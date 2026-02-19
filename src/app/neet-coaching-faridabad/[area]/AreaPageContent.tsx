@@ -82,9 +82,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               {area.fullName}
@@ -142,9 +140,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-6">
-            <div
-              className="bg-purple-50 rounded-xl p-6 animate-fadeInUp"
-            >
+            <div className="bg-purple-50 rounded-xl p-6 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <Train className="w-6 h-6 text-purple-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Nearby Metro</h3>
@@ -167,9 +163,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               </ul>
             </div>
 
-            <div
-              className="bg-blue-50 rounded-xl p-6 animate-fadeInUp"
-            >
+            <div className="bg-blue-50 rounded-xl p-6 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <MapPin className="w-6 h-6 text-blue-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Key Landmarks</h3>
@@ -184,9 +178,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               </ul>
             </div>
 
-            <div
-              className="bg-green-50 rounded-xl p-6 animate-fadeInUp"
-            >
+            <div className="bg-green-50 rounded-xl p-6 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <GraduationCap className="w-6 h-6 text-green-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Schools We Serve</h3>
@@ -201,9 +193,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               </ul>
             </div>
 
-            <div
-              className="bg-orange-50 rounded-xl p-6 animate-fadeInUp"
-            >
+            <div className="bg-orange-50 rounded-xl p-6 animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <Building2 className="w-6 h-6 text-orange-600 mr-2" />
                 <h3 className="font-bold text-gray-900">Societies & Communities</h3>
@@ -235,11 +225,66 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         compact={true}
       />
 
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 border border-green-200">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                Free NEET Biology Practice Tools
+              </h2>
+              <p className="text-gray-600">
+                Access 19,600+ MCQs with 6 question types — chapter-wise practice, completely free
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Link
+                href="/mcq"
+                className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
+              >
+                <GraduationCap className="w-8 h-8 text-green-600 group-hover:text-green-700" />
+                <span className="font-semibold text-gray-900 text-sm text-center">
+                  MCQ Practice
+                </span>
+                <span className="text-xs text-green-600 font-medium">19,600+ Questions</span>
+              </Link>
+              <Link
+                href="/neet-score-calculator"
+                className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
+              >
+                <CheckCircle className="w-8 h-8 text-blue-600 group-hover:text-blue-700" />
+                <span className="font-semibold text-gray-900 text-sm text-center">
+                  Score Calculator
+                </span>
+                <span className="text-xs text-blue-600 font-medium">Instant Results</span>
+              </Link>
+              <Link
+                href="/neet-rank-predictor"
+                className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
+              >
+                <ArrowRight className="w-8 h-8 text-purple-600 group-hover:text-purple-700" />
+                <span className="font-semibold text-gray-900 text-sm text-center">
+                  Rank Predictor
+                </span>
+                <span className="text-xs text-purple-600 font-medium">AI-Powered</span>
+              </Link>
+              <Link
+                href="/neet-college-predictor"
+                className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
+              >
+                <Building2 className="w-8 h-8 text-orange-600 group-hover:text-orange-700" />
+                <span className="font-semibold text-gray-900 text-sm text-center">
+                  College Predictor
+                </span>
+                <span className="text-xs text-orange-600 font-medium">All India Colleges</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Courses for {area.name} Students
             </h2>
@@ -280,9 +325,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 animate-fadeInUp">
             <div className="flex items-center mb-6">
               <MapPin className="w-8 h-8 text-orange-600 mr-3" />
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Center Location</h2>
@@ -326,9 +369,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
       <section className="py-16 md:py-20 bg-orange-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Students from {area.name} Choose Us
             </h2>
@@ -362,9 +403,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
       {nearbyAreas.length > 0 && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-10 animate-fadeInUp"
-            >
+            <div className="text-center mb-10 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 NEET Coaching in Nearby Areas
               </h2>
@@ -378,9 +417,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 const nearbyArea = faridabadAreaDetails[slug]
                 if (!nearbyArea) return null
                 return (
-                  <div
-                    key={slug}
-                   className="animate-fadeInUp">
+                  <div key={slug} className="animate-fadeInUp">
                     <Link
                       href={`/neet-coaching-faridabad/${slug}`}
                       className="block bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-orange-300 group"
@@ -424,8 +461,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
       <section className="py-16 md:py-20 bg-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your NEET Journey from {area.name}?
             </h2>
