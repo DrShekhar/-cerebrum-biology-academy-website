@@ -194,48 +194,62 @@ export const GURUGRAM_AREA_COORDINATES: Record<string, { lat: number; lng: numbe
  */
 export const FARIDABAD_AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
   // Central Faridabad (Premium Sectors)
+  'sector-12': { lat: 28.414, lng: 77.312 },
+  'sector-13': { lat: 28.4125, lng: 77.3135 },
+  'sector-14': { lat: 28.4115, lng: 77.314 },
   'sector-15': { lat: 28.4108, lng: 77.3148 },
   'sector-16': { lat: 28.4069, lng: 77.3158 },
   'sector-17': { lat: 28.4089, lng: 77.3178 }, // Center location
+  'sector-19': { lat: 28.405, lng: 77.31 },
+  'sector-20': { lat: 28.4035, lng: 77.309 },
   'sector-21': { lat: 28.4028, lng: 77.3118 },
+  'sector-22': { lat: 28.402, lng: 77.308 },
+  'sector-23': { lat: 28.401, lng: 77.306 },
   'sector-28': { lat: 28.4467, lng: 77.3133 },
   'sector-29': { lat: 28.4428, lng: 77.3108 },
   'sector-31': { lat: 28.4789, lng: 77.3067 },
-  'sector-37': { lat: 28.4633, lng: 77.3050 },
+  'sector-37': { lat: 28.4633, lng: 77.305 },
 
   // NIT & Old Faridabad
-  'nit-faridabad': { lat: 28.4050, lng: 77.3150 },
-  'old-faridabad': { lat: 28.4200, lng: 77.3200 },
-  'ballabgarh': { lat: 28.3933, lng: 77.3117 },
+  'nit-faridabad': { lat: 28.405, lng: 77.315 },
+  'old-faridabad': { lat: 28.42, lng: 77.32 },
+  ballabgarh: { lat: 28.3933, lng: 77.3117 },
   ajronda: { lat: 28.4089, lng: 77.3178 },
 
-  // Greater Faridabad (Sectors 75-89)
-  'sector-75': { lat: 28.3850, lng: 77.3050 },
-  'sector-76': { lat: 28.3820, lng: 77.3030 },
-  'sector-77': { lat: 28.3790, lng: 77.3010 },
-  'sector-78': { lat: 28.3760, lng: 77.2990 },
-  'sector-79': { lat: 28.3730, lng: 77.2970 },
-  'sector-84': { lat: 28.3670, lng: 77.2910 },
-  'sector-85': { lat: 28.3640, lng: 77.2890 },
-  'sector-86': { lat: 28.3610, lng: 77.2870 },
-  'sector-87': { lat: 28.3580, lng: 77.2850 },
-  'sector-88': { lat: 28.3550, lng: 77.2830 },
-  'sector-89': { lat: 28.3520, lng: 77.2810 },
+  'sector-46': { lat: 28.395, lng: 77.295 },
+  'sector-48': { lat: 28.392, lng: 77.292 },
+
+  // Greater Faridabad (Sectors 62, 75-89)
+  'sector-62': { lat: 28.389, lng: 77.298 },
+  'sector-75': { lat: 28.385, lng: 77.305 },
+  'sector-76': { lat: 28.382, lng: 77.303 },
+  'sector-77': { lat: 28.379, lng: 77.301 },
+  'sector-78': { lat: 28.376, lng: 77.299 },
+  'sector-79': { lat: 28.373, lng: 77.297 },
+  'sector-84': { lat: 28.367, lng: 77.291 },
+  'sector-85': { lat: 28.364, lng: 77.289 },
+  'sector-86': { lat: 28.361, lng: 77.287 },
+  'sector-87': { lat: 28.358, lng: 77.285 },
+  'sector-88': { lat: 28.355, lng: 77.283 },
+  'sector-89': { lat: 28.352, lng: 77.281 },
 
   // Premium Townships
-  'bptp-parklands': { lat: 28.3850, lng: 77.3050 },
-  'omaxe-heights': { lat: 28.3790, lng: 77.3010 },
-  'rps-palms': { lat: 28.3820, lng: 77.3030 },
-  'srs-residency': { lat: 28.3730, lng: 77.2970 },
-  'eldeco-area': { lat: 28.3760, lng: 77.2990 },
-  'crown-interiorz-faridabad': { lat: 28.3610, lng: 77.2870 },
+  'bptp-parklands': { lat: 28.385, lng: 77.305 },
+  'omaxe-heights': { lat: 28.379, lng: 77.301 },
+  'rps-palms': { lat: 28.382, lng: 77.303 },
+  'srs-residency': { lat: 28.373, lng: 77.297 },
+  'eldeco-area': { lat: 28.376, lng: 77.299 },
+  'crown-interiorz-faridabad': { lat: 28.361, lng: 77.287 },
+
+  // Delhi Border
+  badarpur: { lat: 28.495, lng: 77.305 },
 
   // Other Areas
   surajkund: { lat: 28.4333, lng: 77.2867 },
   badkhal: { lat: 28.4333, lng: 77.3167 },
-  'bata-chowk-area': { lat: 28.4050, lng: 77.3150 },
+  'bata-chowk-area': { lat: 28.405, lng: 77.315 },
   'neelam-chowk-area': { lat: 28.4089, lng: 77.3178 },
-  'mewala-maharajpur-area': { lat: 28.4611, lng: 77.3100 },
+  'mewala-maharajpur-area': { lat: 28.4611, lng: 77.31 },
 }
 
 /**
