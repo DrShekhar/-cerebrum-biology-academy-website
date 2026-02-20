@@ -1,0 +1,585 @@
+'use client'
+
+import { useState } from 'react'
+import Link from 'next/link'
+import {
+  CheckCircle,
+  XCircle,
+  ChevronRight,
+  ChevronDown,
+  MapPin,
+  Phone,
+  Play,
+  Home,
+  Users,
+  Target,
+  Award,
+  Clock,
+  BookOpen,
+  Zap,
+  Star,
+  ArrowRight,
+} from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+
+interface FAQ {
+  question: string
+  answer: string
+}
+
+const comparisonData = [
+  {
+    feature: 'Batch Size',
+    cerebrum: '10-20 students',
+    allen: '80-100+ students',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Personal Attention',
+    cerebrum: 'High - Know every student',
+    allen: 'Low - Mass batches',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Faculty',
+    cerebrum: 'AIIMS Alumnus (Dr. Shekhar)',
+    allen: 'Rotating faculty',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Subject Focus',
+    cerebrum: 'Biology Specialized',
+    allen: 'All subjects',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Doubt Clearing',
+    cerebrum: 'Daily 1-on-1 sessions',
+    allen: 'Crowded doubt counters',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Study Material',
+    cerebrum: 'Curated NCERT-focused',
+    allen: 'Comprehensive but bulky',
+    winner: 'tie',
+  },
+  {
+    feature: 'Mock Tests',
+    cerebrum: '50+ NEET pattern tests',
+    allen: '30+ tests',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Fee Structure',
+    cerebrum: '₹45K - ₹1.56L/year',
+    allen: '₹1.2L - ₹2L/year',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Success Rate',
+    cerebrum: '98% (Biology)',
+    allen: '~85% (All subjects)',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Ghaziabad Center',
+    cerebrum: 'Sector 62 (15-20 min Metro)',
+    allen: 'No Ghaziabad center',
+    winner: 'cerebrum',
+  },
+]
+
+const reasons = [
+  {
+    title: 'Lost in the Crowd?',
+    description:
+      "Allen's 100+ student batches mean less individual attention. At Cerebrum, every student is known by name.",
+    icon: Users,
+  },
+  {
+    title: 'Biology Needs Depth',
+    description:
+      'Generic coaching covers Biology superficially. Our AIIMS faculty dives deep into concepts.',
+    icon: BookOpen,
+  },
+  {
+    title: 'Doubt Resolution',
+    description:
+      'Tired of waiting at doubt counters? Get daily 1-on-1 doubt clearing with our faculty.',
+    icon: Zap,
+  },
+  {
+    title: 'No Allen Center in Ghaziabad',
+    description:
+      'Allen has no dedicated Ghaziabad center. Cerebrum at Sector 62 Noida is just 15-20 min via Blue Line Metro.',
+    icon: Target,
+  },
+]
+
+const testimonials = [
+  {
+    name: 'Ananya R.',
+    score: '658/720',
+    previous: 'Ex-Allen Online Student',
+    quote:
+      'Switched to Cerebrum in Class 12. The personal attention made all the difference. Biology score jumped from 280 to 340.',
+  },
+  {
+    name: 'Rohit M.',
+    score: '615/720',
+    previous: 'Allen + Cerebrum',
+    quote:
+      'Continued Allen online for Physics/Chemistry but joined Cerebrum for Biology. Best decision - Biology became my strongest subject.',
+  },
+  {
+    name: 'Priya S.',
+    score: '642/720',
+    previous: 'Dropper from Allen',
+    quote:
+      "After a disappointing first attempt with Allen, Cerebrum's focused approach helped me improve by 120 marks.",
+  },
+]
+
+export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[] }) {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  const handleWhatsApp = () => {
+    trackAndOpenWhatsApp({
+      source: 'allen-alternative-ghaziabad',
+      message:
+        'Hi! I am currently at Allen/considering Allen and want to know about Cerebrum as an alternative for NEET Biology. I am from Ghaziabad. Please share details.',
+      campaign: 'allen-alternative-ghaziabad',
+    })
+  }
+
+  return (
+    <main className="min-h-screen bg-white">
+      <nav className="bg-gray-100 py-3 px-4">
+        <div className="max-w-7xl mx-auto">
+          <ol className="flex items-center flex-wrap gap-1 text-sm">
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-teal-600">
+                <Home className="w-4 h-4" />
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <Link href="/neet-coaching-ghaziabad" className="text-gray-600 hover:text-teal-600">
+                NEET Coaching Ghaziabad
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <span className="text-teal-700 font-medium">Allen Alternative</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="relative py-20 md:py-28 bg-gradient-to-br from-red-900 to-orange-800 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-orange-500 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4">
+          <div className="max-w-4xl animate-fadeInUp">
+            <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Award className="w-4 h-4" />
+              Allen Has No Ghaziabad Center — We Do
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Looking for an
+              <span className="block text-yellow-400 mt-2">Allen Alternative in Ghaziabad?</span>
+            </h1>
+
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl">
+              Allen Career Institute has no dedicated center in Ghaziabad. Cerebrum Biology Academy
+              at Sector 62, Noida is just 15-20 min from Ghaziabad via Blue Line Metro. Smaller
+              batches, AIIMS faculty, 98% success rate.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <Users className="w-5 h-5 text-yellow-400" />
+                <span>10-20 Students/Batch</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <Star className="w-5 h-5 text-yellow-400" />
+                <span>98% Success Rate</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
+                <Target className="w-5 h-5 text-green-400" />
+                <span>20-30% Lower Fees</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/demo-booking">
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo Class
+                </Button>
+              </Link>
+              <button
+                onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
+              >
+                <Phone className="w-5 h-5" />
+                Compare with Allen Expert
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Switch */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why Students Switch from Allen
+            </h2>
+            <p className="text-xl text-slate-600">
+              Common pain points that bring students to Cerebrum
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {reasons.map((reason) => (
+              <div
+                key={reason.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp"
+              >
+                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                  <reason.icon className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{reason.title}</h3>
+                <p className="text-slate-600 text-sm">{reason.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Cerebrum vs Allen: Head-to-Head
+            </h2>
+            <p className="text-xl text-slate-600">See why focused coaching beats mass batches</p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
+              <thead className="bg-slate-800 text-white">
+                <tr>
+                  <th className="px-6 py-4 text-left">Feature</th>
+                  <th className="px-6 py-4 text-center bg-teal-700">Cerebrum</th>
+                  <th className="px-6 py-4 text-center">Allen</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((row, index) => (
+                  <tr key={row.feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                    <td className="px-6 py-4 font-medium">{row.feature}</td>
+                    <td className="px-6 py-4 text-center bg-teal-50">
+                      <span className="flex items-center justify-center gap-2">
+                        {row.winner === 'cerebrum' && (
+                          <CheckCircle className="w-5 h-5 text-green-600" />
+                        )}
+                        {row.cerebrum}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 text-center text-slate-600">
+                      <span className="flex items-center justify-center gap-2">
+                        {row.winner === 'cerebrum' && <XCircle className="w-5 h-5 text-red-400" />}
+                        {row.allen}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Complement Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-600 to-teal-600 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fadeInUp">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Don&apos;t Want to Leave Allen?
+                <br />
+                Complement Your Coaching!
+              </h2>
+              <p className="text-xl text-blue-100 mb-6">
+                Many Ghaziabad students continue with Allen online for Physics &amp; Chemistry while
+                joining Cerebrum specifically for Biology. Get the best of both worlds.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  Weekend batches that don&apos;t clash with Allen
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  Evening sessions for extra Biology practice
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  Sector 62 Metro — easy 15-20 min commute from Ghaziabad
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  Focused Biology boost for your weak areas
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
+              <h3 className="text-2xl font-bold mb-6">Success Stories: Allen + Cerebrum</h3>
+              {testimonials.slice(1, 2).map((t) => (
+                <div key={t.name} className="mb-6">
+                  <p className="text-blue-100 italic">&ldquo;{t.quote}&rdquo;</p>
+                  <div className="flex items-center gap-3 mt-4">
+                    <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-slate-900 font-bold">
+                      {t.name[0]}
+                    </div>
+                    <div>
+                      <p className="font-semibold">{t.name}</p>
+                      <p className="text-sm text-blue-200">
+                        {t.score} | {t.previous}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials from Allen Switchers */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              From Allen Students Who Switched
+            </h2>
+            <p className="text-xl text-slate-600">Real results from students who made the change</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div key={t.name} className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-lg">
+                    {t.name[0]}
+                  </div>
+                  <div>
+                    <p className="font-bold text-slate-900">{t.name}</p>
+                    <p className="text-sm text-slate-500">{t.previous}</p>
+                  </div>
+                  <div className="ml-auto bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">
+                    {t.score}
+                  </div>
+                </div>
+                <p className="text-slate-600 italic">&ldquo;{t.quote}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                  Conveniently Located at Sector 62, Noida
+                </h2>
+                <p className="text-slate-600 mb-6">
+                  Our center is at <strong>B-45, Sector 62, Noida</strong>. Ghaziabad students
+                  reach us in just 15-20 min via Blue Line Metro (Vaishali/Kaushambi to Sector 62).
+                  Whether you&apos;re switching or complementing, easily accessible from all parts
+                  of Ghaziabad.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <p className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-red-600" />
+                    B-45, Sector 62, Noida, UP 201301
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-red-600" />
+                    Sector 62 Metro Station, Blue Line (15-20 min from Vaishali/Kaushambi)
+                  </p>
+                </div>
+                <div className="flex gap-4">
+                  <a href="tel:+919953643938">
+                    <Button variant="outline">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call Now
+                    </Button>
+                  </a>
+                  <a
+                    href="https://maps.google.com/?q=B-45+Sector+62+Noida"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Button>
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Get Directions
+                    </Button>
+                  </a>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="font-bold text-lg mb-4">Quick Comparison</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Independent Institute</span>
+                    <span className="text-green-600 font-semibold">Yes</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Flexible Timings</span>
+                    <span className="text-green-600 font-semibold">Yes</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Trial Class</span>
+                    <span className="text-green-600 font-semibold">7 Days Free</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span>Refund Policy</span>
+                    <span className="text-green-600 font-semibold">Money-Back Guarantee</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <VideoTestimonialsSection />
+      <NEETToolsWidget
+        title="Free NEET Preparation Tools"
+        subtitle="Use our AI-powered tools to boost your preparation"
+      />
+
+      {/* FAQs */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-6">
+                    <p className="text-slate-600">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
+          <div className="grid md:grid-cols-4 gap-4">
+            <Link
+              href="/aakash-alternative-ghaziabad"
+              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">Aakash Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with Aakash</p>
+            </Link>
+            <Link
+              href="/affordable-neet-coaching-ghaziabad"
+              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>
+              <p className="text-sm text-gray-600">Budget-friendly options</p>
+            </Link>
+            <Link
+              href="/neet-coaching-fees-ghaziabad"
+              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">Coaching Fees</h3>
+              <p className="text-sm text-gray-600">Fee comparison</p>
+            </Link>
+            <Link
+              href="/neet-coaching-ghaziabad"
+              className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
+            >
+              <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
+              <p className="text-sm text-gray-600">All programs</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-red-600 to-orange-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Experience the Difference?
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join students from Ghaziabad who switched from Allen for better Biology coaching
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/demo-booking">
+              <Button
+                variant="secondary"
+                size="xl"
+                className="bg-white text-red-600 hover:bg-gray-100 font-bold"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Book Free Demo
+              </Button>
+            </Link>
+            <a href="tel:+919953643938">
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-red-600"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
