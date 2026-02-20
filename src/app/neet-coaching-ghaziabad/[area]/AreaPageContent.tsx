@@ -239,6 +239,64 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
         </div>
       </section>
 
+      {/* Free NEET Practice Tools */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 border border-green-200">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                Free NEET Biology Practice Tools
+              </h2>
+              <p className="text-gray-600">
+                Access 19,600+ MCQs with 6 question types — chapter-wise practice, completely free
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Link
+                href="/mcq"
+                className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
+              >
+                <GraduationCap className="w-8 h-8 text-green-600 group-hover:text-green-700" />
+                <span className="font-semibold text-gray-900 text-sm text-center">
+                  MCQ Practice
+                </span>
+                <span className="text-xs text-green-600 font-medium">19,600+ Questions</span>
+              </Link>
+              <Link
+                href="/neet-score-calculator"
+                className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
+              >
+                <CheckCircle className="w-8 h-8 text-blue-600 group-hover:text-blue-700" />
+                <span className="font-semibold text-gray-900 text-sm text-center">
+                  Score Calculator
+                </span>
+                <span className="text-xs text-blue-600 font-medium">Instant Results</span>
+              </Link>
+              <Link
+                href="/neet-rank-predictor"
+                className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
+              >
+                <ArrowRight className="w-8 h-8 text-purple-600 group-hover:text-purple-700" />
+                <span className="font-semibold text-gray-900 text-sm text-center">
+                  Rank Predictor
+                </span>
+                <span className="text-xs text-purple-600 font-medium">AI-Powered</span>
+              </Link>
+              <Link
+                href="/neet-college-predictor"
+                className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
+              >
+                <Building2 className="w-8 h-8 text-orange-600 group-hover:text-orange-700" />
+                <span className="font-semibold text-gray-900 text-sm text-center">
+                  College Predictor
+                </span>
+                <span className="text-xs text-orange-600 font-medium">All India Colleges</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Nearby Areas */}
       {nearbyAreaSlugs.length > 0 && (
         <section className="py-12 bg-gray-50">

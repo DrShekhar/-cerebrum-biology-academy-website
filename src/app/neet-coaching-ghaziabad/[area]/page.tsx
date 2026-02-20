@@ -41,9 +41,9 @@ export default async function GhaziabadAreaPage({ params }: Props) {
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Sector 62',
-      addressLocality: 'Noida',
+      addressLocality: 'Ghaziabad',
       addressRegion: 'Uttar Pradesh',
-      postalCode: '201301',
+      postalCode: areaData.pincode,
       addressCountry: 'IN',
     },
     areaServed: {
@@ -71,9 +71,9 @@ export default async function GhaziabadAreaPage({ params }: Props) {
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Sector 62',
-      addressLocality: 'Noida',
+      addressLocality: 'Ghaziabad',
       addressRegion: 'Uttar Pradesh',
-      postalCode: '201301',
+      postalCode: areaData.pincode,
       addressCountry: 'IN',
     },
     geo: {

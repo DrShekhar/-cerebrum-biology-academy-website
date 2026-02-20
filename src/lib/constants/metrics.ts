@@ -253,6 +253,80 @@ export const FARIDABAD_AREA_COORDINATES: Record<string, { lat: number; lng: numb
 }
 
 /**
+ * Noida Area Coordinates
+ * Center: Sector 62, Noida
+ * Coverage: 40km radius
+ */
+export const NOIDA_AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
+  'sector-18': { lat: 28.5685, lng: 77.3210 },
+  'sector-62': { lat: 28.6280, lng: 77.3649 },
+  'sector-15': { lat: 28.5800, lng: 77.3100 },
+  'sector-16': { lat: 28.5720, lng: 77.3150 },
+  'sector-44': { lat: 28.5750, lng: 77.3500 },
+  'sector-50': { lat: 28.5900, lng: 77.3400 },
+  'sector-76': { lat: 28.6200, lng: 77.3800 },
+  'sector-77': { lat: 28.6250, lng: 77.3850 },
+  'sector-78': { lat: 28.6300, lng: 77.3900 },
+  'sector-137': { lat: 28.5100, lng: 77.3600 },
+  'sector-135': { lat: 28.5200, lng: 77.3550 },
+  'sector-128': { lat: 28.5350, lng: 77.3650 },
+  'sector-126': { lat: 28.5400, lng: 77.3600 },
+  'sector-120': { lat: 28.5500, lng: 77.3700 },
+  'sector-100': { lat: 28.5600, lng: 77.3750 },
+  'sector-104': { lat: 28.5450, lng: 77.3680 },
+  'sector-37': { lat: 28.5650, lng: 77.3350 },
+  'sector-41': { lat: 28.5700, lng: 77.3450 },
+  'sector-39': { lat: 28.5680, lng: 77.3400 },
+  'sector-63': { lat: 28.6300, lng: 77.3700 },
+  'sector-71': { lat: 28.6150, lng: 77.3750 },
+  'sector-72': { lat: 28.6100, lng: 77.3780 },
+  'sector-73': { lat: 28.6080, lng: 77.3800 },
+  'noida-extension': { lat: 28.5000, lng: 77.3900 },
+  'greater-noida-west': { lat: 28.4700, lng: 77.4200 },
+  'knowledge-park': { lat: 28.4550, lng: 77.5100 },
+  'pari-chowk': { lat: 28.4600, lng: 77.5000 },
+  alpha: { lat: 28.4700, lng: 77.4900 },
+  beta: { lat: 28.4650, lng: 77.4850 },
+  gamma: { lat: 28.4600, lng: 77.4800 },
+  'gaur-city': { lat: 28.4800, lng: 77.4100 },
+  'jaypee-greens': { lat: 28.4500, lng: 77.5200 },
+  'techzone-4': { lat: 28.4900, lng: 77.4000 },
+  surajpur: { lat: 28.4400, lng: 77.4950 },
+  kasna: { lat: 28.4350, lng: 77.5050 },
+  omicron: { lat: 28.4700, lng: 77.4750 },
+  'sector-12': { lat: 28.5850, lng: 77.3050 },
+  'sector-25': { lat: 28.5780, lng: 77.3280 },
+  'film-city': { lat: 28.5760, lng: 77.3180 },
+  'atta-market': { lat: 28.5690, lng: 77.3220 },
+}
+
+/**
+ * Ghaziabad Area Coordinates
+ * Center: Sector 62, Noida (serving Ghaziabad)
+ * Coverage: 25km radius
+ */
+export const GHAZIABAD_AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
+  indirapuram: { lat: 28.6410, lng: 77.3580 },
+  vaishali: { lat: 28.6420, lng: 77.3380 },
+  kaushambi: { lat: 28.6450, lng: 77.3250 },
+  'raj-nagar-extension': { lat: 28.7200, lng: 77.4500 },
+  'crossings-republik': { lat: 28.6600, lng: 77.4300 },
+  vasundhara: { lat: 28.6600, lng: 77.3650 },
+  'lal-kuan': { lat: 28.6800, lng: 77.4100 },
+  'mohan-nagar': { lat: 28.6650, lng: 77.4200 },
+  sahibabad: { lat: 28.6750, lng: 77.3800 },
+  'raj-nagar': { lat: 28.6700, lng: 77.4350 },
+  'wave-city': { lat: 28.7100, lng: 77.4600 },
+  arthala: { lat: 28.6700, lng: 77.4000 },
+  govindpuram: { lat: 28.6900, lng: 77.4400 },
+  'siddharth-vihar': { lat: 28.6550, lng: 77.4150 },
+  'pratap-vihar': { lat: 28.6500, lng: 77.4050 },
+  'nehru-nagar': { lat: 28.6680, lng: 77.4100 },
+  'vijay-nagar': { lat: 28.6630, lng: 77.4150 },
+  nandgram: { lat: 28.6850, lng: 77.4250 },
+}
+
+/**
  * Faridabad Center Specific Metrics
  * Sector 17, Faridabad
  */
