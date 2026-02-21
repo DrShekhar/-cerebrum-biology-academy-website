@@ -183,7 +183,7 @@ const gurgaonLocations: NEETCoachingLocation[] = [
       title: `NEET Coaching in Gurgaon Sector ${sector} - Biology Classes`,
       description: `Best NEET biology coaching for Sector ${sector} Gurgaon students. Expert faculty, online classes available.`,
       heroColor: 'teal' as const,
-      studentCount: `${50 + Math.floor(Math.random() * 50)}+`,
+      studentCount: `${50 + ((sector * 7) % 50)}+`,
       successRate: '98%',
       topScore: '670',
       faqs: generateBaseFAQs(`Gurgaon Sector ${sector}`, 'Haryana'),

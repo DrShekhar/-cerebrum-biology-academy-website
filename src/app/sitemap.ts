@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog/mdx'
 import { getAllSEOSlugs } from '@/data/seo-landing/slugs-static'
-import { getAllAreaSlugs } from '@/data/localAreas'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use non-www URL to match middleware redirect behavior
@@ -28,14 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  // Dynamically generate local area page URLs (e.g., /best-biology-coaching-gurgaon)
-  const localAreaSlugs = getAllAreaSlugs()
-  const localAreaRoutes: MetadataRoute.Sitemap = localAreaSlugs.map((slug) => ({
-    url: `${baseUrl}/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.9,
-  }))
 
   const routes: MetadataRoute.Sitemap = [
     {
@@ -264,8 +255,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogRoutes,
     // SEO landing pages for keyword targeting
     ...seoLandingRoutes,
-    // Local area pages for [localSlug] route (e.g., /best-biology-coaching-gurgaon)
-    ...localAreaRoutes,
     {
       url: `${baseUrl}/gallery`,
       lastModified: lastUpdated,

@@ -4,7 +4,11 @@ import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import bundleAnalyzer from '@next/bundle-analyzer'
-import { seoPageConsolidationRedirects } from './src/config/seo-redirects.mjs'
+import {
+  seoPageConsolidationRedirects,
+  neetCoachingLocationRedirects,
+  localAreaPageRedirects,
+} from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -1488,6 +1492,8 @@ const nextConfig = {
       // ~178 pages redirected to hub pages
       // ============================================
       ...seoPageConsolidationRedirects,
+      ...neetCoachingLocationRedirects,
+      ...localAreaPageRedirects,
     ]
   },
 

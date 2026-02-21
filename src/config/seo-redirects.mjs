@@ -629,3 +629,119 @@ export const seoPageConsolidationRedirects = [
     permanent: true,
   },
 ]
+
+// ============================================
+// /neet-coaching/[location] → hardcoded hub pages
+// Dynamic route duplicates existing hub pages at different URLs
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const neetCoachingLocationRedirects = [
+  { source: '/neet-coaching/gurgaon-sector-:num', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching/gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching/dwarka', destination: '/neet-coaching-dwarka', permanent: true },
+  { source: '/neet-coaching/rohini', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/neet-coaching/greater-kailash', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/neet-coaching/noida', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching/bangalore', destination: '/neet-coaching-bangalore', permanent: true },
+  { source: '/neet-coaching/chennai', destination: '/neet-coaching-chennai', permanent: true },
+  { source: '/neet-coaching/hyderabad', destination: '/neet-coaching-hyderabad', permanent: true },
+  { source: '/neet-coaching/mumbai', destination: '/neet-coaching-mumbai', permanent: true },
+  { source: '/neet-coaching/pune', destination: '/neet-coaching-pune', permanent: true },
+  { source: '/neet-coaching/kolkata', destination: '/neet-coaching-kolkata', permanent: true },
+  { source: '/neet-coaching/ahmedabad', destination: '/neet-coaching-ahmedabad', permanent: true },
+  { source: '/neet-coaching/jaipur', destination: '/neet-coaching-jaipur', permanent: true },
+  { source: '/neet-coaching/lucknow', destination: '/neet-coaching-lucknow', permanent: true },
+  { source: '/neet-coaching/agra', destination: '/neet-coaching-agra', permanent: true },
+  { source: '/neet-coaching/chandigarh', destination: '/neet-coaching-chandigarh', permanent: true },
+]
+
+// ============================================
+// [localSlug] thin pages → nearest hub page
+// 58 thin location pages consolidated into stronger hubs
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const localAreaPageRedirects = [
+  // --- Gurugram hub ---
+  { source: '/best-biology-coaching-gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-gurgaon-sector-43', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/biology-coaching-gurgaon-sector-45', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-biology-gurgaon-sector-57', destination: '/neet-coaching-gurugram', permanent: true },
+
+  // --- Noida hub ---
+  { source: '/best-biology-tuition-noida', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-noida-sector-15', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-noida-sector-50', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-noida-sector-76', destination: '/neet-coaching-noida', permanent: true },
+
+  // --- Faridabad hub ---
+  { source: '/biology-coaching-faridabad-neet', destination: '/neet-coaching-faridabad', permanent: true },
+
+  // --- Ghaziabad hub ---
+  { source: '/best-biology-teacher-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/biology-coaching-vasundhara-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-raj-nagar-extension', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-crossings-republik', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-mohan-nagar', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-wave-city', destination: '/neet-coaching-ghaziabad', permanent: true },
+
+  // --- Centre hub ---
+  { source: '/biology-coaching-central-delhi', destination: '/neet-coaching-centre', permanent: true },
+
+  // --- Rohini hub ---
+  { source: '/neet-coaching-rohini-sector-3', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/neet-coaching-rohini-sector-7', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/neet-coaching-rohini-sector-8', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/neet-coaching-rohini-sector-9', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/neet-coaching-rohini-sector-11', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/neet-coaching-rohini-sector-13', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/neet-coaching-rohini-sector-16', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/neet-coaching-rohini-sector-24', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/biology-coaching-shalimar-bagh', destination: '/neet-coaching-rohini', permanent: true },
+
+  // --- Pitampura ---
+  { source: '/neet-coaching-pitampura-delhi', destination: '/neet-coaching-pitampura', permanent: true },
+
+  // --- South Delhi hub ---
+  { source: '/neet-coaching-greater-kailash-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-lajpat-nagar-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-hauz-khas-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/neet-coaching-malviya-nagar-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-kalkaji-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/neet-coaching-nehru-place-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-defence-colony-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/neet-coaching-south-extension-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-green-park-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+
+  // --- West Delhi hub ---
+  { source: '/neet-coaching-rajouri-garden-delhi', destination: '/neet-coaching-west-delhi', permanent: true },
+  { source: '/biology-coaching-punjabi-bagh-delhi', destination: '/neet-coaching-west-delhi', permanent: true },
+  { source: '/neet-coaching-uttam-nagar', destination: '/neet-coaching-west-delhi', permanent: true },
+  { source: '/neet-coaching-vikaspuri', destination: '/neet-coaching-west-delhi', permanent: true },
+  { source: '/neet-coaching-tilak-nagar', destination: '/neet-coaching-west-delhi', permanent: true },
+
+  // --- East Delhi hub ---
+  { source: '/neet-coaching-nirman-vihar-delhi', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/neet-coaching-mayur-vihar', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/neet-coaching-preet-vihar', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/neet-coaching-laxmi-nagar', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/neet-coaching-shahdara', destination: '/neet-coaching-east-delhi', permanent: true },
+
+  // --- Dwarka hub ---
+  { source: '/neet-coaching-dwarka-delhi', destination: '/neet-coaching-dwarka', permanent: true },
+  { source: '/neet-coaching-dwarka-sector-7', destination: '/neet-coaching-dwarka', permanent: true },
+  { source: '/neet-coaching-dwarka-sector-19', destination: '/neet-coaching-dwarka', permanent: true },
+
+  // --- Bangalore hub ---
+  { source: '/biology-coaching-electronic-city-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
+  { source: '/neet-biology-coaching-marathahalli-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
+  { source: '/biology-coaching-yelahanka-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
+  { source: '/neet-coaching-hebbal-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
+
+  // --- Punjab/Chandigarh ---
+  { source: '/neet-coaching-mohali-punjab', destination: '/neet-coaching-mohali', permanent: true },
+  { source: '/neet-coaching-panchkula-haryana', destination: '/neet-coaching-panchkula', permanent: true },
+  { source: '/neet-coaching-zirakpur-punjab', destination: '/neet-coaching-zirakpur', permanent: true },
+  { source: '/neet-coaching-ludhiana-punjab', destination: '/neet-coaching-ludhiana', permanent: true },
+  { source: '/neet-coaching-jalandhar-punjab', destination: '/neet-coaching-jalandhar', permanent: true },
+  { source: '/neet-coaching-amritsar-punjab', destination: '/neet-coaching-amritsar', permanent: true },
+]
