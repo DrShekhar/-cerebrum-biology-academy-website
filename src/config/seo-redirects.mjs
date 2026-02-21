@@ -745,3 +745,41 @@ export const localAreaPageRedirects = [
   { source: '/neet-coaching-jalandhar-punjab', destination: '/neet-coaching-jalandhar', permanent: true },
   { source: '/neet-coaching-amritsar-punjab', destination: '/neet-coaching-amritsar', permanent: true },
 ]
+
+// ============================================
+// GSC "Not found (404)" cleanup — remaining 404s
+// Most of the 219 reported URLs are already handled by existing
+// redirects (308). These cover the ~20 that still return 404.
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const gsc404CleanupRedirects = [
+  // --- /cities/ phantom routes (route doesn't exist) ---
+  { source: '/cities/:path*', destination: '/neet-coaching', permanent: true },
+
+  // --- State/region pages (no dedicated pages exist) ---
+  { source: '/neet-coaching-maharashtra', destination: '/neet-coaching', permanent: true },
+  { source: '/neet-coaching-gujarat', destination: '/neet-coaching', permanent: true },
+  { source: '/neet-coaching-kerala', destination: '/neet-coaching', permanent: true },
+  { source: '/neet-coaching-tier2-cities', destination: '/neet-coaching', permanent: true },
+  { source: '/neet-coaching-near-metro', destination: '/neet-coaching', permanent: true },
+  { source: '/nri-coaching', destination: '/neet-coaching', permanent: true },
+
+  // --- Standalone pages that don't exist ---
+  { source: '/ncert-solutions', destination: '/biology-notes', permanent: true },
+  { source: '/neet-foundation-class-11-gurugram', destination: '/courses/class-11', permanent: true },
+
+  // --- Biology tutor curriculum/city pages with no route ---
+  { source: '/biology-tutor-cbse', destination: '/biology-tutor', permanent: true },
+  { source: '/biology-tutor-icse', destination: '/biology-tutor', permanent: true },
+  { source: '/biology-tutor-trivandrum', destination: '/biology-tutor', permanent: true },
+  { source: '/biology-tutor-kochi', destination: '/biology-tutor', permanent: true },
+
+  // --- Nested location sub-routes that don't exist ---
+  { source: '/locations/bangalore/:path*', destination: '/neet-coaching-bangalore', permanent: true },
+
+  // --- Blog posts that no longer exist ---
+  { source: '/blog/neet-2026-preparation-90-day-strategy', destination: '/blog', permanent: true },
+  { source: '/blog/neet-preparation-tips-delhi-ncr-students', destination: '/blog', permanent: true },
+  { source: '/blog/kota-vs-online-neet-coaching-2025', destination: '/blog', permanent: true },
+  { source: '/blog/neet-biology-syllabus-2025-complete-guide', destination: '/blog', permanent: true },
+]
