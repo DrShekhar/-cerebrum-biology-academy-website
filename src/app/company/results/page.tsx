@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Trophy, Star, ArrowRight, Medal, Target, TrendingUp, Crown, Zap } from 'lucide-react'
 import Script from 'next/script'
+import { ResultsPageWebPageSchema } from '@/components/seo'
 
 export const metadata: Metadata = {
   title: 'Student Results & Success Stories | NEET Biology Achievements | Cerebrum Biology Academy',
@@ -213,6 +214,8 @@ export default function ResultsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
+      {/* WebPage Schema with internal linking */}
+      <ResultsPageWebPageSchema />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white py-20">

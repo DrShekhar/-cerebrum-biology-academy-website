@@ -8779,6 +8779,86 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  'greater-noida': {
+    slug: 'greater-noida',
+    cityName: 'Greater Noida',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'Biology Classes in Greater Noida | Best NEET Biology Coaching | Cerebrum Academy',
+    metaDescription:
+      'Best biology classes in Greater Noida for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. Online & hybrid classes available. Book free demo!',
+    heroTitle: 'Best Biology Classes in Greater Noida',
+    heroSubtitle:
+      'Top-rated NEET biology coaching for Greater Noida students. Online + hybrid classes with AIIMS faculty and proven 98% success rate.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Sector 62 Noida Center',
+      address: 'B-45, Sector 62, Noida, UP 201301',
+      distance: '15-20 km from Greater Noida via Aqua Line Metro',
+    },
+    localities: [
+      { name: 'Gaur City', url: '/biology-classes-greater-noida/gaur-city' },
+      { name: 'Knowledge Park', url: '/biology-classes-greater-noida/knowledge-park' },
+      { name: 'Pari Chowk', url: '/biology-classes-greater-noida/pari-chowk' },
+      { name: 'Jaypee Greens', url: '/biology-classes-greater-noida/jaypee-greens' },
+      { name: 'Alpha Sectors', url: '/biology-classes-greater-noida/alpha' },
+      { name: 'Beta Sectors', url: '/biology-classes-greater-noida/beta' },
+    ],
+    relatedCities: [
+      { name: 'Noida', url: '/biology-classes-noida' },
+      { name: 'Greater Noida West', url: '/biology-classes-greater-noida-west' },
+      { name: 'Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best biology coaching in Greater Noida for NEET?',
+        answer:
+          'Cerebrum Biology Academy is the top-rated biology coaching for Greater Noida students. We offer live online classes from home and hybrid mode (online + weekend offline at Sector 62, Noida center). Our AIIMS-trained faculty and 98% success rate make us the preferred choice for Greater Noida NEET aspirants.',
+      },
+      {
+        question: 'Do you have an offline center in Greater Noida?',
+        answer:
+          'Our nearest offline center is at B-45, Sector 62, Noida (15-20 km from Greater Noida). Students can reach it via Aqua Line Metro to Noida, then Blue Line to Sector 62 Metro Station. Most Greater Noida students prefer our online or hybrid mode to avoid daily commute.',
+      },
+      {
+        question: 'What is the fee for biology classes for Greater Noida students?',
+        answer:
+          'Our biology coaching fees for Greater Noida students range from ₹35,000 to ₹60,000 per year for online classes. This includes live classes, study material, test series, and WhatsApp doubt support. Offline hybrid mode at our Noida center is also available.',
+      },
+      {
+        question: 'How do online biology classes work for Greater Noida students?',
+        answer:
+          'Our online classes are live and interactive — not recorded videos. You get real-time interaction with faculty, instant doubt resolution via WhatsApp, and the same study material as offline students. Classes run on weekday evenings and weekend batches to fit school schedules.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '400+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4744',
+      lng: '77.5040',
+    },
+    localContext: {
+      nearbyLandmarks:
+        'Serving students across Greater Noida — Gaur City, Knowledge Park, Pari Chowk, Jaypee Greens, Alpha, Beta, Delta sectors.',
+      transportOptions:
+        'Aqua Line Metro connects Greater Noida to Noida City Centre, then Blue Line to Sector 62 Metro Station (15-20 min). Online classes available for all Greater Noida students — zero commute.',
+    },
+    areaSpecificContent: {
+      whyThisArea:
+        'Greater Noida has 400+ NEET aspirants but very few dedicated Biology coaching options. Most students either commute long distances to Noida/Delhi or settle for coaching that covers all subjects superficially. Our live online classes bring AIIMS-faculty teaching directly to Greater Noida homes, saving 1-2 hours of daily commute. Students can also attend our Sector 62 Noida center on weekends via the Aqua Line Metro for practical sessions and mock tests.',
+    },
+    studentSuccessStory: {
+      name: 'Priya S.',
+      area: 'Knowledge Park, Greater Noida',
+      achievement: 'NEET 2025 — 615/720, KGMC Lucknow',
+      quote:
+        'Attending online classes from home in Greater Noida was a game-changer. I saved 2 hours of daily commute and used that time for revision. The faculty quality was far better than local coaching institutes.',
+    },
+  },
+
   'greater-noida-west': {
     slug: 'greater-noida-west',
     cityName: 'Greater Noida West',

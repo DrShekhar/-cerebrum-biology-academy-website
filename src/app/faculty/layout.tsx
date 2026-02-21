@@ -1,24 +1,44 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Expert Faculty | AIIMS & MBBS Teachers | Cerebrum Biology Academy',
+  title:
+    'Expert NEET Biology Faculty Delhi NCR | AIIMS Qualified Teachers | Cerebrum Academy',
   description:
-    'Meet our NEET Biology faculty: AIIMS graduates, PhD holders, 15+ years teaching experience. Expert mentors who have produced 1,50,000+ students trained.',
-  keywords:
-    'NEET faculty, biology teachers, AIIMS faculty, experienced teachers, NEET mentors, biology experts, qualified teachers, teaching staff',
+    'Meet Cerebrum Biology Academy expert faculty. AIIMS-qualified, 15+ years teaching experience, 680+ medical college selections. Led by Dr. Shekhar Singh, founder with AIIMS background.',
+  keywords: [
+    'NEET faculty Delhi',
+    'biology teachers Delhi NCR',
+    'AIIMS faculty',
+    'Dr Shekhar Singh',
+    'best NEET teachers',
+    'expert biology faculty',
+    'qualified NEET tutors',
+    'experienced biology mentors',
+    'AIIMS trained teachers',
+  ],
   openGraph: {
-    title: 'Meet Our AIIMS Expert Faculty | 15+ Years Experience',
+    title:
+      'Expert NEET Biology Faculty | AIIMS Qualified | Cerebrum Academy Delhi NCR',
     description:
-      'Learn from the best! Our faculty includes AIIMS graduates, PhD holders, and experienced NEET mentors. Meet the teachers behind 98% success rate.',
-    images: ['/og-image.jpg'],
+      'Learn from AIIMS-qualified faculty with 15+ years experience. Dr. Shekhar Singh leads our team of expert NEET mentors. 680+ medical college selections achieved.',
     url: 'https://cerebrumbiologyacademy.com/faculty',
+    siteName: 'Cerebrum Biology Academy',
+    images: [
+      {
+        url: 'https://cerebrumbiologyacademy.com/images/og-default.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Expert NEET Biology Faculty - AIIMS Qualified Teachers',
+      },
+    ],
+    locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Expert NEET Biology Faculty | Cerebrum Academy',
-    description: 'AIIMS graduates, PhD holders, 15+ years experience, 1,50,000+ students trained produced',
-    images: ['/og-image.jpg'],
+    description:
+      'AIIMS-qualified faculty, 15+ years experience, 680+ medical selections. Learn from the best!',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/faculty',

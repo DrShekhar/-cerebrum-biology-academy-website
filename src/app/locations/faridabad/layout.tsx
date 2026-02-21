@@ -218,12 +218,135 @@ function FaridabadFAQSchema() {
   )
 }
 
+function FaridabadEventSchema() {
+  const locationEvents = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Upcoming NEET Biology Batches - Faridabad Center',
+    description: 'Scheduled batch starts and demo classes at Cerebrum Biology Academy Faridabad',
+    itemListElement: [
+      {
+        '@type': 'EducationEvent',
+        position: 1,
+        name: 'NEET Biology Class 12 Intensive Batch - Faridabad',
+        description: 'Intensive NEET Biology preparation for Class 12 students at Faridabad center. Complete syllabus coverage with MCQ practice and weekly test series.',
+        startDate: '2026-03-01',
+        endDate: '2027-04-30',
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+        location: {
+          '@type': 'Place',
+          name: 'Cerebrum Biology Academy - Faridabad',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Sector 17',
+            addressLocality: 'Faridabad',
+            addressRegion: 'Haryana',
+            postalCode: '121002',
+            addressCountry: 'IN',
+          },
+        },
+        organizer: {
+          '@type': 'EducationalOrganization',
+          name: 'Cerebrum Biology Academy',
+          url: 'https://cerebrumbiologyacademy.com',
+        },
+        offers: {
+          '@type': 'Offer',
+          price: '75000',
+          priceCurrency: 'INR',
+          availability: 'https://schema.org/InStock',
+          url: 'https://cerebrumbiologyacademy.com/book-free-demo',
+          validFrom: '2026-01-01',
+        },
+      },
+      {
+        '@type': 'EducationEvent',
+        position: 2,
+        name: 'NEET Biology Class 11 Foundation Batch - Faridabad',
+        description: 'Early NEET preparation foundation batch for Class 11 students at Faridabad. Build strong fundamentals with concept clarity and MCQ practice.',
+        startDate: '2026-04-01',
+        endDate: '2027-03-31',
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+        location: {
+          '@type': 'Place',
+          name: 'Cerebrum Biology Academy - Faridabad',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Sector 17',
+            addressLocality: 'Faridabad',
+            addressRegion: 'Haryana',
+            postalCode: '121002',
+            addressCountry: 'IN',
+          },
+        },
+        organizer: {
+          '@type': 'EducationalOrganization',
+          name: 'Cerebrum Biology Academy',
+          url: 'https://cerebrumbiologyacademy.com',
+        },
+        offers: {
+          '@type': 'Offer',
+          price: '75000',
+          priceCurrency: 'INR',
+          availability: 'https://schema.org/InStock',
+          url: 'https://cerebrumbiologyacademy.com/book-free-demo',
+          validFrom: '2026-01-01',
+        },
+      },
+      {
+        '@type': 'EducationEvent',
+        position: 3,
+        name: 'Free NEET Biology Demo Class - Faridabad',
+        description: 'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
+        startDate: '2026-02-15',
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+        location: {
+          '@type': 'Place',
+          name: 'Cerebrum Biology Academy - Faridabad',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Sector 17',
+            addressLocality: 'Faridabad',
+            addressRegion: 'Haryana',
+            postalCode: '121002',
+            addressCountry: 'IN',
+          },
+        },
+        organizer: {
+          '@type': 'EducationalOrganization',
+          name: 'Cerebrum Biology Academy',
+          url: 'https://cerebrumbiologyacademy.com',
+        },
+        isAccessibleForFree: true,
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'INR',
+          availability: 'https://schema.org/InStock',
+          url: 'https://cerebrumbiologyacademy.com/book-free-demo',
+        },
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(locationEvents) }}
+    />
+  )
+}
+
 export default function FaridabadLocationLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <FaridabadServiceSchema />
       <FaridabadLocalBusinessSchema />
-      <FaridabadFAQSchema />      <script
+      <FaridabadFAQSchema />
+      <FaridabadEventSchema />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

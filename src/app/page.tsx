@@ -76,6 +76,46 @@ export const metadata: Metadata = generatePageMetadata('home')
 export const revalidate = 3600
 
 export default function Home() {
+  const homePageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://cerebrumbiologyacademy.com/#webpage',
+    name: 'Best NEET Biology Coaching in Delhi NCR | Cerebrum Biology Academy',
+    description: 'Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. 6 centers across Delhi, Gurugram, Noida, Faridabad.',
+    url: 'https://cerebrumbiologyacademy.com',
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': 'https://cerebrumbiologyacademy.com/#website',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    about: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+    },
+    mainEntity: {
+      '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+    },
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      ],
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'],
+    },
+    significantLink: [
+      'https://cerebrumbiologyacademy.com/courses',
+      'https://cerebrumbiologyacademy.com/locations',
+      'https://cerebrumbiologyacademy.com/book-free-demo',
+      'https://cerebrumbiologyacademy.com/results',
+    ],
+  }
+
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Video Schema for Sadhna Sirin Topper Testimonial */}

@@ -418,7 +418,7 @@ export const navigationConfig: NavigationSection[] = [
       {
         id: 'faculty',
         title: 'Our Faculty',
-        href: '/about/faculty',
+        href: '/faculty',
         description: 'Meet our experienced biology educators',
         keywords: ['faculty', 'teachers', 'educators', 'dr shekhar'],
         isPopular: true,

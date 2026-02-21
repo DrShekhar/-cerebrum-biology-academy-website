@@ -161,7 +161,7 @@ export const seoPageConsolidationRedirects = [
   },
   {
     source: '/biology-classes-dav-gurgaon',
-    destination: '/biology-classes-gurgaon',
+    destination: '/neet-coaching-gurgaon',
     permanent: true,
   },
   {
@@ -310,7 +310,7 @@ export const seoPageConsolidationRedirects = [
   // ============================================
   {
     source: '/biology-classes-bal-bharati-students',
-    destination: '/neet-coaching-centre',
+    destination: '/biology-classes-south-delhi',
     permanent: true,
   },
   {

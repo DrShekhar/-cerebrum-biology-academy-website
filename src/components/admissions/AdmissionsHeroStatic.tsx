@@ -1,5 +1,4 @@
 import { Award, Trophy, Download, Phone } from 'lucide-react'
-import Link from 'next/link'
 
 /**
  * Static Hero Component for Admissions Page
@@ -62,13 +61,15 @@ export function AdmissionsHeroStatic() {
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in-up"
               style={{ animationDelay: '0.4s' }}
             >
-              <Link
-                href="/support/brochure"
+              <a
+                href={`https://wa.me/918826444334?text=${encodeURIComponent('Hi, I am interested in admissions at Cerebrum Biology Academy. Please share the brochure and admission details.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-medium transition-colors w-full sm:w-auto"
               >
                 <Download className="w-5 h-5 mr-2" />
-                Download Brochure
-              </Link>
+                Request Brochure
+              </a>
               <a
                 href="#application-form"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-colors w-full sm:w-auto"

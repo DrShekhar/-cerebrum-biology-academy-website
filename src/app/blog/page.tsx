@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import { getAllPosts, getAllCategories } from '@/lib/blog/mdx'
-import { BreadcrumbSchema } from '@/components/seo'
+import { BreadcrumbSchema, BlogPageWebPageSchema } from '@/components/seo'
 import { BlogListingPage } from '@/components/blog/BlogListingPage'
 
 // Revalidate every hour — page is statically generated and cached at CDN edge
@@ -127,6 +127,8 @@ export default function BlogPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionSchema) }}
       />
+      {/* WebPage Schema with internal linking */}
+      <BlogPageWebPageSchema />
       {/* Breadcrumb Navigation + Schema */}
       <div className="mx-auto max-w-7xl px-4 pt-4">
         <BreadcrumbSchema items={[{ label: 'Blog', isCurrentPage: true }]} />

@@ -2,8 +2,9 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPostSlugs, getRelatedPosts, getCategoryBySlug } from '@/lib/blog/mdx'
 import { BlogPostPage } from '@/components/blog/BlogPostPage'
-import { BreadcrumbSchema, COMMON_BREADCRUMBS } from '@/components/seo'
-import { ArticleSchema } from '@/components/seo/ContentFreshness'
+import { BreadcrumbSchema, COMMON_BREADCRUMBS, HowToSchema } from '@/components/seo'
+import { TechArticleSchema } from '@/components/seo/TechArticleSchema'
+import { HOWTO_CONFIGS } from '@/data/howto-schemas'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -76,15 +77,40 @@ export default async function BlogPost({ params }: Props) {
     <>
       {/* Breadcrumb Schema (SEO only, no visual — BlogCategoryNav handles navigation) */}
       <BreadcrumbSchema items={COMMON_BREADCRUMBS.blog(meta.title)} showSchemaOnly />
-      {/* Article Schema for E-E-A-T */}
-      <ArticleSchema
+      {/* Enhanced Article Schema for E-E-A-T + AEO + Rich Snippets */}
+      <TechArticleSchema
         title={meta.title}
-        description={meta.excerpt}
-        datePublished={meta.publishedAt}
-        dateModified={meta.updatedAt || meta.publishedAt}
-        author={{ name: meta.author.name }}
-        keywords={meta.tags}
+        description={meta.seoDescription || meta.excerpt}
+        author={{
+          name: meta.author.name,
+          role: meta.author.role || 'NEET Biology Expert',
+          url: 'https://cerebrumbiologyacademy.com/faculty',
+        }}
+        publishedAt={meta.publishedAt}
+        updatedAt={meta.updatedAt || meta.publishedAt}
+        featuredImage={meta.featuredImage}
+        url={`https://cerebrumbiologyacademy.com/blog/${slug}`}
+        category={category?.name || meta.category}
+        tags={meta.tags}
+        readTime={meta.readTime}
+        wordCount={meta.readTime ? meta.readTime * 200 : undefined}
+        articleType="BlogPosting"
+        educationalLevel={meta.targetAudience?.includes('Class 11') ? 'Class 11' : 'Class 12'}
+        teaches={meta.keyTakeaways || ['NEET Biology']}
+        learningResourceType="Blog Post"
+        proficiencyLevel={meta.difficulty === 'beginner' ? 'Beginner' : meta.difficulty === 'advanced' ? 'Advanced' : 'Intermediate'}
       />
+      {/* HowTo Schema for preparation guide posts - Google rich snippet eligibility */}
+      {HOWTO_CONFIGS[slug] && (
+        <HowToSchema
+          name={HOWTO_CONFIGS[slug].name}
+          description={HOWTO_CONFIGS[slug].description}
+          steps={HOWTO_CONFIGS[slug].steps}
+          totalTime={HOWTO_CONFIGS[slug].totalTime}
+          image={meta.featuredImage}
+          url={`https://cerebrumbiologyacademy.com/blog/${slug}`}
+        />
+      )}
       <BlogPostPage
         meta={meta}
         content={postData.content}
