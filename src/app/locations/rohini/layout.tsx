@@ -35,8 +35,10 @@ function RohiniServiceSchema() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '850',
+      ratingValue: '5.0',
+      reviewCount: '38',
+      bestRating: '5',
+      worstRating: '1',
     },
     areaServed: [
       'Rohini',
@@ -247,7 +249,7 @@ export default function RohiniLayout({ children }: { children: React.ReactNode }
                 name: 'What are the coaching timings at Cerebrum Academy Rohini?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our Rohini center operates Monday to Saturday from 7:00 AM to 9:00 PM and Sunday from 9:00 AM to 6:00 PM. We offer multiple batch sessions to accommodate Rohini students flexible schedules. Call +91-9870-424-442 to know the best timing for your needs.',
+                  text: 'Our Rohini center operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 10:00 AM to 6:00 PM. We offer multiple batch sessions to accommodate Rohini students flexible schedules. Call +91-88264-44334 to know the best timing for your needs.',
                 },
               },
               {
@@ -255,7 +257,7 @@ export default function RohiniLayout({ children }: { children: React.ReactNode }
                 name: 'Is there metro access to Cerebrum Academy Rohini center?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes! Cerebrum Academy Rohini is near Rohini West Metro Station on the Blue Line, making it highly accessible. Students from across North Delhi can easily reach us via metro. The center is just a short walk from the metro station.',
+                  text: 'Yes! Cerebrum Academy Rohini is near Rohini West Metro Station on the Red Line, making it highly accessible. Students from across North Delhi can easily reach us via metro. The center is just a short walk from the metro station.',
                 },
               },
               {
@@ -263,7 +265,7 @@ export default function RohiniLayout({ children }: { children: React.ReactNode }
                 name: 'What is the fee structure for NEET coaching at Cerebrum Academy Rohini?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and scholarship programs for deserving Rohini students. Contact +91-9870-424-442 or cerebrumacademy@gmail.com for detailed pricing.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and scholarship programs for deserving Rohini students. Contact +91-88264-44334 or info@cerebrumbiologyacademy.com for detailed pricing.',
                 },
               },
             ],

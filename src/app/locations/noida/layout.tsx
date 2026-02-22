@@ -57,11 +57,13 @@ export const metadata: Metadata = {
 function NoidaServiceSchema() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
+    '@type': 'LocalBusiness',
+    additionalType: 'EducationalOrganization',
     name: 'Cerebrum Biology Academy - Noida',
-    description: 'Best NEET Biology coaching in Noida with AIIMS faculty',
+    description: 'Best NEET Biology coaching in Noida with AIIMS faculty. 98% success rate, small batches, Sector 62 location.',
     url: 'https://cerebrumbiologyacademy.com/locations/noida',
     telephone: '+91-88264-44334',
+    email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'B-45, Sector 62',
@@ -84,74 +86,36 @@ function NoidaServiceSchema() {
       'Sector 63',
       'Noida City Centre',
       'Greater Noida',
-      'Noida Extension',
-      'Ghaziabad',
+      'Greater Noida West',
+      'Gaur City',
     ],
+    // IMPORTANT: Must match Google Business Profile exactly (verified Feb 2026)
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '320',
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
       worstRating: '1',
     },
+    priceRange: '₹₹',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '00:00',
-        closes: '23:59',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '08:00',
+        closes: '20:00',
       },
-    ],
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
-function NoidaLocalBusinessSchema() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    'name': 'Cerebrum Biology Academy - Noida',
-    'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
-    'url': 'https://cerebrumbiologyacademy.com/locations/noida',
-    'telephone': '+91-9870-424-442',
-    'email': 'cerebrumacademy@gmail.com',
-    'address': {
-      '@type': 'PostalAddress',
-      'streetAddress': 'Near South Extension',
-      'addressLocality': 'Noida',
-      'addressRegion': 'Uttar Pradesh',
-      'postalCode': '110049',
-      'addressCountry': 'IN',
-    },
-    'geo': {
-      '@type': 'GeoCoordinates',
-      'latitude': 28.5355,
-      'longitude': 77.3910,
-    },
-    'openingHoursSpecification': [
       {
         '@type': 'OpeningHoursSpecification',
-        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        'opens': '08:00',
-        'closes': '20:00',
+        dayOfWeek: 'Sunday',
+        opens: '10:00',
+        closes: '18:00',
       },
     ],
-    'priceRange': '₹45,000 - ₹1,80,000',
-    'aggregateRating': {
-      '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '485',
-      'bestRating': '5',
-    },
-    'sameAs': [
-      'https://www.youtube.com/@CerebrumBiologyAcademy',
-      'https://www.instagram.com/cerebrumbiologyacademy/',
+    sameAs: [
+      'https://www.facebook.com/cerebrumbiologyacademy',
+      'https://www.instagram.com/cerebrumbiologyacademy',
+      'https://www.youtube.com/@cerebrumbiologyacademy',
     ],
   }
 
@@ -162,12 +126,14 @@ function NoidaLocalBusinessSchema() {
     />
   )
 }
+
+// NoidaLocalBusinessSchema REMOVED — was duplicate with wrong address (South Extension/110049 for Noida)
+// LocalBusiness schema is now handled by NoidaServiceSchema above with correct Sector 62 address
 
 export default function NoidaLocationLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <NoidaServiceSchema />
-      <NoidaLocalBusinessSchema />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -180,7 +146,7 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
                 name: 'How far is Cerebrum Academy from Noida Sector 62?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy is approximately 20-25 minutes from Noida Sector 62 depending on traffic conditions. Our main center is located at South Extension Part 2, New Delhi. Noida students can reach us via the Delhi-Noida expressway which is well-connected.',
+                  text: 'Cerebrum Academy has a dedicated center in Noida itself at B-45, Sector 62, making it extremely convenient for Noida students. It is right in the heart of Sector 62 near the metro station, so no need to travel to Delhi.',
                 },
               },
               {
@@ -196,7 +162,7 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
                 name: 'What are the batch timings at Cerebrum Academy for Noida students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM, with Sundays from 9:00 AM to 6:00 PM. We offer flexible batch schedules including morning, afternoon, and evening batches. Noida students can choose timings that suit their commute from Sector 62. Contact +91-9870-424-442 for details.',
+                  text: 'Our Noida center at B-45, Sector 62 operates Monday to Saturday from 8:00 AM to 8:00 PM, with Sundays from 10:00 AM to 6:00 PM. We offer flexible batch schedules including morning, afternoon, and evening batches. Contact +91-88264-44334 for details.',
                 },
               },
               {
@@ -204,7 +170,7 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
                 name: 'How can Noida students reach Cerebrum Academy from Sector 62?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'From Noida Sector 62, students can reach our South Extension center via the Delhi-Noida expressway (25 minutes drive). Alternatively, they can take the metro to Lajpat Nagar Station and reach our center by foot or auto. The location is easily accessible for regular coaching attendance.',
+                  text: 'Our Noida center at B-45, Sector 62 is just a short walk from Sector 62 Metro Station on the Blue Line. Students from all Noida sectors can easily reach us by metro, bus, or personal vehicle. The location is right in the IT hub area with excellent connectivity.',
                 },
               },
               {
@@ -212,7 +178,7 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
                 name: 'What are the NEET coaching fees for Noida students at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer special packages for Noida students and flexible payment options. Call us at +91-9870-424-442 or email cerebrumacademy@gmail.com for personalized fee consultation.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer special packages for Noida students and flexible payment options. Call us at +91-88264-44334 or email info@cerebrumbiologyacademy.com for personalized fee consultation.',
                 },
               },
             ],

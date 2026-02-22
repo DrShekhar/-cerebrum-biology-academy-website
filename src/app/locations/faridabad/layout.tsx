@@ -56,23 +56,25 @@ export const metadata: Metadata = {
 function FaridabadServiceSchema() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
+    '@type': 'LocalBusiness',
+    additionalType: 'EducationalOrganization',
     name: 'Cerebrum Biology Academy - Faridabad',
-    description: 'Best NEET Biology coaching in Faridabad with AIIMS faculty',
+    description: 'Best NEET Biology coaching in Faridabad with AIIMS faculty. 98% success rate, small batches, Sector 17 location.',
     url: 'https://cerebrumbiologyacademy.com/locations/faridabad',
     telephone: '+91-88264-44334',
+    email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'SCO 23, Sector 15',
+      streetAddress: 'Sector 17',
       addressLocality: 'Faridabad',
       addressRegion: 'Haryana',
-      postalCode: '121007',
+      postalCode: '121002',
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 28.3948,
-      longitude: 77.3117,
+      latitude: 28.4089,
+      longitude: 77.3178,
     },
     areaServed: [
       'Sector 15',
@@ -82,75 +84,37 @@ function FaridabadServiceSchema() {
       'NIT Faridabad',
       'Ballabgarh',
       'Old Faridabad',
-      'Badarpur',
+      'Greater Faridabad',
       'Surajkund',
-      'Palwal',
+      'BPTP',
     ],
+    // IMPORTANT: Must match Google Business Profile exactly (verified Feb 2026)
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '280',
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
       worstRating: '1',
     },
+    priceRange: '₹₹',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '00:00',
-        closes: '23:59',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '08:00',
+        closes: '20:00',
       },
-    ],
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
-function FaridabadLocalBusinessSchema() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    'name': 'Cerebrum Biology Academy - Faridabad',
-    'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
-    'url': 'https://cerebrumbiologyacademy.com/locations/faridabad',
-    'telephone': '+91-9870-424-442',
-    'email': 'cerebrumacademy@gmail.com',
-    'address': {
-      '@type': 'PostalAddress',
-      'streetAddress': 'Near South Extension',
-      'addressLocality': 'Faridabad',
-      'addressRegion': 'Haryana',
-      'postalCode': '110049',
-      'addressCountry': 'IN',
-    },
-    'geo': {
-      '@type': 'GeoCoordinates',
-      'latitude': 28.4089,
-      'longitude': 77.3178,
-    },
-    'openingHoursSpecification': [
       {
         '@type': 'OpeningHoursSpecification',
-        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        'opens': '08:00',
-        'closes': '20:00',
+        dayOfWeek: 'Sunday',
+        opens: '10:00',
+        closes: '18:00',
       },
     ],
-    'priceRange': '₹45,000 - ₹1,80,000',
-    'aggregateRating': {
-      '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '485',
-      'bestRating': '5',
-    },
-    'sameAs': [
-      'https://www.youtube.com/@CerebrumBiologyAcademy',
-      'https://www.instagram.com/cerebrumbiologyacademy/',
+    sameAs: [
+      'https://www.facebook.com/cerebrumbiologyacademy',
+      'https://www.instagram.com/cerebrumbiologyacademy',
+      'https://www.youtube.com/@cerebrumbiologyacademy',
     ],
   }
 
@@ -161,6 +125,9 @@ function FaridabadLocalBusinessSchema() {
     />
   )
 }
+
+// FaridabadLocalBusinessSchema REMOVED — was duplicate with wrong address (South Extension/110049 for Faridabad)
+// LocalBusiness schema is now handled by FaridabadServiceSchema above with correct Sector 17 address
 
 function FaridabadFAQSchema() {
   const schema = {
@@ -188,7 +155,7 @@ function FaridabadFAQSchema() {
         name: 'What are the coaching timings at Cerebrum Faridabad center?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Faridabad center operates 7 days a week with extended hours. Monday to Saturday: 8:00 AM to 8:00 PM, Sunday: 9:00 AM to 6:00 PM. Multiple batch timings are available for Faridabad students. Contact +91-9870-424-442 for specific batch schedules.',
+          text: 'Cerebrum Faridabad center operates 7 days a week with extended hours. Monday to Saturday: 8:00 AM to 8:00 PM, Sunday: 9:00 AM to 6:00 PM. Multiple batch timings are available for Faridabad students. Contact +91-88264-44334 for specific batch schedules.',
         },
       },
       {
@@ -204,7 +171,7 @@ function FaridabadFAQSchema() {
         name: 'What are the NEET coaching fees at Cerebrum Faridabad?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible EMI options for Faridabad students. Contact cerebrumacademy@gmail.com or call +91-9870-424-442 for detailed fee structure and special Faridabad offers.',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible EMI options for Faridabad students. Contact info@cerebrumbiologyacademy.com or call +91-88264-44334 for detailed fee structure and special Faridabad offers.',
         },
       },
     ],
@@ -344,7 +311,6 @@ export default function FaridabadLocationLayout({ children }: { children: React.
   return (
     <>
       <FaridabadServiceSchema />
-      <FaridabadLocalBusinessSchema />
       <FaridabadFAQSchema />
       <FaridabadEventSchema />      <script
         type="application/ld+json"

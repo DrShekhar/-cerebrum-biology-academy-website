@@ -375,46 +375,16 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       minValue: 10,
       maxValue: 20,
     },
+    // IMPORTANT: Review count must match Google Business Profile exactly
+    // Last verified: Feb 2026 — 38 reviews on Google, 5.0 rating
+    // MUST stay in sync with ConsistentNAP.tsx and metrics.ts
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue:
-        locationId === 'south-extension'
-          ? '4.9'
-          : locationId === 'rohini'
-            ? '4.8'
-            : locationId === 'green-park'
-              ? '4.9'
-              : locationId === 'gurugram'
-                ? '4.7'
-                : locationId === 'noida'
-                  ? '4.8'
-                  : '4.8',
+      ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount:
-        locationId === 'south-extension'
-          ? '127'
-          : locationId === 'rohini'
-            ? '89'
-            : locationId === 'green-park'
-              ? '64'
-              : locationId === 'gurugram'
-                ? '43'
-                : locationId === 'noida'
-                  ? '28'
-                  : '31',
-      reviewCount:
-        locationId === 'south-extension'
-          ? '127'
-          : locationId === 'rohini'
-            ? '89'
-            : locationId === 'green-park'
-              ? '64'
-              : locationId === 'gurugram'
-                ? '43'
-                : locationId === 'noida'
-                  ? '28'
-                  : '31',
+      ratingCount: '38',
+      reviewCount: '38',
     },
     review: location.reviews.map((review) => ({
       '@type': 'Review',

@@ -35,8 +35,10 @@ function SouthExtensionServiceSchema() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '2500',
+      ratingValue: '5.0',
+      reviewCount: '38',
+      bestRating: '5',
+      worstRating: '1',
     },
     areaServed: [
       'South Extension',
@@ -273,7 +275,7 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
                 name: 'What batch timings are available at Cerebrum Academy South Extension?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our flagship center operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 9:00 AM to 6:00 PM. We offer multiple batch options including morning, afternoon, and evening sessions. Call +91-9870-424-442 to check your preferred batch timing.',
+                  text: 'Our flagship center operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 9:00 AM to 6:00 PM. We offer multiple batch options including morning, afternoon, and evening sessions. Call +91-88264-44334 to check your preferred batch timing.',
                 },
               },
               {
@@ -289,7 +291,7 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
                 name: 'What are the coaching fees at Cerebrum Academy South Extension?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and customized packages for South Extension students. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee structure.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and customized packages for South Extension students. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed fee structure.',
                 },
               },
             ],
