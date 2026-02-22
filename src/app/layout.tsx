@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
+import AdBlockDetector from '@/components/analytics/AdBlockDetector'
+import { SEOHealthCheck } from '@/components/seo/SEOHealthCheck'
+import { CanonicalManager } from '@/components/seo/CanonicalManager'
 import FacebookPixel from '@/components/analytics/FacebookPixel'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
 // PERFORMANCE: Using hybrid header for faster mobile LCP
@@ -112,6 +115,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <StructuredData />
+        <SEOHealthCheck />
 
         {/* Google Ads is loaded by GoogleAnalytics component with lazyOnload strategy - no need for duplicate here */}
 
@@ -256,8 +260,13 @@ export default function RootLayout({
                             <DynamicMaintenancePopup />
                           </ConditionalHeaderFooter>
                         </ConditionalHeaderFooterProvider>
+                        {/* SEO: Canonical URL manager - wrapped in Suspense for useSearchParams */}
+                        <Suspense fallback={null}>
+                          <CanonicalManager />
+                        </Suspense>
                         {/* PERFORMANCE: Analytics after main content for better LCP */}
                         <GoogleAnalytics />
+                        <AdBlockDetector />
                         <FacebookPixel />
                         <WebVitalsReporter />
                     </PersonalizationProvider>
