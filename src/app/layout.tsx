@@ -24,6 +24,13 @@ import {
   ConditionalHeaderFooterProvider,
 } from '@/components/layout/ConditionalHeaderFooter'
 import { Suspense } from 'react'
+import dynamic from 'next/dynamic'
+
+// CONVERSION: Sticky mobile call bar — shows Call + WhatsApp on mobile at all times
+const StickyMobileCallBar = dynamic(
+  () => import('@/components/layout/StickyMobileCallBar').then((m) => m.StickyMobileCallBar),
+  { ssr: false }
+)
 import { RouteChangeIndicator } from '@/components/navigation/RouteChangeIndicator'
 import {
   FloatingCTA,
@@ -260,6 +267,8 @@ export default function RootLayout({
                             <DynamicMaintenancePopup />
                           </ConditionalHeaderFooter>
                         </ConditionalHeaderFooterProvider>
+                        {/* CONVERSION: Sticky mobile call bar — always visible on mobile */}
+                        <StickyMobileCallBar />
                         {/* SEO: Canonical URL manager - wrapped in Suspense for useSearchParams */}
                         <Suspense fallback={null}>
                           <CanonicalManager />

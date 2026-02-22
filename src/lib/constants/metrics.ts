@@ -20,11 +20,12 @@ export const CEREBRUM_METRICS = {
   medicalSelections: 67,
   medicalSelectionsText: '67+ AIIMS Selections',
 
-  // Reviews/Ratings (actual Google reviews)
+  // Reviews/Ratings (actual Google reviews — verified Feb 2026)
+  // MUST match ConsistentNAP.tsx schema and Google Business Profile
   rating: 5.0,
   ratingText: '5.0/5',
-  reviewCount: 32,
-  reviewCountText: '32 reviews',
+  reviewCount: 38,
+  reviewCountText: '38 reviews',
 
   // Batch info
   batchSizeMin: 15,

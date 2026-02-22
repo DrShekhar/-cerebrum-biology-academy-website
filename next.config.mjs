@@ -9,6 +9,7 @@ import {
   neetCoachingLocationRedirects,
   localAreaPageRedirects,
   gsc404CleanupRedirects,
+  thinPageConsolidationRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1496,6 +1497,7 @@ const nextConfig = {
       ...neetCoachingLocationRedirects,
       ...localAreaPageRedirects,
       ...gsc404CleanupRedirects,
+      ...thinPageConsolidationRedirects,
     ]
   },
 

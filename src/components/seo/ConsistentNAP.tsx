@@ -127,13 +127,15 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, UPI, Bank Transfer, EMI',
     image: `${BASE_URL}/og-image.jpg`,
+    // IMPORTANT: Review count must match Google Business Profile exactly
+    // Last verified: Feb 2026 — 38 reviews on Google
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
+      ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '127',
-      reviewCount: '127',
+      ratingCount: '38',
+      reviewCount: '38',
     },
   }
 
