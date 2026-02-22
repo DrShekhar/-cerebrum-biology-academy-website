@@ -1,5 +1,5 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { trackWhatsAppLead, GOOGLE_ADS_ID } from '@/lib/ads/googleAdsConversion'
+import { trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
 
 const WHATSAPP_NUMBER = CONTACT_INFO.whatsapp.number
 const API_ENDPOINT = '/api/analytics/whatsapp-click'
@@ -142,21 +142,8 @@ export async function trackWhatsAppClick(
 export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Promise<void> {
   const result = await trackWhatsAppClick(params)
 
-  // Fire Google Ads conversion for WhatsApp clicks (SECONDARY conversion - lower priority than calls)
-  trackWhatsAppLead(params.source, 50) // Lower priority than phone calls (100)
-
-  // Also fire gtag event for real-time tracking
-  if (typeof window !== 'undefined' && window.gtag && GOOGLE_ADS_ID) {
-    window.gtag('event', 'conversion', {
-      send_to: GOOGLE_ADS_ID,
-      event_category: 'engagement',
-      event_label: 'whatsapp_click',
-      value: 50,
-      currency: 'INR',
-      whatsapp_source: params.source,
-      whatsapp_campaign: params.campaign || 'direct',
-    })
-  }
+  // Fire Google Ads conversion for WhatsApp clicks
+  trackWhatsAppLead(params.source, 50)
 
   window.open(result.whatsappUrl, '_blank', 'noopener,noreferrer')
 }

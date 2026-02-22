@@ -1,35 +1,33 @@
 /**
- * Google Ads Conversion Tracking Configuration
+ * Google Ads Conversion Tracking for Cerebrum Biology Academy
+ * Tracking ID: AW-11121440988
+ * Only tracking: WhatsApp Lead + Phone Call Click
  *
- * IMPORTANT: Replace placeholder labels with actual conversion labels from Google Ads dashboard
- * Go to: Google Ads > Tools > Conversions > [Your Conversion] > Tag setup > Use Google Tag Manager
- *
- * Format: 'AW-CONVERSION_ID/CONVERSION_LABEL'
+ * Real conversion labels from Google Ads dashboard (created Feb 2026)
  */
 
-const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-11121440988'
+const GOOGLE_ADS_ID = 'AW-11121440988'
 
+// Real conversion labels from Google Ads
+const CONVERSION_LABELS = {
+  whatsAppLead: 'spP_CIuY5_wbENzxjrcp',
+  phoneCall: 'lsthCI6Y5_wbENzxjrcp',
+}
+
+// Keep the old GOOGLE_ADS_CONVERSIONS export for any direct references
 export const GOOGLE_ADS_CONVERSIONS = {
-  // Lead conversions
-  DEMO_BOOKING: `${GOOGLE_ADS_ID}/demo_booking`,
-  LEAD_FORM: `${GOOGLE_ADS_ID}/lead_form`,
-  ENROLLMENT_START: `${GOOGLE_ADS_ID}/enrollment_start`,
-
-  // Contact conversions
-  PHONE_CALL: `${GOOGLE_ADS_ID}/phone_call`,
-  WHATSAPP_CLICK: `${GOOGLE_ADS_ID}/whatsapp_click`,
-
-  // Purchase/Enrollment conversions
-  ENROLLMENT_COMPLETE: `${GOOGLE_ADS_ID}/enrollment_complete`,
-  PAYMENT_SUCCESS: `${GOOGLE_ADS_ID}/payment_success`,
-
-  // Engagement conversions
-  COUNSELING_BOOKED: `${GOOGLE_ADS_ID}/counseling_booked`,
-  DOWNLOAD_RESOURCE: `${GOOGLE_ADS_ID}/download_resource`,
-  VIDEO_WATCHED: `${GOOGLE_ADS_ID}/video_watched`,
-
-  // Thank you page
-  THANK_YOU_PAGE: `${GOOGLE_ADS_ID}/thank_you`,
+  PHONE_CALL: `${GOOGLE_ADS_ID}/${CONVERSION_LABELS.phoneCall}`,
+  WHATSAPP_CLICK: `${GOOGLE_ADS_ID}/${CONVERSION_LABELS.whatsAppLead}`,
+  // Backward compatibility — these are no-ops (no real labels)
+  DEMO_BOOKING: '',
+  LEAD_FORM: '',
+  ENROLLMENT_START: '',
+  ENROLLMENT_COMPLETE: '',
+  PAYMENT_SUCCESS: '',
+  COUNSELING_BOOKED: '',
+  DOWNLOAD_RESOURCE: '',
+  VIDEO_WATCHED: '',
+  THANK_YOU_PAGE: '',
 } as const
 
 export type ConversionType = keyof typeof GOOGLE_ADS_CONVERSIONS
@@ -44,11 +42,13 @@ export function trackGoogleAdsConversion(
   transactionId?: string
 ) {
   if (typeof window === 'undefined' || !(window as any).gtag) {
-    console.warn('Google Ads tracking not available')
     return
   }
 
   const conversionLabel = GOOGLE_ADS_CONVERSIONS[conversionType]
+
+  // Skip if no real label (backward compat no-ops)
+  if (!conversionLabel) return
 
   const conversionData: Record<string, any> = {
     send_to: conversionLabel,
@@ -64,11 +64,6 @@ export function trackGoogleAdsConversion(
   }
 
   ;(window as any).gtag('event', 'conversion', conversionData)
-
-  // Also log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Google Ads Conversion:', conversionType, conversionData)
-  }
 }
 
 /**
@@ -79,10 +74,12 @@ export function trackPhoneCallConversion(phoneNumber?: string) {
 
   // Also track as GA4 event
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('event', 'phone_call_click', {
-      event_category: 'contact',
-      event_label: phoneNumber || 'header',
-      value: 1,
+    ;(window as any).gtag('event', 'generate_lead', {
+      currency: 'INR',
+      value: 0,
+      lead_type: 'phone_call',
+      source: phoneNumber || 'header',
+      contact_method: 'phone',
     })
   }
 }
@@ -95,69 +92,17 @@ export function trackWhatsAppConversion(source?: string) {
 
   // Also track as GA4 event
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('event', 'whatsapp_click', {
-      event_category: 'contact',
-      event_label: source || 'unknown',
-      value: 1,
-    })
-  }
-}
-
-/**
- * Track demo booking conversion
- */
-export function trackDemoBookingConversion(courseType?: string) {
-  trackGoogleAdsConversion('DEMO_BOOKING', 0, 'INR')
-
-  // Also track as GA4 event
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('event', 'demo_booking', {
-      event_category: 'lead',
-      event_label: courseType || 'general',
-      value: 1,
-    })
-  }
-}
-
-/**
- * Track enrollment conversion with value
- */
-export function trackEnrollmentConversion(
-  value: number,
-  courseType?: string,
-  transactionId?: string
-) {
-  trackGoogleAdsConversion('ENROLLMENT_COMPLETE', value, 'INR', transactionId)
-
-  // Also track as GA4 event
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('event', 'purchase', {
-      transaction_id: transactionId,
-      value: value,
-      currency: 'INR',
-      items: [
-        {
-          item_name: courseType || 'NEET Biology Course',
-          price: value,
-          quantity: 1,
-        },
-      ],
-    })
-  }
-}
-
-/**
- * Track lead form submission
- */
-export function trackLeadFormConversion(formName?: string) {
-  trackGoogleAdsConversion('LEAD_FORM')
-
-  // Also track as GA4 event
-  if (typeof window !== 'undefined' && (window as any).gtag) {
     ;(window as any).gtag('event', 'generate_lead', {
-      event_category: 'lead',
-      event_label: formName || 'contact_form',
-      value: 1,
+      currency: 'INR',
+      value: 0,
+      lead_type: 'whatsapp',
+      source: source || 'unknown',
+      contact_method: 'whatsapp',
     })
   }
 }
+
+// Backward compatibility no-ops — only WhatsApp and Phone Call are tracked
+export function trackDemoBookingConversion(_courseType?: string) {}
+export function trackEnrollmentConversion(_value: number, _courseType?: string, _transactionId?: string) {}
+export function trackLeadFormConversion(_formName?: string) {}
