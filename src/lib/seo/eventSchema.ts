@@ -92,7 +92,7 @@ export const upcomingEvents: EventData[] = [
     endDate: '2026-02-01T12:00:00+05:30',
     location: {
       name: 'Cerebrum Biology Academy - South Extension',
-      address: 'Block D, South Extension Part 2',
+      address: 'D 35, South Extension Part 2',
       city: 'New Delhi',
       state: 'Delhi',
       postalCode: '110049',
@@ -110,7 +110,7 @@ export const upcomingEvents: EventData[] = [
     startDate: '2026-02-15T09:00:00+05:30',
     location: {
       name: 'Cerebrum Biology Academy - South Extension',
-      address: 'Block D, South Extension Part 2',
+      address: 'D 35, South Extension Part 2',
       city: 'New Delhi',
       state: 'Delhi',
       postalCode: '110049',
@@ -158,7 +158,7 @@ export const upcomingEvents: EventData[] = [
     endDate: '2026-01-25T17:00:00+05:30',
     location: {
       name: 'Cerebrum Biology Academy - South Extension',
-      address: 'Block D, South Extension Part 2',
+      address: 'D 35, South Extension Part 2',
       city: 'New Delhi',
       state: 'Delhi',
       postalCode: '110049',

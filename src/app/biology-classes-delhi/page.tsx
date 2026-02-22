@@ -62,7 +62,7 @@ const centers = [
   {
     id: 'south-extension',
     name: 'South Delhi Center',
-    address: 'Block D, South Extension Part 2, New Delhi 110049',
+    address: 'D 35, South Extension Part 2, New Delhi 110049',
     areas: ['South Extension', 'GK', 'Lajpat Nagar', 'Defence Colony', 'Hauz Khas', 'Saket'],
     metro: 'AIIMS Metro Station (Yellow Line)',
     timings: '8:00 AM - 8:00 PM',
@@ -140,7 +140,7 @@ const faqs = [
   {
     question: 'Where are your biology coaching centers located in Delhi?',
     answer:
-      'We have 3 biology coaching centers in Delhi NCR: 1) Rohini - 211 Vikas Surya Tower, DC Chauk (near DC Chauk Metro), 2) South Delhi - Block D, South Extension Part 2 (near AIIMS Metro), 3) Gurugram - M2K Corporate Park, Sector 51. All centers are easily accessible by metro.',
+      'We have 3 biology coaching centers in Delhi NCR: 1) Rohini - 211 Vikas Surya Tower, DC Chauk (near DC Chauk Metro), 2) South Delhi - D 35, South Extension Part 2 (near AIIMS Metro), 3) Gurugram - M2K Corporate Park, Sector 51. All centers are easily accessible by metro.',
   },
   {
     question: 'What makes Cerebrum different from other biology coaching in Delhi?',
@@ -231,7 +231,7 @@ export default function BiologyClassesDelhiPage() {
       },
       {
         '@type': 'PostalAddress',
-        streetAddress: 'Block D, South Extension Part 2',
+        streetAddress: 'D 35, South Extension Part 2',
         addressLocality: 'South Extension',
         addressRegion: 'Delhi',
         postalCode: '110049',

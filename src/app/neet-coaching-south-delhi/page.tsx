@@ -308,7 +308,7 @@ export default function NEETCoachingSouthDelhiPage() {
       <NearMeKeywordInjector
         location="South Delhi"
         parentLocation="Delhi NCR"
-        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
         centerPhone="+91-8826-444-334"
         nearbyAreas={['Hauz Khas', 'Greater Kailash', 'Defence Colony', 'Vasant Vihar', 'Lajpat Nagar', 'Malviya Nagar', 'Saket', 'Green Park']}
       />

@@ -57,7 +57,7 @@ const centers = [
   {
     id: 'south-extension',
     name: 'South Extension',
-    address: 'Block D, South Extension Part 2, New Delhi - 110049',
+    address: 'D 35, South Extension Part 2, New Delhi - 110049',
     phone: CONTACT_INFO.phone.primary,
     metro: 'South Extension Market',
     nearbyAreas: ['Greater Kailash', 'Defence Colony', 'Lajpat Nagar'],

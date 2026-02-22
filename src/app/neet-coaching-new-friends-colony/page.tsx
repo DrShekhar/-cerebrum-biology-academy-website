@@ -33,7 +33,7 @@ const faqItems = [
   {
     question: 'Where is the closest Cerebrum center to New Friends Colony?',
     answer:
-      'Our South Extension center at Block D, South Extension Part 2 is just 5 minutes walk from New Friends Colony. This central location makes it perfect for NFC, Maharani Bagh, and surrounding areas.',
+      'Our South Extension center at D 35, South Extension Part 2 is just 5 minutes walk from New Friends Colony. This central location makes it perfect for NFC, Maharani Bagh, and surrounding areas.',
   },
   {
     question: 'What makes NFC a great location for NEET coaching?',
@@ -105,7 +105,7 @@ export default function NEETCoachingNewFriendsColonyPage() {
                   <MapPin className="w-6 h-6 text-green-500 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-gray-900">Location</p>
-                    <p className="text-gray-700">Block D, South Extension Part 2, New Delhi - 110049</p>
+                    <p className="text-gray-700">D 35, South Extension Part 2, New Delhi - 110049</p>
                     <p className="text-sm text-gray-600">5 min walk from New Friends Colony</p>
                   </div>
                 </div>

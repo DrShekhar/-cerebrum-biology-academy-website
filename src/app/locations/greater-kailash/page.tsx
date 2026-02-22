@@ -68,7 +68,7 @@ export default function GreaterKailashLocationPage() {
 
   const nearestCenter = {
     name: 'South Extension Center (Flagship)',
-    address: 'Block D, South Extension Part 2, New Delhi 110049',
+    address: 'D 35, South Extension Part 2, New Delhi 110049',
     metro: 'Lajpat Nagar Metro (Violet Line) - 5 min walk',
     distance: 'Just 5 min from GK via Outer Ring Road',
     features: [

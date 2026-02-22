@@ -12,7 +12,7 @@ function SouthExtensionServiceSchema() {
     telephone: '+91-88264-44334',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Block D, South Extension Part 2',
+      streetAddress: 'D 35, South Extension Part 2',
       addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110049',
@@ -141,7 +141,7 @@ function SouthExtensionEventSchema() {
           name: 'Cerebrum Biology Academy - South Extension',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Block D, South Extension Part 2',
+            streetAddress: 'D 35, South Extension Part 2',
             addressLocality: 'New Delhi',
             addressRegion: 'Delhi',
             postalCode: '110049',
@@ -176,7 +176,7 @@ function SouthExtensionEventSchema() {
           name: 'Cerebrum Biology Academy - South Extension',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Block D, South Extension Part 2',
+            streetAddress: 'D 35, South Extension Part 2',
             addressLocality: 'New Delhi',
             addressRegion: 'Delhi',
             postalCode: '110049',
@@ -210,7 +210,7 @@ function SouthExtensionEventSchema() {
           name: 'Cerebrum Biology Academy - South Extension',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Block D, South Extension Part 2',
+            streetAddress: 'D 35, South Extension Part 2',
             addressLocality: 'New Delhi',
             addressRegion: 'Delhi',
             postalCode: '110049',
@@ -259,7 +259,7 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
                 name: 'How close is Cerebrum Academy to South Extension?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy flagship center is located directly in South Extension Part 2, Block D, New Delhi. It is at the heart of South Extension, making it extremely convenient for South Extension students with no commute required.',
+                  text: 'Cerebrum Academy flagship center is located directly in South Extension Part 2, D 35, New Delhi. It is at the heart of South Extension, making it extremely convenient for South Extension students with no commute required.',
                 },
               },
               {

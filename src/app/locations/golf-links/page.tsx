@@ -138,7 +138,7 @@ export default function GolfLinksPage() {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-gray-500 mt-1" />
                     <p className="text-gray-700 font-medium">
-                      Block D, South Extension Part 2, New Delhi 110049
+                      D 35, South Extension Part 2, New Delhi 110049
                     </p>
                   </div>
                   <div className="flex items-center gap-3">

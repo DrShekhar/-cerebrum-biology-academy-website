@@ -44,7 +44,7 @@ const centers = [
   },
   {
     name: 'South Extension Center',
-    address: 'Block D, Near McD, South Extension Part 2',
+    address: 'D 35, Near McD, South Extension Part 2',
     city: 'New Delhi',
     pincode: '110049',
     phone: '+918826444334',

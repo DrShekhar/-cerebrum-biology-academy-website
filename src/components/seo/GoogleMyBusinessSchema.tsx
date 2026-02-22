@@ -31,7 +31,7 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     name: 'Cerebrum Biology Academy - South Extension (Flagship)',
     slug: 'south-extension',
     address: {
-      streetAddress: 'Block D, South Extension Part 2',
+      streetAddress: 'D 35, South Extension Part 2',
       addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110049',
@@ -184,7 +184,7 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     name: 'Cerebrum Biology Academy - Faridabad',
     slug: 'faridabad',
     address: {
-      streetAddress: 'Sector 17',
+      streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
       addressLocality: 'Faridabad',
       addressRegion: 'Haryana',
       postalCode: '121002',

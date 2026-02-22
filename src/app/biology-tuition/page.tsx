@@ -195,7 +195,7 @@ const centers = [
   },
   {
     name: 'South Extension Center',
-    address: 'Block D, South Extension 2, New Delhi',
+    address: 'D 35, South Extension Part 2, New Delhi',
     areas: ['GK', 'Lajpat Nagar', 'Defence Colony', 'Kailash Colony', 'Nehru Place'],
   },
   {
@@ -544,7 +544,7 @@ export default function BiologyTuitionPage() {
               },
               {
                 '@type': 'PostalAddress',
-                streetAddress: 'Block D, South Extension 2',
+                streetAddress: 'D 35, South Extension Part 2',
                 addressLocality: 'New Delhi',
                 addressRegion: 'Delhi',
                 postalCode: '110049',

@@ -16,7 +16,7 @@ const BUSINESS_INFO = {
   phone: CONTACT_INFO.phone.formatted.primary,
   email: 'info@cerebrumbiologyacademy.com',
   address: {
-    streetAddress: 'Block D, South Extension Part 2',
+    streetAddress: 'D 35, South Extension Part 2',
     addressLocality: 'New Delhi',
     addressRegion: 'Delhi',
     postalCode: '110049',
@@ -43,7 +43,7 @@ const BUSINESS_INFO = {
     },
     {
       name: 'Cerebrum Biology Academy - South Extension',
-      address: 'Block D, South Extension Part 2, New Delhi - 110049',
+      address: 'D 35, South Extension Part 2, New Delhi - 110049',
       phone: CONTACT_INFO.phone.formatted.primary,
       geo: { lat: '28.5725', lng: '77.2217' },
     },

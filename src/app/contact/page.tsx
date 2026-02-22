@@ -157,7 +157,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Visit Our Campus',
-      details: ['Block D, South Extension 2', 'New Delhi 110049'],
+      details: ['D 35, South Extension Part 2', 'New Delhi 110049'],
       color: 'bg-[#3d4d3d]',
     },
     {
@@ -467,7 +467,7 @@ export default function ContactPage() {
                         Main Campus
                       </h4>
                       <p className="text-gray-600 text-sm sm:text-base">
-                        Block D, South Extension 2, New Delhi 110049
+                        D 35, South Extension Part 2, New Delhi 110049
                       </p>
                     </div>
                   </div>

@@ -37,7 +37,7 @@ export default function FaridabadCoachingLayout({ children }: { children: React.
       <NearMeKeywordInjector
         location="Faridabad"
         parentLocation="Delhi NCR"
-        centerAddress="Sector 17, Faridabad, Haryana - 121002"
+        centerAddress="SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17, Faridabad - 121002"
         centerPhone="+91-8826-444-334"
         nearbyAreas={['Sector 21', 'NIT Faridabad', 'Ballabgarh', 'Greater Faridabad', 'Sector 15', 'Neharpar', 'BPTP', 'Surajkund']}
       />

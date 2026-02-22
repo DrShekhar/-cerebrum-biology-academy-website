@@ -75,7 +75,7 @@ export default function SouthDelhiLocationPage() {
 
   const nearestCenter = {
     name: 'South Extension Center (Flagship)',
-    address: 'Block D, South Extension Part 2, New Delhi 110049',
+    address: 'D 35, South Extension Part 2, New Delhi 110049',
     metro: 'Lajpat Nagar Metro (Violet Line) - 5 min walk',
     features: [
       'Flagship center - Dr. Shekhar personally teaches',
@@ -89,7 +89,7 @@ export default function SouthDelhiLocationPage() {
   const faqs = [
     {
       q: 'Where should South Delhi students go for NEET Biology coaching?',
-      a: 'South Delhi students should join our flagship South Extension center, located at Block D, South Extension Part 2. It is just 5 minutes from Lajpat Nagar Metro Station.',
+      a: 'South Delhi students should join our flagship South Extension center, located at D 35, South Extension Part 2. It is just 5 minutes from Lajpat Nagar Metro Station.',
     },
     {
       q: 'Is South Extension center easily accessible from Greater Kailash?',

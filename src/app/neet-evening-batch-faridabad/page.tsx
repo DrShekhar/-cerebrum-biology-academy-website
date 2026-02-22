@@ -490,7 +490,7 @@ export default function NEETEveningBatchFaridabad() {
               name: 'Cerebrum Biology Academy',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Sector 17',
+                streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
                 addressLocality: 'Faridabad',
                 addressRegion: 'Haryana',
                 postalCode: '121002',

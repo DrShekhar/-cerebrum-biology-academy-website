@@ -137,7 +137,7 @@ function generateJsonLd() {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Block D, South Extension Part 2',
+      streetAddress: 'D 35, South Extension Part 2',
       addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110049',

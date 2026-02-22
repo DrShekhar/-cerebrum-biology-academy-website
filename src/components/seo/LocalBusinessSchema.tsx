@@ -112,8 +112,8 @@ const locationData = {
   },
   'south-extension': {
     name: 'Cerebrum Biology Academy - South Extension',
-    address: 'Block D, South Extension 2, New Delhi',
-    streetAddress: 'Block D, South Extension Part 2',
+    address: 'D 35, South Extension Part 2, New Delhi',
+    streetAddress: 'D 35, South Extension Part 2',
     addressLocality: 'South Extension',
     addressRegion: 'Delhi',
     postalCode: '110049',
@@ -208,8 +208,8 @@ const locationData = {
   },
   faridabad: {
     name: 'Cerebrum Biology Academy - Faridabad',
-    address: 'Sector 17, Faridabad',
-    streetAddress: 'Sector 17',
+    address: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17, Faridabad',
+    streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
     addressLocality: 'Faridabad',
     addressRegion: 'Haryana',
     postalCode: '121002',

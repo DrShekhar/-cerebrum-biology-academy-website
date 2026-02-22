@@ -26,7 +26,7 @@ export function generateAggregateRatingSchema(reviews?: ReviewData[]) {
     email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Block D, South Extension Part 2',
+      streetAddress: 'D 35, South Extension Part 2',
       addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110049',

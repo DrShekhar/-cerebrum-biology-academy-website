@@ -478,7 +478,7 @@ export default function BatchTypesPage() {
                 <MapPin className="w-8 h-8 mb-3" />
                 <p className="text-sm text-blue-100 mb-2">Visit Us</p>
                 <p className="font-bold text-sm">
-                  Block D, South Extension Part 2
+                  D 35, South Extension Part 2
                   <br />
                   New Delhi 110049
                 </p>
@@ -537,7 +537,7 @@ export default function BatchTypesPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
                     <p className="text-gray-700">
-                      Block D, South Extension Part 2
+                      D 35, South Extension Part 2
                       <br />
                       New Delhi 110049
                     </p>

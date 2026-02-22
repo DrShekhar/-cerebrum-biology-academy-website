@@ -68,7 +68,7 @@ function CourseSchema() {
         location: {
           '@type': 'Place',
           name: 'South Extension Center',
-          address: 'Block D, South Extension Part 2, New Delhi',
+          address: 'D 35, South Extension Part 2, New Delhi',
         },
       },
       {

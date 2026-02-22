@@ -39,7 +39,7 @@ export function OrganizationSchema() {
     email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Block D, South Extension Part 2',
+      streetAddress: 'D 35, South Extension Part 2',
       addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110049',
@@ -56,7 +56,7 @@ export function OrganizationSchema() {
         name: 'Cerebrum Biology Academy - South Extension (Flagship)',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Block D, South Extension Part 2',
+          streetAddress: 'D 35, South Extension Part 2',
           addressLocality: 'New Delhi',
           addressRegion: 'Delhi',
           postalCode: '110049',
@@ -95,7 +95,7 @@ export function OrganizationSchema() {
         name: 'Cerebrum Biology Academy - Faridabad',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Sector 17',
+          streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
           addressLocality: 'Faridabad',
           addressRegion: 'Haryana',
           postalCode: '121002',
@@ -550,7 +550,7 @@ export function LocalBusinessSchema() {
     paymentAccepted: 'Cash, Credit Card, Debit Card, UPI, Bank Transfer',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Block D, South Extension Part 2',
+      streetAddress: 'D 35, South Extension Part 2',
       addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110049',

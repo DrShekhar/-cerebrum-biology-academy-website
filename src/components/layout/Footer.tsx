@@ -288,7 +288,7 @@ export const Footer = memo(function Footer() {
                     <strong>Gurugram:</strong> M2K Corporate Park, Sector 51, 122018
                   </div>
                   <div>
-                    <strong>South Delhi:</strong> Block D, South Extension 2, 110049
+                    <strong>South Delhi:</strong> D 35, South Extension Part 2, 110049
                   </div>
                 </div>
               </div>

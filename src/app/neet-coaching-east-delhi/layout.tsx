@@ -31,7 +31,7 @@ export default function NEETCoachingEastDelhiLayout({ children }: { children: Re
       <NearMeKeywordInjector
         location="East Delhi"
         parentLocation="Delhi NCR"
-        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
         centerPhone="+91-8826-444-334"
         nearbyAreas={['Laxmi Nagar', 'Preet Vihar', 'Mayur Vihar', 'Patparganj', 'Nirman Vihar', 'Anand Vihar', 'Shahdara', 'Vivek Vihar']}
       />

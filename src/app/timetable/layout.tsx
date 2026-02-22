@@ -70,7 +70,7 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
           {
             '@type': 'Place',
             name: 'Cerebrum Biology Academy - South Extension',
-            address: { '@type': 'PostalAddress', streetAddress: 'Block D, South Extension Part 2', addressLocality: 'New Delhi', postalCode: '110049', addressCountry: 'IN' },
+            address: { '@type': 'PostalAddress', streetAddress: 'D 35, South Extension Part 2', addressLocality: 'New Delhi', postalCode: '110049', addressCountry: 'IN' },
           },
           {
             '@type': 'VirtualLocation',
@@ -176,7 +176,7 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
           {
             '@type': 'Place',
             name: 'Cerebrum Biology Academy - South Extension',
-            address: { '@type': 'PostalAddress', streetAddress: 'Block D, South Extension Part 2', addressLocality: 'New Delhi', postalCode: '110049', addressCountry: 'IN' },
+            address: { '@type': 'PostalAddress', streetAddress: 'D 35, South Extension Part 2', addressLocality: 'New Delhi', postalCode: '110049', addressCountry: 'IN' },
           },
           {
             '@type': 'VirtualLocation',

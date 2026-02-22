@@ -1003,7 +1003,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
         <NearMeKeywordInjector
           location={data.cityName}
           parentLocation="Delhi NCR"
-          centerAddress={data.nearestCenter?.address || 'Block D, South Extension Part 2, New Delhi - 110049'}
+          centerAddress={data.nearestCenter?.address || 'D 35, South Extension Part 2, New Delhi - 110049'}
           centerPhone="+91-8826-444-334"
           nearbyAreas={data.localities.slice(0, 8).map((l) => l.name)}
         />
