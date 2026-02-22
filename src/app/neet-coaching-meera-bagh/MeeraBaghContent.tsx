@@ -267,11 +267,11 @@ export function NEETCoachingMeeraBaghContent() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
+      ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '847',
-      reviewCount: '523',
+      ratingCount: '38',
+      reviewCount: '38',
     },
     founder: {
       '@type': 'Person',

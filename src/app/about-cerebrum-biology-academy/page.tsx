@@ -694,8 +694,8 @@ export default function AboutCerebrumPage() {
             ],
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              ratingCount: '680',
+              ratingValue: '5.0',
+              ratingCount: '38',
               bestRating: '5',
               worstRating: '1',
             },

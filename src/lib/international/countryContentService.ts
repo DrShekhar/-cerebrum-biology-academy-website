@@ -649,7 +649,7 @@ class CountryContentService {
         },
         aggregateRating: {
           '@type': 'AggregateRating',
-          ratingValue: '4.8',
+          ratingValue: '5.0',
           reviewCount: country.socialProof.totalStudents,
         },
       },

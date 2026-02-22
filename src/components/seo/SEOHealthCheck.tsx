@@ -42,7 +42,7 @@ function OrganizationSchema() {
       '@type': 'ContactPoint',
       contactType: 'Customer Support',
       telephone: '+91-XXXXXXXXXX',
-      email: 'support@cerebrumbiologyacademy.com',
+      email: 'info@cerebrumbiologyacademy.com',
     },
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
@@ -195,7 +195,7 @@ function LocalBusinessSchema() {
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     description: 'Leading NEET coaching and biology tuition center',
     telephone: '+91-XXXXXXXXXX',
-    email: 'support@cerebrumbiologyacademy.com',
+    email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '[Main Address]',
@@ -231,9 +231,9 @@ function LocalBusinessSchema() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '500',
-      reviewCount: '350',
+      ratingValue: '5.0',
+      ratingCount: '38',
+      reviewCount: '38',
     },
   }
 

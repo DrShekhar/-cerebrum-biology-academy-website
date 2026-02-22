@@ -116,8 +116,8 @@ function DelhiServiceSchema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '450',
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
       worstRating: '1',
     },
@@ -138,8 +138,8 @@ function DelhiLocalBusinessSchema() {
     'name': 'Cerebrum Biology Academy - Delhi',
     'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     'url': 'https://cerebrumbiologyacademy.com/locations/delhi',
-    'telephone': '+91-9870-424-442',
-    'email': 'cerebrumacademy@gmail.com',
+    'telephone': '+91-88264-44334',
+    'email': 'info@cerebrumbiologyacademy.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Near South Extension',
@@ -164,8 +164,8 @@ function DelhiLocalBusinessSchema() {
     'priceRange': '₹45,000 - ₹1,80,000',
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '485',
+      'ratingValue': '5.0',
+      'reviewCount': '38',
       'bestRating': '5',
     },
     'sameAs': [
@@ -208,7 +208,7 @@ function DelhiFAQSchema() {
         name: 'What are the batch timings for NEET coaching in Delhi?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our centers in South Extension and Rohini are open Monday to Saturday from 8:00 AM to 8:00 PM. We offer morning, afternoon, and evening batches to accommodate students from different parts of Delhi. Call +91-9870-424-442 to know available timings.',
+          text: 'Our centers in South Extension and Rohini are open Monday to Saturday from 8:00 AM to 8:00 PM. We offer morning, afternoon, and evening batches to accommodate students from different parts of Delhi. Call +91-88264-44334 to know available timings.',
         },
       },
       {
@@ -224,7 +224,7 @@ function DelhiFAQSchema() {
         name: 'What are the fees for NEET coaching at Cerebrum Delhi centers?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer EMI options for all Delhi students. Email cerebrumacademy@gmail.com or call +91-9870-424-442 for detailed fee information and special discounts.',
+          text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer EMI options for all Delhi students. Email info@cerebrumbiologyacademy.com or call +91-88264-44334 for detailed fee information and special discounts.',
         },
       },
     ],

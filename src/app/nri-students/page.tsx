@@ -102,8 +102,8 @@ const courseSchema = {
   },
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '450',
+    ratingValue: '5.0',
+    ratingCount: '38',
     bestRating: '5',
     worstRating: '1',
   },

@@ -84,7 +84,7 @@ export default function NoidaCoachingLayout({ children }: { children: React.Reac
       <NearMeKeywordInjector
         location="Noida"
         parentLocation="Delhi NCR"
-        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerAddress="B-45, Sector 62, Noida, Uttar Pradesh - 201301"
         centerPhone="+91-8826-444-334"
         nearbyAreas={['Sector 18', 'Sector 62', 'Sector 137', 'Sector 150', 'Greater Noida', 'Greater Noida West', 'Gaur City', 'Pari Chowk']}
       />

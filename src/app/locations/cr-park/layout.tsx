@@ -74,8 +74,8 @@ export default function CRParkLayout({ children }: { children: React.ReactNode }
             'name': 'Cerebrum Biology Academy - CR Park',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/cr-park',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -100,8 +100,8 @@ export default function CRParkLayout({ children }: { children: React.ReactNode }
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -139,7 +139,7 @@ export default function CRParkLayout({ children }: { children: React.ReactNode }
                 name: 'What are the batch timings at Cerebrum for CR Park students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our batch timings are Monday to Saturday from 8:00 AM to 8:00 PM. We offer multiple batches including morning, afternoon, and evening options to suit students from CR Park and surrounding areas like Alaknanda, Kalkaji, and Govindpuri. Contact us at +91-9870-424-442 for details.',
+                  text: 'Our batch timings are Monday to Saturday from 8:00 AM to 8:00 PM. We offer multiple batches including morning, afternoon, and evening options to suit students from CR Park and surrounding areas like Alaknanda, Kalkaji, and Govindpuri. Contact us at +91-88264-44334 for details.',
                 },
               },
               {
@@ -155,7 +155,7 @@ export default function CRParkLayout({ children }: { children: React.ReactNode }
                 name: 'What are the NEET coaching fees at Cerebrum for CR Park students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer flexible payment options and EMI facilities. Email us at cerebrumacademy@gmail.com or call +91-9870-424-442 for a detailed fee breakdown and discounts for CR Park students.',
+                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer flexible payment options and EMI facilities. Email us at info@cerebrumbiologyacademy.com or call +91-88264-44334 for a detailed fee breakdown and discounts for CR Park students.',
                 },
               },
             ],

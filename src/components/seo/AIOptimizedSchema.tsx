@@ -103,7 +103,7 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
       bestRating: '5',
       worstRating: '1',
       ratingCount: '32',
-      reviewCount: '32',
+      reviewCount: '38',
     },
   }
 

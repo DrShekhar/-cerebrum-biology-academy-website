@@ -113,8 +113,8 @@ export default function NEETStudyMaterialGurugramPage() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '342',
+      ratingValue: '5.0',
+      reviewCount: '38',
     },
   }
 

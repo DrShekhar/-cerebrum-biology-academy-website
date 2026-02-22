@@ -188,8 +188,8 @@ export function OrganizationSchema() {
     review: getDynamicReviews(),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: String(realTestimonials.length),
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
       worstRating: '1',
     },
@@ -770,7 +770,7 @@ export function NationalServiceSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '32',
+      reviewCount: '38',
       bestRating: '5',
     },
     hasOfferCatalog: {
@@ -882,7 +882,7 @@ export function GurugramServiceSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '32',
+      reviewCount: '38',
       bestRating: '5',
     },
     hasOfferCatalog: {

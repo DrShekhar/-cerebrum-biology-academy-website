@@ -264,8 +264,8 @@ const jsonLdSchema = {
   },
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '1500',
+    ratingValue: '5.0',
+    reviewCount: '38',
   },
   offers: {
     '@type': 'Offer',

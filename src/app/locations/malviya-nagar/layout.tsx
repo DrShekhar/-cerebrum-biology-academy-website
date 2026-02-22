@@ -72,8 +72,8 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
             priceRange: '₹45,000 - ₹1,80,000',
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '420',
+              ratingValue: '5.0',
+              reviewCount: '38',
               bestRating: '5',
             },
           }),
@@ -88,8 +88,8 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
             'name': 'Cerebrum Biology Academy - Malviya Nagar',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -114,8 +114,8 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -153,7 +153,7 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
                 name: 'What are the batch timings at Cerebrum for Malviya Nagar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 9:00 AM to 6:00 PM. We offer multiple batch options including morning, afternoon, and evening batches. Call +91-9870-424-442 for specific available timings for Malviya Nagar students.',
+                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 9:00 AM to 6:00 PM. We offer multiple batch options including morning, afternoon, and evening batches. Call +91-88264-44334 for specific available timings for Malviya Nagar students.',
                 },
               },
               {
@@ -169,7 +169,7 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
                 name: 'What are the NEET coaching fees at Cerebrum for Malviya Nagar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer affordable fees with flexible EMI options for Malviya Nagar students. Email cerebrumacademy@gmail.com or call +91-9870-424-442 for detailed fee structure.',
+                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer affordable fees with flexible EMI options for Malviya Nagar students. Email info@cerebrumbiologyacademy.com or call +91-88264-44334 for detailed fee structure.',
                 },
               },
             ],

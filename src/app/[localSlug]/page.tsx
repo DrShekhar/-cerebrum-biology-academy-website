@@ -104,8 +104,8 @@ export default async function LocalAreaPage({ params }: Props) {
             ],
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              ratingCount: '500',
+              ratingValue: '5.0',
+              ratingCount: '38',
             },
           }),
         }}

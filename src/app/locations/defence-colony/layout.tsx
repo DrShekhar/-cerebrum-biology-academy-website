@@ -60,8 +60,8 @@ function DefenceColonySchema() {
     serviceType: 'NEET Biology Coaching',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '380',
+      ratingValue: '5.0',
+      reviewCount: '38',
     },
   }
 
@@ -80,8 +80,8 @@ function DefenceColonyLocalBusinessSchema() {
     'name': 'Cerebrum Biology Academy - Defence Colony',
     'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     'url': 'https://cerebrumbiologyacademy.com/locations/defence-colony',
-    'telephone': '+91-9870-424-442',
-    'email': 'cerebrumacademy@gmail.com',
+    'telephone': '+91-88264-44334',
+    'email': 'info@cerebrumbiologyacademy.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Near South Extension',
@@ -106,8 +106,8 @@ function DefenceColonyLocalBusinessSchema() {
     'priceRange': '₹45,000 - ₹1,80,000',
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '485',
+      'ratingValue': '5.0',
+      'reviewCount': '38',
       'bestRating': '5',
     },
     'sameAs': [
@@ -150,7 +150,7 @@ function DefenceColonyFAQSchema() {
         name: 'What are the class timings for Defence Colony students?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM. We offer flexible batch timings including morning, afternoon, and evening batches to suit Defence Colony students. Call +91-9870-424-442 for current batch schedules.',
+          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM. We offer flexible batch timings including morning, afternoon, and evening batches to suit Defence Colony students. Call +91-88264-44334 for current batch schedules.',
         },
       },
       {
@@ -166,7 +166,7 @@ function DefenceColonyFAQSchema() {
         name: 'How much are the NEET coaching fees at Cerebrum?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy offers NEET coaching fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type and duration. We provide flexible EMI options for Defence Colony students. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed pricing.',
+          text: 'Cerebrum Biology Academy offers NEET coaching fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type and duration. We provide flexible EMI options for Defence Colony students. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed pricing.',
         },
       },
     ],

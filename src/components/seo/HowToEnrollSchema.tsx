@@ -176,7 +176,7 @@ export function CourseWithHowToSchema({
       bestRating: '5',
       worstRating: '1',
       ratingCount: '32',
-      reviewCount: '32',
+      reviewCount: '38',
     },
     ...(syllabus.length > 0 && {
       syllabusSections: syllabus.map((topic, index) => ({

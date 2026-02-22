@@ -75,7 +75,7 @@ const organizationSchema = {
   areaServed: { '@type': 'Country', name: 'Canada' },
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
+    ratingValue: '5.0',
     ratingCount: '35',
     bestRating: '5',
   },

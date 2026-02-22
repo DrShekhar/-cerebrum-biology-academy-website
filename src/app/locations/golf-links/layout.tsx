@@ -78,8 +78,8 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
             serviceType: 'NEET Biology Coaching',
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '380',
+              ratingValue: '5.0',
+              reviewCount: '38',
               bestRating: '5',
             },
           }),
@@ -94,8 +94,8 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
             'name': 'Cerebrum Biology Academy - Golf Links',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/golf-links',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -120,8 +120,8 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -159,7 +159,7 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
                 name: 'What are the batch timings at Cerebrum for Golf Links students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM. We offer flexible batch timings including morning and evening batches suited for Golf Links students. Our personalized schedule accommodates busy families. Call +91-9870-424-442 for exclusive timing options.',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM. We offer flexible batch timings including morning and evening batches suited for Golf Links students. Our personalized schedule accommodates busy families. Call +91-88264-44334 for exclusive timing options.',
                 },
               },
               {
@@ -175,7 +175,7 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
                 name: 'What are the fees for NEET coaching at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer premium small batch options. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for customized pricing and special arrangements for Golf Links families.',
+                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer premium small batch options. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for customized pricing and special arrangements for Golf Links families.',
                 },
               },
             ],

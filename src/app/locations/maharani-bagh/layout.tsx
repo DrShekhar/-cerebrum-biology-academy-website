@@ -79,8 +79,8 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
             serviceType: 'NEET Biology Coaching',
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '380',
+              ratingValue: '5.0',
+              reviewCount: '38',
               bestRating: '5',
             },
           }),
@@ -95,8 +95,8 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
             'name': 'Cerebrum Biology Academy - Maharani Bagh',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/maharani-bagh',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -121,8 +121,8 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -160,7 +160,7 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
                 name: 'What are the batch timings at Cerebrum for Maharani Bagh students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options. We offer morning, afternoon, and evening batches for Maharani Bagh students. Call +91-9870-424-442 to know current available batches and arrange timings.',
+                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options. We offer morning, afternoon, and evening batches for Maharani Bagh students. Call +91-88264-44334 to know current available batches and arrange timings.',
                 },
               },
               {
@@ -176,7 +176,7 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
                 name: 'What are the fees for NEET coaching at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible payment options and EMI. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for customized pricing for Maharani Bagh families.',
+                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible payment options and EMI. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for customized pricing for Maharani Bagh families.',
                 },
               },
             ],

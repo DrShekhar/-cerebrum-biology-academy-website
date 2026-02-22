@@ -1840,8 +1840,8 @@ export default function NeetCoachingFaridabadPage() {
             },
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '1200',
+              ratingValue: '5.0',
+              reviewCount: '38',
               bestRating: '5',
             },
           }),

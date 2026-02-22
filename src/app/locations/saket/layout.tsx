@@ -74,8 +74,8 @@ export default function SaketLayout({ children }: { children: React.ReactNode })
             'name': 'Cerebrum Biology Academy - Saket',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/saket',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -100,8 +100,8 @@ export default function SaketLayout({ children }: { children: React.ReactNode })
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -139,7 +139,7 @@ export default function SaketLayout({ children }: { children: React.ReactNode })
                 name: 'What batch timings are available at Cerebrum Academy for Saket students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Saket students flexible schedules. Contact +91-9870-424-442 to book your preferred batch time.',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Saket students flexible schedules. Contact +91-88264-44334 to book your preferred batch time.',
                 },
               },
               {
@@ -155,7 +155,7 @@ export default function SaketLayout({ children }: { children: React.ReactNode })
                 name: 'What is the NEET coaching fee structure for Saket students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and personalized packages for Saket students. Call cerebrumacademy@gmail.com or +91-9870-424-442 for detailed pricing information.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and personalized packages for Saket students. Call info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed pricing information.',
                 },
               },
             ],

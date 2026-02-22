@@ -55,8 +55,8 @@ export default function IBBiologyTutorPage() {
     url: 'https://cerebrumbiologyacademy.com/ib-biology-tutor',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '250',
+      ratingValue: '5.0',
+      reviewCount: '38',
     },
     offers: {
       '@type': 'Offer',

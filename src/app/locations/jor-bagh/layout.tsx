@@ -71,8 +71,8 @@ export default function JorBaghLayout({ children }: { children: React.ReactNode 
             'name': 'Cerebrum Biology Academy - Jor Bagh',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/jor-bagh',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -97,8 +97,8 @@ export default function JorBaghLayout({ children }: { children: React.ReactNode 
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -136,7 +136,7 @@ export default function JorBaghLayout({ children }: { children: React.ReactNode 
                 name: 'What are the batch timings at Cerebrum for Jor Bagh students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch timings. We customize schedules for Jor Bagh students with morning and evening options. Call +91-9870-424-442 to arrange exclusive timings for your family.',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch timings. We customize schedules for Jor Bagh students with morning and evening options. Call +91-88264-44334 to arrange exclusive timings for your family.',
                 },
               },
               {
@@ -152,7 +152,7 @@ export default function JorBaghLayout({ children }: { children: React.ReactNode 
                 name: 'What are the fees for NEET coaching at Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer premium small batch options. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for exclusive pricing and special arrangements for Jor Bagh families.',
+                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer premium small batch options. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for exclusive pricing and special arrangements for Jor Bagh families.',
                 },
               },
             ],

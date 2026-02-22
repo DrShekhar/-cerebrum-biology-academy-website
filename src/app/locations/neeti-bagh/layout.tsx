@@ -79,8 +79,8 @@ export default function NeetiBaghLayout({ children }: { children: React.ReactNod
             serviceType: 'NEET Biology Coaching',
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '380',
+              ratingValue: '5.0',
+              reviewCount: '38',
               bestRating: '5',
             },
           }),
@@ -95,8 +95,8 @@ export default function NeetiBaghLayout({ children }: { children: React.ReactNod
             'name': 'Cerebrum Biology Academy - Neeti Bagh',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/neeti-bagh',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -121,8 +121,8 @@ export default function NeetiBaghLayout({ children }: { children: React.ReactNod
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -160,7 +160,7 @@ export default function NeetiBaghLayout({ children }: { children: React.ReactNod
                 name: 'What are the batch timings at Cerebrum Academy for Neeti Bagh students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our coaching center operates Monday to Saturday, 8:00 AM to 8:00 PM. We offer flexible batch timings in the morning, afternoon, and evening to suit students from Neeti Bagh and nearby areas. Contact us at +91-9870-424-442 to know the best timing for your schedule.',
+                  text: 'Our coaching center operates Monday to Saturday, 8:00 AM to 8:00 PM. We offer flexible batch timings in the morning, afternoon, and evening to suit students from Neeti Bagh and nearby areas. Contact us at +91-88264-44334 to know the best timing for your schedule.',
                 },
               },
               {
@@ -176,7 +176,7 @@ export default function NeetiBaghLayout({ children }: { children: React.ReactNod
                 name: 'What are the NEET coaching fees at Cerebrum Academy for Neeti Bagh students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on the course duration and batch type. We offer flexible payment options and scholarships for deserving students. Call us at +91-9870-424-442 for detailed fee structure and personalized guidance.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on the course duration and batch type. We offer flexible payment options and scholarships for deserving students. Call us at +91-88264-44334 for detailed fee structure and personalized guidance.',
                 },
               },
             ],

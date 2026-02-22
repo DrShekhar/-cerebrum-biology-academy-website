@@ -62,8 +62,8 @@ function VasantViharSchema() {
     serviceType: ['NEET Biology Coaching', 'IB Biology Tutoring', 'IGCSE Biology Coaching'],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '250',
+      ratingValue: '5.0',
+      reviewCount: '38',
     },
   }
 
@@ -82,8 +82,8 @@ function VasantViharLocalBusinessSchema() {
     'name': 'Cerebrum Biology Academy - Vasant Vihar',
     'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     'url': 'https://cerebrumbiologyacademy.com/locations/vasant-vihar',
-    'telephone': '+91-9870-424-442',
-    'email': 'cerebrumacademy@gmail.com',
+    'telephone': '+91-88264-44334',
+    'email': 'info@cerebrumbiologyacademy.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Near South Extension',
@@ -108,8 +108,8 @@ function VasantViharLocalBusinessSchema() {
     'priceRange': '₹45,000 - ₹1,80,000',
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '485',
+      'ratingValue': '5.0',
+      'reviewCount': '38',
       'bestRating': '5',
     },
     'sameAs': [
@@ -159,7 +159,7 @@ export default function VasantViharLayout({ children }: { children: React.ReactN
                 name: 'What batch timings does Cerebrum Academy offer for Vasant Vihar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Vasant Vihar students flexible schedules. Call +91-9870-424-442 to book your preferred batch time.',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Vasant Vihar students flexible schedules. Call +91-88264-44334 to book your preferred batch time.',
                 },
               },
               {
@@ -175,7 +175,7 @@ export default function VasantViharLayout({ children }: { children: React.ReactN
                 name: 'What are the NEET coaching fees for Vasant Vihar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Vasant Vihar families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for personalized fee consultation.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Vasant Vihar families. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for personalized fee consultation.',
                 },
               },
             ],

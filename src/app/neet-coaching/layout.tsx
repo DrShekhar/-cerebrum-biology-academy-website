@@ -126,14 +126,14 @@ function generateJsonLd() {
     url: 'https://cerebrumbiologyacademy.com',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     telephone: '+91-8826444334',
-    email: 'support@cerebrumbiologyacademy.com',
+    email: 'info@cerebrumbiologyacademy.com',
     foundingDate: '2015',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
+      ratingValue: '5.0',
       bestRating: '5',
-      ratingCount: '320',
-      reviewCount: '280',
+      ratingCount: '38',
+      reviewCount: '38',
     },
     address: {
       '@type': 'PostalAddress',

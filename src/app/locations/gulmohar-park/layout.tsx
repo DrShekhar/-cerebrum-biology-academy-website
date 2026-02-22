@@ -59,8 +59,8 @@ function GulmoharParkSchema() {
     serviceType: 'NEET Biology Coaching',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '200',
+      ratingValue: '5.0',
+      reviewCount: '38',
     },
   }
 
@@ -79,8 +79,8 @@ function GulmoharParkLocalBusinessSchema() {
     'name': 'Cerebrum Biology Academy - Gulmohar Park',
     'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     'url': 'https://cerebrumbiologyacademy.com/locations/gulmohar-park',
-    'telephone': '+91-9870-424-442',
-    'email': 'cerebrumacademy@gmail.com',
+    'telephone': '+91-88264-44334',
+    'email': 'info@cerebrumbiologyacademy.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Near South Extension',
@@ -105,8 +105,8 @@ function GulmoharParkLocalBusinessSchema() {
     'priceRange': '₹45,000 - ₹1,80,000',
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '485',
+      'ratingValue': '5.0',
+      'reviewCount': '38',
       'bestRating': '5',
     },
     'sameAs': [
@@ -149,7 +149,7 @@ function GulmoharParkFAQSchema() {
         name: 'What are the batch timings for Gulmohar Park students at Cerebrum?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. Sunday batches also available from 9:00 AM to 6:00 PM. We offer morning, afternoon, and evening batches for Gulmohar Park students. Contact +91-9870-424-442 for specific schedules.',
+          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. Sunday batches also available from 9:00 AM to 6:00 PM. We offer morning, afternoon, and evening batches for Gulmohar Park students. Contact +91-88264-44334 for specific schedules.',
         },
       },
       {
@@ -165,7 +165,7 @@ function GulmoharParkFAQSchema() {
         name: 'What are the NEET coaching fees at Cerebrum for Gulmohar Park students?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible EMI options for Gulmohar Park families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for customized pricing and special offers.',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible EMI options for Gulmohar Park families. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for customized pricing and special offers.',
         },
       },
     ],

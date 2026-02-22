@@ -38,7 +38,7 @@ export function generateAggregateRatingSchema(reviews?: ReviewData[]) {
       bestRating: '5',
       worstRating: '1',
       ratingCount: '32',
-      reviewCount: '32',
+      reviewCount: '38',
     },
     sameAs: [
       'https://www.instagram.com/cerebrumbiologyacademy',

@@ -106,8 +106,8 @@ export default function NEETFoundationClass9RohiniPage() {
     timeRequired: 'P1Y',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '245',
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
     },
     hasCourseInstance: {

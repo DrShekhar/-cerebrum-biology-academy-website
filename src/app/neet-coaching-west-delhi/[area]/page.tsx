@@ -276,10 +276,10 @@ export default function WestDelhiAreaPage() {
             },
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
+              ratingValue: '5.0',
               bestRating: '5',
-              ratingCount: '847',
-              reviewCount: '523',
+              ratingCount: '38',
+              reviewCount: '38',
             },
             hasCredential: [
               {

@@ -61,8 +61,8 @@ function GreaterKailashSchema() {
     serviceType: 'NEET Biology Coaching',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '450',
+      ratingValue: '5.0',
+      reviewCount: '38',
     },
   }
 
@@ -81,8 +81,8 @@ function GreaterKailashLocalBusinessSchema() {
     'name': 'Cerebrum Biology Academy - Greater Kailash',
     'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     'url': 'https://cerebrumbiologyacademy.com/locations/greater-kailash',
-    'telephone': '+91-9870-424-442',
-    'email': 'cerebrumacademy@gmail.com',
+    'telephone': '+91-88264-44334',
+    'email': 'info@cerebrumbiologyacademy.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Near South Extension',
@@ -107,8 +107,8 @@ function GreaterKailashLocalBusinessSchema() {
     'priceRange': '₹45,000 - ₹1,80,000',
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '485',
+      'ratingValue': '5.0',
+      'reviewCount': '38',
       'bestRating': '5',
     },
     'sameAs': [
@@ -151,7 +151,7 @@ function GreaterKailashFAQSchema() {
         name: 'What are the batch timings for Greater Kailash students?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options including morning, afternoon, and evening batches. GK students can choose timings that suit their schedule. Call +91-9870-424-442 to know current batches for Greater Kailash.',
+          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options including morning, afternoon, and evening batches. GK students can choose timings that suit their schedule. Call +91-88264-44334 to know current batches for Greater Kailash.',
         },
       },
       {
@@ -167,7 +167,7 @@ function GreaterKailashFAQSchema() {
         name: 'What are the NEET coaching fees at Cerebrum for GK students?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible payment and EMI options for Greater Kailash students. Email cerebrumacademy@gmail.com or call +91-9870-424-442 for detailed fee structure.',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible payment and EMI options for Greater Kailash students. Email info@cerebrumbiologyacademy.com or call +91-88264-44334 for detailed fee structure.',
         },
       },
     ],

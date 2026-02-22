@@ -293,8 +293,8 @@ export default function NEETScoreCalculatorPage() {
             },
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.8',
-              ratingCount: '2450',
+              ratingValue: '5.0',
+              ratingCount: '38',
             },
           }),
         }}

@@ -137,8 +137,8 @@ export default function NEETCoachingHUDACityCentreMetroPage() {
     })),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '950',
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
     },
   }

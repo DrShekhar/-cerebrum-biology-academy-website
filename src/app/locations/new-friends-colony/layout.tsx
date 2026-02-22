@@ -61,8 +61,8 @@ function NFCSchema() {
     serviceType: 'NEET Biology Coaching',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '180',
+      ratingValue: '5.0',
+      reviewCount: '38',
     },
   }
 
@@ -81,8 +81,8 @@ function NFCLocalBusinessSchema() {
     'name': 'Cerebrum Biology Academy - New Friends Colony',
     'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
     'url': 'https://cerebrumbiologyacademy.com/locations/new-friends-colony',
-    'telephone': '+91-9870-424-442',
-    'email': 'cerebrumacademy@gmail.com',
+    'telephone': '+91-88264-44334',
+    'email': 'info@cerebrumbiologyacademy.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Near South Extension',
@@ -107,8 +107,8 @@ function NFCLocalBusinessSchema() {
     'priceRange': '₹45,000 - ₹1,80,000',
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '485',
+      'ratingValue': '5.0',
+      'reviewCount': '38',
       'bestRating': '5',
     },
     'sameAs': [
@@ -158,7 +158,7 @@ export default function NewFriendsColonyLayout({ children }: { children: React.R
                 name: 'What are the available batch timings at Cerebrum Academy for NFC students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options - morning, afternoon, and evening. This allows New Friends Colony students to choose a timing that best fits their schedule. Call +91-9870-424-442 for batch details.',
+                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options - morning, afternoon, and evening. This allows New Friends Colony students to choose a timing that best fits their schedule. Call +91-88264-44334 for batch details.',
                 },
               },
               {
@@ -174,7 +174,7 @@ export default function NewFriendsColonyLayout({ children }: { children: React.R
                 name: 'What is the fee structure for NEET coaching at Cerebrum Academy for NFC students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment plans and scholarships for deserving New Friends Colony students. Contact us at cerebrumacademy@gmail.com or +91-9870-424-442 for customized fee packages.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment plans and scholarships for deserving New Friends Colony students. Contact us at info@cerebrumbiologyacademy.com or +91-88264-44334 for customized fee packages.',
                 },
               },
             ],

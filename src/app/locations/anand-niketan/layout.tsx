@@ -69,8 +69,8 @@ export default function AnandNiketanLayout({ children }: { children: React.React
             'name': 'Cerebrum Biology Academy - Anand Niketan',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -95,8 +95,8 @@ export default function AnandNiketanLayout({ children }: { children: React.React
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -134,7 +134,7 @@ export default function AnandNiketanLayout({ children }: { children: React.React
                 name: 'What are the batch timings for Anand Niketan students at Cerebrum?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We offer flexible batch timings Monday to Saturday from 8:00 AM to 8:00 PM to accommodate students from Anand Niketan and surrounding areas. We have morning batches, afternoon batches, and evening batches available. Contact us at +91-9870-424-442 for specific batch timings.',
+                  text: 'We offer flexible batch timings Monday to Saturday from 8:00 AM to 8:00 PM to accommodate students from Anand Niketan and surrounding areas. We have morning batches, afternoon batches, and evening batches available. Contact us at +91-88264-44334 for specific batch timings.',
                 },
               },
               {
@@ -150,7 +150,7 @@ export default function AnandNiketanLayout({ children }: { children: React.React
                 name: 'What are the fees for NEET coaching at Cerebrum Academy for Anand Niketan students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Biology Academy offers NEET Biology coaching with fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type, course duration, and study material provided. We offer flexible payment options including EMI. Contact us at cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee structure.',
+                  text: 'Cerebrum Biology Academy offers NEET Biology coaching with fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type, course duration, and study material provided. We offer flexible payment options including EMI. Contact us at info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed fee structure.',
                 },
               },
             ],

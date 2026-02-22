@@ -561,8 +561,8 @@ export default function BiologyTuitionPage() {
             ],
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.8',
-              reviewCount: '500',
+              ratingValue: '5.0',
+              reviewCount: '38',
               bestRating: '5',
               worstRating: '1',
             },

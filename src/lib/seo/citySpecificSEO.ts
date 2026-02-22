@@ -315,7 +315,7 @@ export class CitySpecificSEOService {
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: '5.0',
-        reviewCount: '32',
+        reviewCount: '38',
       },
     }))
   }

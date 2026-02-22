@@ -264,11 +264,11 @@ export default function BiologyClassesDelhiPage() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
+      ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '2500',
-      reviewCount: '875',
+      ratingCount: '38',
+      reviewCount: '38',
     },
     founder: {
       '@type': 'Person',

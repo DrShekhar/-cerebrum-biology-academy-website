@@ -296,8 +296,9 @@ export function generateLocationSchema(location: LocationData) {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: location.slug === 'south-extension' ? '4.9' : location.slug === 'rohini' ? '4.8' : location.slug === 'green-park' ? '4.9' : location.slug === 'gurugram' ? '4.7' : location.slug === 'noida' ? '4.8' : '4.8',
-      reviewCount: location.slug === 'south-extension' ? '127' : location.slug === 'rohini' ? '89' : location.slug === 'green-park' ? '64' : location.slug === 'gurugram' ? '43' : location.slug === 'noida' ? '28' : '31',
+      // IMPORTANT: Must match Google Business Profile exactly (verified Feb 2026)
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
       worstRating: '1',
     },

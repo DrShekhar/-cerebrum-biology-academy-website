@@ -476,8 +476,8 @@ export function BestNEETCoachingDelhiNCRClient() {
             ],
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '500',
+              ratingValue: '5.0',
+              reviewCount: '38',
               bestRating: '5',
             },
             award: [

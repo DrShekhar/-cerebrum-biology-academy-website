@@ -73,8 +73,8 @@ export default function KalkajiLayout({ children }: { children: React.ReactNode 
             'name': 'Cerebrum Biology Academy - Kalkaji',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/kalkaji',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -99,8 +99,8 @@ export default function KalkajiLayout({ children }: { children: React.ReactNode 
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -138,7 +138,7 @@ export default function KalkajiLayout({ children }: { children: React.ReactNode 
                 name: 'What are the batch timings for Kalkaji students at Cerebrum?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening batches suitable for Kalkaji students. Call +91-9870-424-442 to know current available batches for your schedule.',
+                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening batches suitable for Kalkaji students. Call +91-88264-44334 to know current available batches for your schedule.',
                 },
               },
               {
@@ -154,7 +154,7 @@ export default function KalkajiLayout({ children }: { children: React.ReactNode 
                 name: 'What are the NEET coaching fees at Cerebrum for Kalkaji students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible EMI options for Kalkaji students. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee structure and special discounts.',
+                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible EMI options for Kalkaji students. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed fee structure and special discounts.',
                 },
               },
             ],

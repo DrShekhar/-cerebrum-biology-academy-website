@@ -81,7 +81,7 @@ export function generateFaridabadLocalBusinessSchema(
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '32',
+      reviewCount: '38',
       bestRating: '5',
       worstRating: '1',
     },
@@ -352,7 +352,7 @@ export function generateFaridabadCourseSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '32',
+      reviewCount: '38',
       bestRating: '5',
     },
   }
@@ -393,7 +393,7 @@ export function generateFaridabadServiceSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '32',
+      reviewCount: '38',
       bestRating: '5',
     },
     hasOfferCatalog: {

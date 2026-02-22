@@ -134,8 +134,8 @@ export default function NEETCoachingBotanicalGardenMetroPage() {
     })),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1100',
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
     },
   }

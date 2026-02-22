@@ -52,8 +52,8 @@ export default async function NoidaAreaPage({ params }: Props) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1500',
+      ratingValue: '5.0',
+      reviewCount: '38',
       bestRating: '5',
     },
   }

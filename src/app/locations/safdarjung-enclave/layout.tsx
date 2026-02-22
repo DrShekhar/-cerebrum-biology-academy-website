@@ -79,8 +79,8 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
             serviceType: 'NEET Biology Coaching',
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '380',
+              ratingValue: '5.0',
+              reviewCount: '38',
               bestRating: '5',
             },
           }),
@@ -95,8 +95,8 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
             'name': 'Cerebrum Biology Academy - Safdarjung Enclave',
             'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
             'url': 'https://cerebrumbiologyacademy.com/locations/safdarjung-enclave',
-            'telephone': '+91-9870-424-442',
-            'email': 'cerebrumacademy@gmail.com',
+            'telephone': '+91-88264-44334',
+            'email': 'info@cerebrumbiologyacademy.com',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Near South Extension',
@@ -121,8 +121,8 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
             'priceRange': '₹45,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
-              'ratingValue': '4.9',
-              'reviewCount': '485',
+              'ratingValue': '5.0',
+              'reviewCount': '38',
               'bestRating': '5',
             },
             'sameAs': [
@@ -160,7 +160,7 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
                 name: 'What are the batch timings for Safdarjung Enclave students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Safdarjung Enclave students can choose timings that work best for their schedule. Call +91-9870-424-442 for batch details.',
+                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Safdarjung Enclave students can choose timings that work best for their schedule. Call +91-88264-44334 for batch details.',
                 },
               },
               {
@@ -176,7 +176,7 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
                 name: 'What are the NEET coaching fees for Safdarjung Enclave students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment plans for Safdarjung Enclave families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee structure.',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment plans for Safdarjung Enclave families. Contact info@cerebrumbiologyacademy.com or +91-88264-44334 for detailed fee structure.',
                 },
               },
             ],

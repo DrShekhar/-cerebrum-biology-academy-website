@@ -31,7 +31,7 @@ export default function NEETCoachingWestDelhiLayout({ children }: { children: Re
       <NearMeKeywordInjector
         location="West Delhi"
         parentLocation="Delhi NCR"
-        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerAddress="211 Vikas Surya Tower, DC Chauk, Rohini Sector 9, Delhi - 110085"
         centerPhone="+91-8826-444-334"
         nearbyAreas={['Dwarka', 'Janakpuri', 'Rajouri Garden', 'Vikaspuri', 'Uttam Nagar', 'Tilak Nagar', 'Tagore Garden', 'Hari Nagar']}
       />
