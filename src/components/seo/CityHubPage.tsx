@@ -34,6 +34,7 @@ import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedS
 import { CredibilityBar } from '@/components/seo/EEATSignals'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { WhatsAppCTAButton } from '@/components/seo/WhatsAppCTAButton'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 interface CityHubPageProps {
   data: CityHubData
@@ -997,6 +998,15 @@ export function CityHubPage({ data }: CityHubPageProps) {
             </div>
           </div>
         </section>
+
+        {/* SEO: Near Me keyword injection for 10x more search impressions */}
+        <NearMeKeywordInjector
+          location={data.cityName}
+          parentLocation="Delhi NCR"
+          centerAddress={data.nearestCenter?.address || 'Block D, South Extension Part 2, New Delhi - 110049'}
+          centerPhone="+91-8826-444-334"
+          nearbyAreas={data.localities.slice(0, 8).map((l) => l.name)}
+        />
       </div>
     </>
   )

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -304,6 +305,13 @@ export default function NEETCoachingSouthDelhiPage() {
         pageType="coaching"
       coordinates={{ lat: "28.5355", lng: "77.2290" }} faqs={faqs} />
       <PageContent />
+      <NearMeKeywordInjector
+        location="South Delhi"
+        parentLocation="Delhi NCR"
+        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerPhone="+91-8826-444-334"
+        nearbyAreas={['Hauz Khas', 'Greater Kailash', 'Defence Colony', 'Vasant Vihar', 'Lajpat Nagar', 'Malviya Nagar', 'Saket', 'Green Park']}
+      />
     </>
   )
 }

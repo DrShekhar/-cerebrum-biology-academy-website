@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in West Delhi | Dwarka, Janakpuri, Rajouri Garden | Cerebrum Academy',
@@ -24,5 +25,16 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingWestDelhiLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      {children}
+      <NearMeKeywordInjector
+        location="West Delhi"
+        parentLocation="Delhi NCR"
+        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerPhone="+91-8826-444-334"
+        nearbyAreas={['Dwarka', 'Janakpuri', 'Rajouri Garden', 'Vikaspuri', 'Uttam Nagar', 'Tilak Nagar', 'Tagore Garden', 'Hari Nagar']}
+      />
+    </>
+  )
 }

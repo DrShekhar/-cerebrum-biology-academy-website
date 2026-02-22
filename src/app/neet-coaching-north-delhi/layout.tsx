@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in North Delhi | Rohini, Pitampura, Model Town | Cerebrum Academy',
@@ -29,6 +30,13 @@ export default function NEETCoachingNorthDelhiLayout({ children }: { children: R
     <>
       <LocalBusinessSchema locationId="rohini" />
       {children}
+      <NearMeKeywordInjector
+        location="North Delhi"
+        parentLocation="Delhi NCR"
+        centerAddress="211 Vikas Surya Tower, DC Chauk, Rohini Sector 9, Delhi - 110085"
+        centerPhone="+91-8826-444-334"
+        nearbyAreas={['Rohini', 'Pitampura', 'Model Town', 'Shalimar Bagh', 'Ashok Vihar', 'Civil Lines', 'Wazirpur', 'Kohat Enclave']}
+      />
     </>
   )
 }

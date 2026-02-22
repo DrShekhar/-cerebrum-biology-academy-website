@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title:
@@ -33,6 +34,13 @@ export default function FaridabadCoachingLayout({ children }: { children: React.
     <>
       <LocalBusinessSchema locationId="faridabad" />
       {children}
+      <NearMeKeywordInjector
+        location="Faridabad"
+        parentLocation="Delhi NCR"
+        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerPhone="+91-8826-444-334"
+        nearbyAreas={['Sector 21', 'NIT Faridabad', 'Ballabgarh', 'Greater Faridabad', 'Sector 15', 'Neharpar', 'BPTP', 'Surajkund']}
+      />
     </>
   )
 }

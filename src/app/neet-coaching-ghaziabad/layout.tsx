@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title:
@@ -28,5 +29,16 @@ export const metadata: Metadata = {
 }
 
 export default function GhaziabadCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      {children}
+      <NearMeKeywordInjector
+        location="Ghaziabad"
+        parentLocation="Delhi NCR"
+        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerPhone="+91-8826-444-334"
+        nearbyAreas={['Indirapuram', 'Vaishali', 'Crossing Republik', 'Raj Nagar Extension', 'Vasundhara', 'Kaushambi', 'Ahinsa Khand', 'Govindpuram']}
+      />
+    </>
+  )
 }

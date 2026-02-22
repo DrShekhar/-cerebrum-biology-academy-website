@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Noida 2026 [1200+ Students] 98% Success | Cerebrum',
@@ -77,5 +78,16 @@ export const metadata: Metadata = {
 }
 
 export default function NoidaCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      {children}
+      <NearMeKeywordInjector
+        location="Noida"
+        parentLocation="Delhi NCR"
+        centerAddress="Block D, South Extension Part 2, New Delhi - 110049"
+        centerPhone="+91-8826-444-334"
+        nearbyAreas={['Sector 18', 'Sector 62', 'Sector 137', 'Sector 150', 'Greater Noida', 'Greater Noida West', 'Gaur City', 'Pari Chowk']}
+      />
+    </>
+  )
 }
