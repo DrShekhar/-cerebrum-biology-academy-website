@@ -244,24 +244,6 @@ jest.mock('next-auth/react', () => ({
   SessionProvider: ({ children }) => children,
 }))
 
-// Mock Framer Motion
-jest.mock('framer-motion', () => ({
-  motion: {
-    div: (props) => <div {...props} />,
-    section: (props) => <section {...props} />,
-    article: (props) => <article {...props} />,
-    span: (props) => <span {...props} />,
-    h1: (props) => <h1 {...props} />,
-    h2: (props) => <h2 {...props} />,
-    h3: (props) => <h3 {...props} />,
-    p: (props) => <p {...props} />,
-    button: (props) => <button {...props} />,
-    form: (props) => <form {...props} />,
-    input: (props) => <input {...props} />,
-  },
-  AnimatePresence: ({ children }) => children,
-}))
-
 // Mock lucide-react icons
 jest.mock('lucide-react', () => {
   const MockIcon = (props) => <span {...props} data-testid="mock-icon" />

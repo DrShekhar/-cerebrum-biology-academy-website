@@ -296,7 +296,7 @@ describe('Firebase Session Route (/api/auth/firebase-session)', () => {
       const { POST } = await import('@/app/api/auth/firebase-session/route')
       const request = createRequest({
         uid: 'firebase-uid-123',
-        phoneNumber: '9876543210',
+        phoneNumber: '918826444334',
         action: 'check',
       })
 
@@ -304,7 +304,11 @@ describe('Firebase Session Route (/api/auth/firebase-session)', () => {
 
       expect(mockPrisma.users.findFirst).toHaveBeenCalledWith({
         where: {
-          OR: [{ phone: '+919876543210' }, { firebaseUid: 'firebase-uid-123' }],
+          OR: [
+            { phone: '+918826444334' },
+            { phone: '8826444334' },
+            { firebaseUid: 'firebase-uid-123' },
+          ],
         },
       })
     })
