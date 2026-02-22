@@ -81,7 +81,7 @@ export default function Home() {
     '@type': 'WebPage',
     '@id': 'https://cerebrumbiologyacademy.com/#webpage',
     name: 'Best NEET Biology Coaching in Delhi NCR | Cerebrum Biology Academy',
-    description: 'Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. 6 centers across Delhi, Gurugram, Noida, Faridabad.',
+    description: 'Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. 4 centers: South Extension Delhi, Rohini Delhi, Gurugram, Faridabad. Online + offline classes.',
     url: 'https://cerebrumbiologyacademy.com',
     isPartOf: {
       '@type': 'WebSite',
