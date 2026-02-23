@@ -7628,6 +7628,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ibo-preparation-gurugram', 'nseb-coaching-gurugram',
     // Other
     'dr-shekhar-youtube-channel', 'neet-coaching', 'reviews', 'support', 'terms',
+    // School-specific landing pages
+    'neet-coaching-sharda-greater-noida-students', 'neet-coaching-modern-school-faridabad-students',
+    'neet-coaching-amity-noida-students', 'neet-coaching-gd-goenka-faridabad-students',
+    'neet-coaching-cambridge-ghaziabad-students', 'neet-coaching-apeejay-faridabad-students',
+    'neet-coaching-dps-indirapuram-students', 'neet-coaching-kv-noida-students',
+    'neet-coaching-presidium-ghaziabad-students', 'neet-coaching-dps-noida-students',
+    'neet-coaching-kr-mangalam-ghaziabad-students', 'neet-coaching-gd-goenka-ghaziabad-students',
+    'neet-coaching-aggarwal-faridabad-students', 'neet-coaching-dps-greater-noida-students',
+    'neet-coaching-ryan-noida-students', 'neet-coaching-pathways-noida-students',
+    'neet-coaching-dav-faridabad-students', 'neet-coaching-greenfields-faridabad-students',
+    'neet-coaching-somerville-noida-students', 'neet-coaching-mvn-faridabad-students',
+    'neet-coaching-mris-faridabad-students', 'neet-coaching-manav-rachna-faridabad-students',
+    'neet-coaching-lotus-valley-noida-students', 'neet-coaching-dps-faridabad-students',
+    'neet-coaching-jaypee-noida-students',
+    // Board-specific pages
+    'boards/west-bengal-hs', 'boards/up-intermediate', 'boards/gujarat-hsc',
+    'boards/rajasthan-board', 'boards/tamil-nadu-hsc', 'boards/maharashtra-hsc',
+    'boards/kerala-hse', 'boards/telangana-intermediate', 'boards/karnataka-puc',
+    // Testimonial sub-pages
+    'testimonials/sadhna-sirin-neet-2023-topper', 'testimonials/neet-success-story',
+    // College predictor sub-pages
+    'neet-college-predictor/government-medical-colleges', 'neet-college-predictor/low-fees-medical-colleges',
+    // Index/directory pages
+    'states', 'all-locations', 'batch-types',
+    // Language pages
+    'hi', 'ta',
+    // Public tools
+    'book-demo', 'find-center', 'calculator', 'whatsapp-course-selector',
+    'neet-tools/omr-checker', 'neet-tools/olympiad-practice',
+    'neet-tools/quiz-competition', 'neet-tools/quiz-competition/create',
+    // Resources sub-pages
+    'resources/test-generator', 'resources/free', 'resources/mock-tests',
+    'resources/notes', 'resources/doubt', 'resources/questions',
+    // MCQ sub-pages
+    'neet-biology-mcq/pyq-2024', 'neet-biology-mcq/analytics', 'neet-biology-mcq/contribute',
+    // Support
+    'support/help-center',
+    // Study tools
+    'study-with-me',
+    // Landing pages
+    'lp/neet-demo',
+    // Seminar
+    'neet-guidance-seminar/thank-you',
+    // Company
+    'company',
   ]
 
   const missingPageRoutes: MetadataRoute.Sitemap = missingPages.map((page) => ({
