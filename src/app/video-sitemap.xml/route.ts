@@ -25,7 +25,7 @@ const VIDEOS: Record<string, VideoInfo> = {
     title: 'Sadhna Sirin - Delhi NCR Topper NEET 2023 | Cerebrum Biology Academy',
     description:
       'Sadhna Sirin shares her NEET 2023 success story, scoring 695 out of 720 marks with guidance from Dr. Shekhar C Singh at Cerebrum Biology Academy.',
-    duration: 'PT5M30S',
+    duration: '330',
     uploadDate: '2023-07-15',
   },
   NfhkGqOQXzk: {
@@ -33,7 +33,7 @@ const VIDEOS: Record<string, VideoInfo> = {
     title: 'Abhisek - AFMC Selection | Cerebrum Biology Academy',
     description:
       'Abhisek shares how Cerebrum Biology Academy helped him secure admission to Armed Forces Medical College (AFMC) through focused NEET biology preparation.',
-    duration: 'PT4M15S',
+    duration: '255',
     uploadDate: '2024-02-10',
   },
   t5F8RBuHITM: {
@@ -41,7 +41,7 @@ const VIDEOS: Record<string, VideoInfo> = {
     title: 'Student Success Story | NEET Biology Coaching at Cerebrum Biology Academy',
     description:
       'Watch how students at Cerebrum Biology Academy achieve outstanding NEET results through focused biology coaching by Dr. Shekhar C Singh with small batch sizes of 15-20 students.',
-    duration: 'PT4M45S',
+    duration: '285',
     uploadDate: '2024-01-15',
   },
 }
@@ -83,7 +83,6 @@ function buildVideoXML(video: VideoInfo): string {
       <video:thumbnail_loc>https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg</video:thumbnail_loc>
       <video:title>${escapeXML(video.title)}</video:title>
       <video:description>${escapeXML(video.description)}</video:description>
-      <video:content_loc>https://www.youtube.com/watch?v=${video.youtubeId}</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/${video.youtubeId}</video:player_loc>
       <video:duration>${video.duration}</video:duration>
       <video:publication_date>${video.uploadDate}</video:publication_date>
@@ -104,7 +103,7 @@ export async function GET() {
       youtubeId: t.youtubeId!,
       title: `${t.studentName} - ${t.achievement} | Cerebrum Biology Academy`,
       description: t.quote,
-      duration: 'PT5M00S',
+      duration: '300',
       uploadDate: '2024-01-01',
     })),
   }
