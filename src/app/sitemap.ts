@@ -7540,5 +7540,86 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  return routes
+  // ============================================
+  // Pages added 2026-02-23 — were missing from sitemap
+  // ============================================
+  const missingPages: string[] = [
+    // 1-year & 2-year courses
+    '1-year-neet-course-faridabad', '1-year-neet-course-ghaziabad', '1-year-neet-course-gurugram', '1-year-neet-course-noida',
+    '2-year-neet-course-faridabad', '2-year-neet-course-ghaziabad', '2-year-neet-course-gurugram', '2-year-neet-course-noida',
+    // Competitor alternatives
+    'aakash-alternative-faridabad', 'aakash-alternative-ghaziabad', 'aakash-alternative-greater-noida', 'aakash-alternative-gurugram', 'aakash-alternative-noida',
+    'allen-alternative-faridabad', 'allen-alternative-ghaziabad', 'allen-alternative-gurugram', 'allen-alternative-noida',
+    'fiitjee-alternative-faridabad', 'fiitjee-alternative-gurugram', 'fiitjee-alternative-noida',
+    'narayana-alternative-faridabad', 'narayana-alternative-gurugram', 'narayana-alternative-noida',
+    'physics-wallah-alternative-faridabad', 'physics-wallah-alternative-gurugram', 'physics-wallah-alternative-noida',
+    'velocity-alternative-faridabad', 'yvs-alternative-faridabad',
+    'cerebrum-vs-aakash', 'cerebrum-vs-allen',
+    'complement-aakash-coaching-faridabad', 'complement-aakash-coaching-gurugram', 'complement-aakash-coaching-noida',
+    'complement-allen-coaching-faridabad', 'complement-allen-coaching-gurugram', 'complement-allen-coaching-noida',
+    // Best/top/which SEO pages
+    'best-neet-coaching-faridabad', 'best-neet-coaching-ghaziabad', 'best-neet-coaching-greater-noida', 'best-neet-coaching-gurugram', 'best-neet-coaching-noida',
+    'best-online-coaching-neet-biology',
+    'top-10-neet-coaching-faridabad', 'top-10-neet-coaching-ghaziabad', 'top-10-neet-coaching-greater-noida', 'top-10-neet-coaching-gurugram', 'top-10-neet-coaching-noida',
+    'top-5-neet-coaching-faridabad',
+    'which-is-better-aakash-or-allen-faridabad', 'which-is-better-aakash-or-allen-noida',
+    'which-neet-coaching-is-best-in-faridabad', 'which-neet-coaching-is-best-in-ghaziabad', 'which-neet-coaching-is-best-in-greater-noida', 'which-neet-coaching-is-best-in-gurugram', 'which-neet-coaching-is-best-in-noida',
+    // Affordable coaching
+    'affordable-neet-coaching-faridabad', 'affordable-neet-coaching-ghaziabad', 'affordable-neet-coaching-greater-noida', 'affordable-neet-coaching-gurugram', 'affordable-neet-coaching-noida',
+    // Biology coaching/tutor locations
+    'biology-classes-east-delhi', 'biology-classes-greater-noida',
+    'biology-coaching-defence-colony', 'biology-coaching-dwarka', 'biology-coaching-east-of-kailash-delhi', 'biology-coaching-greater-kailash', 'biology-coaching-hauz-khas', 'biology-coaching-model-town', 'biology-coaching-panchsheel', 'biology-coaching-vasant-kunj',
+    'biology-olympiad-coaching-gurugram',
+    'biology-tutor-defence-colony', 'biology-tutor-hauz-khas', 'biology-tutor-malviya-nagar',
+    // Fee & scholarship pages
+    'neet-coaching-fees-faridabad', 'neet-coaching-fees-ghaziabad', 'neet-coaching-fees-greater-noida',
+    'how-much-fees-for-neet-coaching-faridabad',
+    'neet-scholarship-faridabad', 'neet-scholarship-ghaziabad', 'neet-scholarship-greater-noida', 'neet-scholarship-gurugram', 'neet-scholarship-noida',
+    // Near me pages
+    'neet-coaching-near-me-faridabad', 'neet-coaching-near-me-ghaziabad', 'neet-coaching-near-me-greater-noida', 'neet-coaching-near-me-noida',
+    // Crash course
+    'neet-crash-course-faridabad', 'neet-crash-course-ghaziabad', 'neet-crash-course-greater-noida', 'neet-crash-course-gurugram', 'neet-crash-course-noida',
+    // Dropper batches
+    'neet-dropper-batch', 'neet-dropper-batch-2025-26-gurugram', 'neet-dropper-batch-faridabad', 'neet-dropper-batch-ghaziabad', 'neet-dropper-batch-greater-noida', 'neet-dropper-batch-noida',
+    'one-year-dropper-course-gurugram',
+    // Evening & weekend batches
+    'neet-evening-batch-faridabad', 'neet-evening-batch-ghaziabad', 'neet-evening-batch-gurugram', 'neet-evening-batch-noida',
+    'neet-weekend-batch-faridabad', 'neet-weekend-batch-ghaziabad', 'neet-weekend-batch-gurugram', 'neet-weekend-batch-noida',
+    // Foundation classes
+    'neet-foundation-class-9-faridabad', 'neet-foundation-class-9-ghaziabad', 'neet-foundation-class-9-greater-noida', 'neet-foundation-class-9-gurugram', 'neet-foundation-class-9-noida',
+    'neet-foundation-class-10-faridabad', 'neet-foundation-class-10-ghaziabad', 'neet-foundation-class-10-greater-noida', 'neet-foundation-class-10-gurugram', 'neet-foundation-class-10-noida',
+    // Test series
+    'neet-test-series-faridabad', 'neet-test-series-ghaziabad', 'neet-test-series-greater-noida', 'neet-test-series-gurugram', 'neet-test-series-noida',
+    'test-series-schedule',
+    // Revision batches
+    'neet-revision-batch-faridabad', 'neet-revision-batch-gurugram',
+    // Online coaching
+    'online-neet-classes-faridabad', 'online-neet-classes-gurugram',
+    'online-neet-coaching-faridabad', 'online-neet-coaching-ghaziabad', 'online-neet-coaching-greater-noida',
+    // Coaching necessity / comparison pages
+    'is-coaching-necessary-for-neet-biology', 'is-coaching-necessary-for-neet-faridabad', 'is-coaching-necessary-for-neet-ghaziabad', 'is-coaching-necessary-for-neet-noida',
+    'is-online-neet-coaching-effective',
+    // Content pages
+    'neet-ecology-important-questions', 'neet-genetics-preparation', 'neet-human-physiology-guide',
+    'neet-preparation-roadmap', 'neet-study-material-gurugram',
+    'how-to-score-340-in-neet-biology', 'neet-ug-2026', 'neet-updates',
+    // Free demo classes
+    'free-neet-demo-class-faridabad', 'free-neet-demo-class-ghaziabad', 'free-neet-demo-class-greater-noida', 'free-neet-demo-class-noida',
+    'book-free-demo',
+    // Board-specific
+    'haryana-board-neet-coaching-gurugram', 'icse-neet-coaching-gurugram',
+    // Olympiad
+    'ibo-preparation-gurugram', 'nseb-coaching-gurugram',
+    // Other
+    'dr-shekhar-youtube-channel', 'neet-coaching', 'reviews', 'support', 'terms',
+  ]
+
+  const missingPageRoutes: MetadataRoute.Sitemap = missingPages.map((page) => ({
+    url: `${baseUrl}/${page}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  return [...routes, ...blogRoutes, ...seoLandingRoutes, ...missingPageRoutes]
 }
