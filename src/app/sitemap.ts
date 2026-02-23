@@ -17,6 +17,7 @@ import { biologyDefinitions } from '@/data/biology-definitions'
 import { INDIAN_STATES } from '@/components/seo/StateSchema'
 import { COMPETITORS } from '@/components/seo/ComparisonSchema'
 import { getAllAreaSlugs as getAllLocalAreaSlugs } from '@/data/localAreas'
+import collegesData from '@/data/colleges.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use non-www URL to match middleware redirect behavior
@@ -7902,6 +7903,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  // College predictor pages (tier 1 & 2 colleges)
+  const collegeSlugify = (name: string) =>
+    name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim()
+  const topColleges = (collegesData as { name: string; tier: number }[]).filter(
+    (c) => c.tier === 1 || c.tier === 2
+  )
+  const collegeRoutes: MetadataRoute.Sitemap = topColleges.map((college) => ({
+    url: `${baseUrl}/neet-college-predictor/college/${collegeSlugify(college.name)}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...campbellChapterRoutes,
@@ -7929,6 +7943,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...biologyNotesRoutes,
     ...onlineCityRoutes,
     ...curriculumRoutes,
+    ...collegeRoutes,
     ...routes,
     ...blogRoutes,
     ...seoLandingRoutes,

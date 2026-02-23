@@ -101,6 +101,9 @@ export const metadata: Metadata = {
     languages: {
       en: 'https://cerebrumbiologyacademy.com',
       'en-IN': 'https://cerebrumbiologyacademy.com',
+      hi: 'https://cerebrumbiologyacademy.com/hi',
+      'hi-IN': 'https://cerebrumbiologyacademy.com/hi',
+      ta: 'https://cerebrumbiologyacademy.com/ta',
       'x-default': 'https://cerebrumbiologyacademy.com',
     },
   },

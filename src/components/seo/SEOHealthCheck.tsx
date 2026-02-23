@@ -41,7 +41,7 @@ function OrganizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Support',
-      telephone: '+91-XXXXXXXXXX',
+      telephone: '+91-88264-44334',
       email: 'info@cerebrumbiologyacademy.com',
     },
     sameAs: [
@@ -54,18 +54,19 @@ function OrganizationSchema() {
       '@type': 'PostalAddress',
       addressCountry: 'IN',
       addressRegion: 'Delhi',
-      streetAddress: '[Main Office Address]',
-      postalCode: '[Postal Code]',
+      streetAddress: 'D 35, South Extension Part 2',
+      postalCode: '110049',
     },
     founder: {
       '@type': 'Person',
-      name: '[Founder Name]',
+      name: 'Dr. Shekhar',
+      jobTitle: 'Founder & Director',
     },
     employee: [
       {
         '@type': 'Person',
-        name: '[Faculty Member Name]',
-        jobTitle: 'Biology Teacher',
+        name: 'Dr. Shekhar',
+        jobTitle: 'Biology Faculty & Director',
       },
     ],
   }

@@ -20,9 +20,6 @@ export default function robots(): MetadataRoute.Robots {
           '/enrollments/',
           '/test-platform/',
           '/manifest.json',
-          '/blog/feed.xml',
-          '/blog?',
-          '/courses?',
           // Block phantom locale paths (only /hi and /ta exist)
           '/de/',
           '/es/',
@@ -43,12 +40,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: ['/', '/testimonials/', '/video-sitemap.xml'],
-        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/', '/manifest.json', '/blog/feed.xml', '/blog?', '/courses?'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/', '/manifest.json'],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/', '/manifest.json', '/blog/feed.xml', '/blog?', '/courses?'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/', '/manifest.json'],
       },
       // AI Search Engine Crawlers - Allow for GEO (Generative Engine Optimization)
       {

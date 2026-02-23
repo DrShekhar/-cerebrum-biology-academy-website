@@ -50,7 +50,7 @@ export async function generateMetadata({
       },
     },
     ...(hasQueryParams && {
-      robots: { index: false, follow: true },
+      robots: { index: true, follow: true },
     }),
   }
 }

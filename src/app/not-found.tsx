@@ -101,7 +101,7 @@ export default function NotFound() {
             contactPoint: {
               '@type': 'ContactPoint',
               contactType: 'Customer Support',
-              telephone: '+91-XXXXXXXXXX',
+              telephone: '+91-88264-44334',
               email: 'support@cerebrumbiologyacademy.com',
             },
           }),
