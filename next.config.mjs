@@ -792,11 +792,8 @@ const nextConfig = {
         destination: '/biology-classes-gurgaon',
         permanent: true,
       },
-      {
-        source: '/neet-coaching-gurgaon-sector-:num',
-        destination: '/neet-coaching-gurgaon',
-        permanent: true,
-      },
+      // REMOVED: '/neet-coaching-gurgaon-sector-:num' was destroying 5 real pages
+      // (sector-57, sector-62, sector-67, sector-69, sector-70)
       {
         source: '/neet-coaching-rohini-sector-:num',
         destination: '/biology-classes-rohini',
@@ -967,6 +964,7 @@ const nextConfig = {
       { source: '/online-biology-tuition', destination: '/courses', permanent: true },
 
       // Other missing pages
+      { source: '/mcq', destination: '/neet-biology-mcq', permanent: true },
       { source: '/parent-guide', destination: '/about', permanent: true },
       { source: '/5', destination: '/', permanent: true },
 
@@ -1282,6 +1280,11 @@ const nextConfig = {
       },
 
       // NEET coaching specific pages
+      {
+        source: '/dropper/batch',
+        destination: '/neet-dropper-batch',
+        permanent: true,
+      },
       {
         source: '/biology-classes-neet-droppers-batch-gurgaon',
         destination: '/courses/neet-dropper',

@@ -791,38 +791,27 @@ export const gsc404CleanupRedirects = [
   // --- NEET coaching variations with "in" prefix ---
   { source: '/neet-coaching-in-:slug', destination: '/neet-coaching', permanent: true },
 
-  // --- "Best" prefix variations ---
-  { source: '/best-neet-coaching-:slug', destination: '/neet-coaching', permanent: true },
+  // --- REMOVED: Overly-broad wildcards that were destroying real pages ---
+  // These wildcards were 301-redirecting 40+ real location pages to generic hubs,
+  // preventing Google from indexing them. Removed 2026-02-23.
+  //
+  // REMOVED: '/best-neet-coaching-:slug' → killed 7 real pages (delhi-ncr, gurugram, noida, etc.)
+  // REMOVED: '/biology-tuition-:slug' → killed 11 real pages (noida, faridabad, south-delhi, etc.)
+  // REMOVED: '/neet-preparation-:slug' → killed 3 real pages (guide, roadmap, timetable)
+  // REMOVED: '/online-neet-:slug' → killed 9 real pages (classes-faridabad, coaching-ghaziabad, etc.)
+  // REMOVED: '/neet-test-series-:slug' → killed 5 real pages (gurugram, noida, faridabad, etc.)
+  // REMOVED: '/neet-mock-test-:slug' → killed 1 real page (neet-mock-test-free)
+  // REMOVED: '/biology-coaching-:slug-delhi' → killed Delhi locality pages
+  // REMOVED: '/biology-notes-:slug' → killed biology-notes-for-neet
+  // REMOVED: '/courses/neet-:slug' → potentially killed course sub-pages
+  //
+  // If you need redirects for specific non-existent URLs, add them as EXPLICIT redirects below.
 
-  // --- Biology tuition vs tutor confusion ---
-  { source: '/biology-tuition-:slug', destination: '/biology-tutor', permanent: true },
-
-  // --- NEET preparation variations ---
-  { source: '/neet-preparation-:slug', destination: '/neet-coaching', permanent: true },
-
-  // --- Online NEET variations ---
-  { source: '/online-neet-:slug', destination: '/online-neet-coaching', permanent: true },
-
-  // --- NEET classes vs coaching ---
+  // --- NEET classes vs coaching (safe - no real pages with this prefix) ---
   { source: '/neet-classes-:slug', destination: '/neet-coaching', permanent: true },
 
-  // --- Biology coaching with Delhi suffix (generic pages) ---
-  { source: '/biology-coaching-:slug-delhi', destination: '/neet-coaching-centre', permanent: true },
-
-  // --- NEET coaching with India suffix ---
+  // --- NEET coaching with India suffix (safe - only neet-coaching-:slug-india pattern) ---
   { source: '/neet-coaching-:slug-india', destination: '/neet-coaching', permanent: true },
-
-  // --- NEET test series variations ---
-  { source: '/neet-test-series-:slug', destination: '/neet-test-series', permanent: true },
-
-  // --- NEET mock tests → MCQ practice ---
-  { source: '/neet-mock-test-:slug', destination: '/mcq-practice', permanent: true },
-
-  // --- Old course URL patterns ---
-  { source: '/courses/neet-:slug', destination: '/courses', permanent: true },
-
-  // --- Biology notes sub-pages ---
-  { source: '/biology-notes-:slug', destination: '/biology-notes', permanent: true },
 
   // --- Navigation/informational pages redirects ---
   { source: '/testimonials', destination: '/results', permanent: true },
