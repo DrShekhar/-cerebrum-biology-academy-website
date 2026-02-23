@@ -135,21 +135,14 @@ export default function NotFound() {
             <div className="w-full max-w-2xl">
               <form
                 className="relative"
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  const searchInput = (
-                    e.currentTarget.elements.namedItem('search') as HTMLInputElement
-                  )?.value
-                  if (searchInput) {
-                    window.location.href = `/search?q=${encodeURIComponent(searchInput)}`
-                  }
-                }}
+                action="/search"
+                method="get"
               >
                 <div className="relative flex items-center">
                   <Search className="absolute left-4 h-5 w-5 text-slate-400" />
                   <input
                     type="search"
-                    name="search"
+                    name="q"
                     placeholder="Search NEET coaching, courses, biology notes..."
                     className="w-full rounded-lg border border-blue-200 bg-white py-3 pl-12 pr-4 shadow-sm transition-all focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20"
                     aria-label="Search Cerebrum Biology Academy"

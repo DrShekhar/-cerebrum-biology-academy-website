@@ -561,7 +561,7 @@ export function LocalBusinessSchema() {
       latitude: '28.5722',
       longitude: '77.2225',
     },
-    hasMap: CONTACT_INFO.location.southExtension.mapUrl,
+    hasMap: CONTACT_INFO.centers.southExtension.mapUrl,
     areaServed: [
       {
         '@type': 'City',

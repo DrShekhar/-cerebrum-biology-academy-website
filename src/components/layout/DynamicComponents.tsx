@@ -127,6 +127,12 @@ export const DynamicMaintenancePopup = dynamic(
   { ssr: true }
 )
 
+// CONVERSION: Sticky mobile call bar — shows Call + WhatsApp on mobile at all times
+export const DynamicStickyMobileCallBar = dynamic(
+  () => import('@/components/layout/StickyMobileCallBar').then((m) => m.StickyMobileCallBar),
+  { ssr: false }
+)
+
 // PERFORMANCE: Lazy-load Footer to defer lucide-react icons (~50KB) from critical path
 // SSR disabled to prevent icon library from being bundled in initial JS
 // Footer links are still crawlable via sitemap.xml and internal linking

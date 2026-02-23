@@ -24,13 +24,6 @@ import {
   ConditionalHeaderFooterProvider,
 } from '@/components/layout/ConditionalHeaderFooter'
 import { Suspense } from 'react'
-import dynamic from 'next/dynamic'
-
-// CONVERSION: Sticky mobile call bar — shows Call + WhatsApp on mobile at all times
-const StickyMobileCallBar = dynamic(
-  () => import('@/components/layout/StickyMobileCallBar').then((m) => m.StickyMobileCallBar),
-  { ssr: false }
-)
 import { RouteChangeIndicator } from '@/components/navigation/RouteChangeIndicator'
 import {
   FloatingCTA,
@@ -42,6 +35,7 @@ import {
   DynamicPWAProvider,
   DynamicTrialBanner,
   DynamicMaintenancePopup,
+  DynamicStickyMobileCallBar as StickyMobileCallBar,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
 
