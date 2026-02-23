@@ -1,6 +1,22 @@
 import { MetadataRoute } from 'next'
-import { getAllPosts } from '@/lib/blog/mdx'
+import { getAllPosts, blogCategories, getAllTags } from '@/lib/blog/mdx'
 import { getAllSEOSlugs } from '@/data/seo-landing/slugs-static'
+import { allChapters } from '@/data/campbell-biology'
+import { campbellUnits } from '@/data/campbell-biology/units'
+import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
+import { getAllGurugramAreaSlugs } from '@/data/gurugram-areas'
+import { getAllNoidaAreaSlugs } from '@/data/noida-areas'
+import { getAllFaridabadAreaSlugs } from '@/data/faridabad-areas'
+import { getAllGhaziabadAreaSlugs } from '@/data/ghaziabad-areas'
+import { getAllAreaSlugs as getAllSouthDelhiAreaSlugs } from '@/data/south-delhi-areas'
+import { detailedCourses } from '@/data/detailedCourses'
+import { SUPPORTED_COUNTRIES } from '@/lib/international/countries'
+import { nriCountriesList } from '@/data/nriCountries'
+import { getAllLocalities } from '@/data/localities'
+import { biologyDefinitions } from '@/data/biology-definitions'
+import { INDIAN_STATES } from '@/components/seo/StateSchema'
+import { COMPETITORS } from '@/components/seo/ComparisonSchema'
+import { getAllAreaSlugs as getAllLocalAreaSlugs } from '@/data/localAreas'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use non-www URL to match middleware redirect behavior
@@ -7621,5 +7637,264 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }))
 
-  return [...routes, ...blogRoutes, ...seoLandingRoutes, ...missingPageRoutes]
+  // === Dynamic Route Generation ===
+
+  // Campbell Biology chapters (56 chapters)
+  const campbellChapterRoutes: MetadataRoute.Sitemap = allChapters.map((chapter) => ({
+    url: `${baseUrl}/campbell-biology/${chapter.slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Campbell Biology units (8 units)
+  const campbellUnitRoutes: MetadataRoute.Sitemap = campbellUnits.map((unit) => ({
+    url: `${baseUrl}/campbell-biology/unit/${unit.slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // NEET coaching location pages
+  const locationRoutes: MetadataRoute.Sitemap = getAllLocationSlugs().map((slug) => ({
+    url: `${baseUrl}/neet-coaching/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
+  // Gurugram area pages
+  const gurugramAreaRoutes: MetadataRoute.Sitemap = getAllGurugramAreaSlugs().map((area) => ({
+    url: `${baseUrl}/neet-coaching-gurugram/${area}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  // Noida area pages
+  const noidaAreaRoutes: MetadataRoute.Sitemap = getAllNoidaAreaSlugs().map((area) => ({
+    url: `${baseUrl}/neet-coaching-noida/${area}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  // Faridabad area pages
+  const faridabadAreaRoutes: MetadataRoute.Sitemap = getAllFaridabadAreaSlugs().map((area) => ({
+    url: `${baseUrl}/neet-coaching-faridabad/${area}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  // Ghaziabad area pages
+  const ghaziabadAreaRoutes: MetadataRoute.Sitemap = getAllGhaziabadAreaSlugs().map((area) => ({
+    url: `${baseUrl}/neet-coaching-ghaziabad/${area}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  // South Delhi area pages (neet-coaching + biology-tuition)
+  const southDelhiSlugs = getAllSouthDelhiAreaSlugs()
+  const southDelhiCoachingRoutes: MetadataRoute.Sitemap = southDelhiSlugs.map((area) => ({
+    url: `${baseUrl}/neet-coaching-south-delhi/${area}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+  const southDelhiTuitionRoutes: MetadataRoute.Sitemap = southDelhiSlugs.map((area) => ({
+    url: `${baseUrl}/biology-tuition-south-delhi/${area}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  // Metro station pages
+  const metroStations = ['botanical-garden', 'noida-city-centre', 'sector-18-metro', 'sector-137-metro', 'pari-chowk-metro']
+  const metroRoutes: MetadataRoute.Sitemap = metroStations.map((station) => ({
+    url: `${baseUrl}/neet-coaching-near-metro/${station}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // Noida society pages
+  const noidaSocieties = ['godrej-woods', 'mahagun-moderne', 'supertech-eco-village', 'logix-blossom-county', 'ace-city', 'gulshan-dynasty', 'eldeco-utopia', 'paras-tierea', 'prateek-grand-city']
+  const societyRoutes: MetadataRoute.Sitemap = noidaSocieties.map((society) => ({
+    url: `${baseUrl}/neet-coaching-noida-society/${society}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // Course detail pages
+  const courseRoutes: MetadataRoute.Sitemap = detailedCourses.map((course) => ({
+    url: `${baseUrl}/courses/${course.slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
+  // International country pages (main + courses sub-page)
+  const internationalRoutes: MetadataRoute.Sitemap = SUPPORTED_COUNTRIES.flatMap((country) => [
+    {
+      url: `${baseUrl}/international/${country}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/international/${country}/courses`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+  ])
+
+  // NRI student country pages
+  const nriRoutes: MetadataRoute.Sitemap = nriCountriesList.map((country) => ({
+    url: `${baseUrl}/nri-students/${country}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Location pages (city + city/locality)
+  const allLocalities = getAllLocalities()
+  const uniqueCities = [...new Set(allLocalities.map((loc) => loc.citySlug))]
+  const cityRoutes: MetadataRoute.Sitemap = uniqueCities.map((city) => ({
+    url: `${baseUrl}/locations/${city}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+  const localityRoutes: MetadataRoute.Sitemap = allLocalities.map((loc) => ({
+    url: `${baseUrl}/locations/${loc.citySlug}/${loc.slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  // Biology definitions pages
+  const definitionRoutes: MetadataRoute.Sitemap = biologyDefinitions.map((def) => ({
+    url: `${baseUrl}/biology-definitions/${def.slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  // Blog category and tag pages
+  const categoryRoutes: MetadataRoute.Sitemap = Object.keys(blogCategories).map((slug) => ({
+    url: `${baseUrl}/blog/category/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }))
+  const tagRoutes: MetadataRoute.Sitemap = getAllTags().map(({ tag }) => ({
+    url: `${baseUrl}/blog/tag/${tag}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.5,
+  }))
+
+  // State pages
+  const stateRoutes: MetadataRoute.Sitemap = Object.keys(INDIAN_STATES).map((state) => ({
+    url: `${baseUrl}/states/${state}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Competitor comparison pages
+  const compareRoutes: MetadataRoute.Sitemap = Object.keys(COMPETITORS).map((competitor) => ({
+    url: `${baseUrl}/compare/${competitor}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Local area SEO pages (root-level [localSlug] routes)
+  const localAreaRoutes: MetadataRoute.Sitemap = getAllLocalAreaSlugs().map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }))
+
+  // Biology notes for NEET chapter pages
+  const biologyNotesChapters = [
+    'molecular-basis-of-inheritance', 'principles-of-inheritance-and-variation',
+    'human-physiology', 'evolution', 'ecology', 'cell-the-unit-of-life',
+    'biomolecules', 'cell-cycle-and-cell-division', 'reproduction',
+    'biotechnology', 'biological-classification', 'the-living-world',
+    'plant-kingdom', 'animal-kingdom', 'morphology-of-flowering-plants',
+    'anatomy-of-flowering-plants', 'structural-organisation-in-animals',
+    'plant-physiology',
+  ]
+  const biologyNotesRoutes: MetadataRoute.Sitemap = biologyNotesChapters.map((chapter) => ({
+    url: `${baseUrl}/biology-notes-for-neet/${chapter}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Online biology classes pages
+  const onlineCities = ['delhi', 'mumbai', 'bangalore', 'hyderabad', 'noida', 'gurugram', 'pune']
+  const onlineCityRoutes: MetadataRoute.Sitemap = onlineCities.map((city) => ({
+    url: `${baseUrl}/online-biology-classes-in/${city}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // International curriculum pages
+  const curriculums = ['a-level', 'ib', 'ap', 'igcse']
+  const curriculumRoutes: MetadataRoute.Sitemap = curriculums.map((curriculum) => ({
+    url: `${baseUrl}/online-biology-classes-international/${curriculum}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // Combine all routes and deduplicate by URL
+  const allRoutes = [
+    ...campbellChapterRoutes,
+    ...campbellUnitRoutes,
+    ...locationRoutes,
+    ...gurugramAreaRoutes,
+    ...noidaAreaRoutes,
+    ...faridabadAreaRoutes,
+    ...ghaziabadAreaRoutes,
+    ...southDelhiCoachingRoutes,
+    ...southDelhiTuitionRoutes,
+    ...metroRoutes,
+    ...societyRoutes,
+    ...courseRoutes,
+    ...internationalRoutes,
+    ...nriRoutes,
+    ...cityRoutes,
+    ...localityRoutes,
+    ...definitionRoutes,
+    ...categoryRoutes,
+    ...tagRoutes,
+    ...stateRoutes,
+    ...compareRoutes,
+    ...localAreaRoutes,
+    ...biologyNotesRoutes,
+    ...onlineCityRoutes,
+    ...curriculumRoutes,
+    ...routes,
+    ...blogRoutes,
+    ...seoLandingRoutes,
+    ...missingPageRoutes,
+  ]
+
+  // Deduplicate: later entries (hardcoded routes) take priority over dynamic ones
+  const urlMap = new Map<string, MetadataRoute.Sitemap[0]>()
+  for (const route of allRoutes) {
+    urlMap.set(route.url, route)
+  }
+
+  return Array.from(urlMap.values())
 }
