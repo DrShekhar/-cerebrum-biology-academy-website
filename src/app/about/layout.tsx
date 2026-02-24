@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "About Cerebrum Biology Academy | India's Most Trusted NEET Coaching",
   description:
-    'Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2010. 98% NEET qualification success rate, 1,50,000+ students coached achieved. AIIMS alumnus-led teaching excellence with proven methodologies.',
+    'About Cerebrum Biology Academy, founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2010. 98% NEET success rate, 1,50,000+ students coached. Visit us today!',
   keywords:
     'Cerebrum Biology Academy, AIIMS faculty NEET coaching, Dr Shekhar Singh AIIMS, NEET Biology coaching Delhi, medical college entrance coaching, NEET success rate, top NEET coaching institute',
   openGraph: {

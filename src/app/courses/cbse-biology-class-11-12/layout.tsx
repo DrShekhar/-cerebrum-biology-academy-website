@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'CBSE Biology Class 11 & 12 Coaching Delhi | Board Exam Preparation',
   description:
-    'Best CBSE Biology coaching for Class 11 & 12 in Delhi. Expert faculty, complete NCERT coverage, board exam preparation with NEET alignment. South Delhi centers. Book free demo!',
+    'CBSE Biology coaching for Class 11 & 12 in Delhi. Complete NCERT coverage, board exam prep with NEET alignment, expert AIIMS faculty. Book a free demo!',
   keywords: [
     'CBSE Biology class 11 coaching',
     'CBSE Biology class 12 coaching',

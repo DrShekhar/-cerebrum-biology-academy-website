@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET College Predictor 2026 - Find 100+ Medical Colleges by Rank | AIIMS, Govt, Private',
   description:
-    "India's most comprehensive NEET College Predictor with 100+ medical colleges. Accurate NEET 2024 cutoffs for all 23 AIIMS, JIPMER, Government & Private/Deemed colleges. Category-wise (General, EWS, OBC, SC, ST) closing ranks with admission chance calculator.",
+    'NEET College Predictor 2026 — find medical colleges by rank. 100+ colleges with 2024 cutoffs for AIIMS, JIPMER, Govt and Private. Check your chances now!',
   keywords: [
     'NEET college predictor 2026',
     'NEET rank wise college list',

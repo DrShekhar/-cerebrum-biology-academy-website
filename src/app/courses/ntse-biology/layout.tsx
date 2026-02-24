@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NTSE Biology Coaching Delhi | Class 10 Scholarship Preparation',
   description:
-    'Expert NTSE Biology coaching in Delhi. Class 10 scholarship preparation, MAT & SAT strategies, Rs 1.25 lakh/year scholarship till PhD. 90% selection rate.',
+    'NTSE Biology coaching in Delhi — Class 10 scholarship prep, MAT & SAT strategies, Rs 1.25 lakh/year scholarship. 90% selection rate. Book a free demo!',
   keywords: [
     'NTSE Biology preparation Delhi',
     'NTSE coaching Delhi',

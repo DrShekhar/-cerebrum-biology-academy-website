@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best Biology Tuition South Delhi | Classes 9-12',
   description:
-    'Top biology tuition in South Delhi for Classes 9-12. Expert AIIMS faculty, CBSE/ICSE/State board syllabus, NEET foundation. Near Hauz Khas, GK, Defence Colony. Book free demo!',
+    'Top Biology tuition in South Delhi for Classes 9-12 — AIIMS faculty, CBSE/ICSE board coverage, NEET foundation. Near GK, Defence Colony. Book a free demo!',
   twitter: {
     card: 'summary_large_image',
     title: 'Best Biology Tuition South Delhi | Classes 9-12',

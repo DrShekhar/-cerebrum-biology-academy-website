@@ -4,7 +4,7 @@ import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowTo
 export const metadata: Metadata = {
   title: 'NEET Dropper Batch 2026-2027 | One Year Intensive Biology Program',
   description:
-    "Specialized NEET dropper batch for 2026-2027. Complete Biology syllabus in 10 months, rank improvement strategies, 98% success rate. Join India's best NEET repeater program!",
+    'NEET dropper batch 2026-2027 — complete Biology syllabus in 10 months with rank improvement strategies. 98% success rate at Cerebrum Academy. Enroll now!',
   keywords: [
     'NEET dropper batch',
     'NEET repeater',

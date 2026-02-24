@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Class 10 Biology Foundation | Board + NEET Preparation',
   description:
-    'Class 10 Biology coaching with board exam focus and NEET foundation. Life processes, heredity, evolution covered. Expert AIIMS faculty, 95% board toppers.',
+    'Class 10 Biology coaching with board exam focus and NEET foundation. Life processes, heredity, evolution. AIIMS faculty at Cerebrum. Book a free demo!',
   keywords: [
     'Class 10 Biology tuition Delhi',
     'Class 10 Biology coaching',

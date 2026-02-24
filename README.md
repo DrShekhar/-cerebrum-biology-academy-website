@@ -104,7 +104,37 @@ npm run dev
 - [ ] Student authentication portal
 - [ ] Payment integration
 
-## 📞 Support
+## Domain Consolidation: biologyforneetug.com → cerebrumbiologyacademy.com
+
+`biologyforneetug.com` is a legacy domain that ranks for overlapping NEET Biology keywords, splitting SEO authority. All traffic must be consolidated to the primary domain via **301 permanent redirects**.
+
+### Redirect Mappings
+
+| Source (biologyforneetug.com) | Destination (cerebrumbiologyacademy.com) |
+|-------------------------------|------------------------------------------|
+| `/` (homepage) | `/` |
+| `/shekhar-sir` | `/faculty` |
+| `/*` (all other paths) | `/` (catch-all) |
+
+### Implementation Notes
+
+- **301 redirects must be configured at the DNS/hosting level** for biologyforneetug.com (e.g., Vercel redirect rules, Cloudflare Page Rules, or Netlify `_redirects`).
+- This repo already handles canonical tags — every page on cerebrumbiologyacademy.com emits `<link rel="canonical" href="https://cerebrumbiologyacademy.com/...">` via the `CanonicalManager` component in the root layout and `alternates.canonical` in page metadata.
+- After redirects are live, submit the updated sitemap in Google Search Console and use the **Change of Address** tool to notify Google of the domain migration.
+- Monitor Google Search Console for both domains for 6-12 months to ensure full index consolidation.
+
+### Vercel Redirect Example (vercel.json)
+
+```json
+{
+  "redirects": [
+    { "source": "/shekhar-sir", "destination": "https://cerebrumbiologyacademy.com/faculty", "statusCode": 301 },
+    { "source": "/(.*)", "destination": "https://cerebrumbiologyacademy.com/", "statusCode": 301 }
+  ]
+}
+```
+
+## Support
 
 For support and questions, contact:
 
@@ -113,4 +143,4 @@ For support and questions, contact:
 
 ---
 
-Built with ❤️ by Cerebrum Biology Academy team
+Built by Cerebrum Biology Academy team

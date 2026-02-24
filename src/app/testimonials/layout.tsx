@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Success Stories [67+ AIIMS Selections, 98% Success]',
   description:
-    'Real student reviews: 67+ AIIMS selections, 98% success rate, 67+ AIIMS selections. See transformation stories & join the success club today!',
+    'Real NEET success stories at Cerebrum Academy — 67+ AIIMS selections, 98% success rate, 1,50,000+ students trained. Watch video testimonials today!',
   keywords:
     'NEET testimonials, success stories, student reviews, NEET qualifiers, AIIMS selections, medical college admissions, student feedback, coaching reviews',
   openGraph: {

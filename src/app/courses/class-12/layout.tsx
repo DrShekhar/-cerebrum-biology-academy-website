@@ -4,7 +4,7 @@ import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowTo
 export const metadata: Metadata = {
   title: 'Class 12 Biology NEET Coaching | Target 2026-2027 Batch',
   description:
-    'Intensive Class 12 Biology coaching for NEET 2026. Complete syllabus, previous year papers, mock tests, 90+ marks guarantee. AIIMS faculty. Limited seats!',
+    'Class 12 NEET Biology coaching at Cerebrum Academy. Complete syllabus, previous year papers, mock tests, AIIMS faculty, 98% success rate. Enroll now!',
   keywords: [
     'Class 12 biology',
     'NEET target batch',

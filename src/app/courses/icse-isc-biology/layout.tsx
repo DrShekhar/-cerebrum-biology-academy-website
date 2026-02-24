@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'ICSE & ISC Biology Coaching Delhi | Class 9-12',
   description:
-    'Expert ICSE and ISC Biology coaching in Delhi. Class 9, 10 ICSE and Class 11, 12 ISC Biology tuition. Selina, Concise Biology coverage. South Delhi centers. Book free demo!',
+    'ICSE and ISC Biology coaching in Delhi for Class 9-12. Selina & Concise Biology coverage, board exam prep with expert AIIMS faculty. Book a free demo!',
   keywords: [
     'ICSE Biology coaching Delhi',
     'ISC Biology coaching Delhi',

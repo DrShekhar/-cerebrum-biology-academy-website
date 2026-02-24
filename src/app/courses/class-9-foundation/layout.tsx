@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Class 9 Biology Foundation | Pre-NEET Preparation',
   description:
-    'Class 9 Biology foundation course with NEET-aligned curriculum. NCERT-based conceptual learning, interactive sessions, early NEET preparation. Expert AIIMS faculty.',
+    'Class 9 NEET-aligned Biology foundation course — NCERT-based learning, interactive sessions, and AIIMS faculty at Cerebrum Academy. Book a free demo today!',
   keywords: [
     'Class 9 Biology tuition Delhi',
     'Class 9 Biology coaching',

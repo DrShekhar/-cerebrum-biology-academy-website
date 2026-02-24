@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title:
     'Online Biology Tuition for Class 9, 10, 11 & 12 | NEET Biology Coaching | Cerebrum Biology Academy',
   description:
-    'Best online Biology tutor for NEET 2026. Expert online Biology tuition for Class 9, 10, 11 & 12 students. Live online Biology classes with AIIMS-trained faculty. NCERT Biology coaching with chapter-wise NEET preparation.',
+    'Online Biology tuition for Class 9-12 and NEET with AIIMS-trained faculty. Live classes, NCERT coaching, chapter-wise preparation. Book a free demo today!',
   keywords: [
     'online biology tutor',
     'online biology tuition',

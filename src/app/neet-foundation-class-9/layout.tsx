@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 9 | Early NEET Preparation',
   description:
-    'Start NEET preparation from Class 9 with early foundation coaching. Get a 4-year head start in NEET coaching for Class 9 students. Build strong biology concepts, develop problem-solving skills, and excel in both school and competitive exams.',
+    'Start NEET preparation from Class 9 — get a 4-year head start. Build strong biology concepts with AIIMS faculty at Cerebrum Academy. Book a free demo!',
   keywords: [
     'neet foundation class 9',
     'neet coaching class 9',

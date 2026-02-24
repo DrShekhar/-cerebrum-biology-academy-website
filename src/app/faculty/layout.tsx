@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title:
     'Expert NEET Biology Faculty Delhi NCR | AIIMS Qualified Teachers | Cerebrum Academy',
   description:
-    'Meet Cerebrum Biology Academy expert faculty. AIIMS-qualified, 15+ years teaching experience, 680+ medical college selections. Led by Dr. Shekhar Singh, founder with AIIMS background.',
+    "Meet Cerebrum Academy's AIIMS-qualified NEET Biology faculty — 15+ years experience, 680+ medical selections. Led by Dr. Shekhar Singh. Book a free demo!",
   keywords: [
     'NEET faculty Delhi',
     'biology teachers Delhi NCR',

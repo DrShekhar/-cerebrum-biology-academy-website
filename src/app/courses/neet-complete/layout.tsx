@@ -4,7 +4,7 @@ import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowTo
 export const metadata: Metadata = {
   title: 'NEET Complete Program | 2-Year Integrated Biology Coaching',
   description:
-    'Join our comprehensive 2-year NEET Biology program for Class 11 & 12 students. AIIMS faculty, 98% success rate, complete syllabus coverage with adaptive tests. Enroll now!',
+    '2-year NEET Biology program for Class 11 & 12 at Cerebrum Academy. AIIMS faculty, 98% success rate, complete syllabus with adaptive tests. Enroll now!',
   keywords: [
     'NEET complete program',
     '2 year NEET coaching',

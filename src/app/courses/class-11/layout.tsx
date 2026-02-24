@@ -4,7 +4,7 @@ import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowTo
 export const metadata: Metadata = {
   title: 'Class 11 Biology NEET Coaching | Foundation Program 2026-2027',
   description:
-    'Best Class 11 Biology coaching for NEET preparation. Strong foundation building, NCERT mastery, board exam excellence. AIIMS faculty, 98% success rate. Enroll for 2026-2027 batch!',
+    'Class 11 Biology coaching for NEET at Cerebrum Academy. Strong NCERT foundation, board exam excellence, AIIMS faculty, 98% success rate. Enroll for 2026-2027!',
   keywords: [
     'Class 11 biology',
     'NEET foundation',

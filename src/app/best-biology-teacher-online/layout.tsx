@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best Biology Teacher Online | Best Online Biology Teacher',
   description:
-    "Learn from India's best biology teacher online. AIIMS-trained Dr. Shekhar with 15+ years experience, 67+ AIIMS selections. Live interactive classes, personalized mentoring. Join 1,50,000+ students!",
+    "Learn from India's best online biology teacher — Dr. Shekhar (AIIMS). 15+ years experience, 67+ AIIMS selections, live interactive classes. Book a free demo!",
   keywords: [
     'best biology teacher online',
     'best online biology teacher',

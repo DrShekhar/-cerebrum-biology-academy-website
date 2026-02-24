@@ -4,7 +4,7 @@ import { CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 export const metadata: Metadata = {
   title: 'Intensive NEET Biology Course - Elite Program',
   description:
-    "Join India's most exclusive NEET Biology course. Limited to 50 elite students. 100% AIIMS selection rate. Features AIIMS faculty, personalized mentorship, and advanced methodologies. Application-based admission.",
+    "India's most exclusive NEET Biology course — limited to 50 elite students, 100% AIIMS selection rate. AIIMS faculty, personalized mentorship. Apply now!",
   keywords:
     'intensive NEET biology, premium NEET course, AIIMS selection, elite biology coaching, exclusive NEET preparation, top AIR ranks, advanced biology course',
   authors: [{ name: 'Cerebrum Biology Academy' }],
