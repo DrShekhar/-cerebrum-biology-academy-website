@@ -97,7 +97,7 @@ export const CONTACT_INFO = {
       isPhysicalCenter: true,
     },
     greenPark: {
-      name: 'Cerebrum Biology Academy - Green Park',
+      name: 'Cerebrum Biology Academy - Green Park (Online)',
       streetAddress: 'B 113 FF Gulmohar Park',
       addressLocality: 'Green Park, New Delhi',
       addressRegion: 'Delhi',
@@ -114,7 +114,8 @@ export const CONTACT_INFO = {
         'Green Park Market',
         'Near Hauz Khas',
       ],
-      isPhysicalCenter: true,
+      isPhysicalCenter: false,
+      nearestCenter: 'southExtension',
     },
     gurugram: {
       name: 'Cerebrum Biology Academy - Gurugram',
@@ -169,7 +170,7 @@ export const CONTACT_INFO = {
       ],
     },
     noida: {
-      name: 'Cerebrum Biology Academy - Noida',
+      name: 'Cerebrum Biology Academy - Noida (Online)',
       streetAddress: 'B-45, Sector 62',
       addressLocality: 'Noida',
       addressRegion: 'Uttar Pradesh',
@@ -186,7 +187,8 @@ export const CONTACT_INFO = {
         'Electronic City',
         'Near Noida City Centre',
       ],
-      isPhysicalCenter: true,
+      isPhysicalCenter: false,
+      nearestCenter: 'southExtension',
     },
   },
 

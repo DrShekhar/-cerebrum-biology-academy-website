@@ -9,7 +9,7 @@ export const fr = {
   seeSuccessStories: 'Voir les Succès',
   heroTitle: 'Meilleur Coaching Biologie NEET',
   heroSubtitle: "Delhi NCR & En ligne dans toute l'Inde",
-  locations: 'Laxmi Nagar • Dwarka • Noida • Gurgaon • Kota • Hyderabad • Bangalore',
+  locations: 'South Extension • Rohini • Gurugram • Faridabad • Online Classes - Globally',
   topperHighlight: 'Sadhna a obtenu 695 (100e Percentile)',
   stats: '98% Taux de Réussite • 2 500+ Étudiants • Enseignants Formés AIIMS',
   sadhnasScore: 'Score de Sadhna',

@@ -37,7 +37,7 @@ const comparisonData = [
 ]
 
 const majorCities = [
-  { city: 'Delhi NCR', areas: 'Laxmi Nagar, Dwarka, Noida, Gurgaon', students: '800+' },
+  { city: 'Delhi NCR', areas: 'South Extension, Rohini, Gurugram, Faridabad', students: '800+' },
   { city: 'Mumbai', areas: 'Andheri, Thane, Borivali', students: '320+' },
   { city: 'Bangalore', areas: 'Koramangala, Indiranagar, Whitefield', students: '280+' },
   { city: 'Hyderabad', areas: 'Ameerpet, Kukatpally, HITEC City', students: '260+' },

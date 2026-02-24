@@ -37,27 +37,33 @@ const achievements = [
 const cityData = [
   {
     city: 'Delhi',
-    areas: ['South Delhi', 'Rohini', 'Dwarka', 'Laxmi Nagar', 'Pitampura'],
+    areas: ['South Extension', 'Rohini'],
     students: 1500,
     centers: 2,
+  },
+  {
+    city: 'Gurugram',
+    areas: ['Sector 51', 'DLF Phase 3', 'Golf Course Road', 'Sohna Road'],
+    students: 600,
+    centers: 1,
+  },
+  {
+    city: 'Faridabad',
+    areas: ['Sector 17', 'NIT', 'Ballabhgarh', 'Old Faridabad'],
+    students: 400,
+    centers: 1,
   },
   {
     city: 'Noida',
     areas: ['Sector 18', 'Sector 62', 'Sector 137', 'Greater Noida'],
     students: 800,
-    centers: 1,
-  },
-  {
-    city: 'Gurgaon',
-    areas: ['DLF Phase 3', 'Sector 14', 'Sohna Road', 'Golf Course Road'],
-    students: 600,
-    centers: 1,
+    centers: 0,
   },
   {
     city: 'Ghaziabad',
     areas: ['Indirapuram', 'Vaishali', 'Raj Nagar', 'Vasundhara'],
     students: 400,
-    centers: 1,
+    centers: 0,
   },
 ]
 

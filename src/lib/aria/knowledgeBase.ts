@@ -238,7 +238,7 @@ Would you like to see how we can complement your preparation?`,
     response: `I completely understand! Most students prefer face-to-face teaching. Here's what we offer:
 
 1. **1-week FREE trial** - Full access to online classes, study materials, doubt clearing. No commitment, no credit card!
-2. **Offline centers** available at: Gurugram Sector-51 M2K Corporate Park, South Extension Delhi, Rohini Sector-9 Delhi
+2. **Offline centers** available at: Gurugram Sector-51 M2K Corporate Park, South Extension Delhi, Rohini Sector-9 Delhi, Faridabad Sector-17
 3. **Hybrid option** - combine online + offline as needed
 4. **FREE demo class** at offline centers - experience our teaching quality firsthand
 
@@ -353,7 +353,7 @@ export const FAQ_DATA = {
   onlineVsOffline: {
     question: 'Do you have offline classes?',
     answer:
-      'Yes! We have 6 offline centers across Delhi NCR: South Extension Delhi, Gurugram Sector-51 M2K Corporate Park, Rohini Sector-9 Delhi, Laxmi Nagar Delhi, Dwarka Delhi, and Noida. You can choose online, offline, or hybrid mode. All formats have the same expert faculty and curriculum. Our live online classes have recordings, test analysis, and customized courses.',
+      'Yes! We have 4 offline centers across Delhi NCR: South Extension Delhi, Gurugram Sector-51 M2K Corporate Park, Rohini Sector-9 Delhi, and Faridabad Sector-17. You can choose online, offline, or hybrid mode. All formats have the same expert faculty and curriculum. Our live online classes have recordings, test analysis, and customized courses.',
   },
   studyMaterial: {
     question: 'What study materials do you provide?',
@@ -401,9 +401,7 @@ export const CONTACT_POINTS = {
     'South Extension, Delhi',
     'Gurugram - Sector 51, M2K Corporate Park',
     'Rohini Sector-9, Delhi',
-    'Laxmi Nagar, Delhi',
-    'Dwarka, Delhi',
-    'Noida',
+    'Faridabad - Sector 17',
   ],
   website: 'https://cerebrumbiologyacademy.com',
 }
@@ -423,7 +421,7 @@ export const USP_POINTS = [
   'Proprietary "Concept Pyramid" method for conceptual clarity',
   'Money-back guarantee for Pinnacle tier',
   'Flexible online, offline, and hybrid options',
-  '6 offline centers across Delhi NCR + online classes',
+  '4 offline centers across Delhi NCR + online classes',
   'Recorded lectures + Weekly/Monthly/Biweekly tests included',
   'Free 45-minute demo class (₹2,000 value) with study materials',
 ]

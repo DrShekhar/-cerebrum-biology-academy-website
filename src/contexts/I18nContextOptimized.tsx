@@ -54,7 +54,7 @@ const englishTranslations = {
   seeSuccessStories: 'See Success Stories',
   heroTitle: 'Best NEET Biology Coaching',
   heroSubtitle: 'Delhi NCR & Pan-India Online',
-  locations: 'Laxmi Nagar • Dwarka • Noida • Gurgaon • Kota • Hyderabad • Bangalore',
+  locations: 'South Extension • Rohini • Gurugram • Faridabad • Online Classes - Globally',
   topperHighlight: 'Sadhna Scored 695 (100 Percentile)',
   stats: '98% Success Rate • 1,50,000+ Students • AIIMS Trained Faculties',
   sadhnasScore: "Sadhna's Score",

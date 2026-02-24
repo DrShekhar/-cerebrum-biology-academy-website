@@ -9,7 +9,7 @@ export const de = {
   seeSuccessStories: 'Erfolgsgeschichten Ansehen',
   heroTitle: 'Beste NEET Biologie Nachhilfe',
   heroSubtitle: 'Delhi NCR & Online in ganz Indien',
-  locations: 'Laxmi Nagar • Dwarka • Noida • Gurgaon • Kota • Hyderabad • Bangalore',
+  locations: 'South Extension • Rohini • Gurugram • Faridabad • Online Classes - Globally',
   topperHighlight: 'Sadhna erreichte 695 (100. Perzentil)',
   stats: '98% Erfolgsrate • 1,50,000+ Studenten • AIIMS Ausgebildete Dozenten',
   sadhnasScore: 'Sadhnas Punktzahl',

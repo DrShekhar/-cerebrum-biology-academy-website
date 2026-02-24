@@ -11,9 +11,9 @@ export const seoConfig = {
   siteName: 'Cerebrum Biology Academy',
   siteUrl: 'https://cerebrumbiologyacademy.com',
   defaultTitle:
-    'Best NEET Biology Coaching in Delhi NCR | Laxmi Nagar, Dwarka, Noida | Cerebrum Academy',
+    'Best NEET Biology Coaching in Delhi NCR | South Extension, Rohini, Gurugram, Faridabad | Cerebrum Academy',
   defaultDescription:
-    'Top NEET biology coaching in Delhi NCR - Laxmi Nagar, Dwarka, Noida, Gurgaon. Expert AIIMS faculty, 98% success rate, small batches. Best medical entrance preparation. Book free demo!',
+    'Top NEET biology coaching in Delhi NCR - South Extension, Rohini, Gurugram, Faridabad. Expert AIIMS faculty, 98% success rate, small batches. Best medical entrance preparation. Book free demo!',
   defaultOgImage: '/og-image.jpg',
   twitterHandle: '@CerebrumBio',
   locale: 'en_IN',
@@ -23,9 +23,9 @@ export const seoConfig = {
 export const pageMetadata: Record<string, PageMetadata> = {
   home: {
     title:
-      'Best NEET Biology Coaching in Delhi NCR | Laxmi Nagar, Dwarka, Noida, Gurgaon | Cerebrum Academy',
+      'Best NEET Biology Coaching in Delhi NCR | South Extension, Rohini, Gurugram, Faridabad | Cerebrum Academy',
     description:
-      'Top NEET coaching in Delhi NCR 2026. AIIMS faculty, 98% success rate, 15-student batches, 680+ selections. 4 centers across Delhi NCR. Class 11, 12 & droppers. Book free demo!',
+      'Top NEET Biology coaching in Delhi NCR. 98% success rate, 67+ AIIMS selections. Centers in South Extension, Rohini, Gurugram & Faridabad. Online classes globally. Book free demo!',
     keywords: [
       'NEET coaching in Delhi',
       'NEET coaching Delhi NCR',
@@ -33,14 +33,14 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'Biology coaching Delhi NCR',
       'NEET preparation classes Delhi',
       'Medical entrance coaching Delhi',
-      'NEET coaching Laxmi Nagar',
-      'NEET coaching Dwarka',
-      'NEET coaching Noida',
+      'NEET coaching South Extension',
+      'NEET coaching Faridabad',
+      'NEET coaching Gurugram',
       'NEET coaching Gurgaon',
       'NEET coaching Rohini',
-      'NEET coaching Pitampura',
-      'Biology coaching Laxmi Nagar',
-      'Biology coaching Dwarka',
+      'Biology coaching South Extension',
+      'Biology coaching Rohini',
+      'Biology coaching Gurugram',
       'Biology tuition Delhi',
       'NEET 2026 coaching Delhi',
       'NEET 2026 coaching Delhi',
@@ -112,7 +112,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   about: {
     title: 'About Us - Best NEET Biology Coaching Institute Delhi NCR | Cerebrum Academy',
     description:
-      'About Cerebrum Biology Academy - 15+ years of NEET coaching excellence in Delhi NCR. Expert AIIMS faculty, 98% success rate, 1,50,000+ students from Laxmi Nagar, Dwarka, Noida, Gurgaon.',
+      'About Cerebrum Biology Academy - 15+ years of NEET coaching excellence in Delhi NCR. Expert AIIMS faculty, 98% success rate, 1,50,000+ students from South Extension, Rohini, Gurugram, Faridabad.',
     keywords: [
       'about cerebrum academy',
       'NEET coaching institute Delhi',
@@ -128,7 +128,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   contact: {
     title: 'Contact Us - NEET Coaching in Delhi NCR | Cerebrum Academy Admissions',
     description:
-      'Contact Cerebrum Biology Academy for NEET coaching admissions in Delhi NCR. Centers in Laxmi Nagar, Dwarka, Noida, Gurgaon. Call for free demo class. 24/7 support.',
+      'Contact Cerebrum Biology Academy for NEET coaching admissions in Delhi NCR. Centers in South Extension, Rohini, Gurugram, Faridabad. Call for free demo class. 24/7 support.',
     keywords: [
       'contact NEET coaching Delhi',
       'NEET admission Delhi NCR',
@@ -144,7 +144,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   enrollment: {
     title: 'Enroll Now - NEET Biology Coaching Delhi NCR | Cerebrum Academy Admission',
     description:
-      'Enroll in best NEET biology coaching in Delhi NCR. Affordable fees, EMI options. Join students from Laxmi Nagar, Dwarka, Noida, Gurgaon. Limited seats for 2026-27 batch!',
+      'Enroll in best NEET biology coaching in Delhi NCR. Affordable fees, EMI options. Join students from South Extension, Rohini, Gurugram, Faridabad. Limited seats for 2026-27 batch!',
     keywords: [
       'NEET enrollment Delhi',
       'biology course admission Delhi NCR',
@@ -203,8 +203,8 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'affordable NEET coaching Delhi',
       'NEET coaching fees comparison',
       'NEET coaching EMI Delhi',
-      'NEET fees Laxmi Nagar',
-      'NEET fees Dwarka',
+      'NEET fees South Extension',
+      'NEET fees Rohini',
       'NEET coaching fees Noida',
       'NEET coaching fees Gurgaon',
       'Cerebrum Academy fees',
@@ -215,7 +215,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   resources: {
     title: 'Free NEET Biology Study Materials Delhi NCR | Notes, PDFs | Cerebrum Academy',
     description:
-      'Free NEET biology study materials for Delhi NCR students. Download notes, PDFs, practice questions. Best free resources from top NEET coaching in Laxmi Nagar, Dwarka.',
+      'Free NEET biology study materials for Delhi NCR students. Download notes, PDFs, practice questions. Best free resources from top NEET coaching in South Extension, Rohini, Gurugram, Faridabad.',
     keywords: [
       'NEET study material Delhi',
       'biology notes free download',
@@ -266,7 +266,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   faculty: {
     title: 'Expert NEET Biology Faculty Delhi NCR | AIIMS Qualified Teachers | Cerebrum Academy',
     description:
-      'Meet our expert NEET biology faculty in Delhi NCR. AIIMS qualified, 15+ years experience, teaching in Laxmi Nagar, Dwarka, Noida, Gurgaon centers.',
+      'Meet our expert NEET biology faculty in Delhi NCR. AIIMS qualified, 15+ years experience, teaching in South Extension, Rohini, Gurugram, Faridabad centers.',
     keywords: [
       'NEET faculty Delhi',
       'biology teachers Delhi NCR',
@@ -282,7 +282,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   class9Foundation: {
     title: 'Class 9 Biology Foundation Course Delhi NCR | NEET 2028-2029 | Cerebrum Academy',
     description:
-      'Class 9 NEET foundation course in Delhi NCR. Start early for 65% higher success. Best foundation coaching in Laxmi Nagar, Dwarka, Noida, Gurgaon. 4-year NEET preparation.',
+      'Class 9 NEET foundation course in Delhi NCR. Start early for 65% higher success. Best foundation coaching in South Extension, Rohini, Gurugram, Faridabad. 4-year NEET preparation.',
     keywords: [
       'class 9 biology foundation Delhi',
       'early NEET preparation Delhi NCR',
@@ -300,7 +300,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   class10Foundation: {
     title: 'Class 10 Biology Foundation Course Delhi NCR | NEET 2027 | Cerebrum Academy',
     description:
-      'Class 10 NEET foundation course in Delhi NCR. Perfect head start for NEET 2027. Best coaching in Laxmi Nagar, Dwarka, Noida, Gurgaon. Board + NEET preparation.',
+      'Class 10 NEET foundation course in Delhi NCR. Perfect head start for NEET 2027. Best coaching in South Extension, Rohini, Gurugram, Faridabad. Board + NEET preparation.',
     keywords: [
       'class 10 NEET preparation Delhi',
       'class 10 biology foundation Delhi NCR',
