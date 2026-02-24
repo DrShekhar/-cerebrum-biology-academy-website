@@ -130,11 +130,10 @@ export const Footer = memo(function Footer() {
   ]
 
   const offlineCenters = [
-    { name: 'Delhi (Patel Nagar)', href: '/locations/delhi' },
-    { name: 'South Delhi (GK)', href: '/locations/south-delhi' },
-    { name: 'Gurugram', href: '/locations/gurugram' },
-    { name: 'Noida (Sec 62)', href: '/locations/noida' },
-    { name: 'Faridabad', href: '/locations/faridabad' },
+    { name: 'South Extension (Flagship)', href: '/locations/south-extension' },
+    { name: 'Rohini - DC Chowk', href: '/locations/rohini' },
+    { name: 'Gurugram - Sector 51', href: '/locations/gurugram' },
+    { name: 'Faridabad - Sector 17', href: '/locations/faridabad' },
     { name: 'All Locations', href: '/locations' },
   ]
 
@@ -282,13 +281,16 @@ export const Footer = memo(function Footer() {
                 <MapPin className="w-4 h-4 mr-3 text-blue-400 mt-1" aria-hidden="true" />
                 <div className="text-sm space-y-1">
                   <div>
+                    <strong>South Extension:</strong> D 35, South Extension Part 2, 110049
+                  </div>
+                  <div>
                     <strong>Rohini:</strong> DC Chauk Sector 9, Delhi 110085
                   </div>
                   <div>
                     <strong>Gurugram:</strong> M2K Corporate Park, Sector 51, 122018
                   </div>
                   <div>
-                    <strong>South Delhi:</strong> D 35, South Extension Part 2, 110049
+                    <strong>Faridabad:</strong> HUDA Market, Sector 17, 121002
                   </div>
                 </div>
               </div>

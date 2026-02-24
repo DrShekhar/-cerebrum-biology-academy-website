@@ -1,8 +1,9 @@
 'use client'
 
 import { locations } from '@/data/locations'
-import { MapPin, Phone, Clock } from 'lucide-react'
+import { MapPin, Phone, Clock, ArrowRight } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -102,14 +103,23 @@ export function LocationsSection() {
                   </div>
                 </div>
 
-                <a
-                  href={location.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full bg-[#3d4d3d] text-white py-2.5 rounded-lg font-medium text-sm hover:bg-[#4a5d4a] transition-colors"
-                >
-                  Get Directions
-                </a>
+                <div className="space-y-2">
+                  <Link
+                    href={`/locations/${location.id}`}
+                    className="flex items-center justify-center w-full bg-[#3d4d3d] text-white py-2.5 rounded-lg font-medium text-sm hover:bg-[#4a5d4a] transition-colors"
+                  >
+                    View Center
+                    <ArrowRight className="w-4 h-4 ml-1.5" />
+                  </Link>
+                  <a
+                    href={location.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-full border border-[#3d4d3d] text-[#3d4d3d] py-2 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors"
+                  >
+                    Get Directions
+                  </a>
+                </div>
               </div>
             </div>
           ))}

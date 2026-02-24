@@ -23,6 +23,7 @@ import {
   trackWhatsAppConversion,
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
+import Link from 'next/link'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import {
   RelatedLocations,
@@ -381,6 +382,36 @@ export default function SouthExtensionLocationPage() {
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Other Centers */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
+              Our Other Centers
+            </h2>
+            <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+              Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              {[
+                { name: 'Rohini - DC Chowk', slug: 'rohini', city: 'New Delhi', highlight: 'North Delhi' },
+                { name: 'Gurugram - Sector 51', slug: 'gurugram', city: 'Gurugram', highlight: 'Haryana' },
+                { name: 'Faridabad - Sector 17', slug: 'faridabad', city: 'Faridabad', highlight: 'Haryana' },
+              ].map((center) => (
+                <Link
+                  key={center.slug}
+                  href={`/locations/${center.slug}`}
+                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-yellow-500 hover:shadow-lg transition-all group text-center"
+                >
+                  <MapPin className="w-8 h-8 text-yellow-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-bold text-gray-900 mb-1">{center.name}</h3>
+                  <p className="text-sm text-gray-500">{center.city}</p>
+                  <span className="inline-block mt-2 text-xs bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">{center.highlight}</span>
+                </Link>
               ))}
             </div>
           </div>

@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching in Faridabad | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching in Faridabad',
   description:
-    'Best NEET Biology coaching in Faridabad by AIIMS faculty. Small batches of 15 students, 98% success rate. Located in Sector 15. Call +91 88264 44334.',
+    'Best NEET Biology coaching in Faridabad by AIIMS faculty. Small batches of 15 students, 98% success rate. Located in Sector 17, HUDA Market. Call +91 88264 44334.',
   keywords: [
     'NEET coaching Faridabad',
     'Biology coaching Faridabad',
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     'NEET preparation Faridabad',
     'Medical coaching Faridabad',
     'AIIMS coaching Faridabad',
-    'NEET coaching Sector 15 Faridabad',
+    'NEET coaching Sector 17 Faridabad',
     'NEET coaching near me Faridabad',
     'Biology tuition Faridabad',
     'NEET coaching Ballabgarh',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching in Faridabad | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching in Faridabad',
     description:
       'Best NEET Biology coaching in Faridabad. AIIMS faculty, small batches, 98% success rate.',
     type: 'website',
@@ -139,7 +139,7 @@ function FaridabadFAQSchema() {
         name: 'How far is Cerebrum Academy from Faridabad?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy has centers in South Extension, New Delhi and Faridabad Sector 15 to serve students from Faridabad and nearby areas. The Faridabad center at SCO 23, Sector 15 is centrally located for easy access to students from all sectors of Faridabad.',
+          text: 'Cerebrum Biology Academy has a center at SCF 124, Second Floor, Above Union Bank of India, HUDA Market, Sector 17, Faridabad. The center is just 5 minutes from Bata Chowk Metro Station (Violet Line) and serves students from all sectors of Faridabad.',
         },
       },
       {
@@ -147,7 +147,7 @@ function FaridabadFAQSchema() {
         name: 'Why is Cerebrum the best NEET coaching center in Faridabad?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum is the best NEET coaching in Faridabad with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, personalized attention, and a dedicated Faridabad center in Sector 15 for convenient access to local students.',
+          text: 'Cerebrum is the best NEET coaching in Faridabad with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, personalized attention, and a dedicated Faridabad center in Sector 17 HUDA Market for convenient access to local students.',
         },
       },
       {
@@ -163,7 +163,7 @@ function FaridabadFAQSchema() {
         name: 'Is the Faridabad center easily accessible by metro or road?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, Cerebrum Faridabad center at Sector 15 is well-connected and easily accessible. You can reach via NH 44 or local roads. It is close to NIT Faridabad and other important landmarks. The location is convenient for students from all sectors of Faridabad and surrounding areas.',
+          text: 'Yes, Cerebrum Faridabad center at Sector 17 HUDA Market is well-connected. The nearest metro station is Bata Chowk (Violet Line), just 5 minutes walk. You can also reach via Mathura Road or NH 44. It is close to NIT Faridabad, Ballabgarh, and YMCA intersection.',
         },
       },
       {

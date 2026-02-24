@@ -131,7 +131,39 @@ export const navigationRoutes: NavigationItem[] = [
     status: 'active',
   },
 
-  // Location-based Pages
+  // Location-based Pages - Center Pages
+  {
+    title: 'South Extension Center',
+    description: 'Flagship NEET Biology coaching center in South Extension',
+    href: '/locations/south-extension',
+    icon: '📍',
+    category: 'learning',
+    status: 'active',
+  },
+  {
+    title: 'Rohini Center',
+    description: 'NEET Biology coaching at DC Chowk, Rohini',
+    href: '/locations/rohini',
+    icon: '📍',
+    category: 'learning',
+    status: 'active',
+  },
+  {
+    title: 'Gurugram Center',
+    description: 'NEET Biology coaching in Gurugram',
+    href: '/locations/gurugram',
+    icon: '📍',
+    category: 'learning',
+    status: 'active',
+  },
+  {
+    title: 'Faridabad Center',
+    description: 'NEET Biology coaching in Faridabad',
+    href: '/locations/faridabad',
+    icon: '📍',
+    category: 'learning',
+    status: 'active',
+  },
   {
     title: 'Kota Coaching',
     description: 'Biology coaching in Kota',

@@ -353,6 +353,36 @@ export default function GurugramLocationContent() {
         </div>
       </div>
 
+      {/* Other Centers */}
+      <div className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
+            Our Other Centers
+          </h2>
+          <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              { name: 'South Extension (Flagship)', slug: 'south-extension', city: 'New Delhi', highlight: 'Flagship Center' },
+              { name: 'Rohini - DC Chowk', slug: 'rohini', city: 'New Delhi', highlight: 'North Delhi' },
+              { name: 'Faridabad - Sector 17', slug: 'faridabad', city: 'Faridabad', highlight: 'Haryana' },
+            ].map((center) => (
+              <Link
+                key={center.slug}
+                href={`/locations/${center.slug}`}
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-green-500 hover:shadow-lg transition-all group text-center"
+              >
+                <MapPin className="w-8 h-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="font-bold text-gray-900 mb-1">{center.name}</h3>
+                <p className="text-sm text-gray-500">{center.city}</p>
+                <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">{center.highlight}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <div className="py-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

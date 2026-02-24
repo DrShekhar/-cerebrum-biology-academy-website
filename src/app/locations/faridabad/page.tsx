@@ -31,6 +31,7 @@ import {
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import Link from 'next/link'
 
 export default function FaridabadLocationPage() {
   useEffect(() => {
@@ -72,6 +73,7 @@ export default function FaridabadLocationPage() {
     'NIT Faridabad',
     'Ballabgarh',
     'Old Faridabad',
+    'Greater Faridabad',
     'Badarpur',
     'Surajkund',
     'Badkhal',
@@ -80,6 +82,10 @@ export default function FaridabadLocationPage() {
     'Bata Chowk',
     'Neelam Chowk',
     'Ajronda',
+    'Tigaon Road',
+    'BPTP Parklands',
+    'Omaxe Heights',
+    'Sector 75-89',
     'Palwal',
     'Mewat',
     'Tughlakabad',
@@ -88,7 +94,27 @@ export default function FaridabadLocationPage() {
   const faqs = [
     {
       q: 'Where is Cerebrum Biology Academy located in Faridabad?',
-      a: `Our center is located at ${CONTACT_INFO.location.faridabad.streetAddress}, ${CONTACT_INFO.location.faridabad.addressLocality}. We are near Bata Chowk.`,
+      a: `Our center is located at ${CONTACT_INFO.location.faridabad.streetAddress}, ${CONTACT_INFO.location.faridabad.addressLocality}. We are above Union Bank of India in HUDA Market, Sector 17, just 5 minutes from Bata Chowk Metro Station.`,
+    },
+    {
+      q: 'Is Cerebrum Academy accessible from NIT Faridabad?',
+      a: 'Yes! NIT Faridabad is just 10-15 minutes from our Sector 17 center. Many of our students come from NIT, Old Faridabad, and surrounding areas. You can reach us via Mathura Road or take the metro to Bata Chowk station.',
+    },
+    {
+      q: 'Do you offer transport from Ballabgarh?',
+      a: 'While we do not provide dedicated transport, our Sector 17 center is easily accessible from Ballabgarh via the Violet Line metro (Escorts Mujesar → Bata Chowk, about 15 minutes). Many Ballabgarh students commute daily.',
+    },
+    {
+      q: 'What are the batch timings at the Faridabad center?',
+      a: 'We offer multiple batch timings to suit school schedules: Morning batch (7:00-9:00 AM), Afternoon batch (2:00-4:00 PM), and Evening batch (5:00-7:00 PM). Weekend batches are also available. Contact us for current availability.',
+    },
+    {
+      q: 'How many students from Faridabad have cleared NEET through Cerebrum?',
+      a: 'Over 100 students from Faridabad and surrounding areas (NIT, Ballabgarh, Greater Faridabad, Old Faridabad) have successfully cleared NEET through our coaching. Our Faridabad center maintains a 90%+ success rate.',
+    },
+    {
+      q: 'Is there parking available at the Faridabad center?',
+      a: 'Yes, HUDA Market Sector 17 has ample parking space for both cars and two-wheelers. The market area provides convenient parking for students and parents.',
     },
     {
       q: 'Do you offer offline classes in Faridabad?',
@@ -97,14 +123,6 @@ export default function FaridabadLocationPage() {
     {
       q: 'What is the batch size at your Faridabad center?',
       a: 'We maintain small batches of maximum 15 students to ensure personalized attention for every NEET aspirant.',
-    },
-    {
-      q: 'Can students from Ballabgarh join your Faridabad center?',
-      a: 'Absolutely! We have many students from Ballabgarh, Palwal, and surrounding areas. Our center is centrally located and easily accessible.',
-    },
-    {
-      q: 'What are the class timings at the Faridabad center?',
-      a: `We operate ${CONTACT_INFO.hours.displayText}. We offer morning and evening batches to accommodate school schedules.`,
     },
   ]
 
@@ -230,7 +248,7 @@ export default function FaridabadLocationPage() {
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">By Car</h3>
               <p className="text-gray-600">
-                Located in <strong>Sector 15 Market</strong>, easily accessible from Mathura Road.
+                Located in <strong>Sector 17 HUDA Market</strong>, easily accessible from Mathura Road.
                 Dedicated parking available for students.
               </p>
             </div>
@@ -241,7 +259,7 @@ export default function FaridabadLocationPage() {
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Landmarks</h3>
               <p className="text-gray-600">
-                Near <strong>Sector 15 Market</strong> and close to Bata Chowk. Look for our
+                Near <strong>Sector 17 HUDA Market</strong> and close to Bata Chowk. Look for our
                 signboard at the entrance.
               </p>
             </div>
@@ -523,6 +541,36 @@ export default function FaridabadLocationPage() {
                 </h3>
                 <p className="text-gray-600 ml-7">{faq.a}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Other Centers */}
+      <div className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
+            Our Other Centers
+          </h2>
+          <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              { name: 'South Extension (Flagship)', slug: 'south-extension', city: 'New Delhi', highlight: 'Flagship Center' },
+              { name: 'Rohini - DC Chowk', slug: 'rohini', city: 'New Delhi', highlight: 'North Delhi' },
+              { name: 'Gurugram - Sector 51', slug: 'gurugram', city: 'Gurugram', highlight: 'Haryana' },
+            ].map((center) => (
+              <Link
+                key={center.slug}
+                href={`/locations/${center.slug}`}
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-green-500 hover:shadow-lg transition-all group text-center"
+              >
+                <MapPin className="w-8 h-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                <h3 className="font-bold text-gray-900 mb-1">{center.name}</h3>
+                <p className="text-sm text-gray-500">{center.city}</p>
+                <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">{center.highlight}</span>
+              </Link>
             ))}
           </div>
         </div>
