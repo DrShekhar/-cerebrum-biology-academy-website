@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best Biology Teacher for Class 12 CBSE 2025 | Board + NEET',
+  title: 'Best Biology Teacher for Class 12 CBSE 2027 | Board + NEET',
   description:
     'Find the best biology teacher for Class 12 CBSE. Expert teaching for boards and NEET simultaneously. Genetics, Ecology, Biotechnology mastery. 98% success rate.',
   keywords: [

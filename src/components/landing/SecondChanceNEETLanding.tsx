@@ -293,7 +293,7 @@ export function SecondChanceNEETLanding({
                     Get Your Free Failure Analysis Report
                   </h2>
                   <p className="text-gray-600">
-                    Discover exactly why you failed and how to succeed in 2025
+                    Discover exactly why you failed and how to succeed in 2027
                   </p>
                 </div>
 
@@ -637,7 +637,7 @@ export function SecondChanceNEETLanding({
                   <Clock className="w-12 h-12 mx-auto mb-4" />
                   <h3 className="text-xl font-bold mb-2">Next Batch Starts In:</h3>
                   <div className="text-3xl font-bold mb-2">{formatTime(urgencyTimer)}</div>
-                  <p className="text-white/80">January 15th, 2025</p>
+                  <p className="text-white/80">January 15th, 2027</p>
                 </div>
               </PremiumCard>
 

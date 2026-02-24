@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Home Tuition for Biology | Private Biology Home Tutors 2025',
+  title: 'Home Tuition for Biology | Private Biology Home Tutors 2027',
   description:
     'Looking for home tuition for biology? Get personalized learning with expert AIIMS-trained tutors. Better than traditional home tutors - structured online classes with 24/7 doubt support.',
   keywords: [

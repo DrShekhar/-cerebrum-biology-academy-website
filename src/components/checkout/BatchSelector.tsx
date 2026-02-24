@@ -141,7 +141,7 @@ export const defaultBatches: BatchTiming[] = [
     days: ['Mon', 'Wed', 'Fri', 'Sat'],
     seatsAvailable: 8,
     totalSeats: 18,
-    startDate: 'Jan 15, 2025',
+    startDate: 'Jan 15, 2027',
     icon: 'morning',
   },
   {
@@ -151,7 +151,7 @@ export const defaultBatches: BatchTiming[] = [
     days: ['Mon', 'Tue', 'Thu', 'Sat'],
     seatsAvailable: 12,
     totalSeats: 18,
-    startDate: 'Jan 15, 2025',
+    startDate: 'Jan 15, 2027',
     icon: 'afternoon',
   },
   {
@@ -161,7 +161,7 @@ export const defaultBatches: BatchTiming[] = [
     days: ['Mon', 'Wed', 'Fri', 'Sun'],
     seatsAvailable: 3,
     totalSeats: 18,
-    startDate: 'Jan 15, 2025',
+    startDate: 'Jan 15, 2027',
     icon: 'evening',
   },
 ]

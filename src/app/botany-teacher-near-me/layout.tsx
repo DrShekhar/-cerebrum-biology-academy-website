@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Botany Teacher Near Me | Best Botany Classes 2025',
+  title: 'Botany Teacher Near Me | Best Botany Classes 2027',
   description:
     'Find the best botany teacher near you. Offline centers in Delhi NCR + online classes Pan-India. Expert faculty for Plant Physiology, Plant Kingdom & NEET Botany preparation.',
   keywords: [

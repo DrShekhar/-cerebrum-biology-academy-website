@@ -315,7 +315,7 @@ export const testSeries: TestSeries[] = [
     title: 'NEET 2026 Complete Biology Test Series',
     description:
       'Comprehensive 12-week test series covering entire NEET Biology syllabus with weekly tests and detailed performance analysis.',
-    slug: 'neet-2025-complete-biology-series',
+    slug: 'neet-2027-complete-biology-series',
     tests: ['test-1', 'test-2', 'test-3'],
     totalTests: 24,
     duration: '12 weeks',
@@ -334,8 +334,8 @@ export const testSeries: TestSeries[] = [
     schedule: {
       frequency: 'weekly',
       duration: 180,
-      startDate: '2025-02-01T10:00:00Z',
-      endDate: '2025-04-30T18:00:00Z',
+      startDate: '2026-02-01T10:00:00Z',
+      endDate: '2026-04-30T18:00:00Z',
     },
     enrollmentCount: 3247,
     rating: 4.7,
@@ -376,8 +376,8 @@ export const testSeries: TestSeries[] = [
     schedule: {
       frequency: 'bi-weekly',
       duration: 120,
-      startDate: '2025-02-15T14:00:00Z',
-      endDate: '2025-04-15T18:00:00Z',
+      startDate: '2026-02-15T14:00:00Z',
+      endDate: '2026-04-15T18:00:00Z',
     },
     enrollmentCount: 1856,
     rating: 4.5,

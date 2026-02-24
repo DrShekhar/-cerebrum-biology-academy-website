@@ -100,7 +100,7 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
             )}
 
             <span className="text-white/70">
-              New batches starting <span className="font-semibold text-white">January 2025</span>
+              New batches starting <span className="font-semibold text-white">January 2027</span>
             </span>
           </div>
         </div>

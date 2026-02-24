@@ -510,7 +510,7 @@ export default function NEETCrashCourseFaridabadContent({ faqs }: { faqs: FAQ[] 
               <p className="text-sm text-gray-600">Final revision program</p>
             </Link>
             <Link
-              href="/neet-dropper-batch-2025-26-faridabad"
+              href="/neet-dropper-batch-2026-27-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Dropper Batch</h3>

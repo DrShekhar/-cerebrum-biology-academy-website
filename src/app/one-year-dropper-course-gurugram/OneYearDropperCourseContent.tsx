@@ -297,7 +297,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/neet-dropper-batch-2025-26-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">Dropper Batch 2025-26</h3><p className="text-sm text-gray-600">Upcoming batch</p></Link>
+            <Link href="/neet-dropper-batch-2026-27-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">Dropper Batch 2026-27</h3><p className="text-sm text-gray-600">Upcoming batch</p></Link>
             <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Gurugram</h3><p className="text-sm text-gray-600">All programs</p></Link>
             <Link href="/locations/gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">Gurugram Center</h3><p className="text-sm text-gray-600">Center details</p></Link>
             <Link href="/demo-booking" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">Book Demo</h3><p className="text-sm text-gray-600">Free counseling</p></Link>

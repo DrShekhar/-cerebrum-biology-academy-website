@@ -518,7 +518,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-mock-test-free': {
     slug: 'neet-mock-test-free',
     classLevel: 'universal',
-    title: 'NEET Mock Test Free Online | Full-Length Practice Tests 2025',
+    title: 'NEET Mock Test Free Online | Full-Length Practice Tests 2027',
     metaDescription:
       'Take free NEET mock tests online. Full-length practice tests with real exam interface, instant results & detailed analysis. Prepare like the actual NEET exam.',
     keywords: [
@@ -675,9 +675,9 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-important-questions': {
     slug: 'neet-biology-important-questions',
     classLevel: 'universal',
-    title: 'NEET Biology Important Questions | Most Asked Topics 2025',
+    title: 'NEET Biology Important Questions | Most Asked Topics 2027',
     metaDescription:
-      'Get NEET Biology most important questions for 2025. Chapter-wise high-frequency questions with solutions based on PYQ analysis. Score 300+ in Biology!',
+      'Get NEET Biology most important questions for 2027. Chapter-wise high-frequency questions with solutions based on PYQ analysis. Score 300+ in Biology!',
     keywords: [
       'neet biology important questions',
       'important questions for neet biology',
@@ -686,7 +686,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'neet biology important chapters',
     ],
     hero: {
-      headline: 'NEET Biology Important Questions 2025',
+      headline: 'NEET Biology Important Questions 2027',
       subheadline:
         'Focus on questions that matter most. Based on 10+ years of PYQ analysis to help you score maximum marks.',
       highlightedText: 'Score 300+',
@@ -730,7 +730,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '🔮',
           title: 'Predicted Questions',
-          description: 'Expected questions for NEET 2025 based on pattern analysis',
+          description: 'Expected questions for NEET 2027 based on pattern analysis',
         },
         {
           icon: '✅',
@@ -778,7 +778,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
           'Yes, we provide chapter-wise weightage analysis so you know how many questions to expect from each chapter in NEET.',
       },
       {
-        question: 'Do you update the list for NEET 2025?',
+        question: 'Do you update the list for NEET 2027?',
         answer:
           'Yes, we update the important questions list after analyzing NEET 2024 and incorporating any syllabus or pattern changes announced by NTA.',
       },
@@ -790,7 +790,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       features: [
         'Important questions with video explanations',
         'Chapter weightage analysis',
-        'Expected questions for NEET 2025',
+        'Expected questions for NEET 2027',
         'Regular updates based on latest patterns',
       ],
       price: {
@@ -834,7 +834,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NCERT Based NEET Questions | Biology MCQs from NCERT',
     metaDescription:
-      'Practice NCERT-based NEET Biology questions. MCQs directly from NCERT textbook with line-by-line coverage. Essential for NEET 2025 preparation.',
+      'Practice NCERT-based NEET Biology questions. MCQs directly from NCERT textbook with line-by-line coverage. Essential for NEET 2027 preparation.',
     keywords: [
       'ncert based neet questions',
       'ncert questions for neet',
@@ -1146,7 +1146,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-diagrams': {
     slug: 'neet-biology-diagrams',
     classLevel: 'universal',
-    title: 'NEET Biology Diagrams | Labeled Diagrams for NEET 2025',
+    title: 'NEET Biology Diagrams | Labeled Diagrams for NEET 2027',
     metaDescription:
       'Download NEET Biology diagrams with proper labeling. All important diagrams from NCERT for Botany & Zoology. Visual guide for NEET preparation.',
     keywords: [
@@ -1460,9 +1460,9 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-chapter-weightage': {
     slug: 'neet-biology-chapter-weightage',
     classLevel: 'universal',
-    title: 'NEET Biology Chapter Weightage 2025 | Important Chapters Analysis',
+    title: 'NEET Biology Chapter Weightage 2027 | Important Chapters Analysis',
     metaDescription:
-      'Complete NEET Biology chapter-wise weightage for 2025. Know which chapters are most important based on 10-year PYQ analysis. Strategic preparation guide.',
+      'Complete NEET Biology chapter-wise weightage for 2027. Know which chapters are most important based on 10-year PYQ analysis. Strategic preparation guide.',
     keywords: [
       'neet biology chapter weightage',
       'important chapters for neet biology',
@@ -1471,7 +1471,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'neet biology chapter wise questions',
     ],
     hero: {
-      headline: 'NEET Biology Chapter Weightage 2025',
+      headline: 'NEET Biology Chapter Weightage 2027',
       subheadline:
         'Smart preparation starts with knowing where the marks are. Get detailed chapter-wise analysis based on 10+ years of NEET papers.',
       highlightedText: 'Strategic Prep',
@@ -1515,7 +1515,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '🎯',
           title: 'Priority Ranking',
-          description: 'Chapters ranked by importance for NEET 2025',
+          description: 'Chapters ranked by importance for NEET 2027',
         },
         {
           icon: '📅',
@@ -1601,7 +1601,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     relatedPages: [
       { title: 'NEET Important Questions', link: '/neet-biology-important-questions' },
       { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
-      { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+      { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2027' },
     ],
     schema: {
       '@type': 'Course',
@@ -1614,12 +1614,12 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     },
   },
 
-  // HIGH PRIORITY SEO PAGES - Keyword Gap Analysis (Added Jan 2025)
+  // HIGH PRIORITY SEO PAGES - Keyword Gap Analysis (Added Jan 2027)
 
   'neet-human-physiology-guide': {
     slug: 'neet-human-physiology-guide',
     classLevel: 'universal',
-    title: 'NEET Human Physiology Complete Guide 2025 | 12-15% Weightage Topics',
+    title: 'NEET Human Physiology Complete Guide 2027 | 12-15% Weightage Topics',
     metaDescription:
       'Master NEET Human Physiology with our comprehensive guide. Covers Digestion, Breathing, Excretion, Neural Control & more. 12-15% weightage, high-scoring chapters.',
     keywords: [
@@ -1779,7 +1779,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-genetics-preparation': {
     slug: 'neet-genetics-preparation',
     classLevel: 'universal',
-    title: 'NEET Genetics Preparation Guide 2025 | Master Inheritance & Molecular Biology',
+    title: 'NEET Genetics Preparation Guide 2027 | Master Inheritance & Molecular Biology',
     metaDescription:
       'Complete NEET Genetics preparation strategy. Cover Mendelian genetics, molecular biology, biotechnology & evolution. 15-18% weightage with problem-solving approach.',
     keywords: [
@@ -1940,7 +1940,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-ecology-important-questions': {
     slug: 'neet-ecology-important-questions',
     classLevel: 'universal',
-    title: 'NEET Ecology Important Questions 2025 | High-Scoring Topics & PYQs',
+    title: 'NEET Ecology Important Questions 2027 | High-Scoring Topics & PYQs',
     metaDescription:
       'Practice NEET Ecology important questions with solutions. Covers Organisms & Environment, Ecosystem, Biodiversity & Environmental Issues. 12-15 questions, easy marks!',
     keywords: [
@@ -2041,7 +2041,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
           'Yes! Ecology is considered the easiest section in NEET Biology. Questions are mostly factual, directly from NCERT, with minimal application-based problems.',
       },
       {
-        question: 'Which Ecology topics are most important for NEET 2025?',
+        question: 'Which Ecology topics are most important for NEET 2027?',
         answer:
           'Population interactions, ecosystem productivity (GPP, NPP), biodiversity hotspots, and environmental pollution are most frequently asked. Focus on graphs and numerical values in NCERT.',
       },
@@ -2100,7 +2100,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-repeater-success-stories': {
     slug: 'neet-repeater-success-stories',
     classLevel: 'dropper',
-    title: 'NEET Repeater Success Stories 2025 | Dropper to Doctor Journeys',
+    title: 'NEET Repeater Success Stories 2027 | Dropper to Doctor Journeys',
     metaDescription:
       'Real NEET dropper success stories from Cerebrum Academy. See how students improved 100-200 marks in their second attempt. Get inspired & join our repeater batch.',
     keywords: [
@@ -2118,7 +2118,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       subheadline:
         'Real success stories of students who improved 100-200 marks in their second attempt. 78% of our droppers secure government MBBS seats. Your comeback starts here.',
       highlightedText: '78% Success Rate',
-      ctaText: 'Join Dropper Batch 2025',
+      ctaText: 'Join Dropper Batch 2026-2027',
       ctaLink: '/courses/neet-dropper',
     },
     painPoints: {
@@ -2239,7 +2239,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       title: 'Start Your Comeback Story',
       subtitle: 'Join thousands of successful droppers who proved everyone wrong',
       primaryButton: {
-        text: 'Join Dropper Batch 2025',
+        text: 'Join Dropper Batch 2026-2027',
         link: '/courses/neet-dropper',
       },
       secondaryButton: {
@@ -2270,7 +2270,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'live-online-neet-classes': {
     slug: 'live-online-neet-classes',
     classLevel: 'universal',
-    title: 'Live Online NEET Classes 2025-26 | Interactive Biology Sessions | Cerebrum Academy',
+    title: 'Live Online NEET Classes 2026-27 | Interactive Biology Sessions | Cerebrum Academy',
     metaDescription:
       'Join live online NEET classes with real-time doubt clearing. Interactive biology sessions by AIIMS faculty. Live online NEET biology coaching with personal attention. Free demo available!',
     keywords: [
@@ -2282,7 +2282,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'real-time neet classes',
       'live online biology classes for neet',
       'live neet biology coaching',
-      'online live classes for neet 2025',
+      'online live classes for neet 2027',
       'online live classes for neet 2026',
     ],
     hero: {
@@ -2459,7 +2459,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'online-neet-test-series': {
     slug: 'online-neet-test-series',
     classLevel: 'universal',
-    title: 'Online NEET Test Series 2025-26 | Mock Tests & Practice | Cerebrum Academy',
+    title: 'Online NEET Test Series 2026-27 | Mock Tests & Practice | Cerebrum Academy',
     metaDescription:
       'Comprehensive online NEET test series with 200+ mock tests. NEET pattern online tests with detailed analysis, rank prediction & improvement suggestions. Start free trial!',
     keywords: [
@@ -2470,12 +2470,12 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'neet practice test online',
       'free neet test series online',
       'best online neet test series',
-      'neet test series 2025',
+      'neet test series 2027',
       'neet test series 2026',
       'online neet practice papers',
     ],
     hero: {
-      headline: 'Online NEET Test Series 2025-26',
+      headline: 'Online NEET Test Series 2026-27',
       subheadline:
         '200+ mock tests designed by AIIMS faculty. Real NEET experience with AI-powered analysis.',
       highlightedText: '200+ Tests',
@@ -2627,7 +2627,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     ],
     schema: {
       '@type': 'Course',
-      courseName: 'Online NEET Test Series 2025-26',
+      courseName: 'Online NEET Test Series 2026-27',
       provider: 'Cerebrum Biology Academy',
       description:
         'Comprehensive online NEET test series with 200+ mock tests and AI-powered analysis',
@@ -2641,7 +2641,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-online-classes': {
     slug: 'neet-online-classes',
     classLevel: 'universal',
-    title: 'NEET Online Classes 2025-26 | Live Biology Classes',
+    title: 'NEET Online Classes 2026-27 | Live Biology Classes',
     metaDescription:
       'Join NEET online classes with AIIMS faculty. Live interactive biology classes, small batches, 24/7 doubt support. 67+ AIIMS selections.',
     keywords: [
@@ -2655,7 +2655,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'best online classes for neet',
     ],
     hero: {
-      headline: 'NEET Online Classes 2025-26',
+      headline: 'NEET Online Classes 2026-27',
       subheadline:
         'Live interactive biology classes with AIIMS faculty. Join from anywhere in India and get personal attention in small batches.',
       ctaText: 'Book Free Demo Class',
@@ -2830,7 +2830,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     ],
     schema: {
       '@type': 'Course',
-      courseName: 'NEET Online Classes 2025-26',
+      courseName: 'NEET Online Classes 2026-27',
       provider: 'Cerebrum Biology Academy',
       description: 'Live interactive NEET biology classes with AIIMS faculty',
       duration: '12 months',
@@ -3035,7 +3035,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
   'neet-preparation-timetable': {
     slug: 'neet-preparation-timetable',
     classLevel: 'universal',
-    title: 'NEET Preparation Timetable 2025 | Daily Study Schedule',
+    title: 'NEET Preparation Timetable 2027 | Daily Study Schedule',
     metaDescription:
       'NEET preparation timetable for Class 11, 12, and droppers. Download free study schedule PDF. Expert-designed daily routine.',
     keywords: [
@@ -3049,7 +3049,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       'how to make neet study timetable',
     ],
     hero: {
-      headline: 'NEET Preparation Timetable 2025',
+      headline: 'NEET Preparation Timetable 2027',
       subheadline:
         'Proven study schedules for Class 11, 12, and Droppers. Download free PDF or generate custom timetable.',
       ctaText: 'Download Free Timetable',
@@ -3215,7 +3215,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     ],
     schema: {
       '@type': 'Article',
-      courseName: 'NEET Preparation Timetable 2025',
+      courseName: 'NEET Preparation Timetable 2027',
       provider: 'Cerebrum Biology Academy',
       description: 'Expert-designed study schedules for NEET preparation',
       duration: 'Self-paced',
@@ -3230,7 +3230,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Biology Important Diagrams PDF | 500+ Labeled Diagrams',
     metaDescription:
-      'Download NEET biology diagrams PDF free. 500+ NCERT-based labeled diagrams for Class 11 & 12. Essential for NEET 2025.',
+      'Download NEET biology diagrams PDF free. 500+ NCERT-based labeled diagrams for Class 11 & 12. Essential for NEET 2027.',
     keywords: [
       'neet biology diagrams pdf',
       'important diagrams for neet biology',
@@ -3244,7 +3244,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'NEET Biology Important Diagrams PDF',
       subheadline:
-        '500+ NCERT-based labeled diagrams essential for NEET 2025. Free download for Class 11 & 12.',
+        '500+ NCERT-based labeled diagrams essential for NEET 2027. Free download for Class 11 & 12.',
       ctaText: 'Download Free Diagrams',
       ctaLink: '/resources',
       backgroundGradient: 'from-green-900 to-green-800',
@@ -3305,7 +3305,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         },
         {
           icon: 'repeat',
-          title: 'Updated for NEET 2025',
+          title: 'Updated for NEET 2027',
           description: 'Latest syllabus coverage. Includes recent exam trends.',
         },
       ],

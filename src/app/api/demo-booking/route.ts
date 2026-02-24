@@ -937,7 +937,7 @@ function generateDemoConfirmationEmail(bookingData: any): string {
         <!-- Footer -->
         <div style="background-color: #1f2937; padding: 30px 20px; text-align: center;">
           <p style="color: #9ca3af; font-size: 14px; margin: 0;">
-            © 2025 Cerebrum Biology Academy. All rights reserved.
+            © 2026 Cerebrum Biology Academy. All rights reserved.
           </p>
           <p style="color: #6b7280; font-size: 12px; margin: 10px 0 0 0;">
             Gurugram, Haryana, India

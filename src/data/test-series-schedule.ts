@@ -11,10 +11,10 @@ export interface Test {
 }
 
 export const testSeriesSchedule: Test[] = [
-  // Foundation Phase - Nov-Dec 2025
+  // Foundation Phase - Nov-Dec 2026
   {
     id: 1,
-    date: '2025-11-24',
+    date: '2026-11-24',
     day: 'Mon',
     classXITopics: ['The Living World', 'Biological Classification'],
     classXIITopics: ['Reproduction in Organisms'],
@@ -23,7 +23,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 2,
-    date: '2025-12-01',
+    date: '2026-12-01',
     day: 'Mon',
     classXITopics: ['Plant Kingdom'],
     classXIITopics: ['Sexual Reproduction in Flowering Plants'],
@@ -32,7 +32,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 3,
-    date: '2025-12-08',
+    date: '2026-12-08',
     day: 'Mon',
     classXITopics: ['Animal Kingdom'],
     classXIITopics: ['Human Reproduction'],
@@ -41,7 +41,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 4,
-    date: '2025-12-15',
+    date: '2026-12-15',
     day: 'Mon',
     classXITopics: ['CUMULATIVE TEST-1', 'Coverage: Tests 1-3'],
     classXIITopics: ['CUMULATIVE TEST-1', 'Coverage: Tests 1-3'],
@@ -50,7 +50,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 5,
-    date: '2025-12-22',
+    date: '2026-12-22',
     day: 'Mon',
     classXITopics: ['Morphology of Flowering Plants'],
     classXIITopics: ['Reproductive Health'],
@@ -59,7 +59,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 6,
-    date: '2025-12-29',
+    date: '2026-12-29',
     day: 'Mon',
     classXITopics: ['Anatomy of Flowering Plants'],
     classXIITopics: ['Principles of Inheritance and Variation'],
@@ -68,17 +68,17 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 7,
-    date: '2026-01-05',
+    date: '2027-01-05',
     day: 'Mon',
     classXITopics: ['Structural Organisation in Animals'],
     classXIITopics: ['Molecular Basis of Inheritance'],
     type: 'UNIT',
     phase: 'Foundation',
   },
-  // Advanced Phase - Jan-Feb 2026
+  // Advanced Phase - Jan-Feb 2027
   {
     id: 8,
-    date: '2026-01-12',
+    date: '2027-01-12',
     day: 'Mon',
     classXITopics: ['CUMULATIVE TEST-2', 'Coverage: Tests 1-7'],
     classXIITopics: ['CUMULATIVE TEST-2', 'Coverage: Tests 1-7'],
@@ -87,7 +87,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 9,
-    date: '2026-01-19',
+    date: '2027-01-19',
     day: 'Mon',
     classXITopics: ['Cell: The Unit of Life'],
     classXIITopics: ['Evolution'],
@@ -96,7 +96,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 10,
-    date: '2026-01-26',
+    date: '2027-01-26',
     day: 'Mon',
     classXITopics: ['Biomolecules'],
     classXIITopics: ['Human Health and Disease'],
@@ -105,7 +105,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 11,
-    date: '2026-02-02',
+    date: '2027-02-02',
     day: 'Mon',
     classXITopics: ['Cell Cycle and Cell Division'],
     classXIITopics: ['Strategies for Enhancement in Food Production'],
@@ -114,7 +114,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 12,
-    date: '2026-02-09',
+    date: '2027-02-09',
     day: 'Mon',
     classXITopics: ['CUMULATIVE TEST-3', 'Coverage: Tests 1-11'],
     classXIITopics: ['CUMULATIVE TEST-3', 'Coverage: Tests 1-11'],
@@ -123,7 +123,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 13,
-    date: '2026-02-16',
+    date: '2027-02-16',
     day: 'Mon',
     classXITopics: ['Transport in Plants', 'Mineral Nutrition'],
     classXIITopics: ['Microbes in Human Welfare'],
@@ -132,7 +132,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 14,
-    date: '2026-02-23',
+    date: '2027-02-23',
     day: 'Mon',
     classXITopics: ['Photosynthesis', 'Respiration in Plants'],
     classXIITopics: ['Biotechnology: Principles & Processes'],
@@ -141,17 +141,17 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 15,
-    date: '2026-03-02',
+    date: '2027-03-02',
     day: 'Mon',
     classXITopics: ['Plant Growth and Development'],
     classXIITopics: ['Biotechnology and its Applications'],
     type: 'UNIT',
     phase: 'Advanced',
   },
-  // Revision Phase - Mar 2026
+  // Revision Phase - Mar 2027
   {
     id: 16,
-    date: '2026-03-09',
+    date: '2027-03-09',
     day: 'Mon',
     classXITopics: ['CUMULATIVE TEST-4', 'Coverage: Tests 1-15'],
     classXIITopics: ['CUMULATIVE TEST-4', 'Coverage: Tests 1-15'],
@@ -160,7 +160,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 17,
-    date: '2026-03-16',
+    date: '2027-03-16',
     day: 'Mon',
     classXITopics: ['Digestion & Absorption', 'Breathing & Gas Exchange'],
     classXIITopics: ['Organisms and Populations'],
@@ -169,7 +169,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 18,
-    date: '2026-03-23',
+    date: '2027-03-23',
     day: 'Mon',
     classXITopics: ['Body Fluids & Circulation', 'Excretory Products'],
     classXIITopics: ['Ecosystem'],
@@ -178,17 +178,17 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 19,
-    date: '2026-03-30',
+    date: '2027-03-30',
     day: 'Mon',
     classXITopics: ['Locomotion & Movement', 'Neural Control', 'Chemical Coordination'],
     classXIITopics: ['Biodiversity & Conservation', 'Environmental Issues'],
     type: 'UNIT',
     phase: 'Revision',
   },
-  // Mock Test Phase - April 2026
+  // Mock Test Phase - April 2027
   {
     id: 20,
-    date: '2026-04-01',
+    date: '2027-04-01',
     day: 'Wed',
     classXITopics: ['GRAND MOCK TEST - 1'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -197,7 +197,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 21,
-    date: '2026-04-03',
+    date: '2027-04-03',
     day: 'Fri',
     classXITopics: ['GRAND MOCK TEST - 2'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -206,7 +206,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 22,
-    date: '2026-04-06',
+    date: '2027-04-06',
     day: 'Mon',
     classXITopics: ['GRAND MOCK TEST - 3'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -215,7 +215,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 23,
-    date: '2026-04-08',
+    date: '2027-04-08',
     day: 'Wed',
     classXITopics: ['GRAND MOCK TEST - 4'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -224,7 +224,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 24,
-    date: '2026-04-10',
+    date: '2027-04-10',
     day: 'Fri',
     classXITopics: ['GRAND MOCK TEST - 5'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -233,7 +233,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 25,
-    date: '2026-04-13',
+    date: '2027-04-13',
     day: 'Mon',
     classXITopics: ['GRAND MOCK TEST - 6'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -242,7 +242,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 26,
-    date: '2026-04-15',
+    date: '2027-04-15',
     day: 'Wed',
     classXITopics: ['GRAND MOCK TEST - 7'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -251,7 +251,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 27,
-    date: '2026-04-17',
+    date: '2027-04-17',
     day: 'Fri',
     classXITopics: ['GRAND MOCK TEST - 8'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -260,7 +260,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 28,
-    date: '2026-04-20',
+    date: '2027-04-20',
     day: 'Mon',
     classXITopics: ['GRAND MOCK TEST - 9'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -269,7 +269,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 29,
-    date: '2026-04-22',
+    date: '2027-04-22',
     day: 'Wed',
     classXITopics: ['GRAND MOCK TEST - 10'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -278,7 +278,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 30,
-    date: '2026-04-24',
+    date: '2027-04-24',
     day: 'Fri',
     classXITopics: ['GRAND MOCK TEST - 11'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -287,7 +287,7 @@ export const testSeriesSchedule: Test[] = [
   },
   {
     id: 31,
-    date: '2026-04-27',
+    date: '2027-04-27',
     day: 'Mon',
     classXITopics: ['GRAND MOCK TEST - 12'],
     classXIITopics: ['Full NEET Biology Syllabus'],
@@ -297,7 +297,7 @@ export const testSeriesSchedule: Test[] = [
 ]
 
 export const testInfo = {
-  duration: 'Nov 2025 - Apr 2026',
+  duration: 'Nov 2026 - Apr 2027',
   totalTests: 31,
   regularTests: 19,
   mockTests: 12,

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'NEET parents seminar',
     'NEET preparation tips',
     'NEET coaching guidance',
-    'NEET 2025 preparation',
+    'NEET 2027 preparation',
     'biology for NEET',
     'NEET parent support',
   ],

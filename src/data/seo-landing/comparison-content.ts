@@ -37,9 +37,9 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
   'online-vs-offline-neet-coaching': {
     slug: 'online-vs-offline-neet-coaching',
     classLevel: 'universal',
-    title: 'Online vs Offline NEET Coaching 2025 | Complete Comparison',
+    title: 'Online vs Offline NEET Coaching 2027 | Complete Comparison',
     metaDescription:
-      'Online vs offline NEET coaching comparison. Pros, cons, cost analysis & expert advice to choose the right coaching mode for NEET 2025.',
+      'Online vs offline NEET coaching comparison. Pros, cons, cost analysis & expert advice to choose the right coaching mode for NEET 2027.',
     keywords: [
       'online vs offline coaching',
       'neet online coaching',
@@ -84,7 +84,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     benefits: {
-      title: 'Why Online Coaching is the Smart Choice in 2025',
+      title: 'Why Online Coaching is the Smart Choice in 2027',
       subtitle: 'Data shows online coaching outperforms offline in key metrics',
       items: [
         {
@@ -226,9 +226,9 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
   'best-neet-biology-coaching-india': {
     slug: 'best-neet-biology-coaching-india',
     classLevel: 'universal',
-    title: 'Best NEET Biology Coaching in India 2025 | Top 10 Comparison',
+    title: 'Best NEET Biology Coaching in India 2027 | Top 10 Comparison',
     metaDescription:
-      'Compare best NEET Biology coaching in India 2025. Reviews, fees, success rates & student testimonials to find your perfect coaching.',
+      'Compare best NEET Biology coaching in India 2027. Reviews, fees, success rates & student testimonials to find your perfect coaching.',
     keywords: [
       'best neet coaching',
       'best neet biology coaching',
@@ -240,7 +240,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     ],
     hero: {
       headline: 'Best NEET Biology Coaching in India',
-      subheadline: '2025 Rankings Based on Results, Fees & Student Reviews',
+      subheadline: '2027 Rankings Based on Results, Fees & Student Reviews',
       ctaText: 'Why Choose Cerebrum?',
       ctaLink: '#why-cerebrum',
     },
@@ -598,7 +598,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
   'neet-coaching-fees-comparison': {
     slug: 'neet-coaching-fees-comparison',
     classLevel: 'universal',
-    title: 'NEET Coaching Fees Comparison 2025 | Complete Fee Structure Guide',
+    title: 'NEET Coaching Fees Comparison 2027 | Complete Fee Structure Guide',
     metaDescription:
       'Compare NEET coaching fees across institutes. Breakdown of tuition, hostel, materials & hidden costs. Find best value for NEET prep.',
     keywords: [
@@ -612,7 +612,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       'neet coaching fee structure',
     ],
     hero: {
-      headline: 'NEET Coaching Fees Comparison 2025',
+      headline: 'NEET Coaching Fees Comparison 2027',
       subheadline: 'Complete Cost Breakdown: Tuition, Hostel, Materials & Hidden Fees',
       ctaText: 'See Our Fee Structure',
       ctaLink: '/courses',
@@ -784,7 +784,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
   'neet-coaching-success-rate-comparison': {
     slug: 'neet-coaching-success-rate-comparison',
     classLevel: 'universal',
-    title: 'NEET Coaching Success Rate Comparison 2025 | Analysis',
+    title: 'NEET Coaching Success Rate Comparison 2027 | Analysis',
     metaDescription:
       'Compare actual NEET coaching success rates. Understanding how to evaluate coaching results, spot inflated claims, and choose based on real data.',
     keywords: [
@@ -1157,7 +1157,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
   'best-online-coaching-neet-biology': {
     slug: 'best-online-coaching-neet-biology',
     classLevel: 'universal',
-    title: 'Best Online Coaching for NEET Biology 2025 | Top Rated',
+    title: 'Best Online Coaching for NEET Biology 2027 | Top Rated',
     metaDescription:
       'Find the best online coaching for NEET biology with our detailed comparison. Expert faculty, small batches, 4.9★ rating. 1,50,000+ students selected.',
     keywords: [

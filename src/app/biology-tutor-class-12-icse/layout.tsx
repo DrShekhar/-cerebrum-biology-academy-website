@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor for Class 12 ICSE | ISC Biology Coaching 2025',
+  title: 'Biology Tutor for Class 12 ICSE | ISC Biology Coaching 2027',
   description:
     'Looking for biology tutor for Class 12 ICSE? Expert ISC coaching from AIIMS trained faculty. Board exam + NEET preparation. 98% success rate, small batches.',
   keywords: [

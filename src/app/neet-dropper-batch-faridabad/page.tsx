@@ -5,11 +5,11 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const faridabadLocation = CONTACT_INFO.location.faridabad
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2025-26 in Faridabad | Repeater Course',
+  title: 'NEET Dropper Batch 2026-27 in Faridabad | Repeater Course',
   description:
-    'Join NEET Dropper Batch 2025-26 in Faridabad. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 17.',
+    'Join NEET Dropper Batch 2026-27 in Faridabad. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 17.',
   keywords: [
-    'neet dropper batch 2025-26 faridabad',
+    'neet dropper batch 2026-27 faridabad',
     'neet repeater course faridabad',
     'neet dropper coaching faridabad',
     'neet second attempt faridabad',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     '1 year neet dropper course faridabad',
   ],
   openGraph: {
-    title: 'NEET Dropper Batch 2025-26 in Faridabad | Intensive Repeater Course',
+    title: 'NEET Dropper Batch 2026-27 in Faridabad | Intensive Repeater Course',
     description: 'Intensive 1-year NEET preparation for droppers and repeaters in Faridabad.',
     url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-faridabad',
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'What is the eligibility for NEET Dropper Batch 2025-26?',
+    question: 'What is the eligibility for NEET Dropper Batch 2026-27?',
     answer:
       'Any student who has appeared for NEET 2024 or 2025 and wants to improve their score is eligible. We analyze your previous attempt and create a personalized improvement plan.',
   },
@@ -64,7 +64,7 @@ export default function NEETDropperBatchFaridabadPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'NEET Dropper Batch 2025-26 - Faridabad',
+    name: 'NEET Dropper Batch 2026-27 - Faridabad',
     description:
       'Intensive 1-year NEET preparation program for droppers and repeaters targeting NEET 2026.',
     provider: {
@@ -119,7 +119,7 @@ export default function NEETDropperBatchFaridabadPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Dropper Batch 2025-26',
+        name: 'Dropper Batch 2026-27',
         item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-faridabad',
       },
     ],

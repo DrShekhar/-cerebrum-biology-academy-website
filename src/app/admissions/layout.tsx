@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Admissions Open 2025 - NEET Biology Coaching',
+  title: 'Admissions Open 2026-2027 - NEET Biology Coaching',
   description:
-    'Enroll in Cerebrum Biology Academy for NEET 2025-26. Limited seats available for Class 11, 12 & Dropper batches. 98% success rate, AIIMS-trained faculty. Apply now!',
+    'Enroll in Cerebrum Biology Academy for NEET 2026-27. Limited seats available for Class 11, 12 & Dropper batches. 98% success rate, AIIMS-trained faculty. Apply now!',
   keywords: [
-    'NEET coaching admissions 2025',
+    'NEET coaching admissions 2026-2027',
     'NEET biology batch enrollment',
     'Cerebrum Biology Academy admission',
     'NEET dropper batch admission',
@@ -15,16 +15,16 @@ export const metadata: Metadata = {
     'NEET 2026 batch registration',
   ],
   openGraph: {
-    title: 'Admissions Open 2025 - NEET Biology Coaching',
+    title: 'Admissions Open 2026-2027 - NEET Biology Coaching',
     description:
-      'Limited seats for NEET 2025-26 batches. 98% success rate, AIIMS faculty. Class 11, 12 & Dropper programs available.',
+      'Limited seats for NEET 2026-27 batches. 98% success rate, AIIMS faculty. Class 11, 12 & Dropper programs available.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/admissions',
     siteName: 'Cerebrum Biology Academy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Admissions Open 2025',
+    title: 'NEET Admissions Open 2026-2027',
     description:
       'Limited seats! 98% success rate. AIIMS faculty. Apply now for Class 11, 12 & Dropper batches.',
   },

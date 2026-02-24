@@ -675,7 +675,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-1-year-course': {
     slug: 'neet-biology-1-year-course',
     classLevel: 'universal',
-    title: 'NEET Biology 1 Year Course | Complete Annual Program 2025-26',
+    title: 'NEET Biology 1 Year Course | Complete Annual Program 2026-27',
     metaDescription:
       'Comprehensive 1-year NEET Biology course for Class 11 & 12 students. Complete preparation with board integration, mock tests, and personal mentorship.',
     keywords: [

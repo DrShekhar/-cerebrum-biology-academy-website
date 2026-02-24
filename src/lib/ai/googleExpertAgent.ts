@@ -326,7 +326,7 @@ export class GoogleExpertAgent {
       'NEET biology coaching',
       'online biology classes',
       'medical entrance coaching',
-      'NEET preparation 2025',
+      'NEET preparation 2027',
       'biology coaching institute',
       'AIIMS coaching online',
       'NEET biology notes',
@@ -498,7 +498,7 @@ export class GoogleExpertAgent {
 
   private async createLinkableContent(keywords: string[]): Promise<string[]> {
     return [
-      'Comprehensive NEET Biology Study Guide 2025',
+      'Comprehensive NEET Biology Study Guide 2027',
       'Interactive Biology Concept Maps for Medical Entrance',
       'Free NEET Biology Mock Test Series',
       'Biology Formula Sheet for Quick Revision',

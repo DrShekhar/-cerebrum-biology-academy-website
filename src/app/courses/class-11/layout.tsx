@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
-  title: 'Class 11 Biology NEET Coaching | Foundation Program 2025',
+  title: 'Class 11 Biology NEET Coaching | Foundation Program 2026-2027',
   description:
-    'Best Class 11 Biology coaching for NEET preparation. Strong foundation building, NCERT mastery, board exam excellence. AIIMS faculty, 98% success rate. Enroll for 2025 batch!',
+    'Best Class 11 Biology coaching for NEET preparation. Strong foundation building, NCERT mastery, board exam excellence. AIIMS faculty, 98% success rate. Enroll for 2026-2027 batch!',
   keywords: [
     'Class 11 biology',
     'NEET foundation',

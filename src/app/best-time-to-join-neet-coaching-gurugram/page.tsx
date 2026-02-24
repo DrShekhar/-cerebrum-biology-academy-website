@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, ArrowRight, Calendar, CheckCircle, AlertTriangle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Best Time to Join NEET Coaching 2025 | April vs July | Gurugram',
+  title: 'Best Time to Join NEET Coaching 2027 | April vs July | Gurugram',
   description:
     'When is the best time to join NEET coaching? April start vs July batch comparison. Month-wise joining guide for Class 11, 12, and droppers. Call 88264-44334!',
   keywords: [
@@ -11,11 +11,11 @@ export const metadata: Metadata = {
     'when to join neet coaching',
     'neet coaching joining time',
     'april batch vs july batch neet',
-    'neet coaching admission 2025',
+    'neet coaching admission 2026-2027',
     'when to start neet coaching gurugram',
   ],
   openGraph: {
-    title: 'Best Time to Join NEET Coaching 2025',
+    title: 'Best Time to Join NEET Coaching 2027',
     description: 'April vs July batch comparison and month-wise joining guide.',
     url: 'https://cerebrumbiologyacademy.com/best-time-to-join-neet-coaching-gurugram',
   },
@@ -101,7 +101,7 @@ export default function BestTimeToJoinNEETCoaching() {
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 bg-yellow-500 text-sky-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               <Calendar className="w-4 h-4" />
-              Admission Guide 2025
+              Admission Guide 2026-2027
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Best Time to Join NEET Coaching</h1>
             <p className="text-xl text-sky-100 mb-8">Month-wise guide for maximum preparation benefit</p>
@@ -204,20 +204,20 @@ export default function BestTimeToJoinNEETCoaching() {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Our Batch Schedule 2025</h2>
+            <h2 className="text-3xl font-bold text-center mb-8">Our Batch Schedule 2026-2027</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-lg text-center border-2 border-green-500">
                 <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Enrolling Now</span>
                 <h3 className="font-bold mt-4 mb-2">April Batch</h3>
                 <p className="text-3xl font-bold text-green-600 mb-2">2-Year Program</p>
-                <p className="text-sm text-gray-600">Starts: April 1, 2025</p>
+                <p className="text-sm text-gray-600">Starts: April 1, 2027</p>
                 <p className="text-sm text-gray-500">For Class 11 entrants</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                 <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">Coming Soon</span>
                 <h3 className="font-bold mt-4 mb-2">July Batch</h3>
                 <p className="text-3xl font-bold text-blue-600 mb-2">1-Year Program</p>
-                <p className="text-sm text-gray-600">Starts: July 1, 2025</p>
+                <p className="text-sm text-gray-600">Starts: July 1, 2027</p>
                 <p className="text-sm text-gray-500">For Class 12 students</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg text-center">

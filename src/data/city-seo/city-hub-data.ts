@@ -8594,14 +8594,14 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'neet-dropper-crash-course-2025': {
-    slug: 'neet-dropper-crash-course-2025',
+  'neet-dropper-crash-course-2027': {
+    slug: 'neet-dropper-crash-course-2027',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'NEET Dropper Crash Course 2025 | Intensive 3-6 Month Program | Cerebrum Academy',
+    metaTitle: 'NEET Dropper Crash Course 2027 | Intensive 3-6 Month Program | Cerebrum Academy',
     metaDescription:
-      'Last-minute NEET 2025 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 4 centers in Delhi. Call 88264-44334!',
-    heroTitle: 'NEET 2025 Crash Course for Droppers',
+      'Last-minute NEET 2027 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 4 centers in Delhi. Call 88264-44334!',
+    heroTitle: 'NEET 2027 Crash Course for Droppers',
     heroSubtitle:
       'Make every remaining day count! Intensive 3-6 month program with rapid revision, daily practice tests, and focused weak topic coaching.',
     hasOfflineCenter: true,
@@ -8618,7 +8618,7 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     relatedCities: [
       { name: 'NEET Droppers Batch', url: '/neet-droppers-batch-gurgaon' },
-      { name: 'NEET 2025 Preparation', url: '/neet-2025-preparation' },
+      { name: 'NEET 2027 Preparation', url: '/neet-2027-preparation' },
       { name: 'NEET Biology Crash Course', url: '/neet-biology-crash-course' },
       { name: 'NEET Repeaters', url: '/neet-repeaters' },
     ],
@@ -8646,7 +8646,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'When do the crash course batches start?',
         answer:
-          'We run crash courses throughout the year with different durations: 6-month batch (Dec-May), 4-month batch (Feb-May), 3-month batch (Mar-May). New batches start every month. With NEET 2025 in May, join immediately to maximize preparation time. Call 88264-44334 for next batch dates.',
+          'We run crash courses throughout the year with different durations: 6-month batch (Dec-May), 4-month batch (Feb-May), 3-month batch (Mar-May). New batches start every month. With NEET 2027 in May, join immediately to maximize preparation time. Call 88264-44334 for next batch dates.',
       },
     ],
     stats: {

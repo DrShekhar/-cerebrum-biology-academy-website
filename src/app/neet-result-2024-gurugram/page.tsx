@@ -263,7 +263,7 @@ export default function NEETResult2024Gurugram() {
 
       <section className="py-16 bg-amber-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Join Our 2025-26 Batch</h2>
+          <h2 className="text-3xl font-bold mb-4">Join Our 2026-27 Batch</h2>
           <p className="text-xl text-amber-100 mb-8">Be part of our next success story. Limited seats available.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition">

@@ -58,14 +58,14 @@ export const localLeadMagnets: LeadMagnet[] = [
   },
   {
     id: 'local-neet-success-strategy',
-    title: '[AREA] NEET Success Strategy Guide 2025',
+    title: '[AREA] NEET Success Strategy Guide 2027',
     description:
       'Discover how students from [AREA] are cracking NEET with our proven local strategy. Includes area-specific study tips and coaching center comparison.',
     type: 'pdf',
     value: 'Exclusive Local Guide - FREE',
     ctaText: 'Get [AREA] Strategy Guide',
     downloadText: 'Download Your Local Success Guide',
-    fileName: '[AREA]_NEET_Strategy_Guide_2025.pdf',
+    fileName: '[AREA]_NEET_Strategy_Guide_2027.pdf',
     targetAreas: ['gurgaon', 'noida', 'faridabad', 'ghaziabad', 'greater-noida', 'delhi-central'],
     targetStudents: ['class-11', 'class-12', 'dropper'],
     conversionBenefits: [
@@ -127,7 +127,7 @@ export const localLeadMagnets: LeadMagnet[] = [
     value: 'Expert Guidance - FREE',
     ctaText: 'Get Dropper Planning Guide',
     downloadText: 'Download Planning Checklist',
-    fileName: 'NEET_Dropper_Year_Planning_2025.pdf',
+    fileName: 'NEET_Dropper_Year_Planning_2027.pdf',
     targetAreas: ['all'],
     targetStudents: ['dropper'],
     conversionBenefits: [
@@ -161,14 +161,14 @@ export const localLeadMagnets: LeadMagnet[] = [
   },
   {
     id: 'local-coaching-comparison',
-    title: '[AREA] NEET Coaching Comparison Report 2025',
+    title: '[AREA] NEET Coaching Comparison Report 2027',
     description:
       'Unbiased comparison of all NEET coaching centers in [AREA]. Includes fees, faculty, results, and our exclusive recommendation.',
     type: 'pdf',
     value: 'Insider Report - FREE',
     ctaText: 'Get Coaching Comparison Report',
     downloadText: 'Download Comparison Report',
-    fileName: '[AREA]_Coaching_Comparison_2025.pdf',
+    fileName: '[AREA]_Coaching_Comparison_2027.pdf',
     targetAreas: ['gurgaon', 'noida', 'faridabad', 'ghaziabad'],
     targetStudents: ['class-11', 'class-12', 'dropper'],
     conversionBenefits: [
@@ -189,7 +189,7 @@ export const localLeadMagnets: LeadMagnet[] = [
     value: '₹1,999 Guide - FREE',
     ctaText: 'Get Class 11 Head-Start Guide',
     downloadText: 'Download Foundation Guide',
-    fileName: 'Class_11_NEET_Headstart_2025.pdf',
+    fileName: 'Class_11_NEET_Headstart_2027.pdf',
     targetAreas: ['all'],
     targetStudents: ['class-11'],
     conversionBenefits: [

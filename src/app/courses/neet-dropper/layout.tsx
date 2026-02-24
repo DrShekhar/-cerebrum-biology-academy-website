@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2025 | One Year Intensive Biology Program',
+  title: 'NEET Dropper Batch 2026-2027 | One Year Intensive Biology Program',
   description:
-    "Specialized NEET dropper batch for 2025. Complete Biology syllabus in 10 months, rank improvement strategies, 98% success rate. Join India's best NEET repeater program!",
+    "Specialized NEET dropper batch for 2026-2027. Complete Biology syllabus in 10 months, rank improvement strategies, 98% success rate. Join India's best NEET repeater program!",
   keywords: [
     'NEET dropper batch',
     'NEET repeater',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'NEET Biology revision classes',
   ],
   openGraph: {
-    title: 'NEET Dropper Batch 2025 | Transform Your Rank in 10 Months',
+    title: 'NEET Dropper Batch 2026-2027 | Transform Your Rank in 10 Months',
     description:
       'Intensive 10-month program for NEET droppers. 98% qualification rate, personalized mentoring, rank improvement guarantee. Limited seats available!',
     images: ['/og-image.jpg'],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Dropper Batch 2025',
+    title: 'NEET Dropper Batch 2026-2027',
     description:
       'One year intensive program, 98% success, rank improvement strategies, AIIMS faculty',
     images: ['/og-image.jpg'],

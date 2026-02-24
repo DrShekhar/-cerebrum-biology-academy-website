@@ -7597,7 +7597,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Crash course
     'neet-crash-course-faridabad', 'neet-crash-course-ghaziabad', 'neet-crash-course-greater-noida', 'neet-crash-course-gurugram', 'neet-crash-course-noida',
     // Dropper batches
-    'neet-dropper-batch', 'neet-dropper-batch-2025-26-gurugram', 'neet-dropper-batch-faridabad', 'neet-dropper-batch-ghaziabad', 'neet-dropper-batch-greater-noida', 'neet-dropper-batch-noida',
+    'neet-dropper-batch', 'neet-dropper-batch-2026-27-gurugram', 'neet-dropper-batch-faridabad', 'neet-dropper-batch-ghaziabad', 'neet-dropper-batch-greater-noida', 'neet-dropper-batch-noida',
     'one-year-dropper-course-gurugram',
     // Evening & weekend batches
     'neet-evening-batch-faridabad', 'neet-evening-batch-ghaziabad', 'neet-evening-batch-gurugram', 'neet-evening-batch-noida',

@@ -175,7 +175,7 @@ export default function AdmissionPage() {
           >
             <div className="inline-flex items-center space-x-2 bg-green-400 text-green-900 px-4 py-2 rounded-full font-semibold mb-6">
               <CheckCircle className="w-5 h-5" />
-              <span>Admissions Open 2025-26</span>
+              <span>Admissions Open 2026-27</span>
             </div>
             <h1 className="text-5xl font-bold mb-6">
               Start Your Journey to

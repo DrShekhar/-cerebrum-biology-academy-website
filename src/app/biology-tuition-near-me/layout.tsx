@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tuition Near Me | Best Bio Tuition Classes 2025',
+  title: 'Biology Tuition Near Me | Best Bio Tuition Classes 2027',
   description:
     'Find the best biology tuition near you. Expert AIIMS-trained tutors, personalized attention, flexible timings. NEET & board exam preparation. Online & offline options.',
   keywords: [

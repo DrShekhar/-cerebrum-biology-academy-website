@@ -40,7 +40,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
   const handleWhatsApp = () => {
     trackAndOpenWhatsApp({
       source: 'dropper-batch-2025-gurugram',
-      message: 'Hi! I am interested in NEET Dropper Batch 2025-26 in Gurugram. Please share details about the program.',
+      message: 'Hi! I am interested in NEET Dropper Batch 2026-27 in Gurugram. Please share details about the program.',
       campaign: 'dropper-batch-2025-gurugram',
     })
   }
@@ -52,7 +52,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
           <ol className="flex items-center flex-wrap gap-1 text-sm">
             <li><Link href="/" className="text-gray-600 hover:text-teal-600"><Home className="w-4 h-4" /></Link></li>
             <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><Link href="/neet-coaching-gurugram" className="text-gray-600 hover:text-teal-600">NEET Coaching Gurugram</Link></li>
-            <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><span className="text-teal-700 font-medium">Dropper Batch 2025-26</span></li>
+            <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><span className="text-teal-700 font-medium">Dropper Batch 2026-27</span></li>
           </ol>
         </div>
       </nav>
@@ -72,7 +72,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              NEET Dropper Batch 2025-26
+              NEET Dropper Batch 2026-27
               <span className="block text-yellow-400 mt-2">in Gurugram</span>
             </h1>
 
@@ -272,7 +272,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 md:py-20 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Your Second Attempt is Your Best Attempt</h2>
-          <p className="text-xl mb-8 opacity-90">Join NEET Dropper Batch 2025-26 and improve by 100-150 marks</p>
+          <p className="text-xl mb-8 opacity-90">Join NEET Dropper Batch 2026-27 and improve by 100-150 marks</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/demo-booking"><Button variant="secondary" size="xl" className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"><Play className="w-5 h-5 mr-2" />Book Free Counseling</Button></Link>
             <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-slate-900"><Phone className="w-5 h-5 mr-2" />Call Now</Button></a>

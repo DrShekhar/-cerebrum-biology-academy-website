@@ -52,7 +52,7 @@ export function SeminarHero({
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
             <span>🎓</span>
-            <span>NEET 2025-26 Parents Exclusive</span>
+            <span>NEET 2026-27 Parents Exclusive</span>
           </div>
 
           {/* Main Headline */}

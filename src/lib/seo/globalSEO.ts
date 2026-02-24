@@ -74,7 +74,7 @@ export class GlobalSEOService {
       'neet biology coaching india',
       'top neet coaching institute india',
       'best online medical coaching india',
-      'neet 2025 coaching online',
+      'neet 2027 coaching online',
       'aiims trained faculty neet',
       'kota alternative neet coaching',
       'online neet classes india',
@@ -194,7 +194,7 @@ export class GlobalSEOService {
   }
 
   generateComparisonPageSEO(competitor: string): SEOData {
-    const title = `Cerebrum vs ${competitor} | Which is Better for NEET Biology? | Detailed Comparison 2025`
+    const title = `Cerebrum vs ${competitor} | Which is Better for NEET Biology? | Detailed Comparison 2027`
     const description = `🔥 Honest comparison: Cerebrum Biology Academy vs ${competitor}. Compare fees, success rate, faculty, features. See why 98% students choose Cerebrum!`
 
     const keywords = [

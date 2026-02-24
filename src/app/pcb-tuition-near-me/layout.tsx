@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'PCB Tuition Near Me | Physics Chemistry Biology Classes 2025',
+  title: 'PCB Tuition Near Me | Physics Chemistry Biology Classes 2027',
   description:
     'Looking for PCB tuition near you? Expert coaching for Physics, Chemistry & Biology. Perfect for NEET aspirants. AIIMS faculty, small batches. Book free demo class!',
   keywords: [

@@ -33,7 +33,7 @@ const ACADEMIC_YEAR_START_MONTH = 3 // April (0-indexed)
 const ACADEMIC_YEAR_END_MONTH = 2 // March (0-indexed)
 
 /**
- * Get current academic year string (e.g., "2025-2026")
+ * Get current academic year string (e.g., "2026-2027")
  */
 function getAcademicYear(date: Date): string {
   const year = date.getFullYear()

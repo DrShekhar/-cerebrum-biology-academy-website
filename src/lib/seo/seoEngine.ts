@@ -378,7 +378,7 @@ export class SEOEngine {
 
   private async generateContentTopics(keywords: SEOKeyword[]): Promise<string[]> {
     return [
-      'Complete NEET Biology Preparation Guide 2025',
+      'Complete NEET Biology Preparation Guide 2027',
       'Chapter-wise Biology Study Plan for Medical Entrance',
       'How to Score 360/360 in NEET Biology',
       'Biology Tricks and Memory Techniques for NEET',

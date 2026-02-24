@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     'how much NEET coaching cost Noida',
   ].join(', '),
   openGraph: {
-    title: 'Best NEET Coaching in Noida 2025 [1200+ Students]',
+    title: 'Best NEET Coaching in Noida 2027 [1200+ Students]',
     description:
       'Top NEET biology coaching in Noida with 98% success rate. AIIMS faculty, small batches. Join 1,200+ students from all Noida sectors.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',

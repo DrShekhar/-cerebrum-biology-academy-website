@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Zoology Teacher Near Me | Best Zoology Classes 2025',
+  title: 'Zoology Teacher Near Me | Best Zoology Classes 2027',
   description:
     'Find the best zoology teacher near you. Offline centers in Delhi NCR + online classes Pan-India. Expert faculty for Human Physiology, Animal Kingdom & NEET Zoology preparation.',
   keywords: [

@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import NEETDropperBatchNoidaContent from './NEETDropperBatchNoidaContent'
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2025-26 in Noida | Repeater Course',
+  title: 'NEET Dropper Batch 2026-27 in Noida | Repeater Course',
   description:
-    'Join NEET Dropper Batch 2025-26 in Noida. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 62.',
+    'Join NEET Dropper Batch 2026-27 in Noida. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 62.',
   keywords: [
-    'neet dropper batch 2025-26 noida',
+    'neet dropper batch 2026-27 noida',
     'neet repeater course noida',
     'neet dropper coaching noida',
     'neet second attempt noida',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     '1 year neet dropper course noida',
   ],
   openGraph: {
-    title: 'NEET Dropper Batch 2025-26 in Noida | Intensive Repeater Course',
+    title: 'NEET Dropper Batch 2026-27 in Noida | Intensive Repeater Course',
     description: 'Intensive 1-year NEET preparation for droppers and repeaters in Noida.',
     url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-noida',
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'What is the eligibility for NEET Dropper Batch 2025-26?',
+    question: 'What is the eligibility for NEET Dropper Batch 2026-27?',
     answer:
       'Any student who has appeared for NEET 2024 or 2025 and wants to improve their score is eligible. We analyze your previous attempt and create a personalized improvement plan.',
   },
@@ -62,7 +62,7 @@ export default function NEETDropperBatchNoidaPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'NEET Dropper Batch 2025-26 - Noida',
+    name: 'NEET Dropper Batch 2026-27 - Noida',
     description:
       'Intensive 1-year NEET preparation program for droppers and repeaters targeting NEET 2026.',
     provider: {
@@ -117,7 +117,7 @@ export default function NEETDropperBatchNoidaPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Dropper Batch 2025-26',
+        name: 'Dropper Batch 2026-27',
         item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-noida',
       },
     ],

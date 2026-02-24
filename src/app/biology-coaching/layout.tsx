@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Coaching | Best Coaching for Biology NEET & Boards 2025',
+  title: 'Biology Coaching | Best Coaching for Biology NEET Biology Coaching | Best Coaching for Biology NEET & Boards 2025 Boards 2027',
   description:
     'Join the best biology coaching for NEET & board exams. AIIMS-trained faculty, comprehensive curriculum, proven 98% success rate. Online & offline coaching available.',
   keywords: [

@@ -63,7 +63,7 @@ export const neetDropperBatchOnline: SEOLandingContent = {
   ...dropperBaseContent,
   slug: 'neet-dropper-batch-online',
 
-  title: 'NEET Dropper Batch Online | Year-Long Intensive Course 2025',
+  title: 'NEET Dropper Batch Online | Year-Long Intensive Course 2027',
   metaDescription:
     "Join India's best NEET dropper batch online. Intensive year-long course by AIIMS faculty. 92% success rate, 580+ avg score. Limited seats for 2026 batch!",
   keywords: [
@@ -206,10 +206,10 @@ export const neetDropperBatchOnline: SEOLandingContent = {
   },
 }
 
-// Page 2: /neet-repeater-course-2025/
-export const neetRepeaterCourse2025: SEOLandingContent = {
+// Page 2: /neet-repeater-course-2027/
+export const neetRepeaterCourse2027: SEOLandingContent = {
   ...dropperBaseContent,
-  slug: 'neet-repeater-course-2025',
+  slug: 'neet-repeater-course-2027',
 
   title: 'NEET Repeater Course 2026 Online | Best Coaching for 2nd Attempt',
   metaDescription:
@@ -302,7 +302,7 @@ export const neetRepeaterCourse2025: SEOLandingContent = {
     {
       question: 'When should I join for NEET 2026 repeater batch?',
       answer:
-        'Best to join by June-July 2025 for maximum preparation time. Late joiners (up to September) can also catch up with our accelerated track. Earlier you join, better your preparation.',
+        'Best to join by June-July 2027 for maximum preparation time. Late joiners (up to September) can also catch up with our accelerated track. Earlier you join, better your preparation.',
     },
     {
       question: 'What is the expected score improvement for NEET 2026?',
@@ -869,7 +869,7 @@ export const neetRepeaters2026: SEOLandingContent = {
         icon: 'search',
         title: 'Diagnostic Assessment',
         description:
-          'Detailed analysis of your 2025 attempt to identify exactly what needs fixing.',
+          'Detailed analysis of your previous attempt to identify exactly what needs fixing.',
       },
       {
         icon: 'calendar',
@@ -944,7 +944,7 @@ export const neetRepeaters2026: SEOLandingContent = {
     {
       question: 'How is the NEET Repeaters 2026 batch different from fresh batch?',
       answer:
-        'Key differences: Faster syllabus coverage (you have seen it once), more focus on practice and tests (less theory repetition), psychological support for drop year challenges, peer group of serious repeaters only, and personalized gap analysis based on your 2025 attempt.',
+        'Key differences: Faster syllabus coverage (you have seen it once), more focus on practice and tests (less theory repetition), psychological support for drop year challenges, peer group of serious repeaters only, and personalized gap analysis based on your previous attempt.',
     },
     {
       question: 'What marks improvement can I expect as a repeater?',
@@ -954,7 +954,7 @@ export const neetRepeaters2026: SEOLandingContent = {
     {
       question: 'When does the NEET 2026 repeaters batch start?',
       answer:
-        'Main batch starts June 2025 (right after NEET 2025 results). We also have July batch for students who decide later. Earlier you join, more revision cycles you complete. Registration opens April 2025.',
+        'Main batch starts June 2027 (right after NEET 2027 results). We also have July batch for students who decide later. Earlier you join, more revision cycles you complete. Registration opens April 2027.',
     },
     {
       question: 'What if I fail again in NEET 2026?',
@@ -970,10 +970,10 @@ export const neetRepeaters2026: SEOLandingContent = {
 
   courseSummary: {
     title: 'NEET Repeaters 2026 Batch',
-    duration: '12 Months (June 2025 - May 2026)',
+    duration: '12 Months (June 2027 - May 2028)',
     batchSize: '10-12 Students per batch',
     features: [
-      'Diagnostic assessment of 2025 attempt',
+      'Diagnostic assessment of previous attempt',
       'Live online classes 6 days/week',
       'Complete Class 11 + 12 strategic revision',
       '50+ mock tests with detailed analysis',
@@ -1176,7 +1176,7 @@ export const neetDropperBatch: SEOLandingContent = {
 export const dropperSEOPages = {
   neetDropperBatch,
   neetDropperBatchOnline,
-  neetRepeaterCourse2025,
+  neetRepeaterCourse2027,
   neetDropperBiologyCoaching,
   bestCoachingNeetDroppers,
   oneYearNeetDropperCourse,

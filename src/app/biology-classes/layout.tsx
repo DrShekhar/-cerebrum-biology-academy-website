@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Classes | Best Bio Classes for NEET & Boards 2025',
+  title: 'Biology Classes | Best Bio Classes for NEET Biology Classes | Best Bio Classes for NEET & Boards 2025 Boards 2027',
   description:
     'Join the best biology classes for NEET & board exams. Expert AIIMS-trained faculty, structured curriculum, small batches of 15-20 students. Online & offline bio classes available.',
   keywords: [

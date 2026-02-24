@@ -309,7 +309,7 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
           <div className="grid md:grid-cols-4 gap-4">
             <Link href="/neet-crash-course-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Crash Course</h3><p className="text-sm text-gray-600">45-day intensive</p></Link>
             <Link href="/neet-test-series-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Test Series</h3><p className="text-sm text-gray-600">50+ mock tests</p></Link>
-            <Link href="/neet-dropper-batch-2025-26-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Dropper Batch</h3><p className="text-sm text-gray-600">1-year program</p></Link>
+            <Link href="/neet-dropper-batch-2026-27-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Dropper Batch</h3><p className="text-sm text-gray-600">1-year program</p></Link>
             <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
           </div>
         </div>

@@ -713,5 +713,5 @@ export const class11BiologyData: CourseProgram = {
   specialBadge: 'Foundation Builder',
   seoTitle: 'Class 11th NEET Biology Course | 2-Year Comprehensive Program',
   seoDescription:
-    'Start your NEET journey right with our Class 11th Biology comprehensive course. Expert faculty, complete curriculum coverage, practical training, and proven results. Enroll now for 2025-26 batch.',
+    'Start your NEET journey right with our Class 11th Biology comprehensive course. Expert faculty, complete curriculum coverage, practical training, and proven results. Enroll now for 2026-27 batch.',
 }

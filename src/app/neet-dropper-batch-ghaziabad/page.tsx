@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import NEETDropperBatchGhaziabadContent from './NEETDropperBatchGhaziabadContent'
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2025-26 in Ghaziabad | Repeater Course',
+  title: 'NEET Dropper Batch 2026-27 in Ghaziabad | Repeater Course',
   description:
-    'Join NEET Dropper Batch 2025-26 for Ghaziabad students. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 62 Noida.',
+    'Join NEET Dropper Batch 2026-27 for Ghaziabad students. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 62 Noida.',
   keywords: [
-    'neet dropper batch 2025-26 ghaziabad',
+    'neet dropper batch 2026-27 ghaziabad',
     'neet repeater course ghaziabad',
     'neet dropper coaching ghaziabad',
     'neet second attempt ghaziabad',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     '1 year neet dropper course ghaziabad',
   ],
   openGraph: {
-    title: 'NEET Dropper Batch 2025-26 in Ghaziabad | Intensive Repeater Course',
+    title: 'NEET Dropper Batch 2026-27 in Ghaziabad | Intensive Repeater Course',
     description: 'Intensive 1-year NEET preparation for droppers and repeaters from Ghaziabad.',
     url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-ghaziabad',
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'What is the eligibility for NEET Dropper Batch 2025-26 for Ghaziabad students?',
+    question: 'What is the eligibility for NEET Dropper Batch 2026-27 for Ghaziabad students?',
     answer:
       'Any student who has appeared for NEET 2024 or 2025 and wants to improve their score is eligible. We analyze your previous attempt and create a personalized improvement plan.',
   },
@@ -62,7 +62,7 @@ export default function NEETDropperBatchGhaziabadPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'NEET Dropper Batch 2025-26 - Ghaziabad',
+    name: 'NEET Dropper Batch 2026-27 - Ghaziabad',
     description:
       'Intensive 1-year NEET preparation program for droppers and repeaters from Ghaziabad targeting NEET 2026.',
     provider: {
@@ -117,7 +117,7 @@ export default function NEETDropperBatchGhaziabadPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Dropper Batch 2025-26',
+        name: 'Dropper Batch 2026-27',
         item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-ghaziabad',
       },
     ],

@@ -217,7 +217,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
       { name: 'Rohini Center', url: '/biology-classes-rohini' },
       { name: 'Gurugram Center', url: '/biology-classes-gurgaon' },
       { name: 'South Delhi Center', url: '/biology-classes-south-delhi' },
-      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2025' },
+      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2027' },
     ],
     stats: {
       primary: { value: 'Rs 8K', label: 'PG Starting From/Month' },
@@ -429,7 +429,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
     ],
     relatedPages: [
       { name: 'Online Classes', url: '/online-biology-classes' },
-      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2025' },
+      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2027' },
       { name: 'Course Schedule', url: '/courses' },
       { name: 'Book Demo', url: '/demo' },
     ],
@@ -440,16 +440,16 @@ export const intentPagesData: Record<string, IntentPageData> = {
     },
   },
 
-  'neet-dropper-crash-course-2025': {
-    slug: 'neet-dropper-crash-course-2025',
-    metaTitle: 'NEET 2025 Dropper Crash Course | Intensive 1-Year Program | Cerebrum Academy',
+  'neet-dropper-crash-course-2027': {
+    slug: 'neet-dropper-crash-course-2027',
+    metaTitle: 'NEET 2027 Dropper Crash Course | Intensive 1-Year Program | Cerebrum Academy',
     metaDescription:
-      'Intensive NEET 2025 crash course for droppers. Complete syllabus revision, 100+ mock tests, daily practice. AIIMS faculty. Limited seats. Enroll now!',
-    heroTitle: 'NEET 2025 Dropper Crash Course',
+      'Intensive NEET 2027 crash course for droppers. Complete syllabus revision, 100+ mock tests, daily practice. AIIMS faculty. Limited seats. Enroll now!',
+    heroTitle: 'NEET 2027 Dropper Crash Course',
     heroSubtitle:
-      'Intensive 1-year program designed specifically for NEET droppers. Complete revision, rigorous practice, and expert guidance to crack NEET 2025.',
+      'Intensive 1-year program designed specifically for NEET droppers. Complete revision, rigorous practice, and expert guidance to crack NEET 2027.',
     heroHighlight: 'Limited Seats - Batch Starting Soon',
-    primaryCTA: 'Enroll for 2025 Batch',
+    primaryCTA: 'Enroll for 2027 Batch',
     secondaryCTA: 'Get Course Details',
     problemStatement: {
       title: 'Common Mistakes NEET Droppers Make',
@@ -518,7 +518,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
       {
         question: 'When does the NEET 2026 Dropper batch start?',
         answer:
-          'Our NEET 2026 Dropper batch starts in June 2025 (post NEET 2025 results). Early bird enrollment is open now with special discounts.',
+          'Our NEET 2026 Dropper batch starts in June 2027 (post NEET 2027 results). Early bird enrollment is open now with special discounts.',
       },
       {
         question: 'What is the fee for the Dropper course?',

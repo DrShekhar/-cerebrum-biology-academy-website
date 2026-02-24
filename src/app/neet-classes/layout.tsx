@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Classes Near Me | Best NEET Coaching Classes 2025',
+  title: 'NEET Classes Near Me | Best NEET Coaching Classes 2027',
   description:
     'Join the best NEET classes with live interactive sessions, expert faculty, and comprehensive study material. NEET classes available online and offline. 98% success rate!',
   keywords: [
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     'online NEET classes',
     'NEET biology classes',
     'NEET preparation classes',
-    'NEET classes 2025',
+    'NEET classes 2027',
     'NEET live classes',
   ],
   openGraph: {
-    title: 'NEET Classes Near Me | Best NEET Coaching Classes 2025',
+    title: 'NEET Classes Near Me | Best NEET Coaching Classes 2027',
     description:
       'Best NEET classes with live interactive sessions, expert faculty. Available online and offline. 98% success rate!',
     type: 'website',

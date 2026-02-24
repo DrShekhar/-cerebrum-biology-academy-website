@@ -108,7 +108,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
     trackAndOpenWhatsApp({
       source: 'dropper-batch-2025-faridabad',
       message:
-        'Hi! I am interested in NEET Dropper Batch 2025-26 in Faridabad. Please share details about the program.',
+        'Hi! I am interested in NEET Dropper Batch 2026-27 in Faridabad. Please share details about the program.',
       campaign: 'dropper-batch-2025-faridabad',
     })
   }
@@ -131,7 +131,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">Dropper Batch 2025-26</span>
+              <span className="text-teal-700 font-medium">Dropper Batch 2026-27</span>
             </li>
           </ol>
         </div>
@@ -152,7 +152,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              NEET Dropper Batch 2025-26
+              NEET Dropper Batch 2026-27
               <span className="block text-yellow-400 mt-2">in Faridabad</span>
             </h1>
 
@@ -465,7 +465,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
             Your Second Attempt is Your Best Attempt
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join NEET Dropper Batch 2025-26 and improve by 100-150 marks
+            Join NEET Dropper Batch 2026-27 and improve by 100-150 marks
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/demo-booking">

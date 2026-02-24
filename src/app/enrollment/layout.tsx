@@ -1,15 +1,15 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Enrollment | Join Cerebrum Biology Academy | NEET Coaching Admission 2025',
+  title: 'Enrollment | Join Cerebrum Biology Academy | NEET Coaching Admission 2026-2027',
   description:
     "Enroll in India's best NEET Biology coaching. Simple 3-step admission process, flexible payment options, EMI available. Start your medical journey today!",
   keywords:
-    'NEET enrollment, coaching admission, join NEET coaching, biology coaching admission, enroll now, NEET admission 2025, course enrollment',
+    'NEET enrollment, coaching admission, join NEET coaching, biology coaching admission, enroll now, NEET admission 2026-2027, course enrollment',
   openGraph: {
     title: 'Enroll Now NEET Coaching',
     description:
-      'Start your journey to medical college. Simple enrollment, flexible payments, instant access to classes. Limited seats for 2025 batch!',
+      'Start your journey to medical college. Simple enrollment, flexible payments, instant access to classes. Limited seats for 2026-2027 batch!',
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/enrollment',
     type: 'website',

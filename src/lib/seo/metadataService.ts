@@ -163,7 +163,7 @@ export class MetadataService {
   private generateExamMetadata(examData: any): Metadata {
     const examInfo = {
       neet: {
-        title: 'NEET Biology Coaching 2025 | Best NEET Biology Classes | Cerebrum Academy',
+        title: 'NEET Biology Coaching 2027 | Best NEET Biology Classes | Cerebrum Academy',
         description:
           '🏆 #1 NEET Biology coaching with 98% success rate. Expert AIIMS faculty, comprehensive study material, live classes. Join 10,000+ NEET qualifiers!',
         keywords: [
@@ -175,7 +175,7 @@ export class MetadataService {
         ],
       },
       aiims: {
-        title: 'AIIMS Biology Preparation 2025 | Best AIIMS Coaching | Cerebrum Academy',
+        title: 'AIIMS Biology Preparation 2027 | Best AIIMS Coaching | Cerebrum Academy',
         description:
           '🎯 Crack AIIMS with our specialized Biology coaching. Expert AIIMS faculty, previous year papers, mock tests. 98% success rate!',
         keywords: [

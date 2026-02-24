@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   title: pageData.metaTitle,
   description: pageData.metaDescription,
   keywords: [
-    'neet dropper batch 2025',
-    'neet crash course 2025',
+    'neet dropper batch 2026-2027',
+    'neet crash course 2027',
     'neet repeater batch delhi',
     'neet dropper coaching',
-    'neet 2025 preparation',
+    'neet 2027 preparation',
     'one year neet course',
-    'neet long term course 2025',
+    'neet long term course 2027',
   ],
   openGraph: {
     title: pageData.metaTitle,

@@ -5,11 +5,11 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2025-26 in Gurugram | Repeater Course',
+  title: 'NEET Dropper Batch 2026-27 in Gurugram | Repeater Course',
   description:
-    'Join NEET Dropper Batch 2025-26 in Gurugram. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
+    'Join NEET Dropper Batch 2026-27 in Gurugram. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
   keywords: [
-    'neet dropper batch 2025-26 gurugram',
+    'neet dropper batch 2026-27 gurugram',
     'neet repeater course gurugram',
     'neet dropper coaching gurugram',
     'neet second attempt gurugram',
@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     '1 year neet dropper course gurugram',
   ],
   openGraph: {
-    title: 'NEET Dropper Batch 2025-26 in Gurugram | Intensive Repeater Course',
+    title: 'NEET Dropper Batch 2026-27 in Gurugram | Intensive Repeater Course',
     description: 'Intensive 1-year NEET preparation for droppers and repeaters in Gurugram.',
-    url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2025-26-gurugram',
+    url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2025-26-gurugram',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram',
   },
 }
 
 const faqs = [
   {
-    question: 'What is the eligibility for NEET Dropper Batch 2025-26?',
+    question: 'What is the eligibility for NEET Dropper Batch 2026-27?',
     answer:
       'Any student who has appeared for NEET 2024 or 2025 and wants to improve their score is eligible. We analyze your previous attempt and create a personalized improvement plan.',
   },
@@ -64,7 +64,7 @@ export default function NEETDropperBatch2025GurugramPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'NEET Dropper Batch 2025-26 - Gurugram',
+    name: 'NEET Dropper Batch 2026-27 - Gurugram',
     description: 'Intensive 1-year NEET preparation program for droppers and repeaters targeting NEET 2026.',
     provider: {
       '@type': 'EducationalOrganization',
@@ -105,7 +105,7 @@ export default function NEETDropperBatch2025GurugramPage() {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
       { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Dropper Batch 2025-26', item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2025-26-gurugram' },
+      { '@type': 'ListItem', position: 3, name: 'Dropper Batch 2026-27', item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram' },
     ],
   }
 

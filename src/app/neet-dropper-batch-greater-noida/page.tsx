@@ -5,9 +5,9 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const noidaLocation = CONTACT_INFO.centers.noida
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2025-26 in Greater Noida | Repeater Course',
+  title: 'NEET Dropper Batch 2026-27 in Greater Noida | Repeater Course',
   description:
-    'Join NEET Dropper Batch 2025-26 for Greater Noida students. Intensive 1-year program for NEET repeaters. Online + hybrid classes available. Previous attempt analysis, personalized strategy, expert faculty at Sector 62 Noida.',
+    'Join NEET Dropper Batch 2026-27 for Greater Noida students. Intensive 1-year program for NEET repeaters. Online + hybrid classes available. Previous attempt analysis, personalized strategy, expert faculty at Sector 62 Noida.',
   keywords: [
     'neet dropper batch greater noida',
     'neet repeater course greater noida',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'online neet dropper batch greater noida',
   ],
   openGraph: {
-    title: 'NEET Dropper Batch 2025-26 for Greater Noida | Intensive Repeater Course',
+    title: 'NEET Dropper Batch 2026-27 for Greater Noida | Intensive Repeater Course',
     description:
       'Intensive 1-year NEET preparation for droppers and repeaters from Greater Noida. Online + hybrid available.',
     url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-greater-noida',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'What is the eligibility for NEET Dropper Batch 2025-26?',
+    question: 'What is the eligibility for NEET Dropper Batch 2026-27?',
     answer:
       'Any student who has appeared for NEET 2024 or 2025 and wants to improve their score is eligible. We analyze your previous attempt and create a personalized improvement plan. Greater Noida students can join online or hybrid mode.',
   },
@@ -66,7 +66,7 @@ export default function NEETDropperBatchGreaterNoidaPage() {
   const courseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    name: 'NEET Dropper Batch 2025-26 - Greater Noida',
+    name: 'NEET Dropper Batch 2026-27 - Greater Noida',
     description:
       'Intensive 1-year NEET preparation program for droppers and repeaters from Greater Noida targeting NEET 2026. Online + hybrid classes available.',
     provider: {
@@ -121,7 +121,7 @@ export default function NEETDropperBatchGreaterNoidaPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Dropper Batch 2025-26',
+        name: 'Dropper Batch 2026-27',
         item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-greater-noida',
       },
     ],

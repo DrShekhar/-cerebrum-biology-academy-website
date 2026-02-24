@@ -8,7 +8,7 @@ import Script from 'next/script'
 export const metadata: Metadata = {
   title: 'Biology Definitions for NEET | Important Terms & Concepts',
   description:
-    'Master essential biology definitions for NEET 2025-26. Comprehensive glossary of 30+ important terms with examples, key points, and NEET relevance. Free study material by Dr. Shekhar C Singh.',
+    'Master essential biology definitions for NEET 2026-27. Comprehensive glossary of 30+ important terms with examples, key points, and NEET relevance. Free study material by Dr. Shekhar C Singh.',
   keywords: [
     'biology definitions NEET',
     'NEET biology terms',
@@ -106,7 +106,7 @@ export default function BiologyDefinitionsPage() {
               Biology Definitions for NEET
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Master essential biology terms and concepts for NEET 2025-26. Comprehensive
+              Master essential biology terms and concepts for NEET 2026-27. Comprehensive
               definitions with examples, key points, and NEET relevance ratings.
             </p>
 

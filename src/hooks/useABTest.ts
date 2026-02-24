@@ -85,8 +85,8 @@ const AB_TESTS: { [testId: string]: ABTestConfig } = {
       },
     ],
     enabled: true,
-    startDate: new Date('2025-01-01'),
-    endDate: new Date('2025-12-31'),
+    startDate: new Date('2026-01-01'),
+    endDate: new Date('2026-12-31'),
     targetAudience: {
       percentage: 100,
       conditions: {

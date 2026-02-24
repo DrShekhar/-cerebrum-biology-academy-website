@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
-  title: 'Class 12 Biology NEET Coaching | Target 2025 Batch',
+  title: 'Class 12 Biology NEET Coaching | Target 2026-2027 Batch',
   description:
     'Intensive Class 12 Biology coaching for NEET 2026. Complete syllabus, previous year papers, mock tests, 90+ marks guarantee. AIIMS faculty. Limited seats!',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Class 12 Biology NEET Target Batch 2025',
+    title: 'Class 12 Biology NEET Target Batch 2026-2027',
     description: 'Intensive NEET preparation, 90+ board marks guarantee, 98% success rate',
     images: ['/og-image.jpg'],
   },

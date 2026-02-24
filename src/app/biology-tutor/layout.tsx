@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor | Best Biology Tutoring in India 2025',
+  title: 'Biology Tutor | Best Biology Tutoring in India 2027',
   description:
     'Looking for a biology tutor? Get expert biology tutoring from AIIMS-trained faculty. 98% success rate, personalized attention, small batches. Best biology tutor for NEET, CBSE, ICSE.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'biology tutor India',
   ],
   openGraph: {
-    title: 'Biology Tutor | Best Biology Tutoring in India 2025',
+    title: 'Biology Tutor | Best Biology Tutoring in India 2027',
     description:
       'Expert biology tutoring from AIIMS-trained faculty. 98% success rate, personalized attention. Best biology tutor for NEET, CBSE, ICSE preparation.',
     type: 'website',

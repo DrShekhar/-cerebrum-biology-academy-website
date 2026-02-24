@@ -485,7 +485,7 @@ export function NoidaCourseSchema({
       price: price,
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
-      validFrom: '2025-01-01',
+      validFrom: '2026-01-01',
     },
     hasCourseInstance: {
       '@type': 'CourseInstance',

@@ -150,7 +150,7 @@ export class CitySpecificSEOService {
 
     return {
       ...seoData,
-      title: `Best Biology Coaching in ${city.name} | Top NEET Classes ${city.name} 2025 | Cerebrum Academy`,
+      title: `Best Biology Coaching in ${city.name} | Top NEET Classes ${city.name} 2027 | Cerebrum Academy`,
       description: `🏆 #1 Biology coaching in ${city.name}, ${city.state}. 98% NEET success rate, AIIMS faculty, online+offline classes. Better than ${city.competitors[0]}! Book free demo.`,
       keywords: [
         ...city.keywords,
@@ -261,7 +261,7 @@ export class CitySpecificSEOService {
         const comparisonSEO = globalSEOService.generateComparisonPageSEO(competitor)
         comparisons.push({
           ...comparisonSEO,
-          title: `Cerebrum vs ${competitor} in ${city.name} | Which is Better for NEET Biology 2025?`,
+          title: `Cerebrum vs ${competitor} in ${city.name} | Which is Better for NEET Biology 2027?`,
           description: `🔥 Honest comparison: Cerebrum Biology Academy vs ${competitor} in ${city.name}. Compare fees, success rate, faculty. 98% students choose Cerebrum!`,
           keywords: [
             ...comparisonSEO.keywords,

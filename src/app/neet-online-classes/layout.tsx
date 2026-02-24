@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'neet biology online classes',
     'online classes for neet preparation',
     'best neet online classes',
-    'neet 2025 online classes',
+    'neet 2027 online classes',
   ],
   openGraph: {
     title: 'NEET Online Classes | Live Interactive NEET Classes Online',

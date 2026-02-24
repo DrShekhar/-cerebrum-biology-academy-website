@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Home Tutor | Home Tuition for Biology 2025',
+  title: 'Biology Home Tutor | Home Tuition for Biology 2027',
   description:
     'Looking for a biology home tutor? Discover why ordinary home tutors fail and how Cerebrum small batch coaching produces NEET toppers. AIIMS trained faculty, peer learning environment.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'biology home coaching',
   ],
   openGraph: {
-    title: 'Biology Home Tutor | Home Tuition for Biology 2025',
+    title: 'Biology Home Tutor | Home Tuition for Biology 2027',
     description:
       'Looking for biology home tutor? Learn why small batch coaching beats home tuition. AIIMS trained faculty, peer learning, proven results.',
     type: 'website',

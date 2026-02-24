@@ -37,7 +37,7 @@ export const delhiNCRAreas: LocalArea[] = [
       'Premier NEET Biology coaching in Gurgaon with AIIMS expert faculty. Join 1,50,000+ successful students from Cyber City, DLF, and Sector 14-56 areas.',
     metaTitle: 'Best Biology Coaching in Gurgaon | NEET Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Top-rated biology coaching in Gurgaon for NEET 2025. Expert AIIMS faculty, 98% success rate. Serving DLF, Cyber City, Sector 14-56. Book free demo class!',
+      'Top-rated biology coaching in Gurgaon for NEET 2027. Expert AIIMS faculty, 98% success rate. Serving DLF, Cyber City, Sector 14-56. Book free demo class!',
     keywords: [
       'best biology coaching gurgaon',
       'NEET coaching gurgaon',
@@ -774,7 +774,7 @@ export const rohiniAreas: LocalArea[] = [
     displayName: 'Shalimar Bagh',
     state: 'Delhi',
     description:
-      'Expert biology coaching in Shalimar Bagh for NEET 2025. Experienced faculty, proven track record, convenient location.',
+      'Expert biology coaching in Shalimar Bagh for NEET 2027. Experienced faculty, proven track record, convenient location.',
     metaTitle: 'Biology Coaching Shalimar Bagh | NEET Classes | Cerebrum Academy',
     metaDescription:
       'Top biology coaching in Shalimar Bagh. Expert NEET preparation with 96% success rate. Near Azadpur. Book free demo class!',
@@ -1454,7 +1454,7 @@ export const southDelhiAreas: LocalArea[] = [
     description:
       'Premier biology coaching at Ring Road, South Extension 2, Delhi. Expert classes for Class 9, 10, 11, 12, NEET, Board exams & Olympiads. Online, offline & hybrid batches. Metro-connected - 5 min from South Extension Metro.',
     metaTitle:
-      'Biology Coaching Near Me South Extension | NEET 2025-26, Class 9-12 | Cerebrum Academy',
+      'Biology Coaching Near Me South Extension | NEET 2026-27, Class 9-12 | Cerebrum Academy',
     metaDescription:
       'Best biology coaching near me in South Extension 2, Ring Road Delhi. Expert NEET biology coaching near me for Class 9-12, Droppers & Olympiad. 5 min from metro. Book free demo!',
     keywords: [
@@ -1480,7 +1480,7 @@ export const southDelhiAreas: LocalArea[] = [
       'nseb coaching south delhi',
       'biology foundation classes south extension',
       // 2025/2026 keywords
-      'neet 2025 coaching south extension',
+      'neet 2027 coaching south extension',
       'neet 2026 preparation south delhi',
     ],
     localKeywords: [

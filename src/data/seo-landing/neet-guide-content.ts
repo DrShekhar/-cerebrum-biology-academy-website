@@ -12,17 +12,17 @@ const defaultContactButtons = {
   },
 }
 
-// NEET Syllabus 2025 Page
-const neetSyllabus2025: SEOLandingContent = {
-  slug: 'neet-syllabus-2025',
+// NEET Syllabus 2027 Page
+const neetSyllabus2027: SEOLandingContent = {
+  slug: 'neet-syllabus-2027',
   classLevel: 'universal',
 
-  title: 'NEET Syllabus 2025 | Complete Syllabus Guide',
+  title: 'NEET Syllabus 2027 | Complete Syllabus Guide',
   metaDescription:
-    'Complete NEET 2025 syllabus for Physics, Chemistry & Biology. Chapter-wise weightage, important topics & prep strategy. NTA updated.',
+    'Complete NEET 2027 syllabus for Physics, Chemistry & Biology. Chapter-wise weightage, important topics & prep strategy. NTA updated.',
   keywords: [
     'neet syllabus 2024',
-    'neet syllabus 2025',
+    'neet syllabus 2027',
     'neet ka syllabus',
     'neet syllabus pdf',
     'neet ug syllabus',
@@ -34,10 +34,10 @@ const neetSyllabus2025: SEOLandingContent = {
   ],
 
   hero: {
-    headline: 'Complete NEET 2025 Syllabus Guide',
+    headline: 'Complete NEET 2027 Syllabus Guide',
     subheadline:
       'Master the entire NEET syllabus with chapter-wise weightage analysis, important topics, and expert preparation strategies for 700+ scores.',
-    highlightedText: '2025',
+    highlightedText: '2027',
     ctaText: 'Get Syllabus PDF',
     ctaLink: '/resources',
     backgroundGradient: 'from-indigo-900 to-indigo-800',
@@ -136,14 +136,14 @@ const neetSyllabus2025: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'What is the NEET 2025 syllabus based on?',
+      question: 'What is the NEET 2027 syllabus based on?',
       answer:
-        'NEET 2025 syllabus is based on Class 11 and 12 NCERT textbooks for Physics, Chemistry, and Biology. NTA follows the NCERT curriculum, making these textbooks the primary source for NEET preparation.',
+        'NEET 2027 syllabus is based on Class 11 and 12 NCERT textbooks for Physics, Chemistry, and Biology. NTA follows the NCERT curriculum, making these textbooks the primary source for NEET preparation.',
     },
     {
-      question: 'Has the NEET syllabus changed for 2025?',
+      question: 'Has the NEET syllabus changed for 2027?',
       answer:
-        'NTA typically announces any syllabus changes in the official notification. As of now, the NEET 2025 syllabus is expected to remain similar to previous years. We update this page immediately when any changes are announced.',
+        'NTA typically announces any syllabus changes in the official notification. As of now, the NEET 2027 syllabus is expected to remain similar to previous years. We update this page immediately when any changes are announced.',
     },
     {
       question: 'Which subject has the highest weightage in NEET?',
@@ -199,8 +199,8 @@ const neetSyllabus2025: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
-    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2027' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2027' },
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
   ],
 
@@ -208,10 +208,10 @@ const neetSyllabus2025: SEOLandingContent = {
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET 2025 Syllabus Guide',
+    courseName: 'NEET 2027 Syllabus Guide',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Complete NEET 2025 syllabus for Physics, Chemistry, and Biology with chapter-wise weightage and preparation strategies.',
+      'Complete NEET 2027 syllabus for Physics, Chemistry, and Biology with chapter-wise weightage and preparation strategies.',
     duration: '12 months',
     price: 45000,
     priceCurrency: 'INR',
@@ -223,9 +223,9 @@ const neetEligibilityCriteria: SEOLandingContent = {
   slug: 'neet-eligibility-criteria',
   classLevel: 'universal',
 
-  title: 'NEET Eligibility 2025 | Age & Qualification Guide',
+  title: 'NEET Eligibility 2027 | Age & Qualification Guide',
   metaDescription:
-    'Complete NEET 2025 eligibility criteria - age limit, educational qualification, number of attempts, category-wise requirements. Check if you qualify for NEET.',
+    'Complete NEET 2027 eligibility criteria - age limit, educational qualification, number of attempts, category-wise requirements. Check if you qualify for NEET.',
   keywords: [
     'eligibility for neet',
     'eligibility for neet exam',
@@ -233,13 +233,13 @@ const neetEligibilityCriteria: SEOLandingContent = {
     'neet age limit',
     'neet qualification',
     'neet attempts limit',
-    'neet eligibility 2025',
+    'neet eligibility 2027',
     'who can give neet exam',
     'neet criteria',
   ],
 
   hero: {
-    headline: 'NEET 2025 Eligibility Criteria',
+    headline: 'NEET 2027 Eligibility Criteria',
     subheadline:
       'Complete guide to NEET eligibility including age limits, educational qualifications, number of attempts, and category-wise requirements.',
     highlightedText: 'Eligibility',
@@ -259,7 +259,7 @@ const neetEligibilityCriteria: SEOLandingContent = {
       },
       {
         icon: 'calendar',
-        question: 'What is the age limit for NEET 2025?',
+        question: 'What is the age limit for NEET 2027?',
         solution:
           'Get clarity on minimum and maximum age requirements, including relaxations for reserved categories.',
       },
@@ -340,9 +340,9 @@ const neetEligibilityCriteria: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'What is the minimum age to appear for NEET 2025?',
+      question: 'What is the minimum age to appear for NEET 2027?',
       answer:
-        'Candidates must be at least 17 years old as on December 31 of the year of admission. So for NEET 2025 (admission in 2025-26), you must turn 17 by December 31, 2025.',
+        'Candidates must be at least 17 years old as on December 31 of the year of admission. So for NEET 2027 (admission in 2028-29), you must turn 17 by December 31, 2027.',
     },
     {
       question: 'Is there an upper age limit for NEET?',
@@ -408,9 +408,9 @@ const neetEligibilityCriteria: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2027' },
     { title: 'NEET Registration Guide', link: '/neet-registration-guide' },
-    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2027' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -420,27 +420,27 @@ const neetEligibilityCriteria: SEOLandingContent = {
     courseName: 'NEET Eligibility Guide',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Complete guide to NEET 2025 eligibility criteria including age limits, educational qualifications, and attempt restrictions.',
+      'Complete guide to NEET 2027 eligibility criteria including age limits, educational qualifications, and attempt restrictions.',
     duration: 'Reference Guide',
     price: 0,
     priceCurrency: 'INR',
   },
 }
 
-// NEET Exam Pattern 2025 Page
-const neetExamPattern2025: SEOLandingContent = {
-  slug: 'neet-exam-pattern-2025',
+// NEET Exam Pattern 2027 Page
+const neetExamPattern2027: SEOLandingContent = {
+  slug: 'neet-exam-pattern-2027',
   classLevel: 'universal',
 
-  title: 'NEET Exam Pattern 2025 | Marking & Questions',
+  title: 'NEET Exam Pattern 2027 | Marking & Questions',
   metaDescription:
-    'NEET 2025 exam pattern - questions, marking scheme, negative marking, duration & subject distribution. Prepare smartly for NEET.',
+    'NEET 2027 exam pattern - questions, marking scheme, negative marking, duration & subject distribution. Prepare smartly for NEET.',
   keywords: [
     'neet exam pattern',
     'neet question pattern',
     'neet marking scheme',
     'neet exam format',
-    'neet 2025 pattern',
+    'neet 2027 pattern',
     'neet negative marking',
     'neet total marks',
     'neet questions',
@@ -448,9 +448,9 @@ const neetExamPattern2025: SEOLandingContent = {
   ],
 
   hero: {
-    headline: 'NEET 2025 Exam Pattern Decoded',
+    headline: 'NEET 2027 Exam Pattern Decoded',
     subheadline:
-      'Understand the complete exam structure - questions, marks, duration, and strategic approach to maximize your score in NEET 2025.',
+      'Understand the complete exam structure - questions, marks, duration, and strategic approach to maximize your score in NEET 2027.',
     highlightedText: 'Decoded',
     ctaText: 'Get Exam Strategy',
     ctaLink: '/book-demo',
@@ -482,7 +482,7 @@ const neetExamPattern2025: SEOLandingContent = {
   },
 
   benefits: {
-    title: 'NEET 2025 Pattern Overview',
+    title: 'NEET 2027 Pattern Overview',
     subtitle: 'Everything you need to know',
     items: [
       {
@@ -549,12 +549,12 @@ const neetExamPattern2025: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'How many questions are there in NEET 2025?',
+      question: 'How many questions are there in NEET 2027?',
       answer:
-        'NEET 2025 has 200 total questions - 50 each in Physics, Chemistry, Botany, and Zoology. Each subject is divided into Section A (35 mandatory questions) and Section B (15 questions, attempt any 10). Total questions to attempt: 180.',
+        'NEET 2027 has 200 total questions - 50 each in Physics, Chemistry, Botany, and Zoology. Each subject is divided into Section A (35 mandatory questions) and Section B (15 questions, attempt any 10). Total questions to attempt: 180.',
     },
     {
-      question: 'What is the marking scheme for NEET 2025?',
+      question: 'What is the marking scheme for NEET 2027?',
       answer:
         'Each correct answer gets +4 marks, each incorrect answer gets -1 mark (negative marking), and unattempted questions get 0 marks. Maximum possible marks: 720 (180 questions x 4 marks).',
     },
@@ -596,7 +596,7 @@ const neetExamPattern2025: SEOLandingContent = {
 
   cta: {
     title: 'Practice with Real NEET Pattern',
-    subtitle: 'Join our test series designed exactly as per NEET 2025 pattern',
+    subtitle: 'Join our test series designed exactly as per NEET 2027 pattern',
     primaryButton: {
       text: 'Join Test Series',
       link: '/courses',
@@ -612,9 +612,9 @@ const neetExamPattern2025: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2027' },
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2027' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -624,7 +624,7 @@ const neetExamPattern2025: SEOLandingContent = {
     courseName: 'NEET Exam Pattern Guide',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Complete NEET 2025 exam pattern including number of questions, marking scheme, duration, and strategic preparation tips.',
+      'Complete NEET 2027 exam pattern including number of questions, marking scheme, duration, and strategic preparation tips.',
     duration: 'Reference Guide',
     price: 0,
     priceCurrency: 'INR',
@@ -636,12 +636,12 @@ const neetCounsellingGuide: SEOLandingContent = {
   slug: 'neet-counselling-guide',
   classLevel: 'universal',
 
-  title: 'NEET Counselling 2025 | MCC & State Process',
+  title: 'NEET Counselling 2027 | MCC & State Process',
   metaDescription:
-    'Complete NEET 2025 counselling guide - MCC counselling process, state counselling, document verification, seat allotment, and admission process explained.',
+    'Complete NEET 2027 counselling guide - MCC counselling process, state counselling, document verification, seat allotment, and admission process explained.',
   keywords: [
     'neet counselling',
-    'neet counselling 2025',
+    'neet counselling 2027',
     'mcc neet counselling',
     'up neet counselling',
     'neet counselling process',
@@ -834,14 +834,14 @@ const neetCounsellingGuide: SEOLandingContent = {
   },
 }
 
-// NEET Biology Syllabus 2025 Page
-const neetBiologySyllabus2025: SEOLandingContent = {
-  slug: 'neet-biology-syllabus-2025',
+// NEET Biology Syllabus 2027 Page
+const neetBiologySyllabus2027: SEOLandingContent = {
+  slug: 'neet-biology-syllabus-2027',
   classLevel: 'universal',
 
-  title: 'NEET Biology Syllabus 2025 | Botany & Zoology',
+  title: 'NEET Biology Syllabus 2027 | Botany & Zoology',
   metaDescription:
-    'Complete NEET 2025 Biology syllabus for Botany and Zoology. Chapter-wise weightage, important topics, NCERT alignment & preparation strategy for 360 marks.',
+    'Complete NEET 2027 Biology syllabus for Botany and Zoology. Chapter-wise weightage, important topics, NCERT alignment & preparation strategy for 360 marks.',
   keywords: [
     'neet biology syllabus',
     'neet bio syllabus',
@@ -850,11 +850,11 @@ const neetBiologySyllabus2025: SEOLandingContent = {
     'neet botany syllabus',
     'neet zoology syllabus',
     'neet biology topics',
-    'neet biology 2025',
+    'neet biology 2027',
   ],
 
   hero: {
-    headline: 'Complete NEET Biology Syllabus 2025',
+    headline: 'Complete NEET Biology Syllabus 2027',
     subheadline:
       'Master all 38 chapters of Botany and Zoology with chapter-wise weightage analysis. Biology carries 360 marks - half of NEET total!',
     highlightedText: '360 Marks',
@@ -1021,7 +1021,7 @@ const neetBiologySyllabus2025: SEOLandingContent = {
   relatedPages: [
     { title: 'NEET Botany Syllabus', link: '/neet-botany-syllabus' },
     { title: 'NEET Zoology Syllabus', link: '/neet-zoology-syllabus' },
-    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2027' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -1031,7 +1031,7 @@ const neetBiologySyllabus2025: SEOLandingContent = {
     courseName: 'NEET Biology Syllabus Guide',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Complete NEET 2025 Biology syllabus covering all 38 chapters of Botany and Zoology with chapter-wise weightage analysis.',
+      'Complete NEET 2027 Biology syllabus covering all 38 chapters of Botany and Zoology with chapter-wise weightage analysis.',
     duration: '12 months',
     price: 35000,
     priceCurrency: 'INR',
@@ -1043,9 +1043,9 @@ const neetBotanySyllabus: SEOLandingContent = {
   slug: 'neet-botany-syllabus',
   classLevel: 'universal',
 
-  title: 'NEET Botany Syllabus 2025 | Chapters & Weightage',
+  title: 'NEET Botany Syllabus 2027 | Chapters & Weightage',
   metaDescription:
-    'Complete NEET Botany syllabus for 2025 with all 19 chapters, weightage analysis, important topics & preparation strategy. Score 170+ in Botany section.',
+    'Complete NEET Botany syllabus for 2027 with all 19 chapters, weightage analysis, important topics & preparation strategy. Score 170+ in Botany section.',
   keywords: [
     'botany syllabus for neet',
     'neet botany syllabus',
@@ -1053,7 +1053,7 @@ const neetBotanySyllabus: SEOLandingContent = {
     'botany for neet',
     'neet botany topics',
     'plant biology neet',
-    'neet botany 2025',
+    'neet botany 2027',
     'botany weightage neet',
   ],
 
@@ -1219,7 +1219,7 @@ const neetBotanySyllabus: SEOLandingContent = {
 
   relatedPages: [
     { title: 'NEET Zoology Syllabus', link: '/neet-zoology-syllabus' },
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2027' },
     { title: 'Plant Physiology Tuition', link: '/plant-physiology-class-11' },
   ],
 
@@ -1242,9 +1242,9 @@ const neetZoologySyllabus: SEOLandingContent = {
   slug: 'neet-zoology-syllabus',
   classLevel: 'universal',
 
-  title: 'NEET Zoology Syllabus 2025 | Chapters & Weightage',
+  title: 'NEET Zoology Syllabus 2027 | Chapters & Weightage',
   metaDescription:
-    'Complete NEET Zoology syllabus for 2025 with all 19 chapters, weightage analysis, Human Physiology focus & preparation strategy. Score 170+ in Zoology.',
+    'Complete NEET Zoology syllabus for 2027 with all 19 chapters, weightage analysis, Human Physiology focus & preparation strategy. Score 170+ in Zoology.',
   keywords: [
     'zoology syllabus for neet',
     'neet zoology syllabus',
@@ -1252,7 +1252,7 @@ const neetZoologySyllabus: SEOLandingContent = {
     'zoology for neet',
     'neet zoology topics',
     'human physiology neet',
-    'neet zoology 2025',
+    'neet zoology 2027',
     'animal kingdom neet',
   ],
 
@@ -1417,7 +1417,7 @@ const neetZoologySyllabus: SEOLandingContent = {
 
   relatedPages: [
     { title: 'NEET Botany Syllabus', link: '/neet-botany-syllabus' },
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2027' },
     { title: 'Human Physiology Tuition', link: '/human-physiology-tuition' },
   ],
 
@@ -1440,9 +1440,9 @@ const neetPreparationGuide: SEOLandingContent = {
   slug: 'neet-preparation-guide',
   classLevel: 'universal',
 
-  title: 'NEET Preparation Guide 2025 | Strategy & Tips',
+  title: 'NEET Preparation Guide 2027 | Strategy & Tips',
   metaDescription:
-    'Complete NEET 2025 preparation guide with study strategies, time management, subject-wise tips, and expert advice. Start your NEET prep the right way.',
+    'Complete NEET 2027 preparation guide with study strategies, time management, subject-wise tips, and expert advice. Start your NEET prep the right way.',
   keywords: [
     'neet guide',
     'neet prep',
@@ -1452,7 +1452,7 @@ const neetPreparationGuide: SEOLandingContent = {
     'neet study plan',
     'neet tips',
     'neet preparation tips',
-    'neet 2025 preparation',
+    'neet 2027 preparation',
   ],
 
   hero: {
@@ -1605,7 +1605,7 @@ const neetPreparationGuide: SEOLandingContent = {
 
   cta: {
     title: 'Start Your NEET Preparation Today',
-    subtitle: 'Get expert guidance and structured preparation for NEET 2025',
+    subtitle: 'Get expert guidance and structured preparation for NEET 2027',
     primaryButton: {
       text: 'Join Now',
       link: '/courses',
@@ -1621,8 +1621,8 @@ const neetPreparationGuide: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
-    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2027' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2027' },
     { title: 'NEET Dropper Course', link: '/neet-dropper-batch-online' },
   ],
 
@@ -1633,7 +1633,7 @@ const neetPreparationGuide: SEOLandingContent = {
     courseName: 'NEET Preparation Guide',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Complete NEET 2025 preparation guide with study strategies, time management tips, and subject-wise expert advice.',
+      'Complete NEET 2027 preparation guide with study strategies, time management tips, and subject-wise expert advice.',
     duration: '12-24 months',
     price: 45000,
     priceCurrency: 'INR',
@@ -1645,15 +1645,15 @@ const neetExamDetails: SEOLandingContent = {
   slug: 'neet-exam-details',
   classLevel: 'universal',
 
-  title: 'NEET Exam Details 2025 | Complete Exam Guide',
+  title: 'NEET Exam Details 2027 | Complete Exam Guide',
   metaDescription:
-    'Complete NEET 2025 exam details - what is NEET, conducting body, exam date, centers, languages, and everything you need to know about the NEET examination.',
+    'Complete NEET 2027 exam details - what is NEET, conducting body, exam date, centers, languages, and everything you need to know about the NEET examination.',
   keywords: [
     'neet details',
     'neet examination',
     'neet entrance exam',
     'what is neet exam',
-    'neet exam details 2025',
+    'neet exam details 2027',
     'neet exam information',
     'neet full form',
     'neet exam date',
@@ -1771,9 +1771,9 @@ const neetExamDetails: SEOLandingContent = {
         'NEET is conducted by NTA (National Testing Agency) on behalf of the Ministry of Health and Family Welfare, Government of India. NTA was established in 2017 to conduct entrance examinations for higher educational institutions.',
     },
     {
-      question: 'When is NEET 2025 exam date?',
+      question: 'When is NEET 2027 exam date?',
       answer:
-        'NEET 2025 is expected to be conducted in the first week of May 2025 (exact date to be announced by NTA). The notification is typically released in December/January, with application window of about 1 month.',
+        'NEET 2027 is expected to be conducted in the first week of May 2027 (exact date to be announced by NTA). The notification is typically released in December/January, with application window of about 1 month.',
     },
     {
       question: 'Which medical courses accept NEET scores?',
@@ -1826,7 +1826,7 @@ const neetExamDetails: SEOLandingContent = {
   relatedPages: [
     { title: 'NEET Eligibility Criteria', link: '/neet-eligibility-criteria' },
     { title: 'NEET Registration Guide', link: '/neet-registration-guide' },
-    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2027' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -1848,14 +1848,14 @@ const neetRegistrationGuide: SEOLandingContent = {
   slug: 'neet-registration-guide',
   classLevel: 'universal',
 
-  title: 'NEET Registration 2025 | Apply Online Guide | Cerebrum Academy',
+  title: 'NEET Registration 2027 | Apply Online Guide | Cerebrum Academy',
   metaDescription:
-    'Complete NEET 2025 registration guide - how to apply online, documents required, application fee, photo specifications & step-by-step process.',
+    'Complete NEET 2027 registration guide - how to apply online, documents required, application fee, photo specifications & step-by-step process.',
   keywords: [
     'neet registration',
     'neet apply online',
     'neet admission',
-    'neet registration 2025',
+    'neet registration 2027',
     'neet application form',
     'how to apply for neet',
     'neet registration process',
@@ -1864,9 +1864,9 @@ const neetRegistrationGuide: SEOLandingContent = {
   ],
 
   hero: {
-    headline: 'NEET 2025 Registration Guide',
+    headline: 'NEET 2027 Registration Guide',
     subheadline:
-      'Step-by-step guide to apply for NEET 2025 online. Document requirements, photo specifications, fee payment, and common mistakes to avoid.',
+      'Step-by-step guide to apply for NEET 2027 online. Document requirements, photo specifications, fee payment, and common mistakes to avoid.',
     highlightedText: 'Step-by-step',
     ctaText: 'Get Registration Checklist',
     ctaLink: '/resources',
@@ -1964,12 +1964,12 @@ const neetRegistrationGuide: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'When does NEET 2025 registration start?',
+      question: 'When does NEET 2027 registration start?',
       answer:
-        'NEET 2025 registration is expected to start in December 2024 or January 2025. NTA releases the official notification on neet.nta.nic.in. The registration window is typically 15-30 days.',
+        'NEET 2027 registration is expected to start in December 2026 or January 2027. NTA releases the official notification on neet.nta.nic.in. The registration window is typically 15-30 days.',
     },
     {
-      question: 'What is the NEET 2025 application fee?',
+      question: 'What is the NEET 2027 application fee?',
       answer:
         'Application fees: General/OBC-NCL/EWS - Rs. 1700, General-EWS/OBC-NCL (Female) - Rs. 1600, SC/ST/PwD - Rs. 1000. Fee can be paid via Debit Card, Credit Card, Net Banking, UPI, or E-Challan.',
     },
@@ -2039,7 +2039,7 @@ const neetRegistrationGuide: SEOLandingContent = {
     courseName: 'NEET Registration Guide',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Complete NEET 2025 registration guide with step-by-step process, document requirements, and application assistance.',
+      'Complete NEET 2027 registration guide with step-by-step process, document requirements, and application assistance.',
     duration: 'Reference Guide',
     price: 0,
     priceCurrency: 'INR',
@@ -2051,14 +2051,14 @@ const neetResultAnalysis: SEOLandingContent = {
   slug: 'neet-result-analysis',
   classLevel: 'universal',
 
-  title: 'NEET Result 2025 | Result Analysis & Cutoff | Cerebrum Academy',
+  title: 'NEET Result 2027 | Result Analysis & Cutoff | Cerebrum Academy',
   metaDescription:
-    'NEET 2025 result analysis - cutoff marks, rank prediction, previous year analysis, and what your score means for medical college admission.',
+    'NEET 2027 result analysis - cutoff marks, rank prediction, previous year analysis, and what your score means for medical college admission.',
   keywords: [
     'neet result',
     'neet ka result',
     'nta neet result',
-    'neet result 2025',
+    'neet result 2027',
     'neet cutoff',
     'neet result analysis',
     'neet rank vs marks',
@@ -2167,12 +2167,12 @@ const neetResultAnalysis: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'When will NEET 2025 result be declared?',
+      question: 'When will NEET 2027 result be declared?',
       answer:
-        'NEET 2025 result is expected within 4-6 weeks of the exam date. If the exam is in May, result would typically be in June. NTA announces the exact date on the official website.',
+        'NEET 2027 result is expected within 4-6 weeks of the exam date. If the exam is in May, result would typically be in June. NTA announces the exact date on the official website.',
     },
     {
-      question: 'What is the NEET 2025 qualifying cutoff?',
+      question: 'What is the NEET 2027 qualifying cutoff?',
       answer:
         'Expected qualifying cutoff percentile: General - 50th percentile (~130-140 marks), SC/ST/OBC - 40th percentile (~105-110 marks), PwD - 45th percentile (~120-125 marks). Actual marks depend on paper difficulty.',
     },
@@ -3468,7 +3468,7 @@ const howToPrepareForNeetOnline: SEOLandingContent = {
   slug: 'how-to-prepare-for-neet-online',
   classLevel: 'universal',
 
-  title: 'How to Prepare for NEET Online | Complete Guide 2025',
+  title: 'How to Prepare for NEET Online | Complete Guide 2027',
   metaDescription:
     'Learn how to prepare for NEET online with expert strategies, study plans, and tips. Master self-study techniques for online NEET preparation from home.',
   keywords: [
@@ -3689,7 +3689,7 @@ const howToPrepareForNeetOnline: SEOLandingContent = {
 
   relatedPages: [
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
-    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2027' },
     { title: 'NEET Study Tips', link: '/neet-study-tips' },
     { title: 'NEET Time Management', link: '/neet-time-management' },
   ],
@@ -3781,9 +3781,9 @@ const neetTipsStrategy: SEOLandingContent = {
   slug: 'neet-tips-strategy',
   classLevel: 'universal',
 
-  title: 'NEET Tips & Strategy 2025 | Expert Preparation Guide',
+  title: 'NEET Tips & Strategy 2027 | Expert Preparation Guide',
   metaDescription:
-    'Proven NEET tips and strategy for 2025. Expert guidance on time management, revision, mental preparation & scoring 650+ from Dr. Shekhar at Cerebrum Biology.',
+    'Proven NEET tips and strategy for 2027. Expert guidance on time management, revision, mental preparation & scoring 650+ from Dr. Shekhar at Cerebrum Biology.',
   keywords: [
     'neet tips',
     'neet strategy',
@@ -4010,9 +4010,9 @@ const neetTipsStrategy: SEOLandingContent = {
 
   relatedPages: [
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
-    { title: 'NEET Syllabus 2025', link: '/neet-syllabus-2025' },
-    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2027' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2027' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2027' },
   ],
 
   schema: {
@@ -4029,12 +4029,12 @@ const neetTipsStrategy: SEOLandingContent = {
 
 // Export all NEET guide pages
 export const neetGuideSEOPages: Record<string, SEOLandingContent> = {
-  // NEET 2025 pages
-  'neet-syllabus-2025': neetSyllabus2025,
+  // NEET 2027 pages
+  'neet-syllabus-2027': neetSyllabus2027,
   'neet-eligibility-criteria': neetEligibilityCriteria,
-  'neet-exam-pattern-2025': neetExamPattern2025,
+  'neet-exam-pattern-2027': neetExamPattern2027,
   'neet-counselling-guide': neetCounsellingGuide,
-  'neet-biology-syllabus-2025': neetBiologySyllabus2025,
+  'neet-biology-syllabus-2027': neetBiologySyllabus2027,
   'neet-botany-syllabus': neetBotanySyllabus,
   'neet-zoology-syllabus': neetZoologySyllabus,
   'neet-preparation-guide': neetPreparationGuide,

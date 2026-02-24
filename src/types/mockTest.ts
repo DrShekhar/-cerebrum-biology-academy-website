@@ -81,7 +81,7 @@ export interface UserProfile {
   currentClass: 'class-11' | 'class-12' | 'dropper'
   schoolName?: string
   location?: string
-  targetExam: 'neet-2024' | 'neet-2025' | 'neet-2026'
+  targetExam: 'neet-2024' | 'neet-2025' | 'neet-2026' | 'neet-2027'
   weakSubjects: string[]
   strongSubjects: string[]
   studyGoals: string[]
