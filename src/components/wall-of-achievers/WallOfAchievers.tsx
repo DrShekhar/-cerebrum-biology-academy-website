@@ -131,7 +131,7 @@ function FeaturedAchieverCard({ achiever }: FeaturedAchieverCardProps) {
           {achiever.badgeUrl ? (
             <Image
               src={achiever.badgeUrl}
-              alt="Badge"
+              alt={`${achiever.category} achievement badge`}
               width={32}
               height={32}
               className="absolute -bottom-1 -right-1 w-8 h-8"

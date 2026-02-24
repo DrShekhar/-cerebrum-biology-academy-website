@@ -110,7 +110,7 @@ function SocialProofNearCTA() {
             <img
               key={i}
               src={`/avatars/student-${i}.jpg`}
-              alt="Student"
+              alt={`Cerebrum Academy NEET student ${i}`}
               className="w-8 h-8 rounded-full border-2 border-white shadow-sm animate-fadeInUp"
             />
           ))}
