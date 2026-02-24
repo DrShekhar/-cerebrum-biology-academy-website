@@ -5,7 +5,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const rohiniCenter = CONTACT_INFO.centers.rohini
 
 export const metadata: Metadata = {
-  title: 'NEET Foundation Class 9 Rohini | Early NEET Prep | Cerebrum Academy',
+  title: 'NEET Foundation Class 9 Rohini | Early NEET Prep',
   description:
     'Start NEET preparation from Class 9 in Rohini. DC Chauk center, 3-year NEET journey, NCERT mastery, small batches. WhatsApp 88264-44334',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'rohini west metro neet coaching',
   ],
   openGraph: {
-    title: 'NEET Foundation Class 9 Rohini | 3-Year Head Start | Cerebrum Academy',
+    title: 'NEET Foundation Class 9 Rohini | 3-Year Head Start',
     description:
       'Start your NEET journey from Class 9 at our DC Chauk, Rohini center. Build strong foundation with expert faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-rohini',

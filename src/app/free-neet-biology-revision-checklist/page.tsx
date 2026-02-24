@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Revision Checklist | All 38 Chapters | Free PDF | Cerebrum',
+  title: 'NEET Biology Revision Checklist | All 38 Chapters | Free PDF',
   description: 'Download free NEET Biology revision checklist. Track your progress across all 38 chapters. Sub-topic wise completion tracker. By AIIMS faculty.',
   keywords: ['NEET biology revision checklist', 'NEET chapter checklist', 'NEET biology progress tracker', 'NEET syllabus completion tracker', 'NEET revision tracker'],
   openGraph: {
-    title: 'NEET Biology Revision Checklist | All 38 Chapters | Free PDF | Cerebrum',
+    title: 'NEET Biology Revision Checklist | All 38 Chapters | Free PDF',
     description: 'Download free NEET Biology revision checklist. Track your progress across all 38 chapters. Sub-topic wise completion tracker. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-revision-checklist`,
     siteName: 'Cerebrum Biology Academy',

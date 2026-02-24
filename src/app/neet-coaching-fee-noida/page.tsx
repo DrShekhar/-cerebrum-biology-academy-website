@@ -4,7 +4,7 @@ import { Phone, IndianRupee, CheckCircle, ArrowRight, Star, Monitor, MapPin, Bui
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison Rs 48,000-3,50,000 | Cerebrum',
+  title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison Rs 48,000-3,50,000',
   description:
     'NEET coaching fee in Noida 2026: Rs 48,000-3,50,000. Compare Cerebrum (Rs 48,000, AIIMS faculty), Allen, Aakash, FIITJEE fees. EMI available. 98% success rate. Best value coaching in Noida!',
   keywords: [

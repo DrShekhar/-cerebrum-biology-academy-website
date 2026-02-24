@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { GurugramServiceSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching in Gurugram',
   description:
     'Best NEET Biology coaching in Gurugram by AIIMS faculty. Small batches of 15 students, 98% success rate. Located near HUDA City Centre. Call +91 88264 44334.',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'NEET coaching DLF Gurugram',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching in Gurugram',
     description:
       'Best NEET Biology coaching in Gurugram. AIIMS faculty, small batches, 98% success rate. No need to travel to Delhi!',
     type: 'website',

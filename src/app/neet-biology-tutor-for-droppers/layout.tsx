@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Tutor for Droppers | Intensive Repeater Course | Cerebrum Academy',
+  title: 'NEET Biology Tutor for Droppers | Intensive Repeater Course',
   description:
     'Best NEET Biology tutor for droppers - Dr. Shekhar C Singh, AIIMS Alumnus. Intensive 1-year dropper course with personalized attention. Score 650+ in NEET.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Tutor for Droppers | Cerebrum Academy',
+    title: 'NEET Biology Tutor for Droppers',
     description: 'Intensive NEET dropper course by AIIMS Faculty. Score 650+ in your next attempt.',
   },
   alternates: {

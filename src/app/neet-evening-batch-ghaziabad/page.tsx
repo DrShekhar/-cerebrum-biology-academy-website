@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Evening Batch Ghaziabad 2026 | After-School Classes 5-8 PM | Cerebrum',
+  title: 'NEET Evening Batch Ghaziabad 2026 | After-School Classes 5-8 PM',
   description:
     'Join NEET evening batch for Ghaziabad students - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students from Indirapuram, Vaishali, Kaushambi. Call 99536-43938!',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'indirapuram students neet coaching',
   ],
   openGraph: {
-    title: 'NEET Evening Batch Ghaziabad 2026 | Cerebrum Biology Academy',
+    title: 'NEET Evening Batch Ghaziabad 2026',
     description:
       'After-school NEET preparation! Evening classes from 5 PM at Sector 62 Noida, accessible via Blue Line Metro.',
     url: 'https://cerebrumbiologyacademy.com/neet-evening-batch-ghaziabad',

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { NEETRepeatersResourceSection } from '@/components/resources/NEETRepeatersResourceSection'
 
 export const metadata: Metadata = {
-  title: 'NEET Repeaters Program 2025 | Second Attempt Success | Cerebrum Biology',
+  title: 'NEET Repeaters Program 2025 | Second Attempt Success',
   description:
     'Specialized NEET repeater program with proven rank improvement strategies. 89% repeaters qualify NEET with us. Emotional support, focused Biology coaching, motivation. Start again, succeed this time!',
   keywords:
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Repeaters Success Program | Cerebrum Academy',
+    title: 'NEET Repeaters Success Program',
     description: '89% repeater success rate, emotional support, rank improvement guarantee',
     images: ['/og-image.jpg'],
   },

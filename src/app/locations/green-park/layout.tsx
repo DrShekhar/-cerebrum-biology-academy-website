@@ -62,7 +62,7 @@ function GreenParkServiceSchema() {
 }
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Green Park Delhi | Near Hauz Khas | Cerebrum',
+  title: 'NEET Biology Coaching Green Park Delhi | Near Hauz Khas',
   description:
     'NEET Biology coaching in Green Park, Delhi. Near Green Park Metro (Yellow Line), Hauz Khas, IIT Delhi. AIIMS faculty, small batches, weekend batches. Book free demo!',
   keywords: [
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Green Park Delhi | Near Hauz Khas | Cerebrum',
+    title: 'NEET Biology Coaching Green Park Delhi | Near Hauz Khas',
     description: 'NEET Biology coaching center in Green Park, Delhi. Near Yellow Line Metro, Hauz Khas, IIT Delhi.',
   },
   alternates: {

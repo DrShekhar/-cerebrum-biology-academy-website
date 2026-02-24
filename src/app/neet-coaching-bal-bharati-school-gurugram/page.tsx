@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, GraduationCap, Award, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Bal Bharati School Gurugram | Cerebrum Academy',
+  title: 'NEET Coaching for Bal Bharati School Gurugram',
   description:
     'Best NEET coaching for Bal Bharati Public School Brij Vihar students. Just 15 min drive. CBSE-NEET aligned preparation. AIIMS faculty, 98% success rate. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'biology tuition bal bharati students',
   ],
   openGraph: {
-    title: 'NEET Coaching for Bal Bharati School | Cerebrum Academy',
+    title: 'NEET Coaching for Bal Bharati School',
     description: 'Specialized NEET coaching for Bal Bharati students. CBSE aligned.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-bal-bharati-school-gurugram',
   },

@@ -19,7 +19,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Free NEET Preparation Tools 2026 | Cerebrum Biology Academy',
+  title: 'Free NEET Preparation Tools 2026',
   description:
     'Free NEET preparation tools: Rank Predictor, College Predictor, Study Plan Generator, and more. Boost your NEET 2026 preparation with our AI-powered tools.',
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     'NEET days left',
   ],
   openGraph: {
-    title: 'Free NEET Preparation Tools 2026 | Cerebrum Biology Academy',
+    title: 'Free NEET Preparation Tools 2026',
     description:
       'Free NEET preparation tools: Rank Predictor, College Predictor, Study Plan Generator. Plan your NEET journey with our AI-powered tools.',
     type: 'website',

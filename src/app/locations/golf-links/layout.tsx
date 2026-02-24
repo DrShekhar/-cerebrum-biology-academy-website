@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Golf Links | Ultra-Premium Delhi | Cerebrum Academy',
+  title: 'NEET Biology Coaching Golf Links | Ultra-Premium Delhi',
   description:
     'Exclusive NEET Biology coaching for Golf Links families. Elite locality near India Gate. AIIMS faculty, personalized attention, 98% success rate. Discrete, premium learning environment.',
   keywords: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Golf Links | Ultra-Premium Delhi | Cerebrum Academy',
+    title: 'NEET Biology Coaching Golf Links | Ultra-Premium Delhi',
     description: 'Exclusive NEET Biology coaching for Golf Links families. Elite locality near India Gate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/golf-links',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Golf Links | Cerebrum Academy',
+    title: 'NEET Biology Coaching Golf Links',
     description:
       'Exclusive NEET Biology coaching for Golf Links elite families. AIIMS faculty, premium facilities.',
     type: 'website',

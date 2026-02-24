@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     'neet coaching for working professionals gurugram',
   ],
   openGraph: {
-    title: 'NEET Coaching Near HUDA City Centre Metro | Cerebrum Biology Academy',
+    title: 'NEET Coaching Near HUDA City Centre Metro',
     description: `Online & Offline NEET Biology classes for students near HUDA City Centre Metro. ${metroData.studentCount} students from Gurugram enrolled. Yellow Line gateway to Delhi centers.`,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-huda-city-centre-metro',
   },

@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'UP Board Intermediate Biology Coaching | NEET Dual Prep | Cerebrum',
+  title: 'UP Board Intermediate Biology Coaching | NEET Dual Prep',
   description: 'Expert UP Board Intermediate Biology coaching with NEET integration. Hindi medium support available. Master UP board curriculum aligned with NCERT and NEET requirements.',
   keywords: [
     'UP board intermediate biology',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Intermediate biology tuition',
   ],
   openGraph: {
-    title: 'UP Board Intermediate Biology Coaching | NEET Dual Prep | Cerebrum',
+    title: 'UP Board Intermediate Biology Coaching | NEET Dual Prep',
     description: 'Expert UP Board Intermediate Biology coaching with NEET integration.',
     url: `${BASE_URL}/boards/up-intermediate`,
     siteName: 'Cerebrum Biology Academy',

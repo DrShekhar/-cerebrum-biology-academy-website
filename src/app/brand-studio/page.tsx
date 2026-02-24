@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import BrandIdentityGenerator from '@/components/brand/BrandIdentityGenerator'
 
 export const metadata: Metadata = {
-  title: 'Brand Studio | Cerebrum Biology Academy Design System',
+  title: 'Brand Studio Design System',
   description:
     'Generate Harvard-level logos, icons, and brand assets with our AI-powered brand identity system. Professional design tools for educational excellence.',
   keywords:

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching for Nepali Students | Cerebrum Biology Academy",
+  title: "NEET Coaching for Nepali Students",
   description: "NEET coaching for Nepali students. NEET is the primary exam for medical education. 98% success rate with Nepali curriculum bridge.",
   openGraph: {
-    title: "NEET Coaching for Nepali Students | Cerebrum Biology Academy",
+    title: "NEET Coaching for Nepali Students",
     description: "NEET coaching for Nepali students. NEET is the primary exam for medical education. 98% success rate with Nepali curriculum bridge.",
     url: "https://cerebrumbiologyacademy.com/neet-coaching-nri-nepal",
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEET Coaching for Nepali Students | Cerebrum Biology Academy",
+    title: "NEET Coaching for Nepali Students",
     description: "NEET coaching for Nepali students. NEET is the primary exam for medical education. 98% success rate with Nepali curriculum bridge.",
     creator: "@cerebrumbiology",
     site: "@cerebrumbiology",

@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology NCERT Notes | Chapter-wise Summary | Free PDF | Cerebrum',
+  title: 'NEET Biology NCERT Notes | Chapter-wise Summary | Free PDF',
   description: 'Download free NEET Biology NCERT chapter-wise quick revision notes. Concise summaries of all 38 chapters. Perfect for last-minute revision. By AIIMS faculty.',
   keywords: ['NEET biology NCERT notes', 'NCERT biology summary', 'NEET revision notes', 'chapter wise biology notes NEET', 'NCERT quick revision biology'],
   openGraph: {
-    title: 'NEET Biology NCERT Notes | Chapter-wise Summary | Free PDF | Cerebrum',
+    title: 'NEET Biology NCERT Notes | Chapter-wise Summary | Free PDF',
     description: 'Download free NEET Biology NCERT chapter-wise quick revision notes. Concise summaries of all 38 chapters. Perfect for last-minute revision. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-ncert-notes`,
     siteName: 'Cerebrum Biology Academy',

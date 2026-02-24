@@ -62,7 +62,7 @@ function RohiniServiceSchema() {
 }
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Rohini Delhi | DC Chowk | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching Rohini Delhi | DC Chowk',
   description:
     'Best NEET Biology coaching in Rohini at DC Chowk. 211 Vikas Surya Tower, near Rohini West Metro. AIIMS faculty, small batches, 98% success rate. Book free demo!',
   keywords: [
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Rohini Delhi | DC Chowk | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching Rohini Delhi | DC Chowk',
     description: 'NEET Biology coaching center in Rohini, Delhi at DC Chowk. AIIMS faculty, small batches, near Rohini West Metro.',
   },
   alternates: {

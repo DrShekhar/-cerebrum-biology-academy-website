@@ -4,7 +4,7 @@ import { Phone, MessageCircle, CheckCircle, Star, Trophy, Monitor, Building2, Ar
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'NCERT Biology Coaching in Noida 2026 | Class 11 & 12 | Cerebrum',
+  title: 'NCERT Biology Coaching in Noida 2026 | Class 11 & 12',
   description:
     'NCERT Biology coaching for Class 11 & 12 in Noida. Complete NCERT coverage for NEET + Boards. AIIMS faculty, Rs 48,000-98,000/year. Gaur City, Sector 150.',
   keywords: [

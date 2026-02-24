@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${tagName} - NEET Biology Blog | Cerebrum Biology Academy`,
+    title: `${tagName} - NEET Biology Blog`,
     description: `Browse ${posts.length} articles tagged with "${tagName}" for NEET Biology preparation.`,
     openGraph: {
       title: `${tagName} - NEET Biology Blog`,

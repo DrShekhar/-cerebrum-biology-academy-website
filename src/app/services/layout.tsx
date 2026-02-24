@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Our Services | Online & Offline NEET Biology Coaching | Cerebrum Academy',
+  title: 'Our Services | Online & Offline NEET Biology Coaching',
   description:
     'Comprehensive NEET Biology services: Live classes, doubt resolution, mock tests, study material, performance analytics. Online, offline & hybrid learning options available.',
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Services | Cerebrum Academy',
+    title: 'NEET Biology Services',
     description: 'Live classes, doubt resolution, mock tests, study material - everything you need',
     images: ['/og-image.jpg'],
   },

@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Trivandrum | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Trivandrum | Online Biology Classes',
   description:
     'Premium online NEET coaching in Trivandrum for NRI & Kerala families. 8,000+ aspirants, expert biology classes, near Trivandrum Medical College. 98% success rate. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'biology coaching Technopark',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Trivandrum | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Trivandrum | Online Biology Classes',
     description:
       'Premium online NEET coaching in Trivandrum. 8,000+ aspirants, expert faculty, near medical colleges. 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-trivandrum`,

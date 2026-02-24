@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'Maharashtra HSC Biology Coaching | NEET + MHT-CET Dual Prep | Cerebrum',
+  title: 'Maharashtra HSC Biology Coaching | NEET + MHT-CET Dual Prep',
   description: 'Expert Maharashtra HSC Biology coaching with MHT-CET overlap coverage and NEET integration. Master Std XII Biology with chapter-wise weightage and entrance exam strategy.',
   keywords: [
     'Maharashtra HSC biology',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Maharashtra board exam preparation',
   ],
   openGraph: {
-    title: 'Maharashtra HSC Biology Coaching | NEET + MHT-CET Dual Prep | Cerebrum',
+    title: 'Maharashtra HSC Biology Coaching | NEET + MHT-CET Dual Prep',
     description: 'Expert Maharashtra HSC Biology coaching with MHT-CET overlap coverage and NEET integration.',
     url: `${BASE_URL}/boards/maharashtra-hsc`,
     siteName: 'Cerebrum Biology Academy',

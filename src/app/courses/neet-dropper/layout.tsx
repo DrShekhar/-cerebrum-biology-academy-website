@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2025 | One Year Intensive Biology Program | Cerebrum',
+  title: 'NEET Dropper Batch 2025 | One Year Intensive Biology Program',
   description:
     "Specialized NEET dropper batch for 2025. Complete Biology syllabus in 10 months, rank improvement strategies, 98% success rate. Join India's best NEET repeater program!",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Dropper Batch 2025 | Cerebrum Biology Academy',
+    title: 'NEET Dropper Batch 2025',
     description:
       'One year intensive program, 98% success, rank improvement strategies, AIIMS faculty',
     images: ['/og-image.jpg'],

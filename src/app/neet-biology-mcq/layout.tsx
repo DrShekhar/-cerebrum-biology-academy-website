@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'Plant Physiology MCQ',
   ],
   openGraph: {
-    title: 'Free NEET Biology MCQ Practice | 7000+ Questions | Cerebrum Biology Academy',
+    title: 'Free NEET Biology MCQ Practice | 7000+ Questions',
     description:
       'Practice 7000+ free NEET Biology MCQs. NCERT-based questions, PYQs (2018-2024), diagram questions. Unlimited free practice with instant feedback!',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-mcq',

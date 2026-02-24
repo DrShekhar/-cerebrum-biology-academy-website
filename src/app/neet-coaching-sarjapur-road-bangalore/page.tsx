@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Sarjapur Road | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Sarjapur Road | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Sarjapur Road Bangalore. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Personalized batches & doubt clearing. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation East Bangalore',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Sarjapur Road | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Sarjapur Road | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Sarjapur Road Bangalore. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-sarjapur-road-bangalore`,

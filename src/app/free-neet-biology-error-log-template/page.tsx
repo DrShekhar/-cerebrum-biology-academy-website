@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Error Log Template | Track Mistakes | Free PDF | Cerebrum',
+  title: 'NEET Biology Error Log Template | Track Mistakes | Free PDF',
   description: 'Download free NEET Biology error log template. Track and eliminate repeated mistakes. Used by 680+ scorers. Printable mistake tracker by AIIMS faculty.',
   keywords: ['NEET mistake tracker', 'NEET error log', 'NEET biology mistake analysis', 'track NEET mistakes', 'NEET wrong answer analysis'],
   openGraph: {
-    title: 'NEET Biology Error Log Template | Track Mistakes | Free PDF | Cerebrum',
+    title: 'NEET Biology Error Log Template | Track Mistakes | Free PDF',
     description: 'Download free NEET Biology error log template. Track and eliminate repeated mistakes. Used by 680+ scorers. Printable mistake tracker by AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-error-log-template`,
     siteName: 'Cerebrum Biology Academy',

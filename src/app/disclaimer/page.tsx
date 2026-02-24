@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Disclaimer | Cerebrum Biology Academy',
+  title: 'Disclaimer',
   description:
     'Legal disclaimer for Cerebrum Biology Academy educational services and website content.',
 }

@@ -4,7 +4,7 @@ import { Phone, MessageCircle, CheckCircle, Star, Monitor, Building2, ArrowRight
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'Class 12 Board Exam Biology Coaching Noida 2026 | Score 95%+ | Cerebrum',
+  title: 'Class 12 Board Exam Biology Coaching Noida 2026 | Score 95%+',
   description:
     'Class 12 Board exam Biology coaching in Noida. Score 95%+ in CBSE/ISC Biology. NCERT mastery, previous year papers, practical viva prep. Gaur City, Sector 150. Free demo!',
   keywords: [

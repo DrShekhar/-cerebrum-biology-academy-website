@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords:
     'biology coaching class 11, class 11 biology tuition, NEET biology class 11, class 11 NCERT biology, biology tutor class 11, class 11 biology online, biology coaching for NEET class 11, class 11 botany coaching, class 11 zoology tuition, biology classes for 11th, 11th biology coaching near me, online biology class 11',
   openGraph: {
-    title: 'Best Class 11 Biology Coaching | NEET Foundation | Cerebrum Academy',
+    title: 'Best Class 11 Biology Coaching | NEET Foundation',
     description:
       'Expert Class 11 biology coaching for NEET. AIIMS faculty, complete NCERT + NEET level preparation. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/biology-coaching-class-11',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Class 11 Biology Coaching | Cerebrum Biology Academy',
+    title: 'Best Class 11 Biology Coaching',
     description: 'Top Class 11 biology coaching for NEET. AIIMS faculty, 98% success rate.',
   },
   alternates: {

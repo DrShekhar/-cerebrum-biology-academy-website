@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Panchsheel Park & Enclave | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching Panchsheel Park & Enclave',
   description:
     'Best NEET Biology coaching for Panchsheel Park & Panchsheel Enclave students. Diplomat area, premium locality. AIIMS faculty, small batches. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Panchsheel Park & Enclave | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching Panchsheel Park & Enclave',
     description: 'Best NEET Biology coaching for Panchsheel Park & Panchsheel Enclave students. Diplomat area, premium locality.',
   },
   alternates: {

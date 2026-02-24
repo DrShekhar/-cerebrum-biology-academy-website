@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Formulas & Equations | One-Page Sheet | Free PDF | Cerebrum',
+  title: 'NEET Biology Formulas & Equations | One-Page Sheet | Free PDF',
   description: 'Download free NEET Biology formula sheet. All important equations, ratios, values in one page. Genetics ratios, Hardy-Weinberg, enzyme kinetics. AIIMS faculty.',
   keywords: ['NEET biology formulas', 'NEET biology equations', 'genetics ratios NEET', 'Hardy Weinberg equation', 'biology formula sheet NEET'],
   openGraph: {
-    title: 'NEET Biology Formulas & Equations | One-Page Sheet | Free PDF | Cerebrum',
+    title: 'NEET Biology Formulas & Equations | One-Page Sheet | Free PDF',
     description: 'Download free NEET Biology formula sheet. All important equations, ratios, values in one page. Genetics ratios, Hardy-Weinberg, enzyme kinetics. AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-formula-sheet`,
     siteName: 'Cerebrum Biology Academy',

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Rohini | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Rohini | NEET Coaching',
   description:
     'Best Biology tutor in Rohini for NEET & Board exams. Expert coaching for Rohini Sectors, Pitampura, Shalimar Bagh. AIIMS faculty guidance. Online classes available.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Rohini | Cerebrum Academy',
+    title: 'Biology Tutor in Rohini',
     description: 'Expert NEET Biology coaching in Rohini Delhi.',
   },
   alternates: {

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Greater Kailash GK | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching Greater Kailash GK',
   description:
     'Best NEET Biology coaching for Greater Kailash students. GK 1, GK 2, Kailash Colony. AIIMS faculty, small batches, 98% success rate. South Extension center 5 min away. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Greater Kailash GK | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching Greater Kailash GK',
     description: 'Best NEET Biology coaching for Greater Kailash students. GK 1, GK 2, Kailash Colony.',
   },
   alternates: {

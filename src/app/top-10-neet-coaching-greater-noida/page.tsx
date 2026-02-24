@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Top10GreaterNoidaContent } from './Top10GreaterNoidaContent'
 
 export const metadata: Metadata = {
-  title: 'Top 10 NEET Coaching in Greater Noida 2026 | Ranking & Comparison | Cerebrum',
+  title: 'Top 10 NEET Coaching in Greater Noida 2026 | Ranking & Comparison',
   description:
     'Honest ranking of top 10 NEET coaching institutes in Greater Noida 2026. Based on results, faculty, fees, reviews. Cerebrum #1 with 98% success rate. 99536-43938!',
   keywords: [

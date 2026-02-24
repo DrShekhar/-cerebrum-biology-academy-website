@@ -4,7 +4,7 @@ import { Phone, MessageCircle, CheckCircle, Monitor, Building2, ArrowRight, Book
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'CBSE Biology Coaching in Noida 2026 | Class 11-12 | Score 95%+ | Cerebrum',
+  title: 'CBSE Biology Coaching in Noida 2026 | Class 11-12 | Score 95%+',
   description:
     'CBSE Biology coaching in Noida for Class 11 & 12. NCERT mastery, board exam prep, practical viva. AIIMS faculty, Rs 45,000/year. Gaur City, Sector 150. Free demo!',
   keywords: [

@@ -6,7 +6,7 @@ export default function EnrollmentsPage() {
 }
 
 export const metadata: Metadata = {
-  title: 'My Enrollments | Cerebrum Biology Academy',
+  title: 'My Enrollments',
   description:
     'Track your course progress and manage your enrollments at Cerebrum Biology Academy.',
   robots: { index: false, follow: false },

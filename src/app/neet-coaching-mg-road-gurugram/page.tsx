@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, Car, ArrowRight, Train, ShoppingBag } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching MG Road Gurugram | 15 Min Drive | Cerebrum Academy',
+  title: 'NEET Coaching MG Road Gurugram | 15 Min Drive',
   description:
     'Best NEET coaching near MG Road Gurugram. Just 15 min drive to M2K Sector 51. Metro accessible via Yellow Line. AIIMS faculty, 98% success rate. Call 88264-44334!',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'medical coaching mg road gurugram',
   ],
   openGraph: {
-    title: 'NEET Coaching MG Road Gurugram | Cerebrum Biology Academy',
+    title: 'NEET Coaching MG Road Gurugram',
     description: 'Best NEET coaching near MG Road. Just 15 min from MG Road Metro.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-mg-road-gurugram',
   },

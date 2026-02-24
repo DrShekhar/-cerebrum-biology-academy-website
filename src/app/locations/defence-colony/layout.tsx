@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Defence Colony Delhi | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching Defence Colony Delhi',
   description:
     'Best NEET Biology coaching for Defence Colony students. AIIMS faculty, small batches, 98% success rate. Near Lajpat Nagar Metro. South Extension center 3 min away. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Defence Colony Delhi | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching Defence Colony Delhi',
     description: 'Best NEET Biology coaching for Defence Colony students. AIIMS faculty, small batches, 98% success rate.',
   },
   alternates: {

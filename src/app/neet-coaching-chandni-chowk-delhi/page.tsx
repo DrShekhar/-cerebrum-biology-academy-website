@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Chandni Chowk | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Chandni Chowk | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Chandni Chowk Delhi. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Historic Old Delhi medical education hub. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation Old Delhi',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Chandni Chowk | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Chandni Chowk | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Chandni Chowk Delhi. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-chandni-chowk-delhi`,

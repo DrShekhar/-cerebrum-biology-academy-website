@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Biology Tutor in Delhi NCR | AIIMS Faculty | Cerebrum Academy',
+  title: 'Best NEET Biology Tutor in Delhi NCR | AIIMS Faculty',
   description:
     'Find the best NEET Biology tutor in Delhi NCR - Dr. Shekhar C Singh, AIIMS Alumnus. Top NEET coaching in Delhi, Noida, Greater Noida, Ghaziabad, Faridabad.',
   keywords: [

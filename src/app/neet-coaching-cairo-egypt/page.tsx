@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Cairo | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Cairo | 98% Success Rate',
   description: 'Join #1 NEET coaching for Indian students in Cairo. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Serving Indian schools in Egypt.',
   keywords: [
     'NEET coaching Cairo',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'online NEET preparation Cairo',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Cairo | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Cairo | 98% Success Rate',
     description: 'Join #1 NEET coaching for Indian students in Cairo. Expert AIIMS faculty. Book free demo!',
     url: `${BASE_URL}/neet-coaching-cairo-egypt`,
     siteName: 'Cerebrum Biology Academy',

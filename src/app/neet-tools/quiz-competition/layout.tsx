@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Quiz Competition - Classroom Quiz Tool | Cerebrum Biology Academy',
+  title: 'Quiz Competition - Classroom Quiz Tool',
   description:
     'Conduct engaging team-based quizzes in your classroom. Two teams compete with live score updates on all devices. Perfect for NEET biology revision sessions.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Quiz Competition - Classroom Quiz Tool | Cerebrum Biology Academy',
+    title: 'Quiz Competition - Classroom Quiz Tool',
     description: 'Conduct engaging team-based quizzes in your classroom. Two teams compete with live score updates on all devices.',
   },
 }

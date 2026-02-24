@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: ChapterPageProps): Promise<Me
 
   if (!chapter) {
     return {
-      title: 'Chapter Not Found | Cerebrum Academy',
+      title: 'Chapter Not Found',
     }
   }
 

@@ -13,13 +13,13 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Batch Types - Regular, Weekend, Crash Course | Cerebrum',
+  title: 'NEET Biology Batch Types - Regular, Weekend, Crash Course',
   description:
     'Choose the perfect NEET Biology batch for your preparation. Regular batch, weekend batch, crash course, or online live classes at Cerebrum Biology Academy.',
   keywords:
     'NEET biology batch types, regular batch, weekend batch, crash course, online NEET coaching, NEET biology classes Delhi',
   openGraph: {
-    title: 'NEET Biology Batch Types | Cerebrum Biology Academy',
+    title: 'NEET Biology Batch Types',
     description: 'Find the right NEET Biology batch for your preparation style and schedule.',
     url: 'https://cerebrumbiologyacademy.com/batch-types',
     type: 'website',

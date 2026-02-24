@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Nashik | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Nashik | Online Biology Classes',
   description:
     'Join #1 NEET coaching in Nashik. Expert online classes for 12000+ Nashik aspirants. Trusted by wine country families, weak NEET focus region - strong competition. Personalized batches & doubt clearing. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NEET coaching College Road Nashik',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Nashik | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Nashik | Online Biology Classes',
     description:
       'Join #1 NEET coaching in Nashik. Expert online classes for 12000+ aspirants. Wine country families trust us. Book free demo!',
     url: `${BASE_URL}/neet-coaching-nashik`,

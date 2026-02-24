@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import CeriAIShowcase from './CeriAIShowcase'
 
 export const metadata: Metadata = {
-  title: 'Ceri AI - Next-Gen NEET Biology Tutor | Cerebrum Biology Academy',
+  title: 'Ceri AI - Next-Gen NEET Biology Tutor',
   description:
     'Experience Ceri AI - the most advanced AI-powered Biology tutor for NEET preparation. 24/7 instant doubt resolution, visual explanations, voice interaction, and personalized learning.',
   keywords: [

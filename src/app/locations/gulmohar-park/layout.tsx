@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Gulmohar Park Delhi | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching Gulmohar Park Delhi',
   description:
     'Best NEET Biology coaching for Gulmohar Park students. Premium South Delhi locality. AIIMS faculty, small batches. Green Park center nearby. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Gulmohar Park Delhi | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching Gulmohar Park Delhi',
     description: 'Best NEET Biology coaching for Gulmohar Park students. Premium South Delhi locality. AIIMS faculty, small batches.',
   },
   alternates: {

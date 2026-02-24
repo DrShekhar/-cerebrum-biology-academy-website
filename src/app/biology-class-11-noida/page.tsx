@@ -4,7 +4,7 @@ import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Buildi
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'Class 11 Biology Coaching in Noida 2026 | NEET Foundation | Cerebrum Academy',
+  title: 'Class 11 Biology Coaching in Noida 2026 | NEET Foundation',
   description:
     'Best Class 11 Biology coaching in Noida. AIIMS faculty, small batches (15 students). Online Rs 48,000/year. NEET + Board integrated. Gaur City, Sector 150, Greater Noida. Free demo!',
   keywords: [

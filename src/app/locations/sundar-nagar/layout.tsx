@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Sundar Nagar | Near Khan Market | Cerebrum Academy',
+  title: 'NEET Biology Coaching Sundar Nagar | Near Khan Market',
   description:
     'Premium NEET Biology coaching for Sundar Nagar students. Elite locality near Khan Market, art galleries. Expert AIIMS faculty, personalized coaching.',
   keywords: [
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Sundar Nagar | Near Khan Market | Cerebrum Academy',
+    title: 'NEET Biology Coaching Sundar Nagar | Near Khan Market',
     description: 'Premium NEET Biology coaching for Sundar Nagar students. Elite locality near Khan Market, art galleries.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/sundar-nagar',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Sundar Nagar | Cerebrum Academy',
+    title: 'NEET Biology Coaching Sundar Nagar',
     description:
       'Premium NEET Biology coaching for Sundar Nagar students. Near Khan Market, India Gate.',
     type: 'website',

@@ -10,7 +10,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Canadian NRI Students | Toronto, Vancouver | Cerebrum',
+  title: 'NEET Coaching for Canadian NRI Students | Toronto, Vancouver',
   description:
     'Best NEET Biology coaching for Indo-Canadian students. Live online classes at EST/PST friendly timings. AIIMS faculty, provincial curriculum bridge, NRI quota guidance. 98% success rate.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NRI quota Canada NEET',
   ],
   openGraph: {
-    title: 'NEET Coaching for Canadian NRI Students | Cerebrum Biology Academy',
+    title: 'NEET Coaching for Canadian NRI Students',
     description:
       'Top NEET Biology coaching for Indo-Canadian students. EST/PST friendly timings, provincial curriculum bridge, NRI quota expertise.',
     url: `${BASE_URL}/neet-coaching-nri-canada`,

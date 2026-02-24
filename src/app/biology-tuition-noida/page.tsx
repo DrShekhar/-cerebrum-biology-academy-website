@@ -4,7 +4,7 @@ import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Building2, MapP
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'Biology Tuition in Noida 2026 | Class 9-12 & NEET | Rs 45,000/year | Cerebrum',
+  title: 'Biology Tuition in Noida 2026 | Class 9-12 & NEET | Rs 45,000/year',
   description:
     'Best Biology tuition in Noida. Class 9, 10, 11, 12 & NEET. AIIMS faculty, small batches. Online Rs 45,000/year. Gaur City, Sector 150, Greater Noida. Free demo class!',
   keywords: [

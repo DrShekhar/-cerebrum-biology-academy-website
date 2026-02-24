@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Scholarship Greater Noida 2026 | Up to 100% Fee Waiver | Cerebrum Academy',
+  title: 'NEET Scholarship Greater Noida 2026 | Up to 100% Fee Waiver',
   description:
     'Apply for NEET scholarship for Greater Noida students. Merit-based scholarships up to 100% fee waiver. Online + hybrid classes available. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'online neet scholarship greater noida',
   ],
   openGraph: {
-    title: 'NEET Scholarship Greater Noida 2026 | Cerebrum Biology Academy',
+    title: 'NEET Scholarship Greater Noida 2026',
     description: 'Merit-based NEET scholarships up to 100% fee waiver for Greater Noida students. Apply now!',
     url: 'https://cerebrumbiologyacademy.com/neet-scholarship-greater-noida',
   },

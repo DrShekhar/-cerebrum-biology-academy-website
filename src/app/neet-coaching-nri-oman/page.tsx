@@ -3,13 +3,13 @@ import PageContent from "./PageContent";
 import LocalitySchema from "@/components/seo/LocalitySchema";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching for NRI Students in Oman | Cerebrum Biology Academy",
+  title: "NEET Coaching for NRI Students in Oman",
   description: "NEET coaching for NRI students in Oman. 20 CBSE schools, 900K Indians. Relaxed learning environment with 98% success rate.",
   alternates: {
     canonical: "https://cerebrumbiologyacademy.com/neet-coaching-nri-oman",
   },
   openGraph: {
-    title: "NEET Coaching for NRI Students in Oman | Cerebrum Biology Academy",
+    title: "NEET Coaching for NRI Students in Oman",
     description: "NEET coaching for NRI students in Oman. 20 CBSE schools, 900K Indians. Relaxed learning environment with 98% success rate.",
     url: "https://cerebrumbiologyacademy.com/neet-coaching-nri-oman",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEET Coaching for NRI Students in Oman | Cerebrum Biology Academy",
+    title: "NEET Coaching for NRI Students in Oman",
     description: "NEET coaching for NRI students in Oman. 20 CBSE schools, 900K Indians. Relaxed learning environment with 98% success rate.",
     creator: "@cerebrumbiology",
     images: ["https://cerebrumbiologyacademy.com/og-neet-coaching-oman.jpg"],

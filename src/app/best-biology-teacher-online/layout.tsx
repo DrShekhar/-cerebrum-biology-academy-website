@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best Biology Teacher Online | Best Online Biology Teacher - Cerebrum Biology Academy',
+  title: 'Best Biology Teacher Online | Best Online Biology Teacher',
   description:
     "Learn from India's best biology teacher online. AIIMS-trained Dr. Shekhar with 15+ years experience, 67+ AIIMS selections. Live interactive classes, personalized mentoring. Join 1,50,000+ students!",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'online biology coaching teacher',
   ],
   openGraph: {
-    title: 'Best Biology Teacher Online - AIIMS Faculty | Cerebrum',
+    title: 'Best Biology Teacher Online - AIIMS Faculty',
     description:
       "Learn from India's best online biology teacher. AIIMS-trained, 15+ years experience, 67+ AIIMS selections. Book your free demo today!",
     url: 'https://cerebrumbiologyacademy.com/best-biology-teacher-online',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Biology Teacher Online | Cerebrum Biology Academy',
+    title: 'Best Biology Teacher Online',
     description: 'AIIMS-trained biology teacher with 15+ years experience. 67+ AIIMS selections.',
     images: ['https://images.unsplash.com/photo-1544717305-2782549b5136?w=1200&h=630&fit=crop'],
   },

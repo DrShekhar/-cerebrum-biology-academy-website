@@ -5,7 +5,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const rohiniLocation = CONTACT_INFO.centers.rohini
 
 export const metadata: Metadata = {
-  title: 'NEET Crash Course Rohini 2026 | 6-Month Intensive | Cerebrum Academy',
+  title: 'NEET Crash Course Rohini 2026 | 6-Month Intensive',
   description:
     'Intensive NEET 2026 crash course at Rohini DC Chauk. 6-month program, daily classes, 100+ mock tests. For droppers & 12th students. WhatsApp 88264-44334',
   keywords: [

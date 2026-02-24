@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Safdarjung Enclave | Near AIIMS | Cerebrum Academy',
+  title: 'NEET Biology Coaching Safdarjung Enclave | Near AIIMS',
   description:
     'Expert NEET Biology coaching for Safdarjung Enclave students. Near AIIMS & Green Park. AIIMS faculty, small batches, 98% success rate. Medical aspirants welcome!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'NEET Biology coaching fees Delhi',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching Safdarjung Enclave | Cerebrum Academy',
+    title: 'NEET Biology Coaching Safdarjung Enclave',
     description:
       'Expert NEET Biology coaching for Safdarjung Enclave families. Near AIIMS Delhi.',
     type: 'website',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Safdarjung Enclave | Near AIIMS | Cerebrum Academy',
+    title: 'NEET Biology Coaching Safdarjung Enclave | Near AIIMS',
     description: 'Expert NEET Biology coaching for Safdarjung Enclave students. Near AIIMS & Green Park.',
   },
   alternates: {

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Thank You | Cerebrum Biology Academy',
+  title: 'Thank You',
   description:
     'Thank you for your interest in Cerebrum Biology Academy. Our team will contact you shortly to help you on your NEET journey.',
   robots: {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Thank You | Cerebrum Biology Academy',
+    title: 'Thank You',
     description:
       'Thank you for your interest in Cerebrum Biology Academy. Our team will contact you shortly.',
     type: 'website',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Thank You | Cerebrum Biology Academy',
+    title: 'Thank You',
     description: 'Thank you for your interest in Cerebrum Biology Academy.',
   },
 }

@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Versova Mumbai | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Versova Mumbai | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Versova, Andheri West. Expert AIIMS faculty, 98% success rate. Four Bungalows, Lokhandwala area. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation Versova',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Versova Mumbai | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Versova Mumbai | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Versova, Andheri West. Expert AIIMS faculty, 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-versova-mumbai`,

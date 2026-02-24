@@ -4,7 +4,7 @@ import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, B
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Gaur City Noida | Online & Hybrid Classes | Cerebrum',
+  title: 'NEET Coaching for Gaur City Noida | Online & Hybrid Classes',
   description:
     'Best NEET Biology coaching for Gaur City, Greater Noida West students. Online classes from home + optional offline at South Extension. 180+ Gaur City students enrolled. Call 88264-44334!',
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'neet coaching near gaur city',
   ],
   openGraph: {
-    title: 'NEET Coaching for Gaur City Noida Students | Cerebrum Academy',
+    title: 'NEET Coaching for Gaur City Noida Students',
     description: 'Online NEET Biology classes for Gaur City residents. 180+ students enrolled. Hybrid mode available.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gaur-city-noida',
   },

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!areaData) {
     return {
-      title: 'NEET Coaching in Ghaziabad | Cerebrum Biology Academy',
+      title: 'NEET Coaching in Ghaziabad',
       description: 'Best NEET coaching in Ghaziabad with 98% success rate.',
     }
   }
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const schoolsText = areaData.schools.slice(0, 2).join(', ')
   const metroText = areaData.nearbyMetro[0] || 'Metro connectivity'
 
-  const title = `NEET Coaching in ${areaData.name}, Ghaziabad | ${CEREBRUM_METRICS.successRateText} Success | Cerebrum Academy`
+  const title = `NEET Coaching in ${areaData.name}, Ghaziabad | ${CEREBRUM_METRICS.successRateText} Success`
   const description = `Best NEET Biology coaching in ${areaData.name}, Ghaziabad. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Near ${metroText}. Expert AIIMS faculty. Book free demo!`
   const keywords = [
     `NEET coaching ${areaData.name}`,

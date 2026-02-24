@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Whitefield Bangalore | Biology Classes | Cerebrum Academy',
+  title: 'Best NEET Coaching in Whitefield Bangalore | Biology Classes',
   description:
     'Best NEET biology coaching in Whitefield Bangalore. 98% success rate. AIIMS faculty. ITPL, Brookefield, Marathahalli, Kadugodi. Online live classes. Fee ₹24,000+. Book free demo!',
   keywords:
     'NEET coaching Whitefield, best NEET biology coaching Whitefield Bangalore, biology tuition ITPL, NEET classes Brookefield, biology coaching Marathahalli, NEET preparation Bangalore, Whitefield NEET coaching online, international school NEET coaching, biology tuition Whitefield, biology classes Whitefield Bangalore, online biology coaching Whitefield, biology teacher Whitefield, NEET biology Whitefield',
   openGraph: {
-    title: 'Best NEET Coaching in Whitefield Bangalore | Biology Classes | Cerebrum Academy',
+    title: 'Best NEET Coaching in Whitefield Bangalore | Biology Classes',
     description:
       'Best NEET biology coaching in Whitefield Bangalore with 98% success rate. AIIMS faculty. ITPL, Brookefield, Marathahalli.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-whitefield-bangalore',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best NEET Coaching in Whitefield Bangalore | Biology Classes | Cerebrum Academy',
+    title: 'Best NEET Coaching in Whitefield Bangalore | Biology Classes',
     description: 'Best NEET biology coaching in Whitefield Bangalore. 98% success rate. AIIMS faculty.',
   },
   alternates: {

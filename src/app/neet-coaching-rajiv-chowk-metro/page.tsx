@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     'medical coaching central delhi',
   ],
   openGraph: {
-    title: 'NEET Coaching Near Rajiv Chowk Metro | Cerebrum Biology Academy',
+    title: 'NEET Coaching Near Rajiv Chowk Metro',
     description: `Online & Offline NEET Biology classes for students near Rajiv Chowk Metro. ${metroData.studentCount} students from Central Delhi enrolled. 15 min to South Extension center.`,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-rajiv-chowk-metro',
   },

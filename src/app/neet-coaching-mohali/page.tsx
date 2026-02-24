@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Mohali | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Mohali | Online Biology Classes',
   description:
     'Join #1 NEET coaching in Mohali. Expert online classes for Chandigarh tricity premium market. Punjab education hub, IT City advantage. Personalized batches & doubt clearing. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NEET coaching Chandigarh tricity',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Mohali | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Mohali | Online Biology Classes',
     description:
       'Join #1 NEET coaching in Mohali. Expert online classes for Chandigarh tricity. Punjab education hub. Book free demo!',
     url: `${BASE_URL}/neet-coaching-mohali`,

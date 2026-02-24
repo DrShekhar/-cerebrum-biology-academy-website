@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Visakhapatnam | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Visakhapatnam | Online Biology Classes',
   description:
     'Premium online NEET coaching in Visakhapatnam (Vizag) for Andhra families. 12,000+ aspirants, expert biology classes, near Andhra Medical College. 98% success rate. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'biology coaching MVP Colony',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Visakhapatnam | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Visakhapatnam | Online Biology Classes',
     description:
       'Premium online NEET coaching in Vizag. 12,000+ aspirants, expert faculty, near medical colleges. 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-visakhapatnam`,

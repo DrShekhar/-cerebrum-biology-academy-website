@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Anand Niketan | Near Diplomatic Enclave | Cerebrum Academy',
+  title: 'NEET Biology Coaching Anand Niketan | Near Diplomatic Enclave',
   description:
     'Premium NEET Biology coaching for Anand Niketan families. Near Diplomatic Enclave and Chanakyapuri. AIIMS faculty, small batches, 98% success rate.',
   keywords: [
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Anand Niketan | Near Diplomatic Enclave | Cerebrum Academy',
+    title: 'NEET Biology Coaching Anand Niketan | Near Diplomatic Enclave',
     description: 'Premium NEET Biology coaching for Anand Niketan families. Near Diplomatic Enclave and Chanakyapuri.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Anand Niketan | Cerebrum Academy',
+    title: 'NEET Biology Coaching Anand Niketan',
     description:
       'Premium NEET Biology coaching for Anand Niketan families. AIIMS faculty, personalized attention.',
     type: 'website',

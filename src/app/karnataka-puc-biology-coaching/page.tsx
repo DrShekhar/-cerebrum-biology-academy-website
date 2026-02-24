@@ -11,7 +11,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best Karnataka PUC Biology Coaching Online | 98% Success Rate | Cerebrum',
+  title: 'Best Karnataka PUC Biology Coaching Online | 98% Success Rate',
   description: 'Expert online biology coaching for Karnataka PUC students preparing for NEET. AIIMS faculty, 98% success rate, small batches (10-15). Join 1,400+ students across Karnataka cities like Bangalore, Mysore, Mangalore.',
   keywords: [
     'Karnataka PUC biology coaching',

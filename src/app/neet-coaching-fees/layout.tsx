@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Fees 2026-27 — Transparent Pricing | Cerebrum Academy',
+  title: 'NEET Biology Coaching Fees 2026-27 — Transparent Pricing',
   description: 'NEET biology coaching fees at Cerebrum Academy: Rs 24,000 to Rs 98,000/year. 3-10x cheaper than Allen/Aakash. AIIMS faculty, small batches. EMI available. No hidden charges.',
   keywords: 'neet coaching fees, neet biology coaching fees, cerebrum academy fees, neet coaching fees gurugram, affordable neet coaching, neet coaching fee structure',
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Fees 2026-27 — Transparent Pricing | Cerebrum Academy',
+    title: 'NEET Biology Coaching Fees 2026-27 — Transparent Pricing',
     description: 'NEET biology coaching fees at Cerebrum Academy: Rs 24,000 to Rs 98,000/year. 3-10x cheaper than Allen/Aakash.',
   },
   alternates: {

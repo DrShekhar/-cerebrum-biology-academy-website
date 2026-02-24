@@ -11,7 +11,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best Telangana Inter Biology Coaching Online | 98% Success Rate | Cerebrum',
+  title: 'Best Telangana Inter Biology Coaching Online | 98% Success Rate',
   description: 'Expert online biology coaching for Telangana Intermediate (TSBIE) students preparing for NEET. AIIMS faculty, 98% success rate, small batches (10-15). Join 1,600+ students across Hyderabad, Secunderabad, Warangal.',
   keywords: [
     'Telangana Inter biology coaching',

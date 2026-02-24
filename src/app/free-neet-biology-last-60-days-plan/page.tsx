@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Last 60 Days Plan | Day-wise Strategy | Free PDF | Cerebrum',
+  title: 'NEET Biology Last 60 Days Plan | Day-wise Strategy | Free PDF',
   description: 'Download free NEET Biology last 60 days revision plan. Day-wise strategy, mock test schedule, high-yield topics focus. Maximize your score in final stretch.',
   keywords: ['NEET last 60 days plan', 'NEET biology revision plan', 'NEET final preparation strategy', 'NEET last month preparation', 'NEET biology crash course plan'],
   openGraph: {
-    title: 'NEET Biology Last 60 Days Plan | Day-wise Strategy | Free PDF | Cerebrum',
+    title: 'NEET Biology Last 60 Days Plan | Day-wise Strategy | Free PDF',
     description: 'Download free NEET Biology last 60 days revision plan. Day-wise strategy, mock test schedule, high-yield topics focus. Maximize your score in final stretch.',
     url: `${BASE_URL}/free-neet-biology-last-60-days-plan`,
     siteName: 'Cerebrum Biology Academy',

@@ -19,7 +19,7 @@ import {
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export const metadata: Metadata = {
-  title: 'NEET Toppers from Noida 2025 | 23 AIIMS Selections | Cerebrum Academy',
+  title: 'NEET Toppers from Noida 2025 | 23 AIIMS Selections',
   description:
     'Meet NEET toppers from Noida 2025: 47 students scored 650+, 23 got AIIMS/JIPMER. Priya Sharma (698), Rahul Verma (685). See results, testimonials & success stories.',
   keywords: [

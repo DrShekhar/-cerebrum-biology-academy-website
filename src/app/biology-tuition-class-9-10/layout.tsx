@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords:
     'biology tuition class 9, biology tuition class 10, class 9 biology coaching, class 10 biology coaching, NEET foundation class 9, NEET foundation class 10, biology tutor class 9, biology tutor class 10, early NEET preparation, class 9 10 biology, biology classes for class 9, biology classes for class 10, CBSE biology tuition, foundation biology course',
   openGraph: {
-    title: 'Best Class 9 & 10 Biology Tuition | NEET Foundation | Cerebrum Academy',
+    title: 'Best Class 9 & 10 Biology Tuition | NEET Foundation',
     description:
       'Early NEET foundation biology tuition for Class 9 & 10. Strong basics, board exam excellence. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/biology-tuition-class-9-10',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Class 9 & 10 Biology Tuition | Cerebrum Biology Academy',
+    title: 'Best Class 9 & 10 Biology Tuition',
     description: 'Foundation biology tuition for Class 9 & 10. Early NEET preparation.',
   },
   alternates: {

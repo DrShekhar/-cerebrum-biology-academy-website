@@ -3,13 +3,13 @@ import PageContent from "./PageContent";
 import LocalitySchema from "@/components/seo/LocalitySchema";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching for NRI Students in UK | Cerebrum Biology Academy",
+  title: "NEET Coaching for NRI Students in UK",
   description: "A-Level to NEET bridge coaching for NRI students in UK. 3 CBSE schools, 1.8M Indians. NHS pathway with 98% success rate.",
   alternates: {
     canonical: "https://cerebrumbiologyacademy.com/neet-coaching-nri-uk",
   },
   openGraph: {
-    title: "NEET Coaching for NRI Students in UK | Cerebrum Biology Academy",
+    title: "NEET Coaching for NRI Students in UK",
     description: "A-Level to NEET bridge coaching for NRI students in UK. 3 CBSE schools, 1.8M Indians. NHS pathway with 98% success rate.",
     url: "https://cerebrumbiologyacademy.com/neet-coaching-nri-uk",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEET Coaching for NRI Students in UK | Cerebrum Biology Academy",
+    title: "NEET Coaching for NRI Students in UK",
     description: "A-Level to NEET bridge coaching for NRI students in UK. 3 CBSE schools, 1.8M Indians. NHS pathway with 98% success rate.",
     creator: "@cerebrumbiology",
     images: ["https://cerebrumbiologyacademy.com/og-neet-coaching-uk.jpg"],

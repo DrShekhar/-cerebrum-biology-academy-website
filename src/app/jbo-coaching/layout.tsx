@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'JBO Coaching Online | Japan Biology Olympiad Preparation - Cerebrum',
+  title: 'JBO Coaching Online | Japan Biology Olympiad Preparation',
   description:
     'Expert JBO coaching for Japan Biology Olympiad. Complete Campbell Biology coverage, past paper practice, and 1-on-1 mentorship to represent Japan at IBO.',
   keywords: [

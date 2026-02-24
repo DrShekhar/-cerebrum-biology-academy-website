@@ -10,7 +10,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'A-Level to NEET Biology | Bridge Course for A-Level Students | Cerebrum Academy',
+  title: 'A-Level to NEET Biology | Bridge Course for A-Level Students',
   description:
     'Expert A-Level to NEET bridge program. Targeted gap analysis, NEET-specific practice, dedicated faculty from top medical colleges.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'advanced level NEET',
   ],
   openGraph: {
-    title: 'A-Level to NEET Biology | Bridge Course for A-Level Students | Cerebrum Academy',
+    title: 'A-Level to NEET Biology | Bridge Course for A-Level Students',
     description:
       'Expert A-Level to NEET bridge program. Targeted gap analysis, NEET-specific practice, dedicated faculty from top medical colleges.',
     url: `${BASE_URL}/a-level-to-neet-biology-preparation`,

@@ -4,7 +4,7 @@ import { Phone, MessageCircle, Star, Users, Trophy, Building2, ArrowRight, BookO
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'Best Biology Tutor in Noida 2026 | AIIMS Faculty | Dr. Shekhar | Cerebrum',
+  title: 'Best Biology Tutor in Noida 2026 | AIIMS Faculty | Dr. Shekhar',
   description:
     'Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus, 15+ years). 67+ AIIMS selections, 4.9/5 rating. Online & offline. Gaur City, Sector 150. Free demo!',
   keywords: [

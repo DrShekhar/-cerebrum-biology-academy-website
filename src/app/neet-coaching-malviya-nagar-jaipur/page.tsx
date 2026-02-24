@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Malviya Nagar Jaipur | Premium Residential | Cerebrum',
+  title: 'Best NEET Coaching in Malviya Nagar Jaipur | Premium Residential',
   description:
     'Join #1 NEET coaching in Malviya Nagar, Jaipur. Expert faculty, proven 98% success rate, 695/720 top score. Premium coaching for professional families. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation premium Jaipur',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Malviya Nagar Jaipur | Premium Residential | Cerebrum',
+    title: 'Best NEET Coaching in Malviya Nagar Jaipur | Premium Residential',
     description:
       'Join #1 NEET coaching in Malviya Nagar, Jaipur. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-malviya-nagar-jaipur`,

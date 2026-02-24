@@ -4,7 +4,7 @@ import { Globe, GraduationCap, Clock, MessageCircle } from 'lucide-react'
 import { getCountriesByRegion, formatPrice } from '@/lib/international/countries'
 
 export const metadata: Metadata = {
-  title: 'International Biology Tutoring | 10 Countries | Cerebrum Academy',
+  title: 'International Biology Tutoring | 10 Countries',
   description:
     'Expert online biology tutoring for students in US, UK, Canada, Australia, Singapore, UAE, Ireland, Hong Kong, New Zealand & South Africa. Small group from $40/hr.',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/international/',
   },
   openGraph: {
-    title: 'International Biology Tutoring | Cerebrum Academy',
+    title: 'International Biology Tutoring',
     description:
       'Expert tutoring for students across 10 countries. All major exam systems covered.',
     type: 'website',

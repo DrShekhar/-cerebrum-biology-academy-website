@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, IndianRupee, CheckCircle, ArrowRight, AlertCircle, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Fee in Gurugram 2026 | Fee Comparison | Cerebrum Academy',
+  title: 'NEET Coaching Fee in Gurugram 2026 | Fee Comparison',
   description:
     'Complete NEET coaching fee comparison in Gurugram 2026. Fees range from Rs 45,000 to Rs 2,50,000. Compare Aakash, Allen, Physics Wallah, Cerebrum fees. Call 88264-44334!',
   keywords: [

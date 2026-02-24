@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Dwarka Sector 10 | Biology Classes | Cerebrum Academy',
+  title: 'NEET Coaching Dwarka Sector 10 | Biology Classes',
   description: `Best NEET coaching for Dwarka Sector 10, Delhi students. 25-30 min from Rohini via Blue Line + interchange. Online classes available! AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate. WhatsApp 88264-44334!`,
   keywords: [
     'NEET coaching dwarka sector 10',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'NEET classes Dwarka Delhi',
   ],
   openGraph: {
-    title: 'NEET Coaching Dwarka Sector 10 | Biology Classes | Cerebrum Academy',
+    title: 'NEET Coaching Dwarka Sector 10 | Biology Classes',
     description: `Best NEET coaching for Dwarka Sector 10, Delhi. Online + Offline classes. AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate. WhatsApp 88264-44334!`,
     url: `${BASE_URL}/neet-coaching-dwarka-sector-10`,
     siteName: 'Cerebrum Biology Academy',

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Olympiad Coaching | NSEB, IBO Preparation - Cerebrum Biology Academy',
+  title: 'Biology Olympiad Coaching | NSEB, IBO Preparation',
   description:
     'Expert Biology Olympiad coaching for NSEB, INBO, and IBO preparation. Learn college-level biology, compete internationally, and gain research exposure. Small batches, AIIMS-trained faculty. Book free demo!',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'olympiad biology tutor',
   ],
   openGraph: {
-    title: 'Biology Olympiad Coaching | NSEB, INBO, IBO - Cerebrum',
+    title: 'Biology Olympiad Coaching | NSEB, INBO, IBO',
     description:
       'Prepare for Biology Olympiad (NSEB → INBO → IBO) with expert coaching. College-level syllabus, international exposure, research opportunities.',
     url: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching',

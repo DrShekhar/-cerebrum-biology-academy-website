@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { ResultsPageWebPageSchema } from '@/components/seo'
 
 export const metadata: Metadata = {
-  title: 'Student Results & Success Stories | NEET Biology Achievements | Cerebrum Biology Academy',
+  title: 'Student Results & Success Stories | NEET Biology Achievements',
   description:
     'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.',
   keywords:

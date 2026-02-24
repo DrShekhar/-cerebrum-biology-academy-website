@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'USABO Coaching Online | USA Biology Olympiad Preparation - Cerebrum',
+  title: 'USABO Coaching Online | USA Biology Olympiad Preparation',
   description:
     'Expert USABO coaching for Open Exam, Semifinals & National Finals. 1:1 tutoring and small batch options with IBO-trained faculty. US timezone friendly scheduling. Book free consultation!',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'usabo online classes',
   ],
   openGraph: {
-    title: 'USABO Coaching | USA Biology Olympiad Preparation - Cerebrum',
+    title: 'USABO Coaching | USA Biology Olympiad Preparation',
     description:
       'Prepare for USABO (Open → Semifinals → Finals → IBO) with expert coaching. 1:1 tutoring and small batch programs with flexible US timezone scheduling.',
     url: 'https://cerebrumbiologyacademy.com/usabo-coaching',

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Shanti Niketan | Premium Delhi | Cerebrum Academy',
+  title: 'NEET Biology Coaching Shanti Niketan | Premium Delhi',
   description:
     'Premium NEET Biology coaching for Shanti Niketan families. Affluent locality near Chanakyapuri. AIIMS faculty, personalized attention, 98% success rate.',
   keywords: [
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Shanti Niketan | Premium Delhi | Cerebrum Academy',
+    title: 'NEET Biology Coaching Shanti Niketan | Premium Delhi',
     description: 'Premium NEET Biology coaching for Shanti Niketan families. Affluent locality near Chanakyapuri.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/shanti-niketan',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Shanti Niketan | Cerebrum Academy',
+    title: 'NEET Biology Coaching Shanti Niketan',
     description:
       'Premium NEET Biology coaching for Shanti Niketan families. AIIMS faculty, personalized attention.',
     type: 'website',

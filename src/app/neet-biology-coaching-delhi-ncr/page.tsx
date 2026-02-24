@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'best neet biology coaching',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching in Delhi NCR | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching in Delhi NCR',
     description:
       'Premier NEET Biology coaching with 15+ years experience. Small batches, expert faculty, 98% results. Book free demo.',
     type: 'website',

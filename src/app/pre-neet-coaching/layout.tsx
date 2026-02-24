@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pre NEET Coaching | Early NEET Preparation Program - Cerebrum Biology Academy',
+  title: 'Pre NEET Coaching | Early NEET Preparation Program',
   description:
     'Best pre NEET coaching for Class 8-10 students. Start NEET preparation before Class 11 with expert faculty. Early NEET coaching builds strong foundation for medical entrance. Book free demo!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'early start neet',
   ],
   openGraph: {
-    title: 'Pre NEET Coaching | Early NEET Preparation Program - Cerebrum',
+    title: 'Pre NEET Coaching | Early NEET Preparation Program',
     description:
       'Start NEET preparation early with our pre-NEET coaching for Class 8-10. Build strong foundation, develop scientific thinking, and get a 4-year head start.',
     url: 'https://cerebrumbiologyacademy.com/pre-neet-coaching',

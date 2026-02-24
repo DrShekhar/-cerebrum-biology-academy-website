@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching New Friends Colony NFC | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching New Friends Colony NFC',
   description:
     'Best NEET Biology coaching for New Friends Colony students. Maharani Bagh, Friends Colony. AIIMS faculty, small batches. Near Ashram Metro. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching New Friends Colony NFC | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching New Friends Colony NFC',
     description: 'Best NEET Biology coaching for New Friends Colony students. Maharani Bagh, Friends Colony. AIIMS faculty, small batches.',
   },
   alternates: {

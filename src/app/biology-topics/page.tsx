@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { BookOpen, Brain, Dna, Microscope, Leaf, Heart } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Biology Topics for NEET | Complete Study Guide - Cerebrum Biology Academy',
+  title: 'Biology Topics for NEET | Complete Study Guide',
   description:
     'Comprehensive biology topics for NEET preparation. Master Zoology, Botany, Human Physiology, Genetics, Ecology, Cell Biology, and more with expert guidance from AIIMS faculty.',
   keywords:

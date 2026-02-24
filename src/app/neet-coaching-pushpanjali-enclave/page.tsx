@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { PushpanjaliEnclavePageContent } from './PushpanjaliEnclavePageContent'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura | Cerebrum Academy',
+  title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura',
   description:
     'Best NEET coaching for Pushpanjali Enclave students in Pitampura. 8-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'Co-operative Housing Society Pitampura',
   ],
   openGraph: {
-    title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura | Cerebrum Academy',
+    title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura',
     description:
       'Best NEET coaching for Pushpanjali Enclave students in Pitampura. 8-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-pushpanjali-enclave',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura | Cerebrum Academy',
+    title: 'NEET Coaching Pushpanjali Enclave | Biology Classes Pitampura',
     description:
       'Best NEET coaching for Pushpanjali Enclave students. 8-10 min from DC Chauk Rohini. AIIMS faculty, 98% success rate.',
   },

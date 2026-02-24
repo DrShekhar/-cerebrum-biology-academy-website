@@ -10,7 +10,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Zirakpur | Chandigarh Satellite | Cerebrum',
+  title: 'Best NEET Coaching in Zirakpur | Chandigarh Satellite',
   description:
     'Premium NEET coaching in Zirakpur, Punjab. AIIMS trained faculty, 98% success rate. Near Chandigarh. Rs 24,000-68,000/year with EMI. VIP Road, Baltana, Dhakoli. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET online classes Chandigarh tricity',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Zirakpur | Near Chandigarh | Cerebrum',
+    title: 'Best NEET Coaching in Zirakpur | Near Chandigarh',
     description:
       'Premium NEET coaching in Zirakpur. AIIMS faculty, 98% success rate, near Chandigarh tricity. Book free demo!',
     url: `${BASE_URL}/neet-coaching-zirakpur`,

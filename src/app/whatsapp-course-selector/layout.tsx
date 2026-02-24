@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Course Selector — Find Your Perfect NEET Biology Program | Cerebrum Biology Academy',
+  title: 'Course Selector — Find Your Perfect NEET Biology Program',
   description:
     'Choose from 15+ Biology coaching programs for Class 9–12 & Droppers. AIIMS doctor-led teaching, small batches (max 12–16), offline + online. 695/720 NEET topper produced. Rohini, Gurugram, South Delhi & Online.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Course Selector — Find Your Perfect NEET Biology Program | Cerebrum Biology Academy',
+    title: 'Course Selector — Find Your Perfect NEET Biology Program',
     description: 'Choose from 15+ Biology coaching programs for Class 9–12 & Droppers.',
   },
   alternates: {

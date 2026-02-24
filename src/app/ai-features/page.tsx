@@ -8,7 +8,7 @@ import AIFeaturesHub from '@/components/ai/AIFeaturesHub'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AI Features | Cerebrum Biology Academy',
+  title: 'AI Features',
   description:
     'AI-powered study tools including ClaudeChat, Voice Training, and study analytics for NEET Biology',
   keywords: ['AI education', 'ClaudeChat', 'AI tutoring', 'voice training', 'NEET preparation'],

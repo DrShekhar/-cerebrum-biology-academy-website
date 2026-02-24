@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Colombo | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Colombo | 98% Success Rate',
   description: 'Join #1 NEET coaching for Indian students in Colombo. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. A/L to NEET transition support.',
   keywords: [
     'NEET coaching Colombo',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'A/L to NEET preparation',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Colombo | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Colombo | 98% Success Rate',
     description: 'Join #1 NEET coaching for Indian students in Colombo. Expert AIIMS faculty. Book free demo!',
     url: `${BASE_URL}/neet-coaching-colombo-sri-lanka`,
     siteName: 'Cerebrum Biology Academy',

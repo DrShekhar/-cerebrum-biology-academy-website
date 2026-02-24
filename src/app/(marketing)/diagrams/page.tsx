@@ -4,7 +4,7 @@ import { PlantTissues } from '@/components/diagrams/biology/PlantTissues'
 import { StemCrossSection } from '@/components/diagrams/biology/StemCrossSection'
 
 export const metadata: Metadata = {
-  title: 'Interactive Biology Diagrams | Cerebrum Biology Academy',
+  title: 'Interactive Biology Diagrams',
   description:
     'Explore interactive NCERT-style biology diagrams for NEET preparation. Learn plant anatomy, tissue types, and stem cross-sections with our visual learning tools.',
 }

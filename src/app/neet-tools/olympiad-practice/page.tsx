@@ -15,7 +15,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Biology Olympiad Practice | NSEB, USABO, INBO, BBO, IBO | Cerebrum Biology Academy',
+  title: 'Biology Olympiad Practice | NSEB, USABO, INBO, BBO, IBO',
   description:
     'Practice 3,000+ Biology Olympiad questions for NSEB, USABO, INBO, BBO, and IBO. MTF, Data Interpretation, Experimental Design — aligned to Campbell Biology with expert-level depth.',
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     'olympiad biology questions',
   ],
   openGraph: {
-    title: 'Biology Olympiad Practice | Cerebrum Biology Academy',
+    title: 'Biology Olympiad Practice',
     description:
       'Practice 3,000+ Biology Olympiad questions with MTF, Data Interpretation & Experimental Design formats.',
     type: 'website',

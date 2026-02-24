@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Online Biology Classes | Learn Biology Online - Cerebrum Biology Academy',
+  title: 'Online Biology Classes | Learn Biology Online',
   description:
     'Join the best online biology classes for Class 9-12. Learn biology online with AIIMS-trained faculty, live interactive sessions, recorded lectures & NEET preparation. 1,50,000+ students, 98% success rate.',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Online Biology Classes | Cerebrum Biology Academy',
+    title: 'Online Biology Classes',
     description:
       'Learn biology online with AIIMS faculty. Live classes, video lectures, NEET preparation.',
     images: ['https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=630&fit=crop'],

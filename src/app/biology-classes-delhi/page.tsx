@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Biology Classes in Delhi | Best NEET Biology Coaching | Cerebrum Academy',
+  title: 'Biology Classes in Delhi | Best NEET Biology Coaching',
   description:
     'Join the best biology classes in Delhi with AIIMS-trained faculty. 4 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
   keywords: [

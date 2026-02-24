@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!countryData) {
     return {
-      title: 'Country Not Found | Cerebrum Biology Academy',
+      title: 'Country Not Found',
     }
   }
 
-  const title = `NEET Coaching for ${countryData.country} Students | Online Classes | Cerebrum Biology Academy`
+  const title = `NEET Coaching for ${countryData.country} Students | Online Classes`
   const description = `Best NEET Biology coaching for Indian students in ${countryData.country}. ${countryData.cbseSchools}+ CBSE schools, ${countryData.neetCenter ? `NEET exam center in ${countryData.neetCenter}` : 'complete exam support'}. Live classes at ${countryData.classTimings} ${countryData.timezone}. 98% success rate.`
 
   return {
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description,
     keywords: countryData.seoKeywords.join(', '),
     openGraph: {
-      title: `NEET Coaching for ${countryData.country} Students | Cerebrum Biology Academy`,
+      title: `NEET Coaching for ${countryData.country} Students`,
       description: `Top NEET Biology coaching for NRI students in ${countryData.country}. AIIMS faculty, flexible timings, ${countryData.studentCount} students enrolled.`,
       url: `https://cerebrumbiologyacademy.com/nri-students/${country}`,
       type: 'website',

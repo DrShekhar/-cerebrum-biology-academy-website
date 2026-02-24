@@ -8,6 +8,6 @@ export default function AdminEnrollmentsPage() {
 }
 
 export const metadata = {
-  title: 'Enrollment Dashboard | Admin | Cerebrum Biology Academy',
+  title: 'Enrollment Dashboard | Admin',
   description: 'Manage student enrollments and track payments.',
 }

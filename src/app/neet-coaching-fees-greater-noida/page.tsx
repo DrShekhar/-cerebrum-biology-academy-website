@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Fees in Greater Noida 2026 | Compare Coaching Fees | Cerebrum',
+  title: 'NEET Coaching Fees in Greater Noida 2026 | Compare Coaching Fees',
   description:
     'Compare NEET coaching fees in Greater Noida 2026. Fee comparison of Aakash Greater Noida, WiseTurtle Academy vs Cerebrum Biology Academy. Best value with small batches. Call 99536-43938!',
   keywords: [

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'International Biology Online Classes | A-Level, IB, AP, IGCSE | Cerebrum Academy',
+  title: 'International Biology Online Classes | A-Level, IB, AP, IGCSE',
   description:
     'Expert online biology classes for international curricula. A-Level, IB Biology (HL/SL), AP Biology, IGCSE. 11,50,000+ students from 50+ countries. Global timezone support.',
   keywords: [

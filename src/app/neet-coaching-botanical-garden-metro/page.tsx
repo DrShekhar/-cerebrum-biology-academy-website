@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     'neet coaching for working professionals noida',
   ],
   openGraph: {
-    title: 'NEET Coaching Near Botanical Garden Metro | Cerebrum Biology Academy',
+    title: 'NEET Coaching Near Botanical Garden Metro',
     description: `Online & Offline NEET Biology classes for students near Botanical Garden Metro. ${metroData.studentCount} students from Noida enrolled. Blue Line connectivity to Delhi centers.`,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-botanical-garden-metro',
   },

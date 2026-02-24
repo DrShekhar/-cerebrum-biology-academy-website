@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords:
     'NEET enrollment, coaching admission, join NEET coaching, biology coaching admission, enroll now, NEET admission 2025, course enrollment',
   openGraph: {
-    title: 'Enroll Now | Cerebrum Biology Academy NEET Coaching',
+    title: 'Enroll Now NEET Coaching',
     description:
       'Start your journey to medical college. Simple enrollment, flexible payments, instant access to classes. Limited seats for 2025 batch!',
     images: ['/og-image.jpg'],
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Enroll in NEET Biology Coaching | Cerebrum Academy',
+    title: 'Enroll in NEET Biology Coaching',
     description: 'Simple admission process, flexible EMI options, start immediately',
     images: ['/og-image.jpg'],
   },

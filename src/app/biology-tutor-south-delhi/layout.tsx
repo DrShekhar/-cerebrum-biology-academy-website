@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in South Delhi | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in South Delhi | NEET Coaching',
   description:
     'Best Biology tutor in South Delhi for NEET & Board exams. Expert coaching in GK-1, GK-2, Hauz Khas, Malviya Nagar, Saket, Vasant Kunj. AIIMS faculty guidance.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in South Delhi | Cerebrum Academy',
+    title: 'Biology Tutor in South Delhi',
     description: 'Expert NEET Biology coaching in South Delhi localities.',
   },
   alternates: {

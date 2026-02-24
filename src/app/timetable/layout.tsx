@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Batch Timetable & Schedule | Class 11, 12, Dropper | Cerebrum Academy Delhi NCR',
+  title: 'NEET Batch Timetable & Schedule | Class 11, 12, Dropper Delhi NCR',
   description:
     'View NEET Biology batch schedule and timetable across all Cerebrum centers. Class 11, 12, Dropper, Foundation batches with flexible timings in Delhi NCR.',
   keywords: [
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'class schedule NEET',
   ],
   openGraph: {
-    title: 'NEET Batch Timetable & Schedule | Cerebrum Academy',
+    title: 'NEET Batch Timetable & Schedule',
     description:
       'Check all NEET Biology batch timings and schedules. Class 11, 12, Dropper batches with flexible options. Find your ideal batch timing now!',
     url: 'https://cerebrumbiologyacademy.com/timetable',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Batch Timetable | Cerebrum Biology Academy',
+    title: 'NEET Batch Timetable',
     description:
       'Check NEET Biology batch timings - Class 11, 12, Dropper. Find your perfect batch timing across all centers.',
   },

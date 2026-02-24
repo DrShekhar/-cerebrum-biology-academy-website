@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | NEET Biology Coaching Inquiry | Cerebrum Academy Delhi',
+  title: 'Contact Us | NEET Biology Coaching Inquiry Delhi',
   description:
     'Contact Cerebrum Biology Academy for NEET coaching admission. Call +91-88264-44334, visit our Delhi center, or WhatsApp. Free counseling available!',
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us | Cerebrum Biology Academy Delhi',
+    title: 'Contact Us Delhi',
     description: 'Call +91-88264-44334, WhatsApp, visit center, get free counseling',
     images: ['/og-image.jpg'],
   },

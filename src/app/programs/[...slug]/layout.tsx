@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .replace(/\b\w/g, (l) => l.toUpperCase())
 
   return {
-    title: `${programName} | NEET Biology Coaching - Cerebrum Academy`,
+    title: `${programName} | NEET Biology Coaching`,
     description: `Enroll in our ${programName} for NEET preparation. Expert AIIMS faculty, comprehensive study material, proven results.`,
     keywords: `${programName}, NEET program, biology coaching, NEET preparation, medical entrance`,
     openGraph: {
-      title: `${programName} | Cerebrum Biology Academy`,
+      title: `${programName}`,
       description: `Join our ${programName} for NEET success. Expert faculty, small batches, 98% success rate.`,
       url: `https://cerebrumbiologyacademy.com/programs/${programSlug}`,
       siteName: 'Cerebrum Biology Academy',
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
     card: 'summary_large_image',
-    title: '${programName} | NEET Biology Coaching - Cerebrum Academy',
+    title: '${programName} | NEET Biology Coaching',
     description: 'Enroll in our ${programName} for NEET preparation. Expert AIIMS faculty, comprehensive study material, proven results.',
   },
   alternates: {

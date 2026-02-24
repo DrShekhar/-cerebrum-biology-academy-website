@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Kalyani Nagar Pune | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Kalyani Nagar Pune | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Kalyani Nagar, Pune. Expert AIIMS faculty, 98% success rate. EON IT Park, corporate professionals. Premium online coaching. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation Pune',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Kalyani Nagar Pune | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Kalyani Nagar Pune | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Kalyani Nagar, Pune. Expert AIIMS faculty, 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-kalyani-nagar-pune`,

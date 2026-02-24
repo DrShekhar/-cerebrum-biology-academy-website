@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET & MDCAT Coaching in Lahore | 98% Success Rate | Cerebrum',
+  title: 'Best NEET & MDCAT Coaching in Lahore | 98% Success Rate',
   description: 'Join #1 NEET and MDCAT coaching for Indian and Pakistani students in Lahore. Expert AIIMS faculty, proven 98% success rate, 695/720 top score.',
   keywords: [
     'NEET coaching Lahore',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'online NEET preparation Lahore',
   ],
   openGraph: {
-    title: 'Best NEET & MDCAT Coaching in Lahore | 98% Success Rate | Cerebrum',
+    title: 'Best NEET & MDCAT Coaching in Lahore | 98% Success Rate',
     description: 'Join #1 NEET and MDCAT coaching for Lahore students. Expert AIIMS faculty. Book free demo!',
     url: `${BASE_URL}/neet-coaching-lahore-pakistan`,
     siteName: 'Cerebrum Biology Academy',

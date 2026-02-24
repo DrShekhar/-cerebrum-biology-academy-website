@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in New Town Rajarhat Kolkata | IT Hub | Cerebrum',
+  title: 'Best NEET Coaching in New Town Rajarhat Kolkata | IT Hub',
   description:
     'Join #1 NEET coaching in New Town Rajarhat, Kolkata. Expert faculty, proven 98% success rate, 695/720 top score. Premium coaching for Eco Park & Action Area families. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation New Town Kolkata',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in New Town Rajarhat Kolkata | IT Hub | Cerebrum',
+    title: 'Best NEET Coaching in New Town Rajarhat Kolkata | IT Hub',
     description:
       'Join #1 NEET coaching in New Town Rajarhat, Kolkata. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-new-town-kolkata`,

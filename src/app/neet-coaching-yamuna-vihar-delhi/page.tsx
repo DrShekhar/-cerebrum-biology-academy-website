@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Yamuna Vihar | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Yamuna Vihar | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Yamuna Vihar Delhi. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Untapped NEET market. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation North-East Delhi',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Yamuna Vihar | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Yamuna Vihar | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Yamuna Vihar Delhi. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-yamuna-vihar-delhi`,

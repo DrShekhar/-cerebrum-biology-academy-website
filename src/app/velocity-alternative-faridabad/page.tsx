@@ -5,7 +5,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const faridabadLocation = CONTACT_INFO.location.faridabad
 
 export const metadata: Metadata = {
-  title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology | Cerebrum',
+  title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology',
   description:
     "Looking for Velocity Institute alternative in Faridabad? Cerebrum offers 15-20 student batches vs Velocity's 50-80, AIIMS-trained faculty, and biology-specialist coaching. Call 88264-44334!",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'neet biology coaching faridabad',
   ],
   openGraph: {
-    title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology | Cerebrum',
+    title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology',
     description:
       'Why Faridabad students choose Cerebrum over Velocity Institute for focused NEET Biology preparation.',
     url: 'https://cerebrumbiologyacademy.com/velocity-alternative-faridabad',

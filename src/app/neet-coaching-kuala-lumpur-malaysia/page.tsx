@@ -3,7 +3,7 @@ import { PageContent } from './PageContent';
 import { LocalitySchema } from '@/components/seo/LocalitySchema';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Kuala Lumpur, Malaysia | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Kuala Lumpur, Malaysia',
   description: 'Expert NEET coaching in Kuala Lumpur, Malaysia. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students. Enroll now!',
   keywords: 'NEET coaching Kuala Lumpur, NEET exam center Kuala Lumpur, best NEET classes Kuala Lumpur, NEET preparation Malaysia',
   openGraph: {

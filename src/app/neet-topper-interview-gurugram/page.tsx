@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, Quote, Award, Star, BookOpen, Clock, Target, ArrowRight, GraduationCap } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Topper Interviews Gurugram | Success Stories | Cerebrum Academy',
+  title: 'NEET Topper Interviews Gurugram | Success Stories',
   description:
     'Read inspiring NEET topper interviews from Cerebrum Biology Academy Gurugram. Learn strategies from students who scored 650+. Real stories, real success. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'neet 700 scorer interview',
   ],
   openGraph: {
-    title: 'NEET Topper Interviews | Cerebrum Biology Academy Gurugram',
+    title: 'NEET Topper Interviews Gurugram',
     description: 'Inspiring success stories from our NEET toppers. Learn their strategies.',
     url: 'https://cerebrumbiologyacademy.com/neet-topper-interview-gurugram',
   },

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NTSE Online Classes | Online NTSE Coaching - Cerebrum Biology Academy',
+  title: 'NTSE Online Classes | Online NTSE Coaching',
   description:
     'Best NTSE online classes with live interactive sessions. Online NTSE coaching for Stage 1 & 2 preparation. Expert faculty, recorded lectures, mock tests. Study from home across India!',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NTSE Online Classes | Cerebrum Biology Academy',
+    title: 'NTSE Online Classes',
     description:
       'Live NTSE online coaching with expert faculty. Complete preparation for Stage 1 & 2 from home.',
     images: ['https://images.unsplash.com/photo-1588072432836-e10032774350?w=1200&h=630&fit=crop'],

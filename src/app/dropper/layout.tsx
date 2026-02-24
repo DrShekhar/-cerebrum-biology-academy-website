@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Course 2025 | Best Biology Coaching for Repeaters | Cerebrum Academy',
+  title: 'NEET Dropper Course 2025 | Best Biology Coaching for Repeaters',
   description:
     'Specialized NEET Biology coaching for droppers. Transform your second attempt into success with AIIMS faculty guidance. Small batches, personalized attention, proven 98% success rate.',
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Dropper Course 2025 | Best Biology Coaching for Repeaters | Cerebrum Academy',
+    title: 'NEET Dropper Course 2025 | Best Biology Coaching for Repeaters',
     description: 'Specialized NEET Biology coaching for droppers. Transform your second attempt into success with AIIMS faculty guidance.',
   },
   alternates: {

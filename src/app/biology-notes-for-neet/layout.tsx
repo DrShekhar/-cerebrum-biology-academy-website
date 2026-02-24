@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Notes for NEET 2026 | Chapter-wise Notes by AIIMS Faculty | Cerebrum',
+  title: 'Biology Notes for NEET 2026 | Chapter-wise Notes by AIIMS Faculty',
   description:
     'Free NEET Biology notes for all 38 chapters. Chapter-wise notes with diagrams, mnemonics, PYQ analysis and PDF download. Written by Dr. Shekhar (AIIMS). Updated for NEET 2026 syllabus.',
   keywords:

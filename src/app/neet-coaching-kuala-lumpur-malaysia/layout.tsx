@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Kuala Lumpur, Malaysia | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Kuala Lumpur, Malaysia',
   description: 'Expert NEET coaching in Kuala Lumpur, Malaysia. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students.',
   keywords: 'NEET coaching Kuala Lumpur, NEET exam center Kuala Lumpur, best NEET classes Kuala Lumpur, NEET preparation Malaysia',
   openGraph: {

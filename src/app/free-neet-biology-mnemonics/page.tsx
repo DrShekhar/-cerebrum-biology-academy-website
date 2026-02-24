@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Mnemonics 2026 | 200+ Memory Tricks | Free PDF | Cerebrum',
+  title: 'NEET Biology Mnemonics 2026 | 200+ Memory Tricks | Free PDF',
   description: 'Download 200+ NEET Biology mnemonics and memory tricks. Easy memorization for taxonomy, classification, body systems. Created by AIIMS doctors.',
   keywords: ['NEET biology mnemonics', 'biology memory tricks NEET', 'NEET biology shortcuts', 'mnemonics for NEET preparation', 'biology tricks and tips'],
   openGraph: {
-    title: 'NEET Biology Mnemonics 2026 | 200+ Memory Tricks | Free PDF | Cerebrum',
+    title: 'NEET Biology Mnemonics 2026 | 200+ Memory Tricks | Free PDF',
     description: 'Download 200+ NEET Biology mnemonics and memory tricks. Easy memorization for taxonomy, classification, body systems. Created by AIIMS doctors.',
     url: `${BASE_URL}/free-neet-biology-mnemonics`,
     siteName: 'Cerebrum Biology Academy',

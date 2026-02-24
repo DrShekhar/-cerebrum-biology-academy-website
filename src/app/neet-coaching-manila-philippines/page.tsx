@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import NEETCoachingPageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Manila, Philippines - 98% Success Rate | Cerebrum Academy',
+  title: 'NEET Coaching in Manila, Philippines - 98% Success Rate',
   description: "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.",
   keywords: [
     'NEET coaching in Manila',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'NEET online coaching Philippines'
   ],
   openGraph: {
-    title: 'NEET Coaching in Manila, Philippines - 98% Success Rate | Cerebrum Academy',
+    title: 'NEET Coaching in Manila, Philippines - 98% Success Rate',
     description: "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.",
     type: 'website'
   },

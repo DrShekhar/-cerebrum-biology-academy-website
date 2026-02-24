@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const priceString = `${config.currency.symbol}${config.pricing.smallGroup}/hr`
 
   return {
-    title: `Online Biology Tutoring for ${config.name} Students | Cerebrum Academy`,
+    title: `Online Biology Tutoring for ${config.name} Students`,
     description: `Expert biology tutoring for ${examList}. Small group from ${priceString}. Online classes in your timezone. Book a free demo class today!`,
     keywords: [
       `biology tutor ${config.name}`,

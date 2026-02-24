@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Foundation Class 10 | Pre-NEET Coaching - Cerebrum',
+  title: 'NEET Foundation Class 10 | Pre-NEET Coaching',
   description:
     'NEET Foundation Class 10 with 2-year head start advantage. Pre-NEET coaching for Class 10 students with board exam focus. Build strong biology concepts early. Book free demo!',
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'neet biology class 10',
   ],
   openGraph: {
-    title: 'NEET Foundation Class 10 | Pre-NEET Coaching - Cerebrum',
+    title: 'NEET Foundation Class 10 | Pre-NEET Coaching',
     description:
       'Start your NEET journey from Class 10. 2-year head start with board exam focus. Build strong biology foundation with AIIMS-trained faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10',

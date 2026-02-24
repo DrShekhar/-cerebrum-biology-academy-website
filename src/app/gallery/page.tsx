@@ -5,7 +5,7 @@ import { GalleryPageContent } from '@/components/gallery/GalleryPageContent'
 export const revalidate = 1800
 
 export const metadata: Metadata = {
-  title: 'Wall of Excellence | Gallery | Cerebrum Biology Academy',
+  title: 'Wall of Excellence | Gallery',
   description:
     'Explore our Wall of Excellence - celebrating student achievements, faculty expertise, campus events, seminars, and memorable moments at Cerebrum Biology Academy.',
   keywords:
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/gallery',
   },
   openGraph: {
-    title: 'Wall of Excellence | Cerebrum Biology Academy',
+    title: 'Wall of Excellence',
     description:
       'Explore our Wall of Excellence - celebrating student achievements, faculty expertise, and memorable moments.',
     type: 'website',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wall of Excellence | Cerebrum Biology Academy',
+    title: 'Wall of Excellence',
     description:
       'Explore our Wall of Excellence - celebrating student achievements, faculty expertise, and memorable moments.',
     images: [

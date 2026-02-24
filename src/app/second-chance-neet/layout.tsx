@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Failed NEET 2024? 90% Success Rate in Second Attempt | Cerebrum Biology',
+  title: 'Failed NEET 2024? 90% Success Rate in Second Attempt',
   description:
     'Specialized NEET Biology coaching for repeaters by AIIMS faculty. 90% of our students clear NEET in second attempt. Small batches, personal attention, emotional support.',
   keywords: [

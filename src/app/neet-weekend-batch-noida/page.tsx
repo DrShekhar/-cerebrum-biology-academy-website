@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Weekend Batch Noida 2026 | Saturday-Sunday Classes | Cerebrum',
+  title: 'NEET Weekend Batch Noida 2026 | Saturday-Sunday Classes',
   description:
     'Join NEET weekend batch in Noida - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. Sector 62. Call 99536-43938!',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'integrated neet coaching weekend',
   ],
   openGraph: {
-    title: 'NEET Weekend Batch Noida 2026 | Cerebrum Biology Academy',
+    title: 'NEET Weekend Batch Noida 2026',
     description: 'Balance school and NEET prep! Saturday-Sunday intensive classes at Sector 62.',
     url: 'https://cerebrumbiologyacademy.com/neet-weekend-batch-noida',
   },

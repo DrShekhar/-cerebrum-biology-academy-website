@@ -4,14 +4,14 @@ import { MapPin, Phone, Users, ArrowRight, Building2 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Near Noida Societies | Cerebrum Biology Academy',
+  title: 'NEET Coaching Near Noida Societies',
   description:
     'Find NEET Biology coaching near your Noida society. Online & hybrid classes for students in Godrej Woods, Mahagun Moderne, Supertech Eco Village, Logix Blossom County & more.',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-noida-society',
   },
   openGraph: {
-    title: 'NEET Coaching Near Noida Societies | Cerebrum Biology Academy',
+    title: 'NEET Coaching Near Noida Societies',
     description:
       'Find NEET Biology coaching near your Noida society. Online & hybrid classes available.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida-society',

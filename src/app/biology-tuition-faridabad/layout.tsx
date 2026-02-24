@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords:
     'biology tuition Faridabad, biology tutor Faridabad, biology tuition class 11 Faridabad, biology tuition class 12 Faridabad, biology tuition class 9 Greater Faridabad, biology tuition class 10 NIT, biology home tuition Faridabad, NEET biology tuition Faridabad, biology coaching Ballabgarh, biology classes Sector 21, biology tutor Neharpar, biology tuition Sector 86, online biology tuition Faridabad, best biology tutor Faridabad, biology tuition near me Faridabad',
   openGraph: {
-    title: 'Best Biology Tuition in Faridabad | Class 9-12, Droppers | Cerebrum Academy',
+    title: 'Best Biology Tuition in Faridabad | Class 9-12, Droppers',
     description:
       'Top biology tuition in Faridabad for all classes. AIIMS faculty, 98% success rate. Greater Faridabad, NIT, Ballabgarh. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/biology-tuition-faridabad',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Biology Tuition in Faridabad | Cerebrum Biology Academy',
+    title: 'Best Biology Tuition in Faridabad',
     description:
       'Top biology tuition in Faridabad. Class 9, 10, 11, 12 & droppers. Greater Faridabad, NIT, Ballabgarh.',
   },

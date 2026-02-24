@@ -25,7 +25,7 @@ export async function generateMetadata({
     }
   }
 
-  const title = `Best NEET Biology Coaching in ${state.name} | Cerebrum Academy`
+  const title = `Best NEET Biology Coaching in ${state.name}`
   const description = `Top NEET Biology coaching for ${state.name} students. AIIMS-trained faculty, 98% success rate. Online classes for ${state.majorCities.slice(0, 3).join(', ')}. ${state.neetSeats}+ medical seats. Book FREE demo!`
 
   return {

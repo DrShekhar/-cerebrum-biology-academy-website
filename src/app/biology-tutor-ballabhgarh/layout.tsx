@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Ballabhgarh | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Ballabhgarh | NEET Coaching',
   description:
     'Best Biology tutor in Ballabhgarh for NEET & Board exams. Expert coaching near Old Faridabad. AIIMS faculty guidance. Offline & online classes.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Ballabhgarh | Cerebrum Academy',
+    title: 'Biology Tutor in Ballabhgarh',
     description: 'Expert NEET Biology coaching in Ballabhgarh.',
   },
   alternates: {

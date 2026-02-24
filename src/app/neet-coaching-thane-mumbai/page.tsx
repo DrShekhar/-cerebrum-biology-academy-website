@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Thane | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Thane | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Thane. Expert AIIMS faculty, 98% success rate. Ghodbunder Road, Hiranandani Thane, Majiwada. Premium online coaching. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation Thane',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Thane | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Thane | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Thane. Expert AIIMS faculty, 98% success rate. Premium gated communities. Book free demo!',
     url: `${BASE_URL}/neet-coaching-thane-mumbai`,

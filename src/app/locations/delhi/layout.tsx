@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching in Delhi | Cerebrum Biology Academy',
+  title: 'NEET Biology Coaching in Delhi',
   description:
     'Best NEET Biology coaching in Delhi by AIIMS faculty. Small batches of 15 students, 98% success rate. Centers at South Extension & Rohini. Call +91 88264 44334.',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'Biology tuition Delhi',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching in Delhi | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching in Delhi',
     description:
       'Best NEET Biology coaching in Delhi. AIIMS faculty, small batches, 98% success rate.',
     type: 'website',

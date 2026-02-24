@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Saket | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Saket | NEET Coaching',
   description:
     'Best Biology tutor in Saket for NEET & Board exams. Expert coaching for Saket, Malviya Nagar, Hauz Khas, Green Park. AIIMS faculty guidance. Online classes available.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Saket | Cerebrum Academy',
+    title: 'Biology Tutor in Saket',
     description: 'Expert NEET Biology coaching in Saket Delhi.',
   },
   alternates: {

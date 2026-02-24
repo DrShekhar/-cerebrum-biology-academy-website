@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { PageContent } from "./PageContent";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching in Houston, USA | Cerebrum Biology Academy",
+  title: "NEET Coaching in Houston, USA",
   description: "Expert NEET coaching for Houston, USA students. 98% success rate. Dr. Shekhar C Singh's specialized curriculum. Join 50+ top scorers.",
   keywords: "NEET coaching houston, NEET classes houston, medical entrance exam houston, biology coaching houston, Cerebrum Biology Academy houston",
   openGraph: {
-    title: "NEET Coaching in Houston, USA | Cerebrum Biology Academy",
+    title: "NEET Coaching in Houston, USA",
     description: "98% Success Rate. Expert NEET coaching by Dr. Shekhar C Singh. Call +918826444334 for free counseling.",
     url: `https://cerebrumbiologyacademy.com/cities/neet-coaching-houston-usa`,
     type: "website",

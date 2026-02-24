@@ -10,7 +10,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'CBSE Abroad Students NEET Preparation | Online NEET Coaching | Cerebrum Academy',
+  title: 'CBSE Abroad Students NEET Preparation | Online NEET Coaching',
   description:
     'Expert NEET coaching for CBSE students studying abroad. Timezone-friendly classes, comprehensive preparation, 98% success rate.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'international NEET students',
   ],
   openGraph: {
-    title: 'CBSE Abroad Students NEET Preparation | Online NEET Coaching | Cerebrum Academy',
+    title: 'CBSE Abroad Students NEET Preparation | Online NEET Coaching',
     description:
       'Expert NEET coaching for CBSE students studying abroad. Timezone-friendly classes, comprehensive preparation, 98% success rate.',
     url: `${BASE_URL}/cbse-abroad-neet-preparation`,

@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Physics Wallah Alternative Noida | Offline Expert Biology | Cerebrum 2026',
+  title: 'Physics Wallah Alternative Noida | Offline Expert Biology',
   description:
     'Need offline alternative to Physics Wallah in Noida? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 99536-43938!',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'physics wallah supplement noida',
   ],
   openGraph: {
-    title: 'Physics Wallah Alternative Noida | Cerebrum Biology Academy',
+    title: 'Physics Wallah Alternative Noida',
     description:
       'Want real classroom interaction instead of video lectures? Experience offline NEET biology coaching.',
     url: 'https://cerebrumbiologyacademy.com/physics-wallah-alternative-noida',

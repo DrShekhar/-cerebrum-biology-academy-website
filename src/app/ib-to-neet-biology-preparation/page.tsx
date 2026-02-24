@@ -10,7 +10,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'IB to NEET Biology | Bridge Course for IB Students | Cerebrum Academy',
+  title: 'IB to NEET Biology | Bridge Course for IB Students',
   description:
     'Specialized bridge course for IB Biology students preparing for NEET. Expert faculty, comprehensive gap analysis, proven 95% conversion rate.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'IB HL SL NEET',
   ],
   openGraph: {
-    title: 'IB to NEET Biology | Bridge Course for IB Students | Cerebrum Academy',
+    title: 'IB to NEET Biology | Bridge Course for IB Students',
     description:
       'Specialized bridge course for IB Biology students preparing for NEET. Expert faculty, comprehensive gap analysis, proven 95% conversion rate.',
     url: `${BASE_URL}/ib-to-neet-biology-preparation`,

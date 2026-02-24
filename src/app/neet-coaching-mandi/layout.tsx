@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Mandi 2026 | Sadar District | Cerebrum Academy',
+  title: 'Best NEET Coaching in Mandi 2026 | Sadar District',
   description:
     'Top NEET coaching for Mandi & Sundernagar students. 98% success rate. Online classes from AIIMS faculty. Serving Mandi town, Sundernagar, Nerchowk, Pandoh. Prepare for SLBSGMC from home.',
   keywords:
     'NEET coaching Mandi, best NEET coaching Mandi Himachal, NEET preparation Mandi, NEET classes SLBSGMC Nerchowk, biology coaching Mandi, medical entrance Himachal Pradesh, NEET 2026 Mandi, online NEET coaching Mandi, Sundernagar NEET coaching',
   openGraph: {
-    title: 'Best NEET Coaching in Mandi 2026 | Cerebrum Biology Academy',
+    title: 'Best NEET Coaching in Mandi 2026',
     description:
       'Join the most trusted NEET coaching for Mandi. Online classes from AIIMS-trained faculty. 98% success rate. SLBSGMC Nerchowk preparation from home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-mandi',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best NEET Coaching in Mandi 2026 | Sadar District | Cerebrum Academy',
+    title: 'Best NEET Coaching in Mandi 2026 | Sadar District',
     description: 'Top NEET coaching for Mandi & Sundernagar students. 98% success rate. Online classes from AIIMS faculty.',
   },
   alternates: {

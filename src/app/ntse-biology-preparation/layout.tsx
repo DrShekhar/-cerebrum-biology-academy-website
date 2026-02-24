@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NTSE Biology Preparation | NTSE Science Coaching - Cerebrum Biology Academy',
+  title: 'NTSE Biology Preparation | NTSE Science Coaching',
   description:
     'Expert NTSE biology preparation for SAT exam. Complete NTSE science coaching with biology topics, MCQ practice, mock tests. Master life science for NTSE Stage 1 & 2. Join now!',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NTSE Biology Preparation | Cerebrum Biology Academy',
+    title: 'NTSE Biology Preparation',
     description:
       'Master NTSE biology section with expert coaching. Complete SAT life science preparation with MCQs and mock tests.',
     images: ['https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=630&fit=crop'],

@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Satellite Ahmedabad | Premium Drive-In Road | Cerebrum',
+  title: 'Best NEET Coaching in Satellite Ahmedabad | Premium Drive-In Road',
   description:
     'Join #1 NEET coaching in Satellite, Ahmedabad. Expert faculty, proven 98% success rate, 695/720 top score. Premium coaching for Drive-In Road families. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation premium residential',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Satellite Ahmedabad | Premium Drive-In Road | Cerebrum',
+    title: 'Best NEET Coaching in Satellite Ahmedabad | Premium Drive-In Road',
     description:
       'Join #1 NEET coaching in Satellite, Ahmedabad. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-satellite-ahmedabad`,

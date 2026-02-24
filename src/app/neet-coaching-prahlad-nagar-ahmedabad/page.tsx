@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Prahlad Nagar Ahmedabad | Corporate Hub | Cerebrum',
+  title: 'Best NEET Coaching in Prahlad Nagar Ahmedabad | Corporate Hub',
   description:
     'Join #1 NEET coaching in Prahlad Nagar, Ahmedabad. Expert faculty, proven 98% success rate, 695/720 top score. Premium coaching for Satellite area families. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation corporate hub',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Prahlad Nagar Ahmedabad | Corporate Hub | Cerebrum',
+    title: 'Best NEET Coaching in Prahlad Nagar Ahmedabad | Corporate Hub',
     description:
       'Join #1 NEET coaching in Prahlad Nagar, Ahmedabad. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-prahlad-nagar-ahmedabad`,

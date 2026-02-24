@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, Moon, CheckCircle, School, Users, ArrowRight, Coffee } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Evening Batch Gurugram 2026 | After-School Classes 5-8 PM | Cerebrum',
+  title: 'NEET Evening Batch Gurugram 2026 | After-School Classes 5-8 PM',
   description:
     'Join NEET evening batch in Gurugram - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. M2K Sector 51. Call 88264-44334!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'dps students neet coaching',
   ],
   openGraph: {
-    title: 'NEET Evening Batch Gurugram 2026 | Cerebrum Biology Academy',
+    title: 'NEET Evening Batch Gurugram 2026',
     description: 'After-school NEET preparation! Evening classes from 5 PM at M2K Sector 51.',
     url: 'https://cerebrumbiologyacademy.com/neet-evening-batch-gurugram',
   },

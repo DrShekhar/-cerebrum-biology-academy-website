@@ -14,7 +14,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: `NEET Coaching for ${school} Students | Cerebrum Biology Academy`,
+  title: `NEET Coaching for ${school} Students`,
   description: `Specialized NEET Biology coaching for ${school} students in ${city}. Expert faculty, 98% success rate, personalized batches. Book free demo!`,
   keywords: [
     'NEET coaching Sanskriti School',

@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Colaba Mumbai | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Colaba Mumbai | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Colaba, South Mumbai. Expert AIIMS faculty, 98% success rate. Navy Nagar, Cuffe Parade. Premium online coaching. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation Colaba',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Colaba Mumbai | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Colaba Mumbai | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Colaba, South Mumbai. Expert AIIMS faculty, 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-colaba-mumbai`,

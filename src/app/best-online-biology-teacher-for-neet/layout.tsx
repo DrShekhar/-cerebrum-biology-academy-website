@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best Online Biology Teacher for NEET 2026 [67+ AIIMS Selections] | Cerebrum',
+  title: 'Best Online Biology Teacher for NEET 2026 [67+ AIIMS Selections]',
   description:
     'Learn NEET Biology online from AIIMS-trained faculty. 67+ AIIMS selections, 98% success rate. Complete syllabus with PYQ analysis. Book FREE demo today!',
   keywords: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Online Biology Teacher for NEET | Cerebrum',
+    title: 'Best Online Biology Teacher for NEET',
     description: '67+ AIIMS selections. Master Biology (360 marks) with AIIMS faculty online.',
     images: ['https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop'],
   },

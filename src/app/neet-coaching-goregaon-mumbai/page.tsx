@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Goregaon Mumbai | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Goregaon Mumbai | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Goregaon. Expert AIIMS faculty, 98% success rate. Film City, Oberoi Garden City, premium gated communities. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation Goregaon',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Goregaon Mumbai | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Goregaon Mumbai | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Goregaon, Film City area. Expert AIIMS faculty, 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-goregaon-mumbai`,

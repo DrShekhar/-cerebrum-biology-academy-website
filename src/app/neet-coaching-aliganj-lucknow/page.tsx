@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Aliganj Lucknow | Premium Residential | Cerebrum',
+  title: 'Best NEET Coaching in Aliganj Lucknow | Premium Residential',
   description:
     'Join #1 NEET coaching in Aliganj, Lucknow. Expert faculty, proven 98% success rate, 695/720 top score. Premium coaching for university area families. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation residential Lucknow',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Aliganj Lucknow | Premium Residential | Cerebrum',
+    title: 'Best NEET Coaching in Aliganj Lucknow | Premium Residential',
     description:
       'Join #1 NEET coaching in Aliganj, Lucknow. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-aliganj-lucknow`,

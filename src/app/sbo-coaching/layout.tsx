@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'SBO Coaching Online | Singapore Biology Olympiad Preparation - Cerebrum',
+  title: 'SBO Coaching Online | Singapore Biology Olympiad Preparation',
   description:
     'Expert SBO coaching for Singapore Biology Olympiad. Complete Campbell Biology coverage, past paper practice, and 1-on-1 mentorship to represent Singapore at IBO.',
   keywords: [

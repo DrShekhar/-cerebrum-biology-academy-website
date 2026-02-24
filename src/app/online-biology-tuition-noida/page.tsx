@@ -4,7 +4,7 @@ import { Phone, MessageCircle, CheckCircle, Trophy, Monitor, Building2, MapPin, 
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'Online Biology Tuition in Noida 2026 | Live Classes | Rs 48,000/year | Cerebrum',
+  title: 'Online Biology Tuition in Noida 2026 | Live Classes | Rs 48,000/year',
   description:
     'Online Biology tuition for Noida students. Live classes from home. Class 9-12 & NEET. AIIMS faculty, Rs 48,000-98,000/year. Gaur City, Sector 150, Greater Noida. Free demo!',
   keywords: [

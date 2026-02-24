@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology PYQ Analysis 2015-2025 | Free PDF | Cerebrum',
+  title: 'NEET Biology PYQ Analysis 2015-2025 | Free PDF',
   description: 'Download free NEET Biology Previous Year Question analysis (2015-2025). Topic-wise breakdown, repeated questions, difficulty trends. AIIMS faculty analysis.',
   keywords: ['NEET biology previous year questions', 'NEET PYQ analysis', 'NEET biology repeated questions', 'NEET biology trend analysis', 'NEET 2025 question paper analysis'],
   openGraph: {
-    title: 'NEET Biology PYQ Analysis 2015-2025 | Free PDF | Cerebrum',
+    title: 'NEET Biology PYQ Analysis 2015-2025 | Free PDF',
     description: 'Download free NEET Biology Previous Year Question analysis (2015-2025). Topic-wise breakdown, repeated questions, difficulty trends. AIIMS faculty analysis.',
     url: `${BASE_URL}/free-neet-biology-pyq-analysis`,
     siteName: 'Cerebrum Biology Academy',

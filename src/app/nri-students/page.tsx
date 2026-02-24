@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords:
     'NRI NEET coaching, NEET coaching abroad, NEET coaching UAE, NEET coaching Dubai, NEET coaching Saudi Arabia, NEET coaching Singapore, NEET coaching Kuwait, online NEET coaching overseas, NRI quota NEET, CBSE students abroad NEET, Indian students abroad NEET preparation',
   openGraph: {
-    title: 'NEET Coaching for NRI Students | 14+ Countries | Cerebrum Biology Academy',
+    title: 'NEET Coaching for NRI Students | 14+ Countries',
     description:
       'Top NEET Biology coaching for NRI students worldwide. UAE, Saudi, Kuwait, Singapore, Qatar & more. AIIMS faculty, 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/nri-students',

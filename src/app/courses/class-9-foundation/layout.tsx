@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Class 9 Biology Foundation | Pre-NEET Preparation | Cerebrum Academy',
+  title: 'Class 9 Biology Foundation | Pre-NEET Preparation',
   description:
     'Class 9 Biology foundation course with NEET-aligned curriculum. NCERT-based conceptual learning, interactive sessions, early NEET preparation. Expert AIIMS faculty.',
   keywords: [
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     'Class 9 home tutor Biology',
   ],
   openGraph: {
-    title: 'Class 9 Biology Foundation | Pre-NEET Preparation | Cerebrum',
+    title: 'Class 9 Biology Foundation | Pre-NEET Preparation',
     description:
       'Build strong Biology foundation in Class 9 for future NEET success. NCERT-based, interactive learning with expert faculty.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Class 9 Biology Foundation | Pre-NEET Preparation | Cerebrum Academy',
+    title: 'Class 9 Biology Foundation | Pre-NEET Preparation',
     description: 'Class 9 Biology foundation course with NEET-aligned curriculum.',
   },
 }

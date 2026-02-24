@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Ballygunge Kolkata | Ultra-Premium | Cerebrum',
+  title: 'Best NEET Coaching in Ballygunge Kolkata | Ultra-Premium',
   description:
     'Join #1 NEET coaching in Ballygunge, Kolkata. Expert faculty, proven 98% success rate, 695/720 top score. Ultra-premium coaching for elite families. Personalized batches & expert guidance. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'Ballygunge old money NEET coaching',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Ballygunge Kolkata | Ultra-Premium | Cerebrum',
+    title: 'Best NEET Coaching in Ballygunge Kolkata | Ultra-Premium',
     description:
       'Join #1 NEET coaching in Ballygunge, Kolkata. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-ballygunge-kolkata`,

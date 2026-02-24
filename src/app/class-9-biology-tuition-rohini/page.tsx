@@ -5,7 +5,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const rohiniLocation = CONTACT_INFO.centers.rohini
 
 export const metadata: Metadata = {
-  title: 'Class 9 Biology Tuition Rohini | NEET Foundation | Cerebrum Academy',
+  title: 'Class 9 Biology Tuition Rohini | NEET Foundation',
   description:
     'Best Class 9 biology tuition in Rohini, Delhi. DC Chauk center, NEET foundation, CBSE & ICSE. Small batches, experienced faculty. WhatsApp 88264-44334',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'class 9 biology dc chauk rohini',
   ],
   openGraph: {
-    title: 'Class 9 Biology Tuition Rohini | NEET Foundation | Cerebrum Academy',
+    title: 'Class 9 Biology Tuition Rohini | NEET Foundation',
     description: 'Expert Class 9 Biology tuition with NEET foundation for CBSE & ICSE boards in Rohini, Delhi.',
     url: 'https://cerebrumbiologyacademy.com/class-9-biology-tuition-rohini',
   },

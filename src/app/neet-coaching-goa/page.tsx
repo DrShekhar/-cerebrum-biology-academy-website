@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Goa | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Goa | Online Biology Classes',
   description:
     'Join #1 NEET coaching in Goa. Expert online classes for 9000+ Goa aspirants. High success rate, NRI-friendly, franchise-only competition. Personalized batches & doubt clearing. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NEET coaching Panaji Margao',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Goa | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Goa | Online Biology Classes',
     description:
       'Join #1 NEET coaching in Goa. Expert online classes for 9000+ aspirants. NRI-friendly, proven success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-goa`,

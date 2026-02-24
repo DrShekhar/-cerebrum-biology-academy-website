@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { StudyWithMePage } from '@/components/study-with-me/StudyWithMePage'
 
 export const metadata: Metadata = {
-  title: 'Study With Me OBS Overlay | Cerebrum Biology Academy',
+  title: 'Study With Me OBS Overlay',
   description:
     'OBS streaming overlay for NEET Biology study sessions. Clean 1920x1080 layout with timer and student count.',
   robots: 'noindex, nofollow',

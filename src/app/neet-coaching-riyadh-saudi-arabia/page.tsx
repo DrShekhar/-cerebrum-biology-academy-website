@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Riyadh | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Riyadh | 98% Success Rate',
   description: 'Join #1 NEET coaching for Indian students in Riyadh. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Timezone-friendly online classes.',
   keywords: [
     'NEET coaching Riyadh',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'online NEET preparation Riyadh',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Riyadh | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Riyadh | 98% Success Rate',
     description: 'Join #1 NEET coaching for Indian students in Riyadh. Expert AIIMS faculty. Book free demo!',
     url: `${BASE_URL}/neet-coaching-riyadh-saudi-arabia`,
     siteName: 'Cerebrum Biology Academy',

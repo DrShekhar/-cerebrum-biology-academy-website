@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'Tamil Nadu HSC Biology Coaching | NEET + Board Dual Prep | Cerebrum',
+  title: 'Tamil Nadu HSC Biology Coaching | NEET + Board Dual Prep',
   description: 'Expert Tamil Nadu HSC Biology coaching covering 12th std (Volume I & II) with integrated NEET preparation. Master TN State Board pattern with NEET cutoff optimization.',
   keywords: [
     'Tamil Nadu HSC biology',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Tamil Nadu biology classes',
   ],
   openGraph: {
-    title: 'Tamil Nadu HSC Biology Coaching | NEET + Board Dual Prep | Cerebrum',
+    title: 'Tamil Nadu HSC Biology Coaching | NEET + Board Dual Prep',
     description: 'Expert Tamil Nadu HSC Biology coaching covering 12th std with integrated NEET preparation.',
     url: `${BASE_URL}/boards/tamil-nadu-hsc`,
     siteName: 'Cerebrum Biology Academy',

@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Hiranandani Mumbai | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Hiranandani Mumbai | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Hiranandani, Powai. Expert AIIMS faculty, 98% success rate, 695/720 top score. Gated community, 15000+ families. Premium online coaching. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'gated community NEET coaching',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Hiranandani Mumbai | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Hiranandani Mumbai | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Hiranandani, Powai. Expert AIIMS faculty, 98% success rate. Premium coaching for gated community. Book free demo!',
     url: `${BASE_URL}/neet-coaching-hiranandani-mumbai`,

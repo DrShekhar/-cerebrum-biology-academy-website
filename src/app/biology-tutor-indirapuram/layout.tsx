@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Indirapuram | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Indirapuram | NEET Coaching',
   description:
     'Best Biology tutor in Indirapuram for NEET & Board exams. Expert coaching near Shipra Mall. AIIMS faculty guidance. Offline & online classes.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Indirapuram | Cerebrum Academy',
+    title: 'Biology Tutor in Indirapuram',
     description: 'Expert NEET Biology coaching in Indirapuram.',
   },
   alternates: {

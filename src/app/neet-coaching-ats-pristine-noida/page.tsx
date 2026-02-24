@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'online neet coaching sector 150',
   ],
   openGraph: {
-    title: 'NEET Coaching for ATS Pristine Sector 150 | Cerebrum Academy',
+    title: 'NEET Coaching for ATS Pristine Sector 150',
     description: 'Online NEET Biology classes for ATS Pristine residents. 45+ students enrolled.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-ats-pristine-noida',
   },

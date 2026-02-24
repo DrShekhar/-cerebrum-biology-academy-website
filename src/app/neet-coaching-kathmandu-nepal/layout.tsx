@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Kathmandu, Nepal | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Kathmandu, Nepal',
   description: 'Expert NEET coaching in Kathmandu, Nepal. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students.',
   keywords: 'NEET coaching Kathmandu, NEET exam center Kathmandu, best NEET classes Kathmandu, NEET preparation Nepal',
   openGraph: {

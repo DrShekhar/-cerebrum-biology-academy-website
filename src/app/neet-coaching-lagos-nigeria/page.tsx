@@ -3,7 +3,7 @@ import { PageContent } from './PageContent';
 import { LocalitySchema } from '@/components/seo/LocalitySchema';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Lagos, Nigeria | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Lagos, Nigeria',
   description: 'Expert NEET coaching in Lagos, Nigeria. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students. Enroll now!',
   keywords: 'NEET coaching Lagos, NEET exam center Lagos, best NEET classes Lagos, NEET preparation Nigeria',
   openGraph: {

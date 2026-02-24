@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Pattaya Thailand | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Pattaya Thailand | 98% Success Rate',
   description:
     'Join #1 NEET coaching for Indian students in Pattaya Thailand. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Timezone-friendly online classes. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'online NEET preparation Pattaya',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Pattaya Thailand | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Pattaya Thailand | 98% Success Rate',
     description: 'Join #1 NEET coaching for Indian students in Pattaya. Expert AIIMS faculty. Book free demo!',
     url: `${BASE_URL}/neet-coaching-pattaya-thailand`,
     siteName: 'Cerebrum Biology Academy',

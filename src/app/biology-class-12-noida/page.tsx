@@ -4,7 +4,7 @@ import { Phone, MessageCircle, CheckCircle, Trophy, Monitor, Building2, MapPin, 
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'Class 12 Biology Coaching in Noida 2026 | NEET + Board | Cerebrum Academy',
+  title: 'Class 12 Biology Coaching in Noida 2026 | NEET + Board',
   description:
     'Best Class 12 Biology coaching in Noida. NEET + Board exam integrated. AIIMS faculty, Rs 70,000/year. Gaur City, Sector 150, Greater Noida. 650+ NEET scorers. Free demo!',
   keywords: [

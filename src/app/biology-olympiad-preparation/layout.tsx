@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Olympiad Preparation | IBO, USABO, BBO Coaching | Cerebrum',
+  title: 'Biology Olympiad Preparation | IBO, USABO, BBO Coaching',
   description:
     'Expert Biology Olympiad preparation for IBO, USABO, BBO, and national olympiads. Structured curriculum, past paper practice, and mentorship from olympiad medalists.',
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Olympiad Preparation | Cerebrum Academy',
+    title: 'Biology Olympiad Preparation',
     description: 'Expert coaching for IBO, USABO, BBO. Mentorship from olympiad medalists.',
   },
   alternates: {

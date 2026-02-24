@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Kuwait City Kuwait | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Kuwait City Kuwait | 98% Success Rate',
   description:
     'Join #1 NEET coaching for Indian students in Kuwait City Kuwait. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Timezone-friendly online classes. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'online NEET preparation Kuwait City',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Kuwait City Kuwait | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Kuwait City Kuwait | 98% Success Rate',
     description: 'Join #1 NEET coaching for Indian students in Kuwait City. Expert AIIMS faculty. Book free demo!',
     url: `${BASE_URL}/neet-coaching-kuwait-city`,
     siteName: 'Cerebrum Biology Academy',

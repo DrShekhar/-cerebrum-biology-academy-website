@@ -6,7 +6,7 @@ import { FloatingCTA } from '@/components/common/FloatingCTA'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Biology Definitions for NEET | Important Terms & Concepts | Cerebrum Academy',
+  title: 'Biology Definitions for NEET | Important Terms & Concepts',
   description:
     'Master essential biology definitions for NEET 2025-26. Comprehensive glossary of 30+ important terms with examples, key points, and NEET relevance. Free study material by Dr. Shekhar C Singh.',
   keywords: [

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, CheckCircle, Clock, Award, ArrowRight, UserCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'YVS Institute Alternative in Faridabad | AIIMS Faculty NEET Biology | Cerebrum',
+  title: 'YVS Institute Alternative in Faridabad | AIIMS Faculty NEET Biology',
   description:
     "Looking for YVS Institute alternative in Faridabad? Cerebrum: Biology-specialist coaching, AIIMS faculty, 15-20 student batches vs YVS's 40-60. 98% success rate. Call 88264-44334!",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'best neet coaching faridabad',
   ],
   openGraph: {
-    title: 'YVS Institute Alternative in Faridabad | Cerebrum Biology Academy',
+    title: 'YVS Institute Alternative in Faridabad',
     description:
       'Looking for biology-specialist alternative to YVS? Get AIIMS faculty and small batches.',
     url: 'https://cerebrumbiologyacademy.com/yvs-alternative-faridabad',

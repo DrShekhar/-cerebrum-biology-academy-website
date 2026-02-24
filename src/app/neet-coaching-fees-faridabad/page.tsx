@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Fees in Faridabad 2026 | Compare Coaching Fees | Cerebrum',
+  title: 'NEET Coaching Fees in Faridabad 2026 | Compare Coaching Fees',
   description:
     'Compare NEET coaching fees in Faridabad 2026. Fee comparison of Aakash, Narayana, VMC, Velocity, YVS vs Cerebrum Biology Academy. Best value with small batches. Call 88264-44334!',
   keywords: [

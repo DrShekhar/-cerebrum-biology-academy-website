@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, GraduationCap, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Hillwoods Academy Gurugram | Cerebrum Academy',
+  title: 'NEET Coaching for Hillwoods Academy Gurugram',
   description:
     'Best NEET coaching for Hillwoods Academy Preet Vihar students. Just 12 min drive. CBSE-NEET aligned preparation. AIIMS faculty, 98% success rate. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'biology tuition hillwoods students',
   ],
   openGraph: {
-    title: 'NEET Coaching for Hillwoods Academy | Cerebrum Academy',
+    title: 'NEET Coaching for Hillwoods Academy',
     description: 'Specialized NEET coaching for Hillwoods Academy students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-hillwoods-academy-gurugram',
   },

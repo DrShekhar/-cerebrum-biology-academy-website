@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 export const revalidate = 86400
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Cerebrum Biology Academy',
+  title: 'Terms of Service',
   description:
     'Terms and conditions for using Cerebrum Biology Academy services and educational platform.',
 }

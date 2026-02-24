@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Ghaziabad | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Ghaziabad | NEET Coaching',
   description:
     'Best Biology tutor in Ghaziabad for NEET & Board exams. Expert coaching for Indirapuram, Vaishali, Kaushambi. AIIMS faculty guidance. Offline & online classes.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Ghaziabad | Cerebrum Academy',
+    title: 'Biology Tutor in Ghaziabad',
     description: 'Expert NEET Biology coaching in Ghaziabad.',
   },
   alternates: {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Dwarka | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Dwarka | NEET Coaching',
   description:
     'Best Biology tutor in Dwarka for NEET & Board exams. Expert coaching for Dwarka Sectors 1-23, Uttam Nagar, Nawada. AIIMS faculty guidance. Online classes available.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Dwarka | Cerebrum Academy',
+    title: 'Biology Tutor in Dwarka',
     description: 'Expert NEET Biology coaching in Dwarka Delhi.',
   },
   alternates: {

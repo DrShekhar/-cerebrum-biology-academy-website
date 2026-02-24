@@ -4,7 +4,7 @@ import { INDIAN_STATES, getAllStates } from '@/components/seo/StateSchema'
 import { MapPin, Users, GraduationCap, ArrowRight, Stethoscope } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching by State | All India Coverage | Cerebrum Academy',
+  title: 'NEET Biology Coaching by State | All India Coverage',
   description:
     'Find the best NEET Biology coaching for your state. Online classes available for Uttar Pradesh, Bihar, Rajasthan, Haryana, Madhya Pradesh, Punjab and all other states. 98% success rate.',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'best NEET coaching India',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching by State | Cerebrum Academy',
+    title: 'NEET Biology Coaching by State',
     description: 'Find NEET Biology coaching for your state. Online classes for all Indian states.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/states',

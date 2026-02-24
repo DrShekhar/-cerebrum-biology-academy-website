@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { LocalitySchema } from "@/components/seo/LocalitySchema";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching in Sydney, Australia | Cerebrum Biology Academy",
+  title: "NEET Coaching in Sydney, Australia",
   description: "Expert NEET coaching for Sydney, Australia students. 98% success rate with Dr. Shekhar C Singh. WhatsApp: 918826444334",
   keywords: "NEET coaching sydney, sydney NEET classes, medical coaching sydney, NEET australia",
   openGraph: {

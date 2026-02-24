@@ -172,7 +172,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `NEET Coaching Near ${data.name} ${data.area} | Online & Hybrid | Cerebrum`,
+    title: `NEET Coaching Near ${data.name} ${data.area} | Online & Hybrid`,
     description: `NEET Biology coaching for students near ${data.name}. Online classes from home + hybrid mode. ${data.studentCount} students enrolled. ${data.travelTime}. AIIMS faculty.`,
     keywords: [
       `neet coaching near ${data.name.toLowerCase()}`,
@@ -181,7 +181,7 @@ export async function generateMetadata({
       `online neet coaching ${data.area.toLowerCase()}`,
     ],
     openGraph: {
-      title: `NEET Coaching Near ${data.name} | Cerebrum Academy`,
+      title: `NEET Coaching Near ${data.name}`,
       description: `Online NEET Biology classes for students near ${data.name}. ${data.studentCount} students enrolled.`,
       url: `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${data.slug}`,
     },

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Curriculum Details - Complete Syllabus | Cerebrum Biology Academy',
+  title: 'NEET Biology Curriculum Details - Complete Syllabus',
   description:
     'Detailed curriculum and syllabus for all our NEET Biology courses. Chapter-wise breakdown, learning objectives, and study materials.',
   keywords: [

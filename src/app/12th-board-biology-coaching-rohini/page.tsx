@@ -5,7 +5,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const rohiniLocation = CONTACT_INFO.centers.rohini
 
 export const metadata: Metadata = {
-  title: '12th Board Biology Coaching Rohini | CBSE Board + NEET | Cerebrum Academy',
+  title: '12th Board Biology Coaching Rohini | CBSE Board + NEET',
   description:
     'Expert 12th board biology coaching in Rohini. Dual prep for CBSE boards + NEET. DC Chauk center, small batches. WhatsApp 88264-44334',
   keywords: [

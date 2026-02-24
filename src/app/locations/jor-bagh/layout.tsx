@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Jor Bagh | Near Safdarjung | Cerebrum Academy',
+  title: 'NEET Biology Coaching Jor Bagh | Near Safdarjung',
   description:
     'Premium NEET Biology coaching for Jor Bagh students. Ultra-elite locality near Safdarjung Tomb, Lodhi Gardens. Expert AIIMS faculty, personalized attention.',
   keywords: [
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Jor Bagh | Near Safdarjung | Cerebrum Academy',
+    title: 'NEET Biology Coaching Jor Bagh | Near Safdarjung',
     description: 'Premium NEET Biology coaching for Jor Bagh students. Ultra-elite locality near Safdarjung Tomb, Lodhi Gardens.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/jor-bagh',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Jor Bagh | Cerebrum Academy',
+    title: 'NEET Biology Coaching Jor Bagh',
     description:
       'Premium NEET Biology coaching for Jor Bagh students. Near Safdarjung, Lodhi Gardens.',
     type: 'website',

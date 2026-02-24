@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Book FREE NEET Biology Demo Class [Limited Spots] | Cerebrum',
+  title: 'Book FREE NEET Biology Demo Class [Limited Spots]',
   description:
     'Experience our teaching methodology in a FREE 45-min demo class. Learn from AIIMS-trained faculty with 67+ AIIMS selections. Only 5 slots/day - Book now!',
   keywords: [

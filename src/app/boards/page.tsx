@@ -15,7 +15,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Board Preparation | CBSE, ICSE, IGCSE, IB Biology Coaching | Cerebrum Biology Academy',
+  title: 'Board Preparation | CBSE, ICSE, IGCSE, IB Biology Coaching',
   description:
     'Expert Biology coaching for all major boards - CBSE, ICSE, IGCSE, IB, and State Boards. Score 90+ marks with our specialized board preparation programs.',
   keywords:

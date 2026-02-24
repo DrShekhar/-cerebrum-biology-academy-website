@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Media Coverage & Press - Cerebrum Biology Academy',
+  title: 'Media Coverage & Press',
   description:
     'Read about Cerebrum Biology Academy in the news. Media coverage, press releases, and recognition in education sector.',
   keywords: [

@@ -9,11 +9,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const areaName = area.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())
 
   return {
-    title: `NEET Coaching in ${areaName}, East Delhi | Cerebrum Biology Academy`,
+    title: `NEET Coaching in ${areaName}, East Delhi`,
     description: `Best NEET coaching in ${areaName}, East Delhi with AIIMS faculty. 98% success rate, small batches. Book FREE demo class today!`,
     keywords: `NEET coaching ${areaName}, biology coaching ${areaName} East Delhi, NEET classes ${areaName}, medical coaching East Delhi`,
     openGraph: {
-      title: `NEET Coaching in ${areaName} | Cerebrum Biology Academy`,
+      title: `NEET Coaching in ${areaName}`,
       description: `Top NEET coaching in ${areaName}, East Delhi. Expert AIIMS faculty, personalized attention, proven results.`,
       url: `https://cerebrumbiologyacademy.com/neet-coaching-east-delhi/${area}`,
       siteName: 'Cerebrum Biology Academy',
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in ${areaName}, East Delhi | Cerebrum Biology Academy',
+    title: 'NEET Coaching in ${areaName}, East Delhi',
     description: 'Best NEET coaching in ${areaName}, East Delhi with AIIMS faculty. 98% success rate, small batches.',
   },
   alternates: {

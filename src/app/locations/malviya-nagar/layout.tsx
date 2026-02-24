@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Malviya Nagar | Near Saket | Cerebrum Academy',
+  title: 'NEET Biology Coaching Malviya Nagar | Near Saket',
   description:
     'Best NEET Biology coaching for Malviya Nagar students. High student population area near Saket. AIIMS faculty, small batches, 98% success rate. Affordable fees with EMI options.',
   keywords: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Malviya Nagar | Near Saket | Cerebrum Academy',
+    title: 'NEET Biology Coaching Malviya Nagar | Near Saket',
     description: 'Best NEET Biology coaching for Malviya Nagar students. High student population area near Saket.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Malviya Nagar | Cerebrum Academy',
+    title: 'NEET Biology Coaching Malviya Nagar',
     description:
       'Best NEET Biology coaching for Malviya Nagar students. Near Saket Metro, affordable fees.',
     type: 'website',

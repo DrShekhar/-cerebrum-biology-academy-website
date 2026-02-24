@@ -100,7 +100,7 @@ export const metadata: Metadata = {
     'medical coaching north delhi',
   ],
   openGraph: {
-    title: 'NEET Coaching Near Kashmere Gate Metro | Cerebrum Biology Academy',
+    title: 'NEET Coaching Near Kashmere Gate Metro',
     description: `Online & Offline NEET Biology classes for students near Kashmere Gate Metro. ${metroData.studentCount} students from North Delhi enrolled. Red, Yellow & Violet Line connectivity.`,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-kashmere-gate-metro',
   },

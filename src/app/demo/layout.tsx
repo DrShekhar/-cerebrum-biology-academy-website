@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Book Free Demo Class | NEET Biology Trial Lesson | Cerebrum Academy',
+  title: 'Book Free Demo Class | NEET Biology Trial Lesson',
   description:
     'Book your free NEET Biology demo class with AIIMS faculty. Experience our teaching methodology, curriculum, and student support. No obligation. Available online & offline!',
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free NEET Biology Demo Class | Cerebrum Academy',
+    title: 'Free NEET Biology Demo Class',
     description: 'Experience AIIMS faculty teaching, get curriculum overview, no obligation',
     images: ['/og-image.jpg'],
   },

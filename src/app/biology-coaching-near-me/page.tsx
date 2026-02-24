@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { BiologyCoachingNearMeClient } from './BiologyCoachingNearMeClient'
 
 export const metadata: Metadata = {
-  title: 'Biology Coaching Near Me | NEET Biology Classes Delhi NCR | Cerebrum Academy',
+  title: 'Biology Coaching Near Me | NEET Biology Classes Delhi NCR',
   description:
     'Find the best biology coaching near you for NEET preparation. Expert AIIMS faculty in Delhi, Noida, Gurgaon, Ghaziabad, Faridabad. 98% success rate. Book FREE demo today!',
   keywords:

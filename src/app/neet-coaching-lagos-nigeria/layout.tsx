@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Lagos, Nigeria | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Lagos, Nigeria',
   description: 'Expert NEET coaching in Lagos, Nigeria. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students.',
   keywords: 'NEET coaching Lagos, NEET exam center Lagos, best NEET classes Lagos, NEET preparation Nigeria',
   openGraph: {

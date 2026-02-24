@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Free NEET Biology Resources | Notes, Tests & Study Material | Cerebrum',
+  title: 'Free NEET Biology Resources | Notes, Tests & Study Material',
   description:
     'Access free NEET Biology resources: chapter notes, practice tests, previous year papers, video lectures, mock tests. Download study material for Class 11, 12 & droppers.',
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free NEET Biology Resources | Cerebrum Academy',
+    title: 'Free NEET Biology Resources',
     description: 'Free notes, previous papers, mock tests, study material - download now',
     images: ['/og-image.jpg'],
   },

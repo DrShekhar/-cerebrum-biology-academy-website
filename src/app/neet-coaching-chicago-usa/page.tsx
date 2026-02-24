@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import NEETCoachingPageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Chicago, USA - 98% Success Rate | Cerebrum Academy',
+  title: 'NEET Coaching in Chicago, USA - 98% Success Rate',
   description: 'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
   keywords: [
     'NEET coaching in Chicago',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'NEET online coaching USA'
   ],
   openGraph: {
-    title: 'NEET Coaching in Chicago, USA - 98% Success Rate | Cerebrum Academy',
+    title: 'NEET Coaching in Chicago, USA - 98% Success Rate',
     description: 'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
     type: 'website'
   },

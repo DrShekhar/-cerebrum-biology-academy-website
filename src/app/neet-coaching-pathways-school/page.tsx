@@ -6,7 +6,7 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const school = 'Pathways School'
 
 export const metadata: Metadata = {
-  title: `NEET Coaching for ${school} Students | Cerebrum Biology Academy`,
+  title: `NEET Coaching for ${school} Students`,
   description: `Specialized NEET Biology coaching for ${school} (IB World School) students in Noida/Gurgaon. IB curriculum to NEET bridge program with expert faculty.`,
   keywords: [
     'NEET coaching Pathways School',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'NEET for international school students',
   ],
   openGraph: {
-    title: `NEET Coaching for ${school} Students | Cerebrum Biology Academy`,
+    title: `NEET Coaching for ${school} Students`,
     description: `Expert NEET coaching for ${school} students with IB curriculum integration.`,
     url: `${BASE_URL}/neet-coaching-pathways-school`,
     siteName: 'Cerebrum Biology Academy',

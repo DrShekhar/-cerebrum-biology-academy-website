@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Newspaper, Calendar, Quote, Award, Users, TrendingUp, BookOpen } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Media Mentions & Press Coverage | Cerebrum Biology Academy',
+  title: 'Media Mentions & Press Coverage',
   description:
     'Cerebrum Biology Academy featured in Education Times, Career360, Hindustan Times. Read press coverage about our NEET coaching excellence and student success stories.',
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'cerebrum academy reviews',
   ],
   openGraph: {
-    title: 'Media Mentions & Press Coverage | Cerebrum Biology Academy',
+    title: 'Media Mentions & Press Coverage',
     description: 'Featured in leading education publications. Read about our NEET success stories.',
     url: 'https://cerebrumbiologyacademy.com/media-mentions-press-coverage',
   },

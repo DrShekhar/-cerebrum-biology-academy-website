@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Dilshad Garden | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Dilshad Garden | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Dilshad Garden Delhi. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Growing medical aspirant hub. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation Dilshad Garden',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Dilshad Garden | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Dilshad Garden | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Dilshad Garden Delhi. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-dilshad-garden-delhi`,

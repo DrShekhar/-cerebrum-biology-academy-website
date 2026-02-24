@@ -4,7 +4,7 @@ import PageContent from './PageContent'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'Rajasthan Board (RBSE) Biology to NEET | Cerebrum Biology Academy',
+  title: 'Rajasthan Board (RBSE) Biology to NEET',
   description: 'Expert RBSE Biology coaching for Rajasthan students. NEET-integrated preparation from Kota, Jaipur, Jodhpur and across Rajasthan.',
   keywords: [
     'Rajasthan board biology',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'RBSE to NEET bridge',
   ],
   openGraph: {
-    title: 'Rajasthan Board (RBSE) Biology to NEET | Cerebrum Biology Academy',
+    title: 'Rajasthan Board (RBSE) Biology to NEET',
     description: 'Expert RBSE Biology coaching for Rajasthan students with seamless NEET integration.',
     url: `${BASE_URL}/boards/rajasthan-board`,
     siteName: 'Cerebrum Biology Academy',

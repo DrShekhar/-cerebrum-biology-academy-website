@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Gurugram | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Gurugram | NEET Coaching',
   description:
     'Best Biology tutor in Gurugram for NEET & Board exams. Expert coaching for DLF, Sohna Road, Golf Course Road. AIIMS faculty guidance. Offline & online classes.',
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Gurugram | Cerebrum Academy',
+    title: 'Biology Tutor in Gurugram',
     description: 'Expert NEET Biology coaching in Gurugram.',
     images: [
       `https://cerebrumbiologyacademy.com/api/og?title=${encodeURIComponent('Best Biology Tutor')}&subtitle=${encodeURIComponent('NEET & Board Exam Coaching')}&locality=${encodeURIComponent('Gurugram')}`,

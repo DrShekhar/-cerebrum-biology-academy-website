@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Coimbatore | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Coimbatore | Online Biology Classes',
   description:
     'Join Cerebrum for premium online NEET coaching in Coimbatore. 18,000+ aspirants, expert biology classes, near Coimbatore Medical College & PSG IMS. 98% success rate. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NEET online classes TN',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Coimbatore | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Coimbatore | Online Biology Classes',
     description:
       'Premium online NEET coaching in Coimbatore. 18,000+ aspirants, expert faculty, near medical colleges. 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-coimbatore`,

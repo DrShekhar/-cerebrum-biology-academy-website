@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, CheckCircle, Car, ArrowRight, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Sector 57 Gurgaon | 5 Min Drive | Cerebrum Academy',
+  title: 'NEET Coaching Sector 57 Gurgaon | 5 Min Drive',
   description:
     'Best NEET coaching near Sector 57 Gurgaon. Just 5 min drive to M2K Sector 51. Premium residential area with easy access. AIIMS faculty, 98% success. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'neet coaching near sector 57',
   ],
   openGraph: {
-    title: 'NEET Coaching Sector 57 Gurgaon | Cerebrum Biology Academy',
+    title: 'NEET Coaching Sector 57 Gurgaon',
     description: 'Best NEET coaching near Sector 57. Just 5 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurgaon-sector-57',
   },

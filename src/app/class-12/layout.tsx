@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Class 12 NEET Biology Coaching | Board + NEET Preparation | Cerebrum Academy',
+  title: 'Class 12 NEET Biology Coaching | Board + NEET Preparation',
   description:
     'Expert Class 12 Biology coaching for CBSE boards and NEET preparation. Integrated curriculum by AIIMS faculty. Master Biology for both board exams and NEET 2025.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Class 12 NEET Biology Coaching | Board + NEET Preparation | Cerebrum Academy',
+    title: 'Class 12 NEET Biology Coaching | Board + NEET Preparation',
     description: 'Expert Class 12 Biology coaching for CBSE boards and NEET preparation. Integrated curriculum by AIIMS faculty.',
   },
 }

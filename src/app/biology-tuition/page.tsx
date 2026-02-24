@@ -18,7 +18,7 @@ import {
 import { Button } from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Biology Tuition | Best NEET & Board Biology Classes | Cerebrum Academy',
+  title: 'Biology Tuition | Best NEET & Board Biology Classes',
   description:
     'Looking for biology tuition? Cerebrum Biology Academy offers expert biology coaching for Class 9, 10, 11, 12, NEET & Board exams. AIIMS faculty, 98% success rate. Offline classes in Delhi NCR + Online across India.',
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     'biology tuition fees',
   ],
   openGraph: {
-    title: 'Biology Tuition | Best NEET & Board Biology Classes | Cerebrum Academy',
+    title: 'Biology Tuition | Best NEET & Board Biology Classes',
     description:
       'Expert biology tuition for Class 9-12, NEET & Board exams. AIIMS faculty, small batches, 98% success rate. Offline in Delhi NCR + Online pan-India.',
     url: 'https://cerebrumbiologyacademy.com/biology-tuition',

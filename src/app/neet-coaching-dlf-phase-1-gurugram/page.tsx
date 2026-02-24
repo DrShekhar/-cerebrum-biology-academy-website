@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, CheckCircle, Car, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for DLF Phase 1 Gurugram | 15 Min from Your Home | Cerebrum',
+  title: 'NEET Coaching for DLF Phase 1 Gurugram | 15 Min from Your Home',
   description:
     'Best NEET coaching near DLF Phase 1 Gurugram. Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Evening & weekend batches for DLF residents. Call 88264-44334!',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'biology tuition dlf gurgaon',
   ],
   openGraph: {
-    title: 'NEET Coaching for DLF Phase 1 Gurugram | Cerebrum Biology Academy',
+    title: 'NEET Coaching for DLF Phase 1 Gurugram',
     description: 'Best NEET coaching near DLF Phase 1. Just 15 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dlf-phase-1-gurugram',
   },

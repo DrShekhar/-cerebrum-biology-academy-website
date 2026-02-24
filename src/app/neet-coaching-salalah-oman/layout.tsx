@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Salalah, Oman - Cerebrum Biology Academy',
+  title: 'NEET Coaching in Salalah, Oman',
   description: 'Expert NEET coaching in Salalah, Oman. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
   keywords: 'NEET coaching Salalah, NEET classes Oman, biology tuition, medical entrance preparation',
   openGraph: {
-    title: 'NEET Coaching in Salalah, Oman - Cerebrum Biology Academy',
+    title: 'NEET Coaching in Salalah, Oman',
     description: 'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Oman students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-salalah-oman',
     siteName: 'Cerebrum Biology Academy',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Salalah - Cerebrum Biology Academy',
+    title: 'NEET Coaching in Salalah',
     description: 'Expert NEET coaching with 98% success rate led by Dr. Shekhar C Singh.',
     images: ['https://cerebrumbiologyacademy.com/og-neet-coaching-salalah-oman.jpg'],
   },

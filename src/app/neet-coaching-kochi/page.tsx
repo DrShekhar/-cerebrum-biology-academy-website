@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Kochi | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Kochi | Online Biology Classes',
   description:
     'Premium online NEET coaching in Kochi for Kerala families. 15,000+ aspirants, expert biology classes, near Amrita KUHS colleges. 98% success rate. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NEET online classes Kochi',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Kochi | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Kochi | Online Biology Classes',
     description:
       'Premium online NEET coaching in Kochi. 15,000+ aspirants, expert faculty, near medical colleges. 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-kochi`,

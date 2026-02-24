@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Admissions Open 2025 - NEET Biology Coaching | Cerebrum Biology Academy',
+  title: 'Admissions Open 2025 - NEET Biology Coaching',
   description:
     'Enroll in Cerebrum Biology Academy for NEET 2025-26. Limited seats available for Class 11, 12 & Dropper batches. 98% success rate, AIIMS-trained faculty. Apply now!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Admissions Open 2025 | Cerebrum Biology Academy',
+    title: 'NEET Admissions Open 2025',
     description:
       'Limited seats! 98% success rate. AIIMS faculty. Apply now for Class 11, 12 & Dropper batches.',
   },

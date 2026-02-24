@@ -3,7 +3,7 @@
 import AIMonitoringDashboard from '@/components/ai/AIMonitoringDashboard'
 
 export const metadata = {
-  title: 'AI Monitoring Dashboard | Cerebrum Biology Academy Admin',
+  title: 'AI Monitoring Dashboard Admin',
   description:
     'Real-time AI performance monitoring, cost tracking, and analytics for administrators',
 }

@@ -11,7 +11,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best Tamil Nadu Biology Tuition Online | 98% Success Rate | Cerebrum',
+  title: 'Best Tamil Nadu Biology Tuition Online | 98% Success Rate',
   description: 'Expert online biology tuition for Tamil Nadu State Board students preparing for NEET. AIIMS faculty, 98% success rate, small batches (10-15). Join 1,500+ students across Chennai, Coimbatore, Madurai, Vellore.',
   keywords: [
     'Tamil Nadu biology tuition',

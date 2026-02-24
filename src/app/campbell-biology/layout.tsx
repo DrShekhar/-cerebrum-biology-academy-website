@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/campbell-biology/',
   },
   openGraph: {
-    title: 'Campbell Biology Online Coaching | Cerebrum Academy',
+    title: 'Campbell Biology Online Coaching',
     description:
       'Master Campbell Biology with expert tutoring. All 56 chapters covered for Olympiad, NEET, MCAT, AP & IB Biology.',
     type: 'website',

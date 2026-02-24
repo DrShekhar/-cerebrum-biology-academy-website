@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, CheckCircle, Car, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Sushant Lok Gurugram | 15 Min Drive | Cerebrum Academy',
+  title: 'NEET Coaching Sushant Lok Gurugram | 15 Min Drive',
   description:
     'Best NEET coaching near Sushant Lok Gurugram. Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Sushant Lok 1, 2, 3 residents. Call 88264-44334!',
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'biology tuition sushant lok gurgaon',
   ],
   openGraph: {
-    title: 'NEET Coaching Sushant Lok Gurugram | Cerebrum Biology Academy',
+    title: 'NEET Coaching Sushant Lok Gurugram',
     description: 'Best NEET coaching near Sushant Lok. Just 15 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-sushant-lok-gurugram',
   },

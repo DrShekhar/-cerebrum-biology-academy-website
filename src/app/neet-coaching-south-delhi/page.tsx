@@ -14,7 +14,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: `Best NEET Coaching in South Delhi | ${CEREBRUM_METRICS.successRateText} Success Rate | Cerebrum Academy`,
+  title: `Best NEET Coaching in South Delhi | ${CEREBRUM_METRICS.successRateText} Success Rate`,
   description: `Join South Delhi's #1 NEET Biology coaching. Hauz Khas, GK, Defence Colony, Vasant Vihar. Expert AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate, ${CEREBRUM_METRICS.topScoreText} top score. Book free demo!`,
   keywords: [
     'NEET coaching South Delhi',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'biology coaching South Delhi',
   ],
   openGraph: {
-    title: `Best NEET Coaching in South Delhi | ${CEREBRUM_METRICS.successRateText} Success Rate | Cerebrum Academy`,
+    title: `Best NEET Coaching in South Delhi | ${CEREBRUM_METRICS.successRateText} Success Rate`,
     description: `Join South Delhi's #1 NEET Biology coaching. Expert AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate. Hauz Khas, GK, Defence Colony, Vasant Vihar. Book free demo!`,
     url: `${BASE_URL}/neet-coaching-south-delhi`,
     siteName: 'Cerebrum Biology Academy',

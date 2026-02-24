@@ -4,7 +4,7 @@ import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, B
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'Online NEET Classes for Noida Students | Live & Hybrid Mode | Cerebrum',
+  title: 'Online NEET Classes for Noida Students | Live & Hybrid Mode',
   description:
     'Online NEET Biology classes for Noida & Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at South Extension. 1200+ students. Call 88264-44334!',
   keywords: [

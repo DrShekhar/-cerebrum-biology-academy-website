@@ -3,13 +3,13 @@ import PageContent from "./PageContent";
 import LocalitySchema from "@/components/seo/LocalitySchema";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching for NRI Students in Saudi Arabia | Cerebrum Biology Academy",
+  title: "NEET Coaching for NRI Students in Saudi Arabia",
   description: "Expert NEET coaching for NRI students in Saudi Arabia. 42 CBSE schools, 2.6M Indians. IST-friendly evening batches with 98% success rate.",
   alternates: {
     canonical: "https://cerebrumbiologyacademy.com/neet-coaching-nri-saudi-arabia",
   },
   openGraph: {
-    title: "NEET Coaching for NRI Students in Saudi Arabia | Cerebrum Biology Academy",
+    title: "NEET Coaching for NRI Students in Saudi Arabia",
     description: "Expert NEET coaching for NRI students in Saudi Arabia. 42 CBSE schools, 2.6M Indians. IST-friendly evening batches with 98% success rate.",
     url: "https://cerebrumbiologyacademy.com/neet-coaching-nri-saudi-arabia",
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEET Coaching for NRI Students in Saudi Arabia | Cerebrum Biology Academy",
+    title: "NEET Coaching for NRI Students in Saudi Arabia",
     description: "Expert NEET coaching for NRI students in Saudi Arabia. 42 CBSE schools, 2.6M Indians. IST-friendly evening batches with 98% success rate.",
     creator: "@cerebrumbiology",
     images: ["https://cerebrumbiologyacademy.com/og-neet-coaching-saudi-arabia.jpg"],

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, Calendar, CheckCircle, Trophy, GraduationCap, ArrowRight, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: '2 Year NEET Course Gurugram 2026 | Class 11-12 Integrated | Cerebrum',
+  title: '2 Year NEET Course Gurugram 2026 | Class 11-12 Integrated',
   description:
     'Join 2-year NEET course in Gurugram from Class 11. Complete foundation + advanced coaching. M2K Sector 51. Best results with 98% success rate. Call 88264-44334!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'neet biology 2 year course',
   ],
   openGraph: {
-    title: '2 Year NEET Course Gurugram 2026 | Cerebrum Biology Academy',
+    title: '2 Year NEET Course Gurugram 2026',
     description: 'Start early, succeed confidently! 2-year integrated NEET biology program from Class 11.',
     url: 'https://cerebrumbiologyacademy.com/2-year-neet-course-gurugram',
   },

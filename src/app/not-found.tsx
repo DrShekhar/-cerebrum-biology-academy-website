@@ -17,7 +17,7 @@ import Link from 'next/link'
 import { Search, ArrowRight, Home, BookOpen, Phone, Gift } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: '404 - Page Not Found | Cerebrum Biology Academy',
+  title: '404 - Page Not Found',
   description:
     'The page you are looking for could not be found. Explore our NEET coaching, courses, and biology resources.',
   robots: 'noindex, follow',

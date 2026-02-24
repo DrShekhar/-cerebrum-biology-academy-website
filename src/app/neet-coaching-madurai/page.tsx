@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Madurai | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Madurai | Online Biology Classes',
   description:
     'Premium online NEET coaching in Madurai for Tamil Nadu medical families. 10,000+ aspirants, expert biology classes, near Madurai Medical College. 98% success rate. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'biology coaching KK Nagar',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Madurai | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Madurai | Online Biology Classes',
     description:
       'Premium online NEET coaching in Madurai. 10,000+ aspirants, expert faculty, near medical colleges. 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-madurai`,

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching for NRI Students in USA | Cerebrum Biology Academy",
+  title: "NEET Coaching for NRI Students in USA",
   description: "AP Biology to NEET bridge coaching for NRI students in USA. 2 CBSE schools, 5.16M Indians. Pre-med pathway with 98% success rate.",
   openGraph: {
-    title: "NEET Coaching for NRI Students in USA | Cerebrum Biology Academy",
+    title: "NEET Coaching for NRI Students in USA",
     description: "AP Biology to NEET bridge coaching for NRI students in USA. 2 CBSE schools, 5.16M Indians. Pre-med pathway with 98% success rate.",
     url: "https://cerebrumbiologyacademy.com/neet-coaching-nri-usa",
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEET Coaching for NRI Students in USA | Cerebrum Biology Academy",
+    title: "NEET Coaching for NRI Students in USA",
     description: "AP Biology to NEET bridge coaching for NRI students in USA. 2 CBSE schools, 5.16M Indians. Pre-med pathway with 98% success rate.",
     creator: "@cerebrumbiology",
     site: "@cerebrumbiology",

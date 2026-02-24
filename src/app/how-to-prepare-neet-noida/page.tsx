@@ -22,7 +22,7 @@ import {
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export const metadata: Metadata = {
-  title: 'How to Prepare for NEET in Noida | Step-by-Step Guide 2026 | Cerebrum',
+  title: 'How to Prepare for NEET in Noida | Step-by-Step Guide 2026',
   description:
     'Complete guide on how to prepare for NEET from Noida. 5-step strategy by AIIMS faculty Dr. Shekhar Singh. Score 650+ with our proven methodology. Free demo class available.',
   keywords: [

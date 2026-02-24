@@ -15,7 +15,7 @@ import {
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Verify Certificate | Cerebrum Biology Academy',
+  title: 'Verify Certificate',
   description: 'Verify the authenticity of a Cerebrum Biology Academy certificate',
 }
 

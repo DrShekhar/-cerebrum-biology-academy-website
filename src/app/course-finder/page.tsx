@@ -3,7 +3,7 @@ import { EnhancedCourseFinderQuiz } from '@/components/conversion/EnhancedCourse
 import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Course Finder Quiz - Find Your Perfect NEET Biology Course | Cerebrum Biology Academy',
+  title: 'Course Finder Quiz - Find Your Perfect NEET Biology Course',
   description:
     'Take our smart quiz to find the perfect NEET Biology course based on your class, experience, and study schedule. Get personalized recommendations in 60 seconds.',
   keywords: [

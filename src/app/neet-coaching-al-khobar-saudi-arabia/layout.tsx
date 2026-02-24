@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Al Khobar, Saudi Arabia - Cerebrum Biology Academy',
+  title: 'NEET Coaching in Al Khobar, Saudi Arabia',
   description: 'Expert NEET coaching in Al Khobar, Saudi Arabia. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
   keywords: 'NEET coaching Al Khobar, NEET classes Saudi Arabia, biology tuition, medical entrance preparation',
   openGraph: {
-    title: 'NEET Coaching in Al Khobar, Saudi Arabia - Cerebrum Biology Academy',
+    title: 'NEET Coaching in Al Khobar, Saudi Arabia',
     description: 'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Saudi Arabia students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-al-khobar-saudi-arabia',
     siteName: 'Cerebrum Biology Academy',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Al Khobar - Cerebrum Biology Academy',
+    title: 'NEET Coaching in Al Khobar',
     description: 'Expert NEET coaching with 98% success rate led by Dr. Shekhar C Singh.',
     images: ['https://cerebrumbiologyacademy.com/og-neet-coaching-al-khobar-saudi-arabia.jpg'],
   },

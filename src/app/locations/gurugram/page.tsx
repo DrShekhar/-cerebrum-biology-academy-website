@@ -6,7 +6,7 @@ import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metri
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy Center',
+  title: 'NEET Biology Coaching in Gurugram Center',
   description:
     'Visit Cerebrum Biology Academy Gurugram center at M2K Corporate Park, Sector 51. AIIMS faculty, small batches of 15 students, 90% NEET success rate. Near HUDA City Centre Metro.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'Cerebrum Biology Academy Gurugram',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching in Gurugram',
     description:
       'Premier NEET Biology coaching at M2K Corporate Park, Sector 51, Gurugram. AIIMS faculty, 15-student batches, 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/locations/gurugram',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy',
+    title: 'NEET Biology Coaching in Gurugram',
     description:
       'Premier NEET Biology coaching at Sector 51, Gurugram. AIIMS faculty, small batches, 98% success rate.',
   },

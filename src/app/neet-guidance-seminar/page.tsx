@@ -9,7 +9,7 @@ import { SeminarFloatingCTA } from '@/components/seminar/SeminarFloatingCTA'
 import { SEMINAR_CONFIG } from '@/lib/seminar/config'
 
 export const metadata: Metadata = {
-  title: `${SEMINAR_CONFIG.title} | Cerebrum Biology Academy`,
+  title: `${SEMINAR_CONFIG.title}`,
   description: SEMINAR_CONFIG.description,
   keywords: [
     'NEET guidance seminar',

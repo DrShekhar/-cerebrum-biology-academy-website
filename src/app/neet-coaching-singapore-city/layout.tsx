@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Singapore City, Singapore | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Singapore City, Singapore',
   description: 'Expert NEET coaching in Singapore City, Singapore. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students.',
   keywords: 'NEET coaching Singapore City, NEET exam center Singapore City, best NEET classes Singapore City, NEET preparation Singapore',
   openGraph: {

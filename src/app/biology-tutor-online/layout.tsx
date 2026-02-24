@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor Online | Online Biology Tuition - Cerebrum Biology Academy',
+  title: 'Biology Tutor Online | Online Biology Tuition',
   description:
     'Find the best biology tutor online for personalized learning. Online biology tuition with 1-on-1 mentoring, flexible scheduling, progress tracking. CBSE, ICSE, NEET preparation. Book free demo!',
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor Online | Cerebrum Biology Academy',
+    title: 'Biology Tutor Online',
     description:
       'Personalized online biology tuition with expert tutors. Flexible scheduling, progress tracking.',
     images: ['https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=630&fit=crop'],

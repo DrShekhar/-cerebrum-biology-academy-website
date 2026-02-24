@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'CBSE Biology Coaching | Class 11-12 NCERT | NEET Preparation | Cerebrum Biology Academy',
+  title: 'CBSE Biology Coaching | Class 11-12 NCERT | NEET Preparation',
   description:
     'Expert CBSE Biology coaching for Classes 11-12. NCERT-focused teaching, board exam excellence, and integrated NEET preparation. Score 90+ marks!',
   keywords:

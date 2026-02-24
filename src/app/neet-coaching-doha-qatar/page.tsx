@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Doha | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Doha | 98% Success Rate',
   description: 'Join #1 NEET coaching for Indian students in Doha. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Serving DPS Doha and international schools.',
   keywords: [
     'NEET coaching Doha',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'online NEET preparation Doha',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Doha | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Doha | 98% Success Rate',
     description: 'Join #1 NEET coaching for Indian students in Doha. Expert AIIMS faculty. Book free demo!',
     url: `${BASE_URL}/neet-coaching-doha-qatar`,
     siteName: 'Cerebrum Biology Academy',

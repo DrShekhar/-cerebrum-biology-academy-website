@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!definition) {
     return {
-      title: 'Definition Not Found | Cerebrum Biology Academy',
+      title: 'Definition Not Found',
       description: 'The requested biology definition could not be found.',
     }
   }

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Success Stories [67+ AIIMS Selections, 98% Success] | Cerebrum',
+  title: 'NEET Success Stories [67+ AIIMS Selections, 98% Success]',
   description:
     'Real student reviews: 67+ AIIMS selections, 98% success rate, 67+ AIIMS selections. See transformation stories & join the success club today!',
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Success Testimonials | Cerebrum Biology Academy',
+    title: 'NEET Success Testimonials',
     description:
       '1,50,000+ students trained, 98% success rate, student transformation stories',
     images: ['/og-image.jpg'],

@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Juhu Mumbai | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Juhu Mumbai | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Juhu Mumbai. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Premium online classes for celebrity families. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'premium NEET coaching Mumbai',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Juhu Mumbai | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Juhu Mumbai | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Juhu Mumbai. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-juhu-mumbai`,

@@ -3,7 +3,7 @@ import BestNEETBiologyCoachingContent from './BestNEETBiologyCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Biology Coaching 2026 — Honest Comparison | Cerebrum Academy',
+  title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
   description: 'Compare the best NEET biology coaching institutes in India. Cerebrum vs Allen vs Aakash vs Physics Wallah. AIIMS faculty, small batches, 98% success rate. Book FREE demo.',
   keywords: 'best neet biology coaching, neet biology coaching comparison, cerebrum vs allen, neet coaching fees, best biology coaching for neet, neet biology coaching online',
   alternates: {

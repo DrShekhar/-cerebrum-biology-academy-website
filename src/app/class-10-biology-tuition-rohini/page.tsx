@@ -5,7 +5,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const rohiniLocation = CONTACT_INFO.centers.rohini
 
 export const metadata: Metadata = {
-  title: 'Class 10 Biology Tuition Rohini | Board + NEET Foundation | Cerebrum Academy',
+  title: 'Class 10 Biology Tuition Rohini | Board + NEET Foundation',
   description:
     'Best Class 10 biology tuition in Rohini, Delhi. DC Chauk center, Board + NEET dual prep, CBSE & ICSE. Small batches. WhatsApp 88264-44334',
   keywords: [

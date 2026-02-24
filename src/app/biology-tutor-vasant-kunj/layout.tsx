@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Vasant Kunj | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Vasant Kunj | NEET Coaching',
   description:
     'Best Biology tutor in Vasant Kunj for NEET & Board exams. Expert coaching for Vasant Kunj, Vasant Vihar, RK Puram. AIIMS faculty guidance. Online classes available.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Vasant Kunj | Cerebrum Academy',
+    title: 'Biology Tutor in Vasant Kunj',
     description: 'Expert NEET Biology coaching in Vasant Kunj Delhi.',
   },
   alternates: {

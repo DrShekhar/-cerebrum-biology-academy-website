@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, Train, Building, Users, ShoppingBag } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching HUDA City Centre Gurugram | 15 Min | Cerebrum Academy',
+  title: 'NEET Coaching HUDA City Centre Gurugram | 15 Min',
   description:
     'Best NEET coaching near HUDA City Centre Gurugram. Just 15 min drive to M2K Sector 51. Yellow Line terminus, major commercial hub. AIIMS faculty, 98% success. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'biology tuition huda city centre',
   ],
   openGraph: {
-    title: 'NEET Coaching HUDA City Centre Gurugram | Cerebrum Biology Academy',
+    title: 'NEET Coaching HUDA City Centre Gurugram',
     description: 'Best NEET coaching near HUDA City Centre. Yellow Line terminus.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-huda-city-centre-gurugram',
   },

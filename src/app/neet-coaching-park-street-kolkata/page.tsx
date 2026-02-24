@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Park Street Kolkata | Central Premium | Cerebrum',
+  title: 'Best NEET Coaching in Park Street Kolkata | Central Premium',
   description:
     'Join #1 NEET coaching in Park Street, Kolkata. Expert faculty, proven 98% success rate, 695/720 top score. Premium coaching for central Kolkata families. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation premium central Kolkata',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Park Street Kolkata | Central Premium | Cerebrum',
+    title: 'Best NEET Coaching in Park Street Kolkata | Central Premium',
     description:
       'Join #1 NEET coaching in Park Street, Kolkata. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-park-street-kolkata`,

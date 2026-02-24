@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Civil Lines Delhi | Best Biology Classes | Cerebrum Academy',
+  title: 'NEET Coaching Civil Lines Delhi | Best Biology Classes',
   description: `Best NEET coaching in Civil Lines Delhi. Ultra-premium area, nearest to Rohini via Yellow Line Metro. AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate, ${CEREBRUM_METRICS.topScoreText} top score. WhatsApp 88264-44334!`,
   keywords: [
     'NEET coaching civil lines',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'NEET coaching near Mittal Rishi Apartments',
   ],
   openGraph: {
-    title: 'NEET Coaching Civil Lines Delhi | Best Biology Classes | Cerebrum Academy',
+    title: 'NEET Coaching Civil Lines Delhi | Best Biology Classes',
     description: `Best NEET coaching in Civil Lines Delhi. Ultra-premium area, nearest to Rohini via Yellow Line Metro. AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate. WhatsApp 88264-44334!`,
     url: `${BASE_URL}/neet-coaching-civil-lines-delhi`,
     siteName: 'Cerebrum Biology Academy',

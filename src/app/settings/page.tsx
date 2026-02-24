@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Settings - Cerebrum Biology Academy',
+  title: 'Settings',
   description:
     'Manage your app settings, notifications, and preferences for the best NEET Biology learning experience.',
   robots: 'noindex, nofollow',

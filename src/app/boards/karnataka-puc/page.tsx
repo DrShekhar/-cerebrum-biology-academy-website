@@ -4,7 +4,7 @@ import PageContent from './PageContent'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'Karnataka PUC Biology to NEET | Cerebrum Biology Academy',
+  title: 'Karnataka PUC Biology to NEET',
   description: 'Expert Karnataka PUC Biology coaching with seamless NEET integration. Master KCET & NEET from Pre-University Course curriculum.',
   keywords: [
     'Karnataka PUC biology coaching',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'Karnataka state board coaching',
   ],
   openGraph: {
-    title: 'Karnataka PUC Biology to NEET | Cerebrum Biology Academy',
+    title: 'Karnataka PUC Biology to NEET',
     description:
       'Expert Karnataka PUC Biology coaching with seamless NEET integration. Master KCET & NEET from Pre-University Course curriculum.',
     url: `${BASE_URL}/boards/karnataka-puc`,

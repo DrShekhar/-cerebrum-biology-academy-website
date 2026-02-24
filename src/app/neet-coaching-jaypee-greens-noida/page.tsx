@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'online neet coaching jaypee greens',
   ],
   openGraph: {
-    title: 'NEET Coaching for Jaypee Greens Sector 128 | Cerebrum Academy',
+    title: 'NEET Coaching for Jaypee Greens Sector 128',
     description: 'Online NEET Biology classes for Jaypee Greens residents. 55+ students enrolled.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-jaypee-greens-noida',
   },

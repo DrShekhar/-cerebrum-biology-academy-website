@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Cuttack | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Cuttack | Online Biology Classes',
   description:
     'Join #1 NEET coaching in Cuttack. Expert online classes for 5000+ Cuttack aspirants. SCB Medical College proximity advantage, twin city with Bhubaneswar. Personalized batches & doubt clearing. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NEET coaching SCB Medical',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Cuttack | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Cuttack | Online Biology Classes',
     description:
       'Join #1 NEET coaching in Cuttack. Expert online classes for 5000+ aspirants. SCB Medical College proximity. Book free demo!',
     url: `${BASE_URL}/neet-coaching-cuttack`,

@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Kampala, Uganda - Cerebrum Biology Academy',
+  title: 'NEET Coaching in Kampala, Uganda',
   description: 'Expert NEET coaching in Kampala, Uganda. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
   keywords: 'NEET coaching Kampala, NEET classes Uganda, biology tuition, medical entrance preparation',
   openGraph: {
-    title: 'NEET Coaching in Kampala, Uganda - Cerebrum Biology Academy',
+    title: 'NEET Coaching in Kampala, Uganda',
     description: 'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Uganda students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-kampala-uganda',
     siteName: 'Cerebrum Biology Academy',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Kampala - Cerebrum Biology Academy',
+    title: 'NEET Coaching in Kampala',
     description: 'Expert NEET coaching with 98% success rate led by Dr. Shekhar C Singh.',
     images: ['https://cerebrumbiologyacademy.com/og-neet-coaching-kampala-uganda.jpg'],
   },

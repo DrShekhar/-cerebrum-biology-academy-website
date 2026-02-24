@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Manali | Mall Road, Old Manali | Cerebrum Academy',
+  title: 'Best NEET Coaching in Manali | Mall Road, Old Manali',
   description:
     'Top NEET biology coaching in Manali for Himachal students. 98% success rate, AIIMS faculty. Mall Road, Old Manali, Kullu Valley. Online live classes for hill stations. Book free demo!',
   keywords:
     'NEET coaching Manali, NEET biology coaching Manali, best NEET coaching Mall Road Manali, NEET classes Old Manali, biology coaching Kullu, NEET tuition Manali, NEET coaching Himachal Pradesh, NEET preparation hill station, online NEET coaching Manali, NEET biology Manali, biology tuition Manali, biology classes Manali, online biology coaching Manali, biology teacher Manali, NEET biology Manali',
   openGraph: {
-    title: 'Best NEET Coaching in Manali | Himachal Pradesh | Cerebrum Academy',
+    title: 'Best NEET Coaching in Manali | Himachal Pradesh',
     description:
       'Top NEET biology coaching in Manali with 98% success rate. Online classes for Himachal students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-manali',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best NEET Coaching in Manali | Cerebrum Biology Academy',
+    title: 'Best NEET Coaching in Manali',
     description:
       'Top NEET biology coaching in Manali. 98% success rate. Mall Road, Old Manali, Kullu Valley.',
   },

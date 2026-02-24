@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Class 10 Biology Foundation | Board + NEET Preparation | Cerebrum Academy',
+  title: 'Class 10 Biology Foundation | Board + NEET Preparation',
   description:
     'Class 10 Biology coaching with board exam focus and NEET foundation. Life processes, heredity, evolution covered. Expert AIIMS faculty, 95% board toppers.',
   keywords: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     'Heredity and Evolution class 10',
   ],
   openGraph: {
-    title: 'Class 10 Biology Foundation | Board + NEET Prep | Cerebrum',
+    title: 'Class 10 Biology Foundation | Board + NEET Prep',
     description:
       'Excel in Class 10 boards and build NEET foundation. Life processes, heredity, evolution with expert faculty.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Class 10 Biology Foundation | Board + NEET Preparation | Cerebrum Academy',
+    title: 'Class 10 Biology Foundation | Board + NEET Preparation',
     description: 'Class 10 Biology coaching with board exam focus and NEET foundation. Life processes, heredity, evolution covered.',
   },
 }

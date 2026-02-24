@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor in Noida Extension | NEET Coaching | Cerebrum Academy',
+  title: 'Biology Tutor in Noida Extension | NEET Coaching',
   description:
     'Best Biology tutor in Noida Extension (Greater Noida West) for NEET & Board exams. Expert coaching near Gaur City. AIIMS faculty guidance. Offline & online classes.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor in Noida Extension | Cerebrum Academy',
+    title: 'Biology Tutor in Noida Extension',
     description: 'Expert NEET Biology coaching in Noida Extension.',
   },
   alternates: {

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, Trophy, Award, Star, TrendingUp, Users, ArrowRight, Sparkles, GraduationCap } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET 2025 Results Gurugram | 97% Success | Cerebrum Biology Academy',
+  title: 'NEET 2025 Results Gurugram | 97% Success',
   description:
     'Cerebrum Biology Academy NEET 2025 results: 97% qualification rate, 15 students scored 650+, 4 in top 5000 AIR. Our best year yet! Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'neet coaching results gurugram',
   ],
   openGraph: {
-    title: 'NEET 2025 Results | Cerebrum Biology Academy Gurugram',
+    title: 'NEET 2025 Results Gurugram',
     description: '97% success rate, 15 students 650+, 4 in top 5000 AIR. Our best year!',
     url: 'https://cerebrumbiologyacademy.com/neet-result-2025-gurugram',
   },

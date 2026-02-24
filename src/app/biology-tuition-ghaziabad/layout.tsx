@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords:
     'biology tuition Ghaziabad, biology tutor Ghaziabad, biology tuition class 11 Ghaziabad, biology tuition class 12 Ghaziabad, biology tuition class 9 Indirapuram, biology tuition class 10 Vaishali, biology home tuition Ghaziabad, NEET biology tuition Ghaziabad, biology coaching Indirapuram, biology classes Vaishali, biology tutor Crossing Republik, biology tuition Raj Nagar Extension, biology coaching Vasundhara, online biology tuition Ghaziabad, best biology tutor Indirapuram, biology tuition near me Ghaziabad',
   openGraph: {
-    title: 'Best Biology Tuition in Ghaziabad | Class 9-12, Droppers | Cerebrum Academy',
+    title: 'Best Biology Tuition in Ghaziabad | Class 9-12, Droppers',
     description:
       'Top biology tuition in Ghaziabad for all classes. AIIMS faculty, 98% success rate. Indirapuram, Vaishali, Crossing Republik. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/biology-tuition-ghaziabad',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Biology Tuition in Ghaziabad | Cerebrum Biology Academy',
+    title: 'Best Biology Tuition in Ghaziabad',
     description:
       'Top biology tuition in Ghaziabad. Class 9, 10, 11, 12 & droppers. Indirapuram, Vaishali, Crossing Republik.',
   },

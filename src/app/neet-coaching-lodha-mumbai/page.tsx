@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Lodha Mumbai | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Lodha Mumbai | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Lodha Premium - Palava City, Lodha Park. Expert AIIMS faculty, 98% success rate. Premium gated community coaching. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation gated community',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Lodha Mumbai | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Lodha Mumbai | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Lodha Premium. Expert AIIMS faculty, 98% success rate. Premium coaching for gated community. Book free demo!',
     url: `${BASE_URL}/neet-coaching-lodha-mumbai`,

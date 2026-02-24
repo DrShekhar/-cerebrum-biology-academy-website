@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import NEETCoachingPageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in San Jose, USA - 98% Success Rate | Cerebrum Academy',
+  title: 'NEET Coaching in San Jose, USA - 98% Success Rate',
   description: "NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.",
   keywords: [
     'NEET coaching in San Jose',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'NEET online coaching USA'
   ],
   openGraph: {
-    title: 'NEET Coaching in San Jose, USA - 98% Success Rate | Cerebrum Academy',
+    title: 'NEET Coaching in San Jose, USA - 98% Success Rate',
     description: "NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.",
     type: 'website'
   },

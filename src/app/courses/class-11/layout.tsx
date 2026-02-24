@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
-  title: 'Class 11 Biology NEET Coaching | Foundation Program 2025 | Cerebrum Academy',
+  title: 'Class 11 Biology NEET Coaching | Foundation Program 2025',
   description:
     'Best Class 11 Biology coaching for NEET preparation. Strong foundation building, NCERT mastery, board exam excellence. AIIMS faculty, 98% success rate. Enroll for 2025 batch!',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Class 11 Biology NEET Foundation | Cerebrum Academy',
+    title: 'Class 11 Biology NEET Foundation',
     description: 'AIIMS faculty, NCERT mastery, board + NEET preparation, 98% success rate',
     images: ['/og-image.jpg'],
   },

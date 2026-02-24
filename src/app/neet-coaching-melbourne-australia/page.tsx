@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { PageContent } from "./PageContent";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching in Melbourne, Australia | Cerebrum Biology Academy",
+  title: "NEET Coaching in Melbourne, Australia",
   description: "Expert NEET coaching for Melbourne, Australia students. 98% success rate. Dr. Shekhar C Singh's specialized curriculum. Join 50+ top scorers.",
   keywords: "NEET coaching melbourne, NEET classes melbourne, medical entrance exam melbourne, biology coaching melbourne, Cerebrum Biology Academy melbourne",
   openGraph: {
-    title: "NEET Coaching in Melbourne, Australia | Cerebrum Biology Academy",
+    title: "NEET Coaching in Melbourne, Australia",
     description: "98% Success Rate. Expert NEET coaching by Dr. Shekhar C Singh. Call +918826444334 for free counseling.",
     url: `https://cerebrumbiologyacademy.com/cities/neet-coaching-melbourne-australia`,
     type: "website",

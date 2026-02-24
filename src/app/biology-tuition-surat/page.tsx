@@ -10,7 +10,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best Biology Tuition in Surat | 98% Success Rate | Cerebrum',
+  title: 'Best Biology Tuition in Surat | 98% Success Rate',
   description:
     'Premium Biology tuition & NEET coaching for Surat students. AIIMS faculty, 98% success rate. Adajan, Vesu, Athwa, City Light. Rs 24,000-68,000/year. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET online classes Gujarat',
   ],
   openGraph: {
-    title: 'Best Biology Tuition in Surat | Cerebrum Biology Academy',
+    title: 'Best Biology Tuition in Surat',
     description:
       'Premium biology tuition in Surat. AIIMS trained faculty, 98% success rate, 680+ Surat students. Book free demo!',
     url: `${BASE_URL}/biology-tuition-surat`,

@@ -3,11 +3,11 @@ import Link from 'next/link'
 import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 
 export const metadata: Metadata = {
-  title: 'Sadhna Sirin - Delhi NCR NEET 2023 Topper | Cerebrum Biology Academy',
+  title: 'Sadhna Sirin - Delhi NCR NEET 2023 Topper',
   description:
     'Watch Sadhna Sirin share her NEET 2023 journey, scoring 695/720 with Cerebrum Biology Academy. Delhi-NCR\'s top NEET scorer reveals her preparation strategy.',
   openGraph: {
-    title: 'Sadhna Sirin - Delhi NCR NEET 2023 Topper | Cerebrum Biology Academy',
+    title: 'Sadhna Sirin - Delhi NCR NEET 2023 Topper',
     description:
       'Sadhna Sirin scored 695/720 in NEET 2023 with guidance from Dr. Shekhar C Singh at Cerebrum Biology Academy.',
     type: 'video.other',

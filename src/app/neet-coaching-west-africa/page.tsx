@@ -5,7 +5,7 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for West Africa Students | Nigeria, Ghana | Cerebrum',
+  title: 'NEET Coaching for West Africa Students | Nigeria, Ghana',
   description:
     'Best NEET Biology coaching for Indian students in West Africa. Lagos, Accra, Abuja. AIIMS faculty, WAT timezone classes, NRI quota guidance. 98% success rate.',
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'NRI NEET coaching Nigeria',
   ],
   openGraph: {
-    title: 'NEET Coaching for West Africa Students | Cerebrum Biology Academy',
+    title: 'NEET Coaching for West Africa Students',
     description: 'Top NEET coaching for Indian students in Nigeria, Ghana. WAT timezone classes, 98% success rate.',
     url: `${BASE_URL}/neet-coaching-west-africa`,
     siteName: 'Cerebrum Biology Academy',

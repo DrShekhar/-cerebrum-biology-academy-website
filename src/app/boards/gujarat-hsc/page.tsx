@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'Gujarat HSC Biology Coaching | NEET + GUJCET Dual Prep | Cerebrum',
+  title: 'Gujarat HSC Biology Coaching | NEET + GUJCET Dual Prep',
   description: 'Expert Gujarat HSC Biology coaching with GUJCET overlap and NEET integration. Master GSEB syllabus with Gujarati medium support. Complete biology preparation for state board success.',
   keywords: [
     'Gujarat HSC biology',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'Gujarat board exam preparation',
   ],
   openGraph: {
-    title: 'Gujarat HSC Biology Coaching | NEET + GUJCET Dual Prep | Cerebrum',
+    title: 'Gujarat HSC Biology Coaching | NEET + GUJCET Dual Prep',
     description: 'Expert Gujarat HSC Biology coaching with GUJCET overlap and NEET integration.',
     url: `${BASE_URL}/boards/gujarat-hsc`,
     siteName: 'Cerebrum Biology Academy',

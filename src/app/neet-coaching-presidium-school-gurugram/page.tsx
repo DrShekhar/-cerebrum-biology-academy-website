@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, GraduationCap, Users, Target } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Presidium School Gurugram | Cerebrum Academy',
+  title: 'NEET Coaching for Presidium School Gurugram',
   description:
     'Best NEET coaching for Presidium School Gurugram students. Multiple campuses covered - Sector 49, 57. Just 10-15 min drive. AIIMS faculty, 98% success. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'biology tuition presidium students',
   ],
   openGraph: {
-    title: 'NEET Coaching for Presidium School | Cerebrum Academy',
+    title: 'NEET Coaching for Presidium School',
     description: 'Specialized NEET coaching for Presidium students. Multiple campuses.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-presidium-school-gurugram',
   },

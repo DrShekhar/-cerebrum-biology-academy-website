@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mobile App - Study NEET Biology Anywhere | Cerebrum Biology Academy',
+  title: 'Mobile App - Study NEET Biology Anywhere',
   description:
     'Download our mobile app for NEET Biology preparation. Study anywhere, anytime with offline content, practice tests, and AI-powered doubt solving.',
   keywords: [

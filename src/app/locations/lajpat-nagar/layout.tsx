@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Lajpat Nagar | Walking Distance | Cerebrum Academy',
+  title: 'NEET Biology Coaching Lajpat Nagar | Walking Distance',
   description:
     'Best NEET Biology coaching in Lajpat Nagar - walking distance from our flagship center. AIIMS faculty, small batches, 98% success rate. Most convenient location for South Delhi students.',
   keywords: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Lajpat Nagar | Walking Distance | Cerebrum Academy',
+    title: 'NEET Biology Coaching Lajpat Nagar | Walking Distance',
     description: 'Best NEET Biology coaching in Lajpat Nagar - walking distance from our flagship center.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/lajpat-nagar',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Lajpat Nagar | Cerebrum Academy',
+    title: 'NEET Biology Coaching Lajpat Nagar',
     description:
       'Best NEET Biology coaching in Lajpat Nagar. Walking distance from metro, affordable fees.',
     type: 'website',

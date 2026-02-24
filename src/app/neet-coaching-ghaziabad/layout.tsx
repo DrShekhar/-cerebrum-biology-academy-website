@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords:
     'NEET coaching Ghaziabad, NEET coaching Indirapuram, NEET classes Vaishali, biology coaching Crossing Republik, NEET tuition Raj Nagar Extension, NEET coaching Vasundhara, NEET coaching near Vaishali metro, NEET coaching Kaushambi, best NEET coaching Ghaziabad, NEET coaching near DPS Indirapuram, NEET coaching Ahinsa Khand, NEET preparation Ghaziabad, online NEET coaching Ghaziabad, NEET coaching NH-24, medical coaching Ghaziabad',
   openGraph: {
-    title: 'Best NEET Coaching in Ghaziabad | Indirapuram, Vaishali | Cerebrum Academy',
+    title: 'Best NEET Coaching in Ghaziabad | Indirapuram, Vaishali',
     description:
       'Top NEET biology coaching in Ghaziabad with 98% success rate. AIIMS faculty, small batches. Join 1,students from Indirapuram, Vaishali, Crossing Republik.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best NEET Coaching in Ghaziabad | Cerebrum Biology Academy',
+    title: 'Best NEET Coaching in Ghaziabad',
     description:
       'Top NEET biology coaching in Ghaziabad. 98% success rate. Indirapuram, Vaishali, Crossing Republik, Raj Nagar Extension.',
   },

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import NEETCoachingPageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Brampton, Canada - 98% Success Rate | Cerebrum Academy',
+  title: 'NEET Coaching in Brampton, Canada - 98% Success Rate',
   description: "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
   keywords: [
     'NEET coaching in Brampton',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'NEET online coaching Canada'
   ],
   openGraph: {
-    title: 'NEET Coaching in Brampton, Canada - 98% Success Rate | Cerebrum Academy',
+    title: 'NEET Coaching in Brampton, Canada - 98% Success Rate',
     description: "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
     type: 'website'
   },

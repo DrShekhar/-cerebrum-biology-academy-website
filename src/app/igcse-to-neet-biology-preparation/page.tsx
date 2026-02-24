@@ -10,7 +10,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'IGCSE to NEET Biology | Bridge Course for IGCSE Students | Cerebrum Academy',
+  title: 'IGCSE to NEET Biology | Bridge Course for IGCSE Students',
   description:
     'Seamless IGCSE to NEET transition with our specialized bridge course. Fill syllabus gaps, master NEET patterns, join 1,50,000+ successful students.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'international curriculum NEET',
   ],
   openGraph: {
-    title: 'IGCSE to NEET Biology | Bridge Course for IGCSE Students | Cerebrum Academy',
+    title: 'IGCSE to NEET Biology | Bridge Course for IGCSE Students',
     description:
       'Seamless IGCSE to NEET transition with our specialized bridge course. Fill syllabus gaps, master NEET patterns, join 1,50,000+ successful students.',
     url: `${BASE_URL}/igcse-to-neet-biology-preparation`,

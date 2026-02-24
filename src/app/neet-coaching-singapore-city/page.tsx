@@ -3,7 +3,7 @@ import { PageContent } from './PageContent';
 import { LocalitySchema } from '@/components/seo/LocalitySchema';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Singapore City, Singapore | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Singapore City, Singapore',
   description: 'Expert NEET coaching in Singapore City, Singapore. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students. Enroll now!',
   keywords: 'NEET coaching Singapore City, NEET exam center Singapore City, best NEET classes Singapore City, NEET preparation Singapore',
   openGraph: {

@@ -3,13 +3,13 @@ import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in North Delhi | Rohini, Pitampura, Model Town | Cerebrum Academy',
+  title: 'NEET Coaching in North Delhi | Rohini, Pitampura, Model Town',
   description:
     'Best NEET coaching for North Delhi students from Rohini, Pitampura, Model Town, Shalimar Bagh, Ashok Vihar. AIIMS faculty, 98% success rate. Book FREE demo!',
   keywords:
     'NEET coaching North Delhi, NEET coaching Rohini, NEET coaching Pitampura, NEET coaching Model Town, biology coaching North Delhi, medical coaching North Delhi, NEET preparation North Delhi',
   openGraph: {
-    title: 'Best NEET Coaching in North Delhi | Cerebrum Biology Academy',
+    title: 'Best NEET Coaching in North Delhi',
     description:
       'Top NEET coaching for North Delhi students. Expert AIIMS faculty, small batches, 98% success rate. Serving Rohini, Pitampura, Model Town & more.',
     type: 'website',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in North Delhi | Rohini, Pitampura, Model Town | Cerebrum Academy',
+    title: 'NEET Coaching in North Delhi | Rohini, Pitampura, Model Town',
     description: 'Best NEET coaching for North Delhi students from Rohini, Pitampura, Model Town, Shalimar Bagh, Ashok Vihar.',
   },
   alternates: {

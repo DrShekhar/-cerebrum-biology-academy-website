@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: '1 Year NEET Course Noida 2026 | Class 12 + Dropper | Cerebrum',
+  title: '1 Year NEET Course Noida 2026 | Class 12 + Dropper',
   description:
     'Join 1-year NEET course in Noida for Class 12 students & droppers. Complete syllabus in 12 months. Sector 62. Intensive coaching. Call 99536-43938!',
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'neet biology 1 year course',
   ],
   openGraph: {
-    title: '1 Year NEET Course Noida 2026 | Cerebrum Biology Academy',
+    title: '1 Year NEET Course Noida 2026',
     description:
       'Complete NEET biology syllabus in 12 months! Ideal for Class 12 students and droppers.',
     url: 'https://cerebrumbiologyacademy.com/1-year-neet-course-noida',

@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Navi Mumbai | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Navi Mumbai | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Navi Mumbai. Expert AIIMS faculty, 98% success rate. Kharghar, Vashi, Belapur, Palm Beach Road. Premium online coaching. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation Navi Mumbai',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Navi Mumbai | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Navi Mumbai | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Navi Mumbai. Expert AIIMS faculty, 98% success rate. Premium coaching for planned city. Book free demo!',
     url: `${BASE_URL}/neet-coaching-navi-mumbai`,

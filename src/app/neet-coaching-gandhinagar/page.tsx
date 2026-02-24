@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Gandhinagar | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Gandhinagar | Online Biology Classes',
   description:
     'Join #1 NEET coaching in Gandhinagar. Expert online classes for Gujarat state capital families. Government families, education hub, GIFT City advantage. Personalized batches & doubt clearing. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NEET coaching Gujarat capital',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Gandhinagar | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Gandhinagar | Online Biology Classes',
     description:
       'Join #1 NEET coaching in Gandhinagar. Expert online classes for Gujarat capital families. Government hub, GIFT City. Book free demo!',
     url: `${BASE_URL}/neet-coaching-gandhinagar`,

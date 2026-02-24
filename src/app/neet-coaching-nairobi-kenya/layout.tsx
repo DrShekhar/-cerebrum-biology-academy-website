@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Nairobi, Kenya - Cerebrum Biology Academy',
+  title: 'NEET Coaching in Nairobi, Kenya',
   description: 'Expert NEET coaching in Nairobi, Kenya. 98% success rate. Biology-focused curriculum with Dr. Shekhar C Singh. Enroll now!',
   keywords: 'NEET coaching Nairobi, NEET classes Kenya, biology tuition, medical entrance preparation',
   openGraph: {
-    title: 'NEET Coaching in Nairobi, Kenya - Cerebrum Biology Academy',
+    title: 'NEET Coaching in Nairobi, Kenya',
     description: 'Expert NEET coaching with 98% success rate. Personalized biology curriculum tailored for Kenya students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-nairobi-kenya',
     siteName: 'Cerebrum Biology Academy',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Nairobi - Cerebrum Biology Academy',
+    title: 'NEET Coaching in Nairobi',
     description: 'Expert NEET coaching with 98% success rate led by Dr. Shekhar C Singh.',
     images: ['https://cerebrumbiologyacademy.com/og-neet-coaching-nairobi-kenya.jpg'],
   },

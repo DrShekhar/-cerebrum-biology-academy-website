@@ -88,7 +88,7 @@ function SouthExtensionServiceSchema() {
 }
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching South Extension Delhi | Flagship Center | Cerebrum',
+  title: 'NEET Biology Coaching South Extension Delhi | Flagship Center',
   description:
     'Cerebrum Biology Academy flagship center in South Extension Part 2, Delhi. AIIMS faculty led by Dr. Shekhar. Near Lajpat Nagar Metro. Small batches, 98% success rate. Book free demo!',
   keywords: [
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching South Extension Delhi | Flagship Center | Cerebrum',
+    title: 'NEET Biology Coaching South Extension Delhi | Flagship Center',
     description: 'Flagship NEET Biology coaching center in South Extension, Delhi. AIIMS faculty, small batches, near Lajpat Nagar Metro.',
   },
   alternates: {

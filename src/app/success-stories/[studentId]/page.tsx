@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props) {
   }
 
   return {
-    title: `${story.studentName}'s NEET Success Journey | Cerebrum Biology Academy`,
+    title: `${story.studentName}'s NEET Success Journey`,
     description: `${story.quote.substring(0, 150)}... Read the complete success story of ${story.studentName} who scored ${story.neetScore} in NEET and got admission to ${story.college}.`,
     keywords: `${story.studentName}, NEET success story, ${story.college}, biology coaching, NEET rank ${story.rank}, score improvement`,
     alternates: {

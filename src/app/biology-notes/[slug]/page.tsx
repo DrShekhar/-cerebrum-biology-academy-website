@@ -48,13 +48,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!topic) {
     return {
-      title: 'Topic Not Found | Cerebrum Biology Academy',
+      title: 'Topic Not Found',
       description: 'The requested biology topic could not be found.',
     }
   }
 
   return {
-    title: topic.metaTitle || `${topic.title} | Free NEET Biology Notes | Cerebrum Academy`,
+    title: topic.metaTitle || `${topic.title} | Free NEET Biology Notes`,
     description:
       topic.metaDescription ||
       topic.excerpt ||

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching in Saket | Near Select Citywalk | Cerebrum Academy',
+  title: 'NEET Biology Coaching in Saket | Near Select Citywalk',
   description:
     'Best NEET Biology coaching for Saket students. 10 min from Select Citywalk, near Max Hospital. Expert AIIMS faculty, small batches, 98% success rate. Free demo class.',
   keywords: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching in Saket | Near Select Citywalk | Cerebrum Academy',
+    title: 'NEET Biology Coaching in Saket | Near Select Citywalk',
     description: 'Best NEET Biology coaching for Saket students. 10 min from Select Citywalk, near Max Hospital.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/saket',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Saket | Cerebrum Academy',
+    title: 'NEET Biology Coaching Saket',
     description:
       'Expert NEET Biology coaching for Saket students. Near Select Citywalk, 10 min to South Extension center.',
     type: 'website',

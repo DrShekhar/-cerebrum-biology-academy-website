@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Bhubaneswar | Online Biology Classes | Cerebrum',
+  title: 'Best NEET Coaching in Bhubaneswar | Online Biology Classes',
   description:
     'Join #1 NEET coaching in Bhubaneswar. Expert online classes for 13000+ Odisha aspirants. Education hub with moderate competition. Personalized batches & doubt clearing. Book free demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NEET coaching Odisha',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Bhubaneswar | Online Biology Classes | Cerebrum',
+    title: 'Best NEET Coaching in Bhubaneswar | Online Biology Classes',
     description:
       'Join #1 NEET coaching in Bhubaneswar. Expert online classes for 13000+ aspirants. Odisha education hub. Book free demo!',
     url: `${BASE_URL}/neet-coaching-bhubaneswar`,

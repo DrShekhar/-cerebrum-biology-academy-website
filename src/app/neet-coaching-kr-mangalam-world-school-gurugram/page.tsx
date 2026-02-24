@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, GraduationCap, Users, Award } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for K R Mangalam World School Gurugram | Cerebrum Academy',
+  title: 'NEET Coaching for K R Mangalam World School Gurugram',
   description:
     'Best NEET coaching for K R Mangalam World School students. Multiple campus coverage - Sector 51 near GK-2, Vaishali near Sector 88. AIIMS faculty, 98% success. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'biology tuition kr mangalam students',
   ],
   openGraph: {
-    title: 'NEET Coaching for K R Mangalam World School | Cerebrum Academy',
+    title: 'NEET Coaching for K R Mangalam World School',
     description: 'Specialized NEET coaching for KRM students from multiple campuses.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-kr-mangalam-world-school-gurugram',
   },

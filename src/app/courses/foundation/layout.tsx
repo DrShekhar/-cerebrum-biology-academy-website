@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Online Biology Tuition for NEET | Cerebrum Biology Academy',
+    title: 'Online Biology Tuition for NEET',
     description:
       'Best online Biology tutor for Class 9-12 NEET aspirants. Expert NCERT Biology coaching with live classes.',
   },

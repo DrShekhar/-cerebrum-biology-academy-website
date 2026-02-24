@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!area) {
     return {
-      title: 'Area Not Found | Cerebrum Biology Academy',
+      title: 'Area Not Found',
     }
   }
 
-  const title = `Biology Tuition in ${area.name} | Classes 9-12 | Cerebrum Biology Academy`
+  const title = `Biology Tuition in ${area.name} | Classes 9-12`
   const description = `Best biology tuition in ${area.name}, South Delhi for Classes 9-12. ${area.description}. CBSE, ICSE & State Boards. NEET foundation. Expert faculty from AIIMS/JIPMER. Book free demo today.`
 
   return {
@@ -66,7 +66,7 @@ export default async function BiologyTuitionAreaPage({ params }: PageProps) {
     notFound()
   }
 
-  const title = `Biology Tuition in ${area.name} | Classes 9-12 | Cerebrum Biology Academy`
+  const title = `Biology Tuition in ${area.name} | Classes 9-12`
   const description = `Best biology tuition in ${area.name}, South Delhi for Classes 9-12. ${area.description}. CBSE, ICSE & State Boards. NEET foundation.`
 
   return (

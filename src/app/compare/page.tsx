@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Kota coaching alternative',
   ],
   openGraph: {
-    title: 'NEET Coaching Comparison 2026 | Cerebrum Biology Academy',
+    title: 'NEET Coaching Comparison 2026',
     description: 'Compare fees, batch sizes, and success rates. Find the best NEET coaching.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/compare',

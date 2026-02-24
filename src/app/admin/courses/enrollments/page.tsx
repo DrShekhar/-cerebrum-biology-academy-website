@@ -5,6 +5,6 @@ export default function CourseEnrollmentsPage() {
 }
 
 export const metadata = {
-  title: 'Course Enrollments | Admin | Cerebrum Biology Academy',
+  title: 'Course Enrollments | Admin',
   description: 'View and manage course enrollments, payment statuses, and batch assignments.',
 }

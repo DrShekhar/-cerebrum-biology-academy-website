@@ -3,7 +3,7 @@ import { PageContent } from './PageContent';
 import { LocalitySchema } from '@/components/seo/LocalitySchema';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Kathmandu, Nepal | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Kathmandu, Nepal',
   description: 'Expert NEET coaching in Kathmandu, Nepal. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students. Enroll now!',
   keywords: 'NEET coaching Kathmandu, NEET exam center Kathmandu, best NEET classes Kathmandu, NEET preparation Nepal',
   openGraph: {

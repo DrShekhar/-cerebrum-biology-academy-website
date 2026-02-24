@@ -17,7 +17,7 @@ import { NoidaPageSchemas, NoidaEventSchema, NOIDA_COMPREHENSIVE_FAQS } from '@/
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching: Noida vs Kota 2026 | Which is Better? | Cerebrum',
+  title: 'NEET Coaching: Noida vs Kota 2026 | Which is Better?',
   description:
     'Noida vs Kota for NEET coaching - complete comparison. Save Rs 2-3 lakh on hostel costs, study from home, get same results. 98% success rate with online coaching from Noida.',
   keywords: [

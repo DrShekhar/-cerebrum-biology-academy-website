@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, GraduationCap, BookOpen } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Apeejay School Gurugram | Cerebrum Academy',
+  title: 'NEET Coaching for Apeejay School Gurugram',
   description:
     'Best NEET coaching for Apeejay School Sector 15 students. Just 10 min drive. Strong CBSE foundation + NEET expertise. AIIMS faculty, 98% success rate. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'biology tuition apeejay students',
   ],
   openGraph: {
-    title: 'NEET Coaching for Apeejay School | Cerebrum Academy',
+    title: 'NEET Coaching for Apeejay School',
     description: 'Specialized NEET coaching for Apeejay students. CBSE aligned.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-apeejay-school-gurugram',
   },

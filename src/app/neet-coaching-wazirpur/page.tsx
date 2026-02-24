@@ -3,7 +3,7 @@ import WazirpurNEETContent from './WazirpurNEETContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Wazirpur | Biology Classes Near Rohini | Cerebrum Academy',
+  title: 'NEET Coaching Wazirpur | Biology Classes Near Rohini',
   description:
     'Best NEET coaching for Wazirpur students. Just 10-15 min from Rohini center. AIIMS faculty, 98% success rate, small batches. Sadhna Sirin scored 695/720! WhatsApp 88264-44334',
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'NEET biology classes North Delhi',
   ],
   openGraph: {
-    title: 'NEET Coaching Wazirpur | Biology Classes Near Rohini | Cerebrum Academy',
+    title: 'NEET Coaching Wazirpur | Biology Classes Near Rohini',
     description:
       'Best NEET coaching for Wazirpur students. Just 10-15 min from Rohini center. AIIMS faculty, 98% success rate, small batches. WhatsApp 88264-44334!',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-wazirpur',

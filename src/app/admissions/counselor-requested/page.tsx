@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Counselor Request Received | Cerebrum Biology Academy',
+  title: 'Counselor Request Received',
   robots: { index: false, follow: false },
 }
 

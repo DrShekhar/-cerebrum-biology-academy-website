@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching CR Park | Chittaranjan Park | Cerebrum Academy',
+  title: 'NEET Biology Coaching CR Park | Chittaranjan Park',
   description:
     'Best NEET Biology coaching for CR Park (Chittaranjan Park) students. Expert AIIMS faculty, small batches, 98% success rate. Serving Bengali community in South Delhi.',
   keywords: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching CR Park | Chittaranjan Park | Cerebrum Academy',
+    title: 'NEET Biology Coaching CR Park | Chittaranjan Park',
     description: 'Best NEET Biology coaching for CR Park (Chittaranjan Park) students.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/cr-park',
   },
   openGraph: {
-    title: 'NEET Biology Coaching CR Park | Cerebrum Academy',
+    title: 'NEET Biology Coaching CR Park',
     description:
       'Expert NEET Biology coaching for CR Park students. 15 min to South Extension center. Serving South Delhi Bengali community.',
     type: 'website',

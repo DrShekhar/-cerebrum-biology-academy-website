@@ -10,11 +10,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const planName = resolvedParams.plan.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())
 
   return {
-    title: `${className} ${planName} Plan | NEET Biology Coaching - Cerebrum Academy`,
+    title: `${className} ${planName} Plan | NEET Biology Coaching`,
     description: `${planName} coaching plan for ${className} students. Expert AIIMS faculty, comprehensive NEET preparation.`,
     keywords: `${className} NEET coaching, ${planName} plan, biology coaching, NEET preparation`,
     openGraph: {
-      title: `${className} ${planName} Plan | Cerebrum Biology Academy`,
+      title: `${className} ${planName} Plan`,
       description: `Join our ${planName} plan for ${className}. Expert faculty, proven results.`,
       url: `https://cerebrumbiologyacademy.com/courses/series/${resolvedParams.class}/plan-${resolvedParams.plan}`,
       siteName: 'Cerebrum Biology Academy',
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
     card: 'summary_large_image',
-    title: '${className} ${planName} Plan | NEET Biology Coaching - Cerebrum Academy',
+    title: '${className} ${planName} Plan | NEET Biology Coaching',
     description: '${planName} coaching plan for ${className} students. Expert AIIMS faculty, comprehensive NEET preparation.',
   },
   alternates: {

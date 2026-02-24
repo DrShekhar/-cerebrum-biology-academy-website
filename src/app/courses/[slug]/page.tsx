@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const newCourse = coursePrograms.find((course) => course.id === slug)
   if (newCourse) {
     return {
-      title: `${newCourse.name} | NEET Biology Coaching - Cerebrum Biology Academy`,
+      title: `${newCourse.name} | NEET Biology Coaching`,
       description: newCourse.description,
       keywords: `NEET biology course, ${newCourse.targetClass} class preparation, biology coaching, medical entrance, ${newCourse.name}`,
       authors: [{ name: 'Cerebrum Biology Academy' }],
@@ -42,14 +42,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         canonical: `https://cerebrumbiologyacademy.com/courses/${slug}`,
       },
       openGraph: {
-        title: `${newCourse.name} | Cerebrum Biology Academy`,
+        title: `${newCourse.name}`,
         description: newCourse.description,
         images: [`/api/og?title=${encodeURIComponent(newCourse.name)}&subtitle=${encodeURIComponent('NEET Biology Coaching')}`],
         type: 'website',
       },
       twitter: {
         card: 'summary_large_image',
-        title: `${newCourse.name} | Cerebrum Biology Academy`,
+        title: `${newCourse.name}`,
         description: newCourse.description,
         images: [`/api/og?title=${encodeURIComponent(newCourse.name)}&subtitle=${encodeURIComponent('NEET Biology Coaching')}`],
       },
@@ -83,7 +83,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: 'Course Not Found - Cerebrum Biology Academy',
+    title: 'Course Not Found',
     description: 'The course you are looking for could not be found.',
   }
 }

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords:
     'biology coaching class 12, class 12 biology tuition, NEET biology class 12, class 12 NCERT biology, biology tutor class 12, class 12 biology online, biology coaching for NEET class 12, class 12 genetics coaching, class 12 ecology tuition, biology classes for 12th, 12th biology coaching near me, online biology class 12, class 12 reproduction chapter',
   openGraph: {
-    title: 'Best Class 12 Biology Coaching | NEET Preparation | Cerebrum Academy',
+    title: 'Best Class 12 Biology Coaching | NEET Preparation',
     description:
       'Expert Class 12 biology coaching for NEET. AIIMS faculty, complete NCERT + advanced NEET preparation. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/biology-coaching-class-12',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Class 12 Biology Coaching | Cerebrum Biology Academy',
+    title: 'Best Class 12 Biology Coaching',
     description: 'Top Class 12 biology coaching for NEET. AIIMS faculty, 98% success rate.',
   },
   alternates: {

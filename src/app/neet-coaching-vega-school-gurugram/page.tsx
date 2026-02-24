@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, Users, Sparkles, Globe } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Vega School Gurugram | Cerebrum Academy',
+  title: 'NEET Coaching for Vega School Gurugram',
   description:
     'Best NEET coaching for Vega Schools students. Progressive education to NEET transition. Just 15 min from campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'biology tuition vega school students',
   ],
   openGraph: {
-    title: 'NEET Coaching for Vega School | Cerebrum Academy',
+    title: 'NEET Coaching for Vega School',
     description: 'Specialized NEET coaching for Vega School students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-vega-school-gurugram',
   },

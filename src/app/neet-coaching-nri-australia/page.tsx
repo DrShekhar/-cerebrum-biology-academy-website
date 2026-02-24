@@ -10,7 +10,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching for Australian NRI Students | Sydney, Melbourne | Cerebrum',
+  title: 'NEET Coaching for Australian NRI Students | Sydney, Melbourne',
   description:
     'Best NEET Biology coaching for Indian-Australian students. Live online classes at AEST friendly timings. AIIMS faculty, HSC/VCE curriculum bridge, NRI quota guidance. 98% success rate.',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'NRI quota Australia NEET',
   ],
   openGraph: {
-    title: 'NEET Coaching for Australian NRI Students | Cerebrum Biology Academy',
+    title: 'NEET Coaching for Australian NRI Students',
     description:
       'Top NEET Biology coaching for Indian-Australian students. AEST friendly timings, HSC/VCE bridge courses, NRI quota expertise.',
     url: `${BASE_URL}/neet-coaching-nri-australia`,

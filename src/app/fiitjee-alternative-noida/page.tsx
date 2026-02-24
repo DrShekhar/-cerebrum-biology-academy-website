@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Best FIITJEE Alternative in Noida 2026 | Better Results, Lower Fees | Cerebrum',
+  title: 'Best FIITJEE Alternative in Noida 2026 | Better Results, Lower Fees',
   description:
     'Looking for FIITJEE alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 99536-43938!',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'biology coaching sector 62 noida',
   ],
   openGraph: {
-    title: 'Best FIITJEE Alternative in Noida 2026 | Cerebrum Biology Academy',
+    title: 'Best FIITJEE Alternative in Noida 2026',
     description:
       'Looking for FIITJEE alternative? Cerebrum offers 60% lower fees with 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/fiitjee-alternative-noida',

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Class 9 Science Tuition | Biology Coaching Class 9 - Cerebrum',
+  title: 'Class 9 Science Tuition | Biology Coaching Class 9',
   description:
     'Best class 9 science tuition with Biology focus. Expert science tutor for class 9 CBSE covering Physics, Chemistry & Biology. Early NEET foundation preparation. Small batches, personalized attention. Book free demo!',
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'neet foundation class 9',
   ],
   openGraph: {
-    title: 'Class 9 Science Tuition | Biology Coaching Class 9 - Cerebrum',
+    title: 'Class 9 Science Tuition | Biology Coaching Class 9',
     description:
       'Expert class 9 science tuition with Biology specialization. Build strong foundation in Physics, Chemistry & Biology. Early NEET preparation. Small batches, personalized attention.',
     url: 'https://cerebrumbiologyacademy.com/class-9-science-tuition',

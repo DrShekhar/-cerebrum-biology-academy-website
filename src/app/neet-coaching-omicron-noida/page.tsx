@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Omicron Sector, Greater Noida | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Omicron Sector, Greater Noida | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Omicron Sector, Greater Noida. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Pari Chowk hub coaching. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation Knowledge Park',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Omicron Sector, Greater Noida | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Omicron Sector, Greater Noida | 98% Success Rate',
     description:
       'Join #1 NEET coaching in Omicron Sector, Greater Noida. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-omicron-noida`,

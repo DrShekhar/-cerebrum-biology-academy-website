@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Refund Policy | Cerebrum Biology Academy',
+  title: 'Refund Policy',
   description: 'Refund and cancellation policy for Cerebrum Biology Academy courses and services.',
 }
 

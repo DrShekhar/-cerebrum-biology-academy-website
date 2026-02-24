@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor Class 9 CBSE | CBSE Biology Tuition - Cerebrum',
+  title: 'Biology Tutor Class 9 CBSE | CBSE Biology Tuition',
   description:
     'Expert biology tutor for Class 9 CBSE. Complete NCERT coverage, board exam preparation, conceptual clarity. Small batches, personalized attention. Build strong foundation for Class 10. Book free demo!',
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor Class 9 CBSE | Cerebrum Biology Academy',
+    title: 'Biology Tutor Class 9 CBSE',
     description:
       'Expert CBSE Class 9 biology coaching. NCERT-focused, board exam preparation, conceptual clarity.',
     images: ['https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200&h=630&fit=crop'],

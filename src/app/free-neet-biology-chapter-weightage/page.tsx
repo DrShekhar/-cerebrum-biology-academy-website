@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Chapter Weightage 2026 | Free PDF Download | Cerebrum',
+  title: 'NEET Biology Chapter Weightage 2026 | Free PDF Download',
   description: 'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 10-year PYQ analysis by AIIMS faculty.',
   keywords: ['NEET biology chapter weightage', 'NEET 2026 important chapters', 'NEET biology marks distribution', 'chapter wise weightage NEET biology', 'NEET high yield chapters'],
   openGraph: {
-    title: 'NEET Biology Chapter Weightage 2026 | Free PDF Download | Cerebrum',
+    title: 'NEET Biology Chapter Weightage 2026 | Free PDF Download',
     description: 'Download free NEET Biology chapter-wise weightage analysis for 2026. Know which chapters carry maximum marks. Based on 10-year PYQ analysis by AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-chapter-weightage`,
     siteName: 'Cerebrum Biology Academy',

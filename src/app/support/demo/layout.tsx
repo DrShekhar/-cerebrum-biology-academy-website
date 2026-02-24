@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  title: 'Book Free NEET Biology Demo Class | Cerebrum Biology Academy',
+  title: 'Book Free NEET Biology Demo Class',
   description:
     'Experience our expert NEET biology teaching with a free 1-hour demo class. Meet our faculty, preview study materials, and discover our proven methodology that helped 98% of students crack NEET. Book your slot now!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Cerebrum Biology Academy' }],
   openGraph: {
-    title: 'Book Free NEET Biology Demo Class | Cerebrum Biology Academy',
+    title: 'Book Free NEET Biology Demo Class',
     description:
       'Experience our expert teaching with a free demo class. 98% NEET success rate. Book your free slot today!',
     type: 'website',

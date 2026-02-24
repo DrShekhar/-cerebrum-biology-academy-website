@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Adaptive Testing | AI-Powered Assessment | Cerebrum Biology Academy',
+  title: 'Adaptive Testing | AI-Powered Assessment',
   description:
     'AI-powered adaptive testing for NEET Biology preparation. Personalized assessments that adjust to your level for maximum learning efficiency.',
   openGraph: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Adaptive Testing | AI-Powered Assessment | Cerebrum Biology Academy',
+    title: 'Adaptive Testing | AI-Powered Assessment',
     description: 'AI-powered adaptive testing for NEET Biology preparation.',
   },
   alternates: {

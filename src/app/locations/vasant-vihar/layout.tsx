@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Vasant Vihar | IB Biology Tutor | Cerebrum',
+  title: 'NEET Biology Coaching Vasant Vihar | IB Biology Tutor',
   description:
     'Best NEET Biology & IB Biology coaching for Vasant Vihar students. Near diplomatic area, international schools. AIIMS faculty, small batches. South Extension center 10 min away. Book demo!',
   keywords: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Vasant Vihar | IB Biology Tutor | Cerebrum',
+    title: 'NEET Biology Coaching Vasant Vihar | IB Biology Tutor',
     description: 'Best NEET Biology & IB Biology coaching for Vasant Vihar students. Near diplomatic area, international schools.',
   },
   alternates: {

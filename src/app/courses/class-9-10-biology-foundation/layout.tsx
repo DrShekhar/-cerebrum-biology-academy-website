@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Class 9-10 Biology Foundation Course | Pre-NEET Coaching | Cerebrum',
+  title: 'Class 9-10 Biology Foundation Course | Pre-NEET Coaching',
   description:
     'Best Biology tuition for Class 9 & 10 students in Delhi. CBSE & ICSE syllabus with NEET foundation. Build strong basics for medical entrance. Small batches, expert faculty. Book free demo!',
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Class 9-10 Biology Foundation Course | Pre-NEET Coaching | Cerebrum',
+    title: 'Class 9-10 Biology Foundation Course | Pre-NEET Coaching',
     description: 'Best Biology tuition for Class 9 & 10 students in Delhi. CBSE & ICSE syllabus with NEET foundation.',
   },
   alternates: {

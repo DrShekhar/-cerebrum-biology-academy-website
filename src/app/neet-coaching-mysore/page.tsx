@@ -13,11 +13,11 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: `Best NEET Coaching in ${locality} | 98% Success Rate | Cerebrum`,
+  title: `Best NEET Coaching in ${locality} | 98% Success Rate`,
   description: `Top NEET Biology coaching in ${locality}, Karnataka. AIIMS faculty, 98% success rate, 695/720 top score. Online + offline batches.`,
   keywords: ['NEET coaching Mysore', 'biology tuition Mysore', 'best NEET classes Mysore', 'NEET preparation Mysore Karnataka'],
   openGraph: {
-    title: `Best NEET Coaching in ${locality} | Cerebrum`,
+    title: `Best NEET Coaching in ${locality}`,
     description: `Top NEET Biology coaching in ${locality}. AIIMS faculty, 98% success rate.`,
     url: `${BASE_URL}/${slug}`,
     siteName: 'Cerebrum Biology Academy',

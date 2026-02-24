@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Westend | Near Vasant Vihar | Cerebrum Academy',
+  title: 'NEET Biology Coaching Westend | Near Vasant Vihar',
   description:
     'Premium NEET Biology coaching for Westend & Vasant Vihar students. Near DPS RK Puram. AIIMS faculty, small batches, 98% success rate. Book free demo!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'NEET Biology coaching fees Delhi',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching Westend | Cerebrum Academy',
+    title: 'NEET Biology Coaching Westend',
     description:
       'Premium NEET Biology coaching for Westend families. AIIMS faculty, near DPS RK Puram.',
     type: 'website',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Westend | Near Vasant Vihar | Cerebrum Academy',
+    title: 'NEET Biology Coaching Westend | Near Vasant Vihar',
     description: 'Premium NEET Biology coaching for Westend & Vasant Vihar students. Near DPS RK Puram.',
   },
   alternates: {

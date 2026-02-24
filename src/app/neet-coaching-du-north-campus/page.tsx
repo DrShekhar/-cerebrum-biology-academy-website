@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: `NEET Coaching Near DU North Campus | Biology Classes for DU Students | Cerebrum Academy`,
+  title: `NEET Coaching Near DU North Campus | Biology Classes for DU Students`,
   description: `NEET coaching for BSc Biology students & repeaters near Delhi University North Campus. Evening & weekend batches for Hansraj, Hindu, Miranda House, Kirori Mal students. ${CEREBRUM_METRICS.successRateText} success rate. Book free demo!`,
   keywords: [
     'NEET coaching DU north campus',

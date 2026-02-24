@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Salt Lake Kolkata | Premium Coaching | Cerebrum',
+  title: 'Best NEET Coaching in Salt Lake Kolkata | Premium Coaching',
   description:
     'Join #1 NEET coaching in Salt Lake, Kolkata. Expert faculty, proven 98% success rate, 695/720 top score. Perfect for Sector V IT families. Personalized batches & doubt clearing. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'Salt Lake Sector V NEET coaching',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Salt Lake Kolkata | Premium Coaching | Cerebrum',
+    title: 'Best NEET Coaching in Salt Lake Kolkata | Premium Coaching',
     description:
       'Join #1 NEET coaching in Salt Lake, Kolkata. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-salt-lake-kolkata`,

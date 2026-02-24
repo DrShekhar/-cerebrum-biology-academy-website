@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { faqs } from '@/data/neetCoachingData'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching 2026 | Best NEET Biology, Physics, Chemistry Classes | Cerebrum Academy',
+  title: 'NEET Coaching 2026 | Best NEET Biology, Physics, Chemistry Classes',
   description:
     'Top NEET coaching in Delhi-NCR for Class 11, 12 & Droppers. AIIMS & IITians faculties, small batches (10-18 students), 98% success rate. Physics, Chemistry & Biology. Online & offline classes at South Extension, Rohini, Gurugram, Faridabad.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching',
   },
   openGraph: {
-    title: 'NEET Coaching 2026 | Physics, Chemistry, Biology | Cerebrum Academy',
+    title: 'NEET Coaching 2026 | Physics, Chemistry, Biology',
     description:
       'Expert AIIMS & IITians faculties. Small batches of 10-18 students. 98% success rate. Class 11, 12 & Dropper batches. Online & offline coaching in Delhi-NCR.',
     type: 'website',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching 2026 | Cerebrum Biology Academy',
+    title: 'NEET Coaching 2026',
     description:
       'Expert AIIMS & IITians faculties. Small batches. 98% success rate. Class 11, 12 & Dropper. Online & offline.',
     images: ['/api/og?title=NEET+Coaching+2026&subtitle=Expert+AIIMS+%26+IITians+Faculty'],

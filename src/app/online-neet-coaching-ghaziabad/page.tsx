@@ -18,7 +18,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Online NEET Coaching for Ghaziabad Students | Live & Hybrid Mode | Cerebrum',
+  title: 'Online NEET Coaching for Ghaziabad Students | Live & Hybrid Mode',
   description:
     'Online NEET Biology classes for Ghaziabad & Indirapuram students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 99536-43938!',
   keywords: [

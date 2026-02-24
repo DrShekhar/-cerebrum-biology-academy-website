@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { ExploratoryFlow } from '@/components/conversion/ExploratoryFlow'
 
 export const metadata: Metadata = {
-  title: 'Explore NEET Biology Courses - Compare & Choose | Cerebrum Biology Academy',
+  title: 'Explore NEET Biology Courses - Compare & Choose',
   description:
     'Take your time to explore our comprehensive NEET Biology courses. Compare features, read success stories, and book free counseling. 98% success rate, 67+ AIIMS selections.',
   keywords: [

@@ -29,7 +29,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Online NEET Biology Classes | Live Interactive Sessions | Cerebrum Biology Academy',
+  title: 'Online NEET Biology Classes | Live Interactive Sessions',
   description:
     "Join India's most advanced online NEET Biology coaching. HD live classes, recorded sessions, interactive whiteboard, 24/7 doubt resolution. Starting ₹15,999.",
   keywords:

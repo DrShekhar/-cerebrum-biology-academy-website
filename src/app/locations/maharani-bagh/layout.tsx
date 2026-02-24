@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Maharani Bagh | Premium South Delhi | Cerebrum Academy',
+  title: 'NEET Biology Coaching Maharani Bagh | Premium South Delhi',
   description:
     'Expert NEET Biology coaching for Maharani Bagh students. Near Sundar Nagar & Friends Colony. AIIMS faculty, small batches, 98% success rate. Book free demo today!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'NEET Biology coaching fees Delhi',
   ],
   openGraph: {
-    title: 'NEET Biology Coaching Maharani Bagh | Cerebrum Academy',
+    title: 'NEET Biology Coaching Maharani Bagh',
     description:
       'Premium NEET Biology coaching for Maharani Bagh families. AIIMS faculty, personalized attention.',
     type: 'website',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Maharani Bagh | Premium South Delhi | Cerebrum Academy',
+    title: 'NEET Biology Coaching Maharani Bagh | Premium South Delhi',
     description: 'Expert NEET Biology coaching for Maharani Bagh students. Near Sundar Nagar & Friends Colony.',
   },
   alternates: {

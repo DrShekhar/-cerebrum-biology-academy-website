@@ -13,7 +13,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Hinjewadi Pune | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Hinjewadi Pune | 98% Success Rate',
   description:
     'Join #1 NEET coaching in Hinjewadi, Pune. Expert AIIMS faculty, 98% success rate. Rajiv Gandhi Infotech Park, IT professionals. Premium online coaching. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET preparation Pune',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Hinjewadi Pune | 98% Success Rate | Cerebrum',
+    title: 'Best NEET Coaching in Hinjewadi Pune | 98% Success Rate',
     description: 'Join #1 NEET coaching in Hinjewadi, Pune. Expert AIIMS faculty, 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-hinjewadi-pune`,
     siteName: 'Cerebrum Biology Academy',

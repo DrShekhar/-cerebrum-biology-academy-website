@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, Car, ArrowRight, Building, Briefcase, Train, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Cyber City Gurugram | 10 Min from DLF Cyber Hub | Cerebrum',
+  title: 'NEET Coaching Cyber City Gurugram | 10 Min from DLF Cyber Hub',
   description:
     'Best NEET coaching near Cyber City Gurugram. Just 10 min drive to M2K Sector 51. Perfect for IT professional families. AIIMS faculty, 98% success rate. Call 88264-44334!',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'medical coaching cyber city gurugram',
   ],
   openGraph: {
-    title: 'NEET Coaching Cyber City Gurugram | Cerebrum Biology Academy',
+    title: 'NEET Coaching Cyber City Gurugram',
     description: 'Best NEET coaching near Cyber City. Just 10 min from DLF Cyber Hub.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-cyber-city-gurugram',
   },

@@ -3,12 +3,12 @@ import { StudyWithMePage } from '@/components/study-with-me/StudyWithMePage'
 import type { DisplayMode } from '@/lib/study-with-me/types'
 
 export const metadata: Metadata = {
-  title: 'Study With Me | Cerebrum Biology Academy',
+  title: 'Study With Me',
   description:
     'Join our live NEET Biology study session. Focus timer, Pomodoro technique, ambient music, and motivational quotes to boost your preparation.',
   keywords: ['NEET Biology', 'Study With Me', 'Pomodoro', 'Focus Timer', 'NEET Preparation'],
   openGraph: {
-    title: 'Study With Me | Cerebrum Biology Academy',
+    title: 'Study With Me',
     description: 'Join our live NEET Biology study session with Pomodoro timer and focus tools.',
     type: 'website',
   },

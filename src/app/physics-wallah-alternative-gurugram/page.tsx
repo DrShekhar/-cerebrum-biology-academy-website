@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, CheckCircle, Users, Clock, Video, ArrowRight, Monitor, Building } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Physics Wallah Alternative Gurugram | Offline Expert Biology | Cerebrum 2026',
+  title: 'Physics Wallah Alternative Gurugram | Offline Expert Biology',
   description:
     'Need offline alternative to Physics Wallah in Gurugram? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'physics wallah supplement gurugram',
   ],
   openGraph: {
-    title: 'Physics Wallah Alternative Gurugram | Cerebrum Biology Academy',
+    title: 'Physics Wallah Alternative Gurugram',
     description: 'Want real classroom interaction instead of video lectures? Experience offline NEET biology coaching.',
     url: 'https://cerebrumbiologyacademy.com/physics-wallah-alternative-gurugram',
   },

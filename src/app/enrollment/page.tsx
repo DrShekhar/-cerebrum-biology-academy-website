@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Enroll in India\'s top NEET Biology coaching institute. 98% success rate, AIIMS-trained faculty. EMI options available. Limited seats for 2026 batch.',
   keywords: 'NEET enrollment, biology coaching admission, NEET 2026 batch, Cerebrum Academy enrollment, NEET coaching fees',
   openGraph: {
-    title: 'Enroll Now | Cerebrum Biology Academy',
+    title: 'Enroll Now',
     description: '98% success rate. AIIMS-trained faculty. EMI options available. Limited seats!',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/enrollment',

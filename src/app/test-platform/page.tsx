@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Platform Testing Dashboard | Cerebrum Biology Academy',
+  title: 'Platform Testing Dashboard',
   description: 'Testing interface for AI education platform validation and verification',
 }
 

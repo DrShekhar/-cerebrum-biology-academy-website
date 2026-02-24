@@ -266,7 +266,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `NEET Coaching for ${data.name} ${data.area} | Online Classes | Cerebrum`,
+    title: `NEET Coaching for ${data.name} ${data.area} | Online Classes`,
     description: `NEET Biology coaching for ${data.name}, ${data.sector !== 'NH-24' ? `Sector ${data.sector}` : data.sector} ${data.area} students. Online classes from home. ${data.studentCount} students enrolled. AIIMS faculty. Call 88264-44334!`,
     keywords: [
       `neet coaching ${data.name.toLowerCase().replace(/\s+/g, ' ')}`,
@@ -275,7 +275,7 @@ export async function generateMetadata({
       `online neet coaching ${data.area.toLowerCase()}`,
     ],
     openGraph: {
-      title: `NEET Coaching for ${data.name} | Cerebrum Academy`,
+      title: `NEET Coaching for ${data.name}`,
       description: `Online NEET Biology classes for ${data.name} residents. ${data.studentCount} students enrolled.`,
       url: `https://cerebrumbiologyacademy.com/neet-coaching-noida-society/${data.slug}`,
     },

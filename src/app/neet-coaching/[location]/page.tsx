@@ -25,7 +25,7 @@ export async function generateMetadata({
 
   if (!locationData) {
     return {
-      title: 'NEET Coaching - Cerebrum Biology Academy',
+      title: 'NEET Coaching',
       description: 'Best NEET biology coaching with AIIMS trained faculty.',
     }
   }

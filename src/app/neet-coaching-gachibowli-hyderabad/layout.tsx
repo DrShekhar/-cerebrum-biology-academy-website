@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords:
     'NEET coaching Gachibowli, NEET biology coaching Financial District, best NEET coaching Kondapur, NEET classes Nanakramguda, biology coaching Manikonda, NEET tuition IT corridor Hyderabad, premium NEET coaching Hyderabad IT, NEET prep tech families, Oakridge NEET coaching, DPS Gachibowli NEET, Meridian NEET prep, biology tuition Gachibowli, biology classes Gachibowli Hyderabad, online biology coaching Gachibowli, biology teacher Gachibowli, NEET biology Gachibowli',
   openGraph: {
-    title: 'Best NEET Coaching in Gachibowli Hyderabad | IT Hub | Cerebrum Academy',
+    title: 'Best NEET Coaching in Gachibowli Hyderabad | IT Hub',
     description:
       'Premium NEET biology coaching in Gachibowli IT Hub with 98% success rate. AIIMS faculty, tech-forward platform. Perfect for IT families.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gachibowli-hyderabad',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best NEET Coaching in Gachibowli Hyderabad | Cerebrum Biology Academy',
+    title: 'Best NEET Coaching in Gachibowli Hyderabad',
     description:
       'Premium NEET biology coaching in Gachibowli IT Hub. 98% success rate. Financial District, Kondapur, Nanakramguda.',
   },

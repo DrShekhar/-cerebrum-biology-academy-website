@@ -11,7 +11,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Vadodara | 98% Success Rate | Cerebrum',
+  title: 'Best NEET Coaching in Vadodara | 98% Success Rate',
   description:
     'Top NEET Biology coaching in Vadodara, Gujarat. AIIMS trained faculty, 98% success rate, live interactive classes. Alkapuri, Sayajigunj, Fatehgunj. Rs 24,000-48,000/year. Book free demo!',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'NEET online classes Gujarat',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Vadodara | Cerebrum Biology Academy',
+    title: 'Best NEET Coaching in Vadodara',
     description:
       'Premium NEET coaching in Vadodara. AIIMS trained faculty, 98% success rate, 2000+ Gujarat students. Book free demo!',
     url: `${BASE_URL}/neet-coaching-vadodara`,

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, Award, Users, GraduationCap, Star, ArrowRight, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Faculty Gurugram | AIIMS Faculty | Cerebrum Academy',
+  title: 'NEET Biology Faculty Gurugram | AIIMS Faculty',
   description:
     'Meet our expert NEET Biology faculty in Gurugram. AIIMS graduates, 15+ years experience, 98% success rate. Small batch specialists. Call 88264-44334!',
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'cerebrum academy faculty',
   ],
   openGraph: {
-    title: 'NEET Biology Faculty | Cerebrum Academy Gurugram',
+    title: 'NEET Biology Faculty Gurugram',
     description: 'AIIMS graduates with 15+ years experience. 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-faculty-gurugram',
   },

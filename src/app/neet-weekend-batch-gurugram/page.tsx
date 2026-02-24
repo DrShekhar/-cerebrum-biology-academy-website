@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, Calendar, CheckCircle, BookOpen, Users, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Weekend Batch Gurugram 2026 | Saturday-Sunday Classes | Cerebrum',
+  title: 'NEET Weekend Batch Gurugram 2026 | Saturday-Sunday Classes',
   description:
     'Join NEET weekend batch in Gurugram - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. M2K Sector 51. Call 88264-44334!',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'integrated neet coaching weekend',
   ],
   openGraph: {
-    title: 'NEET Weekend Batch Gurugram 2026 | Cerebrum Biology Academy',
+    title: 'NEET Weekend Batch Gurugram 2026',
     description: 'Balance school and NEET prep! Saturday-Sunday intensive classes at M2K Sector 51.',
     url: 'https://cerebrumbiologyacademy.com/neet-weekend-batch-gurugram',
   },

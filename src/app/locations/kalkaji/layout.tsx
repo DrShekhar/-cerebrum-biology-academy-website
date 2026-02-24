@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Kalkaji | Near Nehru Place | Cerebrum Academy',
+  title: 'NEET Biology Coaching Kalkaji | Near Nehru Place',
   description:
     'Best NEET Biology coaching for Kalkaji students. Near Nehru Place, Govindpuri, Kalkaji Temple. Expert AIIMS faculty, small batches, 98% success rate.',
   keywords: [
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   ],
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Biology Coaching Kalkaji | Near Nehru Place | Cerebrum Academy',
+    title: 'NEET Biology Coaching Kalkaji | Near Nehru Place',
     description: 'Best NEET Biology coaching for Kalkaji students. Near Nehru Place, Govindpuri, Kalkaji Temple.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/kalkaji',
   },
   openGraph: {
-    title: 'NEET Biology Coaching Kalkaji | Cerebrum Academy',
+    title: 'NEET Biology Coaching Kalkaji',
     description:
       'Expert NEET Biology coaching for Kalkaji students. Near Nehru Place, convenient metro access.',
     type: 'website',

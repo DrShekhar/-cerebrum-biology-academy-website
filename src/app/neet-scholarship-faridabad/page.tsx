@@ -13,7 +13,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Scholarship Faridabad 2026 | Up to 100% Fee Waiver | Cerebrum Academy',
+  title: 'NEET Scholarship Faridabad 2026 | Up to 100% Fee Waiver',
   description:
     'Apply for NEET scholarship in Faridabad. Merit-based scholarships up to 100% fee waiver. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'biology scholarship faridabad',
   ],
   openGraph: {
-    title: 'NEET Scholarship Faridabad 2026 | Cerebrum Biology Academy',
+    title: 'NEET Scholarship Faridabad 2026',
     description: 'Merit-based NEET scholarships up to 100% fee waiver. Apply now!',
     url: 'https://cerebrumbiologyacademy.com/neet-scholarship-faridabad',
   },

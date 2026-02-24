@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Online Biology Tutor for NEET Droppers | Repeater Course | Cerebrum',
+  title: 'Online Biology Tutor for NEET Droppers | Repeater Course',
   description:
     'Best online biology tutor for NEET droppers. Intensive 1-year program with personalized attention. Learn from Dr. Shekhar C Singh, AIIMS Alumnus. Book FREE demo!',
   keywords: [

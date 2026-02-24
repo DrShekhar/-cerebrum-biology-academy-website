@@ -15,7 +15,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Free NEET Demo Class Ghaziabad | Book Now | Cerebrum Biology Academy',
+  title: 'Free NEET Demo Class Ghaziabad | Book Now',
   description:
     'Book your FREE NEET Biology demo class for Ghaziabad students. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 99536-43938!',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'book free neet class ghaziabad',
   ],
   openGraph: {
-    title: 'Free NEET Demo Class Ghaziabad | Cerebrum Biology Academy',
+    title: 'Free NEET Demo Class Ghaziabad',
     description: 'Book your FREE NEET demo class. Experience our teaching before you decide.',
     url: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-ghaziabad',
   },

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, BookOpen, ArrowRight, CheckCircle, AlertTriangle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Chapter Weightage 2026 | Important Topics | Cerebrum Academy',
+  title: 'NEET Biology Chapter Weightage 2026 | Important Topics',
   description:
     'NEET Biology chapter-wise weightage 2026. Human Physiology (20%), Genetics (18%), Plant Biology (15%). Focus on high-weightage chapters. Expert guidance at Cerebrum. Call 88264-44334!',
   keywords: [

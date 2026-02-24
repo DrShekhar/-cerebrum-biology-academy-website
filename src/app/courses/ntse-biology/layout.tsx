@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NTSE Biology Coaching Delhi | Class 10 Scholarship Preparation | Cerebrum',
+  title: 'NTSE Biology Coaching Delhi | Class 10 Scholarship Preparation',
   description:
     'Expert NTSE Biology coaching in Delhi. Class 10 scholarship preparation, MAT & SAT strategies, Rs 1.25 lakh/year scholarship till PhD. 90% selection rate.',
   keywords: [
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     'NCERT based scholarship exam',
   ],
   openGraph: {
-    title: 'NTSE Biology Coaching Delhi | Rs 1.25 Lakh/Year Scholarship | Cerebrum',
+    title: 'NTSE Biology Coaching Delhi | Rs 1.25 Lakh/Year Scholarship',
     description:
       "Expert NTSE preparation for Class 10. Biology SAT strategies, 90% selection rate. India's most prestigious scholarship.",
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NTSE Biology Coaching Delhi | Class 10 Scholarship Preparation | Cerebrum',
+    title: 'NTSE Biology Coaching Delhi | Class 10 Scholarship Preparation',
     description: 'Expert NTSE Biology coaching in Delhi. Class 10 scholarship preparation, MAT & SAT strategies, Rs 1.',
   },
 }

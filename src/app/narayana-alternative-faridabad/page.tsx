@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, CheckCircle, Clock, Award, ArrowRight, UserCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Best Narayana Alternative in Faridabad 2026 | Small Batch Personal Attention | Cerebrum',
+  title: 'Best Narayana Alternative in Faridabad 2026 | Small Batch Personal Attention',
   description:
     "Looking for Narayana alternative in Faridabad? Cerebrum: 25-student batches vs Narayana's 100+. AIIMS faculty, 98% success rate. Personal attention guaranteed. Call 88264-44334!",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'biology coaching sector 17 faridabad',
   ],
   openGraph: {
-    title: 'Best Narayana Alternative in Faridabad 2026 | Cerebrum Biology Academy',
+    title: 'Best Narayana Alternative in Faridabad 2026',
     description:
       'Tired of crowded Narayana batches? Get personal attention with 25-student batches.',
     url: 'https://cerebrumbiologyacademy.com/narayana-alternative-faridabad',

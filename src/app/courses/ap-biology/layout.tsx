@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'AP Biology Coaching Delhi | College Board AP Exam Preparation | Cerebrum',
+  title: 'AP Biology Coaching Delhi | College Board AP Exam Preparation',
   description:
     'Expert AP Biology coaching in Delhi for American curriculum students. College Board certified exam prep, score 5 strategies, lab skills training. AES, Pathways, American School students welcome.',
   keywords: [
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     'AP exam prep Delhi',
   ],
   openGraph: {
-    title: 'AP Biology Coaching Delhi | Score 5 on Your AP Exam | Cerebrum',
+    title: 'AP Biology Coaching Delhi | Score 5 on Your AP Exam',
     description:
       'Expert AP Biology preparation for College Board exams. Lab skills, FRQ strategies, score 5 coaching. AES, Pathways, American School students.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AP Biology Coaching Delhi | College Board AP Exam Preparation | Cerebrum',
+    title: 'AP Biology Coaching Delhi | College Board AP Exam Preparation',
     description: 'Expert AP Biology coaching in Delhi for American curriculum students.',
   },
 }

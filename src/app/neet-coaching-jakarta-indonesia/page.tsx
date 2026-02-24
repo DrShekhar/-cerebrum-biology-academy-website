@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import NEETCoachingPageContent from './PageContent';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Jakarta, Indonesia - 98% Success Rate | Cerebrum Academy',
+  title: 'NEET Coaching in Jakarta, Indonesia - 98% Success Rate',
   description: "NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge.",
   keywords: [
     'NEET coaching in Jakarta',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'NEET online coaching Indonesia'
   ],
   openGraph: {
-    title: 'NEET Coaching in Jakarta, Indonesia - 98% Success Rate | Cerebrum Academy',
+    title: 'NEET Coaching in Jakarta, Indonesia - 98% Success Rate',
     description: "NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge.",
     type: 'website'
   },

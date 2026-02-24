@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { PageContent } from "./PageContent";
 
 export const metadata: Metadata = {
-  title: "NEET Coaching in New York, USA | Cerebrum Biology Academy",
+  title: "NEET Coaching in New York, USA",
   description: "Expert NEET coaching for New York, USA students. 98% success rate. Dr. Shekhar C Singh's specialized curriculum. Join 50+ top scorers.",
   keywords: "NEET coaching new york, NEET classes new york, medical entrance exam new york, biology coaching new york, Cerebrum Biology Academy new york",
   openGraph: {
-    title: "NEET Coaching in New York, USA | Cerebrum Biology Academy",
+    title: "NEET Coaching in New York, USA",
     description: "98% Success Rate. Expert NEET coaching by Dr. Shekhar C Singh. Call +918826444334 for free counseling.",
     url: `https://cerebrumbiologyacademy.com/cities/neet-coaching-new-york-usa`,
     type: "website",

@@ -5,7 +5,7 @@ import { FAQSchema, FAQDisplay } from '@/components/seo/FAQSchema'
 
 // Metadata export (requires static generation in production)
 export const metadata: Metadata = {
-  title: 'NEET Biology Resources 2026: Free Notes, PYQs, Study Material | Cerebrum Biology Academy',
+  title: 'NEET Biology Resources 2026: Free Notes, PYQs, Study Material',
   description:
     'Access comprehensive NEET Biology resources including chapter-wise notes, previous year questions, study plans, and expert tips from Cerebrum Biology Academy\'s AIIMS-trained faculty.',
   keywords:

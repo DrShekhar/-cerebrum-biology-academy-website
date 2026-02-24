@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compare NEET Coaching Institutes | Cerebrum Academy',
+    title: 'Compare NEET Coaching Institutes',
     description: 'See detailed comparison: success rate, faculty, fees, batch size, support',
     images: ['/og-image.jpg'],
   },

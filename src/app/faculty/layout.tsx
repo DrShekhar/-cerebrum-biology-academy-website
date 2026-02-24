@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Expert NEET Biology Faculty | Cerebrum Academy',
+    title: 'Expert NEET Biology Faculty',
     description:
       'AIIMS-qualified faculty, 15+ years experience, 680+ medical selections. Learn from the best!',
   },

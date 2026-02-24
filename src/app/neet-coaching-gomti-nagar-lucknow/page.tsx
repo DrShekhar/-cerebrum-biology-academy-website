@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Gomti Nagar Lucknow | Top Premium | Cerebrum',
+  title: 'Best NEET Coaching in Gomti Nagar Lucknow | Top Premium',
   description:
     'Join #1 NEET coaching in Gomti Nagar, Lucknow. Expert faculty, proven 98% success rate, 695/720 top score. Premium coaching for bureaucrat families. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation premium Lucknow',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Gomti Nagar Lucknow | Top Premium | Cerebrum',
+    title: 'Best NEET Coaching in Gomti Nagar Lucknow | Top Premium',
     description:
       'Join #1 NEET coaching in Gomti Nagar, Lucknow. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-gomti-nagar-lucknow`,

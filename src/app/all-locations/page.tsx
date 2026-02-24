@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { MapPin, GraduationCap, Globe, Building, Download, Phone } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'All NEET Coaching Locations | Cerebrum Biology Academy',
+  title: 'All NEET Coaching Locations',
   description:
     'Find Cerebrum Biology Academy NEET coaching in your city. 100+ locations across India and international centers. Expert biology coaching for NEET, boards, and international curricula.',
   keywords:
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/all-locations',
   },
   openGraph: {
-    title: 'All NEET Coaching Locations | Cerebrum Biology Academy',
+    title: 'All NEET Coaching Locations',
     description: 'Find NEET coaching in 100+ locations across India and internationally',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/all-locations',

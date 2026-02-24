@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
-  title: 'NEET Complete Program | 2-Year Integrated Biology Coaching | Cerebrum Academy',
+  title: 'NEET Complete Program | 2-Year Integrated Biology Coaching',
   description:
     'Join our comprehensive 2-year NEET Biology program for Class 11 & 12 students. AIIMS faculty, 98% success rate, complete syllabus coverage with adaptive tests. Enroll now!',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Complete 2-Year Program | Cerebrum Biology Academy',
+    title: 'NEET Complete 2-Year Program',
     description:
       '98% success rate, AIIMS faculty, complete NEET Biology preparation for Class 11-12',
     images: ['/og-image.jpg'],

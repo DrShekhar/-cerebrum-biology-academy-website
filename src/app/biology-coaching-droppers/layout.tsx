@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best Biology Coaching for NEET Droppers | Repeater Batch 2025 | Cerebrum Academy',
+  title: 'Best Biology Coaching for NEET Droppers | Repeater Batch 2025',
   description:
     'Top NEET dropper biology coaching. Intensive revision, gap analysis, complete NCERT line-by-line. Expert AIIMS faculty, 98% success rate. Previous year papers, test series. Book free demo!',
   keywords:
     'NEET dropper coaching, biology coaching for droppers, NEET repeater batch, dropper batch biology, NEET second attempt coaching, NEET 2026 dropper, biology tuition for droppers, NEET dropper course, repeater biology coaching, NEET dropper online coaching, biology for NEET repeaters, gap year NEET coaching',
   openGraph: {
-    title: 'Best NEET Dropper Biology Coaching | Repeater Batch | Cerebrum Academy',
+    title: 'Best NEET Dropper Biology Coaching | Repeater Batch',
     description:
       'Intensive biology coaching for NEET droppers. Complete revision, gap analysis, test series. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/biology-coaching-droppers',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best NEET Dropper Biology Coaching | Cerebrum Biology Academy',
+    title: 'Best NEET Dropper Biology Coaching',
     description: 'Top biology coaching for NEET droppers. 98% success rate.',
   },
   alternates: {

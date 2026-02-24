@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: UnitPageProps): Promise<Metad
 
   if (!unit) {
     return {
-      title: 'Unit Not Found | Cerebrum Academy',
+      title: 'Unit Not Found',
     }
   }
 

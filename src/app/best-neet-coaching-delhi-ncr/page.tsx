@@ -3,7 +3,7 @@ import { BestNEETCoachingDelhiNCRClient } from './BestNEETCoachingDelhiNCRClient
 import { BreadcrumbSchema } from '@/components/seo'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Delhi NCR 2025 [67+ AIIMS Selections] | Cerebrum',
+  title: 'Best NEET Coaching in Delhi NCR 2025 [67+ AIIMS Selections]',
   description:
     'Top NEET coaching in Delhi NCR with AIIMS-trained faculty. 98% success rate, 67+ AIIMS selections. Delhi, Noida, Gurgaon centers. Book FREE demo class today!',
   keywords: [

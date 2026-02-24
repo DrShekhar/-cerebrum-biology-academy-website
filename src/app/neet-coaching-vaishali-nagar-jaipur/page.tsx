@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Vaishali Nagar Jaipur | Education Hub | Cerebrum',
+  title: 'Best NEET Coaching in Vaishali Nagar Jaipur | Education Hub',
   description:
     'Join #1 NEET coaching in Vaishali Nagar, Jaipur. Expert faculty, proven 98% success rate, 695/720 top score. Premium coaching for educational families. Book free demo!',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET preparation Vaishali Nagar',
   ],
   openGraph: {
-    title: 'Best NEET Coaching in Vaishali Nagar Jaipur | Education Hub | Cerebrum',
+    title: 'Best NEET Coaching in Vaishali Nagar Jaipur | Education Hub',
     description:
       'Join #1 NEET coaching in Vaishali Nagar, Jaipur. Expert faculty, proven 98% success rate, 695/720 top score. Book free demo!',
     url: `${BASE_URL}/neet-coaching-vaishali-nagar-jaipur`,

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { SaraswatiViharPageContent } from './SaraswatiViharPageContent'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura | Cerebrum Academy',
+  title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura',
   description:
     'Best NEET coaching for Saraswati Vihar students in Pitampura. 5-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'Saraswati Vihar Block E NEET',
   ],
   openGraph: {
-    title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura | Cerebrum Academy',
+    title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura',
     description:
       'Best NEET coaching for Saraswati Vihar students in Pitampura. 5-10 min from Rohini DC Chauk center. AIIMS faculty, 98% success rate. WhatsApp 88264-44334',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-saraswati-vihar',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura | Cerebrum Academy',
+    title: 'NEET Coaching Saraswati Vihar | Biology Classes Pitampura',
     description:
       'Best NEET coaching for Saraswati Vihar students. 5-10 min from DC Chauk Rohini. AIIMS faculty, 98% success rate.',
   },

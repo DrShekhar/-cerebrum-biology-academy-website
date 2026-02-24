@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { BiologyTuitionNearMeClient } from './BiologyTuitionNearMeClient'
 
 export const metadata: Metadata = {
-  title: 'Biology Tuition Near Me | Best Biology Classes in Delhi NCR | Cerebrum Academy',
+  title: 'Biology Tuition Near Me | Best Biology Classes in Delhi NCR',
   description:
     'Looking for biology tuition near you? Cerebrum Biology Academy offers expert biology classes in Delhi, Noida, Gurgaon, Ghaziabad & Faridabad. AIIMS faculty, 98% success rate. Book FREE demo!',
   keywords:

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'ASOB Coaching Online | Australian Science Olympiad Biology - Cerebrum',
+  title: 'ASOB Coaching Online | Australian Science Olympiad Biology',
   description:
     'Expert ASOB coaching for Australian Science Olympiad Biology. Complete Campbell Biology coverage, past paper practice, and 1-on-1 mentorship to represent Australia at IBO.',
   keywords: [

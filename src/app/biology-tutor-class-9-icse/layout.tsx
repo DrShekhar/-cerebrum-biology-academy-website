@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Tutor Class 9 ICSE | ICSE Biology Tuition - Cerebrum',
+  title: 'Biology Tutor Class 9 ICSE | ICSE Biology Tuition',
   description:
     'Expert biology tutor for ICSE Class 9 with personalized attention. Complete syllabus coverage, board exam preparation, practical training. Build strong foundation for Class 10. Book free demo!',
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Biology Tutor Class 9 ICSE | Cerebrum Biology Academy',
+    title: 'Biology Tutor Class 9 ICSE',
     description:
       'Expert ICSE Class 9 biology tuition with complete syllabus coverage and board exam preparation.',
     images: ['https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&h=630&fit=crop'],

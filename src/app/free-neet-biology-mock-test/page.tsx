@@ -5,11 +5,11 @@ import Script from 'next/script'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Mock Test 2026 | Free Online | 90 Questions | Cerebrum',
+  title: 'NEET Biology Mock Test 2026 | Free Online | 90 Questions',
   description: 'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEET readiness. By AIIMS faculty.',
   keywords: ['NEET biology mock test', 'free NEET test online', 'NEET practice test biology', 'NEET 2026 mock test', 'biology test series NEET'],
   openGraph: {
-    title: 'NEET Biology Mock Test 2026 | Free Online | 90 Questions | Cerebrum',
+    title: 'NEET Biology Mock Test 2026 | Free Online | 90 Questions',
     description: 'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEET readiness. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-mock-test`,
     siteName: 'Cerebrum Biology Academy',

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Dammam, Saudi Arabia | Cerebrum Biology Academy',
+  title: 'NEET Coaching in Dammam, Saudi Arabia',
   description: 'Expert NEET coaching in Dammam, Saudi Arabia. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students.',
   keywords: 'NEET coaching Dammam, NEET exam center Dammam, best NEET classes Dammam, NEET preparation Saudi Arabia',
   openGraph: {

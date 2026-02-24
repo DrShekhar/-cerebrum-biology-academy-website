@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: '1 Year NEET Course Ghaziabad 2026 | Class 12 + Dropper | Cerebrum',
+  title: '1 Year NEET Course Ghaziabad 2026 | Class 12 + Dropper',
   description:
     'Join 1-year NEET course for Ghaziabad students. Class 12 & droppers. Complete syllabus in 12 months. Sector 62 Noida center, accessible via Blue Line Metro. Call 99536-43938!',
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'neet biology 1 year course ghaziabad',
   ],
   openGraph: {
-    title: '1 Year NEET Course Ghaziabad 2026 | Cerebrum Biology Academy',
+    title: '1 Year NEET Course Ghaziabad 2026',
     description:
       'Complete NEET biology syllabus in 12 months! Ideal for Class 12 students and droppers from Ghaziabad.',
     url: 'https://cerebrumbiologyacademy.com/1-year-neet-course-ghaziabad',

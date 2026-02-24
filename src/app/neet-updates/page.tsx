@@ -15,7 +15,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET 2025 Updates & NTA Announcements | Latest News | Cerebrum Biology Academy',
+  title: 'NEET 2025 Updates & NTA Announcements | Latest News',
   description:
     'Stay updated with latest NEET 2025 exam dates, NTA announcements, syllabus changes, application forms, and important notifications. Get expert guidance from Cerebrum Biology Academy.',
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     'NEET news today',
   ],
   openGraph: {
-    title: 'NEET 2025 Updates & NTA Announcements | Cerebrum',
+    title: 'NEET 2025 Updates & NTA Announcements',
     description: 'Latest NEET exam updates, dates, syllabus changes, and NTA notifications.',
     url: 'https://cerebrumbiologyacademy.com/neet-updates',
   },

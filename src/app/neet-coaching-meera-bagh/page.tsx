@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { NEETCoachingMeeraBaghContent } from './MeeraBaghContent'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Meera Bagh | Biology Classes Paschim Vihar | Cerebrum Academy',
+  title: 'NEET Coaching Meera Bagh | Biology Classes Paschim Vihar',
   description:
     'Best NEET coaching in Meera Bagh, Paschim Vihar. Premium residential area near Virat Kohli residence. AIIMS faculty, 98% success rate. Only 15-20 min from Rohini center. Book free demo!',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'Dr Shekhar C Singh',
   ],
   openGraph: {
-    title: 'NEET Coaching Meera Bagh | Biology Classes Paschim Vihar | Cerebrum Academy',
+    title: 'NEET Coaching Meera Bagh | Biology Classes Paschim Vihar',
     description:
       'Best NEET coaching in Meera Bagh, Paschim Vihar. Premium residential area near Virat Kohli residence. AIIMS faculty, 98% success rate. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-meera-bagh',

@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'Telangana Intermediate Biology Coaching | NEET + Board Dual Prep | Cerebrum',
+  title: 'Telangana Intermediate Biology Coaching | NEET + Board Dual Prep',
   description: 'Expert Telangana BIE Biology coaching with integrated NEET preparation. Master BIE Telangana syllabus (Botany Paper-I & Zoology Paper-II) with EAMCET overlap coverage.',
   keywords: [
     'Telangana intermediate biology',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'BIE biology online classes',
   ],
   openGraph: {
-    title: 'Telangana Intermediate Biology Coaching | NEET + Board Dual Prep | Cerebrum',
+    title: 'Telangana Intermediate Biology Coaching | NEET + Board Dual Prep',
     description: 'Expert Telangana BIE Biology coaching with integrated NEET preparation.',
     url: `${BASE_URL}/boards/telangana-intermediate`,
     siteName: 'Cerebrum Biology Academy',
