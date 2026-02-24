@@ -30,6 +30,8 @@ import {
   getRelatedLocations,
 } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 
 export default function SouthExtensionLocationPage() {
   useEffect(() => {
@@ -114,6 +116,14 @@ export default function SouthExtensionLocationPage() {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { label: 'Centers', href: '/locations' },
+          { label: 'South Extension', isCurrentPage: true },
+        ]}
+        variant="minimal"
+        className="max-w-7xl mx-auto px-4 pt-3"
+      />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
@@ -339,6 +349,9 @@ export default function SouthExtensionLocationPage() {
             </div>
           </div>
         </section>
+
+        {/* Explore Courses - Cross-linking for SEO */}
+        <ExploreCourses />
 
         {/* Related Locations - Cross-linking for SEO */}
         <RelatedLocations

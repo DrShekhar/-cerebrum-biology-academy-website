@@ -28,6 +28,7 @@ import { NEETToppersShowcase } from '@/components/layout/NEETToppersShowcase'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
+import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 
 export default function NEETDropperPage() {
   const router = useRouter()
@@ -960,6 +961,9 @@ export default function NEETDropperPage() {
           }),
         }}
       />
+
+      {/* Visit Our Centers - Cross-linking for SEO */}
+      <VisitOurCenters />
     </div>
   )
 }

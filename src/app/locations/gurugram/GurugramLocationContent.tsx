@@ -27,6 +27,8 @@ import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 
 export default function GurugramLocationContent() {
   useEffect(() => {
@@ -106,6 +108,14 @@ export default function GurugramLocationContent() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema
+        items={[
+          { label: 'Centers', href: '/locations' },
+          { label: 'Gurugram', isCurrentPage: true },
+        ]}
+        variant="minimal"
+        className="max-w-7xl mx-auto px-4 pt-3"
+      />
       {/* Hero Section with Map */}
       <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
@@ -352,6 +362,9 @@ export default function GurugramLocationContent() {
           </div>
         </div>
       </div>
+
+      {/* Explore Courses - Cross-linking for SEO */}
+      <ExploreCourses />
 
       {/* Other Centers */}
       <div className="py-12 bg-gray-50">

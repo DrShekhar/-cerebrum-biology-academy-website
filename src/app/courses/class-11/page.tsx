@@ -28,6 +28,7 @@ import {
 import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
+import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 
 export default function Class11BiologyPage() {
   const [activeSection, setActiveSection] = useState('hero')
@@ -944,6 +945,9 @@ export default function Class11BiologyPage() {
           </Link>
         </div>
       </div>
+
+      {/* Visit Our Centers - Cross-linking for SEO */}
+      <VisitOurCenters />
 
       {/* Bottom padding for mobile CTA */}
       <div className="h-20 md:hidden" />

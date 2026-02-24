@@ -31,6 +31,8 @@ import {
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import Link from 'next/link'
 
 export default function FaridabadLocationPage() {
@@ -128,6 +130,14 @@ export default function FaridabadLocationPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema
+        items={[
+          { label: 'Centers', href: '/locations' },
+          { label: 'Faridabad', isCurrentPage: true },
+        ]}
+        variant="minimal"
+        className="max-w-7xl mx-auto px-4 pt-3"
+      />
       {/* Hero Section with Map */}
       <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
@@ -545,6 +555,9 @@ export default function FaridabadLocationPage() {
           </div>
         </div>
       </div>
+
+      {/* Explore Courses - Cross-linking for SEO */}
+      <ExploreCourses />
 
       {/* Other Centers */}
       <div className="py-12 bg-gray-50">

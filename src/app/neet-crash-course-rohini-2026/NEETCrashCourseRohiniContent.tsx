@@ -28,6 +28,7 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
 
 interface FAQ {
   question: string
@@ -503,18 +504,11 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                 key={story.name}
                 className="bg-white rounded-2xl shadow-xl overflow-hidden animate-fadeInUp"
               >
-                <div className="relative aspect-video bg-gray-200">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${story.youtubeId}`}
-                    title={`${story.name} NEET Success Story`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
+                <LazyYouTubeEmbed
+                  videoId={story.youtubeId}
+                  title={`${story.name} NEET Success Story`}
+                  playButtonSize="md"
+                />
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold">

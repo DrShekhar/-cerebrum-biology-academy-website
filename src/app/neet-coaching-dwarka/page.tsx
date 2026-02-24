@@ -21,6 +21,7 @@ import {
   Monitor,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -501,18 +502,11 @@ export default function NEETCoachingDwarkaPage() {
                   key={video.youtubeId}
                   className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-fadeInUp"
                 >
-                  <div className="relative aspect-video">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                      title={`${video.student} NEET Success Story`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    />
-                  </div>
+                  <LazyYouTubeEmbed
+                    videoId={video.youtubeId}
+                    title={`${video.student} NEET Success Story`}
+                    playButtonSize="md"
+                  />
                   <div className="p-4">
                     <h3 className="font-bold text-gray-800 mb-1">{video.student}</h3>
                     <p className="text-green-600 font-semibold text-sm">{video.score}</p>

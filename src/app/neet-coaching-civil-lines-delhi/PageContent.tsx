@@ -30,6 +30,7 @@ import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
 
 interface FAQ {
   question: string
@@ -562,18 +563,11 @@ export default function PageContent({ faqs }: PageContentProps) {
                 key={video.youtubeId}
                 className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 group hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
-                <div className="relative aspect-video bg-gray-100">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                    title={`${video.student} NEET Success Story`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
+                <LazyYouTubeEmbed
+                  videoId={video.youtubeId}
+                  title={`${video.student} NEET Success Story`}
+                  playButtonSize="md"
+                />
                 <div className="p-5">
                   <h3 className="font-bold text-gray-900 text-lg mb-1">{video.student}</h3>
                   <p className="text-green-600 font-semibold mb-1">{video.score}</p>

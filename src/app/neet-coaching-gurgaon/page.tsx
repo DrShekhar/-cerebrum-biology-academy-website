@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Phone,
   MapPin,
@@ -24,6 +25,7 @@ import {
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { VideoSchema } from '@/components/seo/VideoSchema'
+import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -367,18 +369,11 @@ export default function NEETCoachingGurgaonPage() {
                   key={video.youtubeId}
                   className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 group hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
                 >
-                  <div className="relative aspect-video bg-gray-100">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={`https://www.youtube.com/embed/${video.youtubeId}`}
-                      title={`${video.student} NEET Success Story`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full"
-                    />
-                  </div>
+                  <LazyYouTubeEmbed
+                    videoId={video.youtubeId}
+                    title={`${video.student} NEET Success Story`}
+                    playButtonSize="md"
+                  />
                   <div className="p-5">
                     <h3 className="font-bold text-gray-900 text-lg mb-1">{video.student}</h3>
                     <p className="text-green-600 font-semibold mb-1">{video.score}</p>
@@ -528,10 +523,13 @@ export default function NEETCoachingGurgaonPage() {
                 className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp"
               >
                 <div className="flex items-center justify-center mb-6">
-                  <img
+                  <Image
                     src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
                     alt="Google"
-                    className="h-10"
+                    width={92}
+                    height={30}
+                    className="h-10 w-auto"
+                    unoptimized
                   />
                 </div>
                 <div className="text-center mb-6">

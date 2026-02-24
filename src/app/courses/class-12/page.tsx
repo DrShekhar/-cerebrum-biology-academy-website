@@ -28,6 +28,7 @@ import {
 } from 'lucide-react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
+import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 
 export default function Class12BiologyPage() {
   const courseFeatures = [
@@ -787,6 +788,9 @@ export default function Class12BiologyPage() {
           </p>
         </div>
       </section>
+
+      {/* Visit Our Centers - Cross-linking for SEO */}
+      <VisitOurCenters />
     </div>
   )
 }

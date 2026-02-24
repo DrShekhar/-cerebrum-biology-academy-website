@@ -24,6 +24,8 @@ import {
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import Link from 'next/link'
 
 export default function RohiniLocationPage() {
@@ -109,6 +111,14 @@ export default function RohiniLocationPage() {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { label: 'Centers', href: '/locations' },
+          { label: 'Rohini', isCurrentPage: true },
+        ]}
+        variant="minimal"
+        className="max-w-7xl mx-auto px-4 pt-3"
+      />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
@@ -374,6 +384,9 @@ export default function RohiniLocationPage() {
             </div>
           </div>
         </section>
+
+        {/* Explore Courses - Cross-linking for SEO */}
+        <ExploreCourses />
 
         {/* Other Centers */}
         <section className="py-12 bg-gray-50">

@@ -145,8 +145,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cerebrumbiologyacademy.com" crossOrigin="anonymous" />
         {/* Vercel CDN for static assets */}
         <link rel="preconnect" href="https://vercel.live" />
-        {/* Third-party services - PERFORMANCE: GTM preconnect removed since script uses lazyOnload */}
+        {/* Third-party services */}
         <link rel="preconnect" href="https://wa.me" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//checkout.razorpay.com" />
         <link rel="dns-prefetch" href="//api.whatsapp.com" />
         <link rel="dns-prefetch" href="//giscus.app" />
