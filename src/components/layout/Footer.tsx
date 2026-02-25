@@ -134,6 +134,10 @@ export const Footer = memo(function Footer() {
     { name: 'Rohini - DC Chowk', href: '/locations/rohini' },
     { name: 'Gurugram - Sector 51', href: '/locations/gurugram' },
     { name: 'Faridabad - Sector 17', href: '/locations/faridabad' },
+    { name: 'Noida', href: '/locations/noida' },
+    { name: 'Ghaziabad', href: '/locations/ghaziabad' },
+    { name: 'Green Park', href: '/locations/green-park' },
+    { name: 'Delhi (All Areas)', href: '/locations/delhi' },
     { name: 'All Locations', href: '/locations' },
   ]
 
@@ -151,8 +155,8 @@ export const Footer = memo(function Footer() {
     { name: 'Noida', href: '/locations/noida' },
     { name: 'Gurugram', href: '/locations/gurugram' },
     { name: 'Faridabad', href: '/locations/faridabad' },
-    { name: 'Ghaziabad', href: '/biology-classes-ghaziabad' },
-    { name: 'Rohini', href: '/biology-classes-rohini' },
+    { name: 'Ghaziabad', href: '/locations/ghaziabad' },
+    { name: 'Rohini', href: '/locations/rohini' },
   ]
 
   const biologyTuitionLinks = [

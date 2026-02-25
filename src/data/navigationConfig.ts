@@ -512,6 +512,27 @@ export const navigationConfig: NavigationSection[] = [
         description: 'HUDA Market, near Bata Chowk Metro (Violet Line)',
         keywords: ['faridabad', 'sector 17', 'bata chowk', 'huda market'],
       },
+      {
+        id: 'noida',
+        title: 'Noida',
+        href: '/locations/noida',
+        description: 'Serving Noida students with online + offline coaching',
+        keywords: ['noida', 'sector 18', 'sector 62', 'greater noida'],
+      },
+      {
+        id: 'ghaziabad',
+        title: 'Ghaziabad',
+        href: '/locations/ghaziabad',
+        description: 'NEET Biology coaching for Ghaziabad and Indirapuram students',
+        keywords: ['ghaziabad', 'indirapuram', 'vaishali', 'vasundhara'],
+      },
+      {
+        id: 'delhi',
+        title: 'Delhi (All Areas)',
+        href: '/locations/delhi',
+        description: 'Serving all Delhi areas - South, North, East, West Delhi',
+        keywords: ['delhi', 'south delhi', 'north delhi', 'east delhi', 'west delhi'],
+      },
     ],
   },
   {
@@ -597,6 +618,9 @@ export const footerNavigationConfig = {
     { title: 'Rohini - DC Chowk', href: '/locations/rohini' },
     { title: 'Gurugram - Sector 51', href: '/locations/gurugram' },
     { title: 'Faridabad - Sector 17', href: '/locations/faridabad' },
+    { title: 'Noida', href: '/locations/noida' },
+    { title: 'Ghaziabad', href: '/locations/ghaziabad' },
+    { title: 'Delhi (All Areas)', href: '/locations/delhi' },
   ],
   olympiadCoaching: [
     { title: 'Campbell Biology Coaching', href: '/campbell-biology' },
