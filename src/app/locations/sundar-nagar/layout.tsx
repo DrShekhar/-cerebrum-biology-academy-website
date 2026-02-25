@@ -136,7 +136,7 @@ export default function SundarNagarLayout({ children }: { children: React.ReactN
                 name: 'What are the batch timings at Cerebrum Academy for Sundar Nagar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Sundar Nagar students can choose timings suitable for their schedule. Call +91-88264-44334 for available batch timings.',
+                  text: 'Our center is open 24/7 with online classes available for students worldwide with flexible batch options including morning, afternoon, and evening sessions. Sundar Nagar students can choose timings suitable for their schedule. Call +91-88264-44334 for available batch timings.',
                 },
               },
               {

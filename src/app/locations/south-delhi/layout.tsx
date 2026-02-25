@@ -243,7 +243,7 @@ export default function SouthDelhiLocationLayout({ children }: { children: React
                 name: 'What are the batch timings at Cerebrum Academy for South Delhi students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to suit South Delhi students flexible schedules. Contact +91-88264-44334 to book your preferred batch time.',
+                  text: 'Our center is open 24/7 with online classes available for students worldwide with multiple batch options. We offer morning, afternoon, and evening sessions to suit South Delhi students flexible schedules. Contact +91-88264-44334 to book your preferred batch time.',
                 },
               },
               {

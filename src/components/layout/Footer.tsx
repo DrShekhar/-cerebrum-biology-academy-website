@@ -262,7 +262,7 @@ export const Footer = memo(function Footer() {
                   >
                     {getDisplayPhone()}
                   </a>
-                  <span className="text-gray-400 text-sm block">Mon-Sat: 8 AM - 8 PM</span>
+                  <span className="text-gray-400 text-sm block">Open 24/7 — Online Classes Globally</span>
                 </div>
               </div>
 

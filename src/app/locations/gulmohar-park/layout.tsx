@@ -149,7 +149,7 @@ function GulmoharParkFAQSchema() {
         name: 'What are the batch timings for Gulmohar Park students at Cerebrum?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. Sunday batches also available from 9:00 AM to 6:00 PM. We offer morning, afternoon, and evening batches for Gulmohar Park students. Contact +91-88264-44334 for specific schedules.',
+          text: 'Cerebrum is open 24/7 with online classes available for students worldwide with multiple batch options. We offer morning, afternoon, and evening batches for Gulmohar Park students. Contact +91-88264-44334 for specific schedules.',
         },
       },
       {

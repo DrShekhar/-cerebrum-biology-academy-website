@@ -101,15 +101,9 @@ function NoidaServiceSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '10:00',
-        closes: '18:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
     sameAs: [
@@ -162,7 +156,7 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
                 name: 'What are the batch timings at Cerebrum Academy for Noida students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our Noida center at B-45, Sector 62 operates Monday to Saturday from 8:00 AM to 8:00 PM, with Sundays from 10:00 AM to 6:00 PM. We offer flexible batch schedules including morning, afternoon, and evening batches. Contact +91-88264-44334 for details.',
+                  text: 'Our Noida center at B-45, Sector 62 is open 24/7 with online classes available for students worldwide. We offer flexible in-person batch schedules including morning, afternoon, and evening batches, plus round-the-clock online support for international students. Contact +91-88264-44334 for details.',
                 },
               },
               {

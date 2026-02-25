@@ -159,7 +159,7 @@ export default function VasantViharLayout({ children }: { children: React.ReactN
                 name: 'What batch timings does Cerebrum Academy offer for Vasant Vihar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Vasant Vihar students flexible schedules. Call +91-88264-44334 to book your preferred batch time.',
+                  text: 'Our center is open 24/7 with online classes available for students worldwide with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Vasant Vihar students flexible schedules. Call +91-88264-44334 to book your preferred batch time.',
                 },
               },
               {

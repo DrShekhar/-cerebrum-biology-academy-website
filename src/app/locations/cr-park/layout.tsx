@@ -139,7 +139,7 @@ export default function CRParkLayout({ children }: { children: React.ReactNode }
                 name: 'What are the batch timings at Cerebrum for CR Park students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our batch timings are Monday to Saturday from 8:00 AM to 8:00 PM. We offer multiple batches including morning, afternoon, and evening options to suit students from CR Park and surrounding areas like Alaknanda, Kalkaji, and Govindpuri. Contact us at +91-88264-44334 for details.',
+                  text: 'Our batch timings are open 24/7 with online classes available for students worldwide. We offer multiple batches including morning, afternoon, and evening options to suit students from CR Park and surrounding areas like Alaknanda, Kalkaji, and Govindpuri. Contact us at +91-88264-44334 for details.',
                 },
               },
               {

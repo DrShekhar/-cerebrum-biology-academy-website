@@ -28,15 +28,9 @@ function RohiniServiceSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '10:00',
-        closes: '18:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
     aggregateRating: {
@@ -255,7 +249,7 @@ export default function RohiniLayout({ children }: { children: React.ReactNode }
                 name: 'What are the coaching timings at Cerebrum Academy Rohini?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our Rohini center operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 10:00 AM to 6:00 PM. We offer multiple batch sessions to accommodate Rohini students flexible schedules. Call +91-88264-44334 to know the best timing for your needs.',
+                  text: 'Our Rohini center is open 24/7 with online classes available for students worldwide. We offer multiple in-person batch sessions including morning, afternoon, and evening to accommodate Rohini students flexible schedules, plus round-the-clock online support. Call +91-88264-44334 to know the best timing for your needs.',
                 },
               },
               {

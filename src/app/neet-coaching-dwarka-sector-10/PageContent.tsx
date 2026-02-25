@@ -1045,7 +1045,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                       >
                         +91-88264-44334
                       </a>
-                      <p className="text-sm text-gray-500 mt-1">Mon-Sat: 8 AM - 8 PM | Sun: 9 AM - 5 PM</p>
+                      <p className="text-sm text-gray-500 mt-1">Open 24/7 — Online Classes Available Globally</p>
                     </div>
                   </div>
 

@@ -158,7 +158,7 @@ export default function NewFriendsColonyLayout({ children }: { children: React.R
                 name: 'What are the available batch timings at Cerebrum Academy for NFC students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options - morning, afternoon, and evening. This allows New Friends Colony students to choose a timing that best fits their schedule. Call +91-88264-44334 for batch details.',
+                  text: 'We operate open 24/7 with online classes available for students worldwide with multiple batch options - morning, afternoon, and evening. This allows New Friends Colony students to choose a timing that best fits their schedule. Call +91-88264-44334 for batch details.',
                 },
               },
               {

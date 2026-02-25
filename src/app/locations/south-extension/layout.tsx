@@ -28,15 +28,9 @@ function SouthExtensionServiceSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '10:00',
-        closes: '18:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
     aggregateRating: {
@@ -281,7 +275,7 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
                 name: 'What batch timings are available at Cerebrum Academy South Extension?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our flagship center operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 9:00 AM to 6:00 PM. We offer multiple batch options including morning, afternoon, and evening sessions. Call +91-88264-44334 to check your preferred batch timing.',
+                  text: 'Our flagship center is open 24/7 with online classes available for students worldwide. We offer multiple batch options including morning, afternoon, and evening sessions for in-person classes, plus round-the-clock online support for international students. Call +91-88264-44334 to check your preferred batch timing.',
                 },
               },
               {

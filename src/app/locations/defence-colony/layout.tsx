@@ -150,7 +150,7 @@ function DefenceColonyFAQSchema() {
         name: 'What are the class timings for Defence Colony students?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM. We offer flexible batch timings including morning, afternoon, and evening batches to suit Defence Colony students. Call +91-88264-44334 for current batch schedules.',
+          text: 'Cerebrum is open 24/7 with online classes available for students worldwide. We offer flexible batch timings including morning, afternoon, and evening batches to suit Defence Colony students. Call +91-88264-44334 for current batch schedules.',
         },
       },
       {

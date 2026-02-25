@@ -347,7 +347,7 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
               </p>
               <p className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                <span className="text-slate-700">Mon-Sat: 8 AM - 8 PM, Sun: 9 AM - 5 PM</span>
+                <span className="text-slate-700">Open 24/7 — Online Classes Available Globally</span>
               </p>
             </div>
             <div className="flex gap-4 mt-6">

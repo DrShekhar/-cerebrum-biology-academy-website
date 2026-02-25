@@ -120,7 +120,7 @@ function GreenParkFAQSchema() {
         name: 'What are the batch timings at Cerebrum Green Park center?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Green Park center operates 7 days a week with extended hours. Monday to Saturday: 8:00 AM to 8:00 PM, Sunday: 9:00 AM to 6:00 PM. We offer multiple batch options including weekend batches for working students. Call +91-88264-44334 for specific timings.',
+          text: 'Cerebrum Green Park center operates 7 days a week with extended hours. Open 24/7 with online classes available for students worldwide. We offer multiple batch options including weekend batches for working students. Call +91-88264-44334 for specific timings.',
         },
       },
       {

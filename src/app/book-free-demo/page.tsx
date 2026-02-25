@@ -441,7 +441,7 @@ export default function BookFreeDemoPage() {
               </a>
 
               <p className="text-xs text-gray-600 mt-2">
-                Available Mon-Sat, 8 AM - 8 PM IST
+                Available 24/7 — Online Classes Globally IST
               </p>
             </div>
 

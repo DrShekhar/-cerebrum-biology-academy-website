@@ -157,7 +157,7 @@ export default function PanchsheelLayout({ children }: { children: React.ReactNo
                 name: 'What batch timings does Cerebrum Academy offer for Panchsheel students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options including morning, afternoon, and evening sessions. Panchsheel students can choose flexible timings that suit their schedule. Call +91-88264-44334 to book your preferred batch.',
+                  text: 'We operate open 24/7 with online classes available for students worldwide with multiple batch options including morning, afternoon, and evening sessions. Panchsheel students can choose flexible timings that suit their schedule. Call +91-88264-44334 to book your preferred batch.',
                 },
               },
               {

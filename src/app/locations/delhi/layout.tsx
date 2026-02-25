@@ -156,15 +156,9 @@ function DelhiLocalBusinessSchema() {
     'openingHoursSpecification': [
       {
         '@type': 'OpeningHoursSpecification',
-        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        'opens': '08:00',
-        'closes': '20:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        'dayOfWeek': 'Sunday',
-        'opens': '10:00',
-        'closes': '18:00',
+        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        'opens': '00:00',
+        'closes': '23:59',
       },
     ],
     'priceRange': '₹45,000 - ₹1,80,000',
@@ -214,7 +208,7 @@ function DelhiFAQSchema() {
         name: 'What are the batch timings for NEET coaching in Delhi?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our centers in South Extension and Rohini are open Monday to Saturday from 8:00 AM to 8:00 PM. We offer morning, afternoon, and evening batches to accommodate students from different parts of Delhi. Call +91-88264-44334 to know available timings.',
+          text: 'Our centers in South Extension and Rohini are open 24/7 with online classes available for students worldwide. We offer morning, afternoon, and evening in-person batches plus round-the-clock online support for international students. Call +91-88264-44334 to know available timings.',
         },
       },
       {

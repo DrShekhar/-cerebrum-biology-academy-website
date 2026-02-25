@@ -135,7 +135,7 @@ export default function ShantiNiketanLayout({ children }: { children: React.Reac
                 name: 'What are the batch timings at Cerebrum Academy for Shanti Niketan students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Shanti Niketan students can choose timings that suit their schedule. Call +91-88264-44334 to book your preferred batch.',
+                  text: 'We operate open 24/7 with online classes available for students worldwide with flexible batch options including morning, afternoon, and evening sessions. Shanti Niketan students can choose timings that suit their schedule. Call +91-88264-44334 to book your preferred batch.',
                 },
               },
               {

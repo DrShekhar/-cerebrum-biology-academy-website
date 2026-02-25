@@ -30,15 +30,9 @@ function GurugramLocalBusinessSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '10:00',
-        closes: '18:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
     aggregateRating: {
@@ -111,7 +105,7 @@ function GurugramFAQSchema() {
         name: 'What batch timings are available at Cerebrum Academy Gurugram?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our Gurugram center operates Monday to Saturday 8:00 AM to 8:00 PM and Sunday 10:00 AM to 6:00 PM. We offer morning, afternoon, and evening batches to suit school schedules. Contact +91-88264-44334 for available slots.',
+          text: 'Our Gurugram center is open 24/7 with online classes available for students worldwide. We offer morning, afternoon, and evening in-person batches to suit school schedules, plus round-the-clock online support for international students. Contact +91-88264-44334 for available slots.',
         },
       },
     ],

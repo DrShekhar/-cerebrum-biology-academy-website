@@ -153,7 +153,7 @@ export default function LajpatNagarLayout({ children }: { children: React.ReactN
                 name: 'What are the batch timings at Cerebrum for Lajpat Nagar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening batches for Lajpat Nagar students. Call +91-88264-44334 to know current available batches and customize timings.',
+                  text: 'Cerebrum is open 24/7 with online classes available for students worldwide with multiple batch options. We offer morning, afternoon, and evening batches for Lajpat Nagar students. Call +91-88264-44334 to know current available batches and customize timings.',
                 },
               },
               {

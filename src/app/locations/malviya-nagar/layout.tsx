@@ -153,7 +153,7 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
                 name: 'What are the batch timings at Cerebrum for Malviya Nagar students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 9:00 AM to 6:00 PM. We offer multiple batch options including morning, afternoon, and evening batches. Call +91-88264-44334 for specific available timings for Malviya Nagar students.',
+                  text: 'Cerebrum is open 24/7 with online classes available for students worldwide. We offer multiple batch options including morning, afternoon, and evening batches. Call +91-88264-44334 for specific available timings for Malviya Nagar students.',
                 },
               },
               {

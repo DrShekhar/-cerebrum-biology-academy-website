@@ -160,7 +160,7 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
                 name: 'What are the batch timings at Cerebrum for Maharani Bagh students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options. We offer morning, afternoon, and evening batches for Maharani Bagh students. Call +91-88264-44334 to know current available batches and arrange timings.',
+                  text: 'Cerebrum is open 24/7 with online classes available for students worldwide with flexible batch options. We offer morning, afternoon, and evening batches for Maharani Bagh students. Call +91-88264-44334 to know current available batches and arrange timings.',
                 },
               },
               {

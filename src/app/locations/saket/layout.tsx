@@ -139,7 +139,7 @@ export default function SaketLayout({ children }: { children: React.ReactNode })
                 name: 'What batch timings are available at Cerebrum Academy for Saket students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Saket students flexible schedules. Contact +91-88264-44334 to book your preferred batch time.',
+                  text: 'Our center is open 24/7 with online classes available for students worldwide with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Saket students flexible schedules. Contact +91-88264-44334 to book your preferred batch time.',
                 },
               },
               {

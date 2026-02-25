@@ -134,7 +134,7 @@ export default function AnandNiketanLayout({ children }: { children: React.React
                 name: 'What are the batch timings for Anand Niketan students at Cerebrum?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We offer flexible batch timings Monday to Saturday from 8:00 AM to 8:00 PM to accommodate students from Anand Niketan and surrounding areas. We have morning batches, afternoon batches, and evening batches available. Contact us at +91-88264-44334 for specific batch timings.',
+                  text: 'We offer flexible batch timings open 24/7 with online classes available for students worldwide to accommodate students from Anand Niketan and surrounding areas. We have morning batches, afternoon batches, and evening batches available. Contact us at +91-88264-44334 for specific batch timings.',
                 },
               },
               {

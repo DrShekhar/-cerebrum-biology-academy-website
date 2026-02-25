@@ -138,7 +138,7 @@ export default function KalkajiLayout({ children }: { children: React.ReactNode 
                 name: 'What are the batch timings for Kalkaji students at Cerebrum?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening batches suitable for Kalkaji students. Call +91-88264-44334 to know current available batches for your schedule.',
+                  text: 'Cerebrum is open 24/7 with online classes available for students worldwide with multiple batch options. We offer morning, afternoon, and evening batches suitable for Kalkaji students. Call +91-88264-44334 to know current available batches for your schedule.',
                 },
               },
               {

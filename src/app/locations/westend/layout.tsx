@@ -160,7 +160,7 @@ export default function WestendLayout({ children }: { children: React.ReactNode 
                 name: 'What are the batch timings at Cerebrum Academy for Westend students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Westend students can choose timings that suit their schedule. Call +91-88264-44334 to book your preferred batch.',
+                  text: 'Our center is open 24/7 with online classes available for students worldwide with flexible batch options including morning, afternoon, and evening sessions. Westend students can choose timings that suit their schedule. Call +91-88264-44334 to book your preferred batch.',
                 },
               },
               {

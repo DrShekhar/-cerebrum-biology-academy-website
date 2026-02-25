@@ -136,7 +136,7 @@ export default function JorBaghLayout({ children }: { children: React.ReactNode 
                 name: 'What are the batch timings at Cerebrum for Jor Bagh students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch timings. We customize schedules for Jor Bagh students with morning and evening options. Call +91-88264-44334 to arrange exclusive timings for your family.',
+                  text: 'Our center is open 24/7 with online classes available for students worldwide with flexible batch timings. We customize schedules for Jor Bagh students with morning and evening options. Call +91-88264-44334 to arrange exclusive timings for your family.',
                 },
               },
               {

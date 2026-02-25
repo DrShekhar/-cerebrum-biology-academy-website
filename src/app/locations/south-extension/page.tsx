@@ -318,7 +318,7 @@ export default function SouthExtensionLocationPage() {
                   <div className="space-y-2">
                     <div className="flex justify-between py-2 border-b">
                       <span className="text-gray-600">Monday - Saturday</span>
-                      <span className="font-semibold">8:00 AM - 8:00 PM</span>
+                      <span className="font-semibold">Open 24/7</span>
                     </div>
                     <div className="flex justify-between py-2">
                       <span className="text-gray-600">Sunday</span>

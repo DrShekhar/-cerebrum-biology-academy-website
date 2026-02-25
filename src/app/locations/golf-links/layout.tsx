@@ -159,7 +159,7 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
                 name: 'What are the batch timings at Cerebrum for Golf Links students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM. We offer flexible batch timings including morning and evening batches suited for Golf Links students. Our personalized schedule accommodates busy families. Call +91-88264-44334 for exclusive timing options.',
+                  text: 'Our center is open 24/7 with online classes available for students worldwide. We offer flexible batch timings including morning and evening batches suited for Golf Links students. Our personalized schedule accommodates busy families. Call +91-88264-44334 for exclusive timing options.',
                 },
               },
               {

@@ -10,13 +10,14 @@ Work needed is structural/schema fixes only.
 
 ### Commits
 - `b0e02dd3` — Batch 1+2: Schema fixes + cross-linking + center consistency
+- (pending) — Revert all hours to 24/7 (user serves global online students)
 
 ---
 
 ## Batch 1: CRITICAL — Schema & Structured Data Fixes
 
-- [x] 1. Fix South Extension opening hours (00:00-23:59 → 08:00-20:00 / 10:00-18:00)
-- [x] 2. Fix Rohini opening hours (00:00-23:59 → 08:00-20:00 / 10:00-18:00)
+- [x] 1. ~~Fix South Extension opening hours~~ → Reverted to 24/7 (global online students)
+- [x] 2. ~~Fix Rohini opening hours~~ → Reverted to 24/7 (global online students)
 - [x] 3. Fix priceRange on all 6 locations (₹₹/$$ → ₹45,000 - ₹1,80,000)
 - [x] 4. Add LocalBusiness + FAQ schema to Gurugram layout.tsx
 - [x] 5. Fix Delhi layout — add Sunday hours + fix vague address

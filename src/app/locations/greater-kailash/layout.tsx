@@ -151,7 +151,7 @@ function GreaterKailashFAQSchema() {
         name: 'What are the batch timings for Greater Kailash students?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options including morning, afternoon, and evening batches. GK students can choose timings that suit their schedule. Call +91-88264-44334 to know current batches for Greater Kailash.',
+          text: 'Cerebrum is open 24/7 with online classes available for students worldwide with multiple batch options including morning, afternoon, and evening batches. GK students can choose timings that suit their schedule. Call +91-88264-44334 to know current batches for Greater Kailash.',
         },
       },
       {

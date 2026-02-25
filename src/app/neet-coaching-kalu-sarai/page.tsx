@@ -426,7 +426,7 @@ export default function NEETCoachingKaluSarai() {
               <div className="mt-8 flex items-center justify-center gap-6 text-green-100">
                 <div className="flex items-center gap-2">
                   <Clock className="w-5 h-5" />
-                  <span>Mon-Sat: 8AM-8PM</span>
+                  <span>Open 24/7</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />

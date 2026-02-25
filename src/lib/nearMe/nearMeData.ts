@@ -63,7 +63,7 @@ export function generateLocalBusinessSchema(keyword: string, centers: NearMeCent
       addressCountry: 'IN',
     },
     geo: getCoordinates(center.locationId),
-    openingHours: 'Mo-Sa 08:00-20:00',
+    openingHours: 'Mo-Su 00:00-23:59',
     image: 'https://cerebrumbiologyacademy.com/images/centers/center-exterior.jpg',
     priceRange: '₹₹',
     sameAs: [

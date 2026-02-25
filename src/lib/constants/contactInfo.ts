@@ -303,16 +303,16 @@ export const CONTACT_INFO = {
   // Operating Hours
   hours: {
     weekdays: {
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      open: '08:00',
-      close: '20:00',
+      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      open: '00:00',
+      close: '23:59',
     },
     sunday: {
       days: ['Sunday'],
-      open: '10:00',
-      close: '18:00',
+      open: '00:00',
+      close: '23:59',
     },
-    displayText: 'Mon-Sat: 8 AM - 8 PM | Sun: 10 AM - 6 PM',
+    displayText: 'Open 24/7 — Online Classes Available Globally',
   },
 
   // Social media

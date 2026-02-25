@@ -160,7 +160,7 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
                 name: 'What are the batch timings for Safdarjung Enclave students?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Safdarjung Enclave students can choose timings that work best for their schedule. Call +91-88264-44334 for batch details.',
+                  text: 'We operate open 24/7 with online classes available for students worldwide with flexible batch options including morning, afternoon, and evening sessions. Safdarjung Enclave students can choose timings that work best for their schedule. Call +91-88264-44334 for batch details.',
                 },
               },
               {

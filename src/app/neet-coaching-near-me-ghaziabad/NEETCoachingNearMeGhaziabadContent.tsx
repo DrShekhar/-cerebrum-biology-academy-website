@@ -271,7 +271,7 @@ export default function NEETCoachingNearMeGhaziabadContent({ faqs }: { faqs: FAQ
                 </p>
                 <p className="flex items-center gap-2 text-slate-600">
                   <Clock className="w-5 h-5 text-teal-600" />
-                  Mon-Sat: 8 AM - 8 PM, Sun: 9 AM - 5 PM
+                  Open 24/7 — Online Classes Available Globally
                 </p>
               </div>
             </div>

@@ -100,15 +100,9 @@ function FaridabadServiceSchema() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '10:00',
-        closes: '18:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
     sameAs: [
@@ -155,7 +149,7 @@ function FaridabadFAQSchema() {
         name: 'What are the coaching timings at Cerebrum Faridabad center?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Faridabad center operates 7 days a week with extended hours. Monday to Saturday: 8:00 AM to 8:00 PM, Sunday: 9:00 AM to 6:00 PM. Multiple batch timings are available for Faridabad students. Contact +91-88264-44334 for specific batch schedules.',
+          text: 'Cerebrum Faridabad center is open 24/7 with online classes available for students worldwide. Multiple in-person batch timings are available during the day, plus round-the-clock online support for international students. Contact +91-88264-44334 for specific batch schedules.',
         },
       },
       {

@@ -450,7 +450,7 @@ export function PushpanjaliEnclavePageContent() {
                     </div>
                     <div className="mb-4 flex items-center gap-2 text-gray-600">
                       <Clock className="h-5 w-5 text-green-600" />
-                      Open: 8:00 AM - 8:00 PM (Mon-Sat)
+                      Open 24/7 — Online Classes Globally
                     </div>
                     <div className="mb-4 flex items-center gap-2 text-gray-600">
                       <Navigation className="h-5 w-5 text-green-600" />
@@ -764,7 +764,7 @@ export function PushpanjaliEnclavePageContent() {
             {/* Operating Hours */}
             <div className="mt-8 flex items-center justify-center text-slate-400">
               <Clock className="mr-2 h-4 w-4" />
-              <span className="text-sm">Available Mon-Sat, 8 AM - 8 PM</span>
+              <span className="text-sm">Available 24/7 — Online Classes Globally</span>
             </div>
           </div>
         </section>

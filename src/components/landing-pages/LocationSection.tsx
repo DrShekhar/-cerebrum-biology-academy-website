@@ -95,8 +95,7 @@ export function LocationSection({
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900">Working Hours</h4>
-                    <p className="mt-1 text-slate-600">Monday - Saturday: 8:00 AM - 8:00 PM</p>
-                    <p className="text-slate-600">Sunday: 10:00 AM - 4:00 PM</p>
+                    <p className="mt-1 text-slate-600">Open 24/7 — Online Classes Available Globally</p>
                   </div>
                 </div>
               </div>
