@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
   // Use a stable date for static pages so Google can distinguish actual content updates
   // from mere redeployments. Update this date when site content meaningfully changes.
-  const lastUpdated = new Date('2026-02-11')
+  const lastUpdated = new Date('2026-02-24')
 
   // Dynamically generate blog post URLs from MDX files
   const blogPosts = getAllPosts()
@@ -403,12 +403,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/locations/green-park`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
-    },
-    {
       url: `${baseUrl}/locations/gurugram`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -416,12 +410,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/locations/faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/locations/noida`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,

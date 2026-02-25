@@ -217,7 +217,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
       { name: 'Rohini Center', url: '/biology-classes-rohini' },
       { name: 'Gurugram Center', url: '/biology-classes-gurgaon' },
       { name: 'South Delhi Center', url: '/biology-classes-south-delhi' },
-      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2027' },
+      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2025' },
     ],
     stats: {
       primary: { value: 'Rs 8K', label: 'PG Starting From/Month' },
@@ -429,7 +429,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
     ],
     relatedPages: [
       { name: 'Online Classes', url: '/online-biology-classes' },
-      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2027' },
+      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2025' },
       { name: 'Course Schedule', url: '/courses' },
       { name: 'Book Demo', url: '/demo' },
     ],
@@ -440,8 +440,8 @@ export const intentPagesData: Record<string, IntentPageData> = {
     },
   },
 
-  'neet-dropper-crash-course-2027': {
-    slug: 'neet-dropper-crash-course-2027',
+  'neet-dropper-crash-course-2025': {
+    slug: 'neet-dropper-crash-course-2025',
     metaTitle: 'NEET 2027 Dropper Crash Course | Intensive 1-Year Program | Cerebrum Academy',
     metaDescription:
       'Intensive NEET 2027 crash course for droppers. Complete syllabus revision, 100+ mock tests, daily practice. AIIMS faculty. Limited seats. Enroll now!',

@@ -8594,8 +8594,8 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'neet-dropper-crash-course-2027': {
-    slug: 'neet-dropper-crash-course-2027',
+  'neet-dropper-crash-course-2025': {
+    slug: 'neet-dropper-crash-course-2025',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
     metaTitle: 'NEET Dropper Crash Course 2027 | Intensive 3-6 Month Program | Cerebrum Academy',
@@ -8618,7 +8618,7 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     relatedCities: [
       { name: 'NEET Droppers Batch', url: '/neet-droppers-batch-gurgaon' },
-      { name: 'NEET 2027 Preparation', url: '/neet-2027-preparation' },
+      { name: 'NEET 2027 Preparation', url: '/neet-2025-preparation' },
       { name: 'NEET Biology Crash Course', url: '/neet-biology-crash-course' },
       { name: 'NEET Repeaters', url: '/neet-repeaters' },
     ],

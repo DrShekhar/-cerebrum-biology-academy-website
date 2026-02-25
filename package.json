@@ -172,7 +172,7 @@
     "katex": "^0.16.27",
     "lucide-react": "^0.544.0",
     "nanoid": "^5.1.6",
-    "next": "^15.5.7",
+    "next": "15.5.11",
     "next-auth": "^5.0.0-beta.29",
     "openai": "^5.21.0",
     "pdf.js-extract": "^0.2.1",

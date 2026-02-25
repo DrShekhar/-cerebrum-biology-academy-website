@@ -206,10 +206,10 @@ export const neetDropperBatchOnline: SEOLandingContent = {
   },
 }
 
-// Page 2: /neet-repeater-course-2027/
+// Page 2: /neet-repeater-course-2025/
 export const neetRepeaterCourse2027: SEOLandingContent = {
   ...dropperBaseContent,
-  slug: 'neet-repeater-course-2027',
+  slug: 'neet-repeater-course-2025',
 
   title: 'NEET Repeater Course 2026 Online | Best Coaching for 2nd Attempt',
   metaDescription:
@@ -1176,7 +1176,7 @@ export const neetDropperBatch: SEOLandingContent = {
 export const dropperSEOPages = {
   neetDropperBatch,
   neetDropperBatchOnline,
-  neetRepeaterCourse2027,
+  neetRepeaterCourse2025: neetRepeaterCourse2027,
   neetDropperBiologyCoaching,
   bestCoachingNeetDroppers,
   oneYearNeetDropperCourse,
