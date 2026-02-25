@@ -291,7 +291,28 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
   )
 }
 
-function NavItem({ item, currentPath, activeSubmenu, setActiveSubmenu, onClose }: any) {
+interface NavItemType {
+  icon: React.ElementType
+  label: string
+  href: string
+  color: string
+  bgColor: string
+  submenu?: Array<{ label: string; href: string }>
+}
+
+function NavItem({
+  item,
+  currentPath,
+  activeSubmenu,
+  setActiveSubmenu,
+  onClose,
+}: {
+  item: NavItemType
+  currentPath: string
+  activeSubmenu: string | null
+  setActiveSubmenu: (v: string | null) => void
+  onClose: () => void
+}) {
   const { shouldReduceAnimations } = useIndianMobileOptimizations()
   const isActive = currentPath === item.href
   const hasSubmenu = item.submenu && item.submenu.length > 0
@@ -351,7 +372,7 @@ function NavItem({ item, currentPath, activeSubmenu, setActiveSubmenu, onClose }
           <div
             className="ml-4 mt-2 space-y-2 overflow-hidden animate-fadeInUp"
           >
-            {item.submenu.map((subItem: any, index: number) => (
+            {item.submenu!.map((subItem, index: number) => (
               <div
                 key={subItem.href}
                className="animate-fadeInUp">
@@ -369,7 +390,16 @@ function NavItem({ item, currentPath, activeSubmenu, setActiveSubmenu, onClose }
   )
 }
 
-function QuickActionButton({ action, onClose }: any) {
+interface QuickActionType {
+  icon: React.ElementType
+  label: string
+  action?: () => void
+  href?: string
+  color: string
+  bgColor: string
+}
+
+function QuickActionButton({ action, onClose }: { action: QuickActionType; onClose: () => void }) {
   const handleClick = () => {
     if (action.action) {
       action.action()

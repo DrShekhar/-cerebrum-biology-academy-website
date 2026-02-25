@@ -53,8 +53,8 @@ interface AriaEventData {
 export function trackCeriEvent(eventType: CeriEventType, eventData: CeriEventData = {}): void {
   try {
     // Google Analytics 4
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', eventType, {
+    if (typeof window !== 'undefined' && window.gtag) {
+      ;window.gtag('event', eventType, {
         event_category: 'ceri_ai_tutor',
         event_label: eventData.topic || 'general',
         topic: eventData.topic,
@@ -96,8 +96,8 @@ export function trackCeriEvent(eventType: CeriEventType, eventData: CeriEventDat
 export function trackAriaEvent(eventType: AriaEventType, eventData: AriaEventData = {}): void {
   try {
     // Google Analytics 4
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', eventType, {
+    if (typeof window !== 'undefined' && window.gtag) {
+      ;window.gtag('event', eventType, {
         event_category: 'aria_sales_agent',
         event_label: eventData.source || 'unknown',
         source: eventData.source,
@@ -115,8 +115,8 @@ export function trackAriaEvent(eventType: AriaEventType, eventData: AriaEventDat
       eventType === 'aria_qualified_lead' ||
       eventType === 'aria_lead_captured'
     ) {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        ;(window as any).gtag('event', 'conversion', {
+      if (typeof window !== 'undefined' && window.gtag) {
+        ;window.gtag('event', 'conversion', {
           send_to: 'AW-11121440988/demo_booking',
           value: eventType === 'aria_demo_booked' ? 500 : 200,
           currency: 'INR',

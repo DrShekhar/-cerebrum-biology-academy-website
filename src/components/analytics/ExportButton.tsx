@@ -45,7 +45,7 @@ export function ExportButton({
         includeRawData: true,
       }
 
-      const requestBody: any = {
+      const requestBody: Record<string, unknown> = {
         type: exportType,
         options: exportOptions,
       }
@@ -187,7 +187,7 @@ export function BulkExportButton({ exports, timeRange, className }: BulkExportBu
           includeRawData: true,
         }
 
-        const requestBody: any = {
+        const requestBody: Record<string, unknown> = {
           type: exportItem.type,
           options: exportOptions,
         }
@@ -276,7 +276,7 @@ export function BulkExportButton({ exports, timeRange, className }: BulkExportBu
 
 interface QuickExportProps {
   type: 'performance' | 'progress' | 'topics' | 'comparison'
-  data: any
+  data: PerformanceData | ProgressDataPoint[] | TopicData[] | ComparisonData
   fileName?: string
   className?: string
 }
@@ -291,16 +291,16 @@ export function QuickExport({ type, data, fileName, className }: QuickExportProp
 
       switch (type) {
         case 'performance':
-          csvContent = generatePerformanceCSV(data)
+          csvContent = generatePerformanceCSV(data as PerformanceData)
           break
         case 'progress':
-          csvContent = generateProgressCSV(data)
+          csvContent = generateProgressCSV(data as ProgressDataPoint[])
           break
         case 'topics':
-          csvContent = generateTopicsCSV(data)
+          csvContent = generateTopicsCSV(data as TopicData[])
           break
         case 'comparison':
-          csvContent = generateComparisonCSV(data)
+          csvContent = generateComparisonCSV(data as ComparisonData)
           break
         default:
           csvContent = JSON.stringify(data)
@@ -342,8 +342,37 @@ export function QuickExport({ type, data, fileName, className }: QuickExportProp
   )
 }
 
-// Helper functions for CSV generation
-function generatePerformanceCSV(data: any): string {
+interface PerformanceData {
+  totalTests?: number
+  averageScore?: number
+  totalStudyTime?: number
+  currentStreak?: number
+  totalPoints?: number
+}
+
+interface ProgressDataPoint {
+  date: { toLocaleDateString: () => string }
+  score: number
+  accuracy: number
+  testsCompleted: number
+  studyTime: number
+}
+
+interface TopicData {
+  topic: string
+  totalQuestions: number
+  correctAnswers: number
+  accuracy: number
+  averageTime: number
+}
+
+interface ComparisonData {
+  user: { score: number; testsTaken: number; studyTime: number }
+  class: { averageScore: number; averageTestsTaken: number; averageStudyTime: number }
+  comparison: { scoreComparison: number; testsComparison: number; timeComparison: number }
+}
+
+function generatePerformanceCSV(data: PerformanceData): string {
   const headers = ['Metric', 'Value']
   const rows = [
     ['Total Tests', data.totalTests || 0],
@@ -356,7 +385,7 @@ function generatePerformanceCSV(data: any): string {
   return [headers, ...rows].map((row) => row.join(',')).join('\n')
 }
 
-function generateProgressCSV(data: any[]): string {
+function generateProgressCSV(data: ProgressDataPoint[]): string {
   const headers = ['Date', 'Score', 'Accuracy', 'Tests Completed', 'Study Time']
   const rows = data.map((point) => [
     point.date.toLocaleDateString(),
@@ -369,7 +398,7 @@ function generateProgressCSV(data: any[]): string {
   return [headers, ...rows].map((row) => row.join(',')).join('\n')
 }
 
-function generateTopicsCSV(data: any[]): string {
+function generateTopicsCSV(data: TopicData[]): string {
   const headers = ['Topic', 'Total Questions', 'Correct Answers', 'Accuracy', 'Average Time']
   const rows = data.map((topic) => [
     topic.topic,
@@ -382,7 +411,7 @@ function generateTopicsCSV(data: any[]): string {
   return [headers, ...rows].map((row) => row.join(',')).join('\n')
 }
 
-function generateComparisonCSV(data: any): string {
+function generateComparisonCSV(data: ComparisonData): string {
   const headers = ['Metric', 'User Value', 'Class Average', 'Difference']
   const rows = [
     ['Score', data.user.score, data.class.averageScore, data.comparison.scoreComparison],

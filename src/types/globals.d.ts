@@ -87,21 +87,32 @@ declare global {
 
   // Analytics and third-party integrations on Window
   interface Window {
-    gtag?: (...args: any[]) => void
-    dataLayer?: any[]
-    fbq?: (...args: any[]) => void
-    _fbq?: any
-    clarity?: (...args: any[]) => void
-    _hsq?: any[]
-    google_trackConversion?: (config: any) => void
+    gtag?: (...args: [string, ...unknown[]]) => void
+    dataLayer?: Array<Record<string, unknown>>
+    fbq?: (...args: [string, ...unknown[]]) => void
+    _fbq?: (...args: [string, ...unknown[]]) => void
+    clarity?: (...args: [string, ...unknown[]]) => void
+    _hsq?: Array<[string, ...unknown[]]>
+    google_trackConversion?: (config: Record<string, unknown>) => void
     Razorpay?: new (options: RazorpayOptions) => {
       open(): void
       on(event: string, handler: (response: unknown) => void): void
     }
   }
 
+  // Navigator extensions for device detection
+  interface Navigator {
+    connection?: {
+      effectiveType?: string
+      downlink?: number
+      rtt?: number
+      saveData?: boolean
+    }
+    deviceMemory?: number
+  }
+
   // Google Analytics gtag function (for direct gtag() calls, not window.gtag)
-  var gtag: ((...args: any[]) => void) | undefined
+  var gtag: ((...args: [string, ...unknown[]]) => void) | undefined
 }
 
 export {}

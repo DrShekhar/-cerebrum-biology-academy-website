@@ -23,9 +23,12 @@ export interface LandingPageTemplateProps {
         title?: string
         description?: string
         icon?: string
+        question?: string
+        answer?: string
       }>
       quote?: string
       author?: string
+      result?: string
       image?: string
     }>
     stats?: {
@@ -33,7 +36,7 @@ export interface LandingPageTemplateProps {
       secondary?: { value: string; label: string }
       tertiary?: { value: string; label: string }
     }
-    [key: string]: any
+    [key: string]: unknown
   }
 }
 
@@ -56,8 +59,9 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
 
   const baseUrl = 'https://cerebrumbiologyacademy.com'
 
-  // Render a section based on its type
-  const renderSection = (section: any, index: number) => {
+  type SectionData = NonNullable<LandingPageTemplateProps['data']['sections']>[number]
+
+  const renderSection = (section: SectionData, index: number) => {
     const { type, title: sectionTitle, items = [], quote, author, content } = section
 
     switch (type) {
@@ -98,7 +102,7 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
                 </h2>
               )}
               <div className="grid md:grid-cols-3 gap-8">
-                {items.map((item: any, idx: number) => (
+                {items.map((item, idx: number) => (
                   <div key={idx} className="p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
                     {item.icon && (
                       <div className="mb-4 text-blue-600 text-3xl">{item.icon}</div>
@@ -122,7 +126,7 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
                 </h2>
               )}
               <div className="space-y-4">
-                {items.map((item: any, idx: number) => (
+                {items.map((item, idx: number) => (
                   <div key={idx} className="flex gap-4">
                     <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                     <div>
@@ -170,7 +174,7 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
                 </h2>
               )}
               <div className="space-y-4">
-                {items.map((item: any, idx: number) => (
+                {items.map((item, idx: number) => (
                   <details key={idx} className="border border-gray-200 rounded-lg p-4 cursor-pointer">
                     <summary className="font-semibold text-gray-900 flex justify-between items-center">
                       {item.title || item.question}
@@ -260,7 +264,7 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
       )}
 
       {/* Render all sections */}
-      {sections.map((section: any, index: number) => renderSection(section, index))}
+      {sections.map((section, index: number) => renderSection(section, index))}
 
       {/* Default CTA section if no sections provided */}
       {sections.length === 0 && (
@@ -271,11 +275,11 @@ export function LandingPageTemplate({ data }: LandingPageTemplateProps) {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={getPhoneLink(CONTACT_INFO.phone.primary)}
+                href={getPhoneLink('primary')}
                 className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                {getDisplayPhone(CONTACT_INFO.phone.primary)}
+                {getDisplayPhone('primary')}
               </a>
               <Link
                 href="/contact"

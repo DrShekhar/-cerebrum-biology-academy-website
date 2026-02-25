@@ -31,7 +31,7 @@ export interface AIRequest {
   id: string
   userId: string
   prompt: string
-  context?: any
+  context?: Record<string, unknown>
   maxTokens?: number
   temperature?: number
   preferredProvider?: 'claude' | 'openai'
@@ -53,6 +53,9 @@ interface AIResponse {
     model: string
     confidence: number
     quality: number
+    selfHealing?: boolean
+    isFallback?: boolean
+    errorId?: string
   }
 }
 
@@ -79,7 +82,7 @@ export class AIGateway {
   private isInitialized = false
 
   constructor() {
-    this.redis = getRedisClient(process.env.REDIS_URL) as any
+    this.redis = getRedisClient(process.env.REDIS_URL) as Redis
     this.retryManager = new RetryManager()
     this.performanceMonitor = new PerformanceMonitor()
     this.costOptimizer = new CostOptimizer()
@@ -118,7 +121,7 @@ export class AIGateway {
       this.providers.set('claude', {
         id: 'claude',
         name: 'Claude (Anthropic)',
-        client: null as any, // Will be lazily initialized
+        client: null, // Will be lazily initialized
         healthCheck: async () => this.healthCheckClaude(),
         costPerToken: 0.00001, // $0.01 per 1K tokens
         maxTokens: 100000,
@@ -132,7 +135,7 @@ export class AIGateway {
       this.providers.set('openai', {
         id: 'openai',
         name: 'OpenAI GPT-4',
-        client: null as any, // Will be lazily initialized
+        client: null, // Will be lazily initialized
         healthCheck: async () => this.healthCheckOpenAI(),
         costPerToken: 0.00003, // $0.03 per 1K tokens
         maxTokens: 128000,
@@ -404,7 +407,7 @@ export class AIGateway {
           selfHealing: healingResult.handled,
           isFallback: true,
           ...(healingResult.errorId && { errorId: healingResult.errorId }),
-        } as any,
+        },
       }
     }
 
@@ -425,7 +428,7 @@ export class AIGateway {
         selfHealing: healingResult.handled,
         isFallback: true,
         ...(healingResult.errorId && { errorId: healingResult.errorId }),
-      } as any,
+      },
     }
   }
 

@@ -14,16 +14,29 @@ interface PricingDisplayProps {
   onEnrollClick?: (tier?: CourseSeries) => void
 }
 
+interface TierPricing {
+  series: CourseSeries
+  price: number
+  formattedPrice: string
+}
+
+interface CoursePricingResult {
+  formattedMinPrice: string
+  minPrice: number
+  priceRange: string
+  tiers: TierPricing[]
+}
+
 interface TierCardProps {
-  tier: any
-  pricing: any
+  tier: TierPricing
+  pricing: CoursePricingResult
   isPopular?: boolean
   onEnrollClick?: (tier: CourseSeries) => void
 }
 
 function TierCard({ tier, pricing, isPopular, onEnrollClick }: TierCardProps) {
   const tierInfo = courseTiers.find((t) => t.series === tier.series)
-  const tierPricing = pricing.tiers.find((p: any) => p.series === tier.series)
+  const tierPricing = pricing.tiers.find((p) => p.series === tier.series)
 
   if (!tierInfo || !tierPricing) return null
 

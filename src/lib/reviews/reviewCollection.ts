@@ -23,6 +23,17 @@ interface ReviewRequestData {
   source?: string
 }
 
+interface ScheduledReviewRequest extends ReviewRequestData {
+  scheduledFor: number
+  createdAt: number
+  sent: boolean
+}
+
+interface ReviewClick {
+  source: string
+  timestamp: number
+}
+
 /**
  * Generate personalized review request message
  */
@@ -100,16 +111,15 @@ export function getReviewRequestWhatsAppLink(data: ReviewRequestData): string {
 export function scheduleReviewRequest(data: ReviewRequestData): void {
   if (typeof window === 'undefined') return
 
-  let scheduledRequests: any[] = []
+  let scheduledRequests: ScheduledReviewRequest[] = []
   try {
     scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
   } catch {
     scheduledRequests = []
   }
 
-  const delay =
-    REVIEW_REQUEST_DELAYS[`AFTER_${data.eventType.toUpperCase()}`] ||
-    REVIEW_REQUEST_DELAYS.AFTER_DEMO
+  const delayKey = `AFTER_${data.eventType.toUpperCase()}` as keyof typeof REVIEW_REQUEST_DELAYS
+  const delay = REVIEW_REQUEST_DELAYS[delayKey] || REVIEW_REQUEST_DELAYS.AFTER_DEMO
 
   scheduledRequests.push({
     ...data,
@@ -125,8 +135,8 @@ export function scheduleReviewRequest(data: ReviewRequestData): void {
   }
 
   // Track scheduling
-  if ((window as any).gtag) {
-    ;(window as any).gtag('event', 'review_request_scheduled', {
+  if (window.gtag) {
+    ;window.gtag('event', 'review_request_scheduled', {
       event_category: 'review_collection',
       event_label: data.eventType,
     })
@@ -140,7 +150,7 @@ export function scheduleReviewRequest(data: ReviewRequestData): void {
 export function processPendingReviewRequests(): ReviewRequestData[] {
   if (typeof window === 'undefined') return []
 
-  let scheduledRequests: any[] = []
+  let scheduledRequests: ScheduledReviewRequest[] = []
   try {
     scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
   } catch {
@@ -150,7 +160,7 @@ export function processPendingReviewRequests(): ReviewRequestData[] {
   const now = Date.now()
   const dueRequests: ReviewRequestData[] = []
 
-  const updatedRequests = scheduledRequests.map((request: any) => {
+  const updatedRequests = scheduledRequests.map((request) => {
     if (!request.sent && request.scheduledFor <= now) {
       dueRequests.push(request)
       return { ...request, sent: true }
@@ -174,8 +184,8 @@ export function trackReviewClick(source: string): void {
   if (typeof window === 'undefined') return
 
   // Track in analytics
-  if ((window as any).gtag) {
-    ;(window as any).gtag('event', 'review_link_click', {
+  if (window.gtag) {
+    ;window.gtag('event', 'review_link_click', {
       event_category: 'review_collection',
       event_label: source,
       value: 1,
@@ -183,8 +193,8 @@ export function trackReviewClick(source: string): void {
   }
 
   // Track in Facebook Pixel
-  if ((window as any).fbq) {
-    ;(window as any).fbq('trackCustom', 'ReviewIntentClick', {
+  if (window.fbq) {
+    ;window.fbq('trackCustom', 'ReviewIntentClick', {
       source: source,
     })
   }
@@ -214,8 +224,8 @@ export function getReviewCollectionStats(): {
     return { scheduled: 0, sent: 0, clicked: 0 }
   }
 
-  let scheduledRequests: any[] = []
-  let reviewClicks: any[] = []
+  let scheduledRequests: ScheduledReviewRequest[] = []
+  let reviewClicks: ReviewClick[] = []
   try {
     scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
     reviewClicks = JSON.parse(localStorage.getItem('reviewClicks') || '[]')
@@ -224,8 +234,8 @@ export function getReviewCollectionStats(): {
   }
 
   return {
-    scheduled: scheduledRequests.filter((r: any) => !r.sent).length,
-    sent: scheduledRequests.filter((r: any) => r.sent).length,
+    scheduled: scheduledRequests.filter((r) => !r.sent).length,
+    sent: scheduledRequests.filter((r) => r.sent).length,
     clicked: reviewClicks.length,
   }
 }

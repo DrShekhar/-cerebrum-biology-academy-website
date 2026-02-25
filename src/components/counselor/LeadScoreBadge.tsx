@@ -141,7 +141,24 @@ export function LeadScoreBadge({
   )
 }
 
-export function LeadScoreBreakdown({ score, breakdown }: { score: number; breakdown: any }) {
+interface LeadScoreBreakdownData {
+  demographic: number
+  behavioral: number
+  engagement: number
+  timeline: number
+  details?: {
+    hasEmail: boolean
+    hasPhone: boolean
+    activityCount: number
+    communicationCount: number
+    demoBooked: boolean
+    demoAttended: boolean
+    daysSinceCreation: number
+    daysSinceLastContact: number
+  }
+}
+
+export function LeadScoreBreakdown({ score, breakdown }: { score: number; breakdown: LeadScoreBreakdownData | null | undefined }) {
   if (!breakdown) {
     return (
       <div className="p-4 border border-gray-200 rounded-lg">

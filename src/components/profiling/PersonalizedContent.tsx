@@ -29,7 +29,7 @@ export function PersonalizedContent({
   section = 'recommendations',
 }: PersonalizedContentProps) {
   const { profile, recommendations, segment } = useUserProfile()
-  const [personalizedData, setPersonalizedData] = useState<any>(null)
+  const [personalizedData, setPersonalizedData] = useState<PersonalizedData | null>(null)
 
   useEffect(() => {
     if (profile && recommendations) {
@@ -43,16 +43,72 @@ export function PersonalizedContent({
 
   return (
     <div className={`${className}`}>
-      {section === 'hero' && <PersonalizedHero data={personalizedData} />}
-      {section === 'courses' && <PersonalizedCourses data={personalizedData} />}
-      {section === 'recommendations' && <PersonalizedRecommendations data={personalizedData} />}
-      {section === 'testimonials' && <PersonalizedTestimonials data={personalizedData} />}
-      {section === 'urgency' && <PersonalizedUrgency data={personalizedData} />}
+      {section === 'hero' && <PersonalizedHero data={personalizedData as PersonalizedHeroData} />}
+      {section === 'courses' && <PersonalizedCourses data={personalizedData as PersonalizedCoursesData} />}
+      {section === 'recommendations' && <PersonalizedRecommendations data={personalizedData as PersonalizedRecommendationsData} />}
+      {section === 'testimonials' && <PersonalizedTestimonials data={personalizedData as PersonalizedTestimonialsData} />}
+      {section === 'urgency' && <PersonalizedUrgency data={personalizedData as PersonalizedUrgencyData} />}
     </div>
   )
 }
 
-function PersonalizedHero({ data }: { data: any }) {
+interface PersonalizedHeroData {
+  title: string
+  subtitle: string
+  stats?: Array<{ value: string; label: string }>
+}
+
+interface PersonalizedCourseItem {
+  id: string
+  title: string
+  description: string
+  category: string
+  recommended: boolean
+  urgency?: string
+  features: string[]
+  price: string
+  originalPrice?: string
+  ctaText: string
+}
+
+interface PersonalizedCoursesData {
+  courses: PersonalizedCourseItem[]
+}
+
+interface PersonalizedRecommendationsData {
+  nextActions: string[]
+  content: string[]
+}
+
+interface PersonalizedTestimonialItem {
+  name: string
+  achievement: string
+  score: string
+  year: string
+  quote: string
+  similarity: string
+}
+
+interface PersonalizedTestimonialsData {
+  testimonials: PersonalizedTestimonialItem[]
+}
+
+interface PersonalizedUrgencyData {
+  urgencyLevel: 'high' | 'medium' | 'low'
+  title: string
+  message: string
+  timeRemaining?: string
+  ctaText: string
+}
+
+type PersonalizedData =
+  | PersonalizedHeroData
+  | PersonalizedCoursesData
+  | PersonalizedRecommendationsData
+  | PersonalizedTestimonialsData
+  | PersonalizedUrgencyData
+
+function PersonalizedHero({ data }: { data: PersonalizedHeroData }) {
   return (
     <div
       className="text-center mb-8 animate-fadeInUp"
@@ -65,7 +121,7 @@ function PersonalizedHero({ data }: { data: any }) {
       <p className="text-xl text-gray-600 mb-6">{data.subtitle}</p>
       {data.stats && (
         <div className="flex flex-wrap justify-center gap-6 mb-6">
-          {data.stats.map((stat: any, index: number) => (
+          {data.stats.map((stat, index: number) => (
             <div key={index} className="text-center">
               <div className="text-2xl font-bold text-primary">{stat.value}</div>
               <div className="text-sm text-gray-600">{stat.label}</div>
@@ -77,10 +133,10 @@ function PersonalizedHero({ data }: { data: any }) {
   )
 }
 
-function PersonalizedCourses({ data }: { data: any }) {
+function PersonalizedCourses({ data }: { data: PersonalizedCoursesData }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {data.courses.map((course: any, index: number) => (
+      {data.courses.map((course, index: number) => (
         <div
           key={course.id}
          className="animate-fadeInUp">
@@ -136,7 +192,7 @@ function PersonalizedCourses({ data }: { data: any }) {
   )
 }
 
-function PersonalizedRecommendations({ data }: { data: any }) {
+function PersonalizedRecommendations({ data }: { data: PersonalizedRecommendationsData }) {
   return (
     <div className="space-y-6">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">Recommended for You</h3>
@@ -201,7 +257,7 @@ function PersonalizedRecommendations({ data }: { data: any }) {
   )
 }
 
-function PersonalizedTestimonials({ data }: { data: any }) {
+function PersonalizedTestimonials({ data }: { data: PersonalizedTestimonialsData }) {
   return (
     <div className="space-y-6">
       <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">
@@ -209,7 +265,7 @@ function PersonalizedTestimonials({ data }: { data: any }) {
       </h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {data.testimonials.map((testimonial: any, index: number) => (
+        {data.testimonials.map((testimonial, index: number) => (
           <div
             key={index}
            className="animate-fadeInUp">
@@ -244,7 +300,7 @@ function PersonalizedTestimonials({ data }: { data: any }) {
   )
 }
 
-function PersonalizedUrgency({ data }: { data: any }) {
+function PersonalizedUrgency({ data }: { data: PersonalizedUrgencyData }) {
   return (
     <div
       className={`p-6 rounded-lg ${
@@ -338,12 +394,30 @@ function PersonalizedUrgency({ data }: { data: any }) {
 }
 
 // Generate personalized content based on user profile
+interface UserPreferences {
+  class?: string
+  [key: string]: unknown
+}
+
+interface UserProfile {
+  preferences: UserPreferences
+  behavior: unknown
+  engagement: unknown
+  visitCount: number
+}
+
+interface UserRecommendations {
+  nextActions: string[]
+  content: string[]
+  [key: string]: unknown
+}
+
 function generatePersonalizedContent(
-  profile: any,
-  recommendations: any,
+  profile: UserProfile,
+  recommendations: UserRecommendations,
   segment: string,
   section: string
-) {
+): PersonalizedData | null {
   const { preferences, behavior, engagement, visitCount } = profile
 
   switch (section) {
@@ -370,7 +444,7 @@ function generatePersonalizedContent(
   }
 }
 
-function generatePersonalizedHero(preferences: any, segment: string, visitCount: number) {
+function generatePersonalizedHero(preferences: UserPreferences, segment: string, visitCount: number): PersonalizedHeroData {
   const isReturningUser = visitCount > 1
 
   if (preferences.class === '12') {
@@ -430,7 +504,7 @@ function generatePersonalizedHero(preferences: any, segment: string, visitCount:
   }
 }
 
-function generatePersonalizedCourses(preferences: any, recommendations: any, segment: string) {
+function generatePersonalizedCourses(preferences: UserPreferences, recommendations: UserRecommendations, segment: string): PersonalizedCoursesData {
   const courses = []
 
   if (preferences.class === '12') {
@@ -513,7 +587,7 @@ function generatePersonalizedCourses(preferences: any, recommendations: any, seg
   return { courses }
 }
 
-function generatePersonalizedTestimonials(preferences: any, segment: string) {
+function generatePersonalizedTestimonials(preferences: UserPreferences, segment: string): PersonalizedTestimonialsData {
   const testimonials = []
 
   if (preferences.class === '12') {
@@ -577,7 +651,7 @@ function generatePersonalizedTestimonials(preferences: any, segment: string) {
   return { testimonials: testimonials.slice(0, 3) }
 }
 
-function generatePersonalizedUrgency(preferences: any, recommendations: any, segment: string) {
+function generatePersonalizedUrgency(preferences: UserPreferences, recommendations: UserRecommendations, segment: string): PersonalizedUrgencyData {
   if (preferences.class === '12') {
     return {
       urgencyLevel: 'high',
