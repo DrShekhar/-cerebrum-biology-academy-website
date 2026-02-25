@@ -261,7 +261,7 @@ function FaridabadEventSchema() {
         position: 3,
         name: 'Free NEET Biology Demo Class - Faridabad',
         description: 'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
-        startDate: '2026-02-15',
+        startDate: '2026-03-15',
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
         location: {

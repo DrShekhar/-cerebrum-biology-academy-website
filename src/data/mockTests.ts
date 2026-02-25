@@ -334,7 +334,7 @@ export const testSeries: TestSeries[] = [
     schedule: {
       frequency: 'weekly',
       duration: 180,
-      startDate: '2026-02-01T10:00:00Z',
+      startDate: '2026-03-01T10:00:00Z',
       endDate: '2026-04-30T18:00:00Z',
     },
     enrollmentCount: 3247,
@@ -376,7 +376,7 @@ export const testSeries: TestSeries[] = [
     schedule: {
       frequency: 'bi-weekly',
       duration: 120,
-      startDate: '2026-02-15T14:00:00Z',
+      startDate: '2026-03-15T14:00:00Z',
       endDate: '2026-04-15T18:00:00Z',
     },
     enrollmentCount: 1856,

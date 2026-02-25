@@ -1,0 +1,81 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /dashboard/
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /student/
+Disallow: /analytics/
+Disallow: /settings/
+Disallow: /portal/
+Disallow: /counselor/
+Disallow: /enrollments/
+Disallow: /test-platform/
+Disallow: /manifest.json
+
+User-agent: Googlebot
+Allow: /
+Allow: /testimonials/
+Allow: /video-sitemap.xml
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /student/
+Disallow: /analytics/
+Disallow: /_next/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /student/
+Disallow: /analytics/
+Disallow: /_next/
+
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /humans.txt
+Allow: /ai.txt
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /student/
+Disallow: /analytics/
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /student/
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /student/
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /admin/
+Disallow: /student/
+
+Sitemap: https://cerebrumbiologyacademy.com/sitemap.xml
+Sitemap: https://cerebrumbiologyacademy.com/image-sitemap.xml
+Sitemap: https://cerebrumbiologyacademy.com/video-sitemap.xml
+Sitemap: https://cerebrumbiologyacademy.com/priority-pages-sitemap.xml

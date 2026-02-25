@@ -169,7 +169,7 @@ export default function TimetableLayout({ children }: { children: React.ReactNod
         position: 4,
         name: 'Free NEET Biology Demo Class',
         description: 'Experience Cerebrum\'s teaching methodology with a free demo class. AIIMS faculty teaches live Biology concepts with interactive Q&A session.',
-        startDate: '2026-02-15',
+        startDate: '2026-03-15',
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
         location: [

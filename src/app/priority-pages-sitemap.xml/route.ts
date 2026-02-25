@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 export const dynamic = 'force-static'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
-const NOW = '2026-02-14'
+const NOW = '2026-02-25'
 
 // High-priority pages that need crawling/indexing focus
 // Submit this sitemap separately in GSC > Sitemaps

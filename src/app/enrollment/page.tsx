@@ -34,7 +34,7 @@ const upcomingBatches = [
   {
     name: 'Free NEET Biology Demo Class — Book Now',
     description: 'Experience Cerebrum Academy teaching firsthand. Free 90-minute demo class with AIIMS faculty. Available at all 6 Delhi NCR centers and online.',
-    startDate: '2026-02-15T10:00:00+05:30',
+    startDate: '2026-03-15T10:00:00+05:30',
     url: 'https://cerebrumbiologyacademy.com/book-free-demo',
     isAccessibleForFree: true,
   },

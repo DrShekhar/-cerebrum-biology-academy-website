@@ -214,7 +214,7 @@ function GhaziabadEventSchema() {
         name: 'Free NEET Biology Demo Class - Ghaziabad Students',
         description:
           'Experience Cerebrum teaching methodology with a free demo class. Available online for all Ghaziabad students.',
-        startDate: '2026-02-15',
+        startDate: '2026-03-15',
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
         organizer: {

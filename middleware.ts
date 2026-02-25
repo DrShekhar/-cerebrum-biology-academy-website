@@ -111,13 +111,49 @@ const publicRoutes = [
   '/genetics-biology-tuition',
   '/dna-biology-tuition',
   '/biology-topics',
+  // Additional SEO page prefixes (matched with route + '-' for city variants)
+  '/12th-board',
+  '/how-to-prepare',
+  '/neet-toppers',
+  '/compare',
+  '/which-neet-coaching',
+  '/which-is-better',
+  '/best-neet',
+  '/affordable-neet',
+  '/is-coaching-necessary',
+  '/free-neet',
+  '/online-neet',
+  '/1-year-neet',
+  '/2-year-neet',
+  '/home-biology',
+  '/cbse-biology',
+  '/ncert-biology',
+  '/class-12-board',
+  '/neet-foundation',
+  '/neet-evening',
+  '/neet-weekend',
+  '/neet-dropper',
+  '/neet-test-series',
+  '/neet-scholarship',
+  '/complement-aakash',
+  '/complement-allen',
+  '/aakash-alternative',
+  '/allen-alternative',
+  '/fiitjee-alternative',
+  '/narayana-alternative',
+  '/physics-wallah-alternative',
+  '/top-10-neet',
+  '/all-locations',
+  '/states',
+  '/batch-types',
 ]
 
 // Check if path matches public routes
+// Match exact route, route + '/' (subpages), and route + '-' (SEO variants like /neet-coaching-noida)
 function isPublicRoute(pathname: string): boolean {
   return publicRoutes.some((route) => {
     if (route === '/') return pathname === '/'
-    return pathname === route || pathname.startsWith(route + '/')
+    return pathname === route || pathname.startsWith(route + '/') || pathname.startsWith(route + '-')
   })
 }
 

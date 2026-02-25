@@ -85,11 +85,11 @@ export function generateEventSchema(event: EventData) {
 // Pre-configured upcoming events
 export const upcomingEvents: EventData[] = [
   {
-    name: 'Free NEET Biology Demo Class - February 2026',
+    name: 'Free NEET Biology Demo Class - March 2026',
     description:
       "Experience Dr. Shekhar Singh's teaching methodology in this free demo class. Topic: Human Physiology - Cardiovascular System. Limited seats available.",
-    startDate: '2026-02-01T10:00:00+05:30',
-    endDate: '2026-02-01T12:00:00+05:30',
+    startDate: '2026-03-01T10:00:00+05:30',
+    endDate: '2026-03-01T12:00:00+05:30',
     location: {
       name: 'Cerebrum Biology Academy - South Extension',
       address: 'D 35, South Extension Part 2',
@@ -104,10 +104,10 @@ export const upcomingEvents: EventData[] = [
     availableSeats: 25,
   },
   {
-    name: 'NEET 2026 Crash Course - Batch Starts February 2026',
+    name: 'NEET 2026 Crash Course - Batch Starts March 2026',
     description:
       'Intensive 4-month NEET Biology preparation with 200+ hours of live classes. Join our proven crash course that has produced 100 percentile scorers.',
-    startDate: '2026-02-15T09:00:00+05:30',
+    startDate: '2026-03-15T09:00:00+05:30',
     location: {
       name: 'Cerebrum Biology Academy - South Extension',
       address: 'D 35, South Extension Part 2',
