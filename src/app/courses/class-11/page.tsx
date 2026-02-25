@@ -546,10 +546,10 @@ export default function Class11BiologyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Cerebrum for Class 11?
+              Why Choose Cerebrum for Class 11 NEET Biology?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              The perfect blend of board exam preparation and NEET foundation building
+              Cerebrum offers the perfect blend of board exam preparation and NEET foundation building, with AIIMS-trained faculty, small batches of 25 students, and a structured curriculum that covers 55% of the NEET syllabus in Class 11 itself.
             </p>
           </div>
 
@@ -601,10 +601,10 @@ export default function Class11BiologyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Complete Class 11 Curriculum
+              What Is Covered in the Class 11 NEET Biology Syllabus?
             </h2>
             <p className="text-gray-600">
-              Structured learning covering all NCERT chapters with NEET focus
+              The Class 11 NEET Biology syllabus covers five units -- from Diversity in Living World to Human Physiology -- with structured learning across all NCERT chapters and NEET-weighted practice.
             </p>
           </div>
 
@@ -639,6 +639,7 @@ export default function Class11BiologyPage() {
               </div>
             ))}
           </div>
+          <p className="text-xs text-gray-500 mt-4">Curriculum aligned with NCERT Class 11 Biology (2024-25 edition) and NTA NEET-UG syllabus. Sources: ncert.nic.in, nta.ac.in</p>
         </div>
       </section>
 
@@ -647,10 +648,10 @@ export default function Class11BiologyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Learn from AIIMS-Trained Faculty
+              Who Teaches NEET Biology at Cerebrum?
             </h2>
             <p className="text-gray-600">
-              Our teachers have cracked NEET themselves and know exactly what it takes
+              Our faculty are AIIMS and top medical college alumni with 15+ years of NEET teaching experience. They have cracked NEET themselves and know exactly what it takes to help students succeed.
             </p>
           </div>
 

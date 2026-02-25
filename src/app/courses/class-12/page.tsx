@@ -401,10 +401,10 @@ export default function Class12BiologyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Class 12th Success Record
+              What Results Do Class 12 Students Achieve at Cerebrum?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Outstanding results in both board exams and NEET
+              Our Class 12 students consistently score 340+ in NEET Biology and 90+ in board exams. Here is our track record across key metrics.
             </p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -463,10 +463,10 @@ export default function Class12BiologyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              What's Included in the Course
+              What Is Covered in Class 12 NEET Biology?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Everything you need to excel in both board exams and NEET
+              The Class 12 NEET Biology course at Cerebrum covers complete NCERT mastery, daily MCQ practice, weekly mock tests, and 24/7 doubt resolution -- everything you need to excel in both board exams and NEET.
             </p>
           </div>
 
@@ -532,10 +532,10 @@ export default function Class12BiologyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Complete Curriculum with NEET Weightage
+              How Is the Class 12 NEET Biology Curriculum Structured?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Strategic coverage based on NEET exam pattern and board requirements
+              The curriculum is divided into four units with strategic coverage based on NEET exam weightage and board requirements, ensuring high-weight topics like Genetics and Reproduction receive the most attention.
             </p>
           </div>
 
@@ -567,6 +567,7 @@ export default function Class12BiologyPage() {
               </div>
             ))}
           </div>
+          <p className="text-xs text-gray-500 mt-4">Curriculum aligned with NCERT Class 12 Biology (2024-25 edition) and NTA NEET-UG syllabus. Sources: ncert.nic.in, nta.ac.in</p>
         </div>
       </section>
 

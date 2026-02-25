@@ -258,10 +258,10 @@ export default function NeetCoachingInstitutePage() {
             className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose Our NEET Institute?
+              What Makes Cerebrum the Best NEET Coaching Institute?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Cerebrum Biology Academy stands out among NEET coaching institutes
+              With 15+ years of experience, 98% success rate, and AIIMS-trained faculty, Cerebrum Biology Academy consistently delivers top NEET results. Here is what sets us apart from other NEET coaching institutes.
             </p>
           </div>
 
@@ -290,10 +290,10 @@ export default function NeetCoachingInstitutePage() {
             className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Courses at Our NEET Institute
+              What Courses Does Cerebrum's NEET Institute Offer?
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive programs for every stage of NEET preparation
+              Cerebrum offers four comprehensive programs designed for every stage of NEET preparation, from Class 11 foundation to crash courses for last-minute revision.
             </p>
           </div>
 
@@ -336,8 +336,11 @@ export default function NeetCoachingInstitutePage() {
             className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Features of Our NEET Coaching Institute
+              How Does NEET Coaching at Cerebrum Work?
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+              Our coaching approach combines expert AIIMS-trained faculty, NCERT-focused curriculum, hybrid learning options, and rigorous weekly testing to maximise your NEET score.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -394,6 +397,7 @@ export default function NeetCoachingInstitutePage() {
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               15+ years of excellence, 98% success rate, 1,50,000+ successful alumni
             </p>
+            <p className="text-xs text-white/60 mb-4">Success rate based on 2023-2025 NEET-UG results. NEET is conducted by NTA (nta.ac.in).</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/demo-booking">
