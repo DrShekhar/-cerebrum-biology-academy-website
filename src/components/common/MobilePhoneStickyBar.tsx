@@ -40,13 +40,15 @@ export function MobilePhoneStickyBar({
       {/* Mobile Sticky Bar - Only visible on mobile */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg z-50 safe-area-inset-bottom">
         <div className="flex p-2 space-x-2">
-          <button
+          <a
+            href={`tel:${phoneNumber}`}
             onClick={handleCallNow}
             className="flex-1 flex items-center justify-center space-x-2 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors"
+            aria-label={`Call ${phoneNumber}`}
           >
             <Phone className="w-5 h-5" />
             <span>Call Now</span>
-          </button>
+          </a>
           {showWhatsApp && (
             <button
               onClick={handleWhatsApp}

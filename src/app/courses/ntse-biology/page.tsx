@@ -36,7 +36,6 @@ export default function NTSEBiologyPage() {
   const handleCallNow = () => {
     ConversionTracker.trackPhoneCall()
     trackPhoneCallConversion(CONTACT_INFO.phone.primary)
-    window.open(`tel:${CONTACT_INFO.phone.primary}`, '_self')
   }
 
   const handleWhatsApp = async () => {
@@ -113,13 +112,14 @@ export default function NTSEBiologyPage() {
                   <MessageSquare className="w-5 h-5" />
                   WhatsApp Us
                 </button>
-                <button
+                <a
+                  href={`tel:${CONTACT_INFO.phone.primary}`}
                   onClick={handleCallNow}
                   className="flex items-center gap-2 bg-white text-orange-900 px-6 py-3 rounded-lg font-semibold transition-all hover:bg-gray-100"
                 >
                   <Phone className="w-5 h-5" />
                   Call Now
-                </button>
+                </a>
               </div>
 
               {/* Stats */}

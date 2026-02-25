@@ -153,13 +153,14 @@ export default function RohiniLocationPage() {
         <section className="py-6 bg-white border-b sticky top-0 z-40 shadow-sm">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-3">
-              <button
+              <a
+                href={`tel:${CONTACT_INFO.phone.primary}`}
                 onClick={handleCallNow}
                 className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all"
               >
                 <Phone className="w-5 h-5" />
                 Call Now
-              </button>
+              </a>
               <button
                 onClick={handleWhatsApp}
                 className="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-lg font-semibold transition-all"
@@ -433,13 +434,14 @@ export default function RohiniLocationPage() {
                 <MessageSquare className="w-6 h-6" />
                 Book Free Demo
               </button>
-              <button
+              <a
+                href={`tel:${CONTACT_INFO.phone.primary}`}
                 onClick={handleCallNow}
                 className="flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-800 transition-all shadow-lg"
               >
                 <Phone className="w-6 h-6" />
                 {CONTACT_INFO.phone.display.primary}
-              </button>
+              </a>
             </div>
           </div>
         </section>

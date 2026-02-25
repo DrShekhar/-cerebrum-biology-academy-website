@@ -35,7 +35,6 @@ export default function NEETCoachingComparisonPage() {
   const handleCallNow = () => {
     ConversionTracker.trackPhoneCall()
     trackPhoneCallConversion(CONTACT_INFO.phone.primary)
-    window.open(`tel:${CONTACT_INFO.phone.primary}`, '_self')
   }
 
   const handleWhatsApp = async () => {
@@ -302,13 +301,14 @@ export default function NEETCoachingComparisonPage() {
             </h2>
             <p className="text-lg mb-6 opacity-90">Book a free demo class and see for yourself</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button
+              <a
+                href={`tel:${CONTACT_INFO.phone.primary}`}
                 onClick={handleCallNow}
                 className="flex items-center gap-2 bg-yellow-500 text-slate-900 px-8 py-4 rounded-lg font-bold text-lg"
               >
                 <Phone className="w-6 h-6" />
                 Call Now
-              </button>
+              </a>
               <button
                 onClick={handleWhatsApp}
                 className="flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg"

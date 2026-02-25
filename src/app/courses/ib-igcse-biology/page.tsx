@@ -36,7 +36,6 @@ export default function IBIGCSEBiologyPage() {
   const handleCallNow = () => {
     ConversionTracker.trackPhoneCall()
     trackPhoneCallConversion(CONTACT_INFO.phone.primary)
-    window.open(`tel:${CONTACT_INFO.phone.primary}`, '_self')
   }
 
   const handleWhatsApp = async () => {
@@ -138,13 +137,14 @@ export default function IBIGCSEBiologyPage() {
                   <MessageSquare className="w-5 h-5" />
                   Book Free Demo
                 </button>
-                <button
+                <a
+                  href={`tel:${CONTACT_INFO.phone.primary}`}
                   onClick={handleCallNow}
                   className="flex items-center gap-2 bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all"
                 >
                   <Phone className="w-5 h-5" />
                   Call Now
-                </button>
+                </a>
               </div>
             </div>
           </div>

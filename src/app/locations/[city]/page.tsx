@@ -5,6 +5,7 @@ import { getAllLocalities, Locality } from '@/data/localities'
 import { generateCityMetadata } from '@/lib/seo/localityMetadata'
 import { MapPin, Users, Award, TrendingUp, ChevronRight, School, Train } from 'lucide-react'
 import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
+import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 
 interface CityPageProps {
   params: Promise<{
@@ -384,10 +385,12 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
 
           <p className="mt-6 text-sm text-blue-200">
-            Contact: +91-88264-44334 | Available for calling and WhatsApp
+            Contact: <a href="tel:+918826444334" className="underline hover:text-white">+91-88264-44334</a> | Available for calling and WhatsApp
           </p>
         </div>
       </section>
+
+      <MobilePhoneStickyBar source={`city-page-${resolvedParams.city}`} />
     </div>
   )
 }

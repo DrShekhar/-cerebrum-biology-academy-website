@@ -141,13 +141,14 @@ export default function DelhiLocationPage() {
                   <MessageSquare className="w-5 h-5" />
                   Find Nearest Center
                 </button>
-                <button
+                <a
+                  href={`tel:${CONTACT_INFO.phone.primary}`}
                   onClick={handleCallNow}
                   className="flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all"
                 >
                   <Phone className="w-5 h-5" />
                   Call Us
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -360,13 +361,14 @@ export default function DelhiLocationPage() {
                 <MessageSquare className="w-6 h-6" />
                 Book Free Demo
               </button>
-              <button
+              <a
+                href={`tel:${CONTACT_INFO.phone.primary}`}
                 onClick={handleCallNow}
                 className="flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-800 transition-all shadow-lg"
               >
                 <Phone className="w-6 h-6" />
                 {CONTACT_INFO.phone.display.primary}
-              </button>
+              </a>
             </div>
           </div>
         </section>

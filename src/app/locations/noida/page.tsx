@@ -165,13 +165,14 @@ export default function NoidaLocationPage() {
                   <span>Get Directions</span>
                 </button>
 
-                <button
+                <a
+                  href={`tel:${CONTACT_INFO.phone.primary}`}
                   onClick={handleCallNow}
                   className="flex items-center justify-center space-x-2 px-6 py-3 bg-white text-slate-900 hover:bg-gray-100 rounded-xl font-medium transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call Now</span>
-                </button>
+                </a>
 
                 <button
                   onClick={handleWhatsApp}
@@ -414,13 +415,14 @@ export default function NoidaLocationPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button
+            <a
+              href={`tel:${CONTACT_INFO.phone.primary}`}
               onClick={handleCallNow}
               className="flex items-center justify-center space-x-2 px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-xl font-bold transition-colors"
             >
               <Phone className="w-5 h-5" />
               <span>Call {CONTACT_INFO.phone.display.primary}</span>
-            </button>
+            </a>
 
             <button
               onClick={handleWhatsApp}

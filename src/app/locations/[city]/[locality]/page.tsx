@@ -8,6 +8,7 @@ import LocalityHero from '@/components/localities/LocalityHero'
 import LocalityFAQ from '@/components/localities/LocalityFAQ'
 import { GoogleMapEmbed } from '@/components/maps/GoogleMapEmbed'
 import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
+import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import {
   MapPin,
   Train,
@@ -459,10 +460,12 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
           </div>
 
           <p className="mt-6 text-sm text-gray-500">
-            Contact: +91-88264-44334 | Available for calling and WhatsApp
+            Contact: <a href="tel:+918826444334" className="underline hover:text-gray-700">+91-88264-44334</a> | Available for calling and WhatsApp
           </p>
         </div>
       </section>
+
+      <MobilePhoneStickyBar source={`locality-page-${locality.slug}`} />
     </div>
   )
 }

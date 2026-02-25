@@ -170,13 +170,14 @@ export default function CRParkPage() {
                       View Center
                       <ArrowRight className="w-4 h-4" />
                     </Link>
-                    <button
+                    <a
+                      href={`tel:${CONTACT_INFO.phone.primary}`}
                       onClick={handleCallNow}
                       className="flex items-center justify-center gap-2 flex-1 bg-green-600 text-white py-3 rounded-lg font-semibold"
                     >
                       <Phone className="w-4 h-4" />
                       Call Now
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

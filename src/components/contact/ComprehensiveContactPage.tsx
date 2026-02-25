@@ -219,7 +219,6 @@ export function ComprehensiveContactPage({
 
   const handleQuickCall = (centerPhone: string) => {
     onCallCenter?.(centerPhone)
-    window.open(`tel:${centerPhone}`, '_self')
   }
 
   const handleWhatsApp = async (message: string) => {
@@ -281,15 +280,14 @@ export function ComprehensiveContactPage({
 
             {/* Quick Contact Bar */}
             <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-              <PremiumButton
+              <a
+                href={`tel:${selectedCenterData.phone}`}
                 onClick={() => handleQuickCall(selectedCenterData.phone)}
-                variant="luxury"
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100"
+                className="relative overflow-hidden rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg bg-white text-blue-600 hover:bg-gray-100 shadow-lg shadow-purple-500/25 inline-flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-3" />
                 Call Now: {selectedCenterData.phone}
-              </PremiumButton>
+              </a>
 
               <PremiumButton
                 onClick={() =>
@@ -434,14 +432,14 @@ export function ComprehensiveContactPage({
 
                     {/* Action Buttons */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                      <PremiumButton
+                      <a
+                        href={`tel:${selectedCenterData.phone}`}
                         onClick={() => handleQuickCall(selectedCenterData.phone)}
-                        variant="primary"
-                        size="sm"
+                        className="relative overflow-hidden rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 px-3 sm:px-4 py-2 text-xs sm:text-sm bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white shadow-lg shadow-blue-500/25 inline-flex items-center justify-center"
                       >
                         <Phone className="w-4 h-4 mr-2" />
                         Call
-                      </PremiumButton>
+                      </a>
 
                       <PremiumButton
                         onClick={() => handleDirections(selectedCenterData)}
@@ -600,14 +598,14 @@ export function ComprehensiveContactPage({
                         WhatsApp Now
                       </PremiumButton>
 
-                      <PremiumButton
+                      <a
+                        href={`tel:${selectedCenterData.phone}`}
                         onClick={() => handleQuickCall(selectedCenterData.phone)}
-                        variant="secondary"
-                        size="md"
+                        className="relative overflow-hidden rounded-xl font-semibold transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 text-white shadow-lg shadow-gray-500/25 inline-flex items-center justify-center"
                       >
                         <Phone className="w-4 h-4 mr-2" />
                         Call Center
-                      </PremiumButton>
+                      </a>
                     </div>
                   </div>
 
@@ -820,12 +818,13 @@ export function ComprehensiveContactPage({
                 >
                   💬 Chat on WhatsApp
                 </button>
-                <button
+                <a
+                  href={`tel:${selectedCenterData.phone}`}
                   onClick={() => handleQuickCall(selectedCenterData.phone)}
-                  className="w-full text-left px-3 py-2 bg-blue-50 hover:bg-blue-100 rounded-lg text-sm text-blue-800 transition-colors"
+                  className="w-full text-left px-3 py-2 bg-blue-50 hover:bg-blue-100 rounded-lg text-sm text-blue-800 transition-colors block"
                 >
                   📞 Call us now
-                </button>
+                </a>
               </div>
             </div>
           </div>

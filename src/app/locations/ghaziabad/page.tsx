@@ -184,13 +184,14 @@ export default function GhaziabadLocationPage() {
                   <span>Book Free Demo</span>
                 </Link>
 
-                <button
+                <a
+                  href={`tel:${CONTACT_INFO.phone.primary}`}
                   onClick={handleCallNow}
                   className="flex items-center justify-center space-x-2 px-6 py-3 bg-white text-slate-900 hover:bg-gray-100 rounded-xl font-medium transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call Now</span>
-                </button>
+                </a>
 
                 <button
                   onClick={handleWhatsApp}
@@ -449,13 +450,14 @@ export default function GhaziabadLocationPage() {
               <span>Book Free Demo Class</span>
             </Link>
 
-            <button
+            <a
+              href={`tel:${CONTACT_INFO.phone.primary}`}
               onClick={handleCallNow}
               className="inline-flex items-center justify-center space-x-2 px-8 py-3 bg-white text-purple-700 rounded-xl font-bold hover:bg-gray-100 transition-colors"
             >
               <Phone className="w-5 h-5" />
               <span>Call: +91 88264 44334</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
