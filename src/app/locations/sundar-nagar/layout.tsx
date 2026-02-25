@@ -89,9 +89,9 @@ export default function SundarNagarLayout({ children }: { children: React.ReactN
             'openingHoursSpecification': [
               {
                 '@type': 'OpeningHoursSpecification',
-                'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-                'opens': '08:00',
-                'closes': '20:00',
+                'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                'opens': '00:00',
+                'closes': '23:59',
               },
             ],
             'priceRange': '₹45,000 - ₹1,80,000',

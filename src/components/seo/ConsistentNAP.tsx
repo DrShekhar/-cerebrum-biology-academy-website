@@ -123,7 +123,7 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
       'Ballabgarh',
       'NIT Faridabad',
     ].map((area) => ({ '@type': 'City' as const, name: area })),
-    priceRange: '₹₹',
+    priceRange: '₹45,000 - ₹1,80,000',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, UPI, Bank Transfer, EMI',
     image: `${BASE_URL}/og-image.jpg`,

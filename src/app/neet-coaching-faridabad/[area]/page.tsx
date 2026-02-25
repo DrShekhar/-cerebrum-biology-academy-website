@@ -245,7 +245,7 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
     url: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
     telephone: CEREBRUM_METRICS.phone,
     email: CEREBRUM_METRICS.email,
-    priceRange: '₹₹',
+    priceRange: '₹45,000 - ₹1,80,000',
     image: 'https://cerebrumbiologyacademy.com/logo.png',
     parentOrganization: { '@id': organizationId },
     address: {

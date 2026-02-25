@@ -228,7 +228,7 @@ export class CitySpecificSEOService {
         ratingCount: '32',
         bestRating: '5',
       },
-      priceRange: '₹₹',
+      priceRange: '₹45,000 - ₹1,80,000',
       telephone: CONTACT_INFO.phone.display.hyphenated.primary,
       openingHours: 'Mo-Su 06:00-22:00',
       sameAs: [
@@ -303,7 +303,7 @@ export class CitySpecificSEOService {
         longitude: this.getCityCoordinates(city.name).lng,
       },
       url: `https://cerebrumbiologyacademy.com/locations/${city.name.toLowerCase()}`,
-      priceRange: '₹₹',
+      priceRange: '₹45,000 - ₹1,80,000',
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',

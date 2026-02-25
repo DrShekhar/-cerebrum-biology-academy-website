@@ -24,7 +24,7 @@ function GreenParkServiceSchema() {
       longitude: 77.2089,
     },
     url: 'https://cerebrumbiologyacademy.com/locations/green-park',
-    priceRange: '₹₹',
+    priceRange: '₹45,000 - ₹1,80,000',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

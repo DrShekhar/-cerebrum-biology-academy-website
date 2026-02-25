@@ -148,7 +148,7 @@ export function generateLocalBusinessSchema(
       '@type': 'Place',
       name: nearbySlug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
     })),
-    priceRange: '₹₹',
+    priceRange: '₹45,000 - ₹1,80,000',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',

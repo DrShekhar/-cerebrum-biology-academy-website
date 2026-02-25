@@ -290,7 +290,7 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
               addressCountry: 'IN',
             },
             telephone: '+91-88264-44334',
-            priceRange: '₹₹',
+            priceRange: '₹45,000 - ₹1,80,000',
             areaServed: ['Delhi', 'Noida', 'Gurgaon', 'Faridabad', 'Ghaziabad', 'Delhi NCR'],
           }),
         }}

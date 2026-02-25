@@ -242,7 +242,7 @@ export function NEETCoachingMeeraBaghContent() {
     telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
-    priceRange: '₹₹',
+    priceRange: '₹45,000 - ₹1,80,000',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '211 Vikas Surya Tower, DC Chowk, Sector 9',

@@ -98,7 +98,7 @@ const localBusinessSchema = {
     addressCountry: 'IN',
   },
   areaServed: ['Gurugram', 'Gurgaon', 'DLF', 'Golf Course Road', 'Sohna Road', 'MG Road'],
-  priceRange: '$$',
+  priceRange: '₹45,000 - ₹1,80,000',
 }
 
 export default function BiologyTutorGurugramLayout({ children }: { children: React.ReactNode }) {
