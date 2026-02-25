@@ -41,7 +41,7 @@ export function trackGoogleAdsConversion(
   currency: string = 'INR',
   transactionId?: string
 ) {
-  if (typeof window === 'undefined' || !(window as any).gtag) {
+  if (typeof window === 'undefined' || !window.gtag) {
     return
   }
 
@@ -50,7 +50,7 @@ export function trackGoogleAdsConversion(
   // Skip if no real label (backward compat no-ops)
   if (!conversionLabel) return
 
-  const conversionData: Record<string, any> = {
+  const conversionData: Record<string, unknown> = {
     send_to: conversionLabel,
   }
 
@@ -63,7 +63,7 @@ export function trackGoogleAdsConversion(
     conversionData.transaction_id = transactionId
   }
 
-  ;(window as any).gtag('event', 'conversion', conversionData)
+  ;window.gtag('event', 'conversion', conversionData)
 }
 
 /**
@@ -73,8 +73,8 @@ export function trackPhoneCallConversion(phoneNumber?: string) {
   trackGoogleAdsConversion('PHONE_CALL')
 
   // Also track as GA4 event
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('event', 'generate_lead', {
+  if (typeof window !== 'undefined' && window.gtag) {
+    ;window.gtag('event', 'generate_lead', {
       currency: 'INR',
       value: 0,
       lead_type: 'phone_call',
@@ -91,8 +91,8 @@ export function trackWhatsAppConversion(source?: string) {
   trackGoogleAdsConversion('WHATSAPP_CLICK')
 
   // Also track as GA4 event
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('event', 'generate_lead', {
+  if (typeof window !== 'undefined' && window.gtag) {
+    ;window.gtag('event', 'generate_lead', {
       currency: 'INR',
       value: 0,
       lead_type: 'whatsapp',
@@ -102,7 +102,48 @@ export function trackWhatsAppConversion(source?: string) {
   }
 }
 
-// Backward compatibility no-ops — only WhatsApp and Phone Call are tracked
-export function trackDemoBookingConversion(_courseType?: string) {}
-export function trackEnrollmentConversion(_value: number, _courseType?: string, _transactionId?: string) {}
-export function trackLeadFormConversion(_formName?: string) {}
+/**
+ * Track demo booking as GA4 generate_lead event (importable as Google Ads conversion)
+ */
+export function trackDemoBookingConversion(courseType?: string) {
+  if (typeof window === 'undefined' || !window.gtag) return
+
+  window.gtag('event', 'generate_lead', {
+    currency: 'INR',
+    value: 0,
+    lead_type: 'demo_booking',
+    source: courseType || 'website',
+    contact_method: 'form',
+  })
+
+  window.gtag('event', 'demo_booking_complete', {
+    event_category: 'conversion',
+    event_label: courseType || 'general',
+  })
+}
+
+/**
+ * Track enrollment as GA4 purchase event (importable as Google Ads conversion)
+ */
+export function trackEnrollmentConversion(value: number, courseType?: string, transactionId?: string) {
+  if (typeof window === 'undefined' || !window.gtag) return
+
+  window.gtag('event', 'purchase', {
+    currency: 'INR',
+    value,
+    transaction_id: transactionId,
+    items: [{ item_name: courseType || 'NEET Biology Course' }],
+  })
+}
+
+export function trackLeadFormConversion(formName?: string) {
+  if (typeof window === 'undefined' || !window.gtag) return
+
+  window.gtag('event', 'generate_lead', {
+    currency: 'INR',
+    value: 0,
+    lead_type: 'lead_form',
+    source: formName || 'unknown',
+    contact_method: 'form',
+  })
+}

@@ -33,6 +33,7 @@ import { useAnalytics } from '@/hooks/useAnalytics'
 import { useFacebookPixel } from '@/hooks/useFacebookPixel'
 import { useFormValidation } from '@/hooks/useFormValidation'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { trackDemoBookingConversion } from '@/lib/analytics/googleAdsConversions'
 import { TestimonialCarousel } from './TestimonialCarousel'
 import { BenefitsGrid } from './BenefitsGrid'
 import { FAQAccordion } from './FAQAccordion'
@@ -453,7 +454,10 @@ export function DemoBookingSystem() {
         bookingData.phone
       )
 
-      // Step 5b: Track with Facebook Pixel (Lead event + Conversion API)
+      // Step 5b: Track Google Ads conversion (GA4 generate_lead event)
+      trackDemoBookingConversion(bookingData.courseInterest.join(', '))
+
+      // Step 5c: Track with Facebook Pixel (Lead event + Conversion API)
       trackDemoBooking({
         subject: bookingData.courseInterest.join(', '),
         studentClass: bookingData.currentClass || 'Not specified',

@@ -70,8 +70,8 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
       submenu: [
         { label: 'Class 11th Biology', href: '/courses/class-11' },
         { label: 'Class 12th Biology', href: '/courses/class-12' },
-        { label: 'NEET Preparation', href: '/courses/neet' },
-        { label: 'Dropper Batch', href: '/courses/dropper' },
+        { label: 'NEET Preparation', href: '/courses/neet-complete' },
+        { label: 'Dropper Batch', href: '/courses/neet-dropper' },
       ],
     },
     {
@@ -91,7 +91,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
     {
       icon: User,
       label: 'My Account',
-      href: '/account',
+      href: '/dashboard',
       color: 'text-indigo-600',
       bgColor: 'bg-indigo-50',
     },
@@ -120,8 +120,8 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
     },
     {
       icon: Search,
-      label: language === 'hi' ? 'खोजें' : 'Search',
-      href: '/search',
+      label: language === 'hi' ? 'खोजें' : 'Find Center',
+      href: '/locations',
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
     },
