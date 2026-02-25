@@ -6,6 +6,7 @@ import { realTestimonials } from '@/data/realTestimonials'
 import { HomePageClient } from '@/components/home/HomePageClient'
 import { SpeakableSchema } from '@/components/seo/SpeakableSchema'
 import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
+import { ContentFreshness } from '@/components/seo/ContentFreshness'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
@@ -219,6 +220,22 @@ export default function Home() {
       <section className="content-visibility-auto">
         <BookingSection />
       </section>
+
+      {/* Content Freshness Schema for E-E-A-T signals */}
+      <ContentFreshness
+        datePublished="2024-01-15"
+        dateModified="2026-02-25"
+        author={{
+          name: 'Dr. Shekhar C Singh',
+          url: 'https://cerebrumbiologyacademy.com/faculty',
+          jobTitle: 'Founder & Head Faculty, AIIMS Graduate',
+        }}
+        reviewedBy={{
+          name: 'Dr. Shekhar C Singh',
+          credentials: 'MBBS, AIIMS Delhi',
+        }}
+        showVisual={false}
+      />
 
       {/* Footer is rendered in layout.tsx - no need to duplicate here */}
     </div>

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { generatePageMetadata } from '@/lib/seo/metadata'
-import { BreadcrumbSchema, CoursesPageWebPageSchema } from '@/components/seo'
+import { BreadcrumbSchema, CoursesPageWebPageSchema, ContentFreshness } from '@/components/seo'
 
 // Lazy load the heavy courses listing component
 const EnhancedCoursesListingPage = dynamic(
@@ -120,6 +120,16 @@ export default function CoursesPage() {
         <BreadcrumbSchema items={[{ label: 'Courses', isCurrentPage: true }]} />
       </div>
       <EnhancedCoursesListingPage />
+      <ContentFreshness
+        datePublished="2024-01-01"
+        dateModified="2026-02-25"
+        author={{
+          name: 'Dr. Shekhar C Singh',
+          url: 'https://cerebrumbiologyacademy.com/faculty',
+          jobTitle: 'Founder & Head Faculty, AIIMS Graduate',
+        }}
+        showVisual={false}
+      />
     </>
   )
 }

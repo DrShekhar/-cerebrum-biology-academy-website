@@ -93,7 +93,7 @@ function NoidaServiceSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '38',
+      reviewCount: '19',
       bestRating: '5',
       worstRating: '1',
     },

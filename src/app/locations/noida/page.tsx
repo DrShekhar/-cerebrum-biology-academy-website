@@ -354,6 +354,34 @@ export default function NoidaLocationPage() {
         </div>
       </div>
 
+      {/* Other Centers in Delhi NCR */}
+      <div className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+            Other Centers in Delhi NCR
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              { name: 'South Extension (Flagship)', href: '/locations/south-extension' },
+              { name: 'Rohini (DC Chowk)', href: '/locations/rohini' },
+              { name: 'Gurugram (Sector 51)', href: '/locations/gurugram' },
+              { name: 'Faridabad (Sector 17)', href: '/locations/faridabad' },
+              { name: 'Delhi', href: '/locations/delhi' },
+              { name: 'Ghaziabad', href: '/locations/ghaziabad' },
+            ].map((center) => (
+              <Link
+                key={center.href}
+                href={center.href}
+                className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 hover:border-blue-200 border border-gray-200 transition-colors group"
+              >
+                <p className="font-semibold text-gray-900 group-hover:text-blue-600">{center.name}</p>
+                <span className="text-sm text-gray-500 group-hover:text-blue-500">View details →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* FAQs */}
       <div className="py-12">
         <div className="max-w-3xl mx-auto px-4">

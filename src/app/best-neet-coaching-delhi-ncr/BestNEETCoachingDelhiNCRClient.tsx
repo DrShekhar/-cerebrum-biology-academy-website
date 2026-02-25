@@ -14,6 +14,7 @@ import {
   Zap,
   BookOpen,
   Brain,
+  ArrowRight,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -40,30 +41,35 @@ const cityData = [
     areas: ['South Extension', 'Rohini'],
     students: 1500,
     centers: 2,
+    href: '/locations/delhi',
   },
   {
     city: 'Gurugram',
     areas: ['Sector 51', 'DLF Phase 3', 'Golf Course Road', 'Sohna Road'],
     students: 600,
     centers: 1,
+    href: '/locations/gurugram',
   },
   {
     city: 'Faridabad',
     areas: ['Sector 17', 'NIT', 'Ballabhgarh', 'Old Faridabad'],
     students: 400,
     centers: 1,
+    href: '/locations/faridabad',
   },
   {
     city: 'Noida',
     areas: ['Sector 18', 'Sector 62', 'Sector 137', 'Greater Noida'],
     students: 800,
     centers: 0,
+    href: '/locations/noida',
   },
   {
     city: 'Ghaziabad',
     areas: ['Indirapuram', 'Vaishali', 'Raj Nagar', 'Vasundhara'],
     students: 400,
     centers: 0,
+    href: '/locations/ghaziabad',
   },
 ]
 
@@ -169,9 +175,7 @@ export function BestNEETCoachingDelhiNCRClient() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-yellow-500 text-black px-6 py-3 rounded-full text-sm font-bold mb-6">
               <Trophy className="w-5 h-5 mr-2" />
               #1 Rated NEET Coaching in Delhi NCR
@@ -230,9 +234,7 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* Rankings Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Top 5 NEET Coaching in Delhi NCR (2025)
             </h2>
@@ -293,9 +295,7 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* Why Best Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Cerebrum is the Best NEET Coaching?
             </h2>
@@ -321,19 +321,18 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* City Coverage */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Across Delhi NCR
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {cityData.map((city, index) => (
-              <div
+              <Link
                 key={city.city}
-                className="bg-indigo-50 rounded-xl p-6 animate-fadeInUp"
+                href={city.href}
+                className="bg-indigo-50 rounded-xl p-6 animate-fadeInUp hover:bg-indigo-100 hover:shadow-md transition-all group block"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{city.city}</h3>
@@ -343,7 +342,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                   <Users className="w-4 h-4 mr-1" />
                   {city.students}+ students | {city.centers} center(s)
                 </div>
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap gap-1 mb-4">
                   {city.areas.map((area) => (
                     <span
                       key={area}
@@ -353,7 +352,11 @@ export function BestNEETCoachingDelhiNCRClient() {
                     </span>
                   ))}
                 </div>
-              </div>
+                <div className="flex items-center text-purple-600 text-sm font-semibold group-hover:text-purple-800 transition-colors">
+                  View center
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -362,9 +365,7 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* Testimonials */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Toppers from Delhi NCR
             </h2>
@@ -401,9 +402,7 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* FAQ Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -411,10 +410,7 @@ export function BestNEETCoachingDelhiNCRClient() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -426,8 +422,7 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Join the Best NEET Coaching?
             </h2>
@@ -483,7 +478,7 @@ export function BestNEETCoachingDelhiNCRClient() {
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '5.0',
-              reviewCount: '38',
+              reviewCount: '47',
               bestRating: '5',
             },
             award: [

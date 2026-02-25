@@ -936,7 +936,7 @@ export function GurugramServiceSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '38',
+      reviewCount: '28',
       bestRating: '5',
     },
     hasOfferCatalog: {

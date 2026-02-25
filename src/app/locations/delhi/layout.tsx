@@ -117,7 +117,7 @@ function DelhiServiceSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '38',
+      reviewCount: '41',
       bestRating: '5',
       worstRating: '1',
     },
@@ -165,7 +165,7 @@ function DelhiLocalBusinessSchema() {
     'aggregateRating': {
       '@type': 'AggregateRating',
       'ratingValue': '5.0',
-      'reviewCount': '38',
+      'reviewCount': '41',
       'bestRating': '5',
     },
     'sameAs': [
