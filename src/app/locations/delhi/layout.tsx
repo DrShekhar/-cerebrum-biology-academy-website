@@ -142,7 +142,7 @@ function DelhiLocalBusinessSchema() {
     'email': 'info@cerebrumbiologyacademy.com',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': 'Near South Extension',
+      'streetAddress': 'D 35, South Extension Part 2',
       'addressLocality': 'Delhi',
       'addressRegion': 'Delhi',
       'postalCode': '110049',
@@ -159,6 +159,12 @@ function DelhiLocalBusinessSchema() {
         'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         'opens': '08:00',
         'closes': '20:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': 'Sunday',
+        'opens': '10:00',
+        'closes': '18:00',
       },
     ],
     'priceRange': '₹45,000 - ₹1,80,000',

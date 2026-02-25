@@ -395,13 +395,15 @@ export default function RohiniLocationPage() {
               Our Other Centers
             </h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
+              Cerebrum Biology Academy has 6 centers across Delhi-NCR. Visit the one nearest to you.
             </p>
-            <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {[
                 { name: 'South Extension (Flagship)', slug: 'south-extension', city: 'New Delhi', highlight: 'Flagship Center' },
                 { name: 'Gurugram - Sector 51', slug: 'gurugram', city: 'Gurugram', highlight: 'Haryana' },
                 { name: 'Faridabad - Sector 17', slug: 'faridabad', city: 'Faridabad', highlight: 'Haryana' },
+                { name: 'Noida (Sector 62)', slug: 'noida', city: 'Noida', highlight: '~50 min from Rohini' },
+                { name: 'Ghaziabad (Online + Hybrid)', slug: 'ghaziabad', city: 'Ghaziabad', highlight: 'Online classes for Ghaziabad students' },
               ].map((center) => (
                 <Link
                   key={center.slug}

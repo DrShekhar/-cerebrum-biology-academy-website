@@ -24,13 +24,19 @@ function RohiniServiceSchema() {
       longitude: 77.1025,
     },
     url: 'https://cerebrumbiologyacademy.com/locations/rohini',
-    priceRange: '₹₹',
+    priceRange: '₹45,000 - ₹1,80,000',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '00:00',
-        closes: '23:59',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '08:00',
+        closes: '20:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Sunday',
+        opens: '10:00',
+        closes: '18:00',
       },
     ],
     aggregateRating: {

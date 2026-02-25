@@ -10,6 +10,8 @@ const CENTERS = [
   { name: 'Rohini', slug: 'rohini', label: 'North Delhi', city: 'New Delhi' },
   { name: 'Gurugram', slug: 'gurugram', label: 'Haryana', city: 'Gurugram' },
   { name: 'Faridabad', slug: 'faridabad', label: 'Haryana', city: 'Faridabad' },
+  { name: 'Noida', slug: 'noida', label: 'Sector 62', city: 'Noida' },
+  { name: 'Ghaziabad', slug: 'ghaziabad', label: 'Online + Hybrid', city: 'Ghaziabad' },
 ]
 
 const POPULAR_COURSES = [
@@ -27,9 +29,9 @@ export function VisitOurCenters({ className = '' }: { className?: string }) {
       <div className="container mx-auto px-4">
         <h2 className="text-xl font-bold text-gray-900 mb-2">Visit Our Centers</h2>
         <p className="text-sm text-gray-600 mb-5">
-          Attend classes at any of our 4 Delhi-NCR centers with AIIMS faculty
+          Attend classes at any of our 6 Delhi-NCR centers with AIIMS faculty
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {CENTERS.map((center) => (
             <Link
               key={center.slug}

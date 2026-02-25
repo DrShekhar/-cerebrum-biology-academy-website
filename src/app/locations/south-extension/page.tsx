@@ -407,13 +407,15 @@ export default function SouthExtensionLocationPage() {
               Our Other Centers
             </h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
+              Cerebrum Biology Academy has 6 centers across Delhi-NCR. Visit the one nearest to you.
             </p>
-            <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {[
                 { name: 'Rohini - DC Chowk', slug: 'rohini', city: 'New Delhi', highlight: 'North Delhi' },
                 { name: 'Gurugram - Sector 51', slug: 'gurugram', city: 'Gurugram', highlight: 'Haryana' },
                 { name: 'Faridabad - Sector 17', slug: 'faridabad', city: 'Faridabad', highlight: 'Haryana' },
+                { name: 'Noida (Sector 62)', slug: 'noida', city: 'Near Botanical Garden Metro', highlight: '~45 min from South Extension' },
+                { name: 'Ghaziabad (Online + Hybrid)', slug: 'ghaziabad', city: 'Online classes + weekend visits', highlight: 'UP' },
               ].map((center) => (
                 <Link
                   key={center.slug}

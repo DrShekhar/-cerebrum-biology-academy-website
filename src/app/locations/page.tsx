@@ -190,32 +190,39 @@ export default function LocationsPage() {
               Visit Our Delhi NCR Centers
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
-              5 state-of-the-art centers with AIIMS faculty, small batches of 15 students
+              6 centers across Delhi NCR with AIIMS faculty, small batches of 15 students
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
-                name: 'Gurugram',
-                area: 'Sector 44',
-                metro: 'HUDA City Centre',
-                href: '/locations/gurugram',
+                name: 'South Extension (Flagship)',
+                area: 'South Extension Part 2',
+                metro: 'Lajpat Nagar Metro',
+                href: '/locations/south-extension',
                 color: 'green',
               },
               {
-                name: 'Delhi (West)',
-                area: 'Patel Nagar',
-                metro: 'Patel Nagar Metro',
-                href: '/locations/delhi',
+                name: 'Rohini',
+                area: 'DC Chowk, Sector 9',
+                metro: 'Rohini West Metro',
+                href: '/locations/rohini',
                 color: 'red',
               },
               {
-                name: 'South Delhi',
-                area: 'Greater Kailash',
-                metro: 'Kailash Colony Metro',
-                href: '/locations/south-delhi',
+                name: 'Gurugram',
+                area: 'M2K Corporate Park, Sector 51',
+                metro: 'HUDA City Centre',
+                href: '/locations/gurugram',
                 color: 'purple',
+              },
+              {
+                name: 'Faridabad',
+                area: 'HUDA Market, Sector 17',
+                metro: 'Bata Chowk Metro',
+                href: '/locations/faridabad',
+                color: 'orange',
               },
               {
                 name: 'Noida',
@@ -225,11 +232,11 @@ export default function LocationsPage() {
                 color: 'blue',
               },
               {
-                name: 'Faridabad',
-                area: 'Sector 15',
-                metro: 'Bata Chowk Metro',
-                href: '/locations/faridabad',
-                color: 'orange',
+                name: 'Ghaziabad',
+                area: 'Online + Hybrid',
+                metro: 'Nearest: Rohini / Noida',
+                href: '/locations/ghaziabad',
+                color: 'teal',
               },
             ].map((center) => (
               <Link key={center.name} href={center.href}>

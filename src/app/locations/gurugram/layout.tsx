@@ -1,6 +1,130 @@
 import { Metadata } from 'next'
 import { GurugramServiceSchema } from '@/components/seo/StructuredData'
 
+function GurugramLocalBusinessSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://cerebrumbiologyacademy.com/locations/gurugram',
+    additionalType: 'EducationalOrganization',
+    name: 'Cerebrum Biology Academy - Gurugram',
+    description: 'Best NEET Biology coaching in Gurugram by AIIMS faculty. Small batches of 15 students, 98% success rate. Located at M2K Corporate Park, Sector 51.',
+    image: 'https://cerebrumbiologyacademy.com/images/gurugram-center.jpg',
+    telephone: '+91-88264-44334',
+    email: 'info@cerebrumbiologyacademy.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51',
+      addressLocality: 'Gurugram',
+      addressRegion: 'Haryana',
+      postalCode: '122018',
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 28.4295,
+      longitude: 77.0426,
+    },
+    url: 'https://cerebrumbiologyacademy.com/locations/gurugram',
+    priceRange: '₹45,000 - ₹1,80,000',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '08:00',
+        closes: '20:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Sunday',
+        opens: '10:00',
+        closes: '18:00',
+      },
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '28',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    areaServed: [
+      'Gurugram', 'Sector 51', 'DLF Phase 1', 'DLF Phase 2', 'DLF Phase 3',
+      'DLF Phase 4', 'DLF Phase 5', 'Sohna Road', 'Golf Course Road',
+      'MG Road', 'HUDA City Centre', 'Sector 44', 'Sector 45', 'Sector 46',
+      'Sector 47', 'Sector 48', 'Sector 49', 'Sector 50', 'Cyber City',
+      'Sushant Lok', 'South City', 'Nirvana Country', 'Palam Vihar',
+    ],
+    sameAs: [
+      'https://www.youtube.com/@CerebrumBiologyAcademy',
+      'https://www.instagram.com/cerebrumbiologyacademy/',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+function GurugramFAQSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Where is Cerebrum Biology Academy located in Gurugram?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy Gurugram is located at Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51, Gurugram 122018. It is easily accessible from DLF Phase 1-5, Golf Course Road, Sohna Road, and MG Road areas.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What makes Cerebrum the best NEET coaching in Gurugram?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum is the best NEET coaching in Gurugram with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, and 67+ AIIMS selections. Students from DPS Gurugram, Pathways World School, Shri Ram School, and GD Goenka choose Cerebrum for personalized NEET preparation.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the NEET coaching fees at Cerebrum Academy Gurugram?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'NEET Biology coaching fees at Cerebrum Gurugram range from ₹45,000 to ₹1,80,000 depending on course type and duration. We offer Class 11, Class 12, Dropper, and Foundation batches with flexible EMI options. Call +91-88264-44334 for detailed fee structure.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which schools in Gurugram send students to Cerebrum Academy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Students from top Gurugram schools choose Cerebrum including DPS Gurugram, Pathways World School, The Shri Ram School, GD Goenka World School, Amity International, Heritage School, Scottish High, and Presidium School. Our Sector 51 location is centrally accessible from all these schools.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What batch timings are available at Cerebrum Academy Gurugram?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our Gurugram center operates Monday to Saturday 8:00 AM to 8:00 PM and Sunday 10:00 AM to 6:00 PM. We offer morning, afternoon, and evening batches to suit school schedules. Contact +91-88264-44334 for available slots.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching in Gurugram',
   description:
@@ -181,7 +305,10 @@ export default function GurugramLocationLayout({ children }: { children: React.R
   return (
     <>
       <GurugramServiceSchema />
-      <GurugramEventSchema />      <script
+      <GurugramLocalBusinessSchema />
+      <GurugramFAQSchema />
+      <GurugramEventSchema />
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

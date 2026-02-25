@@ -96,7 +96,7 @@ function GhaziabadServiceSchema() {
       bestRating: '5',
       worstRating: '1',
     },
-    priceRange: '$$',
+    priceRange: '₹45,000 - ₹1,80,000',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
