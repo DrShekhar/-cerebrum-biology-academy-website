@@ -163,8 +163,7 @@ export default function NEETCoachingRohiniPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-4xl mx-auto animate-fadeInUp"
-            >
+            <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-5 h-5" />
                 <span className="font-medium">NEET Coaching for Rohini Students</span>
@@ -202,8 +201,7 @@ export default function NEETCoachingRohiniPage() {
         {/* Why Rohini Students Choose Us */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Why Rohini Students Choose Cerebrum Biology Academy
               </h2>
@@ -215,7 +213,9 @@ export default function NEETCoachingRohiniPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
-                <div key={feature.title} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
+                <div
+                  key={feature.title}
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
@@ -231,8 +231,7 @@ export default function NEETCoachingRohiniPage() {
         {/* Connectivity from Rohini Areas */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Easy Access from All Rohini Areas
               </h2>
@@ -244,7 +243,9 @@ export default function NEETCoachingRohiniPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {rohiniAreas.map((area, index) => (
-                <div key={area.name} className="bg-white rounded-lg p-4 shadow-md border border-gray-100 animate-fadeInUp"
+                <div
+                  key={area.name}
+                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100 animate-fadeInUp"
                 >
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -260,8 +261,7 @@ export default function NEETCoachingRohiniPage() {
               ))}
             </div>
 
-            <div className="mt-8 bg-red-50 rounded-xl p-6 border border-red-200 animate-fadeInUp"
-            >
+            <div className="mt-8 bg-red-50 rounded-xl p-6 border border-red-200 animate-fadeInUp">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Train className="w-6 h-6 text-red-600" />
@@ -288,8 +288,7 @@ export default function NEETCoachingRohiniPage() {
         {/* Rohini Schools We Serve */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Students from Top Rohini Schools
               </h2>
@@ -313,7 +312,9 @@ export default function NEETCoachingRohiniPage() {
                 'Bal Bharati Public School',
                 'Hansraj Model School',
               ].map((school, index) => (
-                <div key={school} className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-center gap-3 animate-fadeInUp"
+                <div
+                  key={school}
+                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-center gap-3 animate-fadeInUp"
                 >
                   <GraduationCap className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span className="text-gray-700 font-medium">{school}</span>
@@ -333,8 +334,7 @@ export default function NEETCoachingRohiniPage() {
         {/* Success Stories */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto animate-fadeInUp"
-            >
+            <div className="max-w-3xl mx-auto animate-fadeInUp">
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                   Success Stories from Rohini
@@ -373,8 +373,7 @@ export default function NEETCoachingRohiniPage() {
         {/* Video Testimonials Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Watch Success Stories from Our Students
               </h2>
@@ -404,7 +403,9 @@ export default function NEETCoachingRohiniPage() {
                   achievement: '6-Month Intensive Program',
                 },
               ].map((video, index) => (
-                <div key={video.youtubeId} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-fadeInUp"
+                <div
+                  key={video.youtubeId}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-fadeInUp"
                 >
                   <div className="relative aspect-video">
                     <iframe
@@ -427,8 +428,7 @@ export default function NEETCoachingRohiniPage() {
               ))}
             </div>
 
-            <div className="text-center mt-8 animate-fadeInUp"
-            >
+            <div className="text-center mt-8 animate-fadeInUp">
               <a
                 href="https://www.youtube.com/@cerebrumbiologyacademy"
                 target="_blank"
@@ -447,8 +447,7 @@ export default function NEETCoachingRohiniPage() {
         <section className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12 animate-fadeInUp"
-              >
+              <div className="text-center mb-12 animate-fadeInUp">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                   Trusted by 500+ Verified Google Reviews
                 </h2>
@@ -459,12 +458,11 @@ export default function NEETCoachingRohiniPage() {
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {/* Google Rating Card */}
-                <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-100 animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-100 animate-fadeInUp">
                   <div className="flex items-center justify-center mb-4">
                     <img
                       src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                      alt="Google"
+                      alt="Google Reviews rating for Cerebrum Biology Academy"
                       className="h-8"
                     />
                   </div>
@@ -501,8 +499,7 @@ export default function NEETCoachingRohiniPage() {
                 </div>
 
                 {/* Recent Reviews Highlights */}
-                <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp">
                   <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                     <MessageCircle className="w-5 h-5 text-green-600" />
                     Recent Reviews
@@ -542,8 +539,7 @@ export default function NEETCoachingRohiniPage() {
               </div>
 
               {/* Google Maps Embed */}
-              <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp">
                 <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                   <MapPinned className="w-5 h-5 text-red-600" />
                   Visit Our Center - South Extension, New Delhi
@@ -554,9 +550,10 @@ export default function NEETCoachingRohiniPage() {
                     title="NEET Coaching Center Location"
                     height="100%"
                     placeholder={{
-                      lat: 28.5560,
-                      lng: 77.2200,
-                      address: "Cerebrum Biology Academy, Panchsheel Enclave, South Extension, Delhi"
+                      lat: 28.556,
+                      lng: 77.22,
+                      address:
+                        'Cerebrum Biology Academy, Panchsheel Enclave, South Extension, Delhi',
                     }}
                   />
                 </div>
@@ -596,8 +593,7 @@ export default function NEETCoachingRohiniPage() {
         {/* FAQ Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Frequently Asked Questions - NEET Coaching Rohini
               </h2>
@@ -605,7 +601,9 @@ export default function NEETCoachingRohiniPage() {
 
             <div className="max-w-3xl mx-auto space-y-4">
               {faqStructuredData.mainEntity.map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md border border-gray-100 p-6 animate-fadeInUp"
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6 animate-fadeInUp"
                 >
                   <h3 className="font-bold text-gray-800 mb-3 flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -648,8 +646,7 @@ export default function NEETCoachingRohiniPage() {
                   color: 'text-purple-600',
                 },
               ].map((badge, index) => (
-                <div key={badge.label} className="text-center animate-fadeInUp"
-                >
+                <div key={badge.label} className="text-center animate-fadeInUp">
                   <badge.icon className={`w-8 h-8 mx-auto mb-2 ${badge.color}`} />
                   <div className="font-bold text-gray-900 text-sm">{badge.label}</div>
                   <div className="text-xs text-gray-600">{badge.sublabel}</div>

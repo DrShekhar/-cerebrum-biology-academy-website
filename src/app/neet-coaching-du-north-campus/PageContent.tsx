@@ -204,17 +204,14 @@ export default function PageContent() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
               Specialized NEET Coaching for DU Students
             </div>
 
             <h1 className="hero-title text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              NEET Coaching Near{' '}
-              <span className="text-yellow-300">DU North Campus</span>
+              NEET Coaching Near <span className="text-yellow-300">DU North Campus</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -222,9 +219,10 @@ export default function PageContent() {
             </h2>
 
             <p className="hero-description text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto">
-              Join specialized NEET coaching designed for Delhi University students. Evening & weekend
-              batches for Hansraj, Hindu, Miranda House, Kirori Mal, and Ramjas students.
-              {CEREBRUM_METRICS.successRateText} success rate. Flexible timings that fit your college schedule.
+              Join specialized NEET coaching designed for Delhi University students. Evening &
+              weekend batches for Hansraj, Hindu, Miranda House, Kirori Mal, and Ramjas students.
+              {CEREBRUM_METRICS.successRateText} success rate. Flexible timings that fit your
+              college schedule.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -323,9 +321,7 @@ export default function PageContent() {
       {/* Target Audience Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Users className="w-4 h-4 mr-2" />
               Who Should Join?
@@ -334,15 +330,14 @@ export default function PageContent() {
               NEET Coaching for Every DU Aspirant
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Whether you're a current BSc student, a NEET repeater, or preparing for your first attempt
+              Whether you're a current BSc student, a NEET repeater, or preparing for your first
+              attempt
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* BSc Biology Students */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-200 hover:border-purple-400 transition-colors animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-200 hover:border-purple-400 transition-colors animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <div className="bg-purple-100 p-4 rounded-xl">
                   <GraduationCap className="w-8 h-8 text-purple-600" />
@@ -353,7 +348,8 @@ export default function PageContent() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">BSc Biology Students</h3>
               <p className="text-gray-600 mb-6">
-                Currently pursuing BSc Life Sciences, Botany, Zoology, or Microbiology at DU colleges
+                Currently pursuing BSc Life Sciences, Botany, Zoology, or Microbiology at DU
+                colleges
               </p>
               <ul className="space-y-3 mb-6">
                 {[
@@ -377,9 +373,7 @@ export default function PageContent() {
             </div>
 
             {/* NEET Repeaters */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-orange-200 hover:border-orange-400 transition-colors animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-orange-200 hover:border-orange-400 transition-colors animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <div className="bg-orange-100 p-4 rounded-xl">
                   <Repeat className="w-8 h-8 text-orange-600" />
@@ -414,9 +408,7 @@ export default function PageContent() {
             </div>
 
             {/* Career Changers */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-colors animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-colors animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <div className="bg-blue-100 p-4 rounded-xl">
                   <Briefcase className="w-8 h-8 text-blue-600" />
@@ -456,9 +448,7 @@ export default function PageContent() {
       {/* DU Colleges Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Top DU North Campus Colleges
             </h2>
@@ -505,12 +495,10 @@ export default function PageContent() {
             ))}
           </div>
 
-          <div
-            className="text-center mt-10 animate-fadeInUp"
-          >
+          <div className="text-center mt-10 animate-fadeInUp">
             <p className="text-gray-600 text-lg">
-              Students from <strong>St. Stephen's, Daulat Ram, Gargi, Dyal Singh</strong> and
-              other DU colleges also join us for NEET preparation
+              Students from <strong>St. Stephen's, Daulat Ram, Gargi, Dyal Singh</strong> and other
+              DU colleges also join us for NEET preparation
             </p>
           </div>
         </div>
@@ -519,9 +507,7 @@ export default function PageContent() {
       {/* Batch Timings Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Clock className="w-4 h-4 mr-2" />
               Flexible Batch Options
@@ -539,33 +525,51 @@ export default function PageContent() {
               <div
                 key={batch.name}
                 className={`bg-white rounded-xl shadow-lg p-6 border-t-4 hover:shadow-xl transition-all duration-300 ${
-                  batch.color === 'purple' ? 'border-purple-500' :
-                  batch.color === 'blue' ? 'border-blue-500' :
-                  batch.color === 'orange' ? 'border-orange-500' :
-                  'border-green-500'
+                  batch.color === 'purple'
+                    ? 'border-purple-500'
+                    : batch.color === 'blue'
+                      ? 'border-blue-500'
+                      : batch.color === 'orange'
+                        ? 'border-orange-500'
+                        : 'border-green-500'
                 }`}
               >
-                <div className={`inline-flex p-3 rounded-xl mb-4 ${
-                  batch.color === 'purple' ? 'bg-purple-100' :
-                  batch.color === 'blue' ? 'bg-blue-100' :
-                  batch.color === 'orange' ? 'bg-orange-100' :
-                  'bg-green-100'
-                }`}>
-                  <batch.icon className={`w-6 h-6 ${
-                    batch.color === 'purple' ? 'text-purple-600' :
-                    batch.color === 'blue' ? 'text-blue-600' :
-                    batch.color === 'orange' ? 'text-orange-600' :
-                    'text-green-600'
-                  }`} />
+                <div
+                  className={`inline-flex p-3 rounded-xl mb-4 ${
+                    batch.color === 'purple'
+                      ? 'bg-purple-100'
+                      : batch.color === 'blue'
+                        ? 'bg-blue-100'
+                        : batch.color === 'orange'
+                          ? 'bg-orange-100'
+                          : 'bg-green-100'
+                  }`}
+                >
+                  <batch.icon
+                    className={`w-6 h-6 ${
+                      batch.color === 'purple'
+                        ? 'text-purple-600'
+                        : batch.color === 'blue'
+                          ? 'text-blue-600'
+                          : batch.color === 'orange'
+                            ? 'text-orange-600'
+                            : 'text-green-600'
+                    }`}
+                  />
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{batch.name}</h3>
                 <div className="mb-4">
-                  <p className={`text-2xl font-bold ${
-                    batch.color === 'purple' ? 'text-purple-600' :
-                    batch.color === 'blue' ? 'text-blue-600' :
-                    batch.color === 'orange' ? 'text-orange-600' :
-                    'text-green-600'
-                  }`}>
+                  <p
+                    className={`text-2xl font-bold ${
+                      batch.color === 'purple'
+                        ? 'text-purple-600'
+                        : batch.color === 'blue'
+                          ? 'text-blue-600'
+                          : batch.color === 'orange'
+                            ? 'text-orange-600'
+                            : 'text-green-600'
+                    }`}
+                  >
                     {batch.timing}
                   </p>
                   <p className="text-sm text-gray-500">{batch.days}</p>
@@ -584,9 +588,7 @@ export default function PageContent() {
       {/* Free NEET Tools Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <BookOpen className="w-4 h-4 mr-2" />
               Free NEET Resources
@@ -601,9 +603,7 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {freeTools.map((tool, index) => (
-              <div
-                key={tool.name}
-               className="animate-fadeInUp">
+              <div key={tool.name} className="animate-fadeInUp">
                 <Link href={tool.link}>
                   <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-green-100 group h-full">
                     <div className="bg-green-100 p-3 rounded-xl inline-flex mb-4 group-hover:bg-green-200 transition-colors">
@@ -628,9 +628,7 @@ export default function PageContent() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why DU Students Choose Cerebrum?
             </h2>
@@ -669,9 +667,7 @@ export default function PageContent() {
       {/* Success Stories */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
               Success Stories
@@ -680,7 +676,8 @@ export default function PageContent() {
               DU Students Who Cracked NEET
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Real transformation stories of BSc students and repeaters who achieved their MBBS dream
+              Real transformation stories of BSc students and repeaters who achieved their MBBS
+              dream
             </p>
           </div>
 
@@ -696,7 +693,8 @@ export default function PageContent() {
                 neetRank: 'AIR 3,200',
                 medicalCollege: 'Lady Hardinge Medical College',
                 year: 2024,
-                quote: "Balancing BSc and NEET seemed impossible until I joined Cerebrum's evening batch. The 6-8 PM timing was perfect after my Miranda House classes. The faculty understood that BSc Zoology covers many NEET topics, so they focused on filling gaps rather than repeating everything. I improved from 480 to 645 and got into Lady Hardinge!",
+                quote:
+                  "Balancing BSc and NEET seemed impossible until I joined Cerebrum's evening batch. The 6-8 PM timing was perfect after my Miranda House classes. The faculty understood that BSc Zoology covers many NEET topics, so they focused on filling gaps rather than repeating everything. I improved from 480 to 645 and got into Lady Hardinge!",
               },
               {
                 name: 'Rahul Verma',
@@ -708,7 +706,8 @@ export default function PageContent() {
                 neetRank: 'AIR 1,850',
                 medicalCollege: 'UCMS Delhi',
                 year: 2024,
-                quote: "After scoring 520 in my first attempt while at Hansraj, I knew I needed specialized coaching. The dropper batch at Cerebrum was intense but exactly what I needed. The personalized weak area analysis helped me focus on Botany and Human Physiology. The weekly mock tests built my confidence. I jumped to 668 and secured UCMS!",
+                quote:
+                  'After scoring 520 in my first attempt while at Hansraj, I knew I needed specialized coaching. The dropper batch at Cerebrum was intense but exactly what I needed. The personalized weak area analysis helped me focus on Botany and Human Physiology. The weekly mock tests built my confidence. I jumped to 668 and secured UCMS!',
               },
               {
                 name: 'Ananya Gupta',
@@ -720,7 +719,8 @@ export default function PageContent() {
                 neetRank: 'AIR 2,400',
                 medicalCollege: 'MAMC Delhi',
                 year: 2024,
-                quote: "I was skeptical about preparing for NEET during BSc, but the weekend batch made it possible. Saturday-Sunday classes covered the entire syllabus without affecting my Hindu College studies. The study material was concise and NCERT-focused. My BSc Botany knowledge actually helped in NEET. Scored 655 and got MAMC!",
+                quote:
+                  'I was skeptical about preparing for NEET during BSc, but the weekend batch made it possible. Saturday-Sunday classes covered the entire syllabus without affecting my Hindu College studies. The study material was concise and NCERT-focused. My BSc Botany knowledge actually helped in NEET. Scored 655 and got MAMC!',
               },
             ].map((story, index) => (
               <div
@@ -784,9 +784,7 @@ export default function PageContent() {
       {/* Google Reviews & Map Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by DU Students & Parents
             </h2>
@@ -797,18 +795,18 @@ export default function PageContent() {
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Google Rating Card */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 animate-fadeInUp">
               <div className="flex items-center justify-center mb-6">
                 <img
                   src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google"
+                  alt="Google Reviews rating for Cerebrum Biology Academy"
                   className="h-10"
                 />
               </div>
               <div className="text-center mb-6">
-                <div className="text-6xl font-bold text-gray-900 mb-3">{CEREBRUM_METRICS.ratingText}</div>
+                <div className="text-6xl font-bold text-gray-900 mb-3">
+                  {CEREBRUM_METRICS.ratingText}
+                </div>
                 <div className="flex items-center justify-center gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-7 h-7 text-yellow-400 fill-current" />
@@ -833,9 +831,7 @@ export default function PageContent() {
             </div>
 
             {/* Recent Reviews */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 animate-fadeInUp">
               <h3 className="font-bold text-gray-900 text-xl mb-6 flex items-center gap-2">
                 <MessageCircle className="w-6 h-6 text-purple-600" />
                 Reviews from DU Students
@@ -849,13 +845,13 @@ export default function PageContent() {
                     rating: 5,
                   },
                   {
-                    text: "After failing NEET twice, I was losing hope. The dropper batch here changed everything. Personalized attention, weekly tests, and motivation from Dr. Shekhar Sir helped me score 640. Now at MAMC!",
+                    text: 'After failing NEET twice, I was losing hope. The dropper batch here changed everything. Personalized attention, weekly tests, and motivation from Dr. Shekhar Sir helped me score 640. Now at MAMC!',
                     author: 'Sneha M.',
                     location: 'NEET Repeater',
                     rating: 5,
                   },
                   {
-                    text: "Weekend batch is a lifesaver for Miranda House students. Covered full syllabus on Saturdays-Sundays. The study material is concise and NCERT-focused. Highly recommend for DU students!",
+                    text: 'Weekend batch is a lifesaver for Miranda House students. Covered full syllabus on Saturdays-Sundays. The study material is concise and NCERT-focused. Highly recommend for DU students!',
                     author: 'Riya S.',
                     location: 'Miranda House',
                     rating: 5,
@@ -880,9 +876,7 @@ export default function PageContent() {
           </div>
 
           {/* Map & Contact */}
-          <div
-            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 animate-fadeInUp">
             <div className="grid lg:grid-cols-2">
               <div className="relative h-96 lg:h-auto bg-gray-100">
                 <LazyGoogleMap
@@ -978,9 +972,7 @@ export default function PageContent() {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching for DU Students - FAQs
             </h2>
@@ -991,10 +983,7 @@ export default function PageContent() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
@@ -1006,8 +995,7 @@ export default function PageContent() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your NEET Journey?
             </h2>

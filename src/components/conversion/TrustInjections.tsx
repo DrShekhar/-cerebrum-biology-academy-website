@@ -52,33 +52,38 @@ function TrustNearPrice() {
   ]
 
   return (
-    <div
-      className="trust-near-price mt-4 space-y-2 animate-fadeInUp"
-    >
+    <div className="trust-near-price mt-4 space-y-2 animate-fadeInUp">
       {trustPoints.map((point, index) => (
-        <div
-          key={index}
-          className="flex items-center space-x-2 text-sm animate-fadeInUp"
-        >
+        <div key={index} className="flex items-center space-x-2 text-sm animate-fadeInUp">
           <point.icon className={`w-4 h-4 ${point.color}`} />
           <span className="text-slate-700 font-medium">{point.text}</span>
         </div>
       ))}
 
       {/* Payment Security */}
-      <div
-        className="flex items-center space-x-2 pt-2 border-t border-slate-100 animate-fadeInUp"
-      >
+      <div className="flex items-center space-x-2 pt-2 border-t border-slate-100 animate-fadeInUp">
         <div className="flex space-x-1">
           <Image
             src="/icons/razorpay.svg"
-            alt="Razorpay"
+            alt="Razorpay secure payment gateway"
             width={48}
             height={16}
             className="h-4 w-auto"
           />
-          <Image src="/icons/ssl.svg" alt="SSL" width={48} height={16} className="h-4 w-auto" />
-          <Image src="/icons/upi.svg" alt="UPI" width={48} height={16} className="h-4 w-auto" />
+          <Image
+            src="/icons/ssl.svg"
+            alt="SSL encrypted secure checkout"
+            width={48}
+            height={16}
+            className="h-4 w-auto"
+          />
+          <Image
+            src="/icons/upi.svg"
+            alt="UPI payment accepted"
+            width={48}
+            height={16}
+            className="h-4 w-auto"
+          />
         </div>
         <span className="text-xs text-slate-500">Secure payment via Razorpay</span>
       </div>
@@ -100,9 +105,7 @@ function SocialProofNearCTA() {
   }, [])
 
   return (
-    <div
-      className="social-proof bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-3 mb-4 animate-fadeInUp"
-    >
+    <div className="social-proof bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-3 mb-4 animate-fadeInUp">
       <div className="flex items-center space-x-3">
         {/* Avatar Stack */}
         <div className="flex -space-x-2">
@@ -179,86 +182,82 @@ function ExitIntentOffer() {
   if (!isVisible) return null
 
   return (
-<div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeInUp"
-      >
-        <div
-          className="exit-offer bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative animate-fadeInUp"
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeInUp">
+      <div className="exit-offer bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative animate-fadeInUp">
+        {/* Close Button */}
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
         >
-          {/* Close Button */}
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        {/* Content */}
+        <div className="text-center">
+          <AlertTriangle className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+
+          <h3 className="text-2xl font-bold text-slate-800 mb-2">
+            Wait! Get 50% off on diagnostic test
+          </h3>
+
+          <p className="text-slate-600 mb-4">
+            Don't miss out on this exclusive offer for new students
+          </p>
+
+          {/* Timer */}
+          <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-6">
+            <div className="flex items-center justify-center space-x-2">
+              <Clock className="w-5 h-5 text-red-500" />
+              <span className="text-red-700 font-semibold">
+                Offer expires in: {formatTime(timeLeft)}
+              </span>
+            </div>
+          </div>
+
+          {/* Benefits */}
+          <div className="text-left mb-6 space-y-2">
+            <div className="flex items-center space-x-2">
+              <CheckCircle2 className="w-4 h-4 text-green-600" />
+              <span className="text-sm text-slate-700">Complete NEET Biology assessment</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle2 className="w-4 h-4 text-green-600" />
+              <span className="text-sm text-slate-700">Personalized study plan</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle2 className="w-4 h-4 text-green-600" />
+              <span className="text-sm text-slate-700">Free counseling session</span>
+            </div>
+          </div>
+
+          {/* CTA */}
           <button
-            onClick={() => setIsVisible(false)}
-            className="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
+            onClick={() => {
+              // Track exit intent conversion
+              window.gtag?.('event', 'exit_intent_conversion', {
+                event_category: 'Conversion',
+                event_label: 'Diagnostic Test Offer',
+                value: 50,
+              })
+              setIsVisible(false)
+            }}
+            className="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition-all duration-200 shadow-lg"
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            Claim 50% OFF Now
           </button>
 
-          {/* Content */}
-          <div className="text-center">
-            <AlertTriangle className="w-12 h-12 text-orange-500 mx-auto mb-4" />
-
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">
-              Wait! Get 50% off on diagnostic test
-            </h3>
-
-            <p className="text-slate-600 mb-4">
-              Don't miss out on this exclusive offer for new students
-            </p>
-
-            {/* Timer */}
-            <div className="bg-red-50 border border-red-200 rounded-lg p-3 mb-6">
-              <div className="flex items-center justify-center space-x-2">
-                <Clock className="w-5 h-5 text-red-500" />
-                <span className="text-red-700 font-semibold">
-                  Offer expires in: {formatTime(timeLeft)}
-                </span>
-              </div>
-            </div>
-
-            {/* Benefits */}
-            <div className="text-left mb-6 space-y-2">
-              <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-green-600" />
-                <span className="text-sm text-slate-700">Complete NEET Biology assessment</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-green-600" />
-                <span className="text-sm text-slate-700">Personalized study plan</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-4 h-4 text-green-600" />
-                <span className="text-sm text-slate-700">Free counseling session</span>
-              </div>
-            </div>
-
-            {/* CTA */}
-            <button
-              onClick={() => {
-                // Track exit intent conversion
-                window.gtag?.('event', 'exit_intent_conversion', {
-                  event_category: 'Conversion',
-                  event_label: 'Diagnostic Test Offer',
-                  value: 50,
-                })
-                setIsVisible(false)
-              }}
-              className="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg hover:bg-orange-700 transition-all duration-200 shadow-lg"
-            >
-              Claim 50% OFF Now
-            </button>
-
-            <p className="text-xs text-slate-500 mt-2">*Valid for first-time users only</p>
-          </div>
+          <p className="text-xs text-slate-500 mt-2">*Valid for first-time users only</p>
         </div>
       </div>
-)
+    </div>
+  )
 }
 
 // Security badges for trust
@@ -335,24 +334,24 @@ function RecentActivityFeed() {
       </h4>
 
       <div className="space-y-2">
-{activities.map((activity, index) => (
-            <div
-              key={`${activity.name}-${activity.time}-${index}`}
-              className="flex items-center space-x-2 text-xs animate-fadeInUp"
-            >
-              <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                <Users className="w-3 h-3 text-green-600" />
-              </div>
-              <div className="flex-1">
-                <span className="font-medium text-slate-700">{activity.name}</span>
-                <span className="text-slate-600"> {activity.action}</span>
-                <div className="text-slate-500">
-                  {activity.time} • {activity.location}
-                </div>
+        {activities.map((activity, index) => (
+          <div
+            key={`${activity.name}-${activity.time}-${index}`}
+            className="flex items-center space-x-2 text-xs animate-fadeInUp"
+          >
+            <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+              <Users className="w-3 h-3 text-green-600" />
+            </div>
+            <div className="flex-1">
+              <span className="font-medium text-slate-700">{activity.name}</span>
+              <span className="text-slate-600"> {activity.action}</span>
+              <div className="text-slate-500">
+                {activity.time} • {activity.location}
               </div>
             </div>
-          ))}
-</div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
@@ -360,9 +359,7 @@ function RecentActivityFeed() {
 // Guarantee banner
 function GuaranteeBanner() {
   return (
-    <div
-      className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-lg p-4 mb-4 animate-fadeInUp"
-    >
+    <div className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-lg p-4 mb-4 animate-fadeInUp">
       <div className="flex items-center space-x-3">
         <ShieldCheck className="w-8 h-8 flex-shrink-0" />
         <div>

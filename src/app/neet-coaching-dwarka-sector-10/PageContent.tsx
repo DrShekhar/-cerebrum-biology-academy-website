@@ -126,7 +126,7 @@ const testimonials = [
     year: 2024,
     mode: 'Online',
     quote:
-      "I chose 100% online classes because of the distance from Dwarka. Best decision ever! The live classes with Dr. Shekhar Sir are so interactive - you can ask questions anytime. The recorded lectures helped me revise before exams. From 520 to 672, I cracked MAMC Delhi completely through online coaching!",
+      'I chose 100% online classes because of the distance from Dwarka. Best decision ever! The live classes with Dr. Shekhar Sir are so interactive - you can ask questions anytime. The recorded lectures helped me revise before exams. From 520 to 672, I cracked MAMC Delhi completely through online coaching!',
   },
   {
     name: 'Rohit Verma',
@@ -179,12 +179,19 @@ const onlineFeatures = [
 
 export default function PageContent({ faqs }: PageContentProps) {
   const handleDemoBooking = () => {
-    if (typeof window !== 'undefined' && (window as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag) {
-      (window as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'demo_booking_dwarka_sector_10', {
-        event_category: 'conversion',
-        event_label: 'neet_coaching_dwarka_sector_10',
-        value: 1,
-      })
+    if (
+      typeof window !== 'undefined' &&
+      (window as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag
+    ) {
+      ;(window as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag?.(
+        'event',
+        'demo_booking_dwarka_sector_10',
+        {
+          event_category: 'conversion',
+          event_label: 'neet_coaching_dwarka_sector_10',
+          value: 1,
+        }
+      )
     }
   }
 
@@ -196,9 +203,7 @@ export default function PageContent({ faqs }: PageContentProps) {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Monitor className="w-5 h-5 mr-2 text-green-300" />
               Online Classes Available for Dwarka Students
@@ -259,35 +264,39 @@ export default function PageContent({ faqs }: PageContentProps) {
             </div>
 
             {/* Online Classes Highlight */}
-            <div
-              className="online-highlight bg-green-500/20 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto mb-8 border border-green-400/30 animate-fadeInUp"
-            >
+            <div className="online-highlight bg-green-500/20 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto mb-8 border border-green-400/30 animate-fadeInUp">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Globe className="w-8 h-8 text-green-300" />
-                <span className="text-xl font-bold text-green-300">Online Classes - Study from Home!</span>
+                <span className="text-xl font-bold text-green-300">
+                  Online Classes - Study from Home!
+                </span>
               </div>
               <p className="text-white/90">
                 <strong>Live Interactive Classes</strong> with Dr. Shekhar Sir |
-                <strong> Recorded Lectures</strong> for revision |{' '}
-                <strong>Weekly Tests</strong> with analysis
+                <strong> Recorded Lectures</strong> for revision | <strong>Weekly Tests</strong>{' '}
+                with analysis
                 <br />
-                <span className="text-green-200">40+ Dwarka students already enrolled in online mode!</span>
+                <span className="text-green-200">
+                  40+ Dwarka students already enrolled in online mode!
+                </span>
               </p>
             </div>
 
             {/* Metro Connectivity Info */}
-            <div
-              className="bg-blue-500/20 backdrop-blur-sm rounded-2xl p-4 max-w-2xl mx-auto mb-8 border border-blue-400/30 animate-fadeInUp"
-            >
+            <div className="bg-blue-500/20 backdrop-blur-sm rounded-2xl p-4 max-w-2xl mx-auto mb-8 border border-blue-400/30 animate-fadeInUp">
               <div className="flex items-center justify-center gap-3 mb-2">
                 <Train className="w-6 h-6 text-blue-300" />
-                <span className="text-lg font-bold text-blue-300">Or Visit Rohini Center via Metro</span>
+                <span className="text-lg font-bold text-blue-300">
+                  Or Visit Rohini Center via Metro
+                </span>
               </div>
               <p className="text-white/80 text-sm">
                 <strong>Blue Line:</strong> Dwarka Sector 10 → Rajiv Chowk |{' '}
                 <strong>Yellow Line:</strong> Rajiv Chowk → Rohini West
                 <br />
-                <span className="text-blue-200">Total: 25-30 minutes | 2-min walk from Rohini West Metro</span>
+                <span className="text-blue-200">
+                  Total: 25-30 minutes | 2-min walk from Rohini West Metro
+                </span>
               </p>
             </div>
 
@@ -316,9 +325,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Online Classes Section - Prominently Featured */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Globe className="w-4 h-4 mr-2" />
               Most Popular for Dwarka Students
@@ -347,9 +354,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             ))}
           </div>
 
-          <div
-            className="bg-white rounded-2xl shadow-xl p-8 border border-green-200 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-200 animate-fadeInUp">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -404,9 +409,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Metro Connectivity Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Train className="w-4 h-4 mr-2" />
               For Offline Classes
@@ -422,9 +425,7 @@ export default function PageContent({ faqs }: PageContentProps) {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Metro Journey Card */}
-            <div
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                 <Train className="w-8 h-8 text-blue-600" />
                 Your Metro Journey
@@ -455,7 +456,9 @@ export default function PageContent({ faqs }: PageContentProps) {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Rajiv Chowk Metro (Interchange)</p>
-                    <p className="text-sm text-gray-600">Change to Yellow Line towards Samaypur Badli</p>
+                    <p className="text-sm text-gray-600">
+                      Change to Yellow Line towards Samaypur Badli
+                    </p>
                   </div>
                 </div>
 
@@ -479,15 +482,15 @@ export default function PageContent({ faqs }: PageContentProps) {
 
                 <div className="bg-indigo-100 rounded-lg p-4 text-center">
                   <p className="text-2xl font-bold text-indigo-700">25-30 Minutes Total</p>
-                  <p className="text-sm text-gray-600">Many students use travel time for revision!</p>
+                  <p className="text-sm text-gray-600">
+                    Many students use travel time for revision!
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Why Travel is Worth It */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 animate-fadeInUp">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                 <Award className="w-8 h-8 text-purple-600" />
                 Why Students Still Choose Offline
@@ -535,7 +538,8 @@ export default function PageContent({ faqs }: PageContentProps) {
 
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <p className="text-gray-600 mb-4">
-                  <strong>Hybrid Mode Available:</strong> Attend weekends at center + weekdays online
+                  <strong>Hybrid Mode Available:</strong> Attend weekends at center + weekdays
+                  online
                 </p>
                 <Link href="/demo-booking">
                   <Button variant="primary" size="lg" className="w-full">
@@ -552,9 +556,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Dwarka Sectors Grid */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-indigo-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Home className="w-4 h-4 mr-2" />
               Students from All Dwarka Sectors
@@ -608,9 +610,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Student Testimonials */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
               Success Stories from Dwarka
@@ -641,13 +641,15 @@ export default function PageContent({ faqs }: PageContentProps) {
                     <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">
                       {story.year}
                     </span>
-                    <span className={`px-2 py-0.5 rounded text-xs font-medium ${
-                      story.mode === 'Online'
-                        ? 'bg-blue-100 text-blue-700'
-                        : story.mode === 'Hybrid'
-                          ? 'bg-purple-100 text-purple-700'
-                          : 'bg-orange-100 text-orange-700'
-                    }`}>
+                    <span
+                      className={`px-2 py-0.5 rounded text-xs font-medium ${
+                        story.mode === 'Online'
+                          ? 'bg-blue-100 text-blue-700'
+                          : story.mode === 'Hybrid'
+                            ? 'bg-purple-100 text-purple-700'
+                            : 'bg-orange-100 text-orange-700'
+                      }`}
+                    >
                       {story.mode} Mode
                     </span>
                   </div>
@@ -697,9 +699,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             ))}
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-6 py-3 rounded-full text-sm font-semibold">
               <Award className="w-5 h-5 mr-2" />
               Average improvement: 155+ marks | 85+ students from Dwarka qualified NEET
@@ -711,9 +711,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Video Testimonials Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
               Video Success Stories
@@ -776,9 +774,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             ))}
           </div>
 
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <a
               href="https://www.youtube.com/@cerebrumbiologyacademy"
               target="_blank"
@@ -796,9 +792,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Top Schools in Dwarka
             </h2>
@@ -832,9 +826,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Dwarka Students Choose Cerebrum
             </h2>
@@ -868,9 +860,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Google Reviews & Contact Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by Dwarka Families
             </h2>
@@ -881,13 +871,11 @@ export default function PageContent({ faqs }: PageContentProps) {
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Google Rating Card */}
-            <div
-              className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp">
               <div className="flex items-center justify-center mb-6">
                 <img
                   src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google"
+                  alt="Google Reviews rating for Cerebrum Biology Academy"
                   className="h-10"
                 />
               </div>
@@ -899,9 +887,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                   ))}
                 </div>
                 <p className="text-gray-600 font-semibold text-lg mb-2">Based on 847+ reviews</p>
-                <p className="text-sm text-gray-500">
-                  Verified reviews from students and parents
-                </p>
+                <p className="text-sm text-gray-500">Verified reviews from students and parents</p>
               </div>
               <div className="flex flex-col gap-3">
                 <a
@@ -918,9 +904,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             </div>
 
             {/* Reviews from Dwarka */}
-            <div
-              className="bg-gradient-to-br from-indigo-50 to-white rounded-2xl shadow-xl p-8 border border-indigo-100 animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-indigo-50 to-white rounded-2xl shadow-xl p-8 border border-indigo-100 animate-fadeInUp">
               <h3 className="font-bold text-gray-900 text-xl mb-6 flex items-center gap-2">
                 <MessageCircle className="w-6 h-6 text-indigo-600" />
                 Reviews from Dwarka Families
@@ -934,13 +918,13 @@ export default function PageContent({ faqs }: PageContentProps) {
                     rating: 5,
                   },
                   {
-                    text: "The hybrid mode is perfect for us. Weekend classes at Rohini center and weekday sessions online. My son from DAV Dwarka is now confident about NEET 2026. Highly recommend!",
+                    text: 'The hybrid mode is perfect for us. Weekend classes at Rohini center and weekday sessions online. My son from DAV Dwarka is now confident about NEET 2026. Highly recommend!',
                     author: 'Rakesh Kumar',
                     location: 'Sector 6, Dwarka',
                     rating: 5,
                   },
                   {
-                    text: "I was skeptical about online coaching but Cerebrum proved me wrong. Live interactive classes, instant doubt clearing, weekly tests - everything is top quality. 100% satisfied!",
+                    text: 'I was skeptical about online coaching but Cerebrum proved me wrong. Live interactive classes, instant doubt clearing, weekly tests - everything is top quality. 100% satisfied!',
                     author: 'Meera S.',
                     location: 'Sector 11, Dwarka',
                     rating: 5,
@@ -965,9 +949,7 @@ export default function PageContent({ faqs }: PageContentProps) {
           </div>
 
           {/* Map & Contact */}
-          <div
-            className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl overflow-hidden border border-green-100 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl overflow-hidden border border-green-100 animate-fadeInUp">
             <div className="grid lg:grid-cols-2">
               {/* Map */}
               <div className="relative h-96 lg:h-auto bg-gray-100">
@@ -978,16 +960,14 @@ export default function PageContent({ faqs }: PageContentProps) {
                   placeholder={{
                     lat: 28.7041,
                     lng: 77.1025,
-                    address: "211 Vikas Surya Tower, DC Chauk, Rohini - Near Rohini West Metro"
+                    address: '211 Vikas Surya Tower, DC Chauk, Rohini - Near Rohini West Metro',
                   }}
                 />
               </div>
 
               {/* Contact Details */}
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Get Started with Cerebrum
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Started with Cerebrum</h3>
                 <div className="space-y-5">
                   <div className="flex items-start gap-4">
                     <Globe className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
@@ -996,7 +976,9 @@ export default function PageContent({ faqs }: PageContentProps) {
                       <p className="text-gray-600 leading-relaxed">
                         Live interactive sessions from home
                         <br />
-                        <span className="text-green-600 font-medium">Most popular with Dwarka students!</span>
+                        <span className="text-green-600 font-medium">
+                          Most popular with Dwarka students!
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -1045,7 +1027,9 @@ export default function PageContent({ faqs }: PageContentProps) {
                       >
                         +91-88264-44334
                       </a>
-                      <p className="text-sm text-gray-500 mt-1">Open 24/7 — Online Classes Available Globally</p>
+                      <p className="text-sm text-gray-500 mt-1">
+                        Open 24/7 — Online Classes Available Globally
+                      </p>
                     </div>
                   </div>
 
@@ -1080,9 +1064,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Dwarka Sector 10 - FAQs
             </h2>
@@ -1090,10 +1072,7 @@ export default function PageContent({ faqs }: PageContentProps) {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-md animate-fadeInUp"
-              >
+              <div key={index} className="bg-white rounded-xl p-6 shadow-md animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
@@ -1162,8 +1141,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2 text-yellow-300" />
               Limited Seats Available - Online & Offline

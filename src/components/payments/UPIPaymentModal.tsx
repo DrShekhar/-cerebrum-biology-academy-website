@@ -149,119 +149,119 @@ export function UPIPaymentModal({
   if (!isOpen) return null
 
   return (
-<FocusTrap>
+    <FocusTrap>
+      <div
+        className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 animate-fadeInUp"
+        onClick={onClose}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="upi-payment-modal-title"
+      >
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 animate-fadeInUp"
-          onClick={onClose}
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="upi-payment-modal-title"
+          className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
+          onClick={(e) => e.stopPropagation()}
         >
-          <div
-            className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b">
-              <div>
-                <h2 id="upi-payment-modal-title" className="text-xl font-bold text-gray-900">
-                  {paymentState.stage === 'success' ? 'Payment Successful!' : 'Pay with UPI'}
-                </h2>
-                <p className="text-sm text-gray-600 mt-1">
-                  ₹{amount.toLocaleString('en-IN')} • {courseName}
-                </p>
-              </div>
-              <button
-                onClick={onClose}
-                className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors touch-manipulation"
-                aria-label="Close payment modal"
-              >
-                <X className="w-5 h-5" />
-              </button>
+          {/* Header */}
+          <div className="flex items-center justify-between p-6 border-b">
+            <div>
+              <h2 id="upi-payment-modal-title" className="text-xl font-bold text-gray-900">
+                {paymentState.stage === 'success' ? 'Payment Successful!' : 'Pay with UPI'}
+              </h2>
+              <p className="text-sm text-gray-600 mt-1">
+                ₹{amount.toLocaleString('en-IN')} • {courseName}
+              </p>
             </div>
+            <button
+              onClick={onClose}
+              className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-gray-100 rounded-full transition-colors touch-manipulation"
+              aria-label="Close payment modal"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
 
-            {/* Language Selector */}
-            {paymentState.stage === 'selection' && (
-              <div className="p-4 border-b">
-                <div className="flex gap-2">
-                  {[
-                    { code: 'en', name: 'English' },
-                    { code: 'hi', name: 'हिंदी' },
-                    { code: 'ta', name: 'தமிழ்' },
-                    { code: 'bn', name: 'বাংলা' },
-                  ].map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => setLanguage(lang.code as any)}
-                      className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition-colors touch-manipulation ${
-                        language === lang.code
-                          ? 'bg-blue-100 text-blue-800'
-                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                      }`}
-                    >
-                      {lang.name}
-                    </button>
-                  ))}
-                </div>
+          {/* Language Selector */}
+          {paymentState.stage === 'selection' && (
+            <div className="p-4 border-b">
+              <div className="flex gap-2">
+                {[
+                  { code: 'en', name: 'English' },
+                  { code: 'hi', name: 'हिंदी' },
+                  { code: 'ta', name: 'தமிழ்' },
+                  { code: 'bn', name: 'বাংলা' },
+                ].map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => setLanguage(lang.code as any)}
+                    className={`px-4 py-2 min-h-[44px] rounded-full text-sm font-medium transition-colors touch-manipulation ${
+                      language === lang.code
+                        ? 'bg-blue-100 text-blue-800'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                  >
+                    {lang.name}
+                  </button>
+                ))}
               </div>
+            </div>
+          )}
+
+          {/* Content */}
+          <div className="p-6">
+            {paymentState.stage === 'selection' && (
+              <UPIAppSelection
+                apps={availableUPIApps}
+                onSelectApp={handleUPIAppSelection}
+                instructions={instructions}
+                isSlowNetwork={isSlowNetwork}
+              />
             )}
 
-            {/* Content */}
-            <div className="p-6">
-              {paymentState.stage === 'selection' && (
-                <UPIAppSelection
-                  apps={availableUPIApps}
-                  onSelectApp={handleUPIAppSelection}
-                  instructions={instructions}
-                  isSlowNetwork={isSlowNetwork}
-                />
-              )}
+            {paymentState.stage === 'payment' && (
+              <PaymentProcessing
+                onShowQR={() => setShowQR(true)}
+                onRetry={handleRetry}
+                instructions={instructions}
+              />
+            )}
 
-              {paymentState.stage === 'payment' && (
-                <PaymentProcessing
-                  onShowQR={() => setShowQR(true)}
-                  onRetry={handleRetry}
-                  instructions={instructions}
-                />
-              )}
+            {paymentState.stage === 'processing' && (
+              <PaymentStatus
+                transactionId={paymentState.transactionId}
+                onRetry={handleRetry}
+                onManualCheck={handleManualCheck}
+                instructions={instructions}
+              />
+            )}
 
-              {paymentState.stage === 'processing' && (
-                <PaymentStatus
-                  transactionId={paymentState.transactionId}
-                  onRetry={handleRetry}
-                  onManualCheck={handleManualCheck}
-                  instructions={instructions}
-                />
-              )}
+            {paymentState.stage === 'success' && (
+              <PaymentSuccess
+                transactionId={paymentState.transactionId}
+                amount={amount}
+                courseName={courseName}
+              />
+            )}
 
-              {paymentState.stage === 'success' && (
-                <PaymentSuccess
-                  transactionId={paymentState.transactionId}
-                  amount={amount}
-                  courseName={courseName}
-                />
-              )}
+            {paymentState.stage === 'error' && (
+              <PaymentError
+                error={paymentState.error || 'Unknown error occurred'}
+                onRetry={handleRetry}
+                instructions={instructions}
+              />
+            )}
 
-              {paymentState.stage === 'error' && (
-                <PaymentError
-                  error={paymentState.error || 'Unknown error occurred'}
-                  onRetry={handleRetry}
-                  instructions={instructions}
-                />
-              )}
-
-              {showQR && qrCode && (
-                <QRCodeFallback
-                  qrCode={qrCode}
-                  paymentUrl={paymentUrl}
-                  onClose={() => setShowQR(false)}
-                />
-              )}
-            </div>
+            {showQR && qrCode && (
+              <QRCodeFallback
+                qrCode={qrCode}
+                paymentUrl={paymentUrl}
+                onClose={() => setShowQR(false)}
+              />
+            )}
           </div>
         </div>
-      </FocusTrap>
-)
+      </div>
+    </FocusTrap>
+  )
 }
 
 // Types for sub-components
@@ -352,9 +352,7 @@ function PaymentProcessing({
 }) {
   return (
     <div className="text-center">
-      <div
-        className="w-16 h-16 mx-auto mb-4 animate-fadeInUp"
-      >
+      <div className="w-16 h-16 mx-auto mb-4 animate-fadeInUp">
         <Loader2 className="w-16 h-16 text-blue-600" />
       </div>
       <h3 className="text-lg font-semibold mb-2">Opening UPI App...</h3>
@@ -387,9 +385,7 @@ function PaymentStatus({
 }) {
   return (
     <div className="text-center">
-      <div
-        className="w-16 h-16 mx-auto mb-4 animate-fadeInUp"
-      >
+      <div className="w-16 h-16 mx-auto mb-4 animate-fadeInUp">
         <Loader2 className="w-16 h-16 text-blue-600" />
       </div>
       <h3 className="text-lg font-semibold mb-2">Checking Payment Status...</h3>
@@ -500,7 +496,12 @@ function QRCodeFallback({
       <div className="text-center">
         <div className="bg-white p-4 rounded-lg border-2 border-gray-200 inline-block mb-4">
           {qrCode.startsWith('http') ? (
-            <Image src={qrCode} alt="UPI QR Code" width={200} height={200} />
+            <Image
+              src={qrCode}
+              alt="Scan UPI QR code to pay for Cerebrum Biology Academy"
+              width={200}
+              height={200}
+            />
           ) : (
             <div className="w-48 h-48 bg-gray-100 flex items-center justify-center">
               <QrCode className="w-16 h-16 text-gray-400" />

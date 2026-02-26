@@ -128,12 +128,19 @@ const testimonials = [
 
 export default function PageContent({ faqs }: PageContentProps) {
   const handleDemoBooking = () => {
-    if (typeof window !== 'undefined' && (window as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag) {
-      (window as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'demo_booking_civil_lines', {
-        event_category: 'conversion',
-        event_label: 'neet_coaching_civil_lines_delhi',
-        value: 1,
-      })
+    if (
+      typeof window !== 'undefined' &&
+      (window as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag
+    ) {
+      ;(window as typeof globalThis & { gtag?: (...args: unknown[]) => void }).gtag?.(
+        'event',
+        'demo_booking_civil_lines',
+        {
+          event_category: 'conversion',
+          event_label: 'neet_coaching_civil_lines_delhi',
+          value: 1,
+        }
+      )
     }
   }
 
@@ -145,9 +152,7 @@ export default function PageContent({ faqs }: PageContentProps) {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Building2 className="w-5 h-5 mr-2 text-yellow-300" />
               Ultra-Premium Civil Lines - Direct Metro to Rohini
@@ -209,17 +214,19 @@ export default function PageContent({ faqs }: PageContentProps) {
             </div>
 
             {/* Metro Connectivity Highlight */}
-            <div
-              className="bg-yellow-500/20 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8 border border-yellow-400/30 animate-fadeInUp"
-            >
+            <div className="bg-yellow-500/20 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8 border border-yellow-400/30 animate-fadeInUp">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <Train className="w-8 h-8 text-yellow-300" />
-                <span className="text-xl font-bold text-yellow-300">Nearest to Rohini via Metro</span>
+                <span className="text-xl font-bold text-yellow-300">
+                  Nearest to Rohini via Metro
+                </span>
               </div>
               <p className="text-white/90">
                 <strong>Yellow Line:</strong> Civil Lines Station → Rohini West Station
                 <br />
-                <span className="text-yellow-200">Just 8 stops | 20 minutes | No transfers needed!</span>
+                <span className="text-yellow-200">
+                  Just 8 stops | 20 minutes | No transfers needed!
+                </span>
               </p>
             </div>
 
@@ -248,9 +255,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Why Civil Lines Students Choose Cerebrum */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Building2 className="w-4 h-4 mr-2" />
               Ultra-Premium Locality
@@ -259,16 +264,15 @@ export default function PageContent({ faqs }: PageContentProps) {
               Why Civil Lines Families Trust Cerebrum
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Civil Lines is one of Delhi's most prestigious areas. Families here demand excellence -
-              and Cerebrum delivers with AIIMS faculty, proven results, and personalized attention.
+              Civil Lines is one of Delhi's most prestigious areas. Families here demand excellence
+              - and Cerebrum delivers with AIIMS faculty, proven results, and personalized
+              attention.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Metro Connectivity Card */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 animate-fadeInUp">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
                   <Train className="w-8 h-8 text-yellow-600" />
@@ -312,9 +316,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             </div>
 
             {/* Ultra-Premium Expectations */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-indigo-100 animate-fadeInUp">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center">
                   <Award className="w-8 h-8 text-indigo-600" />
@@ -372,9 +374,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Premium Residences Grid */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Home className="w-4 h-4 mr-2" />
               Premium Residences We Serve
@@ -428,9 +428,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Student Testimonials */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-green-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
               Success Stories from Civil Lines
@@ -506,9 +504,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             ))}
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-6 py-3 rounded-full text-sm font-semibold">
               <Award className="w-5 h-5 mr-2" />
               Average improvement: 155+ marks | 180+ students from Civil Lines qualified NEET
@@ -520,9 +516,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Video Testimonials Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
               Video Success Stories
@@ -578,9 +572,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             ))}
           </div>
 
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <a
               href="https://www.youtube.com/@cerebrumbiologyacademy"
               target="_blank"
@@ -598,9 +590,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Top Schools Near Civil Lines
             </h2>
@@ -634,9 +624,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Civil Lines Students Choose Cerebrum
             </h2>
@@ -670,9 +658,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* Google Reviews & Contact Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by Civil Lines Families
             </h2>
@@ -683,13 +669,11 @@ export default function PageContent({ faqs }: PageContentProps) {
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Google Rating Card */}
-            <div
-              className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp">
               <div className="flex items-center justify-center mb-6">
                 <img
                   src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google"
+                  alt="Google Reviews rating for Cerebrum Biology Academy"
                   className="h-10"
                 />
               </div>
@@ -701,9 +685,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                   ))}
                 </div>
                 <p className="text-gray-600 font-semibold text-lg mb-2">Based on 847+ reviews</p>
-                <p className="text-sm text-gray-500">
-                  Verified reviews from students and parents
-                </p>
+                <p className="text-sm text-gray-500">Verified reviews from students and parents</p>
               </div>
               <div className="flex flex-col gap-3">
                 <a
@@ -720,9 +702,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             </div>
 
             {/* Reviews from Civil Lines */}
-            <div
-              className="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 border border-purple-100 animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 border border-purple-100 animate-fadeInUp">
               <h3 className="font-bold text-gray-900 text-xl mb-6 flex items-center gap-2">
                 <MessageCircle className="w-6 h-6 text-purple-600" />
                 Reviews from Civil Lines
@@ -730,7 +710,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               <div className="space-y-5">
                 {[
                   {
-                    text: "Best NEET coaching accessible from Civil Lines! The Yellow Line metro connection to Rohini is perfect. My son from Oberoi Apartments improved from 520 to 668. Small batch size meant personal attention.",
+                    text: 'Best NEET coaching accessible from Civil Lines! The Yellow Line metro connection to Rohini is perfect. My son from Oberoi Apartments improved from 520 to 668. Small batch size meant personal attention.',
                     author: 'Parent',
                     location: 'Oberoi Apartments, Civil Lines',
                     rating: 5,
@@ -742,7 +722,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                     rating: 5,
                   },
                   {
-                    text: "The hybrid mode is perfect for Civil Lines students. Weekend classes at Rohini center + weekday online. My daughter scored 665 in NEET and got LHMC. Highly recommend!",
+                    text: 'The hybrid mode is perfect for Civil Lines students. Weekend classes at Rohini center + weekday online. My daughter scored 665 in NEET and got LHMC. Highly recommend!',
                     author: 'Parent',
                     location: 'Cavalry Lines',
                     rating: 5,
@@ -767,9 +747,7 @@ export default function PageContent({ faqs }: PageContentProps) {
           </div>
 
           {/* Map & Contact */}
-          <div
-            className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl overflow-hidden border border-green-100 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl overflow-hidden border border-green-100 animate-fadeInUp">
             <div className="grid lg:grid-cols-2">
               {/* Map */}
               <div className="relative h-96 lg:h-auto bg-gray-100">
@@ -780,16 +758,14 @@ export default function PageContent({ faqs }: PageContentProps) {
                   placeholder={{
                     lat: 28.7041,
                     lng: 77.1025,
-                    address: "211 Vikas Surya Tower, DC Chauk, Rohini - Near Rohini West Metro"
+                    address: '211 Vikas Surya Tower, DC Chauk, Rohini - Near Rohini West Metro',
                   }}
                 />
               </div>
 
               {/* Contact Details */}
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Visit Our Rohini Center
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Visit Our Rohini Center</h3>
                 <div className="space-y-5">
                   <div className="flex items-start gap-4">
                     <MapPin className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
@@ -832,7 +808,9 @@ export default function PageContent({ faqs }: PageContentProps) {
                       >
                         +91-88264-44334
                       </a>
-                      <p className="text-sm text-gray-500 mt-1">Open 24/7 — Online Classes Available Globally</p>
+                      <p className="text-sm text-gray-500 mt-1">
+                        Open 24/7 — Online Classes Available Globally
+                      </p>
                     </div>
                   </div>
 
@@ -867,9 +845,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Civil Lines Delhi - FAQs
             </h2>
@@ -877,10 +853,7 @@ export default function PageContent({ faqs }: PageContentProps) {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-md animate-fadeInUp"
-              >
+              <div key={index} className="bg-white rounded-xl p-6 shadow-md animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
@@ -949,8 +922,7 @@ export default function PageContent({ faqs }: PageContentProps) {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2 text-yellow-300" />
               Limited Seats Available for Civil Lines Batch

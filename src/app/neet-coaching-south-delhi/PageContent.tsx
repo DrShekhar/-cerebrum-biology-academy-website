@@ -202,9 +202,7 @@ export default function PageContent() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               South Delhi's Premium NEET Institute
@@ -289,9 +287,7 @@ export default function PageContent() {
       {/* Areas Grid */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Across South Delhi
             </h2>
@@ -302,9 +298,7 @@ export default function PageContent() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {southDelhiAreas.map((area, index) => (
-              <div
-                key={area.slug}
-               className="animate-fadeInUp">
+              <div key={area.slug} className="animate-fadeInUp">
                 <Link href={`/neet-coaching-south-delhi/${area.slug}`}>
                   <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 h-full group">
                     <div className="flex items-start justify-between mb-4">
@@ -349,9 +343,7 @@ export default function PageContent() {
       {/* Premium Localities Spotlight */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Building2 className="w-4 h-4 mr-2" />
               Premium Localities We Serve
@@ -367,9 +359,7 @@ export default function PageContent() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Greater Kailash */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-gray-900">Greater Kailash</h3>
                 <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-bold">
@@ -428,9 +418,7 @@ export default function PageContent() {
             </div>
 
             {/* Defence Colony */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-gray-900">Defence Colony</h3>
                 <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-bold">
@@ -489,9 +477,7 @@ export default function PageContent() {
             </div>
 
             {/* Vasant Vihar */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-gray-900">Vasant Vihar</h3>
                 <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">
@@ -552,9 +538,7 @@ export default function PageContent() {
             </div>
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-white rounded-full shadow-lg px-8 py-4 border border-gray-200">
               <Users className="w-6 h-6 text-purple-600 mr-3" />
               <span className="text-gray-700 font-medium">
@@ -569,9 +553,7 @@ export default function PageContent() {
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Top South Delhi Schools
             </h2>
@@ -605,9 +587,7 @@ export default function PageContent() {
       {/* Video Testimonials Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
               Real Success Stories
@@ -671,9 +651,7 @@ export default function PageContent() {
             ))}
           </div>
 
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <a
               href="https://www.youtube.com/@cerebrumbiologyacademy"
               target="_blank"
@@ -691,9 +669,7 @@ export default function PageContent() {
       {/* Why South Delhi */}
       <section className="py-16 md:py-20 bg-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us for South Delhi?</h2>
           </div>
 
@@ -723,9 +699,7 @@ export default function PageContent() {
       {/* Enhanced Success Stories Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
               Student Success Stories
@@ -841,9 +815,7 @@ export default function PageContent() {
             ))}
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-6 py-3 rounded-full text-sm font-semibold">
               <Award className="w-5 h-5 mr-2" />
               Average improvement: 150+ marks | students from South Delhi qualified NEET
@@ -855,9 +827,7 @@ export default function PageContent() {
       {/* Google Business Profile & Reviews Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by South Delhi Families
             </h2>
@@ -870,13 +840,11 @@ export default function PageContent() {
           {/* Google Rating & Reviews Grid */}
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Google Rating Card */}
-            <div
-              className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp">
               <div className="flex items-center justify-center mb-6">
                 <img
                   src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                  alt="Google"
+                  alt="Google Reviews rating for Cerebrum Biology Academy"
                   className="h-10"
                 />
               </div>
@@ -916,9 +884,7 @@ export default function PageContent() {
             </div>
 
             {/* Recent Reviews Highlights */}
-            <div
-              className="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 border border-purple-100 animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 border border-purple-100 animate-fadeInUp">
               <h3 className="font-bold text-gray-900 text-xl mb-6 flex items-center gap-2">
                 <MessageCircle className="w-6 h-6 text-purple-600" />
                 Recent Reviews from South Delhi
@@ -969,9 +935,7 @@ export default function PageContent() {
           </div>
 
           {/* Google Maps & Contact Info */}
-          <div
-            className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl overflow-hidden border border-green-100 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl overflow-hidden border border-green-100 animate-fadeInUp">
             <div className="grid lg:grid-cols-2">
               {/* Map */}
               <div className="relative h-96 lg:h-auto bg-gray-100">
@@ -982,7 +946,7 @@ export default function PageContent() {
                   placeholder={{
                     lat: 28.56964948244002,
                     lng: 77.21443931508122,
-                    address: "South Extension, New Delhi"
+                    address: 'South Extension, New Delhi',
                   }}
                 />
               </div>
@@ -1074,9 +1038,7 @@ export default function PageContent() {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching South Delhi - FAQs
             </h2>
@@ -1084,10 +1046,7 @@ export default function PageContent() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
@@ -1156,8 +1115,7 @@ export default function PageContent() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Join South Delhi's Top NEET Coaching
             </h2>

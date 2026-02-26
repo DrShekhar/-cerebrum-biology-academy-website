@@ -253,9 +253,7 @@ export default function NEETCoachingGurgaonPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div
-              className="text-center max-w-4xl mx-auto animate-fadeInUp"
-            >
+            <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-5 h-5" />
                 <span className="font-medium">NEET Coaching for Gurgaon Students</span>
@@ -267,8 +265,8 @@ export default function NEETCoachingGurgaonPage() {
 
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
                 Join Cerebrum Biology Academy at our dedicated Gurugram center - M2K Corporate Park,
-                Sector 51. Just 10-15 minutes from DLF, Cyber City, and Golf Course Road. No need
-                to travel to Delhi! Weekend batches available for working professionals&apos; children.
+                Sector 51. Just 10-15 minutes from DLF, Cyber City, and Golf Course Road. No need to
+                travel to Delhi! Weekend batches available for working professionals&apos; children.
               </p>
 
               <div className="flex flex-wrap justify-center gap-4">
@@ -293,9 +291,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* Why Gurgaon Students Choose Us */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Why Gurgaon Students Choose Cerebrum Biology Academy
               </h2>
@@ -325,9 +321,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* Video Testimonials Section */}
         <section className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Play className="w-4 h-4 mr-2" />
                 Real Success Stories
@@ -384,9 +378,7 @@ export default function NEETCoachingGurgaonPage() {
               ))}
             </div>
 
-            <div
-              className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <a
                 href="https://www.youtube.com/@cerebrumbiologyacademy"
                 target="_blank"
@@ -404,9 +396,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* Connectivity from Gurgaon Areas */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Our Gurugram Center - M2K Corporate Park, Sector 51
               </h2>
@@ -436,9 +426,7 @@ export default function NEETCoachingGurgaonPage() {
               ))}
             </div>
 
-            <div
-              className="mt-8 bg-green-50 rounded-xl p-6 border border-green-200 animate-fadeInUp"
-            >
+            <div className="mt-8 bg-green-50 rounded-xl p-6 border border-green-200 animate-fadeInUp">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-green-600" />
@@ -446,7 +434,8 @@ export default function NEETCoachingGurgaonPage() {
                 <div>
                   <h3 className="font-bold text-gray-800 mb-2">Our Gurugram Center Location</h3>
                   <p className="text-gray-600">
-                    <strong>Address:</strong> Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51
+                    <strong>Address:</strong> Unit 17, M2K Corporate Park, Mayfield Garden, Sector
+                    51
                     <br />
                     <strong>Landmark:</strong> Near HUDA City Centre Metro Station
                     <br />
@@ -463,9 +452,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* Gurgaon Schools We Serve */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Students from Top Gurgaon Schools
               </h2>
@@ -504,9 +491,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* Google Business Profile & Reviews Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Trusted by Gurgaon Families
               </h2>
@@ -519,13 +504,11 @@ export default function NEETCoachingGurgaonPage() {
             {/* Google Rating & Reviews Grid */}
             <div className="grid lg:grid-cols-2 gap-8 mb-12">
               {/* Google Rating Card */}
-              <div
-                className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp">
                 <div className="flex items-center justify-center mb-6">
                   <Image
                     src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-                    alt="Google"
+                    alt="Google Reviews rating for Cerebrum Biology Academy"
                     width={92}
                     height={30}
                     className="h-10 w-auto"
@@ -568,9 +551,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Recent Reviews Highlights */}
-              <div
-                className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl p-8 border border-green-100 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl p-8 border border-green-100 animate-fadeInUp">
                 <h3 className="font-bold text-gray-900 text-xl mb-6 flex items-center gap-2">
                   <MessageCircle className="w-6 h-6 text-green-600" />
                   Recent Reviews from Gurgaon
@@ -621,9 +602,7 @@ export default function NEETCoachingGurgaonPage() {
             </div>
 
             {/* Google Maps & Contact Info */}
-            <div
-              className="bg-gradient-to-br from-yellow-50 to-white rounded-2xl shadow-xl overflow-hidden border border-yellow-100 animate-fadeInUp"
-            >
+            <div className="bg-gradient-to-br from-yellow-50 to-white rounded-2xl shadow-xl overflow-hidden border border-yellow-100 animate-fadeInUp">
               <div className="grid lg:grid-cols-2">
                 {/* Map */}
                 <div className="relative h-96 lg:h-auto bg-gray-100">
@@ -634,7 +613,7 @@ export default function NEETCoachingGurgaonPage() {
                     placeholder={{
                       lat: 28.4295,
                       lng: 77.0426,
-                      address: "M2K Corporate Park, Sector 51, Gurugram"
+                      address: 'M2K Corporate Park, Sector 51, Gurugram',
                     }}
                   />
                 </div>
@@ -691,7 +670,9 @@ export default function NEETCoachingGurgaonPage() {
                     <div className="flex items-start gap-4">
                       <Clock className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 mb-1">Travel Time from Your Area</p>
+                        <p className="font-semibold text-gray-900 mb-1">
+                          Travel Time from Your Area
+                        </p>
                         <p className="text-gray-600">
                           <span className="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium mr-1">
                             DLF Phases
@@ -732,9 +713,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* Enhanced Success Stories from Gurgaon Students */}
         <section className="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Trophy className="w-4 h-4 mr-2" />
                 Proven Transformations
@@ -750,9 +729,7 @@ export default function NEETCoachingGurgaonPage() {
 
             <div className="grid lg:grid-cols-3 gap-8 mb-10">
               {/* Story 1: Rajat Malhotra */}
-              <div
-                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-green-500 to-teal-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -809,9 +786,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Story 2: Ananya Verma */}
-              <div
-                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -869,9 +844,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Story 3: Kabir Khanna */}
-              <div
-                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-orange-500 to-yellow-500 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -930,9 +903,7 @@ export default function NEETCoachingGurgaonPage() {
             </div>
 
             {/* Average Improvement Stats */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 max-w-4xl mx-auto animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 max-w-4xl mx-auto animate-fadeInUp">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Average Improvement: Gurgaon Students
@@ -977,9 +948,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* Trust Badges Section */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Award className="w-4 h-4 mr-2" />
                 Why Choose Cerebrum from Gurgaon
@@ -994,9 +963,7 @@ export default function NEETCoachingGurgaonPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {/* Badge 1: Years of Excellence */}
-              <div
-                className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Award className="w-8 h-8 text-white" />
                 </div>
@@ -1008,9 +975,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Badge 2: Gurgaon Students */}
-              <div
-                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-white" />
                 </div>
@@ -1022,9 +987,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Badge 3: Google Rating */}
-              <div
-                className="bg-white rounded-2xl shadow-xl p-8 border border-yellow-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-yellow-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Star className="w-8 h-8 text-white fill-current" />
                 </div>
@@ -1036,9 +999,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Badge 4: AIIMS Faculty */}
-              <div
-                className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <GraduationCap className="w-8 h-8 text-white" />
                 </div>
@@ -1050,9 +1011,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Badge 5: Success Rate */}
-              <div
-                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Trophy className="w-8 h-8 text-white" />
                 </div>
@@ -1064,14 +1023,14 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Badge 6: Local Gurugram Center */}
-              <div
-                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
-              >
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-4xl font-bold text-gray-900 mb-2">10-15 min</div>
-                <div className="text-lg font-semibold text-gray-700 mb-2">Local Gurugram Center</div>
+                <div className="text-lg font-semibold text-gray-700 mb-2">
+                  Local Gurugram Center
+                </div>
                 <p className="text-sm text-gray-600">
                   M2K Corporate Park, Sector 51 - no need to travel to Delhi!
                 </p>
@@ -1079,9 +1038,7 @@ export default function NEETCoachingGurgaonPage() {
             </div>
 
             {/* Bottom CTA */}
-            <div
-              className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-xl animate-fadeInUp"
-            >
+            <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-xl animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-3">Join 680+ Successful Gurgaon Students</h3>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                 Experience metro-accessible NEET coaching with proven results. Book your free demo
@@ -1110,9 +1067,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* Premium Localities Spotlight */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Building2 className="w-4 h-4 mr-2" />
                 Serving Premium Gurgaon Localities
@@ -1128,9 +1083,7 @@ export default function NEETCoachingGurgaonPage() {
 
             <div className="grid lg:grid-cols-3 gap-8">
               {/* DLF Phases Card */}
-              <div
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-xl overflow-hidden border border-blue-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-xl overflow-hidden border border-blue-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -1150,7 +1103,9 @@ export default function NEETCoachingGurgaonPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Distance to Center</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">
+                          Distance to Center
+                        </p>
                         <p className="text-gray-600 text-sm">
                           Just 10-12 minutes drive to our Sector 51 center
                         </p>
@@ -1189,9 +1144,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Cyber City & Golf Course Road Card */}
-              <div
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl overflow-hidden border border-green-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl overflow-hidden border border-green-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -1211,7 +1164,9 @@ export default function NEETCoachingGurgaonPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Distance to Center</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">
+                          Distance to Center
+                        </p>
                         <p className="text-gray-600 text-sm">
                           Just 8-10 minutes drive to our Sector 51 center
                         </p>
@@ -1241,8 +1196,8 @@ export default function NEETCoachingGurgaonPage() {
 
                   <div className="bg-green-50 rounded-lg p-4 border border-green-100">
                     <p className="text-sm text-gray-700 italic">
-                      &quot;The M2K Corporate Park center is just 8 minutes from Cyber City.
-                      My daughter balances school and NEET prep beautifully.&quot;
+                      &quot;The M2K Corporate Park center is just 8 minutes from Cyber City. My
+                      daughter balances school and NEET prep beautifully.&quot;
                     </p>
                     <p className="text-xs text-gray-600 mt-2 font-medium">
                       - Rajesh K., Cyber City
@@ -1252,9 +1207,7 @@ export default function NEETCoachingGurgaonPage() {
               </div>
 
               {/* Sohna Road & New Gurgaon Card */}
-              <div
-                className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl shadow-xl overflow-hidden border border-orange-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl shadow-xl overflow-hidden border border-orange-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp">
                 <div className="bg-gradient-to-r from-orange-600 to-yellow-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -1274,7 +1227,9 @@ export default function NEETCoachingGurgaonPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm mb-1">Distance to Center</p>
+                        <p className="font-semibold text-gray-900 text-sm mb-1">
+                          Distance to Center
+                        </p>
                         <p className="text-gray-600 text-sm">
                           Just 12-15 minutes drive to our Sector 51 center
                         </p>
@@ -1304,8 +1259,8 @@ export default function NEETCoachingGurgaonPage() {
 
                   <div className="bg-orange-50 rounded-lg p-4 border border-orange-100">
                     <p className="text-sm text-gray-700 italic">
-                      &quot;The Sector 51 center is just 12 minutes from Sohna Road.
-                      Hybrid mode works perfectly for us.&quot;
+                      &quot;The Sector 51 center is just 12 minutes from Sohna Road. Hybrid mode
+                      works perfectly for us.&quot;
                     </p>
                     <p className="text-xs text-gray-600 mt-2 font-medium">- Meena S., Sohna Road</p>
                   </div>
@@ -1314,13 +1269,12 @@ export default function NEETCoachingGurgaonPage() {
             </div>
 
             {/* Bottom Stats */}
-            <div
-              className="mt-12 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp"
-            >
+            <div className="mt-12 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2">All Gurgaon Areas Covered</h3>
                 <p className="text-gray-300">
-                  Students from every corner of Gurgaon reach our Sector 51 center in just 10-15 minutes
+                  Students from every corner of Gurgaon reach our Sector 51 center in just 10-15
+                  minutes
                 </p>
               </div>
 
@@ -1365,9 +1319,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* FAQ Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Frequently Asked Questions - NEET Coaching Gurgaon
               </h2>
@@ -1393,8 +1345,7 @@ export default function NEETCoachingGurgaonPage() {
         {/* CTA Section */}
         <section className="py-16 bg-[#4a5d4a] text-white">
           <div className="container mx-auto px-4 text-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey from Gurgaon</h2>
               <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                 Join the growing community of successful NEET aspirants from Gurgaon. Book your free
