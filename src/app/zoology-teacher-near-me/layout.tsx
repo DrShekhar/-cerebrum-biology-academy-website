@@ -1,30 +1,15 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Zoology Teacher Near Me | Best Zoology Classes 2027',
+  title: 'Zoology Teacher Near Me | Expert Zoology Classes for NEET',
   description:
-    'Find the best zoology teacher near you. Offline centers in Delhi NCR + online classes Pan-India. Expert faculty for Human Physiology, Animal Kingdom & NEET Zoology preparation.',
-  keywords: [
-    'zoology teacher near me',
-    'zoology classes near me',
-    'zoology tutor near me',
-    'zoology coaching near me',
-    'animal biology teacher near me',
-    'best zoology teacher near me',
-    'zoology faculty near me',
-  ],
+    'Find expert zoology teachers near you at Cerebrum Biology Academy. Specialized zoology coaching for NEET, covering animal physiology, genetics, ecology. Book free demo!',
   openGraph: {
-    title: 'Zoology Teacher Near Me | Offline & Online Classes',
+    title: 'Zoology Teacher Near Me | Expert Zoology Classes for NEET',
     description:
-      'Find expert zoology teachers near you. Delhi NCR offline centers + Pan-India online classes.',
+      'Find expert zoology teachers near you at Cerebrum Biology Academy. Specialized zoology coaching for NEET, covering animal physiology, genetics, ecology. Book free demo!',
     type: 'website',
-    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/zoology-teacher-near-me',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zoology Teacher Near Me',
-    description: 'Expert zoology teachers in Delhi NCR & online across India!',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/zoology-teacher-near-me',

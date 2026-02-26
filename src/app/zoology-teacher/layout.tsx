@@ -1,38 +1,21 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Zoology Teacher | Best Zoology Teacher for NEET 2026',
+  title: 'Best Zoology Teacher for NEET | Expert Zoology Coaching',
   description:
-    'Looking for the best zoology teacher? Expert AIIMS-trained faculty specializing in Animal Biology. Master Human Physiology, Animal Kingdom & Reproduction. 50% of NEET Biology is Zoology!',
-  keywords: [
-    'zoology teacher',
-    'best zoology teacher',
-    'zoology faculty',
-    'animal biology teacher',
-    'zoology expert',
-    'zoology teacher for neet',
-    'best zoology teacher for neet',
-    'zoology tutor',
-    'zoology coaching',
-  ],
+    'Expert zoology teacher for NEET preparation. Specialized coaching in animal biology, human physiology, genetics & ecology by AIIMS-trained faculty. Book free demo!',
   openGraph: {
-    title: 'Best Zoology Teacher | AIIMS-Trained Faculty',
+    title: 'Best Zoology Teacher for NEET | Expert Zoology Coaching',
     description:
-      'Expert zoology teaching focusing on Human Physiology & Animal Kingdom. 50% NEET weightage!',
-    type: 'website',
-    locale: 'en_IN',
+      'Expert zoology teacher for NEET preparation. Specialized coaching in animal biology, human physiology, genetics & ecology by AIIMS-trained faculty. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/zoology-teacher',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Zoology Teacher',
-    description: 'AIIMS-trained faculty specializing in Zoology. 50% of NEET Biology covered!',
+    type: 'website',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/zoology-teacher',
   },
 }
 
-export default function ZoologyTeacherLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return children
 }

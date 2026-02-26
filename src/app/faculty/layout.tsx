@@ -1,50 +1,21 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Expert NEET Biology Faculty Delhi NCR | AIIMS Qualified Teachers | Cerebrum Academy',
+  title: 'Our Faculty | AIIMS-Trained Biology Teachers at Cerebrum Academy',
   description:
-    "Meet Cerebrum Academy's AIIMS-qualified NEET Biology faculty — 15+ years experience, 680+ medical selections. Led by Dr. Shekhar Singh. Book a free demo!",
-  keywords: [
-    'NEET faculty Delhi',
-    'biology teachers Delhi NCR',
-    'AIIMS faculty',
-    'Dr Shekhar Singh',
-    'best NEET teachers',
-    'expert biology faculty',
-    'qualified NEET tutors',
-    'experienced biology mentors',
-    'AIIMS trained teachers',
-  ],
+    'Meet our expert faculty at Cerebrum Biology Academy. AIIMS-trained biology teachers with 10+ years experience. Led by Dr. Shekhar with 67+ AIIMS selections.',
   openGraph: {
-    title:
-      'Expert NEET Biology Faculty | AIIMS Qualified | Cerebrum Academy Delhi NCR',
+    title: 'Our Faculty | AIIMS-Trained Biology Teachers at Cerebrum Academy',
     description:
-      'Learn from AIIMS-qualified faculty with 15+ years experience. Dr. Shekhar Singh leads our team of expert NEET mentors. 680+ medical college selections achieved.',
+      'Meet our expert faculty at Cerebrum Biology Academy. AIIMS-trained biology teachers with 10+ years experience. Led by Dr. Shekhar with 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/faculty',
-    siteName: 'Cerebrum Biology Academy',
-    images: [
-      {
-        url: 'https://cerebrumbiologyacademy.com/images/og-default.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Expert NEET Biology Faculty - AIIMS Qualified Teachers',
-      },
-    ],
-    locale: 'en_IN',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Expert NEET Biology Faculty',
-    description:
-      'AIIMS-qualified faculty, 15+ years experience, 680+ medical selections. Learn from the best!',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/faculty',
   },
 }
 
-export default function FacultyLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return children
 }

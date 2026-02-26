@@ -92,16 +92,6 @@ function WebsiteWithSearchboxSchema() {
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     description:
       'NEET coaching and biology tuition for competitive exams. Expert faculty and proven results.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate:
-          'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
-    // Enable sitelinks searchbox
     siteNavigationElement: [
       {
         '@type': 'SiteNavigationElement',
@@ -195,39 +185,28 @@ function LocalBusinessSchema() {
     url: 'https://cerebrumbiologyacademy.com',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     description: 'Leading NEET coaching and biology tuition center',
-    telephone: '+91-XXXXXXXXXX',
+    telephone: '+91-88264-44334',
     email: 'info@cerebrumbiologyacademy.com',
+    priceRange: '₹45,000 - ₹1,80,000',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '[Main Address]',
-      addressLocality: 'Delhi',
+      streetAddress: 'D 35, South Extension Part 2',
+      addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
-      postalCode: '[Postal Code]',
+      postalCode: '110049',
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '28.5355',
-      longitude: '77.3910',
+      latitude: '28.5764',
+      longitude: '77.2222',
     },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Saturday'],
-        opens: '09:00',
-        closes: '18:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Sunday'],
-        opens: '10:00',
-        closes: '16:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
     aggregateRating: {

@@ -101,9 +101,6 @@ export const metadata: Metadata = {
     languages: {
       en: 'https://cerebrumbiologyacademy.com',
       'en-IN': 'https://cerebrumbiologyacademy.com',
-      hi: 'https://cerebrumbiologyacademy.com/hi',
-      'hi-IN': 'https://cerebrumbiologyacademy.com/hi',
-      ta: 'https://cerebrumbiologyacademy.com/ta',
       'x-default': 'https://cerebrumbiologyacademy.com',
     },
   },
@@ -159,16 +156,12 @@ export default function RootLayout({
         {/* Fonts are handled by next/font/google - no manual preload needed */}
         {/* Logo preloading is handled by Next.js Image priority prop in HeaderHybrid */}
 
-        <meta httpEquiv="Content-Language" content="en-IN,hi-IN,ta-IN" />
-        <meta name="language" content="English,Hindi,Tamil" />
+        <meta httpEquiv="Content-Language" content="en-IN" />
+        <meta name="language" content="English" />
 
         {/* hreflang tags — only languages with actual pages */}
         <link rel="alternate" hrefLang="en" href="https://cerebrumbiologyacademy.com" />
         <link rel="alternate" hrefLang="en-IN" href="https://cerebrumbiologyacademy.com" />
-        <link rel="alternate" hrefLang="hi" href="https://cerebrumbiologyacademy.com/hi" />
-        <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com/hi" />
-        <link rel="alternate" hrefLang="ta" href="https://cerebrumbiologyacademy.com/ta" />
-        <link rel="alternate" hrefLang="ta-IN" href="https://cerebrumbiologyacademy.com/ta" />
         <link rel="alternate" hrefLang="x-default" href="https://cerebrumbiologyacademy.com" />
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-title" content="Cerebrum Biology" />

@@ -2,22 +2,15 @@ import type { Metadata } from 'next'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in West Delhi | Dwarka, Janakpuri, Rajouri Garden',
+  title: 'NEET Coaching in West Delhi | Biology Classes Near You',
   description:
-    'Best NEET coaching for West Delhi students from Dwarka, Janakpuri, Rajouri Garden, Vikaspuri, Uttam Nagar. AIIMS faculty, 98% success rate. Book FREE demo!',
-  keywords:
-    'NEET coaching West Delhi, NEET coaching Dwarka, NEET coaching Janakpuri, NEET coaching Rajouri Garden, biology coaching West Delhi, medical coaching West Delhi, NEET preparation West Delhi',
+    'Best NEET coaching in West Delhi. Expert biology classes for Class 11, 12 & droppers. AIIMS-trained faculty, small batches, 98% success rate. Free demo class!',
   openGraph: {
-    title: 'Best NEET Coaching in West Delhi',
+    title: 'NEET Coaching in West Delhi | Biology Classes Near You',
     description:
-      'Top NEET coaching for West Delhi students. Expert AIIMS faculty, small batches, 98% success rate. Serving Dwarka, Janakpuri, Rajouri Garden & more.',
-    type: 'website',
+      'Best NEET coaching in West Delhi. Expert biology classes for Class 11, 12 & droppers. AIIMS-trained faculty, small batches, 98% success rate. Free demo class!',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'NEET Coaching in West Delhi | Dwarka, Janakpuri, Rajouri Garden',
-    description: 'Best NEET coaching for West Delhi students from Dwarka, Janakpuri, Rajouri Garden, Vikaspuri, Uttam Nagar.',
+    type: 'website',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi',
@@ -33,7 +26,16 @@ export default function NEETCoachingWestDelhiLayout({ children }: { children: Re
         parentLocation="Delhi NCR"
         centerAddress="211 Vikas Surya Tower, DC Chauk, Rohini Sector 9, Delhi - 110085"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Dwarka', 'Janakpuri', 'Rajouri Garden', 'Vikaspuri', 'Uttam Nagar', 'Tilak Nagar', 'Tagore Garden', 'Hari Nagar']}
+        nearbyAreas={[
+          'Dwarka',
+          'Janakpuri',
+          'Rajouri Garden',
+          'Vikaspuri',
+          'Uttam Nagar',
+          'Tilak Nagar',
+          'Tagore Garden',
+          'Hari Nagar',
+        ]}
       />
     </>
   )
