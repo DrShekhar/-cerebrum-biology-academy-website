@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Expert MCAT Biology preparation with Campbell Biology-based curriculum.',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/mcat-biology-preparation/',
+    canonical: 'https://cerebrumbiologyacademy.com/mcat-biology-preparation',
   },
   openGraph: {
     title: 'MCAT Biology Preparation | Online MCAT Biology Tutoring',

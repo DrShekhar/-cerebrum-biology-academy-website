@@ -261,7 +261,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'Cerebrum Academy results',
       'NEET topper interviews',
     ],
-    canonical: '/results',
+    canonical: '/testimonials',
   },
   faculty: {
     title: 'Expert NEET Biology Faculty Delhi NCR | AIIMS Qualified Teachers | Cerebrum Academy',
@@ -794,7 +794,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'best biology coaching gurgaon',
       'neet 2026 coaching gurgaon',
     ],
-    canonical: '/neet-coaching-gurgaon',
+    canonical: '/neet-coaching-gurugram',
   },
   neetCoachingGreaterNoidaWest: {
     title: 'Best NEET Coaching in Greater Noida West 2026 | Noida Extension | Cerebrum Academy',

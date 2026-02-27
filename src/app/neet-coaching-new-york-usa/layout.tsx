@@ -1,45 +1,42 @@
-import { Metadata } from "next";
-import { LocalitySchema } from "@/components/seo/LocalitySchema";
+import { Metadata } from 'next'
+import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 export const metadata: Metadata = {
-  title: "NEET Coaching in New York, USA",
-  description: "Expert NEET coaching for New York, USA students. 98% success rate with Dr. Shekhar C Singh. WhatsApp: 918826444334",
-  keywords: "NEET coaching new york, new york NEET classes, medical coaching new york, NEET usa",
+  title: 'NEET Coaching in New York, USA',
+  description:
+    'Expert NEET coaching for New York, USA students. 98% success rate with Dr. Shekhar C Singh. WhatsApp: 918826444334',
+  keywords: 'NEET coaching new york, new york NEET classes, medical coaching new york, NEET usa',
   openGraph: {
-    title: "NEET Coaching in New York, USA",
-    description: "98% Success Rate | Expert NEET Coaching by Dr. Shekhar C Singh",
-    url: `https://cerebrumbiologyacademy.com/cities/neet-coaching-new-york-usa`,
-    siteName: "Cerebrum Biology Academy",
-    type: "website",
-    locale: "en_US"
+    title: 'NEET Coaching in New York, USA',
+    description: '98% Success Rate | Expert NEET Coaching by Dr. Shekhar C Singh',
+    url: `https://cerebrumbiologyacademy.com/neet-coaching-new-york-usa`,
+    siteName: 'Cerebrum Biology Academy',
+    type: 'website',
+    locale: 'en_US',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "NEET Coaching in New York, USA",
-    description: "98% success rate. Dr. Shekhar C Singh. Free counseling +918826444334",
-    creator: "@cerebrumacademy",
-    site: "@cerebrumacademy"
+    card: 'summary_large_image',
+    title: 'NEET Coaching in New York, USA',
+    description: '98% success rate. Dr. Shekhar C Singh. Free counseling +918826444334',
+    creator: '@cerebrumacademy',
+    site: '@cerebrumacademy',
   },
   alternates: {
-    canonical: `https://cerebrumbiologyacademy.com/cities/neet-coaching-new-york-usa`
+    canonical: `https://cerebrumbiologyacademy.com/neet-coaching-new-york-usa`,
   },
   robots: {
     index: true,
     follow: true,
-    "max-image-preview": "large",
-    "max-snippet": -1,
-    "max-video-preview": -1
-  }
-};
+    'max-image-preview': 'large',
+    'max-snippet': -1,
+    'max-video-preview': -1,
+  },
+}
 
-export default function Layout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <LocalitySchema 
+      <LocalitySchema
         cityName="New York"
         country="USA"
         latitude={40.7128}
@@ -51,5 +48,5 @@ export default function Layout({
       />
       {children}
     </>
-  );
+  )
 }

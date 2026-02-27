@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Expert IBO preparation for students worldwide.',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/ibo-preparation/',
+    canonical: 'https://cerebrumbiologyacademy.com/ibo-preparation',
   },
   openGraph: {
     title: 'IBO Preparation Online | International Biology Olympiad Coaching',

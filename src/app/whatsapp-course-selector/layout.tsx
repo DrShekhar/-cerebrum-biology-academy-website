@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Course Selector — Find Your Perfect NEET Biology Program',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       'Find the perfect NEET Biology program. AIIMS doctor-led teaching. 695/720 NEET topper produced. Class 9–12 & Dropper batches.',
     type: 'website',
-    url: 'https://www.cerebrumbiologyacademy.com/whatsapp-course-selector',
+    url: 'https://cerebrumbiologyacademy.com/whatsapp-course-selector',
   },
   twitter: {
     card: 'summary_large_image',
@@ -31,14 +31,10 @@ export const metadata: Metadata = {
     description: 'Choose from 15+ Biology coaching programs for Class 9–12 & Droppers.',
   },
   alternates: {
-    canonical: 'https://www.cerebrumbiologyacademy.com/whatsapp-course-selector',
+    canonical: 'https://cerebrumbiologyacademy.com/whatsapp-course-selector',
   },
-};
+}
 
-export default function WhatsAppCourseSelectorLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <>{children}</>;
+export default function WhatsAppCourseSelectorLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }

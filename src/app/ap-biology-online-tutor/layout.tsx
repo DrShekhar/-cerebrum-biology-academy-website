@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Expert AP Biology tutoring aligned with Campbell Biology textbook.',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/ap-biology-online-tutor/',
+    canonical: 'https://cerebrumbiologyacademy.com/ap-biology-online-tutor',
   },
   openGraph: {
     title: 'AP Biology Online Tutor | College Board Aligned Coaching',

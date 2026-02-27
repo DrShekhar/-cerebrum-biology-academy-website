@@ -17,10 +17,11 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'BBO Preparation Online | British Biology Olympiad Coaching',
-    description: 'Expert BBO preparation online. British Biology Olympiad coaching with Campbell Biology.',
+    description:
+      'Expert BBO preparation online. British Biology Olympiad coaching with Campbell Biology.',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/bbo-preparation/',
+    canonical: 'https://cerebrumbiologyacademy.com/bbo-preparation',
   },
   openGraph: {
     title: 'BBO Preparation Online | British Biology Olympiad Coaching',

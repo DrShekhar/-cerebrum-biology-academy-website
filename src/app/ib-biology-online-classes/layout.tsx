@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Expert IB Biology tutoring for Higher Level (HL) and Standard Level (SL).',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/ib-biology-online-classes/',
+    canonical: 'https://cerebrumbiologyacademy.com/ib-biology-online-classes',
   },
   openGraph: {
     title: 'IB Biology Online Classes | HL & SL Tutoring',

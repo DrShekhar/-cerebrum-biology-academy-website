@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Expert online coaching for Campbell Biology.',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/campbell-biology/',
+    canonical: 'https://cerebrumbiologyacademy.com/campbell-biology',
   },
   openGraph: {
     title: 'Campbell Biology Online Coaching',
