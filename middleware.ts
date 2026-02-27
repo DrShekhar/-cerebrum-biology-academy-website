@@ -247,6 +247,18 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.redirect(newUrl, { status: 301 })
   }
 
+  // ============================================
+  // SEO: Normalize blog tag URLs (spaces/uppercase → slugified)
+  // Fixes ~500 GSC 404s from old sitemap that generated unslugified tag URLs
+  // ============================================
+  if (pathname.startsWith('/blog/tag/')) {
+    const rawTag = decodeURIComponent(pathname.slice('/blog/tag/'.length))
+    const normalized = rawTag.toLowerCase().replace(/\s+/g, '-')
+    if (normalized !== rawTag) {
+      return NextResponse.redirect(new URL(`/blog/tag/${normalized}`, req.url), 301)
+    }
+  }
+
   // Block demo/test pages in production
   const blockedPrefixes = [
     '/demo',
