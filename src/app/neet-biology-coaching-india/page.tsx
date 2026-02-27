@@ -117,8 +117,7 @@ export default function NeetBiologyCoachingIndiaPage() {
       <section className="relative bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Brain className="w-5 h-5 mr-2" />
               Specialized NEET Biology Coaching
@@ -164,29 +163,25 @@ export default function NeetBiologyCoachingIndiaPage() {
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">360/360</div>
                 <div className="text-sm text-blue-100">Perfect Biology Score</div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">50+</div>
                 <div className="text-sm text-blue-100">360 Scorers</div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Award className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">340+</div>
                 <div className="text-sm text-blue-100">Average Biology Score</div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">1,50,000+</div>
                 <div className="text-sm text-blue-100">Biology Students</div>
@@ -199,8 +194,7 @@ export default function NeetBiologyCoachingIndiaPage() {
       {/* Biology Topics Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete NEET Biology Syllabus Coverage
             </h2>
@@ -240,8 +234,7 @@ export default function NeetBiologyCoachingIndiaPage() {
       {/* Toppers Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Biology Toppers
             </h2>
@@ -252,7 +245,10 @@ export default function NeetBiologyCoachingIndiaPage() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {topperResults.map((topper, index) => (
-              <div key={topper.name} className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 text-center animate-fadeInUp">
+              <div
+                key={topper.name}
+                className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 text-center animate-fadeInUp"
+              >
                 <Trophy className="w-10 h-10 text-yellow-500 mx-auto mb-3" />
                 <h3 className="text-lg font-bold text-gray-900">{topper.name}</h3>
                 <div className="text-3xl font-bold text-purple-600 my-2">{topper.biologyScore}</div>
@@ -267,8 +263,7 @@ export default function NeetBiologyCoachingIndiaPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Our Biology Coaching is Different
             </h2>
@@ -276,7 +271,10 @@ export default function NeetBiologyCoachingIndiaPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={feature.title} className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp">
+              <div
+                key={feature.title}
+                className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp"
+              >
                 <feature.icon className="w-12 h-12 text-purple-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -286,11 +284,28 @@ export default function NeetBiologyCoachingIndiaPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Biology Coaching FAQs
             </h2>

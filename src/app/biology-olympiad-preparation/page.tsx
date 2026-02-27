@@ -431,6 +431,50 @@ export default function BiologyOlympiadHubPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How do I qualify for the International Biology Olympiad?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "Each country has its own national olympiad program. You must participate in your country's national olympiad (like USABO in USA, BBO in UK, INBO in India) and rank among the top 4 students to represent your country at IBO.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is Campbell Biology enough for olympiad preparation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "Campbell Biology is the foundation for olympiad preparation. For higher rounds and IBO, you'll also need supplementary resources like Molecular Biology of the Cell (Alberts), Genetics (Griffiths), and intensive practice with past olympiad papers.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What grade should I start olympiad preparation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Ideally, start in Grade 9-10 to build a strong foundation. Most national olympiads are for students in Grade 11-12 (or equivalent). Starting early gives you time to cover Campbell Biology thoroughly and practice with past papers.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do you offer coaching for students outside India?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes! We offer online coaching to students from 80+ countries. Our international batches are scheduled to accommodate different time zones, and all classes are conducted in English using Campbell Biology.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* FAQ Section */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4">
@@ -519,15 +563,22 @@ export default function BiologyOlympiadHubPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Practice Olympiad MCQs Online</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Prepare for IBO, USABO, BBO &amp; INBO with our free MCQ practice tool — 5,900+ Campbell Biology
-            level questions with instant feedback and detailed explanations.
+            Prepare for IBO, USABO, BBO &amp; INBO with our free MCQ practice tool — 5,900+ Campbell
+            Biology level questions with instant feedback and detailed explanations.
           </p>
           <Link
             href="/neet-biology-mcq?source=olympiad"
             className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
           >
             Start Olympiad Practice
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
           </Link>
         </div>
       </section>

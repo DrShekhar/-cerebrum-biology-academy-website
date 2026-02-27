@@ -9,8 +9,11 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const tagName = decodeURIComponent(slug).replace(/-/g, ' ')
-  const posts = getPostsByTag(tagName)
+  const tagName = slug
+    .split('-')
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+  const posts = getPostsByTag(decodeURIComponent(slug).replace(/-/g, ' '))
 
   if (posts.length === 0) {
     return {
@@ -19,12 +22,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${tagName} - NEET Biology Blog`,
-    description: `Browse ${posts.length} articles tagged with "${tagName}" for NEET Biology preparation.`,
+    title: `${tagName} Articles - Biology Blog | Cerebrum Academy`,
+    description: `Browse articles tagged with ${tagName.toLowerCase()}. Expert biology content, NEET tips, and study resources from Cerebrum Biology Academy.`,
     openGraph: {
-      title: `${tagName} - NEET Biology Blog`,
-      description: `Articles tagged with ${tagName}`,
+      title: `${tagName} Articles - Biology Blog | Cerebrum Academy`,
+      description: `Browse articles tagged with ${tagName.toLowerCase()}. Expert biology content, NEET tips, and study resources from Cerebrum Biology Academy.`,
       type: 'website',
+      url: `https://cerebrumbiologyacademy.com/blog/tag/${slug}`,
     },
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/blog/tag/${slug}`,

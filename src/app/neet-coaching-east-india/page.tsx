@@ -171,9 +171,7 @@ export default function NeetCoachingEastIndiaPage() {
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Globe className="w-5 h-5 mr-2" />
               Serving All East Indian States Online
@@ -236,9 +234,7 @@ export default function NeetCoachingEastIndiaPage() {
       {/* States Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               NEET Coaching Across All East Indian States
             </h2>
@@ -250,9 +246,7 @@ export default function NeetCoachingEastIndiaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {eastIndiaStates.map((state, index) => (
-              <div
-                key={state.slug}
-               className="animate-fadeInUp">
+              <div key={state.slug} className="animate-fadeInUp">
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${
                     state.priority === 'high' ? 'ring-2 ring-green-600' : ''
@@ -290,9 +284,7 @@ export default function NeetCoachingEastIndiaPage() {
       {/* Why Online Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why East India Students Choose Our Online Coaching
             </h2>
@@ -316,9 +308,7 @@ export default function NeetCoachingEastIndiaPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Cerebrum for NEET Coaching in East India?
             </h2>
@@ -339,12 +329,28 @@ export default function NeetCoachingEastIndiaPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions - NEET Coaching East India
             </h2>
@@ -352,10 +358,7 @@ export default function NeetCoachingEastIndiaPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -370,8 +373,7 @@ export default function NeetCoachingEastIndiaPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your NEET Journey from East India Today
             </h2>

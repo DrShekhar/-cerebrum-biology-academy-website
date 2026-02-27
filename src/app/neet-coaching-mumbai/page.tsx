@@ -38,7 +38,7 @@ export default function NEETCoachingMumbai() {
     {
       question: 'Which is the best NEET coaching in Mumbai for 2026 preparation?',
       answer:
-        "Cerebrum Biology Academy is the top-rated NEET coaching for Mumbai students. While Allen, Aakash, and local institutes have physical centers, we offer AIIMS-trained faculty online at a fraction of the cost. Our 98% success rate beats most Mumbai coaching centers. No more wasting 2-3 hours daily in Mumbai traffic - study from home in Andheri, Bandra, Thane, or anywhere!",
+        'Cerebrum Biology Academy is the top-rated NEET coaching for Mumbai students. While Allen, Aakash, and local institutes have physical centers, we offer AIIMS-trained faculty online at a fraction of the cost. Our 98% success rate beats most Mumbai coaching centers. No more wasting 2-3 hours daily in Mumbai traffic - study from home in Andheri, Bandra, Thane, or anywhere!',
     },
     {
       question: 'What medical colleges can Mumbai students target through NEET?',
@@ -101,12 +101,42 @@ export default function NEETCoachingMumbai() {
   ]
 
   const medicalColleges = [
-    { name: 'Seth GS Medical College (KEM)', seats: 200, distance: 'Parel', state: 'MH', highlight: true },
-    { name: 'Grant Medical College', seats: 200, distance: 'Byculla', state: 'MH', highlight: true },
+    {
+      name: 'Seth GS Medical College (KEM)',
+      seats: 200,
+      distance: 'Parel',
+      state: 'MH',
+      highlight: true,
+    },
+    {
+      name: 'Grant Medical College',
+      seats: 200,
+      distance: 'Byculla',
+      state: 'MH',
+      highlight: true,
+    },
     { name: 'LTMMC Sion', seats: 200, distance: 'Sion', state: 'MH', highlight: false },
-    { name: 'Topiwala National Medical College', seats: 200, distance: 'Nair Hospital', state: 'MH', highlight: false },
-    { name: 'BYL Nair Hospital', seats: 150, distance: 'Mumbai Central', state: 'MH', highlight: false },
-    { name: 'TNMC & BYL Nair', seats: 150, distance: 'Central Mumbai', state: 'MH', highlight: false },
+    {
+      name: 'Topiwala National Medical College',
+      seats: 200,
+      distance: 'Nair Hospital',
+      state: 'MH',
+      highlight: false,
+    },
+    {
+      name: 'BYL Nair Hospital',
+      seats: 150,
+      distance: 'Mumbai Central',
+      state: 'MH',
+      highlight: false,
+    },
+    {
+      name: 'TNMC & BYL Nair',
+      seats: 150,
+      distance: 'Central Mumbai',
+      state: 'MH',
+      highlight: false,
+    },
   ]
 
   return (
@@ -116,7 +146,19 @@ export default function NEETCoachingMumbai() {
         stateName="Maharashtra"
         url="https://cerebrumbiologyacademy.com/neet-coaching-mumbai"
         description="Best NEET coaching in Mumbai, Maharashtra. Online classes from AIIMS faculty for Andheri, Bandra, Borivali, Thane, Navi Mumbai students. 98% success rate. Prepare for Seth GS, Grant Medical, KEM from home."
-        areaServed={['Mumbai', 'Andheri', 'Bandra', 'Borivali', 'Thane', 'Navi Mumbai', 'Powai', 'Mulund', 'Dadar', 'Kalyan', 'Dombivli']}
+        areaServed={[
+          'Mumbai',
+          'Andheri',
+          'Bandra',
+          'Borivali',
+          'Thane',
+          'Navi Mumbai',
+          'Powai',
+          'Mulund',
+          'Dadar',
+          'Kalyan',
+          'Dombivli',
+        ]}
         faqs={faqs}
       />
 
@@ -129,9 +171,7 @@ export default function NEETCoachingMumbai() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div
-              className="text-center max-w-5xl mx-auto animate-fadeInUp"
-            >
+            <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-2 mb-6">
                 <Building className="w-4 h-4 text-orange-400" />
                 <span className="text-orange-300 text-sm font-medium">
@@ -149,8 +189,8 @@ export default function NEETCoachingMumbai() {
 
               <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Stop wasting hours in Mumbai traffic!
-                <span className="text-orange-400 font-semibold"> Save 500+ hours/year</span> with online NEET coaching.
-                AIIMS faculty, same results, from Andheri to Navi Mumbai.
+                <span className="text-orange-400 font-semibold"> Save 500+ hours/year</span> with
+                online NEET coaching. AIIMS faculty, same results, from Andheri to Navi Mumbai.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -195,9 +235,7 @@ export default function NEETCoachingMumbai() {
         {/* Mumbai Traffic Problem */}
         <section className="py-16 bg-slate-900/50">
           <div className="container mx-auto px-4">
-            <div
-              className="max-w-4xl mx-auto animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
                 The Mumbai{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
@@ -271,8 +309,7 @@ export default function NEETCoachingMumbai() {
         {/* Areas We Serve */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Serving Students Across{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
@@ -280,7 +317,8 @@ export default function NEETCoachingMumbai() {
                 </span>
               </h2>
               <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-                From South Mumbai to Virar, Thane to Panvel - premium NEET coaching reaches every corner
+                From South Mumbai to Virar, Thane to Panvel - premium NEET coaching reaches every
+                corner
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
@@ -305,8 +343,7 @@ export default function NEETCoachingMumbai() {
         {/* Features Grid */}
         <section className="py-16 bg-slate-900/50">
           <div className="container mx-auto px-4">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
                 Why Mumbai Students{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
@@ -372,8 +409,7 @@ export default function NEETCoachingMumbai() {
         {/* Local Schools Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Top Schools in{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
@@ -401,8 +437,7 @@ export default function NEETCoachingMumbai() {
         {/* Medical Colleges Section */}
         <section className="py-16 bg-slate-900/50">
           <div className="container mx-auto px-4">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Target{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
@@ -411,7 +446,8 @@ export default function NEETCoachingMumbai() {
                 in Mumbai
               </h2>
               <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-                Seth GS (KEM), Grant Medical, LTMMC - India's most prestigious medical colleges are in your city!
+                Seth GS (KEM), Grant Medical, LTMMC - India's most prestigious medical colleges are
+                in your city!
               </p>
 
               <div className="max-w-4xl mx-auto overflow-x-auto">
@@ -419,8 +455,12 @@ export default function NEETCoachingMumbai() {
                   <thead>
                     <tr className="border-b border-white/10">
                       <th className="text-left py-4 px-4 text-slate-300 font-semibold">College</th>
-                      <th className="text-center py-4 px-4 text-slate-300 font-semibold">MBBS Seats</th>
-                      <th className="text-center py-4 px-4 text-slate-300 font-semibold">Location</th>
+                      <th className="text-center py-4 px-4 text-slate-300 font-semibold">
+                        MBBS Seats
+                      </th>
+                      <th className="text-center py-4 px-4 text-slate-300 font-semibold">
+                        Location
+                      </th>
                       <th className="text-center py-4 px-4 text-slate-300 font-semibold">State</th>
                     </tr>
                   </thead>
@@ -435,7 +475,11 @@ export default function NEETCoachingMumbai() {
                             <Building2
                               className={`w-4 h-4 ${college.highlight ? 'text-orange-400' : 'text-slate-500'}`}
                             />
-                            <span className={college.highlight ? 'text-orange-300 font-semibold' : 'text-white'}>
+                            <span
+                              className={
+                                college.highlight ? 'text-orange-300 font-semibold' : 'text-white'
+                              }
+                            >
                               {college.name}
                             </span>
                             {college.highlight && college.name.includes('Seth GS') && (
@@ -460,7 +504,8 @@ export default function NEETCoachingMumbai() {
               </div>
 
               <p className="text-center text-slate-400 mt-6">
-                + GMC Nagpur, GMC Pune, GMC Aurangabad, and 20+ more Maharashtra government medical colleges!
+                + GMC Nagpur, GMC Pune, GMC Aurangabad, and 20+ more Maharashtra government medical
+                colleges!
               </p>
             </div>
           </div>
@@ -469,9 +514,7 @@ export default function NEETCoachingMumbai() {
         {/* Cost Comparison */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="max-w-4xl mx-auto animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
                 Cost Comparison:{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
@@ -547,8 +590,7 @@ export default function NEETCoachingMumbai() {
         {/* FAQs Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Frequently Asked{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
@@ -584,9 +626,7 @@ export default function NEETCoachingMumbai() {
         {/* Final CTA */}
         <section className="py-20 bg-gradient-to-r from-orange-900/50 to-red-900/50">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center max-w-3xl mx-auto animate-fadeInUp"
-            >
+            <div className="text-center max-w-3xl mx-auto animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Beat the{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
@@ -595,7 +635,8 @@ export default function NEETCoachingMumbai() {
                 ?
               </h2>
               <p className="text-xl text-slate-300 mb-8">
-                Seth GS, Grant Medical, KEM - India's best medical colleges are in Mumbai. Prepare smartly from home!
+                Seth GS, Grant Medical, KEM - India's best medical colleges are in Mumbai. Prepare
+                smartly from home!
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -616,7 +657,8 @@ export default function NEETCoachingMumbai() {
               </div>
 
               <p className="text-slate-400 mt-6">
-                Join 1,50,000+ students from Mumbai who chose smart preparation over crowded local trains
+                Join 1,50,000+ students from Mumbai who chose smart preparation over crowded local
+                trains
               </p>
             </div>
           </div>

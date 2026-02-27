@@ -18,12 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${category.name} - NEET Biology Blog`,
-    description: `${category.description}. Read our latest articles on ${category.name.toLowerCase()} for NEET preparation.`,
+    title: `${category.name} - Biology Blog | Cerebrum Academy`,
+    description: `Read expert articles about ${category.name.toLowerCase()}. Latest biology tips, NEET preparation guides, and study strategies from Cerebrum Biology Academy.`,
     openGraph: {
-      title: `${category.name} - NEET Biology Blog`,
-      description: category.description,
+      title: `${category.name} - Biology Blog | Cerebrum Academy`,
+      description: `Read expert articles about ${category.name.toLowerCase()}. Latest biology tips, NEET preparation guides, and study strategies from Cerebrum Biology Academy.`,
       type: 'website',
+      url: `https://cerebrumbiologyacademy.com/blog/category/${slug}`,
     },
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/blog/category/${slug}`,

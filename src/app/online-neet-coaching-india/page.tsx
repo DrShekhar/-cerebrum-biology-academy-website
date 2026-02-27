@@ -133,9 +133,7 @@ export default function OnlineNeetCoachingIndiaPage() {
       <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Globe className="w-5 h-5 mr-2" />
               Pan-India Online NEET Coaching
@@ -150,9 +148,9 @@ export default function OnlineNeetCoachingIndiaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Join 1,50,000+ students from Rajasthan, UP, Maharashtra, Karnataka, Tamil Nadu, Gujarat,
-              Kerala and all Indian states. Quality coaching from home - no need to relocate to
-              Kota!
+              Join 1,50,000+ students from Rajasthan, UP, Maharashtra, Karnataka, Tamil Nadu,
+              Gujarat, Kerala and all Indian states. Quality coaching from home - no need to
+              relocate to Kota!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -181,33 +179,25 @@ export default function OnlineNeetCoachingIndiaPage() {
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">98%</div>
                 <div className="text-sm opacity-80">Success Rate</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">1,50,000+</div>
                 <div className="text-sm opacity-80">Students Pan-India</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <MapPin className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">25+</div>
                 <div className="text-sm opacity-80">Indian States</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">695</div>
                 <div className="text-sm opacity-80">Top Score 2024</div>
@@ -220,9 +210,7 @@ export default function OnlineNeetCoachingIndiaPage() {
       {/* States Coverage Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Students from All Over India Trust Us
             </h2>
@@ -253,9 +241,7 @@ export default function OnlineNeetCoachingIndiaPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our Online NEET Coaching?
             </h2>
@@ -267,10 +253,7 @@ export default function OnlineNeetCoachingIndiaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={feature.title} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <feature.icon className="w-12 h-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -283,9 +266,7 @@ export default function OnlineNeetCoachingIndiaPage() {
       {/* Success Stories Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Success Stories from Across India
             </h2>
@@ -296,10 +277,7 @@ export default function OnlineNeetCoachingIndiaPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
-              <div
-                key={story.name}
-                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
-              >
+              <div key={story.name} className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp">
                 <div className="flex items-center mb-4">
                   <Trophy className="w-8 h-8 text-yellow-500 mr-3" />
                   <div>
@@ -315,12 +293,28 @@ export default function OnlineNeetCoachingIndiaPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -328,10 +322,7 @@ export default function OnlineNeetCoachingIndiaPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -346,8 +337,7 @@ export default function OnlineNeetCoachingIndiaPage() {
       {/* CTA Section */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Join India's Best Online NEET Coaching
             </h2>

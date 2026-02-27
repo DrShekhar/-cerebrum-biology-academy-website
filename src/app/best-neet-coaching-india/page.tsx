@@ -120,9 +120,7 @@ export default function BestNeetCoachingIndiaPage() {
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-5 h-5 mr-2" />
               #1 Ranked NEET Coaching Institute in India
@@ -167,33 +165,25 @@ export default function BestNeetCoachingIndiaPage() {
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">98%</div>
                 <div className="text-sm opacity-80">Success Rate</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">695</div>
                 <div className="text-sm opacity-80">Top Score 2024</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">1,50,000+</div>
                 <div className="text-sm opacity-80">Students</div>
               </div>
 
-              <div
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
-              >
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <MapPin className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">25+</div>
                 <div className="text-sm opacity-80">States Covered</div>
@@ -206,9 +196,7 @@ export default function BestNeetCoachingIndiaPage() {
       {/* Comparison Table Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Compare Top NEET Coaching Institutes in India
             </h2>
@@ -272,9 +260,7 @@ export default function BestNeetCoachingIndiaPage() {
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Cerebrum is India's Best NEET Coaching
             </h2>
@@ -282,10 +268,7 @@ export default function BestNeetCoachingIndiaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
-              <div
-                key={item.title}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={item.title} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <item.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
@@ -298,9 +281,7 @@ export default function BestNeetCoachingIndiaPage() {
       {/* Cities Coverage Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Students from Major Indian Cities
             </h2>
@@ -308,10 +289,7 @@ export default function BestNeetCoachingIndiaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {majorCities.map((city, index) => (
-              <div
-                key={city.city}
-                className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
-              >
+              <div key={city.city} className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-lg font-bold text-gray-900">{city.city}</h3>
                   <MapPin className="w-5 h-5 text-green-600" />
@@ -324,12 +302,28 @@ export default function BestNeetCoachingIndiaPage() {
         </div>
       </section>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -337,10 +331,7 @@ export default function BestNeetCoachingIndiaPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -355,8 +346,7 @@ export default function BestNeetCoachingIndiaPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Join India's Best NEET Coaching Today
             </h2>
