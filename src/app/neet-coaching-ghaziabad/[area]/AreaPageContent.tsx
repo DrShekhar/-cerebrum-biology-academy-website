@@ -253,7 +253,7 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <Link
-                href="/mcq"
+                href="/neet-biology-mcq"
                 className="flex flex-col items-center gap-2 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all border border-green-100 hover:border-green-300 group"
               >
                 <GraduationCap className="w-8 h-8 text-green-600 group-hover:text-green-700" />
