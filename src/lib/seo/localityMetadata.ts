@@ -6,7 +6,8 @@ export function generateLocalityMetadata(
   baseUrl: string = 'https://cerebrumbiologyacademy.com'
 ): Metadata {
   const pageUrl = `${baseUrl}/locations/${locality.citySlug}/${locality.slug}`
-  const imageUrl = `${baseUrl}/og-locality.jpg` // Can be customized per locality
+  const ogTitle = `NEET Biology Coaching in ${locality.displayName}`
+  const imageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(ogTitle)}&subtitle=${encodeURIComponent('Expert Faculty • Small Batches • Proven Results')}&locality=${encodeURIComponent(locality.displayName)}`
 
   return {
     title: locality.seo.title,
@@ -41,7 +42,7 @@ export function generateLocalityMetadata(
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `NEET Biology Coaching in ${locality.displayName}`,
+          alt: ogTitle,
         },
       ],
     },
@@ -74,6 +75,8 @@ export function generateCityMetadata(
 ): Metadata {
   const pageUrl = `${baseUrl}/locations/${citySlug}`
   const localityCount = localities.length
+  const ogTitle = `NEET Biology Coaching in ${city}`
+  const imageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(ogTitle)}&subtitle=${encodeURIComponent(`${localityCount} Locations • Expert Faculty • Proven Results`)}&locality=${encodeURIComponent(city)}`
 
   return {
     title: `NEET Biology Coaching in ${city} | ${localityCount} Locations | Cerebrum Academy`,
@@ -97,10 +100,10 @@ export function generateCityMetadata(
       locale: 'en_IN',
       images: [
         {
-          url: `${baseUrl}/og-city.jpg`,
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `NEET Biology Coaching in ${city}`,
+          alt: ogTitle,
         },
       ],
     },
@@ -108,6 +111,7 @@ export function generateCityMetadata(
       card: 'summary_large_image',
       title: `NEET Biology Coaching in ${city} - ${localityCount} Locations`,
       description: `Find the best NEET Biology coaching in ${city}. ${localityCount} locations across ${city}.`,
+      images: [imageUrl],
     },
   }
 }
@@ -116,6 +120,8 @@ export function generateLocationsIndexMetadata(
   baseUrl: string = 'https://cerebrumbiologyacademy.com'
 ): Metadata {
   const pageUrl = `${baseUrl}/locations`
+  const ogTitle = 'NEET Biology Coaching Locations - Delhi NCR'
+  const imageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(ogTitle)}&subtitle=${encodeURIComponent('51 Locations • Delhi • Noida • Gurugram • Faridabad')}`
 
   return {
     title: 'NEET Biology Coaching Locations | Delhi NCR | Cerebrum Academy',
@@ -134,10 +140,24 @@ export function generateLocationsIndexMetadata(
     openGraph: {
       type: 'website',
       url: pageUrl,
-      title: 'NEET Biology Coaching Locations - Delhi NCR',
+      title: ogTitle,
       description: '51 locations across Delhi NCR. Find the best NEET Biology coaching near you.',
       siteName: 'Cerebrum Biology Academy',
       locale: 'en_IN',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: ogTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: ogTitle,
+      description: '51 locations across Delhi NCR. Find the best NEET Biology coaching near you.',
+      images: [imageUrl],
     },
   }
 }

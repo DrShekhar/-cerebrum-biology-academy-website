@@ -300,9 +300,18 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
     )
   }
 
+  const hasNextPage = currentPage < totalPages
+  const hasPrevPage = currentPage > 1
+  const prevPageUrl =
+    currentPage === 2
+      ? 'https://cerebrumbiologyacademy.com/blog'
+      : `https://cerebrumbiologyacademy.com/blog?page=${currentPage - 1}`
+  const nextPageUrl = `https://cerebrumbiologyacademy.com/blog?page=${currentPage + 1}`
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
+      {hasPrevPage && <link rel="prev" href={prevPageUrl} />}
+      {hasNextPage && <link rel="next" href={nextPageUrl} />}
       <section className="py-20 bg-[#4a5d4a] text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="animate-fade-in-up">

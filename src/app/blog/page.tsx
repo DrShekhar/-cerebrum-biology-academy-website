@@ -29,10 +29,20 @@ export async function generateMetadata({
   searchParams: Promise<Record<string, string | string[] | undefined>>
 }): Promise<Metadata> {
   const params = await searchParams
+  const pageParam = typeof params.page === 'string' ? parseInt(params.page, 10) : 1
+  const currentPage = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam
   const hasQueryParams = Object.keys(params).length > 0
 
+  const canonical =
+    currentPage > 1
+      ? `https://cerebrumbiologyacademy.com/blog?page=${currentPage}`
+      : 'https://cerebrumbiologyacademy.com/blog'
+
   return {
-    title: 'NEET Biology Blog | Study Tips & Preparation Strategies',
+    title:
+      currentPage > 1
+        ? `NEET Biology Blog - Page ${currentPage} | Study Tips & Preparation Strategies`
+        : 'NEET Biology Blog | Study Tips & Preparation Strategies',
     description:
       'Expert NEET biology preparation tips, study strategies, and educational content by AIIMS faculty. Master biology concepts for medical entrance success.',
     keywords:
@@ -44,7 +54,7 @@ export async function generateMetadata({
       images: ['/og-image.jpg'],
     },
     alternates: {
-      canonical: 'https://cerebrumbiologyacademy.com/blog',
+      canonical,
       types: {
         'application/rss+xml': '/blog/feed.xml',
       },
@@ -86,7 +96,8 @@ export default function BlogPage() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'NEET Biology Blog | Study Tips & Preparation Strategies',
-    description: 'Expert NEET biology preparation tips, study strategies, and educational content by AIIMS faculty.',
+    description:
+      'Expert NEET biology preparation tips, study strategies, and educational content by AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/blog',
     isPartOf: {
       '@type': 'WebSite',
