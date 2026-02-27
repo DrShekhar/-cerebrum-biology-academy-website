@@ -249,21 +249,6 @@ export function OrganizationSchema() {
     },
   }
 
-  const websiteData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Cerebrum Biology Academy',
-    url: 'https://cerebrumbiologyacademy.com',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
-  }
-
   const courseData = {
     '@context': 'https://schema.org',
     '@type': 'Course',
@@ -316,14 +301,6 @@ export function WebsiteSchema() {
     '@type': 'WebSite',
     name: 'Cerebrum Biology Academy',
     url: 'https://cerebrumbiologyacademy.com',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
     hasPart: [
       {
         '@type': 'WebPage',
@@ -1738,27 +1715,83 @@ export function BlogPageWebPageSchema() {
 
 function SiteNavigationElementSchema() {
   const navigationItems = [
-    { name: 'Courses', url: 'https://cerebrumbiologyacademy.com/courses', description: 'NEET Biology coaching programs for Class 11, 12, Dropper & Foundation' },
-    { name: 'NEET Tools', url: 'https://cerebrumbiologyacademy.com/neet-exam-countdown', description: 'NEET exam countdown, college predictor, rank predictor, biology MCQ practice' },
-    { name: 'Results', url: 'https://cerebrumbiologyacademy.com/company/results', description: 'NEET results, wall of achievers, and student success stories' },
-    { name: 'Blog', url: 'https://cerebrumbiologyacademy.com/blog', description: 'NEET preparation tips, biology concepts, and study strategies' },
-    { name: 'Gallery', url: 'https://cerebrumbiologyacademy.com/gallery', description: 'Photos and videos from academy events and classrooms' },
-    { name: 'Board Preparation', url: 'https://cerebrumbiologyacademy.com/boards/cbse', description: 'CBSE, ICSE, IGCSE, IB and State Board biology preparation' },
-    { name: 'Services', url: 'https://cerebrumbiologyacademy.com/services/online-classes', description: 'Online classes, classroom teaching, doubt resolution, adaptive testing' },
-    { name: 'Olympiad Coaching', url: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching', description: 'NSEB, INBO, IBO, USABO and Campbell Biology coaching' },
-    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations', description: 'NEET Biology coaching centers across Delhi NCR and pan-India' },
-    { name: 'About Us', url: 'https://cerebrumbiologyacademy.com/about', description: 'About Cerebrum Biology Academy, AIIMS faculty, and our mission' },
-    { name: 'Contact', url: 'https://cerebrumbiologyacademy.com/contact', description: 'Get in touch with Cerebrum Biology Academy' },
-    { name: 'Pricing', url: 'https://cerebrumbiologyacademy.com/pricing', description: 'Course fees and pricing for all NEET Biology programs' },
-    { name: 'Faculty', url: 'https://cerebrumbiologyacademy.com/faculty', description: 'Meet our AIIMS-trained biology educators led by Dr. Shekhar C Singh' },
-    { name: 'Admissions', url: 'https://cerebrumbiologyacademy.com/admissions', description: 'Enroll in NEET Biology coaching programs' },
+    {
+      name: 'Courses',
+      url: 'https://cerebrumbiologyacademy.com/courses',
+      description: 'NEET Biology coaching programs for Class 11, 12, Dropper & Foundation',
+    },
+    {
+      name: 'NEET Tools',
+      url: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
+      description: 'NEET exam countdown, college predictor, rank predictor, biology MCQ practice',
+    },
+    {
+      name: 'Results',
+      url: 'https://cerebrumbiologyacademy.com/company/results',
+      description: 'NEET results, wall of achievers, and student success stories',
+    },
+    {
+      name: 'Blog',
+      url: 'https://cerebrumbiologyacademy.com/blog',
+      description: 'NEET preparation tips, biology concepts, and study strategies',
+    },
+    {
+      name: 'Gallery',
+      url: 'https://cerebrumbiologyacademy.com/gallery',
+      description: 'Photos and videos from academy events and classrooms',
+    },
+    {
+      name: 'Board Preparation',
+      url: 'https://cerebrumbiologyacademy.com/boards/cbse',
+      description: 'CBSE, ICSE, IGCSE, IB and State Board biology preparation',
+    },
+    {
+      name: 'Services',
+      url: 'https://cerebrumbiologyacademy.com/services/online-classes',
+      description: 'Online classes, classroom teaching, doubt resolution, adaptive testing',
+    },
+    {
+      name: 'Olympiad Coaching',
+      url: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching',
+      description: 'NSEB, INBO, IBO, USABO and Campbell Biology coaching',
+    },
+    {
+      name: 'Locations',
+      url: 'https://cerebrumbiologyacademy.com/locations',
+      description: 'NEET Biology coaching centers across Delhi NCR and pan-India',
+    },
+    {
+      name: 'About Us',
+      url: 'https://cerebrumbiologyacademy.com/about',
+      description: 'About Cerebrum Biology Academy, AIIMS faculty, and our mission',
+    },
+    {
+      name: 'Contact',
+      url: 'https://cerebrumbiologyacademy.com/contact',
+      description: 'Get in touch with Cerebrum Biology Academy',
+    },
+    {
+      name: 'Pricing',
+      url: 'https://cerebrumbiologyacademy.com/pricing',
+      description: 'Course fees and pricing for all NEET Biology programs',
+    },
+    {
+      name: 'Faculty',
+      url: 'https://cerebrumbiologyacademy.com/faculty',
+      description: 'Meet our AIIMS-trained biology educators led by Dr. Shekhar C Singh',
+    },
+    {
+      name: 'Admissions',
+      url: 'https://cerebrumbiologyacademy.com/admissions',
+      description: 'Enroll in NEET Biology coaching programs',
+    },
   ]
 
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Cerebrum Biology Academy Site Navigation',
-    description: 'Main navigation menu for India\'s premier NEET Biology coaching academy',
+    description: "Main navigation menu for India's premier NEET Biology coaching academy",
     numberOfItems: navigationItems.length,
     itemListElement: navigationItems.map((item, index) => ({
       '@type': 'SiteNavigationElement',

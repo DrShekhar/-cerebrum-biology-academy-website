@@ -1,9 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import {
-  getAllFaridabadAreaSlugs,
-  getFaridabadAreaBySlug,
-} from '@/data/faridabad-areas'
+import { getAllFaridabadAreaSlugs, getFaridabadAreaBySlug } from '@/data/faridabad-areas'
 import {
   CEREBRUM_METRICS,
   FARIDABAD_AREA_COORDINATES,
@@ -95,16 +92,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ],
     'old-city': ['Old Faridabad NEET coaching', 'Ballabgarh NEET classes', 'local NEET coaching'],
     residential: ['residential area NEET coaching', 'sector NEET classes', 'local NEET coaching'],
-    commercial: [
-      'Sector 17 NEET coaching',
-      'central Faridabad NEET',
-      'convenient NEET coaching',
-    ],
-    industrial: [
-      'NIT Faridabad NEET coaching',
-      'affordable NEET classes',
-      'industrial area NEET',
-    ],
+    commercial: ['Sector 17 NEET coaching', 'central Faridabad NEET', 'convenient NEET coaching'],
+    industrial: ['NIT Faridabad NEET coaching', 'affordable NEET classes', 'industrial area NEET'],
   }
 
   return {
@@ -641,25 +630,6 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
     },
   }
 
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': 'https://cerebrumbiologyacademy.com/#website',
-    url: 'https://cerebrumbiologyacademy.com',
-    name: 'Cerebrum Biology Academy',
-    description: 'Best NEET Biology Coaching in Faridabad with 98% success rate',
-    publisher: { '@id': organizationId },
-    inLanguage: 'en-IN',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
-  }
-
   return (
     <>
       <AreaPageContent area={area} areaSlug={areaSlug} />
@@ -716,12 +686,6 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(speakableSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
         }}
       />
     </>

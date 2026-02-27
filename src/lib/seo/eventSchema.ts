@@ -145,7 +145,7 @@ export const upcomingEvents: EventData[] = [
       postalCode: '110000',
     },
     isOnline: false,
-    url: 'https://cerebrumbiologyacademy.com/courses/two-year-program',
+    url: 'https://cerebrumbiologyacademy.com/courses/neet-complete',
     image: 'https://cerebrumbiologyacademy.com/images/foundation-batch.jpg',
     price: 58000,
     availableSeats: 75,

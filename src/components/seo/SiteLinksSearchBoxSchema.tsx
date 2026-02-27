@@ -18,14 +18,6 @@ export function SiteLinksSearchBoxSchema() {
     url: 'https://cerebrumbiologyacademy.com',
     name: 'Cerebrum Biology Academy',
     description: 'Premier NEET Biology coaching with AIIMS-trained faculty',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
     sameAs: [
       'https://www.youtube.com/@CerebrumBiologyAcademy',
       'https://www.instagram.com/cerebrumbiologyacademy',

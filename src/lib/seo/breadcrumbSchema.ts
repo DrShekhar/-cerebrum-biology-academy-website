@@ -42,13 +42,13 @@ export const breadcrumbPaths: Record<string, BreadcrumbItem[]> = {
     { name: 'Courses', url: 'https://cerebrumbiologyacademy.com/courses' },
     {
       name: 'Two-Year Program',
-      url: 'https://cerebrumbiologyacademy.com/courses/two-year-program',
+      url: 'https://cerebrumbiologyacademy.com/courses/neet-complete',
     },
   ],
   dropperCourse: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
     { name: 'Courses', url: 'https://cerebrumbiologyacademy.com/courses' },
-    { name: 'Dropper Course', url: 'https://cerebrumbiologyacademy.com/courses/dropper-course' },
+    { name: 'Dropper Course', url: 'https://cerebrumbiologyacademy.com/courses/neet-dropper' },
   ],
   foundation: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
@@ -86,28 +86,31 @@ export const breadcrumbPaths: Record<string, BreadcrumbItem[]> = {
   // Location-specific breadcrumbs
   southExtension: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
-    { name: 'South Extension', url: 'https://cerebrumbiologyacademy.com/centers/south-extension' },
+    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    {
+      name: 'South Extension',
+      url: 'https://cerebrumbiologyacademy.com/locations/south-extension',
+    },
   ],
   rohini: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
-    { name: 'Rohini', url: 'https://cerebrumbiologyacademy.com/centers/rohini' },
+    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'Rohini', url: 'https://cerebrumbiologyacademy.com/locations/rohini' },
   ],
   gurugram: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
-    { name: 'Gurugram', url: 'https://cerebrumbiologyacademy.com/centers/gurugram' },
+    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'Gurugram', url: 'https://cerebrumbiologyacademy.com/locations/gurugram' },
   ],
   greenPark: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
-    { name: 'Green Park', url: 'https://cerebrumbiologyacademy.com/centers/green-park' },
+    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'Green Park', url: 'https://cerebrumbiologyacademy.com/locations/green-park' },
   ],
   faridabad: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
-    { name: 'Faridabad', url: 'https://cerebrumbiologyacademy.com/centers/faridabad' },
+    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'Faridabad', url: 'https://cerebrumbiologyacademy.com/locations/faridabad' },
   ],
 }
 

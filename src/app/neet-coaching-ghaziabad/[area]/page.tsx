@@ -96,9 +96,24 @@ export default async function GhaziabadAreaPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Ghaziabad', item: 'https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad' },
-      { '@type': 'ListItem', position: 3, name: `NEET Coaching ${areaData.name}`, item: `https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad/${area}` },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Ghaziabad',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `NEET Coaching ${areaData.name}`,
+        item: `https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad/${area}`,
+      },
     ],
   }
 
@@ -183,7 +198,12 @@ export default async function GhaziabadAreaPage({ params }: Props) {
       name: 'Cerebrum Biology Academy - Noida',
       address: { streetAddress: 'Sector 62', addressLocality: 'Noida', addressRegion: 'UP' },
     },
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR', availability: 'https://schema.org/InStock' },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+    },
     organizer: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
   }
 
@@ -194,10 +214,30 @@ export default async function GhaziabadAreaPage({ params }: Props) {
     name: `How to Enroll for NEET Coaching in ${areaData.name}`,
     description: `Step-by-step guide for ${areaData.name} students to join Cerebrum Biology Academy.`,
     step: [
-      { '@type': 'HowToStep', position: 1, name: 'Book Free Demo', text: 'Book a free demo class online or call us.' },
-      { '@type': 'HowToStep', position: 2, name: 'Attend Demo', text: 'Experience our teaching methodology.' },
-      { '@type': 'HowToStep', position: 3, name: 'Choose Batch', text: 'Select morning, evening, or weekend batch.' },
-      { '@type': 'HowToStep', position: 4, name: 'Complete Enrollment', text: 'Pay fees and start learning.' },
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Book Free Demo',
+        text: 'Book a free demo class online or call us.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Attend Demo',
+        text: 'Experience our teaching methodology.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Choose Batch',
+        text: 'Select morning, evening, or weekend batch.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Complete Enrollment',
+        text: 'Pay fees and start learning.',
+      },
     ],
   }
 
@@ -213,20 +253,7 @@ export default async function GhaziabadAreaPage({ params }: Props) {
     url: `https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad/${area}`,
   }
 
-  // Schema 9: WebSite
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Cerebrum Biology Academy',
-    url: 'https://cerebrumbiologyacademy.com',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
-  }
-
-  // Schema 10: AggregateOffer
+  // Schema 9: AggregateOffer
   const aggregateOfferSchema = {
     '@context': 'https://schema.org',
     '@type': 'AggregateOffer',
@@ -246,16 +273,42 @@ export default async function GhaziabadAreaPage({ params }: Props) {
   return (
     <>
       {/* Schema Markup */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateOfferSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateOfferSchema) }}
+      />
 
       <AreaPageContent
         area={areaData}

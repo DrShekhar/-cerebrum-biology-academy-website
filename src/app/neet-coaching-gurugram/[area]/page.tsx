@@ -1,9 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import {
-  getAllGurugramAreaSlugs,
-  getGurugramAreaBySlug,
-} from '@/data/gurugram-areas'
+import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
 import {
   CEREBRUM_METRICS,
   GURUGRAM_AREA_COORDINATES,
@@ -641,25 +638,6 @@ export default async function GurugramAreaPage({ params }: PageProps) {
     },
   }
 
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': 'https://cerebrumbiologyacademy.com/#website',
-    url: 'https://cerebrumbiologyacademy.com',
-    name: 'Cerebrum Biology Academy',
-    description: 'Best NEET Biology Coaching in Gurugram with 98% success rate',
-    publisher: { '@id': organizationId },
-    inLanguage: 'en-IN',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
-    },
-  }
-
   return (
     <>
       <AreaPageContent area={area} areaSlug={areaSlug} />
@@ -716,12 +694,6 @@ export default async function GurugramAreaPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(speakableSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
         }}
       />
     </>

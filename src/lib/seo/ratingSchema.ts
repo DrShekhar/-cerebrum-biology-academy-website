@@ -172,7 +172,7 @@ export const courseRatings = {
     description:
       'Comprehensive 2-year NEET Biology preparation for Class 11 students with integrated board exam preparation.',
     provider: 'Cerebrum Biology Academy',
-    url: 'https://cerebrumbiologyacademy.com/courses/two-year-program',
+    url: 'https://cerebrumbiologyacademy.com/courses/neet-complete',
     ratingValue: 5.0,
     ratingCount: 32,
     reviewCount: 32,
@@ -183,7 +183,7 @@ export const courseRatings = {
     description:
       'Dedicated 1-year program for NEET repeaters with focused preparation, psychological support, and daily tests.',
     provider: 'Cerebrum Biology Academy',
-    url: 'https://cerebrumbiologyacademy.com/courses/dropper-course',
+    url: 'https://cerebrumbiologyacademy.com/courses/neet-dropper',
     ratingValue: 5.0,
     ratingCount: 32,
     reviewCount: 32,

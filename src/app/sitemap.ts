@@ -44,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-
   const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -164,7 +163,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/biology-notes-for-neet/the-living-world`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
-      priority: 0.80,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/biology-notes-for-neet/plant-kingdom`,
@@ -1548,42 +1547,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/biology-topics/cell-biology`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-topics/genetics-evolution`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-topics/human-physiology`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-topics/plant-physiology`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-topics/ecology-environment`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-topics/biotechnology`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
     },
     // Ghaziabad SEO Landing Pages - HIGH PRIORITY
     {
@@ -5912,13 +5875,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-jalandhar-punjab`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Punjab education hub
+      priority: 0.9, // Punjab education hub
     },
     {
       url: `${baseUrl}/neet-coaching-amritsar-punjab`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Holy city, GMC Amritsar
+      priority: 0.9, // Holy city, GMC Amritsar
     },
     {
       url: `${baseUrl}/neet-coaching-zirakpur-punjab`,
@@ -5955,7 +5918,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-zirakpur`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Zirakpur dedicated page - VIP Road
+      priority: 0.9, // Zirakpur dedicated page - VIP Road
     },
     {
       url: `${baseUrl}/neet-coaching-chandigarh-sector-17`,
@@ -6004,13 +5967,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-patiala`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Patiala - Royal city, GMC Patiala hometown
+      priority: 0.9, // Patiala - Royal city, GMC Patiala hometown
     },
     {
       url: `${baseUrl}/neet-coaching-karnal`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Karnal - KCGMC hometown, Haryana education hub
+      priority: 0.9, // Karnal - KCGMC hometown, Haryana education hub
     },
     // ===== HIMACHAL PRADESH EXPANSION (Jan 2026) =====
     {
@@ -6023,25 +5986,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-dharamshala`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Dharamshala - Kangra district, RPGMC Tanda nearby, tourist hub
+      priority: 0.9, // Dharamshala - Kangra district, RPGMC Tanda nearby, tourist hub
     },
     {
       url: `${baseUrl}/neet-coaching-mandi`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Mandi - SLBSGMC Nerchowk in district, Sadar region
+      priority: 0.9, // Mandi - SLBSGMC Nerchowk in district, Sadar region
     },
     {
       url: `${baseUrl}/neet-coaching-hamirpur`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Hamirpur - HP education hub, 59+ coaching institutes, AIIMS Bilaspur nearby
+      priority: 0.9, // Hamirpur - HP education hub, 59+ coaching institutes, AIIMS Bilaspur nearby
     },
     {
       url: `${baseUrl}/neet-coaching-solan`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Solan - MMMC 150 seats, gateway to HP, near Chandigarh
+      priority: 0.9, // Solan - MMMC 150 seats, gateway to HP, near Chandigarh
     },
     // ===== MAHARASHTRA EXPANSION (Jan 2026) =====
     {
@@ -6085,55 +6048,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-thiruvananthapuram`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Kerala capital
+      priority: 0.9, // Kerala capital
     },
     {
       url: `${baseUrl}/neet-coaching-goa`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Goa Medical College
+      priority: 0.9, // Goa Medical College
     },
     {
       url: `${baseUrl}/neet-coaching-kochi`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Kerala commercial hub
+      priority: 0.9, // Kerala commercial hub
     },
     {
       url: `${baseUrl}/neet-coaching-visakhapatnam`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Andhra Pradesh port city
+      priority: 0.9, // Andhra Pradesh port city
     },
     {
       url: `${baseUrl}/neet-coaching-coimbatore`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Tamil Nadu education hub
+      priority: 0.9, // Tamil Nadu education hub
     },
     {
       url: `${baseUrl}/neet-coaching-madurai`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Tamil Nadu heritage city
+      priority: 0.9, // Tamil Nadu heritage city
     },
     {
       url: `${baseUrl}/neet-coaching-nashik`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Maharashtra wine capital
+      priority: 0.9, // Maharashtra wine capital
     },
     {
       url: `${baseUrl}/neet-coaching-trivandrum`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Kerala - Trivandrum alias
+      priority: 0.9, // Kerala - Trivandrum alias
     },
     {
       url: `${baseUrl}/neet-coaching-bhubaneswar`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Odisha capital - AIIMS Bhubaneswar
+      priority: 0.9, // Odisha capital - AIIMS Bhubaneswar
     },
     {
       url: `${baseUrl}/neet-coaching-cuttack`,
@@ -6151,7 +6114,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-vadodara`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // Gujarat Cultural Capital
+      priority: 0.9, // Gujarat Cultural Capital
     },
     {
       url: `${baseUrl}/biology-coaching-nagpur`,
@@ -6238,13 +6201,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/cerebrum-vs-allen-neet-coaching`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // High-intent comparison
+      priority: 0.9, // High-intent comparison
     },
     {
       url: `${baseUrl}/cerebrum-vs-aakash-neet-coaching`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90, // High-intent comparison
+      priority: 0.9, // High-intent comparison
     },
     // MCQ Chapter Pages (Jan 2026 - Week 1 Priority)
     {
@@ -6363,31 +6326,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-rajiv-chowk-metro`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-hauz-khas-metro`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-kashmere-gate-metro`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-botanical-garden-metro`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-huda-city-centre-metro`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
 
     // === Missing pages added for complete sitemap coverage ===
@@ -7153,13 +7116,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-nri-canada`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-nri-australia`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-east-africa`,
@@ -7179,7 +7142,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-dubai-uae`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-abu-dhabi-uae`,
@@ -7235,49 +7198,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/neet-coaching-nri-saudi-arabia`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-nri-qatar`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-nri-oman`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-nri-singapore`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-nri-malaysia`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-nri-uk`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-nri-usa`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/neet-coaching-nri-nepal`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.90,
+      priority: 0.9,
     },
 
     // Phase 1B: NEET Exam Center City Pages (5)
@@ -7568,108 +7531,251 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ============================================
   const missingPages: string[] = [
     // 1-year & 2-year courses
-    '1-year-neet-course-faridabad', '1-year-neet-course-ghaziabad', '1-year-neet-course-gurugram', '1-year-neet-course-noida',
-    '2-year-neet-course-faridabad', '2-year-neet-course-ghaziabad', '2-year-neet-course-gurugram', '2-year-neet-course-noida',
+    '1-year-neet-course-faridabad',
+    '1-year-neet-course-ghaziabad',
+    '1-year-neet-course-gurugram',
+    '1-year-neet-course-noida',
+    '2-year-neet-course-faridabad',
+    '2-year-neet-course-ghaziabad',
+    '2-year-neet-course-gurugram',
+    '2-year-neet-course-noida',
     // Competitor alternatives
-    'aakash-alternative-faridabad', 'aakash-alternative-ghaziabad', 'aakash-alternative-greater-noida', 'aakash-alternative-gurugram', 'aakash-alternative-noida',
-    'allen-alternative-faridabad', 'allen-alternative-ghaziabad', 'allen-alternative-gurugram', 'allen-alternative-noida',
-    'fiitjee-alternative-faridabad', 'fiitjee-alternative-gurugram', 'fiitjee-alternative-noida',
-    'narayana-alternative-faridabad', 'narayana-alternative-gurugram', 'narayana-alternative-noida',
-    'physics-wallah-alternative-faridabad', 'physics-wallah-alternative-gurugram', 'physics-wallah-alternative-noida',
-    'velocity-alternative-faridabad', 'yvs-alternative-faridabad',
-    'cerebrum-vs-aakash', 'cerebrum-vs-allen',
-    'complement-aakash-coaching-faridabad', 'complement-aakash-coaching-gurugram', 'complement-aakash-coaching-noida',
-    'complement-allen-coaching-faridabad', 'complement-allen-coaching-gurugram', 'complement-allen-coaching-noida',
+    'aakash-alternative-faridabad',
+    'aakash-alternative-ghaziabad',
+    'aakash-alternative-greater-noida',
+    'aakash-alternative-gurugram',
+    'aakash-alternative-noida',
+    'allen-alternative-faridabad',
+    'allen-alternative-ghaziabad',
+    'allen-alternative-gurugram',
+    'allen-alternative-noida',
+    'fiitjee-alternative-faridabad',
+    'fiitjee-alternative-gurugram',
+    'fiitjee-alternative-noida',
+    'narayana-alternative-faridabad',
+    'narayana-alternative-gurugram',
+    'narayana-alternative-noida',
+    'physics-wallah-alternative-faridabad',
+    'physics-wallah-alternative-gurugram',
+    'physics-wallah-alternative-noida',
+    'velocity-alternative-faridabad',
+    'yvs-alternative-faridabad',
+    'cerebrum-vs-aakash',
+    'cerebrum-vs-allen',
+    'complement-aakash-coaching-faridabad',
+    'complement-aakash-coaching-gurugram',
+    'complement-aakash-coaching-noida',
+    'complement-allen-coaching-faridabad',
+    'complement-allen-coaching-gurugram',
+    'complement-allen-coaching-noida',
     // Best/top/which SEO pages
-    'best-neet-coaching-faridabad', 'best-neet-coaching-ghaziabad', 'best-neet-coaching-greater-noida', 'best-neet-coaching-gurugram', 'best-neet-coaching-noida',
+    'best-neet-coaching-faridabad',
+    'best-neet-coaching-ghaziabad',
+    'best-neet-coaching-greater-noida',
+    'best-neet-coaching-gurugram',
+    'best-neet-coaching-noida',
     'best-online-coaching-neet-biology',
-    'top-10-neet-coaching-faridabad', 'top-10-neet-coaching-ghaziabad', 'top-10-neet-coaching-greater-noida', 'top-10-neet-coaching-gurugram', 'top-10-neet-coaching-noida',
+    'top-10-neet-coaching-faridabad',
+    'top-10-neet-coaching-ghaziabad',
+    'top-10-neet-coaching-greater-noida',
+    'top-10-neet-coaching-gurugram',
+    'top-10-neet-coaching-noida',
     'top-5-neet-coaching-faridabad',
-    'which-is-better-aakash-or-allen-faridabad', 'which-is-better-aakash-or-allen-noida',
-    'which-neet-coaching-is-best-in-faridabad', 'which-neet-coaching-is-best-in-ghaziabad', 'which-neet-coaching-is-best-in-greater-noida', 'which-neet-coaching-is-best-in-gurugram', 'which-neet-coaching-is-best-in-noida',
+    'which-is-better-aakash-or-allen-faridabad',
+    'which-is-better-aakash-or-allen-noida',
+    'which-neet-coaching-is-best-in-faridabad',
+    'which-neet-coaching-is-best-in-ghaziabad',
+    'which-neet-coaching-is-best-in-greater-noida',
+    'which-neet-coaching-is-best-in-gurugram',
+    'which-neet-coaching-is-best-in-noida',
     // Affordable coaching
-    'affordable-neet-coaching-faridabad', 'affordable-neet-coaching-ghaziabad', 'affordable-neet-coaching-greater-noida', 'affordable-neet-coaching-gurugram', 'affordable-neet-coaching-noida',
+    'affordable-neet-coaching-faridabad',
+    'affordable-neet-coaching-ghaziabad',
+    'affordable-neet-coaching-greater-noida',
+    'affordable-neet-coaching-gurugram',
+    'affordable-neet-coaching-noida',
     // Biology coaching/tutor locations
-    'biology-classes-east-delhi', 'biology-classes-greater-noida',
-    'biology-coaching-defence-colony', 'biology-coaching-dwarka', 'biology-coaching-east-of-kailash-delhi', 'biology-coaching-greater-kailash', 'biology-coaching-hauz-khas', 'biology-coaching-model-town', 'biology-coaching-panchsheel', 'biology-coaching-vasant-kunj',
+    'biology-classes-east-delhi',
+    'biology-classes-greater-noida',
+    'biology-coaching-defence-colony',
+    'biology-coaching-dwarka',
+    'biology-coaching-east-of-kailash-delhi',
+    'biology-coaching-greater-kailash',
+    'biology-coaching-hauz-khas',
+    'biology-coaching-model-town',
+    'biology-coaching-panchsheel',
+    'biology-coaching-vasant-kunj',
     'biology-olympiad-coaching-gurugram',
-    'biology-tutor-defence-colony', 'biology-tutor-hauz-khas', 'biology-tutor-malviya-nagar',
+    'biology-tutor-defence-colony',
+    'biology-tutor-hauz-khas',
+    'biology-tutor-malviya-nagar',
     // Fee & scholarship pages
-    'neet-coaching-fees-faridabad', 'neet-coaching-fees-ghaziabad', 'neet-coaching-fees-greater-noida',
+    'neet-coaching-fees-faridabad',
+    'neet-coaching-fees-ghaziabad',
+    'neet-coaching-fees-greater-noida',
     'how-much-fees-for-neet-coaching-faridabad',
-    'neet-scholarship-faridabad', 'neet-scholarship-ghaziabad', 'neet-scholarship-greater-noida', 'neet-scholarship-gurugram', 'neet-scholarship-noida',
+    'neet-scholarship-faridabad',
+    'neet-scholarship-ghaziabad',
+    'neet-scholarship-greater-noida',
+    'neet-scholarship-gurugram',
+    'neet-scholarship-noida',
     // Near me pages
-    'neet-coaching-near-me-faridabad', 'neet-coaching-near-me-ghaziabad', 'neet-coaching-near-me-greater-noida', 'neet-coaching-near-me-noida',
+    'neet-coaching-near-me-faridabad',
+    'neet-coaching-near-me-ghaziabad',
+    'neet-coaching-near-me-greater-noida',
+    'neet-coaching-near-me-noida',
     // Crash course
-    'neet-crash-course-faridabad', 'neet-crash-course-ghaziabad', 'neet-crash-course-greater-noida', 'neet-crash-course-gurugram', 'neet-crash-course-noida',
+    'neet-crash-course-faridabad',
+    'neet-crash-course-ghaziabad',
+    'neet-crash-course-greater-noida',
+    'neet-crash-course-gurugram',
+    'neet-crash-course-noida',
     // Dropper batches
-    'neet-dropper-batch', 'neet-dropper-batch-2026-27-gurugram', 'neet-dropper-batch-faridabad', 'neet-dropper-batch-ghaziabad', 'neet-dropper-batch-greater-noida', 'neet-dropper-batch-noida',
+    'neet-dropper-batch',
+    'neet-dropper-batch-2026-27-gurugram',
+    'neet-dropper-batch-faridabad',
+    'neet-dropper-batch-ghaziabad',
+    'neet-dropper-batch-greater-noida',
+    'neet-dropper-batch-noida',
     'one-year-dropper-course-gurugram',
     // Evening & weekend batches
-    'neet-evening-batch-faridabad', 'neet-evening-batch-ghaziabad', 'neet-evening-batch-gurugram', 'neet-evening-batch-noida',
-    'neet-weekend-batch-faridabad', 'neet-weekend-batch-ghaziabad', 'neet-weekend-batch-gurugram', 'neet-weekend-batch-noida',
+    'neet-evening-batch-faridabad',
+    'neet-evening-batch-ghaziabad',
+    'neet-evening-batch-gurugram',
+    'neet-evening-batch-noida',
+    'neet-weekend-batch-faridabad',
+    'neet-weekend-batch-ghaziabad',
+    'neet-weekend-batch-gurugram',
+    'neet-weekend-batch-noida',
     // Foundation classes
-    'neet-foundation-class-9-faridabad', 'neet-foundation-class-9-ghaziabad', 'neet-foundation-class-9-greater-noida', 'neet-foundation-class-9-gurugram', 'neet-foundation-class-9-noida',
-    'neet-foundation-class-10-faridabad', 'neet-foundation-class-10-ghaziabad', 'neet-foundation-class-10-greater-noida', 'neet-foundation-class-10-gurugram', 'neet-foundation-class-10-noida',
+    'neet-foundation-class-9-faridabad',
+    'neet-foundation-class-9-ghaziabad',
+    'neet-foundation-class-9-greater-noida',
+    'neet-foundation-class-9-gurugram',
+    'neet-foundation-class-9-noida',
+    'neet-foundation-class-10-faridabad',
+    'neet-foundation-class-10-ghaziabad',
+    'neet-foundation-class-10-greater-noida',
+    'neet-foundation-class-10-gurugram',
+    'neet-foundation-class-10-noida',
     // Test series
-    'neet-test-series-faridabad', 'neet-test-series-ghaziabad', 'neet-test-series-greater-noida', 'neet-test-series-gurugram', 'neet-test-series-noida',
+    'neet-test-series-faridabad',
+    'neet-test-series-ghaziabad',
+    'neet-test-series-greater-noida',
+    'neet-test-series-gurugram',
+    'neet-test-series-noida',
     'test-series-schedule',
     // Revision batches
-    'neet-revision-batch-faridabad', 'neet-revision-batch-gurugram',
+    'neet-revision-batch-faridabad',
+    'neet-revision-batch-gurugram',
     // Online coaching
-    'online-neet-classes-faridabad', 'online-neet-classes-gurugram',
-    'online-neet-coaching-faridabad', 'online-neet-coaching-ghaziabad', 'online-neet-coaching-greater-noida',
+    'online-neet-classes-faridabad',
+    'online-neet-classes-gurugram',
+    'online-neet-coaching-faridabad',
+    'online-neet-coaching-ghaziabad',
+    'online-neet-coaching-greater-noida',
     // Coaching necessity / comparison pages
-    'is-coaching-necessary-for-neet-biology', 'is-coaching-necessary-for-neet-faridabad', 'is-coaching-necessary-for-neet-ghaziabad', 'is-coaching-necessary-for-neet-noida',
+    'is-coaching-necessary-for-neet-biology',
+    'is-coaching-necessary-for-neet-faridabad',
+    'is-coaching-necessary-for-neet-ghaziabad',
+    'is-coaching-necessary-for-neet-noida',
     'is-online-neet-coaching-effective',
     // Content pages
-    'neet-ecology-important-questions', 'neet-genetics-preparation', 'neet-human-physiology-guide',
-    'neet-preparation-roadmap', 'neet-study-material-gurugram',
-    'how-to-score-340-in-neet-biology', 'neet-ug-2026', 'neet-updates',
+    'neet-ecology-important-questions',
+    'neet-genetics-preparation',
+    'neet-human-physiology-guide',
+    'neet-preparation-roadmap',
+    'neet-study-material-gurugram',
+    'how-to-score-340-in-neet-biology',
+    'neet-ug-2026',
+    'neet-updates',
     // Free demo classes
-    'free-neet-demo-class-faridabad', 'free-neet-demo-class-ghaziabad', 'free-neet-demo-class-greater-noida', 'free-neet-demo-class-noida',
+    'free-neet-demo-class-faridabad',
+    'free-neet-demo-class-ghaziabad',
+    'free-neet-demo-class-greater-noida',
+    'free-neet-demo-class-noida',
     'book-free-demo',
     // Board-specific
-    'haryana-board-neet-coaching-gurugram', 'icse-neet-coaching-gurugram',
+    'haryana-board-neet-coaching-gurugram',
+    'icse-neet-coaching-gurugram',
     // Olympiad
-    'ibo-preparation-gurugram', 'nseb-coaching-gurugram',
+    'ibo-preparation-gurugram',
+    'nseb-coaching-gurugram',
     // Other
-    'dr-shekhar-youtube-channel', 'neet-coaching', 'reviews', 'support', 'terms',
+    'dr-shekhar-youtube-channel',
+    'neet-coaching',
+    'reviews',
+    'support',
+    'terms',
     // School-specific landing pages
-    'neet-coaching-sharda-greater-noida-students', 'neet-coaching-modern-school-faridabad-students',
-    'neet-coaching-amity-noida-students', 'neet-coaching-gd-goenka-faridabad-students',
-    'neet-coaching-cambridge-ghaziabad-students', 'neet-coaching-apeejay-faridabad-students',
-    'neet-coaching-dps-indirapuram-students', 'neet-coaching-kv-noida-students',
-    'neet-coaching-presidium-ghaziabad-students', 'neet-coaching-dps-noida-students',
-    'neet-coaching-kr-mangalam-ghaziabad-students', 'neet-coaching-gd-goenka-ghaziabad-students',
-    'neet-coaching-aggarwal-faridabad-students', 'neet-coaching-dps-greater-noida-students',
-    'neet-coaching-ryan-noida-students', 'neet-coaching-pathways-noida-students',
-    'neet-coaching-dav-faridabad-students', 'neet-coaching-greenfields-faridabad-students',
-    'neet-coaching-somerville-noida-students', 'neet-coaching-mvn-faridabad-students',
-    'neet-coaching-mris-faridabad-students', 'neet-coaching-manav-rachna-faridabad-students',
-    'neet-coaching-lotus-valley-noida-students', 'neet-coaching-dps-faridabad-students',
+    'neet-coaching-sharda-greater-noida-students',
+    'neet-coaching-modern-school-faridabad-students',
+    'neet-coaching-amity-noida-students',
+    'neet-coaching-gd-goenka-faridabad-students',
+    'neet-coaching-cambridge-ghaziabad-students',
+    'neet-coaching-apeejay-faridabad-students',
+    'neet-coaching-dps-indirapuram-students',
+    'neet-coaching-kv-noida-students',
+    'neet-coaching-presidium-ghaziabad-students',
+    'neet-coaching-dps-noida-students',
+    'neet-coaching-kr-mangalam-ghaziabad-students',
+    'neet-coaching-gd-goenka-ghaziabad-students',
+    'neet-coaching-aggarwal-faridabad-students',
+    'neet-coaching-dps-greater-noida-students',
+    'neet-coaching-ryan-noida-students',
+    'neet-coaching-pathways-noida-students',
+    'neet-coaching-dav-faridabad-students',
+    'neet-coaching-greenfields-faridabad-students',
+    'neet-coaching-somerville-noida-students',
+    'neet-coaching-mvn-faridabad-students',
+    'neet-coaching-mris-faridabad-students',
+    'neet-coaching-manav-rachna-faridabad-students',
+    'neet-coaching-lotus-valley-noida-students',
+    'neet-coaching-dps-faridabad-students',
     'neet-coaching-jaypee-noida-students',
     // Board-specific pages
-    'boards/west-bengal-hs', 'boards/up-intermediate', 'boards/gujarat-hsc',
-    'boards/rajasthan-board', 'boards/tamil-nadu-hsc', 'boards/maharashtra-hsc',
-    'boards/kerala-hse', 'boards/telangana-intermediate', 'boards/karnataka-puc',
+    'boards/west-bengal-hs',
+    'boards/up-intermediate',
+    'boards/gujarat-hsc',
+    'boards/rajasthan-board',
+    'boards/tamil-nadu-hsc',
+    'boards/maharashtra-hsc',
+    'boards/kerala-hse',
+    'boards/telangana-intermediate',
+    'boards/karnataka-puc',
     // Testimonial sub-pages
-    'testimonials/sadhna-sirin-neet-2023-topper', 'testimonials/neet-success-story',
+    'testimonials/sadhna-sirin-neet-2023-topper',
+    'testimonials/neet-success-story',
     // College predictor sub-pages
-    'neet-college-predictor/government-medical-colleges', 'neet-college-predictor/low-fees-medical-colleges',
+    'neet-college-predictor/government-medical-colleges',
+    'neet-college-predictor/low-fees-medical-colleges',
     // Index/directory pages
-    'states', 'all-locations', 'batch-types',
+    'states',
+    'all-locations',
+    'batch-types',
     // Language pages
-    'hi', 'ta',
+    'hi',
+    'ta',
     // Public tools
-    'book-demo', 'find-center', 'calculator', 'whatsapp-course-selector',
-    'neet-tools/omr-checker', 'neet-tools/olympiad-practice',
-    'neet-tools/quiz-competition', 'neet-tools/quiz-competition/create',
+    'book-demo',
+    'find-center',
+    'calculator',
+    'whatsapp-course-selector',
+    'neet-tools/omr-checker',
+    'neet-tools/olympiad-practice',
+    'neet-tools/quiz-competition',
+    'neet-tools/quiz-competition/create',
     // Resources sub-pages
-    'resources/test-generator', 'resources/free', 'resources/mock-tests',
-    'resources/notes', 'resources/doubt', 'resources/questions',
+    'resources/test-generator',
+    'resources/free',
+    'resources/mock-tests',
+    'resources/notes',
+    'resources/doubt',
+    'resources/questions',
     // MCQ sub-pages
-    'neet-biology-mcq/pyq-2024', 'neet-biology-mcq/analytics', 'neet-biology-mcq/contribute',
+    'neet-biology-mcq/pyq-2024',
+    'neet-biology-mcq/analytics',
+    'neet-biology-mcq/contribute',
     // Support
     'support/help-center',
     // Study tools
@@ -7763,7 +7869,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Metro station pages
-  const metroStations = ['botanical-garden', 'noida-city-centre', 'sector-18-metro', 'sector-137-metro', 'pari-chowk-metro']
+  const metroStations = [
+    'botanical-garden',
+    'noida-city-centre',
+    'sector-18-metro',
+    'sector-137-metro',
+    'pari-chowk-metro',
+  ]
   const metroRoutes: MetadataRoute.Sitemap = metroStations.map((station) => ({
     url: `${baseUrl}/neet-coaching-near-metro/${station}`,
     lastModified: lastUpdated,
@@ -7772,7 +7884,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Noida society pages
-  const noidaSocieties = ['godrej-woods', 'mahagun-moderne', 'supertech-eco-village', 'logix-blossom-county', 'ace-city', 'gulshan-dynasty', 'eldeco-utopia', 'paras-tierea', 'prateek-grand-city']
+  const noidaSocieties = [
+    'godrej-woods',
+    'mahagun-moderne',
+    'supertech-eco-village',
+    'logix-blossom-county',
+    'ace-city',
+    'gulshan-dynasty',
+    'eldeco-utopia',
+    'paras-tierea',
+    'prateek-grand-city',
+  ]
   const societyRoutes: MetadataRoute.Sitemap = noidaSocieties.map((society) => ({
     url: `${baseUrl}/neet-coaching-noida-society/${society}`,
     lastModified: lastUpdated,
@@ -7844,7 +7966,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
   const tagRoutes: MetadataRoute.Sitemap = getAllTags().map(({ tag }) => ({
-    url: `${baseUrl}/blog/tag/${tag}`,
+    url: `${baseUrl}/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`,
     lastModified: lastUpdated,
     changeFrequency: 'weekly' as const,
     priority: 0.5,
@@ -7876,12 +7998,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Biology notes for NEET chapter pages
   const biologyNotesChapters = [
-    'molecular-basis-of-inheritance', 'principles-of-inheritance-and-variation',
-    'human-physiology', 'evolution', 'ecology', 'cell-the-unit-of-life',
-    'biomolecules', 'cell-cycle-and-cell-division', 'reproduction',
-    'biotechnology', 'biological-classification', 'the-living-world',
-    'plant-kingdom', 'animal-kingdom', 'morphology-of-flowering-plants',
-    'anatomy-of-flowering-plants', 'structural-organisation-in-animals',
+    'molecular-basis-of-inheritance',
+    'principles-of-inheritance-and-variation',
+    'human-physiology',
+    'evolution',
+    'ecology',
+    'cell-the-unit-of-life',
+    'biomolecules',
+    'cell-cycle-and-cell-division',
+    'reproduction',
+    'biotechnology',
+    'biological-classification',
+    'the-living-world',
+    'plant-kingdom',
+    'animal-kingdom',
+    'morphology-of-flowering-plants',
+    'anatomy-of-flowering-plants',
+    'structural-organisation-in-animals',
     'plant-physiology',
   ]
   const biologyNotesRoutes: MetadataRoute.Sitemap = biologyNotesChapters.map((chapter) => ({
@@ -7911,7 +8044,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // College predictor pages (tier 1 & 2 colleges)
   const collegeSlugify = (name: string) =>
-    name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim()
+    name
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .trim()
   const topColleges = (collegesData as { name: string; tier: number }[]).filter(
     (c) => c.tier === 1 || c.tier === 2
   )

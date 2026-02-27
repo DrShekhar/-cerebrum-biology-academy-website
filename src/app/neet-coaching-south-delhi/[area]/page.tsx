@@ -82,7 +82,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     'coaching-hub': ['coaching capital', 'IIT area coaching', 'competitive exam preparation'],
     posh: ['premium coaching', 'elite school students', 'affluent area NEET'],
     'ultra-premium': ['exclusive coaching', 'Lutyens Delhi NEET', 'personalized NEET prep'],
-    'govt-colony': ['govt officers family coaching', 'affordable NEET coaching', 'central govt colony'],
+    'govt-colony': [
+      'govt officers family coaching',
+      'affordable NEET coaching',
+      'central govt colony',
+    ],
     'student-hub': ['student area coaching', 'PG students NEET', 'hostel area coaching'],
     gated: ['gated colony coaching', 'DDA complex NEET', 'residential coaching'],
     residential: ['residential area coaching', 'family area NEET', 'local NEET coaching'],
@@ -293,7 +297,8 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
           itemOffered: {
             '@type': 'Course',
             name: 'Class 11+12 Comprehensive NEET Biology',
-            description: 'Complete 2-year NEET Biology preparation program with NCERT mastery and advanced problem solving',
+            description:
+              'Complete 2-year NEET Biology preparation program with NCERT mastery and advanced problem solving',
             provider: { '@id': organizationId },
             educationalLevel: 'Class 11-12',
             timeRequired: 'P2Y',
@@ -317,7 +322,8 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
           itemOffered: {
             '@type': 'Course',
             name: 'Class 12 Intensive NEET Biology',
-            description: '1-year intensive NEET Biology course with focus on board + NEET integration',
+            description:
+              '1-year intensive NEET Biology course with focus on board + NEET integration',
             provider: { '@id': organizationId },
             educationalLevel: 'Class 12',
             timeRequired: 'P1Y',
@@ -341,7 +347,8 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
           itemOffered: {
             '@type': 'Course',
             name: 'Dropper Batch NEET Biology',
-            description: '1-year comprehensive revision course for NEET repeaters with daily tests and personal mentoring',
+            description:
+              '1-year comprehensive revision course for NEET repeaters with daily tests and personal mentoring',
             provider: { '@id': organizationId },
             educationalLevel: '12th Pass / Dropper',
             timeRequired: 'P1Y',
@@ -622,26 +629,8 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
       ],
     },
     mainEntity: { '@id': localBusinessId },
-    primaryImageOfPage: { '@id': `https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/${areaSlug}#primaryimage` },
-  }
-
-  // WebSite Schema with SearchAction for sitelinks searchbox
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': 'https://cerebrumbiologyacademy.com/#website',
-    url: 'https://cerebrumbiologyacademy.com',
-    name: 'Cerebrum Biology Academy',
-    description: 'Best NEET Biology Coaching in South Delhi with 98% success rate',
-    publisher: { '@id': organizationId },
-    inLanguage: 'en-IN',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
-      },
-      'query-input': 'required name=search_term_string',
+    primaryImageOfPage: {
+      '@id': `https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/${areaSlug}#primaryimage`,
     },
   }
 
@@ -702,12 +691,6 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(speakableSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
         }}
       />
     </>

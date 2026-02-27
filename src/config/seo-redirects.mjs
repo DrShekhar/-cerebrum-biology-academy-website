@@ -824,6 +824,16 @@ export const gsc404CleanupRedirects = [
   { source: '/centres', destination: '/neet-coaching', permanent: true },
   { source: '/branches', destination: '/neet-coaching', permanent: true },
 
+  // --- /centers/ phantom routes (old URL pattern, now /locations/) ---
+  { source: '/centers', destination: '/neet-coaching', permanent: true },
+  { source: '/centers/:path*', destination: '/neet-coaching', permanent: true },
+
+  // --- Standalone pages that moved or don't exist ---
+  { source: '/scholarships', destination: '/scholarship', permanent: true },
+  { source: '/test-series', destination: '/test-series-schedule', permanent: true },
+  { source: '/boards/state', destination: '/boards/state-boards', permanent: true },
+  { source: '/parent-guide', destination: '/about', permanent: true },
+
   // --- Sitemap variants ---
   { source: '/sitemap', destination: '/sitemap.xml', permanent: true },
 

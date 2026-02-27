@@ -214,7 +214,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         'Master NEET Biology in just 45 days! Intensive course with complete syllabus coverage, daily tests, and expert guidance.',
       highlightedText: '45 Days',
       ctaText: 'Start 45-Day Journey',
-      ctaLink: '/courses/45-day-course',
+      ctaLink: '/courses/neet-crash-course',
     },
     painPoints: {
       title: 'Perfect For You If...',
@@ -329,11 +329,11 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       subtitle: 'Transform your NEET score in 45 days',
       primaryButton: {
         text: 'Enroll Now',
-        link: '/courses/45-day-course',
+        link: '/courses/neet-crash-course',
       },
       secondaryButton: {
         text: 'View Schedule',
-        link: '/courses/45-day-course#schedule',
+        link: '/courses/neet-crash-course#schedule',
       },
     },
     toolsCTA: crashCourseToolsCTA,
