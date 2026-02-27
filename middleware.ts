@@ -526,12 +526,17 @@ export default async function middleware(req: NextRequest) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow, nosnippet, noarchive, noimageindex')
   }
 
-  // SEO: Add noindex for pages with query params to prevent duplicate content
-  const searchQuery = req.nextUrl.search
-  const pagesWithQueryParamDuplicates = ['/blog', '/courses', '/demo-booking', '/enrollments']
+  // SEO: Add noindex ONLY for search/filter query params (not pagination)
+  const searchParams = req.nextUrl.searchParams
+  const hasSearchQuery = searchParams.has('search') || searchParams.has('q')
+  const hasFilterQuery = searchParams.has('source')
+  if (hasSearchQuery || hasFilterQuery) {
+    response.headers.set('X-Robots-Tag', 'noindex, follow')
+  }
+  // Noindex for demo-booking and enrollment query params (transactional pages)
   if (
-    searchQuery &&
-    pagesWithQueryParamDuplicates.some((p) => pathname === p || pathname.startsWith(p + '/'))
+    req.nextUrl.search &&
+    (pathname.startsWith('/demo-booking') || pathname.startsWith('/enrollments'))
   ) {
     response.headers.set('X-Robots-Tag', 'noindex, follow')
   }

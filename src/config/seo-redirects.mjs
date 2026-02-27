@@ -1010,6 +1010,74 @@ export const gsc404CleanupRedirects = [
   { source: '/support/help-center', destination: '/support', permanent: true },
   { source: '/ncert-solutions', destination: '/biology-notes-for-neet', permanent: true },
 
+  // --- Feb 27 crawl batch 2: more non-existent pages ---
+
+  // biology-notes chapter sub-routes (redirect to biology-notes-for-neet)
+  { source: '/biology-notes/locomotion-movement', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/biology-notes/animal-kingdom', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/biology-notes/reproductive-health', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/biology-notes/breathing-exchange-gases', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/biology-notes/excretory-products', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/biology-notes/structural-organisation-animals', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/biology-notes/human-health-disease', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/biology-notes/chemical-coordination', destination: '/biology-notes-for-neet', permanent: true },
+
+  // More standalone biology-classes pages that don't exist
+  { source: '/biology-classes-bawal', destination: '/biology-classes', permanent: true },
+  { source: '/biology-classes-dharuhera', destination: '/biology-classes', permanent: true },
+  { source: '/biology-classes-dc-chowk-rohini', destination: '/biology-classes-rohini', permanent: true },
+  { source: '/biology-classes-noida-sector-62', destination: '/biology-classes-noida', permanent: true },
+  { source: '/biology-classes-gurgaon-sector-82', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-gurgaon-sector-50', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-gurgaon-sector-14', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-gurgaon-sector-4', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-rohini-sector-5', destination: '/biology-classes-rohini', permanent: true },
+  { source: '/biology-classes-janakpuri', destination: '/biology-classes', permanent: true },
+  { source: '/biology-classes-nirman-vihar', destination: '/biology-classes', permanent: true },
+  { source: '/biology-classes-rajinder-nagar', destination: '/biology-classes', permanent: true },
+  { source: '/biology-classes-sushant-lok-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-golf-course-extension-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-biology-class-12-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-biology-class-11-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-biology-class-9-10-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-biology-tuition-ryan-international', destination: '/biology-classes', permanent: true },
+  { source: '/biology-classes-biology-tutor-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-neet-droppers-batch-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-neet-coaching-golf-course-road-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-neet-coaching-dlf-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-neet-coaching-nirvana-country-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-classes-neet-coaching-pathways-school', destination: '/biology-classes', permanent: true },
+
+  // Olympiad preparation pages
+  { source: '/cnbo-preparation', destination: '/biology-olympiad-preparation', permanent: true },
+  { source: '/sbo-preparation', destination: '/biology-olympiad-preparation', permanent: true },
+  { source: '/asob-preparation', destination: '/biology-olympiad-preparation', permanent: true },
+
+  // School-specific coaching pages
+  { source: '/neet-coaching-pathways-gurgaon-students', destination: '/neet-coaching', permanent: true },
+  { source: '/neet-coaching-springdales-students', destination: '/neet-coaching', permanent: true },
+
+  // Standalone pages
+  { source: '/hr', destination: '/', permanent: true },
+  { source: '/hour', destination: '/', permanent: true },
+  { source: '/free-biology-quiz', destination: '/neet-biology-mcq', permanent: true },
+  { source: '/neet-droppers-batch-delhi', destination: '/courses/neet-dropper', permanent: true },
+  { source: '/courses/neet', destination: '/courses', permanent: true },
+  { source: '/courses/weekend-batch', destination: '/courses', permanent: true },
+  { source: '/courses/intensive-neet-biology', destination: '/courses', permanent: true },
+  { source: '/fees', destination: '/pricing', permanent: true },
+  { source: '/neet-biology-tutor-droppers', destination: '/biology-tutor', permanent: true },
+  { source: '/biology-tutor-delhi', destination: '/biology-tutor', permanent: true },
+  { source: '/portal', destination: '/sign-in', permanent: true },
+  { source: '/blog/management-quota-mbbs-fees-process-complete-guide', destination: '/blog', permanent: true },
+
+  // More resources sub-pages
+  { source: '/resources/biomolecules-notes', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/resources/classification-notes', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/resources/morphology-notes', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/resources/revision-notes', destination: '/biology-notes-for-neet', permanent: true },
+  { source: '/resources/diagrams', destination: '/resources', permanent: true },
+
   // --- Sitemap variants ---
   { source: '/sitemap', destination: '/sitemap.xml', permanent: true },
 
