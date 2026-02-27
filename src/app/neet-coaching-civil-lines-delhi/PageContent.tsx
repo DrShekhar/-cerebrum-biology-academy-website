@@ -31,6 +31,7 @@ import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
+import { VideoSchema } from '@/components/seo/StructuredData'
 
 interface FAQ {
   question: string
@@ -1028,6 +1029,33 @@ export default function PageContent({ faqs }: PageContentProps) {
       <PricingSection cityName="Civil Lines" />
       <CostComparisonSection cityName="Civil Lines" />
       <RelatedCityLinks currentCity="civil-lines-delhi" variant="default" />
+      <VideoSchema
+        name="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper Testimonial"
+        description="Sadhna Sirin shares her journey to scoring 695/720 in NEET 2023 with 100 Percentile in Biology. Learn how Cerebrum Biology Academy's teaching methods helped her achieve this exceptional result."
+        thumbnailUrl="https://i.ytimg.com/vi/bk6wQCh6b9w/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT8M30S"
+        contentUrl="https://www.youtube.com/watch?v=bk6wQCh6b9w"
+        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+      />
+      <VideoSchema
+        name="Abhisek - AFMC Pune Selection Success Story"
+        description="Abhisek shares his experience preparing for NEET and AFMC entrance with Cerebrum Biology Academy. Hear how personalized mentoring helped him crack Armed Forces Medical College Pune."
+        thumbnailUrl="https://i.ytimg.com/vi/NfhkGqOQXzk/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT6M45S"
+        contentUrl="https://www.youtube.com/watch?v=NfhkGqOQXzk"
+        embedUrl="https://www.youtube.com/embed/NfhkGqOQXzk"
+      />
+      <VideoSchema
+        name="Nishita - Medical College Admission in 6 Months"
+        description="Nishita shares how the 6-month intensive NEET program at Cerebrum Biology Academy helped her secure admission to a medical college. An inspiring success story for NEET aspirants."
+        thumbnailUrl="https://i.ytimg.com/vi/t5F8RBuHITM/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT5M20S"
+        contentUrl="https://www.youtube.com/watch?v=t5F8RBuHITM"
+        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
+      />
     </div>
   )
 }

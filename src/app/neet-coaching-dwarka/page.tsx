@@ -22,6 +22,7 @@ import {
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
+import { VideoSchema } from '@/components/seo/StructuredData'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -117,14 +118,54 @@ const faqStructuredData = {
 }
 
 const dwarkaAreas = [
-  { name: 'Dwarka Sector 4', distance: '30 min via Metro', description: 'Near Dwarka Mor Metro', link: '/neet-coaching-dwarka-sector-4' },
-  { name: 'Dwarka Sector 6', distance: '28 min via Metro', description: 'Near Dwarka Sector 9 Metro', link: '/neet-coaching-dwarka-sector-6' },
-  { name: 'Dwarka Sector 10', distance: '25 min via Metro', description: 'Direct Blue Line Access', link: '/neet-coaching-dwarka-sector-10' },
-  { name: 'Dwarka Sector 12', distance: '30 min via Metro', description: 'Near Dwarka Sector 14 Metro', link: '/neet-coaching-dwarka-sector-12' },
-  { name: 'Dwarka Sector 21', distance: '35 min via Metro', description: 'Near IGI Airport', link: '/neet-coaching-dwarka-sector-21' },
-  { name: 'Dwarka Sector 22', distance: '35 min via Metro', description: 'Near Dwarka Sector 21 Metro', link: '/neet-coaching-dwarka-sector-22' },
-  { name: 'Uttam Nagar', distance: '35 min via Metro', description: 'Blue Line Connection', link: '/neet-coaching-uttam-nagar' },
-  { name: 'Janakpuri', distance: '30 min via Metro', description: 'Magenta + Yellow Line', link: '/neet-coaching-janakpuri' },
+  {
+    name: 'Dwarka Sector 4',
+    distance: '30 min via Metro',
+    description: 'Near Dwarka Mor Metro',
+    link: '/neet-coaching-dwarka-sector-4',
+  },
+  {
+    name: 'Dwarka Sector 6',
+    distance: '28 min via Metro',
+    description: 'Near Dwarka Sector 9 Metro',
+    link: '/neet-coaching-dwarka-sector-6',
+  },
+  {
+    name: 'Dwarka Sector 10',
+    distance: '25 min via Metro',
+    description: 'Direct Blue Line Access',
+    link: '/neet-coaching-dwarka-sector-10',
+  },
+  {
+    name: 'Dwarka Sector 12',
+    distance: '30 min via Metro',
+    description: 'Near Dwarka Sector 14 Metro',
+    link: '/neet-coaching-dwarka-sector-12',
+  },
+  {
+    name: 'Dwarka Sector 21',
+    distance: '35 min via Metro',
+    description: 'Near IGI Airport',
+    link: '/neet-coaching-dwarka-sector-21',
+  },
+  {
+    name: 'Dwarka Sector 22',
+    distance: '35 min via Metro',
+    description: 'Near Dwarka Sector 21 Metro',
+    link: '/neet-coaching-dwarka-sector-22',
+  },
+  {
+    name: 'Uttam Nagar',
+    distance: '35 min via Metro',
+    description: 'Blue Line Connection',
+    link: '/neet-coaching-uttam-nagar',
+  },
+  {
+    name: 'Janakpuri',
+    distance: '30 min via Metro',
+    description: 'Magenta + Yellow Line',
+    link: '/neet-coaching-janakpuri',
+  },
 ]
 
 const features = [
@@ -158,7 +199,8 @@ const testimonials = [
     score: '672/720',
     college: 'MAMC Delhi',
     mode: 'Online',
-    quote: 'The online classes were amazing! I saved 2 hours daily on commute and could revise anytime with recorded lectures. Dr. Shekhar Sir explains concepts so clearly. From 510 to 672 - never thought it was possible!',
+    quote:
+      'The online classes were amazing! I saved 2 hours daily on commute and could revise anytime with recorded lectures. Dr. Shekhar Sir explains concepts so clearly. From 510 to 672 - never thought it was possible!',
   },
   {
     name: 'Arjun Malhotra',
@@ -167,7 +209,8 @@ const testimonials = [
     score: '658/720',
     college: 'UCMS Delhi',
     mode: 'Hybrid',
-    quote: 'I chose hybrid mode - weekends at Rohini center, weekdays online. The metro journey was worth it for the quality of teaching. Small batches meant I could ask doubts anytime. Best decision of my life!',
+    quote:
+      'I chose hybrid mode - weekends at Rohini center, weekdays online. The metro journey was worth it for the quality of teaching. Small batches meant I could ask doubts anytime. Best decision of my life!',
   },
   {
     name: 'Sneha Gupta',
@@ -176,7 +219,8 @@ const testimonials = [
     score: '645/720',
     college: 'LHMC Delhi',
     mode: 'Offline',
-    quote: 'Traveling from Sector 21 was easy via metro. Used the 35-minute journey to revise notes. The personal attention and doubt sessions made all the difference. AIIMS faculty teaching is unmatched!',
+    quote:
+      'Traveling from Sector 21 was easy via metro. Used the 35-minute journey to revise notes. The personal attention and doubt sessions made all the difference. AIIMS faculty teaching is unmatched!',
   },
 ]
 
@@ -214,9 +258,7 @@ export default function NEETCoachingDwarkaPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div
-              className="text-center max-w-4xl mx-auto animate-fadeInUp"
-            >
+            <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-5 h-5" />
                 <span className="font-medium">NEET Coaching for Dwarka Students</span>
@@ -227,13 +269,17 @@ export default function NEETCoachingDwarkaPage() {
               </h1>
 
               <p className="text-xl text-blue-100 mb-4 max-w-3xl mx-auto">
-                Join Cerebrum Biology Academy for specialized NEET biology coaching. Serving all Dwarka sectors
-                with <strong>Online Classes</strong> and <strong>Offline Batches</strong> at our Rohini center (25-35 min via Blue Line Metro).
+                Join Cerebrum Biology Academy for specialized NEET biology coaching. Serving all
+                Dwarka sectors with <strong>Online Classes</strong> and{' '}
+                <strong>Offline Batches</strong> at our Rohini center (25-35 min via Blue Line
+                Metro).
               </p>
 
               <div className="inline-flex items-center bg-green-500/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
                 <Monitor className="w-5 h-5 mr-2 text-green-300" />
-                <span className="text-green-200 font-medium">40+ Dwarka students enrolled in Online Mode</span>
+                <span className="text-green-200 font-medium">
+                  40+ Dwarka students enrolled in Online Mode
+                </span>
               </div>
 
               <div className="flex flex-wrap justify-center gap-4">
@@ -269,15 +315,21 @@ export default function NEETCoachingDwarkaPage() {
             <div className="flex flex-wrap items-center justify-center gap-6 text-center">
               <div className="flex items-center gap-2">
                 <Train className="w-6 h-6 text-blue-600" />
-                <span className="text-gray-700"><strong>25-35 min</strong> from Rohini DC Chauk Center via Metro</span>
+                <span className="text-gray-700">
+                  <strong>25-35 min</strong> from Rohini DC Chauk Center via Metro
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Globe className="w-6 h-6 text-green-600" />
-                <span className="text-gray-700"><strong>Online Classes</strong> available - Study from Home</span>
+                <span className="text-gray-700">
+                  <strong>Online Classes</strong> available - Study from Home
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-6 h-6 text-red-600" />
-                <span className="text-gray-700"><strong>2-min walk</strong> from Rohini West Metro</span>
+                <span className="text-gray-700">
+                  <strong>2-min walk</strong> from Rohini West Metro
+                </span>
               </div>
             </div>
           </div>
@@ -286,15 +338,13 @@ export default function NEETCoachingDwarkaPage() {
         {/* Why Dwarka Students Choose Us */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Why Dwarka Students Choose Cerebrum Biology Academy
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Convenient Blue Line Metro connectivity and flexible online classes make it easy for Dwarka
-                students to access quality NEET coaching with AIIMS Trained faculty.
+                Convenient Blue Line Metro connectivity and flexible online classes make it easy for
+                Dwarka students to access quality NEET coaching with AIIMS Trained faculty.
               </p>
             </div>
 
@@ -318,30 +368,45 @@ export default function NEETCoachingDwarkaPage() {
         {/* Free NEET Tools Section */}
         <section className="py-12 bg-gradient-to-br from-indigo-50 to-white">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-8 animate-fadeInUp"
-            >
+            <div className="text-center mb-8 animate-fadeInUp">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 Free NEET Preparation Tools for Dwarka Students
               </h2>
-              <p className="text-gray-600">Boost your preparation with our AI-powered tools - 100% Free</p>
+              <p className="text-gray-600">
+                Boost your preparation with our AI-powered tools - 100% Free
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              <Link href="/neet-rank-predictor" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+              <Link
+                href="/neet-rank-predictor"
+                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+              >
                 <div className="text-3xl mb-3">📊</div>
                 <h3 className="font-bold text-gray-900 mb-2">NEET Rank Predictor</h3>
-                <p className="text-sm text-gray-600">Predict your All India Rank based on expected score</p>
+                <p className="text-sm text-gray-600">
+                  Predict your All India Rank based on expected score
+                </p>
               </Link>
-              <Link href="/neet-college-predictor" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+              <Link
+                href="/neet-college-predictor"
+                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+              >
                 <div className="text-3xl mb-3">🏥</div>
                 <h3 className="font-bold text-gray-900 mb-2">NEET College Predictor</h3>
-                <p className="text-sm text-gray-600">Find medical colleges based on your NEET rank</p>
+                <p className="text-sm text-gray-600">
+                  Find medical colleges based on your NEET rank
+                </p>
               </Link>
-              <Link href="/neet-biology-mcq" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
+              <Link
+                href="/neet-biology-mcq"
+                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+              >
                 <div className="text-3xl mb-3">📝</div>
                 <h3 className="font-bold text-gray-900 mb-2">NEET Biology MCQs</h3>
-                <p className="text-sm text-gray-600">Practice chapter-wise MCQs with detailed solutions</p>
+                <p className="text-sm text-gray-600">
+                  Practice chapter-wise MCQs with detailed solutions
+                </p>
               </Link>
             </div>
           </div>
@@ -350,22 +415,19 @@ export default function NEETCoachingDwarkaPage() {
         {/* Dwarka Sectors Coverage */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 NEET Coaching for All Dwarka Sectors
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                We serve students from every sector in Dwarka. Click on your area to learn about specific connectivity and batches.
+                We serve students from every sector in Dwarka. Click on your area to learn about
+                specific connectivity and batches.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {dwarkaAreas.map((area, index) => (
-                <div
-                  key={area.name}
-                 className="animate-fadeInUp">
+                <div key={area.name} className="animate-fadeInUp">
                   <Link
                     href={area.link}
                     className="block bg-white rounded-lg p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all"
@@ -386,17 +448,18 @@ export default function NEETCoachingDwarkaPage() {
               ))}
             </div>
 
-            <div
-              className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-200 animate-fadeInUp"
-            >
+            <div className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-200 animate-fadeInUp">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Train className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Metro Route from Dwarka to Rohini Center</h3>
+                  <h3 className="font-bold text-gray-800 mb-2">
+                    Metro Route from Dwarka to Rohini Center
+                  </h3>
                   <p className="text-gray-600">
-                    <strong>Blue Line:</strong> Any Dwarka Sector Metro &rarr; Rajiv Chowk (Interchange)
+                    <strong>Blue Line:</strong> Any Dwarka Sector Metro &rarr; Rajiv Chowk
+                    (Interchange)
                     <br />
                     <strong>Yellow Line:</strong> Rajiv Chowk &rarr; Rohini West
                     <br />
@@ -415,9 +478,7 @@ export default function NEETCoachingDwarkaPage() {
         {/* Success Stories */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Success Stories from Dwarka Students
               </h2>
@@ -439,13 +500,15 @@ export default function NEETCoachingDwarkaPage() {
                     <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold">
                       {testimonial.score}
                     </span>
-                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                      testimonial.mode === 'Online'
-                        ? 'bg-blue-100 text-blue-700'
-                        : testimonial.mode === 'Hybrid'
-                          ? 'bg-purple-100 text-purple-700'
-                          : 'bg-orange-100 text-orange-700'
-                    }`}>
+                    <span
+                      className={`px-2 py-1 rounded text-xs font-medium ${
+                        testimonial.mode === 'Online'
+                          ? 'bg-blue-100 text-blue-700'
+                          : testimonial.mode === 'Hybrid'
+                            ? 'bg-purple-100 text-purple-700'
+                            : 'bg-orange-100 text-orange-700'
+                      }`}
+                    >
                       {testimonial.mode}
                     </span>
                   </div>
@@ -455,7 +518,9 @@ export default function NEETCoachingDwarkaPage() {
                   <div className="border-t border-gray-100 pt-4">
                     <p className="font-semibold text-gray-800">{testimonial.name}</p>
                     <p className="text-gray-600 text-sm">{testimonial.school}</p>
-                    <p className="text-blue-600 text-xs">{testimonial.location} | {testimonial.college}</p>
+                    <p className="text-blue-600 text-xs">
+                      {testimonial.location} | {testimonial.college}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -466,9 +531,7 @@ export default function NEETCoachingDwarkaPage() {
         {/* Video Testimonials */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Watch Success Stories from Our Students
               </h2>
@@ -516,9 +579,7 @@ export default function NEETCoachingDwarkaPage() {
               ))}
             </div>
 
-            <div
-              className="text-center mt-8 animate-fadeInUp"
-            >
+            <div className="text-center mt-8 animate-fadeInUp">
               <a
                 href="https://www.youtube.com/@cerebrumbiologyacademy"
                 target="_blank"
@@ -537,9 +598,7 @@ export default function NEETCoachingDwarkaPage() {
         <section className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div
-                className="text-center mb-12 animate-fadeInUp"
-              >
+              <div className="text-center mb-12 animate-fadeInUp">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                   Trusted by 847+ Verified Google Reviews
                 </h2>
@@ -549,9 +608,7 @@ export default function NEETCoachingDwarkaPage() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div
-                  className="bg-white rounded-xl shadow-xl p-8 border border-gray-100 animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-100 animate-fadeInUp">
                   <div className="text-center">
                     <div className="text-5xl font-bold text-gray-900 mb-2">4.9</div>
                     <div className="flex items-center justify-center gap-1 mb-2">
@@ -573,9 +630,7 @@ export default function NEETCoachingDwarkaPage() {
                   </div>
                 </div>
 
-                <div
-                  className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp">
                   <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                     <MessageCircle className="w-5 h-5 text-green-600" />
                     Recent Reviews from Dwarka
@@ -615,9 +670,7 @@ export default function NEETCoachingDwarkaPage() {
         {/* FAQ Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Frequently Asked Questions - NEET Coaching Dwarka
               </h2>
@@ -670,10 +723,7 @@ export default function NEETCoachingDwarkaPage() {
                   color: 'text-purple-600',
                 },
               ].map((badge, index) => (
-                <div
-                  key={badge.label}
-                  className="text-center animate-fadeInUp"
-                >
+                <div key={badge.label} className="text-center animate-fadeInUp">
                   <badge.icon className={`w-8 h-8 mx-auto mb-2 ${badge.color}`} />
                   <div className="font-bold text-gray-900 text-sm">{badge.label}</div>
                   <div className="text-xs text-gray-600">{badge.sublabel}</div>
@@ -686,11 +736,14 @@ export default function NEETCoachingDwarkaPage() {
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
           <div className="container mx-auto px-4 text-center">
-            <div
-             className="animate-fadeInUp">
-              <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey from Dwarka Today!</h2>
+            <div className="animate-fadeInUp">
+              <h2 className="text-3xl font-bold mb-4">
+                Start Your NEET Journey from Dwarka Today!
+              </h2>
               <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-                Choose Online Classes for convenience or Hybrid Mode for the best of both. Join the growing community of successful NEET aspirants from Dwarka. Book your free demo class today!
+                Choose Online Classes for convenience or Hybrid Mode for the best of both. Join the
+                growing community of successful NEET aspirants from Dwarka. Book your free demo
+                class today!
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <button
@@ -747,6 +800,33 @@ export default function NEETCoachingDwarkaPage() {
           </div>
         </section>
       </div>
+      <VideoSchema
+        name="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper Testimonial"
+        description="Sadhna Sirin shares her journey to scoring 695/720 in NEET 2023 with 100 Percentile in Biology. Learn how Cerebrum Biology Academy's teaching methods helped her achieve this exceptional result."
+        thumbnailUrl="https://i.ytimg.com/vi/bk6wQCh6b9w/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT8M30S"
+        contentUrl="https://www.youtube.com/watch?v=bk6wQCh6b9w"
+        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+      />
+      <VideoSchema
+        name="Abhisek - AFMC Pune Selection Success Story"
+        description="Abhisek shares his experience preparing for NEET and AFMC entrance with Cerebrum Biology Academy. Hear how personalized mentoring helped him crack Armed Forces Medical College Pune."
+        thumbnailUrl="https://i.ytimg.com/vi/NfhkGqOQXzk/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT6M45S"
+        contentUrl="https://www.youtube.com/watch?v=NfhkGqOQXzk"
+        embedUrl="https://www.youtube.com/embed/NfhkGqOQXzk"
+      />
+      <VideoSchema
+        name="Nishita - Medical College Admission in 6 Months"
+        description="Nishita shares how the 6-month intensive NEET program at Cerebrum Biology Academy helped her secure admission to a medical college. An inspiring success story for NEET aspirants."
+        thumbnailUrl="https://i.ytimg.com/vi/t5F8RBuHITM/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT5M20S"
+        contentUrl="https://www.youtube.com/watch?v=t5F8RBuHITM"
+        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
+      />
     </>
   )
 }

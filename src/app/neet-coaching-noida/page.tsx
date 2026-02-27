@@ -23,7 +23,13 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { LocalBusinessSchema, FAQSchema, BreadcrumbSchema, SpeakableSchema } from '@/components/seo/StructuredData'
+import {
+  LocalBusinessSchema,
+  FAQSchema,
+  BreadcrumbSchema,
+  SpeakableSchema,
+  VideoSchema,
+} from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import {
   getAllNoidaAreaSlugs,
@@ -212,8 +218,7 @@ export default function NeetCoachingNoidaPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               #1 NEET Coaching in Noida &amp; Greater Noida
@@ -260,7 +265,10 @@ export default function NeetCoachingNoidaPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {successStats.map((stat, index) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp">
+                <div
+                  key={stat.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp"
+                >
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
@@ -274,8 +282,7 @@ export default function NeetCoachingNoidaPage() {
       {/* Noida Sectors Coverage */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Across All Noida Sectors
             </h2>
@@ -316,8 +323,7 @@ export default function NeetCoachingNoidaPage() {
       {/* Premium Societies Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Premium Noida Societies
             </h2>
@@ -328,7 +334,10 @@ export default function NeetCoachingNoidaPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {premiumSocieties.map((society, index) => (
-              <div key={society.name} className="bg-green-50 rounded-xl p-5 border border-green-100 animate-fadeInUp">
+              <div
+                key={society.name}
+                className="bg-green-50 rounded-xl p-5 border border-green-100 animate-fadeInUp"
+              >
                 <Building2 className="w-6 h-6 text-green-600 mb-2" />
                 <div className="font-bold text-gray-900">{society.name}</div>
                 <div className="text-sm text-gray-500">{society.location}</div>
@@ -342,15 +351,12 @@ export default function NeetCoachingNoidaPage() {
       {/* Learning Modes Section - Online/Hybrid/Offline */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <span className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               <Monitor className="w-4 h-4" />
               Flexible Learning Options
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Choose Your Learning Mode
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Learning Mode</h2>
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
               Study from your Noida home or visit our South Extension center - the choice is yours
             </p>
@@ -363,12 +369,26 @@ export default function NeetCoachingNoidaPage() {
                 <Monitor className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">100% Online</h3>
-              <p className="text-slate-300 mb-4">Live interactive classes from your Noida home. No travel needed.</p>
+              <p className="text-slate-300 mb-4">
+                Live interactive classes from your Noida home. No travel needed.
+              </p>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" />Live classes with Dr. Shekhar</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" />Instant doubt resolution</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" />Recorded lectures for revision</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" />Digital study material</li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Live classes with Dr. Shekhar
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Instant doubt resolution
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Recorded lectures for revision
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Digital study material
+                </li>
               </ul>
               <div className="mt-4 pt-4 border-t border-white/20">
                 <span className="text-yellow-400 font-semibold">Rs 45,000/year</span>
@@ -378,17 +398,33 @@ export default function NeetCoachingNoidaPage() {
 
             {/* Hybrid Mode */}
             <div className="bg-yellow-500 rounded-2xl p-6 text-slate-900 relative overflow-hidden animate-fadeInUp">
-              <div className="absolute top-0 right-0 bg-slate-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMENDED</div>
+              <div className="absolute top-0 right-0 bg-slate-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-bl-lg">
+                RECOMMENDED
+              </div>
               <div className="w-14 h-14 bg-slate-900 rounded-xl flex items-center justify-center mb-4">
                 <TrendingUp className="w-7 h-7 text-yellow-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">Hybrid Mode</h3>
-              <p className="text-slate-700 mb-4">Online classes + Weekend offline sessions at South Extension.</p>
+              <p className="text-slate-700 mb-4">
+                Online classes + Weekend offline sessions at South Extension.
+              </p>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-slate-900" />All online benefits included</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-slate-900" />Weekend tests at center</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-slate-900" />Face-to-face doubt sessions</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-slate-900" />Peer learning environment</li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-slate-900" />
+                  All online benefits included
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-slate-900" />
+                  Weekend tests at center
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-slate-900" />
+                  Face-to-face doubt sessions
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-slate-900" />
+                  Peer learning environment
+                </li>
               </ul>
               <div className="mt-4 pt-4 border-t border-slate-900/20">
                 <span className="text-slate-900 font-semibold">Rs 55,000/year</span>
@@ -402,12 +438,26 @@ export default function NeetCoachingNoidaPage() {
                 <MapPin className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Full Offline</h3>
-              <p className="text-slate-300 mb-4">Daily classes at our South Extension center, Delhi.</p>
+              <p className="text-slate-300 mb-4">
+                Daily classes at our South Extension center, Delhi.
+              </p>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400" />Regular classroom learning</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400" />Small batch of 15 students</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400" />Physical library access</li>
-                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400" />Daily doubt classes</li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
+                  Regular classroom learning
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
+                  Small batch of 15 students
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
+                  Physical library access
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
+                  Daily doubt classes
+                </li>
               </ul>
               <div className="mt-4 pt-4 border-t border-white/20">
                 <span className="text-yellow-400 font-semibold">Rs 65,000/year</span>
@@ -422,12 +472,22 @@ export default function NeetCoachingNoidaPage() {
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2">South Extension Offline Center</h3>
                 <p className="text-slate-300 mb-4">
-                  Our flagship center in South Extension, Delhi is just 45-60 minutes from most Noida locations via Noida-Greater Noida Expressway.
+                  Our flagship center in South Extension, Delhi is just 45-60 minutes from most
+                  Noida locations via Noida-Greater Noida Expressway.
                 </p>
                 <div className="flex flex-wrap gap-4 text-sm">
-                  <span className="flex items-center gap-1"><Train className="w-4 h-4 text-yellow-400" />Metro: AIIMS + Auto</span>
-                  <span className="flex items-center gap-1"><Clock className="w-4 h-4 text-yellow-400" />45-60 min from Noida</span>
-                  <span className="flex items-center gap-1"><MapPin className="w-4 h-4 text-yellow-400" />M-Block, South Extension</span>
+                  <span className="flex items-center gap-1">
+                    <Train className="w-4 h-4 text-yellow-400" />
+                    Metro: AIIMS + Auto
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-4 h-4 text-yellow-400" />
+                    45-60 min from Noida
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <MapPin className="w-4 h-4 text-yellow-400" />
+                    M-Block, South Extension
+                  </span>
                 </div>
               </div>
               <Link
@@ -444,8 +504,7 @@ export default function NeetCoachingNoidaPage() {
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Near Top Noida Schools
             </h2>
@@ -470,8 +529,7 @@ export default function NeetCoachingNoidaPage() {
       {/* Metro Connectivity Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Near Noida Metro Stations
             </h2>
@@ -521,8 +579,7 @@ export default function NeetCoachingNoidaPage() {
       {/* Universities Section */}
       <section className="py-16 md:py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Noida Universities &amp; Colleges
             </h2>
@@ -547,8 +604,7 @@ export default function NeetCoachingNoidaPage() {
       {/* Why Choose Us Section */}
       <section className="py-16 md:py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Noida Students Choose Cerebrum Biology Academy
             </h2>
@@ -573,7 +629,10 @@ export default function NeetCoachingNoidaPage() {
                 desc: 'NCERT notes, tests, PYQs included',
               },
             ].map((feature, index) => (
-              <div key={feature.title} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
+              <div
+                key={feature.title}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
+              >
                 <feature.icon className="w-10 h-10 text-yellow-400 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.desc}</p>
@@ -586,8 +645,7 @@ export default function NeetCoachingNoidaPage() {
       {/* Video Testimonials Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
               Real Student Success Stories
@@ -714,8 +772,7 @@ export default function NeetCoachingNoidaPage() {
           </div>
 
           {/* Watch More CTA */}
-          <div className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <Link
               href="https://www.youtube.com/@CerebrumBiologyAcademy"
               target="_blank"
@@ -736,8 +793,7 @@ export default function NeetCoachingNoidaPage() {
       {/* Google Business Profile & Reviews Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by 1,200+ Noida Students & Parents
             </h2>
@@ -947,7 +1003,7 @@ export default function NeetCoachingNoidaPage() {
                 placeholder={{
                   lat: 28.5667,
                   lng: 77.2381,
-                  address: "Cerebrum Biology Academy, South Extension, New Delhi"
+                  address: 'Cerebrum Biology Academy, South Extension, New Delhi',
                 }}
               />
             </div>
@@ -1029,8 +1085,7 @@ export default function NeetCoachingNoidaPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
               Detailed Success Stories
@@ -1316,8 +1371,7 @@ export default function NeetCoachingNoidaPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why 1,200+ Noida Students Trust Cerebrum Biology Academy
             </h2>
@@ -1449,8 +1503,7 @@ export default function NeetCoachingNoidaPage() {
       <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <MapPin className="w-4 h-4 mr-2" />
               Area-Wise Success
@@ -1724,13 +1777,13 @@ export default function NeetCoachingNoidaPage() {
       {/* All Areas Section - Using Centralized Data */}
       <section className="py-16 md:py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               All {allAreaSlugs.length}+ Areas We Serve in Noida
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Click on your area to view dedicated NEET coaching information and local success stories
+              Click on your area to view dedicated NEET coaching information and local success
+              stories
             </p>
           </div>
 
@@ -1853,8 +1906,7 @@ export default function NeetCoachingNoidaPage() {
       {/* FAQs Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching in Noida - FAQs
             </h2>
@@ -1977,8 +2029,7 @@ export default function NeetCoachingNoidaPage() {
       />
 
       {/* WhatsApp Floating Button - Phase 6 */}
-      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group animate-fadeInUp"
-      >
+      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group animate-fadeInUp">
         {/* Hover Tooltip */}
         <div className="absolute bottom-full mb-2 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           <div className="bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg whitespace-nowrap text-sm">
@@ -2006,7 +2057,10 @@ export default function NeetCoachingNoidaPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-          { name: 'NEET Coaching', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+          {
+            name: 'NEET Coaching',
+            url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+          },
           { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
         ]}
       />
@@ -2026,14 +2080,23 @@ export default function NeetCoachingNoidaPage() {
             '@type': 'Service',
             '@id': 'https://cerebrumbiologyacademy.com/neet-coaching-noida#service',
             name: 'NEET Biology Coaching Noida',
-            description: 'Online NEET Biology coaching for Noida students with optional offline classes at South Extension, Delhi. Serving Gaur City, ATS Pristine, Jaypee Greens, and all premium societies.',
+            description:
+              'Online NEET Biology coaching for Noida students with optional offline classes at South Extension, Delhi. Serving Gaur City, ATS Pristine, Jaypee Greens, and all premium societies.',
             provider: {
               '@type': 'EducationalOrganization',
               name: 'Cerebrum Biology Academy',
             },
             areaServed: [
-              { '@type': 'City', name: 'Noida', containedIn: { '@type': 'State', name: 'Uttar Pradesh' } },
-              { '@type': 'City', name: 'Greater Noida', containedIn: { '@type': 'State', name: 'Uttar Pradesh' } },
+              {
+                '@type': 'City',
+                name: 'Noida',
+                containedIn: { '@type': 'State', name: 'Uttar Pradesh' },
+              },
+              {
+                '@type': 'City',
+                name: 'Greater Noida',
+                containedIn: { '@type': 'State', name: 'Uttar Pradesh' },
+              },
             ],
             serviceType: 'Online NEET Coaching with Hybrid Option',
             availableChannel: {
@@ -2071,14 +2134,66 @@ export default function NeetCoachingNoidaPage() {
             '@type': 'ItemList',
             name: 'NEET Coaching Noida - Related Resources',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Online NEET Classes Noida', url: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida' },
-              { '@type': 'ListItem', position: 2, name: 'NEET Coaching Fee Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-noida' },
-              { '@type': 'ListItem', position: 3, name: 'Gaur City NEET Coaching', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gaur-city-noida' },
-              { '@type': 'ListItem', position: 4, name: 'How to Prepare for NEET in Noida', url: 'https://cerebrumbiologyacademy.com/how-to-prepare-for-neet-in-noida' },
-              { '@type': 'ListItem', position: 5, name: 'South Extension Offline Center', url: 'https://cerebrumbiologyacademy.com/locations/south-extension' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Online NEET Classes Noida',
+                url: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'NEET Coaching Fee Noida',
+                url: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-noida',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Gaur City NEET Coaching',
+                url: 'https://cerebrumbiologyacademy.com/neet-coaching-gaur-city-noida',
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'How to Prepare for NEET in Noida',
+                url: 'https://cerebrumbiologyacademy.com/how-to-prepare-for-neet-in-noida',
+              },
+              {
+                '@type': 'ListItem',
+                position: 5,
+                name: 'South Extension Offline Center',
+                url: 'https://cerebrumbiologyacademy.com/locations/south-extension',
+              },
             ],
           }),
         }}
+      />
+      <VideoSchema
+        name="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper Testimonial"
+        description="Sadhna Sirin shares her journey to scoring 695/720 in NEET 2023 with 100 Percentile in Biology. Learn how Cerebrum Biology Academy's teaching methods helped her achieve this exceptional result."
+        thumbnailUrl="https://i.ytimg.com/vi/bk6wQCh6b9w/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT8M30S"
+        contentUrl="https://www.youtube.com/watch?v=bk6wQCh6b9w"
+        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+      />
+      <VideoSchema
+        name="Abhisek - AFMC Pune Selection Success Story"
+        description="Abhisek shares his experience preparing for NEET and AFMC entrance with Cerebrum Biology Academy. Hear how personalized mentoring helped him crack Armed Forces Medical College Pune."
+        thumbnailUrl="https://i.ytimg.com/vi/NfhkGqOQXzk/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT6M45S"
+        contentUrl="https://www.youtube.com/watch?v=NfhkGqOQXzk"
+        embedUrl="https://www.youtube.com/embed/NfhkGqOQXzk"
+      />
+      <VideoSchema
+        name="Nishita - Medical College Admission in 6 Months"
+        description="Nishita shares how the 6-month intensive NEET program at Cerebrum Biology Academy helped her secure admission to a medical college. An inspiring success story for NEET aspirants."
+        thumbnailUrl="https://i.ytimg.com/vi/t5F8RBuHITM/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT5M20S"
+        contentUrl="https://www.youtube.com/watch?v=t5F8RBuHITM"
+        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
       />
     </div>
   )

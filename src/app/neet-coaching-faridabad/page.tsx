@@ -24,7 +24,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { LocalBusinessSchema, FAQSchema } from '@/components/seo/StructuredData'
+import { LocalBusinessSchema, FAQSchema, VideoSchema } from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import {
   faridabadAreaDetails,
@@ -34,24 +34,26 @@ import {
 import { faridabadMetroStations } from '@/data/faridabad-metros'
 
 // Generate areas dynamically from data file
-const faridabadAreas = getAllFaridabadAreaSlugs().slice(0, 16).map((slug) => {
-  const area = faridabadAreaDetails[slug]
-  const typeHighlights: Record<string, string> = {
-    premium: 'Premium Sector',
-    residential: 'Residential Hub',
-    'old-city': 'Heritage Area',
-    'greater-faridabad': 'Premium Township',
-    commercial: 'Commercial Hub',
-    industrial: 'Industrial Hub',
-  }
-  return {
-    name: area.name,
-    slug,
-    students: `${Math.floor(Math.random() * 80 + 40)}+`,
-    highlight: typeHighlights[area.type] || 'Key Area',
-    metro: area.nearbyMetro.length > 0,
-  }
-})
+const faridabadAreas = getAllFaridabadAreaSlugs()
+  .slice(0, 16)
+  .map((slug) => {
+    const area = faridabadAreaDetails[slug]
+    const typeHighlights: Record<string, string> = {
+      premium: 'Premium Sector',
+      residential: 'Residential Hub',
+      'old-city': 'Heritage Area',
+      'greater-faridabad': 'Premium Township',
+      commercial: 'Commercial Hub',
+      industrial: 'Industrial Hub',
+    }
+    return {
+      name: area.name,
+      slug,
+      students: `${Math.floor(Math.random() * 80 + 40)}+`,
+      highlight: typeHighlights[area.type] || 'Key Area',
+      metro: area.nearbyMetro.length > 0,
+    }
+  })
 
 // Generate premium societies from area data
 const premiumSocieties = (() => {
@@ -222,8 +224,7 @@ export default function NeetCoachingFaridabadPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               #1 NEET Coaching in Faridabad &amp; Greater Faridabad
@@ -270,7 +271,10 @@ export default function NeetCoachingFaridabadPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {successStats.map((stat, index) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp">
+                <div
+                  key={stat.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp"
+                >
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
@@ -284,8 +288,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Faridabad Areas Coverage */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Across All Faridabad Areas
             </h2>
@@ -326,8 +329,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Greater Faridabad Sectors Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching in Greater Faridabad Sectors
             </h2>
@@ -338,7 +340,10 @@ export default function NeetCoachingFaridabadPage() {
 
           <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
             {greaterFaridabadSectors.map((item, index) => (
-              <div key={item.sector} className="bg-orange-50 rounded-xl p-4 border border-orange-100 text-center animate-fadeInUp">
+              <div
+                key={item.sector}
+                className="bg-orange-50 rounded-xl p-4 border border-orange-100 text-center animate-fadeInUp"
+              >
                 <div className="font-bold text-gray-900">Sector {item.sector}</div>
                 <div className="text-orange-600 font-semibold text-sm mt-1">{item.students}</div>
               </div>
@@ -350,8 +355,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Premium Societies Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Premium Faridabad Societies
             </h2>
@@ -362,7 +366,10 @@ export default function NeetCoachingFaridabadPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {premiumSocieties.map((society, index) => (
-              <div key={society.name} className="bg-gradient-to-br from-orange-50 to-rose-50 rounded-xl p-5 border border-orange-100 animate-fadeInUp">
+              <div
+                key={society.name}
+                className="bg-gradient-to-br from-orange-50 to-rose-50 rounded-xl p-5 border border-orange-100 animate-fadeInUp"
+              >
                 <Building2 className="w-6 h-6 text-orange-600 mb-2" />
                 <div className="font-bold text-gray-900">{society.name}</div>
                 <div className="text-sm text-gray-500">{society.location}</div>
@@ -378,8 +385,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-orange-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Near Top Faridabad Schools
             </h2>
@@ -404,8 +410,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Metro Connectivity Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Near Faridabad Metro Stations
             </h2>
@@ -434,8 +439,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Colleges Section */}
       <section className="py-16 md:py-20 bg-rose-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Faridabad Universities &amp; Colleges
             </h2>
@@ -446,7 +450,10 @@ export default function NeetCoachingFaridabadPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {colleges.map((college, index) => (
-              <div key={college.name} className="bg-white rounded-xl p-5 shadow-md animate-fadeInUp">
+              <div
+                key={college.name}
+                className="bg-white rounded-xl p-5 shadow-md animate-fadeInUp"
+              >
                 <GraduationCap className="w-6 h-6 text-rose-600 mb-2" />
                 <div className="font-bold text-gray-900 text-sm">{college.name}</div>
                 <div className="text-sm text-gray-500">{college.location}</div>
@@ -460,8 +467,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Why Choose Us Section */}
       <section className="py-16 md:py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Faridabad Students Choose Cerebrum Biology Academy
             </h2>
@@ -486,7 +492,10 @@ export default function NeetCoachingFaridabadPage() {
                 desc: 'NCERT notes, tests, PYQs included',
               },
             ].map((feature, index) => (
-              <div key={feature.title} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
+              <div
+                key={feature.title}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
+              >
                 <feature.icon className="w-10 h-10 text-yellow-400 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.desc}</p>
@@ -499,8 +508,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Video Testimonials Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
               Real Student Success Stories
@@ -603,8 +611,7 @@ export default function NeetCoachingFaridabadPage() {
           </div>
 
           {/* Watch More CTA */}
-          <div className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <Link
               href="https://www.youtube.com/@CerebrumBiologyAcademy"
               target="_blank"
@@ -626,8 +633,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Google Business Profile & Reviews Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by 1,200+ Faridabad Students & Parents
             </h2>
@@ -838,7 +844,7 @@ export default function NeetCoachingFaridabadPage() {
                   placeholder={{
                     lat: 28.5733,
                     lng: 77.2155,
-                    address: "Cerebrum Biology Academy, South Extension, New Delhi"
+                    address: 'Cerebrum Biology Academy, South Extension, New Delhi',
                   }}
                 />
               </div>
@@ -939,8 +945,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Enhanced Success Stories Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
               Detailed Success Stories
@@ -1269,8 +1274,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Trust Badges Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Shield className="w-4 h-4 mr-2" />
               Verified Trust Signals
@@ -1413,8 +1417,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Premium Area Spotlight Cards */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <MapPin className="w-4 h-4 mr-2" />
               Area-Specific Success
@@ -1717,8 +1720,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* FAQs Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching in Faridabad - FAQs
             </h2>
@@ -1866,6 +1868,33 @@ export default function NeetCoachingFaridabadPage() {
       {/* Schema Markup for SEO */}
       <LocalBusinessSchema />
       <FAQSchema />
+      <VideoSchema
+        name="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper Testimonial"
+        description="Sadhna Sirin shares her journey to scoring 695/720 in NEET 2023 with 100 Percentile in Biology. Learn how Cerebrum Biology Academy's teaching methods helped her achieve this exceptional result."
+        thumbnailUrl="https://i.ytimg.com/vi/bk6wQCh6b9w/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT8M30S"
+        contentUrl="https://www.youtube.com/watch?v=bk6wQCh6b9w"
+        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+      />
+      <VideoSchema
+        name="Abhisek - AFMC Pune Selection Success Story"
+        description="Abhisek shares his experience preparing for NEET and AFMC entrance with Cerebrum Biology Academy. Hear how personalized mentoring helped him crack Armed Forces Medical College Pune."
+        thumbnailUrl="https://i.ytimg.com/vi/NfhkGqOQXzk/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT6M45S"
+        contentUrl="https://www.youtube.com/watch?v=NfhkGqOQXzk"
+        embedUrl="https://www.youtube.com/embed/NfhkGqOQXzk"
+      />
+      <VideoSchema
+        name="Nishita - Medical College Admission in 6 Months"
+        description="Nishita shares how the 6-month intensive NEET program at Cerebrum Biology Academy helped her secure admission to a medical college. An inspiring success story for NEET aspirants."
+        thumbnailUrl="https://i.ytimg.com/vi/t5F8RBuHITM/maxresdefault.jpg"
+        uploadDate="2025-01-01"
+        duration="PT5M20S"
+        contentUrl="https://www.youtube.com/watch?v=t5F8RBuHITM"
+        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
+      />
     </div>
   )
 }
