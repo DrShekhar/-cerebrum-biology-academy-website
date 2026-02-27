@@ -162,7 +162,8 @@ function isAdminRoute(pathname: string): boolean {
   return pathname.startsWith('/admin') || pathname.startsWith('/api/admin')
 }
 
-// Define protected routes
+// Define protected routes that REQUIRE authentication
+// Everything NOT in this list is public by default (visible to Google)
 function isProtectedRoute(pathname: string): boolean {
   const protectedPrefixes = [
     '/dashboard',
@@ -172,6 +173,18 @@ function isProtectedRoute(pathname: string): boolean {
     '/teacher',
     '/counselor',
     '/select-role',
+    '/settings',
+    '/practice',
+    '/adaptive-testing',
+    '/ai-features',
+    '/analytics',
+    '/portal',
+    '/voice-training',
+    '/whatsapp-course-selector',
+    '/claudechat',
+    '/counselor-poc',
+    '/demo-feedback',
+    '/login',
   ]
   return protectedPrefixes.some(
     (prefix) => pathname === prefix || pathname.startsWith(prefix + '/')
@@ -282,12 +295,28 @@ export default async function middleware(req: NextRequest) {
     return response
   }
 
+  // ALLOW-BY-DEFAULT: If the route is not explicitly protected or admin,
+  // let it through without authentication (so Google can crawl all SEO pages)
+  if (!isProtectedRoute(pathname) && !isAdminRoute(pathname) && !pathname.startsWith('/api/')) {
+    const response = NextResponse.next()
+    addSecurityHeaders(response)
+    addCSPHeaders(response)
+    response.cookies.set('x-pathname', pathname, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 60,
+      path: '/',
+    })
+    return response
+  }
+
   const authResult = await getUserFromToken(req)
   const userId = authResult?.userId || null
   const userRole = authResult?.role || null
 
-  // For non-public routes, require authentication
-  if (!userId) {
+  // For protected/admin routes, require authentication
+  if (!userId && (isProtectedRoute(pathname) || isAdminRoute(pathname))) {
     const signInUrl = new URL('/sign-in', req.url)
     signInUrl.searchParams.set('redirect_url', pathname)
     return NextResponse.redirect(signInUrl)
