@@ -18,6 +18,23 @@ import { INDIAN_STATES } from '@/components/seo/StateSchema'
 import { COMPETITORS } from '@/components/seo/ComparisonSchema'
 import { getAllAreaSlugs as getAllLocalAreaSlugs } from '@/data/localAreas'
 import collegesData from '@/data/colleges.json'
+import {
+  seoPageConsolidationRedirects,
+  neetCoachingLocationRedirects,
+  localAreaPageRedirects,
+  gsc404CleanupRedirects,
+  thinPageConsolidationRedirects,
+} from '@/config/seo-redirects.mjs'
+
+const redirectedPaths = new Set(
+  [
+    ...seoPageConsolidationRedirects,
+    ...neetCoachingLocationRedirects,
+    ...localAreaPageRedirects,
+    ...gsc404CleanupRedirects,
+    ...thinPageConsolidationRedirects,
+  ].map((r: { source: string }) => r.source)
+)
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use non-www URL to match middleware redirect behavior
@@ -7965,12 +7982,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
     priority: 0.6,
   }))
-  const tagRoutes: MetadataRoute.Sitemap = getAllTags().map(({ tag }) => ({
-    url: `${baseUrl}/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.5,
-  }))
+  const tagRoutes: MetadataRoute.Sitemap = getAllTags()
+    .filter(({ count }) => count >= 3)
+    .map(({ tag }) => ({
+      url: `${baseUrl}/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.5,
+    }))
 
   // State pages
   const stateRoutes: MetadataRoute.Sitemap = Object.keys(INDIAN_STATES).map((state) => ({
@@ -8100,5 +8119,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     urlMap.set(route.url, route)
   }
 
-  return Array.from(urlMap.values())
+  // Remove URLs that are being 301 redirected — these waste crawl budget
+  return Array.from(urlMap.values()).filter((route) => {
+    const path = route.url.replace(baseUrl, '')
+    return !redirectedPaths.has(path)
+  })
 }
