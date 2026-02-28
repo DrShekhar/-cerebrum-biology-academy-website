@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   getNoidaAreaBySlug,
@@ -15,6 +16,136 @@ type Props = {
 
 export function generateStaticParams() {
   return getAllNoidaAreaSlugs().map((area) => ({ area }))
+}
+
+function getTitleByType(area: ReturnType<typeof getNoidaAreaBySlug>): string {
+  if (!area) return 'NEET Coaching Noida | Cerebrum Biology Academy'
+
+  const typePrefix: Record<string, string> = {
+    premium: 'Premium',
+    residential: 'Top',
+    commercial: 'Convenient',
+    'greater-noida': 'Best',
+    extension: 'Best',
+    'it-hub': 'Best',
+  }
+
+  const prefix = typePrefix[area.type] || 'Best'
+  return `${prefix} NEET Coaching in ${area.name}, Noida | ${CEREBRUM_METRICS.successRateText} Success | Cerebrum Academy`
+}
+
+function getMetaDescriptionByType(area: ReturnType<typeof getNoidaAreaBySlug>): string {
+  if (!area) return ''
+
+  const schoolsText = area.schools.slice(0, 2).join(', ')
+  const metroText = area.nearbyMetro[0] || ''
+
+  switch (area.type) {
+    case 'premium':
+      return `Premium NEET Biology coaching for ${area.name} families. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Near ${metroText}. Personalized ${CEREBRUM_METRICS.batchSizeText} batches. Book free demo!`
+
+    case 'it-hub':
+      return `Best NEET coaching in ${area.name}, Noida's IT hub. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Near ${metroText}. ${area.distanceFromCenter} from our center. Book free demo!`
+
+    case 'commercial':
+      return `NEET coaching near ${area.name} for Noida families. ${CEREBRUM_METRICS.successRateText} success rate. Convenient location near ${metroText}. Students from ${schoolsText}. Flexible timings!`
+
+    case 'greater-noida':
+      return `Best NEET coaching for ${area.name} residents. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Expert AIIMS faculty, small batches. ${area.distanceFromCenter} from our center. Book free demo!`
+
+    case 'extension':
+      return `Quality NEET Biology coaching for ${area.name} students. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. ${area.distanceFromCenter} from our center. Book free demo!`
+
+    case 'residential':
+      return `Best NEET Biology coaching near ${area.name}, Noida. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. ${area.distanceFromCenter} from our center. Book free demo!`
+
+    default:
+      return `Best NEET Biology coaching near ${area.name}. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. Small batches, personal mentorship. Book free demo!`
+  }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { area: areaSlug } = await params
+  const area = getNoidaAreaBySlug(areaSlug)
+
+  if (!area) {
+    return {
+      title: 'Area Not Found',
+    }
+  }
+
+  const title = getTitleByType(area)
+  const description = getMetaDescriptionByType(area)
+
+  const typeKeywords: Record<string, string[]> = {
+    premium: [
+      'premium NEET coaching Noida',
+      'best NEET institute Noida',
+      'private school students NEET',
+    ],
+    'it-hub': [
+      'Electronic City NEET coaching',
+      'IT hub NEET classes',
+      'Sector 62 NEET coaching',
+    ],
+    commercial: ['central Noida NEET coaching', 'convenient NEET coaching Noida'],
+    'greater-noida': [
+      'Greater Noida NEET coaching',
+      'Gaur City NEET classes',
+      'township NEET prep',
+    ],
+    extension: [
+      'Noida Extension NEET coaching',
+      'Greater Noida West NEET classes',
+      'affordable NEET coaching Noida',
+    ],
+    residential: ['residential area NEET coaching', 'sector NEET classes Noida', 'local NEET coaching'],
+  }
+
+  return {
+    title,
+    description,
+    keywords: [
+      `NEET coaching ${area.name}`,
+      `NEET coaching near ${area.name}`,
+      `Best NEET coaching ${area.fullName}`,
+      `Biology coaching ${area.name} Noida`,
+      `NEET preparation ${area.name}`,
+      `Medical coaching ${area.name}`,
+      ...area.schools.map((school) => `NEET coaching for ${school} students`),
+      ...area.nearbyMetro.map((metro) => `NEET coaching near ${metro}`),
+      ...area.societies.slice(0, 2).map((society) => `NEET coaching for ${society} residents`),
+      ...(typeKeywords[area.type] || []),
+    ],
+    openGraph: {
+      title,
+      description,
+      url: `https://cerebrumbiologyacademy.com/neet-coaching-noida/${areaSlug}`,
+      siteName: 'Cerebrum Biology Academy',
+      locale: 'en_IN',
+      type: 'website',
+      images: [
+        {
+          url: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: `NEET Coaching in ${area.name}, Noida`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://cerebrumbiologyacademy.com/neet-coaching-noida/${areaSlug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
 }
 
 export default async function NoidaAreaPage({ params }: Props) {

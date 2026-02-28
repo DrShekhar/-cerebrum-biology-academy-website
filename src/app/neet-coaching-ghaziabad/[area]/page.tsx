@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   getGhaziabadAreaBySlug,
@@ -15,6 +16,144 @@ type Props = {
 
 export function generateStaticParams() {
   return getAllGhaziabadAreaSlugs().map((area) => ({ area }))
+}
+
+function getTitleByType(area: ReturnType<typeof getGhaziabadAreaBySlug>): string {
+  if (!area) return 'NEET Coaching Ghaziabad | Cerebrum Biology Academy'
+
+  const typePrefix: Record<string, string> = {
+    premium: 'Premium',
+    residential: 'Top',
+    commercial: 'Best',
+    township: 'Best',
+    industrial: 'Affordable',
+    'trans-hindon': 'Quality',
+  }
+
+  const prefix = typePrefix[area.type] || 'Best'
+  return `${prefix} NEET Coaching in ${area.name}, Ghaziabad | ${CEREBRUM_METRICS.successRateText} Success | Cerebrum Academy`
+}
+
+function getMetaDescriptionByType(area: ReturnType<typeof getGhaziabadAreaBySlug>): string {
+  if (!area) return ''
+
+  const schoolsText = area.schools.slice(0, 2).join(', ')
+  const metroText = area.nearbyMetro[0] || ''
+
+  switch (area.type) {
+    case 'premium':
+      return `Premium NEET Biology coaching for ${area.name} families. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Near ${metroText}. Personalized ${CEREBRUM_METRICS.batchSizeText} batches. Book free demo!`
+
+    case 'township':
+      return `Best NEET coaching for ${area.name} residents. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Expert AIIMS faculty, small batches. Book free demo!`
+
+    case 'trans-hindon':
+      return `Quality NEET Biology coaching near ${area.name}. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. Near ${metroText}. Book free demo!`
+
+    case 'residential':
+      return `Best NEET Biology coaching near ${area.name}, Ghaziabad. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. ${area.distanceFromCenter} from our center. Book free demo!`
+
+    case 'commercial':
+      return `NEET coaching near ${area.name} for Ghaziabad families. ${CEREBRUM_METRICS.successRateText} success rate. Convenient location. Students from ${schoolsText}. Flexible timings!`
+
+    case 'industrial':
+      return `Affordable NEET Biology coaching for ${area.name} families. ${CEREBRUM_METRICS.successRateText} success rate, experienced faculty. Students from ${schoolsText}. EMI options available!`
+
+    default:
+      return `Best NEET Biology coaching near ${area.name}. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. Small batches, personal mentorship. Book free demo!`
+  }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { area: areaSlug } = await params
+  const area = getGhaziabadAreaBySlug(areaSlug)
+
+  if (!area) {
+    return {
+      title: 'Area Not Found',
+    }
+  }
+
+  const title = getTitleByType(area)
+  const description = getMetaDescriptionByType(area)
+
+  const typeKeywords: Record<string, string[]> = {
+    premium: [
+      'premium NEET coaching Ghaziabad',
+      'best NEET institute Ghaziabad',
+      'private school students NEET',
+    ],
+    township: [
+      'township NEET coaching Ghaziabad',
+      'society NEET classes',
+      'integrated township NEET prep',
+    ],
+    'trans-hindon': [
+      'Trans Hindon NEET coaching',
+      'old Ghaziabad NEET classes',
+      'local NEET coaching',
+    ],
+    residential: [
+      'residential area NEET coaching',
+      'sector NEET classes Ghaziabad',
+      'local NEET coaching',
+    ],
+    commercial: [
+      'central Ghaziabad NEET coaching',
+      'convenient NEET coaching Ghaziabad',
+      'commercial hub NEET classes',
+    ],
+    industrial: [
+      'affordable NEET classes Ghaziabad',
+      'industrial area NEET coaching',
+      'budget NEET coaching',
+    ],
+  }
+
+  return {
+    title,
+    description,
+    keywords: [
+      `NEET coaching ${area.name}`,
+      `NEET coaching near ${area.name}`,
+      `Best NEET coaching ${area.fullName}`,
+      `Biology coaching ${area.name} Ghaziabad`,
+      `NEET preparation ${area.name}`,
+      `Medical coaching ${area.name}`,
+      ...area.schools.map((school) => `NEET coaching for ${school} students`),
+      ...area.nearbyMetro.map((metro) => `NEET coaching near ${metro}`),
+      ...area.societies.slice(0, 2).map((society) => `NEET coaching for ${society} residents`),
+      ...(typeKeywords[area.type] || []),
+    ],
+    openGraph: {
+      title,
+      description,
+      url: `https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad/${areaSlug}`,
+      siteName: 'Cerebrum Biology Academy',
+      locale: 'en_IN',
+      type: 'website',
+      images: [
+        {
+          url: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: `NEET Coaching in ${area.name}, Ghaziabad`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad/${areaSlug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
 }
 
 export default async function GhaziabadAreaPage({ params }: Props) {

@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
+Allow: /_next/static/
 Disallow: /api/
-Disallow: /_next/
+Disallow: /_next/data/
 Disallow: /dashboard/
 Disallow: /auth/
 Disallow: /admin/
@@ -16,6 +17,7 @@ Disallow: /manifest.json
 
 User-agent: Googlebot
 Allow: /
+Allow: /_next/static/
 Allow: /testimonials/
 Allow: /video-sitemap.xml
 Disallow: /dashboard/
@@ -24,17 +26,18 @@ Disallow: /auth/
 Disallow: /admin/
 Disallow: /student/
 Disallow: /analytics/
-Disallow: /_next/
+Disallow: /_next/data/
 
 User-agent: Bingbot
 Allow: /
+Allow: /_next/static/
 Disallow: /dashboard/
 Disallow: /api/
 Disallow: /auth/
 Disallow: /admin/
 Disallow: /student/
 Disallow: /analytics/
-Disallow: /_next/
+Disallow: /_next/data/
 
 User-agent: GPTBot
 Allow: /
