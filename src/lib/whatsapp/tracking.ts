@@ -4,6 +4,25 @@ import { trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
 const WHATSAPP_NUMBER = CONTACT_INFO.whatsapp.number
 const API_ENDPOINT = '/api/analytics/whatsapp-click'
 
+export function isMobileDevice(): boolean {
+  if (typeof navigator === 'undefined') return true
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
+
+export interface WhatsAppDesktopModalEvent {
+  whatsappUrl: string
+  message: string
+  source?: string
+}
+
+export function openDesktopWhatsAppModal(whatsappUrl: string, message: string, source?: string) {
+  window.dispatchEvent(
+    new CustomEvent<WhatsAppDesktopModalEvent>('cerebrum:whatsapp-desktop-modal', {
+      detail: { whatsappUrl, message, source },
+    })
+  )
+}
+
 export interface WhatsAppTrackingParams {
   source: string
   page?: string
@@ -145,7 +164,15 @@ export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Prom
   // Fire Google Ads conversion for WhatsApp clicks
   trackWhatsAppLead(params.source, 50)
 
-  window.open(result.whatsappUrl, '_blank', 'noopener,noreferrer')
+  if (isMobileDevice()) {
+    window.open(result.whatsappUrl, '_blank', 'noopener,noreferrer')
+  } else {
+    openDesktopWhatsAppModal(
+      result.whatsappUrl,
+      params.message || 'Hi! I am interested in NEET Biology coaching.',
+      params.source
+    )
+  }
 }
 
 export function buildWhatsAppUrl(

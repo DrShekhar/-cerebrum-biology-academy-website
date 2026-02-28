@@ -127,6 +127,13 @@ export const DynamicMaintenancePopup = dynamic(
   { ssr: true }
 )
 
+// CONVERSION: Global WhatsApp desktop QR modal — intercepts wa.me links on desktop
+export const DynamicWhatsAppDesktopModal = dynamic(
+  () =>
+    import('@/components/whatsapp/WhatsAppDesktopModal').then((mod) => mod.WhatsAppDesktopModal),
+  { ssr: false }
+)
+
 // CONVERSION: Sticky mobile call bar — shows Call + WhatsApp on mobile at all times
 export const DynamicStickyMobileCallBar = dynamic(
   () => import('@/components/layout/StickyMobileCallBar').then((m) => m.StickyMobileCallBar),

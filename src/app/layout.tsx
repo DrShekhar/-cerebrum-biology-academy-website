@@ -36,6 +36,7 @@ import {
   DynamicTrialBanner,
   DynamicMaintenancePopup,
   DynamicStickyMobileCallBar as StickyMobileCallBar,
+  DynamicWhatsAppDesktopModal,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
 
@@ -204,72 +205,74 @@ export default function RootLayout({
                     enableRealTimeUpdates={false}
                   >
                     <PersonalizationProvider>
-                        {/* Navigation progress indicator - prevents FOUC during page transitions */}
-                        <Suspense fallback={null}>
-                          <RouteChangeIndicator />
-                        </Suspense>
-                        {/* Single provider for all ConditionalHeaderFooter instances - prevents multiple pathname subscriptions */}
-                        <ConditionalHeaderFooterProvider>
-                          <ConditionalHeaderFooter>
-                            <SkipToContent />
-                          </ConditionalHeaderFooter>
-                          <ConditionalHeaderFooter>
-                            <div
-                              data-section="navigation"
-                              className="priority-immediate"
-                              role="banner"
-                            >
-                              <HeaderHybrid />
-                            </div>
-                          </ConditionalHeaderFooter>
-                          <ConditionalHeaderFooter>
-                            <DynamicTrialBanner />
-                          </ConditionalHeaderFooter>
-                          <main
-                            id="main-content"
-                            role="main"
-                            className="min-h-screen pb-[var(--mobile-nav-safe-height)] md:pb-0"
+                      {/* Navigation progress indicator - prevents FOUC during page transitions */}
+                      <Suspense fallback={null}>
+                        <RouteChangeIndicator />
+                      </Suspense>
+                      {/* Single provider for all ConditionalHeaderFooter instances - prevents multiple pathname subscriptions */}
+                      <ConditionalHeaderFooterProvider>
+                        <ConditionalHeaderFooter>
+                          <SkipToContent />
+                        </ConditionalHeaderFooter>
+                        <ConditionalHeaderFooter>
+                          <div
+                            data-section="navigation"
+                            className="priority-immediate"
+                            role="banner"
                           >
-                            {children}
-                          </main>
-                          <ConditionalHeaderFooter>
-                            <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                              <DynamicFooter />
-                            </div>
-                          </ConditionalHeaderFooter>
-                          <ConditionalHeaderFooter>
-                            <div data-section="mobile-navigation" className="priority-deferred">
-                              <DynamicMobileNavigation />
-                            </div>
-                          </ConditionalHeaderFooter>
-                          <ConditionalHeaderFooter>
-                            <FloatingCTA />
-                          </ConditionalHeaderFooter>
-                          <ConditionalHeaderFooter>
-                            <GlobalExitIntent />
-                          </ConditionalHeaderFooter>
-                          <ConditionalHeaderFooter>
-                            <ChatbotWrapper />
-                          </ConditionalHeaderFooter>
-                          {/* ARIA Sales Agent - positioned on right side */}
-                          <ConditionalHeaderFooter>
-                            <SalesAgentWidget />
-                          </ConditionalHeaderFooter>
-                          <ConditionalHeaderFooter>
-                            <DynamicMaintenancePopup />
-                          </ConditionalHeaderFooter>
-                        </ConditionalHeaderFooterProvider>
-                        {/* CONVERSION: Sticky mobile call bar — always visible on mobile */}
-                        <StickyMobileCallBar />
-                        {/* SEO: Canonical URL manager - wrapped in Suspense for useSearchParams */}
-                        <Suspense fallback={null}>
-                          <CanonicalManager />
-                        </Suspense>
-                        {/* PERFORMANCE: Analytics after main content for better LCP */}
-                        <GoogleAnalytics />
-                        <AdBlockDetector />
-                        <FacebookPixel />
-                        <WebVitalsReporter />
+                            <HeaderHybrid />
+                          </div>
+                        </ConditionalHeaderFooter>
+                        <ConditionalHeaderFooter>
+                          <DynamicTrialBanner />
+                        </ConditionalHeaderFooter>
+                        <main
+                          id="main-content"
+                          role="main"
+                          className="min-h-screen pb-[var(--mobile-nav-safe-height)] md:pb-0"
+                        >
+                          {children}
+                        </main>
+                        <ConditionalHeaderFooter>
+                          <div data-lazy="footer" className="priority-lazy" role="contentinfo">
+                            <DynamicFooter />
+                          </div>
+                        </ConditionalHeaderFooter>
+                        <ConditionalHeaderFooter>
+                          <div data-section="mobile-navigation" className="priority-deferred">
+                            <DynamicMobileNavigation />
+                          </div>
+                        </ConditionalHeaderFooter>
+                        <ConditionalHeaderFooter>
+                          <FloatingCTA />
+                        </ConditionalHeaderFooter>
+                        <ConditionalHeaderFooter>
+                          <GlobalExitIntent />
+                        </ConditionalHeaderFooter>
+                        <ConditionalHeaderFooter>
+                          <ChatbotWrapper />
+                        </ConditionalHeaderFooter>
+                        {/* ARIA Sales Agent - positioned on right side */}
+                        <ConditionalHeaderFooter>
+                          <SalesAgentWidget />
+                        </ConditionalHeaderFooter>
+                        <ConditionalHeaderFooter>
+                          <DynamicMaintenancePopup />
+                        </ConditionalHeaderFooter>
+                      </ConditionalHeaderFooterProvider>
+                      {/* CONVERSION: Sticky mobile call bar — always visible on mobile */}
+                      <StickyMobileCallBar />
+                      {/* CONVERSION: Global WhatsApp QR modal for desktop users */}
+                      <DynamicWhatsAppDesktopModal />
+                      {/* SEO: Canonical URL manager - wrapped in Suspense for useSearchParams */}
+                      <Suspense fallback={null}>
+                        <CanonicalManager />
+                      </Suspense>
+                      {/* PERFORMANCE: Analytics after main content for better LCP */}
+                      <GoogleAnalytics />
+                      <AdBlockDetector />
+                      <FacebookPixel />
+                      <WebVitalsReporter />
                     </PersonalizationProvider>
                   </TrustProvider>
                 </ToastProvider>
