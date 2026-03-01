@@ -8,6 +8,7 @@ export const GOOGLE_ADS_ID = 'AW-11121440988'
 const CONVERSION_LABELS = {
   whatsAppLead: 'spP_CIuY5_wbENzxjrcp',
   phoneCall: 'lsthCI6Y5_wbENzxjrcp',
+  signUp: 'MIYpCOHGy4AcENzxjrcp',
 }
 
 /**
@@ -59,6 +60,32 @@ export const trackPhoneCall = (source: string, value: number = 0) => {
     lead_type: 'phone_call',
     source: source,
     contact_method: 'phone',
+  })
+
+  return true
+}
+
+/**
+ * Track sign-up / form submission conversion
+ * Fire this on the thank-you page after a user submits a form
+ */
+export const trackSignUpConversion = (source: string, value: number = 0) => {
+  if (typeof window === 'undefined' || !window.gtag) {
+    return false
+  }
+
+  window.gtag('event', 'conversion', {
+    send_to: `${GOOGLE_ADS_ID}/${CONVERSION_LABELS.signUp}`,
+    value: value,
+    currency: 'INR',
+  })
+
+  window.gtag('event', 'generate_lead', {
+    currency: 'INR',
+    value: value,
+    lead_type: 'sign_up',
+    source: source,
+    contact_method: 'form',
   })
 
   return true

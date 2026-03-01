@@ -6,11 +6,8 @@ import { CheckCircle2, Phone, MessageSquare, Clock, FileText, CalendarDays } fro
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackGoogleAdsConversion,
-  trackPhoneCallConversion,
-  trackDemoBookingConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion, trackDemoBookingConversion } from '@/lib/analytics/googleAdsConversions'
+import { trackSignUpConversion } from '@/lib/ads/googleAdsConversion'
 
 function ThankYouContent() {
   const router = useRouter()
@@ -26,8 +23,8 @@ function ThankYouContent() {
       pageType: 'thank-you',
     })
 
-    // Google Ads conversion tracking
-    trackGoogleAdsConversion('THANK_YOU_PAGE', 1.0, 'INR')
+    // Google Ads sign-up conversion (AW-11121440988/MIYpCOHGy4AcENzxjrcp)
+    trackSignUpConversion(`thank-you-${form}`)
 
     // Countdown timer
     const timer = setInterval(() => {
