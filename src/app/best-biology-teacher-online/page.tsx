@@ -366,6 +366,24 @@ export default function BestBiologyTeacherOnlinePage() {
             >
               Best Biology Teacher for NEET
             </Link>
+            <Link
+              href="/compare/kota-vs-online"
+              className="rounded-lg bg-orange-100 px-4 py-2 text-orange-700 transition hover:bg-orange-200"
+            >
+              Kota vs Online Comparison
+            </Link>
+            <Link
+              href="/neet-biology-important-questions"
+              className="rounded-lg bg-yellow-100 px-4 py-2 text-yellow-700 transition hover:bg-yellow-200"
+            >
+              NEET Important Questions
+            </Link>
+            <Link
+              href="/mcq"
+              className="rounded-lg bg-teal-100 px-4 py-2 text-teal-700 transition hover:bg-teal-200"
+            >
+              Practice MCQs
+            </Link>
           </div>
         </div>
       </section>

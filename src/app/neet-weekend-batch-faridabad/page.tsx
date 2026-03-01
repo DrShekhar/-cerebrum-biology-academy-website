@@ -401,6 +401,20 @@ export default function NEETWeekendBatchFaridabad() {
               View All Batches
             </Link>
           </div>
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <Link href="/neet-biology-important-questions" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+              NEET Important Questions
+            </Link>
+            <Link href="/mcq" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+              Practice MCQs
+            </Link>
+            <Link href="/compare/kota-vs-online" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+              Kota vs Online Comparison
+            </Link>
+            <Link href="/best-biology-teacher-online" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+              About Our Faculty
+            </Link>
+          </div>
         </div>
       </section>
 

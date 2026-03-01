@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import {
   Home,
   Heart,
@@ -224,6 +225,24 @@ export default function KotaVsOnlinePage() {
 
   return (
     <div className="min-h-screen">
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       <section className="relative bg-gradient-to-br from-orange-600 via-red-600 to-pink-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
@@ -601,6 +620,29 @@ export default function KotaVsOnlinePage() {
       </section>
 
       <ParentTestimonialsSection />
+
+      {/* Internal Links */}
+      <section className="bg-gray-50 py-12">
+        <div className="container mx-auto px-4">
+          <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">
+            Explore More
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/online-biology-classes" className="rounded-lg bg-green-100 px-4 py-2 text-green-700 transition hover:bg-green-200">
+              Online Biology Classes
+            </Link>
+            <Link href="/best-biology-teacher-online" className="rounded-lg bg-purple-100 px-4 py-2 text-purple-700 transition hover:bg-purple-200">
+              Best Biology Teacher Online
+            </Link>
+            <Link href="/neet-biology-important-questions" className="rounded-lg bg-blue-100 px-4 py-2 text-blue-700 transition hover:bg-blue-200">
+              NEET Important Questions
+            </Link>
+            <Link href="/courses" className="rounded-lg bg-orange-100 px-4 py-2 text-orange-700 transition hover:bg-orange-200">
+              View All Courses
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
