@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'NEET preparation app',
     'offline biology study',
   ],
+  robots: { index: false, follow: true },
 }
 
 export default function MobileAppPage() {

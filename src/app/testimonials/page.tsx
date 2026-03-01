@@ -341,7 +341,7 @@ export default function TestimonialsPage() {
                     Sadhna Sirin - NEET Topper
                   </Button>
                 </Link>
-                <Link href="/testimonials/neet-success-story">
+                <Link href="/neet-success-stories">
                   <Button variant="outline">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.5V5.5l6 4.5-6 4.5z" />

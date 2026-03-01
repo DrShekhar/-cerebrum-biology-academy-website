@@ -814,9 +814,7 @@ export const gsc404CleanupRedirects = [
   { source: '/neet-coaching-:slug-india', destination: '/neet-coaching', permanent: true },
 
   // --- Navigation/informational pages redirects ---
-  { source: '/testimonials', destination: '/results', permanent: true },
   { source: '/success-stories', destination: '/results', permanent: true },
-  { source: '/faculty', destination: '/about', permanent: true },
   { source: '/teachers', destination: '/about', permanent: true },
   { source: '/schedule', destination: '/courses', permanent: true },
   { source: '/timetable', destination: '/courses', permanent: true },
@@ -989,7 +987,7 @@ export const gsc404CleanupRedirects = [
   { source: '/purchase/neet-dropper', destination: '/courses/neet-dropper', permanent: true },
   { source: '/locations/chennai', destination: '/neet-coaching', permanent: true },
   { source: '/locations/jaipur', destination: '/neet-coaching-jaipur', permanent: true },
-  { source: '/about/faculty', destination: '/about', permanent: true },
+  { source: '/about/faculty', destination: '/faculty', permanent: true },
   { source: '/courses/dropper', destination: '/courses/neet-dropper', permanent: true },
   { source: '/blog/kota-vs-online-neet-coaching-2026', destination: '/blog', permanent: true },
   { source: '/blog/top-10-neet-biology-coaching-delhi-ncr-2025', destination: '/blog/top-10-neet-biology-coaching-delhi-ncr-2026', permanent: true },
@@ -1007,7 +1005,7 @@ export const gsc404CleanupRedirects = [
   { source: '/services/classroom', destination: '/services', permanent: true },
   { source: '/services/online-classes', destination: '/services', permanent: true },
   { source: '/services/international', destination: '/international', permanent: true },
-  { source: '/support/help-center', destination: '/support', permanent: true },
+  { source: '/support/help-center', destination: '/contact', permanent: true },
   // removed: /ncert-solutions duplicate — already in gsc404 → /biology-notes
 
   // --- Feb 27 crawl batch 2: more non-existent pages ---
@@ -1316,4 +1314,17 @@ export const gsc404CleanupBatch3Redirects = [
   { source: '/blog/nri-quota-mbbs-maharashtra-complete-guide-2025', destination: '/blog', permanent: true },
   { source: '/international/hk', destination: '/international', permanent: true },
   { source: '/locations/delhi/hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
+
+  // --- B5 route audit: redirect pages moved from page.tsx to config (March 2026) ---
+  { source: '/enroll', destination: '/enrollment', permanent: true },
+  { source: '/company', destination: '/about', permanent: true },
+  { source: '/login', destination: '/sign-in', permanent: true },
+  { source: '/neet-readiness-quiz', destination: '/neet-tools', permanent: true },
+  { source: '/support', destination: '/contact', permanent: true },
+  { source: '/about/results', destination: '/company/results', permanent: true },
+
+  // --- B5 route audit: empty pages (March 2026) ---
+  { source: '/biology-teacher-near-me-noida', destination: '/biology-tutor-noida', permanent: true },
+  { source: '/neet-updates', destination: '/blog', permanent: true },
+  { source: '/testimonials/neet-success-story', destination: '/testimonials', permanent: true },
 ]

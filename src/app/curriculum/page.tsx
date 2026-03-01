@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'chapter wise syllabus',
     'biology study plan',
   ],
+  robots: { index: false, follow: true },
 }
 
 export default function CurriculumPage() {

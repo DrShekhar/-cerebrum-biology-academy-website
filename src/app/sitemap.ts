@@ -5522,12 +5522,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
-    {
-      url: `${baseUrl}/biology-teacher-near-me-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
     // East Delhi Expansion Pages
     {
       url: `${baseUrl}/neet-coaching-mayur-vihar`,
@@ -7707,7 +7701,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'neet-study-material-gurugram',
     'how-to-score-340-in-neet-biology',
     'neet-ug-2026',
-    'neet-updates',
     // Free demo classes
     'free-neet-demo-class-faridabad',
     'free-neet-demo-class-ghaziabad',
@@ -7724,8 +7717,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'dr-shekhar-youtube-channel',
     'neet-coaching',
     'reviews',
-    'support',
-    'terms',
     // School-specific landing pages
     'neet-coaching-sharda-greater-noida-students',
     'neet-coaching-modern-school-faridabad-students',
@@ -7764,7 +7755,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'boards/karnataka-puc',
     // Testimonial sub-pages
     'testimonials/sadhna-sirin-neet-2023-topper',
-    'testimonials/neet-success-story',
     // College predictor sub-pages
     'neet-college-predictor/government-medical-colleges',
     'neet-college-predictor/low-fees-medical-colleges',
@@ -7796,7 +7786,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'neet-biology-mcq/analytics',
     'neet-biology-mcq/contribute',
     // Support
-    'support/help-center',
     // Study tools
     'study-with-me',
     // Landing pages
@@ -7804,7 +7793,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Seminar
     'neet-guidance-seminar/thank-you',
     // Company
-    'company',
   ]
 
   const missingPageRoutes: MetadataRoute.Sitemap = missingPages.map((page) => ({
