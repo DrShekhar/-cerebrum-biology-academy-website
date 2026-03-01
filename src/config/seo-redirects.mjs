@@ -1388,4 +1388,12 @@ export const gsc404CleanupBatch3Redirects = [
   { source: '/neet-coaching-maharashtra', destination: '/neet-coaching-west-india', permanent: true },
   { source: '/neet-foundation-class-11-gurugram', destination: '/courses/foundation', permanent: true },
   { source: '/biology-classes-greater-noida-west', destination: '/biology-classes-noida', permanent: true },
+
+  // --- Crawled-not-indexed: missing pages (March 2026 batch) ---
+  { source: '/biology-classes-gurgaon-sector-60', destination: '/biology-classes-gurgaon', permanent: true },
+  { source: '/biology-coaching-defence-colony-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/blog/nri-quota-mbbs-maharashtra-complete-guide-2025', destination: '/blog', permanent: true },
+  { source: '/international/hk', destination: '/international', permanent: true },
+  { source: '/locations/delhi/hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/neet-coaching-rk-puram', destination: '/neet-coaching-south-delhi', permanent: true },
 ]
