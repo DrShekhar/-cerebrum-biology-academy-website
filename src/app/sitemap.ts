@@ -24,6 +24,7 @@ import {
   localAreaPageRedirects,
   gsc404CleanupRedirects,
   thinPageConsolidationRedirects,
+  gsc404CleanupBatch3Redirects,
 } from '@/config/seo-redirects.mjs'
 
 const redirectedPaths = new Set(
@@ -33,6 +34,7 @@ const redirectedPaths = new Set(
     ...localAreaPageRedirects,
     ...gsc404CleanupRedirects,
     ...thinPageConsolidationRedirects,
+    ...gsc404CleanupBatch3Redirects,
   ].map((r: { source: string }) => r.source)
 )
 

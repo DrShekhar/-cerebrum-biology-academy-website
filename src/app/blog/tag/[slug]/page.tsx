@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { permanentRedirect } from 'next/navigation'
 import { getPostsByTag, getAllTags } from '@/lib/blog/mdx'
 import { TagArchivePage } from '@/components/blog/TagArchivePage'
 
@@ -17,7 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (posts.length === 0) {
     return {
-      title: 'Tag Not Found',
+      title: 'Redirecting to Blog',
+      robots: { index: false, follow: false },
     }
   }
 
@@ -46,8 +47,8 @@ export async function generateStaticParams() {
   }))
 }
 
-// Return 404 for any slug not in generateStaticParams
-export const dynamicParams = false
+// Allow dynamic params so non-existent tags get 301 → /blog instead of 404
+export const dynamicParams = true
 
 export default async function TagPage({ params }: Props) {
   const { slug } = await params
@@ -58,7 +59,7 @@ export default async function TagPage({ params }: Props) {
   const postsAlt = posts.length === 0 ? getPostsByTag(slug) : posts
 
   if (postsAlt.length === 0) {
-    notFound()
+    permanentRedirect('/blog')
   }
 
   return <TagArchivePage tag={tagName} posts={postsAlt} />

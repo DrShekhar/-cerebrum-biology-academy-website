@@ -10,6 +10,7 @@ import {
   localAreaPageRedirects,
   gsc404CleanupRedirects,
   thinPageConsolidationRedirects,
+  gsc404CleanupBatch3Redirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1501,6 +1502,7 @@ const nextConfig = {
       ...localAreaPageRedirects,
       ...gsc404CleanupRedirects,
       ...thinPageConsolidationRedirects,
+      ...gsc404CleanupBatch3Redirects,
     ]
   },
 
