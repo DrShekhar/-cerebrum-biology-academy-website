@@ -31,7 +31,9 @@ export async function generateMetadata({
   const params = await searchParams
   const pageParam = typeof params.page === 'string' ? parseInt(params.page, 10) : 1
   const currentPage = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam
-  const hasQueryParams = Object.keys(params).length > 0
+  const hasSearch = typeof params.search === 'string'
+  const hasCategory = typeof params.category === 'string'
+  const hasFilterParams = hasSearch || hasCategory
 
   const canonical =
     currentPage > 1
@@ -59,8 +61,8 @@ export async function generateMetadata({
         'application/rss+xml': '/blog/feed.xml',
       },
     },
-    ...(hasQueryParams && {
-      robots: { index: true, follow: true },
+    ...(hasFilterParams && {
+      robots: { index: false, follow: true },
     }),
   }
 }
