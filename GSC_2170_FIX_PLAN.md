@@ -1,219 +1,204 @@
-# GSC 2,170 Not-Indexed Pages — Fix Plan (March 1, 2026)
+# GSC 2,170 Not-Indexed Pages — Fix Plan
+
+**Created**: March 1, 2026
+**Last Updated**: March 2, 2026
+**Status**: Tasks 1, 2, 3 COMPLETE
 
 ## Current State
-- **Not Indexed**: 2,170 pages | **Indexed**: 1,980 pages
+- **Not Indexed**: 2,170 pages (at time of export) | **Indexed**: 1,980 pages
 - **Existing redirects**: 560 in seo-redirects.mjs + 268 in next.config.mjs
 - **Hardcoded SEO routes**: 514 directories in src/app/
 - **Git**: Clean, on `main` branch
 
 ## Breakdown of 2,170 Not-Indexed Pages
 
-| Reason | Pages | Action Needed |
-|--------|-------|---------------|
-| Not found (404) | 726 | TASK 1: Add missing 301 redirects |
-| Page with redirect | 381 | No action (working correctly) |
-| Crawled - not indexed | 265 | TASK 2: Fix thin content or noindex |
-| Excluded by noindex | 226 | Verify intentional |
-| Alternate page with canonical | 69 | No action (working correctly) |
-| Blocked by robots.txt | 54 | Verify intentional |
-| Duplicate without canonical | 30 | TASK 3: Add canonical tags |
-| Redirect error | 9 | Fix broken redirects |
-| Server error (5xx) | 6 | Fix server errors |
-| Soft 404 | 1 | Fix soft 404 |
-| Other reasons | ~203 | Investigate |
+| Reason | Pages | Action Needed | Status |
+|--------|-------|---------------|--------|
+| Not found (404) | 726 | TASK 1: Add missing 301 redirects | DONE |
+| Page with redirect | 381 | No action (working correctly) | N/A |
+| Crawled - not indexed | 265 | TASK 2: Fix thin content or noindex | DONE |
+| Excluded by noindex | 226 | Verify intentional | Pending |
+| Alternate page with canonical | 69 | No action (working correctly) | N/A |
+| Blocked by robots.txt | 54 | Verify intentional | Pending |
+| Duplicate without canonical | 30 | TASK 3: Add canonical tags | DONE |
+| Redirect error | 9 | Fix broken redirects | Pending |
+| Server error (5xx) | 6 | Fix server errors | Pending |
+| Soft 404 | 1 | Fix soft 404 | Pending |
+| Other reasons | ~203 | Investigate | Pending |
 
 **Pages requiring NO action**: 381 (redirects) + 69 (canonical working) = **450 pages are fine**
-**Pages requiring action**: ~1,720
 
 ---
 
-## TASK 1: Fix 726 404 URLs (Add Missing 301 Redirects)
+## TASK 1: Fix 726 404 URLs — COMPLETED
 
-### Problem
-GSC reports 726 404 URLs. We already have 238 GSC 404 cleanup redirects.
-~488 URLs still returning 404 without redirects.
+### What Was Done
+**Commit `f4452366`** — `fix(seo): resolve 728 GSC 404 errors — blog tags + 120 new redirects`
 
-### Prerequisites
-- **USER ACTION REQUIRED**: Export 404 URL list from GSC
-  - Go to GSC → Indexing → Pages → "Not found (404)" → Export
-  - Save CSV to project root as `gsc-404-export.csv`
+#### 1A: Blog Tag 404s (493 URLs)
+- **Root cause**: `dynamicParams = false` in `src/app/blog/tag/[slug]/page.tsx` caused 404 for any tag not pre-generated at build time
+- **Fix**: Changed `dynamicParams` to `true`, changed `notFound()` to `permanentRedirect('/blog')` for tags with no posts
+- **Result**: 369 tags now resolve via middleware normalization, 124 non-existent tags redirect to `/blog`
 
-### Execution Plan (3 Batches)
+#### 1B: 120 New Redirect Rules (235 URLs)
+- Added `gsc404CleanupBatch3Redirects` array to `src/config/seo-redirects.mjs`
+- Categories:
+  - 29 biology-classes nested sub-pages → parent city hubs
+  - 25 biology-tuition nested sub-pages → parent city hubs
+  - 11 biology-tutor pages → relevant hubs
+  - 7 neet-coaching locality pages → city hubs
+  - 6 international course sub-pages → /international
+  - 4 olympiad prep pages → /biology-olympiad-coaching
+  - 8 resource pages → relevant alternatives
+  - 30 misc pages → closest relevant destinations
+- Imported in `next.config.mjs`, excluded from `src/app/sitemap.ts`
 
-#### Batch 1A: Categorize 404 URLs (no code changes)
-1. Parse the exported CSV
-2. Categorize URLs into groups:
-   - **City/locality pages** → redirect to parent city hub
-   - **Old blog posts** → redirect to /blog or related post
-   - **Old course URLs** → redirect to /courses or specific course
-   - **API/asset URLs** → ignore (not real pages)
-   - **Truly dead pages** → redirect to closest relevant page
-3. Cross-reference against existing 560 redirects to find gaps
-4. **Output**: Categorized list with redirect targets
+#### 1C: www-variant URLs (69 URLs)
+- Verified Vercel www→non-www redirect is working (308→308→200)
+- These are stale GSC data — no code change needed
 
-#### Batch 1B: Add Redirect Rules (code changes)
-1. Add new redirects to `src/config/seo-redirects.mjs` under a new array: `gsc404CleanupBatch2Redirects`
-2. Process in sub-batches of ~50 redirects each (to stay within context)
-3. Import new array in `next.config.mjs`
-4. **Commit after each sub-batch of ~50 redirects**
-
-#### Batch 1C: Update Sitemap
-1. Add new redirect array to sitemap exclusion filter in `src/app/sitemap.ts`
-2. Verify no 404 URLs appear in any sitemap
-3. **Commit**: "fix(seo): exclude batch 2 404 redirects from sitemap"
-
-### Estimated Impact: -726 not-indexed pages (404s resolved)
+### Files Modified
+- `src/app/blog/tag/[slug]/page.tsx` — dynamicParams + permanentRedirect
+- `src/config/seo-redirects.mjs` — 120 new redirects
+- `next.config.mjs` — import new redirect array
+- `src/app/sitemap.ts` — exclude new redirects
 
 ---
 
-## TASK 2: Audit & Fix 514 Hardcoded SEO Routes + 265 Crawled-Not-Indexed
+## TASK 2: Fix 265 Crawled-Not-Indexed URLs — COMPLETED
 
-### Problem
-- 514 hardcoded SEO route folders in src/app/
-- Only ~10 have real data in intent-pages-data.ts
-- Many are thin/duplicate (same template, city name swapped)
-- 265 pages Google crawled but refused to index (quality signal)
+### What Was Done
 
-### Prerequisites
-- **USER ACTION REQUIRED**: Export "Crawled - currently not indexed" URLs from GSC
-  - Go to GSC → Indexing → Pages → "Crawled - currently not indexed" → Export
-  - Save CSV to project root as `gsc-crawled-not-indexed-export.csv`
+#### 2A: Triage 264 URLs from GSC Export
+- 144 `_next/` internal assets — normal, no action needed
+- 38 www-variant pages — handled by Vercel redirect
+- 8 blog tag pages — fixed by Task 1
+- 8 `/blog?search=` pages — already noindexed by middleware
+- 6 missing pages — needed redirects
+- 13 existing pages with thin content — needed enrichment
+- Of the 13, 5 already had rich custom content (367-898 lines), leaving 6 template pages + 3 custom pages
 
-### Execution Plan (5 Batches)
+#### 2B: 6 Redirects for Missing Pages
+**Commit `469a5d0a`** — `fix(seo): add 6 redirects for crawled-not-indexed missing pages`
 
-#### Batch 2A: Audit Route Content Quality
-1. Scan all 514 hardcoded SEO route page.tsx files
-2. Categorize each into:
-   - **RICH**: Has unique content, custom component, >5KB (KEEP indexed)
-   - **TEMPLATE**: Uses IntentLandingPage with data entry (KEEP if data exists)
-   - **THIN**: <2KB, generic template, just city name swap (NOINDEX or REDIRECT)
-   - **EMPTY**: No data entry, renders shell (REDIRECT to parent)
-3. **Output**: Classification spreadsheet/JSON
+| Source | Destination |
+|--------|-------------|
+| /biology-classes-gurgaon-sector-60 | /biology-classes-gurgaon |
+| /biology-coaching-defence-colony-delhi | /neet-coaching-south-delhi |
+| /blog/nri-quota-mbbs-maharashtra-complete-guide-2025 | /blog |
+| /international/hk | /international |
+| /locations/delhi/hauz-khas | /neet-coaching-south-delhi |
+| /neet-coaching-rk-puram | /neet-coaching-south-delhi |
 
-#### Batch 2B: Noindex Thin Pages (code changes)
-For pages classified as THIN:
-1. Add `robots: { index: false, follow: true }` to their metadata
-2. Process in batches of ~20 pages per commit
-3. Pattern: Add noindex to metadata export in each page.tsx
-4. **Commit after each batch of ~20 pages**
+#### 2C: Enrich 6 Thin Template Pages
+**Commit `a07c0ec5`** — `fix(seo): enrich 6 thin SEO pages with unique content for indexing`
 
-#### Batch 2C: Redirect Empty Pages (code changes)
-For pages classified as EMPTY:
-1. Add 301 redirects to `seo-redirects.mjs` under new array: `thinPageConsolidationBatch2Redirects`
-2. Map each empty page to its closest parent hub:
-   - `affordable-neet-coaching-{city}` → `/neet-coaching-{city}`
-   - `aakash-alternative-{city}` → `/best-neet-coaching-{city}` or `/neet-coaching-{city}`
-   - `allen-alternative-{city}` → `/best-neet-coaching-{city}` or `/neet-coaching-{city}`
-   - `top-10-neet-coaching-{city}` → `/neet-coaching-{city}`
-   - `when-to-start-neet-coaching-{city}` → `/neet-coaching-{city}`
-3. **Commit after each batch of ~50 redirects**
+Each page was a ~1KB `<SEOLandingPage>` wrapper. Added 500-800 words of unique content:
 
-#### Batch 2D: Remove Redirected Routes from Sitemap
-1. Add new arrays to sitemap exclusion filter
-2. Verify excluded pages don't appear in any sitemap
-3. **Commit**: "fix(seo): exclude thin/empty page redirects from sitemap"
+| Page | Content Added |
+|------|---------------|
+| `genetics-biology-tuition` | Chapter breakdown, common mistakes, teaching methodology |
+| `neet-zoology-syllabus` | 11-chapter weightage table, high-yield topics, 60-day strategy |
+| `class-11-neet-preparation-online` | Month-by-month NEET timeline (Apr-Mar), online vs offline |
+| `ncert-biology-notes-class-11` | 5-unit chapter cards with NEET question counts, note-making tips |
+| `neet-biology-important-questions` | 7-unit weightage table, PYQ analysis, top 10 repeated topics |
+| `neet-biology-revision-notes` | 4-phase 45-day revision plan, time allocation, last-15-days strategy |
 
-#### Batch 2E: Delete Empty Route Folders (optional, after redirects are live)
-1. After confirming redirects work in production, delete the empty page.tsx folders
-2. This reduces codebase bloat from 514 → only RICH + TEMPLATE pages
-3. **Do this in a later session after verifying redirects on Vercel**
+#### 2D: Fix 3 Custom Pages for Indexability
+**Commit `807f165d`** — `fix(seo): add metadata, schema, and internal links to 3 custom pages`
 
-### Estimated Impact: -265 crawled-not-indexed + prevents future thin content issues
+| Page | Lines | Issue Found | Fix Applied |
+|------|-------|-------------|-------------|
+| `compare/kota-vs-online` | 662 | `'use client'` — NO metadata, NO canonical, NO schema, NO internal links | Created `layout.tsx` with metadata + canonical, added FAQ JSON-LD, added 4 internal links |
+| `best-biology-teacher-online` | 402 | Had `layout.tsx` already but limited internal links | Added 3 more cross-linking internal links |
+| `neet-weekend-batch-faridabad` | 461 | Had metadata + schema but only 2 internal links | Added 4 more internal links in CTA section |
 
----
-
-## TASK 3: Fix 30 "Duplicate Without User-Selected Canonical" Pages
-
-### Problem
-30 pages where Google found duplicates but no canonical tag was set.
-Google picked a canonical itself — but it may have picked wrong.
-
-### Prerequisites
-- **USER ACTION REQUIRED**: Export "Duplicate without user-selected canonical" URLs from GSC
-  - Go to GSC → Indexing → Pages → "Duplicate without user-selected canonical" → Export
-  - Save CSV to project root as `gsc-duplicate-no-canonical-export.csv`
-
-### Execution Plan (2 Batches)
-
-#### Batch 3A: Identify Duplicate Pairs
-1. Parse exported CSV to get the 30 URLs
-2. For each URL, determine:
-   - What is the preferred canonical version?
-   - Is there already a canonical tag (that Google is ignoring)?
-   - Is there a www vs non-www issue?
-   - Is there a trailing slash vs no-trailing-slash issue?
-   - Are there query parameter variants?
-3. **Output**: Mapping of duplicate URL → canonical URL
-
-#### Batch 3B: Add Canonical Tags (code changes)
-1. For each of the 30 pages, add/fix `alternates: { canonical: '...' }` in metadata
-2. If page uses `generatePageMetadata()`, verify canonical in `src/lib/seo/metadata.ts`
-3. If page has inline metadata, add canonical directly
-4. Add redirects where appropriate (e.g., www→non-www variants)
-5. **Commit**: "fix(seo): add canonical tags to 30 duplicate pages"
-
-### Estimated Impact: -30 not-indexed pages
+### Files Modified
+- `src/config/seo-redirects.mjs` — 6 redirects added
+- `src/app/genetics-biology-tuition/page.tsx` — enriched
+- `src/app/neet-zoology-syllabus/page.tsx` — enriched
+- `src/app/class-11-neet-preparation-online/page.tsx` — enriched
+- `src/app/ncert-biology-notes-class-11/page.tsx` — enriched
+- `src/app/neet-biology-important-questions/page.tsx` — enriched
+- `src/app/neet-biology-revision-notes/page.tsx` — enriched
+- `src/app/compare/kota-vs-online/layout.tsx` — created (metadata + canonical)
+- `src/app/compare/kota-vs-online/page.tsx` — FAQ schema + internal links
+- `src/app/best-biology-teacher-online/page.tsx` — more internal links
+- `src/app/neet-weekend-batch-faridabad/page.tsx` — more internal links
 
 ---
 
-## BONUS: Quick Wins (No Export Needed)
+## TASK 3: Fix 30 "Duplicate Without User-Selected Canonical" — COMPLETED
 
-### B1: Fix 9 Redirect Errors
-1. Check which redirects are broken (circular? chain? wrong target?)
-2. Fix in seo-redirects.mjs or next.config.mjs
-3. **Commit**: "fix(seo): resolve 9 broken redirect errors"
+### What Was Done
+**Commit `f8b233c2`** — `fix(seo): noindex blog search/category pages to fix duplicate-without-canonical`
 
-### B2: Fix 6 Server Errors (5xx)
-1. Identify which pages are returning 500 errors
-2. Fix the underlying code issue
-3. **Commit**: "fix: resolve 6 server errors on SEO pages"
+#### Analysis of 30 URLs
+- 25 `/blog?search=...` pages (e.g., `?search=MBBS Admission`, `?search=NEET 2026`)
+- 3 `/blog?category=...` pages (e.g., `?category=study-tips`, `?category=neet-preparation`)
+- 2 www-variant subpages (already handled by Vercel redirect, stale GSC data)
 
-### B3: Verify 226 Noindex Pages
-1. Cross-reference 226 noindex URLs against intentional noindex list
-2. If any are accidentally noindexed, remove the noindex tag
-3. **Commit if changes needed**: "fix(seo): remove accidental noindex from X pages"
+#### Root Cause
+In `src/app/blog/page.tsx` line 62-64, the code was:
+```tsx
+...(hasQueryParams && {
+  robots: { index: true, follow: true },
+}),
+```
+This told Google to index ALL query param pages (including search/category filters), while the canonical pointed to `/blog`. The contradictory signals created "Duplicate without user-selected canonical".
 
-### B4: Verify 54 Robots.txt Blocked Pages
-1. Check if the 54 blocked URLs should actually be indexed
-2. Update robots.txt if needed
-3. **Commit if changes needed**: "fix(seo): unblock X pages from robots.txt"
+#### Fix
+Changed to only apply `noindex` for search/category filter params:
+```tsx
+const hasSearch = typeof params.search === 'string'
+const hasCategory = typeof params.category === 'string'
+const hasFilterParams = hasSearch || hasCategory
+// ...
+...(hasFilterParams && {
+  robots: { index: false, follow: true },
+}),
+```
+Pagination (`?page=`) remains indexable with its own canonical URL.
+
+### Files Modified
+- `src/app/blog/page.tsx` — noindex for search/category params
 
 ---
 
-## Execution Order & Context Window Strategy
+## All Commits Summary
 
-### Session 1 (Current): Planning + Quick Wins
-- [x] Create this plan
-- [ ] B1: Fix 9 redirect errors (if URLs visible in GSC)
-- [ ] B2: Fix 6 server errors (if URLs visible in GSC)
-- [ ] Commit plan to git
+| Commit | Description | Date |
+|--------|-------------|------|
+| `f4452366` | fix(seo): resolve 728 GSC 404 errors — blog tags + 120 new redirects | Mar 1 |
+| `469a5d0a` | fix(seo): add 6 redirects for crawled-not-indexed missing pages | Mar 1 |
+| `a07c0ec5` | fix(seo): enrich 6 thin SEO pages with unique content for indexing | Mar 2 |
+| `807f165d` | fix(seo): add metadata, schema, and internal links to 3 custom pages | Mar 2 |
+| `f8b233c2` | fix(seo): noindex blog search/category pages to fix duplicate-without-canonical | Mar 2 |
 
-### Session 2: Task 1 (404 Redirects) — NEEDS CSV EXPORT
-- [ ] Batch 1A: Categorize 404 URLs
-- [ ] Batch 1B: Add redirects (commit every ~50)
-- [ ] Batch 1C: Update sitemap
-- **Expected commits**: 8-12
+---
 
-### Session 3: Task 2 (Audit Routes) — Part 1
-- [ ] Batch 2A: Audit all 514 routes (produce classification)
-- [ ] Batch 2B: Noindex thin pages (commit every ~20)
-- **Expected commits**: 5-8
+## Remaining Work (Bonus Tasks)
 
-### Session 4: Task 2 (Audit Routes) — Part 2
-- [ ] Batch 2C: Redirect empty pages (commit every ~50)
-- [ ] Batch 2D: Update sitemap exclusions
-- **Expected commits**: 5-8
+### B1: Fix 9 Redirect Errors — Pending
+- Need to identify which redirects are broken (circular? chain? wrong target?)
+- Fix in seo-redirects.mjs or next.config.mjs
 
-### Session 5: Task 3 (Duplicate Canonicals) — NEEDS CSV EXPORT
-- [ ] Batch 3A: Identify duplicate pairs
-- [ ] Batch 3B: Add canonical tags
-- [ ] Bonus tasks B3, B4
-- **Expected commits**: 2-3
+### B2: Fix 6 Server Errors (5xx) — Pending
+- Need to identify which pages are returning 500 errors
+- Fix the underlying code issue
 
-### Session 6: Cleanup & Verification
-- [ ] Batch 2E: Delete empty route folders (after production verification)
-- [ ] Run full build to verify no breakage
-- [ ] Deploy and request re-indexing in GSC
+### B3: Verify 226 Noindex Pages — Pending
+- Cross-reference 226 noindex URLs against intentional noindex list
+- If any are accidentally noindexed, remove the noindex tag
+
+### B4: Verify 54 Robots.txt Blocked Pages — Pending
+- Check if the 54 blocked URLs should actually be indexed
+- Update robots.txt if needed
+
+### B5: Audit Remaining 514 Hardcoded SEO Routes — Pending
+- Full audit of all SEO route folders for thin/empty content
+- Noindex thin pages, redirect empty pages
+- This is a larger effort for a future session
 
 ---
 
@@ -221,27 +206,9 @@ Google picked a canonical itself — but it may have picked wrong.
 
 | Metric | Before | After (Expected) |
 |--------|--------|-------------------|
-| Not Indexed | 2,170 | ~800-1,000 |
+| Not Indexed | 2,170 | ~1,200-1,400 |
 | 404 errors | 726 | ~0-50 |
-| Crawled not indexed | 265 | ~50-100 |
+| Crawled not indexed | 265 | ~150-180 |
 | Duplicates without canonical | 30 | 0 |
-| Redirect errors | 9 | 0 |
-| Server errors | 6 | 0 |
 
-**Target**: Reduce not-indexed from 2,170 → under 1,000 (54% improvement)
-
-Note: "Page with redirect" (381) and "Alternate page with proper canonical" (69) are EXPECTED and will always show. "Excluded by noindex" (226) is intentional for thin/private pages.
-
----
-
-## Files That Will Be Modified
-
-| File | Tasks |
-|------|-------|
-| `src/config/seo-redirects.mjs` | Task 1, Task 2 |
-| `next.config.mjs` | Task 1, Task 2 |
-| `src/app/sitemap.ts` | Task 1, Task 2 |
-| `src/lib/seo/metadata.ts` | Task 3 |
-| Various `src/app/*/page.tsx` | Task 2 (noindex), Task 3 (canonical) |
-| `middleware.ts` | If redirect errors found |
-| `public/robots.txt` | If blocked pages need unblocking |
+**Next steps**: Request re-indexing in GSC for the fixed URLs. Wait 2-4 weeks for Google to recrawl. Then tackle bonus tasks based on updated GSC data.
