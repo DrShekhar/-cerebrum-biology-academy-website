@@ -12,10 +12,7 @@ import {
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 
 // High-converting CTA copy with social proof
 const CTA_COPY = {
@@ -93,8 +90,6 @@ export const FloatingCTA = memo(function FloatingCTA() {
 
   const handleMobileWhatsAppClick = async (e: React.MouseEvent) => {
     e.preventDefault()
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('global-sticky-bar')
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'sticky_cta_click', {
         event_category: 'conversion',

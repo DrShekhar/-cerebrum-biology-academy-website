@@ -21,10 +21,7 @@ import {
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 
 export default function Class910BiologyFoundationPage() {
@@ -43,8 +40,6 @@ export default function Class910BiologyFoundationPage() {
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('class-9-10-course')
     await trackAndOpenWhatsApp({
       source: 'class-9-10-biology-course-page',
       message: 'Hi! I am interested in Class 9-10 Biology Foundation course. Please share details.',

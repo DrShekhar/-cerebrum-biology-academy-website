@@ -18,10 +18,7 @@ import {
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import {
   RelatedLocations,
@@ -48,8 +45,6 @@ export default function GreenParkLocationPage() {
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('green-park-location')
     await trackAndOpenWhatsApp({
       source: 'green-park-location-page',
       message: 'Hi! I am from Green Park area and interested in NEET Biology coaching.',

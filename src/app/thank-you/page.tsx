@@ -8,7 +8,6 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
   trackGoogleAdsConversion,
-  trackWhatsAppConversion,
   trackPhoneCallConversion,
   trackDemoBookingConversion,
 } from '@/lib/analytics/googleAdsConversions'
@@ -95,8 +94,6 @@ function ThankYouContent() {
   const content = getContent()
 
   const handleWhatsAppContact = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('thank-you-page')
     await trackAndOpenWhatsApp({
       source: 'thank-you-page',
       message: 'Hi! I just submitted a form on your website and wanted to follow up.',

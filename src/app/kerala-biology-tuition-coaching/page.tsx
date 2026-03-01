@@ -23,12 +23,8 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
-
-const WHATSAPP_NUMBER = '918826444334'
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hi! I am interested in Kerala Biology tuition. Please share details.'
-)
 
 const keralaCities = [
   { name: 'Kochi/Ernakulam', students: '380+', highlight: 'Commercial Capital', priority: 'high' },
@@ -136,14 +132,12 @@ const neetTools = [
 ]
 
 export default function KeralaBiologyTuitionPage() {
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: 'kerala_biology_page',
-      })
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'kerala-biology-tuition',
+      campaign: 'kerala-biology-tuition',
+      message: 'Hi! I am interested in Kerala Biology tuition. Please share details.',
+    })
   }
 
   return (

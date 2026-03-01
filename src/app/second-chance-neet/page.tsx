@@ -8,7 +8,6 @@ import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
   trackGoogleAdsConversion,
   trackPhoneCallConversion,
-  trackWhatsAppConversion,
   trackLeadFormConversion,
   trackDemoBookingConversion,
 } from '@/lib/analytics/googleAdsConversions'
@@ -95,11 +94,6 @@ export default function SecondChanceNEETPage() {
   }
 
   const handleWhatsAppContact = async () => {
-    ConversionTracker.trackWhatsAppClick()
-
-    // Google Ads conversion tracking for WhatsApp clicks
-    trackWhatsAppConversion('second-chance-neet')
-
     await trackAndOpenWhatsApp({
       source: 'second-chance-neet',
       message:

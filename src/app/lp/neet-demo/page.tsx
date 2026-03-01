@@ -6,7 +6,6 @@ import { Phone, MessageSquare, CheckCircle2, Users, Trophy, Clock, Star } from '
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
-  trackWhatsAppConversion,
   trackPhoneCallConversion,
   trackLeadFormConversion,
 } from '@/lib/analytics/googleAdsConversions'
@@ -71,8 +70,6 @@ export default function NEETDemoLandingPage() {
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('neet-demo-landing')
     await trackAndOpenWhatsApp({
       source: 'google-ads-landing',
       message: 'Hi! I want to book a free NEET Biology demo class.',

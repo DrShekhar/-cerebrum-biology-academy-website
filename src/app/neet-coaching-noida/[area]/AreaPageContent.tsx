@@ -58,7 +58,6 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
     await trackAndOpenWhatsApp({
       source: `noida-${slug}-page`,
       message: `Hi! I am from ${area.name}, Noida and interested in NEET Biology coaching.`,

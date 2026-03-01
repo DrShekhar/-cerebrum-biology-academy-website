@@ -33,6 +33,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function BiologyMajorCoursesPage() {
   const router = useRouter()
@@ -48,14 +49,12 @@ export default function BiologyMajorCoursesPage() {
     router.push('/demo-booking')
   }
 
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click_biology_major', {
-        event_category: 'engagement',
-        event_label: 'biology_major_courses_page',
-      })
-    }
-    window.open('https://wa.me/918826444334', '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'biology-major-courses',
+      campaign: 'biology-major-courses',
+      message: 'Hi! I am interested in Biology major courses. Please share details.',
+    })
   }
 
   const faqSchema = {

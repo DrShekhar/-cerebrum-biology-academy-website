@@ -21,13 +21,9 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { CitySchema } from '@/components/seo/CitySchema'
-
-const WHATSAPP_NUMBER = '918826444334'
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hi! I am interested in NEET coaching in Indore. Please share details.'
-)
 
 const localities = [
   { name: 'Vijay Nagar', students: '180+', highlight: 'Education Hub', priority: 'high' },
@@ -133,14 +129,12 @@ const neetTools = [
 ]
 
 export default function NEETCoachingIndorePage() {
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: 'indore_neet_page',
-      })
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'neet-coaching-indore',
+      message: "Hi! I'm from Indore and interested in NEET coaching. Please share details.",
+      campaign: 'neet-coaching-indore',
+    })
   }
 
   return (

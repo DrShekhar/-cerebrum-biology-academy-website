@@ -7,6 +7,7 @@ import {
 } from '@/lib/international/countryContentService'
 import { TimezoneService } from '@/lib/international/timezoneService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { Phone, Mail, Clock, Globe, MapPin, MessageSquare, Smartphone } from 'lucide-react'
 
 interface GlobalContactSupportProps {
@@ -83,7 +84,7 @@ export function GlobalContactSupport({
     setNextAvailable(nextBusinessHour)
   }
 
-  const handleContactClick = (method: string, contactValue: string) => {
+  const handleContactClick = async (method: string, contactValue: string) => {
     setSelectedMethod(method)
 
     trackBehavior('contact_method_clicked', {
@@ -99,11 +100,11 @@ export function GlobalContactSupport({
         window.location.href = `tel:${contactValue}`
         break
       case 'whatsapp':
-        const whatsappNumber = contactValue.replace(/[^\d]/g, '')
-        const message = encodeURIComponent(
-          "Hi! I'm interested in NEET Biology coaching. Can you provide more information?"
-        )
-        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank')
+        await trackAndOpenWhatsApp({
+          source: 'global-contact-support',
+          campaign: 'international',
+          message: "Hi! I'm interested in NEET Biology coaching. Can you provide more information?",
+        })
         break
       case 'email':
         const subject = encodeURIComponent('Inquiry about NEET Biology Coaching')

@@ -23,12 +23,9 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 
-const WHATSAPP_NUMBER = '918826444334'
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hi! I am interested in Karnataka PUC Biology coaching. Please share details about your online coaching program.'
-)
 
 const karnatakaCities = [
   { name: 'Bangalore', students: '580+', highlight: 'IT Capital Hub', priority: 'high' },
@@ -103,15 +100,12 @@ const neetTools = [
 ]
 
 export default function PageContent() {
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: 'karnataka_puc_biology_page',
-        value: 1,
-      })
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'karnataka-puc-biology',
+      campaign: 'karnataka-puc-biology',
+      message: 'Hi! I am interested in Karnataka PUC Biology coaching. Please share details about your online coaching program.',
+    })
   }
 
   const handleDemoBooking = () => {

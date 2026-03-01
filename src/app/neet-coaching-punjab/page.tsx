@@ -18,12 +18,8 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
-
-const WHATSAPP_NUMBER = '918826444334'
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hi! I am from Punjab and interested in online NEET coaching. Please share details.'
-)
 
 const punjabCities = [
   {
@@ -236,14 +232,12 @@ const faqs = [
 ]
 
 export default function NEETCoachingPunjabPage() {
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: 'punjab_neet_page',
-      })
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'neet-coaching-punjab',
+      message: 'Hi! I am from Punjab and interested in online NEET coaching. Please share details.',
+      campaign: 'neet-coaching-punjab',
+    })
   }
 
   const structuredData = {

@@ -25,13 +25,9 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { CitySchema } from '@/components/seo/CitySchema'
-
-const WHATSAPP_NUMBER = '918826444334'
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hi! I am interested in NEET coaching (Sector 34 Chandigarh area). Please share details.'
-)
 
 const nearbySectors = [
   { name: 'Sector 34', students: '85+', highlight: 'Coaching Hub', priority: 'high', distance: '0 km' },
@@ -225,14 +221,12 @@ const neetTools = [
 ]
 
 export default function NEETCoachingSector34Page() {
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: 'sector_34_chandigarh_neet_page',
-      })
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'neet-coaching-chandigarh-sector-34',
+      message: 'Hi! I am from Chandigarh Sector 34 and interested in NEET coaching. Please share details.',
+      campaign: 'neet-coaching-chandigarh-sector-34',
+    })
   }
 
   return (

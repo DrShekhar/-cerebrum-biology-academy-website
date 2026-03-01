@@ -17,10 +17,7 @@ import {
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import {
   RelatedLocations,
@@ -44,8 +41,6 @@ export default function GreaterKailashLocationPage() {
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('greater-kailash-area')
     await trackAndOpenWhatsApp({
       source: 'greater-kailash-area-page',
       message:

@@ -19,10 +19,7 @@ import Link from 'next/link'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
@@ -47,8 +44,6 @@ export default function GurugramLocationContent() {
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('gurugram-location')
     await trackAndOpenWhatsApp({
       source: 'gurugram-location-page',
       message: 'Hi! I am from Gurugram and interested in NEET Biology coaching.',

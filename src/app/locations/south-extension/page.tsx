@@ -19,10 +19,7 @@ import {
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import Link from 'next/link'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import {
@@ -52,8 +49,6 @@ export default function SouthExtensionLocationPage() {
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('south-extension-location')
     await trackAndOpenWhatsApp({
       source: 'south-extension-location-page',
       message:

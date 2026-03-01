@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
   MapPin,
   Users,
@@ -88,11 +89,12 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
     { label: location.type === 'city' ? 'Areas Covered' : 'Batches', value: location.localities?.length || '10+', icon: MapPin },
   ]
 
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      `Hi! I'm from ${location.cityName} and interested in NEET Biology coaching. Please share details.`
-    )
-    window.open(`https://wa.me/918826444334?text=${message}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: `neet-coaching-${location.slug}`,
+      message: `Hi! I'm from ${location.cityName} and interested in NEET Biology coaching. Please share details.`,
+      campaign: `neet-coaching-${location.slug}`,
+    })
   }
 
   return (

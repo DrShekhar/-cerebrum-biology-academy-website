@@ -3,10 +3,7 @@
 import { Phone, MessageSquare } from 'lucide-react'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 
 interface MobilePhoneStickyBarProps {
   phoneNumber?: string
@@ -26,8 +23,6 @@ export function MobilePhoneStickyBar({
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion(source)
     await trackAndOpenWhatsApp({
       source: source,
       message: 'Hi! I want to know more about NEET Biology coaching.',

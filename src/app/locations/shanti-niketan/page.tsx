@@ -18,10 +18,7 @@ import {
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import {
   RelatedLocations,
@@ -45,8 +42,6 @@ export default function ShantiNiketanPage() {
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('shanti-niketan-area')
     await trackAndOpenWhatsApp({
       source: 'shanti-niketan-area-page',
       message: 'Hi! I am from Shanti Niketan and interested in NEET Biology coaching.',

@@ -21,17 +21,13 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { CitySchema } from '@/components/seo/CitySchema'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
-
-const WHATSAPP_NUMBER = '918826444334'
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hi! I am interested in biology tuition in Surat. Please share details.'
-)
 
 const localities = [
   { name: 'Adajan', students: '180+', highlight: 'Premium Zone', priority: 'high' },
@@ -146,14 +142,12 @@ const neetTools = [
 ]
 
 export default function PageContent() {
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: 'surat_biology_page',
-      })
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'biology-tuition-surat',
+      message: "Hi! I'm interested in Biology tuition in Surat. Please share details.",
+      campaign: 'biology-tuition-surat',
+    })
   }
 
   return (

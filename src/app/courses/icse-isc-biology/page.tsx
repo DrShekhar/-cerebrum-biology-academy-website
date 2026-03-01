@@ -14,10 +14,7 @@ import {
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackWhatsAppConversion,
-  trackPhoneCallConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 
 export default function ICSEISCBiologyPage() {
@@ -36,8 +33,6 @@ export default function ICSEISCBiologyPage() {
   }
 
   const handleWhatsApp = async () => {
-    ConversionTracker.trackWhatsAppClick()
-    trackWhatsAppConversion('icse-isc-course')
     await trackAndOpenWhatsApp({
       source: 'icse-isc-biology-course-page',
       message: 'Hi! I am interested in ICSE/ISC Biology coaching. Please share details.',

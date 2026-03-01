@@ -23,12 +23,8 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
-
-const WHATSAPP_NUMBER = '918826444334'
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hi! I am interested in Maharashtra HSC Biology tuition. Please share details about your online coaching program.'
-)
 
 const maharashtraCities = [
   { name: 'Mumbai', students: '450+', highlight: 'Maximum Enrolments', priority: 'high' },
@@ -138,15 +134,12 @@ const neetTools = [
 ]
 
 export default function MaharashtraHSCBiologyTuitionPage() {
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: 'maharashtra_hsc_biology_page',
-        value: 1,
-      })
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'maharashtra-hsc-biology-tuition',
+      message: 'Hi! I am interested in Maharashtra HSC Biology tuition. Please share details about your online coaching program.',
+      campaign: 'maharashtra-hsc-biology-tuition',
+    })
   }
 
   const handleDemoBooking = () => {

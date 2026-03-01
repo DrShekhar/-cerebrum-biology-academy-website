@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { Star, ExternalLink, Heart, MessageSquare, Phone } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 // BreadcrumbList Schema for improved SERP display and CTR
 const breadcrumbSchema = {
@@ -55,11 +56,12 @@ export default function ReviewsPage() {
     window.open(GOOGLE_REVIEW_LINK, '_blank')
   }
 
-  const handleWhatsAppFeedback = () => {
-    const message = encodeURIComponent(
-      'Hi! I want to share my feedback about Cerebrum Biology Academy.'
-    )
-    window.open(`https://wa.me/${CONTACT_INFO.whatsapp.number}?text=${message}`, '_blank')
+  const handleWhatsAppFeedback = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'reviews-page',
+      campaign: 'reviews',
+      message: 'Hi! I want to share my feedback about Cerebrum Biology Academy.',
+    })
   }
 
   return (

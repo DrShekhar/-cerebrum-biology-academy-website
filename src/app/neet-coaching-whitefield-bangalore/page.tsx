@@ -22,13 +22,9 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { CitySchema } from '@/components/seo/CitySchema'
-
-const WHATSAPP_NUMBER = '918826444334'
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hi! I am interested in NEET coaching in Whitefield Bangalore. Please share details.'
-)
 
 const localities = [
   { name: 'Whitefield Main', students: '220+', highlight: 'IT Hub Central', priority: 'high' },
@@ -157,14 +153,12 @@ const whyWhitefield = [
 ]
 
 export default function NeetCoachingWhitefieldPage() {
-  const handleWhatsAppClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'conversion',
-        event_label: 'whitefield_neet_page',
-      })
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`, '_blank')
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'neet-coaching-whitefield-bangalore',
+      campaign: 'neet-coaching-whitefield-bangalore',
+      message: 'Hi! I am interested in NEET coaching in Whitefield Bangalore. Please share details.',
+    })
   }
 
   return (
