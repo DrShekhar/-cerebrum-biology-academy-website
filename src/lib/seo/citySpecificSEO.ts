@@ -225,7 +225,7 @@ export class CitySpecificSEOService {
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: '5.0',
-        ratingCount: '32',
+        ratingCount: '38',
         bestRating: '5',
       },
       priceRange: '₹45,000 - ₹1,80,000',

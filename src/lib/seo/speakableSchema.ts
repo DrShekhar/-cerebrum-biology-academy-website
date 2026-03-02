@@ -101,7 +101,7 @@ export const speakablePages = {
   faculty: {
     headline: 'AIIMS-Trained Faculty at Cerebrum Biology Academy',
     description:
-      'Learn from Dr. Shekhar C Singh, AIIMS alumnus with 14+ years experience and our team of expert Biology teachers.',
+      'Learn from Dr. Shekhar C Singh, AIIMS alumnus with 15+ years experience and our team of expert Biology teachers.',
     url: 'https://cerebrumbiologyacademy.com/faculty',
     speakableSections: ['.faculty-intro', '.faculty-credentials'],
   },

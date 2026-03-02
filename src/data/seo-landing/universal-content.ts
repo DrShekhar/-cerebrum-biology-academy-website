@@ -431,11 +431,11 @@ export const bestBiologyTeacherNeet: SEOLandingContent = {
       {
         icon: 'clock',
         title: '15+ Years Experience',
-        description: 'Teaching NEET biology since 2008. Seen every pattern, every change.',
+        description: 'Teaching NEET biology since 2009. Seen every pattern, every change.',
       },
       {
         icon: 'star',
-        title: '4.9/5 Student Rating',
+        title: '5.0/5 Student Rating',
         description: "Consistently rated as one of India's best biology teachers.",
       },
       {
@@ -1018,8 +1018,8 @@ export const privateSchoolBiologyTuition: SEOLandingContent = {
     price: 85000,
     priceCurrency: 'INR',
     aggregateRating: {
-      ratingValue: 4.9,
-      reviewCount: 487,
+      ratingValue: 5.0,
+      reviewCount: 38,
       bestRating: 5,
       worstRating: 1,
     },

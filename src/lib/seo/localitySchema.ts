@@ -154,7 +154,7 @@ export function generateLocalBusinessSchema(
       ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '32',
+      ratingCount: '38',
     },
     review: locality.socialProof.successStories.slice(0, 3).map((story, index) => ({
       '@type': 'Review',

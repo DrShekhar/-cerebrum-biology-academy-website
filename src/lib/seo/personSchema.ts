@@ -65,7 +65,7 @@ export const facultyMembers: FacultyData[] = [
     name: 'Dr. Shekhar C Singh',
     jobTitle: 'Founder & Lead NEET Biology Faculty',
     description:
-      "Dr. Shekhar C Singh is the founder of Cerebrum Biology Academy and has 14+ years of experience in NEET Biology coaching. An AIIMS New Delhi alumnus, he has helped over 500 students secure admissions to top medical colleges including AIIMS, JIPMER, and state medical colleges. His 'Concept-First Approach' has revolutionized Biology teaching for NEET preparation.",
+      "Dr. Shekhar C Singh is the founder of Cerebrum Biology Academy and has 15+ years of experience in NEET Biology coaching. An AIIMS New Delhi alumnus, he has helped over 500 students secure admissions to top medical colleges including AIIMS, JIPMER, and state medical colleges. His 'Concept-First Approach' has revolutionized Biology teaching for NEET preparation.",
     image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
     email: 'drshekhar@cerebrumbiologyacademy.com',
     url: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh',
@@ -94,7 +94,7 @@ export const facultyMembers: FacultyData[] = [
       'Biotechnology',
       'NEET Biology',
     ],
-    experience: '14+ years',
+    experience: '15+ years',
   },
   {
     name: 'Dr. Priya Sharma',

@@ -176,7 +176,7 @@ export function StateSchema({ state, pageUrl }: StateSchemaProps) {
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: 5.0,
-          reviewCount: 32,
+          reviewCount: 38,
           bestRating: 5,
         },
       },

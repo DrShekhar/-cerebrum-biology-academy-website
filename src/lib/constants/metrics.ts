@@ -5,6 +5,9 @@
  */
 
 export const CEREBRUM_METRICS = {
+  // Founding
+  foundingYear: 2015,
+
   // Success metrics
   successRate: 98, // Percentage of students qualifying NEET
   successRateText: '98%',

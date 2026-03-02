@@ -205,7 +205,7 @@ export default function DelhiLocationPage() {
                 {
                   icon: Trophy,
                   title: '98% Success Rate',
-                  desc: 'Proven NEET results since 2010',
+                  desc: 'Proven NEET results since 2009',
                 },
                 {
                   icon: Star,

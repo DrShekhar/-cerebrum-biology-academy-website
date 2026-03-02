@@ -196,7 +196,7 @@ export function HeroClientInteractive() {
           <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400">
             1,50,000+
           </div>
-          <div className="text-xs sm:text-sm text-blue-200 mt-1">{t('students')}</div>
+          <div className="text-xs sm:text-sm text-blue-200 mt-1">Students Impacted</div>
           <div className="text-xs text-purple-300 mt-0.5">{t('andCounting')}</div>
         </div>
       </div>

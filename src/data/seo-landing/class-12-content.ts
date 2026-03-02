@@ -595,7 +595,7 @@ export const bestBiologyTutorClass12: SEOLandingContent = {
       },
       {
         icon: 'star',
-        title: '4.9/5 Rating',
+        title: '5.0/5 Rating',
         description: "Consistently rated as one of India's best biology teachers.",
       },
     ],

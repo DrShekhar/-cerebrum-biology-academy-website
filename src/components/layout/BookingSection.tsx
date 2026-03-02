@@ -178,7 +178,7 @@ export function BookingSection() {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">67+</div>
-                  <div className="text-sm text-green-100">{t('expertFaculty')}</div>
+                  <div className="text-sm text-green-100">AIIMS Selections</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">5+</div>

@@ -26,7 +26,7 @@ const instituteHighlights = [
   {
     icon: Briefcase,
     title: '15+ Years Experience',
-    description: 'Established institute with proven track record since 2008.',
+    description: 'Established institute with proven track record since 2009.',
     stat: '15+',
   },
   {

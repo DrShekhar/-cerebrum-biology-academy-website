@@ -37,7 +37,7 @@ export function generateAggregateRatingSchema(reviews?: ReviewData[]) {
       ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '32',
+      ratingCount: '38',
       reviewCount: '38',
     },
     sameAs: [
@@ -164,7 +164,7 @@ export const courseRatings = {
     url: 'https://cerebrumbiologyacademy.com/courses/neet-crash-course',
     ratingValue: 5.0,
     ratingCount: 32,
-    reviewCount: 32,
+    reviewCount: 38,
     price: 78000,
   },
   twoYear: {
@@ -175,7 +175,7 @@ export const courseRatings = {
     url: 'https://cerebrumbiologyacademy.com/courses/neet-complete',
     ratingValue: 5.0,
     ratingCount: 32,
-    reviewCount: 32,
+    reviewCount: 38,
     price: 58000,
   },
   dropper: {
@@ -186,7 +186,7 @@ export const courseRatings = {
     url: 'https://cerebrumbiologyacademy.com/courses/neet-dropper',
     ratingValue: 5.0,
     ratingCount: 32,
-    reviewCount: 32,
+    reviewCount: 38,
     price: 68000,
   },
   foundation: {
@@ -197,7 +197,7 @@ export const courseRatings = {
     url: 'https://cerebrumbiologyacademy.com/courses/foundation',
     ratingValue: 5.0,
     ratingCount: 32,
-    reviewCount: 32,
+    reviewCount: 38,
     price: 48000,
   },
 }

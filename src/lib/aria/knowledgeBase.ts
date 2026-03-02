@@ -308,7 +308,7 @@ export const FAQ_DATA = {
   about: {
     question: 'What is Cerebrum Biology Academy?',
     answer:
-      'Cerebrum Biology Academy was founded in 2012 by Dr. Shekhar C Singh, an AIIMS New Delhi Alumnus. With 14+ years of excellence, we are a specialized NEET Biology coaching institute focusing exclusively on Biology - the highest-scoring subject in NEET (360 marks out of 720). We have coached 150,000+ students with 10,000+ medical college admissions and a 98% NEET qualification rate.',
+      'Cerebrum Biology Academy was founded in 2015 by Dr. Shekhar C Singh, an AIIMS New Delhi Alumnus. With 15+ years of teaching excellence since 2009, we are a specialized NEET Biology coaching institute focusing exclusively on Biology - the highest-scoring subject in NEET (360 marks out of 720). We have coached 150,000+ students with 10,000+ medical college admissions and a 98% NEET qualification rate.',
   },
   whyOnlyBiology: {
     question: 'Why do you focus only on Biology?',

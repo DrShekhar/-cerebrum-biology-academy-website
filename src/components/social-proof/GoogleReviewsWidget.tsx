@@ -94,8 +94,8 @@ export function GoogleReviewsWidget({
   className = '',
 }: GoogleReviewsWidgetProps) {
   const displayReviews = showAll ? sampleReviews : sampleReviews.slice(0, maxReviews)
-  const overallRating = 4.8
-  const totalReviews = 127
+  const overallRating = 5.0
+  const totalReviews = 38
 
   if (variant === 'banner') {
     return (

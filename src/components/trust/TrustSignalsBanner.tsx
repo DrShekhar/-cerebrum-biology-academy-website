@@ -26,7 +26,7 @@ interface TrustSignal {
 const trustSignals: TrustSignal[] = [
   {
     id: 'experience',
-    value: '14+',
+    value: '15+',
     label: 'Years',
     sublabel: 'Proven excellence since 2009',
     icon: Calendar,
@@ -55,7 +55,7 @@ const trustSignals: TrustSignal[] = [
     id: 'students',
     value: '1,50,000+',
     label: 'Students',
-    sublabel: 'Medical admissions in last 5 years',
+    sublabel: 'Coached, trained & impacted',
     icon: Users,
     color: 'bg-[#3d4d3d]',
     verified: true,
@@ -71,12 +71,12 @@ const trustSignals: TrustSignal[] = [
   },
   {
     id: 'rating',
-    value: '4.9/5',
+    value: '5.0/5',
     label: 'Google Rating',
-    sublabel: '500+ verified reviews',
+    sublabel: '38 verified reviews',
     icon: Star,
     color: 'bg-orange-600',
-    verified: false,
+    verified: true,
   },
 ]
 

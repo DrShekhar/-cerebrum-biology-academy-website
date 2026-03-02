@@ -439,7 +439,7 @@ export class MetadataService {
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: '5.0',
-        ratingCount: '32',
+        ratingCount: '38',
         bestRating: '5',
       },
     }

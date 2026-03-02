@@ -204,7 +204,7 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
     url: 'https://cerebrumbiologyacademy.com',
     telephone: CEREBRUM_METRICS.phone,
     email: CEREBRUM_METRICS.email,
-    foundingDate: '2010',
+    foundingDate: '2015',
     address: {
       '@type': 'PostalAddress',
       streetAddress: FARIDABAD_CENTER_METRICS.address,

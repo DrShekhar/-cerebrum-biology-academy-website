@@ -25,7 +25,7 @@ const experienceSignals = [
   {
     icon: Clock,
     label: '15+ Years Teaching NEET Biology',
-    description: 'Proven track record since 2010',
+    description: 'Proven track record since 2009',
   },
   {
     icon: Users,
@@ -61,7 +61,7 @@ const authoritySignals = [
   {
     icon: Star,
     label: '98% Success Rate',
-    description: 'Consistently high results since 2010',
+    description: 'Consistently high results since 2009',
   },
   {
     icon: Verified,
@@ -88,8 +88,8 @@ const trustSignals = [
   },
   {
     icon: Users,
-    label: '4.8/5 Student Rating',
-    description: 'Based on 200+ verified reviews',
+    label: '5.0/5 Student Rating',
+    description: 'Based on 38 verified reviews',
   },
 ]
 
@@ -183,7 +183,7 @@ export function EEATSignals({
           )}
           {showTrust && (
             <div className="text-center p-3">
-              <div className="text-2xl font-bold text-green-600">4.8</div>
+              <div className="text-2xl font-bold text-green-600">5.0</div>
               <div className="text-xs text-gray-600">Student Rating</div>
             </div>
           )}
@@ -273,7 +273,7 @@ export function EEATSignals({
               name: 'Cerebrum Biology Academy',
               description:
                 'Premier NEET Biology coaching institute with 15+ years of experience and 98% success rate',
-              foundingDate: '2010',
+              foundingDate: '2015',
               numberOfEmployees: {
                 '@type': 'QuantitativeValue',
                 value: 25,

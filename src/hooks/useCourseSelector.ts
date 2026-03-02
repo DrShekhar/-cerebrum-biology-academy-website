@@ -236,8 +236,8 @@ const MOCK_COURSE_DATA: CourseData[] = [
     },
     socialProof: {
       enrolledStudents: 487,
-      avgRating: 4.8,
-      reviewCount: 234,
+      avgRating: 5.0,
+      reviewCount: 38,
       topReviews: [
         {
           rating: 5,

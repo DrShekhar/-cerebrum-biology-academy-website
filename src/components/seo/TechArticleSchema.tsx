@@ -135,7 +135,7 @@ export function TechArticleSchema({
       ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '32',
+      ratingCount: '38',
     },
   }
 

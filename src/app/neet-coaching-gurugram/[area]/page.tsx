@@ -212,7 +212,7 @@ export default async function GurugramAreaPage({ params }: PageProps) {
     url: 'https://cerebrumbiologyacademy.com',
     telephone: CEREBRUM_METRICS.phone,
     email: CEREBRUM_METRICS.email,
-    foundingDate: '2010',
+    foundingDate: '2015',
     address: {
       '@type': 'PostalAddress',
       streetAddress: GURUGRAM_CENTER_METRICS.address,

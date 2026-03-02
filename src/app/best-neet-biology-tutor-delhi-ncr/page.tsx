@@ -56,7 +56,7 @@ const whyDelhiNCR = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty in Delhi NCR',
-    description: 'Dr. Shekhar C Singh, AIIMS Alumnus, teaching in Greater Noida since 2010.',
+    description: 'Dr. Shekhar C Singh, AIIMS Alumnus, teaching in Greater Noida since 2009.',
   },
   {
     icon: Building,
