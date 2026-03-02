@@ -66,7 +66,7 @@ export function BookingSection() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="book-demo" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">

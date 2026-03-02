@@ -9,20 +9,46 @@ const HeroClientInteractive = dynamic(
 
 // PERFORMANCE: Inline SVGs instead of lucide-react to eliminate icon library from critical path
 const TrophyIcon = () => (
-  <svg className="w-5 h-5 mr-2 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M6 9V2h12v7a6 6 0 01-12 0zm6 13v-4m-4 4h8M4 4h2m12 0h2M4 4a2 2 0 00-2 2v1a2 2 0 002 2m16-5a2 2 0 012 2v1a2 2 0 01-2 2" />
+  <svg
+    className="w-5 h-5 mr-2 text-green-300"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 9V2h12v7a6 6 0 01-12 0zm6 13v-4m-4 4h8M4 4h2m12 0h2M4 4a2 2 0 00-2 2v1a2 2 0 002 2m16-5a2 2 0 012 2v1a2 2 0 01-2 2"
+    />
   </svg>
 )
 
 const PlayIcon = () => (
-  <svg className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" style={{ width: '1.25rem', height: '1.25rem' }}>
+  <svg
+    className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    style={{ width: '1.25rem', height: '1.25rem' }}
+  >
     <path d="M8 5v14l11-7z" />
   </svg>
 )
 
 const PhoneIcon = () => (
-  <svg className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} style={{ width: '1.25rem', height: '1.25rem' }}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+  <svg
+    className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+    style={{ width: '1.25rem', height: '1.25rem' }}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+    />
   </svg>
 )
 
@@ -45,7 +71,10 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
     >
       {/* Background - CSS only, no external image for faster LCP */}
       {/* PERFORMANCE: Static gradients, no animations for better performance */}
-      <div className="absolute inset-0 overflow-hidden contain-strict pointer-events-none" aria-hidden="true">
+      <div
+        className="absolute inset-0 overflow-hidden contain-strict pointer-events-none"
+        aria-hidden="true"
+      >
         {/* CSS gradient orbs - STATIC for performance */}
         <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-green-600/10 rounded-full blur-3xl" />
         <div className="hidden md:block absolute bottom-1/4 right-[16%] w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl" />
@@ -104,12 +133,39 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 mb-6 xs:mb-8 max-w-3xl animate-fade-in-up"
             style={{ animationDelay: '0.2s' }}
           >
-            <span className="text-yellow-300 font-bold">Sadhna scored 695/720 (100%ile)</span> •
-            67+ AIIMS Selections
+            <span className="text-yellow-300 font-bold">Sadhna scored 695/720 (100%ile)</span> • 67+
+            AIIMS Selections
           </p>
 
-          {/* PRIMARY CTA - Call Now Button */}
-          <div className="mb-4">
+          {/* PRIMARY CTAs - Book Demo + Call Now */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4">
+            <a
+              href="#book-demo"
+              className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 text-sm xs:text-base md:text-lg border border-yellow-300 hover:scale-[1.02] active:scale-[0.98] group"
+              style={{
+                backgroundColor: '#facc15',
+                color: '#111827',
+                fontWeight: 700,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+              }}
+            >
+              <svg
+                className="w-5 h-5 flex-shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+              BOOK FREE DEMO
+            </a>
             <a
               href="tel:+918826444334"
               className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/40 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400 hover:scale-[1.02] active:scale-[0.98] group"
