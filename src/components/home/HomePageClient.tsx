@@ -15,7 +15,7 @@ export function HomePageClient() {
 
   const handleDownload = async (email: string, phone: string) => {
     try {
-      const response = await fetch('/api/leads/catalog-download', {
+      const response = await fetch('/api/leads/exit-intent', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,6 +25,7 @@ export function HomePageClient() {
           phone,
           source: 'exit_intent_popup',
           page: 'homepage',
+          variant: 'catalog',
         }),
       })
 
