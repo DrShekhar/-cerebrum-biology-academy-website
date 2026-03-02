@@ -9,6 +9,7 @@
 
 import { getCenterFAQs } from '@/data/faqs/center-specific-faqs'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+import { WhatsAppCTAButton } from '@/components/seo/WhatsAppCTAButton'
 
 interface CenterFAQSectionProps {
   centerId: string
@@ -71,14 +72,14 @@ export default function CenterFAQSection({ centerId, className = '' }: CenterFAQ
           <p className="text-gray-600 mb-4">
             Still have questions about our {centerData.city} center?
           </p>
-          <a
-            href="https://wa.me/918826444334?text=Hi%2C%20I%20have%20a%20question%20about%20NEET%20Biology%20coaching%20at%20your%20center"
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppCTAButton
+            source={`center-faq-${centerId}`}
+            message={`Hi, I have a question about NEET Biology coaching at your ${centerData.city} center`}
+            campaign="center-faq"
+            label="Chat with us on WhatsApp"
             className="inline-flex items-center bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-          >
-            Chat with us on WhatsApp
-          </a>
+            showCallFallback
+          />
         </div>
       </div>
 

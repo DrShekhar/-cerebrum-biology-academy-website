@@ -1,9 +1,10 @@
 'use client'
 
-import { useState, useEffect, memo } from 'react'
+import { useState, useEffect, memo, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import { useAuth } from '@/contexts/AuthContext'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 // PERFORMANCE: Lazy load BurgerMenu to defer framer-motion (~1MB) until interaction
 // The burger icon itself is rendered with CSS - framer-motion only loads when menu opens
@@ -20,7 +21,7 @@ const SearchMenu = dynamic(
 )
 
 interface HeaderClientInteractionsProps {
-  section: 'burger' | 'search' | 'all'
+  section: 'burger' | 'search' | 'cta-demo' | 'cta-enroll' | 'all'
 }
 
 /**
@@ -121,7 +122,60 @@ export const HeaderClientInteractions = memo(function HeaderClientInteractions({
     )
   }
 
+  if (section === 'cta-demo') {
+    return (
+      <button
+        onClick={async () => {
+          await trackAndOpenWhatsApp({
+            source: 'header-free-demo',
+            message: WHATSAPP_MESSAGES.demo,
+            campaign: 'header-cta',
+          })
+        }}
+        className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border-2 border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700 hover:text-green-700 transition-all duration-300 group"
+      >
+        <svg
+          className="w-4 h-4 transition-transform group-hover:scale-110"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M8 5v14l11-7z" />
+        </svg>
+        <span>Free Demo</span>
+      </button>
+    )
+  }
+
+  if (section === 'cta-enroll') {
+    return (
+      <button
+        onClick={async () => {
+          await trackAndOpenWhatsApp({
+            source: 'header-enroll-now',
+            message: WHATSAPP_MESSAGES.courseEnquiry,
+            campaign: 'header-cta',
+          })
+        }}
+        className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group"
+      >
+        <span>Enroll Now</span>
+        <svg
+          className="w-4 h-4 transition-transform group-hover:translate-x-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          />
+        </svg>
+      </button>
+    )
+  }
+
   // section === 'all' is deprecated - auth buttons are now handled by FirebaseAuthButtons
-  // This prevents duplicate dashboard buttons from rendering
   return null
 })

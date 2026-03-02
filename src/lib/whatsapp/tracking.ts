@@ -1,7 +1,8 @@
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 import { trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
 
 const WHATSAPP_NUMBER = CONTACT_INFO.whatsapp.number
+const PHONE_DISPLAY = CONTACT_INFO.phone.display.primary
 const API_ENDPOINT = '/api/analytics/whatsapp-click'
 
 export function isMobileDevice(): boolean {
@@ -165,7 +166,10 @@ export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Prom
   trackWhatsAppLead(params.source, 50)
 
   if (isMobileDevice()) {
-    window.open(result.whatsappUrl, '_blank', 'noopener,noreferrer')
+    const opened = window.open(result.whatsappUrl, '_blank', 'noopener,noreferrer')
+    if (!opened) {
+      showCallFallback()
+    }
   } else {
     openDesktopWhatsAppModal(
       result.whatsappUrl,
@@ -173,6 +177,39 @@ export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Prom
       params.source
     )
   }
+}
+
+/**
+ * Show a call fallback when WhatsApp fails to open (popup blocked, app not installed).
+ * Uses a simple DOM toast so it works without React dependencies.
+ */
+function showCallFallback() {
+  if (typeof document === 'undefined') return
+
+  const existing = document.getElementById('whatsapp-call-fallback')
+  if (existing) existing.remove()
+
+  const toast = document.createElement('div')
+  toast.id = 'whatsapp-call-fallback'
+  toast.style.cssText =
+    'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);z-index:99999;' +
+    'background:#1e40af;color:white;padding:16px 24px;border-radius:16px;' +
+    'box-shadow:0 10px 25px rgba(0,0,0,0.2);text-align:center;max-width:340px;width:90%;' +
+    'font-family:system-ui,sans-serif;animation:fadeInUp 0.3s ease'
+
+  toast.innerHTML =
+    '<p style="margin:0 0 12px;font-size:14px;font-weight:500">WhatsApp could not open. Call us instead:</p>' +
+    `<a href="${getPhoneLink()}" style="display:inline-flex;align-items:center;gap:8px;` +
+    'background:white;color:#1e40af;padding:12px 24px;border-radius:12px;font-weight:700;' +
+    `font-size:16px;text-decoration:none">📞 ${PHONE_DISPLAY}</a>` +
+    '<button onclick="this.parentElement.remove()" style="position:absolute;top:8px;right:12px;' +
+    'background:none;border:none;color:white;font-size:18px;cursor:pointer;padding:4px">&times;</button>'
+
+  document.body.appendChild(toast)
+
+  setTimeout(() => {
+    toast.remove()
+  }, 10000)
 }
 
 export function buildWhatsAppUrl(

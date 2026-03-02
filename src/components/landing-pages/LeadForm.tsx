@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { Send, MessageCircle, Loader2 } from 'lucide-react'
-import { trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface LeadFormProps {
   title?: string
@@ -27,7 +27,7 @@ export function LeadForm({
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const whatsappNumber = '918826444334'
+  const whatsappNumber = CONTACT_INFO.whatsapp.number
   const whatsappMessage = `Hi, I'm interested in ${courseType}. I'd like to book a free demo class.`
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -74,12 +74,12 @@ export function LeadForm({
     }
   }
 
-  const handleWhatsAppClick = () => {
-    trackWhatsAppLead('landing-page', 200)
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
-      '_blank'
-    )
+  const handleWhatsAppClick = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'lead-form-whatsapp-button',
+      message: whatsappMessage,
+      campaign: 'lead-form',
+    })
   }
 
   return (

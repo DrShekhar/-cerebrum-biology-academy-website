@@ -27,6 +27,7 @@ import { useRouter } from 'next/navigation'
 import { navigationConfig } from '@/data/navigationConfig'
 import { useAuth } from '@/contexts/AuthContext'
 import { useFocusTrap } from '@/hooks/useFocusTrap'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
 
 interface BurgerMenuProps {
@@ -400,16 +401,20 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                 <p className="text-blue-100 text-sm mb-4">
                   Join thousands of successful NEET aspirants
                 </p>
-                <a
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20Demo%20Class%20for%20NEET%20Biology.%0A%0AMy%20details%3A%0A%E2%80%A2%20Name%3A%20%0A%E2%80%A2%20Class%3A%20(11th%2F12th%2FDropper)%0A%E2%80%A2%20Preferred%20Day%3A%20%0A%E2%80%A2%20Preferred%20Time%3A%20%0A%0APlease%20confirm%20my%20demo%20slot!"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleLinkClick}
+                <button
+                  onClick={async () => {
+                    handleLinkClick()
+                    await trackAndOpenWhatsApp({
+                      source: 'burger-menu-demo',
+                      message: WHATSAPP_MESSAGES.demo,
+                      campaign: 'burger-menu',
+                    })
+                  }}
                   className="inline-flex items-center justify-center w-full bg-white text-blue-600 px-4 py-3 min-h-[48px] rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 touch-manipulation"
                 >
                   Book Free Demo
                   <ChevronRight className="w-4 h-4 ml-2" />
-                </a>
+                </button>
               </div>
             </div>
           </div>

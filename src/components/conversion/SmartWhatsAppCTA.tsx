@@ -1,13 +1,14 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { MessageCircle, Clock, Users } from 'lucide-react'
+import { MessageCircle, Clock, Users, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import {
   trackAndOpenWhatsApp,
   openDesktopWhatsAppModal,
   buildWhatsAppUrl,
 } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface SmartWhatsAppCTAProps {
   variant?: 'hero' | 'section' | 'inline' | 'banner' | 'compact'
@@ -19,6 +20,7 @@ interface SmartWhatsAppCTAProps {
   showStats?: boolean
   cityName?: string
   countryName?: string
+  showCallFallback?: boolean
 }
 
 const variantStyles = {
@@ -41,6 +43,7 @@ export function SmartWhatsAppCTA({
   showStats = false,
   cityName,
   countryName,
+  showCallFallback = false,
 }: SmartWhatsAppCTAProps) {
   const [isMobile, setIsMobile] = useState(true)
 
@@ -77,8 +80,7 @@ export function SmartWhatsAppCTA({
   }, [isMobile, source, message, campaign, children, cityName, countryName])
 
   return (
-    <>
-      {/* Main CTA Button */}
+    <div>
       <button
         onClick={handleClick}
         className={cn(
@@ -99,7 +101,16 @@ export function SmartWhatsAppCTA({
           </span>
         )}
       </button>
-    </>
+      {showCallFallback && (
+        <a
+          href={getPhoneLink()}
+          className="flex items-center justify-center gap-1.5 mt-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+        >
+          <Phone className="w-4 h-4" />
+          <span>Or call: {CONTACT_INFO.phone.display.primary}</span>
+        </a>
+      )}
+    </div>
   )
 }
 

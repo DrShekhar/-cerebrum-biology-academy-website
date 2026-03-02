@@ -1,8 +1,9 @@
 'use client'
 
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 import { getCountryWhatsAppMessage, type MessageType } from '@/lib/international/whatsapp-messages'
 
 interface CountryWhatsAppCTAProps {
@@ -14,6 +15,7 @@ interface CountryWhatsAppCTAProps {
   children?: React.ReactNode
   showIcon?: boolean
   campaign?: string
+  showCallFallback?: boolean
 }
 
 const variantStyles = {
@@ -40,6 +42,7 @@ export function CountryWhatsAppCTA({
   children,
   showIcon = true,
   campaign,
+  showCallFallback = false,
 }: CountryWhatsAppCTAProps) {
   const whatsappMessage = getCountryWhatsAppMessage(country, message)
 
@@ -53,20 +56,31 @@ export function CountryWhatsAppCTA({
   }
 
   return (
-    <button
-      onClick={handleClick}
-      className={cn(
-        'inline-flex items-center justify-center gap-3 font-semibold rounded-lg transition-all duration-200',
-        'focus:outline-none focus:ring-4 focus:ring-green-500/30',
-        'min-h-[48px]', // Touch-friendly minimum height
-        variantStyles[variant],
-        sizeStyles[size],
-        className
+    <div>
+      <button
+        onClick={handleClick}
+        className={cn(
+          'inline-flex items-center justify-center gap-3 font-semibold rounded-lg transition-all duration-200',
+          'focus:outline-none focus:ring-4 focus:ring-green-500/30',
+          'min-h-[48px]',
+          variantStyles[variant],
+          sizeStyles[size],
+          className
+        )}
+      >
+        {showIcon && <MessageCircle className="w-6 h-6" />}
+        {children || 'Chat on WhatsApp'}
+      </button>
+      {showCallFallback && (
+        <a
+          href={getPhoneLink()}
+          className="flex items-center justify-center gap-1.5 mt-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+        >
+          <Phone className="w-4 h-4" />
+          <span>Or call: {CONTACT_INFO.phone.display.primary}</span>
+        </a>
       )}
-    >
-      {showIcon && <MessageCircle className="w-6 h-6" />}
-      {children || 'Chat on WhatsApp'}
-    </button>
+    </div>
   )
 }
 

@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { MessageCircle, X, Send, Sparkles } from 'lucide-react'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { MessageCircle, X, Send, Sparkles, Phone } from 'lucide-react'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface BlogWhatsAppQueryProps {
   blogTitle: string
@@ -40,11 +41,14 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
     },
   ]
 
-  const handleWhatsAppClick = (message: string) => {
-    const encodedMessage = encodeURIComponent(`${message}\n\n📄 Blog: ${baseUrl}/blog/${blogSlug}`)
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
-    window.open(whatsappUrl, '_blank')
+  const handleWhatsAppClick = async (message: string) => {
+    const fullMessage = `${message}\n\n📄 Blog: ${baseUrl}/blog/${blogSlug}`
     trackBlogLead(blogTitle, blogSlug, neetChapter)
+    await trackAndOpenWhatsApp({
+      source: 'blog-whatsapp-query',
+      message: fullMessage,
+      campaign: 'blog-engagement',
+    })
   }
 
   const handleCustomQuery = () => {
@@ -168,8 +172,19 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
                 </button>
               </div>
 
+              {/* Call Fallback */}
+              <div className="mt-3 pt-3 border-t border-gray-100 text-center">
+                <a
+                  href={getPhoneLink()}
+                  className="inline-flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Or call us: {CONTACT_INFO.phone.display.primary}</span>
+                </a>
+              </div>
+
               {/* Footer Info */}
-              <p className="text-xs text-gray-500 mt-3 text-center">
+              <p className="text-xs text-gray-500 mt-2 text-center">
                 Response within 2 hours • Available 9 AM - 8 PM
               </p>
             </div>

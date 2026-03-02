@@ -10,8 +10,6 @@ import {
   buildWhatsAppUrl,
 } from '@/lib/whatsapp/tracking'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
-import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
-import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 
 // High-converting CTA copy with social proof
@@ -74,18 +72,9 @@ export const FloatingCTA = memo(function FloatingCTA() {
   // Check if current page already has a local MobilePhoneStickyBar
   const hasLocalStickyBar = PAGES_WITH_LOCAL_STICKY.some((prefix) => pathname?.startsWith(prefix))
 
-  // Mobile sticky bar: Call + WhatsApp with full conversion tracking
+  // Mobile sticky bar: Call with single conversion tracking (avoids double-counting)
   const handleCallClick = () => {
-    ConversionTracker.trackPhoneCall()
-    trackPhoneCallConversion('+918826444334')
-    handlePhoneClickTracking('global-sticky-bar-call', 'primary', 100)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'sticky_cta_click', {
-        event_category: 'conversion',
-        event_label: 'call',
-        page_path: pathname,
-      })
-    }
+    trackPhoneCallConversion('global-sticky-bar-call')
   }
 
   const handleMobileWhatsAppClick = async (e: React.MouseEvent) => {
@@ -119,13 +108,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
   }
 
   const handleDesktopCallClick = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'floating_cta_click', {
-        event_category: 'engagement',
-        event_label: 'call',
-      })
-    }
-    handlePhoneClickTracking('floating-cta-call', 'primary', 100)
+    trackPhoneCallConversion('floating-cta-call')
   }
 
   const scrollToTop = () => {

@@ -213,44 +213,14 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
               <HeaderClientInteractions section="search" />
             </Suspense>
 
-            {/* Desktop CTAs - WhatsApp redirects for lead capture */}
+            {/* Desktop CTAs - tracked WhatsApp with desktop QR modal */}
             <div className="hidden lg:flex items-center gap-6">
-              <a
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20Demo%20Class%20for%20NEET%20Biology.%0A%0AMy%20details%3A%0A%E2%80%A2%20Name%3A%20%0A%E2%80%A2%20Class%3A%20(11th%2F12th%2FDropper)%0A%E2%80%A2%20Preferred%20Day%3A%20%0A%E2%80%A2%20Preferred%20Time%3A%20%0A%0APlease%20confirm%20my%20demo%20slot!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border-2 border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700 hover:text-green-700 transition-all duration-300 group"
-              >
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:scale-110"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                <span>Free Demo</span>
-              </a>
-              <a
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20ENROLL%20in%20NEET%20Biology%20Coaching.%0A%0AMy%20details%3A%0A%E2%80%A2%20Name%3A%20%0A%E2%80%A2%20Class%3A%20(11th%2F12th%2FDropper)%0A%E2%80%A2%20Board%3A%20(CBSE%2FICSE%2FState)%0A%E2%80%A2%20City%3A%20%0A%0APlease%20share%20course%20details%20and%20fee%20structure!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-[#4a5d4a] hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 group"
-              >
-                <span>Enroll Now</span>
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </a>
+              <Suspense fallback={null}>
+                <HeaderClientInteractions section="cta-demo" />
+              </Suspense>
+              <Suspense fallback={null}>
+                <HeaderClientInteractions section="cta-enroll" />
+              </Suspense>
               <FirebaseAuthButtons />
             </div>
           </div>

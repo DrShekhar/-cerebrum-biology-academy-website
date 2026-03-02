@@ -1,9 +1,10 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import { MessageCircle, Loader2 } from 'lucide-react'
+import { MessageCircle, Loader2, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 
 export type WhatsAppButtonVariant =
   | 'primary'
@@ -26,6 +27,7 @@ interface TrackedWhatsAppButtonProps {
   iconOnly?: boolean
   disabled?: boolean
   fullWidth?: boolean
+  showCallFallback?: boolean
 }
 
 const variantStyles: Record<WhatsAppButtonVariant, string> = {
@@ -63,6 +65,7 @@ export function TrackedWhatsAppButton({
   iconOnly = false,
   disabled = false,
   fullWidth = false,
+  showCallFallback = false,
 }: TrackedWhatsAppButtonProps) {
   const [isLoading, setIsLoading] = useState(false)
 
@@ -108,27 +111,38 @@ export function TrackedWhatsAppButton({
   }
 
   return (
-    <button
-      onClick={handleClick}
-      disabled={disabled || isLoading}
-      className={cn(
-        'inline-flex items-center justify-center font-semibold rounded-lg',
-        'transition-all duration-200 transform hover:scale-[1.02]',
-        'focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
-        'disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none',
-        variantStyles[variant],
-        sizeStyles[size],
-        fullWidth && 'w-full',
-        className
+    <div className={cn(fullWidth && 'w-full')}>
+      <button
+        onClick={handleClick}
+        disabled={disabled || isLoading}
+        className={cn(
+          'inline-flex items-center justify-center font-semibold rounded-lg',
+          'transition-all duration-200 transform hover:scale-[1.02]',
+          'focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
+          'disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none',
+          variantStyles[variant],
+          sizeStyles[size],
+          fullWidth && 'w-full',
+          className
+        )}
+      >
+        {isLoading ? (
+          <Loader2 className="animate-spin" size={iconSize} />
+        ) : (
+          showIcon && <MessageCircle size={iconSize} />
+        )}
+        <span>{buttonText}</span>
+      </button>
+      {showCallFallback && (
+        <a
+          href={getPhoneLink()}
+          className="flex items-center justify-center gap-1.5 mt-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+        >
+          <Phone size={14} />
+          <span>Or call: {CONTACT_INFO.phone.display.primary}</span>
+        </a>
       )}
-    >
-      {isLoading ? (
-        <Loader2 className="animate-spin" size={iconSize} />
-      ) : (
-        showIcon && <MessageCircle size={iconSize} />
-      )}
-      <span>{buttonText}</span>
-    </button>
+    </div>
   )
 }
 

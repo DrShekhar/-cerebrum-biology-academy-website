@@ -27,6 +27,7 @@ import {
   UserPlus,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 interface MobileNavigationProps {
   className?: string
@@ -313,16 +314,20 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
             </div>
 
             <div className="pt-4">
-              <a
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20Demo%20Class%20for%20NEET%20Biology.%0A%0AMy%20details%3A%0A%E2%80%A2%20Name%3A%20%0A%E2%80%A2%20Class%3A%20(11th%2F12th%2FDropper)%0A%E2%80%A2%20Preferred%20Day%3A%20%0A%E2%80%A2%20Preferred%20Time%3A%20%0A%0APlease%20confirm%20my%20demo%20slot!"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleMenuItemClick}
+              <button
+                onClick={async () => {
+                  handleMenuItemClick()
+                  await trackAndOpenWhatsApp({
+                    source: 'mobile-nav-demo',
+                    message: WHATSAPP_MESSAGES.demo,
+                    campaign: 'mobile-nav',
+                  })
+                }}
                 className="flex items-center justify-center gap-2 w-full bg-orange-100 text-orange-700 px-6 py-4 rounded-lg font-semibold hover:bg-orange-200 transition-colors border border-orange-300 min-h-[52px]"
               >
                 <Play className="w-5 h-5" aria-hidden="true" />
                 <span>Book Free Demo</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
