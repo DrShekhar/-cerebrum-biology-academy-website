@@ -1,7 +1,6 @@
 'use client'
 
 import { Phone, MessageSquare } from 'lucide-react'
-import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 
@@ -17,9 +16,7 @@ export function MobilePhoneStickyBar({
   showWhatsApp = true,
 }: MobilePhoneStickyBarProps) {
   const handleCallNow = () => {
-    ConversionTracker.trackPhoneCall()
-    trackPhoneCallConversion(phoneNumber)
-    window.open(`tel:${phoneNumber}`, '_self')
+    trackPhoneCallConversion(source)
   }
 
   const handleWhatsApp = async () => {
@@ -32,8 +29,8 @@ export function MobilePhoneStickyBar({
 
   return (
     <>
-      {/* Mobile Sticky Bar - Only visible on mobile */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg z-50 safe-area-inset-bottom">
+      {/* Mobile Sticky Bar - Positioned above MobileBottomNav (64px) */}
+      <div className="md:hidden fixed bottom-16 left-0 right-0 bg-white border-t shadow-lg z-[55] safe-area-inset-bottom">
         <div className="flex p-2 space-x-2">
           <a
             href={`tel:${phoneNumber}`}

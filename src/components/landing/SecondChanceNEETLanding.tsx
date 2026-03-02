@@ -839,7 +839,7 @@ export function SecondChanceNEETLanding({
           </div>
         )}
 {/* Fixed Bottom Action Bar - Mobile */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-3 z-40">
+      <div className="md:hidden fixed bottom-16 left-0 right-0 bg-white border-t shadow-lg p-3 z-[55]">
         <div className="flex space-x-3">
           <PremiumButton onClick={onCallNow} variant="secondary" size="sm" className="flex-1">
             <Phone className="w-4 h-4 mr-2" />

@@ -44,7 +44,7 @@ export function SeminarFloatingCTA({ onRegisterClick }: SeminarFloatingCTAProps)
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-gradient-to-r from-slate-900 to-slate-800 border-t border-slate-700 shadow-2xl transform transition-transform duration-300 animate-slide-up">
+    <div className="fixed bottom-16 md:bottom-0 left-0 right-0 z-[55] p-4 bg-gradient-to-r from-slate-900 to-slate-800 border-t border-slate-700 shadow-2xl transform transition-transform duration-300 animate-slide-up">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Info */}
         <div className="flex items-center gap-4 text-center sm:text-left">

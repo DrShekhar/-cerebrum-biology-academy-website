@@ -36,7 +36,7 @@ export function StickyCTA({ phoneCTA = 'Call Now', demoCTA = 'Book Demo' }: Stic
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 animate-in slide-in-from-bottom duration-300">
+    <div className="fixed bottom-16 md:bottom-0 left-0 right-0 z-[55] animate-in slide-in-from-bottom duration-300">
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-3 shadow-2xl backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
           <div className="hidden text-white md:block">

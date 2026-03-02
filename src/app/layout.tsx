@@ -35,7 +35,6 @@ import {
   DynamicPWAProvider,
   DynamicTrialBanner,
   DynamicMaintenancePopup,
-  DynamicStickyMobileCallBar as StickyMobileCallBar,
   DynamicWhatsAppDesktopModal,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
@@ -260,8 +259,9 @@ export default function RootLayout({
                           <DynamicMaintenancePopup />
                         </ConditionalHeaderFooter>
                       </ConditionalHeaderFooterProvider>
-                      {/* CONVERSION: Sticky mobile call bar — always visible on mobile */}
-                      <StickyMobileCallBar />
+                      {/* REMOVED: StickyMobileCallBar was duplicating FloatingCTA's mobile Call+WhatsApp bar.
+                         FloatingCTA already provides Call+WhatsApp at bottom-16 (above MobileBottomNav)
+                         with proper z-index layering, page-aware skipping, and conversion tracking. */}
                       {/* CONVERSION: Global WhatsApp QR modal for desktop users */}
                       <DynamicWhatsAppDesktopModal />
                       {/* SEO: Canonical URL manager - wrapped in Suspense for useSearchParams */}

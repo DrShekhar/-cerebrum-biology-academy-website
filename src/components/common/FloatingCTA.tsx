@@ -25,8 +25,8 @@ const CTA_COPY = {
   },
 }
 
-// Pages that already have their own MobilePhoneStickyBar — skip global bar
-const PAGES_WITH_LOCAL_STICKY = ['/locations/', '/courses/', '/compare/']
+// Previously skipped /locations/, /courses/, /compare/ — but not all have local bars.
+// Now FloatingCTA's mobile bar shows universally for consistent UX.
 
 export const FloatingCTA = memo(function FloatingCTA() {
   const pathname = usePathname()
@@ -68,9 +68,6 @@ export const FloatingCTA = memo(function FloatingCTA() {
   // Hide on blog pages - they have their own BlogWhatsAppQuery component
   const isBlogPage = pathname?.startsWith('/blog/')
   if (isBlogPage) return null
-
-  // Check if current page already has a local MobilePhoneStickyBar
-  const hasLocalStickyBar = PAGES_WITH_LOCAL_STICKY.some((prefix) => pathname?.startsWith(prefix))
 
   // Mobile sticky bar: Call with single conversion tracking (avoids double-counting)
   const handleCallClick = () => {
@@ -118,9 +115,8 @@ export const FloatingCTA = memo(function FloatingCTA() {
   return (
     <>
       {/* ===== MOBILE: Full-width Sticky CTA Bar (Above MobileBottomNav) ===== */}
-      {/* Prominent Call + WhatsApp bar on all mobile pages (except pages with local MobilePhoneStickyBar) */}
-      {!hasLocalStickyBar && (
-        <div className="fixed bottom-16 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[55] lg:hidden">
+      {/* Prominent Call + WhatsApp bar on all mobile pages */}
+      <div className="fixed bottom-16 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[55] lg:hidden">
           <div className="flex p-2 gap-2 max-w-lg mx-auto">
             <a
               href={getPhoneLink()}
@@ -141,7 +137,6 @@ export const FloatingCTA = memo(function FloatingCTA() {
             </button>
           </div>
         </div>
-      )}
 
       {/* ===== FIXED CALL BUTTON (All pages, all breakpoints) ===== */}
       {/* Mobile: floating circle above sticky bar. Desktop: stacked above WhatsApp */}
