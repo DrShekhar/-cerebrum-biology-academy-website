@@ -24,62 +24,6 @@
  */
 
 /**
- * Organization Schema
- * Provides comprehensive company/organization information
- */
-function OrganizationSchema() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    name: 'Cerebrum Biology Academy',
-    url: 'https://cerebrumbiologyacademy.com',
-    logo: 'https://cerebrumbiologyacademy.com/logo.png',
-    description:
-      'Cerebrum Biology Academy - Premier NEET coaching and biology tuition center across India. Expert faculty, proven results, and comprehensive courses.',
-    foundingDate: '2015',
-    areaServed: ['India', 'Delhi NCR', 'Gurgaon', 'Noida', 'Bangalore', 'Chennai'],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'Customer Support',
-      telephone: '+91-88264-44334',
-      email: 'info@cerebrumbiologyacademy.com',
-    },
-    sameAs: [
-      'https://www.facebook.com/cerebrumbiologyacademy',
-      'https://www.instagram.com/cerebrumbiologyacademy',
-      'https://www.youtube.com/cerebrumbiologyacademy',
-      'https://www.linkedin.com/company/cerebrum-biology-academy',
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'IN',
-      addressRegion: 'Delhi',
-      streetAddress: 'D 35, South Extension Part 2',
-      postalCode: '110049',
-    },
-    founder: {
-      '@type': 'Person',
-      name: 'Dr. Shekhar',
-      jobTitle: 'Founder & Director',
-    },
-    employee: [
-      {
-        '@type': 'Person',
-        name: 'Dr. Shekhar',
-        jobTitle: 'Biology Faculty & Director',
-      },
-    ],
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
-/**
  * Website Schema with Sitelinks Searchbox
  * Enables Google to show search box in SERPs for branded queries
  */
@@ -232,7 +176,6 @@ function LocalBusinessSchema() {
 export function SEOHealthCheck() {
   return (
     <>
-      <OrganizationSchema />
       <WebsiteWithSearchboxSchema />
       <BreadcrumbNavigationSchema />
       <LocalBusinessSchema />
@@ -240,21 +183,4 @@ export function SEOHealthCheck() {
   )
 }
 
-/**
- * Export individual schemas for selective use
- */
-export { OrganizationSchema, WebsiteWithSearchboxSchema, BreadcrumbNavigationSchema, LocalBusinessSchema }
-
-/**
- * Individual schema components for selective inclusion
- * Usage:
- * import { OrganizationSchema } from '@/components/seo/SEOHealthCheck'
- * export default function Layout() {
- *   return (
- *     <>
- *       <OrganizationSchema />
- *       ... rest of layout
- *     </>
- *   )
- * }
- */
+export { WebsiteWithSearchboxSchema, BreadcrumbNavigationSchema, LocalBusinessSchema }

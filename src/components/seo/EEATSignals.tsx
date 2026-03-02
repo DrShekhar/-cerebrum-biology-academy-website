@@ -262,60 +262,6 @@ export function EEATSignals({
             </div>
           )}
         </div>
-
-        {/* Structured data for AI/Search engines */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'EducationalOrganization',
-              name: 'Cerebrum Biology Academy',
-              description:
-                'Premier NEET Biology coaching institute with 15+ years of experience and 98% success rate',
-              foundingDate: '2015',
-              numberOfEmployees: {
-                '@type': 'QuantitativeValue',
-                value: 25,
-              },
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '5.0',
-                reviewCount: '38',
-                bestRating: '5',
-                worstRating: '1',
-              },
-              areaServed: [
-                { '@type': 'City', name: 'Delhi' },
-                { '@type': 'City', name: 'Noida' },
-                { '@type': 'City', name: 'Gurgaon' },
-                { '@type': 'City', name: 'Ghaziabad' },
-                { '@type': 'City', name: 'Faridabad' },
-              ],
-              hasCredential: [
-                {
-                  '@type': 'EducationalOccupationalCredential',
-                  credentialCategory: 'NEET Biology Specialist',
-                  description: 'Specialized coaching for NEET Biology with AIIMS faculty',
-                },
-              ],
-              award: [
-                'Top NEET Biology Coaching in Delhi NCR',
-                '98% Success Rate in NEET',
-                '67+ AIIMS Selections',
-              ],
-              knowsAbout: [
-                'NEET Biology',
-                'Medical Entrance Exam Preparation',
-                'NCERT Biology',
-                'Human Physiology',
-                'Genetics',
-                'Ecology',
-                'Cell Biology',
-              ],
-            }),
-          }}
-        />
       </div>
     </section>
   )
