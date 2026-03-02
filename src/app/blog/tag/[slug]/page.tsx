@@ -34,9 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/blog/tag/${slug}`,
     },
-    ...(posts.length < 3 && {
-      robots: { index: false, follow: true },
-    }),
+    robots: { index: false, follow: true },
   }
 }
 

@@ -1567,6 +1567,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/biology-topics/biotechnology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-topics/cell-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-topics/ecology-environment`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-topics/genetics-evolution`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-topics/human-physiology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-topics/plant-physiology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
     // Ghaziabad SEO Landing Pages - HIGH PRIORITY
     {
       url: `${baseUrl}/neet-coaching-ghaziabad`,
@@ -7706,7 +7742,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'free-neet-demo-class-ghaziabad',
     'free-neet-demo-class-greater-noida',
     'free-neet-demo-class-noida',
-    'book-free-demo',
     // Board-specific
     'haryana-board-neet-coaching-gurugram',
     'icse-neet-coaching-gurugram',
@@ -7716,7 +7751,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Other
     'dr-shekhar-youtube-channel',
     'neet-coaching',
-    'reviews',
     // School-specific landing pages
     'neet-coaching-sharda-greater-noida-students',
     'neet-coaching-modern-school-faridabad-students',
@@ -7767,7 +7801,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ta',
     // Public tools
     'book-demo',
-    'find-center',
     'calculator',
     'whatsapp-course-selector',
     'neet-tools/omr-checker',

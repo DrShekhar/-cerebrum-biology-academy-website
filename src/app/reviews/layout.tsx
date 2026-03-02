@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Share your experience at Cerebrum Biology Academy. Your feedback helps future NEET aspirants make the right choice.',
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 }

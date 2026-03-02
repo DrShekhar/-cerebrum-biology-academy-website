@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/find-center',
   },
+  robots: { index: false, follow: true },
 }
 
 const centers = [
