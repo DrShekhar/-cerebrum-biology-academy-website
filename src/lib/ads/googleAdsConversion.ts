@@ -105,9 +105,22 @@ export const trackPageView = (pageType: string, pagePath: string) => {
   }
 }
 
-// Keep these exports for backward compatibility (they are no-ops now)
-export const trackCourseEnrollment = () => {}
-export const trackDemoBooking = () => {}
-export const trackFormSubmission = () => {}
-export const trackCustomConversion = () => {}
-export const trackEnhancedConversion = () => {}
+/**
+ * Track demo booking form submission
+ * Fires signUp conversion since form leads ultimately convert via WhatsApp/call
+ */
+export const trackDemoBooking = (name?: string, courseType?: string, value: number = 0) => {
+  trackSignUpConversion(`demo-booking-${courseType || 'general'}`, value)
+}
+
+/**
+ * Track generic form submission
+ */
+export const trackFormSubmission = (source?: string, value: number = 0) => {
+  trackSignUpConversion(source || 'form', value)
+}
+
+// Keep these exports for backward compatibility (no-ops)
+export const trackCourseEnrollment = (..._args: unknown[]) => {}
+export const trackCustomConversion = (..._args: unknown[]) => {}
+export const trackEnhancedConversion = (..._args: unknown[]) => {}
