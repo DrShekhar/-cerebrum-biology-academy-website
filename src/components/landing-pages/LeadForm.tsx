@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { Send, MessageCircle, Loader2 } from 'lucide-react'
-import { trackDemoBooking, trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
+import { trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface LeadFormProps {
   title?: string
@@ -18,7 +18,6 @@ export function LeadForm({
   courseType,
   formId = 'demo-form',
 }: LeadFormProps) {
-  const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -36,16 +35,15 @@ export function LeadForm({
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    try {
-      // Track Google Ads conversion
-      trackDemoBooking(formData.name, courseType, 500)
+    const submittedData = { ...formData }
 
-      // Submit form data
+    try {
+      // Submit form data to API first (saves lead in DB)
       const response = await fetch('/api/leads/demo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...formData,
+          ...submittedData,
           course: courseType,
           source: 'landing-page',
         }),
@@ -56,10 +54,18 @@ export function LeadForm({
       setSubmitStatus('success')
       setFormData({ name: '', phone: '', class: '', location: '' })
 
-      // Redirect to thank you page after 2 seconds
-      setTimeout(() => {
-        router.push('/demo/complete')
-      }, 2000)
+      // Open WhatsApp with pre-filled message containing form data
+      const classLabel = submittedData.class
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, (c) => c.toUpperCase())
+      const locationPart = submittedData.location ? ` from ${submittedData.location}` : ''
+      const message = `Hi, I'm ${submittedData.name}${locationPart}. I'm interested in ${courseType} (${classLabel}). I'd like to book a free demo class. Please share details about batches, fees, and schedule.`
+
+      await trackAndOpenWhatsApp({
+        source: 'lead-form-submit',
+        message,
+        campaign: 'lead-form',
+      })
     } catch (error) {
       console.error('Form submission error:', error)
       setSubmitStatus('error')
@@ -80,9 +86,7 @@ export function LeadForm({
     <section id={formId} className="scroll-mt-20 bg-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
-          <div
-            className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 shadow-xl md:p-12 animate-fadeInUp"
-          >
+          <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 shadow-xl md:p-12 animate-fadeInUp">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">{title}</h2>
               <p className="mt-4 text-lg text-slate-600">{description}</p>
