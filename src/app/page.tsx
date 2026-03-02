@@ -198,7 +198,7 @@ export default function Home() {
 
       {/* 7. Google Reviews Widget */}
       <section className="content-visibility-auto">
-        <GoogleReviewsWidget variant="full" maxReviews={3} />
+        <GoogleReviewsWidget variant="full" />
       </section>
 
       {/* 8. FAQ Section */}
