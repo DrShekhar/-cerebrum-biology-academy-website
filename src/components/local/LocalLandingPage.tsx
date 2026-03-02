@@ -43,38 +43,37 @@ interface LocalLandingPageProps {
   area: LocalArea
 }
 
-// FAQ Section Component
-function FAQSection({ areaName }: { areaName: string }) {
+// FAQ Section Component - generates area-specific FAQs using local data
+function FAQSection({ area }: { area: LocalArea }) {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
+  const schoolsList = area.demographics.schools.slice(0, 3).join(', ')
+  const transportList = area.transportLinks.slice(0, 2).join(' and ')
 
   const faqs = [
     {
-      question: `What makes Cerebrum Biology Academy the best choice for NEET preparation in ${areaName}?`,
-      answer: `Cerebrum Biology Academy stands out for its AIIMS-trained faculty, personalized attention with small batch sizes, comprehensive study material, and proven track record of 98% success rate. Our ${areaName} center is conveniently located with easy metro access and offers both online and offline learning modes.`,
+      question: `What makes Cerebrum Biology Academy the best choice for NEET preparation in ${area.name}?`,
+      answer: `Cerebrum Biology Academy is the top choice for ${area.name} students because of our AIIMS-trained faculty, small batch sizes of 15-30 students, and a proven 98% success rate. We serve students from schools like ${schoolsList}, and our center is conveniently accessible via ${transportList}. We offer both online and offline modes tailored for ${area.name} families.`,
+    },
+    {
+      question: `How do ${area.name} students reach the Cerebrum Biology Academy center?`,
+      answer: `Our ${area.name} center at ${area.centerAddress || 'a convenient location'} is well-connected by ${area.transportLinks.slice(0, 3).join(', ')}. Students from nearby areas like ${area.nearbyAreas.slice(0, 4).join(', ')} find it easy to commute. We also offer online live classes for students who prefer studying from home.`,
+    },
+    {
+      question: `Which schools in ${area.name} do your students come from?`,
+      answer: `We proudly coach students from leading ${area.name} schools including ${area.demographics.schools.join(', ')}. Our curriculum is designed to complement school syllabi while building strong NEET Biology foundations. Many of these students have gone on to score 330+ in NEET Biology.`,
     },
     {
       question: 'What courses do you offer for NEET Biology preparation?',
-      answer:
-        'We offer three course tiers: Pursuit (foundation building with basics to advanced concepts), Ascent (comprehensive NEET prep with personal mentoring), and Pinnacle (premium excellence with 1:1 faculty access). Each tier is designed for different preparation needs and includes regular tests, doubt sessions, and study materials.',
+      answer: `We offer three course tiers for ${area.name} students: Pursuit (foundation building with basics to advanced concepts), Ascent (comprehensive NEET prep with personal mentoring - our most popular choice), and Pinnacle (premium excellence with 1:1 faculty access). Each includes regular tests, doubt sessions, and study materials.`,
     },
     {
-      question: 'How can I book a free demo class?',
-      answer: `You can book a free demo class by clicking the "Book FREE Demo Class" button on this page, calling us at ${CONTACT_INFO.phone.display.primary}, or sending a WhatsApp message. Our counselors will schedule a convenient time for you to experience our teaching methodology firsthand.`,
+      question: `How can I book a free demo class from ${area.name}?`,
+      answer: `Booking a free demo class is easy! Click the "Book FREE Demo Class" button on this page, call us at ${CONTACT_INFO.phone.display.primary}, or send a WhatsApp message. Our counselors will schedule a convenient time at our ${area.name} center or online. The demo includes a live teaching session so you can experience our methodology firsthand.`,
     },
     {
-      question: 'What is the batch size and timing for classes?',
-      answer:
-        'Our batch sizes range from 15-30 students depending on the course tier to ensure personalized attention. We offer flexible timings including morning, afternoon, and evening batches to accommodate school schedules. Weekend batches are also available.',
-    },
-    {
-      question: 'Do you provide online classes as well?',
-      answer:
-        'Yes, we offer both online and offline learning modes. Our online classes feature live interactive sessions, recorded lectures for revision, online doubt resolution, and digital study materials. Students can choose the mode that suits them best or opt for a hybrid approach.',
-    },
-    {
-      question: 'What study materials are provided?',
-      answer:
-        'We provide comprehensive study materials including topic-wise notes, previous year question papers with solutions, chapter-wise MCQ banks, mind maps and diagrams, and regular test papers. All materials are designed by our AIIMS-trained faculty specifically for NEET preparation.',
+      question: `Is online coaching available for ${area.name} students?`,
+      answer: `Yes! Our online live classes are perfect for ${area.name} students who want to save commute time. Features include live interactive sessions with real-time doubt clearing, recorded lectures for revision, and digital study materials. Many ${area.name} students opt for our hybrid approach - attending offline on weekends and online during weekdays.`,
     },
   ]
 
@@ -85,9 +84,7 @@ function FAQSection({ areaName }: { areaName: string }) {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4">
-        <div
-          className="text-center mb-12 animate-fadeInUp"
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <span className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-bold mb-4">
             FAQ
           </span>
@@ -95,7 +92,7 @@ function FAQSection({ areaName }: { areaName: string }) {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-600">
-            Everything you need to know about NEET Biology coaching in {areaName}
+            Everything you need to know about NEET Biology coaching in {area.name}
           </p>
         </div>
 
@@ -116,23 +113,19 @@ function FAQSection({ areaName }: { areaName: string }) {
                   <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                 )}
               </button>
-{openFAQ === index && (
-                  <div
-                    className="overflow-hidden animate-fadeInUp"
-                  >
-                    <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
-                      {faq.answer}
-                    </div>
+              {openFAQ === index && (
+                <div className="overflow-hidden animate-fadeInUp">
+                  <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                    {faq.answer}
                   </div>
-                )}
-</div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
         {/* Still have questions CTA */}
-        <div
-          className="mt-12 text-center bg-gradient-to-br from-[#4a5d4a] to-[#3d4d3d] rounded-2xl p-8 text-white animate-fadeInUp"
-        >
+        <div className="mt-12 text-center bg-gradient-to-br from-[#4a5d4a] to-[#3d4d3d] rounded-2xl p-8 text-white animate-fadeInUp">
           <h3 className="text-2xl font-bold mb-3">Still have questions?</h3>
           <p className="text-white/80 mb-6">
             Our counselors are here to help you make the right decision
@@ -148,7 +141,7 @@ function FAQSection({ areaName }: { areaName: string }) {
             <button
               onClick={async () => {
                 await trackAndOpenWhatsApp({
-                  source: `local-landing-faq-${areaName.toLowerCase().replace(/\s+/g, '-')}`,
+                  source: `local-landing-faq-${area.name.toLowerCase().replace(/\s+/g, '-')}`,
                   message: WHATSAPP_MESSAGES.enquiry,
                   campaign: 'local-landing',
                 })
@@ -202,8 +195,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               {/* Local Breadcrumb */}
               <div className="flex items-center text-slate-300 mb-6">
                 <MapPin className="w-4 h-4 mr-2 text-[#4a5d4a]" />
@@ -273,9 +265,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
             </div>
 
             {/* Hero Image/Stats */}
-            <div
-              className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               {/* Success Stats Card */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 mb-6 border border-white/10">
                 <h3 className="text-2xl font-bold mb-6 text-center">Our {area.name} Results</h3>
@@ -309,9 +299,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {/* Free Tools Section - NEW */}
       <section className="py-20 bg-gradient-to-br from-[#4a5d4a] to-[#3d4d3d] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <span className="inline-block bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-bold mb-4">
               FREE TOOLS
             </span>
@@ -326,9 +314,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* NEET College Predictor Tool */}
-            <div
-              className="bg-white rounded-2xl p-8 text-gray-900 shadow-xl hover:shadow-2xl transition-shadow animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl p-8 text-gray-900 shadow-xl hover:shadow-2xl transition-shadow animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mr-4">
                   <Calculator className="w-7 h-7 text-white" />
@@ -370,9 +356,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
             </div>
 
             {/* NEET Readiness Quiz */}
-            <div
-              className="bg-white rounded-2xl p-8 text-gray-900 shadow-xl hover:shadow-2xl transition-shadow animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl p-8 text-gray-900 shadow-xl hover:shadow-2xl transition-shadow animate-fadeInUp">
               <div className="flex items-center mb-4">
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
                   <ClipboardCheck className="w-7 h-7 text-white" />
@@ -419,9 +403,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {/* Lead Magnet Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               FREE Resources for {area.name} Students
             </h2>
@@ -488,9 +470,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {/* Why Choose Us for [Area] */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why {area.name} Students Choose Cerebrum Biology Academy?
             </h2>
@@ -517,9 +497,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {/* Enrollment Journey / How to Join Section - NEW */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <span className="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-bold mb-4">
               ENROLLMENT GUIDE
             </span>
@@ -564,10 +542,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                 color: 'bg-orange-500',
               },
             ].map((item, index) => (
-              <div
-                key={index}
-                className="relative animate-fadeInUp"
-              >
+              <div key={index} className="relative animate-fadeInUp">
                 <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center h-full">
                   <div
                     className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
@@ -590,9 +565,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
           </div>
 
           {/* Course Options Preview */}
-          <div
-            className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 lg:p-12 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 lg:p-12 animate-fadeInUp">
             <div className="text-center mb-8">
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
                 Choose Your NEET Biology Course
@@ -672,9 +645,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {localTestimonials.length > 0 && (
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Success Stories from {area.name} Students
               </h2>
@@ -763,8 +734,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <h3 className="text-3xl font-bold text-gray-900 mb-8">
                 Convenient Location in {area.name}
               </h3>
@@ -811,9 +781,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               </div>
             </div>
 
-            <div
-              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Contact Our {area.name} Center
               </h3>
@@ -860,10 +828,143 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
         </div>
       </section>
 
-      {/* FAQ Section - NEW */}
-      <FAQSection areaName={area.name} />
+      {/* Education Landscape - unique per area */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <span className="inline-block bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-bold mb-4">
+              LOCAL INSIGHT
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              NEET Coaching Landscape in {area.name}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {area.name} is a{' '}
+              {area.demographics.populationDensity === 'high'
+                ? 'densely populated'
+                : area.demographics.populationDensity === 'medium'
+                  ? 'growing'
+                  : 'well-connected'}{' '}
+              area with{' '}
+              {area.demographics.studentPopulation === 'high'
+                ? 'a large student population'
+                : area.demographics.studentPopulation === 'medium'
+                  ? 'a significant number of NEET aspirants'
+                  : 'dedicated students'}{' '}
+              seeking quality Biology coaching for NEET.
+            </p>
+          </div>
 
-      {/* Trust Badges Section - NEW */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-purple-50 rounded-2xl p-6">
+              <School className="w-8 h-8 text-purple-600 mb-4" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Top Schools We Serve</h3>
+              <ul className="space-y-2">
+                {area.demographics.schools.map((school, idx) => (
+                  <li key={idx} className="flex items-center text-gray-700 text-sm">
+                    <CheckCircle className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" />
+                    {school}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-blue-50 rounded-2xl p-6">
+              <GraduationCap className="w-8 h-8 text-blue-600 mb-4" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                Nearby Colleges & Universities
+              </h3>
+              <ul className="space-y-2">
+                {area.demographics.colleges.map((college, idx) => (
+                  <li key={idx} className="flex items-center text-gray-700 text-sm">
+                    <CheckCircle className="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" />
+                    {college}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-green-50 rounded-2xl p-6">
+              <MapPin className="w-8 h-8 text-green-600 mb-4" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                Areas We Serve Near {area.name}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {area.nearbyAreas.map((nearby, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-white text-green-700 rounded-full text-sm border border-green-200"
+                  >
+                    {nearby}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cross-links to locations hub (hub-spoke SEO) */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              Explore More Coaching Locations
+            </h3>
+            <p className="text-gray-600">
+              Cerebrum Biology Academy serves students across Delhi NCR and beyond
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {area.state === 'Delhi' && (
+              <Link
+                href="/locations/delhi"
+                className="px-5 py-2.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors"
+              >
+                All Delhi Locations
+              </Link>
+            )}
+            {(area.state === 'Haryana' ||
+              area.name.toLowerCase().includes('gurgaon') ||
+              area.name.toLowerCase().includes('gurugram') ||
+              area.name.toLowerCase().includes('faridabad')) && (
+              <Link
+                href="/locations/gurugram"
+                className="px-5 py-2.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors"
+              >
+                All Gurugram Locations
+              </Link>
+            )}
+            {(area.state === 'Uttar Pradesh' ||
+              area.name.toLowerCase().includes('noida') ||
+              area.name.toLowerCase().includes('ghaziabad')) && (
+              <Link
+                href="/locations/noida"
+                className="px-5 py-2.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors"
+              >
+                All Noida Locations
+              </Link>
+            )}
+            <Link
+              href="/locations"
+              className="px-5 py-2.5 bg-gray-50 text-gray-700 rounded-full text-sm font-medium border border-gray-200 hover:bg-gray-100 transition-colors"
+            >
+              All Locations
+            </Link>
+            <Link
+              href="/all-locations"
+              className="px-5 py-2.5 bg-gray-50 text-gray-700 rounded-full text-sm font-medium border border-gray-200 hover:bg-gray-100 transition-colors"
+            >
+              Location Directory
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - Area-specific */}
+      <FAQSection area={area} />
+
+      {/* Trust Badges Section */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -873,10 +974,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               { icon: Users, label: '10,000+', sublabel: 'Students Trained' },
               { icon: BadgeCheck, label: '98%', sublabel: 'Success Rate' },
             ].map((badge, index) => (
-              <div
-                key={index}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={index} className="text-center animate-fadeInUp">
                 <div className="w-12 h-12 mx-auto bg-[#4a5d4a]/10 rounded-full flex items-center justify-center mb-3">
                   <badge.icon className="w-6 h-6 text-[#4a5d4a]" />
                 </div>
@@ -897,8 +995,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
         </div>
 
         <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             {/* Urgency Badge */}
             <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
               <Clock className="w-4 h-4 mr-2" />

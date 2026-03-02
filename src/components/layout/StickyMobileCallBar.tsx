@@ -2,6 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import { Phone, MessageCircle, X } from 'lucide-react'
+import {
+  trackPhoneCallConversion,
+  trackWhatsAppConversion,
+} from '@/lib/analytics/googleAdsConversions'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 /**
  * StickyMobileCallBar — Always-visible Call + WhatsApp bar on mobile
@@ -13,7 +18,6 @@ export function StickyMobileCallBar() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    // Check if dismissed this session
     if (typeof window !== 'undefined') {
       const wasDismissed = sessionStorage.getItem('sticky-call-dismissed')
       if (wasDismissed) {
@@ -21,7 +25,6 @@ export function StickyMobileCallBar() {
         return
       }
     }
-    // Show after 2 seconds to not hurt LCP
     const timer = setTimeout(() => setIsVisible(true), 2000)
     return () => clearTimeout(timer)
   }, [])
@@ -32,29 +35,16 @@ export function StickyMobileCallBar() {
   }
 
   const handleCall = () => {
-    // Track conversion
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'click_call', {
-        event_category: 'conversion',
-        event_label: 'sticky_mobile_bar',
-        value: 1,
-      })
-    }
+    trackPhoneCallConversion('sticky_mobile_bar')
     window.location.href = 'tel:+918826444334'
   }
 
-  const handleWhatsApp = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'click_whatsapp', {
-        event_category: 'conversion',
-        event_label: 'sticky_mobile_bar',
-        value: 1,
-      })
-    }
-    const msg = encodeURIComponent(
-      'Hi! I want to know about NEET Biology coaching at Cerebrum Academy. Please share details about batches, fees, and demo class.'
-    )
-    window.open(`https://wa.me/918826444334?text=${msg}`, '_blank')
+  const handleWhatsApp = async () => {
+    await trackAndOpenWhatsApp({
+      source: 'sticky_mobile_bar',
+      message: WHATSAPP_MESSAGES.enquiry,
+      campaign: 'sticky-bar',
+    })
   }
 
   if (dismissed || !isVisible) return null

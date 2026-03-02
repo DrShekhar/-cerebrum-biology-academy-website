@@ -309,6 +309,67 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
         </div>
       </section>
 
+      {/* Competition & Market Insight - unique per locality */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              NEET Coaching in {locality.displayName} - How We Compare
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{locality.competition.marketGap}</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                Other Coaching Institutes in {locality.displayName}
+              </h3>
+              <ul className="space-y-3">
+                {locality.competition.majorInstitutes.map((institute, index) => (
+                  <li key={index} className="flex items-start text-gray-600">
+                    <span className="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-xs text-gray-500 mr-3 mt-0.5 flex-shrink-0">
+                      {index + 1}
+                    </span>
+                    <span>{institute}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm text-gray-500">
+                Average fee: ₹{(locality.competition.avgFees / 1000).toFixed(0)}K/year
+              </p>
+            </div>
+
+            <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
+              <h3 className="text-lg font-semibold text-blue-900 mb-4">
+                Why Cerebrum Biology Academy Stands Out
+              </h3>
+              <ul className="space-y-3">
+                {locality.competition.ourAdvantage.map((advantage, index) => (
+                  <li key={index} className="flex items-start text-blue-800">
+                    <CheckCircle className="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>{advantage}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 bg-green-100 rounded-lg p-3">
+                <p className="text-sm font-medium text-green-800">
+                  {locality.content.successMetric}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {locality.demographics.coachingHubs.length > 0 && (
+            <div className="mt-8 text-center">
+              <p className="text-sm text-gray-600">
+                Known coaching areas near {locality.displayName}:{' '}
+                {locality.demographics.coachingHubs.join(' | ')}
+              </p>
+            </div>
+          )}
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-16 bg-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
@@ -401,7 +462,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
       {/* FAQ Section */}
       <LocalityFAQ locality={locality} />
 
-      {/* Nearby Localities */}
+      {/* Nearby Localities + Hub Links */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
@@ -425,6 +486,31 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
                 </Link>
               )
             })}
+          </div>
+
+          {/* Hub-spoke breadcrumb links */}
+          <div className="mt-10 text-center space-y-3">
+            <p className="text-sm text-gray-500">Browse more locations:</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link
+                href={`/locations/${locality.citySlug}`}
+                className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors"
+              >
+                All {locality.city} Locations
+              </Link>
+              <Link
+                href="/locations"
+                className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors"
+              >
+                All Locations
+              </Link>
+              <Link
+                href="/all-locations"
+                className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors"
+              >
+                Location Directory
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -460,7 +546,11 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
           </div>
 
           <p className="mt-6 text-sm text-gray-500">
-            Contact: <a href="tel:+918826444334" className="underline hover:text-gray-700">+91-88264-44334</a> | Available for calling and WhatsApp
+            Contact:{' '}
+            <a href="tel:+918826444334" className="underline hover:text-gray-700">
+              +91-88264-44334
+            </a>{' '}
+            | Available for calling and WhatsApp
           </p>
         </div>
       </section>
