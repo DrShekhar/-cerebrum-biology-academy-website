@@ -1318,7 +1318,7 @@ export default function NeetCoachingGurugramPage() {
               <div className="text-4xl font-bold text-gray-900 mb-1">15+</div>
               <div className="text-lg font-semibold text-gray-700 mb-3">Years of Excellence</div>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Established NEET coaching institute since 2009. Over a decade of proven track record
+                Established NEET coaching institute since 2014. Over a decade of proven track record
                 helping thousands of students achieve medical college admissions through expert
                 teaching methods.
               </p>

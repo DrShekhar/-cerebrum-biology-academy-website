@@ -37,7 +37,7 @@ const tutorProfile = {
 
 const credentials = [
   { icon: GraduationCap, title: 'AIIMS Delhi Alumnus', description: 'Medical education from India\'s top institution' },
-  { icon: Clock, title: '15+ Years Experience', description: 'Teaching Biology for NEET and boards since 2009' },
+  { icon: Clock, title: '15+ Years Experience', description: 'Teaching Biology for NEET and boards since 2014' },
   { icon: Trophy, title: '67+ AIIMS Selections', description: 'Students in top medical colleges across India' },
   { icon: Star, title: '5.0/5 Google Rating', description: 'Consistently rated best by students and parents' },
   { icon: Award, title: 'Subject Matter Expert', description: 'Author of NEET Biology study materials' },

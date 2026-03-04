@@ -36,7 +36,7 @@ const usps: USP[] = [
     icon: 'award',
     title: '15+ Years of Excellence',
     description:
-      'Established NEET coaching institute since 2009 with proven track record and thousands of successful students.',
+      'Established NEET coaching institute since 2014 with proven track record and thousands of successful students.',
   },
   {
     icon: 'users',

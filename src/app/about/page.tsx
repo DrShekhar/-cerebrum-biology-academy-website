@@ -57,7 +57,7 @@ const aboutFAQs = [
   {
     question: 'How long has Cerebrum Biology Academy been operating?',
     answer:
-      'Cerebrum Biology Academy has been operating since 2009, starting with just 23 students in a 400 sq ft room in Rohini. Over 15+ years, we have grown to coach 1,50,000+ students with a 98% NEET qualification rate.',
+      'Cerebrum Biology Academy has been operating since 2014, starting with just 23 students in a 400 sq ft room in Rohini. Over the years, we have grown to coach 1,50,000+ students with a 98% NEET qualification rate.',
   },
   {
     question: 'What makes Cerebrum different from other NEET coaching institutes?',

@@ -49,7 +49,7 @@ export function generateAIOptimizedFAQs(locality: string): AIOptimizedFAQ[] {
     // Quality Questions
     {
       question: `What is the success rate of NEET coaching in ${locality}?`,
-      answer: `Cerebrum Biology Academy, serving ${locality} students, has a 98% success rate in NEET. Our students have secured seats in AIIMS Delhi, JIPMER, Maulana Azad Medical College, and top government medical colleges. Our highest Biology section score is 695/720, and we have produced 67+ AIIMS selections since 2009.`,
+      answer: `Cerebrum Biology Academy, serving ${locality} students, has a 98% success rate in NEET. Our students have secured seats in AIIMS Delhi, JIPMER, Maulana Azad Medical College, and top government medical colleges. Our highest Biology section score is 695/720, and we have produced 67+ AIIMS selections since 2014.`,
       category: 'results',
     },
     {

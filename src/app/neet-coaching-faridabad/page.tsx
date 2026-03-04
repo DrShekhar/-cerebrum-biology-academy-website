@@ -1299,7 +1299,7 @@ export default function NeetCoachingFaridabadPage() {
                 <div className="text-4xl font-bold text-gray-900 mb-2">15+</div>
                 <div className="text-lg font-semibold text-gray-700 mb-3">Years of Excellence</div>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Established NEET coaching institute serving Faridabad students since 2009 with
+                  Established NEET coaching institute serving Faridabad students since 2014 with
                   consistent results
                 </p>
               </div>

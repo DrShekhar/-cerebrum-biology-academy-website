@@ -25,7 +25,7 @@ const experienceSignals = [
   {
     icon: Clock,
     label: '15+ Years Teaching NEET Biology',
-    description: 'Proven track record since 2009',
+    description: 'Proven track record since 2014',
   },
   {
     icon: Users,
@@ -61,7 +61,7 @@ const authoritySignals = [
   {
     icon: Star,
     label: '98% Success Rate',
-    description: 'Consistently high results since 2009',
+    description: 'Consistently high results since 2014',
   },
   {
     icon: Verified,

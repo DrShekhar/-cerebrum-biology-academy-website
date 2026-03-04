@@ -28,7 +28,7 @@ const trustSignals: TrustSignal[] = [
     id: 'experience',
     value: '15+',
     label: 'Years',
-    sublabel: 'Proven excellence since 2009',
+    sublabel: 'Proven excellence since 2014',
     icon: Calendar,
     color: 'bg-[#4285f4]',
     verified: true,

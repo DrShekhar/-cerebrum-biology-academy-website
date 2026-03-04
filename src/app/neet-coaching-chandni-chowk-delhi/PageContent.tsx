@@ -178,7 +178,7 @@ export default function PageContent() {
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Premium NEET coaching for Chandni Chowk, Darya Ganj, Jama Masjid & Old Delhi areas.
               Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - serving Old Delhi's
-              medical aspirations since 2009.
+              medical aspirations since 2014.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

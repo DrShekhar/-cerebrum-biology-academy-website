@@ -431,7 +431,7 @@ export const bestBiologyTeacherNeet: SEOLandingContent = {
       {
         icon: 'clock',
         title: '15+ Years Experience',
-        description: 'Teaching NEET biology since 2009. Seen every pattern, every change.',
+        description: 'Teaching NEET biology since 2014. Seen every pattern, every change.',
       },
       {
         icon: 'star',

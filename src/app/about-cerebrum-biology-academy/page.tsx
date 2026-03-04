@@ -176,7 +176,7 @@ export default function AboutCerebrumPage() {
           </h1>
           <p className="text-xl sm:text-2xl text-slate-200 mb-8 max-w-3xl">
             India's premier NEET Biology coaching institute dedicated to delivering AIIMS-level
-            instruction through personalized teaching since 2009.
+            instruction through personalized teaching since 2014.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
@@ -471,7 +471,7 @@ export default function AboutCerebrumPage() {
               <h3 className="text-xl font-bold mb-3">AIIMS Selections</h3>
               <p className="text-slate-300 mb-4">
                 67+ students selected to AIIMS across campuses (Delhi, Pune, Bhopal, Jodhpur,
-                Raipur, Rishikesh, Nagpur) since 2009.
+                Raipur, Rishikesh, Nagpur) since 2014.
               </p>
             </div>
             <div className="border-l-4 border-green-400 pl-6">

@@ -970,7 +970,7 @@ export default function NEETCoachingGurgaonPage() {
                 <div className="text-4xl font-bold text-gray-900 mb-2">15+</div>
                 <div className="text-lg font-semibold text-gray-700 mb-2">Years of Excellence</div>
                 <p className="text-sm text-gray-600">
-                  Established NEET coaching institute serving Gurgaon students since 2009
+                  Established NEET coaching institute serving Gurgaon students since 2014
                 </p>
               </div>
 
