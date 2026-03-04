@@ -14,6 +14,7 @@ import {
   ArrowRight,
   Award,
   GraduationCap,
+  Navigation,
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
@@ -24,6 +25,8 @@ import {
   RelatedLocations,
   getRelatedLocations,
 } from '@/components/locations/RelatedLocations'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 
 export default function WestendPage() {
   useEffect(() => {
@@ -174,6 +177,15 @@ export default function WestendPage() {
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                     <a
+                      href="https://maps.google.com/?q=Block+D+South+Extension+Part+2+New+Delhi+110049"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+                    >
+                      <Navigation className="w-4 h-4" />
+                      Get Directions
+                    </a>
+                    <a
                       href={`tel:${CONTACT_INFO.phone.primary}`}
                       onClick={handleCallNow}
                       className="flex items-center justify-center gap-2 flex-1 bg-green-600 text-white py-3 rounded-lg font-semibold"
@@ -184,6 +196,22 @@ export default function WestendPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="pb-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                Find Our Nearest Center
+              </h2>
+              <LazyGoogleMap
+                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123!2d77.223!3d28.566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMzJzU3LjAiTiA3N8KwMTMnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                title={`South Extension Center - Nearest to Westend`}
+                height={300}
+              />
             </div>
           </div>
         </section>
@@ -306,6 +334,7 @@ export default function WestendPage() {
           </div>
         </section>
       </div>
+      <ExploreCourses />
       <MobilePhoneStickyBar source="westend-area" />
     </>
   )

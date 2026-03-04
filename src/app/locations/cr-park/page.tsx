@@ -14,6 +14,8 @@ import {
   ArrowRight,
   Award,
   Home,
+  Navigation,
+  GraduationCap,
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
@@ -24,6 +26,9 @@ import {
   RelatedLocations,
   getRelatedLocations,
 } from '@/components/locations/RelatedLocations'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
+import { areaDetails } from '@/data/south-delhi-areas'
 
 export default function CRParkPage() {
   useEffect(() => {
@@ -166,6 +171,15 @@ export default function CRParkPage() {
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                     <a
+                      href="https://maps.google.com/?q=Block+D+South+Extension+Part+2+New+Delhi+110049"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+                    >
+                      <Navigation className="w-4 h-4" />
+                      Get Directions
+                    </a>
+                    <a
                       href={`tel:${CONTACT_INFO.phone.primary}`}
                       onClick={handleCallNow}
                       className="flex items-center justify-center gap-2 flex-1 bg-green-600 text-white py-3 rounded-lg font-semibold"
@@ -176,6 +190,22 @@ export default function CRParkPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="pb-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                Find Our Nearest Center
+              </h2>
+              <LazyGoogleMap
+                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123!2d77.223!3d28.566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMzJzU3LjAiTiA3N8KwMTMnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                title={`South Extension Center - Nearest to CR Park`}
+                height={300}
+              />
             </div>
           </div>
         </section>
@@ -220,6 +250,49 @@ export default function CRParkPage() {
           </div>
         </section>
 
+        {/* Local Schools & Connectivity */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold text-center mb-6">
+                Schools & Connectivity Near CR Park
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <GraduationCap className="w-5 h-5 text-blue-600" /> Top Schools
+                  </h3>
+                  <ul className="space-y-1 text-gray-600 text-sm">
+                    {areaDetails['cr-park'].schools.map((s) => (
+                      <li key={s}>• {s}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <Train className="w-5 h-5 text-purple-600" /> Nearest Metro
+                  </h3>
+                  <ul className="space-y-1 text-gray-600 text-sm">
+                    {areaDetails['cr-park'].nearbyMetro.map((m) => (
+                      <li key={m}>• {m}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-green-600" /> Landmarks
+                  </h3>
+                  <ul className="space-y-1 text-gray-600 text-sm">
+                    {areaDetails['cr-park'].landmarks.map((l) => (
+                      <li key={l}>• {l}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <RelatedLocations
           currentLocation="CR Park"
           locations={getRelatedLocations('cr-park')}
@@ -230,7 +303,7 @@ export default function CRParkPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
               {[
-                { value: '67+ AIIMS Selections' },
+                { value: '680+ Medical College Selections' },
                 { value: '98%', label: 'Success Rate' },
                 { value: '15+', label: 'Years' },
                 { value: '5.0', label: 'Google Rating', icon: Star },
@@ -287,6 +360,7 @@ export default function CRParkPage() {
           </div>
         </section>
       </div>
+      <ExploreCourses />
       <MobilePhoneStickyBar source="cr-park-area" />
     </>
   )

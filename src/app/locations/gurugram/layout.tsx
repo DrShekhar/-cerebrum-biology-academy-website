@@ -81,7 +81,7 @@ function GurugramFAQSchema() {
         name: 'What makes Cerebrum the best NEET coaching in Gurugram?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum is the best NEET coaching in Gurugram with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, and 67+ AIIMS selections. Students from DPS Gurugram, Pathways World School, Shri Ram School, and GD Goenka choose Cerebrum for personalized NEET preparation.',
+          text: 'Cerebrum is the best NEET coaching in Gurugram with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, and 680+ medical college selections. Students from DPS Gurugram, Pathways World School, Shri Ram School, and GD Goenka choose Cerebrum for personalized NEET preparation.',
         },
       },
       {
