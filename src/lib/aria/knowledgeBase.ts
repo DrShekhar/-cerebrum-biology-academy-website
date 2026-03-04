@@ -308,12 +308,12 @@ export const FAQ_DATA = {
   about: {
     question: 'What is Cerebrum Biology Academy?',
     answer:
-      'Cerebrum Biology Academy was founded in 2014 by Dr. Shekhar C Singh, an AIIMS New Delhi Alumnus. With 15+ years of teaching excellence since 2014, we are a specialized NEET Biology coaching institute focusing exclusively on Biology - the highest-scoring subject in NEET (360 marks out of 720). We have coached 150,000+ students with 10,000+ medical college admissions and a 98% NEET qualification rate.',
+      'Cerebrum Biology Academy is India\'s leading NEET-UG coaching institute founded in 2014 by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus). We provide comprehensive NEET-UG preparation with exclusive Biology specialization — Biology accounts for 360/720 marks (50% of NEET). A premium alternative to Aakash and Allen, we offer small batches (15-20 students), AIIMS-trained faculty, and have a 98% NEET-UG qualification rate with 680+ medical college selections.',
   },
   whyOnlyBiology: {
-    question: 'Why do you focus only on Biology?',
+    question: 'Why does Cerebrum specialize exclusively in Biology for NEET-UG?',
     answer:
-      "Biology accounts for 50% of NEET questions and 360/720 NEET marks - it's the backbone of your medical dream! Yet most coachings treat it as secondary to Physics & Chemistry. We believe in specialization. Our AIIMS faculty brings real medical perspective that general coachings can't match. Biology has the highest scoring potential with proper preparation - our students see an average improvement of +285 marks overall, with Biology being the major contributor.",
+      "Within NEET-UG preparation, Biology accounts for 50% of the exam (360/720 marks) — it's the highest-scoring subject and the backbone of medical college admission. Yet most coaching chains like Aakash and Allen treat Biology as secondary to Physics & Chemistry. We believe this critical subject deserves specialized expert instruction. Our AIIMS faculty brings real medical perspective that general coaching can't match. Our students see an average improvement of +285 marks overall, with Biology mastery being the major contributor.",
   },
   faculty: {
     question: 'Who are your faculty members?',
@@ -407,12 +407,12 @@ export const CONTACT_POINTS = {
 }
 
 export const USP_POINTS = [
-  '98% NEET qualification rate - students score 320+ in Biology',
-  '150,000+ students coached with 10,000+ medical college admissions',
-  '14+ years of excellence in NEET Biology coaching',
+  '98% NEET-UG qualification rate with exclusive Biology specialization (360/720 marks)',
+  '680+ medical college selections including AIIMS Delhi, JIPMER, AFMC',
+  'Premium NEET-UG coaching alternative to Aakash and Allen',
   'Founded by Dr. Shekhar C Singh - AIIMS New Delhi Alumnus',
   'AIIMS faculty - learn from doctors who cracked NEET',
-  'Small batches (10-40 students) - not 200+ like big coachings',
+  'Small batches (15-20 students) vs 50-100+ in coaching chains',
   '67+ AIIMS selections in NEET 2024 alone',
   '68 students in Top 500 ranks (NEET 2024)',
   '+285 marks average score improvement',

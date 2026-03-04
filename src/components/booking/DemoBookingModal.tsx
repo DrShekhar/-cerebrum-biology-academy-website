@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/Button'
 import { useAuth } from '@/contexts/AuthContext'
 import { useDemoBooking } from '@/hooks/useDemoBooking'
 import { X, Calendar, Clock, User, Phone, Mail, MessageCircle } from 'lucide-react'
-import { useRouter } from 'next/navigation'
 import FocusTrap from 'focus-trap-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import toast from 'react-hot-toast'
@@ -23,9 +22,8 @@ export function DemoBookingModal({
   courseId,
   courseTitle,
 }: DemoBookingModalProps) {
-  const { user, isAuthenticated } = useAuth()
+  const { user } = useAuth()
   const { bookDemo } = useDemoBooking()
-  const router = useRouter()
 
   const [isLoading, setIsLoading] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -70,13 +68,6 @@ export function DemoBookingModal({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
-    if (!isAuthenticated) {
-      // Redirect to sign-in with return URL
-      onClose()
-      router.push(`/sign-in?redirect=${encodeURIComponent(window.location.pathname)}`)
-      return
-    }
 
     setIsLoading(true)
 
