@@ -127,6 +127,13 @@ export const DynamicMaintenancePopup = dynamic(
   { ssr: true }
 )
 
+// CONVERSION: WhatsApp lead gate — captures name/phone before opening WhatsApp
+export const DynamicWhatsAppLeadGate = dynamic(
+  () =>
+    import('@/components/conversion/WhatsAppLeadGate').then((mod) => mod.WhatsAppLeadGate),
+  { ssr: false }
+)
+
 // CONVERSION: Global WhatsApp desktop QR modal — intercepts wa.me links on desktop
 export const DynamicWhatsAppDesktopModal = dynamic(
   () =>

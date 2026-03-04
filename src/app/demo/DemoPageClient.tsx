@@ -24,9 +24,32 @@ function DemoPageSkeleton() {
   )
 }
 
+function PricingContext() {
+  return (
+    <div className="max-w-2xl mx-auto mb-6 px-4">
+      <div className="bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 flex flex-wrap items-center justify-between gap-2 text-sm">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-gray-700">
+          <span className="font-medium">Courses from <span className="text-gray-900 font-semibold">₹45,000</span></span>
+          <span className="hidden sm:inline text-gray-300">|</span>
+          <span>EMI in 3 installments</span>
+          <span className="hidden sm:inline text-gray-300">|</span>
+          <span>Free demo class included</span>
+        </div>
+        <a
+          href="/pricing"
+          className="text-blue-600 hover:text-blue-700 font-medium whitespace-nowrap hover:underline"
+        >
+          View all pricing →
+        </a>
+      </div>
+    </div>
+  )
+}
+
 export default function DemoPageClient() {
   return (
     <Suspense fallback={<DemoPageSkeleton />}>
+      <PricingContext />
       <DemoBookingSystem />
     </Suspense>
   )

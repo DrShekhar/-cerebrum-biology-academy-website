@@ -172,28 +172,28 @@ export default function Home() {
         <TrustSignalsBanner variant="compact" />
       </section>
 
-      {/* 3. Courses Section - Below fold, deferred rendering */}
-      <section className="content-visibility-auto">
-        <CoursesSection />
-      </section>
-
-      {/* 4. Faculty Section */}
-      <section className="content-visibility-auto">
-        <FacultySection />
-      </section>
-
-      {/* 5. E-E-A-T Signals for AI Recommendations */}
-      <section className="content-visibility-auto-sm">
-        <EEATSignals variant="compact" className="bg-gray-50" />
-      </section>
-
-      {/* 6. Student Testimonials - Unified Section */}
+      {/* 3. Student Testimonials - Social proof early for conversion */}
       <section className="content-visibility-auto-lg">
         <RealStudentTestimonials
           testimonials={realTestimonials}
           title="Real Student Success Stories"
           subtitle="Hear directly from our NEET toppers who achieved their dreams"
         />
+      </section>
+
+      {/* 4. Courses Section - Below fold, deferred rendering */}
+      <section className="content-visibility-auto">
+        <CoursesSection />
+      </section>
+
+      {/* 5. Faculty Section */}
+      <section className="content-visibility-auto">
+        <FacultySection />
+      </section>
+
+      {/* 6. E-E-A-T Signals for AI Recommendations */}
+      <section className="content-visibility-auto-sm">
+        <EEATSignals variant="compact" className="bg-gray-50" />
       </section>
 
       {/* 7. Google Reviews Widget */}

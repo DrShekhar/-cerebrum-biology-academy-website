@@ -159,24 +159,42 @@ export async function trackWhatsAppClick(
   }
 }
 
-export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Promise<void> {
-  const result = await trackWhatsAppClick(params)
+function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
+  trackWhatsAppClick(params).then((result) => {
+    trackWhatsAppLead(params.source, 50)
 
-  // Fire Google Ads conversion for WhatsApp clicks
-  trackWhatsAppLead(params.source, 50)
-
-  if (isMobileDevice()) {
-    const opened = window.open(result.whatsappUrl, '_blank', 'noopener,noreferrer')
-    if (!opened) {
-      showCallFallback()
+    if (isMobileDevice()) {
+      const opened = window.open(result.whatsappUrl, '_blank', 'noopener,noreferrer')
+      if (!opened) {
+        showCallFallback()
+      }
+    } else {
+      openDesktopWhatsAppModal(
+        result.whatsappUrl,
+        params.message || 'Hi! I am interested in NEET Biology coaching.',
+        params.source
+      )
     }
-  } else {
-    openDesktopWhatsAppModal(
-      result.whatsappUrl,
-      params.message || 'Hi! I am interested in NEET Biology coaching.',
-      params.source
-    )
-  }
+  })
+}
+
+export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Promise<void> {
+  return new Promise<void>((resolve) => {
+    const detail = {
+      intercepted: false,
+      resolve: () => {
+        openWhatsAppDirectly(params)
+        resolve()
+      },
+    }
+
+    window.dispatchEvent(new CustomEvent('cerebrum:whatsapp-lead-gate', { detail }))
+
+    if (!detail.intercepted) {
+      openWhatsAppDirectly(params)
+      resolve()
+    }
+  })
 }
 
 /**

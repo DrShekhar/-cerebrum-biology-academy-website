@@ -177,8 +177,8 @@ export function BookingSection() {
                   <div className="text-sm text-green-100">{t('successRate')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">67+</div>
-                  <div className="text-sm text-green-100">AIIMS Selections</div>
+                  <div className="text-3xl font-bold mb-1">680+</div>
+                  <div className="text-sm text-green-100">Medical College Selections</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold mb-1">5+</div>
