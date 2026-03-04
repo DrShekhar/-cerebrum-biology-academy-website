@@ -116,7 +116,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
     <>
       {/* ===== MOBILE: Full-width Sticky CTA Bar (Above MobileBottomNav) ===== */}
       {/* Prominent Call + WhatsApp bar on all mobile pages */}
-      <div className="fixed bottom-16 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[55] lg:hidden">
+      <div className="fixed left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[55] lg:hidden" style={{ bottom: 'var(--mobile-nav-safe-height, 64px)' }}>
           <div className="flex p-2 gap-2 max-w-lg mx-auto">
             <a
               href={getPhoneLink()}
@@ -137,17 +137,6 @@ export const FloatingCTA = memo(function FloatingCTA() {
             </button>
           </div>
         </div>
-
-      {/* ===== FIXED CALL BUTTON (All pages, all breakpoints) ===== */}
-      {/* Mobile: floating circle above sticky bar. Desktop: stacked above WhatsApp */}
-      <a
-        href={getPhoneLink()}
-        onClick={handleDesktopCallClick}
-        className="fixed z-[70] flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 rounded-full lg:hidden bottom-[7.5rem] right-4 w-12 h-12"
-        aria-label="Call Dr. Shekhar"
-      >
-        <Phone className="w-5 h-5" />
-      </a>
 
       {/* ===== DESKTOP: Call + WhatsApp Buttons ===== */}
       {/* Always visible on desktop - bottom right corner */}
