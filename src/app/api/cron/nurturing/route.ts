@@ -35,8 +35,8 @@ export async function GET(request: NextRequest) {
     // Process WhatsApp drip sequences
     const dripStats = await whatsappDripService.processScheduledDrips()
 
-    // Process demo reminders (24h, 1h, 15m before)
-    const reminderStats = await whatsappDripService.processDemoReminders()
+    // NOTE: Demo reminders are handled by dedicated /api/cron/demo-reminders cron job.
+    // Previously called here too, causing double reminders.
 
     // Run cleanup once a day (check if it's midnight hour)
     const currentHour = new Date().getHours()
@@ -52,7 +52,6 @@ export async function GET(request: NextRequest) {
       message: 'Cron job completed',
       stats,
       dripStats,
-      reminderStats,
       cleanupCount,
       duration: `${duration}ms`,
       timestamp: new Date().toISOString(),

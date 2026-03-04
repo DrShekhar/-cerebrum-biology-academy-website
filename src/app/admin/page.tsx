@@ -17,6 +17,7 @@ import {
   RefreshCw,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
+import { IntegrationHealthWidget } from '@/components/admin/IntegrationHealthWidget'
 
 interface DashboardData {
   overview: {
@@ -352,9 +353,7 @@ export default function AdminDashboard() {
 
         {/* Demo Booking Quick Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-          <div
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Pending Demos</h3>
               <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
@@ -370,9 +369,7 @@ export default function AdminDashboard() {
             </button>
           </div>
 
-          <div
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Completed Today</h3>
               <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
@@ -388,9 +385,7 @@ export default function AdminDashboard() {
             </button>
           </div>
 
-          <div
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Demo → Enrollment</h3>
               <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -410,9 +405,7 @@ export default function AdminDashboard() {
         {/* Recent Activity & Popular Courses */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Recent Activity */}
-          <div
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold text-gray-900">Recent Activity</h3>
               <button className="text-primary-600 hover:text-primary-700 text-sm font-medium">
@@ -441,9 +434,7 @@ export default function AdminDashboard() {
           </div>
 
           {/* Popular Courses */}
-          <div
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold text-gray-900">Popular Courses</h3>
               <button className="text-primary-600 hover:text-primary-700 text-sm font-medium">
@@ -483,10 +474,13 @@ export default function AdminDashboard() {
           </div>
         </div>
 
+        {/* Integration Health */}
+        <div className="mb-8">
+          <IntegrationHealthWidget />
+        </div>
+
         {/* Quick Actions */}
-        <div
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
-        >
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp">
           <h3 className="text-lg font-semibold text-gray-900 mb-6">Quick Actions</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

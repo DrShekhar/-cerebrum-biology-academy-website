@@ -1,17 +1,30 @@
 'use client'
 
+import { useState } from 'react'
 import { BookingForm } from '@/components/forms/BookingForm'
 import { ContactForm } from '@/types'
-import { Phone, Calendar, MessageSquare, MapPin, Clock, Shield, Award, Users } from 'lucide-react'
+import {
+  Phone,
+  Calendar,
+  MessageSquare,
+  MapPin,
+  Clock,
+  Shield,
+  Award,
+  Users,
+  CheckCircle,
+} from 'lucide-react'
 import { useI18n } from '@/contexts/I18nContext'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 
 export function BookingSection() {
   const { t } = useI18n()
-  const handleFormSubmit = (_data: ContactForm) => {
-    // Integration point for backend API
-    // Example: sendToAPI(data)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleFormSubmit = (data: ContactForm) => {
+    setIsSubmitted(true)
+    setTimeout(() => setIsSubmitted(false), 10000)
   }
 
   const features = [
@@ -85,7 +98,25 @@ export function BookingSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Booking Form */}
           <div>
-            <BookingForm type="demo" onSubmit={handleFormSubmit} />
+            {isSubmitted ? (
+              <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto text-center animate-fadeInUp">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                  <CheckCircle className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Demo Booked Successfully!</h3>
+                <p className="text-gray-600 mb-6">
+                  Our counselor will contact you within 2 hours to confirm your demo class timing.
+                </p>
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Book Another Demo
+                </button>
+              </div>
+            ) : (
+              <BookingForm type="demo" onSubmit={handleFormSubmit} />
+            )}
           </div>
 
           {/* Right Column - Features and Contact */}

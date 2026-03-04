@@ -6,7 +6,7 @@
 
 import { z } from 'zod'
 import { emailService } from '@/lib/email/emailService'
-import { whatsappService } from '@/lib/whatsapp/whatsappService'
+import { sendWhatsAppMessage } from '@/lib/interakt'
 import { smsService } from '@/lib/sms/smsService'
 import { prisma } from '@/lib/prisma'
 
@@ -203,18 +203,20 @@ class NotificationService {
       )
     }
 
-    // WhatsApp
+    // WhatsApp (via Interakt)
     if (channelConfig.whatsapp && request.whatsappData) {
       promises.push(
         (async () => {
           try {
-            const whatsappResult = await whatsappService.sendMessage({
+            const whatsappResult = await sendWhatsAppMessage({
               phone: request.phone,
               message: request.whatsappData!.message,
             })
             result.channels.whatsapp = {
-              success: whatsappResult,
-              error: whatsappResult ? undefined : 'WhatsApp message failed',
+              success: whatsappResult.success,
+              error: whatsappResult.success
+                ? undefined
+                : whatsappResult.error || 'WhatsApp message failed',
             }
           } catch (error) {
             result.channels.whatsapp = {

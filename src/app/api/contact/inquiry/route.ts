@@ -5,6 +5,8 @@ import { prisma } from '@/lib/prisma'
 import { logger } from '@/lib/utils/logger'
 import { notifyAdminContactInquiry } from '@/lib/notifications/adminLeadNotification'
 import { trackLeadConversion } from '@/lib/integrations/googleAdsConversion'
+import { emailService } from '@/lib/email/emailService'
+import { sendWhatsAppMessage } from '@/lib/interakt'
 
 const contactInquirySchema = z.object({
   name: z.string().min(2).max(100),
@@ -195,7 +197,6 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Simulate inquiry response based on support type
 async function sendInquiryResponse(data: ContactInquiryInput) {
   const responses = {
     academic: `Hi ${data.name}! Thank you for your academic inquiry. Our Biology experts will review your questions and respond within 2 hours with detailed guidance.`,
@@ -204,51 +205,63 @@ async function sendInquiryResponse(data: ContactInquiryInput) {
     counseling: `Hi ${data.name}! Thank you for reaching out for counseling support. Our experienced counselor will schedule a session with you today to provide personalized guidance.`,
   }
 
-  const response =
+  const message =
     responses[data.supportType as keyof typeof responses] ||
     `Hi ${data.name}! Thank you for contacting Cerebrum Biology Academy. We'll get back to you soon.`
 
-  // In real implementation, send WhatsApp message via API
-  return true
+  try {
+    await sendWhatsAppMessage({ phone: data.phone, message })
+  } catch (err) {
+    logger.error('Failed to send inquiry WhatsApp response', { error: err, phone: data.phone })
+  }
 }
 
-// Simulate department notification
 async function notifyDepartment(data: ContactInquiryInput, inquiryId: string) {
   const notifications = {
     academic: {
       email: 'academic@cerebrumbiologyacademy.com',
       subject: `New Academic Inquiry - ${data.name}`,
-      priority: 'normal',
     },
     admission: {
       email: 'admissions@cerebrumbiologyacademy.com',
       subject: `New Admission Inquiry - ${data.name}`,
-      priority: 'high',
     },
     technical: {
       email: 'tech@cerebrumbiologyacademy.com',
       subject: `Urgent: Technical Issue - ${data.name}`,
-      priority: 'urgent',
     },
     counseling: {
       email: 'counseling@cerebrumbiologyacademy.com',
       subject: `Counseling Request - ${data.name}`,
-      priority: 'medium',
     },
   }
 
   const notification = notifications[data.supportType as keyof typeof notifications]
+  if (!notification) return
 
-  // In real implementation, send email notification to department
-  return !!notification
+  try {
+    await emailService.send({
+      to: notification.email,
+      subject: notification.subject,
+      html: `<h2>New ${data.supportType} Inquiry (#${inquiryId})</h2>
+<p><strong>Name:</strong> ${data.name}</p>
+<p><strong>Email:</strong> ${data.email}</p>
+<p><strong>Phone:</strong> ${data.phone}</p>
+<p><strong>Center:</strong> ${data.center || 'Not specified'}</p>
+<p><strong>Message:</strong></p>
+<p>${data.message}</p>`,
+    })
+  } catch (err) {
+    logger.error('Failed to notify department', { error: err, department: data.supportType })
+  }
 }
 
-// Simulate user confirmation email
 async function sendUserConfirmation(data: ContactInquiryInput, inquiryId: string) {
-  const emailContent = {
-    to: data.email,
-    subject: 'Inquiry Received - Cerebrum Biology Academy',
-    html: `
+  try {
+    await emailService.send({
+      to: data.email,
+      subject: 'Inquiry Received - Cerebrum Biology Academy',
+      html: `
       <h2>Dear ${data.name},</h2>
       <p>Thank you for contacting Cerebrum Biology Academy. We have received your inquiry and will respond soon.</p>
 
@@ -272,10 +285,10 @@ async function sendUserConfirmation(data: ContactInquiryInput, inquiryId: string
 
       <p>Best regards,<br>Cerebrum Biology Academy Team</p>
     `,
+    })
+  } catch (err) {
+    logger.error('Failed to send user confirmation email', { error: err, email: data.email })
   }
-
-  // In real implementation, send email via API
-  return true
 }
 
 // Get response time based on support type
