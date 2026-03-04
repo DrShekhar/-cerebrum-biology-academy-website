@@ -24,6 +24,8 @@ interface PageProps {
   }>
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return biologyDefinitions.map((def) => ({
     slug: def.slug,

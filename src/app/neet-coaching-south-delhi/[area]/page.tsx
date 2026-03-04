@@ -8,6 +8,8 @@ interface PageProps {
   params: Promise<{ area: string }>
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return getAllAreaSlugs().map((area) => ({
     area,

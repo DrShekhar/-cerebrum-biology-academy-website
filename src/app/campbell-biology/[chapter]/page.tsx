@@ -19,6 +19,8 @@ interface ChapterPageProps {
   params: Promise<{ chapter: string }>
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return allChapters.map((chapter) => ({
     chapter: chapter.slug,

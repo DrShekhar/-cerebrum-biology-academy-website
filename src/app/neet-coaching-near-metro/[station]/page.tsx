@@ -151,6 +151,8 @@ const metroStationData: Record<string, MetroStationData> = {
   },
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return Object.keys(metroStationData).map((station) => ({
     station,

@@ -7,6 +7,8 @@ type Props = {
   params: Promise<{ chapter: string }>
 }
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return getAllChapterSlugs().map((slug) => ({ chapter: slug }))
 }

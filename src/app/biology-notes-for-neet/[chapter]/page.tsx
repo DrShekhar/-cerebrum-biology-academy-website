@@ -182,6 +182,8 @@ const CHAPTERS_MAP: Record<string, Chapter> = {
 
 /* ─────────────── Generate Static Params ─────────────── */
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return Object.values(CHAPTERS_MAP).map((chapter) => ({
     chapter: chapter.slug,

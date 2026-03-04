@@ -18,6 +18,8 @@ interface PageProps {
   params: Promise<{ country: string }>
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return SUPPORTED_COUNTRIES.map((country) => ({
     country,

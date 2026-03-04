@@ -8,6 +8,8 @@ import {
 } from '@/components/seo/ComparisonSchema'
 import { ComparisonLandingPage } from '@/components/seo/ComparisonLandingPage'
 
+export const dynamicParams = false
+
 // Generate static params for all competitors
 export function generateStaticParams() {
   return Object.keys(COMPETITORS).map((competitor) => ({

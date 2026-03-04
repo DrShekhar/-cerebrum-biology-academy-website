@@ -14,6 +14,8 @@ type Props = {
   params: Promise<{ area: string }>
 }
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return getAllGhaziabadAreaSlugs().map((area) => ({ area }))
 }

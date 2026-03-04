@@ -245,6 +245,8 @@ const societyData: Record<string, SocietyData> = {
   },
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return Object.keys(societyData).map((society) => ({
     society,

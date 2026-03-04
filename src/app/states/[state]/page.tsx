@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import { INDIAN_STATES, StateSchema } from '@/components/seo/StateSchema'
 import { StateLandingPage } from '@/components/seo/StateLandingPage'
 
+export const dynamicParams = false
+
 // Generate static params for all states
 export function generateStaticParams() {
   return Object.keys(INDIAN_STATES).map((state) => ({

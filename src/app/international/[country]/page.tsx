@@ -14,6 +14,8 @@ interface Props {
   params: Promise<{ country: string }>
 }
 
+export const dynamicParams = false
+
 // Generate static params for all 10 countries
 export async function generateStaticParams() {
   return SUPPORTED_COUNTRIES.map((code) => ({ country: code }))

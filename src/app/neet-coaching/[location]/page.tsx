@@ -8,6 +8,8 @@ import {
 } from '@/lib/data/neet-coaching-locations'
 import { NEETCoachingPageContent } from './NEETCoachingPageContent'
 
+export const dynamicParams = false
+
 // Generate static params for all locations
 export async function generateStaticParams() {
   const slugs = getAllLocationSlugs()

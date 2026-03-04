@@ -12,6 +12,8 @@ interface PageProps {
   }>
 }
 
+export const dynamicParams = false
+
 // Generate static params for all published topics (for ISR)
 export async function generateStaticParams() {
   try {
