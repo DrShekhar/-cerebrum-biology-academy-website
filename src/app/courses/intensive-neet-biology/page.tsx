@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { IntensiveNEETBiologyPage } from '@/components/courses/premium/IntensiveNEETBiologyPage'
+import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 
 export const metadata: Metadata = {
   title: 'Intensive NEET Biology Course - Elite Program',
@@ -30,5 +31,10 @@ export const metadata: Metadata = {
 }
 
 export default function IntensiveNEETBiologyCoursePage() {
-  return <IntensiveNEETBiologyPage />
+  return (
+    <>
+      <IntensiveNEETBiologyPage />
+      <VisitOurCenters />
+    </>
+  )
 }

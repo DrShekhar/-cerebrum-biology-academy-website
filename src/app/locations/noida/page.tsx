@@ -23,6 +23,7 @@ import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import Link from 'next/link'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { getAllNoidaAreaSlugs, getNoidaAreaBySlug, getNoidaAreasByMetroLine } from '@/data/noida-areas'
 
 export default function NoidaLocationPage() {
@@ -430,6 +431,7 @@ export default function NoidaLocationPage() {
         </div>
       </div>
 
+      <ExploreCourses />
       {/* Mobile Sticky Bar */}
       <MobilePhoneStickyBar source="noida-location" />
     </div>

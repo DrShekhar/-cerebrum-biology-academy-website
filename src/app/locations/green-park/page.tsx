@@ -25,6 +25,7 @@ import {
   getRelatedLocations,
 } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 
 export default function GreenParkLocationPage() {
   useEffect(() => {
@@ -407,6 +408,7 @@ export default function GreenParkLocationPage() {
         </section>
       </div>
 
+      <ExploreCourses />
       <MobilePhoneStickyBar phoneNumber={CONTACT_INFO.phone.primary} source="green-park-location" />
     </>
   )

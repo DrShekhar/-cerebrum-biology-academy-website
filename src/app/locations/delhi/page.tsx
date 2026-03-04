@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import Link from 'next/link'
+import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import {
   MapPin,
   Phone,
@@ -369,6 +370,7 @@ export default function DelhiLocationPage() {
         </section>
       </div>
 
+      <ExploreCourses />
       <MobilePhoneStickyBar source="delhi-area" />
     </>
   )

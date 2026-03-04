@@ -17,6 +17,7 @@ import {
   Trophy,
 } from 'lucide-react'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
+import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 
 const NEETCompletePage = () => {
   const [activeTab, setActiveTab] = useState<
@@ -932,6 +933,7 @@ const NEETCompletePage = () => {
           </p>
         </div>
       </div>
+      <VisitOurCenters />
     </div>
   )
 }
