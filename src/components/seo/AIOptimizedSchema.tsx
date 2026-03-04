@@ -26,7 +26,7 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
     image: `${BASE_URL}/og-image.jpg`,
     description: `Premier NEET Biology coaching institute in ${locality}, Delhi. Expert AIIMS faculty with 98% success rate and 695/720 top score.`,
     slogan: 'Where Biology Becomes Your Strength',
-    foundingDate: '2015',
+    foundingDate: '2014',
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

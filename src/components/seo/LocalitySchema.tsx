@@ -84,7 +84,7 @@ export function LocalitySchema({
       height: 512,
     },
     image: `${BASE_URL}/og-image.jpg`,
-    foundingDate: '2015',
+    foundingDate: '2014',
     slogan: 'Where Biology Becomes Your Strength',
     founder: {
       '@type': 'Person',

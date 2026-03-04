@@ -363,7 +363,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
     },
-    foundingDate: '2015',
+    foundingDate: '2014',
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
       minValue: 10,
@@ -539,7 +539,7 @@ export function AllLocationsSchema() {
     logo: `${baseUrl}/logo.png`,
     telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
-    foundingDate: '2015',
+    foundingDate: '2014',
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

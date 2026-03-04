@@ -112,7 +112,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   about: {
     title: 'About Us - Best NEET Biology Coaching Institute Delhi NCR | Cerebrum Academy',
     description:
-      'Learn about Cerebrum Biology Academy — founded by Dr. Shekhar (AIIMS Delhi) in 2010. 98% success rate, 1,50,000+ students coached. Visit us today!',
+      'Learn about Cerebrum Biology Academy — founded by Dr. Shekhar (AIIMS Delhi) in 2014. 98% success rate, 680+ medical college selections. Visit us today!',
     keywords: [
       'about cerebrum academy',
       'NEET coaching institute Delhi',

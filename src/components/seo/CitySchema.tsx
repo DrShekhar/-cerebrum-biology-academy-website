@@ -50,7 +50,7 @@ export function CitySchema({
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/og-image.jpg`,
-    foundingDate: '2015',
+    foundingDate: '2014',
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',

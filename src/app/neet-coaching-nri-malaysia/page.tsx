@@ -46,7 +46,7 @@ export default function Page() {
           "https://www.youtube.com/cerebrumbiology",
           "https://www.instagram.com/cerebrumbiology"
         ],
-        "foundingDate": "2015",
+        "foundingDate": "2014",
         "description": "Expert NEET coaching for NRI students with 98% success rate",
         "telephone": "+918826444334",
         "areaServed": {
