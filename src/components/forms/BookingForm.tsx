@@ -175,17 +175,7 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
 
   // Track phone call clicks for Google Ads (PRIMARY conversion - highest priority)
   const handleCallClick = () => {
-    trackPhoneCall('booking-form-cta', 100) // Highest priority value
-    // Also fire as primary conversion
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: GOOGLE_ADS_ID,
-        event_category: 'engagement',
-        event_label: 'phone_call_click',
-        value: 100,
-        currency: 'INR',
-      })
-    }
+    trackPhoneCall('booking-form-cta', 100)
   }
 
   const handleInputChange = (field: keyof ContactForm, value: string) => {
