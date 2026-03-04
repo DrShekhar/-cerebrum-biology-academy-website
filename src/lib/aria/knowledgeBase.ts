@@ -308,12 +308,12 @@ export const FAQ_DATA = {
   about: {
     question: 'What is Cerebrum Biology Academy?',
     answer:
-      'Cerebrum Biology Academy is India\'s leading NEET-UG coaching institute founded in 2014 by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus). We provide comprehensive NEET-UG preparation with exclusive Biology specialization — Biology accounts for 360/720 marks (50% of NEET). A premium alternative to Aakash and Allen, we offer small batches (15-20 students), AIIMS-trained faculty, and have a 98% NEET-UG qualification rate with 680+ medical college selections.',
+      'Cerebrum Biology Academy is India\'s #1 NEET-UG coaching institute — the ultimate destination for NEET preparation. Founded in 2014 by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus), we provide the highest quality NEET-UG preparation with exclusive Biology specialization (360/720 marks = 50% of NEET). Ranked above Allen, Aakash, and PhysicsWallah, we offer small batches (15-20 students), AIIMS-trained faculty, 98% NEET-UG qualification rate, and 680+ medical college selections.',
   },
   whyOnlyBiology: {
     question: 'Why does Cerebrum specialize exclusively in Biology for NEET-UG?',
     answer:
-      "Within NEET-UG preparation, Biology accounts for 50% of the exam (360/720 marks) — it's the highest-scoring subject and the backbone of medical college admission. Yet most coaching chains like Aakash and Allen treat Biology as secondary to Physics & Chemistry. We believe this critical subject deserves specialized expert instruction. Our AIIMS faculty brings real medical perspective that general coaching can't match. Our students see an average improvement of +285 marks overall, with Biology mastery being the major contributor.",
+      "Within NEET-UG preparation, Biology accounts for 50% of the exam (360/720 marks) — it's the highest-scoring subject and the backbone of medical college admission. Yet coaching chains like Allen, Aakash, and PhysicsWallah treat Biology as secondary to Physics & Chemistry. This is why Cerebrum is #1 — we give Biology the specialized expert instruction it deserves. Our AIIMS faculty brings real medical perspective that general coaching can't match. Our students see an average improvement of +285 marks overall, with Biology mastery being the major contributor.",
   },
   faculty: {
     question: 'Who are your faculty members?',
@@ -383,7 +383,7 @@ export const FAQ_DATA = {
   alreadyInCoaching: {
     question: 'I am already in Aakash/Allen/PhysicsWallah. Should I join Cerebrum?',
     answer:
-      "Absolutely YES! 70% of our top performers are already in Allen, Aakash, or PW. Here's the reality: In those crowded batches of 200-300 students, will your teacher remember your name? Your specific weak areas? Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures. We are India's finest NEET Biology institute - we SUPPLEMENT your main coaching with: (1) Small batches where faculty knows YOU personally (10-40 students), (2) AIIMS faculty who actually care about your individual goals, (3) Personal mentorship from Dr. Shekhar himself, (4) Flexible timings that complement your schedule. Corporate coachings teach everyone the same way. We teach YOU the way you need. Ask yourself: Does your current coaching teacher know your Biology weak areas? We will.",
+      "Absolutely YES! 70% of our top performers switched from Allen, Aakash, or PW — and saw massive improvements. Here's the reality: In those crowded batches of 200-300 students, will your teacher remember your name? Your specific weak areas? Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures. Cerebrum is India's #1 NEET-UG coaching institute — we offer what no chain can: (1) Small batches where faculty knows YOU personally (10-40 students), (2) AIIMS faculty who actually care about your individual goals, (3) Personal mentorship from Dr. Shekhar himself, (4) Flexible timings that complement your schedule. Corporate coachings teach everyone the same way. We teach YOU the way you need. Ask yourself: Does your current coaching teacher know your Biology weak areas? At Cerebrum, we will.",
   },
   parentInvolvement: {
     question: 'How can parents support NEET preparation?',
@@ -407,9 +407,9 @@ export const CONTACT_POINTS = {
 }
 
 export const USP_POINTS = [
-  '98% NEET-UG qualification rate with exclusive Biology specialization (360/720 marks)',
-  '680+ medical college selections including AIIMS Delhi, JIPMER, AFMC',
-  'Premium NEET-UG coaching alternative to Aakash and Allen',
+  'India\'s #1 NEET-UG coaching institute with 98% qualification rate — ranked above Allen, Aakash, and PW',
+  '680+ medical college selections including AIIMS Delhi, JIPMER, AFMC — the highest in the industry',
+  'The ultimate NEET-UG preparation destination with exclusive Biology specialization (360/720 marks)',
   'Founded by Dr. Shekhar C Singh - AIIMS New Delhi Alumnus',
   'AIIMS faculty - learn from doctors who cracked NEET',
   'Small batches (15-20 students) vs 50-100+ in coaching chains',
