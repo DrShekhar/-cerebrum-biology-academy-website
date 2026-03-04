@@ -415,7 +415,7 @@ export function StreamlinedEnrollmentPage({
           <div className="flex items-center justify-between mb-8">
             <div>
               <h1 className="text-3xl font-bold text-indigo-600">Secure Your NEET Success</h1>
-              <p className="text-gray-600 mt-2">Join 1,50,000+ students who enrolled this month</p>
+              <p className="text-gray-600 mt-2">Join 15,000+ students who enrolled this month</p>
             </div>
 
             {/* Urgency Timer */}
@@ -1252,7 +1252,7 @@ export function StreamlinedEnrollmentPage({
             </div>
             <div className="flex items-center space-x-2">
               <Users className="w-5 h-5 text-blue-500" />
-              <span className="text-gray-700">1,50,000+ students enrolled</span>
+              <span className="text-gray-700">15,000+ students enrolled</span>
             </div>
             <div className="flex items-center space-x-2">
               <Star className="w-5 h-5 text-yellow-500" />

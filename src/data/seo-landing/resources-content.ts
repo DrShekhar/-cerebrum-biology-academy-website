@@ -165,7 +165,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     },
     cta: {
       title: 'Ready to Ace NEET Biology?',
-      subtitle: 'Join 1,50,000+ students who scored 330+ in NEET Biology with our guidance',
+      subtitle: 'Join 15,000+ students who scored 330+ in NEET Biology with our guidance',
       primaryButton: {
         text: 'Enroll Now',
         link: '/courses',
@@ -2733,7 +2733,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     stats: [
-      { value: '1,50,000+', label: 'Students' },
+      { value: '15,000+', label: 'Students' },
       { value: '5.0/5', label: 'Rating' },
       { value: '500+', label: 'Hours' },
       { value: '85%', label: 'Selection Rate' },
@@ -3617,7 +3617,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Success Stories 2024-25 | Student Results',
     metaDescription:
-      'NEET success stories from Cerebrum Biology Academy. 1,50,000+ students selected. Read topper interviews, score improvements, and college placements.',
+      'NEET success stories from Cerebrum Biology Academy. 15,000+ students selected. Read topper interviews, score improvements, and college placements.',
     keywords: [
       'neet success stories',
       'neet biology topper interviews',
@@ -3631,7 +3631,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'NEET Success Stories 2024-25',
       subheadline:
-        '1,50,000+ students selected in NEET through Cerebrum Biology Academy. Read their inspiring journeys.',
+        '15,000+ students selected in NEET through Cerebrum Biology Academy. Read their inspiring journeys.',
       ctaText: 'Start Your Success Story',
       ctaLink: '/book-demo',
       backgroundGradient: 'from-yellow-800 to-orange-800',
@@ -3734,7 +3734,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'How many students qualify NEET from Cerebrum?',
         answer:
-          '1,50,000+ students selected over 5 years. 85% of our students clear NEET cutoff. 70% get government college seats. Results verified with actual names and colleges.',
+          '15,000+ students selected over 5 years. 85% of our students clear NEET cutoff. 70% get government college seats. Results verified with actual names and colleges.',
       },
       {
         question: 'What is the average score improvement?',
@@ -3762,7 +3762,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       duration: '12-month program',
       batchSize: '10-15 students',
       features: [
-        '1,50,000+ students trained',
+        '15,000+ students trained',
         '85% selection rate',
         'AIIMS faculty guidance',
         'Proven methodology',

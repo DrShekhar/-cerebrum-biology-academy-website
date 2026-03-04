@@ -11,7 +11,7 @@ export const es = {
   heroSubtitle: 'Delhi NCR y Online en toda India',
   locations: 'South Extension • Rohini • Gurugram • Faridabad • Online Classes - Globally',
   topperHighlight: 'Sadhna obtuvo 695 (Percentil 100)',
-  stats: '98% Tasa de Éxito • 1,50,000+ Estudiantes • Facultad Entrenada AIIMS',
+  stats: '98% Tasa de Éxito • 15,000+ Estudiantes • Facultad Entrenada AIIMS',
   sadhnasScore: 'Puntuación de Sadhna',
   percentile100: 'Percentil 100',
   successRate: 'Tasa de Éxito',

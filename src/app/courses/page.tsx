@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { generatePageMetadata } from '@/lib/seo/metadata'
 import { BreadcrumbSchema, CoursesPageWebPageSchema, ContentFreshness } from '@/components/seo'
+import { generateSpeakableWebPageSchema, speakablePages } from '@/lib/seo/speakableSchema'
 
 // Lazy load the heavy courses listing component
 const EnhancedCoursesListingPage = dynamic(
@@ -113,6 +114,8 @@ export default function CoursesPage() {
     <>
       {/* Course Schema - LD+JSON */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      {/* Speakable Schema for Voice Search (AEO) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateSpeakableWebPageSchema(speakablePages.courses)) }} />
       {/* WebPage Schema with internal linking */}
       <CoursesPageWebPageSchema />
       {/* Breadcrumb Navigation + Schema */}

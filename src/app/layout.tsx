@@ -34,7 +34,6 @@ import {
   DynamicMobileNavigation,
   DynamicPWAProvider,
   DynamicTrialBanner,
-  DynamicMaintenancePopup,
   DynamicWhatsAppDesktopModal,
 } from '@/components/layout/DynamicComponents'
 import './globals.css'
@@ -255,9 +254,7 @@ export default function RootLayout({
                         <ConditionalHeaderFooter>
                           <SalesAgentWidget />
                         </ConditionalHeaderFooter>
-                        <ConditionalHeaderFooter>
-                          <DynamicMaintenancePopup />
-                        </ConditionalHeaderFooter>
+                        {/* MaintenancePopup removed — site is live */}
                       </ConditionalHeaderFooterProvider>
                       {/* REMOVED: StickyMobileCallBar was duplicating FloatingCTA's mobile Call+WhatsApp bar.
                          FloatingCTA already provides Call+WhatsApp at bottom-16 (above MobileBottomNav)

@@ -223,7 +223,7 @@ export default function NEETBiologyCoachingPage() {
               Why Choose Our NEET Biology Coaching?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology that has helped 1,50,000+ students crack NEET
+              A proven methodology that has helped 15,000+ students crack NEET
             </p>
           </div>
 

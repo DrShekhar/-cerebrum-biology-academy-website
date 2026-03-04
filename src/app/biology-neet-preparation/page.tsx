@@ -145,7 +145,7 @@ export default function BiologyNeetPreparationPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Master NEET Biology with India&apos;s top AIIMS-trained faculty. Our proven
-              methodology has helped 1,50,000+ students secure medical seats. Biology alone can make or
+              methodology has helped 15,000+ students secure medical seats. Biology alone can make or
               break your NEET score - prepare with the best!
             </p>
 
@@ -327,7 +327,7 @@ export default function BiologyNeetPreparationPage() {
            className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 1,50,000+ successful students who cracked NEET with our expert Biology preparation!
+              Join 15,000+ successful students who cracked NEET with our expert Biology preparation!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

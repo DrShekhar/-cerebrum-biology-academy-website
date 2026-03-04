@@ -29,7 +29,7 @@ const experienceSignals = [
   },
   {
     icon: Users,
-    label: '1,50,000+ Students Trained',
+    label: '15,000+ Students Trained',
     description: 'Across Delhi NCR and online',
   },
   {

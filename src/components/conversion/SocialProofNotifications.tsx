@@ -211,7 +211,7 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
       {
         id: 'milestone-1',
         type: 'milestone',
-        message: '1,50,000+ students successfully qualified NEET with Cerebrum',
+        message: '15,000+ students successfully qualified NEET with Cerebrum',
         timeAgo: 'Today',
         credibility: 'high',
         priority: 8,
@@ -434,7 +434,7 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
           <div className="flex items-center gap-2 text-green-700">
             <Users className="w-4 h-4" />
             <span className="text-sm font-medium">
-              1,50,000+ students successfully qualified NEET
+              15,000+ students successfully qualified NEET
             </span>
           </div>
           <div className="text-xs text-green-600 mt-1">

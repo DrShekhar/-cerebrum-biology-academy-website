@@ -42,7 +42,7 @@ export default function InternationalBiologyClassesPage() {
           >
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Globe className="h-4 w-4" />
-              12,000+ International Students
+              15,000+ International Students
             </span>
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
               Online Biology Classes for International Curricula
@@ -75,7 +75,7 @@ export default function InternationalBiologyClassesPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { icon: Users, value: '12,000+', label: 'International Students' },
+              { icon: Users, value: '15,000+', label: 'International Students' },
               { icon: Globe, value: '50+', label: 'Countries Served' },
               { icon: Trophy, value: '95%', label: 'Pass Rate' },
               { icon: Star, value: '5.0/5', label: 'Student Rating' },
@@ -241,7 +241,7 @@ export default function InternationalBiologyClassesPage() {
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="animate-fadeInUp">
-            <h2 className="mb-4 text-3xl font-bold">Join 12,000+ International Students</h2>
+            <h2 className="mb-4 text-3xl font-bold">Join 15,000+ International Students</h2>
             <p className="mb-8 text-xl text-indigo-100">
               Expert biology tutoring for A-Level, IB, AP, and IGCSE from anywhere in the world
             </p>

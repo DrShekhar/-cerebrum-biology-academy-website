@@ -69,7 +69,7 @@ const schoolDetails: Record<
     description: 'Premium DPS branch in elite Vasant Vihar',
     heroDescription:
       'DPS Vasant Vihar students enjoy our specialized NEET coaching with convenient location and timings designed around their school hours.',
-    students: '1,50,000+',
+    students: '15,000+',
     curriculum: 'CBSE',
     timings: '8:00 AM - 2:30 PM',
     nearbyAreas: ['Vasant Vihar', 'Vasant Kunj', 'Munirka', 'RK Puram'],
@@ -129,7 +129,7 @@ const schoolDetails: Record<
     description: 'Prestigious Modern School branch',
     heroDescription:
       'Modern School Vasant Vihar students benefit from our strategic location and specially designed batches that work around their school timings.',
-    students: '2,000+',
+    students: '15,000+',
     curriculum: 'CBSE',
     timings: '7:45 AM - 2:15 PM',
     nearbyAreas: ['Vasant Vihar', 'RK Puram', 'Munirka', 'JNU'],
@@ -219,7 +219,7 @@ const schoolDetails: Record<
     description: 'Historic school with strong academics',
     heroDescription:
       'Springdales School Pusa Road students enjoy NEET coaching with Central Delhi convenience and timings that work with their schedule.',
-    students: '2,000+',
+    students: '15,000+',
     curriculum: 'CBSE',
     timings: '7:30 AM - 1:45 PM',
     nearbyAreas: ['Karol Bagh', 'Rajendra Place', 'Patel Nagar', 'Connaught Place'],

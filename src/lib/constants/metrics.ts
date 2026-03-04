@@ -17,7 +17,7 @@ export const CEREBRUM_METRICS = {
 
   // Student counts
   totalStudents: 150000,
-  totalStudentsText: '1,50,000+',
+  totalStudentsText: '15,000+',
   topRankers: 180,
   topRankersText: '180+',
   medicalSelections: 67,

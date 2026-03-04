@@ -25,7 +25,7 @@ export const heroVariants: HeroVariant[] = [
       highlight2: 'Personal Attention. Proven Results.',
     },
     subtext:
-      '98% Success Rate with AIIMS Faculty. Join 1,50,000+ students who chose personal attention over mass coaching. Premium NEET Biology preparation with guaranteed results.',
+      '98% Success Rate with AIIMS Faculty. Join 15,000+ students who chose personal attention over mass coaching. Premium NEET Biology preparation with guaranteed results.',
     primaryCTA: 'Book Free NEET Biology Demo',
     secondaryCTA: 'Call Now: +91 88264 44334',
     weight: 40, // Primary content-optimized variant
@@ -34,7 +34,7 @@ export const heroVariants: HeroVariant[] = [
     id: 'outcome_focused_v2',
     name: 'Results-Focused with Differentiation',
     headline: {
-      main: '1,50,000+ Students Mentored',
+      main: '15,000+ Students Mentored',
       highlight1: 'with Personal Mentoring',
       highlight2: '98% Success Rate',
     },
@@ -53,7 +53,7 @@ export const heroVariants: HeroVariant[] = [
       highlight2: '98% Success Rate',
     },
     subtext:
-      'AIIMS faculty teaching 12-25 students (not 100+). Proven track record: 1,50,000+ students mentored, 67+ AIIMS selections. Personal mentoring that actually works.',
+      'AIIMS faculty teaching 12-25 students (not 100+). Proven track record: 15,000+ students mentored, 67+ AIIMS selections. Personal mentoring that actually works.',
     primaryCTA: 'Book Free NEET Biology Demo',
     secondaryCTA: 'Call Now: +91 88264 44334',
     weight: 25, // Trust-building variant

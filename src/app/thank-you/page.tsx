@@ -271,7 +271,7 @@ function ThankYouContent() {
         {/* Social Proof */}
         <div className="mt-12 text-center text-sm text-gray-500 animate-fadeIn">
           <p>🔒 Your information is secure and will never be shared with third parties</p>
-          <p className="mt-2">✅ Join 1,50,000+ students who chose Cerebrum for their NEET success</p>
+          <p className="mt-2">✅ Join 15,000+ students who chose Cerebrum for their NEET success</p>
         </div>
       </div>
     </div>

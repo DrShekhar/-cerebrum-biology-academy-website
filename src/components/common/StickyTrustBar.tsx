@@ -16,7 +16,7 @@ export function StickyTrustBar() {
     },
     {
       icon: Users,
-      value: '1,50,000+',
+      value: '15,000+',
       label: 'Students Mentored',
       color: 'text-blue-600 bg-blue-50 border-blue-200',
     },

@@ -526,7 +526,7 @@ export default function ResultsPage() {
               </h2>
 
               <p className="text-lg text-[#4a5d4a] mb-8">
-                Join 1,50,000+ successful students who achieved their NEET dreams with our proven
+                Join 15,000+ successful students who achieved their NEET dreams with our proven
                 methodology and expert guidance. Book your free demo class today and experience the
                 Cerebrum difference.
               </p>
@@ -584,10 +584,10 @@ export default function ResultsPage() {
             <h3 className="font-semibold text-gray-900">NEET Success Stories</h3>
             <p className="text-sm text-gray-500 mt-1">Inspiring journeys</p>
           </a>
-          <a href="/best-neet-biology-coaching" className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow">
-            <Award className="h-7 w-7 text-blue-500 mx-auto mb-2" />
-            <h3 className="font-semibold text-gray-900">Best NEET Coaching</h3>
-            <p className="text-sm text-gray-500 mt-1">Why choose us</p>
+          <a href="/reviews" className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow">
+            <Heart className="h-7 w-7 text-red-500 mx-auto mb-2" />
+            <h3 className="font-semibold text-gray-900">Google Reviews</h3>
+            <p className="text-sm text-gray-500 mt-1">5.0 star rated</p>
           </a>
         </section>
 
@@ -596,7 +596,7 @@ export default function ResultsPage() {
             Ready to Write Your Success Story?
           </h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Join 1,50,000+ students who cracked NEET with Cerebrum Biology Academy. Book a free demo
+            Join 15,000+ students who cracked NEET with Cerebrum Biology Academy. Book a free demo
             class today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -624,7 +624,7 @@ export default function ResultsPage() {
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
             <span className="ml-2 font-semibold">5.0/5</span>
           </div>
-          <p>Rated by 1,50,000+ students and parents</p>
+          <p>Rated by 15,000+ students and parents</p>
         </section>
       </div>
       </div>

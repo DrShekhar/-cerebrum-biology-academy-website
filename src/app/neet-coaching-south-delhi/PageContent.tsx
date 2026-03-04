@@ -1069,7 +1069,7 @@ export default function PageContent() {
               },
               {
                 icon: Users,
-                label: '1,50,000+ Students',
+                label: '15,000+ Students',
                 sublabel: 'From South Delhi',
                 color: 'text-green-600',
               },

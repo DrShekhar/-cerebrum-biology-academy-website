@@ -10,7 +10,7 @@ const faqData = {
     {
       question: 'What is Cerebrum Biology Academy?',
       answer:
-        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 1,50,000+ students with a 98% NEET qualification rate.',
+        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 15,000+ students with a 98% NEET qualification rate.',
     },
     {
       question: 'Who is Dr. Shekhar C Singh?',
@@ -30,7 +30,7 @@ const faqData = {
     {
       question: 'What is Cerebrum\'s success rate?',
       answer:
-        'Cerebrum Biology Academy has achieved a 98% NEET qualification rate with 1,50,000+ students coached over the past 15+ years. Our students have been selected to top medical colleges including AIIMS Delhi, CMC Vellore, JIPMER, BHU, and state government medical colleges. In 2024 alone, 12 of our students scored 700+ in NEET Biology.',
+        'Cerebrum Biology Academy has achieved a 98% NEET qualification rate with 15,000+ students coached over the past 15+ years. Our students have been selected to top medical colleges including AIIMS Delhi, CMC Vellore, JIPMER, BHU, and state government medical colleges. In 2024 alone, 12 of our students scored 700+ in NEET Biology.',
     },
     {
       question: 'Does Cerebrum offer online coaching?',
@@ -192,7 +192,7 @@ const faqData = {
     {
       question: 'What are Cerebrum\'s NEET 2024 results?',
       answer:
-        'Cerebrum Biology Academy NEET 2024 Results: 98% NEET qualification rate (1,50,000+ students coached from 2015-2024). 2024 cohort highlights: 12 students scored 700+ marks in NEET Biology. 25 students scored 680-699 range. 45 students scored 660-679 range. Average score: 340 (out of 400 in Biology). Highest score: 738/800 (AIIMS Delhi selection). Top 20 scores: All above 700. Students from all batches (Foundation, One-Year, Two-Year, Online) performed well. Success rate: 98% qualified = 680 out of 722 students who joined Cerebrum eventually got selected in a medical college.',
+        'Cerebrum Biology Academy NEET 2024 Results: 98% NEET qualification rate (15,000+ students coached from 2015-2024). 2024 cohort highlights: 12 students scored 700+ marks in NEET Biology. 25 students scored 680-699 range. 45 students scored 660-679 range. Average score: 340 (out of 400 in Biology). Highest score: 738/800 (AIIMS Delhi selection). Top 20 scores: All above 700. Students from all batches (Foundation, One-Year, Two-Year, Online) performed well. Success rate: 98% qualified = 680 out of 722 students who joined Cerebrum eventually got selected in a medical college.',
     },
     {
       question: 'How many students get AIIMS selection from Cerebrum?',

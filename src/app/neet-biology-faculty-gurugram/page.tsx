@@ -93,7 +93,7 @@ const faculty = [
 
 const facultyStats = [
   { label: 'Combined Experience', value: '54+ Years', icon: Award },
-  { label: 'Students Trained', value: '12,000+', icon: Users },
+  { label: 'Students Trained', value: '15,000+', icon: Users },
   { label: 'AIIMS Selections', value: '67+', icon: GraduationCap },
   { label: 'Avg Rating', value: '4.8/5', icon: Star },
 ]

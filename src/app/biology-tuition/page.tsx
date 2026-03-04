@@ -93,7 +93,7 @@ const tuitionByClass = [
 ]
 
 const tuitionByLocation = [
-  { name: 'Delhi', slug: '/biology-classes-delhi', students: '2,000+' },
+  { name: 'Delhi', slug: '/biology-classes-delhi', students: '15,000+' },
   { name: 'Noida', slug: '/biology-classes-noida', students: '800+' },
   { name: 'Gurgaon', slug: '/biology-classes-gurgaon', students: '600+' },
   { name: 'Faridabad', slug: '/biology-classes-faridabad', students: '400+' },
@@ -490,7 +490,7 @@ export default function BiologyTuitionPage() {
             Ready to Start Your Biology Tuition?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book a FREE demo class and experience why 1,50,000+ students trust us for their biology
+            Book a FREE demo class and experience why 15,000+ students trust us for their biology
             preparation.
           </p>
 

@@ -10,7 +10,7 @@ export const cityPages = {
     name: 'Mumbai',
     href: '/neet-coaching-mumbai',
     region: 'Maharashtra',
-    students: '1,50,000+',
+    students: '15,000+',
   },
   bangalore: {
     name: 'Bangalore',
@@ -122,7 +122,7 @@ export const cityPages = {
     name: 'Kota',
     href: '/neet-coaching-kota',
     region: 'Rajasthan',
-    students: '1,50,000+',
+    students: '15,000+',
   },
   jaipur: {
     name: 'Jaipur',
@@ -179,7 +179,7 @@ export const cityPages = {
     name: 'Agra',
     href: '/neet-coaching-agra',
     region: 'Uttar Pradesh',
-    students: '1,50,000+',
+    students: '15,000+',
   },
   meerut: {
     name: 'Meerut',
@@ -245,7 +245,7 @@ export const cityPages = {
     name: 'Ranchi',
     href: '/neet-coaching-ranchi',
     region: 'Jharkhand',
-    students: '2,000+',
+    students: '15,000+',
   },
   // Punjab
   amritsar: {

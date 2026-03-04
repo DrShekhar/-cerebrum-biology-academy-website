@@ -122,7 +122,7 @@ const foundationPursuitFeatures = [
   commonFeaturesByTier.pursuit.hours,
   commonFeaturesByTier.pursuit.aiims,
   'NCERT syllabus coverage',
-  '2,000+ practice questions',
+  '15,000+ practice questions',
   '10+ tests',
   commonFeaturesByTier.pursuit.materials,
   commonFeaturesByTier.pursuit.doubt,

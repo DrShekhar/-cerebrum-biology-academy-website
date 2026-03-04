@@ -252,7 +252,7 @@ export const Footer = memo(function Footer() {
 
             <p className="text-gray-300 mb-6 leading-relaxed">
               Founded by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus). Premier NEET Biology
-              coaching institute with 15+ years of excellence. 98% success rate, 1,50,000+ students
+              coaching institute with 15+ years of excellence. 98% success rate, 15,000+ students
               mentored to medical colleges.
             </p>
 

@@ -495,7 +495,7 @@ function generatePersonalizedHero(preferences: UserPreferences, segment: string,
     title: isReturningUser
       ? 'Welcome Back to Your NEET Journey'
       : "Master NEET Biology with India's #1 Faculty",
-    subtitle: 'Join 1,50,000+ students who chose us for guaranteed NEET success',
+    subtitle: 'Join 15,000+ students who chose us for guaranteed NEET success',
     stats: [
       { value: '98%', label: 'Overall Success Rate' },
       { value: '330+', label: 'Avg Biology Score' },

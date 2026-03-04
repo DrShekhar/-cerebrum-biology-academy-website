@@ -151,7 +151,7 @@ export default function DrShekharSinghPage() {
     },
     {
       icon: Users,
-      label: '1,50,000+ Students',
+      label: '15,000+ Students',
       description: 'Successfully Mentored',
     },
     {
@@ -193,7 +193,7 @@ export default function DrShekharSinghPage() {
     name: 'Dr. Shekhar C Singh',
     jobTitle: 'Director & Chief Educator',
     description:
-      'AIIMS faculty with 15+ years of experience, mentored 1,50,000+ NEET aspirants with 98% success rate',
+      'AIIMS faculty with 15+ years of experience, mentored 15,000+ NEET aspirants with 98% success rate',
     image:
       'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=571,fit=crop/meP3n6VKelS9LnOn/img-0034-meP3pJDRGxsyRZyy.jpg',
     worksFor: {
@@ -367,7 +367,7 @@ export default function DrShekharSinghPage() {
                       className="text-3xl font-bold text-[#3d4d3d]"
                       aria-label="150000 plus students"
                     >
-                      1,50,000+
+                      15,000+
                     </div>
                     <div className="text-xs text-gray-600">Students</div>
                   </div>
@@ -683,7 +683,7 @@ export default function DrShekharSinghPage() {
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Mentored 1,50,000+ Students</h4>
+                    <h4 className="font-semibold text-gray-900">Mentored 15,000+ Students</h4>
                     <p className="text-sm text-gray-600">To top medical colleges across India</p>
                   </div>
                 </div>
@@ -979,7 +979,7 @@ export default function DrShekharSinghPage() {
                 </h2>
                 <p className="text-xl text-white/80 mb-4">
                   Book a personal consultation with Dr. Shekhar and experience the teaching that has
-                  transformed 1,50,000+ students
+                  transformed 15,000+ students
                 </p>
                 <div className="inline-flex items-center bg-white/10 border border-white/20 px-4 py-2 rounded-full">
                   <Clock className="w-4 h-4 mr-2 text-white/80" />

@@ -79,7 +79,7 @@ export default function VideoLecturesPage() {
               <div className="text-sm opacity-90">Hours Content</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl font-bold mb-2">1,50,000+</div>
+              <div className="text-3xl font-bold mb-2">15,000+</div>
               <div className="text-sm opacity-90">Students Mentored</div>
             </div>
           </div>

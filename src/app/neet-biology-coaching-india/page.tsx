@@ -183,7 +183,7 @@ export default function NeetBiologyCoachingIndiaPage() {
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
-                <div className="text-2xl font-bold">1,50,000+</div>
+                <div className="text-2xl font-bold">15,000+</div>
                 <div className="text-sm text-blue-100">Biology Students</div>
               </div>
             </div>

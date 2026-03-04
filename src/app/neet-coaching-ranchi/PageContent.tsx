@@ -43,7 +43,7 @@ export default function PageContent() {
           </h1>
           
           <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto font-light">
-            Expert NEET Biology coaching with AIIMS faculty. Join 1,50,000+ successful students. 98% success rate, 695/720 top score.
+            Expert NEET Biology coaching with AIIMS faculty. Join 15,000+ successful students. 98% success rate, 695/720 top score.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

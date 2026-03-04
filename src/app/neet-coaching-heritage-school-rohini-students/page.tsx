@@ -448,7 +448,7 @@ export default function NEETCoachingHeritageSchoolRohiniPage() {
               </div>
               <div>
                 <Users className="mx-auto mb-2 h-8 w-8 text-yellow-400" />
-                <div className="text-3xl font-bold">1,50,000+</div>
+                <div className="text-3xl font-bold">15,000+</div>
                 <div className="text-blue-200">Students Trained</div>
               </div>
               <div>

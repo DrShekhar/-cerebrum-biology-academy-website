@@ -54,7 +54,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Quick revision answer key',
       'Expert tips from Dr. Shekhar',
     ],
-    socialProof: 'Downloaded by 12,000+ NEET aspirants',
+    socialProof: 'Downloaded by 15,000+ NEET aspirants',
   },
   {
     id: 'local-neet-success-strategy',
@@ -75,7 +75,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Local coaching comparison matrix',
       'Area-specific parent guidance tips',
     ],
-    socialProof: 'Trusted by 1,50,000+ students for NEET preparation',
+    socialProof: 'Trusted by 15,000+ students for NEET preparation',
   },
   {
     id: 'biology-memory-techniques',
@@ -116,7 +116,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Get improvement timeline',
       'Compare with other NEET aspirants',
     ],
-    socialProof: 'Taken by 21,50,000+ students with 98% accuracy rate',
+    socialProof: 'Taken by 15,000+ students with 98% accuracy rate',
   },
   {
     id: 'dropper-year-planning',
@@ -178,7 +178,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Results and success rate data',
       'Hidden costs revealed',
     ],
-    socialProof: 'Helped 2,000+ families make informed decisions',
+    socialProof: 'Helped 15,000+ families make informed decisions',
   },
   {
     id: 'class-11-headstart-guide',
@@ -221,7 +221,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Tricity transport time calculator',
       'Success stories from 780+ Tricity students',
     ],
-    socialProof: 'Downloaded by 1,50,000+ Chandigarh Tricity students',
+    socialProof: 'Downloaded by 15,000+ Chandigarh Tricity students',
   },
   {
     id: 'pgimer-gmch-roadmap',

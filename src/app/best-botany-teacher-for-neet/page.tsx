@@ -34,7 +34,7 @@ const faqs = [
   {
     question: 'Who is the best botany teacher for NEET?',
     answer:
-      'The best botany teacher for NEET should have NCERT expertise, visual teaching methodology, and proven track record. Our AIIMS-trained faculty has helped 1,50,000+ students crack NEET with strong botany scores.',
+      'The best botany teacher for NEET should have NCERT expertise, visual teaching methodology, and proven track record. Our AIIMS-trained faculty has helped 15,000+ students crack NEET with strong botany scores.',
   },
   {
     question: 'Why is botany important for NEET?',
@@ -144,7 +144,7 @@ export default function BestBotanyTeacherForNeetPage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { icon: Trophy, value: '67+', label: 'AIIMS Selections' },
-              { icon: Users, value: '1,50,000+', label: 'Students Taught' },
+              { icon: Users, value: '15,000+', label: 'Students Taught' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '15+', label: 'Years Teaching NEET' },
             ].map((stat, index) => (
@@ -319,7 +319,7 @@ export default function BestBotanyTeacherForNeetPage() {
           <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Learn from the Best Botany Teacher</h2>
             <p className="mb-8 text-xl text-green-100">
-              Join 1,50,000+ students who achieved NEET success with our expert botany teaching
+              Join 15,000+ students who achieved NEET success with our expert botany teaching
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

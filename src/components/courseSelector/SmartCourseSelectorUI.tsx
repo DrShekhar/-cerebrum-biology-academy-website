@@ -311,13 +311,13 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
     pinnacle: {
       successRate: 98.5,
       avgRank: 'Top 500',
-      students: '1,50,000+',
+      students: '15,000+',
       colleges: 'AIIMS/Top Medical',
     },
     ascent: {
       successRate: 98,
       avgRank: 'Top 2000',
-      students: '1,50,000+',
+      students: '15,000+',
       colleges: 'Government Medical',
     },
     pursuit: {

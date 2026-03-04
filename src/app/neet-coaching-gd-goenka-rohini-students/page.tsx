@@ -492,7 +492,7 @@ export default function NEETCoachingGDGoenkaRohiniPage() {
             <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 text-center sm:grid-cols-3">
               <div>
                 <Users className="mx-auto mb-2 h-8 w-8 text-yellow-400" />
-                <div className="text-3xl font-bold">1,50,000+</div>
+                <div className="text-3xl font-bold">15,000+</div>
                 <div className="text-blue-200">Students Trained</div>
               </div>
               <div>

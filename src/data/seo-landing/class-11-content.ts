@@ -6,7 +6,7 @@ const class11BaseContent = {
   stats: [
     { value: '98%', label: 'Success Rate', icon: 'trophy' },
     { value: '330+', label: 'Avg NEET Score', icon: 'target' },
-    { value: '1,50,000+', label: 'Students Trained', icon: 'users' },
+    { value: '15,000+', label: 'Students Trained', icon: 'users' },
     { value: '45+', label: 'AIIMS Selections', icon: 'award' },
   ],
   testimonials: [
@@ -79,7 +79,7 @@ export const neetBiologyCoachingClass11: SEOLandingContent = {
   hero: {
     headline: 'Class 11 is Where NEET Dreams Begin',
     subheadline:
-      "Join 1,50,000+ successful students who scored 330+ in NEET Biology with Dr. Shekhar's proven methodology",
+      "Join 15,000+ successful students who scored 330+ in NEET Biology with Dr. Shekhar's proven methodology",
     highlightedText: "Don't Leave Your Medical Dreams to Chance",
     ctaText: 'View Complete Course Details',
     ctaLink: '/class-11',
@@ -191,7 +191,7 @@ export const neetBiologyCoachingClass11: SEOLandingContent = {
   // CTA
   cta: {
     title: 'Start Your NEET Journey in Class 11',
-    subtitle: 'The earlier you start, the higher you score. Join 1,50,000+ successful students.',
+    subtitle: 'The earlier you start, the higher you score. Join 15,000+ successful students.',
     primaryButton: {
       text: 'View Course & Pricing',
       link: '/class-11',
@@ -272,7 +272,7 @@ export const class11BiologyTuitionOnline: SEOLandingContent = {
 
   benefits: {
     title: 'The Cerebrum Advantage',
-    subtitle: "Why 1,50,000+ parents trust us with their child's NEET dreams",
+    subtitle: "Why 15,000+ parents trust us with their child's NEET dreams",
     items: [
       {
         icon: 'video',
@@ -461,7 +461,7 @@ export const onlineBiologyClassesClass11: SEOLandingContent = {
         icon: 'award',
         title: 'Proven Results',
         description:
-          '65+ AIIMS selections, 1,50,000+ successful students. Results speak for themselves.',
+          '65+ AIIMS selections, 15,000+ successful students. Results speak for themselves.',
       },
     ],
   },
@@ -959,7 +959,7 @@ export const ncertBiologyClass11Tuition: SEOLandingContent = {
 
   cta: {
     title: 'Master NCERT, Ace NEET',
-    subtitle: 'Join 1,50,000+ students who built their NEET foundation on NCERT.',
+    subtitle: 'Join 15,000+ students who built their NEET foundation on NCERT.',
     primaryButton: {
       text: 'See NCERT-Based Curriculum',
       link: '/class-11',

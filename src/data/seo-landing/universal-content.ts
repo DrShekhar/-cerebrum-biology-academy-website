@@ -113,7 +113,7 @@ export const onlineBiologyTuitionIndia: SEOLandingContent = {
 
   benefits: {
     title: 'The Cerebrum Online Advantage',
-    subtitle: 'Why 1,50,000+ students chose us across India',
+    subtitle: 'Why 15,000+ students chose us across India',
     items: [
       {
         icon: 'user-check',
@@ -159,7 +159,7 @@ export const onlineBiologyTuitionIndia: SEOLandingContent = {
     {
       question: 'What makes Cerebrum the best online biology tuition in India?',
       answer:
-        'Three factors: 1) Faculty - AIIMS-trained with 15+ years NEET experience, 2) Results - 1,50,000+ students in top medical colleges, 3) Approach - Small batches, personal attention, comprehensive support. We combine best teaching with technology.',
+        'Three factors: 1) Faculty - AIIMS-trained with 15+ years NEET experience, 2) Results - 15,000+ students in top medical colleges, 3) Approach - Small batches, personal attention, comprehensive support. We combine best teaching with technology.',
     },
     {
       question: 'Which classes do you offer online biology tuition for?',
@@ -185,7 +185,7 @@ export const onlineBiologyTuitionIndia: SEOLandingContent = {
 
   cta: {
     title: 'Start Your NEET Journey Online',
-    subtitle: 'Join 1,50,000+ students from across India. Quality coaching, anywhere.',
+    subtitle: 'Join 15,000+ students from across India. Quality coaching, anywhere.',
     primaryButton: {
       text: 'Explore All Courses',
       link: '/courses',
@@ -470,7 +470,7 @@ export const bestBiologyTeacherNeet: SEOLandingContent = {
     {
       question: 'How many students has Dr. Shekhar taught?',
       answer:
-        '1,50,000+ students over 15 years. 100+ in AIIMS/JIPMER/top medical colleges. Students from across India and abroad. Track record of consistent results across different years and NEET patterns.',
+        '15,000+ students over 15 years. 100+ in AIIMS/JIPMER/top medical colleges. Students from across India and abroad. Track record of consistent results across different years and NEET patterns.',
     },
     {
       question: 'What is the fee to study with Dr. Shekhar online?',
@@ -905,7 +905,7 @@ export const privateSchoolBiologyTuition: SEOLandingContent = {
   },
 
   stats: [
-    { value: '1,50,000+', label: 'Students Trained', icon: 'users' },
+    { value: '15,000+', label: 'Students Trained', icon: 'users' },
     { value: '92%', label: 'Private School Success Rate', icon: 'trophy' },
     { value: '50+', label: 'Partner Schools', icon: 'building' },
     { value: '15+', label: 'Years Experience', icon: 'clock' },

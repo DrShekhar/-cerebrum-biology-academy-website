@@ -509,7 +509,7 @@ export default function EarlyNeetPreparationPage() {
               Give Your Child the Gift of Early Preparation
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join 2,000+ smart parents who made the decision to start early. Your child's medical
+              Join 15,000+ smart parents who made the decision to start early. Your child's medical
               career success begins with the right foundation at the right time.
             </p>
 
@@ -542,7 +542,7 @@ export default function EarlyNeetPreparationPage() {
               </div>
               <div className="flex items-center">
                 <Users className="w-4 h-4 mr-2" />
-                <span>2,000+ Early Starters</span>
+                <span>15,000+ Early Starters</span>
               </div>
               <div className="flex items-center">
                 <Star className="w-4 h-4 mr-2" />

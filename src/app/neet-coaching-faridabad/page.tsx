@@ -181,7 +181,7 @@ const faqs = [
   {
     question: 'What study material is provided for online students from Faridabad?',
     answer:
-      'Online students receive complete digital + courier-delivered material: NCERT-based notes (PDF + printed), topic-wise practice questions (2,000+ MCQs), previous 15 years NEET papers with solutions, biology diagrams booklet, monthly test series, and personalized performance reports. Students from Greater Faridabad and NIT areas receive physical material delivery within 3-4 days via courier. All digital content is accessible 24/7 via our student portal.',
+      'Online students receive complete digital + courier-delivered material: NCERT-based notes (PDF + printed), topic-wise practice questions (15,000+ MCQs), previous 15 years NEET papers with solutions, biology diagrams booklet, monthly test series, and personalized performance reports. Students from Greater Faridabad and NIT areas receive physical material delivery within 3-4 days via courier. All digital content is accessible 24/7 via our student portal.',
   },
   {
     question: 'What is the success rate of Faridabad students specifically?',

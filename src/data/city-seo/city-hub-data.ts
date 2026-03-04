@@ -4341,7 +4341,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -4401,7 +4401,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -4461,7 +4461,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -4899,7 +4899,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -6389,7 +6389,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Top coaching fees range ₹75,000-2,50,000/year. Cerebrum offers premium quality at ₹75,000-95,000 - best value for AIIMS faculty and small batches.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
+    stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6437,7 +6437,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'NCERT is 85% of NEET. Add: MTG for Biology, HC Verma for Physics, MS Chouhan for Chemistry. Our study material covers everything with NEET-focused approach.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
+    stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6485,7 +6485,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Cerebrum offers up to 50% scholarship based on entrance test. Toppers from Class 10/12 boards get additional discounts. Merit rewarded.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
+    stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6530,7 +6530,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Ranked institutes have proven systems, experienced faculty, and peer competition. Local tutors lack resources for comprehensive NEET prep. Invest in quality.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
+    stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6574,7 +6574,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Look for detailed reviews with specific experiences, not just star ratings. Cerebrum reviews mention specific faculty, topics, and experiences - indicating authenticity.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
+    stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6715,7 +6715,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! Only 4 batches × 25 students = 100 students per program. Book early to secure your seat. Quality over quantity.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
+    stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6763,7 +6763,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Typically: Mon-Tue Physics, Wed-Thu Chemistry, Fri-Sat Biology. Sunday tests and doubt sessions. Balanced coverage of all subjects.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
+    stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -7536,11 +7536,11 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'How many DPS Vasant Kunj students study at Cerebrum?',
         answer:
-          'Over 1,50,000+ students have trained with us across all centers over 15+ years. We have a strong community of DPS Vasant Kunj students who benefit from our focused NEET preparation.',
+          'Over 15,000+ students have trained with us across all centers over 15+ years. We have a strong community of DPS Vasant Kunj students who benefit from our focused NEET preparation.',
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -7600,7 +7600,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -7660,7 +7660,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -7716,11 +7716,11 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What is your success rate with Modern School students?',
         answer:
-          'Modern School students have consistently performed excellently at Cerebrum. Over 15+ years and 1,50,000+ students, we have maintained a 98% success rate with 65+ AIIMS selections.',
+          'Modern School students have consistently performed excellently at Cerebrum. Over 15+ years and 15,000+ students, we have maintained a 98% success rate with 65+ AIIMS selections.',
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -7780,7 +7780,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -7840,7 +7840,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -7896,11 +7896,11 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What results have Ryan students achieved?',
         answer:
-          'Ryan International students across our centers have achieved excellent results. Our 15+ years experience with 1,50,000+ students, 65+ AIIMS selections, and 98% success rate speaks for itself.',
+          'Ryan International students across our centers have achieved excellent results. Our 15+ years experience with 15,000+ students, 65+ AIIMS selections, and 98% success rate speaks for itself.',
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -7956,11 +7956,11 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What success have Presidium students achieved at Cerebrum?',
         answer:
-          'Presidium students have consistently performed well at Cerebrum. Our 15+ years of experience, 1,50,000+ students taught, 65+ AIIMS selections, and 98% success rate demonstrate our proven excellence.',
+          'Presidium students have consistently performed well at Cerebrum. Our 15+ years of experience, 15,000+ students taught, 65+ AIIMS selections, and 98% success rate demonstrate our proven excellence.',
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8016,11 +8016,11 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What results have Bal Bharati students achieved?',
         answer:
-          'Bal Bharati students have excelled at Cerebrum Biology Academy. Our 15+ years of experience with 1,50,000+ students, 65+ AIIMS selections, and 98% success rate demonstrate consistent excellence across all schools.',
+          'Bal Bharati students have excelled at Cerebrum Biology Academy. Our 15+ years of experience with 15,000+ students, 65+ AIIMS selections, and 98% success rate demonstrate consistent excellence across all schools.',
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8036,7 +8036,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Delhi',
     metaTitle: 'Biology Coaching for CBSE Students | Class 11 & 12 | Cerebrum Academy',
     metaDescription:
-      'Expert biology coaching for CBSE students Class 11 & 12. Board exam + NEET preparation. 15+ years experience, 1,50,000+ students coached. Call 88264-44334!',
+      'Expert biology coaching for CBSE students Class 11 & 12. Board exam + NEET preparation. 15+ years experience, 15,000+ students coached. Call 88264-44334!',
     heroTitle: 'Biology Coaching for CBSE Students',
     heroSubtitle:
       'Perfect blend of Board exam excellence and NEET preparation. CBSE-aligned curriculum with competitive exam focus for Classes 11 & 12.',
@@ -8071,7 +8071,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What results do CBSE students achieve at Cerebrum?',
         answer:
-          'CBSE students at Cerebrum consistently score 95%+ in boards while securing 550+ in NEET biology. With 15+ years experience coaching 1,50,000+ students including 65+ AIIMS selections, we have proven expertise in dual preparation.',
+          'CBSE students at Cerebrum consistently score 95%+ in boards while securing 550+ in NEET biology. With 15+ years experience coaching 15,000+ students including 65+ AIIMS selections, we have proven expertise in dual preparation.',
       },
       {
         question: 'Do you follow NCERT for CBSE students?',
@@ -8080,7 +8080,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8140,7 +8140,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8200,7 +8200,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8216,10 +8216,10 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Delhi',
     metaTitle: 'Is Coaching Necessary for NEET? | Expert Analysis | Cerebrum Academy',
     metaDescription:
-      'Honest analysis: Is NEET coaching necessary? Compare self-study vs coaching. Success rates, benefits, alternatives. 15+ years experience, 1,50,000+ students. Call 88264-44334!',
+      'Honest analysis: Is NEET coaching necessary? Compare self-study vs coaching. Success rates, benefits, alternatives. 15+ years experience, 15,000+ students. Call 88264-44334!',
     heroTitle: 'Is Coaching Necessary for NEET?',
     heroSubtitle:
-      'Honest, data-backed answer from 15+ years of coaching 1,50,000+ students. Understand when coaching helps and when self-study works.',
+      'Honest, data-backed answer from 15+ years of coaching 15,000+ students. Understand when coaching helps and when self-study works.',
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Multiple Centers',
@@ -8260,7 +8260,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8279,7 +8279,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Compare online vs offline NEET coaching. Pros, cons, success rates, costs. Both options available with AIIMS faculty. 15+ years experience. Call 88264-44334!',
     heroTitle: 'Online vs Offline NEET Coaching',
     heroSubtitle:
-      'Honest comparison based on 15+ years coaching 1,50,000+ students in both modes. Find which format suits your learning style best.',
+      'Honest comparison based on 15+ years coaching 15,000+ students in both modes. Find which format suits your learning style best.',
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Multiple Centers',
@@ -8320,7 +8320,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8378,7 +8378,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is affordable coaching as good as expensive institutes?',
         answer:
-          'Absolutely! Our 1,50,000+ successful students and 65+ AIIMS selections prove that quality education does not need to be expensive. Dr. Shekhar C Singh personally teaches, ensuring the same quality as premium institutes at affordable fees.',
+          'Absolutely! Our 15,000+ successful students and 65+ AIIMS selections prove that quality education does not need to be expensive. Dr. Shekhar C Singh personally teaches, ensuring the same quality as premium institutes at affordable fees.',
       },
       {
         question: 'Are there any scholarships or discounts available?',
@@ -8387,7 +8387,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8452,7 +8452,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8518,7 +8518,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8584,7 +8584,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },
@@ -8650,7 +8650,7 @@ export const cityHubData: Record<string, CityHubData> = {
       },
     ],
     stats: {
-      studentsFromCity: '1,50,000+',
+      studentsFromCity: '15,000+',
       successRate: '98%',
       rating: '5.0',
     },

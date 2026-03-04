@@ -9,7 +9,7 @@
 
 export const STATISTICS = {
   // Student counts - Use the most accurate current number
-  TOTAL_STUDENTS: '1,50,000+',
+  TOTAL_STUDENTS: '15,000+',
   TOTAL_STUDENTS_NUMBER: 150000,
 
   // Student mentored (historical total)

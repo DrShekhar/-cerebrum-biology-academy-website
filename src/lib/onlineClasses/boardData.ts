@@ -92,7 +92,7 @@ export const boards: BoardData[] = [
     name: 'ICSE',
     slug: 'icse',
     fullName: 'Indian Certificate of Secondary Education',
-    studentCount: '12,000+',
+    studentCount: '15,000+',
     classLevels: ['Class 9', 'Class 10', 'ISC Class 11', 'ISC Class 12'],
     syllabusFocus: [
       'ICSE/ISC to NCERT syllabus mapping',
@@ -136,7 +136,7 @@ export const boards: BoardData[] = [
     ],
     metaTitle: 'Online Biology Classes for ICSE/ISC Students | NEET Prep | Cerebrum Academy',
     metaDescription:
-      'Best online biology classes for ICSE & ISC students. NCERT bridge modules for NEET. 12,000+ ICSE students. Expert ICSE-to-NEET preparation.',
+      'Best online biology classes for ICSE & ISC students. NCERT bridge modules for NEET. 15,000+ ICSE students. Expert ICSE-to-NEET preparation.',
     heroSubtitle:
       'ICSE students need NCERT for NEET. We bridge the gap with specialized ICSE → NCERT modules.',
   },

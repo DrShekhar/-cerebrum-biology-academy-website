@@ -615,7 +615,7 @@ export function IntelligentChatbot() {
       '• 98% success rate\n' +
       '• Average biology score: 335+/360\n' +
       '• Top score: 695/720 (Sadhna Sirin - 100%ile Biology)\n' +
-      '• 1,50,000+ students mentored to medical colleges\n\n' +
+      '• 15,000+ students mentored to medical colleges\n\n' +
       '📚 **Our NEET Biology Approach:**\n' +
       '• Complete NCERT mastery\n' +
       '• High-yield topic focus\n' +
@@ -645,7 +645,7 @@ export function IntelligentChatbot() {
       '👨‍⚕️ **Dr. Shekhar - Founder & Lead Faculty**\n' +
       '• AIIMS Delhi alumnus\n' +
       '• 15+ years teaching experience\n' +
-      '• 1,50,000+ students taught\n' +
+      '• 15,000+ students taught\n' +
       '• Author of NEET Biology guides\n\n' +
       '👩‍🔬 **Our Faculty Team:**\n' +
       '• 25+ PhD & MD faculty members\n' +

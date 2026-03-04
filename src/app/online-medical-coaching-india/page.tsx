@@ -162,7 +162,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Prepare for medical entrance exams from home. Expert AIIMS trained faculty, live
-              interactive classes, proven methodology. Join 1,50,000+ students from 25+ Indian states
+              interactive classes, proven methodology. Join 15,000+ students from 25+ Indian states
               pursuing their MBBS dream.
             </p>
 

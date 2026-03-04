@@ -72,7 +72,7 @@ export const coachingFAQs: FAQ[] = [
   {
     question: 'Who is Dr. Shekhar Singh and what makes him qualified for NEET coaching?',
     answer:
-      'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years of NEET Biology teaching experience. He has mentored 1,50,000+ students with 67+ AIIMS selections annually. His teaching methodology focuses on NCERT understanding, concept clarity, and application-based learning aligned with NEET pattern.',
+      'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years of NEET Biology teaching experience. He has mentored 15,000+ students with 67+ AIIMS selections annually. His teaching methodology focuses on NCERT understanding, concept clarity, and application-based learning aligned with NEET pattern.',
     category: 'Coaching',
     keywords: ['Dr Shekhar Singh', 'AIIMS faculty', 'NEET Biology teacher'],
   },

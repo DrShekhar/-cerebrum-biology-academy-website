@@ -17,7 +17,7 @@ export const facultyMembers: Faculty[] = [
       'Founded Delhi Science Foundation and Quark Education',
       'Student Sadhna Sirin: 695 marks in NEET 2023, 100%ile Biology (Delhi-NCR Rank 1)',
       'Student Priya Sehgal: Perfect 360/360 Biology score',
-      'Mentored 1,50,000+ students to medical college admissions',
+      'Mentored 15,000+ students to medical college admissions',
     ],
     teachingStyle:
       'Believes "all humans are equally talented; hard work done smartly brings extraordinary success." Focuses on converting underperforming students into high achievers through unconventional teaching approaches that extend beyond textbooks to include life skills and character development.',

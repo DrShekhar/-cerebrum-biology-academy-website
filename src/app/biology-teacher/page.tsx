@@ -129,7 +129,7 @@ export default function BiologyTeacherPage() {
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Experience biology teaching that transforms understanding. Our expert faculty brings
               15+ years of experience, AIIMS background, and a proven methodology that has helped
-              1,50,000+ students achieve their dreams.
+              15,000+ students achieve their dreams.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

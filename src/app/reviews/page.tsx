@@ -234,6 +234,13 @@ export default function ReviewsPage() {
           <p className="text-sm text-gray-500 mt-2">
             Join hundreds of satisfied students who shared their experience
           </p>
+          <a
+            href="/results"
+            className="mt-4 inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors"
+          >
+            See our NEET results and success metrics
+            <ExternalLink className="w-4 h-4" />
+          </a>
         </div>
       </div>
       </div>

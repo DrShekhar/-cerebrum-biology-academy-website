@@ -55,7 +55,7 @@ const analysisFeatures = [
   { title: 'Chapter Analysis', description: 'Identify weak chapters needing more practice' },
   { title: 'Time Management', description: 'Track time spent per question and section' },
   { title: 'Topper Comparison', description: 'Compare your answers with top scorers' },
-  { title: 'Rank Prediction', description: 'AIR prediction based on 1,50,000+ students' },
+  { title: 'Rank Prediction', description: 'AIR prediction based on 15,000+ students' },
   { title: 'Improvement Graph', description: 'Track your progress over time' },
 ]
 
@@ -397,7 +397,7 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    Compare with 1,50,000+ students
+                    Compare with 15,000+ students
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500" />

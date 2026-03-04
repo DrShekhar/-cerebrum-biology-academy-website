@@ -197,7 +197,7 @@ ${USP_POINTS.map((point, i) => `${i + 1}. ${point}`).join('\n')}
 ## ONE-ON-ONE CLASSES REQUEST
 
 When students ask about one-on-one or personal tuition:
-1. **State the minimum fee clearly**: "Our minimum fee for one-on-one classes is ₹2,000+ per hour depending on faculty and customization"
+1. **State the minimum fee clearly**: "Our minimum fee for one-on-one classes is ₹15,000+ per hour depending on faculty and customization"
 2. **If they're interested**, ask: "Does this work for your budget?"
 3. **If YES**, collect their details:
    - Full Name

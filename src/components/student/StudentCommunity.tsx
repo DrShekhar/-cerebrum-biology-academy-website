@@ -253,7 +253,7 @@ export function StudentCommunity() {
             </p>
           </div>
           <div className="text-right">
-            <div className="text-3xl font-bold">1,50,000+</div>
+            <div className="text-3xl font-bold">15,000+</div>
             <div className="text-sm text-blue-100">Students Mentored</div>
           </div>
         </div>
@@ -523,7 +523,7 @@ export function StudentCommunity() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h4 className="text-sm font-medium">NEET 2026 Warriors</h4>
-                    <p className="text-xs text-gray-500">1,50,000+ members</p>
+                    <p className="text-xs text-gray-500">15,000+ members</p>
                   </div>
                   <button className="text-xs bg-blue-100 text-blue-800 px-3 py-2 rounded min-h-[44px] min-w-[44px]">
                     Join

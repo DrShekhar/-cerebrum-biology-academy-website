@@ -178,7 +178,7 @@ Submitted via School Seminar Booking Form`
     },
     {
       title: '98% Success Rate',
-      description: '1,50,000+ students mentored, thousands in top medical colleges across India',
+      description: '15,000+ students mentored, thousands in top medical colleges across India',
       icon: Award,
     },
     {
@@ -435,7 +435,7 @@ Submitted via School Seminar Booking Form`
 
   const stats = [
     { value: '500+', label: 'Schools Partnered' },
-    { value: '1,50,000+', label: 'Students Guided' },
+    { value: '15,000+', label: 'Students Guided' },
     { value: '15+', label: 'Years Experience' },
     { value: '98%', label: 'Parent Satisfaction' },
   ]

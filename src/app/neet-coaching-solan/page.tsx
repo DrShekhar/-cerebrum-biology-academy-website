@@ -490,7 +490,7 @@ export default function NEETCoachingSolan() {
                     </li>
                     <li className="flex justify-between border-t border-red-500/20 pt-3 font-semibold">
                       <span>Total</span>
-                      <span className="text-red-400">₹2,52,000+</span>
+                      <span className="text-red-400">₹2,515,000+</span>
                     </li>
                   </ul>
                 </div>

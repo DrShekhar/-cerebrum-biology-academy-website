@@ -462,7 +462,7 @@ export function PhotoGallerySection({
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-              <span>1,50,000+ Students Mentored</span>
+              <span>15,000+ Students Mentored</span>
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>

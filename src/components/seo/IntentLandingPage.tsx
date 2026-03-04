@@ -484,7 +484,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
               Ready to Start Your NEET Journey?
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-              Join 1,50,000+ students who have transformed their NEET preparation with us. Book a
+              Join 15,000+ students who have transformed their NEET preparation with us. Book a
               free demo today!
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">

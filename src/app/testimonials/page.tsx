@@ -127,7 +127,7 @@ const testimonials = [
 const stats = [
   {
     icon: Users,
-    value: '1,50,000+',
+    value: '15,000+',
     label: 'Students Mentored',
     color: 'text-blue-600',
   },
@@ -180,7 +180,7 @@ export default function TestimonialsPage() {
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-8 text-xs sm:text-sm opacity-75 px-4">
               <span className="whitespace-nowrap">98% NEET Qualification Rate</span>
               <span className="hidden sm:inline">•</span>
-              <span className="whitespace-nowrap">1,50,000+ Students Taught</span>
+              <span className="whitespace-nowrap">15,000+ Students Taught</span>
               <span className="hidden sm:inline">•</span>
               <span className="whitespace-nowrap">186+ AIIMS/JIPMER Selected</span>
             </div>
@@ -413,7 +413,7 @@ export default function TestimonialsPage() {
                 </Link>
               </div>
               <div className="mt-6 text-sm text-gray-500">
-                Join 1,50,000+ students who trust Cerebrum Biology Academy
+                Join 15,000+ students who trust Cerebrum Biology Academy
               </div>
             </div>
           </div>

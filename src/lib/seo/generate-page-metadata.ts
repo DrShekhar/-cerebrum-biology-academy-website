@@ -21,12 +21,12 @@ const TYPE_TEMPLATES: Record<PageType, { titleTemplate: string; descriptionTempl
   'biology-tuition': {
     titleTemplate: 'Biology Tuition in {locality} | Class 11-12 & NEET | Cerebrum Academy',
     descriptionTemplate:
-      'Premium biology tuition in {locality} for Class 11, 12 & NEET. Experienced teachers, small batches, interactive learning. 1,50,000+ students trained. Enroll now!',
+      'Premium biology tuition in {locality} for Class 11, 12 & NEET. Experienced teachers, small batches, interactive learning. 15,000+ students trained. Enroll now!',
   },
   'neet-preparation': {
     titleTemplate: 'NEET 2026 Preparation in {locality} | Expert Coaching | Cerebrum Academy',
     descriptionTemplate:
-      'Comprehensive NEET 2026 preparation in {locality}. Complete biology syllabus, mock tests, doubt sessions. Join 1,50,000+ students who achieved their medical dreams!',
+      'Comprehensive NEET 2026 preparation in {locality}. Complete biology syllabus, mock tests, doubt sessions. Join 15,000+ students who achieved their medical dreams!',
   },
   'online-coaching': {
     titleTemplate: 'Online NEET Biology Coaching from {locality} | Live Classes | Cerebrum',

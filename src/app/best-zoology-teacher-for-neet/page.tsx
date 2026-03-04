@@ -34,7 +34,7 @@ const faqs = [
   {
     question: 'Who is the best zoology teacher for NEET?',
     answer:
-      'The best zoology teacher for NEET should have medical background, NCERT expertise, and proven track record. Our AIIMS-trained faculty has helped 1,50,000+ students crack NEET with strong zoology scores.',
+      'The best zoology teacher for NEET should have medical background, NCERT expertise, and proven track record. Our AIIMS-trained faculty has helped 15,000+ students crack NEET with strong zoology scores.',
   },
   {
     question: 'Why is zoology important for NEET?',
@@ -144,7 +144,7 @@ export default function BestZoologyTeacherForNeetPage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { icon: Trophy, value: '67+', label: 'AIIMS Selections' },
-              { icon: Users, value: '1,50,000+', label: 'Students Taught' },
+              { icon: Users, value: '15,000+', label: 'Students Taught' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '15+', label: 'Years Teaching NEET' },
             ].map((stat, index) => (
@@ -319,7 +319,7 @@ export default function BestZoologyTeacherForNeetPage() {
           <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Learn from the Best Zoology Teacher</h2>
             <p className="mb-8 text-xl text-green-100">
-              Join 1,50,000+ students who achieved NEET success with our expert zoology teaching
+              Join 15,000+ students who achieved NEET success with our expert zoology teaching
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

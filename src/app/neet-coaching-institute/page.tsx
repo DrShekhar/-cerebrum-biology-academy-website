@@ -37,7 +37,7 @@ const instituteHighlights = [
   },
   {
     icon: Users,
-    title: '1,50,000+ Alumni',
+    title: '15,000+ Alumni',
     description: 'Doctors serving across India and abroad.',
     stat: '1,50K+',
   },
@@ -201,7 +201,7 @@ export default function NeetCoachingInstitutePage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              15+ Years Experience | 98% Success Rate | 1,50,000+ Selections
+              15+ Years Experience | 98% Success Rate | 15,000+ Selections
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -395,7 +395,7 @@ export default function NeetCoachingInstitutePage() {
               Join the Best NEET Coaching Institute Today
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              15+ years of excellence, 98% success rate, 1,50,000+ successful alumni
+              15+ years of excellence, 98% success rate, 15,000+ successful alumni
             </p>
             <p className="text-xs text-white/60 mb-4">Success rate based on 2023-2025 NEET-UG results. NEET is conducted by NTA (nta.ac.in).</p>
 
@@ -435,7 +435,7 @@ export default function NeetCoachingInstitutePage() {
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                <span>1,50,000+ Alumni</span>
+                <span>15,000+ Alumni</span>
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 mr-2" />

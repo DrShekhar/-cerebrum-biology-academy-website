@@ -62,7 +62,7 @@ const whyChooseUs = [
     icon: Zap,
     title: 'AP Coastal Premium Hub',
     description:
-      'Visakhapatnam is Andhra Pradesh\'s premier coastal city with high-income families and quality education focus. 12,000+ NEET aspirants annually - Cerebrum brings structured online coaching.',
+      'Visakhapatnam is Andhra Pradesh\'s premier coastal city with high-income families and quality education focus. 15,000+ NEET aspirants annually - Cerebrum brings structured online coaching.',
   },
   {
     icon: Target,
@@ -206,7 +206,7 @@ export default function PageContent() {
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Online NEET coaching for Visakhapatnam, MVP Colony, Dwaraka Nagar & nearby areas.
               Learn from <strong>AIIMS-trained faculty</strong> - comprehensive AP Inter + CBSE
-              curriculum for 12,000+ annual aspirants.
+              curriculum for 15,000+ annual aspirants.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -251,7 +251,7 @@ export default function PageContent() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">12,000+</div>
+                <div className="text-2xl font-bold">15,000+</div>
                 <div className="text-sm opacity-80">Annual Aspirants</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">

@@ -283,7 +283,7 @@ We specialize in what we do best - NEET Biology. Would you like a side-by-side c
     followUp: ['More comparison details', 'Why only Biology?', 'Book demo'],
   },
   oneOnOneClasses: {
-    response: `We do offer one-on-one personalized classes! Our minimum fee for one-on-one coaching is **₹2,000+ per hour** depending on the faculty and customization level.
+    response: `We do offer one-on-one personalized classes! Our minimum fee for one-on-one coaching is **₹15,000+ per hour** depending on the faculty and customization level.
 
 This includes:
 - Personal attention from AIIMS faculty
@@ -323,7 +323,7 @@ export const FAQ_DATA = {
   results: {
     question: 'What are your results?',
     answer:
-      'Our track record: 98% NEET qualification rate, 10,000+ medical college admissions, 67+ AIIMS selections in NEET 2024 alone, 68 students in Top 500 ranks (NEET 2024), 183 government medical college admissions. Students see an average improvement of +285 marks. Star achievement: Sadhna Sirin scored 695/720 (100 percentile in Biology) on NEET 2023. In NEET 2024, we had 1,50,000+ students with 98% success rate.',
+      'Our track record: 98% NEET qualification rate, 10,000+ medical college admissions, 67+ AIIMS selections in NEET 2024 alone, 68 students in Top 500 ranks (NEET 2024), 183 government medical college admissions. Students see an average improvement of +285 marks. Star achievement: Sadhna Sirin scored 695/720 (100 percentile in Biology) on NEET 2023. In NEET 2024, we had 15,000+ students with 98% success rate.',
   },
   neetExamPattern: {
     question: 'What is the NEET exam pattern for 2026?',

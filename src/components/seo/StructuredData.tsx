@@ -414,7 +414,7 @@ export function FAQSchema() {
         name: 'What is the success rate of Cerebrum Biology Academy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy has a 98% success rate with 67+ AIIMS selections. Over 1,50,000+ students have been mentored successfully for NEET examinations since 2014.',
+          text: 'Cerebrum Biology Academy has a 98% success rate with 67+ AIIMS selections. Over 15,000+ students have been mentored successfully for NEET examinations since 2014.',
         },
       },
       {

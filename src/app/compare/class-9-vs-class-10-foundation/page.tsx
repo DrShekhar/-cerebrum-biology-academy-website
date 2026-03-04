@@ -760,7 +760,7 @@ export default function Class9VsClass10Page() {
             <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">
               <div className="flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 mr-2" />
-                <span>2,000+ Students</span>
+                <span>15,000+ Students</span>
               </div>
               <div className="flex items-center justify-center">
                 <CheckCircle className="w-4 h-4 mr-2" />

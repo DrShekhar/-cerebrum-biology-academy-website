@@ -25,7 +25,7 @@ const facultyVideos: FacultyVideo[] = [
     videoId: 'WqcWDy0K4lU', // Your provided video
     title: 'NEET Biology - Advanced Teaching Methodology',
     description:
-      'Watch Dr. Shekhar demonstrate the proven teaching techniques that have helped 1,50,000+ students secure medical seats with 98% success rate.',
+      'Watch Dr. Shekhar demonstrate the proven teaching techniques that have helped 15,000+ students secure medical seats with 98% success rate.',
     category: 'demo',
     subject: 'Biology',
     duration: 'Watch Preview',
@@ -105,13 +105,13 @@ export function FacultyVideoSection() {
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Watch Dr. Shekhar Singh in action - see the proven teaching methodology that has helped
-            1,50,000+ students secure medical seats with our industry-leading 98% success rate.
+            15,000+ students secure medical seats with our industry-leading 98% success rate.
           </p>
 
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {[
-              { icon: Users, label: '1,50,000+', sublabel: 'Students Mentored', color: 'text-blue-600' },
+              { icon: Users, label: '15,000+', sublabel: 'Students Mentored', color: 'text-blue-600' },
               { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-green-600' },
               {
                 icon: BookOpen,
@@ -200,7 +200,7 @@ export function FacultyVideoSection() {
               Ready to Experience Cerebrum's Teaching Excellence?
             </h3>
             <p className="text-xl mb-8 text-blue-100">
-              Join 1,50,000+ successful students and start your journey to medical college admission
+              Join 15,000+ successful students and start your journey to medical college admission
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

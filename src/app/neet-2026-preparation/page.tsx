@@ -420,7 +420,7 @@ export default function NEET2026PreparationPage() {
                     <div className="flex items-center">
                       <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-[#3d4d3d]" />
                       <span>
-                        <strong>1,50,000+</strong> enrolled
+                        <strong>15,000+</strong> enrolled
                       </span>
                     </div>
                     <div className="flex items-center">
@@ -593,7 +593,7 @@ export default function NEET2026PreparationPage() {
               Start Your NEET 2026 Journey Today
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 opacity-90">
-              Join 1,50,000+ students who trust Cerebrum with Cerebrum Biology Academy. Expert
+              Join 15,000+ students who trust Cerebrum with Cerebrum Biology Academy. Expert
               faculty, proven methodology, and personalized attention await you.
             </p>
 

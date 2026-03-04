@@ -358,7 +358,7 @@ export default function OnlineBiologyTutorNeetPage() {
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Crack NEET Biology?</h2>
             <p className="text-xl md:text-2xl mb-8 text-green-100">
-              Join 1,50,000+ successful students. Book your free online demo today!
+              Join 15,000+ successful students. Book your free online demo today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

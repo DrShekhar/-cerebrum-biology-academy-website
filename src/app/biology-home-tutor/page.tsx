@@ -83,7 +83,7 @@ const cerebrumAdvantages = [
     icon: Trophy,
     title: '98% Success Rate',
     description:
-      '1,50,000+ students selected in medical colleges. Proven methodology that produces results year after year.',
+      '15,000+ students selected in medical colleges. Proven methodology that produces results year after year.',
     highlight: false,
   },
   {

@@ -18,7 +18,7 @@ const teacherCredentials = [
   { icon: GraduationCap, title: 'AIIMS Delhi', desc: 'Medical education background' },
   { icon: Clock, title: '15+ Years', desc: 'Teaching experience' },
   { icon: Trophy, title: '67+', desc: 'AIIMS selections' },
-  { icon: Users, title: '1,50,000+', desc: 'Students taught' },
+  { icon: Users, title: '15,000+', desc: 'Students taught' },
 ]
 
 const teachingMethodology = [

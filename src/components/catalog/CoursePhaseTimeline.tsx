@@ -372,7 +372,7 @@ export function CoursePhaseTimeline({
               <div className="text-blue-100 text-sm">Complete All 4 Phases</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold">1,50,000+</div>
+              <div className="text-3xl font-bold">15,000+</div>
               <div className="text-blue-100 text-sm">Students Mentored</div>
             </div>
             <div className="space-y-2">

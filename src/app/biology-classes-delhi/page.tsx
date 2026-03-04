@@ -165,7 +165,7 @@ const faqs = [
 ]
 
 const stats = [
-  { value: '1,50,000+', label: 'Students Trained', icon: Users },
+  { value: '15,000+', label: 'Students Trained', icon: Users },
   { value: '98%', label: 'Success Rate', icon: Trophy },
   { value: '3', label: 'Centers in Delhi NCR', icon: Building },
   { value: '5.0/5', label: 'Student Rating', icon: Star },
@@ -370,7 +370,7 @@ export default function BiologyClassesDelhiPage() {
 
               <p className="mb-8 text-xl text-blue-100 md:text-2xl">
                 Join Delhi&apos;s top-rated biology coaching with AIIMS-trained faculty. NEET &
-                Board preparation with 98% success rate. 1,50,000+ students trust us!
+                Board preparation with 98% success rate. 15,000+ students trust us!
               </p>
 
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
@@ -588,7 +588,7 @@ export default function BiologyClassesDelhiPage() {
                   </h2>
                   <p className="mb-6 text-gray-600">
                     With over 15 years of teaching experience and an AIIMS Delhi background, Dr.
-                    Shekhar Singh has helped 1,50,000+ students achieve their medical dreams. His
+                    Shekhar Singh has helped 15,000+ students achieve their medical dreams. His
                     unique teaching methodology makes complex biology concepts simple and memorable.
                   </p>
                   <ul className="space-y-3">
@@ -598,7 +598,7 @@ export default function BiologyClassesDelhiPage() {
                     </li>
                     <li className="flex items-center gap-3">
                       <Trophy className="h-5 w-5 text-blue-600" />
-                      <span className="text-gray-700">1,50,000+ Students Mentored</span>
+                      <span className="text-gray-700">15,000+ Students Mentored</span>
                     </li>
                     <li className="flex items-center gap-3">
                       <Star className="h-5 w-5 text-blue-600" />
@@ -688,7 +688,7 @@ export default function BiologyClassesDelhiPage() {
               Start Your NEET Journey in Delhi Today!
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-              Join 1,50,000+ successful students. Book a free demo class at your nearest center.
+              Join 15,000+ successful students. Book a free demo class at your nearest center.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link

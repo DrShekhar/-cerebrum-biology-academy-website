@@ -96,7 +96,7 @@ const benefits = {
       icon: 'award' as const,
       title: 'Proven Results (98% Success)',
       description:
-        '1,50,000+ students coached with 98% NEET qualification rate and 67+ AIIMS selections.',
+        '15,000+ students coached with 98% NEET qualification rate and 67+ AIIMS selections.',
     },
   ],
 }
@@ -163,7 +163,7 @@ const faqs = [
   {
     question: 'Who teaches the Biology crash course?',
     answer:
-      'Dr. Shekhar C Singh, an AIIMS-trained biology expert with 15+ years of experience, personally teaches all crash course batches. He has coached 1,50,000+ students with 67+ AIIMS selections.',
+      'Dr. Shekhar C Singh, an AIIMS-trained biology expert with 15+ years of experience, personally teaches all crash course batches. He has coached 15,000+ students with 67+ AIIMS selections.',
   },
   {
     question: 'Is the crash course available online?',
@@ -201,7 +201,7 @@ const comparisonData = [
   { feature: 'Duration', board: '15 Days', neet: '30-45 Days' },
   { feature: 'Target Exam', board: 'CBSE Class 12 Board', neet: 'NEET 2026' },
   { feature: 'Daily Hours', board: '4 Hours', neet: '5-6 Hours' },
-  { feature: 'Practice Questions', board: '2,000+', neet: '5,000+' },
+  { feature: 'Practice Questions', board: '15,000+', neet: '5,000+' },
   { feature: 'Course Fee', board: 'Rs 15,000', neet: 'Rs 30,000' },
   { feature: 'Batch Size', board: '15-20 Students', neet: '15-20 Students' },
   { feature: 'Mock Tests', board: '5 Full-Length', neet: '15+ Full-Length' },
@@ -302,7 +302,7 @@ export default function CrashCoursePageContent() {
                     '15-day intensive program',
                     'Complete Class 12 NCERT coverage',
                     '4 hours daily live sessions',
-                    '2,000+ practice questions',
+                    '15,000+ practice questions',
                     '5 full-length mock tests',
                     'Board exam pattern focus',
                     'Daily doubt clearing',
@@ -520,7 +520,7 @@ export default function CrashCoursePageContent() {
             Start Your Crash Course Today
           </h2>
           <p className="mb-3 text-lg text-slate-300">
-            Join 1,50,000+ students who transformed their Biology scores with Cerebrum Academy.
+            Join 15,000+ students who transformed their Biology scores with Cerebrum Academy.
           </p>
           <p className="mb-8 text-sm font-medium text-yellow-400">Next batch: March 10, 2026</p>
 

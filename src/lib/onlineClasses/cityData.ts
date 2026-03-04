@@ -38,10 +38,10 @@ export const cities: CityData[] = [
       'Same AIIMS faculty at 60% lower cost',
       'Small batch sizes (max 25) vs 100+ in offline',
     ],
-    studentCount: '12,000+',
+    studentCount: '15,000+',
     metaTitle: 'Online Biology Classes in Delhi | NEET Preparation | Cerebrum Academy',
     metaDescription:
-      'Best online biology classes in Delhi for Class 11, 12 & NEET. AIIMS faculty, live classes, 98% success rate. Join 12,000+ Delhi students learning online.',
+      'Best online biology classes in Delhi for Class 11, 12 & NEET. AIIMS faculty, live classes, 98% success rate. Join 15,000+ Delhi students learning online.',
     heroSubtitle:
       "Delhi's smartest NEET aspirants are switching to online. Save time, money, and get better results.",
   },

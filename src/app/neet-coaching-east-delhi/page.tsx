@@ -490,7 +490,7 @@ export default function NEETCoachingEastDelhiPage() {
               Ready to Start Your NEET Journey?
             </h2>
             <p className="text-green-100 mb-8 max-w-2xl mx-auto">
-              Join 1,50,000+ successful students from East Delhi. Book your FREE demo class today!
+              Join 15,000+ successful students from East Delhi. Book your FREE demo class today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>

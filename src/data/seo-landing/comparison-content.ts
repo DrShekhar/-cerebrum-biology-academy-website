@@ -271,7 +271,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     },
     benefits: {
       title: 'What Makes Cerebrum Biology Academy Stand Out',
-      subtitle: "Here's why 1,50,000+ students chose us over big-name coaching institutes",
+      subtitle: "Here's why 15,000+ students chose us over big-name coaching institutes",
       items: [
         {
           icon: 'graduation',
@@ -314,7 +314,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     stats: [
       { value: '98%', label: 'Selection Rate' },
       { value: '330+', label: 'Avg NEET Biology Score' },
-      { value: '1,50,000+', label: 'Successful Students' },
+      { value: '15,000+', label: 'Successful Students' },
       { value: '50%', label: 'Lower Than Big Coaching' },
     ],
     testimonials: [
@@ -414,7 +414,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'Why Choose Cerebrum Academy | NEET Biology Coaching',
     metaDescription:
-      'Discover why 1,50,000+ students chose Cerebrum Biology Academy for NEET preparation. AIIMS faculty, 98% success rate, small batches, and affordable fees.',
+      'Discover why 15,000+ students chose Cerebrum Biology Academy for NEET preparation. AIIMS faculty, 98% success rate, small batches, and affordable fees.',
     keywords: [
       'why cerebrum',
       'cerebrum biology academy',
@@ -521,7 +521,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'Who is Dr. Shekhar?',
         answer:
-          'Dr. Shekhar is an AIIMS graduate with over 15 years of experience teaching NEET Biology. He has personally mentored 1,50,000+ students, many of whom are now doctors at premier medical colleges across India. His teaching philosophy focuses on concept-building rather than rote memorization.',
+          'Dr. Shekhar is an AIIMS graduate with over 15 years of experience teaching NEET Biology. He has personally mentored 15,000+ students, many of whom are now doctors at premier medical colleges across India. His teaching philosophy focuses on concept-building rather than rote memorization.',
       },
       {
         question: 'How is Cerebrum different from big coaching chains?',
@@ -567,7 +567,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     cta: {
       title: 'Experience the Cerebrum Difference',
       subtitle:
-        'Join the 1,50,000+ students who discovered what effective NEET coaching really looks like. Start with a free demo class.',
+        'Join the 15,000+ students who discovered what effective NEET coaching really looks like. Start with a free demo class.',
       primaryButton: {
         text: 'Book Free Demo',
         link: '/book-demo',
@@ -873,7 +873,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       { value: '98%', label: 'Qualification Rate' },
       { value: '330+', label: 'Avg Biology Score' },
       { value: '78%', label: 'Govt College Admission' },
-      { value: '1,50,000+', label: 'Students Trained' },
+      { value: '15,000+', label: 'Students Trained' },
     ],
     testimonials: [
       {
@@ -1159,7 +1159,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'Best Online Coaching for NEET Biology 2027 | Top Rated',
     metaDescription:
-      'Find the best online coaching for NEET biology with our detailed comparison. Expert faculty, small batches, 5.0★ rating. 1,50,000+ students selected.',
+      'Find the best online coaching for NEET biology with our detailed comparison. Expert faculty, small batches, 5.0★ rating. 15,000+ students selected.',
     keywords: [
       'best online coaching for neet biology',
       'best online neet coaching',
@@ -1174,7 +1174,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'Best Online Coaching for NEET Biology',
       subheadline:
-        'Find the right online coaching with our detailed comparison. Learn why 1,50,000+ students chose Cerebrum Academy for NEET Biology.',
+        'Find the right online coaching with our detailed comparison. Learn why 15,000+ students chose Cerebrum Academy for NEET Biology.',
       ctaText: 'Book Free Demo Class',
       ctaLink: '/book-demo',
       backgroundGradient: 'from-indigo-900 to-blue-800',
@@ -1198,7 +1198,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
           icon: 'chart',
           question: 'Not sure about success rates online?',
           solution:
-            '1,50,000+ students selected in NEET through our online coaching. See verified results and student testimonials.',
+            '15,000+ students selected in NEET through our online coaching. See verified results and student testimonials.',
         },
         {
           icon: 'clock',
@@ -1282,7 +1282,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'Which is the best online coaching for NEET biology?',
         answer:
-          'The best online coaching depends on your learning style, but key factors are: (1) Expert faculty with medical background, (2) Small batch sizes of 10-15 students, (3) Live interactive sessions, (4) Quick doubt resolution, (5) Comprehensive study material, and (6) Regular tests. Cerebrum Biology Academy scores high on all these with 5.0★ rating from 1,50,000+ students.',
+          'The best online coaching depends on your learning style, but key factors are: (1) Expert faculty with medical background, (2) Small batch sizes of 10-15 students, (3) Live interactive sessions, (4) Quick doubt resolution, (5) Comprehensive study material, and (6) Regular tests. Cerebrum Biology Academy scores high on all these with 5.0★ rating from 15,000+ students.',
       },
       {
         question: 'How do I choose the right online NEET coaching?',

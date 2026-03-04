@@ -58,7 +58,7 @@ export function SeminarSpeaker() {
                     <Users className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-slate-900">1,50,000+</p>
+                    <p className="text-lg font-bold text-slate-900">15,000+</p>
                     <p className="text-xs text-slate-500">Students Mentored</p>
                   </div>
                 </div>

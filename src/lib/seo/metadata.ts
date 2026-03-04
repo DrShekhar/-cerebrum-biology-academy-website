@@ -247,7 +247,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   testimonials: {
     title: 'NEET Results 2026 | 98% Success Rate, 680+ Selections | Cerebrum Academy Delhi NCR',
     description:
-      'Read real NEET success stories at Cerebrum Academy — 67+ AIIMS selections, 98% success rate, 1,50,000+ students trained. Watch video testimonials today!',
+      'Read real NEET success stories at Cerebrum Academy — 67+ AIIMS selections, 98% success rate, 15,000+ students trained. Watch video testimonials today!',
     keywords: [
       'NEET success stories Delhi',
       'NEET toppers Delhi NCR',

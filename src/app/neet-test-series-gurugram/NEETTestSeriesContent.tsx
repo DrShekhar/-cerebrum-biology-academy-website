@@ -25,7 +25,7 @@ const analysisFeatures = [
   { title: 'Chapter Analysis', description: 'Identify weak chapters needing more practice' },
   { title: 'Time Management', description: 'Track time spent per question and section' },
   { title: 'Topper Comparison', description: 'Compare your answers with top scorers' },
-  { title: 'Rank Prediction', description: 'AIR prediction based on 1,50,000+ students' },
+  { title: 'Rank Prediction', description: 'AIR prediction based on 15,000+ students' },
   { title: 'Improvement Graph', description: 'Track your progress over time' },
 ]
 
@@ -104,7 +104,7 @@ export default function NEETTestSeriesContent({ faqs }: { faqs: FAQ[] }) {
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Comprehensive test series with detailed analysis, rank prediction, and personalized improvement suggestions.
-              Join 1,50,000+ students preparing with us.
+              Join 15,000+ students preparing with us.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -283,7 +283,7 @@ export default function NEETTestSeriesContent({ faqs }: { faqs: FAQ[] }) {
                   <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Latest NTA pattern questions</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Previous year questions included</li>
                   <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Detailed video solutions</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Compare with 1,50,000+ students</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-500" />Compare with 15,000+ students</li>
                 </ul>
               </div>
             </div>

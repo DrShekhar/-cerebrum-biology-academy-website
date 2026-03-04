@@ -115,7 +115,7 @@ export function ExitIntentPopup({
     'Complete Cerebrum NEET Biology Course Outline',
     'Chapter-wise Study Timeline by Cerebrum Experts',
     'Previous Year Question Analysis & Solutions',
-    'Success Stories from 1,50,000+ Cerebrum Students',
+    'Success Stories from 15,000+ Cerebrum Students',
     'Cerebrum AIIMS Faculty Profiles & Credentials',
     'Fee Structure & Cerebrum Scholarship Details',
     'Exclusive Cerebrum Study Materials Preview',
@@ -355,7 +355,7 @@ export function ExitIntentPopup({
                         </div>
                         <div className="flex items-center">
                           <Users className="w-4 h-4 mr-1 text-[#4a5d4a]" />
-                          1,50,000+ Students
+                          15,000+ Students
                         </div>
                       </div>
                     </div>
@@ -413,7 +413,7 @@ export function ExitIntentPopup({
                     </div>
                     <div className="flex items-center">
                       <Users className="w-4 h-4 mr-2" />
-                      <span>1,50,000+ Students</span>
+                      <span>15,000+ Students</span>
                     </div>
                     <div className="flex items-center">
                       <BookOpen className="w-4 h-4 mr-2" />

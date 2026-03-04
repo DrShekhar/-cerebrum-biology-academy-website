@@ -148,7 +148,7 @@ export default function OnlineNeetCoachingIndiaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Join 1,50,000+ students from Rajasthan, UP, Maharashtra, Karnataka, Tamil Nadu,
+              Join 15,000+ students from Rajasthan, UP, Maharashtra, Karnataka, Tamil Nadu,
               Gujarat, Kerala and all Indian states. Quality coaching from home - no need to
               relocate to Kota!
             </p>
@@ -187,7 +187,7 @@ export default function OnlineNeetCoachingIndiaPage() {
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
-                <div className="text-2xl font-bold">1,50,000+</div>
+                <div className="text-2xl font-bold">15,000+</div>
                 <div className="text-sm opacity-80">Students Pan-India</div>
               </div>
 
@@ -342,7 +342,7 @@ export default function OnlineNeetCoachingIndiaPage() {
               Join India's Best Online NEET Coaching
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              98% success rate, 1,50,000+ students, 25+ states. Start your NEET journey from home
+              98% success rate, 15,000+ students, 25+ states. Start your NEET journey from home
               today!
             </p>
 

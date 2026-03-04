@@ -178,7 +178,7 @@ export function WhatsAppQRModalContent({
         <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
           <span className="flex items-center gap-1">
             <Users className="w-4 h-4" />
-            1,50,000+ students coached
+            15,000+ students coached
           </span>
           <span className="flex items-center gap-1">
             <Clock className="w-4 h-4" />

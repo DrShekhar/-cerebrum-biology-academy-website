@@ -59,7 +59,7 @@ export const SEMINAR_CONFIG: SeminarConfig = {
   speakerName: 'Dr. Shekhar',
   speakerTitle: 'Founder, Cerebrum Biology Academy',
   speakerBio:
-    '15+ years of teaching experience with 1,50,000+ students mentored. Specializes in Biology and NEET preparation strategies.',
+    '15+ years of teaching experience with 15,000+ students mentored. Specializes in Biology and NEET preparation strategies.',
   speakerImage: '/images/dr-shekhar.jpg',
 }
 

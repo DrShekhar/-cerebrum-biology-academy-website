@@ -52,7 +52,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
       details: {
         duration: '2 Years',
         features: ['Complete NCERT', 'Advanced Problems', 'Regular Tests', 'Personal Mentoring'],
-        highlights: ['1,50,000+ Students', '94.8% Success Rate', 'Most Popular'],
+        highlights: ['15,000+ Students', '94.8% Success Rate', 'Most Popular'],
         description:
           'Complete 2-year NEET preparation program with comprehensive coverage of all topics and regular assessments.',
       },

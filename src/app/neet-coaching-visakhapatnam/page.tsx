@@ -14,7 +14,7 @@ const ogImageParams = new URLSearchParams({
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Visakhapatnam | Online Biology Classes',
   description:
-    'Premium online NEET coaching in Visakhapatnam (Vizag) for Andhra families. 12,000+ aspirants, expert biology classes, near Andhra Medical College. 98% success rate. Book free demo!',
+    'Premium online NEET coaching in Visakhapatnam (Vizag) for Andhra families. 15,000+ aspirants, expert biology classes, near Andhra Medical College. 98% success rate. Book free demo!',
   keywords: [
     'NEET coaching Visakhapatnam',
     'NEET classes Vizag',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best NEET Coaching in Visakhapatnam | Online Biology Classes',
     description:
-      'Premium online NEET coaching in Vizag. 12,000+ aspirants, expert faculty, near medical colleges. 98% success rate. Book free demo!',
+      'Premium online NEET coaching in Vizag. 15,000+ aspirants, expert faculty, near medical colleges. 98% success rate. Book free demo!',
     url: `${BASE_URL}/neet-coaching-visakhapatnam`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -61,7 +61,7 @@ export default function NEETCoachingVisakhapatnamPage() {
         locality="Visakhapatnam"
         slug="neet-coaching-visakhapatnam"
         pageTitle="Best NEET Coaching in Visakhapatnam"
-        pageDescription="Premium online NEET coaching in Vizag. 12,000+ aspirants, expert faculty, near Andhra Medical College & GITAM. 98% success rate."
+        pageDescription="Premium online NEET coaching in Vizag. 15,000+ aspirants, expert faculty, near Andhra Medical College & GITAM. 98% success rate."
         pageType="coaching" coordinates={{ lat: "17.6868", lng: "83.2185" }} />
       <PageContent />
     </>

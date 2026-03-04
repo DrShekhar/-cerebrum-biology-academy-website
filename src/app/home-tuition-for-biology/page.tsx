@@ -367,7 +367,7 @@ export default function HomeTuitionBiologyPage() {
               Upgrade Your Home Tuition Experience Today
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Book a free demo class and see why 1,50,000+ students chose us over local home tutors!
+              Book a free demo class and see why 15,000+ students chose us over local home tutors!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

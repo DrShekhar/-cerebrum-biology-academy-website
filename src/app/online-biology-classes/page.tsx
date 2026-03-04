@@ -196,7 +196,7 @@ export default function OnlineBiologyClassesPage() {
               <p className="mb-8 text-xl text-white/80">
                 Join India&apos;s best online biology classes with AIIMS-trained faculty. Live
                 interactive sessions, 300+ recorded lectures, and comprehensive NEET preparation.
-                1,50,000+ students across India and abroad!
+                15,000+ students across India and abroad!
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -253,7 +253,7 @@ export default function OnlineBiologyClassesPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { icon: Users, value: '1,50,000+', label: 'Online Students' },
+              { icon: Users, value: '15,000+', label: 'Online Students' },
               { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Video, value: '500+', label: 'Video Hours' },
               { icon: Star, value: '5.0/5', label: 'Student Rating' },
@@ -513,7 +513,7 @@ export default function OnlineBiologyClassesPage() {
           <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Start Learning Biology Online Today</h2>
             <p className="mb-8 text-xl text-white/80">
-              Join 1,50,000+ students learning biology online from anywhere in the world!
+              Join 15,000+ students learning biology online from anywhere in the world!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
