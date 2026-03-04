@@ -199,7 +199,7 @@ export default function LocationsPage() {
               {
                 name: 'South Extension (Flagship)',
                 area: 'South Extension Part 2',
-                metro: 'Lajpat Nagar Metro',
+                metro: 'South Extension Metro (100m)',
                 href: '/locations/south-extension',
                 color: 'green',
               },

@@ -74,7 +74,7 @@ export default function AboutCerebrumPage() {
       name: 'South Extension',
       address: 'A-68, South Extension Part-1, New Delhi 110049',
       phone: '011-4141-0102',
-      metro: 'Lajpat Nagar Metro (2 km)',
+      metro: 'South Extension Metro (100m)',
       mapUrl:
         'https://maps.app.goo.gl/cerebrumbiologyacademyse',
     },

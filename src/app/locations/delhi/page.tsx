@@ -79,7 +79,7 @@ export default function DelhiLocationPage() {
     {
       name: 'South Extension Center (Flagship)',
       address: 'D 35, South Extension Part 2',
-      metro: 'Lajpat Nagar Metro (Violet Line)',
+      metro: 'South Extension Metro (Violet Line) — 100m',
       bestFor: 'Central & South Delhi students',
       link: '/locations/south-extension',
       color: 'yellow',

@@ -832,7 +832,7 @@ export default function NEETBiologyMCQPage() {
                 Home
               </Link>
               <ChevronRight className="w-4 h-4 text-stone-400" />
-              <span className="text-sage-600 font-medium">NEET Biology MCQ</span>
+              <span className="text-sage-600 font-medium">Biology MCQ Practice</span>
             </div>
           </div>
         </nav>
@@ -842,14 +842,14 @@ export default function NEETBiologyMCQPage() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-sage-100 text-sage-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <span className="text-lg">🧬</span>
-              Unlimited Free Practice
+              19,000+ Questions | Free Practice
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-ink mb-3 tracking-tight">
-              NEET Biology MCQ Practice 2026
+              Biology MCQ Practice — NEET, NCERT & Olympiad
             </h1>
             <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              Free unlimited practice with PYQs, gamification, and topic-wise questions. Track your
-              progress and compete on leaderboards!
+              19,000+ free MCQs for NEET, Class 11-12 Boards, and Olympiad. PYQs, gamification, and
+              topic-wise practice.
             </p>
           </div>
 
@@ -1260,10 +1260,10 @@ export default function NEETBiologyMCQPage() {
           {/* CTA Section - Botanical Scholar */}
           <div className="mt-16 bg-gradient-to-r from-sage-600 to-sage-800 rounded-2xl p-8 text-white text-center shadow-xl shadow-sage-900/20">
             <h2 className="text-2xl font-bold mb-4 tracking-tight">
-              Want Expert Guidance for NEET Biology?
+              Want Expert Guidance for Biology?
             </h2>
             <p className="text-sage-100 mb-6 max-w-2xl mx-auto">
-              Join Cerebrum Biology Academy for comprehensive NEET Biology preparation with
+              Join Cerebrum Biology Academy for NEET, board exams, and Olympiad preparation with
               experienced AIIMS faculty and personalized attention.
             </p>
             <Link
@@ -1278,6 +1278,18 @@ export default function NEETBiologyMCQPage() {
           <div className="mt-12 text-center text-sm text-stone-600">
             <p>
               Related:{' '}
+              <Link href="/class-11-biology-mcq" className="text-sage-600 hover:underline">
+                Class 11 Biology MCQ
+              </Link>{' '}
+              |{' '}
+              <Link href="/class-12-biology-mcq" className="text-sage-600 hover:underline">
+                Class 12 Biology MCQ
+              </Link>{' '}
+              |{' '}
+              <Link href="/biology-olympiad-mcq" className="text-sage-600 hover:underline">
+                Biology Olympiad MCQ
+              </Link>{' '}
+              |{' '}
               <Link href="/neet-biology-syllabus-2026" className="text-sage-600 hover:underline">
                 NEET Biology Syllabus 2026
               </Link>{' '}

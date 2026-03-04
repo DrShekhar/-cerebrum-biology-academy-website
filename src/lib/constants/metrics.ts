@@ -6,7 +6,7 @@
 
 export const CEREBRUM_METRICS = {
   // Founding
-  foundingYear: 2015,
+  foundingYear: 2014,
 
   // Success metrics
   successRate: 98, // Percentage of students qualifying NEET
@@ -51,11 +51,11 @@ export const CEREBRUM_METRICS = {
   email: 'info@cerebrumbiologyacademy.com',
 
   // Location
-  mainAddress: 'Kalu Sarai, Near IIT Delhi, South Delhi',
-  pincode: '110016',
+  mainAddress: 'D 35, South Extension Part 2, New Delhi',
+  pincode: '110049',
   coordinates: {
-    latitude: 28.5459,
-    longitude: 77.1926,
+    latitude: 28.5678,
+    longitude: 77.2234,
   },
 } as const
 

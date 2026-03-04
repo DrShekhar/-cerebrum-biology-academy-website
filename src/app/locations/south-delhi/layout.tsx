@@ -251,7 +251,7 @@ export default function SouthDelhiLocationLayout({ children }: { children: React
                 name: 'How can South Delhi students reach Cerebrum Academy by metro?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Our center is very close to Lajpat Nagar Metro Station on the Pink and Yellow Lines. South Delhi students can easily take metro directly to Lajpat Nagar and reach our South Extension center by a short walk or auto ride. It is the most convenient metro-connected location in South Delhi.',
+                  text: 'Our South Extension center is just 100m from South Extension Metro Station on the Violet Line. South Delhi students can easily take the metro directly to South Extension station and walk to our center in under a minute. It is the most convenient metro-connected location in South Delhi.',
                 },
               },
               {

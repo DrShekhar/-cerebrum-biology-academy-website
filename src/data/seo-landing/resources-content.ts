@@ -363,7 +363,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Biology MCQ Practice | Free Online Question Bank',
     metaDescription:
-      'Practice 5000+ NEET Biology MCQs online free. NCERT-based questions with instant feedback, detailed solutions & performance tracking.',
+      'Practice 19,000+ Biology MCQs online free. NEET, NCERT Class 11-12 & Olympiad questions with instant feedback, detailed solutions & performance tracking.',
     keywords: [
       'neet biology mcq',
       'neet biology mcq practice',
@@ -374,10 +374,10 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'NEET Biology MCQ Practice',
       subheadline:
-        'Practice 5000+ MCQs designed to match NEET difficulty level. Get instant feedback and track your progress.',
+        'Practice 19,000+ MCQs for NEET, Class 11-12 Boards, and Olympiad. Get instant feedback and track your progress.',
       highlightedText: 'Free Online',
       ctaText: 'Start Practice',
-      ctaLink: '/tools/neet-mcq',
+      ctaLink: '/neet-biology-mcq',
     },
     painPoints: {
       title: 'Why MCQ Practice is Crucial for NEET?',
@@ -426,7 +426,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     stats: [
-      { value: '5000+', label: 'MCQs', icon: '❓' },
+      { value: '19,000+', label: 'MCQs', icon: '❓' },
       { value: '38', label: 'Chapters', icon: '📚' },
       { value: '3', label: 'Difficulty Levels', icon: '📊' },
       { value: '100%', label: 'Free Access', icon: '🆓' },
@@ -503,6 +503,9 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { title: 'NEET Mock Test Free', link: '/neet-mock-test-free' },
       { title: 'NEET Biology PYQ', link: '/neet-biology-pyq-chapter-wise' },
       { title: 'NEET Important Questions', link: '/neet-biology-important-questions' },
+      { title: 'Class 11 Biology MCQ', link: '/class-11-biology-mcq' },
+      { title: 'Class 12 Biology MCQ', link: '/class-12-biology-mcq' },
+      { title: 'Biology Olympiad MCQ', link: '/biology-olympiad-mcq' },
     ],
     schema: {
       '@type': 'Course',

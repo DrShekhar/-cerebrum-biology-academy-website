@@ -71,7 +71,7 @@ export default function SouthDelhiLocationPage() {
   const nearestCenter = {
     name: 'South Extension Center (Flagship)',
     address: 'D 35, South Extension Part 2, New Delhi 110049',
-    metro: 'Lajpat Nagar Metro (Violet Line) - 5 min walk',
+    metro: 'South Extension Metro (Violet Line) — 100m',
     features: [
       'Flagship center - Dr. Shekhar personally teaches',
       'Largest facility with best infrastructure',
@@ -84,11 +84,11 @@ export default function SouthDelhiLocationPage() {
   const faqs = [
     {
       q: 'Where should South Delhi students go for NEET Biology coaching?',
-      a: 'South Delhi students should join our flagship South Extension center, located at D 35, South Extension Part 2. It is just 5 minutes from Lajpat Nagar Metro Station.',
+      a: 'South Delhi students should join our flagship South Extension center, located at D 35, South Extension Part 2. It is just 100m from South Extension Metro Station (Violet Line).',
     },
     {
       q: 'Is South Extension center easily accessible from Greater Kailash?',
-      a: 'Yes! South Extension is very close to Greater Kailash. You can reach by auto in 10 minutes or take the metro to Lajpat Nagar station.',
+      a: 'Yes! South Extension is very close to Greater Kailash. You can reach by auto in 10 minutes or take the metro to South Extension station.',
     },
     {
       q: 'Why is South Extension called the Flagship center?',
@@ -232,7 +232,7 @@ export default function SouthDelhiLocationPage() {
                 {
                   icon: Train,
                   title: 'Easy Access',
-                  desc: '5 min from Lajpat Nagar Metro',
+                  desc: '100m from South Extension Metro',
                 },
               ].map((item, idx) => (
                 <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"

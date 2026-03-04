@@ -64,7 +64,7 @@ export default function GreaterKailashLocationPage() {
   const nearestCenter = {
     name: 'South Extension Center (Flagship)',
     address: 'D 35, South Extension Part 2, New Delhi 110049',
-    metro: 'Lajpat Nagar Metro (Violet Line) - 5 min walk',
+    metro: 'South Extension Metro (Violet Line) — 100m',
     distance: 'Just 5 min from GK via Outer Ring Road',
     features: [
       'Flagship center - Dr. Shekhar personally teaches',
@@ -82,7 +82,7 @@ export default function GreaterKailashLocationPage() {
     },
     {
       q: 'Is there parking available?',
-      a: 'Yes, our South Extension center has parking facilities nearby. Students can also easily reach via Lajpat Nagar Metro station.',
+      a: 'Yes, our South Extension center has parking facilities nearby. Students can also easily reach via South Extension Metro station.',
     },
     {
       q: 'Do many GK students study at Cerebrum?',
@@ -201,7 +201,7 @@ export default function GreaterKailashLocationPage() {
                 { icon: MapPin, title: 'Closest Center', desc: 'Just 5 min from GK' },
                 { icon: Users, title: 'Dr. Shekhar Classes', desc: 'Learn from the founder' },
                 { icon: Trophy, title: '98% Success', desc: '60% AIIMS selections' },
-                { icon: Train, title: 'Easy Access', desc: 'Near Lajpat Nagar Metro' },
+                { icon: Train, title: 'Easy Access', desc: '100m from South Extension Metro' },
               ].map((item, idx) => (
                 <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >

@@ -148,10 +148,10 @@ export const navigationConfig: NavigationSection[] = [
       },
       {
         id: 'mcq-practice',
-        title: 'NEET Biology MCQ',
+        title: 'Biology MCQ Practice',
         href: '/neet-biology-mcq',
-        description: 'Practice MCQs topic-wise with explanations',
-        keywords: ['mcq', 'practice questions', 'biology mcq', 'neet questions'],
+        description: '19,000+ MCQs for NEET, Class 11-12 & Olympiad',
+        keywords: ['mcq', 'practice questions', 'biology mcq', 'neet questions', 'olympiad mcq', 'class 11 mcq', 'class 12 mcq'],
         isNew: true,
       },
       {
@@ -476,6 +476,14 @@ export const navigationConfig: NavigationSection[] = [
         description: 'Complete guide to Biology Olympiad competitions worldwide',
         keywords: ['olympiad prep', 'biology olympiad', 'competition preparation'],
       },
+      {
+        id: 'olympiad-mcq-practice',
+        title: 'Olympiad MCQ Practice',
+        href: '/biology-olympiad-mcq',
+        description: '5,900+ Olympiad MCQs based on Campbell Biology',
+        keywords: ['olympiad mcq', 'campbell mcq', 'biology olympiad practice', 'nseb mcq', 'usabo mcq'],
+        isNew: true,
+      },
     ],
   },
   {
@@ -487,7 +495,7 @@ export const navigationConfig: NavigationSection[] = [
         id: 'south-extension',
         title: 'South Extension (Flagship)',
         href: '/locations/south-extension',
-        description: 'Flagship center near Lajpat Nagar Metro, South Delhi',
+        description: 'Flagship center near South Extension Metro, South Delhi',
         keywords: ['south extension', 'south delhi', 'flagship', 'lajpat nagar'],
         isPopular: true,
       },
@@ -918,7 +926,7 @@ export const searchableContent = [
     id: 'center-south-extension',
     title: 'South Extension Center (Flagship)',
     href: '/locations/south-extension',
-    description: 'Flagship NEET Biology coaching center in South Extension, near Lajpat Nagar Metro',
+    description: 'Flagship NEET Biology coaching center in South Extension, near South Extension Metro',
     category: 'Our Centers',
     keywords: ['south extension', 'south delhi', 'flagship', 'lajpat nagar', 'center', 'location'],
     isPopular: true,
@@ -952,12 +960,12 @@ export const searchableContent = [
 export const socialLinks = [
   {
     platform: 'Instagram',
-    href: 'https://instagram.com/cerebrumbiologyacademy',
+    href: 'https://www.instagram.com/cerebrumbiologyacademy/',
     icon: 'Instagram',
   },
   {
     platform: 'YouTube',
-    href: 'https://www.youtube.com/@cerebrumbiologyacademy',
+    href: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
     icon: 'YouTube',
   },
   {
@@ -967,12 +975,12 @@ export const socialLinks = [
   },
   {
     platform: 'Facebook',
-    href: 'https://facebook.com/cerebrumbiologyacademy',
+    href: 'https://www.facebook.com/people/Cerebrum-Biology-Academy/100063640374134/',
     icon: 'Facebook',
   },
   {
     platform: 'Twitter',
-    href: 'https://twitter.com/cerebrumbiology',
+    href: 'https://twitter.com/shekharsingh',
     icon: 'Twitter',
   },
 ]

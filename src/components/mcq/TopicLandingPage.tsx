@@ -12,7 +12,7 @@ interface TopicLandingPageProps {
   description: string
   questionCount: number
   chapters: string[]
-  neetWeightage: string
+  neetWeightage?: string
   difficulty: 'Easy' | 'Medium' | 'Hard'
   importantSubtopics: string[]
   sampleQuestions?: { question: string; answer: string }[]
@@ -76,7 +76,7 @@ export function TopicLandingPage({
             </Link>
             <ChevronRight className="w-4 h-4 text-stone-400" />
             <Link href="/neet-biology-mcq" className="hover:text-sage-600 transition-colors">
-              NEET Biology MCQ
+              Biology MCQ Practice
             </Link>
             <ChevronRight className="w-4 h-4 text-stone-400" />
             <span className="text-sage-600 font-medium">{topic}</span>
@@ -124,10 +124,12 @@ export function TopicLandingPage({
             <div className="text-2xl font-bold text-sage-600">{questionCount}+</div>
             <div className="text-sm text-stone-600">Questions</div>
           </div>
-          <div className="bg-white rounded-xl p-4 shadow-sm border border-stone-200/50 text-center">
-            <div className="text-2xl font-bold text-yellow-600">{neetWeightage}</div>
-            <div className="text-sm text-stone-600">NEET Weightage</div>
-          </div>
+          {neetWeightage && (
+            <div className="bg-white rounded-xl p-4 shadow-sm border border-stone-200/50 text-center">
+              <div className="text-2xl font-bold text-yellow-600">{neetWeightage}</div>
+              <div className="text-sm text-stone-600">NEET Weightage</div>
+            </div>
+          )}
           <div className="bg-white rounded-xl p-4 shadow-sm border border-stone-200/50 text-center">
             <span
               className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${difficultyColors[difficulty]}`}
@@ -175,7 +177,7 @@ export function TopicLandingPage({
         <section className="bg-white rounded-xl p-6 shadow-sm border border-stone-200/50 mb-8">
           <h2 className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
             <Target className="w-5 h-5 text-yellow-600" />
-            Important Topics for NEET
+            Important Subtopics
           </h2>
           <div className="flex flex-wrap gap-2">
             {importantSubtopics.map((subtopic, index) => (
@@ -208,12 +210,12 @@ export function TopicLandingPage({
 
         {/* SEO Content */}
         <section className="prose prose-stone max-w-none mb-10">
-          <h2>Why Practice {topic} MCQs for NEET?</h2>
+          <h2>Why Practice {topic} MCQs?</h2>
           <p>
-            {topic} is one of the most important topics for NEET Biology, with a weightage of{' '}
-            {neetWeightage}. Mastering this topic through regular MCQ practice can significantly
-            boost your NEET score. Our free {topic} MCQ practice includes questions from NCERT
-            textbooks and previous year NEET papers.
+            {topic} is one of the most important topics in Biology. Mastering this topic through
+            regular MCQ practice can significantly boost your exam scores. Our free {topic} MCQ
+            practice includes questions from NCERT textbooks, previous year papers, and competitive
+            exam question banks.
           </p>
 
           <h3>How to Score Well in {topic}</h3>

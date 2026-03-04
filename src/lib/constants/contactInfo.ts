@@ -74,7 +74,7 @@ export const CONTACT_INFO = {
       mapUrl: 'https://maps.google.com/maps?q=South+Extension+Part+2+Delhi',
       googleBusinessUrl: 'https://g.page/cerebrum-biology-academy',
       nearbyLandmarks: [
-        'Near Lajpat Nagar Metro Station (Violet Line)',
+        'South Extension Metro Station (Violet Line) — 100m',
         'Near AIIMS Delhi',
         'South Extension Market',
       ],
@@ -317,11 +317,11 @@ export const CONTACT_INFO = {
 
   // Social media
   social: {
-    instagram: 'https://instagram.com/cerebrumbiologyacademy',
-    youtube: 'https://youtube.com/@cerebrumbiologyacademy',
+    instagram: 'https://www.instagram.com/cerebrumbiologyacademy/',
+    youtube: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',
     youtubePersonal: 'https://www.youtube.com/@drshekharcsingh',
-    facebook: 'https://facebook.com/cerebrumbiologyacademy',
-    twitter: 'https://twitter.com/cerebrumbiology',
+    facebook: 'https://www.facebook.com/people/Cerebrum-Biology-Academy/100063640374134/',
+    twitter: 'https://twitter.com/shekharsingh',
   },
 } as const
 

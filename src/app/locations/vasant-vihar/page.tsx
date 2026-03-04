@@ -65,7 +65,7 @@ export default function VasantViharLocationPage() {
   const nearestCenter = {
     name: 'South Extension Center (Flagship)',
     address: 'D 35, South Extension Part 2, New Delhi 110049',
-    metro: 'Lajpat Nagar Metro (Violet Line) - 5 min walk',
+    metro: 'South Extension Metro (Violet Line) — 100m',
     distance: '10-15 min by car from Vasant Vihar',
     features: [
       'Flagship center - Dr. Shekhar personally teaches',

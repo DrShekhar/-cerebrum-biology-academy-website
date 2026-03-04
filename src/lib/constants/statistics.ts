@@ -19,7 +19,7 @@ export const STATISTICS = {
   // Review/rating statistics
   REVIEWS_COUNT: '2,847',
   REVIEWS_COUNT_NUMBER: 2847,
-  AVERAGE_RATING: 4.9,
+  AVERAGE_RATING: 5.0,
   MAX_RATING: 5,
 
   // Success metrics

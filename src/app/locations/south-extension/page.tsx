@@ -85,7 +85,7 @@ export default function SouthExtensionLocationPage() {
   const faqs = [
     {
       q: 'Where is Cerebrum Biology Academy South Extension center located?',
-      a: `Our flagship center is located at ${center.streetAddress}, ${center.addressLocality}. We are near Lajpat Nagar Metro Station on the Violet Line.`,
+      a: `Our flagship center is located at ${center.streetAddress}, ${center.addressLocality}. South Extension Metro Station (Violet Line) is just 100 meters away.`,
     },
     {
       q: 'Is South Extension your main center?',
@@ -97,7 +97,7 @@ export default function SouthExtensionLocationPage() {
     },
     {
       q: 'How to reach South Extension center by Metro?',
-      a: 'Take the Violet Line to Lajpat Nagar Metro Station. Our center is a 5-minute walk from the station. You can also reach via INA Metro (Yellow Line).',
+      a: 'Take the Violet Line to South Extension Metro Station — our center is just 100 meters from the exit. You can also reach via INA Metro (Yellow Line).',
     },
     {
       q: 'What are the class timings at South Extension?',
@@ -142,7 +142,7 @@ export default function SouthExtensionLocationPage() {
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
                   <Train className="w-4 h-4 text-yellow-400" />
-                  Lajpat Nagar Metro (Violet Line)
+                  South Extension Metro (Violet Line) — 100m
                 </div>
               </div>
             </div>
@@ -270,7 +270,7 @@ export default function SouthExtensionLocationPage() {
                       <div>
                         <h4 className="font-semibold">By Metro</h4>
                         <p className="text-gray-600 text-sm">
-                          Lajpat Nagar Metro (Violet Line) - 5 min walk
+                          South Extension Metro (Violet Line) — 100m walk
                           <br />
                           INA Metro (Yellow Line) - 10 min by auto
                         </p>

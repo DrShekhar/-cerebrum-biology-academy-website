@@ -7,7 +7,7 @@ function SouthExtensionServiceSchema() {
     '@id': 'https://cerebrumbiologyacademy.com/locations/south-extension',
     name: 'Cerebrum Biology Academy - South Extension (Flagship)',
     description:
-      'Flagship NEET Biology coaching center in South Extension, Delhi. AIIMS faculty, small batches, near Lajpat Nagar Metro. Dr. Shekhar personally conducts classes.',
+      'Flagship NEET Biology coaching center in South Extension, Delhi. AIIMS faculty, small batches, 100m from South Extension Metro. Dr. Shekhar personally conducts classes.',
     image: 'https://cerebrumbiologyacademy.com/images/south-extension-center.jpg',
     telephone: '+91-88264-44334',
     address: {
@@ -90,7 +90,7 @@ function SouthExtensionServiceSchema() {
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching South Extension Delhi | Flagship Center',
   description:
-    'Cerebrum Biology Academy flagship center in South Extension Part 2, Delhi. AIIMS faculty led by Dr. Shekhar. Near Lajpat Nagar Metro. Small batches, 98% success rate. Book free demo!',
+    'Cerebrum Biology Academy flagship center in South Extension Part 2, Delhi. AIIMS faculty led by Dr. Shekhar. 100m from South Extension Metro. Small batches, 98% success rate. Book free demo!',
   keywords: [
     'NEET coaching South Extension',
     'NEET coaching Lajpat Nagar',
@@ -100,7 +100,7 @@ export const metadata: Metadata = {
     'Best Biology teacher South Delhi',
     'NEET coaching Defence Colony',
     'Biology tuition Greater Kailash',
-    'NEET classes near Lajpat Nagar Metro',
+    'NEET classes near South Extension Metro',
   ],
   openGraph: {
     title: 'NEET Biology Coaching South Extension Delhi | Flagship Center',
@@ -113,7 +113,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching South Extension Delhi | Flagship Center',
-    description: 'Flagship NEET Biology coaching center in South Extension, Delhi. AIIMS faculty, small batches, near Lajpat Nagar Metro.',
+    description: 'Flagship NEET Biology coaching center in South Extension, Delhi. AIIMS faculty, small batches, 100m from South Extension Metro.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/south-extension',
@@ -283,7 +283,7 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
                 name: 'What is the metro and transport access to Cerebrum Academy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Cerebrum Academy is directly near Lajpat Nagar Metro Station (Pink and Yellow Lines), making it extremely accessible. South Extension students can take metro directly to our center. The location is also accessible via buses and personal vehicles with ample parking.',
+                  text: 'Cerebrum Academy is just 100 meters from South Extension Metro Station (Violet Line), making it extremely accessible. South Extension students can take metro directly to our center. The location is also accessible via buses and personal vehicles with ample parking.',
                 },
               },
               {
