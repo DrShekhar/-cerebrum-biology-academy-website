@@ -38,7 +38,7 @@ const topCoachings = [
     batchSize: '15-20',
     fee: '₹45,000 - 65,000/year',
     faculty: 'AIIMS-trained (Dr. Shekhar Singh)',
-    rating: 4.9,
+    rating: 5.0,
     pros: ['Highest success rate', 'Small batches', 'Personal attention', 'Biology expertise'],
     cons: ['Biology only (not PCB)', 'Limited seats'],
     bestFor: 'Serious NEET aspirants wanting focused Biology preparation',

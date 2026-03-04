@@ -218,7 +218,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               <div className="flex flex-wrap items-center gap-6 mb-8">
                 <div className="flex items-center bg-white/10 px-4 py-2 rounded-full">
                   <Star className="w-5 h-5 text-yellow-400 mr-2" />
-                  <span className="font-medium">4.9/5 Rating</span>
+                  <span className="font-medium">5.0/5 Rating</span>
                 </div>
                 <div className="flex items-center bg-white/10 px-4 py-2 rounded-full">
                   <Users className="w-5 h-5 text-green-400 mr-2" />
@@ -1033,7 +1033,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
             <div className="mt-8 flex items-center justify-center gap-4 text-sm text-slate-400">
               <div className="flex items-center">
                 <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                <span>4.9/5 Rating</span>
+                <span>5.0/5 Rating</span>
               </div>
               <span>•</span>
               <div className="flex items-center">

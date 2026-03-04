@@ -258,7 +258,7 @@ export default function NTSEBiologyPage() {
                 { value: '100+', label: 'NTSE Scholars' },
                 { value: '90%', label: 'Selection Rate' },
                 { value: '15+', label: 'Years Experience' },
-                { value: '4.9', label: 'Rating', icon: Star },
+                { value: '5.0', label: 'Rating', icon: Star },
               ].map((s, i) => (
                 <div key={i}>
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 flex items-center justify-center gap-1">

@@ -52,7 +52,7 @@ interface TrustProviderProps {
 const DEFAULT_METRICS: TrustMetrics = {
   totalStudents: 10247,
   successRate: 98,
-  averageRating: 4.9,
+  averageRating: 5.0,
   verifiedReviews: 4500,
   facultyCount: 25,
   yearsEstablished: 5,

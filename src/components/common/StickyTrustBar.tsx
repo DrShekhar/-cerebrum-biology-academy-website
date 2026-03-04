@@ -28,7 +28,7 @@ export function StickyTrustBar() {
     },
     {
       icon: Star,
-      value: '4.9/5',
+      value: '5.0/5',
       label: 'Student Rating',
       color: 'text-orange-600 bg-orange-50 border-orange-200',
     },

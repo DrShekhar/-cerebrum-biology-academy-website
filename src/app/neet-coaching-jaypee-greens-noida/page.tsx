@@ -80,7 +80,7 @@ export default function NEETCoachingJaypeeGreensPage() {
             </div>
             <div className="text-center p-4 bg-emerald-50 rounded-xl">
               <Star className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
-              <p className="text-2xl font-bold">4.9/5</p>
+              <p className="text-2xl font-bold">5.0/5</p>
               <p className="text-sm text-gray-600">Rating</p>
             </div>
             <div className="text-center p-4 bg-emerald-50 rounded-xl">

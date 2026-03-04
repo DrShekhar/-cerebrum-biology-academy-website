@@ -118,7 +118,7 @@ export default function BiologyClass11NoidaPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-yellow-400" />
-                <span>4.9/5 Rating</span>
+                <span>5.0/5 Rating</span>
               </div>
             </div>
 

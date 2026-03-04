@@ -516,7 +516,7 @@ export default function NEETCoachingGurgaonPage() {
                   />
                 </div>
                 <div className="text-center mb-6">
-                  <div className="text-6xl font-bold text-gray-900 mb-3">4.9</div>
+                  <div className="text-6xl font-bold text-gray-900 mb-3">5.0</div>
                   <div className="flex items-center justify-center gap-1 mb-3">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-7 h-7 text-yellow-400 fill-current" />
@@ -991,7 +991,7 @@ export default function NEETCoachingGurgaonPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Star className="w-8 h-8 text-white fill-current" />
                 </div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">4.9/5</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">5.0/5</div>
                 <div className="text-lg font-semibold text-gray-700 mb-2">Google Rating</div>
                 <p className="text-sm text-gray-600">
                   Based on 500+ verified reviews from satisfied students and parents

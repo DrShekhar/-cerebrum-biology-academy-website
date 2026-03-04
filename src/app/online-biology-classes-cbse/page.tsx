@@ -133,7 +133,7 @@ export default function OnlineBiologyClassesCBSEPage() {
               { icon: Users, value: board.studentCount, label: 'CBSE Students' },
               { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Target, value: '100%', label: 'NCERT Coverage' },
-              { icon: Star, value: '4.9/5', label: 'Student Rating' },
+              { icon: Star, value: '5.0/5', label: 'Student Rating' },
             ].map((stat, index) => (
               <div
                 key={index}

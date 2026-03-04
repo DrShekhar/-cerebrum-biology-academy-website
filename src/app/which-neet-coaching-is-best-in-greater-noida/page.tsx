@@ -54,7 +54,7 @@ const coachingComparison = [
       'Online + hybrid for Greater Noida',
     ],
     weaknesses: ['Only Biology', 'Center in Sector 62 Noida (not in Greater Noida)'],
-    rating: 4.9,
+    rating: 5.0,
     bestFor: 'Serious Biology-focused NEET aspirants in Greater Noida',
     verdict: 'recommended',
   },

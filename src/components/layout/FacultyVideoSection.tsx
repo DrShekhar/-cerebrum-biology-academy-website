@@ -119,7 +119,7 @@ export function FacultyVideoSection() {
                 sublabel: 'AIIMS Selections',
                 color: 'text-green-600',
               },
-              { icon: Star, label: '4.9/5', sublabel: 'Student Rating', color: 'text-yellow-600' },
+              { icon: Star, label: '5.0/5', sublabel: 'Student Rating', color: 'text-yellow-600' },
             ].map((stat, index) => (
               <div key={stat.label} className="text-center">
                 <div

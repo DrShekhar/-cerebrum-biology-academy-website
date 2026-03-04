@@ -19,7 +19,7 @@ import {
 import { Button } from '@/components/ui/Button'
 
 const rankings = [
-  { rank: 1, name: 'Cerebrum Biology Academy', rating: 4.9, successRate: '98%', highlight: true },
+  { rank: 1, name: 'Cerebrum Biology Academy', rating: 5.0, successRate: '98%', highlight: true },
   { rank: 2, name: 'Allen Career Institute', rating: 4.5, successRate: '75%', highlight: false },
   { rank: 3, name: 'Aakash Institute', rating: 4.4, successRate: '72%', highlight: false },
   { rank: 4, name: 'FIITJEE', rating: 4.3, successRate: '68%', highlight: false },
@@ -30,7 +30,7 @@ const achievements = [
   { icon: Trophy, value: '500+', label: 'Medical Selections', color: 'text-yellow-500' },
   { icon: Target, value: '98%', label: 'Success Rate', color: 'text-green-600' },
   { icon: Users, value: '5,000+', label: 'Students Taught', color: 'text-blue-500' },
-  { icon: Star, value: '4.9/5', label: 'Google Rating', color: 'text-orange-500' },
+  { icon: Star, value: '5.0/5', label: 'Google Rating', color: 'text-orange-500' },
   { icon: GraduationCap, value: 'AIIMS', label: 'Expert Faculty', color: 'text-purple-500' },
   { icon: Clock, value: '10+', label: 'Years Experience', color: 'text-green-600' },
 ]

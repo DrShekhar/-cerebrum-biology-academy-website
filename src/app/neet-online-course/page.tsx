@@ -143,7 +143,7 @@ export default function NeetOnlineCoursePage() {
               { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Users, value: '1,50,000+', label: 'Students' },
               { icon: Video, value: '500+', label: 'Video Hours' },
-              { icon: Star, value: '4.9/5', label: 'Course Rating' },
+              { icon: Star, value: '5.0/5', label: 'Course Rating' },
             ].map((stat, index) => (
               <div
                 key={index}

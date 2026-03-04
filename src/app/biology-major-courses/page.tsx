@@ -135,7 +135,7 @@ export default function BiologyMajorCoursesPage() {
     { label: '200+', sublabel: 'College Students', icon: Users },
     { label: 'Top Unis', sublabel: 'MIT, Stanford, DU', icon: Building2 },
     { label: 'PhD Tutors', sublabel: 'Graduate Experts', icon: GraduationCap },
-    { label: '4.9/5', sublabel: 'Student Rating', icon: Star },
+    { label: '5.0/5', sublabel: 'Student Rating', icon: Star },
   ]
 
   const coursesSupported = [
@@ -703,7 +703,7 @@ export default function BiologyMajorCoursesPage() {
               </div>
               <div className="flex items-center">
                 <Star className="w-4 h-4 mr-2" />
-                <span>4.9/5 Average Rating</span>
+                <span>5.0/5 Average Rating</span>
               </div>
               <div className="flex items-center">
                 <GraduationCap className="w-4 h-4 mr-2" />

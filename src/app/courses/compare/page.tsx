@@ -63,7 +63,7 @@ const allCourses: Course[] = [
     mockTests: 30,
     practiceQuestions: 10000,
     validity: '18 Months',
-    rating: 4.9,
+    rating: 5.0,
     students: 150000,
     highlights: [
       'Daily 6-hour live classes',

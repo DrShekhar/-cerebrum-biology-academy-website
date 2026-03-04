@@ -178,7 +178,7 @@ export default function NEETCoachingNewFriendsColonyPage() {
               {
                 icon: Users,
                 title: '780+ Success Stories',
-                desc: 'South Extension center has 4.9/5 rating',
+                desc: 'South Extension center has 5.0/5 rating',
               },
               {
                 icon: Phone,

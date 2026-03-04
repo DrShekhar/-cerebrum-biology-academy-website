@@ -84,7 +84,7 @@ const successStats = [
   { label: 'West Delhi Students', value: '750+', icon: Users },
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'NEET Selections', value: '520+', icon: Award },
-  { label: 'Google Rating', value: '4.9', icon: Star },
+  { label: 'Google Rating', value: '5.0', icon: Star },
 ]
 
 const faqs = [
@@ -558,7 +558,7 @@ export default function NEETCoachingTagoreGardenPage() {
                 </svg>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-gray-900 mb-1">4.9</div>
+                <div className="text-5xl font-bold text-gray-900 mb-1">5.0</div>
                 <div className="flex justify-center mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />

@@ -85,7 +85,7 @@ const successStats = [
   { label: 'Students Enrolled', value: '1,200+', icon: Users },
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'NEET Selections', value: '850+', icon: Award },
-  { label: 'Google Rating', value: '4.9', icon: Star },
+  { label: 'Google Rating', value: '5.0', icon: Star },
 ]
 
 const whyChooseUs = [

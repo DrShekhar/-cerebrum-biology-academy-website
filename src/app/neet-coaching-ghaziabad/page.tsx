@@ -149,7 +149,7 @@ const successStats = [
   { label: 'Ghaziabad Students', value: '1,500+', icon: Users },
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'NEET Selections', value: '1,100+', icon: Award },
-  { label: 'Google Rating', value: '4.9', icon: Star },
+  { label: 'Google Rating', value: '5.0', icon: Star },
 ]
 
 const faqs = [

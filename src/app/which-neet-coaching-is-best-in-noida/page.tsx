@@ -47,7 +47,7 @@ const coachingComparison = [
     successRate: '98%',
     strengths: ['Personal attention', 'Biology focus', 'AIIMS faculty', 'Small batches', 'Local Sector 62 center'],
     weaknesses: ['Only Biology', 'Single center'],
-    rating: 4.9,
+    rating: 5.0,
     bestFor: 'Serious Biology-focused NEET aspirants in Noida',
     verdict: 'recommended',
   },

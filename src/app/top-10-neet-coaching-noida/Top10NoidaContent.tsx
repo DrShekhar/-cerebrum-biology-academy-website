@@ -334,7 +334,7 @@ export function Top10NEETCoachingNoidaContent() {
               </h2>
               <p className="speakable-summary text-blue-100 mb-6">
                 With 98% success rate, AIIMS-trained faculty, smallest batch sizes (15-20 students),
-                and highest student satisfaction (4.9/5 rating), Cerebrum offers the best
+                and highest student satisfaction (5.0/5 rating), Cerebrum offers the best
                 Biology-focused NEET preparation in Noida.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

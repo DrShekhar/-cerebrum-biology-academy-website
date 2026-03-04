@@ -113,7 +113,7 @@ export const courses: Course[] = [
     badge: 'recommended',
     successRate: 98,
     enrollmentCount: 150000,
-    rating: 4.9,
+    rating: 5.0,
     description:
       'Comprehensive NEET preparation with expert faculty and proven teaching methodologies',
     highlights: [
@@ -177,7 +177,7 @@ export const courses: Course[] = [
     badge: 'premium',
     successRate: 96,
     enrollmentCount: 1800,
-    rating: 4.9,
+    rating: 5.0,
     description: 'Advanced NEET preparation for serious aspirants targeting top medical colleges',
     highlights: [
       'Intensive preparation program',
@@ -304,7 +304,7 @@ export const courses: Course[] = [
     badge: 'popular',
     successRate: 98,
     enrollmentCount: 3200,
-    rating: 4.9,
+    rating: 5.0,
     description:
       'Complete 2-year NEET preparation starting from Class 11 for the best possible results',
     highlights: [

@@ -242,7 +242,7 @@ export default function NEETCoachingJalandhar() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Star className="h-4 w-4 text-yellow-500" />
-                    <span>4.9/5 from 350+ Jalandhar students</span>
+                    <span>5.0/5 from 350+ Jalandhar students</span>
                   </div>
                 </div>
               </div>

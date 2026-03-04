@@ -321,7 +321,7 @@ export const parentSuccessMetrics = {
   recommendationRate: 96.2, // Parents who recommend to others
   successStories: 847, // Total parent testimonials
   repeatedEnrollments: 234, // Siblings enrolled later
-  averageRating: 4.9,
+  averageRating: 5.0,
 }
 
 // Helper function to get testimonials by achievement type

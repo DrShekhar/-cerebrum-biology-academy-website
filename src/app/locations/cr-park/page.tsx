@@ -190,7 +190,7 @@ export default function CRParkPage() {
                 { icon: Award, title: 'AIIMS Faculty', desc: 'Learn from the best' },
                 { icon: Users, title: 'Small Batches', desc: '15-20 students' },
                 { icon: Trophy, title: '98% Success', desc: 'Proven results' },
-                { icon: Star, title: 'Top Rated', desc: '4.9 Google rating' },
+                { icon: Star, title: 'Top Rated', desc: '5.0 Google rating' },
               ].map((item, idx) => (
                 <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >
@@ -233,7 +233,7 @@ export default function CRParkPage() {
                 { value: '67+ AIIMS Selections' },
                 { value: '98%', label: 'Success Rate' },
                 { value: '15+', label: 'Years' },
-                { value: '4.9', label: 'Google Rating', icon: Star },
+                { value: '5.0', label: 'Google Rating', icon: Star },
               ].map((s, i) => (
                 <div key={i}>
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 flex items-center justify-center gap-1">

@@ -115,7 +115,7 @@ const gcseBiologyTuition: SEOLandingContent = {
     { value: '95%', label: 'Grade 7+ Achievement', icon: 'trophy' },
     { value: '200+', label: 'UK Students Tutored', icon: 'users' },
     { value: '2+', label: 'Average Grade Improvement', icon: 'trending-up' },
-    { value: '4.9/5', label: 'Student Rating', icon: 'star' },
+    { value: '5.0/5', label: 'Student Rating', icon: 'star' },
   ],
 
   testimonials: [
@@ -325,7 +325,7 @@ const gcseBiologyTutorOnline: SEOLandingContent = {
   stats: [
     { value: '50+', label: 'Expert Biology Tutors', icon: 'users' },
     { value: '100%', label: 'DBS Checked', icon: 'shield' },
-    { value: '4.9/5', label: 'Average Tutor Rating', icon: 'star' },
+    { value: '5.0/5', label: 'Average Tutor Rating', icon: 'star' },
     { value: '24hr', label: 'Tutor Matching', icon: 'clock' },
   ],
 
@@ -1136,7 +1136,7 @@ const ibBiologyTutorOnline: SEOLandingContent = {
     { value: '25+', label: 'IB Specialist Tutors', icon: 'users' },
     { value: '6+', label: 'Average Student Score', icon: 'star' },
     { value: '100%', label: 'IA Guidance Success', icon: 'check' },
-    { value: '4.9/5', label: 'Tutor Rating', icon: 'heart' },
+    { value: '5.0/5', label: 'Tutor Rating', icon: 'heart' },
   ],
 
   testimonials: [
@@ -1335,7 +1335,7 @@ const aLevelBiologyTutor: SEOLandingContent = {
     { value: '40+', label: 'A-Level Tutors', icon: 'users' },
     { value: '90%', label: 'A*/A Achievement', icon: 'trophy' },
     { value: '5+', label: 'Exam Boards Covered', icon: 'book' },
-    { value: '4.9/5', label: 'Student Rating', icon: 'star' },
+    { value: '5.0/5', label: 'Student Rating', icon: 'star' },
   ],
 
   testimonials: [
@@ -1950,7 +1950,7 @@ const internationalBiologyTutor: SEOLandingContent = {
     { value: '15+', label: 'Curricula Covered', icon: 'book' },
     { value: '50+', label: 'Countries Served', icon: 'globe' },
     { value: '100+', label: 'Expert Tutors', icon: 'users' },
-    { value: '4.9/5', label: 'Global Rating', icon: 'star' },
+    { value: '5.0/5', label: 'Global Rating', icon: 'star' },
   ],
 
   testimonials: [

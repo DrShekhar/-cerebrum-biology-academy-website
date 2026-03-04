@@ -231,7 +231,7 @@ export default function JorBaghPage() {
                 { value: '500+', label: 'Selections' },
                 { value: '98%', label: 'Success' },
                 { value: '15+', label: 'Years' },
-                { value: '4.9', label: 'Rating', icon: Star },
+                { value: '5.0', label: 'Rating', icon: Star },
               ].map((s, i) => (
                 <div key={i}>
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 flex items-center justify-center gap-1">

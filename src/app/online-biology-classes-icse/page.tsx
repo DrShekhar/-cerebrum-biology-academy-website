@@ -133,7 +133,7 @@ export default function OnlineBiologyClassesICSEPage() {
               { icon: Users, value: board.studentCount, label: 'ICSE Students' },
               { icon: Trophy, value: '96%', label: 'Success Rate' },
               { icon: Target, value: '30%', label: 'Gap Bridge Modules' },
-              { icon: Star, value: '4.9/5', label: 'Student Rating' },
+              { icon: Star, value: '5.0/5', label: 'Student Rating' },
             ].map((stat, index) => (
               <div
                 key={index}

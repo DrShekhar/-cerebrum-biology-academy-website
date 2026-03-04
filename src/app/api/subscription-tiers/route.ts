@@ -438,7 +438,7 @@ async function demonstrateSmartPricing() {
       revenue_optimization: '+165% vs single-tier pricing',
       market_expansion: '300% increase in global accessibility',
       conversion_improvement: '+45% trial-to-paid conversion',
-      customer_satisfaction: '4.9/5 pricing satisfaction score',
+      customer_satisfaction: '5.0/5 pricing satisfaction score',
       competitive_advantage: 'Most comprehensive AI tutoring value',
     },
     insights: [

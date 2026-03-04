@@ -2366,7 +2366,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       { value: '3+', label: 'Live Hours Daily' },
       { value: '95%', label: 'Live Attendance' },
       { value: '< 30 sec', label: 'Doubt Response' },
-      { value: '4.9/5', label: 'Student Rating' },
+      { value: '5.0/5', label: 'Student Rating' },
     ],
     testimonials: [
       {
@@ -2734,7 +2734,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     },
     stats: [
       { value: '1,50,000+', label: 'Students' },
-      { value: '4.9/5', label: 'Rating' },
+      { value: '5.0/5', label: 'Rating' },
       { value: '500+', label: 'Hours' },
       { value: '85%', label: 'Selection Rate' },
     ],
@@ -2932,7 +2932,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     },
     stats: [
       { value: '1-on-1', label: 'Personal Attention' },
-      { value: '4.9/5', label: 'Student Rating' },
+      { value: '5.0/5', label: 'Student Rating' },
       { value: 'Flexible', label: 'Timing' },
       { value: '85%', label: 'Success Rate' },
     ],

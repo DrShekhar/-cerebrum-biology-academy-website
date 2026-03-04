@@ -242,7 +242,7 @@ export default function Class11BiologyPage() {
     { number: '98%', label: 'Board Exam Success', description: 'Students scoring 90+' },
     { number: '88%', label: 'NEET Foundation', description: 'Strong conceptual clarity' },
     { number: '2000+', label: 'Students Taught', description: 'Since 2018' },
-    { number: '4.9/5', label: 'Student Rating', description: 'Google Reviews' },
+    { number: '5.0/5', label: 'Student Rating', description: 'Google Reviews' },
   ]
 
   const batchInfo = {

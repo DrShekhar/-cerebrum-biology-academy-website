@@ -881,7 +881,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                 />
               </div>
               <div className="text-center mb-6">
-                <div className="text-6xl font-bold text-gray-900 mb-3">4.9</div>
+                <div className="text-6xl font-bold text-gray-900 mb-3">5.0</div>
                 <div className="flex items-center justify-center gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-7 h-7 text-yellow-400 fill-current" />
@@ -1101,7 +1101,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               },
               {
                 icon: Star,
-                label: '4.9/5 Rating',
+                label: '5.0/5 Rating',
                 sublabel: '847+ Google Reviews',
                 color: 'text-yellow-600',
               },

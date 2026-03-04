@@ -239,7 +239,7 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
               </div>
               <div className="flex items-center rounded-full bg-white/10 px-4 py-2">
                 <Star className="mr-2 h-5 w-5 text-yellow-400" />
-                <span className="text-sm font-medium">4.9/5 Rating</span>
+                <span className="text-sm font-medium">5.0/5 Rating</span>
               </div>
               <div className="flex items-center rounded-full bg-white/10 px-4 py-2">
                 <Trophy className="mr-2 h-5 w-5 text-green-400" />
@@ -294,7 +294,7 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">
               <Star className="mx-auto mb-2 h-6 w-6 text-yellow-400 sm:h-8 sm:w-8" />
-              <div className="text-xl font-bold sm:text-2xl">4.9/5</div>
+              <div className="text-xl font-bold sm:text-2xl">5.0/5</div>
               <div className="text-xs text-slate-400 sm:text-sm">Google Rating</div>
             </div>
             <div className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm sm:p-6">

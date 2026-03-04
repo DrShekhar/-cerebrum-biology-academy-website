@@ -575,7 +575,7 @@ export default function NEETDropperPage() {
                     <div className="flex items-center">
                       <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-yellow-500" />
                       <span>
-                        <strong>4.9</strong> rating
+                        <strong>5.0</strong> rating
                       </span>
                     </div>
                   </div>

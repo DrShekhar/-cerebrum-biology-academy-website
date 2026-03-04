@@ -375,7 +375,7 @@ export default function KBOCoachingPage() {
                   { value: '200+', label: 'Korean Students' },
                   { value: '25+', label: 'KBO Finalists' },
                   { value: '10+', label: 'IBO Participants' },
-                  { value: '4.9/5', label: 'Student Rating' },
+                  { value: '5.0/5', label: 'Student Rating' },
                 ].map((stat) => (
                   <div key={stat.label} className="bg-white/5 rounded-lg p-4 backdrop-blur-sm">
                     <div className="text-2xl md:text-3xl font-bold text-yellow-400">

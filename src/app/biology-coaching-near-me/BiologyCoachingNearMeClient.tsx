@@ -31,7 +31,7 @@ const centers = [
     address: 'South Extension Part 2, Near Metro Station',
     areas: ['Hauz Khas', 'GK-1', 'GK-2', 'Defence Colony', 'Saket', 'Malviya Nagar'],
     students: 450,
-    rating: 4.9,
+    rating: 5.0,
     features: ['Near Pink Line Metro', 'Parking Available', 'AC Classrooms'],
   },
   {

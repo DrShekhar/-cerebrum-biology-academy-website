@@ -38,7 +38,7 @@ const faculty = [
       'Author: "NEET Biology Made Easy"',
     ],
     teachingStyle: 'Concept-based learning with clinical correlations. Uses real medical cases to explain physiology concepts.',
-    studentRating: 4.9,
+    studentRating: 5.0,
     toppersTrained: 12,
   },
   {

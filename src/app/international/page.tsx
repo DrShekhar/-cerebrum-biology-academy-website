@@ -72,7 +72,7 @@ export default function InternationalHubPage() {
               <div className="text-slate-300 text-sm">Exam Systems</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <div className="text-3xl font-bold text-purple-400">4.9</div>
+              <div className="text-3xl font-bold text-purple-400">5.0</div>
               <div className="text-slate-300 text-sm">Rating</div>
             </div>
           </div>

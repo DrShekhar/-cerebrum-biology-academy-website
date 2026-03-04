@@ -211,7 +211,7 @@ export default function CBSEBiologyPage() {
                 { value: '98%', label: 'Board Pass Rate' },
                 { value: '85%', label: 'Score 90+ in Bio' },
                 { value: '100%', label: 'NCERT Coverage' },
-                { value: '4.9', label: 'Google Rating', icon: Star },
+                { value: '5.0', label: 'Google Rating', icon: Star },
               ].map((stat, idx) => (
                 <div key={idx}>
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 flex items-center justify-center gap-1">

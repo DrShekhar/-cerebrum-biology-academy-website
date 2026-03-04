@@ -75,7 +75,7 @@ const SUCCESS_METRICS: MetricCard[] = [
   },
   {
     id: 'student-rating',
-    value: 4.9,
+    value: 5.0,
     label: 'Student Rating',
     description: 'Average satisfaction from student feedback',
     suffix: '/5',

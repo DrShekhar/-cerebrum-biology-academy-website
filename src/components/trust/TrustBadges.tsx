@@ -50,7 +50,7 @@ export function TrustBadges() {
     },
     {
       icon: Star,
-      title: language === 'hi' ? '4.9/5 रेटिंग' : '4.9/5 Rating',
+      title: language === 'hi' ? '5.0/5 रेटिंग' : '5.0/5 Rating',
       description:
         language === 'hi' ? 'हजारों सत्यापित समीक्षाओं से' : 'From thousands of verified reviews',
       color: 'text-purple-600',

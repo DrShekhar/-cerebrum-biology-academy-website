@@ -202,7 +202,7 @@ export const NEET_BIOLOGY_PAA_QUESTIONS: PAQuestion[] = [
   },
   {
     question: 'Is Cerebrum Biology Academy good for NEET preparation?',
-    answer: 'Yes, Cerebrum Biology Academy is rated 4.9/5 by students. With AIIMS-trained faculty, 98% success rate, and 67+ AIIMS selections, it is one of the top-rated NEET Biology coaching institutes in Delhi NCR.',
+    answer: 'Yes, Cerebrum Biology Academy is rated 5.0/5 by students. With AIIMS-trained faculty, 98% success rate, and 67+ AIIMS selections, it is one of the top-rated NEET Biology coaching institutes in Delhi NCR.',
   },
   {
     question: 'How many students get selected from Cerebrum Biology Academy?',

@@ -18,7 +18,7 @@ export function SeminarTestimonials() {
                 <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
               ))}
             </div>
-            <span className="text-slate-600">4.9/5 average rating</span>
+            <span className="text-slate-600">5.0/5 average rating</span>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ export function SeminarTestimonials() {
             </div>
             <div className="w-px h-10 bg-slate-200" />
             <div className="text-center">
-              <p className="text-2xl font-bold text-blue-600">4.9/5</p>
+              <p className="text-2xl font-bold text-blue-600">5.0/5</p>
               <p className="text-xs text-slate-500">Average Rating</p>
             </div>
             <div className="w-px h-10 bg-slate-200" />

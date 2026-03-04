@@ -51,7 +51,7 @@
     stats: {
       studentsFromCity: '120+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4385',

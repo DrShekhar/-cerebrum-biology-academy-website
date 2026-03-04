@@ -136,7 +136,7 @@ function SocialProofNearCTA() {
         {/* Trust Badge */}
         <div className="flex items-center space-x-1">
           <Star className="w-4 h-4 text-yellow-500 fill-current" />
-          <span className="text-sm font-semibold text-slate-700">4.9</span>
+          <span className="text-sm font-semibold text-slate-700">5.0</span>
         </div>
       </div>
     </div>

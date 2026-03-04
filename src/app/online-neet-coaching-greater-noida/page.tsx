@@ -169,7 +169,7 @@ export default function OnlineNEETCoachingGreaterNoidaPage() {
             </div>
             <div className="text-center p-4 bg-indigo-50 rounded-xl">
               <Star className="w-8 h-8 text-indigo-600 mx-auto mb-2" />
-              <p className="text-2xl font-bold">4.9/5</p>
+              <p className="text-2xl font-bold">5.0/5</p>
               <p className="text-sm text-gray-600">Student Rating</p>
             </div>
           </div>

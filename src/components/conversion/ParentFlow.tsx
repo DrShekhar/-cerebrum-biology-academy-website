@@ -54,7 +54,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
       icon: Star,
       title: 'Parent Satisfaction',
       description: 'Regular updates, transparent communication, and visible progress reports',
-      stat: '4.9/5 Parent Rating',
+      stat: '5.0/5 Parent Rating',
     },
   ]
 

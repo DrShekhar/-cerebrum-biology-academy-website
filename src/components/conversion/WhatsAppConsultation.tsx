@@ -69,7 +69,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
       time: 'Now - 2:30 PM',
       available: true,
       counselorName: 'Dr. Priya Sharma',
-      counselorRating: 4.9,
+      counselorRating: 5.0,
       specialization: ['NEET Strategy', 'Biology Focus', 'Study Planning'],
     },
     {
@@ -85,7 +85,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
       time: '4:30 PM Today',
       available: true,
       counselorName: 'Dr. Neha Gupta',
-      counselorRating: 4.9,
+      counselorRating: 5.0,
       specialization: ['Academic Planning', 'Exam Strategy', 'Motivation'],
     },
     {
@@ -435,7 +435,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
           <div className="mt-4 pt-4 border-t border-gray-100">
             <div className="grid grid-cols-3 gap-3 text-center">
               <div>
-                <div className="text-lg font-bold text-green-600">4.9⭐</div>
+                <div className="text-lg font-bold text-green-600">5.0⭐</div>
                 <div className="text-xs text-gray-600">Rating</div>
               </div>
               <div>

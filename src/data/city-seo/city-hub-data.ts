@@ -58,7 +58,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,200+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5355',
@@ -140,7 +140,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '800+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4595',
@@ -226,7 +226,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '300+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4295',
@@ -281,7 +281,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4195',
@@ -330,7 +330,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '100+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4195',
@@ -380,7 +380,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '120+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4095',
@@ -435,7 +435,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '100+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4695',
@@ -490,7 +490,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4395',
@@ -543,7 +543,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '120+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.3995',
@@ -592,7 +592,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '80+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4795',
@@ -641,7 +641,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '60+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5095',
@@ -690,7 +690,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '50+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4095',
@@ -742,7 +742,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '40+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4195',
@@ -807,7 +807,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '800+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4595',
@@ -864,7 +864,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '300+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4295',
@@ -912,7 +912,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4195',
@@ -961,7 +961,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '100+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4195',
@@ -1027,7 +1027,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4651',
@@ -1079,7 +1079,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '100+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4695',
@@ -1131,7 +1131,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4395',
@@ -1183,7 +1183,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '120+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.3995',
@@ -1232,7 +1232,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '50+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4095',
@@ -1283,7 +1283,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '60+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4195',
@@ -1471,7 +1471,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '450+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6353',
@@ -1765,7 +1765,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,500+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5732',
@@ -1846,7 +1846,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,200+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7143',
@@ -1983,7 +1983,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '350+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7041',
@@ -2045,7 +2045,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '280+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7125',
@@ -2412,7 +2412,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '220+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5207',
@@ -2462,7 +2462,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '200+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5245',
@@ -2512,7 +2512,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5599',
@@ -2562,7 +2562,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '180+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7143',
@@ -2612,7 +2612,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '220+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7182',
@@ -2763,7 +2763,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '130+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5742',
@@ -2827,7 +2827,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '320+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5494',
@@ -2885,7 +2885,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '280+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5494',
@@ -2943,7 +2943,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '250+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5692',
@@ -3058,7 +3058,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '180+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5376',
@@ -3177,7 +3177,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '450+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5672',
@@ -3240,7 +3240,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '99%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5607',
@@ -3340,7 +3340,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '45+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5850',
@@ -3490,7 +3490,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '30+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5895',
@@ -3540,7 +3540,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '40+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5550',
@@ -3640,7 +3640,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '85+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5650',
@@ -3853,7 +3853,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '180+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4425',
@@ -3915,7 +3915,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '120+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4540',
@@ -4159,7 +4159,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4350',
@@ -4281,7 +4281,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '110+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4380',
@@ -4343,7 +4343,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4403,7 +4403,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4463,7 +4463,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4523,7 +4523,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '65+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4583,7 +4583,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '500+',
       successRate: '95%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4632,7 +4632,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '300+',
       successRate: '95%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4681,7 +4681,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '400+',
       successRate: '96%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4730,7 +4730,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '600+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4779,7 +4779,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '800+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4839,7 +4839,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '650+',
       successRate: '96%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4901,7 +4901,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -4962,7 +4962,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '600+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5022,7 +5022,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '800+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5082,7 +5082,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '400+',
       successRate: '96%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5141,7 +5141,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '500+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5319,7 +5319,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '450+',
       successRate: '96%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5379,7 +5379,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,200+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5439,7 +5439,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '200+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5498,7 +5498,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '250+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5557,7 +5557,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '300+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5616,7 +5616,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '250+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -5660,7 +5660,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Major coaching centers are in Sector 14. Cerebrum in Sector 51 offers better faculty and smaller batches compared to crowded Sector 14 institutes.',
       },
     ],
-    stats: { studentsFromCity: '150+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '150+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4650', lng: '77.0300' },
   },
 
@@ -5699,7 +5699,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'We can arrange carpool groups. Contact us to connect with other Sector 17 students already attending.',
       },
     ],
-    stats: { studentsFromCity: '120+', successRate: '96%', rating: '4.9' },
+    stats: { studentsFromCity: '120+', successRate: '96%', rating: '5.0' },
     geoCoordinates: { lat: '28.4580', lng: '77.0250' },
   },
 
@@ -5738,7 +5738,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Students from DAV, St. Xaviers, and schools in nearby sectors regularly attend. We understand their curriculum.',
       },
     ],
-    stats: { studentsFromCity: '100+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '100+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4550', lng: '77.0200' },
   },
 
@@ -5777,7 +5777,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Students from Vatika City, Vipul Greens, and other Sector 40 societies attend. Short, safe commute.',
       },
     ],
-    stats: { studentsFromCity: '180+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '180+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4400', lng: '77.0450' },
   },
 
@@ -5816,7 +5816,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! Several students from Medanta staff families study with us. They see medical careers daily and are highly motivated.',
       },
     ],
-    stats: { studentsFromCity: '140+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '140+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4420', lng: '77.0500' },
   },
 
@@ -5855,7 +5855,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! Each student gets a dedicated mentor. Weekly parent updates. Personal attention that premium families expect.',
       },
     ],
-    stats: { studentsFromCity: '120+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '120+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4450', lng: '77.0550' },
   },
 
@@ -5894,7 +5894,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! Many Paras World School students from Sector 46 and nearby areas attend our coaching.',
       },
     ],
-    stats: { studentsFromCity: '160+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '160+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4480', lng: '77.0600' },
   },
 
@@ -5933,7 +5933,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Students from Orchid Petals, Uppal Southend, Vipul Belmonte and other Sector 47 societies attend regularly.',
       },
     ],
-    stats: { studentsFromCity: '200+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '200+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4500', lng: '77.0650' },
   },
 
@@ -5972,7 +5972,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Sector 48 is our neighboring sector - just 4 minutes away. Some students walk to class.',
       },
     ],
-    stats: { studentsFromCity: '180+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '180+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4520', lng: '77.0700' },
   },
 
@@ -6011,7 +6011,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! Lotus Valley School (Sector 50) students form a large group. We coordinate with their school schedule.',
       },
     ],
-    stats: { studentsFromCity: '220+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '220+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4540', lng: '77.0730' },
   },
 
@@ -6050,7 +6050,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Students from Tulip Violet, Ansal API, and other Sector 52 societies attend regularly.',
       },
     ],
-    stats: { studentsFromCity: '150+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '150+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4560', lng: '77.0780' },
   },
 
@@ -6089,7 +6089,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! Ample parking at M2K Corporate Park. Both car and two-wheeler parking available.',
       },
     ],
-    stats: { studentsFromCity: '130+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '130+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4580', lng: '77.0820' },
   },
 
@@ -6128,7 +6128,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Absolutely! AIIMS faculty, AC classrooms, small batches. Quality that matches your expectations.',
       },
     ],
-    stats: { studentsFromCity: '140+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '140+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4600', lng: '77.0860' },
   },
 
@@ -6167,7 +6167,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! As Sector 58 grows, more families discover us. Strong community of students from this area.',
       },
     ],
-    stats: { studentsFromCity: '100+', successRate: '96%', rating: '4.9' },
+    stats: { studentsFromCity: '100+', successRate: '96%', rating: '5.0' },
     geoCoordinates: { lat: '28.4640', lng: '77.0900' },
   },
 
@@ -6256,7 +6256,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Major quality coaching is in central Gurgaon. The 20-minute drive is worth it for AIIMS faculty and proven results.',
       },
     ],
-    stats: { studentsFromCity: '120+', successRate: '96%', rating: '4.9' },
+    stats: { studentsFromCity: '120+', successRate: '96%', rating: '5.0' },
     geoCoordinates: { lat: '28.4200', lng: '76.9800' },
   },
 
@@ -6300,7 +6300,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'We focus on one premium center with the best faculty. Quality over quantity. The commute ensures you get the best teachers.',
       },
     ],
-    stats: { studentsFromCity: '200+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '200+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4100', lng: '77.0200' },
   },
 
@@ -6340,7 +6340,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Students from Ireo Skyon, Ramprastha Edge Towers, Pareena Coban Residences, and other SPR projects attend.',
       },
     ],
-    stats: { studentsFromCity: '150+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '150+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4300', lng: '77.0500' },
   },
 
@@ -6374,7 +6374,7 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Which is the best NEET coaching in Gurugram?',
-        answer: 'Based on results (98% selection), faculty (AIIMS-trained), and student reviews (4.9/5), Cerebrum Biology Academy is the top choice. Located in Sector 51 with small batches of 25 students.',
+        answer: 'Based on results (98% selection), faculty (AIIMS-trained), and student reviews (5.0/5), Cerebrum Biology Academy is the top choice. Located in Sector 51 with small batches of 25 students.',
       },
       {
         question: 'How to choose the best NEET coaching?',
@@ -6389,7 +6389,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Top coaching fees range ₹75,000-2,50,000/year. Cerebrum offers premium quality at ₹75,000-95,000 - best value for AIIMS faculty and small batches.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6437,7 +6437,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'NCERT is 85% of NEET. Add: MTG for Biology, HC Verma for Physics, MS Chouhan for Chemistry. Our study material covers everything with NEET-focused approach.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6485,7 +6485,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Cerebrum offers up to 50% scholarship based on entrance test. Toppers from Class 10/12 boards get additional discounts. Merit rewarded.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6523,14 +6523,14 @@ export const cityHubData: Record<string, CityHubData> = {
       },
       {
         question: 'How is Cerebrum ranked #1?',
-        answer: 'Criteria: Results (98% - highest), Faculty (AIIMS-trained), Batch size (25 - smallest), Reviews (4.9/5 - highest), Value (₹75-95K - best ratio).',
+        answer: 'Criteria: Results (98% - highest), Faculty (AIIMS-trained), Batch size (25 - smallest), Reviews (5.0/5 - highest), Value (₹75-95K - best ratio).',
       },
       {
         question: 'Should I join a ranked institute or local tutor?',
         answer: 'Ranked institutes have proven systems, experienced faculty, and peer competition. Local tutors lack resources for comprehensive NEET prep. Invest in quality.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6540,7 +6540,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching Reviews Gurugram 2026 | Student Testimonials | Cerebrum',
     metaDescription:
-      'Real student reviews of NEET coaching in Gurugram. Read experiences, results, faculty feedback. Cerebrum - 4.9/5 rating. Make informed choice. 88264-44334!',
+      'Real student reviews of NEET coaching in Gurugram. Read experiences, results, faculty feedback. Cerebrum - 5.0/5 rating. Make informed choice. 88264-44334!',
     heroTitle: 'NEET Coaching Reviews in Gurugram',
     heroSubtitle:
       'Real feedback from real students. Read verified reviews before choosing your NEET coaching.',
@@ -6548,7 +6548,7 @@ export const cityHubData: Record<string, CityHubData> = {
     nearestCenter: {
       name: 'Gurugram Center',
       address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
-      distance: '4.9/5 Student Rating',
+      distance: '5.0/5 Student Rating',
     },
     localities: [
       { name: 'Google Reviews', url: 'https://g.page/cerebrum-biology-academy' },
@@ -6563,7 +6563,7 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'What do students say about Cerebrum?',
-        answer: 'Common themes: "Best biology teaching", "Personal attention", "Small batches helped", "Faculty actually cares", "Worth every rupee". 4.9/5 average on Google with 500+ reviews.',
+        answer: 'Common themes: "Best biology teaching", "Personal attention", "Small batches helped", "Faculty actually cares", "Worth every rupee". 5.0/5 average on Google with 500+ reviews.',
       },
       {
         question: 'How to verify coaching reviews?',
@@ -6574,7 +6574,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Look for detailed reviews with specific experiences, not just star ratings. Cerebrum reviews mention specific faculty, topics, and experiences - indicating authenticity.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6623,7 +6623,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Separate washrooms, rest room, dedicated female counselor, parent communication for safety, and girls study groups for peer support.',
       },
     ],
-    stats: { studentsFromCity: '1,500+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,500+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6667,7 +6667,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! We bridge IB/IGCSE curriculum to NEET. Special batches help international school students adapt to NCERT-based competitive exam pattern.',
       },
     ],
-    stats: { studentsFromCity: '1,800+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,800+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6715,7 +6715,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Yes! Only 4 batches × 25 students = 100 students per program. Book early to secure your seat. Quality over quantity.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6763,7 +6763,7 @@ export const cityHubData: Record<string, CityHubData> = {
         answer: 'Typically: Mon-Tue Physics, Wed-Thu Chemistry, Fri-Sat Biology. Sunday tests and doubt sessions. Balanced coverage of all subjects.',
       },
     ],
-    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '4.9' },
+    stats: { studentsFromCity: '1,50,000+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4495', lng: '77.0726' },
   },
 
@@ -6820,7 +6820,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '800+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -6880,7 +6880,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '900+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -7363,7 +7363,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '65+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4520',
@@ -7482,7 +7482,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '200+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4495',
@@ -7542,7 +7542,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5244',
@@ -7602,7 +7602,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7328',
@@ -7662,7 +7662,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5831',
@@ -7722,7 +7722,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -7782,7 +7782,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4670',
@@ -7842,7 +7842,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4017',
@@ -7902,7 +7902,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6517',
@@ -7962,7 +7962,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7041',
@@ -8022,7 +8022,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6893',
@@ -8082,7 +8082,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8142,7 +8142,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8202,7 +8202,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8262,7 +8262,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8322,7 +8322,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8389,7 +8389,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8454,7 +8454,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8520,7 +8520,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8586,7 +8586,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8652,7 +8652,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '1,50,000+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6139',
@@ -8834,7 +8834,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '400+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4744',
@@ -8970,7 +8970,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '60+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6509',
@@ -9028,7 +9028,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '55+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6692',
@@ -9087,7 +9087,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '50+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6432',
@@ -9147,7 +9147,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '40+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6692',
@@ -9205,7 +9205,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '45+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6704',
@@ -9442,7 +9442,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '300+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7416',
@@ -9500,7 +9500,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '80+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7296',
@@ -9557,7 +9557,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '50+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7205',
@@ -9612,7 +9612,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '60+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7285',
@@ -9667,7 +9667,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '70+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7335',
@@ -9722,7 +9722,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '75+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7365',
@@ -9778,7 +9778,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '65+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7405',
@@ -9834,7 +9834,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '55+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7445',
@@ -9890,7 +9890,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '50+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7485',
@@ -9946,7 +9946,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '45+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.7525',
@@ -10172,7 +10172,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '40+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4515',
@@ -10230,7 +10230,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '80+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4440',
@@ -10287,7 +10287,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '50+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4195',
@@ -10578,7 +10578,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '30+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.4950',
@@ -10758,7 +10758,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '100+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6517',
@@ -10845,7 +10845,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '800+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5732',
@@ -10930,7 +10930,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '500+',
       successRate: '96%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5732',
@@ -11015,7 +11015,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '600+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.5732',
@@ -11088,7 +11088,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '28.6896',
@@ -11173,7 +11173,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '780+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '30.7333',
@@ -11236,7 +11236,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '180+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '30.7046',
@@ -11299,7 +11299,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '150+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '30.6942',
@@ -11551,7 +11551,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '90+',
       successRate: '98%',
-      rating: '4.9',
+      rating: '5.0',
     },
     geoCoordinates: {
       lat: '30.6430',

@@ -118,7 +118,7 @@ const successStats = [
   { label: 'Noida Students', value: '1,200+', icon: Users },
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'NEET Selections', value: '850+', icon: Award },
-  { label: 'Google Rating', value: '4.9', icon: Star },
+  { label: 'Google Rating', value: '5.0', icon: Star },
 ]
 
 const faqs = [
@@ -828,7 +828,7 @@ export default function NeetCoachingNoidaPage() {
                   </svg>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-gray-900 mb-1">4.9</div>
+                  <div className="text-5xl font-bold text-gray-900 mb-1">5.0</div>
                   <div className="flex justify-center mb-3">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -1410,12 +1410,12 @@ export default function NeetCoachingNoidaPage() {
               </p>
             </div>
 
-            {/* Badge 3: 4.9/5 Google Rating */}
+            {/* Badge 3: 5.0/5 Google Rating */}
             <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp">
               <div className="bg-gradient-to-br from-yellow-500 to-orange-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Star className="w-10 h-10 text-white fill-white" />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-1">4.9/5</div>
+              <div className="text-4xl font-bold text-gray-900 mb-1">5.0/5</div>
               <div className="text-lg font-semibold text-gray-700 mb-3">Google Rating</div>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Based on 500+ verified student and parent reviews. Students consistently praise

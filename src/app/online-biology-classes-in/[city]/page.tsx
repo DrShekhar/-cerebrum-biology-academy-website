@@ -173,7 +173,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
               { icon: Users, value: city.studentCount, label: `${city.name} Students` },
               { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Video, value: '500+', label: 'Video Hours' },
-              { icon: Star, value: '4.9/5', label: 'Student Rating' },
+              { icon: Star, value: '5.0/5', label: 'Student Rating' },
             ].map((stat, index) => (
               <div
                 key={index}

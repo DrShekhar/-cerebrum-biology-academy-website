@@ -60,7 +60,7 @@ const LiveChatSupport: React.FC = () => {
       avatar: '👩‍🏫',
       status: 'online',
       expertise: ['Course Selection', 'Study Planning', 'NEET Strategy'],
-      rating: 4.9,
+      rating: 5.0,
       responseTime: '< 1 min',
     },
     {

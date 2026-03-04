@@ -555,7 +555,7 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
         icon: 'star',
         question: 'How to identify the best coaching?',
         solution:
-          "Look at results: 85+ AIIMS selections, 4.9/5 rating, 15+ years experience. That's us.",
+          "Look at results: 85+ AIIMS selections, 5.0/5 rating, 15+ years experience. That's us.",
       },
     ],
   },

@@ -75,7 +75,7 @@ export default function PageContent() {
             </div>
             <div className="p-4">
               <Star className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
-              <p className="font-bold text-lg">4.9/5</p>
+              <p className="font-bold text-lg">5.0/5</p>
               <p className="text-sm text-gray-500">Student Rating</p>
             </div>
             <div className="p-4">

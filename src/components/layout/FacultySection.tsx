@@ -167,7 +167,7 @@ export function FacultySection() {
                     <Star key={i} className="w-3.5 xs:w-4 h-3.5 xs:h-4 fill-current" />
                   ))}
                 </div>
-                <span className="text-gray-600 text-xs xs:text-sm">4.9/5</span>
+                <span className="text-gray-600 text-xs xs:text-sm">5.0/5</span>
               </div>
             </div>
           ))}

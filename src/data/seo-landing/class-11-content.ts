@@ -603,7 +603,7 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
       },
       {
         icon: 'star',
-        title: '4.9/5 Student Rating',
+        title: '5.0/5 Student Rating',
         description:
           'Consistently rated as one of the best biology teachers by students and parents.',
       },

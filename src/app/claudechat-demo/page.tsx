@@ -321,7 +321,7 @@ export default function ClaudeChatDemo() {
             <div>
               <Heart className="w-8 h-8 mx-auto mb-2" />
               <div className="text-lg font-medium">Student Feedback</div>
-              <div className="text-sm opacity-80">4.9/5 rating from students</div>
+              <div className="text-sm opacity-80">5.0/5 rating from students</div>
             </div>
             <div>
               <Award className="w-8 h-8 mx-auto mb-2" />

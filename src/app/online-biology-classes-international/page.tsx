@@ -78,7 +78,7 @@ export default function InternationalBiologyClassesPage() {
               { icon: Users, value: '12,000+', label: 'International Students' },
               { icon: Globe, value: '50+', label: 'Countries Served' },
               { icon: Trophy, value: '95%', label: 'Pass Rate' },
-              { icon: Star, value: '4.9/5', label: 'Student Rating' },
+              { icon: Star, value: '5.0/5', label: 'Student Rating' },
             ].map((stat, index) => (
               <div
                 key={index}

@@ -5,7 +5,7 @@ export async function GET() {
     successRate: 98,
     totalStudents: 150000,
     yearsOfExperience: 10,
-    averageRating: 4.9,
+    averageRating: 5.0,
     totalReviews: 1800,
     facultyCount: 15,
     citiesServed: 50,

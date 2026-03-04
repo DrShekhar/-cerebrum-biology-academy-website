@@ -432,7 +432,7 @@ export function TestimonialStats() {
       color: 'text-green-600',
     },
     {
-      value: '4.9/5',
+      value: '5.0/5',
       label: language === 'hi' ? 'औसत रेटिंग' : 'Average Rating',
       icon: Star,
       color: 'text-yellow-600',

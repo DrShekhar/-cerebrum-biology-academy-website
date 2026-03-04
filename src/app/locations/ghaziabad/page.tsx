@@ -234,7 +234,7 @@ export default function GhaziabadLocationPage() {
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
                   <Star className="w-6 h-6 text-orange-400 mx-auto mb-2" />
-                  <p className="text-2xl font-bold">4.9/5</p>
+                  <p className="text-2xl font-bold">5.0/5</p>
                   <p className="text-sm text-gray-300">Google Rating</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">

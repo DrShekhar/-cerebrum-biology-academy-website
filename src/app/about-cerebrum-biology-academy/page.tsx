@@ -484,7 +484,7 @@ export default function AboutCerebrumPage() {
             <div className="border-l-4 border-green-400 pl-6">
               <h3 className="text-xl font-bold mb-3">Student Satisfaction</h3>
               <p className="text-slate-300 mb-4">
-                4.9/5 rating on education platforms. Alumni recommend Cerebrum to their
+                5.0/5 rating on education platforms. Alumni recommend Cerebrum to their
                 younger siblings.
               </p>
             </div>

@@ -315,7 +315,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
     name: 'Cerebrum Biology Academy',
     description: 'Specialized Biology-only coaching with AIIMS faculty and highest success rate',
     score: 9.5,
-    rating: 4.9,
+    rating: 5.0,
     isHighlighted: true,
     badge: 'Best for Biology',
     pros: [
@@ -581,7 +581,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
     name: 'Cerebrum Biology Academy',
     description: 'Specialized Biology-only coaching with AIIMS faculty and highest success rate',
     score: 9.5,
-    rating: 4.9,
+    rating: 5.0,
     isHighlighted: true,
     badge: 'Best for Biology',
     pros: [

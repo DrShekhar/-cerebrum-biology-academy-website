@@ -622,7 +622,7 @@ export default function ResultsPage() {
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-            <span className="ml-2 font-semibold">4.9/5</span>
+            <span className="ml-2 font-semibold">5.0/5</span>
           </div>
           <p>Rated by 1,50,000+ students and parents</p>
         </section>

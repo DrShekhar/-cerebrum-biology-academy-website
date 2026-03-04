@@ -18,7 +18,7 @@ interface SeminarHeroProps {
 
 export function SeminarHero({
   registeredCount = 0,
-  rating = 4.9,
+  rating = 5.0,
   reviewCount = 500,
   onRegisterClick,
 }: SeminarHeroProps) {

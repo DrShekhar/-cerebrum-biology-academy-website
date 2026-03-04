@@ -49,7 +49,7 @@ const feeComparison = [
     fee2Year: '85,000',
     mode: 'Online / Hybrid',
     batchSize: '15-20',
-    rating: 4.9,
+    rating: 5.0,
     highlight: true,
   },
   {

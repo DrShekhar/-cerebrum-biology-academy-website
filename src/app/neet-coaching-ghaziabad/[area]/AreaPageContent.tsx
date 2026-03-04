@@ -148,7 +148,7 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
             {[
               { icon: Trophy, value: CEREBRUM_METRICS.successRateText, label: 'Success Rate' },
               { icon: Users, value: '15', label: 'Students/Batch' },
-              { icon: Star, value: '4.9', label: 'Google Rating' },
+              { icon: Star, value: '5.0', label: 'Google Rating' },
               { icon: GraduationCap, value: '15+', label: 'Years Experience' },
             ].map((stat, i) => (
               <div key={i} className="text-center p-4 bg-white rounded-lg shadow-sm">

@@ -135,7 +135,7 @@ export default function NEETCoachingGaurCityPage() {
             </div>
             <div className="text-center p-4 bg-green-50 rounded-xl">
               <Star className="w-8 h-8 text-green-600 mx-auto mb-2" />
-              <p className="text-2xl font-bold text-green-800">4.9/5</p>
+              <p className="text-2xl font-bold text-green-800">5.0/5</p>
               <p className="text-sm text-gray-600">Student Rating</p>
             </div>
             <div className="text-center p-4 bg-green-50 rounded-xl">

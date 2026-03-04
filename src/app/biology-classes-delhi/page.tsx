@@ -168,7 +168,7 @@ const stats = [
   { value: '1,50,000+', label: 'Students Trained', icon: Users },
   { value: '98%', label: 'Success Rate', icon: Trophy },
   { value: '3', label: 'Centers in Delhi NCR', icon: Building },
-  { value: '4.9/5', label: 'Student Rating', icon: Star },
+  { value: '5.0/5', label: 'Student Rating', icon: Star },
 ]
 
 const whyChooseUs = [

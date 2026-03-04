@@ -112,7 +112,7 @@ export default function DrShekharSinghPage() {
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                   ))}
-                  <span className="ml-2">4.9/5</span>
+                  <span className="ml-2">5.0/5</span>
                 </div>
               </div>
               <div className="md:col-span-2">

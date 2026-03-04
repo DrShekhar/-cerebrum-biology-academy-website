@@ -3567,7 +3567,7 @@ const howToPrepareForNeetOnline: SEOLandingContent = {
   stats: [
     { value: '85%', label: 'Online Students Score 600+', icon: 'trophy' },
     { value: '10K+', label: 'Students Taught Online', icon: 'users' },
-    { value: '4.9/5', label: 'Student Satisfaction', icon: 'star' },
+    { value: '5.0/5', label: 'Student Satisfaction', icon: 'star' },
     { value: '24/7', label: 'Doubt Support Available', icon: 'clock' },
   ],
 

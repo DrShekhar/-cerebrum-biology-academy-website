@@ -93,7 +93,7 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
                 <div className="text-sm text-green-100">{state.name} Students</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="text-3xl font-bold text-yellow-300">4.9★</div>
+                <div className="text-3xl font-bold text-yellow-300">5.0★</div>
                 <div className="text-sm text-green-100">Google Rating</div>
               </div>
             </div>

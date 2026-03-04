@@ -421,7 +421,7 @@ export default function IBBiologyPage() {
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star key={i} className="w-5 h-5" fill="currentColor" />
                   ))}
-                  <span className="text-white ml-2">4.9/5 Rating</span>
+                  <span className="text-white ml-2">5.0/5 Rating</span>
                 </div>
                 <p className="text-center text-gray-400 text-sm mt-2">
                   Based on 200+ student reviews

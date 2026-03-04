@@ -117,7 +117,7 @@ export default function FreeNEETDemoClassFaridabad() {
             <div className="flex items-center justify-center gap-4 text-yellow-300 mb-8">
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 fill-current" />
-                <span>4.9/5 Rating</span>
+                <span>5.0/5 Rating</span>
               </div>
               <span>|</span>
               <div className="flex items-center gap-2">

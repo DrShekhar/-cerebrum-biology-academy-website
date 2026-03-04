@@ -5,7 +5,7 @@ const class9BaseContent = {
   classLevel: 'class-9' as const,
   stats: [
     { value: '95%', label: 'Foundation Success', icon: 'trophy' },
-    { value: '4.9/5', label: 'Parent Rating', icon: 'star' },
+    { value: '5.0/5', label: 'Parent Rating', icon: 'star' },
     { value: '500+', label: 'Students Enrolled', icon: 'users' },
     { value: '3 Years', label: 'NEET Advantage', icon: 'clock' },
   ],

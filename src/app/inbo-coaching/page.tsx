@@ -436,7 +436,7 @@ export default function INBOCoachingPage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
                 <Star className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-green-400" />
-                <div className="text-xl md:text-2xl font-bold">4.9/5</div>
+                <div className="text-xl md:text-2xl font-bold">5.0/5</div>
                 <div className="text-xs md:text-sm opacity-80">Student Rating</div>
               </div>
             </div>

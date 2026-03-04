@@ -124,7 +124,7 @@ const successStats = [
   { label: 'Faridabad Students', value: '1,200+', icon: Users },
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'NEET Selections', value: '850+', icon: Award },
-  { label: 'Google Rating', value: '4.9', icon: Star },
+  { label: 'Google Rating', value: '5.0', icon: Star },
 ]
 
 const faqs = [
@@ -673,7 +673,7 @@ export default function NeetCoachingFaridabadPage() {
                       <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <div className="text-5xl font-bold text-gray-900 mb-1">4.9</div>
+                  <div className="text-5xl font-bold text-gray-900 mb-1">5.0</div>
                   <div className="text-gray-600 font-medium">out of 5.0</div>
                 </div>
                 <div className="text-gray-700 font-semibold mb-6">
@@ -1321,14 +1321,14 @@ export default function NeetCoachingFaridabadPage() {
               </div>
             </div>
 
-            {/* Badge 3: 4.9/5 Google Rating */}
+            {/* Badge 3: 5.0/5 Google Rating */}
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden animate-fadeInUp">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-600 to-orange-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Star className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">4.9/5</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">5.0/5</div>
                 <div className="text-lg font-semibold text-gray-700 mb-3">Google Rating</div>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Based on 500+ verified reviews from satisfied students and parents across

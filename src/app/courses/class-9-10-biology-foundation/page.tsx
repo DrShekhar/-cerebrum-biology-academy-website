@@ -238,7 +238,7 @@ export default function Class910BiologyFoundationPage() {
                 { value: '850+', label: 'Class 9-10 Students' },
                 { value: '65%', label: 'Better NEET Scores' },
                 { value: '15', label: 'Max Batch Size' },
-                { value: '4.9', label: 'Google Rating', icon: Star },
+                { value: '5.0', label: 'Google Rating', icon: Star },
               ].map((stat, idx) => (
                 <div key={idx}>
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 flex items-center justify-center gap-1">

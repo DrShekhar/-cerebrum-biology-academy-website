@@ -349,7 +349,7 @@ export default function BiologyTutorGurugramPage() {
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/10">
                 <Star className="w-8 h-8 mx-auto mb-2 text-purple-400" />
-                <div className="text-2xl font-bold">4.9</div>
+                <div className="text-2xl font-bold">5.0</div>
                 <div className="text-sm text-gray-400">Rating</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/10">

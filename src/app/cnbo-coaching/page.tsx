@@ -302,7 +302,7 @@ export default function CNBOCoachingPage() {
               { value: '60+', label: 'CNBO Medalists Trained' },
               { value: '95%', label: 'National Round Qualifiers' },
               { value: '200+', label: 'Hours of Content' },
-              { value: '4.9/5', label: 'Student Rating' },
+              { value: '5.0/5', label: 'Student Rating' },
             ].map((stat, index) => (
               <div key={index} className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm">
                 <div className="text-3xl md:text-4xl font-bold text-yellow-400">{stat.value}</div>

@@ -1159,7 +1159,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'Best Online Coaching for NEET Biology 2027 | Top Rated',
     metaDescription:
-      'Find the best online coaching for NEET biology with our detailed comparison. Expert faculty, small batches, 4.9★ rating. 1,50,000+ students selected.',
+      'Find the best online coaching for NEET biology with our detailed comparison. Expert faculty, small batches, 5.0★ rating. 1,50,000+ students selected.',
     keywords: [
       'best online coaching for neet biology',
       'best online neet coaching',
@@ -1252,7 +1252,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     },
     stats: [
       { value: '67+', label: 'AIIMS Selections' },
-      { value: '4.9/5', label: 'Google Rating' },
+      { value: '5.0/5', label: 'Google Rating' },
       { value: '15', label: 'Max Batch Size' },
       { value: '85%', label: 'Selection Rate' },
     ],
@@ -1282,7 +1282,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'Which is the best online coaching for NEET biology?',
         answer:
-          'The best online coaching depends on your learning style, but key factors are: (1) Expert faculty with medical background, (2) Small batch sizes of 10-15 students, (3) Live interactive sessions, (4) Quick doubt resolution, (5) Comprehensive study material, and (6) Regular tests. Cerebrum Biology Academy scores high on all these with 4.9★ rating from 1,50,000+ students.',
+          'The best online coaching depends on your learning style, but key factors are: (1) Expert faculty with medical background, (2) Small batch sizes of 10-15 students, (3) Live interactive sessions, (4) Quick doubt resolution, (5) Comprehensive study material, and (6) Regular tests. Cerebrum Biology Academy scores high on all these with 5.0★ rating from 1,50,000+ students.',
       },
       {
         question: 'How do I choose the right online NEET coaching?',

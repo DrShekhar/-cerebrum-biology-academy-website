@@ -386,7 +386,7 @@ export default function Class12BiologyPage() {
             </div>
             <div className="flex items-center gap-2">
               <Star className="h-5 w-5 text-white/80" />
-              <span className="font-medium">4.9 Rating</span>
+              <span className="font-medium">5.0 Rating</span>
             </div>
             <div className="flex items-center gap-2">
               <Shield className="h-5 w-5 text-white/80" />
@@ -741,7 +741,7 @@ export default function Class12BiologyPage() {
             </div>
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
               <Star className="w-4 h-4 text-yellow-400" />
-              <span>4.9/5 Rating</span>
+              <span>5.0/5 Rating</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
               <Shield className="w-4 h-4 text-blue-400" />

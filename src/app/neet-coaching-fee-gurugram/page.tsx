@@ -32,7 +32,7 @@ const feeComparison = [
     fee2Year: '85,000 - 1,10,000',
     batchSize: '15-20',
     includes: ['Study Material', 'Test Series', 'Doubt Sessions', 'Mock Tests'],
-    rating: 4.9,
+    rating: 5.0,
     highlight: true,
   },
   {

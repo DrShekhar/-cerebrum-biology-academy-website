@@ -248,7 +248,7 @@ export function PremiumCourseCard({ course, onSelect, className = '' }: PremiumC
               <div className="flex items-center gap-1">
                 <Star className={`h-4 w-4 ${design.accentColor}`} />
                 <span className={`${design.textColor} text-sm font-semibold`}>
-                  {course.rating || 4.9}/5.0
+                  {course.rating || 5.0}/5.0
                 </span>
               </div>
             </div>

@@ -9,7 +9,7 @@ export function CountryTrustSignals({ country }: CountryTrustSignalsProps) {
   const stats = [
     {
       icon: Star,
-      value: '4.9/5',
+      value: '5.0/5',
       label: 'Student Rating',
       color: 'text-yellow-500',
       bgColor: 'bg-yellow-100',

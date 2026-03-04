@@ -55,7 +55,7 @@ export default function PageContent() {
     },
     {
       q: 'What makes Cerebrum different from other NEET coaching centers?',
-      a: 'We specialize in coaching Indian expat students. Our AIIMS faculty combined with personalized attention, 695/720 top score achievement, and 4.9-star rating ensures the best preparation for NEET.',
+      a: 'We specialize in coaching Indian expat students. Our AIIMS faculty combined with personalized attention, 695/720 top score achievement, and 5.0-star rating ensures the best preparation for NEET.',
     },
   ]
 
@@ -82,7 +82,7 @@ export default function PageContent() {
             </div>
             <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
               <Star className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
-              <p className="text-sm text-blue-200">4.9/5 Rating</p>
+              <p className="text-sm text-blue-200">5.0/5 Rating</p>
             </div>
             <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
               <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />

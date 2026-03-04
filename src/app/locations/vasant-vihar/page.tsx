@@ -259,7 +259,7 @@ export default function VasantViharLocationPage() {
                 { value: '200+', label: 'IB/IGCSE Students' },
                 { value: '95%', label: 'Score 6+ in IB' },
                 { value: '98%', label: 'NEET Success' },
-                { value: '4.9', label: 'Google Rating', icon: Star },
+                { value: '5.0', label: 'Google Rating', icon: Star },
               ].map((stat, idx) => (
                 <div key={idx}>
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 flex items-center justify-center gap-1">

@@ -25,7 +25,7 @@ export function BookingHeader({ currentStep, stepTitles, liveBookings }: Booking
         </div>
         <div className="flex items-center gap-2">
           <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-          <span>4.9/5 rating from demos</span>
+          <span>5.0/5 rating from demos</span>
         </div>
         <div className="flex items-center gap-2">
           <TrendingUp className="w-4 h-4" />

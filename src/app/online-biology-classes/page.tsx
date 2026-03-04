@@ -256,7 +256,7 @@ export default function OnlineBiologyClassesPage() {
               { icon: Users, value: '1,50,000+', label: 'Online Students' },
               { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Video, value: '500+', label: 'Video Hours' },
-              { icon: Star, value: '4.9/5', label: 'Student Rating' },
+              { icon: Star, value: '5.0/5', label: 'Student Rating' },
             ].map((stat, index) => (
               <div key={index} className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >

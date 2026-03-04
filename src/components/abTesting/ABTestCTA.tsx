@@ -110,7 +110,7 @@ export function ABTestCTA({ context, onClick, className = '', size = 'md' }: ABT
         <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2 py-1 animate-pulse">
           <div className="flex items-center gap-1">
             <Star className="h-3 w-3" />
-            <span>4.9</span>
+            <span>5.0</span>
           </div>
         </div>
       )}

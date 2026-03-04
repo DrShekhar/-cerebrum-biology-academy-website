@@ -10,7 +10,7 @@ const faqData = {
     {
       question: 'What is Cerebrum Biology Academy?',
       answer:
-        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2015 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2009. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 1,50,000+ students with a 98% NEET qualification rate.',
+        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 1,50,000+ students with a 98% NEET qualification rate.',
     },
     {
       question: 'Who is Dr. Shekhar C Singh?',

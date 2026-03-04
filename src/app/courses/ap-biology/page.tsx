@@ -299,7 +299,7 @@ export default function APBiologyPage() {
                 { value: '100+', label: 'AP Students' },
                 { value: '70%', label: 'Score 5' },
                 { value: '95%', label: 'Score 4+' },
-                { value: '4.9', label: 'Rating', icon: Star },
+                { value: '5.0', label: 'Rating', icon: Star },
               ].map((s, i) => (
                 <div key={i}>
                   <div className="text-3xl md:text-4xl font-bold text-yellow-400 flex items-center justify-center gap-1">

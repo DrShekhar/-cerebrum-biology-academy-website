@@ -142,7 +142,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
     },
     {
       icon: Star,
-      value: '4.9/5',
+      value: '5.0/5',
       label: language === 'hi' ? 'रेटिंग' : 'Rating',
       color: 'text-yellow-600',
     },

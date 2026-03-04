@@ -93,7 +93,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       studentsEnrolled: 850,
       batchSize: 25,
       faculty: 'Dr. Priya Sharma',
-      rating: 4.9,
+      rating: 5.0,
       description: 'Perfect foundation for Class 9-10 students starting their NEET journey early.',
     },
     {

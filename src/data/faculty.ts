@@ -25,7 +25,7 @@ export const facultyMembers: Faculty[] = [
     studentTestimonial:
       'Dr. Shekhar Sir made Biology so clear and interesting. His unique teaching methods helped me score 695 marks in NEET. - Sadhna Sirin',
     studentsGuided: 150000,
-    rating: 4.9,
+    rating: 5.0,
   },
   {
     id: 'dr-priya-sharma',

@@ -244,7 +244,7 @@ export default function OnlineBiologyTutorPage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">4.9/5</div>
+                <div className="text-2xl font-bold">5.0/5</div>
                 <div className="text-sm opacity-80">Student Rating</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
@@ -391,7 +391,7 @@ export default function OnlineBiologyTutorPage() {
                 <div>
                   <div className="flex justify-between mb-2">
                     <span className="font-medium">Student Satisfaction</span>
-                    <span className="text-green-600 font-bold">4.9/5</span>
+                    <span className="text-green-600 font-bold">5.0/5</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-3">
                     <div className="bg-green-600 h-3 rounded-full" style={{ width: '98%' }}></div>

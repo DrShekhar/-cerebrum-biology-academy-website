@@ -159,7 +159,7 @@ export default function VideoLecturesPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">Student Rating</span>
                   <div className="flex items-center">
-                    <span className="text-2xl font-bold text-yellow-600 mr-2">4.9</span>
+                    <span className="text-2xl font-bold text-yellow-600 mr-2">5.0</span>
                     <div className="flex text-yellow-400">
                       {[1, 2, 3, 4, 5].map((i) => (
                         <span key={i}>★</span>

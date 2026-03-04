@@ -145,7 +145,7 @@ export default function InternationalBiologyPage({
               { icon: Users, value: curriculum.studentCount, label: 'Students Enrolled' },
               { icon: Globe, value: curriculum.countries.length + '+', label: 'Countries' },
               { icon: Trophy, value: '95%', label: 'Pass Rate' },
-              { icon: Star, value: '4.9/5', label: 'Student Rating' },
+              { icon: Star, value: '5.0/5', label: 'Student Rating' },
             ].map((stat, index) => (
               <div
                 key={index}

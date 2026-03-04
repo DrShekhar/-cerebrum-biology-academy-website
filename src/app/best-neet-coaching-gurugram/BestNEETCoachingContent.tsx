@@ -26,7 +26,7 @@ const coachingComparison = [
     experience: '15+ years',
     features: ['AIIMS-trained faculty', 'Small batches', 'Personalized attention', 'Biology specialist', 'Gurugram-based'],
     cons: ['Biology only (refer partners for PCM)'],
-    rating: 4.9,
+    rating: 5.0,
     reviews: 400,
   },
   {
@@ -88,7 +88,7 @@ const whyChooseCerebrum = [
 const successStats = [
   { stat: '98%', label: 'Success Rate' },
   { stat: '15+', label: 'Years Experience' },
-  { stat: '4.9/5', label: 'Google Rating' },
+  { stat: '5.0/5', label: 'Google Rating' },
   { stat: '₹60K', label: 'Annual Fees' },
 ]
 

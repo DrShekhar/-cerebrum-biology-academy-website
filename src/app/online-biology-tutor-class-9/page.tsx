@@ -210,7 +210,7 @@ export default function OnlineBiologyTutorClass9Page() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">4.9/5</div>
+                <div className="text-2xl font-bold">5.0/5</div>
                 <div className="text-sm opacity-80">Rating</div>
               </div>
             </div>

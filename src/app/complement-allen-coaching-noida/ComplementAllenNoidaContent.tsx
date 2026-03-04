@@ -108,7 +108,7 @@ const successStats = [
   { stat: '50-70', label: 'Average marks improvement in Biology' },
   { stat: '85%', label: 'Score 320+ in Biology' },
   { stat: '200+', label: 'Allen students enrolled with us' },
-  { stat: '4.9/5', label: 'Student satisfaction rating' },
+  { stat: '5.0/5', label: 'Student satisfaction rating' },
 ]
 
 export default function ComplementAllenNoidaContent({ faqs }: { faqs: FAQ[] }) {

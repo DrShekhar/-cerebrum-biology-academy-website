@@ -465,7 +465,7 @@ export default function DoubtResolutionPage() {
                   <span className="text-gray-600">Rating</span>
                   <div className="flex items-center">
                     <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                    <span className="font-semibold text-gray-900 ml-1">4.9/5</span>
+                    <span className="font-semibold text-gray-900 ml-1">5.0/5</span>
                   </div>
                 </div>
               </div>

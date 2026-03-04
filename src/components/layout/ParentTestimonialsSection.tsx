@@ -395,7 +395,7 @@ export function ParentTestimonialsSection({
             </div>
             <div className="hidden sm:flex items-center min-w-0">
               <div className="w-2 h-2 bg-yellow-400 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>
-              <span className="whitespace-nowrap">4.9/5 Rating</span>
+              <span className="whitespace-nowrap">5.0/5 Rating</span>
             </div>
             <div className="hidden sm:flex items-center min-w-0">
               <div className="w-2 h-2 bg-green-500 rounded-full mr-1 sm:mr-2 flex-shrink-0"></div>

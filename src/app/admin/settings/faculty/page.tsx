@@ -80,7 +80,7 @@ const mockFaculty: Faculty[] = [
     joinedDate: '2022-06-01',
     coursesAssigned: ['Foundation Biology'],
     activeStudents: 98,
-    rating: 4.9,
+    rating: 5.0,
     status: 'active',
     availability: 'Mon-Fri, 2 PM - 7 PM',
   },

@@ -176,7 +176,7 @@ export default function OnlineBiologyClassesNRIPage() {
               { icon: Users, value: '10,000+', label: 'NRI Students' },
               { icon: Globe, value: '40+', label: 'Countries' },
               { icon: Trophy, value: '98%', label: 'Success Rate' },
-              { icon: Star, value: '4.9/5', label: 'Parent Rating' },
+              { icon: Star, value: '5.0/5', label: 'Parent Rating' },
             ].map((stat, index) => (
               <div key={index} className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >

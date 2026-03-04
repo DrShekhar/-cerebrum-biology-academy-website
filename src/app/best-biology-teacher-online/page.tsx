@@ -53,7 +53,7 @@ const whyBestTeacher = [
   { metric: 'Success Rate', value: '98%', detail: 'Students clearing NEET cutoff' },
   { metric: 'Selections', value: '67+', detail: 'AIIMS selections' },
   { metric: 'Top AIRs', value: '50+', detail: 'Students in Top 1000 AIR' },
-  { metric: 'Rating', value: '4.9/5', detail: 'Average student rating' },
+  { metric: 'Rating', value: '5.0/5', detail: 'Average student rating' },
   { metric: 'Reach', value: 'Pan-India', detail: 'Students from all 28 states' },
 ]
 
@@ -182,7 +182,7 @@ export default function BestBiologyTeacherOnlinePage() {
                       </div>
                       <div className="flex items-center gap-1 text-amber-500">
                         <Star className="h-4 w-4 fill-current" />
-                        <span className="font-semibold">4.9</span>
+                        <span className="font-semibold">5.0</span>
                       </div>
                     </div>
                   </div>

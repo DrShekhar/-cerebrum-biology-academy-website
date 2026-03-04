@@ -119,7 +119,7 @@ const COMPARISON_FEATURES: ComparisonFeature[] = [
       },
       {
         label: 'Course Rating',
-        getValue: (course) => course.rating || 4.9,
+        getValue: (course) => course.rating || 5.0,
         format: (value) => `${value}/5.0 ⭐`,
         description: 'Student satisfaction rating',
       },

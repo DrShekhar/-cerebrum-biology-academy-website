@@ -198,7 +198,7 @@ const MOCK_COURSE_DATA: CourseData[] = [
         recommended: true,
         bestValue: true,
         conversionRate: 0.45,
-        satisfactionScore: 4.9,
+        satisfactionScore: 5.0,
       },
       {
         id: 'C',
