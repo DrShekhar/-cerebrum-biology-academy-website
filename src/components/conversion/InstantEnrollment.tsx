@@ -419,7 +419,7 @@ export function InstantEnrollment({
               variant="medical"
               size="lg"
               onClick={onClose}
-              className="w-full bg-green-600 hover:from-green-700 hover:to-green-700 text-white"
+              className="w-full bg-green-600 hover:bg-green-700 text-white"
             >
               Continue to Dashboard
             </PremiumButton>

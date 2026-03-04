@@ -403,7 +403,7 @@ export default function StudyPlanGeneratorPage() {
 
                   <button
                     onClick={generateStudyPlan}
-                    className="w-full rounded-lg bg-green-600 px-6 py-4 text-lg font-semibold text-white transition-all hover:from-green-700 hover:to-green-700"
+                    className="w-full rounded-lg bg-green-600 hover:bg-green-700 px-6 py-4 text-lg font-semibold text-white transition-all"
                   >
                     Generate My Study Plan
                   </button>

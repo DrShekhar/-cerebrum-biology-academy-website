@@ -336,7 +336,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               variant="medical"
               size="lg"
               onClick={handleEnrollNow}
-              className="w-full bg-green-600 hover:from-green-700 hover:to-green-700 text-white py-4"
+              className="w-full bg-green-600 hover:bg-green-700 text-white py-4"
             >
               <GraduationCap className="h-5 w-5" />
               Enroll Now - Start Your Success Journey

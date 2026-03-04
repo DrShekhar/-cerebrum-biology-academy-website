@@ -195,7 +195,7 @@ export function ProgressiveDisclosureQuiz({
               variant="medical"
               size="lg"
               onClick={handleEnrollNow}
-              className="w-full bg-green-600 hover:from-green-600 hover:to-green-700 text-white py-3"
+              className="w-full bg-green-600 hover:bg-green-700 text-white py-3"
             >
               Enroll Now
               <ChevronRight className="h-5 w-5" />

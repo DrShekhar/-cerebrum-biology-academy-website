@@ -250,7 +250,7 @@ export default function NCERTBiologyClass11Page() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button className="bg-green-600 hover:from-green-700 hover:to-green-700 text-white px-6 py-3 rounded-xl flex items-center gap-2">
+                      <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl flex items-center gap-2">
                         <ShoppingCart className="w-5 h-5" />
                         Buy from Amazon India
                         <ExternalLink className="w-4 h-4" />

@@ -790,7 +790,7 @@ Please help me choose the right course and enrollment process.`
                       campaign: 'exploratory-flow',
                     })
                   }}
-                  className="w-full bg-[#4a5d4a] hover:from-green-700 hover:to-green-800 text-white"
+                  className="w-full bg-[#4a5d4a] hover:bg-[#3d4f3d] text-white"
                 >
                   Chat on WhatsApp
                 </PremiumButton>
