@@ -154,7 +154,7 @@ const faqs = [
   {
     question: 'Do you have centers in Noida and Gurgaon?',
     answer:
-      'Yes! We have 6 centers - South Delhi (South Extension), Rohini (DC Chauk), Gurgaon (M2K Corporate Park, Sector 51), and Faridabad. All centers are near metro stations. We also offer online classes for students from Noida and Ghaziabad.',
+      'Yes! We have 6 centers - South Extension, Rohini (DC Chauk), Gurugram (M2K Corporate Park, Sector 51), Faridabad, Green Park, and Noida. All centers are well-connected. We also offer online classes for students across India.',
   },
   {
     question: 'Is there a free demo class available?',

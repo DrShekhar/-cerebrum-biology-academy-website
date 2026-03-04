@@ -64,7 +64,7 @@ const faqs = [
   {
     question: 'How do I find biology classes near my location?',
     answer:
-      'We have offline centers in Rohini, Gurugram, South Delhi, and Faridabad. If you are not near these centers, our online classes provide the same quality education with live interactive sessions. Use the location selector above to find the nearest center or choose online mode.',
+      'We have 6 offline centers in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. If you are not near these centers, our online classes provide the same quality education with live interactive sessions.',
   },
   {
     question: 'Are offline and online classes the same quality?',
@@ -79,7 +79,7 @@ const faqs = [
   {
     question: 'What areas do your offline centers cover?',
     answer:
-      'Our Rohini center covers North Delhi, Gurugram center covers entire Gurgaon and parts of South Delhi, South Extension center covers South Delhi, and Faridabad center covers the entire Faridabad district.',
+      'Our Rohini center covers North Delhi, Gurugram center covers Gurgaon, South Extension and Green Park cover South Delhi, Faridabad center covers the entire Faridabad district, and Noida center covers Noida and Greater Noida.',
   },
 ]
 
