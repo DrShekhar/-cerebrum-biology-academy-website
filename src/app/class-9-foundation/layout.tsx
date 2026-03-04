@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     'Class 9 biology foundation course for early NEET preparation. NCERT-aligned curriculum, concept building, regular assessments. Start your NEET journey from Class 9!',
   openGraph: {
     title: 'Class 9 Foundation Course | Biology & NEET Preparation',
+    images: ['/og-image.jpg'],
     description:
       'Class 9 biology foundation course for early NEET preparation. NCERT-aligned curriculum, concept building, regular assessments. Start your NEET journey from Class 9!',
     url: 'https://cerebrumbiologyacademy.com/class-9-foundation',

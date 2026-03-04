@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     'Best NEET coaching in West Delhi. Expert biology classes for Class 11, 12 & droppers. AIIMS-trained faculty, small batches, 98% success rate. Free demo class!',
   openGraph: {
     title: 'NEET Coaching in West Delhi | Biology Classes Near You',
+    images: ['/og-image.jpg'],
     description:
       'Best NEET coaching in West Delhi. Expert biology classes for Class 11, 12 & droppers. AIIMS-trained faculty, small batches, 98% success rate. Free demo class!',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi',

@@ -197,11 +197,18 @@ See previous plan in `.claude/plans/curious-discovering-moler.md`:
 | 8 | 5A: Header hover fix (12 files) | DONE | 5b241415 |
 | 9 | 3B: Phone tracking double-count fix | DONE | 82bdaf84 |
 | 10 | 3C: Blog WhatsApp CTA | VERIFIED OK (already working) |
-| 11 | 1B: Years experience consistency | PENDING — needs user decision (12+ vs 15+) |
-| 12 | 4A: Speakable schema extension | PENDING — already exists, needs extension to courses/about |
-| 13 | 4C: PeopleAlsoAsk schema | PENDING — low priority |
-| 14 | 5B-5D: Location/OG/internal linking | PENDING — larger tasks |
-| 15 | 6: MCQ multi-audience | PENDING — separate plan |
+| 11 | 1B: Years experience consistency | DONE — "15+" = Dr. Shekhar's career, "12+" = academy age. Both correct. |
+| 12 | 4A: Speakable schema on /courses | DONE | ba7bfefb |
+| 13 | 4C: PeopleAlsoAsk schema | LOW PRIORITY — already on many pages |
+| 14 | 5C: Missing OG images | IN PROGRESS |
+| 15 | 5D: Results ↔ Reviews cross-linking | DONE | ba7bfefb |
+| 16 | Data: Inflated 1,50,000+ → 15,000+ (209 files) | DONE | ba7bfefb |
+| 17 | Data: foundingDate 2015→2014 (23 files) | DONE | 89f6ac8d |
+| 18 | Data: About page stats + OG images | DONE | f40203a1 |
+| 19 | UI: Maintenance popup removed | DONE | ba7bfefb |
+| 20 | SEO: 3 MCQ pages added to sitemap | DONE | 902cf5dc |
+| 21 | 6: MCQ multi-audience | VERIFIED COMPLETE — all 7 steps already done |
+| 22 | 5B: Location page improvements | PENDING — larger content task |
 
 ---
 
@@ -209,6 +216,7 @@ See previous plan in `.claude/plans/curious-discovering-moler.md`:
 
 - **WhatsApp login redirect is INTENTIONAL** — running Google Ads, Indian users prefer WhatsApp
 - **Rating already fixed**: 4.9 → 5.0 across 238 files (commit b41dbaf8)
-- **Founding year partially fixed**: "2015" instances done, "2009" instances remain (this plan)
+- **Founding year fully fixed**: "2009" → "2014" (fc8e3ed2), "2015" → "2014" (89f6ac8d), "2010" → "2014" (f40203a1)
 - **FloatingCTA already fixed**: Removed floating phone icon, fixed sticky bar spacing (commit 9bfd5560)
-- Git state: 3 unpushed commits on main (39c73010, b41dbaf8, 9bfd5560)
+- **Student counts**: "15,000+" is the standard across site (was inflated to 1,50,000+)
+- **Centers**: 6 centers (South Extension, Rohini, Gurugram, Faridabad, Green Park, Noida)

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   keywords: 'NEET demo class, free biology demo, NEET trial class, biology coaching demo, Cerebrum Academy demo',
   openGraph: {
     title: 'Book Free Demo Class',
+    images: ['/og-image.jpg'],
     description: 'Experience NEET Biology coaching with AIIMS-trained faculty. Book your free demo class today!',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/demo',

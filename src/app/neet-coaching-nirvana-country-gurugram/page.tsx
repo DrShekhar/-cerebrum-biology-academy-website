@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Coaching Nirvana Country Gurugram',
+    images: ['/og-image.jpg'],
     description: 'Best NEET coaching near Nirvana Country. Just 10 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-nirvana-country-gurugram',
   },

@@ -68,6 +68,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: topic.publishedAt?.toISOString(),
       authors: ['Dr. Shekhar C Singh'],
+      images: ['/og-image.jpg'],
     },
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/biology-notes/${resolvedParams.slug}`,

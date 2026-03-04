@@ -110,7 +110,7 @@ const faqs = [
   {
     question: 'Do you offer online biology tutoring?',
     answer:
-      'Yes! We offer both offline classes at our 4 centers (Rohini, Gurugram, South Extension, Faridabad) and live online classes. Online students get the same quality teaching with recorded lectures for revision.',
+      'Yes! We offer both offline classes at our 6 centers (Rohini, Gurugram, South Extension, Faridabad, Green Park, Noida) and live online classes. Online students get the same quality teaching with recorded lectures for revision.',
   },
   {
     question: 'What is the fee for biology tutoring?',

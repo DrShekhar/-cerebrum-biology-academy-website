@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     'Meet our expert faculty at Cerebrum Biology Academy. AIIMS-trained biology teachers with 10+ years experience. Led by Dr. Shekhar with 67+ AIIMS selections.',
   openGraph: {
     title: 'Our Faculty | AIIMS-Trained Biology Teachers at Cerebrum Academy',
+    images: ['/og-image.jpg'],
     description:
       'Meet our expert faculty at Cerebrum Biology Academy. AIIMS-trained biology teachers with 10+ years experience. Led by Dr. Shekhar with 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/faculty',

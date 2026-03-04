@@ -118,7 +118,7 @@ const faqs = [
   {
     question: 'What types of NEET classes do you offer?',
     answer:
-      'We offer live interactive online classes, offline classroom sessions at our 4 centres (Rohini, Gurugram, South Extension, Faridabad), recorded lectures for revision, and dedicated doubt clearing sessions. You can choose the mode that suits you best.',
+      'We offer live interactive online classes, offline classroom sessions at our 4 centres (Rohini, Gurugram, South Extension, Faridabad, Green Park, Noida), recorded lectures for revision, and dedicated doubt clearing sessions. You can choose the mode that suits you best.',
   },
   {
     question: 'What are the NEET class timings?',

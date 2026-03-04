@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   ].join(', '),
   openGraph: {
     title: 'Free NEET Biology Notes',
+    images: ['/og-image.jpg'],
     description: 'Comprehensive biology notes for NEET preparation by Dr. Shekhar C Singh',
     type: 'website',
   },

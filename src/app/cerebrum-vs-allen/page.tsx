@@ -53,7 +53,7 @@ const jsonLdSchema = {
       name: 'Does Cerebrum have online coaching like Allen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, Cerebrum offers both offline classes at 4 centers in Delhi NCR and online coaching options. Students can choose the mode that best fits their schedule.',
+        text: 'Yes, Cerebrum offers both offline classes at 6 centers in Delhi NCR and online coaching options. Students can choose the mode that best fits their schedule.',
       },
     },
     {
@@ -160,7 +160,7 @@ export default function CerebrumVsAllenPage() {
                   },
                   {
                     criteria: 'Coverage',
-                    cerebrum: '4 centers in Delhi NCR + Online',
+                    cerebrum: '6 centers in Delhi NCR + Online',
                     allen: 'Pan-India (50+ centers)',
                   },
                 ].map((row, index) => (
@@ -516,7 +516,7 @@ export default function CerebrumVsAllenPage() {
               {
                 title: 'Delhi NCR Convenience',
                 description:
-                  '4 centers strategically located across Delhi NCR with flexible online options. Learn in your preferred mode and location.',
+                  '6 centers strategically located across Delhi NCR with flexible online options. Learn in your preferred mode and location.',
               },
             ].map((item, i) => (
               <div key={i} className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">

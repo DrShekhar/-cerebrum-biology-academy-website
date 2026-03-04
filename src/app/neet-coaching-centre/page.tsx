@@ -110,7 +110,7 @@ const faqs = [
   {
     question: 'Where are your NEET coaching centres located?',
     answer:
-      'We have 4 NEET coaching centres in Delhi NCR: Rohini (North Delhi), Gurugram, South Extension (South Delhi), and Faridabad. All centres are easily accessible by metro and public transport.',
+      'We have 6 NEET coaching centres in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. All centres are easily accessible by metro and public transport.',
   },
   {
     question: 'Which is the best NEET coaching centre near me?',
@@ -182,7 +182,7 @@ export default function NeetCoachingCentrePage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Rohini | Gurugram | South Extension | Faridabad
+              Rohini | Gurugram | South Extension | Faridabad | Green Park | Noida
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">

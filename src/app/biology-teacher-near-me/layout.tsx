@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Biology Teacher Near Me | Find Best Biology Teacher 2027',
   description:
-    'Find the best biology teacher near you. Offline centers in Delhi NCR (Rohini, Gurugram, South Extension, Faridabad) or join online from anywhere. AIIMS-trained faculty, 98% success rate.',
+    'Find the best biology teacher near you. Offline centers in Delhi NCR (Rohini, Gurugram, South Extension, Faridabad, Green Park, Noida) or join online from anywhere. AIIMS-trained faculty, 98% success rate.',
   keywords: [
     'biology teacher near me',
     'best biology teacher near me',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology Teacher Near Me | Delhi NCR & Online',
     description:
-      'Find expert biology teachers near you. 4 offline centers in Delhi NCR + online classes available.',
+      'Find expert biology teachers near you. 6 offline centers in Delhi NCR + online classes available.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/biology-teacher-near-me',

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Foundation Class 9 in Noida | 4-Year Head Start',
+    images: ['/og-image.jpg'],
     description:
       'Start your NEET journey from Class 9 in Noida. Build strong foundation with our expert faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-noida',

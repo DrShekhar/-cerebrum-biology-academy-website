@@ -77,7 +77,7 @@ const faqs = [
   {
     question: 'Can I switch from online to offline coaching?',
     answer:
-      'Yes, students can switch between online and offline modes. If you move to Delhi NCR, you can transfer to our offline centers at Rohini, Gurugram, South Extension, or Faridabad.',
+      'Yes, students can switch between online and offline modes. If you move to Delhi NCR, you can transfer to our offline centers at Rohini, Gurugram, South Extension, Faridabad, Green Park, or Noida.',
   },
 ]
 

@@ -125,7 +125,7 @@ const faqs = [
   {
     question: 'Is there a NEET academy near me?',
     answer:
-      'We have 4 physical centres in Delhi NCR - Rohini, Gurugram, South Extension, and Faridabad. If you are not near any of these, join our online program which offers the same quality education with live interactive classes.',
+      'We have 6 physical centres in Delhi NCR - Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. If you are not near any of these, join our online program which offers the same quality education with live interactive classes.',
   },
   {
     question: 'What courses does your NEET institute offer?',

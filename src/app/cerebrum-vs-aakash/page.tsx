@@ -37,7 +37,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: 'Does Cerebrum have centers outside Delhi NCR?',
-    answer: 'Currently, Cerebrum Biology Academy operates 4 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum\'s online programs allow students nationwide to access AIIMS-trained faculty expertise.',
+    answer: 'Currently, Cerebrum Biology Academy operates 6 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum\'s online programs allow students nationwide to access AIIMS-trained faculty expertise.',
   },
 ];
 

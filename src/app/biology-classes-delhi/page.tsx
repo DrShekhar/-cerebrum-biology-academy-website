@@ -23,7 +23,7 @@ import {
 export const metadata: Metadata = {
   title: 'Biology Classes in Delhi | Best NEET Biology Coaching',
   description:
-    'Join the best biology classes in Delhi with AIIMS-trained faculty. 4 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
+    'Join the best biology classes in Delhi with AIIMS-trained faculty. 6 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
   keywords: [
     'biology classes in delhi',
     'biology coaching delhi',
@@ -125,7 +125,7 @@ const faqs = [
   {
     question: 'Which is the best biology coaching in Delhi for NEET?',
     answer:
-      'Cerebrum Biology Academy is rated as one of the best biology coaching institutes in Delhi with 98% success rate. Our AIIMS-trained faculty, small batch sizes (15-20 students), comprehensive study material, and personalized attention make us the top choice for NEET aspirants. We have 4 centers in Delhi NCR - Rohini, South Extension, Gurugram, and Faridabad.',
+      'Cerebrum Biology Academy is rated as one of the best biology coaching institutes in Delhi with 98% success rate. Our AIIMS-trained faculty, small batch sizes (15-20 students), comprehensive study material, and personalized attention make us the top choice for NEET aspirants. We have 6 centers in Delhi NCR - Rohini, South Extension, Gurugram, and Faridabad.',
   },
   {
     question: 'What is the fee for biology classes in Delhi?',
@@ -213,7 +213,7 @@ export default function BiologyClassesDelhiPage() {
     '@id': `${baseUrl}/biology-classes-delhi#organization`,
     name: 'Cerebrum Biology Academy - Delhi',
     description:
-      'Best biology classes in Delhi for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. 4 centers in Rohini, South Extension, Gurugram, and Faridabad.',
+      'Best biology classes in Delhi for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. 6 centers in Rohini, South Extension, Gurugram, and Faridabad.',
     url: `${baseUrl}/biology-classes-delhi`,
     telephone: '+91-8826444334',
     email: 'info@cerebrumbiologyacademy.com',

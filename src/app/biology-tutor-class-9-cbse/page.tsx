@@ -133,7 +133,7 @@ const faqs = [
   {
     question: 'Do you offer both online and offline classes for Class 9?',
     answer:
-      'Yes! We offer offline classes at our 4 centers in Delhi NCR and live online classes for students across India. Both modes have the same faculty and curriculum with equal focus on quality education.',
+      'Yes! We offer offline classes at our 6 centers in Delhi NCR and live online classes for students across India. Both modes have the same faculty and curriculum with equal focus on quality education.',
   },
   {
     question: 'What is the fee for Class 9 CBSE biology coaching?',

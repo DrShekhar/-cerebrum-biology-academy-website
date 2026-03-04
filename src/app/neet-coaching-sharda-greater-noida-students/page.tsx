@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: pageData.metaTitle,
+    images: ['/og-image.jpg'],
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-sharda-greater-noida-students',
     type: 'website',

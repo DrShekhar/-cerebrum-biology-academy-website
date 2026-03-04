@@ -32,7 +32,7 @@ const comparison = [
   { factor: 'Test Series', aakash: 'AIATS (Good)', allen: 'AITS (Excellent)', winner: 'Allen' },
   { factor: 'Online Platform', aakash: 'Aakash Digital', allen: 'Allen Digital', winner: 'Tie' },
   { factor: 'Faculty Quality', aakash: 'Good', allen: 'Very Good', winner: 'Allen' },
-  { factor: 'Gurugram Presence', aakash: '5+ centers', allen: '3-4 centers', winner: 'Aakash' },
+  { factor: 'Gurugram Presence', aakash: '5+ centers', allen: '3-6 centers', winner: 'Aakash' },
   { factor: 'Personal Attention', aakash: 'Limited', allen: 'Limited', winner: 'Neither' },
 ]
 

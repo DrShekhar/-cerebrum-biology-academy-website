@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: cityData.metaTitle,
+    images: ['/og-image.jpg'],
     description: cityData.metaDescription,
     url: `https://cerebrumbiologyacademy.com/biology-classes-cr-park`,
   },

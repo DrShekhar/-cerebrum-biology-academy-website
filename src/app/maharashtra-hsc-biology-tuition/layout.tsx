@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     'Expert Maharashtra HSC biology tuition for board exams & MHT-CET/NEET preparation. State board aligned teaching with competitive exam focus. Online classes available!',
   openGraph: {
     title: 'Maharashtra HSC Biology Tuition | MHT-CET & NEET Coaching',
+    images: ['/og-image.jpg'],
     description:
       'Expert Maharashtra HSC biology tuition for board exams & MHT-CET/NEET preparation. State board aligned teaching with competitive exam focus. Online classes available!',
     url: 'https://cerebrumbiologyacademy.com/maharashtra-hsc-biology-tuition',

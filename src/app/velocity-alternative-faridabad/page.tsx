@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology',
+    images: ['/og-image.jpg'],
     description:
       'Why Faridabad students choose Cerebrum over Velocity Institute for focused NEET Biology preparation.',
     url: 'https://cerebrumbiologyacademy.com/velocity-alternative-faridabad',

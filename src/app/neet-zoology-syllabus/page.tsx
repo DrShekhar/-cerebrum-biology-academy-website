@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   keywords: content.keywords,
   openGraph: {
     title: content.title,
+    images: ['/og-image.jpg'],
     description: content.metaDescription,
     type: 'website',
     url: `https://cerebrumbiologyacademy.com/${content.slug}`,

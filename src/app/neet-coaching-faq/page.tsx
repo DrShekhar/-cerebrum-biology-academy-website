@@ -10,7 +10,7 @@ const faqData = {
     {
       question: 'What is Cerebrum Biology Academy?',
       answer:
-        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 15,000+ students with a 98% NEET qualification rate.',
+        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience since 2014. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 6 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 15,000+ students with a 98% NEET qualification rate.',
     },
     {
       question: 'Who is Dr. Shekhar C Singh?',
@@ -40,7 +40,7 @@ const faqData = {
     {
       question: 'What are Cerebrum\'s contact details?',
       answer:
-        'Phone: +91-88264-44334 | Email: info@cerebrumbiologyacademy.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 4 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
+        'Phone: +91-88264-44334 | Email: info@cerebrumbiologyacademy.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 6 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
     },
     {
       question: 'How can I book a free demo class?',
@@ -240,7 +240,7 @@ const faqData = {
     {
       question: 'Are there any centers outside Delhi NCR?',
       answer:
-        'Cerebrum currently operates only in Delhi NCR (4 centers: South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida). Expansion plans: We are opening centers in Bangalore, Mumbai, Pune in 2026 (target launch June 2026). Until then, students from other cities can join our Live Online batch - Same faculty, same curriculum, recorded lectures, doubt-clearing in real-time. Online students from Chennai, Mumbai, Bangalore, Hyderabad are already performing well (average score 330+). Join online without geography limitation. After 2026 expansion, you can transfer to offline if you relocate to those cities.',
+        'Cerebrum currently operates only in Delhi NCR (6 centers: South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida). Expansion plans: We are opening centers in Bangalore, Mumbai, Pune in 2026 (target launch June 2026). Until then, students from other cities can join our Live Online batch - Same faculty, same curriculum, recorded lectures, doubt-clearing in real-time. Online students from Chennai, Mumbai, Bangalore, Hyderabad are already performing well (average score 330+). Join online without geography limitation. After 2026 expansion, you can transfer to offline if you relocate to those cities.',
     },
     {
       question: 'Which center should I choose?',
