@@ -1604,7 +1604,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     relatedPages: [
       { title: 'NEET Important Questions', link: '/neet-biology-important-questions' },
       { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
-      { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+      { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2026' },
     ],
     schema: {
       '@type': 'Course',

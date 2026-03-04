@@ -4523,12 +4523,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     // NEET Coaching & Course Pages
-    {
-      url: `${baseUrl}/neet-2025-biology-coaching`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
+    // neet-2025-biology-coaching → redirects to /neet-2026-preparation
     {
       url: `${baseUrl}/neet-application-form-2026`,
       lastModified: lastUpdated,
@@ -4631,12 +4626,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/neet-biology-syllabus-2025`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
+    // neet-biology-syllabus-2025 → redirects to /neet-biology-syllabus-2026
     {
       url: `${baseUrl}/neet-biology-tutor-for-droppers`,
       lastModified: lastUpdated,
@@ -5053,12 +5043,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/neet-dropper-crash-course-2025`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
+    // neet-dropper-crash-course-2025 → redirects to /neet-crash-course
     {
       url: `${baseUrl}/neet-droppers-batch-gurgaon`,
       lastModified: lastUpdated,
@@ -5095,12 +5080,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/neet-exam-pattern-2025`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
+    // neet-exam-pattern-2025 → redirects to /neet-exam-details
     {
       url: `${baseUrl}/neet-guidance-seminar`,
       lastModified: lastUpdated,
@@ -5137,12 +5117,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/neet-repeater-course-2025`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
+    // neet-repeater-course-2025 → redirects to /neet-repeaters-2026
     {
       url: `${baseUrl}/neet-repeaters-2026`,
       lastModified: lastUpdated,
@@ -5167,12 +5142,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/neet-syllabus-2025`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
+    // neet-syllabus-2025 → redirects to /neet-syllabus-2026
     {
       url: `${baseUrl}/neet-syllabus-2026`,
       lastModified: lastUpdated,

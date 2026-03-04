@@ -199,8 +199,8 @@ const neetSyllabus2027: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
-    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2026' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-details' },
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
   ],
 
@@ -408,9 +408,9 @@ const neetEligibilityCriteria: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2026' },
     { title: 'NEET Registration Guide', link: '/neet-registration-guide' },
-    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-details' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -612,9 +612,9 @@ const neetExamPattern2027: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2026' },
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2026' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -1021,7 +1021,7 @@ const neetBiologySyllabus2027: SEOLandingContent = {
   relatedPages: [
     { title: 'NEET Botany Syllabus', link: '/neet-botany-syllabus' },
     { title: 'NEET Zoology Syllabus', link: '/neet-zoology-syllabus' },
-    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2026' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -1219,7 +1219,7 @@ const neetBotanySyllabus: SEOLandingContent = {
 
   relatedPages: [
     { title: 'NEET Zoology Syllabus', link: '/neet-zoology-syllabus' },
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2026' },
     { title: 'Plant Physiology Tuition', link: '/plant-physiology-class-11' },
   ],
 
@@ -1417,7 +1417,7 @@ const neetZoologySyllabus: SEOLandingContent = {
 
   relatedPages: [
     { title: 'NEET Botany Syllabus', link: '/neet-botany-syllabus' },
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2026' },
     { title: 'Human Physiology Tuition', link: '/human-physiology-tuition' },
   ],
 
@@ -1621,8 +1621,8 @@ const neetPreparationGuide: SEOLandingContent = {
   },
 
   relatedPages: [
-    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2025' },
-    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2026' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-details' },
     { title: 'NEET Dropper Course', link: '/neet-dropper-batch-online' },
   ],
 
@@ -1826,7 +1826,7 @@ const neetExamDetails: SEOLandingContent = {
   relatedPages: [
     { title: 'NEET Eligibility Criteria', link: '/neet-eligibility-criteria' },
     { title: 'NEET Registration Guide', link: '/neet-registration-guide' },
-    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2026' },
   ],
 
   contactButtons: defaultContactButtons,
@@ -3689,7 +3689,7 @@ const howToPrepareForNeetOnline: SEOLandingContent = {
 
   relatedPages: [
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
-    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2026' },
     { title: 'NEET Study Tips', link: '/neet-study-tips' },
     { title: 'NEET Time Management', link: '/neet-time-management' },
   ],
@@ -4010,9 +4010,9 @@ const neetTipsStrategy: SEOLandingContent = {
 
   relatedPages: [
     { title: 'NEET Preparation Guide', link: '/neet-preparation-guide' },
-    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2025' },
-    { title: 'NEET Exam Pattern', link: '/neet-exam-pattern-2025' },
-    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2025' },
+    { title: 'NEET Syllabus 2027', link: '/neet-syllabus-2026' },
+    { title: 'NEET Exam Pattern', link: '/neet-exam-details' },
+    { title: 'NEET Biology Syllabus', link: '/neet-biology-syllabus-2026' },
   ],
 
   schema: {

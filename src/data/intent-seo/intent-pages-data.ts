@@ -217,7 +217,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
       { name: 'Rohini Center', url: '/biology-classes-rohini' },
       { name: 'Gurugram Center', url: '/biology-classes-gurgaon' },
       { name: 'South Delhi Center', url: '/biology-classes-south-delhi' },
-      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2025' },
+      { name: 'NEET Dropper Batch', url: '/neet-crash-course' },
     ],
     stats: {
       primary: { value: 'Rs 8K', label: 'PG Starting From/Month' },
@@ -429,7 +429,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
     ],
     relatedPages: [
       { name: 'Online Classes', url: '/online-biology-classes' },
-      { name: 'NEET Dropper Batch', url: '/neet-dropper-crash-course-2025' },
+      { name: 'NEET Dropper Batch', url: '/neet-crash-course' },
       { name: 'Course Schedule', url: '/courses' },
       { name: 'Book Demo', url: '/demo' },
     ],
