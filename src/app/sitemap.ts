@@ -735,6 +735,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.96,
     },
+    // MCQ Landing Pages - Class 11, Class 12, Olympiad
+    {
+      url: `${baseUrl}/class-11-biology-mcq`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/class-12-biology-mcq`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-mcq`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
     // NEET Biology MCQ Topic Pages - HIGH ENGAGEMENT
     {
       url: `${baseUrl}/neet-biology-mcq/ecology`,
