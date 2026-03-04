@@ -18,10 +18,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Book FREE NEET Biology Demo Class [Limited Spots]',
     description:
-      'Experience our teaching with AIIMS-trained faculty. 45-min FREE demo, 67+ AIIMS selections. Book now!',
+      'Experience our teaching with AIIMS-trained faculty. 45-min FREE demo, 680+ medical college selections. Book now!',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/demo-booking',
+    images: [
+      {
+        url: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Book Free NEET Biology Demo Class at Cerebrum Biology Academy',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
