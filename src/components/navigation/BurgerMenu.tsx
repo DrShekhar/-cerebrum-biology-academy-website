@@ -215,7 +215,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-black bg-opacity-50 z-[100] animate-fadeInUp"
+            className="fixed inset-0 bg-black bg-opacity-50 z-[110] animate-fadeInUp"
             onClick={onClose}
             style={{ pointerEvents: 'auto' }}
           />
@@ -231,7 +231,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[101] overflow-y-auto animate-fadeInUp"
+            className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[111] overflow-y-auto animate-fadeInUp"
           >
             {/* Header - sticky with solid background and z-index to stay above scrolling content */}
             <div className="sticky top-0 bg-white/100 backdrop-blur-sm border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-20 shadow-md isolate">

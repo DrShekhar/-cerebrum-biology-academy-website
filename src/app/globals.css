@@ -459,6 +459,11 @@
   --mobile-nav-safe-height: calc(64px + env(safe-area-inset-bottom, 0px));
 }
 
+html {
+  /* Account for sticky header when scrolling to anchors */
+  scroll-padding-top: 80px;
+}
+
 html,
 body {
   margin: 0;
