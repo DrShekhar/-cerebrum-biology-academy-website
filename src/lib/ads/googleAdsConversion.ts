@@ -120,7 +120,46 @@ export const trackFormSubmission = (source?: string, value: number = 0) => {
   trackSignUpConversion(source || 'form', value)
 }
 
-// Keep these exports for backward compatibility (no-ops)
+/**
+ * Track enhanced conversion with hashed user data
+ * Sends first-party user data to Google Ads for better attribution (20-40% improvement)
+ * Google handles the SHA256 hashing when using the gtag API
+ */
+export const trackEnhancedConversion = (
+  eventName: string,
+  value: number = 0,
+  email?: string,
+  phone?: string,
+  name?: string
+) => {
+  if (typeof window === 'undefined' || !window.gtag) {
+    return false
+  }
+
+  const userData: Record<string, string> = {}
+  if (email) userData.email = email.trim().toLowerCase()
+  if (phone) {
+    const cleaned = phone.replace(/[^\d]/g, '').slice(-10)
+    userData.phone_number = `+91${cleaned}`
+  }
+  if (name) {
+    const parts = name.trim().split(/\s+/)
+    if (parts[0]) userData.first_name = parts[0]
+    if (parts.length > 1) userData.last_name = parts.slice(1).join(' ')
+  }
+
+  if (Object.keys(userData).length === 0) return false
+
+  window.gtag('set', 'user_data', userData)
+
+  window.gtag('event', 'conversion', {
+    send_to: `${GOOGLE_ADS_ID}/${CONVERSION_LABELS.signUp}`,
+    value,
+    currency: 'INR',
+  })
+
+  return true
+}
+
 export const trackCourseEnrollment = (..._args: unknown[]) => {}
 export const trackCustomConversion = (..._args: unknown[]) => {}
-export const trackEnhancedConversion = (..._args: unknown[]) => {}

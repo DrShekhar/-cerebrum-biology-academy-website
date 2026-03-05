@@ -145,9 +145,7 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
       trackDemoBooking(formData.name, formData.course, 0)
 
       // Fire enhanced conversion with user data for better attribution
-      if (typeof window !== 'undefined' && window.gtag && GOOGLE_ADS_ID) {
-        trackEnhancedConversion('demo_booking', 0, formData.email, formData.phone)
-      }
+      trackEnhancedConversion('demo_booking', 0, formData.email, formData.phone, formData.name)
 
       if (onSubmit) {
         onSubmit(formData)
