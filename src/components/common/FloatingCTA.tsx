@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, memo } from 'react'
 import { usePathname } from 'next/navigation'
-import { Phone, MessageCircle, ChevronUp, Clock, Users, Minimize2, Maximize2 } from 'lucide-react'
+import { Phone, MessageCircle, ChevronUp, Clock, Users } from 'lucide-react'
 import {
   trackAndOpenWhatsApp,
   getContextAwareMessage,
@@ -30,7 +30,6 @@ const CTA_COPY = {
 
 export const FloatingCTA = memo(function FloatingCTA() {
   const pathname = usePathname()
-  const [isMinimized, setIsMinimized] = useState(false) // Desktop minimize state
   const [showScrollTop, setShowScrollTop] = useState(false)
   const rafRef = useRef<number | null>(null)
   const lastScrollRef = useRef(0)
@@ -141,7 +140,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
       {/* ===== DESKTOP: Call + WhatsApp Buttons ===== */}
       {/* Always visible on desktop - bottom right corner */}
       <div className="hidden lg:flex fixed bottom-8 right-8 z-[70] flex-col items-end gap-3">
-        {/* Desktop Call Button - compact pill above WhatsApp */}
+        {/* Desktop Call Button */}
         <a
           href={getPhoneLink()}
           onClick={handleDesktopCallClick}
@@ -152,70 +151,33 @@ export const FloatingCTA = memo(function FloatingCTA() {
           <span className="whitespace-nowrap text-sm">Call Now</span>
         </a>
 
-        {/* Main Desktop WhatsApp Button - Collapsible */}
-        <div className="flex items-center gap-2">
-          {/* Minimize/Maximize toggle */}
-          <button
-            onClick={() => setIsMinimized(!isMinimized)}
-            className="w-8 h-8 bg-gray-600/80 hover:bg-gray-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300"
-            aria-label={isMinimized ? 'Expand WhatsApp button' : 'Minimize WhatsApp button'}
-          >
-            {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
-          </button>
-
-          {/* WhatsApp Button - Full or Minimized */}
-          {isMinimized ? (
-            /* Minimized: Just icon */
-            <button
-              onClick={(e) => handleDesktopWhatsAppClick(e, 'desktop-floating-cta-minimized')}
-              className="w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-xl flex items-center justify-center text-white transition-all duration-300 transform hover:scale-105"
-              aria-label="Chat on WhatsApp"
-            >
-              <MessageCircle className="w-7 h-7" />
-              {/* Notification dot */}
-              <span className="absolute -top-1 -right-1 flex h-4 w-4">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500 items-center justify-center text-[10px] font-bold">
-                  1
-                </span>
-              </span>
-            </button>
-          ) : (
-            /* Expanded: Full button with text */
-            <button
-              onClick={(e) => handleDesktopWhatsAppClick(e, 'desktop-floating-cta')}
-              className="group flex items-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20BD5A] rounded-2xl shadow-xl text-white font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-              aria-label={`${CTA_COPY.desktop.primary} on WhatsApp`}
-            >
-              <div className="flex flex-col items-start">
-                <div className="flex items-center gap-2">
-                  <MessageCircle className="w-5 h-5" />
-                  <span className="whitespace-nowrap font-bold">{CTA_COPY.desktop.primary}</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs opacity-90 mt-0.5">
-                  <Clock className="w-3 h-3" />
-                  <span>{CTA_COPY.desktop.secondary}</span>
-                  <span className="mx-1">•</span>
-                  <Users className="w-3 h-3" />
-                  <span>{CTA_COPY.desktop.badge}</span>
-                </div>
-              </div>
-
-              {/* Notification indicator */}
-              <span className="relative flex h-3 w-3 ml-1">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
-              </span>
-            </button>
-          )}
-        </div>
+        {/* Desktop WhatsApp Button */}
+        <button
+          onClick={(e) => handleDesktopWhatsAppClick(e, 'desktop-floating-cta')}
+          className="group flex items-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20BD5A] rounded-2xl shadow-xl text-white font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+          aria-label={`${CTA_COPY.desktop.primary} on WhatsApp`}
+        >
+          <div className="flex flex-col items-start">
+            <div className="flex items-center gap-2">
+              <MessageCircle className="w-5 h-5" />
+              <span className="whitespace-nowrap font-bold">{CTA_COPY.desktop.primary}</span>
+            </div>
+            <div className="flex items-center gap-2 text-xs opacity-90 mt-0.5">
+              <Clock className="w-3 h-3" />
+              <span>{CTA_COPY.desktop.secondary}</span>
+              <span className="mx-1">•</span>
+              <Users className="w-3 h-3" />
+              <span>{CTA_COPY.desktop.badge}</span>
+            </div>
+          </div>
+        </button>
       </div>
 
-      {/* Desktop Scroll to Top - positioned on LEFT side */}
+      {/* Desktop Scroll to Top - positioned on LEFT side, above ARIA Sales Agent */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="hidden lg:flex fixed bottom-8 left-8 z-[60] w-12 h-12 bg-gray-700 hover:bg-gray-800 rounded-full shadow-lg items-center justify-center text-white hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 animate-scaleIn"
+          className="hidden lg:flex fixed bottom-24 left-8 z-[60] w-12 h-12 bg-gray-700 hover:bg-gray-800 rounded-full shadow-lg items-center justify-center text-white hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 animate-scaleIn"
           aria-label="Scroll to top"
         >
           <ChevronUp className="w-6 h-6" />
