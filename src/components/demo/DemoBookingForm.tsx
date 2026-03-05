@@ -321,6 +321,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
                   </label>
                   <input
                     type="tel"
+                    inputMode="numeric"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}

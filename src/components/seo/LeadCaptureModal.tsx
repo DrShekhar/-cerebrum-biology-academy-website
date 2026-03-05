@@ -251,6 +251,7 @@ export function LeadCaptureModal({
                     </label>
                     <input
                       type="tel"
+                      inputMode="numeric"
                       id="whatsappNumber"
                       name="whatsappNumber"
                       value={formData.whatsappNumber}

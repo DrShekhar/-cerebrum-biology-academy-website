@@ -139,11 +139,16 @@ export function WhatsAppLeadGate() {
               setPhone(e.target.value)
               setError('')
             }}
-            className="w-full px-4 py-3 min-h-[48px] border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className={`w-full px-4 py-3 min-h-[48px] border rounded-lg text-sm focus:outline-none focus:ring-2 focus:border-transparent ${
+              error
+                ? 'border-red-500 focus:ring-red-200'
+                : 'border-gray-200 focus:ring-green-500'
+            }`}
             autoComplete="tel"
+            aria-invalid={error ? 'true' : undefined}
             required
           />
-          {error && <p className="text-red-500 text-xs">{error}</p>}
+          {error && <p className="text-red-500 text-xs" role="alert">{error}</p>}
           <button
             type="submit"
             disabled={submitting}

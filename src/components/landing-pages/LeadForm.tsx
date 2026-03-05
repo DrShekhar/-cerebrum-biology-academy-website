@@ -114,6 +114,7 @@ export function LeadForm({
                 </label>
                 <input
                   type="tel"
+                  inputMode="numeric"
                   id="phone"
                   required
                   pattern="[0-9]{10}"

@@ -288,6 +288,7 @@ export function ExitIntentPopup({
                       <div className="space-y-3">
                         <input
                           type="tel"
+                          inputMode="numeric"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           required
@@ -460,6 +461,7 @@ export function ExitIntentPopup({
                         />
                         <input
                           type="tel"
+                          inputMode="numeric"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           required
