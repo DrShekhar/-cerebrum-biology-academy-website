@@ -74,12 +74,12 @@ export function ReferralInput({ onReferralApplied, onReferralRemoved }: Referral
               }}
               placeholder="Enter code (e.g., NEHA1A2B)"
               maxLength={10}
-              className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent uppercase"
+              className="flex-1 px-4 py-3 min-h-[48px] border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent uppercase"
             />
             <button
               onClick={validateReferralCode}
               disabled={validating || !referralCode.trim()}
-              className="px-6 py-2.5 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              className="px-6 py-3 min-h-[48px] bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
             >
               {validating ? (
                 <>

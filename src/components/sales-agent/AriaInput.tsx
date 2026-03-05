@@ -177,7 +177,7 @@ export function AriaInput({
         {/* Language toggle */}
         <button
           onClick={onToggleLanguage}
-          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-600"
+          className="flex h-11 w-11 min-h-[44px] min-w-[44px] flex-shrink-0 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition-colors hover:border-green-300 hover:bg-green-50 hover:text-green-600 touch-manipulation"
           title={getTranslation('languageToggle', language)}
         >
           <Globe className="h-4 w-4" />
@@ -198,7 +198,7 @@ export function AriaInput({
             onKeyDown={handleKeyDown}
             placeholder={getPlaceholder()}
             disabled={disabled || isStreaming}
-            className={`w-full rounded-lg border border-slate-200 bg-slate-50 py-2 pr-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-green-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-green-400 disabled:cursor-not-allowed disabled:opacity-50 ${
+            className={`w-full rounded-lg border border-slate-200 bg-slate-50 py-2.5 min-h-[44px] pr-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-green-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-green-400 disabled:cursor-not-allowed disabled:opacity-50 ${
               isLeadCapture ? 'pl-9' : 'pl-3'
             }`}
             autoComplete={leadStage === 'phone' ? 'tel' : leadStage === 'name' ? 'name' : 'off'}
@@ -209,7 +209,7 @@ export function AriaInput({
         <button
           onClick={handleSubmit}
           disabled={!inputValue.trim() || disabled || isStreaming}
-          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-green-500 text-white transition-colors hover:bg-green-600 disabled:cursor-not-allowed disabled:bg-slate-300"
+          className="flex h-11 w-11 min-h-[44px] min-w-[44px] flex-shrink-0 items-center justify-center rounded-lg bg-green-500 text-white transition-colors hover:bg-green-600 disabled:cursor-not-allowed disabled:bg-slate-300 touch-manipulation"
         >
           {isStreaming ? (
             <Loader2 className="h-4 w-4 animate-spin" />

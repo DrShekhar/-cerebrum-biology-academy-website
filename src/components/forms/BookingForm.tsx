@@ -284,6 +284,7 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
               id="phone"
               name="phone"
               type="tel"
+              inputMode="numeric"
               placeholder="9876543210"
               value={formData.phone}
               onChange={(e) => handleInputChange('phone', e.target.value)}
@@ -304,7 +305,7 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
             id="course"
             value={formData.course}
             onChange={(e) => handleInputChange('course', e.target.value)}
-            className={`flex h-12 w-full items-center justify-between rounded-lg border bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 ${
+            className={`flex h-12 min-h-[48px] w-full items-center justify-between rounded-lg border bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200 ${
               errors.course
                 ? 'border-red-500 focus:border-red-500 focus:ring-red-200'
                 : 'border-gray-200 focus:border-blue-500 focus:ring-blue-200'
@@ -338,7 +339,7 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
                 onChange={(e) =>
                   setFormData((prev) => ({ ...prev, preferredDate: e.target.value }))
                 }
-                className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
+                className="flex h-12 min-h-[48px] w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
               />
             </div>
             <div>
@@ -355,7 +356,7 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
                 onChange={(e) =>
                   handleInputChange('preferredTime' as keyof ContactForm, e.target.value)
                 }
-                className="flex h-12 w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
+                className="flex h-12 min-h-[48px] w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
               >
                 {preferredTimeOptions.map((option) => (
                   <option key={option.value} value={option.value}>

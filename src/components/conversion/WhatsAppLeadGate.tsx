@@ -97,7 +97,7 @@ export function WhatsAppLeadGate() {
 
   return (
     <div
-      className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+      className="fixed inset-0 z-[130] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
       onClick={(e) => {
         if (e.target === e.currentTarget) handleSkip()
       }}
@@ -105,7 +105,7 @@ export function WhatsAppLeadGate() {
       <div className="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 relative animate-fade-in-up">
         <button
           onClick={handleSkip}
-          className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-2 right-2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors touch-manipulation"
           aria-label="Close"
         >
           <X className="w-5 h-5" />
@@ -127,18 +127,19 @@ export function WhatsAppLeadGate() {
             placeholder="Your name (optional)"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 min-h-[48px] border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
             autoComplete="name"
           />
           <input
             type="tel"
+            inputMode="numeric"
             placeholder="Phone number *"
             value={phone}
             onChange={(e) => {
               setPhone(e.target.value)
               setError('')
             }}
-            className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+            className="w-full px-4 py-3 min-h-[48px] border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
             autoComplete="tel"
             required
           />
@@ -146,7 +147,7 @@ export function WhatsAppLeadGate() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2.5 rounded-lg text-sm transition-colors disabled:opacity-60"
+            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 min-h-[48px] rounded-lg text-sm transition-colors disabled:opacity-60"
           >
             {submitting ? 'Opening WhatsApp...' : 'Continue to WhatsApp'}
           </button>
@@ -154,7 +155,7 @@ export function WhatsAppLeadGate() {
 
         <button
           onClick={handleSkip}
-          className="w-full mt-2 text-center text-sm text-gray-400 hover:text-gray-600 transition-colors py-1"
+          className="w-full mt-2 text-center text-sm text-gray-400 hover:text-gray-600 transition-colors py-2 min-h-[44px]"
         >
           Skip, go to WhatsApp →
         </button>
