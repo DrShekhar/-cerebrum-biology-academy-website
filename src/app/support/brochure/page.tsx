@@ -30,9 +30,25 @@ export default function BrochurePage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    setSubmitted(true)
-    setIsSubmitting(false)
+    try {
+      await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          course: formData.course || 'brochure-request',
+          message: `Brochure download request. Course: ${formData.course}`,
+          source: 'brochure-page',
+        }),
+      })
+      setSubmitted(true)
+    } catch (error) {
+      console.error('Brochure request error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
