@@ -160,22 +160,21 @@ export async function trackWhatsAppClick(
 }
 
 function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
-  trackWhatsAppClick(params).then((result) => {
-    trackWhatsAppLead(params.source, 50)
+  const message = params.message || 'Hi! I am interested in NEET Biology coaching.'
+  const trackingInfo = ` [Source: ${params.source}]`
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message + trackingInfo)}`
 
-    if (isMobileDevice()) {
-      const opened = window.open(result.whatsappUrl, '_blank', 'noopener,noreferrer')
-      if (!opened) {
-        showCallFallback()
-      }
-    } else {
-      openDesktopWhatsAppModal(
-        result.whatsappUrl,
-        params.message || 'Hi! I am interested in NEET Biology coaching.',
-        params.source
-      )
+  if (isMobileDevice()) {
+    const opened = window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+    if (!opened) {
+      window.location.href = whatsappUrl
     }
-  })
+  } else {
+    openDesktopWhatsAppModal(whatsappUrl, message, params.source)
+  }
+
+  trackWhatsAppClick(params).catch(() => {})
+  trackWhatsAppLead(params.source, 50)
 }
 
 export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Promise<void> {

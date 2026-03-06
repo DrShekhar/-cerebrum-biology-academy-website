@@ -24,7 +24,7 @@ export default function AdmissionsPage() {
 
     const redirectTimer = setTimeout(() => {
       setRedirected(true)
-      window.open(WHATSAPP_ENROLL_URL, '_blank', 'noopener,noreferrer')
+      window.location.href = WHATSAPP_ENROLL_URL
     }, 3000)
 
     return () => {

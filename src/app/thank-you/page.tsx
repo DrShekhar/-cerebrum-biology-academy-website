@@ -101,7 +101,7 @@ function ThankYouContent() {
   const handleCallNow = () => {
     ConversionTracker.trackPhoneCall()
     trackPhoneCallConversion('+918826444334')
-    window.open('tel:+918826444334', '_self')
+    window.location.href = 'tel:+918826444334'
   }
 
   const handleBookCounseling = () => {

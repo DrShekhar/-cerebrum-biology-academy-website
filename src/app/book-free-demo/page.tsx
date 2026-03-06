@@ -68,7 +68,7 @@ export default function BookFreeDemoPage() {
 
       const redirectTimer = setTimeout(() => {
         setRedirected(true)
-        window.open(getWhatsAppUrl(), '_blank', 'noopener,noreferrer')
+        window.location.href = getWhatsAppUrl()
       }, 3000)
 
       return () => {

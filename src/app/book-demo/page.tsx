@@ -24,7 +24,7 @@ export default function BookDemoPage() {
 
     const redirectTimer = setTimeout(() => {
       setRedirected(true)
-      window.open(WHATSAPP_DEMO_URL, '_blank', 'noopener,noreferrer')
+      window.location.href = WHATSAPP_DEMO_URL
     }, 3000)
 
     return () => {
