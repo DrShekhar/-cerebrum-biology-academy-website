@@ -158,11 +158,29 @@ export default function AdmissionPage() {
     { phase: 'Late Admission', dates: 'July - August', discount: 'No Discount' },
   ]
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle admission form submission
-    console.log('Admission form:', formData)
-    alert('Application submitted successfully! We will contact you within 24 hours.')
+    setIsSubmitting(true)
+    try {
+      await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.personalInfo.name,
+          email: formData.personalInfo.email,
+          phone: formData.personalInfo.phone,
+          course: formData.courseSelection.course || selectedCourse,
+          message: `Admission application. Class: ${formData.academicInfo.currentClass}, School: ${formData.academicInfo.school}, Board: ${formData.academicInfo.board}, Batch: ${formData.courseSelection.batch}, Mode: ${formData.courseSelection.mode}`,
+          source: 'admission-page',
+        }),
+      })
+      setSubmitSuccess(true)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

@@ -73,12 +73,26 @@ export default function NEETCrashCoursePage() {
   const handleLeadSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setSubmitSuccess(true)
-    setIsSubmitting(false)
-    setTimeout(() => {
-      router.push('/demo-booking')
-    }, 2000)
+    try {
+      await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          course: 'neet-crash-course',
+          message: `NEET Crash Course inquiry. Current level: ${formData.currentLevel}`,
+          source: 'crash-course-page',
+        }),
+      })
+      setSubmitSuccess(true)
+      setTimeout(() => {
+        router.push('/demo-booking')
+      }, 2000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const crashCourseFeatures = [

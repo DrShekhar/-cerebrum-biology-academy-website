@@ -73,7 +73,18 @@ export default function FoundationCoursePage() {
           event_label: 'Foundation Course Lead',
         })
       }
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          course: 'foundation',
+          message: `Foundation course inquiry. Student class: ${formData.studentClass}`,
+          source: 'foundation-course-page',
+        }),
+      })
       setSubmitSuccess(true)
       setSeatsLeft((prev) => Math.max(prev - 1, 5))
     } finally {

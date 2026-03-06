@@ -330,10 +330,29 @@ export default function CareersPage() {
       ? openPositions
       : openPositions.filter((position) => position.department === selectedDepartment)
 
-  const handleApplicationSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  const handleApplicationSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    alert('Application submitted successfully! We will get back to you within 48 hours.')
+    setIsSubmitting(true)
+    try {
+      await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: applicationForm.name,
+          email: applicationForm.email,
+          phone: applicationForm.phone,
+          course: 'career-application',
+          message: `Career application for: ${applicationForm.position}. Experience: ${applicationForm.experience}. Cover letter: ${applicationForm.coverLetter}`,
+          source: 'careers-page',
+        }),
+      })
+      setSubmitSuccess(true)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

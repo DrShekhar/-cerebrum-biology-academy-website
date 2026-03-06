@@ -94,13 +94,26 @@ export default function NEETDropperPage() {
       })
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setSubmitSuccess(true)
-    setIsSubmitting(false)
-
-    setTimeout(() => {
-      router.push('/demo-booking')
-    }, 2000)
+    try {
+      await fetch('/api/contact/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          course: 'neet-dropper',
+          message: `NEET Dropper batch inquiry. Previous score: ${formData.previousScore}`,
+          source: 'dropper-course-page',
+        }),
+      })
+      setSubmitSuccess(true)
+      setTimeout(() => {
+        router.push('/demo-booking')
+      }, 2000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const courseFeatures = [
