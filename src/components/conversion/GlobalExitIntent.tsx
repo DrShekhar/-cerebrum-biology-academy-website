@@ -7,8 +7,14 @@ export function GlobalExitIntent() {
   const { showExitIntent, hideExitIntent } = useExitIntent()
   const pathname = usePathname()
 
-  // Disable exit intent on homepage
+  // Disable exit intent on homepage and conversion/thank-you pages
   const isHomepage = pathname === '/'
+  const isConversionPage =
+    pathname?.includes('/thank') ||
+    pathname?.includes('/success') ||
+    pathname?.includes('/checkout') ||
+    pathname?.includes('/enrollment') ||
+    pathname?.includes('/purchase')
 
   const handleDownload = async (
     email: string,
@@ -51,8 +57,8 @@ export function GlobalExitIntent() {
     }
   }
 
-  // Don't render on homepage
-  if (isHomepage) {
+  // Don't render on homepage or conversion pages
+  if (isHomepage || isConversionPage) {
     return null
   }
 
