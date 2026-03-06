@@ -56,7 +56,7 @@ export function StickyMobileCallBar() {
 
       {/* The actual sticky bar */}
       <div
-        className="fixed bottom-0 left-0 right-0 z-[9999] md:hidden"
+        className="fixed bottom-0 left-0 right-0 z-[90] md:hidden"
         role="complementary"
         aria-label="Contact options"
       >

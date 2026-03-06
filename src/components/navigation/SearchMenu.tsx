@@ -562,7 +562,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 <>
 {isOpen && (
         <div
-          className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
+          className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[115] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
           onClick={handleClose}
         >
           <div
