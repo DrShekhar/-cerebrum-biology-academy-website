@@ -79,15 +79,34 @@ export default function DemoPage() {
     },
   ]
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle demo booking
-    console.log('Demo booking:', {
-      ...formData,
-      course: selectedCourse,
-      timeSlot: selectedTimeSlot,
-    })
-    alert('Demo class booked successfully! We will contact you shortly.')
+    setIsSubmitting(true)
+    try {
+      const response = await fetch('/api/demo-booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          courseInterest: [selectedCourse || 'general-inquiry'],
+          preferredDate: formData.preferredDate || new Date().toISOString().split('T')[0],
+          preferredTime: selectedTimeSlot || '09:00 AM - 08:00 PM',
+          message: `Class: ${formData.class}`,
+        }),
+      })
+      if (response.ok) {
+        setSubmitSuccess(true)
+      }
+    } catch (error) {
+      console.error('Demo booking error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
