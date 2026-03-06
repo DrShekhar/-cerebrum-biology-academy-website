@@ -50,7 +50,7 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
-  display: 'swap',
+  display: 'optional', // PERFORMANCE: not critical font, skip swap to avoid FOUT
   preload: false, // Not used on initial render
 })
 
@@ -147,10 +147,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//checkout.razorpay.com" />
         <link rel="dns-prefetch" href="//api.whatsapp.com" />
-        <link rel="dns-prefetch" href="//giscus.app" />
-        <link rel="dns-prefetch" href="//i.ytimg.com" />
         <link rel="dns-prefetch" href="//connect.facebook.net" />
-        <link rel="dns-prefetch" href="//assets.zyrosite.com" />
 
         {/* Fonts are handled by next/font/google - no manual preload needed */}
         {/* Logo preloading is handled by Next.js Image priority prop in HeaderHybrid */}
