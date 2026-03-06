@@ -90,7 +90,7 @@ export function WhatsAppDesktopModal() {
 
   return (
     <div
-      className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+      className="fixed inset-0 z-[125] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
       onClick={(e) => {
         if (e.target === e.currentTarget) closeModal()
       }}
