@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
@@ -372,14 +373,16 @@ export default function ResultsPage() {
 
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">Want to see more success stories?</p>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
-            >
-              <Play className="h-5 w-5 mr-2" />
-              View All Video Testimonials
-            </Button>
+            <Link href="/testimonials">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
+              >
+                <Play className="h-5 w-5 mr-2" />
+                View All Video Testimonials
+              </Button>
+            </Link>
           </div>
         </section>
 
@@ -532,22 +535,26 @@ export default function ResultsPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="xl"
-                  variant="secondary"
-                  className="bg-[#3d4d3d] text-white hover:bg-[#4a5d4a] shadow-lg hover:shadow-xl"
-                >
-                  Book Your Free Demo Class
-                  <ChevronRight className="h-6 w-6 ml-2" />
-                </Button>
+                <Link href="/book-free-demo">
+                  <Button
+                    size="xl"
+                    variant="secondary"
+                    className="bg-[#3d4d3d] text-white hover:bg-[#4a5d4a] shadow-lg hover:shadow-xl"
+                  >
+                    Book Your Free Demo Class
+                    <ChevronRight className="h-6 w-6 ml-2" />
+                  </Button>
+                </Link>
 
-                <Button
-                  size="xl"
-                  variant="outline"
-                  className="border-2 border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
-                >
-                  Talk to Our Success Coach
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    size="xl"
+                    variant="outline"
+                    className="border-2 border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
+                  >
+                    Talk to Our Success Coach
+                  </Button>
+                </Link>
               </div>
 
               <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-[#3d4d3d]">
