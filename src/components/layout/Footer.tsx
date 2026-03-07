@@ -21,6 +21,11 @@ import { useI18n } from '@/contexts/I18nContext'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
+import {
+  trackFooterLinkClick,
+  trackFooterSectionToggle,
+  trackFooterSubscribe,
+} from '@/lib/analytics/footerTracking'
 
 function FooterSection({
   title,
@@ -58,6 +63,7 @@ function FooterSection({
                 <Link
                   href={link.href}
                   className="text-gray-300 hover:text-white transition-colors text-sm"
+                  onClick={() => trackFooterLinkClick(link.name, link.href, title)}
                 >
                   {link.name}
                 </Link>
@@ -81,7 +87,9 @@ export const Footer = memo(function Footer() {
   const { t } = useI18n()
 
   const toggleSection = (title: string) => {
+    const willOpen = openSection !== title
     setOpenSection((prev) => (prev === title ? null : title))
+    trackFooterSectionToggle(title, willOpen)
   }
 
   const handleNewsletterSubscribe = async (e: React.FormEvent) => {
@@ -108,6 +116,7 @@ export const Footer = memo(function Footer() {
       const data = await response.json()
 
       if (response.ok) {
+        trackFooterSubscribe(whatsappNumber ? 'both' : 'email')
         setSubscribeMessage(data.message || 'Thank you for subscribing!')
         if (!data.alreadySubscribed) {
           setEmail('')

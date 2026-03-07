@@ -6,6 +6,7 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { SEOHealthCheck } from '@/components/seo/SEOHealthCheck'
 import { CanonicalManager } from '@/components/seo/CanonicalManager'
 import FacebookPixel from '@/components/analytics/FacebookPixel'
+import MicrosoftClarity from '@/components/analytics/MicrosoftClarity'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
 // PERFORMANCE: Using hybrid header for faster mobile LCP
 // Server-rendered shell with lazy-loaded interactivity
@@ -268,6 +269,7 @@ export default function RootLayout({
                       <GoogleAnalytics />
                       <FacebookPixel />
                       <WebVitalsReporter />
+                      <MicrosoftClarity />
                     </PersonalizationProvider>
                   </TrustProvider>
                 </ToastProvider>
