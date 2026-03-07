@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-tuition-vasant-vihar',
   },
+  robots: { index: false, follow: true },
 }
 
 export default function BestBiologyTuitionVasantViharPage() {

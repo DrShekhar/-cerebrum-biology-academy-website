@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-coaching-panchsheel',
   },
+  robots: { index: false, follow: true },
 }
 
 export default function BiologyCoachingPanchsheel() {

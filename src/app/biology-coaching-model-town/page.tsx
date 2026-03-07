@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-coaching-model-town',
   },
+  robots: { index: false, follow: true },
 }
 
 export default function BiologyCoachingModelTown() {

@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-tuition-lajpat-nagar',
   },
+  robots: { index: false, follow: true },
 }
 
 export default function BestBiologyTuitionLajpatNagarPage() {
