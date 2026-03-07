@@ -241,7 +241,6 @@ export const seoPageConsolidationRedirects = [
     permanent: true,
   },
   { source: '/neet-droppers-batch-gurgaon', destination: '/courses/neet-dropper', permanent: true },
-  // DUPLICATE REMOVED: { source: '/biology-tuition-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-tutor-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
   {
     source: '/biology-home-tuition-gurgaon',
@@ -827,10 +826,6 @@ export const gsc404CleanupRedirects = [
   { source: '/centers/:path*', destination: '/neet-coaching', permanent: true },
 
   // --- Standalone pages that moved or don't exist ---
-  { source: '/scholarships', destination: '/scholarship', permanent: true },
-  { source: '/test-series', destination: '/test-series-schedule', permanent: true },
-  { source: '/boards/state', destination: '/boards/state-boards', permanent: true },
-  { source: '/parent-guide', destination: '/about', permanent: true },
 
   // ============================================
   // COMPREHENSIVE GSC 404 CLEANUP — Feb 27, 2026
@@ -869,138 +864,41 @@ export const gsc404CleanupRedirects = [
   { source: '/biology-notes/class-12/:path*', destination: '/biology-notes-for-neet', permanent: true },
 
   // --- Standalone biology-classes pages that don't exist ---
-  { source: '/biology-classes-paschim-vihar', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-narnaul', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-jhajjar', destination: '/biology-classes', permanent: true },
   { source: '/biology-classes-gurgaon-sector-31', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-classes-gurgaon-sector-61', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-gurgaon-badshapur', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-classes-gurgaon-sector-47', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-gurgaon-aravali', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-classes-rohini-sector-8', destination: '/biology-classes-rohini', permanent: true },
   { source: '/biology-classes-rohini-sector-15', destination: '/biology-classes-rohini', permanent: true },
   { source: '/biology-classes-rohini-sector-7', destination: '/biology-classes-rohini', permanent: true },
   { source: '/biology-classes-rohini-sector-3', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-rohini-west', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-greater-noida-west', destination: '/biology-classes-noida', permanent: true },
 
   // --- Double-prefix bug: biology-classes-biology-classes-* (schema generation bug) ---
-  { source: '/biology-classes-biology-classes-amity-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-classes-shri-ram-school-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-classes-heritage-school-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-classes-lotus-valley-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-classes-scottish-high-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-classes-blue-bells-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-classes-dps-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-12th-boards-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-home-tuition-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-neet-coaching-gurgaon-sector-49', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-neet-coaching-sohna-road-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-neet-coaching-presidium-school', destination: '/biology-classes', permanent: true },
 
   // --- School-specific NEET coaching pages ---
-  { source: '/neet-coaching-st-columba-students', destination: '/neet-coaching', permanent: true },
-  { source: '/neet-coaching-gd-goenka-students', destination: '/neet-coaching', permanent: true },
-  { source: '/neet-coaching-vasant-valley-students', destination: '/neet-coaching', permanent: true },
-  { source: '/neet-coaching-mount-abu-rohini-students', destination: '/neet-coaching', permanent: true },
 
   // --- Biology tutor pages that don't exist ---
-  { source: '/biology-tutor-pitampura', destination: '/biology-tutor', permanent: true },
-  { source: '/biology-tutor-laxmi-nagar', destination: '/biology-tutor', permanent: true },
-  { source: '/biology-tutor-noida-sector-137', destination: '/biology-tutor', permanent: true },
-  { source: '/biology-tutor-class-10', destination: '/biology-tutor', permanent: true },
-  { source: '/biology-tutor-class-10-cbse', destination: '/biology-tutor', permanent: true },
-  { source: '/biology-tutor-class-10-icse', destination: '/biology-tutor', permanent: true },
-  { source: '/biology-tutor-class-9', destination: '/biology-tutor', permanent: true },
-  { source: '/neet-biology-tutor-class-12', destination: '/biology-tutor', permanent: true },
-  { source: '/neet-biology-tutor-class-11', destination: '/biology-tutor', permanent: true },
 
   // --- Course pages that don't exist ---
-  { source: '/courses/45-day-course', destination: '/courses/neet-crash-course', permanent: true },
-  { source: '/courses/neet-biology', destination: '/courses', permanent: true },
-  { source: '/courses/class-9', destination: '/courses', permanent: true },
-  { source: '/courses/dropper-batch', destination: '/courses/neet-dropper', permanent: true },
-  { source: '/courses/foundation-course', destination: '/courses', permanent: true },
-  { source: '/courses/test-series', destination: '/test-series-schedule', permanent: true },
-  { source: '/services/mentorship', destination: '/courses', permanent: true },
 
   // --- Olympiad preparation pages ---
-  { source: '/cbo-preparation', destination: '/biology-olympiad-preparation', permanent: true },
-  { source: '/german-biology-olympiad', destination: '/biology-olympiad-preparation', permanent: true },
-  { source: '/jbo-preparation', destination: '/biology-olympiad-preparation', permanent: true },
-  { source: '/nso-coaching', destination: '/biology-olympiad-preparation', permanent: true },
-  { source: '/ntse-coaching', destination: '/neet-coaching', permanent: true },
 
   // --- Standalone pages ---
   { source: '/best-neet-biology-coaching-delhi-ncr', destination: '/neet-coaching', permanent: true },
-  { source: '/about/dr-shekhar', destination: '/about', permanent: true },
-  { source: '/locations/hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/errorless-biology-for-neet', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/mtg-biology-for-neet', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/class-10-science-tuition', destination: '/biology-tuition', permanent: true },
-  { source: '/laxmi-nagar', destination: '/neet-coaching', permanent: true },
   { source: '/undefined', destination: '/', permanent: true },
-  { source: '/5', destination: '/', permanent: true },
-  { source: '/360', destination: '/', permanent: true },
 
   // --- Resources sub-pages that don't exist ---
-  { source: '/resources/community', destination: '/resources', permanent: true },
-  { source: '/resources/planner', destination: '/resources', permanent: true },
-  { source: '/resources/signup', destination: '/resources', permanent: true },
-  { source: '/resources/important-questions', destination: '/resources', permanent: true },
-  { source: '/resources/animal-tissue-notes', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/resources/biodiversity-notes', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/resources/plant-physiology-notes', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/resources/anatomy-notes', destination: '/biology-notes-for-neet', permanent: true },
 
   // --- Blog posts that no longer exist ---
-  { source: '/blog/all-aiims-india-complete-guide-2025', destination: '/blog', permanent: true },
-  { source: '/blog/navi-mumbai-medical-colleges-comparison-2025', destination: '/blog', permanent: true },
-  { source: '/blog/medical-colleges-pune-complete-guide-2025', destination: '/blog', permanent: true },
-  { source: '/blog/best-neet-coaching-noida-sector-wise-guide', destination: '/blog', permanent: true },
-  { source: '/blog/molecular-biology-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/ecology-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/genetics-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/plant-physiology-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/biotechnology-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/cell-biology-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/neet-coaching-laxmi-nagar-east-delhi-guide', destination: '/blog', permanent: true },
-  { source: '/blog/human-physiology-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/evolution-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/animal-kingdom-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/human-reproduction-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/plant-kingdom-neet-complete-guide', destination: '/blog', permanent: true },
-  { source: '/blog/neet-preparation-timeline-class-9-to-2028', destination: '/blog', permanent: true },
-  { source: '/blog/early-neet-preparation-success-rate-science', destination: '/blog', permanent: true },
-  { source: '/blog/international-school-neet-transition-guide', destination: '/blog', permanent: true },
-  { source: '/blog/online-vs-offline-neet-coaching-data-comparison', destination: '/blog', permanent: true },
-  { source: '/blog/mumbai-best-neet-biology-coaching-2025', destination: '/blog', permanent: true },
-  { source: '/blog/neet-2024-cutoff-analysis', destination: '/blog', permanent: true },
 
   // --- Additional non-existent pages from Feb 27 crawl data ---
-  { source: '/biology-classes-neet-coaching-south-city-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-green-park/iit', destination: '/biology-classes-green-park', permanent: true },
-  { source: '/kbo-preparation', destination: '/biology-olympiad-preparation', permanent: true },
-  { source: '/search', destination: '/', permanent: true },
   // removed: /neet-coaching-reviews-gurugram — already in seoPage → /neet-coaching-gurgaon
   // removed: /neet-coaching-malviya-nagar-delhi — already in localArea → /neet-coaching-south-delhi
-  { source: '/purchase/neet-dropper', destination: '/courses/neet-dropper', permanent: true },
-  { source: '/locations/chennai', destination: '/neet-coaching', permanent: true },
-  { source: '/locations/jaipur', destination: '/neet-coaching-jaipur', permanent: true },
   { source: '/about/faculty', destination: '/faculty', permanent: true },
   { source: '/courses/dropper', destination: '/courses/neet-dropper', permanent: true },
-  { source: '/blog/kota-vs-online-neet-coaching-2026', destination: '/blog', permanent: true },
-  { source: '/blog/top-10-neet-biology-coaching-delhi-ncr-2025', destination: '/blog/top-10-neet-biology-coaching-delhi-ncr-2026', permanent: true },
-  { source: '/blog/delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2025', destination: '/blog/delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2026', permanent: true },
-  { source: '/blog/neet-biology-preparation-strategy-score-180-plus', destination: '/blog/neet-biology-preparation-strategy-score-340-plus', permanent: true },
-  { source: '/blog/bangalore-online-neet-preparation-guide', destination: '/blog', permanent: true },
   { source: '/blog/maharashtra-mbbs-counselling-dmer-guide-2025', destination: '/blog', permanent: true },
-  { source: '/blog/neet-2025-biology-paper-analysis', destination: '/blog', permanent: true },
   { source: '/blog/how-to-score-700-plus-in-neet', destination: '/blog', permanent: true },
   { source: '/blog/neet-application-form-2026', destination: '/blog', permanent: true },
-  { source: '/blog/neet-cutoff-2026-category-wise', destination: '/blog', permanent: true },
   { source: '/blog/human-physiology-neet-complete-notes', destination: '/blog', permanent: true },
-  { source: '/blog/career-options-after-12th-pcb-complete-guide', destination: '/blog', permanent: true },
   { source: '/blog/top-private-medical-colleges-india-fees-cutoff-rankings', destination: '/blog', permanent: true },
   { source: '/services/classroom', destination: '/services', permanent: true },
   { source: '/services/online-classes', destination: '/services', permanent: true },
@@ -1021,60 +919,22 @@ export const gsc404CleanupRedirects = [
   { source: '/biology-notes/chemical-coordination', destination: '/biology-notes-for-neet', permanent: true },
 
   // More standalone biology-classes pages that don't exist
-  { source: '/biology-classes-bawal', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-dharuhera', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-dc-chowk-rohini', destination: '/biology-classes-rohini', permanent: true },
   { source: '/biology-classes-noida-sector-62', destination: '/biology-classes-noida', permanent: true },
   { source: '/biology-classes-gurgaon-sector-82', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-classes-gurgaon-sector-50', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-classes-gurgaon-sector-14', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-classes-gurgaon-sector-4', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-classes-rohini-sector-5', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-janakpuri', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-nirman-vihar', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-rajinder-nagar', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-sushant-lok-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-golf-course-extension-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-class-12-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-class-11-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-class-9-10-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-biology-tuition-ryan-international', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-biology-tutor-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-neet-droppers-batch-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-neet-coaching-golf-course-road-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-neet-coaching-dlf-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-neet-coaching-nirvana-country-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-neet-coaching-pathways-school', destination: '/biology-classes', permanent: true },
 
   // Olympiad preparation pages
-  { source: '/cnbo-preparation', destination: '/biology-olympiad-preparation', permanent: true },
-  { source: '/sbo-preparation', destination: '/biology-olympiad-preparation', permanent: true },
-  { source: '/asob-preparation', destination: '/biology-olympiad-preparation', permanent: true },
 
   // School-specific coaching pages
-  { source: '/neet-coaching-pathways-gurgaon-students', destination: '/neet-coaching', permanent: true },
-  { source: '/neet-coaching-springdales-students', destination: '/neet-coaching', permanent: true },
 
   // Standalone pages
-  { source: '/hr', destination: '/', permanent: true },
-  { source: '/hour', destination: '/', permanent: true },
-  { source: '/free-biology-quiz', destination: '/neet-biology-mcq', permanent: true },
-  { source: '/neet-droppers-batch-delhi', destination: '/courses/neet-dropper', permanent: true },
-  { source: '/courses/neet', destination: '/courses', permanent: true },
-  { source: '/courses/weekend-batch', destination: '/courses', permanent: true },
   { source: '/courses/intensive-neet-biology', destination: '/courses', permanent: true },
-  { source: '/fees', destination: '/pricing', permanent: true },
-  { source: '/neet-biology-tutor-droppers', destination: '/biology-tutor', permanent: true },
-  { source: '/biology-tutor-delhi', destination: '/biology-tutor', permanent: true },
   { source: '/portal', destination: '/sign-in', permanent: true },
-  { source: '/blog/management-quota-mbbs-fees-process-complete-guide', destination: '/blog', permanent: true },
 
   // More resources sub-pages
-  { source: '/resources/biomolecules-notes', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/resources/classification-notes', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/resources/morphology-notes', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/resources/revision-notes', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/resources/diagrams', destination: '/resources', permanent: true },
 
   // --- Sitemap variants ---
   { source: '/sitemap', destination: '/sitemap.xml', permanent: true },
@@ -1233,7 +1093,6 @@ export const gsc404CleanupBatch3Redirects = [
   { source: '/biology-classes-dwarka/dwarka-mor', destination: '/biology-classes-west-delhi', permanent: true },
   { source: '/biology-classes-dwarka/sector-21', destination: '/biology-classes-west-delhi', permanent: true },
   { source: '/biology-classes-dwarka/sector-7', destination: '/biology-classes-west-delhi', permanent: true },
-  { source: '/biology-classes-greater-noida', destination: '/biology-classes-noida', permanent: true },
   { source: '/biology-classes-green-park/extension', destination: '/biology-classes-south-delhi', permanent: true },
   { source: '/biology-classes-karol-bagh/cp', destination: '/biology-classes-central-delhi', permanent: true },
   { source: '/biology-classes-laxmi-nagar/nirman-vihar', destination: '/biology-classes-east-delhi', permanent: true },
@@ -1305,9 +1164,7 @@ export const gsc404CleanupBatch3Redirects = [
   { source: '/cbo-preparation/', destination: '/biology-olympiad-coaching', permanent: true },
   { source: '/german-biology-olympiad/', destination: '/biology-olympiad-coaching', permanent: true },
   { source: '/jbo-preparation/', destination: '/biology-olympiad-coaching', permanent: true },
-  { source: '/book-demo', destination: '/demo-booking', permanent: true },
   { source: '/online-neet-biology-classes', destination: '/online-neet-coaching', permanent: true },
-  { source: '/counselor/communications', destination: '/counselor', permanent: true },
 
   // --- Crawled-not-indexed: missing pages (March 2026 batch) ---
   { source: '/biology-classes-gurgaon-sector-60', destination: '/biology-classes-gurgaon', permanent: true },
@@ -1316,7 +1173,6 @@ export const gsc404CleanupBatch3Redirects = [
   { source: '/locations/delhi/hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
 
   // --- B5 route audit: redirect pages moved from page.tsx to config (March 2026) ---
-  { source: '/enroll', destination: '/enrollment', permanent: true },
   { source: '/company', destination: '/about', permanent: true },
   { source: '/login', destination: '/sign-in', permanent: true },
   { source: '/neet-readiness-quiz', destination: '/neet-tools', permanent: true },
