@@ -25,7 +25,6 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
 
   const handleCall = () => {
     handlePhoneClickTracking('header-call-button', 'primary', 100)
-    window.open(getPhoneLink(), '_self')
   }
 
   const navLinks = [
@@ -66,13 +65,14 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
             >
               Book Demo
             </button>
-            <button
+            <a
+              href={getPhoneLink()}
               onClick={handleCall}
               className="text-green-500 hover:text-green-300 transition-colors duration-200 p-2"
               aria-label="Call us"
             >
               <Phone className="w-5 h-5" />
-            </button>
+            </a>
             <button
               onClick={toggleMobileMenu}
               className="md:hidden text-white p-2"
@@ -84,46 +84,45 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
         </div>
 
         {/* Mobile Menu */}
-{mobileMenuOpen && (
-            <div
-              className="md:hidden overflow-hidden animate-fadeInUp"
-            >
-              <div className="py-4 space-y-4 border-t border-slate-700 mt-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block text-gray-300 hover:text-green-500 transition-colors duration-200 py-2"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <div className="pt-4 space-y-3">
-                  <button
-                    onClick={() => {
-                      handleBookDemo()
-                      setMobileMenuOpen(false)
-                    }}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-                  >
-                    Book Demo
-                  </button>
-                  <button
-                    onClick={() => {
-                      handleCall()
-                      setMobileMenuOpen(false)
-                    }}
-                    className="w-full flex items-center justify-center gap-2 text-green-500 hover:text-green-300 transition-colors duration-200 py-2"
-                  >
-                    <Phone className="w-5 h-5" />
-                    Call Now
-                  </button>
-                </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden overflow-hidden animate-fadeInUp">
+            <div className="py-4 space-y-4 border-t border-slate-700 mt-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block text-gray-300 hover:text-green-500 transition-colors duration-200 py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="pt-4 space-y-3">
+                <button
+                  onClick={() => {
+                    handleBookDemo()
+                    setMobileMenuOpen(false)
+                  }}
+                  className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                >
+                  Book Demo
+                </button>
+                <a
+                  href={getPhoneLink()}
+                  onClick={() => {
+                    handleCall()
+                    setMobileMenuOpen(false)
+                  }}
+                  className="w-full flex items-center justify-center gap-2 text-green-500 hover:text-green-300 transition-colors duration-200 py-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call Now
+                </a>
               </div>
             </div>
-          )}
-</nav>
+          </div>
+        )}
+      </nav>
     </header>
   )
 }

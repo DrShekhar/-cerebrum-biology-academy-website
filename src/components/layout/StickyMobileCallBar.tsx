@@ -2,11 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import { Phone, MessageCircle, X } from 'lucide-react'
+import { trackPhoneCall } from '@/lib/ads/googleAdsConversion'
 import {
-  trackPhoneCallConversion,
-  trackWhatsAppConversion,
-} from '@/lib/analytics/googleAdsConversions'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+  trackAndOpenWhatsApp,
+  WHATSAPP_MESSAGES,
+  buildWhatsAppUrl,
+  getContextAwareMessage,
+  isMobileDevice,
+} from '@/lib/whatsapp/tracking'
 
 /**
  * StickyMobileCallBar — Always-visible Call + WhatsApp bar on mobile
@@ -35,17 +38,10 @@ export function StickyMobileCallBar() {
   }
 
   const handleCall = () => {
-    trackPhoneCallConversion('sticky_mobile_bar')
-    window.location.href = 'tel:+918826444334'
+    trackPhoneCall('sticky_mobile_bar', 100)
   }
 
-  const handleWhatsApp = async () => {
-    await trackAndOpenWhatsApp({
-      source: 'sticky_mobile_bar',
-      message: WHATSAPP_MESSAGES.enquiry,
-      campaign: 'sticky-bar',
-    })
-  }
+  const whatsappHref = buildWhatsAppUrl(WHATSAPP_MESSAGES.enquiry, 'sticky_mobile_bar')
 
   if (dismissed || !isVisible) return null
 
@@ -75,24 +71,27 @@ export function StickyMobileCallBar() {
 
           <div className="flex items-stretch">
             {/* Call Now Button - 50% width */}
-            <button
+            <a
+              href="tel:+918826444334"
               onClick={handleCall}
               className="flex-1 flex items-center justify-center gap-2 py-3.5 bg-green-600 hover:bg-green-700 active:bg-green-800 text-white font-bold text-sm transition-colors"
               aria-label="Call Cerebrum Academy now"
             >
               <Phone className="w-5 h-5" fill="currentColor" />
               <span>Call Now</span>
-            </button>
+            </a>
 
             {/* WhatsApp Button - 50% width */}
-            <button
-              onClick={handleWhatsApp}
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 py-3.5 bg-[#25D366] hover:bg-[#20BD5A] active:bg-[#1DA851] text-white font-bold text-sm transition-colors"
               aria-label="Chat on WhatsApp"
             >
               <MessageCircle className="w-5 h-5" fill="currentColor" />
               <span>WhatsApp</span>
-            </button>
+            </a>
           </div>
 
           {/* Trust line */}

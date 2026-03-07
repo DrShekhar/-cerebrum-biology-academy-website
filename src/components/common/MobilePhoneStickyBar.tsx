@@ -1,8 +1,8 @@
 'use client'
 
 import { Phone, MessageSquare } from 'lucide-react'
-import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
+import { buildWhatsAppUrl } from '@/lib/whatsapp/tracking'
+import { trackPhoneCall, trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
 
 interface MobilePhoneStickyBarProps {
   phoneNumber?: string
@@ -16,15 +16,16 @@ export function MobilePhoneStickyBar({
   showWhatsApp = true,
 }: MobilePhoneStickyBarProps) {
   const handleCallNow = () => {
-    trackPhoneCallConversion(source)
+    trackPhoneCall(source, 100)
   }
 
-  const handleWhatsApp = async () => {
-    await trackAndOpenWhatsApp({
-      source: source,
-      message: 'Hi! I want to know more about NEET Biology coaching.',
-      campaign: 'sticky-bar',
-    })
+  const whatsappHref = buildWhatsAppUrl(
+    'Hi! I want to know more about NEET Biology coaching.',
+    source
+  )
+
+  const handleWhatsApp = () => {
+    trackWhatsAppLead(source, 50)
   }
 
   return (
@@ -42,13 +43,17 @@ export function MobilePhoneStickyBar({
             <span>Call Now</span>
           </a>
           {showWhatsApp && (
-            <button
+            <a
+              href={whatsappHref}
               onClick={handleWhatsApp}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center space-x-2 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl font-medium transition-colors"
+              aria-label="Chat on WhatsApp"
             >
               <MessageSquare className="w-5 h-5" />
               <span>WhatsApp</span>
-            </button>
+            </a>
           )}
         </div>
       </div>

@@ -164,36 +164,36 @@ function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
   const trackingInfo = ` [Source: ${params.source}]`
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message + trackingInfo)}`
 
+  // Fire synchronous tracking FIRST (Google Ads conversion — no network call)
+  trackWhatsAppLead(params.source, 50)
+
   if (isMobileDevice()) {
-    const opened = window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
-    if (!opened) {
-      window.location.href = whatsappUrl
-    }
+    // Use location.href directly — more reliable than window.open on mobile
+    // and avoids popup blockers entirely
+    window.location.href = whatsappUrl
   } else {
     openDesktopWhatsAppModal(whatsappUrl, message, params.source)
   }
 
+  // Fire async tracking AFTER navigation starts (fire-and-forget)
   trackWhatsAppClick(params).catch(() => {})
-  trackWhatsAppLead(params.source, 50)
 }
 
 export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Promise<void> {
-  return new Promise<void>((resolve) => {
-    const detail = {
-      intercepted: false,
-      resolve: () => {
-        openWhatsAppDirectly(params)
-        resolve()
-      },
-    }
-
-    window.dispatchEvent(new CustomEvent('cerebrum:whatsapp-lead-gate', { detail }))
-
-    if (!detail.intercepted) {
+  const detail = {
+    intercepted: false,
+    resolve: () => {
       openWhatsAppDirectly(params)
-      resolve()
-    }
-  })
+    },
+  }
+
+  window.dispatchEvent(new CustomEvent('cerebrum:whatsapp-lead-gate', { detail }))
+
+  // Only open directly if the lead gate did NOT intercept.
+  // If intercepted, the gate will call detail.resolve() after collecting info.
+  if (!detail.intercepted) {
+    openWhatsAppDirectly(params)
+  }
 }
 
 /**
