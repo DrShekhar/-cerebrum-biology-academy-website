@@ -40,19 +40,29 @@ export function VisitOurCenters({ className = '' }: { className?: string }) {
               href={`/locations/${center.slug}`}
               className="bg-white rounded-lg p-4 border border-gray-200 hover:border-green-500 hover:shadow-md transition-all text-center"
             >
-              <span className="block font-semibold text-gray-900 text-sm">
-                {center.name}
-              </span>
+              <span className="block font-semibold text-gray-900 text-sm">{center.name}</span>
               <span className="block text-xs text-gray-500 mt-1">{center.label}</span>
             </Link>
           ))}
         </div>
-        <div className="text-center mt-4">
+        <div className="flex flex-wrap justify-center gap-4 mt-4">
           <Link
-            href="/locations"
+            href="/all-locations"
             className="text-sm text-green-700 hover:text-green-800 font-medium hover:underline"
           >
             View all center locations &rarr;
+          </Link>
+          <Link
+            href="/results"
+            className="text-sm text-blue-700 hover:text-blue-800 font-medium hover:underline"
+          >
+            See our results &rarr;
+          </Link>
+          <Link
+            href="/board-exam-preparation"
+            className="text-sm text-purple-700 hover:text-purple-800 font-medium hover:underline"
+          >
+            Board exam preparation &rarr;
           </Link>
         </div>
       </div>
@@ -64,9 +74,7 @@ export function ExploreCourses({ className = '' }: { className?: string }) {
   return (
     <section className={`py-10 bg-white ${className}`}>
       <div className="container mx-auto px-4">
-        <h2 className="text-xl font-bold text-gray-900 mb-2">
-          Explore NEET Biology Courses
-        </h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Explore NEET Biology Courses</h2>
         <p className="text-sm text-gray-600 mb-5">
           Programs for Class 9 to Dropper level — AIIMS faculty, small batches, proven results
         </p>
@@ -77,9 +85,7 @@ export function ExploreCourses({ className = '' }: { className?: string }) {
               href={`/courses/${course.slug}`}
               className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-500 hover:shadow-md transition-all"
             >
-              <span className="block font-semibold text-gray-900 text-sm">
-                {course.name}
-              </span>
+              <span className="block font-semibold text-gray-900 text-sm">{course.name}</span>
             </Link>
           ))}
         </div>
