@@ -497,11 +497,11 @@ export default function BestNEETCoachingGhaziabadContent({ faqs }: { faqs: FAQ[]
               <p className="text-sm text-gray-600">All Ghaziabad programs</p>
             </Link>
             <Link
-              href="/affordable-neet-coaching-ghaziabad"
+              href="/biology-tutor-ghaziabad"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>
-              <p className="text-sm text-gray-600">Budget-friendly options</p>
+              <h3 className="font-semibold text-teal-600">Biology Tutor</h3>
+              <p className="text-sm text-gray-600">Expert biology tutoring</p>
             </Link>
             <Link
               href="/neet-dropper-batch-ghaziabad"

@@ -465,7 +465,7 @@ export default function NEETTestSeriesGreaterNoidaContent({ faqs }: { faqs: FAQ[
               <p className="text-sm text-gray-600">Try before you join</p>
             </Link>
             <Link
-              href="/affordable-neet-coaching-greater-noida"
+              href="/best-neet-coaching-greater-noida"
               className="bg-white p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>

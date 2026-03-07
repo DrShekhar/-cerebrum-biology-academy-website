@@ -312,7 +312,7 @@ export default function AllenAlternativeContent({ faqs }: { faqs: FAQ[] }) {
           <div className="grid md:grid-cols-4 gap-4">
             <Link href="/aakash-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Aakash Alternative</h3><p className="text-sm text-gray-600">Compare with Aakash</p></Link>
             <Link href="/complement-allen-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Complement Allen</h3><p className="text-sm text-gray-600">Add Biology support</p></Link>
-            <Link href="/affordable-neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Affordable Coaching</h3><p className="text-sm text-gray-600">Budget-friendly options</p></Link>
+            <Link href="/best-neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Affordable Coaching</h3><p className="text-sm text-gray-600">Budget-friendly options</p></Link>
             <Link href="/neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
           </div>
         </div>

@@ -735,7 +735,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               <p className="text-sm text-gray-600">Compare with Allen</p>
             </Link>
             <Link
-              href="/affordable-neet-coaching-gurugram"
+              href="/best-neet-coaching-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>

@@ -524,7 +524,7 @@ export default function AllenAlternativeNoidaContent({ faqs }: { faqs: FAQ[] }) 
               <p className="text-sm text-gray-600">Compare with Aakash</p>
             </Link>
             <Link
-              href="/which-neet-coaching-is-best-in-noida"
+              href="/best-neet-coaching-noida"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Best NEET Coaching</h3>

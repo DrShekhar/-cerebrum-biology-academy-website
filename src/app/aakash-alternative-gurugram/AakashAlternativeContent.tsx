@@ -313,7 +313,7 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
           <div className="grid md:grid-cols-4 gap-4">
             <Link href="/allen-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Allen Alternative</h3><p className="text-sm text-gray-600">Compare with Allen</p></Link>
             <Link href="/complement-aakash-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Complement Aakash</h3><p className="text-sm text-gray-600">Add Biology support</p></Link>
-            <Link href="/affordable-neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Affordable Coaching</h3><p className="text-sm text-gray-600">Budget-friendly options</p></Link>
+            <Link href="/best-neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Affordable Coaching</h3><p className="text-sm text-gray-600">Budget-friendly options</p></Link>
             <Link href="/neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
           </div>
         </div>

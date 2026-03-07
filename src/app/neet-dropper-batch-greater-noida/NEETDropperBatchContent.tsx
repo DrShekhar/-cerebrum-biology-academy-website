@@ -446,7 +446,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
               <p className="text-sm text-gray-600">All NEET programs</p>
             </Link>
             <Link
-              href="/affordable-neet-coaching-greater-noida"
+              href="/best-neet-coaching-greater-noida"
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>

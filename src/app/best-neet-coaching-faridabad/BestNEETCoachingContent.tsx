@@ -486,18 +486,18 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
               <p className="text-sm text-gray-600">All Faridabad programs</p>
             </Link>
             <Link
-              href="/top-10-neet-coaching-faridabad"
+              href="/biology-tutor-faridabad"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">Top 10 NEET Coaching</h3>
-              <p className="text-sm text-gray-600">Ranking & comparison</p>
+              <h3 className="font-semibold text-teal-600">Biology Tutor</h3>
+              <p className="text-sm text-gray-600">Expert biology tutoring</p>
             </Link>
             <Link
-              href="/affordable-neet-coaching-faridabad"
+              href="/locations/faridabad"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>
-              <p className="text-sm text-gray-600">Budget-friendly options</p>
+              <h3 className="font-semibold text-teal-600">Faridabad Center</h3>
+              <p className="text-sm text-gray-600">Visit our center</p>
             </Link>
             <Link
               href="/neet-dropper-batch-faridabad"

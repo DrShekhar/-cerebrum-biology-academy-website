@@ -523,7 +523,7 @@ export default function AllenAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[]
               <p className="text-sm text-gray-600">Compare with Aakash</p>
             </Link>
             <Link
-              href="/affordable-neet-coaching-ghaziabad"
+              href="/best-neet-coaching-ghaziabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>

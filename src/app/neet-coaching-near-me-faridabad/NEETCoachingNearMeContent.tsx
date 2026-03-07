@@ -405,7 +405,7 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
               <p className="text-sm text-gray-600">Top institutes compared</p>
             </Link>
             <Link
-              href="/affordable-neet-coaching-faridabad"
+              href="/best-neet-coaching-faridabad"
               className="bg-white p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>

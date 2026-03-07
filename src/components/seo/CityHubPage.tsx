@@ -35,6 +35,7 @@ import { CredibilityBar } from '@/components/seo/EEATSignals'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { WhatsAppCTAButton } from '@/components/seo/WhatsAppCTAButton'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
+import { LocalSEOCrossLinks } from '@/components/seo/LocalSEOCrossLinks'
 
 interface CityHubPageProps {
   data: CityHubData
@@ -933,6 +934,9 @@ export function CityHubPage({ data }: CityHubPageProps) {
             </div>
           </div>
         </section>
+
+        {/* Local SEO Cross-Links for internal linking */}
+        <LocalSEOCrossLinks cityName={data.cityName} citySlug={data.slug} />
 
         {/* Final CTA - Cerebrum Colors with WhatsApp */}
         <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20 text-white">

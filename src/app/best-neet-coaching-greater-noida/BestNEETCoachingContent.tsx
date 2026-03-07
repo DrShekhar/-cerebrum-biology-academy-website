@@ -490,11 +490,11 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
               <p className="text-sm text-gray-600">All Greater Noida programs</p>
             </Link>
             <Link
-              href="/affordable-neet-coaching-greater-noida"
+              href="/biology-classes-greater-noida"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>
-              <p className="text-sm text-gray-600">Budget-friendly options</p>
+              <h3 className="font-semibold text-teal-600">Biology Classes</h3>
+              <p className="text-sm text-gray-600">Expert biology coaching</p>
             </Link>
             <Link
               href="/neet-dropper-batch-greater-noida"

@@ -301,7 +301,7 @@ export default function OnlineNEETClassesFaridabadContent({ faqs }: { faqs: FAQ[
             <Link href="/neet-coaching-faridabad" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Offline Coaching</h3><p className="text-sm text-gray-600">In-person classes</p></Link>
             <Link href="/neet-test-series-faridabad" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Test Series</h3><p className="text-sm text-gray-600">Online mock tests</p></Link>
             <Link href="/neet-study-material-faridabad" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Study Material</h3><p className="text-sm text-gray-600">Digital resources</p></Link>
-            <Link href="/affordable-neet-coaching-faridabad" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Affordable Options</h3><p className="text-sm text-gray-600">Budget-friendly plans</p></Link>
+            <Link href="/best-neet-coaching-faridabad" className="bg-white p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Affordable Options</h3><p className="text-sm text-gray-600">Budget-friendly plans</p></Link>
           </div>
         </div>
       </section>

@@ -540,7 +540,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
             <Link
-              href="/affordable-neet-coaching-greater-noida"
+              href="/best-neet-coaching-greater-noida"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Affordable Coaching</h3>
