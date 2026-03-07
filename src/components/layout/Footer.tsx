@@ -12,6 +12,7 @@ import {
   Twitter,
   MessageCircle,
   Send,
+  ChevronDown,
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -20,6 +21,46 @@ import { useI18n } from '@/contexts/I18nContext'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
+
+function FooterSection({
+  title,
+  links,
+  className,
+}: {
+  title: string
+  links: { name: string; href: string }[]
+  className?: string
+}) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className={className}>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center justify-between w-full py-3 lg:py-0 lg:mb-4 lg:pointer-events-none"
+        aria-expanded={isOpen}
+      >
+        <h4 className="font-semibold text-lg text-white">{title}</h4>
+        <ChevronDown
+          className={`w-5 h-5 text-gray-400 transition-transform duration-200 lg:hidden ${isOpen ? 'rotate-180' : ''}`}
+        />
+      </button>
+      <ul className={`space-y-2 pb-4 lg:pb-0 ${isOpen ? 'block' : 'hidden'} lg:block`}>
+        {links.map((link) => (
+          <li key={link.name}>
+            <Link
+              href={link.href}
+              className="text-gray-300 hover:text-white transition-colors text-sm"
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
@@ -63,141 +104,56 @@ export const Footer = memo(function Footer() {
       } else {
         setSubscribeMessage(data.error || 'Subscription failed. Please try again.')
       }
-    } catch (error) {
+    } catch {
       setSubscribeMessage('Subscription failed. Please try again.')
     } finally {
       setIsSubscribing(false)
     }
   }
 
-  const courseLinks = [
+  const programLinks = [
     { name: 'NEET 2026 Preparation', href: '/neet-2026-preparation' },
-    { name: 'Intensive Biology Program', href: '/courses/intensive-neet-biology' },
-    { name: 'Class 11th Biology', href: '/courses/class-11' },
-    { name: 'Class 12th Biology', href: '/courses/class-12' },
+    { name: 'Class 11 Biology', href: '/courses/class-11' },
+    { name: 'Class 12 Biology', href: '/courses/class-12' },
     { name: 'NEET Dropper Program', href: '/courses/neet-dropper' },
     { name: 'Foundation Course (9th-10th)', href: '/courses/foundation' },
-    { name: 'Class 9th Foundation', href: '/courses/class-9-foundation' },
-    { name: 'Class 10th Foundation', href: '/courses/class-10-foundation' },
+    { name: 'Board Exam Preparation', href: '/board-exam-preparation' },
+    { name: 'International Curriculum', href: '/international' },
     { name: 'Pricing & Fee Structure', href: '/pricing' },
   ]
 
-  const boardLinks = [
-    { name: 'CBSE Biology', href: '/boards/cbse' },
-    { name: 'ICSE Biology', href: '/boards/icse' },
-    { name: 'IGCSE Biology', href: '/boards/igcse' },
-    { name: 'IB Biology', href: '/boards/ib' },
-    { name: 'State Board Biology', href: '/boards/state-boards' },
+  const centerLinks = [
+    { name: 'All Locations', href: '/all-locations' },
+    { name: 'South Extension (Flagship)', href: '/locations/south-extension' },
+    { name: 'Rohini - DC Chowk', href: '/locations/rohini' },
+    { name: 'Gurugram - Sector 51', href: '/locations/gurugram' },
+    { name: 'Faridabad - Sector 17', href: '/locations/faridabad' },
+    { name: 'Online Classes — 14+ Countries', href: '/online-neet-biology-coaching' },
   ]
 
-  const servicesLinks = [
-    { name: 'Best NEET Biology Coaching', href: '/best-neet-biology-coaching' },
-    { name: 'Online NEET Biology Coaching', href: '/online-neet-biology-coaching' },
-    { name: 'NEET Coaching Fees', href: '/neet-coaching-fees' },
-    { name: 'Book a Demo Class', href: '/demo-booking' },
+  const resourceLinks = [
     { name: 'Free Biology MCQ Practice', href: '/neet-biology-mcq' },
-    { name: 'Class 11 Biology MCQ', href: '/class-11-biology-mcq' },
-    { name: 'Class 12 Biology MCQ', href: '/class-12-biology-mcq' },
-    { name: 'Olympiad MCQ Practice', href: '/biology-olympiad-mcq' },
     { name: 'Biology Notes for NEET', href: '/biology-notes-for-neet' },
     { name: 'NEET Previous Year Questions', href: '/neet-previous-year-questions' },
     { name: 'Online NEET Test Series', href: '/online-neet-test-series' },
     { name: 'Free Biology Lectures', href: '/free-neet-biology-lectures' },
-    { name: 'Free Resources', href: '/free-resources' },
-    { name: 'NEET Seminar for Schools', href: '/school-career-seminar' },
-    { name: 'Ceri AI', href: '/ai-education-demo' },
-    { name: 'Mobile App', href: '/mobile-app' },
+    { name: 'NEET Biology Study Material', href: '/neet-biology-study-material' },
   ]
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Dr. Shekhar Singh', href: '/dr-shekhar-singh' },
     { name: 'Our Faculty', href: '/faculty' },
+    { name: 'Results & Success Stories', href: '/results' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Results', href: '/results' },
-    { name: 'Success Stories', href: '/testimonials' },
-    { name: 'Wall of Achievers', href: '/wall-of-achievers' },
-    { name: 'NEET Success Stories', href: '/neet-success-stories' },
-    { name: 'Photo Gallery', href: '/gallery' },
-    { name: 'Careers', href: '/company/careers' },
   ]
 
   const supportLinks = [
     { name: 'Contact Us', href: '/contact' },
+    { name: 'Book a Demo Class', href: '/demo-booking' },
     { name: 'Help Center', href: '/help' },
-    { name: 'Book Demo Class', href: '/demo-booking' },
-    { name: 'Leave a Review', href: '/reviews' },
     { name: 'Scholarship', href: '/scholarship' },
-    { name: 'Referral Program', href: '/referral' },
-    { name: 'Admission Process', href: '/admissions' },
-  ]
-
-  const offlineCenters = [
-    { name: 'South Extension (Flagship)', href: '/locations/south-extension' },
-    { name: 'Rohini - DC Chowk', href: '/locations/rohini' },
-    { name: 'Gurugram - Sector 51', href: '/locations/gurugram' },
-    { name: 'Faridabad - Sector 17', href: '/locations/faridabad' },
-    { name: 'Noida', href: '/locations/noida' },
-    { name: 'Ghaziabad', href: '/locations/ghaziabad' },
-    { name: 'Green Park', href: '/locations/green-park' },
-    { name: 'Delhi (All Areas)', href: '/locations/delhi' },
-    { name: 'All Locations', href: '/locations' },
-  ]
-
-  const onlineRegions = [
-    { name: 'North India', href: '/neet-coaching-north-india' },
-    { name: 'South India', href: '/neet-coaching-south-india' },
-    { name: 'East India', href: '/neet-coaching-east-india' },
-    { name: 'West India', href: '/neet-coaching-west-india' },
-    { name: 'NRI Students (14+ Countries)', href: '/nri-students' },
-  ]
-
-  const biologyClassesByCity = [
-    { name: 'Delhi', href: '/locations/delhi' },
-    { name: 'South Delhi', href: '/locations/south-delhi' },
-    { name: 'Noida', href: '/locations/noida' },
-    { name: 'Gurugram', href: '/locations/gurugram' },
-    { name: 'Faridabad', href: '/locations/faridabad' },
-    { name: 'Ghaziabad', href: '/locations/ghaziabad' },
-    { name: 'Rohini', href: '/locations/rohini' },
-  ]
-
-  const biologyTuitionLinks = [
-    { name: 'Biology Tuition', href: '/biology-tuition' },
-    { name: 'Class 9-10 Tuition', href: '/biology-tuition-class-9-10' },
-    { name: 'Class 11 Tuition', href: '/biology-tuition-class-11' },
-    { name: 'Class 12 Tuition', href: '/biology-tuition-class-12' },
-    { name: 'Tuition Near Me', href: '/biology-tuition-near-me' },
-    { name: 'Online Classes', href: '/online-biology-classes' },
-  ]
-
-  const hubLinks = [
-    { name: 'NEET Biology', href: '/neet-biology-coaching' },
-    { name: 'Biology Teacher', href: '/biology-teacher' },
-    { name: 'Online Classes', href: '/online-biology-classes' },
-    { name: 'Foundation & Olympiad', href: '/neet-foundation-class-9' },
-    { name: 'International Curriculum', href: '/international' },
-    { name: 'Best Biology Books', href: '/best-biology-books-for-neet' },
-  ]
-
-  const programDetailsLinks = [
-    { name: 'NEET Biology Coaching Delhi NCR', href: '/neet-biology-coaching-delhi-ncr' },
-    { name: 'NEET Biology Class 11', href: '/neet-biology-class-11' },
-    { name: 'NEET Biology Class 12', href: '/neet-biology-class-12' },
-    { name: 'NEET Biology Study Material', href: '/neet-biology-study-material' },
-    { name: 'NEET Biology Preparation Tips', href: '/neet-biology-preparation-tips' },
-    { name: 'Class 11 Biology Tuition', href: '/class-11-biology-tuition' },
-    { name: 'Class 12 Biology Tuition', href: '/class-12-biology-tuition' },
-    { name: 'Class 12 Board Biology Prep', href: '/class-12-board-biology-preparation' },
-    { name: 'CBSE Biology Coaching Delhi', href: '/cbse-biology-coaching-delhi' },
-    { name: 'Online Biology Classes', href: '/online-biology-classes' },
-  ]
-
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Terms of Service', href: '/terms-of-service' },
-    { name: 'Refund Policy', href: '/refund-policy' },
-    { name: 'Disclaimer', href: '/disclaimer' },
+    { name: 'Leave a Review', href: '/reviews' },
   ]
 
   const socialLinks = [
@@ -226,40 +182,48 @@ export const Footer = memo(function Footer() {
     { name: 'Telegram', href: 'https://t.me/cerebrumbiologyacademy', icon: Send },
   ]
 
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms-of-service' },
+    { name: 'Refund Policy', href: '/refund-policy' },
+  ]
+
   return (
     <footer className="bg-gray-900 text-white" role="contentinfo">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-8 gap-4 md:gap-6 lg:gap-8">
-          {/* Company Info - Spans 2 columns on larger screens */}
-          <div className="lg:col-span-2 animate-fade-in-up">
-            {/* Logo */}
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2">
-                <Image
-                  src="/brain-logo.webp"
-                  alt="Cerebrum Biology Academy"
-                  width={40}
-                  height={40}
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Cerebrum Biology Academy</h3>
-                <p className="text-gray-300 text-sm">Excellence in Biology Education</p>
-              </div>
-            </div>
+      <div className="max-w-7xl mx-auto px-4 pt-12 pb-8">
+        <div className="flex items-center space-x-3 mb-10">
+          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2">
+            <Image
+              src="/brain-logo.webp"
+              alt="Cerebrum Biology Academy"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold">Cerebrum Biology Academy</h3>
+            <p className="text-gray-300 text-sm">Excellence in Biology Education</p>
+          </div>
+        </div>
 
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Founded by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus). Premier NEET Biology
-              coaching institute with 15+ years of excellence. 98% success rate, 15,000+ students
-              mentored to medical colleges.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-0 lg:gap-8 divide-y divide-gray-800 lg:divide-y-0">
+          <FooterSection title="Programs" links={programLinks} />
+          <FooterSection title="Centers & Locations" links={centerLinks} />
+          <FooterSection title="Free Resources" links={resourceLinks} />
+          <div>
+            <FooterSection title="Company" links={companyLinks} />
+            <FooterSection title="Support" links={supportLinks} className="mt-0 lg:mt-6" />
+          </div>
+        </div>
+      </div>
 
-            {/* Contact Info */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
-                <Phone className="w-4 h-4 mr-3 text-blue-400" aria-hidden="true" />
+                <Phone className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" aria-hidden="true" />
                 <div>
                   <a
                     href={getPhoneLink()}
@@ -269,15 +233,14 @@ export const Footer = memo(function Footer() {
                   >
                     {getDisplayPhone()}
                   </a>
-                  <span className="text-gray-400 text-sm block">Open 24/7 — Online Classes Globally</span>
                 </div>
               </div>
 
               <div className="flex items-center text-gray-300">
-                <Mail className="w-4 h-4 mr-3 text-blue-400" aria-hidden="true" />
+                <Mail className="w-4 h-4 mr-3 text-blue-400 flex-shrink-0" aria-hidden="true" />
                 <a
                   href="mailto:info@cerebrumbiologyacademy.com"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white transition-colors text-sm"
                   aria-label="Email us at info@cerebrumbiologyacademy.com"
                 >
                   info@cerebrumbiologyacademy.com
@@ -285,217 +248,24 @@ export const Footer = memo(function Footer() {
               </div>
 
               <div className="flex items-start text-gray-300">
-                <MapPin className="w-4 h-4 mr-3 text-blue-400 mt-1" aria-hidden="true" />
-                <div className="text-sm space-y-1">
-                  <div>
-                    <strong>South Extension:</strong> D 35, South Extension Part 2, 110049
-                  </div>
-                  <div>
-                    <strong>Rohini:</strong> DC Chauk Sector 9, Delhi 110085
-                  </div>
-                  <div>
-                    <strong>Gurugram:</strong> M2K Corporate Park, Sector 51, 122018
-                  </div>
-                  <div>
-                    <strong>Faridabad:</strong> HUDA Market, Sector 17, 121002
-                  </div>
-                </div>
+                <MapPin
+                  className="w-4 h-4 mr-3 text-blue-400 mt-0.5 flex-shrink-0"
+                  aria-hidden="true"
+                />
+                <p className="text-sm text-gray-400">
+                  South Extension &bull; Rohini &bull; Gurugram &bull; Faridabad
+                </p>
               </div>
-            </div>
-          </div>
 
-          {/* Courses */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <h4 className="font-semibold text-lg mb-4 text-white">{t('courses')}</h4>
-            <ul className="space-y-2">
-              {courseLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Board Preparation */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h4 className="font-semibold text-lg mb-4 text-white">{t('boardPreparation')}</h4>
-            <ul className="space-y-2">
-              {boardLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Centers */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <h4 className="font-semibold text-lg mb-4 text-white">Offline Centers</h4>
-            <ul className="space-y-2">
-              {offlineCenters.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Serving Online</h4>
-            <ul className="space-y-2">
-              {onlineRegions.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Biology Classes by City */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-            <h4 className="font-semibold text-lg mb-4 text-white">Biology Classes</h4>
-            <ul className="space-y-2">
-              {biologyClassesByCity.slice(0, 7).map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Biology Tuition</h4>
-            <ul className="space-y-2">
-              {biologyTuitionLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services & Programs */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <h4 className="font-semibold text-lg mb-4 text-white">{t('services')}</h4>
-            <ul className="space-y-2">
-              {servicesLinks.slice(0, 10).map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 mt-6 text-white">Explore Programs</h4>
-            <ul className="space-y-2">
-              {hubLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Program Details - SEO Landing Pages */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.425s' }}>
-            <h4 className="font-semibold text-lg mb-4 text-white">Program Details</h4>
-            <ul className="space-y-2">
-              {programDetailsLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company & Support */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.45s' }}>
-            <h4 className="font-semibold text-lg mb-4 text-white">{t('company')}</h4>
-            <ul className="space-y-2 mb-6">
-              {companyLinks.slice(0, 8).map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h4 className="font-semibold text-lg mb-4 text-white">{t('support')}</h4>
-            <ul className="space-y-2">
-              {supportLinks.slice(0, 5).map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Newsletter Section */}
-        <div
-          className="mt-12 pt-8 border-t border-gray-800 animate-fade-in-up"
-          style={{ animationDelay: '0.5s' }}
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div>
-              <h4 className="font-semibold text-lg mb-2 text-white">{t('stayUpdated')}</h4>
-              <p className="text-gray-300 text-sm">{t('getLatestUpdates')}</p>
-              <p className="text-gray-400 text-xs mt-2">
-                Get free NEET tips, chapter notes, and important updates via email or WhatsApp
-              </p>
+              <p className="text-xs text-gray-500 pl-7">Open 24/7 — Online Classes Globally</p>
             </div>
 
             <form onSubmit={handleNewsletterSubscribe} className="space-y-3">
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <h4 className="font-semibold text-white mb-1">{t('stayUpdated')}</h4>
+              <p className="text-gray-400 text-xs">
+                Get free NEET tips, chapter notes, and important updates via email or WhatsApp
+              </p>
+              <div className="flex flex-col sm:flex-row gap-2">
                 <label htmlFor="newsletter-email" className="sr-only">
                   Email address
                 </label>
@@ -505,14 +275,12 @@ export const Footer = memo(function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email *"
-                  className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-sm sm:text-base min-h-[44px]"
-                  aria-label="Email address for newsletter"
+                  className="flex-1 px-3 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 text-sm min-h-[44px]"
                   disabled={isSubscribing}
                   required
                 />
               </div>
-
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <label htmlFor="newsletter-whatsapp" className="sr-only">
                   WhatsApp number (optional)
                 </label>
@@ -521,20 +289,19 @@ export const Footer = memo(function Footer() {
                   type="tel"
                   value={whatsappNumber}
                   onChange={(e) => setWhatsappNumber(e.target.value)}
-                  placeholder="WhatsApp: +91 88264 44334 (optional)"
-                  className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20 text-sm sm:text-base min-h-[44px]"
-                  aria-label="WhatsApp number for updates"
+                  placeholder="WhatsApp number (optional)"
+                  className="flex-1 px-3 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-2 focus:ring-green-500/20 text-sm min-h-[44px]"
                   disabled={isSubscribing}
                 />
                 <Button
                   type="submit"
                   variant="primary"
-                  className="w-full sm:w-auto whitespace-nowrap text-xs sm:text-sm min-h-[44px]"
+                  className="w-full sm:w-auto whitespace-nowrap text-sm min-h-[44px]"
                   aria-label="Subscribe to newsletter"
                   disabled={isSubscribing}
                 >
                   {isSubscribing ? '...' : t('subscribe')}
-                  <Send className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" aria-hidden="true" />
+                  <Send className="w-4 h-4 ml-2" aria-hidden="true" />
                 </Button>
               </div>
 
@@ -564,19 +331,15 @@ export const Footer = memo(function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-gray-300 text-sm text-center md:text-left">
-              © {currentYear} Cerebrum Biology Academy. All rights reserved. | Empowering future
-              doctors through excellence in biology education.
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-gray-400 text-sm text-center md:text-left">
+              &copy; {currentYear} Cerebrum Biology Academy. All rights reserved.
             </div>
 
-            {/* Social Links */}
             <nav aria-label="Social media links">
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
                 {socialLinks.map((social) => {
                   const handleClick = (social as { isWhatsApp?: boolean }).isWhatsApp
                     ? async (e: React.MouseEvent) => {
@@ -602,50 +365,37 @@ export const Footer = memo(function Footer() {
                           ? undefined
                           : 'noopener noreferrer'
                       }
-                      className="w-11 h-11 min-w-[44px] min-h-[44px] bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors touch-manipulation cursor-pointer"
+                      className="w-10 h-10 min-w-[44px] min-h-[44px] bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors touch-manipulation cursor-pointer"
                       aria-label={`Visit our ${social.name} page`}
                     >
-                      <social.icon className="w-5 h-5" aria-hidden="true" />
+                      <social.icon className="w-4 h-4" aria-hidden="true" />
                     </a>
                   )
                 })}
               </div>
             </nav>
 
-            {/* Legal Links */}
             <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
               {legalLinks.map((link, index) => (
                 <span key={link.name} className="flex items-center">
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
-                  {index < legalLinks.length - 1 && <span className="text-gray-600 ml-4">|</span>}
+                  {index < legalLinks.length - 1 && <span className="text-gray-700 ml-4">|</span>}
                 </span>
               ))}
-              <span className="flex items-center">
-                <span className="text-gray-600 ml-4">|</span>
-                <Link
-                  href="/portal"
-                  className="text-gray-300 hover:text-white transition-colors ml-4"
-                >
-                  Staff Login
-                </Link>
-              </span>
             </div>
           </div>
 
-          {/* Language Switcher - Simplified Dropdown */}
-          <div className="mt-6 pt-4 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-gray-300 text-sm">{t('chooseLanguage')}:</div>
+          <div className="mt-4 pt-4 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-gray-400 text-sm">{t('chooseLanguage')}:</div>
             <LanguageSwitcher variant="default" />
           </div>
         </div>
       </div>
-
-      {/* Quick Actions moved to FloatingCTA component to avoid duplication */}
     </footer>
   )
 })

@@ -25,6 +25,7 @@ import {
   gsc404CleanupRedirects,
   thinPageConsolidationRedirects,
   gsc404CleanupBatch3Redirects,
+  hubPageConsolidationRedirects,
 } from '@/config/seo-redirects.mjs'
 
 const redirectedPaths = new Set(
@@ -35,6 +36,7 @@ const redirectedPaths = new Set(
     ...gsc404CleanupRedirects,
     ...thinPageConsolidationRedirects,
     ...gsc404CleanupBatch3Redirects,
+    ...hubPageConsolidationRedirects,
   ].map((r: { source: string }) => r.source)
 )
 
@@ -300,32 +302,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/results`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.6,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/all-locations`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/board-exam-preparation`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/success-stories`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    },
-    // Trust & Social Proof Pages - HIGH CONVERSION
-    {
-      url: `${baseUrl}/neet-success-stories`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/wall-of-achievers`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-repeater-success-stories`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
+      priority: 0.7,
     },
     // Free Resources & Lead Gen Pages
     {
@@ -7783,7 +7778,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'neet-college-predictor/low-fees-medical-colleges',
     // Index/directory pages
     'states',
-    'all-locations',
     'batch-types',
     // Language pages
     'hi',

@@ -59,6 +59,7 @@ export const kn = {
   enrollNow: 'ಈಗ ನೋಂದಾಯಿಸಿ',
   getStarted: 'ಆರಂಭಿಸಿ',
   results: 'ಫಲಿತಾಂಶಗಳು',
+  ourLocations: 'ಕೇಂದ್ರಗಳು',
   successStories: 'ಯಶಸ್ಸಿನ ಕಥೆಗಳು',
   aiims: 'ಎಐಐಎಂಎಸ್',
   trainedFaculty: 'ತರಬೇತಿ ಪಡೆದ ಫ್ಯಾಕಲ್ಟಿ',

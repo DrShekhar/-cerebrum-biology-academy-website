@@ -59,6 +59,7 @@ export const ru = {
   enrollNow: 'Записаться',
   getStarted: 'Начать',
   results: 'Результаты',
+  ourLocations: 'Центры',
   successStories: 'Истории Успеха',
   aiims: 'AIIMS',
   trainedFaculty: 'Опытные Преподаватели',

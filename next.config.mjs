@@ -11,6 +11,7 @@ import {
   gsc404CleanupRedirects,
   thinPageConsolidationRedirects,
   gsc404CleanupBatch3Redirects,
+  hubPageConsolidationRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1481,17 +1482,41 @@ const nextConfig = {
       { source: '/book-demo', destination: '/demo-booking', permanent: true },
 
       // Blog posts that were deleted or never published
-      { source: '/blog/all-aiims-india-complete-guide-2025', destination: '/blog', permanent: true },
-      { source: '/blog/delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2025', destination: '/blog', permanent: true },
-      { source: '/blog/medical-colleges-pune-complete-guide-2025', destination: '/blog', permanent: true },
-      { source: '/blog/navi-mumbai-medical-colleges-comparison-2025', destination: '/blog', permanent: true },
-      { source: '/blog/top-10-neet-biology-coaching-delhi-ncr-2025', destination: '/blog', permanent: true },
+      {
+        source: '/blog/all-aiims-india-complete-guide-2025',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2025',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/medical-colleges-pune-complete-guide-2025',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/navi-mumbai-medical-colleges-comparison-2025',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/top-10-neet-biology-coaching-delhi-ncr-2025',
+        destination: '/blog',
+        permanent: true,
+      },
 
       // Boards variant
       { source: '/boards/state-boards', destination: '/courses', permanent: true },
 
       // Location variant
-      { source: '/locations/hauz-khas', destination: '/biology-classes-south-delhi', permanent: true },
+      {
+        source: '/locations/hauz-khas',
+        destination: '/biology-classes-south-delhi',
+        permanent: true,
+      },
 
       // ============================================
       // SEO Page Consolidation - Thin/Doorway Pages
@@ -1503,6 +1528,7 @@ const nextConfig = {
       ...gsc404CleanupRedirects,
       ...thinPageConsolidationRedirects,
       ...gsc404CleanupBatch3Redirects,
+      ...hubPageConsolidationRedirects,
     ]
   },
 

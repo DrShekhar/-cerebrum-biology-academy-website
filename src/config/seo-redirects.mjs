@@ -635,11 +635,19 @@ export const seoPageConsolidationRedirects = [
 // ============================================
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const neetCoachingLocationRedirects = [
-  { source: '/neet-coaching/gurgaon-sector-:num', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/neet-coaching/gurgaon-sector-:num',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
   { source: '/neet-coaching/gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
   { source: '/neet-coaching/dwarka', destination: '/neet-coaching-dwarka', permanent: true },
   { source: '/neet-coaching/rohini', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching/greater-kailash', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching/greater-kailash',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching/noida', destination: '/neet-coaching-noida', permanent: true },
   { source: '/neet-coaching/bangalore', destination: '/neet-coaching-bangalore', permanent: true },
   { source: '/neet-coaching/chennai', destination: '/neet-coaching-chennai', permanent: true },
@@ -651,7 +659,11 @@ export const neetCoachingLocationRedirects = [
   { source: '/neet-coaching/jaipur', destination: '/neet-coaching-jaipur', permanent: true },
   { source: '/neet-coaching/lucknow', destination: '/neet-coaching-lucknow', permanent: true },
   { source: '/neet-coaching/agra', destination: '/neet-coaching-agra', permanent: true },
-  { source: '/neet-coaching/chandigarh', destination: '/neet-coaching-chandigarh', permanent: true },
+  {
+    source: '/neet-coaching/chandigarh',
+    destination: '/neet-coaching-chandigarh',
+    permanent: true,
+  },
 ]
 
 // ============================================
@@ -661,88 +673,296 @@ export const neetCoachingLocationRedirects = [
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const localAreaPageRedirects = [
   // --- Gurugram hub ---
-  { source: '/best-biology-coaching-gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-gurgaon-sector-43', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/biology-coaching-gurgaon-sector-45', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-biology-gurgaon-sector-57', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/best-biology-coaching-gurgaon',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurgaon-sector-43',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-gurgaon-sector-45',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-biology-gurgaon-sector-57',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
 
   // --- Noida hub ---
   { source: '/best-biology-tuition-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-noida-sector-15', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-noida-sector-50', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-noida-sector-76', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/neet-coaching-noida-sector-15',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida-sector-50',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida-sector-76',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 
   // --- Faridabad hub ---
-  { source: '/biology-coaching-faridabad-neet', destination: '/neet-coaching-faridabad', permanent: true },
+  {
+    source: '/biology-coaching-faridabad-neet',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // --- Ghaziabad hub ---
-  { source: '/best-biology-teacher-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/biology-coaching-vasundhara-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-coaching-raj-nagar-extension', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-coaching-crossings-republik', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-coaching-mohan-nagar', destination: '/neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/best-biology-teacher-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-vasundhara-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-raj-nagar-extension',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-crossings-republik',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-mohan-nagar',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
   { source: '/neet-coaching-wave-city', destination: '/neet-coaching-ghaziabad', permanent: true },
 
   // --- Centre hub ---
-  { source: '/biology-coaching-central-delhi', destination: '/neet-coaching-centre', permanent: true },
+  {
+    source: '/biology-coaching-central-delhi',
+    destination: '/neet-coaching-centre',
+    permanent: true,
+  },
 
   // --- Rohini hub ---
-  { source: '/neet-coaching-rohini-sector-3', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-rohini-sector-7', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-rohini-sector-8', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-rohini-sector-9', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-rohini-sector-11', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-rohini-sector-13', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-rohini-sector-16', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-rohini-sector-24', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/biology-coaching-shalimar-bagh', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/neet-coaching-rohini-sector-3',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-rohini-sector-7',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-rohini-sector-8',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-rohini-sector-9',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-rohini-sector-11',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-rohini-sector-13',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-rohini-sector-16',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-rohini-sector-24',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-shalimar-bagh',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
 
   // --- Pitampura ---
-  { source: '/neet-coaching-pitampura-delhi', destination: '/neet-coaching-north-delhi', permanent: true },
+  {
+    source: '/neet-coaching-pitampura-delhi',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
 
   // --- South Delhi hub ---
-  { source: '/neet-coaching-greater-kailash-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-lajpat-nagar-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-hauz-khas-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-malviya-nagar-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-kalkaji-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-nehru-place-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-defence-colony-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-south-extension-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-green-park-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-greater-kailash-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-lajpat-nagar-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-hauz-khas-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-malviya-nagar-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-kalkaji-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-nehru-place-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-defence-colony-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-extension-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-green-park-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
 
   // --- West Delhi hub ---
-  { source: '/neet-coaching-rajouri-garden-delhi', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/biology-coaching-punjabi-bagh-delhi', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/neet-coaching-uttam-nagar', destination: '/neet-coaching-west-delhi', permanent: true },
+  {
+    source: '/neet-coaching-rajouri-garden-delhi',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-punjabi-bagh-delhi',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-uttam-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching-vikaspuri', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/neet-coaching-tilak-nagar', destination: '/neet-coaching-west-delhi', permanent: true },
+  {
+    source: '/neet-coaching-tilak-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
 
   // --- East Delhi hub ---
-  { source: '/neet-coaching-nirman-vihar-delhi', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/neet-coaching-mayur-vihar', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/neet-coaching-preet-vihar', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/neet-coaching-laxmi-nagar', destination: '/neet-coaching-east-delhi', permanent: true },
+  {
+    source: '/neet-coaching-nirman-vihar-delhi',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-mayur-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-preet-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-laxmi-nagar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching-shahdara', destination: '/neet-coaching-east-delhi', permanent: true },
 
   // --- Dwarka hub ---
   { source: '/neet-coaching-dwarka-delhi', destination: '/neet-coaching-dwarka', permanent: true },
-  { source: '/neet-coaching-dwarka-sector-7', destination: '/neet-coaching-dwarka', permanent: true },
-  { source: '/neet-coaching-dwarka-sector-19', destination: '/neet-coaching-dwarka', permanent: true },
+  {
+    source: '/neet-coaching-dwarka-sector-7',
+    destination: '/neet-coaching-dwarka',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dwarka-sector-19',
+    destination: '/neet-coaching-dwarka',
+    permanent: true,
+  },
 
   // --- Bangalore hub ---
-  { source: '/biology-coaching-electronic-city-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
-  { source: '/neet-biology-coaching-marathahalli-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
-  { source: '/biology-coaching-yelahanka-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
-  { source: '/neet-coaching-hebbal-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
+  {
+    source: '/biology-coaching-electronic-city-bangalore',
+    destination: '/neet-coaching-bangalore',
+    permanent: true,
+  },
+  {
+    source: '/neet-biology-coaching-marathahalli-bangalore',
+    destination: '/neet-coaching-bangalore',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-yelahanka-bangalore',
+    destination: '/neet-coaching-bangalore',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-hebbal-bangalore',
+    destination: '/neet-coaching-bangalore',
+    permanent: true,
+  },
 
   // --- Punjab/Chandigarh ---
   { source: '/neet-coaching-mohali-punjab', destination: '/neet-coaching-mohali', permanent: true },
-  { source: '/neet-coaching-panchkula-haryana', destination: '/neet-coaching-panchkula', permanent: true },
-  { source: '/neet-coaching-zirakpur-punjab', destination: '/neet-coaching-zirakpur', permanent: true },
-  { source: '/neet-coaching-ludhiana-punjab', destination: '/neet-coaching-ludhiana', permanent: true },
-  { source: '/neet-coaching-jalandhar-punjab', destination: '/neet-coaching-jalandhar', permanent: true },
-  { source: '/neet-coaching-amritsar-punjab', destination: '/neet-coaching-amritsar', permanent: true },
+  {
+    source: '/neet-coaching-panchkula-haryana',
+    destination: '/neet-coaching-panchkula',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-zirakpur-punjab',
+    destination: '/neet-coaching-zirakpur',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ludhiana-punjab',
+    destination: '/neet-coaching-ludhiana',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-jalandhar-punjab',
+    destination: '/neet-coaching-jalandhar',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-amritsar-punjab',
+    destination: '/neet-coaching-amritsar',
+    permanent: true,
+  },
 ]
 
 // ============================================
@@ -765,7 +985,11 @@ export const gsc404CleanupRedirects = [
 
   // --- Standalone pages that don't exist ---
   { source: '/ncert-solutions', destination: '/biology-notes', permanent: true },
-  { source: '/neet-foundation-class-11-gurugram', destination: '/courses/class-11', permanent: true },
+  {
+    source: '/neet-foundation-class-11-gurugram',
+    destination: '/courses/class-11',
+    permanent: true,
+  },
 
   // --- Biology tutor curriculum/city pages with no route ---
   { source: '/biology-tutor-cbse', destination: '/biology-tutor', permanent: true },
@@ -774,13 +998,25 @@ export const gsc404CleanupRedirects = [
   { source: '/biology-tutor-kochi', destination: '/biology-tutor', permanent: true },
 
   // --- Nested location sub-routes that don't exist ---
-  { source: '/locations/bangalore/:path*', destination: '/neet-coaching-bangalore', permanent: true },
+  {
+    source: '/locations/bangalore/:path*',
+    destination: '/neet-coaching-bangalore',
+    permanent: true,
+  },
 
   // --- Blog posts that no longer exist ---
   { source: '/blog/neet-2026-preparation-90-day-strategy', destination: '/blog', permanent: true },
-  { source: '/blog/neet-preparation-tips-delhi-ncr-students', destination: '/blog', permanent: true },
+  {
+    source: '/blog/neet-preparation-tips-delhi-ncr-students',
+    destination: '/blog',
+    permanent: true,
+  },
   { source: '/blog/kota-vs-online-neet-coaching-2025', destination: '/blog', permanent: true },
-  { source: '/blog/neet-biology-syllabus-2025-complete-guide', destination: '/blog', permanent: true },
+  {
+    source: '/blog/neet-biology-syllabus-2025-complete-guide',
+    destination: '/blog',
+    permanent: true,
+  },
 
   // ============================================
   // Wildcard redirects for common 404 patterns (219 GSC 404s)
@@ -813,7 +1049,6 @@ export const gsc404CleanupRedirects = [
   { source: '/neet-coaching-:slug-india', destination: '/neet-coaching', permanent: true },
 
   // --- Navigation/informational pages redirects ---
-  { source: '/success-stories', destination: '/results', permanent: true },
   { source: '/teachers', destination: '/about', permanent: true },
   { source: '/schedule', destination: '/courses', permanent: true },
   { source: '/timetable', destination: '/courses', permanent: true },
@@ -834,43 +1069,151 @@ export const gsc404CleanupRedirects = [
 
   // --- WILDCARD: biology-classes sub-area routes (catches ~50 URLs) ---
   // Parent pages exist but sub-area routes don't (e.g., /biology-classes-dwarka/sector-7)
-  { source: '/biology-classes-vasant-kunj/:path+', destination: '/biology-classes', permanent: true },
+  {
+    source: '/biology-classes-vasant-kunj/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
   { source: '/biology-classes-dwarka/:path+', destination: '/biology-classes', permanent: true },
   { source: '/biology-classes-rewari/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-mahendragarh/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-defence-colony/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-ashok-vihar/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-karol-bagh/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-nehru-place/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-model-town/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-south-delhi/:path+', destination: '/biology-classes', permanent: true },
+  {
+    source: '/biology-classes-mahendragarh/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-defence-colony/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-ashok-vihar/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-karol-bagh/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-nehru-place/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-model-town/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-south-delhi/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
   { source: '/biology-classes-manesar/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-laxmi-nagar/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-preet-vihar/:path+', destination: '/biology-classes', permanent: true },
-  { source: '/biology-classes-pitampura/:path+', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/biology-classes-rohini/:path+', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-green-park/:path+', destination: '/biology-classes-green-park', permanent: true },
-  { source: '/biology-classes-noida/:path+', destination: '/biology-classes-noida', permanent: true },
+  {
+    source: '/biology-classes-laxmi-nagar/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-preet-vihar/:path+',
+    destination: '/biology-classes',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-pitampura/:path+',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini/:path+',
+    destination: '/biology-classes-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-green-park/:path+',
+    destination: '/biology-classes-green-park',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-noida/:path+',
+    destination: '/biology-classes-noida',
+    permanent: true,
+  },
 
   // --- WILDCARD: biology-tuition sub-area routes (catches ~28 URLs) ---
-  { source: '/biology-tuition-west-delhi/:path+', destination: '/biology-tuition', permanent: true },
-  { source: '/biology-tuition-east-delhi/:path+', destination: '/biology-tuition', permanent: true },
-  { source: '/biology-tuition-north-delhi/:path+', destination: '/biology-tuition', permanent: true },
+  {
+    source: '/biology-tuition-west-delhi/:path+',
+    destination: '/biology-tuition',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-east-delhi/:path+',
+    destination: '/biology-tuition',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-north-delhi/:path+',
+    destination: '/biology-tuition',
+    permanent: true,
+  },
   { source: '/biology-tuition-gurgaon/:path+', destination: '/biology-tuition', permanent: true },
-  { source: '/biology-tuition-noida/:path+', destination: '/biology-tuition-noida', permanent: true },
+  {
+    source: '/biology-tuition-noida/:path+',
+    destination: '/biology-tuition-noida',
+    permanent: true,
+  },
 
   // --- WILDCARD: biology-notes chapter routes (catches ~25 URLs) ---
-  { source: '/biology-notes/class-11/:path*', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/biology-notes/class-12/:path*', destination: '/biology-notes-for-neet', permanent: true },
+  {
+    source: '/biology-notes/class-11/:path*',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/biology-notes/class-12/:path*',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
 
   // --- Standalone biology-classes pages that don't exist ---
-  { source: '/biology-classes-gurgaon-sector-31', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-gurgaon-sector-61', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-gurgaon-sector-47', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-rohini-sector-8', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-rohini-sector-15', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-rohini-sector-7', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-rohini-sector-3', destination: '/biology-classes-rohini', permanent: true },
+  {
+    source: '/biology-classes-gurgaon-sector-31',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-gurgaon-sector-61',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-gurgaon-sector-47',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini-sector-8',
+    destination: '/biology-classes-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini-sector-15',
+    destination: '/biology-classes-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini-sector-7',
+    destination: '/biology-classes-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini-sector-3',
+    destination: '/biology-classes-rohini',
+    permanent: true,
+  },
 
   // --- Double-prefix bug: biology-classes-biology-classes-* (schema generation bug) ---
 
@@ -883,7 +1226,11 @@ export const gsc404CleanupRedirects = [
   // --- Olympiad preparation pages ---
 
   // --- Standalone pages ---
-  { source: '/best-neet-biology-coaching-delhi-ncr', destination: '/neet-coaching', permanent: true },
+  {
+    source: '/best-neet-biology-coaching-delhi-ncr',
+    destination: '/neet-coaching',
+    permanent: true,
+  },
   { source: '/undefined', destination: '/', permanent: true },
 
   // --- Resources sub-pages that don't exist ---
@@ -895,11 +1242,19 @@ export const gsc404CleanupRedirects = [
   // removed: /neet-coaching-malviya-nagar-delhi — already in localArea → /neet-coaching-south-delhi
   { source: '/about/faculty', destination: '/faculty', permanent: true },
   { source: '/courses/dropper', destination: '/courses/neet-dropper', permanent: true },
-  { source: '/blog/maharashtra-mbbs-counselling-dmer-guide-2025', destination: '/blog', permanent: true },
+  {
+    source: '/blog/maharashtra-mbbs-counselling-dmer-guide-2025',
+    destination: '/blog',
+    permanent: true,
+  },
   { source: '/blog/how-to-score-700-plus-in-neet', destination: '/blog', permanent: true },
   { source: '/blog/neet-application-form-2026', destination: '/blog', permanent: true },
   { source: '/blog/human-physiology-neet-complete-notes', destination: '/blog', permanent: true },
-  { source: '/blog/top-private-medical-colleges-india-fees-cutoff-rankings', destination: '/blog', permanent: true },
+  {
+    source: '/blog/top-private-medical-colleges-india-fees-cutoff-rankings',
+    destination: '/blog',
+    permanent: true,
+  },
   { source: '/services/classroom', destination: '/services', permanent: true },
   { source: '/services/online-classes', destination: '/services', permanent: true },
   { source: '/services/international', destination: '/international', permanent: true },
@@ -909,22 +1264,78 @@ export const gsc404CleanupRedirects = [
   // --- Feb 27 crawl batch 2: more non-existent pages ---
 
   // biology-notes chapter sub-routes (redirect to biology-notes-for-neet)
-  { source: '/biology-notes/locomotion-movement', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/biology-notes/animal-kingdom', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/biology-notes/reproductive-health', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/biology-notes/breathing-exchange-gases', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/biology-notes/excretory-products', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/biology-notes/structural-organisation-animals', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/biology-notes/human-health-disease', destination: '/biology-notes-for-neet', permanent: true },
-  { source: '/biology-notes/chemical-coordination', destination: '/biology-notes-for-neet', permanent: true },
+  {
+    source: '/biology-notes/locomotion-movement',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/biology-notes/animal-kingdom',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/biology-notes/reproductive-health',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/biology-notes/breathing-exchange-gases',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/biology-notes/excretory-products',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/biology-notes/structural-organisation-animals',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/biology-notes/human-health-disease',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/biology-notes/chemical-coordination',
+    destination: '/biology-notes-for-neet',
+    permanent: true,
+  },
 
   // More standalone biology-classes pages that don't exist
-  { source: '/biology-classes-noida-sector-62', destination: '/biology-classes-noida', permanent: true },
-  { source: '/biology-classes-gurgaon-sector-82', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-gurgaon-sector-50', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-gurgaon-sector-14', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-gurgaon-sector-4', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-rohini-sector-5', destination: '/biology-classes-rohini', permanent: true },
+  {
+    source: '/biology-classes-noida-sector-62',
+    destination: '/biology-classes-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-gurgaon-sector-82',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-gurgaon-sector-50',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-gurgaon-sector-14',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-gurgaon-sector-4',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini-sector-5',
+    destination: '/biology-classes-rohini',
+    permanent: true,
+  },
 
   // Olympiad preparation pages
 
@@ -953,126 +1364,446 @@ export const gsc404CleanupRedirects = [
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const thinPageConsolidationRedirects = [
   // --- South Delhi micro-localities → /neet-coaching-south-delhi ---
-  { source: '/neet-coaching-alaknanda', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-chittaranjan-park', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-east-of-kailash', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-alaknanda',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-chittaranjan-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-of-kailash',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching-jangpura', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-kailash-colony', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-maharani-bagh', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-kailash-colony',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-maharani-bagh',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching-munirka', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-nehru-place', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-nehru-place',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching-okhla', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-safdarjung', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-sarvapriya-vihar', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-shahpur-jat', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-shanti-niketan', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-safdarjung',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sarvapriya-vihar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-shahpur-jat',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-shanti-niketan',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   // removed: /neet-coaching-vasant-vihar — already in seoPage
-  { source: '/neet-coaching-sarita-vihar', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-sarita-vihar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching-jor-bagh', destination: '/neet-coaching-south-delhi', permanent: true },
   { source: '/neet-coaching-mehrauli', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-lado-sarai', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-chattarpur', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-alaknanda', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-cr-park', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-munirka', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-lado-sarai',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-chattarpur',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-alaknanda',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-cr-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-munirka',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/biology-coaching-okhla', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-nehru-place', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-sarita-vihar', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-coaching-nehru-place',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-sarita-vihar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
 
   // --- North Delhi micro-localities → /neet-coaching-north-delhi ---
-  { source: '/neet-coaching-civil-lines', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/neet-coaching-kamla-nagar', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/neet-coaching-shakti-nagar', destination: '/neet-coaching-north-delhi', permanent: true },
+  {
+    source: '/neet-coaching-civil-lines',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-kamla-nagar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-shakti-nagar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching-timarpur', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/neet-coaching-hudson-lines', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/neet-coaching-kohat-enclave', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/neet-coaching-adarsh-nagar', destination: '/neet-coaching-north-delhi', permanent: true },
+  {
+    source: '/neet-coaching-hudson-lines',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-kohat-enclave',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-adarsh-nagar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
   { source: '/neet-coaching-wazirpur', destination: '/neet-coaching-north-delhi', permanent: true },
   // removed: /neet-coaching-ashok-vihar — already in seoPage
-  { source: '/biology-coaching-civil-lines', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/biology-coaching-kamla-nagar', destination: '/neet-coaching-north-delhi', permanent: true },
+  {
+    source: '/biology-coaching-civil-lines',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-kamla-nagar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
 
   // --- East Delhi micro-localities → /neet-coaching-east-delhi ---
   // removed: /neet-coaching-preet-vihar, /neet-coaching-nirman-vihar — already in earlier arrays
-  { source: '/neet-coaching-vivek-vihar', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/neet-coaching-anand-vihar', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/neet-coaching-lakshmi-nagar', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/neet-coaching-patparganj', destination: '/neet-coaching-east-delhi', permanent: true },
+  {
+    source: '/neet-coaching-vivek-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-anand-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-lakshmi-nagar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-patparganj',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
   // removed: /neet-coaching-shahdara — already in localArea
-  { source: '/neet-coaching-gandhi-nagar', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/neet-coaching-geeta-colony', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/biology-coaching-laxmi-nagar', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/biology-coaching-preet-vihar', destination: '/neet-coaching-east-delhi', permanent: true },
+  {
+    source: '/neet-coaching-gandhi-nagar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-geeta-colony',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-laxmi-nagar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-preet-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
 
   // --- West Delhi micro-localities → /neet-coaching-west-delhi ---
   // removed: rajouri-garden, tilak-nagar, vikaspuri, uttam-nagar — already in earlier arrays
-  { source: '/neet-coaching-hari-nagar', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/neet-coaching-tagore-garden', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/neet-coaching-kirti-nagar', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/neet-coaching-patel-nagar', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/biology-coaching-rajouri-garden', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/biology-coaching-janakpuri', destination: '/neet-coaching-west-delhi', permanent: true },
+  {
+    source: '/neet-coaching-hari-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-tagore-garden',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-kirti-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-patel-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-rajouri-garden',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-janakpuri',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
 
   // --- Gurugram thin sectors → /neet-coaching-gurgaon ---
-  { source: '/neet-coaching-sector-14-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-15-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-22-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-23-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-40-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-45-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-49-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-56-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-57-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-sector-82-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+  {
+    source: '/neet-coaching-sector-14-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-15-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-22-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-23-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-40-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-45-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-49-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-56-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-57-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-82-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
   { source: '/neet-coaching-manesar', destination: '/neet-coaching-gurgaon', permanent: true },
-  { source: '/neet-coaching-palam-vihar-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+  {
+    source: '/neet-coaching-palam-vihar-gurgaon',
+    destination: '/neet-coaching-gurgaon',
+    permanent: true,
+  },
   // removed: /neet-coaching-south-city-gurgaon — already in seoPage
 
   // --- Noida thin sectors → /neet-coaching-noida ---
-  { source: '/neet-coaching-sector-15-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-16-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-18-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-25-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-37-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-44-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-50-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-76-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-93-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-104-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-120-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-137-noida', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/neet-coaching-sector-15-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-16-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-18-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-25-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-37-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-44-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-50-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-76-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-93-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-104-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-120-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-137-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
   { source: '/neet-coaching-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-noida-extension', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/neet-coaching-noida-extension',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 
   // --- Faridabad thin pages → /neet-coaching-faridabad ---
-  { source: '/neet-coaching-sector-14-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-sector-15-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-sector-16-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-sector-21-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-sector-28-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-sector-37-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-nit-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  {
+    source: '/neet-coaching-sector-14-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-15-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-16-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-21-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-28-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sector-37-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-nit-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
   { source: '/neet-coaching-ballabgarh', destination: '/neet-coaching-faridabad', permanent: true },
   { source: '/neet-coaching-surajkund', destination: '/neet-coaching-faridabad', permanent: true },
 
   // --- Ghaziabad thin pages → /neet-coaching-ghaziabad ---
   // removed: vaishali, vasundhara, kaushambi — already in seoPage → /biology-classes-noida
-  { source: '/neet-coaching-raj-nagar-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-coaching-crossing-republik', destination: '/neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/neet-coaching-raj-nagar-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-crossing-republik',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // --- School-specific thin pages → nearest hub ---
-  { source: '/neet-coaching-near-:school-school-:slug', destination: '/neet-coaching', permanent: true },
-  { source: '/biology-coaching-near-:school-school-:slug', destination: '/neet-coaching', permanent: true },
+  {
+    source: '/neet-coaching-near-:school-school-:slug',
+    destination: '/neet-coaching',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-near-:school-school-:slug',
+    destination: '/neet-coaching',
+    permanent: true,
+  },
   { source: '/neet-coaching-near-dps-:slug', destination: '/neet-coaching', permanent: true },
-  { source: '/neet-coaching-near-modern-school-:slug', destination: '/neet-coaching', permanent: true },
-  { source: '/neet-coaching-near-sanskriti-school', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-near-springdales-:slug', destination: '/neet-coaching', permanent: true },
-  { source: '/neet-coaching-near-amity-:slug', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/neet-coaching-near-modern-school-:slug',
+    destination: '/neet-coaching',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-near-sanskriti-school',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-near-springdales-:slug',
+    destination: '/neet-coaching',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-near-amity-:slug',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 
   // --- Generic "best" variations → hub ---
   { source: '/best-biology-coaching-:slug', destination: '/neet-coaching', permanent: true },
   { source: '/top-neet-coaching-:slug', destination: '/neet-coaching', permanent: true },
-  { source: '/affordable-neet-coaching-:slug', destination: '/neet-coaching-fees', permanent: true },
+  {
+    source: '/affordable-neet-coaching-:slug',
+    destination: '/neet-coaching-fees',
+    permanent: true,
+  },
   { source: '/cheap-neet-coaching-:slug', destination: '/neet-coaching-fees', permanent: true },
   { source: '/neet-coaching-fees-:slug', destination: '/neet-coaching-fees', permanent: true },
   { source: '/neet-coaching-reviews-:slug', destination: '/results', permanent: true },
@@ -1085,92 +1816,376 @@ export const thinPageConsolidationRedirects = [
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const gsc404CleanupBatch3Redirects = [
   // --- Biology Classes nested locality sub-pages → parent hub ---
-  { source: '/biology-classes-ashok-vihar/phase-1', destination: '/biology-classes-north-delhi', permanent: true },
-  { source: '/biology-classes-ashok-vihar/phase-2', destination: '/biology-classes-north-delhi', permanent: true },
-  { source: '/biology-classes-ashok-vihar/wazirpur', destination: '/biology-classes-north-delhi', permanent: true },
-  { source: '/biology-classes-defence-colony/andrews-ganj', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-defence-colony/jangpura', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-dwarka/dwarka-mor', destination: '/biology-classes-west-delhi', permanent: true },
-  { source: '/biology-classes-dwarka/sector-21', destination: '/biology-classes-west-delhi', permanent: true },
-  { source: '/biology-classes-dwarka/sector-7', destination: '/biology-classes-west-delhi', permanent: true },
-  { source: '/biology-classes-green-park/extension', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-karol-bagh/cp', destination: '/biology-classes-central-delhi', permanent: true },
-  { source: '/biology-classes-laxmi-nagar/nirman-vihar', destination: '/biology-classes-east-delhi', permanent: true },
-  { source: '/biology-classes-mahendragarh/city', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-manesar/imt', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-manesar/sector-8', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-model-town/part-1', destination: '/biology-classes-north-delhi', permanent: true },
-  { source: '/biology-classes-nehru-place/cr-park', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-nehru-place/kalkaji', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-noida/sector-62', destination: '/biology-classes-noida', permanent: true },
-  { source: '/biology-classes-pitampura/kohat-enclave', destination: '/biology-classes-north-delhi', permanent: true },
-  { source: '/biology-classes-preet-vihar/karkardooma', destination: '/biology-classes-east-delhi', permanent: true },
-  { source: '/biology-classes-rewari/city', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/biology-classes-rohini/paschim-vihar', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-rohini/prashant-vihar', destination: '/biology-classes-rohini', permanent: true },
-  { source: '/biology-classes-south-delhi/gk', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-south-delhi/hauz-khas', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-south-delhi/malviya-nagar', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-vasant-kunj/sector-b', destination: '/biology-classes-south-delhi', permanent: true },
-  { source: '/biology-classes-vasant-kunj/sector-c', destination: '/biology-classes-south-delhi', permanent: true },
+  {
+    source: '/biology-classes-ashok-vihar/phase-1',
+    destination: '/biology-classes-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-ashok-vihar/phase-2',
+    destination: '/biology-classes-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-ashok-vihar/wazirpur',
+    destination: '/biology-classes-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-defence-colony/andrews-ganj',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-defence-colony/jangpura',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-dwarka/dwarka-mor',
+    destination: '/biology-classes-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-dwarka/sector-21',
+    destination: '/biology-classes-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-dwarka/sector-7',
+    destination: '/biology-classes-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-green-park/extension',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-karol-bagh/cp',
+    destination: '/biology-classes-central-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-laxmi-nagar/nirman-vihar',
+    destination: '/biology-classes-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-mahendragarh/city',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-manesar/imt',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-manesar/sector-8',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-model-town/part-1',
+    destination: '/biology-classes-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-nehru-place/cr-park',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-nehru-place/kalkaji',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-noida/sector-62',
+    destination: '/biology-classes-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-pitampura/kohat-enclave',
+    destination: '/biology-classes-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-preet-vihar/karkardooma',
+    destination: '/biology-classes-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rewari/city',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini/paschim-vihar',
+    destination: '/biology-classes-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini/prashant-vihar',
+    destination: '/biology-classes-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-south-delhi/gk',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-south-delhi/hauz-khas',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-south-delhi/malviya-nagar',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-vasant-kunj/sector-b',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-vasant-kunj/sector-c',
+    destination: '/biology-classes-south-delhi',
+    permanent: true,
+  },
 
   // --- Biology Tuition nested locality sub-pages → parent hub ---
-  { source: '/biology-tuition-east-delhi/laxmi-nagar', destination: '/biology-tuition-east-delhi', permanent: true },
-  { source: '/biology-tuition-east-delhi/mayur-vihar', destination: '/biology-tuition-east-delhi', permanent: true },
-  { source: '/biology-tuition-east-delhi/patparganj', destination: '/biology-tuition-east-delhi', permanent: true },
-  { source: '/biology-tuition-east-delhi/preet-vihar', destination: '/biology-tuition-east-delhi', permanent: true },
-  { source: '/biology-tuition-east-delhi/shahdara', destination: '/biology-tuition-east-delhi', permanent: true },
-  { source: '/biology-tuition-gurgaon/dlf-phase-3', destination: '/biology-tuition-gurgaon', permanent: true },
-  { source: '/biology-tuition-gurgaon/golf-course-road', destination: '/biology-tuition-gurgaon', permanent: true },
-  { source: '/biology-tuition-gurgaon/sector-14', destination: '/biology-tuition-gurgaon', permanent: true },
-  { source: '/biology-tuition-gurgaon/sector-56', destination: '/biology-tuition-gurgaon', permanent: true },
-  { source: '/biology-tuition-gurgaon/sohna-road', destination: '/biology-tuition-gurgaon', permanent: true },
-  { source: '/biology-tuition-noida/sector-137', destination: '/biology-tuition-noida', permanent: true },
-  { source: '/biology-tuition-noida/sector-18', destination: '/biology-tuition-noida', permanent: true },
-  { source: '/biology-tuition-noida/sector-44', destination: '/biology-tuition-noida', permanent: true },
-  { source: '/biology-tuition-noida/sector-50', destination: '/biology-tuition-noida', permanent: true },
-  { source: '/biology-tuition-noida/sector-62', destination: '/biology-tuition-noida', permanent: true },
-  { source: '/biology-tuition-north-delhi/ashok-vihar', destination: '/biology-tuition-north-delhi', permanent: true },
-  { source: '/biology-tuition-north-delhi/model-town', destination: '/biology-tuition-north-delhi', permanent: true },
-  { source: '/biology-tuition-north-delhi/pitampura', destination: '/biology-tuition-north-delhi', permanent: true },
-  { source: '/biology-tuition-north-delhi/rohini', destination: '/biology-tuition-north-delhi', permanent: true },
-  { source: '/biology-tuition-north-delhi/shalimar-bagh', destination: '/biology-tuition-north-delhi', permanent: true },
-  { source: '/biology-tuition-west-delhi/dwarka', destination: '/biology-tuition-west-delhi', permanent: true },
-  { source: '/biology-tuition-west-delhi/janakpuri', destination: '/biology-tuition-west-delhi', permanent: true },
-  { source: '/biology-tuition-west-delhi/patel-nagar', destination: '/biology-tuition-west-delhi', permanent: true },
-  { source: '/biology-tuition-west-delhi/rajouri-garden', destination: '/biology-tuition-west-delhi', permanent: true },
-  { source: '/biology-tuition-west-delhi/uttam-nagar', destination: '/biology-tuition-west-delhi', permanent: true },
+  {
+    source: '/biology-tuition-east-delhi/laxmi-nagar',
+    destination: '/biology-tuition-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-east-delhi/mayur-vihar',
+    destination: '/biology-tuition-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-east-delhi/patparganj',
+    destination: '/biology-tuition-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-east-delhi/preet-vihar',
+    destination: '/biology-tuition-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-east-delhi/shahdara',
+    destination: '/biology-tuition-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-gurgaon/dlf-phase-3',
+    destination: '/biology-tuition-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-gurgaon/golf-course-road',
+    destination: '/biology-tuition-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-gurgaon/sector-14',
+    destination: '/biology-tuition-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-gurgaon/sector-56',
+    destination: '/biology-tuition-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-gurgaon/sohna-road',
+    destination: '/biology-tuition-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-noida/sector-137',
+    destination: '/biology-tuition-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-noida/sector-18',
+    destination: '/biology-tuition-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-noida/sector-44',
+    destination: '/biology-tuition-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-noida/sector-50',
+    destination: '/biology-tuition-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-noida/sector-62',
+    destination: '/biology-tuition-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-north-delhi/ashok-vihar',
+    destination: '/biology-tuition-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-north-delhi/model-town',
+    destination: '/biology-tuition-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-north-delhi/pitampura',
+    destination: '/biology-tuition-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-north-delhi/rohini',
+    destination: '/biology-tuition-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-north-delhi/shalimar-bagh',
+    destination: '/biology-tuition-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-west-delhi/dwarka',
+    destination: '/biology-tuition-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-west-delhi/janakpuri',
+    destination: '/biology-tuition-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-west-delhi/patel-nagar',
+    destination: '/biology-tuition-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-west-delhi/rajouri-garden',
+    destination: '/biology-tuition-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-west-delhi/uttam-nagar',
+    destination: '/biology-tuition-west-delhi',
+    permanent: true,
+  },
 
   // --- Unique entries (not duplicated in earlier arrays) ---
-  { source: '/biology-olympiad-coaching-faridabad', destination: '/biology-olympiad-coaching', permanent: true },
-  { source: '/biology-olympiad-coaching-noida', destination: '/biology-olympiad-coaching', permanent: true },
-  { source: '/neet-coaching-gurgaon-sector-57', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-panchsheel-park', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-vasant-kunj', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-olympiad-coaching-faridabad',
+    destination: '/biology-olympiad-coaching',
+    permanent: true,
+  },
+  {
+    source: '/biology-olympiad-coaching-noida',
+    destination: '/biology-olympiad-coaching',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurgaon-sector-57',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-panchsheel-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-vasant-kunj',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/neet-dropper-batch-delhi', destination: '/dropper', permanent: true },
-  { source: '/neet-foundation-class-11-faridabad', destination: '/courses/foundation', permanent: true },
+  {
+    source: '/neet-foundation-class-11-faridabad',
+    destination: '/courses/foundation',
+    permanent: true,
+  },
   { source: '/one-year-dropper-course-faridabad', destination: '/dropper', permanent: true },
   { source: '/class-10-biology-coaching-faridabad', destination: '/courses', permanent: true },
   { source: '/class-9-biology-tuition-noida', destination: '/courses', permanent: true },
-  { source: '/international/ca/courses/bc-biology', destination: '/international', permanent: true },
-  { source: '/international/ie/courses/hpat-biology', destination: '/international', permanent: true },
-  { source: '/international/sg/courses/a-level-h2-biology', destination: '/international', permanent: true },
-  { source: '/international/sg/courses/ip-biology', destination: '/international', permanent: true },
-  { source: '/international/sg/courses/o-level-biology', destination: '/international', permanent: true },
-  { source: '/international/sg/courses/sbo-olympiad', destination: '/international', permanent: true },
+  {
+    source: '/international/ca/courses/bc-biology',
+    destination: '/international',
+    permanent: true,
+  },
+  {
+    source: '/international/ie/courses/hpat-biology',
+    destination: '/international',
+    permanent: true,
+  },
+  {
+    source: '/international/sg/courses/a-level-h2-biology',
+    destination: '/international',
+    permanent: true,
+  },
+  {
+    source: '/international/sg/courses/ip-biology',
+    destination: '/international',
+    permanent: true,
+  },
+  {
+    source: '/international/sg/courses/o-level-biology',
+    destination: '/international',
+    permanent: true,
+  },
+  {
+    source: '/international/sg/courses/sbo-olympiad',
+    destination: '/international',
+    permanent: true,
+  },
   { source: '/cities/neet-coaching-london-uk', destination: '/neet-coaching-uk', permanent: true },
-  { source: '/cities/neet-coaching-melbourne-australia', destination: '/neet-coaching-australia', permanent: true },
-  { source: '/cities/neet-coaching-sydney-australia', destination: '/neet-coaching-australia', permanent: true },
+  {
+    source: '/cities/neet-coaching-melbourne-australia',
+    destination: '/neet-coaching-australia',
+    permanent: true,
+  },
+  {
+    source: '/cities/neet-coaching-sydney-australia',
+    destination: '/neet-coaching-australia',
+    permanent: true,
+  },
   { source: '/cbo-preparation/', destination: '/biology-olympiad-coaching', permanent: true },
-  { source: '/german-biology-olympiad/', destination: '/biology-olympiad-coaching', permanent: true },
+  {
+    source: '/german-biology-olympiad/',
+    destination: '/biology-olympiad-coaching',
+    permanent: true,
+  },
   { source: '/jbo-preparation/', destination: '/biology-olympiad-coaching', permanent: true },
   { source: '/online-neet-biology-classes', destination: '/online-neet-coaching', permanent: true },
 
   // --- Crawled-not-indexed: missing pages (March 2026 batch) ---
-  { source: '/biology-classes-gurgaon-sector-60', destination: '/biology-classes-gurgaon', permanent: true },
-  { source: '/blog/nri-quota-mbbs-maharashtra-complete-guide-2025', destination: '/blog', permanent: true },
+  {
+    source: '/biology-classes-gurgaon-sector-60',
+    destination: '/biology-classes-gurgaon',
+    permanent: true,
+  },
+  {
+    source: '/blog/nri-quota-mbbs-maharashtra-complete-guide-2025',
+    destination: '/blog',
+    permanent: true,
+  },
   { source: '/international/hk', destination: '/international', permanent: true },
-  { source: '/locations/delhi/hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/locations/delhi/hauz-khas',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
 
   // --- B5 route audit: redirect pages moved from page.tsx to config (March 2026) ---
   { source: '/company', destination: '/about', permanent: true },
@@ -1180,7 +2195,22 @@ export const gsc404CleanupBatch3Redirects = [
   { source: '/about/results', destination: '/company/results', permanent: true },
 
   // --- B5 route audit: empty pages (March 2026) ---
-  { source: '/biology-teacher-near-me-noida', destination: '/biology-tutor-noida', permanent: true },
+  {
+    source: '/biology-teacher-near-me-noida',
+    destination: '/biology-tutor-noida',
+    permanent: true,
+  },
   { source: '/neet-updates', destination: '/blog', permanent: true },
   { source: '/testimonials/neet-success-story', destination: '/testimonials', permanent: true },
+]
+
+// ============================================
+// Hub Page Consolidation Redirects (March 2026)
+// Merging thin results/success pages into /results/ hub
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const hubPageConsolidationRedirects = [
+  { source: '/wall-of-achievers', destination: '/results', permanent: true },
+  { source: '/neet-success-stories', destination: '/results', permanent: true },
+  { source: '/neet-repeater-success-stories', destination: '/results', permanent: true },
 ]

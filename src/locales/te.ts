@@ -59,6 +59,7 @@ export const te = {
   enrollNow: 'ఇప్పుడు నమోదు చేసుకోండి',
   getStarted: 'ప్రారంభించండి',
   results: 'ఫలితాలు',
+  ourLocations: 'కేంద్రాలు',
   successStories: 'విజయ గాథలు',
   aiims: 'ఎయిమ్స్',
   trainedFaculty: 'శిక్షణ పొందిన ఫ్యాకల్టీ',

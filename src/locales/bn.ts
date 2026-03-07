@@ -59,6 +59,7 @@ export const bn = {
   enrollNow: 'এখনই ভর্তি হন',
   getStarted: 'শুরু করুন',
   results: 'ফলাফল',
+  ourLocations: 'কেন্দ্র',
   successStories: 'সাফল্যের গল্প',
   aiims: 'এইমস',
   trainedFaculty: 'প্রশিক্ষিত ফ্যাকাল্টি',

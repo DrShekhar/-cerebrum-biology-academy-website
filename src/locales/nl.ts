@@ -59,6 +59,7 @@ export const nl = {
   enrollNow: 'Nu Inschrijven',
   getStarted: 'Begin',
   results: 'Resultaten',
+  ourLocations: 'Locaties',
   successStories: 'Succesverhalen',
   aiims: 'AIIMS',
   trainedFaculty: 'Opgeleide Docenten',

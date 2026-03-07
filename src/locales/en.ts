@@ -59,6 +59,7 @@ export const en = {
   enrollNow: 'Enroll Now',
   getStarted: 'Get Started',
   results: 'Results',
+  ourLocations: 'Locations',
   successStories: 'Success Stories',
   aiims: 'AIIMS',
   trainedFaculty: 'Trained Faculty',

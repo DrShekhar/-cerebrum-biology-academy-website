@@ -59,6 +59,7 @@ export const ml = {
   enrollNow: 'ഇപ്പോൾ ചേരുക',
   getStarted: 'ആരംഭിക്കുക',
   results: 'ഫലങ്ങൾ',
+  ourLocations: 'കേന്ദ്രങ്ങൾ',
   successStories: 'വിജയഗാഥകൾ',
   aiims: 'എയിംസ്',
   trainedFaculty: 'പരിശീലനം ലഭിച്ച ഫാക്കൽറ്റി',

@@ -59,6 +59,7 @@ export const ta = {
   enrollNow: 'இப்போது சேரவும்',
   getStarted: 'தொடங்கவும்',
   results: 'முடிவுகள்',
+  ourLocations: 'இடங்கள்',
   successStories: 'வெற்றிக் கதைகள்',
   aiims: 'எய்ம்ஸ்',
   trainedFaculty: 'பயிற்சி பெற்ற ஆசிரியர்கள்',

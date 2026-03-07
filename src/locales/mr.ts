@@ -59,6 +59,7 @@ export const mr = {
   enrollNow: 'आता नावनोंदणी करा',
   getStarted: 'सुरू करा',
   results: 'निकाल',
+  ourLocations: 'केंद्रे',
   successStories: 'यशोगाथा',
   aiims: 'एम्स',
   trainedFaculty: 'प्रशिक्षित फॅकल्टी',

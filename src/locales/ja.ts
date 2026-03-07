@@ -59,6 +59,7 @@ export const ja = {
   enrollNow: '今すぐ登録',
   getStarted: '始める',
   results: '結果',
+  ourLocations: '教室',
   successStories: '成功事例',
   aiims: 'AIIMS',
   trainedFaculty: '訓練済み講師',

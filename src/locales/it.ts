@@ -59,6 +59,7 @@ export const it = {
   enrollNow: 'Iscriviti Ora',
   getStarted: 'Inizia',
   results: 'Risultati',
+  ourLocations: 'Sedi',
   successStories: 'Storie di Successo',
   aiims: 'AIIMS',
   trainedFaculty: 'Docenti Formati',

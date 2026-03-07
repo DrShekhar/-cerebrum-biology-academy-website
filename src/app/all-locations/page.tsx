@@ -1,270 +1,408 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
-import { MapPin, GraduationCap, Globe, Building, Download, Phone } from 'lucide-react'
+import {
+  MapPin,
+  GraduationCap,
+  Trophy,
+  Users,
+  ChevronRight,
+  Globe,
+  Star,
+  Building2,
+  Wifi,
+} from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import { Badge } from '@/components/ui/Badge'
+import { Card, CardContent } from '@/components/ui/Card'
 
-export const metadata: Metadata = {
-  title: 'All NEET Coaching Locations',
-  description:
-    'Find Cerebrum Biology Academy NEET coaching in your city. 100+ locations across India and international centers. Expert biology coaching for NEET, boards, and international curricula.',
-  keywords:
-    'NEET coaching near me, NEET centers India, biology tuition, coaching locations',
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/all-locations',
-  },
-  openGraph: {
-    title: 'All NEET Coaching Locations',
-    description: 'Find NEET coaching in 100+ locations across India and internationally',
-    type: 'website',
-    url: 'https://cerebrumbiologyacademy.com/all-locations',
-  },
-}
-
-interface LocationLink {
-  name: string
-  slug: string
-}
-
-interface LocationSection {
-  title: string
-  icon: React.ReactNode
-  links: LocationLink[]
-}
-
-const locations: LocationSection[] = [
+const offlineCenters = [
   {
-    title: 'Delhi NCR',
-    icon: <MapPin className="w-5 h-5" />,
-    links: [
-      { name: 'South Extension (Flagship)', slug: '/locations/south-extension' },
-      { name: 'Rohini (DC Chowk)', slug: '/locations/rohini' },
-      { name: 'Defence Colony', slug: '/locations/defence-colony' },
-      { name: 'South Delhi', slug: '/locations/south-delhi' },
-      { name: 'Greater Kailash', slug: '/locations/greater-kailash' },
-      { name: 'Vasant Vihar', slug: '/locations/vasant-vihar' },
-      { name: 'Lajpat Nagar', slug: '/locations/lajpat-nagar' },
-      { name: 'Green Park', slug: '/locations/green-park' },
-      { name: 'Saket', slug: '/locations/saket' },
-      { name: 'Malviya Nagar', slug: '/locations/malviya-nagar' },
-      { name: 'Delhi (All Areas)', slug: '/locations/delhi' },
-      { name: 'Gurugram', slug: '/locations/gurugram' },
-      { name: 'Faridabad', slug: '/locations/faridabad' },
-      { name: 'Noida', slug: '/locations/noida' },
-      { name: 'Ghaziabad', slug: '/locations/ghaziabad' },
-    ],
+    name: 'South Extension',
+    tag: 'Flagship',
+    address: 'D 35, South Ext Part 2',
+    landmark: 'Near South Extension Metro',
+    href: '/locations/south-extension',
   },
   {
-    title: 'Mumbai & Pune',
-    icon: <MapPin className="w-5 h-5" />,
-    links: [
-      { name: 'Juhu', slug: '/neet-coaching-juhu-mumbai' },
-      { name: 'Colaba', slug: '/neet-coaching-colaba-mumbai' },
-      { name: 'Hiranandani', slug: '/neet-coaching-hiranandani-mumbai' },
-      { name: 'Thane', slug: '/neet-coaching-thane-mumbai' },
-      { name: 'Bandra', slug: '/neet-coaching-bandra-mumbai' },
-      { name: 'Andheri', slug: '/neet-coaching-andheri-mumbai' },
-      { name: 'Powai', slug: '/neet-coaching-powai-mumbai' },
-      { name: 'Navi Mumbai', slug: '/neet-coaching-navi-mumbai' },
-      { name: 'Pune', slug: '/neet-coaching-pune' },
-    ],
+    name: 'Rohini DC Chowk',
+    tag: null,
+    address: 'DC Chowk, Sector 9',
+    landmark: 'Near Rohini West Metro',
+    href: '/locations/rohini',
   },
   {
-    title: 'Bangalore',
-    icon: <MapPin className="w-5 h-5" />,
-    links: [
-      { name: 'Sarjapur Road', slug: '/neet-coaching-sarjapur-road-bangalore' },
-      { name: 'Electronic City', slug: '/neet-coaching-electronic-city-bangalore' },
-      { name: 'HSR Layout', slug: '/neet-coaching-hsr-layout-bangalore' },
-      { name: 'Indiranagar', slug: '/neet-coaching-indiranagar-bangalore' },
-      { name: 'Koramangala', slug: '/neet-coaching-koramangala-bangalore' },
-      { name: 'Whitefield', slug: '/neet-coaching-whitefield-bangalore' },
-      { name: 'Marathahalli', slug: '/neet-coaching-marathahalli-bangalore' },
-      { name: 'MG Road', slug: '/neet-coaching-mg-road-bangalore' },
-    ],
+    name: 'Gurugram',
+    tag: null,
+    address: 'M2K Corporate Park, Sector 51',
+    landmark: 'Near HUDA City Centre',
+    href: '/locations/gurugram',
   },
   {
-    title: 'Other Metro Cities',
-    icon: <MapPin className="w-5 h-5" />,
-    links: [
-      { name: 'Hyderabad', slug: '/neet-coaching-hyderabad' },
-      { name: 'Chennai', slug: '/neet-coaching-chennai' },
-      { name: 'Kolkata', slug: '/neet-coaching-kolkata' },
-      { name: 'Ahmedabad', slug: '/neet-coaching-ahmedabad' },
-    ],
+    name: 'Faridabad',
+    tag: null,
+    address: 'HUDA Market, Sector 17',
+    landmark: 'Near Bata Chowk Metro',
+    href: '/locations/faridabad',
   },
   {
-    title: 'Tier-2 Cities',
-    icon: <MapPin className="w-5 h-5" />,
-    links: [
-      { name: 'Coimbatore', slug: '/neet-coaching-coimbatore' },
-      { name: 'Kochi', slug: '/neet-coaching-kochi' },
-      { name: 'Patna', slug: '/neet-coaching-patna' },
-      { name: 'Ranchi', slug: '/neet-coaching-ranchi' },
-      { name: 'Guwahati', slug: '/neet-coaching-guwahati' },
-      { name: 'Nagpur', slug: '/neet-coaching-nagpur' },
-      { name: 'Varanasi', slug: '/neet-coaching-varanasi' },
-      { name: 'Surat', slug: '/neet-coaching-surat' },
-      { name: 'Chandigarh', slug: '/neet-coaching-chandigarh' },
-      { name: 'Lucknow', slug: '/neet-coaching-lucknow' },
-      { name: 'Jaipur', slug: '/neet-coaching-jaipur' },
-    ],
+    name: 'Noida',
+    tag: null,
+    address: 'Sector 62',
+    landmark: 'Near Sector 62 Metro',
+    href: '/locations/noida',
   },
   {
-    title: 'International',
-    icon: <Globe className="w-5 h-5" />,
-    links: [
-      { name: 'Riyadh, Saudi Arabia', slug: '/neet-coaching-riyadh-saudi-arabia' },
-      { name: 'Jeddah, Saudi Arabia', slug: '/neet-coaching-jeddah-saudi-arabia' },
-      { name: 'Doha, Qatar', slug: '/neet-coaching-doha-qatar' },
-      { name: 'Dubai, UAE', slug: '/international/ae' },
-      { name: 'Dhaka, Bangladesh', slug: '/neet-coaching-dhaka-bangladesh' },
-      { name: 'Colombo, Sri Lanka', slug: '/neet-coaching-colombo-sri-lanka' },
-    ],
+    name: 'Ghaziabad',
+    tag: null,
+    address: 'Online + Hybrid',
+    landmark: 'Nearest: Rohini / Noida',
+    href: '/locations/ghaziabad',
   },
   {
-    title: 'Board Preparation',
-    icon: <GraduationCap className="w-5 h-5" />,
-    links: [
-      { name: 'CBSE', slug: '/boards/cbse' },
-      { name: 'IB', slug: '/boards/ib' },
-      { name: 'ICSE', slug: '/boards/icse' },
-      { name: 'IGCSE', slug: '/boards/igcse' },
-      { name: 'Karnataka PUC', slug: '/boards/karnataka-puc' },
-      { name: 'Tamil Nadu HSC', slug: '/boards/tamil-nadu-hsc' },
-      { name: 'Maharashtra HSC', slug: '/boards/maharashtra-hsc' },
-      { name: 'Kerala HSE', slug: '/boards/kerala-hse' },
-    ],
+    name: 'Green Park',
+    tag: null,
+    address: 'Green Park Area',
+    landmark: 'Near Green Park Metro',
+    href: '/locations/green-park',
   },
   {
-    title: 'School-Specific Programs',
-    icon: <Building className="w-5 h-5" />,
-    links: [
-      { name: 'Vasant Valley', slug: '/neet-coaching-vasant-valley-school' },
-      { name: 'DPS Chandigarh', slug: '/neet-coaching-dps-chandigarh' },
-      { name: 'Cathedral Mumbai', slug: '/neet-coaching-cathedral-school-mumbai' },
-      { name: 'Oakridge Hyderabad', slug: '/neet-coaching-oakridge-hyderabad' },
-      { name: 'Modern School Delhi', slug: '/neet-coaching-modern-school-delhi' },
-      { name: 'Amity International', slug: '/neet-coaching-amity-international' },
-    ],
-  },
-  {
-    title: 'Bridge Programs',
-    icon: <GraduationCap className="w-5 h-5" />,
-    links: [
-      { name: 'IB to NEET', slug: '/ib-to-neet-biology-preparation' },
-      { name: 'IGCSE to NEET', slug: '/igcse-to-neet-biology-preparation' },
-      { name: 'A-Level to NEET', slug: '/a-level-to-neet-biology-preparation' },
-      { name: 'CBSE Abroad', slug: '/cbse-abroad-neet-preparation' },
-    ],
-  },
-  {
-    title: 'Lead Magnets & Free Resources',
-    icon: <Download className="w-5 h-5" />,
-    links: [
-      { name: 'Free Resources Hub', slug: '/free-resources' },
-      { name: 'NEET Biology Syllabus', slug: '/neet-biology-syllabus' },
-      { name: 'NEET Study Planner', slug: '/neet-study-planner-2026' },
-      { name: 'NEET Biology Notes', slug: '/neet-biology-notes' },
-    ],
+    name: 'Delhi (All Areas)',
+    tag: null,
+    address: 'Serving All Delhi Areas',
+    landmark: 'Multiple Locations',
+    href: '/locations/delhi',
   },
 ]
 
-export default function AllLocationsPage() {
-  const totalLocations = locations.reduce((sum, section) => sum + section.links.length, 0)
+const onlineRegions = [
+  {
+    name: 'North India',
+    href: '/neet-coaching-north-india',
+    icon: Globe,
+  },
+  {
+    name: 'South India',
+    href: '/neet-coaching-south-india',
+    icon: Globe,
+  },
+  {
+    name: 'East India',
+    href: '/neet-coaching-east-india',
+    icon: Globe,
+  },
+  {
+    name: 'West India',
+    href: '/neet-coaching-west-india',
+    icon: Globe,
+  },
+  {
+    name: 'NRI Students (14+ Countries)',
+    href: '/nri-students',
+    icon: Wifi,
+  },
+]
 
+const features = [
+  {
+    icon: GraduationCap,
+    title: 'AIIMS Faculty',
+    description: 'Learn from doctors and researchers who graduated from AIIMS Delhi',
+  },
+  {
+    icon: Users,
+    title: 'Small Batches of 15',
+    description: 'Personalized attention with a maximum of 15 students per batch',
+  },
+  {
+    icon: Trophy,
+    title: '98% Success Rate',
+    description: 'Consistently high selection rate across all our centers',
+  },
+  {
+    icon: Star,
+    title: '24/7 Doubt Support',
+    description: 'Round-the-clock doubt resolution via app, WhatsApp, and live sessions',
+  },
+]
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://cerebrumbiologyacademy.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'All Locations',
+      item: 'https://cerebrumbiologyacademy.com/all-locations',
+    },
+  ],
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: 'Cerebrum Biology Academy',
+  url: 'https://cerebrumbiologyacademy.com',
+  description:
+    'Premier NEET Biology coaching with 6 offline centers in Delhi NCR and online classes across India.',
+  location: [
+    {
+      '@type': 'Place',
+      name: 'Cerebrum Biology Academy - South Extension',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'D 35, South Ext Part 2',
+        addressLocality: 'New Delhi',
+        addressRegion: 'Delhi',
+        addressCountry: 'IN',
+      },
+    },
+    {
+      '@type': 'Place',
+      name: 'Cerebrum Biology Academy - Rohini',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'DC Chowk, Sector 9',
+        addressLocality: 'Rohini',
+        addressRegion: 'Delhi',
+        addressCountry: 'IN',
+      },
+    },
+    {
+      '@type': 'Place',
+      name: 'Cerebrum Biology Academy - Gurugram',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'M2K Corporate Park, Sector 51',
+        addressLocality: 'Gurugram',
+        addressRegion: 'Haryana',
+        addressCountry: 'IN',
+      },
+    },
+    {
+      '@type': 'Place',
+      name: 'Cerebrum Biology Academy - Faridabad',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'HUDA Market, Sector 17',
+        addressLocality: 'Faridabad',
+        addressRegion: 'Haryana',
+        addressCountry: 'IN',
+      },
+    },
+    {
+      '@type': 'Place',
+      name: 'Cerebrum Biology Academy - Noida',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Sector 62',
+        addressLocality: 'Noida',
+        addressRegion: 'Uttar Pradesh',
+        addressCountry: 'IN',
+      },
+    },
+    {
+      '@type': 'Place',
+      name: 'Cerebrum Biology Academy - Ghaziabad',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Ghaziabad',
+        addressRegion: 'Uttar Pradesh',
+        addressCountry: 'IN',
+      },
+    },
+  ],
+}
+
+export default function AllLocationsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+
       <main className="pt-20">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-br from-green-600 to-green-800 text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-                <MapPin className="w-5 h-5" />
-                <span className="text-sm font-medium">All Locations</span>
+        <section className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 sm:py-20 lg:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <MapPin className="w-5 h-5 text-yellow-400" />
+              <span className="text-sm font-medium">Find Your Nearest Center</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              Biology Classes <span className="text-yellow-400">Near You</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10">
+              6 offline coaching centers across Delhi NCR plus live online classes for students
+              across India and 14+ countries worldwide
+            </p>
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto">
+              <div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">6</div>
+                <div className="text-xs sm:text-sm text-slate-400 mt-1">Centers</div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Find NEET Coaching Near You
-              </h1>
-              <p className="text-lg text-green-100 mb-8">
-                Cerebrum Biology Academy is present in {totalLocations}+ locations across
-                India and internationally. Find your nearest center and join thousands of
-                successful NEET aspirants.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="https://wa.me/918826444334"
-                  className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-xl font-semibold hover:bg-green-50 transition-colors shadow-lg"
-                >
-                  <Phone className="w-5 h-5" />
-                  Contact Us on WhatsApp
-                </a>
-                <Link
-                  href="/free-resources"
-                  className="inline-flex items-center gap-2 bg-green-600/20 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-600/30 transition-colors border border-white/20"
-                >
-                  <Download className="w-5 h-5" />
-                  Free Resources
-                </Link>
+              <div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">
+                  98%
+                </div>
+                <div className="text-xs sm:text-sm text-slate-400 mt-1">Success</div>
+              </div>
+              <div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">
+                  15,000+
+                </div>
+                <div className="text-xs sm:text-sm text-slate-400 mt-1">Students</div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Locations Grid */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {locations.map((section, idx) => (
-              <div key={idx} className="mb-16">
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="text-green-600">{section.icon}</div>
-                  <h2 className="text-3xl font-bold text-gray-900">{section.title}</h2>
-                  <span className="ml-auto text-sm font-medium text-gray-600 bg-gray-200 px-3 py-1 rounded-full">
-                    {section.links.length} location{section.links.length !== 1 ? 's' : ''}
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {section.links.map((link) => (
-                    <Link
-                      key={link.slug}
-                      href={link.slug}
-                      className="group bg-white rounded-lg p-4 border border-gray-200 hover:border-green-500 hover:shadow-md hover:bg-green-50 transition-all duration-300 hover:scale-[1.02]"
-                    >
-                      <h3 className="font-semibold text-gray-900 group-hover:text-green-600 transition-colors line-clamp-2">
-                        {link.name}
-                      </h3>
-                      <p className="text-sm text-gray-500 mt-2 group-hover:text-gray-700">
-                        View coaching details
-                      </p>
-                    </Link>
-                  ))}
-                </div>
+        <section className="py-16 sm:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 text-slate-600 mb-3">
+                <Building2 className="w-5 h-5" />
+                <span className="text-sm font-semibold uppercase tracking-wider">
+                  Offline Centers
+                </span>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-white border-t border-gray-200">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Can't Find Your Location?
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
+                Our Coaching Centers in Delhi NCR
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                We're expanding to new cities every month. Contact us to inquire about
-                opening a center in your area or for online NEET coaching options.
-              </p>
-              <a
-                href="https://wa.me/918826444334"
-                className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl"
-              >
-                <Phone className="w-5 h-5" />
-                Connect with Us
-              </a>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {offlineCenters.map((center) => (
+                <Link key={center.href} href={center.href} className="group block">
+                  <Card className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-full border-0">
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                          <MapPin className="w-5 h-5 text-slate-600 group-hover:text-blue-600 transition-colors" />
+                        </div>
+                        {center.tag && (
+                          <Badge className="bg-yellow-100 text-yellow-800 border-yellow-200 text-xs">
+                            {center.tag}
+                          </Badge>
+                        )}
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-1">
+                        {center.name}
+                      </h3>
+                      <p className="text-sm text-slate-600 mb-1">{center.address}</p>
+                      <p className="text-xs text-slate-400 mb-4">{center.landmark}</p>
+                      <div className="flex items-center text-blue-600 text-sm font-medium">
+                        <span>View Details</span>
+                        <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
+
+        <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 text-blue-200 mb-3">
+                <Wifi className="w-5 h-5" />
+                <span className="text-sm font-semibold uppercase tracking-wider">
+                  Online Classes
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Serving Students Online Across India & Globally
+              </h2>
+              <p className="text-blue-200 text-lg max-w-2xl mx-auto">
+                Live interactive classes with the same AIIMS faculty, accessible from anywhere
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {onlineRegions.map((region) => {
+                const RegionIcon = region.icon
+                return (
+                  <Link key={region.href} href={region.href} className="group block">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center h-full">
+                      <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                        <RegionIcon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-white font-semibold text-base mb-2">{region.name}</h3>
+                      <div className="flex items-center justify-center text-blue-200 text-sm font-medium">
+                        <span>Explore</span>
+                        <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                Why Choose Cerebrum Biology Academy
+              </h2>
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+                Trusted by 15,000+ students and parents for NEET Biology preparation
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature) => {
+                const FeatureIcon = feature.icon
+                return (
+                  <Card
+                    key={feature.title}
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-0"
+                  >
+                    <CardContent className="p-6 text-center">
+                      <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <FeatureIcon className="w-7 h-7 text-blue-600" />
+                      </div>
+                      <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
+                      <p className="text-sm text-slate-600">{feature.description}</p>
+                    </CardContent>
+                  </Card>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-20 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Start Your NEET Journey Today
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-8">
+              Book a free demo class and experience our teaching methodology firsthand
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold min-h-[44px] px-8 rounded-xl shadow-lg hover:shadow-xl"
+              >
+                <Link href="/demo-booking">Book a Free Demo Class</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="min-h-[44px] px-8 rounded-xl">
+                <Link href="/courses">Explore All Courses</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   )

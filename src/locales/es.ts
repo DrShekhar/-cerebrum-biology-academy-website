@@ -59,6 +59,7 @@ export const es = {
   enrollNow: 'Inscribirse Ahora',
   getStarted: 'Comenzar',
   results: 'Resultados',
+  ourLocations: 'Ubicaciones',
   successStories: 'Historias de Éxito',
   aiims: 'AIIMS',
   trainedFaculty: 'Facultad Entrenada',

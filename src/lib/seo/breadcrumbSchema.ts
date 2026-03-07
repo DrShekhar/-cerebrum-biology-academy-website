@@ -83,10 +83,27 @@ export const breadcrumbPaths: Record<string, BreadcrumbItem[]> = {
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
     { name: 'About Us', url: 'https://cerebrumbiologyacademy.com/about' },
   ],
+  // Hub pages
+  allLocations: [
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'All Locations', url: 'https://cerebrumbiologyacademy.com/all-locations' },
+  ],
+  boardExamPreparation: [
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    {
+      name: 'Board Exam Preparation',
+      url: 'https://cerebrumbiologyacademy.com/board-exam-preparation',
+    },
+  ],
+  successStories: [
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Results', url: 'https://cerebrumbiologyacademy.com/results' },
+    { name: 'Success Stories', url: 'https://cerebrumbiologyacademy.com/success-stories' },
+  ],
   // Location-specific breadcrumbs
   southExtension: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'All Locations', url: 'https://cerebrumbiologyacademy.com/all-locations' },
     {
       name: 'South Extension',
       url: 'https://cerebrumbiologyacademy.com/locations/south-extension',
@@ -94,22 +111,22 @@ export const breadcrumbPaths: Record<string, BreadcrumbItem[]> = {
   ],
   rohini: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'All Locations', url: 'https://cerebrumbiologyacademy.com/all-locations' },
     { name: 'Rohini', url: 'https://cerebrumbiologyacademy.com/locations/rohini' },
   ],
   gurugram: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'All Locations', url: 'https://cerebrumbiologyacademy.com/all-locations' },
     { name: 'Gurugram', url: 'https://cerebrumbiologyacademy.com/locations/gurugram' },
   ],
   greenPark: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'All Locations', url: 'https://cerebrumbiologyacademy.com/all-locations' },
     { name: 'Green Park', url: 'https://cerebrumbiologyacademy.com/locations/green-park' },
   ],
   faridabad: [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'All Locations', url: 'https://cerebrumbiologyacademy.com/all-locations' },
     { name: 'Faridabad', url: 'https://cerebrumbiologyacademy.com/locations/faridabad' },
   ],
 }
@@ -131,7 +148,7 @@ export function generateBlogBreadcrumb(postTitle: string, postSlug: string): Bre
 export function generateCityBreadcrumb(cityName: string, citySlug: string): BreadcrumbItem[] {
   return [
     { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: 'All Locations', url: 'https://cerebrumbiologyacademy.com/all-locations' },
     { name: cityName, url: `https://cerebrumbiologyacademy.com/locations/${citySlug}` },
   ]
 }

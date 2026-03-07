@@ -59,6 +59,7 @@ export const hi = {
   enrollNow: 'अभी नामांकन करें',
   getStarted: 'शुरू करें',
   results: 'रिजल्ट्स',
+  ourLocations: 'केंद्र',
   successStories: 'सफलता की कहानियाँ',
   aiims: 'एम्स',
   trainedFaculty: 'प्रशिक्षित फैकल्टी',

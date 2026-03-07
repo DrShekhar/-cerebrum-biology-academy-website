@@ -14,6 +14,7 @@ import {
   ArrowRight,
   Search,
   GraduationCap,
+  MapPin,
 } from 'lucide-react'
 import Image from 'next/image'
 import { useAuth } from '@/contexts/AuthContext'
@@ -73,6 +74,12 @@ const Header = () => {
         icon: Users,
         priority: 3,
       },
+      {
+        href: '/all-locations',
+        labelKey: 'ourLocations' as const,
+        icon: MapPin,
+        priority: 4,
+      },
     ],
     []
   )
@@ -117,7 +124,10 @@ const Header = () => {
             />
 
             {/* Enhanced Logo with Brain Design - iOS Safari fix */}
-            <Link href="/" className="flex items-center gap-2 sm:gap-3 group overflow-hidden max-w-[200px] sm:max-w-none">
+            <Link
+              href="/"
+              className="flex items-center gap-2 sm:gap-3 group overflow-hidden max-w-[200px] sm:max-w-none"
+            >
               {/* Brain Logo */}
               <div className="relative flex-shrink-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
