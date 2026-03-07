@@ -2214,3 +2214,66 @@ export const hubPageConsolidationRedirects = [
   { source: '/neet-success-stories', destination: '/results', permanent: true },
   { source: '/neet-repeater-success-stories', destination: '/results', permanent: true },
 ]
+
+// ============================================
+// Cannibalization Consolidation Redirects (March 2026)
+// Merges competing pages targeting same keywords into single canonical
+// MUST be registered BEFORE thinPageConsolidationRedirects (which has wildcards)
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const cannibalizationConsolidationRedirects = [
+  // About page consolidation
+  { source: '/about-cerebrum-biology-academy', destination: '/about', permanent: true },
+
+  // ============================================
+  // Best/Top/Which/Affordable coaching → best-neet-coaching-[city]
+  // 4-5 pages per city all compete for "best neet coaching [city]"
+  // ============================================
+
+  // Faridabad (4 redirects)
+  { source: '/top-5-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
+  { source: '/top-10-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
+  { source: '/which-neet-coaching-is-best-in-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
+  { source: '/affordable-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
+
+  // Ghaziabad (3 redirects)
+  { source: '/top-10-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
+  { source: '/which-neet-coaching-is-best-in-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
+  { source: '/affordable-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
+
+  // Gurugram (4 redirects)
+  { source: '/top-5-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/top-10-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/which-neet-coaching-is-best-in-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/affordable-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+
+  // Greater Noida (3 redirects)
+  { source: '/top-10-neet-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/which-neet-coaching-is-best-in-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/affordable-neet-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+
+  // Noida (3 redirects)
+  { source: '/top-10-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
+  { source: '/which-neet-coaching-is-best-in-noida', destination: '/best-neet-coaching-noida', permanent: true },
+  { source: '/affordable-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
+
+  // Delhi — no best-neet-coaching-delhi page, redirect to root
+  { source: '/affordable-neet-coaching-delhi', destination: '/best-neet-coaching', permanent: true },
+
+  // ============================================
+  // Biology tuition → tutor consolidation
+  // "tutor" pages have more coverage (33 vs 12), keep tutor as canonical
+  // ============================================
+  { source: '/biology-tuition', destination: '/biology-tutor', permanent: true },
+  { source: '/biology-tuition-noida', destination: '/biology-tutor-noida', permanent: true },
+  { source: '/biology-tuition-ghaziabad', destination: '/biology-tutor-ghaziabad', permanent: true },
+  { source: '/biology-tuition-faridabad', destination: '/biology-tutor-faridabad', permanent: true },
+  { source: '/biology-tuition-south-delhi', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/biology-tuition-near-me', destination: '/biology-tutors-near-me', permanent: true },
+  { source: '/biology-tuition-class-11', destination: '/biology-tutor-class-11-cbse', permanent: true },
+  { source: '/biology-tuition-class-12', destination: '/biology-tutor-class-12-cbse', permanent: true },
+  { source: '/biology-tuition-class-9-10', destination: '/biology-tutor-class-9-cbse', permanent: true },
+  { source: '/biology-tuition-class-11-noida', destination: '/biology-tutor-class-11-cbse', permanent: true },
+  { source: '/biology-tuition-class-12-noida', destination: '/biology-tutor-class-12-cbse', permanent: true },
+  { source: '/biology-tuition-surat', destination: '/biology-tutor', permanent: true },
+]

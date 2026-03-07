@@ -12,6 +12,7 @@ import {
   thinPageConsolidationRedirects,
   gsc404CleanupBatch3Redirects,
   hubPageConsolidationRedirects,
+  cannibalizationConsolidationRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1522,6 +1523,7 @@ const nextConfig = {
       // SEO Page Consolidation - Thin/Doorway Pages
       // ~178 pages redirected to hub pages
       // ============================================
+      ...cannibalizationConsolidationRedirects,
       ...seoPageConsolidationRedirects,
       ...neetCoachingLocationRedirects,
       ...localAreaPageRedirects,
