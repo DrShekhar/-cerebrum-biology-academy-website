@@ -385,6 +385,20 @@ export default function ResultsPage() {
                 </Button>
               </Link>
             </div>
+            <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm">
+              <Link
+                href="/all-locations"
+                className="text-gray-400 hover:text-white underline underline-offset-4"
+              >
+                Find a Center Near You &rarr;
+              </Link>
+              <Link
+                href="/board-exam-preparation"
+                className="text-gray-400 hover:text-white underline underline-offset-4"
+              >
+                Board Exam Preparation &rarr;
+              </Link>
+            </div>
           </div>
         </section>
       </div>

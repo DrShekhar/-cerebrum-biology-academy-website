@@ -373,6 +373,20 @@ export default function BoardExamPreparationPage() {
               <Link href="/courses">View All Courses</Link>
             </Button>
           </div>
+          <div className="mt-8 flex flex-wrap gap-4 justify-center text-sm">
+            <Link
+              href="/results"
+              className="text-slate-400 hover:text-white underline underline-offset-4"
+            >
+              See Our Results &rarr;
+            </Link>
+            <Link
+              href="/all-locations"
+              className="text-slate-400 hover:text-white underline underline-offset-4"
+            >
+              Find a Center Near You &rarr;
+            </Link>
+          </div>
         </div>
       </section>
     </>

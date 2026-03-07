@@ -82,7 +82,8 @@ export default function Home() {
     '@type': 'WebPage',
     '@id': 'https://cerebrumbiologyacademy.com/#webpage',
     name: 'Best NEET Biology Coaching in Delhi NCR | Cerebrum Biology Academy',
-    description: 'Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. 6 centers: South Extension Delhi, Rohini Delhi, Gurugram, Faridabad. Online + offline classes.',
+    description:
+      'Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. 6 centers: South Extension Delhi, Rohini Delhi, Gurugram, Faridabad. Online + offline classes.',
     url: 'https://cerebrumbiologyacademy.com',
     isPartOf: {
       '@type': 'WebSite',
@@ -102,7 +103,12 @@ export default function Home() {
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://cerebrumbiologyacademy.com',
+        },
       ],
     },
     speakable: {
@@ -111,7 +117,7 @@ export default function Home() {
     },
     significantLink: [
       'https://cerebrumbiologyacademy.com/courses',
-      'https://cerebrumbiologyacademy.com/locations',
+      'https://cerebrumbiologyacademy.com/all-locations',
       'https://cerebrumbiologyacademy.com/book-free-demo',
       'https://cerebrumbiologyacademy.com/results',
     ],
@@ -147,11 +153,7 @@ export default function Home() {
       <SpeakableSchema
         headline="Best NEET Biology Coaching Delhi NCR | Cerebrum Academy"
         description="Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. Get expert guidance for NEET preparation with personalized coaching."
-        cssSelectors={[
-          '[data-speakable="title"]',
-          '[data-speakable="summary"]',
-          '.faq-answer',
-        ]}
+        cssSelectors={['[data-speakable="title"]', '[data-speakable="summary"]', '.faq-answer']}
         url="https://cerebrumbiologyacademy.com"
       />
 

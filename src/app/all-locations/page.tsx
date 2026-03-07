@@ -401,6 +401,17 @@ export default function AllLocationsPage() {
                 <Link href="/courses">Explore All Courses</Link>
               </Button>
             </div>
+            <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm text-slate-500">
+              <Link href="/results" className="hover:text-slate-800 underline underline-offset-4">
+                See Our Results &rarr;
+              </Link>
+              <Link
+                href="/board-exam-preparation"
+                className="hover:text-slate-800 underline underline-offset-4"
+              >
+                Board Exam Preparation &rarr;
+              </Link>
+            </div>
           </div>
         </section>
       </main>
