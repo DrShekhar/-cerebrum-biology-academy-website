@@ -26,6 +26,7 @@ import {
   thinPageConsolidationRedirects,
   gsc404CleanupBatch3Redirects,
   hubPageConsolidationRedirects,
+  cannibalizationConsolidationRedirects,
 } from '@/config/seo-redirects.mjs'
 
 const redirectedPaths = new Set(
@@ -37,8 +38,87 @@ const redirectedPaths = new Set(
     ...thinPageConsolidationRedirects,
     ...gsc404CleanupBatch3Redirects,
     ...hubPageConsolidationRedirects,
+    ...cannibalizationConsolidationRedirects,
   ].map((r: { source: string }) => r.source)
 )
+
+/**
+ * Normalize sitemap priorities based on URL patterns.
+ * When everything is 0.85+, Google ignores priority entirely.
+ * This applies a tiered system so Google knows what matters.
+ */
+function normalizePriority(path: string, currentPriority: number): number {
+  // Tier 1 (1.0): Core conversion pages — keep as-is
+  if (
+    path === '/' ||
+    path === '/courses' ||
+    path === '/demo-booking' ||
+    path === '/about' ||
+    path === '/success-stories' ||
+    path === '/results' ||
+    path === '/contact'
+  ) {
+    return 1.0
+  }
+
+  // Tier 2 (0.8): High-intent landing pages
+  if (
+    path.startsWith('/locations/') ||
+    path.startsWith('/best-neet-coaching') ||
+    path === '/neet-coaching' ||
+    path === '/neet-coaching-delhi' ||
+    path === '/neet-coaching-noida' ||
+    path === '/neet-coaching-gurgaon' ||
+    path === '/neet-coaching-faridabad' ||
+    path === '/neet-coaching-ghaziabad' ||
+    path === '/all-locations' ||
+    path === '/board-exam-preparation'
+  ) {
+    return 0.8
+  }
+
+  // Tier 2.5 (0.7): Courses, blog, important content
+  if (
+    path.startsWith('/courses/') ||
+    path.startsWith('/blog') ||
+    path.startsWith('/compare/') ||
+    path.startsWith('/neet-') ||
+    path.startsWith('/online-neet-') ||
+    path.startsWith('/biology-notes')
+  ) {
+    return Math.min(currentPriority, 0.7)
+  }
+
+  // Tier 3 (0.5): Local SEO pages with some unique content
+  if (
+    path.startsWith('/neet-coaching-') ||
+    path.startsWith('/biology-tutor-') ||
+    path.startsWith('/biology-tuition-')
+  ) {
+    return 0.5
+  }
+
+  // Tier 4 (0.4): Template/data-driven local pages
+  if (
+    path.startsWith('/biology-classes-') ||
+    path.startsWith('/biology-coaching-') ||
+    path.startsWith('/best-biology-tuition-')
+  ) {
+    return 0.4
+  }
+
+  // Tier 5 (0.3): Low-value supplementary pages
+  if (
+    path.startsWith('/states/') ||
+    path.startsWith('/neet-college-predictor/') ||
+    path.startsWith('/biology-definitions/')
+  ) {
+    return 0.3
+  }
+
+  // Everything else: cap at 0.6 to prevent inflation
+  return Math.min(currentPriority, 0.6)
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Use non-www URL to match middleware redirect behavior
@@ -8018,7 +8098,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/${slug}`,
     lastModified: lastUpdated,
     changeFrequency: 'weekly' as const,
-    priority: 0.85,
+    priority: 0.5,
   }))
 
   // Biology notes for NEET chapter pages
@@ -8126,8 +8206,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Remove URLs that are being 301 redirected — these waste crawl budget
-  return Array.from(urlMap.values()).filter((route) => {
-    const path = route.url.replace(baseUrl, '')
-    return !redirectedPaths.has(path)
-  })
+  // Then normalize priorities so Google sees a meaningful hierarchy
+  return Array.from(urlMap.values())
+    .filter((route) => {
+      const path = route.url.replace(baseUrl, '')
+      return !redirectedPaths.has(path)
+    })
+    .map((route) => {
+      const path = route.url.replace(baseUrl, '')
+      return {
+        ...route,
+        priority: normalizePriority(path, route.priority ?? 0.5),
+      }
+    })
 }
