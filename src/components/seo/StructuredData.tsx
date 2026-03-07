@@ -310,9 +310,9 @@ export function WebsiteSchema() {
       },
       {
         '@type': 'WebPage',
-        name: 'NEET Results & Success Stories',
-        url: 'https://cerebrumbiologyacademy.com/company/results',
-        description: 'Student achievements, AIIMS selections, and success stories',
+        name: 'Results & Success Stories',
+        url: 'https://cerebrumbiologyacademy.com/results',
+        description: '98% success rate, 67+ AIIMS selections, student success stories',
       },
       {
         '@type': 'WebPage',
@@ -322,9 +322,15 @@ export function WebsiteSchema() {
       },
       {
         '@type': 'WebPage',
-        name: 'Coaching Locations',
-        url: 'https://cerebrumbiologyacademy.com/locations',
-        description: 'NEET Biology coaching centers across Delhi NCR and pan-India',
+        name: 'All Locations',
+        url: 'https://cerebrumbiologyacademy.com/all-locations',
+        description: '6 coaching centers in Delhi NCR plus online classes pan-India',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'Board Exam Preparation',
+        url: 'https://cerebrumbiologyacademy.com/board-exam-preparation',
+        description: 'CBSE, ICSE, IGCSE, IB and State Board biology preparation',
       },
       {
         '@type': 'WebPage',
@@ -1727,7 +1733,7 @@ function SiteNavigationElementSchema() {
     },
     {
       name: 'Results',
-      url: 'https://cerebrumbiologyacademy.com/company/results',
+      url: 'https://cerebrumbiologyacademy.com/results',
       description: 'NEET results, wall of achievers, and student success stories',
     },
     {
@@ -1742,7 +1748,7 @@ function SiteNavigationElementSchema() {
     },
     {
       name: 'Board Preparation',
-      url: 'https://cerebrumbiologyacademy.com/boards/cbse',
+      url: 'https://cerebrumbiologyacademy.com/board-exam-preparation',
       description: 'CBSE, ICSE, IGCSE, IB and State Board biology preparation',
     },
     {
@@ -1757,7 +1763,7 @@ function SiteNavigationElementSchema() {
     },
     {
       name: 'Locations',
-      url: 'https://cerebrumbiologyacademy.com/locations',
+      url: 'https://cerebrumbiologyacademy.com/all-locations',
       description: 'NEET Biology coaching centers across Delhi NCR and pan-India',
     },
     {
