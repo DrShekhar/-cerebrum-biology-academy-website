@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import {
   Calendar,
   Clock,
@@ -9,38 +8,14 @@ import {
   Star,
   BookOpen,
   Phone,
-  Mail,
-  ArrowRight,
+  MessageCircle,
   Microscope,
   GraduationCap,
+  CheckCircle,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+
 export default function DemoPage() {
-  const [selectedTimeSlot, setSelectedTimeSlot] = useState('')
-  const [selectedCourse, setSelectedCourse] = useState('')
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    class: '',
-    preferredDate: '',
-    preferredTime: '',
-  })
-
-  const timeSlots = [
-    { id: '10am', time: '10:00 AM - 11:00 AM', available: true },
-    { id: '2pm', time: '2:00 PM - 3:00 PM', available: true },
-    { id: '4pm', time: '4:00 PM - 5:00 PM', available: false },
-    { id: '6pm', time: '6:00 PM - 7:00 PM', available: true },
-    { id: '8pm', time: '8:00 PM - 9:00 PM', available: true },
-  ]
-
-  const courses = [
-    { id: 'class-11', name: 'Class 11th Foundation', duration: '2 Years' },
-    { id: 'class-12', name: 'Class 12th Intensive', duration: '1 Year' },
-    { id: 'dropper', name: 'Dropper Batch', duration: '1 Year' },
-    { id: 'foundation', name: 'Foundation Course', duration: '6 Months' },
-  ]
-
   const demoFeatures = [
     {
       icon: Video,
@@ -69,54 +44,19 @@ export default function DemoPage() {
       name: 'Dr. Priya Sharma',
       qualification: 'Ph.D. Botany, 15+ years experience',
       specialization: 'Plant Physiology & Ecology',
-      image: '/faculty/dr-priya-sharma.jpg',
     },
     {
       name: 'Dr. Rajesh Kumar',
       qualification: 'M.Sc. Zoology, 15+ years experience',
       specialization: 'Human Physiology & Genetics',
-      image: '/faculty/dr-rajesh-kumar.jpg',
     },
   ]
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    try {
-      const response = await fetch('/api/demo-booking', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          courseInterest: [selectedCourse || 'general-inquiry'],
-          preferredDate: formData.preferredDate || new Date().toISOString().split('T')[0],
-          preferredTime: selectedTimeSlot || '09:00 AM - 08:00 PM',
-          message: `Class: ${formData.class}`,
-        }),
-      })
-      if (response.ok) {
-        setSubmitSuccess(true)
-      }
-    } catch (error) {
-      console.error('Demo booking error:', error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
       <section className="bg-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <div className="inline-flex items-center space-x-2 bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-semibold mb-6">
               <Star className="w-5 h-5" />
               <span>Free Demo Class Available</span>
@@ -147,12 +87,9 @@ export default function DemoPage() {
         </div>
       </section>
 
-      {/* Demo Features */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What You'll Experience</h2>
             <p className="text-xl text-gray-600">
               Get a comprehensive preview of our teaching methodology and course structure
@@ -174,156 +111,64 @@ export default function DemoPage() {
         </div>
       </section>
 
-      {/* Booking Form Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Book Your Free Demo Class</h2>
+        <div className="max-w-2xl mx-auto px-6">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Book Your Free Demo Class
+            </h2>
             <p className="text-xl text-gray-600">
-              Choose your preferred time slot and get started with your NEET preparation journey
+              Connect with us instantly — no forms, no waiting!
             </p>
           </div>
 
-          <div
-            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
-            <form onSubmit={handleSubmit} className="space-y-8">
-              {/* Course Selection */}
-              <div>
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Select Course
-                </label>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {courses.map((course) => (
-                    <button
-                      key={course.id}
-                      type="button"
-                      onClick={() => setSelectedCourse(course.id)}
-                      className={`p-4 border-2 rounded-xl text-left transition-all duration-300 ${
-                        selectedCourse === course.id
-                          ? 'border-blue-600 bg-blue-50'
-                          : 'border-gray-200 hover:border-blue-300'
-                      }`}
-                    >
-                      <div className="font-semibold text-gray-900">{course.name}</div>
-                      <div className="text-sm text-gray-600">{course.duration}</div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Time Slot Selection */}
-              <div>
-                <label className="block text-lg font-semibold text-gray-900 mb-4">
-                  Available Time Slots
-                </label>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {timeSlots.map((slot) => (
-                    <button
-                      key={slot.id}
-                      type="button"
-                      disabled={!slot.available}
-                      onClick={() => setSelectedTimeSlot(slot.id)}
-                      className={`p-4 border-2 rounded-xl text-center transition-all duration-300 ${
-                        !slot.available
-                          ? 'border-gray-200 bg-gray-100 text-gray-400 cursor-not-allowed'
-                          : selectedTimeSlot === slot.id
-                            ? 'border-blue-600 bg-blue-50'
-                            : 'border-gray-200 hover:border-blue-300'
-                      }`}
-                    >
-                      <Clock className="w-5 h-5 mx-auto mb-2" />
-                      <div className="font-semibold">{slot.time}</div>
-                      {!slot.available && <div className="text-xs text-red-500 mt-1">Booked</div>}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Personal Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your full name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Enter your phone number"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Current Class
-                  </label>
-                  <select
-                    className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    value={formData.class}
-                    onChange={(e) => setFormData({ ...formData, class: e.target.value })}
-                  >
-                    <option value="">Select your class</option>
-                    <option value="10th">Class 10th</option>
-                    <option value="11th">Class 11th</option>
-                    <option value="12th">Class 12th</option>
-                    <option value="12th-pass">12th Pass</option>
-                  </select>
-                </div>
-              </div>
-
+          <div className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp">
+            <div className="space-y-4 mb-8">
               <button
-                type="submit"
-                disabled={!selectedCourse || !selectedTimeSlot}
-                className="w-full bg-indigo-500 text-white py-4 rounded-xl hover:bg-indigo-600 transition-all duration-300 flex items-center justify-center space-x-2 font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                type="button"
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    source: 'support-demo-page',
+                    message:
+                      'Hi! I want to book a FREE Demo Class for NEET Biology. Please confirm my demo slot!',
+                    campaign: 'demo-booking',
+                  })
+                }
+                className="w-full flex items-center justify-center gap-2 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-xl shadow-lg shadow-green-500/25 transition-all min-h-[56px] touch-manipulation"
               >
-                <Calendar className="w-5 h-5" />
-                <span>Book Free Demo Class</span>
-                <ArrowRight className="w-5 h-5" />
+                <MessageCircle className="w-6 h-6" />
+                WhatsApp Us Now
               </button>
-            </form>
+
+              <a
+                href="tel:+918826444334"
+                className="flex items-center justify-center gap-2 w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl shadow-lg shadow-blue-500/25 transition-all min-h-[56px] touch-manipulation"
+              >
+                <Phone className="w-6 h-6" />
+                Call: +91 88264 44334
+              </a>
+            </div>
+
+            <div className="space-y-3 pt-6 border-t border-gray-200">
+              {[
+                'Instant response on WhatsApp',
+                'Choose your preferred day and time',
+                '100% free — no hidden charges',
+                'AIIMS faculty demo session',
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Faculty Preview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Expert Faculty</h2>
             <p className="text-xl text-gray-600">
               Learn from experienced educators who have helped thousands crack NEET
@@ -332,10 +177,7 @@ export default function DemoPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {facultyPreview.map((faculty, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-2xl p-8 text-center animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-2xl p-8 text-center animate-fadeInUp">
                 <div className="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <GraduationCap className="w-12 h-12 text-white" />
                 </div>
@@ -348,7 +190,6 @@ export default function DemoPage() {
         </div>
       </section>
 
-      {/* Contact Information */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Have Questions?</h2>
@@ -356,13 +197,17 @@ export default function DemoPage() {
             Our counseling team is here to help you choose the right course and demo session
           </p>
           <div className="flex flex-wrap justify-center gap-8">
-            <div className="flex items-center space-x-2">
+            <a href="tel:+918826444334" className="flex items-center space-x-2 hover:text-blue-200">
               <Phone className="w-5 h-5" />
               <span>+91 88264 44334</span>
+            </a>
+            <div className="flex items-center space-x-2">
+              <Calendar className="w-5 h-5" />
+              <span>Mon-Sat, 8 AM - 9 PM</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Mail className="w-5 h-5" />
-              <span>info@cerebrumbiologyacademy.com</span>
+              <Clock className="w-5 h-5" />
+              <span>Instant Response</span>
             </div>
           </div>
         </div>

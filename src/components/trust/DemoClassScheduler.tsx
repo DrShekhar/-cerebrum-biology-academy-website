@@ -448,59 +448,11 @@ function BookingForm({
   selectedSlot: TimeSlot | null
   onSubmit: (formData: any) => void
 }) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    class: '',
-    currentPreparation: '',
-    specificQuestions: '',
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    try {
-      await fetch('/api/leads/demo-booking', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          course: formData.class,
-          source: 'demo-class-scheduler',
-          selectedClass: selectedClass?.title,
-          selectedSlot: selectedSlot ? `${selectedSlot.date} ${selectedSlot.time}` : undefined,
-          currentPreparation: formData.currentPreparation,
-          timestamp: new Date().toISOString(),
-        }),
-      })
-    } catch {}
-
-    onSubmit({
-      ...formData,
-      selectedClass: selectedClass?.id,
-      selectedSlot: selectedSlot?.id,
-    })
-
-    setIsSubmitting(false)
-  }
-
-  const updateFormData = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
-
-  const isFormValid = formData.name && formData.email && formData.phone && formData.class
-
   return (
     <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
       <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
         <User className="w-5 h-5 mr-2 text-green-600" />
-        Complete Your Registration
+        Book Your Demo
       </h3>
 
       {!selectedClass || !selectedSlot ? (
@@ -510,7 +462,6 @@ function BookingForm({
         </div>
       ) : (
         <>
-          {/* Selection Summary */}
           <div className="bg-blue-50 rounded-lg p-4 mb-6">
             <h4 className="font-semibold text-blue-900 mb-2">Your Selection:</h4>
             <div className="text-sm text-blue-800">
@@ -526,133 +477,43 @@ function BookingForm({
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                <input
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => updateFormData('name', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Enter your full name"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Current Class *
-                </label>
-                <select
-                  value={formData.class}
-                  onChange={(e) => updateFormData('class', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  required
-                >
-                  <option value="">Select your class</option>
-                  <option value="9th">Class 9th</option>
-                  <option value="10th">Class 10th</option>
-                  <option value="11th">Class 11th</option>
-                  <option value="12th">Class 12th</option>
-                  <option value="dropper">Dropper/Repeater</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => updateFormData('email', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="your.email@example.com"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => updateFormData('phone', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="+91 9876543210"
-                  required
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Current Preparation Status
-              </label>
-              <select
-                value={formData.currentPreparation}
-                onChange={(e) => updateFormData('currentPreparation', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="">Select your status</option>
-                <option value="just_started">Just started NEET preparation</option>
-                <option value="ongoing">Ongoing preparation (self-study)</option>
-                <option value="other_coaching">Currently in other coaching</option>
-                <option value="dropper">Dropper looking for better guidance</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Specific Questions or Topics (Optional)
-              </label>
-              <textarea
-                value={formData.specificQuestions}
-                onChange={(e) => updateFormData('specificQuestions', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                rows={3}
-                placeholder="Any specific topics you'd like the faculty to cover in the demo class?"
-              />
-            </div>
-
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <div className="flex items-start">
-                <Gift className="w-5 h-5 text-green-600 mr-3 mt-0.5" />
-                <div>
-                  <h4 className="font-semibold text-green-900">What You Get:</h4>
-                  <ul className="text-sm text-green-800 mt-1 space-y-1">
-                    <li>• Free 90-minute interactive demo class</li>
-                    <li>• Personal doubt clearing session</li>
-                    <li>• Digital study notes and materials</li>
-                    <li>• NEET preparation strategy consultation</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
+          <div className="space-y-3 mb-6">
             <button
-              type="submit"
-              disabled={!isFormValid || isSubmitting}
-              className="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-6 rounded-lg font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              type="button"
+              onClick={() => {
+                const message = `Hi! I want to book a FREE Demo Class.\n\nClass: ${selectedClass.title}\nDate: ${selectedSlot.date}\nTime: ${selectedSlot.time}\n\nPlease confirm my slot!`
+                window.location.href = `https://wa.me/918826444334?text=${encodeURIComponent(message)}`
+                onSubmit({ selectedClass: selectedClass.id, selectedSlot: selectedSlot.id })
+              }}
+              className="w-full flex items-center justify-center gap-2 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
             >
-              {isSubmitting ? (
-                <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                  Confirming Your Slot...
-                </>
-              ) : (
-                <>
-                  🎯 Book FREE Demo Class
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </>
-              )}
+              <Globe className="w-6 h-6" />
+              Book via WhatsApp
             </button>
-          </form>
+
+            <a
+              href="tel:+918826444334"
+              className="w-full flex items-center justify-center gap-2 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+            >
+              <Phone className="w-6 h-6" />
+              Call: +91 88264 44334
+            </a>
+          </div>
+
+          <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+            <div className="flex items-start">
+              <Gift className="w-5 h-5 text-green-600 mr-3 mt-0.5" />
+              <div>
+                <h4 className="font-semibold text-green-900">What You Get:</h4>
+                <ul className="text-sm text-green-800 mt-1 space-y-1">
+                  <li>- Free 90-minute interactive demo class</li>
+                  <li>- Personal doubt clearing session</li>
+                  <li>- Digital study notes and materials</li>
+                  <li>- NEET preparation strategy consultation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </>
       )}
     </div>

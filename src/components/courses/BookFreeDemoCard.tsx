@@ -1,7 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-import { Play, Phone, CheckCircle, Loader2 } from 'lucide-react'
+import { Play, Phone, MessageCircle, CheckCircle } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
@@ -10,67 +9,10 @@ interface BookFreeDemoCardProps {
   source?: string
 }
 
-export function BookFreeDemoCard({ courseName = 'NEET Biology', source = 'course-hero-form' }: BookFreeDemoCardProps) {
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!name.trim() || !phone.trim()) return
-
-    setLoading(true)
-
-    // Track form submission
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'demo_form_submit', {
-        event_category: 'conversion',
-        event_label: source,
-        course_name: courseName,
-      })
-    }
-
-    // Submit to demo booking API
-    try {
-      await fetch('/api/demo-booking', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: name.trim(),
-          phone: phone.trim(),
-          course: courseName,
-          source,
-          type: 'quick-demo-form',
-        }),
-      })
-    } catch {
-      // Fail silently — WhatsApp fallback below ensures contact
-    }
-
-    // Open WhatsApp with pre-filled message
-    await trackAndOpenWhatsApp({
-      source,
-      message: `Hi, I am ${name.trim()}. I want to book a free demo class for ${courseName}. My number is ${phone.trim()}.`,
-      campaign: 'demo-form-hero',
-    })
-
-    setLoading(false)
-    setSubmitted(true)
-  }
-
-  if (submitted) {
-    return (
-      <div className="bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
-        <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-3" />
-        <h3 className="text-lg font-bold text-green-800 mb-1">Demo Class Booked!</h3>
-        <p className="text-sm text-green-700">
-          Our team will call you shortly to confirm the schedule.
-        </p>
-      </div>
-    )
-  }
-
+export function BookFreeDemoCard({
+  courseName = 'NEET Biology',
+  source = 'course-hero-form',
+}: BookFreeDemoCardProps) {
   return (
     <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
       <div className="flex items-center gap-2 mb-4">
@@ -81,47 +23,38 @@ export function BookFreeDemoCard({ courseName = 'NEET Biology', source = 'course
         Experience a live class with Dr. Shekhar. No fee, no commitment.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <input
-          type="text"
-          placeholder="Your Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
-        />
-        <input
-          type="tel"
-          placeholder="Phone Number"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          required
-          pattern="[0-9]{10}"
-          className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
-        />
+      <div className="space-y-3 mb-4">
         <button
-          type="submit"
-          disabled={loading}
-          className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70"
+          type="button"
+          onClick={() =>
+            trackAndOpenWhatsApp({
+              source,
+              message: `Hi! I want to book a free demo class for ${courseName}. Please share the schedule.`,
+              campaign: 'demo-form-hero',
+            })
+          }
+          className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold transition-all min-h-[48px] touch-manipulation shadow-lg shadow-green-500/25"
         >
-          {loading ? (
-            <Loader2 className="w-4 h-4 animate-spin" />
-          ) : (
-            <Play className="w-4 h-4" />
-          )}
-          {loading ? 'Booking...' : 'Book Free Demo'}
+          <MessageCircle className="w-5 h-5" />
+          WhatsApp Us Now
         </button>
-      </form>
 
-      <div className="mt-4 flex items-center justify-center gap-1 text-xs text-gray-500">
-        <Phone className="w-3 h-3" />
-        <span>Or call directly: {CONTACT_INFO.phone.display.primary}</span>
+        <a
+          href="tel:+918826444334"
+          className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition-all min-h-[48px] touch-manipulation shadow-lg shadow-blue-500/25"
+        >
+          <Phone className="w-5 h-5" />
+          Call: {CONTACT_INFO.phone.display.primary}
+        </a>
       </div>
 
-      <div className="mt-3 flex items-center justify-center gap-3 text-xs text-gray-400">
-        <span>500+ demos conducted</span>
-        <span>·</span>
-        <span>Avg reply: 2 mins</span>
+      <div className="space-y-2">
+        {['500+ demos conducted', 'Avg reply: 2 mins', 'AIIMS Faculty'].map((text) => (
+          <div key={text} className="flex items-center gap-2 text-xs text-gray-500">
+            <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
+            <span>{text}</span>
+          </div>
+        ))}
       </div>
     </div>
   )
