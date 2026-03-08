@@ -35,7 +35,7 @@ export const offlineLocations: Location[] = [
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.123!2d77.123!3d28.123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDA3JzIzLjAiTiA3N8KwMDcnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Fully Equipped Classrooms', 'Library', 'Test Series Center'],
-    timing: 'Open 24/7 — Online Classes Available Globally',
+    timing: 'Offline & Online Classes Available',
     type: 'offline',
   },
   {
@@ -50,7 +50,7 @@ export const offlineLocations: Location[] = [
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.123!2d77.123!3d28.456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDE3JzIzLjAiTiA3N8KwMDcnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Modern Infrastructure', 'Digital Classrooms', 'Student Lounge'],
-    timing: 'Open 24/7 — Online Classes Available Globally',
+    timing: 'Offline & Online Classes Available',
     type: 'offline',
   },
   {
@@ -64,7 +64,7 @@ export const offlineLocations: Location[] = [
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123!2d77.223!3d28.566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMzJzU3LjAiTiA3N8KwMTMnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Prime Location', 'Well-Connected', 'Spacious Classrooms'],
-    timing: 'Open 24/7 — Online Classes Available Globally',
+    timing: 'Offline & Online Classes Available',
     type: 'offline',
   },
   {
@@ -78,7 +78,7 @@ export const offlineLocations: Location[] = [
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.123!2d77.310!3d28.380!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDIyJzQ4LjAiTiA3N8KwMTgnMzYuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Spacious Classrooms', 'Study Material Library', 'Mock Test Center'],
-    timing: 'Open 24/7 — Online Classes Available Globally',
+    timing: 'Offline & Online Classes Available',
     type: 'offline',
   },
   {
@@ -92,7 +92,7 @@ export const offlineLocations: Location[] = [
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.123!2d77.320!3d28.570!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzEyLjAiTiA3N8KwMTknMTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Online + Hybrid Classes', 'Mock Test Center', 'Digital Classrooms'],
-    timing: 'Open 24/7 — Online Classes Available Globally',
+    timing: 'Offline & Online Classes Available',
     type: 'offline',
   },
   {
@@ -106,7 +106,7 @@ export const offlineLocations: Location[] = [
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.123!2d77.370!3d28.630!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQ4LjAiTiA3N8KwMjInMTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Online + Hybrid Classes', 'Spacious Classrooms', 'Study Material Library'],
-    timing: 'Open 24/7 — Online Classes Available Globally',
+    timing: 'Offline & Online Classes Available',
     type: 'offline',
   },
 ]

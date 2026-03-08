@@ -327,7 +327,7 @@ export const Footer = memo(function Footer() {
                   </p>
                 </div>
 
-                <p className="text-xs text-gray-500 pl-7">Open 24/7 — Online Classes Globally</p>
+                <p className="text-xs text-gray-500 pl-7">Offline & Online Classes Available</p>
               </div>
 
               <form onSubmit={handleNewsletterSubscribe} className="space-y-3">

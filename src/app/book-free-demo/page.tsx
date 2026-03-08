@@ -441,7 +441,7 @@ export default function BookFreeDemoPage() {
               </a>
 
               <p className="text-xs text-gray-600 mt-2">
-                Available 24/7 — Online Classes Globally IST
+                Offline & Online Classes — Available 24/7
               </p>
             </div>
 

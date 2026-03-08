@@ -331,7 +331,7 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
                   </div>
                   <div className="mb-4 flex items-center gap-2 text-gray-600">
                     <Clock className="h-5 w-5 text-green-600" />
-                    Open 24/7 — Online Classes Globally
+                    Offline & Online Classes Available
                   </div>
                   <div className="flex flex-wrap gap-3">
                     <Link
@@ -675,7 +675,7 @@ export default function WazirpurNEETContent({ faqs }: WazirpurNEETContentProps) 
 
           <div className="mt-8 flex items-center justify-center text-slate-400">
             <Clock className="mr-2 h-4 w-4" />
-            <span className="text-sm">Available 24/7 — Online Classes Globally</span>
+            <span className="text-sm">Offline & Online Classes — Available 24/7</span>
           </div>
         </div>
       </section>

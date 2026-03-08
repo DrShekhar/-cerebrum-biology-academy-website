@@ -99,7 +99,7 @@ export function LocationsSection() {
 
                   <div className="flex items-center text-sm text-gray-600">
                     <Clock className="w-4 h-4 text-[#3d4d3d] mr-2 flex-shrink-0" />
-                    <span>Open 24/7 — Online Classes Globally</span>
+                    <span>Offline & Online Classes Available</span>
                   </div>
                 </div>
 
