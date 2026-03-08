@@ -1,17 +1,13 @@
 'use client'
 
-import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
-import { showToast } from '@/lib/toast'
-import { getTrackingDataForAPI, getLeadSource } from '@/lib/tracking/utm'
 import {
   MapPin,
   Phone,
   Mail,
   Clock,
-  Send,
-  CheckCircle,
   MessageSquare,
+  MessageCircle,
   Calendar,
   Users,
   Award,
@@ -21,10 +17,12 @@ import {
   ArrowRight,
   Building,
   Navigation,
+  CheckCircle,
 } from 'lucide-react'
 import Link from 'next/link'
 import { FAQDisplay } from '@/components/seo/FAQSchema'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 // BreadcrumbList Schema for improved SERP display and CTR
 const breadcrumbSchema = {
@@ -80,79 +78,6 @@ const contactFAQs = [
 ]
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    enquiryType: 'general',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    try {
-      // Get tracking data for Google Ads and UTM attribution
-      const trackingData = getTrackingDataForAPI()
-      const source = getLeadSource()
-
-      const response = await fetch('/api/contact/inquiry', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          supportType: formData.enquiryType,
-          center: 'noida',
-          ...trackingData,
-          source,
-        }),
-      })
-
-      const result = await response.json()
-
-      if (response.ok && result.success) {
-        setSubmitted(true)
-        showToast.success('Message sent successfully! We will contact you within 24 hours.')
-
-        // Reset form after 3 seconds
-        setTimeout(() => {
-          setSubmitted(false)
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            message: '',
-            enquiryType: 'general',
-          })
-        }, 3000)
-      } else {
-        showToast.error(result.error || 'Failed to send message. Please try again.')
-      }
-    } catch (error) {
-      console.error('Contact form error:', error)
-      showToast.error('Unable to send message. Please try again or call us directly.')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
   const contactInfo = [
     {
       icon: MapPin,
@@ -309,134 +234,60 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Contact Form */}
+        {/* Connect With Us */}
         <section className="py-12 sm:py-16 md:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 sm:mb-12 md:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                Send Us a Message
+                Connect With Us Instantly
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600">
-                We'll get back to you within 24 hours
+                Get immediate assistance — no waiting
               </p>
             </div>
 
             <div className="bg-gray-50 rounded-2xl sm:rounded-3xl shadow-lg p-5 sm:p-6 md:p-8 animate-fade-in-up">
-              {submitted ? (
-                <div className="text-center py-12 animate-scale-in">
-                  <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Message Sent Successfully!
-                  </h3>
-                  <p className="text-gray-600">
-                    Thank you for contacting us. We'll respond within 24 hours.
-                  </p>
+              <div className="space-y-4">
+                <button
+                  type="button"
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'contact-page',
+                      message:
+                        'Hi! I have an inquiry about Cerebrum Biology Academy. Please help me with course details and admission information.',
+                      campaign: 'contact-page',
+                    })
+                  }
+                  className="w-full flex items-center justify-center gap-2 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                  WhatsApp Us Now
+                </button>
+
+                <a
+                  href="tel:+918826444334"
+                  className="w-full flex items-center justify-center gap-2 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                >
+                  <Phone className="w-6 h-6" />
+                  Call: +91 88264 44334
+                </a>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center text-sm text-gray-600">
+                  {[
+                    'Instant Response',
+                    'Admission Guidance',
+                    'Course Details',
+                    'Fee Structure',
+                  ].map((item) => (
+                    <div key={item} className="flex items-center justify-center gap-1.5">
+                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
-                        Enquiry Type
-                      </label>
-                      <select
-                        name="enquiryType"
-                        value={formData.enquiryType}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent"
-                      >
-                        <option value="general">General Inquiry</option>
-                        <option value="admission">Admission Information</option>
-                        <option value="courses">Course Details</option>
-                        <option value="fees">Fee Structure</option>
-                        <option value="demo">Demo Class</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-[#3d4d3d] focus:border-transparent resize-none"
-                      placeholder="Tell us about your requirements, questions, or how we can help you..."
-                    />
-                  </div>
-
-                  <div className="text-center">
-                    <Button
-                      type="submit"
-                      variant="primary"
-                      size="lg"
-                      disabled={isSubmitting}
-                      className="px-12"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="w-5 h-5 mr-2" />
-                          Send Message
-                        </>
-                      )}
-                    </Button>
-                  </div>
-                </form>
-              )}
+              </div>
             </div>
           </div>
         </section>

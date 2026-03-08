@@ -13,8 +13,10 @@ import {
   ArrowRight,
   Sparkles,
   GraduationCap,
-  Phone,
+  MessageCircle,
+  Phone as PhoneIcon,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface StudyPlan {
   weekNumber: number
@@ -71,10 +73,7 @@ export default function StudyPlanGeneratorPage() {
   const [targetScore, setTargetScore] = useState('320')
   const [studyPlan, setStudyPlan] = useState<StudyPlan[]>([])
   const [showResults, setShowResults] = useState(false)
-  const [showLeadForm, setShowLeadForm] = useState(false)
-  const [phone, setPhone] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [planDownloaded, setPlanDownloaded] = useState(false)
+  const [showPostDownloadCTA, setShowPostDownloadCTA] = useState(false)
 
   const generateStudyPlan = () => {
     const months = parseInt(monthsRemaining)
@@ -143,12 +142,9 @@ export default function StudyPlanGeneratorPage() {
     setShowResults(true)
   }
 
-  const handleDownload = async () => {
-    if (!planDownloaded) {
-      setShowLeadForm(true)
-      return
-    }
+  const handleDownload = () => {
     downloadPlan()
+    setShowPostDownloadCTA(true)
   }
 
   const downloadPlan = () => {
@@ -189,34 +185,6 @@ export default function StudyPlanGeneratorPage() {
     a.click()
     document.body.removeChild(a)
     URL.revokeObjectURL(url)
-  }
-
-  const handleLeadSubmit = async () => {
-    if (!/^[6-9]\d{9}$/.test(phone)) {
-      alert('Please enter a valid 10-digit mobile number')
-      return
-    }
-
-    setIsSubmitting(true)
-    try {
-      await fetch('/api/blog/capture-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          phone,
-          source: 'blog_sidebar',
-          articleSlug: 'neet-study-plan-generator',
-          articleTitle: 'Study Plan Generator Download',
-        }),
-      })
-      setPlanDownloaded(true)
-      setShowLeadForm(false)
-      downloadPlan()
-    } catch {
-      alert('Something went wrong. Please try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
   }
 
   const toggleWeakSubject = (subject: string) => {
@@ -436,48 +404,36 @@ export default function StudyPlanGeneratorPage() {
                   </button>
                 </div>
 
-                {/* Lead Form Modal */}
-                {showLeadForm && (
-                  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-                    <div className="w-full max-w-md rounded-2xl bg-white p-6">
-                      <h3 className="mb-4 text-xl font-bold text-gray-900">
-                        Get Your Free Study Plan
-                      </h3>
-                      <p className="mb-4 text-gray-600">
-                        Enter your phone number to download the personalized study plan
-                      </p>
-                      <div className="mb-4">
-                        <div className="relative">
-                          <Phone className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
-                          <input
-                            type="tel"
-                            value={phone}
-                            onChange={(e) =>
-                              setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))
-                            }
-                            placeholder="Enter 10-digit mobile number"
-                            className="w-full rounded-lg border border-gray-300 py-3 pl-10 pr-4 focus:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-200"
-                          />
-                        </div>
-                      </div>
-                      <div className="flex gap-3">
-                        <button
-                          onClick={() => setShowLeadForm(false)}
-                          className="flex-1 rounded-lg border border-gray-300 px-4 py-3 font-medium text-gray-700 hover:bg-gray-50"
-                        >
-                          Cancel
-                        </button>
-                        <button
-                          onClick={handleLeadSubmit}
-                          disabled={isSubmitting}
-                          className="flex-1 rounded-lg bg-green-600 px-4 py-3 font-medium text-white hover:bg-green-700 disabled:opacity-50"
-                        >
-                          {isSubmitting ? 'Processing...' : 'Download Now'}
-                        </button>
-                      </div>
-                      <p className="mt-3 text-center text-xs text-gray-500">
-                        We will send additional study tips via WhatsApp
-                      </p>
+                {showPostDownloadCTA && (
+                  <div className="mb-6 rounded-xl border border-green-200 bg-green-50 p-6">
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">
+                      Plan Downloaded! Want Personalized Guidance?
+                    </h3>
+                    <p className="mb-4 text-sm text-gray-600">
+                      Talk to our NEET experts to get a customized strategy for your preparation.
+                    </p>
+                    <div className="flex flex-col gap-3 sm:flex-row">
+                      <button
+                        onClick={() =>
+                          trackAndOpenWhatsApp({
+                            source: 'study-plan-generator',
+                            message:
+                              'Hi! I just generated my NEET study plan. I want personalized guidance to follow through with it.',
+                            campaign: 'study-plan',
+                          })
+                        }
+                        className="flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-green-700"
+                      >
+                        <MessageCircle className="h-5 w-5" />
+                        Chat on WhatsApp
+                      </button>
+                      <a
+                        href="tel:+918826444334"
+                        className="flex items-center justify-center gap-2 rounded-lg border border-green-600 px-5 py-3 font-semibold text-green-700 transition-colors hover:bg-green-100"
+                      >
+                        <PhoneIcon className="h-5 w-5" />
+                        Call Us
+                      </a>
                     </div>
                   </div>
                 )}

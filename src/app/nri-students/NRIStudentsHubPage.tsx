@@ -24,13 +24,13 @@ import {
   Shield,
   Sparkles,
   Calendar,
-  Send,
   ChevronDown,
   HelpCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { nriCountriesData, nriRegions } from '@/data/nriCountries'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 const regions = [
   {
@@ -294,55 +294,12 @@ const blogArticles = [
 ]
 
 export function NRIStudentsHubPage() {
-  const [formData, setFormData] = useState({
-    studentName: '',
-    parentName: '',
-    country: '',
-    city: '',
-    whatsappNumber: '',
-    email: '',
-    currentClass: '',
-    targetYear: 'NEET 2026',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [formSubmitted, setFormSubmitted] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   const whatsappMessage = encodeURIComponent(
     "Hi, I'm an NRI student interested in NEET Biology coaching. Please share details about online classes, timings, and fee structure."
   )
   const whatsappLink = `https://wa.me/918826444334?text=${whatsappMessage}`
-
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    try {
-      // Submit to API
-      const response = await fetch('/api/contact/inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.studentName,
-          phone: formData.whatsappNumber,
-          email: formData.email,
-          center: 'online',
-          supportType: 'admission',
-          message: `NRI Lead from ${formData.country}. Class: ${formData.currentClass}. Target: ${formData.targetYear}. Parent: ${formData.parentName}. City: ${formData.city}`,
-          timestamp: new Date().toISOString(),
-          source: 'nri-students-page',
-        }),
-      })
-
-      if (response.ok) {
-        setFormSubmitted(true)
-      }
-    } catch (error) {
-      console.error('Form submission error:', error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   return (
     <div className="min-h-screen">
@@ -370,8 +327,7 @@ export function NRIStudentsHubPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Globe className="w-4 h-4 mr-2" />
                 Serving NRI Students in 14+ Countries
@@ -435,89 +391,38 @@ export function NRIStudentsHubPage() {
             </div>
 
             {/* Right Column - Quick Lead Form */}
-            <div
-              className="bg-white rounded-2xl p-6 shadow-2xl animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl p-6 shadow-2xl animate-fadeInUp">
               <div className="text-center mb-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-2">Get Free Consultation</h2>
                 <p className="text-sm text-gray-600">Our counselor will call you within 1 hour</p>
               </div>
 
-              {!formSubmitted ? (
-                <form onSubmit={handleFormSubmit} className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Student Name *"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-                    value={formData.studentName}
-                    onChange={(e) => setFormData({ ...formData, studentName: e.target.value })}
-                  />
-                  <select
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-                    value={formData.country}
-                    onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                  >
-                    <option value="">Select Country *</option>
-                    {Object.entries(nriCountriesData).map(([code, country]) => (
-                      <option key={code} value={country.country}>
-                        {country.flag} {country.country}
-                      </option>
-                    ))}
-                  </select>
-                  <input
-                    type="tel"
-                    placeholder="WhatsApp Number *"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-                    value={formData.whatsappNumber}
-                    onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
-                  />
-                  <select
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
-                    value={formData.currentClass}
-                    onChange={(e) => setFormData({ ...formData, currentClass: e.target.value })}
-                  >
-                    <option value="">Select Class *</option>
-                    <option value="Class 9">Class 9</option>
-                    <option value="Class 10">Class 10</option>
-                    <option value="Class 11">Class 11</option>
-                    <option value="Class 12">Class 12</option>
-                    <option value="Dropper">Dropper</option>
-                  </select>
-                  <Button
-                    type="submit"
-                    variant="primary"
-                    className="w-full bg-green-600 hover:bg-green-600 text-white py-3"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      'Submitting...'
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 mr-2" />
-                        Get Free Consultation
-                      </>
-                    )}
-                  </Button>
-                </form>
-              ) : (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Thank You!</h3>
-                  <p className="text-gray-600 mb-4">Our counselor will call you within 1 hour.</p>
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <Button variant="secondary" className="bg-green-600 text-white">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      Chat on WhatsApp Now
-                    </Button>
-                  </a>
-                </div>
-              )}
+              <div className="space-y-4">
+                <button
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'nri-students-hub',
+                      message:
+                        "Hi, I'm an NRI student interested in NEET Biology coaching. Please share details about online classes, timings, and fee structure.",
+                      campaign: 'nri-students',
+                    })
+                  }
+                  className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors text-lg"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Chat on WhatsApp
+                </button>
+                <a
+                  href="tel:+918826444334"
+                  className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors text-lg"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call Now
+                </a>
+                <p className="text-center text-sm text-gray-500">
+                  Our counselor will guide you within minutes
+                </p>
+              </div>
 
               {/* Trust Badges */}
               <div className="flex items-center justify-center gap-4 mt-6 pt-6 border-t border-gray-100">
@@ -542,9 +447,7 @@ export function NRIStudentsHubPage() {
       {/* Free Tools Section */}
       <section className="py-12 bg-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-8 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4 mr-2" />
               Start Your NEET Prep Journey - Free!
@@ -556,8 +459,7 @@ export function NRIStudentsHubPage() {
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* MCQ Practice Tool */}
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Link href="/neet-biology-mcq">
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow cursor-pointer group">
                   <div className="flex items-start gap-4">
@@ -583,8 +485,7 @@ export function NRIStudentsHubPage() {
             </div>
 
             {/* Rank Predictor Tool */}
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Link href="/neet-rank-predictor">
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow cursor-pointer group">
                   <div className="flex items-start gap-4">
@@ -615,9 +516,7 @@ export function NRIStudentsHubPage() {
       {/* Features Section - Redesigned with Design System */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why NRI Students Choose Cerebrum
             </h2>
@@ -646,9 +545,7 @@ export function NRIStudentsHubPage() {
       {/* Regions & Countries Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Choose Your Country
             </h2>
@@ -721,9 +618,7 @@ export function NRIStudentsHubPage() {
       {/* Testimonials Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NRI Students Who Cracked NEET
             </h2>
@@ -763,9 +658,7 @@ export function NRIStudentsHubPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
               <HelpCircle className="w-4 h-4 mr-2" />
               Common Questions from NRI Parents & Students
@@ -796,9 +689,7 @@ export function NRIStudentsHubPage() {
                   />
                 </button>
                 {openFaqIndex === index && (
-                  <div
-                    className="px-6 pb-5 animate-fadeInUp"
-                  >
+                  <div className="px-6 pb-5 animate-fadeInUp">
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
@@ -806,9 +697,7 @@ export function NRIStudentsHubPage() {
             ))}
           </div>
 
-          <div
-            className="text-center mt-10 animate-fadeInUp"
-          >
+          <div className="text-center mt-10 animate-fadeInUp">
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <Link
               href={whatsappLink}
@@ -825,9 +714,7 @@ export function NRIStudentsHubPage() {
       {/* Courses Section with Limited Seats */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-red-100 px-4 py-2 rounded-full text-red-700 text-sm font-medium mb-4">
               <Calendar className="w-4 h-4 mr-2" />
               NEET 2026 Batches Starting Soon - Limited Seats!
@@ -905,9 +792,7 @@ export function NRIStudentsHubPage() {
       {/* NEET Centers Section */}
       <section className="py-16 bg-[#4a5d4a] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <Plane className="w-16 h-16 mx-auto mb-4 opacity-80" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Write NEET in Your Country!</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
@@ -950,9 +835,7 @@ export function NRIStudentsHubPage() {
       {/* Blog Resources Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Preparation Guides for NRI Students
             </h2>
@@ -961,9 +844,7 @@ export function NRIStudentsHubPage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {blogArticles.map((article, index) => (
-              <div
-                key={article.title}
-               className="animate-fadeInUp">
+              <div key={article.title} className="animate-fadeInUp">
                 <Link href={article.link}>
                   <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow group">
                     <div className="h-40 bg-indigo-100 flex items-center justify-center">
@@ -1003,9 +884,7 @@ export function NRIStudentsHubPage() {
       {/* Boards Supported */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               All Boards Welcome
             </h2>
@@ -1038,8 +917,7 @@ export function NRIStudentsHubPage() {
       {/* Final CTA Section with Urgency */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             {/* Urgency Badge */}
             <div className="inline-flex items-center bg-red-500 px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
               <Calendar className="w-4 h-4 mr-2" />

@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import {
   BookOpen,
@@ -26,15 +25,6 @@ import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function NEET2026PreparationPage() {
   const router = useRouter()
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    studentClass: '12',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
-
   const handleDemoBooking = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'demo_booking_neet2026', {
@@ -44,40 +34,6 @@ export default function NEET2026PreparationPage() {
       })
     }
     router.push('/demo-booking')
-  }
-
-  const handleLeadSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'lead_form_submit', {
-        event_category: 'conversion',
-        event_label: 'neet_2026_lead_form',
-        value: 1,
-      })
-    }
-
-    try {
-      await fetch('/api/contact/inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          course: 'neet-2026',
-          message: `NEET 2026 preparation inquiry. Student class: ${formData.studentClass}`,
-          source: 'neet-2026-page',
-        }),
-      })
-      setSubmitSuccess(true)
-      setTimeout(() => {
-        router.push('/demo-booking')
-      }, 2000)
-    } finally {
-      setIsSubmitting(false)
-    }
   }
 
   const neet2026Highlights = [
@@ -331,101 +287,31 @@ export default function NEET2026PreparationPage() {
                   </p>
                 </div>
 
-                {submitSuccess ? (
-                  <div className="text-center py-6 sm:py-8">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                      <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Thank You!</h4>
-                    <p className="text-gray-600 text-sm">Redirecting to book your demo class...</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleLeadSubmit} className="space-y-3 sm:space-y-4">
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Student Name *"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="tel"
-                        placeholder="Phone Number *"
-                        required
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="email"
-                        placeholder="Email Address"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
-                      />
-                    </div>
-                    <div>
-                      <select
-                        value={formData.studentClass}
-                        onChange={(e) => setFormData({ ...formData, studentClass: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
-                      >
-                        <option value="11">Class 11 (NEET 2027)</option>
-                        <option value="12">Class 12 (NEET 2026)</option>
-                        <option value="dropper">Dropper (NEET 2026)</option>
-                      </select>
-                    </div>
+                <div className="space-y-3 sm:space-y-4">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      trackAndOpenWhatsApp({
+                        source: 'neet-2026-page',
+                        message:
+                          'Hi! I am interested in NEET 2026 Biology preparation. Please share course details, batch timings, and fee structure.',
+                        campaign: 'neet-2026',
+                      })
+                    }
+                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                  >
+                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+                    Get Free Study Kit via WhatsApp
+                  </button>
 
-                    <Button
-                      type="submit"
-                      variant="primary"
-                      size="lg"
-                      className="w-full bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white py-3 sm:py-4 text-sm sm:text-base"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <span className="flex items-center justify-center">
-                          <svg
-                            className="animate-spin -ml-1 mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                          >
-                            <circle
-                              className="opacity-25"
-                              cx="12"
-                              cy="12"
-                              r="10"
-                              stroke="currentColor"
-                              strokeWidth="4"
-                            ></circle>
-                            <path
-                              className="opacity-75"
-                              fill="currentColor"
-                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                            ></path>
-                          </svg>
-                          Processing...
-                        </span>
-                      ) : (
-                        <>
-                          <Gift className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                          Get Free Study Kit + Demo
-                        </>
-                      )}
-                    </Button>
-
-                    <p className="text-center text-[10px] sm:text-xs text-gray-500 mt-2 sm:mt-3">
-                      By registering, you agree to receive updates via WhatsApp & SMS
-                    </p>
-                  </form>
-                )}
+                  <a
+                    href="tel:+918826444334"
+                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                  >
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+                    Call: +91 88264 44334
+                  </a>
+                </div>
 
                 {/* Social Proof */}
                 <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-100">

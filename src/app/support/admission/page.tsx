@@ -15,34 +15,12 @@ import {
   Download,
   Upload,
   CreditCard,
+  MessageCircle,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 export default function AdmissionPage() {
   const [selectedCourse, setSelectedCourse] = useState('')
   const [currentStep, setCurrentStep] = useState(1)
-  const [formData, setFormData] = useState({
-    personalInfo: {
-      name: '',
-      email: '',
-      phone: '',
-      dateOfBirth: '',
-      gender: '',
-      address: '',
-    },
-    academicInfo: {
-      currentClass: '',
-      school: '',
-      board: '',
-      percentage: '',
-      previousNEETAttempt: '',
-      neetScore: '',
-    },
-    courseSelection: {
-      course: '',
-      batch: '',
-      mode: '',
-      location: '',
-    },
-  })
 
   const admissionSteps = [
     {
@@ -158,39 +136,12 @@ export default function AdmissionPage() {
     { phase: 'Late Admission', dates: 'July - August', discount: 'No Discount' },
   ]
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    try {
-      await fetch('/api/contact/inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.personalInfo.name,
-          email: formData.personalInfo.email,
-          phone: formData.personalInfo.phone,
-          course: formData.courseSelection.course || selectedCourse,
-          message: `Admission application. Class: ${formData.academicInfo.currentClass}, School: ${formData.academicInfo.school}, Board: ${formData.academicInfo.board}, Batch: ${formData.courseSelection.batch}, Mode: ${formData.courseSelection.mode}`,
-          source: 'admission-page',
-        }),
-      })
-      setSubmitSuccess(true)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <div className="inline-flex items-center space-x-2 bg-green-400 text-green-900 px-4 py-2 rounded-full font-semibold mb-6">
               <CheckCircle className="w-5 h-5" />
               <span>Admissions Open 2026-27</span>
@@ -224,9 +175,7 @@ export default function AdmissionPage() {
       {/* Admission Process */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Admission Process</h2>
             <p className="text-xl text-gray-600">
               Simple 5-step process to secure your seat at Cerebrum Biology Academy
@@ -239,10 +188,7 @@ export default function AdmissionPage() {
 
             <div className="grid lg:grid-cols-5 gap-8">
               {admissionSteps.map((step, index) => (
-                <div
-                  key={step.step}
-                  className="text-center relative animate-fadeInUp"
-                >
+                <div key={step.step} className="text-center relative animate-fadeInUp">
                   <div className="relative z-10 bg-white">
                     <div
                       className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
@@ -266,9 +212,7 @@ export default function AdmissionPage() {
       {/* Course Selection */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Course</h2>
             <p className="text-xl text-gray-600">
               Select the course that best fits your current academic level and goals
@@ -311,9 +255,7 @@ export default function AdmissionPage() {
       {/* Eligibility Criteria */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Eligibility Criteria</h2>
             <p className="text-xl text-gray-600">
               Check if you meet the requirements for your preferred course
@@ -344,18 +286,14 @@ export default function AdmissionPage() {
       {/* Required Documents */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Required Documents</h2>
             <p className="text-xl text-gray-600">
               Prepare these documents for a smooth admission process
             </p>
           </div>
 
-          <div
-            className="bg-white rounded-2xl shadow-lg p-8 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-2xl shadow-lg p-8 animate-fadeInUp">
             <div className="space-y-4">
               {requiredDocuments.map((doc, index) => (
                 <div
@@ -389,9 +327,7 @@ export default function AdmissionPage() {
       {/* Admission Timeline */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Admission Timeline</h2>
             <p className="text-xl text-gray-600">
               Apply early to avail maximum discounts and secure your preferred batch
@@ -424,49 +360,37 @@ export default function AdmissionPage() {
         </div>
       </section>
 
-      {/* Application Form CTA */}
+      {/* Apply Now CTA */}
       <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div
-           className="animate-fadeInUp">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <div className="animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-4">Ready to Apply?</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Start your application process now and take the first step towards your medical career
+              Start your admission process — connect with our counselors instantly
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors duration-300 flex items-center space-x-2 font-semibold">
-                <FileText className="w-5 h-5" />
-                <span>Start Application</span>
-                <ArrowRight className="w-5 h-5" />
+            <div className="space-y-4 max-w-md mx-auto">
+              <button
+                type="button"
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    source: 'admission-page',
+                    message: `Hi! I want to apply for admission${selectedCourse ? ` to the ${selectedCourse} program` : ''}. Please guide me through the process.`,
+                    campaign: 'admission',
+                  })
+                }
+                className="w-full flex items-center justify-center gap-2 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+              >
+                <MessageCircle className="w-6 h-6" />
+                Apply via WhatsApp
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center space-x-2 font-semibold">
-                <Download className="w-5 h-5" />
-                <span>Download Brochure</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Contact for Assistance */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Assistance?</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Our admission counselors are here to help you throughout the process
-          </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            <div className="flex items-center space-x-2 text-gray-700">
-              <Phone className="w-5 h-5 text-blue-600" />
-              <span className="font-semibold">+91 88264 44334</span>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <Mail className="w-5 h-5 text-blue-600" />
-              <span className="font-semibold">admissions@cerebrumbiologyacademy.com</span>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-700">
-              <Clock className="w-5 h-5 text-blue-600" />
-              <span className="font-semibold">Mon-Sat: 9 AM - 6 PM</span>
+              <a
+                href="tel:+918826444334"
+                className="w-full flex items-center justify-center gap-2 py-4 bg-white text-blue-600 hover:bg-blue-50 font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+              >
+                <Phone className="w-6 h-6" />
+                Call: +91 88264 44334
+              </a>
             </div>
           </div>
         </div>

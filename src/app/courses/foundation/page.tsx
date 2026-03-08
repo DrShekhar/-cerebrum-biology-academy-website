@@ -29,14 +29,6 @@ import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonial
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 export default function FoundationCoursePage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    studentClass: '9',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
   const [seatsLeft, setSeatsLeft] = useState(12)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [countdown, setCountdown] = useState({
@@ -62,35 +54,6 @@ export default function FoundationCoursePage() {
     }, 1000)
     return () => clearInterval(timer)
   }, [])
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    try {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'foundation_lead_submit', {
-          event_category: 'Lead',
-          event_label: 'Foundation Course Lead',
-        })
-      }
-      await fetch('/api/contact/inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          course: 'foundation',
-          message: `Foundation course inquiry. Student class: ${formData.studentClass}`,
-          source: 'foundation-course-page',
-        }),
-      })
-      setSubmitSuccess(true)
-      setSeatsLeft((prev) => Math.max(prev - 1, 5))
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   const courseFeatures = [
     'NCERT-based conceptual learning',
@@ -295,9 +258,7 @@ export default function FoundationCoursePage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           {/* Urgency Banner */}
-          <div
-            className="bg-[#4a5d4a] text-white rounded-xl p-3 sm:p-4 mb-6 text-center animate-fadeInUp"
-          >
+          <div className="bg-[#4a5d4a] text-white rounded-xl p-3 sm:p-4 mb-6 text-center animate-fadeInUp">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base">
               <span className="font-semibold flex items-center">
                 <Sparkles className="w-4 h-4 mr-2" />
@@ -315,8 +276,7 @@ export default function FoundationCoursePage() {
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Content */}
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-[#4a5d4a] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <GraduationCap className="w-4 h-4 mr-2" />
                 For Class 9 & 10 Students
@@ -380,122 +340,58 @@ export default function FoundationCoursePage() {
             </div>
 
             {/* Lead Capture Form */}
-            <div
-              className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 animate-fadeInUp"
-            >
-              {!submitSuccess ? (
-                <>
-                  <div className="text-center mb-6">
-                    <div className="inline-flex items-center bg-[#e8ede8] text-[#4a5d4a] px-3 py-1 rounded-full text-sm font-medium mb-3">
-                      <Gift className="w-4 h-4 mr-1" />
-                      FREE Counseling Session
-                    </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#3d4d3d]">
-                      Get Your Child's Personalized Study Plan
-                    </h3>
-                    <p className="text-[#5a6d5a] text-sm mt-2">
-                      Fill the form for a free academic assessment
-                    </p>
-                  </div>
-
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <input
-                        type="text"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Student's Name *"
-                        required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4a5d4a] focus:border-transparent outline-none transition-all"
-                        style={{ fontSize: '16px' }}
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="Parent's Phone Number *"
-                        required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4a5d4a] focus:border-transparent outline-none transition-all"
-                        style={{ fontSize: '16px' }}
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="Email Address"
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4a5d4a] focus:border-transparent outline-none transition-all"
-                        style={{ fontSize: '16px' }}
-                      />
-                    </div>
-                    <div>
-                      <select
-                        value={formData.studentClass}
-                        onChange={(e) => setFormData({ ...formData, studentClass: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#4a5d4a] focus:border-transparent outline-none transition-all bg-white"
-                        style={{ fontSize: '16px' }}
-                      >
-                        <option value="9">Class 9</option>
-                        <option value="10">Class 10</option>
-                      </select>
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full py-4 bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white font-bold text-lg rounded-xl shadow-lg transition-all disabled:opacity-50 flex items-center justify-center gap-2 animate-fadeInUp"
-                    >
-                      {isSubmitting ? (
-                        'Submitting...'
-                      ) : (
-                        <>
-                          <Sparkles className="w-5 h-5" />
-                          Get Free Study Plan
-                        </>
-                      )}
-                    </button>
-
-                    <p className="text-xs text-gray-500 text-center">
-                      By submitting, you agree to receive calls/messages. No spam!
-                    </p>
-                  </form>
-
-                  <div className="mt-4 pt-4 border-t border-gray-100">
-                    <div className="flex items-center justify-center gap-4 text-xs text-[#5a6d5a]">
-                      <div className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-1 text-[#4a5d4a]" />
-                        Free Assessment
-                      </div>
-                      <div className="flex items-center">
-                        <CheckCircle className="w-4 h-4 mr-1 text-[#4a5d4a]" />
-                        No Obligation
-                      </div>
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <div className="text-center py-8">
-                  <div
-                    className="bg-[#e8ede8] rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 animate-fadeInUp"
-                  >
-                    <CheckCircle className="w-10 h-10 text-[#4a5d4a]" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-[#3d4d3d] mb-2">Thank You!</h3>
-                  <p className="text-[#5a6d5a] mb-4">
-                    Our counselor will call you within 2 hours with your child's personalized study
-                    plan.
-                  </p>
-                  <Link
-                    href="/demo-booking"
-                    className="inline-flex items-center text-[#4a5d4a] font-semibold hover:underline"
-                  >
-                    Book Demo Class Now <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+            <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 animate-fadeInUp">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center bg-[#e8ede8] text-[#4a5d4a] px-3 py-1 rounded-full text-sm font-medium mb-3">
+                  <Gift className="w-4 h-4 mr-1" />
+                  FREE Counseling Session
                 </div>
-              )}
+                <h3 className="text-xl sm:text-2xl font-bold text-[#3d4d3d]">
+                  Get Your Child's Personalized Study Plan
+                </h3>
+                <p className="text-[#5a6d5a] text-sm mt-2">
+                  Connect with us for a free academic assessment
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <button
+                  type="button"
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'foundation-course-page',
+                      message:
+                        'Hi! I am interested in the Foundation Course (Class 9-10) for my child. Please share course details, batch timings, and fee structure.',
+                      campaign: 'foundation-course',
+                    })
+                  }
+                  className="w-full flex items-center justify-center gap-2 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                  WhatsApp Us Now
+                </button>
+
+                <a
+                  href="tel:+918826444334"
+                  className="w-full flex items-center justify-center gap-2 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                >
+                  <Phone className="w-6 h-6" />
+                  Call: +91 88264 44334
+                </a>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <div className="flex items-center justify-center gap-4 text-xs text-[#5a6d5a]">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 mr-1 text-[#4a5d4a]" />
+                    Free Assessment
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="w-4 h-4 mr-1 text-[#4a5d4a]" />
+                    No Obligation
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -517,9 +413,7 @@ export default function FoundationCoursePage() {
             {freeTools.map((tool, index) => {
               const Icon = tool.icon
               return (
-                <div
-                  key={index}
-                 className="animate-fadeInUp">
+                <div key={index} className="animate-fadeInUp">
                   <Link
                     href={tool.link}
                     className="block bg-[#f5f8f5] hover:bg-[#e8ede8] rounded-xl p-6 text-center transition-all hover:shadow-lg group"
@@ -557,9 +451,7 @@ export default function FoundationCoursePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">
-            <div
-              className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-            >
+            <div className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
               <Laptop className="w-10 h-10 text-[#4a5d4a] mb-4" />
               <h3 className="text-lg font-bold text-[#3d4d3d] mb-2">Live Online Biology Classes</h3>
               <p className="text-[#5a6d5a] text-sm">
@@ -568,9 +460,7 @@ export default function FoundationCoursePage() {
               </p>
             </div>
 
-            <div
-              className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-            >
+            <div className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
               <BookOpen className="w-10 h-10 text-[#4a5d4a] mb-4" />
               <h3 className="text-lg font-bold text-[#3d4d3d] mb-2">NCERT Biology for NEET</h3>
               <p className="text-[#5a6d5a] text-sm">
@@ -579,9 +469,7 @@ export default function FoundationCoursePage() {
               </p>
             </div>
 
-            <div
-              className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-            >
+            <div className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
               <Target className="w-10 h-10 text-[#4a5d4a] mb-4" />
               <h3 className="text-lg font-bold text-[#3d4d3d] mb-2">NEET Biology Coaching</h3>
               <p className="text-[#5a6d5a] text-sm">
@@ -781,9 +669,7 @@ export default function FoundationCoursePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div
-              className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[#4a5d4a] animate-fadeInUp"
-            >
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[#4a5d4a] animate-fadeInUp">
               <h3 className="text-xl font-bold text-[#3d4d3d] mb-4">
                 Biology Coaching in Gurugram
               </h3>
@@ -806,9 +692,7 @@ export default function FoundationCoursePage() {
               </div>
             </div>
 
-            <div
-              className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[#4a5d4a] animate-fadeInUp"
-            >
+            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[#4a5d4a] animate-fadeInUp">
               <h3 className="text-xl font-bold text-[#3d4d3d] mb-4">
                 Biology Tuition in Delhi NCR
               </h3>

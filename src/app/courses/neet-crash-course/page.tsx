@@ -29,14 +29,6 @@ import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 
 export default function NEETCrashCoursePage() {
   const router = useRouter()
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    currentLevel: '',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
   const [seatsLeft, setSeatsLeft] = useState(12)
 
   const [countdown, setCountdown] = useState({
@@ -68,31 +60,6 @@ export default function NEETCrashCoursePage() {
 
   const handleDemoBooking = () => {
     router.push('/demo-booking')
-  }
-
-  const handleLeadSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    try {
-      await fetch('/api/contact/inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          course: 'neet-crash-course',
-          message: `NEET Crash Course inquiry. Current level: ${formData.currentLevel}`,
-          source: 'crash-course-page',
-        }),
-      })
-      setSubmitSuccess(true)
-      setTimeout(() => {
-        router.push('/demo-booking')
-      }, 2000)
-    } finally {
-      setIsSubmitting(false)
-    }
   }
 
   const crashCourseFeatures = [
@@ -283,8 +250,7 @@ export default function NEETCrashCoursePage() {
 
         <div className="relative max-w-7xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-yellow-300" />
                 90-Day Intensive Program
@@ -347,9 +313,7 @@ export default function NEETCrashCoursePage() {
             </div>
 
             {/* Lead Form */}
-            <div
-              className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               <div className="bg-red-700 rounded-t-2xl sm:rounded-t-3xl px-4 py-2 sm:py-3 text-center">
                 <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold">
                   <Calendar className="w-4 h-4" />
@@ -391,62 +355,31 @@ export default function NEETCrashCoursePage() {
                   ))}
                 </div>
 
-                {submitSuccess ? (
-                  <div className="text-center py-6 sm:py-8">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                      <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Thank You!</h4>
-                    <p className="text-gray-600 text-sm">Redirecting to book your demo class...</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleLeadSubmit} className="space-y-3 sm:space-y-4">
-                    <input
-                      type="text"
-                      placeholder="Your Name *"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-orange-500 focus:outline-none text-gray-900 text-sm sm:text-base"
-                    />
-                    <input
-                      type="tel"
-                      placeholder="Phone Number *"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-orange-500 focus:outline-none text-gray-900 text-sm sm:text-base"
-                    />
-                    <select
-                      value={formData.currentLevel}
-                      onChange={(e) => setFormData({ ...formData, currentLevel: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-orange-500 focus:outline-none text-gray-900 text-sm sm:text-base"
-                    >
-                      <option value="">Current Preparation Level</option>
-                      <option value="beginner">Just Starting</option>
-                      <option value="syllabus-done">Syllabus Once Done</option>
-                      <option value="revision">Need Revision</option>
-                      <option value="dropper">Dropper/Repeater</option>
-                    </select>
+                <div className="space-y-3 sm:space-y-4">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      trackAndOpenWhatsApp({
+                        source: 'neet-crash-course-page',
+                        message:
+                          'Hi! I am interested in the NEET Crash Course for quick revision. Please share batch details, schedule, and fee structure.',
+                        campaign: 'neet-crash-course',
+                      })
+                    }
+                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                  >
+                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+                    Join via WhatsApp
+                  </button>
 
-                    <Button
-                      type="submit"
-                      variant="primary"
-                      size="lg"
-                      className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 sm:py-4 text-sm sm:text-base"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        'Processing...'
-                      ) : (
-                        <>
-                          <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                          Join Crash Course Now
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                )}
+                  <a
+                    href="tel:+918826444334"
+                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                  >
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+                    Call: +91 88264 44334
+                  </a>
+                </div>
 
                 <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-100">
                   <div className="flex items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-600">
@@ -473,9 +406,7 @@ export default function NEETCrashCoursePage() {
       {/* Course Features */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <div
-            className="text-center mb-8 sm:mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 sm:mb-12 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               What You Get in Crash Course
             </h2>
@@ -506,9 +437,7 @@ export default function NEETCrashCoursePage() {
       {/* Weekly Plan */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <div
-            className="text-center mb-8 sm:mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 sm:mb-12 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               12-Week Intensive Plan
             </h2>
@@ -611,9 +540,7 @@ export default function NEETCrashCoursePage() {
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-3 sm:px-4">
-          <div
-            className="text-center mb-8 sm:mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 sm:mb-12 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Crash Course FAQ
             </h2>
@@ -641,8 +568,7 @@ export default function NEETCrashCoursePage() {
       {/* Final CTA */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               90 Days to NEET Success
             </h2>

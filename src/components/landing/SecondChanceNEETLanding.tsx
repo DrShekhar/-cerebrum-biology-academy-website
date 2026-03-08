@@ -10,7 +10,7 @@ import {
   Star,
   Trophy,
   Phone,
-  MessageSquare,
+  MessageCircle,
   X,
   Gift,
   Heart,
@@ -22,7 +22,6 @@ import {
 } from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
-import { trackLeadFormConversion } from '@/lib/analytics/googleAdsConversions'
 
 interface SecondChanceNEETLandingProps {
   onFormSubmit?: (data: any) => void
@@ -55,12 +54,6 @@ export function SecondChanceNEETLanding({
   onBookCounseling,
   onDownloadStories,
 }: SecondChanceNEETLandingProps) {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    previousScore: '',
-    email: '',
-  })
   const [showExitIntent, setShowExitIntent] = useState(false)
   const [urgencyTimer, setUrgencyTimer] = useState(259200) // 72 hours in seconds
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
@@ -182,17 +175,6 @@ export function SecondChanceNEETLanding({
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
   }
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    onFormSubmit?.(formData)
-    // Track conversion
-    trackLeadFormConversion('failure-analysis-form')
-  }
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
-
   const toggleFAQ = (index: number) => {
     setFaqs((prev) =>
       prev.map((faq, i) =>
@@ -211,9 +193,7 @@ export function SecondChanceNEETLanding({
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Headlines and Hero Image */}
             <div className="space-y-8">
-              <div
-                className="space-y-6 animate-fadeInUp"
-              >
+              <div className="space-y-6 animate-fadeInUp">
                 <div className="bg-red-500 text-white px-4 py-2 rounded-full inline-block text-sm font-medium">
                   🎯 For NEET 2024 Repeaters Only
                 </div>
@@ -252,9 +232,7 @@ export function SecondChanceNEETLanding({
               </div>
 
               {/* Hero Image - Split Screen Effect */}
-              <div
-                className="relative animate-fadeInUp"
-              >
+              <div className="relative animate-fadeInUp">
                 <div className="grid grid-cols-2 gap-4 rounded-2xl overflow-hidden shadow-2xl">
                   <div className="relative bg-gradient-to-br from-red-100 to-red-200 aspect-square flex items-center justify-center">
                     <div className="text-center">
@@ -282,78 +260,40 @@ export function SecondChanceNEETLanding({
             </div>
 
             {/* Right Side - Lead Capture Form */}
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <PremiumCard variant="luxury" size="lg" className="bg-white shadow-2xl">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FileText className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Phone className="w-8 h-8 text-white" />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    Get Your Free Failure Analysis Report
+                    Talk to Our NEET Experts Now
                   </h2>
                   <p className="text-gray-600">
-                    Discover exactly why you failed and how to succeed in 2027
+                    Get a free personalized success plan for your second attempt
                   </p>
                 </div>
 
-                <form onSubmit={handleFormSubmit} className="space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Full Name *"
-                      value={formData.name}
-                      onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder="WhatsApp Number *"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email Address *"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <input
-                      type="number"
-                      placeholder="Previous NEET Score (out of 720) *"
-                      value={formData.previousScore}
-                      onChange={(e) => handleInputChange('previousScore', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      required
-                      min="0"
-                      max="720"
-                    />
-                  </div>
+                <div className="space-y-4">
+                  <button
+                    onClick={() => onWhatsAppContact?.()}
+                    className="w-full py-4 text-lg font-bold bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg shadow-green-500/25 px-8 rounded-xl transition-all duration-300 hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-4 focus:ring-green-500/50 flex items-center justify-center"
+                  >
+                    <MessageCircle className="w-6 h-6 mr-3" />
+                    Chat on WhatsApp
+                  </button>
 
                   <button
-                    type="submit"
-                    className="w-full py-4 text-lg font-bold bg-gradient-to-r from-green-600 via-green-700 to-blue-800 text-white shadow-lg shadow-green-500/25 px-8 rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-opacity-50"
+                    onClick={() => onCallNow?.()}
+                    className="w-full py-4 text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/25 px-8 rounded-xl transition-all duration-300 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-500/50 flex items-center justify-center"
                   >
-                    Get My Success Plan
+                    <Phone className="w-6 h-6 mr-3" />
+                    Call Now
                   </button>
-                </form>
+                </div>
 
                 <div className="mt-4 text-center text-sm text-gray-500">
-                  ✓ Instant WhatsApp delivery ✓ 100% Free ✓ No spam calls
+                  ✓ Instant response ✓ 100% Free ✓ No spam
                 </div>
 
                 {/* Urgency Elements */}
@@ -401,56 +341,56 @@ export function SecondChanceNEETLanding({
           {/* Video Testimonials Carousel */}
           <div className="relative mb-12">
             <div className="overflow-hidden rounded-2xl">
-<div
-                  key={currentTestimonial}
-                  className="grid md:grid-cols-2 gap-8 items-center bg-navy-50 border border-navy-100 p-8 rounded-2xl animate-fadeInUp"
-                >
-                  <div className="relative">
-                    <div className="relative bg-black rounded-2xl overflow-hidden aspect-video">
-                      <Image
-                        src={successStories[currentTestimonial].image}
-                        alt={successStories[currentTestimonial].name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <PlayCircle className="w-16 h-16 text-white cursor-pointer hover:scale-110 transition-transform" />
-                      </div>
+              <div
+                key={currentTestimonial}
+                className="grid md:grid-cols-2 gap-8 items-center bg-navy-50 border border-navy-100 p-8 rounded-2xl animate-fadeInUp"
+              >
+                <div className="relative">
+                  <div className="relative bg-black rounded-2xl overflow-hidden aspect-video">
+                    <Image
+                      src={successStories[currentTestimonial].image}
+                      alt={successStories[currentTestimonial].name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                      <PlayCircle className="w-16 h-16 text-white cursor-pointer hover:scale-110 transition-transform" />
                     </div>
-                  </div>
-
-                  <div className="space-y-6">
-                    <div className="space-y-3">
-                      <h3 className="text-2xl font-bold text-gray-900">
-                        {successStories[currentTestimonial].name}
-                      </h3>
-                      <div className="flex items-center space-x-4">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-red-600">
-                            {successStories[currentTestimonial].beforeScore}
-                          </div>
-                          <div className="text-sm text-gray-600">Before</div>
-                        </div>
-                        <ChevronRight className="w-6 h-6 text-gray-400" />
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-green-600">
-                            {successStories[currentTestimonial].afterScore}
-                          </div>
-                          <div className="text-sm text-gray-600">After</div>
-                        </div>
-                      </div>
-                      <div className="text-lg font-medium text-blue-600">
-                        {successStories[currentTestimonial].college}
-                      </div>
-                    </div>
-
-                    <blockquote className="text-lg text-gray-800 italic">
-                      "{successStories[currentTestimonial].quote}"
-                    </blockquote>
                   </div>
                 </div>
-</div>
+
+                <div className="space-y-6">
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {successStories[currentTestimonial].name}
+                    </h3>
+                    <div className="flex items-center space-x-4">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-red-600">
+                          {successStories[currentTestimonial].beforeScore}
+                        </div>
+                        <div className="text-sm text-gray-600">Before</div>
+                      </div>
+                      <ChevronRight className="w-6 h-6 text-gray-400" />
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-green-600">
+                          {successStories[currentTestimonial].afterScore}
+                        </div>
+                        <div className="text-sm text-gray-600">After</div>
+                      </div>
+                    </div>
+                    <div className="text-lg font-medium text-blue-600">
+                      {successStories[currentTestimonial].college}
+                    </div>
+                  </div>
+
+                  <blockquote className="text-lg text-gray-800 italic">
+                    "{successStories[currentTestimonial].quote}"
+                  </blockquote>
+                </div>
+              </div>
+            </div>
 
             {/* Testimonial indicators */}
             <div className="flex justify-center space-x-2 mt-6">
@@ -622,9 +562,7 @@ export function SecondChanceNEETLanding({
       {/* Urgency Section */}
       <div className="py-16 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-            className="space-y-8 animate-fadeInUp"
-          >
+          <div className="space-y-8 animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-6">🔥 Limited Time Offer - Act Now!</h2>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -721,14 +659,12 @@ export function SecondChanceNEETLanding({
                     }`}
                   />
                 </button>
-{faq.isOpen && (
-                    <div
-                      className="overflow-hidden animate-fadeInUp"
-                    >
-                      <div className="px-6 pb-4 text-gray-600 leading-relaxed">{faq.answer}</div>
-                    </div>
-                  )}
-</div>
+                {faq.isOpen && (
+                  <div className="overflow-hidden animate-fadeInUp">
+                    <div className="px-6 pb-4 text-gray-600 leading-relaxed">{faq.answer}</div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -737,9 +673,7 @@ export function SecondChanceNEETLanding({
       {/* Final CTA Section */}
       <div className="py-16 bg-navy-900 border-t-4 border-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-            className="space-y-8 animate-fadeInUp"
-          >
+          <div className="space-y-8 animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-6">Your Medical Dream is Still Alive</h2>
             <p className="text-xl mb-8">
               Don't let one failure define your future. Join thousands who converted failure into
@@ -797,48 +731,56 @@ export function SecondChanceNEETLanding({
       </div>
 
       {/* Exit Intent Popup */}
-{showExitIntent && (
-          <div
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
-          >
-            <div
-              className="bg-white rounded-2xl p-8 max-w-md w-full relative animate-fadeInUp"
+      {showExitIntent && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp">
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full relative animate-fadeInUp">
+            <button
+              onClick={() => setShowExitIntent(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
             >
-              <button
-                onClick={() => setShowExitIntent(false)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
-              >
-                <X className="w-6 h-6" />
-              </button>
+              <X className="w-6 h-6" />
+            </button>
 
-              <div className="text-center">
-                <Gift className="w-16 h-16 text-red-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Wait! Get 50% Off on Diagnostic Test
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Don't leave empty-handed. Get our comprehensive diagnostic test at 50% off.
-                </p>
+            <div className="text-center">
+              <Gift className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Wait! Get 50% Off on Diagnostic Test
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Don't leave empty-handed. Talk to our experts and claim your 50% discount.
+              </p>
 
-                <div className="space-y-3">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500"
-                  />
-                  <PremiumButton variant="medical" size="lg" className="w-full">
-                    Claim 50% Discount
-                  </PremiumButton>
-                </div>
-
-                <p className="text-sm text-gray-500 mt-3">
-                  Limited time offer. Valid for 24 hours only.
-                </p>
+              <div className="space-y-3">
+                <button
+                  onClick={() => {
+                    onWhatsAppContact?.()
+                    setShowExitIntent(false)
+                  }}
+                  className="w-full py-3 text-base font-bold bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl transition-all duration-300 hover:from-green-600 hover:to-green-700 flex items-center justify-center"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Chat on WhatsApp
+                </button>
+                <button
+                  onClick={() => {
+                    onCallNow?.()
+                    setShowExitIntent(false)
+                  }}
+                  className="w-full py-3 text-base font-bold bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl transition-all duration-300 hover:from-blue-700 hover:to-blue-800 flex items-center justify-center"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
+                </button>
               </div>
+
+              <p className="text-sm text-gray-500 mt-3">
+                Limited time offer. Valid for 24 hours only.
+              </p>
             </div>
           </div>
-        )}
-{/* Fixed Bottom Action Bar - Mobile */}
+        </div>
+      )}
+      {/* Fixed Bottom Action Bar - Mobile */}
       <div className="md:hidden fixed bottom-16 left-0 right-0 bg-white border-t shadow-lg p-3 z-[55]">
         <div className="flex space-x-3">
           <PremiumButton onClick={onCallNow} variant="secondary" size="sm" className="flex-1">
@@ -846,7 +788,7 @@ export function SecondChanceNEETLanding({
             Call Now
           </PremiumButton>
           <PremiumButton onClick={onWhatsAppContact} variant="medical" size="sm" className="flex-1">
-            <MessageSquare className="w-4 h-4 mr-2" />
+            <MessageCircle className="w-4 h-4 mr-2" />
             WhatsApp
           </PremiumButton>
         </div>

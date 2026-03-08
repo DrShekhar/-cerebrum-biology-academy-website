@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import {
   Download,
@@ -13,51 +12,12 @@ import {
   Target,
   Phone,
   ArrowRight,
+  MessageCircle,
 } from 'lucide-react'
 import Link from 'next/link'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function BrochurePage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    course: '',
-    class: '',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    try {
-      await fetch('/api/contact/inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          course: formData.course || 'brochure-request',
-          message: `Brochure download request. Course: ${formData.course}`,
-          source: 'brochure-page',
-        }),
-      })
-      setSubmitted(true)
-    } catch (error) {
-      console.error('Brochure request error:', error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
   const brochures = [
     {
       title: 'Complete Course Brochure',
@@ -123,21 +83,13 @@ export default function BrochurePage() {
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <h1
-              className="text-5xl font-bold mb-6 animate-fadeInUp"
-            >
-              Download Course Brochures
-            </h1>
-            <p
-              className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8 animate-fadeInUp"
-            >
+            <h1 className="text-5xl font-bold mb-6 animate-fadeInUp">Download Course Brochures</h1>
+            <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8 animate-fadeInUp">
               Get detailed information about our NEET Biology courses, faculty profiles, success
               stories, and fee structure. Everything you need to make an informed decision.
             </p>
 
-            <div
-              className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
               <Button
                 variant="outline"
                 size="lg"
@@ -211,143 +163,58 @@ export default function BrochurePage() {
         </div>
       </section>
 
-      {/* Download Form */}
+      {/* Get Brochure */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Get Your Free Brochure</h2>
             <p className="text-xl text-gray-600">
-              Fill this form to receive detailed course brochures
+              Request brochures instantly via WhatsApp or call us
             </p>
           </div>
 
-          <div
-            className="bg-gray-50 rounded-3xl shadow-lg p-8 animate-fadeInUp"
-          >
-            {submitted ? (
-              <div
-                className="text-center py-12 animate-fadeInUp"
+          <div className="bg-gray-50 rounded-3xl shadow-lg p-8 animate-fadeInUp">
+            <div className="space-y-4">
+              <button
+                type="button"
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    source: 'brochure-page',
+                    message:
+                      'Hi! I would like to receive the Cerebrum Biology Academy course brochure with fee structure and batch details. Please share it with me.',
+                    campaign: 'brochure-request',
+                  })
+                }
+                className="w-full flex items-center justify-center gap-2 py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
               >
-                <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Brochures Sent Successfully!
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Check your email for download links and additional information.
-                </p>
-                <div className="bg-green-50 border border-green-200 rounded-2xl p-4 max-w-md mx-auto">
-                  <p className="text-green-800 font-medium">Downloads available for 30 days</p>
-                </div>
+                <MessageCircle className="w-6 h-6" />
+                Get Brochure via WhatsApp
+              </button>
+
+              <a
+                href="tel:+918826444334"
+                className="w-full flex items-center justify-center gap-2 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+              >
+                <Phone className="w-6 h-6" />
+                Call: +91 88264 44334
+              </a>
+            </div>
+
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <div className="grid grid-cols-2 gap-4 text-center text-sm text-gray-600">
+                {[
+                  'Instant Delivery',
+                  'Fee Structure Included',
+                  'Faculty Profiles',
+                  'Success Stories',
+                ].map((item) => (
+                  <div key={item} className="flex items-center justify-center gap-1.5">
+                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                      placeholder="Enter your email address"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
-                      Current Class
-                    </label>
-                    <select
-                      name="class"
-                      value={formData.class}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    >
-                      <option value="">Select your class</option>
-                      <option value="class-10">Class 10th</option>
-                      <option value="class-11">Class 11th</option>
-                      <option value="class-12">Class 12th</option>
-                      <option value="dropper">Dropper/Repeater</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">
-                    Course Interest
-                  </label>
-                  <select
-                    name="course"
-                    value={formData.course}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                  >
-                    <option value="">Select course of interest</option>
-                    <option value="foundation">Foundation Course (Class 9-10)</option>
-                    <option value="class-11">Class 11th Foundation</option>
-                    <option value="class-12">Class 12th Intensive</option>
-                    <option value="dropper">NEET Dropper Batch</option>
-                    <option value="all">All Courses</option>
-                  </select>
-                </div>
-
-                <div className="text-center">
-                  <Button
-                    type="submit"
-                    variant="primary"
-                    size="lg"
-                    disabled={isSubmitting}
-                    className="px-12"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                        Sending Brochures...
-                      </>
-                    ) : (
-                      <>
-                        <Download className="w-5 h-5 mr-2" />
-                        Get Free Brochures
-                      </>
-                    )}
-                  </Button>
-                </div>
-              </form>
-            )}
+            </div>
           </div>
         </div>
       </section>
@@ -366,10 +233,7 @@ export default function BrochurePage() {
 
           <div className="grid md:grid-cols-4 gap-8">
             {highlights.map((highlight, index) => (
-              <div
-                key={index}
-                className="text-center animate-fadeInUp"
-              >
+              <div key={index} className="text-center animate-fadeInUp">
                 <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <highlight.icon className="w-8 h-8 text-white" />
                 </div>

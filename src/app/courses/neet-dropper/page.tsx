@@ -32,14 +32,6 @@ import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 
 export default function NEETDropperPage() {
   const router = useRouter()
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    previousScore: '',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
   const [seatsLeft, setSeatsLeft] = useState(18)
 
   // Countdown timer for batch start
@@ -80,40 +72,6 @@ export default function NEETDropperPage() {
       })
     }
     router.push('/demo-booking')
-  }
-
-  const handleLeadSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'lead_form_submit_dropper', {
-        event_category: 'conversion',
-        event_label: 'neet_dropper_lead_form',
-        value: 1,
-      })
-    }
-
-    try {
-      await fetch('/api/contact/inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          course: 'neet-dropper',
-          message: `NEET Dropper batch inquiry. Previous score: ${formData.previousScore}`,
-          source: 'dropper-course-page',
-        }),
-      })
-      setSubmitSuccess(true)
-      setTimeout(() => {
-        router.push('/demo-booking')
-      }, 2000)
-    } finally {
-      setIsSubmitting(false)
-    }
   }
 
   const courseFeatures = [
@@ -323,8 +281,7 @@ export default function NEETDropperPage() {
 
         <div className="relative max-w-7xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-yellow-400" />
                 #1 NEET Dropper Course for 2026
@@ -397,9 +354,7 @@ export default function NEETDropperPage() {
               </div>
             </div>
 
-            <div
-              className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               {/* Urgency Banner */}
               <div className="bg-yellow-500 text-black rounded-t-2xl sm:rounded-t-3xl px-4 py-2 sm:py-3 text-center">
                 <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold">
@@ -443,138 +398,31 @@ export default function NEETDropperPage() {
                   ))}
                 </div>
 
-                {submitSuccess ? (
-                  <div className="text-center py-6 sm:py-8">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                      <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Thank You!</h4>
-                    <p className="text-gray-600 text-sm">
-                      Redirecting to book your counseling session...
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleLeadSubmit} className="space-y-3 sm:space-y-4">
-                    <div>
-                      <label htmlFor="name" className="sr-only">
-                        Your Name (required)
-                      </label>
-                      <input
-                        id="name"
-                        type="text"
-                        placeholder="Your Name *"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
-                        aria-required="true"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="sr-only">
-                        Phone Number (required)
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        placeholder="Phone Number *"
-                        required
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
-                        aria-required="true"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="sr-only">
-                        Email Address (optional)
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        placeholder="Email Address"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="previousScore" className="sr-only">
-                        Previous NEET Score (optional)
-                      </label>
-                      <select
-                        id="previousScore"
-                        value={formData.previousScore}
-                        onChange={(e) =>
-                          setFormData({ ...formData, previousScore: e.target.value })
-                        }
-                        className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
-                        aria-label="Previous NEET Score"
-                      >
-                        <option value="">Previous NEET Score (Optional)</option>
-                        <option value="below-300">Below 300</option>
-                        <option value="300-400">300 - 400</option>
-                        <option value="400-500">400 - 500</option>
-                        <option value="500-550">500 - 550</option>
-                        <option value="above-550">Above 550</option>
-                        <option value="first-attempt">First Attempt</option>
-                      </select>
-                    </div>
+                <div className="space-y-3 sm:space-y-4">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      trackAndOpenWhatsApp({
+                        source: 'neet-dropper-page',
+                        message:
+                          'Hi! I am a NEET dropper/repeater and want to join the Dropper Batch. Please share batch details, timings, and fee structure.',
+                        campaign: 'neet-dropper',
+                      })
+                    }
+                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                  >
+                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+                    Get Free Counseling via WhatsApp
+                  </button>
 
-                    <Button
-                      type="submit"
-                      variant="primary"
-                      size="lg"
-                      className="w-full bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white py-3 sm:py-4 text-sm sm:text-base"
-                      disabled={isSubmitting}
-                      aria-label={
-                        isSubmitting
-                          ? 'Processing your request'
-                          : 'Get Free Counseling and Study Kit'
-                      }
-                    >
-                      {isSubmitting ? (
-                        <span className="flex items-center justify-center">
-                          <svg
-                            className="animate-spin -ml-1 mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                          >
-                            <circle
-                              className="opacity-25"
-                              cx="12"
-                              cy="12"
-                              r="10"
-                              stroke="currentColor"
-                              strokeWidth="4"
-                            ></circle>
-                            <path
-                              className="opacity-75"
-                              fill="currentColor"
-                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                            ></path>
-                          </svg>
-                          Processing...
-                        </span>
-                      ) : (
-                        <>
-                          <Gift
-                            className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0"
-                            aria-hidden="true"
-                          />
-                          <span className="hidden sm:inline">Get Free Counseling + Study Kit</span>
-                          <span className="sm:hidden">Free Counseling</span>
-                        </>
-                      )}
-                    </Button>
-
-                    <p className="text-center text-[10px] sm:text-xs text-gray-500 mt-2 sm:mt-3">
-                      By registering, you agree to receive updates via WhatsApp & SMS
-                    </p>
-                  </form>
-                )}
+                  <a
+                    href="tel:+918826444334"
+                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                  >
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
+                    Call: +91 88264 44334
+                  </a>
+                </div>
 
                 {/* Social Proof */}
                 <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-100">
@@ -609,9 +457,7 @@ export default function NEETDropperPage() {
       {/* Why Droppers Choose Us */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <div
-            className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Why Droppers Choose Cerebrum?
             </h2>
@@ -650,9 +496,7 @@ export default function NEETDropperPage() {
       {/* Phase-wise Plan */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <div
-            className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Strategic 4-Phase Preparation Plan
             </h2>
@@ -722,9 +566,7 @@ export default function NEETDropperPage() {
       {/* Course Features */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <div
-            className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Complete Dropper Course Features
             </h2>
@@ -747,8 +589,7 @@ export default function NEETDropperPage() {
       {/* Pricing Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#e8ede8]">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
               Transform Your NEET Journey
             </h2>
@@ -877,9 +718,7 @@ export default function NEETDropperPage() {
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-3 sm:px-4">
-          <div
-            className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Dropper Students FAQ
             </h2>
@@ -916,8 +755,7 @@ export default function NEETDropperPage() {
       {/* Final CTA */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#3d4d3d] text-white">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-6">
               Your Second Chance Deserves the Best
             </h2>
