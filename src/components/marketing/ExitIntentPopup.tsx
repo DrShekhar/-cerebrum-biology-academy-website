@@ -48,6 +48,17 @@ export function ExitIntentPopup({ onClose, onCapture }: ExitIntentPopupProps) {
     if (!email) return
 
     try {
+      await fetch('/api/leads/exit-intent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          phone: phone || undefined,
+          source: 'exit-intent-popup',
+          timestamp: new Date().toISOString(),
+        }),
+      })
+
       onCapture?.(email)
       setIsSubmitted(true)
 

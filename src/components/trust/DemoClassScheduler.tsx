@@ -467,8 +467,23 @@ function BookingForm({
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      await fetch('/api/leads/demo-booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          course: formData.class,
+          source: 'demo-class-scheduler',
+          selectedClass: selectedClass?.title,
+          selectedSlot: selectedSlot ? `${selectedSlot.date} ${selectedSlot.time}` : undefined,
+          currentPreparation: formData.currentPreparation,
+          timestamp: new Date().toISOString(),
+        }),
+      })
+    } catch {}
 
     onSubmit({
       ...formData,

@@ -40,15 +40,20 @@ export function LeadMagnetModal({ isOpen, onClose, leadMagnet, area }: LeadMagne
     setIsLoading(true)
 
     try {
-      // Simulate lead capture
-      console.log('Lead captured:', {
-        leadMagnet: leadMagnet.title.replace('[AREA]', area.displayName),
-        area: area.name,
-        formData,
+      await fetch('/api/leads/demo-booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          course: formData.studentClass,
+          source: 'lead-magnet',
+          leadMagnet: leadMagnet.title.replace('[AREA]', area.displayName),
+          area: area.name,
+          timestamp: new Date().toISOString(),
+        }),
       })
-
-      // In real implementation, send to InstantDB and email service
-      await new Promise((resolve) => setTimeout(resolve, 1000))
 
       setIsSubmitted(true)
     } catch (error) {
