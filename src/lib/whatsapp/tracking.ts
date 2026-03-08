@@ -180,20 +180,7 @@ function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
 }
 
 export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Promise<void> {
-  const detail = {
-    intercepted: false,
-    resolve: () => {
-      openWhatsAppDirectly(params)
-    },
-  }
-
-  window.dispatchEvent(new CustomEvent('cerebrum:whatsapp-lead-gate', { detail }))
-
-  // Only open directly if the lead gate did NOT intercept.
-  // If intercepted, the gate will call detail.resolve() after collecting info.
-  if (!detail.intercepted) {
-    openWhatsAppDirectly(params)
-  }
+  openWhatsAppDirectly(params)
 }
 
 /**

@@ -7,7 +7,6 @@ export function GlobalExitIntent() {
   const { showExitIntent, hideExitIntent } = useExitIntent()
   const pathname = usePathname()
 
-  // Disable exit intent on homepage and conversion/thank-you pages
   const isHomepage = pathname === '/'
   const isConversionPage =
     pathname?.includes('/thank') ||
@@ -16,58 +15,9 @@ export function GlobalExitIntent() {
     pathname?.includes('/enrollment') ||
     pathname?.includes('/purchase')
 
-  const handleDownload = async (
-    email: string,
-    phone: string
-  ): Promise<{ discountCode?: string }> => {
-    try {
-      const response = await fetch('/api/leads/exit-intent', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          phone,
-          source: 'exit_intent_popup',
-          variant: 'discount',
-          page: typeof window !== 'undefined' ? window.location.pathname : '/',
-        }),
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to submit lead')
-      }
-
-      const data = await response.json()
-
-      // Track conversion event
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'exit_intent_conversion', {
-          event_category: 'Lead Generation',
-          event_label: 'Exit Intent Popup',
-          value: 1,
-        })
-      }
-
-      return { discountCode: data.discountCode }
-    } catch (error) {
-      console.error('Exit intent submission error:', error)
-      throw error
-    }
-  }
-
-  // Don't render on homepage or conversion pages
   if (isHomepage || isConversionPage) {
     return null
   }
 
-  return (
-    <ExitIntentPopup
-      isVisible={showExitIntent}
-      onClose={hideExitIntent}
-      onDownload={handleDownload}
-      variant="discount"
-    />
-  )
+  return <ExitIntentPopup isVisible={showExitIntent} onClose={hideExitIntent} variant="discount" />
 }

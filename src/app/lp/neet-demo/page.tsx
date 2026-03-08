@@ -1,26 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 import { Phone, MessageSquare, CheckCircle2, Users, Trophy, Clock, Star } from 'lucide-react'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  trackPhoneCallConversion,
-  trackLeadFormConversion,
-} from '@/lib/analytics/googleAdsConversions'
+import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 
 export default function NEETDemoLandingPage() {
-  const router = useRouter()
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    course: 'neet-biology',
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [showSuccess, setShowSuccess] = useState(false)
-  const [showError, setShowError] = useState(false)
-
   useEffect(() => {
     ConversionTracker.initialize()
     ConversionTracker.trackConversion('page_view', 0, {
@@ -29,42 +15,6 @@ export default function NEETDemoLandingPage() {
       pageType: 'google-ads-landing',
     })
   }, [])
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    trackLeadFormConversion('neet-demo-landing')
-    ConversionTracker.trackLeadGeneration('neet-demo-form', formData)
-
-    try {
-      const response = await fetch('/api/leads/demo-booking', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          source: 'google-ads-landing',
-          landingPage: '/lp/neet-demo',
-          timestamp: new Date().toISOString(),
-          utm_source: new URLSearchParams(window.location.search).get('utm_source'),
-          utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign'),
-          utm_medium: new URLSearchParams(window.location.search).get('utm_medium'),
-          gclid: new URLSearchParams(window.location.search).get('gclid'),
-        }),
-      })
-
-      if (response.ok) {
-        setShowSuccess(true)
-        router.push('/thank-you?form=demo-booking&source=google-ads')
-      } else {
-        setShowError(true)
-      }
-    } catch {
-      setShowError(true)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
 
   const handleCallNow = () => {
     ConversionTracker.trackPhoneCall()
@@ -152,7 +102,7 @@ export default function NEETDemoLandingPage() {
             </div>
           </div>
 
-          {/* Right Side - Simple Lead Form */}
+          {/* Right Side - Direct Contact CTAs */}
           <div className="animate-fadeInUp">
             <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
               <div className="text-center mb-6">
@@ -162,93 +112,47 @@ export default function NEETDemoLandingPage() {
                 <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
                   Book Your FREE Demo Class
                 </h2>
-                <p className="text-gray-600 mt-2">Limited seats available</p>
+                <p className="text-gray-600 mt-2">Limited seats available — connect now!</p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name *"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-lg"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="tel"
-                    placeholder="WhatsApp Number *"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-lg"
-                    required
-                  />
-                </div>
-
-                {showError && (
-                  <div className="bg-red-50 border border-red-200 rounded-xl p-4">
-                    <p className="text-red-800 font-medium text-sm mb-2">
-                      Something went wrong. Please connect directly:
-                    </p>
-                    <div className="flex gap-2">
-                      <a
-                        href="tel:+918826444334"
-                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-blue-600 text-white rounded-lg font-medium text-sm"
-                      >
-                        <Phone className="w-4 h-4" />
-                        Call: 88264 44334
-                      </a>
-                      <button
-                        type="button"
-                        onClick={handleWhatsApp}
-                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-green-600 text-white rounded-lg font-medium text-sm"
-                      >
-                        <MessageSquare className="w-4 h-4" />
-                        WhatsApp Us
-                      </button>
-                    </div>
-                  </div>
-                )}
-
+              <div className="space-y-4">
                 <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-4 text-lg font-bold bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-xl transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50"
+                  onClick={handleWhatsApp}
+                  className="w-full flex items-center justify-center space-x-3 py-4 text-lg font-bold bg-green-600 hover:bg-green-700 text-white rounded-xl transition-all duration-300 shadow-lg shadow-green-500/25"
                 >
-                  {isSubmitting ? 'Booking...' : 'Book Free Demo Now'}
+                  <MessageSquare className="w-6 h-6" />
+                  <span>WhatsApp Us Now</span>
                 </button>
-              </form>
 
-              {/* Quick Contact Options */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-center text-gray-500 text-sm mb-4">Or connect instantly</p>
-                <div className="grid grid-cols-2 gap-3">
-                  <a
-                    href="tel:+918826444334"
-                    onClick={handleCallNow}
-                    className="flex items-center justify-center space-x-2 py-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-xl transition-colors font-medium"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>Call: 88264 44334</span>
-                  </a>
-                  <button
-                    onClick={handleWhatsApp}
-                    className="flex items-center justify-center space-x-2 py-3 bg-green-50 hover:bg-green-100 text-green-700 rounded-xl transition-colors font-medium"
-                  >
-                    <MessageSquare className="w-5 h-5" />
-                    <span>WhatsApp</span>
-                  </button>
-                </div>
+                <a
+                  href="tel:+918826444334"
+                  onClick={handleCallNow}
+                  className="w-full flex items-center justify-center space-x-3 py-4 text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/25"
+                >
+                  <Phone className="w-6 h-6" />
+                  <span>Call: +91 88264 44334</span>
+                </a>
+              </div>
+
+              {/* What you get */}
+              <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
+                {[
+                  'FREE 45-min demo with AIIMS faculty',
+                  'Personalized study plan for your level',
+                  'No payment required — 100% free',
+                ].map((item) => (
+                  <div key={item} className="flex items-center space-x-2 text-sm text-gray-700">
+                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Trust Indicators */}
               <div className="mt-6 flex items-center justify-center space-x-4 text-sm text-gray-500">
                 <div className="flex items-center space-x-1">
                   <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  <span>100% Free</span>
+                  <span>Instant Response</span>
                 </div>
                 <div className="flex items-center space-x-1">
                   <CheckCircle2 className="w-4 h-4 text-green-500" />
