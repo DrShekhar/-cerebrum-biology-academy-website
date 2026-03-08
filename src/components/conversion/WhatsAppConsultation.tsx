@@ -209,9 +209,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
 
   if (variant === 'compact' && !isExpanded) {
     return (
-      <div
-        className={getPositionStyles()}
-      >
+      <div className={getPositionStyles()}>
         <button
           onClick={() => setIsExpanded(true)}
           className={`w-16 h-16 rounded-full bg-gradient-to-r ${getUrgencyColor()} text-white shadow-lg flex items-center justify-center relative overflow-hidden`}
@@ -220,9 +218,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
 
           {/* Pulse animation for urgency */}
           {urgencyLevel === 'high' && (
-            <div
-              className="absolute inset-0 bg-white rounded-full animate-fadeInUp"
-            />
+            <div className="absolute inset-0 bg-white rounded-full animate-fadeInUp" />
           )}
 
           {/* Online indicator */}
@@ -235,9 +231,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
   }
 
   return (
-    <div
-      className={getPositionStyles()}
-    >
+    <div className={getPositionStyles()}>
       <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
         {/* Header */}
         <div className={`bg-gradient-to-r ${getUrgencyColor()} p-4 text-white relative`}>
@@ -321,114 +315,112 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                   <ChevronDown className="w-4 h-4 text-purple-600" />
                 )}
               </button>
-{showForm && (
-                  <div
-                    className="mt-3 space-y-3 animate-fadeInUp"
-                  >
-                    {/* Available slots */}
-                    <div>
-                      <div className="text-sm font-medium text-gray-700 mb-2">Available Slots</div>
-                      <div className="space-y-2">
-                        {availableSlots.map((slot) => (
-                          <div
-                            key={slot.id}
-                            className={`p-3 border rounded-lg cursor-pointer transition-all ${
-                              slot.available
-                                ? selectedSlot === slot.id
-                                  ? 'border-green-600 bg-green-50'
-                                  : 'border-gray-200 hover:border-green-400 hover:bg-green-50'
-                                : 'border-gray-100 bg-gray-50 cursor-not-allowed'
-                            }`}
-                            onClick={() => slot.available && setSelectedSlot(slot.id)}
-                          >
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <div className="flex items-center gap-2">
-                                  <Clock className="w-4 h-4 text-gray-500" />
-                                  <span
-                                    className={`font-medium ${slot.available ? 'text-gray-900' : 'text-gray-500'}`}
-                                  >
-                                    {slot.time}
+              {showForm && (
+                <div className="mt-3 space-y-3 animate-fadeInUp">
+                  {/* Available slots */}
+                  <div>
+                    <div className="text-sm font-medium text-gray-700 mb-2">Available Slots</div>
+                    <div className="space-y-2">
+                      {availableSlots.map((slot) => (
+                        <div
+                          key={slot.id}
+                          className={`p-3 border rounded-lg cursor-pointer transition-all ${
+                            slot.available
+                              ? selectedSlot === slot.id
+                                ? 'border-green-600 bg-green-50'
+                                : 'border-gray-200 hover:border-green-400 hover:bg-green-50'
+                              : 'border-gray-100 bg-gray-50 cursor-not-allowed'
+                          }`}
+                          onClick={() => slot.available && setSelectedSlot(slot.id)}
+                        >
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="flex items-center gap-2">
+                                <Clock className="w-4 h-4 text-gray-500" />
+                                <span
+                                  className={`font-medium ${slot.available ? 'text-gray-900' : 'text-gray-500'}`}
+                                >
+                                  {slot.time}
+                                </span>
+                                {!slot.available && (
+                                  <span className="text-xs text-orange-600 bg-orange-100 px-2 py-0.5 rounded-full">
+                                    Busy
                                   </span>
-                                  {!slot.available && (
-                                    <span className="text-xs text-orange-600 bg-orange-100 px-2 py-0.5 rounded-full">
-                                      Busy
-                                    </span>
-                                  )}
-                                </div>
-                                <div className="text-sm text-gray-600 mt-1">
-                                  {slot.counselorName} • {slot.counselorRating} ⭐
-                                </div>
-                                <div className="text-xs text-gray-500 mt-1">
-                                  {slot.specialization.join(' • ')}
-                                </div>
-                                {!slot.available && slot.nextAvailable && (
-                                  <div className="text-xs text-blue-600 mt-1">
-                                    Next available: {slot.nextAvailable}
-                                  </div>
                                 )}
                               </div>
-
-                              {slot.available && selectedSlot === slot.id && (
-                                <CheckCircle className="w-5 h-5 text-green-600" />
+                              <div className="text-sm text-gray-600 mt-1">
+                                {slot.counselorName} • {slot.counselorRating} ⭐
+                              </div>
+                              <div className="text-xs text-gray-500 mt-1">
+                                {slot.specialization.join(' • ')}
+                              </div>
+                              {!slot.available && slot.nextAvailable && (
+                                <div className="text-xs text-blue-600 mt-1">
+                                  Next available: {slot.nextAvailable}
+                                </div>
                               )}
                             </div>
+
+                            {slot.available && selectedSlot === slot.id && (
+                              <CheckCircle className="w-5 h-5 text-green-600" />
+                            )}
                           </div>
-                        ))}
-                      </div>
+                        </div>
+                      ))}
                     </div>
-
-                    {/* Consultation form */}
-                    <div className="space-y-3">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                          Specific Query (Optional)
-                        </label>
-                        <textarea
-                          value={consultationData.specificQuery}
-                          onChange={(e) =>
-                            setConsultationData((prev) => ({
-                              ...prev,
-                              specificQuery: e.target.value,
-                            }))
-                          }
-                          placeholder="What specific help do you need? (Course selection, study plan, etc.)"
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 text-sm"
-                          rows={3}
-                        />
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          id="urgent"
-                          checked={consultationData.urgency === 'urgent'}
-                          onChange={(e) =>
-                            setConsultationData((prev) => ({
-                              ...prev,
-                              urgency: e.target.checked ? 'urgent' : 'normal',
-                            }))
-                          }
-                          className="w-4 h-4 text-green-600 focus:ring-green-600 border-gray-300 rounded"
-                        />
-                        <label htmlFor="urgent" className="text-sm text-gray-700">
-                          Urgent consultation needed
-                        </label>
-                      </div>
-                    </div>
-
-                    {/* Book consultation button */}
-                    <button
-                      onClick={() => handleWhatsAppClick(selectedSlot || undefined)}
-                      disabled={!selectedSlot}
-                      className="w-full flex items-center justify-center gap-2 p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                    >
-                      <Send className="w-4 h-4" />
-                      Book via WhatsApp
-                    </button>
                   </div>
-                )}
-</div>
+
+                  {/* Consultation form */}
+                  <div className="space-y-3">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Specific Query (Optional)
+                      </label>
+                      <textarea
+                        value={consultationData.specificQuery}
+                        onChange={(e) =>
+                          setConsultationData((prev) => ({
+                            ...prev,
+                            specificQuery: e.target.value,
+                          }))
+                        }
+                        placeholder="What specific help do you need? (Course selection, study plan, etc.)"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 text-sm"
+                        rows={3}
+                      />
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        id="urgent"
+                        checked={consultationData.urgency === 'urgent'}
+                        onChange={(e) =>
+                          setConsultationData((prev) => ({
+                            ...prev,
+                            urgency: e.target.checked ? 'urgent' : 'normal',
+                          }))
+                        }
+                        className="w-4 h-4 text-green-600 focus:ring-green-600 border-gray-300 rounded"
+                      />
+                      <label htmlFor="urgent" className="text-sm text-gray-700">
+                        Urgent consultation needed
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Book consultation button */}
+                  <button
+                    onClick={() => handleWhatsAppClick(selectedSlot || undefined)}
+                    disabled={!selectedSlot}
+                    className="w-full flex items-center justify-center gap-2 p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  >
+                    <Send className="w-4 h-4" />
+                    Book via WhatsApp
+                  </button>
+                </div>
+              )}
+            </div>
           )}
 
           {/* Trust indicators */}

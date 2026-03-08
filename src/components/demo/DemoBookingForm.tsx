@@ -292,9 +292,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
 
         {/* Step 1: Basic Information */}
         {step === 1 && (
-          <div
-            className="space-y-6 animate-fadeInUp"
-          >
+          <div className="space-y-6 animate-fadeInUp">
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Your Information</h3>
               <p className="text-gray-600">Quick and easy - takes just 30 seconds!</p>
@@ -389,9 +387,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
 
         {/* Step 2: Schedule Demo */}
         {step === 2 && (
-          <div
-            className="space-y-6 animate-fadeInUp"
-          >
+          <div className="space-y-6 animate-fadeInUp">
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Schedule Your Demo</h3>
               <p className="text-gray-600">Pick your preferred date and time</p>

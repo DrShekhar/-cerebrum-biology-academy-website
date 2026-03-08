@@ -293,7 +293,10 @@ export function DemoBookingModal({
 
                   <p className="text-center text-sm text-gray-500 mt-3">
                     Or call us:{' '}
-                    <a href="tel:+918826444334" className="text-blue-600 font-semibold hover:underline">
+                    <a
+                      href="tel:+918826444334"
+                      className="text-blue-600 font-semibold hover:underline"
+                    >
                       +91 88264 44334
                     </a>
                   </p>

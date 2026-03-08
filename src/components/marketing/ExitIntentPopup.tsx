@@ -76,8 +76,8 @@ export function ExitIntentPopup({ onClose, onCapture }: ExitIntentPopupProps) {
   }
 
   return (
-<>
-{isVisible && (
+    <>
+      {isVisible && (
         <>
           {/* Backdrop */}
           <div
@@ -86,9 +86,7 @@ export function ExitIntentPopup({ onClose, onCapture }: ExitIntentPopupProps) {
           />
 
           {/* Popup */}
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fadeInUp"
-          >
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fadeInUp">
             <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden">
               {/* Close Button */}
               <button
@@ -206,6 +204,6 @@ export function ExitIntentPopup({ onClose, onCapture }: ExitIntentPopupProps) {
           </div>
         </>
       )}
-</>
-)
+    </>
+  )
 }

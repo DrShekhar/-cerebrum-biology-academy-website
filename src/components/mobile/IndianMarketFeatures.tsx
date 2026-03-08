@@ -277,130 +277,122 @@ export function IndianMarketFeatures({
       </div>
 
       {/* Language Selection Modal */}
-{showLanguageSelector && (
+      {showLanguageSelector && (
+        <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center animate-fadeInUp">
           <div
-            className="fixed inset-0 z-50 flex items-end md:items-center justify-center animate-fadeInUp"
-          >
-            <div
-              className="absolute inset-0 bg-black bg-opacity-50"
-              onClick={() => setShowLanguageSelector(false)}
-            />
-            <div
-              className="relative bg-white rounded-t-2xl md:rounded-2xl w-full max-w-md max-h-96 overflow-y-auto animate-fadeInUp"
-            >
-              <div className="p-6">
-                <h3 className="text-lg font-bold mb-4 flex items-center">
-                  <Languages className="w-5 h-5 mr-2" />
-                  {currentLanguage === 'hi' ? 'भाषा चुनें' : 'Select Language'}
-                </h3>
-                <div className="space-y-2">
-                  {SUPPORTED_LANGUAGES.map((language) => (
-                    <button
-                      key={language.code}
-                      onClick={() => handleLanguageSelect(language)}
-                      className={`w-full flex items-center p-3 rounded-lg border transition-all ${
-                        language.code === currentLanguage
-                          ? 'border-blue-500 bg-blue-50 text-blue-900'
-                          : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                      }`}
-                    >
-                      <span className="text-2xl mr-3">{language.flag}</span>
-                      <div className="text-left">
-                        <div className="font-medium">{language.nativeName}</div>
-                        <div className="text-sm text-gray-600">{language.name}</div>
-                      </div>
-                      {language.code === currentLanguage && (
-                        <Star className="w-4 h-4 text-blue-500 ml-auto" />
-                      )}
-                    </button>
-                  ))}
-                </div>
+            className="absolute inset-0 bg-black bg-opacity-50"
+            onClick={() => setShowLanguageSelector(false)}
+          />
+          <div className="relative bg-white rounded-t-2xl md:rounded-2xl w-full max-w-md max-h-96 overflow-y-auto animate-fadeInUp">
+            <div className="p-6">
+              <h3 className="text-lg font-bold mb-4 flex items-center">
+                <Languages className="w-5 h-5 mr-2" />
+                {currentLanguage === 'hi' ? 'भाषा चुनें' : 'Select Language'}
+              </h3>
+              <div className="space-y-2">
+                {SUPPORTED_LANGUAGES.map((language) => (
+                  <button
+                    key={language.code}
+                    onClick={() => handleLanguageSelect(language)}
+                    className={`w-full flex items-center p-3 rounded-lg border transition-all ${
+                      language.code === currentLanguage
+                        ? 'border-blue-500 bg-blue-50 text-blue-900'
+                        : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                    }`}
+                  >
+                    <span className="text-2xl mr-3">{language.flag}</span>
+                    <div className="text-left">
+                      <div className="font-medium">{language.nativeName}</div>
+                      <div className="text-sm text-gray-600">{language.name}</div>
+                    </div>
+                    {language.code === currentLanguage && (
+                      <Star className="w-4 h-4 text-blue-500 ml-auto" />
+                    )}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
-        )}
-{/* WhatsApp Share Modal */}
-{showWhatsAppShare && (
+        </div>
+      )}
+      {/* WhatsApp Share Modal */}
+      {showWhatsAppShare && (
+        <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center animate-fadeInUp">
           <div
-            className="fixed inset-0 z-50 flex items-end md:items-center justify-center animate-fadeInUp"
-          >
-            <div
-              className="absolute inset-0 bg-black bg-opacity-50"
-              onClick={() => setShowWhatsAppShare(false)}
-            />
-            <div
-              className="relative bg-white rounded-t-2xl md:rounded-2xl w-full max-w-md animate-fadeInUp"
-            >
-              <div className="p-6">
-                <h3 className="text-lg font-bold mb-4 flex items-center text-green-600">
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  {currentLanguage === 'hi' ? 'WhatsApp पर शेयर करें' : 'Share on WhatsApp'}
-                </h3>
-                <div className="space-y-3">
-                  <button
-                    onClick={() => shareToWhatsApp('test-result')}
-                    className="w-full flex items-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-all"
-                  >
-                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
-                      <Star className="w-5 h-5 text-green-600" />
+            className="absolute inset-0 bg-black bg-opacity-50"
+            onClick={() => setShowWhatsAppShare(false)}
+          />
+          <div className="relative bg-white rounded-t-2xl md:rounded-2xl w-full max-w-md animate-fadeInUp">
+            <div className="p-6">
+              <h3 className="text-lg font-bold mb-4 flex items-center text-green-600">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                {currentLanguage === 'hi' ? 'WhatsApp पर शेयर करें' : 'Share on WhatsApp'}
+              </h3>
+              <div className="space-y-3">
+                <button
+                  onClick={() => shareToWhatsApp('test-result')}
+                  className="w-full flex items-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-all"
+                >
+                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                    <Star className="w-5 h-5 text-green-600" />
+                  </div>
+                  <div className="text-left">
+                    <div className="font-medium">
+                      {currentLanguage === 'hi' ? 'टेस्ट रिजल्ट शेयर करें' : 'Share Test Result'}
                     </div>
-                    <div className="text-left">
-                      <div className="font-medium">
-                        {currentLanguage === 'hi' ? 'टेस्ट रिजल्ट शेयर करें' : 'Share Test Result'}
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        {currentLanguage === 'hi'
-                          ? 'अपने स्कोर के बारे में बताएं'
-                          : 'Tell friends about your score'}
-                      </div>
+                    <div className="text-sm text-gray-600">
+                      {currentLanguage === 'hi'
+                        ? 'अपने स्कोर के बारे में बताएं'
+                        : 'Tell friends about your score'}
                     </div>
-                  </button>
+                  </div>
+                </button>
 
-                  <button
-                    onClick={() => shareToWhatsApp('course')}
-                    className="w-full flex items-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-all"
-                  >
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                      <BookOpen className="w-5 h-5 text-blue-600" />
+                <button
+                  onClick={() => shareToWhatsApp('course')}
+                  className="w-full flex items-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-all"
+                >
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                    <BookOpen className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div className="text-left">
+                    <div className="font-medium">
+                      {currentLanguage === 'hi'
+                        ? 'कोर्स की जानकारी शेयर करें'
+                        : 'Share Course Info'}
                     </div>
-                    <div className="text-left">
-                      <div className="font-medium">
-                        {currentLanguage === 'hi'
-                          ? 'कोर्स की जानकारी शेयर करें'
-                          : 'Share Course Info'}
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        {currentLanguage === 'hi'
-                          ? 'दोस्तों को कोर्स के बारे में बताएं'
-                          : 'Recommend course to friends'}
-                      </div>
+                    <div className="text-sm text-gray-600">
+                      {currentLanguage === 'hi'
+                        ? 'दोस्तों को कोर्स के बारे में बताएं'
+                        : 'Recommend course to friends'}
                     </div>
-                  </button>
+                  </div>
+                </button>
 
-                  <button
-                    onClick={() => shareToWhatsApp('app')}
-                    className="w-full flex items-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-all"
-                  >
-                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
-                      <Download className="w-5 h-5 text-purple-600" />
+                <button
+                  onClick={() => shareToWhatsApp('app')}
+                  className="w-full flex items-center p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-all"
+                >
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                    <Download className="w-5 h-5 text-purple-600" />
+                  </div>
+                  <div className="text-left">
+                    <div className="font-medium">
+                      {currentLanguage === 'hi' ? 'ऐप शेयर करें' : 'Share App'}
                     </div>
-                    <div className="text-left">
-                      <div className="font-medium">
-                        {currentLanguage === 'hi' ? 'ऐप शेयर करें' : 'Share App'}
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        {currentLanguage === 'hi'
-                          ? 'ऐप डाउनलोड लिंक शेयर करें'
-                          : 'Share app download link'}
-                      </div>
+                    <div className="text-sm text-gray-600">
+                      {currentLanguage === 'hi'
+                        ? 'ऐप डाउनलोड लिंक शेयर करें'
+                        : 'Share app download link'}
                     </div>
-                  </button>
-                </div>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
-        )}
-{/* Regional Context Info */}
+        </div>
+      )}
+      {/* Regional Context Info */}
       <div className="bg-gradient-to-r from-orange-50 to-green-50 rounded-lg p-4 border border-orange-200">
         <div className="flex items-center mb-2">
           <MapPin className="w-4 h-4 text-orange-600 mr-2" />

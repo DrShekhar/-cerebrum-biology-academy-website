@@ -227,9 +227,7 @@ function DemoClassCard({ demoClass }: { demoClass: DemoClass }) {
   const FormatIcon = getFormatIcon(demoClass.format)
 
   return (
-    <div
-      className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden animate-fadeInUp"
-    >
+    <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden animate-fadeInUp">
       {/* Header */}
       <div className="bg-indigo-500 text-white p-4">
         <div className="flex items-start justify-between">
@@ -304,22 +302,20 @@ function DemoClassCard({ demoClass }: { demoClass: DemoClass }) {
         </div>
 
         {/* What You'll Learn (Expanded View) */}
-{showDetails && (
-            <div
-              className="mb-4 animate-fadeInUp"
-            >
-              <h4 className="font-semibold text-gray-900 mb-2 text-sm">What You'll Learn:</h4>
-              <ul className="space-y-1">
-                {demoClass.whatYouLearn.map((item, index) => (
-                  <li key={index} className="text-sm text-gray-700 flex items-start">
-                    <BookOpen className="w-3 h-3 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-{/* Enrollment Status */}
+        {showDetails && (
+          <div className="mb-4 animate-fadeInUp">
+            <h4 className="font-semibold text-gray-900 mb-2 text-sm">What You'll Learn:</h4>
+            <ul className="space-y-1">
+              {demoClass.whatYouLearn.map((item, index) => (
+                <li key={index} className="text-sm text-gray-700 flex items-start">
+                  <BookOpen className="w-3 h-3 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {/* Enrollment Status */}
         <div className="flex items-center justify-between">
           <div className="text-sm">
             {demoClass.capacity - demoClass.enrolledCount <= 5 ? (
@@ -784,184 +780,170 @@ export default function DemoClassScheduler({
 
       {/* Main Content */}
       <div className="p-8">
-{/* Step 1: Select Demo Class */}
-          {currentStep === 'select' && (
-            <div
-              key="select"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Choose Your Demo Class</h3>
-                <p className="text-gray-600">
-                  Select the subject area you're most interested in exploring
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {DEMO_CLASSES.map((demoClass) => (
-                  <div key={demoClass.id} className="relative">
-                    <DemoClassCard demoClass={demoClass} />
-                    <div className="mt-4">
-                      <button
-                        onClick={() => handleClassSelect(demoClass)}
-                        className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                      >
-                        Select This Class
-                        <ArrowRight className="w-4 h-4 inline ml-2" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
+        {/* Step 1: Select Demo Class */}
+        {currentStep === 'select' && (
+          <div key="select" className="space-y-6 animate-fadeInUp">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Choose Your Demo Class</h3>
+              <p className="text-gray-600">
+                Select the subject area you're most interested in exploring
+              </p>
             </div>
-          )}
 
-          {/* Step 2: Schedule Time */}
-          {currentStep === 'schedule' && (
-            <div
-              key="schedule"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Choose Your Time Slot</h3>
-                  <p className="text-gray-600">Pick a convenient time for your demo class</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {DEMO_CLASSES.map((demoClass) => (
+                <div key={demoClass.id} className="relative">
+                  <DemoClassCard demoClass={demoClass} />
+                  <div className="mt-4">
+                    <button
+                      onClick={() => handleClassSelect(demoClass)}
+                      className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    >
+                      Select This Class
+                      <ArrowRight className="w-4 h-4 inline ml-2" />
+                    </button>
+                  </div>
                 </div>
-                <button
-                  onClick={() => setCurrentStep('select')}
-                  className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                >
-                  <ChevronLeft className="w-4 h-4 mr-1" />
-                  Change Class
-                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Step 2: Schedule Time */}
+        {currentStep === 'schedule' && (
+          <div key="schedule" className="space-y-6 animate-fadeInUp">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900">Choose Your Time Slot</h3>
+                <p className="text-gray-600">Pick a convenient time for your demo class</p>
+              </div>
+              <button
+                onClick={() => setCurrentStep('select')}
+                className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
+              >
+                <ChevronLeft className="w-4 h-4 mr-1" />
+                Change Class
+              </button>
+            </div>
+
+            {selectedClass && (
+              <div className="bg-white rounded-lg border border-gray-200 p-4 mb-6">
+                <h4 className="font-semibold text-gray-900">Selected Demo Class:</h4>
+                <p className="text-gray-700 mt-1">{selectedClass.title}</p>
+                <div className="flex items-center mt-2 text-sm text-gray-600">
+                  <User className="w-4 h-4 mr-1" />
+                  {selectedClass.faculty.name}
+                  <Clock className="w-4 h-4 ml-4 mr-1" />
+                  {selectedClass.duration} minutes
+                </div>
+              </div>
+            )}
+
+            <TimeSlotGrid selectedClass={selectedClass} onSlotSelect={handleSlotSelect} />
+          </div>
+        )}
+
+        {/* Step 3: Book Session */}
+        {currentStep === 'book' && (
+          <div key="book" className="space-y-6 animate-fadeInUp">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900">Complete Your Booking</h3>
+                <p className="text-gray-600">Just a few details to confirm your free demo class</p>
+              </div>
+              <button
+                onClick={() => setCurrentStep('schedule')}
+                className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
+              >
+                <ChevronLeft className="w-4 h-4 mr-1" />
+                Change Time
+              </button>
+            </div>
+
+            <BookingForm
+              selectedClass={selectedClass}
+              selectedSlot={selectedSlot}
+              onSubmit={handleBookingSubmit}
+            />
+          </div>
+        )}
+
+        {/* Step 4: Confirmation */}
+        {currentStep === 'confirmed' && (
+          <div key="confirmed" className="text-center py-12 animate-fadeInUp">
+            <div className="max-w-2xl mx-auto">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CheckCircle className="w-10 h-10 text-green-600" />
               </div>
 
-              {selectedClass && (
-                <div className="bg-white rounded-lg border border-gray-200 p-4 mb-6">
-                  <h4 className="font-semibold text-gray-900">Selected Demo Class:</h4>
-                  <p className="text-gray-700 mt-1">{selectedClass.title}</p>
-                  <div className="flex items-center mt-2 text-sm text-gray-600">
-                    <User className="w-4 h-4 mr-1" />
-                    {selectedClass.faculty.name}
-                    <Clock className="w-4 h-4 ml-4 mr-1" />
-                    {selectedClass.duration} minutes
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                🎉 Demo Class Booked Successfully!
+              </h3>
+
+              <p className="text-lg text-gray-600 mb-8">
+                Your free demo class has been confirmed. We'll send you the joining details via
+                email and SMS.
+              </p>
+
+              {selectedClass && selectedSlot && (
+                <div className="bg-blue-50 rounded-xl p-6 mb-8 text-left">
+                  <h4 className="font-bold text-blue-900 mb-4">Booking Details:</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <strong>Class:</strong> {selectedClass.title}
+                    </div>
+                    <div>
+                      <strong>Faculty:</strong> {selectedClass.faculty.name}
+                    </div>
+                    <div>
+                      <strong>Date & Time:</strong> {selectedSlot.date} at {selectedSlot.time}
+                    </div>
+                    <div>
+                      <strong>Duration:</strong> {selectedClass.duration} minutes
+                    </div>
+                    <div>
+                      <strong>Format:</strong> {selectedClass.format}
+                    </div>
+                    <div>
+                      <strong>Student:</strong> {bookingData?.name}
+                    </div>
                   </div>
                 </div>
               )}
 
-              <TimeSlotGrid selectedClass={selectedClass} onSlotSelect={handleSlotSelect} />
-            </div>
-          )}
-
-          {/* Step 3: Book Session */}
-          {currentStep === 'book' && (
-            <div
-              key="book"
-              className="space-y-6 animate-fadeInUp"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Complete Your Booking</h3>
-                  <p className="text-gray-600">
-                    Just a few details to confirm your free demo class
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div className="bg-white rounded-lg border border-gray-200 p-4">
+                  <Mail className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                  <h4 className="font-semibold text-gray-900">Email Confirmation</h4>
+                  <p className="text-sm text-gray-600">Check your inbox for joining details</p>
                 </div>
+                <div className="bg-white rounded-lg border border-gray-200 p-4">
+                  <Phone className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                  <h4 className="font-semibold text-gray-900">SMS Reminder</h4>
+                  <p className="text-sm text-gray-600">We'll remind you 30 mins before</p>
+                </div>
+                <div className="bg-white rounded-lg border border-gray-200 p-4">
+                  <Video className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                  <h4 className="font-semibold text-gray-900">Join Link</h4>
+                  <p className="text-sm text-gray-600">Direct access to the demo class</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={() => setCurrentStep('schedule')}
-                  className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  onClick={resetScheduler}
+                  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
-                  <ChevronLeft className="w-4 h-4 mr-1" />
-                  Change Time
+                  Book Another Demo
+                </button>
+                <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                  Explore Full Courses
                 </button>
               </div>
-
-              <BookingForm
-                selectedClass={selectedClass}
-                selectedSlot={selectedSlot}
-                onSubmit={handleBookingSubmit}
-              />
             </div>
-          )}
-
-          {/* Step 4: Confirmation */}
-          {currentStep === 'confirmed' && (
-            <div
-              key="confirmed"
-              className="text-center py-12 animate-fadeInUp"
-            >
-              <div className="max-w-2xl mx-auto">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-10 h-10 text-green-600" />
-                </div>
-
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  🎉 Demo Class Booked Successfully!
-                </h3>
-
-                <p className="text-lg text-gray-600 mb-8">
-                  Your free demo class has been confirmed. We'll send you the joining details via
-                  email and SMS.
-                </p>
-
-                {selectedClass && selectedSlot && (
-                  <div className="bg-blue-50 rounded-xl p-6 mb-8 text-left">
-                    <h4 className="font-bold text-blue-900 mb-4">Booking Details:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <strong>Class:</strong> {selectedClass.title}
-                      </div>
-                      <div>
-                        <strong>Faculty:</strong> {selectedClass.faculty.name}
-                      </div>
-                      <div>
-                        <strong>Date & Time:</strong> {selectedSlot.date} at {selectedSlot.time}
-                      </div>
-                      <div>
-                        <strong>Duration:</strong> {selectedClass.duration} minutes
-                      </div>
-                      <div>
-                        <strong>Format:</strong> {selectedClass.format}
-                      </div>
-                      <div>
-                        <strong>Student:</strong> {bookingData?.name}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                  <div className="bg-white rounded-lg border border-gray-200 p-4">
-                    <Mail className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                    <h4 className="font-semibold text-gray-900">Email Confirmation</h4>
-                    <p className="text-sm text-gray-600">Check your inbox for joining details</p>
-                  </div>
-                  <div className="bg-white rounded-lg border border-gray-200 p-4">
-                    <Phone className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                    <h4 className="font-semibold text-gray-900">SMS Reminder</h4>
-                    <p className="text-sm text-gray-600">We'll remind you 30 mins before</p>
-                  </div>
-                  <div className="bg-white rounded-lg border border-gray-200 p-4">
-                    <Video className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                    <h4 className="font-semibold text-gray-900">Join Link</h4>
-                    <p className="text-sm text-gray-600">Direct access to the demo class</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button
-                    onClick={resetScheduler}
-                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    Book Another Demo
-                  </button>
-                  <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                    Explore Full Courses
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-</div>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

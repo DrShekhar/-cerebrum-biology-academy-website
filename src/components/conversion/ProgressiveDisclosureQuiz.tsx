@@ -153,16 +153,16 @@ export function ProgressiveDisclosureQuiz({
 
   const handleEnrollNow = () => {
     const result = calculateResult()
-    router.push(`/enrollment?course=${encodeURIComponent(result.recommendedCourse)}&price=${result.pricing}`)
+    router.push(
+      `/enrollment?course=${encodeURIComponent(result.recommendedCourse)}&price=${result.pricing}`
+    )
   }
 
   if (showResult) {
     const result = calculateResult()
 
     return (
-      <div
-        className={`bg-slate-800 rounded-2xl p-6 max-w-xl ${className}`}
-      >
+      <div className={`bg-slate-800 rounded-2xl p-6 max-w-xl ${className}`}>
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center gap-2 text-green-500 text-sm">
             <Sparkles className="h-4 w-4" />
@@ -224,9 +224,7 @@ export function ProgressiveDisclosureQuiz({
   const currentStepData = quizSteps[currentStep]
 
   return (
-    <div
-      className={`bg-slate-800 rounded-2xl p-6 max-w-xl ${className}`}
-    >
+    <div className={`bg-slate-800 rounded-2xl p-6 max-w-xl ${className}`}>
       {/* Quiz Header */}
       <div className="text-center mb-4">
         <p className="text-sm text-green-500 mb-1">Find your perfect course in 30 seconds</p>
@@ -243,27 +241,25 @@ export function ProgressiveDisclosureQuiz({
       </div>
 
       {/* Current Question */}
-<div
-          key={currentStep}
-         className="animate-fadeInUp">
-          <p className="text-white mb-4 font-medium">{currentStepData.question}</p>
+      <div key={currentStep} className="animate-fadeInUp">
+        <p className="text-white mb-4 font-medium">{currentStepData.question}</p>
 
-          <div className="grid grid-cols-2 gap-2">
-            {currentStepData.options.map((option, index) => (
-              <button
-                key={option.value}
-                onClick={() => handleAnswer(currentStepData.id, option.value)}
-                className="quiz-option bg-slate-700 hover:bg-slate-600 text-white p-3 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-green-500 animate-fadeInUp"
-              >
-                <div className="font-medium">{option.label}</div>
-                {option.description && (
-                  <div className="text-xs text-gray-400 mt-1">{option.description}</div>
-                )}
-              </button>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 gap-2">
+          {currentStepData.options.map((option, index) => (
+            <button
+              key={option.value}
+              onClick={() => handleAnswer(currentStepData.id, option.value)}
+              className="quiz-option bg-slate-700 hover:bg-slate-600 text-white p-3 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-green-500 animate-fadeInUp"
+            >
+              <div className="font-medium">{option.label}</div>
+              {option.description && (
+                <div className="text-xs text-gray-400 mt-1">{option.description}</div>
+              )}
+            </button>
+          ))}
         </div>
-{/* Progress Indicator */}
+      </div>
+      {/* Progress Indicator */}
       <div className="mt-4 text-center text-xs text-gray-400">
         Step {currentStep + 1} of {quizSteps.length}
       </div>
@@ -297,9 +293,7 @@ export function LiveTrustIndicators({ className = '' }: { className?: string }) 
 
   return (
     <div className={`hero-trust-indicators fixed bottom-6 right-6 z-40 space-y-3 ${className}`}>
-      <div
-        className="live-students bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg animate-fadeInUp"
-      >
+      <div className="live-students bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg animate-fadeInUp">
         <div className="flex items-center gap-2 text-sm font-medium">
           <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
           <span className="text-gray-800">

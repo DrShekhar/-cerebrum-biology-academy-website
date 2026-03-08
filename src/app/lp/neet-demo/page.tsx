@@ -101,8 +101,7 @@ export default function NEETDemoLandingPage() {
       <div className="max-w-6xl mx-auto px-4 py-8 lg:py-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Value Proposition */}
-          <div className="text-white space-y-6 animate-fadeInUp"
-          >
+          <div className="text-white space-y-6 animate-fadeInUp">
             <div className="inline-flex items-center space-x-2 bg-yellow-500/20 border border-yellow-500/40 rounded-full px-4 py-2">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-yellow-300 text-sm font-medium">#1 NEET Biology Coaching</span>

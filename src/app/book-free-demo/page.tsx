@@ -367,12 +367,10 @@ export default function BookFreeDemoPage() {
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="w-10 h-10 text-green-600" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                  Booking Request Sent!
-                </h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">Booking Request Sent!</h2>
                 <p className="text-gray-600 mb-6">
-                  Your demo class request has been sent via WhatsApp. Our team will confirm your slot
-                  within 5 minutes.
+                  Your demo class request has been sent via WhatsApp. Our team will confirm your
+                  slot within 5 minutes.
                 </p>
                 <div className="bg-gray-50 rounded-xl p-4 mb-6">
                   <p className="text-sm text-gray-700">
@@ -451,7 +449,9 @@ export default function BookFreeDemoPage() {
                 className="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-3 mb-3 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span className="font-medium text-sm">Call {CONTACT_INFO.phone.display.primary}</span>
+                <span className="font-medium text-sm">
+                  Call {CONTACT_INFO.phone.display.primary}
+                </span>
               </a>
 
               <p className="text-xs text-gray-600 mt-2">

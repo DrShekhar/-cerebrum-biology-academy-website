@@ -101,7 +101,9 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
     {
       icon: Phone,
       label: language === 'hi' ? 'कॉल: 88264 44334' : 'Call: 88264 44334',
-      action: () => { window.location.href = getPhoneLink() },
+      action: () => {
+        window.location.href = getPhoneLink()
+      },
       color: 'text-green-600',
       bgColor: 'bg-green-50',
     },
@@ -162,132 +164,118 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
         className="md:hidden fixed top-4 left-4 z-50 p-3 bg-white border border-gray-200 rounded-xl shadow-lg mobile-touch-target animate-fadeInUp"
         aria-label="Toggle Menu"
       >
-{isOpen ? (
-            <div
-              key="close"
-             className="animate-fadeInUp">
-              <X className="w-6 h-6 text-gray-700" />
-            </div>
-          ) : (
-            <div
-              key="menu"
-             className="animate-fadeInUp">
-              <Menu className="w-6 h-6 text-gray-700" />
-            </div>
-          )}
-</button>
-
-      {/* Full Screen Menu Overlay */}
-{isOpen && (
-          <div
-            className="fixed inset-0 bg-white z-40 md:hidden overflow-y-auto animate-fadeInUp"
-          >
-            {/* Header */}
-            <div className="pt-20 pb-6 px-6 border-b border-gray-100">
-              <div className="flex items-center justify-between mb-4">
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900">
-                    {language === 'hi' ? 'सेरेब्रम बायोलॉजी अकादमी' : 'Cerebrum Biology Academy'}
-                  </h2>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {language === 'hi' ? 'भारत की #1 NEET कोचिंग' : "India's #1 NEET Coaching"}
-                  </p>
-                </div>
-                <QuickLanguageToggle />
-              </div>
-
-              {/* Quick Stats */}
-              <div className="grid grid-cols-2 gap-3">
-                {statsItems.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="bg-gray-50 rounded-lg p-3 text-center animate-fadeInUp"
-                  >
-                    <stat.icon className={`w-5 h-5 ${stat.color} mx-auto mb-1`} />
-                    <div className="text-lg font-bold text-gray-900">{stat.value}</div>
-                    <div className="text-xs text-gray-600">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Main Navigation */}
-            <div className="px-6 py-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {language === 'hi' ? 'मुख्य मेनू' : 'Main Menu'}
-              </h3>
-
-              <div className="space-y-3">
-                {mainNavItems.map((item, index) => (
-                  <div
-                    key={item.href}
-                   className="animate-fadeInUp">
-                    <NavItem
-                      item={item}
-                      currentPath={currentPath}
-                      activeSubmenu={activeSubmenu}
-                      setActiveSubmenu={setActiveSubmenu}
-                      onClose={onToggle}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Quick Actions */}
-            <div className="px-6 py-6 border-t border-gray-100">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                {language === 'hi' ? 'त्वरित कार्य' : 'Quick Actions'}
-              </h3>
-
-              <div className="grid grid-cols-3 gap-3">
-                {quickActions.map((action, index) => (
-                  <div
-                    key={action.label}
-                   className="animate-fadeInUp">
-                    <QuickActionButton action={action} onClose={onToggle} />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="px-6 py-6 bg-gray-50">
-              <div
-                className="text-center animate-fadeInUp"
-              >
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {language === 'hi' ? 'मुफ्त डेमो क्लास बुक करें' : 'Book Free Demo Class'}
-                </h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  {language === 'hi'
-                    ? 'AIIMS फैकल्टी के साथ लाइव क्लास का अनुभव करें'
-                    : 'Experience live classes with AIIMS faculty'}
-                </p>
-                <Link href="/demo-booking" onClick={onToggle}>
-                  <button
-                    className="w-full bg-indigo-500 text-white py-4 rounded-xl font-semibold mobile-cta animate-fadeInUp"
-                  >
-                    {language === 'hi' ? 'अभी बुक करें' : 'Book Now'}
-                  </button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Footer */}
-            <div className="px-6 py-6 bg-gray-50 border-t border-gray-100">
-              <div className="text-center text-sm text-gray-600">
-                <p className="mb-2">
-                  {language === 'hi'
-                    ? '© 2026 सेरेब्रम बायोलॉजी अकादमी'
-                    : '© 2026 Cerebrum Biology Academy'}
-                </p>
-                <p>{language === 'hi' ? 'सभी अधिकार सुरक्षित हैं' : 'All rights reserved'}</p>
-              </div>
-            </div>
+        {isOpen ? (
+          <div key="close" className="animate-fadeInUp">
+            <X className="w-6 h-6 text-gray-700" />
+          </div>
+        ) : (
+          <div key="menu" className="animate-fadeInUp">
+            <Menu className="w-6 h-6 text-gray-700" />
           </div>
         )}
-</>
+      </button>
+
+      {/* Full Screen Menu Overlay */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-white z-40 md:hidden overflow-y-auto animate-fadeInUp">
+          {/* Header */}
+          <div className="pt-20 pb-6 px-6 border-b border-gray-100">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {language === 'hi' ? 'सेरेब्रम बायोलॉजी अकादमी' : 'Cerebrum Biology Academy'}
+                </h2>
+                <p className="text-sm text-gray-600 mt-1">
+                  {language === 'hi' ? 'भारत की #1 NEET कोचिंग' : "India's #1 NEET Coaching"}
+                </p>
+              </div>
+              <QuickLanguageToggle />
+            </div>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 gap-3">
+              {statsItems.map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className="bg-gray-50 rounded-lg p-3 text-center animate-fadeInUp"
+                >
+                  <stat.icon className={`w-5 h-5 ${stat.color} mx-auto mb-1`} />
+                  <div className="text-lg font-bold text-gray-900">{stat.value}</div>
+                  <div className="text-xs text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Main Navigation */}
+          <div className="px-6 py-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              {language === 'hi' ? 'मुख्य मेनू' : 'Main Menu'}
+            </h3>
+
+            <div className="space-y-3">
+              {mainNavItems.map((item, index) => (
+                <div key={item.href} className="animate-fadeInUp">
+                  <NavItem
+                    item={item}
+                    currentPath={currentPath}
+                    activeSubmenu={activeSubmenu}
+                    setActiveSubmenu={setActiveSubmenu}
+                    onClose={onToggle}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Actions */}
+          <div className="px-6 py-6 border-t border-gray-100">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              {language === 'hi' ? 'त्वरित कार्य' : 'Quick Actions'}
+            </h3>
+
+            <div className="grid grid-cols-3 gap-3">
+              {quickActions.map((action, index) => (
+                <div key={action.label} className="animate-fadeInUp">
+                  <QuickActionButton action={action} onClose={onToggle} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="px-6 py-6 bg-gray-50">
+            <div className="text-center animate-fadeInUp">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                {language === 'hi' ? 'मुफ्त डेमो क्लास बुक करें' : 'Book Free Demo Class'}
+              </h3>
+              <p className="text-sm text-gray-600 mb-4">
+                {language === 'hi'
+                  ? 'AIIMS फैकल्टी के साथ लाइव क्लास का अनुभव करें'
+                  : 'Experience live classes with AIIMS faculty'}
+              </p>
+              <Link href="/demo-booking" onClick={onToggle}>
+                <button className="w-full bg-indigo-500 text-white py-4 rounded-xl font-semibold mobile-cta animate-fadeInUp">
+                  {language === 'hi' ? 'अभी बुक करें' : 'Book Now'}
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="px-6 py-6 bg-gray-50 border-t border-gray-100">
+            <div className="text-center text-sm text-gray-600">
+              <p className="mb-2">
+                {language === 'hi'
+                  ? '© 2026 सेरेब्रम बायोलॉजी अकादमी'
+                  : '© 2026 Cerebrum Biology Academy'}
+              </p>
+              <p>{language === 'hi' ? 'सभी अधिकार सुरक्षित हैं' : 'All rights reserved'}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
@@ -368,25 +356,21 @@ function NavItem({
       )}
 
       {/* Submenu */}
-{hasSubmenu && isSubmenuOpen && (
-          <div
-            className="ml-4 mt-2 space-y-2 overflow-hidden animate-fadeInUp"
-          >
-            {item.submenu!.map((subItem, index: number) => (
-              <div
-                key={subItem.href}
-               className="animate-fadeInUp">
-                <Link href={subItem.href} onClick={onClose}>
-                  <div className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors mobile-secondary-btn">
-                    <div className="w-2 h-2 bg-gray-300 rounded-full mr-3" />
-                    <span className="text-gray-700 font-medium">{subItem.label}</span>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        )}
-</div>
+      {hasSubmenu && isSubmenuOpen && (
+        <div className="ml-4 mt-2 space-y-2 overflow-hidden animate-fadeInUp">
+          {item.submenu!.map((subItem, index: number) => (
+            <div key={subItem.href} className="animate-fadeInUp">
+              <Link href={subItem.href} onClick={onClose}>
+                <div className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors mobile-secondary-btn">
+                  <div className="w-2 h-2 bg-gray-300 rounded-full mr-3" />
+                  <span className="text-gray-700 font-medium">{subItem.label}</span>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 
