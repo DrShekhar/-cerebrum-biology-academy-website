@@ -179,7 +179,8 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
               }}
             >
               <PhoneIcon />
-              CALL NOW
+              <span className="hidden sm:inline">CALL NOW: +91 88264 44334</span>
+              <span className="sm:hidden">CALL: 88264 44334</span>
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>

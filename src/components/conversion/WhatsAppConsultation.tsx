@@ -165,7 +165,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
       })
     }
 
-    window.open(whatsappURL, '_blank')
+    window.location.href = whatsappURL
   }
 
   const handlePhoneCall = () => {

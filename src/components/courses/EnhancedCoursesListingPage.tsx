@@ -396,10 +396,24 @@ export function EnhancedCoursesListingPage() {
               >
                 Book Free Demo Class
               </button>
-              <button className="bg-[#3d4d3d] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#5a6d5a] transition-colors">
-                Talk to Counselor
-              </button>
+              <a
+                href="tel:+918826444334"
+                className="bg-[#3d4d3d] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#5a6d5a] transition-colors inline-flex items-center justify-center gap-2"
+              >
+                📞 Call: +91 88264 44334
+              </a>
             </div>
+            <p className="text-green-200 text-sm mt-4">
+              Or WhatsApp us at{' '}
+              <a
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20about%20NEET%20Biology%20courses."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold underline"
+              >
+                +91 88264 44334
+              </a>
+            </p>
           </div>
         </div>
 

@@ -86,11 +86,25 @@ export default function BookFreeDemoPage() {
     return 'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20Demo%20Class%20for%20NEET%20Biology.%0A%0AMy%20details%3A%0A%E2%80%A2%20Name%3A%20%0A%E2%80%A2%20Class%3A%20(11th%2F12th%2FDropper)%0A%E2%80%A2%20Preferred%20Day%3A%20%0A%E2%80%A2%20Preferred%20Time%3A%20%0A%0APlease%20confirm%20my%20demo%20slot!'
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Open WhatsApp with filled details
+    try {
+      await fetch('/api/leads/demo-booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          course: formData.classLevel,
+          source: 'book-free-demo-page',
+          center: formData.center,
+          preferredDay: formData.preferredDay,
+          timestamp: new Date().toISOString(),
+        }),
+      })
+    } catch {}
     const url = getWhatsAppUrl(formData)
-    window.open(url, '_blank', 'noopener,noreferrer')
+    window.location.href = url
     setSubmitted(true)
   }
 

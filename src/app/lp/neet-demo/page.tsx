@@ -19,6 +19,7 @@ export default function NEETDemoLandingPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
+  const [showError, setShowError] = useState(false)
 
   useEffect(() => {
     ConversionTracker.initialize()
@@ -55,9 +56,11 @@ export default function NEETDemoLandingPage() {
       if (response.ok) {
         setShowSuccess(true)
         router.push('/thank-you?form=demo-booking&source=google-ads')
+      } else {
+        setShowError(true)
       }
-    } catch (error) {
-      console.error('Form submission error:', error)
+    } catch {
+      setShowError(true)
     } finally {
       setIsSubmitting(false)
     }
@@ -186,6 +189,31 @@ export default function NEETDemoLandingPage() {
                   />
                 </div>
 
+                {showError && (
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-4">
+                    <p className="text-red-800 font-medium text-sm mb-2">
+                      Something went wrong. Please connect directly:
+                    </p>
+                    <div className="flex gap-2">
+                      <a
+                        href="tel:+918826444334"
+                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-blue-600 text-white rounded-lg font-medium text-sm"
+                      >
+                        <Phone className="w-4 h-4" />
+                        Call: 88264 44334
+                      </a>
+                      <button
+                        type="button"
+                        onClick={handleWhatsApp}
+                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-green-600 text-white rounded-lg font-medium text-sm"
+                      >
+                        <MessageSquare className="w-4 h-4" />
+                        WhatsApp Us
+                      </button>
+                    </div>
+                  </div>
+                )}
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -199,13 +227,14 @@ export default function NEETDemoLandingPage() {
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <p className="text-center text-gray-500 text-sm mb-4">Or connect instantly</p>
                 <div className="grid grid-cols-2 gap-3">
-                  <button
+                  <a
+                    href="tel:+918826444334"
                     onClick={handleCallNow}
                     className="flex items-center justify-center space-x-2 py-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-xl transition-colors font-medium"
                   >
                     <Phone className="w-5 h-5" />
-                    <span>Call Now</span>
-                  </button>
+                    <span>Call: 88264 44334</span>
+                  </a>
                   <button
                     onClick={handleWhatsApp}
                     className="flex items-center justify-center space-x-2 py-3 bg-green-50 hover:bg-green-100 text-green-700 rounded-xl transition-colors font-medium"
@@ -255,20 +284,30 @@ export default function NEETDemoLandingPage() {
       {/* Mobile Sticky CTA */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-3 z-50">
         <div className="flex space-x-3">
-          <button
+          <a
+            href="tel:+918826444334"
             onClick={handleCallNow}
             className="flex-1 flex items-center justify-center space-x-2 py-3 bg-blue-600 text-white rounded-xl font-medium"
           >
             <Phone className="w-5 h-5" />
-            <span>Call</span>
-          </button>
-          <button
-            onClick={handleWhatsApp}
+            <span>Call: 88264 44334</span>
+          </a>
+          <a
+            href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20free%20NEET%20Biology%20demo%20class."
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              trackAndOpenWhatsApp({
+                source: 'google-ads-landing-sticky',
+                message: 'Hi! I want to book a free NEET Biology demo class.',
+                campaign: 'google-ads-demo',
+              })
+            }}
             className="flex-1 flex items-center justify-center space-x-2 py-3 bg-green-600 text-white rounded-xl font-medium"
           >
             <MessageSquare className="w-5 h-5" />
             <span>WhatsApp</span>
-          </button>
+          </a>
         </div>
       </div>
 
