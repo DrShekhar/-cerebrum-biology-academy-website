@@ -259,7 +259,7 @@ export function IndianMarketFeatures({
           className="flex flex-col items-center py-3 h-auto text-blue-600 border-blue-200 hover:bg-blue-50"
         >
           <Phone className="w-5 h-5 mb-1" />
-          <span className="text-xs">{currentLanguage === 'hi' ? 'कॉल' : 'Call'}</span>
+          <span className="text-xs">{currentLanguage === 'hi' ? 'कॉल करें' : 'Call Us'}</span>
         </Button>
 
         {/* Data Usage */}

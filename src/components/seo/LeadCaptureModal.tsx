@@ -127,9 +127,7 @@ export function LeadCaptureModal({
       setIsSubmitted(true)
 
       if (data.downloadUrl) {
-        setTimeout(() => {
-          window.open(data.downloadUrl, '_blank')
-        }, 500)
+        window.location.href = data.downloadUrl
       }
     } catch (err) {
       console.error('Lead capture error:', err)

@@ -100,8 +100,8 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
   const quickActions = [
     {
       icon: Phone,
-      label: language === 'hi' ? 'कॉल करें' : 'Call Now',
-      action: () => window.open(getPhoneLink()),
+      label: language === 'hi' ? 'कॉल: 88264 44334' : 'Call: 88264 44334',
+      action: () => { window.location.href = getPhoneLink() },
       color: 'text-green-600',
       bgColor: 'bg-green-50',
     },

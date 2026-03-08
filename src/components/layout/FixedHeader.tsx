@@ -116,7 +116,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
                   className="w-full flex items-center justify-center gap-2 text-green-500 hover:text-green-300 transition-colors duration-200 py-2"
                 >
                   <Phone className="w-5 h-5" />
-                  Call Now
+                  Call: 88264 44334
                 </a>
               </div>
             </div>
