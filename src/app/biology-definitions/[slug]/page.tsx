@@ -10,6 +10,8 @@ import {
   Link as LinkIcon,
   CheckCircle,
   Calendar,
+  AlertTriangle,
+  Zap,
 } from 'lucide-react'
 import {
   biologyDefinitions,
@@ -248,6 +250,44 @@ export default async function BiologyDefinitionPage({ params }: PageProps) {
                 </span>
               ))}
             </div>
+          </div>
+        )}
+
+        {definition.commonMistakes && definition.commonMistakes.length > 0 && (
+          <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <AlertTriangle className="w-5 h-5 text-red-600 mr-2" />
+              Common Mistakes to Avoid
+            </h2>
+            <ul className="space-y-3">
+              {definition.commonMistakes.map((mistake, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-100 text-red-700 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                    ✗
+                  </span>
+                  <span className="text-gray-700">{mistake}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {definition.quickRevisionNotes && definition.quickRevisionNotes.length > 0 && (
+          <div className="bg-teal-50 border border-teal-200 rounded-xl p-6 mb-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <Zap className="w-5 h-5 text-teal-600 mr-2" />
+              Quick Revision Notes
+            </h2>
+            <ul className="space-y-3">
+              {definition.quickRevisionNotes.map((note, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="flex-shrink-0 w-6 h-6 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                    ⚡
+                  </span>
+                  <span className="text-gray-700">{note}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
 
