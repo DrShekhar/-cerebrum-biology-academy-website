@@ -75,7 +75,7 @@ export function SEOLandingPage({ content }: SEOLandingPageProps) {
       <section className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h3 className="mb-6 text-center text-lg font-semibold text-gray-900">
-            Explore More Courses
+            Related Pages You May Find Useful
           </h3>
           <div className="flex flex-wrap items-center justify-center gap-4">
             {content.relatedPages.map((page, index) => (

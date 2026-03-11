@@ -50,9 +50,11 @@ export function ToolsCTASection({ toolsCTA }: ToolsCTASectionProps) {
             Free Tools
           </span>
           <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">{toolsCTA.title}</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600">
-            Boost your NEET preparation with our free interactive tools
-          </p>
+          {toolsCTA.tools.length > 0 && (
+            <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600">
+              {toolsCTA.tools.length} free tools to help you track progress and predict performance
+            </p>
+          )}
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
