@@ -398,7 +398,7 @@ export default function WhichNEETCoachingBestGreaterNoida() {
               Book Free Demo: 99536-43938
             </a>
             <Link
-              href="/biology-classes-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-white text-green-700 px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-green-50 transition"
             >
               View All Courses

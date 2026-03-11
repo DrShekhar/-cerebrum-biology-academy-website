@@ -151,7 +151,7 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
               <Link
-                href="/neet-coaching-greater-noida"
+                href="/neet-coaching-noida"
                 className="text-gray-600 hover:text-teal-600"
               >
                 NEET Coaching Greater Noida
@@ -474,7 +474,7 @@ export default function NEETFoundationClass10GreaterNoidaContent({ faqs }: { faq
               <p className="text-sm text-gray-600">From Greater Noida home</p>
             </Link>
             <Link
-              href="/biology-classes-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Biology Classes Hub</h3>

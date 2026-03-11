@@ -261,7 +261,7 @@ const FreeResourcesHub = () => {
               Earn points, unlock achievements, and track your learning milestones
             </p>
             <Link
-              href="/wall-of-achievers"
+              href="/results"
               className="text-purple-600 font-medium hover:underline"
             >
               View Achievements →

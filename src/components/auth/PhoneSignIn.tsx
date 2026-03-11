@@ -635,7 +635,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
       <div className="text-xs text-center text-gray-500">
         By continuing, you agree to our{' '}
-        <Link href="/terms" className="text-green-600 hover:underline">
+        <Link href="/terms-of-service" className="text-green-600 hover:underline">
           Terms of Service
         </Link>{' '}
         and{' '}

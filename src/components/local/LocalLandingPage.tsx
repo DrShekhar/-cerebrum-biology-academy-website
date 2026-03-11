@@ -384,7 +384,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   Expert Recommendations
                 </li>
               </ul>
-              <Link href="/neet-readiness-quiz">
+              <Link href="/neet-tools">
                 <Button
                   variant="primary"
                   size="lg"
@@ -946,7 +946,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               </Link>
             )}
             <Link
-              href="/locations"
+              href="/neet-coaching"
               className="px-5 py-2.5 bg-gray-50 text-gray-700 rounded-full text-sm font-medium border border-gray-200 hover:bg-gray-100 transition-colors"
             >
               All Locations

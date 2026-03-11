@@ -272,10 +272,10 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">NEET Coaching for CBSE Schools</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/biology-classes-dps-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">DPS Gurugram</h3><p className="text-sm text-gray-600">85+ students enrolled</p></Link>
-            <Link href="/biology-classes-shri-ram-school-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">The Shri Ram School</h3><p className="text-sm text-gray-600">65+ students enrolled</p></Link>
-            <Link href="/biology-classes-gd-goenka-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">GD Goenka World School</h3><p className="text-sm text-gray-600">55+ students enrolled</p></Link>
-            <Link href="/biology-classes-amity-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">Amity International</h3><p className="text-sm text-gray-600">45+ students enrolled</p></Link>
+            <Link href="/biology-classes-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">DPS Gurugram</h3><p className="text-sm text-gray-600">85+ students enrolled</p></Link>
+            <Link href="/biology-classes-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">The Shri Ram School</h3><p className="text-sm text-gray-600">65+ students enrolled</p></Link>
+            <Link href="/biology-classes-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">GD Goenka World School</h3><p className="text-sm text-gray-600">55+ students enrolled</p></Link>
+            <Link href="/biology-classes-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">Amity International</h3><p className="text-sm text-gray-600">45+ students enrolled</p></Link>
           </div>
         </div>
       </section>

@@ -408,12 +408,12 @@ const nextConfig = {
       },
       {
         source: '/biology-tuition-delhi/:area*',
-        destination: '/biology-tuition-south-delhi',
+        destination: '/biology-tutor-south-delhi',
         permanent: true,
       },
       {
         source: '/biology-tuition-delhi',
-        destination: '/biology-tuition-south-delhi',
+        destination: '/biology-tutor-south-delhi',
         permanent: true,
       },
 
@@ -451,7 +451,7 @@ const nextConfig = {
       // Biology tutor class redirects
       {
         source: '/biology-tutor-class-10',
-        destination: '/biology-tuition-class-9-10',
+        destination: '/biology-tutor-class-9-cbse',
         permanent: true,
       }, // Protected route - redirect to login
       {
@@ -616,22 +616,22 @@ const nextConfig = {
       // Biology tutor class variations
       {
         source: '/biology-tutor-class-10-cbse',
-        destination: '/biology-tuition-class-9-10',
+        destination: '/biology-tutor-class-9-cbse',
         permanent: true,
       },
       {
         source: '/biology-tutor-class-10-icse',
-        destination: '/biology-tuition-class-9-10',
+        destination: '/biology-tutor-class-9-cbse',
         permanent: true,
       },
       {
         source: '/biology-tutor-class-9',
-        destination: '/biology-tuition-class-9-10',
+        destination: '/biology-tutor-class-9-cbse',
         permanent: true,
       },
       {
         source: '/class-10-science-tuition',
-        destination: '/biology-tuition-class-9-10',
+        destination: '/biology-tutor-class-9-cbse',
         permanent: true,
       },
 
@@ -763,7 +763,7 @@ const nextConfig = {
       },
       {
         source: '/biology-classes-green-park/:area*',
-        destination: '/best-biology-tuition-greater-kailash',
+        destination: '/biology-tutor-south-delhi',
         permanent: true,
       },
       {
@@ -869,7 +869,7 @@ const nextConfig = {
       // NEET coaching school-specific pages
       {
         source: '/neet-coaching-vasant-valley-students',
-        destination: '/best-biology-tuition-vasant-vihar',
+        destination: '/biology-tutor-south-delhi',
         permanent: true,
       },
       {
@@ -896,12 +896,12 @@ const nextConfig = {
       },
       {
         source: '/neet-biology-tutor-class-11',
-        destination: '/biology-tuition-class-11',
+        destination: '/biology-tutor-class-11-cbse',
         permanent: true,
       },
       {
         source: '/neet-biology-tutor-class-12',
-        destination: '/biology-tuition-class-12',
+        destination: '/biology-tutor-class-12-cbse',
         permanent: true,
       },
 
@@ -1229,17 +1229,17 @@ const nextConfig = {
       },
       {
         source: '/biology-classes-biology-class-12-gurgaon',
-        destination: '/biology-tuition-class-12',
+        destination: '/biology-tutor-class-12-cbse',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-class-11-gurgaon',
-        destination: '/biology-tuition-class-11',
+        destination: '/biology-tutor-class-11-cbse',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-class-9-10-gurgaon',
-        destination: '/biology-tuition-class-9-10',
+        destination: '/biology-tutor-class-9-cbse',
         permanent: true,
       },
       {

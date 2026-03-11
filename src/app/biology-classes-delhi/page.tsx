@@ -666,7 +666,7 @@ export default function BiologyClassesDelhiPage() {
                 Biology Classes in Faridabad
               </Link>
               <Link
-                href="/biology-classes-ghaziabad"
+                href="/biology-classes-noida"
                 className="rounded-lg bg-gray-100 px-6 py-3 font-medium text-gray-700 transition hover:bg-blue-600 hover:text-white"
               >
                 Biology Classes in Ghaziabad

@@ -209,7 +209,7 @@ export default function BiologyTutorsNearMePage() {
                 </Button>
               </Link>
 
-              <Link href="/locations">
+              <Link href="/neet-coaching">
                 <Button
                   variant="outline"
                   size="xl"
@@ -569,7 +569,7 @@ export default function BiologyTutorsNearMePage() {
               Biology Classes Near Me
             </Link>
             <Link
-              href="/locations"
+              href="/neet-coaching"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               All Locations

@@ -409,7 +409,7 @@ export default function PageContent() {
               South Delhi NEET Hub
             </Link>
             <Link
-              href="/neet-coaching-saket-delhi"
+              href="/neet-coaching-south-delhi"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Saket NEET Coaching

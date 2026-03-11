@@ -505,7 +505,7 @@ export default function ComplementAakashNoidaContent({ faqs }: { faqs: FAQ[] }) 
               <p className="text-sm text-gray-600">For Allen students</p>
             </Link>
             <Link
-              href="/neet-foundation-class-11-noida"
+              href="/courses/foundation"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Class 11 Foundation</h3>

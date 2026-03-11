@@ -549,31 +549,31 @@ export default function NEETCoachingPunjabPage() {
               Chandigarh
             </Link>
             <Link
-              href="/neet-coaching-ludhiana-punjab"
+              href="/neet-coaching-ludhiana"
               className="bg-gray-100 hover:bg-[#1e3a5f] hover:text-white px-4 py-2 rounded-full transition-colors"
             >
               Ludhiana
             </Link>
             <Link
-              href="/neet-coaching-mohali-punjab"
+              href="/neet-coaching-mohali"
               className="bg-gray-100 hover:bg-[#1e3a5f] hover:text-white px-4 py-2 rounded-full transition-colors"
             >
               Mohali
             </Link>
             <Link
-              href="/neet-coaching-jalandhar-punjab"
+              href="/neet-coaching-jalandhar"
               className="bg-gray-100 hover:bg-[#1e3a5f] hover:text-white px-4 py-2 rounded-full transition-colors"
             >
               Jalandhar
             </Link>
             <Link
-              href="/neet-coaching-amritsar-punjab"
+              href="/neet-coaching-amritsar"
               className="bg-gray-100 hover:bg-[#1e3a5f] hover:text-white px-4 py-2 rounded-full transition-colors"
             >
               Amritsar
             </Link>
             <Link
-              href="/neet-coaching-panchkula-haryana"
+              href="/neet-coaching-panchkula"
               className="bg-gray-100 hover:bg-[#1e3a5f] hover:text-white px-4 py-2 rounded-full transition-colors"
             >
               Panchkula

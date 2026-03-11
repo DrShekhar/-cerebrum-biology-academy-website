@@ -203,7 +203,7 @@ export default function NEETBiologyTutorOnlinePage() {
                 </Button>
               </Link>
 
-              <Link href="/courses/intensive-neet-biology">
+              <Link href="/courses">
                 <Button
                   variant="outline"
                   size="xl"

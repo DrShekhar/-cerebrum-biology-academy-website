@@ -312,10 +312,10 @@ export default function ICSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">NEET Coaching for ICSE Schools</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/biology-classes-suncity-school-gurgaon" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-purple-700">Suncity World School</h3><p className="text-sm text-gray-600">35+ students enrolled</p></Link>
-            <Link href="/biology-classes-heritage-school-gurgaon" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-purple-700">Heritage Xperiential</h3><p className="text-sm text-gray-600">25+ students enrolled</p></Link>
-            <Link href="/biology-classes-scottish-high-gurgaon" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-purple-700">Scottish High International</h3><p className="text-sm text-gray-600">40+ students enrolled</p></Link>
-            <Link href="/biology-classes-manav-rachna-gurgaon" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-purple-700">Manav Rachna School</h3><p className="text-sm text-gray-600">30+ students enrolled</p></Link>
+            <Link href="/biology-classes-gurgaon" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-purple-700">Suncity World School</h3><p className="text-sm text-gray-600">35+ students enrolled</p></Link>
+            <Link href="/biology-classes-gurgaon" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-purple-700">Heritage Xperiential</h3><p className="text-sm text-gray-600">25+ students enrolled</p></Link>
+            <Link href="/biology-classes-gurgaon" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-purple-700">Scottish High International</h3><p className="text-sm text-gray-600">40+ students enrolled</p></Link>
+            <Link href="/biology-classes-gurgaon" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-purple-700">Manav Rachna School</h3><p className="text-sm text-gray-600">30+ students enrolled</p></Link>
           </div>
         </div>
       </section>

@@ -23,7 +23,7 @@ export default function PageContent({ area, areaSlug }: PageContentProps) {
             className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <Link
-              href="/biology-tuition-south-delhi"
+              href="/biology-tutor-south-delhi"
               className="inline-flex items-center text-yellow-300 hover:text-yellow-200 mb-4"
             >
               <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
@@ -251,7 +251,7 @@ export default function PageContent({ area, areaSlug }: PageContentProps) {
                 </Button>
               </Link>
 
-              <Link href="/biology-tuition-south-delhi">
+              <Link href="/biology-tutor-south-delhi">
                 <Button
                   variant="outline"
                   size="xl"

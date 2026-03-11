@@ -379,7 +379,7 @@ export default function BestBiologyTeacherOnlinePage() {
               NEET Important Questions
             </Link>
             <Link
-              href="/mcq"
+              href="/neet-biology-mcq"
               className="rounded-lg bg-teal-100 px-4 py-2 text-teal-700 transition hover:bg-teal-200"
             >
               Practice MCQs

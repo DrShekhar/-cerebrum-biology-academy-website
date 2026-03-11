@@ -306,7 +306,7 @@ export default function NcertBiologyCoachingNoidaPage() {
               Book Free Demo
             </a>
             <Link
-              href="/biology-tuition-noida"
+              href="/biology-tutor-noida"
               className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition"
             >
               View All Programs <ArrowRight className="w-5 h-5" />

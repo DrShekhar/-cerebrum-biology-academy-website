@@ -410,7 +410,7 @@ export default function NEETFoundationClass9NoidaContent({ faqs }: { faqs: FAQ[]
               <p className="text-sm text-gray-600">Continue your journey</p>
             </Link>
             <Link
-              href="/class-9-biology-tuition-noida"
+              href="/courses"
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Class 9 Biology Tuition</h3>
@@ -424,7 +424,7 @@ export default function NEETFoundationClass9NoidaContent({ faqs }: { faqs: FAQ[]
               <p className="text-sm text-gray-600">Full NEET program</p>
             </Link>
             <Link
-              href="/biology-olympiad-coaching-noida"
+              href="/biology-olympiad-coaching"
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Biology Olympiad</h3>

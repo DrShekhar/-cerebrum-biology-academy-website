@@ -179,7 +179,7 @@ export default function IBBiologyTutorPage() {
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp"
               >
                 <Link
-                  href="/book-demo"
+                  href="/demo-booking"
                   className="group bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-50 transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   Book Free Demo Class
@@ -852,7 +852,7 @@ export default function IBBiologyTutorPage() {
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fadeInUp"
               >
                 <Link
-                  href="/book-demo"
+                  href="/demo-booking"
                   className="group bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-50 transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   Book Free Demo Class

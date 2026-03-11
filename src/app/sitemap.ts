@@ -71,7 +71,6 @@ function normalizePriority(path: string, currentPriority: number): number {
     path.startsWith('/locations/') ||
     path.startsWith('/best-neet-coaching') ||
     path === '/neet-coaching' ||
-    path === '/neet-coaching-delhi' ||
     path === '/neet-coaching-noida' ||
     path === '/neet-coaching-gurgaon' ||
     path === '/neet-coaching-faridabad' ||

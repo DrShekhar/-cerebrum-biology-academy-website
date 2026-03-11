@@ -421,7 +421,7 @@ export default function NEETFoundationClass9Content({ faqs }: { faqs: FAQ[] }) {
               <p className="text-sm text-gray-600">Full NEET program</p>
             </Link>
             <Link
-              href="/biology-olympiad-coaching-faridabad"
+              href="/biology-olympiad-coaching"
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Biology Olympiad</h3>

@@ -24,7 +24,7 @@ export function CityBreadcrumb({ cityName, stateName, stateSlug }: CityBreadcrum
           </li>
           <ChevronRight className="w-3.5 h-3.5 mx-1 text-gray-400 flex-shrink-0" />
           <li>
-            <Link href="/locations" className="hover:text-teal-600 transition-colors">
+            <Link href="/neet-coaching" className="hover:text-teal-600 transition-colors">
               Locations
             </Link>
           </li>

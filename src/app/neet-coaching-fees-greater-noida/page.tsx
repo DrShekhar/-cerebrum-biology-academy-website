@@ -176,7 +176,7 @@ export default function NEETCoachingFeesGreaterNoidaPage() {
                 Call 99536-43938
               </a>
               <Link
-                href="/biology-classes-greater-noida"
+                href="/neet-coaching-noida"
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
               >
                 View All Programs

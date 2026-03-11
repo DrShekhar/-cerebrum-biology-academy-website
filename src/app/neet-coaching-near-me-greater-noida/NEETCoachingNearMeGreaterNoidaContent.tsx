@@ -123,7 +123,7 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
               <Link
-                href="/neet-coaching-greater-noida"
+                href="/neet-coaching-noida"
                 className="text-gray-600 hover:text-teal-600"
               >
                 NEET Coaching Greater Noida
@@ -436,7 +436,7 @@ export default function NEETCoachingNearMeGreaterNoidaContent({ faqs }: { faqs: 
               <p className="text-sm text-gray-600">Zero travel, same quality</p>
             </Link>
             <Link
-              href="/biology-classes-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-white p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Biology Classes</h3>

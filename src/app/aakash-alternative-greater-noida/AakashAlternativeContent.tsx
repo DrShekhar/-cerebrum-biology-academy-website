@@ -177,7 +177,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
               <Link
-                href="/neet-coaching-greater-noida"
+                href="/neet-coaching-noida"
                 className="text-gray-600 hover:text-teal-600"
               >
                 NEET Coaching Greater Noida
@@ -368,7 +368,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
                   Online + hybrid classes for Greater Noida students
                 </li>
               </ul>
-              <Link href="/neet-coaching-greater-noida">
+              <Link href="/neet-coaching-noida">
                 <Button className="bg-white text-indigo-600 hover:bg-indigo-50">
                   Learn About Complementary Coaching <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -547,7 +547,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
               <p className="text-sm text-gray-600">Budget-friendly options</p>
             </Link>
             <Link
-              href="/neet-coaching-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>

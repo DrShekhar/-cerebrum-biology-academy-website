@@ -110,7 +110,7 @@ export default function NeetBiologyImportantQuestionsPage() {
               <Link href="/neet-zoology-syllabus" className="text-green-700 hover:text-green-900 font-medium">
                 Zoology Syllabus →
               </Link>
-              <Link href="/mcq" className="text-green-700 hover:text-green-900 font-medium">
+              <Link href="/neet-biology-mcq" className="text-green-700 hover:text-green-900 font-medium">
                 Practice MCQs →
               </Link>
             </div>

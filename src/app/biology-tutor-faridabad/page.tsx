@@ -392,7 +392,7 @@ export default function BiologyTutorFaridabadPage() {
               Ballabhgarh
             </Link>
             <Link
-              href="/biology-tutor-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Greater Noida

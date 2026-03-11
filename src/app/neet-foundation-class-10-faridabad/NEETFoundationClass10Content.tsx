@@ -457,7 +457,7 @@ export default function NEETFoundationClass10Content({ faqs }: { faqs: FAQ[] }) 
               <p className="text-sm text-gray-600">Start earlier</p>
             </Link>
             <Link
-              href="/class-10-biology-coaching-faridabad"
+              href="/courses"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Class 10 Biology Coaching</h3>
@@ -471,7 +471,7 @@ export default function NEETFoundationClass10Content({ faqs }: { faqs: FAQ[] }) 
               <p className="text-sm text-gray-600">Full NEET program</p>
             </Link>
             <Link
-              href="/biology-olympiad-coaching-faridabad"
+              href="/biology-olympiad-coaching"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Biology Olympiad</h3>

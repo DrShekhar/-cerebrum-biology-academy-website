@@ -279,7 +279,7 @@ export default function PageContent() {
                 <span className="text-green-600 font-semibold text-sm">View Centers →</span>
               </Link>
               <Link
-                href="/about-cerebrum-biology-academy"
+                href="/about"
                 className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-500 hover:shadow-md transition-all"
               >
                 <h4 className="font-bold text-gray-900 mb-2">Learn About Us</h4>

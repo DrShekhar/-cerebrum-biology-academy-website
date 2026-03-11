@@ -499,7 +499,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
                 All {locality.city} Locations
               </Link>
               <Link
-                href="/locations"
+                href="/neet-coaching"
                 className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 All Locations

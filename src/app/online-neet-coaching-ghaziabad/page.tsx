@@ -377,7 +377,7 @@ export default function OnlineNEETCoachingGhaziabadPage() {
               Call 99536-43938
             </a>
             <Link
-              href="/biology-classes-ghaziabad"
+              href="/biology-classes-noida"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
             >
               View All Ghaziabad Programs <ArrowRight className="w-5 h-5" />

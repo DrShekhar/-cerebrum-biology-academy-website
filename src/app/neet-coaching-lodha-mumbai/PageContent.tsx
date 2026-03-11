@@ -416,7 +416,7 @@ export default function PageContent() {
               Mumbai NEET Hub
             </Link>
             <Link
-              href="/neet-coaching-navi-mumbai"
+              href="/neet-coaching-west-india"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Navi Mumbai Coaching

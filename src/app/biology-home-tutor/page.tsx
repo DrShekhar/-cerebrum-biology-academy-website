@@ -408,7 +408,7 @@ export default function BiologyHomeTutorPage() {
                 </Button>
               </Link>
 
-              <Link href="/locations">
+              <Link href="/neet-coaching">
                 <Button
                   variant="outline"
                   size="xl"

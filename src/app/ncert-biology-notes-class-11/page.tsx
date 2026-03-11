@@ -94,7 +94,7 @@ export default function NcertBiologyNotesClass11Page() {
               <Link href="/class-11-neet-preparation-online" className="text-green-700 hover:text-green-900 font-medium">
                 Class 11 NEET Prep →
               </Link>
-              <Link href="/mcq" className="text-green-700 hover:text-green-900 font-medium">
+              <Link href="/neet-biology-mcq" className="text-green-700 hover:text-green-900 font-medium">
                 Practice MCQs →
               </Link>
             </div>

@@ -405,7 +405,7 @@ export default function NEETWeekendBatchFaridabad() {
             <Link href="/neet-biology-important-questions" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
               NEET Important Questions
             </Link>
-            <Link href="/mcq" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
+            <Link href="/neet-biology-mcq" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">
               Practice MCQs
             </Link>
             <Link href="/compare/kota-vs-online" className="text-orange-100 hover:text-white font-medium underline underline-offset-4">

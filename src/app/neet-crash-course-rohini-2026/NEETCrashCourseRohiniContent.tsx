@@ -679,7 +679,7 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
               <p className="text-sm text-gray-600">All programs at Rohini</p>
             </Link>
             <Link
-              href="/neet-coaching-dc-chowk-rohini"
+              href="/biology-classes-rohini"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
               <h3 className="font-semibold text-teal-600">DC Chauk Center</h3>

@@ -150,7 +150,7 @@ export default function NEETFoundationClass10GhaziabadContent({ faqs }: { faqs: 
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <Link href="/biology-classes-ghaziabad" className="text-gray-600 hover:text-teal-600">
+              <Link href="/biology-classes-noida" className="text-gray-600 hover:text-teal-600">
                 Biology Classes Ghaziabad
               </Link>
             </li>
@@ -475,7 +475,7 @@ export default function NEETFoundationClass10GhaziabadContent({ faqs }: { faqs: 
               <p className="text-sm text-gray-600">Weekend classes for school students</p>
             </Link>
             <Link
-              href="/biology-classes-ghaziabad"
+              href="/biology-classes-noida"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Biology Classes Ghaziabad</h3>

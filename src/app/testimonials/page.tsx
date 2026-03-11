@@ -341,7 +341,7 @@ export default function TestimonialsPage() {
                     Sadhna Sirin - NEET Topper
                   </Button>
                 </Link>
-                <Link href="/neet-success-stories">
+                <Link href="/results">
                   <Button variant="outline">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.5V5.5l6 4.5-6 4.5z" />
@@ -357,7 +357,7 @@ export default function TestimonialsPage() {
           <div className="mb-12 sm:mb-14 md:mb-16 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <Link
-                href="/wall-of-achievers"
+                href="/results"
                 className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow"
               >
                 <Award className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
@@ -365,7 +365,7 @@ export default function TestimonialsPage() {
                 <p className="text-sm text-gray-500 mt-1">Our top NEET scorers</p>
               </Link>
               <Link
-                href="/neet-success-stories"
+                href="/results"
                 className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow"
               >
                 <TrendingUp className="w-8 h-8 text-green-500 mx-auto mb-2" />

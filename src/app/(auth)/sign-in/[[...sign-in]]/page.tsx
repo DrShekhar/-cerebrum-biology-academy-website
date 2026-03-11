@@ -74,7 +74,7 @@ export default function SignInPage() {
         {/* Terms */}
         <p className="mt-4 text-center text-xs text-slate-500">
           By signing in, you agree to our{' '}
-          <Link href="/terms" className="underline hover:text-slate-300">
+          <Link href="/terms-of-service" className="underline hover:text-slate-300">
             Terms
           </Link>{' '}
           &{' '}

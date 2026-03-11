@@ -127,7 +127,7 @@ export function LocationsSection() {
 
         <div className="text-center mt-8">
           <Link
-            href="/locations"
+            href="/neet-coaching"
             className="inline-flex items-center gap-2 text-[#3d4d3d] font-semibold hover:text-[#4a5d4a] transition-colors"
           >
             View All 4 Centers

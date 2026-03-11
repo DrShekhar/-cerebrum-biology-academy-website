@@ -388,7 +388,7 @@ export default function BiologyTutorNoidaSector18Page() {
               Sector 62
             </Link>
             <Link
-              href="/biology-tutor-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Greater Noida

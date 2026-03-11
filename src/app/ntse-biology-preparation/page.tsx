@@ -434,7 +434,7 @@ export default function NTSEBiologyPreparationPage() {
               NTSE Online Classes
             </Link>
             <Link
-              href="/biology-tutor-class-10"
+              href="/biology-tutor-class-9-cbse"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Class 10 Biology Tutor

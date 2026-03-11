@@ -138,7 +138,7 @@ export function TierSelector({ tiers, selectedTier, onSelect }: TierSelectorProp
               </p>
             </div>
             <Link
-              href="/courses/intensive-neet-biology"
+              href="/courses"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#3d4d3d] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#4a5d4a] transition-colors whitespace-nowrap"
             >
               Learn More

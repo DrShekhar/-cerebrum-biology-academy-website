@@ -392,7 +392,7 @@ export default function NEETToolsPage() {
 
             <div className="grid gap-6 md:grid-cols-4">
               <Link
-                href="/blog/neet-biology-chapter-wise-weightage-2026"
+                href="/blog"
                 className="group rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-lg"
               >
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">

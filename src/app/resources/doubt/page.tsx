@@ -429,7 +429,7 @@ export default function DoubtResolutionPage() {
               </div>
 
               <Link
-                href="/about/dr-shekhar"
+                href="/about"
                 className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
               >
                 Know more about Dr. Shekhar

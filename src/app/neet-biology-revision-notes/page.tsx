@@ -99,7 +99,7 @@ export default function NeetBiologyRevisionNotesPage() {
               <Link href="/ncert-biology-notes-class-11" className="text-green-700 hover:text-green-900 font-medium">
                 Class 11 NCERT Notes →
               </Link>
-              <Link href="/mcq" className="text-green-700 hover:text-green-900 font-medium">
+              <Link href="/neet-biology-mcq" className="text-green-700 hover:text-green-900 font-medium">
                 Practice MCQs →
               </Link>
             </div>

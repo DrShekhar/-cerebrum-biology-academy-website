@@ -153,7 +153,7 @@ export function SEOFooterLinks() {
               <Link href="/privacy-policy">
                 <span className="hover:text-green-400 transition-colors">Privacy Policy</span>
               </Link>
-              <Link href="/terms">
+              <Link href="/terms-of-service">
                 <span className="hover:text-green-400 transition-colors">Terms of Service</span>
               </Link>
             </div>

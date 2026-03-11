@@ -427,7 +427,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
             <Link
-              href="/one-year-dropper-course-faridabad"
+              href="/dropper"
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">One Year Dropper Course</h3>

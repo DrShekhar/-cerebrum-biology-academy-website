@@ -401,7 +401,7 @@ export default function PreNEETCoachingPage() {
               NEET Foundation Class 10
             </Link>
             <Link
-              href="/biology-tuition-class-9-10"
+              href="/biology-tutor-class-9-cbse"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Class 9 Biology Tutor

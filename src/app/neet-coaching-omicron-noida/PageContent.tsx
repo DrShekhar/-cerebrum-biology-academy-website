@@ -410,7 +410,7 @@ export default function PageContent() {
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/neet-coaching-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Greater Noida Hub

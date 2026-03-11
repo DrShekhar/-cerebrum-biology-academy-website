@@ -173,7 +173,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
               <Link
-                href="/neet-coaching-greater-noida"
+                href="/neet-coaching-noida"
                 className="text-gray-500 hover:text-gray-700"
               >
                 NEET Coaching Greater Noida
@@ -483,14 +483,14 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Explore More</h2>
           <div className="grid md:grid-cols-4 gap-4">
             <Link
-              href="/neet-coaching-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
               <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
               <p className="text-sm text-gray-600">All Greater Noida programs</p>
             </Link>
             <Link
-              href="/biology-classes-greater-noida"
+              href="/neet-coaching-noida"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
               <h3 className="font-semibold text-teal-600">Biology Classes</h3>

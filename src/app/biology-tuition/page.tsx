@@ -384,7 +384,7 @@ export default function BiologyTuitionPage() {
                 </div>
               </Link>
             ))}
-            <Link href="/biology-tuition-near-me" className="group">
+            <Link href="/biology-tutors-near-me" className="group">
               <div className="bg-indigo-600 rounded-xl p-6 text-center hover:bg-indigo-700 transition-colors text-white">
                 <MapPin className="w-8 h-8 mx-auto mb-3" />
                 <h3 className="font-bold">All Locations</h3>

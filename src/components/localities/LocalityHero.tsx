@@ -27,7 +27,7 @@ export default function LocalityHero({ locality }: LocalityHeroProps) {
             Home
           </Link>
           <span className="mx-2">/</span>
-          <Link href="/locations" className="hover:text-white">
+          <Link href="/neet-coaching" className="hover:text-white">
             Locations
           </Link>
           <span className="mx-2">/</span>

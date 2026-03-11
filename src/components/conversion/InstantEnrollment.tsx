@@ -325,7 +325,7 @@ export function InstantEnrollment({
                 />
                 <label htmlFor="agreeTerms" className="text-sm text-gray-600">
                   I agree to the{' '}
-                  <Link href="/terms" className="text-blue-600 hover:underline">
+                  <Link href="/terms-of-service" className="text-blue-600 hover:underline">
                     Terms & Conditions
                   </Link>{' '}
                   and

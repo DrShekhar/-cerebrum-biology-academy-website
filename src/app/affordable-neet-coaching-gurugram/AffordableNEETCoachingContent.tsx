@@ -379,7 +379,7 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
           <div className="grid md:grid-cols-4 gap-4">
             <Link href="/allen-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Allen Alternative</h3><p className="text-sm text-gray-600">Lower fees, better ratio</p></Link>
             <Link href="/aakash-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Aakash Alternative</h3><p className="text-sm text-gray-600">Quality at lower cost</p></Link>
-            <Link href="/neet-foundation-class-11-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Class 11 Foundation</h3><p className="text-sm text-gray-600">Start early, save more</p></Link>
+            <Link href="/courses/foundation" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Class 11 Foundation</h3><p className="text-sm text-gray-600">Start early, save more</p></Link>
             <Link href="/neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
           </div>
         </div>

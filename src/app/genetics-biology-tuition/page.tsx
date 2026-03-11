@@ -76,7 +76,7 @@ export default function GeneticsBiologyTuitionPage() {
             <Link href="/biology-notes" className="text-green-700 hover:text-green-900 font-medium no-underline">
               Biology Notes →
             </Link>
-            <Link href="/mcq" className="text-green-700 hover:text-green-900 font-medium no-underline">
+            <Link href="/neet-biology-mcq" className="text-green-700 hover:text-green-900 font-medium no-underline">
               Practice MCQs →
             </Link>
           </div>

@@ -114,7 +114,7 @@ export default function NeetZoologySyllabusPage() {
               <Link href="/neet-biology-revision-notes" className="text-red-700 hover:text-red-900 font-medium">
                 Revision Notes →
               </Link>
-              <Link href="/mcq" className="text-red-700 hover:text-red-900 font-medium">
+              <Link href="/neet-biology-mcq" className="text-red-700 hover:text-red-900 font-medium">
                 Practice MCQs →
               </Link>
             </div>

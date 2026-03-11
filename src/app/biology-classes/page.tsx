@@ -362,7 +362,7 @@ export default function BiologyClassesPage() {
               Biology Classes Near Me
             </Link>
             <Link
-              href="/biology-tuition-near-me"
+              href="/biology-tutors-near-me"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Biology Tuition Near Me
