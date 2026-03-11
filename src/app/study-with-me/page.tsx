@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   description:
     'Join our live NEET Biology study session. Focus timer, Pomodoro technique, ambient music, and motivational quotes to boost your preparation.',
   keywords: ['NEET Biology', 'Study With Me', 'Pomodoro', 'Focus Timer', 'NEET Preparation'],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/study-with-me',
+  },
+
   openGraph: {
     title: 'Study With Me',
     description: 'Join our live NEET Biology study session with Pomodoro timer and focus tools.',

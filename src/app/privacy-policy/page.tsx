@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
     'Privacy Policy for Cerebrum Biology Academy - How we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/privacy-policy',
+  },
 }
 
 export default function PrivacyPolicyPage() {

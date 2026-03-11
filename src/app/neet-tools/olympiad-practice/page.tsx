@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     'biology olympiad practice',
     'olympiad biology questions',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-tools/olympiad-practice',
+  },
+
   openGraph: {
     title: 'Biology Olympiad Practice',
     description:
@@ -43,7 +47,8 @@ const examCards = [
   {
     level: 'NSEB',
     title: 'National Standard Examination in Biology',
-    description: 'Stage 1 — NCERT+ concepts with application-based questions. 750 questions across all Campbell units.',
+    description:
+      'Stage 1 — NCERT+ concepts with application-based questions. 750 questions across all Campbell units.',
     icon: Target,
     color: 'bg-blue-100',
     iconColor: 'text-blue-600',
@@ -55,7 +60,8 @@ const examCards = [
   {
     level: 'USABO_OPEN',
     title: 'USABO Open Exam',
-    description: 'First round of USA Biology Olympiad. Covers all Campbell Biology domains with emphasis on conceptual understanding.',
+    description:
+      'First round of USA Biology Olympiad. Covers all Campbell Biology domains with emphasis on conceptual understanding.',
     icon: BookOpen,
     color: 'bg-green-100',
     iconColor: 'text-green-600',
@@ -67,7 +73,8 @@ const examCards = [
   {
     level: 'USABO_SEMI',
     title: 'USABO Semifinal',
-    description: 'Advanced round with MTF and data interpretation. Requires university-level depth in molecular biology and physiology.',
+    description:
+      'Advanced round with MTF and data interpretation. Requires university-level depth in molecular biology and physiology.',
     icon: Beaker,
     color: 'bg-purple-100',
     iconColor: 'text-purple-600',
@@ -79,7 +86,8 @@ const examCards = [
   {
     level: 'INBO',
     title: 'Indian National Biology Olympiad',
-    description: 'Stage 2 for NSEB qualifiers. Deep Campbell Biology concepts, experimental design, and data interpretation.',
+    description:
+      'Stage 2 for NSEB qualifiers. Deep Campbell Biology concepts, experimental design, and data interpretation.',
     icon: Beaker,
     color: 'bg-orange-100',
     iconColor: 'text-orange-600',
@@ -91,7 +99,8 @@ const examCards = [
   {
     level: 'BBO',
     title: 'British Biology Olympiad',
-    description: 'UK national competition. Broad coverage with emphasis on ecology, evolution, and plant biology.',
+    description:
+      'UK national competition. Broad coverage with emphasis on ecology, evolution, and plant biology.',
     icon: GraduationCap,
     color: 'bg-teal-100',
     iconColor: 'text-teal-600',
@@ -103,7 +112,8 @@ const examCards = [
   {
     level: 'IBO',
     title: 'International Biology Olympiad',
-    description: 'The pinnacle. Expert-level MTF questions covering molecular biology, genetics, ecology, and physiology at university depth.',
+    description:
+      'The pinnacle. Expert-level MTF questions covering molecular biology, genetics, ecology, and physiology at university depth.',
     icon: Trophy,
     color: 'bg-yellow-100',
     iconColor: 'text-yellow-800',
@@ -115,13 +125,41 @@ const examCards = [
 ]
 
 const campbellUnits = [
-  { unit: 1, title: 'Chemistry of Life', chapters: 'Ch 1-5', questions: 75, iboWeight: '2.5%', tier: 3 },
+  {
+    unit: 1,
+    title: 'Chemistry of Life',
+    chapters: 'Ch 1-5',
+    questions: 75,
+    iboWeight: '2.5%',
+    tier: 3,
+  },
   { unit: 2, title: 'The Cell', chapters: 'Ch 6-12', questions: 600, iboWeight: '20%', tier: 1 },
   { unit: 3, title: 'Genetics', chapters: 'Ch 13-21', questions: 600, iboWeight: '20%', tier: 1 },
   { unit: 4, title: 'Evolution', chapters: 'Ch 22-26', questions: 225, iboWeight: '7.5%', tier: 2 },
-  { unit: 5, title: 'Diversity of Life', chapters: 'Ch 27-34', questions: 150, iboWeight: '5%', tier: 3 },
-  { unit: 6, title: 'Plant Form & Function', chapters: 'Ch 35-39', questions: 375, iboWeight: '12.5%', tier: 2 },
-  { unit: 7, title: 'Animal Form & Function', chapters: 'Ch 40-49', questions: 750, iboWeight: '25%', tier: 1 },
+  {
+    unit: 5,
+    title: 'Diversity of Life',
+    chapters: 'Ch 27-34',
+    questions: 150,
+    iboWeight: '5%',
+    tier: 3,
+  },
+  {
+    unit: 6,
+    title: 'Plant Form & Function',
+    chapters: 'Ch 35-39',
+    questions: 375,
+    iboWeight: '12.5%',
+    tier: 2,
+  },
+  {
+    unit: 7,
+    title: 'Animal Form & Function',
+    chapters: 'Ch 40-49',
+    questions: 750,
+    iboWeight: '25%',
+    tier: 1,
+  },
   { unit: 8, title: 'Ecology', chapters: 'Ch 52-56', questions: 225, iboWeight: '7.5%', tier: 2 },
 ]
 
@@ -129,7 +167,8 @@ const questionTypeTraining = [
   {
     type: 'MTF',
     title: 'Multiple True/False',
-    description: 'Signature IBO/USABO format — evaluate 4 statements as True or False with partial credit scoring.',
+    description:
+      'Signature IBO/USABO format — evaluate 4 statements as True or False with partial credit scoring.',
     icon: CheckCircle,
     color: 'bg-purple-600',
     count: 750,
@@ -138,7 +177,8 @@ const questionTypeTraining = [
   {
     type: 'DATA_INTERPRETATION',
     title: 'Data Interpretation',
-    description: 'Analyze graphs, tables, and experimental data. Tests ability to extract and interpret biological data.',
+    description:
+      'Analyze graphs, tables, and experimental data. Tests ability to extract and interpret biological data.',
     icon: BarChart3,
     color: 'bg-blue-600',
     count: 450,
@@ -147,7 +187,8 @@ const questionTypeTraining = [
   {
     type: 'EXPERIMENTAL_DESIGN',
     title: 'Experimental Design',
-    description: 'Design experiments, identify controls, predict outcomes. Critical for IBO and USABO Semi.',
+    description:
+      'Design experiments, identify controls, predict outcomes. Critical for IBO and USABO Semi.',
     icon: FlaskConical,
     color: 'bg-green-600',
     count: 300,
@@ -156,7 +197,8 @@ const questionTypeTraining = [
   {
     type: 'MCQ',
     title: 'Standard MCQ',
-    description: 'Single-best-answer format used in NSEB, USABO Open, and BBO. University-level conceptual depth.',
+    description:
+      'Single-best-answer format used in NSEB, USABO Open, and BBO. University-level conceptual depth.',
     icon: Target,
     color: 'bg-slate-700',
     count: 1200,
@@ -193,11 +235,10 @@ export default function OlympiadPracticePage() {
               <span className="font-semibold">Biology Olympiad Question Bank</span>
             </div>
 
-            <h1 className="mb-4 text-3xl font-bold md:text-5xl">
-              3,000+ Olympiad Questions
-            </h1>
+            <h1 className="mb-4 text-3xl font-bold md:text-5xl">3,000+ Olympiad Questions</h1>
             <p className="mb-6 text-lg text-slate-300 md:text-xl">
-              The most comprehensive Biology Olympiad prep resource. MTF, Data Interpretation, and Experimental Design — aligned to IBO syllabus.
+              The most comprehensive Biology Olympiad prep resource. MTF, Data Interpretation, and
+              Experimental Design — aligned to IBO syllabus.
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">
@@ -249,11 +290,13 @@ export default function OlympiadPracticePage() {
                 <p className="mb-3 text-xs text-gray-600 leading-relaxed">{exam.description}</p>
 
                 <div className="flex items-center gap-3 text-xs text-gray-500">
-                  <span className={`px-2 py-0.5 rounded-full ${
-                    exam.difficulty === 'EXPERT'
-                      ? 'bg-purple-100 text-purple-700'
-                      : 'bg-red-100 text-red-700'
-                  }`}>
+                  <span
+                    className={`px-2 py-0.5 rounded-full ${
+                      exam.difficulty === 'EXPERT'
+                        ? 'bg-purple-100 text-purple-700'
+                        : 'bg-red-100 text-red-700'
+                    }`}
+                  >
                     {exam.difficulty}
                   </span>
                   <span className="text-gray-400">{exam.format}</span>
@@ -293,13 +336,15 @@ export default function OlympiadPracticePage() {
                     <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 text-sm">
                       {unit.title}
                     </h3>
-                    <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${
-                      unit.tier === 1
-                        ? 'bg-red-100 text-red-700'
-                        : unit.tier === 2
-                          ? 'bg-amber-100 text-amber-700'
-                          : 'bg-gray-100 text-gray-600'
-                    }`}>
+                    <span
+                      className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${
+                        unit.tier === 1
+                          ? 'bg-red-100 text-red-700'
+                          : unit.tier === 2
+                            ? 'bg-amber-100 text-amber-700'
+                            : 'bg-gray-100 text-gray-600'
+                      }`}
+                    >
                       Tier {unit.tier}
                     </span>
                   </div>
@@ -340,7 +385,9 @@ export default function OlympiadPracticePage() {
                 className="group rounded-xl bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <div className={`flex h-11 w-11 items-center justify-center rounded-lg ${item.color} text-white`}>
+                  <div
+                    className={`flex h-11 w-11 items-center justify-center rounded-lg ${item.color} text-white`}
+                  >
                     <item.icon className="h-5 w-5" />
                   </div>
                   <span className="text-xs font-bold text-gray-500">{item.count} Questions</span>
@@ -361,9 +408,7 @@ export default function OlympiadPracticePage() {
       {/* Section 4: Difficulty Ladder */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-2 text-center text-3xl font-bold text-gray-900">
-            Difficulty Ladder
-          </h2>
+          <h2 className="mb-2 text-center text-3xl font-bold text-gray-900">Difficulty Ladder</h2>
           <p className="mb-8 text-center text-gray-600">
             Progress from foundation to expert depth systematically
           </p>

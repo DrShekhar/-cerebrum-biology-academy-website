@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     'Expert CBSE Biology coaching for Classes 11-12. NCERT-focused teaching, board exam excellence, and integrated NEET preparation. Score 90+ marks!',
   keywords:
     'CBSE Biology coaching, NCERT Biology, CBSE board exam, Class 11 Biology, Class 12 Biology, NEET preparation',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/boards/cbse',
+  },
 }
 
 export default function CBSEBiologyPage() {

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     'Expert State Board Biology coaching for all Indian states. Regional language support, state-specific curriculum, and local examination pattern focus.',
   keywords:
     'State board Biology coaching, regional board preparation, state-specific curriculum, local language support',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/boards/state-boards',
+  },
 }
 
 export default function StateBoardsPage() {

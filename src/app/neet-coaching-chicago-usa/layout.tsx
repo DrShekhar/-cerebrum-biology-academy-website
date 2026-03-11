@@ -1,23 +1,30 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Chicago, USA - 98% Success Rate',
-  description: 'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
+  description:
+    'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
   keywords: [
     'NEET coaching Chicago',
     'medical entrance exam preparation',
     'Dr. Shekhar C Singh',
-    'best NEET institute'
+    'best NEET institute',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chicago-usa',
+  },
+
   openGraph: {
     title: 'NEET Coaching in Chicago, USA - 98% Success Rate',
-    description: 'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
-    type: 'website'
+    description:
+      'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Chicago, USA',
-    description: 'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.'
+    description:
+      'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
   },
   robots: {
     index: true,
@@ -30,12 +37,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-};
+}
 
-export default function ChicagoLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <>{children}</>;
+export default function ChicagoLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }

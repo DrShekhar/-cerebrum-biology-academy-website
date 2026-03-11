@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     'education news',
     'coaching institute news',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/about/media',
+  },
 }
 
 export default function MediaPage() {

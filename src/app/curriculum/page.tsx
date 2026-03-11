@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     'chapter wise syllabus',
     'biology study plan',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/curriculum',
+  },
+
   robots: { index: false, follow: true },
 }
 

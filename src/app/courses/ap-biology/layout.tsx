@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     'Pathways School AP Biology',
     'AP exam prep Delhi',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/courses/ap-biology',
+  },
+
   openGraph: {
     title: 'AP Biology Coaching Delhi | Score 5 on Your AP Exam',
     description:

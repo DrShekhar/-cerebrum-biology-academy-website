@@ -1,6 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, Clock, FileText, Star, Trophy, CheckCircle, Award, GraduationCap } from 'lucide-react'
+import {
+  Calendar,
+  Clock,
+  FileText,
+  Star,
+  Trophy,
+  CheckCircle,
+  Award,
+  GraduationCap,
+} from 'lucide-react'
 import { CountdownClient } from './CountdownClient'
 
 export const metadata: Metadata = {
@@ -9,6 +18,9 @@ export const metadata: Metadata = {
     'Live countdown to NEET 2026 exam. Track days, hours, minutes left. Get study planner, important dates, and preparation tips from NEET toppers.',
   keywords:
     'NEET 2026 countdown, NEET exam date, days left for NEET, NEET timer, NEET preparation countdown',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
+  },
 }
 
 // NEET Exam Dates - First Sunday of May each year
@@ -30,7 +42,12 @@ const getImportantDates = (year: number) => {
     { event: 'Registration Closes', date: `Mar 7, ${year}`, color: 'bg-amber-500' },
     { event: 'Correction Window', date: `Mar 10-15, ${year}`, color: 'bg-blue-500' },
     { event: 'Admit Card Release', date: `Apr 30, ${year}`, color: 'bg-green-500' },
-    { event: `NEET ${year} Exam`, date: `${examMonth} ${examDay}, ${year}`, color: 'bg-red-500', isExam: true },
+    {
+      event: `NEET ${year} Exam`,
+      date: `${examMonth} ${examDay}, ${year}`,
+      color: 'bg-red-500',
+      isExam: true,
+    },
     { event: 'Answer Key Release', date: `May 10, ${year}`, color: 'bg-amber-500' },
     { event: 'Result Declaration', date: `June 5, ${year}`, color: 'bg-green-500' },
     { event: 'Counselling Begins', date: `July ${year}`, color: 'bg-blue-500' },
@@ -66,7 +83,8 @@ export default function NEETExamCountdownPage() {
             '@context': 'https://schema.org',
             '@type': 'WebApplication',
             name: 'NEET 2026 Exam Countdown Timer',
-            description: 'Live countdown to NEET 2026 exam with study planner and preparation tips.',
+            description:
+              'Live countdown to NEET 2026 exam with study planner and preparation tips.',
             url: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
             applicationCategory: 'EducationalApplication',
             operatingSystem: 'All',
@@ -84,9 +102,13 @@ export default function NEETExamCountdownPage() {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             {/* Breadcrumb - Server rendered */}
             <nav className="mb-6 flex items-center gap-2 text-sm text-gray-500">
-              <Link href="/" className="hover:text-blue-500">Home</Link>
+              <Link href="/" className="hover:text-blue-500">
+                Home
+              </Link>
               <span>/</span>
-              <Link href="/neet-tools" className="hover:text-blue-500">NEET Tools</Link>
+              <Link href="/neet-tools" className="hover:text-blue-500">
+                NEET Tools
+              </Link>
               <span>/</span>
               <span className="text-gray-800">Exam Countdown</span>
             </nav>
@@ -119,10 +141,7 @@ export default function NEETExamCountdownPage() {
               >
                 NEET 2026 Exam Countdown
               </h1>
-              <p
-                className="mx-auto mb-8 max-w-xl text-gray-600"
-                style={{ color: '#4b5563' }}
-              >
+              <p className="mx-auto mb-8 max-w-xl text-gray-600" style={{ color: '#4b5563' }}>
                 Every second counts. Track your journey to becoming a doctor.
               </p>
 
@@ -160,7 +179,7 @@ export default function NEETExamCountdownPage() {
 
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {importantDates.map((item) => {
-                const Icon = item.event.includes('NEET') ? Star : (iconMap[item.event] || FileText)
+                const Icon = item.event.includes('NEET') ? Star : iconMap[item.event] || FileText
                 return (
                   <div
                     key={item.event}
@@ -168,10 +187,14 @@ export default function NEETExamCountdownPage() {
                       item.isExam ? 'border-red-200 bg-red-50' : 'border-gray-100 shadow-sm'
                     }`}
                   >
-                    <div className={`mb-3 flex h-10 w-10 items-center justify-center rounded-xl ${item.color}`}>
+                    <div
+                      className={`mb-3 flex h-10 w-10 items-center justify-center rounded-xl ${item.color}`}
+                    >
                       <Icon className="h-5 w-5 text-white" />
                     </div>
-                    <h3 className={`font-semibold ${item.isExam ? 'text-red-600' : 'text-gray-900'}`}>
+                    <h3
+                      className={`font-semibold ${item.isExam ? 'text-red-600' : 'text-gray-900'}`}
+                    >
                       {item.event}
                     </h3>
                     <p className="text-sm text-gray-500">{item.date}</p>
@@ -189,8 +212,18 @@ export default function NEETExamCountdownPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { value: '180', label: 'Questions', sub: '45 per subject', color: 'text-red-500' },
-                { value: '720', label: 'Total Marks', sub: '+4 per correct', color: 'text-blue-500' },
-                { value: '3:20', label: 'Duration', sub: '3 hours 20 min', color: 'text-amber-500' },
+                {
+                  value: '720',
+                  label: 'Total Marks',
+                  sub: '+4 per correct',
+                  color: 'text-blue-500',
+                },
+                {
+                  value: '3:20',
+                  label: 'Duration',
+                  sub: '3 hours 20 min',
+                  color: 'text-amber-500',
+                },
                 { value: '-1', label: 'Negative', sub: 'per wrong', color: 'text-gray-500' },
               ].map((stat) => (
                 <div key={stat.label} className="rounded-xl bg-gray-50 p-4 text-center">

@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     'NEET preparation course',
     'personalized course recommendation',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/course-finder',
+  },
 }
 
 export default function CourseFinderPage() {

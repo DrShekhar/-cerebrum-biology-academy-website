@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: 'Free NEET Biology Demo Class | Book Now',
   description:
     'Book your FREE demo class for NEET Biology coaching by AIIMS faculty. 98% success rate, small batches of 15 students. Call +91 88264 44334.',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/lp/neet-demo',
+  },
   robots: {
     index: true,
     follow: true,

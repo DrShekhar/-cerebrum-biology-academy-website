@@ -1,28 +1,35 @@
-import { Metadata } from 'next';
-import NEETCoachingPageContent from './PageContent';
+import { Metadata } from 'next'
+import NEETCoachingPageContent from './PageContent'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Jakarta, Indonesia - 98% Success Rate',
-  description: "NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge.",
+  description:
+    "NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge.",
   keywords: [
     'NEET coaching in Jakarta',
     'medical entrance exam preparation Jakarta',
     'Dr. Shekhar C Singh Jakarta',
     'best NEET institute Jakarta',
-    'NEET online coaching Indonesia'
+    'NEET online coaching Indonesia',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jakarta-indonesia',
+  },
+
   openGraph: {
     title: 'NEET Coaching in Jakarta, Indonesia - 98% Success Rate',
-    description: "NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge.",
-    type: 'website'
+    description:
+      "NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge.",
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Jakarta, Indonesia',
-    description: "NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge."
-  }
-};
+    description:
+      "NEET Coaching in Jakarta - Asia's emerging Indian expat hub with Gandhi Memorial School partnerships and IB curriculum bridge.",
+  },
+}
 
 export default function JakartaNEETCoachingPage() {
-  return <NEETCoachingPageContent />;
+  return <NEETCoachingPageContent />
 }

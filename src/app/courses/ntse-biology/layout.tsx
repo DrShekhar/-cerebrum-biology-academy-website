@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     'Talent search exam coaching',
     'NCERT based scholarship exam',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/courses/ntse-biology',
+  },
+
   openGraph: {
     title: 'NTSE Biology Coaching Delhi | Rs 1.25 Lakh/Year Scholarship',
     description:
@@ -28,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NTSE Biology Coaching Delhi | Class 10 Scholarship Preparation',
-    description: 'Expert NTSE Biology coaching in Delhi. Class 10 scholarship preparation, MAT & SAT strategies, Rs 1.',
+    description:
+      'Expert NTSE Biology coaching in Delhi. Class 10 scholarship preparation, MAT & SAT strategies, Rs 1.',
   },
 }
 

@@ -1,23 +1,30 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Brampton, Canada - 98% Success Rate',
-  description: "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
+  description:
+    "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
   keywords: [
     'NEET coaching Brampton',
     'medical entrance exam preparation',
     'Dr. Shekhar C Singh',
-    'best NEET institute'
+    'best NEET institute',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-brampton-canada',
+  },
+
   openGraph: {
     title: 'NEET Coaching in Brampton, Canada - 98% Success Rate',
-    description: "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
-    type: 'website'
+    description:
+      "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Brampton, Canada',
-    description: "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge."
+    description:
+      "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
   },
   robots: {
     index: true,
@@ -30,12 +37,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-};
+}
 
-export default function BramptonLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <>{children}</>;
+export default function BramptonLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
 }

@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     'NEET exam countdown',
     'NEET days left',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-tools',
+  },
+
   openGraph: {
     title: 'Free NEET Preparation Tools 2026',
     description:

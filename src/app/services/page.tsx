@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     'Comprehensive NEET Biology coaching services: Online classes, Classroom teaching, International programs, and 24/7 doubt resolution support.',
   keywords:
     'NEET coaching services, online Biology classes, classroom teaching, international coaching, doubt resolution',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/services',
+  },
 }
 
 // BreadcrumbList Schema for improved SERP display and CTR

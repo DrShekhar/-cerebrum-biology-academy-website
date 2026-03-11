@@ -1,26 +1,12 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Thank You',
-  description:
-    'Thank you for your interest in Cerebrum Biology Academy. Our team will contact you shortly to help you on your NEET journey.',
-  robots: {
-    index: false,
-    follow: true,
+  title: 'Thank You | Cerebrum Biology Academy',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/thank-you',
   },
-  openGraph: {
-    title: 'Thank You',
-    description:
-      'Thank you for your interest in Cerebrum Biology Academy. Our team will contact you shortly.',
-    type: 'website',
-    url: 'https://cerebrumbiologyacademy.com/thank-you',
-    siteName: 'Cerebrum Biology Academy',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Thank You',
-    description: 'Thank you for your interest in Cerebrum Biology Academy.',
-  },
+
+  robots: { index: false, follow: false },
 }
 
 export default function ThankYouLayout({ children }: { children: React.ReactNode }) {

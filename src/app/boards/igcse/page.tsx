@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     'Expert IGCSE Biology coaching following Cambridge curriculum. International teaching standards, practical assessments, and global university preparation.',
   keywords:
     'IGCSE Biology coaching, Cambridge Biology, international curriculum, IGCSE board exam, global standards',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/boards/igcse',
+  },
 }
 
 export default function IGCSEBiologyPage() {

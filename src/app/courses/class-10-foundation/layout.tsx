@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     'Class 10 home tutor Biology',
     'Heredity and Evolution class 10',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/courses/class-10-foundation',
+  },
+
   openGraph: {
     title: 'Class 10 Biology Foundation | Board + NEET Prep',
     description:
@@ -28,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Class 10 Biology Foundation | Board + NEET Preparation',
-    description: 'Class 10 Biology coaching with board exam focus and NEET foundation. Life processes, heredity, evolution covered.',
+    description:
+      'Class 10 Biology coaching with board exam focus and NEET foundation. Life processes, heredity, evolution covered.',
   },
 }
 

@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: 'Class 12 Biology MCQ Practice | 1,600+ Free Questions — NCERT Based',
   description:
     'Practice 1,600+ free Class 12 Biology MCQs based on NCERT. Covers Reproduction, Genetics, Biotechnology & Ecology. Board and NEET aligned. Start now!',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/class-12-biology-mcq',
+  },
+
   openGraph: {
     title: 'Class 12 Biology MCQ Practice | 1,600+ Free Questions',
     description:
@@ -143,8 +147,8 @@ export default function Class12BiologyMCQPage() {
           <section className="prose prose-stone max-w-none mb-10">
             <h2>Why Practice Class 12 Biology MCQs?</h2>
             <p>
-              Class 12 Biology is critical for both board exams and NEET, contributing roughly 50% of
-              NEET Biology questions. Topics like Genetics, Reproduction, and Biotechnology are
+              Class 12 Biology is critical for both board exams and NEET, contributing roughly 50%
+              of NEET Biology questions. Topics like Genetics, Reproduction, and Biotechnology are
               high-scorers. Regular MCQ practice sharpens your problem-solving speed and helps you
               retain key concepts.
             </p>

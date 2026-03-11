@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     'class 11 neet biology coaching',
     'neet foundation class 11',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-class-11',
+  },
 }
 
 const usps: USP[] = [

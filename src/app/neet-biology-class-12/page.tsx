@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   description:
     'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2026. Book free demo. Call +91-88264-44334',
   keywords: ['class 12 biology neet', 'neet biology class 12', 'class 12 neet biology coaching'],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-class-12',
+  },
 }
 
 const usps: USP[] = [

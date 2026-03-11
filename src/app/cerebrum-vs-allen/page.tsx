@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ChevronRight, Check, X, Phone, MessageCircle } from 'lucide-react';
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { ChevronRight, Check, X, Phone, MessageCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Cerebrum vs Allen: Which is Better for NEET Biology 2026?',
@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     'neet biology coaching',
     'specialized biology coaching',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-allen',
+  },
+
   openGraph: {
     title: 'Cerebrum vs Allen: Which is Better for NEET Biology 2026?',
     description:
@@ -26,7 +30,7 @@ export const metadata: Metadata = {
     title: 'Cerebrum vs Allen: NEET Biology Coaching Comparison',
     description: 'Specialized Biology Coaching vs General NEET Institute',
   },
-};
+}
 
 const jsonLdSchema = {
   '@context': 'https://schema.org',
@@ -73,7 +77,7 @@ const jsonLdSchema = {
       },
     },
   ],
-};
+}
 
 export default function CerebrumVsAllenPage() {
   return (
@@ -90,11 +94,16 @@ export default function CerebrumVsAllenPage() {
             Cerebrum vs Allen: Which is Better for NEET Biology 2026?
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-6">
-            Comprehensive comparison between specialized Biology coaching (Cerebrum) and
-            general NEET institute (Allen) to help you make the right choice.
+            Comprehensive comparison between specialized Biology coaching (Cerebrum) and general
+            NEET institute (Allen) to help you make the right choice.
           </p>
           <p className="text-sm text-gray-600">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            Last updated:{' '}
+            {new Date().toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
           </p>
         </div>
       </section>
@@ -234,9 +243,9 @@ export default function CerebrumVsAllenPage() {
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
             <p className="text-gray-800">
-              <strong>Key Advantage for Cerebrum:</strong> AIIMS-trained faculty brings expertise from
-              India's premier medical institution, ensuring medical-standard teaching quality. The
-              specialized focus on Biology means every faculty member is a subject expert.
+              <strong>Key Advantage for Cerebrum:</strong> AIIMS-trained faculty brings expertise
+              from India's premier medical institution, ensuring medical-standard teaching quality.
+              The specialized focus on Biology means every faculty member is a subject expert.
             </p>
           </div>
         </div>
@@ -297,9 +306,10 @@ export default function CerebrumVsAllenPage() {
 
           <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
             <p className="text-gray-800">
-              <strong>Cost-Benefit Winner:</strong> Cerebrum offers 40-60% lower fees while delivering
-              specialized Biology training with better student-teacher ratios. For students focused on
-              maximizing Biology scores, Cerebrum provides superior value for money.
+              <strong>Cost-Benefit Winner:</strong> Cerebrum offers 40-60% lower fees while
+              delivering specialized Biology training with better student-teacher ratios. For
+              students focused on maximizing Biology scores, Cerebrum provides superior value for
+              money.
             </p>
           </div>
         </div>
@@ -308,7 +318,9 @@ export default function CerebrumVsAllenPage() {
       {/* Student Results & Success Stories */}
       <section className="py-12 md:py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Student Results & Success Stories</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Student Results & Success Stories
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
@@ -344,8 +356,8 @@ export default function CerebrumVsAllenPage() {
                     <strong>Overall Success Metrics:</strong>
                   </p>
                   <p className="text-sm text-gray-700 mt-2">
-                    Allen publishes aggregate data but doesn't disclose Biology-specific success rates
-                    separately.
+                    Allen publishes aggregate data but doesn't disclose Biology-specific success
+                    rates separately.
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-gray-200">
@@ -365,9 +377,9 @@ export default function CerebrumVsAllenPage() {
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
             <p className="text-gray-800">
-              <strong>Key Insight:</strong> Cerebrum's transparent 98% selection rate specifically for
-              Biology demonstrates accountability. Smaller batches ensure personalized monitoring of
-              progress, leading to consistent results.
+              <strong>Key Insight:</strong> Cerebrum's transparent 98% selection rate specifically
+              for Biology demonstrates accountability. Smaller batches ensure personalized
+              monitoring of progress, leading to consistent results.
             </p>
           </div>
         </div>
@@ -473,9 +485,9 @@ export default function CerebrumVsAllenPage() {
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
             <p className="text-gray-800">
               <strong>For Delhi NCR Students:</strong> Cerebrum offers localized attention with 6
-              strategically placed centers. Students benefit from knowing their center staff personally
-              and getting community-based support. Allen's larger network is beneficial for students
-              relocating to different cities.
+              strategically placed centers. Students benefit from knowing their center staff
+              personally and getting community-based support. Allen's larger network is beneficial
+              for students relocating to different cities.
             </p>
           </div>
         </div>
@@ -496,7 +508,7 @@ export default function CerebrumVsAllenPage() {
               {
                 title: 'AIIMS-Trained Faculty',
                 description:
-                  'Learn from educators who have worked at AIIMS, India\'s premier medical institute. Access to medical-standard teaching quality and real examination insights.',
+                  "Learn from educators who have worked at AIIMS, India's premier medical institute. Access to medical-standard teaching quality and real examination insights.",
               },
               {
                 title: 'Small Batch Advantage',
@@ -519,7 +531,10 @@ export default function CerebrumVsAllenPage() {
                   '6 centers strategically located across Delhi NCR with flexible online options. Learn in your preferred mode and location.',
               },
             ].map((item, i) => (
-              <div key={i} className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">
+              <div
+                key={i}
+                className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200"
+              >
                 <h3 className="text-lg font-semibold text-blue-600 mb-3">{item.title}</h3>
                 <p className="text-gray-700 text-sm">{item.description}</p>
               </div>
@@ -574,8 +589,8 @@ export default function CerebrumVsAllenPage() {
                 a: 'Yes, Cerebrum offers both offline classes at 6 Delhi NCR centers and comprehensive online programs. Students can choose hybrid (combination of online and offline) or fully online modes based on their preferences.',
               },
               {
-                q: 'What is Cerebrum\'s success rate compared to Allen?',
-                a: 'Cerebrum has a transparent 98% selection rate among students who complete the course consistently. Allen does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum\'s transparent metrics demonstrate accountability.',
+                q: "What is Cerebrum's success rate compared to Allen?",
+                a: "Cerebrum has a transparent 98% selection rate among students who complete the course consistently. Allen does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum's transparent metrics demonstrate accountability.",
               },
               {
                 q: 'Can I shift from Allen to Cerebrum mid-course?',
@@ -590,9 +605,7 @@ export default function CerebrumVsAllenPage() {
                   <h3 className="text-lg font-semibold text-gray-900 pr-4">{item.q}</h3>
                   <ChevronRight className="w-5 h-5 text-gray-600 group-open:rotate-90 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-6 pb-6 text-gray-700 border-t border-gray-100">
-                  {item.a}
-                </div>
+                <div className="px-6 pb-6 text-gray-700 border-t border-gray-100">{item.a}</div>
               </details>
             ))}
           </div>
@@ -602,9 +615,12 @@ export default function CerebrumVsAllenPage() {
       {/* CTA Section */}
       <section className="py-12 md:py-16 px-4 md:px-8 bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600">
         <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Start Your NEET Biology Journey Today</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Start Your NEET Biology Journey Today
+          </h2>
           <p className="text-lg mb-8 text-blue-100">
-            Experience specialized Biology coaching with AIIMS-trained faculty. Limited seats available.
+            Experience specialized Biology coaching with AIIMS-trained faculty. Limited seats
+            available.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -657,13 +673,13 @@ export default function CerebrumVsAllenPage() {
       <section className="py-8 px-4 md:px-8 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <p className="text-sm text-gray-700 text-center">
-            <strong>Disclaimer:</strong> This comparison is based on publicly available information and
-            Cerebrum Biology Academy's verified track record. We have not made any defamatory claims
-            against Allen Career Institute. Both institutions are reputable in their respective domains.
-            The choice depends on your specific learning needs and preferences.
+            <strong>Disclaimer:</strong> This comparison is based on publicly available information
+            and Cerebrum Biology Academy's verified track record. We have not made any defamatory
+            claims against Allen Career Institute. Both institutions are reputable in their
+            respective domains. The choice depends on your specific learning needs and preferences.
           </p>
         </div>
       </section>
     </>
-  );
+  )
 }

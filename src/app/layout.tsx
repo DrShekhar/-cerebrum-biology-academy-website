@@ -94,6 +94,7 @@ export const metadata: Metadata = {
     creator: '@cerebrumbiologyacademy',
   },
   alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com',
     types: {
       'application/rss+xml': '/blog/feed.xml',
     },

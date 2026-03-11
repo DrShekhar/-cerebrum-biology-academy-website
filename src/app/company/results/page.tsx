@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.',
   keywords:
     'NEET results, AIIMS selection, JIPMER admission, NEET Biology scores, medical college admission, student success stories',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/company/results',
+  },
 }
 
 export default function ResultsPage() {

@@ -1,11 +1,15 @@
-import { Metadata } from 'next';
-import PageContent from './PageContent';
+import { Metadata } from 'next'
+import PageContent from './PageContent'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Dar es Salaam, Tanzania',
-  description: "Expert NEET coaching in Dar es Salaam, Tanzania. Dar es Salaam, Tanzania's largest city and former capital, has a historic and thriving Indian community, particularly in the Kariyakoo market area. 98% success rate. Enroll today!",
-};
+  description:
+    "Expert NEET coaching in Dar es Salaam, Tanzania. Dar es Salaam, Tanzania's largest city and former capital, has a historic and thriving Indian community, particularly in the Kariyakoo market area. 98% success rate. Enroll today!",
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dar-es-salaam-tanzania',
+  },
+}
 
 export default function Page() {
-  return <PageContent />;
+  return <PageContent />
 }

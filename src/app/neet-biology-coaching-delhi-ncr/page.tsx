@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     'neet biology coaching south extension',
     'best neet biology coaching',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-delhi-ncr',
+  },
+
   openGraph: {
     title: 'NEET Biology Coaching in Delhi NCR',
     description:

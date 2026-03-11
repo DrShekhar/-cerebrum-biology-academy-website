@@ -2,11 +2,16 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Edexcel to NEET Biology Bridge',
-  description: 'Specialized bridge course for Edexcel Biology students (IGCSE/A-Level) preparing for NEET. Expert faculty, comprehensive gap analysis, proven 98% conversion rate.',
+  description:
+    'Specialized bridge course for Edexcel Biology students (IGCSE/A-Level) preparing for NEET. Expert faculty, comprehensive gap analysis, proven 98% conversion rate.',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/edexcel-to-neet-biology-preparation',
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'Edexcel to NEET Biology Bridge',
-    description: 'Specialized bridge course for Edexcel Biology students (IGCSE/A-Level) preparing for NEET. Expert faculty, comprehensive gap analysis, proven 98% conversion rate.',
+    description:
+      'Specialized bridge course for Edexcel Biology students (IGCSE/A-Level) preparing for NEET. Expert faculty, comprehensive gap analysis, proven 98% conversion rate.',
   },
 }
 

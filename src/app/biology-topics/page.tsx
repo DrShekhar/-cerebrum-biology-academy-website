@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     'Comprehensive biology topics for NEET preparation. Master Zoology, Botany, Human Physiology, Genetics, Ecology, Cell Biology, and more with expert guidance from AIIMS faculty.',
   keywords:
     'biology topics for NEET, NEET biology syllabus, zoology topics, botany topics, human physiology, genetics, ecology, cell biology, molecular biology, evolution, biodiversity, NCERT biology topics, NEET biology chapters',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/biology-topics',
+  },
+
   openGraph: {
     title: 'Biology Topics for NEET | Complete Study Guide',
     description:

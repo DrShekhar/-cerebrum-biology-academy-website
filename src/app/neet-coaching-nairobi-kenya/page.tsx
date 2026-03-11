@@ -1,11 +1,15 @@
-import { Metadata } from 'next';
-import PageContent from './PageContent';
+import { Metadata } from 'next'
+import PageContent from './PageContent'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Nairobi, Kenya',
-  description: "Expert NEET coaching in Nairobi, Kenya. Nairobi, Kenya's vibrant capital, hosts the largest Indian community in East Africa with over 50,000 residents, making it a major hub for NEET coaching. 98% success rate. Enroll today!",
-};
+  description:
+    "Expert NEET coaching in Nairobi, Kenya. Nairobi, Kenya's vibrant capital, hosts the largest Indian community in East Africa with over 50,000 residents, making it a major hub for NEET coaching. 98% success rate. Enroll today!",
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-nairobi-kenya',
+  },
+}
 
 export default function Page() {
-  return <PageContent />;
+  return <PageContent />
 }

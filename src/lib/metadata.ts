@@ -23,7 +23,6 @@ export function generatePageMetadata(params: PageMetadataParams): Metadata {
     title: params.title,
     description: params.description,
     keywords: keywordsArray,
-    canonical: canonicalUrl,
     openGraph: {
       title: params.title,
       description: params.description,

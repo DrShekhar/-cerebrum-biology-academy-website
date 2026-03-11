@@ -4,6 +4,10 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Counselor Request Received',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/admissions/counselor-requested',
+  },
+
   robots: { index: false, follow: false },
 }
 
@@ -17,12 +21,10 @@ export default function CounselorRequestedPage() {
           </div>
         </div>
 
-        <h1 className="text-2xl font-bold text-slate-900 mb-2">
-          Counselor Request Received!
-        </h1>
+        <h1 className="text-2xl font-bold text-slate-900 mb-2">Counselor Request Received!</h1>
         <p className="text-slate-600 mb-6">
-          Our admission counselor will contact you shortly to help you with the enrollment
-          process and answer any questions you may have.
+          Our admission counselor will contact you shortly to help you with the enrollment process
+          and answer any questions you may have.
         </p>
 
         <div className="bg-blue-50 rounded-lg p-4 mb-6">
@@ -52,10 +54,7 @@ export default function CounselorRequestedPage() {
             Browse Courses
           </Link>
 
-          <Link
-            href="/"
-            className="block text-sm text-slate-500 hover:text-slate-700 mt-4"
-          >
+          <Link href="/" className="block text-sm text-slate-500 hover:text-slate-700 mt-4">
             Back to Homepage
           </Link>
         </div>

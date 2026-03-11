@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   description:
     'Refer friends to Cerebrum Biology Academy and earn rewards. Get ₹500 for every successful referral. Share your unique code and help your friends succeed in NEET.',
   robots: { index: false, follow: true },
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/referral',
+  },
+
   openGraph: {
     title: 'Refer & Earn',
     description:
@@ -16,7 +20,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Refer & Earn',
-    description: 'Refer friends to Cerebrum Biology Academy and earn rewards. Get ₹500 for every successful referral.',
+    description:
+      'Refer friends to Cerebrum Biology Academy and earn rewards. Get ₹500 for every successful referral.',
   },
 }
 

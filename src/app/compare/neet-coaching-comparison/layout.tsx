@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     'AIIMS faculty vs regular faculty',
     'NEET coaching fees comparison Delhi',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/compare/neet-coaching-comparison',
+  },
+
   openGraph: {
     title: 'NEET Coaching Comparison 2026 | Cerebrum vs Others',
     description:

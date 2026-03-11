@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     'board exam biology preparation',
     'cbse class 12 biology',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/class-12-board-biology-preparation',
+  },
 }
 
 const usps: USP[] = [

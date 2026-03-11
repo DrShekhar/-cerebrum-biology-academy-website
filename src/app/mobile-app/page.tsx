@@ -12,6 +12,10 @@ export const metadata: Metadata = {
     'NEET preparation app',
     'offline biology study',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/mobile-app',
+  },
+
   robots: { index: false, follow: true },
 }
 

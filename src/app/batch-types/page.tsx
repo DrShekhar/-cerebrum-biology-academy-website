@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next'
+import Link from 'next/link'
 import {
   Clock,
   Users,
@@ -10,7 +10,7 @@ import {
   PhoneIcon,
   Mail,
   MapPin,
-} from 'lucide-react';
+} from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Batch Types - Regular, Weekend, Crash Course',
@@ -18,26 +18,30 @@ export const metadata: Metadata = {
     'Choose the perfect NEET Biology batch for your preparation. Regular batch, weekend batch, crash course, or online live classes at Cerebrum Biology Academy.',
   keywords:
     'NEET biology batch types, regular batch, weekend batch, crash course, online NEET coaching, NEET biology classes Delhi',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/batch-types',
+  },
+
   openGraph: {
     title: 'NEET Biology Batch Types',
     description: 'Find the right NEET Biology batch for your preparation style and schedule.',
     url: 'https://cerebrumbiologyacademy.com/batch-types',
     type: 'website',
   },
-};
+}
 
 interface BatchCard {
-  id: string;
-  title: string;
-  badge: string;
-  for: string;
-  schedule: string;
-  duration: string;
-  includes: string[];
-  fee: string;
-  bestFor: string;
-  icon: React.ReactNode;
-  color: string;
+  id: string
+  title: string
+  badge: string
+  for: string
+  schedule: string
+  duration: string
+  includes: string[]
+  fee: string
+  bestFor: string
+  icon: React.ReactNode
+  color: string
 }
 
 const batchTypes: BatchCard[] = [
@@ -117,7 +121,7 @@ const batchTypes: BatchCard[] = [
     icon: <Users className="w-8 h-8" />,
     color: 'from-green-500 to-green-600',
   },
-];
+]
 
 const faqData = [
   {
@@ -145,7 +149,7 @@ const faqData = [
     answer:
       'All our batches have consistently produced 85%+ students qualifying NEET in the first attempt. The success depends on your commitment and consistency rather than the batch type. Our counselors help you choose the right batch based on your goals.',
   },
-];
+]
 
 export default function BatchTypesPage() {
   return (
@@ -203,9 +207,7 @@ export default function BatchTypesPage() {
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Batch Types
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Batch Types</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Choose based on your schedule, learning style, and preparation timeline
               </p>
@@ -220,9 +222,7 @@ export default function BatchTypesPage() {
                   {/* Header with color gradient */}
                   <div className={`bg-gradient-to-r ${batch.color} p-6 text-white`}>
                     <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 bg-white bg-opacity-20 rounded-lg">
-                        {batch.icon}
-                      </div>
+                      <div className="p-3 bg-white bg-opacity-20 rounded-lg">{batch.icon}</div>
                       <span className="text-xs font-semibold bg-white bg-opacity-30 px-3 py-1 rounded-full">
                         {batch.badge}
                       </span>
@@ -299,8 +299,8 @@ export default function BatchTypesPage() {
                     gives you ample time for school + JEE preparation
                   </p>
                   <p>
-                    <span className="font-semibold">Class 12:</span> Choose Regular Batch if you have
-                    flexible school hours, or Weekend Batch if your school is competitive
+                    <span className="font-semibold">Class 12:</span> Choose Regular Batch if you
+                    have flexible school hours, or Weekend Batch if your school is competitive
                   </p>
                   <p>
                     <span className="font-semibold">Dropper:</span> Crash Course (90-day) or Regular
@@ -319,10 +319,12 @@ export default function BatchTypesPage() {
                     <span className="font-semibold">1-2 hours:</span> Weekend Batch or Online Batch
                   </p>
                   <p>
-                    <span className="font-semibold">2-3 hours:</span> Regular Batch (perfect balance)
+                    <span className="font-semibold">2-3 hours:</span> Regular Batch (perfect
+                    balance)
                   </p>
                   <p>
-                    <span className="font-semibold">5-6 hours:</span> Crash Course for intensive prep
+                    <span className="font-semibold">5-6 hours:</span> Crash Course for intensive
+                    prep
                   </p>
                 </div>
               </div>
@@ -376,8 +378,8 @@ export default function BatchTypesPage() {
                     or Crash Course (₹25,000)
                   </p>
                   <p>
-                    <span className="font-semibold">Moderate budget:</span> Online Batch (₹30,000) or
-                    Regular Batch (₹45,000)
+                    <span className="font-semibold">Moderate budget:</span> Online Batch (₹30,000)
+                    or Regular Batch (₹45,000)
                   </p>
                   <p>
                     <span className="font-semibold">Premium experience:</span> Regular Batch with
@@ -430,9 +432,7 @@ export default function BatchTypesPage() {
                       +
                     </span>
                   </summary>
-                  <div className="px-6 pb-6 border-t text-gray-700">
-                    {item.answer}
-                  </div>
+                  <div className="px-6 pb-6 border-t text-gray-700">{item.answer}</div>
                 </details>
               ))}
             </div>
@@ -440,7 +440,10 @@ export default function BatchTypesPage() {
         </section>
 
         {/* CTA Section */}
-        <section id="demo" className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <section
+          id="demo"
+          className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-blue-800 text-white"
+        >
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your NEET Preparation?
@@ -470,7 +473,10 @@ export default function BatchTypesPage() {
               <div className="flex flex-col items-center">
                 <Mail className="w-8 h-8 mb-3" />
                 <p className="text-sm text-blue-100 mb-2">Email Us</p>
-                <a href="mailto:info@cerebrumbiologyacademy.com" className="font-bold hover:text-blue-50">
+                <a
+                  href="mailto:info@cerebrumbiologyacademy.com"
+                  className="font-bold hover:text-blue-50"
+                >
                   info@cerebrumbiologyacademy.com
                 </a>
               </div>
@@ -511,7 +517,10 @@ export default function BatchTypesPage() {
                   <Mail className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:info@cerebrumbiologyacademy.com" className="text-blue-600 hover:underline">
+                    <a
+                      href="mailto:info@cerebrumbiologyacademy.com"
+                      className="text-blue-600 hover:underline"
+                    >
                       info@cerebrumbiologyacademy.com
                     </a>
                   </div>
@@ -584,5 +593,5 @@ export default function BatchTypesPage() {
         </section>
       </main>
     </>
-  );
+  )
 }

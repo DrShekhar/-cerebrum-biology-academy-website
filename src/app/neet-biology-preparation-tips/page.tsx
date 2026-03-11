@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     'neet biology strategy',
     'how to prepare for neet biology',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-preparation-tips',
+  },
 }
 
 const usps: USP[] = [

@@ -6,6 +6,7 @@ export interface LocalityMetadataParams {
   locality: string
   area?: string
   type: PageType
+  path: string
   customTitle?: string
   customDescription?: string
 }
@@ -39,6 +40,7 @@ export function generateLocalityMetadata({
   locality,
   area,
   type,
+  path,
   customTitle,
   customDescription,
 }: LocalityMetadataParams): Metadata {
@@ -66,7 +68,7 @@ export function generateLocalityMetadata({
       title,
       description,
       type: 'website',
-      url: `${BASE_URL}`,
+      url: `${BASE_URL}${path}`,
       siteName: 'Cerebrum Biology Academy',
       images: [
         {
@@ -85,7 +87,7 @@ export function generateLocalityMetadata({
       images: [ogImageUrl],
     },
     alternates: {
-      canonical: `${BASE_URL}`,
+      canonical: `${BASE_URL}${path}`,
     },
     robots: {
       index: true,

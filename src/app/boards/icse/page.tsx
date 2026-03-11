@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     'Expert ICSE Biology coaching with comprehensive curriculum coverage. In-depth conceptual learning, practical focus, and medical entrance preparation.',
   keywords:
     'ICSE Biology coaching, ICSE board exam, detailed Biology curriculum, medical entrance, practical Biology',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/boards/icse',
+  },
 }
 
 export default function ICSEBiologyPage() {

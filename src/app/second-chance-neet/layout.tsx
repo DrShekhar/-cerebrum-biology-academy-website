@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/second-chance-neet',
+  },
+
   openGraph: {
     title: 'Failed NEET 2024? 90% Success Rate in Second Attempt',
     description:

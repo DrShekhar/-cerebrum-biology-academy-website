@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: 'Disclaimer',
   description:
     'Legal disclaimer for Cerebrum Biology Academy educational services and website content.',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/disclaimer',
+  },
 }
 
 export default function DisclaimerPage() {

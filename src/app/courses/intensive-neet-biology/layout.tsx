@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   keywords:
     'intensive NEET biology, premium NEET course, AIIMS selection, elite biology coaching, exclusive NEET preparation, top AIR ranks, advanced biology course',
   authors: [{ name: 'Cerebrum Biology Academy' }],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/courses/intensive-neet-biology',
+  },
+
   openGraph: {
     title: 'Intensive NEET Biology Course - Elite Program',
     description:

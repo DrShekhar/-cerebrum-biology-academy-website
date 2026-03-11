@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     'NEET rank predictor',
     'calculate NEET score',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/calculator',
+  },
+
   openGraph: {
     title: 'NEET Score Calculator 2027 | Calculate Your Expected Score',
     description:

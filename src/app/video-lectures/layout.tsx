@@ -2,6 +2,10 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Video Lectures - Cerebrum Biology Academy',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/video-lectures',
+  },
+
   robots: { index: false, follow: true },
 }
 

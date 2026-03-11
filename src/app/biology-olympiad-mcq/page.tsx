@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: 'Biology Olympiad MCQ Practice | 5,900+ Free Questions — Campbell Biology Based',
   description:
     'Practice 5,900+ free Biology Olympiad MCQs based on Campbell Biology. Covers all 8 units with MTF, Data Interpretation, and Experimental Design questions. NSEB, USABO, IBO prep.',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/biology-olympiad-mcq',
+  },
+
   openGraph: {
     title: 'Biology Olympiad MCQ Practice | 5,900+ Free Questions',
     description:

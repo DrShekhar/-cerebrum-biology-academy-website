@@ -1,11 +1,15 @@
-import { Metadata } from 'next';
-import PageContent from './PageContent';
+import { Metadata } from 'next'
+import PageContent from './PageContent'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Accra, Ghana',
-  description: "Expert NEET coaching in Accra, Ghana. Accra, Ghana's capital, hosts a growing Indian business diaspora and is establishing itself as a leading tech hub in West Africa. 98% success rate. Enroll today!",
-};
+  description:
+    "Expert NEET coaching in Accra, Ghana. Accra, Ghana's capital, hosts a growing Indian business diaspora and is establishing itself as a leading tech hub in West Africa. 98% success rate. Enroll today!",
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-accra-ghana',
+  },
+}
 
 export default function Page() {
-  return <PageContent />;
+  return <PageContent />
 }

@@ -17,6 +17,10 @@ export const metadata: Metadata = {
     'AI tutoring',
     'instant doubt resolution',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/ai-education-demo',
+  },
+
   openGraph: {
     title: 'Ceri AI - Next-Gen NEET Biology Tutor',
     description: 'The most advanced AI-powered Biology tutor for NEET aspirants',

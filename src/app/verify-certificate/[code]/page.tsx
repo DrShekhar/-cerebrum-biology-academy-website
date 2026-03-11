@@ -17,6 +17,13 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Verify Certificate',
   description: 'Verify the authenticity of a Cerebrum Biology Academy certificate',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/verify-certificate',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 async function verifyCertificate(code: string) {

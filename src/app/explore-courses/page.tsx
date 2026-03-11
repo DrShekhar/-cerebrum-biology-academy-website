@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     'course selection guide',
     'NEET preparation courses',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/explore-courses',
+  },
+
   openGraph: {
     title: 'Explore & Compare NEET Biology Courses',
     description:

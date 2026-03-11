@@ -4,6 +4,10 @@ export const metadata: Metadata = {
   title: 'Leave a Review',
   description:
     'Share your experience at Cerebrum Biology Academy. Your feedback helps future NEET aspirants make the right choice.',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/reviews',
+  },
+
   robots: {
     index: false,
     follow: true,

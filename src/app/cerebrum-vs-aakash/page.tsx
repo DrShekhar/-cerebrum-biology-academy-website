@@ -1,45 +1,57 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Check, X } from 'lucide-react';
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { Check, X } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Cerebrum vs Aakash: Which is Better for NEET Biology 2026?',
-  description: 'Detailed comparison of Cerebrum Biology Academy vs Aakash Institute for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 98% success rate.',
-  keywords: 'cerebrum vs aakash, aakash vs cerebrum, NEET coaching comparison, Biology coaching, Delhi NCR',
+  description:
+    'Detailed comparison of Cerebrum Biology Academy vs Aakash Institute for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 98% success rate.',
+  keywords:
+    'cerebrum vs aakash, aakash vs cerebrum, NEET coaching comparison, Biology coaching, Delhi NCR',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-aakash',
+  },
+
   openGraph: {
     title: 'Cerebrum vs Aakash: Which is Better for NEET Biology 2026?',
-    description: 'Compare Cerebrum Biology Academy vs Aakash Institute. Learn about faculty, fees, success rates, and which institute is better for Biology specialization.',
+    description:
+      'Compare Cerebrum Biology Academy vs Aakash Institute. Learn about faculty, fees, success rates, and which institute is better for Biology specialization.',
     type: 'article',
   },
-};
+}
 
 interface FAQItem {
-  question: string;
-  answer: string;
+  question: string
+  answer: string
 }
 
 const faqs: FAQItem[] = [
   {
     question: 'Is Cerebrum better than Aakash for NEET Biology?',
-    answer: 'Cerebrum specializes exclusively in Biology and leverages AIIMS-trained faculty, making it superior for students prioritizing Biology mastery. With a 98% selection rate and average 120+ marks improvement in Biology, Cerebrum offers focused expertise. Aakash covers all NEET subjects, which may work better if you need comprehensive subject coverage. The choice depends on your Biology proficiency and goals.',
+    answer:
+      'Cerebrum specializes exclusively in Biology and leverages AIIMS-trained faculty, making it superior for students prioritizing Biology mastery. With a 98% selection rate and average 120+ marks improvement in Biology, Cerebrum offers focused expertise. Aakash covers all NEET subjects, which may work better if you need comprehensive subject coverage. The choice depends on your Biology proficiency and goals.',
   },
   {
     question: 'What is the fee difference between Cerebrum and Aakash?',
-    answer: 'Cerebrum Biology Academy charges ₹45,000 to ₹1,20,000 depending on duration and location, while Aakash typically charges ₹1,00,000 to ₹2,50,000 for comprehensive NEET programs. Cerebrum offers competitive pricing with Biology-specialized curriculum, making it more affordable for students focusing on Biology excellence.',
+    answer:
+      'Cerebrum Biology Academy charges ₹45,000 to ₹1,20,000 depending on duration and location, while Aakash typically charges ₹1,00,000 to ₹2,50,000 for comprehensive NEET programs. Cerebrum offers competitive pricing with Biology-specialized curriculum, making it more affordable for students focusing on Biology excellence.',
   },
   {
-    question: 'How is Cerebrum\'s faculty different from Aakash?',
-    answer: 'Cerebrum is founded by Dr. Shekhar, an AIIMS Senior Faculty, and all instructors are AIIMS-trained with specialization in Biology. This ensures medical college-aligned teaching. Aakash employs a mix of faculty across subjects with varying expertise levels, though they do have experienced teachers in individual subjects.',
+    question: "How is Cerebrum's faculty different from Aakash?",
+    answer:
+      'Cerebrum is founded by Dr. Shekhar, an AIIMS Senior Faculty, and all instructors are AIIMS-trained with specialization in Biology. This ensures medical college-aligned teaching. Aakash employs a mix of faculty across subjects with varying expertise levels, though they do have experienced teachers in individual subjects.',
   },
   {
     question: 'Which institute provides better personal attention?',
-    answer: 'Cerebrum maintains batch sizes of 25-30 students with a 1:25 student-to-faculty ratio, ensuring personalized attention. Aakash typically has 60-80+ students per batch with higher ratios. For Biology mastery requiring detailed doubt clearing, Cerebrum\'s smaller batches provide superior personal attention.',
+    answer:
+      "Cerebrum maintains batch sizes of 25-30 students with a 1:25 student-to-faculty ratio, ensuring personalized attention. Aakash typically has 60-80+ students per batch with higher ratios. For Biology mastery requiring detailed doubt clearing, Cerebrum's smaller batches provide superior personal attention.",
   },
   {
     question: 'Does Cerebrum have centers outside Delhi NCR?',
-    answer: 'Currently, Cerebrum Biology Academy operates 6 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum\'s online programs allow students nationwide to access AIIMS-trained faculty expertise.',
+    answer:
+      "Currently, Cerebrum Biology Academy operates 6 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum's online programs allow students nationwide to access AIIMS-trained faculty expertise.",
   },
-];
+]
 
 export default function CerebrumVsAakash() {
   return (
@@ -70,10 +82,13 @@ export default function CerebrumVsAakash() {
             Cerebrum vs Aakash: Which is Better for NEET Biology 2026?
           </h1>
           <p className="text-lg sm:text-xl text-blue-100 mb-6 leading-relaxed">
-            A detailed comparison of two leading NEET coaching institutes. Understand the differences in faculty quality, fees, results, and why Cerebrum specializes in Biology excellence with AIIMS-trained experts.
+            A detailed comparison of two leading NEET coaching institutes. Understand the
+            differences in faculty quality, fees, results, and why Cerebrum specializes in Biology
+            excellence with AIIMS-trained experts.
           </p>
           <p className="text-sm text-blue-200">
-            Last updated: February 2026 | Comparison based on actual institute programs and student feedback
+            Last updated: February 2026 | Comparison based on actual institute programs and student
+            feedback
           </p>
         </div>
       </section>
@@ -180,9 +195,7 @@ export default function CerebrumVsAakash() {
                   <td className="px-4 sm:px-6 py-4 text-sm sm:text-base">
                     <span className="text-green-700 font-medium">1:25</span>
                   </td>
-                  <td className="px-4 sm:px-6 py-4 text-sm sm:text-base text-gray-700">
-                    1:60+
-                  </td>
+                  <td className="px-4 sm:px-6 py-4 text-sm sm:text-base text-gray-700">1:60+</td>
                 </tr>
 
                 <tr className="hover:bg-gray-50">
@@ -228,7 +241,10 @@ export default function CerebrumVsAakash() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span>Founded by Dr. Shekhar, AIIMS Senior Faculty with 15+ years medical education experience</span>
+                    <span>
+                      Founded by Dr. Shekhar, AIIMS Senior Faculty with 15+ years medical education
+                      experience
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -240,7 +256,9 @@ export default function CerebrumVsAakash() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span>1:25 student-to-faculty ratio ensures personalized teaching methodology</span>
+                    <span>
+                      1:25 student-to-faculty ratio ensures personalized teaching methodology
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -254,11 +272,17 @@ export default function CerebrumVsAakash() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <span>Employs faculty across multiple subjects (Physics, Chemistry, Biology, Mathematics)</span>
+                    <span>
+                      Employs faculty across multiple subjects (Physics, Chemistry, Biology,
+                      Mathematics)
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <span>Some experienced faculty with strong subject expertise in individual disciplines</span>
+                    <span>
+                      Some experienced faculty with strong subject expertise in individual
+                      disciplines
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -266,7 +290,9 @@ export default function CerebrumVsAakash() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <span>Faculty trained to teach comprehensive NEET + JEE curriculum simultaneously</span>
+                    <span>
+                      Faculty trained to teach comprehensive NEET + JEE curriculum simultaneously
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -276,7 +302,10 @@ export default function CerebrumVsAakash() {
               </div>
             </div>
             <p className="mt-6 text-gray-700 text-base">
-              <strong>Verdict:</strong> Cerebrum's specialization in Biology with AIIMS-trained faculty provides focused expertise that general NEET coaching institutes cannot match. For Biology excellence, Cerebrum's faculty background gives it a significant advantage.
+              <strong>Verdict:</strong> Cerebrum's specialization in Biology with AIIMS-trained
+              faculty provides focused expertise that general NEET coaching institutes cannot match.
+              For Biology excellence, Cerebrum's faculty background gives it a significant
+              advantage.
             </p>
           </div>
 
@@ -292,16 +321,21 @@ export default function CerebrumVsAakash() {
                   <div>
                     <p className="font-semibold text-gray-900">Online Biology Course</p>
                     <p className="text-green-700 font-bold text-lg">₹45,000 - ₹75,000</p>
-                    <p className="text-sm text-gray-600">6-12 months program with live + recorded classes</p>
+                    <p className="text-sm text-gray-600">
+                      6-12 months program with live + recorded classes
+                    </p>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Offline (Delhi NCR)</p>
                     <p className="text-green-700 font-bold text-lg">₹60,000 - ₹1,20,000</p>
-                    <p className="text-sm text-gray-600">Classroom + online with personalized sessions</p>
+                    <p className="text-sm text-gray-600">
+                      Classroom + online with personalized sessions
+                    </p>
                   </div>
                   <div className="bg-white p-4 rounded border border-blue-200">
                     <p className="text-sm text-gray-700">
-                      <strong>Value Add:</strong> Better ROI through focused Biology training with proven 98% selection rate
+                      <strong>Value Add:</strong> Better ROI through focused Biology training with
+                      proven 98% selection rate
                     </p>
                   </div>
                 </div>
@@ -313,23 +347,31 @@ export default function CerebrumVsAakash() {
                   <div>
                     <p className="font-semibold text-gray-900">Classroom Program (NEET)</p>
                     <p className="text-gray-900 font-bold text-lg">₹1,00,000 - ₹2,50,000</p>
-                    <p className="text-sm text-gray-600">Comprehensive Physics + Chemistry + Biology</p>
+                    <p className="text-sm text-gray-600">
+                      Comprehensive Physics + Chemistry + Biology
+                    </p>
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Online (Aakash Digital)</p>
                     <p className="text-gray-900 font-bold text-lg">₹80,000 - ₹1,50,000</p>
-                    <p className="text-sm text-gray-600">Video-based learning with BYJU'S integration</p>
+                    <p className="text-sm text-gray-600">
+                      Video-based learning with BYJU'S integration
+                    </p>
                   </div>
                   <div className="bg-white p-4 rounded border border-gray-300">
                     <p className="text-sm text-gray-700">
-                      <strong>Note:</strong> Higher fees reflect all-subject curriculum; ROI depends on overall NEET score
+                      <strong>Note:</strong> Higher fees reflect all-subject curriculum; ROI depends
+                      on overall NEET score
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <p className="mt-6 text-gray-700 text-base">
-              <strong>Verdict:</strong> Cerebrum offers superior affordability with specialized Biology focus. If you need comprehensive NEET subject coverage, Aakash's all-in-one approach justifies higher fees. For Biology specialists, Cerebrum provides 50-70% cost savings.
+              <strong>Verdict:</strong> Cerebrum offers superior affordability with specialized
+              Biology focus. If you need comprehensive NEET subject coverage, Aakash's all-in-one
+              approach justifies higher fees. For Biology specialists, Cerebrum provides 50-70% cost
+              savings.
             </p>
           </div>
 
@@ -344,11 +386,16 @@ export default function CerebrumVsAakash() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span><strong>98% Selection Rate</strong> - Among all students completing the program</span>
+                    <span>
+                      <strong>98% Selection Rate</strong> - Among all students completing the
+                      program
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span><strong>Average Biology Score Improvement:</strong> 120+ marks within 6 months</span>
+                    <span>
+                      <strong>Average Biology Score Improvement:</strong> 120+ marks within 6 months
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -392,7 +439,10 @@ export default function CerebrumVsAakash() {
               </div>
             </div>
             <p className="mt-6 text-gray-700 text-base">
-              <strong>Verdict:</strong> Cerebrum's 98% selection rate demonstrates focused excellence in Biology training. Aakash's track record is solid but distributed across multiple subjects. For Biology-specific improvements, Cerebrum's specialized approach shows measurable advantages.
+              <strong>Verdict:</strong> Cerebrum's 98% selection rate demonstrates focused
+              excellence in Biology training. Aakash's track record is solid but distributed across
+              multiple subjects. For Biology-specific improvements, Cerebrum's specialized approach
+              shows measurable advantages.
             </p>
           </div>
 
@@ -423,7 +473,9 @@ export default function CerebrumVsAakash() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span>Direct access to faculty for concept clarification via WhatsApp/Email</span>
+                    <span>
+                      Direct access to faculty for concept clarification via WhatsApp/Email
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -463,7 +515,10 @@ export default function CerebrumVsAakash() {
               </div>
             </div>
             <p className="mt-6 text-gray-700 text-base">
-              <strong>Verdict:</strong> Cerebrum provides focused Biology material with direct faculty access. Aakash offers comprehensive multi-subject resources with advanced technology. Cerebrum is better for in-depth Biology learning; Aakash for complete NEET preparation.
+              <strong>Verdict:</strong> Cerebrum provides focused Biology material with direct
+              faculty access. Aakash offers comprehensive multi-subject resources with advanced
+              technology. Cerebrum is better for in-depth Biology learning; Aakash for complete NEET
+              preparation.
             </p>
           </div>
 
@@ -478,7 +533,10 @@ export default function CerebrumVsAakash() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span><strong>4 Centers in Delhi NCR:</strong> Strategically located for easy accessibility</span>
+                    <span>
+                      <strong>4 Centers in Delhi NCR:</strong> Strategically located for easy
+                      accessibility
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -504,7 +562,9 @@ export default function CerebrumVsAakash() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                    <span><strong>Pan-India Presence:</strong> 200+ centers across major Indian cities</span>
+                    <span>
+                      <strong>Pan-India Presence:</strong> 200+ centers across major Indian cities
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
@@ -526,7 +586,9 @@ export default function CerebrumVsAakash() {
               </div>
             </div>
             <p className="mt-6 text-gray-700 text-base">
-              <strong>Verdict:</strong> Cerebrum is ideal for Delhi NCR students with direct access to AIIMS faculty. Aakash suits students nationwide needing centers in multiple cities. For Delhi NCR, both are accessible; Cerebrum offers specialized Biology focus.
+              <strong>Verdict:</strong> Cerebrum is ideal for Delhi NCR students with direct access
+              to AIIMS faculty. Aakash suits students nationwide needing centers in multiple cities.
+              For Delhi NCR, both are accessible; Cerebrum offers specialized Biology focus.
             </p>
           </div>
 
@@ -546,7 +608,8 @@ export default function CerebrumVsAakash() {
                       AIIMS-Trained Faculty Specialization
                     </p>
                     <p className="text-gray-700 text-sm">
-                      Learn from Dr. Shekhar and AIIMS-trained instructors who understand medical college entrance exam requirements deeply.
+                      Learn from Dr. Shekhar and AIIMS-trained instructors who understand medical
+                      college entrance exam requirements deeply.
                     </p>
                   </div>
                 </li>
@@ -556,11 +619,10 @@ export default function CerebrumVsAakash() {
                     2
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">
-                      Biology-Focused Curriculum
-                    </p>
+                    <p className="font-semibold text-gray-900">Biology-Focused Curriculum</p>
                     <p className="text-gray-700 text-sm">
-                      Specialized coaching for Biology with 98% selection rate proves the effectiveness of focused expertise over generalized approaches.
+                      Specialized coaching for Biology with 98% selection rate proves the
+                      effectiveness of focused expertise over generalized approaches.
                     </p>
                   </div>
                 </li>
@@ -574,7 +636,8 @@ export default function CerebrumVsAakash() {
                       Personalized Attention (1:25 Ratio)
                     </p>
                     <p className="text-gray-700 text-sm">
-                      Small batch sizes ensure every student receives individual attention, concept clarity, and customized doubt resolution.
+                      Small batch sizes ensure every student receives individual attention, concept
+                      clarity, and customized doubt resolution.
                     </p>
                   </div>
                 </li>
@@ -584,11 +647,10 @@ export default function CerebrumVsAakash() {
                     4
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">
-                      Cost-Effective (50-70% Savings)
-                    </p>
+                    <p className="font-semibold text-gray-900">Cost-Effective (50-70% Savings)</p>
                     <p className="text-gray-700 text-sm">
-                      Superior Biology results at half the cost of general NEET institutes, making it the best value for money.
+                      Superior Biology results at half the cost of general NEET institutes, making
+                      it the best value for money.
                     </p>
                   </div>
                 </li>
@@ -598,11 +660,10 @@ export default function CerebrumVsAakash() {
                     5
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">
-                      Proven Track Record
-                    </p>
+                    <p className="font-semibold text-gray-900">Proven Track Record</p>
                     <p className="text-gray-700 text-sm">
-                      Average 120+ marks improvement in Biology, consistent year-on-year success, and multiple selections to top medical colleges.
+                      Average 120+ marks improvement in Biology, consistent year-on-year success,
+                      and multiple selections to top medical colleges.
                     </p>
                   </div>
                 </li>
@@ -612,11 +673,10 @@ export default function CerebrumVsAakash() {
                     6
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">
-                      Flexible Learning Options
-                    </p>
+                    <p className="font-semibold text-gray-900">Flexible Learning Options</p>
                     <p className="text-gray-700 text-sm">
-                      Choose between offline classes in Delhi NCR, fully online, or hybrid mode with live + recorded sessions for maximum flexibility.
+                      Choose between offline classes in Delhi NCR, fully online, or hybrid mode with
+                      live + recorded sessions for maximum flexibility.
                     </p>
                   </div>
                 </li>
@@ -626,11 +686,10 @@ export default function CerebrumVsAakash() {
                     7
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">
-                      Direct Faculty Access
-                    </p>
+                    <p className="font-semibold text-gray-900">Direct Faculty Access</p>
                     <p className="text-gray-700 text-sm">
-                      WhatsApp, email, and scheduled sessions for doubt resolution directly with AIIMS-trained faculty members.
+                      WhatsApp, email, and scheduled sessions for doubt resolution directly with
+                      AIIMS-trained faculty members.
                     </p>
                   </div>
                 </li>
@@ -671,11 +730,10 @@ export default function CerebrumVsAakash() {
       {/* CTA Section */}
       <section className="py-12 sm:py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Ready to Master Biology for NEET?
-          </h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Master Biology for NEET?</h2>
           <p className="text-lg text-blue-100 mb-8">
-            Join Cerebrum Biology Academy and experience AIIMS-trained coaching with proven 98% selection rate.
+            Join Cerebrum Biology Academy and experience AIIMS-trained coaching with proven 98%
+            selection rate.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -704,11 +762,13 @@ export default function CerebrumVsAakash() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-blue-400">
-            <p className="text-blue-100 mb-4">
-              Have questions? We are here to help!
-            </p>
+            <p className="text-blue-100 mb-4">Have questions? We are here to help!</p>
             <p className="text-blue-100 text-sm">
-              Email: <a href="mailto:info@cerebrumbiologyacademy.com" className="underline hover:text-white">
+              Email:{' '}
+              <a
+                href="mailto:info@cerebrumbiologyacademy.com"
+                className="underline hover:text-white"
+              >
                 info@cerebrumbiologyacademy.com
               </a>
             </p>
@@ -756,5 +816,5 @@ export default function CerebrumVsAakash() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     'live scoreboard',
     'teaching tool',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-tools/quiz-competition',
+  },
+
   openGraph: {
     title: 'Quiz Competition - Classroom Quiz Tool',
     description: 'Conduct engaging team-based quizzes with live score updates across all devices.',
@@ -22,7 +26,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Quiz Competition - Classroom Quiz Tool',
-    description: 'Conduct engaging team-based quizzes in your classroom. Two teams compete with live score updates on all devices.',
+    description:
+      'Conduct engaging team-based quizzes in your classroom. Two teams compete with live score updates on all devices.',
   },
 }
 

@@ -1,11 +1,15 @@
-import { Metadata } from 'next';
-import PageContent from './PageContent';
+import { Metadata } from 'next'
+import PageContent from './PageContent'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Al Wakrah, Qatar',
-  description: "Expert NEET coaching in Al Wakrah, Qatar. Al Wakrah, Qatar's growing satellite city south of Doha, offers modern educational infrastructure and competitive NEET coaching options. 98% success rate. Enroll today!",
-};
+  description:
+    "Expert NEET coaching in Al Wakrah, Qatar. Al Wakrah, Qatar's growing satellite city south of Doha, offers modern educational infrastructure and competitive NEET coaching options. 98% success rate. Enroll today!",
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-al-wakrah-qatar',
+  },
+}
 
 export default function Page() {
-  return <PageContent />;
+  return <PageContent />
 }

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     'Expert Biology coaching for all major boards - CBSE, ICSE, IGCSE, IB, and State Boards. Score 90+ marks with our specialized board preparation programs.',
   keywords:
     'board preparation, CBSE Biology, ICSE Biology, IGCSE Biology, IB Biology, state board, board exam coaching',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/boards',
+  },
 }
 
 export default function BoardPreparationPage() {

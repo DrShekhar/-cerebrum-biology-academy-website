@@ -7,6 +7,10 @@ export const metadata: Metadata = {
     'Best NEET coaching in Vikas Puri, West Delhi. Expert AIIMS faculty, small batches, proven results. Serving all 9 blocks, KG apartments & DDA flats. 15-20 min from Rohini via metro.',
   keywords:
     'NEET coaching vikas puri, biology tuition vikas puri delhi, NEET classes vikas puri, medical coaching west delhi, biology coaching vikas puri, NEET preparation vikas puri',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-vikas-puri',
+  },
+
   openGraph: {
     title: 'NEET Coaching Vikas Puri | Biology Classes West Delhi',
     description:

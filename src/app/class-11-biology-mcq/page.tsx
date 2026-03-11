@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: 'Class 11 Biology MCQ Practice | 2,200+ Free Questions — NCERT Based',
   description:
     'Practice 2,200+ free Class 11 Biology MCQs based on NCERT. Covers Diversity, Structural Organisation, Cell Biology, Plant & Human Physiology. Start now!',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/class-11-biology-mcq',
+  },
+
   openGraph: {
     title: 'Class 11 Biology MCQ Practice | 2,200+ Free Questions',
     description:
@@ -145,7 +149,8 @@ export default function Class11BiologyMCQPage() {
             <p>
               Class 11 Biology lays the foundation for both board exams and NEET. Topics like Cell
               Biology, Plant Physiology, and Human Physiology carry significant weightage. Regular
-              MCQ practice helps you retain concepts, identify weak areas, and build exam confidence.
+              MCQ practice helps you retain concepts, identify weak areas, and build exam
+              confidence.
             </p>
             <h3>How to Use This Practice Tool</h3>
             <ul>

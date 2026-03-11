@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     'CBSE Biology class 9',
     'Class 9 home tutor Biology',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/courses/class-9-foundation',
+  },
+
   openGraph: {
     title: 'Class 9 Biology Foundation | Pre-NEET Preparation',
     description:

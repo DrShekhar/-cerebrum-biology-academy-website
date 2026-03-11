@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     'Experience the power of traditional classroom coaching for NEET Biology. Small batches, personal attention, practical lab work, and direct faculty interaction. Starting ₹25,999.',
   keywords:
     'NEET classroom coaching, Biology coaching classes, face-to-face teaching, traditional coaching, small batch coaching, practical Biology lab, NEET coaching center',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/services/classroom',
+  },
 }
 
 export default function ClassroomCoachingPage() {

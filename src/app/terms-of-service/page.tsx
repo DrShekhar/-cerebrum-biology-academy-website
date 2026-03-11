@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
     'Terms and conditions for using Cerebrum Biology Academy services and educational platform.',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/terms-of-service',
+  },
 }
 
 export default function TermsOfServicePage() {

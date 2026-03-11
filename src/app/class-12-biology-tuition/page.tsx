@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     'CBSE biology class 12',
     'class 12 biology coaching delhi',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/class-12-biology-tuition',
+  },
 }
 
 const usps: USP[] = [

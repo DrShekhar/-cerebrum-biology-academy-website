@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     'neet biology mcqs',
     'neet previous year papers',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-biology-study-material',
+  },
 }
 
 const usps: USP[] = [

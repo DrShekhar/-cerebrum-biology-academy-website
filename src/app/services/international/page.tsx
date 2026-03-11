@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     'Comprehensive NEET Biology coaching for international students and Indians abroad. IGCSE, IB, AP Biology support, global university prep, 24/7 timezone support. Starting $599.',
   keywords:
     'international NEET coaching, global Biology education, IGCSE Biology, IB Biology, AP Biology, medical admissions abroad, international students NEET, overseas education, global medical programs, timezone flexible coaching',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/services/international',
+  },
 }
 
 export default function InternationalProgramsPage() {

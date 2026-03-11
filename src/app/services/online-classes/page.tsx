@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     "Join India's most advanced online NEET Biology coaching. HD live classes, recorded sessions, interactive whiteboard, 24/7 doubt resolution. Starting ₹15,999.",
   keywords:
     'online NEET coaching, Biology online classes, live NEET sessions, interactive online learning, NEET preparation online, virtual Biology coaching',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/services/online-classes',
+  },
 }
 
 export default function OnlineClassesPage() {
