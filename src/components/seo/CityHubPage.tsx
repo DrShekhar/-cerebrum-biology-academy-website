@@ -28,6 +28,8 @@ import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { WhatsAppCTAButton } from '@/components/seo/WhatsAppCTAButton'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 import { LocalSEOCrossLinks } from '@/components/seo/LocalSEOCrossLinks'
+import { AreasServedSection } from '@/components/seo/AreasServedSection'
+import { getCityAreas } from '@/data/city-seo/city-area-map'
 
 interface CityHubPageProps {
   data: CityHubData
@@ -120,6 +122,7 @@ const freeResources = [
 
 export function CityHubPage({ data }: CityHubPageProps) {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
+  const cityAreas = getCityAreas(data.slug)
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -640,6 +643,46 @@ export function CityHubPage({ data }: CityHubPageProps) {
                     Biology Classes in {locality.name}
                   </Link>
                 ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Areas We Serve - city-specific content from area data files */}
+        {cityAreas.length > 0 && (
+          <AreasServedSection
+            cityName={data.cityName}
+            citySlug={data.slug}
+            areas={cityAreas}
+          />
+        )}
+
+        {/* How to Reach Us */}
+        {data.localContext && (data.localContext.nearbyLandmarks || data.localContext.transportOptions) && (
+          <section className="bg-white py-16">
+            <div className="container mx-auto px-4">
+              <div className="mx-auto max-w-4xl">
+                <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
+                  How to Reach Cerebrum Academy from {data.cityName}
+                </h2>
+                <div className="grid gap-6 md:grid-cols-2">
+                  {data.nearestCenter && (
+                    <div className="rounded-xl border border-gray-200 bg-gray-50 p-6">
+                      <h3 className="mb-3 font-semibold text-gray-900">Nearest Center</h3>
+                      <p className="text-gray-600">{data.nearestCenter.name}</p>
+                      <p className="mt-1 text-sm text-gray-500">{data.nearestCenter.address}</p>
+                      {data.nearestCenter.distance && (
+                        <p className="mt-2 text-sm font-medium text-green-600">{data.nearestCenter.distance} from {data.cityName}</p>
+                      )}
+                    </div>
+                  )}
+                  {data.localContext.transportOptions && (
+                    <div className="rounded-xl border border-gray-200 bg-gray-50 p-6">
+                      <h3 className="mb-3 font-semibold text-gray-900">Transport Options</h3>
+                      <p className="text-gray-600">{data.localContext.transportOptions}</p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </section>
