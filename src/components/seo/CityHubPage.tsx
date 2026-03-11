@@ -8,13 +8,9 @@ import {
   CheckCircle,
   Phone,
   Clock,
-  BookOpen,
   GraduationCap,
-  Video,
-  MessageCircle,
   Building,
   ArrowRight,
-  Target,
   Wifi,
   Navigation,
   FileText,
@@ -24,10 +20,6 @@ import {
   Zap,
   Shield,
   Award,
-  Stethoscope,
-  Brain,
-  TrendingUp,
-  School,
 } from 'lucide-react'
 import type { CityHubData } from '@/data/city-seo/cities'
 import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'
@@ -100,39 +92,6 @@ const courses = [
   },
 ]
 
-const whyChooseUs = [
-  {
-    icon: GraduationCap,
-    title: 'AIIMS-Trained Faculty',
-    description:
-      'Learn from Dr. Shekhar C Singh, AIIMS New Delhi Alumnus with 15+ years experience',
-  },
-  {
-    icon: Users,
-    title: 'Small Batch Size',
-    description: 'Only 15-20 students per batch for personalized attention',
-  },
-  {
-    icon: Target,
-    title: '98% Success Rate',
-    description: 'Proven track record with thousands of NEET qualifiers',
-  },
-  {
-    icon: Video,
-    title: 'Hybrid Learning',
-    description: 'Flexibility to attend online or offline as per convenience',
-  },
-  {
-    icon: MessageCircle,
-    title: '24/7 Doubt Support',
-    description: 'Get doubts resolved anytime via WhatsApp',
-  },
-  {
-    icon: BookOpen,
-    title: 'NCERT-Focused Material',
-    description: 'Comprehensive study material aligned with NEET pattern',
-  },
-]
 
 const freeResources = [
   {
@@ -158,79 +117,6 @@ const freeResources = [
   },
 ]
 
-// Enhanced NEET Tools - Free for all students
-const neetTools = [
-  {
-    icon: School,
-    title: 'NEET College Predictor',
-    description: 'Find which medical colleges you can get based on your NEET score',
-    href: '/neet-college-predictor',
-    color: 'from-green-500 to-teal-600',
-    bgColor: 'bg-green-50',
-    textColor: 'text-green-700',
-    cta: 'Predict Colleges',
-  },
-  {
-    icon: TrendingUp,
-    title: 'NEET Rank Predictor',
-    description: 'Predict your All India Rank based on expected score',
-    href: '/neet-rank-predictor',
-    color: 'from-purple-500 to-indigo-600',
-    bgColor: 'bg-purple-50',
-    textColor: 'text-purple-700',
-    cta: 'Predict Rank',
-  },
-  {
-    icon: Brain,
-    title: 'Biology MCQ Practice',
-    description: 'Practice 10,000+ NEET Biology MCQs with explanations',
-    href: '/neet-biology-mcq-test',
-    color: 'from-blue-500 to-cyan-600',
-    bgColor: 'bg-blue-50',
-    textColor: 'text-blue-700',
-    cta: 'Start Practice',
-  },
-  {
-    icon: FileText,
-    title: 'NEET PYQ Papers',
-    description: 'Access last 10 years previous year questions with solutions',
-    href: '/neet-previous-year-papers',
-    color: 'from-orange-500 to-red-500',
-    bgColor: 'bg-orange-50',
-    textColor: 'text-orange-700',
-    cta: 'Solve PYQs',
-  },
-]
-
-// How Cerebrum helps students reach medical colleges
-const howWeHelp = [
-  {
-    icon: GraduationCap,
-    title: 'AIIMS-Trained Faculty',
-    stat: '15+ Years',
-    description:
-      'Learn Biology from Dr. Shekhar C Singh, AIIMS Delhi Alumnus who understands exactly what NEET demands',
-  },
-  {
-    icon: Target,
-    title: 'Focused NEET Strategy',
-    stat: '98% Success',
-    description:
-      'Our proven teaching methodology focuses on high-yield topics that appear repeatedly in NEET',
-  },
-  {
-    icon: Users,
-    title: 'Small Batch Attention',
-    stat: '15-20 Students',
-    description: 'Personal attention ensures no student falls behind. Every doubt gets answered.',
-  },
-  {
-    icon: ClipboardList,
-    title: 'Rigorous Testing',
-    stat: '100+ Mock Tests',
-    description: 'Weekly tests simulate NEET environment so you perform best on exam day',
-  },
-]
 
 export function CityHubPage({ data }: CityHubPageProps) {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
@@ -604,72 +490,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
           </section>
         )}
 
-        {/* How Cerebrum Helps You Get Into Medical College */}
-        <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20 text-white">
-          <div className="container mx-auto px-4">
-            <div className="mb-12 text-center">
-              <div className="mb-4 inline-flex items-center rounded-full bg-yellow-500/20 px-6 py-2 text-sm font-semibold text-yellow-400">
-                <Stethoscope className="mr-2 h-4 w-4" />
-                Your Path to Medical College
-              </div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                How Cerebrum Helps You Get Into Medical College
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg text-slate-300">
-                Our proven methodology has helped thousands of students crack NEET and secure MBBS
-                seats
-              </p>
-            </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {howWeHelp.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10"
-                >
-                  <item.icon className="mb-4 h-10 w-10 text-yellow-400" />
-                  <div className="mb-2 text-2xl font-bold text-green-400">{item.stat}</div>
-                  <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
-                  <p className="text-sm text-slate-400">{item.description}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-10 text-center">
-              <Link
-                href="/demo-booking"
-                className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
-              >
-                Start Your Medical Journey Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="bg-gray-50 py-20">
-          <div className="container mx-auto px-4">
-            <div className="mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Why {data.cityName} Students Choose Cerebrum?
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                We are committed to helping you excel in NEET and board exams
-              </p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {whyChooseUs.map((item) => (
-                <div key={item.title} className="rounded-xl bg-white p-6 shadow-md">
-                  <item.icon className="mb-4 h-10 w-10 text-[#4a5d4a]" />
-                  <h3 className="mb-2 text-xl font-semibold text-gray-900">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Courses with Actual Prices */}
         <section className="py-20">
@@ -801,66 +622,6 @@ export function CityHubPage({ data }: CityHubPageProps) {
           </div>
         </section>
 
-        {/* NEET Tools Section - Enhanced Cards */}
-        <section className="bg-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="mb-10 text-center">
-              <div className="mb-4 inline-flex items-center rounded-full bg-purple-100 px-6 py-2 text-sm font-semibold text-purple-700">
-                <Zap className="mr-2 h-4 w-4" />
-                100% Free for All Students
-              </div>
-              <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                Free NEET Tools for {data.cityName} Students
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Use our powerful free tools to track your preparation and predict your performance
-              </p>
-            </div>
-
-            <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {neetTools.map((tool) => (
-                <Link
-                  key={tool.title}
-                  href={tool.href}
-                  className="group relative overflow-hidden rounded-2xl border-2 border-gray-100 bg-white p-6 shadow-md transition hover:border-transparent hover:shadow-xl"
-                >
-                  {/* Gradient background on hover */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 transition-opacity group-hover:opacity-10`}
-                  />
-
-                  <div className={`mb-4 inline-flex rounded-xl ${tool.bgColor} p-3`}>
-                    <tool.icon className={`h-7 w-7 ${tool.textColor}`} />
-                  </div>
-
-                  <h3 className="mb-2 text-lg font-bold text-gray-900">{tool.title}</h3>
-                  <p className="mb-4 text-sm text-gray-600">{tool.description}</p>
-
-                  <span
-                    className={`inline-flex items-center text-sm font-semibold ${tool.textColor} group-hover:underline`}
-                  >
-                    {tool.cta}
-                    <ArrowRight className="ml-1 h-4 w-4 transition group-hover:translate-x-1" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-10 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 p-8 text-center text-white">
-              <h3 className="mb-2 text-xl font-bold">Not sure where you stand?</h3>
-              <p className="mb-4 text-purple-100">
-                Take our free NEET Readiness Quiz to assess your preparation level
-              </p>
-              <Link
-                href="/neet-readiness-quiz"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-purple-700 transition hover:bg-purple-50"
-              >
-                Take Free Quiz
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
 
         {/* Localities */}
         {data.localities.length > 0 && (
