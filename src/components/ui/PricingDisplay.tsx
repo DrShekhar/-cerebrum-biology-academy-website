@@ -131,8 +131,9 @@ export function PricingDisplay({
                 <h3 className="text-lg font-semibold text-green-800">Competitive Advantage</h3>
               </div>
               <p className="text-green-700">
-                Starting at <span className="font-bold">{pricing.formattedMinPrice}</span> vs
-                competitors' ₹60K+ • Up to 25% scholarships • 0% EMI options
+                Starting at <span className="font-bold">₹5,999/year</span> (Elixir) •{' '}
+                <span className="font-bold">{pricing.formattedMinPrice}</span> for premium tiers •
+                Up to 25% scholarships • 0% EMI options
               </p>
             </div>
           </div>

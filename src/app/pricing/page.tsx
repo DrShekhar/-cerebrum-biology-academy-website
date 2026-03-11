@@ -195,6 +195,7 @@ export default function PricingPage() {
     pinnacle: 'Top rankers seeking premium coaching',
     ascent: 'Serious aspirants with balanced approach',
     pursuit: 'Budget-conscious students seeking quality education',
+    elixir: 'Price-sensitive students wanting NCERT-based quality coaching',
   }
 
   const renderTierCard = (tier: PricingTier, classData: ClassPricing) => {
@@ -229,6 +230,14 @@ export default function PricingPage() {
         floatingBadge: '💰 BEST VALUE',
         badgeBg: 'bg-green-600',
         borderColor: 'border-green-200',
+      },
+      elixir: {
+        bg: 'from-amber-50 to-orange-50',
+        textColor: 'text-amber-900',
+        badge: 'bg-amber-100 text-amber-700',
+        floatingBadge: '✨ STARTING ₹5,999/yr',
+        badgeBg: 'bg-amber-500',
+        borderColor: 'border-amber-200',
       },
     }
 
@@ -293,7 +302,7 @@ export default function PricingPage() {
             </div>
             <div className="bg-white/50 rounded-md p-1 sm:p-1.5 min-w-0">
               <div className="text-xs sm:text-sm md:text-base font-bold text-green-600 truncate">
-                {tier.tier === 'pinnacle' ? '55' : tier.tier === 'ascent' ? '120' : '160'}
+                {tier.tier === 'pinnacle' ? '55' : tier.tier === 'ascent' ? '120' : tier.tier === 'elixir' ? '400+' : '160'}
               </div>
               <div className="text-[10px] sm:text-xs opacity-80 truncate">Enrolled</div>
             </div>
@@ -367,6 +376,7 @@ export default function PricingPage() {
                 twoInstallments={tier.prices.twoInstallments}
                 threeInstallments={tier.prices.threeInstallments}
                 tierName={tier.tier}
+                monthly={tier.prices.monthly}
               />
             </div>
           )}
@@ -444,6 +454,9 @@ export default function PricingPage() {
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-green-100/90 max-w-2xl mx-auto px-4 leading-relaxed">
               Small batches, personalized attention, and proven results.
+              <span className="block mt-2 text-yellow-300 font-semibold">
+                Courses starting from just ₹5,999/year
+              </span>
             </p>
           </div>
 
@@ -470,6 +483,94 @@ export default function PricingPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Elixir Banner Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10 pb-0">
+        <div className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-2 border-amber-200 rounded-3xl p-6 sm:p-8 lg:p-10 mb-6 sm:mb-8">
+          <div className="text-center mb-6 sm:mb-8">
+            <span className="inline-flex items-center bg-amber-100 text-amber-700 px-4 py-1.5 rounded-full text-sm font-bold mb-3">
+              NEW: Budget-Friendly Courses
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+              NEET Elixir & BIO Elixir
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              Quality NEET coaching starting from just{' '}
+              <span className="font-bold text-amber-700">₹5,999/year</span> |{' '}
+              <span className="font-bold text-amber-700">₹3,000/month</span>
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto mb-6 sm:mb-8">
+            {/* NEET Elixir Card */}
+            <div className="bg-white rounded-2xl shadow-lg border border-amber-200 p-5 sm:p-6">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900">NEET Elixir</h3>
+                <span className="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full">
+                  NEET Prep
+                </span>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">NCERT-based NEET preparation for Class 11, 12 & Droppers</p>
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-2xl sm:text-3xl font-bold text-gray-900">₹5,999</span>
+                <span className="text-gray-500">/year</span>
+                <span className="text-sm text-gray-400 ml-1">(₹7,999 for Droppers)</span>
+              </div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+                  ₹3,000/mo monthly option
+                </span>
+              </div>
+              <ul className="space-y-2 mb-5">
+                {['400+ students mega batch', 'AIIMS faculty teaching', '3 hours/week live classes', 'Free MCQ practice tool', 'Mock test series included'].map((f) => (
+                  <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
+                    <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/demo-booking">
+                <button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition-colors">
+                  Book Free Demo
+                </button>
+              </Link>
+            </div>
+
+            {/* BIO Elixir Card */}
+            <div className="bg-white rounded-2xl shadow-lg border border-amber-200 p-5 sm:p-6">
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900">BIO Elixir</h3>
+                <span className="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">
+                  Board Biology
+                </span>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">NCERT-based Board Biology for Class 11 & 12</p>
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-2xl sm:text-3xl font-bold text-gray-900">₹5,999</span>
+                <span className="text-gray-500">/year</span>
+              </div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+                  ₹3,000/mo monthly option
+                </span>
+              </div>
+              <ul className="space-y-2 mb-5">
+                {['400+ students mega batch', 'AIIMS faculty teaching', '3 hours/week live classes', 'Free MCQ practice tool', 'NCERT-based Board prep'].map((f) => (
+                  <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
+                    <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/demo-booking">
+                <button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition-colors">
+                  Book Free Demo
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -565,20 +666,33 @@ export default function PricingPage() {
                 {(() => {
                   // Get Focus options based on selected class
                   const getFocusOptions = (): { type: CourseType; label: string }[] => {
-                    // Dropper: NEET only
+                    // Dropper: NEET + Elixir NEET
                     if (selectedClass === 'dropper') {
-                      return [{ type: 'neet', label: 'NEET' }]
+                      return [
+                        { type: 'neet', label: 'NEET' },
+                        { type: 'elixir-neet', label: 'NEET Elixir' },
+                      ]
                     }
                     // 2-Year: NEET only
                     if (selectedClass === '2-year') {
                       return [{ type: 'neet', label: 'NEET' }]
                     }
-                    // Class 9 & 11: Academic terminology
-                    if (selectedClass === 'foundation-9' || selectedClass === 'class-11') {
+                    // Class 9: Academic terminology (no elixir for foundation)
+                    if (selectedClass === 'foundation-9') {
                       return [
                         { type: 'academic', label: 'Academic' },
                         { type: 'neet', label: 'NEET' },
                         { type: 'board-neet', label: 'NEET + Academic' },
+                      ]
+                    }
+                    // Class 11: Academic + Elixir
+                    if (selectedClass === 'class-11') {
+                      return [
+                        { type: 'academic', label: 'Academic' },
+                        { type: 'neet', label: 'NEET' },
+                        { type: 'board-neet', label: 'NEET + Academic' },
+                        { type: 'elixir-neet', label: 'NEET Elixir' },
+                        { type: 'elixir-board', label: 'BIO Elixir' },
                       ]
                     }
                     // Class 10: Boards terminology
@@ -589,13 +703,15 @@ export default function PricingPage() {
                         { type: 'board-neet', label: 'NEET + Boards' },
                       ]
                     }
-                    // Class 12: Boards + Flagship
+                    // Class 12: Boards + Flagship + Elixir
                     if (selectedClass === 'class-12') {
                       return [
                         { type: 'board-only', label: 'Boards' },
                         { type: 'neet', label: 'NEET' },
                         { type: 'board-neet', label: 'NEET + Boards' },
                         { type: 'flagship', label: 'Flagship (12th+11th)' },
+                        { type: 'elixir-neet', label: 'NEET Elixir' },
+                        { type: 'elixir-board', label: 'BIO Elixir' },
                       ]
                     }
                     // All Classes: Show combined options
@@ -828,6 +944,17 @@ export default function PricingPage() {
                 oneOnOne: false,
                 bestFor: 'Budget-conscious students seeking quality',
               },
+              {
+                name: 'Elixir',
+                color: 'amber',
+                badge: '✨ From ₹5,999',
+                batchSize: '400+',
+                hours: '3 hrs',
+                attention: 'Standard',
+                mentorship: false,
+                oneOnOne: false,
+                bestFor: 'Price-sensitive students wanting NCERT-based coaching',
+              },
             ].map((tier) => (
               <div
                 key={tier.name}
@@ -836,7 +963,9 @@ export default function PricingPage() {
                     ? 'border-purple-200 bg-purple-50/50'
                     : tier.color === 'blue'
                       ? 'border-blue-200 bg-blue-50/50'
-                      : 'border-green-200 bg-green-50/50'
+                      : tier.color === 'amber'
+                        ? 'border-amber-200 bg-amber-50/50'
+                        : 'border-green-200 bg-green-50/50'
                 }`}
               >
                 <div className="flex items-center justify-between mb-4">
@@ -846,7 +975,9 @@ export default function PricingPage() {
                         ? 'text-purple-700'
                         : tier.color === 'blue'
                           ? 'text-blue-700'
-                          : 'text-green-700'
+                          : tier.color === 'amber'
+                            ? 'text-amber-700'
+                            : 'text-green-700'
                     }`}
                   >
                     {tier.name}
@@ -857,7 +988,9 @@ export default function PricingPage() {
                         ? 'bg-purple-100 text-purple-700'
                         : tier.color === 'blue'
                           ? 'bg-blue-100 text-blue-700'
-                          : 'bg-green-100 text-green-700'
+                          : tier.color === 'amber'
+                            ? 'bg-amber-100 text-amber-700'
+                            : 'bg-green-100 text-green-700'
                     }`}
                   >
                     {tier.badge}
@@ -931,6 +1064,7 @@ export default function PricingPage() {
                   <th className="pb-4 text-center font-semibold text-purple-700">Pinnacle</th>
                   <th className="pb-4 text-center font-semibold text-blue-700">Ascent</th>
                   <th className="pb-4 text-center font-semibold text-green-700">Pursuit</th>
+                  <th className="pb-4 text-center font-semibold text-amber-700">Elixir</th>
                 </tr>
               </thead>
               <tbody>
@@ -939,12 +1073,14 @@ export default function PricingPage() {
                   <td className="py-4 text-center text-green-600 font-semibold">10-12</td>
                   <td className="py-4 text-center text-blue-600 font-semibold">16-25</td>
                   <td className="py-4 text-center text-gray-600 font-semibold">30-40</td>
+                  <td className="py-4 text-center text-amber-600 font-semibold">400+</td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Weekly Hours</td>
                   <td className="py-4 text-center">10-12 hrs</td>
                   <td className="py-4 text-center">8 hrs</td>
                   <td className="py-4 text-center">6 hrs</td>
+                  <td className="py-4 text-center">3 hrs</td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Personal Attention</td>
@@ -957,9 +1093,15 @@ export default function PricingPage() {
                   <td className="py-4 text-center">
                     <span className="text-gray-600 font-semibold">Good</span>
                   </td>
+                  <td className="py-4 text-center">
+                    <span className="text-amber-600 font-semibold">Standard</span>
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">AIIMS Faculty</td>
+                  <td className="py-4 text-center">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                  </td>
                   <td className="py-4 text-center">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
@@ -981,9 +1123,15 @@ export default function PricingPage() {
                   <td className="py-4 text-center">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
+                  <td className="py-4 text-center">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Mock Tests</td>
+                  <td className="py-4 text-center">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                  </td>
                   <td className="py-4 text-center">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
@@ -1005,6 +1153,9 @@ export default function PricingPage() {
                   <td className="py-4 text-center">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
                   </td>
+                  <td className="py-4 text-center">
+                    <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">Personal Mentorship</td>
@@ -1017,6 +1168,9 @@ export default function PricingPage() {
                   <td className="py-4 text-center">
                     <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
                   </td>
+                  <td className="py-4 text-center">
+                    <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                  </td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
                   <td className="py-4 font-medium">1-on-1 Doubt Sessions</td>
@@ -1025,6 +1179,9 @@ export default function PricingPage() {
                   </td>
                   <td className="py-4 text-center">
                     <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                  </td>
+                  <td className="py-4 text-center">
+                    <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
                   </td>
                   <td className="py-4 text-center">
                     <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
@@ -1047,7 +1204,201 @@ export default function PricingPage() {
                     <br />
                     Quality education
                   </td>
+                  <td className="py-4 text-center text-sm">
+                    Price-sensitive
+                    <br />
+                    NCERT-based coaching
+                  </td>
                 </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Detailed Feature Comparison Table */}
+        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-6 md:p-8 mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
+            Detailed Feature Comparison
+          </h2>
+
+          {/* Mobile Card View */}
+          <div className="md:hidden space-y-6">
+            {[
+              { name: 'Elixir', color: 'amber' },
+              { name: 'Pursuit', color: 'green' },
+              { name: 'Ascent', color: 'blue' },
+              { name: 'Pinnacle', color: 'purple' },
+            ].map((tier) => {
+              const tierKey = tier.name.toLowerCase() as 'elixir' | 'pursuit' | 'ascent' | 'pinnacle'
+              const featureData = [
+                { category: 'Core Teaching', features: [
+                  { name: 'Live Classes', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Recorded Videos', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Personal Mentoring', elixir: false, pursuit: false, ascent: false, pinnacle: true },
+                  { name: 'Doubt Sessions', elixir: false, pursuit: false, ascent: true, pinnacle: true },
+                ]},
+                { category: 'Study Materials', features: [
+                  { name: 'Printed Materials', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Digital Notes', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Worksheets (Digital)', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Worksheets (Printed)', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Previous Year Papers', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                ]},
+                { category: 'Assessment', features: [
+                  { name: 'Weekly Tests', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Test Series', elixir: false, pursuit: false, ascent: true, pinnacle: true },
+                  { name: 'Mock Tests', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Performance Tracking', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'All India Ranking', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                ]},
+                { category: 'Support', features: [
+                  { name: 'Parent Counseling', elixir: false, pursuit: false, ascent: false, pinnacle: true },
+                  { name: 'Career Guidance', elixir: false, pursuit: false, ascent: true, pinnacle: true },
+                  { name: 'Regular Feedback', elixir: false, pursuit: false, ascent: true, pinnacle: true },
+                  { name: 'Study Planning', elixir: false, pursuit: false, ascent: false, pinnacle: true },
+                  { name: 'Revision Sessions', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                ]},
+                { category: 'Extras', features: [
+                  { name: 'Free MCQ Tool', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                  { name: 'Monthly Payment Option', elixir: true, pursuit: false, ascent: false, pinnacle: false },
+                ]},
+              ]
+              const yesCount = featureData.reduce((sum, cat) => sum + cat.features.filter(f => f[tierKey]).length, 0)
+              const totalCount = featureData.reduce((sum, cat) => sum + cat.features.length, 0)
+
+              return (
+                <div
+                  key={tier.name}
+                  className={`border-2 rounded-2xl p-4 ${
+                    tier.color === 'amber' ? 'border-amber-200 bg-amber-50/50' :
+                    tier.color === 'green' ? 'border-green-200 bg-green-50/50' :
+                    tier.color === 'blue' ? 'border-blue-200 bg-blue-50/50' :
+                    'border-purple-200 bg-purple-50/50'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className={`text-lg font-bold ${
+                      tier.color === 'amber' ? 'text-amber-700' :
+                      tier.color === 'green' ? 'text-green-700' :
+                      tier.color === 'blue' ? 'text-blue-700' :
+                      'text-purple-700'
+                    }`}>{tier.name}</h3>
+                    <span className="text-sm text-gray-500">{yesCount}/{totalCount} features</span>
+                  </div>
+                  {featureData.map((cat) => (
+                    <div key={cat.category} className="mb-3">
+                      <div className="text-xs font-semibold text-gray-500 uppercase mb-1">{cat.category}</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {cat.features.map((f) => (
+                          <span
+                            key={f.name}
+                            className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full border ${
+                              f[tierKey] ? 'bg-white border-green-200 text-gray-700' : 'bg-gray-100 border-gray-200 text-gray-400 line-through'
+                            }`}
+                          >
+                            {f[tierKey] ? (
+                              <CheckCircle2 className="w-3 h-3 text-green-600" />
+                            ) : (
+                              <XCircleIcon className="w-3 h-3 text-gray-300" />
+                            )}
+                            {f.name}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Desktop Table View */}
+          <div className="hidden md:block overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="text-left py-3 px-4 font-semibold text-gray-900">Features</th>
+                  <th className="text-center py-3 px-4 font-semibold text-amber-700">Elixir</th>
+                  <th className="text-center py-3 px-4 font-semibold text-green-700">Pursuit</th>
+                  <th className="text-center py-3 px-4 font-semibold text-blue-700">Ascent</th>
+                  <th className="text-center py-3 px-4 font-semibold text-purple-700">Pinnacle</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { category: 'Core Teaching', features: [
+                    { name: 'Live Classes', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Recorded Videos', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Personal Mentoring', elixir: false, pursuit: false, ascent: false, pinnacle: true },
+                    { name: 'Doubt Sessions', elixir: false, pursuit: false, ascent: true, pinnacle: true },
+                  ]},
+                  { category: 'Study Materials', features: [
+                    { name: 'Printed Materials', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Digital Notes', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Worksheets (Digital)', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Worksheets (Printed)', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Previous Year Papers', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                  ]},
+                  { category: 'Assessment', features: [
+                    { name: 'Weekly Tests', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Test Series', elixir: false, pursuit: false, ascent: true, pinnacle: true },
+                    { name: 'Mock Tests', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Performance Tracking', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'All India Ranking', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                  ]},
+                  { category: 'Support', features: [
+                    { name: 'Parent Counseling', elixir: false, pursuit: false, ascent: false, pinnacle: true },
+                    { name: 'Career Guidance', elixir: false, pursuit: false, ascent: true, pinnacle: true },
+                    { name: 'Regular Feedback', elixir: false, pursuit: false, ascent: true, pinnacle: true },
+                    { name: 'Study Planning', elixir: false, pursuit: false, ascent: false, pinnacle: true },
+                    { name: 'Revision Sessions', elixir: false, pursuit: true, ascent: true, pinnacle: true },
+                  ]},
+                  { category: 'Extras', features: [
+                    { name: 'Free MCQ Tool', elixir: true, pursuit: true, ascent: true, pinnacle: true },
+                    { name: 'Monthly Payment Option', elixir: true, pursuit: false, ascent: false, pinnacle: false },
+                  ]},
+                ].map((section) => (
+                  <React.Fragment key={section.category}>
+                    <tr className="bg-gray-50">
+                      <td colSpan={5} className="py-2 px-4 font-semibold text-gray-800 text-sm">
+                        {section.category}
+                      </td>
+                    </tr>
+                    {section.features.map((feature) => (
+                      <tr key={feature.name} className="border-b border-gray-100 hover:bg-blue-50/50 transition-colors">
+                        <td className="py-3 px-4 text-gray-700">{feature.name}</td>
+                        <td className="py-3 px-4 text-center">
+                          {feature.elixir ? (
+                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                          ) : (
+                            <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                          )}
+                        </td>
+                        <td className="py-3 px-4 text-center">
+                          {feature.pursuit ? (
+                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                          ) : (
+                            <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                          )}
+                        </td>
+                        <td className="py-3 px-4 text-center">
+                          {feature.ascent ? (
+                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                          ) : (
+                            <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                          )}
+                        </td>
+                        <td className="py-3 px-4 text-center">
+                          {feature.pinnacle ? (
+                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                          ) : (
+                            <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                ))}
               </tbody>
             </table>
           </div>
@@ -1140,6 +1491,10 @@ export default function PricingPage() {
               {
                 q: 'Can I switch tiers after enrollment?',
                 a: 'Yes, you can upgrade to a higher tier by paying the price difference within the first 30 days of enrollment, subject to batch availability.',
+              },
+              {
+                q: 'What is the Elixir course?',
+                a: '<strong>NEET Elixir (₹5,999/yr)</strong> is our budget-friendly NCERT-based NEET preparation course with AIIMS faculty, 3 hrs/week live classes, mock tests, and free MCQ tool access. <strong>BIO Elixir (₹5,999/yr)</strong> is the Board Biology variant. Dropper Elixir is ₹7,999/yr. Monthly payment of ₹3,000/mo is also available. Ideal for price-sensitive students who want quality coaching at an affordable price.',
               },
             ].map((faq, idx) => (
               <details

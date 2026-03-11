@@ -75,8 +75,15 @@ const featureComparison = [
     category: 'Study Materials',
   },
   {
-    feature: 'Worksheets',
-    pursuit: false,
+    feature: 'Worksheets (Digital)',
+    pursuit: true,
+    ascent: true,
+    pinnacle: true,
+    category: 'Study Materials',
+  },
+  {
+    feature: 'Worksheets (Printed)',
+    pursuit: true,
     ascent: true,
     pinnacle: true,
     category: 'Study Materials',
@@ -118,7 +125,7 @@ const featureComparison = [
   },
   {
     feature: 'All India Ranking',
-    pursuit: false,
+    pursuit: true,
     ascent: true,
     pinnacle: true,
     category: 'Assessment',
@@ -158,9 +165,16 @@ const featureComparison = [
     pinnacle: true,
     category: 'Support',
   },
+  {
+    feature: 'Free MCQ Tool',
+    pursuit: true,
+    ascent: true,
+    pinnacle: true,
+    category: 'Extras',
+  },
 ]
 
-const featureCategories = ['Core Teaching', 'Study Materials', 'Assessment', 'Support']
+const featureCategories = ['Core Teaching', 'Study Materials', 'Assessment', 'Support', 'Extras']
 
 export function DetailedPricingSection({ course }: DetailedPricingSectionProps) {
   const [selectedTier, setSelectedTier] = useState<CourseSeries>('ascent')

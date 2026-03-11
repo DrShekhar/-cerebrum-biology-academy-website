@@ -7,6 +7,7 @@ interface PaymentOptionsDisplayProps {
   twoInstallments: number
   threeInstallments: number
   tierName: TierLevel
+  monthly?: number
 }
 
 export function PaymentOptionsDisplay({
@@ -14,6 +15,7 @@ export function PaymentOptionsDisplay({
   twoInstallments,
   threeInstallments,
   tierName,
+  monthly,
 }: PaymentOptionsDisplayProps) {
   const getTierColor = (tier: TierLevel) => {
     switch (tier) {
@@ -23,6 +25,8 @@ export function PaymentOptionsDisplay({
         return 'bg-blue-600'
       case 'pursuit':
         return 'bg-green-600'
+      case 'elixir':
+        return 'from-amber-500 to-orange-500'
       default:
         return 'from-indigo-500 to-indigo-600'
     }
@@ -76,6 +80,44 @@ export function PaymentOptionsDisplay({
   }
 
   const savingsAmount = lumpSum * 0.05
+
+  if (monthly) {
+    return (
+      <div className="space-y-4">
+        <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-6 relative overflow-hidden">
+          <div className="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+            BEST VALUE
+          </div>
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h4 className="text-lg font-bold text-green-900">Annual Payment</h4>
+              <p className="text-green-700 text-sm">Pay once for the full year</p>
+            </div>
+            <div className="text-right">
+              <div className="text-2xl font-bold text-green-900">{formatCurrency(lumpSum)}</div>
+              <div className="text-sm text-green-600">/year</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-6">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h4 className="text-lg font-bold text-amber-900">Monthly Payment</h4>
+              <p className="text-amber-700 text-sm">Pay month by month</p>
+            </div>
+            <div className="text-right">
+              <div className="text-2xl font-bold text-amber-900">{formatCurrency(monthly)}</div>
+              <div className="text-sm text-amber-600">/month</div>
+            </div>
+          </div>
+          <div className="text-sm text-amber-700">
+            Total if paid monthly: {formatCurrency(monthly * 12)}/year
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-4">

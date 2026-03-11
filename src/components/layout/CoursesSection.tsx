@@ -110,6 +110,9 @@ export function CoursesSection() {
           <p className="text-base xs:text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             {t('viewAllCourses')}
           </p>
+          <p className="mt-2 text-sm sm:text-base font-semibold text-amber-700">
+            Starting from ₹5,999/year
+          </p>
         </div>
 
         {/* Course Categories */}

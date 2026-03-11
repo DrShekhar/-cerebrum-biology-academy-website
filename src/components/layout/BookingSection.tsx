@@ -36,7 +36,7 @@ export function BookingSection() {
     {
       icon: Shield,
       title: 'No Hidden Fees',
-      description: 'Transparent pricing with no surprise charges. What you see is what you pay',
+      description: 'Transparent pricing from ₹5,999/year. No surprise charges — what you see is what you pay',
     },
     {
       icon: Award,

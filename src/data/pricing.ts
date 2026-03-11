@@ -9,9 +9,16 @@ export type ClassLevel =
   | 'dropper'
   | '2-year'
 
-export type TierLevel = 'pinnacle' | 'ascent' | 'pursuit'
+export type TierLevel = 'pinnacle' | 'ascent' | 'pursuit' | 'elixir'
 
-export type CourseType = 'academic' | 'neet' | 'board-only' | 'board-neet' | 'flagship'
+export type CourseType =
+  | 'academic'
+  | 'neet'
+  | 'board-only'
+  | 'board-neet'
+  | 'flagship'
+  | 'elixir-neet'
+  | 'elixir-board'
 
 export interface PricingTier {
   tier: TierLevel
@@ -21,11 +28,13 @@ export interface PricingTier {
     lumpSum: number
     twoInstallments: number
     threeInstallments: number
+    monthly?: number
   }
   features: {
     pinnacle: string[]
     ascent: string[]
     pursuit: string[]
+    elixir: string[]
   }[TierLevel]
 }
 
@@ -76,6 +85,15 @@ const commonFeaturesByTier = {
     tests: 'Basic mock test series',
     recordings: 'Access to recorded lectures',
     support: 'Standard support',
+  },
+  elixir: {
+    batch: '400+ students mega batch',
+    hours: '3 hours/week',
+    aiims: 'AIIMS faculty teaching',
+    materials: 'NCERT-based syllabus',
+    tests: 'Mock test series included',
+    mcq: 'Free MCQ practice tool access',
+    monthly: 'Monthly payment option (₹3,000/mo)',
   },
 }
 
@@ -354,12 +372,36 @@ const class11PursuitFeatures = [
   'Affordable NEET coaching',
 ]
 
+const elixirNeetFeatures = [
+  commonFeaturesByTier.elixir.batch,
+  commonFeaturesByTier.elixir.hours,
+  commonFeaturesByTier.elixir.aiims,
+  'NCERT-based NEET preparation',
+  commonFeaturesByTier.elixir.materials,
+  commonFeaturesByTier.elixir.tests,
+  commonFeaturesByTier.elixir.mcq,
+  'Access to recorded lectures',
+  commonFeaturesByTier.elixir.monthly,
+]
+
+const elixirBoardFeatures = [
+  commonFeaturesByTier.elixir.batch,
+  commonFeaturesByTier.elixir.hours,
+  commonFeaturesByTier.elixir.aiims,
+  'NCERT-based Board Biology preparation',
+  commonFeaturesByTier.elixir.materials,
+  commonFeaturesByTier.elixir.tests,
+  commonFeaturesByTier.elixir.mcq,
+  'Access to recorded lectures',
+  commonFeaturesByTier.elixir.monthly,
+]
+
 const class11: ClassPricing = {
   class: 'class-11',
   displayName: 'Class XI',
   duration: '1 Year',
   description: 'Foundation for NEET & Board exams',
-  availableCourseTypes: ['academic', 'neet', 'board-neet'],
+  availableCourseTypes: ['academic', 'neet', 'board-neet', 'elixir-neet', 'elixir-board'],
   tiers: {
     academic: [
       {
@@ -430,6 +472,24 @@ const class11: ClassPricing = {
         features: class11PursuitFeatures,
       },
     ],
+    'elixir-neet': [
+      {
+        tier: 'elixir',
+        batchSize: '400+',
+        hours: '3 hrs/week',
+        prices: { lumpSum: 5999, twoInstallments: 5999, threeInstallments: 5999, monthly: 3000 },
+        features: elixirNeetFeatures,
+      },
+    ],
+    'elixir-board': [
+      {
+        tier: 'elixir',
+        batchSize: '400+',
+        hours: '3 hrs/week',
+        prices: { lumpSum: 5999, twoInstallments: 5999, threeInstallments: 5999, monthly: 3000 },
+        features: elixirBoardFeatures,
+      },
+    ],
   },
 }
 
@@ -490,7 +550,7 @@ const class12: ClassPricing = {
   displayName: 'Class XII',
   duration: '1 Year',
   description: 'Final year NEET preparation',
-  availableCourseTypes: ['board-only', 'neet', 'board-neet', 'flagship'],
+  availableCourseTypes: ['board-only', 'neet', 'board-neet', 'flagship', 'elixir-neet', 'elixir-board'],
   tiers: {
     'board-only': [
       {
@@ -600,6 +660,24 @@ const class12: ClassPricing = {
         ],
       },
     ],
+    'elixir-neet': [
+      {
+        tier: 'elixir',
+        batchSize: '400+',
+        hours: '3 hrs/week',
+        prices: { lumpSum: 5999, twoInstallments: 5999, threeInstallments: 5999, monthly: 3000 },
+        features: elixirNeetFeatures,
+      },
+    ],
+    'elixir-board': [
+      {
+        tier: 'elixir',
+        batchSize: '400+',
+        hours: '3 hrs/week',
+        prices: { lumpSum: 5999, twoInstallments: 5999, threeInstallments: 5999, monthly: 3000 },
+        features: elixirBoardFeatures,
+      },
+    ],
   },
 }
 
@@ -608,7 +686,7 @@ const dropper: ClassPricing = {
   displayName: 'Dropper/Repeater Batch',
   duration: '1 Year',
   description: 'Intensive preparation for NEET retakers',
-  availableCourseTypes: ['neet'],
+  availableCourseTypes: ['neet', 'elixir-neet'],
   tiers: {
     neet: [
       {
@@ -638,6 +716,15 @@ const dropper: ClassPricing = {
         hours: '6 hrs/week',
         prices: { lumpSum: 70000, twoInstallments: 72000, threeInstallments: 75000 },
         features: class12PursuitFeatures,
+      },
+    ],
+    'elixir-neet': [
+      {
+        tier: 'elixir',
+        batchSize: '400+',
+        hours: '3 hrs/week',
+        prices: { lumpSum: 7999, twoInstallments: 7999, threeInstallments: 7999, monthly: 3000 },
+        features: elixirNeetFeatures,
       },
     ],
   },
@@ -918,6 +1005,12 @@ export function getTierDetails(tier: TierLevel) {
       subtitle: 'Budget-Friendly Quality',
       popular: false,
       color: 'green',
+    },
+    elixir: {
+      name: 'Elixir',
+      subtitle: 'Affordable NCERT-Based Coaching',
+      popular: false,
+      color: 'amber',
     },
   }[tier]
 }

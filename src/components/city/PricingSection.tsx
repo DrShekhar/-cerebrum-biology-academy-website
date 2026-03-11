@@ -10,11 +10,11 @@ interface PricingSectionProps {
 
 const plans = [
   {
-    name: 'Foundation',
-    target: 'Class 11',
-    price: '24,000',
+    name: 'Elixir',
+    target: 'Class 11-12 / Dropper',
+    price: '5,999',
     duration: '/year',
-    features: ['Complete Botany + Zoology', 'NCERT aligned curriculum', 'Weekly chapter tests', 'Doubt clearing sessions'],
+    features: ['NCERT-based NEET prep', 'AIIMS faculty teaching', '3 hrs/week live classes', 'Free MCQ practice tool', 'Monthly option: ₹3,000/mo'],
     popular: false,
   },
   {

@@ -137,6 +137,16 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             AIIMS Selections
           </p>
 
+          {/* Pricing Badge */}
+          <div
+            className="inline-flex items-center bg-amber-500/20 backdrop-blur-sm border border-amber-300/30 px-4 py-2 rounded-full mb-4 animate-fade-in-up"
+            style={{ animationDelay: '0.25s' }}
+          >
+            <span className="text-amber-200 font-semibold text-xs xs:text-sm md:text-base">
+              Courses from ₹5,999/year
+            </span>
+          </div>
+
           {/* PRIMARY CTAs - Book Demo + Call Now */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4">
             <a
