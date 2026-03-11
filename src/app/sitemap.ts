@@ -11,6 +11,9 @@ import { getAllLocalities } from '@/data/localities'
 import { biologyDefinitions } from '@/data/biology-definitions'
 import { INDIAN_STATES } from '@/components/seo/StateSchema'
 import { COMPETITORS } from '@/components/seo/ComparisonSchema'
+import { facultyMembers } from '@/data/faculty'
+import { successStoriesData } from '@/data/successStories'
+import { mockTests } from '@/data/mockTests'
 // localAreas import removed — [localSlug] pages now redirect to city hubs
 import collegesData from '@/data/colleges.json'
 import {
@@ -8098,6 +8101,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const facultyRoutes: MetadataRoute.Sitemap = facultyMembers.map((f) => ({
+    url: `${baseUrl}/faculty/${f.id}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }))
+
+  const successStoryRoutes: MetadataRoute.Sitemap = successStoriesData.map((s) => ({
+    url: `${baseUrl}/success-stories/${s.id}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }))
+
+  const mockTestRoutes: MetadataRoute.Sitemap = mockTests
+    .filter((t) => t.isActive && t.slug)
+    .map((t) => ({
+      url: `${baseUrl}/mock-tests/${t.subject.toLowerCase()}/${t.slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...campbellChapterRoutes,
@@ -8118,6 +8144,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...onlineCityRoutes,
     ...curriculumRoutes,
     ...collegeRoutes,
+    ...facultyRoutes,
+    ...successStoryRoutes,
+    ...mockTestRoutes,
     ...routes,
     ...blogRoutes,
     ...seoLandingRoutes,
