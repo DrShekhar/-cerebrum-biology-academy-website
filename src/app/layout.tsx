@@ -36,6 +36,7 @@ import {
   DynamicTrialBanner,
   DynamicWhatsAppDesktopModal,
 } from '@/components/layout/DynamicComponents'
+import { SEOFooterLinks } from '@/components/seo/SEOFooterLinks'
 import './globals.css'
 
 const geistSans = Geist({
@@ -94,7 +95,6 @@ export const metadata: Metadata = {
     creator: '@cerebrumbiologyacademy',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com',
     types: {
       'application/rss+xml': '/blog/feed.xml',
     },
@@ -232,6 +232,7 @@ export default function RootLayout({
                           {children}
                         </main>
                         <ConditionalHeaderFooter>
+                          <SEOFooterLinks />
                           <div data-lazy="footer" className="priority-lazy" role="contentinfo">
                             <DynamicFooter />
                           </div>
