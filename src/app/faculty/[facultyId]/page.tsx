@@ -1,6 +1,13 @@
 import { notFound } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 import { facultyMembers } from '@/data/faculty'
+
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return facultyMembers.map((f) => ({ facultyId: f.id }))
+}
+
 import {
   BookOpen,
   Star,

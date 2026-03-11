@@ -1130,70 +1130,11 @@ export const gsc404CleanupRedirects = [
     destination: '/biology-classes',
     permanent: true,
   },
-  {
-    source: '/biology-classes-model-town/:path+',
-    destination: '/biology-classes',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-south-delhi/:path+',
-    destination: '/biology-classes',
-    permanent: true,
-  },
-  { source: '/biology-classes-manesar/:path+', destination: '/biology-classes', permanent: true },
-  {
-    source: '/biology-classes-laxmi-nagar/:path+',
-    destination: '/biology-classes',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-preet-vihar/:path+',
-    destination: '/biology-classes',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-pitampura/:path+',
-    destination: '/neet-coaching-north-delhi',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-rohini/:path+',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-green-park/:path+',
-    destination: '/biology-classes-green-park',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-noida/:path+',
-    destination: '/biology-classes-noida',
-    permanent: true,
-  },
-
-  // --- WILDCARD: biology-tuition sub-area routes (catches ~28 URLs) ---
-  {
-    source: '/biology-tuition-west-delhi/:path+',
-    destination: '/biology-tutor',
-    permanent: true,
-  },
-  {
-    source: '/biology-tuition-east-delhi/:path+',
-    destination: '/biology-tutor',
-    permanent: true,
-  },
-  {
-    source: '/biology-tuition-north-delhi/:path+',
-    destination: '/biology-tutor',
-    permanent: true,
-  },
-  { source: '/biology-tuition-gurgaon/:path+', destination: '/biology-tutor', permanent: true },
-  {
-    source: '/biology-tuition-noida/:path+',
-    destination: '/biology-tutor-noida',
-    permanent: true,
-  },
+  // NOTE: model-town, south-delhi, manesar, laxmi-nagar, preet-vihar, pitampura,
+  // rohini, green-park, noida /:path+ wildcards REMOVED — already covered by
+  // /:area* wildcards in next.config.mjs (inline redirects run first).
+  // Similarly biology-tuition-* /:path+ wildcards REMOVED — covered by
+  // /:area+ wildcards in next.config.mjs.
 
   // --- WILDCARD: biology-notes chapter routes (catches ~25 URLs) ---
   {
@@ -1847,17 +1788,17 @@ export const gsc404CleanupBatch3Redirects = [
   // --- Biology Classes nested locality sub-pages → parent hub ---
   {
     source: '/biology-classes-ashok-vihar/phase-1',
-    destination: '/biology-classes-north-delhi',
+    destination: '/biology-classes-rohini',
     permanent: true,
   },
   {
     source: '/biology-classes-ashok-vihar/phase-2',
-    destination: '/biology-classes-north-delhi',
+    destination: '/biology-classes-rohini',
     permanent: true,
   },
   {
     source: '/biology-classes-ashok-vihar/wazirpur',
-    destination: '/biology-classes-north-delhi',
+    destination: '/biology-classes-rohini',
     permanent: true,
   },
   {
@@ -1872,17 +1813,17 @@ export const gsc404CleanupBatch3Redirects = [
   },
   {
     source: '/biology-classes-dwarka/dwarka-mor',
-    destination: '/biology-classes-west-delhi',
+    destination: '/biology-classes-delhi',
     permanent: true,
   },
   {
     source: '/biology-classes-dwarka/sector-21',
-    destination: '/biology-classes-west-delhi',
+    destination: '/biology-classes-delhi',
     permanent: true,
   },
   {
     source: '/biology-classes-dwarka/sector-7',
-    destination: '/biology-classes-west-delhi',
+    destination: '/biology-classes-delhi',
     permanent: true,
   },
   {
@@ -1892,7 +1833,7 @@ export const gsc404CleanupBatch3Redirects = [
   },
   {
     source: '/biology-classes-karol-bagh/cp',
-    destination: '/biology-classes-central-delhi',
+    destination: '/biology-classes-delhi',
     permanent: true,
   },
   {
@@ -1917,7 +1858,7 @@ export const gsc404CleanupBatch3Redirects = [
   },
   {
     source: '/biology-classes-model-town/part-1',
-    destination: '/biology-classes-north-delhi',
+    destination: '/biology-classes-rohini',
     permanent: true,
   },
   {
@@ -1937,7 +1878,7 @@ export const gsc404CleanupBatch3Redirects = [
   },
   {
     source: '/biology-classes-pitampura/kohat-enclave',
-    destination: '/biology-classes-north-delhi',
+    destination: '/neet-coaching-north-delhi',
     permanent: true,
   },
   {
@@ -2178,15 +2119,15 @@ export const gsc404CleanupBatch3Redirects = [
     destination: '/international',
     permanent: true,
   },
-  { source: '/cities/neet-coaching-london-uk', destination: '/neet-coaching-uk', permanent: true },
+  { source: '/cities/neet-coaching-london-uk', destination: '/international/uk', permanent: true },
   {
     source: '/cities/neet-coaching-melbourne-australia',
-    destination: '/neet-coaching-australia',
+    destination: '/international/australia',
     permanent: true,
   },
   {
     source: '/cities/neet-coaching-sydney-australia',
-    destination: '/neet-coaching-australia',
+    destination: '/international/australia',
     permanent: true,
   },
   { source: '/cbo-preparation/', destination: '/biology-olympiad-coaching', permanent: true },

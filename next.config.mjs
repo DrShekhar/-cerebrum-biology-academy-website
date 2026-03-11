@@ -757,7 +757,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/biology-classes-south-delhi/:area*',
+        source: '/biology-classes-south-delhi/:area+',
         destination: '/biology-classes-south-delhi',
         permanent: true,
       },
@@ -767,7 +767,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/biology-classes-noida/:area*',
+        source: '/biology-classes-noida/:area+',
         destination: '/biology-classes-noida',
         permanent: true,
       },
@@ -1478,7 +1478,7 @@ const nextConfig = {
 
       // About sub-page that never existed
       { source: '/about/dr-shekhar', destination: '/about', permanent: true },
-      { source: '/about/:path*', destination: '/about', permanent: true },
+      { source: '/about/:path+', destination: '/about', permanent: true },
 
       // Book demo → demo-booking
       { source: '/book-demo', destination: '/demo-booking', permanent: true },

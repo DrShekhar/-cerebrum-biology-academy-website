@@ -1,6 +1,15 @@
 import { notFound } from 'next/navigation'
-import { getTestBySlug } from '@/data/mockTests'
+import { getTestBySlug, mockTests } from '@/data/mockTests'
 import { TestInterface } from '@/components/mockTests/TestInterface'
+
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return mockTests.map((t) => ({
+    subject: t.subject.toLowerCase(),
+    slug: t.slug,
+  }))
+}
 
 interface Props {
   params: Promise<{

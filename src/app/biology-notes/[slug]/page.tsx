@@ -98,7 +98,7 @@ export default async function BiologyTopicPage({ params }: PageProps) {
     .catch(console.error)
 
   // Parse key points
-  const keyPoints = (topic.keyPoints as string[]) || []
+  const keyPoints = Array.isArray(topic.keyPoints) ? (topic.keyPoints as string[]) : []
 
   return (
     <div className="min-h-screen bg-white">

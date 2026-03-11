@@ -1,7 +1,14 @@
 import { notFound } from 'next/navigation'
 import { StudentJourney } from '@/components/testimonials/StudentJourney'
 import { ScoreComparison } from '@/components/testimonials/ScoreComparison'
-import { getStoryById } from '@/data/successStories'
+import { getStoryById, successStoriesData } from '@/data/successStories'
+
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return successStoriesData.map((s) => ({ studentId: s.id }))
+}
+
 import { Button } from '@/components/ui/Button'
 import { ArrowLeft, Share2, Download, Heart } from 'lucide-react'
 import Link from 'next/link'
