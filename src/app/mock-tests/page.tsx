@@ -1,6 +1,13 @@
 import { prisma } from '@/lib/prisma'
 import Link from 'next/link'
 
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/mock-tests' },
+}
+
 export const revalidate = 3600
 
 async function getTestsFromDatabase() {

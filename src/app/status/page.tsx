@@ -1,5 +1,12 @@
 import Link from 'next/link'
 
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/status' },
+}
+
 export default function StatusPage() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">

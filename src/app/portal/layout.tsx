@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/portal' },
   title: 'Student Portal',
   description:
     'Access your Cerebrum Biology Academy student dashboard. View courses, track progress, access study materials, and manage your NEET preparation journey.',

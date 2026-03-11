@@ -1,5 +1,12 @@
 import { redirect } from 'next/navigation'
 
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/support/help-center' },
+}
+
 /**
  * Redirect /support/help-center to /help
  *
