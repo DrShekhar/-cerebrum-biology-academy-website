@@ -11,7 +11,7 @@ import { getAllLocalities } from '@/data/localities'
 import { biologyDefinitions } from '@/data/biology-definitions'
 import { INDIAN_STATES } from '@/components/seo/StateSchema'
 import { COMPETITORS } from '@/components/seo/ComparisonSchema'
-import { getAllAreaSlugs as getAllLocalAreaSlugs } from '@/data/localAreas'
+// localAreas import removed — [localSlug] pages now redirect to city hubs
 import collegesData from '@/data/colleges.json'
 import {
   seoPageConsolidationRedirects,
@@ -8021,13 +8021,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Local area SEO pages (root-level [localSlug] routes)
-  const localAreaRoutes: MetadataRoute.Sitemap = getAllLocalAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.5,
-  }))
+  // Local area SEO pages removed — all 72 [localSlug] routes now 301 redirect to parent city hubs
 
   // Biology notes for NEET chapter pages
   const biologyNotesChapters = [
@@ -8108,7 +8102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...tagRoutes,
     ...stateRoutes,
     ...compareRoutes,
-    ...localAreaRoutes,
+    // localAreaRoutes removed — redirected to parent city hubs
     ...biologyNotesRoutes,
     ...onlineCityRoutes,
     ...curriculumRoutes,

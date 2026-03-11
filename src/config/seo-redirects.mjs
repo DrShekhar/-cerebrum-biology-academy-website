@@ -754,12 +754,22 @@ export const localAreaPageRedirects = [
     permanent: true,
   },
 
+  // --- Greater Noida ---
+  { source: '/biology-tutor-greater-noida', destination: '/neet-coaching-noida', permanent: true },
+
   // --- Rohini hub ---
+  { source: '/neet-biology-coaching-rohini-sector-1', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/biology-tuition-rohini-sector-3',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-rohini-sector-3',
     destination: '/neet-coaching-rohini',
     permanent: true,
   },
+  { source: '/neet-classes-rohini-sector-7', destination: '/neet-coaching-rohini', permanent: true },
   {
     source: '/neet-coaching-rohini-sector-7',
     destination: '/neet-coaching-rohini',
@@ -775,6 +785,7 @@ export const localAreaPageRedirects = [
     destination: '/neet-coaching-rohini',
     permanent: true,
   },
+  { source: '/biology-coaching-rohini-sector-11', destination: '/neet-coaching-rohini', permanent: true },
   {
     source: '/neet-coaching-rohini-sector-11',
     destination: '/neet-coaching-rohini',
@@ -785,11 +796,15 @@ export const localAreaPageRedirects = [
     destination: '/neet-coaching-rohini',
     permanent: true,
   },
+  { source: '/neet-coaching-rohini-sector-14', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/biology-teacher-rohini-sector-16', destination: '/neet-coaching-rohini', permanent: true },
   {
     source: '/neet-coaching-rohini-sector-16',
     destination: '/neet-coaching-rohini',
     permanent: true,
   },
+  { source: '/neet-biology-rohini-sector-22', destination: '/neet-coaching-rohini', permanent: true },
+  { source: '/biology-classes-rohini-sector-24', destination: '/neet-coaching-rohini', permanent: true },
   {
     source: '/neet-coaching-rohini-sector-24',
     destination: '/neet-coaching-rohini',
@@ -809,6 +824,7 @@ export const localAreaPageRedirects = [
   },
 
   // --- South Delhi hub ---
+  { source: '/neet-coaching-saket-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
   {
     source: '/neet-coaching-greater-kailash-delhi',
     destination: '/neet-coaching-south-delhi',
@@ -903,18 +919,23 @@ export const localAreaPageRedirects = [
 
   // --- Dwarka hub ---
   { source: '/neet-coaching-dwarka-delhi', destination: '/neet-coaching-dwarka', permanent: true },
+  { source: '/neet-coaching-dwarka-sector-6', destination: '/neet-coaching-dwarka', permanent: true },
   {
     source: '/neet-coaching-dwarka-sector-7',
     destination: '/neet-coaching-dwarka',
     permanent: true,
   },
+  { source: '/neet-coaching-dwarka-sector-10', destination: '/neet-coaching-dwarka', permanent: true },
+  { source: '/neet-coaching-dwarka-sector-12', destination: '/neet-coaching-dwarka', permanent: true },
   {
     source: '/neet-coaching-dwarka-sector-19',
     destination: '/neet-coaching-dwarka',
     permanent: true,
   },
+  { source: '/neet-coaching-dwarka-sector-22', destination: '/neet-coaching-dwarka', permanent: true },
 
   // --- Bangalore hub ---
+  { source: '/neet-coaching-whitefield-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
   {
     source: '/biology-coaching-electronic-city-bangalore',
     destination: '/neet-coaching-bangalore',
@@ -936,7 +957,15 @@ export const localAreaPageRedirects = [
     permanent: true,
   },
 
+  // --- Noida expansion ---
+  { source: '/neet-coaching-gaur-city-noida', destination: '/neet-coaching-noida', permanent: true },
+
+  // --- Ghaziabad expansion ---
+  { source: '/neet-coaching-indirapuram', destination: '/neet-coaching-ghaziabad', permanent: true },
+
   // --- Punjab/Chandigarh ---
+  { source: '/neet-coaching-chandigarh-sector-34', destination: '/neet-coaching-chandigarh', permanent: true },
+  { source: '/neet-coaching-chandigarh-sector-17', destination: '/neet-coaching-chandigarh', permanent: true },
   { source: '/neet-coaching-mohali-punjab', destination: '/neet-coaching-mohali', permanent: true },
   {
     source: '/neet-coaching-panchkula-haryana',
