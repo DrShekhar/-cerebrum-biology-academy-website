@@ -8,7 +8,6 @@ interface FooterLinkCategory {
   }>
 }
 
-// Comprehensive footer links organized by category for site-wide crawlability
 const FOOTER_CATEGORIES: FooterLinkCategory[] = [
   {
     heading: 'NEET Coaching Centers',
@@ -19,6 +18,51 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'Green Park', href: '/neet-coaching-green-park' },
       { label: 'Faridabad', href: '/neet-coaching-faridabad' },
       { label: 'Noida Area', href: '/neet-coaching-noida' },
+    ],
+  },
+  {
+    heading: 'Best NEET Coaching',
+    links: [
+      { label: 'Best in Faridabad', href: '/best-neet-coaching-faridabad' },
+      { label: 'Best in Gurugram', href: '/best-neet-coaching-gurugram' },
+      { label: 'Best in Noida', href: '/best-neet-coaching-noida' },
+      { label: 'Best in Ghaziabad', href: '/best-neet-coaching-ghaziabad' },
+      { label: 'Best in Greater Noida', href: '/best-neet-coaching-greater-noida' },
+      { label: 'Best Biology Coaching', href: '/best-neet-biology-coaching' },
+    ],
+  },
+  {
+    heading: 'Top Coaching Guides',
+    links: [
+      { label: 'Top 10 Faridabad', href: '/top-10-neet-coaching-faridabad' },
+      { label: 'Top 10 Gurugram', href: '/top-10-neet-coaching-gurugram' },
+      { label: 'Top 10 Noida', href: '/top-10-neet-coaching-noida' },
+      { label: 'Top 10 Ghaziabad', href: '/top-10-neet-coaching-ghaziabad' },
+      { label: 'Top 10 Greater Noida', href: '/top-10-neet-coaching-greater-noida' },
+      { label: 'Coaching Comparison', href: '/neet-coaching-comparison' },
+    ],
+  },
+  {
+    heading: 'Which Coaching Is Best',
+    links: [
+      { label: 'Best in Faridabad?', href: '/which-neet-coaching-is-best-in-faridabad' },
+      { label: 'Best in Gurugram?', href: '/which-neet-coaching-is-best-in-gurugram' },
+      { label: 'Best in Noida?', href: '/which-neet-coaching-is-best-in-noida' },
+      { label: 'Best in Ghaziabad?', href: '/which-neet-coaching-is-best-in-ghaziabad' },
+      { label: 'Best in Greater Noida?', href: '/which-neet-coaching-is-best-in-greater-noida' },
+    ],
+  },
+  {
+    heading: 'Biology Classes',
+    links: [
+      { label: 'Delhi', href: '/biology-classes-delhi' },
+      { label: 'East Delhi', href: '/biology-classes-east-delhi' },
+      { label: 'South Delhi', href: '/biology-classes-south-delhi' },
+      { label: 'Gurgaon', href: '/biology-classes-gurgaon' },
+      { label: 'Noida', href: '/biology-classes-noida' },
+      { label: 'Faridabad', href: '/biology-classes-faridabad' },
+      { label: 'Ghaziabad', href: '/biology-classes-ghaziabad' },
+      { label: 'Greater Noida', href: '/biology-classes-greater-noida' },
     ],
   },
   {
@@ -42,7 +86,30 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'Dropper Batch', href: '/neet-dropper-batch' },
       { label: 'JEE Coaching', href: '/jee-coaching' },
       { label: 'NEET Preparation', href: '/neet-preparation-roadmap' },
-      { label: 'Course Comparison', href: '/neet-coaching-comparison' },
+      { label: 'Board Exam Prep', href: '/board-exam-preparation' },
+    ],
+  },
+  {
+    heading: 'Study Material',
+    links: [
+      { label: 'Biology Notes', href: '/biology-notes-for-neet' },
+      { label: 'NEET MCQ Practice', href: '/neet-biology-mcq' },
+      { label: 'Campbell Biology', href: '/campbell-biology' },
+      { label: 'Biology Definitions', href: '/biology-definitions' },
+      { label: 'Previous Year Qs', href: '/neet-previous-year-questions' },
+      { label: 'Online Test Series', href: '/online-neet-test-series' },
+      { label: 'Mock Tests', href: '/mock-tests' },
+    ],
+  },
+  {
+    heading: 'NEET Guides',
+    links: [
+      { label: 'Preparation Guide', href: '/neet-preparation-guide' },
+      { label: 'Eligibility 2026', href: '/neet-eligibility-2026' },
+      { label: 'Syllabus 2026', href: '/neet-syllabus-2026' },
+      { label: 'Exam Countdown', href: '/neet-exam-countdown' },
+      { label: 'College Predictor', href: '/neet-college-predictor' },
+      { label: 'Coaching Fees', href: '/neet-coaching-fees' },
     ],
   },
   {
@@ -52,9 +119,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'NEET Study Guide', href: '/blog/ultimate-neet-biology-guide-2026' },
       { label: 'Scoring Strategies', href: '/blog/how-to-score-360-in-neet-biology' },
       { label: 'Genetics Guide', href: '/blog/genetics-for-neet-mendel-to-molecular-biology' },
-      { label: 'Photosynthesis Guide', href: '/blog/photosynthesis-complete-neet-guide' },
       { label: 'Chapter Weightage', href: '/blog/neet-biology-chapter-wise-weightage-2026-advanced' },
-      { label: 'Coaching Comparison', href: '/blog/best-neet-coaching-delhi-ncr-2026-comparison' },
       { label: 'Blog & Articles', href: '/blog' },
     ],
   },
@@ -67,6 +132,8 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'Testimonials', href: '/testimonials' },
       { label: 'Success Stories', href: '/success-stories' },
       { label: 'Book Free Demo', href: '/book-free-demo' },
+      { label: 'All States', href: '/states' },
+      { label: 'All Locations', href: '/all-locations' },
     ],
   },
   {
@@ -119,16 +186,12 @@ export function SEOFooterLinks() {
   return (
     <section className="bg-slate-900 text-white py-12 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Grid layout: responsive columns */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-8 md:gap-6">
           {FOOTER_CATEGORIES.map((category, categoryIndex) => (
             <div key={categoryIndex}>
-              {/* Category heading */}
               <h3 className="text-green-400 font-semibold text-sm mb-4 truncate">
                 {category.heading}
               </h3>
-
-              {/* Links list */}
               <ul className="space-y-2.5">
                 {category.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
@@ -143,10 +206,7 @@ export function SEOFooterLinks() {
             </div>
           ))}
         </div>
-
-        {/* Divider */}
         <div className="border-t border-slate-700 mt-10 pt-8">
-          {/* Footer meta info */}
           <div className="flex flex-col md:flex-row items-center justify-between text-xs text-gray-400">
             <p>&copy; 2026 Cerebrum Biology Academy. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
