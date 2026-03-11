@@ -17,11 +17,11 @@ export function generateLocalityMetadata(
     creator: 'Cerebrum Biology Academy',
     publisher: 'Cerebrum Biology Academy',
     robots: {
-      index: locality.seo.metaRobots.includes('index'),
-      follow: locality.seo.metaRobots.includes('follow'),
+      index: locality.seo.metaRobots === 'index,follow',
+      follow: true,
       googleBot: {
-        index: locality.seo.metaRobots.includes('index'),
-        follow: locality.seo.metaRobots.includes('follow'),
+        index: locality.seo.metaRobots === 'index,follow',
+        follow: true,
         'max-snippet': -1,
         'max-image-preview': 'large' as const,
         'max-video-preview': -1,

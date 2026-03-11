@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/video-lectures',
   },
 
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 }
 
 export default function VideoLecturesLayout({ children }: { children: React.ReactNode }) {

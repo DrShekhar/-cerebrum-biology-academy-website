@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/curriculum',
   },
 
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 }
 
 export default function CurriculumPage() {

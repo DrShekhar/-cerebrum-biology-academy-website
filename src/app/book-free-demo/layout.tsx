@@ -4,7 +4,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata'
 const baseMetadata = generatePageMetadata('bookDemo')
 export const metadata: Metadata = {
   ...baseMetadata,
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 }
 
 export default function BookFreeDemoLayout({ children }: { children: React.ReactNode }) {

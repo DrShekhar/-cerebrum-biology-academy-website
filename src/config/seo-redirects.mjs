@@ -344,12 +344,12 @@ export const seoPageConsolidationRedirects = [
   },
   {
     source: '/biology-coaching-vasant-valley-school',
-    destination: '/best-biology-tuition-vasant-vihar',
+    destination: '/biology-tutor-south-delhi',
     permanent: true,
   },
   {
     source: '/biology-coaching-dps-rk-puram',
-    destination: '/best-biology-tuition-rk-puram',
+    destination: '/biology-tutor-south-delhi',
     permanent: true,
   },
   {
@@ -2296,4 +2296,23 @@ export const areaConsolidationRedirects = [
   { source: '/neet-coaching-west-delhi/:area', destination: '/neet-coaching-west-delhi', permanent: true },
   { source: '/neet-coaching-near-metro/:station', destination: '/all-locations', permanent: true },
   { source: '/neet-coaching-noida-society/:society', destination: '/neet-coaching-noida', permanent: true },
+
+  // Thin biology-coaching location pages → parent city hub
+  { source: '/biology-coaching-vasant-kunj', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-defence-colony', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-dwarka', destination: '/neet-coaching-west-delhi', permanent: true },
+  { source: '/biology-coaching-greater-kailash', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-coaching-model-town', destination: '/neet-coaching-north-delhi', permanent: true },
+  { source: '/biology-coaching-panchsheel', destination: '/neet-coaching-south-delhi', permanent: true },
+
+  // Thin best-biology-tuition area pages → biology tutor south delhi
+  { source: '/best-biology-tuition-malviya-nagar', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/best-biology-tuition-rk-puram', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/best-biology-tuition-vasant-vihar', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/best-biology-tuition-cr-park', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/best-biology-tuition-greater-kailash', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/best-biology-tuition-hauz-khas', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/best-biology-tuition-kalkaji', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/best-biology-tuition-lajpat-nagar', destination: '/biology-tutor-south-delhi', permanent: true },
 ]
