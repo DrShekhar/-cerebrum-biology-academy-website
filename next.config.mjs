@@ -13,6 +13,7 @@ import {
   gsc404CleanupBatch3Redirects,
   hubPageConsolidationRedirects,
   cannibalizationConsolidationRedirects,
+  areaConsolidationRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1528,6 +1529,7 @@ const nextConfig = {
       ...neetCoachingLocationRedirects,
       ...localAreaPageRedirects,
       ...gsc404CleanupRedirects,
+      ...areaConsolidationRedirects,
       ...thinPageConsolidationRedirects,
       ...gsc404CleanupBatch3Redirects,
       ...hubPageConsolidationRedirects,

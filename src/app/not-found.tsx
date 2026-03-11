@@ -51,7 +51,7 @@ export default function NotFound() {
     },
     {
       title: 'Book Free Demo',
-      href: '/book-demo',
+      href: '/demo-booking',
       icon: Gift,
       description: 'Schedule a session',
     },
@@ -108,12 +108,12 @@ export default function NotFound() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-[#f0f4f0] to-slate-100">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
           {/* Header Section */}
           <div className="mb-16 text-center">
-            <div className="mb-8 inline-flex h-24 w-24 items-center justify-center rounded-full bg-blue-100">
-              <span className="text-5xl font-bold text-blue-600">404</span>
+            <div className="mb-8 inline-flex h-24 w-24 items-center justify-center rounded-full bg-[#e8ede8]">
+              <span className="text-5xl font-bold text-[#4a5d4a]">404</span>
             </div>
 
             <h1 className="mb-4 text-4xl font-bold text-slate-900 sm:text-5xl">
@@ -144,12 +144,12 @@ export default function NotFound() {
                     type="search"
                     name="q"
                     placeholder="Search NEET coaching, courses, biology notes..."
-                    className="w-full rounded-lg border border-blue-200 bg-white py-3 pl-12 pr-4 shadow-sm transition-all focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20"
+                    className="w-full rounded-lg border border-[#c5d4c5] bg-white py-3 pl-12 pr-4 shadow-sm transition-all focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a] focus:ring-opacity-20"
                     aria-label="Search Cerebrum Biology Academy"
                   />
                   <button
                     type="submit"
-                    className="absolute right-2 inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 font-medium text-white transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    className="absolute right-2 inline-flex items-center gap-2 rounded-md bg-[#3d4d3d] px-4 py-2 font-medium text-white transition-all hover:bg-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a] focus:ring-offset-2"
                   >
                     <span className="hidden sm:inline">Search</span>
                     <Search className="h-4 w-4 sm:hidden" />
@@ -172,14 +172,14 @@ export default function NotFound() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="group rounded-lg border border-blue-100 bg-white p-6 shadow-sm transition-all hover:border-blue-300 hover:shadow-md"
+                    className="group rounded-lg border border-[#e8ede8] bg-white p-6 shadow-sm transition-all hover:border-[#4a5d4a] hover:shadow-md"
                   >
-                    <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600 transition-all group-hover:bg-blue-100">
+                    <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#f0f4f0] text-[#4a5d4a] transition-all group-hover:bg-[#e8ede8]">
                       <Icon className="h-6 w-6" />
                     </div>
                     <h3 className="mb-1 font-semibold text-slate-900">{link.title}</h3>
                     <p className="mb-4 text-sm text-slate-500">{link.description}</p>
-                    <div className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 transition-all group-hover:gap-3">
+                    <div className="inline-flex items-center gap-2 text-sm font-medium text-[#4a5d4a] transition-all group-hover:gap-3">
                       Visit
                       <ArrowRight className="h-4 w-4" />
                     </div>
@@ -190,24 +190,24 @@ export default function NotFound() {
           </div>
 
           {/* Info Section */}
-          <div className="rounded-lg border border-blue-200 bg-blue-50 p-8 text-center">
-            <h3 className="mb-2 text-lg font-semibold text-blue-900">
+          <div className="rounded-lg border border-[#c5d4c5] bg-[#f0f4f0] p-8 text-center">
+            <h3 className="mb-2 text-lg font-semibold text-[#3d4d3d]">
               Still can't find what you're looking for?
             </h3>
-            <p className="mb-4 text-blue-700">
+            <p className="mb-4 text-[#4a5d4a]">
               Our support team is here to help you navigate our NEET coaching programs and courses.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-all hover:bg-blue-700"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#3d4d3d] px-6 py-3 font-medium text-white transition-all hover:bg-[#4a5d4a]"
               >
                 <Phone className="h-4 w-4" />
                 Contact Us
               </a>
               <a
-                href="/book-demo"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-300 bg-white px-6 py-3 font-medium text-blue-600 transition-all hover:bg-blue-50"
+                href="/demo-booking"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#4a5d4a] bg-white px-6 py-3 font-medium text-[#4a5d4a] transition-all hover:bg-[#f0f4f0]"
               >
                 <Gift className="h-4 w-4" />
                 Book Free Demo

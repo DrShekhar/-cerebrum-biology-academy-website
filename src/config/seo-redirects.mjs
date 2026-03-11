@@ -2277,3 +2277,23 @@ export const cannibalizationConsolidationRedirects = [
   { source: '/biology-tuition-class-12-noida', destination: '/biology-tutor-class-12-cbse', permanent: true },
   { source: '/biology-tuition-surat', destination: '/biology-tutor', permanent: true },
 ]
+
+// ============================================
+// Area Page Consolidation Redirects (March 2026)
+// 192+ thin area/sector pages → parent city hub pages
+// Wildcard patterns catch all sub-area URLs
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const areaConsolidationRedirects = [
+  { source: '/neet-coaching-noida/:area', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-gurugram/:area', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-faridabad/:area', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-ghaziabad/:area', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-south-delhi/:area', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-tuition-south-delhi/:area', destination: '/biology-tutor-south-delhi', permanent: true },
+  { source: '/neet-coaching-east-delhi/:area', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/neet-coaching-north-delhi/:area', destination: '/neet-coaching-north-delhi', permanent: true },
+  { source: '/neet-coaching-west-delhi/:area', destination: '/neet-coaching-west-delhi', permanent: true },
+  { source: '/neet-coaching-near-metro/:station', destination: '/all-locations', permanent: true },
+  { source: '/neet-coaching-noida-society/:society', destination: '/neet-coaching-noida', permanent: true },
+]

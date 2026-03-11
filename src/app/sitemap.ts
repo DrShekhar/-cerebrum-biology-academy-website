@@ -4,11 +4,6 @@ import { getAllSEOSlugs } from '@/data/seo-landing/slugs-static'
 import { allChapters } from '@/data/campbell-biology'
 import { campbellUnits } from '@/data/campbell-biology/units'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
-import { getAllGurugramAreaSlugs } from '@/data/gurugram-areas'
-import { getAllNoidaAreaSlugs } from '@/data/noida-areas'
-import { getAllFaridabadAreaSlugs } from '@/data/faridabad-areas'
-import { getAllGhaziabadAreaSlugs } from '@/data/ghaziabad-areas'
-import { getAllAreaSlugs as getAllSouthDelhiAreaSlugs } from '@/data/south-delhi-areas'
 import { detailedCourses } from '@/data/detailedCourses'
 import { SUPPORTED_COUNTRIES } from '@/lib/international/countries'
 import { nriCountriesList } from '@/data/nriCountries'
@@ -27,20 +22,30 @@ import {
   gsc404CleanupBatch3Redirects,
   hubPageConsolidationRedirects,
   cannibalizationConsolidationRedirects,
+  areaConsolidationRedirects,
 } from '@/config/seo-redirects.mjs'
 
-const redirectedPaths = new Set(
-  [
-    ...seoPageConsolidationRedirects,
-    ...neetCoachingLocationRedirects,
-    ...localAreaPageRedirects,
-    ...gsc404CleanupRedirects,
-    ...thinPageConsolidationRedirects,
-    ...gsc404CleanupBatch3Redirects,
-    ...hubPageConsolidationRedirects,
-    ...cannibalizationConsolidationRedirects,
-  ].map((r: { source: string }) => r.source)
-)
+const allRedirectSources = [
+  ...seoPageConsolidationRedirects,
+  ...neetCoachingLocationRedirects,
+  ...localAreaPageRedirects,
+  ...gsc404CleanupRedirects,
+  ...thinPageConsolidationRedirects,
+  ...gsc404CleanupBatch3Redirects,
+  ...hubPageConsolidationRedirects,
+  ...cannibalizationConsolidationRedirects,
+  ...areaConsolidationRedirects,
+].map((r: { source: string }) => r.source)
+
+const exactRedirects = new Set(allRedirectSources.filter((s) => !s.includes(':')))
+const wildcardPrefixes = allRedirectSources
+  .filter((s) => s.includes(':'))
+  .map((s) => s.replace(/\/:[^/]+\*?$/, ''))
+
+function isRedirectedPath(path: string): boolean {
+  if (exactRedirects.has(path)) return true
+  return wildcardPrefixes.some((prefix) => path.startsWith(prefix + '/'))
+}
 
 /**
  * Normalize sitemap priorities based on URL patterns.
@@ -7924,86 +7929,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  // Gurugram area pages
-  const gurugramAreaRoutes: MetadataRoute.Sitemap = getAllGurugramAreaSlugs().map((area) => ({
-    url: `${baseUrl}/neet-coaching-gurugram/${area}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
-
-  // Noida area pages
-  const noidaAreaRoutes: MetadataRoute.Sitemap = getAllNoidaAreaSlugs().map((area) => ({
-    url: `${baseUrl}/neet-coaching-noida/${area}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
-
-  // Faridabad area pages
-  const faridabadAreaRoutes: MetadataRoute.Sitemap = getAllFaridabadAreaSlugs().map((area) => ({
-    url: `${baseUrl}/neet-coaching-faridabad/${area}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
-
-  // Ghaziabad area pages
-  const ghaziabadAreaRoutes: MetadataRoute.Sitemap = getAllGhaziabadAreaSlugs().map((area) => ({
-    url: `${baseUrl}/neet-coaching-ghaziabad/${area}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
-
-  // South Delhi area pages (neet-coaching + biology-tuition)
-  const southDelhiSlugs = getAllSouthDelhiAreaSlugs()
-  const southDelhiCoachingRoutes: MetadataRoute.Sitemap = southDelhiSlugs.map((area) => ({
-    url: `${baseUrl}/neet-coaching-south-delhi/${area}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
-  const southDelhiTuitionRoutes: MetadataRoute.Sitemap = southDelhiSlugs.map((area) => ({
-    url: `${baseUrl}/biology-tuition-south-delhi/${area}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }))
-
-  // Metro station pages
-  const metroStations = [
-    'botanical-garden',
-    'noida-city-centre',
-    'sector-18-metro',
-    'sector-137-metro',
-    'pari-chowk-metro',
-  ]
-  const metroRoutes: MetadataRoute.Sitemap = metroStations.map((station) => ({
-    url: `${baseUrl}/neet-coaching-near-metro/${station}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // Noida society pages
-  const noidaSocieties = [
-    'godrej-woods',
-    'mahagun-moderne',
-    'supertech-eco-village',
-    'logix-blossom-county',
-    'ace-city',
-    'gulshan-dynasty',
-    'eldeco-utopia',
-    'paras-tierea',
-    'prateek-grand-city',
-  ]
-  const societyRoutes: MetadataRoute.Sitemap = noidaSocieties.map((society) => ({
-    url: `${baseUrl}/neet-coaching-noida-society/${society}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // NOTE: Area pages (gurugram, noida, faridabad, ghaziabad, south-delhi),
+  // metro station pages, and society pages have been consolidated into
+  // their parent city hub pages. Wildcard 301 redirects handle old URLs.
 
   // Course detail pages
   const courseRoutes: MetadataRoute.Sitemap = detailedCourses.map((course) => ({
@@ -8170,14 +8098,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...campbellChapterRoutes,
     ...campbellUnitRoutes,
     ...locationRoutes,
-    ...gurugramAreaRoutes,
-    ...noidaAreaRoutes,
-    ...faridabadAreaRoutes,
-    ...ghaziabadAreaRoutes,
-    ...southDelhiCoachingRoutes,
-    ...southDelhiTuitionRoutes,
-    ...metroRoutes,
-    ...societyRoutes,
     ...courseRoutes,
     ...internationalRoutes,
     ...nriRoutes,
@@ -8210,7 +8130,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return Array.from(urlMap.values())
     .filter((route) => {
       const path = route.url.replace(baseUrl, '')
-      return !redirectedPaths.has(path)
+      return !isRedirectedPath(path)
     })
     .map((route) => {
       const path = route.url.replace(baseUrl, '')

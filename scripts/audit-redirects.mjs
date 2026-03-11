@@ -5,6 +5,9 @@ import {
   gsc404CleanupRedirects,
   thinPageConsolidationRedirects,
   gsc404CleanupBatch3Redirects,
+  hubPageConsolidationRedirects,
+  cannibalizationConsolidationRedirects,
+  areaConsolidationRedirects,
 } from '../src/config/seo-redirects.mjs'
 
 const arrays = {
@@ -14,6 +17,9 @@ const arrays = {
   gsc404: gsc404CleanupRedirects,
   thinPage: thinPageConsolidationRedirects,
   batch3: gsc404CleanupBatch3Redirects,
+  hubPage: hubPageConsolidationRedirects,
+  cannibalization: cannibalizationConsolidationRedirects,
+  areaConsolidation: areaConsolidationRedirects,
 }
 
 // Collect all sources with their destinations and origin array
