@@ -5,10 +5,7 @@ import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 import {
   MapPin,
-  Users,
-  Trophy,
   Star,
-  CheckCircle,
   Phone,
   GraduationCap,
   Video,
@@ -20,7 +17,6 @@ import {
   Brain,
   Stethoscope,
   School,
-  Clock,
 } from 'lucide-react'
 import { StateData, generateStateFAQs } from './StateSchema'
 import { FAQDisplay } from './FAQSchema'
@@ -29,29 +25,6 @@ interface StateLandingPageProps {
   state: StateData
 }
 
-const courses = [
-  {
-    name: 'Class 11th NEET Biology',
-    price: 72200,
-    duration: '1 Year',
-    features: ['Complete NCERT', 'NEET Pattern Practice', 'Weekly Tests'],
-    tag: 'Most Popular',
-  },
-  {
-    name: 'Class 12th NEET Biology',
-    price: 72200,
-    duration: '1 Year',
-    features: ['Board + NEET Prep', 'PYQ Analysis', '100+ Mocks'],
-    tag: null,
-  },
-  {
-    name: 'NEET Dropper Batch',
-    price: 85500,
-    duration: '1 Year',
-    features: ['Complete Revision', 'Daily Practice', 'Score Improvement'],
-    tag: 'High Demand',
-  },
-]
 
 export function StateLandingPage({ state }: StateLandingPageProps) {
   const faqs = generateStateFAQs(state)
@@ -139,62 +112,77 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* NEET in State - Unique Content */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why {state.name} Students Choose Cerebrum
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+              NEET Preparation for {state.name} Students
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Trusted by 500+ {state.name} students. Better than local coaching, accessible from anywhere.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                icon: GraduationCap,
-                title: 'AIIMS-Trained Faculty',
-                description: `Learn from Dr. Shekhar C Singh, AIIMS alumnus. ${state.capital} students get expert teaching not available locally.`,
-              },
-              {
-                icon: Video,
-                title: 'Live Online Classes',
-                description: `Attend live interactive classes from ${state.majorCities[0]}, ${state.majorCities[1]} or any city. Same quality as offline coaching.`,
-              },
-              {
-                icon: Users,
-                title: 'Small Batch Size',
-                description: 'Only 15-20 students per batch. Personal attention for every student from ' + state.name + '.',
-              },
-              {
-                icon: Target,
-                title: '98% Success Rate',
-                description: `Proven track record. ${state.name} toppers include students who scored 680+ in NEET Biology.`,
-              },
-              {
-                icon: MessageCircle,
-                title: '24/7 Doubt Support',
-                description: `WhatsApp doubt resolution anytime. ${state.localLanguage} speaking support available.`,
-              },
-              {
-                icon: BookOpen,
-                title: 'NCERT-Focused Material',
-                description: 'Comprehensive study material aligned with NEET pattern. Better than Kota coaching.',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
-              >
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-2xl p-6 border border-gray-100">
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-green-600" />
+                  <Stethoscope className="w-6 h-6 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {state.medicalColleges.length} Medical Colleges
+                </h3>
+                <p className="text-gray-600 mb-3">
+                  {state.name} has {state.neetSeats.toLocaleString()}+ MBBS seats across government colleges
+                  including {state.medicalColleges.slice(0, 2).join(' and ')}.
+                </p>
+                <Link
+                  href="/neet-college-predictor"
+                  className="text-green-600 hover:text-green-700 font-medium text-sm"
+                >
+                  Check your college chances →
+                </Link>
               </div>
-            ))}
+              <div className="bg-white rounded-2xl p-6 border border-gray-100">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {state.educationFocus[0]} Focus
+                </h3>
+                <p className="text-gray-600 mb-3">
+                  Our curriculum covers both CBSE and state board ({state.localLanguage} medium) biology
+                  with NEET-aligned teaching for {state.capital} and {state.majorCities[1]} students.
+                </p>
+                <Link
+                  href="/courses"
+                  className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                >
+                  View course details →
+                </Link>
+              </div>
+              <div className="bg-white rounded-2xl p-6 border border-gray-100">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                  <School className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Major Cities Covered
+                </h3>
+                <p className="text-gray-600">
+                  Students from {state.majorCities.slice(0, 5).join(', ')} and other cities in{' '}
+                  {state.name} attend our live online classes with full doubt support.
+                </p>
+              </div>
+              <div className="bg-white rounded-2xl p-6 border border-gray-100">
+                <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap className="w-6 h-6 text-yellow-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Online + Offline Access
+                </h3>
+                <p className="text-gray-600">
+                  Live interactive classes from anywhere in {state.name}.
+                  {state.nearestOfflineCenter && (
+                    <> Nearest offline center: {state.nearestOfflineCenter}.</>
+                  )}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -246,58 +234,25 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
         </div>
       </section>
 
-      {/* Courses */}
-      <section className="py-16 bg-gray-50">
+      {/* Courses CTA */}
+      <section className="py-12 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              NEET Biology Courses for {state.name} Students
-            </h2>
-            <p className="text-xl text-gray-600">
-              Affordable pricing. 60% lower than Kota coaching with better results.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {courses.map((course, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100 overflow-hidden"
-              >
-                {course.tag && (
-                  <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-2 text-sm font-medium">
-                    {course.tag}
-                  </div>
-                )}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{course.name}</h3>
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-3xl font-bold text-green-600">₹{course.price.toLocaleString()}</span>
-                    <span className="text-gray-500">/ {course.duration}</span>
-                  </div>
-                  <ul className="space-y-2 mb-6">
-                    {course.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    onClick={() => trackAndOpenWhatsApp(WHATSAPP_MESSAGES.ENROLLMENT, `state_${state.slug}_${course.name.toLowerCase().replace(/\s+/g, '_')}`)}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-colors"
-                  >
-                    Enroll Now
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <p className="text-gray-600">
-              EMI options available. Special scholarships for meritorious {state.name} students.
-            </p>
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h2 className="text-2xl font-bold mb-2">
+                NEET Biology Courses for {state.name} Students
+              </h2>
+              <p className="text-green-100">
+                Classes 9-12 + Dropper batches. 60% lower than Kota coaching. EMI available.
+              </p>
+            </div>
+            <Link
+              href="/courses"
+              className="inline-flex items-center gap-2 bg-white text-green-600 font-semibold px-6 py-3 rounded-xl hover:bg-green-50 transition-colors flex-shrink-0"
+            >
+              <BookOpen className="w-5 h-5" />
+              View Courses & Fees
+            </Link>
           </div>
         </div>
       </section>
