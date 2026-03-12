@@ -577,7 +577,7 @@ export const BIOLOGY_CHAPTERS: Record<BiologyTopic, string[]> = {
     'Evolution',
   ],
   // Class 12 - Unit 8: Biology and Human Welfare
-  'Biology and Human Welfare': ['Human Health and Diseases', 'Microbes in Human Welfare'],
+  'Biology and Human Welfare': ['Human Health and Diseases', 'Strategies for Enhancement in Food Production', 'Microbes in Human Welfare'],
   // Class 12 - Unit 9: Biotechnology
   Biotechnology: ['Biotechnology - Principles and Processes', 'Biotechnology and Its Applications'],
   // Class 12 - Unit 10: Ecology

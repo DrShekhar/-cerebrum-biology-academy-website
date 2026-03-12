@@ -63,10 +63,10 @@ export function ContentSourceTabs({
     },
     {
       id: 'olympiad' as ContentSource,
-      label: 'Olympiad',
+      label: 'Campbell / Olympiad',
       emoji: '🏅',
       count: questionCounts.olympiad,
-      description: 'Campbell Biology level',
+      description: 'Campbell Biology chapters',
     },
   ]
 
