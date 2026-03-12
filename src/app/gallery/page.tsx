@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop/meP3n6VKelS9LnOn/img_2854-YD0v2gX7w8TZqBql.jpg',
+        url: '/images/gallery/img-2854.jpg',
         width: 1200,
         height: 630,
         alt: 'Cerebrum Biology Academy - Wall of Excellence',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       'Explore our Wall of Excellence - celebrating student achievements, faculty expertise, and memorable moments.',
     images: [
-      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop/meP3n6VKelS9LnOn/img_2854-YD0v2gX7w8TZqBql.jpg',
+      '/images/gallery/img-2854.jpg',
     ],
   },
 }

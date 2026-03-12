@@ -110,10 +110,6 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
         hostname: 'cerebrumbiologyacademy.com',
       },
       {
@@ -127,10 +123,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'vercel.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'assets.zyrosite.com',
       },
       {
         protocol: 'https',
@@ -246,6 +238,19 @@ const nextConfig = {
       'clsx',
       'tailwind-merge',
     ],
+  },
+
+  async rewrites() {
+    return [
+      {
+        source: '/g/collect',
+        destination: 'https://www.google-analytics.com/g/collect',
+      },
+      {
+        source: '/gtm.js',
+        destination: `https://www.googletagmanager.com/gtm.js?id=${process.env.NEXT_PUBLIC_GTM_ID}`,
+      },
+    ]
   },
 
   // Redirects for SEO - Fix 404 errors reported in Google Search Console

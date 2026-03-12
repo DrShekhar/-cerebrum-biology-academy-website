@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       'AIIMS faculty with proven track record of 98% success rate. Mentored 15,000+ students to medical college admissions.',
     images: [
       {
-        url: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=571,fit=crop/meP3n6VKelS9LnOn/img-0034-meP3pJDRGxsyRZyy.jpg',
+        url: '/images/faculty/dr-shekhar-portrait.jpg',
         width: 375,
         height: 571,
         alt: 'Dr. Shekhar C Singh - Director of Cerebrum Biology Academy',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'Dr. Shekhar C Singh - Expert NEET Biology Educator',
     description: 'AIIMS faculty with proven track record of 98% success rate',
     images: [
-      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=571,fit=crop/meP3n6VKelS9LnOn/img-0034-meP3pJDRGxsyRZyy.jpg',
+      '/images/faculty/dr-shekhar-portrait.jpg',
     ],
   },
   alternates: {

@@ -195,7 +195,7 @@ export default function DrShekharSinghPage() {
     description:
       'AIIMS faculty with 15+ years of experience, mentored 15,000+ NEET aspirants with 98% success rate',
     image:
-      'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=571,fit=crop/meP3n6VKelS9LnOn/img-0034-meP3pJDRGxsyRZyy.jpg',
+      '/images/faculty/dr-shekhar-portrait.jpg',
     worksFor: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',

@@ -5,6 +5,7 @@ import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { SEOHealthCheck } from '@/components/seo/SEOHealthCheck'
 import { CanonicalManager } from '@/components/seo/CanonicalManager'
+import GoogleTagManager, { GoogleTagManagerNoscript } from '@/components/analytics/GoogleTagManager'
 import FacebookPixel from '@/components/analytics/FacebookPixel'
 import MicrosoftClarity from '@/components/analytics/MicrosoftClarity'
 import { WebVitalsReporter } from '@/components/analytics/WebVitalsReporter'
@@ -115,6 +116,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GoogleTagManager />
         <StructuredData />
         <SEOHealthCheck />
 
@@ -188,6 +190,7 @@ export default function RootLayout({
             - Task scheduler now handled by browser native APIs */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <GoogleTagManagerNoscript />
         <PageErrorBoundary>
           {/* PERFORMANCE: Analytics moved after main content for better LCP */}
           {/* These scripts use lazyOnload strategy but still benefit from being after content */}
