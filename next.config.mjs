@@ -14,6 +14,7 @@ import {
   hubPageConsolidationRedirects,
   cannibalizationConsolidationRedirects,
   areaConsolidationRedirects,
+  localPageConsolidationBatch2,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1538,6 +1539,7 @@ const nextConfig = {
       ...thinPageConsolidationRedirects,
       ...gsc404CleanupBatch3Redirects,
       ...hubPageConsolidationRedirects,
+      ...localPageConsolidationBatch2,
     ]
   },
 

@@ -2286,3 +2286,40 @@ export const areaConsolidationRedirects = [
   { source: '/best-biology-tuition-kalkaji', destination: '/biology-tutor-south-delhi', permanent: true },
   { source: '/best-biology-tuition-lajpat-nagar', destination: '/biology-tutor-south-delhi', permanent: true },
 ]
+
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const localPageConsolidationBatch2 = [
+  // ============================================
+  // biology-classes-* → canonical neet-coaching page (22 redirects)
+  // Stops cannibalization with biology-tutor-* and neet-coaching-* pages
+  // ============================================
+  { source: '/biology-classes-cr-park', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-east-delhi', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/biology-classes-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/biology-classes-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/biology-classes-greater-kailash', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/biology-classes-green-park', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/biology-classes-hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-kalkaji', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-lajpat-nagar', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-malviya-nagar', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-near-me', destination: '/biology-tutor', permanent: true },
+  { source: '/biology-classes-noida', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/biology-classes-pitampura', destination: '/neet-coaching-north-delhi', permanent: true },
+  { source: '/biology-classes-rk-puram', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-rohini', destination: '/neet-coaching-north-delhi', permanent: true },
+  { source: '/biology-classes-saket', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-south-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-vasant-kunj', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/biology-classes-vasant-vihar', destination: '/neet-coaching-south-delhi', permanent: true },
+
+  // ============================================
+  // Remaining micro-area pages cannibalizing parent city hubs
+  // ============================================
+  { source: '/neet-coaching-lajpat-nagar', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/neet-coaching-cr-park-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  { source: '/neet-coaching-hauz-khas-metro', destination: '/neet-coaching-south-delhi', permanent: true },
+]
