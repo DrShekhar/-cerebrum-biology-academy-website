@@ -234,7 +234,7 @@ export const Footer = memo(function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-0 lg:gap-8 divide-y divide-gray-800 lg:divide-y-0">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-8 divide-y divide-gray-800 lg:divide-y-0">
             <FooterSection
               title="Programs"
               links={programLinks}
@@ -253,21 +253,18 @@ export const Footer = memo(function Footer() {
               isOpen={openSection === 'Resources'}
               onToggle={() => toggleSection('Resources')}
             />
-            <div className="divide-y divide-gray-800 lg:divide-y-0">
-              <FooterSection
-                title="Company"
-                links={companyLinks}
-                isOpen={openSection === 'Company'}
-                onToggle={() => toggleSection('Company')}
-              />
-              <FooterSection
-                title="Support"
-                links={supportLinks}
-                isOpen={openSection === 'Support'}
-                onToggle={() => toggleSection('Support')}
-                className="lg:mt-6"
-              />
-            </div>
+            <FooterSection
+              title="Company"
+              links={companyLinks}
+              isOpen={openSection === 'Company'}
+              onToggle={() => toggleSection('Company')}
+            />
+            <FooterSection
+              title="Support"
+              links={supportLinks}
+              isOpen={openSection === 'Support'}
+              onToggle={() => toggleSection('Support')}
+            />
           </div>
         </div>
 

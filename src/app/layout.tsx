@@ -37,7 +37,6 @@ import {
   DynamicTrialBanner,
   DynamicWhatsAppDesktopModal,
 } from '@/components/layout/DynamicComponents'
-import { SEOFooterLinks } from '@/components/seo/SEOFooterLinks'
 import './globals.css'
 
 const geistSans = Geist({
@@ -235,7 +234,6 @@ export default function RootLayout({
                           {children}
                         </main>
                         <ConditionalHeaderFooter>
-                          <SEOFooterLinks />
                           <div data-lazy="footer" className="priority-lazy" role="contentinfo">
                             <DynamicFooter />
                           </div>
