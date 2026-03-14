@@ -15,6 +15,7 @@ import {
   cannibalizationConsolidationRedirects,
   areaConsolidationRedirects,
   localPageConsolidationBatch2,
+  gurugramConsolidationRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1540,6 +1541,7 @@ const nextConfig = {
       ...gsc404CleanupBatch3Redirects,
       ...hubPageConsolidationRedirects,
       ...localPageConsolidationBatch2,
+      ...gurugramConsolidationRedirects,
     ]
   },
 

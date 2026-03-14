@@ -8,7 +8,7 @@ const gurugramLocation = CONTACT_INFO.location.gurugram
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching in Gurugram Center',
   description:
-    'Visit Cerebrum Biology Academy Gurugram center at M2K Corporate Park, Sector 51. AIIMS faculty, small batches of 15 students, 90% NEET success rate. Near HUDA City Centre Metro.',
+    'Visit Cerebrum Biology Academy Gurugram center at M2K Corporate Park, Sector 51. AIIMS faculty, small batches of 15 students, 98% NEET success rate. Near HUDA City Centre Metro.',
   keywords: [
     'NEET coaching Gurugram',
     'Biology coaching Gurugram',
@@ -273,7 +273,7 @@ export default function GurugramLocationPage() {
     url: 'https://cerebrumbiologyacademy.com/locations/gurugram',
     name: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy Center',
     description:
-      'Visit Cerebrum Biology Academy Gurugram center at M2K Corporate Park, Sector 51. AIIMS faculty, small batches of 15 students, 90% NEET success rate.',
+      'Visit Cerebrum Biology Academy Gurugram center at M2K Corporate Park, Sector 51. AIIMS faculty, small batches of 15 students, 98% NEET success rate.',
     isPartOf: {
       '@type': 'WebSite',
       '@id': 'https://cerebrumbiologyacademy.com#website',

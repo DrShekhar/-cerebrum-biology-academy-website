@@ -26,6 +26,7 @@ import {
   hubPageConsolidationRedirects,
   cannibalizationConsolidationRedirects,
   areaConsolidationRedirects,
+  gurugramConsolidationRedirects,
 } from '@/config/seo-redirects.mjs'
 
 const allRedirectSources = [
@@ -38,6 +39,7 @@ const allRedirectSources = [
   ...hubPageConsolidationRedirects,
   ...cannibalizationConsolidationRedirects,
   ...areaConsolidationRedirects,
+  ...gurugramConsolidationRedirects,
 ].map((r: { source: string }) => r.source)
 
 const exactRedirects = new Set(allRedirectSources.filter((s) => !s.includes(':')))
@@ -75,7 +77,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     path.startsWith('/best-neet-coaching') ||
     path === '/neet-coaching' ||
     path === '/neet-coaching-noida' ||
-    path === '/neet-coaching-gurgaon' ||
+    path === '/neet-coaching-gurugram' ||
     path === '/neet-coaching-faridabad' ||
     path === '/neet-coaching-ghaziabad' ||
     path === '/all-locations' ||
@@ -1015,37 +1017,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
-    // Gurugram/Gurgaon Key Localities - HIGH PRIORITY for Gurugram Domination
+    // Gurugram Canonical Pages
     {
       url: `${baseUrl}/neet-coaching-gurugram`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
-    // Gurugram Featured Snippet / AEO Pages
     {
       url: `${baseUrl}/neet-coaching-fee-gurugram`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-success-rate-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/top-5-neet-coaching-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-biology-chapter-weightage-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
     },
     // E-E-A-T Authority Pages
     {
@@ -1059,191 +1042,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.85,
-    },
-    // Gurugram Results & Authority Pages
-    {
-      url: `${baseUrl}/neet-result-2025-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-result-2024-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-topper-interview-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-biology-faculty-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/free-neet-demo-class-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    // Gurugram Course Pages
-    {
-      url: `${baseUrl}/6-month-neet-coaching-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    // Gurugram Metro/Sector Pages
-    {
-      url: `${baseUrl}/neet-coaching-cyber-city-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-mg-road-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-iffco-chowk-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-huda-city-centre-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-pataudi-road-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-69`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-70`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    // Gurugram AEO Question Pages
-    {
-      url: `${baseUrl}/is-coaching-necessary-for-neet-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/how-much-fees-for-neet-coaching-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/can-i-crack-neet-without-coaching-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/when-to-start-neet-preparation-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/which-is-better-aakash-or-allen-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-vs-self-study-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/best-time-to-join-neet-coaching-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/parents-guide-neet-coaching-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    // Gurugram School-Specific Pages
-    {
-      url: `${baseUrl}/neet-coaching-pathways-world-school-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-kr-mangalam-world-school-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-bal-bharati-school-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-presidium-school-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-apeejay-school-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-dps-international-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-vega-school-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-hillwoods-academy-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-paras-world-school-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/locations/gurugram/dlf-phase-1`,
@@ -3223,12 +3021,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.96,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
     },
     // Delhi Area NEET Coaching Pages
     {
@@ -7665,40 +7457,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 1-year & 2-year courses
     '1-year-neet-course-faridabad',
     '1-year-neet-course-ghaziabad',
-    '1-year-neet-course-gurugram',
     '1-year-neet-course-noida',
     '2-year-neet-course-faridabad',
     '2-year-neet-course-ghaziabad',
-    '2-year-neet-course-gurugram',
     '2-year-neet-course-noida',
     // Competitor alternatives
     'aakash-alternative-faridabad',
     'aakash-alternative-ghaziabad',
     'aakash-alternative-greater-noida',
-    'aakash-alternative-gurugram',
     'aakash-alternative-noida',
     'allen-alternative-faridabad',
     'allen-alternative-ghaziabad',
-    'allen-alternative-gurugram',
     'allen-alternative-noida',
     'fiitjee-alternative-faridabad',
-    'fiitjee-alternative-gurugram',
     'fiitjee-alternative-noida',
     'narayana-alternative-faridabad',
-    'narayana-alternative-gurugram',
     'narayana-alternative-noida',
     'physics-wallah-alternative-faridabad',
-    'physics-wallah-alternative-gurugram',
     'physics-wallah-alternative-noida',
     'velocity-alternative-faridabad',
     'yvs-alternative-faridabad',
     'cerebrum-vs-aakash',
     'cerebrum-vs-allen',
     'complement-aakash-coaching-faridabad',
-    'complement-aakash-coaching-gurugram',
     'complement-aakash-coaching-noida',
     'complement-allen-coaching-faridabad',
-    'complement-allen-coaching-gurugram',
     'complement-allen-coaching-noida',
     // Best/top/which SEO pages
     'best-neet-coaching-faridabad',
@@ -7710,7 +7493,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'top-10-neet-coaching-faridabad',
     'top-10-neet-coaching-ghaziabad',
     'top-10-neet-coaching-greater-noida',
-    'top-10-neet-coaching-gurugram',
     'top-10-neet-coaching-noida',
     'top-5-neet-coaching-faridabad',
     'which-is-better-aakash-or-allen-faridabad',
@@ -7718,13 +7500,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'which-neet-coaching-is-best-in-faridabad',
     'which-neet-coaching-is-best-in-ghaziabad',
     'which-neet-coaching-is-best-in-greater-noida',
-    'which-neet-coaching-is-best-in-gurugram',
     'which-neet-coaching-is-best-in-noida',
     // Affordable coaching
     'affordable-neet-coaching-faridabad',
     'affordable-neet-coaching-ghaziabad',
     'affordable-neet-coaching-greater-noida',
-    'affordable-neet-coaching-gurugram',
     'affordable-neet-coaching-noida',
     // Biology coaching/tutor locations
     'biology-classes-east-delhi',
@@ -7737,7 +7517,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'biology-coaching-model-town',
     'biology-coaching-panchsheel',
     'biology-coaching-vasant-kunj',
-    'biology-olympiad-coaching-gurugram',
     'biology-tutor-defence-colony',
     'biology-tutor-hauz-khas',
     'biology-tutor-malviya-nagar',
@@ -7749,7 +7528,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'neet-scholarship-faridabad',
     'neet-scholarship-ghaziabad',
     'neet-scholarship-greater-noida',
-    'neet-scholarship-gurugram',
     'neet-scholarship-noida',
     // Near me pages
     'neet-coaching-near-me-faridabad',
@@ -7760,49 +7538,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'neet-crash-course-faridabad',
     'neet-crash-course-ghaziabad',
     'neet-crash-course-greater-noida',
-    'neet-crash-course-gurugram',
     'neet-crash-course-noida',
     // Dropper batches
     'neet-dropper-batch',
-    'neet-dropper-batch-2026-27-gurugram',
     'neet-dropper-batch-faridabad',
     'neet-dropper-batch-ghaziabad',
     'neet-dropper-batch-greater-noida',
     'neet-dropper-batch-noida',
-    'one-year-dropper-course-gurugram',
     // Evening & weekend batches
     'neet-evening-batch-faridabad',
     'neet-evening-batch-ghaziabad',
-    'neet-evening-batch-gurugram',
     'neet-evening-batch-noida',
     'neet-weekend-batch-faridabad',
     'neet-weekend-batch-ghaziabad',
-    'neet-weekend-batch-gurugram',
     'neet-weekend-batch-noida',
     // Foundation classes
     'neet-foundation-class-9-faridabad',
     'neet-foundation-class-9-ghaziabad',
     'neet-foundation-class-9-greater-noida',
-    'neet-foundation-class-9-gurugram',
     'neet-foundation-class-9-noida',
     'neet-foundation-class-10-faridabad',
     'neet-foundation-class-10-ghaziabad',
     'neet-foundation-class-10-greater-noida',
-    'neet-foundation-class-10-gurugram',
     'neet-foundation-class-10-noida',
     // Test series
     'neet-test-series-faridabad',
     'neet-test-series-ghaziabad',
     'neet-test-series-greater-noida',
-    'neet-test-series-gurugram',
     'neet-test-series-noida',
     'test-series-schedule',
     // Revision batches
     'neet-revision-batch-faridabad',
-    'neet-revision-batch-gurugram',
     // Online coaching
     'online-neet-classes-faridabad',
-    'online-neet-classes-gurugram',
     'online-neet-coaching-faridabad',
     'online-neet-coaching-ghaziabad',
     'online-neet-coaching-greater-noida',
@@ -7817,7 +7585,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'neet-genetics-preparation',
     'neet-human-physiology-guide',
     'neet-preparation-roadmap',
-    'neet-study-material-gurugram',
     'how-to-score-340-in-neet-biology',
     'neet-ug-2026',
     // Free demo classes
@@ -7826,11 +7593,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'free-neet-demo-class-greater-noida',
     'free-neet-demo-class-noida',
     // Board-specific
-    'haryana-board-neet-coaching-gurugram',
-    'icse-neet-coaching-gurugram',
-    // Olympiad
-    'ibo-preparation-gurugram',
-    'nseb-coaching-gurugram',
     // Other
     'dr-shekhar-youtube-channel',
     'neet-coaching',
@@ -8124,6 +7886,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }))
 
+  // Gurugram area sub-pages (/neet-coaching-gurugram/[area])
+  const gurugramAreaSlugs = [
+    'dlf-phase-1', 'dlf-phase-2', 'dlf-phase-3', 'dlf-phase-4', 'dlf-phase-5',
+    'golf-course-road', 'sushant-lok', 'nirvana-country',
+    'south-city-1', 'south-city-2',
+    'sector-14', 'sector-43', 'sector-45', 'sector-49', 'sector-51',
+    'sector-54', 'sector-56', 'sector-57', 'sector-58',
+    'sector-65', 'sector-67', 'sector-69', 'sector-70', 'sector-72',
+    'sector-81', 'sector-82', 'sector-84',
+    'sohna-road', 'sector-48', 'mg-road', 'cyber-city',
+    'manesar', 'iffco-chowk', 'palam-vihar',
+  ]
+  const gurugramAreaRoutes: MetadataRoute.Sitemap = gurugramAreaSlugs.map((slug) => ({
+    url: `${baseUrl}/neet-coaching-gurugram/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...campbellChapterRoutes,
@@ -8140,6 +7921,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...stateRoutes,
     ...compareRoutes,
     // localAreaRoutes removed — redirected to parent city hubs
+    ...gurugramAreaRoutes,
     ...biologyNotesRoutes,
     ...onlineCityRoutes,
     ...curriculumRoutes,

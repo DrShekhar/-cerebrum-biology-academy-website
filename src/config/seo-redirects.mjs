@@ -52,7 +52,7 @@ export const seoPageConsolidationRedirects = [
     destination: '/biology-classes-gurgaon',
     permanent: true,
   },
-  { source: '/neet-coaching-dlf-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
+  { source: '/neet-coaching-dlf-gurgaon', destination: '/neet-coaching-gurugram/dlf-phase-1', permanent: true },
   {
     source: '/neet-coaching-golf-course-road-gurgaon',
     destination: '/neet-coaching-gurgaon',
@@ -2322,4 +2322,121 @@ export const localPageConsolidationBatch2 = [
   { source: '/neet-coaching-lajpat-nagar', destination: '/neet-coaching-south-delhi', permanent: true },
   { source: '/neet-coaching-cr-park-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
   { source: '/neet-coaching-hauz-khas-metro', destination: '/neet-coaching-south-delhi', permanent: true },
+]
+
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const gurugramConsolidationRedirects = [
+  // ============================================
+  // 1A. Dual hub fix — single canonical hub
+  // ============================================
+  { source: '/neet-coaching-gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
+
+  // ============================================
+  // 1B. Standalone area pages → hub or area sub-pages (15 redirects)
+  // ============================================
+  { source: '/neet-coaching-gurgaon-sector-62', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-gurgaon-sector-67', destination: '/neet-coaching-gurugram/sector-67', permanent: true },
+  { source: '/neet-coaching-gurgaon-sector-69', destination: '/neet-coaching-gurugram/sector-69', permanent: true },
+  { source: '/neet-coaching-gurgaon-sector-70', destination: '/neet-coaching-gurugram/sector-70', permanent: true },
+  { source: '/neet-coaching-cyber-city-gurugram', destination: '/neet-coaching-gurugram/cyber-city', permanent: true },
+  { source: '/neet-coaching-iffco-chowk-gurugram', destination: '/neet-coaching-gurugram/iffco-chowk', permanent: true },
+  { source: '/neet-coaching-mg-road-gurugram', destination: '/neet-coaching-gurugram/mg-road', permanent: true },
+  { source: '/neet-coaching-pataudi-road-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-south-city-gurugram', destination: '/neet-coaching-gurugram/south-city-1', permanent: true },
+  { source: '/neet-coaching-huda-city-centre-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-dlf-phase-1-gurugram', destination: '/neet-coaching-gurugram/dlf-phase-1', permanent: true },
+  { source: '/neet-coaching-sushant-lok-gurugram', destination: '/neet-coaching-gurugram/sushant-lok', permanent: true },
+  { source: '/neet-coaching-nirvana-country-gurugram', destination: '/neet-coaching-gurugram/nirvana-country', permanent: true },
+  { source: '/neet-coaching-bhondsi-gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-imt-manesar-gurgaon', destination: '/neet-coaching-gurugram/manesar', permanent: true },
+
+  // ============================================
+  // 1C. Alternative/comparison pages → best page (8 redirects)
+  // ============================================
+  { source: '/aakash-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/allen-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/fiitjee-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/narayana-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/physics-wallah-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/which-is-better-aakash-or-allen-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  { source: '/complement-aakash-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/complement-allen-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+
+  // ============================================
+  // 1D. Course/batch pages → hub (11 redirects)
+  // ============================================
+  { source: '/1-year-neet-course-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/2-year-neet-course-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-crash-course-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-weekend-batch-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-evening-batch-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-revision-batch-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-dropper-batch-2025-26-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-foundation-class-9-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-foundation-class-10-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/one-year-dropper-course-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/online-neet-classes-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+
+  // ============================================
+  // 1E. School-specific pages → hub (11 redirects)
+  // ============================================
+  { source: '/neet-coaching-apeejay-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-bal-bharati-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-dps-international-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-hillwoods-academy-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-kr-mangalam-world-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-paras-world-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-pathways-world-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-presidium-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-vega-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-amity-gurgaon-students', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-dps-gurgaon-students', destination: '/neet-coaching-gurugram', permanent: true },
+
+  // ============================================
+  // 1F. FAQ/question pages → hub (8 redirects)
+  // ============================================
+  { source: '/can-i-crack-neet-without-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/is-coaching-necessary-for-neet-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/when-to-start-neet-preparation-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/best-time-to-join-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-vs-self-study-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/parents-guide-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-coaching-near-me-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/6-month-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+
+  // ============================================
+  // 1G. Fee duplicate → canonical fee page (2 redirects)
+  // ============================================
+  { source: '/neet-coaching-fees-gurugram', destination: '/neet-coaching-fee-gurugram', permanent: true },
+  { source: '/how-much-fees-for-neet-coaching-gurugram', destination: '/neet-coaching-fee-gurugram', permanent: true },
+
+  // ============================================
+  // 1H. Result/specialty pages → hub (10 redirects)
+  // ============================================
+  { source: '/neet-result-2024-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-result-2025-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-success-rate-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-scholarship-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-biology-chapter-weightage-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-biology-faculty-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/free-neet-demo-class-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-topper-interview-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-study-material-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/neet-test-series-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+
+  // ============================================
+  // 1I. Board/olympiad pages → hub (6 redirects)
+  // ============================================
+  { source: '/cbse-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/icse-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/haryana-board-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/biology-olympiad-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/nseb-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  { source: '/ibo-preparation-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+
+  // ============================================
+  // 1J. Biology class-specific → biology-tutor (2 redirects)
+  // ============================================
+  { source: '/class-9-biology-tuition-gurugram', destination: '/biology-tutor-gurugram', permanent: true },
+  { source: '/class-10-biology-coaching-gurugram', destination: '/biology-tutor-gurugram', permanent: true },
 ]
