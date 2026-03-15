@@ -107,7 +107,7 @@ export default function FaridabadLocationPage() {
     },
     {
       q: 'How many students from Faridabad have cleared NEET through Cerebrum?',
-      a: 'Over 100 students from Faridabad and surrounding areas (NIT, Ballabgarh, Greater Faridabad, Old Faridabad) have successfully cleared NEET through our coaching. Our Faridabad center maintains a 90%+ success rate.',
+      a: 'Over 100 students from Faridabad and surrounding areas (NIT, Ballabgarh, Greater Faridabad, Old Faridabad) have successfully cleared NEET through our coaching. Our Faridabad center maintains a 98% success rate.',
     },
     {
       q: 'Is there parking available at the Faridabad center?',
@@ -289,7 +289,7 @@ export default function FaridabadLocationPage() {
               },
               {
                 icon: Trophy,
-                title: '90% Success Rate',
+                title: '98% Success Rate',
                 description: 'Proven track record of NEET selections from Faridabad',
               },
               {

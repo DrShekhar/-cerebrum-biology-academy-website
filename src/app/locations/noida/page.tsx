@@ -258,7 +258,7 @@ export default function NoidaLocationPage() {
               },
               {
                 icon: Trophy,
-                title: '90% Success Rate',
+                title: '98% Success Rate',
                 description: 'Proven track record of NEET selections from Noida',
               },
               {

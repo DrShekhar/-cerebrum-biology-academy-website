@@ -16,6 +16,9 @@ import {
   areaConsolidationRedirects,
   localPageConsolidationBatch2,
   gurugramConsolidationRedirects,
+  noidaConsolidationRedirects,
+  faridabadConsolidationRedirects,
+  ghaziabadConsolidationRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1542,6 +1545,9 @@ const nextConfig = {
       ...hubPageConsolidationRedirects,
       ...localPageConsolidationBatch2,
       ...gurugramConsolidationRedirects,
+      ...noidaConsolidationRedirects,
+      ...faridabadConsolidationRedirects,
+      ...ghaziabadConsolidationRedirects,
     ]
   },
 

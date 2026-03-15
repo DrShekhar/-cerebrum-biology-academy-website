@@ -12,6 +12,9 @@ import { biologyDefinitions } from '@/data/biology-definitions'
 import { INDIAN_STATES } from '@/components/seo/StateSchema'
 import { COMPETITORS } from '@/components/seo/ComparisonSchema'
 import { facultyMembers } from '@/data/faculty'
+import { getAllNoidaAreaSlugs } from '@/data/noida-areas'
+import { getAllFaridabadAreaSlugs } from '@/data/faridabad-areas'
+import { getAllGhaziabadAreaSlugs } from '@/data/ghaziabad-areas'
 import { successStoriesData } from '@/data/successStories'
 import { mockTests } from '@/data/mockTests'
 // localAreas import removed — [localSlug] pages now redirect to city hubs
@@ -27,6 +30,9 @@ import {
   cannibalizationConsolidationRedirects,
   areaConsolidationRedirects,
   gurugramConsolidationRedirects,
+  noidaConsolidationRedirects,
+  faridabadConsolidationRedirects,
+  ghaziabadConsolidationRedirects,
 } from '@/config/seo-redirects.mjs'
 
 const allRedirectSources = [
@@ -40,6 +46,9 @@ const allRedirectSources = [
   ...cannibalizationConsolidationRedirects,
   ...areaConsolidationRedirects,
   ...gurugramConsolidationRedirects,
+  ...noidaConsolidationRedirects,
+  ...faridabadConsolidationRedirects,
+  ...ghaziabadConsolidationRedirects,
 ].map((r: { source: string }) => r.source)
 
 const exactRedirects = new Set(allRedirectSources.filter((s) => !s.includes(':')))
@@ -1005,18 +1014,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
-    {
-      url: `${baseUrl}/locations/noida/sector-18`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/locations/noida/sector-62`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
     // Gurugram Canonical Pages
     {
       url: `${baseUrl}/neet-coaching-gurugram`,
@@ -1249,203 +1246,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
-    // Noida SEO Landing Pages - HIGH PRIORITY
+    // Noida SEO Landing Pages - HIGH PRIORITY (area sub-pages now dynamic)
     {
       url: `${baseUrl}/neet-coaching-noida`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-18`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-62`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-137`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-150`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-44`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-50`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-37`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-93`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-104`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-128`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-15a`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/sector-168`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida/greater-noida-west`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-greater-noida-west`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
-    },
-    // Noida Society Pages
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/godrej-woods`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/mahagun-moderne`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/supertech-eco-village`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/logix-blossom-county`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/ace-city`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/gulshan-dynasty`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/eldeco-utopia`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/paras-tierea`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-society/prateek-grand-city`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    // Noida Metro Station Pages
-    {
-      url: `${baseUrl}/neet-coaching-near-metro/botanical-garden`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-near-metro/noida-city-centre`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-near-metro/sector-18-metro`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-near-metro/sector-137-metro`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-near-metro/pari-chowk-metro`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    // Noida HowTo Guide Page
-    {
-      url: `${baseUrl}/how-to-prepare-neet-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    // Noida vs Kota Comparison
-    {
-      url: `${baseUrl}/neet-coaching-noida-vs-kota`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    // Noida Toppers/Results
-    {
-      url: `${baseUrl}/neet-toppers-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/privacy-policy`,
@@ -1514,115 +1320,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
-    // Ghaziabad SEO Landing Pages - HIGH PRIORITY
+    // Ghaziabad SEO Landing Pages (area sub-pages now dynamic)
     {
       url: `${baseUrl}/neet-coaching-ghaziabad`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
-    {
-      url: `${baseUrl}/neet-coaching-ghaziabad/indirapuram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-ghaziabad/vaishali`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-ghaziabad/vasundhara`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-ghaziabad/crossing-republik`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-ghaziabad/raj-nagar-extension`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-ghaziabad/kaushambi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-ghaziabad/mohan-nagar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-ghaziabad/sahibabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    // Faridabad SEO Landing Pages - HIGH PRIORITY
+    // Faridabad SEO Landing Pages (area sub-pages now dynamic)
     {
       url: `${baseUrl}/neet-coaching-faridabad`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-faridabad/greater-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-faridabad/sector-21`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-faridabad/nit-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-faridabad/ballabgarh`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-faridabad/sector-15`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-faridabad/neharpar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-faridabad/sector-86`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-faridabad/old-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
     },
     // Biology Tuition & Coaching Pages - HIGH PRIORITY
     {
@@ -2481,19 +2191,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.94,
     },
     {
-      url: `${baseUrl}/biology-tutor-noida-sector-18`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.92,
-    },
-    {
       url: `${baseUrl}/biology-tutor-noida-sector-62`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.92,
-    },
-    {
-      url: `${baseUrl}/biology-tutor-noida-sector-137`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.92,
@@ -3828,12 +3526,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/biology-classes-noida-sector-137`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/biology-classes-palam-vihar-gurgaon`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -4708,12 +4400,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/neet-coaching-noida-sector-62`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/neet-coaching-paschim-vihar`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -5316,122 +5002,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
-    // Noida Expansion Pages
-    {
-      url: `${baseUrl}/neet-coaching-noida-sector-15`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-sector-50`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-noida-sector-76`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gaur-city-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-ats-pristine-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-jaypee-greens-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/online-neet-classes-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
+    // Noida canonical pages (area/thin pages now redirected, ghosts removed)
     {
       url: `${baseUrl}/neet-coaching-fee-noida`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
-    },
-    // Noida Class 11/12, Tuition, Board, CBSE Pages
-    {
-      url: `${baseUrl}/biology-class-11-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/biology-class-12-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/class-12-board-biology-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/best-biology-tutor-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/home-biology-tutor-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/cbse-biology-coaching-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    // Noida P1 Pages - Tuition variants, NCERT, Teacher near me
-    {
-      url: `${baseUrl}/online-biology-tuition-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-class-11-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-class-12-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/ncert-biology-coaching-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
     },
     // East Delhi Expansion Pages
     {
@@ -6795,12 +6371,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.86,
     },
     {
-      url: `${baseUrl}/neet-coaching-greater-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.86,
-    },
-    {
       url: `${baseUrl}/neet-coaching-gurgaon-sector-57`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -7454,131 +7024,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Pages added 2026-02-23 — were missing from sitemap
   // ============================================
   const missingPages: string[] = [
-    // 1-year & 2-year courses
-    '1-year-neet-course-faridabad',
-    '1-year-neet-course-ghaziabad',
-    '1-year-neet-course-noida',
-    '2-year-neet-course-faridabad',
-    '2-year-neet-course-ghaziabad',
-    '2-year-neet-course-noida',
-    // Competitor alternatives
-    'aakash-alternative-faridabad',
-    'aakash-alternative-ghaziabad',
-    'aakash-alternative-greater-noida',
-    'aakash-alternative-noida',
-    'allen-alternative-faridabad',
-    'allen-alternative-ghaziabad',
-    'allen-alternative-noida',
-    'fiitjee-alternative-faridabad',
-    'fiitjee-alternative-noida',
-    'narayana-alternative-faridabad',
-    'narayana-alternative-noida',
-    'physics-wallah-alternative-faridabad',
-    'physics-wallah-alternative-noida',
-    'velocity-alternative-faridabad',
-    'yvs-alternative-faridabad',
+    // Competitor comparison (non-city)
     'cerebrum-vs-aakash',
     'cerebrum-vs-allen',
-    'complement-aakash-coaching-faridabad',
-    'complement-aakash-coaching-noida',
-    'complement-allen-coaching-faridabad',
-    'complement-allen-coaching-noida',
-    // Best/top/which SEO pages
+    // Canonical best pages (kept — thin redirects point here)
     'best-neet-coaching-faridabad',
     'best-neet-coaching-ghaziabad',
-    'best-neet-coaching-greater-noida',
     'best-neet-coaching-gurugram',
     'best-neet-coaching-noida',
     'best-online-coaching-neet-biology',
-    'top-10-neet-coaching-faridabad',
-    'top-10-neet-coaching-ghaziabad',
-    'top-10-neet-coaching-greater-noida',
-    'top-10-neet-coaching-noida',
-    'top-5-neet-coaching-faridabad',
-    'which-is-better-aakash-or-allen-faridabad',
-    'which-is-better-aakash-or-allen-noida',
-    'which-neet-coaching-is-best-in-faridabad',
-    'which-neet-coaching-is-best-in-ghaziabad',
-    'which-neet-coaching-is-best-in-greater-noida',
-    'which-neet-coaching-is-best-in-noida',
-    // Affordable coaching
-    'affordable-neet-coaching-faridabad',
-    'affordable-neet-coaching-ghaziabad',
-    'affordable-neet-coaching-greater-noida',
-    'affordable-neet-coaching-noida',
-    // Biology coaching/tutor locations
-    'biology-classes-east-delhi',
-    'biology-classes-greater-noida',
-    'biology-coaching-defence-colony',
-    'biology-coaching-dwarka',
-    'biology-coaching-east-of-kailash-delhi',
-    'biology-coaching-greater-kailash',
-    'biology-coaching-hauz-khas',
-    'biology-coaching-model-town',
-    'biology-coaching-panchsheel',
-    'biology-coaching-vasant-kunj',
-    'biology-tutor-defence-colony',
-    'biology-tutor-hauz-khas',
-    'biology-tutor-malviya-nagar',
-    // Fee & scholarship pages
+    // Canonical fee pages
     'neet-coaching-fees-faridabad',
     'neet-coaching-fees-ghaziabad',
-    'neet-coaching-fees-greater-noida',
-    'how-much-fees-for-neet-coaching-faridabad',
-    'neet-scholarship-faridabad',
-    'neet-scholarship-ghaziabad',
-    'neet-scholarship-greater-noida',
-    'neet-scholarship-noida',
-    // Near me pages
-    'neet-coaching-near-me-faridabad',
-    'neet-coaching-near-me-ghaziabad',
-    'neet-coaching-near-me-greater-noida',
-    'neet-coaching-near-me-noida',
-    // Crash course
-    'neet-crash-course-faridabad',
-    'neet-crash-course-ghaziabad',
-    'neet-crash-course-greater-noida',
-    'neet-crash-course-noida',
-    // Dropper batches
+    // Non-city batch/content pages
     'neet-dropper-batch',
-    'neet-dropper-batch-faridabad',
-    'neet-dropper-batch-ghaziabad',
-    'neet-dropper-batch-greater-noida',
-    'neet-dropper-batch-noida',
-    // Evening & weekend batches
-    'neet-evening-batch-faridabad',
-    'neet-evening-batch-ghaziabad',
-    'neet-evening-batch-noida',
-    'neet-weekend-batch-faridabad',
-    'neet-weekend-batch-ghaziabad',
-    'neet-weekend-batch-noida',
-    // Foundation classes
-    'neet-foundation-class-9-faridabad',
-    'neet-foundation-class-9-ghaziabad',
-    'neet-foundation-class-9-greater-noida',
-    'neet-foundation-class-9-noida',
-    'neet-foundation-class-10-faridabad',
-    'neet-foundation-class-10-ghaziabad',
-    'neet-foundation-class-10-greater-noida',
-    'neet-foundation-class-10-noida',
-    // Test series
-    'neet-test-series-faridabad',
-    'neet-test-series-ghaziabad',
-    'neet-test-series-greater-noida',
-    'neet-test-series-noida',
     'test-series-schedule',
-    // Revision batches
-    'neet-revision-batch-faridabad',
-    // Online coaching
-    'online-neet-classes-faridabad',
-    'online-neet-coaching-faridabad',
-    'online-neet-coaching-ghaziabad',
-    'online-neet-coaching-greater-noida',
-    // Coaching necessity / comparison pages
     'is-coaching-necessary-for-neet-biology',
-    'is-coaching-necessary-for-neet-faridabad',
-    'is-coaching-necessary-for-neet-ghaziabad',
-    'is-coaching-necessary-for-neet-noida',
     'is-online-neet-coaching-effective',
     // Content pages
     'neet-ecology-important-questions',
@@ -7587,41 +7048,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'neet-preparation-roadmap',
     'how-to-score-340-in-neet-biology',
     'neet-ug-2026',
-    // Free demo classes
-    'free-neet-demo-class-faridabad',
-    'free-neet-demo-class-ghaziabad',
-    'free-neet-demo-class-greater-noida',
-    'free-neet-demo-class-noida',
-    // Board-specific
     // Other
     'dr-shekhar-youtube-channel',
     'neet-coaching',
-    // School-specific landing pages
-    'neet-coaching-sharda-greater-noida-students',
-    'neet-coaching-modern-school-faridabad-students',
-    'neet-coaching-amity-noida-students',
-    'neet-coaching-gd-goenka-faridabad-students',
-    'neet-coaching-cambridge-ghaziabad-students',
-    'neet-coaching-apeejay-faridabad-students',
+    // School-specific pages not yet consolidated
     'neet-coaching-dps-indirapuram-students',
-    'neet-coaching-kv-noida-students',
-    'neet-coaching-presidium-ghaziabad-students',
-    'neet-coaching-dps-noida-students',
     'neet-coaching-kr-mangalam-ghaziabad-students',
-    'neet-coaching-gd-goenka-ghaziabad-students',
-    'neet-coaching-aggarwal-faridabad-students',
-    'neet-coaching-dps-greater-noida-students',
-    'neet-coaching-ryan-noida-students',
-    'neet-coaching-pathways-noida-students',
-    'neet-coaching-dav-faridabad-students',
-    'neet-coaching-greenfields-faridabad-students',
-    'neet-coaching-somerville-noida-students',
-    'neet-coaching-mvn-faridabad-students',
-    'neet-coaching-mris-faridabad-students',
-    'neet-coaching-manav-rachna-faridabad-students',
-    'neet-coaching-lotus-valley-noida-students',
-    'neet-coaching-dps-faridabad-students',
-    'neet-coaching-jaypee-noida-students',
     // Board-specific pages
     'boards/west-bengal-hs',
     'boards/up-intermediate',
@@ -7705,9 +7137,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  // NOTE: Area pages (gurugram, noida, faridabad, ghaziabad, south-delhi),
-  // metro station pages, and society pages have been consolidated into
-  // their parent city hub pages. Wildcard 301 redirects handle old URLs.
+  // NOTE: Area sub-pages for gurugram, noida, faridabad, ghaziabad are now
+  // generated dynamically above. Metro station and society pages redirect to city hubs.
 
   // Course detail pages
   const courseRoutes: MetadataRoute.Sitemap = detailedCourses.map((course) => ({
@@ -7905,6 +7336,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  // Noida area sub-pages (/neet-coaching-noida/[area])
+  const noidaAreaRoutes: MetadataRoute.Sitemap = getAllNoidaAreaSlugs().map((slug) => ({
+    url: `${baseUrl}/neet-coaching-noida/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // Faridabad area sub-pages (/neet-coaching-faridabad/[area])
+  const faridabadAreaRoutes: MetadataRoute.Sitemap = getAllFaridabadAreaSlugs().map((slug) => ({
+    url: `${baseUrl}/neet-coaching-faridabad/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // Ghaziabad area sub-pages (/neet-coaching-ghaziabad/[area])
+  const ghaziabadAreaRoutes: MetadataRoute.Sitemap = getAllGhaziabadAreaSlugs().map((slug) => ({
+    url: `${baseUrl}/neet-coaching-ghaziabad/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...campbellChapterRoutes,
@@ -7922,6 +7377,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...compareRoutes,
     // localAreaRoutes removed — redirected to parent city hubs
     ...gurugramAreaRoutes,
+    ...noidaAreaRoutes,
+    ...faridabadAreaRoutes,
+    ...ghaziabadAreaRoutes,
     ...biologyNotesRoutes,
     ...onlineCityRoutes,
     ...curriculumRoutes,
