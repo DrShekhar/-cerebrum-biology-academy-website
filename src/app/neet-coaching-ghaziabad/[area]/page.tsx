@@ -196,6 +196,7 @@ export default async function GhaziabadAreaPage({ params }: Props) {
       ratingValue: '5.0',
       reviewCount: '38',
       bestRating: '5',
+      worstRating: '1',
     },
   }
 

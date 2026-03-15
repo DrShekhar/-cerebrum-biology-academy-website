@@ -319,35 +319,17 @@ export function getCenterFAQs(centerId: string): CenterFAQ | undefined {
 export function getAllCenterFAQsForSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: centerSpecificFAQs.map((center, index) => ({
-      '@type': 'Question',
-      position: index + 1,
-      mainEntity: {
-        '@type': 'Organization',
-        name: center.centerName,
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: center.address,
-          addressLocality: center.city,
-          addressCountry: 'IN'
-        }
-      },
-      acceptedAnswer: center.faqs.map(faq => ({
-        '@type': 'Answer',
-        text: faq.answer,
-        author: {
-          '@type': 'Organization',
-          name: 'Cerebrum Biology Academy',
-          url: 'https://cerebrumbiologyacademy.com',
-          contactPoint: {
-            '@type': 'ContactPoint',
-            telephone: ['+91-8826444334', '+91-9311946297'],
-            contactType: 'Customer Service'
-          }
-        }
+    '@type': 'FAQPage',
+    mainEntity: centerSpecificFAQs.flatMap((center) =>
+      center.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
       }))
-    }))
+    ),
   };
 }
 

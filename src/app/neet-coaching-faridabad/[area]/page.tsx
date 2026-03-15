@@ -160,42 +160,6 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
     lng: FARIDABAD_CENTER_METRICS.coordinates.longitude,
   }
 
-  const getAreaReviews = () => {
-    const itemReviewed = {
-      '@type': 'LocalBusiness',
-      '@id': localBusinessId,
-      name: `Cerebrum Biology Academy - ${area.name}`,
-    }
-
-    const baseReviews = [
-      {
-        '@type': 'Review',
-        itemReviewed,
-        author: { '@type': 'Person', name: 'Parent from ' + area.name },
-        datePublished: '2025-11-15',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: `Excellent NEET coaching! My child from ${area.schools[0] || area.name} improved from 480 to 650+ marks. The small batch size at their ${FARIDABAD_CENTER_METRICS.address} center made all the difference.`,
-      },
-      {
-        '@type': 'Review',
-        itemReviewed,
-        author: { '@type': 'Person', name: 'Student from ' + (area.societies[0] || area.name) },
-        datePublished: '2025-10-20',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: `Best Biology coaching in ${area.name}. Dr. Shekhar Sir's teaching methodology made complex topics easy. The ${area.nearbyMetro[0] || 'location'} connectivity makes it convenient from ${area.societies[0] || area.name}.`,
-      },
-      {
-        '@type': 'Review',
-        itemReviewed,
-        author: { '@type': 'Person', name: 'NEET 2025 Qualifier' },
-        datePublished: '2025-09-10',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: `I'm from ${area.name} and joined Cerebrum for my dropper year. The focused approach and regular tests helped me score ${CEREBRUM_METRICS.topScoreText} in Biology. Highly recommend!`,
-      },
-    ]
-    return baseReviews
-  }
-
   const educationalOrgSchema = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
@@ -288,7 +252,6 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
       bestRating: '5',
       worstRating: '1',
     },
-    review: getAreaReviews(),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'NEET Biology Courses',

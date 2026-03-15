@@ -188,6 +188,7 @@ export default async function NoidaAreaPage({ params }: Props) {
       ratingValue: '5.0',
       reviewCount: '38',
       bestRating: '5',
+      worstRating: '1',
     },
   }
 
