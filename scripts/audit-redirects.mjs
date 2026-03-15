@@ -8,6 +8,12 @@ import {
   hubPageConsolidationRedirects,
   cannibalizationConsolidationRedirects,
   areaConsolidationRedirects,
+  localPageConsolidationBatch2,
+  gurugramConsolidationRedirects,
+  noidaConsolidationRedirects,
+  faridabadConsolidationRedirects,
+  ghaziabadConsolidationRedirects,
+  rohiniConsolidationRedirects,
 } from '../src/config/seo-redirects.mjs'
 
 const arrays = {
@@ -20,6 +26,12 @@ const arrays = {
   hubPage: hubPageConsolidationRedirects,
   cannibalization: cannibalizationConsolidationRedirects,
   areaConsolidation: areaConsolidationRedirects,
+  localBatch2: localPageConsolidationBatch2,
+  gurugram: gurugramConsolidationRedirects,
+  noida: noidaConsolidationRedirects,
+  faridabad: faridabadConsolidationRedirects,
+  ghaziabad: ghaziabadConsolidationRedirects,
+  rohini: rohiniConsolidationRedirects,
 }
 
 // Collect all sources with their destinations and origin array

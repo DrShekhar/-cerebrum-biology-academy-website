@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Gurugram 2026 | DLF, Golf Course Road, Sector 51',
@@ -32,6 +33,13 @@ export default function GurugramCoachingLayout({ children }: { children: React.R
     <>
       <LocalBusinessSchema locationId="gurugram" />
       {children}
+      <NearMeKeywordInjector
+        location="Gurugram"
+        parentLocation="Delhi NCR"
+        centerAddress="M2K Corporate Park, Sector 51, Gurugram - 122003"
+        centerPhone="+91-8826-444-334"
+        nearbyAreas={['DLF Phase 1', 'Golf Course Road', 'Sushant Lok', 'Sector 51', 'Sohna Road', 'MG Road', 'Nirvana Country', 'Cyber City']}
+      />
     </>
   )
 }

@@ -15,6 +15,11 @@ import { facultyMembers } from '@/data/faculty'
 import { getAllNoidaAreaSlugs } from '@/data/noida-areas'
 import { getAllFaridabadAreaSlugs } from '@/data/faridabad-areas'
 import { getAllGhaziabadAreaSlugs } from '@/data/ghaziabad-areas'
+import { getAllAreaSlugs as getAllSouthDelhiAreaSlugs } from '@/data/south-delhi-areas'
+import { getAllAreaSlugs as getAllNorthDelhiAreaSlugs } from '@/data/north-delhi-areas'
+import { getAllAreaSlugs as getAllEastDelhiAreaSlugs } from '@/data/east-delhi-areas'
+import { getAllAreaSlugs as getAllWestDelhiAreaSlugs } from '@/data/west-delhi-areas'
+import { getAllGurugramAreaSlugs } from '@/data/gurugram-areas'
 import { successStoriesData } from '@/data/successStories'
 import { mockTests } from '@/data/mockTests'
 // localAreas import removed — [localSlug] pages now redirect to city hubs
@@ -33,6 +38,8 @@ import {
   noidaConsolidationRedirects,
   faridabadConsolidationRedirects,
   ghaziabadConsolidationRedirects,
+  rohiniConsolidationRedirects,
+  localPageConsolidationBatch2,
 } from '@/config/seo-redirects.mjs'
 
 const allRedirectSources = [
@@ -49,6 +56,8 @@ const allRedirectSources = [
   ...noidaConsolidationRedirects,
   ...faridabadConsolidationRedirects,
   ...ghaziabadConsolidationRedirects,
+  ...rohiniConsolidationRedirects,
+  ...localPageConsolidationBatch2,
 ].map((r: { source: string }) => r.source)
 
 const exactRedirects = new Set(allRedirectSources.filter((s) => !s.includes(':')))
@@ -7318,18 +7327,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
 
   // Gurugram area sub-pages (/neet-coaching-gurugram/[area])
-  const gurugramAreaSlugs = [
-    'dlf-phase-1', 'dlf-phase-2', 'dlf-phase-3', 'dlf-phase-4', 'dlf-phase-5',
-    'golf-course-road', 'sushant-lok', 'nirvana-country',
-    'south-city-1', 'south-city-2',
-    'sector-14', 'sector-43', 'sector-45', 'sector-49', 'sector-51',
-    'sector-54', 'sector-56', 'sector-57', 'sector-58',
-    'sector-65', 'sector-67', 'sector-69', 'sector-70', 'sector-72',
-    'sector-81', 'sector-82', 'sector-84',
-    'sohna-road', 'sector-48', 'mg-road', 'cyber-city',
-    'manesar', 'iffco-chowk', 'palam-vihar',
-  ]
-  const gurugramAreaRoutes: MetadataRoute.Sitemap = gurugramAreaSlugs.map((slug) => ({
+  const gurugramAreaRoutes: MetadataRoute.Sitemap = getAllGurugramAreaSlugs().map((slug) => ({
     url: `${baseUrl}/neet-coaching-gurugram/${slug}`,
     lastModified: lastUpdated,
     changeFrequency: 'weekly' as const,
@@ -7360,6 +7358,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  // South Delhi area sub-pages (/neet-coaching-south-delhi/[area])
+  const southDelhiAreaRoutes: MetadataRoute.Sitemap = getAllSouthDelhiAreaSlugs().map((slug) => ({
+    url: `${baseUrl}/neet-coaching-south-delhi/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // North Delhi area sub-pages (/neet-coaching-north-delhi/[area])
+  const northDelhiAreaRoutes: MetadataRoute.Sitemap = getAllNorthDelhiAreaSlugs().map((slug) => ({
+    url: `${baseUrl}/neet-coaching-north-delhi/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // East Delhi area sub-pages (/neet-coaching-east-delhi/[area])
+  const eastDelhiAreaRoutes: MetadataRoute.Sitemap = getAllEastDelhiAreaSlugs().map((slug) => ({
+    url: `${baseUrl}/neet-coaching-east-delhi/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // West Delhi area sub-pages (/neet-coaching-west-delhi/[area])
+  const westDelhiAreaRoutes: MetadataRoute.Sitemap = getAllWestDelhiAreaSlugs().map((slug) => ({
+    url: `${baseUrl}/neet-coaching-west-delhi/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
   // Combine all routes and deduplicate by URL
   const allRoutes = [
     ...campbellChapterRoutes,
@@ -7380,6 +7410,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...noidaAreaRoutes,
     ...faridabadAreaRoutes,
     ...ghaziabadAreaRoutes,
+    ...southDelhiAreaRoutes,
+    ...northDelhiAreaRoutes,
+    ...eastDelhiAreaRoutes,
+    ...westDelhiAreaRoutes,
     ...biologyNotesRoutes,
     ...onlineCityRoutes,
     ...curriculumRoutes,

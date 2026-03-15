@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     'international biology olympiad',
   ],
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation/',
+    canonical: 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation',
   },
   openGraph: {
     title: 'Biology Olympiad Preparation Online | IBO, USABO, BBO, INBO Coaching',

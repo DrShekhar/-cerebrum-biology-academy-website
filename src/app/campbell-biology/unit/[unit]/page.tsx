@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: UnitPageProps): Promise<Metad
     description: unit.metaDescription,
     keywords: unit.keywords,
     alternates: {
-      canonical: `https://cerebrumbiologyacademy.com/campbell-biology/unit/${unit.slug}/`,
+      canonical: `https://cerebrumbiologyacademy.com/campbell-biology/unit/${unit.slug}`,
     },
     openGraph: {
       title: unit.metaTitle,

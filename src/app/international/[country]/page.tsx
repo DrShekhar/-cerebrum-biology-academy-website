@@ -41,12 +41,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${config.name.toLowerCase()} biology tutor`,
     ],
     alternates: {
-      canonical: `https://cerebrumbiologyacademy.com/international/${country}/`,
+      canonical: `https://cerebrumbiologyacademy.com/international/${country}`,
     },
     openGraph: {
       title: `Biology Tutoring for ${config.name} Students`,
       description: `Expert ${config.examSystems[0]} tutoring. From ${priceString}.`,
-      url: `https://cerebrumbiologyacademy.com/international/${country}/`,
+      url: `https://cerebrumbiologyacademy.com/international/${country}`,
       siteName: 'Cerebrum Biology Academy',
       locale: config.hreflang.replace('-', '_'),
       type: 'website',

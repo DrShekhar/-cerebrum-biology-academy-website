@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ['https://cerebrumbiologyacademy.com/og/neet-guidance-seminar.jpg'],
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-guidance-seminar/',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-guidance-seminar',
   },
 }
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
+import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title:
@@ -32,6 +33,13 @@ export default function NEETCoachingSouthDelhiLayout({ children }: { children: R
     <>
       <LocalBusinessSchema locationId="south-extension" />
       {children}
+      <NearMeKeywordInjector
+        location="South Delhi"
+        parentLocation="Delhi NCR"
+        centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
+        centerPhone="+91-8826-444-334"
+        nearbyAreas={['Hauz Khas', 'Greater Kailash', 'Defence Colony', 'Saket', 'Vasant Vihar', 'CR Park', 'Malviya Nagar', 'Lajpat Nagar']}
+      />
     </>
   )
 }

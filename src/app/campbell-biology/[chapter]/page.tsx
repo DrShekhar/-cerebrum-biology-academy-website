@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: ChapterPageProps): Promise<Me
     description: chapter.metaDescription,
     keywords: chapter.keywords,
     alternates: {
-      canonical: `https://cerebrumbiologyacademy.com/campbell-biology/${chapter.slug}/`,
+      canonical: `https://cerebrumbiologyacademy.com/campbell-biology/${chapter.slug}`,
     },
     openGraph: {
       title: chapter.metaTitle,

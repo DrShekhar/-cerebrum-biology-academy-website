@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Centre Near Me | Best NEET Coaching Centres in Delhi NCR',
@@ -36,5 +37,10 @@ export const metadata: Metadata = {
 }
 
 export default function NeetCoachingCentreLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <LocalBusinessSchema locationId="south-extension" />
+      {children}
+    </>
+  )
 }
