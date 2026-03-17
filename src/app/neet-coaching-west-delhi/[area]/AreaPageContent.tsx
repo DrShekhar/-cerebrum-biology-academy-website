@@ -22,6 +22,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 import { WestDelhiAreaDetails, courseOptions, areaDetails } from '@/data/west-delhi-areas'
+import { HowToReachSection } from '@/components/seo/HowToReachSection'
 
 function getNearbyAreas(currentSlug: string, currentType: string): string[] {
   const typeMapping: Record<string, string[]> = {
@@ -406,6 +407,14 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
           </div>
         </div>
       </section>
+
+      <HowToReachSection
+        areaName={area.name}
+        citySlug="west-delhi"
+        nearbyMetro={area.nearbyMetro}
+        distanceFromCenter="35-50 min by Metro"
+        landmarks={area.landmarks}
+      />
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-orange-600 to-rose-600">

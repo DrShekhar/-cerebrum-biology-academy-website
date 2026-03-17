@@ -20,6 +20,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { NorthDelhiAreaDetails, courseOptions, areaDetails } from '@/data/north-delhi-areas'
+import { HowToReachSection } from '@/components/seo/HowToReachSection'
 
 function getNearbyAreas(currentSlug: string, currentType: string): string[] {
   const typeMapping: Record<string, string[]> = {
@@ -364,6 +365,14 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
           </div>
         </div>
       </section>
+
+      <HowToReachSection
+        areaName={area.name}
+        citySlug="north-delhi"
+        nearbyMetro={area.nearbyMetro}
+        distanceFromCenter="35-45 min by Metro"
+        landmarks={area.landmarks}
+      />
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600">

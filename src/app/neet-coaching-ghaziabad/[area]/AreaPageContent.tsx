@@ -24,6 +24,7 @@ import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
+import { HowToReachSection } from '@/components/seo/HowToReachSection'
 
 interface AreaPageContentProps {
   area: GhaziabadAreaDetails
@@ -322,6 +323,14 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
           </div>
         </section>
       )}
+
+      <HowToReachSection
+        areaName={area.name}
+        citySlug="ghaziabad"
+        nearbyMetro={area.nearbyMetro}
+        distanceFromCenter={area.distanceFromCenter}
+        landmarks={area.landmarks}
+      />
 
       {/* CTA Section */}
       <section id="speakable-contact" className="py-16 bg-gradient-to-r from-red-600 to-orange-600 text-white">

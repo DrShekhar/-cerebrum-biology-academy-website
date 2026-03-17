@@ -23,6 +23,7 @@ import {
   faridabadAreaDetails,
   getNearbyFaridabadAreas,
 } from '@/data/faridabad-areas'
+import { HowToReachSection } from '@/components/seo/HowToReachSection'
 
 function metroToSlug(metroName: string): string {
   return metroName.toLowerCase().replace(' metro', '-metro').replace(/\s+/g, '-')
@@ -458,6 +459,14 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
           </div>
         </section>
       )}
+
+      <HowToReachSection
+        areaName={area.name}
+        citySlug="faridabad"
+        nearbyMetro={area.nearbyMetro}
+        distanceFromCenter={area.distanceFromCenter}
+        landmarks={area.landmarks}
+      />
 
       <section className="py-16 md:py-20 bg-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

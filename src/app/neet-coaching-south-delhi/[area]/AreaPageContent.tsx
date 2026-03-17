@@ -15,6 +15,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { QuickAnswers } from '@/components/seo/QuickAnswers'
 import { AreaDetails, courseOptions, areaDetails } from '@/data/south-delhi-areas'
+import { HowToReachSection } from '@/components/seo/HowToReachSection'
 
 // Helper to get nearby areas based on area type and location
 function getNearbyAreas(currentSlug: string, currentType: string): string[] {
@@ -373,6 +374,14 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
           </div>
         </section>
       )}
+
+      <HowToReachSection
+        areaName={area.name}
+        citySlug="south-delhi"
+        nearbyMetro={area.nearbyMetro}
+        distanceFromCenter="30-45 min by Metro"
+        landmarks={area.landmarks}
+      />
 
       {/* CTA */}
       <section className="py-16 md:py-20 bg-indigo-600 text-white">
