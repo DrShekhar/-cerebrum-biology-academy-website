@@ -1,5 +1,6 @@
 // Server Component - no client-side interactivity needed
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 
 interface LocalBusinessSchemaProps {
   locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad' | 'noida'
@@ -369,16 +370,15 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       minValue: 10,
       maxValue: 20,
     },
-    // IMPORTANT: Review count must match Google Business Profile exactly
-    // Last verified: Feb 2026 — 38 reviews on Google, 5.0 rating
-    // MUST stay in sync with ConsistentNAP.tsx and metrics.ts
+    // TODO: Update quarterly from Google Business Profile
+    // Source of truth: CEREBRUM_METRICS in src/lib/constants/metrics.ts
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
+      ratingValue: String(CEREBRUM_METRICS.rating),
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
+      ratingCount: String(CEREBRUM_METRICS.reviewCount),
+      reviewCount: String(CEREBRUM_METRICS.reviewCount),
     },
     review: location.reviews.map((review) => ({
       '@type': 'Review',

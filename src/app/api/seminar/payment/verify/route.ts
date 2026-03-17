@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { RazorpayService } from '@/lib/payments/razorpayService'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 export async function POST(req: NextRequest) {
   try {
@@ -47,11 +48,15 @@ export async function POST(req: NextRequest) {
       },
     })
 
-    // TODO: Trigger WhatsApp welcome message via Interakt
-    // await sendWhatsAppWelcome(registration)
-
-    // TODO: Send email confirmation
-    // await sendEmailConfirmation(registration)
+    notifyAdminFormSubmission('🎓 Seminar Registration Payment', {
+      Parent: registration.parentName,
+      Email: registration.email,
+      'WhatsApp': registration.whatsappNumber || '-',
+      'Seminar Date': registration.seminarDate || '-',
+      'Seminar Slot': registration.seminarSlot || '-',
+      'Payment ID': razorpay_payment_id,
+      Status: 'COMPLETED',
+    }).catch(() => {})
 
     return NextResponse.json({
       success: true,

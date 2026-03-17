@@ -116,10 +116,9 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
     },
     {
       icon: MessageCircle,
-      label: 'Chat',
-      href: '/student/ai-tutor',
-      requiresAuth: true,
-      ariaLabel: 'Open AI tutor chat',
+      label: 'WhatsApp',
+      href: '#whatsapp',
+      ariaLabel: 'Chat on WhatsApp',
     },
     {
       icon: User,
@@ -178,6 +177,26 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
           {bottomNavItems.map((item) => {
             const Icon = item.icon
             const active = isActive(item.href)
+
+            if (item.label === 'WhatsApp') {
+              return (
+                <button
+                  key={item.label}
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'mobile-bottom-nav',
+                      message: WHATSAPP_MESSAGES.default,
+                      campaign: 'bottom-nav',
+                    })
+                  }
+                  className="flex flex-col items-center gap-1 transition-colors min-w-[44px] min-h-[44px] justify-center text-green-600 hover:text-green-700"
+                  aria-label={item.ariaLabel}
+                >
+                  <Icon className="w-6 h-6" aria-hidden="true" />
+                  <span className="text-xs font-medium">{item.label}</span>
+                </button>
+              )
+            }
 
             if (item.label === 'Menu') {
               return (

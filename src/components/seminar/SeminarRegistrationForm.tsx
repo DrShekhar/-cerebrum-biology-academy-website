@@ -142,6 +142,15 @@ export function SeminarRegistrationForm() {
           const verifyData = await verifyResponse.json()
 
           if (verifyData.success) {
+            const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+            openWhatsAppWithFormData('Seminar Registration', {
+              Name: formData.parentName,
+              Email: formData.email,
+              WhatsApp: formData.whatsappNumber,
+              City: formData.city,
+              Class: formData.studentClass || '-',
+              'Referral Code': formData.referralCode || '-',
+            })
             router.push(`/neet-guidance-seminar/thank-you?id=${orderData.registrationId}`)
           } else {
             alert('Payment verification failed. Please contact support.')

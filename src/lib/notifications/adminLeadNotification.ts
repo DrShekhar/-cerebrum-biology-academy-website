@@ -7,8 +7,8 @@ import { WhatsAppBusinessService } from '@/lib/integrations/whatsappBusinessServ
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { logger } from '@/lib/utils/logger'
 
-// Admin phone number for lead notifications
-const ADMIN_WHATSAPP_NUMBER = process.env.ADMIN_NOTIFICATION_WHATSAPP || CONTACT_INFO.phone.owner
+// Admin phone number for lead notifications (918826444334)
+const ADMIN_WHATSAPP_NUMBER = process.env.ADMIN_NOTIFICATION_WHATSAPP || CONTACT_INFO.phone.primary
 
 export interface LeadNotificationData {
   // Required fields
@@ -286,8 +286,50 @@ export async function notifyAdminContactInquiry(data: {
   })
 }
 
+/**
+ * Generic form submission notification to admin WhatsApp
+ * Use this for any form that doesn't have a dedicated notifier above
+ */
+export async function notifyAdminFormSubmission(
+  formName: string,
+  data: Record<string, string | number | boolean | null | undefined>
+): Promise<boolean> {
+  try {
+    const adminNumber = ADMIN_WHATSAPP_NUMBER.replace(/[^\d]/g, '')
+    const formattedAdminNumber = adminNumber.startsWith('91') ? adminNumber : `91${adminNumber}`
+
+    const timestamp = new Date()
+    let message = `📋 NEW FORM SUBMISSION\n`
+    message += `━━━━━━━━━━━━━━━━━━━━\n\n`
+    message += `📝 *Form:* ${formName}\n\n`
+
+    for (const [key, value] of Object.entries(data)) {
+      if (value === null || value === undefined || value === '') continue
+      const label = key
+        .replace(/([A-Z])/g, ' $1')
+        .replace(/^./, (s) => s.toUpperCase())
+        .trim()
+      const displayValue = String(value).length > 150
+        ? String(value).slice(0, 150) + '...'
+        : String(value)
+      message += `*${label}:* ${displayValue}\n`
+    }
+
+    message += `\n⏰ ${timestamp.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`
+
+    await WhatsAppBusinessService.sendTextMessage(formattedAdminNumber, message)
+
+    logger.businessEvent('admin_form_notification_sent', { formName })
+    return true
+  } catch (error) {
+    logger.error('Failed to send admin form notification', { error, formName })
+    return false
+  }
+}
+
 export default {
   sendAdminLeadNotification,
   notifyAdminDemoBooking,
   notifyAdminContactInquiry,
+  notifyAdminFormSubmission,
 }

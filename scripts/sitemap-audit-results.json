@@ -1,0 +1,881 @@
+{
+  "timestamp": "2026-03-11T09:39:51.085Z",
+  "summary": {
+    "total": 1240,
+    "exists": 851,
+    "dynamicRoute": 159,
+    "redirected": 230,
+    "missing404": 0
+  },
+  "missing404": [],
+  "redirected": [
+    "/6-month-neet-coaching-gurugram",
+    "/neet-coaching-noida/sector-18",
+    "/neet-coaching-noida/sector-62",
+    "/neet-coaching-noida/sector-137",
+    "/neet-coaching-noida/sector-150",
+    "/neet-coaching-noida/sector-44",
+    "/neet-coaching-noida/sector-50",
+    "/neet-coaching-noida/sector-37",
+    "/neet-coaching-noida/sector-93",
+    "/neet-coaching-noida/sector-104",
+    "/neet-coaching-noida/sector-128",
+    "/neet-coaching-noida/sector-15a",
+    "/neet-coaching-noida/sector-168",
+    "/neet-coaching-noida/greater-noida-west",
+    "/neet-coaching-greater-noida-west",
+    "/neet-coaching-noida-society/godrej-woods",
+    "/neet-coaching-noida-society/mahagun-moderne",
+    "/neet-coaching-noida-society/supertech-eco-village",
+    "/neet-coaching-noida-society/logix-blossom-county",
+    "/neet-coaching-noida-society/ace-city",
+    "/neet-coaching-noida-society/gulshan-dynasty",
+    "/neet-coaching-noida-society/eldeco-utopia",
+    "/neet-coaching-noida-society/paras-tierea",
+    "/neet-coaching-noida-society/prateek-grand-city",
+    "/neet-coaching-near-metro/botanical-garden",
+    "/neet-coaching-near-metro/noida-city-centre",
+    "/neet-coaching-near-metro/sector-18-metro",
+    "/neet-coaching-near-metro/sector-137-metro",
+    "/neet-coaching-near-metro/pari-chowk-metro",
+    "/neet-coaching-ghaziabad/indirapuram",
+    "/neet-coaching-ghaziabad/vaishali",
+    "/neet-coaching-ghaziabad/vasundhara",
+    "/neet-coaching-ghaziabad/crossing-republik",
+    "/neet-coaching-ghaziabad/raj-nagar-extension",
+    "/neet-coaching-ghaziabad/kaushambi",
+    "/neet-coaching-ghaziabad/mohan-nagar",
+    "/neet-coaching-ghaziabad/sahibabad",
+    "/neet-coaching-faridabad/greater-faridabad",
+    "/neet-coaching-faridabad/sector-21",
+    "/neet-coaching-faridabad/nit-faridabad",
+    "/neet-coaching-faridabad/ballabgarh",
+    "/neet-coaching-faridabad/sector-15",
+    "/neet-coaching-faridabad/neharpar",
+    "/neet-coaching-faridabad/sector-86",
+    "/neet-coaching-faridabad/old-faridabad",
+    "/neet-coaching-south-delhi/hauz-khas",
+    "/neet-coaching-south-delhi/kalu-sarai",
+    "/neet-coaching-south-delhi/greater-kailash",
+    "/neet-coaching-south-delhi/defence-colony",
+    "/neet-coaching-south-delhi/vasant-vihar",
+    "/neet-coaching-south-delhi/saket",
+    "/neet-coaching-south-delhi/malviya-nagar",
+    "/neet-coaching-south-delhi/green-park",
+    "/neet-coaching-south-delhi/panchsheel-park",
+    "/neet-coaching-south-delhi/new-friends-colony",
+    "/neet-coaching-south-delhi/cr-park",
+    "/neet-coaching-south-delhi/vasant-kunj",
+    "/neet-coaching-south-delhi/rk-puram",
+    "/neet-coaching-south-delhi/sarojini-nagar",
+    "/neet-coaching-south-delhi/lodhi-colony",
+    "/neet-coaching-south-delhi/andrews-ganj",
+    "/neet-coaching-south-delhi/kidwai-nagar",
+    "/neet-coaching-south-delhi/netaji-nagar",
+    "/neet-coaching-south-delhi/moti-bagh",
+    "/neet-coaching-south-delhi/golf-links",
+    "/neet-coaching-south-delhi/jor-bagh",
+    "/neet-coaching-south-delhi/sunder-nagar",
+    "/neet-coaching-south-delhi/munirka",
+    "/neet-coaching-south-delhi/ber-sarai",
+    "/neet-coaching-south-delhi/katwaria-sarai",
+    "/neet-coaching-south-delhi/lajpat-nagar",
+    "/neet-coaching-south-delhi/kalkaji",
+    "/neet-coaching-south-delhi/safdarjung-enclave",
+    "/neet-coaching-south-delhi/gulmohar-park",
+    "/neet-coaching-south-delhi/east-of-kailash",
+    "/neet-coaching-south-delhi/alaknanda",
+    "/neet-coaching-south-delhi/sukhdev-vihar",
+    "/neet-coaching-south-delhi/okhla",
+    "/neet-coaching-south-delhi/rajendra-nagar",
+    "/neet-coaching-south-delhi/karol-bagh",
+    "/neet-coaching-south-delhi/civil-lines",
+    "/biology-tuition-south-delhi/hauz-khas",
+    "/biology-tuition-south-delhi/kalu-sarai",
+    "/biology-tuition-south-delhi/greater-kailash",
+    "/biology-tuition-south-delhi/defence-colony",
+    "/biology-tuition-south-delhi/vasant-vihar",
+    "/biology-tuition-south-delhi/rk-puram",
+    "/biology-tuition-south-delhi/sarojini-nagar",
+    "/biology-tuition-south-delhi/lodhi-colony",
+    "/biology-tuition-south-delhi/saket",
+    "/biology-tuition-south-delhi/malviya-nagar",
+    "/biology-tuition-south-delhi/green-park",
+    "/biology-tuition-south-delhi/cr-park",
+    "/biology-tuition-south-delhi/munirka",
+    "/biology-tuition-south-delhi/lajpat-nagar",
+    "/biology-tuition-south-delhi/kalkaji",
+    "/biology-tuition-south-delhi/east-of-kailash",
+    "/biology-tutor-west-delhi",
+    "/international/hk",
+    "/about/faculty",
+    "/about/results",
+    "/courses/dropper",
+    "/biology-12th-boards-gurgaon",
+    "/biology-class-11-gurgaon",
+    "/biology-class-12-gurgaon",
+    "/biology-class-9-10-gurgaon",
+    "/biology-classes-alaknanda",
+    "/biology-classes-amity-gurgaon",
+    "/biology-classes-ashok-vihar",
+    "/biology-classes-bal-bharati-students",
+    "/biology-classes-blue-bells-gurgaon",
+    "/biology-classes-crossings-republik",
+    "/biology-classes-cyber-city-gurgaon",
+    "/biology-classes-dav-gurgaon",
+    "/biology-classes-defence-colony",
+    "/biology-classes-dlf-gurgaon",
+    "/biology-classes-dps-gurgaon",
+    "/biology-classes-dwarka",
+    "/biology-classes-east-of-kailash",
+    "/biology-classes-euro-international-gurgaon",
+    "/biology-classes-gd-goenka-gurgaon",
+    "/biology-classes-golf-course-road-gurgaon",
+    "/biology-classes-golf-links",
+    "/biology-classes-gulmohar-park",
+    "/biology-classes-gurgaon-sector-60",
+    "/biology-classes-heritage-school-gurgaon",
+    "/biology-classes-indirapuram",
+    "/biology-classes-jor-bagh",
+    "/biology-classes-karol-bagh",
+    "/biology-classes-lodhi-colony",
+    "/biology-classes-lotus-valley-gurgaon",
+    "/biology-classes-mahendragarh",
+    "/biology-classes-manav-rachna-gurgaon",
+    "/biology-classes-mayur-vihar",
+    "/biology-classes-mg-road-gurgaon",
+    "/biology-classes-moti-bagh",
+    "/biology-classes-munirka",
+    "/biology-classes-nehru-place",
+    "/biology-classes-new-gurgaon",
+    "/biology-classes-nirvana-country-gurgaon",
+    "/biology-classes-palam-vihar-gurgaon",
+    "/biology-classes-panchsheel-park",
+    "/biology-classes-patel-nagar",
+    "/biology-classes-pathways-world-school",
+    "/biology-classes-punjabi-bagh",
+    "/biology-classes-rewari",
+    "/biology-classes-rps-gurgaon",
+    "/biology-classes-ryan-gurgaon",
+    "/biology-classes-safdarjung-enclave",
+    "/biology-classes-sanskriti-school",
+    "/biology-classes-sarojini-nagar",
+    "/biology-classes-scottish-high-gurgaon",
+    "/biology-classes-shalimar-bagh",
+    "/biology-classes-shikshanter-gurgaon",
+    "/biology-classes-shri-ram-school-gurgaon",
+    "/biology-classes-sohna-road-gurgaon",
+    "/biology-classes-south-city-gurgaon",
+    "/biology-classes-suncity-school-gurgaon",
+    "/biology-classes-tilak-nagar",
+    "/biology-classes-uttam-nagar",
+    "/biology-coaching-dps-rk-puram",
+    "/biology-coaching-dps-vasant-kunj",
+    "/biology-coaching-modern-school",
+    "/biology-coaching-mothers-international-school",
+    "/biology-coaching-sanskriti-school",
+    "/biology-coaching-sardar-patel-vidyalaya",
+    "/biology-coaching-springdales-school",
+    "/biology-coaching-vasant-valley-school",
+    "/biology-home-tuition-gurgaon",
+    "/biology-tuition-rohini-west",
+    "/biology-tuition-ryan-international",
+    "/biology-tutor-gurgaon",
+    "/how-to-prepare-for-neet-in-gurugram",
+    "/neet-coaching-cr-park",
+    "/neet-coaching-dc-chowk-rohini",
+    "/neet-coaching-golf-course-road-gurgaon",
+    "/neet-coaching-greater-kailash",
+    "/neet-coaching-gurgaon-sector-43",
+    "/neet-coaching-hauz-khas",
+    "/neet-coaching-kalkaji",
+    "/neet-coaching-kaushambi",
+    "/neet-coaching-malviya-nagar",
+    "/neet-coaching-nirman-vihar",
+    "/neet-coaching-nirvana-country-gurgaon",
+    "/neet-coaching-paschim-vihar",
+    "/neet-coaching-model-town",
+    "/neet-coaching-punjabi-bagh",
+    "/neet-coaching-ashok-vihar",
+    "/neet-coaching-prashant-vihar",
+    "/neet-coaching-presidium-school",
+    "/neet-coaching-rajouri-garden",
+    "/neet-coaching-rk-puram",
+    "/neet-coaching-rohini-sector-3",
+    "/neet-coaching-rohini-sector-7",
+    "/neet-coaching-rohini-sector-8",
+    "/neet-coaching-sohna-road-gurgaon",
+    "/neet-coaching-south-city-gurgaon",
+    "/neet-coaching-udyog-vihar-gurgaon",
+    "/neet-coaching-vaishali-ghaziabad",
+    "/neet-coaching-vasant-vihar",
+    "/neet-coaching-vasundhara-ghaziabad",
+    "/neet-droppers-batch-gurgaon",
+    "/neet-readiness-quiz",
+    "/neet-coaching-dwarka-delhi",
+    "/neet-coaching-dwarka-sector-7",
+    "/neet-coaching-dwarka-sector-19",
+    "/neet-coaching-uttam-nagar",
+    "/neet-coaching-vikaspuri",
+    "/neet-coaching-paschim-vihar",
+    "/neet-coaching-tilak-nagar",
+    "/neet-coaching-raj-nagar-extension",
+    "/neet-coaching-crossings-republik",
+    "/neet-coaching-kaushambi",
+    "/neet-coaching-mohan-nagar",
+    "/neet-coaching-wave-city",
+    "/neet-coaching-noida-sector-15",
+    "/neet-coaching-noida-sector-50",
+    "/neet-coaching-noida-sector-76",
+    "/neet-coaching-mayur-vihar",
+    "/neet-coaching-preet-vihar",
+    "/neet-coaching-laxmi-nagar",
+    "/neet-coaching-shahdara",
+    "/neet-coaching-mohali-punjab",
+    "/neet-coaching-panchkula-haryana",
+    "/neet-coaching-ludhiana-punjab",
+    "/neet-coaching-jalandhar-punjab",
+    "/neet-coaching-amritsar-punjab",
+    "/neet-coaching-zirakpur-punjab",
+    "/neet-coaching-netaji-subhash-place",
+    "/neet-coaching-near-metro"
+  ],
+  "dynamicRoutes": [
+    {
+      "url": "/blog/${post.slug}",
+      "route": "blog/[slug]"
+    },
+    {
+      "url": "/${slug}",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-notes-for-neet/molecular-basis-of-inheritance",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/principles-of-inheritance-and-variation",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/human-physiology",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/evolution",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/ecology",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/cell-the-unit-of-life",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/biomolecules",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/cell-cycle-and-cell-division",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/reproduction",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/biotechnology",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/biological-classification",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/the-living-world",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/plant-kingdom",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/animal-kingdom",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/morphology-of-flowering-plants",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/anatomy-of-flowering-plants",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/structural-organisation-in-animals",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/biology-notes-for-neet/plant-physiology",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/laxmi-nagar",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/locations/delhi/dwarka",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/delhi/rohini",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/delhi/south-delhi",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/noida/sector-18",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/noida/sector-62",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/dlf-phase-1",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/golf-course-road",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sushant-lok",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-56",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-14",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-43",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-51",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-57",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/south-city-1",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/new-gurugram",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/dlf-phase-4",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/nirvana-country",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-49",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sohna-road",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-84",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/dlf-phase-2",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/dlf-phase-3",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/dlf-phase-5",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/mg-road",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-54",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-58",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-53",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/ambience-island",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-45",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-48",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-62",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-63",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-41",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-102",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-106",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-109",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-111",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/gurugram/sector-113",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/biology-topics/biotechnology",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-topics/cell-biology",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-topics/ecology-environment",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-topics/genetics-evolution",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-topics/human-physiology",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-topics/plant-physiology",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-near/dps-rk-puram",
+      "route": "neet-coaching-near/[school]"
+    },
+    {
+      "url": "/neet-coaching-near/dps-vasant-vihar",
+      "route": "neet-coaching-near/[school]"
+    },
+    {
+      "url": "/neet-coaching-near/vasant-valley-school",
+      "route": "neet-coaching-near/[school]"
+    },
+    {
+      "url": "/neet-coaching-near/modern-school-vasant-vihar",
+      "route": "neet-coaching-near/[school]"
+    },
+    {
+      "url": "/neet-coaching-near/sanskriti-school",
+      "route": "neet-coaching-near/[school]"
+    },
+    {
+      "url": "/neet-coaching-near/shri-ram-school",
+      "route": "neet-coaching-near/[school]"
+    },
+    {
+      "url": "/neet-coaching-near/springdales-pusa-road",
+      "route": "neet-coaching-near/[school]"
+    },
+    {
+      "url": "/neet-coaching-near/dps-east-of-kailash",
+      "route": "neet-coaching-near/[school]"
+    },
+    {
+      "url": "/neet-biology-tutor-class-11",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-biology-tutor-class-12",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-biology-tutor-droppers",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-tutor-delhi",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-tutor-laxmi-nagar",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-tutor-pitampura",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-tutor-noida-sector-137",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/international/us",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/uk",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/ca",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/au",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/sg",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/ae",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/ie",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/nz",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/za",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/biology-classes-gurgaon-sector-49",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-gurgaon-sector-51",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-gurgaon-sector-55",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-gurgaon-sector-56",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-gurgaon-sector-57",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-gurgaon-sector-73",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-laxmi-nagar",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-manesar",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-model-town",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-noida-sector-137",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-preet-vihar",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-rohini-sector-11",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-rohini-sector-13",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-rohini-sector-16",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-classes-rohini-sector-24",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-tuition-gurgaon",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-gurgaon-sector-45",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-gurgaon-sector-49",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-gurgaon-sector-51",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-gurgaon-sector-56",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-gurgaon-sector-61",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-gurgaon-sector-82",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-noida-sector-62",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-rohini-sector-14",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-rohini-sector-15",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-rohini-sector-22",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/neet-coaching-rohini-sector-5",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/nri-students/uae",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/saudi-arabia",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/kuwait",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/qatar",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/oman",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/bahrain",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/singapore",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/malaysia",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/nepal",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/nigeria",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/kenya",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/thailand",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/indonesia",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/tanzania",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/sri-lanka",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/mauritius",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/philippines",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/hong-kong",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/vietnam",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/usa",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/uk",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/canada",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/nri-students/australia",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/${page}",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/campbell-biology/${chapter.slug}",
+      "route": "campbell-biology/[chapter]"
+    },
+    {
+      "url": "/campbell-biology/unit/${unit.slug}",
+      "route": "campbell-biology/unit/[unit]"
+    },
+    {
+      "url": "/neet-coaching/${slug}",
+      "route": "neet-coaching/[location]"
+    },
+    {
+      "url": "/courses/${course.slug}",
+      "route": "courses/[slug]"
+    },
+    {
+      "url": "/international/${country}",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/international/${country}/courses",
+      "route": "international/[country]"
+    },
+    {
+      "url": "/nri-students/${country}",
+      "route": "nri-students/[country]"
+    },
+    {
+      "url": "/locations/${city}",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/locations/${loc.citySlug}/${loc.slug}",
+      "route": "locations/[city]"
+    },
+    {
+      "url": "/biology-definitions/${def.slug}",
+      "route": "biology-definitions/[slug]"
+    },
+    {
+      "url": "/blog/category/${slug}",
+      "route": "blog/category/[slug]"
+    },
+    {
+      "url": "/blog/tag/${tag.toLowerCase().replace(/\\s+/g, '-')}",
+      "route": "blog/tag/[slug]"
+    },
+    {
+      "url": "/states/${state}",
+      "route": "states/[state]"
+    },
+    {
+      "url": "/compare/${competitor}",
+      "route": "compare/[competitor]"
+    },
+    {
+      "url": "/${slug}",
+      "route": "[localSlug]"
+    },
+    {
+      "url": "/biology-notes-for-neet/${chapter}",
+      "route": "biology-notes-for-neet/[chapter]"
+    },
+    {
+      "url": "/online-biology-classes-in/${city}",
+      "route": "online-biology-classes-in/[city]"
+    },
+    {
+      "url": "/online-biology-classes-international/${curriculum}",
+      "route": "online-biology-classes-international/[curriculum]"
+    },
+    {
+      "url": "/neet-college-predictor/college/${collegeSlugify(college.name)}",
+      "route": "neet-college-predictor/college/[slug]"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/east-delhi-areas'
-import { CEREBRUM_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
+import { CEREBRUM_METRICS, NOIDA_CENTER_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
 import AreaPageContent from './AreaPageContent'
 
 interface PageProps {
@@ -121,8 +121,8 @@ export default async function EastDelhiAreaPage({ params }: PageProps) {
   const localBusinessId = `https://cerebrumbiologyacademy.com/neet-coaching-east-delhi/${areaSlug}#localbusiness`
 
   const areaCoords = AREA_COORDINATES[areaSlug] || {
-    lat: CEREBRUM_METRICS.coordinates.latitude,
-    lng: CEREBRUM_METRICS.coordinates.longitude,
+    lat: NOIDA_CENTER_METRICS.coordinates.latitude,
+    lng: NOIDA_CENTER_METRICS.coordinates.longitude,
   }
 
   const educationalOrgSchema = {
@@ -138,16 +138,16 @@ export default async function EastDelhiAreaPage({ params }: PageProps) {
     foundingDate: '2014',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: CEREBRUM_METRICS.mainAddress,
-      addressLocality: 'South Delhi',
-      addressRegion: 'Delhi',
-      postalCode: CEREBRUM_METRICS.pincode,
+      streetAddress: NOIDA_CENTER_METRICS.address,
+      addressLocality: NOIDA_CENTER_METRICS.locality,
+      addressRegion: NOIDA_CENTER_METRICS.region,
+      postalCode: NOIDA_CENTER_METRICS.pincode,
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: CEREBRUM_METRICS.coordinates.latitude,
-      longitude: CEREBRUM_METRICS.coordinates.longitude,
+      latitude: NOIDA_CENTER_METRICS.coordinates.latitude,
+      longitude: NOIDA_CENTER_METRICS.coordinates.longitude,
     },
     areaServed: [
       { '@type': 'City', name: area.name },
@@ -169,7 +169,7 @@ export default async function EastDelhiAreaPage({ params }: PageProps) {
     parentOrganization: { '@id': organizationId },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: CEREBRUM_METRICS.mainAddress,
+      streetAddress: NOIDA_CENTER_METRICS.address,
       addressLocality: area.name,
       addressRegion: 'Delhi',
       postalCode: area.pincode,

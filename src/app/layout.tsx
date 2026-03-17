@@ -4,7 +4,6 @@ import { StructuredData } from '@/components/seo/StructuredData'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { SEOHealthCheck } from '@/components/seo/SEOHealthCheck'
-import { CanonicalManager } from '@/components/seo/CanonicalManager'
 import GoogleTagManager, { GoogleTagManagerNoscript } from '@/components/analytics/GoogleTagManager'
 import FacebookPixel from '@/components/analytics/FacebookPixel'
 import MicrosoftClarity from '@/components/analytics/MicrosoftClarity'
@@ -136,20 +135,12 @@ export default function RootLayout({
         {/* PERFORMANCE: Next.js handles chunk preloading automatically - removed invalid static paths */}
         {/* Using modulepreload for modern browsers on actual chunks is handled by Next.js */}
 
-        {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
-        {/* Google Fonts preconnect removed - next/font/google self-hosts fonts */}
-        {/* Self-origin preconnect for faster CSS/JS loading */}
+        {/* Performance: Preconnect to critical domains only */}
         <link rel="preconnect" href="https://cerebrumbiologyacademy.com" />
         <link rel="preconnect" href="https://cerebrumbiologyacademy.com" crossOrigin="anonymous" />
-        {/* Vercel CDN for static assets */}
-        <link rel="preconnect" href="https://vercel.live" />
-        {/* Third-party services */}
-        <link rel="preconnect" href="https://wa.me" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        <link rel="dns-prefetch" href="//checkout.razorpay.com" />
-        <link rel="dns-prefetch" href="//api.whatsapp.com" />
-        <link rel="dns-prefetch" href="//connect.facebook.net" />
+        {/* Razorpay, WhatsApp, Facebook preconnects moved to specific pages that need them */}
 
         {/* Fonts are handled by next/font/google - no manual preload needed */}
         {/* Logo preloading is handled by Next.js Image priority prop in HeaderHybrid */}
@@ -265,10 +256,6 @@ export default function RootLayout({
                          Leads are captured when users message on WhatsApp directly. */}
                       {/* CONVERSION: Global WhatsApp QR modal for desktop users */}
                       <DynamicWhatsAppDesktopModal />
-                      {/* SEO: Canonical URL manager - wrapped in Suspense for useSearchParams */}
-                      <Suspense fallback={null}>
-                        <CanonicalManager />
-                      </Suspense>
                       {/* PERFORMANCE: Analytics after main content for better LCP */}
                       <GoogleAnalytics />
                       <FacebookPixel />

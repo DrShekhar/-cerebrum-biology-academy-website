@@ -819,6 +819,13 @@ export function IntelligentChatbot() {
       })
 
       if (response.ok) {
+        const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+        openWhatsAppWithFormData('Ceri AI Chatbot Lead', {
+          Name: leadData.name || '-',
+          Phone: leadData.phone || '-',
+          Email: leadData.email || '-',
+          Class: leadData.class || '-',
+        })
         trackBehavior('lead_captured_chatbot', {
           score: chatState.leadScore?.overall,
           classification: chatState.leadScore?.classification,

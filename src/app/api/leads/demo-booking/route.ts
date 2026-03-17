@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { normalizePhone } from '@/lib/utils/phone'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 /**
  * Simplified demo booking endpoint for Google Ads landing pages.
@@ -60,6 +61,14 @@ export async function POST(request: NextRequest) {
 
       return { booking, lead }
     })
+
+    notifyAdminFormSubmission('Demo Booking (Landing Page)', {
+      Name: name,
+      Phone: normalizedPhone,
+      Course: course,
+      Source: source,
+      UTM: body.utm_campaign || body.utm_source || '-',
+    }).catch(() => {})
 
     return NextResponse.json(
       {

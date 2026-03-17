@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/west-delhi-areas'
-import { CEREBRUM_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
+import { CEREBRUM_METRICS, ROHINI_CENTER_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
 import AreaPageContent from './AreaPageContent'
 
 interface PageProps {
@@ -121,8 +121,8 @@ export default async function WestDelhiAreaPage({ params }: PageProps) {
   const localBusinessId = `https://cerebrumbiologyacademy.com/neet-coaching-west-delhi/${areaSlug}#localbusiness`
 
   const areaCoords = AREA_COORDINATES[areaSlug] || {
-    lat: CEREBRUM_METRICS.coordinates.latitude,
-    lng: CEREBRUM_METRICS.coordinates.longitude,
+    lat: ROHINI_CENTER_METRICS.coordinates.latitude,
+    lng: ROHINI_CENTER_METRICS.coordinates.longitude,
   }
 
   const educationalOrgSchema = {
@@ -138,16 +138,16 @@ export default async function WestDelhiAreaPage({ params }: PageProps) {
     foundingDate: '2014',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: CEREBRUM_METRICS.mainAddress,
-      addressLocality: 'South Delhi',
-      addressRegion: 'Delhi',
-      postalCode: CEREBRUM_METRICS.pincode,
+      streetAddress: ROHINI_CENTER_METRICS.address,
+      addressLocality: ROHINI_CENTER_METRICS.locality,
+      addressRegion: ROHINI_CENTER_METRICS.region,
+      postalCode: ROHINI_CENTER_METRICS.pincode,
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: CEREBRUM_METRICS.coordinates.latitude,
-      longitude: CEREBRUM_METRICS.coordinates.longitude,
+      latitude: ROHINI_CENTER_METRICS.coordinates.latitude,
+      longitude: ROHINI_CENTER_METRICS.coordinates.longitude,
     },
     areaServed: [
       { '@type': 'City', name: area.name },
@@ -169,7 +169,7 @@ export default async function WestDelhiAreaPage({ params }: PageProps) {
     parentOrganization: { '@id': organizationId },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: CEREBRUM_METRICS.mainAddress,
+      streetAddress: ROHINI_CENTER_METRICS.address,
       addressLocality: area.name,
       addressRegion: 'Delhi',
       postalCode: area.pincode,

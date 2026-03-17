@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
 export default function NEETCoachingEastDelhiLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <LocalBusinessSchema locationId="south-extension" />
       {children}
       <NearMeKeywordInjector
         location="East Delhi"

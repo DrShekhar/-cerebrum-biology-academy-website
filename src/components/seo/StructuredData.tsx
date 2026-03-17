@@ -242,8 +242,8 @@ export function OrganizationSchema() {
     review: getDynamicReviews(),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
+      ratingValue: String(CEREBRUM_METRICS.rating),
+      reviewCount: String(CEREBRUM_METRICS.reviewCount),
       bestRating: '5',
       worstRating: '1',
     },

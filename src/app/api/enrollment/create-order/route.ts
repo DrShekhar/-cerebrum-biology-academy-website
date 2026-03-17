@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { nanoid } from 'nanoid'
 import { rateLimit } from '@/lib/rateLimit'
 import { validateUserSession } from '@/lib/auth/config'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 function getRazorpayInstance() {
   if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
@@ -227,6 +228,18 @@ export async function POST(request: NextRequest) {
       },
     })
 
+
+    notifyAdminFormSubmission('Enrollment Order Created', {
+      Student: studentName,
+      Email: email,
+      Phone: phone,
+      Class: classLevel,
+      Tier: tier,
+      Batch: batchName,
+      'Payment Plan': paymentPlan,
+      'Installment Amount': `₹${installmentAmount}`,
+      'Total Amount': `₹${totalAmount}`,
+    }).catch(() => {})
 
     return NextResponse.json({
       success: true,

@@ -144,6 +144,12 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
       const data = await response.json()
 
       if (data.success) {
+        const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+        openWhatsAppWithFormData('Blog Lead Capture', {
+          Phone: leadPhone,
+          Article: meta.title,
+          Category: meta.category,
+        })
         setLeadSubmitted(true)
       } else {
         setLeadError(data.message || 'Something went wrong. Please try again.')

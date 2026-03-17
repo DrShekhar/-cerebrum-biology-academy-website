@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 // Normalize phone number to standard format
 function normalizePhone(phone: string): string {
@@ -97,6 +98,11 @@ export async function POST(request: NextRequest) {
           source: 'website_footer',
         },
       })
+
+      notifyAdminFormSubmission('Newsletter Subscribe', {
+        Email: normalizedEmail,
+        WhatsApp: normalizedWhatsApp || '-',
+      }).catch(() => {})
 
       return NextResponse.json({
         success: true,

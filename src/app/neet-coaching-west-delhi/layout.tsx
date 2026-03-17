@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in West Delhi | Biology Classes Near You',
   description:
     'Best NEET coaching in West Delhi. Expert biology classes for Class 11, 12 & droppers. AIIMS-trained faculty, small batches, 98% success rate. Free demo class!',
+  keywords:
+    'NEET coaching West Delhi, NEET coaching Dwarka, NEET coaching Janakpuri, NEET coaching Rajouri Garden, biology coaching West Delhi, medical coaching West Delhi, NEET preparation West Delhi',
   openGraph: {
     title: 'NEET Coaching in West Delhi | Biology Classes Near You',
     images: ['/og-image.jpg'],
@@ -21,6 +24,7 @@ export const metadata: Metadata = {
 export default function NEETCoachingWestDelhiLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <LocalBusinessSchema locationId="rohini" />
       {children}
       <NearMeKeywordInjector
         location="West Delhi"

@@ -357,6 +357,15 @@ export default function ApplicationForm() {
       }
 
       localStorage.removeItem('applicationFormData')
+      const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+      openWhatsAppWithFormData('Admission Application', {
+        Name: `${formData.personalInfo.firstName} ${formData.personalInfo.lastName}`,
+        Email: formData.personalInfo.email,
+        Phone: formData.personalInfo.phone,
+        City: formData.personalInfo.city,
+        Batch: formData.courseSelection.selectedBatch || '-',
+        'Payment Plan': formData.courseSelection.paymentPlan || '-',
+      })
       setSubmitSuccess(true)
       trackFormSubmission.success()
     } catch (err: any) {

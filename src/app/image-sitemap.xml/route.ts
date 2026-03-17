@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { getAllPosts } from '@/lib/blog/mdx'
 
 export const dynamic = 'force-static'
 
@@ -164,7 +165,24 @@ function escapeXML(str: string): string {
 }
 
 export async function GET() {
-  const xml = generateImageSitemapXML(imageEntries)
+  const blogPosts = getAllPosts()
+  const blogEntries: ImageSitemapEntry[] = blogPosts
+    .filter((post) => post.featuredImage && post.featuredImage !== '/blog/default-featured.jpg')
+    .map((post) => ({
+      loc: `${BASE_URL}/blog/${post.slug}`,
+      images: [
+        {
+          loc: post.featuredImage.startsWith('http')
+            ? post.featuredImage
+            : `${BASE_URL}${post.featuredImage}`,
+          title: post.title,
+          caption: post.excerpt,
+        },
+      ],
+    }))
+
+  const allEntries = [...imageEntries, ...blogEntries]
+  const xml = generateImageSitemapXML(allEntries)
 
   return new NextResponse(xml, {
     headers: {

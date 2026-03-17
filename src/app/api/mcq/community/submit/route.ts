@@ -4,6 +4,7 @@ import { rateLimit } from '@/lib/rateLimit'
 import type { QuestionSubmission } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 import { screenQuestion, getScreeningDecision, type QuestionToScreen } from '@/lib/mcq/aiScreening'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 export async function POST(request: NextRequest) {
   try {
@@ -144,6 +145,15 @@ export async function POST(request: NextRequest) {
         questionsSubmitted: { increment: 1 },
       },
     })
+
+    notifyAdminFormSubmission('MCQ Community Submission', {
+      Submitter: submitterName,
+      Phone: submitterPhone || '-',
+      Topic: topic,
+      Subtopic: subtopic || '-',
+      Difficulty: difficulty || 'MEDIUM',
+      Question: question.slice(0, 100),
+    }).catch(() => {})
 
     // Trigger AI screening asynchronously (non-blocking)
     triggerAIScreening(communityQuestion.id, {

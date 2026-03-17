@@ -48,6 +48,11 @@ export function BlogNewsletterSignup({ articleSlug, category }: BlogNewsletterSi
       })
 
       if (response.ok) {
+        const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+        openWhatsAppWithFormData('Blog Newsletter Signup', {
+          Email: email,
+          Source: articleSlug || 'blog',
+        })
         setSubmitted(true)
       } else {
         setError('Something went wrong. Please try again.')

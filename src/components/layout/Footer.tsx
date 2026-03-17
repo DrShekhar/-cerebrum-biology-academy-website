@@ -116,6 +116,11 @@ export const Footer = memo(function Footer() {
       const data = await response.json()
 
       if (response.ok) {
+        const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+        openWhatsAppWithFormData('Newsletter Subscribe', {
+          Email: email,
+          WhatsApp: whatsappNumber || '-',
+        })
         trackFooterSubscribe(whatsappNumber ? 'both' : 'email')
         setSubscribeMessage(data.message || 'Thank you for subscribing!')
         if (!data.alreadySubscribed) {

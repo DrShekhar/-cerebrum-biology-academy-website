@@ -46,11 +46,8 @@ const VIDEOS: Record<string, VideoInfo> = {
   },
 }
 
-const ALL_THREE = [VIDEOS.bk6wQCh6b9w, VIDEOS.NfhkGqOQXzk, VIDEOS.t5F8RBuHITM]
-
-// Static video sitemap entries for dedicated + location pages
+// Static video sitemap entries — canonical URL only per video (no duplicates)
 const STATIC_ENTRIES: VideoSitemapEntry[] = [
-  // Dedicated testimonial pages
   {
     loc: '/testimonials/sadhna-sirin-neet-2023-topper',
     videos: [VIDEOS.bk6wQCh6b9w],
@@ -59,14 +56,6 @@ const STATIC_ENTRIES: VideoSitemapEntry[] = [
     loc: '/testimonials/neet-success-story',
     videos: [VIDEOS.t5F8RBuHITM],
   },
-  // Location pages with embedded videos
-  { loc: '/neet-coaching-gurgaon', videos: ALL_THREE },
-  { loc: '/neet-coaching-civil-lines-delhi', videos: ALL_THREE },
-  { loc: '/neet-coaching-noida', videos: ALL_THREE },
-  { loc: '/neet-crash-course-rohini-2026', videos: ALL_THREE },
-  { loc: '/neet-coaching-dwarka', videos: ALL_THREE },
-  { loc: '/neet-coaching-gurugram', videos: ALL_THREE },
-  { loc: '/neet-coaching-faridabad', videos: ALL_THREE },
 ]
 
 function escapeXML(str: string): string {

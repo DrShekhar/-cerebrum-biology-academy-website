@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { FeedbackData, FeedbackAnalyzer } from '../../../lib/feedback/feedbackCollection'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 // In-memory storage for demo purposes
 // In production, use a proper database like PostgreSQL with proper schema
@@ -40,6 +41,13 @@ export async function POST(request: NextRequest) {
 
     // Trigger alerts for critical feedback
     await handleCriticalFeedback(feedback)
+
+    notifyAdminFormSubmission('User Feedback', {
+      Type: feedback.feedbackType,
+      User: feedback.userId,
+      Rating: feedback.data?.rating || '-',
+      Comment: feedback.data?.comment || '-',
+    }).catch(() => {})
 
     return NextResponse.json({
       success: true,

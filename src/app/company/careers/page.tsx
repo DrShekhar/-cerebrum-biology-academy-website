@@ -349,6 +349,14 @@ export default function CareersPage() {
           source: 'careers-page',
         }),
       })
+      const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+      openWhatsAppWithFormData('Career Application', {
+        Name: applicationForm.name,
+        Email: applicationForm.email,
+        Phone: applicationForm.phone,
+        Position: applicationForm.position,
+        Experience: applicationForm.experience,
+      })
       setSubmitSuccess(true)
     } finally {
       setIsSubmitting(false)

@@ -428,6 +428,13 @@ For personalized guidance, our counselor team can help. In the meantime:
           message: `Lead captured via ARIA chat. Score: ${data.score}`,
         }),
       })
+      const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+      openWhatsAppWithFormData('ARIA Sales Agent Lead', {
+        Name: data.name || '-',
+        Phone: data.phone || '-',
+        Email: data.email || '-',
+        Class: data.class || '-',
+      })
     } catch (error) {
       console.error('Failed to submit lead:', error)
     }

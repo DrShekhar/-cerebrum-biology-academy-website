@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { rateLimit } from '@/lib/rateLimit'
 import type { ErrorReportType } from '@/generated/prisma'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 export async function POST(request: NextRequest) {
   try {
@@ -132,6 +133,15 @@ export async function POST(request: NextRequest) {
         errorsReported: { increment: 1 },
       },
     })
+
+    notifyAdminFormSubmission('MCQ Error Report', {
+      Reporter: reporterName,
+      Phone: reporterPhone || '-',
+      Type: reportType,
+      'Current Answer': currentAnswer,
+      'Suggested Answer': suggestedAnswer || '-',
+      Explanation: explanation,
+    }).catch(() => {})
 
     return NextResponse.json({
       success: true,

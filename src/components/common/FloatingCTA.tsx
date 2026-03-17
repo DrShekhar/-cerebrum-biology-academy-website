@@ -107,7 +107,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
       {/* ===== MOBILE: Full-width Sticky CTA Bar (Above MobileBottomNav) ===== */}
       {/* Prominent Call + WhatsApp bar on all mobile pages */}
       <div
-        className="fixed left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[55] lg:hidden"
+        className="fixed left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[55] hidden"
         style={{ bottom: 'var(--mobile-nav-safe-height, 64px)' }}
       >
         <div className="flex p-2 gap-2 max-w-lg mx-auto">

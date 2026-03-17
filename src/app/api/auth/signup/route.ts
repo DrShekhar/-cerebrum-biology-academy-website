@@ -12,6 +12,7 @@ import type { UserRole } from '@/generated/prisma'
 import { z } from 'zod'
 import crypto from 'crypto'
 import { emailService } from '@/lib/email/emailService'
+import { notifyAdminFormSubmission } from '@/lib/notifications/adminLeadNotification'
 
 // Request validation schema
 const SignUpSchema = z.object({
@@ -189,6 +190,16 @@ export async function POST(request: NextRequest) {
       // Don't fail registration if analytics fails
       console.error('Analytics tracking error:', analyticsError)
     }
+
+    notifyAdminFormSubmission('New User Signup', {
+      Name: name,
+      Email: email,
+      Phone: phone || '-',
+      Role: role,
+      Grade: grade || '-',
+      City: city || '-',
+      School: school || '-',
+    }).catch(() => {})
 
     // Send verification email
     let verificationEmailSent = false

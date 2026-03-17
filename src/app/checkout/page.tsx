@@ -312,6 +312,17 @@ function CheckoutContent() {
               })
 
               if (verifyResponse.ok) {
+                const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
+                openWhatsAppWithFormData('Course Enrollment', {
+                  Name: formData.fullName,
+                  Phone: formData.phone,
+                  Email: formData.email,
+                  Class: selectedClass || '-',
+                  Tier: selectedTier || '-',
+                  Batch: selectedBatchData?.name || '-',
+                  'Payment Plan': selectedPaymentPlan || '-',
+                  Amount: `₹${calculateFirstPayment()}`,
+                })
                 const batchData = selectedBatchData
                 router.push(
                   `/purchase/success?payment_id=${response.razorpay_payment_id}&order_id=${response.razorpay_order_id}&enrollment_id=${enrollmentId}&batch=${encodeURIComponent(batchData?.name || '')}&timing=${encodeURIComponent(batchData?.time || '')}`

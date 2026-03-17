@@ -365,3 +365,41 @@ export const GURUGRAM_CENTER_METRICS = {
   nearbyLandmark: 'Same building as Allen Career Institute',
   metroAccess: 'Sector 55-56 Rapid Metro (5 min walk)',
 } as const
+
+/**
+ * Rohini Center Specific Metrics
+ * 211, Vikas Surya Tower, DC Chowk, Sector 9, Rohini
+ * Serves: North Delhi, West Delhi
+ */
+export const ROHINI_CENTER_METRICS = {
+  address: '211, Vikas Surya Tower, DC Chowk, Sector 9, Rohini',
+  locality: 'Rohini, New Delhi',
+  region: 'Delhi',
+  pincode: '110085',
+  coordinates: {
+    latitude: 28.7041,
+    longitude: 77.1025,
+  },
+  coverageRadiusKm: 15,
+  nearbyLandmark: 'Near Rohini West Metro Station (Red Line)',
+  metroAccess: 'Rohini West Metro (Red Line, 3 min walk)',
+} as const
+
+/**
+ * Noida Center Specific Metrics
+ * B-45, Sector 62, Noida
+ * Serves: Noida, Greater Noida, Ghaziabad, East Delhi
+ */
+export const NOIDA_CENTER_METRICS = {
+  address: 'B-45, Sector 62',
+  locality: 'Noida',
+  region: 'Uttar Pradesh',
+  pincode: '201301',
+  coordinates: {
+    latitude: 28.628,
+    longitude: 77.3649,
+  },
+  coverageRadiusKm: 20,
+  nearbyLandmark: 'Near Sector 62 Metro Station (Blue Line)',
+  metroAccess: 'Sector 62 Metro (Blue Line, 5 min walk)',
+} as const
