@@ -17,6 +17,8 @@ import { Button } from '@/components/ui/Button'
 import { QuickAnswers } from '@/components/seo/QuickAnswers'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { HowToReachSection } from '@/components/seo/HowToReachSection'
+import { AreaTestimonials } from '@/components/testimonials/AreaTestimonials'
 import {
   GurugramAreaDetails,
   gurugramCourseOptions,
@@ -228,6 +230,20 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
           </div>
         </div>
       </section>
+
+      <AreaTestimonials
+        citySlug="gurugram"
+        areaName={area.name}
+        cityName="Gurugram"
+      />
+
+      <HowToReachSection
+        areaName={area.name}
+        citySlug="gurugram"
+        nearbyMetro={area.nearbyMetro}
+        distanceFromCenter={area.distanceFromCenter}
+        landmarks={area.landmarks}
+      />
 
       <NEETToolsWidget
         title={`Free NEET Tools for ${area.name} Students`}

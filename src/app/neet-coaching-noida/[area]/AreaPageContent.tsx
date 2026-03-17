@@ -24,6 +24,8 @@ import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
+import { HowToReachSection } from '@/components/seo/HowToReachSection'
+import { AreaTestimonials } from '@/components/testimonials/AreaTestimonials'
 
 interface AreaPageContentProps {
   area: NoidaAreaDetails
@@ -60,7 +62,7 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
   const handleWhatsApp = async () => {
     await trackAndOpenWhatsApp({
       source: `noida-${slug}-page`,
-      message: `Hi! I am from ${area.name}, Noida and interested in NEET Biology coaching.`,
+      message: `Hi! I am from ${area.name}, Noida (${area.distanceFromCenter} from your Sector 62 center) and interested in NEET Biology coaching. Please share details about batch timings and fees.`,
       campaign: `noida-${slug}`,
     })
   }
@@ -239,6 +241,22 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
         </div>
       </section>
 
+      {/* Area-Specific Testimonials */}
+      <AreaTestimonials
+        citySlug="noida"
+        areaName={area.name}
+        cityName="Noida"
+      />
+
+      {/* How to Reach Section */}
+      <HowToReachSection
+        areaName={area.name}
+        citySlug="noida"
+        nearbyMetro={area.nearbyMetro}
+        distanceFromCenter={area.distanceFromCenter}
+        landmarks={area.landmarks}
+      />
+
       {/* Free NEET Practice Tools */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -330,11 +348,20 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Start Your NEET Journey from {area.name}?
           </h2>
-          <p className="text-lg text-blue-100 mb-8">
-            Join {CEREBRUM_METRICS.totalStudentsText} students. Book your free demo class today!
+          <p className="text-lg text-blue-100 mb-4">
+            Join {CEREBRUM_METRICS.totalStudentsText} students. Book your free demo at our Sector 62 Noida center!
+          </p>
+          <p className="text-sm text-blue-200 mb-8">
+            Just {area.distanceFromCenter} from {area.name} | Online classes also available
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href={`/demo-booking?center=noida&area=${slug}`} onClick={handleDemoBooking}>
+              <Button size="xl" className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold w-full sm:w-auto">
+                <Play className="w-5 h-5 mr-2" />
+                Book Demo at Noida Center
+              </Button>
+            </Link>
             <a href={`tel:${CONTACT_INFO.phone.primary}`} onClick={handlePhoneCall}>
               <Button size="xl" className="bg-white text-blue-600 hover:bg-gray-100 font-bold w-full sm:w-auto">
                 <Phone className="w-5 h-5 mr-2" />
