@@ -24,6 +24,7 @@ import {
   getNearbyFaridabadAreas,
 } from '@/data/faridabad-areas'
 import { HowToReachSection } from '@/components/seo/HowToReachSection'
+import { AreaTestimonials } from '@/components/testimonials/AreaTestimonials'
 
 function metroToSlug(metroName: string): string {
   return metroName.toLowerCase().replace(' metro', '-metro').replace(/\s+/g, '-')
@@ -460,6 +461,12 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         </section>
       )}
 
+      <AreaTestimonials
+        citySlug="faridabad"
+        areaName={area.name}
+        cityName="Faridabad"
+      />
+
       <HowToReachSection
         areaName={area.name}
         citySlug="faridabad"
@@ -475,7 +482,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               Ready to Start Your NEET Journey from {area.name}?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join hundreds of successful students from {area.name}. Book your free demo today!
+              Join hundreds of successful students from {area.name}. Visit our nearest center at Faridabad Sector 17 and book your free demo today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

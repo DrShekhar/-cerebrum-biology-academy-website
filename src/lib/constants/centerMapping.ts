@@ -78,7 +78,7 @@ export function getCenterInfo(citySlug: string): CenterInfo {
     geo: center.geo,
     mapUrl: center.mapUrl,
     googleBusinessUrl: (center as any).googleBusinessUrl,
-    nearbyLandmarks: center.nearbyLandmarks,
+    nearbyLandmarks: [...center.nearbyLandmarks],
     isPhysicalCenter: center.isPhysicalCenter,
     googleMapsEmbed: GOOGLE_MAPS_EMBEDS[centerKey],
   }

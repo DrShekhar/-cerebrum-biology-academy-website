@@ -23,6 +23,7 @@ import { Button } from '@/components/ui/Button'
 import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 import { WestDelhiAreaDetails, courseOptions, areaDetails } from '@/data/west-delhi-areas'
 import { HowToReachSection } from '@/components/seo/HowToReachSection'
+import { AreaTestimonials } from '@/components/testimonials/AreaTestimonials'
 
 function getNearbyAreas(currentSlug: string, currentType: string): string[] {
   const typeMapping: Record<string, string[]> = {
@@ -408,6 +409,12 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         </div>
       </section>
 
+      <AreaTestimonials
+        citySlug="west-delhi"
+        areaName={area.name}
+        cityName="West Delhi"
+      />
+
       <HowToReachSection
         areaName={area.name}
         citySlug="west-delhi"
@@ -424,7 +431,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               Ready to Start Your NEET Preparation?
             </h2>
             <p className="text-orange-100 mb-8 max-w-2xl mx-auto">
-              Join successful students from {area.name}. Book your FREE demo class today!
+              Join successful students from {area.name}. Visit our nearest center at Rohini and book your FREE demo class today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>

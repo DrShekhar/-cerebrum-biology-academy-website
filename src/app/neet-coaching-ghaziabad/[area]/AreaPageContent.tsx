@@ -25,6 +25,7 @@ import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { HowToReachSection } from '@/components/seo/HowToReachSection'
+import { AreaTestimonials } from '@/components/testimonials/AreaTestimonials'
 
 interface AreaPageContentProps {
   area: GhaziabadAreaDetails
@@ -324,6 +325,12 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
         </section>
       )}
 
+      <AreaTestimonials
+        citySlug="ghaziabad"
+        areaName={area.name}
+        cityName="Ghaziabad"
+      />
+
       <HowToReachSection
         areaName={area.name}
         citySlug="ghaziabad"
@@ -339,7 +346,7 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
             Ready to Start Your NEET Journey from {area.name}?
           </h2>
           <p className="text-lg text-red-100 mb-8">
-            Join {CEREBRUM_METRICS.totalStudentsText} students. Book your free demo class today!
+            Join {CEREBRUM_METRICS.totalStudentsText} students. Visit our nearest center at Noida Sector 62 and book your free demo class today!
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">

@@ -394,3 +394,11 @@ export function getAreaBySlug(slug: string): EastDelhiAreaDetails | undefined {
 export function getAllAreaSlugs(): string[] {
   return Object.keys(areaDetails)
 }
+
+export function getVoiceSearchPhrases(slug: string): string[] {
+  return areaDetails[slug]?.voiceSearchPhrases || []
+}
+
+export function getAICitationFacts(slug: string): string[] {
+  return areaDetails[slug]?.aiCitationFacts || []
+}
