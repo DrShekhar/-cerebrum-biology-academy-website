@@ -446,12 +446,15 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your NEET Journey from {area.name}?
             </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Join hundreds of successful students from {area.name}. Book your free demo today!
+            <p className="text-xl mb-4 opacity-90">
+              Join hundreds of successful students from {area.name}. Visit our Gurugram Sector 51 center and book your free demo today!
+            </p>
+            <p className="text-lg mb-8 opacity-80">
+              Just {area.distanceFromCenter} from {area.name} | Online classes also available
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/demo-booking">
+              <Link href={`/demo-booking?center=gurugram&area=${areaSlug}`}>
                 <Button
                   variant="secondary"
                   size="xl"
@@ -459,7 +462,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                   className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold"
                 >
                   <Play className="w-5 h-5 mr-2" />
-                  Book Free Demo Class
+                  Book Demo at Gurugram Center
                 </Button>
               </Link>
 

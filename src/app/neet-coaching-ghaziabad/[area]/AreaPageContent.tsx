@@ -62,7 +62,7 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
   const handleWhatsApp = async () => {
     await trackAndOpenWhatsApp({
       source: `ghaziabad-${slug}-page`,
-      message: `Hi! I am from ${area.name}, Ghaziabad and interested in NEET Biology coaching.`,
+      message: `Hi! I am from ${area.name}, Ghaziabad (${area.distanceFromCenter} from your Sector 62 Noida center) and interested in NEET Biology coaching. Please share details about batch timings and fees.`,
       campaign: `ghaziabad-${slug}`,
     })
   }
@@ -345,11 +345,20 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Start Your NEET Journey from {area.name}?
           </h2>
-          <p className="text-lg text-red-100 mb-8">
-            Join {CEREBRUM_METRICS.totalStudentsText} students. Visit our nearest center at Noida Sector 62 and book your free demo class today!
+          <p className="text-lg text-red-100 mb-4">
+            Join {CEREBRUM_METRICS.totalStudentsText} students. Visit our Noida Sector 62 center and book your free demo class today!
+          </p>
+          <p className="text-md text-red-200 mb-8">
+            Just {area.distanceFromCenter} from {area.name} | Online classes also available
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href={`/demo-booking?center=noida&area=${slug}`}>
+              <Button size="xl" className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold w-full sm:w-auto">
+                <Play className="w-5 h-5 mr-2" />
+                Book Demo at Noida Center
+              </Button>
+            </Link>
             <a href={`tel:${CONTACT_INFO.phone.primary}`} onClick={handlePhoneCall}>
               <Button size="xl" className="bg-white text-red-600 hover:bg-gray-100 font-bold w-full sm:w-auto">
                 <Phone className="w-5 h-5 mr-2" />

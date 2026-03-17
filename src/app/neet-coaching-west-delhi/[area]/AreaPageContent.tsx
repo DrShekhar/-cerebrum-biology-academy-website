@@ -125,7 +125,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
               <TrackedWhatsAppButton
                 source={`west-delhi-${areaSlug}-hero`}
-                message={`Hi! I'm from ${area.name}, West Delhi. I want to join NEET Biology coaching. What batches are available?`}
+                message={`Hi! I'm from ${area.name}, West Delhi (near your Rohini center) and interested in NEET Biology coaching. Please share details about batch timings and fees.`}
                 buttonText="WhatsApp Now"
                 variant="primary"
                 size="lg"
@@ -243,7 +243,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <TrackedWhatsAppButton
                 source={`west-delhi-${areaSlug}-why-cerebrum`}
-                message={`Hi! I'm a student from ${area.name}. I want to know more about your NEET coaching programs. Please share details.`}
+                message={`Hi! I'm a student from ${area.name}, West Delhi (near your Rohini center). I want to know more about your NEET coaching programs. Please share details.`}
                 buttonText="Chat on WhatsApp"
                 variant="secondary"
                 size="lg"
@@ -430,16 +430,22 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your NEET Preparation?
             </h2>
-            <p className="text-orange-100 mb-8 max-w-2xl mx-auto">
-              Join successful students from {area.name}. Visit our nearest center at Rohini and book your FREE demo class today!
+            <p className="text-orange-100 mb-4 max-w-2xl mx-auto">
+              Join successful students from {area.name}. Visit our Rohini center and book your FREE demo class today!
+            </p>
+            <p className="text-orange-200 mb-8">
+              Online classes also available
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/demo-booking">Book FREE Demo Class</Link>
+                <Link href={`/demo-booking?center=rohini&area=${areaSlug}`}>
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Demo at Rohini Center
+                </Link>
               </Button>
               <TrackedWhatsAppButton
                 source={`west-delhi-${areaSlug}-footer-cta`}
-                message={`Hi! I'm from ${area.name}, West Delhi. I want to enroll for NEET coaching. Please share batch details and fees.`}
+                message={`Hi! I'm from ${area.name}, West Delhi (near your Rohini center). I want to enroll for NEET coaching. Please share batch details and fees.`}
                 buttonText="WhatsApp Counselor"
                 variant="primary"
                 size="xl"

@@ -388,12 +388,18 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your NEET Preparation?
             </h2>
-            <p className="text-indigo-100 mb-8 max-w-2xl mx-auto">
-              Join successful students from {area.name}. Visit our nearest center at Rohini and book your FREE demo class today!
+            <p className="text-indigo-100 mb-4 max-w-2xl mx-auto">
+              Join successful students from {area.name}. Visit our Rohini center and book your FREE demo class today!
+            </p>
+            <p className="text-indigo-200 mb-8">
+              Online classes also available
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/demo-booking">Book FREE Demo Class</Link>
+                <Link href={`/demo-booking?center=north-delhi&area=${areaSlug}`}>
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Demo at Rohini Center
+                </Link>
               </Button>
               <Button
                 size="lg"
