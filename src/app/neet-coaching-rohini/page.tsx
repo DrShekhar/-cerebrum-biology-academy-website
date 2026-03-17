@@ -543,18 +543,18 @@ export default function NEETCoachingRohiniPage() {
               <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp">
                 <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                   <MapPinned className="w-5 h-5 text-red-600" />
-                  Visit Our Center - South Extension, New Delhi
+                  Visit Our Center - Rohini, New Delhi
                 </h3>
                 <div className="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-100">
                   <LazyGoogleMap
-                    embedUrl="https://www.google.com/maps?q=Cerebrum+Biology+Academy+Panchsheel+Enclave+South+Extension+Delhi&output=embed"
-                    title="NEET Coaching Center Location"
+                    embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.123!2d77.1025!3d28.7041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0147e0000001%3A0xdc_chowk_rohini!2sVikas%20Surya%20Tower%2C%20DC%20Chowk%2C%20Rohini%20Sector%209!5e0!3m2!1sen!2sin!4v1710000000000"
+                    title="NEET Coaching Center Location - Rohini"
                     height="100%"
                     placeholder={{
-                      lat: 28.556,
-                      lng: 77.22,
+                      lat: 28.7041,
+                      lng: 77.1025,
                       address:
-                        'Cerebrum Biology Academy, Panchsheel Enclave, South Extension, Delhi',
+                        'Cerebrum Biology Academy, 211 Vikas Surya Tower, DC Chowk, Rohini Sector 9',
                     }}
                   />
                 </div>

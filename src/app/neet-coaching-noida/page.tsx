@@ -997,13 +997,13 @@ export default function NeetCoachingNoidaPage() {
             {/* Google Maps */}
             <div className="rounded-xl overflow-hidden shadow-lg">
               <LazyGoogleMap
-                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5351350896896!2d77.23806131508236!3d28.566682982448893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c16e000001%3A0x5027e47c24e3e43e!2sSouth%20Extension%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890"
-                title="NEET Coaching Center Location"
+                embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.5!2d77.3649!3d28.628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a0e0000001%3A0xsector_62_noida!2sSector%2062%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000"
+                title="NEET Coaching Center Location - Noida Sector 62"
                 height={300}
                 placeholder={{
-                  lat: 28.5667,
-                  lng: 77.2381,
-                  address: 'Cerebrum Biology Academy, South Extension, New Delhi',
+                  lat: 28.628,
+                  lng: 77.3649,
+                  address: 'Cerebrum Biology Academy, B-45 Sector 62, Noida',
                 }}
               />
             </div>

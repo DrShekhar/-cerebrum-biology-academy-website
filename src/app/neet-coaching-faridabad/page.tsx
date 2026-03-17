@@ -838,13 +838,13 @@ export default function NeetCoachingFaridabadPage() {
               </h3>
               <div className="rounded-xl overflow-hidden shadow-lg mb-4">
                 <LazyGoogleMap
-                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.123456789!2d77.2155!3d28.5733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzI0LjAiTiA3N8KwMTInNTUuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                  title="NEET Coaching Center Location"
+                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.8!2d77.3178!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdd7ae0000001%3A0xhuda_market_sector17!2sHuda%20Market%2C%20Sector%2017%2C%20Faridabad!5e0!3m2!1sen!2sin!4v1710000000000"
+                  title="NEET Coaching Center Location - Faridabad Sector 17"
                   height={300}
                   placeholder={{
-                    lat: 28.5733,
-                    lng: 77.2155,
-                    address: 'Cerebrum Biology Academy, South Extension, New Delhi',
+                    lat: 28.4089,
+                    lng: 77.3178,
+                    address: 'Cerebrum Biology Academy, SCF 124, Huda Market, Sector 17, Faridabad',
                   }}
                 />
               </div>
