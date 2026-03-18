@@ -6,6 +6,7 @@ import { generateLocalityMetadata } from '@/lib/seo/localityMetadata'
 import { generateAllSchemas } from '@/lib/seo/localitySchema'
 import LocalityHero from '@/components/localities/LocalityHero'
 import LocalityFAQ from '@/components/localities/LocalityFAQ'
+import { CourseOfferingsSection } from '@/components/seo/CourseOfferingsSection'
 import { GoogleMapEmbed } from '@/components/maps/GoogleMapEmbed'
 import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
@@ -499,6 +500,9 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
           </div>
         </section>
       )}
+
+      {/* Course Offerings */}
+      <CourseOfferingsSection cityName={locality.displayName} />
 
       {/* FAQ Section */}
       <LocalityFAQ locality={locality} />

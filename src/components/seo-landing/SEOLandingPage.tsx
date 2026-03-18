@@ -12,6 +12,7 @@ import { ToolsCTASection } from './ToolsCTASection'
 import { RelatedBlogPosts } from './RelatedBlogPosts'
 import { HowToSchema, DrShekharSinghSchema } from '@/components/seo/StructuredData'
 import { AICitationTracking } from '@/components/seo/AICitationTracking'
+import { CourseOfferingsSection } from '@/components/seo/CourseOfferingsSection'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
@@ -137,6 +138,9 @@ export function SEOLandingPage({ content }: SEOLandingPageProps) {
 
       {/* FAQ Section */}
       <SEOFAQSection faqs={content.faqs} />
+
+      {/* Course Offerings — NEET, Board, Olympiad, Foundation */}
+      <CourseOfferingsSection />
 
       {/* Related Pages for Internal Linking */}
       <section className="bg-white py-12">
