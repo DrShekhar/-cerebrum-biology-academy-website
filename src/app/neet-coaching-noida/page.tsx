@@ -31,21 +31,27 @@ import {
   VideoSchema,
 } from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import {
   getAllNoidaAreaSlugs,
   getNoidaAreaBySlug,
-  getNoidaAreasByType,
-  getNoidaAreasByMetroLine,
 } from '@/data/noida-areas'
 
 // Get all areas from centralized data
 const allAreaSlugs = getAllNoidaAreaSlugs()
-const blueLineAreas = getNoidaAreasByMetroLine('Blue')
-const aquaLineAreas = getNoidaAreasByMetroLine('Aqua')
-const premiumAreasData = getNoidaAreasByType('premium')
-const itHubAreasData = getNoidaAreasByType('it-hub')
-const greaterNoidaAreasData = getNoidaAreasByType('greater-noida')
-const extensionAreasData = getNoidaAreasByType('extension')
+
+const areasForAccordion: AreaCardData[] = allAreaSlugs.map((slug) => {
+  const area = getNoidaAreaBySlug(slug)
+  return {
+    name: area?.name || slug,
+    description: area?.description || '',
+    schools: area?.schools || [],
+    nearbyMetro: area?.nearbyMetro || [],
+    distanceFromCenter: area?.distanceFromCenter || '',
+    metroLine: area?.metroLine,
+    type: area?.type,
+  }
+})
 
 const noidaSectors = [
   { sector: '18', area: 'Atta Market, Great India Place', students: '120+', metro: 'Sector 18' },
@@ -1774,134 +1780,7 @@ export default function NeetCoachingNoidaPage() {
         </div>
       </section>
 
-      {/* All Areas Section - Using Centralized Data */}
-      <section className="py-16 md:py-20 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              All {allAreaSlugs.length}+ Areas We Serve in Noida
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Click on your area to view dedicated NEET coaching information and local success
-              stories
-            </p>
-          </div>
-
-          {/* Blue Line Metro Areas */}
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-blue-900 mb-4 flex items-center">
-              <Train className="w-5 h-5 mr-2 text-blue-600" />
-              Blue Line Metro Areas
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {blueLineAreas.map((slug) => {
-                const area = getNoidaAreaBySlug(slug)
-                if (!area) return null
-                return (
-                  <Link
-                    key={slug}
-                    href={`/neet-coaching-noida/${slug}`}
-                    className="px-4 py-2 bg-white text-blue-700 rounded-full text-sm hover:bg-blue-100 transition-colors shadow-sm"
-                  >
-                    {area.name}
-                  </Link>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* Aqua Line Metro Areas */}
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-cyan-900 mb-4 flex items-center">
-              <Train className="w-5 h-5 mr-2 text-cyan-600" />
-              Aqua Line Metro Areas
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {aquaLineAreas.map((slug) => {
-                const area = getNoidaAreaBySlug(slug)
-                if (!area) return null
-                return (
-                  <Link
-                    key={slug}
-                    href={`/neet-coaching-noida/${slug}`}
-                    className="px-4 py-2 bg-white text-cyan-700 rounded-full text-sm hover:bg-cyan-100 transition-colors shadow-sm"
-                  >
-                    {area.name}
-                  </Link>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* Premium Societies */}
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-purple-900 mb-4 flex items-center">
-              <Building2 className="w-5 h-5 mr-2 text-purple-600" />
-              Premium Residential Societies
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {premiumAreasData.map((slug) => {
-                const area = getNoidaAreaBySlug(slug)
-                if (!area) return null
-                return (
-                  <Link
-                    key={slug}
-                    href={`/neet-coaching-noida/${slug}`}
-                    className="px-4 py-2 bg-white text-purple-700 rounded-full text-sm hover:bg-purple-100 transition-colors shadow-sm"
-                  >
-                    {area.name}
-                  </Link>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* Greater Noida & Extension */}
-          <div className="mb-8">
-            <h3 className="text-xl font-bold text-green-900 mb-4 flex items-center">
-              <MapPin className="w-5 h-5 mr-2 text-green-600" />
-              Greater Noida & Noida Extension
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {[...greaterNoidaAreasData, ...extensionAreasData].map((slug) => {
-                const area = getNoidaAreaBySlug(slug)
-                if (!area) return null
-                return (
-                  <Link
-                    key={slug}
-                    href={`/neet-coaching-noida/${slug}`}
-                    className="px-4 py-2 bg-white text-green-700 rounded-full text-sm hover:bg-green-100 transition-colors shadow-sm"
-                  >
-                    {area.name}
-                  </Link>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* All Areas Cloud */}
-          <div className="mt-12 pt-8 border-t border-blue-200">
-            <h3 className="text-lg font-semibold text-gray-700 mb-4 text-center">
-              Browse All Areas
-            </h3>
-            <div className="flex flex-wrap justify-center gap-2">
-              {allAreaSlugs.map((slug) => {
-                const area = getNoidaAreaBySlug(slug)
-                if (!area) return null
-                return (
-                  <Link
-                    key={slug}
-                    href={`/neet-coaching-noida/${slug}`}
-                    className="px-3 py-1 bg-white text-gray-600 rounded-full text-sm hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                  >
-                    {area.name}
-                  </Link>
-                )
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
+      <AreasServedSection cityName="Noida" areas={areasForAccordion} />
 
       {/* FAQs Section */}
       <section className="py-16 md:py-20 bg-white">

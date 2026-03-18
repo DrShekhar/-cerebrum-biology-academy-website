@@ -37,6 +37,20 @@ import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
+
+const areasForAccordion: AreaCardData[] = getAllGurugramAreaSlugs().map((slug) => {
+  const area = getGurugramAreaBySlug(slug)
+  return {
+    name: area?.name || slug,
+    description: area?.description || '',
+    schools: area?.schools || [],
+    nearbyMetro: area?.nearbyMetro || [],
+    distanceFromCenter: area?.distanceFromCenter || '',
+    type: area?.type,
+  }
+})
 
 const gurugramLocalities = [
   // ULTRA-PREMIUM LOCALITIES (Golf Course Road + DLF Phases)
@@ -413,53 +427,7 @@ export default function NeetCoachingGurugramPage() {
       {/* Trust Signals — Social Proof */}
       <TrustSignalsBanner variant="compact" />
 
-      {/* Gurugram Localities Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              NEET Coaching Across All Gurugram Localities
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From DLF Cyber City to New Gurugram - we serve students from every corner of
-              Gurugram/Gurgaon. Click on your locality for location-specific information.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {gurugramLocalities.map((locality, index) => (
-              <div
-                key={locality.slug}
-               className="animate-fadeInUp">
-                <Link href={`/locations/gurugram/${locality.slug}`}>
-                  <div
-                    className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer ${
-                      locality.priority === 'high' ? 'ring-2 ring-green-600' : ''
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
-                      <MapPin className="w-5 h-5 text-green-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-green-600 mb-1">
-                      {locality.students}
-                    </div>
-                    <div className="text-sm text-gray-500">{locality.highlight}</div>
-                    {locality.priority === 'high' && (
-                      <div className="mt-2 inline-flex items-center text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
-                        <Star className="w-3 h-3 mr-1" />
-                        High Demand Area
-                      </div>
-                    )}
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AreasServedSection cityName="Gurugram" areas={areasForAccordion} />
 
       {/* Why Gurugram Students Choose Us */}
       <section className="py-20 bg-white">

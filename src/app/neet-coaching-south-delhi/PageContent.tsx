@@ -27,6 +27,20 @@ import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import { VideoSchema } from '@/components/seo/StructuredData'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { getAllAreaSlugs, getAreaBySlug } from '@/data/south-delhi-areas'
+
+const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {
+  const area = getAreaBySlug(slug)
+  return {
+    name: area?.name || slug,
+    description: area?.description || '',
+    schools: area?.schools || [],
+    nearbyMetro: area?.nearbyMetro || [],
+    distanceFromCenter: '',
+    type: area?.type,
+  }
+})
 
 const southDelhiAreas = [
   {
@@ -285,61 +299,7 @@ export default function PageContent() {
         </div>
       </section>
 
-      {/* Areas Grid */}
-      <section className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              NEET Coaching Across South Delhi
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Serving students from posh localities, coaching hubs, and residential areas
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {southDelhiAreas.map((area, index) => (
-              <div key={area.slug} className="animate-fadeInUp">
-                <Link href={`/neet-coaching-south-delhi/${area.slug}`}>
-                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 h-full group">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center">
-                        {area.type === 'posh' && (
-                          <Building2 className="w-6 h-6 text-purple-600 mr-2" />
-                        )}
-                        {area.type === 'coaching-hub' && (
-                          <School className="w-6 h-6 text-blue-600 mr-2" />
-                        )}
-                        {area.type === 'residential' && (
-                          <MapPin className="w-6 h-6 text-green-600 mr-2" />
-                        )}
-                        {area.type === 'gated' && (
-                          <Building2 className="w-6 h-6 text-orange-600 mr-2" />
-                        )}
-                        <h3 className="font-bold text-gray-900 text-lg group-hover:text-purple-600 transition-colors">
-                          {area.name}
-                        </h3>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-600 transition-colors" />
-                    </div>
-                    <p className="text-gray-600 text-sm mb-4">{area.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {area.highlights.map((highlight) => (
-                        <span
-                          key={highlight}
-                          className="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded-full"
-                        >
-                          {highlight}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AreasServedSection cityName="South Delhi" areas={areasForAccordion} />
 
       {/* Premium Localities Spotlight */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-blue-50">

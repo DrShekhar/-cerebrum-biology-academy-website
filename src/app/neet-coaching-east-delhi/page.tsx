@@ -14,6 +14,20 @@ import {
   Play,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { getAllAreaSlugs, getAreaBySlug } from '@/data/east-delhi-areas'
+
+const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {
+  const area = getAreaBySlug(slug)
+  return {
+    name: area?.name || slug,
+    description: area?.description || '',
+    schools: area?.schools || [],
+    nearbyMetro: area?.nearbyMetro || [],
+    distanceFromCenter: '',
+    type: area?.type,
+  }
+})
 
 const eastDelhiAreas = [
   {
@@ -265,71 +279,7 @@ export default function NEETCoachingEastDelhiPage() {
         </div>
       </section>
 
-      {/* Areas Grid Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-              NEET Coaching for All East Delhi Localities
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We serve students from every corner of East Delhi. Find NEET coaching information for
-              your area.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {eastDelhiAreas.map((area, index) => (
-              <div key={area.slug} className="animate-fadeInUp">
-                <Link href={`/neet-coaching-east-delhi/${area.slug}`}>
-                  <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-green-200 h-full">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-5 h-5 text-green-600" />
-                        <h3 className="font-semibold text-navy-900">{area.name}</h3>
-                      </div>
-                      <span
-                        className={`text-xs px-2 py-1 rounded-full ${
-                          area.type === 'coaching-hub'
-                            ? 'bg-orange-100 text-orange-700'
-                            : area.type === 'posh'
-                              ? 'bg-purple-100 text-purple-700'
-                              : area.type === 'commercial'
-                                ? 'bg-blue-100 text-blue-700'
-                                : 'bg-green-100 text-green-700'
-                        }`}
-                      >
-                        {area.type === 'coaching-hub'
-                          ? 'Coaching Hub'
-                          : area.type === 'posh'
-                            ? 'Premium'
-                            : area.type === 'commercial'
-                              ? 'Commercial'
-                              : 'Residential'}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 text-sm mb-4">{area.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {area.highlights.map((highlight) => (
-                        <span
-                          key={highlight}
-                          className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
-                        >
-                          {highlight}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex items-center text-green-600 text-sm font-medium">
-                      View Details <ArrowRight className="w-4 h-4 ml-1" />
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AreasServedSection cityName="East Delhi" areas={areasForAccordion} />
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white">

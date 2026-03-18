@@ -25,13 +25,27 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { LocalBusinessSchema, FAQSchema, VideoSchema } from '@/components/seo/StructuredData'
+import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import {
   faridabadAreaDetails,
   getAllFaridabadAreaSlugs,
   getFaridabadAreasByType,
+  getFaridabadAreaBySlug,
 } from '@/data/faridabad-areas'
 import { faridabadMetroStations } from '@/data/faridabad-metros'
+
+const areasForAccordion: AreaCardData[] = getAllFaridabadAreaSlugs().map((slug) => {
+  const area = getFaridabadAreaBySlug(slug)
+  return {
+    name: area?.name || slug,
+    description: area?.description || '',
+    schools: area?.schools || [],
+    nearbyMetro: area?.nearbyMetro || [],
+    distanceFromCenter: area?.distanceFromCenter || '',
+    type: area?.type,
+  }
+})
 
 // Generate areas dynamically from data file
 const faridabadAreas = getAllFaridabadAreaSlugs()
@@ -285,46 +299,7 @@ export default function NeetCoachingFaridabadPage() {
         </div>
       </section>
 
-      {/* Faridabad Areas Coverage */}
-      <section className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              NEET Coaching Across All Faridabad Areas
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Students from every Faridabad area trust us. Click on your area to see local success
-              stories.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {faridabadAreas.map((item, index) => (
-              <div key={item.slug} className="animate-fadeInUp">
-                <Link
-                  href={`/neet-coaching-faridabad/${item.slug}`}
-                  className="block bg-white rounded-xl shadow-md hover:shadow-xl p-5 transition-all hover:-translate-y-1 border border-gray-100"
-                >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-lg font-bold text-gray-900">{item.name}</span>
-                    <MapPin className="w-4 h-4 text-orange-600" />
-                  </div>
-                  <div className="text-sm text-gray-500 mb-2">{item.highlight}</div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-orange-600 font-semibold">{item.students} students</span>
-                    {item.metro && (
-                      <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full flex items-center">
-                        <Train className="w-3 h-3 mr-1" />
-                        Metro
-                      </span>
-                    )}
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AreasServedSection cityName="Faridabad" areas={areasForAccordion} />
 
       {/* Greater Faridabad Sectors Section */}
       <section className="py-16 md:py-20 bg-white">
