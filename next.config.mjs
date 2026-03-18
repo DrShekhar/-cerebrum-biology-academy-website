@@ -20,6 +20,7 @@ import {
   faridabadConsolidationRedirects,
   ghaziabadConsolidationRedirects,
   rohiniConsolidationRedirects,
+  areaPageConsolidationRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1599,6 +1600,7 @@ const nextConfig = {
       ...faridabadConsolidationRedirects,
       ...ghaziabadConsolidationRedirects,
       ...rohiniConsolidationRedirects,
+      ...areaPageConsolidationRedirects,
     ]
   },
 

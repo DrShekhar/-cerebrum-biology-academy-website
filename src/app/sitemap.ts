@@ -12,14 +12,7 @@ import { biologyDefinitions } from '@/data/biology-definitions'
 // INDIAN_STATES import removed — state pages noindexed and excluded from sitemap
 import { COMPETITORS } from '@/components/seo/ComparisonSchema'
 import { facultyMembers } from '@/data/faculty'
-import { getAllNoidaAreaSlugs } from '@/data/noida-areas'
-import { getAllFaridabadAreaSlugs } from '@/data/faridabad-areas'
-import { getAllGhaziabadAreaSlugs } from '@/data/ghaziabad-areas'
-import { getAllAreaSlugs as getAllSouthDelhiAreaSlugs } from '@/data/south-delhi-areas'
-import { getAllAreaSlugs as getAllNorthDelhiAreaSlugs } from '@/data/north-delhi-areas'
-import { getAllAreaSlugs as getAllEastDelhiAreaSlugs } from '@/data/east-delhi-areas'
-import { getAllAreaSlugs as getAllWestDelhiAreaSlugs } from '@/data/west-delhi-areas'
-import { getAllGurugramAreaSlugs } from '@/data/gurugram-areas'
+// Area slug imports removed — area pages redirected to city hubs
 import { successStoriesData } from '@/data/successStories'
 import { mockTests } from '@/data/mockTests'
 // localAreas import removed — [localSlug] pages now redirect to city hubs
@@ -40,6 +33,7 @@ import {
   ghaziabadConsolidationRedirects,
   rohiniConsolidationRedirects,
   localPageConsolidationBatch2,
+  areaPageConsolidationRedirects,
 } from '@/config/seo-redirects.mjs'
 
 const allRedirectSources = [
@@ -58,6 +52,7 @@ const allRedirectSources = [
   ...ghaziabadConsolidationRedirects,
   ...rohiniConsolidationRedirects,
   ...localPageConsolidationBatch2,
+  ...areaPageConsolidationRedirects,
 ].map((r: { source: string }) => r.source)
 
 const exactRedirects = new Set(allRedirectSources.filter((s) => !s.includes(':')))
@@ -7161,69 +7156,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }))
 
-  // Gurugram area sub-pages (/neet-coaching-gurugram/[area])
-  const gurugramAreaRoutes: MetadataRoute.Sitemap = getAllGurugramAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/neet-coaching-gurugram/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // Noida area sub-pages (/neet-coaching-noida/[area])
-  const noidaAreaRoutes: MetadataRoute.Sitemap = getAllNoidaAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/neet-coaching-noida/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // Faridabad area sub-pages (/neet-coaching-faridabad/[area])
-  const faridabadAreaRoutes: MetadataRoute.Sitemap = getAllFaridabadAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/neet-coaching-faridabad/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // Ghaziabad area sub-pages (/neet-coaching-ghaziabad/[area])
-  const ghaziabadAreaRoutes: MetadataRoute.Sitemap = getAllGhaziabadAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/neet-coaching-ghaziabad/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // South Delhi area sub-pages (/neet-coaching-south-delhi/[area])
-  const southDelhiAreaRoutes: MetadataRoute.Sitemap = getAllSouthDelhiAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/neet-coaching-south-delhi/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // North Delhi area sub-pages (/neet-coaching-north-delhi/[area])
-  const northDelhiAreaRoutes: MetadataRoute.Sitemap = getAllNorthDelhiAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/neet-coaching-north-delhi/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // East Delhi area sub-pages (/neet-coaching-east-delhi/[area])
-  const eastDelhiAreaRoutes: MetadataRoute.Sitemap = getAllEastDelhiAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/neet-coaching-east-delhi/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // West Delhi area sub-pages (/neet-coaching-west-delhi/[area])
-  const westDelhiAreaRoutes: MetadataRoute.Sitemap = getAllWestDelhiAreaSlugs().map((slug) => ({
-    url: `${baseUrl}/neet-coaching-west-delhi/${slug}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
+  // Area sub-pages — all redirected to city hubs, excluded from sitemap
+  const gurugramAreaRoutes: MetadataRoute.Sitemap = []
+  const noidaAreaRoutes: MetadataRoute.Sitemap = []
+  const faridabadAreaRoutes: MetadataRoute.Sitemap = []
+  const ghaziabadAreaRoutes: MetadataRoute.Sitemap = []
+  const southDelhiAreaRoutes: MetadataRoute.Sitemap = []
+  const northDelhiAreaRoutes: MetadataRoute.Sitemap = []
+  const eastDelhiAreaRoutes: MetadataRoute.Sitemap = []
+  const westDelhiAreaRoutes: MetadataRoute.Sitemap = []
 
   // Combine all routes and deduplicate by URL
   const allRoutes = [

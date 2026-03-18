@@ -54,7 +54,7 @@ export const seoPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-dlf-gurgaon',
-    destination: '/neet-coaching-gurugram/dlf-phase-1',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
@@ -2640,32 +2640,32 @@ export const gurugramConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-gurgaon-sector-67',
-    destination: '/neet-coaching-gurugram/sector-67',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
     source: '/neet-coaching-gurgaon-sector-69',
-    destination: '/neet-coaching-gurugram/sector-69',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
     source: '/neet-coaching-gurgaon-sector-70',
-    destination: '/neet-coaching-gurugram/sector-70',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
     source: '/neet-coaching-cyber-city-gurugram',
-    destination: '/neet-coaching-gurugram/cyber-city',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
     source: '/neet-coaching-iffco-chowk-gurugram',
-    destination: '/neet-coaching-gurugram/iffco-chowk',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
     source: '/neet-coaching-mg-road-gurugram',
-    destination: '/neet-coaching-gurugram/mg-road',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
@@ -2675,7 +2675,7 @@ export const gurugramConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-south-city-gurugram',
-    destination: '/neet-coaching-gurugram/south-city-1',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
@@ -2685,17 +2685,17 @@ export const gurugramConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-dlf-phase-1-gurugram',
-    destination: '/neet-coaching-gurugram/dlf-phase-1',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
     source: '/neet-coaching-sushant-lok-gurugram',
-    destination: '/neet-coaching-gurugram/sushant-lok',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
     source: '/neet-coaching-nirvana-country-gurugram',
-    destination: '/neet-coaching-gurugram/nirvana-country',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
   {
@@ -2705,7 +2705,7 @@ export const gurugramConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-imt-manesar-gurgaon',
-    destination: '/neet-coaching-gurugram/manesar',
+    destination: '/neet-coaching-gurugram',
     permanent: true,
   },
 
@@ -3156,12 +3156,12 @@ export const noidaConsolidationRedirects = [
   { source: '/neet-coaching-omicron-noida', destination: '/neet-coaching-noida', permanent: true },
   {
     source: '/neet-coaching-ats-pristine-noida',
-    destination: '/neet-coaching-noida/ats-pristine',
+    destination: '/neet-coaching-noida',
     permanent: true,
   },
   {
     source: '/neet-coaching-jaypee-greens-noida',
-    destination: '/neet-coaching-noida/jaypee-greens',
+    destination: '/neet-coaching-noida',
     permanent: true,
   },
 
@@ -3610,4 +3610,954 @@ export const rohiniConsolidationRedirects = [
     destination: '/biology-tutor-rohini',
     permanent: true,
   },
+]
+
+// Total: 186 area→city redirects
+export const areaPageConsolidationRedirects = [
+  // neet-coaching-noida area pages (34)
+  {
+    source: '/neet-coaching-noida/sector-18',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-62',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-15',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-16',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-50',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-76',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-78',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-93',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-104',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-117',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-120',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-128',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-135',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-137',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-143',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-150',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/noida-extension',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/gaur-city',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/ace-city',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/supertech-ecovillage',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/knowledge-park',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/pari-chowk',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/alpha-1',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/alpha-2',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/crossing-republik',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/ats-pristine',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/jaypee-greens',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/mahagun',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/amrapali',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-12',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/sector-25',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/film-city',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-noida/atta-market',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+
+  // neet-coaching-gurugram area pages (34)
+  {
+    source: '/neet-coaching-gurugram/dlf-phase-1',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/dlf-phase-2',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/dlf-phase-3',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/dlf-phase-4',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/dlf-phase-5',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/golf-course-road',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sushant-lok',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/nirvana-country',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/south-city-1',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/south-city-2',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-14',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-43',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-45',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-49',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-51',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-54',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-56',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-57',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-58',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-65',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-67',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-69',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-70',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-72',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-81',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-82',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-84',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sohna-road',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/sector-48',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/mg-road',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/cyber-city',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/manesar',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/iffco-chowk',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurugram/palam-vihar',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+
+  // neet-coaching-south-delhi area pages (31)
+  {
+    source: '/neet-coaching-south-delhi/hauz-khas',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/kalu-sarai',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/greater-kailash',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/defence-colony',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/vasant-vihar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/malviya-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/green-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/panchsheel-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/new-friends-colony',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/cr-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/vasant-kunj',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/rk-puram',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/sarojini-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/lodhi-colony',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/andrews-ganj',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/kidwai-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/netaji-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/moti-bagh',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/golf-links',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/jor-bagh',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/sunder-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/ber-sarai',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/katwaria-sarai',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/lajpat-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/safdarjung-enclave',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/gulmohar-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/east-of-kailash',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/sukhdev-vihar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/rajendra-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/karol-bagh',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-delhi/civil-lines',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+
+  // neet-coaching-north-delhi area pages (9)
+  {
+    source: '/neet-coaching-north-delhi/model-town',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/shalimar-bagh',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/ashok-vihar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/gtb-nagar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/mukherjee-nagar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/kamla-nagar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/kingsway-camp',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/adarsh-nagar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-north-delhi/prashant-vihar',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+
+  // neet-coaching-east-delhi area pages (12)
+  {
+    source: '/neet-coaching-east-delhi/laxmi-nagar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/preet-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/mayur-vihar-phase-1',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/mayur-vihar-phase-2',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/mayur-vihar-phase-3',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/ip-extension',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/anand-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/nirman-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/pandav-nagar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/krishna-nagar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/vivek-vihar',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-east-delhi/dilshad-garden',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+
+  // neet-coaching-west-delhi area pages (9)
+  {
+    source: '/neet-coaching-west-delhi/rajouri-garden',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/uttam-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/tilak-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/subhash-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/paschim-vihar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/punjabi-bagh',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/hari-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/kirti-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-west-delhi/moti-nagar',
+    destination: '/neet-coaching-west-delhi',
+    permanent: true,
+  },
+
+  // neet-coaching-faridabad area pages (40)
+  {
+    source: '/neet-coaching-faridabad/sector-15',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-16',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-17',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-21',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-28',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-29',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-31',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-37',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-12',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-13',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-14',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-19',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-20',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-22',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-23',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-46',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-48',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-62',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/nit-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/old-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-75',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-76',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-77',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-78',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-79',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-84',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-85',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-86',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-87',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-88',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/sector-89',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/bptp-parklands',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/omaxe-heights',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/rps-palms',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/srs-residency',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/eldeco-area',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/bata-chowk-area',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/neelam-chowk-area',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/mewala-maharajpur-area',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-faridabad/crown-interiorz-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+
+  // neet-coaching-ghaziabad area pages (17)
+  {
+    source: '/neet-coaching-ghaziabad/crossing-republik',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/raj-nagar-extension',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/wave-city',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/mohan-nagar',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/shaheed-sthal',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/vijay-nagar',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/nehru-nagar',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/shalimar-garden',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/pratap-vihar',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/ahinsa-khand',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/vaibhav-khand',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/nyay-khand',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/niti-khand',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/shakti-khand',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/raj-nagar',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/lal-kuan',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ghaziabad/siddharth-vihar',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+
 ]
