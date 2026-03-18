@@ -26,12 +26,23 @@ function ThankYouContent() {
     // Google Ads sign-up conversion (AW-11121440988/MIYpCOHGy4AcENzxjrcp)
     trackSignUpConversion(`thank-you-${form}`)
 
+    // Auto-open WhatsApp after 2 seconds so lead reaches 8826444334 directly
+    const whatsAppTimer = setTimeout(() => {
+      window.open(
+        `https://wa.me/918826444334?text=${encodeURIComponent('Hi! I just submitted a form on your website. Please follow up with me.')}`,
+        '_blank'
+      )
+    }, 2000)
+
     // Countdown timer
     const timer = setInterval(() => {
       setCountdown((prev) => (prev > 0 ? prev - 1 : 0))
     }, 1000)
 
-    return () => clearInterval(timer)
+    return () => {
+      clearInterval(timer)
+      clearTimeout(whatsAppTimer)
+    }
   }, [])
 
   const getContent = () => {

@@ -218,6 +218,12 @@ export default function BiologyTutorGurugramPage() {
       if (response.ok && result.success) {
         setFormSuccess(true)
         setFormData({ name: '', phone: '', email: '', area: '', message: '' })
+        setTimeout(() => {
+          window.open(
+            `https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I'm ${formData.name} from Gurugram. I just submitted an enquiry for Biology tuition. My phone: ${cleanPhone}. Please call me back.`)}`,
+            '_blank'
+          )
+        }, 500)
       } else {
         setFormError(result.error || 'Failed to submit. Please try again.')
       }
@@ -531,9 +537,19 @@ export default function BiologyTutorGurugramPage() {
                     <CheckCircle className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-                  <p className="text-gray-600 mb-6">
-                    Our counselor will call you within 30 minutes.
+                  <p className="text-gray-600 mb-4">
+                    WhatsApp is opening — confirm your enquiry there for instant response!
                   </p>
+                  <a
+                    href="https://wa.me/918826444334?text=Hi!%20I%20just%20submitted%20an%20enquiry%20for%20Biology%20tuition.%20Please%20call%20me%20back."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-medium transition mb-3"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    Open WhatsApp
+                  </a>
+                  <br />
                   <Button onClick={() => setFormSuccess(false)} variant="outline">
                     Send Another Enquiry
                   </Button>
