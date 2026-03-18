@@ -9,7 +9,7 @@ import { SUPPORTED_COUNTRIES } from '@/lib/international/countries'
 import { nriCountriesList } from '@/data/nriCountries'
 import { getAllLocalities } from '@/data/localities'
 import { biologyDefinitions } from '@/data/biology-definitions'
-import { INDIAN_STATES } from '@/components/seo/StateSchema'
+// INDIAN_STATES import removed — state pages noindexed and excluded from sitemap
 import { COMPETITORS } from '@/components/seo/ComparisonSchema'
 import { facultyMembers } from '@/data/faculty'
 import { getAllNoidaAreaSlugs } from '@/data/noida-areas'
@@ -7061,13 +7061,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     }))
 
-  // State pages
-  const stateRoutes: MetadataRoute.Sitemap = Object.keys(INDIAN_STATES).map((state) => ({
-    url: `${baseUrl}/states/${state}`,
-    lastModified: lastUpdated,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  // State pages — noindexed (thin content), excluded from sitemap
+  const stateRoutes: MetadataRoute.Sitemap = []
 
   // Competitor comparison pages
   const compareRoutes: MetadataRoute.Sitemap = Object.keys(COMPETITORS).map((competitor) => ({

@@ -67,6 +67,10 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/states/${state.slug}`,
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
   }
 }
 

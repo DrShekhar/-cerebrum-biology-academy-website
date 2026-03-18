@@ -190,6 +190,10 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${data.slug}`,
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
   }
 }
 

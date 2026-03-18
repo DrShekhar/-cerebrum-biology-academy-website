@@ -284,6 +284,10 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/neet-coaching-noida-society/${data.slug}`,
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
   }
 }
 
