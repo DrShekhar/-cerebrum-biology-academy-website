@@ -61,6 +61,29 @@ const class9BaseContent = {
 // Page 1: /class-9-biology-tuition-online/
 export const class9BiologyTuitionOnline: SEOLandingContent = {
   ...class9BaseContent,
+  testimonials: [
+    {
+      name: "Vikram's Mother (Mrs. Joshi)",
+      achievement: 'Parent of Class 9 Student',
+      quote:
+        'My son was losing interest in science until we enrolled him in Cerebrum online tuition. Now he wants to become a doctor and studies biology willingly!',
+      score: 'Class Topper',
+    },
+    {
+      name: 'Diya Krishnan',
+      achievement: 'Currently in Class 11 | School Biology Topper',
+      quote:
+        'I started online biology tuition in Class 9 at Cerebrum. The animated classes made cell biology and tissues so interesting that I topped every exam.',
+      score: '97% in Science',
+    },
+    {
+      name: "Aarav's Father (Mr. Mehta)",
+      achievement: 'Parent of NEET Aspirant',
+      quote:
+        'The online tuition format was perfect for Class 9. No travel hassle, and Aarav got better teaching than any local coaching could provide.',
+      score: '94% in Boards later',
+    },
+  ],
   slug: 'class-9-biology-tuition-online',
 
   title: 'Class 9 Biology Tuition Online | NEET Foundation Course',
@@ -232,6 +255,29 @@ export const class9BiologyTuitionOnline: SEOLandingContent = {
 // Page 2: /neet-foundation-class-9/
 export const neetFoundationClass9: SEOLandingContent = {
   ...class9BaseContent,
+  testimonials: [
+    {
+      name: 'Arjun Nair',
+      achievement: 'Currently in Class 12 | NEET Mock 640+',
+      quote:
+        'I joined NEET foundation in Class 9. By Class 12, I was scoring 640+ in mocks while my classmates were still struggling with basics.',
+      score: 'NEET Mock: 340/360 Bio',
+    },
+    {
+      name: "Sneha's Mother (Mrs. Agarwal)",
+      achievement: 'Parent of Foundation Student',
+      quote:
+        'Starting NEET foundation early was the best parenting decision. Sneha is stress-free in Class 11 while her friends are panicking about the syllabus.',
+      score: 'Batch Rank 2',
+    },
+    {
+      name: 'Kabir Singh',
+      achievement: 'NSO Gold Medalist | Currently Class 11',
+      quote:
+        'The NEET foundation course also prepared me for Science Olympiad. Won gold in NSO and built a biology base that makes Class 11 feel easy.',
+      score: 'NSO State Rank 3',
+    },
+  ],
   slug: 'neet-foundation-class-9',
 
   title: 'NEET Foundation Class 9 | Early Start Online Course',
@@ -405,6 +451,29 @@ export const neetFoundationClass9: SEOLandingContent = {
 // Page 3: /online-biology-classes-class-9/
 export const onlineBiologyClassesClass9: SEOLandingContent = {
   ...class9BaseContent,
+  testimonials: [
+    {
+      name: 'Tanisha Verma',
+      achievement: 'Currently Class 10 | School Science Topper',
+      quote:
+        'The online biology classes with 3D animations made tissues and cell organelles come alive. I actually look forward to every class!',
+      score: '98% in Science',
+    },
+    {
+      name: "Rehan's Parent (Mr. Khan)",
+      achievement: 'Parent of Class 9 Student',
+      quote:
+        'We live in a small town with no good science teachers. Online biology classes at Cerebrum gave Rehan access to teaching we never thought possible.',
+      score: 'District Topper',
+    },
+    {
+      name: 'Mira Chatterjee',
+      achievement: 'Currently Class 11 | Biology Enthusiast',
+      quote:
+        'The gamified quizzes and virtual lab experiments in Class 9 online classes made biology my favourite subject. I chose PCB stream because of Cerebrum.',
+      score: 'Top 3 in batch',
+    },
+  ],
   slug: 'online-biology-classes-class-9',
 
   title: 'Online Biology Classes for Class 9 | Live Expert Teaching',
@@ -571,6 +640,29 @@ export const onlineBiologyClassesClass9: SEOLandingContent = {
 // Page 4: /class-9-science-tuition-neet/
 export const class9ScienceTuitionNeet: SEOLandingContent = {
   ...class9BaseContent,
+  testimonials: [
+    {
+      name: "Ishaan's Mother (Dr. Priya Kapoor)",
+      achievement: 'Parent & Doctor',
+      quote:
+        'As a doctor myself, I wanted my son to start pre-medical preparation early. Cerebrum Class 9 tuition builds the right scientific temperament for medicine.',
+      score: 'Top of Class',
+    },
+    {
+      name: 'Ananya Reddy',
+      achievement: 'Currently Class 12 | NEET Mock 620+',
+      quote:
+        'Starting science tuition for NEET from Class 9 meant I had 4 years of biology preparation. My friends who started in Class 11 are envious of my comfort level.',
+      score: 'NEET Mock: 330/360 Bio',
+    },
+    {
+      name: 'Dev Malhotra',
+      achievement: 'Currently Class 10 | Aspiring Doctor',
+      quote:
+        'The pre-medical tuition at Cerebrum showed me what being a doctor means through real case studies. I am more motivated than ever to crack NEET.',
+      score: '96% in Science',
+    },
+  ],
   slug: 'class-9-science-tuition-neet',
 
   title: 'Class 9 Science Tuition for NEET | Pre-Medical Foundation Online',

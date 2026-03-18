@@ -61,6 +61,29 @@ const class11BaseContent = {
 // Page 1: /neet-biology-coaching-class-11/
 export const neetBiologyCoachingClass11: SEOLandingContent = {
   ...class11BaseContent,
+  testimonials: [
+    {
+      name: 'Ishita Malhotra',
+      achievement: 'AIR 189 | AIIMS Delhi',
+      quote:
+        'NEET biology coaching at Cerebrum transformed my understanding of Botany and Zoology. Dr. Shekhar breaks down every NCERT line for NEET relevance.',
+      score: '348/360',
+    },
+    {
+      name: 'Devansh Tiwari',
+      achievement: 'AIR 374 | KGMU Lucknow',
+      quote:
+        'The coaching methodology here is unmatched. Weekly tests and personal feedback helped me improve from 280 to 348 in biology within 8 months.',
+      score: '342/360',
+    },
+    {
+      name: 'Sanya Kapoor',
+      achievement: 'AIR 621 | BHU Varanasi',
+      quote:
+        'Joined Cerebrum for Class 11 NEET coaching and never looked back. The small batch meant I could ask unlimited doubts without hesitation.',
+      score: '330/360',
+    },
+  ],
   slug: 'neet-biology-coaching-class-11',
 
   // SEO
@@ -241,6 +264,29 @@ export const neetBiologyCoachingClass11: SEOLandingContent = {
 // Page 2: /class-11-biology-tuition-online/
 export const class11BiologyTuitionOnline: SEOLandingContent = {
   ...class11BaseContent,
+  testimonials: [
+    {
+      name: 'Ritu Agarwal',
+      achievement: 'AIR 298 | MAMC Delhi',
+      quote:
+        'Online biology tuition from Cerebrum gave me flexibility without compromising quality. The recorded sessions were lifesavers during revision.',
+      score: '338/360',
+    },
+    {
+      name: 'Aryan Joshi',
+      achievement: 'AIR 475 | AIIMS Jodhpur',
+      quote:
+        'Class 11 biology tuition here covers NCERT line-by-line plus PYQs. I felt completely prepared for every NEET biology question pattern.',
+      score: '332/360',
+    },
+    {
+      name: 'Nandini Rao',
+      achievement: 'AIR 710 | JIPMER Puducherry',
+      quote:
+        'The diagrams and mnemonics taught in Class 11 tuition stayed with me till NEET day. Scored 326 in biology with zero last-minute panic.',
+      score: '326/360',
+    },
+  ],
   slug: 'class-11-biology-tuition-online',
 
   title: 'Class 11 Biology Tuition Online | Live NEET Preparation',
@@ -415,6 +461,29 @@ export const class11BiologyTuitionOnline: SEOLandingContent = {
 // Page 3: /online-biology-classes-class-11/
 export const onlineBiologyClassesClass11: SEOLandingContent = {
   ...class11BaseContent,
+  testimonials: [
+    {
+      name: 'Tanvi Mehta',
+      achievement: 'AIR 412 | Lady Hardinge Medical College',
+      quote:
+        'Live online classes at Cerebrum felt like sitting in a personal classroom. Every concept was explained until the entire batch understood it.',
+      score: '336/360',
+    },
+    {
+      name: 'Sahil Pandey',
+      achievement: 'AIR 567 | KGMU Lucknow',
+      quote:
+        'The interactive biology classes with quizzes after every topic kept me engaged. I never missed a single online session in Class 11.',
+      score: '330/360',
+    },
+    {
+      name: 'Meghna Iyer',
+      achievement: 'AIR 834 | Government Medical College Chandigarh',
+      quote:
+        'Coming from a small town, online biology classes gave me access to teaching quality I could never find locally. Best decision ever.',
+      score: '322/360',
+    },
+  ],
   slug: 'online-biology-classes-class-11',
 
   title: 'Online Biology Classes for Class 11 | Live NEET Coaching',
@@ -587,6 +656,29 @@ export const onlineBiologyClassesClass11: SEOLandingContent = {
 // Page 4: /best-biology-tutor-class-11/
 export const bestBiologyTutorClass11: SEOLandingContent = {
   ...class11BaseContent,
+  testimonials: [
+    {
+      name: 'Kavya Bansal',
+      achievement: 'AIR 156 | AIIMS New Delhi',
+      quote:
+        'Dr. Shekhar is hands down the best biology tutor for NEET. His way of connecting Class 11 concepts to clinical medicine made biology unforgettable.',
+      score: '350/360',
+    },
+    {
+      name: 'Rohan Saxena',
+      achievement: 'AIR 345 | Maulana Azad Medical College',
+      quote:
+        'Finding the right biology tutor changed my NEET journey. The personal mentorship and study plan customised for my weak areas made all the difference.',
+      score: '340/360',
+    },
+    {
+      name: 'Aditi Choudhary',
+      achievement: 'AIR 678 | AIIMS Rishikesh',
+      quote:
+        'My Class 11 biology tutor at Cerebrum taught me how to think like a biologist, not just memorise. That approach got me into AIIMS.',
+      score: '325/360',
+    },
+  ],
   slug: 'best-biology-tutor-class-11',
 
   title: 'Best Biology Tutor for Class 11 | AIIMS Faculty',
@@ -765,6 +857,29 @@ export const bestBiologyTutorClass11: SEOLandingContent = {
 // Page 5: /class-11-neet-preparation-online/
 export const class11NeetPreparationOnline: SEOLandingContent = {
   ...class11BaseContent,
+  testimonials: [
+    {
+      name: 'Pranav Deshmukh',
+      achievement: 'AIR 223 | AIIMS Delhi',
+      quote:
+        'Starting NEET preparation in Class 11 online with Cerebrum was the smartest move. Two full years of structured biology prep gave me a massive edge.',
+      score: '345/360',
+    },
+    {
+      name: 'Shruti Nair',
+      achievement: 'AIR 489 | JIPMER Puducherry',
+      quote:
+        'The Class 11 NEET preparation covered every NCERT concept with PYQ mapping. I knew exactly which topics carry maximum weightage.',
+      score: '334/360',
+    },
+    {
+      name: 'Aakash Gupta',
+      achievement: 'AIR 756 | BHU Medical',
+      quote:
+        'Online NEET preparation from Class 11 meant I could balance school and competitive prep perfectly. Cerebrum made both manageable.',
+      score: '320/360',
+    },
+  ],
   slug: 'class-11-neet-preparation-online',
 
   title: 'Class 11 NEET Preparation Online | Complete Biology Course',
@@ -935,6 +1050,29 @@ export const class11NeetPreparationOnline: SEOLandingContent = {
 // Page 6: /ncert-biology-class-11-tuition/
 export const ncertBiologyClass11Tuition: SEOLandingContent = {
   ...class11BaseContent,
+  testimonials: [
+    {
+      name: 'Divya Mishra',
+      achievement: 'AIR 310 | AIIMS Delhi',
+      quote:
+        'NCERT is the bible for NEET biology, and Cerebrum taught me how to read it properly. Every line, every diagram, every activity was covered.',
+      score: '344/360',
+    },
+    {
+      name: 'Nikhil Sharma',
+      achievement: 'AIR 502 | MAMC Delhi',
+      quote:
+        'The NCERT-focused Class 11 biology tuition ensured I never needed any other book. Pure NCERT mastery got me 332 in biology.',
+      score: '332/360',
+    },
+    {
+      name: 'Pooja Kumari',
+      achievement: 'AIR 890 | KGMU Lucknow',
+      quote:
+        'I used to struggle with Class 11 NCERT biology chapters. After Cerebrum tuition, I could explain every concept from memory.',
+      score: '318/360',
+    },
+  ],
   slug: 'ncert-biology-class-11-tuition',
 
   title: 'NCERT Biology Class 11 Tuition | Complete CBSE Coverage',

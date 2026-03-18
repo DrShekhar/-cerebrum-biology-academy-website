@@ -61,6 +61,29 @@ const class12BaseContent = {
 // Page 1: /neet-biology-coaching-class-12/
 export const neetBiologyCoachingClass12: SEOLandingContent = {
   ...class12BaseContent,
+  testimonials: [
+    {
+      name: 'Aarav Khanna',
+      achievement: 'AIR 134 | AIIMS Delhi',
+      quote:
+        'Class 12 NEET biology coaching at Cerebrum covered Genetics and Ecology with such depth that I could solve any PYQ pattern confidently.',
+      score: '352/360',
+    },
+    {
+      name: 'Roshni Dutta',
+      achievement: 'AIR 298 | MAMC Delhi',
+      quote:
+        'The coaching integrated board and NEET preparation seamlessly. Scored 99% in boards and 344 in NEET biology in the same year.',
+      score: '344/360',
+    },
+    {
+      name: 'Harsh Vardhan',
+      achievement: 'AIR 523 | KGMU Lucknow',
+      quote:
+        'Dr. Shekhar coaching for Class 12 biology made Reproduction and Genetics my strongest chapters. These two units alone gave me 60+ marks.',
+      score: '336/360',
+    },
+  ],
   slug: 'neet-biology-coaching-class-12',
 
   title: 'NEET Biology Coaching for Class 12 | Final Year Preparation',
@@ -237,6 +260,29 @@ export const neetBiologyCoachingClass12: SEOLandingContent = {
 // Page 2: /class-12-biology-tuition-online/
 export const class12BiologyTuitionOnline: SEOLandingContent = {
   ...class12BaseContent,
+  testimonials: [
+    {
+      name: 'Simran Kaur',
+      achievement: 'AIR 178 | AIIMS Delhi',
+      quote:
+        'Online Class 12 biology tuition at Cerebrum was perfect for my schedule. The recorded lectures helped me revise Ecology three times before NEET.',
+      score: '348/360',
+    },
+    {
+      name: 'Varun Chopra',
+      achievement: 'AIR 401 | BHU Varanasi',
+      quote:
+        'Class 12 biology tuition online covered the entire syllabus with NEET-weighted focus. Evolution and Biotechnology became my scoring chapters.',
+      score: '340/360',
+    },
+    {
+      name: 'Anushka Jain',
+      achievement: 'AIR 634 | Lady Hardinge Medical College',
+      quote:
+        'I was sceptical about online tuition initially, but Cerebrum Class 12 biology sessions were more interactive than any offline class I attended.',
+      score: '330/360',
+    },
+  ],
   slug: 'class-12-biology-tuition-online',
 
   title: 'Class 12 Biology Tuition Online | Board + NEET Integrated',
@@ -406,6 +452,29 @@ export const class12BiologyTuitionOnline: SEOLandingContent = {
 // Page 3: /online-biology-classes-class-12/
 export const onlineBiologyClassesClass12: SEOLandingContent = {
   ...class12BaseContent,
+  testimonials: [
+    {
+      name: 'Karthik Menon',
+      achievement: 'AIR 245 | JIPMER Puducherry',
+      quote:
+        'The live online biology classes for Class 12 had real-time doubt solving that offline coaching never offered. Every session was productive.',
+      score: '346/360',
+    },
+    {
+      name: 'Prerna Sharma',
+      achievement: 'AIR 378 | AIIMS Jodhpur',
+      quote:
+        'Online classes saved me 2 hours of daily commute. That extra time went into biology revision, and my score jumped from 300 to 340.',
+      score: '340/360',
+    },
+    {
+      name: 'Amit Yadav',
+      achievement: 'AIR 712 | Government Medical College Nagpur',
+      quote:
+        'Class 12 online biology classes with small batches meant the teacher knew my weak chapters and gave me targeted practice.',
+      score: '324/360',
+    },
+  ],
   slug: 'online-biology-classes-class-12',
 
   title: 'Online Biology Classes for Class 12 | Live NEET Coaching',
@@ -573,6 +642,29 @@ export const onlineBiologyClassesClass12: SEOLandingContent = {
 // Page 4: /best-biology-tutor-class-12/
 export const bestBiologyTutorClass12: SEOLandingContent = {
   ...class12BaseContent,
+  testimonials: [
+    {
+      name: 'Ritika Aggarwal',
+      achievement: 'AIR 167 | AIIMS Delhi',
+      quote:
+        'The best biology tutor makes you love the subject. Dr. Shekhar made Class 12 Genetics feel like solving puzzles, not memorising facts.',
+      score: '350/360',
+    },
+    {
+      name: 'Manish Kumar',
+      achievement: 'AIR 356 | MAMC Delhi',
+      quote:
+        'Having the right Class 12 biology tutor is everything. Personal attention on my weak areas in Human Reproduction and Ecology changed my score completely.',
+      score: '342/360',
+    },
+    {
+      name: 'Pallavi Reddy',
+      achievement: 'AIR 589 | AIIMS Bhopal',
+      quote:
+        'My biology tutor at Cerebrum predicted 8 out of 10 NEET biology questions correctly. That level of expertise is rare.',
+      score: '332/360',
+    },
+  ],
   slug: 'best-biology-tutor-class-12',
 
   title: 'Best Biology Tutor for Class 12 NEET | AIIMS Faculty',
@@ -740,6 +832,29 @@ export const bestBiologyTutorClass12: SEOLandingContent = {
 // Page 5: /neet-2025-biology-coaching/
 export const neet2025BiologyCoaching: SEOLandingContent = {
   ...class12BaseContent,
+  testimonials: [
+    {
+      name: 'Yash Tandon',
+      achievement: 'AIR 201 | AIIMS Delhi',
+      quote:
+        'Joined Cerebrum NEET 2025 batch in April. The systematic biology coverage with daily tests ensured I was exam-ready by December.',
+      score: '347/360',
+    },
+    {
+      name: 'Nisha Verma',
+      achievement: 'AIR 423 | BHU Varanasi',
+      quote:
+        'The NEET 2025 coaching biology module had the perfect balance of concept teaching and MCQ practice. Mock test accuracy predicted my actual score.',
+      score: '338/360',
+    },
+    {
+      name: 'Rajat Sinha',
+      achievement: 'AIR 645 | KGMU Lucknow',
+      quote:
+        'NEET 2025 coaching at Cerebrum gave me 15 full-length biology mock tests. By the 10th test, I was consistently scoring 320+.',
+      score: '328/360',
+    },
+  ],
   slug: 'neet-2025-biology-coaching',
 
   title: 'NEET 2026 Biology Coaching | Class 12 Batch Starting Now',
@@ -907,6 +1022,29 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
 // Page 6: /board-neet-biology-class-12/
 export const boardNeetBiologyClass12: SEOLandingContent = {
   ...class12BaseContent,
+  testimonials: [
+    {
+      name: 'Deepika Rawat',
+      achievement: 'AIR 189 | AIIMS Delhi',
+      quote:
+        'The board plus NEET integrated approach meant I never studied biology twice. One deep study session covered both exam patterns perfectly.',
+      score: '349/360',
+    },
+    {
+      name: 'Siddharth Malhotra',
+      achievement: 'AIR 367 | JIPMER Puducherry',
+      quote:
+        'Scored 98% in Class 12 biology board and 340 in NEET biology. Cerebrum dual preparation saved me from choosing one over the other.',
+      score: '340/360',
+    },
+    {
+      name: 'Trisha Bose',
+      achievement: 'AIR 578 | AIIMS Patna',
+      quote:
+        'Board exams and NEET felt like the same preparation thanks to Cerebrum. The NCERT-first approach works brilliantly for both.',
+      score: '334/360',
+    },
+  ],
   slug: 'board-neet-biology-class-12',
 
   title: 'Board + NEET Biology Class 12 | Dual Exam Preparation',

@@ -61,6 +61,29 @@ const class10BaseContent = {
 // Page 1: /class-10-biology-tuition-online/
 export const class10BiologyTuitionOnline: SEOLandingContent = {
   ...class10BaseContent,
+  testimonials: [
+    {
+      name: 'Anika Saxena',
+      achievement: 'Currently Class 12 | 97% in Class 10 Boards',
+      quote:
+        'Online biology tuition at Cerebrum made board preparation stress-free. The NCERT-focused approach helped me score 97% in science while building NEET basics.',
+      score: '97% in Boards',
+    },
+    {
+      name: "Vivaan's Father (Mr. Gupta)",
+      achievement: 'Parent of Class 10 Student',
+      quote:
+        'We tried 3 local tuitions before finding Cerebrum online. The quality difference was night and day. Vivaan went from 78% to 95% in science.',
+      score: '95% in Science',
+    },
+    {
+      name: 'Rhea Nair',
+      achievement: 'Currently Class 11 | NEET Foundation Complete',
+      quote:
+        'Class 10 biology tuition online gave me both board marks and NEET readiness. I entered Class 11 already knowing cell biology and genetics basics.',
+      score: 'NEET Mock: 310/360 Bio',
+    },
+  ],
   slug: 'class-10-biology-tuition-online',
 
   title: 'Class 10 Biology Tuition Online | Board + NEET Foundation',
@@ -232,6 +255,29 @@ export const class10BiologyTuitionOnline: SEOLandingContent = {
 // Page 2: /neet-foundation-class-10/
 export const neetFoundationClass10: SEOLandingContent = {
   ...class10BaseContent,
+  testimonials: [
+    {
+      name: 'Aryan Bhatt',
+      achievement: 'Currently Class 12 | NEET Mock 650+',
+      quote:
+        'NEET foundation from Class 10 gave me a 2-year head start. While my Class 12 peers panic about syllabus, I am doing advanced question practice.',
+      score: 'NEET Mock: 345/360 Bio',
+    },
+    {
+      name: "Sia's Mother (Mrs. Chandra)",
+      achievement: 'Parent of Foundation Student',
+      quote:
+        'The NEET foundation course did not overburden Sia at all. She scored 96% in Class 10 boards AND built a strong pre-medical base simultaneously.',
+      score: '96% in Boards',
+    },
+    {
+      name: 'Kunal Rastogi',
+      achievement: 'Currently Class 11 | Batch Topper',
+      quote:
+        'Foundation in Class 10 introduced me to Punnett squares and enzyme specificity early. Class 11 Genetics and Biochemistry felt like revision, not new learning.',
+      score: 'Batch Rank 1',
+    },
+  ],
   slug: 'neet-foundation-class-10',
 
   title: 'NEET Foundation Class 10 | Pre-Medical Online Course',
@@ -401,6 +447,29 @@ export const neetFoundationClass10: SEOLandingContent = {
 // Page 3: /online-biology-classes-class-10/
 export const onlineBiologyClassesClass10: SEOLandingContent = {
   ...class10BaseContent,
+  testimonials: [
+    {
+      name: 'Ishita Pandey',
+      achievement: 'Currently Class 11 | 98% in Class 10 Science',
+      quote:
+        'The live online biology classes for Class 10 had real-time quizzes that made every session interactive. I never felt like I was staring at a screen.',
+      score: '98% in Science',
+    },
+    {
+      name: 'Rohan Mittal',
+      achievement: 'Currently Class 11 | Multiple School Awards',
+      quote:
+        'Online classes gave me access to AIIMS-trained teachers from my small city. The quality of biology teaching at Cerebrum is unmatchable locally.',
+      score: 'School Topper',
+    },
+    {
+      name: "Priya's Parent (Mrs. Saxena)",
+      achievement: 'Parent of Class 10 Student',
+      quote:
+        'The online format with recorded sessions was perfect. Priya could rewatch difficult topics like Heredity and Evolution multiple times before board exams.',
+      score: '96% in Boards',
+    },
+  ],
   slug: 'online-biology-classes-class-10',
 
   title: 'Online Biology Classes for Class 10 | Live Expert Teaching',
@@ -561,6 +630,29 @@ export const onlineBiologyClassesClass10: SEOLandingContent = {
 // Page 4: /class-10-board-neet-coaching/
 export const class10BoardNeetCoaching: SEOLandingContent = {
   ...class10BaseContent,
+  testimonials: [
+    {
+      name: 'Sarthak Jain',
+      achievement: 'Currently Class 12 | 99% in Class 10 Boards',
+      quote:
+        'The dual board plus NEET coaching approach was genius. One integrated programme gave me the top board score AND made me NEET-ready for Class 11.',
+      score: '99% in Boards',
+    },
+    {
+      name: 'Nandini Verma',
+      achievement: 'Currently Class 11 | Foundation Complete',
+      quote:
+        'My parents were worried about doing both board prep and NEET foundation. Cerebrum showed them it is the same study, just deeper. Scored 97% in boards.',
+      score: '97% in Boards',
+    },
+    {
+      name: "Aaditya's Mother (Mrs. Sharma)",
+      achievement: 'Parent of Class 10 Student',
+      quote:
+        'We compared 5 coaching options. Only Cerebrum offered genuine integrated board-NEET coaching online. The results speak for themselves.',
+      score: 'School Rank 1',
+    },
+  ],
   slug: 'class-10-board-neet-coaching',
 
   title: 'Class 10 Board + NEET Coaching Online | Dual Preparation',

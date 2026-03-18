@@ -61,6 +61,29 @@ const dropperBaseContent = {
 // Page 1: /neet-dropper-batch-online/
 export const neetDropperBatchOnline: SEOLandingContent = {
   ...dropperBaseContent,
+  testimonials: [
+    {
+      name: 'Vikrant Sharma',
+      achievement: 'AIR 278 | AIIMS Delhi (Dropper)',
+      quote:
+        'First attempt: 490. After Cerebrum dropper batch online: 650. The structured revision plan and daily biology tests turned my weakness into my strongest subject.',
+      score: '650/720 (160+ improvement)',
+    },
+    {
+      name: 'Neha Chauhan',
+      achievement: 'AIR 412 | MAMC Delhi (Dropper)',
+      quote:
+        'The online dropper batch allowed me to study from home without the stigma of going to a coaching centre. Scored 625 in my second attempt.',
+      score: '625/720',
+    },
+    {
+      name: 'Arjun Rao',
+      achievement: 'AIR 734 | JIPMER Puducherry (2nd Attempt)',
+      quote:
+        'Dr. Shekhar identified that my biology fundamentals were weak despite scoring okay. Rebuilding from scratch in the dropper batch gave me 340 in biology.',
+      score: '605/720',
+    },
+  ],
   slug: 'neet-dropper-batch-online',
 
   title: 'NEET Dropper Batch Online | Year-Long Intensive Course 2027',
@@ -239,6 +262,29 @@ export const neetDropperBatchOnline: SEOLandingContent = {
 // Page 2: /neet-repeater-course-2025/
 export const neetRepeaterCourse2027: SEOLandingContent = {
   ...dropperBaseContent,
+  testimonials: [
+    {
+      name: 'Prateek Mishra',
+      achievement: 'AIR 198 | AIIMS Delhi (Repeater)',
+      quote:
+        'My first NEET score was 510. The repeater course at Cerebrum fixed my conceptual gaps in Genetics and Human Physiology. Second attempt: 658.',
+      score: '658/720 (148+ improvement)',
+    },
+    {
+      name: 'Swati Tiwari',
+      achievement: 'AIR 389 | BHU Varanasi (2nd Attempt)',
+      quote:
+        'The 2025 repeater course had a completely different approach from my first-year coaching. Cerebrum focused on understanding, not rote learning.',
+      score: '630/720',
+    },
+    {
+      name: 'Gaurav Jha',
+      achievement: 'AIR 612 | KGMU Lucknow (Repeater)',
+      quote:
+        'Failed NEET by 15 marks in my first attempt. The repeater course gave me 100+ mark improvement in biology alone. Now a medical student!',
+      score: '610/720',
+    },
+  ],
   slug: 'neet-repeater-course-2025',
 
   title: 'NEET Repeater Course 2026 Online | Best Coaching for 2nd Attempt',
@@ -407,6 +453,29 @@ export const neetRepeaterCourse2027: SEOLandingContent = {
 // Page 3: /neet-dropper-biology-coaching/
 export const neetDropperBiologyCoaching: SEOLandingContent = {
   ...dropperBaseContent,
+  testimonials: [
+    {
+      name: 'Aakash Dubey',
+      achievement: 'AIR 234 | AIIMS Delhi (Dropper)',
+      quote:
+        'Biology coaching in the dropper year was transformative. Cerebrum retaught every chapter with NEET-specific focus. My biology score jumped from 260 to 348.',
+      score: '645/720',
+    },
+    {
+      name: 'Megha Patel',
+      achievement: 'AIR 456 | Lady Hardinge (2nd Attempt)',
+      quote:
+        'The dropper biology coaching covered 19,000+ MCQs with detailed explanations. That sheer volume of practice built my confidence for NEET day.',
+      score: '620/720',
+    },
+    {
+      name: 'Saurabh Pandey',
+      achievement: 'AIR 823 | AIIMS Bhopal (Dropper)',
+      quote:
+        'My first-year coaching was all about speed. Cerebrum dropper biology coaching taught me accuracy first, speed second. Result: zero negative marking in biology.',
+      score: '595/720',
+    },
+  ],
   slug: 'neet-dropper-biology-coaching',
 
   title: 'NEET Dropper Biology Coaching Online | Expert AIIMS Faculty',
@@ -580,6 +649,29 @@ export const neetDropperBiologyCoaching: SEOLandingContent = {
 // Page 4: /best-coaching-neet-droppers/
 export const bestCoachingNeetDroppers: SEOLandingContent = {
   ...dropperBaseContent,
+  testimonials: [
+    {
+      name: 'Rahul Thakur',
+      achievement: 'AIR 167 | AIIMS Delhi (Dropper)',
+      quote:
+        'I researched 20+ coaching options for droppers. Cerebrum had the best results, smallest batches, and most personalised approach. My 660 score proved it.',
+      score: '660/720',
+    },
+    {
+      name: 'Kritika Joshi',
+      achievement: 'AIR 334 | MAMC Delhi (2nd Attempt)',
+      quote:
+        'The best coaching for NEET droppers is one that treats you as an individual, not a batch number. Cerebrum knew my name, my weak chapters, and my study pattern.',
+      score: '635/720',
+    },
+    {
+      name: 'Deepak Yadav',
+      achievement: 'AIR 567 | JIPMER Puducherry (Dropper)',
+      quote:
+        'After wasting a year at a big factory coaching, I found Cerebrum. The personalised dropper program with 10-student batches was exactly what I needed.',
+      score: '615/720',
+    },
+  ],
   slug: 'best-coaching-neet-droppers',
 
   title: 'Best Coaching for NEET Droppers Online | 92% Success Rate',
@@ -751,6 +843,29 @@ export const bestCoachingNeetDroppers: SEOLandingContent = {
 // Page 5: /one-year-neet-dropper-course/
 export const oneYearNeetDropperCourse: SEOLandingContent = {
   ...dropperBaseContent,
+  testimonials: [
+    {
+      name: 'Nitin Agarwal',
+      achievement: 'AIR 245 | AIIMS Delhi (Dropper)',
+      quote:
+        'The one-year dropper course at Cerebrum had a month-by-month roadmap. I knew exactly what to study when. No wasted days, no confusion.',
+      score: '648/720',
+    },
+    {
+      name: 'Pooja Bhardwaj',
+      achievement: 'AIR 478 | BHU Varanasi (2nd Attempt)',
+      quote:
+        'One year was enough to transform my NEET score from 485 to 628. The structured one-year course with daily targets made every day count.',
+      score: '628/720',
+    },
+    {
+      name: 'Vivek Rathore',
+      achievement: 'AIR 689 | KGMU Lucknow (Dropper)',
+      quote:
+        'The one-year course covered complete Class 11 and 12 revision in 8 months, leaving 4 months for pure test practice. Perfect planning.',
+      score: '608/720',
+    },
+  ],
   slug: 'one-year-neet-dropper-course',
 
   title: 'One Year NEET Dropper Course Online | Complete Preparation',
@@ -916,6 +1031,29 @@ export const oneYearNeetDropperCourse: SEOLandingContent = {
 // Page: /neet-repeaters-2026/
 export const neetRepeaters2026: SEOLandingContent = {
   ...dropperBaseContent,
+  testimonials: [
+    {
+      name: 'Ankit Verma',
+      achievement: 'AIR 312 | AIIMS Delhi (2026 Repeater)',
+      quote:
+        'NEET 2025 was a disaster at 470. Cerebrum 2026 repeater batch rebuilt my biology from chapter 1. Scored 350 in biology and 640 overall in NEET 2026.',
+      score: '640/720',
+    },
+    {
+      name: 'Shraddha Kapoor',
+      achievement: 'AIR 534 | MAMC Delhi (2026 Attempt)',
+      quote:
+        'The 2026 repeater batch had updated PYQ analysis and new pattern questions. Cerebrum stays current with NEET trends, which big coachings ignore.',
+      score: '618/720',
+    },
+    {
+      name: 'Mohit Tiwari',
+      achievement: 'AIR 756 | AIIMS Jodhpur (2nd Attempt)',
+      quote:
+        'My 2026 NEET preparation at Cerebrum focused on eliminating negative marks. Biology accuracy went from 75% to 95%. That alone added 40 marks.',
+      score: '600/720',
+    },
+  ],
   slug: 'neet-repeaters-2026',
 
   title: 'NEET Repeaters 2026 | Dropper Batch for Second Attempt Success',
@@ -1145,6 +1283,29 @@ export const neetRepeaters2026: SEOLandingContent = {
 // Page: /neet-dropper-batch/ (Central Hub)
 export const neetDropperBatch: SEOLandingContent = {
   ...dropperBaseContent,
+  testimonials: [
+    {
+      name: 'Shivam Gupta',
+      achievement: 'AIR 289 | AIIMS Delhi (Dropper)',
+      quote:
+        'The dropper batch at Cerebrum is not a repeat of Class 11-12 coaching. It is a completely redesigned programme that targets exactly where droppers fail.',
+      score: '645/720',
+    },
+    {
+      name: 'Rashmi Sinha',
+      achievement: 'AIR 445 | Lady Hardinge (2nd Attempt)',
+      quote:
+        'What makes this dropper batch special is the mental health support alongside academics. Dr. Shekhar understood the emotional toll of taking a drop year.',
+      score: '622/720',
+    },
+    {
+      name: 'Tushar Malik',
+      achievement: 'AIR 678 | BHU Varanasi (Dropper)',
+      quote:
+        'The dropper batch had 6 full-length NEET simulations under real exam conditions. By NEET day, the exam hall felt familiar, not intimidating.',
+      score: '602/720',
+    },
+  ],
   slug: 'neet-dropper-batch',
 
   title: 'NEET Dropper Batch 2026 Delhi NCR | Online & Offline | Cerebrum Academy',

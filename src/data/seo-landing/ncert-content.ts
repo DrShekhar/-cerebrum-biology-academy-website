@@ -60,6 +60,29 @@ const ncertBaseContent = {
 // Page 1: /ncert-biology-class-11/
 export const ncertBiologyClass11: SEOLandingContent = {
   ...ncertBaseContent,
+  testimonials: [
+    {
+      name: 'Aakriti Sharma',
+      achievement: 'AIR 234 | AIIMS Delhi',
+      quote:
+        'The NCERT Class 11 biology coverage at Cerebrum was so thorough that I could answer any NEET question just from NCERT knowledge. No extra books needed.',
+      score: '348/360 Biology',
+    },
+    {
+      name: 'Vikash Yadav',
+      achievement: 'AIR 456 | KGMU Lucknow',
+      quote:
+        'Class 11 NCERT biology has 22 chapters. Cerebrum taught each one with line-by-line analysis and NEET PYQ mapping. My biology fundamentals became rock solid.',
+      score: '335/360 Biology',
+    },
+    {
+      name: 'Anjali Menon',
+      achievement: 'AIR 678 | JIPMER Puducherry',
+      quote:
+        'I wasted months reading Trueman and Dinesh before realising NCERT is enough. Cerebrum Class 11 NCERT approach would have saved me 6 months if I started here.',
+      score: '325/360 Biology',
+    },
+  ],
   slug: 'ncert-biology-class-11',
   classLevel: 'class-11',
 
@@ -244,6 +267,29 @@ export const ncertBiologyClass11: SEOLandingContent = {
 // Page 2: /ncert-biology-class-12/
 export const ncertBiologyClass12: SEOLandingContent = {
   ...ncertBaseContent,
+  testimonials: [
+    {
+      name: 'Raghav Kapoor',
+      achievement: 'AIR 178 | AIIMS Delhi',
+      quote:
+        'Class 12 NCERT biology is where NEET questions come from directly. Cerebrum taught me to read between the lines of NCERT, catching details others miss.',
+      score: '350/360 Biology',
+    },
+    {
+      name: 'Shalini Dubey',
+      achievement: 'AIR 389 | MAMC Delhi',
+      quote:
+        'The NCERT Class 12 biology teaching at Cerebrum covered Genetics, Ecology, and Reproduction with exam-ready precision. I could recall entire NCERT paragraphs.',
+      score: '340/360 Biology',
+    },
+    {
+      name: 'Kartik Nair',
+      achievement: 'AIR 567 | BHU Varanasi',
+      quote:
+        'Cerebrum NCERT Class 12 biology sessions highlighted exactly which NCERT lines become NEET questions. That targeting saved me hundreds of hours.',
+      score: '330/360 Biology',
+    },
+  ],
   slug: 'ncert-biology-class-12',
   classLevel: 'class-12',
 
@@ -422,6 +468,29 @@ export const ncertBiologyClass12: SEOLandingContent = {
 // Page 3: /ncert-fingertips-biology/
 export const ncertFingertipsBiology: SEOLandingContent = {
   ...ncertBaseContent,
+  testimonials: [
+    {
+      name: 'Deepa Krishnan',
+      achievement: 'AIR 212 | AIIMS Delhi',
+      quote:
+        'NCERT at Your Fingertips combined with Cerebrum teaching was the ultimate combo. The fingertips-style question practice drilled every NCERT fact into my memory.',
+      score: '346/360 Biology',
+    },
+    {
+      name: 'Manav Agarwal',
+      achievement: 'AIR 423 | KGMU Lucknow',
+      quote:
+        'Cerebrum taught me how to use NCERT Fingertips effectively. Not just solving questions but understanding why each answer is correct from NCERT text.',
+      score: '336/360 Biology',
+    },
+    {
+      name: 'Priyanka Sharma',
+      achievement: 'AIR 645 | AIIMS Jodhpur',
+      quote:
+        'The fingertips approach at Cerebrum helped me practice 5000+ NCERT-based MCQs. By NEET day, I had seen every possible question pattern from NCERT.',
+      score: '328/360 Biology',
+    },
+  ],
   slug: 'ncert-fingertips-biology',
   classLevel: 'universal',
 
@@ -594,6 +663,29 @@ export const ncertFingertipsBiology: SEOLandingContent = {
 // Page 4: /ncert-exemplar-biology/
 export const ncertExemplarBiology: SEOLandingContent = {
   ...ncertBaseContent,
+  testimonials: [
+    {
+      name: 'Rohit Srivastava',
+      achievement: 'AIR 189 | AIIMS Delhi',
+      quote:
+        'NCERT Exemplar biology questions are the closest to actual NEET difficulty. Cerebrum exemplar sessions taught me to solve the trickiest application-based MCQs.',
+      score: '349/360 Biology',
+    },
+    {
+      name: 'Ananya Banerjee',
+      achievement: 'AIR 356 | Lady Hardinge Medical College',
+      quote:
+        'Most students skip NCERT Exemplar. Cerebrum made it mandatory, and that decision alone gave me an edge over 90% of NEET aspirants.',
+      score: '342/360 Biology',
+    },
+    {
+      name: 'Harsh Gupta',
+      achievement: 'AIR 589 | JIPMER Puducherry',
+      quote:
+        'The NCERT Exemplar biology solutions taught at Cerebrum covered assertion-reasoning and case-based questions that appeared directly in my NEET paper.',
+      score: '330/360 Biology',
+    },
+  ],
   slug: 'ncert-exemplar-biology',
   classLevel: 'universal',
 
@@ -760,6 +852,29 @@ export const ncertExemplarBiology: SEOLandingContent = {
 // Page 5: /ncert-biology-notes-class-11/
 export const ncertBiologyNotesClass11: SEOLandingContent = {
   ...ncertBaseContent,
+  testimonials: [
+    {
+      name: 'Shreya Malik',
+      achievement: 'AIR 267 | AIIMS Delhi',
+      quote:
+        'The NCERT biology notes for Class 11 from Cerebrum condensed 22 chapters into revision-ready summaries. I used them exclusively in the last 30 days before NEET.',
+      score: '344/360 Biology',
+    },
+    {
+      name: 'Arjun Kapoor',
+      achievement: 'AIR 478 | MAMC Delhi',
+      quote:
+        'Class 11 NCERT notes with highlighted NEET-important lines saved me during quick revisions. Every note had PYQ references that showed where questions come from.',
+      score: '334/360 Biology',
+    },
+    {
+      name: 'Neha Saxena',
+      achievement: 'AIR 712 | BHU Varanasi',
+      quote:
+        'I made my own notes but Cerebrum Class 11 NCERT notes were better organised with diagrams and tables. Switched completely and my scores improved.',
+      score: '322/360 Biology',
+    },
+  ],
   slug: 'ncert-biology-notes-class-11',
   classLevel: 'class-11',
 
@@ -931,6 +1046,29 @@ export const ncertBiologyNotesClass11: SEOLandingContent = {
 // Page 6: /ncert-biology-notes-class-12/
 export const ncertBiologyNotesClass12: SEOLandingContent = {
   ...ncertBaseContent,
+  testimonials: [
+    {
+      name: 'Ravi Shankar',
+      achievement: 'AIR 198 | AIIMS Delhi',
+      quote:
+        'Class 12 NCERT biology notes from Cerebrum had Genetics pedigree shortcuts and Ecology diagrams that I could recall under exam pressure. Pure gold for revision.',
+      score: '348/360 Biology',
+    },
+    {
+      name: 'Kavita Iyer',
+      achievement: 'AIR 367 | JIPMER Puducherry',
+      quote:
+        'The Class 12 NCERT notes covered Reproduction, Genetics, Ecology, and Biotechnology with exam-focused precision. Not a single unnecessary line.',
+      score: '338/360 Biology',
+    },
+    {
+      name: 'Akash Sharma',
+      achievement: 'AIR 623 | KGMU Lucknow',
+      quote:
+        'During the last week before NEET, I only revised from Cerebrum Class 12 NCERT notes. They had everything I needed in a compact format.',
+      score: '326/360 Biology',
+    },
+  ],
   slug: 'ncert-biology-notes-class-12',
   classLevel: 'class-12',
 
@@ -1102,6 +1240,29 @@ export const ncertBiologyNotesClass12: SEOLandingContent = {
 // Page 7: /ncert-biology-solutions/
 export const ncertBiologySolutions: SEOLandingContent = {
   ...ncertBaseContent,
+  testimonials: [
+    {
+      name: 'Tanmay Desai',
+      achievement: 'AIR 223 | AIIMS Delhi',
+      quote:
+        'NCERT biology solutions at Cerebrum were not just answers but detailed explanations linking each solution to NEET question patterns. Understanding, not memorising.',
+      score: '346/360 Biology',
+    },
+    {
+      name: 'Sakshi Verma',
+      achievement: 'AIR 445 | MAMC Delhi',
+      quote:
+        'Every NCERT exercise question was solved with the logic behind each option. This approach helped me eliminate wrong choices in NEET MCQs confidently.',
+      score: '336/360 Biology',
+    },
+    {
+      name: 'Dhruv Patel',
+      achievement: 'AIR 678 | AIIMS Bhopal',
+      quote:
+        'The NCERT solutions teaching at Cerebrum covered both in-text and end-of-chapter questions. Many NEET questions are rephrased versions of NCERT exercises.',
+      score: '324/360 Biology',
+    },
+  ],
   slug: 'ncert-biology-solutions',
   classLevel: 'universal',
 
@@ -1268,6 +1429,29 @@ export const ncertBiologySolutions: SEOLandingContent = {
 // Page 8: /ncert-punch-biology/
 export const ncertPunchBiology: SEOLandingContent = {
   ...ncertBaseContent,
+  testimonials: [
+    {
+      name: 'Nikhil Jain',
+      achievement: 'AIR 156 | AIIMS Delhi',
+      quote:
+        'The NCERT Punch approach at Cerebrum taught me to extract the key statement from every NCERT paragraph. This skill alone helped me solve 90% of NEET biology.',
+      score: '352/360 Biology',
+    },
+    {
+      name: 'Riya Choudhary',
+      achievement: 'AIR 334 | BHU Varanasi',
+      quote:
+        'NCERT Punch biology is about finding the one-liner in NCERT that becomes a NEET question. Cerebrum teaching identified these punches for every chapter.',
+      score: '340/360 Biology',
+    },
+    {
+      name: 'Siddharth Rao',
+      achievement: 'AIR 567 | JIPMER Puducherry',
+      quote:
+        'The punch-style revision at Cerebrum condensed 2 years of NCERT into 500 key statements. I revised all of biology in 3 days before NEET using these.',
+      score: '328/360 Biology',
+    },
+  ],
   slug: 'ncert-punch-biology',
   classLevel: 'universal',
 

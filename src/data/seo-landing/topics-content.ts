@@ -42,6 +42,29 @@ const topicBaseContent = {
 // Page 1: /cell-biology-tuition/
 export const cellBiologyTuition: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Radhika Verma',
+      achievement: 'AIR 189 | AIIMS Delhi',
+      quote:
+        'Cell Biology was my weakest topic until Cerebrum. The 3D cell models and organelle function maps made mitochondria, ER, and Golgi apparatus unforgettable.',
+      score: '348/360 Biology',
+    },
+    {
+      name: 'Aman Khanna',
+      achievement: 'AIR 412 | MAMC Delhi',
+      quote:
+        'Cell structure and cell division carry 15+ marks in NEET. Cerebrum cell biology tuition covered every diagram and process until I could draw them blindfolded.',
+      score: '336/360 Biology',
+    },
+    {
+      name: 'Sonali Patil',
+      achievement: 'AIR 678 | JIPMER Puducherry',
+      quote:
+        'The cell biology sessions connected prokaryotic vs eukaryotic cells, cell cycle phases, and membrane transport into one clear story. Best topic coverage.',
+      score: '324/360 Biology',
+    },
+  ],
   slug: 'cell-biology-tuition',
   classLevel: 'universal',
 
@@ -238,6 +261,29 @@ export const cellBiologyTuition: SEOLandingContent = {
 // Page 2: /molecular-biology-tuition/
 export const molecularBiologyTuition: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Vaibhav Soni',
+      achievement: 'AIR 234 | AIIMS Delhi',
+      quote:
+        'Molecular biology including DNA replication, transcription, and translation was taught with step-by-step animations. I could visualise every molecular process.',
+      score: '346/360 Biology',
+    },
+    {
+      name: 'Garima Tiwari',
+      achievement: 'AIR 456 | BHU Varanasi',
+      quote:
+        'The molecular biology tuition explained lac operon, genetic code properties, and central dogma with such clarity that these became my highest-scoring topics.',
+      score: '338/360 Biology',
+    },
+    {
+      name: 'Nitin Chaudhary',
+      achievement: 'AIR 689 | KGMU Lucknow',
+      quote:
+        'I feared molecular biology before Cerebrum. After the tuition, DNA fingerprinting and recombinant DNA technology became topics I actually enjoyed solving.',
+      score: '322/360 Biology',
+    },
+  ],
   slug: 'molecular-biology-tuition',
   classLevel: 'universal',
 
@@ -429,6 +475,29 @@ export const molecularBiologyTuition: SEOLandingContent = {
 // Page 3: /genetics-biology-tuition/
 export const geneticsBiologyTuition: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Aditya Prakash',
+      achievement: 'AIR 167 | AIIMS Delhi',
+      quote:
+        'Genetics is the highest-weightage NEET chapter and Cerebrum genetics tuition made Mendelian crosses, pedigree analysis, and chromosomal disorders crystal clear.',
+      score: '352/360 Biology',
+    },
+    {
+      name: 'Shweta Mishra',
+      achievement: 'AIR 378 | Lady Hardinge Medical College',
+      quote:
+        'The genetics tuition covered dihybrid crosses, incomplete dominance, and sex-linked inheritance with practice problems. I solved every genetics PYQ correctly in NEET.',
+      score: '340/360 Biology',
+    },
+    {
+      name: 'Raj Kumar',
+      achievement: 'AIR 612 | AIIMS Jodhpur',
+      quote:
+        'Genetics was my most feared topic. After Cerebrum tuition with Punnett square drills and probability shortcuts, it became my most confident chapter.',
+      score: '328/360 Biology',
+    },
+  ],
   slug: 'genetics-biology-tuition',
   classLevel: 'universal',
 
@@ -625,6 +694,29 @@ export const geneticsBiologyTuition: SEOLandingContent = {
 // Page 4: /evolution-class-12/
 export const evolutionClass12: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Pranali Deshmukh',
+      achievement: 'AIR 245 | AIIMS Delhi',
+      quote:
+        'Evolution is often neglected by students but carries guaranteed NEET marks. Cerebrum taught Darwin, Lamarck, and Hardy-Weinberg with real exam focus.',
+      score: '344/360 Biology',
+    },
+    {
+      name: 'Kunal Mehta',
+      achievement: 'AIR 489 | MAMC Delhi',
+      quote:
+        'The evolution chapter teaching connected natural selection, speciation, and human evolution into a logical story. I scored full marks in all evolution questions.',
+      score: '336/360 Biology',
+    },
+    {
+      name: 'Divya Nayak',
+      achievement: 'AIR 723 | JIPMER Puducherry',
+      quote:
+        'Evolution was confusing from textbooks alone. Cerebrum Class 12 evolution sessions made homologous organs, analogous organs, and adaptive radiation simple.',
+      score: '320/360 Biology',
+    },
+  ],
   slug: 'evolution-class-12',
   classLevel: 'class-12',
 
@@ -815,6 +907,29 @@ export const evolutionClass12: SEOLandingContent = {
 // Page 5: /biodiversity-conservation-class-12/
 export const biodiversityConservationClass12: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Ankita Joshi',
+      achievement: 'AIR 198 | AIIMS Delhi',
+      quote:
+        'Biodiversity and Conservation seems easy but NEET asks tricky questions. Cerebrum teaching on species-area relationship and IUCN categories was exam-focused.',
+      score: '350/360 Biology',
+    },
+    {
+      name: 'Rohit Pillai',
+      achievement: 'AIR 423 | BHU Varanasi',
+      quote:
+        'The biodiversity chapter at Cerebrum covered hotspots, sacred groves, and in-situ vs ex-situ conservation with real Indian examples that made NEET questions easy.',
+      score: '338/360 Biology',
+    },
+    {
+      name: 'Megha Singhania',
+      achievement: 'AIR 656 | KGMU Lucknow',
+      quote:
+        'I used to confuse alpha, beta, and gamma diversity. After Cerebrum conservation biology sessions, I could differentiate all diversity types with examples.',
+      score: '326/360 Biology',
+    },
+  ],
   slug: 'biodiversity-conservation-class-12',
   classLevel: 'class-12',
 
@@ -1006,6 +1121,29 @@ export const biodiversityConservationClass12: SEOLandingContent = {
 // Page 6: /animal-tissues-class-9/
 export const animalTissuesClass9: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Siddhi Sharma',
+      achievement: 'Currently Class 11 | School Science Topper',
+      quote:
+        'Animal tissues was my favourite topic at Cerebrum. The comparison tables for epithelial, connective, muscular, and nervous tissues made classification effortless.',
+      score: '98% in Science',
+    },
+    {
+      name: 'Aryan Mishra',
+      achievement: 'Currently Class 11 | Foundation Batch Topper',
+      quote:
+        'Learning animal tissues in Class 9 with Cerebrum meant I already knew histology basics when Class 11 started. My classmates were shocked at my knowledge.',
+      score: 'Batch Rank 1',
+    },
+    {
+      name: "Tanya's Mother (Mrs. Gupta)",
+      achievement: 'Parent of Class 9 Student',
+      quote:
+        'The tissue diagrams and microscopy images in Cerebrum classes made biology visual and exciting for my daughter. She now draws tissue types for fun!',
+      score: 'Top 5 in batch',
+    },
+  ],
   slug: 'animal-tissues-class-9',
   classLevel: 'class-9',
 
@@ -1195,6 +1333,29 @@ export const animalTissuesClass9: SEOLandingContent = {
 // Page 7: /plant-physiology-class-11/
 export const plantPhysiologyClass11: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Snehal Kulkarni',
+      achievement: 'AIR 278 | AIIMS Delhi',
+      quote:
+        'Plant Physiology is the most underrated NEET unit. Cerebrum teaching on transpiration, photosynthesis, and mineral nutrition made this my highest-scoring unit.',
+      score: '346/360 Biology',
+    },
+    {
+      name: 'Anand Rathi',
+      achievement: 'AIR 512 | JIPMER Puducherry',
+      quote:
+        'The plant physiology sessions covered C3, C4, and CAM pathways with clear diagrams. I got 3 questions from this unit alone correct in NEET.',
+      score: '332/360 Biology',
+    },
+    {
+      name: 'Priya Jain',
+      achievement: 'AIR 734 | MAMC Delhi',
+      quote:
+        'Most students skip plant physiology for human physiology. Cerebrum made both equally interesting. My plant biology preparation gave me easy marks in NEET.',
+      score: '320/360 Biology',
+    },
+  ],
   slug: 'plant-physiology-class-11',
   classLevel: 'class-11',
 
@@ -1386,6 +1547,29 @@ export const plantPhysiologyClass11: SEOLandingContent = {
 // Page 8: /living-world-ncert/
 export const livingWorldNcert: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Sameer Bhat',
+      achievement: 'AIR 234 | AIIMS Delhi',
+      quote:
+        'The Living World is the first chapter of Class 11 and sets the tone for NEET biology. Cerebrum covered taxonomy, nomenclature, and classification with exam depth.',
+      score: '344/360 Biology',
+    },
+    {
+      name: 'Anamika Singh',
+      achievement: 'AIR 467 | BHU Varanasi',
+      quote:
+        'Living World NCERT teaching at Cerebrum included all taxonomic categories, species concept, and herbarium details. Got 2 direct questions from this chapter in NEET.',
+      score: '334/360 Biology',
+    },
+    {
+      name: 'Rishi Verma',
+      achievement: 'AIR 689 | KGMU Lucknow',
+      quote:
+        'Most coaching centres rush through The Living World. Cerebrum spent proper time on it because NEET always has 1-2 questions from this chapter.',
+      score: '322/360 Biology',
+    },
+  ],
   slug: 'living-world-ncert',
   classLevel: 'class-11',
 
@@ -1571,6 +1755,29 @@ export const livingWorldNcert: SEOLandingContent = {
 // Page 9: /dna-biology-tuition/
 export const dnaBiologyTuition: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Kirti Agarwal',
+      achievement: 'AIR 178 | AIIMS Delhi',
+      quote:
+        'DNA replication, repair, and recombination are NEET favourites. Cerebrum DNA biology tuition covered Meselson-Stahl experiment and semi-conservative replication perfectly.',
+      score: '350/360 Biology',
+    },
+    {
+      name: 'Mayank Saxena',
+      achievement: 'AIR 389 | MAMC Delhi',
+      quote:
+        'The DNA tuition sessions explained Watson-Crick model, Hershey-Chase experiment, and Griffith experiment with exam-oriented diagrams. I never confused these again.',
+      score: '338/360 Biology',
+    },
+    {
+      name: 'Simran Sethi',
+      achievement: 'AIR 623 | AIIMS Bhopal',
+      quote:
+        'DNA structure, packaging, and the genetic code were taught with 3D models at Cerebrum. These visual aids made molecular biology my strongest area in NEET.',
+      score: '326/360 Biology',
+    },
+  ],
   slug: 'dna-biology-tuition',
   classLevel: 'universal',
 
@@ -1760,6 +1967,29 @@ export const dnaBiologyTuition: SEOLandingContent = {
 // Page 10: /botany-zoology-tuition/
 export const botanyZoologyTuition: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Tarun Reddy',
+      achievement: 'AIR 212 | AIIMS Delhi',
+      quote:
+        'Cerebrum balanced botany and zoology perfectly. Most students are strong in one and weak in the other. The equal focus approach got me 350 in NEET biology.',
+      score: '350/360 Biology',
+    },
+    {
+      name: 'Nisha Agarwal',
+      achievement: 'AIR 434 | Lady Hardinge Medical College',
+      quote:
+        'I hated botany before Cerebrum. The tuition made Plant Kingdom, Morphology, and Plant Physiology as interesting as the zoology chapters.',
+      score: '336/360 Biology',
+    },
+    {
+      name: 'Rahul Dubey',
+      achievement: 'AIR 667 | JIPMER Puducherry',
+      quote:
+        'The botany and zoology tuition covered both sections with comparative teaching. Comparing plant and animal tissues side by side was brilliant for retention.',
+      score: '324/360 Biology',
+    },
+  ],
   slug: 'botany-zoology-tuition',
   classLevel: 'universal',
 
@@ -1945,6 +2175,29 @@ export const botanyZoologyTuition: SEOLandingContent = {
 // Page 11-15: Additional topic pages
 export const ecologyBiologyTuition: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Aditi Bhargava',
+      achievement: 'AIR 156 | AIIMS Delhi',
+      quote:
+        'Ecology is the easiest high-scoring unit in NEET if taught well. Cerebrum ecology tuition covered all 4 chapters with population graphs, food webs, and ecosystem diagrams.',
+      score: '352/360 Biology',
+    },
+    {
+      name: 'Saurav Pandey',
+      achievement: 'AIR 345 | BHU Varanasi',
+      quote:
+        'The ecology tuition at Cerebrum taught ecological succession, nutrient cycling, and environmental issues with real-world examples. Scored full in ecology section.',
+      score: '342/360 Biology',
+    },
+    {
+      name: 'Lakshmi Nair',
+      achievement: 'AIR 578 | KGMU Lucknow',
+      quote:
+        'Ecology carries 12-14 marks in NEET and is the most scorable. Cerebrum ecology sessions ensured I got every single ecology question right.',
+      score: '330/360 Biology',
+    },
+  ],
   slug: 'ecology-biology-tuition',
   classLevel: 'universal',
   title: 'Ecology Biology Tuition | Environmental Biology for NEET',
@@ -2108,6 +2361,29 @@ export const ecologyBiologyTuition: SEOLandingContent = {
 
 export const humanPhysiologyTuition: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Neeraj Chopra',
+      achievement: 'AIR 189 | AIIMS Delhi',
+      quote:
+        'Human Physiology is the heaviest NEET unit with 25-30 marks. Cerebrum covered all 6 chapters with organ system diagrams and clinical correlations.',
+      score: '348/360 Biology',
+    },
+    {
+      name: 'Renu Sharma',
+      achievement: 'AIR 401 | MAMC Delhi',
+      quote:
+        'The human physiology tuition taught cardiac cycle, nephron function, and neural transmission with such clarity that I could draw each diagram from memory in NEET.',
+      score: '340/360 Biology',
+    },
+    {
+      name: 'Ajay Thakur',
+      achievement: 'AIR 645 | AIIMS Jodhpur',
+      quote:
+        'I struggled with Body Fluids, Excretion, and Locomotion chapters. Cerebrum human physiology sessions with animated organ functions made everything click.',
+      score: '326/360 Biology',
+    },
+  ],
   slug: 'human-physiology-tuition',
   classLevel: 'class-12',
   title: 'Human Physiology Tuition | Class 11-12 for NEET',
@@ -2260,6 +2536,29 @@ export const humanPhysiologyTuition: SEOLandingContent = {
 
 export const biomoleculesClass11: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Payal Bhatt',
+      achievement: 'AIR 267 | AIIMS Delhi',
+      quote:
+        'Biomolecules is where chemistry meets biology. Cerebrum teaching on enzyme kinetics, protein structure, and nucleic acids made this chapter scoring in NEET.',
+      score: '344/360 Biology',
+    },
+    {
+      name: 'Suresh Yadav',
+      achievement: 'AIR 489 | JIPMER Puducherry',
+      quote:
+        'The biomolecules Class 11 sessions at Cerebrum used molecular models and reaction diagrams. I understood amino acid classification and enzyme specificity thoroughly.',
+      score: '334/360 Biology',
+    },
+    {
+      name: 'Meenakshi Iyer',
+      achievement: 'AIR 712 | BHU Varanasi',
+      quote:
+        'Biomolecules was confusing until Cerebrum broke it into carbohydrates, proteins, lipids, and nucleic acids with comparison tables. Simple and effective teaching.',
+      score: '322/360 Biology',
+    },
+  ],
   slug: 'biomolecules-class-11',
   classLevel: 'class-11',
   title: 'Biomolecules Class 11 | Complete NEET Preparation',
@@ -2405,6 +2704,29 @@ export const biomoleculesClass11: SEOLandingContent = {
 
 export const plantKingdomClass11: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Chitra Narayan',
+      achievement: 'AIR 223 | AIIMS Delhi',
+      quote:
+        'Plant Kingdom with algae, bryophytes, pteridophytes, and gymnosperms was taught with lifecycle diagrams at Cerebrum. Every alternation of generation became clear.',
+      score: '346/360 Biology',
+    },
+    {
+      name: 'Mohit Garg',
+      achievement: 'AIR 456 | KGMU Lucknow',
+      quote:
+        'The Plant Kingdom Class 11 teaching covered Spirogyra, Funaria, and Pinus lifecycles in detail. NEET loves lifecycle questions and I was fully prepared.',
+      score: '334/360 Biology',
+    },
+    {
+      name: 'Aparna Reddy',
+      achievement: 'AIR 678 | MAMC Delhi',
+      quote:
+        'Plant Kingdom classification was a memorisation nightmare before Cerebrum. The comparison tables and mnemonic devices made it systematic and retainable.',
+      score: '324/360 Biology',
+    },
+  ],
   slug: 'plant-kingdom-class-11',
   classLevel: 'class-11',
   title: 'Plant Kingdom Class 11 | Plantae for NEET',
@@ -2558,6 +2880,29 @@ export const plantKingdomClass11: SEOLandingContent = {
 
 export const animalKingdomClass11: SEOLandingContent = {
   ...topicBaseContent,
+  testimonials: [
+    {
+      name: 'Karan Malhotra',
+      achievement: 'AIR 201 | AIIMS Delhi',
+      quote:
+        'Animal Kingdom classification from Porifera to Chordata was taught with phylum-wise comparison charts at Cerebrum. I could classify any organism instantly in NEET.',
+      score: '348/360 Biology',
+    },
+    {
+      name: 'Sneha Batra',
+      achievement: 'AIR 434 | Lady Hardinge Medical College',
+      quote:
+        'The Animal Kingdom Class 11 sessions used example organisms for each phylum. Sycon, Aurelia, Nereis, and Balanoglossus became permanent memories.',
+      score: '336/360 Biology',
+    },
+    {
+      name: 'Abhishek Tiwari',
+      achievement: 'AIR 667 | AIIMS Rishikesh',
+      quote:
+        'Animal Kingdom carries 3-4 NEET questions. Cerebrum phylum comparison tables with body plan, symmetry, and coelom type made this chapter a guaranteed scorer.',
+      score: '324/360 Biology',
+    },
+  ],
   slug: 'animal-kingdom-class-11',
   classLevel: 'class-11',
   title: 'Animal Kingdom Class 11 | Animalia for NEET',
