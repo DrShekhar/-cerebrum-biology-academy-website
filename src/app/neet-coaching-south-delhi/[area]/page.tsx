@@ -11,9 +11,7 @@ interface PageProps {
 export const dynamicParams = false
 
 export async function generateStaticParams() {
-  return getAllAreaSlugs().map((area) => ({
-    area,
-  }))
+  return []
 }
 
 // Generate area-type specific meta descriptions

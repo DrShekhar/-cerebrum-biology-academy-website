@@ -17,7 +17,7 @@ type Props = {
 export const dynamicParams = false
 
 export function generateStaticParams() {
-  return getAllGhaziabadAreaSlugs().map((area) => ({ area }))
+  return []
 }
 
 function getTitleByType(area: ReturnType<typeof getGhaziabadAreaBySlug>): string {
