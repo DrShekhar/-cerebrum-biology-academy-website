@@ -279,6 +279,26 @@ export const WHATSAPP_MESSAGES = {
   seminarSupport: 'Hi! I just registered for the NEET Guidance Seminar and need help.',
   careerSeminar:
     'Hi! I attended the School-Career Seminar. I want to know more about NEET coaching.',
+
+  // City-specific messages with center info
+  cityFaridabad:
+    "Hi! I'm from Faridabad. I want to visit your Sector 17 center for NEET Biology coaching. Please share batch timings and demo class schedule.",
+  cityGurugram:
+    "Hi! I'm from Gurugram. I want to visit your Sector 51 center (M2K Corporate Park) for NEET Biology classes. Please share batch details.",
+  citySouthDelhi:
+    "Hi! I'm from South Delhi. I want to visit your South Extension center for NEET Biology coaching. Please share batch timings.",
+  cityRohini:
+    "Hi! I'm from Rohini/North Delhi. I want to visit your DC Chowk center for NEET Biology classes. Please share demo schedule.",
+  cityNoida:
+    "Hi! I'm from Noida. I want to join your online NEET Biology classes. Please share batch timings and demo class schedule.",
+  cityGhaziabad:
+    "Hi! I'm from Ghaziabad. I want to join your online NEET Biology classes. Please share batch details and fees.",
+
+  // Course-specific messages for broader offerings
+  olympiad: 'Hi! I want to enroll for Biology Olympiad (NBO/IBO) preparation. What courses do you offer?',
+  boardBiology: 'Hi! I need Board Biology / CBSE Biology coaching. Please share course details.',
+  foundation: 'Hi! I want Foundation Biology coaching for Class 9/10. What batches are available?',
+  mcqPractice: 'Hi! I want to access your MCQ Practice tool for NEET Biology preparation.',
 } as const
 
 // Page-to-message mapping for automatic context detection
@@ -293,6 +313,15 @@ export const PAGE_MESSAGES: Record<string, string> = {
   '/dropper-batch': WHATSAPP_MESSAGES.dropper,
   '/demo-booking': WHATSAPP_MESSAGES.demo,
   '/school-career-seminar': WHATSAPP_MESSAGES.careerSeminar,
+  '/neet-coaching-faridabad': WHATSAPP_MESSAGES.cityFaridabad,
+  '/neet-coaching-gurugram': WHATSAPP_MESSAGES.cityGurugram,
+  '/neet-coaching-south-delhi': WHATSAPP_MESSAGES.citySouthDelhi,
+  '/neet-coaching-rohini': WHATSAPP_MESSAGES.cityRohini,
+  '/neet-coaching-north-delhi': WHATSAPP_MESSAGES.cityRohini,
+  '/neet-coaching-west-delhi': WHATSAPP_MESSAGES.cityRohini,
+  '/neet-coaching-noida': WHATSAPP_MESSAGES.cityNoida,
+  '/neet-coaching-ghaziabad': WHATSAPP_MESSAGES.cityGhaziabad,
+  '/neet-coaching-east-delhi': WHATSAPP_MESSAGES.cityNoida,
 }
 
 // Get context-aware message based on current page with locality personalization
@@ -310,6 +339,21 @@ export function getContextAwareMessage(pathname?: string): string {
     return PAGE_MESSAGES[pathname]
   }
 
+  // City-specific messages mentioning nearest offline center
+  const centerCities: Record<string, string> = {
+    'faridabad': 'I can visit your Faridabad center (Sector 17, Huda Market). ',
+    'gurugram': 'I can visit your Gurugram center (M2K Corporate Park, Sector 51). ',
+    'gurgaon': 'I can visit your Gurugram center (M2K Corporate Park, Sector 51). ',
+    'south-delhi': 'I can visit your South Extension center. ',
+    'south-extension': 'I can visit your South Extension center. ',
+    'rohini': 'I can visit your Rohini center (DC Chowk, Sector 9). ',
+    'north-delhi': 'I can visit your Rohini center (DC Chowk, Sector 9). ',
+    'west-delhi': 'I can visit your Rohini center (DC Chowk, Sector 9). ',
+    'noida': 'I prefer online classes. ',
+    'ghaziabad': 'I prefer online classes. ',
+    'east-delhi': 'I prefer online classes. ',
+  }
+
   // Locality-specific messages for better conversion
   const locality = extractLocalityFromPath(pathname)
   if (locality) {
@@ -318,15 +362,17 @@ export function getContextAwareMessage(pathname?: string): string {
       .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
       .join(' ')
 
+    const centerHint = Object.entries(centerCities).find(([key]) => pathname.includes(key))?.[1] || ''
+
     if (pathname.includes('neet-coaching')) {
-      return `Hi! I'm from ${localityName}. I want to join NEET Biology coaching. What batches are available nearby?`
+      return `Hi! I'm from ${localityName}. ${centerHint}I want to join NEET Biology coaching. What batches and timings are available?`
     }
 
     if (pathname.includes('biology-tuition')) {
-      return `Hi! I'm from ${localityName}. I need Biology tuition for my child. Can you share batch details?`
+      return `Hi! I'm from ${localityName}. ${centerHint}I need Biology tuition for my child. Can you share batch details?`
     }
 
-    return `Hi! I'm from ${localityName} area and interested in NEET Biology coaching. Please share details.`
+    return `Hi! I'm from ${localityName} area. ${centerHint}I'm interested in NEET Biology coaching. Please share details.`
   }
 
   // Check for partial matches

@@ -489,14 +489,15 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   WhatsApp
                 </button>
 
-                {/* Call */}
+                {/* Call with phone number visible */}
                 <a
                   href={getPhoneLink()}
                   onClick={() => handlePhoneClickTracking('sticky-header-desktop-call', 'primary', 100)}
                   className="hidden sm:flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 animate-fadeInUp"
                 >
                   <Phone className="h-4 w-4" />
-                  Call
+                  <span className="hidden lg:inline">88264-44334</span>
+                  <span className="lg:hidden">Call</span>
                 </a>
 
                 {/* Book Demo */}
@@ -645,7 +646,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                     className="flex items-center justify-center gap-2 w-full bg-blue-500 text-white py-3 rounded-xl font-medium"
                   >
                     <Phone className="h-5 w-5" />
-                    Call Now
+                    Call: 88264-44334
                   </a>
                   <a
                     href="/demo-booking"
