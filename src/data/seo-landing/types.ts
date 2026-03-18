@@ -152,6 +152,13 @@ export interface SEOLandingContent {
     link: string
   }>
 
+  // Deep unique content to differentiate thin pages (optional)
+  deepContent?: {
+    paragraphs: Array<{ heading: string; body: string }>
+    comparisonTable?: Array<Record<string, string>>
+    checklist?: Array<{ item: string; explanation: string }>
+  }
+
   // HowTo schema for instructional/guide content (optional)
   howToSteps?: HowToStep[]
   howToMeta?: HowToMeta

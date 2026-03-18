@@ -63,6 +63,73 @@ export function SEOLandingPage({ content }: SEOLandingPageProps) {
       {/* Testimonials */}
       <MiniTestimonials testimonials={content.testimonials} />
 
+      {/* Deep Content Section — unique educational content per page */}
+      {content.deepContent && content.deepContent.paragraphs.length > 0 && (
+        <section className="bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            {content.deepContent.paragraphs.map((para, i) => (
+              <div key={i} className={i > 0 ? 'mt-10' : ''}>
+                <h2 className="mb-4 text-2xl font-bold text-gray-900">{para.heading}</h2>
+                <p className="text-gray-700 leading-relaxed">{para.body}</p>
+              </div>
+            ))}
+
+            {content.deepContent.comparisonTable &&
+              content.deepContent.comparisonTable.length > 0 && (
+                <div className="mt-10 overflow-x-auto">
+                  <table className="w-full border-collapse rounded-lg border border-gray-200">
+                    <thead>
+                      <tr className="bg-gray-50">
+                        {Object.keys(content.deepContent.comparisonTable[0]).map((key) => (
+                          <th
+                            key={key}
+                            className="border border-gray-200 px-4 py-3 text-left text-sm font-semibold text-gray-900"
+                          >
+                            {key}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {content.deepContent.comparisonTable.map((row, i) => (
+                        <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                          {Object.values(row).map((val, j) => (
+                            <td
+                              key={j}
+                              className="border border-gray-200 px-4 py-3 text-sm text-gray-700"
+                            >
+                              {val}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+            {content.deepContent.checklist && content.deepContent.checklist.length > 0 && (
+              <div className="mt-10 rounded-xl bg-green-50 border border-green-200 p-6">
+                <h3 className="mb-4 text-lg font-bold text-green-900">Study Checklist</h3>
+                <ul className="space-y-3">
+                  {content.deepContent.checklist.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-xs font-bold text-white">
+                        {i + 1}
+                      </span>
+                      <div>
+                        <span className="font-medium text-gray-900">{item.item}</span>
+                        <p className="text-sm text-gray-600">{item.explanation}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* Related Blog Posts */}
       {content.relatedBlogPosts && content.relatedBlogPosts.length > 0 && (
         <RelatedBlogPosts posts={content.relatedBlogPosts} />
