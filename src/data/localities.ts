@@ -64,6 +64,14 @@ export interface Locality {
     question: string
     answer: string
   }>
+
+  educationalLandscape?: {
+    neetDemandLevel: 'very-high' | 'high' | 'moderate' | 'growing'
+    demandExplanation: string
+    competitionAnalysis: string
+    parentConcerns: string
+    studyCultureTrend: string
+  }
 }
 
 export const localities: Locality[] = [

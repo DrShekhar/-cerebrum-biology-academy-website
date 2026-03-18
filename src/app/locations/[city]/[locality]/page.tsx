@@ -459,6 +459,47 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
         </div>
       </section>
 
+      {/* Educational Landscape — unique content per locality */}
+      {locality.educationalLandscape && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              NEET Coaching Landscape in {locality.displayName}
+            </h2>
+            <div className="space-y-6">
+              <div className="rounded-xl bg-blue-50 border border-blue-200 p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${
+                    locality.educationalLandscape.neetDemandLevel === 'very-high'
+                      ? 'bg-red-100 text-red-800'
+                      : locality.educationalLandscape.neetDemandLevel === 'high'
+                        ? 'bg-orange-100 text-orange-800'
+                        : locality.educationalLandscape.neetDemandLevel === 'moderate'
+                          ? 'bg-yellow-100 text-yellow-800'
+                          : 'bg-green-100 text-green-800'
+                  }`}>
+                    {locality.educationalLandscape.neetDemandLevel.replace('-', ' ').toUpperCase()} DEMAND
+                  </span>
+                </div>
+                <p className="text-gray-700 leading-relaxed">{locality.educationalLandscape.demandExplanation}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Competition Analysis</h3>
+                <p className="text-gray-700 leading-relaxed">{locality.educationalLandscape.competitionAnalysis}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">What Parents Are Asking</h3>
+                <p className="text-gray-700 leading-relaxed">{locality.educationalLandscape.parentConcerns}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Study Culture Trends</h3>
+                <p className="text-gray-700 leading-relaxed">{locality.educationalLandscape.studyCultureTrend}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQ Section */}
       <LocalityFAQ locality={locality} />
 
