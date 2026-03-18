@@ -27,7 +27,7 @@ import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import { VideoSchema } from '@/components/seo/StructuredData'
-import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/south-delhi-areas'
 
 const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {
@@ -299,7 +299,18 @@ export default function PageContent() {
         </div>
       </section>
 
-      <AreasServedSection cityName="South Delhi" areas={areasForAccordion} />
+      <AreasServedSection
+        cityName="South Delhi"
+        areas={areasForAccordion}
+        hasOfflineCenter={true}
+        centerInfo={{
+          name: 'Cerebrum Biology Academy - South Extension (Flagship)',
+          address: 'D 35, South Extension Part 2, New Delhi 110049',
+          phone: '+918826444334',
+          mapUrl: 'https://maps.google.com/maps?q=South+Extension+Part+2+Delhi',
+          nearbyLandmark: 'South Extension Metro (Violet Line) — 100m',
+        }}
+      />
 
       {/* Premium Localities Spotlight */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-blue-50">

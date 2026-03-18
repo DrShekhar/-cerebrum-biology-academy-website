@@ -31,7 +31,7 @@ import {
   VideoSchema,
 } from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
-import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import {
   getAllNoidaAreaSlugs,
   getNoidaAreaBySlug,

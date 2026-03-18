@@ -13,7 +13,7 @@ import {
   Play,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/west-delhi-areas'
 
 const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {
@@ -282,7 +282,18 @@ export default function NEETCoachingWestDelhiPage() {
         </div>
       </section>
 
-      <AreasServedSection cityName="West Delhi" areas={areasForAccordion} />
+      <AreasServedSection
+        cityName="West Delhi"
+        areas={areasForAccordion}
+        hasOfflineCenter={true}
+        centerInfo={{
+          name: 'Cerebrum Biology Academy - Rohini',
+          address: '211 Vikas Surya Tower, DC Chauk, Sector 9, Rohini, Delhi',
+          phone: '+918826444334',
+          mapUrl: 'https://maps.google.com/maps?q=DC+Chowk+Rohini+Delhi',
+          nearbyLandmark: 'Rohini West Metro (Red Line)',
+        }}
+      />
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white">

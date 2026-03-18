@@ -25,7 +25,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { LocalBusinessSchema, FAQSchema, VideoSchema } from '@/components/seo/StructuredData'
-import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import {
   faridabadAreaDetails,
@@ -299,7 +299,18 @@ export default function NeetCoachingFaridabadPage() {
         </div>
       </section>
 
-      <AreasServedSection cityName="Faridabad" areas={areasForAccordion} />
+      <AreasServedSection
+        cityName="Faridabad"
+        areas={areasForAccordion}
+        hasOfflineCenter={true}
+        centerInfo={{
+          name: 'Cerebrum Biology Academy - Faridabad',
+          address: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17, Faridabad',
+          phone: '+918826444334',
+          mapUrl: 'https://maps.google.com/maps?q=Sector+17+Faridabad',
+          nearbyLandmark: 'Bata Chowk Metro (Violet Line) — 5 min walk',
+        }}
+      />
 
       {/* Greater Faridabad Sectors Section */}
       <section className="py-16 md:py-20 bg-white">

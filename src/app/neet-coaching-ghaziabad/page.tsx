@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { LocalBusinessSchema, FAQSchema } from '@/components/seo/StructuredData'
-import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import {
   getAllGhaziabadAreaSlugs,
   getGhaziabadAreaBySlug,

@@ -37,7 +37,7 @@ import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
-import { AreasServedSection, AreaCardData } from '@/components/seo/AreasServedSection'
+import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
 
 const areasForAccordion: AreaCardData[] = getAllGurugramAreaSlugs().map((slug) => {
@@ -427,7 +427,18 @@ export default function NeetCoachingGurugramPage() {
       {/* Trust Signals — Social Proof */}
       <TrustSignalsBanner variant="compact" />
 
-      <AreasServedSection cityName="Gurugram" areas={areasForAccordion} />
+      <AreasServedSection
+        cityName="Gurugram"
+        areas={areasForAccordion}
+        hasOfflineCenter={true}
+        centerInfo={{
+          name: 'Cerebrum Biology Academy - Gurugram',
+          address: 'Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51, Gurugram',
+          phone: '+918826444334',
+          mapUrl: 'https://maps.google.com/maps?q=M2K+Corporate+Park+Sector+51+Gurugram',
+          nearbyLandmark: 'HUDA City Centre Metro (Yellow Line)',
+        }}
+      />
 
       {/* Why Gurugram Students Choose Us */}
       <section className="py-20 bg-white">
