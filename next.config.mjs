@@ -294,6 +294,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/trial',
+        destination: '/demo-booking',
+        permanent: true,
+      },
+      {
+        source: '/courses/intensive-neet-biology',
+        destination: '/courses',
+        permanent: true,
+      },
+      {
         source: '/courses/neet-foundation',
         destination: '/courses/foundation',
         permanent: true,
@@ -402,6 +412,16 @@ const nextConfig = {
       },
 
       // Biology tuition location redirects (pages don't exist yet)
+      {
+        source: '/biology-tuition-south-delhi/:area*',
+        destination: '/biology-tutor-south-delhi',
+        permanent: true,
+      },
+      {
+        source: '/biology-tuition-south-delhi',
+        destination: '/biology-tutor-south-delhi',
+        permanent: true,
+      },
       {
         source: '/biology-tuition-gurgaon/:area*',
         destination: '/neet-coaching-gurugram',
@@ -807,8 +827,37 @@ const nextConfig = {
         destination: '/neet-coaching-gurugram',
         permanent: true,
       },
-      // REMOVED: '/neet-coaching-gurgaon-sector-:num' was destroying 5 real pages
-      // (sector-57, sector-62, sector-67, sector-69, sector-70)
+      // Specific gurgaon sector redirects (NOT wildcard — sector-57/62/67/69/70 have real pages)
+      {
+        source: '/neet-coaching-gurgaon-sector-45',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-gurgaon-sector-49',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-gurgaon-sector-51',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-gurgaon-sector-56',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-gurgaon-sector-61',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-gurgaon-sector-82',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
       {
         source: '/neet-coaching-rohini-sector-:num',
         destination: '/neet-coaching-rohini',

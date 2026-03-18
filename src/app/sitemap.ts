@@ -65,9 +65,39 @@ const wildcardPrefixes = allRedirectSources
   .filter((s) => s.includes(':'))
   .map((s) => s.replace(/\/:[^/]+\*?$/, ''))
 
+// Inline redirect patterns from next.config.mjs that aren't in seo-redirects.mjs
+const inlineRedirectPatterns: RegExp[] = [
+  /^\/biology-tuition-gurgaon(\/|$)/,
+  /^\/biology-tuition-south-delhi(\/|$)/,
+  /^\/biology-topics\/[^/]+$/,
+  /^\/biology-classes-gurgaon-sector-\d+$/,
+  /^\/biology-classes-rohini-sector-\d+$/,
+  /^\/biology-classes-noida-sector-\d+$/,
+  /^\/biology-classes-laxmi-nagar(\/|$)/,
+  /^\/biology-classes-manesar(\/|$)/,
+  /^\/biology-classes-model-town(\/|$)/,
+  /^\/biology-classes-preet-vihar(\/|$)/,
+  /^\/neet-coaching-rohini-sector-\d+$/,
+  /^\/neet-coaching-gurgaon-sector-(4[359]|49|51|56|61|82)$/,
+  /^\/biology-tutor-pitampura$/,
+  /^\/biology-tutor-laxmi-nagar$/,
+  /^\/biology-tutor-delhi$/,
+  /^\/biology-tutor-greater-noida$/,
+  /^\/biology-tutor-gurgaon$/,
+  /^\/biology-tutor-west-delhi$/,
+  /^\/neet-biology-tutor-class-11$/,
+  /^\/neet-biology-tutor-class-12$/,
+  /^\/neet-biology-tutor-droppers$/,
+  /^\/laxmi-nagar$/,
+  /^\/demo$/,
+  /^\/ai-education-demo$/,
+  /^\/support\/demo$/,
+]
+
 function isRedirectedPath(path: string): boolean {
   if (exactRedirects.has(path)) return true
-  return wildcardPrefixes.some((prefix) => path.startsWith(prefix + '/'))
+  if (wildcardPrefixes.some((prefix) => path.startsWith(prefix + '/'))) return true
+  return inlineRedirectPatterns.some((pattern) => pattern.test(path))
 }
 
 /**
@@ -179,12 +209,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily' as const,
       priority: 1.0,
     },
-    {
-      url: `${baseUrl}/ai-education-demo`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
+    // REMOVED: /ai-education-demo — blocked by middleware in production (302 → /)
     {
       url: `${baseUrl}/courses`,
       lastModified: lastUpdated,
@@ -1286,49 +1311,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly' as const,
       priority: 0.3,
     },
-    // Biology Topics Pages - High SEO value
+    // Biology Topics Hub - sub-pages redirect via /biology-topics/:topic pattern
     {
       url: `${baseUrl}/biology-topics`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/biology-topics/biotechnology`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-topics/cell-biology`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-topics/ecology-environment`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-topics/genetics-evolution`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-topics/human-physiology`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-topics/plant-physiology`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    },
+    // REMOVED: /biology-topics/{biotechnology,cell-biology,ecology-environment,genetics-evolution,human-physiology,plant-physiology}
+    // — these redirect to /biology-topics via next.config.mjs wildcard
     // Ghaziabad SEO Landing Pages (area sub-pages now dynamic)
     {
       url: `${baseUrl}/neet-coaching-ghaziabad`,
@@ -1706,110 +1697,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
-    // Biology Tuition South Delhi - Hub Page
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
-    },
-    // Biology Tuition Area Pages
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/hauz-khas`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/kalu-sarai`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/greater-kailash`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/defence-colony`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/vasant-vihar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/rk-puram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/sarojini-nagar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/lodhi-colony`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/saket`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/malviya-nagar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/green-park`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/cr-park`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/munirka`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/lajpat-nagar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/kalkaji`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/biology-tuition-south-delhi/east-of-kailash`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
+    // REMOVED: /biology-tuition-south-delhi + 16 area sub-pages
+    // — no page.tsx exists, added redirect /biology-tuition-south-delhi/:area* → /biology-tutor-south-delhi
     // Biology Tutor SEO Pages - High Traffic Keywords
     {
       url: `${baseUrl}/biology-tutor`,
@@ -2509,12 +2398,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.94,
     },
     // Critical Conversion & Feature Pages
-    {
-      url: `${baseUrl}/demo`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
-    },
+    // REMOVED: /demo — blocked by middleware in production (302 → /)
     {
       url: `${baseUrl}/help`,
       lastModified: lastUpdated,
@@ -2990,12 +2874,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
-    {
-      url: `${baseUrl}/support/demo`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
+    // REMOVED: /support/demo — blocked by middleware in production (302 → /)
     {
       url: `${baseUrl}/support/fees`,
       lastModified: lastUpdated,
@@ -4324,48 +4203,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-43`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-45`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-49`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-51`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-56`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-61`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gurgaon-sector-82`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
+    // REMOVED: /neet-coaching-gurgaon-sector-{43,45,49,51,56,61,82}
+    // — no page exists for "gurgaon" spelling; real pages use /neet-coaching-gurugram/[area]
+    // Added redirect /neet-coaching-gurgaon-sector-:num → /neet-coaching-gurugram
     {
       url: `${baseUrl}/neet-coaching-hauz-khas`,
       lastModified: lastUpdated,
