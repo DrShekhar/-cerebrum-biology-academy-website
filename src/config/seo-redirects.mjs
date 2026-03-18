@@ -52,7 +52,11 @@ export const seoPageConsolidationRedirects = [
     destination: '/neet-coaching-gurugram',
     permanent: true,
   },
-  { source: '/neet-coaching-dlf-gurgaon', destination: '/neet-coaching-gurugram/dlf-phase-1', permanent: true },
+  {
+    source: '/neet-coaching-dlf-gurgaon',
+    destination: '/neet-coaching-gurugram/dlf-phase-1',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-golf-course-road-gurgaon',
     destination: '/neet-coaching-gurugram',
@@ -747,7 +751,11 @@ export const localAreaPageRedirects = [
   { source: '/biology-tutor-greater-noida', destination: '/neet-coaching-noida', permanent: true },
 
   // --- Rohini hub ---
-  { source: '/neet-biology-coaching-rohini-sector-1', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/neet-biology-coaching-rohini-sector-1',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
   {
     source: '/biology-tuition-rohini-sector-3',
     destination: '/neet-coaching-rohini',
@@ -758,7 +766,11 @@ export const localAreaPageRedirects = [
     destination: '/neet-coaching-rohini',
     permanent: true,
   },
-  { source: '/neet-classes-rohini-sector-7', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/neet-classes-rohini-sector-7',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-rohini-sector-7',
     destination: '/neet-coaching-rohini',
@@ -774,7 +786,11 @@ export const localAreaPageRedirects = [
     destination: '/neet-coaching-rohini',
     permanent: true,
   },
-  { source: '/biology-coaching-rohini-sector-11', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/biology-coaching-rohini-sector-11',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-rohini-sector-11',
     destination: '/neet-coaching-rohini',
@@ -785,15 +801,31 @@ export const localAreaPageRedirects = [
     destination: '/neet-coaching-rohini',
     permanent: true,
   },
-  { source: '/neet-coaching-rohini-sector-14', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/biology-teacher-rohini-sector-16', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/neet-coaching-rohini-sector-14',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-teacher-rohini-sector-16',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-rohini-sector-16',
     destination: '/neet-coaching-rohini',
     permanent: true,
   },
-  { source: '/neet-biology-rohini-sector-22', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/biology-classes-rohini-sector-24', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/neet-biology-rohini-sector-22',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rohini-sector-24',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-rohini-sector-24',
     destination: '/neet-coaching-rohini',
@@ -813,7 +845,11 @@ export const localAreaPageRedirects = [
   },
 
   // --- South Delhi hub ---
-  { source: '/neet-coaching-saket-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-saket-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-greater-kailash-delhi',
     destination: '/neet-coaching-south-delhi',
@@ -908,25 +944,53 @@ export const localAreaPageRedirects = [
 
   // --- Dwarka hub ---
   { source: '/neet-coaching-dwarka-delhi', destination: '/neet-coaching-dwarka', permanent: true },
-  { source: '/neet-coaching-dwarka-sector-6', destination: '/neet-coaching-dwarka', permanent: true },
+  {
+    source: '/neet-coaching-dwarka-sector-6',
+    destination: '/neet-coaching-dwarka',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-dwarka-sector-7',
     destination: '/neet-coaching-dwarka',
     permanent: true,
   },
-  { source: '/neet-coaching-dwarka-sector-10', destination: '/neet-coaching-dwarka', permanent: true },
-  { source: '/neet-coaching-dwarka-sector-12', destination: '/neet-coaching-dwarka', permanent: true },
+  {
+    source: '/neet-coaching-dwarka-sector-10',
+    destination: '/neet-coaching-dwarka',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dwarka-sector-12',
+    destination: '/neet-coaching-dwarka',
+    permanent: true,
+  },
   {
     source: '/neet-coaching-dwarka-sector-19',
     destination: '/neet-coaching-dwarka',
     permanent: true,
   },
-  { source: '/neet-coaching-dwarka-sector-22', destination: '/neet-coaching-dwarka', permanent: true },
-  { source: '/neet-coaching-dwarka-sector-4', destination: '/neet-coaching-dwarka', permanent: true },
-  { source: '/neet-coaching-dwarka-sector-21', destination: '/neet-coaching-dwarka', permanent: true },
+  {
+    source: '/neet-coaching-dwarka-sector-22',
+    destination: '/neet-coaching-dwarka',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dwarka-sector-4',
+    destination: '/neet-coaching-dwarka',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dwarka-sector-21',
+    destination: '/neet-coaching-dwarka',
+    permanent: true,
+  },
 
   // --- Bangalore hub ---
-  { source: '/neet-coaching-whitefield-bangalore', destination: '/neet-coaching-bangalore', permanent: true },
+  {
+    source: '/neet-coaching-whitefield-bangalore',
+    destination: '/neet-coaching-bangalore',
+    permanent: true,
+  },
   {
     source: '/biology-coaching-electronic-city-bangalore',
     destination: '/neet-coaching-bangalore',
@@ -949,14 +1013,30 @@ export const localAreaPageRedirects = [
   },
 
   // --- Noida expansion ---
-  { source: '/neet-coaching-gaur-city-noida', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/neet-coaching-gaur-city-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 
   // --- Ghaziabad expansion ---
-  { source: '/neet-coaching-indirapuram', destination: '/neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/neet-coaching-indirapuram',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // --- Punjab/Chandigarh ---
-  { source: '/neet-coaching-chandigarh-sector-34', destination: '/neet-coaching-chandigarh', permanent: true },
-  { source: '/neet-coaching-chandigarh-sector-17', destination: '/neet-coaching-chandigarh', permanent: true },
+  {
+    source: '/neet-coaching-chandigarh-sector-34',
+    destination: '/neet-coaching-chandigarh',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-chandigarh-sector-17',
+    destination: '/neet-coaching-chandigarh',
+    permanent: true,
+  },
   { source: '/neet-coaching-mohali-punjab', destination: '/neet-coaching-mohali', permanent: true },
   {
     source: '/neet-coaching-panchkula-haryana',
@@ -993,6 +1073,19 @@ export const localAreaPageRedirects = [
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const gsc404CleanupRedirects = [
   // --- /cities/ phantom routes (route doesn't exist) ---
+  // Specific international city redirects MUST come before the catch-all
+  { source: '/cities/neet-coaching-london-uk', destination: '/international/uk', permanent: true },
+  {
+    source: '/cities/neet-coaching-melbourne-australia',
+    destination: '/international/australia',
+    permanent: true,
+  },
+  {
+    source: '/cities/neet-coaching-sydney-australia',
+    destination: '/international/australia',
+    permanent: true,
+  },
+  // Catch-all for remaining /cities/ routes (AFTER specific ones above)
   { source: '/cities/:path*', destination: '/neet-coaching', permanent: true },
 
   // --- State/region pages (no dedicated pages exist) ---
@@ -1302,14 +1395,13 @@ export const gsc404CleanupRedirects = [
 
   // School-specific coaching pages
 
-  // Standalone pages
-  { source: '/courses/intensive-neet-biology', destination: '/courses', permanent: true },
+  // Standalone pages (MOVED /courses/intensive-neet-biology to next.config.mjs inline redirects)
   { source: '/portal', destination: '/sign-in', permanent: true },
 
   // More resources sub-pages
 
-  // --- Sitemap variants ---
-  { source: '/sitemap', destination: '/sitemap.xml', permanent: true },
+  // REMOVED: /sitemap → /sitemap.xml — Next.js generates sitemap.xml from sitemap.ts,
+  // and /sitemap resolves to the same route, creating a redirect loop
 
   // --- Policy page variants ---
   { source: '/privacy', destination: '/privacy-policy', permanent: true },
@@ -2110,17 +2202,7 @@ export const gsc404CleanupBatch3Redirects = [
     destination: '/international',
     permanent: true,
   },
-  { source: '/cities/neet-coaching-london-uk', destination: '/international/uk', permanent: true },
-  {
-    source: '/cities/neet-coaching-melbourne-australia',
-    destination: '/international/australia',
-    permanent: true,
-  },
-  {
-    source: '/cities/neet-coaching-sydney-australia',
-    destination: '/international/australia',
-    permanent: true,
-  },
+  // MOVED: /cities/neet-coaching-{london,melbourne,sydney} to gsc404CleanupRedirects (before catch-all)
   { source: '/cbo-preparation/', destination: '/biology-olympiad-coaching', permanent: true },
   {
     source: '/german-biology-olympiad/',
@@ -2192,34 +2274,106 @@ export const cannibalizationConsolidationRedirects = [
   // ============================================
 
   // Faridabad (4 redirects)
-  { source: '/top-5-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/top-10-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/affordable-neet-coaching-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
+  {
+    source: '/top-5-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/top-10-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // Ghaziabad (3 redirects)
-  { source: '/top-10-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
-  { source: '/affordable-neet-coaching-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/top-10-neet-coaching-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // Gurugram (4 redirects)
-  { source: '/top-5-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/top-10-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/affordable-neet-coaching-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
+  {
+    source: '/top-5-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/top-10-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
 
   // Greater Noida (3 redirects)
-  { source: '/top-10-neet-coaching-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/affordable-neet-coaching-greater-noida', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/top-10-neet-coaching-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 
   // Noida (3 redirects)
-  { source: '/top-10-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/which-neet-coaching-is-best-in-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/affordable-neet-coaching-noida', destination: '/best-neet-coaching-noida', permanent: true },
+  {
+    source: '/top-10-neet-coaching-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/which-neet-coaching-is-best-in-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/affordable-neet-coaching-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
 
   // Delhi — no best-neet-coaching-delhi page, redirect to root
-  { source: '/affordable-neet-coaching-delhi', destination: '/best-neet-coaching', permanent: true },
+  {
+    source: '/affordable-neet-coaching-delhi',
+    destination: '/best-neet-coaching',
+    permanent: true,
+  },
 
   // ============================================
   // Biology tuition → tutor consolidation
@@ -2227,15 +2381,47 @@ export const cannibalizationConsolidationRedirects = [
   // ============================================
   { source: '/biology-tuition', destination: '/biology-tutor', permanent: true },
   { source: '/biology-tuition-noida', destination: '/biology-tutor-noida', permanent: true },
-  { source: '/biology-tuition-ghaziabad', destination: '/biology-tutor-ghaziabad', permanent: true },
-  { source: '/biology-tuition-faridabad', destination: '/biology-tutor-faridabad', permanent: true },
-  { source: '/biology-tuition-south-delhi', destination: '/biology-tutor-south-delhi', permanent: true },
+  {
+    source: '/biology-tuition-ghaziabad',
+    destination: '/biology-tutor-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-faridabad',
+    destination: '/biology-tutor-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-south-delhi',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
   { source: '/biology-tuition-near-me', destination: '/biology-tutors-near-me', permanent: true },
-  { source: '/biology-tuition-class-11', destination: '/biology-tutor-class-11-cbse', permanent: true },
-  { source: '/biology-tuition-class-12', destination: '/biology-tutor-class-12-cbse', permanent: true },
-  { source: '/biology-tuition-class-9-10', destination: '/biology-tutor-class-9-cbse', permanent: true },
-  { source: '/biology-tuition-class-11-noida', destination: '/biology-tutor-class-11-cbse', permanent: true },
-  { source: '/biology-tuition-class-12-noida', destination: '/biology-tutor-class-12-cbse', permanent: true },
+  {
+    source: '/biology-tuition-class-11',
+    destination: '/biology-tutor-class-11-cbse',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-class-12',
+    destination: '/biology-tutor-class-12-cbse',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-class-9-10',
+    destination: '/biology-tutor-class-9-cbse',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-class-11-noida',
+    destination: '/biology-tutor-class-11-cbse',
+    permanent: true,
+  },
+  {
+    source: '/biology-tuition-class-12-noida',
+    destination: '/biology-tutor-class-12-cbse',
+    permanent: true,
+  },
   { source: '/biology-tuition-surat', destination: '/biology-tutor', permanent: true },
 ]
 
@@ -2249,23 +2435,79 @@ export const areaConsolidationRedirects = [
   { source: '/neet-coaching-near-metro/:station', destination: '/all-locations', permanent: true },
 
   // Thin biology-coaching location pages → parent city hub
-  { source: '/biology-coaching-vasant-kunj', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-defence-colony', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-coaching-vasant-kunj',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-defence-colony',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/biology-coaching-dwarka', destination: '/neet-coaching-west-delhi', permanent: true },
-  { source: '/biology-coaching-greater-kailash', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-coaching-model-town', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/biology-coaching-panchsheel', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-coaching-greater-kailash',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-hauz-khas',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-model-town',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-coaching-panchsheel',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
 
   // Thin best-biology-tuition area pages → biology tutor south delhi
-  { source: '/best-biology-tuition-malviya-nagar', destination: '/biology-tutor-south-delhi', permanent: true },
-  { source: '/best-biology-tuition-rk-puram', destination: '/biology-tutor-south-delhi', permanent: true },
-  { source: '/best-biology-tuition-vasant-vihar', destination: '/biology-tutor-south-delhi', permanent: true },
-  { source: '/best-biology-tuition-cr-park', destination: '/biology-tutor-south-delhi', permanent: true },
-  { source: '/best-biology-tuition-greater-kailash', destination: '/biology-tutor-south-delhi', permanent: true },
-  { source: '/best-biology-tuition-hauz-khas', destination: '/biology-tutor-south-delhi', permanent: true },
-  { source: '/best-biology-tuition-kalkaji', destination: '/biology-tutor-south-delhi', permanent: true },
-  { source: '/best-biology-tuition-lajpat-nagar', destination: '/biology-tutor-south-delhi', permanent: true },
+  {
+    source: '/best-biology-tuition-malviya-nagar',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tuition-rk-puram',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tuition-vasant-vihar',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tuition-cr-park',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tuition-greater-kailash',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tuition-hauz-khas',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tuition-kalkaji',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tuition-lajpat-nagar',
+    destination: '/biology-tutor-south-delhi',
+    permanent: true,
+  },
 ]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
@@ -2274,35 +2516,111 @@ export const localPageConsolidationBatch2 = [
   // biology-classes-* → canonical neet-coaching page (22 redirects)
   // Stops cannibalization with biology-tutor-* and neet-coaching-* pages
   // ============================================
-  { source: '/biology-classes-cr-park', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-classes-cr-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/biology-classes-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-classes-east-delhi', destination: '/neet-coaching-east-delhi', permanent: true },
-  { source: '/biology-classes-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/biology-classes-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/biology-classes-greater-kailash', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-classes-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/biology-classes-green-park', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-classes-east-delhi',
+    destination: '/neet-coaching-east-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-greater-kailash',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-green-park',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/biology-classes-gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/biology-classes-hauz-khas', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-classes-kalkaji', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-classes-lajpat-nagar', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-classes-malviya-nagar', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-classes-hauz-khas',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-kalkaji',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-lajpat-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-malviya-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/biology-classes-near-me', destination: '/biology-tutor', permanent: true },
   { source: '/biology-classes-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/biology-classes-pitampura', destination: '/neet-coaching-north-delhi', permanent: true },
-  { source: '/biology-classes-rk-puram', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-classes-pitampura',
+    destination: '/neet-coaching-north-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-rk-puram',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
   { source: '/biology-classes-rohini', destination: '/neet-coaching-rohini', permanent: true },
   { source: '/biology-classes-saket', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-classes-south-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-classes-vasant-kunj', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/biology-classes-vasant-vihar', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/biology-classes-south-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-vasant-kunj',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/biology-classes-vasant-vihar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
 
   // ============================================
   // Remaining micro-area pages cannibalizing parent city hubs
   // ============================================
-  { source: '/neet-coaching-lajpat-nagar', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-cr-park-delhi', destination: '/neet-coaching-south-delhi', permanent: true },
-  { source: '/neet-coaching-hauz-khas-metro', destination: '/neet-coaching-south-delhi', permanent: true },
+  {
+    source: '/neet-coaching-lajpat-nagar',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-cr-park-delhi',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-hauz-khas-metro',
+    destination: '/neet-coaching-south-delhi',
+    permanent: true,
+  },
 ]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
@@ -2315,126 +2633,422 @@ export const gurugramConsolidationRedirects = [
   // ============================================
   // 1B. Standalone area pages → hub or area sub-pages (15 redirects)
   // ============================================
-  { source: '/neet-coaching-gurgaon-sector-62', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-gurgaon-sector-67', destination: '/neet-coaching-gurugram/sector-67', permanent: true },
-  { source: '/neet-coaching-gurgaon-sector-69', destination: '/neet-coaching-gurugram/sector-69', permanent: true },
-  { source: '/neet-coaching-gurgaon-sector-70', destination: '/neet-coaching-gurugram/sector-70', permanent: true },
-  { source: '/neet-coaching-cyber-city-gurugram', destination: '/neet-coaching-gurugram/cyber-city', permanent: true },
-  { source: '/neet-coaching-iffco-chowk-gurugram', destination: '/neet-coaching-gurugram/iffco-chowk', permanent: true },
-  { source: '/neet-coaching-mg-road-gurugram', destination: '/neet-coaching-gurugram/mg-road', permanent: true },
-  { source: '/neet-coaching-pataudi-road-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-south-city-gurugram', destination: '/neet-coaching-gurugram/south-city-1', permanent: true },
-  { source: '/neet-coaching-huda-city-centre-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-dlf-phase-1-gurugram', destination: '/neet-coaching-gurugram/dlf-phase-1', permanent: true },
-  { source: '/neet-coaching-sushant-lok-gurugram', destination: '/neet-coaching-gurugram/sushant-lok', permanent: true },
-  { source: '/neet-coaching-nirvana-country-gurugram', destination: '/neet-coaching-gurugram/nirvana-country', permanent: true },
-  { source: '/neet-coaching-bhondsi-gurgaon', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-imt-manesar-gurgaon', destination: '/neet-coaching-gurugram/manesar', permanent: true },
+  {
+    source: '/neet-coaching-gurgaon-sector-62',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurgaon-sector-67',
+    destination: '/neet-coaching-gurugram/sector-67',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurgaon-sector-69',
+    destination: '/neet-coaching-gurugram/sector-69',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gurgaon-sector-70',
+    destination: '/neet-coaching-gurugram/sector-70',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-cyber-city-gurugram',
+    destination: '/neet-coaching-gurugram/cyber-city',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-iffco-chowk-gurugram',
+    destination: '/neet-coaching-gurugram/iffco-chowk',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-mg-road-gurugram',
+    destination: '/neet-coaching-gurugram/mg-road',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-pataudi-road-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-south-city-gurugram',
+    destination: '/neet-coaching-gurugram/south-city-1',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-huda-city-centre-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dlf-phase-1-gurugram',
+    destination: '/neet-coaching-gurugram/dlf-phase-1',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sushant-lok-gurugram',
+    destination: '/neet-coaching-gurugram/sushant-lok',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-nirvana-country-gurugram',
+    destination: '/neet-coaching-gurugram/nirvana-country',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-bhondsi-gurgaon',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-imt-manesar-gurgaon',
+    destination: '/neet-coaching-gurugram/manesar',
+    permanent: true,
+  },
 
   // ============================================
   // 1C. Alternative/comparison pages → best page (8 redirects)
   // ============================================
-  { source: '/aakash-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/allen-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/fiitjee-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/narayana-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/physics-wallah-alternative-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/which-is-better-aakash-or-allen-gurugram', destination: '/best-neet-coaching-gurugram', permanent: true },
-  { source: '/complement-aakash-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/complement-allen-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/aakash-alternative-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/allen-alternative-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/fiitjee-alternative-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/narayana-alternative-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/physics-wallah-alternative-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/which-is-better-aakash-or-allen-gurugram',
+    destination: '/best-neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/complement-aakash-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/complement-allen-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
 
   // ============================================
   // 1D. Course/batch pages → hub (11 redirects)
   // ============================================
-  { source: '/1-year-neet-course-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/2-year-neet-course-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-crash-course-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-weekend-batch-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-evening-batch-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-revision-batch-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-dropper-batch-2025-26-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-foundation-class-9-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-foundation-class-10-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/one-year-dropper-course-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/online-neet-classes-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/1-year-neet-course-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/2-year-neet-course-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-crash-course-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-weekend-batch-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-evening-batch-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-revision-batch-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-dropper-batch-2025-26-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-9-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-10-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/one-year-dropper-course-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/online-neet-classes-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
 
   // ============================================
   // 1E. School-specific pages → hub (11 redirects)
   // ============================================
-  { source: '/neet-coaching-apeejay-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-bal-bharati-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-dps-international-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-hillwoods-academy-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-kr-mangalam-world-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-paras-world-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-pathways-world-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-presidium-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-vega-school-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-amity-gurgaon-students', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-dps-gurgaon-students', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/neet-coaching-apeejay-school-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-bal-bharati-school-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dps-international-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-hillwoods-academy-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-kr-mangalam-world-school-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-paras-world-school-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-pathways-world-school-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-presidium-school-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-vega-school-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-amity-gurgaon-students',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dps-gurgaon-students',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
 
   // ============================================
   // 1F. FAQ/question pages → hub (8 redirects)
   // ============================================
-  { source: '/can-i-crack-neet-without-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/is-coaching-necessary-for-neet-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/when-to-start-neet-preparation-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/best-time-to-join-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-vs-self-study-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/parents-guide-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-coaching-near-me-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/6-month-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/can-i-crack-neet-without-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/is-coaching-necessary-for-neet-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/when-to-start-neet-preparation-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/best-time-to-join-neet-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-vs-self-study-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/parents-guide-neet-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-near-me-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/6-month-neet-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
 
   // ============================================
   // 1G. Fee duplicate → canonical fee page (2 redirects)
   // ============================================
-  { source: '/neet-coaching-fees-gurugram', destination: '/neet-coaching-fee-gurugram', permanent: true },
-  { source: '/how-much-fees-for-neet-coaching-gurugram', destination: '/neet-coaching-fee-gurugram', permanent: true },
+  {
+    source: '/neet-coaching-fees-gurugram',
+    destination: '/neet-coaching-fee-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/how-much-fees-for-neet-coaching-gurugram',
+    destination: '/neet-coaching-fee-gurugram',
+    permanent: true,
+  },
 
   // ============================================
   // 1H. Result/specialty pages → hub (10 redirects)
   // ============================================
   { source: '/neet-result-2024-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
   { source: '/neet-result-2025-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-success-rate-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/neet-success-rate-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
   { source: '/neet-scholarship-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-biology-chapter-weightage-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-biology-faculty-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/free-neet-demo-class-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-topper-interview-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/neet-study-material-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/neet-biology-chapter-weightage-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-biology-faculty-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/free-neet-demo-class-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-topper-interview-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/neet-study-material-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
   { source: '/neet-test-series-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
 
   // ============================================
   // 1I. Board/olympiad pages → hub (6 redirects)
   // ============================================
-  { source: '/cbse-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/icse-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/haryana-board-neet-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
-  { source: '/biology-olympiad-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
+  {
+    source: '/cbse-neet-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/icse-neet-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/haryana-board-neet-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/biology-olympiad-coaching-gurugram',
+    destination: '/neet-coaching-gurugram',
+    permanent: true,
+  },
   { source: '/nseb-coaching-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
   { source: '/ibo-preparation-gurugram', destination: '/neet-coaching-gurugram', permanent: true },
 
   // ============================================
   // 1J. Biology class-specific → biology-tutor (2 redirects)
   // ============================================
-  { source: '/class-9-biology-tuition-gurugram', destination: '/biology-tutor-gurugram', permanent: true },
-  { source: '/class-10-biology-coaching-gurugram', destination: '/biology-tutor-gurugram', permanent: true },
+  {
+    source: '/class-9-biology-tuition-gurugram',
+    destination: '/biology-tutor-gurugram',
+    permanent: true,
+  },
+  {
+    source: '/class-10-biology-coaching-gurugram',
+    destination: '/biology-tutor-gurugram',
+    permanent: true,
+  },
 ]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const noidaConsolidationRedirects = [
   // 2A. Alternatives → /best-neet-coaching-noida (6)
-  { source: '/aakash-alternative-noida', destination: '/best-neet-coaching-noida', permanent: true },
+  {
+    source: '/aakash-alternative-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
   { source: '/allen-alternative-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/fiitjee-alternative-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/narayana-alternative-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/physics-wallah-alternative-noida', destination: '/best-neet-coaching-noida', permanent: true },
-  { source: '/which-is-better-aakash-or-allen-noida', destination: '/best-neet-coaching-noida', permanent: true },
+  {
+    source: '/fiitjee-alternative-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/narayana-alternative-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/physics-wallah-alternative-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/which-is-better-aakash-or-allen-noida',
+    destination: '/best-neet-coaching-noida',
+    permanent: true,
+  },
 
   // 2B. Complements → /neet-coaching-noida (2)
-  { source: '/complement-aakash-coaching-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/complement-allen-coaching-noida', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/complement-aakash-coaching-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/complement-allen-coaching-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 
   // 2C. Course/batch → /neet-coaching-noida (9)
   { source: '/1-year-neet-course-noida', destination: '/neet-coaching-noida', permanent: true },
@@ -2443,22 +3057,66 @@ export const noidaConsolidationRedirects = [
   { source: '/neet-weekend-batch-noida', destination: '/neet-coaching-noida', permanent: true },
   { source: '/neet-evening-batch-noida', destination: '/neet-coaching-noida', permanent: true },
   { source: '/neet-dropper-batch-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-foundation-class-9-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-foundation-class-10-noida', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/neet-foundation-class-9-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-10-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
   { source: '/online-neet-classes-noida', destination: '/neet-coaching-noida', permanent: true },
 
   // 2D. School-specific → /neet-coaching-noida (8)
-  { source: '/neet-coaching-dps-noida-students', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-kv-noida-students', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-amity-noida-students', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-ryan-noida-students', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-pathways-noida-students', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-somerville-noida-students', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-lotus-valley-noida-students', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-jaypee-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/neet-coaching-dps-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-kv-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-amity-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-ryan-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-pathways-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-somerville-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-lotus-valley-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-jaypee-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 
   // 2E. FAQ/specialty → /neet-coaching-noida (10)
-  { source: '/is-coaching-necessary-for-neet-noida', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/is-coaching-necessary-for-neet-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
   { source: '/how-to-prepare-neet-noida', destination: '/neet-coaching-noida', permanent: true },
   { source: '/neet-coaching-noida-vs-kota', destination: '/neet-coaching-noida', permanent: true },
   { source: '/neet-coaching-near-me-noida', destination: '/neet-coaching-noida', permanent: true },
@@ -2467,7 +3125,11 @@ export const noidaConsolidationRedirects = [
   { source: '/free-neet-demo-class-noida', destination: '/neet-coaching-noida', permanent: true },
   { source: '/neet-toppers-noida', destination: '/neet-coaching-noida', permanent: true },
   { source: '/online-biology-tuition-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sector-62-noida', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/neet-coaching-sector-62-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 
   // 2F. Board/academic → /neet-coaching-noida (3)
   { source: '/cbse-biology-coaching-noida', destination: '/neet-coaching-noida', permanent: true },
@@ -2479,133 +3141,473 @@ export const noidaConsolidationRedirects = [
   { source: '/biology-class-12-noida', destination: '/biology-tutor-noida', permanent: true },
   { source: '/best-biology-tutor-noida', destination: '/biology-tutor-noida', permanent: true },
   { source: '/home-biology-tutor-noida', destination: '/biology-tutor-noida', permanent: true },
-  { source: '/biology-tutor-noida-extension', destination: '/biology-tutor-noida', permanent: true },
-  { source: '/biology-tutor-noida-sector-18', destination: '/biology-tutor-noida', permanent: true },
+  {
+    source: '/biology-tutor-noida-extension',
+    destination: '/biology-tutor-noida',
+    permanent: true,
+  },
+  {
+    source: '/biology-tutor-noida-sector-18',
+    destination: '/biology-tutor-noida',
+    permanent: true,
+  },
 
   // 2H. Standalone area → area sub-pages (3)
   { source: '/neet-coaching-omicron-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-ats-pristine-noida', destination: '/neet-coaching-noida/ats-pristine', permanent: true },
-  { source: '/neet-coaching-jaypee-greens-noida', destination: '/neet-coaching-noida/jaypee-greens', permanent: true },
+  {
+    source: '/neet-coaching-ats-pristine-noida',
+    destination: '/neet-coaching-noida/ats-pristine',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-jaypee-greens-noida',
+    destination: '/neet-coaching-noida/jaypee-greens',
+    permanent: true,
+  },
 
   // 2I. Greater Noida collapse → /neet-coaching-noida (14)
-  { source: '/best-neet-coaching-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-near-me-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-crash-course-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-dropper-batch-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-foundation-class-9-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-foundation-class-10-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-test-series-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-scholarship-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/free-neet-demo-class-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/aakash-alternative-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-fees-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/online-neet-coaching-greater-noida', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-dps-greater-noida-students', destination: '/neet-coaching-noida', permanent: true },
-  { source: '/neet-coaching-sharda-greater-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  {
+    source: '/best-neet-coaching-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-near-me-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-crash-course-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-dropper-batch-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-9-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-10-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-test-series-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-scholarship-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/free-neet-demo-class-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/aakash-alternative-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-fees-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/online-neet-coaching-greater-noida',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dps-greater-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-sharda-greater-noida-students',
+    destination: '/neet-coaching-noida',
+    permanent: true,
+  },
 ]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const faridabadConsolidationRedirects = [
   // 3A. Alternatives → /best-neet-coaching-faridabad (8)
-  { source: '/aakash-alternative-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/allen-alternative-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/fiitjee-alternative-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/narayana-alternative-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/physics-wallah-alternative-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/velocity-alternative-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/yvs-alternative-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
-  { source: '/which-is-better-aakash-or-allen-faridabad', destination: '/best-neet-coaching-faridabad', permanent: true },
+  {
+    source: '/aakash-alternative-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/allen-alternative-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/fiitjee-alternative-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/narayana-alternative-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/physics-wallah-alternative-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/velocity-alternative-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/yvs-alternative-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/which-is-better-aakash-or-allen-faridabad',
+    destination: '/best-neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // 3B. Complements → /neet-coaching-faridabad (2)
-  { source: '/complement-aakash-coaching-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/complement-allen-coaching-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  {
+    source: '/complement-aakash-coaching-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/complement-allen-coaching-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // 3C. Course/batch → /neet-coaching-faridabad (9)
-  { source: '/1-year-neet-course-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/2-year-neet-course-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-crash-course-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-weekend-batch-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-evening-batch-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-revision-batch-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-dropper-batch-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-foundation-class-9-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-foundation-class-10-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  {
+    source: '/1-year-neet-course-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/2-year-neet-course-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-crash-course-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-weekend-batch-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-evening-batch-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-revision-batch-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-dropper-batch-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-9-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-10-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // 3D. School-specific → /neet-coaching-faridabad (10)
-  { source: '/neet-coaching-modern-school-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-gd-goenka-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-apeejay-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-aggarwal-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-dav-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-greenfields-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-mvn-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-mris-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-manav-rachna-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-dps-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  {
+    source: '/neet-coaching-modern-school-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gd-goenka-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-apeejay-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-aggarwal-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dav-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-greenfields-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-mvn-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-mris-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-manav-rachna-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dps-faridabad-students',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // 3E. FAQ/specialty → /neet-coaching-faridabad (5)
-  { source: '/is-coaching-necessary-for-neet-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-coaching-near-me-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-scholarship-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/neet-test-series-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/free-neet-demo-class-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  {
+    source: '/is-coaching-necessary-for-neet-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-near-me-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-scholarship-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-test-series-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/free-neet-demo-class-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // 3F. Online → /neet-coaching-faridabad (2)
-  { source: '/online-neet-coaching-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
-  { source: '/online-neet-classes-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  {
+    source: '/online-neet-coaching-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
+  {
+    source: '/online-neet-classes-faridabad',
+    destination: '/neet-coaching-faridabad',
+    permanent: true,
+  },
 
   // 3G. Fee duplicate → /neet-coaching-fees-faridabad (1)
-  { source: '/how-much-fees-for-neet-coaching-faridabad', destination: '/neet-coaching-fees-faridabad', permanent: true },
+  {
+    source: '/how-much-fees-for-neet-coaching-faridabad',
+    destination: '/neet-coaching-fees-faridabad',
+    permanent: true,
+  },
 ]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const ghaziabadConsolidationRedirects = [
   // 4A. Alternatives → /best-neet-coaching-ghaziabad (2)
-  { source: '/aakash-alternative-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
-  { source: '/allen-alternative-ghaziabad', destination: '/best-neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/aakash-alternative-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/allen-alternative-ghaziabad',
+    destination: '/best-neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // 4B. Course/batch → /neet-coaching-ghaziabad (7)
-  { source: '/1-year-neet-course-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/2-year-neet-course-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-crash-course-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-weekend-batch-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-evening-batch-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-dropper-batch-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-test-series-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/1-year-neet-course-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/2-year-neet-course-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-crash-course-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-weekend-batch-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-evening-batch-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-dropper-batch-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-test-series-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // 4C. Foundation → /neet-coaching-ghaziabad (2)
-  { source: '/neet-foundation-class-9-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-foundation-class-10-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/neet-foundation-class-9-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-10-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // 4D. School-specific → /neet-coaching-ghaziabad (3)
-  { source: '/neet-coaching-cambridge-ghaziabad-students', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-coaching-gd-goenka-ghaziabad-students', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-coaching-presidium-ghaziabad-students', destination: '/neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/neet-coaching-cambridge-ghaziabad-students',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gd-goenka-ghaziabad-students',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-presidium-ghaziabad-students',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
 
   // 4E. FAQ/specialty → /neet-coaching-ghaziabad (6)
-  { source: '/is-coaching-necessary-for-neet-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-coaching-near-me-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-coaching-lal-kuan-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/neet-scholarship-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/free-neet-demo-class-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
-  { source: '/online-neet-coaching-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  {
+    source: '/is-coaching-necessary-for-neet-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-near-me-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-lal-kuan-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/neet-scholarship-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/free-neet-demo-class-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
+  {
+    source: '/online-neet-coaching-ghaziabad',
+    destination: '/neet-coaching-ghaziabad',
+    permanent: true,
+  },
 ]
 
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const rohiniConsolidationRedirects = [
   // School-specific → /neet-coaching-rohini (5)
-  { source: '/neet-coaching-bal-bharati-rohini-students', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-dps-rohini-students', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-gd-goenka-rohini-students', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-heritage-school-rohini-students', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-coaching-venkateshwar-rohini-students', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/neet-coaching-bal-bharati-rohini-students',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-dps-rohini-students',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-gd-goenka-rohini-students',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-heritage-school-rohini-students',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-venkateshwar-rohini-students',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
 
   // Course/class → /neet-coaching-rohini (2)
-  { source: '/neet-foundation-class-9-rohini', destination: '/neet-coaching-rohini', permanent: true },
-  { source: '/neet-crash-course-rohini-2026', destination: '/neet-coaching-rohini', permanent: true },
+  {
+    source: '/neet-foundation-class-9-rohini',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
+  {
+    source: '/neet-crash-course-rohini-2026',
+    destination: '/neet-coaching-rohini',
+    permanent: true,
+  },
 
   // Biology class-specific → /biology-tutor-rohini (3)
-  { source: '/class-9-biology-tuition-rohini', destination: '/biology-tutor-rohini', permanent: true },
-  { source: '/class-10-biology-tuition-rohini', destination: '/biology-tutor-rohini', permanent: true },
-  { source: '/12th-board-biology-coaching-rohini', destination: '/biology-tutor-rohini', permanent: true },
+  {
+    source: '/class-9-biology-tuition-rohini',
+    destination: '/biology-tutor-rohini',
+    permanent: true,
+  },
+  {
+    source: '/class-10-biology-tuition-rohini',
+    destination: '/biology-tutor-rohini',
+    permanent: true,
+  },
+  {
+    source: '/12th-board-biology-coaching-rohini',
+    destination: '/biology-tutor-rohini',
+    permanent: true,
+  },
 ]

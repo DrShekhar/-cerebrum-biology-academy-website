@@ -153,7 +153,9 @@ const publicRoutes = [
 function isPublicRoute(pathname: string): boolean {
   return publicRoutes.some((route) => {
     if (route === '/') return pathname === '/'
-    return pathname === route || pathname.startsWith(route + '/') || pathname.startsWith(route + '-')
+    return (
+      pathname === route || pathname.startsWith(route + '/') || pathname.startsWith(route + '-')
+    )
   })
 }
 
@@ -205,7 +207,9 @@ interface FirebaseSessionPayload {
 
 // Try to get user from our custom JWT token
 // Uses jose library for Edge runtime compatibility
-async function getUserFromToken(req: NextRequest): Promise<{ userId: string; role: string } | null> {
+async function getUserFromToken(
+  req: NextRequest
+): Promise<{ userId: string; role: string } | null> {
   try {
     const sessionToken =
       req.cookies.get('__Secure-authjs.session-token')?.value ||
@@ -533,10 +537,13 @@ export default async function middleware(req: NextRequest) {
   if (hasSearchQuery || hasFilterQuery) {
     response.headers.set('X-Robots-Tag', 'noindex, follow')
   }
-  // Noindex for demo-booking and enrollment query params (transactional pages)
+  // Noindex for transactional/filtered pages with query params
   if (
     req.nextUrl.search &&
-    (pathname.startsWith('/demo-booking') || pathname.startsWith('/enrollments'))
+    (pathname.startsWith('/demo-booking') ||
+      pathname.startsWith('/enrollments') ||
+      pathname.startsWith('/neet-biology-mcq') ||
+      pathname.startsWith('/thank-you'))
   ) {
     response.headers.set('X-Robots-Tag', 'noindex, follow')
   }
