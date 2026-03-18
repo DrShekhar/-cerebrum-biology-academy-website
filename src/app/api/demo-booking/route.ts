@@ -950,8 +950,8 @@ function generateDemoConfirmationEmail(bookingData: any): string {
 }
 
 // Admin notification phone number - configured via env var
-const ADMIN_PHONE = process.env.ADMIN_PHONE_NUMBER || '9311946297'
-const SUPPORT_PHONE = process.env.SUPPORT_PHONE_NUMBER || '+91 93119 46297'
+const ADMIN_PHONE = process.env.ADMIN_PHONE_NUMBER || '8826444334'
+const SUPPORT_PHONE = process.env.SUPPORT_PHONE_NUMBER || '+91 88264 44334'
 
 // Notify admin when a demo booking fails - so no lead is lost!
 async function notifyAdminBookingFailure(leadData: {

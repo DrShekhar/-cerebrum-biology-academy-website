@@ -131,7 +131,7 @@ async function notifyAdmin(data: z.infer<typeof enquirySchema>, phone: string) {
       },
       body: JSON.stringify({
         countryCode: '+91',
-        phoneNumber: '9311946297',
+        phoneNumber: process.env.ADMIN_PHONE_NUMBER || '8826444334',
         type: 'Text',
         data: {
           message: adminMessage,

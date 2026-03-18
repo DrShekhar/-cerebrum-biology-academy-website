@@ -88,6 +88,14 @@
       "schedule": "30 4 * * *"
     },
     {
+      "path": "/api/cron/followup-queue",
+      "schedule": "*/10 * * * *"
+    },
+    {
+      "path": "/api/cron/followup-triggers",
+      "schedule": "15,45 * * * *"
+    },
+    {
       "path": "/api/cron/seo-reminder",
       "schedule": "0 4 * * 5"
     },

@@ -349,7 +349,7 @@ async function sendRescheduleNotifications(booking: any, oldDate: string, oldTim
     }
 
     // 3. Notify admin team via WhatsApp
-    const adminPhone = process.env.ADMIN_PHONE_NUMBER || '9311946297'
+    const adminPhone = process.env.ADMIN_PHONE_NUMBER || '8826444334'
     if (process.env.INTERAKT_API_KEY) {
       notificationPromises.push(
         fetch('https://api.interakt.ai/v1/public/message/', {

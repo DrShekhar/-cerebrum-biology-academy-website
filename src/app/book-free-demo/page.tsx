@@ -183,10 +183,10 @@ export default function BookFreeDemoPage() {
             <div className="space-y-3">
               {[
                 'AIIMS Faculty-led teaching',
-                '94% NEET selection rate',
-                'Small batch sizes (max 30 students)',
+                '98% NEET selection rate (680+ students)',
+                'Small batch sizes (max 15 students)',
                 'Daily doubt-clearing sessions',
-                '6 centers across Delhi NCR',
+                '4 centers: South Ext, Rohini, Gurugram, Faridabad',
                 'Online + Offline hybrid option',
               ].map((text) => (
                 <div key={text} className="flex items-center gap-3">
