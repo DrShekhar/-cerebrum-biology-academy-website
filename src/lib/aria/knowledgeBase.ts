@@ -293,7 +293,7 @@ This includes:
 
 If this works for your budget, I can:
 1. **Collect your details** and have our counselor call you to discuss specifics
-2. **Share our contact numbers** so you can call us directly: +91 8826444334 or +91 9311946297
+2. **Share our contact number** so you can call us directly: +91 8826444334
 
 Which would you prefer?`,
     followUp: [
@@ -394,7 +394,7 @@ export const FAQ_DATA = {
 
 export const CONTACT_POINTS = {
   phone: '+91 8826444334',
-  phone2: '+91 9311946297',
+  phone2: '+91 8826444334',
   whatsapp: '+91 8826444334',
   email: 'admissions@cerebrumbiologyacademy.com',
   centers: [

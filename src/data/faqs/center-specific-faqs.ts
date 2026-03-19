@@ -46,7 +46,7 @@ export const centerSpecificFAQs: CenterFAQ[] = [
       },
       {
         question: 'What is the fee structure at Cerebrum Rohini Center?',
-        answer: 'For Class 11 & 12 students: ₹72,200 per year. For Foundation courses: ₹57,000 per year. Flexible payment options are available. Scholarships are offered based on merit and need. Contact us at +91-9311946297 for more details on fees, discounts, and payment plans.',
+        answer: 'For Class 11 & 12 students: ₹72,200 per year. For Foundation courses: ₹57,000 per year. Flexible payment options are available. Scholarships are offered based on merit and need. Contact us at +91-8826444334 for more details on fees, discounts, and payment plans.',
         keywords: ['fees', 'cost', 'payment', 'scholarship', 'charges']
       },
       {
@@ -94,7 +94,7 @@ export const centerSpecificFAQs: CenterFAQ[] = [
       },
       {
         question: 'What is the fee structure at Cerebrum Gurugram Center?',
-        answer: 'Annual fees for Class 11 & 12 students: ₹72,200. Foundation course fees: ₹57,000 per year. We offer flexible payment plans, scholarships for meritorious students, and special discounts for early enrollment. Contact us at +91-9311946297 for personalized fee information and available offers.',
+        answer: 'Annual fees for Class 11 & 12 students: ₹72,200. Foundation course fees: ₹57,000 per year. We offer flexible payment plans, scholarships for meritorious students, and special discounts for early enrollment. Contact us at +91-8826444334 for personalized fee information and available offers.',
         keywords: ['fees', 'cost', 'charges', 'payment', 'scholarship']
       },
       {
@@ -142,7 +142,7 @@ export const centerSpecificFAQs: CenterFAQ[] = [
       },
       {
         question: 'What are the fee details for South Extension Center?',
-        answer: 'Class 11 & 12 Coaching: ₹72,200 per year. Foundation courses: ₹57,000 per year. Multiple payment options available including installment plans. Scholarship programs for merit-based and need-based cases. For personalized quotes and current offers, contact us at +91-9311946297.',
+        answer: 'Class 11 & 12 Coaching: ₹72,200 per year. Foundation courses: ₹57,000 per year. Multiple payment options available including installment plans. Scholarship programs for merit-based and need-based cases. For personalized quotes and current offers, contact us at +91-8826444334.',
         keywords: ['fees', 'cost', 'charges', 'payment', 'scholarship']
       },
       {
@@ -190,7 +190,7 @@ export const centerSpecificFAQs: CenterFAQ[] = [
       },
       {
         question: 'What is the fee structure at Faridabad Center?',
-        answer: 'Annual fees for Class 11 & 12 students: ₹72,200. Foundation course fees: ₹57,000 per year. Flexible payment plans available. Scholarships offered for meritorious students. For detailed fee information and available discounts, contact us at +91-9311946297.',
+        answer: 'Annual fees for Class 11 & 12 students: ₹72,200. Foundation course fees: ₹57,000 per year. Flexible payment plans available. Scholarships offered for meritorious students. For detailed fee information and available discounts, contact us at +91-8826444334.',
         keywords: ['fees', 'cost', 'charges', 'payment', 'scholarship']
       },
       {
@@ -238,7 +238,7 @@ export const centerSpecificFAQs: CenterFAQ[] = [
       },
       {
         question: 'What is the fee structure at Green Park Center?',
-        answer: 'Class 11 & 12 Coaching: ₹72,200 per year. Foundation courses: ₹57,000 per year. Flexible payment options including installment plans. Merit-based scholarships available. For personalized fee consultation and current offers, contact us at +91-9311946297.',
+        answer: 'Class 11 & 12 Coaching: ₹72,200 per year. Foundation courses: ₹57,000 per year. Flexible payment options including installment plans. Merit-based scholarships available. For personalized fee consultation and current offers, contact us at +91-8826444334.',
         keywords: ['fees', 'cost', 'charges', 'payment', 'scholarship']
       },
       {
@@ -286,7 +286,7 @@ export const centerSpecificFAQs: CenterFAQ[] = [
       },
       {
         question: 'What is the fee structure at Noida Center?',
-        answer: 'Annual fees for Class 11 & 12 students: ₹72,200. Foundation course fees: ₹57,000 per year. Flexible payment plans available to suit student needs. Scholarships for meritorious students. For detailed fee information and applicable discounts, contact us at +91-9311946297.',
+        answer: 'Annual fees for Class 11 & 12 students: ₹72,200. Foundation course fees: ₹57,000 per year. Flexible payment plans available to suit student needs. Scholarships for meritorious students. For detailed fee information and applicable discounts, contact us at +91-8826444334.',
         keywords: ['fees', 'cost', 'charges', 'payment', 'scholarship']
       },
       {
@@ -338,6 +338,6 @@ export function getAllCenterFAQsForSchema() {
  */
 export const faqContactInfo = {
   phone1: '+91-8826444334',
-  phone2: '+91-9311946297',
+  phone2: '+91-8826444334',
   website: 'cerebrumbiologyacademy.com'
 };
