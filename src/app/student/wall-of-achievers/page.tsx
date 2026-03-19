@@ -157,10 +157,10 @@ export default function StudentWallOfAchieversPage() {
   const categories = ['topper', 'improvement', 'dropper', 'repeater']
 
   const stats = [
-    { label: 'NEET Toppers', value: '67+', icon: Trophy, color: 'text-yellow-500' },
-    { label: 'Avg Score', value: '650+', icon: TrendingUp, color: 'text-green-500' },
-    { label: 'AIIMS Selections', value: '45+', icon: GraduationCap, color: 'text-blue-500' },
-    { label: 'Years of Excellence', value: '10+', icon: Award, color: 'text-purple-500' },
+    { label: 'Top Rankers', value: '180+', icon: Trophy, color: 'text-yellow-500' },
+    { label: 'Avg Biology Score', value: '330+/360', icon: TrendingUp, color: 'text-green-500' },
+    { label: 'AIIMS Selections', value: '67+', icon: GraduationCap, color: 'text-blue-500' },
+    { label: 'Years of Excellence', value: '12+', icon: Award, color: 'text-purple-500' },
   ]
 
   return (
