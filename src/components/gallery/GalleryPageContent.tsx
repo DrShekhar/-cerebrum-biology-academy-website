@@ -5,6 +5,7 @@ import { GalleryGrid } from './GalleryGrid'
 import { GalleryFilters, GalleryCategory } from './GalleryFilters'
 import { GalleryItemData } from './GalleryCard'
 import { Loader2 } from 'lucide-react'
+import { fallbackGalleryItems } from '@/data/galleryFallback'
 
 interface GalleryApiResponse {
   success: boolean
@@ -62,8 +63,28 @@ export function GalleryPageContent() {
         const response = await fetch(`/api/gallery?${params.toString()}`)
         const data: GalleryApiResponse = await response.json()
 
-        if (!data.success || !data.data) {
-          throw new Error(data.error || 'Failed to fetch gallery')
+        if (!data.success || !data.data || data.data.items.length === 0) {
+          if (!append) {
+            const filtered = category
+              ? fallbackGalleryItems.filter((i) => i.category === category)
+              : fallbackGalleryItems
+            setItems(filtered)
+            setTotalCount(filtered.length)
+            setHasMore(false)
+            const catCounts = Object.entries(
+              fallbackGalleryItems.reduce((acc, i) => {
+                acc[i.category] = (acc[i.category] || 0) + 1
+                return acc
+              }, {} as Record<string, number>)
+            ).map(([cat, count]) => ({
+              value: cat,
+              label: CATEGORY_CONFIG[cat]?.label || cat,
+              icon: CATEGORY_CONFIG[cat]?.icon || '📷',
+              count,
+            }))
+            setCategories(catCounts)
+          }
+          return
         }
 
         const { items: newItems, pagination, categories: categoryCounts } = data.data
