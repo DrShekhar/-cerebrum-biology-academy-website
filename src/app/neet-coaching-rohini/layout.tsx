@@ -3,11 +3,11 @@ import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Rohini | Biology Classes Sector 9, DC Chowk | Cerebrum Academy',
+  title: 'NEET Biology Coaching Rohini | 98% Success | Visit Our Center | Free Demo',
   description:
-    'Best NEET coaching in Rohini - Sector 9, DC Chowk, Sector 3, Sector 7, Rohini West. AIIMS faculty, 98% success rate, small batches. Online & offline classes. Book free demo!',
+    'NEET Biology coaching in Rohini by AIIMS Alumnus Dr. Shekhar Singh. Visit DC Chowk center. 98% success, 67+ AIIMS selections. Board Biology, Olympiad, Foundation. Call 88264-44334.',
   keywords:
-    'NEET coaching Rohini, biology tuition Rohini, NEET classes Rohini Sector 9, biology coaching DC Chowk, NEET coaching Rohini West, medical coaching Rohini, NEET preparation Rohini, biology classes near me Rohini',
+    'NEET coaching Rohini, biology tuition Rohini, NEET classes Rohini Sector 9, biology coaching DC Chowk, NEET coaching Rohini West, medical coaching Rohini, NEET preparation Rohini, Board Biology, CBSE Biology, Biology Olympiad, NBO, IBO, Class 11 Biology Rohini, Class 12 Biology Rohini, Foundation Biology',
   openGraph: {
     title: 'Best NEET Coaching in Rohini',
     description:

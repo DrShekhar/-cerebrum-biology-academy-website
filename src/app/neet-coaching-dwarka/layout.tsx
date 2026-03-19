@@ -3,11 +3,11 @@ import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Dwarka | Sector 4, 6, 10, 12, 21, 22 | Cerebrum Academy',
+  title: 'NEET Biology Coaching Dwarka | 98% Success | Online + Offline | Free Demo',
   description:
-    'Top NEET biology coaching in Dwarka, New Delhi. 98% success rate, AIIMS faculty. Best coaching in Sector 4, 6, 10, 12, 21, 22, Palam, Uttam Nagar. 1,500+ students. Book free demo!',
+    'NEET Biology coaching for Dwarka students by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections. Board Biology, Olympiad, Foundation. Call 88264-44334. Book FREE demo!',
   keywords:
-    'NEET coaching Dwarka, NEET coaching Dwarka Sector 6, NEET coaching Dwarka Sector 10, NEET coaching Dwarka Sector 12, biology coaching Dwarka, NEET tuition Dwarka, NEET coaching Palam, NEET coaching Uttam Nagar, NEET coaching Janakpuri, best NEET coaching Dwarka, online NEET coaching Dwarka, medical coaching Dwarka',
+    'NEET coaching Dwarka, NEET coaching Dwarka Sector 6, NEET coaching Dwarka Sector 10, NEET coaching Dwarka Sector 12, biology coaching Dwarka, NEET tuition Dwarka, NEET coaching Palam, Board Biology, CBSE Biology, Biology Olympiad, NBO, IBO, Class 11 Biology Dwarka, Class 12 Biology Dwarka, Foundation Biology',
   openGraph: {
     title: 'Best NEET Coaching in Dwarka | All Sectors Covered',
     description:

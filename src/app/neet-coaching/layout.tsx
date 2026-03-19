@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { faqs } from '@/data/neetCoachingData'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching 2026 | Best NEET Biology, Physics, Chemistry Classes',
+  title: 'NEET Coaching 2026 | 98% Success | AIIMS Faculty | Free Demo',
   description:
-    'Top NEET coaching in Delhi-NCR for Class 11, 12 & Droppers. AIIMS & IITians faculties, small batches (10-18 students), 98% success rate. Physics, Chemistry & Biology. Online & offline classes at South Extension, Rohini, Gurugram, Faridabad.',
+    'India\'s top NEET coaching by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers: South Extension, Rohini, Gurugram, Faridabad + Online. Call 88264-44334. Book FREE demo!',
   keywords: [
     'NEET coaching',
     'NEET 2026 coaching',

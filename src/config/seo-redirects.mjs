@@ -2606,11 +2606,7 @@ export const localPageConsolidationBatch2 = [
   // ============================================
   // Remaining micro-area pages cannibalizing parent city hubs
   // ============================================
-  {
-    source: '/neet-coaching-lajpat-nagar',
-    destination: '/neet-coaching-south-delhi',
-    permanent: true,
-  },
+  // /neet-coaching-lajpat-nagar duplicate removed — already in seoPageConsolidationRedirects
   {
     source: '/neet-coaching-cr-park-delhi',
     destination: '/neet-coaching-south-delhi',
