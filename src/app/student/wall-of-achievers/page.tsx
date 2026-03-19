@@ -1,524 +1,279 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { cn } from '@/lib/utils'
+import { Trophy, Star, TrendingUp, Award, GraduationCap, ChevronRight } from 'lucide-react'
+import { successStoriesData } from '@/data/successStories'
 
-// ============================================
-// TYPES
-// ============================================
+const galleryImages = [
+  '/images/gallery/img-2854.jpg',
+  '/images/gallery/teachers-day-mgr.png',
+  '/images/gallery/shekhar-sir-dean-south-city.png',
+  '/images/gallery/shekhar-sir-welcome-mgr.png',
+  '/images/gallery/untitled-design-7.png',
+  '/images/gallery/untitled-design-8.png',
+  '/images/gallery/untitled-design-11.png',
+  '/images/gallery/untitled-design-16.png',
+  '/images/gallery/untitled-design-17.png',
+  '/images/gallery/warm-welcome-by-mgr-staff.png',
+]
 
-interface Achiever {
-  id: string
-  studentId: string
-  studentName: string
-  achievement: string
-  description: string | null
-  category: string
-  score: number | null
-  rank: number | null
-  badgeUrl: string | null
-  photoUrl: string | null
-  courseId: string | null
-  period: string | null
-  featuredFrom: string | null
-  featuredUntil: string | null
-  viewCount: number
-  nominationCount: number
-  isFeatured: boolean
-  createdAt: string
-}
-
-interface Nomination {
-  id: string
-  achieverId: string
-  nominationType: string
-  reason: string | null
-  isApproved: boolean
-  createdAt: string
-  achiever: {
-    id: string
-    studentName: string
-    achievement: string
-    category: string
-  }
-}
-
-interface Filters {
-  categories: string[]
-  periods: string[]
-}
-
-// ============================================
-// CONFIG
-// ============================================
-
-const categoryConfig: Record<string, { icon: string; color: string; bgColor: string }> = {
-  ACADEMIC: { icon: '📚', color: 'text-blue-700', bgColor: 'bg-blue-100' },
-  SPORTS: { icon: '🏆', color: 'text-green-700', bgColor: 'bg-green-100' },
-  ARTS: { icon: '🎨', color: 'text-purple-700', bgColor: 'bg-purple-100' },
-  SCIENCE: { icon: '🔬', color: 'text-cyan-700', bgColor: 'bg-cyan-100' },
-  LEADERSHIP: { icon: '⭐', color: 'text-yellow-700', bgColor: 'bg-yellow-100' },
-  COMMUNITY: { icon: '🤝', color: 'text-pink-700', bgColor: 'bg-pink-100' },
-  INNOVATION: { icon: '💡', color: 'text-orange-700', bgColor: 'bg-orange-100' },
-  OTHER: { icon: '🏅', color: 'text-gray-700', bgColor: 'bg-gray-100' },
-}
-
-const defaultCategoryConfig = { icon: '🏅', color: 'text-gray-700', bgColor: 'bg-gray-100' }
-
-// ============================================
-// HELPER FUNCTIONS
-// ============================================
-
-function getInitials(name: string): string {
-  return name
-    .split(' ')
-    .map((n) => n[0])
-    .join('')
-    .toUpperCase()
-    .slice(0, 2)
-}
-
-function getRankSuffix(rank: number): string {
-  if (rank % 100 >= 11 && rank % 100 <= 13) return 'th'
-  switch (rank % 10) {
-    case 1:
-      return 'st'
-    case 2:
-      return 'nd'
-    case 3:
-      return 'rd'
-    default:
-      return 'th'
-  }
-}
-
-// ============================================
-// NOMINATION MODAL
-// ============================================
-
-interface NominationModalProps {
-  achiever: Achiever
-  onClose: () => void
-  onNominate: (reason: string) => Promise<void>
-}
-
-function NominationModal({ achiever, onClose, onNominate }: NominationModalProps) {
-  const [reason, setReason] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setIsSubmitting(true)
-    try {
-      await onNominate(reason)
-      onClose()
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-xl max-w-md w-full p-6 shadow-xl">
-        <h3 className="text-lg font-bold text-gray-900 mb-2">Nominate {achiever.studentName}</h3>
-        <p className="text-sm text-gray-600 mb-4">for &quot;{achiever.achievement}&quot;</p>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Why do you think they deserve recognition? (optional)
-            </label>
-            <textarea
-              value={reason}
-              onChange={(e) => setReason(e.target.value)}
-              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              rows={3}
-              placeholder="Share your thoughts..."
-            />
-          </div>
-          <div className="flex gap-3">
-            <button
-              type="button"
-              onClick={onClose}
-              className="flex-1 px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-50"
-              disabled={isSubmitting}
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Submitting...' : '👍 Nominate'}
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  )
-}
-
-// ============================================
-// ACHIEVER CARD (with nomination)
-// ============================================
-
-interface AchieverCardProps {
-  achiever: Achiever
-  hasNominated: boolean
-  onNominate: () => void
-}
-
-function AchieverCard({ achiever, hasNominated, onNominate }: AchieverCardProps) {
-  const config = categoryConfig[achiever.category] || defaultCategoryConfig
-
-  return (
-    <div
-      className={cn(
-        'relative bg-white rounded-lg border p-4 transition-all hover:shadow-md',
-        achiever.isFeatured && 'border-yellow-300 bg-yellow-50/30'
-      )}
-    >
-      {achiever.isFeatured && (
-        <span className="absolute -top-2 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-0.5 rounded-full">
-          ⭐ Featured
-        </span>
-      )}
-
-      <div className="flex items-start gap-3">
-        {/* Photo/Avatar */}
-        <div className="relative flex-shrink-0">
-          {achiever.photoUrl ? (
-            <Image
-              src={achiever.photoUrl}
-              alt={achiever.studentName}
-              width={56}
-              height={56}
-              className="w-14 h-14 rounded-full object-cover border-2 border-gray-200"
-            />
-          ) : (
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-white font-bold border-2 border-gray-200">
-              {getInitials(achiever.studentName)}
-            </div>
-          )}
-          {achiever.rank && achiever.rank <= 3 && (
-            <span className="absolute -top-1 -right-1 text-lg">
-              {achiever.rank === 1 ? '🥇' : achiever.rank === 2 ? '🥈' : '🥉'}
-            </span>
-          )}
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-start justify-between gap-2">
-            <div>
-              <h3 className="font-semibold text-gray-900">{achiever.studentName}</h3>
-              <p className="text-sm text-blue-600 font-medium">{achiever.achievement}</p>
-            </div>
-            <span
-              className={cn(
-                'flex-shrink-0 px-2 py-0.5 rounded-full text-xs font-medium',
-                config.bgColor,
-                config.color
-              )}
-            >
-              {config.icon}
-            </span>
-          </div>
-
-          {achiever.description && (
-            <p className="text-sm text-gray-500 mt-1 line-clamp-2">{achiever.description}</p>
-          )}
-
-          {/* Footer */}
-          <div className="flex items-center justify-between mt-3">
-            <div className="flex items-center gap-3 text-xs text-gray-500">
-              {achiever.rank && (
-                <span className="font-medium">
-                  #{achiever.rank}
-                  <sup>{getRankSuffix(achiever.rank)}</sup>
-                </span>
-              )}
-              {achiever.score !== null && (
-                <span className="font-medium text-green-600">{achiever.score}%</span>
-              )}
-              <span>👍 {achiever.nominationCount}</span>
-            </div>
-
-            <button
-              onClick={onNominate}
-              disabled={hasNominated}
-              className={cn(
-                'px-3 py-1 rounded-full text-xs font-medium transition-all',
-                hasNominated
-                  ? 'bg-green-100 text-green-700 cursor-not-allowed'
-                  : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
-              )}
-            >
-              {hasNominated ? '✓ Nominated' : '👍 Nominate'}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-// ============================================
-// MAIN PAGE COMPONENT
-// ============================================
-
-export default function StudentWallOfAchieversPage() {
-  const [achievers, setAchievers] = useState<Achiever[]>([])
-  const [filters, setFilters] = useState<Filters>({ categories: [], periods: [] })
-  const [myNominations, setMyNominations] = useState<Set<string>>(new Set())
-  const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-  const [selectedPeriod, setSelectedPeriod] = useState<string | null>(null)
-  const [nominatingAchiever, setNominatingAchiever] = useState<Achiever | null>(null)
-  const [successMessage, setSuccessMessage] = useState<string | null>(null)
+function AutoScrollBanner() {
+  const scrollRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    fetchData()
-  }, [selectedCategory, selectedPeriod])
+    const el = scrollRef.current
+    if (!el) return
 
-  async function fetchData() {
-    try {
-      setIsLoading(true)
-      setError(null)
+    let animationId: number
+    let position = 0
+    const speed = 0.5
 
-      // Fetch achievers and nominations in parallel
-      const params = new URLSearchParams()
-      params.set('limit', '50')
-      if (selectedCategory) params.set('category', selectedCategory)
-      if (selectedPeriod) params.set('period', selectedPeriod)
-
-      const [achieversResult, nominationsResult] = await Promise.allSettled([
-        fetch(`/api/wall-of-achievers?${params.toString()}`),
-        fetch('/api/wall-of-achievers/nominate'),
-      ])
-
-      if (achieversResult.status === 'fulfilled') {
-        const achieversData = await achieversResult.value.json()
-        if (achieversData.success) {
-          setAchievers(achieversData.data.achievers)
-          setFilters(achieversData.data.filters)
-        } else {
-          setError(achieversData.error || 'Failed to fetch achievers')
-        }
-      } else {
-        console.error('Achievers fetch failed:', achieversResult.reason)
-        setError('Failed to fetch achievers')
+    function animate() {
+      position += speed
+      if (position >= el!.scrollWidth / 2) {
+        position = 0
       }
-
-      if (nominationsResult.status === 'fulfilled') {
-        const nominationsData = await nominationsResult.value.json()
-        if (nominationsData.success) {
-          const nominatedIds = new Set<string>(
-            nominationsData.data.map((n: Nomination) => n.achieverId)
-          )
-          setMyNominations(nominatedIds)
-        }
-      } else {
-        console.error('Nominations fetch failed:', nominationsResult.reason)
-      }
-    } catch (err) {
-      console.error('Error fetching data:', err)
-      setError('Failed to load data')
-    } finally {
-      setIsLoading(false)
+      el!.scrollLeft = position
+      animationId = requestAnimationFrame(animate)
     }
-  }
 
-  async function handleNominate(reason: string) {
-    if (!nominatingAchiever) return
+    animationId = requestAnimationFrame(animate)
+    return () => cancelAnimationFrame(animationId)
+  }, [])
 
-    try {
-      const response = await fetch('/api/wall-of-achievers/nominate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          achieverId: nominatingAchiever.id,
-          reason,
-        }),
-      })
-
-      const data = await response.json()
-
-      if (data.success) {
-        setMyNominations((prev) => {
-          const newSet = new Set(prev)
-          newSet.add(nominatingAchiever.id)
-          return newSet
-        })
-        setSuccessMessage(`You nominated ${nominatingAchiever.studentName}!`)
-        setTimeout(() => setSuccessMessage(null), 3000)
-
-        // Update nomination count locally
-        setAchievers((prev) =>
-          prev.map((a) =>
-            a.id === nominatingAchiever.id ? { ...a, nominationCount: a.nominationCount + 1 } : a
-          )
-        )
-      } else {
-        setError(data.error || 'Failed to submit nomination')
-        setTimeout(() => setError(null), 3000)
-      }
-    } catch (err) {
-      console.error('Error nominating:', err)
-      setError('Failed to submit nomination')
-      setTimeout(() => setError(null), 3000)
-    }
-  }
-
-  const featuredAchievers = achievers.filter((a) => a.isFeatured)
-  const regularAchievers = achievers.filter((a) => !a.isFeatured)
+  const doubledImages = [...galleryImages, ...galleryImages]
 
   return (
-    <div className="container mx-auto px-4 py-6 max-w-4xl">
-      {/* Header */}
-      <div className="text-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">🏆 Wall of Achievers</h1>
-        <p className="text-sm text-gray-600 mt-1">
-          Celebrate your peers! Nominate students who inspire you.
-        </p>
+    <div className="relative overflow-hidden bg-gray-900">
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-transparent to-gray-900 z-10 pointer-events-none" />
+      <div
+        ref={scrollRef}
+        className="flex gap-3 py-4 overflow-hidden"
+        style={{ scrollBehavior: 'auto' }}
+      >
+        {doubledImages.map((src, i) => (
+          <div key={i} className="flex-shrink-0 w-48 h-32 md:w-64 md:h-40 relative rounded-lg overflow-hidden">
+            <Image
+              src={src}
+              alt={`Cerebrum Academy moment ${(i % galleryImages.length) + 1}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 192px, 256px"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+const categoryIcons: Record<string, { icon: typeof Trophy; color: string; bg: string }> = {
+  topper: { icon: Trophy, color: 'text-yellow-600', bg: 'bg-yellow-50 border-yellow-200' },
+  improvement: { icon: TrendingUp, color: 'text-green-600', bg: 'bg-green-50 border-green-200' },
+  dropper: { icon: Award, color: 'text-blue-600', bg: 'bg-blue-50 border-blue-200' },
+  repeater: { icon: Star, color: 'text-purple-600', bg: 'bg-purple-50 border-purple-200' },
+}
+
+function AchieverCard({ story }: { story: (typeof successStoriesData)[0] }) {
+  const config = categoryIcons[story.category] || categoryIcons.topper
+  const Icon = config.icon
+
+  return (
+    <div className={`rounded-2xl border-2 p-6 transition-all hover:shadow-xl hover:-translate-y-1 ${config.bg}`}>
+      <div className="flex items-start gap-4">
+        <div className="relative flex-shrink-0">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center text-white text-xl font-bold shadow-lg">
+            {story.studentName.split(' ').map((n) => n[0]).join('').slice(0, 2)}
+          </div>
+          {story.rank <= 500 && (
+            <span className="absolute -top-1 -right-1 text-2xl">
+              {story.rank <= 100 ? '🥇' : story.rank <= 300 ? '🥈' : '🥉'}
+            </span>
+          )}
+        </div>
+
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 mb-1">
+            <h3 className="text-lg font-bold text-gray-900">{story.studentName}</h3>
+            {story.featured && (
+              <span className="px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full">STAR</span>
+            )}
+          </div>
+          <p className="text-sm font-semibold text-blue-700 mb-1">{story.college}</p>
+          <p className="text-xs text-gray-500 mb-3">{story.school} | {story.year}</p>
+
+          <div className="grid grid-cols-3 gap-3 mb-3">
+            <div className="text-center p-2 bg-white/70 rounded-xl">
+              <div className="text-lg font-bold text-gray-900">{story.neetScore}</div>
+              <div className="text-xs text-gray-500">NEET Score</div>
+            </div>
+            <div className="text-center p-2 bg-white/70 rounded-xl">
+              <div className="text-lg font-bold text-gray-900">AIR {story.rank}</div>
+              <div className="text-xs text-gray-500">Rank</div>
+            </div>
+            <div className="text-center p-2 bg-white/70 rounded-xl">
+              <div className="text-lg font-bold text-green-600">+{story.improvement}</div>
+              <div className="text-xs text-gray-500">Improvement</div>
+            </div>
+          </div>
+
+          <blockquote className="text-sm text-gray-600 italic border-l-3 border-gray-300 pl-3 line-clamp-2">
+            &ldquo;{story.quote}&rdquo;
+          </blockquote>
+        </div>
       </div>
 
-      {/* Success/Error Messages */}
-      {successMessage && (
-        <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg text-sm text-center">
-          {successMessage}
+      <div className="mt-4 flex items-center justify-between">
+        <div className="flex items-center gap-1.5">
+          <Icon className={`w-4 h-4 ${config.color}`} />
+          <span className={`text-xs font-medium ${config.color} capitalize`}>{story.category}</span>
         </div>
-      )}
-      {error && (
-        <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm text-center">
-          {error}
+        <span className="text-xs text-gray-400">{story.achievement}</span>
+      </div>
+    </div>
+  )
+}
+
+export default function StudentWallOfAchieversPage() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [apiAchievers, setApiAchievers] = useState<any[]>([])
+
+  useEffect(() => {
+    fetch('/api/wall-of-achievers?limit=50')
+      .then((r) => r.json())
+      .then((d) => {
+        if (d.success && d.data?.achievers?.length > 0) {
+          setApiAchievers(d.data.achievers)
+        }
+      })
+      .catch(() => {})
+  }, [])
+
+  const stories = selectedCategory
+    ? successStoriesData.filter((s) => s.category === selectedCategory)
+    : successStoriesData
+
+  const categories = ['topper', 'improvement', 'dropper', 'repeater']
+
+  const stats = [
+    { label: 'NEET Toppers', value: '67+', icon: Trophy, color: 'text-yellow-500' },
+    { label: 'Avg Score', value: '650+', icon: TrendingUp, color: 'text-green-500' },
+    { label: 'AIIMS Selections', value: '45+', icon: GraduationCap, color: 'text-blue-500' },
+    { label: 'Years of Excellence', value: '10+', icon: Award, color: 'text-purple-500' },
+  ]
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Auto-scrolling photo banner */}
+      <AutoScrollBanner />
+
+      {/* Hero */}
+      <section className="relative py-12 md:py-16 bg-gradient-to-b from-gray-900 to-gray-800 text-white -mt-1">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full bg-yellow-500/20 px-4 py-1.5 text-sm font-medium text-yellow-300 mb-4">
+            <Trophy className="w-4 h-4" />
+            Celebrating Excellence
+          </div>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            Wall of <span className="text-yellow-400">Achievers</span>
+          </h1>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
+            Meet the students who turned their NEET dreams into reality with Cerebrum Biology Academy.
+            Every score, every rank — a story of dedication.
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            {stats.map((stat) => (
+              <div key={stat.label} className="bg-white/10 backdrop-blur rounded-2xl p-4 text-center">
+                <stat.icon className={`w-6 h-6 mx-auto mb-2 ${stat.color}`} />
+                <div className="text-2xl font-bold">{stat.value}</div>
+                <div className="text-xs text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
-      )}
+      </section>
 
       {/* Filters */}
-      {(filters.categories.length > 0 || filters.periods.length > 0) && (
-        <div className="mb-6 space-y-3">
-          {filters.categories.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setSelectedCategory(null)}
-                className={cn(
-                  'px-3 py-1.5 rounded-full text-sm font-medium transition-all',
-                  !selectedCategory
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                )}
-              >
-                All
-              </button>
-              {filters.categories.map((cat) => {
-                const config = categoryConfig[cat] || defaultCategoryConfig
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={cn(
-                      'px-3 py-1.5 rounded-full text-sm font-medium transition-all',
-                      selectedCategory === cat
-                        ? 'bg-blue-600 text-white'
-                        : cn(config.bgColor, config.color)
-                    )}
-                  >
-                    {config.icon} {cat}
-                  </button>
-                )
-              })}
-            </div>
-          )}
-
-          {filters.periods.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {filters.periods.map((period) => (
+      <section className="py-8">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-3">
+            <button
+              onClick={() => setSelectedCategory(null)}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                !selectedCategory
+                  ? 'bg-gray-900 text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
+            >
+              All ({successStoriesData.length})
+            </button>
+            {categories.map((cat) => {
+              const config = categoryIcons[cat]
+              const count = successStoriesData.filter((s) => s.category === cat).length
+              if (count === 0) return null
+              return (
                 <button
-                  key={period}
-                  onClick={() => setSelectedPeriod(selectedPeriod === period ? null : period)}
-                  className={cn(
-                    'px-3 py-1 rounded-full text-xs font-medium transition-all',
-                    selectedPeriod === period
-                      ? 'bg-indigo-600 text-white'
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                    selectedCategory === cat
+                      ? 'bg-gray-900 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  )}
+                  }`}
                 >
-                  {period}
+                  <config.icon className="w-4 h-4" />
+                  <span className="capitalize">{cat}s ({count})</span>
                 </button>
-              ))}
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Achiever Cards */}
+      <section className="pb-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-6">
+            {stories.map((story) => (
+              <AchieverCard key={story.id} story={story} />
+            ))}
+          </div>
+
+          {stories.length === 0 && (
+            <div className="text-center py-16 bg-gray-50 rounded-2xl">
+              <Trophy className="w-16 h-16 mx-auto text-gray-300 mb-4" />
+              <p className="text-gray-500 text-lg">No achievers in this category yet</p>
             </div>
           )}
         </div>
-      )}
+      </section>
 
-      {/* Content */}
-      {isLoading ? (
-        <div className="space-y-3">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="h-24 bg-gray-100 rounded-lg animate-pulse" />
-          ))}
+      {/* CTA */}
+      <section className="bg-gradient-to-r from-green-600 to-blue-600 py-12 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Your Name Could Be Here Next</h2>
+          <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
+            Join 680+ students who achieved their NEET dreams with Cerebrum. Start with a free demo class today.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="/book-free-demo"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-white text-green-700 font-bold rounded-xl hover:bg-gray-100 transition shadow-lg"
+            >
+              Book Free Demo
+              <ChevronRight className="w-5 h-5" />
+            </a>
+            <a
+              href="tel:+918826444334"
+              className="inline-flex items-center gap-2 px-8 py-3 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition"
+            >
+              Call: 88264-44334
+            </a>
+          </div>
         </div>
-      ) : achievers.length === 0 ? (
-        <div className="text-center py-12 bg-gray-50 rounded-lg">
-          <span className="text-5xl mb-4 block">🏆</span>
-          <p className="text-gray-500 text-lg">No achievers found</p>
-          <p className="text-gray-400 text-sm mt-1">Achievers will appear here once recognized</p>
-        </div>
-      ) : (
-        <>
-          {/* Featured Section */}
-          {featuredAchievers.length > 0 && (
-            <div className="mb-6">
-              <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-                <span>⭐</span> Featured
-              </h2>
-              <div className="space-y-3">
-                {featuredAchievers.map((achiever) => (
-                  <AchieverCard
-                    key={achiever.id}
-                    achiever={achiever}
-                    hasNominated={myNominations.has(achiever.id)}
-                    onNominate={() => setNominatingAchiever(achiever)}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* All Achievers */}
-          {regularAchievers.length > 0 && (
-            <div>
-              {featuredAchievers.length > 0 && (
-                <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-                  <span>🏅</span> All Achievers
-                </h2>
-              )}
-              <div className="space-y-3">
-                {regularAchievers.map((achiever) => (
-                  <AchieverCard
-                    key={achiever.id}
-                    achiever={achiever}
-                    hasNominated={myNominations.has(achiever.id)}
-                    onNominate={() => setNominatingAchiever(achiever)}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-        </>
-      )}
-
-      {/* Nomination Modal */}
-      {nominatingAchiever && (
-        <NominationModal
-          achiever={nominatingAchiever}
-          onClose={() => setNominatingAchiever(null)}
-          onNominate={handleNominate}
-        />
-      )}
+      </section>
     </div>
   )
 }
