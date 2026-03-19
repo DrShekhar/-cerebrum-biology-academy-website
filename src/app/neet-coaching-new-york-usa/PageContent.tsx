@@ -58,7 +58,7 @@ export function PageContent() {
             NEET Coaching in New York, USA
           </h1>
           <p className="text-xl mb-6 text-blue-100">
-            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh's proven methodology.
+            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh — AIIMS Alumnus, India's Top Biology Teacher, Best Biology Educator Globally.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -80,7 +80,7 @@ export function PageContent() {
       {/* Quick Stats */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-3xl font-bold text-blue-600">98%</div>
               <div className="text-gray-700 mt-2">Success Rate</div>
@@ -92,6 +92,10 @@ export function PageContent() {
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-3xl font-bold text-blue-600">50+</div>
               <div className="text-gray-700 mt-2">Students in AIIMS</div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="text-3xl font-bold text-blue-600">15-20</div>
+              <div className="text-gray-700 mt-2">Students Per Batch</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-3xl font-bold text-blue-600">200,000</div>
@@ -109,7 +113,7 @@ export function PageContent() {
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Expert Mentorship</h3>
               <p className="text-gray-700">
-                Learn directly from Dr. Shekhar C Singh with 20+ years of medical education expertise.
+                Learn directly from Dr. Shekhar C Singh — AIIMS Alumnus, India's Top Biology Teacher for NEET & Olympiads, with 15+ years of medical education expertise.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">

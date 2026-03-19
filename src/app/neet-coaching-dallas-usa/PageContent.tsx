@@ -11,7 +11,7 @@ export default function NEETCoachingPageContent() {
   const faqData = [
     {
       question: 'Why choose Cerebrum Biology Academy for NEET coaching in Dallas?',
-      answer: 'Cerebrum Academy offers 98% success rate with personalized coaching from Dr. Shekhar C Singh. We understand Dallas student needs and provide curriculum-aligned preparation.'
+      answer: 'Cerebrum Academy offers 98% success rate with personalized coaching from Dr. Shekhar C Singh — AIIMS Alumnus, India\'s Top Biology Teacher for NEET & Olympiads, Best Biology Educator Globally, with 15+ years of experience. We understand Dallas student needs and provide curriculum-aligned preparation.'
     },
     {
       question: 'What is the success rate for students in Dallas?',
@@ -86,7 +86,7 @@ export default function NEETCoachingPageContent() {
       {/* Stats Section */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="text-4xl sm:text-5xl font-bold text-blue-600 mb-2">98%</div>
               <p className="text-gray-700 font-semibold">Success Rate</p>
@@ -98,6 +98,10 @@ export default function NEETCoachingPageContent() {
             <div className="text-center">
               <div className="text-4xl sm:text-5xl font-bold text-purple-600 mb-2">15+</div>
               <p className="text-gray-700 font-semibold">Years Experience</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-teal-600 mb-2">15-20</div>
+              <p className="text-gray-700 font-semibold">Students Per Batch</p>
             </div>
             <div className="text-center">
               <div className="text-4xl sm:text-5xl font-bold text-pink-600 mb-2">24/7</div>
@@ -211,7 +215,7 @@ export default function NEETCoachingPageContent() {
             Ready to Excel in NEET?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Contact Dr. Shekhar C Singh today for personalized NEET coaching in Dallas
+            Contact Dr. Shekhar C Singh — AIIMS Alumnus, India's Top Biology Teacher, Best Biology Educator Globally — for personalized NEET coaching in Dallas
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <SmartWhatsAppCTA 

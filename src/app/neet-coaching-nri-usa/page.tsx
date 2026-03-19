@@ -67,7 +67,7 @@ export default function Page() {
             "name": "Is NEET preparation necessary for United States of America students?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, NEET is essential for admission to medical colleges in India. Our specialized coaching helps United States of America students master the NEET curriculum with United States of America-specific study schedules and exam center support."
+              "text": "Yes, NEET is essential for admission to medical colleges in India. Our specialized coaching helps United States of America students master the NEET curriculum with United States of America-specific study schedules and exam registration guidance."
             }
           },
           {
@@ -91,7 +91,7 @@ export default function Page() {
             "name": "Can United States of America students take NEET exam in India?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, we provide guidance for NEET exam registration and center allocation. Our exam centers are in New York, San Francisco."
+              "text": "NEET is conducted in India. We provide complete guidance for exam registration, travel planning, and logistics for NRI students."
             }
           },
           {

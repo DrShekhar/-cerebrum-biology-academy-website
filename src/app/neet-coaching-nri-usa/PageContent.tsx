@@ -22,13 +22,14 @@ export default function PageContent() {
     { label: "Success Rate", value: "98%", icon: "📊" },
     { label: "CBSE Schools", value: "2", icon: "🏫" },
     { label: "Indian Population", value: "5.16M", icon: "👥" },
-    { label: "Exam Centers", value: "2", icon: "📍" },
+    { label: "Countries Served", value: "15+", icon: "🌍" },
+    { label: "Students Per Batch", value: "15-20", icon: "👩‍🎓" },
   ];
 
   const whyChoose = [
     {
       title: "Expert Faculty",
-      description: "Highly qualified NEET biology experts with United States of America experience",
+      description: "Dr. Shekhar C Singh — AIIMS Alumnus, India's Top Biology Teacher for NEET & Olympiads, Best Biology Educator Globally, with 15+ years experience",
       icon: "👨‍🏫",
     },
     {
@@ -52,8 +53,8 @@ export default function PageContent() {
       icon: "🤝",
     },
     {
-      title: "Exam Center Support",
-      description: "Help with registration at New York, San Francisco",
+      title: "Exam Registration & Travel Support",
+      description: "Complete guidance for NEET registration, India travel & exam logistics",
       icon: "📋",
     },
   ];
@@ -104,7 +105,7 @@ export default function PageContent() {
     {
       id: "faq-4",
       question: "Can United States of America students take NEET exam in United States of America?",
-      answer: "NEET exam centers are available in New York, San Francisco. We provide complete guidance for exam registration, admit card collection, and exam day logistics."
+      answer: "NEET is conducted at exam centers across India. We provide complete guidance for NRI students including exam registration, travel planning, accommodation, and exam day logistics."
     },
     {
       id: "faq-5",
@@ -257,7 +258,7 @@ export default function PageContent() {
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">✓</span>
-                <span className="text-gray-700">Exam center registration and logistics</span>
+                <span className="text-gray-700">NEET exam registration guidance & India travel logistics</span>
               </li>
               <li className="flex items-start">
                 <span className="text-blue-600 font-bold mr-3">✓</span>
