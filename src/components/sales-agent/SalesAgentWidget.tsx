@@ -17,7 +17,9 @@ import {
   Loader2,
   Maximize2,
   Minimize2,
+  MessageCircle,
 } from 'lucide-react'
+import { openDesktopWhatsAppModal, buildWhatsAppUrl, isMobileDevice } from '@/lib/whatsapp/tracking'
 
 // Types
 interface Message {
@@ -119,6 +121,7 @@ export default function SalesAgentWidget() {
     'none' | 'name' | 'phone' | 'class' | 'complete'
   >('none')
   const [unreadCount, setUnreadCount] = useState(0)
+  const [showWhatsAppCTA, setShowWhatsAppCTA] = useState(false)
 
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -313,6 +316,13 @@ For personalized guidance, our counselor team can help. In the meantime:
         setLeadCaptureStep('name')
       }
 
+      // After 5+ user messages, suggest WhatsApp handoff
+      const userMsgCount = messages.filter((m) => m.role === 'user').length + 1
+      if (userMsgCount >= 5 && !showWhatsAppCTA && leadCaptureStep !== 'complete') {
+        responseContent += `\n\n---\n\n💬 Would you like to connect with a human counselor on WhatsApp? They can answer your specific questions and help with enrollment!`
+        setShowWhatsAppCTA(true)
+      }
+
       const assistantMessage: Message = {
         id: `assistant-${Date.now()}`,
         role: 'assistant',
@@ -387,11 +397,16 @@ For personalized guidance, our counselor team can help. In the meantime:
           const studentClass = classMap[input.toLowerCase()] || input
           setLeadData((prev) => ({ ...prev, class: studentClass }))
 
-          responseContent = `Excellent! 🎯\n\n**Thank you, ${leadData.name}!** Here's what happens next:\n\n✅ Our counselor will call you within 2 hours\n✅ You'll receive course details on WhatsApp\n✅ We'll send you a FREE demo class link\n\nIn the meantime, feel free to ask me anything about NEET preparation!`
+          responseContent = `Excellent! 🎯\n\n**Thank you, ${leadData.name}!** Here's what happens next:\n\n✅ Our counselor will call you within 2 hours\n✅ You'll receive course details on WhatsApp\n✅ We'll send you a FREE demo class link\n\n👇 **Connect with our counselor directly on WhatsApp for instant response!**`
           nextStep = 'complete'
 
           // Submit lead to API (fire and forget)
           submitLead({ ...leadData, class: studentClass })
+
+          // Show WhatsApp connect CTA after a short delay
+          setTimeout(() => {
+            setShowWhatsAppCTA(true)
+          }, 1000)
           break
 
         default:
@@ -413,9 +428,38 @@ For personalized guidance, our counselor team can help. In the meantime:
     [leadCaptureStep, leadData]
   )
 
-  // Submit lead to API
+  // Build conversation summary for WhatsApp
+  const getConversationSummary = useCallback(() => {
+    const userMsgs = messages.filter((m) => m.role === 'user').map((m) => m.content)
+    const summary = userMsgs.slice(-5).join(' | ')
+    return summary.length > 200 ? summary.substring(0, 200) + '...' : summary
+  }, [messages])
+
+  // Connect user to WhatsApp counselor
+  const handleConnectWhatsApp = useCallback(() => {
+    const name = leadData.name || 'Student'
+    const phone = leadData.phone || ''
+    const cls = leadData.class || ''
+    const summary = getConversationSummary()
+
+    const message = `Hi! I'm ${name}${cls ? ` (${cls})` : ''}${phone ? `, Phone: ${phone}` : ''}. I was chatting with ARIA and would like to speak with a counselor.${summary ? `\n\nMy questions: ${summary}` : ''}`
+
+    if (isMobileDevice()) {
+      window.open(`https://wa.me/918826444334?text=${encodeURIComponent(message)}`, '_blank')
+    } else {
+      const whatsappUrl = buildWhatsAppUrl(message, 'aria-handoff')
+      openDesktopWhatsAppModal(whatsappUrl, message, 'aria-handoff')
+    }
+  }, [leadData, getConversationSummary])
+
+  // Submit lead to API + send conversation to admin WhatsApp
   const submitLead = async (data: LeadData) => {
     try {
+      const conversationSummary = messages
+        .slice(-10)
+        .map((m) => `${m.role === 'user' ? '👤' : '🤖'}: ${m.content.substring(0, 100)}`)
+        .join('\n')
+
       await fetch('/api/contact/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -425,15 +469,8 @@ For personalized guidance, our counselor team can help. In the meantime:
           email: data.email,
           class: data.class,
           source: 'ARIA_Sales_Agent',
-          message: `Lead captured via ARIA chat. Score: ${data.score}`,
+          message: `Lead captured via ARIA chat. Score: ${data.score}\n\nConversation:\n${conversationSummary}`,
         }),
-      })
-      const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
-      openWhatsAppWithFormData('ARIA Sales Agent Lead', {
-        Name: data.name || '-',
-        Phone: data.phone || '-',
-        Email: data.email || '-',
-        Class: data.class || '-',
       })
     } catch (error) {
       console.error('Failed to submit lead:', error)
@@ -636,6 +673,21 @@ For personalized guidance, our counselor team can help. In the meantime:
                 <div ref={messagesEndRef} />
               </div>
             </div>
+
+            {/* WhatsApp Connect CTA — shown after lead capture or 5+ messages */}
+            {(showWhatsAppCTA || messages.filter((m) => m.role === 'user').length >= 5) && (
+              <div className={`bg-green-50 border-t border-green-200 ${isFullscreen ? 'px-6 py-3' : 'px-4 py-2'}`}>
+                <button
+                  onClick={handleConnectWhatsApp}
+                  className={`w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-xl font-semibold transition-colors ${
+                    isFullscreen ? 'text-sm py-3' : 'text-xs py-2.5'
+                  }`}
+                >
+                  <MessageCircle className={isFullscreen ? 'w-5 h-5' : 'w-4 h-4'} />
+                  {isMobileDevice() ? 'Connect with Counselor on WhatsApp' : 'Scan QR to Chat on WhatsApp'}
+                </button>
+              </div>
+            )}
 
             {/* Quick CTA buttons */}
             <div className={`bg-white border-t border-gray-100 flex gap-2 ${isFullscreen ? 'px-6 py-3 max-w-3xl mx-auto' : 'px-4 py-2'}`}>
