@@ -266,7 +266,7 @@ export const subjects: SubjectCard[] = [
 ]
 
 export const successStats = [
-  { label: 'Students Coached', value: '2000+', color: 'text-yellow-400' },
+  { label: 'Students Coached', value: '15,000+', color: 'text-yellow-400' },
   { label: 'Success Rate', value: '98%', color: 'text-green-400' },
   { label: 'Top NEET Score', value: '695/720', color: 'text-blue-400' },
   { label: 'Google Rating', value: '5.0/5', color: 'text-orange-400' },

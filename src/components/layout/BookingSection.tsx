@@ -200,7 +200,7 @@ export function BookingSection() {
               <h3 className="text-xl font-bold mb-4">{t('joinOurSuccess')}</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">2000+</div>
+                  <div className="text-3xl font-bold mb-1">15,000+</div>
                   <div className="text-sm text-green-100">{t('studentsEnrolled')}</div>
                 </div>
                 <div className="text-center">
@@ -208,11 +208,11 @@ export function BookingSection() {
                   <div className="text-sm text-green-100">{t('successRate')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">680+</div>
-                  <div className="text-sm text-green-100">Medical College Selections</div>
+                  <div className="text-3xl font-bold mb-1">67+</div>
+                  <div className="text-sm text-green-100">AIIMS Selections</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">5+</div>
+                  <div className="text-3xl font-bold mb-1">12+</div>
                   <div className="text-sm text-green-100">{t('yearsExperience')}</div>
                 </div>
               </div>
