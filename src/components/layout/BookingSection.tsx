@@ -79,8 +79,8 @@ export function BookingSection() {
   ]
 
   return (
-    <section id="book-demo" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="book-demo" className="py-12 sm:py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -181,8 +181,8 @@ export function BookingSection() {
                           <p className="text-gray-500 text-xs">{method.available}</p>
                         </div>
                       </div>
-                      <div className="text-right flex-shrink-0">
-                        <p className="text-blue-600 font-medium text-xs sm:text-sm group-hover:underline whitespace-nowrap">
+                      <div className="text-right flex-shrink-0 max-w-[120px] sm:max-w-none">
+                        <p className="text-blue-600 font-medium text-xs sm:text-sm group-hover:underline">
                           {method.actionText}
                         </p>
                       </div>
@@ -194,26 +194,26 @@ export function BookingSection() {
 
             {/* Quick Stats */}
             <div
-              className="bg-indigo-500 rounded-2xl p-8 text-white animate-fade-in-up"
+              className="bg-indigo-500 rounded-2xl p-5 sm:p-8 text-white animate-fade-in-up"
               style={{ animationDelay: '600ms' }}
             >
               <h3 className="text-xl font-bold mb-4">{t('joinOurSuccess')}</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">15,000+</div>
-                  <div className="text-sm text-green-100">{t('studentsEnrolled')}</div>
+                  <div className="text-2xl sm:text-3xl font-bold mb-1">15,000+</div>
+                  <div className="text-xs sm:text-sm text-green-100">{t('studentsEnrolled')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">98%</div>
-                  <div className="text-sm text-green-100">{t('successRate')}</div>
+                  <div className="text-2xl sm:text-3xl font-bold mb-1">98%</div>
+                  <div className="text-xs sm:text-sm text-green-100">{t('successRate')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">67+</div>
-                  <div className="text-sm text-green-100">AIIMS Selections</div>
+                  <div className="text-2xl sm:text-3xl font-bold mb-1">67+</div>
+                  <div className="text-xs sm:text-sm text-green-100">AIIMS Selections</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">12+</div>
-                  <div className="text-sm text-green-100">{t('yearsExperience')}</div>
+                  <div className="text-2xl sm:text-3xl font-bold mb-1">12+</div>
+                  <div className="text-xs sm:text-sm text-green-100">{t('yearsExperience')}</div>
                 </div>
               </div>
             </div>
@@ -222,7 +222,7 @@ export function BookingSection() {
 
         {/* Bottom Section - Additional Info */}
         <div
-          className="mt-16 text-center bg-white rounded-2xl p-8 shadow-sm animate-fade-in-up"
+          className="mt-8 sm:mt-16 text-center bg-white rounded-2xl p-5 sm:p-8 shadow-sm animate-fade-in-up"
           style={{ animationDelay: '800ms' }}
         >
           <div className="flex items-center justify-center mb-4">
