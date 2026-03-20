@@ -126,27 +126,16 @@ export function FacultySection() {
             >
               {/* Faculty Image */}
               <div className="w-20 xs:w-22 sm:w-24 h-20 xs:h-22 sm:h-24 mx-auto mb-4 xs:mb-5 sm:mb-6 rounded-full overflow-hidden border-4 border-blue-100 group-hover:scale-105 transition-transform shadow-lg">
-                {faculty.image && !faculty.image.includes('ui-avatars.com') ? (
-                  <Image
-                    src={faculty.image}
-                    alt={faculty.name}
-                    width={96}
-                    height={96}
-                    quality={80}
-                    className="w-full h-full object-cover"
-                    sizes="(max-width: 640px) 80px, 96px"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-600 flex items-center justify-center">
-                    <span className="text-white font-bold text-xl xs:text-2xl sm:text-3xl">
-                      {faculty.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .slice(0, 2)
-                        .join('')}
-                    </span>
-                  </div>
-                )}
+                <div className="w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-600 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl xs:text-2xl sm:text-3xl">
+                    {faculty.name
+                      .replace(/^(Dr\.|Prof\.|Mr\.|Ms\.)\s*/i, '')
+                      .split(' ')
+                      .map((n) => n[0])
+                      .slice(0, 2)
+                      .join('')}
+                  </span>
+                </div>
               </div>
 
               {/* Faculty Info */}

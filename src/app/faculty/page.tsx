@@ -240,27 +240,18 @@ export default function FacultyPage() {
                 className="bg-white rounded-3xl overflow-hidden border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-xl transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="relative h-48 bg-gradient-to-br from-[#3d4d3d] via-[#4a5d4a] to-[#5a6d5a]">
-                  {faculty.image && !faculty.image.includes('ui-avatars.com') ? (
-                    <Image
-                      src={faculty.image}
-                      alt={faculty.name}
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/20">
-                        <span className="text-white font-bold text-3xl">
-                          {faculty.name
-                            .split(' ')
-                            .map((n) => n[0])
-                            .slice(0, 2)
-                            .join('')}
-                        </span>
-                      </div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/20">
+                      <span className="text-white font-bold text-3xl">
+                        {faculty.name
+                          .replace(/^(Dr\.|Prof\.|Mr\.|Ms\.)\s*/i, '')
+                          .split(' ')
+                          .map((n) => n[0])
+                          .slice(0, 2)
+                          .join('')}
+                      </span>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 <div className="p-6">
