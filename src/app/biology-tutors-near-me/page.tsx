@@ -82,7 +82,7 @@ const faqs = [
   {
     question: 'What are the offline center locations?',
     answer:
-      'We have 6 centers in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. Each center offers the same quality teaching with small batch sizes of 15-20 students.',
+      'We have 4 centers in Delhi NCR: Rohini, Gurugram, South Extension, Faridabad, Green Park, and Noida. Each center offers the same quality teaching with small batch sizes of 15-20 students.',
   },
   {
     question: 'Is hostel facility available for outstation students?',

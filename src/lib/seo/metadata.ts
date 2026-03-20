@@ -112,7 +112,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   about: {
     title: 'About Us - Best NEET Biology Coaching Institute Delhi NCR | Cerebrum Academy',
     description:
-      'Learn about Cerebrum Biology Academy — founded by Dr. Shekhar (AIIMS Delhi) in 2014. 98% success rate, 680+ medical college selections. Visit us today!',
+      'Learn about Cerebrum Biology Academy — founded by Dr. Shekhar (AIIMS Delhi) in 2014. 98% success rate, 67+ AIIMS selections. Visit us today!',
     keywords: [
       'about cerebrum academy',
       'NEET coaching institute Delhi',
@@ -176,9 +176,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/book-free-demo',
   },
   results: {
-    title: 'NEET Results 2026 | 98% Success Rate, 680+ Selections | Cerebrum Academy Delhi NCR',
+    title: 'NEET Results 2026 | 98% Success Rate, 67+ AIIMS Selections | Cerebrum Academy Delhi NCR',
     description:
-      'Cerebrum Academy NEET results: 98% qualification rate, 680+ medical college selections, AIIMS & JIPMER toppers from Delhi NCR. Book a free demo today!',
+      'Cerebrum Academy NEET results: 98% qualification rate, 67+ AIIMS selections, AIIMS & JIPMER toppers from Delhi NCR. Book a free demo today!',
     keywords: [
       'NEET results 2026 Cerebrum',
       'NEET success stories Delhi',
@@ -245,7 +245,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/mock-tests',
   },
   testimonials: {
-    title: 'NEET Results 2026 | 98% Success Rate, 680+ Selections | Cerebrum Academy Delhi NCR',
+    title: 'NEET Results 2026 | 98% Success Rate, 67+ AIIMS Selections | Cerebrum Academy Delhi NCR',
     description:
       'Read real NEET success stories at Cerebrum Academy — 67+ AIIMS selections, 98% success rate, 15,000+ students trained. Watch video testimonials today!',
     keywords: [
@@ -266,7 +266,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   faculty: {
     title: 'Expert NEET Biology Faculty Delhi NCR | AIIMS Qualified Teachers | Cerebrum Academy',
     description:
-      "Meet Cerebrum Academy's AIIMS-qualified NEET Biology faculty — 15+ years experience, 680+ medical selections. Led by Dr. Shekhar Singh. Book a free demo!",
+      "Meet Cerebrum Academy's AIIMS-qualified NEET Biology faculty — 15+ years experience, 67+ AIIMS selections. Led by Dr. Shekhar Singh. Book a free demo!",
     keywords: [
       'NEET faculty Delhi',
       'biology teachers Delhi NCR',

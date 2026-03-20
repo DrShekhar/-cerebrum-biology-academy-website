@@ -335,7 +335,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'Where are your offline coaching centers located?',
     answer:
-      'We have 6 centers in Delhi-NCR: South Extension (Flagship), Rohini, Gurugram (Sector 51), Faridabad (Sector 17), Green Park, and Noida. All centers are well-connected by metro and have modern classroom facilities. Online classes are available for students across India.',
+      'We have 4 centers in Delhi-NCR: South Extension (Flagship), Rohini, Gurugram (Sector 51), Faridabad (Sector 17), Green Park, and Noida. All centers are well-connected by metro and have modern classroom facilities. Online classes are available for students across India.',
   },
   {
     question: 'What is the Intensive Program?',

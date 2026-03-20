@@ -303,7 +303,7 @@ export default function CRParkPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-center">
               {[
-                { value: '680+ Medical College Selections' },
+                { value: '67+ AIIMS Selections' },
                 { value: '98%', label: 'Success Rate' },
                 { value: '15+', label: 'Years' },
                 { value: '5.0', label: 'Google Rating', icon: Star },

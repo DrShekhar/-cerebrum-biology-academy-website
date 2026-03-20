@@ -190,7 +190,7 @@ export default function LocationsPage() {
               Visit Our Delhi NCR Centers
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
-              6 centers across Delhi NCR with AIIMS faculty, small batches of 15 students
+              4 centers across Delhi NCR with AIIMS faculty, small batches of 15 students
             </p>
           </div>
 

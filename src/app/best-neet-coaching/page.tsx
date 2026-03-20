@@ -104,7 +104,7 @@ const faqs = [
   {
     question: 'Do you provide online coaching as well?',
     answer:
-      'Yes! We offer both offline classes at our 6 centers (Rohini, Gurugram, South Extension, Faridabad, Green Park, Noida) and live online classes. Online students get the same quality teaching with recorded lectures for revision.',
+      'Yes! We offer both offline classes at our 4 centers (Rohini, Gurugram, South Extension, Faridabad, Green Park, Noida) and live online classes. Online students get the same quality teaching with recorded lectures for revision.',
   },
   {
     question: 'What study material is provided?',

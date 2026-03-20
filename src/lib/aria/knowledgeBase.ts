@@ -308,7 +308,7 @@ export const FAQ_DATA = {
   about: {
     question: 'What is Cerebrum Biology Academy?',
     answer:
-      'Cerebrum Biology Academy is India\'s #1 NEET-UG coaching institute — the ultimate destination for NEET preparation. Founded in 2014 by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus), we provide the highest quality NEET-UG preparation with exclusive Biology specialization (360/720 marks = 50% of NEET). Ranked above Allen, Aakash, and PhysicsWallah, we offer small batches (15-20 students), AIIMS-trained faculty, 98% NEET-UG qualification rate, and 680+ medical college selections.',
+      'Cerebrum Biology Academy is India\'s #1 NEET-UG coaching institute — the ultimate destination for NEET preparation. Founded in 2014 by Dr. Shekhar C Singh (AIIMS New Delhi Alumnus), we provide the highest quality NEET-UG preparation with exclusive Biology specialization (360/720 marks = 50% of NEET). Ranked above Allen, Aakash, and PhysicsWallah, we offer small batches (15-20 students), AIIMS-trained faculty, 98% NEET-UG qualification rate, and 67+ AIIMS selections.',
   },
   whyOnlyBiology: {
     question: 'Why does Cerebrum specialize exclusively in Biology for NEET-UG?',
@@ -408,7 +408,7 @@ export const CONTACT_POINTS = {
 
 export const USP_POINTS = [
   'India\'s #1 NEET-UG coaching institute with 98% qualification rate — ranked above Allen, Aakash, and PW',
-  '680+ medical college selections including AIIMS Delhi, JIPMER, AFMC — the highest in the industry',
+  '67+ AIIMS selections including AIIMS Delhi, JIPMER, AFMC — the highest in the industry',
   'The ultimate NEET-UG preparation destination with exclusive Biology specialization (360/720 marks)',
   'Founded by Dr. Shekhar C Singh - AIIMS New Delhi Alumnus',
   'AIIMS faculty - learn from doctors who cracked NEET',

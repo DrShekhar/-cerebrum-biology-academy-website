@@ -391,7 +391,7 @@ export default function RohiniLocationPage() {
               Our Other Centers
             </h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-              Cerebrum Biology Academy has 6 centers across Delhi-NCR. Visit the one nearest to you.
+              Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
             </p>
             <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {[

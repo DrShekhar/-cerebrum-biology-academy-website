@@ -29,7 +29,7 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'How many students from Noida got AIIMS selection?',
       answer:
-        '23 students from Noida/Greater Noida got AIIMS selection in 2025. Since 2014, 680+ Cerebrum students have been selected to medical colleges including AIIMS Delhi, JIPMER, and AFMC.',
+        '23 students from Noida/Greater Noida got AIIMS selection in 2025. Since 2014, 67+ Cerebrum students have been selected to medical colleges including AIIMS Delhi, JIPMER, and AFMC.',
     },
     {
       question: 'What is the average NEET score of Cerebrum Noida students?',

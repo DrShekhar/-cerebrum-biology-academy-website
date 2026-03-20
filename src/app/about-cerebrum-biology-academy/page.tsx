@@ -25,7 +25,7 @@ const aboutFaqs = [
   {
     question: 'How long has Cerebrum been operating?',
     answer:
-      'Since 2014 (12+ years), Cerebrum has achieved a 98% NEET qualification rate with 680+ medical college selections including AIIMS Delhi, JIPMER, and AFMC.',
+      'Since 2014 (12+ years), Cerebrum has achieved a 98% NEET qualification rate with 67+ AIIMS selections including AIIMS Delhi, JIPMER, and AFMC.',
   },
   {
     question: 'What makes Cerebrum different?',
@@ -47,13 +47,13 @@ const aboutFaqs = [
 export const metadata: Metadata = {
   title: 'About Cerebrum Biology Academy — NEET-UG Coaching Since 2014 | Delhi NCR',
   description:
-    "Cerebrum Biology Academy: India's #1 NEET-UG coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ medical college selections, 98% success rate, small batches of 15-20 students.",
+    "Cerebrum Biology Academy: India's #1 NEET-UG coaching with AIIMS-trained faculty, 4 centers in Delhi NCR, 67+ AIIMS selections, 98% success rate, small batches of 15-20 students.",
   keywords:
     'Cerebrum Biology Academy, NEET coaching, AIIMS faculty, Biology tuition, Delhi NCR',
   openGraph: {
     title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2014 | Delhi NCR',
     description:
-      "Cerebrum Biology Academy: India's #1 NEET-UG coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ medical college selections, 98% success rate.",
+      "Cerebrum Biology Academy: India's #1 NEET-UG coaching with AIIMS-trained faculty, 4 centers in Delhi NCR, 67+ AIIMS selections, 98% success rate.",
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/about-cerebrum-biology-academy',
     images: [
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Cerebrum Biology Academy — NEET-UG Coaching Since 2014',
     description:
-      'Cerebrum: 12+ years, 680+ medical college selections, 98% success rate, AIIMS-trained faculty, 6 centers in Delhi NCR.',
+      'Cerebrum: 12+ years, 67+ AIIMS selections, 98% success rate, AIIMS-trained faculty, 4 centers in Delhi NCR.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/about-cerebrum-biology-academy',
@@ -132,10 +132,10 @@ export default function AboutCerebrumPage() {
     {
       metric: '98%',
       label: 'NEET Qualification Rate',
-      description: '680+ medical college selections since 2014',
+      description: '67+ AIIMS selections since 2014',
     },
     {
-      metric: '680+',
+      metric: '67+',
       label: 'Medical Selections',
       description: 'AIIMS Delhi, JIPMER, AFMC & top GMCs',
     },
@@ -188,7 +188,7 @@ export default function AboutCerebrumPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
-              <div className="text-3xl font-bold text-green-400 mb-2">680+</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">67+</div>
               <div className="text-slate-200">NEET Selections</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
@@ -281,7 +281,7 @@ export default function AboutCerebrumPage() {
                 <div className="flex gap-4">
                   <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-slate-900">680+ Medical College Selections</h3>
+                    <h3 className="font-semibold text-slate-900">67+ AIIMS Selections</h3>
                     <p className="text-slate-600">AIIMS Delhi, JIPMER, AFMC & top GMCs since 2014</p>
                   </div>
                 </div>
@@ -485,7 +485,7 @@ export default function AboutCerebrumPage() {
             <div className="border-l-4 border-green-400 pl-6">
               <h3 className="text-xl font-bold mb-3">NEET Success Rate</h3>
               <p className="text-slate-300 mb-4">
-                98% qualification rate with 680+ medical college selections — the highest success rate in
+                98% qualification rate with 67+ AIIMS selections — the highest success rate in
                 the coaching industry.
               </p>
             </div>
@@ -515,7 +515,7 @@ export default function AboutCerebrumPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-lg p-8 border border-slate-200 text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">680+</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">67+</div>
               <p className="text-slate-600">Total NEET Selections (All-time)</p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 text-center">
@@ -659,7 +659,7 @@ export default function AboutCerebrumPage() {
             logo: 'https://cerebrumbiologyacademy.com/logo.png',
             image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
             description:
-              "India's #1 NEET-UG coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ medical college selections, 98% success rate",
+              "India's #1 NEET-UG coaching with AIIMS-trained faculty, 4 centers in Delhi NCR, 67+ AIIMS selections, 98% success rate",
             telephone: '+91-88264-44334',
             email: 'info@cerebrumbiologyacademy.com',
             foundingDate: '2014',

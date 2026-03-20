@@ -8136,7 +8136,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What batch timings work best with school?',
         answer:
-          'Our 4:30 PM batch suits students finishing school by 3:30 PM. The 6:00 PM batch works for those with extended school hours. Weekend batches (Saturday/Sunday) provide comprehensive coverage. We have flexible options across all 6 centers.',
+          'Our 4:30 PM batch suits students finishing school by 3:30 PM. The 6:00 PM batch works for those with extended school hours. Weekend batches (Saturday/Sunday) provide comprehensive coverage. We have flexible options across all 4 centers.',
       },
     ],
     stats: {
@@ -8337,7 +8337,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Affordable NEET Coaching Delhi | Budget-Friendly Biology Classes | Cerebrum Academy',
     metaDescription:
-      'Find the most affordable NEET coaching in Delhi without compromising quality. AIIMS faculty at budget-friendly fees. 6 centers across Delhi. EMI options available. Call 88264-44334!',
+      'Find the most affordable NEET coaching in Delhi without compromising quality. AIIMS faculty at budget-friendly fees. 4 centers across Delhi. EMI options available. Call 88264-44334!',
     heroTitle: 'Affordable NEET Coaching in Delhi',
     heroSubtitle:
       'Quality NEET preparation at budget-friendly fees. AIIMS-trained faculty, proven results, flexible payment options including EMI.',
@@ -8345,7 +8345,7 @@ export const cityHubData: Record<string, CityHubData> = {
     nearestCenter: {
       name: 'Multiple Centers Across Delhi',
       address: 'Rohini (DC Chauk), South Extension, Green Park - Choose your nearest center',
-      distance: '6 centers across Delhi',
+      distance: '4 centers across Delhi',
     },
     localities: [
       { name: 'Rohini', url: '/biology-classes-rohini' },
@@ -8403,7 +8403,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Delhi',
     metaTitle: 'NEET Coaching with Hostel Delhi | Residential NEET Preparation | Cerebrum Academy',
     metaDescription:
-      'NEET coaching with nearby hostel facilities in Delhi. Safe PG accommodations near all 6 centers - Rohini, Gurugram, South Extension, Green Park. Call 88264-44334 for hostel assistance!',
+      'NEET coaching with nearby hostel facilities in Delhi. Safe PG accommodations near all 4 centers - Rohini, Gurugram, South Extension, Green Park. Call 88264-44334 for hostel assistance!',
     heroTitle: 'NEET Coaching with Hostel Facilities in Delhi',
     heroSubtitle:
       'Focus completely on NEET preparation. Quality coaching with safe, affordable hostel options near all our centers.',
@@ -8428,7 +8428,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do you provide hostel facilities for NEET students?',
         answer:
-          'While we do not run our own hostel, we help students find safe, verified PG accommodations near all 6 centers (Rohini, Gurugram, South Extension, Green Park). We have tie-ups with several hostels offering secure, affordable stays. Call 88264-44334 for hostel assistance.',
+          'While we do not run our own hostel, we help students find safe, verified PG accommodations near all 4 centers (Rohini, Gurugram, South Extension, Green Park). We have tie-ups with several hostels offering secure, affordable stays. Call 88264-44334 for hostel assistance.',
       },
       {
         question: 'What is the cost of hostel/PG near your centers?',
@@ -8541,7 +8541,7 @@ export const cityHubData: Record<string, CityHubData> = {
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Weekend & Evening Batches',
-      address: 'Available at all 6 centers: Rohini, Gurugram, South Extension, Green Park',
+      address: 'Available at all 4 centers: Rohini, Gurugram, South Extension, Green Park',
       distance: 'Flexible timing options',
     },
     localities: [
@@ -8600,7 +8600,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Delhi',
     metaTitle: 'NEET Dropper Crash Course 2027 | Intensive 3-6 Month Program | Cerebrum Academy',
     metaDescription:
-      'Last-minute NEET 2027 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 6 centers in Delhi. Call 88264-44334!',
+      'Last-minute NEET 2027 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 4 centers in Delhi. Call 88264-44334!',
     heroTitle: 'NEET 2027 Crash Course for Droppers',
     heroSubtitle:
       'Make every remaining day count! Intensive 3-6 month program with rapid revision, daily practice tests, and focused weak topic coaching.',
@@ -11132,7 +11132,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which is the best NEET coaching in Chandigarh for Biology?',
         answer:
-          'Cerebrum Biology Academy is the top-rated NEET biology coaching for Chandigarh students. With AIIMS-trained faculty, 98% success rate, and 780+ Tricity students, we specialize in biology preparation. Unlike crowded Sector 36 centers with 50-100 students, our online batches have only 10-15 students for personalized attention.',
+          'Cerebrum Biology Academy is the top-rated NEET biology coaching for Chandigarh students. With AIIMS-trained faculty, 98% success rate, and 780+ Tricity students, we specialize in biology preparation. Unlike crowded Sector 34 centers with 50-100 students, our online batches have only 10-15 students for personalized attention.',
       },
       {
         question: 'How is online coaching better than Sector 34 coaching centers?',
@@ -11225,7 +11225,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What is the fee for NEET coaching for Mohali students?',
         answer:
-          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. This is often less than Sector 36 centers when you factor in commute costs. Plus you get smaller batches (10-15 students) vs their 50-100. EMI options available.',
+          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. This is often less than Sector 34 centers when you factor in commute costs. Plus you get smaller batches (10-15 students) vs their 50-100. EMI options available.',
       },
       {
         question: 'Which schools in Mohali do your students come from?',

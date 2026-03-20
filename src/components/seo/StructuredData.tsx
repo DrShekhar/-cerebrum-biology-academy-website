@@ -30,7 +30,7 @@ export function OrganizationSchema() {
     alternateName: ['Cerebrum Academy', 'Cerebrum Biology', 'CBA Delhi NCR'],
     legalName: 'Cerebrum Biology Academy Private Limited',
     description:
-      'Premier NEET Biology coaching institute with AIIMS Trained faculty, offering comprehensive preparation for medical entrance exams with 98% success rate. 6 centers across Delhi NCR — South Extension, Rohini, Gurugram, and Faridabad.',
+      'Premier NEET Biology coaching institute with AIIMS Trained faculty, offering comprehensive preparation for medical entrance exams with 98% success rate. 4 centers across Delhi NCR — South Extension, Rohini, Gurugram, and Faridabad.',
     slogan: 'Where Biology Meets Excellence',
     url: 'https://cerebrumbiologyacademy.com',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
