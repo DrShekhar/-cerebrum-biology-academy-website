@@ -63,7 +63,7 @@ const Header = () => {
         priority: 1,
       },
       {
-        href: '/courses',
+        href: '/pricing',
         labelKey: 'courses' as const,
         icon: GraduationCap,
         priority: 2,

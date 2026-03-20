@@ -76,7 +76,7 @@ export function HeaderServer() {
               </span>
             </Link>
             <Link
-              href="/courses"
+              href="/pricing"
               className="flex items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200"
             >
               Courses
