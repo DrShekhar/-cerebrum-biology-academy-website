@@ -312,52 +312,21 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
     <div className="min-h-screen bg-gray-50">
       {hasPrevPage && <link rel="prev" href={prevPageUrl} />}
       {hasNextPage && <link rel="next" href={nextPageUrl} />}
-      <section className="py-20 bg-[#4a5d4a] text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="animate-fade-in-up">
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <BookOpen className="w-4 h-4 mr-2" />
-              Expert Biology Education
-            </div>
-
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Biology <span className="text-yellow-300">Mastery</span> Blog
-            </h1>
-
-            <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-              Expert tips, study strategies, and preparation guides by AIIMS faculty to help you ace
-              NEET Biology
-            </p>
-
-            {/* Blog Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-                <div className="text-2xl font-bold">{stats.totalPosts}+</div>
-                <div className="text-sm opacity-80">Articles</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-                <div className="text-2xl font-bold">{formatViewCount(stats.totalViews)}</div>
-                <div className="text-sm opacity-80">Total Reads</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-                <div className="text-2xl font-bold">{stats.avgReadTime}</div>
-                <div className="text-sm opacity-80">Avg Read Time</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-                <div className="text-2xl font-bold">{stats.categories}</div>
-                <div className="text-sm opacity-80">Categories</div>
-              </div>
-            </div>
-          </div>
+      <section className="pt-8 pb-4 bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
+            NEET Biology Blog
+          </h1>
+          <p className="text-gray-600">
+            {stats.totalPosts} articles by AIIMS faculty — tips, strategies & study guides
+          </p>
         </div>
       </section>
 
-      {/* Search and Filter Section */}
-      <section className="py-12">
+      {/* Search and Sort — compact single row */}
+      <section className="py-4 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 mb-12">
-            {/* Search and Filters Row */}
-            <div className="flex flex-col lg:flex-row gap-4 items-stretch">
+          <div className="flex flex-col sm:flex-row gap-3 items-stretch">
               {/* Search Bar with Preview */}
               <div className="flex-1 relative" ref={searchRef}>
                 <Search
@@ -445,7 +414,7 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
                 </select>
               </div>
 
-              {/* Category Filter */}
+              {/* Category Filter — single dropdown */}
               <div className="flex items-center gap-2">
                 <Filter className="w-5 h-5 text-gray-500" aria-hidden="true" />
                 <select
@@ -465,187 +434,50 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
                   ))}
                 </select>
               </div>
-
-              {/* Difficulty Filter */}
-              <select
-                value={selectedDifficulty}
-                onChange={(e) => {
-                  setSelectedDifficulty(e.target.value as Difficulty | 'all')
-                  handleFilterChange()
-                }}
-                className="px-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm"
-                aria-label="Filter by difficulty"
-              >
-                <option value="all">All Levels</option>
-                <option value="Beginner">Beginner</option>
-                <option value="Intermediate">Intermediate</option>
-                <option value="Advanced">Advanced</option>
-              </select>
-
-              {/* Author Filter */}
-              <div className="flex items-center gap-2">
-                <User className="w-5 h-5 text-gray-500" />
-                <select
-                  value={selectedAuthor}
-                  onChange={(e) => {
-                    setSelectedAuthor(e.target.value)
-                    handleFilterChange()
-                  }}
-                  className="px-4 py-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-sm"
-                  aria-label="Filter by author"
-                >
-                  <option value="all">All Authors</option>
-                  {authors.map((author) => (
-                    <option key={author} value={author}>
-                      {author}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            {/* Active Filters & Category Pills */}
-            <div className="flex flex-wrap items-center gap-3 mt-6 pt-6 border-t border-gray-100">
-              {/* Sort indicator */}
-              <div className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 py-1.5 rounded-full">
-                {sortBy === 'newest' && <SortAsc className="w-4 h-4" />}
-                {sortBy === 'popular' && <Flame className="w-4 h-4 text-orange-500" />}
-                {sortBy === 'readTime' && <Clock className="w-4 h-4 text-blue-500" />}
-                <span>
-                  {sortBy === 'newest' && 'Newest'}
-                  {sortBy === 'popular' && 'Most Popular'}
-                  {sortBy === 'readTime' && 'Quick Reads'}
-                </span>
-              </div>
-
-              {/* Active filter chips */}
-              {hasActiveFilters && (
-                <>
-                  {selectedCategory !== 'all' && (
-                    <button
-                      onClick={() => {
-                        setSelectedCategory('all')
-                        handleFilterChange()
-                      }}
-                      className="flex items-center gap-1 px-3 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm hover:bg-blue-200 transition-colors"
-                    >
-                      {getCategoryInfo(selectedCategory).name}
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
-                  {selectedDifficulty !== 'all' && (
-                    <button
-                      onClick={() => {
-                        setSelectedDifficulty('all')
-                        handleFilterChange()
-                      }}
-                      className="flex items-center gap-1 px-3 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm hover:bg-purple-200 transition-colors"
-                    >
-                      {selectedDifficulty}
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
-                  {selectedAuthor !== 'all' && (
-                    <button
-                      onClick={() => {
-                        setSelectedAuthor('all')
-                        handleFilterChange()
-                      }}
-                      className="flex items-center gap-1 px-3 py-1.5 bg-green-100 text-green-700 rounded-full text-sm hover:bg-green-200 transition-colors"
-                    >
-                      {selectedAuthor}
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
-                  {searchTerm && (
-                    <button
-                      onClick={() => {
-                        setSearchInput('')
-                        setSearchTerm('')
-                        handleFilterChange()
-                      }}
-                      className="flex items-center gap-1 px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm hover:bg-yellow-200 transition-colors"
-                    >
-                      "{searchTerm}"
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
-                  {showBookmarksOnly && (
-                    <button
-                      onClick={() => {
-                        setShowBookmarksOnly(false)
-                        handleFilterChange()
-                      }}
-                      className="flex items-center gap-1 px-3 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm hover:bg-blue-200 transition-colors"
-                    >
-                      <Bookmark className="w-3 h-3 fill-current" />
-                      Bookmarked
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
-                  <button
-                    onClick={clearAllFilters}
-                    className="text-sm text-red-600 hover:text-red-700 font-medium"
-                  >
-                    Clear all
-                  </button>
-                </>
-              )}
-
-              {/* Category quick filters */}
-              <div className="flex-1" />
-              <div className="flex flex-wrap gap-2">
-                {categories.slice(0, 4).map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => {
-                      setSelectedCategory(
-                        selectedCategory === category.slug ? 'all' : category.slug
-                      )
-                      handleFilterChange()
-                    }}
-                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
-                      selectedCategory === category.slug
-                        ? category.color
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                    }`}
-                  >
-                    {category.name}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Popular Topics */}
-      {popularTags && popularTags.length > 0 && (
-        <section className="pb-8">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center gap-2 mb-4">
-              <Hash className="w-5 h-5 text-gray-500" />
-              <h2 className="text-lg font-semibold text-gray-900">Popular Topics</h2>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {popularTags.map(({ tag, count }) => (
-                <Link
-                  key={tag}
-                  href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors shadow-sm"
-                >
-                  <span>#{tag}</span>
-                  <span className="text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full">
-                    {count}
-                  </span>
-                </Link>
-              ))}
-            </div>
+      {/* Active filter chips (shown only when filters are active) */}
+      {hasActiveFilters && (
+        <div className="max-w-7xl mx-auto px-4 py-2">
+          <div className="flex flex-wrap items-center gap-2">
+            {selectedCategory !== 'all' && (
+              <button
+                onClick={() => {
+                  setSelectedCategory('all')
+                  handleFilterChange()
+                }}
+                className="flex items-center gap-1 px-3 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm hover:bg-blue-200 transition-colors"
+              >
+                {getCategoryInfo(selectedCategory).name}
+                <X className="w-3 h-3" />
+              </button>
+            )}
+            {searchTerm && (
+              <button
+                onClick={() => {
+                  setSearchInput('')
+                  setSearchTerm('')
+                  handleFilterChange()
+                }}
+                className="flex items-center gap-1 px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-full text-sm hover:bg-yellow-200 transition-colors"
+              >
+                &quot;{searchTerm}&quot;
+                <X className="w-3 h-3" />
+              </button>
+            )}
+            <button
+              onClick={clearAllFilters}
+              className="text-sm text-red-600 hover:text-red-700 font-medium"
+            >
+              Clear all
+            </button>
           </div>
-        </section>
+        </div>
       )}
 
-      {/* Blog Posts Grid */}
+      {/* Blog Posts Grid — content first */}
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-4">
           {/* Results count */}
@@ -993,6 +825,32 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
           )}
         </div>
       </section>
+
+      {/* Popular Topics — below posts for SEO internal linking */}
+      {popularTags && popularTags.length > 0 && (
+        <section className="py-10 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-center gap-2 mb-4">
+              <Hash className="w-5 h-5 text-gray-500" />
+              <h2 className="text-lg font-semibold text-gray-900">Popular Topics</h2>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {popularTags.map(({ tag, count }) => (
+                <Link
+                  key={tag}
+                  href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-700 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors"
+                >
+                  <span>#{tag}</span>
+                  <span className="text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full">
+                    {count}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
