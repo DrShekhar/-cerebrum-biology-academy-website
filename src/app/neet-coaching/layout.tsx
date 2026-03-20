@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { faqs } from '@/data/neetCoachingData'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching 2026 | 98% Success | AIIMS Faculty | Free Demo',
+  title: 'NEET Coaching 2026 | Physics, Chemistry, Biology | 98% Success | Free Demo',
   description:
-    'India\'s top NEET coaching by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers: South Extension, Rohini, Gurugram, Faridabad + Online. Call 88264-44334. Book FREE demo!',
+    'India\'s top NEET coaching — Physics, Chemistry & Biology by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers: South Extension, Rohini, Gurugram, Faridabad + Online. Call 88264-44334. Free Demo!',
   keywords: [
     'NEET coaching',
     'NEET 2026 coaching',
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'NEET biology coaching',
     'NEET physics coaching',
     'NEET chemistry coaching',
+    'physics chemistry biology coaching',
     'NEET preparation classes',
     'NEET dropper batch',
     'NEET coaching near me',
@@ -21,6 +22,8 @@ export const metadata: Metadata = {
     'NEET coaching Delhi NCR',
     'NEET coaching Gurugram',
     'NEET coaching Class 11 12',
+    'neet classes Delhi',
+    'neet institute Delhi',
   ],
   authors: [{ name: 'Cerebrum Biology Academy' }],
   alternates: {

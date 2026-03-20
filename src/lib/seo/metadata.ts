@@ -474,9 +474,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
   },
   // GURUGRAM SEO PAGES
   neetCoachingGurugram: {
-    title: 'NEET Biology Coaching Gurugram | 98% Success | Free Demo',
+    title: 'Best NEET Coaching Gurugram 2026 | All Subjects | Visit Our Center',
     description:
-      'India\'s only Biology-specialist NEET coaching in Gurugram. 98% success, 67+ AIIMS selections. Offline + Online available. Call 88264-44334. Book FREE demo!',
+      'Top NEET coaching in Gurugram — Physics, Chemistry & Biology by AIIMS Alumnus Dr. Shekhar. Visit M2K Corporate Park, Sector 51. 98% success. Call 88264-44334. Free Demo!',
     keywords: [
       'neet coaching gurugram',
       'neet coaching gurgaon',
@@ -502,6 +502,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet institute gurugram',
       'neet tuition gurugram',
       'neet 2026 coaching gurugram',
+      'physics chemistry biology coaching gurugram',
       'NEET Biology',
       'Board Biology',
       'CBSE Biology',
@@ -638,9 +639,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
   },
   // DELHI REGIONAL PAGES
   neetCoachingNorthDelhi: {
-    title: 'NEET Biology Coaching North Delhi | 98% Success | Free Demo',
+    title: 'Best NEET Coaching North Delhi 2026 | All Subjects | Rohini Center',
     description:
-      'India\'s only Biology-specialist NEET coaching in North Delhi. 98% success, 67+ AIIMS selections. Visit Rohini center. Call 88264-44334. Book FREE demo!',
+      'Top NEET coaching in North Delhi — Physics, Chemistry & Biology at Rohini center. AIIMS faculty, 98% success. Call 88264-44334. Free Demo!',
     keywords: [
       'neet coaching north delhi',
       'best neet coaching north delhi',
@@ -655,6 +656,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet preparation north delhi',
       'best biology coaching north delhi',
       'neet 2026 coaching north delhi',
+      'physics chemistry biology coaching north delhi',
       'NEET Biology',
       'Board Biology',
       'CBSE Biology',
@@ -668,9 +670,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-north-delhi',
   },
   neetCoachingEastDelhi: {
-    title: 'Online NEET Biology Coaching East Delhi | 98% Success',
+    title: 'Best NEET Coaching East Delhi 2026 | All Subjects | Online Classes',
     description:
-      'Online NEET Biology coaching for East Delhi. Biology specialist, 98% success, AIIMS faculty, 15,000+ students. Save 2-3hrs commute. Call 88264-44334. FREE demo!',
+      'Top NEET coaching for East Delhi — Physics, Chemistry & Biology online. AIIMS faculty, save 2-3hrs commute, 98% success. Call 88264-44334. Free Demo!',
     keywords: [
       'neet coaching east delhi',
       'best neet coaching east delhi',
@@ -685,6 +687,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet preparation east delhi',
       'best biology coaching east delhi',
       'neet 2026 coaching east delhi',
+      'physics chemistry biology coaching east delhi',
       'NEET Biology',
       'Board Biology',
       'CBSE Biology',
@@ -698,9 +701,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-east-delhi',
   },
   neetCoachingWestDelhi: {
-    title: 'Online NEET Biology Coaching West Delhi | 98% Success',
+    title: 'Best NEET Coaching West Delhi 2026 | All Subjects | Online Classes',
     description:
-      'Online NEET Biology coaching for West Delhi. Biology specialist, 98% success, AIIMS faculty, 15,000+ students. Save 2-3hrs commute. Call 88264-44334. FREE demo!',
+      'Top NEET coaching for West Delhi — Physics, Chemistry & Biology. AIIMS faculty, 98% success, 67+ AIIMS selections. Call 88264-44334. Free Demo!',
     keywords: [
       'neet coaching west delhi',
       'best neet coaching west delhi',
@@ -715,6 +718,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet preparation west delhi',
       'best biology coaching west delhi',
       'neet 2026 coaching west delhi',
+      'physics chemistry biology coaching west delhi',
       'NEET Biology',
       'Board Biology',
       'CBSE Biology',
@@ -728,9 +732,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-west-delhi',
   },
   neetCoachingSouthDelhi: {
-    title: 'NEET Biology Coaching South Delhi | 98% Success | Free Demo',
+    title: 'Best NEET Coaching South Delhi 2026 | All Subjects | South Extension Center',
     description:
-      'India\'s only Biology-specialist NEET coaching in South Delhi. 98% success, 67+ AIIMS selections. Visit South Extension center. Call 88264-44334. FREE demo!',
+      'Top NEET coaching in South Delhi — Physics, Chemistry & Biology at South Extension. AIIMS Alumnus faculty, 98% success, 67+ AIIMS selections. Call 88264-44334. Free Demo!',
     keywords: [
       'neet coaching south delhi',
       'best neet coaching south delhi',
@@ -745,6 +749,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet preparation south delhi',
       'best biology coaching south delhi',
       'neet 2026 coaching south delhi',
+      'physics chemistry biology coaching south delhi',
       'NEET Biology',
       'Board Biology',
       'CBSE Biology',
@@ -759,9 +764,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
   },
   // NCR CITY PAGES
   neetCoachingNoida: {
-    title: 'NEET Biology Coaching Noida | 98% Success | Free Demo',
+    title: 'Best NEET Coaching Noida 2026 | Physics, Chemistry, Biology | 98% Success',
     description:
-      'India\'s only Biology-specialist NEET coaching in Noida. 98% success, 67+ AIIMS selections, 15,000+ students. Call 88264-44334. Book FREE demo class today!',
+      'Top NEET coaching in Noida — Physics, Chemistry & Biology by AIIMS faculty. 98% success, 67+ AIIMS selections. Small batches (15-20). Online + Offline. Call 88264-44334. Free Demo!',
     keywords: [
       'neet coaching noida',
       'best neet coaching noida',
@@ -775,6 +780,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet preparation noida',
       'best biology coaching noida',
       'neet 2026 coaching noida',
+      'physics chemistry biology coaching noida',
       'NEET Biology',
       'Board Biology',
       'CBSE Biology',
@@ -788,9 +794,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-noida',
   },
   neetCoachingGhaziabad: {
-    title: 'Online NEET Biology Coaching Ghaziabad | 98% Success',
+    title: 'Best NEET Coaching Ghaziabad 2026 | All Subjects | Online Classes',
     description:
-      'Online NEET Biology coaching for Ghaziabad students. Biology specialist, 98% success, AIIMS faculty. Save 2-3hrs commute. Call 88264-44334. FREE demo class!',
+      'Top NEET coaching for Ghaziabad — Physics, Chemistry & Biology online by AIIMS faculty. Save commute, same quality. 98% success. Call 88264-44334. Free Demo!',
     keywords: [
       'neet coaching ghaziabad',
       'best neet coaching ghaziabad',
@@ -804,6 +810,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet preparation ghaziabad',
       'best biology coaching ghaziabad',
       'neet 2026 coaching ghaziabad',
+      'physics chemistry biology coaching ghaziabad',
       'NEET Biology',
       'Board Biology',
       'CBSE Biology',
@@ -817,9 +824,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-ghaziabad',
   },
   neetCoachingFaridabad: {
-    title: 'NEET Biology Coaching Faridabad | 98% Success | Free Demo',
+    title: 'Best NEET Coaching Faridabad 2026 | All Subjects | Visit Sector 17 Center',
     description:
-      'India\'s only Biology-specialist NEET coaching in Faridabad. 98% success, 67+ AIIMS selections. Offline + Online at Sector 17. Call 88264-44334. Book FREE demo!',
+      'Top NEET coaching in Faridabad — Physics, Chemistry & Biology. Visit our Sector 17 center. AIIMS faculty, 98% success, 67+ AIIMS selections. Call 88264-44334. Free Demo!',
     keywords: [
       'neet coaching faridabad',
       'best neet coaching faridabad',
@@ -833,6 +840,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet preparation faridabad',
       'best biology coaching faridabad',
       'neet 2026 coaching faridabad',
+      'physics chemistry biology coaching faridabad',
       'NEET Biology',
       'Board Biology',
       'CBSE Biology',

@@ -3,11 +3,11 @@ import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
-  title: 'NEET Biology Coaching Dwarka | 98% Success | Online + Offline | Free Demo',
+  title: 'Best NEET Coaching Dwarka 2026 | All Subjects | Online + Offline',
   description:
-    'NEET Biology coaching for Dwarka students by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections. Board Biology, Olympiad, Foundation. Call 88264-44334. Book FREE demo!',
+    'Top NEET coaching for Dwarka — Physics, Chemistry & Biology by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections. All sectors covered. Call 88264-44334. Free Demo!',
   keywords:
-    'NEET coaching Dwarka, NEET coaching Dwarka Sector 6, NEET coaching Dwarka Sector 10, NEET coaching Dwarka Sector 12, biology coaching Dwarka, NEET tuition Dwarka, NEET coaching Palam, Board Biology, CBSE Biology, Biology Olympiad, NBO, IBO, Class 11 Biology Dwarka, Class 12 Biology Dwarka, Foundation Biology',
+    'NEET coaching Dwarka, neet classes Dwarka, neet institute Dwarka, physics chemistry biology coaching Dwarka, NEET coaching Dwarka Sector 6, NEET coaching Dwarka Sector 10, NEET coaching Dwarka Sector 12, biology coaching Dwarka, NEET tuition Dwarka, NEET coaching Palam, Board Biology, CBSE Biology, Biology Olympiad, NBO, IBO, Class 11 Biology Dwarka, Class 12 Biology Dwarka, Foundation Biology',
   openGraph: {
     title: 'Best NEET Coaching in Dwarka | All Sectors Covered',
     description:
