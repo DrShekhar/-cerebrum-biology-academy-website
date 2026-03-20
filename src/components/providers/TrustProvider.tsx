@@ -214,8 +214,10 @@ function FloatingTrustIndicators() {
     }
   }, [isVisible, hasAutoHidden])
 
-  if (!isVisible) return null
+  // Floating trust badges removed — cluttered the UI and overlapped content
+  return null
 
+  /* eslint-disable no-unreachable */
   const trustIndicators = [
     {
       icon: Star,
@@ -224,38 +226,12 @@ function FloatingTrustIndicators() {
       color: 'text-yellow-600',
       bgColor: 'bg-yellow-50',
     },
-    {
-      icon: CheckCircle,
-      value: `${metrics.successRate}%`,
-      label: 'Success Rate',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-    },
-    {
-      icon: Users,
-      value: `${Math.floor(metrics.totalStudents / 1000)}K+`,
-      label: 'Students',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-    },
   ]
 
   return (
-    <div className="fixed right-1 top-1/3 transform -translate-y-1/2 z-20 space-y-1.5 hidden lg:block animate-fade-in-right">
+    <div className="hidden">
       {trustIndicators.map((indicator, index) => (
-        <div
-          key={indicator.label}
-          className={`${indicator.bgColor} border border-gray-200 rounded-lg p-2 shadow-md backdrop-blur-sm bg-opacity-95 animate-fade-in-right`}
-          style={{ animationDelay: `${index * 100}ms` }}
-        >
-          <div className="flex items-center space-x-1.5">
-            <indicator.icon className={`w-3 h-3 ${indicator.color}`} />
-            <div>
-              <div className={`font-bold ${indicator.color} text-xs`}>{indicator.value}</div>
-              <div className="text-[10px] text-gray-600">{indicator.label}</div>
-            </div>
-          </div>
-        </div>
+        <div key={indicator.label}></div>
       ))}
 
       {/* Trust Level Indicator */}
