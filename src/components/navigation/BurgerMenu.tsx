@@ -280,7 +280,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
               <div className="space-y-2">
                 {/* All Courses - Prominent Button */}
                 <Link
-                  href="/courses"
+                  href="/pricing"
                   onClick={handleLinkClick}
                   className="flex items-center justify-center gap-2 p-4 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all shadow-md hover:shadow-lg text-base font-semibold"
                 >
