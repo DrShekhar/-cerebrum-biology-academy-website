@@ -106,11 +106,11 @@ export const rateLimiters = {
       })
     : null,
 
-  // Demo booking - moderate limits
+  // Demo booking - high limit to never block leads
   demoBooking: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(3, '1 h'),
+        limiter: Ratelimit.slidingWindow(1000, '1 h'),
         analytics: true,
         prefix: 'ratelimit:demo:booking',
       })
