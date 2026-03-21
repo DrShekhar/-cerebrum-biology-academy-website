@@ -7,7 +7,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'noida',
     cityName: 'Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Noida | Best NEET Biology Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Noida | Best NEET Biology Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Join the best biology classes in Noida for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. Online & Offline options. Book free demo!',
     heroTitle: 'Best Biology Classes in Noida',
@@ -83,7 +83,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Gurgaon | Best NEET Coaching Gurugram | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Gurgaon | Best NEET Coaching Gurugram | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Gurgaon with offline center in Sector 51. AIIMS faculty, 98% success rate. NEET & Board prep. Book free demo at M2K Corporate Park!',
     heroTitle: 'Best Biology Classes in Gurgaon',
@@ -169,7 +169,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-51',
     cityName: 'Sector 51 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 51 Gurgaon | NEET Coaching Center | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Sector 51 Gurgaon | NEET Coaching Center | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Sector 51 Gurgaon at M2K Corporate Park. AIIMS faculty, 98% success rate. Walk-in for NEET & Board prep. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 51 Gurgaon',
@@ -238,7 +238,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-56',
     cityName: 'Sector 56 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 56 Gurgaon | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Sector 56 Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes for Sector 56 Gurgaon students. Center in nearby Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Sector 56 Gurgaon',
@@ -273,7 +273,7 @@ export const cityHubData: Record<string, CityHubData> = {
           'While we do not provide transport, our Sector 51 center is very accessible. Many Sector 56 students commute easily by car, bike, or shared auto.',
       },
       {
-        question: 'What makes Cerebrum Academy best for Sector 56 students?',
+        question: 'What makes Cerebrum Biology Academy best for Sector 56 students?',
         answer:
           'Proximity to Sector 51 center, AIIMS-trained faculty, small batch sizes of 15-20 students, and 98% NEET success rate make us the top choice.',
       },
@@ -293,7 +293,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-49',
     cityName: 'Sector 49 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 49 Gurgaon | NEET Coaching Near You | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Sector 49 Gurgaon | NEET Coaching Near You | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Sector 49 Gurgaon. Center in adjacent Sector 51 (3 min). AIIMS faculty, 98% success rate. Book free demo today!',
     heroTitle: 'Biology Classes for Sector 49 Gurgaon',
@@ -342,7 +342,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-57',
     cityName: 'Sector 57 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 57 Gurgaon | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Sector 57 Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes for Sector 57 Gurgaon students. Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for Sector 57 Gurgaon',
@@ -392,7 +392,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'dlf-gurgaon',
     cityName: 'DLF Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in DLF Gurgaon | NEET Coaching DLF Phase 1-5 | Cerebrum Academy',
+    metaTitle: 'Biology Classes in DLF Gurgaon | NEET Coaching DLF Phase 1-5 | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for DLF Phase 1, 2, 3, 4, 5 Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'Biology Classes for DLF Gurgaon Students',
@@ -447,7 +447,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'golf-course-road-gurgaon',
     cityName: 'Golf Course Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes on Golf Course Road Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes on Golf Course Road Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes near Golf Course Road Gurgaon. Center on Golf Course Extension Road Sector 51. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes near Golf Course Road Gurgaon',
@@ -502,7 +502,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'sohna-road-gurgaon',
     cityName: 'Sohna Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes on Sohna Road Gurgaon | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes on Sohna Road Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes for Sohna Road Gurgaon students. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'Biology Classes for Sohna Road Gurgaon',
@@ -555,7 +555,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'mg-road-gurgaon',
     cityName: 'MG Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes near MG Road Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes near MG Road Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for MG Road Gurgaon students. Center in Sector 51. AIIMS faculty, 98% success rate. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for MG Road Gurgaon Students',
@@ -604,7 +604,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'palam-vihar-gurgaon',
     cityName: 'Palam Vihar Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Palam Vihar Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Palam Vihar Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Palam Vihar Gurgaon. Center in Sector 51 or join online. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for Palam Vihar Gurgaon',
@@ -653,7 +653,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'south-city-gurgaon',
     cityName: 'South City Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in South City Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in South City Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for South City 1 & 2 Gurgaon. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'Biology Classes for South City Gurgaon',
@@ -702,7 +702,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'nirvana-country-gurgaon',
     cityName: 'Nirvana Country Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Nirvana Country Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Nirvana Country Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Nirvana Country Gurgaon residents. Center in Sector 51 (8 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for Nirvana Country Gurgaon',
@@ -755,7 +755,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Best NEET Coaching in Gurgaon | Top NEET Classes Gurugram | Cerebrum Academy',
+    metaTitle: 'Best NEET Coaching in Gurgaon | Top NEET Classes Gurugram | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Gurgaon with center in Sector 51. AIIMS-trained Dr. Shekhar Singh, 98% success rate. Class 11, 12 & Dropper batches. Call 88264-44334!',
     heroTitle: 'Best NEET Coaching in Gurgaon',
@@ -819,7 +819,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-51',
     cityName: 'Sector 51 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 51 Gurgaon | Best NEET Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 51 Gurgaon | Best NEET Classes | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET coaching at M2K Corporate Park, Sector 51 Gurgaon. AIIMS faculty Dr. Shekhar Singh. 98% success. Class 11, 12, Droppers. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 51 Gurgaon',
@@ -876,7 +876,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-56',
     cityName: 'Sector 56 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching near Sector 56 Gurgaon | Best NEET Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching near Sector 56 Gurgaon | Best NEET Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 56 Gurgaon students. Center in Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 56 Gurgaon',
@@ -924,7 +924,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-49',
     cityName: 'Sector 49 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 49 Gurgaon | Eldeco Acacia | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 49 Gurgaon | Eldeco Acacia | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 49 Gurgaon, Eldeco Acacia, Uppal Southend. Center in Sector 51 (3 min). 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 49 Gurgaon',
@@ -1039,7 +1039,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-dlf-gurgaon',
     cityName: 'DLF Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in DLF Gurgaon | Phase 1-5 | Cyber City | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in DLF Gurgaon | Phase 1-5 | Cyber City | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for DLF Phase 1, 2, 3, 4, 5 Gurgaon. Center in Sector 51. AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'NEET Coaching for DLF Gurgaon Students',
@@ -1091,7 +1091,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-golf-course-road-gurgaon',
     cityName: 'Golf Course Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching on Golf Course Road Gurgaon | Magnolias Aralias | Cerebrum Academy',
+    metaTitle: 'NEET Coaching on Golf Course Road Gurgaon | Magnolias Aralias | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching near Golf Course Road Gurgaon. DLF Magnolias, Aralias, Camellias, Palm Springs. Center in Sector 51. Call 88264-44334!',
     heroTitle: 'NEET Coaching near Golf Course Road Gurgaon',
@@ -1143,7 +1143,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-sohna-road-gurgaon',
     cityName: 'Sohna Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching on Sohna Road Gurgaon | Central Park Vatika | Cerebrum Academy',
+    metaTitle: 'NEET Coaching on Sohna Road Gurgaon | Central Park Vatika | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sohna Road Gurgaon. Central Park, Vatika City, BPTP, Bestech. Center in Sector 51 (10 min). Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sohna Road Gurgaon',
@@ -1195,7 +1195,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-south-city-gurgaon',
     cityName: 'South City Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in South City Gurgaon | South City 1 & 2 | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in South City Gurgaon | South City 1 & 2 | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for South City 1 & 2 Gurgaon students. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching for South City Gurgaon',
@@ -1244,7 +1244,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-nirvana-country-gurgaon',
     cityName: 'Nirvana Country Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Nirvana Country Gurgaon | The Close | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Nirvana Country Gurgaon | The Close | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Nirvana Country, The Close South/North Gurgaon. Center in Sector 51 (8 min). AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Nirvana Country Gurgaon',
@@ -1295,7 +1295,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'faridabad',
     cityName: 'Faridabad',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Faridabad | Best NEET Biology Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Faridabad | Best NEET Biology Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Faridabad for NEET & Boards. AIIMS-trained faculty, 98% success rate. Online classes + nearby Delhi centers. Book free demo!',
     heroTitle: 'Best Biology Classes in Faridabad',
@@ -1365,7 +1365,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Ghaziabad | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Ghaziabad | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Ghaziabad for NEET preparation. AIIMS faculty, 98% success rate. Online + Delhi offline options. Book free demo today!',
     heroTitle: 'Best Biology Classes in Ghaziabad',
@@ -1422,7 +1422,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'indirapuram',
     cityName: 'Indirapuram',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Indirapuram | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Indirapuram | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Indirapuram for NEET preparation. AIIMS faculty, 98% success rate. Online + Rohini offline options. Book free demo: 88264-44334!',
     heroTitle: 'Best Biology Classes in Indirapuram',
@@ -1483,7 +1483,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'crossings-republik',
     cityName: 'Crossings Republik',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Crossings Republik | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Crossings Republik | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Crossings Republik for NEET preparation. AIIMS faculty, 98% success rate. Online + Rohini offline options. Book free demo today!',
     heroTitle: 'Best Biology Classes in Crossings Republik',
@@ -1544,7 +1544,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'manesar',
     cityName: 'Manesar',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Manesar | NEET Coaching Near IMT | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Manesar | NEET Coaching Near IMT | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Manesar for NEET preparation. Closest center in Gurgaon Sector 51 (10 km). AIIMS faculty, 98% success. Book free demo!',
     heroTitle: 'Best Biology Classes in Manesar',
@@ -1594,7 +1594,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rewari',
     cityName: 'Rewari',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Rewari | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Rewari | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Rewari for NEET & Boards. AIIMS-trained faculty, 98% success rate. Online classes available. Book free demo today!',
     heroTitle: 'Best Biology Classes in Rewari',
@@ -1649,7 +1649,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'mahendragarh',
     cityName: 'Mahendragarh',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Mahendragarh | NEET Coaching Online | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Mahendragarh | NEET Coaching Online | Cerebrum Biology Academy',
     metaDescription:
       'Best online biology classes for Mahendragarh students. AIIMS-trained faculty, 98% success rate. NEET & Board preparation. Book free demo!',
     heroTitle: 'Best Biology Classes in Mahendragarh',
@@ -1794,7 +1794,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini',
     cityName: 'Rohini',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Rohini | Best NEET Coaching DC Chauk | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Rohini | Best NEET Coaching DC Chauk | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Rohini at Vikas Surya Tower, DC Chauk. AIIMS faculty, 98% success rate. Near Metro. Book free demo class!',
     heroTitle: 'Best Biology Classes in Rohini',
@@ -1875,7 +1875,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'dwarka',
     cityName: 'Dwarka',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Dwarka | Best NEET Coaching Dwarka Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Dwarka | Best NEET Coaching Dwarka Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Dwarka, Delhi for NEET & Boards. AIIMS faculty, 98% success rate. Near Dwarka Sector 21 Metro. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Dwarka',
@@ -1938,7 +1938,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'pitampura',
     cityName: 'Pitampura',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Pitampura | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Pitampura | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Pitampura, Delhi. Near Rohini center (10 mins). AIIMS faculty, 98% success. NEET & Board prep. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Pitampura',
@@ -1995,7 +1995,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'prashant-vihar',
     cityName: 'Prashant Vihar',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching Prashant Vihar | Biology Classes Rohini | Cerebrum Academy',
+    metaTitle: 'NEET Coaching Prashant Vihar | Biology Classes Rohini | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Prashant Vihar students. Near Rohini DC Chauk center. AIIMS faculty, 98% success. WhatsApp 88264-44334',
     heroTitle: 'Best NEET Coaching in Prashant Vihar',
@@ -2037,7 +2037,7 @@ export const cityHubData: Record<string, CityHubData> = {
           'Biology coaching at Rohini center is Rs 45,000 to Rs 75,000 per year. Online option is Rs 35,000 to Rs 60,000. Both include complete study material and test series. Call 88264-44334.',
       },
       {
-        question: 'Why should Prashant Vihar students choose Cerebrum Academy?',
+        question: 'Why should Prashant Vihar students choose Cerebrum Biology Academy?',
         answer:
           'With AIIMS-trained faculty, 98% success rate, and proximity to DC Chauk Rohini center, Cerebrum is the best choice for Prashant Vihar students. Our small batch sizes ensure personal attention.',
       },
@@ -2057,7 +2057,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'karol-bagh',
     cityName: 'Karol Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Karol Bagh | Best NEET Coaching Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Karol Bagh | Best NEET Coaching Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Karol Bagh, Delhi for NEET preparation. AIIMS-trained faculty, 98% success rate. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Karol Bagh',
@@ -2113,7 +2113,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'laxmi-nagar',
     cityName: 'Laxmi Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Laxmi Nagar | Best NEET Coaching East Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Laxmi Nagar | Best NEET Coaching East Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Laxmi Nagar, East Delhi. AIIMS faculty, 98% success rate. Online + offline options. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Laxmi Nagar',
@@ -2170,7 +2170,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'preet-vihar',
     cityName: 'Preet Vihar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Preet Vihar | NEET Coaching East Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Preet Vihar | NEET Coaching East Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Preet Vihar, East Delhi. AIIMS-trained faculty, 98% success. Online & offline options. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Preet Vihar',
@@ -2221,7 +2221,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'mayur-vihar',
     cityName: 'Mayur Vihar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Mayur Vihar | NEET Coaching East Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Mayur Vihar | NEET Coaching East Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Mayur Vihar, East Delhi. AIIMS faculty, 98% success rate. Near Noida border. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Mayur Vihar',
@@ -2272,7 +2272,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'uttam-nagar',
     cityName: 'Uttam Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Uttam Nagar | Affordable NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Uttam Nagar | Affordable NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Uttam Nagar, West Delhi. Affordable NEET coaching with AIIMS faculty. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Uttam Nagar',
@@ -2322,7 +2322,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'patel-nagar',
     cityName: 'Patel Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Patel Nagar | NEET Coaching Central Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Patel Nagar | NEET Coaching Central Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Patel Nagar, Central Delhi. AIIMS-trained faculty, 98% success. Near Karol Bagh. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Patel Nagar',
@@ -2372,7 +2372,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'vasant-kunj',
     cityName: 'Vasant Kunj',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Vasant Kunj | Best NEET Coaching South Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Vasant Kunj | Best NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Vasant Kunj, South Delhi. AIIMS faculty, 98% success. Near South Extension center. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Vasant Kunj',
@@ -2424,7 +2424,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'saket',
     cityName: 'Saket',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Saket | Best NEET Coaching South Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Saket | Best NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Saket, South Delhi. Near South Extension center (5 km). AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Saket',
@@ -2474,7 +2474,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'green-park',
     cityName: 'Green Park',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Green Park | NEET Coaching South Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Green Park | NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Green Park, South Delhi. Walking distance from South Extension. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Green Park',
@@ -2524,7 +2524,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'model-town',
     cityName: 'Model Town',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Model Town | NEET Coaching North Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Model Town | NEET Coaching North Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Model Town, North Delhi. Near Rohini center. AIIMS faculty, 98% success rate. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Model Town',
@@ -2574,7 +2574,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'shalimar-bagh',
     cityName: 'Shalimar Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Shalimar Bagh | NEET Coaching North Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Shalimar Bagh | NEET Coaching North Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Shalimar Bagh, North Delhi. 5 km from Rohini center. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Shalimar Bagh',
@@ -2624,7 +2624,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'ashok-vihar',
     cityName: 'Ashok Vihar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Ashok Vihar | NEET Coaching North Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Ashok Vihar | NEET Coaching North Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Ashok Vihar, North Delhi. Near Rohini center. AIIMS faculty, 98% success rate. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Ashok Vihar',
@@ -2674,7 +2674,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'nehru-place',
     cityName: 'Nehru Place',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Nehru Place | NEET Coaching South Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Nehru Place | NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes near Nehru Place, South Delhi. Close to South Extension center. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Nehru Place',
@@ -2725,7 +2725,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'defence-colony',
     cityName: 'Defence Colony',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Defence Colony | NEET Coaching South Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Defence Colony | NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Defence Colony, South Delhi. 3 km from South Extension. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Defence Colony',
@@ -2776,7 +2776,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Greater Kailash',
     stateName: 'Delhi',
     metaTitle:
-      'Biology Classes in Greater Kailash | Best NEET Coaching GK Delhi | Cerebrum Academy',
+      'Biology Classes in Greater Kailash | Best NEET Coaching GK Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Greater Kailash (GK-I, GK-II), South Delhi. AIIMS faculty, 98% success. DPS GK students. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Greater Kailash',
@@ -2839,7 +2839,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'hauz-khas',
     cityName: 'Hauz Khas',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Hauz Khas | NEET Coaching Near IIT Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Hauz Khas | NEET Coaching Near IIT Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Hauz Khas, near IIT Delhi. Premier coaching hub location. AIIMS faculty, 98% success. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Hauz Khas',
@@ -2869,7 +2869,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is Hauz Khas good for NEET coaching?',
         answer:
-          "Hauz Khas is Delhi's premier coaching hub near IIT. Cerebrum Academy serves this area with premium NEET biology coaching. Our South Extension center + online options available. Call 88264-44334.",
+          "Hauz Khas is Delhi's premier coaching hub near IIT. Cerebrum Biology Academy serves this area with premium NEET biology coaching. Our South Extension center + online options available. Call 88264-44334.",
       },
       {
         question: 'How far is Cerebrum from Hauz Khas Metro?',
@@ -2897,7 +2897,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'lajpat-nagar',
     cityName: 'Lajpat Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Lajpat Nagar | Best NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Lajpat Nagar | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Lajpat Nagar, South Delhi. Central location, metro connected. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Lajpat Nagar',
@@ -2955,7 +2955,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'malviya-nagar',
     cityName: 'Malviya Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Malviya Nagar | Affordable NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Malviya Nagar | Affordable NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Malviya Nagar, South Delhi. Affordable quality coaching. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Malviya Nagar',
@@ -3012,7 +3012,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'cr-park',
     cityName: 'CR Park',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in CR Park | NEET Coaching Chittaranjan Park | Cerebrum Academy',
+    metaTitle: 'Biology Classes in CR Park | NEET Coaching Chittaranjan Park | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in CR Park (Chittaranjan Park), South Delhi. Academic community focus. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in CR Park',
@@ -3070,7 +3070,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'kalkaji',
     cityName: 'Kalkaji',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Kalkaji | NEET Coaching Near Lotus Temple | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Kalkaji | NEET Coaching Near Lotus Temple | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Kalkaji, South Delhi. Near Kalkaji Temple & Lotus Temple. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Kalkaji',
@@ -3126,7 +3126,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rk-puram',
     cityName: 'RK Puram',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in RK Puram | NEET Coaching All Sectors | Cerebrum Academy',
+    metaTitle: 'Biology Classes in RK Puram | NEET Coaching All Sectors | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in RK Puram (Sectors 1-13), South Delhi. Serving govt colony families. DPS RKP students. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in RK Puram',
@@ -3189,7 +3189,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'vasant-vihar',
     cityName: 'Vasant Vihar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Vasant Vihar | Premium NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Vasant Vihar | Premium NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Vasant Vihar, South Delhi. Elite locality, embassy area. Vasant Valley students. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Vasant Vihar',
@@ -3252,7 +3252,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'sarojini-nagar',
     cityName: 'Sarojini Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Sarojini Nagar | NEET Coaching Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Sarojini Nagar | NEET Coaching Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Sarojini Nagar for govt quarters residents. NEET & Board prep with AIIMS faculty. Affordable fees. Call 88264-44334 for demo class.',
     heroTitle: 'Best Biology Classes in Sarojini Nagar',
@@ -3302,7 +3302,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'lodhi-colony',
     cityName: 'Lodhi Colony',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Lodhi Colony | Premium NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Lodhi Colony | Premium NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Lodhi Colony for IAS/IPS families. Personalized NEET coaching near Lodhi Gardens. Expert AIIMS faculty. Call 88264-44334.',
     heroTitle: 'Premium Biology Classes in Lodhi Colony',
@@ -3352,7 +3352,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'moti-bagh',
     cityName: 'Moti Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Moti Bagh | NEET Coaching Govt Colony | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Moti Bagh | NEET Coaching Govt Colony | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Moti Bagh for govt officers families. NEET & Board preparation with AIIMS faculty. Near Bhikaji Cama Place. Call 88264-44334.',
     heroTitle: 'Best Biology Classes in Moti Bagh',
@@ -3452,7 +3452,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'jor-bagh',
     cityName: 'Jor Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Jor Bagh | Premium NEET Coaching Lutyens | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Jor Bagh | Premium NEET Coaching Lutyens | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Jor Bagh near Lodhi Gardens. Exclusive NEET coaching for diplomats and elite families. AIIMS faculty. Call 88264-44334.',
     heroTitle: 'Premium Biology Classes in Jor Bagh',
@@ -3502,7 +3502,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gulmohar-park',
     cityName: 'Gulmohar Park',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Gulmohar Park | Elite NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Gulmohar Park | Elite NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Elite biology classes in Gulmohar Park for celebrity and industrialist families. Premium NEET coaching with AIIMS faculty. Call 88264-44334 for consultation.',
     heroTitle: 'Elite Biology Classes in Gulmohar Park',
@@ -3552,7 +3552,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'munirka',
     cityName: 'Munirka',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Munirka | Affordable NEET Coaching Near JNU | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Munirka | Affordable NEET Coaching Near JNU | Cerebrum Biology Academy',
     metaDescription:
       'Affordable biology classes in Munirka near JNU. Best NEET coaching for serious aspirants. Student-friendly fees. Call 88264-44334 for enrollment.',
     heroTitle: 'Affordable Biology Classes in Munirka',
@@ -3652,7 +3652,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'east-of-kailash',
     cityName: 'East of Kailash',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in East of Kailash | NEET Coaching DPS EOK | Cerebrum Academy',
+    metaTitle: 'Biology Classes in East of Kailash | NEET Coaching DPS EOK | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in East of Kailash for DPS EOK students. Expert NEET coaching near Greater Kailash. AIIMS faculty. Call 88264-44334 for demo.',
     heroTitle: 'Best Biology Classes in East of Kailash',
@@ -3702,7 +3702,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'panchsheel-park',
     cityName: 'Panchsheel Park',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Panchsheel Park | Premium NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Panchsheel Park | Premium NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Panchsheel Park. Expert NEET coaching for upscale South Delhi families. Near GK & Chirag Delhi. Call 88264-44334.',
     heroTitle: 'Premium Biology Classes in Panchsheel Park',
@@ -3752,7 +3752,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'alaknanda',
     cityName: 'Alaknanda',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Alaknanda | NEET Coaching Near Nehru Place | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Alaknanda | NEET Coaching Near Nehru Place | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Alaknanda for NEET & Boards. Quality coaching near Nehru Place & Lotus Temple. Affordable fees. Call 88264-44334 for enrollment.',
     heroTitle: 'Best Biology Classes in Alaknanda',
@@ -3804,7 +3804,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'DPS Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for DPS Gurgaon Students | NEET Coaching Near DPS | Cerebrum Academy',
+      'Biology Classes for DPS Gurgaon Students | NEET Coaching Near DPS | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for DPS Gurgaon students (Sector 45 & 67C). NEET coaching in Sector 51 near DPS campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'Biology Classes for DPS Gurgaon Students',
@@ -3830,12 +3830,12 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     faqs: [
       {
-        question: 'Is Cerebrum Academy good for DPS Gurgaon students preparing for NEET?',
+        question: 'Is Cerebrum Biology Academy good for DPS Gurgaon students preparing for NEET?',
         answer:
           'Absolutely! Many DPS Gurgaon students from both Sector 45 and 67C campuses study with us. Our Sector 51 center is conveniently located 10-15 minutes from both DPS campuses. Our batch timings complement DPS school schedules.',
       },
       {
-        question: 'How far is Cerebrum Academy from DPS Gurgaon Sector 45?',
+        question: 'How far is Cerebrum Biology Academy from DPS Gurgaon Sector 45?',
         answer:
           'Our M2K Corporate Park center in Sector 51 is approximately 4 km from DPS Gurgaon Sector 45 - about 10-12 minutes drive. Many students come directly after school.',
       },
@@ -3928,7 +3928,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Pathways World School',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for Pathways World School | NEET Coaching Aravali Hills | Cerebrum Academy',
+      'Biology Classes for Pathways World School | NEET Coaching Aravali Hills | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Pathways World School (Aravali Hills) students. NEET coaching in Sector 51 Gurgaon. IB & CBSE compatible. Call 88264-44334!',
     heroTitle: 'Biology Classes for Pathways World School Students',
@@ -3989,7 +3989,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'GD Goenka Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for GD Goenka Students | NEET Coaching Sohna Road | Cerebrum Academy',
+      'Biology Classes for GD Goenka Students | NEET Coaching Sohna Road | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for GD Goenka World School students. NEET coaching in Sector 51 Gurgaon, near Sohna Road. AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for GD Goenka World School Students',
@@ -4014,7 +4014,7 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     faqs: [
       {
-        question: 'Is Cerebrum Academy suitable for GD Goenka students?',
+        question: 'Is Cerebrum Biology Academy suitable for GD Goenka students?',
         answer:
           "Absolutely! Many GD Goenka World School students study with us. Our teaching methodology complements the school's academic standards while focusing on NEET preparation.",
       },
@@ -4050,7 +4050,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Heritage School Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for Heritage School Students | NEET Coaching Sector 62 | Cerebrum Academy',
+      'Biology Classes for Heritage School Students | NEET Coaching Sector 62 | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Heritage Xperiential Learning School students. NEET coaching near Sector 62 Gurgaon. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Heritage School Students',
@@ -4111,7 +4111,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Amity Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for Amity Gurgaon Students | NEET Coaching Sector 46 | Cerebrum Academy',
+      'Biology Classes for Amity Gurgaon Students | NEET Coaching Sector 46 | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Amity International School Gurgaon students. NEET coaching in Sector 51, near Sector 46. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Amity International School Students',
@@ -4136,7 +4136,7 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     faqs: [
       {
-        question: 'How close is Cerebrum Academy to Amity International School?',
+        question: 'How close is Cerebrum Biology Academy to Amity International School?',
         answer:
           'Our Sector 51 center is just 3 km from Amity International School Sector 46 - approximately 10 minutes by road. This makes it very convenient for Amity students.',
       },
@@ -4172,7 +4172,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Scottish High Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for Scottish High Students | NEET Coaching Sushant Lok | Cerebrum Academy',
+      'Biology Classes for Scottish High Students | NEET Coaching Sushant Lok | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Scottish High International School students. NEET coaching in Sector 51 Gurgaon, near Sushant Lok. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Scottish High Students',
@@ -4233,7 +4233,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Suncity School Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for Suncity School Students | NEET Coaching Sector 54 | Cerebrum Academy',
+      'Biology Classes for Suncity School Students | NEET Coaching Sector 54 | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Suncity World School students. NEET coaching in Sector 51 Gurgaon, near Sector 54. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Suncity World School Students',
@@ -4294,7 +4294,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-tuition-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Tuition in Gurgaon | Best Biology Tutor Gurugram | Cerebrum Academy',
+    metaTitle: 'Biology Tuition in Gurgaon | Best Biology Tutor Gurugram | Cerebrum Biology Academy',
     metaDescription:
       'Best biology tuition in Gurgaon with offline center in Sector 51. AIIMS faculty for NEET & Board prep. Class 9-12 biology tutor. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Tuition in Gurgaon',
@@ -4355,7 +4355,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-tutor-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Best Biology Tutor in Gurgaon | AIIMS Faculty | NEET Expert | Cerebrum Academy',
+    metaTitle: 'Best Biology Tutor in Gurgaon | AIIMS Faculty | NEET Expert | Cerebrum Biology Academy',
     metaDescription:
       'Find the best biology tutor in Gurgaon for NEET & Boards. AIIMS-trained faculty at Sector 51 center. 98% success rate. Book demo: 88264-44334!',
     heroTitle: 'Best Biology Tutor in Gurgaon',
@@ -4415,7 +4415,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-tutor-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Best Biology Tutor in Gurugram 2026 | AIIMS Faculty | Cerebrum Academy',
+    metaTitle: 'Best Biology Tutor in Gurugram 2026 | AIIMS Faculty | Cerebrum Biology Academy',
     metaDescription:
       'Top biology tutor in Gurugram for NEET & Boards. AIIMS-trained faculty, 98% success rate. Class 9-12, NEET. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Best Biology Tutor in Gurugram',
@@ -4475,7 +4475,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'aiims-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'AIIMS Coaching in Gurugram 2026 | Medical Entrance Prep | Cerebrum Academy',
+    metaTitle: 'AIIMS Coaching in Gurugram 2026 | Medical Entrance Prep | Cerebrum Biology Academy',
     metaDescription:
       'Top AIIMS coaching in Gurugram for NEET-UG. AIIMS alumni faculty, 65+ AIIMS selections, 98% success. Medical entrance preparation. Call 88264-44334!',
     heroTitle: 'AIIMS Coaching in Gurugram',
@@ -4535,7 +4535,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-10th-boards-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Coaching for 10th Boards Gurgaon | CBSE Class 10 | Cerebrum Academy',
+    metaTitle: 'Biology Coaching for 10th Boards Gurgaon | CBSE Class 10 | Cerebrum Biology Academy',
     metaDescription:
       'Best biology coaching for Class 10 board exams in Gurgaon. CBSE, ICSE, Haryana Board. Strong foundation for NEET. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Biology Coaching for 10th Board Exams Gurgaon',
@@ -4595,7 +4595,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-9-biology-tuition-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 9 Biology Tuition in Gurugram 2026 | Foundation Course | Cerebrum Academy',
+    metaTitle: 'Class 9 Biology Tuition in Gurugram 2026 | Foundation Course | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 9 biology tuition in Gurugram. Build strong foundation for NEET. CBSE, ICSE curriculum. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Class 9 Biology Tuition in Gurugram',
@@ -4644,7 +4644,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-10-biology-tuition-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 10 Biology Tuition in Gurugram 2026 | Board + NEET Prep | Cerebrum Academy',
+    metaTitle: 'Class 10 Biology Tuition in Gurugram 2026 | Board + NEET Prep | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 10 biology tuition in Gurugram for boards and NEET foundation. CBSE, ICSE, Haryana Board. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Class 10 Biology Tuition in Gurugram',
@@ -4693,7 +4693,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-11-biology-tuition-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 11 Biology Tuition in Gurugram 2026 | NEET Foundation | Cerebrum Academy',
+    metaTitle: 'Class 11 Biology Tuition in Gurugram 2026 | NEET Foundation | Cerebrum Biology Academy',
     metaDescription:
       'Top Class 11 biology tuition in Gurugram for NEET preparation. AIIMS faculty, 98% results. Botany + Zoology. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 11 Biology Tuition in Gurugram',
@@ -4742,7 +4742,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-12-biology-tuition-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 12 Biology Tuition in Gurugram 2026 | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology Tuition in Gurugram 2026 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 12 biology tuition in Gurugram for boards and NEET. AIIMS faculty, 98% results. Intensive preparation. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 12 Biology Tuition in Gurugram',
@@ -4791,7 +4791,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-12th-boards-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Coaching for 12th Boards Gurgaon | Class 12 CBSE | Cerebrum Academy',
+    metaTitle: 'Biology Coaching for 12th Boards Gurgaon | Class 12 CBSE | Cerebrum Biology Academy',
     metaDescription:
       'Best biology coaching for Class 12 board exams in Gurgaon. CBSE, Haryana Board. Score 95%+ in boards while preparing for NEET. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Biology Coaching for 12th Board Exams Gurgaon',
@@ -4852,7 +4852,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Home Tuition Gurgaon | Best Alternative - Center Coaching | Cerebrum Academy',
+      'Biology Home Tuition Gurgaon | Best Alternative - Center Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Looking for biology home tuition in Gurgaon? Try our superior center-based coaching in Sector 51. Better resources, peer learning, 98% results. 88264-44334!',
     heroTitle: 'Biology Coaching Near Your Home in Gurgaon',
@@ -4914,7 +4914,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-11-neet-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 11 NEET Coaching Gurugram 2026 | Foundation Year | Cerebrum Academy',
+    metaTitle: 'Class 11 NEET Coaching Gurugram 2026 | Foundation Year | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 11 NEET coaching in Gurugram. Build strong foundation in Physics, Chemistry, Biology. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 11 NEET Coaching in Gurugram',
@@ -4974,7 +4974,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-12-neet-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 12 NEET Coaching Gurugram 2026 | Final Year Prep | Cerebrum Academy',
+    metaTitle: 'Class 12 NEET Coaching Gurugram 2026 | Final Year Prep | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 12 NEET coaching in Gurugram. Intensive preparation for NEET 2026. AIIMS faculty, daily tests, 98% results. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 12 NEET Coaching in Gurugram',
@@ -5035,7 +5035,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: '1-year-neet-course-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: '1 Year NEET Course Gurugram 2026 | Intensive Program | Cerebrum Academy',
+    metaTitle: '1 Year NEET Course Gurugram 2026 | Intensive Program | Cerebrum Biology Academy',
     metaDescription:
       'Best 1 year NEET course in Gurugram for Class 12 and dropper students. Complete syllabus coverage, 500+ tests, AIIMS faculty. Sector 51. Call 88264-44334!',
     heroTitle: '1 Year NEET Course in Gurugram',
@@ -5094,7 +5094,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: '2-year-neet-course-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: '2 Year NEET Course Gurugram 2026-27 | Class 11-12 Integrated | Cerebrum Academy',
+    metaTitle: '2 Year NEET Course Gurugram 2026-27 | Class 11-12 Integrated | Cerebrum Biology Academy',
     metaDescription:
       'Best 2 year NEET course in Gurugram for Class 11 students. Integrated school + NEET preparation. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
     heroTitle: '2 Year NEET Course in Gurugram',
@@ -5153,7 +5153,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: '6-month-neet-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: '6 Month NEET Coaching Gurugram 2026 | Crash Course | Cerebrum Academy',
+    metaTitle: '6 Month NEET Coaching Gurugram 2026 | Crash Course | Cerebrum Biology Academy',
     metaDescription:
       'Intensive 6 month NEET coaching in Gurugram. Fast-track revision and practice. For droppers and late starters. Sector 51 center. Call 88264-44334!',
     heroTitle: '6 Month NEET Coaching in Gurugram',
@@ -5213,7 +5213,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'weekend-neet-batch-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Weekend NEET Batch Gurugram 2026 | Saturday-Sunday Classes | Cerebrum Academy',
+    metaTitle: 'Weekend NEET Batch Gurugram 2026 | Saturday-Sunday Classes | Cerebrum Biology Academy',
     metaDescription:
       'Weekend NEET coaching in Gurugram for school students. Saturday-Sunday batches. Balance school and NEET prep. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Weekend NEET Batch in Gurugram',
@@ -5272,7 +5272,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'evening-batch-neet-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Evening Batch NEET Coaching Gurugram | After School | Cerebrum Academy',
+    metaTitle: 'Evening Batch NEET Coaching Gurugram | After School | Cerebrum Biology Academy',
     metaDescription:
       'Evening NEET coaching in Gurugram after school hours. 4 PM - 8 PM batches. Perfect for Class 11-12 students. Sector 51. Call 88264-44334!',
     heroTitle: 'Evening Batch NEET Coaching Gurugram',
@@ -5331,7 +5331,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'offline-neet-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Offline NEET Coaching Gurugram 2026 | Classroom Program | Cerebrum Academy',
+    metaTitle: 'Offline NEET Coaching Gurugram 2026 | Classroom Program | Cerebrum Biology Academy',
     metaDescription:
       'Best offline NEET coaching in Gurugram. In-person classroom teaching at Sector 51 center. AIIMS faculty, small batches, 98% results. Call 88264-44334!',
     heroTitle: 'Offline NEET Coaching in Gurugram',
@@ -5392,7 +5392,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'fiitjee-alternative-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'FIITJEE Alternative in Gurugram | Better for NEET Biology | Cerebrum Academy',
+    metaTitle: 'FIITJEE Alternative in Gurugram | Better for NEET Biology | Cerebrum Biology Academy',
     metaDescription:
       'Looking for FIITJEE alternative in Gurugram for NEET? Cerebrum offers specialized biology coaching with AIIMS faculty. 50% lower fees, 98% results. 88264-44334!',
     heroTitle: 'FIITJEE Alternative for NEET in Gurugram',
@@ -5451,7 +5451,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'narayana-alternative-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Narayana Alternative in Gurugram | Personal Attention | Cerebrum Academy',
+    metaTitle: 'Narayana Alternative in Gurugram | Personal Attention | Cerebrum Biology Academy',
     metaDescription:
       'Better than Narayana for NEET in Gurugram? Cerebrum offers small batches, personal attention, AIIMS faculty. No factory coaching. Call 88264-44334!',
     heroTitle: 'Narayana Alternative for NEET in Gurugram',
@@ -5510,7 +5510,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'physics-wallah-alternative-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Physics Wallah (PW) Alternative Gurugram | Offline Expert | Cerebrum Academy',
+    metaTitle: 'Physics Wallah (PW) Alternative Gurugram | Offline Expert | Cerebrum Biology Academy',
     metaDescription:
       'Looking for Physics Wallah alternative in Gurugram? Cerebrum offers offline classes with AIIMS faculty. Real classroom experience. Call 88264-44334!',
     heroTitle: 'Physics Wallah Alternative for NEET in Gurugram',
@@ -5569,7 +5569,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'unacademy-alternative-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Unacademy Alternative Gurugram | Real Classroom | Cerebrum Academy',
+    metaTitle: 'Unacademy Alternative Gurugram | Real Classroom | Cerebrum Biology Academy',
     metaDescription:
       'Better than Unacademy for NEET? Cerebrum offers real classroom coaching in Gurugram. No screen fatigue. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Unacademy Alternative for NEET in Gurugram',
@@ -5629,7 +5629,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-15',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 15 Gurgaon | Near HUDA Market | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 15 Gurgaon | Near HUDA Market | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 15 Gurgaon students. 15 min from our Sector 51 center. AIIMS faculty, 98% results. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 15 Gurgaon',
@@ -5668,7 +5668,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-17',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 17 Gurgaon | Old Gurgaon | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 17 Gurgaon | Old Gurgaon | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 17 Gurgaon students. Serving Old Gurgaon since 2014. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 17 Gurgaon',
@@ -5707,7 +5707,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-18',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 18 Gurgaon | Near Vyapar Kendra | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 18 Gurgaon | Near Vyapar Kendra | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 18 Gurgaon students. Near Vyapar Kendra. AIIMS faculty, 98% results. Sector 51 center. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 18 Gurgaon',
@@ -5746,7 +5746,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-40',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 40 Gurgaon | Near Huda City Centre | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 40 Gurgaon | Near Huda City Centre | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 40 Gurgaon. 10 min from Huda City Centre Metro. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 40 Gurgaon',
@@ -5785,7 +5785,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-42',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 42 Gurgaon | Near Medanta | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 42 Gurgaon | Near Medanta | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 42 Gurgaon students. Near Medanta Hospital. AIIMS faculty, 98% results. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 42 Gurgaon',
@@ -5824,7 +5824,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-44',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 44 Gurgaon | Premium Locality | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 44 Gurgaon | Premium Locality | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 44 Gurgaon. Premium coaching for premium locality. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 44 Gurgaon',
@@ -5863,7 +5863,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-46',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 46 Gurgaon | Near Paras Hospital | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 46 Gurgaon | Near Paras Hospital | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 46 Gurgaon. Near Paras Hospital. See doctors daily, become one yourself. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 46 Gurgaon',
@@ -5902,7 +5902,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-47',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 47 Gurgaon | Central Location | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 47 Gurgaon | Central Location | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 47 Gurgaon students. Centrally located. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 47 Gurgaon',
@@ -5941,7 +5941,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-48',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 48 Gurgaon | Near Vega School | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 48 Gurgaon | Near Vega School | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 48 Gurgaon. Vega School, Presidium students welcome. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 48 Gurgaon',
@@ -5980,7 +5980,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-50',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 50 Gurgaon | Near Lotus Valley | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 50 Gurgaon | Near Lotus Valley | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 50 Gurgaon. Lotus Valley, Ryan International students. 3 min walk to our center. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 50 Gurgaon',
@@ -6019,7 +6019,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-52',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 52 Gurgaon | Rapid Metro | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 52 Gurgaon | Rapid Metro | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 52 Gurgaon. Near Rapid Metro station. Easy commute, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 52 Gurgaon',
@@ -6058,7 +6058,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-53',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 53 Gurgaon | Golf Course Extension | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 53 Gurgaon | Golf Course Extension | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 53 Gurgaon on Golf Course Extension Road. Premium coaching, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 53 Gurgaon',
@@ -6097,7 +6097,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-54',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 54 Gurgaon | Near Golf Course Road | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 54 Gurgaon | Near Golf Course Road | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 54 Gurgaon. Near Golf Course Road. Premium location, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 54 Gurgaon',
@@ -6136,7 +6136,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-58',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 58 Gurgaon | Growing Locality | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 58 Gurgaon | Growing Locality | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 58 Gurgaon. Serving growing families in this developing sector. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 58 Gurgaon',
@@ -6176,7 +6176,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-manesar-gurgaon',
     cityName: 'Manesar',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Manesar Gurgaon 2026 | Industrial Hub | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Manesar Gurgaon 2026 | Industrial Hub | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Manesar students. Serving IMT Manesar, residential sectors. 25 min from Sector 51. Online + Offline. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Manesar Gurgaon',
@@ -6220,7 +6220,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-dwarka-expressway-gurgaon',
     cityName: 'Dwarka Expressway',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching Dwarka Expressway Gurgaon 2026 | SPR Road | Cerebrum Academy',
+    metaTitle: 'NEET Coaching Dwarka Expressway Gurgaon 2026 | SPR Road | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Dwarka Expressway residents. Sectors 99-115. Growing area, quality coaching. 20 min drive. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Dwarka Expressway Gurgaon',
@@ -6264,7 +6264,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-new-gurgaon',
     cityName: 'New Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in New Gurgaon 2026 | Sectors 80-115 | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in New Gurgaon 2026 | Sectors 80-115 | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for New Gurgaon (Sectors 80-115). Premium coaching for premium localities. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for New Gurgaon (Sectors 80-115)',
@@ -6308,7 +6308,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-spr-gurgaon',
     cityName: 'SPR Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching SPR Road Gurgaon 2026 | Southern Peripheral Road | Cerebrum Academy',
+    metaTitle: 'NEET Coaching SPR Road Gurgaon 2026 | Southern Peripheral Road | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for SPR Road Gurgaon students. Sectors 68-84. Easy expressway access. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for SPR Road Gurgaon',
@@ -6397,7 +6397,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'how-to-prepare-for-neet-in-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'How to Prepare for NEET in Gurugram 2026 | Complete Guide | Cerebrum Academy',
+    metaTitle: 'How to Prepare for NEET in Gurugram 2026 | Complete Guide | Cerebrum Biology Academy',
     metaDescription:
       'Complete guide on how to prepare for NEET in Gurugram. Study plan, coaching options, tips from toppers. Expert guidance from AIIMS faculty. 88264-44334!',
     heroTitle: 'How to Prepare for NEET in Gurugram - Complete Guide',
@@ -6583,7 +6583,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'girls-neet-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Girls NEET Coaching Gurugram 2026 | Safe Environment | Cerebrum Academy',
+    metaTitle: 'Girls NEET Coaching Gurugram 2026 | Safe Environment | Cerebrum Biology Academy',
     metaDescription:
       'Safe and supportive NEET coaching for girls in Gurugram. Female faculty available, women-friendly environment. 60% female students. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Girls in Gurugram',
@@ -6723,7 +6723,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'pcb-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'PCB Coaching Gurugram 2026 | Physics Chemistry Biology | Cerebrum Academy',
+    metaTitle: 'PCB Coaching Gurugram 2026 | Physics Chemistry Biology | Cerebrum Biology Academy',
     metaDescription:
       'Complete PCB coaching in Gurugram for NEET. Physics, Chemistry, Biology by expert faculty. Integrated preparation. Sector 51. Call 88264-44334!',
     heroTitle: 'PCB Coaching for NEET in Gurugram',
@@ -6772,7 +6772,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-11-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Class 11 Biology Coaching Gurgaon | NEET Foundation | Cerebrum Academy',
+    metaTitle: 'Class 11 Biology Coaching Gurgaon | NEET Foundation | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 11 biology coaching in Gurgaon. Build strong NEET foundation with AIIMS faculty. School + NEET integrated program. Sector 51 center. 88264-44334!',
     heroTitle: 'Class 11 Biology Coaching in Gurgaon',
@@ -6832,7 +6832,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-12-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Class 12 Biology Coaching Gurgaon | Board + NEET Prep | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology Coaching Gurgaon | Board + NEET Prep | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 12 biology coaching in Gurgaon for Boards and NEET. Dual focus program. AIIMS faculty at Sector 51. 98% success rate. Call 88264-44334!',
     heroTitle: 'Class 12 Biology Coaching in Gurgaon',
@@ -6892,7 +6892,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-9-10-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Class 9 & 10 Biology Coaching Gurgaon | Foundation Program | Cerebrum Academy',
+    metaTitle: 'Class 9 & 10 Biology Coaching Gurgaon | Foundation Program | Cerebrum Biology Academy',
     metaDescription:
       'Build strong biology foundation in Class 9-10 for future NEET success. School curriculum + competitive exam prep in Gurgaon Sector 51. Call 88264-44334!',
     heroTitle: 'Class 9 & 10 Biology Foundation in Gurgaon',
@@ -6952,7 +6952,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Manav Rachna Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for Manav Rachna Students | NEET Coaching Faridabad | Cerebrum Academy',
+      'Biology Classes for Manav Rachna Students | NEET Coaching Faridabad | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Manav Rachna School students. NEET coaching accessible from Faridabad & Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Manav Rachna Students',
@@ -7013,7 +7013,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Shikshanter Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for Shikshanter Students | NEET Coaching Sector 40 | Cerebrum Academy',
+      'Biology Classes for Shikshanter Students | NEET Coaching Sector 40 | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Shikshanter School Gurgaon students. NEET coaching in Sector 51, near Sector 40. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Shikshanter School Students',
@@ -7074,7 +7074,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-rps-gurgaon',
     cityName: 'RPS International Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for RPS International Students | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes for RPS International Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for RPS International School Gurgaon students. NEET coaching in Sector 51. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for RPS International School Students',
@@ -7135,7 +7135,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Euro International Gurgaon',
     stateName: 'Haryana',
     metaTitle:
-      'Biology Classes for Euro International Students | NEET Coaching Gurgaon | Cerebrum Academy',
+      'Biology Classes for Euro International Students | NEET Coaching Gurgaon | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Euro International School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Euro International School Students',
@@ -7195,7 +7195,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-ryan-gurgaon',
     cityName: 'Ryan International Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Ryan International Students | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes for Ryan International Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Ryan International School Gurgaon. NEET coaching in Sector 51 with AIIMS faculty. Call 88264-44334 for free demo!',
     heroTitle: 'Biology Classes for Ryan International School Students',
@@ -7255,7 +7255,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-dav-gurgaon',
     cityName: 'DAV Public School Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for DAV Public School Students | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes for DAV Public School Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for DAV Public School Gurgaon students. NEET coaching in Sector 51. AIIMS faculty, proven results. Call 88264-44334!',
     heroTitle: 'Biology Classes for DAV Public School Students',
@@ -7315,7 +7315,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-lotus-valley-gurgaon',
     cityName: 'Lotus Valley Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Lotus Valley Students | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes for Lotus Valley Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Lotus Valley International School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Lotus Valley International School Students',
@@ -7375,7 +7375,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-blue-bells-gurgaon',
     cityName: 'Blue Bells Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Blue Bells School Students | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes for Blue Bells School Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Blue Bells Model School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Blue Bells School Students',
@@ -7435,7 +7435,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-droppers-batch-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Droppers Batch Gurgaon | Repeater Coaching | Cerebrum Academy',
+    metaTitle: 'NEET Droppers Batch Gurgaon | Repeater Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Dedicated NEET droppers batch in Gurgaon. Gap year coaching with intensive preparation. Proven results for repeaters. Sector 51 center. Call 88264-44334!',
     heroTitle: 'NEET Droppers Batch in Gurgaon',
@@ -8034,7 +8034,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-coaching-cbse-students',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'Biology Coaching for CBSE Students | Class 11 & 12 | Cerebrum Academy',
+    metaTitle: 'Biology Coaching for CBSE Students | Class 11 & 12 | Cerebrum Biology Academy',
     metaDescription:
       'Expert biology coaching for CBSE students Class 11 & 12. Board exam + NEET preparation. 15+ years experience, 15,000+ students coached. Call 88264-44334!',
     heroTitle: 'Biology Coaching for CBSE Students',
@@ -8094,7 +8094,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-with-school',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching with School | Balance Studies | Cerebrum Academy',
+    metaTitle: 'NEET Coaching with School | Balance Studies | Cerebrum Biology Academy',
     metaDescription:
       'Perfect NEET coaching alongside school. Flexible batches for Class 11 & 12. 98% success rate balancing board exams + NEET. Call 88264-44334 for schedule!',
     heroTitle: 'NEET Coaching with School',
@@ -8214,7 +8214,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'is-coaching-necessary-for-neet',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'Is Coaching Necessary for NEET? | Expert Analysis | Cerebrum Academy',
+    metaTitle: 'Is Coaching Necessary for NEET? | Expert Analysis | Cerebrum Biology Academy',
     metaDescription:
       'Honest analysis: Is NEET coaching necessary? Compare self-study vs coaching. Success rates, benefits, alternatives. 15+ years experience, 15,000+ students. Call 88264-44334!',
     heroTitle: 'Is Coaching Necessary for NEET?',
@@ -8274,7 +8274,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'online-vs-offline-neet-coaching',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'Online vs Offline NEET Coaching | Which is Better? | Cerebrum Academy',
+    metaTitle: 'Online vs Offline NEET Coaching | Which is Better? | Cerebrum Biology Academy',
     metaDescription:
       'Compare online vs offline NEET coaching. Pros, cons, success rates, costs. Both options available with AIIMS faculty. 15+ years experience. Call 88264-44334!',
     heroTitle: 'Online vs Offline NEET Coaching',
@@ -8335,7 +8335,7 @@ export const cityHubData: Record<string, CityHubData> = {
     cityName: 'Delhi',
     stateName: 'Delhi',
     metaTitle:
-      'Affordable NEET Coaching Delhi | Budget-Friendly Biology Classes | Cerebrum Academy',
+      'Affordable NEET Coaching Delhi | Budget-Friendly Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Find the most affordable NEET coaching in Delhi without compromising quality. AIIMS faculty at budget-friendly fees. 4 centers across Delhi. EMI options available. Call 88264-44334!',
     heroTitle: 'Affordable NEET Coaching in Delhi',
@@ -8401,7 +8401,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-with-hostel-delhi',
     cityName: 'Delhi',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching with Hostel Delhi | Residential NEET Preparation | Cerebrum Academy',
+    metaTitle: 'NEET Coaching with Hostel Delhi | Residential NEET Preparation | Cerebrum Biology Academy',
     metaDescription:
       'NEET coaching with nearby hostel facilities in Delhi. Safe PG accommodations near all 4 centers - Rohini, Gurugram, South Extension, Green Park. Call 88264-44334 for hostel assistance!',
     heroTitle: 'NEET Coaching with Hostel Facilities in Delhi',
@@ -8466,7 +8466,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'one-to-one-biology-coaching',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: '1 to 1 Biology Coaching NEET | Personal Biology Tutor | Cerebrum Academy',
+    metaTitle: '1 to 1 Biology Coaching NEET | Personal Biology Tutor | Cerebrum Biology Academy',
     metaDescription:
       'Premium 1-on-1 biology coaching for NEET with Dr. Shekhar C Singh. Personalized attention, customized study plans, flexible timings. Online & offline options. Call 88264-44334!',
     heroTitle: '1-to-1 Personal Biology Coaching for NEET',
@@ -8532,7 +8532,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-working-students',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching for Working Students | Flexible Timing Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching for Working Students | Flexible Timing Classes | Cerebrum Biology Academy',
     metaDescription:
       'NEET coaching designed for working professionals & job holders. Weekend batches, evening classes, online options. Balance work & NEET prep. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Working Students & Professionals',
@@ -8598,7 +8598,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-dropper-crash-course-2025',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'NEET Dropper Crash Course 2027 | Intensive 3-6 Month Program | Cerebrum Academy',
+    metaTitle: 'NEET Dropper Crash Course 2027 | Intensive 3-6 Month Program | Cerebrum Biology Academy',
     metaDescription:
       'Last-minute NEET 2027 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 4 centers in Delhi. Call 88264-44334!',
     heroTitle: 'NEET 2027 Crash Course for Droppers',
@@ -8665,7 +8665,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'noida-sector-137',
     cityName: 'Noida Sector 137',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Noida Sector 137 | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Noida Sector 137 | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Noida Sector 137. Online & offline options. AIIMS faculty, 98% success rate. Call for NEET preparation!',
     heroTitle: 'Biology Classes in Noida Sector 137',
@@ -8724,7 +8724,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'noida-sector-62',
     cityName: 'Noida Sector 62',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Noida Sector 62 | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Noida Sector 62 | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Noida Sector 62. Online & offline options. AIIMS faculty, 98% success rate. Call for NEET preparation!',
     heroTitle: 'Biology Classes in Noida Sector 62',
@@ -8783,7 +8783,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'greater-noida',
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Greater Noida | Best NEET Biology Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Greater Noida | Best NEET Biology Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Greater Noida for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. Online & hybrid classes available. Book free demo!',
     heroTitle: 'Best Biology Classes in Greater Noida',
@@ -8863,7 +8863,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'greater-noida-west',
     cityName: 'Greater Noida West',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Coaching in Greater Noida West | Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Greater Noida West | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Greater Noida West. Online classes with AIIMS faculty, 98% success rate. Book free demo!',
     heroTitle: 'NEET Coaching in Greater Noida West',
@@ -8923,7 +8923,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'vaishali-ghaziabad',
     cityName: 'Vaishali Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Coaching in Vaishali Ghaziabad | Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Vaishali Ghaziabad | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Vaishali Ghaziabad. Online & offline options. AIIMS faculty, 98% success rate. Book free demo!',
     heroTitle: 'NEET Coaching in Vaishali Ghaziabad',
@@ -8982,7 +8982,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'vasundhara-ghaziabad',
     cityName: 'Vasundhara Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Coaching in Vasundhara Ghaziabad | Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Vasundhara Ghaziabad | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Vasundhara Ghaziabad. Online & offline options. AIIMS faculty, 98% success rate. Book free demo!',
     heroTitle: 'NEET Coaching in Vasundhara Ghaziabad',
@@ -9040,7 +9040,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'kaushambi',
     cityName: 'Kaushambi',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Coaching in Kaushambi | Biology Classes Ghaziabad | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Kaushambi | Biology Classes Ghaziabad | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Kaushambi. Online & offline options. AIIMS faculty, 98% success rate. Book free demo!',
     heroTitle: 'NEET Coaching in Kaushambi',
@@ -9100,7 +9100,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'punjabi-bagh',
     cityName: 'Punjabi Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Punjabi Bagh | NEET Coaching Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Punjabi Bagh | NEET Coaching Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Punjabi Bagh. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'Biology Classes in Punjabi Bagh',
@@ -9159,7 +9159,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'paschim-vihar',
     cityName: 'Paschim Vihar',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Paschim Vihar | Biology Classes Delhi | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Paschim Vihar | Biology Classes Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Paschim Vihar. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Paschim Vihar',
@@ -9217,7 +9217,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rajouri-garden',
     cityName: 'Rajouri Garden',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Rajouri Garden | Biology Classes Delhi | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Rajouri Garden | Biology Classes Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Rajouri Garden. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Rajouri Garden',
@@ -9276,7 +9276,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'tilak-nagar',
     cityName: 'Tilak Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Tilak Nagar | NEET Coaching Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Tilak Nagar | NEET Coaching Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Tilak Nagar. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'Biology Classes in Tilak Nagar',
@@ -9336,7 +9336,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'nirman-vihar',
     cityName: 'Nirman Vihar',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Nirman Vihar | Biology Classes Delhi | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Nirman Vihar | Biology Classes Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Nirman Vihar. Online & offline options. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Nirman Vihar',
@@ -9395,7 +9395,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'dc-chowk-rohini',
     cityName: 'DC Chowk Rohini',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching at DC Chowk Rohini | Biology Center Sector 9 | Cerebrum Academy',
+    metaTitle: 'NEET Coaching at DC Chowk Rohini | Biology Center Sector 9 | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching at DC Chowk Rohini center. AIIMS faculty, 98% success rate. Walk-in at Sector 9! Call 88264-44334',
     heroTitle: 'NEET Coaching at DC Chowk Rohini',
@@ -9454,7 +9454,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-west',
     cityName: 'Rohini West',
     stateName: 'Delhi',
-    metaTitle: 'Biology Tuition in Rohini West | NEET Coaching Delhi | Cerebrum Academy',
+    metaTitle: 'Biology Tuition in Rohini West | NEET Coaching Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology tuition in Rohini West. Center at DC Chowk Sector 9. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'Biology Tuition in Rohini West',
@@ -9512,7 +9512,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-3',
     cityName: 'Rohini Sector 3',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Rohini Sector 3 | Biology Center | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Rohini Sector 3 | Biology Center | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Rohini Sector 3. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Rohini Sector 3',
@@ -9569,7 +9569,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-5',
     cityName: 'Rohini Sector 5',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Rohini Sector 5 | Biology Center | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Rohini Sector 5 | Biology Center | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Rohini Sector 5. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Rohini Sector 5',
@@ -9624,7 +9624,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-7',
     cityName: 'Rohini Sector 7',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Rohini Sector 7 | Biology Center | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Rohini Sector 7 | Biology Center | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Rohini Sector 7. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Rohini Sector 7',
@@ -9679,7 +9679,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-8',
     cityName: 'Rohini Sector 8',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Rohini Sector 8 | Biology Center | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Rohini Sector 8 | Biology Center | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Rohini Sector 8. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Rohini Sector 8',
@@ -9734,7 +9734,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-11',
     cityName: 'Rohini Sector 11',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Rohini Sector 11 | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Rohini Sector 11 | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Rohini Sector 11. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Rohini Sector 11',
@@ -9790,7 +9790,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-13',
     cityName: 'Rohini Sector 13',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Rohini Sector 13 | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Rohini Sector 13 | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Rohini Sector 13. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Rohini Sector 13',
@@ -9846,7 +9846,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-14',
     cityName: 'Rohini Sector 14',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Rohini Sector 14 | Biology Center | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Rohini Sector 14 | Biology Center | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Rohini Sector 14. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Rohini Sector 14',
@@ -9902,7 +9902,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-15',
     cityName: 'Rohini Sector 15',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Rohini Sector 15 | Biology Center | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Rohini Sector 15 | Biology Center | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Rohini Sector 15. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Rohini Sector 15',
@@ -9958,7 +9958,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-16',
     cityName: 'Rohini Sector 16',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Rohini Sector 16 | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Rohini Sector 16 | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Rohini Sector 16. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Rohini Sector 16',
@@ -10014,7 +10014,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-22',
     cityName: 'Rohini Sector 22',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching in Rohini Sector 22 | Biology Center | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Rohini Sector 22 | Biology Center | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Rohini Sector 22. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Rohini Sector 22',
@@ -10070,7 +10070,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'rohini-sector-24',
     cityName: 'Rohini Sector 24',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Rohini Sector 24 | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Rohini Sector 24 | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Rohini Sector 24. Center at DC Chowk. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Rohini Sector 24',
@@ -10127,7 +10127,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-43',
     cityName: 'Sector 43 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 43 Gurgaon | Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 43 Gurgaon | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 43 Gurgaon. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 43 Gurgaon',
@@ -10184,7 +10184,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-45',
     cityName: 'Sector 45 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 45 Gurgaon | DPS Area Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 45 Gurgaon | DPS Area Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching near Sector 45 Gurgaon & DPS. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 45 Gurgaon',
@@ -10242,7 +10242,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-55',
     cityName: 'Sector 55 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 55 Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Sector 55 Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Sector 55 Gurgaon. Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 55 Gurgaon',
@@ -10299,7 +10299,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-60',
     cityName: 'Sector 60 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 60 Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Sector 60 Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Sector 60 Gurgaon. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 60 Gurgaon',
@@ -10356,7 +10356,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-61',
     cityName: 'Sector 61 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 61 Gurgaon | Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 61 Gurgaon | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 61 Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 61 Gurgaon',
@@ -10413,7 +10413,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-73',
     cityName: 'Sector 73 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 73 Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Sector 73 Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Sector 73 Gurgaon. Center in Sector 51 (20 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 73 Gurgaon',
@@ -10471,7 +10471,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-82',
     cityName: 'Sector 82 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 82 Gurgaon | Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Sector 82 Gurgaon | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 82 Gurgaon. Center in Sector 51 (25 min) or online. AIIMS faculty, 98% success!',
     heroTitle: 'NEET Coaching in Sector 82 Gurgaon',
@@ -10531,7 +10531,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'cyber-city-gurgaon',
     cityName: 'Cyber City Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Cyber City Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Cyber City Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Cyber City Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Cyber City Gurgaon',
@@ -10590,7 +10590,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'new-gurgaon',
     cityName: 'New Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in New Gurgaon | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Classes in New Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in New Gurgaon. Center in Sector 51 or online. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in New Gurgaon',
@@ -10649,7 +10649,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'udyog-vihar-gurgaon',
     cityName: 'Udyog Vihar Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Udyog Vihar Gurgaon | Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Udyog Vihar Gurgaon | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Udyog Vihar Gurgaon. Center in Sector 51 (20 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Udyog Vihar Gurgaon',
@@ -10706,7 +10706,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'west-delhi',
     cityName: 'West Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Biology Tutor in West Delhi | NEET Coaching | Cerebrum Academy',
+    metaTitle: 'Biology Tutor in West Delhi | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best Biology tutor for West Delhi students. NEET & Board preparation for Janakpuri, Dwarka, Rajouri Garden. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Tutor in West Delhi',
@@ -11027,7 +11027,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'netaji-subhash-place',
     cityName: 'Netaji Subhash Place',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching Netaji Subhash Place | Biology Classes NSP Delhi | Cerebrum Academy',
+    metaTitle: 'NEET Coaching Netaji Subhash Place | Biology Classes NSP Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching near Netaji Subhash Place (NSP) Delhi. 15-20 min from Rohini center via metro. AIIMS faculty, 98% success rate. WhatsApp 88264-44334!',
     heroTitle: 'Best NEET Coaching near Netaji Subhash Place',
@@ -11102,7 +11102,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'chandigarh',
     cityName: 'Chandigarh',
     stateName: 'Chandigarh',
-    metaTitle: 'Best NEET Coaching in Chandigarh 2026 | Biology Classes Tricity | Cerebrum Academy',
+    metaTitle: 'Best NEET Coaching in Chandigarh 2026 | Biology Classes Tricity | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Chandigarh with 98% success rate. AIIMS faculty, online classes for Tricity. Target PGIMER, GMCH. 780+ students. Book free demo!',
     heroTitle: 'Best NEET Coaching in Chandigarh',
@@ -11185,7 +11185,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'mohali',
     cityName: 'Mohali',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Mohali 2026 | Biology Classes SAS Nagar | Cerebrum Academy',
+    metaTitle: 'Best NEET Coaching in Mohali 2026 | Biology Classes SAS Nagar | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Mohali (SAS Nagar) with AIIMS faculty. Online classes for Phase 1-11, IT City, Aerocity. 180+ students. Target PGIMER. Book demo!',
     heroTitle: 'Best NEET Coaching in Mohali',
@@ -11248,7 +11248,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'panchkula',
     cityName: 'Panchkula',
     stateName: 'Haryana',
-    metaTitle: 'Best NEET Coaching in Panchkula 2026 | Biology Classes Haryana | Cerebrum Academy',
+    metaTitle: 'Best NEET Coaching in Panchkula 2026 | Biology Classes Haryana | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Panchkula with AIIMS faculty. Online classes for all sectors. 150+ students. Target Haryana quota seats. Book free demo!',
     heroTitle: 'Best NEET Coaching in Panchkula',
@@ -11311,7 +11311,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'ludhiana',
     cityName: 'Ludhiana',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Ludhiana 2026 | Online Biology Classes Punjab | Cerebrum Academy',
+    metaTitle: 'Best NEET Coaching in Ludhiana 2026 | Online Biology Classes Punjab | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Ludhiana with AIIMS faculty. Online classes for Model Town, Sarabha Nagar, Civil Lines. Target DMC Ludhiana. Book free demo!',
     heroTitle: 'Best NEET Coaching in Ludhiana',
@@ -11374,7 +11374,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'jalandhar',
     cityName: 'Jalandhar',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Jalandhar 2026 | Online Biology Classes | Cerebrum Academy',
+    metaTitle: 'Best NEET Coaching in Jalandhar 2026 | Online Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Jalandhar with AIIMS faculty. Online classes for Model Town, Defence Colony, Maqsudan. Target Punjab medical colleges. Book demo!',
     heroTitle: 'Best NEET Coaching in Jalandhar',
@@ -11437,7 +11437,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'amritsar',
     cityName: 'Amritsar',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Amritsar 2026 | Online Biology Classes | Cerebrum Academy',
+    metaTitle: 'Best NEET Coaching in Amritsar 2026 | Online Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Amritsar with AIIMS faculty. Online classes for Lawrence Road, Mall Road, Ranjit Avenue. Target GMC Amritsar. Book demo!',
     heroTitle: 'Best NEET Coaching in Amritsar',
@@ -11500,7 +11500,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'zirakpur',
     cityName: 'Zirakpur',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Zirakpur 2026 | Biology Classes | Cerebrum Academy',
+    metaTitle: 'Best NEET Coaching in Zirakpur 2026 | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Zirakpur with AIIMS faculty. Online classes for VIP Road, Patiala Road, Baltana. Save commute to Chandigarh. Book demo!',
     heroTitle: 'Best NEET Coaching in Zirakpur',
@@ -11563,7 +11563,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'noida-extension',
     cityName: 'Noida Extension (Greater Noida West)',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Coaching in Noida Extension | Greater Noida West | Cerebrum Academy',
+    metaTitle: 'NEET Coaching in Noida Extension | Greater Noida West | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET Biology coaching for Noida Extension & Greater Noida West students. Gaur City, Ace City, Supertech covered. AIIMS faculty, 98% success. ₹35K-75K. Free demo!',
     heroTitle: 'NEET Biology Coaching for Noida Extension Students',
@@ -11641,7 +11641,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gaur-city',
     cityName: 'Gaur City',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Coaching for Gaur City Students | Biology Classes | Cerebrum Academy',
+    metaTitle: 'NEET Coaching for Gaur City Students | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'NEET Biology coaching for Gaur City 1 & 2 students. 120+ students enrolled, AIIMS faculty, live online + weekend offline at Sector 62. ₹35K-60K/year. Book free demo!',
     heroTitle: 'NEET Biology Coaching for Gaur City Students',
@@ -11951,7 +11951,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-11-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 11 Biology Tuition in Gurugram | CBSE & NEET | Cerebrum Academy',
+    metaTitle: 'Class 11 Biology Tuition in Gurugram | CBSE & NEET | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 11 Biology coaching in Gurugram. CBSE Board + NEET integrated. AIIMS faculty, small batches (15 max), ₹48K-90K/year. DLF, Sector 14-57. Free demo class!',
     heroTitle: 'Class 11 Biology Tuition in Gurugram',
@@ -12025,7 +12025,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-12-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 12 Biology Tuition Gurugram | Board Exam + NEET 2026 | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology Tuition Gurugram | Board Exam + NEET 2026 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology coaching in Gurugram for CBSE Board + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty, 98% pass rate, ₹48K-90K. DLF, Sohna Road, Sector 14-57.',
     heroTitle: 'Class 12 Biology — Board + NEET Coaching in Gurugram',
@@ -12099,7 +12099,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-11-ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 11 Biology Tuition Ghaziabad | Indirapuram, Vaishali | Cerebrum Academy',
+    metaTitle: 'Class 11 Biology Tuition Ghaziabad | Indirapuram, Vaishali | Cerebrum Biology Academy',
     metaDescription:
       'Class 11 Biology coaching in Ghaziabad — Indirapuram, Vaishali, Raj Nagar. Board + NEET integrated. AIIMS faculty, 15-student batches. ₹35K-60K. Free demo!',
     heroTitle: 'Class 11 Biology Tuition in Ghaziabad',
@@ -12173,7 +12173,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-12-ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 12 Biology Coaching Ghaziabad | Board + NEET 2026 | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology Coaching Ghaziabad | Board + NEET 2026 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology tuition in Ghaziabad for Board + NEET. Indirapuram, Vaishali, Raj Nagar. Score 90+ boards AND crack NEET. AIIMS faculty. ₹35K-75K. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Ghaziabad',
@@ -12320,7 +12320,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-12-faridabad',
     cityName: 'Faridabad',
     stateName: 'Haryana',
-    metaTitle: 'Class 12 Biology Coaching Faridabad | Board Exam + NEET 2026 | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology Coaching Faridabad | Board Exam + NEET 2026 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology tuition in Faridabad — CBSE & Haryana Board + NEET prep. Score 90+ boards AND crack NEET. AIIMS faculty. ₹35K-75K. NIT, Sector 15-21. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Faridabad',
@@ -12394,7 +12394,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-revision-batch-noida',
     cityName: 'Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Revision Batch Noida 2026 | 3-Month Final Revision | Cerebrum Academy',
+    metaTitle: 'NEET Revision Batch Noida 2026 | 3-Month Final Revision | Cerebrum Biology Academy',
     metaDescription:
       'NEET Biology revision batch in Noida — 3-month intensive final revision. NCERT x2, 2000+ MCQs, 12 mock exams. AIIMS faculty. ₹40,000. Sector 62 center + online.',
     heroTitle: 'NEET Final Revision Batch — Noida',
@@ -12464,7 +12464,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-revision-batch-ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Revision Batch Ghaziabad 2026 | Final 3-Month Revision | Cerebrum Academy',
+    metaTitle: 'NEET Revision Batch Ghaziabad 2026 | Final 3-Month Revision | Cerebrum Biology Academy',
     metaDescription:
       'NEET Biology revision batch for Ghaziabad students — Indirapuram, Vaishali, Raj Nagar. 3-month intensive, NCERT x2, 12 mock exams. Online + offline. ₹35,000-50,000.',
     heroTitle: 'NEET Final Revision Batch — Ghaziabad',
@@ -12533,7 +12533,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-revision-batch-greater-noida',
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Revision Batch Greater Noida 2026 | Final Revision | Cerebrum Academy',
+    metaTitle: 'NEET Revision Batch Greater Noida 2026 | Final Revision | Cerebrum Biology Academy',
     metaDescription:
       'NEET Biology revision batch for Greater Noida & Noida Extension students. 3-month intensive, NCERT x2, 12 mocks. Knowledge Park, Pari Chowk, Gaur City. ₹35,000-50,000.',
     heroTitle: 'NEET Final Revision Batch — Greater Noida',
@@ -12604,7 +12604,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'best-biology-coaching-delhi-ncr',
     cityName: 'Delhi NCR',
     stateName: 'Delhi / UP / Haryana',
-    metaTitle: 'Best Biology Coaching in Delhi NCR 2026 | #1 for Board + NEET | Cerebrum Academy',
+    metaTitle: 'Best Biology Coaching in Delhi NCR 2026 | #1 for Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Ranked #1 Biology coaching in Delhi NCR — Board exam (95% score 90+) AND NEET (98% success). AIIMS faculty Dr. Shekhar Singh. Centers in Gurugram, Delhi. Online for Noida, Ghaziabad, Faridabad.',
     heroTitle: 'Best Biology Coaching in Delhi NCR — Board + NEET',
@@ -12642,7 +12642,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Ghaziabad 2026 | Class 9-12 | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Ghaziabad 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Best Biology classes in Ghaziabad for Class 9-12. CBSE + UP Board. Indirapuram, Vaishali, Raj Nagar. AIIMS faculty, 15-student batches. ₹35,000-60,000/year. Free demo!',
     heroTitle: 'Biology Classes in Ghaziabad — Class 9 to 12',
@@ -12677,7 +12677,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-tuition-greater-noida',
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Tuition in Greater Noida 2026 | Class 9-12 | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Biology Tuition in Greater Noida 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Biology tuition for Greater Noida students — Gaur City, Knowledge Park, Pari Chowk. Class 9-12, CBSE board + NEET. AIIMS faculty, online + offline. ₹35,000-60,000/year.',
     heroTitle: 'Biology Tuition in Greater Noida',
@@ -12712,7 +12712,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-11-biology-coaching-greater-noida',
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 11 Biology Coaching Greater Noida | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Class 11 Biology Coaching Greater Noida | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Class 11 Biology coaching for Greater Noida students. CBSE Board + NEET integrated. AIIMS faculty, 15-student batches, ₹48,000-65,000/year. Online + weekend offline. Free demo!',
     heroTitle: 'Class 11 Biology Coaching — Greater Noida',
@@ -12746,7 +12746,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-12-biology-coaching-greater-noida',
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 12 Biology Coaching Greater Noida | Board + NEET 2026 | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology Coaching Greater Noida | Board + NEET 2026 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology in Greater Noida — Board exam + NEET dual focus. Score 90+ in boards AND crack NEET. AIIMS faculty. ₹48,000-90,000/year. Gaur City, Knowledge Park. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Greater Noida',
@@ -12779,7 +12779,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-faridabad',
     cityName: 'Faridabad',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Faridabad 2026 | Class 9-12 | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Faridabad 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Best Biology classes in Faridabad — Class 9-12, CBSE + Haryana Board. NIT, Sector 15-21, Ballabgarh. AIIMS faculty, ₹35,000-60,000/year. Board exam + NEET prep. Free demo!',
     heroTitle: 'Biology Classes in Faridabad — All Classes',
@@ -12813,7 +12813,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-10-biology-coaching-noida',
     cityName: 'Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 10 Biology Coaching Noida | CBSE Board Prep | Cerebrum Academy',
+    metaTitle: 'Class 10 Biology Coaching Noida | CBSE Board Prep | Cerebrum Biology Academy',
     metaDescription:
       'Class 10 Biology coaching in Noida — CBSE board prep + NEET foundation. AIIMS faculty, small batches, ₹38,000-50,000/year. Sector 18, 62, Greater Noida. Free demo class!',
     heroTitle: 'Class 10 Biology Coaching in Noida',
@@ -12847,7 +12847,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-10-biology-coaching-delhi',
     cityName: 'Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Class 10 Biology Coaching Delhi | CBSE Board Prep | Cerebrum Academy',
+    metaTitle: 'Class 10 Biology Coaching Delhi | CBSE Board Prep | Cerebrum Biology Academy',
     metaDescription:
       'Class 10 Biology coaching in Delhi — CBSE board prep + NEET foundation. South Delhi, North Delhi, East Delhi. AIIMS faculty, ₹38,000-50,000/year. Free demo!',
     heroTitle: 'Class 10 Biology Coaching in Delhi',
@@ -12882,7 +12882,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-9-biology-tuition-noida',
     cityName: 'Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 9 Biology Tuition Noida | Foundation Course | Cerebrum Academy',
+    metaTitle: 'Class 9 Biology Tuition Noida | Foundation Course | Cerebrum Biology Academy',
     metaDescription:
       'Class 9 Biology tuition in Noida — fun, interactive learning that builds strong NCERT foundation. AIIMS faculty, small batches, ₹35,000/year. Sector 18, 62, Greater Noida. Free demo!',
     heroTitle: 'Class 9 Biology Tuition in Noida',
@@ -12917,7 +12917,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-9-biology-tuition-delhi',
     cityName: 'Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Class 9 Biology Tuition Delhi | Foundation Course | Cerebrum Academy',
+    metaTitle: 'Class 9 Biology Tuition Delhi | Foundation Course | Cerebrum Biology Academy',
     metaDescription:
       'Class 9 Biology tuition in Delhi — interactive, fun learning. South Delhi, North Delhi centers + online. AIIMS faculty, ₹35,000-45,000/year. Build strong NCERT foundation. Free demo!',
     heroTitle: 'Class 9 Biology Tuition in Delhi',
@@ -12952,7 +12952,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-east-delhi',
     cityName: 'East Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in East Delhi 2026 | Class 9-12 | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Biology Classes in East Delhi 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Biology classes in East Delhi — Laxmi Nagar, Preet Vihar, IP Extension, Mayur Vihar. Class 9-12, CBSE board + NEET. AIIMS faculty, ₹35,000-60,000/year. Online + offline. Free demo!',
     heroTitle: 'Biology Classes in East Delhi',
@@ -12987,7 +12987,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-north-delhi',
     cityName: 'North Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in North Delhi 2026 | Rohini Center | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Biology Classes in North Delhi 2026 | Rohini Center | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Biology classes in North Delhi — offline at Rohini center + online. Pitampura, Model Town, Civil Lines, Rohini. Class 9-12, CBSE board + NEET. AIIMS faculty. ₹35,000-60,000/year.',
     heroTitle: 'Biology Classes in North Delhi — Rohini Center',
@@ -13022,7 +13022,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'best-biology-coaching-noida',
     cityName: 'Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Best Biology Coaching in Noida 2026 | #1 Rated | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Best Biology Coaching in Noida 2026 | #1 Rated | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Ranked #1 Biology coaching in Noida. 98% success rate, AIIMS faculty, 15-student batches. Board exam (avg 92/100) + NEET (avg 160+/180 Biology). ₹45,000-90,000/year. Free demo!',
     heroTitle: 'Best Biology Coaching in Noida — Ranked #1',
@@ -13057,7 +13057,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'best-biology-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Best Biology Coaching in Gurugram 2026 | Offline + Online | Cerebrum Academy',
+    metaTitle: 'Best Biology Coaching in Gurugram 2026 | Offline + Online | Cerebrum Biology Academy',
     metaDescription:
       'Best Biology coaching in Gurugram with offline center at Sector 51. AIIMS faculty, 15-student batches, Board (avg 92) + NEET (98% success). DLF, Sohna Road. ₹48K-90K. Free demo!',
     heroTitle: 'Best Biology Coaching in Gurugram — Offline Center',
@@ -13092,7 +13092,7 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'cbse-biology-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'CBSE Biology Coaching Gurugram | Class 11-12 Board Prep | Cerebrum Academy',
+    metaTitle: 'CBSE Biology Coaching Gurugram | Class 11-12 Board Prep | Cerebrum Biology Academy',
     metaDescription:
       'CBSE Biology coaching in Gurugram — score 90+ in board exams. Offline at Sector 51 + online. AIIMS faculty, diagram/practical/viva prep, sample papers. ₹48,000-65,000/year. Free demo!',
     heroTitle: 'CBSE Biology Coaching in Gurugram',
@@ -13124,7 +13124,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'biology-classes-gurugram': {
     slug: 'biology-classes-gurugram', cityName: 'Gurugram', stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Gurugram 2026 | Class 9-12 | Offline + Online | Cerebrum Academy',
+    metaTitle: 'Biology Classes in Gurugram 2026 | Class 9-12 | Offline + Online | Cerebrum Biology Academy',
     metaDescription: 'Biology classes in Gurugram — offline at Sector 51 center. Class 9-12, CBSE + Haryana Board + NEET. AIIMS faculty, 15-student batches. ₹35,000-90,000/year. Free demo!',
     heroTitle: 'Biology Classes in Gurugram — Offline Center Available', heroSubtitle: 'Gurugram\'s only dedicated Biology coaching with a physical classroom. Walk-in classes at Sector 51 for all levels — Class 9 foundation through Class 12 Board + NEET. CBSE and Haryana Board patterns both covered.',
     hasOfflineCenter: true, nearestCenter: { name: 'Gurugram Center', address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram', distance: 'In Gurugram' },
@@ -13137,7 +13137,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'biology-tutor-greater-noida': {
     slug: 'biology-tutor-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Tutor in Greater Noida | Class 9-12 | Online + Offline | Cerebrum Academy',
+    metaTitle: 'Biology Tutor in Greater Noida | Class 9-12 | Online + Offline | Cerebrum Biology Academy',
     metaDescription: 'Expert Biology tutor for Greater Noida — Gaur City, Knowledge Park, Pari Chowk. AIIMS faculty, 1-on-1 attention in 15-student batches. ₹35,000-60,000/year. Free demo!',
     heroTitle: 'Biology Tutor for Greater Noida Students', heroSubtitle: 'Expert Biology tutoring by AIIMS faculty for Greater Noida students. Better than private tutors — structured curriculum, regular tests, and 15-student batches that give personal attention at 1/3 the cost of home tutors.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
@@ -13150,7 +13150,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'biology-tuition-east-delhi': {
     slug: 'biology-tuition-east-delhi', cityName: 'East Delhi', stateName: 'Delhi',
-    metaTitle: 'Biology Tuition in East Delhi 2026 | Laxmi Nagar, Preet Vihar | Cerebrum Academy',
+    metaTitle: 'Biology Tuition in East Delhi 2026 | Laxmi Nagar, Preet Vihar | Cerebrum Biology Academy',
     metaDescription: 'Biology tuition in East Delhi — Laxmi Nagar, Preet Vihar, Mayur Vihar, IP Extension. Class 9-12, CBSE Board + NEET. AIIMS faculty. ₹35,000-60,000/year. Free demo!',
     heroTitle: 'Biology Tuition in East Delhi', heroSubtitle: 'East Delhi students deserve quality Biology tuition without crossing the Yamuna. Our live online classes bring AIIMS-faculty teaching to Laxmi Nagar, Preet Vihar, Mayur Vihar, and all East Delhi areas.',
     hasOfflineCenter: false, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '10-15 km via Blue Line Metro' },
@@ -13163,7 +13163,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'biology-tuition-west-delhi': {
     slug: 'biology-tuition-west-delhi', cityName: 'West Delhi', stateName: 'Delhi',
-    metaTitle: 'Biology Tuition in West Delhi 2026 | Dwarka, Janakpuri | Cerebrum Academy',
+    metaTitle: 'Biology Tuition in West Delhi 2026 | Dwarka, Janakpuri | Cerebrum Biology Academy',
     metaDescription: 'Biology tuition in West Delhi — Dwarka, Janakpuri, Rajouri Garden, Tilak Nagar. CBSE Board + NEET. AIIMS faculty, ₹35,000-60,000/year. Online + Rohini center. Free demo!',
     heroTitle: 'Biology Tuition in West Delhi', heroSubtitle: 'West Delhi students from Dwarka, Janakpuri, Rajouri Garden — access AIIMS-faculty Biology tuition online or at our Rohini center. Board exam + NEET preparation for Class 9-12.',
     hasOfflineCenter: true, nearestCenter: { name: 'Rohini Center', address: 'Block-A, Sector 7, Rohini, Delhi 110085', distance: '5-15 km from West Delhi areas' },
@@ -13176,7 +13176,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-11-biology-coaching-delhi': {
     slug: 'class-11-biology-coaching-delhi', cityName: 'Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 11 Biology Coaching Delhi 2026 | Board + NEET | Cerebrum Academy',
+    metaTitle: 'Class 11 Biology Coaching Delhi 2026 | Board + NEET | Cerebrum Biology Academy',
     metaDescription: 'Class 11 Biology coaching in Delhi — South Extension + Rohini centers. CBSE Board + NEET integrated. AIIMS faculty, 15-student batches. ₹48,000-90,000/year. Free demo!',
     heroTitle: 'Class 11 Biology Coaching in Delhi', heroSubtitle: 'Class 11 is when Biology gets serious — Cell Biology, Plant Physiology, Human Anatomy. Our integrated Board + NEET program at two Delhi centers (South Extension + Rohini) ensures your child masters every chapter at depth.',
     hasOfflineCenter: true, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: 'In Delhi' },
@@ -13189,7 +13189,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-11-biology-coaching-north-delhi': {
     slug: 'class-11-biology-coaching-north-delhi', cityName: 'North Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 11 Biology Coaching North Delhi | Rohini Center | Cerebrum Academy',
+    metaTitle: 'Class 11 Biology Coaching North Delhi | Rohini Center | Cerebrum Biology Academy',
     metaDescription: 'Class 11 Biology at Rohini center — offline classes for North Delhi. Pitampura, Model Town, Shalimar Bagh. Board + NEET. AIIMS faculty. ₹48,000-65,000/year. Free demo!',
     heroTitle: 'Class 11 Biology — Rohini Center, North Delhi', heroSubtitle: 'North Delhi students: attend Class 11 Biology at our Rohini center (Sector 7, near Rohini East Metro). No more traveling to South Delhi. Offline classroom coaching with AIIMS faculty.',
     hasOfflineCenter: true, nearestCenter: { name: 'Rohini Center', address: 'Block-A, Sector 7, Rohini, Delhi 110085', distance: 'In North Delhi' },
@@ -13202,7 +13202,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-11-biology-coaching-east-delhi': {
     slug: 'class-11-biology-coaching-east-delhi', cityName: 'East Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 11 Biology Coaching East Delhi | Online + Metro Access | Cerebrum Academy',
+    metaTitle: 'Class 11 Biology Coaching East Delhi | Online + Metro Access | Cerebrum Biology Academy',
     metaDescription: 'Class 11 Biology for East Delhi — Laxmi Nagar, Preet Vihar, Mayur Vihar. Live online + South Extension via Blue Line. AIIMS faculty. ₹40,000-65,000/year. Free demo!',
     heroTitle: 'Class 11 Biology Coaching — East Delhi', heroSubtitle: 'East Delhi Class 11 students: access AIIMS-faculty Biology coaching online from home or visit our South Extension center (20 min by Blue Line Metro from Laxmi Nagar). Board + NEET integrated.',
     hasOfflineCenter: false, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '20 min by Blue Line Metro' },
@@ -13215,7 +13215,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-12-biology-coaching-delhi': {
     slug: 'class-12-biology-coaching-delhi', cityName: 'Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 12 Biology Coaching Delhi 2026 | Board + NEET | Two Centers | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology Coaching Delhi 2026 | Board + NEET | Two Centers | Cerebrum Biology Academy',
     metaDescription: 'Class 12 Biology in Delhi — Board exam (avg 92/100) + NEET dual focus. South Extension + Rohini centers. AIIMS faculty. ₹48,000-90,000/year. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Delhi', heroSubtitle: 'The decisive year: board marks for college, NEET for medical career. Our integrated program at two Delhi centers covers both without doubling study hours. Average board score: 92/100.',
     hasOfflineCenter: true, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: 'In Delhi' },
@@ -13228,7 +13228,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-12-biology-coaching-north-delhi': {
     slug: 'class-12-biology-coaching-north-delhi', cityName: 'North Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 12 Biology North Delhi | Rohini Center | Board + NEET 2026 | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology North Delhi | Rohini Center | Board + NEET 2026 | Cerebrum Biology Academy',
     metaDescription: 'Class 12 Biology at Rohini center — Board exam + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty. ₹48,000-90,000/year. Pitampura, Model Town. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET at Rohini Center', heroSubtitle: 'North Delhi Class 12 students: walk-in to our Rohini center for offline Biology coaching. Board revision + NEET prep integrated. 60-day board revision program included.',
     hasOfflineCenter: true, nearestCenter: { name: 'Rohini Center', address: 'Block-A, Sector 7, Rohini, Delhi 110085', distance: 'In North Delhi' },
@@ -13241,7 +13241,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-12-biology-coaching-east-delhi': {
     slug: 'class-12-biology-coaching-east-delhi', cityName: 'East Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 12 Biology East Delhi | Board + NEET 2026 | Online | Cerebrum Academy',
+    metaTitle: 'Class 12 Biology East Delhi | Board + NEET 2026 | Online | Cerebrum Biology Academy',
     metaDescription: 'Class 12 Biology for East Delhi students — Board exam + NEET. Online + South Extension via metro. AIIMS faculty. ₹40,000-65,000/year. Laxmi Nagar, Mayur Vihar. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET for East Delhi', heroSubtitle: 'East Delhi Class 12 students: prepare for both board exams and NEET with our online coaching. South Extension center accessible via Blue Line Metro for weekend lab sessions.',
     hasOfflineCenter: false, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '20 min by Blue Line' },
@@ -13254,7 +13254,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-9-biology-tuition-ghaziabad': {
     slug: 'class-9-biology-tuition-ghaziabad', cityName: 'Ghaziabad', stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 9 Biology Tuition Ghaziabad | Foundation Course | Cerebrum Academy',
+    metaTitle: 'Class 9 Biology Tuition Ghaziabad | Foundation Course | Cerebrum Biology Academy',
     metaDescription: 'Class 9 Biology tuition in Ghaziabad — fun, interactive learning. Indirapuram, Vaishali. AIIMS faculty, ₹35,000/year. CBSE + UP Board. Free demo!',
     heroTitle: 'Class 9 Biology Tuition — Ghaziabad', heroSubtitle: 'Build strong Biology foundations in Class 9. Interactive teaching with hands-on experiments — just 3 hours/week. Perfect for Ghaziabad students who want to ace school exams and prepare for the Class 10-11 leap.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km' },
@@ -13267,7 +13267,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-10-biology-coaching-ghaziabad': {
     slug: 'class-10-biology-coaching-ghaziabad', cityName: 'Ghaziabad', stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 10 Biology Coaching Ghaziabad | CBSE Board Prep | Cerebrum Academy',
+    metaTitle: 'Class 10 Biology Coaching Ghaziabad | CBSE Board Prep | Cerebrum Biology Academy',
     metaDescription: 'Class 10 Biology coaching in Ghaziabad — board prep + foundation. Indirapuram, Vaishali. AIIMS faculty. ₹38,000-50,000/year. CBSE + UP Board. Free demo!',
     heroTitle: 'Class 10 Biology Coaching — Ghaziabad', heroSubtitle: 'Class 10 Biology is the gateway to Class 11-12. Our coaching builds deep understanding of Life Processes, Heredity, and Environment — scoring well in boards AND preparing for the Class 11 leap.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km' },
@@ -13280,7 +13280,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-9-biology-tuition-faridabad': {
     slug: 'class-9-biology-tuition-faridabad', cityName: 'Faridabad', stateName: 'Haryana',
-    metaTitle: 'Class 9 Biology Tuition Faridabad | Foundation | Cerebrum Academy',
+    metaTitle: 'Class 9 Biology Tuition Faridabad | Foundation | Cerebrum Biology Academy',
     metaDescription: 'Class 9 Biology tuition in Faridabad — interactive learning, 3 hrs/week. NIT, Sector 15-21. CBSE + Haryana Board. AIIMS faculty. ₹35,000/year. Free demo!',
     heroTitle: 'Class 9 Biology Tuition — Faridabad', heroSubtitle: 'Start your child\'s Biology journey in Class 9 with fun, interactive teaching. Hands-on experiments and visual learning — just 3 hours/week. CBSE and Haryana Board patterns covered.',
     hasOfflineCenter: false, nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km' },
@@ -13293,7 +13293,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-10-biology-coaching-faridabad': {
     slug: 'class-10-biology-coaching-faridabad', cityName: 'Faridabad', stateName: 'Haryana',
-    metaTitle: 'Class 10 Biology Coaching Faridabad | Board Prep | Cerebrum Academy',
+    metaTitle: 'Class 10 Biology Coaching Faridabad | Board Prep | Cerebrum Biology Academy',
     metaDescription: 'Class 10 Biology coaching in Faridabad — CBSE + Haryana Board prep. NIT, Sector 15-21. AIIMS faculty. ₹38,000-50,000/year. Free demo!',
     heroTitle: 'Class 10 Biology Coaching — Faridabad', heroSubtitle: 'Score 90+ in Class 10 CBSE/Haryana Board Biology and build a strong foundation for Class 11. Practical exam prep, viva practice, and diagram techniques included.',
     hasOfflineCenter: false, nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km' },
@@ -13306,7 +13306,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-9-biology-tuition-greater-noida': {
     slug: 'class-9-biology-tuition-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 9 Biology Tuition Greater Noida | Foundation | Cerebrum Academy',
+    metaTitle: 'Class 9 Biology Tuition Greater Noida | Foundation | Cerebrum Biology Academy',
     metaDescription: 'Class 9 Biology tuition for Greater Noida — Gaur City, Knowledge Park. Interactive learning, 3 hrs/week. AIIMS faculty. ₹35,000/year. Free demo!',
     heroTitle: 'Class 9 Biology Tuition — Greater Noida', heroSubtitle: 'Greater Noida students: start Biology early with fun, interactive classes. Hands-on experiments and 3D models make Cell Biology and Life Processes memorable. Just 3 hours/week online.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
@@ -13319,7 +13319,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'class-10-biology-coaching-greater-noida': {
     slug: 'class-10-biology-coaching-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 10 Biology Coaching Greater Noida | Board Prep | Cerebrum Academy',
+    metaTitle: 'Class 10 Biology Coaching Greater Noida | Board Prep | Cerebrum Biology Academy',
     metaDescription: 'Class 10 Biology in Greater Noida — board prep + Class 11 foundation. Gaur City, Knowledge Park. AIIMS faculty. ₹38,000-50,000/year. Online. Free demo!',
     heroTitle: 'Class 10 Biology Coaching — Greater Noida', heroSubtitle: 'Score 90+ in Class 10 Biology boards and build the foundation for Class 11. Online coaching for Gaur City, Knowledge Park, and all Greater Noida areas.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
@@ -13332,7 +13332,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'cbse-biology-coaching-ghaziabad': {
     slug: 'cbse-biology-coaching-ghaziabad', cityName: 'Ghaziabad', stateName: 'Uttar Pradesh',
-    metaTitle: 'CBSE Biology Coaching Ghaziabad | Class 11-12 Board Prep | Cerebrum Academy',
+    metaTitle: 'CBSE Biology Coaching Ghaziabad | Class 11-12 Board Prep | Cerebrum Biology Academy',
     metaDescription: 'CBSE Biology coaching in Ghaziabad — score 90+ in board exams. Indirapuram, Vaishali. Diagram practice, practical/viva prep, sample papers. AIIMS faculty. ₹40,000-60,000/year.',
     heroTitle: 'CBSE Biology Coaching in Ghaziabad', heroSubtitle: 'CBSE Biology needs diagram perfection, practical confidence, and HOTS mastery. Our board-focused coaching covers all of this while optionally building NEET readiness. Average board score: 91/100.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km' },
@@ -13345,7 +13345,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'cbse-biology-coaching-faridabad': {
     slug: 'cbse-biology-coaching-faridabad', cityName: 'Faridabad', stateName: 'Haryana',
-    metaTitle: 'CBSE Biology Coaching Faridabad | Board Prep + Haryana Board | Cerebrum Academy',
+    metaTitle: 'CBSE Biology Coaching Faridabad | Board Prep + Haryana Board | Cerebrum Biology Academy',
     metaDescription: 'CBSE & Haryana Board Biology coaching in Faridabad. Score 90+ in boards. Diagram practice, practical/viva prep. AIIMS faculty. ₹38,000-55,000/year. Free demo!',
     heroTitle: 'CBSE & Haryana Board Biology — Faridabad', heroSubtitle: 'Faridabad students from both CBSE and Haryana Board schools — score 90+ with our board-specific Biology coaching. Diagram perfection, practical prep, and HOTS mastery included.',
     hasOfflineCenter: false, nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km' },
@@ -13358,7 +13358,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'cbse-biology-coaching-greater-noida': {
     slug: 'cbse-biology-coaching-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
-    metaTitle: 'CBSE Biology Coaching Greater Noida | Board Prep | Cerebrum Academy',
+    metaTitle: 'CBSE Biology Coaching Greater Noida | Board Prep | Cerebrum Biology Academy',
     metaDescription: 'CBSE Biology coaching for Greater Noida — Gaur City, Knowledge Park. Score 90+ in boards. Diagram practice, practical prep. ₹38,000-55,000/year. Free demo!',
     heroTitle: 'CBSE Biology Coaching — Greater Noida', heroSubtitle: 'Greater Noida CBSE students: score 90+ in Biology boards with focused coaching on diagrams, practicals, and HOTS questions. Online classes with AIIMS faculty.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
@@ -13371,7 +13371,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'best-biology-coaching-ghaziabad': {
     slug: 'best-biology-coaching-ghaziabad', cityName: 'Ghaziabad', stateName: 'Uttar Pradesh',
-    metaTitle: 'Best Biology Coaching in Ghaziabad 2026 | #1 Rated | Cerebrum Academy',
+    metaTitle: 'Best Biology Coaching in Ghaziabad 2026 | #1 Rated | Cerebrum Biology Academy',
     metaDescription: 'Best Biology coaching in Ghaziabad — 96% success rate, AIIMS faculty, 15-student batches. Board (avg 91/100) + NEET. Indirapuram, Vaishali. ₹35,000-65,000/year. Free demo!',
     heroTitle: 'Best Biology Coaching in Ghaziabad', heroSubtitle: 'Why 200+ Ghaziabad students chose Cerebrum: AIIMS faculty, 15-student batches, 91/100 average board score. The only Biology-specialist serving Indirapuram, Vaishali, and Raj Nagar Extension.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km' },
@@ -13384,7 +13384,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'best-biology-coaching-faridabad': {
     slug: 'best-biology-coaching-faridabad', cityName: 'Faridabad', stateName: 'Haryana',
-    metaTitle: 'Best Biology Coaching in Faridabad 2026 | #1 Rated | Cerebrum Academy',
+    metaTitle: 'Best Biology Coaching in Faridabad 2026 | #1 Rated | Cerebrum Biology Academy',
     metaDescription: 'Best Biology coaching in Faridabad — AIIMS faculty, 95% success rate. Board + NEET. NIT, Sector 15-21. CBSE + Haryana Board. ₹35,000-60,000/year. Free demo!',
     heroTitle: 'Best Biology Coaching in Faridabad', heroSubtitle: 'Faridabad\'s only Biology-specialist coaching. AIIMS faculty, 15-student batches, and results that speak: 90/100 average board score. CBSE and Haryana Board both covered.',
     hasOfflineCenter: false, nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km' },
@@ -13397,7 +13397,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'best-biology-coaching-greater-noida': {
     slug: 'best-biology-coaching-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
-    metaTitle: 'Best Biology Coaching Greater Noida 2026 | Gaur City, Knowledge Park | Cerebrum Academy',
+    metaTitle: 'Best Biology Coaching Greater Noida 2026 | Gaur City, Knowledge Park | Cerebrum Biology Academy',
     metaDescription: 'Best Biology coaching for Greater Noida — Gaur City, Knowledge Park, Pari Chowk. AIIMS faculty, 95% success. Board + NEET. ₹35,000-60,000/year. Free demo!',
     heroTitle: 'Best Biology Coaching — Greater Noida', heroSubtitle: 'Greater Noida finally has access to the best Biology coaching in Delhi NCR. 100+ students from Gaur City, Knowledge Park, and Pari Chowk chose Cerebrum for AIIMS-faculty quality at affordable prices.',
     hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
@@ -13410,7 +13410,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'board-exam-biology-gurugram': {
     slug: 'board-exam-biology-gurugram', cityName: 'Gurugram', stateName: 'Haryana',
-    metaTitle: 'Board Exam Biology Preparation Gurugram | CBSE + Haryana Board | Cerebrum Academy',
+    metaTitle: 'Board Exam Biology Preparation Gurugram | CBSE + Haryana Board | Cerebrum Biology Academy',
     metaDescription: 'Board exam Biology prep in Gurugram — score 90+ in CBSE/Haryana Board. Offline at Sector 51. Diagrams, practicals, HOTS, sample papers. AIIMS faculty. ₹40,000-55,000/year.',
     heroTitle: 'Board Exam Biology Preparation — Gurugram', heroSubtitle: 'Focused preparation for CBSE and Haryana Board Biology exams. Our board-specific program covers everything that gets marks: diagram perfection, practical/viva confidence, HOTS answers, and sample paper mastery. Offline at Sector 51.',
     hasOfflineCenter: true, nearestCenter: { name: 'Gurugram Center', address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram', distance: 'In Gurugram' },
@@ -13423,7 +13423,7 @@ export const cityHubData: Record<string, CityHubData> = {
   },
   'board-exam-biology-delhi': {
     slug: 'board-exam-biology-delhi', cityName: 'Delhi', stateName: 'Delhi',
-    metaTitle: 'Board Exam Biology Preparation Delhi 2026 | CBSE | Score 90+ | Cerebrum Academy',
+    metaTitle: 'Board Exam Biology Preparation Delhi 2026 | CBSE | Score 90+ | Cerebrum Biology Academy',
     metaDescription: 'Board exam Biology prep in Delhi — score 90+ in CBSE. Two centers: South Extension + Rohini. Diagrams, practicals, HOTS, sample papers. AIIMS faculty. ₹40,000-55,000/year.',
     heroTitle: 'Board Exam Biology Preparation — Delhi', heroSubtitle: 'Not every student wants NEET. If your goal is scoring 90+ in CBSE Biology boards for DU/IP admission, our board-focused program is exactly what you need. No competitive exam pressure — pure board preparation with AIIMS-quality teaching.',
     hasOfflineCenter: true, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: 'In Delhi' },
