@@ -110,7 +110,7 @@ function VerifyEmailContent() {
               <h2 className="text-2xl font-bold text-gray-900 mb-2">Email Verified!</h2>
               <p className="text-gray-600 mb-6">{message}</p>
               <Button
-                onClick={() => router.push('/signin')}
+                onClick={() => router.push('/sign-in')}
                 className="w-full bg-green-600 hover:bg-green-700 text-white"
               >
                 Sign In Now
@@ -129,7 +129,7 @@ function VerifyEmailContent() {
               <p className="text-gray-600 mb-6">{message}</p>
               <div className="space-y-3">
                 <Button
-                  onClick={() => router.push('/signin')}
+                  onClick={() => router.push('/sign-in')}
                   variant="outline"
                   className="w-full"
                 >
@@ -170,7 +170,7 @@ function VerifyEmailContent() {
                     )}
                   </Button>
                   <Button
-                    onClick={() => router.push('/signin')}
+                    onClick={() => router.push('/sign-in')}
                     variant="outline"
                     className="w-full"
                   >

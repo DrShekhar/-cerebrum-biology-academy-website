@@ -92,8 +92,9 @@ export function LandingHero({
           >
             <Link
               href="#demo-form"
-              onClick={() => {
-                const element = document.getElementById('demo-form')
+              onClick={(e) => {
+                e.preventDefault()
+                const element = document.getElementById('demo-form') || document.querySelector('form')
                 element?.scrollIntoView({ behavior: 'smooth' })
               }}
               className="group inline-flex items-center gap-2 rounded-lg bg-yellow-500 px-10 py-5 text-xl font-bold text-slate-900 shadow-xl transition-all hover:scale-105 hover:bg-yellow-400 hover:shadow-2xl"

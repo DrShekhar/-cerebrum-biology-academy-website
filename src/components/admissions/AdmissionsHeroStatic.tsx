@@ -71,7 +71,7 @@ export function AdmissionsHeroStatic() {
                 Request Brochure
               </a>
               <a
-                href="#application-form"
+                href="#hero-form-placeholder"
                 className="inline-flex items-center justify-center bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-colors w-full sm:w-auto"
               >
                 <Phone className="w-5 h-5 mr-2" />

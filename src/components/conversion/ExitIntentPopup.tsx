@@ -415,7 +415,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
         })
         break
       case 'trial':
-        router.push('/trial-signup')
+        router.push('/courses')
         break
       case 'urgency':
         router.push('/enroll?urgency=true')

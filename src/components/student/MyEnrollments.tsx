@@ -147,7 +147,7 @@ export function MyEnrollments() {
           <Button
             variant="outline"
             size="default"
-            onClick={() => router.push('/login')}
+            onClick={() => router.push('/sign-in')}
           >
             Sign In to View Enrollments
           </Button>
