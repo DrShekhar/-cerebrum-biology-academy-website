@@ -12388,6 +12388,216 @@ export const cityHubData: Record<string, CityHubData> = {
       differentiator: 'Only Biology-specialist serving Faridabad. Board + NEET integrated. Online = zero commute. 50% cheaper than Delhi coaching + travel.',
     },
   },
+  },
+
+  'neet-revision-batch-noida': {
+    slug: 'neet-revision-batch-noida',
+    cityName: 'Noida',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Revision Batch Noida 2026 | 3-Month Final Revision | Cerebrum Academy',
+    metaDescription:
+      'NEET Biology revision batch in Noida — 3-month intensive final revision. NCERT x2, 2000+ MCQs, 12 mock exams. AIIMS faculty. ₹40,000. Sector 62 center + online.',
+    heroTitle: 'NEET Final Revision Batch — Noida',
+    heroSubtitle:
+      'Boards are done. NEET is 3 months away. This is not the time for new learning — it is the time for strategic revision. Our 3-month revision batch covers the entire NCERT twice, with 2000+ MCQs and 12 full-length mocks. 92% of revision batch students score 550+.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: 'In Noida (Sector 62)',
+    },
+    localities: [
+      { name: 'Sector 18', url: '/neet-coaching-noida/sector-18' },
+      { name: 'Sector 62', url: '/neet-coaching-noida/sector-62' },
+      { name: 'Greater Noida', url: '/best-neet-coaching-greater-noida' },
+      { name: 'Noida Extension', url: '/neet-coaching-noida-extension' },
+    ],
+    relatedCities: [
+      { name: 'NEET Crash Course Noida', url: '/neet-crash-course-noida' },
+      { name: 'NEET Coaching Noida', url: '/neet-coaching-noida' },
+      { name: 'Compare Crash Course Durations', url: '/neet-crash-course-comparison' },
+    ],
+    faqs: [
+      {
+        question: 'When does the Noida revision batch start?',
+        answer:
+          'New revision batches start every month from January to April. The most popular batch starts in March (post-board exams). Contact us to confirm the next batch date — usually within 1-2 weeks.',
+      },
+      {
+        question: 'Is this revision only or does it cover new topics?',
+        answer:
+          'Primarily revision — we assume you have covered the syllabus at least once. However, we include concept clarification for commonly weak chapters (Genetics, Ecology, Molecular Biology). If you have major gaps, consider our 90-day crash course instead.',
+      },
+      {
+        question: 'What does the 3-month revision include?',
+        answer:
+          'Month 1: Complete Class 11 NCERT revision + chapter tests. Month 2: Complete Class 12 NCERT revision + chapter tests. Month 3: 12 full-length mock exams + analysis + high-yield chapter deep-dives + exam strategy. Total: 2000+ MCQs, 12 mocks, daily doubt clearing.',
+      },
+      {
+        question: 'What is the fee for the Noida revision batch?',
+        answer:
+          'Offline (Sector 62 center): ₹40,000-60,000. Online: ₹35,000-50,000. Includes all material, tests, mocks, and doubt support. EMI: ₹13,000-20,000/month for 3 months. Scholarship test available for additional discount.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '92%',
+      rating: '4.9',
+    },
+    geoCoordinates: { lat: '28.5355', lng: '77.3910' },
+    localContext: {
+      nearbyLandmarks: 'Sector 62 Metro Station, Electronic City, Noida Film City',
+      transportOptions: 'Blue Line Metro to Sector 62 (direct). All Noida sectors accessible within 20 min.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Noida is our home base — the Sector 62 center is purpose-built for intensive revision programs. Students from all 40+ Noida sectors, Greater Noida, and Noida Extension attend the revision batch. The offline option is popular for revision because in-person mock exam practice simulates actual NEET conditions better than online.',
+    },
+    studentSuccessStory: {
+      name: 'Tanvi S.',
+      area: 'Sector 137, Noida',
+      achievement: 'NEET 2025 — 632/720 (Revision Batch)',
+      quote: 'I had covered syllabus twice on my own but my mock scores were stuck at 520. The revision batch at Sector 62 center changed everything — the mock exam analysis showed me I was losing 60 marks on silly mistakes. Fixed that in 3 weeks. Final score: 632.',
+    },
+  },
+
+  'neet-revision-batch-ghaziabad': {
+    slug: 'neet-revision-batch-ghaziabad',
+    cityName: 'Ghaziabad',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Revision Batch Ghaziabad 2026 | Final 3-Month Revision | Cerebrum Academy',
+    metaDescription:
+      'NEET Biology revision batch for Ghaziabad students — Indirapuram, Vaishali, Raj Nagar. 3-month intensive, NCERT x2, 12 mock exams. Online + offline. ₹35,000-50,000.',
+    heroTitle: 'NEET Final Revision Batch — Ghaziabad',
+    heroSubtitle:
+      'Ghaziabad students: boards are over, NEET is approaching. Join our focused 3-month revision program — cover entire NCERT twice, practice 2000+ MCQs, and take 12 full-length mock exams. Online classes + optional weekend offline at Noida center.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '15-20 km from Ghaziabad areas',
+    },
+    localities: [
+      { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
+      { name: 'Vaishali', url: '/neet-coaching-vaishali' },
+      { name: 'Raj Nagar Extension', url: '/neet-coaching-raj-nagar-extension' },
+    ],
+    relatedCities: [
+      { name: 'NEET Crash Course Ghaziabad', url: '/neet-crash-course-ghaziabad' },
+      { name: 'NEET Coaching Ghaziabad', url: '/neet-coaching-ghaziabad' },
+      { name: 'Revision Batch Noida', url: '/neet-revision-batch-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Is the revision batch available online for Ghaziabad students?',
+        answer:
+          'Yes! Most Ghaziabad students attend the revision batch online — live interactive sessions, daily tests, and doubt clearing. Weekend mock exams can be taken at our Noida center (15 min from Vaishali) for real exam simulation.',
+      },
+      {
+        question: 'How is revision batch different from crash course?',
+        answer:
+          'Revision batch assumes you have completed the syllabus once. It focuses on: rapid chapter revision, weak-area strengthening, extensive MCQ practice, and mock exam analysis. Crash course is for students who need to learn/re-learn topics. If you have major gaps, take the crash course instead.',
+      },
+      {
+        question: 'Which Ghaziabad schools do revision batch students come from?',
+        answer:
+          'DPS Indirapuram, Cambridge School, Ryan International, Delhi Public School Raj Nagar, St. Mary\'s Ghaziabad, and 15+ other schools. Post-board exam is the most popular joining time — students finish boards in March and join revision batch immediately.',
+      },
+      {
+        question: 'What are the fees for Ghaziabad students?',
+        answer:
+          'Online revision batch: ₹35,000-50,000. Hybrid (online + weekend offline): ₹40,000-60,000. EMI: ₹12,000-20,000/month. Scholarship test available. This is 40% less than chain coaching revision programs.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '80+',
+      successRate: '91%',
+      rating: '4.8',
+    },
+    geoCoordinates: { lat: '28.6692', lng: '77.4538' },
+    localContext: {
+      nearbyLandmarks: 'Indirapuram, Vaishali Metro, NH-24, Raj Nagar Extension',
+      transportOptions: 'Online classes eliminate commute. Weekend offline at Noida Sector 62 (15 min from Vaishali via Blue Line Metro).',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Ghaziabad\'s 80+ revision batch students primarily come from Indirapuram and Vaishali — areas with high NEET aspirant density. The online format is crucial for Ghaziabad students as it saves 2-3 hours of daily commute. Post-board joining is the most popular pattern — students finish CBSE/UP Board exams in March and immediately start intensive revision.',
+    },
+    studentSuccessStory: {
+      name: 'Priyanshu M.',
+      area: 'Indirapuram, Ghaziabad',
+      achievement: 'NEET 2025 — 605/720 (Revision Batch)',
+      quote: 'After boards I had 3 months. Joined the online revision batch from home in Indirapuram. The structured plan — NCERT twice + 12 mocks — was exactly what I needed. I was scoring 490 in March, finished at 605 in May.',
+    },
+  },
+
+  'neet-revision-batch-greater-noida': {
+    slug: 'neet-revision-batch-greater-noida',
+    cityName: 'Greater Noida',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Revision Batch Greater Noida 2026 | Final Revision | Cerebrum Academy',
+    metaDescription:
+      'NEET Biology revision batch for Greater Noida & Noida Extension students. 3-month intensive, NCERT x2, 12 mocks. Knowledge Park, Pari Chowk, Gaur City. ₹35,000-50,000.',
+    heroTitle: 'NEET Final Revision Batch — Greater Noida',
+    heroSubtitle:
+      'Greater Noida and Noida Extension students: the final 3 months before NEET decide everything. Our revision batch is designed for students who have covered the syllabus but need systematic revision, extensive practice, and mock exam training to convert knowledge into marks.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km from Greater Noida',
+    },
+    localities: [
+      { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
+      { name: 'Pari Chowk', url: '/neet-coaching-noida/pari-chowk' },
+      { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
+      { name: 'Noida Extension', url: '/neet-coaching-noida-extension' },
+    ],
+    relatedCities: [
+      { name: 'NEET Crash Course Greater Noida', url: '/neet-crash-course-greater-noida' },
+      { name: 'Revision Batch Noida', url: '/neet-revision-batch-noida' },
+      { name: 'Best NEET Crash Course', url: '/best-neet-crash-course' },
+    ],
+    faqs: [
+      {
+        question: 'Is the revision batch suitable for Greater Noida college students (droppers)?',
+        answer:
+          'Yes! Many of our Greater Noida revision batch students are droppers from Sharda University, Galgotias, and NIET who are reattempting NEET. The program runs on evenings/weekends so it doesn\'t conflict with college schedules. Dropper students get an additional 15% discount.',
+      },
+      {
+        question: 'How do Greater Noida students attend?',
+        answer:
+          'Online during weekdays (live, interactive). Optional weekend offline at Noida Sector 62 center for mock exam practice. Many Gaur City and Noida Extension students organize shared cabs for Saturday mock exam sessions.',
+      },
+      {
+        question: 'What is the revision batch schedule?',
+        answer:
+          'Weekday classes: 2-3 hours daily (online). Weekend: Full-length mock exam at center (optional) + analysis session. Total: 15-18 hours/week of focused revision. Designed to complement self-study, not replace it.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Online: ₹35,000-50,000 for 3 months. Hybrid: ₹40,000-60,000. College student/dropper discount: 15% off. EMI: ₹12,000-17,000/month. Scholarship test for additional discount.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '50+',
+      successRate: '90%',
+      rating: '4.8',
+    },
+    geoCoordinates: { lat: '28.4744', lng: '77.5030' },
+    localContext: {
+      nearbyLandmarks: 'Knowledge Park, Pari Chowk, Gaur City, Greater Noida Expressway',
+      transportOptions: 'Online classes eliminate commute. Greater Noida Expressway to Noida center (25-30 min). Shared cabs organized by students.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Greater Noida and Noida Extension have a growing population of NEET aspirants — including many dropper students at local universities. The revision batch serves 50+ students from Knowledge Park, Pari Chowk, Gaur City, and surrounding sectors. The online format is essential given the 18-25 km distance from the nearest quality coaching center.',
+    },
+    studentSuccessStory: {
+      name: 'Sakshi J.',
+      area: 'Gaur City, Noida Extension',
+      achievement: 'NEET 2025 — 572/720 (Dropper, Revision Batch)',
+      quote: 'As a Galgotias student retaking NEET, I needed evening revision classes that fit around college. The online revision batch was perfect — attended from my hostel room in Gaur City. Improved from 420 to 572 in 3 months.',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {

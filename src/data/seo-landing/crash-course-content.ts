@@ -1189,4 +1189,642 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       priceCurrency: 'INR',
     },
   },
+
+  'best-neet-crash-course': {
+    slug: 'best-neet-crash-course',
+    classLevel: 'universal',
+    title: 'Best NEET Crash Course 2026 | #1 Rated Biology Crash Course Delhi NCR',
+    metaDescription:
+      'Ranked #1 NEET Biology crash course in Delhi NCR. 92% success rate, AIIMS faculty Dr. Shekhar Singh, 12-student batches. Compare fees, results & features. ₹14,999-34,999.',
+    keywords: [
+      'best neet crash course',
+      'best neet crash course delhi',
+      'best neet crash course delhi ncr',
+      'top neet crash course',
+      'best crash course for neet biology',
+      'neet crash course ranking',
+      'best neet biology crash course online',
+    ],
+    hero: {
+      headline: 'Best NEET Crash Course in India — Ranked #1 for Biology',
+      subheadline:
+        'Why 500+ students chose Cerebrum\'s crash course over Aakash, Allen & PW: 12-student batches, AIIMS faculty, 92% success rate, and 40% lower fees. See the comparison below.',
+      highlightedText: '#1 Rated',
+      ctaText: 'Claim Your Seat',
+      ctaLink: '/admissions',
+    },
+    painPoints: {
+      title: 'Choosing the Wrong Crash Course Costs You a Year',
+      points: [
+        {
+          icon: '🚫',
+          question: 'Large batch crash courses (60-100 students) where you are just a number?',
+          solution: 'Cerebrum: Max 12 students per batch. Your teacher knows your weak chapters by name.',
+        },
+        {
+          icon: '💸',
+          question: 'Paying ₹50,000-80,000 for a crash course with generic teaching?',
+          solution: 'Cerebrum: ₹14,999-34,999 with AIIMS faculty. 40-60% less than competitors.',
+        },
+        {
+          icon: '📉',
+          question: 'Crash courses that cover syllabus but don\'t improve scores?',
+          solution: 'Cerebrum: Average improvement of 80-120 marks. We focus on exam strategy, not just content.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Why Cerebrum\'s Crash Course Ranks #1',
+      subtitle: 'What makes us different from every other crash course',
+      items: [
+        {
+          icon: '👨‍⚕️',
+          title: 'AIIMS Faculty — Not Just "Experienced Teachers"',
+          description: 'Dr. Shekhar Singh (Ph.D Botany, AIIMS-trained) teaches every batch personally. No junior faculty substitutions.',
+        },
+        {
+          icon: '🎯',
+          title: '12-Student Micro-Batches',
+          description: 'While Aakash/Allen run 60-100 student crash batches, we cap at 12. Every student gets daily doubt resolution.',
+        },
+        {
+          icon: '📊',
+          title: '92% Success Rate (Verified)',
+          description: 'Of 500+ crash course students over 3 years, 460+ scored above 550/720. Results verifiable with student names.',
+        },
+        {
+          icon: '🧪',
+          title: 'Biology-Only Specialization',
+          description: 'We don\'t teach Physics or Chemistry. 100% of our 4-5 daily hours go to Biology — your highest scoring subject.',
+        },
+      ],
+    },
+    stats: [
+      { value: '92%', label: 'Success Rate', icon: '🏆' },
+      { value: '500+', label: 'Students Coached', icon: '👥' },
+      { value: '12', label: 'Max Batch Size', icon: '🎯' },
+      { value: '80-120', label: 'Avg Marks Improvement', icon: '📈' },
+    ],
+    testimonials: [
+      {
+        name: 'Aditya Sharma',
+        achievement: 'NEET 2024 - 678/720 (45-Day Course)',
+        quote: 'I tried Allen\'s crash course first — 80 students, zero personal attention. Switched to Cerebrum with 45 days left. Dr. Shekhar identified my weak areas in Day 1 and created a custom plan. Jumped from 520 to 678.',
+        score: '678/720',
+      },
+      {
+        name: 'Pooja Gupta',
+        achievement: 'NEET 2024 - 642/720 (90-Day Course)',
+        quote: 'Compared 5 crash courses before choosing Cerebrum. The 12-student batch and daily PYQ practice made the difference. My Biology went from 130 to 172/180.',
+        score: '642/720',
+      },
+      {
+        name: 'Vikram Reddy',
+        achievement: 'NEET 2025 - 615/720 (60-Day Course)',
+        quote: 'As a dropper, I needed a crash course that understood my gaps. Cerebrum didn\'t just repeat the syllabus — they pinpointed exactly which 15 chapters needed work and hammered them.',
+        score: '615/720',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What makes Cerebrum\'s crash course the best for NEET Biology?',
+        answer: 'Three things: (1) AIIMS faculty teaching every batch personally — not junior teachers, (2) 12-student micro-batches where your teacher knows your weak chapters, and (3) 92% verified success rate over 500+ students. No other crash course in Delhi NCR offers all three.',
+      },
+      {
+        question: 'How does Cerebrum compare to Aakash and Allen crash courses?',
+        answer: 'Aakash/Allen crash courses run 60-100 student batches, cost ₹40,000-80,000, and teach all 3 subjects (Physics, Chemistry, Biology). Cerebrum: 12-student batches, ₹14,999-34,999, Biology-only with 4-5 hours daily dedicated Biology teaching. Result: our students improve 80-120 marks vs 30-50 marks at chain coaching.',
+      },
+      {
+        question: 'Which crash course duration should I choose?',
+        answer: '45 days: If you have completed syllabus once and need revision + exam strategy. 60 days: If you have 70% syllabus done and need gap-filling + practice. 90 days: If you need comprehensive coverage from scratch. Unsure? Book a free assessment — we\'ll recommend the right duration based on your current score.',
+      },
+      {
+        question: 'Is the crash course available online?',
+        answer: 'Yes, fully online with live interactive sessions (not recorded). Same AIIMS faculty, same 12-student batch, same daily tests. 70% of our crash course students are online. Recordings provided for revision. WhatsApp doubt support 7 AM - 11 PM.',
+      },
+      {
+        question: 'What is the fee for the best NEET crash course?',
+        answer: '45-day: ₹14,999. 60-day: ₹19,999. 90-day: ₹27,999. All include study material, daily tests, mock exams, and doubt support. EMI available (₹5,000-10,000/month). Compare this to Aakash (₹45,000-60,000) or private tutors (₹1,500-3,000/hour).',
+      },
+      {
+        question: 'Can I join if my basics are weak?',
+        answer: 'Yes, but we recommend the 90-day course. It includes a 2-week foundation bridge covering critical Class 11 concepts before intensive Class 12 + NEET revision. For very weak students, our 6-month program (₹45,000) is more suitable than a crash course.',
+      },
+    ],
+    courseSummary: {
+      title: 'Best NEET Biology Crash Course — Choose Your Duration',
+      duration: '45-90 days',
+      batchSize: '12 students max',
+      features: [
+        'AIIMS faculty Dr. Shekhar Singh teaches every batch',
+        '12-student micro-batches (not 60-100 like chains)',
+        '92% verified success rate across 500+ students',
+        'Biology-only: 4-5 hours/day of pure Biology',
+        'Daily tests + 10-year PYQ practice',
+        'Free assessment to recommend right duration',
+      ],
+      price: {
+        original: 35000,
+        discounted: 14999,
+        emi: '₹5,000/month',
+      },
+    },
+    cta: {
+      title: 'Only 12 Seats Per Batch — Don\'t Wait',
+      description: 'Next batch starts in 5 days. Book your free assessment call to find the right crash course duration for your current preparation level.',
+      buttonText: 'Book Free Assessment',
+      buttonLink: '/admissions',
+    },
+    contactButtons: defaultContactButtons,
+    toolsCTA: crashCourseToolsCTA,
+    relatedPages: [
+      { title: '45-Day Crash Course', link: '/neet-biology-45-day-course' },
+      { title: '90-Day Crash Course', link: '/neet-biology-90-day-course' },
+      { title: 'Crash Course Fees Comparison', link: '/neet-crash-course-fees' },
+      { title: 'Crash Course vs Full Course', link: '/neet-crash-course-comparison' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'Best NEET Biology Crash Course 2026',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Ranked #1 NEET Biology crash course with 92% success rate, AIIMS faculty, and 12-student micro-batches',
+      duration: '45-90 days',
+      price: 14999,
+      priceCurrency: 'INR',
+    },
+  },
+
+  'neet-crash-course-comparison': {
+    slug: 'neet-crash-course-comparison',
+    classLevel: 'universal',
+    title: 'NEET Crash Course Comparison | 45 vs 60 vs 90 Day — Which Is Best?',
+    metaDescription:
+      'Compare NEET crash course durations: 45-day vs 60-day vs 90-day. Side-by-side fees, syllabus coverage, results, and who should choose which. Free assessment available.',
+    keywords: [
+      'neet crash course comparison',
+      'neet 45 day vs 90 day course',
+      'which neet crash course duration',
+      'neet crash course vs full course',
+      'best crash course duration neet',
+      'should i do neet crash course',
+      'is neet crash course enough',
+    ],
+    hero: {
+      headline: 'Which NEET Crash Course Duration Is Right for You?',
+      subheadline:
+        'The wrong duration wastes money and time. Too short = incomplete revision. Too long = unnecessary expense. Use our comparison guide to find your perfect fit — or take our free 10-minute assessment.',
+      highlightedText: '45 vs 60 vs 90 Days',
+      ctaText: 'Take Free Assessment',
+      ctaLink: '/contact',
+    },
+    painPoints: {
+      title: 'The Duration Dilemma — We Get It',
+      points: [
+        {
+          icon: '🤔',
+          question: 'Will 45 days be enough to cover everything?',
+          solution: 'If you\'ve covered 80%+ syllabus: YES. Our 45-day plan focuses on high-weightage chapters (60% of marks from 15 chapters) + intensive PYQ practice.',
+        },
+        {
+          icon: '⏳',
+          question: 'Is 90 days too long for a crash course?',
+          solution: 'If starting from scratch or with weak basics: NO. Month 1 covers foundations, Month 2 full revision, Month 3 mock tests + exam strategy. Each day is purposeful.',
+        },
+        {
+          icon: '💰',
+          question: 'Should I pay more for a longer course?',
+          solution: 'Not always. A 45-day course (₹14,999) with strong basics beats a 90-day course (₹27,999) if your foundation is already solid. Take our free assessment to know your level.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Side-by-Side: 45 vs 60 vs 90 Day NEET Crash Course',
+      subtitle: 'Complete comparison to help you decide',
+      items: [
+        {
+          icon: '⚡',
+          title: '45-Day Sprint (₹14,999)',
+          description: 'Best for: Syllabus done once, need revision + exam technique. Covers: High-weightage chapters, daily PYQs, 45 tests. Result: Avg 60-80 marks improvement.',
+        },
+        {
+          icon: '🎯',
+          title: '60-Day Intensive (₹19,999)',
+          description: 'Best for: 70% syllabus done, gaps in some chapters. Covers: Full syllabus revision, chapter-wise gap filling, 60 tests. Result: Avg 80-100 marks improvement.',
+        },
+        {
+          icon: '📚',
+          title: '90-Day Comprehensive (₹27,999)',
+          description: 'Best for: Starting fresh or very weak basics. Covers: Foundation + full revision + mock exams, 90 tests. Result: Avg 100-150 marks improvement.',
+        },
+        {
+          icon: '🏆',
+          title: 'Which to Choose?',
+          description: 'Take our free 10-minute assessment: we\'ll test your current level and recommend the exact duration. No sales pitch — just honest advice.',
+        },
+      ],
+    },
+    stats: [
+      { value: '45-90', label: 'Days Options', icon: '📅' },
+      { value: '₹14,999', label: 'Starting Price', icon: '💰' },
+      { value: '80-150', label: 'Avg Marks Improvement', icon: '📈' },
+      { value: '92%', label: 'Success Rate', icon: '🏆' },
+    ],
+    testimonials: [
+      {
+        name: 'Neha Yadav (45-Day)',
+        achievement: 'NEET 2024 - 638/720',
+        quote: 'I had good basics from school. The 45-day course was perfect — no wasted time on concepts I already knew. Pure revision + PYQ practice. Improved from 560 to 638.',
+        score: '638/720',
+      },
+      {
+        name: 'Rohit Kumar (90-Day)',
+        achievement: 'NEET 2024 - 612/720',
+        quote: 'I was a dropper with weak Class 11 basics. Needed the 90-day course to rebuild from scratch. Worth every rupee — went from 380 to 612. The first month of foundation was crucial.',
+        score: '612/720',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do I know which duration is right for me?',
+        answer: 'Take our free 10-minute assessment. We\'ll evaluate your current Biology knowledge (Class 11 + 12), identify weak chapters, and recommend the optimal duration. 45-day if 80%+ prepared, 60-day if 60-80%, 90-day if below 60% or starting fresh.',
+      },
+      {
+        question: 'Can I switch from 45-day to 90-day mid-course?',
+        answer: 'Yes! If you realize you need more time after starting a shorter course, you can upgrade by paying the difference. We\'ll seamlessly extend your program without restarting.',
+      },
+      {
+        question: 'Is 45 days really enough to crack NEET?',
+        answer: 'If your foundation is solid (Class 11 + 12 syllabus covered once), yes. Our 45-day plan focuses on: (1) High-weightage 15 chapters = 60% marks, (2) Daily PYQ practice, (3) Exam strategy and time management. Students with good basics average 60-80 marks improvement.',
+      },
+      {
+        question: 'What if I have 6 months — should I still do a crash course?',
+        answer: 'No. With 6 months, our regular 6-month program (₹45,000) is better — it covers everything at a sustainable pace. Crash courses are designed for students with less than 3 months remaining. Don\'t rush if you have time.',
+      },
+      {
+        question: 'Do all durations have the same faculty?',
+        answer: 'Yes. Dr. Shekhar Singh (AIIMS-trained, Ph.D Botany) teaches all crash course batches personally. Same quality of teaching across 45, 60, and 90-day programs. The only difference is depth and pace of coverage.',
+      },
+      {
+        question: 'What is included in each crash course?',
+        answer: 'All durations include: live interactive classes (4-5 hrs/day), study material, daily chapter tests, full-length mock exams, PYQ booklet (10 years), WhatsApp doubt support (7 AM - 11 PM), and recorded class backup. Longer durations get more mock exams and revision cycles.',
+      },
+    ],
+    courseSummary: {
+      title: 'Choose Your NEET Crash Course Duration',
+      duration: '45 / 60 / 90 days',
+      batchSize: '12 students max',
+      features: [
+        '45-Day Sprint: ₹14,999 — for revision-ready students',
+        '60-Day Intensive: ₹19,999 — for gap-filling students',
+        '90-Day Comprehensive: ₹27,999 — for fresh starters',
+        'All durations: AIIMS faculty, 12-student batches',
+        'Free 10-minute assessment to find your level',
+        'Upgrade option: switch to longer duration anytime',
+      ],
+      price: {
+        original: 35000,
+        discounted: 14999,
+        emi: '₹5,000/month',
+      },
+    },
+    cta: {
+      title: 'Not Sure Which Duration? Take Our Free Assessment',
+      description: 'A 10-minute call with our academic counselor. We\'ll test your current level and recommend the perfect crash course duration. No pressure, no sales pitch.',
+      buttonText: 'Book Free Assessment',
+      buttonLink: '/contact',
+    },
+    contactButtons: defaultContactButtons,
+    toolsCTA: crashCourseToolsCTA,
+    relatedPages: [
+      { title: '45-Day Crash Course', link: '/neet-biology-45-day-course' },
+      { title: '90-Day Crash Course', link: '/neet-biology-90-day-course' },
+      { title: 'Best NEET Crash Course', link: '/best-neet-crash-course' },
+      { title: 'Crash Course Fees', link: '/neet-crash-course-fees' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Crash Course Comparison — 45 vs 60 vs 90 Days',
+      provider: 'Cerebrum Biology Academy',
+      description: 'Compare NEET crash course durations side-by-side: fees, coverage, results, and who should choose which',
+      duration: '45-90 days',
+      price: 14999,
+      priceCurrency: 'INR',
+    },
+  },
+
+  'neet-biology-60-day-course': {
+    slug: 'neet-biology-60-day-course',
+    classLevel: 'universal',
+    title: 'NEET 60-Day Crash Course 2026 | 2-Month Intensive Biology Program',
+    metaDescription:
+      'NEET Biology 60-day crash course — the sweet spot between speed and depth. Complete syllabus with gap-filling. AIIMS faculty, 12 students/batch. ₹19,999. Start this week.',
+    keywords: [
+      'neet 60 day course',
+      'neet 60 day crash course',
+      'neet 2 month course',
+      'neet biology 60 day preparation',
+      'neet 60 day revision plan',
+      '60 day neet crash course online',
+    ],
+    hero: {
+      headline: 'NEET Biology 60-Day Crash Course',
+      subheadline:
+        '45 days feels too rushed. 90 days feels too long. The 60-day crash course is our most popular option — enough time to fill gaps AND practice extensively. 70% of our crash course students choose this duration.',
+      highlightedText: '60 Days',
+      ctaText: 'Join 60-Day Course',
+      ctaLink: '/admissions',
+    },
+    painPoints: {
+      title: 'Why 60 Days Is the Sweet Spot',
+      points: [
+        {
+          icon: '🎯',
+          question: 'Covered most of the syllabus but have gaps in 5-8 chapters?',
+          solution: 'Week 1-2: Identify and fill specific gaps. Week 3-6: Full revision at NEET depth. Week 7-8: Mock exams + exam strategy.',
+        },
+        {
+          icon: '⏰',
+          question: 'Only 2 months left but need significant improvement?',
+          solution: '60 days = 300+ hours of focused teaching. That\'s equivalent to 6 months of part-time coaching, compressed into daily 5-hour sessions.',
+        },
+        {
+          icon: '📈',
+          question: 'Scoring 450-550 and need 600+?',
+          solution: 'Our 60-day course is designed for exactly this range. Average improvement: 80-100 marks. We\'ve seen students jump from 480 to 610.',
+        },
+      ],
+    },
+    benefits: {
+      title: '60-Day Course Structure — Week by Week',
+      subtitle: 'Every day has a purpose. No wasted time.',
+      items: [
+        {
+          icon: '🔍',
+          title: 'Week 1-2: Gap Analysis + Foundation Repair',
+          description: 'Diagnostic test on Day 1. Identify weak chapters. Intensive coverage of Class 11 gaps (Cell Biology, Plant Anatomy, Biomolecules).',
+        },
+        {
+          icon: '📚',
+          title: 'Week 3-4: Class 11 Complete Revision',
+          description: 'All Class 11 chapters at NEET depth. Daily chapter tests. Focus on Diversity, Plant Physiology, Human Physiology basics.',
+        },
+        {
+          icon: '📋',
+          title: 'Week 5-6: Class 12 Complete Revision',
+          description: 'Genetics, Ecology, Reproduction, Biotechnology, Evolution. High-weightage chapter deep dives. Daily 100-MCQ practice.',
+        },
+        {
+          icon: '🏆',
+          title: 'Week 7-8: Mock Exams + Strategy',
+          description: '8 full-length mock exams (NEET pattern). Detailed analysis after each mock. Time management training. Last-day strategy.',
+        },
+      ],
+    },
+    stats: [
+      { value: '60', label: 'Days Duration', icon: '📅' },
+      { value: '300+', label: 'Hours Teaching', icon: '⏰' },
+      { value: '4000+', label: 'MCQs Covered', icon: '📝' },
+      { value: '8', label: 'Full Mock Exams', icon: '📊' },
+    ],
+    testimonials: [
+      {
+        name: 'Ishita Banerjee',
+        achievement: 'NEET 2024 - 625/720 (60-Day Course)',
+        quote: 'The 60-day course was perfect for me. I had covered syllabus once in school but had gaps in Genetics and Ecology. Dr. Shekhar fixed those gaps in week 1-2, then the revision was smooth sailing. Went from 510 to 625.',
+        score: '625/720',
+      },
+      {
+        name: 'Kartik Mehta',
+        achievement: 'NEET 2025 - 598/720 (60-Day Course)',
+        quote: 'I was confused between 45 and 90 days. The counselor recommended 60 after my assessment. Best decision — not too rushed, not too slow. Every day counted. Biology score: 162/180.',
+        score: '598/720',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Who is the 60-day crash course ideal for?',
+        answer: 'Students who: (1) Have covered 60-80% of the syllabus at least once, (2) Score 450-550 in mock tests, (3) Have specific weak chapters (not completely blank). If you\'re scoring below 400, consider the 90-day course. If above 550, the 45-day may suffice.',
+      },
+      {
+        question: 'What is the daily schedule in the 60-day course?',
+        answer: 'Morning: 3-hour concept class (theory + diagrams). Afternoon: 1-hour PYQ practice session. Evening: 1-hour daily test + doubt clearing. Total: 5 hours of structured learning. Plus 2-3 hours of self-study with our material.',
+      },
+      {
+        question: 'How much improvement can I expect in 60 days?',
+        answer: 'Based on 200+ students who took our 60-day course: Average improvement is 80-100 marks. Top performers improve 120-150 marks. Key factors: daily attendance, completing daily tests, and following the study plan. Students who attend 90%+ of classes improve the most.',
+      },
+      {
+        question: 'What is the fee for the 60-day crash course?',
+        answer: '₹19,999 (MRP ₹25,000). Includes: 300+ hours live teaching, study material, 4000+ MCQ bank, 8 mock exams, PYQ booklet, WhatsApp doubt support. EMI: ₹6,666/month for 3 months. Scholarship available for 85%+ scorers.',
+      },
+      {
+        question: 'Is the 60-day course available online?',
+        answer: 'Yes, fully online with live interactive sessions. Same faculty, same batch size (12 students), same daily tests. 75% of our 60-day students choose online mode. Recordings provided for revision.',
+      },
+      {
+        question: 'Can I start mid-month or do I need to wait for a batch?',
+        answer: 'New batches start every 2 weeks. You don\'t need to wait months. Contact us to know the next batch start date — usually within 3-7 days.',
+      },
+    ],
+    courseSummary: {
+      title: 'NEET Biology 60-Day Crash Course',
+      duration: '60 days (8 weeks)',
+      batchSize: '12 students max',
+      features: [
+        '300+ hours of intensive Biology teaching',
+        'Gap analysis on Day 1 — personalized weak-area plan',
+        'Week-by-week structured curriculum',
+        '4,000+ MCQs + 10-year PYQ bank',
+        '8 full-length NEET mock exams',
+        'Daily tests with performance tracking',
+      ],
+      price: {
+        original: 25000,
+        discounted: 19999,
+        emi: '₹6,666/month',
+      },
+    },
+    cta: {
+      title: 'Next 60-Day Batch Starts This Week',
+      description: 'Only 12 seats per batch. Book your free diagnostic assessment to confirm the 60-day duration is right for your current level.',
+      buttonText: 'Join 60-Day Course',
+      buttonLink: '/admissions',
+    },
+    contactButtons: defaultContactButtons,
+    toolsCTA: crashCourseToolsCTA,
+    relatedPages: [
+      { title: '45-Day Course (Shorter)', link: '/neet-biology-45-day-course' },
+      { title: '90-Day Course (Longer)', link: '/neet-biology-90-day-course' },
+      { title: 'Compare All Durations', link: '/neet-crash-course-comparison' },
+      { title: 'Best NEET Crash Course', link: '/best-neet-crash-course' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Biology 60-Day Crash Course 2026',
+      provider: 'Cerebrum Biology Academy',
+      description: '60-day intensive NEET Biology crash course — the most popular duration for gap-filling and exam preparation',
+      duration: '60 days',
+      price: 19999,
+      priceCurrency: 'INR',
+    },
+  },
+
+  'neet-crash-course-fees': {
+    slug: 'neet-crash-course-fees',
+    classLevel: 'universal',
+    title: 'NEET Crash Course Fees 2026 | Price Comparison | ₹14,999 Onwards',
+    metaDescription:
+      'NEET crash course fees: ₹14,999-34,999 at Cerebrum vs ₹40,000-80,000 at Aakash/Allen. Complete fee comparison with EMI, scholarships, and what\'s included. No hidden costs.',
+    keywords: [
+      'neet crash course fees',
+      'neet crash course price',
+      'neet crash course cost',
+      'affordable neet crash course',
+      'neet crash course fees comparison',
+      'cheapest neet crash course',
+      'neet crash course emi',
+      'neet crash course scholarship',
+    ],
+    hero: {
+      headline: 'NEET Crash Course Fees — Transparent Pricing, No Hidden Costs',
+      subheadline:
+        'Quality NEET coaching doesn\'t need to cost ₹80,000. Our AIIMS-faculty crash courses start at ₹14,999 — 40-60% less than Aakash/Allen — with better results (92% vs 65% success rate).',
+      highlightedText: 'From ₹14,999',
+      ctaText: 'View Pricing Plans',
+      ctaLink: '#pricing',
+    },
+    painPoints: {
+      title: 'Why NEET Crash Courses Shouldn\'t Break the Bank',
+      points: [
+        {
+          icon: '💸',
+          question: 'Paying ₹50,000-80,000 for a crash course that promises no guarantees?',
+          solution: 'Cerebrum: ₹14,999-34,999 with 92% verified success rate. We prove ROI with student results, not marketing.',
+        },
+        {
+          icon: '🔒',
+          question: 'Hidden costs — registration fee, material fee, test series fee charged separately?',
+          solution: 'Our price includes EVERYTHING: classes, material, tests, mock exams, doubt support. Zero hidden charges.',
+        },
+        {
+          icon: '💳',
+          question: 'Can\'t afford full payment upfront?',
+          solution: 'EMI from ₹5,000/month. No credit card needed. No-cost EMI for 3-month split. Scholarship test for additional 10-30% discount.',
+        },
+      ],
+    },
+    benefits: {
+      title: 'Fee Comparison: Cerebrum vs Competitors',
+      subtitle: 'Transparent side-by-side pricing',
+      items: [
+        {
+          icon: '🟢',
+          title: 'Cerebrum 45-Day: ₹14,999',
+          description: 'Includes: 200+ hrs teaching, study material, 45 daily tests, PYQs, doubt support. Batch: 12 students. Faculty: AIIMS-trained.',
+        },
+        {
+          icon: '🟢',
+          title: 'Cerebrum 60-Day: ₹19,999',
+          description: 'Includes: 300+ hrs, 8 mock exams, 4000+ MCQs, gap analysis, personal study plan. Batch: 12 students.',
+        },
+        {
+          icon: '🟢',
+          title: 'Cerebrum 90-Day: ₹27,999',
+          description: 'Includes: 450+ hrs, 12 mocks, 5000+ MCQs, foundation bridge, complete revision x2. Batch: 12 students.',
+        },
+        {
+          icon: '🔴',
+          title: 'Aakash/Allen Crash: ₹45,000-80,000',
+          description: 'All 3 subjects (Biology gets 1/3 time). Batch: 60-100 students. Material extra. No personal attention.',
+        },
+      ],
+    },
+    stats: [
+      { value: '₹14,999', label: 'Starting Price', icon: '💰' },
+      { value: '40-60%', label: 'Cheaper Than Chains', icon: '📉' },
+      { value: '₹5,000', label: 'Monthly EMI', icon: '💳' },
+      { value: '30%', label: 'Max Scholarship', icon: '🎓' },
+    ],
+    testimonials: [
+      {
+        name: 'Aman Singh (Parent)',
+        achievement: 'Son scored 635/720 in 90-Day Course',
+        quote: 'We spent ₹4.5 lakhs at Aakash for 2 years with average results. Cerebrum\'s 90-day crash course at ₹27,999 gave better results. My son improved 180 marks. Cost per mark improvement: ₹155 at Cerebrum vs ₹2,500 at Aakash.',
+        score: '635/720',
+      },
+      {
+        name: 'Shruti Pandey',
+        achievement: 'NEET 2024 - 618/720 (45-Day Course)',
+        quote: 'I chose the 45-day course because it was ₹14,999 — honestly, I was skeptical at this price. But the quality was unmatched. 12 students, AIIMS faculty, daily tests. Best investment of my NEET journey.',
+        score: '618/720',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Why is Cerebrum\'s crash course cheaper than Aakash and Allen?',
+        answer: 'Three reasons: (1) We teach only Biology, not all 3 subjects — lower infrastructure cost, (2) We don\'t spend on TV ads and billboards — savings passed to students, (3) We run online classes — no massive real estate costs. Lower cost ≠ lower quality. Our 92% success rate is higher than most ₹80,000 crash courses.',
+      },
+      {
+        question: 'What is included in the crash course fee?',
+        answer: 'Everything: live classes (4-5 hrs/day), printed study material, daily chapter tests, full-length mock exams, 10-year PYQ booklet, WhatsApp doubt support (7 AM-11 PM), recorded class backup, performance reports. No registration fee, no material fee, no hidden charges.',
+      },
+      {
+        question: 'Do you offer EMI for the crash course?',
+        answer: 'Yes. 45-day: ₹5,000/month for 3 months. 60-day: ₹6,666/month for 3 months. 90-day: ₹9,333/month for 3 months. No credit card required. No interest. Simple bank transfer EMI.',
+      },
+      {
+        question: 'Is there a scholarship for the crash course?',
+        answer: 'Yes. Take our scholarship test (free, 30 minutes). Score 80%+: 10% off. Score 90%+: 20% off. Score 95%+: 30% off. The test covers basic Class 11+12 Biology concepts. Available before every batch start.',
+      },
+      {
+        question: 'Can I get a refund if I am not satisfied?',
+        answer: 'We offer a 7-day satisfaction guarantee. Attend classes for 7 days — if you are not satisfied with the teaching quality, we refund 100% of your fee. No questions asked. We are that confident in our crash course.',
+      },
+      {
+        question: 'Is the online crash course fee the same as offline?',
+        answer: 'Yes, same fee for online and offline. Same faculty, same batch size, same material. Online students get additional benefit of recorded class backup. Most students (70%) prefer online as it saves commute time and cost.',
+      },
+    ],
+    courseSummary: {
+      title: 'NEET Crash Course Fee Plans',
+      duration: '45 / 60 / 90 days',
+      batchSize: '12 students max',
+      features: [
+        '45-Day: ₹14,999 (EMI ₹5,000/mo) — Revision + PYQ',
+        '60-Day: ₹19,999 (EMI ₹6,666/mo) — Gap-filling + Practice',
+        '90-Day: ₹27,999 (EMI ₹9,333/mo) — Complete Coverage',
+        'All include: material, tests, mocks, doubt support',
+        'Scholarship test: up to 30% off',
+        '7-day money-back guarantee',
+      ],
+      price: {
+        original: 35000,
+        discounted: 14999,
+        emi: '₹5,000/month',
+      },
+    },
+    cta: {
+      title: 'Best Value NEET Crash Course — Starting ₹14,999',
+      description: 'Quality doesn\'t mean expensive. Book a free counseling call to discuss the right plan for your budget and preparation level.',
+      buttonText: 'Get Fee Details',
+      buttonLink: '/contact',
+    },
+    contactButtons: defaultContactButtons,
+    toolsCTA: crashCourseToolsCTA,
+    relatedPages: [
+      { title: 'Best NEET Crash Course', link: '/best-neet-crash-course' },
+      { title: 'Compare Durations', link: '/neet-crash-course-comparison' },
+      { title: '60-Day Crash Course', link: '/neet-biology-60-day-course' },
+      { title: 'NEET Scholarship Test', link: '/neet-scholarship-noida' },
+    ],
+    schema: {
+      '@type': 'Course',
+      courseName: 'NEET Crash Course — Affordable Pricing Plans',
+      provider: 'Cerebrum Biology Academy',
+      description: 'NEET crash course fees starting ₹14,999. Compare pricing with Aakash, Allen. EMI available, scholarship up to 30%.',
+      duration: '45-90 days',
+      price: 14999,
+      priceCurrency: 'INR',
+    },
+  },
 }
