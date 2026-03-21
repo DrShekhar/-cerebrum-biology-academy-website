@@ -200,7 +200,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Biology 45-Day Course | Starts March 18 | Exam May 2, 2026',
     metaDescription:
-      'NEET 2026 is May 2. Our 45-day crash course starts March 18 — complete syllabus revision, 15 mock exams, AIIMS faculty, 12-student batches. ₹14,999. Also available: 30-day Sprint.',
+      'NEET 2026 is May 2. Our 45-day crash course starts March 18 — complete syllabus revision, 15 mock exams, AIIMS faculty, 12-student batches. ₹34,999. Also available: 30-day Sprint (₹14,999).',
     keywords: [
       'neet biology 45 day course',
       '45 day neet preparation',
@@ -1208,7 +1208,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'Best NEET Crash Course 2026 — Only 42 Days Until May 2 Exam',
       subheadline:
-        'NEET is May 2, 2026. 500+ students chose Cerebrum\'s crash course over Aakash, Allen & PW: 12-student batches, AIIMS faculty, 92% success rate. 30-day (₹12,999) and 45-day (₹14,999) batches starting NOW.',
+        'NEET is May 2, 2026. 500+ students chose Cerebrum\'s crash course over Aakash, Allen & PW: 12-student batches, AIIMS faculty, 92% success rate. 30-day (₹14,999) and 45-day (₹34,999) batches starting NOW.',
       highlightedText: '#1 Rated',
       ctaText: 'Claim Your Seat',
       ctaLink: '/admissions',
@@ -1296,7 +1296,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
       {
         question: 'Which crash course duration should I choose?',
-        answer: 'NEET 2026 is on May 2. With ~40 days left, we offer: 30-day Sprint (₹12,999) if you have completed syllabus and need high-yield revision + mock exams. 45-day Intensive (₹14,999) if you need gap-filling + comprehensive revision. Book a free assessment — we\'ll recommend the right duration.',
+        answer: 'NEET 2026 is on May 2. With ~40 days left, we offer: 30-day Sprint (₹14,999) if you have completed syllabus and need high-yield revision + mock exams. 45-day Intensive (₹34,999) if you need gap-filling + comprehensive revision with more personal attention. Book a free assessment — we\'ll recommend the right duration.',
       },
       {
         question: 'Is the crash course available online?',
@@ -1304,7 +1304,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
       {
         question: 'What is the fee for the best NEET crash course?',
-        answer: '30-day Sprint: ₹12,999. 45-day Intensive: ₹14,999. Both include study material, daily tests, mock exams, PYQ booklet, and WhatsApp doubt support. EMI: ₹6,500-7,500/month. Compare this to Aakash (₹45,000-60,000) or private tutors (₹1,500-3,000/hour). NEET is May 2 — enroll now.',
+        answer: '30-day Sprint: ₹14,999. 45-day Intensive: ₹34,999. Both include study material, daily tests, mock exams, PYQ booklet, and WhatsApp doubt support. EMI available. Compare this to Aakash (₹45,000-60,000) or private tutors (₹1,500-3,000/hour). NEET is May 2 — enroll now.',
       },
       {
         question: 'Can I join if my basics are weak?',
@@ -1316,8 +1316,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
-        '30-Day Sprint: ₹12,999 (starts March 31) — for revision-ready students',
-        '45-Day Intensive: ₹14,999 (starts March 18) — for gap-filling + revision',
+        '30-Day Sprint: ₹14,999 (starts March 31) — for revision-ready students',
+        '45-Day Intensive: ₹34,999 (starts March 18) — for gap-filling + revision',
         'AIIMS faculty Dr. Shekhar Singh teaches every batch',
         '12-student micro-batches (not 60-100 like chains)',
         '92% verified success rate across 500+ students',
@@ -1325,7 +1325,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       ],
       price: {
         original: 25000,
-        discounted: 12999,
+        discounted: 14999,
         emi: '₹6,500/month',
       },
     },
@@ -1393,7 +1393,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '💰',
           question: 'Should I pay more for a longer course?',
-          solution: 'Not always. A 45-day course (₹14,999) with strong basics beats a 90-day course (₹27,999) if your foundation is already solid. Take our free assessment to know your level.',
+          solution: 'Depends on your level. A 30-day sprint (₹14,999) with strong basics can be enough. If you have gaps, the 45-day intensive (₹34,999) gives deeper coverage. Take our free assessment to know your level.',
         },
       ],
     },
@@ -1403,12 +1403,12 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       items: [
         {
           icon: '⚡',
-          title: '30-Day Sprint (₹12,999) — Starts March 31',
+          title: '30-Day Sprint (₹14,999) — Starts March 31',
           description: 'Best for: Syllabus done, need revision + mock exams. Covers: Top 15 high-weightage chapters (60% of marks), daily PYQs, 10 full mocks. Result: Avg 50-80 marks improvement.',
         },
         {
           icon: '🎯',
-          title: '45-Day Intensive (₹14,999) — Starts March 18',
+          title: '45-Day Intensive (₹34,999) — Starts March 18',
           description: 'Best for: 60-80% syllabus done, gaps in 5-8 chapters. Covers: Complete syllabus revision, gap-filling, 15 mocks. Result: Avg 80-120 marks improvement.',
         },
         {
@@ -1474,8 +1474,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
-        '30-Day Sprint: ₹12,999 — revision + 10 mock exams (starts March 31)',
-        '45-Day Intensive: ₹14,999 — gap-filling + complete revision (starts March 18)',
+        '30-Day Sprint: ₹14,999 — revision + 10 mock exams (starts March 31)',
+        '45-Day Intensive: ₹34,999 — gap-filling + complete revision (starts March 18)',
         'NEET exam: May 2, 2026 — every day counts',
         'AIIMS faculty, 12-student micro-batches',
         'Free 10-minute assessment to find your level',
@@ -1517,7 +1517,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Crash Course 2026 | 30 & 45-Day Options | Exam May 2',
     metaDescription:
-      'NEET 2026 is May 2 — only 30-day (₹12,999) and 45-day (₹14,999) crash courses available now. AIIMS faculty, 12 students/batch. Enroll today, start immediately.',
+      'NEET 2026 is May 2 — only 30-day (₹14,999) and 45-day (₹34,999) crash courses available now. AIIMS faculty, 12 students/batch. Enroll today, start immediately.',
     keywords: [
       'neet 60 day course',
       'neet 60 day crash course',
@@ -1529,7 +1529,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'NEET 2026 Crash Course — 30 & 45 Day Batches Starting Now',
       subheadline:
-        'NEET exam is May 2, 2026. With ~42 days left, we now offer 30-day Sprint (₹12,999) and 45-day Intensive (₹14,999) batches. Both starting immediately with AIIMS faculty and 12-student micro-batches.',
+        'NEET exam is May 2, 2026. With ~42 days left, we now offer 30-day Sprint (₹14,999) and 45-day Intensive (₹14,999) batches. Both starting immediately with AIIMS faculty and 12-student micro-batches.',
       highlightedText: 'Starts Now',
       ctaText: 'Enroll Today',
       ctaLink: '/admissions',
@@ -1672,9 +1672,9 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-crash-course-fees': {
     slug: 'neet-crash-course-fees',
     classLevel: 'universal',
-    title: 'NEET Crash Course Fees 2026 | ₹12,999 for 30-Day | May 2 Exam',
+    title: 'NEET Crash Course Fees 2026 | ₹14,999 for 30-Day | May 2 Exam',
     metaDescription:
-      'NEET crash course fees: ₹12,999 (30-day) or ₹14,999 (45-day) at Cerebrum vs ₹40,000-80,000 at Aakash/Allen. NEET May 2 — enroll now. EMI, scholarships available.',
+      'NEET crash course fees: ₹14,999 (30-day) to ₹34,999 (45-day) at Cerebrum vs ₹40,000-80,000 at Aakash/Allen. NEET May 2 — enroll now. EMI, scholarships available.',
     keywords: [
       'neet crash course fees',
       'neet crash course price',
@@ -1686,10 +1686,10 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       'neet crash course scholarship',
     ],
     hero: {
-      headline: 'NEET Crash Course Fees — ₹12,999 for 30-Day | NEET May 2, 2026',
+      headline: 'NEET Crash Course Fees — ₹14,999 for 30-Day | NEET May 2, 2026',
       subheadline:
-        'Only ~42 days until NEET 2026. Our 30-day crash course starts at ₹12,999 — 70% less than Aakash/Allen. 45-day option at ₹14,999 for students who need deeper coverage. Both include AIIMS faculty and 12-student batches.',
-      highlightedText: 'From ₹12,999',
+        'Only ~42 days until NEET 2026. Our 30-day crash course starts at ₹14,999 — 70% less than Aakash/Allen. 45-day option at ₹34,999 for students who need deeper coverage. Both include AIIMS faculty and 12-student batches.',
+      highlightedText: 'From ₹14,999',
       ctaText: 'View Pricing Plans',
       ctaLink: '#pricing',
     },
@@ -1719,12 +1719,12 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       items: [
         {
           icon: '🟢',
-          title: 'Cerebrum 30-Day Sprint: ₹12,999 (Starts March 31)',
+          title: 'Cerebrum 30-Day Sprint: ₹14,999 (Starts March 31)',
           description: 'Includes: 150+ hrs teaching, study material, 30 daily tests, 10 full mocks, PYQs, doubt support. Batch: 12 students. Faculty: AIIMS-trained.',
         },
         {
           icon: '🟢',
-          title: 'Cerebrum 45-Day Intensive: ₹14,999 (Starts March 18)',
+          title: 'Cerebrum 45-Day Intensive: ₹34,999 (Starts March 18)',
           description: 'Includes: 225+ hrs, 15 mock exams, 3000+ MCQs, gap analysis, complete syllabus revision. Batch: 12 students.',
         },
         {
@@ -1740,7 +1740,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     stats: [
-      { value: '₹12,999', label: 'Starting Price (30-Day)', icon: '💰' },
+      { value: '₹14,999', label: 'Starting Price (30-Day)', icon: '💰' },
       { value: '70%', label: 'Cheaper Than Aakash', icon: '📉' },
       { value: '42', label: 'Days Left Until NEET', icon: '⏰' },
       { value: '30%', label: 'Max Scholarship', icon: '🎓' },
@@ -1755,7 +1755,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Shruti Pandey',
         achievement: 'NEET 2024 - 618/720 (45-Day Course)',
-        quote: 'I chose the 45-day course because it was ₹14,999 — honestly, I was skeptical at this price. But the quality was unmatched. 12 students, AIIMS faculty, daily tests. Best investment of my NEET journey.',
+        quote: 'I chose the 45-day course — honestly, I was skeptical that such quality was possible at this price. But it was unmatched. 12 students, AIIMS faculty, daily tests. Best investment of my NEET journey.',
         score: '618/720',
       },
     ],
@@ -1790,8 +1790,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
-        '30-Day Sprint: ₹12,999 — High-yield revision + 10 mocks (starts March 31)',
-        '45-Day Intensive: ₹14,999 — Complete revision + 15 mocks (starts March 18)',
+        '30-Day Sprint: ₹14,999 — High-yield revision + 10 mocks (starts March 31)',
+        '45-Day Intensive: ₹34,999 — Complete revision + 15 mocks (starts March 18)',
         'Both include: material, daily tests, PYQs, doubt support',
         'Scholarship test: up to 30% off',
         '7-day money-back guarantee',
