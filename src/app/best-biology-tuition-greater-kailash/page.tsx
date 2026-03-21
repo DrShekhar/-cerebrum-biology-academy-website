@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-tuition-greater-kailash',
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 }
 
 export default function BestBiologyTuitionGreaterKailashPage() {

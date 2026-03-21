@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-coaching-defence-colony',
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 }
 
 export default function BiologyCoachingDefenceColony() {
