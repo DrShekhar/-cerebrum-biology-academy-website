@@ -81,7 +81,7 @@ export const rateLimiters = {
   whatsappSend: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(20, '1 h'),
+        limiter: Ratelimit.slidingWindow(1000, '1 h'),
         analytics: true,
         prefix: 'ratelimit:whatsapp:send',
       })
