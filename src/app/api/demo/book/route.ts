@@ -141,10 +141,10 @@ export async function POST(request: NextRequest) {
     // Use distributed rate limiting (Redis-backed when configured)
     const rateLimitResult = await withRateLimit(request, {
       identifier: `demo-book:${clientIp}`,
-      limit: 10, // 10 bookings per hour per IP
+      limit: 1000, // Never block a lead
       window: 60 * 60 * 1000, // 1 hour
       keyPrefix: 'demo-book',
-      failClosed: true, // Security-critical: block requests if rate limiter fails
+      failClosed: false, // Never block a lead — fail open
     })
 
     if (!rateLimitResult.success) {
@@ -598,10 +598,10 @@ export async function GET(request: NextRequest) {
     // Use distributed rate limiting for slot availability checks
     const rateLimitResult = await withRateLimit(request, {
       identifier: `demo-book-slots:${clientIp}`,
-      limit: 30, // 30 requests per 15 minutes for slot checks
+      limit: 1000, // Never block slot checks
       window: 15 * 60 * 1000,
       keyPrefix: 'demo-book-slots',
-      failClosed: true, // Block requests if rate limit check fails
+      failClosed: false, // Never block a lead — fail open
     })
 
     if (!rateLimitResult.success) {

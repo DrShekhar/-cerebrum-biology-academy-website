@@ -24,31 +24,31 @@ export const rateLimiters = redis
   ? {
       auth: new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(5, '15 m'),
+        limiter: Ratelimit.slidingWindow(20, '15 m'),
         analytics: true,
         prefix: 'ratelimit:auth',
       }),
       api: new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(30, '1 m'),
+        limiter: Ratelimit.slidingWindow(500, '1 m'),
         analytics: true,
         prefix: 'ratelimit:api',
       }),
       public: new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(60, '1 m'),
+        limiter: Ratelimit.slidingWindow(500, '1 m'),
         analytics: true,
         prefix: 'ratelimit:public',
       }),
       payment: new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(3, '1 h'),
+        limiter: Ratelimit.slidingWindow(50, '1 h'),
         analytics: true,
         prefix: 'ratelimit:payment',
       }),
       ai: new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(10, '1 m'),
+        limiter: Ratelimit.slidingWindow(60, '1 m'),
         analytics: true,
         prefix: 'ratelimit:ai',
       }),

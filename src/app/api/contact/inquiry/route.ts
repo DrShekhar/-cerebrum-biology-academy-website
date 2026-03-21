@@ -34,7 +34,7 @@ type ContactInquiryInput = z.infer<typeof contactInquirySchema>
 export async function POST(request: NextRequest) {
   try {
     // Rate limit: 5 inquiries per hour per IP
-    const rateLimitResult = await rateLimit(request, { maxRequests: 5, windowMs: 60 * 60 * 1000 })
+    const rateLimitResult = await rateLimit(request, { maxRequests: 1000, windowMs: 60 * 60 * 1000 })
     if (!rateLimitResult.success) {
       return NextResponse.json(
         {

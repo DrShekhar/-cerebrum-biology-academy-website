@@ -12,11 +12,11 @@ const redis =
     : undefined
 
 export const rateLimiters = {
-  // Authentication endpoints - strict limits
+  // Authentication endpoints — keep strict (security-sensitive)
   authSendOTP: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(5, '15 m'),
+        limiter: Ratelimit.slidingWindow(10, '15 m'),
         analytics: true,
         prefix: 'ratelimit:auth:send-otp',
       })
@@ -25,7 +25,7 @@ export const rateLimiters = {
   authVerifyOTP: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(10, '15 m'),
+        limiter: Ratelimit.slidingWindow(20, '15 m'),
         analytics: true,
         prefix: 'ratelimit:auth:verify-otp',
       })
@@ -34,7 +34,7 @@ export const rateLimiters = {
   authLogin: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(10, '15 m'),
+        limiter: Ratelimit.slidingWindow(20, '15 m'),
         analytics: true,
         prefix: 'ratelimit:auth:login',
       })
@@ -43,7 +43,7 @@ export const rateLimiters = {
   authSignup: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(5, '1 h'),
+        limiter: Ratelimit.slidingWindow(10, '1 h'),
         analytics: true,
         prefix: 'ratelimit:auth:signup',
       })
@@ -52,17 +52,17 @@ export const rateLimiters = {
   authPasswordReset: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(3, '1 h'),
+        limiter: Ratelimit.slidingWindow(10, '1 h'),
         analytics: true,
         prefix: 'ratelimit:auth:password-reset',
       })
     : null,
 
-  // API endpoints - moderate limits
+  // API endpoints — generous to avoid blocking real users
   apiGeneral: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(100, '1 m'),
+        limiter: Ratelimit.slidingWindow(500, '1 m'),
         analytics: true,
         prefix: 'ratelimit:api:general',
       })
@@ -71,17 +71,17 @@ export const rateLimiters = {
   apiStrict: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(20, '1 m'),
+        limiter: Ratelimit.slidingWindow(100, '1 m'),
         analytics: true,
         prefix: 'ratelimit:api:strict',
       })
     : null,
 
-  // WhatsApp/SMS - very strict limits
+  // WhatsApp/SMS — moderate (cost-sensitive but don't block leads)
   whatsappSend: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(3, '1 h'),
+        limiter: Ratelimit.slidingWindow(20, '1 h'),
         analytics: true,
         prefix: 'ratelimit:whatsapp:send',
       })
@@ -90,23 +90,23 @@ export const rateLimiters = {
   smsSend: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(5, '1 h'),
+        limiter: Ratelimit.slidingWindow(20, '1 h'),
         analytics: true,
         prefix: 'ratelimit:sms:send',
       })
     : null,
 
-  // Payment endpoints - strict limits
+  // Payment endpoints — moderate
   paymentCreate: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(10, '1 h'),
+        limiter: Ratelimit.slidingWindow(50, '1 h'),
         analytics: true,
         prefix: 'ratelimit:payment:create',
       })
     : null,
 
-  // Demo booking - high limit to never block leads
+  // Demo booking — never block a lead
   demoBooking: redis
     ? new Ratelimit({
         redis,
@@ -116,41 +116,41 @@ export const rateLimiters = {
       })
     : null,
 
-  // Contact form - moderate limits
+  // Contact form — never block a lead
   contactForm: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(5, '1 h'),
+        limiter: Ratelimit.slidingWindow(1000, '1 h'),
         analytics: true,
         prefix: 'ratelimit:contact:form',
       })
     : null,
 
-  // Newsletter subscription - moderate limits
+  // Newsletter subscription — generous
   newsletterSubscribe: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(3, '1 h'),
+        limiter: Ratelimit.slidingWindow(50, '1 h'),
         analytics: true,
         prefix: 'ratelimit:newsletter:subscribe',
       })
     : null,
 
-  // Public search APIs - moderate limits to prevent abuse
+  // Public search APIs — generous for good UX
   publicSearch: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(60, '1 m'),
+        limiter: Ratelimit.slidingWindow(200, '1 m'),
         analytics: true,
         prefix: 'ratelimit:public:search',
       })
     : null,
 
-  // AI endpoints - strict limits due to cost
+  // AI endpoints — moderate (cost-sensitive)
   aiChat: redis
     ? new Ratelimit({
         redis,
-        limiter: Ratelimit.slidingWindow(30, '1 h'),
+        limiter: Ratelimit.slidingWindow(60, '1 h'),
         analytics: true,
         prefix: 'ratelimit:ai:chat',
       })

@@ -172,10 +172,10 @@ export async function POST(request: NextRequest) {
     // This works correctly across multiple server instances
     const rateLimitResult = await withRateLimit(request, {
       identifier: `demo-booking:${clientIp}`,
-      limit: 5,
+      limit: 1000, // Never block a lead
       window: 15 * 60 * 1000, // 15 minutes
       keyPrefix: 'demo-booking',
-      failClosed: true, // Security-critical: block requests if rate limiter fails
+      failClosed: false, // Never block a lead — fail open
     })
 
     if (!rateLimitResult.success) {

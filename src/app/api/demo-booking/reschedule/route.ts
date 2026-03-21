@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
       limit: 10, // 10 reschedule attempts per 15 minutes (stricter than GET)
       window: 15 * 60 * 1000,
       keyPrefix: 'reschedule-post',
-      failClosed: true, // Security-critical: block requests if rate limiter fails
+      failClosed: false, // Never block — fail open
     })
 
     if (!rateLimitResult.success) {
@@ -208,7 +208,7 @@ export async function GET(request: NextRequest) {
       limit: 20, // 20 requests per 15 minutes
       window: 15 * 60 * 1000,
       keyPrefix: 'reschedule-get',
-      failClosed: true, // Security-critical: block requests if rate limiter fails
+      failClosed: false, // Never block — fail open
     })
 
     if (!rateLimitResult.success) {

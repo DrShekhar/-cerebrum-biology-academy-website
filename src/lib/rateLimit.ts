@@ -33,7 +33,7 @@ export interface RateLimitResult {
 
 export async function rateLimit(
   req: NextRequest,
-  config: RateLimitConfig = { maxRequests: 10, windowMs: 60 * 60 * 1000 }
+  config: RateLimitConfig = { maxRequests: 500, windowMs: 60 * 60 * 1000 }
 ): Promise<RateLimitResult> {
   const identifier = getClientIdentifier(req)
   const windowSeconds = Math.ceil(config.windowMs / 1000)
