@@ -41,7 +41,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Biology Crash Course 2026 | Last Minute Preparation Online',
     metaDescription:
-      'Intensive NEET Biology crash course for last-minute preparation. Complete syllabus revision in 45-60 days with expert faculty. Limited batch size for personal attention.',
+      'Intensive NEET Biology crash course for last-minute preparation. Complete syllabus revision in 30-45 days with expert faculty. Limited batch size for personal attention.',
     keywords: [
       'neet biology crash course',
       'neet crash course 2026',
@@ -52,8 +52,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'NEET Biology Crash Course 2026',
       subheadline:
-        'Complete your NEET Biology syllabus revision in 45-60 days. Intensive crash course designed for last-minute preparation with expert AIIMS faculty.',
-      highlightedText: '45-60 Days',
+        'Complete your NEET Biology syllabus revision in 30-45 days. Intensive crash course designed for last-minute preparation with expert AIIMS faculty.',
+      highlightedText: '30-45 Days',
       ctaText: 'Join Crash Course',
       ctaLink: '/courses/crash-course',
     },
@@ -129,7 +129,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'How long is the NEET Biology crash course?',
         answer:
-          'Our crash course is 45-60 days long, covering the complete NEET Biology syllabus with intensive daily sessions of 4-5 hours.',
+          'Our crash course is 30-45 days long, covering the complete NEET Biology syllabus with intensive daily sessions of 4-5 hours.',
       },
       {
         question: 'Can I join the crash course if I have weak basics?',
@@ -149,7 +149,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     ],
     courseSummary: {
       title: 'NEET Biology Crash Course 2026',
-      duration: '45-60 days',
+      duration: '30-45 days',
       batchSize: '10-15 students',
       features: [
         '360+ hours of intensive teaching',
@@ -189,7 +189,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       courseName: 'NEET Biology Crash Course 2026',
       provider: 'Cerebrum Biology Academy',
       description: 'Intensive NEET Biology crash course for last-minute preparation',
-      duration: '45-60 days',
+      duration: '30-45 days',
       price: 19999,
       priceCurrency: 'INR',
     },
@@ -198,9 +198,9 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-45-day-course': {
     slug: 'neet-biology-45-day-course',
     classLevel: 'universal',
-    title: 'NEET Biology 45 Day Course | Complete Revision in 45 Days',
+    title: 'NEET Biology 45-Day Course | Starts March 18 | Exam May 2, 2026',
     metaDescription:
-      'Complete NEET Biology revision in 45 days. Fast-track course covering all chapters with focus on high-weightage topics. Expert faculty and daily tests.',
+      'NEET 2026 is May 2. Our 45-day crash course starts March 18 — complete syllabus revision, 15 mock exams, AIIMS faculty, 12-student batches. ₹14,999. Also available: 30-day Sprint.',
     keywords: [
       'neet biology 45 day course',
       '45 day neet preparation',
@@ -995,7 +995,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Crash Course 2026 | Intensive Last-Minute Preparation',
     metaDescription:
-      'Enroll in NEET Crash Course 2026 for intensive last-minute preparation. Complete syllabus in 45-90 days with expert AIIMS faculty. Limited batch size, proven results.',
+      'Enroll in NEET Crash Course 2026 for intensive last-minute preparation. Complete syllabus in 30-45 days with expert AIIMS faculty. Limited batch size, proven results.',
     keywords: [
       'neet crash course',
       'neet crash course 2026',
@@ -1020,7 +1020,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
           icon: '⏰',
           question: 'Only a few months left for NEET?',
           solution:
-            'Our crash course covers complete syllabus in 45-90 days with strategic prioritization',
+            'Our crash course covers complete syllabus in 30-45 days with strategic prioritization',
         },
         {
           icon: '📊',
@@ -1140,7 +1140,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     ],
     courseSummary: {
       title: 'NEET Crash Course 2026',
-      duration: '45-90 days (flexible)',
+      duration: '30-45 days (flexible)',
       batchSize: '10-12 students',
       features: [
         '500+ hours of intensive teaching',
@@ -1184,7 +1184,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       provider: 'Cerebrum Biology Academy',
       description:
         'Intensive NEET crash course for last-minute preparation with complete syllabus coverage',
-      duration: '45-90 days',
+      duration: '30-45 days',
       price: 34999,
       priceCurrency: 'INR',
     },
@@ -1206,9 +1206,9 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       'best neet biology crash course online',
     ],
     hero: {
-      headline: 'Best NEET Crash Course in India — Ranked #1 for Biology',
+      headline: 'Best NEET Crash Course 2026 — Only 42 Days Until May 2 Exam',
       subheadline:
-        'Why 500+ students chose Cerebrum\'s crash course over Aakash, Allen & PW: 12-student batches, AIIMS faculty, 92% success rate, and 40% lower fees. See the comparison below.',
+        'NEET is May 2, 2026. 500+ students chose Cerebrum\'s crash course over Aakash, Allen & PW: 12-student batches, AIIMS faculty, 92% success rate. 30-day (₹12,999) and 45-day (₹14,999) batches starting NOW.',
       highlightedText: '#1 Rated',
       ctaText: 'Claim Your Seat',
       ctaLink: '/admissions',
@@ -1296,7 +1296,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
       {
         question: 'Which crash course duration should I choose?',
-        answer: '45 days: If you have completed syllabus once and need revision + exam strategy. 60 days: If you have 70% syllabus done and need gap-filling + practice. 90 days: If you need comprehensive coverage from scratch. Unsure? Book a free assessment — we\'ll recommend the right duration based on your current score.',
+        answer: 'NEET 2026 is on May 2. With ~40 days left, we offer: 30-day Sprint (₹12,999) if you have completed syllabus and need high-yield revision + mock exams. 45-day Intensive (₹14,999) if you need gap-filling + comprehensive revision. Book a free assessment — we\'ll recommend the right duration.',
       },
       {
         question: 'Is the crash course available online?',
@@ -1304,7 +1304,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
       {
         question: 'What is the fee for the best NEET crash course?',
-        answer: '45-day: ₹14,999. 60-day: ₹19,999. 90-day: ₹27,999. All include study material, daily tests, mock exams, and doubt support. EMI available (₹5,000-10,000/month). Compare this to Aakash (₹45,000-60,000) or private tutors (₹1,500-3,000/hour).',
+        answer: '30-day Sprint: ₹12,999. 45-day Intensive: ₹14,999. Both include study material, daily tests, mock exams, PYQ booklet, and WhatsApp doubt support. EMI: ₹6,500-7,500/month. Compare this to Aakash (₹45,000-60,000) or private tutors (₹1,500-3,000/hour). NEET is May 2 — enroll now.',
       },
       {
         question: 'Can I join if my basics are weak?',
@@ -1312,21 +1312,21 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
     ],
     courseSummary: {
-      title: 'Best NEET Biology Crash Course — Choose Your Duration',
-      duration: '45-90 days',
+      title: 'Best NEET Crash Course — 30-Day or 45-Day | NEET May 2, 2026',
+      duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
+        '30-Day Sprint: ₹12,999 (starts March 31) — for revision-ready students',
+        '45-Day Intensive: ₹14,999 (starts March 18) — for gap-filling + revision',
         'AIIMS faculty Dr. Shekhar Singh teaches every batch',
         '12-student micro-batches (not 60-100 like chains)',
         '92% verified success rate across 500+ students',
         'Biology-only: 4-5 hours/day of pure Biology',
-        'Daily tests + 10-year PYQ practice',
-        'Free assessment to recommend right duration',
       ],
       price: {
-        original: 35000,
-        discounted: 14999,
-        emi: '₹5,000/month',
+        original: 25000,
+        discounted: 12999,
+        emi: '₹6,500/month',
       },
     },
     cta: {
@@ -1348,7 +1348,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       courseName: 'Best NEET Biology Crash Course 2026',
       provider: 'Cerebrum Biology Academy',
       description: 'Ranked #1 NEET Biology crash course with 92% success rate, AIIMS faculty, and 12-student micro-batches',
-      duration: '45-90 days',
+      duration: '30-45 days',
       price: 14999,
       priceCurrency: 'INR',
     },
@@ -1357,9 +1357,9 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-crash-course-comparison': {
     slug: 'neet-crash-course-comparison',
     classLevel: 'universal',
-    title: 'NEET Crash Course Comparison | 45 vs 60 vs 90 Day — Which Is Best?',
+    title: 'NEET Crash Course Comparison | 30 vs 45 Day — Which Is Best for May 2026?',
     metaDescription:
-      'Compare NEET crash course durations: 45-day vs 60-day vs 90-day. Side-by-side fees, syllabus coverage, results, and who should choose which. Free assessment available.',
+      'NEET 2026 is May 2. Compare 30-day vs 45-day crash course: fees, syllabus coverage, results. Only 42 days left — choose the right duration now. Free assessment.',
     keywords: [
       'neet crash course comparison',
       'neet 45 day vs 90 day course',
@@ -1370,10 +1370,10 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       'is neet crash course enough',
     ],
     hero: {
-      headline: 'Which NEET Crash Course Duration Is Right for You?',
+      headline: 'NEET May 2, 2026 — 30-Day or 45-Day Crash Course?',
       subheadline:
-        'The wrong duration wastes money and time. Too short = incomplete revision. Too long = unnecessary expense. Use our comparison guide to find your perfect fit — or take our free 10-minute assessment.',
-      highlightedText: '45 vs 60 vs 90 Days',
+        'Only ~42 days left until NEET 2026. Every day counts. The 30-day Sprint is for revision-ready students. The 45-day Intensive fills gaps AND revises. Take our free 10-minute assessment to find your perfect fit.',
+      highlightedText: '30 vs 45 Days',
       ctaText: 'Take Free Assessment',
       ctaLink: '/contact',
     },
@@ -1403,23 +1403,23 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       items: [
         {
           icon: '⚡',
-          title: '45-Day Sprint (₹14,999)',
-          description: 'Best for: Syllabus done once, need revision + exam technique. Covers: High-weightage chapters, daily PYQs, 45 tests. Result: Avg 60-80 marks improvement.',
+          title: '30-Day Sprint (₹12,999) — Starts March 31',
+          description: 'Best for: Syllabus done, need revision + mock exams. Covers: Top 15 high-weightage chapters (60% of marks), daily PYQs, 10 full mocks. Result: Avg 50-80 marks improvement.',
         },
         {
           icon: '🎯',
-          title: '60-Day Intensive (₹19,999)',
-          description: 'Best for: 70% syllabus done, gaps in some chapters. Covers: Full syllabus revision, chapter-wise gap filling, 60 tests. Result: Avg 80-100 marks improvement.',
+          title: '45-Day Intensive (₹14,999) — Starts March 18',
+          description: 'Best for: 60-80% syllabus done, gaps in 5-8 chapters. Covers: Complete syllabus revision, gap-filling, 15 mocks. Result: Avg 80-120 marks improvement.',
         },
         {
-          icon: '📚',
-          title: '90-Day Comprehensive (₹27,999)',
-          description: 'Best for: Starting fresh or very weak basics. Covers: Foundation + full revision + mock exams, 90 tests. Result: Avg 100-150 marks improvement.',
+          icon: '📊',
+          title: 'What About 60 or 90 Day Courses?',
+          description: 'With NEET on May 2, 2026, longer courses are no longer viable. If you have not covered the syllabus at all, join the 45-day batch immediately — it includes a foundation bridge in Week 1.',
         },
         {
           icon: '🏆',
-          title: 'Which to Choose?',
-          description: 'Take our free 10-minute assessment: we\'ll test your current level and recommend the exact duration. No sales pitch — just honest advice.',
+          title: 'Not Sure? Free 10-Min Assessment',
+          description: 'Call us now. We\'ll test your current level in 10 minutes and recommend 30-day or 45-day. Every day you wait = 1 less day of preparation.',
         },
       ],
     },
@@ -1470,16 +1470,16 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
     ],
     courseSummary: {
-      title: 'Choose Your NEET Crash Course Duration',
-      duration: '45 / 60 / 90 days',
+      title: 'NEET 2026 Crash Course — Only 30 & 45 Day Options Left',
+      duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
-        '45-Day Sprint: ₹14,999 — for revision-ready students',
-        '60-Day Intensive: ₹19,999 — for gap-filling students',
-        '90-Day Comprehensive: ₹27,999 — for fresh starters',
-        'All durations: AIIMS faculty, 12-student batches',
+        '30-Day Sprint: ₹12,999 — revision + 10 mock exams (starts March 31)',
+        '45-Day Intensive: ₹14,999 — gap-filling + complete revision (starts March 18)',
+        'NEET exam: May 2, 2026 — every day counts',
+        'AIIMS faculty, 12-student micro-batches',
         'Free 10-minute assessment to find your level',
-        'Upgrade option: switch to longer duration anytime',
+        'Daily 5-hour sessions + WhatsApp doubt support',
       ],
       price: {
         original: 35000,
@@ -1506,7 +1506,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       courseName: 'NEET Crash Course Comparison — 45 vs 60 vs 90 Days',
       provider: 'Cerebrum Biology Academy',
       description: 'Compare NEET crash course durations side-by-side: fees, coverage, results, and who should choose which',
-      duration: '45-90 days',
+      duration: '30-45 days',
       price: 14999,
       priceCurrency: 'INR',
     },
@@ -1515,9 +1515,9 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-60-day-course': {
     slug: 'neet-biology-60-day-course',
     classLevel: 'universal',
-    title: 'NEET 60-Day Crash Course 2026 | 2-Month Intensive Biology Program',
+    title: 'NEET Crash Course 2026 | 30 & 45-Day Options | Exam May 2',
     metaDescription:
-      'NEET Biology 60-day crash course — the sweet spot between speed and depth. Complete syllabus with gap-filling. AIIMS faculty, 12 students/batch. ₹19,999. Start this week.',
+      'NEET 2026 is May 2 — only 30-day (₹12,999) and 45-day (₹14,999) crash courses available now. AIIMS faculty, 12 students/batch. Enroll today, start immediately.',
     keywords: [
       'neet 60 day course',
       'neet 60 day crash course',
@@ -1527,11 +1527,11 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       '60 day neet crash course online',
     ],
     hero: {
-      headline: 'NEET Biology 60-Day Crash Course',
+      headline: 'NEET 2026 Crash Course — 30 & 45 Day Batches Starting Now',
       subheadline:
-        '45 days feels too rushed. 90 days feels too long. The 60-day crash course is our most popular option — enough time to fill gaps AND practice extensively. 70% of our crash course students choose this duration.',
-      highlightedText: '60 Days',
-      ctaText: 'Join 60-Day Course',
+        'NEET exam is May 2, 2026. With ~42 days left, we now offer 30-day Sprint (₹12,999) and 45-day Intensive (₹14,999) batches. Both starting immediately with AIIMS faculty and 12-student micro-batches.',
+      highlightedText: 'Starts Now',
+      ctaText: 'Enroll Today',
       ctaLink: '/admissions',
     },
     painPoints: {
@@ -1672,9 +1672,9 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-crash-course-fees': {
     slug: 'neet-crash-course-fees',
     classLevel: 'universal',
-    title: 'NEET Crash Course Fees 2026 | Price Comparison | ₹14,999 Onwards',
+    title: 'NEET Crash Course Fees 2026 | ₹12,999 for 30-Day | May 2 Exam',
     metaDescription:
-      'NEET crash course fees: ₹14,999-34,999 at Cerebrum vs ₹40,000-80,000 at Aakash/Allen. Complete fee comparison with EMI, scholarships, and what\'s included. No hidden costs.',
+      'NEET crash course fees: ₹12,999 (30-day) or ₹14,999 (45-day) at Cerebrum vs ₹40,000-80,000 at Aakash/Allen. NEET May 2 — enroll now. EMI, scholarships available.',
     keywords: [
       'neet crash course fees',
       'neet crash course price',
@@ -1686,10 +1686,10 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       'neet crash course scholarship',
     ],
     hero: {
-      headline: 'NEET Crash Course Fees — Transparent Pricing, No Hidden Costs',
+      headline: 'NEET Crash Course Fees — ₹12,999 for 30-Day | NEET May 2, 2026',
       subheadline:
-        'Quality NEET coaching doesn\'t need to cost ₹80,000. Our AIIMS-faculty crash courses start at ₹14,999 — 40-60% less than Aakash/Allen — with better results (92% vs 65% success rate).',
-      highlightedText: 'From ₹14,999',
+        'Only ~42 days until NEET 2026. Our 30-day crash course starts at ₹12,999 — 70% less than Aakash/Allen. 45-day option at ₹14,999 for students who need deeper coverage. Both include AIIMS faculty and 12-student batches.',
+      highlightedText: 'From ₹12,999',
       ctaText: 'View Pricing Plans',
       ctaLink: '#pricing',
     },
@@ -1719,18 +1719,18 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       items: [
         {
           icon: '🟢',
-          title: 'Cerebrum 45-Day: ₹14,999',
-          description: 'Includes: 200+ hrs teaching, study material, 45 daily tests, PYQs, doubt support. Batch: 12 students. Faculty: AIIMS-trained.',
+          title: 'Cerebrum 30-Day Sprint: ₹12,999 (Starts March 31)',
+          description: 'Includes: 150+ hrs teaching, study material, 30 daily tests, 10 full mocks, PYQs, doubt support. Batch: 12 students. Faculty: AIIMS-trained.',
         },
         {
           icon: '🟢',
-          title: 'Cerebrum 60-Day: ₹19,999',
-          description: 'Includes: 300+ hrs, 8 mock exams, 4000+ MCQs, gap analysis, personal study plan. Batch: 12 students.',
+          title: 'Cerebrum 45-Day Intensive: ₹14,999 (Starts March 18)',
+          description: 'Includes: 225+ hrs, 15 mock exams, 3000+ MCQs, gap analysis, complete syllabus revision. Batch: 12 students.',
         },
         {
-          icon: '🟢',
-          title: 'Cerebrum 90-Day: ₹27,999',
-          description: 'Includes: 450+ hrs, 12 mocks, 5000+ MCQs, foundation bridge, complete revision x2. Batch: 12 students.',
+          icon: '🟡',
+          title: 'No More 60/90 Day Options',
+          description: 'NEET 2026 is May 2. With 42 days left, only 30-day and 45-day courses are available. Don\'t waste time on courses that end after the exam.',
         },
         {
           icon: '🔴',
@@ -1740,9 +1740,9 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     stats: [
-      { value: '₹14,999', label: 'Starting Price', icon: '💰' },
-      { value: '40-60%', label: 'Cheaper Than Chains', icon: '📉' },
-      { value: '₹5,000', label: 'Monthly EMI', icon: '💳' },
+      { value: '₹12,999', label: 'Starting Price (30-Day)', icon: '💰' },
+      { value: '70%', label: 'Cheaper Than Aakash', icon: '📉' },
+      { value: '42', label: 'Days Left Until NEET', icon: '⏰' },
       { value: '30%', label: 'Max Scholarship', icon: '🎓' },
     ],
     testimonials: [
@@ -1786,16 +1786,16 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
     ],
     courseSummary: {
-      title: 'NEET Crash Course Fee Plans',
-      duration: '45 / 60 / 90 days',
+      title: 'NEET 2026 Crash Course Fees — May 2 Exam',
+      duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
-        '45-Day: ₹14,999 (EMI ₹5,000/mo) — Revision + PYQ',
-        '60-Day: ₹19,999 (EMI ₹6,666/mo) — Gap-filling + Practice',
-        '90-Day: ₹27,999 (EMI ₹9,333/mo) — Complete Coverage',
-        'All include: material, tests, mocks, doubt support',
+        '30-Day Sprint: ₹12,999 — High-yield revision + 10 mocks (starts March 31)',
+        '45-Day Intensive: ₹14,999 — Complete revision + 15 mocks (starts March 18)',
+        'Both include: material, daily tests, PYQs, doubt support',
         'Scholarship test: up to 30% off',
         '7-day money-back guarantee',
+        'NEET May 2, 2026 — don\'t delay enrollment',
       ],
       price: {
         original: 35000,
@@ -1822,7 +1822,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       courseName: 'NEET Crash Course — Affordable Pricing Plans',
       provider: 'Cerebrum Biology Academy',
       description: 'NEET crash course fees starting ₹14,999. Compare pricing with Aakash, Allen. EMI available, scholarship up to 30%.',
-      duration: '45-90 days',
+      duration: '30-45 days',
       price: 14999,
       priceCurrency: 'INR',
     },
