@@ -2,6 +2,7 @@
 
 import { lazy, Suspense } from 'react'
 import { useExitIntent } from '@/components/ui/ExitIntentPopup'
+import { getTrackingDataForAPI } from '@/lib/tracking/utm'
 
 // Lazy-load ExitIntentPopup to defer framer-motion bundle (~50KB)
 const ExitIntentPopup = lazy(() =>
@@ -15,6 +16,7 @@ export function HomePageClient() {
 
   const handleDownload = async (email: string, phone: string) => {
     try {
+      const trackingData = getTrackingDataForAPI()
       const response = await fetch('/api/leads/exit-intent', {
         method: 'POST',
         headers: {
@@ -24,6 +26,7 @@ export function HomePageClient() {
           email,
           phone,
           source: 'exit_intent_popup',
+          ...trackingData,
           page: 'homepage',
           variant: 'catalog',
         }),

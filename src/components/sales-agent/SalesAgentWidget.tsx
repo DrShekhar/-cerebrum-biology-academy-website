@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
+import { getTrackingDataForAPI } from '@/lib/tracking/utm'
 import {
   X,
   Send,
@@ -460,6 +461,7 @@ For personalized guidance, our counselor team can help. In the meantime:
         .map((m) => `${m.role === 'user' ? '👤' : '🤖'}: ${m.content.substring(0, 100)}`)
         .join('\n')
 
+      const trackingData = getTrackingDataForAPI()
       await fetch('/api/contact/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -470,6 +472,7 @@ For personalized guidance, our counselor team can help. In the meantime:
           class: data.class,
           source: 'ARIA_Sales_Agent',
           message: `Lead captured via ARIA chat. Score: ${data.score}\n\nConversation:\n${conversationSummary}`,
+          ...trackingData,
         }),
       })
     } catch (error) {

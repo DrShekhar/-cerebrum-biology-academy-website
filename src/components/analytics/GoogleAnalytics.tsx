@@ -10,31 +10,13 @@ export default function GoogleAnalytics() {
   const [shouldLoad, setShouldLoad] = useState(false)
 
   useEffect(() => {
-    // PERFORMANCE: Defer GA loading until after page load + browser idle
-    // This removes 166KB from the critical render path and avoids main thread blocking
-    const loadGA = () => {
-      if ('requestIdleCallback' in window) {
-        const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 5000 })
-        return () => cancelIdleCallback(idleId)
-      } else {
-        const timerId = setTimeout(() => setShouldLoad(true), 3000)
-        return () => clearTimeout(timerId)
-      }
-    }
-
-    if (document.readyState === 'complete') {
-      const timerId = setTimeout(loadGA, 3000)
+    if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 1500 })
+      return () => cancelIdleCallback(idleId)
+    } else {
+      const timerId = setTimeout(() => setShouldLoad(true), 1000)
       return () => clearTimeout(timerId)
     }
-
-    const handleLoad = () => {
-      const timerId = setTimeout(loadGA, 3000)
-      window.removeEventListener('load', handleLoad)
-      return () => clearTimeout(timerId)
-    }
-
-    window.addEventListener('load', handleLoad)
-    return () => window.removeEventListener('load', handleLoad)
   }, [])
 
   if (!GA_MEASUREMENT_ID || !shouldLoad) {
@@ -43,23 +25,20 @@ export default function GoogleAnalytics() {
 
   return (
     <>
-      {/* PERFORMANCE: Deferred until after LCP via requestIdleCallback */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="lazyOnload">
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          // Google Analytics 4 configuration
           gtag('config', '${GA_MEASUREMENT_ID}', {
             page_title: document.title,
             page_location: window.location.href,
-            send_page_view: false, // Page views handled by ga4.ts singleton to avoid duplicates
-            // Enhanced ecommerce for education
+            send_page_view: false,
             custom_map: {
               'custom_parameter_1': 'course_type',
               'custom_parameter_2': 'student_level',
@@ -67,7 +46,6 @@ export default function GoogleAnalytics() {
             }
           });
 
-          // Google Ads Conversion Tracking
           ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : '// Google Ads ID not configured'}
         `}
       </Script>

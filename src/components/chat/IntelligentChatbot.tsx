@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { MessageCircle, X, Send, Bot, BookOpen, Calendar, Phone, Download } from 'lucide-react'
+import { getTrackingDataForAPI } from '@/lib/tracking/utm'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import { AIErrorBoundary } from '@/components/ai/AIErrorBoundary'
 import {
@@ -803,6 +804,7 @@ export function IntelligentChatbot() {
 
   const submitLead = async (leadData: LeadData) => {
     try {
+      const trackingData = getTrackingDataForAPI()
       const response = await fetch('/api/contact/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -814,6 +816,7 @@ export function IntelligentChatbot() {
           supportType: 'admission',
           message: `Lead from CERI AI chatbot. Class: ${leadData.class || 'Not specified'}. Lead Score: ${chatState.leadScore?.overall || 'N/A'} (${chatState.leadScore?.classification || 'N/A'})`,
           timestamp: new Date().toISOString(),
+          ...trackingData,
           source: 'ceri_chatbot',
         }),
       })

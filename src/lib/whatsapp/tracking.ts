@@ -42,7 +42,7 @@ export function getUTMParams(): Record<string, string> {
   const urlParams = new URLSearchParams(window.location.search)
   const utmParams: Record<string, string> = {}
 
-  const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
+  const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid']
   utmKeys.forEach((key) => {
     const value = urlParams.get(key)
     if (value) {
@@ -161,7 +161,9 @@ export async function trackWhatsAppClick(
 
 function openWhatsAppDirectly(params: WhatsAppTrackingParams): void {
   const message = params.message || 'Hi! I am interested in NEET Biology coaching.'
-  const trackingInfo = ` [Source: ${params.source}]`
+  const utmData = getUTMParams()
+  const sourceTag = utmData.gclid ? 'Google Ads' : params.source
+  const trackingInfo = ` [Source: ${sourceTag}]`
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message + trackingInfo)}`
 
   // Fire synchronous tracking FIRST (Google Ads conversion — no network call)

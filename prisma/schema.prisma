@@ -590,12 +590,15 @@ model contact_inquiries {
   utmSource     String?
   utmMedium     String?
   utmCampaign   String?
+  utmContent    String?
+  gclid         String?
   createdAt     DateTime        @default(now())
   updatedAt     DateTime
   users         users?          @relation(fields: [assignedToId], references: [id])
 
   @@index([assignedToId])
   @@index([email])
+  @@index([gclid])
   @@index([phone])
   @@index([status, createdAt])
   @@index([supportType, createdAt])
@@ -931,6 +934,8 @@ model demo_bookings {
   utmSource             String?
   utmMedium             String?
   utmCampaign           String?
+  utmContent            String?
+  gclid                 String?
   createdAt             DateTime             @default(now())
   updatedAt             DateTime
   demoType              DemoType             @default(FREE)
@@ -1474,6 +1479,9 @@ model leads {
   lostReason              String?
   demoBookingId           String?                   @unique
   source                  LeadSource                @default(MANUAL_ENTRY)
+  sourceDetail            String?
+  utmContent              String?
+  gclid                   String?
   score                   Int?
   scoreBreakdown          Json?
   scoreUpdatedAt          DateTime?
@@ -1496,6 +1504,7 @@ model leads {
   @@index([createdAt])
   @@index([email])
   @@index([nextFollowUpAt])
+  @@index([gclid])
   @@index([phone])
   @@index([score])
 }
