@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { MessageCircle, X, Send, Bot, BookOpen, Calendar, Phone, Download } from 'lucide-react'
 import { getTrackingDataForAPI } from '@/lib/tracking/utm'
+import { trackEnhancedConversion } from '@/lib/ads/googleAdsConversion'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import { AIErrorBoundary } from '@/components/ai/AIErrorBoundary'
 import {
@@ -822,6 +823,7 @@ export function IntelligentChatbot() {
       })
 
       if (response.ok) {
+        trackEnhancedConversion('generate_lead', 100, leadData.email, leadData.phone, leadData.name)
         const { openWhatsAppWithFormData } = await import('@/lib/whatsapp/formToWhatsApp')
         openWhatsAppWithFormData('Ceri AI Chatbot Lead', {
           Name: leadData.name || '-',

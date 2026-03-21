@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { getTrackingDataForAPI } from '@/lib/tracking/utm'
+import { trackEnhancedConversion } from '@/lib/ads/googleAdsConversion'
 import {
   X,
   Send,
@@ -475,6 +476,8 @@ For personalized guidance, our counselor team can help. In the meantime:
           ...trackingData,
         }),
       })
+
+      trackEnhancedConversion('generate_lead', 100, data.email, data.phone, data.name)
     } catch (error) {
       console.error('Failed to submit lead:', error)
     }

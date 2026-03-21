@@ -15,7 +15,7 @@ const CONVERSION_LABELS = {
  * Track WhatsApp lead conversion
  * Call this when a user clicks WhatsApp CTA
  */
-export const trackWhatsAppLead = (source: string, value: number = 0) => {
+export const trackWhatsAppLead = (source: string, value: number = 500) => {
   if (typeof window === 'undefined' || !window.gtag) {
     return false
   }
@@ -42,7 +42,7 @@ export const trackWhatsAppLead = (source: string, value: number = 0) => {
  * Track phone call conversion
  * Call this when a user clicks phone number CTA
  */
-export const trackPhoneCall = (source: string, value: number = 0) => {
+export const trackPhoneCall = (source: string, value: number = 500) => {
   if (typeof window === 'undefined' || !window.gtag) {
     return false
   }
@@ -69,7 +69,7 @@ export const trackPhoneCall = (source: string, value: number = 0) => {
  * Track sign-up / form submission conversion
  * Fire this on the thank-you page after a user submits a form
  */
-export const trackSignUpConversion = (source: string, value: number = 0) => {
+export const trackSignUpConversion = (source: string, value: number = 1000) => {
   if (typeof window === 'undefined' || !window.gtag) {
     return false
   }
@@ -102,6 +102,16 @@ export const trackPageView = (pageType: string, pagePath: string) => {
       page_type: pageType,
       send_to: GOOGLE_ADS_ID,
     })
+
+    if (pageType === 'course' || pageType === 'landing') {
+      window.gtag('event', 'view_item', {
+        send_to: GOOGLE_ADS_ID,
+        items: [{
+          item_category: pageType,
+          item_name: document.title,
+        }],
+      })
+    }
   }
 }
 
