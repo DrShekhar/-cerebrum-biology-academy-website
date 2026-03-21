@@ -105,7 +105,7 @@ export function BookingSection() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Demo Booked Successfully!</h3>
                 <p className="text-gray-600 mb-6">
-                  Our counselor will contact you within 2 hours to confirm your demo class timing.
+                  Our counselor will contact you within 15 minutes to confirm your demo class.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}

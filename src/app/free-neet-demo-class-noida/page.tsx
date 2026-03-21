@@ -80,7 +80,7 @@ const faqs = [
   {
     question: 'How do I book a demo class?',
     answer:
-      'Call us at 99536-43938 or fill the form on this page. We will schedule your demo within 24-48 hours based on your preferred timing (weekday evening or weekend morning).',
+      'Call us at 99536-43938 or fill the form on this page. We schedule demos instantly — same day slots available 7 days a week. Online demo also available.',
   },
   {
     question: 'What if I dont like the demo class?',

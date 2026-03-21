@@ -80,7 +80,7 @@ const faqs = [
   {
     question: 'How do I book a demo class as a Ghaziabad student?',
     answer:
-      'Call us at 99536-43938 or fill the form on this page. We will schedule your demo within 24-48 hours based on your preferred timing (weekday evening or weekend morning). Online demo also available if you prefer to attend from Ghaziabad.',
+      'Call us at 99536-43938 or fill the form on this page. We schedule demos instantly — same day slots available 7 days a week. Online demo available anytime from Ghaziabad.',
   },
   {
     question: 'How do Ghaziabad students reach the center?',

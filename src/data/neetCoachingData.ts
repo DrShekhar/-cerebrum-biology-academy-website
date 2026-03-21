@@ -310,7 +310,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'Can I attend a free demo class before enrolling?',
     answer:
-      'Absolutely! We offer a free demo class with no commitment. You can experience our teaching methodology, interact with faculty, and understand the course structure. Book a demo through WhatsApp or our website, and we will schedule it within 24-48 hours.',
+      'Absolutely! We offer a free demo class with no commitment. You can experience our teaching methodology, interact with faculty, and understand the course structure. Book a demo through WhatsApp or our website, and we will schedule it immediately — same day demos available.',
   },
   {
     question: 'What results has Cerebrum achieved in NEET?',
