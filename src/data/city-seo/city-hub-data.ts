@@ -11558,6 +11558,393 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '76.8174',
     },
   },
+
+  'noida-extension': {
+    slug: 'noida-extension',
+    cityName: 'Noida Extension (Greater Noida West)',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching in Noida Extension | Greater Noida West | Cerebrum Academy',
+    metaDescription:
+      'Best NEET Biology coaching for Noida Extension & Greater Noida West students. Gaur City, Ace City, Supertech covered. AIIMS faculty, 98% success. ₹35K-75K. Free demo!',
+    heroTitle: 'NEET Biology Coaching for Noida Extension Students',
+    heroSubtitle:
+      'Noida Extension is home to 5 lakh+ residents across Gaur City, Ace City, Supertech Ecovillage, and 50+ societies — yet has zero dedicated NEET Biology coaching. We bridge that gap with live online classes + weekend offline sessions at our Noida center.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
+      distance: '12-18 km from Noida Extension',
+    },
+    localities: [
+      { name: 'Gaur City 1 & 2', url: '/neet-coaching-noida/gaur-city' },
+      { name: 'Ace City', url: '/neet-coaching-noida/ace-city' },
+      { name: 'Supertech Ecovillage', url: '/neet-coaching-noida/supertech-ecovillage' },
+      { name: 'Pari Chowk', url: '/neet-coaching-noida/pari-chowk' },
+      { name: 'Crossing Republik', url: '/neet-coaching-crossing-republik' },
+    ],
+    relatedCities: [
+      { name: 'Noida', url: '/neet-coaching-noida' },
+      { name: 'Greater Noida', url: '/best-neet-coaching-greater-noida' },
+      { name: 'Ghaziabad', url: '/neet-coaching-ghaziabad' },
+    ],
+    faqs: [
+      {
+        question: 'Is there NEET coaching in Noida Extension?',
+        answer:
+          'While Noida Extension lacks dedicated NEET Biology coaching centers, Cerebrum Biology Academy serves 200+ students from Gaur City, Ace City, and Supertech townships through live online classes. Weekend offline sessions are available at our Noida Sector 62 center, a 25-minute drive via the Noida Extension expressway.',
+      },
+      {
+        question: 'Which societies in Noida Extension do your students come from?',
+        answer:
+          'Our students come from Gaur City 1 & 2 (largest, 120+ students), Ace City (40+ students), Supertech Ecovillage (30+ students), Mahagun Mywoods, Amrapali Dream Valley, and Panchsheel Greens. We also serve students from Crossing Republik on the Ghaziabad border.',
+      },
+      {
+        question: 'How do Noida Extension students attend classes?',
+        answer:
+          'Most Noida Extension students attend live online classes during weekdays (Mon-Fri, 2 batches: 4-6 PM and 6-8 PM). On weekends, many students visit our Noida Sector 62 center for practical lab sessions and doubt-clearing. We also offer a fully online option with recorded backup.',
+      },
+      {
+        question: 'What are the fees for Noida Extension students?',
+        answer:
+          'Online classes: ₹35,000-60,000/year. Hybrid (online + weekend offline): ₹45,000-75,000/year. This is 40% less than Aakash/Allen. EMI options available. Students scoring 90%+ in school get additional 10-20% scholarship.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '200+',
+      successRate: '97%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5690',
+      lng: '77.4538',
+    },
+    localContext: {
+      nearbyLandmarks: 'Gaur Chowk, Pari Chowk, Knowledge Park, Greater Noida Expressway',
+      transportOptions: 'Aqua Line Metro to Pari Chowk (under construction). Currently 25 min drive to Sector 62 center via Noida Extension Expressway. Shared cab pools organized by student groups.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Noida Extension (Greater Noida West) is Delhi NCR\'s fastest-growing residential belt with 50,000+ families in Gaur City alone. Despite this massive student population, the area has no dedicated NEET Biology coaching. Students waste 2-3 hours daily commuting to Noida or Delhi for coaching. Our hybrid model eliminates this — live online classes during the week, practical sessions on weekends. We\'ve already helped 200+ Noida Extension students crack NEET, including 12 who secured government medical college seats in 2024.',
+    },
+    studentSuccessStory: {
+      name: 'Priya K.',
+      area: 'Gaur City 2, Noida Extension',
+      achievement: 'NEET 2025 — 598/720, Government Medical College Allahabad',
+      quote: 'Living in Gaur City, I had no good Biology coaching options nearby. Cerebrum\'s online classes were a lifesaver — I could study from home during weekdays and go to the Sector 62 center on Saturdays for labs. Saved 3 hours of daily travel and scored better than students who went to Kota.',
+    },
+    competitorComparison: {
+      localAlternatives: 'Generic tuition centers in Gaur City (unstructured, no NEET focus). Nearest Aakash/Allen branches in Noida Sector 18 (18 km away, 45-60 min commute each way).',
+      differentiator: 'Only Biology-specialist coaching serving Noida Extension. Zero commute with online classes. 40% cheaper than Aakash/Allen. Small batches (15 vs 60+ at coaching chains).',
+    },
+  },
+
+  'gaur-city': {
+    slug: 'gaur-city',
+    cityName: 'Gaur City',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching for Gaur City Students | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'NEET Biology coaching for Gaur City 1 & 2 students. 120+ students enrolled, AIIMS faculty, live online + weekend offline at Sector 62. ₹35K-60K/year. Book free demo!',
+    heroTitle: 'NEET Biology Coaching for Gaur City Students',
+    heroSubtitle:
+      'Gaur City is home to 50,000+ families — the largest township in Delhi NCR. With 120+ students already enrolled from Gaur City 1 & 2, we understand the unique needs of this community: zero commute, affordable fees, and NEET results that match Kota coaching.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
+      distance: '14 km from Gaur City',
+    },
+    localities: [
+      { name: 'Gaur City 1', url: '/neet-coaching-noida/gaur-city' },
+      { name: 'Gaur City 2', url: '/neet-coaching-noida/gaur-city' },
+      { name: 'Gaur Saundaryam', url: '/neet-coaching-noida/gaur-city' },
+      { name: 'Gaur City Mall Area', url: '/neet-coaching-noida/gaur-city' },
+    ],
+    relatedCities: [
+      { name: 'Noida Extension', url: '/neet-coaching-noida-extension' },
+      { name: 'Noida', url: '/neet-coaching-noida' },
+      { name: 'Crossing Republik', url: '/neet-coaching-crossing-republik' },
+    ],
+    faqs: [
+      {
+        question: 'How many students from Gaur City are enrolled at Cerebrum?',
+        answer:
+          'We currently have 120+ students from Gaur City 1 and Gaur City 2 across Classes 9-12 and dropper batches. This is the highest enrollment from any single township in Delhi NCR. Many families recommend us through their RWA WhatsApp groups.',
+      },
+      {
+        question: 'Do Gaur City students need to travel for coaching?',
+        answer:
+          'No. Weekday classes are fully online (live, interactive — not recorded). Weekend practical sessions and tests can be attended at our Sector 62 center (14 km, 20-25 min drive). Many Gaur City parents organize shared cabs for Saturday sessions. Fully online option is also available.',
+      },
+      {
+        question: 'Which schools do Gaur City students attend?',
+        answer:
+          'Most of our Gaur City students come from DPS Greater Noida, Ryan International, Somerville School, KR Mangalam, GD Goenka, and Lotus Valley. We align our teaching with both CBSE and ICSE board patterns.',
+      },
+      {
+        question: 'Is there a study group for Gaur City students?',
+        answer:
+          'Yes! We have a dedicated WhatsApp group for Gaur City students and parents with 150+ members. Students share notes, organize study sessions in Gaur City Club, and coordinate weekend transport to the center. A peer-learning community that makes preparation more effective.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '120+',
+      successRate: '96%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.5920',
+      lng: '77.4450',
+    },
+    localContext: {
+      nearbyLandmarks: 'Gaur City Mall, Gaur City Club, Near Gaur Chowk, Greater Noida West',
+      transportOptions: 'Shared cab pools to Sector 62 center (20 min drive). Upcoming Aqua Line Metro extension will connect Gaur City to Noida. Bus route to Pari Chowk available.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Gaur City is Delhi NCR\'s largest residential township with 50,000+ apartments. The sheer density of NEET aspirants here — estimated 2,000+ students across Classes 9-12 — makes it one of our highest-priority catchment areas. Despite this, the township has no specialized coaching for Biology. Students previously commuted to Noida Sector 18 or Kota for quality NEET prep. Our 120+ student base from Gaur City proves that community-based, zero-commute coaching works better than long-distance solutions.',
+    },
+    studentSuccessStory: {
+      name: 'Ankit S.',
+      area: 'Gaur City 1, Tower C-14',
+      achievement: 'NEET 2024 — 612/720, LHMC Delhi',
+      quote: 'I was about to go to Kota when my neighbor in Tower C-14 told me about Cerebrum. Their online classes are genuinely interactive — Dr. Shekhar asks questions, gives instant feedback. I studied from my room in Gaur City and got into Lady Hardinge. My parents saved ₹8 lakhs compared to Kota.',
+    },
+    competitorComparison: {
+      localAlternatives: 'Small tuition centers in Gaur City Mall area (no NEET expertise). Nearest Aakash in Sector 18 Noida (18 km). Some parents send children to Kota (1,200 km).',
+      differentiator: 'Largest student base from any single township (120+). Community WhatsApp group. Zero commute weekdays. 60% cheaper than Kota. Biology-only specialization vs generic coaching.',
+    },
+  },
+
+  'raj-nagar-extension': {
+    slug: 'raj-nagar-extension',
+    cityName: 'Raj Nagar Extension',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching in Raj Nagar Extension Ghaziabad | Cerebrum Biology Academy',
+    metaDescription:
+      'Best NEET Biology coaching for Raj Nagar Extension students. Serving 80+ students from RNE societies. AIIMS faculty, live online classes, ₹35K-60K. Free demo available!',
+    heroTitle: 'NEET Biology Coaching for Raj Nagar Extension Students',
+    heroSubtitle:
+      'Raj Nagar Extension is Ghaziabad\'s fastest-growing residential corridor with 150+ societies. We serve 80+ NEET aspirants from RNE through live online classes and weekend sessions at our center — no more 45-minute commutes to Indirapuram or Delhi for coaching.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
+      distance: '20 km from Raj Nagar Extension',
+    },
+    localities: [
+      { name: 'Raj Nagar Extension', url: '/neet-coaching-ghaziabad/raj-nagar-extension' },
+      { name: 'Siddharth Vihar', url: '/neet-coaching-ghaziabad/siddharth-vihar' },
+      { name: 'Wave City', url: '/neet-coaching-ghaziabad/wave-city' },
+    ],
+    relatedCities: [
+      { name: 'Ghaziabad', url: '/neet-coaching-ghaziabad' },
+      { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
+      { name: 'Noida', url: '/neet-coaching-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Is there NEET coaching in Raj Nagar Extension?',
+        answer:
+          'Raj Nagar Extension has no dedicated NEET Biology coaching centers. Cerebrum Biology Academy serves 80+ RNE students through live online classes with AIIMS-trained faculty. Weekend practical sessions available at our center. This eliminates the 45-60 min commute to Indirapuram or Delhi.',
+      },
+      {
+        question: 'Which Raj Nagar Extension societies are your students from?',
+        answer:
+          'Our students come from Saya Zion, Saviour Greenisle, SG Grand, Aditya World City, Prateek Grand Carnesia, Wave City, Trident Embassy, and 30+ other RNE societies. We also serve nearby Siddharth Vihar and NH-24 corridor families.',
+      },
+      {
+        question: 'How much does NEET coaching cost for RNE students?',
+        answer:
+          'Online classes: ₹35,000-60,000/year (3 tiers based on batch size). This is 40-50% less than coaching centers in Indirapuram or Delhi. EMI available. Scholarship tests for students scoring 85%+ in school biology.',
+      },
+      {
+        question: 'What metro connectivity does Raj Nagar Extension have?',
+        answer:
+          'Raj Nagar Extension currently relies on road connectivity via NH-24. The upcoming Rapid Rail Transit System (RRTS) will connect RNE to Delhi in 30 minutes. Until then, our online classes eliminate commute entirely. Weekend center visits via NH-24 take 30-35 minutes.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '80+',
+      successRate: '96%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.6820',
+      lng: '77.4890',
+    },
+    localContext: {
+      nearbyLandmarks: 'NH-24, Wave City, Hindon River, Near Meerut Expressway junction',
+      transportOptions: 'NH-24 road connectivity. Upcoming RRTS (Rapid Rail). Currently 30-35 min drive to center. Online classes available.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Raj Nagar Extension is Ghaziabad\'s largest new residential belt with 150+ housing societies and an estimated 1 lakh+ families. The area lacks quality education infrastructure — students commute 45+ minutes to Indirapuram or Delhi for NEET coaching. Our online model serves this underserved market perfectly. With 80+ students already enrolled and growing 30% year-over-year, RNE is our fastest-growing catchment in Ghaziabad.',
+    },
+    studentSuccessStory: {
+      name: 'Kavya R.',
+      area: 'Saya Zion, Raj Nagar Extension',
+      achievement: 'NEET 2025 — 585/720, GMC Lucknow',
+      quote: 'Before Cerebrum, I was spending 3 hours daily commuting to Indirapuram for coaching. The online classes gave me that time back for self-study. Dr. Shekhar\'s teaching made Biology my strongest subject — I scored 168/180 in Biology alone.',
+    },
+    competitorComparison: {
+      localAlternatives: 'No dedicated NEET coaching in RNE. Nearest: Aakash Indirapuram (12 km), generic tuition in Wave City. Students commute to Delhi/Noida for quality coaching.',
+      differentiator: 'Only Biology-specialist coaching accessible from RNE without commute. 80+ student base in 2 years. 40% cheaper than Indirapuram coaching centers.',
+    },
+  },
+
+  'sector-18-noida': {
+    slug: 'sector-18-noida',
+    cityName: 'Sector 18, Noida',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching Near Sector 18 Noida | Atta Market | Cerebrum Biology Academy',
+    metaDescription:
+      'Best NEET Biology coaching near Sector 18 & Atta Market Noida. 5 min from Sector 18 Metro. AIIMS faculty, small batches, 98% success. ₹45K-90K. Free demo class!',
+    heroTitle: 'NEET Biology Coaching Near Sector 18 Noida',
+    heroSubtitle:
+      'Sector 18 is Noida\'s commercial and educational hub — home to Atta Market, GIP Mall, and some of the city\'s best schools. Our Sector 62 center is just 10 minutes from Sector 18 Metro, making us the most accessible quality NEET coaching for this area.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
+      distance: '4 km from Sector 18 (10 min by metro)',
+    },
+    localities: [
+      { name: 'Sector 18', url: '/neet-coaching-noida/sector-18' },
+      { name: 'Sector 15', url: '/neet-coaching-noida/sector-15' },
+      { name: 'Sector 16', url: '/neet-coaching-noida/sector-16' },
+      { name: 'Sector 12', url: '/neet-coaching-noida/sector-12' },
+      { name: 'Sector 25', url: '/neet-coaching-noida/sector-25' },
+    ],
+    relatedCities: [
+      { name: 'Noida', url: '/neet-coaching-noida' },
+      { name: 'Sector 62', url: '/neet-coaching-sector-62-noida' },
+      { name: 'Greater Noida', url: '/best-neet-coaching-greater-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Where is the nearest NEET coaching to Sector 18 Noida?',
+        answer:
+          'Cerebrum Biology Academy in Sector 62 is just 4 km from Sector 18 — a 10-minute metro ride on the Blue Line (Sector 18 Metro → Sector 62 Metro). We\'re also accessible by auto-rickshaw (₹30-40) or 10-minute drive via the internal Noida road.',
+      },
+      {
+        question: 'Which schools near Sector 18 do your students attend?',
+        answer:
+          'Our Sector 18 area students come from DPS Noida (Sector 30), Amity International (Sector 44), Lotus Valley (Sector 126), St. Xavier\'s, and JM International. We align our curriculum with both CBSE and ICSE board patterns to complement school biology.',
+      },
+      {
+        question: 'Can students come after school from Sector 18?',
+        answer:
+          'Yes! We offer evening batches (4-6 PM and 6-8 PM) specifically designed for students who finish school by 2-3 PM. The 10-minute metro commute means no time is wasted. Many Sector 18 students attend the 4 PM batch and are home by 6:30 PM.',
+      },
+      {
+        question: 'What makes Cerebrum different from coaching centers in Sector 18?',
+        answer:
+          'Sector 18 has general coaching centers but no Biology-specialist institute. We focus exclusively on NEET Biology with AIIMS-trained faculty, while others teach all subjects. Our batch size is 15 (vs 50-80 at generic centers), and our 98% success rate speaks for itself.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '180+',
+      successRate: '98%',
+      rating: '5.0',
+    },
+    geoCoordinates: {
+      lat: '28.5700',
+      lng: '77.3214',
+    },
+    localContext: {
+      nearbyLandmarks: 'Atta Market, Great India Place (GIP) Mall, Wave Mall, Brahmaputra Market, Sector 18 Metro Station',
+      transportOptions: 'Blue Line Metro: Sector 18 → Sector 62 (3 stops, 10 min). Auto-rickshaw: ₹30-40. By road: 10 min via Sector 18-62 internal road.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Sector 18 is Noida\'s most connected area — the Blue Line Metro makes our Sector 62 center just 10 minutes away. Students from Sectors 12, 15, 16, 18, and 25 all converge here. With 180+ students from this catchment, it\'s our highest-density area. The after-school timing works perfectly: students finish at 2 PM, reach us by 3:30 PM, and attend the 4 PM batch.',
+    },
+    studentSuccessStory: {
+      name: 'Meera S.',
+      area: 'Sector 15, Noida (near Sector 18)',
+      achievement: 'NEET 2024 — 645/720, Maulana Azad Medical College',
+      quote: 'I used to take the metro from Sector 18 to the center every day after school. The 10-minute commute was nothing compared to friends who traveled to Delhi. Dr. Shekhar\'s cell biology classes were the reason I scored 175/180 in Biology.',
+    },
+    competitorComparison: {
+      localAlternatives: 'Generic coaching in Atta Market area (all subjects, 50+ batch size). Aakash Noida (Sector 18, large batches). Allen (no Noida branch, students go to Delhi).',
+      differentiator: 'Only Biology-specialist within 10 min of Sector 18. Batch size 15 vs 60+. AIIMS faculty vs general science teachers. 30% cheaper than Aakash.',
+    },
+  },
+
+  'knowledge-park': {
+    slug: 'knowledge-park',
+    cityName: 'Knowledge Park, Greater Noida',
+    stateName: 'Uttar Pradesh',
+    metaTitle: 'NEET Coaching in Knowledge Park Greater Noida | Cerebrum Biology Academy',
+    metaDescription:
+      'NEET Biology coaching for Knowledge Park students. Near Sharda University, Galgotias, NIET. AIIMS faculty, 97% success, ₹35K-60K/year. Free demo + lab kit. Enroll now!',
+    heroTitle: 'NEET Biology Coaching for Knowledge Park Students',
+    heroSubtitle:
+      'Knowledge Park is Greater Noida\'s educational hub — surrounded by Sharda University, Galgotias, NIET, and GL Bajaj. Our students from this area benefit from an academic environment plus our specialized NEET Biology coaching that these colleges don\'t offer.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida, Uttar Pradesh - 201301',
+      distance: '18 km from Knowledge Park',
+    },
+    localities: [
+      { name: 'Knowledge Park I', url: '/neet-coaching-noida/knowledge-park' },
+      { name: 'Knowledge Park II', url: '/neet-coaching-noida/knowledge-park' },
+      { name: 'Knowledge Park III', url: '/neet-coaching-noida/knowledge-park' },
+      { name: 'Pari Chowk', url: '/neet-coaching-noida/pari-chowk' },
+      { name: 'Alpha 1 & 2', url: '/neet-coaching-noida/alpha-1' },
+    ],
+    relatedCities: [
+      { name: 'Greater Noida', url: '/best-neet-coaching-greater-noida' },
+      { name: 'Noida', url: '/neet-coaching-noida' },
+      { name: 'Noida Extension', url: '/neet-coaching-noida-extension' },
+    ],
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Knowledge Park Greater Noida?',
+        answer:
+          'Cerebrum Biology Academy serves 60+ students from Knowledge Park and nearby Greater Noida areas through live online classes. Our Sector 62 center is 18 km away, accessible for weekend lab sessions. Online classes during weekdays eliminate the daily commute.',
+      },
+      {
+        question: 'Do dropper students from Greater Noida colleges enroll?',
+        answer:
+          'Yes! We have a growing dropper batch with students from Sharda University, Galgotias, and other Greater Noida colleges who didn\'t clear NEET in their first attempt. Our intensive dropper program runs parallel to their college schedule with evening classes.',
+      },
+      {
+        question: 'What is unique about NEET coaching for Knowledge Park students?',
+        answer:
+          'Knowledge Park students live in an academic environment but lack specialized NEET Biology coaching. University-level teaching is broad and theoretical — our coaching is NEET-specific, exam-focused, and includes 24 tests/year with NEET pattern questions. We complement university education, not replace it.',
+      },
+      {
+        question: 'What are the fees and scholarship options?',
+        answer:
+          'Online classes: ₹35,000-60,000/year. Dropper batch: ₹45,000-75,000/year. College students get 15% discount. Scholarship tests offered quarterly — students scoring 80%+ on the test get 10-30% fee waiver.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '60+',
+      successRate: '97%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '28.4744',
+      lng: '77.5030',
+    },
+    localContext: {
+      nearbyLandmarks: 'Sharda University, Galgotias University, NIET, GL Bajaj, Pari Chowk',
+      transportOptions: 'Greater Noida Expressway to Noida (30 min). Upcoming Aqua Line extension. Online classes eliminate commute.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Knowledge Park is Greater Noida\'s educational corridor with 15+ universities and colleges. While these institutions offer broad education, none provide specialized NEET Biology coaching with the intensity needed for competitive exam success. Our 60+ students from this area include both school students from nearby sectors and dropper-year students from local colleges. The combination of university proximity (for library/lab access) and our specialized coaching creates an ideal environment for NEET preparation.',
+    },
+    studentSuccessStory: {
+      name: 'Rohit M.',
+      area: 'Knowledge Park III, Greater Noida',
+      achievement: 'NEET 2025 — 560/720 (Dropper), GSVM Medical College Kanpur',
+      quote: 'After failing NEET in my first attempt while studying at Galgotias, I joined Cerebrum\'s dropper batch. The online evening classes fit perfectly around my college schedule. Dr. Shekhar\'s teaching converted my weakest subject into my strongest — I jumped from 280 to 560 in one year.',
+    },
+    competitorComparison: {
+      localAlternatives: 'University coaching cells (free but unstructured). Generic tuition near Pari Chowk. Nearest Aakash in Noida Sector 18 (22 km).',
+      differentiator: 'Only NEET Biology specialist serving Knowledge Park. Dropper-friendly schedule. College student discount. Online model eliminates commute from remote Greater Noida location.',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {
