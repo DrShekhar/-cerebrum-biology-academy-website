@@ -121,7 +121,7 @@ export default function GurugramLocationContent() {
             >
               <div className="inline-flex items-center space-x-2 bg-green-500/20 border border-green-500/40 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-green-400" />
-                <span className="text-green-300 text-sm font-medium">Gurugram Center</span>
+                <span className="text-green-300 text-sm font-medium">Gurugram Center — Offline Classes Available</span>
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
@@ -129,8 +129,8 @@ export default function GurugramLocationContent() {
               </h1>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                Premier NEET Biology coaching by AIIMS faculty. Small batches of 15 students,
-                personalized attention, 98% success rate. No need to travel to Delhi!
+                Offline classroom coaching at our Gurugram Sector 51 center. AIIMS faculty,
+                small batches of 15 students, 98% success rate. Walk-in classes — no need to travel to Delhi!
               </p>
 
               {/* Address Card */}
@@ -278,8 +278,8 @@ export default function GurugramLocationContent() {
               },
               {
                 icon: MapPin,
-                title: 'No Delhi Travel',
-                description: 'Quality coaching without the hassle of commuting to Delhi',
+                title: 'Offline Classes in Gurugram',
+                description: 'Physical classroom at Sector 51 — walk-in, attend in person, no online compromise',
               },
             ].map((feature, index) => (
               <div
