@@ -653,7 +653,7 @@ export default function CerebrumVsAllenPage() {
 
           <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg border border-white border-opacity-20">
             <p className="text-blue-100 mb-2">Email: info@cerebrumbiologyacademy.com</p>
-            <p className="text-blue-100 mb-4">Available Monday - Saturday, 10 AM - 6 PM</p>
+            <p className="text-blue-100 mb-4">Available 24/7</p>
             <div className="flex flex-wrap gap-4 justify-center text-sm">
               <Link href="/courses" className="hover:text-blue-100 underline">
                 Explore Courses

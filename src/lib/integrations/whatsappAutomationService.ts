@@ -515,7 +515,7 @@ export class WhatsAppAutomationService {
   private static async handleCounselorRequest(actionData: any) {
     return WhatsAppBusinessService.sendTextMessage(
       actionData.phone,
-      '👨‍🏫 Connect with our expert counselor immediately!\n\n📞 Call: ${CONTACT_INFO.phone.display.hyphenated.primary}\n📱 WhatsApp: ${CONTACT_INFO.phone.display.hyphenated.primary}\n\n🕐 Available: 9 AM - 8 PM (Mon-Sat)\n\nOur counselors will help you choose the right course and create a personalized study plan! 🎯'
+      '👨‍🏫 Connect with our expert counselor immediately!\n\n📞 Call: ${CONTACT_INFO.phone.display.hyphenated.primary}\n📱 WhatsApp: ${CONTACT_INFO.phone.display.hyphenated.primary}\n\n🕐 Available: 24/7\n\nOur counselors will help you choose the right course and create a personalized study plan! 🎯'
     )
   }
 

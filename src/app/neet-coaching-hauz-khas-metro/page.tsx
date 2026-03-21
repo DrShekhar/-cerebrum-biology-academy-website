@@ -496,7 +496,7 @@ export default function NEETCoachingHauzKhasMetroPage() {
 
             <div className="mt-8 flex items-center justify-center text-white/80">
               <Clock className="mr-2 h-4 w-4" />
-              <span className="text-sm">Available Mon-Sat, 7 AM - 9 PM</span>
+              <span className="text-sm">Available 24/7 — we respond anytime</span>
             </div>
           </div>
         </section>

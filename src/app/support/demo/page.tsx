@@ -203,7 +203,7 @@ export default function DemoPage() {
             </a>
             <div className="flex items-center space-x-2">
               <Calendar className="w-5 h-5" />
-              <span>Mon-Sat, 8 AM - 9 PM</span>
+              <span>Available 24/7</span>
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="w-5 h-5" />

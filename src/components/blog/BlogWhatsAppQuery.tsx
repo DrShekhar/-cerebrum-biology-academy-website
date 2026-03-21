@@ -185,7 +185,7 @@ export function BlogWhatsAppQuery({ blogTitle, blogSlug, neetChapter }: BlogWhat
 
               {/* Footer Info */}
               <p className="text-xs text-gray-500 mt-2 text-center">
-                Response within 2 hours • Available 9 AM - 8 PM
+                Available 24/7 • Response within 15 minutes
               </p>
             </div>
           </div>

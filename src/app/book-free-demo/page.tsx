@@ -173,7 +173,7 @@ export default function BookFreeDemoPage() {
               </div>
               <div className="flex items-center gap-2 text-sm text-green-700">
                 <Clock className="w-4 h-4 flex-shrink-0" />
-                Available Mon-Sat, 8 AM - 9 PM
+                Available 24/7 — we respond anytime
               </div>
             </div>
           </div>

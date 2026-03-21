@@ -400,7 +400,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                           {getDisplayPhone()}
                         </a>
                         <div className="text-center text-sm text-gray-400">
-                          Available: Mon-Sat, 9 AM - 7 PM
+                          Available: 24/7
                         </div>
                       </div>
                     </div>

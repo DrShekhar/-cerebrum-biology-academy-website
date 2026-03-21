@@ -953,7 +953,7 @@ export default function PageContent() {
                       >
                         +91-88264-44334
                       </a>
-                      <p className="text-sm text-gray-500 mt-1">Mon-Sat: 9 AM - 7 PM</p>
+                      <p className="text-sm text-gray-500 mt-1">Open 24/7</p>
                     </div>
                   </div>
 

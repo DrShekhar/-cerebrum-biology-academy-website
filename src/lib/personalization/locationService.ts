@@ -232,7 +232,7 @@ class LocationService {
     return {
       phone: '+91 88264 44334',
       address: location.city ? `Available in ${location.city}` : 'Delhi NCR Headquarters',
-      timings: 'Mon-Sat: 9 AM - 8 PM IST',
+      timings: 'Available 24/7',
     }
   }
 

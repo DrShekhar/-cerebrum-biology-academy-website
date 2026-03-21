@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
       <ul>
         <li>📧 Email: <a href="mailto:support@cerebrumbiologyacademy.com">support@cerebrumbiologyacademy.com</a></li>
         <li>💬 WhatsApp: <a href="https://wa.me/918826444334">+91-8826444334</a></li>
-        <li>⏰ Support Hours: Mon-Sat, 9 AM - 8 PM IST</li>
+        <li>⏰ Available 24/7</li>
       </ul>
     </div>
 
@@ -144,7 +144,7 @@ ${baseUrl}/student/courses/${enrollment.courseId}
 Need Help?
 Email: support@cerebrumbiologyacademy.com
 WhatsApp: +91-8826444334
-Support Hours: Mon-Sat, 9 AM - 8 PM IST
+Available 24/7
 
 Happy Learning!
 - Cerebrum Biology Academy Team

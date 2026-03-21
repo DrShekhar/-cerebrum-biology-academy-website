@@ -924,7 +924,7 @@ export default function PageContent() {
                       >
                         {CEREBRUM_METRICS.phoneDisplay}
                       </a>
-                      <p className="text-sm text-gray-500 mt-1">Mon-Sat: 9 AM - 8 PM</p>
+                      <p className="text-sm text-gray-500 mt-1">Open 24/7</p>
                     </div>
                   </div>
 

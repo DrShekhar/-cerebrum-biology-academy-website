@@ -606,7 +606,7 @@ export function ComprehensiveContactPage({
                       </div>
                       <div className="flex items-center text-sm text-green-700">
                         <CheckCircle2 className="w-4 h-4 mr-2 flex-shrink-0" />
-                        Available Mon-Sat, 8 AM - 9 PM
+                        Available 24/7 — we respond anytime
                       </div>
                     </div>
                   </div>

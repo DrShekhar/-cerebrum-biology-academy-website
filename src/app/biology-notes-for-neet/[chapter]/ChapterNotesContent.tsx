@@ -4308,7 +4308,7 @@ export default function ChapterNotesContent({
           </div>
 
           <p className="text-center text-indigo-100 text-sm mt-6">
-            Available Monday-Saturday: 7 AM - 9 PM | Sunday: 9 AM - 6 PM
+            Available 24/7
           </p>
         </div>
       </div>

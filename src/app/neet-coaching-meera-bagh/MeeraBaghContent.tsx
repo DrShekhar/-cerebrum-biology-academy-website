@@ -560,7 +560,7 @@ export function NEETCoachingMeeraBaghContent() {
                     <div className="mb-4 flex flex-wrap gap-4 text-gray-600">
                       <div className="flex items-center gap-2">
                         <Clock className="h-5 w-5 text-green-600" />
-                        Open: 7:00 AM - 9:00 PM (Mon-Sat)
+                        Open 24/7
                       </div>
                       <div className="flex items-center gap-2">
                         <Navigation className="h-5 w-5 text-green-600" />
@@ -916,7 +916,7 @@ export function NEETCoachingMeeraBaghContent() {
             {/* Operating Hours */}
             <div className="mt-8 flex items-center justify-center text-slate-400">
               <Clock className="mr-2 h-4 w-4" />
-              <span className="text-sm">Available Mon-Sat, 7 AM - 9 PM | Sun, 9 AM - 6 PM</span>
+              <span className="text-sm">Available 24/7 — we respond anytime</span>
             </div>
           </div>
         </section>

@@ -401,7 +401,7 @@ export function CourseFAQ({ course }: CourseFAQProps) {
             </div>
 
             <div className="mt-6 text-sm text-blue-100">
-              <p>Available 9 AM - 8 PM (Mon-Sat) | Response within 2 hours</p>
+              <p>Available 24/7 | Response within 15 minutes</p>
             </div>
           </div>
         </Card>

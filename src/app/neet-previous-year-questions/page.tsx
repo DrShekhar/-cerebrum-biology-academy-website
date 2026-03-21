@@ -534,7 +534,7 @@ export default function NEETPreviousYearQuestionsPage() {
                 WhatsApp Us
               </a>
             </div>
-            <p className="text-indigo-200 text-sm mt-6">Available Monday-Saturday: 7 AM - 9 PM</p>
+            <p className="text-indigo-200 text-sm mt-6">Available 24/7</p>
           </div>
         </section>
 

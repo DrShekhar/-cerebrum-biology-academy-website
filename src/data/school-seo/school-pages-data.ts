@@ -2014,7 +2014,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2113,7 +2113,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2211,7 +2211,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2310,7 +2310,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2408,7 +2408,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2505,7 +2505,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2603,7 +2603,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2701,7 +2701,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2799,7 +2799,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2898,7 +2898,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -2996,7 +2996,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -3096,7 +3096,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -3194,7 +3194,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -3293,7 +3293,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },
@@ -3391,7 +3391,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Cerebrum Biology Academy, Sector 62 Noida Center',
       address: 'B-45, Sector 62, Noida, UP 201301',
-      timing: 'Mon-Sat 7:00 AM - 8:00 PM',
+      timing: 'Available 24/7',
       phone: '+91-99536-43938',
     },
   },

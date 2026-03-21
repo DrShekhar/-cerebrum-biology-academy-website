@@ -550,7 +550,7 @@ export default function AboutCerebrumPage() {
               >
                 +91-88264-44334
               </a>
-              <p className="text-sm text-slate-500 mt-2">Mon-Sat: 9 AM - 7 PM</p>
+              <p className="text-sm text-slate-500 mt-2">Open 24/7</p>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-slate-200 text-center">

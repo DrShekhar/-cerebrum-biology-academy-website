@@ -434,7 +434,7 @@ Or you can reach us at:
 📞 +91-88264-44334
 📧 support@cerebrumbiologyacademy.com
 
-⏰ Available: Mon-Sat, 9 AM - 8 PM
+⏰ Available: 24/7
 
 What would you like help with?
 1. Course selection

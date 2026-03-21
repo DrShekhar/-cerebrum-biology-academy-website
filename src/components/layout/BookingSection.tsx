@@ -57,7 +57,7 @@ export function BookingSection() {
       description: 'Speak directly with our counselors',
       action: getPhoneLink(),
       actionText: getDisplayPhone(),
-      available: 'Mon-Sat: 9 AM - 8 PM',
+      available: 'Available 24/7',
     },
     {
       icon: MessageSquare,

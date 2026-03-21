@@ -100,7 +100,7 @@ class CountryContentService {
         email: 'admissions@cerebrumbiologyacademy.com',
         whatsapp: CONTACT_INFO.phone.display.primary,
         address: 'Delhi NCR Headquarters + 12 coaching hubs across India',
-        hours: 'Mon-Sat: 9 AM - 8 PM IST',
+        hours: 'Available 24/7',
         preferredContact: 'WhatsApp or Phone Call',
         timezone: 'Asia/Kolkata',
       },

@@ -572,7 +572,7 @@ export default function FeesPage() {
             </div>
 
             <p className="mt-8 text-sm text-slate-500">
-              Available Monday to Saturday, 9 AM - 7 PM IST
+              Available 24/7
             </p>
           </div>
         </div>
