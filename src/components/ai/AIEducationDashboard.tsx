@@ -32,7 +32,6 @@ import {
   Menu,
   RefreshCw,
 } from 'lucide-react'
-// import { aiEducationOrchestrator } from '@/lib/ai/AIEducationOrchestrator' // Commented out for Edge Runtime compatibility
 
 interface AIMetrics {
   totalQuestions: number

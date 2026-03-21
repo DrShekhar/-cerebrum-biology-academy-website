@@ -18,9 +18,7 @@ import {
   VolumeX,
 } from 'lucide-react'
 import { EmptyState } from '@/components/ui/EmptyState'
-// import { biologyTutor, BiologyQuery, BiologyResponse } from '@/lib/ai/BiologyTutorEngine' // Using API instead for Edge Runtime compatibility
 
-// Types for API compatibility
 interface BiologyQuery {
   id: string
   studentId: string
