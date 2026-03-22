@@ -43,43 +43,45 @@ export function PaymentOptionsDisplay({
 
   const getInstallmentBreakdown = (installments: 'two' | 'three') => {
     const total = installments === 'two' ? twoInstallments : threeInstallments
-    const count = installments === 'two' ? 2 : 3
 
-    if (count === 2) {
+    if (installments === 'two') {
       return [
         {
-          description: 'First Installment',
-          dueDate: 'Due on enrollment',
+          description: 'First Installment (50%)',
+          dueDate: 'Due on enrollment (Day 1)',
           amount: Math.round(total / 2),
         },
         {
-          description: 'Second Installment',
-          dueDate: 'Due after 6 months',
-          amount: Math.round(total / 2),
+          description: 'Second Installment (50%)',
+          dueDate: 'Due after 45 days (Day 45)',
+          amount: total - Math.round(total / 2),
         },
       ]
     } else {
+      const first = Math.round(total * 0.5)
+      const second = Math.round(total * 0.25)
+      const third = total - first - second
       return [
         {
-          description: 'First Installment',
-          dueDate: 'Due on enrollment',
-          amount: Math.round(total / 3),
+          description: 'First Installment (50%)',
+          dueDate: 'Due on enrollment (Day 1)',
+          amount: first,
         },
         {
-          description: 'Second Installment',
-          dueDate: 'Due after 4 months',
-          amount: Math.round(total / 3),
+          description: 'Second Installment (25%)',
+          dueDate: 'Due after 30 days (Day 31)',
+          amount: second,
         },
         {
-          description: 'Third Installment',
-          dueDate: 'Due after 8 months',
-          amount: Math.round(total / 3),
+          description: 'Third Installment (25%)',
+          dueDate: 'Due after 60 days (Day 61)',
+          amount: third,
         },
       ]
     }
   }
 
-  const savingsAmount = lumpSum * 0.05
+  const savingsAmount = lumpSum * 0.02
 
   if (monthly) {
     return (
@@ -124,7 +126,7 @@ export function PaymentOptionsDisplay({
       {/* One-time Payment Option - Highlighted */}
       <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-6 relative overflow-hidden">
         <div className="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-          SAVE 5%
+          SAVE 2%
         </div>
 
         <div className="flex items-center justify-between mb-4">
@@ -151,7 +153,7 @@ export function PaymentOptionsDisplay({
         <div className="flex items-center justify-between mb-4">
           <div>
             <h4 className="text-lg font-bold text-gray-900">2-Installment Plan</h4>
-            <p className="text-gray-600 text-sm">Split into 2 payments</p>
+            <p className="text-gray-600 text-sm">Split into 2 payments (Day 1 + Day 45)</p>
           </div>
           <div className="text-right">
             <div className="text-2xl font-bold text-gray-900">
@@ -182,7 +184,7 @@ export function PaymentOptionsDisplay({
         <div className="flex items-center justify-between mb-4">
           <div>
             <h4 className="text-lg font-bold text-gray-900">3-Installment Plan</h4>
-            <p className="text-gray-600 text-sm">Spread payments over time</p>
+            <p className="text-gray-600 text-sm">50% on admission, rest in 60 days</p>
           </div>
           <div className="text-right">
             <div className="text-2xl font-bold text-gray-900">

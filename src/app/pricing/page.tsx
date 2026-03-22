@@ -751,7 +751,7 @@ export default function PricingPage() {
                       : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
                   }`}
                 >
-                  <span className="relative z-10">Lump Sum</span>
+                  <span className="relative z-10">Lump Sum (2% Off)</span>
                 </button>
                 <button
                   onClick={() => setPaymentMode('twoInstallments')}

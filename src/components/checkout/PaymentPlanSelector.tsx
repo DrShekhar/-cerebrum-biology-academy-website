@@ -41,22 +41,22 @@ export const paymentPlans: PaymentPlan[] = [
   {
     id: 'twoInstallments',
     name: '2 Installments',
-    description: 'Split into 2 easy payments',
+    description: 'Split into 2 payments (Day 1 + Day 45)',
     getAmount: (prices) => prices.twoInstallments,
     getSchedule: (total) => [
-      { label: 'Today (50%)', amount: Math.round(total * 0.5) },
-      { label: 'After 3 months (50%)', amount: Math.round(total * 0.5) },
+      { label: 'Day 1 — On admission (50%)', amount: Math.round(total * 0.5) },
+      { label: 'Day 45 — After 45 days (50%)', amount: total - Math.round(total * 0.5) },
     ],
   },
   {
     id: 'threeInstallments',
     name: '3 Installments',
-    description: 'Most flexible payment option',
+    description: 'Pay 50% now, rest in 60 days',
     getAmount: (prices) => prices.threeInstallments,
     getSchedule: (total) => [
-      { label: 'Today (40%)', amount: Math.round(total * 0.4) },
-      { label: 'After 2 months (30%)', amount: Math.round(total * 0.3) },
-      { label: 'After 4 months (30%)', amount: Math.round(total * 0.3) },
+      { label: 'Day 1 — On admission (50%)', amount: Math.round(total * 0.5) },
+      { label: 'Day 31 — After 30 days (25%)', amount: Math.round(total * 0.25) },
+      { label: 'Day 61 — After 60 days (25%)', amount: total - Math.round(total * 0.5) - Math.round(total * 0.25) },
     ],
   },
 ]
