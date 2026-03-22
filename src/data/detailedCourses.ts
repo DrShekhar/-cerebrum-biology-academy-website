@@ -3,9 +3,9 @@ import { Course } from '@/types'
 export const detailedCourses: Course[] = [
   {
     id: 'neet-2026-11th',
-    title: 'NEET 2027 - Class 11th Foundation',
+    title: 'NEET 2028 - Class 11th Foundation',
     description:
-      'Comprehensive 1-year foundation program for Class 11th students targeting NEET 2027. Build strong conceptual foundation with AIIMS expert faculty.',
+      'Comprehensive 1-year foundation program for Class 11th students targeting NEET 2028. Build strong conceptual foundation with AIIMS expert faculty.',
     duration: '1 Year',
     price: 98000,
     features: [
@@ -180,9 +180,9 @@ export const detailedCourses: Course[] = [
           'Yes, comprehensive study materials including textbooks, practice papers, and online resources are included in the course fee.',
       },
     ],
-    seoTitle: 'NEET 2027 Class 11th Foundation Course | Biology Coaching Delhi',
+    seoTitle: 'NEET 2028 Class 11th Foundation Course | Biology Coaching Delhi',
     seoDescription:
-      'Join our NEET 2027 Class 11th foundation course. 2-year comprehensive program with AIIMS faculty, small batches, and proven results. Enroll now!',
+      'Join our NEET 2028 Class 11th foundation course. 2-year comprehensive program with AIIMS faculty, small batches, and proven results. Enroll now!',
     isPopular: true,
     discount: {
       percentage: 10,
@@ -192,7 +192,7 @@ export const detailedCourses: Course[] = [
   },
   {
     id: 'neet-2026-12th',
-    title: 'NEET 2026 - Class 12th Intensive',
+    title: 'NEET 2027 - Class 12th Intensive',
     description:
       'Intensive program for Class 12th students with focus on both boards and NEET preparation simultaneously. Master advanced concepts and exam strategies.',
     duration: '1 Year',
@@ -364,16 +364,16 @@ export const detailedCourses: Course[] = [
           "All classes are recorded and made available online. Additionally, we provide comprehensive notes for every session to ensure you don't miss any important content.",
       },
     ],
-    seoTitle: 'NEET 2026 Class 12th Course | Board + NEET Preparation Delhi',
+    seoTitle: 'NEET 2027 Class 12th Course | Board + NEET Preparation Delhi',
     seoDescription:
-      'Excel in CBSE Class 12th and NEET 2026 with our dual preparation course. Expert faculty, comprehensive study material, and proven results. Enroll today!',
+      'Excel in CBSE Class 12th and NEET 2027 with our dual preparation course. Expert faculty, comprehensive study material, and proven results. Enroll today!',
     isPopular: true,
   },
   {
     id: 'neet-2026-dropper',
-    title: 'NEET 2026 - Dropper/Repeater Batch',
+    title: 'NEET 2027 - Dropper/Repeater Batch',
     description:
-      'Specialized intensive course for dropper students targeting NEET 2026. Comprehensive revision, advanced problem solving, and strategic preparation for improved scores.',
+      'Specialized intensive course for dropper students targeting NEET 2027. Comprehensive revision, advanced problem solving, and strategic preparation for improved scores.',
     duration: '1 Year',
     price: 156000,
     features: [
@@ -528,9 +528,9 @@ export const detailedCourses: Course[] = [
           'We conduct regular motivational sessions, share success stories, provide personalized counseling, and maintain a competitive yet supportive learning environment.',
       },
     ],
-    seoTitle: 'NEET 2026 Dropper Batch | Intensive Biology Coaching Delhi',
+    seoTitle: 'NEET 2027 Dropper Batch | Intensive Biology Coaching Delhi',
     seoDescription:
-      'Join our NEET 2026 dropper batch for intensive preparation and score improvement. Expert faculty, daily tests, and proven results. Limited seats available!',
+      'Join our NEET 2027 dropper batch for intensive preparation and score improvement. Expert faculty, daily tests, and proven results. Limited seats available!',
     isPopular: false,
   },
   {
@@ -805,7 +805,7 @@ export const detailedCourses: Course[] = [
   },
   {
     id: 'class-12th-neet-ascent',
-    title: 'NEET 2026 - Class 12th Ascent',
+    title: 'NEET 2027 - Class 12th Ascent',
     description:
       'Intensive program for Class 12th students with focus on both boards and NEET preparation simultaneously. Achieve excellence in both with our proven dual preparation strategy.',
     duration: '1 Year',
@@ -936,14 +936,14 @@ export const detailedCourses: Course[] = [
           'This course covers board syllabus thoroughly along with NEET preparation, while dropper batch is purely NEET-focused. The teaching pace and approach are optimized for Class 12th students.',
       },
     ],
-    seoTitle: 'NEET 2026 Class 12th Ascent | Dual Board + NEET Preparation Delhi',
+    seoTitle: 'NEET 2027 Class 12th Ascent | Dual Board + NEET Preparation Delhi',
     seoDescription:
-      'Join NEET 2026 Class 12th Ascent program for dual preparation. Expert AIIMS faculty, board excellence, and NEET rank guarantee. Limited seats!',
+      'Join NEET 2027 Class 12th Ascent program for dual preparation. Expert AIIMS faculty, board excellence, and NEET rank guarantee. Limited seats!',
     isPopular: true,
   },
   {
     id: 'neet-dropper-year',
-    title: 'NEET 2026 - Dropper/Repeater Batch',
+    title: 'NEET 2027 - Dropper/Repeater Batch',
     description:
       'Specialized intensive course for students who want to improve their NEET score. Complete preparation with proven results, expert mentorship, and success guarantee program.',
     duration: '1 Year',
@@ -1091,9 +1091,9 @@ export const detailedCourses: Course[] = [
           'We conduct weekly motivational sessions, one-on-one counseling, success story sharing, and maintain competitive yet supportive environment. Our faculty are trained to handle dropper psychology.',
       },
     ],
-    seoTitle: 'NEET 2026 Dropper Batch | Score Improvement Guarantee Delhi',
+    seoTitle: 'NEET 2027 Dropper Batch | Score Improvement Guarantee Delhi',
     seoDescription:
-      'Join NEET 2026 Dropper Batch for guaranteed score improvement. Expert faculty, 50+ mock tests, strategic preparation. Average improvement: 150+ marks!',
+      'Join NEET 2027 Dropper Batch for guaranteed score improvement. Expert faculty, 50+ mock tests, strategic preparation. Average improvement: 150+ marks!',
     isPopular: true,
   },
 ]
