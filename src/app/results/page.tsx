@@ -10,14 +10,12 @@ import {
   GraduationCap,
   Target,
   Play,
-  BarChart3,
   ArrowRight,
   Phone,
   MessageCircle,
   BookOpen,
   CheckCircle,
   Sparkles,
-  Building2,
   Quote,
 } from 'lucide-react'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
@@ -414,24 +412,42 @@ export default function ResultsPage() {
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { title: 'Video Success Stories', desc: 'Watch detailed testimonials from toppers', href: '/success-stories', icon: Play, color: 'green' },
-                { title: 'Wall of Achievers', desc: '1000+ achievers with ranks and colleges', href: '/student/wall-of-achievers', icon: Award, color: 'blue' },
-                { title: 'Free MCQ Practice', desc: '19,000+ NEET Biology questions', href: '/neet-biology-mcq', icon: BookOpen, color: 'purple' },
-              ].map((link) => (
-                <Link key={link.title} href={link.href} className="group block">
-                  <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-${link.color}-500 h-full`}>
-                    <div className={`w-12 h-12 bg-${link.color}-100 rounded-full flex items-center justify-center mb-4`}>
-                      <link.icon className={`w-6 h-6 text-${link.color}-600`} />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{link.title}</h3>
-                    <p className="text-gray-600 mb-4">{link.desc}</p>
-                    <span className="inline-flex items-center text-blue-600 font-semibold text-sm">
-                      Explore <ChevronRight className="w-4 h-4 ml-1" />
-                    </span>
+              <Link href="/success-stories" className="group block">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-green-500 h-full">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <Play className="w-6 h-6 text-green-600" />
                   </div>
-                </Link>
-              ))}
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Video Success Stories</h3>
+                  <p className="text-gray-600 mb-4">Watch detailed testimonials from toppers</p>
+                  <span className="inline-flex items-center text-blue-600 font-semibold text-sm">
+                    Explore <ChevronRight className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </Link>
+              <Link href="/student/wall-of-achievers" className="group block">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-blue-500 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <Award className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Wall of Achievers</h3>
+                  <p className="text-gray-600 mb-4">1000+ achievers with ranks and colleges</p>
+                  <span className="inline-flex items-center text-blue-600 font-semibold text-sm">
+                    Explore <ChevronRight className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </Link>
+              <Link href="/neet-biology-mcq" className="group block">
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-8 border-t-4 border-purple-500 h-full">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <BookOpen className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Free MCQ Practice</h3>
+                  <p className="text-gray-600 mb-4">19,000+ NEET Biology questions</p>
+                  <span className="inline-flex items-center text-blue-600 font-semibold text-sm">
+                    Explore <ChevronRight className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
