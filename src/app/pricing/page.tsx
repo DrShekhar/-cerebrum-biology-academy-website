@@ -322,39 +322,13 @@ export default function PricingPage() {
           <div className="mb-3 sm:mb-4 flex-grow">
             <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
             <div className="space-y-2">
-              {(expandedFeatures.has(tierKey) ? tier.features : tier.features.slice(0, 3)).map(
+              {tier.features.slice(0, 6).map(
                 (feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">{feature}</span>
                   </div>
                 )
-              )}
-              {tier.features.length > 3 && (
-                <button
-                  onClick={() => {
-                    const newExpanded = new Set(expandedFeatures)
-                    if (newExpanded.has(tierKey)) {
-                      newExpanded.delete(tierKey)
-                    } else {
-                      newExpanded.add(tierKey)
-                    }
-                    setExpandedFeatures(newExpanded)
-                  }}
-                  className="text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1 pt-2 transition-colors"
-                >
-                  {expandedFeatures.has(tierKey) ? (
-                    <>
-                      <ChevronDown className="w-4 h-4 rotate-180 transition-transform" />
-                      <span>Show less</span>
-                    </>
-                  ) : (
-                    <>
-                      <ChevronDown className="w-4 h-4 transition-transform" />
-                      <span>+{tier.features.length - 3} more features</span>
-                    </>
-                  )}
-                </button>
               )}
             </div>
           </div>
@@ -426,11 +400,11 @@ export default function PricingPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
         {/* Hero Section with enhanced gradient */}
-        <div className="relative bg-[#4a5d4a] text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#3d4d3d]/40 rounded-full blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-white/5 to-transparent rounded-full" />
         </div>
 
@@ -440,7 +414,7 @@ export default function PricingPage() {
               className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 mb-4 sm:mb-5 shadow-lg animate-fade-in-up"
               style={{ animationDelay: '0.2s' }}
             >
-              <ShieldCheck className="w-4 sm:w-5 h-4 sm:h-5 text-green-300" />
+              <ShieldCheck className="w-4 sm:w-5 h-4 sm:h-5 text-blue-300" />
               <span className="font-semibold text-xs sm:text-sm tracking-wide">
                 Trusted by 5,000+ NEET aspirants
               </span>
@@ -452,7 +426,7 @@ export default function PricingPage() {
                 With India&apos;s Best Faculty
               </span>
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-green-100/90 max-w-2xl mx-auto px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-blue-200 max-w-2xl mx-auto px-4 leading-relaxed">
               Small batches, personalized attention, and proven results.
               <span className="block mt-2 text-yellow-300 font-semibold">
                 Courses starting from just ₹5,999/year
@@ -1404,11 +1378,11 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="relative bg-[#4a5d4a] rounded-3xl p-8 sm:p-12 lg:p-16 text-white mb-16 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-slate-900 to-blue-950 rounded-3xl p-8 sm:p-12 lg:p-16 text-white mb-16 overflow-hidden">
           {/* Background decoration */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#3d4d3d]/40 rounded-full blur-3xl" />
+            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl" />
           </div>
 
           <div className="relative">
@@ -1515,11 +1489,11 @@ export default function PricingPage() {
         </div>
 
         <div className="mt-12 sm:mt-16 pb-24 md:pb-8">
-          <div className="relative bg-gradient-to-br from-[#5a6d5a] via-[#4a5d4a] to-[#3d4d3d] rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
+          <div className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#e8ede8]/30 rounded-full blur-3xl hidden sm:block" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#3d4d3d]/40 rounded-full blur-3xl hidden sm:block" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl hidden sm:block" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl hidden sm:block" />
             </div>
 
             <div className="relative text-center">
