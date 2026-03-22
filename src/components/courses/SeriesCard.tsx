@@ -255,7 +255,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
               className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 animate-fadeInUp"
             >
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-              <span className="font-semibold text-gray-700">NEET Focused</span>
+              <span className="font-semibold text-gray-700">Board + NEET</span>
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
             </div>
           </div>

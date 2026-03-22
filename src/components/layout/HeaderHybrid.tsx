@@ -89,33 +89,25 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             </Suspense>
 
             {/* Logo - Server rendered for instant LCP */}
-            {/* iOS Safari fix: explicit flex properties and transform3d to prevent duplicate rendering */}
             <Link
               href="/"
-              className="flex items-center gap-2 sm:gap-3 group max-w-[200px] [transform:translateZ(0)]"
+              className="inline-flex items-center gap-2 sm:gap-3 group"
+              style={{ WebkitBackfaceVisibility: 'hidden' }}
             >
-              <div className="relative flex-shrink-0">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
-                  <Image
-                    src="/brain-logo.webp"
-                    alt="Cerebrum Biology Academy"
-                    width={40}
-                    height={40}
-                    sizes="(max-width: 640px) 32px, 40px"
-                    className="object-contain w-8 h-8 sm:w-10 sm:h-10"
-                    priority
-                  />
-                </div>
-              </div>
-
-              {/* Responsive brand text - iOS Safari fix: explicit styles prevent duplicate rendering */}
-              <div
-                className="flex flex-col justify-center min-w-0 overflow-hidden flex-shrink [transform:translateZ(0)]"
-              >
-                <span className="text-lg sm:text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em] whitespace-nowrap overflow-hidden text-ellipsis">
+              <Image
+                src="/brain-logo.webp"
+                alt="Cerebrum Biology Academy"
+                width={40}
+                height={40}
+                sizes="(max-width: 640px) 32px, 40px"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl shadow-md border border-green-100"
+                priority
+              />
+              <div>
+                <span className="block text-lg sm:text-2xl font-bold text-slate-900 leading-none tracking-tight">
                   Cerebrum
                 </span>
-                <span className="text-[10px] sm:text-sm text-slate-600 font-medium tracking-wide leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+                <span className="block text-[10px] sm:text-sm text-slate-600 font-medium tracking-wide leading-tight">
                   Biology Academy
                 </span>
               </div>

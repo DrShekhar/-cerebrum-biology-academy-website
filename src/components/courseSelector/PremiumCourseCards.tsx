@@ -207,11 +207,11 @@ const CourseCard = ({
         </div>
       </div>
 
-      {/* NEET Focused Badge */}
+      {/* Board + NEET Badge */}
       {course.isNEETFocused && (
         <div className="flex items-center gap-2 mb-6">
           <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-          <span className="text-green-600 text-sm font-medium">NEET Focused</span>
+          <span className="text-green-600 text-sm font-medium">Board + NEET</span>
         </div>
       )}
 
