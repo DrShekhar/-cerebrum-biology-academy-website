@@ -433,8 +433,8 @@ export interface LeadCaptureConfig {
 }
 
 export const LEAD_CAPTURE_CONFIG: LeadCaptureConfig = {
-  softPromptAfter: 999999, // Disabled - only prompt once at hardPromptAfter
-  hardPromptAfter: 10,
+  softPromptAfter: 25, // Gentle dismissable prompt at 25 questions
+  hardPromptAfter: 50, // Skippable prompt at 50 questions
   requiredFields: ['phone'],
 }
 

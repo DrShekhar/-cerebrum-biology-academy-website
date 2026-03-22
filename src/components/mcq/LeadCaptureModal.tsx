@@ -29,9 +29,7 @@ export function LeadCaptureModal({
   variant,
 }: LeadCaptureModalProps) {
   const handleSkip = () => {
-    if (variant === 'soft') {
-      onClose()
-    }
+    onClose()
   }
 
   return (
@@ -39,7 +37,7 @@ export function LeadCaptureModal({
       {isOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fadeInUp"
-          onClick={variant === 'soft' ? handleSkip : undefined}
+          onClick={handleSkip}
         >
           <div
             onClick={(e) => e.stopPropagation()}
@@ -48,14 +46,13 @@ export function LeadCaptureModal({
             <div className="bg-indigo-500 p-6 text-white">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-4xl">🎉</span>
-                {variant === 'soft' && (
-                  <button
-                    onClick={handleSkip}
-                    className="text-white/80 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-                  >
-                    ✕
-                  </button>
-                )}
+                <button
+                  onClick={handleSkip}
+                  className="text-white/80 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+                  aria-label="Skip"
+                >
+                  ✕
+                </button>
               </div>
               <h2 className="text-2xl font-bold mb-2">Great Progress!</h2>
               <p className="text-white/90">
@@ -103,15 +100,13 @@ export function LeadCaptureModal({
                 Call: +91 88264 44334
               </a>
 
-              {variant === 'soft' && (
-                <button
-                  type="button"
-                  onClick={handleSkip}
-                  className="w-full py-2 text-gray-500 text-sm hover:text-gray-700 transition-colors"
-                >
-                  Continue practicing
-                </button>
-              )}
+              <button
+                type="button"
+                onClick={handleSkip}
+                className="w-full py-2 text-gray-500 text-sm hover:text-gray-700 transition-colors"
+              >
+                Skip — Continue practicing
+              </button>
             </div>
 
             <div className="px-6 pb-6">
