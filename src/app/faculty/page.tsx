@@ -27,28 +27,28 @@ export default function FacultyPage() {
       description: 'MBBS & MD faculty specializing in human body systems',
       faculty: 15,
       icon: Users,
-      color: 'bg-[#3d4d3d]',
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
     },
     {
       title: 'Plant Biology & Botany',
       description: 'PhD botanists covering plant sciences comprehensively',
       faculty: 12,
       icon: BookOpen,
-      color: 'bg-[#4a5d4a]',
+      color: 'bg-gradient-to-br from-emerald-500 to-teal-600',
     },
     {
       title: 'Genetics & Molecular Biology',
       description: 'Research experts in advanced genetic concepts',
       faculty: 8,
       icon: Lightbulb,
-      color: 'bg-[#5a6d5a]',
+      color: 'bg-gradient-to-br from-purple-500 to-violet-600',
     },
     {
       title: 'Environmental Biology',
       description: 'Ecology and environmental science specialists',
       faculty: 6,
       icon: Target,
-      color: 'bg-[#3d4d3d]',
+      color: 'bg-gradient-to-br from-orange-500 to-rose-500',
     },
   ]
 
@@ -78,25 +78,27 @@ export default function FacultyPage() {
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       {/* Breadcrumb Navigation + Schema */}
-      <div className="mx-auto max-w-7xl px-4 pt-4 bg-[#e8ede8]">
+      <div className="mx-auto max-w-7xl px-4 pt-4 bg-gray-50">
         <BreadcrumbSchema items={[{ label: 'Faculty', isCurrentPage: true }]} />
       </div>
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 bg-[#e8ede8] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-900 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           <div className="text-center">
             <div
-              className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6 animate-fadeInUp"
+              className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6 animate-fadeInUp"
             >
+              <GraduationCap className="w-4 h-4" />
               Expert Educators
             </div>
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#3d4d3d] mb-4 sm:mb-6 animate-fadeInUp"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 animate-fadeInUp"
             >
               World-Class Faculty
             </h1>
             <p
-              className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8 sm:mb-10 animate-fadeInUp"
+              className="text-base sm:text-lg md:text-xl text-blue-200 max-w-3xl mx-auto mb-8 sm:mb-10 animate-fadeInUp"
             >
               Learn from the best minds in biology education. Our faculty comprises PhD holders,
               MBBS graduates from AIIMS, and industry experts with decades of NEET coaching
@@ -108,9 +110,9 @@ export default function FacultyPage() {
             >
               <Link href="/demo-booking" className="w-full sm:w-auto">
                 <Button
-                  variant="outline"
+                  variant="primary"
                   size="lg"
-                  className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white w-full sm:w-auto"
+                  className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold w-full sm:w-auto"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Faculty Interaction
@@ -118,9 +120,9 @@ export default function FacultyPage() {
               </Link>
               <Link href="/contact" className="w-full sm:w-auto">
                 <Button
-                  variant="primary"
+                  variant="outline"
                   size="lg"
-                  className="bg-[#3d4d3d] text-white hover:bg-[#4a5d4a] w-full sm:w-auto"
+                  className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto"
                 >
                   Join Our Academy
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -135,10 +137,10 @@ export default function FacultyPage() {
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <div className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
+            <div className="inline-block bg-blue-600 text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
               Our Excellence
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Faculty Excellence Statistics
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
@@ -150,9 +152,9 @@ export default function FacultyPage() {
             {facultyStats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 text-center border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-lg transition-all duration-300 group animate-fadeInUp"
+                className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 text-center border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 group animate-fadeInUp"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
                   {stat.number}
                 </div>
                 <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
@@ -168,13 +170,13 @@ export default function FacultyPage() {
       </section>
 
       {/* Faculty Specializations */}
-      <section className="py-12 sm:py-16 md:py-20 bg-[#e8ede8]">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <div className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
+            <div className="inline-block bg-blue-600 text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
               Expertise Areas
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Subject Specializations
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
@@ -186,9 +188,9 @@ export default function FacultyPage() {
             {specializations.map((spec, index) => (
               <div
                 key={index}
-                className="bg-white rounded-3xl p-8 border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-xl transition-all duration-300 group relative overflow-hidden animate-fadeInUp"
+                className="bg-white rounded-3xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 group relative overflow-hidden animate-fadeInUp"
               >
-                <div className="absolute inset-0 bg-[#e8ede8]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gray-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
                     <div
@@ -198,7 +200,7 @@ export default function FacultyPage() {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-xl font-bold text-gray-900">{spec.title}</h3>
-                      <p className="text-[#3d4d3d] font-medium">{spec.faculty} Faculty Members</p>
+                      <p className="text-gray-900 font-medium">{spec.faculty} Faculty Members</p>
                     </div>
                   </div>
                   <p className="text-gray-600 mb-6">{spec.description}</p>
@@ -206,7 +208,7 @@ export default function FacultyPage() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
+                      className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
                     >
                       View Faculty <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -222,10 +224,10 @@ export default function FacultyPage() {
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <div className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
+            <div className="inline-block bg-blue-600 text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
               Our Team
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Meet Our Faculty
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600">
@@ -237,12 +239,21 @@ export default function FacultyPage() {
             {facultyMembers.map((faculty, index) => (
               <div
                 key={faculty.id}
-                className="bg-white rounded-3xl overflow-hidden border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-xl transition-all duration-300 group animate-fadeInUp"
+                className="bg-white rounded-3xl overflow-hidden border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-300 group animate-fadeInUp"
               >
-                <div className="relative h-48 bg-gradient-to-br from-[#3d4d3d] via-[#4a5d4a] to-[#5a6d5a]">
+                <div className={`relative h-48 ${
+                  [
+                    'bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700',
+                    'bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700',
+                    'bg-gradient-to-br from-orange-500 via-rose-500 to-pink-600',
+                    'bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600',
+                    'bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700',
+                    'bg-gradient-to-br from-amber-500 via-orange-500 to-red-600',
+                  ][index % 6]
+                }`}>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/20">
-                      <span className="text-white font-bold text-3xl">
+                    <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border-2 border-white/40 shadow-xl">
+                      <span className="text-white font-bold text-3xl drop-shadow-lg">
                         {faculty.name
                           .replace(/^(Dr\.|Prof\.|Mr\.|Ms\.)\s*/i, '')
                           .split(' ')
@@ -256,7 +267,7 @@ export default function FacultyPage() {
 
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{faculty.name}</h3>
-                  <p className="text-[#3d4d3d] font-medium mb-3 text-sm line-clamp-2">
+                  <p className="text-gray-900 font-medium mb-3 text-sm line-clamp-2">
                     {faculty.qualification}
                   </p>
                   <p className="text-gray-600 mb-4">{faculty.experience} Experience</p>
@@ -264,7 +275,7 @@ export default function FacultyPage() {
                   <div className="space-y-2 mb-6">
                     {faculty.specialization.slice(0, 2).map((spec, idx) => (
                       <div key={idx} className="flex items-center">
-                        <div className="w-5 h-5 bg-[#3d4d3d] rounded flex items-center justify-center mr-2">
+                        <div className="w-5 h-5 bg-blue-600 rounded flex items-center justify-center mr-2">
                           <Star className="w-3 h-3 text-white" />
                         </div>
                         <span className="text-sm text-gray-700">{spec}</span>
@@ -277,7 +288,7 @@ export default function FacultyPage() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="w-full border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
+                        className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
                       >
                         <MessageSquare className="w-4 h-4 mr-2" />
                         Profile
@@ -287,7 +298,7 @@ export default function FacultyPage() {
                       <Button
                         variant="primary"
                         size="sm"
-                        className="w-full bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white"
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                       >
                         <Calendar className="w-4 h-4 mr-2" />
                         Meet
@@ -304,7 +315,7 @@ export default function FacultyPage() {
               <Button
                 variant="primary"
                 size="lg"
-                className="bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 View All Faculty Members
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -315,14 +326,14 @@ export default function FacultyPage() {
       </section>
 
       {/* Teaching Approach */}
-      <section className="py-12 sm:py-16 md:py-20 bg-[#e8ede8]">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
             <div>
-              <div className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
+              <div className="inline-block bg-blue-600 text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
                 Methodology
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Our Teaching Approach
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
@@ -336,7 +347,7 @@ export default function FacultyPage() {
                     key={index}
                     className="flex items-start animate-fadeInUp"
                   >
-                    <div className="w-12 h-12 bg-[#3d4d3d] rounded-xl flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mr-4">
                       <approach.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -349,13 +360,13 @@ export default function FacultyPage() {
             </div>
 
             <div
-              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-[#3d4d3d]/10 animate-fadeInUp"
+              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-gray-200 animate-fadeInUp"
             >
-              <h3 className="text-2xl font-bold text-[#3d4d3d] mb-6">Faculty Highlights</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Faculty Highlights</h3>
               <div className="space-y-4">
                 {facultyHighlights.map((highlight, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-6 h-6 bg-[#3d4d3d] rounded-md flex items-center justify-center mr-3">
+                    <div className="w-6 h-6 bg-blue-600 rounded-md flex items-center justify-center mr-3">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-gray-700">{highlight}</span>
@@ -363,14 +374,14 @@ export default function FacultyPage() {
                 ))}
               </div>
 
-              <div className="mt-8 pt-8 border-t border-[#3d4d3d]/10">
+              <div className="mt-8 pt-8 border-t border-gray-200">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-[#3d4d3d]">98%</div>
+                    <div className="text-2xl font-bold text-gray-900">98%</div>
                     <div className="text-sm text-gray-600">Student Satisfaction</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-[#4a5d4a]">15+</div>
+                    <div className="text-2xl font-bold text-blue-600">15+</div>
                     <div className="text-sm text-gray-600">Avg. Experience</div>
                   </div>
                 </div>
@@ -384,10 +395,10 @@ export default function FacultyPage() {
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
-            <div className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
+            <div className="inline-block bg-blue-600 text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
               Careers
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
               Join Our Faculty Team
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto">
@@ -400,7 +411,7 @@ export default function FacultyPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
                 >
                   <GraduationCap className="w-5 h-5 mr-2" />
                   Faculty Requirements
@@ -410,7 +421,7 @@ export default function FacultyPage() {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white"
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
                 >
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Apply Now
@@ -422,12 +433,12 @@ export default function FacultyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-[#e8ede8]">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <div className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
+          <div className="inline-block bg-blue-600 text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6">
             Get Started
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
             Learn from the Best Biology Faculty
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
@@ -440,7 +451,7 @@ export default function FacultyPage() {
               <Button
                 variant="outline"
                 size="xl"
-                className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
+                className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo Class
@@ -450,7 +461,7 @@ export default function FacultyPage() {
               <Button
                 variant="primary"
                 size="xl"
-                className="bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
               >
                 Book Free Consultation
               </Button>
@@ -458,16 +469,16 @@ export default function FacultyPage() {
           </div>
 
           <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-center">
-            <div className="bg-white rounded-2xl p-6 border border-[#3d4d3d]/10">
-              <div className="text-2xl sm:text-3xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">50+</div>
+            <div className="bg-white rounded-2xl p-6 border border-gray-200">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">50+</div>
               <div className="text-gray-600 text-sm sm:text-base">Expert Faculty</div>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-[#3d4d3d]/10">
-              <div className="text-2xl sm:text-3xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">20+</div>
+            <div className="bg-white rounded-2xl p-6 border border-gray-200">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">20+</div>
               <div className="text-gray-600 text-sm sm:text-base">AIIMS Alumni</div>
             </div>
-            <div className="bg-white rounded-2xl p-6 border border-[#3d4d3d]/10">
-              <div className="text-2xl sm:text-3xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">15+</div>
+            <div className="bg-white rounded-2xl p-6 border border-gray-200">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">15+</div>
               <div className="text-gray-600 text-sm sm:text-base">Years Experience</div>
             </div>
           </div>
