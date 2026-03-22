@@ -1083,7 +1083,7 @@ export const neetRepeaters2026: SEOLandingContent = {
     points: [
       {
         icon: 'refresh-cw',
-        question: 'Disappointed with NEET 2025 result?',
+        question: 'Disappointed with your NEET result?',
         solution:
           'Most AIIMS doctors took multiple attempts. Your first attempt gave you experience - now use it strategically.',
       },

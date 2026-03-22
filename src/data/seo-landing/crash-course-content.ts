@@ -198,9 +198,9 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-45-day-course': {
     slug: 'neet-biology-45-day-course',
     classLevel: 'universal',
-    title: 'NEET Biology 45-Day Course | Starts March 18 | Exam May 2, 2026',
+    title: 'NEET Biology 45-Day Course | Starting Now | Exam May 2, 2026',
     metaDescription:
-      'NEET 2026 is May 2. Our 45-day crash course starts March 18 — complete syllabus revision, 15 mock exams, AIIMS faculty, 12-student batches. ₹34,999. Also available: 30-day Sprint (₹14,999).',
+      'NEET 2026 is May 2. Our 45-day crash course starting now — complete syllabus revision, 15 mock exams, AIIMS faculty, 12-student batches. ₹34,999. Also available: 30-day Sprint (₹14,999).',
     keywords: [
       'neet biology 45 day course',
       '45 day neet preparation',
@@ -1316,8 +1316,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
-        '30-Day Sprint: ₹14,999 (starts March 31) — for revision-ready students',
-        '45-Day Intensive: ₹34,999 (starts March 18) — for gap-filling + revision',
+        '30-Day Sprint: ₹14,999 (starting now) — for revision-ready students',
+        '45-Day Intensive: ₹34,999 (starting now) — for gap-filling + revision',
         'AIIMS faculty Dr. Shekhar Singh teaches every batch',
         '12-student micro-batches (not 60-100 like chains)',
         '92% verified success rate across 500+ students',
@@ -1331,7 +1331,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     },
     cta: {
       title: 'Only 12 Seats Per Batch — Don\'t Wait',
-      description: 'Next batch starts in 5 days. Book your free assessment call to find the right crash course duration for your current preparation level.',
+      description: 'New batches start every week. Book your free assessment call to find the right crash course duration for your current preparation level.',
       buttonText: 'Book Free Assessment',
       buttonLink: '/admissions',
     },
@@ -1403,12 +1403,12 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       items: [
         {
           icon: '⚡',
-          title: '30-Day Sprint (₹14,999) — Starts March 31',
+          title: '30-Day Sprint (₹14,999) — Starting Now',
           description: 'Best for: Syllabus done, need revision + mock exams. Covers: Top 15 high-weightage chapters (60% of marks), daily PYQs, 10 full mocks. Result: Avg 50-80 marks improvement.',
         },
         {
           icon: '🎯',
-          title: '45-Day Intensive (₹34,999) — Starts March 18',
+          title: '45-Day Intensive (₹34,999) — Starting Now',
           description: 'Best for: 60-80% syllabus done, gaps in 5-8 chapters. Covers: Complete syllabus revision, gap-filling, 15 mocks. Result: Avg 80-120 marks improvement.',
         },
         {
@@ -1474,8 +1474,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
-        '30-Day Sprint: ₹14,999 — revision + 10 mock exams (starts March 31)',
-        '45-Day Intensive: ₹34,999 — gap-filling + complete revision (starts March 18)',
+        '30-Day Sprint: ₹14,999 — revision + 10 mock exams (starting now)',
+        '45-Day Intensive: ₹34,999 — gap-filling + complete revision (starting now)',
         'NEET exam: May 2, 2026 — every day counts',
         'AIIMS faculty, 12-student micro-batches',
         'Free 10-minute assessment to find your level',
@@ -1719,12 +1719,12 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       items: [
         {
           icon: '🟢',
-          title: 'Cerebrum 30-Day Sprint: ₹14,999 (Starts March 31)',
+          title: 'Cerebrum 30-Day Sprint: ₹14,999 (Starting Now)',
           description: 'Includes: 150+ hrs teaching, study material, 30 daily tests, 10 full mocks, PYQs, doubt support. Batch: 12 students. Faculty: AIIMS-trained.',
         },
         {
           icon: '🟢',
-          title: 'Cerebrum 45-Day Intensive: ₹34,999 (Starts March 18)',
+          title: 'Cerebrum 45-Day Intensive: ₹34,999 (Starting Now)',
           description: 'Includes: 225+ hrs, 15 mock exams, 3000+ MCQs, gap analysis, complete syllabus revision. Batch: 12 students.',
         },
         {
@@ -1790,8 +1790,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       duration: '30 / 45 days',
       batchSize: '12 students max',
       features: [
-        '30-Day Sprint: ₹14,999 — High-yield revision + 10 mocks (starts March 31)',
-        '45-Day Intensive: ₹34,999 — Complete revision + 15 mocks (starts March 18)',
+        '30-Day Sprint: ₹14,999 — High-yield revision + 10 mocks (starting now)',
+        '45-Day Intensive: ₹34,999 — Complete revision + 15 mocks (starting now)',
         'Both include: material, daily tests, PYQs, doubt support',
         'Scholarship test: up to 30% off',
         '7-day money-back guarantee',
