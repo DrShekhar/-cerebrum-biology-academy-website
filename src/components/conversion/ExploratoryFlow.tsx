@@ -752,7 +752,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                 questions.
               </p>
               <div className="space-y-3">
-                <div className="text-sm text-gray-600">Available: 24/7
+                <div className="text-sm text-gray-600">Available 24 hours, 7 days a week</div>
                 <PremiumButton
                   variant="medical"
                   size="lg"

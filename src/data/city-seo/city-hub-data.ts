@@ -11945,7 +11945,6 @@ export const cityHubData: Record<string, CityHubData> = {
       differentiator: 'Only NEET Biology specialist serving Knowledge Park. Dropper-friendly schedule. College student discount. Online model eliminates commute from remote Greater Noida location.',
     },
   },
-  },
 
   'biology-class-11-gurugram': {
     slug: 'biology-class-11-gurugram',
@@ -12388,7 +12387,6 @@ export const cityHubData: Record<string, CityHubData> = {
       differentiator: 'Only Biology-specialist serving Faridabad. Board + NEET integrated. Online = zero commute. 50% cheaper than Delhi coaching + travel.',
     },
   },
-  },
 
   'neet-revision-batch-noida': {
     slug: 'neet-revision-batch-noida',
@@ -12597,7 +12595,6 @@ export const cityHubData: Record<string, CityHubData> = {
       achievement: 'NEET 2025 — 572/720 (Dropper, Revision Batch)',
       quote: 'As a Galgotias student retaking NEET, I needed evening revision classes that fit around college. The online revision batch was perfect — attended from my hostel room in Gaur City. Improved from 420 to 572 in 3 months.',
     },
-  },
   },
 
   'best-biology-coaching-delhi-ncr': {
@@ -13121,7 +13118,6 @@ export const cityHubData: Record<string, CityHubData> = {
     areaSpecificContent: { whyThisArea: 'Gurugram CBSE students need Board-specific preparation that generic coaching doesn\'t provide. Our CBSE Biology coaching focuses on what actually gets marks in board exams: diagram perfection, practical confidence, HOTS answers, and sample paper mastery. The offline center at Sector 51 allows hands-on practical sessions that online-only coaching can\'t match.' },
     studentSuccessStory: { name: 'Aanya M.', area: 'DLF Phase 4, Gurugram', achievement: 'CBSE Board: 96/100 Biology | School topper', quote: 'Cerebrum\'s CBSE Biology coaching was exactly what I needed. The diagram practice sessions alone added 8-10 marks to my board score. The practical/viva prep made me the most confident student in my school\'s practical exam.' },
   },
-  },
   'biology-classes-gurugram': {
     slug: 'biology-classes-gurugram', cityName: 'Gurugram', stateName: 'Haryana',
     metaTitle: 'Biology Classes in Gurugram 2026 | Class 9-12 | Offline + Online | Cerebrum Biology Academy',
@@ -13434,15 +13430,6 @@ export const cityHubData: Record<string, CityHubData> = {
     areaSpecificContent: { whyThisArea: 'Many Delhi students want strong Biology board scores for college admission without NEET pressure. Our board-only program serves this market with focused preparation at two convenient centers — without the intensity and cost of full NEET coaching.' },
     studentSuccessStory: { name: 'Tanya A.', area: 'Hauz Khas, Delhi', achievement: 'CBSE Board: 94/100 Biology | Got into Lady Shri Ram College', quote: 'I didn\'t want NEET — I wanted a BSc Biology admission at a good DU college. Cerebrum\'s board-only batch gave me 94 in Biology. Got into Lady Shri Ram College. Worth every rupee.' },
   },
-}
-
-export const getAllCitySlugs = (): string[] => {
-  return Object.keys(cityHubData)
-}
-
-export const getCityData = (slug: string): CityHubData | undefined => {
-  return cityHubData[slug]
-}
 
   'biology-tutor-near-me': {
     slug: 'biology-tutor-near-me', cityName: 'Delhi NCR', stateName: 'Delhi / UP / Haryana',
@@ -13548,3 +13535,12 @@ export const getCityData = (slug: string): CityHubData | undefined => {
     areaSpecificContent: { whyThisArea: '40% of Biology students just want good board scores — but every coaching assumes they want NEET. Our board-focused program serves this ignored market with targeted diagram, practical, and HOTS preparation.' },
     studentSuccessStory: { name: 'Tanya A.', area: 'Hauz Khas, Delhi', achievement: 'CBSE: 94/100 | Lady Shri Ram College', quote: 'Didn\'t want NEET. Cerebrum board-only batch gave me 94 in Biology. Got into Lady Shri Ram. Diagram and practical prep made the difference.' },
   },
+}
+
+export const getAllCitySlugs = (): string[] => {
+  return Object.keys(cityHubData)
+}
+
+export const getCityData = (slug: string): CityHubData | undefined => {
+  return cityHubData[slug]
+}

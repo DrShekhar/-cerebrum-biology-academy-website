@@ -13,11 +13,11 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const newCourseParams = coursePrograms.map((course) => ({
+  const newCourseParams = (coursePrograms || []).map((course) => ({
     slug: course.id,
   }))
 
-  const oldCourseParams = detailedCourses.map((course) => ({
+  const oldCourseParams = (detailedCourses || []).map((course) => ({
     slug: course.slug,
   }))
 
