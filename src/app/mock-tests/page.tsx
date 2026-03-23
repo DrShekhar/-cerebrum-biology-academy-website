@@ -35,7 +35,7 @@ async function getTestsFromDatabase() {
         topics: true,
         _count: {
           select: {
-            testSessions: true,
+            test_sessions: true,
           },
         },
       },
@@ -54,7 +54,7 @@ async function getTestsFromDatabase() {
       totalMarks: test.totalMarks,
       subject: test.subject,
       topics: test.topics ? JSON.parse(test.topics as string) : [],
-      attemptsCount: test._count.testSessions,
+      attemptsCount: test._count.test_sessions,
     }))
   } catch (error) {
     console.error('Error fetching tests:', error)
