@@ -268,7 +268,7 @@ const droppersBatches: Batch[] = [
     classType: 'DROPPERS',
     batchNumber: 5,
     days: ['Sat', 'Sun'],
-    startTime: '19:30',
+    startTime: '18:00',
     endTime: '21:00',
     offlineLocation: 'GURUGRAM',
     hasOnline: true,
