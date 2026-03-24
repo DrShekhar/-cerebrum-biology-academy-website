@@ -10,12 +10,18 @@ import { SuccessStories } from './SuccessStories'
 import { CourseFAQ } from './CourseFAQ'
 import { DetailedPricingSection } from './DetailedPricingSection'
 import { FloatingCTABar } from './FloatingCTABar'
+import WhyStartEarlySection from './WhyStartEarlySection'
+import ParentGuideSection from './ParentGuideSection'
+import WhatsIncludedSection from './WhatsIncludedSection'
+import EnrollmentStepsSection from './EnrollmentStepsSection'
 
 interface EnhancedCourseDetailPageProps {
   course: CourseProgram
 }
 
 export function EnhancedCourseDetailPage({ course }: EnhancedCourseDetailPageProps) {
+  const isFoundationCourse = ['9th', '10th'].includes(course.targetClass)
+
   // Generate breadcrumb items
   const breadcrumbItems = [
     { label: 'Courses', href: '/courses' },
@@ -40,10 +46,24 @@ export function EnhancedCourseDetailPage({ course }: EnhancedCourseDetailPagePro
 
       {/* Course Sections */}
       <div className="space-y-0">
+        {/* Why Start Early — Foundation courses only */}
+        {isFoundationCourse && (
+          <section id="why-start-early">
+            <WhyStartEarlySection />
+          </section>
+        )}
+
         {/* Course Curriculum */}
         <section id="curriculum">
           <CourseCurriculum course={course} />
         </section>
+
+        {/* What's Included */}
+        {isFoundationCourse && (
+          <section id="whats-included">
+            <WhatsIncludedSection />
+          </section>
+        )}
 
         {/* Faculty Profiles */}
         <section id="faculty">
@@ -60,9 +80,21 @@ export function EnhancedCourseDetailPage({ course }: EnhancedCourseDetailPagePro
           <SuccessStories course={course} />
         </section>
 
+        {/* Parent's Guide — Foundation courses only */}
+        {isFoundationCourse && (
+          <section id="parent-guide">
+            <ParentGuideSection />
+          </section>
+        )}
+
         {/* Detailed Pricing */}
         <section id="pricing">
           <DetailedPricingSection course={course} />
+        </section>
+
+        {/* Enrollment Steps */}
+        <section id="enrollment">
+          <EnrollmentStepsSection />
         </section>
 
         {/* FAQ Section */}
