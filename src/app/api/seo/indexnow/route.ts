@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const body: IndexNowRequest = await request.json()
-    let urls = body.urls || []
+    const urls = body.urls || []
 
     if (urls.length === 0) {
       return NextResponse.json({ error: 'No URLs provided' }, { status: 400 })
