@@ -269,7 +269,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         }
 
         // Execute query with timeout
-        const questions = await withTimeout(
+        const questions = await withTimeout<any[]>(
           db.questions.findMany({
             where: whereClause,
             take: safeLimit,
@@ -441,7 +441,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         }
 
         // Query ChapterNote table for NCERT-like content
-        const ncertContent = await withTimeout(
+        const ncertContent = await withTimeout<any>(
           db.chapter_notes.findFirst({
             where: whereClause,
             orderBy: {
@@ -584,7 +584,7 @@ Topics covered:
       try {
         // Query UserProgress table for weak areas
         // First try to find as regular user, then as free user
-        const studentProgress = await withTimeout(
+        const studentProgress = await withTimeout<any>(
           db.user_progress.findMany({
             where: {
               OR: [{ userId: studentId }, { freeUserId: studentId }],
@@ -652,7 +652,7 @@ Topics covered:
           }))
 
           // Get recent test performance for additional context
-          const recentTests = await withTimeout(
+          const recentTests = await withTimeout<any[]>(
             db.test_sessions.findMany({
               where: {
                 OR: [{ userId: studentId }, { freeUserId: studentId }],

@@ -8,11 +8,11 @@ import { en } from './en'
 import { hi } from './hi'
 import { ta } from './ta'
 
-export const dictionaries = {
+export const dictionaries: Record<string, typeof en> = {
   en,
-  hi,
-  ta,
-} as const
+  hi: hi as unknown as typeof en,
+  ta: ta as unknown as typeof en,
+}
 
 export type Dictionary = typeof en
 

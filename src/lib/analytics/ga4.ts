@@ -56,7 +56,7 @@ class GoogleAnalytics {
       // Initialize dataLayer
       window.dataLayer = window.dataLayer || []
       window.gtag = function (...args: unknown[]) {
-        window.dataLayer.push(args)
+        window.dataLayer.push(args as unknown as Record<string, unknown>)
       }
 
       window.gtag('js', new Date())

@@ -232,7 +232,7 @@ export default function NEETBiologyMCQPage() {
         correctAnswer = originalLabel
       } else {
         // Handle shifting of options between original position and end
-        const correctIndex = optionLabels.indexOf(correctAnswer)
+        const correctIndex = optionLabels.indexOf(correctAnswer as 'A' | 'B' | 'C' | 'D')
         if (correctIndex > allOfAboveIndex) {
           // Options after allOfAboveIndex shift up by 1
           correctAnswer = optionLabels[correctIndex - 1]

@@ -15,7 +15,7 @@ interface LocalitySchemaProps {
   pageTitle?: string
   pageDescription?: string
   pageType?: 'tutor' | 'coaching' | 'tuition' | 'classes'
-  coordinates?: { lat: string; lng: string; latitude?: number; longitude?: number }
+  coordinates?: { lat?: string; lng?: string; latitude?: number; longitude?: number }
   faqs?: Array<{ q: string; a: string } | { question: string; answer: string }>
   name?: string
   address?: string
@@ -28,6 +28,7 @@ interface LocalitySchemaProps {
   email?: string
   website?: string
   whatsapp?: string
+  region?: string
   data?: Record<string, unknown>
 }
 

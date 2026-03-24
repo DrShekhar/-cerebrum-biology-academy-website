@@ -32,6 +32,10 @@ export interface Course extends BasicCourse {
     validUntil: string
     originalPrice: number
   }
+  pricing?: {
+    amount: number
+    currency?: string
+  }
 }
 
 export interface CourseCurriculum {

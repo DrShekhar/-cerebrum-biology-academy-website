@@ -317,9 +317,9 @@ export class QuestionService {
       const randomQuestions = this.shuffleArray(questions).slice(0, filters.count)
 
       // Cache the results
-      await QuestionCacheService.cacheRandomQuestions(randomQuestions, filters)
+      await QuestionCacheService.cacheRandomQuestions(randomQuestions as questions[], filters)
 
-      return randomQuestions
+      return randomQuestions as questions[]
     } catch (error) {
       console.error('Failed to fetch random questions:', error)
       return []

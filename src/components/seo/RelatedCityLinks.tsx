@@ -556,7 +556,7 @@ export const cityPages = {
 type CityKey = keyof typeof cityPages
 
 interface RelatedCityLinksProps {
-  currentCity: CityKey | string
+  currentCity?: CityKey | string
   currentCountry?: string
   currentSlug?: string
   country?: string

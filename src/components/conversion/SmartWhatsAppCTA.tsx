@@ -27,6 +27,7 @@ interface SmartWhatsAppCTAProps {
   text?: string
   phoneNumber?: string
   size?: string
+  fullWidth?: boolean
 }
 
 const variantStyles = {
