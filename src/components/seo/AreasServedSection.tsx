@@ -37,6 +37,7 @@ export interface CenterInfo {
 
 interface AreasServedSectionProps {
   cityName: string
+  citySlug?: string
   areas: AreaCardData[]
   hasOfflineCenter?: boolean
   centerInfo?: CenterInfo

@@ -74,7 +74,7 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => trackAndOpenWhatsApp(WHATSAPP_MESSAGES.DEMO_BOOKING, `state_${state.slug}_hero`)}
+                onClick={() => trackAndOpenWhatsApp({ message: WHATSAPP_MESSAGES.demo, source: `state_${state.slug}_hero` })}
                 className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
               >
                 <Video className="w-5 h-5" />
@@ -317,7 +317,7 @@ export function StateLandingPage({ state }: StateLandingPageProps) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => trackAndOpenWhatsApp(WHATSAPP_MESSAGES.DEMO_BOOKING, `state_${state.slug}_footer`)}
+              onClick={() => trackAndOpenWhatsApp({ message: WHATSAPP_MESSAGES.demo, source: `state_${state.slug}_footer` })}
               className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold px-8 py-4 rounded-xl text-lg transition-all transform hover:scale-105"
             >
               <MessageCircle className="w-5 h-5" />

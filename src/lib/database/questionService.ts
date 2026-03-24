@@ -279,7 +279,7 @@ export class QuestionService {
   static async getRandomQuestions(filters: RandomQuestionFilters): Promise<questions[]> {
     try {
       // Try cache first
-      const cached = await QuestionCacheService.getRandomQuestions(filters)
+      const cached = await QuestionCacheService.getRandomQuestions(filters) as questions[] | null
       if (cached && cached.length >= filters.count) {
         return this.shuffleArray(cached).slice(0, filters.count)
       }

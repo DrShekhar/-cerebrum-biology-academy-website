@@ -1158,30 +1158,6 @@ export const neetRepeaters2026: SEOLandingContent = {
     { value: '120+', label: 'Avg Improvement', icon: 'trending-up' },
   ],
 
-  testimonials: [
-    {
-      name: 'Vikram Malhotra',
-      achievement: 'AIR 456 | AIIMS Delhi (2nd Attempt)',
-      quote:
-        '2024: 512 marks. 2025: 658 marks. The gap year with Cerebrum was the best decision. Dr. Shekhar helped me identify why I was stuck and fixed it systematically.',
-      score: '658/720 (146 improvement)',
-    },
-    {
-      name: 'Kavitha Nair',
-      achievement: 'AIR 823 | JIPMER (Repeater)',
-      quote:
-        'Taking a drop was emotionally hard. But Cerebrum community kept me motivated. The weekly tests built my confidence. Now I am a JIPMERite!',
-      score: '624/720',
-    },
-    {
-      name: 'Arjun Patel',
-      achievement: 'AIR 1,250 | GMC Ahmedabad (2nd Attempt)',
-      quote:
-        'First attempt: Missed cutoff by 10 marks. Second attempt: Government college secured. The personalized attention in small batches made all the difference.',
-      score: '598/720',
-    },
-  ],
-
   faqs: [
     {
       question: 'Is taking a drop year for NEET worth it in 2026?',

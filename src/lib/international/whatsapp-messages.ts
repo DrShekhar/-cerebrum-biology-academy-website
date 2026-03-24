@@ -99,6 +99,36 @@ export const countryWhatsAppMessages: Record<CountryCode, CountryMessages> = {
       "Hi! I'm interested in your biology courses for South African students. Can you share details?",
     exam: 'Hi! I need help with NSC / IEB Life Sciences preparation. Do you have courses for Matric?',
   },
+  sa: {
+    default: "Hi! I'm a student in Saudi Arabia interested in biology tutoring.",
+    booking: "Hi! I'd like to book a free demo class.",
+    courseEnquiry: "Hi! I'm interested in your biology courses. Can you share details?",
+    exam: 'Hi! I need help with NEET preparation. What courses do you offer?',
+  },
+  bd: {
+    default: "Hi! I'm a student in Bangladesh interested in biology tutoring.",
+    booking: "Hi! I'd like to book a free demo class.",
+    courseEnquiry: "Hi! I'm interested in your biology courses. Can you share details?",
+    exam: 'Hi! I need help with NEET preparation. What courses do you offer?',
+  },
+  lk: {
+    default: "Hi! I'm a student in Sri Lanka interested in biology tutoring.",
+    booking: "Hi! I'd like to book a free demo class.",
+    courseEnquiry: "Hi! I'm interested in your biology courses. Can you share details?",
+    exam: 'Hi! I need help with NEET preparation. What courses do you offer?',
+  },
+  eg: {
+    default: "Hi! I'm a student in Egypt interested in biology tutoring.",
+    booking: "Hi! I'd like to book a free demo class.",
+    courseEnquiry: "Hi! I'm interested in your biology courses. Can you share details?",
+    exam: 'Hi! I need help with NEET preparation. What courses do you offer?',
+  },
+  pk: {
+    default: "Hi! I'm a student in Pakistan interested in biology tutoring.",
+    booking: "Hi! I'd like to book a free demo class.",
+    courseEnquiry: "Hi! I'm interested in your biology courses. Can you share details?",
+    exam: 'Hi! I need help with NEET / MDCAT preparation. What courses do you offer?',
+  },
 }
 
 /**

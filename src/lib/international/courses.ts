@@ -1287,6 +1287,11 @@ export const COUNTRY_COURSES: Record<CountryCode, Course[]> = {
   hk: HK_COURSES,
   nz: NZ_COURSES,
   za: ZA_COURSES,
+  sa: [],
+  bd: [],
+  lk: [],
+  eg: [],
+  pk: [],
 }
 
 /**

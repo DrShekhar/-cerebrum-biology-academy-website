@@ -6,7 +6,7 @@ export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G
 export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-11121440988'
 
 // Initialize Google Analytics
-export const gtag = (...args: any[]) => {
+export const gtag = (...args: [string, ...unknown[]]) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag(...args)
   }

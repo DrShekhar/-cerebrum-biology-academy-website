@@ -209,7 +209,7 @@ export function EmptyStateIllustration({
           <path
             d="M 100 120 L 105 130 L 115 130 L 108 137 L 110 147 L 100 140 L 90 147 L 92 137 L 85 130 L 95 130 Z"
             fill="#FCD34D"
-            style={{ originX: '100px', originY: '133px' }}
+            style={{ transformOrigin: '100px 133px' }}
           />
         </g>
       </svg>
