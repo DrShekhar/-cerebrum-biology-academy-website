@@ -37,6 +37,7 @@ const buttonVariants = cva(
         secondary_cta:
           'bg-white border-2 border-navy-300 text-navy-700 hover:bg-navy-50 hover:border-navy-400 font-semibold',
         link: 'text-blue-600 underline-offset-4 hover:underline',
+        light: 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm font-semibold',
       },
       size: {
         default: 'h-11 min-h-[44px] px-4 py-2 text-sm',
@@ -59,6 +60,9 @@ export interface ButtonProps
   asChild?: boolean
   loading?: boolean
   animate?: boolean
+  href?: string
+  target?: string
+  rel?: string
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
