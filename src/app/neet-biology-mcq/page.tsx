@@ -517,8 +517,8 @@ export default function NEETBiologyMCQPage() {
             ...prev,
             {
               question,
-              selectedAnswer,
-              correctAnswer: result.correctAnswer,
+              selectedAnswer: selectedAnswer as 'A' | 'B' | 'C' | 'D',
+              correctAnswer: result.correctAnswer as 'A' | 'B' | 'C' | 'D',
               explanation: result.explanation,
               timeSpent,
             },

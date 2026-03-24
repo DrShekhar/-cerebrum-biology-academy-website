@@ -214,7 +214,6 @@ export async function generateMetadata({
   return {
     title: pageTitle,
     description: pageDescription,
-    canonical: canonicalUrl,
     keywords: [
       chapterData.name.toLowerCase(),
       "NEET biology notes",

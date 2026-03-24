@@ -98,7 +98,7 @@ export default async function BlogPost({ params }: Props) {
         educationalLevel={meta.targetAudience?.includes('Class 11') ? 'Class 11' : 'Class 12'}
         teaches={meta.keyTakeaways || ['NEET Biology']}
         learningResourceType="Blog Post"
-        proficiencyLevel={meta.difficulty === 'beginner' ? 'Beginner' : meta.difficulty === 'advanced' ? 'Advanced' : 'Intermediate'}
+        proficiencyLevel={meta.difficulty === 'Beginner' ? 'Beginner' : meta.difficulty === 'Advanced' ? 'Advanced' : 'Intermediate'}
       />
       {/* HowTo Schema for preparation guide posts - Google rich snippet eligibility */}
       {HOWTO_CONFIGS[slug] && (
@@ -108,7 +108,6 @@ export default async function BlogPost({ params }: Props) {
           steps={HOWTO_CONFIGS[slug].steps}
           totalTime={HOWTO_CONFIGS[slug].totalTime}
           image={meta.featuredImage}
-          url={`https://cerebrumbiologyacademy.com/blog/${slug}`}
         />
       )}
       <BlogPostPage

@@ -86,7 +86,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false)
 
   const canvasRef = useRef<HTMLDivElement>(null)
-  const dragControls = useDragControls()
+  const dragControls = { start: () => {} }
 
   // Sample interactive diagrams
   const diagrams: InteractiveDiagram[] = [
@@ -749,16 +749,6 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                   .map((component) => (
                     <div
                       key={component.id}
-                      drag={component.isInteractive}
-                      dragControls={dragControls}
-                      dragMomentum={false}
-                      onDragEnd={(_, info) => {
-                        const newPosition = {
-                          x: component.position.x + info.offset.x,
-                          y: component.position.y + info.offset.y,
-                        }
-                        handleComponentDrag(component.id, newPosition)
-                      }}
                       onClick={() => handleComponentClick(component)}
                       className="absolute cursor-pointer animate-fadeInUp"
                       style={{

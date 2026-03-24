@@ -223,7 +223,7 @@ export default function TamilHomePage() {
                 {dict.cta.button}
               </Link>
               <a
-                href={`https://wa.me/${CONTACT_INFO.phone.whatsapp}`}
+                href={`https://wa.me/${CONTACT_INFO.whatsapp.number}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all"

@@ -70,8 +70,8 @@ export default function AdBlockDetector() {
     // Method 3: Check if gtag / Google Ads actually loaded
     setTimeout(() => {
       if (typeof window !== 'undefined') {
-        const gtagExists = typeof (window as Record<string, unknown>).gtag === 'function'
-        const dataLayerExists = Array.isArray((window as Record<string, unknown>).dataLayer)
+        const gtagExists = typeof (window as unknown as Record<string, unknown>).gtag === 'function'
+        const dataLayerExists = Array.isArray((window as unknown as Record<string, unknown>).dataLayer)
         if (!gtagExists && !dataLayerExists) {
           setAdBlockDetected(true)
         }

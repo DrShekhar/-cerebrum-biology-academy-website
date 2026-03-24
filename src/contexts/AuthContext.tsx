@@ -70,11 +70,13 @@ export interface User {
   id: string
   email: string
   name: string
+  fullName?: string
   phone?: string
   role: UserRole
   emailVerified: Date | null
   profile: UserProfile | null
   profileCompletion?: number
+  grade?: string
 }
 
 export interface ProfileUpdateData {

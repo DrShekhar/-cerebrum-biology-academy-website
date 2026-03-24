@@ -57,7 +57,7 @@ export default function ChapterNotesContent({
   slug,
 }: ChapterNotesContentProps) {
   const [activeSection, setActiveSection] = useState<string | null>(null)
-  const [expandedTopic, setExpandedTopic] = useState<string | null>(null)
+  const [expandedTopic, setExpandedTopic] = useState<number | null>(null)
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {

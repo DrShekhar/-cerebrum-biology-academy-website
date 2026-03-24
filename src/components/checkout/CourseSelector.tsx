@@ -49,6 +49,16 @@ const courseTypeLabels: Record<
     icon: Target,
     description: '1-Year intensive NEET ZA',
   },
+  'elixir-neet': {
+    label: 'Elixir NEET',
+    icon: Target,
+    description: 'Premium NEET preparation',
+  },
+  'elixir-board': {
+    label: 'Elixir Board',
+    icon: BookOpen,
+    description: 'Premium board preparation',
+  },
 }
 
 export function CourseSelector({

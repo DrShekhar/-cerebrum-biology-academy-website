@@ -4,7 +4,6 @@ import { StructuredData } from '@/components/seo/StructuredData'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { FixedHeader } from '@/components/layout/FixedHeader'
-import { MobileBottomNav } from '@/components/layout/MobileBottomNav'
 import { Footer } from '@/components/layout/Footer'
 import './globals.css'
 
@@ -118,9 +117,6 @@ export default function RootLayout({
           </main>
           <div data-lazy="footer" className="priority-lazy">
             <Footer />
-          </div>
-          <div data-section="mobile-bottom-nav" className="priority-immediate">
-            <MobileBottomNav />
           </div>
         </ErrorBoundary>
       </body>

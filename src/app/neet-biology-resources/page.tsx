@@ -205,8 +205,8 @@ export default function NEETBiologyResourcesPage() {
       <div className="mx-auto max-w-7xl px-4 pt-4">
         <BreadcrumbSchema
           items={[
-            { label: 'Home', url: '/' },
-            { label: 'Resources', url: '/neet-biology-resources', isCurrentPage: true },
+            { label: 'Home', href: '/' },
+            { label: 'Resources', href: '/neet-biology-resources', isCurrentPage: true },
           ]}
         />
       </div>

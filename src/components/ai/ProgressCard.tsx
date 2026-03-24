@@ -71,8 +71,8 @@ export function ProgressCard({
 
   const [isCelebrating, setIsCelebrating] = useState(false)
   const [previousValue, setPreviousValue] = useState(value)
-  const iconControls = useAnimationControls()
-  const celebrationControls = useAnimationControls()
+  const iconControls = { start: () => {} }
+  const celebrationControls = { start: () => {} }
 
   const getGradientColors = (gradientClass: string): [string, string] => {
     const gradientMap: Record<string, [string, string]> = {
@@ -144,13 +144,9 @@ export function ProgressCard({
 
   return (
     <div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
       className={`relative overflow-hidden rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-xl bg-white/10 border border-white/20 shadow-xl ${className}`}
       style={{
         boxShadow: '0 8px 32px rgba(79, 70, 229, 0.12)',
-        willChange: 'transform',
       }}
     >
       <div
@@ -172,7 +168,6 @@ export function ProgressCard({
           <div className="flex-1 min-w-0 pr-3 sm:pr-4">
             <h3
               className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-1 sm:mb-2 animate-fadeInUp"
-              layoutId={`title-${variant}`}
             >
               {title}
             </h3>
