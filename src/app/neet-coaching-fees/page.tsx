@@ -441,8 +441,8 @@ export default function FeesPage() {
           </div>
 
           <div
-            initial="hidden"
-            whileInView="visible"
+           
+           
             className="grid md:grid-cols-3 gap-8 animate-fadeInUp"
           >
             {whatIncluded.map((item, index) => {
@@ -511,8 +511,8 @@ export default function FeesPage() {
           </div>
 
           <div
-            initial="hidden"
-            whileInView="visible"
+           
+           
             className="space-y-6 animate-fadeInUp"
           >
             {faqs.map((faq, index) => (

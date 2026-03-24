@@ -239,7 +239,7 @@ export default function NEETPreviousYearQuestionsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
 
-      <div initial="hidden" animate="visible" className="min-h-screen bg-gradient-to-b from-slate-50 to-white animate-fadeInUp">
+      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white animate-fadeInUp">
 
         {/* ── Breadcrumb ── */}
         <nav className="bg-white border-b border-gray-200 animate-fadeInUp">

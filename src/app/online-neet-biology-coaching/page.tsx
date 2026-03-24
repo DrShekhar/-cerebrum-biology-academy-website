@@ -221,8 +221,8 @@ export default function OnlineNEETBiologyCoachingPage() {
           </div>
 
           <div
-            initial="hidden"
-            whileInView="visible"
+           
+           
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {features.map((feature, index) => {
@@ -259,8 +259,8 @@ export default function OnlineNEETBiologyCoachingPage() {
           </div>
 
           <div
-            initial="hidden"
-            whileInView="visible"
+           
+           
             className="space-y-6"
           >
             {programSteps.map((item, index) => (
@@ -380,8 +380,8 @@ export default function OnlineNEETBiologyCoachingPage() {
           </div>
 
           <div
-            initial="hidden"
-            whileInView="visible"
+           
+           
             className="grid md:grid-cols-3 gap-8"
           >
             {testimonials.map((testimonial, index) => (
@@ -422,8 +422,8 @@ export default function OnlineNEETBiologyCoachingPage() {
           </div>
 
           <div
-            initial="hidden"
-            whileInView="visible"
+           
+           
             className="space-y-6"
           >
             {faqs.map((faq, index) => (

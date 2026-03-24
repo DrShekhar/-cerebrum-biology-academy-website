@@ -130,8 +130,8 @@ export default function IBBiologyTutorPage() {
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div
-              initial="hidden"
-              animate="visible"
+             
+             
               className="text-center animate-fadeInUp"
             >
               <div
@@ -207,8 +207,8 @@ export default function IBBiologyTutorPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
@@ -222,8 +222,8 @@ export default function IBBiologyTutorPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Standard Level */}
               <div
-                initial="hidden"
-                whileInView="visible"
+               
+               
                 className="bg-white rounded-3xl p-8 shadow-xl border-2 border-green-200 animate-fadeInUp"
               >
                 <div className="flex items-center gap-3 mb-6">
@@ -281,8 +281,8 @@ export default function IBBiologyTutorPage() {
 
               {/* Higher Level */}
               <div
-                initial="hidden"
-                whileInView="visible"
+               
+               
                 className="bg-[#4a5d4a] rounded-3xl p-8 shadow-xl border-2 border-green-500 relative overflow-hidden animate-fadeInUp"
               >
                 <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
@@ -353,8 +353,8 @@ export default function IBBiologyTutorPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
@@ -366,8 +366,8 @@ export default function IBBiologyTutorPage() {
             </div>
 
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeInUp"
             >
               {[
@@ -434,8 +434,8 @@ export default function IBBiologyTutorPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
           <div className="max-w-7xl mx-auto">
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="text-center mb-16 animate-fadeInUp"
             >
               <div
@@ -453,8 +453,8 @@ export default function IBBiologyTutorPage() {
             </div>
 
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeInUp"
             >
               {[
@@ -535,8 +535,8 @@ export default function IBBiologyTutorPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
@@ -548,8 +548,8 @@ export default function IBBiologyTutorPage() {
             </div>
 
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
             >
               {[
@@ -619,8 +619,8 @@ export default function IBBiologyTutorPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#4a5d4a]">
           <div className="max-w-7xl mx-auto">
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl font-bold text-white mb-4 animate-fadeInUp">
@@ -660,8 +660,8 @@ export default function IBBiologyTutorPage() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  initial="hidden"
-                  whileInView="visible"
+                 
+                 
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 animate-fadeInUp"
                 >
                   <div className="bg-white/20 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
@@ -687,8 +687,8 @@ export default function IBBiologyTutorPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
@@ -700,8 +700,8 @@ export default function IBBiologyTutorPage() {
             </div>
 
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeInUp"
             >
               {[
@@ -761,8 +761,8 @@ export default function IBBiologyTutorPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
           <div className="max-w-4xl mx-auto">
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
@@ -774,8 +774,8 @@ export default function IBBiologyTutorPage() {
             </div>
 
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
               className="space-y-4 animate-fadeInUp"
             >
               {[
@@ -836,8 +836,8 @@ export default function IBBiologyTutorPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#4a5d4a]">
           <div className="max-w-4xl mx-auto text-center">
             <div
-              initial="hidden"
-              whileInView="visible"
+             
+             
              className="animate-fadeInUp">
               <h2
                 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fadeInUp"

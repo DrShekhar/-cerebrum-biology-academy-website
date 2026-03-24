@@ -323,8 +323,8 @@ export default function JBOCoachingPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div
               className="max-w-4xl mx-auto text-center animate-fadeInUp"
-              initial="initial"
-              animate="animate"
+             
+             
             >
               <div
                 className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6 animate-fadeInUp"
