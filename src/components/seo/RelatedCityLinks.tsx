@@ -558,6 +558,8 @@ type CityKey = keyof typeof cityPages
 interface RelatedCityLinksProps {
   currentCity: CityKey | string
   currentCountry?: string
+  currentSlug?: string
+  country?: string
   variant?: 'default' | 'compact' | 'grid'
   title?: string
   showRegion?: boolean

@@ -11,8 +11,8 @@ import {
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface SmartWhatsAppCTAProps {
-  variant?: 'hero' | 'section' | 'inline' | 'banner' | 'compact' | 'light' | 'secondary' | 'default' | 'highlight'
-  message: string
+  variant?: 'hero' | 'section' | 'inline' | 'banner' | 'compact' | 'light' | 'secondary' | 'default' | 'highlight' | 'primary' | 'outline'
+  message?: string
   source?: string
   campaign?: string
   className?: string
@@ -24,6 +24,9 @@ interface SmartWhatsAppCTAProps {
   ctaText?: string
   title?: string
   buttonText?: string
+  text?: string
+  phoneNumber?: string
+  size?: string
 }
 
 const variantStyles = {

@@ -87,7 +87,7 @@ const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
   },
 ]
 
-export function VideoTestimonialsSection() {
+export function VideoTestimonialsSection(_props: { city?: string; country?: string; title?: string; subtitle?: string; testimonials?: Array<{ name: string; score: string; school: string; quote: string }> } = {}) {
   const [activeIndex, setActiveIndex] = useState(0)
   // Track which videos have been clicked to play
   const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set())
