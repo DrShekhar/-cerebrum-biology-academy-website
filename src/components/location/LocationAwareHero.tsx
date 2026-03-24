@@ -74,7 +74,6 @@ export function LocationAwareHero({
   return (
     <section
       className={`relative py-20 px-4 bg-blue-600 overflow-hidden ${className}`}
-      initial="hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black/20" />

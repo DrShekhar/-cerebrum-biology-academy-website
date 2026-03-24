@@ -108,8 +108,6 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
 
   return (
     <div
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
       className="group cursor-pointer animate-fadeInUp"
       style={{ height: '480px' }} // Optimized height
     >
@@ -229,7 +227,6 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
               <div className="relative bg-slate-100 rounded-xl p-1">
 {selectedPlan && (
                     <div
-                      layoutId={`plan-indicator-${series.id}`}
                       className={`
                         absolute inset-y-1
                         bg-gradient-to-r ${config.accentColor}

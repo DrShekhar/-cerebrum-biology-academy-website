@@ -70,8 +70,6 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
 
   return (
     <div
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
       className="group cursor-pointer animate-fadeInUp"
       style={{ height: '420px' }} // Optimized compact height
     >
@@ -182,7 +180,6 @@ export function AppleCourseCard({ course, selectedTier = 'ascent' }: AppleCourse
                     left: `${(['pinnacle', 'ascent', 'pursuit'].indexOf(activeTier) * 100) / 3 + 0.5}%`,
                     width: '32.33%',
                   }}
-                  layoutId="tierSelector"
                 />
 
                 <div className="relative flex">

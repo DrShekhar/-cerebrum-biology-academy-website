@@ -56,7 +56,6 @@ export function GalleryFilters({
             {/* Active indicator */}
             {isSelected && (
               <div
-                layoutId="activeCategory"
                 className="absolute inset-0 rounded-full bg-[#3d4d3d] animate-fadeInUp"
                 style={{ zIndex: -1 }}
               />

@@ -503,9 +503,6 @@ export default function ApplicationForm() {
 {currentStep === 1 && (
                 <div
                   key="step1"
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
                  className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
@@ -770,9 +767,6 @@ export default function ApplicationForm() {
               {currentStep === 2 && (
                 <div
                   key="step2"
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
                  className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
@@ -973,9 +967,6 @@ export default function ApplicationForm() {
               {currentStep === 3 && (
                 <div
                   key="step3"
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
                  className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
@@ -1153,9 +1144,6 @@ export default function ApplicationForm() {
               {currentStep === 4 && (
                 <div
                   key="step4"
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
                  className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
@@ -1284,9 +1272,6 @@ export default function ApplicationForm() {
               {currentStep === 5 && (
                 <div
                   key="step5"
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
                  className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">

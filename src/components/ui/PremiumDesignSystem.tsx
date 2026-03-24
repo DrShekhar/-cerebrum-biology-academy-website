@@ -98,10 +98,6 @@ export function PremiumButton({
       )}
       onClick={onClick}
       disabled={disabled}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      onTapStart={() => setIsPressed(true)}
-      onTap={() => setIsPressed(false)}
     >
       {/* Shimmer Effect */}
       <div

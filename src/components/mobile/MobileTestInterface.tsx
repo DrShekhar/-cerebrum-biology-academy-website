@@ -347,10 +347,6 @@ export function MobileTestInterface({
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        onPan={handlePan}
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.2}
       >
         {/* Question */}
         <div className="mb-6">

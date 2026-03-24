@@ -247,8 +247,6 @@ export const AcademicList: React.FC<AcademicListProps> = ({
   if (animation) {
     return (
       <div
-        initial="initial"
-        whileInView="animate"
        className="animate-fadeInUp">
         {listContent}
       </div>

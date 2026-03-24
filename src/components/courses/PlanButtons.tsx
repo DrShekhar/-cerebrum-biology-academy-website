@@ -160,15 +160,12 @@ export function PlanButtons({
               {/* Selection indicator */}
 {isSelected && (
                   <div
-                    layoutId={`plan-selection-${seriesId}`}
                     className="absolute -inset-1 bg-gradient-to-r from-green-600/20 to-green-600/20 rounded-3xl blur-sm animate-fadeInUp"
                   />
                 )}
 {/* Main plan button */}
               <button
                 onClick={() => onPlanSelect(plan.id)}
-                onHoverStart={() => setHoveredPlan(plan.id)}
-                onHoverEnd={() => setHoveredPlan(null)}
                 className={`relative w-full p-6 rounded-3xl transition-all duration-500 group ${
                   isSelected
                     ? `bg-gradient-to-br ${plan.cardGradient} border-2 border-blue-300/50 shadow-2xl`

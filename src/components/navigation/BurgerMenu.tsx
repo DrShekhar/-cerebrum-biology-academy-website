@@ -212,9 +212,6 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
       {/* Overlay */}
 {isOpen && (
           <div
-            initial="closed"
-            animate="open"
-            exit="closed"
             className="fixed inset-0 bg-black bg-opacity-50 z-[110] animate-fadeInUp"
             onClick={onClose}
             style={{ pointerEvents: 'auto' }}
@@ -228,9 +225,6 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
-            initial="closed"
-            animate="open"
-            exit="closed"
             className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[111] overflow-y-auto animate-fadeInUp"
           >
             {/* Header - sticky with solid background and z-index to stay above scrolling content */}
@@ -346,9 +340,6 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                     </button>
 {isExpanded && (
                         <div
-                          initial="closed"
-                          animate="open"
-                          exit="closed"
                           className="overflow-hidden animate-fadeInUp"
                         >
                           <div className="p-4 space-y-2 bg-white">

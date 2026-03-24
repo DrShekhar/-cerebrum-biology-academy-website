@@ -192,7 +192,6 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
               value={selectedLanguage}
               onChange={(e) => setSelectedLanguage(e.target.value as any)}
               className="bg-gray-100 border-none rounded-xl px-3 py-2 text-sm shadow-neomorph-inset focus:outline-none focus:ring-2 focus:ring-blue-400"
-              whileFocus={{ scale: 1.02 }}
             >
               <option value="auto">Auto</option>
               <option value="hindi">हिंदी</option>

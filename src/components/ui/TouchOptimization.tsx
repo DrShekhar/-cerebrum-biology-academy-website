@@ -85,10 +85,6 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
     <div className="course-carousel-container relative overflow-hidden">
       <div
         className="course-carousel swipeable animate-fadeInUp"
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        onPanStart={handlePanStart}
-        onPanEnd={handlePanEnd}
       >
         {courses.map((course, index) => (
           <div

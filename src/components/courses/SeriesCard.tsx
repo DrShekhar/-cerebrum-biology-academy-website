@@ -134,8 +134,6 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
 
   return (
     <div
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
       className="relative group animate-fadeInUp"
     >
       {/* Shimmer effect overlay */}
@@ -271,7 +269,6 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
           <div className="relative bg-white/60 backdrop-blur-sm rounded-2xl p-2 mb-6 border border-white/30">
 {selectedPlan && (
                 <div
-                  layoutId={`plan-selector-${series.id}`}
                   className={`absolute inset-y-2 bg-gradient-to-r ${config.gradient} rounded-xl`}
                   style={{
                     left: `${(series.plans.findIndex((p) => p.id === selectedPlan) * 100) / series.plans.length + 1}%`,

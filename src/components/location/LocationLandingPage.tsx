@@ -83,7 +83,6 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
   return (
     <div
       className={`min-h-screen bg-gradient-to-b from-slate-50 to-white ${className}`}
-      initial="hidden"
     >
       {/* Hero Section */}
       <section

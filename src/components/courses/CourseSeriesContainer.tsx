@@ -85,8 +85,6 @@ export function CourseSeriesContainer({
           <div
             key={`${series.id}-${selectedClass}`}
             className={getSeriesClassName(series.id)}
-            onHoverStart={() => setHoveredCard(series.id)}
-            onHoverEnd={() => setHoveredCard(null)}
           >
             {/* Main Series Card */}
             <SeriesCard

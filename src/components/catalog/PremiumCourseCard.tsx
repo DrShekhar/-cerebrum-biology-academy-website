@@ -117,8 +117,6 @@ export function PremiumCourseCard({ course, onSelect, className = '' }: PremiumC
   return (
     <div
       className={`relative group cursor-pointer ${className}`}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
     >
       {/* Main Card */}
       <div

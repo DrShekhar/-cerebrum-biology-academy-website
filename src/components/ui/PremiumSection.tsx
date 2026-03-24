@@ -171,8 +171,6 @@ export const AcademicGrid: React.FC<AcademicGridProps> = ({
   return (
     <div
       className={gridClasses}
-      initial="initial"
-      whileInView="animate"
     >
       {children}
     </div>
@@ -209,8 +207,6 @@ export const AcademicCard: React.FC<AcademicCardProps> = ({
   return (
     <div
       className={cardClasses}
-      initial="initial"
-      whileInView="animate"
     >
       {children}
     </div>

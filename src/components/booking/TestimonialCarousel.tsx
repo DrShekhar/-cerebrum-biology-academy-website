@@ -133,10 +133,6 @@ export function TestimonialCarousel() {
       <div className="relative overflow-hidden min-h-[200px]">
 <div
             key={currentIndex}
-            custom={direction}
-            initial="enter"
-            animate="center"
-            exit="exit"
             className="absolute w-full animate-fadeInUp"
           >
             <div className="bg-white rounded-lg p-6 shadow-lg">
