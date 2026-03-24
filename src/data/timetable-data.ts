@@ -16,6 +16,8 @@ export type ClassType =
   | 'PINNACLE_NEET_10'
   | 'MENTORSHIP'
   | 'PRACTICE'
+  | 'NEET_PRACTICE_11'
+  | 'NEET_PRACTICE_12'
 export type Location = 'GURUGRAM' | 'SOUTH_EXT' | 'ROHINI' | 'FARIDABAD'
 export type BatchStatus = 'AVAILABLE' | 'FULL'
 
@@ -69,6 +71,8 @@ export const classTypeLabels: Record<ClassType, string> = {
   PINNACLE_NEET_10: 'Pinnacle NEET 10th',
   MENTORSHIP: 'Mentorship',
   PRACTICE: 'Practice Class',
+  NEET_PRACTICE_11: 'NEET/Practice Class XI',
+  NEET_PRACTICE_12: 'NEET/Practice Class XII',
 }
 
 export type ClassCategory = 'foundation' | 'neet' | 'pinnacle' | 'olympiad' | 'international' | 'special'
@@ -100,6 +104,8 @@ export const classTypeToCategory: Record<ClassType, ClassCategory> = {
   IB_BIO: 'special',
   MENTORSHIP: 'special',
   PRACTICE: 'special',
+  NEET_PRACTICE_11: 'neet',
+  NEET_PRACTICE_12: 'neet',
 }
 
 export interface BatchCombination {
@@ -432,6 +438,32 @@ const ibBioBatches: Batch[] = [
   },
 ]
 
+// NEET / Practice Classes (Online only — for all batches)
+const neetPracticeBatches: Batch[] = [
+  {
+    id: 'neet-prac-11',
+    classType: 'NEET_PRACTICE_11',
+    batchNumber: 1,
+    days: ['Mon'],
+    startTime: '20:30',
+    endTime: '21:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'neet-prac-12',
+    classType: 'NEET_PRACTICE_12',
+    batchNumber: 1,
+    days: ['Mon'],
+    startTime: '21:30',
+    endTime: '22:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
 // Special: Mentorship & Practice
 const specialBatches: Batch[] = [
   {
@@ -468,6 +500,7 @@ export const batches: Batch[] = [
   ...olympiadBatches,
   ...crashCourseBatches,
   ...ibBioBatches,
+  ...neetPracticeBatches,
   ...specialBatches,
 ]
 
@@ -613,5 +646,6 @@ export {
   olympiadBatches,
   crashCourseBatches,
   ibBioBatches,
+  neetPracticeBatches,
   specialBatches,
 }

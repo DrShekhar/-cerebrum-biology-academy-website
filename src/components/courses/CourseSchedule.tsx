@@ -39,11 +39,11 @@ function getClassTypesForCourse(targetClass: string): ClassType[] {
     case '10th':
       return ['PINNACLE_NEET_10', 'USA_NEET_10', 'OLYMPIAD_NSEB', 'OLYMPIAD_IBO']
     case '11th':
-      return ['CLASS_11', 'USA_NEET_11', 'OLYMPIAD_NSEB', 'OLYMPIAD_IBO']
+      return ['CLASS_11', 'USA_NEET_11', 'OLYMPIAD_NSEB', 'OLYMPIAD_IBO', 'NEET_PRACTICE_11']
     case '12th':
-      return ['CLASS_12', 'USA_NEET_12', 'CRASH_COURSE']
+      return ['CLASS_12', 'USA_NEET_12', 'CRASH_COURSE', 'NEET_PRACTICE_12']
     case 'Dropper':
-      return ['DROPPERS', 'CRASH_COURSE']
+      return ['DROPPERS', 'CRASH_COURSE', 'NEET_PRACTICE_11', 'NEET_PRACTICE_12']
     default:
       return ['CLASS_11']
   }
