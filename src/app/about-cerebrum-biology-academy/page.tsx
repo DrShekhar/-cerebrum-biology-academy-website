@@ -8,11 +8,9 @@ import {
   Phone,
   Mail,
   MessageCircle,
-  Calendar,
   Target,
   TrendingUp,
 } from 'lucide-react'
-import Link from 'next/link'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 

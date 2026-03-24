@@ -20,7 +20,6 @@ import {
   Clock,
   Award,
   ArrowRightLeft,
-  Loader2,
   RefreshCw,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'

@@ -7,7 +7,6 @@ import {
   Users,
   BookOpen,
   Target,
-  Clock,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 

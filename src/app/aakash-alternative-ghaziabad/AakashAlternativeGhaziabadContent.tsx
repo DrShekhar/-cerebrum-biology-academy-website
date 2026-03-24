@@ -18,7 +18,6 @@ import {
   BookOpen,
   Zap,
   Star,
-  ArrowRight,
   AlertTriangle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

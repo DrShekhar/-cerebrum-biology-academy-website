@@ -4,10 +4,8 @@ import { useState, useEffect } from 'react'
 import {
   Target,
   TrendingUp,
-  Users,
   ArrowDown,
   Calendar,
-  DollarSign,
   CheckCircle,
   Clock,
   RefreshCw,

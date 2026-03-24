@@ -6,7 +6,6 @@ import {
   Search,
   Plus,
   AlertTriangle,
-  CheckCircle,
   Clock,
   DollarSign,
 } from 'lucide-react'
