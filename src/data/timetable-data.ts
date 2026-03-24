@@ -1,5 +1,22 @@
-export type ClassType = 'CLASS_11' | 'CLASS_12' | 'DROPPERS' | 'PINNACLE_ZA'
-export type Location = 'GURUGRAM' | 'SOUTH_EXT' | 'ROHINI'
+export type ClassType =
+  | 'CLASS_9'
+  | 'CLASS_10'
+  | 'CLASS_11'
+  | 'CLASS_12'
+  | 'DROPPERS'
+  | 'PINNACLE_ZA'
+  | 'OLYMPIAD_NSEB'
+  | 'OLYMPIAD_IBO'
+  | 'USA_NEET_9'
+  | 'USA_NEET_10'
+  | 'USA_NEET_11'
+  | 'USA_NEET_12'
+  | 'CRASH_COURSE'
+  | 'IB_BIO'
+  | 'PINNACLE_NEET_10'
+  | 'MENTORSHIP'
+  | 'PRACTICE'
+export type Location = 'GURUGRAM' | 'SOUTH_EXT' | 'ROHINI' | 'FARIDABAD'
 export type BatchStatus = 'AVAILABLE' | 'FULL'
 
 export interface Batch {
@@ -31,13 +48,58 @@ export const locationLabels: Record<Location, string> = {
   GURUGRAM: 'Gurugram',
   SOUTH_EXT: 'South Delhi (South Ext)',
   ROHINI: 'Rohini',
+  FARIDABAD: 'Faridabad',
 }
 
 export const classTypeLabels: Record<ClassType, string> = {
+  CLASS_9: 'Class 9th',
+  CLASS_10: 'Class 10th',
   CLASS_11: 'Class 11th',
   CLASS_12: 'Class 12th',
   DROPPERS: 'Droppers',
   PINNACLE_ZA: 'Pinnacle ZA',
+  OLYMPIAD_NSEB: 'Olympiad (NSEB)',
+  OLYMPIAD_IBO: 'Olympiad (IBO)',
+  USA_NEET_9: 'USA NEET 9th',
+  USA_NEET_10: 'USA NEET 10th',
+  USA_NEET_11: 'USA NEET 11th',
+  USA_NEET_12: 'USA NEET 12th',
+  CRASH_COURSE: 'Crash Course NEET 2026',
+  IB_BIO: 'IB Biology',
+  PINNACLE_NEET_10: 'Pinnacle NEET 10th',
+  MENTORSHIP: 'Mentorship',
+  PRACTICE: 'Practice Class',
+}
+
+export type ClassCategory = 'foundation' | 'neet' | 'pinnacle' | 'olympiad' | 'international' | 'special'
+
+export const classCategoryLabels: Record<ClassCategory, string> = {
+  foundation: 'Foundation (9th-10th)',
+  neet: 'NEET (11th/12th/Dropper)',
+  pinnacle: 'Pinnacle',
+  olympiad: 'Olympiad',
+  international: 'International / USA',
+  special: 'Special Programs',
+}
+
+export const classTypeToCategory: Record<ClassType, ClassCategory> = {
+  CLASS_9: 'foundation',
+  CLASS_10: 'foundation',
+  CLASS_11: 'neet',
+  CLASS_12: 'neet',
+  DROPPERS: 'neet',
+  PINNACLE_ZA: 'pinnacle',
+  PINNACLE_NEET_10: 'pinnacle',
+  OLYMPIAD_NSEB: 'olympiad',
+  OLYMPIAD_IBO: 'olympiad',
+  USA_NEET_9: 'international',
+  USA_NEET_10: 'international',
+  USA_NEET_11: 'international',
+  USA_NEET_12: 'international',
+  CRASH_COURSE: 'special',
+  IB_BIO: 'special',
+  MENTORSHIP: 'special',
+  PRACTICE: 'special',
 }
 
 export interface BatchCombination {
@@ -214,7 +276,200 @@ const droppersBatches: Batch[] = [
   },
 ]
 
-export const batches: Batch[] = [...class11Batches, ...class12Batches, ...droppersBatches]
+// Class 9th PINNACLE NEET Batch
+const class9Batches: Batch[] = [
+  {
+    id: 'c9-b1',
+    classType: 'CLASS_9',
+    batchNumber: 1,
+    days: ['Sat', 'Sun'],
+    startTime: '17:00',
+    endTime: '18:00',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+// Class 10th PINNACLE NEET Batch
+const class10Batches: Batch[] = [
+  {
+    id: 'c10-b1',
+    classType: 'PINNACLE_NEET_10',
+    batchNumber: 1,
+    days: ['Mon', 'Wed'],
+    startTime: '19:30',
+    endTime: '20:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+// USA NEET Batches (early morning IST for US timezone students)
+const usaBatches: Batch[] = [
+  {
+    id: 'usa-c9-b1',
+    classType: 'USA_NEET_9',
+    batchNumber: 1,
+    days: ['Mon', 'Wed'],
+    startTime: '06:00',
+    endTime: '07:00',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'usa-c10-b1',
+    classType: 'USA_NEET_10',
+    batchNumber: 1,
+    days: ['Tue', 'Thu'],
+    startTime: '06:00',
+    endTime: '07:00',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'usa-c11-b1',
+    classType: 'USA_NEET_11',
+    batchNumber: 1,
+    days: ['Mon', 'Wed'],
+    startTime: '07:00',
+    endTime: '08:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'usa-c12-b1',
+    classType: 'USA_NEET_12',
+    batchNumber: 1,
+    days: ['Tue', 'Thu'],
+    startTime: '07:00',
+    endTime: '08:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+// Olympiad Batches
+const olympiadBatches: Batch[] = [
+  {
+    id: 'oly-nseb-b1',
+    classType: 'OLYMPIAD_NSEB',
+    batchNumber: 1,
+    days: ['Mon', 'Wed'],
+    startTime: '15:00',
+    endTime: '16:00',
+    offlineLocation: 'ROHINI',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'oly-ibo-b1',
+    classType: 'OLYMPIAD_IBO',
+    batchNumber: 1,
+    days: ['Tue', 'Thu'],
+    startTime: '15:00',
+    endTime: '16:00',
+    offlineLocation: 'FARIDABAD',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'oly-ibo-b2',
+    classType: 'OLYMPIAD_IBO',
+    batchNumber: 2,
+    days: ['Tue', 'Thu'],
+    startTime: '06:00',
+    endTime: '07:00',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+// Crash Course NEET 2026
+const crashCourseBatches: Batch[] = [
+  {
+    id: 'crash-b1',
+    classType: 'CRASH_COURSE',
+    batchNumber: 1,
+    days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+    startTime: '09:30',
+    endTime: '10:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'crash-b2',
+    classType: 'CRASH_COURSE',
+    batchNumber: 2,
+    days: ['Sat', 'Sun'],
+    startTime: '07:00',
+    endTime: '08:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+// IB Biology Batch
+const ibBioBatches: Batch[] = [
+  {
+    id: 'ib-b1',
+    classType: 'IB_BIO',
+    batchNumber: 1,
+    days: ['Tue', 'Thu', 'Fri'],
+    startTime: '11:40',
+    endTime: '12:40',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+// Special: Mentorship & Practice
+const specialBatches: Batch[] = [
+  {
+    id: 'mentor-b1',
+    classType: 'MENTORSHIP',
+    batchNumber: 1,
+    days: ['Fri'],
+    startTime: '06:00',
+    endTime: '07:00',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'practice-b1',
+    classType: 'PRACTICE',
+    batchNumber: 1,
+    days: ['Fri'],
+    startTime: '15:00',
+    endTime: '16:00',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+export const batches: Batch[] = [
+  ...class9Batches,
+  ...class10Batches,
+  ...class11Batches,
+  ...class12Batches,
+  ...droppersBatches,
+  ...usaBatches,
+  ...olympiadBatches,
+  ...crashCourseBatches,
+  ...ibBioBatches,
+  ...specialBatches,
+]
 
 export const neetClasses: NeetClass[] = [
   {
@@ -338,5 +593,25 @@ export function generateBatchCombinations(): BatchCombination[] {
   return combinations
 }
 
+export function getBatchesByCategory(category: ClassCategory): Batch[] {
+  return batches.filter((b) => classTypeToCategory[b.classType] === category)
+}
+
+export function getAvailableCategories(): ClassCategory[] {
+  const cats = new Set(batches.map((b) => classTypeToCategory[b.classType]))
+  return Array.from(cats)
+}
+
 // Export class-specific batches for easy access
-export { class11Batches, class12Batches, droppersBatches }
+export {
+  class9Batches,
+  class10Batches,
+  class11Batches,
+  class12Batches,
+  droppersBatches,
+  usaBatches,
+  olympiadBatches,
+  crashCourseBatches,
+  ibBioBatches,
+  specialBatches,
+}

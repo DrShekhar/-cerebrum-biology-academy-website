@@ -18,6 +18,7 @@ import {
   Zap,
   ArrowRight,
   Layers,
+  Award,
 } from 'lucide-react'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
@@ -39,6 +40,18 @@ const classTypeColors: Record<
   ClassType,
   { bg: string; text: string; border: string; tab: string }
 > = {
+  CLASS_9: {
+    bg: 'bg-teal-50',
+    text: 'text-teal-700',
+    border: 'border-teal-200',
+    tab: 'bg-teal-600',
+  },
+  CLASS_10: {
+    bg: 'bg-green-50',
+    text: 'text-green-700',
+    border: 'border-green-200',
+    tab: 'bg-green-600',
+  },
   CLASS_11: {
     bg: 'bg-blue-50',
     text: 'text-blue-700',
@@ -62,6 +75,72 @@ const classTypeColors: Record<
     text: 'text-indigo-700',
     border: 'border-indigo-300',
     tab: 'bg-indigo-600',
+  },
+  OLYMPIAD_NSEB: {
+    bg: 'bg-yellow-50',
+    text: 'text-yellow-800',
+    border: 'border-yellow-200',
+    tab: 'bg-yellow-600',
+  },
+  OLYMPIAD_IBO: {
+    bg: 'bg-yellow-50',
+    text: 'text-yellow-800',
+    border: 'border-yellow-200',
+    tab: 'bg-yellow-600',
+  },
+  USA_NEET_9: {
+    bg: 'bg-red-50',
+    text: 'text-red-700',
+    border: 'border-red-200',
+    tab: 'bg-red-600',
+  },
+  USA_NEET_10: {
+    bg: 'bg-red-50',
+    text: 'text-red-700',
+    border: 'border-red-200',
+    tab: 'bg-red-600',
+  },
+  USA_NEET_11: {
+    bg: 'bg-red-50',
+    text: 'text-red-700',
+    border: 'border-red-200',
+    tab: 'bg-red-600',
+  },
+  USA_NEET_12: {
+    bg: 'bg-red-50',
+    text: 'text-red-700',
+    border: 'border-red-200',
+    tab: 'bg-red-600',
+  },
+  CRASH_COURSE: {
+    bg: 'bg-rose-50',
+    text: 'text-rose-700',
+    border: 'border-rose-200',
+    tab: 'bg-rose-600',
+  },
+  IB_BIO: {
+    bg: 'bg-blue-50',
+    text: 'text-blue-700',
+    border: 'border-blue-200',
+    tab: 'bg-blue-600',
+  },
+  PINNACLE_NEET_10: {
+    bg: 'bg-green-50',
+    text: 'text-green-700',
+    border: 'border-green-200',
+    tab: 'bg-green-600',
+  },
+  MENTORSHIP: {
+    bg: 'bg-gray-50',
+    text: 'text-gray-700',
+    border: 'border-gray-200',
+    tab: 'bg-gray-600',
+  },
+  PRACTICE: {
+    bg: 'bg-gray-50',
+    text: 'text-gray-700',
+    border: 'border-gray-200',
+    tab: 'bg-gray-600',
   },
 }
 
@@ -459,10 +538,21 @@ export default function TimetablePage() {
   }, [allCombinations, selectedLocation, combinationFilter])
 
   const tabConfig: { type: ClassType; icon: React.ElementType; label: string }[] = [
+    { type: 'CLASS_9', icon: BookOpen, label: 'Class 9th' },
+    { type: 'CLASS_10', icon: BookOpen, label: 'Class 10th' },
     { type: 'CLASS_11', icon: BookOpen, label: 'Class 11th' },
     { type: 'CLASS_12', icon: GraduationCap, label: 'Class 12th' },
     { type: 'DROPPERS', icon: Users, label: 'Droppers' },
     { type: 'PINNACLE_ZA', icon: Zap, label: 'Pinnacle ZA' },
+    { type: 'PINNACLE_NEET_10', icon: Zap, label: 'Pinnacle 10th' },
+    { type: 'OLYMPIAD_NSEB', icon: Award, label: 'NSEB Olympiad' },
+    { type: 'OLYMPIAD_IBO', icon: Award, label: 'IBO Olympiad' },
+    { type: 'CRASH_COURSE', icon: Layers, label: 'Crash Course' },
+    { type: 'USA_NEET_9', icon: Layers, label: 'USA 9th' },
+    { type: 'USA_NEET_10', icon: Layers, label: 'USA 10th' },
+    { type: 'USA_NEET_11', icon: Layers, label: 'USA 11th' },
+    { type: 'USA_NEET_12', icon: Layers, label: 'USA 12th' },
+    { type: 'IB_BIO', icon: BookOpen, label: 'IB Biology' },
   ]
 
   return (
