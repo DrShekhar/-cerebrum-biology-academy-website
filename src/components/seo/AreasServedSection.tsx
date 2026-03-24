@@ -18,12 +18,13 @@ import {
 
 export interface AreaCardData {
   name: string
-  description: string
+  description?: string
   schools: string[]
   nearbyMetro: string[]
-  distanceFromCenter: string
+  distanceFromCenter?: string
   metroLine?: string
   type?: string
+  landmarks?: string[]
 }
 
 export interface CenterInfo {

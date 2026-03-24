@@ -5,7 +5,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 
 interface CostComparisonSectionProps {
-  cityName: string
+  cityName?: string
+  city?: string
+  country?: string
 }
 
 const comparisonRows = [
@@ -21,13 +23,14 @@ const comparisonRows = [
   { feature: 'Progress Tracking', kota: 'Monthly (generic)', cerebrum: 'Weekly (personalized)', cerebrumWins: true },
 ]
 
-export function CostComparisonSection({ cityName }: CostComparisonSectionProps) {
+export function CostComparisonSection({ cityName, city }: CostComparisonSectionProps) {
+  const displayCity = cityName || city || 'Our'
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why {cityName} Students Choose Cerebrum Over Kota
+            Why {displayCity} Students Choose Cerebrum Over Kota
           </h2>
           <p className="text-lg text-gray-600">
             Save Rs 2-4 Lakh per year. Get better results. Stay with your family.

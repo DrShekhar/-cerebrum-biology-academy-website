@@ -71,8 +71,8 @@ export function ProgressCard({
 
   const [isCelebrating, setIsCelebrating] = useState(false)
   const [previousValue, setPreviousValue] = useState(value)
-  const iconControls = { start: () => {} }
-  const celebrationControls = { start: () => {} }
+  const iconControls = { start: (_args: Record<string, unknown>) => {} }
+  const celebrationControls = { start: (_args: Record<string, unknown>) => {} }
 
   const getGradientColors = (gradientClass: string): [string, string] => {
     const gradientMap: Record<string, [string, string]> = {

@@ -5,7 +5,7 @@ import { ChevronRight, Home } from 'lucide-react'
 
 interface CityBreadcrumbProps {
   cityName: string
-  stateName: string
+  stateName?: string
   stateSlug?: string
 }
 

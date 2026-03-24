@@ -5,7 +5,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 
 interface PricingSectionProps {
-  cityName: string
+  cityName?: string
+  city?: string
+  country?: string
 }
 
 const plans = [
@@ -35,13 +37,14 @@ const plans = [
   },
 ]
 
-export function PricingSection({ cityName }: PricingSectionProps) {
+export function PricingSection({ cityName, city }: PricingSectionProps) {
+  const displayCity = cityName || city || 'Your City'
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            NEET Coaching Fees for {cityName} Students
+            NEET Coaching Fees for {displayCity} Students
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Affordable pricing with EMI options. Scholarships available for meritorious students.

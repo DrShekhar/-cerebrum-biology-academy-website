@@ -11,9 +11,9 @@ import {
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface SmartWhatsAppCTAProps {
-  variant?: 'hero' | 'section' | 'inline' | 'banner' | 'compact'
+  variant?: 'hero' | 'section' | 'inline' | 'banner' | 'compact' | 'light' | 'secondary' | 'default' | 'highlight'
   message: string
-  source: string
+  source?: string
   campaign?: string
   className?: string
   children?: React.ReactNode
@@ -21,6 +21,9 @@ interface SmartWhatsAppCTAProps {
   cityName?: string
   countryName?: string
   showCallFallback?: boolean
+  ctaText?: string
+  title?: string
+  buttonText?: string
 }
 
 const variantStyles = {
@@ -36,7 +39,7 @@ const variantStyles = {
 export function SmartWhatsAppCTA({
   variant = 'hero',
   message,
-  source,
+  source = 'location-page',
   campaign,
   className,
   children,

@@ -10,13 +10,25 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface LocalitySchemaProps {
-  locality: string
-  slug: string
-  pageTitle: string
-  pageDescription: string
+  locality?: string
+  slug?: string
+  pageTitle?: string
+  pageDescription?: string
   pageType?: 'tutor' | 'coaching' | 'tuition' | 'classes'
-  coordinates?: { lat: string; lng: string }
+  coordinates?: { lat: string; lng: string; latitude?: number; longitude?: number }
   faqs?: Array<{ q: string; a: string } | { question: string; answer: string }>
+  name?: string
+  address?: string
+  city?: string
+  cityName?: string
+  country?: string
+  latitude?: number
+  longitude?: number
+  phone?: string
+  email?: string
+  website?: string
+  whatsapp?: string
+  data?: Record<string, unknown>
 }
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'

@@ -95,7 +95,7 @@ const MobileMultimodalInterface: React.FC = () => {
 
   const containerRef = useRef<HTMLDivElement>(null)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
-  const dragControls = useDragControls()
+  const dragControls = { start: () => {} }
 
   // Sample mobile-optimized content
   const mobileContent: MultimodalContent[] = [

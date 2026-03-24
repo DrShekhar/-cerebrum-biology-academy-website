@@ -556,7 +556,8 @@ export const cityPages = {
 type CityKey = keyof typeof cityPages
 
 interface RelatedCityLinksProps {
-  currentCity: CityKey
+  currentCity: CityKey | string
+  currentCountry?: string
   variant?: 'default' | 'compact' | 'grid'
   title?: string
   showRegion?: boolean
