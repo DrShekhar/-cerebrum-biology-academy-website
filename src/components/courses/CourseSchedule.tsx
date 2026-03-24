@@ -17,116 +17,70 @@ import {
   Phone,
   CalendarPlus,
   RefreshCw,
+  ExternalLink,
 } from 'lucide-react'
+import {
+  batches as timetableBatches,
+  formatTimeRange,
+  locationLabels,
+  classTypeLabels,
+  type ClassType,
+} from '@/data/timetable-data'
 
 interface CourseScheduleProps {
   course: CourseProgram
 }
 
-// Mock batch data - in real app this would come from API
-const mockBatches = {
-  pinnacle: [
-    {
-      id: 'pinnacle-morning',
-      name: 'Morning Batch',
-      timing: '9:00 AM - 11:00 AM',
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      availableSeats: 3,
-      totalSeats: 12,
-      startDate: '2024-01-15',
-      faculty: 'Dr. Priya Sharma',
-      mode: 'Offline',
-      location: 'Main Campus',
-    },
-    {
-      id: 'pinnacle-evening',
-      name: 'Evening Batch',
-      timing: '6:00 PM - 8:00 PM',
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      availableSeats: 7,
-      totalSeats: 12,
-      startDate: '2024-01-22',
-      faculty: 'Dr. Meena Patel',
-      mode: 'Hybrid',
-      location: 'Main Campus + Online',
-    },
-  ],
-  ascent: [
-    {
-      id: 'ascent-morning',
-      name: 'Morning Batch',
-      timing: '9:00 AM - 11:00 AM',
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      availableSeats: 8,
-      totalSeats: 20,
-      startDate: '2024-01-15',
-      faculty: 'Dr. Rajesh Kumar',
-      mode: 'Offline',
-      location: 'Main Campus',
-    },
-    {
-      id: 'ascent-afternoon',
-      name: 'Afternoon Batch',
-      timing: '2:00 PM - 4:00 PM',
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      availableSeats: 12,
-      totalSeats: 20,
-      startDate: '2024-01-20',
-      faculty: 'Dr. Anil Singh',
-      mode: 'Online',
-      location: 'Online Platform',
-    },
-    {
-      id: 'ascent-evening',
-      name: 'Evening Batch',
-      timing: '6:00 PM - 8:00 PM',
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      availableSeats: 5,
-      totalSeats: 20,
-      startDate: '2024-01-25',
-      faculty: 'Dr. Priya Sharma',
-      mode: 'Hybrid',
-      location: 'Main Campus + Online',
-    },
-  ],
-  pursuit: [
-    {
-      id: 'pursuit-morning',
-      name: 'Morning Batch',
-      timing: '10:00 AM - 12:00 PM',
-      days: ['Monday', 'Wednesday', 'Friday'],
-      availableSeats: 15,
-      totalSeats: 25,
-      startDate: '2024-01-15',
-      faculty: 'Dr. Rajesh Kumar',
-      mode: 'Offline',
-      location: 'Main Campus',
-    },
-    {
-      id: 'pursuit-weekend',
-      name: 'Weekend Batch',
-      timing: '9:00 AM - 1:00 PM',
-      days: ['Saturday', 'Sunday'],
-      availableSeats: 18,
-      totalSeats: 25,
-      startDate: '2024-01-20',
-      faculty: 'Dr. Anil Singh',
-      mode: 'Online',
-      location: 'Online Platform',
-    },
-  ],
+// Map course targetClass to timetable ClassTypes
+function getClassTypesForCourse(targetClass: string): ClassType[] {
+  switch (targetClass) {
+    case '9th':
+      return ['CLASS_9', 'USA_NEET_9', 'OLYMPIAD_NSEB', 'OLYMPIAD_IBO']
+    case '10th':
+      return ['PINNACLE_NEET_10', 'USA_NEET_10', 'OLYMPIAD_NSEB', 'OLYMPIAD_IBO']
+    case '11th':
+      return ['CLASS_11', 'USA_NEET_11', 'OLYMPIAD_NSEB', 'OLYMPIAD_IBO']
+    case '12th':
+      return ['CLASS_12', 'USA_NEET_12', 'CRASH_COURSE']
+    case 'Dropper':
+      return ['DROPPERS', 'CRASH_COURSE']
+    default:
+      return ['CLASS_11']
+  }
 }
 
-const mockHolidays = [
-  { date: '2024-01-26', name: 'Republic Day' },
-  { date: '2024-03-08', name: 'Holi' },
-  { date: '2024-08-15', name: 'Independence Day' },
-  { date: '2024-10-02', name: 'Gandhi Jayanti' },
-  { date: '2024-11-01', name: 'Diwali Break' },
+function getRealBatchesForCourse(targetClass: string) {
+  const classTypes = getClassTypesForCourse(targetClass)
+  return timetableBatches
+    .filter((b) => classTypes.includes(b.classType))
+    .map((b) => ({
+      id: b.id,
+      name: `${classTypeLabels[b.classType]} — Batch ${b.batchNumber}`,
+      timing: formatTimeRange(b.startTime, b.endTime),
+      days: b.days,
+      availableSeats: b.status === 'AVAILABLE' ? 5 : 0,
+      totalSeats: 12,
+      startDate: 'April 2026',
+      faculty: 'Dr. Shekhar Singh',
+      mode: b.hasOnline ? 'Hybrid' : 'Offline',
+      location: b.hasOnline
+        ? `${locationLabels[b.offlineLocation]} + Online`
+        : locationLabels[b.offlineLocation],
+      classType: b.classType,
+    }))
+}
+
+const holidays = [
+  { date: '2026-01-26', name: 'Republic Day' },
+  { date: '2026-03-14', name: 'Holi' },
+  { date: '2026-08-15', name: 'Independence Day' },
+  { date: '2026-10-02', name: 'Gandhi Jayanti' },
+  { date: '2026-11-08', name: 'Diwali Break' },
 ]
 
 export function CourseSchedule({ course }: CourseScheduleProps) {
   const [selectedTier, setSelectedTier] = useState<CourseSeries>('ascent')
+  const realBatches = getRealBatchesForCourse(course.targetClass)
 
   const BatchCard = ({ batch, tier }: { batch: any; tier: CourseSeries }) => {
     const occupancyRate = ((batch.totalSeats - batch.availableSeats) / batch.totalSeats) * 100
@@ -178,7 +132,7 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
           </div>
           <div className="flex items-center gap-2 text-sm">
             <CalendarPlus className="h-4 w-4 text-orange-500" />
-            <span>Starts: {new Date(batch.startDate).toLocaleDateString()}</span>
+            <span>Starts: {batch.startDate}</span>
           </div>
         </div>
 
@@ -237,35 +191,28 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
           </p>
         </div>
 
-        {/* Tier Selection */}
+        {/* Real Batch Schedule */}
         <div className="mb-8">
-          <Tabs
-            value={selectedTier}
-            onValueChange={(value) => setSelectedTier(value as CourseSeries)}
-          >
-            <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto">
-              <TabsTrigger value="pursuit" className="text-sm">
-                Pursuit Series
-              </TabsTrigger>
-              <TabsTrigger value="ascent" className="text-sm">
-                Ascent Series
-              </TabsTrigger>
-              <TabsTrigger value="pinnacle" className="text-sm">
-                Pinnacle Series
-              </TabsTrigger>
-            </TabsList>
-
-            {/* Batch Cards for each tier */}
-            {(['pursuit', 'ascent', 'pinnacle'] as CourseSeries[]).map((tier) => (
-              <TabsContent key={tier} value={tier} className="mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {mockBatches[tier]?.map((batch) => (
-                    <BatchCard key={batch.id} batch={batch} tier={tier} />
-                  ))}
-                </div>
-              </TabsContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {realBatches.map((batch) => (
+              <BatchCard key={batch.id} batch={batch} tier={selectedTier} />
             ))}
-          </Tabs>
+          </div>
+          {realBatches.length === 0 && (
+            <div className="text-center py-12 text-gray-500">
+              <Calendar className="h-12 w-12 mx-auto mb-4 opacity-50" />
+              <p>Schedule coming soon. Contact us for details.</p>
+            </div>
+          )}
+          <div className="text-center mt-8">
+            <a
+              href="/timetable"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View Full Master Timetable
+            </a>
+          </div>
         </div>
 
         {/* Schedule Information */}
@@ -341,7 +288,7 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
             Important Dates & Holidays
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {mockHolidays.map((holiday, index) => (
+            {holidays.map((holiday, index) => (
               <div key={index} className="flex items-center gap-3 p-3 bg-purple-50 rounded-lg">
                 <div className="text-purple-600 font-semibold text-sm">
                   {new Date(holiday.date).toLocaleDateString('en-US', {
