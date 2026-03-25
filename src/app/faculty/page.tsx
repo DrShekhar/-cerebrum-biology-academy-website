@@ -27,28 +27,28 @@ export default function FacultyPage() {
       description: 'MBBS & MD faculty specializing in human body systems',
       faculty: 15,
       icon: Users,
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
+      color: 'bg-blue-600',
     },
     {
       title: 'Plant Biology & Botany',
       description: 'PhD botanists covering plant sciences comprehensively',
       faculty: 12,
       icon: BookOpen,
-      color: 'bg-gradient-to-br from-emerald-500 to-teal-600',
+      color: 'bg-teal-600',
     },
     {
       title: 'Genetics & Molecular Biology',
       description: 'Research experts in advanced genetic concepts',
       faculty: 8,
       icon: Lightbulb,
-      color: 'bg-gradient-to-br from-purple-500 to-violet-600',
+      color: 'bg-purple-700',
     },
     {
       title: 'Environmental Biology',
       description: 'Ecology and environmental science specialists',
       faculty: 6,
       icon: Target,
-      color: 'bg-gradient-to-br from-orange-500 to-rose-500',
+      color: 'bg-green-600',
     },
   ]
 
@@ -243,12 +243,12 @@ export default function FacultyPage() {
               >
                 <div className={`relative h-48 ${
                   [
-                    'bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700',
-                    'bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700',
-                    'bg-gradient-to-br from-orange-500 via-rose-500 to-pink-600',
-                    'bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600',
-                    'bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700',
-                    'bg-gradient-to-br from-amber-500 via-orange-500 to-red-600',
+                    'bg-blue-700',
+                    'bg-teal-700',
+                    'bg-purple-800',
+                    'bg-green-700',
+                    'bg-blue-800',
+                    'bg-purple-700',
                   ][index % 6]
                 }`}>
                   <div className="absolute inset-0 flex items-center justify-center">
