@@ -71,7 +71,7 @@ export default function NEETDropperPage() {
         value: 1,
       })
     }
-    router.push('/demo-booking')
+    trackAndOpenWhatsApp({ source: 'neet-dropper-demo', message: 'Hi! I want to book a FREE demo class for NEET Dropper/Repeater Batch. Please share available timings.', campaign: 'neet-dropper' })
   }
 
   const courseFeatures = [

@@ -59,7 +59,7 @@ export default function NEETCrashCoursePage() {
   }, [])
 
   const handleDemoBooking = () => {
-    router.push('/demo-booking')
+    trackAndOpenWhatsApp({ source: 'neet-crash-course-demo', message: 'Hi! I want to book a FREE demo class for NEET Crash Course 2026. Please share available timings.', campaign: 'neet-crash-course' })
   }
 
   const crashCourseFeatures = [

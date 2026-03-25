@@ -15,6 +15,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { PricingDisplay } from '@/components/ui/PricingDisplay'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function Class10FoundationPage() {
   const router = useRouter()
@@ -164,19 +165,19 @@ export default function Class10FoundationPage() {
                 for NEET foundation with comprehensive life processes understanding.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/admissions"
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'class-10-foundation-enroll', message: 'Hi! I want to enroll in Class 10 Foundation Biology. Please share fee structure, batch timings, and enrollment process.', campaign: 'class-10-foundation' })}
                   className="w-full sm:w-auto bg-white text-green-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Join Class 10 Foundation
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  href="/contact"
+                </button>
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'class-10-foundation-demo', message: 'Hi! I want to book a FREE demo class for Class 10 Foundation Biology. Please share available timings.', campaign: 'class-10-foundation' })}
                   className="w-full sm:w-auto border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Book Free Demo
-                </Link>
+                </button>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
@@ -425,7 +426,7 @@ export default function Class10FoundationPage() {
                 <PricingDisplay
                   courseId="class-10-foundation-biology"
                   showCompetitiveAdvantage={true}
-                  onEnrollClick={() => router.push('/admissions')}
+                  onEnrollClick={() => trackAndOpenWhatsApp({ source: 'class-10-foundation-enroll', message: 'Hi! I want to enroll in Class 10 Foundation Biology. Please share fee structure, batch timings, and enrollment process.', campaign: 'class-10-foundation' })}
                 />
               </div>
             </div>

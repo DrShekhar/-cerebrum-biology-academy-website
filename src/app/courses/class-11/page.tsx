@@ -372,14 +372,14 @@ export default function Class11BiologyPage() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/demo-booking"
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'class-11-demo', message: 'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.', campaign: 'class-11' })}
                   className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] group"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo Class
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </button>
                 <button
                   onClick={async () => {
                     await trackAndOpenWhatsApp({
@@ -772,12 +772,12 @@ export default function Class11BiologyPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/demo-booking"
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'class-11-demo', message: 'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.', campaign: 'class-11' })}
                   className="flex-1 bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition-all duration-300 text-center"
                 >
                   Book Free Demo First
-                </Link>
+                </button>
                 <Link
                   href="/courses?class=class-11"
                   className="flex-1 bg-white text-[#3d4d3d] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 text-center"
@@ -937,13 +937,13 @@ export default function Class11BiologyPage() {
             <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
             WhatsApp
           </button>
-          <Link
-            href="/demo-booking"
+          <button
+            onClick={() => trackAndOpenWhatsApp({ source: 'class-11-demo', message: 'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.', campaign: 'class-11' })}
             className="flex-1 bg-[#3d4d3d] text-white py-3 rounded-xl font-semibold flex items-center justify-center min-h-[48px]"
             aria-label="Book a free demo class for Class 11 Biology course"
           >
             Book Demo
-          </Link>
+          </button>
         </div>
       </div>
 

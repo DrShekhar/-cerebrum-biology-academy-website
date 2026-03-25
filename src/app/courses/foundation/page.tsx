@@ -316,13 +316,13 @@ export default function FoundationCoursePage() {
 
               {/* Quick CTAs */}
               <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/demo-booking"
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'foundation-demo', message: 'Hi! I want to book a FREE demo class for Foundation Biology (Class 9-10). Please share available timings.', campaign: 'foundation' })}
                   className="inline-flex items-center bg-[#4a5d4a] text-white px-5 py-3 rounded-lg font-semibold hover:bg-[#3d4d3d] transition-colors"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo
-                </Link>
+                </button>
                 <button
                   onClick={async () => {
                     await trackAndOpenWhatsApp({
@@ -569,12 +569,12 @@ export default function FoundationCoursePage() {
                     </div>
                   ))}
                 </div>
-                <Link
-                  href="/demo-booking"
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'foundation-demo', message: `Hi! I want to book a FREE demo class for Foundation Biology (${group.class}). Please share available timings.`, campaign: 'foundation' })}
                   className="mt-6 inline-flex items-center text-[#4a5d4a] font-semibold hover:underline"
                 >
                   Book Demo for {group.class} <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
+                </button>
               </div>
             ))}
           </div>
@@ -772,20 +772,20 @@ export default function FoundationCoursePage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/admissions"
+            <button
+              onClick={() => trackAndOpenWhatsApp({ source: 'foundation-enroll', message: 'Hi! I want to enroll in Foundation Biology (Class 9-10). Please share fee structure, batch timings, and enrollment process.', campaign: 'foundation' })}
               className="inline-flex items-center justify-center bg-white text-[#4a5d4a] px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#e8ede8] transition-colors"
             >
               <Award className="w-5 h-5 mr-2" />
               Enroll Now
-            </Link>
-            <Link
-              href="/demo-booking"
+            </button>
+            <button
+              onClick={() => trackAndOpenWhatsApp({ source: 'foundation-demo', message: 'Hi! I want to book a FREE demo class for Foundation Biology (Class 9-10). Please share available timings.', campaign: 'foundation' })}
               className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-[#4a5d4a] transition-colors"
             >
               <Play className="w-5 h-5 mr-2" />
               Book Free Demo
-            </Link>
+            </button>
           </div>
         </div>
       </section>

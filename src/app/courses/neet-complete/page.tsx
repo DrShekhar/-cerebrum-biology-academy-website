@@ -16,6 +16,7 @@ import {
   Users,
   Trophy,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 
@@ -494,10 +495,10 @@ const NEETCompletePage = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-yellow-500 text-yellow-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all shadow-lg">
+                <button onClick={() => trackAndOpenWhatsApp({ source: 'neet-complete-enroll', message: 'Hi! I want to enroll in Complete NEET Biology. Please share fee structure, batch timings, and enrollment process.', campaign: 'neet-complete' })} className="bg-yellow-500 text-yellow-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all shadow-lg">
                   Enroll Now - ₹75,000
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
+                <button onClick={() => trackAndOpenWhatsApp({ source: 'neet-complete-demo', message: 'Hi! I want to book a FREE demo class for Complete NEET Biology. Please share available timings.', campaign: 'neet-complete' })} className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
                   Book Free Demo
                 </button>
               </div>
@@ -865,10 +866,10 @@ const NEETCompletePage = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all">
+                      <button onClick={() => trackAndOpenWhatsApp({ source: 'neet-complete-enroll', message: 'Hi! I want to enroll in Complete NEET Biology. Please share fee structure, batch timings, and enrollment process.', campaign: 'neet-complete' })} className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all">
                         Enroll Now - Full Payment
                       </button>
-                      <button className="w-full border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all">
+                      <button onClick={() => trackAndOpenWhatsApp({ source: 'neet-complete-emi', message: 'Hi! I want to enroll in Complete NEET Biology with EMI option. Please share EMI details and enrollment process.', campaign: 'neet-complete' })} className="w-full border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all">
                         EMI Option - ₹8,334/month
                       </button>
                     </div>
@@ -920,10 +921,10 @@ const NEETCompletePage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-yellow-500 text-yellow-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all shadow-lg">
+            <button onClick={() => trackAndOpenWhatsApp({ source: 'neet-complete-enroll', message: 'Hi! I want to enroll in Complete NEET Biology. Please share fee structure, batch timings, and enrollment process.', campaign: 'neet-complete' })} className="bg-yellow-500 text-yellow-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all shadow-lg">
               Enroll Now - Limited Seats
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
+            <button onClick={() => trackAndOpenWhatsApp({ source: 'neet-complete-demo', message: 'Hi! I want to book a FREE demo class for Complete NEET Biology. Please share available timings.', campaign: 'neet-complete' })} className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
               Book Free Demo Class
             </button>
           </div>

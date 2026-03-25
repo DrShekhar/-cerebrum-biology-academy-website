@@ -267,14 +267,14 @@ export default function Class12BiologyPage() {
 
               {/* CTAs */}
               <div className="flex flex-col gap-3 sm:gap-4">
-                <Link
-                  href="/demo-booking"
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'class-12-demo', message: 'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.', campaign: 'class-12' })}
                   className="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] min-h-[52px] w-full group"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   <span>Book Free Demo Class</span>
                   <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </button>
 
                 <div className="flex flex-col xs:flex-row gap-3">
                   <button
@@ -626,13 +626,13 @@ export default function Class12BiologyPage() {
                     Enroll Now
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
-                  <Link
-                    href="/demo-booking"
+                  <button
+                    onClick={() => trackAndOpenWhatsApp({ source: 'class-12-demo', message: 'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.', campaign: 'class-12' })}
                     className="w-full bg-yellow-500 text-slate-900 py-3 rounded-xl font-bold hover:bg-yellow-400 transition-all inline-flex items-center justify-center"
                   >
                     <Play className="w-5 h-5 mr-2" />
                     Book Free Demo First
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -751,14 +751,14 @@ export default function Class12BiologyPage() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/demo-booking"
+            <button
+              onClick={() => trackAndOpenWhatsApp({ source: 'class-12-demo', message: 'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.', campaign: 'class-12' })}
               className="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-all inline-flex items-center justify-center shadow-lg min-h-[52px]"
               aria-label="Book a free demo class"
             >
               <Play className="w-5 h-5 mr-2" aria-hidden="true" />
               Book Free Demo
-            </Link>
+            </button>
             <button
               onClick={async () => {
                 await trackAndOpenWhatsApp({
