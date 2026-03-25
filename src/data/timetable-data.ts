@@ -429,13 +429,14 @@ const ibBioBatches: Batch[] = [
   },
 ]
 
-// NEET / Practice Classes (Online only — for all batches)
+// NEET / Practice Classes (Online only — included for all Class 11, 12, Dropper students)
+// These appear inside CLASS_11, CLASS_12, and DROPPERS tabs directly
 const neetPracticeBatches: Batch[] = [
   {
     id: 'neet-prac-11',
-    classType: 'NEET_PRACTICE_11',
-    batchNumber: 1,
-    days: ['Mon'],
+    classType: 'CLASS_11',
+    batchNumber: 6,
+    days: ['Fri'],
     startTime: '20:30',
     endTime: '21:30',
     offlineLocation: 'GURUGRAM',
@@ -444,9 +445,31 @@ const neetPracticeBatches: Batch[] = [
   },
   {
     id: 'neet-prac-12',
-    classType: 'NEET_PRACTICE_12',
-    batchNumber: 1,
-    days: ['Mon'],
+    classType: 'CLASS_12',
+    batchNumber: 5,
+    days: ['Fri'],
+    startTime: '21:30',
+    endTime: '22:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'neet-prac-drop-11',
+    classType: 'DROPPERS',
+    batchNumber: 6,
+    days: ['Fri'],
+    startTime: '20:30',
+    endTime: '21:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'neet-prac-drop-12',
+    classType: 'DROPPERS',
+    batchNumber: 7,
+    days: ['Fri'],
     startTime: '21:30',
     endTime: '22:30',
     offlineLocation: 'GURUGRAM',

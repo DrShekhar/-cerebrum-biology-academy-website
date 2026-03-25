@@ -565,8 +565,6 @@ export default function TimetablePage() {
     { type: 'USA_NEET_11', icon: Layers, label: 'USA 11th' },
     { type: 'USA_NEET_12', icon: Layers, label: 'USA 12th' },
     { type: 'IB_BIO', icon: BookOpen, label: 'IB Biology' },
-    { type: 'NEET_PRACTICE_11', icon: Zap, label: 'NEET Practice XI' },
-    { type: 'NEET_PRACTICE_12', icon: Zap, label: 'NEET Practice XII' },
   ]
 
   return (
