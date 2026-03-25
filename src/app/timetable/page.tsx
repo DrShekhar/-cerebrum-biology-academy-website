@@ -560,10 +560,10 @@ export default function TimetablePage() {
     { type: 'OLYMPIAD_NSEB', icon: Award, label: 'NSEB Olympiad' },
     { type: 'OLYMPIAD_IBO', icon: Award, label: 'IBO Olympiad' },
     { type: 'CRASH_COURSE', icon: Layers, label: 'Crash Course' },
-    { type: 'USA_NEET_9', icon: Layers, label: 'EST 9th' },
-    { type: 'USA_NEET_10', icon: Layers, label: 'EST 10th' },
-    { type: 'USA_NEET_11', icon: Layers, label: 'EST 11th' },
-    { type: 'USA_NEET_12', icon: Layers, label: 'EST 12th' },
+    { type: 'USA_NEET_9', icon: Layers, label: 'CST 9th' },
+    { type: 'USA_NEET_10', icon: Layers, label: 'CST 10th' },
+    { type: 'USA_NEET_11', icon: Layers, label: 'CST 11th' },
+    { type: 'USA_NEET_12', icon: Layers, label: 'CST 12th' },
     { type: 'IB_BIO', icon: BookOpen, label: 'IB Biology' },
   ]
 
