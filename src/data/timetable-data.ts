@@ -398,25 +398,16 @@ const olympiadBatches: Batch[] = [
 ]
 
 // Crash Course NEET 2026
+// Crash Course NEET 2026 — Single batch, 7 days/week
+// Weekdays: 9:30-10:30 AM | Weekends: 7:00-8:30 AM
 const crashCourseBatches: Batch[] = [
   {
     id: 'crash-b1',
     classType: 'CRASH_COURSE',
     batchNumber: 1,
-    days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+    days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     startTime: '09:30',
     endTime: '10:30',
-    offlineLocation: 'GURUGRAM',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-  {
-    id: 'crash-b2',
-    classType: 'CRASH_COURSE',
-    batchNumber: 2,
-    days: ['Sat', 'Sun'],
-    startTime: '07:00',
-    endTime: '08:30',
     offlineLocation: 'GURUGRAM',
     hasOnline: true,
     status: 'AVAILABLE',
