@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Class 9 Biology Foundation Course | NEET-Aligned | Cerebrum Academy',
   description:
-    'Class 9 Biology foundation course by Dr. Shekhar Singh (AIIMS faculty). NCERT-aligned, small batches (max 15), 95% board success rate. Fee starts ₹45,000. Free demo + lab kit worth ₹5,000. Enroll now!',
+    'Class 9 NEET Biology Foundation course at ₹60,000/year by Dr. Shekhar C Singh (AIIMS faculty). NCERT-aligned + Olympiad prep (NSEB/IBO). Small batches (12-25 students), 95% board success rate. 65% of NEET toppers started in Class 9. EMI ₹5,000/month. Free demo + lab kit worth ₹5,000.',
   keywords: [
     'Class 9 Biology tuition Delhi',
     'Class 9 Biology coaching',
@@ -143,6 +143,57 @@ export default function Class9FoundationLayout({ children }: { children: React.R
                 position: 3,
                 name: 'Class 9 Foundation',
                 item: 'https://cerebrumbiologyacademy.com/courses/class-9-foundation',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is the fee for Class 9 Biology Foundation course?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The NEET Foundation course for Class 9 starts at ₹45,000/year (Pursuit tier). The most popular Ascent tier is ₹60,000/year with 16-25 student batches. Premium Pinnacle tier with personal mentoring is ₹90,000/year. EMI options available starting ₹3,750/month.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is Class 9 too early to start NEET preparation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No. 65% of NEET toppers (AIR under 1000) started preparation in Class 9 or earlier. Starting early gives a 2-year advantage in conceptual clarity. Class 9-10 Biology directly covers 30% of the NEET syllabus. Our foundation course focuses on building understanding, not pressure.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who teaches Class 9 Biology at Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Dr. Shekhar C Singh, AIIMS alumnus with 8+ years of teaching experience and 100+ NEET qualifiers. He personally teaches all foundation batches with interactive, age-appropriate methods including lab sessions and 3D model demonstrations.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the batch schedule for Class 9 NEET Foundation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Class 9 NEET Foundation batch runs Saturday-Sunday 5:00-6:00 PM (Hybrid: Gurugram offline + Online). USA timezone batch available Monday-Wednesday 6:00-7:00 AM IST. Olympiad batches (NSEB/IBO) run separately. All batches start 1st week of April 2026.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Does this course help with school board exams too?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '95% of our Class 9 students score 85+ in school Biology exams. The course follows NCERT Class 9 syllabus with deeper conceptual understanding. School topics feel easy after our classes. We balance board prep with NEET foundation building.',
+                },
               },
             ],
           }),

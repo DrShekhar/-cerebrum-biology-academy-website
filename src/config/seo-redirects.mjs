@@ -1161,6 +1161,9 @@ export const gsc404CleanupRedirects = [
   // --- NEET coaching with India suffix (safe - only neet-coaching-:slug-india pattern) ---
   { source: '/neet-coaching-:slug-india', destination: '/neet-coaching', permanent: true },
 
+  // --- Course slug consolidation ---
+  { source: '/courses/class-9th-foundation', destination: '/courses/class-9-foundation', permanent: true },
+
   // --- Navigation/informational pages redirects ---
   { source: '/teachers', destination: '/about', permanent: true },
   { source: '/schedule', destination: '/timetable', permanent: true },

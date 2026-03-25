@@ -245,17 +245,20 @@ export default function Class9FoundationPage() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                 Class 9 Biology Foundation
               </h1>
+              <div className="bg-yellow-500 text-gray-900 inline-block px-4 py-2 rounded-lg font-bold text-lg sm:text-xl mb-4">
+                NEET Foundation — ₹60,000/year
+              </div>
               <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8">
                 Give your child a 2-year head start for NEET. Fun, interactive Biology classes that
                 build deep understanding — not just memorization. 95% of our students score 85+ in
-                board exams.
+                board exams. Starting at just ₹5,000/month.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/admissions"
                   className="w-full sm:w-auto bg-yellow-500 text-gray-900 px-6 sm:px-8 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors inline-flex items-center justify-center min-h-[48px]"
                 >
-                  Join Class 9 Foundation
+                  Enroll Now — ₹60,000/year
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
@@ -519,32 +522,34 @@ export default function Class9FoundationPage() {
       {/* Pricing & Enrollment */}
       <section className="py-8 sm:py-12 md:py-16 bg-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
             Choose Your Plan
           </h2>
+          <p className="text-gray-600 mb-6 sm:mb-8">Most parents choose the <strong className="text-blue-700">NEET Foundation (₹60,000/year)</strong> — the best balance of quality and value</p>
 
           <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-8 mb-6 sm:mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div>
+                <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold mb-3">MOST POPULAR</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-                  Class 9 Biology Foundation
+                  NEET Foundation — ₹60,000/year
                 </h3>
                 <div className="text-left space-y-2 sm:space-y-3">
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">28 weeks intensive program (3 hrs/week)</span>
+                    <span className="text-sm sm:text-base">28 weeks program (4.5 hrs/week) with AIIMS faculty</span>
                   </div>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">AIIMS faculty — Dr. Shekhar Singh</span>
+                    <span className="text-sm sm:text-base">16-25 students per batch — personal attention</span>
                   </div>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">3 tiers: ₹45,000 / ₹60,000 / ₹90,000</span>
+                    <span className="text-sm sm:text-base">EMI: ₹5,000/month | 2% off on lump sum</span>
                   </div>
                   <div className="flex items-center">
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">EMI available | Merit scholarships up to 30%</span>
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium text-green-700">Also available: Pursuit ₹45K | Pinnacle ₹90K</span>
                   </div>
                 </div>
               </div>
@@ -552,6 +557,8 @@ export default function Class9FoundationPage() {
               <div>
                 <PricingDisplay
                   courseId="class-9-foundation-biology"
+                  showTiers={true}
+                  highlightTier="ascent"
                   showCompetitiveAdvantage={true}
                   onEnrollClick={() => router.push('/admissions')}
                 />
