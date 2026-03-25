@@ -38,10 +38,17 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
   }
 
   const getDefaultTier = () => {
+    if (course.tiers.pursuit) return 'pursuit'
     if (course.tiers.ascent) return 'ascent'
-    if (course.tiers.pinnacle) return 'pinnacle'
-    return 'pursuit'
+    return 'pinnacle'
   }
+
+  const lowestPrice = Math.min(
+    course.tiers.pursuit?.price || Infinity,
+    course.tiers.ascent?.price || Infinity,
+    course.tiers.pinnacle?.price || Infinity
+  )
+  const monthlyEMI = Math.round(lowestPrice / 12)
 
   const defaultTier = getDefaultTier()
   const primaryTier = course.tiers[defaultTier as CourseSeries]
@@ -83,7 +90,15 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
                 {course.name}
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-4 sm:mb-6">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="inline-block bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg font-bold text-lg sm:text-xl">
+                  Starts ₹{lowestPrice.toLocaleString()}/year
+                </span>
+                <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-sm font-medium">
+                  EMI from ₹{monthlyEMI.toLocaleString()}/mo
+                </span>
+              </div>
+              <p className="text-base sm:text-lg text-white/90 mb-4 sm:mb-6">
                 {course.description}
               </p>
             </div>
@@ -184,20 +199,30 @@ Please share the details!`,
               </ul>
             </Card>
 
-            {/* Price Starting From */}
-            <Card className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black p-6 border-0">
-              <div className="text-center">
-                <div className="text-sm font-medium mb-1">Starting from</div>
-                <div className="text-3xl font-bold mb-2">
-                  ₹
-                  {Math.min(
-                    course.tiers.pursuit?.price || 0,
-                    course.tiers.ascent?.price || 0,
-                    course.tiers.pinnacle?.price || 0
-                  ).toLocaleString()}
+            {/* Pricing Tiers */}
+            <Card className="bg-yellow-500 text-gray-900 p-5 sm:p-6 border-0">
+              <div className="text-center mb-4">
+                <div className="text-sm font-medium mb-1">Choose Your Plan</div>
+                <div className="text-3xl font-bold">
+                  ₹{lowestPrice.toLocaleString()}<span className="text-lg font-medium">/year</span>
                 </div>
-                <div className="text-sm">EMI options available • Money-back guarantee</div>
+                <div className="text-sm mt-1">EMI from ₹{monthlyEMI.toLocaleString()}/month</div>
               </div>
+              <div className="space-y-2">
+                <div className="flex justify-between items-center bg-white/40 rounded-lg px-3 py-2">
+                  <span className="font-medium text-sm">Pursuit</span>
+                  <span className="font-bold">₹{course.tiers.pursuit.price.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between items-center bg-white/60 rounded-lg px-3 py-2 ring-2 ring-gray-900/20">
+                  <span className="font-medium text-sm">Ascent <span className="text-xs bg-gray-900 text-yellow-400 px-1.5 py-0.5 rounded ml-1">Popular</span></span>
+                  <span className="font-bold">₹{course.tiers.ascent.price.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between items-center bg-white/40 rounded-lg px-3 py-2">
+                  <span className="font-medium text-sm">Pinnacle</span>
+                  <span className="font-bold">₹{course.tiers.pinnacle.price.toLocaleString()}</span>
+                </div>
+              </div>
+              <div className="text-xs text-center mt-3 font-medium">15-day money-back guarantee • 2% off lump sum</div>
             </Card>
 
             {/* Enrollment Bonus */}
