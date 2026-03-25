@@ -62,6 +62,86 @@ export default function NEETDropperLayout({ children }: { children: React.ReactN
           'Weak Area Improvement Program',
         ]}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'NEET Dropper',
+                item: 'https://cerebrumbiologyacademy.com/courses/neet-dropper',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is the fee for NEET Dropper batch?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Pursuit \u20B970,000. Ascent \u20B990,000. Pinnacle \u20B91,56,000. EMI from \u20B95,833/month. Merit scholarships available.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How much improvement can I expect as a repeater?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Average improvement: 120 marks. Our repeater students go from 400-500 to 600+ range. 92% success rate for droppers.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the Dropper batch schedule?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '7 batches including both NEET Practice classes. 18 hrs/week, 720 total hours. Intensive Mon-Sun schedule options.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is it worth taking a drop year for NEET?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '65% of medical students took 2+ attempts. With structured coaching, drop year gives 80-150 marks improvement. 92% of our droppers qualify.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum different for droppers?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Personal rank improvement strategy, weakness analysis, 80+ mock tests, previous year toppers mentoring, mental wellness support.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

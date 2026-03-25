@@ -64,6 +64,86 @@ export default function Class11Layout({ children }: { children: React.ReactNode 
           'Cell Cycle and Cell Division',
         ]}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Class 11th NEET',
+                item: 'https://cerebrumbiologyacademy.com/courses/class-11',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is the fee for Class 11 NEET Biology?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Pursuit \u20B948,000/year. Ascent \u20B976,000/year. Pinnacle \u20B998,000/year. EMI available from \u20B94,000/month.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How many hours per week for Class 11 NEET?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '12 hours/week with 480 total teaching hours. 5 batch options: Gurugram, South Ext, Rohini + Online.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What syllabus is covered in Class 11 NEET Biology?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Complete NCERT Class 11: Diversity, Classification, Plant & Animal Kingdom, Cell Biology, Biomolecules, Plant Physiology, Human Physiology \u2014 15 modules total.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who teaches Class 11 NEET at Cerebrum?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Dr. Shekhar C Singh, AIIMS alumnus. Student Sadhna Sirin scored 695/720 (100%ile). 98% success rate.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the batch schedule for Class 11?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '5 regular batches + NEET Practice Class (Fri 8:30-9:30 PM). Timings: Mon/Wed evening, Sat/Sun morning/afternoon/evening, Tue/Thu at Rohini.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

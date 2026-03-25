@@ -66,6 +66,86 @@ export default function Class12Layout({ children }: { children: React.ReactNode 
           'Biodiversity and Conservation',
         ]}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Class 12th NEET',
+                item: 'https://cerebrumbiologyacademy.com/courses/class-12',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is the fee for Class 12 NEET Biology?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Pursuit \u20B970,000/year. Ascent \u20B976,000/year. Pinnacle \u20B998,000/year. EMI from \u20B95,833/month.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Does Class 12 course cover both board and NEET?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Dual preparation with strategic time management. 12 modules covering Reproduction, Genetics, Evolution, Biotechnology, Ecology.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How is Class 12 different from Class 11 course?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Class 12 is intensive \u2014 focuses on high-weightage NEET topics (Genetics 20%, Human Physiology 18%). Includes 60+ mock tests and board exam preparation.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who teaches Class 12 NEET at Cerebrum?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Dr. Shekhar C Singh, AIIMS alumnus, 15+ years. Former Academic Head at Narayana Group.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What batch timings for Class 12?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '4 regular batches + NEET Practice XII (Fri 9:30-10:30 PM). Locations: Gurugram, South Ext, Rohini + Online.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

@@ -34,5 +34,89 @@ export const metadata: Metadata = {
 }
 
 export default function CrashCourseLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'NEET Crash Course',
+                item: 'https://cerebrumbiologyacademy.com/courses/neet-crash-course',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is NEET Crash Course duration and schedule?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '7 days/week intensive. Weekdays 9:30-10:30 AM, Weekends 7:00-8:30 AM. Available at South Extension + Online.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who should join NEET Crash Course?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Students who need quick revision before NEET 2026. Covers complete Class 11 + 12 Biology in compressed format.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the fee for NEET Crash Course?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Contact us on WhatsApp for current pricing. EMI options available.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is Crash Course enough to crack NEET?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Best for revision, not first-time learning. Ideal for students who completed syllabus but need structured revision and mock test practice.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Does Crash Course include mock tests?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Daily practice MCQs, weekly full-length mocks, and previous year paper analysis included.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {children}
+    </>
+  )
 }

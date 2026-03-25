@@ -83,6 +83,86 @@ export default function Class10FoundationLayout({ children }: { children: React.
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Class 10 Foundation',
+                item: 'https://cerebrumbiologyacademy.com/courses/class-10-foundation',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is the fee for Class 10 Biology Foundation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Starting \u20B945,000/year (Pursuit). Ascent \u20B960,000/year. Pinnacle \u20B990,000/year. EMI from \u20B93,750/month.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Does Class 10 Biology coaching help with board exams?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '95% of our Class 10 students score 90+ in board Biology. Course follows NCERT with deeper concepts.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who teaches Class 10 Biology at Cerebrum?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Dr. Shekhar C Singh, AIIMS New Delhi alumnus, 15+ years experience, 15,000+ students mentored.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is covered in Class 10 Biology Foundation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '10 modules: Life Processes, Control & Coordination, Reproduction, Heredity & Evolution, Environment, Natural Resources, Board Mastery, Olympiad Prep.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is Olympiad preparation included in Class 10?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. NSEB and IBO preparation included. Dedicated Olympiad module with mock tests and advanced problem-solving.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )
