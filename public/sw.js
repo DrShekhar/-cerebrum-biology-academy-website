@@ -2,7 +2,7 @@
 // Optimized for Indian mobile networks and offline learning
 // Enhanced with counselor CRM offline support
 
-const CACHE_NAME = 'cerebrum-biology-v3'
+const CACHE_NAME = 'cerebrum-biology-v4'
 const OFFLINE_URL = '/offline'
 
 // Critical resources to cache immediately
