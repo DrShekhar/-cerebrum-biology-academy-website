@@ -1163,8 +1163,7 @@ export const gsc404CleanupRedirects = [
 
   // --- Navigation/informational pages redirects ---
   { source: '/teachers', destination: '/about', permanent: true },
-  { source: '/schedule', destination: '/courses', permanent: true },
-  { source: '/timetable', destination: '/courses', permanent: true },
+  { source: '/schedule', destination: '/timetable', permanent: true },
   { source: '/locations', destination: '/neet-coaching', permanent: true },
   { source: '/centres', destination: '/neet-coaching', permanent: true },
   { source: '/branches', destination: '/neet-coaching', permanent: true },
