@@ -20,15 +20,15 @@ export function PaymentOptionsDisplay({
   const getTierColor = (tier: TierLevel) => {
     switch (tier) {
       case 'pinnacle':
-        return 'from-purple-600 to-indigo-600'
+        return 'bg-purple-700'
       case 'ascent':
-        return 'bg-blue-600'
+        return 'bg-blue-700'
       case 'pursuit':
-        return 'bg-green-600'
+        return 'bg-green-700'
       case 'elixir':
-        return 'from-amber-500 to-orange-500'
+        return 'bg-amber-600'
       default:
-        return 'from-indigo-500 to-indigo-600'
+        return 'bg-indigo-700'
     }
   }
 
@@ -211,7 +211,7 @@ export function PaymentOptionsDisplay({
       </div>
 
       {/* EMI Options */}
-      <div className={`bg-gradient-to-r ${getTierColor(tierName)} rounded-2xl p-6 text-white`}>
+      <div className={`${getTierColor(tierName)} rounded-2xl p-6 text-white`}>
         <div className="flex items-center justify-between mb-3">
           <h4 className="text-lg font-bold">EMI Options Available</h4>
           <span className="text-2xl">💳</span>
