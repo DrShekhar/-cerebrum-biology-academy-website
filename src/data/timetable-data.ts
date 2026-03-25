@@ -384,17 +384,6 @@ const olympiadBatches: Batch[] = [
     hasOnline: true,
     status: 'AVAILABLE',
   },
-  {
-    id: 'oly-ibo-b2',
-    classType: 'OLYMPIAD_IBO',
-    batchNumber: 2,
-    days: ['Tue', 'Thu'],
-    startTime: '06:00',
-    endTime: '07:00',
-    offlineLocation: 'GURUGRAM',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
 ]
 
 // Crash Course NEET 2026
