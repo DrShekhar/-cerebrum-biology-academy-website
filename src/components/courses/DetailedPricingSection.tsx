@@ -592,22 +592,20 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
                 <MessageCircle className="h-5 w-5" />
                 Chat on WhatsApp
               </button>
-              <Button
-                size="lg"
-                variant="secondary"
-                className="bg-white text-blue-600 hover:bg-blue-50"
+              <button
+                onClick={() => trackAndOpenWhatsApp({ source: 'course-pricing-enroll-' + course.id, message: 'Hi! I want to enroll in ' + course.name + '. Please share the enrollment process, fee payment options, and next batch start date.', campaign: 'course-enroll' })}
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg"
               >
-                <CreditCard className="h-5 w-5 mr-2" />
+                <CreditCard className="h-5 w-5" />
                 Enroll Now
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
+              </button>
+              <button
+                onClick={() => trackAndOpenWhatsApp({ source: 'course-pricing-counseling-' + course.id, message: 'Hi! I want to book a FREE counseling session for ' + course.name + '. Please share available slots.', campaign: 'course-counseling' })}
+                className="inline-flex items-center justify-center gap-2 border border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-6 rounded-lg"
               >
-                <Clock className="h-5 w-5 mr-2" />
+                <Clock className="h-5 w-5" />
                 Book Free Counseling
-              </Button>
+              </button>
             </div>
             <div className="mt-4 text-xs text-blue-200">
               Limited time offer: Free study materials worth ₹5,000 with every enrollment

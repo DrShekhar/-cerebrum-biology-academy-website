@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { CourseProgram } from '@/types/courseSystem'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
-import { DemoClassModal } from './DemoClassModal'
 import { Phone, Play, MessageCircle, X, Clock, Users } from 'lucide-react'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
@@ -16,8 +15,6 @@ interface FloatingCTABarProps {
 export function FloatingCTABar({ course }: FloatingCTABarProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [isDismissed, setIsDismissed] = useState(false)
-  const [showDemoModal, setShowDemoModal] = useState(false)
-
   useEffect(() => {
     const handleScroll = () => {
       // Show the floating bar when user scrolls past the hero section
@@ -95,7 +92,7 @@ export function FloatingCTABar({ course }: FloatingCTABarProps) {
               size="sm"
               variant="outline"
               className="hidden sm:flex items-center gap-2 border-blue-600 text-blue-600 hover:bg-blue-50"
-              onClick={() => setShowDemoModal(true)}
+              onClick={() => trackAndOpenWhatsApp({ source: 'floating-demo-' + course.id, message: 'Hi! I want to book a FREE demo class for ' + course.name + '.', campaign: 'floating-demo' })}
             >
               <Play className="h-4 w-4" />
               Demo Class
@@ -152,8 +149,6 @@ Please share:
         </div>
       </div>
 
-      {/* Demo Class Modal */}
-      {showDemoModal && <DemoClassModal course={course} onClose={() => setShowDemoModal(false)} />}
     </div>
   )
 }

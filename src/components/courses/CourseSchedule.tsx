@@ -26,6 +26,7 @@ import {
   classTypeLabels,
   type ClassType,
 } from '@/data/timetable-data'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface CourseScheduleProps {
   course: CourseProgram
@@ -161,7 +162,7 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
           <Badge variant="outline" className="text-xs">
             {batch.mode}
           </Badge>
-          <Button size="sm" className="text-sm">
+          <Button size="sm" className="text-sm" onClick={() => trackAndOpenWhatsApp({ source: 'course-schedule-reserve-' + batch.id, message: 'Hi! I want to reserve a seat in ' + batch.name + ' for ' + course.name + '. Timing: ' + batch.timing + ', Days: ' + batch.days.join(', ') + '. Please confirm availability.', campaign: 'course-reserve' })}>
             Reserve Seat
           </Button>
         </div>
@@ -309,15 +310,15 @@ export function CourseSchedule({ course }: CourseScheduleProps) {
         {/* Action Buttons */}
         <div className="text-center space-y-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={() => trackAndOpenWhatsApp({ source: 'course-schedule-counseling', message: 'Hi! I need counseling for ' + course.name + '. Please help me choose the right batch and plan.', campaign: 'course-counseling' })}>
               <CalendarPlus className="h-5 w-5 mr-2" />
               Book Counseling Session
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" onClick={() => trackAndOpenWhatsApp({ source: 'course-schedule-pdf', message: 'Hi! Please share the schedule PDF for ' + course.name + '.', campaign: 'course-schedule' })}>
               <Download className="h-5 w-5 mr-2" />
               Download Schedule PDF
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" onClick={() => trackAndOpenWhatsApp({ source: 'course-custom-schedule', message: 'Hi! I need a custom schedule for ' + course.name + '. My school timings are [please fill]. Can you suggest a suitable batch?', campaign: 'course-custom' })}>
               <Phone className="h-5 w-5 mr-2" />
               Call for Custom Schedule
             </Button>
