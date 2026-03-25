@@ -74,5 +74,73 @@ export const metadata: Metadata = {
 }
 
 export default function FoundationLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Foundation Biology',
+                item: 'https://cerebrumbiologyacademy.com/courses/foundation',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is Foundation Biology course?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '2-year program for Class 9-10 building strong Biology basics for future NEET success. NCERT-aligned with Olympiad prep. Starting ₹45,000/year.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is Class 9-10 too early for NEET?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No. 65% of NEET toppers started in Class 9. Foundation course covers 30% of NEET syllabus. Builds conceptual clarity, not pressure.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who teaches Foundation Biology?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Dr. Shekhar C Singh, AIIMS New Delhi alumnus, 15+ years experience. Student Sadhna Sirin scored 695/720 in NEET.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {children}
+    </>
+  )
 }

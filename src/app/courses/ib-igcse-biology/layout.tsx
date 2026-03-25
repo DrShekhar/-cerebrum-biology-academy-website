@@ -93,10 +93,82 @@ function IBIGCSESchema() {
   )
 }
 
+function BreadcrumbAndFAQSchema() {
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Courses',
+        item: 'https://cerebrumbiologyacademy.com/courses',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'IB/IGCSE Biology',
+        item: 'https://cerebrumbiologyacademy.com/courses/ib-igcse-biology',
+      },
+    ],
+  }
+
+  const faq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Do you offer IB Biology coaching?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. IB Biology HL and SL preparation with Internal Assessment guidance. Dedicated batch: Tue/Thu/Fri 11:40 AM - 12:40 PM.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can IB students also prepare for NEET?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. 60% syllabus overlap. Our course integrates IB curriculum with NEET-relevant topics for dual preparation.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What about IGCSE Biology?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'IGCSE Biology coaching available covering Cambridge curriculum. Contact us for batch details and pricing.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+      />
+    </>
+  )
+}
+
 export default function IBIGCSEBiologyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <IBIGCSESchema />
+      <BreadcrumbAndFAQSchema />
       {children}
     </>
   )

@@ -86,10 +86,82 @@ function CourseSchema() {
   )
 }
 
+function BreadcrumbAndFAQSchema() {
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Courses',
+        item: 'https://cerebrumbiologyacademy.com/courses',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Class 9-10 Biology Foundation',
+        item: 'https://cerebrumbiologyacademy.com/courses/class-9-10-biology-foundation',
+      },
+    ],
+  }
+
+  const faq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What does Class 9-10 Biology Foundation include?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Complete NCERT Class 9 and 10 Biology with Olympiad preparation. 8-10 modules, lab sessions, and 24+ tests per year.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the fee?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Starting ₹45,000/year (Pursuit). Ascent ₹60,000. Pinnacle ₹90,000. EMI available.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How many hours per week?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '6-8 hours per week. Flexible batch timings including weekends. Online + Offline hybrid mode.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+      />
+    </>
+  )
+}
+
 export default function Class910FoundationLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <CourseSchema />
+      <BreadcrumbAndFAQSchema />
       {children}
     </>
   )

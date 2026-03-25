@@ -84,10 +84,82 @@ function CBSEBiologySchema() {
   )
 }
 
+function BreadcrumbAndFAQSchema() {
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Courses',
+        item: 'https://cerebrumbiologyacademy.com/courses',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'CBSE Biology Class 11-12',
+        item: 'https://cerebrumbiologyacademy.com/courses/cbse-biology-class-11-12',
+      },
+    ],
+  }
+
+  const faq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Is this course for CBSE board exams or NEET?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Both. Integrated CBSE board + NEET preparation. Same NCERT syllabus with deeper conceptual approach for competitive exams.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the fee for CBSE Biology coaching?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Starting ₹48,000/year. Multiple tiers available with EMI options.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does it cover both Class 11 and 12?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Complete 2-year program or join for individual years. 27 modules covering entire NCERT Class 11 + 12 Biology.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+      />
+    </>
+  )
+}
+
 export default function CBSEBiologyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <CBSEBiologySchema />
+      <BreadcrumbAndFAQSchema />
       {children}
     </>
   )

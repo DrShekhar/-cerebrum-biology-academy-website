@@ -62,6 +62,70 @@ export default function NEETCompleteLayout({ children }: { children: React.React
           'Personalized Mentoring',
         ]}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Complete NEET Biology',
+                item: 'https://cerebrumbiologyacademy.com/courses/neet-complete',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is Complete NEET Biology course?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Comprehensive program covering entire Class 11 + 12 NEET Biology. 27 modules, 960 hours, 100+ mock tests.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How is it different from yearly courses?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Single enrollment covers 2 years of preparation. Better continuity, consistent faculty, and long-term mentoring at discounted pricing.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the fee for Complete NEET?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Contact us for current pricing. Multi-year discount available. EMI from ₹5,000/month.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

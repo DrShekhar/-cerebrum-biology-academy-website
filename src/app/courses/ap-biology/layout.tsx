@@ -93,6 +93,70 @@ export default function APBiologyLayout({ children }: { children: React.ReactNod
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'AP Biology',
+                item: 'https://cerebrumbiologyacademy.com/courses/ap-biology',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Do you teach AP Biology?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Complete AP Biology preparation aligned with College Board curriculum. Covers all 8 units with lab investigations.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Can AP Biology help with NEET?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '70% overlap between AP Biology and NEET syllabus. Our course bridges both, helping international students prepare for Indian medical entrance.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the schedule for AP Biology?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Flexible online batches for international students. Early morning IST slots available for US timezone compatibility.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

@@ -83,10 +83,82 @@ function ICSEISCSchema() {
   )
 }
 
+function BreadcrumbAndFAQSchema() {
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Courses',
+        item: 'https://cerebrumbiologyacademy.com/courses',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'ICSE/ISC Biology',
+        item: 'https://cerebrumbiologyacademy.com/courses/icse-isc-biology',
+      },
+    ],
+  }
+
+  const faq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Do you offer coaching for ICSE/ISC Biology?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Specialized coaching covering ICSE (Class 10) and ISC (Class 11-12) Biology syllabus with NEET integration.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How is ICSE Biology different from CBSE?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'ICSE has more detailed syllabus with emphasis on practical applications. Our course covers both board and competitive exam preparation.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the fee?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Contact us on WhatsApp for ICSE/ISC specific pricing. EMI options available.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+      />
+    </>
+  )
+}
+
 export default function ICSEISCBiologyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <ICSEISCSchema />
+      <BreadcrumbAndFAQSchema />
       {children}
     </>
   )

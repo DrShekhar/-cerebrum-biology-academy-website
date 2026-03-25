@@ -48,6 +48,70 @@ export default function IntensiveNEETBiologyLayout({ children }: { children: Rea
           'One-on-One Sessions',
         ]}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Intensive NEET Biology',
+                item: 'https://cerebrumbiologyacademy.com/courses/intensive-neet-biology',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is Intensive NEET Biology?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Premium fast-track NEET Biology preparation with small batches (max 12 students), personal mentoring, and guaranteed improvement.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who is this course for?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Serious NEET aspirants targeting top 1% scores. Students who want maximum faculty interaction and personalized strategy.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What results has this program achieved?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: '98% success rate. Student Sadhna Sirin scored 695/720. Multiple AIIMS selections every year.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

@@ -83,6 +83,70 @@ export default function NTSEBiologyLayout({ children }: { children: React.ReactN
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Courses',
+                item: 'https://cerebrumbiologyacademy.com/courses',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'NTSE Biology',
+                item: 'https://cerebrumbiologyacademy.com/courses/ntse-biology',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Do you offer NTSE Biology coaching?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Specialized NTSE preparation covering Biology section with scientific reasoning, data interpretation, and application-based questions.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What class should I be in for NTSE?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'NTSE is for Class 10 students. Our NTSE Biology module prepares students for both Stage 1 (state) and Stage 2 (national).',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is NTSE prep included in Foundation course?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'NTSE Biology preparation is integrated into our Class 10 Foundation course. Standalone NTSE module also available.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )
