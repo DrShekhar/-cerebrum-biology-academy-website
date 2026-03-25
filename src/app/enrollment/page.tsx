@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { Metadata } from 'next'
 import EnrollmentPageClient from './EnrollmentPageClient'
 import { EventSchema, EventListSchema } from '@/components/seo/EventSchema'
@@ -56,7 +57,16 @@ export default function EnrollmentPage() {
         events={upcomingBatches}
         listName="Upcoming NEET Biology Batches at Cerebrum Academy"
       />
-      <EnrollmentPageClient />
+      <Suspense fallback={
+        <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse" />
+            <p className="text-gray-500">Loading enrollment...</p>
+          </div>
+        </div>
+      }>
+        <EnrollmentPageClient />
+      </Suspense>
     </main>
   )
 }
