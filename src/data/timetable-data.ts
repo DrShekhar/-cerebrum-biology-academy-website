@@ -478,31 +478,7 @@ const neetPracticeBatches: Batch[] = [
   },
 ]
 
-// Special: Mentorship & Practice
-const specialBatches: Batch[] = [
-  {
-    id: 'mentor-b1',
-    classType: 'MENTORSHIP',
-    batchNumber: 1,
-    days: ['Fri'],
-    startTime: '06:00',
-    endTime: '07:00',
-    offlineLocation: 'GURUGRAM',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-  {
-    id: 'practice-b1',
-    classType: 'PRACTICE',
-    batchNumber: 1,
-    days: ['Fri'],
-    startTime: '15:00',
-    endTime: '16:00',
-    offlineLocation: 'GURUGRAM',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-]
+const specialBatches: Batch[] = []
 
 export const batches: Batch[] = [
   ...class9Batches,
