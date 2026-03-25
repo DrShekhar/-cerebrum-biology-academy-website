@@ -22,6 +22,8 @@ import {
   type PricingTier,
   type ClassPricing,
 } from '@/data/pricing'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { MessageCircle } from 'lucide-react'
 
 const getCourseDetailUrl = (classLevel: ClassLevel): string => {
   const urlMap: Record<ClassLevel, string> = {
@@ -62,8 +64,8 @@ const breadcrumbSchema = {
 }
 
 export default function PricingPage() {
-  const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>('all')
-  const [courseType, setCourseType] = useState<CourseType>('neet')
+  const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>('class-11')
+  const [courseType, setCourseType] = useState<CourseType>('board-neet')
   const [paymentMode, setPaymentMode] = useState<
     'lumpSum' | 'twoInstallments' | 'threeInstallments'
   >('lumpSum')
@@ -355,41 +357,23 @@ export default function PricingPage() {
             </div>
           )}
 
-          <div className="grid grid-cols-2 gap-2 mb-3">
-            <Link href={getCourseDetailUrl(classData.class)}>
-              <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2.5 rounded-xl transition-all duration-200 hover:shadow-lg text-sm">
-                View Details
-              </button>
-            </Link>
-            <Link href={`/demo-booking?tier=${tier.tier}&class=${classData.class}`}>
-              <button
-                className={`w-full bg-indigo-500 text-white font-bold py-2.5 rounded-xl hover:bg-indigo-600 transition-all duration-200 hover:shadow-xl text-sm`}
-              >
-                Enroll Now
-              </button>
-            </Link>
-          </div>
+          <button
+            onClick={() => trackAndOpenWhatsApp({
+              source: `pricing-${classData.class}-${tier.tier}`,
+              message: `Hi! I'm interested in ${classData.displayName} — ${tier.tier.charAt(0).toUpperCase() + tier.tier.slice(1)} tier (₹${price.toLocaleString()}). Please share enrollment details, batch timings, and payment options.`,
+              campaign: 'pricing-page',
+            })}
+            className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 rounded-xl transition-all duration-200 hover:shadow-xl mb-3 text-sm flex items-center justify-center gap-2"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Chat to Enroll — ₹{price.toLocaleString()}
+          </button>
 
-          <Link href="/demo-booking">
-            <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 rounded-xl transition-all duration-200 hover:shadow-xl mb-3 text-sm">
-              Book Free Demo Class
+          <Link href={getCourseDetailUrl(classData.class)}>
+            <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-xl transition-colors text-sm">
+              View Course Details
             </button>
           </Link>
-
-          <div className="flex items-center justify-center gap-4 text-xs text-gray-500">
-            <div className="flex items-center gap-1">
-              <div className="w-2 h-2 rounded-full bg-gray-400"></div>
-              <span>Online</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <div className="w-2 h-2 rounded-full bg-gray-400"></div>
-              <span>Offline</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <div className="w-2 h-2 rounded-full bg-gray-400"></div>
-              <span>Hybrid</span>
-            </div>
-          </div>
         </div>
       </div>
     )
@@ -461,93 +445,34 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* Elixir Banner Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10 pb-0">
-        <div className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-2 border-amber-200 rounded-3xl p-6 sm:p-8 lg:p-10 mb-6 sm:mb-8">
-          <div className="text-center mb-6 sm:mb-8">
-            <span className="inline-flex items-center bg-amber-100 text-amber-700 px-4 py-1.5 rounded-full text-sm font-bold mb-3">
-              NEW: Budget-Friendly Courses
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-              NEET Elixir & BIO Elixir
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600">
-              Quality NEET coaching starting from just{' '}
-              <span className="font-bold text-amber-700">₹5,999/year</span> |{' '}
-              <span className="font-bold text-amber-700">₹3,000/month</span>
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto mb-6 sm:mb-8">
-            {/* NEET Elixir Card */}
-            <div className="bg-white rounded-2xl shadow-lg border border-amber-200 p-5 sm:p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">NEET Elixir</h3>
-                <span className="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full">
-                  NEET Prep
-                </span>
-              </div>
-              <p className="text-gray-600 text-sm mb-4">NCERT-based NEET preparation for Class 11, 12 & Droppers</p>
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-2xl sm:text-3xl font-bold text-gray-900">₹5,999</span>
-                <span className="text-gray-500">/year</span>
-                <span className="text-sm text-gray-400 ml-1">(₹7,999 for Droppers)</span>
-              </div>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-2.5 py-1 rounded-full">
-                  ₹3,000/mo monthly option
-                </span>
-              </div>
-              <ul className="space-y-2 mb-5">
-                {['400+ students mega batch', 'AIIMS faculty teaching', '3 hours/week live classes', 'Free MCQ practice tool', 'Mock test series included'].map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
-                    <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <Link href="/demo-booking">
-                <button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition-colors">
-                  Book Free Demo
-                </button>
-              </Link>
-            </div>
-
-            {/* BIO Elixir Card */}
-            <div className="bg-white rounded-2xl shadow-lg border border-amber-200 p-5 sm:p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">BIO Elixir</h3>
-                <span className="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">
-                  Board Biology
-                </span>
-              </div>
-              <p className="text-gray-600 text-sm mb-4">NCERT-based Board Biology for Class 11 & 12</p>
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-2xl sm:text-3xl font-bold text-gray-900">₹5,999</span>
-                <span className="text-gray-500">/year</span>
-              </div>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-2.5 py-1 rounded-full">
-                  ₹3,000/mo monthly option
-                </span>
-              </div>
-              <ul className="space-y-2 mb-5">
-                {['400+ students mega batch', 'AIIMS faculty teaching', '3 hours/week live classes', 'Free MCQ practice tool', 'NCERT-based Board prep'].map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
-                    <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <Link href="/demo-booking">
-                <button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition-colors">
-                  Book Free Demo
-                </button>
-              </Link>
-            </div>
-          </div>
+      {/* Urgency Banner */}
+      <div className="bg-red-600 text-white py-3">
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-medium">
+          <span>April 2026 Batch — Enrollment Open</span>
+          <span className="bg-white/20 px-2 sm:px-3 py-1 rounded-full">Pinnacle: 3 seats left</span>
+          <span className="bg-white/20 px-2 sm:px-3 py-1 rounded-full">Ascent: 8 seats left</span>
+          <button
+            onClick={() => trackAndOpenWhatsApp({ source: 'pricing-urgency-banner', message: 'Hi! I want to reserve my seat for the April 2026 batch. Please share available slots and enrollment process.', campaign: 'pricing-urgency' })}
+            className="bg-yellow-500 text-gray-900 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-bold hover:bg-yellow-400 transition-colors"
+          >
+            Reserve Now
+          </button>
         </div>
       </div>
+
+      {/* "Not sure?" helper */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-0">
+        <div className="text-center">
+          <button
+            onClick={() => trackAndOpenWhatsApp({ source: 'pricing-help', message: 'Hi! I\'m on the pricing page but not sure which course/tier is right for me. Can you help me choose?', campaign: 'pricing-help' })}
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Not sure which plan? Chat with us — we&apos;ll help you choose
+          </button>
+        </div>
+      </div>
+
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
         {/* Sticky Filter Section */}
@@ -1431,6 +1356,81 @@ export default function PricingPage() {
           </div>
         </div>
 
+        {/* Competitive Comparison Table */}
+        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-6 sm:p-10 mb-16">
+          <div className="text-center mb-8">
+            <span className="inline-block px-4 py-1.5 bg-green-50 text-green-700 rounded-full text-sm font-medium mb-4">
+              Compare & Decide
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+              Cerebrum vs Alternatives
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base">See why 15,000+ students choose us over Kota coaching and big EdTech</p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="text-left py-3 px-4 font-medium text-gray-500">Feature</th>
+                  <th className="text-center py-3 px-4 font-medium text-gray-500">Kota (Allen/Aakash)</th>
+                  <th className="text-center py-3 px-4 font-medium text-gray-500">Big EdTech</th>
+                  <th className="text-center py-3 px-4 font-bold text-blue-700 bg-blue-50 rounded-t-xl">Cerebrum</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  ['Batch Size', '200-500', 'Recorded/AI', '10-30 students'],
+                  ['Faculty', 'Rotating teachers', 'Pre-recorded', 'Dr. Shekhar (AIIMS)'],
+                  ['Annual Fee', '₹3-5 Lakh + Hostel', '₹1-2 Lakh', '₹45K-98K'],
+                  ['Success Rate', '15-20%', 'Not disclosed', '98%'],
+                  ['Personal Mentoring', 'No', 'No', 'Yes (Pinnacle)'],
+                  ['Location', 'Kota only', 'Online only', 'Delhi NCR + Online'],
+                  ['Money-back Guarantee', 'No', 'No', '15-day guarantee'],
+                  ['Parent Progress Reports', 'No', 'Basic', 'Monthly detailed reports'],
+                  ['Doubt Resolution', 'Queue (2-3 days)', 'AI chatbot', 'WhatsApp (2 hours)'],
+                ].map(([feature, kota, edtech, cerebrum], idx) => (
+                  <tr key={idx} className="hover:bg-gray-50">
+                    <td className="py-3 px-4 font-medium text-gray-900">{feature}</td>
+                    <td className="py-3 px-4 text-center text-gray-500">{kota}</td>
+                    <td className="py-3 px-4 text-center text-gray-500">{edtech}</td>
+                    <td className="py-3 px-4 text-center font-semibold text-blue-700 bg-blue-50">{cerebrum}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Elixir Budget Section — Positioned as alternative for price-sensitive visitors */}
+        <div className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border-2 border-amber-200 rounded-3xl p-6 sm:p-8 lg:p-10 mb-16">
+          <div className="text-center mb-6">
+            <span className="inline-flex items-center bg-amber-100 text-amber-700 px-4 py-1.5 rounded-full text-sm font-bold mb-3">
+              Budget-Friendly Option
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+              Looking for something more affordable?
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              Try <span className="font-bold text-amber-700">NEET Elixir — ₹5,999/year</span> (₹3,000/month) — AIIMS faculty, 400+ student mega batch
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
+            <button
+              onClick={() => trackAndOpenWhatsApp({ source: 'pricing-elixir-bottom', message: 'Hi! I\'m interested in the NEET Elixir budget course (₹5,999/year). Please share details about batch timings and enrollment.', campaign: 'pricing-elixir' })}
+              className="flex-1 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3 px-6 rounded-xl transition-colors flex items-center justify-center gap-2"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Chat About Elixir — ₹5,999/year
+            </button>
+            <button
+              onClick={() => trackAndOpenWhatsApp({ source: 'pricing-elixir-demo', message: 'Hi! I want to book a FREE demo for the Elixir course. Please share available timings.', campaign: 'pricing-elixir' })}
+              className="flex-1 bg-white hover:bg-gray-50 text-gray-900 font-semibold py-3 px-6 rounded-xl border-2 border-amber-300 transition-colors"
+            >
+              Book Free Demo
+            </button>
+          </div>
+        </div>
+
         <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-6 sm:p-10">
           <div className="text-center mb-8 sm:mb-10">
             <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-medium mb-4">
@@ -1504,16 +1504,19 @@ export default function PricingPage() {
                 Join 5,000+ successful students. Limited seats available for the upcoming batch!
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-                <Link href="/demo-booking">
-                  <button className="w-full sm:w-auto px-8 py-4 bg-gray-900 hover:bg-black text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-sm sm:text-base">
-                    Book Free Demo Class
-                  </button>
-                </Link>
-                <Link href="/contact">
-                  <button className="w-full sm:w-auto px-8 py-4 bg-white/90 hover:bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-gray-900/10 text-sm sm:text-base">
-                    Talk to Counselor
-                  </button>
-                </Link>
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'pricing-bottom-enroll', message: 'Hi! I\'m ready to enroll at Cerebrum Biology Academy. Please share available courses and batch timings for my class.', campaign: 'pricing-bottom' })}
+                  className="w-full sm:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-sm sm:text-base flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Chat to Enroll Now
+                </button>
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'pricing-bottom-demo', message: 'Hi! I want to book a FREE demo class before enrolling. Please share available timings.', campaign: 'pricing-bottom' })}
+                  className="w-full sm:w-auto px-8 py-4 bg-white/90 hover:bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-gray-900/10 text-sm sm:text-base"
+                >
+                  Book Free Demo First
+                </button>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 text-sm text-white/80">
                 <span className="flex items-center gap-1.5">
@@ -1539,26 +1542,13 @@ export default function PricingPage() {
 
       {/* Mobile Sticky CTA */}
       <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200/80 px-4 py-3 shadow-[0_-4px_30px_rgba(0,0,0,0.08)] z-50 safe-area-pb">
-        <div className="flex gap-2.5 max-w-lg mx-auto">
-          <Link href="/demo-booking" className="flex-1">
-            <button className="w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-transform">
-              Book Free Demo
-            </button>
-          </Link>
-          <Link href="tel:+918826444334">
-            <button className="bg-green-600 text-white font-bold py-3.5 px-5 rounded-xl text-sm shadow-lg shadow-green-500/25 active:scale-[0.98] transition-transform flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              Call
-            </button>
-          </Link>
-        </div>
+        <button
+          onClick={() => trackAndOpenWhatsApp({ source: 'pricing-sticky-mobile', message: 'Hi! I\'m on the pricing page and want to enroll. Please help me choose the right course and plan.', campaign: 'pricing-sticky' })}
+          className="w-full max-w-lg mx-auto bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold py-3.5 rounded-xl text-sm shadow-lg shadow-green-500/25 active:scale-[0.98] transition-transform flex items-center justify-center gap-2"
+        >
+          <MessageCircle className="w-5 h-5" />
+          Chat to Enroll — Starting ₹45,000/year
+        </button>
       </div>
       </div>
     </>
