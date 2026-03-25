@@ -21,6 +21,7 @@ import {
   Quote,
 } from 'lucide-react'
 import { PricingDisplay } from '@/components/ui/PricingDisplay'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function Class9FoundationPage() {
   const router = useRouter()
@@ -254,19 +255,19 @@ export default function Class9FoundationPage() {
                 board exams. Starting at just ₹5,000/month.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/admissions"
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'class-9-hero-enroll', message: 'Hi! I want to enroll in Class 9 Biology Foundation (NEET Foundation ₹60,000/year). Please share the enrollment process and available batch timings.', campaign: 'class-9-foundation' })}
                   className="w-full sm:w-auto bg-yellow-500 text-gray-900 px-6 sm:px-8 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors inline-flex items-center justify-center min-h-[48px]"
                 >
                   Enroll Now — ₹60,000/year
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  href="/contact"
+                </button>
+                <button
+                  onClick={() => trackAndOpenWhatsApp({ source: 'class-9-hero-demo', message: 'Hi! I want to book a FREE demo class for Class 9 Biology Foundation. Please share available demo timings.', campaign: 'class-9-foundation' })}
                   className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center min-h-[48px]"
                 >
                   Book Free Demo Class
-                </Link>
+                </button>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
@@ -560,7 +561,7 @@ export default function Class9FoundationPage() {
                   showTiers={true}
                   highlightTier="ascent"
                   showCompetitiveAdvantage={true}
-                  onEnrollClick={() => router.push('/admissions')}
+                  onEnrollClick={() => trackAndOpenWhatsApp({ source: 'class-9-pricing-enroll', message: 'Hi! I want to enroll in Class 9 Biology Foundation. Please share fee details and payment options.', campaign: 'class-9-foundation' })}
                 />
               </div>
             </div>
@@ -574,13 +575,13 @@ export default function Class9FoundationPage() {
               Every Pinnacle tier student receives: Biology lab kit + microscope slides + lab manual +
               specimen collection kit. Limited to first 20 enrollments this batch.
             </p>
-            <Link
-              href="/admissions"
+            <button
+              onClick={() => trackAndOpenWhatsApp({ source: 'class-9-claim-spot', message: 'Hi! I want to claim my spot in the Class 9 Biology Foundation Pinnacle tier. Please share enrollment details and lab kit bonus info.', campaign: 'class-9-foundation' })}
               className="inline-flex items-center bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-indigo-700 transition-colors min-h-[44px]"
             >
               Claim Your Spot
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            </button>
           </div>
         </div>
       </section>
