@@ -135,12 +135,12 @@ export const FloatingCTA = memo(function FloatingCTA() {
       </div>
 
       {/* ===== DESKTOP: Compact Circle Buttons ===== */}
-      <div className="hidden lg:flex fixed bottom-8 right-8 z-[70] flex-col items-end gap-3">
+      <div className="hidden lg:flex fixed bottom-8 right-8 z-[70] flex-col items-end gap-4">
         {/* Desktop Call Button — small circle */}
         <a
           href={getPhoneLink()}
           onClick={handleDesktopCallClick}
-          className="group relative flex items-center justify-center w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg text-white transition-all duration-300 hover:scale-110 hover:shadow-xl"
+          className="group relative flex items-center justify-center w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg text-white transition-all duration-300 hover:scale-110 hover:shadow-xl outline-none focus:ring-0"
           aria-label="Call Dr. Shekhar"
         >
           <Phone className="w-6 h-6" />
@@ -152,7 +152,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
         {/* Desktop WhatsApp Button — small circle */}
         <button
           onClick={(e) => handleDesktopWhatsAppClick(e, 'desktop-floating-cta')}
-          className="group relative flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg text-white transition-all duration-300 hover:scale-110 hover:shadow-xl"
+          className="group relative flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg text-white transition-all duration-300 hover:scale-110 hover:shadow-xl outline-none focus:ring-0"
           aria-label={`${CTA_COPY.desktop.primary} on WhatsApp`}
         >
           <MessageCircle className="w-6 h-6" />
