@@ -77,7 +77,7 @@ const centers = [
   },
   {
     name: 'Faridabad',
-    address: 'SCF 124, Huda Market, Sector 17, 121002',
+    address: 'SCF-124-125, Huda Market, Sector 17, 121002',
     metro: 'Bata Chowk Metro (Violet Line)',
     areas: 'NIT, Sector 15-21, Ballabhgarh, Greater Faridabad',
     mapUrl: 'https://maps.google.com/?q=SCF+124+Huda+Market+Sector+17+Faridabad',
@@ -149,7 +149,7 @@ const faqs = [
   },
   {
     q: 'Is there NEET biology coaching near me in Faridabad?',
-    a: 'Yes. Our Faridabad center is at SCF 124, Huda Market, Sector 17. It serves NIT, Sectors 15-21, Ballabhgarh, and Greater Faridabad. Bata Chowk Metro (Violet Line) is the nearest station.',
+    a: 'Yes. Our Faridabad center is at SCF-124-125, Huda Market, Sector 17. It serves NIT, Sectors 15-21, Ballabhgarh, and Greater Faridabad. Bata Chowk Metro (Violet Line) is the nearest station.',
   },
 ]
 

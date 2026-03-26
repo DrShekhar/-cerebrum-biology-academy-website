@@ -184,7 +184,7 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     name: 'Cerebrum Biology Academy - Faridabad',
     slug: 'faridabad',
     address: {
-      streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
+      streetAddress: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
       addressLocality: 'Faridabad',
       addressRegion: 'Haryana',
       postalCode: '121002',

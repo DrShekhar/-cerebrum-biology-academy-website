@@ -209,8 +209,8 @@ const locationData = {
   },
   faridabad: {
     name: 'Cerebrum Biology Academy - Faridabad',
-    address: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17, Faridabad',
-    streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
+    address: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad',
+    streetAddress: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
     addressLocality: 'Faridabad',
     addressRegion: 'Haryana',
     postalCode: '121002',

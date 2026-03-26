@@ -65,7 +65,7 @@ function FaridabadServiceSchema() {
     email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
+      streetAddress: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
       addressLocality: 'Faridabad',
       addressRegion: 'Haryana',
       postalCode: '121002',
@@ -133,7 +133,7 @@ function FaridabadFAQSchema() {
         name: 'How far is Cerebrum Academy from Faridabad?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy has a center at SCF 124, Second Floor, Above Union Bank of India, HUDA Market, Sector 17, Faridabad. The center is just 5 minutes from Bata Chowk Metro Station (Violet Line) and serves students from all sectors of Faridabad.',
+          text: 'Cerebrum Biology Academy has a center at SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad. The center is just 5 minutes from Bata Chowk Metro Station (Violet Line) and serves students from all sectors of Faridabad.',
         },
       },
       {
@@ -200,7 +200,7 @@ function FaridabadEventSchema() {
           name: 'Cerebrum Biology Academy - Faridabad',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
+            streetAddress: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
             addressLocality: 'Faridabad',
             addressRegion: 'Haryana',
             postalCode: '121002',
@@ -235,7 +235,7 @@ function FaridabadEventSchema() {
           name: 'Cerebrum Biology Academy - Faridabad',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
+            streetAddress: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
             addressLocality: 'Faridabad',
             addressRegion: 'Haryana',
             postalCode: '121002',
@@ -269,7 +269,7 @@ function FaridabadEventSchema() {
           name: 'Cerebrum Biology Academy - Faridabad',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'SCF 124, Second Floor, Above Union Bank of India, Huda Market, Sector 17',
+            streetAddress: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
             addressLocality: 'Faridabad',
             addressRegion: 'Haryana',
             postalCode: '121002',
