@@ -192,6 +192,9 @@ export default function PricingPage() {
     setCourseType('board-neet')
   }
 
+  const tierOrder: Record<TierLevel, number> = { pursuit: 0, ascent: 1, pinnacle: 2, elixir: 3 }
+  const sortTiers = (tiers: PricingTier[]) => [...tiers].sort((a, b) => tierOrder[a.tier] - tierOrder[b.tier])
+
   // Best For descriptions for each tier
   const bestForDescriptions: Record<TierLevel, string> = {
     pinnacle: 'Top rankers seeking premium coaching',
@@ -757,7 +760,7 @@ export default function PricingPage() {
                 }
               }
 
-              const allTiers = (classData.tiers[effectiveType] || []).map((tier) => ({
+              const allTiers = sortTiers(classData.tiers[effectiveType] || []).map((tier) => ({
                 ...tier,
                 courseType: effectiveType,
               }))
@@ -795,7 +798,7 @@ export default function PricingPage() {
         ) : (
           hasResults && (
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16 pt-4 sm:pt-6 auto-rows-fr">
-              {currentTiers.map((tier) =>
+              {sortTiers(currentTiers).map((tier) =>
                 currentClassData ? renderTierCard(tier, currentClassData) : null
               )}
             </div>
