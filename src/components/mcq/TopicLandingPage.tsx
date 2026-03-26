@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ChevronRight, BookOpen, Target, Clock, CheckCircle2 } from 'lucide-react'
+import { DiagramExplainer } from '@/components/diagrams/DiagramExplainer'
 
 interface TopicLandingPageProps {
   topic: string
@@ -117,6 +118,11 @@ export function TopicLandingPage({
           <h1 className="text-3xl md:text-4xl font-bold text-ink mb-4">{title}</h1>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">{description}</p>
         </header>
+
+        {/* Interactive Topic Diagram */}
+        <div className="mb-10">
+          <DiagramExplainer topic={topic} defaultExpanded />
+        </div>
 
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">

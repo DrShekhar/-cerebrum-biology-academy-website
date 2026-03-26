@@ -5,6 +5,7 @@ import { Flag } from 'lucide-react'
 import type { MCQQuestion, AnswerResult } from '@/lib/mcq/types'
 import { DiagramQuestion } from './DiagramQuestion'
 import { BookmarkButton } from './BookmarkButton'
+import { DiagramExplainer } from '@/components/diagrams/DiagramExplainer'
 
 interface QuestionCardProps {
   question: MCQQuestion
@@ -406,6 +407,14 @@ export function QuestionCard({
                       {showFullExplanation ? 'Less' : 'More'}
                     </button>
                   )}
+                  <DiagramExplainer
+                    topic={question.topic}
+                    classLevel={
+                      question.ncertClass === 11 ? '11' : question.ncertClass === 12 ? '12' : 'neet'
+                    }
+                    compact
+                    className="mt-2"
+                  />
                 </div>
               )}
 

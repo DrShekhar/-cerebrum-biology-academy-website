@@ -13,6 +13,7 @@ export { StemCrossSection } from './biology/StemCrossSection'
 
 // Interactive diagram renderers
 export { InteractiveDiagramRenderer } from './InteractiveDiagramRenderer'
+export { DiagramExplainer } from './DiagramExplainer'
 export { CycleDiagram } from './renderers/CycleDiagram'
 export { FlowchartDiagram } from './renderers/FlowchartDiagram'
 export { LabeledDiagram } from './renderers/LabeledDiagram'

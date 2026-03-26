@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ChevronDown, ChevronUp, X, CheckCircle, XCircle, BookOpen } from 'lucide-react'
 import type { MCQQuestion } from '@/lib/mcq/types'
+import { DiagramExplainer } from '@/components/diagrams/DiagramExplainer'
 
 export interface WrongAnswer {
   question: MCQQuestion
@@ -223,6 +224,20 @@ export function WrongAnswersReview({ wrongAnswers, onClose }: WrongAnswersReview
                         <p className="text-sm text-blue-800">{item.explanation}</p>
                       </div>
                     )}
+
+                    {/* Interactive Concept Diagram */}
+                    <DiagramExplainer
+                      topic={item.question.topic}
+                      classLevel={
+                        item.question.ncertClass === 11
+                          ? '11'
+                          : item.question.ncertClass === 12
+                            ? '12'
+                            : 'neet'
+                      }
+                      compact
+                      className="mt-1"
+                    />
 
                     {/* Mark as Reviewed Button */}
                     {!isReviewed && (
