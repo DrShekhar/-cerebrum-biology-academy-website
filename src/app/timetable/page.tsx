@@ -531,13 +531,14 @@ export default function TimetablePage() {
     let filtered = allCombinations
 
     // Filter by location if selected
-    if (selectedLocation !== 'ALL') {
+    if (selectedLocation !== 'ALL' && selectedLocation !== 'ONLINE') {
       filtered = filtered.filter(
         (c) =>
           c.class11Batch.offlineLocation === selectedLocation ||
           c.class12Batch.offlineLocation === selectedLocation
       )
     }
+    // For ONLINE, show all combinations since all batches have online option
 
     // Filter by combination type
     if (combinationFilter === 'different_days') {
