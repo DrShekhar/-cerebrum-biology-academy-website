@@ -550,13 +550,12 @@ export default function TimetablePage() {
   }, [allCombinations, selectedLocation, combinationFilter])
 
   const tabConfig: { type: ClassType; icon: React.ElementType; label: string }[] = [
-    { type: 'CLASS_9', icon: BookOpen, label: 'Class 9th' },
-    { type: 'CLASS_10', icon: BookOpen, label: 'Class 10th' },
     { type: 'CLASS_11', icon: BookOpen, label: 'Class 11th' },
     { type: 'CLASS_12', icon: GraduationCap, label: 'Class 12th' },
     { type: 'DROPPERS', icon: Users, label: 'Droppers' },
     { type: 'PINNACLE_ZA', icon: Zap, label: 'Pinnacle ZA' },
-    { type: 'PINNACLE_NEET_10', icon: Zap, label: 'Pinnacle 10th' },
+    { type: 'CLASS_9', icon: BookOpen, label: 'Class 9th' },
+    { type: 'PINNACLE_NEET_10', icon: Zap, label: 'Class 10th' },
     { type: 'OLYMPIAD_NSEB', icon: Award, label: 'NSEB Olympiad' },
     { type: 'OLYMPIAD_IBO', icon: Award, label: 'IBO Olympiad' },
     { type: 'CRASH_COURSE', icon: Layers, label: 'Crash Course' },

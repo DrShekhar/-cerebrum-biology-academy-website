@@ -574,8 +574,8 @@ function doBatchesConflict(batch1: Batch, batch2: Batch): boolean {
 
 // Generate all valid Class 11th + Class 12th combinations for Pinnacle ZA
 export function generateBatchCombinations(): BatchCombination[] {
-  const class11 = batches.filter((b) => b.classType === 'CLASS_11')
-  const class12 = batches.filter((b) => b.classType === 'CLASS_12')
+  const class11 = batches.filter((b) => b.classType === 'CLASS_11' && !b.id.startsWith('neet-prac'))
+  const class12 = batches.filter((b) => b.classType === 'CLASS_12' && !b.id.startsWith('neet-prac'))
   const combinations: BatchCombination[] = []
 
   for (const b11 of class11) {
