@@ -1,18 +1,11 @@
 'use client'
 
+import { memo, useId } from 'react'
 import { DiagramRendererProps } from '@/types/interactive-diagram'
 import { biologyColors } from '../hooks/useDiagram'
+import { NODE_STYLE_COLORS, DIMMED_OPACITY, EDGE_COLOR_DEFAULT } from './constants'
 
-const NODE_STYLE_COLORS: Record<string, string> = {
-  primary: '#4169E1',
-  secondary: '#6B7280',
-  highlight: '#FF4500',
-  faded: '#D1D5DB',
-  danger: '#DC2626',
-  success: '#16A34A',
-}
-
-export function LabeledDiagram({
+function LabeledDiagramInner({
   diagram,
   activeNode,
   highlightedNodes,
@@ -21,10 +14,14 @@ export function LabeledDiagram({
   width = 600,
   height = 500,
 }: DiagramRendererProps) {
+  const uid = useId().replace(/:/g, '')
+
+  if (diagram.nodes.length === 0) return null
+
   const isHighlighted = (id: string) => highlightedNodes?.includes(id) ?? false
 
-  const scaleX = (x: number) => x * width
-  const scaleY = (y: number) => y * height
+  const scaleX = (x: number) => Math.max(30, Math.min(width - 30, x * width))
+  const scaleY = (y: number) => Math.max(20, Math.min(height - 20, y * height))
 
   const labelSide = (x: number) => (x > 0.5 ? 'right' : 'left')
   const labelX = (x: number) => (x > 0.5 ? width - 20 : 20)
@@ -36,15 +33,22 @@ export function LabeledDiagram({
       viewBox={`0 0 ${width} ${height}`}
       className="mx-auto"
       style={{ maxWidth: width }}
+      role="img"
+      aria-label={diagram.title}
     >
+      <title>{diagram.title}</title>
       <defs>
-        <filter id="labeled-shadow">
-          <feDropShadow dx="0" dy="1" stdDeviation="2" floodOpacity="0.15" />
-        </filter>
-        <filter id="labeled-glow">
+        <filter id={`${uid}-glow`}>
           <feGaussianBlur stdDeviation="4" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id={`${uid}-text-bg`}>
+          <feFlood floodColor="white" floodOpacity="0.85" result="bg" />
+          <feMerge>
+            <feMergeNode in="bg" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
@@ -85,11 +89,20 @@ export function LabeledDiagram({
         return (
           <g
             key={node.id}
+            role="button"
+            tabIndex={0}
+            aria-label={`${node.label}: ${node.description}`}
             onMouseEnter={() => onNodeHover(node.id)}
             onMouseLeave={() => onNodeHover(null)}
             onClick={() => onNodeClick?.(node.id)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                onNodeClick?.(node.id)
+              }
+            }}
             style={{ cursor: 'pointer' }}
-            opacity={dimmed ? 0.3 : 1}
+            opacity={dimmed ? DIMMED_OPACITY : 1}
           >
             <circle
               cx={x}
@@ -98,7 +111,7 @@ export function LabeledDiagram({
               fill={`${nodeColor}33`}
               stroke={active ? biologyColors.highlight : highlighted ? nodeColor : `${nodeColor}99`}
               strokeWidth={active || highlighted ? 2.5 : 1.5}
-              filter={active || highlighted ? 'url(#labeled-glow)' : undefined}
+              filter={active || highlighted ? `url(#${uid}-glow)` : undefined}
             />
             <circle cx={x} cy={y} r={4} fill={nodeColor} />
 
@@ -107,7 +120,7 @@ export function LabeledDiagram({
               y1={y}
               x2={lx + (side === 'right' ? -5 : 5)}
               y2={y}
-              stroke={active ? biologyColors.highlight : '#9CA3AF'}
+              stroke={active ? biologyColors.highlight : EDGE_COLOR_DEFAULT}
               strokeWidth={active ? 1.5 : 1}
               strokeDasharray="3,2"
             />
@@ -127,7 +140,7 @@ export function LabeledDiagram({
               fontWeight={active || highlighted ? 700 : 500}
               fill={active ? biologyColors.highlight : biologyColors.labelText}
               fontFamily="system-ui, -apple-system, sans-serif"
-              style={{ textShadow: '0 0 3px white, 0 0 3px white' }}
+              filter={`url(#${uid}-text-bg)`}
             >
               {node.label}
             </text>
@@ -152,3 +165,5 @@ export function LabeledDiagram({
     </svg>
   )
 }
+
+export const LabeledDiagram = memo(LabeledDiagramInner)

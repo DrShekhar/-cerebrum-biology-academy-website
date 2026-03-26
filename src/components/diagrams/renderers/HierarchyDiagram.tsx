@@ -1,22 +1,15 @@
 'use client'
 
+import { memo, useId } from 'react'
 import { DiagramRendererProps } from '@/types/interactive-diagram'
 import { biologyColors } from '../hooks/useDiagram'
-
-const NODE_STYLE_COLORS: Record<string, string> = {
-  primary: '#4169E1',
-  secondary: '#6B7280',
-  highlight: '#FF4500',
-  faded: '#D1D5DB',
-  danger: '#DC2626',
-  success: '#16A34A',
-}
+import { NODE_STYLE_COLORS, DIMMED_OPACITY, EDGE_DIMMED_OPACITY } from './constants'
 
 const BOX_WIDTH = 120
 const BOX_HEIGHT = 36
 const BOX_RX = 6
 
-export function HierarchyDiagram({
+function HierarchyDiagramInner({
   diagram,
   activeNode,
   highlightedNodes,
@@ -26,10 +19,22 @@ export function HierarchyDiagram({
   width = 700,
   height = 500,
 }: DiagramRendererProps) {
+  const uid = useId().replace(/:/g, '')
+
+  if (diagram.nodes.length === 0) return null
+
   const isHighlighted = (id: string) => highlightedNodes?.includes(id) ?? false
 
-  const scaleX = (x: number) => x * (width - BOX_WIDTH) + BOX_WIDTH / 2
-  const scaleY = (y: number) => y * (height - BOX_HEIGHT - 20) + BOX_HEIGHT / 2 + 10
+  const scaleX = (x: number) =>
+    Math.max(
+      BOX_WIDTH / 2,
+      Math.min(width - BOX_WIDTH / 2, x * (width - BOX_WIDTH) + BOX_WIDTH / 2)
+    )
+  const scaleY = (y: number) =>
+    Math.max(
+      BOX_HEIGHT / 2 + 10,
+      Math.min(height - BOX_HEIGHT / 2 - 10, y * (height - BOX_HEIGHT - 20) + BOX_HEIGHT / 2 + 10)
+    )
 
   return (
     <svg
@@ -38,12 +43,15 @@ export function HierarchyDiagram({
       viewBox={`0 0 ${width} ${height}`}
       className="mx-auto"
       style={{ maxWidth: width }}
+      role="img"
+      aria-label={diagram.title}
     >
+      <title>{diagram.title}</title>
       <defs>
-        <filter id="hier-shadow">
+        <filter id={`${uid}-shadow`}>
           <feDropShadow dx="0" dy="1" stdDeviation="2" floodOpacity="0.1" />
         </filter>
-        <filter id="hier-glow">
+        <filter id={`${uid}-glow`}>
           <feGaussianBlur stdDeviation="3" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
@@ -75,7 +83,7 @@ export function HierarchyDiagram({
             fill="none"
             stroke={edgeActive ? biologyColors.highlight : edge.color || '#CBD5E1'}
             strokeWidth={edgeActive ? 2 : 1.5}
-            opacity={highlightedNodes && !edgeActive ? 0.2 : 1}
+            opacity={highlightedNodes && !edgeActive ? EDGE_DIMMED_OPACITY : 1}
           />
         )
       })}
@@ -93,12 +101,21 @@ export function HierarchyDiagram({
         return (
           <g
             key={node.id}
+            role="button"
+            tabIndex={0}
+            aria-label={`${node.label}: ${node.description}`}
             onMouseEnter={() => onNodeHover(node.id)}
             onMouseLeave={() => onNodeHover(null)}
             onClick={() => onNodeClick?.(node.id)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                onNodeClick?.(node.id)
+              }
+            }}
             style={{ cursor: 'pointer' }}
-            filter={active || highlighted ? 'url(#hier-glow)' : 'url(#hier-shadow)'}
-            opacity={dimmed ? 0.3 : 1}
+            filter={active || highlighted ? `url(#${uid}-glow)` : `url(#${uid}-shadow)`}
+            opacity={dimmed ? DIMMED_OPACITY : 1}
           >
             <rect
               x={x - boxW / 2}
@@ -143,3 +160,5 @@ export function HierarchyDiagram({
     </svg>
   )
 }
+
+export const HierarchyDiagram = memo(HierarchyDiagramInner)

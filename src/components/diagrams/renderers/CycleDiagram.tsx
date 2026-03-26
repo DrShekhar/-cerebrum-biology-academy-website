@@ -1,18 +1,16 @@
 'use client'
 
+import { memo, useMemo, useId } from 'react'
 import { DiagramRendererProps } from '@/types/interactive-diagram'
 import { biologyColors } from '../hooks/useDiagram'
+import {
+  NODE_STYLE_COLORS,
+  DIMMED_OPACITY,
+  EDGE_DIMMED_OPACITY,
+  EDGE_COLOR_DEFAULT,
+} from './constants'
 
-const NODE_STYLE_COLORS: Record<string, string> = {
-  primary: '#4169E1',
-  secondary: '#6B7280',
-  highlight: '#FF4500',
-  faded: '#D1D5DB',
-  danger: '#DC2626',
-  success: '#16A34A',
-}
-
-export function CycleDiagram({
+function CycleDiagramInner({
   diagram,
   activeNode,
   highlightedNodes,
@@ -22,31 +20,38 @@ export function CycleDiagram({
   width = 600,
   height = 500,
 }: DiagramRendererProps) {
+  const uid = useId().replace(/:/g, '')
+
+  const nodeCount = diagram.nodes.length
+  if (nodeCount === 0) return null
+
   const cx = width / 2
   const cy = height / 2
   const radius = Math.min(width, height) * 0.34
-  const nodeCount = diagram.nodes.length
   const nodeRadius = Math.max(28, Math.min(44, 180 / nodeCount))
 
-  const getNodePosition = (index: number) => {
-    const angle = (index / nodeCount) * Math.PI * 2 - Math.PI / 2
-    return {
-      x: cx + Math.cos(angle) * radius,
-      y: cy + Math.sin(angle) * radius,
-    }
-  }
+  const nodePositions = useMemo(() => {
+    return diagram.nodes.map((_, i) => {
+      const angle = (i / nodeCount) * Math.PI * 2 - Math.PI / 2
+      return {
+        x: cx + Math.cos(angle) * radius,
+        y: cy + Math.sin(angle) * radius,
+      }
+    })
+  }, [nodeCount, cx, cy, radius, diagram.nodes])
 
   const isHighlighted = (id: string) => highlightedNodes?.includes(id) ?? false
   const isEdgeHighlighted = (from: string, to: string) =>
     highlightedEdges?.includes(`${from}->${to}`) ?? false
 
   const getArrowPath = (fromIdx: number, toIdx: number) => {
-    const from = getNodePosition(fromIdx)
-    const to = getNodePosition(toIdx)
+    const from = nodePositions[fromIdx]
+    const to = nodePositions[toIdx]
 
     const dx = to.x - from.x
     const dy = to.y - from.y
     const dist = Math.sqrt(dx * dx + dy * dy)
+    if (dist === 0) return null
     const nx = dx / dist
     const ny = dy / dist
 
@@ -62,9 +67,6 @@ export function CycleDiagram({
 
     return {
       path: `M ${startX} ${startY} Q ${midX + perpX} ${midY + perpY} ${endX} ${endY}`,
-      endX,
-      endY,
-      angle: Math.atan2(endY - (midY + perpY), endX - (midX + perpX)),
     }
   }
 
@@ -75,13 +77,23 @@ export function CycleDiagram({
       viewBox={`0 0 ${width} ${height}`}
       className="mx-auto"
       style={{ maxWidth: width }}
+      role="img"
+      aria-label={diagram.title}
     >
+      <title>{diagram.title}</title>
       <defs>
-        <marker id="cycle-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <marker
+          id={`${uid}-arrow`}
+          markerWidth="8"
+          markerHeight="6"
+          refX="7"
+          refY="3"
+          orient="auto"
+        >
           <path d="M 0 0 L 8 3 L 0 6 Z" fill={biologyColors.leaderLine} />
         </marker>
         <marker
-          id="cycle-arrow-active"
+          id={`${uid}-arrow-active`}
           markerWidth="8"
           markerHeight="6"
           refX="7"
@@ -90,15 +102,22 @@ export function CycleDiagram({
         >
           <path d="M 0 0 L 8 3 L 0 6 Z" fill={biologyColors.highlight} />
         </marker>
-        <filter id="cycle-glow">
+        <filter id={`${uid}-glow`}>
           <feGaussianBlur stdDeviation="3" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
-        <filter id="cycle-shadow">
+        <filter id={`${uid}-shadow`}>
           <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.15" />
+        </filter>
+        <filter id={`${uid}-text-bg`}>
+          <feFlood floodColor="white" floodOpacity="0.85" result="bg" />
+          <feMerge>
+            <feMergeNode in="bg" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
         </filter>
       </defs>
 
@@ -108,6 +127,8 @@ export function CycleDiagram({
         if (fromIdx === -1 || toIdx === -1) return null
 
         const arrow = getArrowPath(fromIdx, toIdx)
+        if (!arrow) return null
+
         const edgeActive =
           isEdgeHighlighted(edge.from, edge.to) ||
           isHighlighted(edge.from) ||
@@ -118,20 +139,20 @@ export function CycleDiagram({
             <path
               d={arrow.path}
               fill="none"
-              stroke={edgeActive ? biologyColors.highlight : edge.color || '#9CA3AF'}
+              stroke={edgeActive ? biologyColors.highlight : edge.color || EDGE_COLOR_DEFAULT}
               strokeWidth={edgeActive ? 2.5 : 1.5}
-              markerEnd={edgeActive ? 'url(#cycle-arrow-active)' : 'url(#cycle-arrow)'}
-              opacity={highlightedNodes && !edgeActive ? 0.3 : 1}
+              markerEnd={edgeActive ? `url(#${uid}-arrow-active)` : `url(#${uid}-arrow)`}
+              opacity={highlightedNodes && !edgeActive ? EDGE_DIMMED_OPACITY : 1}
             />
             {edge.label && (
               <text
-                x={(getNodePosition(fromIdx).x + getNodePosition(toIdx).x) / 2}
-                y={(getNodePosition(fromIdx).y + getNodePosition(toIdx).y) / 2 - 8}
+                x={(nodePositions[fromIdx].x + nodePositions[toIdx].x) / 2}
+                y={(nodePositions[fromIdx].y + nodePositions[toIdx].y) / 2 - 8}
                 textAnchor="middle"
                 fontSize={9}
                 fill={edgeActive ? biologyColors.highlight : '#6B7280'}
                 fontFamily="system-ui, -apple-system, sans-serif"
-                style={{ textShadow: '0 0 3px white, 0 0 3px white' }}
+                filter={`url(#${uid}-text-bg)`}
               >
                 {edge.label}
               </text>
@@ -144,6 +165,8 @@ export function CycleDiagram({
         diagram.nodes.map((_, i) => {
           const nextIdx = (i + 1) % nodeCount
           const arrow = getArrowPath(i, nextIdx)
+          if (!arrow) return null
+
           const nodeActive = isHighlighted(diagram.nodes[i].id)
           const nextActive = isHighlighted(diagram.nodes[nextIdx].id)
           const edgeActive = nodeActive || nextActive
@@ -153,16 +176,16 @@ export function CycleDiagram({
               key={`auto-edge-${i}`}
               d={arrow.path}
               fill="none"
-              stroke={edgeActive ? biologyColors.highlight : '#9CA3AF'}
+              stroke={edgeActive ? biologyColors.highlight : EDGE_COLOR_DEFAULT}
               strokeWidth={edgeActive ? 2.5 : 1.5}
-              markerEnd={edgeActive ? 'url(#cycle-arrow-active)' : 'url(#cycle-arrow)'}
-              opacity={highlightedNodes && !edgeActive ? 0.3 : 1}
+              markerEnd={edgeActive ? `url(#${uid}-arrow-active)` : `url(#${uid}-arrow)`}
+              opacity={highlightedNodes && !edgeActive ? EDGE_DIMMED_OPACITY : 1}
             />
           )
         })}
 
       {diagram.nodes.map((node, i) => {
-        const pos = getNodePosition(i)
+        const pos = nodePositions[i]
         const active = activeNode === node.id
         const highlighted = isHighlighted(node.id)
         const dimmed = highlightedNodes && !highlighted
@@ -172,12 +195,21 @@ export function CycleDiagram({
         return (
           <g
             key={node.id}
+            role="button"
+            tabIndex={0}
+            aria-label={`${node.label}: ${node.description}`}
             onMouseEnter={() => onNodeHover(node.id)}
             onMouseLeave={() => onNodeHover(null)}
             onClick={() => onNodeClick?.(node.id)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                onNodeClick?.(node.id)
+              }
+            }}
             style={{ cursor: 'pointer' }}
-            filter={active || highlighted ? 'url(#cycle-glow)' : 'url(#cycle-shadow)'}
-            opacity={dimmed ? 0.35 : 1}
+            filter={active || highlighted ? `url(#${uid}-glow)` : `url(#${uid}-shadow)`}
+            opacity={dimmed ? DIMMED_OPACITY : 1}
           >
             <circle
               cx={pos.x}
@@ -200,10 +232,17 @@ export function CycleDiagram({
               {node.label.length > 14 ? (
                 <>
                   <tspan x={pos.x} dy="-0.5em">
-                    {node.label.slice(0, Math.ceil(node.label.length / 2))}
+                    {node.label.slice(
+                      0,
+                      node.label.lastIndexOf(' ', Math.ceil(node.label.length / 2)) ||
+                        Math.ceil(node.label.length / 2)
+                    )}
                   </tspan>
                   <tspan x={pos.x} dy="1.1em">
-                    {node.label.slice(Math.ceil(node.label.length / 2))}
+                    {node.label.slice(
+                      node.label.lastIndexOf(' ', Math.ceil(node.label.length / 2)) + 1 ||
+                        Math.ceil(node.label.length / 2)
+                    )}
                   </tspan>
                 </>
               ) : (
@@ -231,3 +270,5 @@ export function CycleDiagram({
     </svg>
   )
 }
+
+export const CycleDiagram = memo(CycleDiagramInner)

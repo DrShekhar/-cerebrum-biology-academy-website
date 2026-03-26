@@ -1,22 +1,20 @@
 'use client'
 
+import { memo, useId } from 'react'
 import { DiagramRendererProps } from '@/types/interactive-diagram'
 import { biologyColors } from '../hooks/useDiagram'
-
-const NODE_STYLE_COLORS: Record<string, string> = {
-  primary: '#4169E1',
-  secondary: '#6B7280',
-  highlight: '#FF4500',
-  faded: '#D1D5DB',
-  danger: '#DC2626',
-  success: '#16A34A',
-}
+import {
+  NODE_STYLE_COLORS,
+  DIMMED_OPACITY,
+  EDGE_DIMMED_OPACITY,
+  EDGE_COLOR_DEFAULT,
+} from './constants'
 
 const NODE_WIDTH = 150
 const NODE_HEIGHT = 48
 const NODE_RX = 10
 
-export function FlowchartDiagram({
+function FlowchartDiagramInner({
   diagram,
   activeNode,
   highlightedNodes,
@@ -26,12 +24,27 @@ export function FlowchartDiagram({
   width = 600,
   height = 500,
 }: DiagramRendererProps) {
+  const uid = useId().replace(/:/g, '')
+
+  if (diagram.nodes.length === 0) return null
+
   const isHighlighted = (id: string) => highlightedNodes?.includes(id) ?? false
   const isEdgeHighlighted = (from: string, to: string) =>
     highlightedEdges?.includes(`${from}->${to}`) ?? false
 
-  const scaleX = (x: number) => x * (width - NODE_WIDTH) + NODE_WIDTH / 2
-  const scaleY = (y: number) => y * (height - NODE_HEIGHT - 20) + NODE_HEIGHT / 2 + 10
+  const scaleX = (x: number) =>
+    Math.max(
+      NODE_WIDTH / 2,
+      Math.min(width - NODE_WIDTH / 2, x * (width - NODE_WIDTH) + NODE_WIDTH / 2)
+    )
+  const scaleY = (y: number) =>
+    Math.max(
+      NODE_HEIGHT / 2 + 10,
+      Math.min(
+        height - NODE_HEIGHT / 2 - 10,
+        y * (height - NODE_HEIGHT - 20) + NODE_HEIGHT / 2 + 10
+      )
+    )
 
   const getEdgePath = (fromNode: (typeof diagram.nodes)[0], toNode: (typeof diagram.nodes)[0]) => {
     const fx = scaleX(fromNode.position.x)
@@ -62,13 +75,23 @@ export function FlowchartDiagram({
       viewBox={`0 0 ${width} ${height}`}
       className="mx-auto"
       style={{ maxWidth: width }}
+      role="img"
+      aria-label={diagram.title}
     >
+      <title>{diagram.title}</title>
       <defs>
-        <marker id="flow-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <marker
+          id={`${uid}-arrow`}
+          markerWidth="8"
+          markerHeight="6"
+          refX="7"
+          refY="3"
+          orient="auto"
+        >
           <path d="M 0 0 L 8 3 L 0 6 Z" fill={biologyColors.leaderLine} />
         </marker>
         <marker
-          id="flow-arrow-active"
+          id={`${uid}-arrow-active`}
           markerWidth="8"
           markerHeight="6"
           refX="7"
@@ -77,16 +100,30 @@ export function FlowchartDiagram({
         >
           <path d="M 0 0 L 8 3 L 0 6 Z" fill={biologyColors.highlight} />
         </marker>
-        <marker id="flow-inhibit" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <marker
+          id={`${uid}-inhibit`}
+          markerWidth="8"
+          markerHeight="8"
+          refX="4"
+          refY="4"
+          orient="auto"
+        >
           <line x1="0" y1="0" x2="0" y2="8" stroke={biologyColors.leaderLine} strokeWidth="2" />
         </marker>
-        <filter id="flow-shadow">
+        <filter id={`${uid}-shadow`}>
           <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.12" />
         </filter>
-        <filter id="flow-glow">
+        <filter id={`${uid}-glow`}>
           <feGaussianBlur stdDeviation="3" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <filter id={`${uid}-text-bg`}>
+          <feFlood floodColor="white" floodOpacity="0.85" result="bg" />
+          <feMerge>
+            <feMergeNode in="bg" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
@@ -104,21 +141,21 @@ export function FlowchartDiagram({
         const path = getEdgePath(fromNode, toNode)
         const markerEnd =
           edge.type === 'inhibit'
-            ? 'url(#flow-inhibit)'
+            ? `url(#${uid}-inhibit)`
             : edgeActive
-              ? 'url(#flow-arrow-active)'
-              : 'url(#flow-arrow)'
+              ? `url(#${uid}-arrow-active)`
+              : `url(#${uid}-arrow)`
 
         return (
           <g key={`edge-${i}`}>
             <path
               d={path}
               fill="none"
-              stroke={edgeActive ? biologyColors.highlight : edge.color || '#9CA3AF'}
+              stroke={edgeActive ? biologyColors.highlight : edge.color || EDGE_COLOR_DEFAULT}
               strokeWidth={edgeActive ? 2.5 : 1.5}
               strokeDasharray={edge.type === 'dashed' ? '6,4' : 'none'}
               markerEnd={markerEnd}
-              opacity={highlightedNodes && !edgeActive ? 0.25 : 1}
+              opacity={highlightedNodes && !edgeActive ? EDGE_DIMMED_OPACITY : 1}
             />
             {edge.label && (
               <text
@@ -129,7 +166,7 @@ export function FlowchartDiagram({
                 fill={edgeActive ? biologyColors.highlight : '#6B7280'}
                 fontFamily="system-ui, -apple-system, sans-serif"
                 fontWeight={500}
-                style={{ textShadow: '0 0 4px white, 0 0 4px white' }}
+                filter={`url(#${uid}-text-bg)`}
               >
                 {edge.label}
               </text>
@@ -150,12 +187,21 @@ export function FlowchartDiagram({
         return (
           <g
             key={node.id}
+            role="button"
+            tabIndex={0}
+            aria-label={`${node.label}: ${node.description}`}
             onMouseEnter={() => onNodeHover(node.id)}
             onMouseLeave={() => onNodeHover(null)}
             onClick={() => onNodeClick?.(node.id)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                onNodeClick?.(node.id)
+              }
+            }}
             style={{ cursor: 'pointer' }}
-            filter={active || highlighted ? 'url(#flow-glow)' : 'url(#flow-shadow)'}
-            opacity={dimmed ? 0.3 : 1}
+            filter={active || highlighted ? `url(#${uid}-glow)` : `url(#${uid}-shadow)`}
+            opacity={dimmed ? DIMMED_OPACITY : 1}
           >
             <rect
               x={x - NODE_WIDTH / 2}
@@ -180,10 +226,10 @@ export function FlowchartDiagram({
               {node.label.length > 20 ? (
                 <>
                   <tspan x={x} dy="-0.5em">
-                    {node.label.slice(0, Math.ceil(node.label.length / 2))}
+                    {node.label.slice(0, node.label.lastIndexOf(' ', 20) || 20)}
                   </tspan>
                   <tspan x={x} dy="1.1em">
-                    {node.label.slice(Math.ceil(node.label.length / 2))}
+                    {node.label.slice((node.label.lastIndexOf(' ', 20) || 20) + 1)}
                   </tspan>
                 </>
               ) : (
@@ -211,3 +257,5 @@ export function FlowchartDiagram({
     </svg>
   )
 }
+
+export const FlowchartDiagram = memo(FlowchartDiagramInner)

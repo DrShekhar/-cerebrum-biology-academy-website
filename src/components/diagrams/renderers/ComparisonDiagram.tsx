@@ -1,17 +1,9 @@
 'use client'
 
-import { useState } from 'react'
-import { ComparisonDiagramData, DiagramStep } from '@/types/interactive-diagram'
+import { memo, useState, useId } from 'react'
+import { ComparisonDiagramData } from '@/types/interactive-diagram'
 import { biologyColors } from '../hooks/useDiagram'
-
-const NODE_STYLE_COLORS: Record<string, string> = {
-  primary: '#4169E1',
-  secondary: '#6B7280',
-  highlight: '#FF4500',
-  faded: '#D1D5DB',
-  danger: '#DC2626',
-  success: '#16A34A',
-}
+import { NODE_STYLE_COLORS, DIMMED_OPACITY, BORDER_COLOR } from './constants'
 
 interface ComparisonDiagramProps {
   diagram: ComparisonDiagramData
@@ -23,7 +15,7 @@ interface ComparisonDiagramProps {
   height?: number
 }
 
-export function ComparisonDiagram({
+function ComparisonDiagramInner({
   diagram,
   activeNode,
   highlightedNodes,
@@ -32,6 +24,7 @@ export function ComparisonDiagram({
   width = 700,
   height = 500,
 }: ComparisonDiagramProps) {
+  const uid = useId().replace(/:/g, '')
   const [hoveredDiff, setHoveredDiff] = useState<number | null>(null)
   const halfWidth = width / 2 - 20
   const isHighlighted = (id: string) => highlightedNodes?.includes(id) ?? false
@@ -42,6 +35,8 @@ export function ComparisonDiagram({
     sideWidth: number,
     sideLabel: 'left' | 'right'
   ) => {
+    if (side.nodes.length === 0) return null
+
     return (
       <g>
         <text
@@ -60,7 +55,7 @@ export function ComparisonDiagram({
           y1={42}
           x2={offsetX + sideWidth - 20}
           y2={42}
-          stroke="#E5E7EB"
+          stroke={BORDER_COLOR}
           strokeWidth={1}
         />
 
@@ -101,11 +96,20 @@ export function ComparisonDiagram({
           return (
             <g
               key={node.id}
+              role="button"
+              tabIndex={0}
+              aria-label={`${node.label}: ${node.description}`}
               onMouseEnter={() => onNodeHover(node.id)}
               onMouseLeave={() => onNodeHover(null)}
               onClick={() => onNodeClick?.(node.id)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  onNodeClick?.(node.id)
+                }
+              }}
               style={{ cursor: 'pointer' }}
-              opacity={dimmed ? 0.3 : 1}
+              opacity={dimmed ? DIMMED_OPACITY : 1}
             >
               <rect
                 x={x - 60}
@@ -146,13 +150,17 @@ export function ComparisonDiagram({
         viewBox={`0 0 ${width} ${height}`}
         className="mx-auto"
         style={{ maxWidth: width }}
+        role="img"
+        aria-label={diagram.title}
       >
+        <title>{diagram.title}</title>
+
         <line
           x1={width / 2}
           y1={10}
           x2={width / 2}
           y2={height - 10}
-          stroke="#E5E7EB"
+          stroke={BORDER_COLOR}
           strokeWidth={2}
           strokeDasharray="8,4"
         />
@@ -215,3 +223,5 @@ export function ComparisonDiagram({
     </div>
   )
 }
+
+export const ComparisonDiagram = memo(ComparisonDiagramInner)
