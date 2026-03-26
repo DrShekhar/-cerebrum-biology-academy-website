@@ -243,10 +243,7 @@ export default function RootLayout({
                         <ConditionalHeaderFooter>
                           <ChatbotWrapper />
                         </ConditionalHeaderFooter>
-                        {/* ARIA Sales Agent - positioned on right side */}
-                        <ConditionalHeaderFooter>
-                          <SalesAgentWidget />
-                        </ConditionalHeaderFooter>
+                        {/* ARIA Sales Agent removed — redundant with FloatingCTA WhatsApp button */}
                         {/* MaintenancePopup removed — site is live */}
                       </ConditionalHeaderFooterProvider>
                       {/* REMOVED: StickyMobileCallBar was duplicating FloatingCTA's mobile Call+WhatsApp bar.
