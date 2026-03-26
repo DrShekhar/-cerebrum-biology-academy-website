@@ -161,7 +161,7 @@ export default function BiologyHomeTutorPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission
-    router.push(`/demo-booking?source=home-tutor&name=${formData.name}&phone=${formData.phone}`)
+    window.open(`https://wa.me/918826444334?text=Hi!%20I%20am%20${formData.name}%20and%20want%20a%20home%20biology%20tutor.%20My%20phone:%20${formData.phone}`, '_blank')
   }
 
   return (

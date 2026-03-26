@@ -401,7 +401,7 @@ export default function NTSEBiologyPreparationPage() {
                 </Button>
               </Link>
 
-              <Link href="/enrollment">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   size="xl"

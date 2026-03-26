@@ -231,7 +231,7 @@ export default function StudentDashboard() {
               </span>
             </div>
             <Button
-              onClick={() => router.push('/enrollment')}
+              onClick={() => window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.', '_blank')}
               variant="secondary"
               size="sm"
               className="bg-white text-blue-600 hover:bg-gray-100"

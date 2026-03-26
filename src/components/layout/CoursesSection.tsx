@@ -63,7 +63,7 @@ export function CoursesSection() {
   const ctaAnim = useScrollAnimation()
 
   const handleEnrollClick = (courseId: string) => {
-    router.push(`/enrollment?course=${courseId}`)
+    window.open(`https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20${courseId}.%20Please%20share%20details.`, '_blank')
   }
 
   const handleViewDetails = (courseId: string) => {
@@ -73,7 +73,7 @@ export function CoursesSection() {
   }
 
   const handleCounselingClick = () => {
-    router.push('/demo-booking?type=counseling')
+    window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20counseling%20session.', '_blank')
   }
 
   const handleBrochureDownload = () => {

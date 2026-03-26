@@ -111,7 +111,7 @@ export default function IBOPreparationGurugramContent({ faqs }: { faqs: FAQ[] })
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" size="xl" className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold">
                   <Play className="w-5 h-5 mr-2" />
                   Book Consultation
@@ -219,7 +219,7 @@ export default function IBOPreparationGurugramContent({ faqs }: { faqs: FAQ[] })
               <a href={`tel:${CONTACT_INFO.phone.primary}`}>
                 <Button variant="outline"><Phone className="w-4 h-4 mr-2" />Call Now</Button>
               </a>
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button>Book Consultation</Button>
               </Link>
             </div>
@@ -279,7 +279,7 @@ export default function IBOPreparationGurugramContent({ faqs }: { faqs: FAQ[] })
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Compete at International Level?</h2>
           <p className="text-xl mb-8 opacity-90">Join our IBO preparation program in Gurugram</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="xl" className="bg-white text-yellow-600 hover:bg-gray-100 font-bold">
                 <Play className="w-5 h-5 mr-2" />
                 Book Consultation

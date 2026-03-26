@@ -181,7 +181,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -344,7 +344,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                 Fee depends on your goal, current level, and the work needed to reliably achieve
                 your target score.
               </p>
-              <Link href="/demo-booking" className="block mt-6">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="block mt-6">
                 <Button className="w-full bg-yellow-500 text-slate-900 hover:bg-yellow-400">
                   Book Free Counseling
                 </Button>
@@ -460,7 +460,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
               <p className="text-sm text-gray-600">45-day intensive</p>
             </Link>
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
             >
               <h3 className="font-semibold text-teal-600">Book Demo</h3>
@@ -480,7 +480,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
             Join NEET Dropper Batch 2026-27 and improve by 100-150 marks
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
               <Button
                 variant="secondary"
                 size="xl"

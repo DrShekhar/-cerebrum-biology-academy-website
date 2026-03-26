@@ -156,7 +156,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" size="xl" className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold">
                   <Play className="w-5 h-5 mr-2" />Book Free Demo at Cerebrum
                 </Button>
@@ -350,7 +350,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Choose the Best?</h2>
           <p className="text-xl mb-8 opacity-90">Book a free demo class and experience why students call us the best for Biology</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="xl" className="bg-white text-green-600 hover:bg-gray-100 font-bold">
                 <Play className="w-5 h-5 mr-2" />Book Free Demo
               </Button>

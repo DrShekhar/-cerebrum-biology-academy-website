@@ -940,7 +940,7 @@ export function AIEducationDashboard() {
                       <span>Try AI Tutor</span>
                     </button>
                     <a
-                      href="/demo-booking"
+                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                       className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-[#4a5d4a] text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
                       aria-label="Book Free Demo"
                     >

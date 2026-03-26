@@ -511,7 +511,7 @@ export function EnhancedCourseFinderQuiz({
 
   const handleEnrollNow = () => {
     if (recommendation) {
-      router.push(`/enrollment?course=${encodeURIComponent(recommendation.primary.name)}&price=${recommendation.primary.price}`)
+      window.open(`https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20${encodeURIComponent(recommendation.primary.name)}%20(Rs%20${recommendation.primary.price}).%20Please%20share%20details.`, '_blank')
     }
   }
 

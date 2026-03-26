@@ -150,7 +150,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp Us
                 </Button>
-                <Link href="/demo-booking">
+                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                     size="lg"
@@ -605,7 +605,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                 <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                 <span className="truncate">WhatsApp Us</span>
               </Button>
-              <Link href="/demo-booking" className="w-full sm:w-auto">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"

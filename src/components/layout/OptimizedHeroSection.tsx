@@ -194,7 +194,7 @@ export function OptimizedHeroSection({
               <PremiumButton
                 variant="medical"
                 size="lg"
-                onClick={() => router.push('/demo-booking')}
+                onClick={() => window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class.', '_blank')}
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/30 transition-all duration-300 group text-sm xs:text-base md:text-lg border border-green-400/30"
               >
                 <Play className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform" />

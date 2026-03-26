@@ -502,7 +502,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
 
                 {/* Book Demo */}
                 <a
-                  href="/demo-booking"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                   className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl animate-fadeInUp"
                 >
                   Book Demo
@@ -649,7 +649,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                     Call: 88264-44334
                   </a>
                   <a
-                    href="/demo-booking"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-medium"
                   >
                     <Video className="h-5 w-5" />

@@ -46,7 +46,7 @@ export default function BiologyMajorCoursesPage() {
         value: 1,
       })
     }
-    router.push('/demo-booking')
+    window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class.', '_blank')
   }
 
   const handleWhatsAppClick = async () => {

@@ -206,7 +206,7 @@ export default function NotFound() {
                 Contact Us
               </a>
               <a
-                href="/demo-booking"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#4a5d4a] bg-white px-6 py-3 font-medium text-[#4a5d4a] transition-all hover:bg-[#f0f4f0]"
               >
                 <Gift className="h-4 w-4" />

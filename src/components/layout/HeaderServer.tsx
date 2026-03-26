@@ -97,13 +97,13 @@ export function HeaderServer() {
             {/* Desktop CTA - Server rendered for SEO */}
             <div className="hidden lg:flex items-center gap-6">
               <Link
-                href="/demo-booking"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border-2 border-green-600 text-green-600 hover:bg-green-50 transition-all duration-300"
               >
                 Free Demo
               </Link>
               <Link
-                href="/admissions"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-5 py-2 rounded-full text-sm font-semibold bg-[#4a5d4a] text-white shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Enroll Now

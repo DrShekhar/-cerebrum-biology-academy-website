@@ -100,7 +100,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             <p className="text-md opacity-80 mb-8 max-w-4xl mx-auto">{area.heroDescription}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -249,7 +249,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 size="lg"
                 className="bg-white text-green-700 hover:bg-green-50 font-bold"
               />
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-700">
                   Book Demo Class
                 </Button>
@@ -293,7 +293,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                     </li>
                   ))}
                 </ul>
-                <Link href="/demo-booking">
+                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                   <Button variant="primary" className="w-full">Enquire Now</Button>
                 </Link>
               </div>

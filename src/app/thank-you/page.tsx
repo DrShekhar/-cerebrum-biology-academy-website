@@ -118,7 +118,7 @@ function ThankYouContent() {
   const handleBookCounseling = () => {
     ConversionTracker.trackDemoBooking()
     trackDemoBookingConversion('thank-you-page')
-    router.push('/enrollment?source=thank-you')
+    window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.', '_blank')
   }
 
   const formatTime = (seconds: number) => {

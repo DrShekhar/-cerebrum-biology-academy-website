@@ -345,7 +345,7 @@ export function SaraswatiViharPageContent() {
               {/* Primary CTAs */}
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
-                  href="/demo-booking"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
                 >
                   Book FREE Demo Class
@@ -462,7 +462,7 @@ export function SaraswatiViharPageContent() {
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <Link
-                        href="/demo-booking"
+                        href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                         className="rounded-lg bg-green-600 px-6 py-3 font-medium text-white transition hover:bg-green-700"
                       >
                         Book Demo at Center
@@ -733,7 +733,7 @@ export function SaraswatiViharPageContent() {
 
             <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
               <Link
-                href="/demo-booking"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
               >
                 Book Free Demo Class

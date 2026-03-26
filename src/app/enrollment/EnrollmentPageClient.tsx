@@ -116,7 +116,7 @@ export default function EnrollmentPageClient() {
           </a>
 
           <Link
-            href="/demo-booking"
+            href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 w-full bg-white hover:bg-gray-50 text-gray-900 font-semibold py-4 px-8 rounded-xl text-lg transition-colors border-2 border-gray-200"
           >
             Book Free Demo Class First

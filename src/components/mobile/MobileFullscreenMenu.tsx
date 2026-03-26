@@ -254,7 +254,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
                   ? 'AIIMS फैकल्टी के साथ लाइव क्लास का अनुभव करें'
                   : 'Experience live classes with AIIMS faculty'}
               </p>
-              <Link href="/demo-booking" onClick={onToggle}>
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" onClick={onToggle}>
                 <button className="w-full bg-indigo-500 text-white py-4 rounded-xl font-semibold mobile-cta animate-fadeInUp">
                   {language === 'hi' ? 'अभी बुक करें' : 'Book Now'}
                 </button>

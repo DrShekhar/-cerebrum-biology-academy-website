@@ -125,7 +125,7 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" size="xl" className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold">
                   <Play className="w-5 h-5 mr-2" />Try Free Online Demo
                 </Button>
@@ -252,7 +252,7 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
                 <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" />Same test series with rank comparison</li>
                 <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" />Better doubt clearing (recorded + live)</li>
               </ul>
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button className="bg-white text-blue-600 hover:bg-blue-50">
                   <Play className="w-4 h-4 mr-2" />Try Free Online Demo
                 </Button>
@@ -312,7 +312,7 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Online Classes?</h2>
           <p className="text-xl mb-8 opacity-90">Join 300+ Gurugram students learning online with us</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking"><Button variant="secondary" size="xl" className="bg-white text-blue-600 hover:bg-gray-100 font-bold"><Play className="w-5 h-5 mr-2" />Book Free Online Demo</Button></Link>
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"><Button variant="secondary" size="xl" className="bg-white text-blue-600 hover:bg-gray-100 font-bold"><Play className="w-5 h-5 mr-2" />Book Free Online Demo</Button></Link>
             <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-blue-600"><Phone className="w-5 h-5 mr-2" />Call Now</Button></a>
           </div>
         </div>

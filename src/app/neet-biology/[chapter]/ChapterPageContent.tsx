@@ -52,7 +52,7 @@ export default function ChapterPageContent({
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/demo-booking"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
               >
                 Join Expert Classes
@@ -167,7 +167,7 @@ export default function ChapterPageContent({
                   Join our expert-led classes for in-depth understanding and guaranteed NEET success.
                 </p>
                 <Link
-                  href="/demo-booking"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                   className="block w-full bg-white text-green-700 py-3 rounded-lg font-semibold text-center hover:bg-green-50 transition-colors"
                 >
                   Book Free Demo
@@ -241,7 +241,7 @@ export default function ChapterPageContent({
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Book Free Demo Class

@@ -241,7 +241,7 @@ function CheckoutContent() {
         }),
       })
 
-      router.push('/admissions/counselor-requested')
+      window.open('https://wa.me/918826444334?text=Hi!%20I%20need%20counseling%20help%20with%20enrollment.', '_blank')
     } catch (error) {
       console.error('Error submitting counselor request:', error)
       setLoading(false)

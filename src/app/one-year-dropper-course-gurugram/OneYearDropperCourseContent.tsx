@@ -123,7 +123,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" size="xl" className="bg-indigo-500 text-white hover:bg-indigo-400 font-bold">
                   <Play className="w-5 h-5 mr-2" />Book Free Counseling
                 </Button>
@@ -248,7 +248,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
                 <div className="flex justify-between py-3"><span className="text-slate-600">Study Material</span><span className="font-semibold">Complete Package Included</span></div>
               </div>
               <p className="mt-4 text-sm text-slate-600 italic">Fee depends on your goal, current level, and the work needed to reliably achieve your target score.</p>
-              <Link href="/demo-booking" className="block mt-6">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="block mt-6">
                 <Button className="w-full bg-indigo-600 hover:bg-indigo-700">Book Free Counseling</Button>
               </Link>
             </div>
@@ -300,7 +300,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
             <Link href="/neet-dropper-batch-2026-27-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">Dropper Batch 2026-27</h3><p className="text-sm text-gray-600">Upcoming batch</p></Link>
             <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Gurugram</h3><p className="text-sm text-gray-600">All programs</p></Link>
             <Link href="/locations/gurugram" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">Gurugram Center</h3><p className="text-sm text-gray-600">Center details</p></Link>
-            <Link href="/demo-booking" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">Book Demo</h3><p className="text-sm text-gray-600">Free counseling</p></Link>
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"><h3 className="font-semibold text-teal-600">Book Demo</h3><p className="text-sm text-gray-600">Free counseling</p></Link>
           </div>
         </div>
       </section>
@@ -311,7 +311,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Transform Your NEET Score</h2>
           <p className="text-xl mb-8 opacity-90">Join our One Year Dropper Course and achieve your dream medical seat</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking"><Button variant="secondary" size="xl" className="bg-white text-indigo-600 hover:bg-gray-100 font-bold"><Play className="w-5 h-5 mr-2" />Book Free Counseling</Button></Link>
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"><Button variant="secondary" size="xl" className="bg-white text-indigo-600 hover:bg-gray-100 font-bold"><Play className="w-5 h-5 mr-2" />Book Free Counseling</Button></Link>
             <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-indigo-600"><Phone className="w-5 h-5 mr-2" />Call Now</Button></a>
           </div>
         </div>

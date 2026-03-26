@@ -272,7 +272,7 @@ export function PricingComparisonTable({
                     className={`p-4 text-center ${isHighlighted ? `${tierBgColors[tier]} border-2 border-t-0 rounded-b-xl` : ''}`}
                   >
                     <a
-                      href="/demo-booking"
+                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                       className={`inline-block w-full px-4 py-3 rounded-xl font-semibold text-sm transition-all min-h-[44px] touch-manipulation ${
                         isHighlighted
                           ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-xl'

@@ -201,7 +201,7 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" size="xl" className="bg-blue-500 text-white hover:bg-blue-400 font-bold">
                   <Play className="w-5 h-5 mr-2" />
                   Book Free Demo Class
@@ -340,7 +340,7 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
                       Call Now
                     </Button>
                   </a>
-                  <Link href="/demo-booking">
+                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                     <Button>Book Demo</Button>
                   </Link>
                 </div>
@@ -436,7 +436,7 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Crack NSEB?</h2>
           <p className="text-xl mb-8 opacity-90">Join our expert coaching in Gurugram and qualify for INBO</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="xl" className="bg-white text-blue-600 hover:bg-gray-100 font-bold">
                 <Play className="w-5 h-5 mr-2" />
                 Book Free Demo

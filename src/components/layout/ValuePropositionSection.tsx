@@ -227,7 +227,7 @@ export function ValuePropositionSection() {
             </h3>
             <p className="text-blue-100 mb-6 text-lg">{t('joinThousands')}</p>
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="inline-block bg-green-600 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-green-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg text-sm sm:text-base"
             >
               {t('bookFreeStrategy')}

@@ -275,7 +275,7 @@ export function CoachingTrialBanner({
 
               <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
                 <button
-                  onClick={onUpgradeClick || (() => router.push('/enrollment'))}
+                  onClick={onUpgradeClick || (() => window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.', '_blank'))}
                   className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg font-semibold text-sm transition-all hover:shadow-lg active:scale-95 ${config.buttonStyle} flex-1 sm:flex-initial min-h-[44px] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2`}
                   aria-label={config.buttonText}
                 >
