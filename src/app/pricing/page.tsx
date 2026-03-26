@@ -806,13 +806,40 @@ export default function PricingPage() {
         )}
 
         <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-6 md:p-8 mb-10 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
-            Tier Comparison
-          </h2>
+          <div className="text-center mb-6 sm:mb-8">
+            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-medium mb-3">
+              Compare Plans
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              Which Plan is Right for You?
+            </h2>
+          </div>
 
           {/* Mobile Card View */}
           <div className="md:hidden space-y-4">
             {[
+              {
+                name: 'Pursuit',
+                color: 'green',
+                badge: '💰 Best Value',
+                batchSize: '30-40',
+                hours: '4.5 hrs',
+                attention: 'Good',
+                mentorship: false,
+                oneOnOne: false,
+                bestFor: 'Budget-conscious students seeking quality',
+              },
+              {
+                name: 'Ascent',
+                color: 'blue',
+                badge: '🔥 Most Popular',
+                batchSize: '16-25',
+                hours: '4.5 hrs',
+                attention: 'High',
+                mentorship: true,
+                oneOnOne: true,
+                bestFor: 'Serious aspirants with balanced approach',
+              },
               {
                 name: 'Pinnacle',
                 color: 'purple',
@@ -823,39 +850,6 @@ export default function PricingPage() {
                 mentorship: true,
                 oneOnOne: true,
                 bestFor: 'Top rankers seeking premium coaching',
-              },
-              {
-                name: 'Ascent',
-                color: 'blue',
-                badge: '🔥 Popular',
-                batchSize: '16-25',
-                hours: '4.5 hrs',
-                attention: 'High',
-                mentorship: true,
-                oneOnOne: true,
-                bestFor: 'Serious aspirants with balanced approach',
-              },
-              {
-                name: 'Pursuit',
-                color: 'green',
-                badge: '💰 Value',
-                batchSize: '30-40',
-                hours: '4.5 hrs',
-                attention: 'Good',
-                mentorship: false,
-                oneOnOne: false,
-                bestFor: 'Budget-conscious students seeking quality',
-              },
-              {
-                name: 'Elixir',
-                color: 'amber',
-                badge: '✨ From ₹5,999',
-                batchSize: '400+',
-                hours: '3 hrs',
-                attention: 'Standard',
-                mentorship: false,
-                oneOnOne: false,
-                bestFor: 'Price-sensitive students wanting NCERT-based coaching',
               },
             ].map((tier) => (
               <div
@@ -962,344 +956,66 @@ export default function PricingPage() {
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b-2 border-gray-200">
-                  <th className="pb-4 font-semibold">Feature</th>
-                  <th className="pb-4 text-center font-semibold text-purple-700">Pinnacle</th>
-                  <th className="pb-4 text-center font-semibold text-blue-700">Ascent</th>
-                  <th className="pb-4 text-center font-semibold text-green-700">Pursuit</th>
-                  <th className="pb-4 text-center font-semibold text-amber-700">Elixir</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">Batch Size</td>
-                  <td className="py-4 text-center text-green-600 font-semibold">10-12</td>
-                  <td className="py-4 text-center text-blue-600 font-semibold">16-25</td>
-                  <td className="py-4 text-center text-gray-600 font-semibold">30-40</td>
-                  <td className="py-4 text-center text-amber-600 font-semibold">400+</td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">Weekly Hours</td>
-                  <td className="py-4 text-center">4.5-6.0 hrs</td>
-                  <td className="py-4 text-center">4.5 hrs</td>
-                  <td className="py-4 text-center">4.5 hrs</td>
-                  <td className="py-4 text-center">3 hrs</td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">Personal Attention</td>
-                  <td className="py-4 text-center">
-                    <span className="text-green-600 font-semibold">Maximum</span>
-                  </td>
-                  <td className="py-4 text-center">
-                    <span className="text-blue-600 font-semibold">High</span>
-                  </td>
-                  <td className="py-4 text-center">
-                    <span className="text-gray-600 font-semibold">Good</span>
-                  </td>
-                  <td className="py-4 text-center">
-                    <span className="text-amber-600 font-semibold">Standard</span>
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">AIIMS Faculty</td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">Study Materials</td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">Mock Tests</td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">AI Doubt Resolution</td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">Personal Mentorship</td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">1-on-1 Doubt Sessions</td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                  </td>
-                  <td className="py-4 text-center">
-                    <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-100 hover:bg-blue-50/50 hover:border-l-4 hover:border-l-blue-500 transition-all duration-200">
-                  <td className="py-4 font-medium">Best For</td>
-                  <td className="py-4 text-center text-sm">
-                    Top rankers
-                    <br />
-                    Premium coaching
-                  </td>
-                  <td className="py-4 text-center text-sm">
-                    Serious aspirants
-                    <br />
-                    Balanced approach
-                  </td>
-                  <td className="py-4 text-center text-sm">
-                    Budget-conscious
-                    <br />
-                    Quality education
-                  </td>
-                  <td className="py-4 text-center text-sm">
-                    Price-sensitive
-                    <br />
-                    NCERT-based coaching
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* Detailed Feature Comparison Table */}
-        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-6 md:p-8 mb-10 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">
-            Detailed Feature Comparison
-          </h2>
-
-          {/* Mobile Card View */}
-          <div className="md:hidden space-y-6">
-            {[
-              { name: 'Elixir', color: 'amber' },
-              { name: 'Pursuit', color: 'green' },
-              { name: 'Ascent', color: 'blue' },
-              { name: 'Pinnacle', color: 'purple' },
-            ].map((tier) => {
-              const tierKey = tier.name.toLowerCase() as 'elixir' | 'pursuit' | 'ascent' | 'pinnacle'
-              const featureData = [
-                { category: 'Core Teaching', features: [
-                  { name: 'Live Classes', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Recorded Videos', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Personal Mentoring', elixir: false, pursuit: false, ascent: false, pinnacle: true },
-                  { name: 'Doubt Sessions', elixir: false, pursuit: false, ascent: true, pinnacle: true },
-                ]},
-                { category: 'Study Materials', features: [
-                  { name: 'Printed Materials', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Digital Notes', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Worksheets (Digital)', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Worksheets (Printed)', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Previous Year Papers', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                ]},
-                { category: 'Assessment', features: [
-                  { name: 'Weekly Tests', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Test Series', elixir: false, pursuit: false, ascent: true, pinnacle: true },
-                  { name: 'Mock Tests', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Performance Tracking', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'All India Ranking', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                ]},
-                { category: 'Support', features: [
-                  { name: 'Parent Counseling', elixir: false, pursuit: false, ascent: false, pinnacle: true },
-                  { name: 'Career Guidance', elixir: false, pursuit: false, ascent: true, pinnacle: true },
-                  { name: 'Regular Feedback', elixir: false, pursuit: false, ascent: true, pinnacle: true },
-                  { name: 'Study Planning', elixir: false, pursuit: false, ascent: false, pinnacle: true },
-                  { name: 'Revision Sessions', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                ]},
-                { category: 'Extras', features: [
-                  { name: 'Free MCQ Tool', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                  { name: 'Monthly Payment Option', elixir: true, pursuit: false, ascent: false, pinnacle: false },
-                ]},
-              ]
-              const yesCount = featureData.reduce((sum, cat) => sum + cat.features.filter(f => f[tierKey]).length, 0)
-              const totalCount = featureData.reduce((sum, cat) => sum + cat.features.length, 0)
-
-              return (
-                <div
-                  key={tier.name}
-                  className={`border-2 rounded-2xl p-4 ${
-                    tier.color === 'amber' ? 'border-amber-200 bg-amber-50/50' :
-                    tier.color === 'green' ? 'border-green-200 bg-green-50/50' :
-                    tier.color === 'blue' ? 'border-blue-200 bg-blue-50/50' :
-                    'border-purple-200 bg-purple-50/50'
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className={`text-lg font-bold ${
-                      tier.color === 'amber' ? 'text-amber-700' :
-                      tier.color === 'green' ? 'text-green-700' :
-                      tier.color === 'blue' ? 'text-blue-700' :
-                      'text-purple-700'
-                    }`}>{tier.name}</h3>
-                    <span className="text-sm text-gray-500">{yesCount}/{totalCount} features</span>
-                  </div>
-                  {featureData.map((cat) => (
-                    <div key={cat.category} className="mb-3">
-                      <div className="text-xs font-semibold text-gray-500 uppercase mb-1">{cat.category}</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {cat.features.map((f) => (
-                          <span
-                            key={f.name}
-                            className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full border ${
-                              f[tierKey] ? 'bg-white border-green-200 text-gray-700' : 'bg-gray-100 border-gray-200 text-gray-400 line-through'
-                            }`}
-                          >
-                            {f[tierKey] ? (
-                              <CheckCircle2 className="w-3 h-3 text-green-600" />
-                            ) : (
-                              <XCircleIcon className="w-3 h-3 text-gray-300" />
-                            )}
-                            {f.name}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )
-            })}
-          </div>
-
-          {/* Desktop Table View */}
-          <div className="hidden md:block overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b-2 border-gray-200">
-                  <th className="text-left py-3 px-4 font-semibold text-gray-900">Features</th>
-                  <th className="text-center py-3 px-4 font-semibold text-amber-700">Elixir</th>
-                  <th className="text-center py-3 px-4 font-semibold text-green-700">Pursuit</th>
-                  <th className="text-center py-3 px-4 font-semibold text-blue-700">Ascent</th>
-                  <th className="text-center py-3 px-4 font-semibold text-purple-700">Pinnacle</th>
+                  <th className="pb-4 pl-4 font-semibold text-gray-500 text-sm uppercase tracking-wide">Feature</th>
+                  <th className="pb-4 text-center font-bold text-green-700">
+                    <div className="text-lg">Pursuit</div>
+                    <div className="text-xs font-normal text-gray-500">Best Value</div>
+                  </th>
+                  <th className="pb-4 text-center font-bold text-blue-700 bg-blue-50 rounded-t-2xl">
+                    <div className="text-xs font-bold text-blue-600 mb-1">MOST POPULAR</div>
+                    <div className="text-lg">Ascent</div>
+                    <div className="text-xs font-normal text-gray-500">Recommended</div>
+                  </th>
+                  <th className="pb-4 text-center font-bold text-purple-700">
+                    <div className="text-lg">Pinnacle</div>
+                    <div className="text-xs font-normal text-gray-500">Premium</div>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { category: 'Core Teaching', features: [
-                    { name: 'Live Classes', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Recorded Videos', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Personal Mentoring', elixir: false, pursuit: false, ascent: false, pinnacle: true },
-                    { name: 'Doubt Sessions', elixir: false, pursuit: false, ascent: true, pinnacle: true },
-                  ]},
-                  { category: 'Study Materials', features: [
-                    { name: 'Printed Materials', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Digital Notes', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Worksheets (Digital)', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Worksheets (Printed)', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Previous Year Papers', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                  ]},
-                  { category: 'Assessment', features: [
-                    { name: 'Weekly Tests', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Test Series', elixir: false, pursuit: false, ascent: true, pinnacle: true },
-                    { name: 'Mock Tests', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Performance Tracking', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'All India Ranking', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                  ]},
-                  { category: 'Support', features: [
-                    { name: 'Parent Counseling', elixir: false, pursuit: false, ascent: false, pinnacle: true },
-                    { name: 'Career Guidance', elixir: false, pursuit: false, ascent: true, pinnacle: true },
-                    { name: 'Regular Feedback', elixir: false, pursuit: false, ascent: true, pinnacle: true },
-                    { name: 'Study Planning', elixir: false, pursuit: false, ascent: false, pinnacle: true },
-                    { name: 'Revision Sessions', elixir: false, pursuit: true, ascent: true, pinnacle: true },
-                  ]},
-                  { category: 'Extras', features: [
-                    { name: 'Free MCQ Tool', elixir: true, pursuit: true, ascent: true, pinnacle: true },
-                    { name: 'Monthly Payment Option', elixir: true, pursuit: false, ascent: false, pinnacle: false },
-                  ]},
-                ].map((section) => (
-                  <React.Fragment key={section.category}>
-                    <tr className="bg-gray-50">
-                      <td colSpan={5} className="py-2 px-4 font-semibold text-gray-800 text-sm">
-                        {section.category}
-                      </td>
-                    </tr>
-                    {section.features.map((feature) => (
-                      <tr key={feature.name} className="border-b border-gray-100 hover:bg-blue-50/50 transition-colors">
-                        <td className="py-3 px-4 text-gray-700">{feature.name}</td>
-                        <td className="py-3 px-4 text-center">
-                          {feature.elixir ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                          ) : (
-                            <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                          )}
-                        </td>
-                        <td className="py-3 px-4 text-center">
-                          {feature.pursuit ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                          ) : (
-                            <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                          )}
-                        </td>
-                        <td className="py-3 px-4 text-center">
-                          {feature.ascent ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                          ) : (
-                            <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                          )}
-                        </td>
-                        <td className="py-3 px-4 text-center">
-                          {feature.pinnacle ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
-                          ) : (
-                            <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </React.Fragment>
+                  { feature: 'Batch Size', pursuit: '30-40', ascent: '16-25', pinnacle: '10-12', highlight: true },
+                  { feature: 'Weekly Hours', pursuit: '4.5 hrs', ascent: '4.5 hrs', pinnacle: '4.5-6.0 hrs' },
+                  { feature: 'Personal Attention', pursuit: 'Good', ascent: 'High', pinnacle: 'Maximum', highlight: true },
+                  { feature: 'AIIMS Faculty', pursuit: true, ascent: true, pinnacle: true },
+                  { feature: 'Study Materials', pursuit: true, ascent: true, pinnacle: true },
+                  { feature: 'Mock Tests', pursuit: true, ascent: true, pinnacle: true },
+                  { feature: 'Recorded Lectures', pursuit: true, ascent: true, pinnacle: true },
+                  { feature: 'AI Doubt Resolution', pursuit: true, ascent: true, pinnacle: true },
+                  { feature: 'Personal Mentoring', pursuit: false, ascent: true, pinnacle: true },
+                  { feature: '1-on-1 Doubt Sessions', pursuit: false, ascent: true, pinnacle: true },
+                  { feature: 'Printed Materials', pursuit: true, ascent: true, pinnacle: true },
+                  { feature: 'Weekly Tests', pursuit: false, ascent: true, pinnacle: true },
+                  { feature: 'Performance Tracking', pursuit: false, ascent: true, pinnacle: true },
+                  { feature: 'Parent Counseling', pursuit: false, ascent: false, pinnacle: true },
+                  { feature: 'Career Guidance', pursuit: false, ascent: true, pinnacle: true },
+                  { feature: 'Study Planning', pursuit: false, ascent: false, pinnacle: true },
+                  { feature: 'Money-back Guarantee', pursuit: false, ascent: true, pinnacle: true },
+                ].map((row, idx) => (
+                  <tr key={idx} className={`border-b border-gray-100 ${idx % 2 === 0 ? 'bg-gray-50/50' : ''}`}>
+                    <td className="py-3.5 pl-4 font-medium text-gray-900 text-sm">{row.feature}</td>
+                    <td className="py-3.5 text-center text-sm">
+                      {typeof row.pursuit === 'boolean' ? (
+                        row.pursuit ? <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" /> : <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                      ) : (
+                        <span className={row.highlight ? 'font-semibold text-green-700' : ''}>{row.pursuit}</span>
+                      )}
+                    </td>
+                    <td className="py-3.5 text-center text-sm bg-blue-50/60">
+                      {typeof row.ascent === 'boolean' ? (
+                        row.ascent ? <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" /> : <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                      ) : (
+                        <span className={row.highlight ? 'font-semibold text-blue-700' : ''}>{row.ascent}</span>
+                      )}
+                    </td>
+                    <td className="py-3.5 text-center text-sm">
+                      {typeof row.pinnacle === 'boolean' ? (
+                        row.pinnacle ? <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" /> : <XCircleIcon className="w-5 h-5 text-gray-300 mx-auto" />
+                      ) : (
+                        <span className={row.highlight ? 'font-semibold text-purple-700' : ''}>{row.pinnacle}</span>
+                      )}
+                    </td>
+                  </tr>
                 ))}
               </tbody>
             </table>
