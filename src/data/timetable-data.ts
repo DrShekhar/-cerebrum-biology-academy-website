@@ -486,13 +486,13 @@ export const batches: Batch[] = [
 export const neetClasses: NeetClass[] = [
   {
     classType: 'CLASS_11',
-    optionA: { day: 'Wednesday', time: '7:30 - 8:30 PM' },
-    optionB: { day: 'Sunday', time: '6:15 - 7:15 PM' },
+    optionA: { day: 'Friday', time: '8:30 - 9:30 PM' },
+    optionB: { day: 'Friday', time: '8:30 - 9:30 PM' },
   },
   {
     classType: 'CLASS_12',
-    optionA: { day: 'Wednesday', time: '8:30 - 9:30 PM' },
-    optionB: { day: 'Sunday', time: '5:15 - 6:15 PM' },
+    optionA: { day: 'Friday', time: '9:30 - 10:30 PM' },
+    optionB: { day: 'Friday', time: '9:30 - 10:30 PM' },
   },
 ]
 
