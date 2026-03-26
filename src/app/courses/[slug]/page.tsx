@@ -96,10 +96,6 @@ export default async function CoursePage({ params }: Props) {
   if (newCourse) {
     return (
       <>
-        {/* Breadcrumb Navigation + Schema */}
-        <div className="mx-auto max-w-7xl px-4 py-4">
-          <BreadcrumbSchema items={COMMON_BREADCRUMBS.courses(newCourse.name)} />
-        </div>
         {/* Learning Resource Schema for E-E-A-T */}
         <LearningResourceSchema
           name={newCourse.name}

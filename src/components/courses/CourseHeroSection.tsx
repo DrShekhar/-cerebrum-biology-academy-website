@@ -55,7 +55,7 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
 
   return (
     <section
-      className={`relative bg-gradient-to-r ${getTierColor(defaultTier as CourseSeries)} text-white`}
+      className="relative bg-gradient-to-r from-slate-900 via-blue-950 to-indigo-900 text-white"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-20">
@@ -190,10 +190,15 @@ Please share the details!`,
                 Course Highlights
               </h3>
               <ul className="space-y-3">
-                {primaryTier.additionalBenefits.slice(0, 4).map((benefit, index) => (
+                {[
+                  `AIIMS Faculty — Dr. Shekhar C Singh`,
+                  `${course.curriculum.totalModules} Modules, ${course.curriculum.totalHours} Hours`,
+                  `${course.curriculum.testCount}+ Mock Tests & Assessments`,
+                  `98% Success Rate | 15-day Money-back`,
+                ].map((highlight, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="h-2 w-2 bg-white rounded-full mt-2 flex-shrink-0" />
-                    <span className="text-white/90">{benefit}</span>
+                    <div className="h-2 w-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0" />
+                    <span className="text-white/90">{highlight}</span>
                   </li>
                 ))}
               </ul>
