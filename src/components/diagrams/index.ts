@@ -10,3 +10,11 @@ export { useDiagram, biologyColors, labelStyles } from './hooks/useDiagram'
 export { RootMeristem } from './biology/RootMeristem'
 export { PlantTissues } from './biology/PlantTissues'
 export { StemCrossSection } from './biology/StemCrossSection'
+
+// Interactive diagram renderers
+export { InteractiveDiagramRenderer } from './InteractiveDiagramRenderer'
+export { CycleDiagram } from './renderers/CycleDiagram'
+export { FlowchartDiagram } from './renderers/FlowchartDiagram'
+export { LabeledDiagram } from './renderers/LabeledDiagram'
+export { HierarchyDiagram } from './renderers/HierarchyDiagram'
+export { ComparisonDiagram } from './renderers/ComparisonDiagram'
