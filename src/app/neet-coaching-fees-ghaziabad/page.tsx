@@ -418,7 +418,7 @@ export default function NEETCoachingFeesGhaziabadPage() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30"
             >
               Book Free Demo

@@ -450,7 +450,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
 
             <div className="mt-8 text-center">
               <Link
-                href="/admissions"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                 className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 View Detailed Pricing & Enroll
@@ -573,7 +573,7 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/admissions"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
             >
               Enroll Now

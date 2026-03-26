@@ -328,7 +328,7 @@ export default function SchoolNEETCoachingPage() {
             <p className="text-md opacity-80 mb-8 max-w-4xl mx-auto">{school.heroDescription}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -474,7 +474,7 @@ export default function SchoolNEETCoachingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"

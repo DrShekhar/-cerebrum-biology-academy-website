@@ -141,7 +141,7 @@ export default function IGCSEBiologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
-                  href="/admissions"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
                 >
                   Enroll for IGCSE
@@ -408,7 +408,7 @@ export default function IGCSEBiologyPage() {
                 <p className="text-gray-600 mb-6">Complete 2-year IGCSE program</p>
                 <div className="space-y-2 sm:space-y-3">
                   <Link
-                    href="/admissions"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                     className="block bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                   >
                     Enroll for IGCSE

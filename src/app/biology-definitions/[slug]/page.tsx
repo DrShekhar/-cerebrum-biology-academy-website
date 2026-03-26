@@ -331,7 +331,7 @@ export default async function BiologyDefinitionPage({ params }: PageProps) {
               </p>
             </div>
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="inline-block bg-yellow-400 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-yellow-300 transition-all duration-300 shadow-lg text-sm sm:text-base min-h-[48px] whitespace-nowrap"
             >
               Book Free Demo

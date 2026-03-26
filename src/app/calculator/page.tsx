@@ -567,7 +567,7 @@ export default function CalculatorPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
             >
               Book Free Demo Class

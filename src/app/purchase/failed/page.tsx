@@ -78,7 +78,7 @@ function PurchaseFailedContent() {
             <Phone className="w-4 h-4" />
             Call Support
           </a>
-          <Link href="/admissions" className="flex items-center gap-1 text-blue-600 hover:underline">
+          <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-blue-600 hover:underline">
             <ArrowRight className="w-4 h-4" />
             Back to Admissions
           </Link>

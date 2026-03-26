@@ -417,7 +417,7 @@ export default function NoidaVsKotaPage() {
                 WhatsApp Us
               </a>
               <Link
-                href="/demo-booking"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2"
               >
                 Book Free Demo

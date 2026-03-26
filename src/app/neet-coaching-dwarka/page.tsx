@@ -291,7 +291,7 @@ export default function NEETCoachingDwarkaPage() {
                   WhatsApp: 88264-44334
                 </button>
                 <Link
-                  href="/demo-booking"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors"
                 >
                   <Play className="w-5 h-5" />
@@ -754,7 +754,7 @@ export default function NEETCoachingDwarkaPage() {
                   WhatsApp: 88264-44334
                 </button>
                 <Link
-                  href="/demo-booking"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors"
                 >
                   Book Free Demo Class

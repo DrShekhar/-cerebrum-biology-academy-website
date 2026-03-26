@@ -674,7 +674,7 @@ export default function ProgramPage({ params }: { params: Promise<{ slug: string
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/demo-booking"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all"
                 >
                   Book Free Demo
@@ -894,7 +894,7 @@ export default function ProgramPage({ params }: { params: Promise<{ slug: string
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all"
             >
               Book Free Demo Class

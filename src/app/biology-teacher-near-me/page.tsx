@@ -234,7 +234,7 @@ export default function BiologyTeacherNearMePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="/demo-booking">
+                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                   <Button
                     size="xl"
                     className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-semibold shadow-lg hover:shadow-xl transition-all"
@@ -350,7 +350,7 @@ export default function BiologyTeacherNearMePage() {
                     </div>
 
                     <div className="flex gap-3">
-                      <Link href="/demo-booking" className="flex-1">
+                      <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="flex-1">
                         <Button
                           className={`w-full bg-gradient-to-r ${style.color} text-white hover:shadow-lg`}
                         >
@@ -420,7 +420,7 @@ export default function BiologyTeacherNearMePage() {
                 ))}
               </div>
 
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-green-600 hover:bg-green-700">
                   <Video className="w-5 h-5 mr-2" />
                   Try Free Online Demo
@@ -606,7 +606,7 @@ export default function BiologyTeacherNearMePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   size="xl"
                   className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 font-semibold shadow-xl hover:shadow-2xl"

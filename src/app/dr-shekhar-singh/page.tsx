@@ -408,7 +408,7 @@ export default function DrShekharSinghPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6" role="group">
                   <Link
-                    href="/demo-booking"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-[#3d4d3d]/20 transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:ring-offset-2"
                     aria-label="Book a demo class with Dr. Shekhar Singh"
                   >
@@ -1007,7 +1007,7 @@ export default function DrShekharSinghPage() {
                     slots available.
                   </p>
                   <Link
-                    href="/demo-booking"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 py-3 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white/50"
                   >
                     <Calendar className="w-5 h-5 mr-2" />
@@ -1050,7 +1050,7 @@ export default function DrShekharSinghPage() {
 
               <div className="text-center mb-8">
                 <Link
-                  href="/demo-booking"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-[#3d4d3d] font-bold px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl shadow-2xl transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 text-base sm:text-lg w-full sm:w-auto"
                 >
                   <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 flex-shrink-0" />
@@ -1097,7 +1097,7 @@ export default function DrShekharSinghPage() {
             className="fixed bottom-8 right-8 z-50 animate-fadeInUp"
           >
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-3 bg-[#4a5d4a] text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 group"
               aria-label="Book a demo class"
             >

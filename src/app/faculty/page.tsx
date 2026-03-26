@@ -108,7 +108,7 @@ export default function FacultyPage() {
             <div
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fadeInUp"
             >
-              <Link href="/demo-booking" className="w-full sm:w-auto">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
                   variant="primary"
                   size="lg"
@@ -294,7 +294,7 @@ export default function FacultyPage() {
                         Profile
                       </Button>
                     </Link>
-                    <Link href="/demo-booking" className="flex-1">
+                    <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="flex-1">
                       <Button
                         variant="primary"
                         size="sm"
@@ -447,7 +447,7 @@ export default function FacultyPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="xl"

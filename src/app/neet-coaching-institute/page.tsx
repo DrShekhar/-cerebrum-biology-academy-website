@@ -211,7 +211,7 @@ export default function NeetCoachingInstitutePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -400,7 +400,7 @@ export default function NeetCoachingInstitutePage() {
             <p className="text-xs text-white/60 mb-4">Success rate based on 2023-2025 NEET-UG results. NEET is conducted by NTA (nta.ac.in).</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"

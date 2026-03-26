@@ -134,7 +134,7 @@ export default function FreeNEETDemoClassFaridabad() {
                 Book Demo: 88264-44334
               </a>
               <Link
-                href="/demo-booking"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-green-50 transition"
               >
                 Book Online

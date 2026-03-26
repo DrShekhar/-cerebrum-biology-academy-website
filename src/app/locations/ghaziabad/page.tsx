@@ -172,7 +172,7 @@ export default function GhaziabadLocationPage() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/demo-booking"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-2 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black rounded-xl font-medium transition-colors"
                 >
                   <Play className="w-5 h-5" />
@@ -438,7 +438,7 @@ export default function GhaziabadLocationPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/demo-booking"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center space-x-2 px-8 py-3 bg-yellow-500 text-black rounded-xl font-bold hover:bg-yellow-400 transition-colors"
             >
               <Play className="w-5 h-5" />

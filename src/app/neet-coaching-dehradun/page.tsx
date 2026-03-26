@@ -89,7 +89,7 @@ export default function NeetCoachingDehradunPage() {
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">Rajpur Road | Clock Tower | Prem Nagar | Clement Town</h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">Why migrate to Kota? Get AIIMS trained faculties, 98% success rate, and live interactive classes - all from Dehradun. Join 1,800+ Uttarakhand students achieving NEET success from home.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/demo-booking"><Button variant="secondary" size="xl" onClick={handleDemoBooking} className="bg-yellow-500 text-black hover:bg-yellow-400"><Play className="w-5 h-5 mr-2" />Book Free Demo Class</Button></Link>
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"><Button variant="secondary" size="xl" onClick={handleDemoBooking} className="bg-yellow-500 text-black hover:bg-yellow-400"><Play className="w-5 h-5 mr-2" />Book Free Demo Class</Button></Link>
               <Link href="/courses"><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-teal-900"><BookOpen className="w-5 h-5 mr-2" />View Course Details</Button></Link>
             </div>
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -172,7 +172,7 @@ export default function NeetCoachingDehradunPage() {
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey from the Doon Valley</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">98% success rate, AIIMS trained faculties, 1,800+ Uttarakhand students!</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/demo-booking"><Button variant="secondary" size="xl" onClick={handleDemoBooking} className="bg-yellow-500 text-black hover:bg-yellow-400"><Play className="w-5 h-5 mr-2" />Book Free Demo Class</Button></Link>
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"><Button variant="secondary" size="xl" onClick={handleDemoBooking} className="bg-yellow-500 text-black hover:bg-yellow-400"><Play className="w-5 h-5 mr-2" />Book Free Demo Class</Button></Link>
               <Link href="/enrollment"><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-teal-600"><ArrowRight className="w-5 h-5 mr-2" />Enroll Now</Button></Link>
             </div>
             <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">

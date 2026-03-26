@@ -126,7 +126,7 @@ export default function PageContent() {
               Expert NEET preparation for Amity students across all campuses. Harness competitive environment and CBSE foundation for 650+ NEET success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/demo-booking" className="bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center">
                 Book Free Demo
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -217,7 +217,7 @@ export default function PageContent() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-purple-600 mb-4">{plan.price}</div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
-                <Link href="/admissions" className="block bg-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details." target="_blank" rel="noopener noreferrer" className="block bg-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                   Enroll Now
                 </Link>
               </div>
@@ -265,7 +265,7 @@ export default function PageContent() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Amity Excellence in NEET</h2>
           <p className="text-xl md:text-2xl mb-8 opacity-90">Join 500+ Amity students achieving top NEET scores</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking" className="bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center">
               Book Free Demo
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

@@ -180,7 +180,7 @@ export default function BiologyClassesNearMePage() {
                 {userLocation ? 'Change Location' : 'Select Your Location'}
               </Button>
 
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   size="xl"
@@ -331,7 +331,7 @@ export default function BiologyClassesNearMePage() {
 
                   {/* Action Links */}
                   <div className="flex flex-wrap gap-3 mt-4">
-                    <Link href="/demo-booking">
+                    <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="sm">
                         Book Visit
                       </Button>
@@ -398,7 +398,7 @@ export default function BiologyClassesNearMePage() {
                 <p className="opacity-90 mb-6">
                   Book a free demo class and experience our teaching methodology
                 </p>
-                <Link href="/demo-booking">
+                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="secondary"
                     size="xl"
@@ -520,7 +520,7 @@ export default function BiologyClassesNearMePage() {
               Book a free demo class today - online or at our nearest center!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"

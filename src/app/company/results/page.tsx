@@ -504,7 +504,7 @@ export default function ResultsPage() {
               <Zap className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              href="/admissions"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Apply Now

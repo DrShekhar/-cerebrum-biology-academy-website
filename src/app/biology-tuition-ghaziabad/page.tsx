@@ -189,7 +189,7 @@ export default function BiologyTuitionGhaziabadPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -266,7 +266,7 @@ export default function BiologyTuitionGhaziabadPage() {
                       <div className="text-sm text-gray-500">{program.duration}</div>
                       <div className="text-lg font-bold text-green-600">{program.fee}</div>
                     </div>
-                    <Link href="/demo-booking">
+                    <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="sm">
                         Enquire
                       </Button>
@@ -360,7 +360,7 @@ export default function BiologyTuitionGhaziabadPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/demo-booking">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"

@@ -96,7 +96,7 @@ export default async function FacultyProfilePage({ params }: Props) {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link href="/demo-booking">
+                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                     <Button
                       variant="outline"
                       size="lg"
@@ -234,7 +234,7 @@ export default async function FacultyProfilePage({ params }: Props) {
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
                 <div className="space-y-4">
-                  <Link href="/demo-booking">
+                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                     <Button variant="primary" size="lg" className="w-full">
                       <Calendar className="w-5 h-5 mr-2" />
                       Book Demo Class
@@ -246,7 +246,7 @@ export default async function FacultyProfilePage({ params }: Props) {
                       Ask Doubts
                     </Button>
                   </Link>
-                  <Link href="/demo-booking">
+                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="lg" className="w-full">
                       <Video className="w-5 h-5 mr-2" />
                       Video Call
@@ -323,7 +323,7 @@ export default async function FacultyProfilePage({ params }: Props) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/demo-booking">
+            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
                 size="xl"

@@ -180,7 +180,7 @@ function PurchaseSuccessContent() {
             We couldn't find your order details. Please contact support.
           </p>
           <Link
-            href="/admissions"
+            href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
           >
             Back to Admissions

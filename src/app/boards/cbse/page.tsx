@@ -210,7 +210,7 @@ export default function CBSEBiologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
-                  href="/admissions"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                   className="bg-white text-blue-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto"
                 >
                   Enroll for CBSE
@@ -466,7 +466,7 @@ export default function CBSEBiologyPage() {
                 </p>
                 <div className="space-y-3">
                   <Link
-                    href="/admissions"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                     className="block bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[44px] flex items-center justify-center"
                   >
                     Enroll for CBSE

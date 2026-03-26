@@ -169,7 +169,7 @@ export default function StateBoardsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
-                  href="/admissions"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                   className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center"
                 >
                   Choose Your State Board
@@ -447,7 +447,7 @@ export default function StateBoardsPage() {
                 <p className="text-gray-600 mb-6">Complete state board program</p>
                 <div className="space-y-2 sm:space-y-3">
                   <Link
-                    href="/admissions"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                     className="block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
                   >
                     Choose Your State Board

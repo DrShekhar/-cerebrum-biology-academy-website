@@ -297,7 +297,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
-                  <Link href="/admissions">
+                  <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer">
                     <Button
                       variant="primary"
                       size="xl"

@@ -281,7 +281,7 @@ export default function InternationalProgramsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">
               <Link
-                href="/admissions"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                 className="bg-white text-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center text-base sm:text-lg min-h-[44px] w-full sm:w-auto"
               >
                 Start Global Journey
@@ -558,7 +558,7 @@ export default function InternationalProgramsPage() {
                   </div>
 
                   <Link
-                    href="/admissions"
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base min-h-[44px] ${
                       tier.popular
                         ? 'bg-purple-600 text-white hover:bg-purple-700'
@@ -712,7 +712,7 @@ export default function InternationalProgramsPage() {
 
             <div className="space-y-3 sm:space-y-4">
               <Link
-                href="/admissions"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
                 className="block w-full bg-white text-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-base sm:text-lg min-h-[44px]"
               >
                 Start Your Global Application - No Commitment Required

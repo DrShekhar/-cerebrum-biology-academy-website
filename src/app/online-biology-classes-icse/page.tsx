@@ -107,7 +107,7 @@ export default function OnlineBiologyClassesICSEPage() {
             <p className="mb-8 text-xl text-purple-100">{board.heroSubtitle}</p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/demo-booking"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-yellow-500 px-8 py-3 font-semibold text-black shadow-lg transition hover:bg-yellow-400"
               >
                 <Play className="h-5 w-5" />
@@ -346,7 +346,7 @@ export default function OnlineBiologyClassesICSEPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/demo-booking"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg bg-yellow-500 px-8 py-3 font-semibold text-black shadow-lg transition hover:bg-yellow-400"
               >
                 <Play className="h-5 w-5" />

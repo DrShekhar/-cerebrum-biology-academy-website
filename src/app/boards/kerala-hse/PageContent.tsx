@@ -117,7 +117,7 @@ export default function PageContent() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/admissions"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details." target="_blank" rel="noopener noreferrer"
                   className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
                 >
                   Enroll for Kerala HSE
@@ -246,7 +246,7 @@ export default function PageContent() {
                 <div className="text-3xl font-bold text-green-600 mb-4">{plan.price}</div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 <Link
-                  href="/admissions"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details." target="_blank" rel="noopener noreferrer"
                   className="block bg-green-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 >
                   Enroll Now
@@ -305,7 +305,7 @@ export default function PageContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/admissions"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details." target="_blank" rel="noopener noreferrer"
               className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
             >
               Start Your Journey
