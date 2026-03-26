@@ -279,16 +279,16 @@ export function CityHubPage({ data }: CityHubPageProps) {
 
               {/* Primary CTAs */}
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                <Link
-                  href="/demo-booking"
+                <WhatsAppCTAButton
+                  source={`city-hub-hero-demo-${data.slug}`}
+                  message={`Hi! I want to book a FREE demo class for NEET Biology coaching in ${data.cityName}. Please share available timings.`}
+                  campaign="city-hub-demo"
+                  label="Book FREE Demo Class"
                   className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
-                >
-                  Book FREE Demo Class
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                />
                 <WhatsAppCTAButton
                   source={`city-hub-hero-${data.slug}`}
-                  message={`Hi! I'm interested in NEET Biology coaching in ${data.cityName}`}
+                  message={`Hi! I'm interested in NEET Biology coaching in ${data.cityName}. Please share course details and fee structure.`}
                   campaign="city-hub"
                   label="WhatsApp Us"
                   className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-4 py-3 text-base font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer sm:px-8 sm:py-4 sm:text-lg"
@@ -776,16 +776,16 @@ export function CityHubPage({ data }: CityHubPageProps) {
             </div>
 
             <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
-              <Link
-                href="/demo-booking"
+              <WhatsAppCTAButton
+                source={`city-hub-cta-demo-${data.slug}`}
+                message={`Hi! I want to book a FREE demo class in ${data.cityName}. Please share available timings.`}
+                campaign="city-hub-cta-demo"
+                label="Book Free Demo Class"
                 className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
-              >
-                Book Free Demo Class
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              />
               <WhatsAppCTAButton
                 source={`city-hub-cta-${data.slug}`}
-                message={`Hi! I'm from ${data.cityName} and interested in NEET Biology coaching`}
+                message={`Hi! I'm from ${data.cityName} and interested in NEET Biology coaching. Please share details.`}
                 campaign="city-hub-cta"
                 label="WhatsApp Us Now"
                 className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-4 py-3 text-base font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer sm:px-8 sm:py-4 sm:text-lg"
