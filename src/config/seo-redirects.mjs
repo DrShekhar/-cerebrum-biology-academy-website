@@ -3592,20 +3592,20 @@ export const rohiniConsolidationRedirects = [
     permanent: true,
   },
 
-  // Biology class-specific → /biology-tutor-rohini (3)
+  // Biology class-specific → /biology-tuition-rohini (covers Class 11, 12, CBSE, NEET)
   {
     source: '/class-9-biology-tuition-rohini',
-    destination: '/biology-tutor-rohini',
+    destination: '/biology-tuition-rohini',
     permanent: true,
   },
   {
     source: '/class-10-biology-tuition-rohini',
-    destination: '/biology-tutor-rohini',
+    destination: '/biology-tuition-rohini',
     permanent: true,
   },
   {
     source: '/12th-board-biology-coaching-rohini',
-    destination: '/biology-tutor-rohini',
+    destination: '/biology-tuition-rohini',
     permanent: true,
   },
 ]
