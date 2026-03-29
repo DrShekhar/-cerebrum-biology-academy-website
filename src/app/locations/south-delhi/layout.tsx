@@ -163,40 +163,40 @@ function SouthDelhiLocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    'name': 'Cerebrum Biology Academy - South Delhi',
-    'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
-    'url': 'https://cerebrumbiologyacademy.com/locations/south-delhi',
-    'telephone': '+91-88264-44334',
-    'email': 'info@cerebrumbiologyacademy.com',
-    'address': {
+    name: 'Cerebrum Biology Academy - South Delhi',
+    image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
+    url: 'https://cerebrumbiologyacademy.com/locations/south-delhi',
+    telephone: '+91-88264-44334',
+    email: 'info@cerebrumbiologyacademy.com',
+    address: {
       '@type': 'PostalAddress',
-      'streetAddress': 'Near South Extension',
-      'addressLocality': 'South Delhi',
-      'addressRegion': 'Delhi',
-      'postalCode': '110049',
-      'addressCountry': 'IN',
+      streetAddress: 'D 35, South Extension Part 2',
+      addressLocality: 'New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110049',
+      addressCountry: 'IN',
     },
-    'geo': {
+    geo: {
       '@type': 'GeoCoordinates',
-      'latitude': 28.5354,
-      'longitude': 77.2500,
+      latitude: 28.5678,
+      longitude: 77.2234,
     },
-    'openingHoursSpecification': [
+    openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        'opens': '00:00',
-        'closes': '23:59',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
-    'priceRange': '₹45,000 - ₹1,80,000',
-    'aggregateRating': {
+    priceRange: '₹45,000 - ₹1,80,000',
+    aggregateRating: {
       '@type': 'AggregateRating',
-      'ratingValue': '5.0',
-      'reviewCount': '38',
-      'bestRating': '5',
+      ratingValue: '5.0',
+      reviewCount: '38',
+      bestRating: '5',
     },
-    'sameAs': [
+    sameAs: [
       'https://www.youtube.com/@CerebrumBiologyAcademy',
       'https://www.instagram.com/cerebrumbiologyacademy/',
     ],
@@ -265,21 +265,36 @@ export default function SouthDelhiLocationLayout({ children }: { children: React
             ],
           }),
         }}
-      />      <script
+      />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'South Delhi', item: 'https://cerebrumbiologyacademy.com/locations/south-delhi' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'South Delhi',
+                item: 'https://cerebrumbiologyacademy.com/locations/south-delhi',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )
