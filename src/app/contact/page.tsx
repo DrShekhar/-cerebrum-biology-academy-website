@@ -53,7 +53,7 @@ const contactFAQs = [
   {
     question: 'What are the center locations for Cerebrum Biology Academy?',
     answer:
-      'We have centers in South Delhi (Greater Kailash II), Rohini, and Gurugram. All centers have experienced AIIMS faculty and follow the same curriculum. We also offer online classes for students across India.',
+      'We have 4 centers across Delhi NCR — South Extension Part 2 (Delhi), Rohini DC Chowk (Delhi), Gurugram Sector 51 (Haryana), and Faridabad Sector 17 (Haryana). All centers have experienced AIIMS faculty and follow the same curriculum. We also offer online classes for students across India and worldwide.',
   },
   {
     question: 'What are the office hours for contacting Cerebrum Academy?',
@@ -146,7 +146,11 @@ export default function ContactPage() {
                 className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
                 style={{ animationDelay: '0.4s' }}
               >
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button
                     variant="outline"
                     size="lg"

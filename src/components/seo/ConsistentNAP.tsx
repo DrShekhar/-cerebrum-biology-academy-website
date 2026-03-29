@@ -49,9 +49,10 @@ const BUSINESS_INFO = {
     },
     {
       name: 'Cerebrum Biology Academy - Faridabad',
-      address: 'Sector 17, Faridabad - 121002',
+      address:
+        'SCF-124-125, 2nd Floor, Above Union Bank, HUDA Market, Sector 17, Faridabad - 121002',
       phone: CONTACT_INFO.phone.formatted.primary,
-      geo: { lat: '28.3870', lng: '77.3070' },
+      geo: { lat: '28.4089', lng: '77.3178' },
     },
     {
       name: 'Cerebrum Biology Academy - Noida',
