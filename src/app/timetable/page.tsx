@@ -571,27 +571,28 @@ export default function TimetablePage() {
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="border-b border-gray-200 bg-white shadow-sm">
-        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-3">
+        <div className="mx-auto max-w-7xl px-3 py-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 sm:gap-3 min-w-0">
               <Link
                 href="/"
-                className="flex items-center gap-1 text-gray-600 hover:text-indigo-600"
+                className="flex shrink-0 items-center gap-1 text-gray-600 hover:text-indigo-600"
               >
                 <ArrowLeft className="h-5 w-5" />
-                <span className="hidden sm:inline">Back</span>
               </Link>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900 sm:text-2xl">Batch Timetable</h1>
-                <p className="text-sm text-gray-500">Cerebrum Biology Academy</p>
+              <div className="min-w-0">
+                <h1 className="text-lg font-bold text-gray-900 sm:text-2xl truncate">
+                  Batch Timetable
+                </h1>
+                <p className="text-xs text-gray-500 sm:text-sm">Cerebrum Biology Academy</p>
               </div>
             </div>
             <a
               href={getPhoneLink()}
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-indigo-600 px-3 py-2 text-xs font-medium text-white hover:bg-indigo-700 sm:gap-2 sm:px-4 sm:text-sm"
             >
-              <Phone className="h-4 w-4" />
-              Contact: {getDisplayPhone()}
+              <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+              <span className="hidden sm:inline">Contact:</span> {getDisplayPhone()}
             </a>
           </div>
         </div>
@@ -600,38 +601,54 @@ export default function TimetablePage() {
       {/* Tabs */}
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <nav className="-mb-px flex space-x-1 overflow-x-auto py-2" aria-label="Tabs">
-            {tabConfig.map(({ type, icon: Icon, label }) => {
-              const isSelected = selectedClassType === type
-              const tabColors = classTypeColors[type]
-              const count =
-                type === 'PINNACLE_ZA'
-                  ? allCombinations.length
-                  : batches.filter((b) => b.classType === type).length
+          <div className="relative">
+            <nav
+              className="-mb-px flex gap-1.5 overflow-x-auto py-2 scrollbar-hide snap-x snap-mandatory"
+              aria-label="Tabs"
+              style={{
+                WebkitOverflowScrolling: 'touch',
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+              }}
+            >
+              {tabConfig.map(({ type, icon: Icon, label }) => {
+                const isSelected = selectedClassType === type
+                const tabColors = classTypeColors[type]
+                const count =
+                  type === 'PINNACLE_ZA'
+                    ? allCombinations.length
+                    : batches.filter((b) => b.classType === type).length
 
-              return (
-                <button
-                  key={type}
-                  onClick={() => setSelectedClassType(type)}
-                  className={`flex items-center gap-2 whitespace-nowrap rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
-                    isSelected
-                      ? `${tabColors.tab} text-white shadow-md`
-                      : 'text-gray-600 hover:bg-gray-100'
-                  }`}
-                >
-                  <Icon className="h-4 w-4" />
-                  {label}
-                  <span
-                    className={`rounded-full px-2 py-0.5 text-xs ${
-                      isSelected ? 'bg-white/20' : 'bg-gray-200'
+                return (
+                  <button
+                    key={type}
+                    type="button"
+                    onClick={() => setSelectedClassType(type)}
+                    className={`flex shrink-0 snap-start items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium transition-all ${
+                      isSelected
+                        ? `${tabColors.tab} text-white shadow-md`
+                        : 'text-gray-600 hover:bg-gray-100'
                     }`}
                   >
-                    {count}
-                  </span>
-                </button>
-              )
-            })}
-          </nav>
+                    <Icon className="h-4 w-4" />
+                    <span className="hidden sm:inline">{label}</span>
+                    <span className="sm:hidden">
+                      {label.replace('Class ', '').replace('Olympiad', '')}
+                    </span>
+                    <span
+                      className={`rounded-full px-1.5 py-0.5 text-xs ${
+                        isSelected ? 'bg-white/20' : 'bg-gray-200'
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                )
+              })}
+            </nav>
+            {/* Scroll fade hint on right */}
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white to-transparent sm:hidden" />
+          </div>
         </div>
       </div>
 
@@ -786,7 +803,7 @@ export default function TimetablePage() {
                   ({filteredBatches.length} batches)
                 </span>
               </h2>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {filteredBatches.map((batch) => (
                   <BatchCard key={batch.id} batch={batch} selectedLocation={selectedLocation} />
                 ))}
