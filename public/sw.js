@@ -2,33 +2,20 @@
 // Optimized for Indian mobile networks and offline learning
 // Enhanced with counselor CRM offline support
 
-const CACHE_NAME = 'cerebrum-biology-v5'
+const CACHE_NAME = 'cerebrum-biology-v6'
 const OFFLINE_URL = '/offline'
 
 // Critical resources to cache immediately
 const CRITICAL_RESOURCES = [
   '/',
   '/offline',
-  '/courses',
-  '/mock-tests',
-  '/claudechat',
-  '/counselor/leads',
-  '/counselor/tasks',
-  '/_next/static/css/app.css',
-  '/_next/static/js/app.js',
   '/manifest.json',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',
 ]
 
 // Test-specific resources for offline capability
-const TEST_RESOURCES = [
-  '/components/mobile/MobileTestInterface',
-  '/api/tests/sample-biology-test',
-  '/api/mock-tests/class-11',
-  '/api/mock-tests/class-12',
-  '/api/mock-tests/dropper',
-]
+const TEST_RESOURCES = []
 
 // Additional resources to cache on demand
 const CACHE_STRATEGIES = {
@@ -144,7 +131,7 @@ self.addEventListener('fetch', (event) => {
   } else if (isAPIRequest(url)) {
     event.respondWith(networkFirstStrategy(request))
   } else if (isPageRequest(url)) {
-    event.respondWith(staleWhileRevalidateStrategy(request))
+    event.respondWith(networkFirstStrategy(request))
   } else {
     event.respondWith(networkOnlyStrategy(request))
   }

@@ -561,7 +561,10 @@ function AdaptiveLearningPathsComponent() {
             Your personalized study plan is ready! We'll track your progress and provide adaptive
             recommendations.
           </p>
-          <button className="bg-green-600 text-white py-2 px-6 rounded-lg font-medium hover:bg-green-700 transition-colors">
+          <button
+            type="button"
+            className="bg-green-600 text-white py-2 px-6 rounded-lg font-medium hover:bg-green-700 transition-colors"
+          >
             Book Demo Class to Get Started
           </button>
         </div>

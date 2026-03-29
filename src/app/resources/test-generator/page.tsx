@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import {
   BookOpen,
@@ -473,9 +474,9 @@ export default function TestGeneratorPage() {
       <div className="bg-[#4a5d4a] text-white py-2 px-4 text-center text-sm">
         <span className="font-medium">Self-Practice Mode</span> - Practice at your own pace. For
         official tests assigned by your teacher, check your{' '}
-        <a href="/student/dashboard" className="underline hover:no-underline">
+        <Link href="/student/dashboard" className="underline hover:no-underline">
           Student Dashboard
-        </a>
+        </Link>
       </div>
 
       {/* Header */}

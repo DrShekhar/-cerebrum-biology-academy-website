@@ -4,7 +4,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import Link from 'next/link'
-import { useSession } from 'next-auth/react'
+import { useSession, signOut } from 'next-auth/react'
 import { LayoutDashboard, Users, DollarSign, Link2, Menu, X, LogOut, Bell } from 'lucide-react'
 
 const navItems = [
@@ -123,7 +123,7 @@ function ConsultantAuthWrapper({ children }: { children: React.ReactNode }) {
 
               {/* Logout Button */}
               <button
-                onClick={() => router.push('/api/auth/signout')}
+                onClick={() => signOut({ callbackUrl: '/' })}
                 className="hidden sm:flex p-2 hover:bg-gray-100 rounded-lg transition-colors"
                 title="Sign Out"
               >
@@ -170,7 +170,7 @@ function ConsultantAuthWrapper({ children }: { children: React.ReactNode }) {
               })}
               <hr className="my-2" />
               <button
-                onClick={() => router.push('/api/auth/signout')}
+                onClick={() => signOut({ callbackUrl: '/' })}
                 className="flex items-center gap-3 w-full px-4 py-3 text-sm font-medium text-red-600 hover:bg-red-50 rounded-lg transition-colors"
               >
                 <LogOut className="w-5 h-5" />

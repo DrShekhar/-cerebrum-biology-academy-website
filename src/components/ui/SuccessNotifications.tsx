@@ -114,7 +114,7 @@ export function SuccessNotifications({
     ]
 
     const newNotification: SuccessNotification = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: `notif-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
       message: successStory.message,
       timestamp: successStory.timestamp,
       student: successStory.student,
@@ -167,9 +167,7 @@ export function SuccessNotifications({
   return (
     <div className="fixed top-20 right-4 z-50 space-y-3 max-w-sm">
       {/* Live Stats Counter */}
-      <div
-        className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-lg shadow-lg animate-fadeInUp"
-      >
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-lg shadow-lg animate-fadeInUp">
         <div className="flex items-center mb-2">
           <TrendingUp className="w-5 h-5 mr-2" />
           <span className="font-semibold text-sm">Live Success Updates</span>
@@ -187,66 +185,64 @@ export function SuccessNotifications({
       </div>
 
       {/* Success Notifications */}
-{notifications.map((notification, index) => (
-          <div
-            key={notification.id}
-            className={`relative bg-white rounded-lg shadow-lg border-l-4 p-4 ${getNotificationColor(notification.type)}`}
-            style={{ maxWidth: '320px' }}
+      {notifications.map((notification, index) => (
+        <div
+          key={notification.id}
+          className={`relative bg-white rounded-lg shadow-lg border-l-4 p-4 ${getNotificationColor(notification.type)}`}
+          style={{ maxWidth: '320px' }}
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => removeNotification(notification.id)}
+            className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
           >
-            {/* Close Button */}
-            <button
-              onClick={() => removeNotification(notification.id)}
-              className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              <X className="w-4 h-4" />
-            </button>
+            <X className="w-4 h-4" />
+          </button>
 
-            {/* Notification Content */}
-            <div className="pr-6">
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 mt-1">{getNotificationIcon(notification.type)}</div>
+          {/* Notification Content */}
+          <div className="pr-6">
+            <div className="flex items-start space-x-3">
+              <div className="flex-shrink-0 mt-1">{getNotificationIcon(notification.type)}</div>
 
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-900 leading-relaxed">
-                    {notification.message}
-                  </p>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium text-gray-900 leading-relaxed">
+                  {notification.message}
+                </p>
 
-                  {/* Additional Details */}
-                  <div className="mt-2 space-y-1">
-                    <div className="flex items-center text-xs text-gray-500">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      <span>{notification.student.location}</span>
-                      {notification.student.score && (
-                        <>
-                          <span className="mx-2">•</span>
-                          <Star className="w-3 h-3 mr-1" />
-                          <span>Score: {notification.student.score}</span>
-                        </>
-                      )}
-                    </div>
+                {/* Additional Details */}
+                <div className="mt-2 space-y-1">
+                  <div className="flex items-center text-xs text-gray-500">
+                    <MapPin className="w-3 h-3 mr-1" />
+                    <span>{notification.student.location}</span>
+                    {notification.student.score && (
+                      <>
+                        <span className="mx-2">•</span>
+                        <Star className="w-3 h-3 mr-1" />
+                        <span>Score: {notification.student.score}</span>
+                      </>
+                    )}
+                  </div>
 
-                    <div className="flex items-center text-xs text-gray-500">
-                      <Calendar className="w-3 h-3 mr-1" />
-                      <span>Just now</span>
-                      <span className="mx-2">•</span>
-                      <span className="text-green-600 font-medium">Cerebrum Student</span>
-                    </div>
+                  <div className="flex items-center text-xs text-gray-500">
+                    <Calendar className="w-3 h-3 mr-1" />
+                    <span>Just now</span>
+                    <span className="mx-2">•</span>
+                    <span className="text-green-600 font-medium">Cerebrum Student</span>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Pulse animation for new notifications */}
-            <div
-              className="absolute inset-0 rounded-lg bg-blue-200 opacity-20 animate-pulse pointer-events-none"
-              style={{ animation: 'pulse 2s ease-in-out' }}
-            />
           </div>
-        ))}
-{/* Cerebrum Branding */}
-      <div
-        className="text-center animate-fadeInUp"
-      >
+
+          {/* Pulse animation for new notifications */}
+          <div
+            className="absolute inset-0 rounded-lg bg-blue-200 opacity-20 animate-pulse pointer-events-none"
+            style={{ animation: 'pulse 2s ease-in-out' }}
+          />
+        </div>
+      ))}
+      {/* Cerebrum Branding */}
+      <div className="text-center animate-fadeInUp">
         <p className="text-xs text-gray-500">
           Powered by <span className="font-semibold text-purple-600">Cerebrum Biology Academy</span>
         </p>
@@ -311,7 +307,7 @@ export function SuccessTicker({ useCoordination = false }: SuccessTickerProps) {
     }
 
     // Mobile ticker gets priority on mobile
-    const isMobile = window.innerWidth <= 768
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768
     if (isMobile && popupCoordinator.canShowPopup('mobile_ticker')) {
       if (popupCoordinator.showPopup('mobile_ticker')) {
         setCoordinationActive(true)
@@ -355,9 +351,7 @@ export function SuccessTicker({ useCoordination = false }: SuccessTickerProps) {
 
   return (
     <div className="md:hidden fixed bottom-4 left-4 right-4 z-40">
-      <div
-        className="bg-[#4a5d4a] text-white p-2.5 rounded-lg shadow-lg animate-fadeInUp"
-      >
+      <div className="bg-[#4a5d4a] text-white p-2.5 rounded-lg shadow-lg animate-fadeInUp">
         <div className="flex items-center">
           <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
           <p className="text-xs font-medium truncate">{currentStory}</p>
