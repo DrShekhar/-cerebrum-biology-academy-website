@@ -118,8 +118,7 @@ export default function RohiniLocationPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
-            >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Train className="w-4 h-4" />
                 North Delhi Center
@@ -203,8 +202,7 @@ export default function RohiniLocationPage() {
                   desc: '150+ NEET selections from this center',
                 },
               ].map((item, idx) => (
-                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp">
                   <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-red-600" />
                   </div>
@@ -223,13 +221,14 @@ export default function RohiniLocationPage() {
               {/* Map */}
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
                 <LazyGoogleMap
-                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499!2d77.102!3d28.704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDC+Chowk+Rohini!5e0!3m2!1sen!2sin!4v1234567890"
+                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.123!2d77.1025!3d28.7041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0147e0000001%3A0xdc_chowk_rohini!2sVikas%20Surya%20Tower%2C%20DC%20Chowk%2C%20Rohini%20Sector%209!5e0!3m2!1sen!2sin!4v1710000000000"
                   title="Rohini NEET Coaching Center"
                   height={350}
                   placeholder={{
-                    lat: 28.704,
-                    lng: 77.102,
-                    address: "Vikas Surya Tower, DC Chowk, Rohini, Delhi"
+                    lat: 28.7041,
+                    lng: 77.1025,
+                    address:
+                      'Cerebrum Biology Academy, 211 Vikas Surya Tower, DC Chowk, Rohini Sector 9',
                   }}
                 />
                 <div className="p-6">
@@ -371,8 +370,7 @@ export default function RohiniLocationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
-                >
+                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp">
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
                 </div>
@@ -387,19 +385,42 @@ export default function RohiniLocationPage() {
         {/* Other Centers */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
-              Our Other Centers
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Our Other Centers</h2>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
               Cerebrum Biology Academy has 4 centers across Delhi-NCR. Visit the one nearest to you.
             </p>
             <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {[
-                { name: 'South Extension (Flagship)', slug: 'south-extension', city: 'New Delhi', highlight: 'Flagship Center' },
-                { name: 'Gurugram - Sector 51', slug: 'gurugram', city: 'Gurugram', highlight: 'Haryana' },
-                { name: 'Faridabad - Sector 17', slug: 'faridabad', city: 'Faridabad', highlight: 'Haryana' },
-                { name: 'Noida (Sector 62)', slug: 'noida', city: 'Noida', highlight: '~50 min from Rohini' },
-                { name: 'Ghaziabad (Online + Hybrid)', slug: 'ghaziabad', city: 'Ghaziabad', highlight: 'Online classes for Ghaziabad students' },
+                {
+                  name: 'South Extension (Flagship)',
+                  slug: 'south-extension',
+                  city: 'New Delhi',
+                  highlight: 'Flagship Center',
+                },
+                {
+                  name: 'Gurugram - Sector 51',
+                  slug: 'gurugram',
+                  city: 'Gurugram',
+                  highlight: 'Haryana',
+                },
+                {
+                  name: 'Faridabad - Sector 17',
+                  slug: 'faridabad',
+                  city: 'Faridabad',
+                  highlight: 'Haryana',
+                },
+                {
+                  name: 'Noida (Sector 62)',
+                  slug: 'noida',
+                  city: 'Noida',
+                  highlight: '~50 min from Rohini',
+                },
+                {
+                  name: 'Ghaziabad (Online + Hybrid)',
+                  slug: 'ghaziabad',
+                  city: 'Ghaziabad',
+                  highlight: 'Online classes for Ghaziabad students',
+                },
               ].map((center) => (
                 <Link
                   key={center.slug}
@@ -409,7 +430,9 @@ export default function RohiniLocationPage() {
                   <MapPin className="w-8 h-8 text-red-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <h3 className="font-bold text-gray-900 mb-1">{center.name}</h3>
                   <p className="text-sm text-gray-500">{center.city}</p>
-                  <span className="inline-block mt-2 text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full">{center.highlight}</span>
+                  <span className="inline-block mt-2 text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full">
+                    {center.highlight}
+                  </span>
                 </Link>
               ))}
             </div>
