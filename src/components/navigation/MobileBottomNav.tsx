@@ -13,6 +13,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
   Home,
+  Phone,
   BarChart3,
   MessageCircle,
   User,
@@ -103,16 +104,15 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
     },
     {
       icon: BookOpen,
-      label: 'Tests',
-      href: '/mock-tests',
-      ariaLabel: 'Navigate to mock tests page',
+      label: 'Courses',
+      href: '/courses',
+      ariaLabel: 'Browse our courses',
     },
     {
-      icon: BarChart3,
-      label: 'Progress',
-      href: '/dashboard/student',
-      requiresAuth: true,
-      ariaLabel: 'View your progress dashboard',
+      icon: Phone,
+      label: 'Call',
+      href: 'tel:+918826444334',
+      ariaLabel: 'Call us now',
     },
     {
       icon: MessageCircle,
@@ -177,6 +177,21 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
           {bottomNavItems.map((item) => {
             const Icon = item.icon
             const active = isActive(item.href)
+
+            if (item.label === 'Call') {
+              return (
+                <a
+                  key={item.label}
+                  href="tel:+918826444334"
+                  className="flex flex-col items-center gap-1 transition-colors min-w-[44px] min-h-[44px] justify-center text-blue-600 hover:text-blue-700 relative"
+                  aria-label={item.ariaLabel}
+                >
+                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse" />
+                  <Icon className="w-6 h-6" aria-hidden="true" />
+                  <span className="text-xs font-bold">{item.label}</span>
+                </a>
+              )
+            }
 
             if (item.label === 'WhatsApp') {
               return (
