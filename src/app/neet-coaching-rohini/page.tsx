@@ -78,7 +78,7 @@ const faqStructuredData = {
       name: 'How can Rohini students reach Cerebrum Biology Academy?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Students from Rohini can take the Red Line Metro from Rohini East/West stations to Rajiv Chowk, then change to Yellow Line towards Hauz Khas. From Hauz Khas, our Panchsheel Enclave center is a short auto ride. Total journey is approximately 60-70 minutes.',
+        text: 'Our Rohini center is at 211 Vikas Surya Tower, DC Chowk, Sector 9 — just a 3-minute walk from Rohini West Metro Station (Red Line). Students from all Rohini sectors, Pitampura, Shalimar Bagh, and Prashant Vihar can reach us within 10-20 minutes.',
       },
     },
     {
@@ -101,18 +101,15 @@ const faqStructuredData = {
 }
 
 const rohiniAreas = [
-  { name: 'Sector 3-5 Rohini', distance: '60 min via Metro', description: 'Residential hub' },
-  { name: 'Sector 7-8 Rohini', distance: '60 min via Metro', description: 'Near Rithala Metro' },
-  { name: 'Sector 11-14 Rohini', distance: '65 min via Metro', description: 'Central Rohini' },
-  {
-    name: 'Sector 15-18 Rohini',
-    distance: '65 min via Metro',
-    description: 'Near Rohini West',
-  },
-  { name: 'Sector 22-24 Rohini', distance: '70 min via Metro', description: 'Near Samaypur' },
-  { name: 'Pitampura', distance: '55 min via Metro', description: 'Adjacent to Rohini' },
-  { name: 'Shalimar Bagh', distance: '60 min via Metro', description: 'Near Netaji Subhash' },
-  { name: 'Prashant Vihar', distance: '65 min via Metro', description: 'North Delhi hub' },
+  { name: 'Sector 3-5 Rohini', distance: '10 min by auto', description: 'Residential hub' },
+  { name: 'Sector 7-8 Rohini', distance: '5 min walk', description: 'Near Rithala Metro' },
+  { name: 'Sector 9 (DC Chowk)', distance: '3 min walk', description: 'Center location' },
+  { name: 'Sector 11-14 Rohini', distance: '10 min by auto', description: 'Central Rohini' },
+  { name: 'Sector 15-18 Rohini', distance: '8 min by auto', description: 'Near Rohini West Metro' },
+  { name: 'Sector 22-24 Rohini', distance: '15 min by auto', description: 'Near Samaypur Badli' },
+  { name: 'Pitampura', distance: '15 min by metro', description: 'Red Line — 2 stops' },
+  { name: 'Shalimar Bagh', distance: '12 min by auto', description: 'Adjacent to Rohini' },
+  { name: 'Prashant Vihar', distance: '10 min by auto', description: 'North Delhi hub' },
 ]
 
 const features = [
