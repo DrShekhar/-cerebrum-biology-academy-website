@@ -296,11 +296,32 @@ export default async function middleware(req: NextRequest) {
     }
   }
 
+  // SEO: Add X-Robots-Tag headers for query-param and transactional pages.
+  // Must be called BEFORE early returns so public routes also get noindex on filtered URLs.
+  function addRobotsHeaders(response: NextResponse) {
+    const searchParams = req.nextUrl.searchParams
+    const hasSearchQuery = searchParams.has('search') || searchParams.has('q')
+    const hasFilterQuery = searchParams.has('source')
+    if (hasSearchQuery || hasFilterQuery) {
+      response.headers.set('X-Robots-Tag', 'noindex, follow')
+    }
+    if (
+      req.nextUrl.search &&
+      (pathname.startsWith('/demo-booking') ||
+        pathname.startsWith('/enrollments') ||
+        pathname.startsWith('/neet-biology-mcq') ||
+        pathname.startsWith('/thank-you'))
+    ) {
+      response.headers.set('X-Robots-Tag', 'noindex, follow')
+    }
+  }
+
   // PERFORMANCE: Check public routes BEFORE JWT verification to skip auth on 90%+ of traffic
   if (isPublicRoute(pathname)) {
     const response = NextResponse.next()
     addSecurityHeaders(response)
     addCSPHeaders(response)
+    addRobotsHeaders(response)
     response.cookies.set('x-pathname', pathname, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
@@ -317,6 +338,7 @@ export default async function middleware(req: NextRequest) {
     const response = NextResponse.next()
     addSecurityHeaders(response)
     addCSPHeaders(response)
+    addRobotsHeaders(response)
     response.cookies.set('x-pathname', pathname, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
