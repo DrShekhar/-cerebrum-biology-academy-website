@@ -120,10 +120,10 @@ export default function NEETCoachingHUDACityCentreMetroPage() {
     telephone: CONTACT_INFO.phone.primary,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'South Extension Part 2',
-      addressLocality: 'New Delhi',
-      addressRegion: 'Delhi',
-      postalCode: '110049',
+      streetAddress: 'Unit 17, M2K Corporate Park, Sector 51',
+      addressLocality: 'Gurugram',
+      addressRegion: 'Haryana',
+      postalCode: '122003',
       addressCountry: 'IN',
     },
     geo: {
@@ -147,7 +147,12 @@ export default function NEETCoachingHUDACityCentreMetroPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,

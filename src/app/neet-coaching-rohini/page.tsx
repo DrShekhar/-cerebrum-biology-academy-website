@@ -189,7 +189,9 @@ export default function NEETCoachingRohiniPage() {
                   Call: 8826444334
                 </Link>
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition-colors border border-white/30"
                 >
                   Book Free Demo Class
@@ -268,16 +270,16 @@ export default function NEETCoachingRohiniPage() {
                   <Train className="w-6 h-6 text-red-600" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Metro Route from Rohini</h3>
+                  <h3 className="font-bold text-gray-800 mb-2">Reach Our Rohini Center</h3>
                   <p className="text-gray-600">
-                    <strong>Red Line:</strong> Rohini East/West → Rajiv Chowk (Direct)
+                    <strong>Red Line Metro:</strong> Alight at Rohini West Metro Station
                     <br />
-                    <strong>Yellow Line:</strong> Rajiv Chowk → Hauz Khas
+                    <strong>Walk:</strong> 3-minute walk to DC Chowk, Sector 9
                     <br />
-                    <strong>Then:</strong> Short auto/cab to Panchsheel Enclave (5 min)
+                    <strong>Landmark:</strong> 211 Vikas Surya Tower, opposite DC Chowk
                     <br />
                     <span className="text-green-600 font-medium">
-                      Total journey: 60-70 minutes from most Rohini sectors
+                      Just 3 minutes from Rohini West Metro (Red Line)
                     </span>
                   </p>
                 </div>
@@ -564,9 +566,9 @@ export default function NEETCoachingRohiniPage() {
                     <p className="text-gray-600 text-sm">
                       Cerebrum Biology Academy
                       <br />
-                      Panchsheel Enclave, South Extension
+                      211 Vikas Surya Tower, DC Chowk, Sector 9
                       <br />
-                      New Delhi - 110017
+                      Rohini, Delhi - 110085
                     </p>
                   </div>
                   <div>
@@ -668,7 +670,9 @@ export default function NEETCoachingRohiniPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-green-700 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors"
                 >
                   Book Free Demo Class

@@ -259,7 +259,11 @@ export default function NeetCoachingFaridabadPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -830,7 +834,8 @@ export default function NeetCoachingFaridabadPage() {
                   placeholder={{
                     lat: 28.4089,
                     lng: 77.3178,
-                    address: 'Cerebrum Biology Academy, SCF-124-125, Huda Market, Sector 17, Faridabad',
+                    address:
+                      'Cerebrum Biology Academy, SCF-124-125, Huda Market, Sector 17, Faridabad',
                   }}
                 />
               </div>
@@ -838,7 +843,8 @@ export default function NeetCoachingFaridabadPage() {
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 mr-2 text-blue-600 mt-1 flex-shrink-0" />
                   <span>
-                    <strong>Physical Center:</strong> South Extension, New Delhi
+                    <strong>Physical Center:</strong> SCF-124-125, 2nd Floor, Above Union Bank, HUDA
+                    Market, Sector 17, Faridabad
                   </span>
                 </div>
                 <div className="flex items-start">
@@ -1735,7 +1741,11 @@ export default function NeetCoachingFaridabadPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
