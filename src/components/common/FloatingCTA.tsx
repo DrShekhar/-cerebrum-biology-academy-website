@@ -134,16 +134,17 @@ export const FloatingCTA = memo(function FloatingCTA() {
         </div>
       </div>
 
-      {/* ===== DESKTOP: Compact Circle Buttons ===== */}
-      <div className="hidden lg:flex fixed bottom-8 right-8 z-[70] flex-col items-end gap-4">
+      {/* ===== DESKTOP/TABLET: Compact Circle Buttons ===== */}
+      {/* Positioned higher on tablets (bottom-32) to avoid overlapping page CTAs */}
+      <div className="hidden lg:flex fixed bottom-32 xl:bottom-8 right-4 xl:right-8 z-[70] flex-col items-end gap-3">
         {/* Desktop Call Button — small circle */}
         <a
           href={getPhoneLink()}
           onClick={handleDesktopCallClick}
-          className="group relative flex items-center justify-center w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg text-white transition-all duration-300 hover:scale-110 hover:shadow-xl outline-none focus:ring-0"
+          className="group relative flex items-center justify-center w-12 h-12 xl:w-14 xl:h-14 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg text-white transition-all duration-300 hover:scale-110 hover:shadow-xl outline-none focus:ring-0"
           aria-label="Call Dr. Shekhar"
         >
-          <Phone className="w-6 h-6" />
+          <Phone className="w-5 h-5 xl:w-6 xl:h-6" />
           <span className="absolute right-full mr-3 whitespace-nowrap rounded-lg bg-gray-900 px-3 py-1.5 text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             Call Now
           </span>
@@ -152,10 +153,10 @@ export const FloatingCTA = memo(function FloatingCTA() {
         {/* Desktop WhatsApp Button — small circle */}
         <button
           onClick={(e) => handleDesktopWhatsAppClick(e, 'desktop-floating-cta')}
-          className="group relative flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg text-white transition-all duration-300 hover:scale-110 hover:shadow-xl outline-none focus:ring-0"
+          className="group relative flex items-center justify-center w-12 h-12 xl:w-14 xl:h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg text-white transition-all duration-300 hover:scale-110 hover:shadow-xl outline-none focus:ring-0"
           aria-label={`${CTA_COPY.desktop.primary} on WhatsApp`}
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-5 h-5 xl:w-6 xl:h-6" />
           <span className="absolute right-full mr-3 whitespace-nowrap rounded-lg bg-gray-900 px-3 py-1.5 text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             Chat on WhatsApp
           </span>
