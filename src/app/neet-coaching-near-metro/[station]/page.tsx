@@ -515,6 +515,436 @@ const metroStationData: Record<string, MetroStationData> = {
       },
     ],
   },
+
+  // ============================================
+  // Gurugram Metro Stations — All near Sector 51 center
+  // ============================================
+  'huda-city-centre-metro': {
+    name: 'HUDA City Centre Metro',
+    slug: 'huda-city-centre-metro',
+    line: 'Yellow Line',
+    lineColor: 'yellow',
+    area: 'Gurugram',
+    description:
+      'HUDA City Centre is the terminal station of Delhi Metro Yellow Line in Gurugram. Direct connection from Delhi. Our Sector 51 center is just 15 minutes away via Rapid Metro or auto.',
+    studentCount: '220+',
+    coordinates: { lat: '28.4595', lng: '77.0724' },
+    nearbyAreas: ['Sector 43', 'Sector 44', 'Sector 56', 'Sushant Lok', 'South City 1'],
+    travelTime: '15 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near HUDA City Centre Metro?',
+        answer:
+          'Yes! Our Gurugram center at M2K Corporate Park, Sector 51 is 15 minutes from HUDA City Centre Metro. Take Rapid Metro to Sector 55-56 station (10 min) then 5 min walk. 220+ Gurugram students enrolled.',
+      },
+      {
+        question: 'How do Delhi students reach Gurugram center via HUDA City Centre?',
+        answer:
+          'Take Yellow Line to HUDA City Centre (terminal). Then Rapid Metro towards Sector 55-56 (10 min). Our center is 5 min walk from Sector 55-56 Rapid Metro. Total from Rajiv Chowk: 45 min.',
+      },
+      {
+        question: 'Is Gurugram center better than South Extension for HUDA area students?',
+        answer:
+          'Yes! Gurugram center saves you 1-2 hours daily commute. Same AIIMS faculty, same curriculum, smaller batches. 220+ students from Sushant Lok, Sector 43-56 attend here.',
+      },
+    ],
+  },
+  'iffco-chowk-metro': {
+    name: 'IFFCO Chowk Metro',
+    slug: 'iffco-chowk-metro',
+    line: 'Yellow Line',
+    lineColor: 'yellow',
+    area: 'Gurugram',
+    description:
+      'IFFCO Chowk is a major Gurugram junction connecting Yellow Line with Rapid Metro. Students from Sector 14, 29, MG Road, DLF Phase 1, and Old Gurugram can reach our Sector 51 center quickly.',
+    studentCount: '180+',
+    coordinates: { lat: '28.4724', lng: '77.0724' },
+    nearbyAreas: ['Sector 14', 'Sector 29', 'MG Road', 'DLF Phase 1', 'Old Gurugram'],
+    travelTime: '20 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near IFFCO Chowk Metro?',
+        answer:
+          'Yes! Our Gurugram center at Sector 51 is 20 minutes from IFFCO Chowk. Take Rapid Metro connection to Sector 55-56 station. 180+ students from IFFCO Chowk area enrolled.',
+      },
+      {
+        question: 'Which areas near IFFCO Chowk do you serve?',
+        answer:
+          'We serve Sector 14, 29, MG Road, DLF Phase 1, Old Gurugram, and Udyog Vihar. All accessible within 20 minutes of our Sector 51 center.',
+      },
+      {
+        question: 'What fee options for IFFCO Chowk area students?',
+        answer:
+          'Offline at Sector 51: Rs 48,000-98,000/year. Online: Rs 48,000/year. Hybrid (online + weekend offline): Rs 58,000/year. EMI available.',
+      },
+    ],
+  },
+  'mg-road-metro': {
+    name: 'MG Road Metro',
+    slug: 'mg-road-metro',
+    line: 'Yellow Line',
+    lineColor: 'yellow',
+    area: 'Gurugram',
+    description:
+      "MG Road Metro connects Gurugram's main commercial corridor. Students from MG Road, DLF Phase 1-2, and Sikanderpur area attend our Sector 51 center via Rapid Metro.",
+    studentCount: '140+',
+    coordinates: { lat: '28.4796', lng: '77.0826' },
+    nearbyAreas: ['MG Road', 'DLF Phase 1', 'DLF Phase 2', 'Sikanderpur', 'Sahara Mall'],
+    travelTime: '25 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near MG Road Metro Gurugram?',
+        answer:
+          'Yes! Our Sector 51 center is 25 minutes from MG Road Metro via Rapid Metro. 140+ students from MG Road, DLF Phase 1-2 area are enrolled.',
+      },
+      {
+        question: 'How do I reach Sector 51 from MG Road Metro?',
+        answer:
+          'Take Rapid Metro from MG Road towards Sector 55-56 (15 min). Our center at M2K Corporate Park is a 5 min walk from Sector 55-56 station.',
+      },
+      {
+        question: 'Do you have students from DLF Phase 1 area?',
+        answer:
+          'Yes! 165+ students from DLF Phase 1 alone attend our coaching. DLF Phase 1 is well connected via MG Road Metro and Rapid Metro to our center.',
+      },
+    ],
+  },
+  'sikanderpur-metro': {
+    name: 'Sikanderpur Metro',
+    slug: 'sikanderpur-metro',
+    line: 'Yellow Line',
+    lineColor: 'yellow',
+    area: 'Gurugram',
+    description:
+      'Sikanderpur Metro serves DLF Cyber City and connects to Rapid Metro. Students from Cyber Hub, DLF Phase 2-3, and Golf Course Road tech families attend our coaching.',
+    studentCount: '160+',
+    coordinates: { lat: '28.4824', lng: '77.0896' },
+    nearbyAreas: ['DLF Cyber City', 'DLF Phase 2', 'DLF Phase 3', 'Golf Course Road', 'Cyber Hub'],
+    travelTime: '25 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Sikanderpur Metro?',
+        answer:
+          'Yes! Our Sector 51 center is 25 minutes from Sikanderpur Metro. 160+ students from Cyber City, DLF Phase 2-3, and Golf Course Road families are enrolled.',
+      },
+      {
+        question: 'Do you serve students from Cyber City families?',
+        answer:
+          'Absolutely! Many students whose parents work at DLF Cyber Hub Fortune 500 companies attend our coaching. We offer flexible timings and premium small batches of 15 students.',
+      },
+      {
+        question: 'How do I reach your center from Sikanderpur?',
+        answer:
+          'Take Rapid Metro from Sikanderpur to Sector 55-56 (15 min). Walk 5 min to M2K Corporate Park, Sector 51. Or direct auto via Golf Course Road (20 min).',
+      },
+    ],
+  },
+  'guru-dronacharya-metro': {
+    name: 'Guru Dronacharya Metro',
+    slug: 'guru-dronacharya-metro',
+    line: 'Yellow Line',
+    lineColor: 'yellow',
+    area: 'Gurugram',
+    description:
+      "Guru Dronacharya Metro serves DLF Phase 1 and 2 — Gurugram's most established residential areas with families from top schools like The Shri Ram School and DPS Gurugram.",
+    studentCount: '130+',
+    coordinates: { lat: '28.4825', lng: '77.0962' },
+    nearbyAreas: ['DLF Phase 1', 'DLF Phase 2', 'Udyog Vihar', 'Bristol Chowk', 'Qutab Plaza'],
+    travelTime: '30 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Guru Dronacharya Metro?',
+        answer:
+          'Yes! Our Sector 51 center is 30 minutes from Guru Dronacharya Metro. 130+ students from DLF Phase 1-2 attend. Also available: 100% online classes from home.',
+      },
+      {
+        question: 'Which schools near Guru Dronacharya send students?',
+        answer:
+          'The Shri Ram School DLF Phase 3, DPS Gurugram, GD Goenka, and Heritage School students attend our NEET Biology coaching. We serve all top Gurugram schools.',
+      },
+      {
+        question: 'Is online mode better for DLF Phase 1 students?',
+        answer:
+          'Many DLF Phase 1 students choose hybrid mode — online weekdays + offline weekends at Sector 51. Saves commute and gives best of both worlds.',
+      },
+    ],
+  },
+  'sector-54-chowk-rapid-metro': {
+    name: 'Sector 54 Chowk Rapid Metro',
+    slug: 'sector-54-chowk-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      'Sector 54 Chowk Rapid Metro serves the ultra-premium Golf Course Road area. Just 10 minutes from our Sector 51 center — one of the closest metro stations.',
+    studentCount: '95+',
+    coordinates: { lat: '28.4475', lng: '77.0670' },
+    nearbyAreas: ['Sector 54', 'Golf Course Road', 'DLF Phase 5', 'DLF Magnolias', 'DLF Camellias'],
+    travelTime: '10 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Sector 54 Chowk?',
+        answer:
+          'Yes! Our center at M2K Corporate Park, Sector 51 is just 10 minutes from Sector 54 Chowk Rapid Metro. Walk or quick auto ride. 95+ students from Golf Course Road area enrolled.',
+      },
+      {
+        question: 'Do students from DLF Magnolias/Camellias attend?',
+        answer:
+          'Yes! Students from DLF Magnolias, Camellias, Aralias (Golf Course Road ultra-premium towers) attend our premium Pinnacle batch with just 10-12 students per batch.',
+      },
+      {
+        question: 'What batch sizes do you offer for Golf Course Road students?',
+        answer:
+          'Pinnacle batch: 10-12 students (Rs 98,000/year). Most Golf Course Road families prefer this for maximum personal attention from AIIMS faculty.',
+      },
+    ],
+  },
+  'sector-55-56-rapid-metro': {
+    name: 'Sector 55-56 Rapid Metro',
+    slug: 'sector-55-56-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      'Sector 55-56 Rapid Metro is the CLOSEST metro station to our center — just a 5-minute walk to M2K Corporate Park, Sector 51. The most convenient station for our students.',
+    studentCount: '250+',
+    coordinates: { lat: '28.4389', lng: '77.0573' },
+    nearbyAreas: ['Sector 55', 'Sector 56', 'Sector 57', 'South City 2', 'Sector 49', 'Sector 51'],
+    travelTime: '5 min walk to center',
+    faqs: [
+      {
+        question: 'Which metro station is closest to Cerebrum Gurugram center?',
+        answer:
+          'Sector 55-56 Rapid Metro station is the closest — just a 5-minute walk to our center at M2K Corporate Park, Sector 51. 250+ students use this station daily.',
+      },
+      {
+        question: 'How do I reach Cerebrum from Sector 55-56 Metro?',
+        answer:
+          'Exit Sector 55-56 Rapid Metro. Walk towards Sector 51 (5 min). M2K Corporate Park is on the main road. Landmark: Opposite Mayfield Garden entrance. Easiest route to our center!',
+      },
+      {
+        question: 'Can I come from Delhi via Rapid Metro?',
+        answer:
+          'Yes! Take Yellow Line to HUDA City Centre, switch to Rapid Metro towards Sector 55-56 (10 min). Walk 5 min to our center. Total from Rajiv Chowk: ~45 min.',
+      },
+    ],
+  },
+  'sector-42-43-rapid-metro': {
+    name: 'Sector 42-43 Rapid Metro',
+    slug: 'sector-42-43-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      'Sector 42-43 Rapid Metro connects to HUDA City Centre Yellow Line, providing seamless Delhi-Gurugram access for students coming to our Sector 51 center.',
+    studentCount: '110+',
+    coordinates: { lat: '28.4524', lng: '77.0701' },
+    nearbyAreas: ['Sector 42', 'Sector 43', 'Sushant Lok', 'HUDA City Centre'],
+    travelTime: '12 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Sector 42-43 Metro?',
+        answer:
+          'Yes! Our Sector 51 center is 12 minutes from Sector 42-43 Rapid Metro. 110+ students from Sushant Lok and Sector 42-43 area are enrolled.',
+      },
+      {
+        question: 'Do Sushant Lok students attend your coaching?',
+        answer:
+          'Yes! 220+ students from Sushant Lok attend our NEET Biology coaching. It is 12 minutes from Sector 42-43 Rapid Metro to our center.',
+      },
+      {
+        question: 'What is nearby Sector 42-43 Metro station?',
+        answer:
+          'Galaxy Hotel, Sector 43 Market, and Sushant Lok are nearby. Our center at M2K Corporate Park, Sector 51 is a short Rapid Metro ride away.',
+      },
+    ],
+  },
+  'phase-1-rapid-metro': {
+    name: 'Phase 1 Rapid Metro',
+    slug: 'phase-1-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      "Phase 1 Rapid Metro serves DLF Phase 1 — Gurugram's oldest premium residential area. Students from Phase 1, Galleria Market, and Qutab Plaza area attend our coaching.",
+    studentCount: '165+',
+    coordinates: { lat: '28.4744', lng: '77.0856' },
+    nearbyAreas: ['DLF Phase 1', 'MG Road', 'DLF Galleria', 'Qutab Plaza', 'Sikanderpur'],
+    travelTime: '20 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Phase 1 Rapid Metro?',
+        answer:
+          'Yes! Our Sector 51 center is 20 minutes from Phase 1 Rapid Metro. 165+ students from DLF Phase 1 are enrolled in our NEET Biology program.',
+      },
+      {
+        question: 'Which schools from DLF Phase 1 send students?',
+        answer:
+          'Students from The Shri Ram School, DPS Gurugram, Heritage School, and GD Goenka attend. DLF Phase 1 is one of our biggest feeder areas.',
+      },
+      {
+        question: 'Is there parking at your Sector 51 center?',
+        answer:
+          'Yes! M2K Corporate Park has ample paid parking. Most DLF Phase 1 families drive (15 min) or take Rapid Metro (20 min). Both work well.',
+      },
+    ],
+  },
+  'phase-2-rapid-metro': {
+    name: 'Phase 2 Rapid Metro',
+    slug: 'phase-2-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      'Phase 2 Rapid Metro connects DLF Phase 2 and Cyber City. Students from IT professional families in this area attend our premium NEET coaching batches.',
+    studentCount: '120+',
+    coordinates: { lat: '28.4786', lng: '77.0896' },
+    nearbyAreas: ['DLF Phase 2', 'DLF Phase 3', 'Cyber Hub', 'Sikanderpur'],
+    travelTime: '22 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Phase 2 Rapid Metro?',
+        answer:
+          'Yes! Our Sector 51 center is 22 minutes via Rapid Metro. 120+ students from DLF Phase 2 and Cyber City families are enrolled.',
+      },
+      {
+        question: 'Do you serve Cyber Hub area families?',
+        answer:
+          'Yes! Many students whose parents work at DLF Cyber Hub attend our coaching. We offer flexible evening batches (5-8 PM) and weekend batches for working families.',
+      },
+      {
+        question: 'What makes Cerebrum better than Delhi coaching for Phase 2 students?',
+        answer:
+          'Save 2-3 hours daily commute! Same AIIMS faculty, same curriculum as our Delhi center. Smaller batches (15 students). Most Phase 2 families prefer local coaching.',
+      },
+    ],
+  },
+  'phase-3-rapid-metro': {
+    name: 'Phase 3 Rapid Metro',
+    slug: 'phase-3-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      'Phase 3 Rapid Metro serves DLF Phase 3 and 4 with Galleria Market and premium residential areas. Families from The Shri Ram School catchment area attend our coaching.',
+    studentCount: '135+',
+    coordinates: { lat: '28.4683', lng: '77.0823' },
+    nearbyAreas: [
+      'DLF Phase 3',
+      'DLF Phase 4',
+      'Galleria Market',
+      'Nathupur',
+      'The Shri Ram School',
+    ],
+    travelTime: '18 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Phase 3 Rapid Metro?',
+        answer:
+          'Yes! Our Sector 51 center is 18 minutes from Phase 3 Rapid Metro. 135+ students from DLF Phase 3-4 and Galleria Market area are enrolled.',
+      },
+      {
+        question: 'Do The Shri Ram School students attend Cerebrum?',
+        answer:
+          'Yes! The Shri Ram School DLF Phase 3 is one of our top feeder schools. We offer Board + NEET combined preparation that complements their curriculum perfectly.',
+      },
+      {
+        question: 'What is the fee for DLF Phase 3 students?',
+        answer:
+          'Pinnacle batch (10-12 students): Rs 98,000/year. Ascent batch (16-25 students): Rs 76,000/year. Pursuit batch (30-40 students): Rs 48,000/year. EMI available.',
+      },
+    ],
+  },
+  'cyber-city-rapid-metro': {
+    name: 'Cyber City Rapid Metro',
+    slug: 'cyber-city-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      "Cyber City Rapid Metro serves Gurugram's IT hub. Students from families working at Google, Microsoft, Deloitte, and other Fortune 500 companies attend our NEET coaching.",
+    studentCount: '100+',
+    coordinates: { lat: '28.4948', lng: '77.0889' },
+    nearbyAreas: ['DLF Cyber City', 'DLF Phase 2', 'Sikanderpur', 'Golf Course Road', 'Cyber Hub'],
+    travelTime: '25 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Cyber City Metro?',
+        answer:
+          'Yes! Our Sector 51 center is 25 minutes from Cyber City Rapid Metro. 100+ students from IT professional families in Cyber City area are enrolled.',
+      },
+      {
+        question: 'Do you offer flexible timings for Cyber City families?',
+        answer:
+          'Yes! We have morning (8-11 AM), afternoon (2-5 PM), and evening (5-8 PM) batches. Weekend batches for families who prefer Saturday/Sunday coaching.',
+      },
+      {
+        question: 'Why do Cyber City families choose Cerebrum?',
+        answer:
+          'Premium small batches (10-15 students), AIIMS faculty, and proximity (25 min metro). No need to send children to Delhi. 98% success rate speaks for itself.',
+      },
+    ],
+  },
+  'belvedere-towers-rapid-metro': {
+    name: 'Belvedere Towers Rapid Metro',
+    slug: 'belvedere-towers-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      'Belvedere Towers Rapid Metro serves the ultra-premium Golf Course Road segment. Luxury tower residents from Belvedere Park, DLF Phase 5, and Magnolias attend our coaching.',
+    studentCount: '80+',
+    coordinates: { lat: '28.4617', lng: '77.0756' },
+    nearbyAreas: ['Belvedere Towers', 'Golf Course Road', 'DLF Phase 5', 'DLF Aralias'],
+    travelTime: '15 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Belvedere Towers?',
+        answer:
+          'Yes! Our Sector 51 center is 15 minutes from Belvedere Towers Rapid Metro. 80+ students from Golf Course Road luxury towers are enrolled in our premium Pinnacle batch.',
+      },
+      {
+        question: 'What batch do Golf Course Road families prefer?',
+        answer:
+          'Most families from Belvedere, Magnolias, Camellias choose our Pinnacle batch — just 10-12 students with personal attention from AIIMS faculty. Rs 98,000/year.',
+      },
+      {
+        question: 'Do you offer home tuition for Golf Course Road?',
+        answer:
+          'We recommend our center-based coaching for best results (peer learning, mock tests). However, online classes are available for students who prefer studying from home.',
+      },
+    ],
+  },
+  'moulsari-avenue-rapid-metro': {
+    name: 'Moulsari Avenue Rapid Metro',
+    slug: 'moulsari-avenue-rapid-metro',
+    line: 'Rapid Metro',
+    lineColor: 'orange',
+    area: 'Gurugram',
+    description:
+      'Moulsari Avenue Rapid Metro serves the DLF corporate area. Students whose parents work in Gateway Tower and Building 5 Cyber City attend our NEET coaching.',
+    studentCount: '75+',
+    coordinates: { lat: '28.4755', lng: '77.0886' },
+    nearbyAreas: ['DLF Phase 3', 'DLF Cyber City', 'Sikanderpur', 'Moulsari Avenue'],
+    travelTime: '20 min to Sector 51 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Moulsari Avenue Metro?',
+        answer:
+          'Yes! Our Sector 51 center is 20 minutes from Moulsari Avenue Rapid Metro. 75+ students from DLF corporate area families are enrolled.',
+      },
+      {
+        question: 'How do I reach Sector 51 from Moulsari Avenue?',
+        answer:
+          'Take Rapid Metro from Moulsari Avenue towards Sector 55-56 (12 min). Walk 5 min to M2K Corporate Park. Or direct auto via Golf Course Road (15 min).',
+      },
+      {
+        question: 'Do you have evening batches for Moulsari area?',
+        answer:
+          "Yes! Evening batch (5-8 PM) is popular with Moulsari area students. Weekend batch also available. Online option for days you can't commute.",
+      },
+    ],
+  },
 }
 
 export const dynamicParams = false
@@ -606,6 +1036,12 @@ export default async function MetroStationPage({
       bg: 'bg-purple-50',
       text: 'text-purple-600',
     },
+    orange: {
+      badge: 'bg-orange-500',
+      hero: 'from-orange-700 to-amber-600',
+      bg: 'bg-orange-50',
+      text: 'text-orange-600',
+    },
   }
   const colors = colorMap[data.lineColor] || colorMap.blue
   const lineColorClass = colors.badge
@@ -628,7 +1064,9 @@ export default async function MetroStationPage({
           <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">
             Online Biology classes for students near {data.name}. {data.studentCount} students
             enrolled.
-            {data.travelTime} to our South Extension center for hybrid mode.
+            {data.travelTime} to our{' '}
+            {data.area === 'Gurugram' ? 'Sector 51 center' : 'South Extension center'} for hybrid
+            mode.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -661,7 +1099,9 @@ export default async function MetroStationPage({
             <div className={`text-center p-4 ${accentBg} rounded-xl`}>
               <Clock className={`w-8 h-8 ${accentText} mx-auto mb-2`} />
               <p className="text-2xl font-bold">{data.travelTime.split(' ')[0]}</p>
-              <p className="text-sm text-gray-600">To South Extension</p>
+              <p className="text-sm text-gray-600">
+                {data.area === 'Gurugram' ? 'To Sector 51 Center' : 'To South Extension'}
+              </p>
             </div>
             <div className={`text-center p-4 ${accentBg} rounded-xl`}>
               <Trophy className={`w-8 h-8 ${accentText} mx-auto mb-2`} />
@@ -705,7 +1145,8 @@ export default async function MetroStationPage({
                 Metro Line
               </h3>
               <p className="text-gray-600">
-                {data.line} - {data.travelTime} to South Extension center
+                {data.line} - {data.travelTime} to{' '}
+                {data.area === 'Gurugram' ? 'Sector 51 center' : 'South Extension center'}
               </p>
             </div>
           </div>
@@ -738,7 +1179,10 @@ export default async function MetroStationPage({
             <div className="bg-white rounded-2xl p-6 border-2 border-gray-200 shadow-md">
               <MapPin className="w-10 h-10 text-gray-600 mb-4" />
               <h3 className="text-xl font-bold mb-2">Full Offline</h3>
-              <p className="text-gray-600 mb-4">Daily at South Extension ({data.travelTime}).</p>
+              <p className="text-gray-600 mb-4">
+                Daily at {data.area === 'Gurugram' ? 'Sector 51 center' : 'South Extension'} (
+                {data.travelTime}).
+              </p>
               <p className="text-2xl font-bold text-gray-700">Rs 68,000/year</p>
             </div>
           </div>
@@ -800,7 +1244,10 @@ export default async function MetroStationPage({
         pageUrl={`https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${data.slug}`}
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-          { name: data.area, url: `https://cerebrumbiologyacademy.com/locations/noida` },
+          {
+            name: data.area,
+            url: `https://cerebrumbiologyacademy.com/locations/${data.area === 'Gurugram' ? 'gurugram' : data.area === 'South Delhi' ? 'south-delhi' : 'noida'}`,
+          },
           {
             name: data.name,
             url: `https://cerebrumbiologyacademy.com/neet-coaching-near-metro/${data.slug}`,
