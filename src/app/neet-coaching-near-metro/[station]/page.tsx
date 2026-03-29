@@ -945,6 +945,286 @@ const metroStationData: Record<string, MetroStationData> = {
       },
     ],
   },
+
+  // ============================================
+  // Faridabad Metro Stations — All Violet Line, near Sector 17 center
+  // ============================================
+  'bata-chowk-metro': {
+    name: 'Bata Chowk Metro',
+    slug: 'bata-chowk-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'Bata Chowk Metro is the CLOSEST station to our Faridabad center — just a 5-minute walk to SCF-124-125, HUDA Market, Sector 17. The most convenient station for our students.',
+    studentCount: '200+',
+    coordinates: { lat: '28.4050', lng: '77.3150' },
+    nearbyAreas: ['Sector 16', 'Sector 17', 'NIT Faridabad', 'HUDA Market', 'Bata Factory'],
+    travelTime: '5 min walk to Sector 17 center',
+    faqs: [
+      {
+        question: 'Which metro station is closest to Cerebrum Faridabad center?',
+        answer:
+          'Bata Chowk Metro is the closest — just a 5-minute walk! Exit the station, walk towards HUDA Market Sector 17. Our center is at SCF-124-125, 2nd Floor, Above Union Bank. 200+ students use this station daily.',
+      },
+      {
+        question: 'How do I walk from Bata Chowk Metro to Cerebrum?',
+        answer:
+          'Exit Bata Chowk Metro from Gate 1. Walk towards Sector 17 HUDA Market (5 min). Look for Union Bank on ground floor — we are on the 2nd Floor, SCF-124-125. Very easy to find!',
+      },
+      {
+        question: 'Can I come from Delhi to Faridabad center by metro?',
+        answer:
+          'Yes! Take Violet Line from Central Secretariat/Kashmere Gate towards Escorts Mujesar. Get down at Bata Chowk (total ~45 min from central Delhi). Walk 5 min to our center.',
+      },
+    ],
+  },
+  'neelam-chowk-metro': {
+    name: 'Neelam Chowk Ajronda Metro',
+    slug: 'neelam-chowk-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'Neelam Chowk Ajronda Metro serves Sector 15, Ajronda, and Crown Heights areas. Just 8 minutes from our Sector 17 center — the second closest station.',
+    studentCount: '150+',
+    coordinates: { lat: '28.4089', lng: '77.3178' },
+    nearbyAreas: ['Ajronda', 'Sector 15', 'Neelam Apartments', 'Crown Heights', 'Apeejay School'],
+    travelTime: '8 min to Sector 17 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Neelam Chowk Ajronda Metro?',
+        answer:
+          'Yes! Our Faridabad center at HUDA Market Sector 17 is just 8 minutes from Neelam Chowk Ajronda Metro. 150+ students from Sector 15, Ajronda, and Crown Heights are enrolled.',
+      },
+      {
+        question: 'Do Apeejay School students attend Cerebrum?',
+        answer:
+          'Yes! Apeejay School near Neelam Chowk is one of our feeder schools. Students walk to our Sector 17 center after school for evening batches.',
+      },
+      {
+        question: 'What are the fees for Neelam Chowk area students?',
+        answer:
+          'Pinnacle batch (10-12 students): Rs 98,000/year. Ascent (16-25 students): Rs 76,000/year. Pursuit (30-40 students): Rs 48,000/year. EMI available.',
+      },
+    ],
+  },
+  'old-faridabad-metro': {
+    name: 'Old Faridabad Metro',
+    slug: 'old-faridabad-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'Old Faridabad Metro serves the historic heart of the city including Railway Road, Main Market, and business families. Just 12 minutes from our Sector 17 center.',
+    studentCount: '120+',
+    coordinates: { lat: '28.4200', lng: '77.3200' },
+    nearbyAreas: ['Old Faridabad', 'Railway Road', 'Main Market', 'Bus Stand', 'NIT Area'],
+    travelTime: '12 min to Sector 17 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Old Faridabad Metro?',
+        answer:
+          'Yes! Our center at HUDA Market Sector 17 is 12 minutes from Old Faridabad Metro. 120+ students from Old Faridabad, Railway Road, and NIT area are enrolled.',
+      },
+      {
+        question: 'How do Old Faridabad students reach your center?',
+        answer:
+          'From Old Faridabad Metro, take auto or e-rickshaw to Sector 17 HUDA Market (12 min, Rs 20-30). Our center at SCF-124-125 is above Union Bank.',
+      },
+      {
+        question: 'Do you serve NIT Faridabad students?',
+        answer:
+          'Yes! NIT Faridabad is between Old Faridabad and Bata Chowk metros. Many NIT area students attend our coaching. Both metro stations are nearby.',
+      },
+    ],
+  },
+  'escorts-mujesar-metro': {
+    name: 'Escorts Mujesar Metro',
+    slug: 'escorts-mujesar-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'Escorts Mujesar is the terminal Violet Line station serving Ballabgarh and all of Greater Faridabad (Sectors 75-89). Students from BPTP, Omaxe, RPS townships use this station.',
+    studentCount: '110+',
+    coordinates: { lat: '28.3933', lng: '77.3117' },
+    nearbyAreas: [
+      'Ballabgarh',
+      'Greater Faridabad',
+      'Sector 75-89',
+      'BPTP Parklands',
+      'Omaxe Heights',
+    ],
+    travelTime: '15 min to Sector 17 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Escorts Mujesar Metro?',
+        answer:
+          'Yes! Our Sector 17 center is 15 minutes from Escorts Mujesar Metro. 110+ students from Ballabgarh, Greater Faridabad, BPTP, and Omaxe townships are enrolled.',
+      },
+      {
+        question: 'Do Greater Faridabad students attend your coaching?',
+        answer:
+          'Yes! 110+ students from Sectors 75-89, BPTP Parklands, Omaxe Heights, RPS Palms, and SRS Residency attend. Escorts Mujesar Metro makes commuting easy.',
+      },
+      {
+        question: 'Is online mode available for Greater Faridabad?',
+        answer:
+          'Yes! Many Greater Faridabad students choose hybrid mode — online weekdays + offline weekends at Sector 17. Saves commute on busy days.',
+      },
+    ],
+  },
+  'badkhal-mor-metro': {
+    name: 'Badkhal Mor Metro',
+    slug: 'badkhal-mor-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'Badkhal Mor Metro serves the scenic Badkhal and Surajkund areas. Students from these residential areas reach our Sector 17 center in just 15 minutes.',
+    studentCount: '90+',
+    coordinates: { lat: '28.4333', lng: '77.3167' },
+    nearbyAreas: ['Badkhal', 'Sector 19', 'Sector 20', 'Surajkund', 'Badkhal Lake'],
+    travelTime: '15 min to Sector 17 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Badkhal Mor Metro?',
+        answer:
+          'Yes! Our center at HUDA Market Sector 17 is 15 minutes from Badkhal Mor Metro. 90+ students from Badkhal, Surajkund, and Sector 19-20 are enrolled.',
+      },
+      {
+        question: 'How do Surajkund students reach your center?',
+        answer:
+          'From Badkhal Mor Metro, take auto to Sector 17 HUDA Market (15 min). Or take the metro one more stop to Bata Chowk and walk 5 min. Both routes work well.',
+      },
+      {
+        question: 'Do you offer weekend batches for Badkhal area students?',
+        answer:
+          'Yes! Weekend batches (Saturday-Sunday) are popular with Badkhal and Surajkund students. Morning (9 AM-12 PM) and afternoon (2-5 PM) slots available.',
+      },
+    ],
+  },
+  'sector-28-metro': {
+    name: 'Sector 28 Metro',
+    slug: 'sector-28-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'Sector 28 Metro serves the commercial hub of Faridabad. Students from Sectors 28-29 and nearby areas access our Sector 17 center via this station.',
+    studentCount: '85+',
+    coordinates: { lat: '28.4467', lng: '77.3133' },
+    nearbyAreas: ['Sector 28', 'Sector 29', 'Mathura Road', 'Commercial Area'],
+    travelTime: '20 min to Sector 17 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Sector 28 Metro Faridabad?',
+        answer:
+          'Yes! Our center at Sector 17 is 20 minutes from Sector 28 Metro. Take the metro towards Escorts Mujesar, get down at Bata Chowk, walk 5 min. 85+ students from Sector 28-29 enrolled.',
+      },
+      {
+        question: 'How do Sector 29 students reach your center?',
+        answer:
+          'From Sector 28 Metro, take Violet Line 3 stops to Bata Chowk (8 min). Walk 5 min to our center. Or direct auto via Mathura Road (15 min).',
+      },
+      {
+        question: 'Do you have students from Sector 28 commercial area?',
+        answer:
+          'Yes! Business families from Sector 28-29 commercial area send their children to our coaching. We offer flexible timings and premium small batches.',
+      },
+    ],
+  },
+  'nhpc-chowk-metro': {
+    name: 'NHPC Chowk Metro',
+    slug: 'nhpc-chowk-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'NHPC Chowk Metro serves NHPC Colony, Sectors 31-32, and government employee families. Students from these areas attend our Sector 17 NEET coaching center.',
+    studentCount: '70+',
+    coordinates: { lat: '28.4789', lng: '77.3067' },
+    nearbyAreas: ['NHPC Colony', 'Sector 31', 'Sector 32', 'Government Housing'],
+    travelTime: '30 min to Sector 17 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near NHPC Chowk Metro?',
+        answer:
+          'Yes! Our Sector 17 center is 30 minutes from NHPC Chowk Metro via Violet Line. 70+ students from NHPC Colony and Sector 31-32 are enrolled. Online classes also available.',
+      },
+      {
+        question: 'Do NHPC colony children attend Cerebrum?',
+        answer:
+          'Yes! Families from NHPC Colony and government housing in Sector 31-32 send their children to our NEET coaching. We offer special batch timings for this area.',
+      },
+      {
+        question: 'Is online mode recommended for NHPC area students?',
+        answer:
+          'Both modes work! Metro ride is 30 min but many NHPC students prefer hybrid — online weekdays + offline weekends at Sector 17. Saves commute and gives flexibility.',
+      },
+    ],
+  },
+  'mewala-maharajpur-metro': {
+    name: 'Mewala Maharajpur Metro',
+    slug: 'mewala-maharajpur-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'Mewala Maharajpur Metro serves Sectors 27-28 and the industrial belt. Students from residential pockets near the industrial area attend our NEET coaching center.',
+    studentCount: '60+',
+    coordinates: { lat: '28.4611', lng: '77.3100' },
+    nearbyAreas: ['Mewala Village', 'Sector 27', 'Sector 28', 'Industrial Area'],
+    travelTime: '25 min to Sector 17 center',
+    faqs: [
+      {
+        question: 'Is there NEET coaching near Mewala Maharajpur Metro?',
+        answer:
+          'Yes! Our Sector 17 center is 25 minutes from Mewala Maharajpur Metro. 60+ students from Sectors 27-28 area are enrolled. Online + offline modes available.',
+      },
+      {
+        question: 'How do I reach Sector 17 from Mewala Maharajpur?',
+        answer:
+          'Take Violet Line towards Escorts Mujesar. Get down at Bata Chowk (4 stops, 12 min). Walk 5 min to our center at SCF-124-125, HUDA Market.',
+      },
+      {
+        question: 'Do you serve industrial area students?',
+        answer:
+          'Yes! Families working in Sector 27-28 industrial area send their children to our coaching. We have evening batches (5-8 PM) and weekend batches for working families.',
+      },
+    ],
+  },
+  'badarpur-border-metro': {
+    name: 'Badarpur Border Metro',
+    slug: 'badarpur-border-metro',
+    line: 'Violet Line',
+    lineColor: 'purple',
+    area: 'Faridabad',
+    description:
+      'Badarpur Border Metro is the first Faridabad station from Delhi. Students from Badarpur, Tughlakabad, and Delhi border areas choose between our South Extension and Faridabad centers.',
+    studentCount: '75+',
+    coordinates: { lat: '28.4944', lng: '77.3033' },
+    nearbyAreas: ['Badarpur', 'Tughlakabad', 'Delhi Border', 'Faridabad Entry', 'NH-44'],
+    travelTime: '35 min to Sector 17 center',
+    faqs: [
+      {
+        question: 'Which Cerebrum center should Badarpur students choose?',
+        answer:
+          'Badarpur students have two options: South Extension center (30 min via Violet Line towards Delhi) or Faridabad Sector 17 center (35 min towards Faridabad). Choose based on which direction is more convenient for you!',
+      },
+      {
+        question: 'Is there NEET coaching near Badarpur Border Metro?',
+        answer:
+          'Yes! Both our South Extension and Faridabad centers are accessible. 75+ students from Badarpur area are enrolled. Online mode also available for zero commute.',
+      },
+      {
+        question: 'Do you serve Tughlakabad area students?',
+        answer:
+          'Yes! Tughlakabad students attend either our South Extension center (closer to Delhi) or Faridabad Sector 17 center. Both have same AIIMS faculty and curriculum.',
+      },
+    ],
+  },
 }
 
 export const dynamicParams = false
@@ -1065,8 +1345,12 @@ export default async function MetroStationPage({
             Online Biology classes for students near {data.name}. {data.studentCount} students
             enrolled.
             {data.travelTime} to our{' '}
-            {data.area === 'Gurugram' ? 'Sector 51 center' : 'South Extension center'} for hybrid
-            mode.
+            {data.area === 'Gurugram'
+              ? 'Sector 51 center'
+              : data.area === 'Faridabad'
+                ? 'Sector 17 center'
+                : 'South Extension center'}{' '}
+            for hybrid mode.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -1100,7 +1384,11 @@ export default async function MetroStationPage({
               <Clock className={`w-8 h-8 ${accentText} mx-auto mb-2`} />
               <p className="text-2xl font-bold">{data.travelTime.split(' ')[0]}</p>
               <p className="text-sm text-gray-600">
-                {data.area === 'Gurugram' ? 'To Sector 51 Center' : 'To South Extension'}
+                {data.area === 'Gurugram'
+                  ? 'To Sector 51 Center'
+                  : data.area === 'Faridabad'
+                    ? 'To Sector 17 Center'
+                    : 'To South Extension'}
               </p>
             </div>
             <div className={`text-center p-4 ${accentBg} rounded-xl`}>
@@ -1146,7 +1434,11 @@ export default async function MetroStationPage({
               </h3>
               <p className="text-gray-600">
                 {data.line} - {data.travelTime} to{' '}
-                {data.area === 'Gurugram' ? 'Sector 51 center' : 'South Extension center'}
+                {data.area === 'Gurugram'
+                  ? 'Sector 51 center'
+                  : data.area === 'Faridabad'
+                    ? 'Sector 17 center'
+                    : 'South Extension center'}
               </p>
             </div>
           </div>
@@ -1180,8 +1472,13 @@ export default async function MetroStationPage({
               <MapPin className="w-10 h-10 text-gray-600 mb-4" />
               <h3 className="text-xl font-bold mb-2">Full Offline</h3>
               <p className="text-gray-600 mb-4">
-                Daily at {data.area === 'Gurugram' ? 'Sector 51 center' : 'South Extension'} (
-                {data.travelTime}).
+                Daily at{' '}
+                {data.area === 'Gurugram'
+                  ? 'Sector 51 center'
+                  : data.area === 'Faridabad'
+                    ? 'Sector 17 center'
+                    : 'South Extension'}{' '}
+                ({data.travelTime}).
               </p>
               <p className="text-2xl font-bold text-gray-700">Rs 68,000/year</p>
             </div>
@@ -1246,7 +1543,7 @@ export default async function MetroStationPage({
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
           {
             name: data.area,
-            url: `https://cerebrumbiologyacademy.com/locations/${data.area === 'Gurugram' ? 'gurugram' : data.area === 'South Delhi' ? 'south-delhi' : 'noida'}`,
+            url: `https://cerebrumbiologyacademy.com/locations/${data.area === 'Gurugram' ? 'gurugram' : data.area === 'Faridabad' ? 'faridabad' : data.area === 'South Delhi' ? 'south-delhi' : 'noida'}`,
           },
           {
             name: data.name,
