@@ -16,7 +16,7 @@ import { I18nProvider } from '@/contexts/I18nContext'
 import { ToastProvider } from '@/components/ui/Toast'
 import { TrackingProvider } from '@/components/tracking/TrackingProvider'
 import { TrustProvider } from '@/components/providers/TrustProvider'
-import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
+import { PersonalizationProviderLazy as PersonalizationProvider } from '@/components/providers/PersonalizationProviderLazy'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
 import {
