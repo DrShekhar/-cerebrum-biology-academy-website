@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Phone,
   MapPin,
@@ -460,10 +461,12 @@ export default function NEETCoachingRohiniPage() {
                 {/* Google Rating Card */}
                 <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-100 animate-fadeInUp">
                   <div className="flex items-center justify-center mb-4">
-                    <img
+                    <Image
                       src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
                       alt="Google Reviews rating for Cerebrum Biology Academy"
-                      className="h-8"
+                      width={92}
+                      height={30}
+                      className="h-8 w-auto"
                     />
                   </div>
                   <div className="text-center">

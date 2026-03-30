@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const pageUrl = `${BASE_URL}/dr-shekhar-youtube-channel`
@@ -6,7 +7,7 @@ const pageUrl = `${BASE_URL}/dr-shekhar-youtube-channel`
 export const metadata: Metadata = {
   title: 'Dr. Shekhar C Singh YouTube Channel | NEET Biology Expert | AIIMS Faculty',
   description:
-    'Subscribe to Dr. Shekhar C Singh\'s YouTube channel for free NEET Biology lectures, exam tips, and preparation strategies by an AIIMS New Delhi alumnus with 14+ years experience.',
+    "Subscribe to Dr. Shekhar C Singh's YouTube channel for free NEET Biology lectures, exam tips, and preparation strategies by an AIIMS New Delhi alumnus with 14+ years experience.",
   keywords: [
     'dr shekhar singh youtube',
     'neet biology youtube channel',
@@ -144,7 +145,7 @@ export default function DrShekhartYoutubeChannelPage() {
         name: 'Is the YouTube content free for NEET preparation?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, all content on both Dr. Shekhar\'s personal channel and the Cerebrum Biology Academy channel is completely free. You can watch unlimited lectures, solve practice problems, and access exam preparation strategies without any paid subscription.',
+          text: "Yes, all content on both Dr. Shekhar's personal channel and the Cerebrum Biology Academy channel is completely free. You can watch unlimited lectures, solve practice problems, and access exam preparation strategies without any paid subscription.",
         },
       },
       {
@@ -176,7 +177,7 @@ export default function DrShekhartYoutubeChannelPage() {
         name: 'What is the difference between the personal and academy channels?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Dr. Shekhar\'s personal channel (@drshekharcsingh) focuses on quick tips, exam strategies, and focused topic explanations. The Cerebrum Biology Academy channel (@cerebrumbiologyacademy) provides comprehensive course lectures, full chapter explanations, and structured learning sequences. Both are complementary and provide valuable content.',
+          text: "Dr. Shekhar's personal channel (@drshekharcsingh) focuses on quick tips, exam strategies, and focused topic explanations. The Cerebrum Biology Academy channel (@cerebrumbiologyacademy) provides comprehensive course lectures, full chapter explanations, and structured learning sequences. Both are complementary and provide valuable content.",
         },
       },
     ],
@@ -232,7 +233,7 @@ export default function DrShekhartYoutubeChannelPage() {
     {
       question: 'Is the YouTube content free for NEET preparation?',
       answer:
-        'Yes, all content on both Dr. Shekhar\'s personal channel and the Cerebrum Biology Academy channel is completely free. You can watch unlimited lectures, solve practice problems, and access exam preparation strategies without any paid subscription.',
+        "Yes, all content on both Dr. Shekhar's personal channel and the Cerebrum Biology Academy channel is completely free. You can watch unlimited lectures, solve practice problems, and access exam preparation strategies without any paid subscription.",
     },
     {
       question: 'What topics are covered on the channel?',
@@ -252,7 +253,7 @@ export default function DrShekhartYoutubeChannelPage() {
     {
       question: 'What is the difference between the personal and academy channels?',
       answer:
-        'Dr. Shekhar\'s personal channel (@drshekharcsingh) focuses on quick tips, exam strategies, and focused topic explanations. The Cerebrum Biology Academy channel (@cerebrumbiologyacademy) provides comprehensive course lectures, full chapter explanations, and structured learning sequences. Both are complementary and provide valuable content.',
+        "Dr. Shekhar's personal channel (@drshekharcsingh) focuses on quick tips, exam strategies, and focused topic explanations. The Cerebrum Biology Academy channel (@cerebrumbiologyacademy) provides comprehensive course lectures, full chapter explanations, and structured learning sequences. Both are complementary and provide valuable content.",
     },
   ]
 
@@ -357,13 +358,19 @@ export default function DrShekhartYoutubeChannelPage() {
                   className="group rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <div className="relative overflow-hidden bg-black aspect-video">
-                    <img
+                    <Image
                       src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
                       alt={videoTitles[index]}
+                      width={480}
+                      height={360}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors flex items-center justify-center">
-                      <svg className="w-16 h-16 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="w-16 h-16 text-red-500"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path d="M8 5v14l11-7z" />
                       </svg>
                     </div>

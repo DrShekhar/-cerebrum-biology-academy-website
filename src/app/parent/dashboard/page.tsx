@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useUserFlow } from '@/hooks/useUserFlow'
 import { Button } from '@/components/ui/Button'
@@ -155,11 +156,16 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
 
   const getRedirectPath = () => {
     switch (userRole?.toUpperCase()) {
-      case 'ADMIN': return '/dashboard/admin'
-      case 'TEACHER': return '/dashboard/teacher'
-      case 'STUDENT': return '/student/dashboard'
-      case 'CONSULTANT': return '/consultant/dashboard'
-      default: return '/dashboard'
+      case 'ADMIN':
+        return '/dashboard/admin'
+      case 'TEACHER':
+        return '/dashboard/teacher'
+      case 'STUDENT':
+        return '/student/dashboard'
+      case 'CONSULTANT':
+        return '/consultant/dashboard'
+      default:
+        return '/dashboard'
     }
   }
 
@@ -171,8 +177,8 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
         </div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Access Denied</h1>
         <p className="text-gray-600 mb-6">
-          You don&apos;t have permission to access the Parent Dashboard.
-          This area is restricted to parents only.
+          You don&apos;t have permission to access the Parent Dashboard. This area is restricted to
+          parents only.
         </p>
         <div className="space-y-3">
           <Button
@@ -181,11 +187,7 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
           >
             Go to Your Dashboard
           </Button>
-          <Button
-            onClick={() => router.push('/')}
-            variant="outline"
-            className="w-full"
-          >
+          <Button onClick={() => router.push('/')} variant="outline" className="w-full">
             Return to Home
           </Button>
         </div>
@@ -409,9 +411,11 @@ export default function ParentDashboard() {
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
                   {currentChild.profilePicture ? (
-                    <img
+                    <Image
                       src={currentChild.profilePicture}
                       alt={currentChild.name}
+                      width={64}
+                      height={64}
                       className="w-16 h-16 rounded-full object-cover"
                     />
                   ) : (

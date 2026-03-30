@@ -110,10 +110,12 @@ function SocialProofNearCTA() {
         {/* Avatar Stack */}
         <div className="flex -space-x-2">
           {[1, 2, 3, 4].map((i) => (
-            <img
+            <Image
               key={i}
               src={`/avatars/student-${i}.jpg`}
               alt={`Cerebrum Academy NEET student ${i}`}
+              width={32}
+              height={32}
               className="w-8 h-8 rounded-full border-2 border-white shadow-sm animate-fadeInUp"
             />
           ))}
