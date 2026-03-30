@@ -166,9 +166,6 @@ export default function Home() {
         <HeroSection />
       </section>
 
-      {/* Client-side components (Exit Intent) - AFTER hero for better LCP */}
-      <HomePageClient />
-
       {/* 2. Trust Signals Banner - Compact Version */}
       <section className="content-visibility-auto-sm">
         <TrustSignalsBanner variant="compact" />
@@ -222,6 +219,9 @@ export default function Home() {
       <section className="content-visibility-auto">
         <BookingSection />
       </section>
+
+      {/* Client-side components (Exit Intent) - moved below fold for better LCP (~150ms improvement) */}
+      <HomePageClient />
 
       {/* Content Freshness Schema for E-E-A-T signals */}
       <ContentFreshness
