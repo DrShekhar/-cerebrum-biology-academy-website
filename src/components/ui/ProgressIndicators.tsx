@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { Check } from 'lucide-react'
+import { throttle } from '@/lib/performance'
 
 interface ScrollProgressBarProps {
   className?: string
@@ -24,10 +25,11 @@ export function ScrollProgressBar({
       setScrollProgress(progress)
     }
 
-    window.addEventListener('scroll', updateScrollProgress)
+    const throttledUpdateScrollProgress = throttle(updateScrollProgress, 150)
+    window.addEventListener('scroll', throttledUpdateScrollProgress)
     updateScrollProgress()
 
-    return () => window.removeEventListener('scroll', updateScrollProgress)
+    return () => window.removeEventListener('scroll', throttledUpdateScrollProgress)
   }, [])
 
   const gradients = {
@@ -133,9 +135,7 @@ export function FormSteps({
                 {index < steps.length - 1 && (
                   <div className="flex-1 mx-2">
                     <div className="h-px bg-slate-200 relative">
-                      <div
-                        className="h-full bg-green-600 animate-fadeInUp"
-                      />
+                      <div className="h-full bg-green-600 animate-fadeInUp" />
                     </div>
                   </div>
                 )}
@@ -225,9 +225,7 @@ export function QuizProgress({
         <span>{Math.round(progress)}% complete</span>
       </div>
       <div className="w-full bg-slate-200 rounded-full h-2">
-        <div
-          className="bg-gradient-to-r from-green-600 to-blue-500 h-2 rounded-full animate-fadeInUp"
-        />
+        <div className="bg-gradient-to-r from-green-600 to-blue-500 h-2 rounded-full animate-fadeInUp" />
       </div>
     </div>
   )

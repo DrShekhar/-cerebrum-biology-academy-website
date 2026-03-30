@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { List, ChevronDown, ChevronUp } from 'lucide-react'
+import { throttle } from '@/lib/performance'
 
 /**
  * TableOfContents Component
@@ -46,7 +47,13 @@ export function TableOfContents({
       headings.forEach((heading) => {
         const level = parseInt(heading.tagName.charAt(1))
         if (level <= maxLevel) {
-          const id = heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || ''
+          const id =
+            heading.id ||
+            heading.textContent
+              ?.toLowerCase()
+              .replace(/\s+/g, '-')
+              .replace(/[^a-z0-9-]/g, '') ||
+            ''
 
           // Add id to heading if not present
           if (!heading.id && id) {
@@ -81,8 +88,9 @@ export function TableOfContents({
       }
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    const throttledHandleScroll = throttle(handleScroll, 150)
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [items])
 
   const scrollToSection = (id: string) => {
@@ -221,9 +229,7 @@ export function TableOfContents({
               className="flex items-start gap-2"
               style={{ paddingLeft: `${(item.level - 1) * 16}px` }}
             >
-              <span className="text-blue-400 font-mono text-sm mt-0.5">
-                {idx + 1}.
-              </span>
+              <span className="text-blue-400 font-mono text-sm mt-0.5">{idx + 1}.</span>
               <button
                 onClick={() => scrollToSection(item.id)}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors"

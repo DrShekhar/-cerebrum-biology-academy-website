@@ -29,6 +29,7 @@ import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
+import { throttle } from '@/lib/performance'
 
 export default function Class11BiologyPage() {
   const [activeSection, setActiveSection] = useState('hero')
@@ -58,8 +59,9 @@ export default function Class11BiologyPage() {
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const throttledHandleScroll = throttle(handleScroll, 150)
+    window.addEventListener('scroll', throttledHandleScroll)
+    return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [])
 
   const freeTools = [
@@ -373,7 +375,14 @@ export default function Class11BiologyPage() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => trackAndOpenWhatsApp({ source: 'class-11-demo', message: 'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.', campaign: 'class-11' })}
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-11-demo',
+                      message:
+                        'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.',
+                      campaign: 'class-11',
+                    })
+                  }
                   className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] group"
                 >
                   <Play className="w-5 h-5 mr-2" />
@@ -549,7 +558,9 @@ export default function Class11BiologyPage() {
               Why Choose Cerebrum for Class 11 NEET Biology?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Cerebrum offers the perfect blend of board exam preparation and NEET foundation building, with AIIMS-trained faculty, small batches of 25 students, and a structured curriculum that covers 55% of the NEET syllabus in Class 11 itself.
+              Cerebrum offers the perfect blend of board exam preparation and NEET foundation
+              building, with AIIMS-trained faculty, small batches of 25 students, and a structured
+              curriculum that covers 55% of the NEET syllabus in Class 11 itself.
             </p>
           </div>
 
@@ -604,7 +615,9 @@ export default function Class11BiologyPage() {
               What Is Covered in the Class 11 NEET Biology Syllabus?
             </h2>
             <p className="text-gray-600">
-              The Class 11 NEET Biology syllabus covers five units -- from Diversity in Living World to Human Physiology -- with structured learning across all NCERT chapters and NEET-weighted practice.
+              The Class 11 NEET Biology syllabus covers five units -- from Diversity in Living World
+              to Human Physiology -- with structured learning across all NCERT chapters and
+              NEET-weighted practice.
             </p>
           </div>
 
@@ -639,7 +652,10 @@ export default function Class11BiologyPage() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 mt-4">Curriculum aligned with NCERT Class 11 Biology (2024-25 edition) and NTA NEET-UG syllabus. Sources: ncert.nic.in, nta.ac.in</p>
+          <p className="text-xs text-gray-500 mt-4">
+            Curriculum aligned with NCERT Class 11 Biology (2024-25 edition) and NTA NEET-UG
+            syllabus. Sources: ncert.nic.in, nta.ac.in
+          </p>
         </div>
       </section>
 
@@ -651,7 +667,9 @@ export default function Class11BiologyPage() {
               Who Teaches NEET Biology at Cerebrum?
             </h2>
             <p className="text-gray-600">
-              Our faculty are AIIMS and top medical college alumni with 15+ years of NEET teaching experience. They have cracked NEET themselves and know exactly what it takes to help students succeed.
+              Our faculty are AIIMS and top medical college alumni with 15+ years of NEET teaching
+              experience. They have cracked NEET themselves and know exactly what it takes to help
+              students succeed.
             </p>
           </div>
 
@@ -773,7 +791,14 @@ export default function Class11BiologyPage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => trackAndOpenWhatsApp({ source: 'class-11-demo', message: 'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.', campaign: 'class-11' })}
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-11-demo',
+                      message:
+                        'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.',
+                      campaign: 'class-11',
+                    })
+                  }
                   className="flex-1 bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition-all duration-300 text-center"
                 >
                   Book Free Demo First
@@ -938,7 +963,14 @@ export default function Class11BiologyPage() {
             WhatsApp
           </button>
           <button
-            onClick={() => trackAndOpenWhatsApp({ source: 'class-11-demo', message: 'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.', campaign: 'class-11' })}
+            onClick={() =>
+              trackAndOpenWhatsApp({
+                source: 'class-11-demo',
+                message:
+                  'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.',
+                campaign: 'class-11',
+              })
+            }
             className="flex-1 bg-[#3d4d3d] text-white py-3 rounded-xl font-semibold flex items-center justify-center min-h-[48px]"
             aria-label="Book a free demo class for Class 11 Biology course"
           >

@@ -13,6 +13,7 @@
 
 import React from 'react'
 import { cn } from '@/lib/utils'
+import { throttle } from '@/lib/performance'
 
 export type ContainerVariant = 'tight' | 'comfortable' | 'wide' | 'full'
 
@@ -291,9 +292,10 @@ export function useIsMobile(): boolean {
     }
 
     checkMobile()
-    window.addEventListener('resize', checkMobile)
+    const throttledCheckMobile = throttle(checkMobile, 200)
+    window.addEventListener('resize', throttledCheckMobile)
 
-    return () => window.removeEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', throttledCheckMobile)
   }, [])
 
   return isMobile

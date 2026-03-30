@@ -28,6 +28,7 @@ import { navigationConfig } from '@/data/navigationConfig'
 import { useAuth } from '@/contexts/AuthContext'
 import { useFocusTrap } from '@/hooks/useFocusTrap'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { throttle } from '@/lib/performance'
 const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
 
 interface BurgerMenuProps {
@@ -96,8 +97,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
     }
 
     checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    const throttledCheckMobile = throttle(checkMobile, 200)
+    window.addEventListener('resize', throttledCheckMobile)
+    return () => window.removeEventListener('resize', throttledCheckMobile)
   }, [mounted])
 
   // Reset expanded section when menu closes
@@ -210,207 +212,200 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const menuContent = (
     <>
       {/* Overlay */}
-{isOpen && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-[110] animate-fadeInUp"
-            onClick={onClose}
-            style={{ pointerEvents: 'auto' }}
-          />
-        )}
-{/* Menu Panel */}
-{isOpen && (
-          <div
-            ref={focusTrapRef}
-            id="burger-menu-panel"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Navigation menu"
-            className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[111] overflow-y-auto animate-fadeInUp"
-          >
-            {/* Header - sticky with solid background and z-index to stay above scrolling content */}
-            <div className="sticky top-0 bg-white/100 backdrop-blur-sm border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-20 shadow-md isolate">
-              <div>
-                <h2 className="text-xl font-bold text-gray-900">Navigation</h2>
-                <p className="text-sm text-gray-500">Explore our courses & services</p>
-              </div>
-              <button
-                onClick={onClose}
-                className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 touch-manipulation"
-                aria-label="Close navigation menu"
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-[110] animate-fadeInUp"
+          onClick={onClose}
+          style={{ pointerEvents: 'auto' }}
+        />
+      )}
+      {/* Menu Panel */}
+      {isOpen && (
+        <div
+          ref={focusTrapRef}
+          id="burger-menu-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+          className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[111] overflow-y-auto animate-fadeInUp"
+        >
+          {/* Header - sticky with solid background and z-index to stay above scrolling content */}
+          <div className="sticky top-0 bg-white/100 backdrop-blur-sm border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-20 shadow-md isolate">
+            <div>
+              <h2 className="text-xl font-bold text-gray-900">Navigation</h2>
+              <p className="text-sm text-gray-500">Explore our courses & services</p>
+            </div>
+            <button
+              onClick={onClose}
+              className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 touch-manipulation"
+              aria-label="Close navigation menu"
+            >
+              <X className="w-5 h-5 text-gray-500" />
+            </button>
+          </div>
+
+          {/* Dashboard Link and Sign Out (if authenticated) */}
+          {dashboardInfo && (
+            <div className="px-6 pt-4 relative z-0 bg-white space-y-2">
+              <Link
+                href={dashboardInfo.href}
+                onClick={handleLinkClick}
+                className="flex items-center justify-between p-4 bg-indigo-500 text-white rounded-xl hover:bg-indigo-600 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <X className="w-5 h-5 text-gray-500" />
+                <div className="flex items-center space-x-3">
+                  <dashboardInfo.icon className="w-5 h-5" />
+                  <span className="font-semibold">{dashboardInfo.label}</span>
+                </div>
+                <ChevronRight className="w-5 h-5" />
+              </Link>
+              <button
+                onClick={handleSignOut}
+                disabled={isSigningOut}
+                className="w-full flex items-center justify-center p-3 bg-red-50 text-red-600 rounded-xl hover:bg-red-100 transition-all duration-300 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSigningOut ? 'Signing Out...' : 'Sign Out'}
               </button>
             </div>
+          )}
 
-            {/* Dashboard Link and Sign Out (if authenticated) */}
-            {dashboardInfo && (
-              <div className="px-6 pt-4 relative z-0 bg-white space-y-2">
+          {/* Quick Course Links */}
+          <div className="px-6 pt-4 relative z-0 bg-white">
+            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
+              Quick Access
+            </h3>
+            <div className="space-y-2">
+              {/* All Courses - Prominent Button */}
+              <Link
+                href="/pricing"
+                onClick={handleLinkClick}
+                className="flex items-center justify-center gap-2 p-4 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all shadow-md hover:shadow-lg text-base font-semibold"
+              >
+                <GraduationCap className="w-5 h-5" />
+                View All Courses
+              </Link>
+              {/* Course Grid - responsive for small screens */}
+              <div className="grid grid-cols-2 xs:grid-cols-3 gap-2">
                 <Link
-                  href={dashboardInfo.href}
+                  href="/courses/class-11"
                   onClick={handleLinkClick}
-                  className="flex items-center justify-between p-4 bg-indigo-500 text-white rounded-xl hover:bg-indigo-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="flex items-center justify-center p-3 min-h-[44px] bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium touch-manipulation"
                 >
-                  <div className="flex items-center space-x-3">
-                    <dashboardInfo.icon className="w-5 h-5" />
-                    <span className="font-semibold">{dashboardInfo.label}</span>
-                  </div>
-                  <ChevronRight className="w-5 h-5" />
+                  Class 11
                 </Link>
-                <button
-                  onClick={handleSignOut}
-                  disabled={isSigningOut}
-                  className="w-full flex items-center justify-center p-3 bg-red-50 text-red-600 rounded-xl hover:bg-red-100 transition-all duration-300 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSigningOut ? 'Signing Out...' : 'Sign Out'}
-                </button>
-              </div>
-            )}
-
-            {/* Quick Course Links */}
-            <div className="px-6 pt-4 relative z-0 bg-white">
-              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
-                Quick Access
-              </h3>
-              <div className="space-y-2">
-                {/* All Courses - Prominent Button */}
                 <Link
-                  href="/pricing"
+                  href="/courses/class-12"
                   onClick={handleLinkClick}
-                  className="flex items-center justify-center gap-2 p-4 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-all shadow-md hover:shadow-lg text-base font-semibold"
+                  className="flex items-center justify-center p-3 min-h-[44px] bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium touch-manipulation"
                 >
-                  <GraduationCap className="w-5 h-5" />
-                  View All Courses
+                  Class 12
                 </Link>
-                {/* Course Grid - responsive for small screens */}
-                <div className="grid grid-cols-2 xs:grid-cols-3 gap-2">
-                  <Link
-                    href="/courses/class-11"
-                    onClick={handleLinkClick}
-                    className="flex items-center justify-center p-3 min-h-[44px] bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium touch-manipulation"
-                  >
-                    Class 11
-                  </Link>
-                  <Link
-                    href="/courses/class-12"
-                    onClick={handleLinkClick}
-                    className="flex items-center justify-center p-3 min-h-[44px] bg-green-50 text-green-700 rounded-lg hover:bg-green-100 transition-colors text-sm font-medium touch-manipulation"
-                  >
-                    Class 12
-                  </Link>
-                  <Link
-                    href="/courses/neet-dropper"
-                    onClick={handleLinkClick}
-                    className="flex items-center justify-center p-3 min-h-[44px] bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium col-span-2 xs:col-span-1 touch-manipulation"
-                  >
-                    Dropper
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation Sections */}
-            <div className="p-6 space-y-4 relative z-0 bg-white">
-              {navigationConfig.map((section) => {
-                const Icon = iconMap[section.icon as keyof typeof iconMap]
-                const isExpanded = expandedSection === section.id
-
-                return (
-                  <div
-                    key={section.id}
-                    className="border border-gray-200 rounded-xl overflow-hidden"
-                  >
-                    <button
-                      onClick={() => handleSectionToggle(section.id)}
-                      className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-indigo-50 transition-all duration-300 group relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
-                      aria-expanded={isExpanded}
-                    >
-                      <div className="flex items-center space-x-3 relative z-10">
-                        {Icon && (
-                          <Icon className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
-                        )}
-                        <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                          {section.title}
-                        </span>
-                      </div>
-                      <div
-                        className="relative z-10 animate-fadeInUp"
-                      >
-                        <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-blue-600 transition-colors duration-300" />
-                      </div>
-                    </button>
-{isExpanded && (
-                        <div
-                          className="overflow-hidden animate-fadeInUp"
-                        >
-                          <div className="p-4 space-y-2 bg-white">
-                            {section.items.map((item) => (
-                              <Link
-                                key={item.id}
-                                href={item.href}
-                                onClick={handleLinkClick}
-                                className="group relative flex items-center justify-between p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
-                              >
-                                <div className="flex-1 relative z-10">
-                                  <div className="flex items-center space-x-2">
-                                    <span className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                                      {item.title}
-                                    </span>
-                                    {item.isNew && (
-                                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-600">
-                                        <Sparkles className="w-3 h-3 mr-1" />
-                                        New
-                                      </span>
-                                    )}
-                                    {item.isPopular && (
-                                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-600">
-                                        <Star className="w-3 h-3 mr-1" />
-                                        Popular
-                                      </span>
-                                    )}
-                                  </div>
-                                  {item.description && (
-                                    <p className="text-sm text-gray-500 mt-1 group-hover:text-gray-700 transition-colors duration-300">
-                                      {item.description}
-                                    </p>
-                                  )}
-                                </div>
-                                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transform group-hover:translate-x-1 transition-all duration-300 relative z-10" />
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-</div>
-                )
-              })}
-            </div>
-
-            {/* Footer - Non-sticky to avoid blocking clicks */}
-            <div className="mt-auto bg-indigo-500 text-white p-4 sm:p-6">
-              <div className="text-center">
-                <h3 className="font-bold text-lg mb-2">Ready to Start?</h3>
-                <p className="text-blue-100 text-sm mb-4">
-                  Join thousands of successful NEET aspirants
-                </p>
-                <button
-                  onClick={async () => {
-                    handleLinkClick()
-                    await trackAndOpenWhatsApp({
-                      source: 'burger-menu-demo',
-                      message: WHATSAPP_MESSAGES.demo,
-                      campaign: 'burger-menu',
-                    })
-                  }}
-                  className="inline-flex items-center justify-center w-full bg-white text-blue-600 px-4 py-3 min-h-[48px] rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 touch-manipulation"
+                <Link
+                  href="/courses/neet-dropper"
+                  onClick={handleLinkClick}
+                  className="flex items-center justify-center p-3 min-h-[44px] bg-purple-50 text-purple-700 rounded-lg hover:bg-purple-100 transition-colors text-sm font-medium col-span-2 xs:col-span-1 touch-manipulation"
                 >
-                  Book Free Demo
-                  <ChevronRight className="w-4 h-4 ml-2" />
-                </button>
+                  Dropper
+                </Link>
               </div>
             </div>
           </div>
-        )}
-</>
+
+          {/* Navigation Sections */}
+          <div className="p-6 space-y-4 relative z-0 bg-white">
+            {navigationConfig.map((section) => {
+              const Icon = iconMap[section.icon as keyof typeof iconMap]
+              const isExpanded = expandedSection === section.id
+
+              return (
+                <div key={section.id} className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => handleSectionToggle(section.id)}
+                    className="w-full p-4 flex items-center justify-between bg-gray-50 hover:bg-indigo-50 transition-all duration-300 group relative overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
+                    aria-expanded={isExpanded}
+                  >
+                    <div className="flex items-center space-x-3 relative z-10">
+                      {Icon && (
+                        <Icon className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+                      )}
+                      <span className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                        {section.title}
+                      </span>
+                    </div>
+                    <div className="relative z-10 animate-fadeInUp">
+                      <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-blue-600 transition-colors duration-300" />
+                    </div>
+                  </button>
+                  {isExpanded && (
+                    <div className="overflow-hidden animate-fadeInUp">
+                      <div className="p-4 space-y-2 bg-white">
+                        {section.items.map((item) => (
+                          <Link
+                            key={item.id}
+                            href={item.href}
+                            onClick={handleLinkClick}
+                            className="group relative flex items-center justify-between p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 overflow-hidden before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:bg-blue-600 before:transition-all before:duration-300 hover:before:w-1"
+                          >
+                            <div className="flex-1 relative z-10">
+                              <div className="flex items-center space-x-2">
+                                <span className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                                  {item.title}
+                                </span>
+                                {item.isNew && (
+                                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-600">
+                                    <Sparkles className="w-3 h-3 mr-1" />
+                                    New
+                                  </span>
+                                )}
+                                {item.isPopular && (
+                                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-600">
+                                    <Star className="w-3 h-3 mr-1" />
+                                    Popular
+                                  </span>
+                                )}
+                              </div>
+                              {item.description && (
+                                <p className="text-sm text-gray-500 mt-1 group-hover:text-gray-700 transition-colors duration-300">
+                                  {item.description}
+                                </p>
+                              )}
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transform group-hover:translate-x-1 transition-all duration-300 relative z-10" />
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Footer - Non-sticky to avoid blocking clicks */}
+          <div className="mt-auto bg-indigo-500 text-white p-4 sm:p-6">
+            <div className="text-center">
+              <h3 className="font-bold text-lg mb-2">Ready to Start?</h3>
+              <p className="text-blue-100 text-sm mb-4">
+                Join thousands of successful NEET aspirants
+              </p>
+              <button
+                onClick={async () => {
+                  handleLinkClick()
+                  await trackAndOpenWhatsApp({
+                    source: 'burger-menu-demo',
+                    message: WHATSAPP_MESSAGES.demo,
+                    campaign: 'burger-menu',
+                  })
+                }}
+                className="inline-flex items-center justify-center w-full bg-white text-blue-600 px-4 py-3 min-h-[48px] rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 touch-manipulation"
+              >
+                Book Free Demo
+                <ChevronRight className="w-4 h-4 ml-2" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 
   return (
@@ -424,15 +419,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
         aria-controls="burger-menu-panel"
       >
         <div className="relative w-6 h-6 animate-fadeInUp">
-          <span
-            className="absolute left-0 top-0 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300 animate-fadeInUp"
-          />
-          <span
-            className="absolute left-0 top-2.5 w-6 h-0.5 bg-blue-600 transition-all duration-300 animate-fadeInUp"
-          />
-          <span
-            className="absolute left-0 top-5 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300 animate-fadeInUp"
-          />
+          <span className="absolute left-0 top-0 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300 animate-fadeInUp" />
+          <span className="absolute left-0 top-2.5 w-6 h-0.5 bg-blue-600 transition-all duration-300 animate-fadeInUp" />
+          <span className="absolute left-0 top-5 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300 animate-fadeInUp" />
         </div>
       </button>
 

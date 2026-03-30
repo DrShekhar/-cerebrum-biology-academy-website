@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react'
+import { throttle } from '@/lib/performance'
 
 interface BackToTopProps {
   showAfter?: number
@@ -20,8 +21,9 @@ export function BackToTop({ showAfter = 400, readTime }: BackToTopProps) {
       }
     }
 
-    window.addEventListener('scroll', toggleVisibility)
-    return () => window.removeEventListener('scroll', toggleVisibility)
+    const throttledToggleVisibility = throttle(toggleVisibility, 150)
+    window.addEventListener('scroll', throttledToggleVisibility)
+    return () => window.removeEventListener('scroll', throttledToggleVisibility)
   }, [showAfter])
 
   const scrollToTop = () => {

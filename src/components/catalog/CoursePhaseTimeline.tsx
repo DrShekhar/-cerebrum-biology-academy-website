@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Check, Clock, Target, Trophy, Brain, Zap, Star } from 'lucide-react'
 import { useInView } from '@/hooks/useInView'
+import { throttle } from '@/lib/performance'
 
 interface TimelinePhase {
   id: number
@@ -135,8 +136,9 @@ export function CoursePhaseTimeline({
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
     checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    const throttledCheckMobile = throttle(checkMobile, 200)
+    window.addEventListener('resize', throttledCheckMobile)
+    return () => window.removeEventListener('resize', throttledCheckMobile)
   }, [])
 
   return (
@@ -146,9 +148,7 @@ export function CoursePhaseTimeline({
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <div
-          className="text-center mb-16 animate-fadeInUp"
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 bg-indigo-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
             <Clock className="w-4 h-4" />
             12-Month Transformation Journey
@@ -174,18 +174,13 @@ export function CoursePhaseTimeline({
           <div className={`${isMobile ? 'hidden' : 'block'}`}>
             {/* Connecting Line */}
             <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-green-200 to-green-500 rounded-full">
-              <div
-                className="h-full bg-green-600 rounded-full origin-left animate-fadeInUp"
-              />
+              <div className="h-full bg-green-600 rounded-full origin-left animate-fadeInUp" />
             </div>
 
             {/* Phase Cards */}
             <div className="grid grid-cols-4 gap-8">
               {COURSE_PHASES.map((phase, index) => (
-                <div
-                  key={phase.id}
-                  className="relative animate-fadeInUp"
-                >
+                <div key={phase.id} className="relative animate-fadeInUp">
                   {/* Timeline Dot */}
                   <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10">
                     <div
@@ -226,10 +221,7 @@ export function CoursePhaseTimeline({
                     {/* Key Points */}
                     <div className="space-y-2 mb-4">
                       {phase.keyPoints.map((point, pointIndex) => (
-                        <div
-                          key={pointIndex}
-                          className="flex items-start gap-2 animate-fadeInUp"
-                        >
+                        <div key={pointIndex} className="flex items-start gap-2 animate-fadeInUp">
                           <Check className={`h-4 w-4 ${phase.color.accent} mt-0.5 flex-shrink-0`} />
                           <span className="text-gray-700 text-xs leading-relaxed">{point}</span>
                         </div>
@@ -256,9 +248,7 @@ export function CoursePhaseTimeline({
 
                     {/* Current Phase Indicator */}
                     {phase.id === currentPhase && (
-                      <div
-                        className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-fadeInUp"
-                      >
+                      <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-fadeInUp">
                         CURRENT
                       </div>
                     )}
@@ -272,18 +262,13 @@ export function CoursePhaseTimeline({
           <div className={`${isMobile ? 'block' : 'hidden'} relative`}>
             {/* Vertical Connecting Line */}
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-green-200 to-green-500 rounded-full">
-              <div
-                className="w-full bg-green-600 rounded-full origin-top animate-fadeInUp"
-              />
+              <div className="w-full bg-green-600 rounded-full origin-top animate-fadeInUp" />
             </div>
 
             {/* Mobile Phase Cards */}
             <div className="space-y-8">
               {COURSE_PHASES.map((phase, index) => (
-                <div
-                  key={phase.id}
-                  className="relative flex items-start gap-6 animate-fadeInUp"
-                >
+                <div key={phase.id} className="relative flex items-start gap-6 animate-fadeInUp">
                   {/* Timeline Dot */}
                   <div className="relative z-10">
                     <div
@@ -363,9 +348,7 @@ export function CoursePhaseTimeline({
         </div>
 
         {/* Success Statistics */}
-        <div
-          className="mt-16 bg-navy-900 border-t-4 border-green-600 rounded-2xl p-8 text-center text-white animate-fadeInUp"
-        >
+        <div className="mt-16 bg-navy-900 border-t-4 border-green-600 rounded-2xl p-8 text-center text-white animate-fadeInUp">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
               <div className="text-3xl font-bold">92%</div>

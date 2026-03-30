@@ -15,6 +15,7 @@
  */
 
 import React, { useEffect, useRef, useState, useCallback } from 'react'
+import { throttle } from '@/lib/performance'
 // PERFORMANCE: Dynamic import HLS.js - only loaded when video player is used
 // This saves ~200KB from pages that don't have video content
 import type HlsType from 'hls.js'
@@ -396,8 +397,9 @@ export default function SecureVideoPlayer({
     }
 
     const container = containerRef.current
+    const throttledMouseMove = throttle(handleMouseMove, 150)
     if (container) {
-      container.addEventListener('mousemove', handleMouseMove)
+      container.addEventListener('mousemove', throttledMouseMove)
       container.addEventListener('mouseleave', () => {
         if (isPlaying) setShowControls(false)
       })
@@ -406,7 +408,7 @@ export default function SecureVideoPlayer({
     return () => {
       clearTimeout(timeout)
       if (container) {
-        container.removeEventListener('mousemove', handleMouseMove)
+        container.removeEventListener('mousemove', throttledMouseMove)
       }
     }
   }, [isPlaying])

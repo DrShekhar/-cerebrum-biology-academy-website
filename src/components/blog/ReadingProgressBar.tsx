@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
+import { throttle } from '@/lib/performance'
 
 interface ReadingProgressBarProps {
   showPercentage?: boolean
@@ -23,9 +24,10 @@ export function ReadingProgressBar({
   }, [])
 
   useEffect(() => {
-    window.addEventListener('scroll', updateProgress, { passive: true })
+    const throttledUpdateProgress = throttle(updateProgress, 150)
+    window.addEventListener('scroll', throttledUpdateProgress, { passive: true })
     updateProgress()
-    return () => window.removeEventListener('scroll', updateProgress)
+    return () => window.removeEventListener('scroll', throttledUpdateProgress)
   }, [updateProgress])
 
   const timeRemaining = Math.max(0, Math.ceil(readTime * (1 - progress / 100)))

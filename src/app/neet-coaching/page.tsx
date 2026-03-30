@@ -61,6 +61,7 @@ import type {
   ModeOption,
   LocationOption,
 } from '@/data/neetCoachingData'
+import { throttle } from '@/lib/performance'
 
 const subjectIcons: Record<string, React.ReactNode> = {
   Biology: <Leaf className="w-7 h-7" />,
@@ -149,8 +150,9 @@ export default function NEETCoachingPage() {
     const handleScroll = () => {
       setShowFloatingCta(window.scrollY > 500)
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const throttledHandleScroll = throttle(handleScroll, 150)
+    window.addEventListener('scroll', throttledHandleScroll)
+    return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [])
 
   useEffect(() => {
@@ -965,8 +967,8 @@ export default function NEETCoachingPage() {
               Start Your NEET Journey Today
             </h2>
             <p className="text-gray-300 max-w-xl mx-auto mb-8 text-lg">
-              Join 15,000+ students who cracked NEET with Cerebrum. Limited seats per batch —
-              enroll now.
+              Join 15,000+ students who cracked NEET with Cerebrum. Limited seats per batch — enroll
+              now.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">

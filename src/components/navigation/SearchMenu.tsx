@@ -33,6 +33,7 @@ import Link from 'next/link'
 import Fuse from 'fuse.js'
 import { searchableContent } from '@/data/navigationConfig'
 import { useFocusTrap } from '@/hooks/useFocusTrap'
+import { throttle } from '@/lib/performance'
 
 // Web Speech API types are declared in src/types/speech-recognition.d.ts
 
@@ -469,8 +470,9 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
     checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    const throttledCheckMobile = throttle(checkMobile, 200)
+    window.addEventListener('resize', throttledCheckMobile)
+    return () => window.removeEventListener('resize', throttledCheckMobile)
   }, [])
 
   // Handle iOS keyboard - adjust modal height when virtual keyboard appears
@@ -559,8 +561,8 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 
   // Modal content for portal
   const modalContent = (
-<>
-{isOpen && (
+    <>
+      {isOpen && (
         <div
           className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[115] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
           onClick={handleClose}
@@ -639,11 +641,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                       aria-label={isListening ? 'Stop voice search' : 'Start voice search'}
                       aria-pressed={isListening}
                     >
-                      {isListening ? (
-                        <MicOff className="w-5 h-5" />
-                      ) : (
-                        <Mic className="w-5 h-5" />
-                      )}
+                      {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
                     </button>
                   )}
                 </div>
@@ -658,7 +656,8 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
               {query && results.length > 0 && (
                 <div className="p-4 sm:p-6">
                   <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
-                    Search Results ({results.length}{allResults.length > results.length ? ` of ${allResults.length}` : ''})
+                    Search Results ({results.length}
+                    {allResults.length > results.length ? ` of ${allResults.length}` : ''})
                   </h3>
                   <div className="space-y-2">
                     {results.map(({ item }, index) => (
@@ -944,8 +943,8 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
           </div>
         </div>
       )}
-</>
-)
+    </>
+  )
 
   return (
     <>

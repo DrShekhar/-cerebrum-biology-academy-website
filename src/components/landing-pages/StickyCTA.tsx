@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Phone, Calendar } from 'lucide-react'
 import { trackPhoneCall } from '@/lib/ads/googleAdsConversion'
+import { throttle } from '@/lib/performance'
 
 interface StickyCTAProps {
   phoneCTA?: string
@@ -20,8 +21,9 @@ export function StickyCTA({ phoneCTA = 'Call Now', demoCTA = 'Book Demo' }: Stic
       setIsVisible(window.scrollY > 300)
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const throttledHandleScroll = throttle(handleScroll, 150)
+    window.addEventListener('scroll', throttledHandleScroll)
+    return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [])
 
   const handlePhoneClick = () => {

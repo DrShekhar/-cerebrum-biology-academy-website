@@ -16,6 +16,7 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { type Course } from '@/data/courseData'
+import { throttle } from '@/lib/performance'
 
 interface CourseComparisonTableProps {
   courses: Course[]
@@ -222,8 +223,9 @@ export function CourseComparisonTable({
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
     checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    const throttledCheckMobile = throttle(checkMobile, 200)
+    window.addEventListener('resize', throttledCheckMobile)
+    return () => window.removeEventListener('resize', throttledCheckMobile)
   }, [])
 
   const toggleCourseSelection = (courseId: string) => {
@@ -357,39 +359,35 @@ export function CourseComparisonTable({
                         <ChevronDown className="h-4 w-4 text-gray-500" />
                       )}
                     </button>
-{expandedCategories.includes(category.category) && (
-                        <div
-                          className="overflow-hidden animate-fadeInUp"
-                        >
-                          <div className="p-4 space-y-3 bg-white/40">
-                            {category.features.map((feature) => {
-                              const value = feature.getValue(course)
-                              const formattedValue = feature.format
-                                ? feature.format(value)
-                                : String(value)
+                    {expandedCategories.includes(category.category) && (
+                      <div className="overflow-hidden animate-fadeInUp">
+                        <div className="p-4 space-y-3 bg-white/40">
+                          {category.features.map((feature) => {
+                            const value = feature.getValue(course)
+                            const formattedValue = feature.format
+                              ? feature.format(value)
+                              : String(value)
 
-                              return (
-                                <div
-                                  key={feature.label}
-                                  className="flex justify-between items-center"
+                            return (
+                              <div
+                                key={feature.label}
+                                className="flex justify-between items-center"
+                              >
+                                <span className="text-gray-700 text-sm">{feature.label}</span>
+                                <span
+                                  className={`font-medium text-sm ${
+                                    feature.highlight ? 'text-gray-900 font-bold' : 'text-gray-600'
+                                  }`}
                                 >
-                                  <span className="text-gray-700 text-sm">{feature.label}</span>
-                                  <span
-                                    className={`font-medium text-sm ${
-                                      feature.highlight
-                                        ? 'text-gray-900 font-bold'
-                                        : 'text-gray-600'
-                                    }`}
-                                  >
-                                    {formattedValue}
-                                  </span>
-                                </div>
-                              )
-                            })}
-                          </div>
+                                  {formattedValue}
+                                </span>
+                              </div>
+                            )
+                          })}
                         </div>
-                      )}
-</div>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
@@ -569,9 +567,7 @@ export function CourseComparisonTable({
 
       {/* Action Bar */}
       {selectedCourses.length > 0 && (
-        <div
-          className="bg-blue-50 border-t border-blue-200 p-4 animate-fadeInUp"
-        >
+        <div className="bg-blue-50 border-t border-blue-200 p-4 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div className="text-blue-800 font-medium">
               {selectedCourses.length} course(s) selected for detailed comparison

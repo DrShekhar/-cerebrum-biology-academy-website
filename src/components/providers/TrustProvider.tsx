@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState, lazy, Suspense } from 'react'
 import { Shield, Star, Award, Users, CheckCircle } from 'lucide-react'
+import { throttle } from '@/lib/performance'
 
 // Lazy-load heavy components to reduce initial bundle
 const RealTimeSocialProof = lazy(() =>
@@ -82,11 +83,7 @@ export function TrustProvider({
   const allDisabled = !enableSocialProof && !enableTrustBadges && !enableRealTimeUpdates
 
   if (allDisabled) {
-    return (
-      <TrustContext.Provider value={DISABLED_CONTEXT_VALUE}>
-        {children}
-      </TrustContext.Provider>
-    )
+    return <TrustContext.Provider value={DISABLED_CONTEXT_VALUE}>{children}</TrustContext.Provider>
   }
 
   // Full provider implementation when features are enabled
@@ -199,8 +196,9 @@ function FloatingTrustIndicators() {
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const throttledHandleScroll = throttle(handleScroll, 150)
+    window.addEventListener('scroll', throttledHandleScroll)
+    return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [hasAutoHidden])
 
   // Auto-hide after 7 seconds of being visible

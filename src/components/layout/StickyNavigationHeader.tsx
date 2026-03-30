@@ -24,6 +24,7 @@ import {
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
+import { throttle } from '@/lib/performance'
 
 interface NavigationItem {
   label: string
@@ -218,8 +219,9 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
       setIsScrolled(window.scrollY > 20)
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const throttledHandleScroll = throttle(handleScroll, 150)
+    window.addEventListener('scroll', throttledHandleScroll)
+    return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [])
 
   // Close dropdowns when clicking outside
@@ -311,69 +313,64 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 </button>
 
                 {/* Mega Dropdown */}
-{isProgramsDropdownOpen && (
-                    <div
-                      className="absolute top-full left-0 mt-2 w-screen max-w-4xl bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fadeInUp"
-                      style={{ transform: 'translateX(-40%)' }}
-                    >
-                      <div className="p-8">
-                        <div className="grid grid-cols-4 gap-8">
-                          {MEGA_MENU_DATA.map((section, index) => (
-                            <div
-                              key={section.title}
-                              className="space-y-4 animate-fadeInUp"
-                            >
-                              <div className="flex items-center gap-2 pb-3 border-b border-gray-100">
-                                <div className={section.color}>{section.icon}</div>
-                                <h3 className="font-semibold text-gray-900">{section.title}</h3>
-                              </div>
+                {isProgramsDropdownOpen && (
+                  <div
+                    className="absolute top-full left-0 mt-2 w-screen max-w-4xl bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fadeInUp"
+                    style={{ transform: 'translateX(-40%)' }}
+                  >
+                    <div className="p-8">
+                      <div className="grid grid-cols-4 gap-8">
+                        {MEGA_MENU_DATA.map((section, index) => (
+                          <div key={section.title} className="space-y-4 animate-fadeInUp">
+                            <div className="flex items-center gap-2 pb-3 border-b border-gray-100">
+                              <div className={section.color}>{section.icon}</div>
+                              <h3 className="font-semibold text-gray-900">{section.title}</h3>
+                            </div>
 
-                              <div className="space-y-3">
-                                {section.items.map((item) => (
-                                  <a
-                                    key={item.label}
-                                    href={item.href}
-                                    className="block group animate-fadeInUp"
-                                  >
-                                    <div className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors duration-200">
-                                      {item.label}
+                            <div className="space-y-3">
+                              {section.items.map((item) => (
+                                <a
+                                  key={item.label}
+                                  href={item.href}
+                                  className="block group animate-fadeInUp"
+                                >
+                                  <div className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors duration-200">
+                                    {item.label}
+                                  </div>
+                                  {item.description && (
+                                    <div className="text-xs text-gray-500 mt-1 leading-relaxed">
+                                      {item.description}
                                     </div>
-                                    {item.description && (
-                                      <div className="text-xs text-gray-500 mt-1 leading-relaxed">
-                                        {item.description}
-                                      </div>
-                                    )}
-                                  </a>
-                                ))}
-                              </div>
+                                  )}
+                                </a>
+                              ))}
                             </div>
-                          ))}
-                        </div>
-
-                        {/* Featured Action */}
-                        <div className="mt-8 pt-6 border-t border-gray-100">
-                          <div className="bg-navy-50 rounded-xl p-4 flex items-center justify-between">
-                            <div>
-                              <div className="font-semibold text-gray-900">
-                                Not sure which program to choose?
-                              </div>
-                              <div className="text-sm text-gray-600">
-                                Take our course finder quiz
-                              </div>
-                            </div>
-                            <a
-                              href="/courses/finder"
-                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-green-700 hover:shadow-lg transition-all duration-200 animate-fadeInUp"
-                            >
-                              Find Course
-                              <ArrowRight className="h-4 w-4" />
-                            </a>
                           </div>
+                        ))}
+                      </div>
+
+                      {/* Featured Action */}
+                      <div className="mt-8 pt-6 border-t border-gray-100">
+                        <div className="bg-navy-50 rounded-xl p-4 flex items-center justify-between">
+                          <div>
+                            <div className="font-semibold text-gray-900">
+                              Not sure which program to choose?
+                            </div>
+                            <div className="text-sm text-gray-600">Take our course finder quiz</div>
+                          </div>
+                          <a
+                            href="/courses/finder"
+                            className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-green-700 hover:shadow-lg transition-all duration-200 animate-fadeInUp"
+                          >
+                            Find Course
+                            <ArrowRight className="h-4 w-4" />
+                          </a>
                         </div>
                       </div>
                     </div>
-                  )}
-</div>
+                  </div>
+                )}
+              </div>
 
               {/* Other Navigation Items */}
               <a
@@ -431,46 +428,42 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 </div>
 
                 {/* Search Results */}
-{isSearchOpen && (searchResults.length > 0 || searchQuery.length > 1) && (
-                    <div
-                      className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-fadeInUp"
-                    >
-                      {searchResults.length > 0 ? (
-                        <div className="max-h-80 overflow-y-auto">
-                          {searchResults.map((result, index) => (
-                            <a
-                              key={index}
-                              href={result.href}
-                              className="flex items-start gap-3 p-4 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-50 last:border-0 animate-fadeInUp"
-                              onClick={() => {
-                                setIsSearchOpen(false)
-                                setSearchQuery('')
-                                setSearchResults([])
-                              }}
-                            >
-                              {getSearchIcon(result.type)}
-                              <div className="flex-1">
-                                <div className="font-medium text-gray-900 text-sm">
-                                  {result.title}
-                                </div>
-                                <div className="text-xs text-gray-500 mt-1">
-                                  {result.description}
-                                </div>
-                                <div className="text-xs text-blue-600 mt-1 capitalize">
-                                  {result.type}
-                                </div>
+                {isSearchOpen && (searchResults.length > 0 || searchQuery.length > 1) && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-fadeInUp">
+                    {searchResults.length > 0 ? (
+                      <div className="max-h-80 overflow-y-auto">
+                        {searchResults.map((result, index) => (
+                          <a
+                            key={index}
+                            href={result.href}
+                            className="flex items-start gap-3 p-4 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-50 last:border-0 animate-fadeInUp"
+                            onClick={() => {
+                              setIsSearchOpen(false)
+                              setSearchQuery('')
+                              setSearchResults([])
+                            }}
+                          >
+                            {getSearchIcon(result.type)}
+                            <div className="flex-1">
+                              <div className="font-medium text-gray-900 text-sm">
+                                {result.title}
                               </div>
-                            </a>
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="p-4 text-center text-gray-500 text-sm">
-                          No results found for "{searchQuery}"
-                        </div>
-                      )}
-                    </div>
-                  )}
-</div>
+                              <div className="text-xs text-gray-500 mt-1">{result.description}</div>
+                              <div className="text-xs text-blue-600 mt-1 capitalize">
+                                {result.type}
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="p-4 text-center text-gray-500 text-sm">
+                        No results found for "{searchQuery}"
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
 
               {/* Action Buttons */}
               <div className="flex items-center gap-2">
@@ -492,7 +485,9 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 {/* Call with phone number visible */}
                 <a
                   href={getPhoneLink()}
-                  onClick={() => handlePhoneClickTracking('sticky-header-desktop-call', 'primary', 100)}
+                  onClick={() =>
+                    handlePhoneClickTracking('sticky-header-desktop-call', 'primary', 100)
+                  }
                   className="hidden sm:flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 animate-fadeInUp"
                 >
                   <Phone className="h-4 w-4" />
@@ -502,7 +497,9 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
 
                 {/* Book Demo */}
                 <a
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl animate-fadeInUp"
                 >
                   Book Demo
@@ -522,164 +519,166 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
       </header>
 
       {/* Mobile Menu Slide-out */}
-{isMobileMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <div
-              className="fixed inset-0 bg-black/50 z-40 md:hidden animate-fadeInUp"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
+      {isMobileMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/50 z-40 md:hidden animate-fadeInUp"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
 
-            {/* Mobile Menu Drawer */}
-            <div
-              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 md:hidden overflow-y-auto animate-fadeInUp"
-            >
-              <div className="p-6">
-                {/* Mobile Header */}
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-                      <Brain className="h-5 w-5 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-gray-900">Cerebrum</div>
-                      <div className="text-xs text-gray-500">Biology Excellence</div>
-                    </div>
+          {/* Mobile Menu Drawer */}
+          <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 md:hidden overflow-y-auto animate-fadeInUp">
+            <div className="p-6">
+              {/* Mobile Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+                    <Brain className="h-5 w-5 text-white" />
                   </div>
-                  <button
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-2 text-gray-500 hover:text-gray-700"
-                  >
-                    <X className="h-6 w-6" />
-                  </button>
-                </div>
-
-                {/* Mobile Search */}
-                <div className="mb-6">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                    <input
-                      type="text"
-                      placeholder="Search..."
-                      className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  </div>
-                </div>
-
-                {/* Mobile Navigation */}
-                <nav className="space-y-4">
                   <div>
-                    <div className="flex items-center justify-between py-3 text-gray-900 font-medium">
-                      Programs
-                      <ChevronRight className="h-4 w-4" />
-                    </div>
-                    <div className="pl-4 space-y-2">
-                      {MEGA_MENU_DATA[0].items.map((item) => (
-                        <a
-                          key={item.label}
-                          href={item.href}
-                          className="block py-2 text-sm text-gray-600 hover:text-blue-600"
-                        >
-                          {item.label}
-                        </a>
-                      ))}
-                    </div>
+                    <div className="font-bold text-gray-900">Cerebrum</div>
+                    <div className="text-xs text-gray-500">Biology Excellence</div>
                   </div>
+                </div>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 text-gray-500 hover:text-gray-700"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
 
-                  <a
-                    href="/courses/finder"
-                    className="block py-3 text-gray-900 font-medium border-t border-gray-100"
-                  >
-                    Course Finder
-                  </a>
-                  <a
-                    href="/success-stories"
-                    className="block py-3 text-gray-900 font-medium border-t border-gray-100"
-                  >
-                    Success Stories
-                  </a>
-                  <a
-                    href="/faculty"
-                    className="block py-3 text-gray-900 font-medium border-t border-gray-100"
-                  >
-                    Faculty
-                  </a>
-                  <a
-                    href="/resources"
-                    className="block py-3 text-gray-900 font-medium border-t border-gray-100"
-                  >
-                    Resources
-                  </a>
-                  <a
-                    href="/gallery"
-                    className="block py-3 text-gray-900 font-medium border-t border-gray-100"
-                  >
-                    Gallery
-                  </a>
-                  <a
-                    href="/contact"
-                    className="block py-3 text-gray-900 font-medium border-t border-gray-100"
-                  >
-                    Contact
-                  </a>
-                </nav>
+              {/* Mobile Search */}
+              <div className="mb-6">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
 
-                {/* Mobile Action Buttons */}
-                <div className="mt-8 space-y-3">
-                  <button
-                    onClick={async () => {
-                      await trackAndOpenWhatsApp({
-                        source: 'sticky-header-mobile',
-                        message: WHATSAPP_MESSAGES.default,
-                        campaign: 'header-cta',
-                      })
-                      setIsMobileMenuOpen(false)
-                    }}
-                    className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3 rounded-xl font-medium cursor-pointer"
-                  >
-                    <MessageCircle className="h-5 w-5" />
-                    WhatsApp Us
-                  </button>
-                  <a
-                    href={getPhoneLink()}
-                    onClick={() => handlePhoneClickTracking('sticky-header-mobile-call', 'primary', 100)}
-                    className="flex items-center justify-center gap-2 w-full bg-blue-500 text-white py-3 rounded-xl font-medium"
-                  >
-                    <Phone className="h-5 w-5" />
-                    Call: 88264-44334
-                  </a>
-                  <a
-                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-medium"
-                  >
-                    <Video className="h-5 w-5" />
-                    Book Demo Class
-                  </a>
+              {/* Mobile Navigation */}
+              <nav className="space-y-4">
+                <div>
+                  <div className="flex items-center justify-between py-3 text-gray-900 font-medium">
+                    Programs
+                    <ChevronRight className="h-4 w-4" />
+                  </div>
+                  <div className="pl-4 space-y-2">
+                    {MEGA_MENU_DATA[0].items.map((item) => (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        className="block py-2 text-sm text-gray-600 hover:text-blue-600"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Mobile Quick Links */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <div className="text-sm font-medium text-gray-900 mb-3">Quick Links</div>
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <Link href="/scholarship" className="text-blue-600 hover:underline">
-                      Scholarship Test
-                    </Link>
-                    <Link href="/calculator" className="text-blue-600 hover:underline">
-                      Fee Calculator
-                    </Link>
-                    <Link href="/resources/free" className="text-blue-600 hover:underline">
-                      Free Resources
-                    </Link>
-                    <Link href="/courses/compare" className="text-blue-600 hover:underline">
-                      Compare Courses
-                    </Link>
-                  </div>
+                <a
+                  href="/courses/finder"
+                  className="block py-3 text-gray-900 font-medium border-t border-gray-100"
+                >
+                  Course Finder
+                </a>
+                <a
+                  href="/success-stories"
+                  className="block py-3 text-gray-900 font-medium border-t border-gray-100"
+                >
+                  Success Stories
+                </a>
+                <a
+                  href="/faculty"
+                  className="block py-3 text-gray-900 font-medium border-t border-gray-100"
+                >
+                  Faculty
+                </a>
+                <a
+                  href="/resources"
+                  className="block py-3 text-gray-900 font-medium border-t border-gray-100"
+                >
+                  Resources
+                </a>
+                <a
+                  href="/gallery"
+                  className="block py-3 text-gray-900 font-medium border-t border-gray-100"
+                >
+                  Gallery
+                </a>
+                <a
+                  href="/contact"
+                  className="block py-3 text-gray-900 font-medium border-t border-gray-100"
+                >
+                  Contact
+                </a>
+              </nav>
+
+              {/* Mobile Action Buttons */}
+              <div className="mt-8 space-y-3">
+                <button
+                  onClick={async () => {
+                    await trackAndOpenWhatsApp({
+                      source: 'sticky-header-mobile',
+                      message: WHATSAPP_MESSAGES.default,
+                      campaign: 'header-cta',
+                    })
+                    setIsMobileMenuOpen(false)
+                  }}
+                  className="flex items-center justify-center gap-2 w-full bg-green-600 text-white py-3 rounded-xl font-medium cursor-pointer"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  WhatsApp Us
+                </button>
+                <a
+                  href={getPhoneLink()}
+                  onClick={() =>
+                    handlePhoneClickTracking('sticky-header-mobile-call', 'primary', 100)
+                  }
+                  className="flex items-center justify-center gap-2 w-full bg-blue-500 text-white py-3 rounded-xl font-medium"
+                >
+                  <Phone className="h-5 w-5" />
+                  Call: 88264-44334
+                </a>
+                <a
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-medium"
+                >
+                  <Video className="h-5 w-5" />
+                  Book Demo Class
+                </a>
+              </div>
+
+              {/* Mobile Quick Links */}
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="text-sm font-medium text-gray-900 mb-3">Quick Links</div>
+                <div className="grid grid-cols-2 gap-2 text-xs">
+                  <Link href="/scholarship" className="text-blue-600 hover:underline">
+                    Scholarship Test
+                  </Link>
+                  <Link href="/calculator" className="text-blue-600 hover:underline">
+                    Fee Calculator
+                  </Link>
+                  <Link href="/resources/free" className="text-blue-600 hover:underline">
+                    Free Resources
+                  </Link>
+                  <Link href="/courses/compare" className="text-blue-600 hover:underline">
+                    Compare Courses
+                  </Link>
                 </div>
               </div>
             </div>
-          </>
-        )}
-{/* Spacer for fixed header */}
+          </div>
+        </>
+      )}
+      {/* Spacer for fixed header */}
       <div className="h-16 lg:h-20" />
     </>
   )
