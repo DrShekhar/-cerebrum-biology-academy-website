@@ -39,7 +39,7 @@ const demoVideo = {
 const testimonialVideos = [
   {
     id: 'WqcWDy0K4lU',
-    title: "From Struggling to AIIMS — A Student's Journey",
+    title: 'Enjoying My NEET Journey at Cerebrum',
     badge: 'Success Story',
   },
   { id: 'bk6wQCh6b9w', title: 'How I Scored 680+ in NEET Biology', badge: 'NEET Topper' },
