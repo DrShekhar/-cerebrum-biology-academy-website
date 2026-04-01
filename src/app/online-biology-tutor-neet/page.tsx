@@ -1,6 +1,3 @@
-'use client'
-
-import { useState, useEffect, useRef } from 'react'
 import {
   Trophy,
   Users,
@@ -20,31 +17,6 @@ import {
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { BreadcrumbSchema } from '@/components/seo'
-
-function useScrollAnimation(threshold = 0.1) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const element = ref.current
-    if (!element) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.unobserve(element)
-        }
-      },
-      { threshold }
-    )
-
-    observer.observe(element)
-    return () => observer.disconnect()
-  }, [threshold])
-
-  return { ref, isVisible }
-}
 
 const neetExpertise = [
   {
@@ -115,12 +87,6 @@ const faqs = [
 ]
 
 export default function OnlineBiologyTutorNeetPage() {
-  const heroAnim = useScrollAnimation()
-  const expertiseHeaderAnim = useScrollAnimation()
-  const resultsHeaderAnim = useScrollAnimation()
-  const faqsHeaderAnim = useScrollAnimation()
-  const ctaAnim = useScrollAnimation()
-
   return (
     <div className="min-h-screen">
       {/* Breadcrumb Navigation + Schema */}
@@ -174,10 +140,7 @@ export default function OnlineBiologyTutorNeetPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div
-            ref={heroAnim.ref}
-            className={`text-center max-w-4xl mx-auto transition-all duration-700 ${
-              heroAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            }`}
+            className={`text-center max-w-4xl mx-auto transition-all duration-700 ${'opacity-100 translate-y-0'}`}
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-5 h-5 mr-2 text-yellow-400" />
@@ -200,7 +163,11 @@ export default function OnlineBiologyTutorNeetPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -253,12 +220,7 @@ export default function OnlineBiologyTutorNeetPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div
-            ref={expertiseHeaderAnim.ref}
-            className={`text-center mb-16 transition-all duration-600 ${
-              expertiseHeaderAnim.isVisible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-5'
-            }`}
+            className={`text-center mb-16 transition-all duration-600 ${'opacity-100 translate-y-0'}`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Online NEET Teaching Approach
@@ -288,10 +250,7 @@ export default function OnlineBiologyTutorNeetPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div
-            ref={resultsHeaderAnim.ref}
-            className={`text-center mb-16 transition-all duration-600 ${
-              resultsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            }`}
+            className={`text-center mb-16 transition-all duration-600 ${'opacity-100 translate-y-0'}`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Our NEET Results</h2>
           </div>
@@ -319,10 +278,7 @@ export default function OnlineBiologyTutorNeetPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <div
-            ref={faqsHeaderAnim.ref}
-            className={`text-center mb-16 transition-all duration-600 ${
-              faqsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            }`}
+            className={`text-center mb-16 transition-all duration-600 ${'opacity-100 translate-y-0'}`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
@@ -350,19 +306,18 @@ export default function OnlineBiologyTutorNeetPage() {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-700 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-            ref={ctaAnim.ref}
-            className={`transition-all duration-600 ${
-              ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            }`}
-          >
+          <div className={`transition-all duration-600 ${'opacity-100 translate-y-0'}`}>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Crack NEET Biology?</h2>
             <p className="text-xl md:text-2xl mb-8 text-green-100">
               Join 15,000+ successful students. Book your free online demo today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

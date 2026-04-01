@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Trophy,
   Users,
@@ -24,7 +22,6 @@ import {
   Atom,
   Phone,
 } from 'lucide-react'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
@@ -273,9 +270,7 @@ export default function ALevelBiologyTutorPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/20">
               <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
               Cambridge, Edexcel, AQA & OCR Expert
@@ -299,7 +294,11 @@ export default function ALevelBiologyTutorPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -310,21 +309,20 @@ export default function ALevelBiologyTutorPage() {
                 </Button>
               </Link>
 
-              <Button
-                variant="outline"
-                size="xl"
-                className="border-white text-white hover:bg-white hover:text-purple-700 cursor-pointer"
-                onClick={async () => {
-                  await trackAndOpenWhatsApp({
-                    source: 'a-level-biology-hero',
-                    message: WHATSAPP_MESSAGES.courseEnquiry,
-                    campaign: 'a-level-biology',
-                  })
-                }}
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20about%20A-Level%20Biology%20coaching.%20Please%20share%20details."
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                WhatsApp: +91 88264 44334
-              </Button>
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="border-white text-white hover:bg-white hover:text-purple-700 cursor-pointer"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  WhatsApp: +91 88264 44334
+                </Button>
+              </Link>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -346,9 +344,7 @@ export default function ALevelBiologyTutorPage() {
       {/* Exam Boards Section */}
       <section className="py-20 bg-gradient-to-b from-white to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               All A-Level Exam Boards Covered
             </h2>
@@ -392,9 +388,7 @@ export default function ALevelBiologyTutorPage() {
       {/* A-Level Topics Coverage */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete A-Level Biology Syllabus Coverage
             </h2>
@@ -444,9 +438,7 @@ export default function ALevelBiologyTutorPage() {
       {/* AS vs A2 Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 via-violet-50 to-purple-100">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               AS Level vs A2 Level: Understanding the Pathway
             </h2>
@@ -456,9 +448,7 @@ export default function ALevelBiologyTutorPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div
-              className="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-purple-500 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-purple-500 animate-fadeInUp">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-purple-100 rounded-lg mr-4">
                   <BookOpen className="w-8 h-8 text-purple-600" />
@@ -492,9 +482,7 @@ export default function ALevelBiologyTutorPage() {
               </div>
             </div>
 
-            <div
-              className="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-violet-600 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-violet-600 animate-fadeInUp">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-violet-100 rounded-lg mr-4">
                   <GraduationCap className="w-8 h-8 text-violet-600" />
@@ -534,9 +522,7 @@ export default function ALevelBiologyTutorPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Beyond Standard Teaching
             </h2>
@@ -566,9 +552,7 @@ export default function ALevelBiologyTutorPage() {
       {/* Grade Boundaries */}
       <section className="py-20 bg-gradient-to-br from-purple-900 via-violet-900 to-purple-800 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Understanding Grade Boundaries</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Know exactly what you need for A*/A grades in each exam board
@@ -611,9 +595,7 @@ export default function ALevelBiologyTutorPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -642,8 +624,7 @@ export default function ALevelBiologyTutorPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-violet-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Achieve A*/A in A-Level Biology?
             </h2>
@@ -653,7 +634,11 @@ export default function ALevelBiologyTutorPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -664,21 +649,20 @@ export default function ALevelBiologyTutorPage() {
                 </Button>
               </Link>
 
-              <Button
-                variant="outline"
-                size="xl"
-                className="border-white text-white hover:bg-white hover:text-purple-700 cursor-pointer"
-                onClick={async () => {
-                  await trackAndOpenWhatsApp({
-                    source: 'a-level-biology-cta',
-                    message: WHATSAPP_MESSAGES.courseEnquiry,
-                    campaign: 'a-level-biology',
-                  })
-                }}
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20about%20A-Level%20Biology%20coaching.%20Please%20share%20details."
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                WhatsApp Now
-              </Button>
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="border-white text-white hover:bg-white hover:text-purple-700 cursor-pointer"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  WhatsApp Now
+                </Button>
+              </Link>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">
