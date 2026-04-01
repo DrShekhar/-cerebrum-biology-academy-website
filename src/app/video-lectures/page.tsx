@@ -86,14 +86,14 @@ export default function VideoLecturesPage() {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}
-        <section className="bg-gradient-to-br from-red-600 via-red-700 to-red-900 text-white py-12">
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-12">
           <div className="max-w-5xl mx-auto px-4 text-center">
-            <span className="inline-flex items-center gap-2 bg-white/15 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              <Play className="w-4 h-4" />
+            <span className="inline-flex items-center gap-2 bg-green-600/20 border border-green-400/30 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <Play className="w-4 h-4 text-green-300" />
               Free Video Lectures • Hinglish Medium
             </span>
             <h1 className="text-3xl md:text-5xl font-bold mb-4">Biology Video Lectures</h1>
-            <p className="text-lg text-red-100 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
               Watch Dr. Shekhar (AIIMS) teach Biology. Free demo class, student success stories, and
               complete NEET lecture library.
             </p>
@@ -111,7 +111,7 @@ export default function VideoLecturesPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{demoVideo.title}</h2>
               <p className="text-gray-600 mt-2">{demoVideo.subtitle}</p>
             </div>
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-red-500/20">
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-200">
               <iframe
                 src={`https://www.youtube.com/embed/${demoVideo.id}?rel=0&modestbranding=1`}
                 title={demoVideo.title}
@@ -137,7 +137,7 @@ export default function VideoLecturesPage() {
                 </Link>
                 <a
                   href="tel:+918826444334"
-                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+                  className="inline-flex items-center gap-2 bg-yellow-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-900 transition"
                 >
                   <Phone className="w-5 h-5" />
                   Call: +91 88264 44334
@@ -158,7 +158,7 @@ export default function VideoLecturesPage() {
                 { icon: Clock, value: '15+', label: 'Years Experience' },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center">
-                  <stat.icon className="w-5 h-5 text-red-600 mb-1" />
+                  <stat.icon className="w-5 h-5 text-teal-600 mb-1" />
                   <p className="text-xl font-bold text-gray-900">{stat.value}</p>
                   <p className="text-xs text-gray-600">{stat.label}</p>
                 </div>
@@ -199,7 +199,7 @@ export default function VideoLecturesPage() {
                       <Star className="w-3 h-3 inline mr-1" />
                       {video.badge}
                     </span>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                       {video.title}
                     </h3>
                   </div>
@@ -235,7 +235,7 @@ export default function VideoLecturesPage() {
                 href={`https://www.youtube.com/playlist?list=${playlistId}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-red-600 font-semibold hover:text-red-700 transition"
+                className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition"
               >
                 <Play className="w-5 h-5" />
                 Watch full playlist on YouTube
@@ -276,10 +276,10 @@ export default function VideoLecturesPage() {
         </section>
 
         {/* Bottom CTA */}
-        <section className="py-12 bg-gradient-to-r from-red-600 to-red-800 text-white">
+        <section className="py-12 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Your NEET Journey?</h2>
-            <p className="text-lg text-red-100 mb-8">
+            <p className="text-lg text-slate-300 mb-8">
               Free videos are great — but live coaching with AIIMS faculty is what gets you into
               medical college
             </p>
