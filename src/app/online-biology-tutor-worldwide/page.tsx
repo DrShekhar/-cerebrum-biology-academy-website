@@ -147,7 +147,7 @@ const faqs = [
   {
     question: 'Can I try a free class before committing?',
     answer:
-      'Yes! We offer a FREE demo class for every curriculum. Experience our teaching quality, ask questions, and see if it is the right fit. Book via WhatsApp, email (info@cerebrumbiologyacademy.com), or our website.',
+      'Yes! We offer a FREE demo class for every curriculum. Experience our teaching quality, ask questions, and see if it is the right fit. Book via WhatsApp (+91 88264 44334) or our website.',
   },
 ]
 
@@ -160,7 +160,6 @@ export default function OnlineBiologyTutorWorldwidePage() {
       'Expert online Biology tutoring for A-Level, IB, IGCSE, AP, GCSE, NEET, and Board exams. AIIMS-trained faculty. Students in 14+ countries.',
     url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-worldwide',
     telephone: '+91-88264-44334',
-    email: 'info@cerebrumbiologyacademy.com',
     areaServed: 'Worldwide',
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -219,12 +218,6 @@ export default function OnlineBiologyTutorWorldwidePage() {
                 <Phone className="w-5 h-5" />
                 WhatsApp Us
               </Link>
-              <a
-                href="mailto:info@cerebrumbiologyacademy.com?subject=Online%20Biology%20Tutoring%20Enquiry"
-                className="inline-flex items-center gap-2 bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition"
-              >
-                Email Us
-              </a>
               <Link
                 href="/demo-booking"
                 className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
@@ -402,12 +395,6 @@ export default function OnlineBiologyTutorWorldwidePage() {
               Whatever your curriculum, wherever you are — expert Biology tutoring is one click away
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="mailto:info@cerebrumbiologyacademy.com?subject=Online%20Biology%20Tutoring%20Enquiry"
-                className="inline-flex items-center gap-2 bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition"
-              >
-                Email: info@cerebrumbiologyacademy.com
-              </a>
               <Link
                 href="https://wa.me/918826444334?text=Hi!%20I%20need%20an%20online%20Biology%20tutor.%20My%20curriculum%20is%20[A-Level/IB/IGCSE/AP/GCSE].%20Please%20help."
                 target="_blank"
@@ -416,6 +403,12 @@ export default function OnlineBiologyTutorWorldwidePage() {
               >
                 <Phone className="w-6 h-6" />
                 WhatsApp Us
+              </Link>
+              <Link
+                href="/demo-booking"
+                className="inline-flex items-center gap-2 bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition"
+              >
+                Book FREE Demo
               </Link>
             </div>
           </div>

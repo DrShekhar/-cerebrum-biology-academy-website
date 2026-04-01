@@ -63,12 +63,6 @@ export default function InternationalBiologyClassesPage() {
                 <Phone className="h-5 w-5" />
                 Call: +91 88264 44334
               </a>
-              <a
-                href="mailto:info@cerebrumbiologyacademy.com?subject=International%20Biology%20Classes%20Enquiry"
-                className="flex items-center gap-2 rounded-lg bg-white/10 border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/20"
-              >
-                Email Us
-              </a>
             </div>
           </div>
         </div>

@@ -663,12 +663,6 @@ export default function ALevelBiologyTutorPage() {
                   WhatsApp Now
                 </Button>
               </Link>
-              <a
-                href="mailto:info@cerebrumbiologyacademy.com?subject=A-Level%20Biology%20Coaching%20Enquiry"
-                className="inline-flex items-center gap-2 bg-white/10 border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
-              >
-                Email Us
-              </a>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">
