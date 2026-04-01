@@ -297,7 +297,8 @@ export const WHATSAPP_MESSAGES = {
     "Hi! I'm from Ghaziabad. I want to join your online NEET Biology classes. Please share batch details and fees.",
 
   // Course-specific messages for broader offerings
-  olympiad: 'Hi! I want to enroll for Biology Olympiad (NBO/IBO) preparation. What courses do you offer?',
+  olympiad:
+    'Hi! I want to enroll for Biology Olympiad (NBO/IBO) preparation. What courses do you offer?',
   boardBiology: 'Hi! I need Board Biology / CBSE Biology coaching. Please share course details.',
   foundation: 'Hi! I want Foundation Biology coaching for Class 9/10. What batches are available?',
   mcqPractice: 'Hi! I want to access your MCQ Practice tool for NEET Biology preparation.',
@@ -343,16 +344,16 @@ export function getContextAwareMessage(pathname?: string): string {
 
   // City-specific messages mentioning nearest offline center
   const centerCities: Record<string, string> = {
-    'faridabad': 'I can visit your Faridabad center (Sector 17, Huda Market). ',
-    'gurugram': 'I can visit your Gurugram center (M2K Corporate Park, Sector 51). ',
-    'gurgaon': 'I can visit your Gurugram center (M2K Corporate Park, Sector 51). ',
+    faridabad: 'I can visit your Faridabad center (Sector 17, Huda Market). ',
+    gurugram: 'I can visit your Gurugram center (M2K Corporate Park, Sector 51). ',
+    gurgaon: 'I can visit your Gurugram center (M2K Corporate Park, Sector 51). ',
     'south-delhi': 'I can visit your South Extension center. ',
     'south-extension': 'I can visit your South Extension center. ',
-    'rohini': 'I can visit your Rohini center (DC Chowk, Sector 9). ',
+    rohini: 'I can visit your Rohini center (DC Chowk, Sector 9). ',
     'north-delhi': 'I can visit your Rohini center (DC Chowk, Sector 9). ',
     'west-delhi': 'I can visit your Rohini center (DC Chowk, Sector 9). ',
-    'noida': 'I prefer online classes. ',
-    'ghaziabad': 'I prefer online classes. ',
+    noida: 'I prefer online classes. ',
+    ghaziabad: 'I prefer online classes. ',
     'east-delhi': 'I prefer online classes. ',
   }
 
@@ -364,7 +365,8 @@ export function getContextAwareMessage(pathname?: string): string {
       .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
       .join(' ')
 
-    const centerHint = Object.entries(centerCities).find(([key]) => pathname.includes(key))?.[1] || ''
+    const centerHint =
+      Object.entries(centerCities).find(([key]) => pathname.includes(key))?.[1] || ''
 
     if (pathname.includes('neet-coaching')) {
       return `Hi! I'm from ${localityName}. ${centerHint}I want to join NEET Biology coaching. What batches and timings are available?`
@@ -377,6 +379,36 @@ export function getContextAwareMessage(pathname?: string): string {
     return `Hi! I'm from ${localityName} area. ${centerHint}I'm interested in NEET Biology coaching. Please share details.`
   }
 
+  // International curriculum pages
+  if (pathname.includes('a-level') || pathname.includes('cambridge')) {
+    return 'Hi! I want to know about A-Level Biology coaching. Please share details and timings.'
+  }
+  if (pathname.includes('ib-biology') || pathname.includes('ib-bio')) {
+    return 'Hi! I want to know about IB Biology coaching (HL/SL). Please share details.'
+  }
+  if (pathname.includes('igcse')) {
+    return 'Hi! I want to know about IGCSE Biology coaching. Please share details.'
+  }
+  if (pathname.includes('ap-biology')) {
+    return 'Hi! I want to know about AP Biology coaching. Please share details.'
+  }
+  if (pathname.includes('gcse')) {
+    return 'Hi! I want to know about GCSE Biology coaching. Please share details.'
+  }
+  if (
+    pathname.includes('international') ||
+    pathname.includes('nri') ||
+    pathname.includes('worldwide')
+  ) {
+    return 'Hi! I am an international student looking for online Biology coaching. Please share details.'
+  }
+  if (pathname.includes('olympiad') || pathname.includes('nseb') || pathname.includes('ibo')) {
+    return 'Hi! I want to know about Biology Olympiad (NSEB/IBO) coaching. Please share details.'
+  }
+  if (pathname.includes('near-me') || pathname.includes('near_me')) {
+    return 'Hi! I am looking for NEET Biology coaching near me. Please help me find the nearest center.'
+  }
+
   // Check for partial matches
   if (pathname.startsWith('/courses/')) {
     const courseName = pathname.split('/').pop()?.replace(/-/g, ' ') || 'NEET Biology'
@@ -384,7 +416,7 @@ export function getContextAwareMessage(pathname?: string): string {
   }
 
   if (pathname.startsWith('/blog/')) {
-    return 'Hi! I was reading your blog and have some questions about NEET Biology preparation.'
+    return 'Hi! I was reading your blog and have some questions about Biology preparation.'
   }
 
   // Default message with urgency

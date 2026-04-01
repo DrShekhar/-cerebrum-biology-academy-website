@@ -11,6 +11,29 @@ interface SEOLandingHeroProps {
 }
 
 export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
+  // Derive WhatsApp message from page title for curriculum-appropriate messaging
+  const title = hero.headline || ''
+  const whatsappSubject = title.includes('IB')
+    ? 'IB Biology coaching'
+    : title.includes('IGCSE')
+      ? 'IGCSE Biology coaching'
+      : title.includes('A-Level') || title.includes('A Level')
+        ? 'A-Level Biology coaching'
+        : title.includes('AP Biology')
+          ? 'AP Biology coaching'
+          : title.includes('GCSE')
+            ? 'GCSE Biology coaching'
+            : title.includes('Olympiad') || title.includes('NSEB')
+              ? 'Biology Olympiad coaching'
+              : title.includes('Dropper') || title.includes('Repeater')
+                ? 'NEET Dropper coaching'
+                : title.includes('Foundation') ||
+                    title.includes('Class 9') ||
+                    title.includes('Class 10')
+                  ? 'NEET Foundation coaching'
+                  : 'NEET Biology coaching'
+  const whatsappUrl = `https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I want to know about ${whatsappSubject}. Please share details.`)}`
+
   return (
     <section
       className={`relative overflow-hidden ${hero.backgroundGradient ? `bg-gradient-to-br ${hero.backgroundGradient}` : 'bg-indigo-900'} py-20 lg:py-28`}
@@ -35,32 +58,24 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
         <div className="text-center">
           {/* Highlighted Text Badge */}
           {hero.highlightedText && (
-            <div
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm animate-fadeInUp"
-            >
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm animate-fadeInUp">
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
               <span className="text-sm font-medium text-white/90">{hero.highlightedText}</span>
             </div>
           )}
 
           {/* Main Headline */}
-          <h1
-            className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl animate-fadeInUp"
-          >
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl animate-fadeInUp">
             {hero.headline}
           </h1>
 
           {/* Subheadline */}
-          <p
-            className="mx-auto mt-6 max-w-3xl text-lg text-white/80 sm:text-xl animate-fadeInUp"
-          >
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-white/80 sm:text-xl animate-fadeInUp">
             {hero.subheadline}
           </p>
 
           {/* CTA Buttons */}
-          <div
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp"
-          >
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp">
             <Link
               href={hero.ctaLink}
               className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-lg font-semibold text-gray-900 shadow-xl transition-all hover:bg-gray-100 hover:shadow-2xl"
@@ -69,7 +84,9 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20"
             >
               <Play className="h-5 w-5" />
@@ -78,9 +95,7 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
           </div>
 
           {/* Quick Contact */}
-          <div
-            className="mt-8 flex items-center justify-center gap-2 text-white/70 animate-fadeInUp"
-          >
+          <div className="mt-8 flex items-center justify-center gap-2 text-white/70 animate-fadeInUp">
             <Phone className="h-4 w-4" />
             <span className="text-sm">Questions? Call Dr. Shekhar:</span>
             <a href={getPhoneLink()} className="font-semibold text-white hover:underline">
@@ -90,9 +105,7 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
         </div>
 
         {/* Stats Bar */}
-        <div
-          className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-4 animate-fadeInUp"
-        >
+        <div className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-4 animate-fadeInUp">
           {stats.map((stat, index) => (
             <div
               key={index}
