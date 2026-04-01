@@ -75,7 +75,13 @@ export const classTypeLabels: Record<ClassType, string> = {
   NEET_PRACTICE_12: 'NEET/Practice Class XII',
 }
 
-export type ClassCategory = 'foundation' | 'neet' | 'pinnacle' | 'olympiad' | 'international' | 'special'
+export type ClassCategory =
+  | 'foundation'
+  | 'neet'
+  | 'pinnacle'
+  | 'olympiad'
+  | 'international'
+  | 'special'
 
 export const classCategoryLabels: Record<ClassCategory, string> = {
   foundation: 'Foundation (9th-10th)',
@@ -116,16 +122,18 @@ export interface BatchCombination {
   description: string
 }
 
-// Class 11th Batches
+// ============================================
+// CLASS 11th Batches (Updated April 2026)
+// ============================================
 const class11Batches: Batch[] = [
   {
     id: 'c11-b1',
     classType: 'CLASS_11',
     batchNumber: 1,
     days: ['Mon', 'Wed'],
-    startTime: '18:00',
-    endTime: '19:30',
-    offlineLocation: 'FARIDABAD',
+    startTime: '16:15',
+    endTime: '17:45',
+    offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -133,28 +141,6 @@ const class11Batches: Batch[] = [
     id: 'c11-b2',
     classType: 'CLASS_11',
     batchNumber: 2,
-    days: ['Sat', 'Sun'],
-    startTime: '09:30',
-    endTime: '11:00',
-    offlineLocation: 'SOUTH_EXT',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-  {
-    id: 'c11-b3',
-    classType: 'CLASS_11',
-    batchNumber: 3,
-    days: ['Sat', 'Sun'],
-    startTime: '15:30',
-    endTime: '17:00',
-    offlineLocation: 'GURUGRAM',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-  {
-    id: 'c11-b4',
-    classType: 'CLASS_11',
-    batchNumber: 4,
     days: ['Tue', 'Thu'],
     startTime: '16:15',
     endTime: '17:45',
@@ -163,8 +149,91 @@ const class11Batches: Batch[] = [
     status: 'AVAILABLE',
   },
   {
+    id: 'c11-b3',
+    classType: 'CLASS_11',
+    batchNumber: 3,
+    days: ['Sat', 'Sun'],
+    startTime: '08:00',
+    endTime: '09:30',
+    offlineLocation: 'SOUTH_EXT',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'c11-b4',
+    classType: 'CLASS_11',
+    batchNumber: 4,
+    days: ['Sat', 'Sun'],
+    startTime: '13:30',
+    endTime: '15:00',
+    offlineLocation: 'FARIDABAD',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
     id: 'c11-b5',
     classType: 'CLASS_11',
+    batchNumber: 5,
+    days: ['Sat', 'Sun'],
+    startTime: '18:00',
+    endTime: '19:30',
+    offlineLocation: 'GURUGRAM',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+// ============================================
+// CLASS 12th Batches (Updated April 2026)
+// ============================================
+const class12Batches: Batch[] = [
+  {
+    id: 'c12-b1',
+    classType: 'CLASS_12',
+    batchNumber: 1,
+    days: ['Mon', 'Wed'],
+    startTime: '18:00',
+    endTime: '19:30',
+    offlineLocation: 'SOUTH_EXT',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'c12-b2',
+    classType: 'CLASS_12',
+    batchNumber: 2,
+    days: ['Tue', 'Thu'],
+    startTime: '18:00',
+    endTime: '19:30',
+    offlineLocation: 'ROHINI',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'c12-b3',
+    classType: 'CLASS_12',
+    batchNumber: 3,
+    days: ['Sat', 'Sun'],
+    startTime: '09:30',
+    endTime: '10:30',
+    offlineLocation: 'SOUTH_EXT',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'c12-b4',
+    classType: 'CLASS_12',
+    batchNumber: 4,
+    days: ['Sat', 'Sun'],
+    startTime: '11:45',
+    endTime: '13:30',
+    offlineLocation: 'FARIDABAD',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+  {
+    id: 'c12-b5',
+    classType: 'CLASS_12',
     batchNumber: 5,
     days: ['Sat', 'Sun'],
     startTime: '19:30',
@@ -175,55 +244,9 @@ const class11Batches: Batch[] = [
   },
 ]
 
-// Class 12th Batches
-const class12Batches: Batch[] = [
-  {
-    id: 'c12-b1',
-    classType: 'CLASS_12',
-    batchNumber: 1,
-    days: ['Mon', 'Wed'],
-    startTime: '16:15',
-    endTime: '17:45',
-    offlineLocation: 'FARIDABAD',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-  {
-    id: 'c12-b2',
-    classType: 'CLASS_12',
-    batchNumber: 2,
-    days: ['Sat', 'Sun'],
-    startTime: '08:00',
-    endTime: '09:30',
-    offlineLocation: 'SOUTH_EXT',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-  {
-    id: 'c12-b3',
-    classType: 'CLASS_12',
-    batchNumber: 3,
-    days: ['Sat', 'Sun'],
-    startTime: '14:00',
-    endTime: '15:30',
-    offlineLocation: 'GURUGRAM',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-  {
-    id: 'c12-b4',
-    classType: 'CLASS_12',
-    batchNumber: 4,
-    days: ['Tue', 'Thu'],
-    startTime: '18:00',
-    endTime: '19:30',
-    offlineLocation: 'ROHINI',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-]
-
-// Droppers Batches (longer duration classes)
+// ============================================
+// Droppers Batches — attend both XI + XII batches
+// ============================================
 const droppersBatches: Batch[] = [
   {
     id: 'drop-b1',
@@ -232,7 +255,7 @@ const droppersBatches: Batch[] = [
     days: ['Mon', 'Wed'],
     startTime: '16:15',
     endTime: '19:30',
-    offlineLocation: 'FARIDABAD',
+    offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -240,10 +263,10 @@ const droppersBatches: Batch[] = [
     id: 'drop-b2',
     classType: 'DROPPERS',
     batchNumber: 2,
-    days: ['Sat', 'Sun'],
-    startTime: '08:00',
-    endTime: '11:00',
-    offlineLocation: 'SOUTH_EXT',
+    days: ['Tue', 'Thu'],
+    startTime: '16:15',
+    endTime: '19:30',
+    offlineLocation: 'ROHINI',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -252,9 +275,9 @@ const droppersBatches: Batch[] = [
     classType: 'DROPPERS',
     batchNumber: 3,
     days: ['Sat', 'Sun'],
-    startTime: '14:00',
-    endTime: '17:00',
-    offlineLocation: 'GURUGRAM',
+    startTime: '08:00',
+    endTime: '10:30',
+    offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -262,10 +285,10 @@ const droppersBatches: Batch[] = [
     id: 'drop-b4',
     classType: 'DROPPERS',
     batchNumber: 4,
-    days: ['Tue', 'Thu'],
-    startTime: '16:15',
-    endTime: '19:30',
-    offlineLocation: 'ROHINI',
+    days: ['Sat', 'Sun'],
+    startTime: '11:45',
+    endTime: '15:00',
+    offlineLocation: 'FARIDABAD',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -306,7 +329,7 @@ const class10Batches: Batch[] = [
     days: ['Mon', 'Wed'],
     startTime: '19:30',
     endTime: '20:30',
-    offlineLocation: 'GURUGRAM',
+    offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -315,8 +338,8 @@ const class10Batches: Batch[] = [
 // USA NEET Batches (early morning IST for US timezone students)
 const usaBatches: Batch[] = [
   {
-    id: 'usa-c9-b1',
-    classType: 'USA_NEET_9',
+    id: 'usa-c10-b1',
+    classType: 'USA_NEET_10',
     batchNumber: 1,
     days: ['Mon', 'Wed'],
     startTime: '06:00',
@@ -326,8 +349,8 @@ const usaBatches: Batch[] = [
     status: 'AVAILABLE',
   },
   {
-    id: 'usa-c10-b1',
-    classType: 'USA_NEET_10',
+    id: 'usa-c12-b1',
+    classType: 'USA_NEET_12',
     batchNumber: 1,
     days: ['Tue', 'Thu'],
     startTime: '06:00',
@@ -341,17 +364,6 @@ const usaBatches: Batch[] = [
     classType: 'USA_NEET_11',
     batchNumber: 1,
     days: ['Mon', 'Wed'],
-    startTime: '07:00',
-    endTime: '08:30',
-    offlineLocation: 'SOUTH_EXT',
-    hasOnline: true,
-    status: 'AVAILABLE',
-  },
-  {
-    id: 'usa-c12-b1',
-    classType: 'USA_NEET_12',
-    batchNumber: 1,
-    days: ['Tue', 'Thu'],
     startTime: '07:00',
     endTime: '08:30',
     offlineLocation: 'SOUTH_EXT',
@@ -386,24 +398,33 @@ const olympiadBatches: Batch[] = [
   },
 ]
 
-// Crash Course NEET 2026
-// Crash Course NEET 2026 — Single batch, 7 days/week
-// Weekdays: 9:30-10:30 AM | Weekends: 7:00-8:30 AM
+// Crash Course NEET 2026 — Mon-Fri 9:30-10:30 AM + Sat/Sun 7:00-8:00 AM
 const crashCourseBatches: Batch[] = [
   {
     id: 'crash-b1',
     classType: 'CRASH_COURSE',
     batchNumber: 1,
-    days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
     startTime: '09:30',
     endTime: '10:30',
     offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
+  {
+    id: 'crash-b2',
+    classType: 'CRASH_COURSE',
+    batchNumber: 2,
+    days: ['Sat', 'Sun'],
+    startTime: '07:00',
+    endTime: '08:00',
+    offlineLocation: 'SOUTH_EXT',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
 ]
 
-// IB Biology Batch
+// IB Biology Batch — Tue/Thu/Fri 11:40-12:40
 const ibBioBatches: Batch[] = [
   {
     id: 'ib-b1',
@@ -418,9 +439,19 @@ const ibBioBatches: Batch[] = [
   },
 ]
 
-// NEET / Practice Classes (Online only — included for all Class 11, 12, Dropper students)
-// These appear inside CLASS_11, CLASS_12, and DROPPERS tabs directly
+// NEET/Practice Classes (Friday only — included for all Class 11, 12, Dropper)
 const neetPracticeBatches: Batch[] = [
+  {
+    id: 'neet-prac-all',
+    classType: 'PRACTICE',
+    batchNumber: 1,
+    days: ['Fri'],
+    startTime: '15:00',
+    endTime: '16:00',
+    offlineLocation: 'SOUTH_EXT',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
   {
     id: 'neet-prac-11',
     classType: 'CLASS_11',
@@ -428,18 +459,18 @@ const neetPracticeBatches: Batch[] = [
     days: ['Fri'],
     startTime: '20:30',
     endTime: '21:30',
-    offlineLocation: 'GURUGRAM',
+    offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
   {
     id: 'neet-prac-12',
     classType: 'CLASS_12',
-    batchNumber: 5,
+    batchNumber: 6,
     days: ['Fri'],
     startTime: '21:30',
     endTime: '22:30',
-    offlineLocation: 'GURUGRAM',
+    offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -450,7 +481,7 @@ const neetPracticeBatches: Batch[] = [
     days: ['Fri'],
     startTime: '20:30',
     endTime: '21:30',
-    offlineLocation: 'GURUGRAM',
+    offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -461,7 +492,22 @@ const neetPracticeBatches: Batch[] = [
     days: ['Fri'],
     startTime: '21:30',
     endTime: '22:30',
-    offlineLocation: 'GURUGRAM',
+    offlineLocation: 'SOUTH_EXT',
+    hasOnline: true,
+    status: 'AVAILABLE',
+  },
+]
+
+// Mentorship Session (Friday)
+const mentorshipBatches: Batch[] = [
+  {
+    id: 'mentor-b1',
+    classType: 'MENTORSHIP',
+    batchNumber: 1,
+    days: ['Fri'],
+    startTime: '06:00',
+    endTime: '07:00',
+    offlineLocation: 'SOUTH_EXT',
     hasOnline: true,
     status: 'AVAILABLE',
   },
@@ -480,6 +526,7 @@ export const batches: Batch[] = [
   ...crashCourseBatches,
   ...ibBioBatches,
   ...neetPracticeBatches,
+  ...mentorshipBatches,
   ...specialBatches,
 ]
 
@@ -511,7 +558,7 @@ export const testSchedules: TestSchedule[] = [
   },
 ]
 
-export const locations: Location[] = ['GURUGRAM', 'SOUTH_EXT', 'ROHINI']
+export const locations: Location[] = ['GURUGRAM', 'SOUTH_EXT', 'ROHINI', 'FARIDABAD']
 
 export function formatTime(time24: string): string {
   const [hours, minutes] = time24.split(':').map(Number)
@@ -532,8 +579,6 @@ export function filterBatches(
   classType: ClassType,
   location: Location | 'ALL' | 'ONLINE'
 ): Batch[] {
-  // Always return ALL batches for the class type
-  // The UI will mark batches differently based on whether they match the selected location
   return getBatchesByClassType(classType)
 }
 
@@ -547,7 +592,6 @@ export function getTestScheduleByType(
   return testSchedules.find((ts) => ts.classType === classType)
 }
 
-// Helper to check if two time ranges overlap
 function timeToMinutes(time: string): number {
   const [hours, minutes] = time.split(':').map(Number)
   return hours * 60 + minutes
@@ -561,18 +605,12 @@ function doTimesOverlap(start1: string, end1: string, start2: string, end2: stri
   return s1 < e2 && s2 < e1
 }
 
-// Check if two batches have overlapping schedules
 function doBatchesConflict(batch1: Batch, batch2: Batch): boolean {
-  // Check if any days overlap
   const commonDays = batch1.days.filter((day) => batch2.days.includes(day))
-  if (commonDays.length === 0) {
-    return false // Different days, no conflict
-  }
-  // Same days - check if times overlap
+  if (commonDays.length === 0) return false
   return doTimesOverlap(batch1.startTime, batch1.endTime, batch2.startTime, batch2.endTime)
 }
 
-// Generate all valid Class 11th + Class 12th combinations for Pinnacle ZA
 export function generateBatchCombinations(): BatchCombination[] {
   const class11 = batches.filter((b) => b.classType === 'CLASS_11' && !b.id.startsWith('neet-prac'))
   const class12 = batches.filter((b) => b.classType === 'CLASS_12' && !b.id.startsWith('neet-prac'))
@@ -614,7 +652,6 @@ export function getAvailableCategories(): ClassCategory[] {
   return Array.from(cats)
 }
 
-// Export class-specific batches for easy access
 export {
   class9Batches,
   class10Batches,
