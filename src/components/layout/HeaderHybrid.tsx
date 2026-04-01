@@ -159,13 +159,6 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
               <span>Courses</span>
             </Link>
             <Link
-              href="/online-neet-biology-coaching"
-              className="flex items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200"
-            >
-              <MonitorIcon />
-              <span>Online</span>
-            </Link>
-            <Link
               href="/faculty"
               className="flex items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200"
             >
