@@ -1973,6 +1973,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.94,
     },
     {
+      url: `${baseUrl}/online-biology-tutor-worldwide`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/online-biology-tutor-neet`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
