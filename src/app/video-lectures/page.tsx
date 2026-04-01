@@ -50,8 +50,8 @@ const testimonialVideos = [
   },
   {
     id: 't5F8RBuHITM',
-    title: "Parent's Perspective — Best Decision for My Child",
-    badge: 'Parent Testimonial',
+    title: 'Cerebrum Shaped My Career — Light Years Ahead of Other Coaching Institutes. I Could Not Have Done It Without Shekhar Sir',
+    badge: 'Student Testimonial',
   },
 ]
 
