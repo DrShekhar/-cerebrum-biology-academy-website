@@ -42,7 +42,7 @@ const testimonialVideos = [
     title: 'Enjoying My NEET Journey at Cerebrum',
     badge: 'Success Story',
   },
-  { id: 'bk6wQCh6b9w', title: 'How I Scored 680+ in NEET Biology', badge: 'NEET Topper' },
+  { id: 'bk6wQCh6b9w', title: 'How Shekhar Sir Helped Me Score 695/720 in NEET — Sadhana Sirin, MBBS at Lady Hardinge Medical College', badge: 'NEET Topper' },
   {
     id: 'Eim_y7yc5Y8',
     title: 'Why I Left Allen & Joined Cerebrum — Honest Review',
