@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    locale: 'en_OM',
     title: 'NEET Coaching for NRI Students in Oman',
     description:
       'NEET coaching for NRI students in Oman. 20 CBSE schools, 900K Indians. Relaxed learning environment with 98% success rate.',

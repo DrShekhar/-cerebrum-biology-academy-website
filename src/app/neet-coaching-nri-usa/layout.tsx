@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    locale: 'en_US',
     title: 'NEET Coaching for NRI Students in USA',
     description:
       'AP Biology to NEET bridge coaching for NRI students in USA. 2 CBSE schools, 5.16M Indians. Pre-med pathway with 98% success rate.',

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    locale: 'en_NP',
     title: 'NEET Coaching for Nepali Students',
     description:
       'NEET coaching for Nepali students. NEET is the primary exam for medical education. 98% success rate with Nepali curriculum bridge.',

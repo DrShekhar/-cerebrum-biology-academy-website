@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    locale: 'en_QA',
     title: 'NEET Coaching for NRI Students in Qatar',
     description:
       'NEET coaching for NRI students in Qatar. 12 CBSE schools, 700K Indian expatriates. Expert guidance for high-achieving students with 98% success rate.',

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    locale: 'en_SG',
     title: 'NEET Coaching for NRI Students in Singapore',
     description:
       'NEET coaching for NRI students in Singapore. 4 CBSE schools, 600K Indians. Bridge from IB/IGCSE to NEET with 98% success rate.',
