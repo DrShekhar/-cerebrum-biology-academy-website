@@ -4,7 +4,11 @@ import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/seo/metadata'
 import { HeroSection } from '@/components/layout/HeroSection'
 import { realTestimonials } from '@/data/realTestimonials'
-import { HomePageClient } from '@/components/home/HomePageClient'
+// PERFORMANCE: Dynamic import — HomePageClient (exit intent) loads after all content renders
+const HomePageClient = dynamic(
+  () => import('@/components/home/HomePageClient').then((mod) => mod.HomePageClient),
+  { loading: () => null }
+)
 import { SpeakableSchema } from '@/components/seo/SpeakableSchema'
 import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 import { ContentFreshness } from '@/components/seo/ContentFreshness'

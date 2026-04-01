@@ -116,14 +116,10 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             </span>
           </h1>
 
-          {/* H2 - Also LCP candidate, inline styles for immediate visibility */}
+          {/* H2 - LCP element. Simplified inline styles for faster render. No clamp(). */}
           <h2
             className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-3 text-yellow-200"
-            style={{
-              color: '#fef08a',
-              fontWeight: 600,
-              fontSize: 'clamp(1.125rem, 3vw, 1.875rem)',
-            }}
+            style={{ color: '#fef08a', fontWeight: 600 }}
           >
             Delhi NCR - Offline in South Extension, Gurugram, Rohini • Online - Serving Worldwide
           </h2>

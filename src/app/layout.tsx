@@ -114,9 +114,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleTagManager />
-        <StructuredData />
-        <SEOHealthCheck />
+        {/* PERFORMANCE: Moved GTM, StructuredData, SEOHealthCheck AFTER critical meta tags
+            GTM uses lazyOnload but was first in <head> — moved below meta tags
+            StructuredData and SEOHealthCheck are non-render-critical */}
 
         {/* Google Ads is loaded by GoogleAnalytics component with lazyOnload strategy - no need for duplicate here */}
 
@@ -175,9 +175,10 @@ export default function RootLayout({
           }}
         />
 
-        {/* PERFORMANCE: Removed inline scripts that were blocking parsing
-            - CSS MIME error suppression moved to error boundary
-            - Task scheduler now handled by browser native APIs */}
+        {/* Non-critical: GTM, StructuredData, SEOHealthCheck moved to end of <head> */}
+        <GoogleTagManager />
+        <StructuredData />
+        <SEOHealthCheck />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleTagManagerNoscript />
