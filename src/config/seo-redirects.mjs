@@ -1254,14 +1254,11 @@ export const gsc404CleanupRedirects = [
     destination: '/blog',
     permanent: true,
   },
-  { source: '/blog/how-to-score-700-plus-in-neet', destination: '/blog', permanent: true },
-  { source: '/blog/neet-application-form-2026', destination: '/blog', permanent: true },
-  { source: '/blog/human-physiology-neet-complete-notes', destination: '/blog', permanent: true },
-  {
-    source: '/blog/top-private-medical-colleges-india-fees-cutoff-rankings',
-    destination: '/blog',
-    permanent: true,
-  },
+  // REMOVED: 4 blog redirects that were hiding real blog posts with high-value content
+  // /blog/how-to-score-700-plus-in-neet — EXISTS in content/blog/
+  // /blog/neet-application-form-2026 — EXISTS in content/blog/
+  // /blog/human-physiology-neet-complete-notes — EXISTS in content/blog/
+  // /blog/top-private-medical-colleges-india-fees-cutoff-rankings — EXISTS in content/blog/
   // removed: /ncert-solutions duplicate — already in gsc404 → /biology-notes
 
   // --- Feb 27 crawl batch 2: more non-existent pages ---
@@ -1776,8 +1773,10 @@ export const thinPageConsolidationRedirects = [
   },
 
   // --- Generic "best" variations → hub ---
-  { source: '/best-biology-coaching-:slug', destination: '/neet-coaching', permanent: true },
-  { source: '/top-neet-coaching-:slug', destination: '/neet-coaching', permanent: true },
+  // REMOVED: /best-biology-coaching-:slug → /neet-coaching
+  // This wildcard was catching 7 real pages (best-biology-coaching-delhi-ncr, -faridabad, -gurugram, etc.)
+  // REMOVED: /top-neet-coaching-:slug → /neet-coaching
+  // This was catching real pages like /top-10-neet-coaching-gurugram, /top-5-neet-coaching-gurugram
   {
     source: '/affordable-neet-coaching-:slug',
     destination: '/neet-coaching-fees',
@@ -2287,10 +2286,10 @@ export const cannibalizationConsolidationRedirects = [
 // ============================================
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const areaConsolidationRedirects = [
-  { source: '/neet-coaching-near-metro/:station', destination: '/all-locations', permanent: true },
-
+  // REMOVED: /neet-coaching-near-metro/:station → /all-locations
+  // This wildcard was redirecting ALL 35 metro station pages to /all-locations
+  // Metro pages now exist as dynamic route at /neet-coaching-near-metro/[station]/
   // Thin biology-coaching location pages → parent city hub
-
   // Thin best-biology-tuition area pages → biology tutor south delhi
 ]
 
