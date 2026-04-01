@@ -6305,6 +6305,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.86,
     },
     {
+      url: `${baseUrl}/neet-coaching-near-me`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/neet-coaching-near-me-gurugram`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
