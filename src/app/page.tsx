@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/seo/metadata'
 import { HeroSection } from '@/components/layout/HeroSection'
 import { realTestimonials } from '@/data/realTestimonials'
@@ -208,6 +209,84 @@ export default function Home() {
       {/* 8.5 MCQ Practice Tool Promotion */}
       <section className="content-visibility-auto-sm">
         <MCQPromoBanner />
+      </section>
+
+      {/* 8.6 International Programs — for NRI/A-Level/IB/IGCSE/AP students */}
+      <section className="content-visibility-auto-sm">
+        <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-violet-50 py-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-10">
+              <span className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                Serving Students in 14+ Countries
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                International & NRI Students
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Expert Biology coaching for A-Level, IB, IGCSE, AP curricula and NRI students
+                worldwide
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                {
+                  title: 'A-Level Biology',
+                  desc: 'Cambridge, Edexcel, AQA',
+                  href: '/a-level-biology-tutor',
+                  badge: '92% A*/A Rate',
+                },
+                {
+                  title: 'IB Biology',
+                  desc: 'HL & SL, IA Support',
+                  href: '/ib-biology-tuition',
+                  badge: 'IB Expert',
+                },
+                {
+                  title: 'IGCSE Biology',
+                  desc: 'Cambridge 0610/0970',
+                  href: '/igcse-biology-tuition',
+                  badge: 'IGCSE Specialist',
+                },
+                {
+                  title: 'AP Biology',
+                  desc: 'College Board Prep',
+                  href: '/ap-biology-to-neet-preparation',
+                  badge: 'Score 5',
+                },
+              ].map((program) => (
+                <Link
+                  key={program.href}
+                  href={program.href}
+                  className="group bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:border-indigo-400 hover:shadow-lg transition-all"
+                >
+                  <span className="inline-block bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3">
+                    {program.badge}
+                  </span>
+                  <h3 className="font-bold text-gray-900 text-lg mb-1 group-hover:text-indigo-600 transition-colors">
+                    {program.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">{program.desc}</p>
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 mt-8">
+              <Link
+                href="/online-biology-classes-international"
+                className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Explore International Programs
+              </Link>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20international%20student.%20Please%20share%20details%20about%20your%20programs."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              >
+                WhatsApp for NRI Students
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 9. Locations Section */}
