@@ -45,7 +45,7 @@ const testimonialVideos = [
   { id: 'bk6wQCh6b9w', title: 'How Shekhar Sir Helped Me Score 695/720 in NEET — Sadhana Sirin, MBBS at Lady Hardinge Medical College', badge: 'NEET Topper' },
   {
     id: 'Eim_y7yc5Y8',
-    title: 'Why I Left Allen & Joined Cerebrum — Honest Review',
+    title: 'Where Big Coachings Pushed Me to Fail, One Advice from Shekhar Sir Saved Me — Now at AFMC Pune',
     badge: 'Student Review',
   },
   {
