@@ -1,35 +1,38 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Best Online Biology Tutor in India [98% Success Rate]',
+  title: 'Best Online Biology Tutor | NEET, A-Level, IB, IGCSE, AP | 98% Success Rate',
   description:
-    'Learn Biology online from Dr. Shekhar C Singh, AIIMS Alumnus. Expert online biology tutor for NEET, Class 11-12, and Board exams. Live interactive classes, personalized attention. Book FREE demo!',
+    'Expert online Biology tutor — AIIMS-trained Dr. Shekhar C Singh. NEET, Board exams, A-Level, IB, IGCSE, AP Biology. Live interactive classes, 15-student batches, 98% success rate. Students in 14+ countries. Book FREE demo!',
   keywords: [
     'online biology tutor',
-    'online biology tutor india',
     'best online biology tutor',
     'online biology tuition',
     'biology tutor online',
     'online biology classes',
     'online biology teacher',
     'biology online coaching',
-    'best online biology teacher india',
     'neet biology online tutor',
+    'a level biology tutor online',
+    'ib biology tutor online',
+    'igcse biology tutor online',
+    'ap biology tutor online',
     'class 11 biology online tutor',
     'class 12 biology online tutor',
+    'biology tutor for homeschool',
   ],
   openGraph: {
-    title: 'Best Online Biology Tutor in India [98% Success Rate]',
+    title: 'Best Online Biology Tutor | NEET, A-Level, IB, IGCSE | 98% Success',
     description:
-      'Learn from AIIMS Alumnus Dr. Shekhar C Singh. Live interactive online biology classes for NEET & Boards!',
+      'Expert online Biology tutoring by AIIMS faculty. NEET, A-Level, IB, IGCSE, AP. Live classes, 14+ countries. Book FREE demo!',
     type: 'website',
-    locale: 'en_IN',
+    locale: 'en',
     url: 'https://cerebrumbiologyacademy.com/online-biology-tutor',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Online Biology Tutor in India',
-    description: 'AIIMS faculty, 98% success rate, live interactive classes!',
+    title: 'Best Online Biology Tutor | All Curricula | 98% Success',
+    description: 'AIIMS faculty, NEET + A-Level + IB + IGCSE + AP. Live classes, 14+ countries!',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor',
