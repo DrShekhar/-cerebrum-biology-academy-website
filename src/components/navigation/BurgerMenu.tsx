@@ -22,6 +22,7 @@ import {
   Trophy,
   Image,
   Globe,
+  Play,
 } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -49,6 +50,7 @@ const iconMap = {
   Trophy,
   Image,
   Globe,
+  Play,
 }
 
 export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {

@@ -88,6 +88,35 @@ export const navigationConfig: NavigationSection[] = [
     ],
   },
   {
+    id: 'demo-videos',
+    title: 'Demo Videos',
+    icon: 'Play',
+    items: [
+      {
+        id: 'watch-demo',
+        title: 'Watch FREE Demo Class',
+        href: '/video-lectures',
+        description: "Experience Dr. Shekhar's teaching — AIIMS faculty, Hinglish medium",
+        keywords: ['demo class', 'free lecture', 'biology video', 'dr shekhar'],
+        isPopular: true,
+      },
+      {
+        id: 'success-stories-video',
+        title: 'Student Success Stories',
+        href: '/video-lectures#success-stories',
+        description: 'Hear from students who cracked NEET with Cerebrum',
+        keywords: ['testimonial', 'success story', 'neet topper', 'student review'],
+      },
+      {
+        id: 'lecture-library',
+        title: 'Complete Lecture Library',
+        href: '/video-lectures#lecture-library',
+        description: 'Full NEET Biology lectures — watch anytime, learn at your pace',
+        keywords: ['neet lectures', 'biology lectures', 'free lectures', 'youtube'],
+      },
+    ],
+  },
+  {
     id: 'neet-tools',
     title: 'NEET Tools',
     icon: 'Calculator',
