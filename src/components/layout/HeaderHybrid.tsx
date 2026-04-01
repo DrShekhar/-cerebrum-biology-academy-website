@@ -8,22 +8,43 @@ import Image from 'next/image'
 // PERFORMANCE: Inline SVGs instead of lucide-react to eliminate icon library from critical path (~50KB)
 const TrophyIcon = () => (
   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M6 9V2h12v7a6 6 0 01-12 0zm6 13v-4m-4 4h8M4 4h2m12 0h2M4 4a2 2 0 00-2 2v1a2 2 0 002 2m16-5a2 2 0 012 2v1a2 2 0 01-2 2" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 9V2h12v7a6 6 0 01-12 0zm6 13v-4m-4 4h8M4 4h2m12 0h2M4 4a2 2 0 00-2 2v1a2 2 0 002 2m16-5a2 2 0 012 2v1a2 2 0 01-2 2"
+    />
   </svg>
 )
 
 const GraduationCapIcon = () => (
   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+    />
   </svg>
 )
 
 const UsersIcon = () => (
   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+    />
   </svg>
 )
 
+const MonitorIcon = () => (
+  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+    />
+  </svg>
+)
 
 // Lazy load client-side interactive elements
 // Note: Removed ssr: false to prevent BAILOUT_TO_CLIENT_SIDE_RENDERING error in Next.js 15
@@ -136,6 +157,13 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             >
               <GraduationCapIcon />
               <span>Courses</span>
+            </Link>
+            <Link
+              href="/online-neet-biology-coaching"
+              className="flex items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200"
+            >
+              <MonitorIcon />
+              <span>Online</span>
             </Link>
             <Link
               href="/faculty"
