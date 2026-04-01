@@ -295,7 +295,7 @@ export default function ALevelBiologyTutorPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20about%20A-Level%20Biology%20coaching.%20Please%20share%20available%20timings."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -635,7 +635,7 @@ export default function ALevelBiologyTutorPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20know%20about%20A-Level%20Biology%20coaching.%20Please%20share%20available%20timings."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -663,6 +663,12 @@ export default function ALevelBiologyTutorPage() {
                   WhatsApp Now
                 </Button>
               </Link>
+              <a
+                href="mailto:info@cerebrumbiologyacademy.com?subject=A-Level%20Biology%20Coaching%20Enquiry"
+                className="inline-flex items-center gap-2 bg-white/10 border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+              >
+                Email Us
+              </a>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">

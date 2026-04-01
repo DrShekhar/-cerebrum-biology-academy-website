@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       'Expert online biology classes for international curricula. 15,000+ students from 50+ countries.',
     url: 'https://cerebrumbiologyacademy.com/online-biology-classes-international',
     siteName: 'Cerebrum Biology Academy',
-    locale: 'en_IN',
+    locale: 'en',
     type: 'website',
   },
   twitter: {
