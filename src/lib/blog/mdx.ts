@@ -108,6 +108,13 @@ export const blogCategories: Record<string, BlogCategory> = {
     description: 'USABO, IBO, and Biology Olympiad preparation guides',
     color: 'bg-teal-100 text-teal-800',
   },
+  'ib-biology': {
+    id: '10',
+    name: 'IB Biology',
+    slug: 'ib-biology',
+    description: 'IB Biology 2025 syllabus guides — IA, EE, Paper 1/2, HL & SL strategies',
+    color: 'bg-emerald-100 text-emerald-800',
+  },
 }
 
 export function getAllPostSlugs(): string[] {
@@ -139,7 +146,10 @@ export function getPostBySlug(slug: string): {
     data = parsed.data
     content = parsed.content
   } catch (error) {
-    console.warn(`[Blog] Failed to parse frontmatter for ${slug}:`, error instanceof Error ? error.message : error)
+    console.warn(
+      `[Blog] Failed to parse frontmatter for ${slug}:`,
+      error instanceof Error ? error.message : error
+    )
     return null
   }
 
@@ -160,9 +170,10 @@ export function getPostBySlug(slug: string): {
     title: data.title || '',
     slug: data.slug || slug,
     excerpt: data.excerpt || data.description || '',
-    author: typeof data.author === 'string'
-      ? { name: data.author, role: 'Faculty' }
-      : data.author || { name: 'Cerebrum Biology Academy', role: 'Editorial Team' },
+    author:
+      typeof data.author === 'string'
+        ? { name: data.author, role: 'Faculty' }
+        : data.author || { name: 'Cerebrum Biology Academy', role: 'Editorial Team' },
     category: data.category || 'neet-preparation',
     tags: data.tags || [],
     featuredImage: data.featuredImage || data.image || '/blog/default-featured.jpg',

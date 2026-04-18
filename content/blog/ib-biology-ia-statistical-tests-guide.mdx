@@ -1,0 +1,176 @@
+---
+title: 'IB Biology IA Statistical Tests: t-test vs ANOVA vs Chi-squared (2025 Rubric)'
+slug: ib-biology-ia-statistical-tests-guide
+excerpt: 'Which statistical test should your IB Biology IA use? Complete guide to t-test, ANOVA, chi-squared, Pearson, and Spearman with 2025 rubric criteria — what examiners reward and what drops your Data Analysis mark.'
+author:
+  name: 'Dr. Shekhar'
+  role: 'Founder & Senior Faculty'
+category: ib-biology
+tags:
+  - 'IB Biology IA'
+  - 'Statistical Tests'
+  - 'IB Biology 2025'
+  - 'Internal Assessment'
+  - 'Data Analysis'
+featuredImage: '/blog/ib-biology-ia-stats.svg'
+publishedAt: '2026-04-19'
+updatedAt: '2026-04-19'
+readTime: 11
+isPublished: true
+seoTitle: 'IB Biology IA Statistical Tests 2025 — t-test, ANOVA, Chi-squared Guide'
+seoDescription: 'Which statistical test for your IB Biology IA? t-test vs ANOVA vs chi-squared vs Pearson — full decision tree, assumptions, and examiner reward signals for the 2025 rubric.'
+views: 0
+difficulty: 'Intermediate'
+targetAudience: 'International'
+keyTakeaways:
+  - 'The right statistical test is worth 1-2 marks on Data Analysis (6 marks total)'
+  - 'Decision flow: number of groups × data type → correct test'
+  - '2 groups of continuous data → t-test; 3+ groups → one-way ANOVA'
+  - 'Categorical counts (Mendelian ratios) → chi-squared goodness of fit'
+  - 'Always check assumptions (normality, equal variance) before running the test'
+---
+
+# IB Biology IA Statistical Tests — The 2025 Decision Tree
+
+Your statistical test is worth 1–2 marks on the **Data Analysis criterion** (6 marks total). Pick the wrong test and your Conclusion will wobble too, because examiners read both criteria together.
+
+This guide walks you through the decision tree from data type → test choice → assumption check, and shows you exactly what the 2025 IB Biology IA rubric rewards.
+
+---
+
+## The 5-Second Decision Tree
+
+| Data type                    | Number of groups | Test                                                  |
+| ---------------------------- | ---------------- | ----------------------------------------------------- |
+| Continuous (mean comparison) | 2                | **t-test** (independent or paired)                    |
+| Continuous (mean comparison) | 3+               | **One-way ANOVA** + Tukey post-hoc                    |
+| Continuous (correlation)     | —                | **Pearson r** (linear) or **Spearman ρ** (rank-based) |
+| Categorical counts           | —                | **Chi-squared** goodness of fit or independence       |
+| Non-normal distribution      | 2                | **Mann-Whitney U**                                    |
+| Non-normal distribution      | 3+               | **Kruskal-Wallis**                                    |
+
+If you can identify your row in this table, you are already at a 5/6 Data Analysis floor.
+
+---
+
+## When to Use Each Test — With IB Biology Examples
+
+### t-test (two means)
+
+Use when you are comparing the means of **exactly two groups** of continuous data.
+
+**IB Biology example:** Effect of light vs dark on Elodea photosynthesis rate. You have 10 replicates in light, 10 replicates in dark, and you want to know whether the mean rates differ significantly.
+
+- Independent t-test: different subjects in each group.
+- Paired t-test: same subject measured twice (before/after).
+
+**Assumptions to check:**
+
+1. Data is approximately normal (Shapiro-Wilk test or Q-Q plot).
+2. Equal variances (Levene's test) — if unequal, use Welch's t-test.
+
+**2025 rubric signal:** Examiners reward stating the p-value, the 95% confidence interval for the mean difference, and Cohen's d (effect size). A p-value alone caps you at 4/6.
+
+### One-way ANOVA (3+ means)
+
+Use when comparing **three or more group means**. The single biggest error on 2025 IAs is using a t-test on 4 groups — this is mathematically invalid because it inflates your Type I error rate.
+
+**IB Biology example:** Effect of 5 different enzyme pH levels (3, 5, 7, 9, 11) on amylase activity. You have 5 replicates per pH, 25 data points total.
+
+**Assumptions:**
+
+1. Normality within each group.
+2. Homogeneity of variance across groups (Levene's).
+3. Independence of observations.
+
+**2025 rubric signal:** If you write "ANOVA showed significant differences (F = 12.3, p < 0.001), and Tukey post-hoc identified pH 7 as significantly higher than all others" — that is 5/6 territory. Adding effect size (η² or ω²) is the 6/6 move.
+
+### Chi-squared (categorical data)
+
+Use for **counts**, not means. Two common flavours:
+
+- **Goodness of fit:** Compare observed frequencies to expected. Classic use: testing Mendelian 3:1 or 9:3:3:1 ratios in a PTC tasting or Drosophila IA.
+- **Independence:** Test whether two categorical variables are associated. E.g. smoker vs non-smoker × lung infection rate.
+
+**IB Biology example:** You observe 78 tasters and 22 non-tasters for PTC in 100 volunteers. Hardy-Weinberg expected under p² + 2pq + q² = 1 predicts different frequencies. Chi-squared goodness of fit tests whether the deviation is significant.
+
+**Assumption:** Expected count ≥ 5 in each category. If any cell has expected < 5, use Fisher's exact test instead.
+
+**2025 rubric signal:** Include the chi-squared statistic, degrees of freedom, and p-value. State the null hypothesis explicitly.
+
+### Pearson (linear correlation)
+
+Use for two continuous variables where you expect a **linear relationship**.
+
+**IB Biology example:** Temperature (continuous) vs enzyme initial reaction rate (continuous). You have one data point per temperature but 5 temperatures.
+
+**Assumption:** Linear relationship. If you see a curve (e.g. bell-shaped enzyme temperature response), regression with a non-linear model is better.
+
+**2025 rubric signal:** Report r, r², and the p-value. Explain what r² tells you about the proportion of variance explained.
+
+### Spearman (rank correlation)
+
+Use when one or both variables are ordinal, or when the relationship is **monotonic but not linear**.
+
+**IB Biology example:** Ranked species abundance across 5 habitats. Use Spearman.
+
+---
+
+## Common Mistakes That Drop 2 Marks
+
+### 1. Using a t-test on 4 groups
+
+This is the single most common statistical error in IB Biology IAs. It inflates your false positive rate. The fix: one-way ANOVA with Tukey HSD post-hoc.
+
+### 2. Not checking normality
+
+If you run a t-test on a heavily skewed dataset, the p-value is unreliable. Always check (Shapiro-Wilk on each group, or a Q-Q plot). If non-normal, use the non-parametric equivalent (Mann-Whitney U).
+
+### 3. Reporting only the p-value
+
+`p < 0.05` is not enough. Examiners expect effect size and confidence interval. For ANOVA, report η² (proportion of variance explained). For t-tests, report Cohen's d. For correlations, r² does the same job.
+
+### 4. Using chi-squared when you should use Fisher's exact
+
+If any cell has an expected count below 5, chi-squared becomes unreliable. Example: you have 100 volunteers split across 8 blood-group categories — several cells will have expected counts of 1-2. Use Fisher's exact test instead.
+
+### 5. Picking the test after seeing the data
+
+Examiners flag this. Your test should be justified **in Research Design** based on the planned experiment, not chosen post-hoc to make your data look significant.
+
+---
+
+## What Examiners Reward Under Each Criterion
+
+| Criterion       | Signal                                                                | Mark impact   |
+| --------------- | --------------------------------------------------------------------- | ------------- |
+| Research Design | Justified statistical test before data collection                     | Unlocks 5/6   |
+| Data Analysis   | Correct test + assumption checks + effect size                        | Unlocks 6/6   |
+| Conclusion      | Quantitative statement using p-value AND effect size                  | Unlocks 5-6/6 |
+| Evaluation      | Acknowledging when assumptions were violated and impact on conclusion | Bonus mark    |
+
+---
+
+## Worked Example — A Grade-7 IA
+
+**Research Question:** How does temperature (10, 20, 30, 40, 50 °C) affect the initial rate of catalase-mediated O₂ evolution from potato extract?
+
+**Data:** 5 temperatures × 6 replicates = 30 data points. Initial rates in cm³ s⁻¹.
+
+**Test selection rationale (Research Design):**
+
+> "Because I have five independent groups (temperatures) of continuous data (initial rate), the most appropriate test is **one-way ANOVA** with Tukey HSD post-hoc to identify which temperature pairs differ. I will verify normality (Shapiro-Wilk at α = 0.05 per group) and homogeneity of variance (Levene's test) before applying the parametric test. If either assumption is violated, I will use Kruskal-Wallis with Dunn's post-hoc instead."
+
+**Result reporting (Data Analysis):**
+
+> "ANOVA showed a significant main effect of temperature on initial rate, F(4, 25) = 42.3, p < 0.001, η² = 0.87 (large effect size). Tukey HSD identified 40 °C as significantly faster than 10, 20, and 50 °C (all p < 0.01). Rate at 40 °C: mean = 2.4 ± 0.18 cm³ s⁻¹ (SE)."
+
+That single paragraph is a 6/6 Data Analysis mark.
+
+---
+
+## Next Steps
+
+- Already chose an IA topic? Start with the [IA Guide (2025)](/ib-biology-ia-guide) for the full 4-criterion breakdown.
+- Not sure which topic? Browse [50+ IA topic ideas by theme](/ib-biology-ia-topics).
+- IA broken and deadline close? The [IA troubleshooting guide](/ib-biology-ia-troubleshooting) covers the 12 most common failure modes.
