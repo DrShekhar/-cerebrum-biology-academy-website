@@ -241,9 +241,9 @@ export default function Home() {
                 },
                 {
                   title: 'IB Biology',
-                  desc: 'HL & SL, IA Support',
-                  href: '/ib-biology-tuition',
-                  badge: 'IB Expert',
+                  desc: '2025 Syllabus · HL/SL · IA · 15 Cities',
+                  href: '/ib-biology',
+                  badge: 'IB Hub',
                 },
                 {
                   title: 'IGCSE Biology',
@@ -288,6 +288,40 @@ export default function Home() {
               >
                 WhatsApp for NRI Students
               </Link>
+            </div>
+
+            {/* IB Biology deep links — surface rich 2025-syllabus resources */}
+            <div className="mt-10 rounded-2xl border border-indigo-100 bg-white/70 p-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="text-base font-semibold text-gray-900">
+                  Popular IB Biology resources (2025 syllabus)
+                </h3>
+                <Link
+                  href="/ib-biology"
+                  className="text-sm font-semibold text-indigo-700 hover:text-indigo-900"
+                >
+                  View IB hub →
+                </Link>
+              </div>
+              <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  { label: 'IA Guide (4 criteria)', href: '/ib-biology-ia-guide' },
+                  { label: '2025 Syllabus Map', href: '/ib-biology-2025-syllabus' },
+                  { label: 'Past Papers Strategy', href: '/ib-biology-past-papers' },
+                  { label: 'IB Biology Tutors', href: '/ib-biology-tutors' },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="group flex items-center justify-between rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-700 hover:border-indigo-400 hover:text-indigo-700"
+                  >
+                    <span>{link.label}</span>
+                    <span className="text-indigo-500 group-hover:translate-x-0.5 transition-transform">
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
