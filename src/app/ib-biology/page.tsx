@@ -119,6 +119,33 @@ const coreResources = [
   },
 ]
 
+const iaHubResources = [
+  {
+    title: 'IB Biology IA Guide (2025)',
+    href: '/ib-biology-ia-guide',
+    description:
+      'The complete 2025-syllabus IA guide — 4 criteria × 6 marks, 20% of grade, 7-step process from topic to submission.',
+  },
+  {
+    title: '50+ IA Topic Ideas by Theme',
+    href: '/ib-biology-ia-topics',
+    description:
+      'IA research-question templates grouped by the four 2025 themes — variables, controls, difficulty, statistical test.',
+  },
+  {
+    title: 'IA Rubric 2025 Breakdown',
+    href: '/ib-biology-ia-rubric-2025',
+    description:
+      'Every criterion decoded: what examiners reward, common pitfalls, and the descriptor bands from 1 to 6 marks.',
+  },
+  {
+    title: 'IA Exemplars & Troubleshooting',
+    href: '/ib-biology-ia-examples',
+    description:
+      'Annotated IA case studies plus a last-mile rescue guide for broken IAs — rewriting without re-collecting data.',
+  },
+]
+
 const pathwayResources = [
   {
     title: 'IB + IGCSE Biology Program',
@@ -322,6 +349,36 @@ export default function IBBiologyHubPage() {
                     Learn more
                     <ArrowRight className="h-4 w-4" />
                   </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* IA Hub */}
+        <section className="bg-gradient-to-br from-green-50 to-teal-50 py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+                Internal Assessment (IA) — 2025 Syllabus
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                IA contributes 20% of your final IB Biology grade. These four resources cover the
+                full journey — from topic choice to last-mile rescue.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {iaHubResources.map((resource) => (
+                <Link
+                  key={resource.href}
+                  href={resource.href}
+                  className="group rounded-xl border border-green-200 bg-white p-6 transition-all hover:border-green-400 hover:shadow-md"
+                >
+                  <h3 className="mb-2 text-lg font-bold text-gray-900 group-hover:text-green-700">
+                    {resource.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">{resource.description}</p>
                 </Link>
               ))}
             </div>
