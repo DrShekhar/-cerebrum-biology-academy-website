@@ -129,6 +129,68 @@ export const countryWhatsAppMessages: Record<CountryCode, CountryMessages> = {
     courseEnquiry: "Hi! I'm interested in your biology courses. Can you share details?",
     exam: 'Hi! I need help with NEET / MDCAT preparation. What courses do you offer?',
   },
+  // 2026 IB expansion markets
+  es: {
+    default: "Hi! I'm a student in Spain interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo class (CET/CEST).",
+    courseEnquiry: "Hi! I'm interested in IB Biology support — please share pricing and schedules.",
+    exam: 'Hi! I need help with IB Biology HL/SL preparation. What courses do you offer?',
+  },
+  cn: {
+    default: "Hi! I'm an IB student in China interested in Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo class (CST timezone).",
+    courseEnquiry: "Hi! I'm interested in IB Biology coaching. Can you share details?",
+    exam: 'Hi! I need IB Biology HL support. What do you offer for students in China?',
+  },
+  de: {
+    default: "Hi! I'm a student in Germany interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo lesson (CET/CEST).",
+    courseEnquiry: "Hi! I'm interested in IB Biology — can you share your course details?",
+    exam: 'Hi! I need help with IB Biology HL/SL or Abitur Biology. What do you offer?',
+  },
+  ch: {
+    default: "Hi! I'm a student in Switzerland interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo (CET/CEST).",
+    courseEnquiry: "Hi! I'm interested in IB Biology support. Please share course details.",
+    exam: 'Hi! I need help with IB Biology HL/SL or Swiss Matura Biology. What do you offer?',
+  },
+  nl: {
+    default: "Hi! I'm a student in the Netherlands interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo lesson (CET/CEST).",
+    courseEnquiry: "Hi! I'm interested in IB Biology coaching. Can you share details?",
+    exam: 'Hi! I need help with IB Biology HL/SL or VWO Biology. What courses do you offer?',
+  },
+  th: {
+    default: "Hi! I'm a student in Thailand interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo class (ICT).",
+    courseEnquiry:
+      "Hi! I'm interested in IB Biology coaching. Can you share pricing and schedules?",
+    exam: 'Hi! I need help with IB Biology HL/SL preparation. What courses do you offer?',
+  },
+  my: {
+    default: "Hi! I'm a student in Malaysia interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo class (MYT).",
+    courseEnquiry: "Hi! I'm interested in your IB Biology courses. Please share details.",
+    exam: 'Hi! I need help with IB Biology HL/SL or SPM Biology. What do you offer?',
+  },
+  mx: {
+    default: "Hi! I'm a student in Mexico interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo class (CST/CDT).",
+    courseEnquiry: "Hi! I'm interested in your IB Biology courses. Please share details.",
+    exam: 'Hi! I need help with IB Biology HL/SL preparation. What do you offer?',
+  },
+  jp: {
+    default: "Hi! I'm a student in Japan interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo class (JST).",
+    courseEnquiry: "Hi! I'm interested in your IB Biology courses. Please share details.",
+    exam: 'Hi! I need help with IB Biology HL/SL preparation. What do you offer?',
+  },
+  kr: {
+    default: "Hi! I'm a student in South Korea interested in IB Biology tutoring.",
+    booking: "Hi! I'd like to book a free IB Biology demo class (KST).",
+    courseEnquiry: "Hi! I'm interested in your IB Biology courses. Please share details.",
+    exam: 'Hi! I need help with IB Biology HL/SL preparation. What do you offer?',
+  },
 }
 
 /**

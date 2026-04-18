@@ -1292,6 +1292,17 @@ export const COUNTRY_COURSES: Record<CountryCode, Course[]> = {
   lk: [],
   eg: [],
   pk: [],
+  // 2026 IB expansion markets — IB-focused course catalogs (to be extended)
+  es: [],
+  cn: [],
+  de: [],
+  ch: [],
+  nl: [],
+  th: [],
+  my: [],
+  mx: [],
+  jp: [],
+  kr: [],
 }
 
 /**
