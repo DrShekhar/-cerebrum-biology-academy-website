@@ -4081,6 +4081,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     })),
     {
+      url: `${baseUrl}/ib-biology-tutors`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    ...[
+      'dr-shekhar-singh',
+      'dr-priya-menon',
+      'mr-james-hartley',
+      'ms-aditi-rao',
+      'mr-daniel-carter',
+      'dr-sofia-alvarez',
+      'ms-ishita-bose',
+      'mr-arjun-patel',
+    ].map((tutor) => ({
+      url: `${baseUrl}/ib-biology-tutors/${tutor}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    })),
+    {
       url: `${baseUrl}/ib-biology-tuition`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
