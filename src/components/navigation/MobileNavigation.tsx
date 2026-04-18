@@ -127,6 +127,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
         { label: 'Home', href: '/', icon: Home },
         { label: 'About Us', href: '/about', icon: Users },
         { label: 'Courses', href: '/courses', icon: BookOpen },
+        { label: 'IB Biology', href: '/ib-biology', icon: BookOpen },
         { label: 'Results', href: '/results', icon: Award },
         { label: 'Resources', href: '/resources', icon: BookOpen },
         { label: 'Contact', href: '/contact', icon: HelpCircle },
@@ -303,7 +304,9 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
 
             <div className="pt-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={handleMenuItemClick}
                 className="flex items-center justify-center gap-2 w-full bg-orange-100 text-orange-700 px-6 py-4 rounded-lg font-semibold hover:bg-orange-200 transition-colors border border-orange-300 min-h-[52px]"
               >

@@ -137,6 +137,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
         { label: 'Home', href: '/', icon: Home },
         { label: 'About Us', href: '/about', icon: Users },
         { label: 'Courses', href: '/courses', icon: BookOpen },
+        { label: 'IB Biology', href: '/ib-biology', icon: BookOpen },
         { label: 'Results', href: '/results', icon: Award },
         { label: 'Resources', href: '/resources', icon: BookOpen },
         { label: 'Contact', href: '/contact', icon: HelpCircle },
