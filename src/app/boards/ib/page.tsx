@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { boardsIbFAQs } from '@/data/faqs/ib-biology-faqs'
 import {
   CheckCircle,
   Users,
@@ -42,14 +43,11 @@ const FloatingWhatsAppButton = () => {
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-2xl transition-all duration-300 group animate-fadeInUp"
     >
-      <div
-       className="animate-fadeInUp">
+      <div className="animate-fadeInUp">
         <MessageCircle className="w-6 h-6" fill="currentColor" />
       </div>
       <span className="font-semibold hidden sm:inline">Chat on WhatsApp</span>
-      <div
-        className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-fadeInUp"
-      />
+      <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-fadeInUp" />
     </a>
   )
 }
@@ -66,9 +64,7 @@ const FAQItem = ({
   isOpen: boolean
   onClick: () => void
 }) => (
-  <div
-    className="border border-gray-200 rounded-xl overflow-hidden bg-white animate-fadeInUp"
-  >
+  <div className="border border-gray-200 rounded-xl overflow-hidden bg-white animate-fadeInUp">
     <button
       onClick={onClick}
       className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
@@ -80,13 +76,12 @@ const FAQItem = ({
         <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
       )}
     </button>
-{isOpen && (
-        <div
-         className="animate-fadeInUp">
-          <div className="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4">{answer}</div>
-        </div>
-      )}
-</div>
+    {isOpen && (
+      <div className="animate-fadeInUp">
+        <div className="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4">{answer}</div>
+      </div>
+    )}
+  </div>
 )
 
 export default function IBBiologyPage() {
@@ -271,38 +266,7 @@ export default function IBBiologyPage() {
     },
   ]
 
-  const faqs = [
-    {
-      question: 'What makes Cerebrum different from other IB Biology tutoring services?',
-      answer:
-        "Unlike generic tutoring platforms, we specialize exclusively in IB Biology with actual IB examiners on our faculty. Our 89% success rate for 6-7 scores and 2-point improvement guarantee demonstrate our commitment to results. We also offer 24/7 WhatsApp support - something most competitors charge extra for or don't offer at all.",
-    },
-    {
-      question: 'How does the 2-point score guarantee work?',
-      answer:
-        "If you complete our full program (minimum 40 hours of instruction) and don't improve by at least 2 points from your baseline assessment, we provide free additional tutoring until you achieve that improvement. This applies to students who attend 90%+ sessions and complete all assigned work.",
-    },
-    {
-      question: 'Do you help with Internal Assessment (IA)?',
-      answer:
-        'Absolutely! IA support is central to our program. We guide you through topic selection, experimental design, data collection methodology, analysis techniques, and scientific writing. Our structured approach has helped 92% of students score 20+ out of 24 on their IA.',
-    },
-    {
-      question: 'What timezones do you support for live classes?',
-      answer:
-        "We have faculty across multiple timezones (IST, GMT, EST, PST, SGT) and offer flexible scheduling. Whether you're in Singapore, Dubai, London, or New York, we can accommodate your schedule. 1:1 sessions offer maximum flexibility.",
-    },
-    {
-      question: 'Is $6,000/year for the Complete Program really all-inclusive?',
-      answer:
-        'Yes! The Complete IB Program includes 150+ hours of instruction (worth $6,000 at $40/hr), all study materials, past paper banks, IA guidance, and bonus university application support worth $500. No hidden costs. This makes us one of the most affordable premium IB Biology programs globally.',
-    },
-    {
-      question: 'Can I switch between 1:1 and batch sessions?',
-      answer:
-        'Yes, we offer flexibility. Many students start with our batch program and add 1:1 sessions for IA support or exam-intensive revision. We can create a hybrid plan that fits your needs and budget.',
-    },
-  ]
+  const faqs = boardsIbFAQs
 
   const comparisonData = [
     { feature: 'IB Examiner Faculty', us: true, others: 'Rare' },
@@ -329,9 +293,7 @@ export default function IBBiologyPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
           {/* Trust Badges Row */}
-          <div
-            className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-8 sm:mb-12 animate-fadeInUp"
-          >
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-8 sm:mb-12 animate-fadeInUp">
             {trustBadges.map((badge, i) => (
               <div
                 key={i}
@@ -344,8 +306,7 @@ export default function IBBiologyPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4" />
                 India's Premier IB Biology Institute
@@ -397,16 +358,11 @@ export default function IBBiologyPage() {
             </div>
 
             {/* Stats Card */}
-            <div
-              className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/10 animate-fadeInUp"
-            >
+            <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/10 animate-fadeInUp">
               <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center">Our Track Record</h3>
               <div className="grid grid-cols-2 gap-4 sm:gap-6">
                 {stats.map((stat, i) => (
-                  <div
-                    key={i}
-                    className="text-center p-4 bg-white/5 rounded-xl animate-fadeInUp"
-                  >
+                  <div key={i} className="text-center p-4 bg-white/5 rounded-xl animate-fadeInUp">
                     <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-1">
                       {stat.value}
                     </div>
@@ -435,9 +391,7 @@ export default function IBBiologyPage() {
       {/* Why Choose Cerebrum */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div
-            className="text-center mb-12 sm:mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 sm:mb-16 animate-fadeInUp">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Top IB Students Choose Cerebrum
             </h2>
@@ -467,16 +421,12 @@ export default function IBBiologyPage() {
       {/* Comparison Table */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How We Compare</h2>
             <p className="text-lg text-gray-600">See why students switch to Cerebrum</p>
           </div>
 
-          <div
-            className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 sm:p-8 border border-green-100 animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 sm:p-8 border border-green-100 animate-fadeInUp">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
@@ -515,9 +465,7 @@ export default function IBBiologyPage() {
       {/* Syllabus Section */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div
-            className="text-center mb-12 sm:mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 sm:mb-16 animate-fadeInUp">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Complete IB Biology Syllabus Coverage
             </h2>
@@ -569,9 +517,7 @@ export default function IBBiologyPage() {
       {/* Pricing Section */}
       <section id="pricing" className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div
-            className="text-center mb-12 sm:mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 sm:mb-16 animate-fadeInUp">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Transparent Pricing, Premium Value
             </h2>
@@ -685,9 +631,7 @@ export default function IBBiologyPage() {
       {/* Testimonials */}
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div
-            className="text-center mb-12 sm:mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 sm:mb-16 animate-fadeInUp">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Success Stories from IB Students
             </h2>
@@ -725,9 +669,7 @@ export default function IBBiologyPage() {
       {/* FAQ Section */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -750,8 +692,7 @@ export default function IBBiologyPage() {
       {/* Final CTA */}
       <section className="py-16 sm:py-20 bg-gradient-to-r from-green-600 via-teal-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Excel in IB Biology?</h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
               Join 500+ IB students worldwide who chose Cerebrum for their Biology success. Start

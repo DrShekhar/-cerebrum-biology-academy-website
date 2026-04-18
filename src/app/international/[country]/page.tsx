@@ -6,9 +6,11 @@ import { CountryWhatsAppCTA } from '@/components/international/CountryWhatsAppCT
 import { CountryExamSystems } from '@/components/international/CountryExamSystems'
 import { CountryPricing } from '@/components/international/CountryPricing'
 import { CountryTestimonials } from '@/components/international/CountryTestimonials'
-import { CountryFAQ } from '@/components/international/CountryFAQ'
+import { CountryFAQ, getFAQsForCountry } from '@/components/international/CountryFAQ'
 import { CountryFloatingCTA } from '@/components/international/CountryFloatingCTA'
 import { CountryTrustSignals } from '@/components/international/CountryTrustSignals'
+import { FAQSchema } from '@/components/seo/FAQSchema'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 
 interface Props {
   params: Promise<{ country: string }>
@@ -117,6 +119,8 @@ export default async function CountryPage({ params }: Props) {
   }
 
   const structuredData = generateStructuredData(config)
+  const countryFAQs = getFAQsForCountry(config)
+  const countryPageUrl = `https://cerebrumbiologyacademy.com/international/${country}`
 
   return (
     <>
@@ -125,6 +129,18 @@ export default async function CountryPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+
+      {/* BreadcrumbList: Home > International > Country */}
+      <BreadcrumbSchema
+        items={[
+          { label: 'International', href: '/international' },
+          { label: config.name, isCurrentPage: true },
+        ]}
+        showSchemaOnly
+      />
+
+      {/* FAQPage schema for country-specific FAQs */}
+      <FAQSchema questions={countryFAQs} pageUrl={countryPageUrl} />
 
       <main className="min-h-screen">
         {/* 1. Hero Section */}

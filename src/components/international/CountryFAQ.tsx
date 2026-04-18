@@ -14,7 +14,7 @@ interface FAQItem {
   answer: string
 }
 
-function getFAQsForCountry(country: CountryConfig): FAQItem[] {
+export function getFAQsForCountry(country: CountryConfig): FAQItem[] {
   const primaryExam = country.examSystems[0]
   const secondaryExam = country.examSystems[1] || country.examSystems[0]
 

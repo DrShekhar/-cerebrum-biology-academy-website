@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { ChevronDown, HelpCircle } from 'lucide-react'
 import { SEOLandingContent } from '@/data/seo-landing/types'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 
 interface SEOFAQSectionProps {
   faqs: SEOLandingContent['faqs']
@@ -19,10 +20,9 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
 
   return (
     <section className="bg-gray-50 py-16 lg:py-24">
+      <FAQSchema questions={faqs} />
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div
-          className="text-center animate-fadeInUp"
-        >
+        <div className="text-center animate-fadeInUp">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
             <HelpCircle className="h-6 w-6 text-blue-600" />
           </div>
@@ -55,25 +55,24 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
                   />
                 </button>
               </h3>
-{openIndex === index && (
-                  <div
-                    id={`faq-answer-${index}`}
-                    role="region"
-                    aria-labelledby={`faq-question-${index}`}
-                   className="animate-fadeInUp">
-                    <div className="border-t border-gray-100 px-6 pb-6 pt-4">
-                      <p className="leading-relaxed text-gray-600">{faq.answer}</p>
-                    </div>
+              {openIndex === index && (
+                <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                  className="animate-fadeInUp"
+                >
+                  <div className="border-t border-gray-100 px-6 pb-6 pt-4">
+                    <p className="leading-relaxed text-gray-600">{faq.answer}</p>
                   </div>
-                )}
-</div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
         {/* CTA below FAQs */}
-        <div
-          className="mt-12 rounded-2xl bg-indigo-500 p-8 text-center animate-fadeInUp"
-        >
+        <div className="mt-12 rounded-2xl bg-indigo-500 p-8 text-center animate-fadeInUp">
           <p className="text-lg text-white/90">Still have questions?</p>
           <p className="mt-2 text-2xl font-bold text-white">Talk to our academic counselor</p>
           <a

@@ -119,7 +119,10 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'NEET Study Guide', href: '/blog/ultimate-neet-biology-guide-2026' },
       { label: 'Scoring Strategies', href: '/blog/how-to-score-360-in-neet-biology' },
       { label: 'Genetics Guide', href: '/blog/genetics-for-neet-mendel-to-molecular-biology' },
-      { label: 'Chapter Weightage', href: '/blog/neet-biology-chapter-wise-weightage-2026-advanced' },
+      {
+        label: 'Chapter Weightage',
+        href: '/blog/neet-biology-chapter-wise-weightage-2026-advanced',
+      },
       { label: 'Blog & Articles', href: '/blog' },
     ],
   },
@@ -167,6 +170,17 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'Lagos', href: '/neet-coaching-lagos-nigeria' },
       { label: 'Nairobi', href: '/neet-coaching-nairobi-kenya' },
       { label: 'NRI Dropper', href: '/nri-neet-dropper-program' },
+    ],
+  },
+  {
+    heading: 'IB Biology',
+    links: [
+      { label: 'IB Biology Hub', href: '/ib-biology' },
+      { label: 'IB Biology Coaching', href: '/boards/ib' },
+      { label: 'IB Biology Tuition', href: '/ib-biology-tuition' },
+      { label: 'IB Biology Tutor Online', href: '/ib-biology-tutor-online' },
+      { label: 'IB Biology Online Classes', href: '/ib-biology-online-classes' },
+      { label: 'IB + IGCSE Biology', href: '/courses/ib-igcse-biology' },
     ],
   },
   {

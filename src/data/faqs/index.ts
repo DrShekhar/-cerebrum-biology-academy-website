@@ -23,3 +23,5 @@ export {
   getAllCenterFAQsForSchema,
   type CenterFAQ,
 } from './center-specific-faqs'
+
+export { boardsIbFAQs, toFAQSchemaItems } from './ib-biology-faqs'
