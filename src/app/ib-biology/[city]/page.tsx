@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const url = `https://cerebrumbiologyacademy.com/ib-biology/${config.slug}`
   const title = `IB Biology Tutor ${config.city} | HL & SL, IA Coaching | Cerebrum`
   const description = `Expert IB Biology tutoring in ${config.city}, ${config.country}. HL & SL coaching with 2025-syllabus IA support. ${config.pricing.perHourText}. Timezone-matched online sessions for ${config.timezoneAbbr}.`
+  // hreflang — tell Google this English page is targeted at users in the city's country.
+  const hreflangLocale = `en-${config.countryCode}`
   return {
     title,
     description,
@@ -38,13 +40,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       `IB Biology SL ${config.city}`,
       `IB Biology IA help ${config.city}`,
     ],
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        [hreflangLocale]: url,
+        en: url,
+        'x-default': url,
+      },
+    },
     openGraph: {
       title,
       description,
       url,
       siteName: 'Cerebrum Biology Academy',
       type: 'website',
+      locale: hreflangLocale.replace('-', '_'),
     },
     twitter: { card: 'summary_large_image', title, description },
     robots: { index: true, follow: true },

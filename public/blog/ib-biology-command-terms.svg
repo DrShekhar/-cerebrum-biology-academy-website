@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="IB Biology Command Terms Decoded">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#581c87"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <circle cx="920" cy="100" r="180" fill="#a855f7" opacity="0.15"/>
+  <circle cx="160" cy="540" r="140" fill="#ec4899" opacity="0.10"/>
+  <text x="80" y="140" fill="#ddd6fe" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="600" letter-spacing="2">CEREBRUM · IB BIOLOGY 2025</text>
+  <text x="80" y="250" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="68" font-weight="800">Command Terms</text>
+  <text x="80" y="330" fill="#c4b5fd" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="700">Decoded for Paper 2</text>
+  <text x="80" y="430" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="400">State · Explain · Discuss · Evaluate · Suggest · Justify</text>
+  <g transform="translate(80, 495)" font-family="system-ui, sans-serif" font-weight="600" font-size="20">
+    <rect width="140" height="50" rx="8" fill="#a855f7" opacity="0.2" stroke="#a855f7" stroke-width="2"/>
+    <text x="70" y="32" fill="#ddd6fe" text-anchor="middle">Explain</text>
+    <rect x="160" width="140" height="50" rx="8" fill="#a855f7" opacity="0.2" stroke="#a855f7" stroke-width="2"/>
+    <text x="230" y="32" fill="#ddd6fe" text-anchor="middle">Discuss</text>
+    <rect x="320" width="140" height="50" rx="8" fill="#a855f7" opacity="0.2" stroke="#a855f7" stroke-width="2"/>
+    <text x="390" y="32" fill="#ddd6fe" text-anchor="middle">Evaluate</text>
+    <rect x="480" width="140" height="50" rx="8" fill="#a855f7" opacity="0.2" stroke="#a855f7" stroke-width="2"/>
+    <text x="550" y="32" fill="#ddd6fe" text-anchor="middle">Suggest</text>
+  </g>
+</svg>

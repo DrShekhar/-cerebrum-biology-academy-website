@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { getTutor, tutorSlugs, tutors } from '@/data/ib-biology/tutors'
+import { getTutor, tutorSlugs, tutors, usdToInr } from '@/data/ib-biology/tutors'
 import { ArrowRight, MessageCircle, Award, CheckCircle2, Clock, Globe } from 'lucide-react'
 
 interface PageProps {
@@ -154,7 +154,7 @@ export default async function TutorProfilePage({ params }: PageProps) {
                 {t.tier}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/20 px-3 py-1 text-sm font-medium text-blue-300">
-                ${t.hourlyRateUSD}/hr
+                ${t.hourlyRateUSD}/hr · ~₹{usdToInr(t.hourlyRateUSD).toLocaleString('en-IN')}/hr
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/20 px-3 py-1 text-sm font-medium text-purple-300">
                 {t.yearsExperience} years

@@ -253,22 +253,43 @@ export function tutorsByTier(tier: TutorTier): Tutor[] {
 
 export const tierPricing: Record<
   TutorTier,
-  { range: string; description: string; whoFor: string }
+  { range: string; rangeINR: string; description: string; whoFor: string }
 > = {
   Examiner: {
     range: '$130–180/hr',
+    rangeINR: '₹11,000–15,300/hr',
     description: 'Current or former IB Biology examiners and markers. Highest tier.',
     whoFor: 'Students targeting 6–7, IA moderation-level feedback, or EE supervision.',
   },
   'Qualified Teacher': {
     range: '$70–100/hr',
+    rangeINR: '₹5,950–8,500/hr',
     description: 'IB-certified Biology teachers with ≥5 years of classroom experience.',
     whoFor:
       'Students wanting structured topic teaching, Paper 2 extended response, or UK/US medical school prep.',
   },
   'Academic Tutor': {
     range: '$40–60/hr',
+    rangeINR: '₹3,400–5,100/hr',
     description: 'Recent IB graduates and BSc/MSc holders who scored 7 in IB Biology.',
     whoFor: 'Students wanting revision support, MCQ practice, or affordable weekly tutoring.',
   },
+}
+
+/** Convert a USD rate into INR using the pricing-table reference rate (₹85/USD, 2026). */
+export function usdToInr(usdRate: number): number {
+  return Math.round(usdRate * 85)
+}
+
+/**
+ * Local Indian pricing note — shown on tutor directory and profile pages.
+ * Indian students typically book via the group + annual package model
+ * (₹60,000–98,000/year) rather than hourly. See /ib-biology/delhi for
+ * city-specific INR pricing.
+ */
+export const indianPricingNote = {
+  headline: 'Indian students: annual package pricing available',
+  body: 'For students based in India (Delhi, Mumbai, Bangalore, Gurugram, Pune, Hyderabad, Chennai, Noida), we offer group-batch + annual-package pricing: ₹60,000–98,000 per year including IA support, past-paper bank, and WhatsApp doubt clearing. Hourly INR equivalents shown below are for international parity; Indian families typically choose annual plans.',
+  linkHref: '/ib-biology/delhi',
+  linkLabel: 'See Delhi pricing →',
 }
