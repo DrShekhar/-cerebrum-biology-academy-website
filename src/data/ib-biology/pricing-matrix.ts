@@ -180,3 +180,97 @@ export function pricingAsCourseOffers(pageUrl: string) {
     url: `${pageUrl}#pricing`,
   }))
 }
+
+/**
+ * Map a 2-letter country code (from `x-vercel-ip-country`) to the
+ * currency we should promote in the pricing matrix. Countries not
+ * explicitly listed fall through to USD (no geo emphasis).
+ *
+ * Eurozone members resolve to EUR so a single shared card lights up
+ * across DE / NL / ES / FR / IT / BE / AT / IE / PT / FI / GR / LU.
+ */
+const countryToCurrency: Record<string, string> = {
+  // South Asia
+  IN: 'INR',
+  // UK
+  GB: 'GBP',
+  UK: 'GBP',
+  // Eurozone
+  DE: 'EUR',
+  NL: 'EUR',
+  ES: 'EUR',
+  FR: 'EUR',
+  IT: 'EUR',
+  BE: 'EUR',
+  AT: 'EUR',
+  IE: 'EUR',
+  PT: 'EUR',
+  FI: 'EUR',
+  GR: 'EUR',
+  LU: 'EUR',
+  // Middle East
+  AE: 'AED',
+  // Asia-Pacific
+  SG: 'SGD',
+  HK: 'HKD',
+  CA: 'CAD',
+  AU: 'AUD',
+  NZ: 'AUD',
+  // Alpine
+  CH: 'CHF',
+  LI: 'CHF',
+}
+
+export function currencyForCountry(countryCode: string | null | undefined): CurrencyInfo | null {
+  if (!countryCode) return null
+  const code = countryToCurrency[countryCode.toUpperCase()]
+  if (!code) return null
+  return displayCurrencies.find((c) => c.code === code) ?? null
+}
+
+/**
+ * Friendly region label for a given 2-letter country code. Returns the
+ * detected country's common English name if we know it, else the raw
+ * country code uppercased.
+ */
+const countryNames: Record<string, string> = {
+  IN: 'India',
+  GB: 'United Kingdom',
+  UK: 'United Kingdom',
+  US: 'United States',
+  DE: 'Germany',
+  NL: 'Netherlands',
+  ES: 'Spain',
+  FR: 'France',
+  IT: 'Italy',
+  BE: 'Belgium',
+  AT: 'Austria',
+  IE: 'Ireland',
+  PT: 'Portugal',
+  AE: 'United Arab Emirates',
+  SG: 'Singapore',
+  HK: 'Hong Kong',
+  CA: 'Canada',
+  AU: 'Australia',
+  NZ: 'New Zealand',
+  CH: 'Switzerland',
+  LI: 'Liechtenstein',
+  TH: 'Thailand',
+  MY: 'Malaysia',
+  JP: 'Japan',
+  KR: 'South Korea',
+  CN: 'China',
+  MX: 'Mexico',
+  ZA: 'South Africa',
+  SA: 'Saudi Arabia',
+  BD: 'Bangladesh',
+  LK: 'Sri Lanka',
+  EG: 'Egypt',
+  PK: 'Pakistan',
+}
+
+export function countryName(countryCode: string | null | undefined): string | null {
+  if (!countryCode) return null
+  const upper = countryCode.toUpperCase()
+  return countryNames[upper] ?? upper
+}

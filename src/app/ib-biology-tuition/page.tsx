@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { SEOLandingPage } from '@/components/seo-landing'
 import { internationalSEOPages } from '@/data/seo-landing'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
-import { IBBiologyPricingMatrix } from '@/components/ib-biology/PricingMatrix'
+import { GeoAwarePricingMatrix } from '@/components/ib-biology/GeoAwarePricingMatrix'
 import { pricingAsCourseOffers } from '@/data/ib-biology/pricing-matrix'
 
 const content = internationalSEOPages['ib-biology-tuition']
@@ -105,7 +105,7 @@ export default function IbBiologyTuitionPage() {
         showSchemaOnly
       />
       <SEOLandingPage content={content} />
-      <IBBiologyPricingMatrix />
+      <GeoAwarePricingMatrix />
     </>
   )
 }

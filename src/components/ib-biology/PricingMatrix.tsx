@@ -1,9 +1,11 @@
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, Globe } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Globe, MapPin } from 'lucide-react'
 import {
   ibPricingProducts,
   displayCurrencies,
   convertForDisplay,
+  currencyForCountry,
+  countryName,
 } from '@/data/ib-biology/pricing-matrix'
 
 /**
@@ -12,24 +14,45 @@ import {
  * Drop-in section for /boards/ib, /ib-biology-tuition, /ib-biology-tutor-online,
  * or any IB Biology page that needs to display authoritative pricing.
  *
- * Server-renderable (no client state). Shows USD primary + rotating
- * currency equivalents, with city-level links for region-specific pricing.
+ * Server-renderable. Shows USD primary + rotating currency equivalents,
+ * with city-level links for region-specific pricing.
+ *
+ * When `detectedCountry` is passed (ISO-2 code from Vercel's
+ * x-vercel-ip-country header), the matching currency card is highlighted,
+ * a "Detected" badge appears at the top, and the matching regional link
+ * is pinned first.
  */
 export function IBBiologyPricingMatrix({
   heading = 'IB Biology Pricing — Pick Your Fit',
   subheading = 'All prices in USD. Local currency equivalents shown; region-specific pages publish exact local pricing.',
   ctaPrimaryHref = 'https://wa.me/918826444334?text=Hi!%20I%27m%20interested%20in%20IB%20Biology%20coaching.%20Please%20share%20details.',
   ctaPrimaryLabel = 'WhatsApp for Enrollment',
+  detectedCountry,
 }: {
   heading?: string
   subheading?: string
   ctaPrimaryHref?: string
   ctaPrimaryLabel?: string
+  detectedCountry?: string | null
 } = {}) {
+  const detectedCurrency = currencyForCountry(detectedCountry)
+  const detectedCountryLabel = countryName(detectedCountry)
+
+  // Reorder displayCurrencies so the detected one comes first.
+  const orderedCurrencies = detectedCurrency
+    ? [detectedCurrency, ...displayCurrencies.filter((c) => c.code !== detectedCurrency.code)]
+    : displayCurrencies
+
   return (
     <section id="pricing" className="py-16 sm:py-20 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-10 text-center">
+          {detectedCurrency && detectedCountryLabel && (
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-1.5 text-sm font-semibold text-green-800">
+              <MapPin className="h-4 w-4" />
+              Detected: {detectedCountryLabel} · showing {detectedCurrency.code} first
+            </div>
+          )}
           <h2 className="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl">{heading}</h2>
           <p className="mx-auto max-w-2xl text-base text-gray-600 sm:text-lg">{subheading}</p>
         </div>
@@ -69,20 +92,45 @@ export function IBBiologyPricingMatrix({
                 </span>
               </div>
 
+              {/* Local-currency headline (when geo-detected) */}
+              {detectedCurrency && (
+                <div
+                  className={`mb-4 inline-flex items-baseline gap-1 rounded-md px-2.5 py-1 text-sm font-semibold ${
+                    p.highlight ? 'bg-green-500/20 text-green-200' : 'bg-green-50 text-green-800'
+                  }`}
+                >
+                  ≈ {convertForDisplay(p.priceUSD, detectedCurrency)} {detectedCurrency.code}
+                </div>
+              )}
+
               <p
                 className={`mb-5 text-sm leading-relaxed ${p.highlight ? 'text-slate-200' : 'text-gray-700'}`}
               >
                 {p.description}
               </p>
 
-              {/* Multi-currency equivalents */}
+              {/* Multi-currency equivalents grid */}
               <div className="mb-5 grid grid-cols-2 gap-x-4 gap-y-1 text-xs">
-                {displayCurrencies.slice(0, 6).map((c) => (
-                  <div key={c.code} className={p.highlight ? 'text-slate-300' : 'text-gray-600'}>
-                    <span className="font-semibold">{c.code}</span>{' '}
-                    {convertForDisplay(p.priceUSD, c)}
-                  </div>
-                ))}
+                {orderedCurrencies.slice(0, 6).map((c) => {
+                  const isDetected = detectedCurrency?.code === c.code
+                  return (
+                    <div
+                      key={c.code}
+                      className={
+                        isDetected
+                          ? p.highlight
+                            ? 'font-semibold text-green-300'
+                            : 'font-semibold text-green-700'
+                          : p.highlight
+                            ? 'text-slate-300'
+                            : 'text-gray-600'
+                      }
+                    >
+                      <span className="font-semibold">{c.code}</span>{' '}
+                      {convertForDisplay(p.priceUSD, c)}
+                    </div>
+                  )
+                })}
               </div>
 
               <ul className="space-y-2 text-sm">
@@ -99,35 +147,41 @@ export function IBBiologyPricingMatrix({
           ))}
         </div>
 
-        {/* Regional pricing callout */}
+        {/* Regional pricing callout — detected region pinned first */}
         <div className="mt-10 rounded-2xl border border-green-200 bg-green-50 p-6 sm:p-8">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-            <div className="flex gap-3">
-              <Globe className="mt-1 h-5 w-5 flex-shrink-0 text-green-700" />
-              <div>
-                <h3 className="mb-2 text-base font-bold text-green-900">
-                  Local pricing for your city
-                </h3>
-                <p className="text-sm text-green-900">
-                  Currency equivalents above are reference conversions. City-level pages publish the
-                  exact fee band we use for students in your region — INR for India, local currency
-                  for global cities.
-                </p>
-              </div>
+          <div className="flex gap-3">
+            <Globe className="mt-1 h-5 w-5 flex-shrink-0 text-green-700" />
+            <div>
+              <h3 className="mb-2 text-base font-bold text-green-900">
+                Local pricing for your city
+              </h3>
+              <p className="text-sm text-green-900">
+                {detectedCurrency && detectedCountryLabel
+                  ? `We detected you're visiting from ${detectedCountryLabel}. See exact ${detectedCurrency.code} pricing on the regional page below, or pick another city.`
+                  : 'Currency equivalents above are reference conversions. City-level pages publish the exact fee band we use for students in your region — INR for India, local currency for global cities.'}
+              </p>
             </div>
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            {displayCurrencies.map((c) => (
-              <Link
-                key={c.code}
-                href={c.regionalHref}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-green-300 bg-white px-3 py-1.5 text-xs font-medium text-green-800 transition-all hover:border-green-500 hover:text-green-900"
-              >
-                {c.region}
-                <ArrowRight className="h-3 w-3" />
-              </Link>
-            ))}
+            {orderedCurrencies.map((c) => {
+              const isDetected = detectedCurrency?.code === c.code
+              return (
+                <Link
+                  key={c.code}
+                  href={c.regionalHref}
+                  className={`inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium transition-all ${
+                    isDetected
+                      ? 'border-green-500 bg-green-600 text-white hover:bg-green-700'
+                      : 'border-green-300 bg-white text-green-800 hover:border-green-500 hover:text-green-900'
+                  }`}
+                >
+                  {isDetected && <MapPin className="h-3 w-3" />}
+                  {c.region}
+                  <ArrowRight className="h-3 w-3" />
+                </Link>
+              )
+            })}
           </div>
         </div>
 
