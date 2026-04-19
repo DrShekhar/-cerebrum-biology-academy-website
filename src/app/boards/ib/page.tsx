@@ -625,6 +625,43 @@ export default function IBBiologyPage() {
               </div>
             ))}
           </div>
+
+          {/* Regional currency callout — links to city pages with local pricing */}
+          <div className="mt-12 max-w-4xl mx-auto rounded-2xl border border-green-200 bg-green-50 p-6 sm:p-8">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <h3 className="mb-2 text-lg font-bold text-green-900">
+                  See pricing in your local currency
+                </h3>
+                <p className="text-sm text-green-900">
+                  Prices above are in USD. Reference conversions: Complete Programme ≈ ₹5,10,000 /
+                  £4,740 / €5,520 / AED 22,020 / S$8,040 / HK$46,740. City-level pages publish the
+                  exact fee bands for your region — INR for India, local currency for global cities.
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {[
+                { label: 'India (Delhi)', href: '/ib-biology/delhi' },
+                { label: 'UK (London)', href: '/ib-biology/london' },
+                { label: 'UAE (Dubai)', href: '/ib-biology/dubai' },
+                { label: 'Singapore', href: '/ib-biology/singapore' },
+                { label: 'Hong Kong', href: '/ib-biology/hong-kong' },
+                { label: 'Canada (Toronto)', href: '/ib-biology/toronto' },
+                { label: 'Australia (Sydney)', href: '/ib-biology/sydney' },
+                { label: 'Switzerland (Zurich)', href: '/ib-biology/zurich' },
+                { label: 'EU (Amsterdam)', href: '/ib-biology/amsterdam' },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-green-300 bg-white px-3 py-1.5 text-xs font-medium text-green-800 hover:border-green-500 hover:text-green-900"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

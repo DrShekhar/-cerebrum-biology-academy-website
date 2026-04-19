@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import { SEOLandingPage } from '@/components/seo-landing'
 import { internationalSEOPages } from '@/data/seo-landing'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { IBBiologyPricingMatrix } from '@/components/ib-biology/PricingMatrix'
+import { pricingAsCourseOffers } from '@/data/ib-biology/pricing-matrix'
 
 const content = internationalSEOPages['ib-biology-tutor-online']
 const PAGE_URL = `https://cerebrumbiologyacademy.com/${content.slug}`
@@ -73,16 +75,7 @@ const courseSchema = {
       courseMode: 'Online',
     },
   ],
-  offers: [
-    {
-      '@type': 'Offer',
-      name: '1:1 IB Biology Online Tutoring',
-      price: '48',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      url: PAGE_URL,
-    },
-  ],
+  offers: pricingAsCourseOffers(PAGE_URL),
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',
@@ -109,6 +102,7 @@ export default function IbBiologyTutorOnlinePage() {
         showSchemaOnly
       />
       <SEOLandingPage content={content} />
+      <IBBiologyPricingMatrix />
     </>
   )
 }
