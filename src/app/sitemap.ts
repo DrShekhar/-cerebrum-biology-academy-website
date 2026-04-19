@@ -4074,6 +4074,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'amsterdam',
       'bangkok',
       'kuala-lumpur',
+      // India — home market
+      'delhi',
+      'gurugram',
+      'mumbai',
+      'bangalore',
+      'pune',
+      'hyderabad',
+      'noida',
+      'chennai',
     ].map((city) => ({
       url: `${baseUrl}/ib-biology/${city}`,
       lastModified: lastUpdated,

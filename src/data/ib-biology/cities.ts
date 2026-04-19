@@ -27,6 +27,15 @@ export type CitySlug =
   | 'amsterdam'
   | 'bangkok'
   | 'kuala-lumpur'
+  // India — home market
+  | 'delhi'
+  | 'gurugram'
+  | 'mumbai'
+  | 'bangalore'
+  | 'pune'
+  | 'hyderabad'
+  | 'noida'
+  | 'chennai'
 
 export interface CityConfig {
   slug: CitySlug
@@ -40,6 +49,15 @@ export interface CityConfig {
   ibSchools: string[]
   neighbourhoods: string[]
   localHook: string
+  /** Optional in-person centre details — shown instead of the default online-only messaging. */
+  inPersonCentre?: {
+    name: string
+    address: string
+  }
+  /** Optional annual package line (typical for Indian market) shown in the hero meta row. */
+  annualPackage?: string
+  /** Optional companion page (e.g., the pre-existing /ib-igcse-biology-tuition-gurugram hub) */
+  companionPage?: { title: string; href: string }
 }
 
 export const cities: Record<CitySlug, CityConfig> = {
@@ -352,6 +370,267 @@ export const cities: Record<CitySlug, CityConfig> = {
     neighbourhoods: ['Mont Kiara', 'Bangsar', 'Damansara Heights', 'Ampang Hilir', 'Cyberjaya'],
     localHook:
       "KL's IB community has grown rapidly alongside international school expansion. Our MYT-aligned sessions fit IB schedules at ISKL, Mont'Kiara, and Garden International.",
+  },
+
+  // --- India: home market, 220+ IB World Schools, 6,156 IBDP students (2024) ---
+
+  delhi: {
+    slug: 'delhi',
+    city: 'Delhi',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Delhi NCR',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'American Embassy School',
+      'Vasant Valley School',
+      'The Shri Ram School',
+      'Pathways School Noida',
+      'Modern School',
+      'Sanskriti School',
+      'GD Goenka World School',
+      'British School New Delhi',
+    ],
+    neighbourhoods: [
+      'Vasant Vihar',
+      'Defence Colony',
+      'South Extension',
+      'Greater Kailash',
+      'Chanakyapuri',
+      'Shanti Niketan',
+      'Anand Lok',
+      'Jor Bagh',
+    ],
+    localHook:
+      'Delhi has one of the largest IB communities in India. Cerebrum runs in-person IB Biology coaching at our South Extension and Rohini centres alongside timezone-matched online sessions — a combination no all-online competitor (TutorChase, Lanterna, Revision Village) can offer locally.',
+    inPersonCentre: {
+      name: 'Cerebrum Biology Academy — South Extension (Flagship)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
+    },
+  },
+
+  gurugram: {
+    slug: 'gurugram',
+    city: 'Gurugram',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Delhi NCR',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Pathways World School, Aravali',
+      'Scottish High International School',
+      'DPS International School',
+      'Heritage Xperiential Learning School',
+      'Shikshantar School',
+      'The Shri Ram School, Aravali',
+      'GD Goenka Signature School',
+    ],
+    neighbourhoods: [
+      'Sector 51',
+      'DLF Phase 1',
+      'DLF Phase 5',
+      'Sohna Road',
+      'Golf Course Road',
+      'Golf Course Extension',
+      'Sushant Lok',
+      'M.G. Road',
+    ],
+    localHook:
+      "Gurugram has India's most concentrated IB school belt — Pathways Aravali, Scottish High, DPS International, and Heritage sit within a 15 km radius. Our Sector 51 centre offers in-person IB Biology classes plus IST-aligned online sessions, with an integrated IB+NEET option not available from global tutoring platforms.",
+    inPersonCentre: {
+      name: 'Cerebrum Biology Academy — Gurugram',
+      address: 'Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51, Gurugram 122018',
+    },
+    companionPage: {
+      title: 'IB & IGCSE Biology Tuition — Gurugram (dedicated hub)',
+      href: '/ib-igcse-biology-tuition-gurugram',
+    },
+  },
+
+  mumbai: {
+    slug: 'mumbai',
+    city: 'Mumbai',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Maharashtra',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Dhirubhai Ambani International School (BKC)',
+      'JBCN International School',
+      'Oberoi International School',
+      'Ecole Mondiale World School',
+      'BD Somani International School',
+      'Bombay International School',
+      'Aditya Birla World Academy',
+      'Jamnabai Narsee International School',
+    ],
+    neighbourhoods: ['BKC', 'Bandra', 'Juhu', 'Worli', 'Powai', 'Andheri', 'Goregaon', 'Parel'],
+    localHook:
+      'Mumbai has the largest concentration of IB World Schools in India — Dhirubhai Ambani International, JBCN, Oberoi, Ecole Mondiale all within Western suburbs. We run IST-aligned online IB Biology coaching for Mumbai students with small-batch live classes and examiner-led IA reviews.',
+  },
+
+  bangalore: {
+    slug: 'bangalore',
+    city: 'Bangalore',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Karnataka',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Canadian International School',
+      'Stonehill International School',
+      'Indus International School',
+      'The International School Bangalore (TISB)',
+      'Bangalore International School',
+      'Oakridge International School',
+      'Inventure Academy',
+    ],
+    neighbourhoods: [
+      'Whitefield',
+      'Koramangala',
+      'Indiranagar',
+      'HSR Layout',
+      'JP Nagar',
+      'Hebbal',
+      'Sarjapur Road',
+      'Electronic City',
+    ],
+    localHook:
+      'Bangalore IB students at TISB, Canadian International, Stonehill, and Indus balance STEM-heavy HL choices. Our online IB Biology coaching is IST-aligned, and our tutors have specific experience with pre-med and biotech pathway coaching popular with Bangalore families.',
+  },
+
+  pune: {
+    slug: 'pune',
+    city: 'Pune',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Maharashtra',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Mercedes-Benz International School',
+      'Symbiosis International School',
+      'Indus International School Pune',
+      'The Orchid School',
+      'Vibgyor Rise School',
+      'Pawar Public School',
+    ],
+    neighbourhoods: [
+      'Kalyani Nagar',
+      'Koregaon Park',
+      'Hinjewadi',
+      'Aundh',
+      'Balewadi',
+      'Viman Nagar',
+      'Kharadi',
+    ],
+    localHook:
+      "Pune's IB community is concentrated around MBIS, Symbiosis, and Indus. We run IST online IB Biology classes with dedicated IA mentors, and many of our Pune students choose the dual IB+NEET track for medical school optionality.",
+  },
+
+  hyderabad: {
+    slug: 'hyderabad',
+    city: 'Hyderabad',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Telangana',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Oakridge International School',
+      'Chirec International School',
+      'Glendale Academy',
+      'Indus International School Hyderabad',
+      'Aga Khan Academy',
+      'Delhi Public School International',
+    ],
+    neighbourhoods: [
+      'Gachibowli',
+      'Banjara Hills',
+      'Jubilee Hills',
+      'HITEC City',
+      'Madhapur',
+      'Kondapur',
+      'Financial District',
+    ],
+    localHook:
+      "Hyderabad IB students at Oakridge, Chirec, and Glendale often target US pre-med and engineering programmes. Our online IB Biology coaching is IST-aligned with examiner-led Paper 2 drills and IA supervision specific to each school's calendar.",
+  },
+
+  noida: {
+    slug: 'noida',
+    city: 'Noida',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Delhi NCR',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Pathways School Noida',
+      'Shiv Nadar School',
+      'Step by Step School',
+      'Genesis Global School',
+      'GD Goenka Public School',
+      'Lotus Valley International',
+    ],
+    neighbourhoods: [
+      'Sector 44',
+      'Sector 62',
+      'Sector 132',
+      'Greater Noida',
+      'Sector 50',
+      'Sector 93',
+    ],
+    localHook:
+      'Noida IB students at Pathways, Shiv Nadar, and Step by Step benefit from our Delhi NCR footprint. Online IST sessions by default; in-person available at our South Extension and Rohini centres within a short Delhi NCR commute.',
+  },
+
+  chennai: {
+    slug: 'chennai',
+    city: 'Chennai',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Tamil Nadu',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'American International School Chennai',
+      'KC High International School',
+      'Good Shepherd International School',
+      'Sishya School',
+      'Akshara Academy',
+      'Padma Seshadri Bala Bhavan (IBDP track)',
+    ],
+    neighbourhoods: [
+      'Thiruvanmiyur',
+      'East Coast Road (ECR)',
+      'Nungambakkam',
+      'Anna Nagar',
+      'Adyar',
+      'Kotturpuram',
+    ],
+    localHook:
+      'Chennai IB students at AISC, KC High, and Good Shepherd often pair IB with SAT and US college applications. We run IST online IB Biology coaching with a specific track for US admissions-aligned Biology HL preparation.',
   },
 }
 

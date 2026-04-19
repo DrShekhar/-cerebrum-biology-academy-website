@@ -177,10 +177,24 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
     links: [
       { label: 'IB Biology Hub', href: '/ib-biology' },
       { label: 'IB Biology Coaching', href: '/boards/ib' },
-      { label: 'IB Biology Tuition', href: '/ib-biology-tuition' },
-      { label: 'IB Biology Tutor Online', href: '/ib-biology-tutor-online' },
-      { label: 'IB Biology Online Classes', href: '/ib-biology-online-classes' },
-      { label: 'IB + IGCSE Biology', href: '/courses/ib-igcse-biology' },
+      { label: 'IA Guide (2025)', href: '/ib-biology-ia-guide' },
+      { label: '2025 Syllabus', href: '/ib-biology-2025-syllabus' },
+      { label: 'Past Papers', href: '/ib-biology-past-papers' },
+      { label: 'IB Biology Tutors', href: '/ib-biology-tutors' },
+    ],
+  },
+  {
+    heading: 'IB Biology — India',
+    links: [
+      { label: 'Delhi', href: '/ib-biology/delhi' },
+      { label: 'Gurugram', href: '/ib-biology/gurugram' },
+      { label: 'Mumbai', href: '/ib-biology/mumbai' },
+      { label: 'Bangalore', href: '/ib-biology/bangalore' },
+      { label: 'Pune', href: '/ib-biology/pune' },
+      { label: 'Hyderabad', href: '/ib-biology/hyderabad' },
+      { label: 'Noida', href: '/ib-biology/noida' },
+      { label: 'Chennai', href: '/ib-biology/chennai' },
+      { label: 'Gurugram IB/IGCSE Hub', href: '/ib-igcse-biology-tuition-gurugram' },
     ],
   },
   {

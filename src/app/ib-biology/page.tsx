@@ -173,17 +173,59 @@ const pathwayResources = [
   },
 ]
 
-const globalResources = [
+// Indian cities get direct links to the city-level /ib-biology/[city] pages,
+// because that is where the INR pricing + Indian-school list + in-person centre
+// signals live. Other countries route through /international/[country].
+const indiaCityResources = [
+  { label: 'Delhi', href: '/ib-biology/delhi' },
+  { label: 'Gurugram', href: '/ib-biology/gurugram' },
+  { label: 'Mumbai', href: '/ib-biology/mumbai' },
+  { label: 'Bangalore', href: '/ib-biology/bangalore' },
+  { label: 'Pune', href: '/ib-biology/pune' },
+  { label: 'Hyderabad', href: '/ib-biology/hyderabad' },
+  { label: 'Noida', href: '/ib-biology/noida' },
+  { label: 'Chennai', href: '/ib-biology/chennai' },
+]
+
+const globalCityResources = [
+  { label: 'London', href: '/ib-biology/london' },
+  { label: 'Singapore', href: '/ib-biology/singapore' },
+  { label: 'Dubai', href: '/ib-biology/dubai' },
+  { label: 'Hong Kong', href: '/ib-biology/hong-kong' },
+  { label: 'Toronto', href: '/ib-biology/toronto' },
+  { label: 'Vancouver', href: '/ib-biology/vancouver' },
+  { label: 'Sydney', href: '/ib-biology/sydney' },
+  { label: 'Melbourne', href: '/ib-biology/melbourne' },
+  { label: 'New York', href: '/ib-biology/new-york' },
+  { label: 'Boston', href: '/ib-biology/boston' },
+  { label: 'Geneva', href: '/ib-biology/geneva' },
+  { label: 'Zurich', href: '/ib-biology/zurich' },
+  { label: 'Amsterdam', href: '/ib-biology/amsterdam' },
+  { label: 'Bangkok', href: '/ib-biology/bangkok' },
+  { label: 'Kuala Lumpur', href: '/ib-biology/kuala-lumpur' },
+]
+
+const countryResources = [
   { country: 'United States', href: '/international/us' },
   { country: 'United Kingdom', href: '/international/uk' },
   { country: 'Canada', href: '/international/ca' },
   { country: 'Australia', href: '/international/au' },
   { country: 'Singapore', href: '/international/sg' },
-  { country: 'UAE (Dubai)', href: '/international/ae' },
+  { country: 'UAE', href: '/international/ae' },
   { country: 'Hong Kong', href: '/international/hk' },
   { country: 'Ireland', href: '/international/ie' },
   { country: 'New Zealand', href: '/international/nz' },
   { country: 'South Africa', href: '/international/za' },
+  { country: 'Spain', href: '/international/es' },
+  { country: 'Germany', href: '/international/de' },
+  { country: 'Switzerland', href: '/international/ch' },
+  { country: 'Netherlands', href: '/international/nl' },
+  { country: 'Thailand', href: '/international/th' },
+  { country: 'Malaysia', href: '/international/my' },
+  { country: 'Japan', href: '/international/jp' },
+  { country: 'South Korea', href: '/international/kr' },
+  { country: 'Mexico', href: '/international/mx' },
+  { country: 'China', href: '/international/cn' },
 ]
 
 function HubCollectionSchema() {
@@ -450,21 +492,89 @@ export default function IBBiologyHubPage() {
           </div>
         </section>
 
-        {/* Global coverage */}
-        <section className="bg-gradient-to-br from-slate-50 to-green-50 py-16 sm:py-20">
+        {/* India — home market, shown first */}
+        <section className="bg-gradient-to-br from-orange-50 via-white to-green-50 py-16 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="mb-12 text-center">
+            <div className="mb-10 text-center">
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-800">
+                Home Market · 220+ IB World Schools · Fastest-growing IB market globally
+              </div>
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
-                IB Biology Coaching — Global Markets
+                IB Biology Coaching in India
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Country-specific IB Biology tutoring with local currency pricing and timezone-aware
-                scheduling.
+                INR pricing, IST-aligned classes, and in-person centres in Delhi NCR. City-specific
+                pages name real Indian IB schools and neighbourhoods.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-4">
+              {indiaCityResources.map((resource) => (
+                <Link
+                  key={resource.href}
+                  href={resource.href}
+                  className="rounded-lg border border-orange-200 bg-white px-4 py-3 text-center text-sm font-medium text-gray-800 transition-all hover:border-orange-400 hover:bg-orange-50 hover:text-orange-800"
+                >
+                  {resource.label}
+                </Link>
+              ))}
+            </div>
+
+            <p className="mt-8 text-center text-sm text-gray-600">
+              Delhi NCR students also get access to our{' '}
+              <Link
+                href="/ib-igcse-biology-tuition-gurugram"
+                className="font-semibold text-orange-700 underline hover:text-orange-900"
+              >
+                dedicated Gurugram IB/IGCSE hub
+              </Link>{' '}
+              and 4 physical centres (South Extension, Rohini, Gurugram, Faridabad).
+            </p>
+          </div>
+        </section>
+
+        {/* Global city coverage */}
+        <section className="bg-gradient-to-br from-slate-50 to-green-50 py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="mb-10 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+                Global IB Biology Cities
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                City-specific IB Biology tutoring with local currency pricing, real IB World School
+                lists, and timezone-aware scheduling.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
-              {globalResources.map((resource) => (
+              {globalCityResources.map((resource) => (
+                <Link
+                  key={resource.href}
+                  href={resource.href}
+                  className="rounded-lg border border-gray-200 bg-white px-4 py-3 text-center text-sm font-medium text-gray-700 transition-all hover:border-green-300 hover:text-green-700"
+                >
+                  {resource.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Country gateways */}
+        <section className="py-16 sm:py-20">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="mb-10 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+                Country Gateways (20 Markets)
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
+                Country-level hubs with local exam systems, pricing in local currency, and
+                region-specific testimonials.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-5">
+              {countryResources.map((resource) => (
                 <Link
                   key={resource.href}
                   href={resource.href}

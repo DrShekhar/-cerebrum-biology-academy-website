@@ -52,12 +52,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 function LocalBusinessSchema({ config }: { config: CityConfig }) {
-  const schema = {
+  const url = `https://cerebrumbiologyacademy.com/ib-biology/${config.slug}`
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
+    '@type': config.inPersonCentre ? 'LocalBusiness' : 'Service',
     serviceType: 'IB Biology Tutoring',
     name: `IB Biology Tutoring — ${config.city}`,
-    url: `https://cerebrumbiologyacademy.com/ib-biology/${config.slug}`,
+    url,
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -84,6 +85,18 @@ function LocalBusinessSchema({ config }: { config: CityConfig }) {
       availability: 'https://schema.org/InStock',
     },
   }
+
+  // If a physical centre exists, add full LocalBusiness address + telephone for local rich results.
+  if (config.inPersonCentre) {
+    schema.telephone = '+91-88264-44334'
+    schema.address = {
+      '@type': 'PostalAddress',
+      streetAddress: config.inPersonCentre.address,
+      addressLocality: config.city,
+      addressCountry: config.countryCode,
+    }
+  }
+
   return (
     <script
       type="application/ld+json"
@@ -102,11 +115,15 @@ export default async function CityPage({ params }: PageProps) {
   const cityFAQs = [
     {
       question: `How do your IB Biology sessions work for students in ${config.city}?`,
-      answer: `All sessions are live online and timed for ${config.timezoneAbbr}. We run in small groups (4–8 students) or 1-on-1, with HD video, a digital whiteboard, and recorded sessions you can review later. Students in ${config.city} typically join from home after school or during weekend blocks.`,
+      answer: config.inPersonCentre
+        ? `You can attend in-person small-group classes at our ${config.city} centre (${config.inPersonCentre.address}), or join live online sessions timed for ${config.timezoneAbbr}. Students typically blend both — in-person for core classes, online for IA reviews or catch-up sessions. Group sizes are 4-8 students; 1-on-1 is also available.`
+        : `All sessions are live online and timed for ${config.timezoneAbbr}. We run in small groups (4–8 students) or 1-on-1, with HD video, a digital whiteboard, and recorded sessions you can review later. Students in ${config.city} typically join from home after school or during weekend blocks.`,
     },
     {
       question: `What is the typical fee for IB Biology tutoring in ${config.city}?`,
-      answer: `Our IB Biology tutoring in ${config.city} is priced at ${config.pricing.perHourText} for group sessions, with packaged rates for 10+ hour blocks. 1-on-1 with an IB examiner costs more. We also offer a complete annual programme with bundled IA support — contact us on WhatsApp for a quote.`,
+      answer: config.annualPackage
+        ? `Our IB Biology coaching in ${config.city} starts at ${config.pricing.perHourText} for group sessions. ${config.annualPackage}. 1-on-1 with an IB examiner costs more. Contact us on WhatsApp for a tailored quote matched to your target grade and target university.`
+        : `Our IB Biology tutoring in ${config.city} is priced at ${config.pricing.perHourText} for group sessions, with packaged rates for 10+ hour blocks. 1-on-1 with an IB examiner costs more. We also offer a complete annual programme with bundled IA support — contact us on WhatsApp for a quote.`,
     },
     {
       question: `Do you help with the Internal Assessment for ${config.city} IB students?`,
@@ -118,7 +135,9 @@ export default async function CityPage({ params }: PageProps) {
     },
     {
       question: `Can I meet an IB Biology tutor in person in ${config.city}?`,
-      answer: `Cerebrum\'s in-person centres are in Delhi NCR (South Extension, Rohini, Gurugram, Faridabad). For ${config.city}, all tutoring is online — which gives you access to our best IB examiners regardless of where they live. If you are visiting Delhi NCR, in-person meetings can be arranged.`,
+      answer: config.inPersonCentre
+        ? `Yes. Our ${config.inPersonCentre.name} is at ${config.inPersonCentre.address}. Book a demo class or an in-person IA review via WhatsApp. Online sessions remain available for flexibility.`
+        : `Cerebrum's physical centres are in Delhi NCR (South Extension, Rohini, Gurugram, Faridabad). For ${config.city}, all tutoring is online — which gives you access to our best IB examiners regardless of where they live. If you are visiting Delhi NCR, in-person meetings can be arranged.`,
     },
   ]
 
@@ -168,13 +187,64 @@ export default async function CityPage({ params }: PageProps) {
               <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/20 px-3 py-1 text-sm font-medium text-purple-300">
                 {config.pricing.perHourText}
               </span>
+              {config.inPersonCentre && (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/20 px-3 py-1 text-sm font-medium text-amber-300">
+                  In-person + online
+                </span>
+              )}
             </div>
             <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl">
               IB Biology Tutor in {config.city} — HL &amp; SL, 2025 Syllabus
             </h1>
             <p className="max-w-3xl text-lg text-gray-300 sm:text-xl">{config.localHook}</p>
+            {config.annualPackage && (
+              <p className="mt-4 text-sm text-green-300">{config.annualPackage}</p>
+            )}
           </div>
         </section>
+
+        {config.inPersonCentre && (
+          <section className="border-b border-amber-200 bg-amber-50 py-8">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <div className="text-sm font-semibold uppercase tracking-wide text-amber-800">
+                    Visit our {config.city} centre
+                  </div>
+                  <p className="mt-1 text-base font-bold text-gray-900">
+                    {config.inPersonCentre.name}
+                  </p>
+                  <p className="text-sm text-gray-700">{config.inPersonCentre.address}</p>
+                </div>
+                <a
+                  href={`https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I want to visit your ${config.city} centre for IB Biology tuition.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-amber-700"
+                >
+                  Book a visit
+                </a>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {config.companionPage && (
+          <section className="py-8">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
+              <div className="rounded-xl border border-green-200 bg-green-50 p-5 text-sm">
+                <strong className="text-green-900">Dedicated local hub:</strong>{' '}
+                <Link
+                  href={config.companionPage.href}
+                  className="text-green-800 underline hover:text-green-900"
+                >
+                  {config.companionPage.title}
+                </Link>{' '}
+                — in-depth page with {config.city}-specific school list, fees, and demo booking.
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Value props */}
         <section className="py-16 sm:py-20">
@@ -241,8 +311,8 @@ export default async function CityPage({ params }: PageProps) {
               ))}
             </div>
             <p className="mt-6 text-sm text-gray-600">
-              Not listed? Our programme supports every IB World School — contact us and we\'ll match
-              you with a tutor familiar with your school\'s calendar.
+              Not listed? Our programme supports every IB World School — contact us and we will
+              match you with a tutor familiar with your school&apos;s calendar.
             </p>
           </div>
         </section>
@@ -254,8 +324,9 @@ export default async function CityPage({ params }: PageProps) {
               Neighbourhoods Served
             </h2>
             <p className="mb-6 text-gray-700">
-              All tutoring is online so any neighbourhood in {config.city} is served — common
-              catchment areas include:
+              {config.inPersonCentre
+                ? `In-person classes at our ${config.city} centre plus ${config.timezoneAbbr} online sessions from home. Typical catchment areas include:`
+                : `All tutoring is online so any neighbourhood in ${config.city} is served — common catchment areas include:`}
             </p>
             <div className="flex flex-wrap gap-2">
               {config.neighbourhoods.map((n) => (
