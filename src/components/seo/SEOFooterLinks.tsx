@@ -264,7 +264,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
 
 export function SEOFooterLinks() {
   return (
-    <section className="bg-slate-900 text-white py-12 px-4 md:px-6">
+    <section className="content-visibility-auto-lg bg-slate-900 text-white py-12 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-8 md:gap-6">
           {FOOTER_CATEGORIES.map((category, categoryIndex) => (

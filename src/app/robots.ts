@@ -20,7 +20,6 @@ export default function robots(): MetadataRoute.Robots {
           '/enrollments/',
           '/test-platform/',
           '/manifest.json',
-          '/_next/static/',
         ],
       },
       {
@@ -40,7 +39,6 @@ export default function robots(): MetadataRoute.Robots {
           '/enrollments/',
           '/test-platform/',
           '/manifest.json',
-          '/_next/static/',
         ],
       },
       {
@@ -60,7 +58,6 @@ export default function robots(): MetadataRoute.Robots {
           '/enrollments/',
           '/test-platform/',
           '/manifest.json',
-          '/_next/static/',
         ],
       },
       // AI Search Engine Crawlers - Allow for GEO (Generative Engine Optimization)
