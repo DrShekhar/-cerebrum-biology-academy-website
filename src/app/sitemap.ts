@@ -2213,6 +2213,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Olympiad Preparation SEO Pages
     {
+      url: `${baseUrl}/biology-olympiads`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/biology-olympiad-coaching`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -2283,6 +2289,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.92,
+    },
+    // Olympiad — India regional (Gurugram cluster)
+    {
+      url: `${baseUrl}/nseb-coaching-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-coaching-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/ibo-preparation-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
     },
     // NCERT Biology Books SEO Pages - High Traffic Keywords
     {

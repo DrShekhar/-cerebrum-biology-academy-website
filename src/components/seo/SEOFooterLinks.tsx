@@ -208,6 +208,30 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'NRI Foundation', href: '/nri-neet-foundation-program' },
     ],
   },
+  {
+    heading: 'Biology Olympiads',
+    links: [
+      { label: 'Olympiads Hub', href: '/biology-olympiads' },
+      { label: 'IBO (International)', href: '/ibo-preparation' },
+      { label: 'USABO (USA)', href: '/usabo-coaching' },
+      { label: 'BBO (UK)', href: '/bbo-preparation' },
+      { label: 'INBO (India)', href: '/inbo-coaching' },
+      { label: 'SBO (Singapore)', href: '/sbo-coaching' },
+      { label: 'Olympiad MCQ Bank', href: '/biology-olympiad-mcq' },
+    ],
+  },
+  {
+    heading: 'Olympiads — More Countries',
+    links: [
+      { label: 'CNBO (China)', href: '/cnbo-coaching' },
+      { label: 'KBO (South Korea)', href: '/kbo-coaching' },
+      { label: 'JBO (Japan)', href: '/jbo-coaching' },
+      { label: 'CBO (Canada)', href: '/cbo-coaching' },
+      { label: 'ASOB (Australia)', href: '/asob-coaching' },
+      { label: 'NSEB Gurugram', href: '/nseb-coaching-gurugram' },
+      { label: 'Olympiad in Gurugram', href: '/biology-olympiad-coaching-gurugram' },
+    ],
+  },
 ]
 
 export function SEOFooterLinks() {

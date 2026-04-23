@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
+import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
 
 export const metadata: Metadata = {
   title: 'CNBO Coaching Online | Chinese National Biology Olympiad',
@@ -76,6 +78,16 @@ export default function CNBOCoachingLayout({ children }: { children: React.React
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {children}
+      <GeoAwareSharedPricingMatrix
+        products={olympiadPricingProducts}
+        heading="CNBO coaching — pricing in your currency"
+        subheading="USD reference price. Local currency auto-detected from your region."
+        equivalents={['CNY', 'USD', 'HKD', 'SGD', 'INR', 'GBP']}
+        regionalLinks={[
+          { region: 'All Olympiads', href: '/biology-olympiads' },
+          { region: 'IBO', href: '/ibo-preparation' },
+        ]}
+      />
     </>
   )
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
+import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
 
 export const metadata: Metadata = {
   title: 'BBO Preparation Online | British Biology Olympiad Coaching',
@@ -65,6 +67,17 @@ export default function BBOLayout({ children }: { children: React.ReactNode }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {children}
+      <GeoAwareSharedPricingMatrix
+        products={olympiadPricingProducts}
+        heading="BBO coaching — pricing in your currency"
+        subheading="USD reference price. Local currency auto-detected from your region."
+        equivalents={['GBP', 'USD', 'EUR', 'INR', 'AED', 'SGD']}
+        regionalLinks={[
+          { region: 'All Olympiads', href: '/biology-olympiads' },
+          { region: 'IBO', href: '/ibo-preparation' },
+          { region: 'USA (USABO)', href: '/usabo-coaching' },
+        ]}
+      />
     </>
   )
 }

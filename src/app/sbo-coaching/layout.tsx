@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
+import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
 
 export const metadata: Metadata = {
   title: 'SBO Coaching Online | Singapore Biology Olympiad Preparation',
@@ -76,6 +78,16 @@ export default function SBOCoachingLayout({ children }: { children: React.ReactN
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {children}
+      <GeoAwareSharedPricingMatrix
+        products={olympiadPricingProducts}
+        heading="SBO coaching — pricing in your currency"
+        subheading="USD reference price. Local currency auto-detected from your region."
+        equivalents={['SGD', 'USD', 'MYR', 'INR', 'HKD', 'AED']}
+        regionalLinks={[
+          { region: 'All Olympiads', href: '/biology-olympiads' },
+          { region: 'IBO', href: '/ibo-preparation' },
+        ]}
+      />
     </>
   )
 }
