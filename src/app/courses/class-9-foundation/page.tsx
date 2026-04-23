@@ -225,11 +225,22 @@ export default function Class9FoundationPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumbs */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm text-gray-500" aria-label="Breadcrumb">
+      <nav
+        className="max-w-7xl mx-auto px-4 sm:px-6 py-3 text-sm text-gray-500"
+        aria-label="Breadcrumb"
+      >
         <ol className="flex items-center gap-1.5">
-          <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
+          <li>
+            <Link href="/" className="hover:text-blue-600">
+              Home
+            </Link>
+          </li>
           <ChevronRight className="w-3.5 h-3.5" />
-          <li><Link href="/courses" className="hover:text-blue-600">Courses</Link></li>
+          <li>
+            <Link href="/courses" className="hover:text-blue-600">
+              Courses
+            </Link>
+          </li>
           <ChevronRight className="w-3.5 h-3.5" />
           <li className="text-gray-900 font-medium">Class 9 Foundation</li>
         </ol>
@@ -256,14 +267,28 @@ export default function Class9FoundationPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => trackAndOpenWhatsApp({ source: 'class-9-hero-enroll', message: 'Hi! I want to enroll in Class 9 Biology Foundation (NEET Foundation ₹60,000/year). Please share the enrollment process and available batch timings.', campaign: 'class-9-foundation' })}
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-9-hero-enroll',
+                      message:
+                        'Hi! I want to enroll in Class 9 Biology Foundation (NEET Foundation ₹60,000/year). Please share the enrollment process and available batch timings.',
+                      campaign: 'class-9-foundation',
+                    })
+                  }
                   className="w-full sm:w-auto bg-yellow-500 text-gray-900 px-6 sm:px-8 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors inline-flex items-center justify-center min-h-[48px]"
                 >
                   Enroll Now — ₹60,000/year
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button
-                  onClick={() => trackAndOpenWhatsApp({ source: 'class-9-hero-demo', message: 'Hi! I want to book a FREE demo class for Class 9 Biology Foundation. Please share available demo timings.', campaign: 'class-9-foundation' })}
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-9-hero-demo',
+                      message:
+                        'Hi! I want to book a FREE demo class for Class 9 Biology Foundation. Please share available demo timings.',
+                      campaign: 'class-9-foundation',
+                    })
+                  }
                   className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center min-h-[48px]"
                 >
                   Book Free Demo Class
@@ -334,16 +359,24 @@ export default function Class9FoundationPage() {
               <GraduationCap className="w-14 h-14 text-white" />
             </div>
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">Dr. Shekhar Singh</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
+                Dr. Shekhar Singh
+              </h3>
               <p className="text-blue-600 font-medium mb-3">Founder & Lead Biology Faculty</p>
               <p className="text-gray-700 mb-3">
                 M.Sc Biology, Ph.D Botany | 8+ years teaching experience | Specialist in
                 foundation-level teaching that builds conceptual clarity from day one.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">100+ NEET Qualifiers</span>
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Cell Biology Specialist</span>
-                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">Plant Sciences Expert</span>
+                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                  100+ NEET Qualifiers
+                </span>
+                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
+                  Cell Biology Specialist
+                </span>
+                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">
+                  Plant Sciences Expert
+                </span>
               </div>
             </div>
           </div>
@@ -390,8 +423,8 @@ export default function Class9FoundationPage() {
               Why Start in Class 9?
             </h2>
             <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-              Students who build foundations in Class 9 have a proven 2-year advantage over those who
-              start NEET prep in Class 11
+              Students who build foundations in Class 9 have a proven 2-year advantage over those
+              who start NEET prep in Class 11
             </p>
           </div>
 
@@ -423,7 +456,8 @@ export default function Class9FoundationPage() {
               Class 9 Biology Curriculum
             </h2>
             <p className="text-sm sm:text-base text-gray-600">
-              NCERT-aligned syllabus enhanced with NEET-relevant conceptual depth and practical sessions
+              NCERT-aligned syllabus enhanced with NEET-relevant conceptual depth and practical
+              sessions
             </p>
           </div>
 
@@ -523,34 +557,46 @@ export default function Class9FoundationPage() {
       {/* Pricing & Enrollment */}
       <section className="py-8 sm:py-12 md:py-16 bg-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-            Choose Your Plan
-          </h2>
-          <p className="text-gray-600 mb-6 sm:mb-8">Most parents choose the <strong className="text-blue-700">NEET Foundation (₹60,000/year)</strong> — the best balance of quality and value</p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Choose Your Plan</h2>
+          <p className="text-gray-600 mb-6 sm:mb-8">
+            Most parents choose the{' '}
+            <strong className="text-blue-700">NEET Foundation (₹60,000/year)</strong> — the best
+            balance of quality and value
+          </p>
 
           <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-8 mb-6 sm:mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div>
-                <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold mb-3">MOST POPULAR</div>
+                <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-bold mb-3">
+                  MOST POPULAR
+                </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                   NEET Foundation — ₹60,000/year
                 </h3>
                 <div className="text-left space-y-2 sm:space-y-3">
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">28 weeks program (4.5 hrs/week) with AIIMS faculty</span>
+                    <span className="text-sm sm:text-base">
+                      28 weeks program (4.5 hrs/week) with AIIMS faculty
+                    </span>
                   </div>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">16-25 students per batch — personal attention</span>
+                    <span className="text-sm sm:text-base">
+                      16-25 students per batch — personal attention
+                    </span>
                   </div>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">EMI: ₹5,000/month | 2% off on lump sum</span>
+                    <span className="text-sm sm:text-base">
+                      EMI: ₹5,000/month | 2% off on lump sum
+                    </span>
                   </div>
                   <div className="flex items-center">
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium text-green-700">Also available: Pursuit ₹45K | Pinnacle ₹90K</span>
+                    <span className="text-sm sm:text-base font-medium text-green-700">
+                      Also available: Pursuit ₹45K | Pinnacle ₹90K
+                    </span>
                   </div>
                 </div>
               </div>
@@ -561,7 +607,14 @@ export default function Class9FoundationPage() {
                   showTiers={true}
                   highlightTier="ascent"
                   showCompetitiveAdvantage={true}
-                  onEnrollClick={() => trackAndOpenWhatsApp({ source: 'class-9-pricing-enroll', message: 'Hi! I want to enroll in Class 9 Biology Foundation. Please share fee details and payment options.', campaign: 'class-9-foundation' })}
+                  onEnrollClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-9-pricing-enroll',
+                      message:
+                        'Hi! I want to enroll in Class 9 Biology Foundation. Please share fee details and payment options.',
+                      campaign: 'class-9-foundation',
+                    })
+                  }
                 />
               </div>
             </div>
@@ -572,11 +625,18 @@ export default function Class9FoundationPage() {
               Enrollment Bonus — Free Lab Kit Worth ₹5,000
             </p>
             <p className="text-sm sm:text-base text-indigo-700 mb-3">
-              Every Pinnacle tier student receives: Biology lab kit + microscope slides + lab manual +
-              specimen collection kit. Limited to first 20 enrollments this batch.
+              Every Pinnacle tier student receives: Biology lab kit + microscope slides + lab manual
+              + specimen collection kit. Limited to first 20 enrollments this batch.
             </p>
             <button
-              onClick={() => trackAndOpenWhatsApp({ source: 'class-9-claim-spot', message: 'Hi! I want to claim my spot in the Class 9 Biology Foundation Pinnacle tier. Please share enrollment details and lab kit bonus info.', campaign: 'class-9-foundation' })}
+              onClick={() =>
+                trackAndOpenWhatsApp({
+                  source: 'class-9-claim-spot',
+                  message:
+                    'Hi! I want to claim my spot in the Class 9 Biology Foundation Pinnacle tier. Please share enrollment details and lab kit bonus info.',
+                  campaign: 'class-9-foundation',
+                })
+              }
               className="inline-flex items-center bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-indigo-700 transition-colors min-h-[44px]"
             >
               Claim Your Spot
@@ -621,7 +681,8 @@ export default function Class9FoundationPage() {
                 Class 10 Foundation
               </h3>
               <p className="text-sm text-gray-600 mb-3">
-                Continue building your Biology foundation with Class 10 advanced concepts and board exam preparation.
+                Continue building your Biology foundation with Class 10 advanced concepts and board
+                exam preparation.
               </p>
               <span className="text-blue-600 font-medium text-sm inline-flex items-center">
                 View Course <ArrowRight className="w-4 h-4 ml-1" />
@@ -629,14 +690,15 @@ export default function Class9FoundationPage() {
             </Link>
 
             <Link
-              href="/courses/neet-foundation"
+              href="/courses/foundation"
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group"
             >
               <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 NEET Foundation (Class 11)
               </h3>
               <p className="text-sm text-gray-600 mb-3">
-                The natural next step after Class 10 — intensive NEET Biology preparation with competitive exam focus.
+                The natural next step after Class 10 — intensive NEET Biology preparation with
+                competitive exam focus.
               </p>
               <span className="text-blue-600 font-medium text-sm inline-flex items-center">
                 View Course <ArrowRight className="w-4 h-4 ml-1" />
@@ -651,7 +713,8 @@ export default function Class9FoundationPage() {
                 Free MCQ Practice
               </h3>
               <p className="text-sm text-gray-600 mb-3">
-                Start practicing Biology MCQs aligned with NCERT Class 9 syllabus. 19,600+ questions available.
+                Start practicing Biology MCQs aligned with NCERT Class 9 syllabus. 19,600+ questions
+                available.
               </p>
               <span className="text-blue-600 font-medium text-sm inline-flex items-center">
                 Try Free <ArrowRight className="w-4 h-4 ml-1" />

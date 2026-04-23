@@ -3410,48 +3410,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
-    {
-      url: `${baseUrl}/biology-classes-gurgaon-sector-49`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-classes-gurgaon-sector-51`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-classes-gurgaon-sector-55`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-classes-gurgaon-sector-56`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-classes-gurgaon-sector-57`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-classes-gurgaon-sector-60`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-classes-gurgaon-sector-73`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
+    // NOTE: Gurugram sector sub-page URLs (sector-49, 51, 55, 56, 57, 60, 73)
+    // were removed — those pages do not exist and the inline regex on line 68
+    // already strips them from the final sitemap. Removing them here prevents
+    // dead code and keeps the audit-sitemap-404s.mjs report clean.
     {
       url: `${baseUrl}/biology-classes-hauz-khas`,
       lastModified: lastUpdated,

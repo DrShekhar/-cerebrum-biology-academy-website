@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: "Biology Home Tutor in Delhi NCR? Try This Better Alternative | ₹4K/Month",
+  title: 'Biology Home Tutor in Delhi NCR? Try This Better Alternative | ₹4K/Month',
   description:
     'Searching for a biology home tutor in Delhi NCR? Get AIIMS faculty, test series, recordings & 19,000+ MCQs at ₹4K/month — less than most home tutors charge. Call 88264-44334.',
   keywords: [
@@ -83,52 +83,94 @@ const homeTutorProblems = [
 ]
 
 const comparisonRows = [
-  { feature: 'Faculty', tutor: 'Varies widely, often unverified', cerebrum: 'AIIMS-trained, 10+ years experience' },
-  { feature: 'Batch Size', tutor: '1 student (isolated learning)', cerebrum: '15 students (peer learning + competition)' },
+  {
+    feature: 'Faculty',
+    tutor: 'Varies widely, often unverified',
+    cerebrum: 'AIIMS-trained, 10+ years experience',
+  },
+  {
+    feature: 'Batch Size',
+    tutor: '1 student (isolated learning)',
+    cerebrum: '15 students (peer learning + competition)',
+  },
   { feature: 'Monthly Cost', tutor: '₹5,000-8,000/month', cerebrum: '₹4,000/month (₹48K/year)' },
-  { feature: 'Test Series', tutor: 'Rarely included', cerebrum: 'Weekly tests + full mock NEET exams' },
-  { feature: 'Study Material', tutor: 'Depends on tutor', cerebrum: 'Structured notes + 19,000+ MCQ bank' },
-  { feature: 'Recorded Lectures', tutor: 'Not available', cerebrum: 'Every class recorded for revision' },
-  { feature: 'Doubt Clearing', tutor: 'Only during session', cerebrum: 'WhatsApp doubt support 6 days/week' },
-  { feature: 'NEET Focus', tutor: 'Often board-focused', cerebrum: '100% NEET-oriented curriculum' },
-  { feature: 'Board Prep', tutor: 'Yes, but generic', cerebrum: 'Integrated board + NEET approach' },
-  { feature: 'Results Tracking', tutor: 'No analytics', cerebrum: 'AI-powered performance dashboard' },
+  {
+    feature: 'Test Series',
+    tutor: 'Rarely included',
+    cerebrum: 'Weekly tests + full mock NEET exams',
+  },
+  {
+    feature: 'Study Material',
+    tutor: 'Depends on tutor',
+    cerebrum: 'Structured notes + 19,000+ MCQ bank',
+  },
+  {
+    feature: 'Recorded Lectures',
+    tutor: 'Not available',
+    cerebrum: 'Every class recorded for revision',
+  },
+  {
+    feature: 'Doubt Clearing',
+    tutor: 'Only during session',
+    cerebrum: 'WhatsApp doubt support 6 days/week',
+  },
+  {
+    feature: 'NEET Focus',
+    tutor: 'Often board-focused',
+    cerebrum: '100% NEET-oriented curriculum',
+  },
+  {
+    feature: 'Board Prep',
+    tutor: 'Yes, but generic',
+    cerebrum: 'Integrated board + NEET approach',
+  },
+  {
+    feature: 'Results Tracking',
+    tutor: 'No analytics',
+    cerebrum: 'AI-powered performance dashboard',
+  },
 ]
 
 const cityAdvice = [
   {
     city: 'Noida',
-    advice: 'No physical center nearby, but our online program gives you the same AIIMS faculty live from home. Save the commute, keep the quality.',
+    advice:
+      'No physical center nearby, but our online program gives you the same AIIMS faculty live from home. Save the commute, keep the quality.',
     link: '/neet-coaching-noida',
     cta: 'Join Online from Noida',
   },
   {
     city: 'Gurugram',
-    advice: 'Visit our Gurugram center at M2K Corporate Park, Sector 51. Just 10 minutes from HUDA City Centre Metro.',
+    advice:
+      'Visit our Gurugram center at M2K Corporate Park, Sector 51. Just 10 minutes from HUDA City Centre Metro.',
     link: '/neet-coaching-gurugram',
     cta: 'Visit Gurugram Center',
   },
   {
     city: 'South Delhi',
-    advice: 'Our South Extension center (D 35, Part 2) is walking distance from South Extension Metro. GK, Defence Colony, Hauz Khas students attend here.',
+    advice:
+      'Our South Extension center (D 35, Part 2) is walking distance from South Extension Metro. GK, Defence Colony, Hauz Khas students attend here.',
     link: '/neet-coaching-delhi',
     cta: 'Visit South Extension Center',
   },
   {
     city: 'Rohini / North Delhi',
-    advice: 'Our Rohini center at Vikas Surya Tower, DC Chowk is right next to Rohini West Metro. Pitampura and Shalimar Bagh students prefer this.',
+    advice:
+      'Our Rohini center at Vikas Surya Tower, DC Chowk is right next to Rohini West Metro. Pitampura and Shalimar Bagh students prefer this.',
     link: '/neet-coaching-delhi',
     cta: 'Visit Rohini Center',
   },
   {
     city: 'Faridabad',
-    advice: 'Our Faridabad center at Huda Market, Sector 17 serves NIT, Ballabhgarh, and Greater Faridabad students.',
+    advice:
+      'Our Faridabad center at Huda Market, Sector 17 serves NIT, Ballabhgarh, and Greater Faridabad students.',
     link: '/neet-coaching-faridabad',
     cta: 'Visit Faridabad Center',
   },
   {
     city: 'Ghaziabad / East Delhi',
-    advice: 'No center in Ghaziabad yet. Our online program is the best alternative — live classes, recordings, MCQ bank, and doubt support included.',
+    advice:
+      'No center in Ghaziabad yet. Our online program is the best alternative — live classes, recordings, MCQ bank, and doubt support included.',
     link: '/book-free-demo',
     cta: 'Try Free Online Demo',
   },
@@ -200,7 +242,7 @@ const faqSchema = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Biology Home Tutor in Delhi NCR — There\'s a Better Option',
+  headline: "Biology Home Tutor in Delhi NCR — There's a Better Option",
   description:
     'Comparing biology home tutors with structured NEET coaching. Why Cerebrum Biology Academy at ₹4K/month outperforms most home tutors in Delhi NCR.',
   author: {
@@ -274,10 +316,7 @@ export default function BiologyHomeTutorDelhiNCRPage() {
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {homeTutorProblems.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-red-100 bg-red-50/50 p-5"
-              >
+              <div key={item.title} className="rounded-xl border border-red-100 bg-red-50/50 p-5">
                 <div className="flex items-center gap-3">
                   <item.icon className="h-5 w-5 shrink-0 text-red-500" />
                   <h3 className="font-semibold text-slate-900">{item.title}</h3>
@@ -344,17 +383,10 @@ export default function BiologyHomeTutorDelhiNCRPage() {
               </thead>
               <tbody>
                 {comparisonRows.map((row, i) => (
-                  <tr
-                    key={row.feature}
-                    className={i % 2 === 0 ? 'bg-slate-50' : 'bg-white'}
-                  >
-                    <td className="px-4 py-3 text-sm font-medium text-slate-900">
-                      {row.feature}
-                    </td>
+                  <tr key={row.feature} className={i % 2 === 0 ? 'bg-slate-50' : 'bg-white'}>
+                    <td className="px-4 py-3 text-sm font-medium text-slate-900">{row.feature}</td>
                     <td className="px-4 py-3 text-sm text-slate-600">{row.tutor}</td>
-                    <td className="px-4 py-3 text-sm font-medium text-green-700">
-                      {row.cerebrum}
-                    </td>
+                    <td className="px-4 py-3 text-sm font-medium text-green-700">{row.cerebrum}</td>
                   </tr>
                 ))}
               </tbody>
@@ -418,9 +450,7 @@ export default function BiologyHomeTutorDelhiNCRPage() {
                 key={item.city}
                 className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
               >
-                <h3 className="font-bold text-slate-900">
-                  Biology Home Tutor in {item.city}?
-                </h3>
+                <h3 className="font-bold text-slate-900">Biology Home Tutor in {item.city}?</h3>
                 <p className="mt-2 text-sm text-slate-600">{item.advice}</p>
                 <Link
                   href={item.link}
@@ -445,10 +475,7 @@ export default function BiologyHomeTutorDelhiNCRPage() {
           </p>
           <div className="mt-8 space-y-6">
             {parentTestimonials.map((t) => (
-              <div
-                key={t.name}
-                className="rounded-lg border border-purple-200 bg-white p-5"
-              >
+              <div key={t.name} className="rounded-lg border border-purple-200 bg-white p-5">
                 <p className="text-sm italic leading-relaxed text-slate-600">
                   &quot;{t.text}&quot;
                 </p>
@@ -567,10 +594,10 @@ export default function BiologyHomeTutorDelhiNCRPage() {
             </Link>
             <span className="text-slate-300">|</span>
             <Link
-              href="/biology-tuition-delhi"
+              href="/biology-tutor-south-delhi"
               className="text-teal-600 underline hover:text-teal-800"
             >
-              Biology Tuition Delhi
+              Biology Tutor South Delhi
             </Link>
             <span className="text-slate-300">|</span>
             <Link

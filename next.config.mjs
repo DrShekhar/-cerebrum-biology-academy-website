@@ -259,11 +259,9 @@ const nextConfig = {
         destination: '/neet-coaching-south-india',
         permanent: true,
       },
-      {
-        source: '/nseb-coaching',
-        destination: '/nseb-coaching-gurugram',
-        permanent: true,
-      },
+      // /nseb-coaching is now a live national hub page
+      // (src/app/nseb-coaching/page.tsx). Redirect removed so the
+      // page is reachable. Gurugram variant stays at its own URL.
       {
         source: '/best-biology',
         destination: '/best-biology-books-for-neet',

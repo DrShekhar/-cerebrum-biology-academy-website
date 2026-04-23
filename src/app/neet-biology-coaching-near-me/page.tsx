@@ -420,19 +420,31 @@ export default function NEETBiologyCoachingNearMePage() {
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="text-center text-lg font-semibold text-slate-700">Explore More</h2>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-sm">
-            <Link href="/neet-coaching-delhi" className="text-teal-600 underline hover:text-teal-800">
-              NEET Coaching Delhi
+            <Link
+              href="/neet-coaching-centre"
+              className="text-teal-600 underline hover:text-teal-800"
+            >
+              NEET Coaching Centre
             </Link>
             <span className="text-slate-300">|</span>
-            <Link href="/neet-coaching-gurugram" className="text-teal-600 underline hover:text-teal-800">
+            <Link
+              href="/neet-coaching-gurugram"
+              className="text-teal-600 underline hover:text-teal-800"
+            >
               NEET Coaching Gurugram
             </Link>
             <span className="text-slate-300">|</span>
-            <Link href="/neet-coaching-faridabad" className="text-teal-600 underline hover:text-teal-800">
+            <Link
+              href="/neet-coaching-faridabad"
+              className="text-teal-600 underline hover:text-teal-800"
+            >
               NEET Coaching Faridabad
             </Link>
             <span className="text-slate-300">|</span>
-            <Link href="/neet-coaching-noida" className="text-teal-600 underline hover:text-teal-800">
+            <Link
+              href="/neet-coaching-noida"
+              className="text-teal-600 underline hover:text-teal-800"
+            >
               NEET Coaching Noida
             </Link>
             <span className="text-slate-300">|</span>
