@@ -126,9 +126,33 @@ export const navigationConfig: NavigationSection[] = [
   },
   {
     id: 'olympiad-coaching',
-    title: 'Olympiad Coaching',
+    title: 'Biology Olympiads',
     icon: 'GraduationCap',
     items: [
+      {
+        id: 'biology-olympiads-hub',
+        title: 'All Biology Olympiads (Global Hub)',
+        href: '/biology-olympiads',
+        description: 'Every major Biology Olympiad — IBO, USABO, BBO, INBO, NSEB, SBO and more',
+        keywords: [
+          'biology olympiad',
+          'biology olympiad hub',
+          'all olympiads',
+          'olympiad list',
+          'ibo usabo bbo',
+        ],
+        isNew: true,
+        isPopular: true,
+      },
+      {
+        id: 'nseb-coaching',
+        title: 'NSEB Coaching (India Stage 1)',
+        href: '/nseb-coaching',
+        description: 'National Standard Examination in Biology — the Indian olympiad prelim',
+        keywords: ['nseb', 'nseb coaching', 'iapt biology', 'biology olympiad india prelim'],
+        isNew: true,
+        isPopular: true,
+      },
       {
         id: 'campbell-biology',
         title: 'Campbell Biology Coaching',

@@ -2297,6 +2297,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92,
     },
+    // Olympiad — cross-curriculum transition / parallel-prep guides
+    {
+      url: `${baseUrl}/cbse-to-olympiad-transition`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/ib-biology-olympiad-parallel-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.86,
+    },
     // Olympiad — country dynamic pages (English-speaking markets)
     {
       url: `${baseUrl}/biology-olympiad/new-zealand`,

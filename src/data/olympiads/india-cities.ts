@@ -85,6 +85,14 @@ export const olympiadCities: OlympiadCityEntry[] = [
     relatedLinks: [
       { label: 'NSEB coaching', href: '/nseb-coaching' },
       { label: 'INBO coaching', href: '/inbo-coaching' },
+      {
+        label: 'South Delhi (GK, Saket, Vasant Kunj)',
+        href: '/biology-olympiads/india/south-delhi',
+      },
+      { label: 'Rohini (North Delhi)', href: '/biology-olympiads/india/rohini' },
+      { label: 'Gurugram (NCR)', href: '/biology-olympiads/india/gurugram' },
+      { label: 'Noida (NCR)', href: '/biology-olympiads/india/noida' },
+      { label: 'Faridabad (NCR)', href: '/biology-olympiads/india/faridabad' },
       { label: 'Delhi NEET biology classes', href: '/biology-classes-delhi' },
       { label: 'All India cities', href: '/biology-olympiads' },
     ],
