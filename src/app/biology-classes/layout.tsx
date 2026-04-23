@@ -1,37 +1,62 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Biology Classes | Best Bio Classes for NEET Biology Classes | Best Bio Classes for NEET & Boards 2025 Boards 2027',
+  title:
+    'Biology Classes for NEET and Boards (9-12) & Droppers | Online, Offline, Hybrid | Delhi NCR',
   description:
-    'Join the best biology classes for NEET & board exams. Expert AIIMS-trained faculty, structured curriculum, small batches of 15-20 students. Online & offline bio classes available.',
+    'Biology classes for NEET, CBSE/ICSE Boards (Classes 9-12), and droppers. Online, offline, and hybrid modes. Offline centres in South Extension New Delhi, Gurugram Sector 51, Faridabad Sector 17, and Rohini. AIIMS-trained faculty, small batches, 98% success rate.',
   keywords: [
     'biology classes',
-    'bio classes',
-    'biology class',
-    'best biology classes',
-    'biology classes for neet',
-    'biology classes online',
-    'bio classes near me',
-    'biology coaching classes',
-    'neet biology classes',
-    'biology classes for class 11',
-    'biology classes for class 12',
+    'biology classes for NEET',
+    'biology classes class 11',
+    'biology classes class 12',
+    'biology classes for droppers',
+    'biology classes for boards',
+    'online biology classes',
+    'offline biology classes',
+    'hybrid biology classes',
+    'biology classes south extension',
+    'biology classes gurugram sector 51',
+    'biology classes faridabad sector 17',
+    'biology classes rohini',
+    'biology classes delhi ncr',
+    'CBSE biology classes',
+    'ICSE biology classes',
+    'NEET biology coaching Delhi',
+    'best biology coaching Delhi NCR',
   ],
   openGraph: {
-    title: 'Best Biology Classes | AIIMS-Trained Faculty',
+    title: 'Biology Classes for NEET and Boards (9-12) & Droppers | Online, Offline, Hybrid',
     description:
-      'Expert biology classes with structured curriculum and batch learning. 98% success rate.',
+      'AIIMS-trained faculty. Small batches. 4 Delhi NCR centres: South Extension, Gurugram, Faridabad, Rohini. Plus live online and hybrid options.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/biology-classes',
+    siteName: 'Cerebrum Biology Academy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Biology Classes',
-    description: 'AIIMS-trained faculty with 15+ years experience. 98% success rate!',
+    title: 'Biology Classes for NEET and Boards (9-12) & Droppers | Delhi NCR',
+    description:
+      'Online, offline, and hybrid biology classes with AIIMS-trained faculty. 98% success rate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes',
+    languages: {
+      'en-IN': 'https://cerebrumbiologyacademy.com/biology-classes',
+      en: 'https://cerebrumbiologyacademy.com/biology-classes',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-classes',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
