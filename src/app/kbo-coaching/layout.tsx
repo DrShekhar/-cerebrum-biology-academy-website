@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema } from '@/data/olympiads/schema-helpers'
 
 export const metadata: Metadata = {
   title: 'KBO Coaching Online | Korean Biology Olympiad Preparation',
@@ -70,12 +71,25 @@ const breadcrumbSchema = {
   ],
 }
 
+const courseSchema = olympiadCourseSchema({
+  name: 'KBO Coaching Programme',
+  description:
+    'Korean Biology Olympiad preparation. KBIO-aligned curriculum, Campbell Biology coverage, past-paper drills, and senior olympiad tutors.',
+  url: 'https://cerebrumbiologyacademy.com/kbo-coaching',
+  about: 'KBO - Korean Biology Olympiad',
+  areaServed: { type: 'Country', name: 'South Korea' },
+})
+
 export default function KBOCoachingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       {children}
       <GeoAwareSharedPricingMatrix

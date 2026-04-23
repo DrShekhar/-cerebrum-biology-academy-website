@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema, iboPracticalHowToSchema } from '@/data/olympiads/schema-helpers'
 
 export const metadata: Metadata = {
   title: 'USABO Coaching Online | USA Biology Olympiad Preparation',
@@ -72,12 +73,31 @@ const breadcrumbSchema = {
   ],
 }
 
+const courseSchema = olympiadCourseSchema({
+  name: 'USABO Coaching Programme',
+  description:
+    'USA Biology Olympiad preparation — Open Exam, Semifinals, and National Finals. Campbell Biology coverage, past-paper drills, and senior olympiad tutors.',
+  url: 'https://cerebrumbiologyacademy.com/usabo-coaching',
+  about: 'USABO - USA Biology Olympiad',
+  areaServed: { type: 'Country', name: 'United States' },
+})
+
+const howToSchema = iboPracticalHowToSchema('https://cerebrumbiologyacademy.com/usabo-coaching')
+
 export default function USABOCoachingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       {children}
       <GeoAwareSharedPricingMatrix

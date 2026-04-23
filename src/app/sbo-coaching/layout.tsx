@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema } from '@/data/olympiads/schema-helpers'
 
 export const metadata: Metadata = {
   title: 'SBO Coaching Online | Singapore Biology Olympiad Preparation',
@@ -70,12 +71,25 @@ const breadcrumbSchema = {
   ],
 }
 
+const courseSchema = olympiadCourseSchema({
+  name: 'SBO Coaching Programme',
+  description:
+    'Singapore Biology Olympiad coaching for pre-university students. Campbell Biology coverage, NUS-aligned curriculum, past-paper drills, and senior olympiad tutors.',
+  url: 'https://cerebrumbiologyacademy.com/sbo-coaching',
+  about: 'SBO - Singapore Biology Olympiad',
+  areaServed: { type: 'Country', name: 'Singapore' },
+})
+
 export default function SBOCoachingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       {children}
       <GeoAwareSharedPricingMatrix

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { olympiadCourseSchema, nsebHowToSchema } from '@/data/olympiads/schema-helpers'
 
 export const metadata: Metadata = {
   title: 'Biology Olympiad Coaching Delhi | NSEB, INBO, IBO Preparation',
@@ -83,12 +84,31 @@ const breadcrumbSchema = {
   ],
 }
 
+const courseSchema = olympiadCourseSchema({
+  name: 'Olympiad Preparation Programme',
+  description:
+    'Science olympiad preparation with biology focus — NSEB, KVPY, NSO, INBO. Structured curriculum, past-paper drills, and senior olympiad tutors.',
+  url: 'https://cerebrumbiologyacademy.com/olympiad-preparation',
+  about: 'Science Olympiad - NSEB, INBO, KVPY, NSO',
+  areaServed: { type: 'Country', name: 'India' },
+})
+
+const howToSchema = nsebHowToSchema('https://cerebrumbiologyacademy.com/olympiad-preparation')
+
 export default function OlympiadPreparationLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       {children}
     </>

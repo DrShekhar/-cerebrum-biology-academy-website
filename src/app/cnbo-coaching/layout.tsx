@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema } from '@/data/olympiads/schema-helpers'
 
 export const metadata: Metadata = {
   title: 'CNBO Coaching Online | Chinese National Biology Olympiad',
@@ -70,12 +71,25 @@ const breadcrumbSchema = {
   ],
 }
 
+const courseSchema = olympiadCourseSchema({
+  name: 'CNBO Coaching Programme',
+  description:
+    'Chinese National Biology Olympiad preparation. Campbell Biology coverage, provincial + national paper drills, and senior olympiad tutors.',
+  url: 'https://cerebrumbiologyacademy.com/cnbo-coaching',
+  about: 'CNBO - Chinese National Biology Olympiad',
+  areaServed: { type: 'Country', name: 'China' },
+})
+
 export default function CNBOCoachingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       {children}
       <GeoAwareSharedPricingMatrix

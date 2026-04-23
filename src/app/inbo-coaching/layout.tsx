@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema, nsebHowToSchema } from '@/data/olympiads/schema-helpers'
 
 export const metadata: Metadata = {
   title: 'INBO Coaching Online | Indian Biology Olympiad Preparation',
@@ -60,12 +61,31 @@ const breadcrumbSchema = {
   ],
 }
 
+const courseSchema = olympiadCourseSchema({
+  name: 'INBO Coaching Programme',
+  description:
+    'Indian National Biology Olympiad (Stage 2, HBCSE) coaching for NSEB qualifiers. Theory + practical preparation, OCSC readiness, pathway to IBO.',
+  url: 'https://cerebrumbiologyacademy.com/inbo-coaching',
+  about: 'INBO - Indian National Biology Olympiad',
+  areaServed: { type: 'Country', name: 'India' },
+})
+
+const howToSchema = nsebHowToSchema('https://cerebrumbiologyacademy.com/inbo-coaching')
+
 export default function INBOLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       {children}
       <GeoAwareSharedPricingMatrix

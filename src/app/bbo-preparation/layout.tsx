@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema } from '@/data/olympiads/schema-helpers'
 
 export const metadata: Metadata = {
   title: 'BBO Preparation Online | British Biology Olympiad Coaching',
@@ -59,12 +60,25 @@ const breadcrumbSchema = {
   ],
 }
 
+const courseSchema = olympiadCourseSchema({
+  name: 'BBO Preparation Programme',
+  description:
+    'British Biology Olympiad coaching for UK sixth-form students. Campbell Biology coverage, past-paper drills, and 1:1 mentoring by senior olympiad tutors.',
+  url: 'https://cerebrumbiologyacademy.com/bbo-preparation',
+  about: 'BBO - British Biology Olympiad',
+  areaServed: { type: 'Country', name: 'United Kingdom' },
+})
+
 export default function BBOLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       {children}
       <GeoAwareSharedPricingMatrix
