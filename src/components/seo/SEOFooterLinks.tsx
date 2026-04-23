@@ -212,6 +212,17 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
     ],
   },
   {
+    heading: 'Class 11 Biology',
+    links: [
+      { label: 'All 5 Curricula Hub', href: '/class-11-biology-by-curriculum' },
+      { label: 'CBSE Class 11', href: '/courses/class-11' },
+      { label: 'ICSE Class 11', href: '/biology-tutor-class-11-icse' },
+      { label: 'AP Biology Grade 11', href: '/ap-biology-class-11' },
+      { label: 'IB Biology (DP1)', href: '/ib-biology' },
+      { label: 'IGCSE Biology', href: '/igcse-biology-tutor' },
+    ],
+  },
+  {
     heading: 'Biology Olympiads',
     links: [
       { label: 'Olympiads Hub', href: '/biology-olympiads' },

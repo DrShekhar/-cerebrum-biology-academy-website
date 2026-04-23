@@ -2311,6 +2311,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92,
     },
+    // Class 11 Biology — cross-board hub + AP Class 11 feeder
+    {
+      url: `${baseUrl}/class-11-biology-by-curriculum`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/ap-biology-class-11`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
     // Olympiad — cross-curriculum transition / parallel-prep guides
     {
       url: `${baseUrl}/cbse-to-olympiad-transition`,
