@@ -276,6 +276,36 @@ export default async function OlympiadCityPage({ params }: PageProps) {
           </div>
         </section>
 
+        {/* Local context + commute — city-specific depth */}
+        {(entry.localContext || entry.commuteContext) && (
+          <section className="border-b border-slate-200 bg-slate-50 py-14 md:py-20">
+            <div className="mx-auto max-w-5xl px-6">
+              <div className="grid gap-8 md:grid-cols-3">
+                {entry.localContext && (
+                  <div className="md:col-span-2">
+                    <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+                      Olympiad context for {entry.city} students.
+                    </h2>
+                    <p className="mt-4 text-base leading-relaxed text-slate-700">
+                      {entry.localContext}
+                    </p>
+                  </div>
+                )}
+                {entry.commuteContext && (
+                  <div className="rounded-2xl border border-slate-200 bg-white p-6">
+                    <h3 className="text-base font-semibold text-slate-900">
+                      How {entry.city} students attend
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                      {entry.commuteContext}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Schools + centre */}
         <section className="border-b border-slate-200 py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-6">

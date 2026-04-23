@@ -6,7 +6,7 @@ import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
-import { olympiadCourseSchema, iboPracticalHowToSchema } from '@/data/olympiads/schema-helpers'
+import { olympiadCourseSchema } from '@/data/olympiads/schema-helpers'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
 import {
@@ -106,7 +106,10 @@ export default async function CountryOlympiadPage({ params }: PageProps) {
   }
 
   const courseSchema = buildCourseSchema(entry, pageUrl)
-  const howToSchema = iboPracticalHowToSchema(pageUrl)
+  // HowTo schema removed from country pages (was identical across all 6
+  // countries — duplicate-schema signal). The canonical IBO practical prep
+  // HowTo lives on /ibo-preparation; country pages now focus on Course +
+  // FAQ + Breadcrumb with country-specific content.
 
   return (
     <>
@@ -117,10 +120,6 @@ export default async function CountryOlympiadPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <BreadcrumbSchema
         items={[

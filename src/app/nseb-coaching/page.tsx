@@ -66,12 +66,88 @@ const pathway = [
 ]
 
 const syllabusBreakdown = [
-  { unit: 'Cell Biology & Biochemistry', weightage: '20%' },
-  { unit: 'Genetics & Evolution', weightage: '20%' },
-  { unit: 'Animal Anatomy & Physiology', weightage: '25%' },
-  { unit: 'Plant Biology', weightage: '15%' },
-  { unit: 'Ecology & Behavior', weightage: '15%' },
-  { unit: 'Biosystematics & Biodiversity', weightage: '5%' },
+  {
+    unit: 'Cell Biology & Biochemistry',
+    weightage: '20%',
+    detail:
+      'Goes beyond NCERT cell structure into enzyme kinetics (Michaelis-Menten), membrane transport mechanisms (primary vs secondary active transport), cell signaling cascades, and cellular respiration regulation. NSEB regularly asks about protein folding, chaperones, and post-translational modifications — all from Campbell Chapters 5-10, not covered at depth in NCERT Class 11.',
+  },
+  {
+    unit: 'Genetics & Evolution',
+    weightage: '20%',
+    detail:
+      'NSEB depth covers Mendelian extensions (epistasis, pleiotropy, linkage mapping with recombination frequencies), population genetics (Hardy-Weinberg, allele frequency shifts), and molecular genetics (gene expression regulation in prokaryotes vs eukaryotes, operon models). Questions often require calculation-based answers — 3-point test crosses, genetic drift problems, phylogenetic tree reading. Campbell Chapters 13-23 plus Raven Biology for genetics depth.',
+  },
+  {
+    unit: 'Animal Anatomy & Physiology',
+    weightage: '25%',
+    detail:
+      'The largest NSEB section. Covers comparative anatomy across vertebrate classes, circulatory system variations (open vs closed, single vs double circulation), nervous system (action potentials with Hodgkin-Huxley model basics), endocrine feedback loops, and reproductive physiology with hormonal regulation. Students should know mammalian vs avian vs reptilian adaptations — NSEB favours comparative-physiology questions.',
+  },
+  {
+    unit: 'Plant Biology',
+    weightage: '15%',
+    detail:
+      'Photosynthesis at depth (light reactions with Z-scheme, Calvin cycle step-by-step, C3/C4/CAM comparisons), plant hormones and their interactions, water transport (cohesion-tension theory with water-potential calculations), and angiosperm reproduction. Plant systematics is tested — know monocot vs dicot features and major plant family characters.',
+  },
+  {
+    unit: 'Ecology & Behavior',
+    weightage: '15%',
+    detail:
+      'Population ecology (exponential vs logistic growth with quantitative questions), community ecology (niche theory, competitive exclusion, keystone species), ecosystem dynamics (energy flow, trophic efficiency calculations), and behavioural ecology (fixed action patterns, kin selection, optimal foraging theory). Expect data-interpretation questions on graphs and field-study data sets.',
+  },
+  {
+    unit: 'Biosystematics & Biodiversity',
+    weightage: '5%',
+    detail:
+      'Modern phylogenetics and cladistics — reading and constructing phylogenetic trees from character-state data. Covers all major kingdoms with emphasis on protists, fungi, and invertebrate phyla. NSEB often has 3-5 questions on classification here; while low weightage, these are high-yield because they test recall not complex reasoning.',
+  },
+]
+
+const sampleQuestions = [
+  {
+    topic: 'Genetics',
+    difficulty: 'Hard',
+    question:
+      'In a three-point test cross, the recombination frequencies between three loci A-B, B-C, and A-C are 12%, 18%, and 28% respectively. What is the coefficient of coincidence, given observed double crossovers are 1.4%?',
+    approach:
+      'Calculate expected double crossovers (0.12 × 0.18 = 2.16%), then coefficient of coincidence = observed / expected = 1.4 / 2.16 = 0.65. Interference = 1 - 0.65 = 0.35 (i.e., 35% of double crossovers suppressed). NSEB rewards students who can recite this formula AND interpret its biological meaning.',
+  },
+  {
+    topic: 'Physiology',
+    difficulty: 'Medium',
+    question:
+      'Why do Arctic fish not freeze despite living in sub-zero waters? Identify the class of molecules responsible and explain the mechanism.',
+    approach:
+      'Antifreeze glycoproteins (AFGPs) bind to ice crystal nuclei via hydrogen bonding and prevent further ice growth by creating thermal hysteresis. NSEB expects both the molecular identification AND the thermodynamic mechanism — freezing point depression without colligative effects. Campbell Chapter 40 covers this under homeostasis adaptations.',
+  },
+  {
+    topic: 'Ecology',
+    difficulty: 'Hard',
+    question:
+      'Given a predator-prey Lotka-Volterra system with dN/dt = rN - aNP and dP/dt = baNP - mP, find the non-zero equilibrium and interpret what happens if the prey carrying capacity is introduced as dN/dt = rN(1 - N/K) - aNP.',
+    approach:
+      'Non-zero equilibrium: P* = r/a, N* = m/(ba). When K is added, prey population has density-dependent regulation; the system becomes stable with damped oscillations (previously, pure Lotka-Volterra gives neutral stability — not realistic). This question tests both the math AND ecological intuition.',
+  },
+]
+
+const postINBOPath = [
+  {
+    title: 'Top 4 → IBO (July)',
+    body: 'Four students are selected from OCSC to represent India at the International Biology Olympiad. This is the elite tier — medal at IBO opens doors to Ivy League admissions, IIIT-H, IISc, and international universities.',
+  },
+  {
+    title: 'OCSC attendees who do not make top 4',
+    body: 'Attending OCSC itself (~30 students) is a nationally recognised credential. Many OCSC alumni secure admissions at top Indian universities (IIT integrated M.Sc. programmes, IISER, TIFR) and are fast-tracked for research internships at HBCSE and academic institutions.',
+  },
+  {
+    title: 'INBO qualifiers who do not make OCSC',
+    body: "Top ~300 NSEB to ~30 OCSC means roughly 270 INBO qualifiers stay at Stage 2. This credential alone is valuable for NEET rank improvement (Campbell depth translates to 20-40 more NEET marks) and for medical college applications. Many continue Cerebrum's NEET programme with the same mentor.",
+  },
+  {
+    title: 'NSEB qualifiers who do not clear INBO',
+    body: 'Top 1% nationally (NSEB qualifiers) is still a recognised achievement. The Campbell foundation built during NSEB prep carries over directly into NEET Biology — our data shows NSEB-prep students typically score 340+ in NEET Biology vs 320 average for NEET-only students.',
+  },
 ]
 
 const whyCerebrum = [
@@ -309,18 +385,79 @@ export default function NSEBCoachingHubPage() {
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
               NSEB syllabus and weightage.
             </h2>
-            <p className="mt-3 max-w-2xl text-lg text-slate-600">
+            <p className="mt-3 max-w-3xl text-lg text-slate-600">
               Questions are distributed across six broad units. Our revision schedule follows
-              weightage so you spend proportionate prep time on each topic cluster.
+              weightage so you spend proportionate prep time on each topic cluster. Below is what
+              NSEB actually tests in each unit beyond the NCERT baseline.
             </p>
 
-            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 space-y-4">
               {syllabusBreakdown.map((s) => (
                 <div key={s.unit} className="rounded-2xl border border-slate-200 bg-white p-6">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-green-700">
-                    {s.weightage}
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="text-lg font-semibold text-slate-900">{s.unit}</h3>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-green-700">
+                      {s.weightage}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{s.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Sample question walkthroughs */}
+        <section className="border-b border-slate-200 py-14 md:py-20">
+          <div className="mx-auto max-w-5xl px-6">
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Three real NSEB question patterns.
+            </h2>
+            <p className="mt-3 max-w-2xl text-lg text-slate-600">
+              NSEB questions blend quantitative reasoning with biological concepts. Here are three
+              representative patterns with the approach our students use to solve them.
+            </p>
+
+            <div className="mt-10 space-y-5">
+              {sampleQuestions.map((q, i) => (
+                <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
+                  <div className="mb-3 flex items-center gap-3">
+                    <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-700">
+                      {q.topic}
+                    </span>
+                    <span className="text-xs font-medium text-slate-500">{q.difficulty}</span>
+                  </div>
+                  <p className="text-sm font-semibold leading-relaxed text-slate-900">
+                    Q{i + 1}. {q.question}
                   </p>
-                  <h3 className="mt-2 text-lg font-semibold text-slate-900">{s.unit}</h3>
+                  <div className="mt-4 rounded-xl bg-green-50 p-4">
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-green-700">
+                      Approach
+                    </p>
+                    <p className="text-sm leading-relaxed text-slate-700">{q.approach}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Post-INBO pathway */}
+        <section className="border-b border-slate-200 bg-slate-50 py-14 md:py-20">
+          <div className="mx-auto max-w-5xl px-6">
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              What happens after NSEB — every stage pays off.
+            </h2>
+            <p className="mt-3 max-w-2xl text-lg text-slate-600">
+              Even students who do not reach IBO finals benefit from the NSEB pathway. Each stage
+              unlocks a different tier of credentials and a different next step.
+            </p>
+
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              {postINBOPath.map((p) => (
+                <div key={p.title} className="rounded-2xl border border-slate-200 bg-white p-6">
+                  <h3 className="text-base font-semibold text-slate-900">{p.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{p.body}</p>
                 </div>
               ))}
             </div>
