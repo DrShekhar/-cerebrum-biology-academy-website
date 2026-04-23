@@ -4218,13 +4218,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'kuala-lumpur',
       // India — home market
       'delhi',
+      'south-delhi',
       'gurugram',
+      'noida',
+      'faridabad',
+      'rohini',
       'mumbai',
       'bangalore',
       'pune',
       'hyderabad',
-      'noida',
       'chennai',
+      'kolkata',
     ].map((city) => ({
       url: `${baseUrl}/ib-biology/${city}`,
       lastModified: lastUpdated,

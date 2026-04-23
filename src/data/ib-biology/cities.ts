@@ -36,6 +36,10 @@ export type CitySlug =
   | 'hyderabad'
   | 'noida'
   | 'chennai'
+  | 'south-delhi'
+  | 'faridabad'
+  | 'rohini'
+  | 'kolkata'
 
 export interface CityConfig {
   slug: CitySlug
@@ -631,6 +635,145 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     localHook:
       'Chennai IB students at AISC, KC High, and Good Shepherd often pair IB with SAT and US college applications. We run IST online IB Biology coaching with a specific track for US admissions-aligned Biology HL preparation.',
+  },
+
+  'south-delhi': {
+    slug: 'south-delhi',
+    city: 'South Delhi',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Delhi NCR',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Vasant Valley School',
+      'The Shri Ram School, Aravali',
+      'Sardar Patel Vidyalaya',
+      "Mother's International School",
+      'Step by Step School Jasola',
+      'Pathways School Noida (South Delhi feeder)',
+    ],
+    neighbourhoods: [
+      'Greater Kailash',
+      'Defence Colony',
+      'South Extension',
+      'Vasant Kunj',
+      'Hauz Khas',
+      'Panchsheel Park',
+      'Chanakyapuri',
+      'Lajpat Nagar',
+    ],
+    localHook:
+      'South Delhi has the highest density of IB/IGCSE schools in India after Gurugram. Our flagship South Extension centre sits at the heart of this cluster — GK, Defence Colony, Saket, and Vasant Kunj students reach in 15-25 minutes. We blend offline intensive weekends with IST online classes.',
+    inPersonCentre: {
+      name: 'Cerebrum Biology Academy — South Extension (Flagship)',
+      address: 'D 35, South Extension Part 2, New Delhi 110049',
+    },
+  },
+
+  faridabad: {
+    slug: 'faridabad',
+    city: 'Faridabad',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Delhi NCR',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Manav Rachna International School',
+      'Delhi Public School Faridabad',
+      'The Shri Ram School Faridabad',
+      'Apeejay School Faridabad',
+      'Modern Delhi Public School',
+      'Ryan International',
+    ],
+    neighbourhoods: [
+      'Sector 14',
+      'Sector 15',
+      'Sector 17',
+      'Sector 19',
+      'NIT Faridabad',
+      'Sector 80',
+      'Old Faridabad',
+      'Surajkund',
+    ],
+    localHook:
+      'Faridabad IB/IGCSE students access our Sector 17 offline centre alongside the IST online cohort. NIT Faridabad, Old Faridabad, and Sectors 14-19 reach the centre in 10-15 minutes. Greater Faridabad students typically join online with optional intensive weekends at the centre.',
+    inPersonCentre: {
+      name: 'Cerebrum Biology Academy — Faridabad',
+      address: 'Sector 17, Faridabad, Haryana',
+    },
+  },
+
+  rohini: {
+    slug: 'rohini',
+    city: 'Rohini',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Delhi NCR',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Maharaja Agrasen Model School',
+      'Rukmini Devi Public School',
+      'Delhi Public School Rohini',
+      'MM Public School',
+      'Apeejay School Pitampura',
+    ],
+    neighbourhoods: [
+      'Rohini Sector 3',
+      'Rohini Sector 7',
+      'Rohini Sector 11',
+      'Pitampura',
+      'Model Town',
+      'Ashok Vihar',
+      'Shalimar Bagh',
+      'Punjabi Bagh',
+    ],
+    localHook:
+      'Rohini and North Delhi IB students (Pitampura, Model Town, Shalimar Bagh) access our programme online with IST live classes plus an offline option at our Rohini centre. Commute to South Extension is 25-35 minutes by Red Line → Yellow Line → Pink Line.',
+    inPersonCentre: {
+      name: 'Cerebrum Biology Academy — Rohini',
+      address: 'Rohini, North West Delhi',
+    },
+  },
+
+  kolkata: {
+    slug: 'kolkata',
+    city: 'Kolkata',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'West Bengal',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Calcutta International School',
+      'La Martiniere for Boys',
+      'La Martiniere for Girls',
+      "St Xavier's Collegiate School",
+      'Modern High School for Girls',
+      'Heritage School',
+      'South Point School',
+    ],
+    neighbourhoods: [
+      'Salt Lake',
+      'New Town',
+      'Ballygunge',
+      'Alipore',
+      'Park Street',
+      'Rajarhat',
+      'Hindustan Park',
+    ],
+    localHook:
+      'Kolkata IB students at Calcutta International, La Martiniere, and Modern High School pair IB with strong West Bengal board foundations. Our IST online programme serves all Kolkata neighbourhoods with live classes scheduled around South Point, Ballygunge, and Salt Lake school timings.',
   },
 }
 

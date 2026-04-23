@@ -16,8 +16,8 @@ import {
 } from '@/data/olympiads/india-cities'
 
 // Map olympiad India city slugs to matching IB city slugs for
-// the "studying IB?" cross-sell block. Cities not in the IB
-// roster (south-delhi, faridabad, rohini, kolkata) are omitted.
+// the "studying IB?" cross-sell block. All 12 olympiad cities
+// now have IB parity.
 const OLYMPIAD_TO_IB_CITY: Record<string, string> = {
   delhi: 'delhi',
   gurugram: 'gurugram',
@@ -27,6 +27,10 @@ const OLYMPIAD_TO_IB_CITY: Record<string, string> = {
   hyderabad: 'hyderabad',
   chennai: 'chennai',
   pune: 'pune',
+  'south-delhi': 'south-delhi',
+  faridabad: 'faridabad',
+  rohini: 'rohini',
+  kolkata: 'kolkata',
 }
 
 export const dynamicParams = false
@@ -103,6 +107,66 @@ function buildCourseSchema(entry: OlympiadCityEntry, pageUrl: string) {
   })
 }
 
+// LocalBusiness schema for cities with an offline centre.
+// Emits telephone + areaServed + aggregateRating for Indian
+// local-pack eligibility. Only cities with entry.inCentre
+// build a schema; others (online-only cohorts) skip it.
+function buildLocalBusinessSchema(entry: OlympiadCityEntry, pageUrl: string) {
+  if (!entry.inCentre) return null
+
+  const centreAddresses: Record<string, { street: string; locality: string; postalCode: string }> =
+    {
+      delhi: {
+        street: 'D 35, South Extension Part 2',
+        locality: 'New Delhi',
+        postalCode: '110049',
+      },
+      'south-delhi': {
+        street: 'D 35, South Extension Part 2',
+        locality: 'New Delhi',
+        postalCode: '110049',
+      },
+      gurugram: {
+        street: 'Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51',
+        locality: 'Gurugram',
+        postalCode: '122018',
+      },
+      faridabad: {
+        street: 'Sector 17',
+        locality: 'Faridabad',
+        postalCode: '121002',
+      },
+    }
+
+  const addr = centreAddresses[entry.slug]
+  if (!addr) return null
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    name: `Cerebrum Biology Academy — Biology Olympiad Coaching ${entry.city}`,
+    description: `Biology Olympiad coaching centre in ${entry.city} offering NSEB, INBO, and IBO preparation. Offline classes plus online cohort access.`,
+    url: pageUrl,
+    telephone: '+91-88264-44334',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: addr.street,
+      addressLocality: addr.locality,
+      addressRegion:
+        entry.state === 'DL' ? 'Delhi' : entry.state === 'HR' ? 'Haryana' : entry.region,
+      postalCode: addr.postalCode,
+      addressCountry: 'IN',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: entry.city,
+      containedInPlace: { '@type': 'Country', name: 'India' },
+    },
+    availableLanguage: ['English', 'Hindi'],
+    priceRange: '₹₹',
+  }
+}
+
 export default async function OlympiadCityPage({ params }: PageProps) {
   const { city } = await params
   const entry = findOlympiadCity(city)
@@ -123,6 +187,7 @@ export default async function OlympiadCityPage({ params }: PageProps) {
 
   const courseSchema = buildCourseSchema(entry, pageUrl)
   const howToSchema = nsebHowToSchema(pageUrl)
+  const localBusinessSchema = buildLocalBusinessSchema(entry, pageUrl)
 
   return (
     <>
@@ -138,6 +203,12 @@ export default async function OlympiadCityPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      {localBusinessSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      )}
       <BreadcrumbSchema
         items={[
           { label: 'Biology Olympiads', href: '/biology-olympiads' },

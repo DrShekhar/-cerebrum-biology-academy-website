@@ -17,6 +17,10 @@ const IB_TO_OLYMPIAD_CITY: Record<string, string> = {
   hyderabad: 'hyderabad',
   noida: 'noida',
   chennai: 'chennai',
+  'south-delhi': 'south-delhi',
+  faridabad: 'faridabad',
+  rohini: 'rohini',
+  kolkata: 'kolkata',
 }
 
 interface PageProps {

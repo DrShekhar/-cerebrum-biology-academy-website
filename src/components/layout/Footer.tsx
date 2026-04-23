@@ -26,6 +26,7 @@ import {
   trackFooterSectionToggle,
   trackFooterSubscribe,
 } from '@/lib/analytics/footerTracking'
+import { SEOFooterLinks } from '@/components/seo/SEOFooterLinks'
 
 function FooterSection({
   title,
@@ -144,6 +145,8 @@ export const Footer = memo(function Footer() {
     { name: 'Class 12 Biology', href: '/courses/class-12' },
     { name: 'NEET Dropper Program', href: '/courses/neet-dropper' },
     { name: 'Foundation Course (9th-10th)', href: '/courses/foundation' },
+    { name: 'IB Biology Coaching', href: '/ib-biology' },
+    { name: 'Biology Olympiads', href: '/biology-olympiads' },
     { name: 'Board Exam Preparation', href: '/board-exam-preparation' },
     { name: 'International Curriculum', href: '/international' },
     { name: 'Pricing & Fee Structure', href: '/pricing' },
@@ -465,6 +468,9 @@ export const Footer = memo(function Footer() {
             </div>
           </div>
         </div>
+
+        {/* SEO link grid: Biology Olympiads, IB Biology, NEET coaching cities, etc. */}
+        <SEOFooterLinks />
       </footer>
 
       <div
