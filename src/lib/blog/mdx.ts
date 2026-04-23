@@ -207,7 +207,10 @@ export function getAllPosts(): BlogPostMeta[] {
       const post = getPostBySlug(slug)
       return post?.meta
     })
-    .filter((post): post is BlogPostMeta => post !== null && post.isPublished !== false)
+    // `post?.meta` returns `undefined` (not null) when getPostBySlug returns
+    // null from a parse failure. Accepting both via `!= null` prevents
+    // `undefined.isPublished` crashing the entire build on a single bad MDX.
+    .filter((post): post is BlogPostMeta => post != null && post.isPublished !== false)
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 
   return posts
