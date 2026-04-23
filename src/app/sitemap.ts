@@ -2297,6 +2297,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92,
     },
+    // Olympiad — country dynamic pages (English-speaking markets)
+    {
+      url: `${baseUrl}/biology-olympiad/new-zealand`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad/ireland`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad/south-africa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad/nigeria`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad/philippines`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad/malaysia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
     // Olympiad — India regional (Gurugram cluster)
     {
       url: `${baseUrl}/nseb-coaching-gurugram`,

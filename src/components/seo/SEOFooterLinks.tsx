@@ -233,6 +233,17 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'Olympiad in Gurugram', href: '/biology-olympiad-coaching-gurugram' },
     ],
   },
+  {
+    heading: 'Olympiads — New Markets',
+    links: [
+      { label: 'New Zealand (NZIBO)', href: '/biology-olympiad/new-zealand' },
+      { label: 'Ireland (IrBO)', href: '/biology-olympiad/ireland' },
+      { label: 'South Africa (SABO)', href: '/biology-olympiad/south-africa' },
+      { label: 'Nigeria', href: '/biology-olympiad/nigeria' },
+      { label: 'Philippines (PBO)', href: '/biology-olympiad/philippines' },
+      { label: 'Malaysia (MBO)', href: '/biology-olympiad/malaysia' },
+    ],
+  },
 ]
 
 export function SEOFooterLinks() {
