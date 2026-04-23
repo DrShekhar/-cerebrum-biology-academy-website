@@ -15,6 +15,14 @@ import {
   hubPageConsolidationRedirects,
   cannibalizationConsolidationRedirects,
   areaConsolidationRedirects,
+  localPageConsolidationBatch2,
+  gurugramConsolidationRedirects,
+  noidaConsolidationRedirects,
+  faridabadConsolidationRedirects,
+  ghaziabadConsolidationRedirects,
+  rohiniConsolidationRedirects,
+  areaPageConsolidationRedirects,
+  gscCrawledNotIndexedRedirects,
 } from '../src/config/seo-redirects.mjs'
 
 import fs from 'fs'
@@ -31,15 +39,20 @@ const redirectSection = configContent.substring(
   configContent.indexOf('...cannibalizationConsolidationRedirects')
 )
 // Filter out commented lines before matching
-const uncommentedLines = redirectSection.split('\n').filter(l => !l.trim().startsWith('//')).join('\n')
-const inlineMatches = [...uncommentedLines.matchAll(
-  /source:\s*['"]([^'"]+)['"].*?destination:\s*['"]([^'"]+)['"].*?permanent:\s*(true|false)/gs
-)]
-const inlineRedirects = inlineMatches.map(m => ({
+const uncommentedLines = redirectSection
+  .split('\n')
+  .filter((l) => !l.trim().startsWith('//'))
+  .join('\n')
+const inlineMatches = [
+  ...uncommentedLines.matchAll(
+    /source:\s*['"]([^'"]+)['"].*?destination:\s*['"]([^'"]+)['"].*?permanent:\s*(true|false)/gs
+  ),
+]
+const inlineRedirects = inlineMatches.map((m) => ({
   source: m[1],
   destination: m[2],
   permanent: m[3] === 'true',
-  origin: 'next.config.mjs'
+  origin: 'next.config.mjs',
 }))
 
 // Combine all seo-redirects.mjs arrays
@@ -53,7 +66,15 @@ const allExternalRedirects = [
   ...hubPageConsolidationRedirects,
   ...(cannibalizationConsolidationRedirects || []),
   ...(areaConsolidationRedirects || []),
-].map(r => ({ ...r, origin: 'seo-redirects.mjs' }))
+  ...(localPageConsolidationBatch2 || []),
+  ...(gurugramConsolidationRedirects || []),
+  ...(noidaConsolidationRedirects || []),
+  ...(faridabadConsolidationRedirects || []),
+  ...(ghaziabadConsolidationRedirects || []),
+  ...(rohiniConsolidationRedirects || []),
+  ...(areaPageConsolidationRedirects || []),
+  ...(gscCrawledNotIndexedRedirects || []),
+].map((r) => ({ ...r, origin: 'seo-redirects.mjs' }))
 
 const allRedirects = [...inlineRedirects, ...allExternalRedirects]
 
@@ -71,16 +92,25 @@ const nonPermanentRedirects = []
 const duplicates = []
 
 for (const r of allRedirects) {
-  const isWild = r.source.includes(':path') || r.source.includes(':area') ||
-                 r.source.includes(':slug') || r.source.includes(':city') ||
-                 r.source.includes(':topic')
+  const isWild =
+    r.source.includes(':path') ||
+    r.source.includes(':area') ||
+    r.source.includes(':slug') ||
+    r.source.includes(':city') ||
+    r.source.includes(':topic')
   if (isWild) {
     wildcardRedirects.push(r)
   } else {
     if (redirectMap.has(r.source)) {
       const existing = redirectMap.get(r.source)
       if (existing.destination !== r.destination) {
-        duplicates.push({ source: r.source, dest1: existing.destination, dest2: r.destination, origin1: existing.origin, origin2: r.origin })
+        duplicates.push({
+          source: r.source,
+          dest1: existing.destination,
+          dest2: r.destination,
+          origin1: existing.origin,
+          origin2: r.origin,
+        })
       }
     }
     redirectMap.set(r.source, { destination: r.destination, origin: r.origin })
@@ -219,7 +249,9 @@ if (nonPermanentRedirects.length === 0) {
   }
 }
 
-console.log('\n  Note: middleware.ts has 302 for blocked demo/test pages → / (intentional, production-only)')
+console.log(
+  '\n  Note: middleware.ts has 302 for blocked demo/test pages → / (intentional, production-only)'
+)
 
 // ===== 7. Check sitemap for redirect source URLs =====
 console.log('\n' + '='.repeat(70))
@@ -274,14 +306,21 @@ function walkDir(dir) {
     for (const entry of entries) {
       const fullPath = path.join(dir, entry.name)
       if (entry.isDirectory()) {
-        if (!entry.name.startsWith('.') && entry.name !== 'node_modules' && entry.name !== '__tests__' && entry.name !== '.next') {
+        if (
+          !entry.name.startsWith('.') &&
+          entry.name !== 'node_modules' &&
+          entry.name !== '__tests__' &&
+          entry.name !== '.next'
+        ) {
           walkDir(fullPath)
         }
       } else if (/\.(tsx?|jsx?|mjs)$/.test(entry.name)) {
         filesToScan.push(fullPath)
       }
     }
-  } catch { /* skip */ }
+  } catch {
+    /* skip */
+  }
 }
 
 walkDir(srcDir)
@@ -299,7 +338,8 @@ for (const file of filesToScan) {
     relPath.includes('localAreas.ts') ||
     relPath.includes('__tests__') ||
     relPath.includes('.test.')
-  ) continue
+  )
+    continue
 
   try {
     const content = fs.readFileSync(file, 'utf-8')
@@ -324,13 +364,17 @@ for (const file of filesToScan) {
         }
       }
     }
-  } catch { /* skip */ }
+  } catch {
+    /* skip */
+  }
 }
 
 if (internalLinkIssues.length === 0) {
   console.log('\n  ✓ No internal links pointing to redirect sources!')
 } else {
-  console.log(`\n  ✗ Found ${internalLinkIssues.length} internal links pointing to redirect sources:\n`)
+  console.log(
+    `\n  ✗ Found ${internalLinkIssues.length} internal links pointing to redirect sources:\n`
+  )
   const byFile = {}
   for (const issue of internalLinkIssues) {
     if (!byFile[issue.file]) byFile[issue.file] = []
@@ -358,7 +402,13 @@ console.log(`  Non-301 redirects: ${nonPermanentRedirects.length}`)
 console.log(`  Sitemap conflicts: ${sitemapConflicts.length}`)
 console.log(`  Internal link issues: ${internalLinkIssues.length}`)
 
-const totalIssues = duplicates.length + allChains.length + loops.length + nonPermanentRedirects.length + sitemapConflicts.length + internalLinkIssues.length
+const totalIssues =
+  duplicates.length +
+  allChains.length +
+  loops.length +
+  nonPermanentRedirects.length +
+  sitemapConflicts.length +
+  internalLinkIssues.length
 if (totalIssues > 0) {
   console.log(`\n  ⚠ TOTAL ISSUES TO FIX: ${totalIssues}`)
   process.exit(1)

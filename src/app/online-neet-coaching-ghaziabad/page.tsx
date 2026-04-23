@@ -143,7 +143,9 @@ export default function OnlineNEETCoachingGhaziabadPage() {
                 Call 99536-43938
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
               >
                 Try Free Online Demo
@@ -333,9 +335,7 @@ export default function OnlineNEETCoachingGhaziabadPage() {
               <p className="text-2xl font-bold text-gray-700">
                 Rs 65,000<span className="text-sm font-normal text-gray-500">/year</span>
               </p>
-              <p className="text-sm text-gray-500 mt-2">
-                Near Sector 62 Metro Station (Blue Line)
-              </p>
+              <p className="text-sm text-gray-500 mt-2">Near Sector 62 Metro Station (Blue Line)</p>
             </div>
           </div>
         </div>
@@ -377,7 +377,7 @@ export default function OnlineNEETCoachingGhaziabadPage() {
               Call 99536-43938
             </a>
             <Link
-              href="/biology-classes-noida"
+              href="/neet-coaching-noida"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
             >
               View All Ghaziabad Programs <ArrowRight className="w-5 h-5" />

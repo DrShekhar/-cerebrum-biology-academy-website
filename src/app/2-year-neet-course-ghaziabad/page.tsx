@@ -490,7 +490,9 @@ export default function TwoYearNEETCourseGhaziabad() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-teal-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-teal-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -515,7 +517,7 @@ export default function TwoYearNEETCourseGhaziabad() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="/biology-classes-noida"
+              href="/neet-coaching-noida"
               className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
             >
               View All Courses

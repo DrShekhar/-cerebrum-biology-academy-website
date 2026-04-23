@@ -462,7 +462,7 @@ export default function OneYearNEETCourseGhaziabad() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="/biology-classes-noida"
+              href="/neet-coaching-noida"
               className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
             >
               View All Courses

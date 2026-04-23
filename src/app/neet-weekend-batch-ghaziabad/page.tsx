@@ -403,7 +403,7 @@ export default function NEETWeekendBatchGhaziabad() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="/biology-classes-noida"
+              href="/neet-coaching-noida"
               className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition"
             >
               View All Batches

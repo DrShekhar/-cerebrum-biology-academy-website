@@ -83,7 +83,7 @@ const compatibleSchools = [
   { name: 'Ryan International Ghaziabad', endTime: '2:00 PM' },
   { name: 'Amity International Vaishali', endTime: '2:30 PM' },
   { name: 'GD Goenka Indirapuram', endTime: '2:30 PM' },
-  { name: 'St. Mary\'s Convent Indirapuram', endTime: '3:00 PM' },
+  { name: "St. Mary's Convent Indirapuram", endTime: '3:00 PM' },
   { name: 'Jaipuria School Indirapuram', endTime: '3:00 PM' },
   { name: 'Mother Mary School Ghaziabad', endTime: '2:30 PM' },
   { name: 'Delhi Public School Ghaziabad', endTime: '2:30 PM' },
@@ -98,7 +98,7 @@ const faqs = [
   {
     question: 'Which Ghaziabad schools can conveniently attend evening batch?',
     answer:
-      'Ideal for students from: DPS Indirapuram, Ryan International Ghaziabad, Amity International Vaishali, GD Goenka Indirapuram, St. Mary\'s Convent, Jaipuria School, and other Ghaziabad schools ending by 3-4 PM. Blue Line Metro from Vaishali/Kaushambi reaches Sector 62 in 20-25 min.',
+      "Ideal for students from: DPS Indirapuram, Ryan International Ghaziabad, Amity International Vaishali, GD Goenka Indirapuram, St. Mary's Convent, Jaipuria School, and other Ghaziabad schools ending by 3-4 PM. Blue Line Metro from Vaishali/Kaushambi reaches Sector 62 in 20-25 min.",
   },
   {
     question: 'Is evening batch as effective as morning batch?',
@@ -476,7 +476,7 @@ export default function NEETEveningBatchGhaziabad() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="/biology-classes-noida"
+              href="/neet-coaching-noida"
               className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
             >
               View All Batches

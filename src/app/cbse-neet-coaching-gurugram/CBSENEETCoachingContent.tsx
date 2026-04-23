@@ -3,8 +3,19 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import {
-  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Users, Clock, BookOpen, Star, GraduationCap, FileText,
+  CheckCircle,
+  ChevronRight,
+  ChevronDown,
+  MapPin,
+  Phone,
+  Play,
+  Home,
+  Users,
+  Clock,
+  BookOpen,
+  Star,
+  GraduationCap,
+  FileText,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
@@ -12,7 +23,10 @@ import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
-interface FAQ { question: string; answer: string }
+interface FAQ {
+  question: string
+  answer: string
+}
 
 const cbseSchools = [
   { name: 'DPS Gurugram', sector: 'Sector 45', students: '85+' },
@@ -26,10 +40,26 @@ const cbseSchools = [
 ]
 
 const ncertAdvantages = [
-  { title: '100% NCERT Coverage', description: 'Every line, diagram, and example from NCERT is covered thoroughly.', icon: BookOpen },
-  { title: 'Board + NEET Integration', description: 'Prepare for both exams simultaneously with our unified approach.', icon: FileText },
-  { title: 'CBSE School Alignment', description: 'Batch timings designed around Gurugram CBSE school schedules.', icon: Clock },
-  { title: 'AIIMS Faculty', description: 'Learn from Dr. Shekhar (AIIMS alumnus) who understands NCERT deeply.', icon: GraduationCap },
+  {
+    title: '100% NCERT Coverage',
+    description: 'Every line, diagram, and example from NCERT is covered thoroughly.',
+    icon: BookOpen,
+  },
+  {
+    title: 'Board + NEET Integration',
+    description: 'Prepare for both exams simultaneously with our unified approach.',
+    icon: FileText,
+  },
+  {
+    title: 'CBSE School Alignment',
+    description: 'Batch timings designed around Gurugram CBSE school schedules.',
+    icon: Clock,
+  },
+  {
+    title: 'AIIMS Faculty',
+    description: 'Learn from Dr. Shekhar (AIIMS alumnus) who understands NCERT deeply.',
+    icon: GraduationCap,
+  },
 ]
 
 const successStats = [
@@ -45,7 +75,8 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
   const handleWhatsApp = () => {
     trackAndOpenWhatsApp({
       source: 'cbse-neet-coaching-gurugram',
-      message: 'Hi! I am a CBSE board student in Gurugram looking for NEET Biology coaching. Please share details about batches and fees.',
+      message:
+        'Hi! I am a CBSE board student in Gurugram looking for NEET Biology coaching. Please share details about batches and fees.',
       campaign: 'cbse-neet-gurugram',
     })
   }
@@ -55,9 +86,21 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <nav className="bg-gray-100 py-3 px-4">
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">
-            <li><Link href="/" className="text-gray-600 hover:text-teal-600"><Home className="w-4 h-4" /></Link></li>
-            <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><Link href="/neet-coaching-gurugram" className="text-gray-600 hover:text-teal-600">NEET Coaching Gurugram</Link></li>
-            <li className="flex items-center"><ChevronRight className="w-4 h-4 text-gray-400 mx-1" /><span className="text-teal-700 font-medium">CBSE NEET Coaching</span></li>
+            <li>
+              <Link href="/" className="text-gray-600 hover:text-teal-600">
+                <Home className="w-4 h-4" />
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <Link href="/neet-coaching-gurugram" className="text-gray-600 hover:text-teal-600">
+                NEET Coaching Gurugram
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
+              <span className="text-teal-700 font-medium">CBSE NEET Coaching</span>
+            </li>
           </ol>
         </div>
       </nav>
@@ -82,8 +125,8 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Maximize your CBSE advantage for NEET. Our NCERT-focused coaching helps you excel in both
-              board exams and NEET with 98% success rate.
+              Maximize your CBSE advantage for NEET. Our NCERT-focused coaching helps you excel in
+              both board exams and NEET with 98% success rate.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -102,14 +145,26 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
-                <Button variant="secondary" size="xl" className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold">
-                  <Play className="w-5 h-5 mr-2" />Book Free Demo Class
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-yellow-500 text-slate-900 hover:bg-yellow-400 font-bold"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Book Free Demo Class
                 </Button>
               </Link>
-              <button onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
-                <Phone className="w-5 h-5" />Get CBSE Batch Details
+              <button
+                onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
+              >
+                <Phone className="w-5 h-5" />
+                Get CBSE Batch Details
               </button>
             </div>
           </div>
@@ -121,8 +176,7 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <div key={item.label}
-                className="text-center animate-fadeInUp">
+              <div key={item.label} className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-blue-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
               </div>
@@ -135,14 +189,20 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why CBSE Students Excel with Us</h2>
-            <p className="text-xl text-slate-600">Leverage your NCERT foundation for NEET success</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why CBSE Students Excel with Us
+            </h2>
+            <p className="text-xl text-slate-600">
+              Leverage your NCERT foundation for NEET success
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {ncertAdvantages.map((advantage, index) => (
-              <div key={advantage.title}
-                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
+              <div
+                key={advantage.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp"
+              >
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                   <advantage.icon className="w-6 h-6 text-blue-600" />
                 </div>
@@ -158,14 +218,20 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Students from Top CBSE Schools</h2>
-            <p className="text-xl text-slate-600">Trusted by students from premier Gurugram CBSE schools</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Students from Top CBSE Schools
+            </h2>
+            <p className="text-xl text-slate-600">
+              Trusted by students from premier Gurugram CBSE schools
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {cbseSchools.map((school, index) => (
-              <div key={school.name}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100 animate-fadeInUp">
+              <div
+                key={school.name}
+                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100 animate-fadeInUp"
+              >
                 <h3 className="text-lg font-bold text-slate-900 mb-1">{school.name}</h3>
                 <p className="text-sm text-slate-500 mb-2">{school.sector}</p>
                 <p className="text-2xl font-bold text-blue-600">{school.students}</p>
@@ -181,31 +247,61 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInUp">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Board + NEET = One Preparation</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Board + NEET = One Preparation
+              </h2>
               <p className="text-xl text-blue-100 mb-6">
-                CBSE Biology and NEET Biology are essentially the same syllabus. Our integrated approach
-                ensures you score 95%+ in boards AND clear NEET with high marks.
+                CBSE Biology and NEET Biology are essentially the same syllabus. Our integrated
+                approach ensures you score 95%+ in boards AND clear NEET with high marks.
               </p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" />NCERT line-by-line coverage for boards</li>
-                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" />NEET-level MCQ practice from day one</li>
-                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" />Previous year NEET + board questions</li>
-                <li className="flex items-center gap-3"><CheckCircle className="w-5 h-5 text-green-400" />Diagram practice for both exams</li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  NCERT line-by-line coverage for boards
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  NEET-level MCQ practice from day one
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  Previous year NEET + board questions
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  Diagram practice for both exams
+                </li>
               </ul>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-white text-blue-600 hover:bg-blue-50">
-                  <Play className="w-4 h-4 mr-2" />Start Integrated Preparation
+                  <Play className="w-4 h-4 mr-2" />
+                  Start Integrated Preparation
                 </Button>
               </Link>
             </div>
-            <div
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">CBSE Student Results 2024</h3>
               <div className="space-y-4">
-                <div className="flex justify-between py-3 border-b border-white/20"><span>Average NEET Biology</span><span className="font-semibold">324/360</span></div>
-                <div className="flex justify-between py-3 border-b border-white/20"><span>Average Board Score</span><span className="font-semibold">95.2%</span></div>
-                <div className="flex justify-between py-3 border-b border-white/20"><span>Students Above 340</span><span className="font-semibold">42%</span></div>
-                <div className="flex justify-between py-3"><span>NEET Qualified</span><span className="font-semibold text-green-400">85%</span></div>
+                <div className="flex justify-between py-3 border-b border-white/20">
+                  <span>Average NEET Biology</span>
+                  <span className="font-semibold">324/360</span>
+                </div>
+                <div className="flex justify-between py-3 border-b border-white/20">
+                  <span>Average Board Score</span>
+                  <span className="font-semibold">95.2%</span>
+                </div>
+                <div className="flex justify-between py-3 border-b border-white/20">
+                  <span>Students Above 340</span>
+                  <span className="font-semibold">42%</span>
+                </div>
+                <div className="flex justify-between py-3">
+                  <span>NEET Qualified</span>
+                  <span className="font-semibold text-green-400">85%</span>
+                </div>
               </div>
             </div>
           </div>
@@ -218,27 +314,57 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Convenient Location for CBSE Students</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                  Convenient Location for CBSE Students
+                </h2>
                 <p className="text-slate-600 mb-6">
                   Our center at <strong>M2K Corporate Park, Sector 51</strong> is centrally located,
                   easily accessible from all major CBSE schools in Gurugram.
                 </p>
                 <div className="space-y-3 mb-6">
-                  <p className="flex items-center gap-2"><MapPin className="w-5 h-5 text-blue-600" />{CONTACT_INFO.location.gurugram.streetAddress}</p>
-                  <p className="flex items-center gap-2"><Clock className="w-5 h-5 text-blue-600" />Morning, Evening & Weekend Batches</p>
+                  <p className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-blue-600" />
+                    {CONTACT_INFO.location.gurugram.streetAddress}
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-blue-600" />
+                    Morning, Evening & Weekend Batches
+                  </p>
                 </div>
                 <div className="flex gap-4">
-                  <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>
-                  <a href={CONTACT_INFO.location.gurugram.mapUrl} target="_blank" rel="noopener"><Button><MapPin className="w-4 h-4 mr-2" />Get Directions</Button></a>
+                  <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+                    <Button variant="outline">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call Now
+                    </Button>
+                  </a>
+                  <a href={CONTACT_INFO.location.gurugram.mapUrl} target="_blank" rel="noopener">
+                    <Button>
+                      <MapPin className="w-4 h-4 mr-2" />
+                      Get Directions
+                    </Button>
+                  </a>
                 </div>
               </div>
               <div className="bg-blue-50 rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-4">Batch Timings for CBSE Schools</h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between py-2 border-b"><span>Morning Batch</span><span className="font-semibold">6:30 - 8:30 AM</span></div>
-                  <div className="flex justify-between py-2 border-b"><span>Evening Batch</span><span className="font-semibold">5:00 - 7:00 PM</span></div>
-                  <div className="flex justify-between py-2 border-b"><span>Weekend Batch</span><span className="font-semibold">Sat-Sun Full Day</span></div>
-                  <div className="flex justify-between py-2"><span>Online Option</span><span className="font-semibold text-green-600">Available</span></div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Morning Batch</span>
+                    <span className="font-semibold">6:30 - 8:30 AM</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Evening Batch</span>
+                    <span className="font-semibold">5:00 - 7:00 PM</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b">
+                    <span>Weekend Batch</span>
+                    <span className="font-semibold">Sat-Sun Full Day</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span>Online Option</span>
+                    <span className="font-semibold text-green-600">Available</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -247,20 +373,34 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       </section>
 
       <VideoTestimonialsSection />
-      <NEETToolsWidget title="Free NEET Preparation Tools" subtitle="Use our AI-powered tools to boost your preparation" />
+      <NEETToolsWidget
+        title="Free NEET Preparation Tools"
+        subtitle="Use our AI-powered tools to boost your preparation"
+      />
 
       {/* FAQs */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-gray-50 rounded-xl overflow-hidden shadow-sm">
-                <button onClick={() => setOpenFaq(openFaq === index ? null : index)} className="w-full flex items-center justify-between p-6 text-left">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
                   <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-5 h-5 text-slate-500 transition-transform ${openFaq === index ? 'rotate-180' : ''}`}
+                  />
                 </button>
-                {openFaq === index && <div className="px-6 pb-6"><p className="text-slate-600">{faq.answer}</p></div>}
+                {openFaq === index && (
+                  <div className="px-6 pb-6">
+                    <p className="text-slate-600">{faq.answer}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -270,12 +410,38 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       {/* School-Specific Pages */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">NEET Coaching for CBSE Schools</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            NEET Coaching for CBSE Schools
+          </h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/biology-classes-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">DPS Gurugram</h3><p className="text-sm text-gray-600">85+ students enrolled</p></Link>
-            <Link href="/biology-classes-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">The Shri Ram School</h3><p className="text-sm text-gray-600">65+ students enrolled</p></Link>
-            <Link href="/biology-classes-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">GD Goenka World School</h3><p className="text-sm text-gray-600">55+ students enrolled</p></Link>
-            <Link href="/biology-classes-gurgaon" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-blue-700">Amity International</h3><p className="text-sm text-gray-600">45+ students enrolled</p></Link>
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-blue-700">DPS Gurugram</h3>
+              <p className="text-sm text-gray-600">85+ students enrolled</p>
+            </Link>
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-blue-700">The Shri Ram School</h3>
+              <p className="text-sm text-gray-600">65+ students enrolled</p>
+            </Link>
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-blue-700">GD Goenka World School</h3>
+              <p className="text-sm text-gray-600">55+ students enrolled</p>
+            </Link>
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-blue-700">Amity International</h3>
+              <p className="text-sm text-gray-600">45+ students enrolled</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -285,10 +451,34 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/icse-neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">ICSE NEET Coaching</h3><p className="text-sm text-gray-600">For ICSE board students</p></Link>
-            <Link href="/online-neet-classes-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">Online NEET Classes</h3><p className="text-sm text-gray-600">Live interactive sessions</p></Link>
-            <Link href="/neet-study-material-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">NEET Study Material</h3><p className="text-sm text-gray-600">Notes, MCQs, tests</p></Link>
-            <Link href="/neet-coaching-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
+            <Link
+              href="/icse-neet-coaching-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-teal-600">ICSE NEET Coaching</h3>
+              <p className="text-sm text-gray-600">For ICSE board students</p>
+            </Link>
+            <Link
+              href="/online-neet-classes-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-teal-600">Online NEET Classes</h3>
+              <p className="text-sm text-gray-600">Live interactive sessions</p>
+            </Link>
+            <Link
+              href="/neet-study-material-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-teal-600">NEET Study Material</h3>
+              <p className="text-sm text-gray-600">Notes, MCQs, tests</p>
+            </Link>
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3>
+              <p className="text-sm text-gray-600">All programs</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -296,11 +486,37 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Maximize Your CBSE Advantage?</h2>
-          <p className="text-xl mb-8 opacity-90">Join 500+ CBSE students excelling in NEET with our NCERT-focused coaching</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Maximize Your CBSE Advantage?
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join 500+ CBSE students excelling in NEET with our NCERT-focused coaching
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"><Button variant="secondary" size="xl" className="bg-white text-blue-600 hover:bg-gray-100 font-bold"><Play className="w-5 h-5 mr-2" />Book Free Demo</Button></Link>
-            <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-blue-600"><Phone className="w-5 h-5 mr-2" />Call Now</Button></a>
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="secondary"
+                size="xl"
+                className="bg-white text-blue-600 hover:bg-gray-100 font-bold"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Book Free Demo
+              </Button>
+            </Link>
+            <a href={`tel:${CONTACT_INFO.phone.primary}`}>
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>

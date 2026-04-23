@@ -648,13 +648,13 @@ export default function BiologyClassesDelhiPage() {
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/biology-classes-noida"
+                href="/neet-coaching-noida"
                 className="rounded-lg bg-gray-100 px-6 py-3 font-medium text-gray-700 transition hover:bg-blue-600 hover:text-white"
               >
                 Biology Classes in Noida
               </Link>
               <Link
-                href="/biology-classes-gurgaon"
+                href="/neet-coaching-gurugram"
                 className="rounded-lg bg-gray-100 px-6 py-3 font-medium text-gray-700 transition hover:bg-blue-600 hover:text-white"
               >
                 Biology Classes in Gurgaon
@@ -666,7 +666,7 @@ export default function BiologyClassesDelhiPage() {
                 Biology Classes in Faridabad
               </Link>
               <Link
-                href="/biology-classes-noida"
+                href="/neet-coaching-noida"
                 className="rounded-lg bg-gray-100 px-6 py-3 font-medium text-gray-700 transition hover:bg-blue-600 hover:text-white"
               >
                 Biology Classes in Ghaziabad
