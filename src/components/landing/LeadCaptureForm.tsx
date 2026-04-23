@@ -130,9 +130,9 @@ export function LeadCaptureForm({
     return (
       <div className={containerStyle}>
         <div className="text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
             <svg
-              className="h-6 w-6 text-emerald-600"
+              className="h-6 w-6 text-green-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -156,7 +156,7 @@ export function LeadCaptureForm({
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700"
             >
               <MessageCircle size={16} />
               Reopen WhatsApp
@@ -184,7 +184,7 @@ export function LeadCaptureForm({
             5.0 rating
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <Stethoscope className="h-3.5 w-3.5 text-emerald-600" />
+            <Stethoscope className="h-3.5 w-3.5 text-green-600" />
             AIIMS-trained faculty
           </span>
           <span className="inline-flex items-center gap-1.5">
@@ -228,7 +228,7 @@ export function LeadCaptureForm({
             autoComplete="name"
             autoFocus
             placeholder="e.g. Ananya Sharma"
-            className="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+            className="w-full rounded-lg border border-slate-300 px-3 py-3 sm:py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
           />
         </div>
 
@@ -245,7 +245,7 @@ export function LeadCaptureForm({
             inputMode="tel"
             autoComplete="tel"
             placeholder="98XXX XXXXX"
-            className="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+            className="w-full rounded-lg border border-slate-300 px-3 py-3 sm:py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
           />
           <p className="mt-1.5 text-xs text-slate-500">
             We never share your number. One message, one call max before you say stop.
@@ -273,7 +273,7 @@ export function LeadCaptureForm({
                   id="lead-course"
                   value={course}
                   onChange={(e) => setCourse(e.target.value)}
-                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
                 >
                   {COURSES.map((c) => (
                     <option key={c} value={c}>
@@ -293,7 +293,7 @@ export function LeadCaptureForm({
                   id="lead-mode"
                   value={mode}
                   onChange={(e) => setMode(e.target.value)}
-                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                  className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
                 >
                   {MODES.map((m) => (
                     <option key={m} value={m}>
@@ -316,7 +316,7 @@ export function LeadCaptureForm({
                 onChange={(e) => setMessage(e.target.value)}
                 rows={2}
                 placeholder="Target score, exam year, current school, etc."
-                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500/20"
               />
             </div>
           </div>
@@ -333,7 +333,7 @@ export function LeadCaptureForm({
           type="submit"
           onClick={handleSubmit('whatsapp')}
           disabled={submitting}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-emerald-700 disabled:opacity-60"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-green-700 disabled:opacity-60"
         >
           <MessageCircle size={20} />
           Send on WhatsApp
@@ -343,11 +343,17 @@ export function LeadCaptureForm({
           type="button"
           onClick={handleSubmit('call')}
           disabled={submitting}
-          className="flex w-full items-center justify-center gap-1.5 py-1 text-sm text-slate-600 hover:text-slate-900 disabled:opacity-60"
+          className="flex min-h-[44px] w-full items-center justify-center gap-1.5 rounded-lg py-2.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-60"
         >
           <Phone size={14} />
           Prefer a call? Tap to call {PHONE_NUMBER}
         </button>
+
+        {/* WhatsApp / phone opt-in microcopy — lets parents know what to expect. */}
+        <p className="text-center text-[11px] leading-relaxed text-slate-500">
+          By tapping Send on WhatsApp or Call, you agree to receive one follow-up from Cerebrum
+          about this enquiry. We never share your number. Reply STOP any time.
+        </p>
       </form>
 
       {/* Founder credential — shown optionally beside/below the form. */}

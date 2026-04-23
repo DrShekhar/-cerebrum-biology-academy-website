@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Play, ExternalLink } from 'lucide-react'
+import { Play } from 'lucide-react'
 
 interface TestimonialVideoProps {
   youtubeId: string
@@ -69,20 +69,11 @@ export function TestimonialVideo({ youtubeId, title, caption, student }: Testimo
       <div className="mt-5 grid gap-4 sm:grid-cols-5 sm:items-start">
         <div className="sm:col-span-3">
           <p className="text-sm leading-relaxed text-slate-700">{caption}</p>
-          <a
-            href={`https://www.youtube.com/watch?v=${youtubeId}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-slate-900"
-          >
-            <ExternalLink className="h-3 w-3" />
-            Watch on YouTube
-          </a>
         </div>
         <div className="rounded-xl bg-slate-50 p-4 sm:col-span-2">
           <p className="text-base font-semibold text-slate-900">{student.name}</p>
-          <p className="mt-1 text-sm text-emerald-700">{student.score}</p>
-          <p className="mt-1 text-xs text-slate-500">Now at {student.nowAt}</p>
+          <p className="mt-1 text-sm text-green-700">{student.score}</p>
+          <p className="mt-1 text-xs text-slate-600">Now at {student.nowAt}</p>
         </div>
       </div>
     </div>

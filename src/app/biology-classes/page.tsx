@@ -10,6 +10,7 @@ import {
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { TestimonialVideo } from '@/components/landing/TestimonialVideo'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
+import { TrackedLink } from '@/components/landing/TrackedLink'
 import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 import {
   batchSeats,
@@ -210,8 +211,8 @@ export default function BiologyClassesPage() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0">
-          <div className="absolute -top-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-emerald-500/10 blur-3xl" />
-          <div className="absolute bottom-0 right-0 h-[32rem] w-[32rem] rounded-full bg-sky-500/10 blur-3xl" />
+          <div className="absolute -top-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-green-500/10 blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-[32rem] w-[32rem] rounded-full bg-blue-500/10 blur-3xl" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-24">
@@ -219,14 +220,14 @@ export default function BiologyClassesPage() {
             {/* Copy block — second on mobile (order-2), left on desktop (lg:order-1) */}
             <div className="order-2 lg:order-1 lg:col-span-3">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200">
-                <GraduationCap className="h-3.5 w-3.5 text-emerald-400" />
+                <GraduationCap className="h-3.5 w-3.5 text-green-400" />
                 NEET · Boards 9 to 12 · Droppers · IB/IGCSE
               </div>
 
               <h1 className="text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Biology classes for NEET and Boards.
                 <br />
-                <span className="text-emerald-400">Online, offline, or hybrid.</span>
+                <span className="text-green-400">Online, offline, or hybrid.</span>
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
@@ -268,7 +269,7 @@ export default function BiologyClassesPage() {
       </section>
 
       {/* Modes */}
-      <section className="border-b border-slate-200 py-20">
+      <section className="border-b border-slate-200 py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
@@ -284,10 +285,10 @@ export default function BiologyClassesPage() {
             {modes.map((mode) => (
               <div
                 key={mode.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-emerald-300"
+                className="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-green-300"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-50">
-                  <mode.icon className="h-5 w-5 text-emerald-700" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-50">
+                  <mode.icon className="h-5 w-5 text-green-700" />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-slate-900">{mode.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{mode.copy}</p>
@@ -301,7 +302,7 @@ export default function BiologyClassesPage() {
       </section>
 
       {/* Audiences */}
-      <section className="border-b border-slate-200 bg-slate-50 py-20">
+      <section className="border-b border-slate-200 bg-slate-50 py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
@@ -325,7 +326,7 @@ export default function BiologyClassesPage() {
       </section>
 
       {/* Centres */}
-      <section className="border-b border-slate-200 py-20">
+      <section className="border-b border-slate-200 py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
@@ -338,31 +339,60 @@ export default function BiologyClassesPage() {
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {centres.map((c) => (
-              <div key={c.city} className="rounded-2xl border border-slate-200 bg-white p-6">
-                <div className="flex items-start gap-3">
-                  <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-emerald-600" />
-                  <div>
-                    <div className="flex flex-wrap items-baseline gap-2">
-                      <h3 className="text-base font-semibold text-slate-900">{c.city}</h3>
-                      <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">
-                        {c.tag}
-                      </span>
+            {centres.map((c) => {
+              const centreLabel = c.city.split(',')[0].trim()
+              const whatsappMessage = `Hi Cerebrum, I would like a free demo class at your ${centreLabel} centre (${c.tag}). Please share the next available seat and timings.`
+              const whatsappHref = `https://wa.me/918826444334?text=${encodeURIComponent(whatsappMessage)}`
+              return (
+                <div key={c.city} className="rounded-2xl border border-slate-200 bg-white p-6">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-green-600" />
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-baseline gap-2">
+                        <h3 className="text-base font-semibold text-slate-900">{c.city}</h3>
+                        <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">
+                          {c.tag}
+                        </span>
+                      </div>
+                      <p className="mt-2 text-sm text-slate-700">{c.address}</p>
+                      <p className="mt-2 text-xs text-slate-600">
+                        <span className="font-medium text-slate-700">Catchment:</span> {c.serves}
+                      </p>
+
+                      {/* Centre-specific CTAs — visitor can ask about this centre directly. */}
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <TrackedLink
+                          href={whatsappHref}
+                          method="whatsapp"
+                          source="centre-card"
+                          campaign={CAMPAIGN}
+                          params={{ centre: centreLabel }}
+                          className="inline-flex min-h-[40px] items-center gap-1.5 rounded-lg bg-green-600 px-3 py-2 text-xs font-semibold text-white hover:bg-green-700"
+                        >
+                          Chat about {centreLabel}
+                        </TrackedLink>
+                        <TrackedLink
+                          href="tel:+918826444334"
+                          method="phone"
+                          source="centre-card"
+                          campaign={CAMPAIGN}
+                          params={{ centre: centreLabel }}
+                          className="inline-flex min-h-[40px] items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50"
+                        >
+                          Call centre
+                        </TrackedLink>
+                      </div>
                     </div>
-                    <p className="mt-2 text-sm text-slate-700">{c.address}</p>
-                    <p className="mt-2 text-xs text-slate-500">
-                      <span className="font-medium text-slate-600">Catchment:</span> {c.serves}
-                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* Schedule + included */}
-      <section className="border-b border-slate-200 bg-slate-50 py-20">
+      <section className="border-b border-slate-200 bg-slate-50 py-14 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
@@ -388,7 +418,7 @@ export default function BiologyClassesPage() {
                       ? 'bg-amber-50 text-amber-800 ring-1 ring-amber-200'
                       : status === 'Filling fast'
                         ? 'bg-blue-50 text-blue-800 ring-1 ring-blue-200'
-                        : 'bg-emerald-50 text-emerald-800 ring-1 ring-emerald-200'
+                        : 'bg-green-50 text-green-800 ring-1 ring-green-200'
                   return (
                     <li
                       key={s.batch}
@@ -425,7 +455,7 @@ export default function BiologyClassesPage() {
                                   ? 'bg-amber-500'
                                   : pct >= 50
                                     ? 'bg-blue-500'
-                                    : 'bg-emerald-500'
+                                    : 'bg-green-500'
                               }`}
                               style={{ width: `${pct}%` }}
                             />
@@ -451,7 +481,7 @@ export default function BiologyClassesPage() {
                     key={item}
                     className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3"
                   >
-                    <CheckCircle className="h-4 w-4 flex-shrink-0 text-emerald-600" />
+                    <CheckCircle className="h-4 w-4 flex-shrink-0 text-green-600" />
                     <span className="text-sm text-slate-800">{item}</span>
                   </li>
                 ))}
@@ -462,7 +492,7 @@ export default function BiologyClassesPage() {
       </section>
 
       {/* FAQ */}
-      <section className="border-b border-slate-200 py-20">
+      <section className="border-b border-slate-200 py-14 md:py-20">
         <div className="mx-auto max-w-3xl px-6">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
             Frequently asked.
@@ -472,7 +502,7 @@ export default function BiologyClassesPage() {
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group rounded-xl border border-slate-200 bg-white p-5 open:border-emerald-300"
+                className="group rounded-xl border border-slate-200 bg-white p-5 open:border-green-300"
               >
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-4">
                   <span className="text-sm font-semibold text-slate-900">{faq.question}</span>
@@ -488,10 +518,10 @@ export default function BiologyClassesPage() {
       </section>
 
       {/* Student result — real video testimonial */}
-      <section className="border-b border-slate-200 bg-white py-20">
+      <section className="border-b border-slate-200 bg-white py-14 md:py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
+            <p className="text-sm font-semibold uppercase tracking-wider text-green-700">
               Student result
             </p>
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
@@ -531,7 +561,7 @@ to 695 out of 720. She is now a medical student at AIIMS Delhi."
       </section>
 
       {/* Closing form */}
-      <section className="bg-slate-950 py-20 text-white">
+      <section className="bg-slate-950 py-14 md:py-20 text-white">
         <div className="mx-auto max-w-4xl px-6">
           <div className="grid gap-10 lg:grid-cols-5 lg:items-center">
             <div className="lg:col-span-2">
@@ -539,14 +569,20 @@ to 695 out of 720. She is now a medical student at AIIMS Delhi."
                 Start with a free demo.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-300">
-                No commitment. Fill the form and we reach out on WhatsApp or by phone within fifteen
+                No commitment. Fill the form and we reach out on WhatsApp or by phone within 15
                 minutes during working hours.
               </p>
-              <p className="mt-6 text-sm text-slate-400">
+              <p className="mt-6 text-sm text-slate-300">
                 Prefer to call directly?{' '}
-                <a className="underline hover:text-white" href="tel:+918826444334">
+                <TrackedLink
+                  href="tel:+918826444334"
+                  method="phone"
+                  source="closing-copy"
+                  campaign={CAMPAIGN}
+                  className="inline-block min-h-[44px] items-center underline hover:text-white"
+                >
                   +91 88264 44334
-                </a>
+                </TrackedLink>
               </p>
             </div>
             <div className="lg:col-span-3">
@@ -584,7 +620,7 @@ to 695 out of 720. She is now a medical student at AIIMS Delhi."
 
       {/* Floating WhatsApp bubble — always-visible conversion lifeline */}
       <FloatingWhatsAppButton
-        message="Hi Cerebrum, I am interested in Biology classes. Please share details."
+        message="Hi Cerebrum, I landed on your Biology Classes page and would like a free demo. Please share timings for NEET or Boards."
         campaign={CAMPAIGN}
         tooltip="Questions? Chat with us on WhatsApp"
       />

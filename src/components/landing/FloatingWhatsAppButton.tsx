@@ -106,7 +106,7 @@ export function FloatingWhatsAppButton({
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleClick}
-        className="group flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-sm font-semibold text-white shadow-2xl ring-2 ring-emerald-400/40 transition-all hover:bg-emerald-600 hover:shadow-emerald-500/30"
+        className="group flex items-center gap-2 rounded-full bg-green-500 px-4 py-3 text-sm font-semibold text-white shadow-2xl ring-2 ring-green-400/40 transition-all hover:bg-green-600 hover:shadow-green-500/30"
         aria-label="Chat with us on WhatsApp"
         data-cta-method="whatsapp"
         data-cta-source="floating-bubble"
