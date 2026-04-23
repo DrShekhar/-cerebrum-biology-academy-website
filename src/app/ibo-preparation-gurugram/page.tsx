@@ -74,6 +74,7 @@ export default function IBOPreparationGurugramPage() {
     },
     educationalLevel: 'Advanced High School',
     about: 'IBO - International Biology Olympiad',
+    inLanguage: 'en-IN',
   }
 
   const faqSchema = {

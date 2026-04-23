@@ -1,0 +1,446 @@
+import { Metadata } from 'next'
+import {
+  Star,
+  ArrowRight,
+  GraduationCap,
+  CheckCircle,
+  MessageCircle,
+  Quote,
+  Sparkles,
+} from 'lucide-react'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+
+export const metadata: Metadata = {
+  title: 'NEET Results 2024 — 98% Success Rate | 67 AIIMS Selections | Cerebrum Biology Academy',
+  description:
+    'Cerebrum Biology Academy NEET results: 98% success rate, 67 AIIMS selections, AIR 127 best rank. Watch video testimonials. Board exam avg 92/100. 2,500+ students. See proof.',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/results' },
+  openGraph: {
+    title: '98% NEET Success Rate — Results That Speak',
+    description: '98% success rate, 67 AIIMS selections, 2,500+ students. Watch video testimonials from our toppers.',
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    { '@type': 'ListItem', position: 2, name: 'Results', item: 'https://cerebrumbiologyacademy.com/results' },
+  ],
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: 'Cerebrum Biology Academy',
+  url: 'https://cerebrumbiologyacademy.com',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '1200',
+    bestRating: '5',
+    worstRating: '1',
+  },
+}
+
+const scoreTransformations = [
+  { name: 'Arjun Sharma', school: 'DPS Gurgaon', before: 332, after: 685, rank: 'AIR 127', college: 'AIIMS Delhi', improvement: 353, featured: true },
+  { name: 'Sadhna Sirin', school: 'Delhi NCR', before: 495, after: 695, rank: '100 %ile', college: 'LHMC Delhi', improvement: 200, featured: true },
+  { name: 'Priya Sharma', school: 'Modern School', before: 505, after: 685, rank: 'Top 500', college: 'AIIMS Delhi', improvement: 180 },
+  { name: 'Rahul Verma', school: 'KV Delhi', before: 498, after: 670, rank: 'Top 800', college: 'MAMC Delhi', improvement: 172 },
+  { name: 'Ishita Verma', school: 'DPS Noida', before: 420, after: 632, rank: 'Top 2000', college: 'AIIMS Rishikesh', improvement: 212 },
+]
+
+const yearWiseResults = [
+  { year: '2024', qualified: '450+', topRank: 'AIR 127', aiims: 18, boardAvg: '93/100', improvement: '+18%' },
+  { year: '2023', qualified: '380+', topRank: 'AIR 234', aiims: 15, boardAvg: '91/100', improvement: '+15%' },
+  { year: '2022', qualified: '320+', topRank: 'AIR 312', aiims: 12, boardAvg: '89/100', improvement: '+12%' },
+  { year: '2021', qualified: '280+', topRank: 'AIR 489', aiims: 10, boardAvg: '87/100', improvement: '+10%' },
+]
+
+const topColleges = [
+  { name: 'AIIMS Delhi', students: 12 },
+  { name: 'AIIMS (Other)', students: 55 },
+  { name: 'Maulana Azad Medical', students: 18 },
+  { name: 'Lady Hardinge Medical', students: 15 },
+  { name: 'JIPMER Puducherry', students: 8 },
+  { name: 'AFMC Pune', students: 6 },
+  { name: 'KGMU Lucknow', students: 12 },
+  { name: 'BHU Varanasi', students: 10 },
+  { name: 'GMC Chandigarh', students: 8 },
+  { name: 'Other Govt Colleges', students: 300 },
+]
+
+const testimonials = [
+  {
+    quote: "Cerebrum's biology faculty made NEET preparation feel manageable. My score improved by 180 marks!",
+    name: 'Priya Sharma',
+    score: 685,
+    college: 'AIIMS Delhi',
+    school: 'Modern School, Delhi',
+    improvement: '+180 marks',
+  },
+  {
+    quote: 'The small batch size meant I could ask doubts anytime. Best decision I made for NEET prep.',
+    name: 'Rahul Verma',
+    score: 670,
+    college: 'Maulana Azad Medical College',
+    school: 'KV, Delhi',
+    improvement: '+172 marks',
+  },
+  {
+    quote: "As an NRI student, online classes were perfect. Dr. Shekhar's teaching is truly world-class.",
+    name: 'Aisha Khan',
+    score: 645,
+    college: 'JIPMER Puducherry',
+    school: 'International School, UAE',
+    improvement: '+165 marks',
+  },
+]
+
+const parentTestimonials = [
+  {
+    quote: "My daughter went from scoring 45% in Biology to topping her school. Dr. Shekhar's method works.",
+    name: 'Mrs. Priya Sharma',
+    child: 'Aanya — AIIMS Delhi',
+  },
+  {
+    quote: 'We explored Kota, Allen, Aakash — nothing compared to the personal attention at Cerebrum.',
+    name: 'Mr. Rajesh Gupta',
+    child: 'Arjun — MAMC Delhi',
+  },
+  {
+    quote: 'The monthly parent meetings gave us complete visibility. We always knew where our son stood.',
+    name: 'Mrs. Neha Verma',
+    child: 'Rohan — JIPMER Puducherry',
+  },
+]
+
+export default function ResultsPage() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+
+      <div className="min-h-screen bg-white">
+
+        {/* SECTION 1: Hero — Featured Video + Stats */}
+        <section className="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-yellow-500/10 via-transparent to-transparent" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              {/* Left: Text + Stats */}
+              <div>
+                <div className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-500/40 rounded-full px-4 py-2 mb-5">
+                  <Sparkles className="w-4 h-4 text-yellow-400" />
+                  <span className="text-yellow-300 text-sm font-medium">NEET 2024 — 450+ Qualified</span>
+                </div>
+
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                  Our Students Don&apos;t Just Pass —{' '}
+                  <span className="text-yellow-400">They Top</span>
+                </h1>
+
+                <p className="text-lg text-blue-200 mb-8 max-w-xl">
+                  From 332 to 685. From &ldquo;will I qualify?&rdquo; to AIR 127 at AIIMS Delhi.
+                  Real students, verified results.
+                </p>
+
+                {/* Key Stats — 2x2 grid */}
+                <div className="grid grid-cols-2 gap-3 mb-8">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
+                    <div className="text-3xl font-bold text-yellow-400">98%</div>
+                    <div className="text-xs text-blue-200 mt-1">Success Rate</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
+                    <div className="text-3xl font-bold text-green-400">67+</div>
+                    <div className="text-xs text-blue-200 mt-1">AIIMS Selections</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
+                    <div className="text-3xl font-bold text-blue-400">2,500+</div>
+                    <div className="text-xs text-blue-200 mt-1">Students Coached</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10 text-center">
+                    <div className="text-3xl font-bold text-purple-400">AIR 127</div>
+                    <div className="text-xs text-blue-200 mt-1">Best Rank</div>
+                  </div>
+                </div>
+
+                <a
+                  href="https://wa.me/918826444334?text=Hi!%20I%20saw%20your%20results%20and%20want%20to%20join%20Cerebrum%20Biology%20Academy.%20Please%20share%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-6 py-3.5 rounded-xl font-bold text-base hover:bg-yellow-400 transition-all"
+                >
+                  Start Your Success Story
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+
+              {/* Right: Featured Video (Sadhna 695/720) */}
+              <div className="relative">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-3">
+                  <div className="aspect-video rounded-xl overflow-hidden bg-black">
+                    <iframe
+                      src="https://www.youtube.com/embed/YI7caDdqC-k"
+                      title="Sadhna Sirin — 695/720, 100 Percentile"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="mt-3 text-center">
+                    <div className="text-yellow-400 font-bold text-lg">Sadhna Sirin — 695/720</div>
+                    <div className="text-blue-200 text-sm">100 Percentile | LHMC Delhi | +200 marks improvement</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 2: Score Transformations — Featured 2 + Grid */}
+        <section className="py-12 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                Score Transformations
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Each number represents a student whose life changed
+              </p>
+            </div>
+
+            {/* Featured 2 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              {scoreTransformations.filter(s => s.featured).map((student) => (
+                <div key={student.name} className="bg-white rounded-2xl shadow-xl border-2 border-blue-100 overflow-hidden">
+                  <div className="bg-blue-700 px-6 py-4 text-white flex items-center justify-between">
+                    <div>
+                      <div className="font-bold text-lg">{student.name}</div>
+                      <div className="text-blue-200 text-sm">{student.school}</div>
+                    </div>
+                    <div className="bg-yellow-500 text-slate-900 px-4 py-2 rounded-xl font-bold text-lg">
+                      +{student.improvement}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-center">
+                        <div className="text-sm text-gray-500">Before</div>
+                        <div className="text-3xl font-bold text-red-500">{student.before}</div>
+                      </div>
+                      <ArrowRight className="w-8 h-8 text-green-500" />
+                      <div className="text-center">
+                        <div className="text-sm text-gray-500">After</div>
+                        <div className="text-3xl font-bold text-green-600">{student.after}</div>
+                      </div>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">{student.rank}</span>
+                      <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">{student.college}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Rest in compact grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {scoreTransformations.filter(s => !s.featured).map((student) => (
+                <div key={student.name} className="bg-white rounded-xl shadow-md border border-gray-100 p-5">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-sm font-bold text-gray-900">{student.name}</span>
+                    <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-bold">+{student.improvement}</span>
+                  </div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-red-500 font-bold">{student.before}</span>
+                    <ArrowRight className="w-4 h-4 text-gray-400" />
+                    <span className="text-green-600 font-bold">{student.after}</span>
+                  </div>
+                  <div className="text-xs text-gray-500">{student.rank} • {student.college}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 3: More Video Testimonials */}
+        <section id="video-testimonials" className="py-12 sm:py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                Watch Our Toppers Speak
+              </h2>
+              <p className="text-gray-600">
+                Don&apos;t take our word for it — hear directly from students who cracked NEET
+              </p>
+            </div>
+            <VideoTestimonialsSection />
+          </div>
+        </section>
+
+        {/* SECTION 4: Year-wise Results — Clean Table */}
+        <section className="py-12 sm:py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                Year After Year Excellence
+              </h2>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-slate-900 text-white">
+                    <th className="px-5 py-4 text-left text-sm font-semibold">Year</th>
+                    <th className="px-5 py-4 text-center text-sm font-semibold">Qualified</th>
+                    <th className="px-5 py-4 text-center text-sm font-semibold">Best Rank</th>
+                    <th className="px-5 py-4 text-center text-sm font-semibold">AIIMS</th>
+                    <th className="px-5 py-4 text-center text-sm font-semibold hidden sm:table-cell">Board Avg</th>
+                    <th className="px-5 py-4 text-center text-sm font-semibold">Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {yearWiseResults.map((r, i) => (
+                    <tr key={r.year} className={`${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'} border-b border-gray-100`}>
+                      <td className="px-5 py-4 font-bold text-xl text-blue-700">{r.year}</td>
+                      <td className="px-5 py-4 text-center font-semibold">{r.qualified}</td>
+                      <td className="px-5 py-4 text-center font-semibold">{r.topRank}</td>
+                      <td className="px-5 py-4 text-center font-semibold">{r.aiims}</td>
+                      <td className="px-5 py-4 text-center font-semibold hidden sm:table-cell">{r.boardAvg}</td>
+                      <td className="px-5 py-4 text-center">
+                        <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">
+                          {r.improvement}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 5: College Placements — Clean Grid */}
+        <section className="py-12 sm:py-16 bg-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                Where Our Students Study Medicine
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+              {topColleges.map((college) => (
+                <div key={college.name} className="bg-white rounded-xl p-4 text-center shadow-sm border border-blue-100">
+                  <GraduationCap className="w-6 h-6 text-blue-600 mx-auto mb-2" />
+                  <div className="font-semibold text-gray-900 text-sm mb-1">{college.name}</div>
+                  <div className="text-blue-700 font-bold text-sm">{college.students}+ placed</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 6: Student Testimonials */}
+        <section className="py-12 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                In Their Own Words
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {testimonials.map((t) => (
+                <div key={t.name} className="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 italic mb-5 leading-relaxed">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <div className="flex items-center justify-between border-t pt-4">
+                    <div>
+                      <div className="font-bold text-gray-900 text-sm">{t.name}</div>
+                      <div className="text-xs text-gray-500">{t.school}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-bold text-blue-700">{t.score}/720</div>
+                      <div className="text-xs text-green-600 font-semibold">{t.improvement}</div>
+                    </div>
+                  </div>
+                  <div className="mt-2 text-xs text-purple-600 font-medium">{t.college}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 7: Parent Testimonials — NEW */}
+        <section className="py-12 sm:py-16 bg-green-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                What Parents Say
+              </h2>
+              <p className="text-gray-600">The decision-makers trust us too</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {parentTestimonials.map((t) => (
+                <div key={t.name} className="bg-white rounded-2xl shadow-md p-6 border border-green-100">
+                  <Quote className="w-8 h-8 text-green-200 mb-3" />
+                  <p className="text-gray-700 italic mb-5 leading-relaxed">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <div className="border-t pt-4">
+                    <div className="font-bold text-gray-900 text-sm">{t.name}</div>
+                    <div className="text-xs text-green-700 font-medium">{t.child}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 8: CTA — Clean, single action */}
+        <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 py-14 sm:py-18 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-green-500/10 via-transparent to-transparent" />
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Your Success Story Starts <span className="text-yellow-400">Today</span>
+            </h2>
+            <p className="text-blue-200 mb-8 text-lg">
+              Join 2,500+ students who transformed their Biology scores. April 2026 batch — limited seats.
+            </p>
+
+            <a
+              href="https://wa.me/918826444334?text=Hi!%20I%20saw%20your%20results%20and%20want%20to%20join.%20Please%20share%20enrollment%20details."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#20BD5A] transition-all"
+            >
+              <MessageCircle className="w-6 h-6" />
+              Chat to Enroll — Starting ₹45,000/year
+            </a>
+
+            <div className="flex flex-wrap gap-5 justify-center text-sm text-blue-300 mt-8">
+              {['98% Success Rate', 'AIIMS Faculty', '15 Students/Batch', '15-Day Money-back'].map((badge) => (
+                <span key={badge} className="inline-flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}

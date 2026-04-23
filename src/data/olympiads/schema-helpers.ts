@@ -89,7 +89,11 @@ export function olympiadCourseSchema(args: {
   about: string
   teaches?: string[]
   areaServed?: { type: 'City' | 'Country'; name: string; containedIn?: string }
+  /** BCP-47 locale for inLanguage. Defaults to 'en'; India pages
+   * should pass 'en-IN' to signal regional English. */
+  inLanguage?: string
 }) {
+  const lang = args.inLanguage ?? 'en'
   return {
     '@context': 'https://schema.org',
     '@type': 'Course',
@@ -110,7 +114,7 @@ export function olympiadCourseSchema(args: {
       : PROVIDER,
     educationalLevel: 'High School',
     about: args.about,
-    inLanguage: 'en',
+    inLanguage: lang,
     ...(args.teaches && args.teaches.length > 0 && { teaches: args.teaches }),
     instructor: PROVIDER,
     hasCourseInstance: olympiadCourseInstances(args.url),

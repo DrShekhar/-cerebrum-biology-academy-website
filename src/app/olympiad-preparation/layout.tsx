@@ -91,6 +91,7 @@ const courseSchema = olympiadCourseSchema({
   url: 'https://cerebrumbiologyacademy.com/olympiad-preparation',
   about: 'Science Olympiad - NSEB, INBO, KVPY, NSO',
   areaServed: { type: 'Country', name: 'India' },
+  inLanguage: 'en-IN',
 })
 
 const howToSchema = nsebHowToSchema('https://cerebrumbiologyacademy.com/olympiad-preparation')

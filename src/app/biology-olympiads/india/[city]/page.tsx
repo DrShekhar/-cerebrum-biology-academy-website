@@ -15,6 +15,20 @@ import {
   type OlympiadCityEntry,
 } from '@/data/olympiads/india-cities'
 
+// Map olympiad India city slugs to matching IB city slugs for
+// the "studying IB?" cross-sell block. Cities not in the IB
+// roster (south-delhi, faridabad, rohini, kolkata) are omitted.
+const OLYMPIAD_TO_IB_CITY: Record<string, string> = {
+  delhi: 'delhi',
+  gurugram: 'gurugram',
+  noida: 'noida',
+  mumbai: 'mumbai',
+  bangalore: 'bangalore',
+  hyderabad: 'hyderabad',
+  chennai: 'chennai',
+  pune: 'pune',
+}
+
 export const dynamicParams = false
 
 export function generateStaticParams() {
@@ -85,6 +99,7 @@ function buildCourseSchema(entry: OlympiadCityEntry, pageUrl: string) {
     url: pageUrl,
     about: 'Biology Olympiad - NSEB, INBO, IBO',
     areaServed: { type: 'City', name: entry.city, containedIn: 'India' },
+    inLanguage: 'en-IN',
   })
 }
 
@@ -309,6 +324,45 @@ export default async function OlympiadCityPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {/* Cross-sell: IB Biology (for students in IB schools) */}
+        {OLYMPIAD_TO_IB_CITY[entry.slug] && (
+          <section className="border-b border-slate-200 bg-white py-16 md:py-20">
+            <div className="mx-auto max-w-5xl px-6">
+              <div className="grid gap-8 lg:grid-cols-3 lg:items-center">
+                <div className="lg:col-span-2">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-green-700">
+                    Studying IB in {entry.city}?
+                  </p>
+                  <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                    Campbell Biology is the same text for
+                    <br />
+                    <span className="text-green-700">IB HL and olympiads.</span>
+                  </h2>
+                  <p className="mt-4 text-base leading-relaxed text-slate-600">
+                    If you are in Grade 11-12 IB HL Biology, layering NSEB onto your HL schedule
+                    adds depth for university applications and opens the IBO path. We coach both
+                    tracks from the same curriculum base.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3 lg:justify-end">
+                  <Link
+                    href={`/ib-biology/${OLYMPIAD_TO_IB_CITY[entry.slug]}`}
+                    className="inline-flex items-center gap-2 rounded-xl bg-green-600 px-5 py-3 text-sm font-semibold text-white hover:bg-green-700"
+                  >
+                    IB Biology in {entry.city}
+                  </Link>
+                  <Link
+                    href="/ib-biology"
+                    className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 hover:border-green-500 hover:text-green-700"
+                  >
+                    IB Biology hub
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Related cities */}
         <section className="border-b border-slate-200 bg-slate-50 py-14 md:py-20">

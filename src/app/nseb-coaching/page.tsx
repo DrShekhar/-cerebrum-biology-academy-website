@@ -151,6 +151,7 @@ const courseSchema = olympiadCourseSchema({
   url: PAGE_URL,
   about: 'NSEB - National Standard Examination in Biology',
   areaServed: { type: 'Country', name: 'India' },
+  inLanguage: 'en-IN',
   teaches: [
     'Cell Biology & Biochemistry',
     'Genetics & Evolution',

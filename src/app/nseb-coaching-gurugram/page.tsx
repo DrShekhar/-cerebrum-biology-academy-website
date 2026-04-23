@@ -90,6 +90,7 @@ export default function NSEBCoachingGurugramPage() {
     },
     educationalLevel: 'High School',
     about: 'NSEB - National Standard Examination in Biology',
+    inLanguage: 'en-IN',
     teaches: [
       'Cell Biology',
       'Molecular Biology',

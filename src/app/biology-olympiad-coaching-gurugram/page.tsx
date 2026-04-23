@@ -103,6 +103,7 @@ export default function BiologyOlympiadCoachingGurugramPage() {
       },
     },
     educationalLevel: 'High School',
+    inLanguage: 'en-IN',
     about: [
       'NSEB - National Standard Examination in Biology',
       'INBO - Indian National Biology Olympiad',

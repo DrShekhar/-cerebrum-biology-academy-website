@@ -6,6 +6,19 @@ import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { cities, citySlugs, getCity, type CityConfig } from '@/data/ib-biology/cities'
 import { MessageCircle, MapPin, Clock, CheckCircle2 } from 'lucide-react'
 
+// Map IB city slugs to olympiad city slugs. Used for the
+// "beyond HL" cross-sell block shown only on India pages.
+const IB_TO_OLYMPIAD_CITY: Record<string, string> = {
+  delhi: 'delhi',
+  gurugram: 'gurugram',
+  mumbai: 'mumbai',
+  bangalore: 'bangalore',
+  pune: 'pune',
+  hyderabad: 'hyderabad',
+  noida: 'noida',
+  chennai: 'chennai',
+}
+
 interface PageProps {
   params: Promise<{ city: string }>
 }
@@ -377,6 +390,44 @@ export default async function CityPage({ params }: PageProps) {
             </div>
           </div>
         </section>
+
+        {/* Cross-sell: Biology Olympiads (India only) */}
+        {config.countryCode === 'IN' && IB_TO_OLYMPIAD_CITY[config.slug] && (
+          <section className="bg-slate-950 py-16 text-white sm:py-20">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
+              <div className="grid gap-8 lg:grid-cols-3 lg:items-center">
+                <div className="lg:col-span-2">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-green-400">
+                    Going beyond HL
+                  </p>
+                  <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                    IB HL Biology students also crack{' '}
+                    <span className="text-green-400">NSEB, INBO and IBO</span>.
+                  </h2>
+                  <p className="mt-4 text-base leading-relaxed text-slate-300">
+                    Campbell Biology is the canonical IB HL reference — and also the core olympiad
+                    textbook. Many {config.city} IB students layer NSEB preparation onto HL Biology
+                    for university application depth and international olympiad selection.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3 lg:justify-end">
+                  <Link
+                    href={`/biology-olympiads/india/${IB_TO_OLYMPIAD_CITY[config.slug]}`}
+                    className="inline-flex items-center gap-2 rounded-xl bg-green-500 px-5 py-3 text-sm font-semibold text-white hover:bg-green-400"
+                  >
+                    Olympiads in {config.city}
+                  </Link>
+                  <Link
+                    href="/biology-olympiads"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:border-green-400"
+                  >
+                    All olympiads
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Cross-links */}
         <section className="py-12">

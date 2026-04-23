@@ -78,6 +78,7 @@ const courseSchema = olympiadCourseSchema({
   url: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching',
   about: 'Biology Olympiad - NSEB, INBO, IBO',
   areaServed: { type: 'Country', name: 'India' },
+  inLanguage: 'en-IN',
 })
 
 const howToSchema = nsebHowToSchema('https://cerebrumbiologyacademy.com/biology-olympiad-coaching')
