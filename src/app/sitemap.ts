@@ -87,6 +87,20 @@ const inlineRedirectPatterns: RegExp[] = [
   /^\/demo$/,
   /^\/ai-education-demo$/,
   /^\/support\/demo$/,
+  // Phase 2 GSC wildcards (2026-04-23) — metro [area] sub-pages,
+  // locations/[city]/[locality], and school/metro-station sub-routes
+  // are all 301'd to parent in next.config.mjs. Filter sitemap too.
+  /^\/neet-coaching-south-delhi\/[^/]+$/,
+  /^\/neet-coaching-north-delhi\/[^/]+$/,
+  /^\/neet-coaching-east-delhi\/[^/]+$/,
+  /^\/neet-coaching-west-delhi\/[^/]+$/,
+  /^\/neet-coaching-noida\/[^/]+$/,
+  /^\/neet-coaching-ghaziabad\/[^/]+$/,
+  /^\/neet-coaching-faridabad\/[^/]+$/,
+  /^\/neet-coaching-gurugram\/[^/]+$/,
+  /^\/neet-coaching-near-metro\/[^/]+$/,
+  /^\/neet-coaching-near\/[^/]+$/,
+  /^\/locations\/[^/]+\/[^/]+$/,
 ]
 
 function isRedirectedPath(path: string): boolean {

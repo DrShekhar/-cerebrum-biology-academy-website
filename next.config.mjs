@@ -397,6 +397,68 @@ const nextConfig = {
         permanent: true,
       },
 
+      // ============================================
+      // Phase 2 GSC "Crawled — not indexed" cleanup (2026-04-23)
+      // Consolidate thin area-level templates into metro parents.
+      // These wildcards catch the ~170 URLs Google rejected as
+      // near-duplicate doorways (Buckets D/E/H from the GSC audit).
+      // ============================================
+      {
+        source: '/neet-coaching-south-delhi/:area',
+        destination: '/neet-coaching-south-delhi',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-north-delhi/:area',
+        destination: '/neet-coaching-north-delhi',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-east-delhi/:area',
+        destination: '/neet-coaching-east-delhi',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-west-delhi/:area',
+        destination: '/neet-coaching-west-delhi',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-noida/:area',
+        destination: '/neet-coaching-noida',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-ghaziabad/:area',
+        destination: '/neet-coaching-ghaziabad',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-faridabad/:area',
+        destination: '/neet-coaching-faridabad',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-gurugram/:area',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-near-metro/:station',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/neet-coaching-near/:school',
+        destination: '/neet-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/locations/:city/:locality',
+        destination: '/locations/:city',
+        permanent: true,
+      },
+
       // Biology tuition location redirects (pages don't exist yet)
       {
         source: '/biology-tuition-south-delhi/:area*',
