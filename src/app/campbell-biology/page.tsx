@@ -169,7 +169,7 @@ export default function CampbellBiologyHubPage() {
                       {unitChapters.map((chapter) => (
                         <Link
                           key={chapter.id}
-                          href={`/campbell-biology/${chapter.slug}/`}
+                          href={`/campbell-biology/${chapter.slug}`}
                           className="group flex items-start gap-3 p-4 rounded-xl bg-white border border-slate-200 hover:border-green-500 hover:shadow-md transition-all"
                         >
                           <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-700 font-bold text-sm">

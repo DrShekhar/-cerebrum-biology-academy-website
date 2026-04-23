@@ -293,9 +293,7 @@ export default function IBOPreparationPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
               World&apos;s Premier Biology Competition
@@ -338,7 +336,7 @@ export default function IBOPreparationPage() {
                 Start IBO Training
               </button>
               <Link
-                href="/campbell-biology/"
+                href="/campbell-biology"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-medium transition-colors"
               >
                 <BookOpen className="w-5 h-5" />
@@ -352,9 +350,7 @@ export default function IBOPreparationPage() {
       {/* IBO Pathway */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Your Path to IBO</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               The journey from national olympiad to international gold medal
@@ -363,10 +359,7 @@ export default function IBOPreparationPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {iboPathway.map((stage, index) => (
-              <div
-                key={stage.stage}
-                className="relative animate-fadeInUp"
-              >
+              <div key={stage.stage} className="relative animate-fadeInUp">
                 <div className="bg-white rounded-2xl p-6 shadow-lg h-full border-2 border-transparent hover:border-yellow-400 transition-colors">
                   <div
                     className={`w-12 h-12 ${stage.color} rounded-xl flex items-center justify-center mb-4`}
@@ -391,9 +384,7 @@ export default function IBOPreparationPage() {
       {/* IBO Syllabus */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               IBO Syllabus Coverage
             </h2>
@@ -433,9 +424,7 @@ export default function IBOPreparationPage() {
       {/* Features Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Choose Our IBO Coaching?
             </h2>
@@ -464,9 +453,7 @@ export default function IBOPreparationPage() {
       {/* Pricing Section */}
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">IBO Coaching Plans</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Flexible options for students from all countries preparing for IBO
@@ -517,9 +504,7 @@ export default function IBOPreparationPage() {
       {/* FAQs Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -557,9 +542,7 @@ export default function IBOPreparationPage() {
       {/* Country Olympiads */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-8 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               National Olympiad Preparation
             </h2>
@@ -604,7 +587,7 @@ export default function IBOPreparationPage() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/campbell-biology/"
+              href="/campbell-biology"
               className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"
             >
               Campbell Biology (56 Chapters)
@@ -652,8 +635,7 @@ export default function IBOPreparationPage() {
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-400 to-yellow-500">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <Award className="w-16 h-16 text-yellow-900 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-yellow-900 mb-6">
               Ready to Compete at the Highest Level?

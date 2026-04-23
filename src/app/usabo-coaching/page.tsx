@@ -385,9 +385,7 @@ export default function USABOCoachingPage() {
       <section className="relative bg-[#3d4d3d] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#3d4d3d] via-[#4a5d4a] to-[#3d4d3d]" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Globe className="w-5 h-5 mr-2 text-green-400" />
               USA Biology Olympiad Coaching
@@ -408,7 +406,11 @@ export default function USABOCoachingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-black font-bold py-4 px-8 rounded-xl shadow-xl transition-all duration-300">
                   <Play className="w-5 h-5" />
                   Book Free Consultation
@@ -453,9 +455,7 @@ export default function USABOCoachingPage() {
       {/* USABO Pathway Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
               USABO Competition Pathway
             </h2>
@@ -466,10 +466,7 @@ export default function USABOCoachingPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {usaboPathway.map((stage, index) => (
-              <div
-                key={stage.stage}
-                className="relative animate-fadeInUp"
-              >
+              <div key={stage.stage} className="relative animate-fadeInUp">
                 <div className="bg-[#e8ede8] rounded-lg p-4 border border-[#4a5d4a]/20 h-full">
                   <stage.icon className="w-8 h-8 text-[#3d4d3d] mb-3" />
                   <div className="text-xs text-[#4a5d4a] font-semibold mb-1">{stage.stage}</div>
@@ -491,9 +488,7 @@ export default function USABOCoachingPage() {
       {/* Syllabus Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               USABO Syllabus Coverage
             </h2>
@@ -504,10 +499,7 @@ export default function USABOCoachingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {syllabus.map((unit, index) => (
-              <div
-                key={unit.unit}
-                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={unit.unit} className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-[#e8ede8] rounded-full flex items-center justify-center">
                     <unit.icon className="w-6 h-6 text-[#3d4d3d]" />
@@ -534,9 +526,7 @@ export default function USABOCoachingPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our USABO Coaching
             </h2>
@@ -560,9 +550,7 @@ export default function USABOCoachingPage() {
       {/* Pricing Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Pricing & Programs
             </h2>
@@ -748,9 +736,7 @@ export default function USABOCoachingPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -778,8 +764,7 @@ export default function USABOCoachingPage() {
       {/* CTA Section */}
       <section className="py-20 bg-[#3d4d3d] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Aim for Team USA at International Biology Olympiad
             </h2>
@@ -788,7 +773,11 @@ export default function USABOCoachingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-black font-bold py-4 px-8 rounded-xl shadow-xl transition-all duration-300">
                   <Play className="w-5 h-5" />
                   Book Free Consultation
@@ -810,9 +799,7 @@ export default function USABOCoachingPage() {
       {/* Parent Guide Callout */}
       <section className="py-12 bg-gradient-to-br from-teal-50 to-green-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-teal-200 animate-fadeInUp"
-          >
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-teal-200 animate-fadeInUp">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <BookOpen className="w-8 h-8 text-teal-600" />
@@ -844,15 +831,22 @@ export default function USABOCoachingPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Practice USABO MCQs Online</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Ace the USABO Open &amp; Semifinal exams with our free MCQ practice tool — 5,900+ Campbell
-            Biology level questions covering all topics tested in USABO.
+            Ace the USABO Open &amp; Semifinal exams with our free MCQ practice tool — 5,900+
+            Campbell Biology level questions covering all topics tested in USABO.
           </p>
           <Link
             href="/neet-biology-mcq?source=olympiad"
             className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
           >
             Start USABO Practice
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
           </Link>
         </div>
       </section>
@@ -865,7 +859,7 @@ export default function USABOCoachingPage() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/campbell-biology/"
+              href="/campbell-biology"
               className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"
             >
               Campbell Biology (56 Chapters)

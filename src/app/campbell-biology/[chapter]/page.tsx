@@ -70,8 +70,97 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
     advanced: 'bg-red-100 text-red-700 border-red-300',
   }
 
+  const pageUrl = `https://cerebrumbiologyacademy.com/campbell-biology/${chapter.slug}`
+
+  // Proper FAQPage JSON-LD (stronger than inline microdata for rich results)
+  const faqSchema =
+    chapter.faqs && chapter.faqs.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: chapter.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+          })),
+        }
+      : null
+
+  // Article schema for chapter content (signals depth + E-E-A-T)
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: chapter.title,
+    description: chapter.heroDescription,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    inLanguage: 'en',
+    about: `Campbell Biology Chapter ${chapter.chapterNumber}: ${chapter.title}`,
+    educationalLevel: 'University, Olympiad, NEET, MCAT, IB, AP Biology',
+    keywords: chapter.keywords ? chapter.keywords.join(', ') : undefined,
+    author: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    publisher: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Campbell Biology',
+        item: 'https://cerebrumbiologyacademy.com/campbell-biology',
+      },
+      ...(unit
+        ? [
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: `Unit ${unit.unitNumber}: ${unit.title}`,
+              item: `https://cerebrumbiologyacademy.com/campbell-biology/unit/${unit.slug}`,
+            },
+          ]
+        : []),
+      {
+        '@type': 'ListItem',
+        position: unit ? 4 : 3,
+        name: chapter.title,
+        item: pageUrl,
+      },
+    ],
+  }
+
   return (
     <main className="min-h-screen">
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -82,7 +171,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
         <div className="relative max-w-7xl mx-auto px-4">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link href="/campbell-biology/" className="hover:text-green-400 transition-colors">
+            <Link href="/campbell-biology" className="hover:text-green-400 transition-colors">
               Campbell Biology
             </Link>
             <ChevronRight className="w-4 h-4" />
@@ -290,7 +379,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
           <div className="flex items-center justify-between">
             {previous ? (
               <Link
-                href={`/campbell-biology/${previous.slug}/`}
+                href={`/campbell-biology/${previous.slug}`}
                 className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-slate-200 hover:border-green-500 transition-colors group"
               >
                 <ChevronLeft className="w-5 h-5 text-slate-400 group-hover:text-green-500" />
@@ -305,7 +394,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
 
             {next ? (
               <Link
-                href={`/campbell-biology/${next.slug}/`}
+                href={`/campbell-biology/${next.slug}`}
                 className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-slate-200 hover:border-green-500 transition-colors group"
               >
                 <div className="text-right">

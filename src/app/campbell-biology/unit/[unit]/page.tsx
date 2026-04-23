@@ -85,7 +85,7 @@ export default async function UnitPage({ params }: UnitPageProps) {
         <div className="relative max-w-7xl mx-auto px-4">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-6">
-            <Link href="/campbell-biology/" className="hover:text-green-400 transition-colors">
+            <Link href="/campbell-biology" className="hover:text-green-400 transition-colors">
               Campbell Biology
             </Link>
             <ChevronRight className="w-4 h-4" />
@@ -201,7 +201,7 @@ export default async function UnitPage({ params }: UnitPageProps) {
               return (
                 <Link
                   key={chapter.id}
-                  href={`/campbell-biology/${chapter.slug}/`}
+                  href={`/campbell-biology/${chapter.slug}`}
                   className="group bg-white rounded-xl border border-slate-200 p-6 hover:border-green-500 hover:shadow-xl transition-all"
                 >
                   <div className="flex items-start gap-4">
@@ -289,7 +289,7 @@ export default async function UnitPage({ params }: UnitPageProps) {
             )}
 
             <Link
-              href="/campbell-biology/"
+              href="/campbell-biology"
               className="px-4 py-2 text-sm text-slate-600 hover:text-green-600 transition-colors"
             >
               ← Back to All Units

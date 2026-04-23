@@ -388,9 +388,7 @@ export default function APBiologyPage() {
           <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-blue-500 blur-3xl" />
         </div>
         <div className="container relative mx-auto px-4">
-          <div
-            className="mx-auto max-w-4xl text-center animate-fadeInUp"
-          >
+          <div className="mx-auto max-w-4xl text-center animate-fadeInUp">
             <span className="mb-4 inline-block rounded-full bg-green-500/20 px-4 py-2 text-sm font-semibold text-green-400">
               College Board Aligned Curriculum
             </span>
@@ -410,7 +408,7 @@ export default function APBiologyPage() {
                 Start AP Biology Prep
               </button>
               <Link
-                href="/campbell-biology/"
+                href="/campbell-biology"
                 className="rounded-lg border border-white/30 px-8 py-4 text-lg font-semibold text-white transition hover:bg-white/10"
               >
                 View Campbell Chapters
@@ -423,9 +421,7 @@ export default function APBiologyPage() {
       {/* AP Biology Exam Overview */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               AP Biology Exam Format
             </h2>
@@ -435,33 +431,25 @@ export default function APBiologyPage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div
-              className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
-            >
+            <div className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp">
               <div className="mb-4 text-4xl font-bold text-green-600">3 hrs</div>
               <div className="font-semibold text-gray-900">Total Duration</div>
               <p className="mt-2 text-sm text-gray-600">Including breaks</p>
             </div>
 
-            <div
-              className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
-            >
+            <div className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp">
               <div className="mb-4 text-4xl font-bold text-blue-600">60</div>
               <div className="font-semibold text-gray-900">Multiple Choice</div>
               <p className="mt-2 text-sm text-gray-600">90 minutes, 50% of score</p>
             </div>
 
-            <div
-              className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
-            >
+            <div className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp">
               <div className="mb-4 text-4xl font-bold text-purple-600">6</div>
               <div className="font-semibold text-gray-900">Free Response</div>
               <p className="mt-2 text-sm text-gray-600">90 minutes, 50% of score</p>
             </div>
 
-            <div
-              className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
-            >
+            <div className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp">
               <div className="mb-4 text-4xl font-bold text-orange-600">1-5</div>
               <div className="font-semibold text-gray-900">Score Range</div>
               <p className="mt-2 text-sm text-gray-600">5 = Extremely qualified</p>
@@ -473,9 +461,7 @@ export default function APBiologyPage() {
       {/* 8 AP Biology Units */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Complete AP Biology Coverage
             </h2>
@@ -515,9 +501,7 @@ export default function APBiologyPage() {
       {/* Features */}
       <section className="bg-gradient-to-br from-green-50 to-teal-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Why Choose Our AP Biology Tutoring
             </h2>
@@ -528,10 +512,7 @@ export default function APBiologyPage() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
                   <feature.icon className="text-xl text-green-600" />
                 </div>
@@ -546,9 +527,7 @@ export default function APBiologyPage() {
       {/* Pricing Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               AP Biology Tutoring Packages
             </h2>
@@ -606,9 +585,7 @@ export default function APBiologyPage() {
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Frequently Asked Questions
             </h2>
@@ -619,10 +596,7 @@ export default function APBiologyPage() {
 
           <div className="mx-auto max-w-3xl space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-3 text-lg font-bold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -653,15 +627,13 @@ export default function APBiologyPage() {
       {/* Related Pages */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-8 text-center animate-fadeInUp"
-          >
+          <div className="mb-8 text-center animate-fadeInUp">
             <h2 className="mb-4 text-2xl font-bold text-gray-900">Related Programs</h2>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
             <Link
-              href="/campbell-biology/"
+              href="/campbell-biology"
               className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-green-300 hover:shadow-lg"
             >
               <BookOpen className="mx-auto mb-2 h-6 w-6 text-green-600" />
@@ -707,8 +679,7 @@ export default function APBiologyPage() {
       {/* Final CTA */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16">
         <div className="container mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Ready to Score 5 on AP Biology?
             </h2>

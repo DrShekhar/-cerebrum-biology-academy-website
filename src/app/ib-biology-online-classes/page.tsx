@@ -474,7 +474,7 @@ export default function IBBiologyPage() {
                   Start IB Biology Prep
                 </button>
                 <Link
-                  href="/campbell-biology/"
+                  href="/campbell-biology"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-8 py-4 text-lg font-semibold text-white transition hover:bg-white/10"
                 >
                   <BookOpen className="h-6 w-6" />
@@ -494,7 +494,10 @@ export default function IBBiologyPage() {
               { value: '85%', label: 'Score 6+' },
               { value: '40+', label: 'Countries' },
             ].map((stat, index) => (
-              <div key={index} className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm animate-fadeInUp">
+              <div
+                key={index}
+                className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm animate-fadeInUp"
+              >
                 <div className="text-2xl font-bold text-purple-400 md:text-3xl">{stat.value}</div>
                 <div className="text-sm text-gray-300">{stat.label}</div>
               </div>
@@ -506,8 +509,7 @@ export default function IBBiologyPage() {
       {/* Features Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Why Choose Our IB Biology Tutoring?
             </h2>
@@ -518,7 +520,9 @@ export default function IBBiologyPage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <div key={index} className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition hover:shadow-xl animate-fadeInUp"
+              <div
+                key={index}
+                className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition hover:shadow-xl animate-fadeInUp"
               >
                 <feature.icon className="mb-4 h-10 w-10 text-purple-600" />
                 <h3 className="mb-2 text-lg font-bold text-gray-900">{feature.title}</h3>
@@ -532,8 +536,7 @@ export default function IBBiologyPage() {
       {/* Core Topics Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               IB Biology Core Topics (SL & HL)
             </h2>
@@ -544,8 +547,7 @@ export default function IBBiologyPage() {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {ibBiologyTopics.map((topic, index) => (
-              <div key={index} className="rounded-xl bg-white p-5 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-5 shadow-lg animate-fadeInUp">
                 <div className="mb-3 flex items-center justify-between">
                   <span className="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700">
                     Topic {topic.topic}
@@ -575,8 +577,7 @@ export default function IBBiologyPage() {
       {/* AHL Topics Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Additional Higher Level (AHL) Topics
             </h2>
@@ -587,7 +588,9 @@ export default function IBBiologyPage() {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {ahlTopics.map((topic, index) => (
-              <div key={index} className="rounded-xl border-2 border-purple-200 bg-purple-50 p-5 animate-fadeInUp"
+              <div
+                key={index}
+                className="rounded-xl border-2 border-purple-200 bg-purple-50 p-5 animate-fadeInUp"
               >
                 <div className="mb-3 flex items-center justify-between">
                   <span className="rounded-full bg-purple-600 px-3 py-1 text-sm font-medium text-white">
@@ -614,8 +617,7 @@ export default function IBBiologyPage() {
       <section className="bg-gradient-to-br from-purple-600 to-purple-800 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <div className="text-center animate-fadeInUp"
-            >
+            <div className="text-center animate-fadeInUp">
               <FileText className="mx-auto mb-4 h-12 w-12 text-purple-200" />
               <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
                 Internal Assessment (IA) Support
@@ -633,7 +635,9 @@ export default function IBBiologyPage() {
                 { title: 'Data Analysis', desc: 'Statistical tests and uncertainty calculations' },
                 { title: 'Report Writing', desc: 'Structure and criterion-based feedback' },
               ].map((item, index) => (
-                <div key={index} className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm animate-fadeInUp"
+                <div
+                  key={index}
+                  className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm animate-fadeInUp"
                 >
                   <div className="mb-2 text-2xl font-bold text-white">{index + 1}</div>
                   <h3 className="mb-1 font-semibold text-white">{item.title}</h3>
@@ -658,8 +662,7 @@ export default function IBBiologyPage() {
       {/* Pricing Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               IB Biology Tutoring Packages
             </h2>
@@ -717,8 +720,7 @@ export default function IBBiologyPage() {
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Frequently Asked Questions
             </h2>
@@ -729,8 +731,7 @@ export default function IBBiologyPage() {
 
           <div className="mx-auto max-w-3xl space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-3 text-lg font-bold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -761,14 +762,13 @@ export default function IBBiologyPage() {
       {/* Related Pages */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="mb-8 text-center animate-fadeInUp"
-          >
+          <div className="mb-8 text-center animate-fadeInUp">
             <h2 className="mb-4 text-2xl font-bold text-gray-900">Related Programs</h2>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <Link
-              href="/campbell-biology/"
+              href="/campbell-biology"
               className="rounded-lg border border-gray-200 bg-white p-4 text-center transition hover:border-purple-300 hover:shadow-lg"
             >
               <BookOpen className="mx-auto mb-2 h-6 w-6 text-teal-600" />

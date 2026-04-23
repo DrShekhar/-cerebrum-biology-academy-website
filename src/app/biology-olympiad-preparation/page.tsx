@@ -400,7 +400,7 @@ export default function BiologyOlympiadHubPage() {
                   olympiad topics.
                 </p>
                 <Link
-                  href="/campbell-biology/"
+                  href="/campbell-biology"
                   className="inline-flex items-center gap-2 text-green-600 font-semibold hover:text-green-700"
                 >
                   <Book className="w-5 h-5" />

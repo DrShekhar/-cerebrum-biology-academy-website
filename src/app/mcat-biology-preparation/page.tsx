@@ -315,9 +315,7 @@ export default function MCATBiologyPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="max-w-4xl animate-fadeInUp"
-          >
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-4 h-4" />
               Pre-Medical Preparation
@@ -360,7 +358,7 @@ export default function MCATBiologyPage() {
                 Start MCAT Prep
               </button>
               <Link
-                href="/campbell-biology/"
+                href="/campbell-biology"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-medium transition-colors"
               >
                 <BookOpen className="w-5 h-5" />
@@ -374,9 +372,7 @@ export default function MCATBiologyPage() {
       {/* MCAT Exam Format */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               MCAT Exam Structure
             </h2>
@@ -439,9 +435,7 @@ export default function MCATBiologyPage() {
       {/* Biology Topics Coverage */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               MCAT Biology Topics We Cover
             </h2>
@@ -481,9 +475,7 @@ export default function MCATBiologyPage() {
       {/* Features Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Choose Our MCAT Biology Coaching?
             </h2>
@@ -512,9 +504,7 @@ export default function MCATBiologyPage() {
       {/* Pricing Section */}
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">MCAT Coaching Plans</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Flexible options for pre-med students preparing for medical school
@@ -565,9 +555,7 @@ export default function MCATBiologyPage() {
       {/* FAQs Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -605,9 +593,7 @@ export default function MCATBiologyPage() {
       {/* Related Pages */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-8 animate-fadeInUp"
-          >
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               Explore More Resources
             </h2>
@@ -615,7 +601,7 @@ export default function MCATBiologyPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <Link
-              href="/campbell-biology/"
+              href="/campbell-biology"
               className="bg-white rounded-xl p-4 text-center border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all group"
             >
               <BookOpen className="w-8 h-8 text-blue-500 mx-auto mb-2" />
@@ -661,8 +647,7 @@ export default function MCATBiologyPage() {
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <GraduationCap className="w-16 h-16 text-white mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Ace the MCAT Biology Sections?

@@ -695,7 +695,7 @@ export default function ALevelBiologyTutorPage() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/campbell-biology/"
+              href="/campbell-biology"
               className="bg-teal-600 text-white px-6 py-3 rounded-lg shadow hover:shadow-md hover:bg-teal-700 transition"
             >
               Campbell Biology (56 Chapters)
