@@ -217,6 +217,7 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'BBO (UK)', href: '/bbo-preparation' },
       { label: 'INBO (India)', href: '/inbo-coaching' },
       { label: 'SBO (Singapore)', href: '/sbo-coaching' },
+      { label: 'NSEB (India)', href: '/nseb-coaching' },
       { label: 'Olympiad MCQ Bank', href: '/biology-olympiad-mcq' },
     ],
   },

@@ -2290,6 +2290,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92,
     },
+    // Olympiad — NSEB national hub
+    {
+      url: `${baseUrl}/nseb-coaching`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
     // Olympiad — India regional (Gurugram cluster)
     {
       url: `${baseUrl}/nseb-coaching-gurugram`,

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     languages: {
       'en-IN': 'https://cerebrumbiologyacademy.com/nseb-coaching-gurugram',
       en: 'https://cerebrumbiologyacademy.com/nseb-coaching-gurugram',
-      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+      'x-default': 'https://cerebrumbiologyacademy.com/nseb-coaching',
     },
   },
 }
@@ -126,13 +126,19 @@ export default function NSEBCoachingGurugramPage() {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Biology Olympiad',
-        item: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching-gurugram',
+        name: 'Biology Olympiads',
+        item: 'https://cerebrumbiologyacademy.com/biology-olympiads',
       },
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'NSEB Coaching Gurugram',
+        name: 'NSEB Coaching',
+        item: 'https://cerebrumbiologyacademy.com/nseb-coaching',
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Gurugram',
         item: 'https://cerebrumbiologyacademy.com/nseb-coaching-gurugram',
       },
     ],
