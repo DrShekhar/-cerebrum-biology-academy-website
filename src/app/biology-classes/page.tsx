@@ -6,12 +6,18 @@ import {
   Monitor,
   Building2,
   Layers,
-  Clock,
 } from 'lucide-react'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { TestimonialVideo } from '@/components/landing/TestimonialVideo'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
 import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
+import {
+  batchSeats,
+  seatsPercent,
+  seatsStatus,
+  seatsUpdatedAt,
+  type BatchKey,
+} from '@/data/biology-classes/seats'
 
 const CAMPAIGN = 'biology-classes'
 
@@ -82,11 +88,11 @@ const centres = [
   },
 ]
 
-const schedule = [
-  { batch: 'Class 11 (Boards + NEET)', time: 'Mon, Wed, Fri · 5:00 to 7:00 PM' },
-  { batch: 'Class 12 (Boards + NEET)', time: 'Tue, Thu, Sat · 5:00 to 7:00 PM' },
-  { batch: 'Dropper', time: 'Daily · 10:00 AM to 1:00 PM' },
-  { batch: 'Weekend', time: 'Sat and Sun · 9:00 AM to 1:00 PM' },
+const schedule: Array<{ key: BatchKey; batch: string }> = [
+  { key: 'class-11', batch: 'Class 11 (Boards + NEET)' },
+  { key: 'class-12', batch: 'Class 12 (Boards + NEET)' },
+  { key: 'dropper', batch: 'Dropper' },
+  { key: 'weekend', batch: 'Weekend' },
 ]
 
 const included = [
@@ -117,9 +123,9 @@ const faqs = [
       'Four campuses: South Extension Part 2 in New Delhi (flagship), Rohini Sector 9, Gurugram Sector 51 (M2K Corporate Park, Mayfield Garden), and Faridabad Sector 17 (Huda Market). All four run Board, NEET, and dropper batches.',
   },
   {
-    question: 'What are the class timings?',
+    question: 'When do batches start?',
     answer:
-      'Class 11 runs Mon/Wed/Fri 5 to 7 PM. Class 12 runs Tue/Thu/Sat 5 to 7 PM. Droppers are daily 10 AM to 1 PM. Weekend batch is Sat and Sun 9 AM to 1 PM. Online students in other timezones can request schedule accommodation.',
+      'New cohorts open through the year. Class 11 and Class 12 batches are currently enrolling with seats refreshed in the seat counter above. Dropper and weekend batches also enrol continuously. Tell us your preferred mode and class on the form and we will share the next available seat and exact timings.',
   },
   {
     question: 'Are online classes as effective as offline?',
@@ -361,26 +367,74 @@ export default function BiologyClassesPage() {
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
-                Current batches.
+                Seats available right now.
               </h2>
               <p className="mt-3 text-sm text-slate-600">
-                Seats refresh each term. Ask for live availability on the form.
+                Live count refreshed{' '}
+                {new Date(seatsUpdatedAt).toLocaleDateString('en-GB', {
+                  day: 'numeric',
+                  month: 'short',
+                  year: 'numeric',
+                })}
+                . Exact timings shared on the call.
               </p>
               <ul className="mt-8 space-y-3">
-                {schedule.map((s) => (
-                  <li
-                    key={s.batch}
-                    className="flex items-start justify-between gap-4 rounded-xl border border-slate-200 bg-white px-5 py-4"
-                  >
-                    <div>
-                      <p className="text-sm font-semibold text-slate-900">{s.batch}</p>
-                      <p className="mt-1 flex items-center gap-1.5 text-xs text-slate-600">
-                        <Clock className="h-3.5 w-3.5" />
-                        {s.time}
-                      </p>
-                    </div>
-                  </li>
-                ))}
+                {schedule.map((s) => {
+                  const seats = batchSeats[s.key]
+                  const pct = seats ? seatsPercent(seats) : null
+                  const status = seats ? seatsStatus(seats) : 'Enrolling'
+                  const statusTone =
+                    status === 'Almost full' || status === 'Waitlist'
+                      ? 'bg-amber-50 text-amber-800 ring-1 ring-amber-200'
+                      : status === 'Filling fast'
+                        ? 'bg-blue-50 text-blue-800 ring-1 ring-blue-200'
+                        : 'bg-emerald-50 text-emerald-800 ring-1 ring-emerald-200'
+                  return (
+                    <li
+                      key={s.batch}
+                      className="rounded-xl border border-slate-200 bg-white px-5 py-4"
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <p className="text-sm font-semibold text-slate-900">{s.batch}</p>
+                        <span
+                          className={`whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-semibold ${statusTone}`}
+                        >
+                          {status}
+                        </span>
+                      </div>
+                      {seats && pct !== null && (
+                        <div className="mt-3">
+                          <div className="flex items-center justify-between text-xs text-slate-600">
+                            <span>
+                              <strong className="text-slate-900">{seats.filled}</strong> of{' '}
+                              {seats.total} seats filled
+                            </span>
+                            <span>{pct}%</span>
+                          </div>
+                          <div
+                            className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-100"
+                            role="progressbar"
+                            aria-valuenow={pct}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                            aria-label={`${s.batch} seats filled`}
+                          >
+                            <div
+                              className={`h-full rounded-full ${
+                                pct >= 80
+                                  ? 'bg-amber-500'
+                                  : pct >= 50
+                                    ? 'bg-blue-500'
+                                    : 'bg-emerald-500'
+                              }`}
+                              style={{ width: `${pct}%` }}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </li>
+                  )
+                })}
               </ul>
             </div>
 
