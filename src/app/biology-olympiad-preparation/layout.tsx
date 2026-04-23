@@ -28,7 +28,34 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation',
+    languages: {
+      en: 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation',
+      'en-IN': 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation',
+      'en-US': 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation',
+      'en-GB': 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
   },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Biology Olympiads',
+      item: 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Biology Olympiad Preparation',
+      item: 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation',
+    },
+  ],
 }
 
 export default function BiologyOlympiadPreparationLayout({
@@ -36,5 +63,13 @@ export default function BiologyOlympiadPreparationLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  )
 }

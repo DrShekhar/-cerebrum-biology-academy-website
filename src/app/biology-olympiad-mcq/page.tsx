@@ -7,6 +7,13 @@ export const metadata: Metadata = {
     'Practice 5,900+ free Biology Olympiad MCQs based on Campbell Biology. Covers all 8 units with MTF, Data Interpretation, and Experimental Design questions. NSEB, USABO, IBO prep.',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-olympiad-mcq',
+    languages: {
+      en: 'https://cerebrumbiologyacademy.com/biology-olympiad-mcq',
+      'en-IN': 'https://cerebrumbiologyacademy.com/biology-olympiad-mcq',
+      'en-US': 'https://cerebrumbiologyacademy.com/biology-olympiad-mcq',
+      'en-GB': 'https://cerebrumbiologyacademy.com/biology-olympiad-mcq',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiad-mcq',
+    },
   },
 
   openGraph: {
@@ -65,11 +72,40 @@ export default function BiologyOlympiadMCQPage() {
     numberOfQuestions: totalQuestions,
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Biology Olympiads',
+        item: 'https://cerebrumbiologyacademy.com/biology-olympiads',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Olympiad MCQ Practice',
+        item: 'https://cerebrumbiologyacademy.com/biology-olympiad-mcq',
+      },
+    ],
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="min-h-screen bg-gradient-to-br from-parchment via-sage-50/30 to-stone-50">
         <nav className="bg-white/90 backdrop-blur-md border-b border-stone-200/50 sticky top-0 z-40">

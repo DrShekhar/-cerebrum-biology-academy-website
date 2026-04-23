@@ -40,9 +40,42 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/kbo-coaching',
+    languages: {
+      en: 'https://cerebrumbiologyacademy.com/kbo-coaching',
+      'en-KR': 'https://cerebrumbiologyacademy.com/kbo-coaching',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Biology Olympiads',
+      item: 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'KBO Coaching',
+      item: 'https://cerebrumbiologyacademy.com/kbo-coaching',
+    },
+  ],
+}
+
 export default function KBOCoachingLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  )
 }

@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/ibo-preparation',
+    languages: {
+      en: 'https://cerebrumbiologyacademy.com/ibo-preparation',
+      'en-IN': 'https://cerebrumbiologyacademy.com/ibo-preparation',
+      'en-US': 'https://cerebrumbiologyacademy.com/ibo-preparation',
+      'en-GB': 'https://cerebrumbiologyacademy.com/ibo-preparation',
+      'en-SG': 'https://cerebrumbiologyacademy.com/ibo-preparation',
+      'x-default': 'https://cerebrumbiologyacademy.com/ibo-preparation',
+    },
   },
   openGraph: {
     title: 'IBO Preparation Online | International Biology Olympiad Coaching',
@@ -31,6 +39,34 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Biology Olympiads',
+      item: 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'IBO Preparation',
+      item: 'https://cerebrumbiologyacademy.com/ibo-preparation',
+    },
+  ],
+}
+
 export default function IBOLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  )
 }

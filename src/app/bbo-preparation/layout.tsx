@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/bbo-preparation',
+    languages: {
+      'en-GB': 'https://cerebrumbiologyacademy.com/bbo-preparation',
+      en: 'https://cerebrumbiologyacademy.com/bbo-preparation',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
   },
   openGraph: {
     title: 'BBO Preparation Online | British Biology Olympiad Coaching',
@@ -32,6 +37,34 @@ export const metadata: Metadata = {
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Biology Olympiads',
+      item: 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'BBO Preparation',
+      item: 'https://cerebrumbiologyacademy.com/bbo-preparation',
+    },
+  ],
+}
+
 export default function BBOLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  )
 }

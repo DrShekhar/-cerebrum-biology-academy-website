@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/nseb-coaching-gurugram',
+    languages: {
+      'en-IN': 'https://cerebrumbiologyacademy.com/nseb-coaching-gurugram',
+      en: 'https://cerebrumbiologyacademy.com/nseb-coaching-gurugram',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
   },
 }
 

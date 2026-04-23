@@ -26,6 +26,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/ibo-preparation-gurugram',
+    languages: {
+      'en-IN': 'https://cerebrumbiologyacademy.com/ibo-preparation-gurugram',
+      en: 'https://cerebrumbiologyacademy.com/ibo-preparation-gurugram',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
   },
 }
 
@@ -85,17 +90,41 @@ export default function IBOPreparationGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'Biology Olympiad', item: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'IBO Preparation Gurugram', item: 'https://cerebrumbiologyacademy.com/ibo-preparation-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Biology Olympiad',
+        item: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'IBO Preparation Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/ibo-preparation-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <IBOPreparationGurugramContent faqs={faqs} />
     </>
   )

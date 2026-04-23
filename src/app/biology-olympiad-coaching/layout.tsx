@@ -42,9 +42,42 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching',
+    languages: {
+      en: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching',
+      'en-IN': 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
   },
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Biology Olympiads',
+      item: 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Biology Olympiad Coaching',
+      item: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching',
+    },
+  ],
+}
+
 export default function BiologyOlympiadCoachingLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  )
 }

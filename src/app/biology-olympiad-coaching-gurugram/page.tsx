@@ -38,6 +38,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching-gurugram',
+    languages: {
+      'en-IN': 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching-gurugram',
+      en: 'https://cerebrumbiologyacademy.com/biology-olympiad-coaching-gurugram',
+      'x-default': 'https://cerebrumbiologyacademy.com/biology-olympiads',
+    },
   },
 }
 
