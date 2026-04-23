@@ -14,7 +14,7 @@ const CAMPAIGN = 'biology-olympiads'
 export const metadata: Metadata = {
   title: 'Biology Olympiads Coaching | IBO, USABO, BBO, INBO, NSEB, SBO, CNBO, KBO | Cerebrum',
   description:
-    'Coaching for every major Biology Olympiad: International (IBO), USA (USABO), UK (BBO), India (NSEB + INBO), Singapore (SBO), China (CNBO), Korea (KBO), and more. Campbell Biology coverage, past-paper drills, IBO-medallist mentors.',
+    'Coaching for every major Biology Olympiad: International (IBO), USA (USABO), UK (BBO), India (NSEB + INBO), Singapore (SBO), China (CNBO), Korea (KBO), and more. Campbell Biology coverage, past-paper drills, senior olympiad tutors.',
   keywords: [
     'biology olympiad coaching',
     'biology olympiad preparation',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology Olympiads Coaching — IBO, USABO, BBO, INBO, SBO and more',
     description:
-      'Olympiad coaching in 10+ countries. IBO-medallist mentors, Campbell Biology coverage, past-paper drills.',
+      'Olympiad coaching in 14+ countries. Senior olympiad tutors, Campbell Biology coverage, past-paper drills.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'Cerebrum Biology Academy',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Biology Olympiads Coaching — Cerebrum',
-    description: 'IBO, USABO, BBO, INBO, SBO, CNBO, KBO, NSEB — coached by medallists.',
+    description: 'IBO, USABO, BBO, INBO, SBO, CNBO, KBO, NSEB — senior olympiad tutors.',
   },
   robots: {
     index: true,
@@ -228,9 +228,9 @@ const faqs = [
       'Campbell Biology (11th-12th edition) is the canonical textbook across most olympiads. Our olympiad programmes start with a full Campbell sweep in Year 1 and move to past-paper drills and national-paper practice in the pre-exam phase. If you are an absolute beginner, we recommend the Complete Olympiad Year programme (9-12 months).',
   },
   {
-    question: 'Do you have IBO-medallist mentors?',
+    question: 'Who coaches the olympiad programme?',
     answer:
-      'Yes. Our senior olympiad coaches include IBO medallists and national team trainers from India, Singapore, UK, and other markets. 1:1 Elite mentoring is delivered by this tier.',
+      'Our olympiad programme is led by senior biology tutors with deep past-paper experience across NSEB, INBO, IBO, USABO, BBO and SBO. 1:1 Elite mentoring is delivered by our most senior tutor tier.',
   },
   {
     question: 'How do olympiad selections differ by country?',
@@ -338,8 +338,8 @@ export default function BiologyOlympiadsHubPage() {
                 </h1>
 
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
-                  Complete Campbell Biology coverage, past-paper drills, and 1:1 mentoring by IBO
-                  medallists. Coaching for 8+ national olympiads plus the IBO itself.
+                  Complete Campbell Biology coverage, past-paper drills, and 1:1 mentoring with
+                  senior olympiad tutors. Coaching for 14+ national olympiads plus the IBO itself.
                 </p>
 
                 <dl className="mt-10 grid max-w-xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
@@ -349,7 +349,7 @@ export default function BiologyOlympiadsHubPage() {
                   </div>
                   <div>
                     <dt className="text-xs uppercase tracking-wider text-slate-400">
-                      IBO medallist mentors
+                      Senior tutor 1:1 available
                     </dt>
                     <dd className="mt-1 text-2xl font-semibold text-white">Yes</dd>
                   </div>
@@ -475,8 +475,8 @@ export default function BiologyOlympiadsHubPage() {
               {[
                 {
                   icon: Award,
-                  title: 'IBO medallist mentors',
-                  body: 'Your 1:1 coach has stood on the IBO podium or trained a national team. The feedback is exam-paper specific, not theoretical.',
+                  title: 'Senior olympiad tutors',
+                  body: 'Your 1:1 coach is a senior biology tutor with deep past-paper experience across NSEB, INBO, IBO, USABO, BBO, and SBO. Feedback is exam-paper specific, not theoretical.',
                 },
                 {
                   icon: Globe,

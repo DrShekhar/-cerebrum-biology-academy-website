@@ -5,6 +5,7 @@ import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema, nsebHowToSchema } from '@/data/olympiads/schema-helpers'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
 
@@ -14,7 +15,7 @@ const CAMPAIGN = 'nseb-coaching'
 export const metadata: Metadata = {
   title: 'NSEB Coaching in India | National Standard Examination in Biology',
   description:
-    'NSEB coaching for the Indian national biology olympiad prelim. Complete Campbell + NCERT coverage, past-paper drills, mock tests, and IBO-medallist mentors. Pathway to INBO, OCSC, IBO.',
+    'NSEB coaching for the Indian national biology olympiad prelim. Complete Campbell + NCERT coverage, past-paper drills, mock tests, and senior olympiad tutors. Pathway to INBO, OCSC, IBO.',
   keywords: [
     'NSEB coaching',
     'NSEB preparation',
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NSEB Coaching in India — National Standard Examination in Biology',
     description:
-      'Expert NSEB coaching with Campbell Biology coverage, past-paper drills, and IBO medallist mentors. Stage 1 of the NSEB → INBO → OCSC → IBO pathway.',
+      'Expert NSEB coaching with Campbell Biology coverage, past-paper drills, and senior olympiad tutors. Stage 1 of the NSEB → INBO → OCSC → IBO pathway.',
     type: 'website',
     url: PAGE_URL,
     siteName: 'Cerebrum Biology Academy',
@@ -75,8 +76,8 @@ const syllabusBreakdown = [
 const whyCerebrum = [
   {
     icon: Award,
-    title: 'IBO medallist mentors',
-    body: 'Your mentor has sat the same paper and made team India. Feedback is exam-specific, not theoretical.',
+    title: 'Senior olympiad tutors',
+    body: 'Your mentor has deep NSEB past-paper experience across 10+ years of Indian olympiad papers. Feedback is exam-specific, not theoretical.',
   },
   {
     icon: Target,
@@ -124,7 +125,7 @@ const faqs = [
   {
     question: 'What does NSEB coaching cost?',
     answer:
-      'Complete Olympiad Year (9–12 months, covers NSEB and INBO): $4,500 equivalent in INR — local currency equivalents are shown in the pricing section below. 1:1 Elite Mentoring with an IBO medallist: $90 per hour. Small-Batch Weekend: $50 per hour.',
+      'Complete Olympiad Year (9–12 months, covers NSEB and INBO): $4,500 equivalent in INR — local currency equivalents are shown in the pricing section below. 1:1 Elite Mentoring with a senior olympiad tutor: $90 per hour. Small-Batch Weekend: $50 per hour.',
   },
   {
     question: 'Do you coach for INBO, OCSC, and IBO after NSEB?',
@@ -143,21 +144,13 @@ const faqSchema = {
   })),
 }
 
-const courseSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Course',
+const courseSchema = olympiadCourseSchema({
   name: 'NSEB Coaching Programme',
   description:
     'National Standard Examination in Biology (NSEB) coaching. Stage 1 of the Indian biology olympiad pathway — prepares students for NSEB → INBO → OCSC → IBO.',
   url: PAGE_URL,
-  provider: {
-    '@type': 'EducationalOrganization',
-    name: 'Cerebrum Biology Academy',
-    url: 'https://cerebrumbiologyacademy.com',
-  },
-  educationalLevel: 'High School',
   about: 'NSEB - National Standard Examination in Biology',
-  inLanguage: 'en',
+  areaServed: { type: 'Country', name: 'India' },
   teaches: [
     'Cell Biology & Biochemistry',
     'Genetics & Evolution',
@@ -166,21 +159,9 @@ const courseSchema = {
     'Ecology & Behavior',
     'Biosystematics & Biodiversity',
   ],
-  offers: olympiadPricingProducts.map((p) => ({
-    '@type': 'Offer',
-    name: p.name,
-    price: p.priceUSD,
-    priceCurrency: 'USD',
-    priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      price: p.priceUSD,
-      priceCurrency: 'USD',
-      unitText: p.schemaUnitText,
-    },
-    availability: 'https://schema.org/InStock',
-    url: `${PAGE_URL}#pricing`,
-  })),
-}
+})
+
+const howToSchema = nsebHowToSchema(PAGE_URL)
 
 export default function NSEBCoachingHubPage() {
   return (
@@ -192,6 +173,10 @@ export default function NSEBCoachingHubPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <BreadcrumbSchema
         items={[
@@ -221,7 +206,7 @@ export default function NSEBCoachingHubPage() {
                 <h1 className="text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
                   NSEB coaching.
                   <br />
-                  <span className="text-green-400">Built by IBO medallists.</span>
+                  <span className="text-green-400">Built for olympiad depth.</span>
                 </h1>
 
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">

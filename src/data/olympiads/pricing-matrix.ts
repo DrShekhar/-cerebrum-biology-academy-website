@@ -42,8 +42,8 @@ export const olympiadPricingProducts: OlympiadPricingProduct[] = [
       'Weekly past-paper drills',
       'Data analysis + statistics modules',
       'Practical and lab-skills training',
-      'Mock exams with examiner feedback',
-      'Medallist mentor assigned',
+      'Mock exams with examiner-style feedback',
+      'Senior tutor assigned for the year',
     ],
     highlight: true,
     schemaUnitText: 'ANN',
@@ -51,14 +51,14 @@ export const olympiadPricingProducts: OlympiadPricingProduct[] = [
   {
     id: 'elite-mentor',
     name: '1:1 Elite Mentoring',
-    subtitle: 'IBO medallist or team trainer',
+    subtitle: 'Senior olympiad tutor, 1:1',
     priceUSD: 90,
     unit: 'hr',
     unitLabel: '/ hour',
     description:
-      'One-on-one sessions with an IBO medallist or national team trainer. Best for score optimisation, advanced topic weaknesses, or final-phase pre-national prep.',
+      'One-on-one sessions with a senior olympiad tutor. Best for score optimisation, advanced topic weaknesses, or final-phase pre-national prep.',
     features: [
-      'IBO medallist mentor',
+      'Senior olympiad tutor, 1:1',
       'Customised topic sequence',
       'Past-paper walkthroughs',
       'Lab skills coaching',

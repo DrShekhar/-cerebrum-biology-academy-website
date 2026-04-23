@@ -205,8 +205,8 @@ export default function Home() {
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
                 NSEB, INBO, USABO, IBO, BBO, SBO and more. Campbell Biology coverage, 15 years of
-                past-paper drills, and 1:1 mentoring by IBO medallists. For Class 9-12 students
-                aiming for national and international olympiad teams.
+                past-paper drills, and 1:1 mentoring with senior olympiad tutors. For Class 9-12
+                students aiming for national and international olympiad teams.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">

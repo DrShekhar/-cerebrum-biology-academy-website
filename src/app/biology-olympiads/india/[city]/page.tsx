@@ -6,6 +6,7 @@ import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema, nsebHowToSchema } from '@/data/olympiads/schema-helpers'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
 import {
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const pageUrl = `${BASE}/biology-olympiads/india/${entry.slug}`
   const title = `Biology Olympiad Coaching in ${entry.city} | NSEB, INBO, IBO Preparation`
-  const description = `${entry.pitch} Campbell Biology coverage, 15 years of NSEB past papers, and IBO-medallist 1:1 mentoring.`
+  const description = `${entry.pitch} Campbell Biology coverage, 15 years of NSEB past papers, and 1:1 mentoring with senior olympiad tutors.`
 
   return {
     title,
@@ -78,40 +79,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 function buildCourseSchema(entry: OlympiadCityEntry, pageUrl: string) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Course',
+  return olympiadCourseSchema({
     name: `Biology Olympiad Coaching in ${entry.city}`,
-    description: `NSEB, INBO, and IBO preparation programme for ${entry.city} students. Campbell Biology coverage, weekly past-paper drills, IBO-medallist mentors.`,
+    description: `NSEB, INBO, and IBO preparation programme for ${entry.city} students. Campbell Biology coverage, weekly past-paper drills, senior olympiad tutors.`,
     url: pageUrl,
-    provider: {
-      '@type': 'EducationalOrganization',
-      name: 'Cerebrum Biology Academy',
-      url: 'https://cerebrumbiologyacademy.com',
-      areaServed: {
-        '@type': 'City',
-        name: entry.city,
-        containedInPlace: { '@type': 'Country', name: 'India' },
-      },
-    },
-    educationalLevel: 'High School',
     about: 'Biology Olympiad - NSEB, INBO, IBO',
-    inLanguage: 'en',
-    offers: olympiadPricingProducts.map((p) => ({
-      '@type': 'Offer',
-      name: p.name,
-      price: p.priceUSD,
-      priceCurrency: 'USD',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: p.priceUSD,
-        priceCurrency: 'USD',
-        unitText: p.schemaUnitText,
-      },
-      availability: 'https://schema.org/InStock',
-      url: `${pageUrl}#pricing`,
-    })),
-  }
+    areaServed: { type: 'City', name: entry.city, containedIn: 'India' },
+  })
 }
 
 export default async function OlympiadCityPage({ params }: PageProps) {
@@ -133,6 +107,7 @@ export default async function OlympiadCityPage({ params }: PageProps) {
   }
 
   const courseSchema = buildCourseSchema(entry, pageUrl)
+  const howToSchema = nsebHowToSchema(pageUrl)
 
   return (
     <>
@@ -143,6 +118,10 @@ export default async function OlympiadCityPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <BreadcrumbSchema
         items={[

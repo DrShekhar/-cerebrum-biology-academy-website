@@ -6,6 +6,7 @@ import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { olympiadCourseSchema, iboPracticalHowToSchema } from '@/data/olympiads/schema-helpers'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
 import {
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const pageUrl = `${BASE}/biology-olympiad/${entry.slug}`
   const title = `${entry.acronym} Coaching | ${entry.fullName} | Biology Olympiad`
-  const description = `${entry.pitch} Campbell Biology coverage, past-paper drills, and IBO-medallist mentors for ${entry.country} students. ${entry.examWindow}.`
+  const description = `${entry.pitch} Campbell Biology coverage, past-paper drills, and senior olympiad tutors for ${entry.country} students. ${entry.examWindow}.`
 
   return {
     title,
@@ -77,35 +78,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 function buildCourseSchema(entry: CountryOlympiadEntry, pageUrl: string) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Course',
+  return olympiadCourseSchema({
     name: `${entry.acronym} Coaching Programme (${entry.country})`,
-    description: `${entry.acronym} (${entry.fullName}) preparation for ${entry.country} students. Campbell Biology coverage with past-paper drills, mock exams, and IBO medallist mentors.`,
+    description: `${entry.acronym} (${entry.fullName}) preparation for ${entry.country} students. Campbell Biology coverage with past-paper drills, mock exams, and senior olympiad tutors.`,
     url: pageUrl,
-    provider: {
-      '@type': 'EducationalOrganization',
-      name: 'Cerebrum Biology Academy',
-      url: 'https://cerebrumbiologyacademy.com',
-    },
-    educationalLevel: 'High School',
     about: `${entry.acronym} - ${entry.fullName}`,
-    inLanguage: 'en',
-    offers: olympiadPricingProducts.map((p) => ({
-      '@type': 'Offer',
-      name: p.name,
-      price: p.priceUSD,
-      priceCurrency: 'USD',
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: p.priceUSD,
-        priceCurrency: 'USD',
-        unitText: p.schemaUnitText,
-      },
-      availability: 'https://schema.org/InStock',
-      url: `${pageUrl}#pricing`,
-    })),
-  }
+    areaServed: { type: 'Country', name: entry.country },
+  })
 }
 
 export default async function CountryOlympiadPage({ params }: PageProps) {
@@ -127,6 +106,7 @@ export default async function CountryOlympiadPage({ params }: PageProps) {
   }
 
   const courseSchema = buildCourseSchema(entry, pageUrl)
+  const howToSchema = iboPracticalHowToSchema(pageUrl)
 
   return (
     <>
@@ -137,6 +117,10 @@ export default async function CountryOlympiadPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <BreadcrumbSchema
         items={[
@@ -256,10 +240,12 @@ export default async function CountryOlympiadPage({ params }: PageProps) {
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">
                   <Award className="h-5 w-5 text-green-700" />
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-slate-900">IBO medallist mentors</h3>
+                <h3 className="mt-4 text-lg font-semibold text-slate-900">
+                  Senior olympiad tutors
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Your 1:1 coach has stood on the IBO podium or trained a national team. Feedback is
-                  exam-paper specific, not theoretical.
+                  Your 1:1 coach is a senior biology tutor with deep olympiad-paper experience.
+                  Feedback is exam-paper specific, not theoretical.
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-6">

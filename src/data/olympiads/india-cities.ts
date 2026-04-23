@@ -36,7 +36,7 @@ const commonFaqsBase = (city: string) => [
   {
     question: `Do you offer offline Biology Olympiad coaching in ${city}?`,
     answer:
-      'Our Biology Olympiad programme runs primarily online across India so students from all cities can access the same IBO-medallist mentors and past-paper archive. Offline classroom coaching is available at our Gurugram, South Extension (Delhi), and Faridabad centres. Students in other cities join the online cohort.',
+      'Our Biology Olympiad programme runs primarily online across India so students from all cities can access the same senior biology tutors and past-paper archive. Offline classroom coaching is available at our Gurugram, South Extension (Delhi), and Faridabad centres. Students in other cities join the online cohort.',
   },
   {
     question: `Which schools in ${city} register students for NSEB and INBO?`,
@@ -46,7 +46,7 @@ const commonFaqsBase = (city: string) => [
   {
     question: `How much does Biology Olympiad coaching cost for ${city} students?`,
     answer:
-      'Complete Olympiad Year programme (9-12 months, covers NSEB and INBO): $4,500 reference price with INR auto-shown on the pricing section (approximately ₹3.8 lakh equivalent). 1:1 Elite Mentoring with an IBO medallist: $90 per hour. Small-Batch Weekend: $50 per hour. Pricing is identical across all India cities.',
+      'Complete Olympiad Year programme (9-12 months, covers NSEB and INBO): $4,500 reference price with INR auto-shown on the pricing section (approximately ₹3.8 lakh equivalent). 1:1 Elite Mentoring with a senior olympiad tutor: $90 per hour. Small-Batch Weekend: $50 per hour. Pricing is identical across all India cities.',
   },
 ]
 
@@ -57,9 +57,9 @@ export const olympiadCities: OlympiadCityEntry[] = [
     region: 'Delhi NCR',
     state: 'DL',
     pitch:
-      'Biology Olympiad coaching in Delhi — NSEB, INBO, IBO pathway with IBO-medallist mentors.',
+      'Biology Olympiad coaching in Delhi — NSEB, INBO, IBO pathway with senior olympiad tutors.',
     intro:
-      "Delhi has one of India's highest olympiad-qualifying student concentrations, with DPS RK Puram, Modern School, St Stephens feeder schools, Springdales, and Mount Carmel sending students to NSEB every November. Our programme runs online with Delhi-timezone live classes and offline at our South Extension centre. Complete Campbell Biology coverage, weekly past-paper drills, and IBO-medallist 1:1 mentoring.",
+      "Delhi has one of India's highest olympiad-qualifying student concentrations, with DPS RK Puram, Modern School, St Stephens feeder schools, Springdales, and Mount Carmel sending students to NSEB every November. Our programme runs online with Delhi-timezone live classes and offline at our South Extension centre. Complete Campbell Biology coverage, weekly past-paper drills, and 1:1 mentoring with senior biology tutors.",
     inCentre: { label: 'South Extension centre', href: '/biology-classes-delhi' },
     schoolCatchment: [
       'DPS RK Puram',

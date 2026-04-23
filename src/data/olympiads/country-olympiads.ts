@@ -91,7 +91,7 @@ export const countryOlympiads: CountryOlympiadEntry[] = [
       {
         question: 'Is NZIBO coaching available online for NZ students?',
         answer:
-          'Yes. Our programme runs fully online on NZ-friendly timings. Live classes are scheduled across NZ evenings with recordings for every session. 1:1 elite mentoring by IBO medallists is also NZ-timezone compatible.',
+          'Yes. Our programme runs fully online on NZ-friendly timings. Live classes are scheduled across NZ evenings with recordings for every session. 1:1 elite mentoring with senior olympiad tutors is also NZ-timezone compatible.',
       },
       {
         question: 'What does NZIBO coaching cost in New Zealand dollars?',
