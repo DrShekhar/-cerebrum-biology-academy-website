@@ -190,6 +190,63 @@ export default function Home() {
         <CoursesSection />
       </section>
 
+      {/* 4b. Biology Olympiads callout — cross-sell to olympiad funnel */}
+      <section className="content-visibility-auto-sm bg-slate-950 py-14 text-white md:py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-8 lg:grid-cols-5 lg:items-center lg:gap-12">
+            <div className="lg:col-span-3">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-green-400">
+                Beyond NEET
+              </p>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                Biology Olympiad coaching —
+                <br />
+                <span className="text-green-400">14 countries, one curriculum.</span>
+              </h2>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
+                NSEB, INBO, USABO, IBO, BBO, SBO and more. Campbell Biology coverage, 15 years of
+                past-paper drills, and 1:1 mentoring by IBO medallists. For Class 9-12 students
+                aiming for national and international olympiad teams.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  href="/biology-olympiads"
+                  className="inline-flex items-center gap-2 rounded-xl bg-green-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-400"
+                >
+                  Explore all olympiads
+                </Link>
+                <Link
+                  href="/nseb-coaching"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-green-400 hover:bg-white/10"
+                >
+                  NSEB (India) coaching
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 text-xs lg:col-span-2 sm:grid-cols-3">
+              {[
+                { label: '🇮🇳 INBO', href: '/inbo-coaching' },
+                { label: '🇺🇸 USABO', href: '/usabo-coaching' },
+                { label: '🌍 IBO', href: '/ibo-preparation' },
+                { label: '🇬🇧 BBO', href: '/bbo-preparation' },
+                { label: '🇸🇬 SBO', href: '/sbo-coaching' },
+                { label: '🇳🇿 NZIBO', href: '/biology-olympiad/new-zealand' },
+              ].map((o) => (
+                <Link
+                  key={o.href}
+                  href={o.href}
+                  className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center font-medium text-slate-200 transition-all hover:border-green-400/50 hover:text-white"
+                >
+                  {o.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 5. Faculty Section */}
       <section className="content-visibility-auto">
         <FacultySection />
