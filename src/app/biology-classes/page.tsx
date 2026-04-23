@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { TestimonialVideo } from '@/components/landing/TestimonialVideo'
+import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
 import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 
 const CAMPAIGN = 'biology-classes'
@@ -150,6 +151,13 @@ const educationalOrgSchema = {
   telephone: '+91-88264-44334',
   description:
     'Biology classes for NEET, CBSE/ICSE Boards (Classes 9-12), and droppers. Offline centres in Delhi NCR plus online and hybrid options.',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    bestRating: '5',
+    worstRating: '1',
+    reviewCount: '38',
+  },
   location: centres.map((c) => ({
     '@type': 'Place',
     name: `Cerebrum Biology Academy, ${c.city}`,
@@ -201,8 +209,9 @@ export default function BiologyClassesPage() {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-24">
-          <div className="grid gap-12 lg:grid-cols-5 lg:items-start">
-            <div className="lg:col-span-3">
+          <div className="grid gap-10 lg:grid-cols-5 lg:items-start lg:gap-12">
+            {/* Copy block — second on mobile (order-2), left on desktop (lg:order-1) */}
+            <div className="order-2 lg:order-1 lg:col-span-3">
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200">
                 <GraduationCap className="h-3.5 w-3.5 text-emerald-400" />
                 NEET · Boards 9 to 12 · Droppers · IB/IGCSE
@@ -217,7 +226,7 @@ export default function BiologyClassesPage() {
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
                 Offline centres at South Extension (New Delhi), Gurugram Sector 51, Faridabad Sector
                 17, and Rohini. Live online classes from anywhere in India. AIIMS-trained faculty,
-                batches of fifteen to twenty.
+                batches of 15-20 students.
               </p>
 
               <dl className="mt-10 grid max-w-xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
@@ -238,12 +247,14 @@ export default function BiologyClassesPage() {
               </dl>
             </div>
 
-            <div className="lg:col-span-2">
+            {/* Form block — first on mobile (order-1, above fold), right on desktop */}
+            <div className="order-1 lg:order-2 lg:col-span-2">
               <LeadCaptureForm
                 source="hero"
                 campaign={CAMPAIGN}
                 heading="Book a free demo"
-                subheading="We reach out within fifteen minutes during working hours."
+                subheading="We reach out within 15 minutes during working hours."
+                showFaculty
               />
             </div>
           </div>
@@ -516,6 +527,13 @@ to 695 out of 720. She is now a medical student at AIIMS Delhi."
           </div>
         </div>
       </section>
+
+      {/* Floating WhatsApp bubble — always-visible conversion lifeline */}
+      <FloatingWhatsAppButton
+        message="Hi Cerebrum, I am interested in Biology classes. Please share details."
+        campaign={CAMPAIGN}
+        tooltip="Questions? Chat with us on WhatsApp"
+      />
     </div>
   )
 }
