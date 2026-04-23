@@ -5,6 +5,7 @@ import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
+import { indiaOlympiadFAQs } from '@/data/olympiads/india-faqs'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
 
@@ -257,6 +258,8 @@ const faqs = [
     answer:
       'Your national biology olympiad is determined by where you are enrolled in school. Most English-speaking countries also allow applying to open international competitions. Tell us your country and school on the form and we will suggest the exact route (USABO Open, BBO, NSEB, etc.).',
   },
+  // India-specific registration + process FAQs for IN visitors (AEO)
+  ...indiaOlympiadFAQs,
 ]
 
 const faqSchema = {

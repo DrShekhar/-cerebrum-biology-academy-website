@@ -6,6 +6,8 @@
  * and major IB-heavy tier-2 cities.
  */
 
+import { indiaOlympiadFAQs } from './india-faqs'
+
 export interface OlympiadCityEntry {
   /** URL slug. */
   slug: string
@@ -48,6 +50,8 @@ const commonFaqsBase = (city: string) => [
     answer:
       'Complete Olympiad Year programme (9-12 months, covers NSEB and INBO): $4,500 reference price with INR auto-shown on the pricing section (approximately ₹3.8 lakh equivalent). 1:1 Elite Mentoring with a senior olympiad tutor: $90 per hour. Small-Batch Weekend: $50 per hour. Pricing is identical across all India cities.',
   },
+  // India-wide registration/process FAQs (shared across all city pages)
+  ...indiaOlympiadFAQs,
 ]
 
 export const olympiadCities: OlympiadCityEntry[] = [

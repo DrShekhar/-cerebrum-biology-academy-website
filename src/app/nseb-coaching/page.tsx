@@ -6,6 +6,7 @@ import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
 import { olympiadCourseSchema, nsebHowToSchema } from '@/data/olympiads/schema-helpers'
+import { indiaOlympiadFAQs } from '@/data/olympiads/india-faqs'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
 import { FloatingWhatsAppButton } from '@/components/landing/FloatingWhatsAppButton'
 
@@ -132,6 +133,8 @@ const faqs = [
     answer:
       'Yes. Our Complete Olympiad Year programme covers the full NSEB → INBO → OCSC → IBO pathway. Same mentor continues with the student through all four stages. See /inbo-coaching and /ibo-preparation for the next stages.',
   },
+  // India-specific registration + process FAQs (AEO-focused)
+  ...indiaOlympiadFAQs,
 ]
 
 const faqSchema = {
