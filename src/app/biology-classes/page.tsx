@@ -9,6 +9,8 @@ import {
   Clock,
 } from 'lucide-react'
 import { LeadCaptureForm } from '@/components/landing/LeadCaptureForm'
+import { TestimonialVideo } from '@/components/landing/TestimonialVideo'
+import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 
 const CAMPAIGN = 'biology-classes'
 
@@ -417,6 +419,49 @@ export default function BiologyClassesPage() {
               </details>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Student result — real video testimonial */}
+      <section className="border-b border-slate-200 bg-white py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
+              Student result
+            </p>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              Sadhna Sirin. 695 out of 720. AIIMS Delhi.
+            </h2>
+            <p className="mt-3 text-lg text-slate-600">
+              A Delhi-NCR NEET topper taught by Dr. Shekhar at Cerebrum. Her story in her own words.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <TestimonialVideo
+              youtubeId="bk6wQCh6b9w"
+              title="Sadhna Sirin, Delhi-NCR NEET 2023 Topper, Cerebrum Biology Academy"
+              caption="Sadhna walks through her NEET 2023 preparation with Cerebrum: how the small-batch
+format, NCERT-deep teaching, and Dr. Shekhar's mentorship moved her score from mock-level
+to 695 out of 720. She is now a medical student at AIIMS Delhi."
+              student={{
+                name: 'Sadhna Sirin',
+                score: 'NEET 2023 · 695 / 720',
+                nowAt: 'AIIMS Delhi (MBBS)',
+              }}
+            />
+          </div>
+
+          <VideoObjectSchema
+            name="Sadhna Sirin - Delhi NCR Topper NEET 2023 | Cerebrum Biology Academy"
+            description="Sadhna Sirin shares her NEET 2023 success story, scoring 695 out of 720 with guidance from Dr. Shekhar C Singh at Cerebrum Biology Academy. She is now a medical student at AIIMS Delhi."
+            thumbnailUrl="https://i.ytimg.com/vi/bk6wQCh6b9w/hqdefault.jpg"
+            uploadDate="2023-07-15"
+            duration="PT5M30S"
+            contentUrl="https://www.youtube.com/watch?v=bk6wQCh6b9w"
+            embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+            interactionStatistic={{ watchCount: 5000 }}
+          />
         </div>
       </section>
 
