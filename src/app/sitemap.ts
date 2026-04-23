@@ -2334,6 +2334,79 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.88,
     },
+    // Olympiad — India city pages (metro cluster)
+    {
+      url: `${baseUrl}/biology-olympiads/india/delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/south-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/faridabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/rohini`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/bangalore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/hyderabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/chennai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/pune`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/biology-olympiads/india/kolkata`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
     // Olympiad — India regional (Gurugram cluster)
     {
       url: `${baseUrl}/nseb-coaching-gurugram`,

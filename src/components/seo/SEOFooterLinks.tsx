@@ -244,6 +244,19 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'Malaysia (MBO)', href: '/biology-olympiad/malaysia' },
     ],
   },
+  {
+    heading: 'Olympiads — India Cities',
+    links: [
+      { label: 'Delhi', href: '/biology-olympiads/india/delhi' },
+      { label: 'South Delhi', href: '/biology-olympiads/india/south-delhi' },
+      { label: 'Gurugram', href: '/biology-olympiads/india/gurugram' },
+      { label: 'Noida', href: '/biology-olympiads/india/noida' },
+      { label: 'Faridabad', href: '/biology-olympiads/india/faridabad' },
+      { label: 'Mumbai', href: '/biology-olympiads/india/mumbai' },
+      { label: 'Bangalore', href: '/biology-olympiads/india/bangalore' },
+      { label: 'Chennai', href: '/biology-olympiads/india/chennai' },
+    ],
+  },
 ]
 
 export function SEOFooterLinks() {

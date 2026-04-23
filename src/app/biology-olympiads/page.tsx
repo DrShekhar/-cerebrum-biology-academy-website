@@ -421,6 +421,49 @@ export default function BiologyOlympiadsHubPage() {
           </div>
         </section>
 
+        {/* India cities */}
+        <section className="border-b border-slate-200 py-14 md:py-20">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                India olympiad coaching, city by city.
+              </h2>
+              <p className="mt-3 text-lg text-slate-600">
+                Local school feeders, offline centre details, and commute context for 12 Indian
+                cities. Online programme is identical nationally; offline options listed per city.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {[
+                { city: 'Delhi', slug: 'delhi', region: 'Delhi NCR' },
+                { city: 'South Delhi', slug: 'south-delhi', region: 'Delhi NCR' },
+                { city: 'Gurugram', slug: 'gurugram', region: 'Delhi NCR' },
+                { city: 'Noida', slug: 'noida', region: 'Delhi NCR' },
+                { city: 'Faridabad', slug: 'faridabad', region: 'Delhi NCR' },
+                { city: 'Rohini', slug: 'rohini', region: 'Delhi NCR' },
+                { city: 'Mumbai', slug: 'mumbai', region: 'West India' },
+                { city: 'Bangalore', slug: 'bangalore', region: 'South India' },
+                { city: 'Hyderabad', slug: 'hyderabad', region: 'South India' },
+                { city: 'Chennai', slug: 'chennai', region: 'South India' },
+                { city: 'Pune', slug: 'pune', region: 'West India' },
+                { city: 'Kolkata', slug: 'kolkata', region: 'East India' },
+              ].map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/biology-olympiads/india/${c.slug}`}
+                  className="group rounded-xl border border-slate-200 bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-green-300 hover:shadow-sm"
+                >
+                  <p className="text-xs uppercase tracking-wider text-slate-500">{c.region}</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-900 group-hover:text-green-700">
+                    {c.city}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Why us */}
         <section className="border-b border-slate-200 bg-slate-50 py-14 md:py-20">
           <div className="mx-auto max-w-6xl px-6">
