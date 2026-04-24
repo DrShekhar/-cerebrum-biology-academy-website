@@ -26,7 +26,6 @@ import {
   trackFooterSectionToggle,
   trackFooterSubscribe,
 } from '@/lib/analytics/footerTracking'
-import { SEOFooterLinks } from '@/components/seo/SEOFooterLinks'
 
 function FooterSection({
   title,
@@ -468,9 +467,6 @@ export const Footer = memo(function Footer() {
             </div>
           </div>
         </div>
-
-        {/* SEO link grid: Biology Olympiads, IB Biology, NEET coaching cities, etc. */}
-        <SEOFooterLinks />
       </footer>
 
       <div
