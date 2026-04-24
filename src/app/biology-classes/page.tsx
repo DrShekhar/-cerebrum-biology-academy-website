@@ -238,18 +238,20 @@ export default function BiologyClassesPage() {
 
               <dl className="mt-10 grid max-w-xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
                 <div>
-                  <dt className="text-xs uppercase tracking-wider text-slate-400">Success rate</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-white">98%</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-slate-400">AIIMS selects</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-white">67+</dd>
+                  <dt className="text-xs uppercase tracking-wider text-slate-400">Batch size</dt>
+                  <dd className="mt-1 text-2xl font-semibold text-white">15-20</dd>
                 </div>
                 <div>
                   <dt className="text-xs uppercase tracking-wider text-slate-400">
-                    Students taught
+                    Delivery modes
                   </dt>
-                  <dd className="mt-1 text-2xl font-semibold text-white">10,000+</dd>
+                  <dd className="mt-1 text-2xl font-semibold text-white">3</dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-slate-400">
+                    Centres in NCR
+                  </dt>
+                  <dd className="mt-1 text-2xl font-semibold text-white">4</dd>
                 </div>
               </dl>
             </div>
@@ -276,8 +278,8 @@ export default function BiologyClassesPage() {
               Three ways to study with us.
             </h2>
             <p className="mt-3 text-lg text-slate-600">
-              Same faculty, same curriculum, same test series across all three modes. Pick the
-              format that fits your commute and schedule.
+              Online, offline, and hybrid all use the same curriculum and weekly tests. The only
+              difference is how you attend.
             </p>
           </div>
 
