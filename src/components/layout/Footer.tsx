@@ -477,7 +477,7 @@ export const Footer = memo(function Footer() {
           href="tel:+918826444334"
           onClick={() => handlePhoneClickTracking('sticky-cta', 'primary', 100)}
           className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 active:bg-green-800 text-white font-semibold py-3.5 transition-colors"
-          aria-label="Call +91 88264 44334"
+          aria-label="Call Now — +91 88264 44334"
         >
           <Phone className="w-5 h-5" aria-hidden="true" />
           <span>Call Now — +91 88264 44334</span>

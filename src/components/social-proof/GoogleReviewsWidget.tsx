@@ -133,8 +133,8 @@ export function GoogleReviewsWidget({
     <section className={`py-16 bg-gray-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center animate-fade-in-up">
-          <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <Star className="w-4 h-4 mr-2 fill-yellow-600" />
+          <div className="inline-flex items-center bg-yellow-100 text-yellow-900 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Star className="w-4 h-4 mr-2 fill-yellow-700" />
             Google Reviews
           </div>
 

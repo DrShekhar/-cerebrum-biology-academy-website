@@ -174,6 +174,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             </a>
             <a
               href="tel:+918826444334"
+              aria-label="Call Cerebrum Biology Academy at +91 88264 44334"
               className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/40 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400 hover:scale-[1.02] active:scale-[0.98] group"
               style={{
                 backgroundColor: '#22c55e',
