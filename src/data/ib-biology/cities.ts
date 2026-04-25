@@ -395,7 +395,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     region: 'Tokyo / Kanto',
     timezoneAbbr: 'JST',
     currency: { code: 'JPY', symbol: '¥' },
-    pricing: { perHour: 10000, perHourText: '¥9,000–13,000/hr' },
+    pricing: { perHour: 12500, perHourText: '¥10,000–15,000/hr' },
     ibSchools: [
       'American School in Japan (ASIJ)',
       'Tokyo International School',
@@ -541,7 +541,7 @@ export const cities: Record<CitySlug, CityConfig> = {
     region: 'California',
     timezoneAbbr: 'PST/PDT',
     currency: { code: 'USD', symbol: '$' },
-    pricing: { perHour: 80, perHourText: '$70–100/hr' },
+    pricing: { perHour: 105, perHourText: '$85–125/hr' },
     ibSchools: [
       'French American International School (San Francisco)',
       'San Francisco International High School',
