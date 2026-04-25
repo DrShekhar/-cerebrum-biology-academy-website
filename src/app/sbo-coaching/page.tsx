@@ -197,53 +197,6 @@ const testimonials = [
   },
 ]
 
-const pricing = [
-  {
-    name: 'SBO Foundation',
-    price: 'SGD 799',
-    priceUSD: '$599 USD',
-    duration: '3 months',
-    features: [
-      'Complete Campbell Biology coverage',
-      'Weekly live classes (2 hrs/week)',
-      'SBO past papers (10 years)',
-      'WhatsApp doubt support',
-      'Performance tracking',
-    ],
-    popular: false,
-  },
-  {
-    name: 'SBO Intensive',
-    price: 'SGD 1,399',
-    priceUSD: '$1,049 USD',
-    duration: '6 months',
-    features: [
-      'Everything in Foundation',
-      '1-on-1 mentoring sessions',
-      'Extended live classes (4 hrs/week)',
-      'Mock tests with analysis',
-      'Practical exam preparation',
-      'IBO-level problem solving',
-    ],
-    popular: true,
-  },
-  {
-    name: 'SBO Elite',
-    price: 'SGD 2,299',
-    priceUSD: '$1,725 USD',
-    duration: '12 months',
-    features: [
-      'Everything in Intensive',
-      'Daily doubt clearing',
-      'Advanced practical training',
-      'Priority faculty access',
-      'International competition prep',
-      'Lifetime recorded access',
-    ],
-    popular: false,
-  },
-]
-
 export default function SBOCoachingPage() {
   const handleWhatsAppClick = (source: string) => {
     const message = `Hi! I'm from Singapore and interested in SBO coaching. I'd like to know more about your program. [Source: ${source}]`
@@ -260,9 +213,7 @@ export default function SBOCoachingPage() {
       <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <div className="flex items-center justify-center gap-2 mb-4">
               <MapPin className="h-5 w-5 text-red-500" />
               <span className="text-red-400 font-medium">For Students in Singapore</span>
@@ -295,9 +246,7 @@ export default function SBOCoachingPage() {
           </div>
 
           {/* Stats */}
-          <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fadeInUp"
-          >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fadeInUp">
             {[
               { value: '35+', label: 'SBO Medalists Trained' },
               { value: '92%', label: 'Round 2 Selection' },
@@ -326,10 +275,7 @@ export default function SBOCoachingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {sboPathway.map((stage, index) => (
-              <div
-                key={index}
-                className="relative animate-fadeInUp"
-              >
+              <div key={index} className="relative animate-fadeInUp">
                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 h-full">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                     <stage.icon className="h-6 w-6 text-red-600" />
@@ -463,77 +409,8 @@ export default function SBOCoachingPage() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">SBO Coaching Plans</h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that best fits your preparation timeline
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative rounded-2xl p-8 ${
-                  plan.popular
-                    ? 'bg-white ring-4 ring-yellow-400'
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3
-                    className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-gray-900' : 'text-white'}`}
-                  >
-                    {plan.name}
-                  </h3>
-                  <div
-                    className={`text-4xl font-bold ${plan.popular ? 'text-gray-900' : 'text-white'}`}
-                  >
-                    {plan.price}
-                  </div>
-                  <div className={`text-sm ${plan.popular ? 'text-gray-500' : 'text-gray-400'}`}>
-                    {plan.priceUSD} / {plan.duration}
-                  </div>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <CheckCircle
-                        className={`h-5 w-5 mr-2 flex-shrink-0 ${plan.popular ? 'text-green-500' : 'text-green-400'}`}
-                      />
-                      <span className={plan.popular ? 'text-gray-600' : 'text-gray-300'}>
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <button
-                  onClick={() =>
-                    handleWhatsAppClick(`pricing-${plan.name.toLowerCase().replace(' ', '-')}`)
-                  }
-                  className={`w-full py-3 rounded-lg font-semibold transition-all ${
-                    plan.popular
-                      ? 'bg-green-500 hover:bg-green-600 text-white'
-                      : 'bg-white/20 hover:bg-white/30 text-white border border-white/30'
-                  }`}
-                >
-                  <MessageCircle className="h-5 w-5 inline mr-2" />
-                  Enquire on WhatsApp
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Pricing section rendered by layout.tsx via GeoAwareSharedPricingMatrix
+          (server-side geo detection — appears after this page's content) */}
 
       {/* FAQs */}
       <section className="py-20 bg-white">
@@ -548,10 +425,7 @@ export default function SBOCoachingPage() {
           </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -584,15 +458,22 @@ export default function SBOCoachingPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Practice SBO MCQs Online</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Prepare for the Singapore Biology Olympiad with our free MCQ practice tool — 5,900+ Campbell
-            Biology level questions with instant feedback and detailed explanations.
+            Prepare for the Singapore Biology Olympiad with our free MCQ practice tool — 5,900+
+            Campbell Biology level questions with instant feedback and detailed explanations.
           </p>
           <Link
             href="/neet-biology-mcq?source=olympiad"
             className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
           >
             Start SBO Practice
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
           </Link>
         </div>
       </section>

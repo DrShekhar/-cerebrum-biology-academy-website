@@ -1,64 +1,69 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client'
 
-import { useState } from "react";
-import { SmartWhatsAppCTA } from "@/components/conversion/SmartWhatsAppCTA";
-import { VideoTestimonialsSection } from "@/components/testimonials/VideoTestimonialsSection";
-import { PricingSection, CostComparisonSection } from "@/components/city";
-import { RelatedCityLinks } from "@/components/seo/RelatedCityLinks";
+import { useState } from 'react'
+import { SmartWhatsAppCTA } from '@/components/conversion/SmartWhatsAppCTA'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { PricingSection, CostComparisonSection } from '@/components/city'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
+  id: string
+  question: string
+  answer: string
 }
 
 const faqData: FAQItem[] = [
   {
-        id: "0",
-        question: "Why is Houston a good choice for NEET prep?",
-        answer: "Houston's Texas Medical Center and huge Indian tech community create perfect environment. Many doctors here mentor our students, and Houston offers CMH pathways."
-      },
-      {
-        id: "1",
-        question: "What are the class timings for Houston?",
-        answer: "Houston batches: 7 AM - 10 AM IST (8:30 PM - 11:30 PM CST previous day) or 11 PM - 2 AM IST (1:30 PM - 4:30 PM CST)."
-      },
-      {
-        id: "2",
-        question: "How does AP Biology integrate with NEET?",
-        answer: "NEET biology goes much deeper than AP Bio. Students taking both find strong synergy; AP Bio topics are practice for NEET depth."
-      },
-      {
-        id: "3",
-        question: "Is the Indian tech community supportive?",
-        answer: "Yes! 90,000+ Indians in Houston, mostly in tech/medicine. Strong mentorship culture with regular meetups and expert guidance available."
-      },
-      {
-        id: "4",
-        question: "What's Houston batch's success rate?",
-        answer: "98% success with 50+ students in top AIIMS/NIT colleges. Average NEET score: 625+ with excellent CMH/medical school pathway options."
-      },
-      {
-        id: "5",
-        question: "Do you help with Texas Medical pathway after NEET?",
-        answer: "Absolutely! We guide on NEET + USMLE pathway for practicing medicine in USA, or direct admission to Indian medical colleges."
-      }
-];
+    id: '0',
+    question: 'Can NEET help me get into a US medical school?',
+    answer:
+      'No. US medical schools use MCAT + a US undergraduate (pre-med) degree. NEET is the Indian medical entrance exam. Indian-American students in Houston typically take NEET to access the 15% NRI quota at Indian medical colleges — a direct-to-MBBS path at lower cost than US med school.',
+  },
+  {
+    id: '1',
+    question: 'What are the class timings for Houston students?',
+    answer:
+      'Live weekday classes run 9:30 PM–12:00 AM CST (8:00–10:30 PM IST + 10.5 hr offset). Weekend batches 8:00–11:00 AM CST. All sessions are recorded.',
+  },
+  {
+    id: '2',
+    question: 'Can I prepare for NEET while taking AP Biology?',
+    answer:
+      'Yes — AP Biology and NEET Biology overlap significantly (cell biology, genetics, physiology, ecology). NEET goes deeper on human physiology and adds NCERT-specific depth. Students running AP Bio and NEET prep in parallel typically find both easier.',
+  },
+  {
+    id: '3',
+    question: 'Which Houston-area schools do you support?',
+    answer:
+      'Indian-American students from Houston public magnets (Bellaire HS, DeBakey HSHP, Carnegie Vanguard) and high-Indian-density suburban schools in Sugar Land (Stephen F. Austin, Clements, Dulles, Travis), Katy, and Pearland. Any US high school curriculum is fine — NEET is NCERT-based.',
+  },
+  {
+    id: '4',
+    question: 'Do you help with the NRI quota for Indian MBBS admissions?',
+    answer:
+      'Yes — on the academic and procedural side. We explain which Indian colleges offer NRI seats, typical NEET cut-offs, and the admission timeline. We do not provide visa, immigration, or legal documentation services — those are handled by your family or licensed consultants.',
+  },
+  {
+    id: '5',
+    question: 'Where does NEET actually get taken from the US?',
+    answer:
+      'There is no NEET exam centre inside the United States. Most Houston candidates fly to Dubai or India to sit NEET-UG. We help enrolled students plan registration, exam-city selection, and travel.',
+  },
+]
 
 export function PageContent() {
-  const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
+  const [expandedFaq, setExpandedFaq] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            NEET Coaching in Houston, USA
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">NEET Coaching in Houston, USA</h1>
           <p className="text-xl mb-6 text-blue-100">
-            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh — AIIMS Alumnus, India&apos;s Top Biology Teacher, Best Biology Educator Globally.
+            Online NEET Biology coaching for Indian-American students across Houston, Sugar Land,
+            Pearland and Katy. AP Biology + NEET dual prep. Live CST/CDT classes.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -80,26 +85,22 @@ export function PageContent() {
       {/* Quick Stats */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-blue-600">98%</div>
-              <div className="text-gray-700 mt-2">Success Rate</div>
+              <div className="text-3xl font-bold text-blue-600">CST/CDT</div>
+              <div className="text-gray-700 mt-2">Live class timezone</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-blue-600">600+</div>
-              <div className="text-gray-700 mt-2">Avg. NEET Score</div>
+              <div className="text-3xl font-bold text-blue-600">~150k</div>
+              <div className="text-gray-700 mt-2">Indian-American in Houston metro</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-blue-600">50+</div>
-              <div className="text-gray-700 mt-2">Students in AIIMS</div>
+              <div className="text-3xl font-bold text-blue-600">AP Bio</div>
+              <div className="text-gray-700 mt-2">Dual prep supported</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-blue-600">15-20</div>
-              <div className="text-gray-700 mt-2">Students Per Batch</div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-3xl font-bold text-blue-600">90,000</div>
-              <div className="text-gray-700 mt-2">Indian Community</div>
+              <div className="text-3xl font-bold text-blue-600">NRI quota</div>
+              <div className="text-gray-700 mt-2">MBBS India guidance</div>
             </div>
           </div>
         </div>
@@ -113,19 +114,22 @@ export function PageContent() {
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Expert Mentorship</h3>
               <p className="text-gray-700">
-                Learn directly from Dr. Shekhar C Singh — AIIMS Alumnus, India's Top Biology Teacher for NEET & Olympiads, with 15+ years of medical education expertise.
+                Dr. Shekhar C Singh (AIIMS alum) leads the Biology programme. Teaching aligned with
+                NCERT and NEET-UG pattern.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Localized Curriculum</h3>
               <p className="text-gray-700">
-                Houston-specific content aligned with local education boards and timezone optimization.
+                Houston-specific content aligned with local education boards and timezone
+                optimization.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold mb-2">Community Support</h3>
               <p className="text-gray-700">
-                Join a vibrant Houston community of NEET aspirants with peer mentorship and study groups.
+                Join a vibrant Houston community of NEET aspirants with peer mentorship and study
+                groups.
               </p>
             </div>
             <div className="border-l-4 border-blue-600 pl-6">
@@ -156,44 +160,65 @@ export function PageContent() {
           <h2 className="text-3xl font-bold mb-12 text-center">Class Timings for Houston</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-blue-600">Morning Batch</h3>
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Weekday Live Classes</h3>
               <p className="text-gray-700 mb-2">
-                <span className="font-semibold">IST:</span> 7 AM - 10 AM
+                <span className="font-semibold">Houston (CST):</span> 9:30 PM – 12:00 AM
               </p>
-              <p className="text-gray-700">
-                <span className="font-semibold">Local CST/CDT:</span> See meta timings
+              <p className="text-gray-700 mb-2">
+                <span className="font-semibold">Houston (CDT):</span> 10:30 PM – 1:00 AM
               </p>
-              <p className="text-gray-600 mt-4">Ideal for students with evening commitments</p>
+              <p className="text-gray-600 mt-4">
+                Recordings available next morning if class times don&apos;t fit.
+              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-blue-600">Evening Batch</h3>
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Weekend Doubt Clearing</h3>
               <p className="text-gray-700 mb-2">
-                <span className="font-semibold">IST:</span> 6 PM - 9 PM
+                <span className="font-semibold">Houston (CST):</span> 8:00 AM – 11:00 AM
               </p>
-              <p className="text-gray-700">
-                <span className="font-semibold">Local CST/CDT:</span> See meta timings
+              <p className="text-gray-700 mb-2">
+                <span className="font-semibold">Houston (CDT):</span> 9:00 AM – 12:00 PM
               </p>
-              <p className="text-gray-600 mt-4">Perfect for students balancing school/college</p>
+              <p className="text-gray-600 mt-4">Sat &amp; Sun, optional attendance.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Top Schools in City */}
+      {/* Schools we support */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Top Schools in Houston</h2>
-          <p className="text-center text-gray-600 mb-8">
-            Many students from these prestigious institutions join our NEET coaching:
+          <h2 className="text-3xl font-bold mb-4 text-center">Houston-area schools we support</h2>
+          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            We work with Indian-American students across Houston public magnets and
+            high-Indian-density suburban schools in Sugar Land, Katy, and Pearland.
           </p>
           <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <li key="0">Kinkaid School</li>
-                  <li key="1">St. John&apos;s School</li>
-                  <li key="2">Bellaire High School IB</li>
-                  <li key="3">Awty International School</li>
-                  <li key="4">The Woodlands High School</li>
-            </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">Houston public magnets</h3>
+                <ul className="space-y-1 text-gray-700">
+                  <li>Bellaire High School</li>
+                  <li>DeBakey High School for Health Professions</li>
+                  <li>Carnegie Vanguard High School</li>
+                  <li>Michael E. DeBakey Academy</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">Sugar Land / Katy / Pearland</h3>
+                <ul className="space-y-1 text-gray-700">
+                  <li>Stephen F. Austin HS (Sugar Land)</li>
+                  <li>Clements HS (Sugar Land)</li>
+                  <li>Dulles HS &amp; Travis HS</li>
+                  <li>Katy HS, Seven Lakes HS, Tompkins HS</li>
+                  <li>Dawson HS &amp; Glenda Dawson HS (Pearland)</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-sm text-gray-500 mt-6 text-center">
+              Any US high school curriculum (AP Bio, IB, on-level) is fine — NEET is NCERT-based and
+              we bridge the gap.
+            </p>
           </div>
         </div>
       </section>
@@ -225,8 +250,8 @@ export function PageContent() {
       {/* WhatsApp CTA 2 */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
-          <SmartWhatsAppCTA 
-            title="Still Have Questions?" 
+          <SmartWhatsAppCTA
+            title="Still Have Questions?"
             message="Chat with our counselors on WhatsApp for instant guidance"
           />
         </div>
@@ -240,16 +265,13 @@ export function PageContent() {
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqData.map((item) => (
-              <div
-                key={item.id}
-                className="border border-gray-200 rounded-lg"
-              >
+              <div key={item.id} className="border border-gray-200 rounded-lg">
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === item.id ? null : item.id)}
                   className="w-full px-6 py-4 text-left font-semibold text-gray-800 hover:bg-gray-50 flex justify-between items-center"
                 >
                   {item.question}
-                  <span className="text-blue-600">{expandedFaq === item.id ? "-" : "+"}</span>
+                  <span className="text-blue-600">{expandedFaq === item.id ? '-' : '+'}</span>
                 </button>
                 {expandedFaq === item.id && (
                   <div className="px-6 py-4 bg-gray-50 text-gray-700 border-t border-gray-200">
@@ -265,8 +287,8 @@ export function PageContent() {
       {/* WhatsApp CTA 3 */}
       <section className="py-8 px-4 bg-blue-50">
         <div className="max-w-6xl mx-auto">
-          <SmartWhatsAppCTA 
-            title="Ready to Start Your NEET Journey?" 
+          <SmartWhatsAppCTA
+            title="Ready to Start Your NEET Journey?"
             message="Book your free counseling session now"
             variant="highlight"
           />
@@ -277,18 +299,17 @@ export function PageContent() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">NEET Coaching in Other Cities</h2>
-          <RelatedCityLinks currentCity="neet-coaching-houston-usa" />
+          <RelatedCityLinks currentCity="houston" />
         </div>
       </section>
 
       {/* Final CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Join Our Successful NEET Students
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Join Our Successful NEET Students</h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start your preparation with India&apos;s most trusted NEET coaching. Limited seats available in Houston batch.
+            Start your preparation with India&apos;s most trusted NEET coaching. Limited seats
+            available in Houston batch.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -307,5 +328,5 @@ export function PageContent() {
         </div>
       </section>
     </div>
-  );
+  )
 }

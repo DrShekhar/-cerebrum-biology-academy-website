@@ -1,150 +1,205 @@
-import { Suspense } from 'react';
-import SmartWhatsAppCTA from '@/components/conversion/SmartWhatsAppCTA';
-import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection';
-import LocalitySchema from '@/components/seo/LocalitySchema';
-import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks';
-import { PricingSection } from '@/components/city/PricingSection';
-import { CostComparisonSection } from '@/components/city/CostComparisonSection';
+'use client'
 
-export default function PageContent() {
-  const cityData = {
-    name: 'Salalah',
-    country: 'Oman',
-    slug: 'neet-coaching-salalah-oman',
-    coordinates: {
-      latitude: 17.0151,
-      longitude: 54.0924,
-    },
-    timezone: 'GST (UTC+4)',
-    community: 'Growing Indian community',
-  };
+import Link from 'next/link'
+import {
+  Globe,
+  Clock,
+  GraduationCap,
+  MapPin,
+  CheckCircle,
+  Phone,
+  Calendar,
+  BookOpen,
+  Users,
+} from 'lucide-react'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
-  const faqs = [
-    {
-      question: 'Why choose Cerebrum Biology Academy for NEET coaching in Salalah, Oman?',
-      answer: 'Cerebrum Biology Academy offers a 98% success rate with personalized coaching tailored to the Oman educational context. Our expert faculty, led by Dr. Shekhar C Singh, uses evidence-based teaching methods proven to maximize student performance.',
-    },
-    {
-      question: 'What is the course duration for NEET preparation in Salalah?',
-      answer: 'Our comprehensive NEET coaching program is designed for flexibility. We offer both intensive 12-month programs and accelerated 6-month tracks, depending on your current level and target timeline.',
-    },
-    {
-      question: 'Are there Oman board-specific coaching modules?',
-      answer: 'Yes, we provide curriculum customization for Oman boards while maintaining NEET alignment. Our biology-focused approach ensures mastery of all concepts required for top scores.',
-    },
-    {
-      question: 'What support do students from Salalah receive during the coaching?',
-      answer: 'Beyond classroom instruction, students get 1-on-1 mentoring, doubt-clearing sessions, mock tests, and personalized study schedules. We also provide nutrition and stress management guidance.',
-    },
-    {
-      question: 'How affordable is NEET coaching in Salalah?',
-      answer: 'Our pricing is competitive and transparent with no hidden charges. We offer flexible payment plans and scholarships for merit students. Contact us for customized packages.',
-    },
-    {
-      question: "Can I join from Salalah if I'm still in Grade 10 or 11?",
-      answer: 'Absolutely! Early-bird enrollment gives students a significant advantage. We offer foundational courses for Grade 10-11 students to build strong fundamentals before intensive NEET prep.',
-    },
-  ];
+interface PageContentProps {
+  faqs: Array<{ q: string; a: string }>
+}
 
+export default function PageContent({ faqs }: PageContentProps) {
   return (
-    <main>
-      <section className="hero-section">
-        <div className="container">
-          <h1>NEET Coaching in Salalah, Oman</h1>
-          <p className="lead">
-            Salalah, Oman's second-largest city, offers a unique educational experience with personalized coaching and a growing Indian community. Cerebrum Biology Academy brings expert NEET coaching to Salalah with a proven 98% success rate and personalized learning paths.
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50">
+      {/* Hero */}
+      <section className="relative py-16 bg-gradient-to-r from-blue-700 via-blue-600 to-teal-700 text-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1 text-sm mb-4">
+            <Globe className="w-4 h-4" />
+            <span>Online NEET Biology for Salalah students</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            NEET Biology Coaching in
+            <br />
+            <span className="text-blue-200">Salalah, Oman</span>
+          </h1>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">
+            Live online NEET Biology classes for Indian students in Salalah. Muscat NEET exam centre
+            support. Class 9–12 plus droppers.
           </p>
-          
-          <div className="info-grid">
-            <div className="info-card">
-              <h3>Community Size</h3>
-              <p>Growing Indian community</p>
-            </div>
-            <div className="info-card">
-              <h3>Timezone</h3>
-              <p>GST (UTC+4)</p>
-            </div>
-            <div className="info-card">
-              <h3>Key Schools</h3>
-              <p>Indian School Salalah, Salalah Academy, Dhofar International School & more</p>
-            </div>
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <Link
+              href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Salalah%20and%20want%20a%20free%20NEET%20Biology%20demo"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
+            >
+              <Phone className="w-5 h-5" /> WhatsApp for Free Demo
+            </Link>
+            <Link
+              href="#pricing"
+              className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              View Pricing
+            </Link>
           </div>
-
-          <SmartWhatsAppCTA 
-            ctaText="Get NEET Coaching Details"
-            message="Hi! I'm interested in NEET coaching in Salalah, Oman."
-          />
-        </div>
-      </section>
-
-      <section className="highlights-section">
-        <div className="container">
-          <h2>Why Salalah for NEET Coaching?</h2>
-          <p>Monsoon season advantage (khareef), smaller community, personalized attention, unique climate</p>
-          <ul>
-              <li>Indian School Salalah</li>
-              <li>Salalah Academy</li>
-              <li>Dhofar International School</li>
-              <li>Salalah Private School</li>
-          </ul>
-        </div>
-      </section>
-
-      <Suspense fallback={<div>Loading testimonials...</div>}>
-        <VideoTestimonialsSection city="Salalah" country="Oman" />
-      </Suspense>
-
-      <section className="faq-section">
-        <div className="container">
-          <h2>FAQs About NEET Coaching in Salalah</h2>
-          <div className="faq-items">
-            {faqs.map((faq, idx) => (
-              <details key={idx} className="faq-item">
-                <summary>{faq.question}</summary>
-                <p>{faq.answer}</p>
-              </details>
-            ))}
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <span className="flex items-center gap-1">
+              <CheckCircle className="w-4 h-4" /> GST (UTC+4) live classes
+            </span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="w-4 h-4" /> Muscat exam centre
+            </span>
+            <span className="flex items-center gap-1">
+              <CheckCircle className="w-4 h-4" /> Class 9–12 + droppers
+            </span>
           </div>
         </div>
       </section>
 
-      <SmartWhatsAppCTA 
-        ctaText="Schedule Your Free Counseling"
-        message="I'd like to schedule a free NEET counseling session. I'm from Salalah, Oman."
-      />
-
-      <Suspense fallback={<div>Loading pricing...</div>}>
-        <PricingSection city="Salalah" />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading cost comparison...</div>}>
-        <CostComparisonSection city="Salalah" />
-      </Suspense>
-
-      <section className="cta-final">
-        <div className="container">
-          <h2>Start Your NEET Success Journey in Salalah</h2>
-          <p>Dr. Shekhar C Singh and the Cerebrum Biology Academy team are ready to guide you to NEET success.</p>
-          
-          <SmartWhatsAppCTA 
-            ctaText="Connect on WhatsApp Now"
-            message="Hi Dr. Shekhar! I want to enroll in NEET coaching. I'm based in Salalah, Oman."
-          />
+      {/* Key context */}
+      <section className="py-12 max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+            <p className="text-lg font-bold">4:00 PM GST</p>
+            <p className="text-sm text-gray-500">Typical class start</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <MapPin className="w-8 h-8 text-green-600 mx-auto mb-2" />
+            <p className="text-lg font-bold">~1,000 km</p>
+            <p className="text-sm text-gray-500">Salalah → Muscat NEET centre</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <BookOpen className="w-8 h-8 text-teal-600 mx-auto mb-2" />
+            <p className="text-lg font-bold">CBSE · ICSE · IB</p>
+            <p className="text-sm text-gray-500">Boards supported</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <Users className="w-8 h-8 text-yellow-600 mx-auto mb-2" />
+            <p className="text-lg font-bold">Small batches</p>
+            <p className="text-sm text-gray-500">Live + recorded access</p>
+          </div>
         </div>
       </section>
 
-      <Suspense fallback={<div>Loading related cities...</div>}>
-        <RelatedCityLinks currentCity="Salalah" />
-      </Suspense>
+      {/* Why Salalah students join */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            Why Salalah students join Cerebrum
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-xl border border-blue-100 bg-blue-50">
+              <GraduationCap className="w-8 h-8 text-blue-600 mb-3" />
+              <h3 className="font-bold text-lg mb-2">AIIMS-led Biology faculty</h3>
+              <p className="text-gray-600">
+                Dr. Shekhar C Singh (AIIMS alum) leads the Biology programme. Teaching aligned with
+                NCERT and the NEET-UG pattern.
+              </p>
+            </div>
+            <div className="p-6 rounded-xl border border-green-100 bg-green-50">
+              <Clock className="w-8 h-8 text-green-600 mb-3" />
+              <h3 className="font-bold text-lg mb-2">GST (UTC+4) friendly</h3>
+              <p className="text-gray-600">
+                Live classes run after school hours in Salalah. Every session is recorded, so
+                khareef travel or family trips never interrupt prep.
+              </p>
+            </div>
+            <div className="p-6 rounded-xl border border-teal-100 bg-teal-50">
+              <Globe className="w-8 h-8 text-teal-600 mb-3" />
+              <h3 className="font-bold text-lg mb-2">NRI quota guidance</h3>
+              <p className="text-gray-600">
+                Academic prep plus clarity on how the 15% NRI MBBS quota works in India. We do not
+                provide visa or legal services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <LocalitySchema 
-        city="Salalah"
-        country="Oman"
-        coordinates={{
-          latitude: 17.0151,
-          longitude: 54.0924,
-        }}
-      />
-    </main>
-  );
+      {/* Exam logistics callout */}
+      <section className="py-12 bg-blue-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="bg-white rounded-2xl shadow-md p-8 border border-blue-100">
+            <div className="flex items-start gap-4">
+              <MapPin className="w-8 h-8 text-blue-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold mb-2">NEET exam centre logistics</h3>
+                <p className="text-gray-700 mb-3">
+                  Oman has a single official NTA NEET exam centre in <strong>Muscat</strong>.
+                  Salalah is roughly 1,000 km from Muscat, so most Salalah candidates travel by road
+                  (14–16 hr) or flight for the exam. We help students plan NEET registration,
+                  travel, and exam-day logistics.
+                </p>
+                <p className="text-sm text-gray-500">
+                  Note: NEET centre allocation is managed by the NTA and can change year to year. We
+                  share the current intake options with enrolled students.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <div id="pricing">
+        <PricingSection cityName="Salalah" />
+      </div>
+      <CostComparisonSection cityName="Salalah" />
+
+      {/* FAQ */}
+      <section className="py-16 max-w-4xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10">
+          FAQs — NEET coaching in Salalah, Oman
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => (
+            <details
+              key={idx}
+              className="group bg-white rounded-xl border border-gray-200 p-6 open:shadow-md transition-shadow"
+            >
+              <summary className="font-semibold text-lg text-gray-900 cursor-pointer list-none flex justify-between items-center">
+                <span>{faq.q}</span>
+                <span className="text-blue-600 group-open:rotate-45 transition-transform text-2xl">
+                  +
+                </span>
+              </summary>
+              <p className="mt-4 text-gray-700 leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <Calendar className="w-12 h-12 mx-auto mb-4 text-blue-100" />
+          <h2 className="text-3xl font-bold mb-4">Book a free Biology demo from Salalah</h2>
+          <p className="text-blue-100 mb-8 text-lg">
+            See the teaching style before you decide. 45–60 minute live session with an AIIMS-led
+            faculty.
+          </p>
+          <Link
+            href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Salalah%20and%20want%20a%20free%20NEET%20Biology%20demo"
+            className="inline-flex bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-lg font-bold text-lg items-center gap-2 transition-colors"
+          >
+            <Phone className="w-5 h-5" /> WhatsApp +91-8826444334
+          </Link>
+        </div>
+      </section>
+
+      <RelatedCityLinks currentCity="salalah" variant="default" />
+    </div>
+  )
 }

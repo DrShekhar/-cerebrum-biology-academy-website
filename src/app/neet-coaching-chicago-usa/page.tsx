@@ -1,32 +1,41 @@
 import { Metadata } from 'next'
 import NEETCoachingPageContent from './PageContent'
 
-export const metadata: Metadata = {
-  title: 'NEET Coaching in Chicago, USA - 98% Success Rate',
-  description:
-    'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
-  keywords: [
-    'NEET coaching in Chicago',
-    'medical entrance exam preparation Chicago',
-    'Dr. Shekhar C Singh Chicago',
-    'best NEET institute Chicago',
-    'NEET online coaching USA',
-  ],
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chicago-usa',
-  },
+const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
+export const metadata: Metadata = {
+  title: 'NEET Coaching in Chicago, USA | Online Biology Classes for NRI Students',
+  description:
+    'Online NEET Biology coaching for Indian-American students across Chicago, Naperville, Schaumburg, Aurora. AP Biology + NEET dual prep. Free demo available.',
+  alternates: {
+    canonical: `${BASE_URL}/neet-coaching-chicago-usa`,
+    languages: {
+      'en-US': `${BASE_URL}/neet-coaching-chicago-usa`,
+      'en-IN': `${BASE_URL}/neet-coaching-chicago-usa`,
+    },
+  },
   openGraph: {
-    title: 'NEET Coaching in Chicago, USA - 98% Success Rate',
+    title: 'NEET Coaching in Chicago, USA — Online Biology Classes',
     description:
-      'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
+      'NEET Biology coaching for Indian-American students in Chicago metro. AP Biology friendly, CST/CDT live classes, NRI quota MBBS guidance.',
+    url: `${BASE_URL}/neet-coaching-chicago-usa`,
+    siteName: 'Cerebrum Biology Academy',
+    locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${BASE_URL}/og-neet-coaching-chicago-usa.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'NEET Coaching in Chicago — Cerebrum Biology Academy',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Chicago, USA',
-    description:
-      'NEET Coaching in Chicago - Leading medical entrance exam preparation in Illinois with expert guidance from Dr. Shekhar C Singh.',
+    description: 'Online NEET Biology coaching for Chicago metro. Book free demo.',
+    images: [`${BASE_URL}/og-neet-coaching-chicago-usa.jpg`],
   },
 }
 

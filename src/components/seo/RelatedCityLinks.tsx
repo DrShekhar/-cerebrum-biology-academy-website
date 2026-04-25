@@ -395,6 +395,42 @@ export const cityPages = {
     region: 'UAE',
     students: '250+',
   },
+  sharjah: {
+    name: 'Sharjah',
+    href: '/neet-coaching-sharjah-uae',
+    region: 'UAE',
+    students: '600+',
+  },
+  bahrain: {
+    name: 'Bahrain',
+    href: '/neet-coaching-bahrain',
+    region: 'Bahrain',
+    students: '350+',
+  },
+  ajman: {
+    name: 'Ajman',
+    href: '/neet-coaching-ajman-uae',
+    region: 'UAE',
+    students: '200+',
+  },
+  salmiya: {
+    name: 'Salmiya',
+    href: '/neet-coaching-salmiya-kuwait',
+    region: 'Kuwait',
+    students: '200+',
+  },
+  nriKuwait: {
+    name: 'NRI Kuwait',
+    href: '/neet-coaching-nri-kuwait',
+    region: 'Kuwait',
+    students: '500+',
+  },
+  nriBahrain: {
+    name: 'NRI Bahrain',
+    href: '/neet-coaching-nri-bahrain',
+    region: 'Bahrain',
+    students: '350+',
+  },
   salalah: {
     name: 'Salalah',
     href: '/neet-coaching-salalah-oman',
@@ -413,6 +449,24 @@ export const cityPages = {
     href: '/neet-coaching-london-uk',
     region: 'UK',
     students: '1,200+',
+  },
+  leicester: {
+    name: 'Leicester',
+    href: '/neet-coaching-leicester-uk',
+    region: 'UK',
+    students: '400+',
+  },
+  birmingham: {
+    name: 'Birmingham',
+    href: '/neet-coaching-birmingham-uk',
+    region: 'UK',
+    students: '300+',
+  },
+  manchester: {
+    name: 'Manchester',
+    href: '/neet-coaching-manchester-uk',
+    region: 'UK',
+    students: '250+',
   },
   // Americas
   newYork: {
@@ -445,6 +499,30 @@ export const cityPages = {
     region: 'USA',
     students: '350+',
   },
+  edisonNJ: {
+    name: 'Edison, NJ',
+    href: '/neet-coaching-edison-nj-usa',
+    region: 'USA',
+    students: '350+',
+  },
+  atlanta: {
+    name: 'Atlanta',
+    href: '/neet-coaching-atlanta-usa',
+    region: 'USA',
+    students: '300+',
+  },
+  washingtonDC: {
+    name: 'Washington DC',
+    href: '/neet-coaching-washington-dc-usa',
+    region: 'USA',
+    students: '300+',
+  },
+  boston: {
+    name: 'Boston',
+    href: '/neet-coaching-boston-usa',
+    region: 'USA',
+    students: '250+',
+  },
   toronto: {
     name: 'Toronto',
     href: '/neet-coaching-toronto-canada',
@@ -463,6 +541,12 @@ export const cityPages = {
     region: 'Canada',
     students: '250+',
   },
+  calgary: {
+    name: 'Calgary',
+    href: '/neet-coaching-calgary-canada',
+    region: 'Canada',
+    students: '200+',
+  },
   // Australia
   sydney: {
     name: 'Sydney',
@@ -475,6 +559,18 @@ export const cityPages = {
     href: '/neet-coaching-melbourne-australia',
     region: 'Australia',
     students: '350+',
+  },
+  brisbane: {
+    name: 'Brisbane',
+    href: '/neet-coaching-brisbane-australia',
+    region: 'Australia',
+    students: '200+',
+  },
+  auckland: {
+    name: 'Auckland',
+    href: '/neet-coaching-auckland-new-zealand',
+    region: 'New Zealand',
+    students: '150+',
   },
   // South Asia
   kathmandu: {
@@ -646,22 +742,38 @@ const relatedCitiesMap: Record<CityKey, CityKey[]> = {
   dammam: ['alKhobar', 'riyadh', 'jeddah', 'nriSaudiArabia', 'dubai'],
   alKhobar: ['dammam', 'riyadh', 'dubai', 'doha', 'nriSaudiArabia'],
   alAin: ['abuDhabi', 'dubai', 'muscat', 'nriSaudiArabia', 'doha'],
+  sharjah: ['dubai', 'abuDhabi', 'ajman', 'nriSaudiArabia', 'doha'],
+  bahrain: ['nriBahrain', 'dubai', 'nriSaudiArabia', 'doha', 'muscat'],
+  ajman: ['sharjah', 'dubai', 'abuDhabi', 'nriSaudiArabia', 'doha'],
+  salmiya: ['kuwaitCity', 'nriKuwait', 'dubai', 'doha', 'nriSaudiArabia'],
+  nriKuwait: ['kuwaitCity', 'salmiya', 'dubai', 'nriSaudiArabia', 'nriBahrain'],
+  nriBahrain: ['bahrain', 'dubai', 'nriSaudiArabia', 'doha', 'muscat'],
   salalah: ['muscat', 'nriOman', 'dubai', 'doha', 'nriSaudiArabia'],
   alWakrah: ['doha', 'nriQatar', 'dubai', 'muscat', 'kuwaitCity'],
   // UK/Europe
-  london: ['nriUK', 'toronto', 'newYork', 'sydney', 'dubai'],
+  london: ['leicester', 'nriUK', 'toronto', 'newYork', 'dubai'],
+  leicester: ['birmingham', 'london', 'nriUK', 'manchester', 'toronto'],
+  birmingham: ['leicester', 'manchester', 'london', 'nriUK', 'toronto'],
+  manchester: ['birmingham', 'leicester', 'london', 'nriUK', 'toronto'],
   // Americas
-  newYork: ['houston', 'chicago', 'nriUSA', 'toronto', 'london'],
-  houston: ['dallas', 'newYork', 'sanJose', 'nriUSA', 'chicago'],
-  chicago: ['newYork', 'houston', 'dallas', 'nriUSA', 'toronto'],
+  newYork: ['edisonNJ', 'boston', 'washingtonDC', 'nriUSA', 'toronto'],
+  edisonNJ: ['newYork', 'boston', 'washingtonDC', 'nriUSA', 'atlanta'],
+  houston: ['dallas', 'atlanta', 'sanJose', 'nriUSA', 'chicago'],
+  chicago: ['newYork', 'houston', 'dallas', 'nriUSA', 'boston'],
   sanJose: ['houston', 'newYork', 'dallas', 'nriUSA', 'vancouver'],
-  dallas: ['houston', 'chicago', 'newYork', 'nriUSA', 'sanJose'],
+  dallas: ['houston', 'chicago', 'atlanta', 'nriUSA', 'sanJose'],
+  atlanta: ['washingtonDC', 'houston', 'dallas', 'nriUSA', 'newYork'],
+  washingtonDC: ['newYork', 'atlanta', 'boston', 'nriUSA', 'edisonNJ'],
+  boston: ['newYork', 'washingtonDC', 'edisonNJ', 'nriUSA', 'chicago'],
   toronto: ['vancouver', 'brampton', 'nriCanada', 'newYork', 'london'],
   vancouver: ['toronto', 'brampton', 'nriCanada', 'sanJose', 'sydney'],
-  brampton: ['toronto', 'vancouver', 'nriCanada', 'newYork', 'london'],
+  brampton: ['toronto', 'calgary', 'vancouver', 'nriCanada', 'newYork'],
+  calgary: ['toronto', 'vancouver', 'brampton', 'nriCanada', 'london'],
   // Australia
-  sydney: ['melbourne', 'nriAustralia', 'singaporeCity', 'london', 'toronto'],
-  melbourne: ['sydney', 'nriAustralia', 'singaporeCity', 'london', 'toronto'],
+  sydney: ['melbourne', 'brisbane', 'nriAustralia', 'singaporeCity', 'auckland'],
+  melbourne: ['sydney', 'brisbane', 'nriAustralia', 'singaporeCity', 'auckland'],
+  brisbane: ['sydney', 'melbourne', 'nriAustralia', 'auckland', 'singaporeCity'],
+  auckland: ['sydney', 'melbourne', 'brisbane', 'nriAustralia', 'singaporeCity'],
   // South Asia
   kathmandu: ['nriNepal', 'colombo', 'nriSingapore', 'delhiNCR', 'patna'],
   colombo: ['kathmandu', 'nriNepal', 'nriSingapore', 'kualaLumpur', 'chennai'],
@@ -811,10 +923,58 @@ export function CityQuickLinks() {
     'faridabad',
     'ghaziabad',
   ]
-  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur', 'prayagraj', 'varanasi', 'agra', 'meerut', 'dehradun', 'jammu', 'srinagar', 'vadodara', 'jodhpur', 'gwalior', 'mussoorie', 'udaipur', 'ranchi', 'amritsar', 'mahendragarh', 'manali']
-  const gulfCities: CityKey[] = ['dubai', 'abuDhabi', 'riyadh', 'jeddah', 'doha', 'muscat', 'kuwaitCity', 'dammam']
-  const westernCities: CityKey[] = ['london', 'newYork', 'houston', 'chicago', 'toronto', 'vancouver', 'sydney', 'melbourne']
-  const asiaAfricaCities: CityKey[] = ['singaporeCity', 'kualaLumpur', 'kathmandu', 'jakarta', 'manila', 'lagos', 'nairobi']
+  const coachingHubCities: CityKey[] = [
+    'kota',
+    'jaipur',
+    'patna',
+    'lucknow',
+    'kanpur',
+    'prayagraj',
+    'varanasi',
+    'agra',
+    'meerut',
+    'dehradun',
+    'jammu',
+    'srinagar',
+    'vadodara',
+    'jodhpur',
+    'gwalior',
+    'mussoorie',
+    'udaipur',
+    'ranchi',
+    'amritsar',
+    'mahendragarh',
+    'manali',
+  ]
+  const gulfCities: CityKey[] = [
+    'dubai',
+    'abuDhabi',
+    'riyadh',
+    'jeddah',
+    'doha',
+    'muscat',
+    'kuwaitCity',
+    'dammam',
+  ]
+  const westernCities: CityKey[] = [
+    'london',
+    'newYork',
+    'houston',
+    'chicago',
+    'toronto',
+    'vancouver',
+    'sydney',
+    'melbourne',
+  ]
+  const asiaAfricaCities: CityKey[] = [
+    'singaporeCity',
+    'kualaLumpur',
+    'kathmandu',
+    'jakarta',
+    'manila',
+    'lagos',
+    'nairobi',
+  ]
 
   return (
     <div className="space-y-6">

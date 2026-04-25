@@ -164,57 +164,6 @@ export default function KBOCoachingPage() {
     },
   ]
 
-  const pricingPlans = [
-    {
-      name: 'Foundation',
-      priceKRW: '₩350,000',
-      priceUSD: '$280',
-      period: '/month',
-      description: 'Perfect for starting your KBO journey',
-      features: [
-        '8 live sessions/month',
-        'Campbell Biology Units 1-4',
-        'KBO past paper access',
-        'WhatsApp doubt support',
-        'Weekly assessments',
-      ],
-      popular: false,
-    },
-    {
-      name: 'Intensive',
-      priceKRW: '₩550,000',
-      priceUSD: '$440',
-      period: '/month',
-      description: 'Comprehensive preparation for KBO finals',
-      features: [
-        '16 live sessions/month',
-        'Complete Campbell Biology',
-        'All KBO past papers + solutions',
-        '24/7 priority support',
-        'Mock tests with feedback',
-        'Practical training sessions',
-      ],
-      popular: true,
-    },
-    {
-      name: 'IBO Elite',
-      priceKRW: '₩850,000',
-      priceUSD: '$680',
-      period: '/month',
-      description: 'For IBO team selection candidates',
-      features: [
-        'Unlimited sessions',
-        'IBO-level preparation',
-        'International past papers',
-        '1-on-1 mentorship',
-        'Lab practical training',
-        'Competition strategy sessions',
-        'Parent progress reports',
-      ],
-      popular: false,
-    },
-  ]
-
   const faqs = [
     {
       question: 'What is KBO and how do I qualify for it?',
@@ -321,37 +270,25 @@ export default function KBOCoachingPage() {
         <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
           <div className="container mx-auto px-4 relative z-10">
-            <div
-              className="max-w-4xl mx-auto text-center animate-fadeInUp"
-             
-             
-            >
-              <div
-                className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6 animate-fadeInUp"
-              >
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
+              <div className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6 animate-fadeInUp">
                 <Globe className="w-4 h-4 text-yellow-400" />
                 <span className="text-yellow-400 text-sm font-medium">
                   South Korea&apos;s Biology Olympiad
                 </span>
               </div>
 
-              <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fadeInUp"
-              >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fadeInUp">
                 KBO Coaching Online
                 <span className="block text-yellow-400 mt-2">Korean Biology Olympiad</span>
               </h1>
 
-              <p
-                className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fadeInUp"
-              >
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fadeInUp">
                 Expert coaching to help you excel in the Korean Biology Olympiad and qualify for the
                 International Biology Olympiad (IBO). Join South Korea&apos;s top biology students!
               </p>
 
-              <div
-                className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp"
-              >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
                 <button
                   onClick={() => handleWhatsAppClick('hero-cta')}
                   className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg"
@@ -368,9 +305,7 @@ export default function KBOCoachingPage() {
                 </Link>
               </div>
 
-              <div
-                className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fadeInUp"
-              >
+              <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fadeInUp">
                 {[
                   { value: '200+', label: 'Korean Students' },
                   { value: '25+', label: 'KBO Finalists' },
@@ -405,10 +340,7 @@ export default function KBOCoachingPage() {
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {pathwayStages.map((stage, index) => (
-                  <div
-                    key={stage.stage}
-                    className="relative animate-fadeInUp"
-                  >
+                  <div key={stage.stage} className="relative animate-fadeInUp">
                     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 h-full">
                       <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
                         <stage.icon className="w-6 h-6 text-slate-900" />
@@ -542,63 +474,8 @@ export default function KBOCoachingPage() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                KBO Coaching Plans
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Flexible pricing for Korean students. All prices shown in KRW and USD.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={plan.name}
-                  className={`bg-white rounded-xl p-6 shadow-lg border-2 ${
-                    plan.popular ? 'border-yellow-400' : 'border-gray-100'
-                  } relative`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-yellow-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
-                        MOST POPULAR
-                      </span>
-                    </div>
-                  )}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="mb-2">
-                    <span className="text-3xl font-bold text-gray-900">{plan.priceKRW}</span>
-                    <span className="text-gray-500">{plan.period}</span>
-                  </div>
-                  <div className="text-sm text-gray-500 mb-4">({plan.priceUSD} USD)</div>
-                  <p className="text-gray-600 mb-6">{plan.description}</p>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2 text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    onClick={() => handleWhatsAppClick(`pricing-${plan.name.toLowerCase()}`)}
-                    className={`w-full py-3 rounded-lg font-semibold transition-all ${
-                      plan.popular
-                        ? 'bg-yellow-400 hover:bg-yellow-500 text-slate-900'
-                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                    }`}
-                  >
-                    Get Started
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Pricing section rendered by layout.tsx via GeoAwareSharedPricingMatrix
+            (server-side geo detection — appears after this page's content) */}
 
         {/* FAQ Section */}
         <section className="py-16">
@@ -665,15 +542,22 @@ export default function KBOCoachingPage() {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Practice KBO MCQs Online</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Prepare for the Korean Biology Olympiad with our free MCQ practice tool — 5,900+ Campbell
-              Biology level questions with instant feedback and detailed explanations.
+              Prepare for the Korean Biology Olympiad with our free MCQ practice tool — 5,900+
+              Campbell Biology level questions with instant feedback and detailed explanations.
             </p>
             <Link
               href="/neet-biology-mcq?source=olympiad"
               className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
             >
               Start KBO Practice
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
             </Link>
           </div>
         </section>

@@ -178,57 +178,6 @@ const features = [
   },
 ]
 
-const pricingPlans = [
-  {
-    name: 'Senior Faculty',
-    price: '$120-150',
-    unit: 'per hour',
-    description: 'IBO Medalists & National Team Trainers',
-    features: [
-      'IBO gold/silver medalist instructors',
-      'National team training experience',
-      'Advanced research mentorship',
-      'Personalized IBO preparation plan',
-      'Direct WhatsApp support',
-      'Mock IBO exam reviews',
-    ],
-    popular: true,
-    cta: 'Book Senior Faculty',
-  },
-  {
-    name: 'Junior Faculty',
-    price: '$60-75',
-    unit: 'per hour',
-    description: 'National Olympiad Medalists & PhD Students',
-    features: [
-      'National olympiad medalists',
-      'PhD/Masters in Biology',
-      'Strong theoretical foundation',
-      'Regular practice sessions',
-      'Doubt clearing support',
-      'Progress tracking',
-    ],
-    popular: false,
-    cta: 'Book Junior Faculty',
-  },
-  {
-    name: 'Batch Programs',
-    price: '$40',
-    unit: 'per hour',
-    description: 'Intensive Group Training (4-6 Students)',
-    features: [
-      'Small batch (4-6 students)',
-      'Collaborative problem solving',
-      'Weekly live sessions',
-      'Recorded lectures access',
-      'International peer network',
-      'Batch study materials',
-    ],
-    popular: false,
-    cta: 'Join Batch',
-  },
-]
-
 const faqs = [
   {
     question: 'What is the International Biology Olympiad (IBO)?',
@@ -450,56 +399,8 @@ export default function IBOPreparationPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 md:py-24 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">IBO Coaching Plans</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Flexible options for students from all countries preparing for IBO
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={plan.name}
-                className={`relative bg-white rounded-2xl p-6 ${plan.popular ? 'ring-2 ring-yellow-400' : ''}`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">{plan.name}</h3>
-                  <div className="text-3xl font-bold text-slate-900 mb-1">{plan.price}</div>
-                  <div className="text-slate-500 text-sm">{plan.unit}</div>
-                  <p className="text-slate-600 text-sm mt-2">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2 text-slate-600">
-                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button
-                  onClick={handleWhatsAppEnquiry}
-                  className={`w-full py-3 rounded-xl font-semibold transition-colors ${
-                    plan.popular
-                      ? 'bg-yellow-400 hover:bg-yellow-500 text-yellow-900'
-                      : 'bg-slate-900 hover:bg-slate-800 text-white'
-                  }`}
-                >
-                  {plan.cta}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Pricing section rendered by layout.tsx via GeoAwareSharedPricingMatrix
+          (server-side geo detection — appears after this page's content) */}
 
       {/* FAQs Section */}
       <section className="py-16 md:py-24 bg-white">

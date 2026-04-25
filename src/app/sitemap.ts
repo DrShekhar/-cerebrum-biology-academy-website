@@ -7123,6 +7123,94 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.87,
     },
 
+    // Sprint 1 (Apr 2026): 5 new US/UK city pages filling GSC gaps
+    {
+      url: `${baseUrl}/neet-coaching-leicester-uk`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-edison-nj-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-atlanta-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-washington-dc-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-boston-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+
+    // Sprint 2 (Apr 2026): 7 new city pages + 2 NRI hubs
+    {
+      url: `${baseUrl}/neet-coaching-ajman-uae`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-salmiya-kuwait`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-birmingham-uk`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-manchester-uk`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-calgary-canada`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-brisbane-australia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-auckland-new-zealand`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-kuwait`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-bahrain`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+
     // Phase 3B: Southeast Asian City Pages (3)
     {
       url: `${baseUrl}/neet-coaching-jakarta-indonesia`,

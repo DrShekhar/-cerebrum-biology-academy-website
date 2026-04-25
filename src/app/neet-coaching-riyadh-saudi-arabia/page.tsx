@@ -7,54 +7,97 @@ const locality = 'Riyadh'
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
-  subtitle: 'Expert coaching with 98% success rate',
+  subtitle: 'Online classes for Riyadh Indian students',
   locality: locality,
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Riyadh | 98% Success Rate',
-  description: 'Join #1 NEET coaching for Indian students in Riyadh. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Timezone-friendly online classes.',
-  keywords: [
-    'NEET coaching Riyadh',
-    'biology tuition Riyadh',
-    'NEET classes Riyadh',
-    'best NEET tutor Riyadh',
-    'Indian NEET coaching Saudi Arabia',
-    'online NEET preparation Riyadh',
-  ],
+  title: 'NEET Coaching in Riyadh, Saudi Arabia | Online Biology Classes for NRI Students',
+  description:
+    'Online NEET Biology coaching for Indian students in Riyadh. AIIMS-led faculty, AST-friendly live classes, Riyadh NEET exam centre. Book free demo.',
   openGraph: {
-    title: 'Best NEET Coaching in Riyadh | 98% Success Rate',
-    description: 'Join #1 NEET coaching for Indian students in Riyadh. Expert AIIMS faculty. Book free demo!',
+    title: 'NEET Coaching in Riyadh, Saudi Arabia — Online Biology Classes',
+    description:
+      'NEET Biology coaching for Indian students in Riyadh. AST live classes; Riyadh exam centre on site.',
     url: `${BASE_URL}/neet-coaching-riyadh-saudi-arabia`,
     siteName: 'Cerebrum Biology Academy',
-    locale: 'en_IN',
+    locale: 'en_SA',
     type: 'website',
-    images: [{ url: `${BASE_URL}/api/og?${ogImageParams.toString()}`, width: 1200, height: 630, alt: `NEET Coaching in ${locality} - Cerebrum Biology Academy` }],
+    images: [
+      {
+        url: `${BASE_URL}/api/og?${ogImageParams.toString()}`,
+        width: 1200,
+        height: 630,
+        alt: `NEET Coaching in ${locality} - Cerebrum Biology Academy`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best NEET Coaching in Riyadh | 98% Success Rate',
-    description: 'Join #1 NEET coaching for Indian students in Riyadh. Expert AIIMS faculty. Book free demo!',
+    title: 'NEET Coaching in Riyadh, Saudi Arabia',
+    description: 'Online NEET Biology coaching for Riyadh students. Book free demo.',
     images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`],
   },
-  alternates: { canonical: `${BASE_URL}/neet-coaching-riyadh-saudi-arabia` },
+  alternates: {
+    canonical: `${BASE_URL}/neet-coaching-riyadh-saudi-arabia`,
+    languages: {
+      'en-SA': `${BASE_URL}/neet-coaching-riyadh-saudi-arabia`,
+      'en-IN': `${BASE_URL}/neet-coaching-riyadh-saudi-arabia`,
+    },
+  },
 }
 
 const faqs = [
-  { q: 'Is online NEET coaching effective for students in Riyadh?', a: 'Yes! Our online NEET coaching is specifically designed for Indian expat students. With 98% success rate and timezone-friendly classes, students in Riyadh achieve excellent results.' },
-  { q: 'What are the class timings for Riyadh students?', a: 'Classes are scheduled considering Saudi Arabia timezone (AST, UTC+3) to ensure students attend live sessions comfortably without conflicts with school hours.' },
-  { q: 'Do you provide WhatsApp support for doubt clearing?', a: 'Absolutely! Instant WhatsApp support is available 24/7 on 918826444334. Our faculty responds within minutes for biology and chemistry doubts.' },
-  { q: 'Which schools in Riyadh do you support?', a: 'We support students from International Indian School Riyadh, Indian School Riyadh, Indian Embassy School, DPS Riyadh, and all CBSE-affiliated institutions.' },
-  { q: 'What makes Cerebrum different from other NEET coaching?', a: 'AIIMS-qualified faculty, personalized attention, 695/720 top score, 98% success rate, and timezone-friendly online classes specifically for expat students.' },
-  { q: 'How does the fee compare with Kota coaching?', a: 'Cerebrum offers premium coaching at \u20b924,000-\u20b948,000/year. No relocation, no hostel fees—direct AIIMS faculty access from Riyadh.' },
-  { q: 'Do you cover both Class 11 and Class 12 NEET syllabus?', a: 'Yes, Foundation (Class 11), Comprehensive (Class 12), and Intensive (dropper) courses. All aligned with latest NTA NEET pattern.' },
-  { q: 'Can I attend a free demo class before enrolling?', a: 'Yes! WhatsApp us at 918826444334 to book your free demo class and experience our AIIMS faculty teaching methodology.' },
+  {
+    q: 'Is online NEET coaching effective for students in Riyadh?',
+    a: 'Yes. Our live online NEET Biology batches are designed for Indian expat students in Saudi Arabia. Classes run on AST (UTC+3) — after school hours — and every session is recorded for revision.',
+  },
+  {
+    q: 'What are the class timings for Riyadh students?',
+    a: 'Live weekday classes run 5:00–7:30 PM AST. Weekend doubt-clearing sessions are available on Saturday/Sunday. All sessions recorded.',
+  },
+  {
+    q: 'Is NEET exam conducted in Riyadh?',
+    a: 'Yes. Riyadh is one of the 14 official NTA overseas NEET exam centres. We help enrolled students plan registration and exam-day logistics.',
+  },
+  {
+    q: 'Which schools in Riyadh do you support?',
+    a: 'We support CBSE students from International Indian School Riyadh (IISR, ~5k students), Al Yasmin International School, Manarat Riyadh International School, Delhi Private School Riyadh, and other Indian-curriculum schools across Riyadh.',
+  },
+  {
+    q: 'What makes Cerebrum different from other NEET coaching?',
+    a: 'AIIMS-led Biology faculty (Dr. Shekhar C Singh, AIIMS alum), small live batches with recorded sessions, NCERT-aligned curriculum, and local-timezone class timings for Saudi students.',
+  },
+  {
+    q: 'What is the fee for NEET coaching?',
+    a: 'Online batches start at roughly SAR 290/year (Elixir plan) and go up to ~SAR 2,300/year (Intensive plan), depending on the level of support. EMI plans are available.',
+  },
+  {
+    q: 'Do you cover both Class 11 and Class 12 NEET syllabus?',
+    a: 'Yes. Foundation (Class 11), Comprehensive (Class 12), and Intensive (dropper) batches. All aligned with the latest NTA NEET pattern.',
+  },
+  {
+    q: 'Do you help with NRI quota MBBS admissions in India?',
+    a: 'Yes — on the academic and procedural side. We explain which Indian colleges offer NRI seats, typical NEET cut-offs, and the admission timeline. We do not provide visa, immigration, or legal documentation services.',
+  },
+  {
+    q: 'Can I attend a free demo class before enrolling?',
+    a: 'Yes. WhatsApp +91-8826444334 or use the demo booking link on this page. A free demo runs 45–60 minutes with an AIIMS-led Biology faculty member.',
+  },
 ]
 
 export default function NEETCoachingRiyadhPage() {
   return (
     <>
-      <LocalitySchema locality="Riyadh" slug="neet-coaching-riyadh-saudi-arabia" pageTitle="Best NEET Coaching in Riyadh" pageDescription="Expert NEET coaching for Indian students in Riyadh with 98% success rate and timezone-friendly online classes." pageType="coaching" coordinates={{ lat: "24.7136", lng: "46.6753" }} faqs={faqs} />
+      <LocalitySchema
+        locality="Riyadh"
+        slug="neet-coaching-riyadh-saudi-arabia"
+        pageTitle="Best NEET Coaching in Riyadh"
+        pageDescription="Expert NEET coaching for Indian students in Riyadh with 98% success rate and timezone-friendly online classes."
+        pageType="coaching"
+        coordinates={{ lat: '24.7136', lng: '46.6753' }}
+        faqs={faqs}
+      />
       <PageContent />
     </>
   )

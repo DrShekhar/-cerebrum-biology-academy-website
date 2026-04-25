@@ -7,54 +7,97 @@ const locality = 'Doha'
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
-  subtitle: 'Expert coaching with 98% success rate',
+  subtitle: 'Online classes for Doha Indian students',
   locality: locality,
 })
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Doha | 98% Success Rate',
-  description: 'Join #1 NEET coaching for Indian students in Doha. Expert AIIMS faculty, proven 98% success rate, 695/720 top score. Serving DPS Doha and international schools.',
-  keywords: [
-    'NEET coaching Doha',
-    'biology tuition Doha',
-    'NEET classes Doha',
-    'best NEET tutor Doha',
-    'Indian NEET coaching Qatar',
-    'online NEET preparation Doha',
-  ],
+  title: 'NEET Coaching in Doha, Qatar | Online Biology Classes for NRI Students',
+  description:
+    'Online NEET Biology coaching for Indian students in Doha. AIIMS-led faculty, AST-friendly live classes, Doha NEET exam centre. Book free demo.',
   openGraph: {
-    title: 'Best NEET Coaching in Doha | 98% Success Rate',
-    description: 'Join #1 NEET coaching for Indian students in Doha. Expert AIIMS faculty. Book free demo!',
+    title: 'NEET Coaching in Doha, Qatar — Online Biology Classes',
+    description:
+      'NEET Biology coaching for Indian students in Doha. AST live classes; Doha exam centre on site.',
     url: `${BASE_URL}/neet-coaching-doha-qatar`,
     siteName: 'Cerebrum Biology Academy',
-    locale: 'en_IN',
+    locale: 'en_QA',
     type: 'website',
-    images: [{ url: `${BASE_URL}/api/og?${ogImageParams.toString()}`, width: 1200, height: 630, alt: `NEET Coaching in ${locality} - Cerebrum Biology Academy` }],
+    images: [
+      {
+        url: `${BASE_URL}/api/og?${ogImageParams.toString()}`,
+        width: 1200,
+        height: 630,
+        alt: `NEET Coaching in ${locality} - Cerebrum Biology Academy`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best NEET Coaching in Doha | 98% Success Rate',
-    description: 'Join #1 NEET coaching for Indian students in Doha. Expert AIIMS faculty. Book free demo!',
+    title: 'NEET Coaching in Doha, Qatar',
+    description: 'Online NEET Biology coaching for Doha students. Book free demo.',
     images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`],
   },
-  alternates: { canonical: `${BASE_URL}/neet-coaching-doha-qatar` },
+  alternates: {
+    canonical: `${BASE_URL}/neet-coaching-doha-qatar`,
+    languages: {
+      'en-QA': `${BASE_URL}/neet-coaching-doha-qatar`,
+      'en-IN': `${BASE_URL}/neet-coaching-doha-qatar`,
+    },
+  },
 }
 
 const faqs = [
-  { q: 'Is online NEET coaching effective for students in Doha?', a: 'Yes! Our online NEET coaching is specifically designed for Doha students. With AIIMS faculty, 98% success rate, and personalized attention, students in Doha achieve excellent results without traveling to coaching hubs.' },
-  { q: 'What are the class timings for Doha students?', a: 'We offer flexible morning, afternoon, and evening batches so Doha students can attend after school or college hours. Weekend revision sessions are also available.' },
-  { q: 'Do you provide WhatsApp support for doubt clearing?', a: 'Yes! Instant WhatsApp support available on +91-8826444334. Our AIIMS faculty responds within minutes. Doha students get unlimited doubt clearing.' },
-  { q: 'What makes Cerebrum different from local coaching in Doha?', a: 'AIIMS-qualified faculty, 10-15 student batches (vs 100+ locally), 695/720 top score, 98% success rate, structured NCERT approach. Doha students get premium coaching at affordable fees.' },
-  { q: 'What is the NEET coaching fee for Doha students?', a: 'Foundation (Class 11): Rs 24,000/year, Comprehensive (Class 12): Rs 36,000/year, Intensive (Dropper): Rs 48,000/year. EMI available. Much more affordable than Qatar classroom coaching.' },
-  { q: 'Which medical colleges can Doha students target?', a: 'With strong NEET scores, Doha students can target AIIMS Delhi, JIPMER, LHMC, Maulana Azad Medical College, and top government medical colleges across India.' },
-  { q: 'Do you cover Class 11 and Class 12 NEET syllabus?', a: 'Yes! Foundation (Class 11), Comprehensive (Class 12), and Intensive (dropper) courses. All aligned with latest NTA NEET pattern and 100% NCERT-based curriculum.' },
-  { q: 'Can I attend a free demo class before enrolling?', a: 'Absolutely! WhatsApp us at +91-8826444334 to book your free demo class. Experience our AIIMS faculty teaching methodology.' },
+  {
+    q: 'Is online NEET coaching effective for students in Doha?',
+    a: 'Yes. Our live online NEET Biology batches are designed for Indian expat students in Qatar. Classes run on AST (UTC+3) — after Doha school hours — and every session is recorded for revision.',
+  },
+  {
+    q: 'What are the class timings for Doha students?',
+    a: 'Live weekday classes run 5:00–7:30 PM AST. Weekend doubt-clearing sessions are available on Saturday/Sunday. All sessions recorded.',
+  },
+  {
+    q: 'Is NEET exam conducted in Doha?',
+    a: 'Yes. Doha is one of the 14 official NTA overseas NEET exam centres. Qatar-based candidates can sit NEET-UG locally without travelling to India or another GCC country.',
+  },
+  {
+    q: 'Which schools in Doha do you support?',
+    a: "MES Indian School Doha (~9k+ students), DPS Modern Indian School Doha, Bhavan's Public School Qatar, Ideal Indian School, Birla Public School, and all Indian-curriculum schools across Doha.",
+  },
+  {
+    q: 'What makes Cerebrum different from local coaching in Doha?',
+    a: 'AIIMS-led Biology faculty (Dr. Shekhar C Singh, AIIMS alum), small live batches with recorded sessions, NCERT-aligned curriculum, and local-timezone class timings for Qatar students.',
+  },
+  {
+    q: 'What is the NEET coaching fee for Doha students?',
+    a: 'Online batches start at roughly QAR 290/year (Elixir plan) and go up to ~QAR 2,300/year (Intensive plan), depending on the level of support. EMI plans are available.',
+  },
+  {
+    q: 'Which medical colleges can Doha students target?',
+    a: 'Qualified NEET scorers can apply to Indian government medical colleges (via all-India quota) or NRI quota seats at eligible private medical colleges. Cut-offs vary by college and year.',
+  },
+  {
+    q: 'Do you help with NRI quota MBBS admissions in India?',
+    a: 'Yes — on the academic and procedural side. We explain which Indian colleges offer NRI seats, typical NEET cut-offs, and the admission timeline. We do not provide visa, immigration, or legal documentation services.',
+  },
+  {
+    q: 'Can I attend a free demo class before enrolling?',
+    a: 'Yes. WhatsApp +91-8826444334 or use the demo booking link on this page. A free demo runs 45–60 minutes with an AIIMS-led Biology faculty member.',
+  },
 ]
 
 export default function NEETCoachingDohaPage() {
   return (
     <>
-      <LocalitySchema locality="Doha" slug="neet-coaching-doha-qatar" pageTitle="Best NEET Coaching in Doha" pageDescription="Expert NEET coaching for Indian students in Doha serving DPS Doha and international schools." pageType="coaching" coordinates={{ lat: "25.2854", lng: "51.5310" }} faqs={faqs} />
+      <LocalitySchema
+        locality="Doha"
+        slug="neet-coaching-doha-qatar"
+        pageTitle="Best NEET Coaching in Doha"
+        pageDescription="Expert NEET coaching for Indian students in Doha serving DPS Doha and international schools."
+        pageType="coaching"
+        coordinates={{ lat: '25.2854', lng: '51.5310' }}
+        faqs={faqs}
+      />
       <PageContent />
     </>
   )

@@ -1,142 +1,147 @@
-import { Metadata } from "next";
-import PageContent from "./PageContent";
-import LocalitySchema from "@/components/seo/LocalitySchema";
+import { Metadata } from 'next'
+import PageContent from './PageContent'
+
+const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: "NEET Coaching for NRI Students in USA",
-  description: "AP Biology to NEET bridge coaching for NRI students in USA. 2 CBSE schools, 5.16M Indians. Pre-med pathway with 98% success rate.",
+  title: 'NEET Coaching for NRI Students in USA | Online Biology Classes',
+  description:
+    'Online NEET Biology coaching for ~5M Indian-American students. AP Biology + NEET dual prep, EST/CST/PST-friendly batches, NRI quota MBBS guidance.',
   alternates: {
-    canonical: "https://cerebrumbiologyacademy.com/neet-coaching-nri-usa",
+    canonical: `${BASE_URL}/neet-coaching-nri-usa`,
+    languages: {
+      'en-US': `${BASE_URL}/neet-coaching-nri-usa`,
+      'en-IN': `${BASE_URL}/neet-coaching-nri-usa`,
+    },
   },
   openGraph: {
-    title: "NEET Coaching for NRI Students in USA",
-    description: "AP Biology to NEET bridge coaching for NRI students in USA. 2 CBSE schools, 5.16M Indians. Pre-med pathway with 98% success rate.",
-    url: "https://cerebrumbiologyacademy.com/neet-coaching-nri-usa",
-    type: "website",
+    title: 'NEET Coaching for NRI Students in USA',
+    description:
+      'Online NEET Biology coaching for Indian-American students. AP Biology + NEET dual prep. NRI quota MBBS guidance.',
+    url: `${BASE_URL}/neet-coaching-nri-usa`,
+    siteName: 'Cerebrum Biology Academy',
+    locale: 'en_US',
+    type: 'website',
     images: [
       {
-        url: "https://cerebrumbiologyacademy.com/og-neet-coaching-usa.jpg",
+        url: `${BASE_URL}/og-neet-coaching-usa.jpg`,
         width: 1200,
         height: 630,
-        alt: "NEET Coaching in United States of America - Cerebrum Biology Academy",
+        alt: 'NEET Coaching in USA — Cerebrum Biology Academy',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "NEET Coaching for NRI Students in USA",
-    description: "AP Biology to NEET bridge coaching for NRI students in USA. 2 CBSE schools, 5.16M Indians. Pre-med pathway with 98% success rate.",
-    creator: "@cerebrumbiology",
-    images: ["https://cerebrumbiologyacademy.com/og-neet-coaching-usa.jpg"],
+    card: 'summary_large_image',
+    title: 'NEET Coaching for NRI Students in USA',
+    description: 'Online NEET Biology coaching for Indian-American students. Book free demo.',
+    creator: '@cerebrumbiology',
+    images: [`${BASE_URL}/og-neet-coaching-usa.jpg`],
   },
-};
+}
 
 export default function Page() {
   const jsonld = {
-    "@context": "https://schema.org",
-    "@graph": [
+    '@context': 'https://schema.org',
+    '@graph': [
       {
-        "@type": "EducationalOrganization",
-        "@id": "https://cerebrumbiologyacademy.com/#organization",
-        "name": "Cerebrum Biology Academy",
-        "url": "https://cerebrumbiologyacademy.com",
-        "logo": "https://cerebrumbiologyacademy.com/logo.png",
-        "sameAs": [
-          "https://www.facebook.com/cerebrumbiology",
-          "https://www.youtube.com/cerebrumbiology",
-          "https://www.instagram.com/cerebrumbiology"
+        '@type': 'EducationalOrganization',
+        '@id': `${BASE_URL}/#organization`,
+        name: 'Cerebrum Biology Academy',
+        url: BASE_URL,
+        logo: `${BASE_URL}/logo.png`,
+        sameAs: [
+          'https://www.facebook.com/cerebrumbiology',
+          'https://www.youtube.com/cerebrumbiology',
+          'https://www.instagram.com/cerebrumbiology',
         ],
-        "foundingDate": "2014",
-        "description": "Expert NEET coaching for NRI students with 98% success rate",
-        "telephone": "+918826444334",
-        "areaServed": {
-          "@type": "City",
-          "name": "United States of America"
+        foundingDate: '2014',
+        description: 'Online NEET Biology coaching for Indian-American students (~5M diaspora).',
+        telephone: '+918826444334',
+        areaServed: {
+          '@type': 'Country',
+          name: 'United States',
         },
-        "offers": {
-          "@type": "EducationalOccupationalProgram",
-          "name": "NEET Coaching",
-          "description": "Comprehensive NEET preparation for United States of America students"
-        }
+        offers: {
+          '@type': 'EducationalOccupationalProgram',
+          name: 'NEET Biology Coaching',
+          description:
+            'Online NEET-UG Biology preparation for Indian-American high-school students across NY, NJ, TX, IL, CA, GA, DC, MA and other US states.',
+        },
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
+        '@type': 'FAQPage',
+        mainEntity: [
           {
-            "@type": "Question",
-            "name": "Is NEET preparation necessary for United States of America students?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, NEET is essential for admission to medical colleges in India. Our specialized coaching helps United States of America students master the NEET curriculum with United States of America-specific study schedules and exam registration guidance."
-            }
+            '@type': 'Question',
+            name: 'Why would an Indian-American student take NEET?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Because NEET is the gateway to MBBS admission in Indian medical colleges, including the 15% NRI quota seats. Indian-American families pursue this route when they want a direct-to-MBBS pathway at lower cost and shorter timeline than US pre-med + med school. NEET does not play any role in US medical school admission — that requires MCAT + a US undergraduate degree.',
+            },
           },
           {
-            "@type": "Question",
-            "name": "What is your success rate for United States of America students?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We maintain a 98% success rate for all students including United States of America NRI students. Many of our students secure admissions in top AIIMS and medical colleges."
-            }
+            '@type': 'Question',
+            name: 'Is there a NEET exam centre inside the United States?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. The NTA-designated overseas NEET exam centres are in Dubai, Sharjah, Abu Dhabi, Doha, Kuwait City, Riyadh, Muscat, Manama, Singapore, Bangkok, Kuala Lumpur, Lagos, Colombo and Kathmandu. US candidates typically fly to Dubai or India to sit NEET-UG. We help enrolled students plan the travel and registration.',
+            },
           },
           {
-            "@type": "Question",
-            "name": "Do you offer online coaching for students in United States of America?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, we offer both online and hybrid batches with flexible timings suitable for United States of America's timezone (EST)."
-            }
+            '@type': 'Question',
+            name: 'Can I prepare for NEET while taking AP Biology?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. AP Biology and NEET Biology overlap on cell biology, genetics, physiology, and ecology. NEET adds depth on human physiology and NCERT-specific content. Students running AP Bio and NEET prep in parallel typically find both easier because the fundamentals are shared.',
+            },
           },
           {
-            "@type": "Question",
-            "name": "Can United States of America students take NEET exam in India?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "NEET is conducted in India. We provide complete guidance for exam registration, travel planning, and logistics for NRI students."
-            }
+            '@type': 'Question',
+            name: 'What are typical class timings for US students?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Live classes run in IST blocks that translate to weekday evenings (CST/EST/PST) and weekend mornings local time. All sessions are recorded, so time-zone mismatches don't block progress.",
+            },
           },
           {
-            "@type": "Question",
-            "name": "What about visa support for medical education?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "F-1 visa to medical education visa transition support"
-            }
+            '@type': 'Question',
+            name: 'Do you provide visa or immigration services?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. We are an academic coaching institute only. We do not provide visa, immigration, or legal documentation services. Visa matters should be handled by your family, school, or licensed immigration consultants.',
+            },
           },
           {
-            "@type": "Question",
-            "name": "How many students from United States of America study with us?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We have a thriving community of United States of America students with strong peer networks and regular success stories. Our community includes students from 2 CBSE schools."
-            }
-          }
-        ]
+            '@type': 'Question',
+            name: 'What about the NRI quota for Indian MBBS admissions?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '15% of seats at eligible Indian medical colleges are reserved for NRI/OCI candidates. We help you understand which colleges offer NRI seats, typical NEET cut-offs for those seats, and broad admission timelines. We do not act as an admissions consultant.',
+            },
+          },
+        ],
       },
       {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL },
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://cerebrumbiologyacademy.com"
+            '@type': 'ListItem',
+            position: 2,
+            name: 'NRI Coaching',
+            item: `${BASE_URL}/nri-coaching`,
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "NRI Coaching",
-            "item": "https://cerebrumbiologyacademy.com/nri-coaching"
+            '@type': 'ListItem',
+            position: 3,
+            name: 'NEET Coaching in USA',
+            item: `${BASE_URL}/neet-coaching-nri-usa`,
           },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "NEET Coaching in United States of America",
-            "item": "https://cerebrumbiologyacademy.com/neet-coaching-nri-usa"
-          }
-        ]
-      }
-    ]
-  };
+        ],
+      },
+    ],
+  }
 
   return (
     <>
@@ -144,12 +149,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }}
       />
-      <LocalitySchema
-        locality="United States of America"
-        region="United States of America"
-        country="United States of America"
-      />
       <PageContent />
     </>
-  );
+  )
 }

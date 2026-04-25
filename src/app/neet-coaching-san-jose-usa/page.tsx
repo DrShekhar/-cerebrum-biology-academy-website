@@ -1,32 +1,41 @@
 import { Metadata } from 'next'
 import NEETCoachingPageContent from './PageContent'
 
-export const metadata: Metadata = {
-  title: 'NEET Coaching in San Jose, USA - 98% Success Rate',
-  description:
-    "NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.",
-  keywords: [
-    'NEET coaching in San Jose',
-    'medical entrance exam preparation San Jose',
-    'Dr. Shekhar C Singh San Jose',
-    'best NEET institute San Jose',
-    'NEET online coaching USA',
-  ],
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-san-jose-usa',
-  },
+const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
+export const metadata: Metadata = {
+  title: 'NEET Coaching in San Jose, Silicon Valley | Online Biology Classes for NRI Students',
+  description:
+    'Online NEET Biology coaching for Indian-American students in San Jose, Fremont, Cupertino, Sunnyvale, Santa Clara. AP Biology + NEET dual prep. Free demo available.',
+  alternates: {
+    canonical: `${BASE_URL}/neet-coaching-san-jose-usa`,
+    languages: {
+      'en-US': `${BASE_URL}/neet-coaching-san-jose-usa`,
+      'en-IN': `${BASE_URL}/neet-coaching-san-jose-usa`,
+    },
+  },
   openGraph: {
-    title: 'NEET Coaching in San Jose, USA - 98% Success Rate',
+    title: 'NEET Coaching in San Jose — Silicon Valley Biology Classes',
     description:
-      "NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.",
+      'NEET Biology coaching for Indian-American students in SF Bay Area / Silicon Valley. AP Bio friendly, PST/PDT live classes, NRI quota MBBS guidance.',
+    url: `${BASE_URL}/neet-coaching-san-jose-usa`,
+    siteName: 'Cerebrum Biology Academy',
+    locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${BASE_URL}/og-neet-coaching-san-jose-usa.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'NEET Coaching in San Jose / Silicon Valley — Cerebrum Biology Academy',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in San Jose, USA',
-    description:
-      "NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.",
+    title: 'NEET Coaching in San Jose / SF Bay Area',
+    description: 'Online NEET Biology coaching for Silicon Valley. Book free demo.',
+    images: [`${BASE_URL}/og-neet-coaching-san-jose-usa.jpg`],
   },
 }
 
