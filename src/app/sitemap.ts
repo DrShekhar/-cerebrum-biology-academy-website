@@ -4218,6 +4218,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'amsterdam',
       'bangkok',
       'kuala-lumpur',
+      // 2026 P0 expansion — additive (no edits to existing IB pages)
+      'tokyo',
+      'seoul',
+      'shanghai',
+      'beijing',
+      'houston',
+      'chicago',
+      'san-francisco',
+      'paris',
       // India — home market
       'delhi',
       'south-delhi',

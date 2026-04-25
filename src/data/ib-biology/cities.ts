@@ -27,6 +27,15 @@ export type CitySlug =
   | 'amsterdam'
   | 'bangkok'
   | 'kuala-lumpur'
+  // 2026 P0 expansion — additive only (no edits to existing pages)
+  | 'tokyo'
+  | 'seoul'
+  | 'shanghai'
+  | 'beijing'
+  | 'houston'
+  | 'chicago'
+  | 'san-francisco'
+  | 'paris'
   // India — home market
   | 'delhi'
   | 'gurugram'
@@ -374,6 +383,212 @@ export const cities: Record<CitySlug, CityConfig> = {
     neighbourhoods: ['Mont Kiara', 'Bangsar', 'Damansara Heights', 'Ampang Hilir', 'Cyberjaya'],
     localHook:
       "KL's IB community has grown rapidly alongside international school expansion. Our MYT-aligned sessions fit IB schedules at ISKL, Mont'Kiara, and Garden International.",
+  },
+
+  // --- 2026 P0 expansion: 8 missing global IB markets ---
+
+  tokyo: {
+    slug: 'tokyo',
+    city: 'Tokyo',
+    country: 'Japan',
+    countryCode: 'JP',
+    region: 'Tokyo / Kanto',
+    timezoneAbbr: 'JST',
+    currency: { code: 'JPY', symbol: '¥' },
+    pricing: { perHour: 10000, perHourText: '¥9,000–13,000/hr' },
+    ibSchools: [
+      'American School in Japan (ASIJ)',
+      'Tokyo International School',
+      'Saint Maur International School (Yokohama)',
+      'Yokohama International School',
+      'Aoba-Japan International School',
+      'Nishimachi International School',
+      'KAIS International School',
+    ],
+    neighbourhoods: ['Minato', 'Shibuya', 'Setagaya', 'Meguro', 'Shinagawa', 'Yokohama'],
+    localHook:
+      "Tokyo's IB community is concentrated around Minato (Roppongi/Azabu), Setagaya, and the Yokohama international corridor. Our JST-aligned sessions fit the long Japanese school day, with weekend IA workshops timed for after-cram-school slots.",
+  },
+
+  seoul: {
+    slug: 'seoul',
+    city: 'Seoul',
+    country: 'South Korea',
+    countryCode: 'KR',
+    region: 'Seoul / Gyeonggi',
+    timezoneAbbr: 'KST',
+    currency: { code: 'KRW', symbol: '₩' },
+    pricing: { perHour: 90000, perHourText: '₩80,000–120,000/hr' },
+    ibSchools: [
+      'Dwight School Seoul',
+      'Korea International School (KIS)',
+      'KIS Pangyo',
+      'Seoul Foreign School',
+      'Seoul International School',
+      'Yongsan International School of Seoul (YISS)',
+      'Chadwick International (Songdo)',
+      'Branksome Hall Asia (Jeju)',
+    ],
+    neighbourhoods: ['Gangnam', 'Yongsan', 'Itaewon', 'Pangyo / Bundang', 'Songdo (Incheon)'],
+    localHook:
+      "Korea's IB community is concentrated around Yongsan (Dwight, YISS, SFS), Pangyo (KIS), and Songdo (Chadwick). Many of our Seoul students target US highly-selective universities — our KST sessions fit after-school hagwon schedules.",
+  },
+
+  shanghai: {
+    slug: 'shanghai',
+    city: 'Shanghai',
+    country: 'China',
+    countryCode: 'CN',
+    region: 'Shanghai',
+    timezoneAbbr: 'CST (China)',
+    currency: { code: 'CNY', symbol: '¥' },
+    pricing: { perHour: 800, perHourText: '¥700–1,000/hr' },
+    ibSchools: [
+      'Shanghai American School (Pudong & Puxi)',
+      'Dulwich College Shanghai (Pudong & Puxi)',
+      'Shanghai Community International School (SCIS)',
+      'Yew Chung International School Shanghai (YCIS)',
+      'Concordia International School Shanghai',
+      'Wellington College International Shanghai',
+      'Western International School of Shanghai (WISS)',
+    ],
+    neighbourhoods: ['Pudong', 'Puxi', "Jing'an", 'Xuhui', 'Hongqiao', 'Minhang'],
+    localHook:
+      "Shanghai is China's largest IB market, with the SAS Pudong/Puxi twin campuses, Dulwich, SCIS, YCIS, and Concordia within the same city. Our China-time-aligned sessions support both expat and Chinese-national IB students preparing for global university applications.",
+  },
+
+  beijing: {
+    slug: 'beijing',
+    city: 'Beijing',
+    country: 'China',
+    countryCode: 'CN',
+    region: 'Beijing',
+    timezoneAbbr: 'CST (China)',
+    currency: { code: 'CNY', symbol: '¥' },
+    pricing: { perHour: 800, perHourText: '¥700–1,000/hr' },
+    ibSchools: [
+      'International School of Beijing (ISB)',
+      'Western Academy of Beijing (WAB)',
+      'Dulwich College Beijing',
+      'Yew Chung International School Beijing',
+      'Keystone Academy',
+      'Beijing City International School (BCIS)',
+      'Harrow International School Beijing',
+    ],
+    neighbourhoods: ['Shunyi', 'Chaoyang', 'Haidian', 'Lido', 'CBD'],
+    localHook:
+      "Beijing's IB cluster is centered in Shunyi (ISB, WAB, Dulwich) and Chaoyang. Our tutors are familiar with the ISB and WAB IA calendars and the cross-cultural admissions priorities that Beijing IB students face.",
+  },
+
+  houston: {
+    slug: 'houston',
+    city: 'Houston',
+    country: 'United States',
+    countryCode: 'US',
+    region: 'Texas',
+    timezoneAbbr: 'CST/CDT',
+    currency: { code: 'USD', symbol: '$' },
+    pricing: { perHour: 70, perHourText: '$60–90/hr' },
+    ibSchools: [
+      'Awty International School',
+      'Bellaire High School (HISD IB)',
+      'Westchester Academy for International Studies',
+      'Carnegie Vanguard High School',
+      'Stratford High School (Spring Branch ISD IB)',
+      'The Awty International (Lower School IB Continuum)',
+    ],
+    neighbourhoods: ['River Oaks', 'Memorial', 'Sugar Land', 'The Woodlands', 'Bellaire', 'Katy'],
+    localHook:
+      "Houston's IB community is anchored by Awty International (the city's flagship IB World School) and HISD's IB programmes at Bellaire and Westchester. Our CST-aligned weekend sessions fit Awty's IA timeline.",
+  },
+
+  chicago: {
+    slug: 'chicago',
+    city: 'Chicago',
+    country: 'United States',
+    countryCode: 'US',
+    region: 'Illinois',
+    timezoneAbbr: 'CST/CDT',
+    currency: { code: 'USD', symbol: '$' },
+    pricing: { perHour: 70, perHourText: '$60–90/hr' },
+    ibSchools: [
+      'Lincoln Park High School (CPS IB)',
+      'Senn High School (CPS IB)',
+      'Curie Metropolitan High School',
+      'Hubbard High School (CPS IB)',
+      'Hinsdale Central High School',
+      'Stevenson High School (Lincolnshire)',
+      'Glenbrook North High School',
+      'Schaumburg High School',
+    ],
+    neighbourhoods: [
+      'Lincoln Park',
+      'North Shore',
+      'Hinsdale',
+      'Naperville',
+      'Schaumburg',
+      'Wilmette',
+    ],
+    localHook:
+      'Chicago has one of the largest US public-school IB populations through CPS plus suburban district IB programmes (Hinsdale Central, Stevenson, Glenbrook). Our CST sessions fit US after-school slots and weekend IA blocks.',
+  },
+
+  'san-francisco': {
+    slug: 'san-francisco',
+    city: 'San Francisco / Bay Area',
+    country: 'United States',
+    countryCode: 'US',
+    region: 'California',
+    timezoneAbbr: 'PST/PDT',
+    currency: { code: 'USD', symbol: '$' },
+    pricing: { perHour: 80, perHourText: '$70–100/hr' },
+    ibSchools: [
+      'French American International School (San Francisco)',
+      'San Francisco International High School',
+      'German International School of Silicon Valley (Mountain View)',
+      'Stratford School (IB Continuum)',
+      'Independence High School (San Jose, IB)',
+      'Hillsdale High School (San Mateo, IB)',
+    ],
+    neighbourhoods: [
+      'Pacific Heights',
+      'Palo Alto',
+      'Cupertino',
+      'San Mateo',
+      'Mountain View',
+      'Berkeley',
+      'Marin',
+    ],
+    localHook:
+      'Bay Area IB enrollment is smaller than the AP/UC system, but the IB students at French American International, SFIHS, and German International School of Silicon Valley target highly-competitive global universities. Our PST sessions fit US school days; weekend IA support runs Sat morning.',
+  },
+
+  paris: {
+    slug: 'paris',
+    city: 'Paris',
+    country: 'France',
+    countryCode: 'FR',
+    region: 'Île-de-France',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€55–85/hr' },
+    ibSchools: [
+      'International School of Paris (ISP)',
+      'École Jeannine Manuel',
+      'American School of Paris (Saint-Cloud)',
+      'British School of Paris',
+      'Lycée International (Saint-Germain-en-Laye)',
+      'EIB Victor Hugo',
+    ],
+    neighbourhoods: [
+      '16e arrondissement',
+      'Saint-Cloud',
+      'Neuilly-sur-Seine',
+      'Saint-Germain-en-Laye',
+      'Versailles',
+    ],
+    localHook:
+      "Paris's IB hubs are in the 16e (ISP, Jeannine Manuel) and Hauts-de-Seine (American School Paris, British School). Our CET-aligned sessions fit the French school calendar including the Wednesday-afternoon school break, when many IB students take dedicated tutoring.",
   },
 
   // --- India: home market, 220+ IB World Schools, 6,156 IBDP students (2024) ---
