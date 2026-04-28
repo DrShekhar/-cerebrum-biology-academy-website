@@ -3573,4 +3573,18 @@ export const gscCrawledNotIndexedRedirects = [
     destination: '/neet-coaching-gurugram',
     permanent: true,
   },
+  // ============================================
+  // Language stubs (orphaned i18n routes with no translation)
+  // GSC reported these as "Crawled — currently not indexed" (~10 URLs).
+  // /hi and /ta have real translated content — keep those, redirect the rest to homepage.
+  // ============================================
+  { source: '/ja', destination: '/', permanent: true },
+  { source: '/te', destination: '/', permanent: true },
+  { source: '/kn', destination: '/', permanent: true },
+  { source: '/bn', destination: '/', permanent: true },
+  { source: '/es', destination: '/', permanent: true },
+  { source: '/ml', destination: '/', permanent: true },
+  { source: '/de', destination: '/', permanent: true },
+  { source: '/mr', destination: '/', permanent: true },
+  { source: '/pt', destination: '/', permanent: true },
 ]

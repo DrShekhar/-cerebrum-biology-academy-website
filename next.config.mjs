@@ -1710,10 +1710,14 @@ const nextConfig = {
     // Production: strategic caching for maximum performance
     return [
       // Static assets - Long-term caching with immutable
+      // SEO: X-Robots-Tag noindex prevents these CSS/JS/font files from showing
+      // in GSC's "Crawled — currently not indexed" report (~250 URLs).
+      // Googlebot can still fetch them for rendering — this only suppresses indexing.
       {
         source: '/_next/static/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'X-Robots-Tag', value: 'noindex' },
           ...securityHeaders,
         ],
       },
@@ -1722,6 +1726,7 @@ const nextConfig = {
         source: '/:path*.{js,css,woff,woff2,ttf,eot}',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'X-Robots-Tag', value: 'noindex' },
           ...securityHeaders,
         ],
       },
