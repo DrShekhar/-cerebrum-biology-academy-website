@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic'
 import { Play, Star, Clock, Sparkles, GraduationCap, MessageCircle } from 'lucide-react'
 import { getWhatsAppLink } from '@/lib/constants/contactInfo'
+import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 
 const HeroClientInteractive = dynamic(
   () => import('./HeroClientInteractive').then((mod) => mod.HeroClientInteractive),
@@ -21,13 +22,12 @@ function HeroPlaceholder() {
     <>
       {/* CTAs - Must match HeroClientInteractive exactly (3 buttons) */}
       <div className="flex flex-col sm:flex-row gap-3 xs:gap-4 mb-4">
-        <a
-          href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+        <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 bg-[#ea4335] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl text-sm xs:text-base md:text-lg border border-red-400/30"
         >
           <Play className="h-5 xs:h-6 w-5 xs:w-6 flex-shrink-0" />
           BOOK DEMO
-        </a>
+        </ContextualWhatsAppLink>
         <a
           href={getWhatsAppLink()}
           className="inline-flex items-center justify-center gap-2 bg-[#166534] text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl text-sm xs:text-base md:text-lg border border-green-400/30"

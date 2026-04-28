@@ -128,7 +128,7 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
               WhatsApp Us
             </button>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20botanical%20garden%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-blue-400 px-6 py-3 font-semibold text-white transition hover:bg-blue-300"
             >
               Book FREE Demo
@@ -438,7 +438,7 @@ export default function BotanicalGardenMetroContent({ metroData }: BotanicalGard
               WhatsApp Now
             </button>
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20botanical%20garden%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-semibold text-blue-700 transition hover:bg-blue-50"
             >
               Book Free Demo

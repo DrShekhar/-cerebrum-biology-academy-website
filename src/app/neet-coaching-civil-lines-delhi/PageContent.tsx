@@ -192,7 +192,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               </a>
 
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Civil%20Lines.%20Please%20share%20available%20timings."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -961,7 +961,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               </a>
 
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Civil%20Lines.%20Please%20share%20available%20timings."
                 target="_blank"
                 rel="noopener noreferrer"
               >

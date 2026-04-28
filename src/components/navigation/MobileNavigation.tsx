@@ -19,6 +19,7 @@ import {
   UserPlus,
 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
+import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 
 interface MobileNavigationProps {
   className?: string
@@ -303,8 +304,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
             </div>
 
             <div className="pt-4">
-              <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+              <ContextualWhatsAppLink
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleMenuItemClick}
@@ -312,7 +312,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
               >
                 <Play className="w-5 h-5" aria-hidden="true" />
                 <span>Book Free Demo</span>
-              </Link>
+              </ContextualWhatsAppLink>
             </div>
           </div>
         </div>

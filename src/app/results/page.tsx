@@ -159,7 +159,7 @@ export default function ResultsPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20results.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition-all hover:scale-105 min-h-[52px]"
                 >
                   Book Free Demo Class
@@ -467,7 +467,7 @@ export default function ResultsPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20details." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20results.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition-all hover:scale-105 min-h-[52px]"
               >
                 Book Free Demo Class

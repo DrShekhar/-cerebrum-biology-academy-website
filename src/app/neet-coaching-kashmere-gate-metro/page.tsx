@@ -251,7 +251,7 @@ export default function NEETCoachingKashmereGateMetroPage() {
                 WhatsApp Us
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kashmere%20gate%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-6 py-3 font-semibold text-gray-900 transition hover:bg-yellow-300"
               >
                 Book FREE Demo
@@ -502,7 +502,7 @@ export default function NEETCoachingKashmereGateMetroPage() {
                 WhatsApp Now
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kashmere%20gate%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-semibold text-red-700 transition hover:bg-red-50"
               >
                 Book Free Demo

@@ -240,7 +240,7 @@ export default function NeetCoachingAnnaNagarPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -439,7 +439,7 @@ export default function NeetCoachingAnnaNagarPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="secondary"
                   size="xl"
@@ -451,7 +451,7 @@ export default function NeetCoachingAnnaNagarPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details." target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Chennai.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   size="xl"

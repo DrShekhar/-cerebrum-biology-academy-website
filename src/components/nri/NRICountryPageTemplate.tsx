@@ -23,6 +23,7 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 
 export interface NRICountryData {
   country: string
@@ -150,7 +151,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp Us
                 </Button>
-                <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                     size="lg"
@@ -159,7 +160,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                     <Play className="w-5 h-5 mr-2" />
                     Book Demo
                   </Button>
-                </Link>
+                </ContextualWhatsAppLink>
                 <a href={getPhoneLink()}>
                   <Button
                     variant="outline"
@@ -605,7 +606,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                 <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
                 <span className="truncate">WhatsApp Us</span>
               </Button>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
                   variant="outline"
                   size="lg"
@@ -614,7 +615,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <Play className="w-5 h-5 mr-2 flex-shrink-0" />
                   <span className="truncate">Book Demo</span>
                 </Button>
-              </Link>
+              </ContextualWhatsAppLink>
               <a href={getPhoneLink()} className="w-full sm:w-auto">
                 <Button
                   variant="outline"

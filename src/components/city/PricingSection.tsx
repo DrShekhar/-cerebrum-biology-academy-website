@@ -3,6 +3,7 @@
 import { CheckCircle, Star } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
+import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 
 interface PricingSectionProps {
   cityName?: string
@@ -80,14 +81,14 @@ export function PricingSection({ cityName, city }: PricingSectionProps) {
                   </li>
                 ))}
               </ul>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer">
                 <Button
                   variant={plan.popular ? 'default' : 'outline'}
                   className={`w-full ${plan.popular ? 'bg-teal-600 hover:bg-teal-700 text-white' : ''}`}
                 >
                   Book Free Demo
                 </Button>
-              </Link>
+              </ContextualWhatsAppLink>
             </div>
           ))}
         </div>

@@ -11,6 +11,7 @@ import { ProgressCardSkeleton } from './skeletons/ProgressCardSkeleton'
 import { MetricCardSkeleton } from './skeletons/MetricsSkeleton'
 import { useAuth } from '@/contexts/AuthContext'
 import { EmptyState } from '@/components/ui/EmptyState'
+import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 import {
   Brain,
   BookOpen,
@@ -939,14 +940,13 @@ export function AIEducationDashboard() {
                       <MessageCircle className="w-4 h-4" />
                       <span>Try AI Tutor</span>
                     </button>
-                    <a
-                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                    <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
                       className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-[#4a5d4a] text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
                       aria-label="Book Free Demo"
                     >
                       <Calendar className="w-4 h-4" />
                       <span>Book Free Demo</span>
-                    </a>
+                    </ContextualWhatsAppLink>
                     <a
                       href="/courses"
                       className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"

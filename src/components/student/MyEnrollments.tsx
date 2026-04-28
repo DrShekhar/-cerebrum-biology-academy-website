@@ -20,6 +20,7 @@ import {
   Mail,
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 
 interface ProgressData {
   overallProgress: number
@@ -117,8 +118,7 @@ export function MyEnrollments() {
             </p>
           </a>
 
-          <a
-            href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20NEET%20Biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrollment%20details." target="_blank" rel="noopener noreferrer"
+          <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
             className="bg-indigo-500 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group text-white animate-fadeInUp"
           >
             <div className="flex items-center mb-4">
@@ -135,7 +135,7 @@ export function MyEnrollments() {
             <p className="text-blue-100 text-sm">
               Complete your enrollment in minutes with multiple payment options available.
             </p>
-          </a>
+          </ContextualWhatsAppLink>
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-center">

@@ -23,6 +23,7 @@ import { useI18n } from '@/contexts/I18nContext'
 // Import BurgerMenu directly for reliable navigation (critical UI)
 // This ensures the burger menu always renders even if dynamic chunks fail
 import { BurgerMenu } from '@/components/navigation/BurgerMenu'
+import { ContextualWhatsAppLink } from '@/components/common/ContextualWhatsAppLink'
 
 const SearchMenu = dynamic(
   () => import('@/components/navigation/SearchMenu').then((mod) => mod.SearchMenu),
@@ -238,13 +239,12 @@ const Header = () => {
               ) : (
                 <>
                   {/* Free Demo - Ghost Button Style */}
-                  <Link
-                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border-2 border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700 hover:text-green-700 hover:shadow-md whitespace-nowrap group"
                   >
                     <Play className="w-4 h-4 transition-transform group-hover:scale-110" />
                     <span>{t('demoClasses')}</span>
-                  </Link>
+                  </ContextualWhatsAppLink>
 
                   {/* Primary CTA - Enroll Now (Enhanced) */}
                   <Link
@@ -340,13 +340,12 @@ const Header = () => {
                 ) : (
                   <>
                     {/* Free Demo - Ghost Style */}
-                    <Link
-                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                    <ContextualWhatsAppLink target="_blank" rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 border-2 border-green-600 text-green-600 px-6 py-4 rounded-full font-semibold hover:bg-green-50 hover:border-green-700 hover:text-green-700 transition-all duration-300 min-h-[52px]"
                     >
                       <Play className="w-5 h-5" />
                       <span>{t('demoClasses')}</span>
-                    </Link>
+                    </ContextualWhatsAppLink>
 
                     {/* Primary CTA - Enroll Now */}
                     <Link
