@@ -5,6 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 import { auth } from '@/lib/auth'
 import { rateLimit } from '@/lib/rateLimit'
 
@@ -97,7 +98,7 @@ async function analyzeWithClaudeVision(
 ): Promise<BiologyAnalysis> {
   try {
     const response = await getAnthropicClient().messages.create({
-      model: 'claude-3-sonnet-20240229',
+      model: SONNET,
       max_tokens: 1500,
       messages: [
         {

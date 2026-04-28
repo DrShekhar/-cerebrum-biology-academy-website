@@ -4,6 +4,7 @@
  */
 
 import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { SONNET } from '@/lib/ai/models'
 
 // Code Quality Agent
 export const codeQualityConfig: AgentConfig = {
@@ -25,7 +26,7 @@ export const codeQualityConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.1,
     maxTokens: 2000,
     systemPrompt: `You are a Code Quality Engineer.
@@ -73,7 +74,7 @@ export const unitTestConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.3,
     maxTokens: 6000,
     systemPrompt: `You are a Testing Engineer specializing in Jest and React Testing Library.
@@ -129,7 +130,7 @@ export const e2eTestConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.3,
     maxTokens: 6000,
     systemPrompt: `You are an E2E Testing Engineer specializing in Playwright.
@@ -182,7 +183,7 @@ export const securityAuditConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.2,
     maxTokens: 4000,
     systemPrompt: `You are a Security Engineer specializing in web application security.

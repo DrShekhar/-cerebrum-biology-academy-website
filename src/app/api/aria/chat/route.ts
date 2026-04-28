@@ -8,6 +8,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import { getSystemPrompt } from '@/lib/aria/systemPrompt'
 import { detectLanguage } from '@/lib/aria/translations'
 import type { Language } from '@/lib/aria/types'
+import { HAIKU } from '@/lib/ai/models'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -172,7 +173,7 @@ export async function POST(request: NextRequest) {
     const anthropic = new Anthropic({ apiKey })
 
     const stream = await createStreamWithRetry(anthropic, {
-      model: 'claude-3-5-haiku-20241022',
+      model: HAIKU,
       max_tokens: 1024,
       temperature: 0.7,
       system: systemPrompt,

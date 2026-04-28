@@ -1,6 +1,8 @@
 // AI Configuration Service for Cerebrum Biology Academy
 // Centralizes all AI provider configurations and settings
 
+import { HAIKU, SONNET } from './models'
+
 export interface AIProviderConfig {
   name: string
   apiKey: string
@@ -157,12 +159,12 @@ class AIConfigManager {
       apiKey: process.env.ANTHROPIC_API_KEY || '',
       baseUrl: process.env.ANTHROPIC_API_URL || 'https://api.anthropic.com/v1',
       models: {
-        default: 'claude-3-5-sonnet-20250107',
-        fast: 'claude-3-5-haiku-20241022',
+        default: SONNET,
+        fast: HAIKU,
         premium: 'claude-4', // Claude 4 for premium tier
-        reasoning: 'claude-3-5-sonnet-20250107', // Best for reasoning
-        vision: 'claude-3-5-sonnet-20250107', // Vision capabilities
-        long: 'claude-3-5-sonnet-20250107', // 200K context window
+        reasoning: SONNET, // Best for reasoning
+        vision: SONNET, // Vision capabilities
+        long: SONNET, // 200K context window
       },
       rateLimits: {
         requestsPerMinute: 5000, // Increased limits
@@ -175,12 +177,12 @@ class AIConfigManager {
         premiumOutputCost: 0.03,
       },
       capabilities: {
-        reasoning: ['claude-3-5-sonnet-20250107', 'claude-4'],
-        vision: ['claude-3-5-sonnet-20250107'],
-        coding: ['claude-3-5-sonnet-20250107'],
-        analysis: ['claude-3-5-sonnet-20250107', 'claude-4'],
-        longContext: ['claude-3-5-sonnet-20250107'], // 200K tokens
-        fastResponse: ['claude-3-5-haiku-20241022'],
+        reasoning: [SONNET, 'claude-4'],
+        vision: [SONNET],
+        coding: [SONNET],
+        analysis: [SONNET, 'claude-4'],
+        longContext: [SONNET], // 200K tokens
+        fastResponse: [HAIKU],
       },
     })
 

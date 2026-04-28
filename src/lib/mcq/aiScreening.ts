@@ -4,6 +4,7 @@
  */
 
 import Anthropic from '@anthropic-ai/sdk'
+import { HAIKU } from '@/lib/ai/models'
 
 export interface AIScreeningResult {
   overallScore: number
@@ -113,7 +114,7 @@ Be especially strict on accuracy. If the marked answer is incorrect, set accurac
 
   try {
     const message = await anthropic.messages.create({
-      model: 'claude-3-5-sonnet-20241022',
+      model: HAIKU,
       max_tokens: 1500,
       temperature: 0.1,
       messages: [

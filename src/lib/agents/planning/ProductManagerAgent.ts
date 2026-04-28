@@ -6,6 +6,7 @@
  */
 
 import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { SONNET } from '@/lib/ai/models'
 
 export const productManagerConfig: AgentConfig = {
   id: 'product-manager-001',
@@ -26,7 +27,7 @@ export const productManagerConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.3,
     maxTokens: 4000,
     systemPrompt: `You are an expert Product Manager for an educational technology platform (Cerebrum Biology Academy).

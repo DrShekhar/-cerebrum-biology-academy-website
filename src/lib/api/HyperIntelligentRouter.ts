@@ -5,6 +5,7 @@
  */
 
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 import OpenAI from 'openai'
 import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
@@ -379,7 +380,7 @@ export class HyperIntelligentRouter {
 
     const claude = this.ensureClaude()
     const response = await claude.messages.create({
-      model: 'claude-3-5-sonnet-20241022',
+      model: SONNET,
       max_tokens: request.maxTokens || 1000,
       temperature: 0.7,
       system: systemPrompt,

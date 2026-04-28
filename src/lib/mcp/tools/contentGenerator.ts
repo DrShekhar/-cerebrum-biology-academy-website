@@ -5,6 +5,7 @@
  */
 
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 import Redis from 'ioredis'
 import type { EducationalAgent, StudentQuery, AgentResponse, NEETCurriculum } from '../types'
 import { AgentType, AgentCapability, DifficultyLevel, ExamType } from '../types'
@@ -270,7 +271,7 @@ Keywords: [key concepts]
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 3000,
         messages: [
           {
@@ -345,7 +346,7 @@ Make it engaging and easy to understand. Use examples that students can relate t
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 2500,
         messages: [
           {
@@ -422,7 +423,7 @@ Make it perfect for last-minute revision before NEET.
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 1500,
         messages: [
           {
@@ -496,7 +497,7 @@ Example format:
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 1200,
         messages: [
           {
@@ -563,7 +564,7 @@ Make descriptions clear enough for students to visualize without seeing the actu
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 2000,
         messages: [
           {

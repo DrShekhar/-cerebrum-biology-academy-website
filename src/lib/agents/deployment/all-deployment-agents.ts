@@ -4,6 +4,7 @@
  */
 
 import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { SONNET } from '@/lib/ai/models'
 
 // Build Validation Agent - CRITICAL for preventing deployment failures
 export const buildValidationConfig: AgentConfig = {
@@ -25,7 +26,7 @@ export const buildValidationConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.1,
     maxTokens: 3000,
     systemPrompt: `You are a Build Engineer ensuring zero deployment failures.
@@ -92,7 +93,7 @@ export const gitOperationsConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.2,
     maxTokens: 2000,
     systemPrompt: `You are a Git Expert managing version control.
@@ -156,7 +157,7 @@ export const deploymentConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.1,
     maxTokens: 2000,
     systemPrompt: `You are a DevOps Engineer managing deployments to Vercel.
@@ -218,7 +219,7 @@ export const rollbackConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.1,
     maxTokens: 2000,
     systemPrompt: `You are an Incident Response Engineer handling deployment failures.

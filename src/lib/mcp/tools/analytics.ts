@@ -5,6 +5,7 @@
  */
 
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 import Redis from 'ioredis'
 import type {
   EducationalAgent,
@@ -646,7 +647,7 @@ Length: 400-500 words total.
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 1500,
         messages: [
           {

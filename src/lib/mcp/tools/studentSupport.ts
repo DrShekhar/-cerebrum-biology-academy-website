@@ -5,6 +5,7 @@
  */
 
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 import Redis from 'ioredis'
 import type { EducationalAgent, StudentQuery, AgentResponse, BiologyTopic } from '../types'
 import { AgentType, AgentCapability, DifficultyLevel, BiologyUnit } from '../types'
@@ -203,7 +204,7 @@ Respond in JSON format:
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 1000,
         messages: [
           {
@@ -277,7 +278,7 @@ Make it NEET-focused with emphasis on scoring marks.
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 2000,
         messages: [
           {
@@ -342,7 +343,7 @@ Difficulty level: ${analysis.difficulty}
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 1500,
         messages: [
           {
@@ -406,7 +407,7 @@ Make questions progressively challenging and cover different aspects of the topi
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 2000,
         messages: [
           {
@@ -469,7 +470,7 @@ Current preparation level: ${analysis.difficulty}
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 1500,
         messages: [
           {
@@ -526,7 +527,7 @@ Be warm, understanding, and encouraging. Remember they're under immense pressure
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 1000,
         messages: [
           {
@@ -579,7 +580,7 @@ Be helpful, encouraging, and guide them toward specific Biology learning goals.
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: SONNET,
         max_tokens: 1000,
         messages: [
           {

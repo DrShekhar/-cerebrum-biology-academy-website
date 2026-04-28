@@ -5,6 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 
 // Lazy initialize Anthropic client for better tree-shaking
 let _anthropic: Anthropic | null = null
@@ -87,7 +88,7 @@ async function analyzeVoiceInput(request: VoiceRequest) {
     'No previous conversation'
 
   const response = await getAnthropicClient().messages.create({
-    model: 'claude-3-sonnet-20240229',
+    model: SONNET,
     max_tokens: 500,
     messages: [
       {
@@ -134,7 +135,7 @@ async function generateEducationalResponse(analysis: any, request: VoiceRequest)
   const languageInstruction = getLanguageInstruction(request.language)
 
   const response = await getAnthropicClient().messages.create({
-    model: 'claude-3-sonnet-20240229',
+    model: SONNET,
     max_tokens: 800,
     messages: [
       {

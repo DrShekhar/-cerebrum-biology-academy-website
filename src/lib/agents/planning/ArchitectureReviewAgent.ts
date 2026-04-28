@@ -6,6 +6,7 @@
  */
 
 import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { SONNET } from '@/lib/ai/models'
 
 export const architectureReviewConfig: AgentConfig = {
   id: 'architecture-review-001',
@@ -26,7 +27,7 @@ export const architectureReviewConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.2,
     maxTokens: 4000,
     systemPrompt: `You are a Senior Software Architect for Cerebrum Biology Academy, an educational technology platform.

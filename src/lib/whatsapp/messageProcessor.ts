@@ -5,6 +5,7 @@
  */
 
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 import OpenAI from 'openai'
 import { WhatsAppService } from './whatsappService'
 import { StudentTracker } from './studentTracker'
@@ -242,7 +243,7 @@ export class WhatsAppMessageProcessor {
   ): Promise<{ isRelevant: boolean; suggestion?: string }> {
     try {
       const response = await getClaude().messages.create({
-        model: 'claude-3-sonnet-20240229',
+        model: SONNET,
         max_tokens: 200,
         messages: [
           {
@@ -293,7 +294,7 @@ Respond with JSON:
       )
 
       const response = await getClaude().messages.create({
-        model: 'claude-3-sonnet-20240229',
+        model: SONNET,
         max_tokens: 1000,
         messages: [
           {

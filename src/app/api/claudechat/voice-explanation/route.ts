@@ -5,6 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 
 // Lazy initialize Anthropic client for better tree-shaking
 let _anthropic: Anthropic | null = null
@@ -52,7 +53,7 @@ export async function POST(request: NextRequest) {
 async function generateEducationalScript(request: VoiceRequest): Promise<string> {
   try {
     const response = await getAnthropicClient().messages.create({
-      model: 'claude-3-sonnet-20240229',
+      model: SONNET,
       max_tokens: 800,
       messages: [
         {

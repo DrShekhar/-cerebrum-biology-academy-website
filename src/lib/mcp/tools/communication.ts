@@ -5,6 +5,7 @@
  */
 
 import { Anthropic } from '@anthropic-ai/sdk'
+import { HAIKU } from '@/lib/ai/models'
 import Redis from 'ioredis'
 import {
   type EducationalAgent,
@@ -417,7 +418,7 @@ Make it personal, informative, and encouraging.
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: HAIKU,
         max_tokens: 800,
         messages: [
           {
@@ -487,7 +488,7 @@ Use positive tone while being honest about areas needing improvement.
 
     try {
       const response = await this.anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: HAIKU,
         max_tokens: 2000,
         messages: [
           {

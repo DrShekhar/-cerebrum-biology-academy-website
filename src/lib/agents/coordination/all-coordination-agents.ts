@@ -4,6 +4,7 @@
  */
 
 import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { SONNET } from '@/lib/ai/models'
 
 // Learning Agent
 export const learningConfig: AgentConfig = {
@@ -24,7 +25,7 @@ export const learningConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.4,
     maxTokens: 4000,
     systemPrompt: `You are a Machine Learning Engineer building institutional knowledge.
@@ -114,7 +115,7 @@ export const documentationConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.3,
     maxTokens: 4000,
     systemPrompt: `You are a Technical Writer creating clear, comprehensive documentation.

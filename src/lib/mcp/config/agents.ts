@@ -5,6 +5,7 @@
  */
 
 import { AgentType, AgentCapability } from '../types'
+import { SONNET } from '@/lib/ai/models'
 
 export interface AgentConfigProfile {
   id: string
@@ -170,7 +171,7 @@ export class AgentConfig {
       confidenceThreshold: 0.85,
       configuration: {
         modelSettings: {
-          model: 'claude-3-5-sonnet-20241022',
+          model: SONNET,
           maxTokens: 2000,
           temperature: 0.7,
           topP: 0.9,
@@ -236,7 +237,7 @@ export class AgentConfig {
       confidenceThreshold: 0.9,
       configuration: {
         modelSettings: {
-          model: 'claude-3-5-sonnet-20241022',
+          model: SONNET,
           maxTokens: 3000,
           temperature: 0.8,
           topP: 0.9,
@@ -302,7 +303,7 @@ export class AgentConfig {
       confidenceThreshold: 0.95,
       configuration: {
         modelSettings: {
-          model: 'claude-3-5-sonnet-20241022',
+          model: SONNET,
           maxTokens: 2500,
           temperature: 0.3, // Lower temperature for analytical tasks
           topP: 0.8,
@@ -364,7 +365,7 @@ export class AgentConfig {
       confidenceThreshold: 0.88,
       configuration: {
         modelSettings: {
-          model: 'claude-3-5-sonnet-20241022',
+          model: SONNET,
           maxTokens: 1500,
           temperature: 0.6,
           topP: 0.9,
@@ -430,7 +431,7 @@ export class AgentConfig {
       confidenceThreshold: 0.92,
       configuration: {
         modelSettings: {
-          model: 'claude-3-5-sonnet-20241022',
+          model: SONNET,
           maxTokens: 2500,
           temperature: 0.5,
           topP: 0.8,

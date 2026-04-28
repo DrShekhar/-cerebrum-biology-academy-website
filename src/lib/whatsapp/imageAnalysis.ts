@@ -5,6 +5,7 @@
 
 import OpenAI from 'openai'
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 
 let openai: OpenAI | null = null
 let anthropic: Anthropic | null = null
@@ -144,7 +145,7 @@ export class ImageAnalysisService {
       const imageBase64 = await this.downloadAndEncodeImage(imageUrl)
 
       const response = await getClaude().messages.create({
-        model: 'claude-3-sonnet-20240229',
+        model: SONNET,
         max_tokens: 1000,
         messages: [
           {

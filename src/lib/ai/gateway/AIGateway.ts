@@ -5,6 +5,7 @@
  */
 
 import { Anthropic } from '@anthropic-ai/sdk'
+import { SONNET } from '@/lib/ai/models'
 import OpenAI from 'openai'
 import Redis from 'ioredis'
 import { getRedisClient } from '@/lib/cache/redis'
@@ -284,7 +285,7 @@ export class AIGateway {
       if (provider.id === 'claude') {
         const claude = this.ensureClaude()
         const response = await claude.messages.create({
-          model: 'claude-3-sonnet-20240229',
+          model: SONNET,
           max_tokens: request.maxTokens || 1000,
           messages: [{ role: 'user', content: request.prompt }],
           temperature: request.temperature || 0.7,
@@ -306,7 +307,7 @@ export class AIGateway {
           cached: false,
           timestamp: new Date(),
           metadata: {
-            model: 'claude-3-sonnet-20240229',
+            model: SONNET,
             confidence: 0.95,
             quality: 0.9,
           },
@@ -437,7 +438,7 @@ export class AIGateway {
     try {
       const claude = this.ensureClaude()
       await claude.messages.create({
-        model: 'claude-3-sonnet-20240229',
+        model: SONNET,
         max_tokens: 10,
         messages: [{ role: 'user', content: 'Health check' }],
       })

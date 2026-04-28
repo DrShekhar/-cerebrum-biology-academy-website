@@ -5,6 +5,7 @@
  */
 
 import Anthropic from '@anthropic-ai/sdk'
+import { HAIKU } from '@/lib/ai/models'
 
 let _anthropic: Anthropic | null = null
 function getAnthropicClient(): Anthropic {
@@ -65,7 +66,7 @@ export async function generateWhatsAppMessage(
     const prompt = buildPrompt(leadContext, options)
 
     const response = await getAnthropicClient().messages.create({
-      model: 'claude-3-5-sonnet-20241022',
+      model: HAIKU,
       max_tokens: options.maxLength || 300,
       temperature: 0.7,
       messages: [

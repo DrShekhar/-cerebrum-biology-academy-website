@@ -4,6 +4,7 @@
  */
 
 import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { SONNET } from '@/lib/ai/models'
 
 // Performance Monitor Agent
 export const performanceMonitorConfig: AgentConfig = {
@@ -24,7 +25,7 @@ export const performanceMonitorConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.2,
     maxTokens: 3000,
     systemPrompt: `You are a Performance Engineer monitoring application performance.
@@ -85,7 +86,7 @@ export const errorTrackingConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.2,
     maxTokens: 3000,
     systemPrompt: `You are an Error Tracking Engineer monitoring application health.
@@ -152,7 +153,7 @@ export const analyticsConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.3,
     maxTokens: 3000,
     systemPrompt: `You are a Product Analytics Engineer tracking user behavior and business metrics.

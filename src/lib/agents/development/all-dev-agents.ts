@@ -4,6 +4,7 @@
  */
 
 import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { SONNET } from '@/lib/ai/models'
 
 // UI/UX Developer Agent
 export const uiUxDeveloperConfig: AgentConfig = {
@@ -25,7 +26,7 @@ export const uiUxDeveloperConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.4,
     maxTokens: 8000,
     systemPrompt: `You are an expert Frontend Developer specializing in Next.js, React, TypeScript, and Tailwind CSS.
@@ -75,7 +76,7 @@ export const backendDeveloperConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.3,
     maxTokens: 8000,
     systemPrompt: `You are an expert Backend Developer specializing in Next.js API Routes, Prisma, and PostgreSQL.
@@ -130,7 +131,7 @@ export const databaseMigrationConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.1,
     maxTokens: 4000,
     systemPrompt: `You are an expert Database Engineer specializing in PostgreSQL and Prisma.
@@ -184,7 +185,7 @@ export const integrationConfig: AgentConfig = {
   ],
   modelConfig: {
     provider: 'anthropic',
-    model: 'claude-3-5-sonnet-20241022',
+    model: SONNET,
     temperature: 0.3,
     maxTokens: 6000,
     systemPrompt: `You are an expert Full-Stack Developer specializing in React Query and state management.
