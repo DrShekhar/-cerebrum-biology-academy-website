@@ -10,7 +10,18 @@
  */
 
 import { useEffect, useMemo, useState } from 'react'
-import { Calendar, CheckCircle, Clock, MessageCircle, Phone, Sparkles } from 'lucide-react'
+import {
+  Calendar,
+  CheckCircle,
+  Clock,
+  GraduationCap,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Sparkles,
+  Target,
+  Users,
+} from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
@@ -144,35 +155,44 @@ export default function BookFreeDemoPage() {
             <Sparkles className="h-3.5 w-3.5" />
             <span>An AIIMSonian&apos;s Initiative</span>
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl">
             Book a <span className="text-[#3d4d3d]">free demo class</span>
           </h1>
           <p className="mx-auto mt-3 max-w-xl text-sm text-gray-600 sm:text-base">
             Pick your class, goal, and mode below — we&apos;ll WhatsApp you back with the right
             batch schedule and a faculty introduction.
           </p>
-          <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-[#3d4d3d] px-3 py-1 text-xs font-medium text-white sm:text-sm">
+          {/* Urgency chip — same outlined style as the AIIMSonian badge above
+              for visual consistency. Includes seats-left counter for scarcity. */}
+          <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#3d4d3d]/20 bg-white px-3 py-1 text-xs font-medium text-[#3d4d3d] sm:text-sm">
             <Calendar className="h-3.5 w-3.5" />
-            <span>Next batch starts {batchStartDay}</span>
+            <span>
+              Next batch starts {batchStartDay} <span className="text-[#3d4d3d]/60">·</span>{' '}
+              <span className="font-semibold">12 seats left</span>
+            </span>
           </div>
         </div>
 
-        {/* Capture card — single responsive surface (no mobile/desktop branch) */}
-        <div className="rounded-2xl bg-white p-5 shadow-xl ring-1 ring-gray-200 sm:p-7 md:p-8">
+        {/* Capture card — single responsive surface (no mobile/desktop branch).
+            Lighter shadow-lg (was shadow-xl which felt dated at rounded-2xl). */}
+        <div className="rounded-2xl bg-white p-5 shadow-lg ring-1 ring-gray-200 sm:p-7 md:p-8">
           {/* On desktop, the three selectors sit in a 3-column grid so the
               card stays compact and the CTAs are above the fold on a 1024px+
               viewport. On mobile they stack vertically as before. */}
-          <div className="grid gap-4 md:grid-cols-3 md:gap-5">
+          <div className="grid gap-5 md:grid-cols-3 md:gap-6">
             {/* Class selector */}
             <div>
-              <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Which class?
+              <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500">
+                <GraduationCap className="h-3.5 w-3.5 text-[#3d4d3d]" />
+                <span>Which class?</span>
               </div>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {(['Class 9', 'Class 10', 'Class 11', 'Class 12', 'Dropper'] as const).map((c) => {
                   const isSelected = classLevel === c
-                  // Untouched default chip gets a dashed-ring nudge so the user
-                  // notices it and either confirms with a tap or chooses another.
+                  // Untouched default chip pulses with a soft brand-green ring
+                  // so the user notices it and either confirms with a tap or
+                  // chooses another. (Was a screaming yellow ring — out of
+                  // palette and read like a validation error.)
                   const isUnconfirmedDefault = isSelected && !touchedClass
                   return (
                     <button
@@ -186,7 +206,7 @@ export default function BookFreeDemoPage() {
                         isSelected
                           ? 'bg-[#3d4d3d] text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      } ${isUnconfirmedDefault ? 'ring-2 ring-yellow-400 ring-offset-1' : ''}`}
+                      } ${isUnconfirmedDefault ? 'ring-2 ring-[#3d4d3d]/40 ring-offset-2' : ''}`}
                     >
                       {c}
                     </button>
@@ -197,8 +217,9 @@ export default function BookFreeDemoPage() {
 
             {/* Track selector */}
             <div>
-              <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Goal
+              <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500">
+                <Target className="h-3.5 w-3.5 text-[#3d4d3d]" />
+                <span>Goal</span>
               </div>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {(['NEET', 'Boards', 'Olympiad', 'All-round'] as const).map((t) => {
@@ -216,7 +237,7 @@ export default function BookFreeDemoPage() {
                         isSelected
                           ? 'bg-[#3d4d3d] text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      } ${isUnconfirmedDefault ? 'ring-2 ring-yellow-400 ring-offset-1' : ''}`}
+                      } ${isUnconfirmedDefault ? 'ring-2 ring-[#3d4d3d]/40 ring-offset-2' : ''}`}
                     >
                       {t}
                     </button>
@@ -226,9 +247,10 @@ export default function BookFreeDemoPage() {
             </div>
 
             {/* Mode selector */}
-            <div className="mb-2 md:mb-0">
-              <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500">
-                Mode
+            <div>
+              <div className="mb-1.5 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gray-500">
+                <MapPin className="h-3.5 w-3.5 text-[#3d4d3d]" />
+                <span>Mode</span>
               </div>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {(['Online', 'Offline', 'Either'] as const).map((m) => {
@@ -246,7 +268,7 @@ export default function BookFreeDemoPage() {
                         isSelected
                           ? 'bg-[#3d4d3d] text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      } ${isUnconfirmedDefault ? 'ring-2 ring-yellow-400 ring-offset-1' : ''}`}
+                      } ${isUnconfirmedDefault ? 'ring-2 ring-[#3d4d3d]/40 ring-offset-2' : ''}`}
                     >
                       {m === 'Offline' ? 'Offline (Delhi NCR)' : m}
                     </button>
@@ -256,66 +278,72 @@ export default function BookFreeDemoPage() {
             </div>
           </div>
 
-          {/* Confirm-defaults nudge — appears only when at least one chip is
-              still on its auto-default. Quietly tells the user that confirming
-              their selection is what unlocks the right batch info. */}
+          {/* Confirm-defaults nudge — in-palette, reads as a quiet hint not
+              an error message. Was amber-700 which clashed with the brand. */}
           {(!touchedClass || !touchedTrack || !touchedMode) && (
-            <p className="mt-4 text-center text-xs text-amber-700">
+            <p className="mt-5 text-center text-xs text-[#3d4d3d]/80">
               Tap the chips above to confirm your class, goal, and mode — we&apos;ll route you to
               the right counsellor.
             </p>
           )}
 
-          {/* Primary CTA — WhatsApp with full context attached */}
-          <button
-            type="button"
-            onClick={handleWhatsApp}
-            className="mt-6 inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-[#20BD5A] hover:shadow-xl touch-manipulation sm:text-lg"
-          >
-            <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
-            <span>Send my details on WhatsApp</span>
-          </button>
+          {/* CTA stack — uniform space-y-3 vertical rhythm. Primary CTA
+              dominates (filled WhatsApp brand), secondary is outline-only. */}
+          <div className="mt-6 space-y-3">
+            <button
+              type="button"
+              onClick={handleWhatsApp}
+              className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-4 text-base font-bold text-white shadow-md transition-all hover:bg-[#20BD5A] hover:shadow-lg touch-manipulation sm:text-lg"
+            >
+              <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
+              <span>Send my details on WhatsApp</span>
+            </button>
 
-          {/* Secondary CTA — Call. Forest green to match brand system. */}
-          <a
-            href={`tel:${CONTACT_INFO.phone.primary.replace(/[^+\d]/g, '')}`}
-            className="mt-3 inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-xl border-2 border-[#3d4d3d] bg-white px-6 py-4 text-base font-bold text-[#3d4d3d] transition-all hover:bg-[#e8ede8] touch-manipulation sm:text-lg"
-          >
-            <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
-            <span>Or call +91 88264 44334</span>
-          </a>
+            <a
+              href={`tel:${CONTACT_INFO.phone.primary.replace(/[^+\d]/g, '')}`}
+              className="inline-flex min-h-[56px] w-full items-center justify-center gap-2 rounded-xl border-2 border-[#3d4d3d] bg-white px-6 py-4 text-base font-bold text-[#3d4d3d] transition-all hover:bg-[#e8ede8] touch-manipulation sm:text-lg"
+            >
+              <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
+              <span>Or call +91 88264 44334</span>
+            </a>
+          </div>
 
           {/* Fee anchor — qualifies the lead before they tap. Honest range
-              that covers Class 9-10 Foundation through Pinnacle Dropper tier
-              instead of the misleading single ₹70K anchor that hid the lower
-              Foundation tiers. */}
-          <p className="mt-4 text-center text-xs text-gray-500 sm:text-sm">
+              covers Foundation through Pinnacle. Centred to match the CTA
+              stack above. */}
+          <p className="mt-5 text-center text-xs text-gray-500 sm:text-sm">
             Course fees vary by class — typically ₹35,000 – ₹1,56,000 / year. EMI available.
             Counsellor will share the right tier on WhatsApp.
           </p>
         </div>
 
-        {/* Trust + assurance strip */}
-        <div className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-2">
-          <div className="rounded-xl bg-white p-4 ring-1 ring-gray-200">
-            <div className="mb-1 flex items-center gap-2 text-sm font-semibold text-[#3d4d3d]">
-              <CheckCircle className="h-4 w-4" />
-              What you get on the demo
+        {/* Trust + assurance strip — designed cards with circular accent
+            icon top-left, then heading + body in a clean hierarchy. Was loose
+            prose with inline icons; now reads as designed components. */}
+        <div className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4">
+          <div className="flex gap-3 rounded-xl bg-white p-4 ring-1 ring-gray-200 sm:p-5">
+            <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-[#3d4d3d]/10 text-[#3d4d3d]">
+              <CheckCircle className="h-[18px] w-[18px]" strokeWidth={2.25} />
             </div>
-            <p className="text-xs text-gray-600 sm:text-sm">
-              45 minutes of live teaching with our biology faculty + a previous-year-attempt
-              diagnostic if you&apos;re a Class 12 / Dropper student. No payment, no commitment.
-            </p>
+            <div className="min-w-0">
+              <div className="text-sm font-semibold text-[#3d4d3d]">What you get on the demo</div>
+              <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
+                45 minutes of live teaching with our biology faculty + a previous-year-attempt
+                diagnostic if you&apos;re a Class 12 / Dropper student. No payment, no commitment.
+              </p>
+            </div>
           </div>
-          <div className="rounded-xl bg-white p-4 ring-1 ring-gray-200">
-            <div className="mb-1 flex items-center gap-2 text-sm font-semibold text-[#3d4d3d]">
-              <Clock className="h-4 w-4" />
-              When we respond
+          <div className="flex gap-3 rounded-xl bg-white p-4 ring-1 ring-gray-200 sm:p-5">
+            <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-[#3d4d3d]/10 text-[#3d4d3d]">
+              <Clock className="h-[18px] w-[18px]" strokeWidth={2.25} />
             </div>
-            <p className="text-xs text-gray-600 sm:text-sm">
-              Within 15 minutes between 9 AM – 9 PM IST. Outside those hours we reply first thing
-              the next morning.
-            </p>
+            <div className="min-w-0">
+              <div className="text-sm font-semibold text-[#3d4d3d]">When we respond</div>
+              <p className="mt-1 text-xs leading-relaxed text-gray-600 sm:text-sm">
+                Within 15 minutes between 9 AM – 9 PM IST. Outside those hours we reply first thing
+                the next morning.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -343,8 +371,8 @@ export default function BookFreeDemoPage() {
         {/* Quiet privacy footer — replaces the "Back to Home" outbound which
             was a bounce path on a paid Ads landing page. */}
         <p className="mt-6 text-center text-[11px] text-gray-400">
-          By tapping a CTA you agree to receive WhatsApp messages from Cerebrum Biology Academy.
-          We don&apos;t spam — counsellors message once and follow up only after you reply.
+          By tapping a CTA you agree to receive WhatsApp messages from Cerebrum Biology Academy. We
+          don&apos;t spam — counsellors message once and follow up only after you reply.
         </p>
       </div>
     </main>
