@@ -514,7 +514,14 @@ Shorter alternative:
 ### Biology Olympiad
 - **NSEB Coaching**: Campbell Biology depth. Mon/Wed or Tue/Thu. 15+ qualifiers
 - **INBO/IBO Prep**: Theory + practical skills. Alberts, Lehninger supplementary
-- **USABO Prep**: 80% overlap with our Olympiad curriculum. Online for USA students
+- **USABO Coaching (USA students)**: USA Biology Olympiad full pathway coaching for US-based high school students. Two stages we cover end-to-end:
+   - *USABO Open Exam* — held in February (typically first/second week). 50-question MCQ, 50 minutes. Top ~10% advance.
+   - *USABO Semifinal* — held in mid-March. Theory + free-response. Top ~20 students become USABO Finalists; top 4 form the US IBO team.
+   Eligibility: students enrolled in a US high school (USABO is restricted to US schools). Curriculum maps Campbell Biology (12th ed) ~80% + Alberts Molecular Biology of the Cell + Lehninger Biochemistry for upper-level depth. Live online classes scheduled in US time zones (EST/CT/PT).
+   AP Biology bridge: students aiming for AP-5 are typically 6 weeks of focused prep away from a Semifinalist score. We run a dedicated AP-to-USABO bridge inside the programme.
+   College admissions value: USABO Semifinalist / Finalist credentials are routinely cited in successful Ivy League and selective-college applications for STEM majors.
+- **IBO Preparation (USABO Finalists, BBO Top-10, INBO/SBO qualifiers)**: International Biology Olympiad — top 4 students per country. Theory + practical (40% weight). We coach the full pathway: USABO Finalists → US IBO team selection camp; BBO Round 2 medallists → UK IBO team; INBO toppers → India IBO team.
+- **BBO Coaching (UK students)**: British Biology Olympiad. Round 1 (Jan, MCQ) + Round 2 (Mar, written). Top 4 from UK selection camp form the UK IBO team.
 - **Campbell Biology Tutor**: University-level Biology taught by AIIMS faculty
 
 ### Online Biology Tutoring (Global)

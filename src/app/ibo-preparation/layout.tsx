@@ -6,21 +6,26 @@ import { olympiadCourseSchema, iboPracticalHowToSchema } from '@/data/olympiads/
 export const metadata: Metadata = {
   title: 'IBO Preparation Online | International Biology Olympiad Coaching',
   description:
-    'Expert IBO preparation for students worldwide. International Biology Olympiad coaching from IBO medalists and national team trainers. Prepare to compete with 80+ countries.',
+    'IBO preparation for USABO/BBO/INBO qualifiers. International Biology Olympiad coaching from IBO medalists — theory + practical training, 10+ years of past papers. US, UK, India, Singapore students supported.',
   keywords: [
     'IBO preparation',
     'International Biology Olympiad',
     'IBO coaching',
+    'IBO preparation USA',
+    'IBO after USABO',
+    'USABO to IBO pathway',
     'biology olympiad international',
     'IBO training online',
     'biology olympiad gold medal',
     'IBO practical preparation',
+    'IBO coaching for USA students',
     'international biology competition',
   ],
   twitter: {
     card: 'summary_large_image',
     title: 'IBO Preparation Online | International Biology Olympiad Coaching',
-    description: 'Expert IBO preparation for students worldwide.',
+    description:
+      'IBO preparation for USABO/BBO/INBO qualifiers. Theory + practical training from IBO medalists.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/ibo-preparation',
@@ -36,8 +41,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IBO Preparation Online | International Biology Olympiad Coaching',
     description:
-      'Expert IBO preparation for students worldwide. International Biology Olympiad coaching from IBO medalists and national team trainers.',
+      'IBO preparation for USABO/BBO/INBO qualifiers. Theory + practical training from IBO medalists, supporting US, UK, India, and Singapore students.',
     type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['en_GB', 'en_IN', 'en_SG'],
     siteName: 'Cerebrum Biology Academy',
   },
 }
@@ -68,6 +75,8 @@ const courseSchema = olympiadCourseSchema({
     'International Biology Olympiad (IBO) preparation for students worldwide. Campbell Biology coverage, theory + practical round training, 10+ years of past-paper drills.',
   url: 'https://cerebrumbiologyacademy.com/ibo-preparation',
   about: 'IBO - International Biology Olympiad',
+  audienceDescription:
+    'High school students worldwide who have qualified through their national Biology Olympiad (USABO in the United States, BBO in the United Kingdom, INBO in India, SBO in Singapore, etc.) and are preparing for the International Biology Olympiad (IBO)',
 })
 
 const howToSchema = iboPracticalHowToSchema('https://cerebrumbiologyacademy.com/ibo-preparation')

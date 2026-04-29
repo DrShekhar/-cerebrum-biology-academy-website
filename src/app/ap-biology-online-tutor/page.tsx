@@ -11,6 +11,7 @@ import {
   Clock,
   MessageCircle,
   Award,
+  ChevronRight,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
@@ -622,6 +623,37 @@ export default function APBiologyPage() {
             }),
           }}
         />
+      </section>
+
+      {/* Bridge: AP Biology → USABO callout */}
+      <section className="py-12 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto rounded-2xl border border-yellow-300 bg-white p-6 shadow-md md:p-8">
+            <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
+              <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100">
+                <Award className="h-7 w-7 text-yellow-600" />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-xl font-bold text-gray-900 md:text-2xl">
+                  Already strong in AP Biology? Consider USABO.
+                </h2>
+                <p className="mt-2 text-gray-700">
+                  AP Biology covers ~80% of the USABO Open Exam content. If you're aiming for a 5
+                  on AP Bio, you're already 6 weeks of focused prep away from a Semifinalist score
+                  on USABO — a credential that materially strengthens college applications and
+                  unlocks the IBO pathway.
+                </p>
+              </div>
+              <Link
+                href="/usabo-coaching"
+                className="inline-flex flex-shrink-0 items-center gap-2 rounded-lg bg-yellow-500 px-5 py-3 font-semibold text-slate-900 transition hover:bg-yellow-400"
+              >
+                Explore USABO prep
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Related Pages */}

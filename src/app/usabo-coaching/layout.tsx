@@ -80,6 +80,9 @@ const courseSchema = olympiadCourseSchema({
   url: 'https://cerebrumbiologyacademy.com/usabo-coaching',
   about: 'USABO - USA Biology Olympiad',
   areaServed: { type: 'Country', name: 'United States' },
+  inLanguage: 'en-US',
+  audienceDescription:
+    'USA-based high school students (grades 9-12) preparing for the USA Biology Olympiad (USABO Open Exam, Semifinal, and National Finals) and the IBO selection pathway',
 })
 
 const howToSchema = iboPracticalHowToSchema('https://cerebrumbiologyacademy.com/usabo-coaching')

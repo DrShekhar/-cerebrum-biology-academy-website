@@ -92,6 +92,9 @@ export function olympiadCourseSchema(args: {
   /** BCP-47 locale for inLanguage. Defaults to 'en'; India pages
    * should pass 'en-IN' to signal regional English. */
   inLanguage?: string
+  /** Optional EducationalAudience — used by AEO surfaces (Google AI, Perplexity)
+   * to match the page to the right student segment. */
+  audienceDescription?: string
 }) {
   const lang = args.inLanguage ?? 'en'
   return {
@@ -116,6 +119,13 @@ export function olympiadCourseSchema(args: {
     about: args.about,
     inLanguage: lang,
     ...(args.teaches && args.teaches.length > 0 && { teaches: args.teaches }),
+    ...(args.audienceDescription && {
+      audience: {
+        '@type': 'EducationalAudience',
+        educationalRole: 'student',
+        audienceType: args.audienceDescription,
+      },
+    }),
     instructor: PROVIDER,
     hasCourseInstance: olympiadCourseInstances(args.url),
     offers: olympiadPricingProducts.map((p) => ({

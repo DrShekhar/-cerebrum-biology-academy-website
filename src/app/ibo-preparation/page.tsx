@@ -257,6 +257,18 @@ export default function IBOPreparationPage() {
               Expert coaching to help you compete at the highest level of pre-university biology.
               Join 80+ countries in the world&apos;s most prestigious biology competition. Learn
               from IBO medalists and national team trainers.
+              {' '}
+              <span className="block mt-3 text-base text-yellow-200/90">
+                For US students: IBO selection runs through{' '}
+                <Link href="/usabo-coaching" className="underline hover:text-yellow-100">
+                  USABO Open + Semifinal
+                </Link>
+                . For UK, India, Singapore students: through{' '}
+                <Link href="/bbo-preparation" className="underline hover:text-yellow-100">BBO</Link>,{' '}
+                <Link href="/inbo-coaching" className="underline hover:text-yellow-100">INBO</Link>,{' '}
+                <Link href="/sbo-coaching" className="underline hover:text-yellow-100">SBO</Link>.
+                We coach the full pathway in your timezone.
+              </span>
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
