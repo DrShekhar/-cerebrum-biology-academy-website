@@ -790,6 +790,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    // ===== /programs/biology-olympiad — international-school programme + 27 country pages =====
+    {
+      url: `${baseUrl}/programs/biology-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    ...[
+      'usa', 'uk', 'uae', 'singapore', 'canada', 'australia', 'saudi-arabia',
+      'qatar', 'oman', 'bahrain', 'kuwait', 'malaysia', 'thailand',
+      'philippines', 'indonesia', 'vietnam', 'south-africa', 'nigeria',
+      'kenya', 'new-zealand', 'germany', 'netherlands', 'hong-kong',
+      'mauritius', 'nepal', 'bangladesh', 'sri-lanka',
+    ].map((slug) => ({
+      url: `${baseUrl}/programs/biology-olympiad/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85 as const,
+    })),
     {
       url: `${baseUrl}/neet-repeaters`,
       lastModified: lastUpdated,
