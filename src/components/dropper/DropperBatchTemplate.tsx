@@ -33,6 +33,7 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { useForeignPrice, formatINR } from '@/components/ui/DualCurrencyPrice'
 
 interface FAQ {
   question: string
@@ -118,8 +119,20 @@ const improvementPlan = [
 ]
 
 const defaultSuccessStories: SuccessStory[] = [
-  { name: 'Rahul S.', improvement: '+180 marks', before: 420, after: 600, college: 'Govt. Medical College' },
-  { name: 'Priya K.', improvement: '+145 marks', before: 480, after: 625, college: 'Safdarjung Hospital' },
+  {
+    name: 'Rahul S.',
+    improvement: '+180 marks',
+    before: 420,
+    after: 600,
+    college: 'Govt. Medical College',
+  },
+  {
+    name: 'Priya K.',
+    improvement: '+145 marks',
+    before: 480,
+    after: 625,
+    college: 'Safdarjung Hospital',
+  },
   { name: 'Amit R.', improvement: '+120 marks', before: 510, after: 630, college: 'MAMC Delhi' },
 ]
 
@@ -133,6 +146,17 @@ export default function DropperBatchTemplate({
   faqs,
 }: DropperBatchTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  // Geo-aware fee range. Foreign visitors (US-based parents of Indian-
+  // origin droppers are a real cohort) see local currency primary with
+  // INR as secondary context. Indian visitors see INR-only.
+  const lowFx = useForeignPrice(70000)
+  const highFx = useForeignPrice(156000)
+  const feeRangeINR = `${formatINR(70000)} – ${formatINR(156000)}`
+  const feeRangeForeign =
+    lowFx && highFx
+      ? `${lowFx.symbol}${lowFx.amount.toLocaleString('en-US')} – ${highFx.symbol}${highFx.amount.toLocaleString('en-US')} ${highFx.code}`
+      : null
 
   const handleWhatsApp = () => {
     trackAndOpenWhatsApp({
@@ -190,10 +214,14 @@ export default function DropperBatchTemplate({
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Your second attempt is your best attempt. Join our specialised dropper programme for
-              {' '}{cityName} students — designed to help motivated droppers reliably add 100+ marks
-              over their first attempt. Previous-attempt analysis + personalised strategy, delivered {modeLabel}
-              {nearestCenterName ? ` (with optional offline access at our ${nearestCenterName} centre)` : ''}.
+              Your second attempt is your best attempt. Join our specialised dropper programme for{' '}
+              {cityName} students — designed to help motivated droppers reliably add 100+ marks over
+              their first attempt. Previous-attempt analysis + personalised strategy, delivered{' '}
+              {modeLabel}
+              {nearestCenterName
+                ? ` (with optional offline access at our ${nearestCenterName} centre)`
+                : ''}
+              .
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -373,7 +401,16 @@ export default function DropperBatchTemplate({
                 </div>
                 <div className="flex justify-between py-3 border-b">
                   <span className="text-slate-600">Fee Range</span>
-                  <span className="font-semibold text-green-600">₹70,000 – ₹1,56,000</span>
+                  <span className="text-right">
+                    <span className="font-semibold text-green-600">
+                      {feeRangeForeign ?? feeRangeINR}
+                    </span>
+                    {feeRangeForeign && (
+                      <span className="block text-[11px] text-slate-500 font-normal mt-0.5">
+                        ≈ {feeRangeINR}
+                      </span>
+                    )}
+                  </span>
                 </div>
                 <div className="flex justify-between py-3 border-b">
                   <span className="text-slate-600">Tiers</span>
@@ -396,7 +433,12 @@ export default function DropperBatchTemplate({
                 Fee depends on your goal, current level, and the work needed to reliably achieve
                 your target score.
               </p>
-              <a href={counsellingHref} target="_blank" rel="noopener noreferrer" className="block mt-6">
+              <a
+                href={counsellingHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mt-6"
+              >
                 <Button className="w-full bg-yellow-500 text-slate-900 hover:bg-yellow-400">
                   Book Free Counselling
                 </Button>
@@ -417,11 +459,26 @@ export default function DropperBatchTemplate({
                 <strong className="text-white">What you get in {cityName}:</strong>
               </p>
               <ul className="text-slate-300 space-y-2 mb-6">
-                <li className="flex gap-2"><CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> Live interactive Biology classes (recorded if you miss one)</li>
-                <li className="flex gap-2"><CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> 1-on-1 mentor calls + previous-attempt analysis</li>
-                <li className="flex gap-2"><CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> Printed study material + test booklets shipped to {cityName}</li>
-                <li className="flex gap-2"><CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> Weekly mock tests with detailed analysis</li>
-                <li className="flex gap-2"><CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> Optional offline immersion week at our Delhi NCR centre</li>
+                <li className="flex gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> Live
+                  interactive Biology classes (recorded if you miss one)
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> 1-on-1
+                  mentor calls + previous-attempt analysis
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> Printed
+                  study material + test booklets shipped to {cityName}
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> Weekly
+                  mock tests with detailed analysis
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> Optional
+                  offline immersion week at our Delhi NCR centre
+                </li>
               </ul>
               <div className="flex gap-4 flex-wrap">
                 <a href={`tel:${CONTACT_INFO.phone.primary}`}>
@@ -489,15 +546,26 @@ export default function DropperBatchTemplate({
               <h3 className="font-semibold text-teal-600">One-Year Dropper Course</h3>
               <p className="text-sm text-gray-600">Intensive programme</p>
             </Link>
-            <Link href="/courses/neet-dropper" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md">
+            <Link
+              href="/courses/neet-dropper"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
+            >
               <h3 className="font-semibold text-teal-600">NEET Dropper Course</h3>
               <p className="text-sm text-gray-600">Full course details</p>
             </Link>
-            <Link href="/success-stories" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md">
+            <Link
+              href="/success-stories"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
+            >
               <h3 className="font-semibold text-teal-600">Success Stories</h3>
               <p className="text-sm text-gray-600">Real dropper wins</p>
             </Link>
-            <a href={counsellingHref} target="_blank" rel="noopener noreferrer" className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md">
+            <a
+              href={counsellingHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md"
+            >
               <h3 className="font-semibold text-teal-600">Book Demo</h3>
               <p className="text-sm text-gray-600">Free counselling</p>
             </a>
@@ -512,7 +580,8 @@ export default function DropperBatchTemplate({
             Your Second Attempt is Your Best Attempt
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join NEET Dropper Batch 2026-27 from {cityName} — most students who follow the programme add 100+ marks
+            Join NEET Dropper Batch 2026-27 from {cityName} — most students who follow the programme
+            add 100+ marks
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={counsellingHref} target="_blank" rel="noopener noreferrer">
