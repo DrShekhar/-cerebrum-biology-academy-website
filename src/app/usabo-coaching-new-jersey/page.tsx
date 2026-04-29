@@ -23,7 +23,13 @@ export const metadata: Metadata = {
   "USABO coaching for West Windsor-Plainsboro HS North students",
   "USABO coaching for Princeton HS students",
   "USABO coaching for Montgomery HS students",
-  "USABO coaching for Edison Academy / J.P. Stevens HS students"
+  "USABO coaching for Edison Academy / J.P. Stevens HS students",
+    "USABO tutor near me",
+    "USABO tutor near me new jersey",
+    "biology olympiad tutor near me new jersey",
+    "IBO tutor near me new jersey",
+    "USABO online tutor new jersey",
+    "private biology olympiad tutor new jersey",
 ],
   alternates: {
     canonical: url,

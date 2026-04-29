@@ -455,6 +455,50 @@ export default function IBOPreparationPage() {
         </div>
       </section>
 
+      {/* "IBO tutor near me" — direct AEO answer */}
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+            Looking for an IBO tutor near you?
+          </h2>
+          <p className="text-base md:text-lg text-slate-700 mb-4 max-w-3xl">
+            IBO preparation is delivered <strong>live online</strong> in your country&apos;s time
+            zone — there isn&apos;t a meaningful local-market alternative because IBO-grade
+            coaching is genuinely rare anywhere in the world. The IBO syllabus is taught by the
+            same faculty across all our country tracks; what varies is your scheduling and the
+            pathway exam (USABO for US students, BBO for UK, INBO for India, SBO for Singapore).
+          </p>
+          <p className="text-base md:text-lg text-slate-700 mb-6 max-w-3xl">
+            <strong>For US students seeking an IBO tutor near you:</strong> the USABO programme
+            is the right entry point — IBO selection in the United States runs through USABO
+            Open + Semifinal + National Finals. Pick your region:
+          </p>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { slug: 'northern-virginia-dc', label: 'Northern Virginia / DC' },
+              { slug: 'bay-area', label: 'SF Bay Area' },
+              { slug: 'new-york', label: 'NYC + Long Island' },
+              { slug: 'boston', label: 'Greater Boston' },
+              { slug: 'houston', label: 'Houston' },
+              { slug: 'los-angeles', label: 'LA + San Diego' },
+              { slug: 'new-jersey', label: 'New Jersey' },
+              { slug: 'chicago', label: 'Chicago Suburbs' },
+              { slug: 'seattle', label: 'Seattle + Bellevue' },
+              { slug: 'dallas-austin', label: 'Dallas + Austin' },
+              { slug: 'atlanta', label: 'Atlanta + suburbs' },
+            ].map((c) => (
+              <a
+                key={c.slug}
+                href={`/usabo-coaching-${c.slug}`}
+                className="block bg-white hover:bg-yellow-50 rounded-lg px-4 py-3 text-sm font-semibold text-slate-700 border border-slate-200 hover:border-yellow-300 transition"
+              >
+                {c.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing section rendered by layout.tsx via GeoAwareSharedPricingMatrix
           (server-side geo detection — appears after this page's content) */}
 

@@ -23,7 +23,13 @@ export const metadata: Metadata = {
   "USABO coaching for Plano East Senior HS students",
   "USABO coaching for Frisco Liberty HS students",
   "USABO coaching for Allen HS students",
-  "USABO coaching for TAG Magnet (Dallas) students"
+  "USABO coaching for TAG Magnet (Dallas) students",
+    "USABO tutor near me",
+    "USABO tutor near me dallas + austin",
+    "biology olympiad tutor near me dallas + austin",
+    "IBO tutor near me dallas + austin",
+    "USABO online tutor dallas + austin",
+    "private biology olympiad tutor dallas + austin",
 ],
   alternates: {
     canonical: url,

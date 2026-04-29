@@ -23,7 +23,13 @@ export const metadata: Metadata = {
   "USABO coaching for San Marino HS students",
   "USABO coaching for La Cañada HS students",
   "USABO coaching for Arcadia HS students",
-  "USABO coaching for Troy HS (Fullerton) students"
+  "USABO coaching for Troy HS (Fullerton) students",
+    "USABO tutor near me",
+    "USABO tutor near me los angeles",
+    "biology olympiad tutor near me los angeles",
+    "IBO tutor near me los angeles",
+    "USABO online tutor los angeles",
+    "private biology olympiad tutor los angeles",
 ],
   alternates: {
     canonical: url,

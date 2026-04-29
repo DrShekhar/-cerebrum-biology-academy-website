@@ -23,7 +23,13 @@ export const metadata: Metadata = {
   "USABO coaching for Acton-Boxborough Regional HS students",
   "USABO coaching for Newton South HS students",
   "USABO coaching for Newton North HS students",
-  "USABO coaching for Belmont HS students"
+  "USABO coaching for Belmont HS students",
+    "USABO tutor near me",
+    "USABO tutor near me greater boston",
+    "biology olympiad tutor near me greater boston",
+    "IBO tutor near me greater boston",
+    "USABO online tutor greater boston",
+    "private biology olympiad tutor greater boston",
 ],
   alternates: {
     canonical: url,

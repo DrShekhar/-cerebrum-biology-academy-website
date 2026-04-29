@@ -23,7 +23,13 @@ export const metadata: Metadata = {
   "USABO coaching for Naperville North HS students",
   "USABO coaching for Hinsdale Central HS students",
   "USABO coaching for New Trier HS students",
-  "USABO coaching for Northbrook (Glenbrook North) students"
+  "USABO coaching for Northbrook (Glenbrook North) students",
+    "USABO tutor near me",
+    "USABO tutor near me chicago suburbs",
+    "biology olympiad tutor near me chicago suburbs",
+    "IBO tutor near me chicago suburbs",
+    "USABO online tutor chicago suburbs",
+    "private biology olympiad tutor chicago suburbs",
 ],
   alternates: {
     canonical: url,

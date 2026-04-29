@@ -436,6 +436,56 @@ export default function USABOCoachingPage() {
         </div>
       </section>
 
+      {/* "USABO tutor near me" — direct AEO answer + city links */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+            Looking for a USABO or IBO tutor near you?
+          </h2>
+          <p className="text-base md:text-lg text-gray-700 mb-4 max-w-3xl">
+            We don&apos;t run a physical centre in any US city — and that&apos;s the point. Our
+            USABO + IBO coaching is delivered as <strong>live online classes</strong> in your
+            local US time zone (ET / CT / PT), taught by AIIMS-trained biology specialists. No
+            commute, same instructor for the full year, weekly written feedback on every
+            past-paper attempt. The Indian small-batch coaching tradition, scheduled around your
+            AP coursework.
+          </p>
+          <p className="text-base md:text-lg text-gray-700 mb-6 max-w-3xl">
+            Pick the page closest to your school district for region-specific scheduling, school
+            lists, and FAQs:
+          </p>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { slug: 'northern-virginia-dc', label: 'Northern Virginia / DC' },
+              { slug: 'bay-area', label: 'SF Bay Area' },
+              { slug: 'new-york', label: 'New York City + Long Island' },
+              { slug: 'boston', label: 'Greater Boston' },
+              { slug: 'houston', label: 'Houston' },
+              { slug: 'los-angeles', label: 'Los Angeles + San Diego' },
+              { slug: 'new-jersey', label: 'New Jersey' },
+              { slug: 'chicago', label: 'Chicago Suburbs' },
+              { slug: 'seattle', label: 'Seattle + Bellevue' },
+              { slug: 'dallas-austin', label: 'Dallas + Austin' },
+              { slug: 'atlanta', label: 'Atlanta + suburbs' },
+            ].map((c) => (
+              <a
+                key={c.slug}
+                href={`/usabo-coaching-${c.slug}`}
+                className="block bg-[#e8ede8] hover:bg-[#dce4dc] rounded-lg px-4 py-3 text-sm font-semibold text-[#3d4d3d] transition"
+              >
+                {c.label}
+              </a>
+            ))}
+          </div>
+          <p className="text-sm text-gray-600 mt-6 max-w-3xl">
+            Don&apos;t see your city? Our online format means we coach students from any US
+            high-school district — the city pages above just have the most localised content
+            (school lists, time-zone scheduling, regional FAQs). For other locations, the main
+            programme on this page applies as-is.
+          </p>
+        </div>
+      </section>
+
       {/* Pricing section rendered by layout.tsx via GeoAwareSharedPricingMatrix
           (server-side geo detection — appears after this page's content) */}
 
