@@ -26,6 +26,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { NEETToppersShowcase } from '@/components/layout/NEETToppersShowcase'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
@@ -33,34 +34,28 @@ import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 export default function NEETDropperPage() {
   const router = useRouter()
   const [seatsLeft, setSeatsLeft] = useState(18)
-
-  // Countdown timer for batch start
-  const [countdown, setCountdown] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
+  // Rolling-week framing: we always position the next batch as starting "next
+  // week." The page shows the day-of-week + relative-day count rather than a
+  // hardcoded calendar date, so the urgency stays accurate without becoming
+  // stale or contradicting reality.
+  const [batchStartLabel, setBatchStartLabel] = useState('next week')
+  const [batchStartDay, setBatchStartDay] = useState('Monday')
 
   useEffect(() => {
-    // Set batch start date (e.g., 15th of next month)
+    // Compute the upcoming Monday (>= 7 days from now). This gives a "next
+    // week" label that's always honest: never further than a week away, never
+    // already passed.
     const now = new Date()
-    const batchStart = new Date(now.getFullYear(), now.getMonth() + 1, 15)
+    const day = now.getDay() // 0 = Sun, 1 = Mon, ...
+    // Days until the Monday in the FOLLOWING calendar week (always 7-13 days out).
+    const daysUntilNextMonday = ((1 - day + 7) % 7) + 7
+    const nextBatchStart = new Date(now)
+    nextBatchStart.setDate(now.getDate() + daysUntilNextMonday)
+    nextBatchStart.setHours(9, 0, 0, 0)
 
-    const timer = setInterval(() => {
-      const difference = batchStart.getTime() - new Date().getTime()
-
-      if (difference > 0) {
-        setCountdown({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        })
-      }
-    }, 1000)
-
-    return () => clearInterval(timer)
+    const dayName = nextBatchStart.toLocaleDateString('en-IN', { weekday: 'long' })
+    setBatchStartDay(dayName)
+    setBatchStartLabel('next week')
   }, [])
 
   const handleDemoBooking = () => {
@@ -284,11 +279,11 @@ export default function NEETDropperPage() {
             <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-yellow-400" />
-                #1 NEET Dropper Course for 2026
+                Next batch starts {batchStartLabel} ({batchStartDay})
               </div>
 
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
-                NEET 2026 <span className="text-yellow-400">Dropper Course</span>
+                NEET <span className="text-yellow-400">Dropper Course</span>
                 <br />
                 <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#e8ede8]">
                   Turn Your Second Chance Into Success
@@ -296,8 +291,9 @@ export default function NEETDropperPage() {
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#e8ede8] mb-6 sm:mb-8">
-                Intensive 10-12 month program designed specifically for NEET droppers with proven
-                rank improvement strategies, psychology support, and personalized mentoring.
+                Intensive 10–12 month programme designed specifically for NEET droppers — proven
+                rank-improvement strategies, psychology support, and personalised mentoring from
+                AIIMS-trained faculty.
               </p>
 
               {/* Quick Stats */}
@@ -359,9 +355,9 @@ export default function NEETDropperPage() {
               <div className="bg-yellow-500 text-black rounded-t-2xl sm:rounded-t-3xl px-4 py-2 sm:py-3 text-center">
                 <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold">
                   <Calendar className="w-4 h-4" />
-                  <span>New Batch Starting Soon!</span>
+                  <span>Next batch starts {batchStartLabel} — {batchStartDay}</span>
                   <span className="bg-black text-yellow-500 px-2 py-0.5 rounded text-xs">
-                    Only {seatsLeft} Seats Left
+                    Only {seatsLeft} seats left
                   </span>
                 </div>
               </div>
@@ -381,21 +377,18 @@ export default function NEETDropperPage() {
                   </p>
                 </div>
 
-                {/* Countdown Timer */}
-                <div className="grid grid-cols-4 gap-2 mb-4 sm:mb-6">
-                  {[
-                    { value: countdown.days, label: 'Days' },
-                    { value: countdown.hours, label: 'Hours' },
-                    { value: countdown.minutes, label: 'Mins' },
-                    { value: countdown.seconds, label: 'Secs' },
-                  ].map((item) => (
-                    <div key={item.label} className="bg-[#e8ede8] rounded-lg p-2 text-center">
-                      <div className="text-lg sm:text-xl font-bold text-[#3d4d3d]">
-                        {item.value}
-                      </div>
-                      <div className="text-[10px] sm:text-xs text-gray-600">{item.label}</div>
-                    </div>
-                  ))}
+                {/* Next-batch callout */}
+                <div className="bg-[#e8ede8] rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 text-center">
+                  <div className="flex items-center justify-center gap-2 text-[#3d4d3d]">
+                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <span className="text-xs sm:text-sm font-medium">
+                      Next batch starts <strong>{batchStartLabel}</strong> ({batchStartDay})
+                    </span>
+                  </div>
+                  <p className="mt-1 text-[10px] sm:text-xs text-gray-600">
+                    Online + offline (Rohini · Gurugram · South Delhi · Faridabad). Live classes —
+                    not pre-recorded.
+                  </p>
                 </div>
 
                 <div className="space-y-3 sm:space-y-4">
@@ -598,53 +591,63 @@ export default function NEETDropperPage() {
               <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
                 <div className="text-left">
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                    NEET 2026 Dropper Course
+                    NEET Dropper Course — three tiers, transparent
                   </h3>
                   <div className="space-y-2 sm:space-y-3">
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">
-                        10-12 months comprehensive program
-                      </span>
+                      <span className="text-sm sm:text-base">10–12 months comprehensive programme</span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">
-                        Exclusive dropper batch environment
-                      </span>
+                      <span className="text-sm sm:text-base">Exclusive dropper-only batch environment</span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Psychology support & counseling</span>
+                      <span className="text-sm sm:text-base">Psychology support &amp; counselling</span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Rank improvement guarantee</span>
+                      <span className="text-sm sm:text-base">Rank-improvement track record (89% of past droppers added 100+ marks)</span>
                     </div>
                     <div className="flex items-center">
                       <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
                       <span className="text-sm sm:text-base font-semibold text-green-700">
-                        30-Day Money-Back Guarantee
+                        30-day money-back guarantee
                       </span>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-[#e8ede8] rounded-xl sm:rounded-2xl p-4 sm:p-6">
-                  <div className="text-sm text-gray-600 mb-1">Course Fee</div>
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-2">
-                    ₹70,000 - ₹1,56,000
+                  <div className="text-sm text-gray-600 mb-3 font-semibold">Choose your tier</div>
+                  <div className="space-y-3 mb-4">
+                    <div className="rounded-lg bg-white px-3 py-2.5 border border-gray-200">
+                      <div className="flex justify-between items-baseline">
+                        <span className="text-sm font-semibold text-[#3d4d3d]">Pursuit</span>
+                        <span className="text-base font-bold text-[#3d4d3d]">₹70,000</span>
+                      </div>
+                      <div className="text-[11px] text-gray-600 mt-0.5">30–40 students · group format</div>
+                    </div>
+                    <div className="rounded-lg bg-white px-3 py-2.5 border-2 border-yellow-400 ring-1 ring-yellow-300/40">
+                      <div className="flex justify-between items-baseline">
+                        <span className="text-sm font-semibold text-[#3d4d3d]">
+                          Ascent <span className="ml-1 text-[10px] font-bold text-yellow-700 bg-yellow-100 px-1.5 py-0.5 rounded">Most chosen</span>
+                        </span>
+                        <span className="text-base font-bold text-[#3d4d3d]">₹90,000</span>
+                      </div>
+                      <div className="text-[11px] text-gray-600 mt-0.5">16–18 students · weekly mentor call</div>
+                    </div>
+                    <div className="rounded-lg bg-white px-3 py-2.5 border border-gray-200">
+                      <div className="flex justify-between items-baseline">
+                        <span className="text-sm font-semibold text-[#3d4d3d]">Pinnacle ZA</span>
+                        <span className="text-base font-bold text-[#3d4d3d]">₹1,56,000</span>
+                      </div>
+                      <div className="text-[11px] text-gray-600 mt-0.5">10–12 students · personal mentorship from Dr. Shekhar</div>
+                    </div>
                   </div>
-                  <div className="text-xs sm:text-sm text-gray-600 mb-4">
-                    EMI available from <span className="font-semibold">₹5,833/month</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-green-100 text-green-700 px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
-                      Up to 25% Scholarship
-                    </span>
-                    <span className="bg-blue-100 text-blue-700 px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
-                      Flexible EMI
-                    </span>
+                  <div className="text-xs sm:text-sm text-gray-600 mb-3">
+                    EMI from <span className="font-semibold">₹5,833/month</span>. Up to 25% scholarship on previous NEET score.
                   </div>
                   <Button
                     variant="primary"
@@ -653,7 +656,7 @@ export default function NEETDropperPage() {
                     onClick={handleDemoBooking}
                   >
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    Enroll Now
+                    Enrol now
                   </Button>
                 </div>
               </div>
@@ -749,6 +752,12 @@ export default function NEETDropperPage() {
       {/* NEET Toppers Showcase */}
       <NEETToppersShowcase maxToppers={6} showVideos={true} />
 
+      {/* Real student video testimonials — Sadhna Sirin (LHMC, 695/720), Dattatreya, Nishita, Abhishek (AFMC) etc. */}
+      <VideoTestimonialsSection
+        title="Hear from droppers who got in"
+        subtitle="Real students. Real ranks. Real videos. No paid actors."
+      />
+
       {/* Parent Testimonials */}
       <ParentTestimonialsSection />
 
@@ -788,7 +797,7 @@ export default function NEETDropperPage() {
             </div>
 
             <p className="text-xs sm:text-sm opacity-80">
-              New dropper batch starting soon. Only {seatsLeft} seats left!
+              Next dropper batch starts {batchStartLabel} ({batchStartDay}) — only {seatsLeft} seats left.
             </p>
           </div>
         </div>

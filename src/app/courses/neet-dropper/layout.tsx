@@ -2,34 +2,34 @@ import { Metadata } from 'next'
 import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2026-2027 | One Year Intensive Biology Program',
+  title: 'NEET Dropper Batch | One Year Intensive Biology Programme',
   description:
-    'NEET dropper batch 2026-2027 — complete Biology syllabus in 10 months with rank improvement strategies. 98% success rate at Cerebrum Academy. Enroll now!',
+    'NEET dropper batch — complete Biology syllabus in 10 months with rank-improvement strategies. AIIMS-trained faculty, three transparent fee tiers, next batch starting next week.',
   keywords: [
     'NEET dropper batch',
     'NEET repeater',
     'one year NEET coaching',
     'NEET second attempt',
     'dropper biology coaching',
-    'NEET 2026 preparation',
+    'NEET dropper preparation',
     'rank improvement NEET',
     'Is NEET Biology coaching necessary for droppers',
     'Biology coaching for weak students',
     'NEET Biology revision classes',
   ],
   openGraph: {
-    title: 'NEET Dropper Batch 2026-2027 | Transform Your Rank in 10 Months',
+    title: 'NEET Dropper Batch | Transform Your Rank in 10 Months',
     description:
-      'Intensive 10-month program for NEET droppers. 98% qualification rate, personalized mentoring, rank improvement guarantee. Limited seats available!',
+      'Intensive 10-month programme for NEET droppers. AIIMS-trained faculty, personalised mentoring, rank-improvement track record. Next batch starts next week.',
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/courses/neet-dropper',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Dropper Batch 2026-2027',
+    title: 'NEET Dropper Batch | One-Year Intensive Biology',
     description:
-      'One year intensive program, 98% success, rank improvement strategies, AIIMS faculty',
+      'One-year intensive programme. AIIMS-trained faculty. Rank-improvement strategies. Next batch starts next week.',
     images: ['/og-image.jpg'],
   },
   alternates: {
