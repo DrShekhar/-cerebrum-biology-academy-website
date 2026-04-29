@@ -15,7 +15,7 @@ import {
   Brain,
   Phone,
   MessageCircle,
-  Gift,
+  BookOpen,
   GraduationCap,
   Calendar,
   TrendingUp,
@@ -85,50 +85,51 @@ export default function NEETDropperPage() {
       duration: 'Month 1-3',
       focus: 'Complete syllabus coverage with strong foundation building',
       topics: ['NCERT thorough revision', 'Concept clarity', 'Basic problem solving'],
-      color: 'green',
+      // Forest-green scale (same hue across all phases) — visual unity
+      // instead of the prior green/teal/blue/indigo rotation.
+      color: 'phase-1',
     },
     {
       phase: 'Phase 2: Advanced',
       duration: 'Month 4-7',
       focus: 'Advanced concepts and extensive practice',
       topics: ['Previous year questions', 'Advanced problem solving', 'Speed enhancement'],
-      color: 'teal',
+      color: 'phase-2',
     },
     {
       phase: 'Phase 3: Mastery',
       duration: 'Month 8-10',
       focus: 'Mock tests, revision, and exam strategy',
       topics: ['Full-length tests', 'Weak area improvement', 'Time management'],
-      color: 'blue',
+      color: 'phase-3',
     },
     {
       phase: 'Phase 4: Final',
       duration: 'Month 11-12',
       focus: 'Final revision and exam preparation',
       topics: ['Crash course', 'Last minute tips', 'Confidence building'],
-      color: 'indigo',
+      color: 'phase-4',
     },
   ]
 
   const successStats = [
     {
       number: '89%',
-      label: 'Rank Improvement',
-      description: 'Significant rank boost',
+      label: 'Added 100+ marks',
+      description: 'Rank improvement track record',
       icon: TrendingUp,
     },
-    { number: '350+', label: 'Avg Biology Score', description: 'Target achievement', icon: Target },
     {
-      number: '1500+',
-      label: 'Droppers Coached',
-      description: 'Successful transformations',
-      icon: Users,
+      number: '350+',
+      label: 'Avg biology score',
+      description: 'Cohort biology performance',
+      icon: Target,
     },
     {
-      number: '95%',
-      label: 'Target Achievement',
-      description: 'Desired rank/college',
-      icon: Trophy,
+      number: '1500+',
+      label: 'Droppers coached',
+      description: 'Across 15+ years',
+      icon: Users,
     },
   ]
 
@@ -245,8 +246,10 @@ export default function NEETDropperPage() {
         }}
       />
 
-      {/* Floating Contact Buttons */}
-      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2 sm:gap-3">
+      {/* Floating Contact Buttons — sits above the mobile bottom-nav (~80–90px
+          tall) and the desktop sticky surfaces. Mirrors the ARIA-widget vertical
+          offset on the opposite (left) side, so the two never overlap. */}
+      <div className="fixed bottom-24 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2 sm:gap-3">
         <button
           onClick={async () => {
             await trackAndOpenWhatsApp({
@@ -281,13 +284,12 @@ export default function NEETDropperPage() {
                 Next batch starts {batchStartLabel} ({batchStartDay})
               </div>
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 leading-[1.05]">
                 NEET <span className="text-yellow-400">Dropper Course</span>
-                <br />
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#e8ede8]">
-                  Turn Your Second Chance Into Success
-                </span>
               </h1>
+              <p className="text-base sm:text-lg md:text-xl text-[#e8ede8]/80 mb-4 sm:mb-6 font-light tracking-wide">
+                Turn your second chance into success.
+              </p>
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#e8ede8] mb-6 sm:mb-8">
                 Intensive 10–12 month programme designed specifically for NEET droppers — proven
@@ -296,7 +298,7 @@ export default function NEETDropperPage() {
               </p>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6 sm:mb-8">
                 {successStats.map((stat, index) => (
                   <div
                     key={stat.label}
@@ -313,13 +315,13 @@ export default function NEETDropperPage() {
               {/* Mobile CTA */}
               <div className="lg:hidden flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8">
                 <Button
-                  variant="secondary"
+                  variant="primary"
                   size="lg"
                   onClick={handleDemoBooking}
-                  className="bg-yellow-500 text-black hover:bg-yellow-400 w-full text-sm sm:text-base py-2.5 sm:py-3"
+                  className="bg-white text-[#3d4d3d] hover:bg-[#e8ede8] w-full text-sm sm:text-base py-2.5 sm:py-3 font-bold"
                 >
                   <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Book FREE Demo Class
+                  Book free demo class
                 </Button>
                 <a href="tel:+918826444334" className="w-full">
                   <Button
@@ -328,7 +330,7 @@ export default function NEETDropperPage() {
                     className="border-white text-white hover:bg-white hover:text-[#3d4d3d] w-full text-sm sm:text-base py-2.5 sm:py-3"
                   >
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    Call: +91 88264 44334
+                    Call +91 88264 44334
                   </Button>
                 </a>
               </div>
@@ -356,9 +358,9 @@ export default function NEETDropperPage() {
                     Free counselling call + previous-year-attempt analysis. Live online +
                     offline at Rohini, Gurugram, South Delhi, Faridabad.
                   </p>
-                  <div className="inline-flex items-center gap-1.5 mt-3 bg-green-50 text-green-700 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold">
-                    <Gift className="w-3.5 h-3.5" />
-                    Free Dropper Success Kit (₹4,999) included
+                  <div className="inline-flex items-center gap-1.5 mt-3 bg-[#e8ede8] text-[#3d4d3d] px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold">
+                    <BookOpen className="w-3.5 h-3.5" />
+                    Includes full study material + previous-year-attempt diagnostic
                   </div>
                 </div>
 
@@ -373,18 +375,18 @@ export default function NEETDropperPage() {
                         campaign: 'neet-dropper',
                       })
                     }
-                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-green-600 hover:bg-green-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
                   >
                     <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
-                    Get Free Counseling via WhatsApp
+                    Get free counselling via WhatsApp
                   </button>
 
                   <a
                     href="tel:+918826444334"
-                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
+                    className="w-full flex items-center justify-center gap-2 py-3 sm:py-4 bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition-all min-h-[56px] touch-manipulation"
                   >
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
-                    Call: +91 88264 44334
+                    Call +91 88264 44334
                   </a>
                 </div>
 
@@ -471,25 +473,30 @@ export default function NEETDropperPage() {
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             {phasePlan.map((phase, index) => {
+              // Single-hue forest-green scale across all 4 phases — visual
+              // unity replaces the prior green/teal/blue/indigo rotation.
+              // Each phase deepens the saturation a step.
               const colorClasses: Record<string, string> = {
-                green: 'border-[#3d4d3d] bg-[#e8ede8]',
-                teal: 'border-teal-600 bg-teal-50',
-                blue: 'border-blue-600 bg-blue-50',
-                indigo: 'border-indigo-600 bg-indigo-50',
+                'phase-1': 'border-[#5a6d5a] bg-[#f3f6f3]',
+                'phase-2': 'border-[#4a5d4a] bg-[#e8ede8]',
+                'phase-3': 'border-[#3d4d3d] bg-[#dde4dd]',
+                'phase-4': 'border-[#2d3d2d] bg-[#d2dad2]',
               }
 
+              // All phases use the same brand text colour for the duration
+              // chip + check icons — keeps the eye anchored on one accent.
               const textClasses: Record<string, string> = {
-                green: 'text-[#3d4d3d]',
-                teal: 'text-teal-800',
-                blue: 'text-blue-800',
-                indigo: 'text-indigo-800',
+                'phase-1': 'text-[#3d4d3d]',
+                'phase-2': 'text-[#3d4d3d]',
+                'phase-3': 'text-[#3d4d3d]',
+                'phase-4': 'text-[#3d4d3d]',
               }
 
               const checkClasses: Record<string, string> = {
-                green: 'text-[#3d4d3d]',
-                teal: 'text-teal-600',
-                blue: 'text-blue-600',
-                indigo: 'text-indigo-600',
+                'phase-1': 'text-[#3d4d3d]',
+                'phase-2': 'text-[#3d4d3d]',
+                'phase-3': 'text-[#3d4d3d]',
+                'phase-4': 'text-[#3d4d3d]',
               }
 
               return (
@@ -744,13 +751,13 @@ export default function NEETDropperPage() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-6 sm:mb-8">
               <Button
-                variant="secondary"
+                variant="primary"
                 size="xl"
                 onClick={handleDemoBooking}
-                className="bg-yellow-500 text-black hover:bg-yellow-400 text-sm sm:text-base py-3 sm:py-4"
+                className="bg-white text-[#3d4d3d] hover:bg-[#e8ede8] font-bold text-sm sm:text-base py-3 sm:py-4"
               >
                 <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Book FREE Demo Class
+                Book free demo class
               </Button>
 
               <a href="tel:+918826444334" className="w-full sm:w-auto">
@@ -760,7 +767,7 @@ export default function NEETDropperPage() {
                   className="border-white text-white hover:bg-white hover:text-[#3d4d3d] w-full text-sm sm:text-base py-3 sm:py-4"
                 >
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  Call: +91 88264 44334
+                  Call +91 88264 44334
                 </Button>
               </a>
             </div>
