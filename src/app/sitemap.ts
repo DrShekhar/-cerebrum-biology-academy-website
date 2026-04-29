@@ -2244,6 +2244,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.93,
     },
+    // ===== USABO city/region pages (Apr 2026) =====
+    {
+      url: `${baseUrl}/usabo-coaching-northern-virginia-dc`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-bay-area`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-new-york`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-boston`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/usabo-coaching-houston`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
     // ===== USABO content cluster (Apr 2026) =====
     {
       url: `${baseUrl}/ap-biology-vs-usabo`,
