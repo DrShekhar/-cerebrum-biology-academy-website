@@ -11,7 +11,6 @@ import {
   Target,
   Star,
   ArrowRight,
-  Download,
   Calculator,
   FileText,
   Brain,
@@ -22,13 +21,10 @@ import {
   Play,
   Shield,
   TrendingUp,
-  Gift,
   AlertCircle,
 } from 'lucide-react'
 import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
-import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
-import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
 import { throttle } from '@/lib/performance'
 
 export default function Class11BiologyPage() {
@@ -89,7 +85,6 @@ export default function Class11BiologyPage() {
 
       const sections = [
         'hero',
-        'free-tools',
         'features',
         'curriculum',
         'faculty',
@@ -287,10 +282,10 @@ export default function Class11BiologyPage() {
   ]
 
   const successStats = [
-    { number: '98%', label: 'Board Exam Success', description: 'Students scoring 90+' },
-    { number: '88%', label: 'NEET Foundation', description: 'Strong conceptual clarity' },
-    { number: '2000+', label: 'Students Taught', description: 'Since 2018' },
-    { number: '5.0/5', label: 'Student Rating', description: 'Google Reviews' },
+    { number: '90%+', label: 'Boards target', description: 'Most of our cohort' },
+    { number: 'NEET-aligned', label: 'NCERT-line-by-line', description: 'Foundation that actually holds' },
+    { number: '2000+', label: 'Students taught', description: 'Since 2018' },
+    { number: '5.0/5', label: 'Student rating', description: 'Google Reviews' },
   ]
 
   // Static batch metadata — date is rendered from `batchStartDay` (rolling week)
@@ -303,7 +298,6 @@ export default function Class11BiologyPage() {
 
   const navItems = [
     { id: 'hero', label: 'Overview' },
-    { id: 'free-tools', label: 'Free Tools' },
     { id: 'features', label: 'Features' },
     { id: 'curriculum', label: 'Curriculum' },
     { id: 'faculty', label: 'Faculty' },
@@ -518,8 +512,8 @@ export default function Class11BiologyPage() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-semibold">98% Success Rate</h4>
-                    <p className="text-gray-300 text-sm">Our Class 11 starters top NEET</p>
+                    <h4 className="font-semibold">Foundation that holds</h4>
+                    <p className="text-gray-300 text-sm">Most Class-11 starters carry into Class 12 with a real lead</p>
                   </div>
                 </div>
               </div>
@@ -544,81 +538,11 @@ export default function Class11BiologyPage() {
         </div>
       </section>
 
-      {/* Book Free Demo — Inline Form */}
-      <section className="py-8 bg-gradient-to-b from-[#3d4d3d] to-[#4a5d4a]">
-        <div className="max-w-md mx-auto px-4">
-          <BookFreeDemoCard courseName="Class 11 NEET Biology" source="class-11-hero-form" />
-        </div>
-      </section>
-
-      {/* Free NEET Tools Section - Lead Magnet */}
-      <section
-        id="free-tools"
-        className="py-12 sm:py-16 bg-gradient-to-b from-green-50 to-white border-b border-green-100"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center bg-[#e8ede8] text-[#3d4d3d] px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Gift className="w-4 h-4 mr-2" />
-              100% Free - No Login Required
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Free NEET Tools & Resources
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Start your NEET preparation today with our free tools. Used by 50,000+ students.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {freeTools.map((tool, index) => {
-              const Icon = tool.icon
-              return (
-                <Link
-                  key={index}
-                  href={tool.link}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#4a5d4a] group relative overflow-hidden"
-                >
-                  {/* Badge */}
-                  <div className="absolute top-4 right-4">
-                    <span
-                      className={`${tool.color} text-white text-xs px-2 py-1 rounded-full font-medium`}
-                    >
-                      {tool.badge}
-                    </span>
-                  </div>
-
-                  <div
-                    className={`${tool.color} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                  >
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
-
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{tool.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{tool.description}</p>
-
-                  <div className="flex items-center text-[#4a5d4a] font-medium text-sm group-hover:text-[#3d4d3d]">
-                    Try Now Free
-                    <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-
-          {/* More Resources CTA */}
-          <div className="text-center mt-10">
-            <Link
-              href="/free-resources"
-              className="inline-flex items-center bg-[#4a5d4a] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#3d4d3d] transition-colors"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Download All Free Resources
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Inline lead-form section + Free NEET Tools section removed —
+          the hero already captures full context to WhatsApp, and the tools
+          section linked outside this page (against the founder direction
+          to keep every visitor locked here on a single WhatsApp path).
+          Sections re-enable once we add proper in-page tool surfaces. */}
 
       {/* Course Features */}
       <section id="features" className="py-12 sm:py-16">
@@ -823,34 +747,30 @@ export default function Class11BiologyPage() {
 
             <div className="relative">
               <div className="text-center mb-8">
-                <div className="inline-block bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold mb-4">
-                  Most Popular
-                </div>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                  Class 11th Biology Complete Course
+                  Class 11 Biology — Complete 1-year course
                 </h3>
-                <p className="text-gray-300">1-year comprehensive NEET foundation program</p>
+                <p className="text-gray-300">NCERT foundation · NEET + Board dual prep</p>
               </div>
 
               <div className="text-center mb-8">
-                <div className="flex items-center justify-center">
-                  <span className="text-gray-400 line-through text-2xl mr-3">₹95,000</span>
-                  <span className="text-5xl sm:text-6xl font-bold">₹75,000</span>
-                </div>
-                <p className="text-gray-300 mt-2">EMI available: ₹6,250/month × 12 months</p>
-                <p className="text-yellow-400 text-sm mt-1">Save ₹20,000 - Early Bird Offer!</p>
+                <div className="text-5xl sm:text-6xl font-bold">₹75,000</div>
+                <p className="text-gray-300 mt-2">For the year — EMI from ₹6,250/month</p>
+                <p className="text-gray-300/80 text-sm mt-1">
+                  Merit scholarships available. Free demo class first — no commitment.
+                </p>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 {[
-                  'Complete NCERT Coverage',
-                  'AIIMS Faculty Access',
-                  'Live + Recorded Classes',
-                  'Weekly Tests & Analysis',
-                  'Doubt Resolution Sessions',
-                  'Study Materials Included',
-                  'Board Exam Preparation',
-                  'Parent-Teacher Meetings',
+                  'Complete NCERT coverage',
+                  'AIIMS-trained faculty',
+                  'Live + recorded classes',
+                  'Weekly tests & analysis',
+                  'Doubt resolution sessions',
+                  'Study materials included',
+                  'Board exam preparation',
+                  'Parent-teacher meetings',
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -861,24 +781,18 @@ export default function Class11BiologyPage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() =>
-                    trackAndOpenWhatsApp({
-                      source: 'class-11-demo',
-                      message:
-                        'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.',
-                      campaign: 'class-11',
-                    })
-                  }
-                  className="flex-1 bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition-all duration-300 text-center"
+                  onClick={() => sendContextWhatsApp('class-11-pricing-demo')}
+                  className="flex-1 bg-[#25D366] hover:bg-[#20BD5A] text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center inline-flex items-center justify-center gap-2"
                 >
-                  Book Free Demo First
+                  <MessageCircle className="w-5 h-5" />
+                  Book free demo on WhatsApp
                 </button>
-                <Link
-                  href="/courses?class=class-11"
+                <button
+                  onClick={() => sendContextWhatsApp('class-11-pricing-enrol')}
                   className="flex-1 bg-white text-[#3d4d3d] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 text-center"
                 >
-                  Enroll Now - Save ₹20,000
-                </Link>
+                  Talk about enrolling
+                </button>
               </div>
 
               {/* Urgency */}
@@ -887,31 +801,6 @@ export default function Class11BiologyPage() {
                   <AlertCircle className="w-4 h-4 mr-2" />
                   Only {seatsRemaining} seats left · next batch starts {batchStartDay}
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Comparison */}
-          <div className="mt-8 bg-white rounded-2xl p-6 shadow-lg">
-            <h4 className="font-bold text-gray-900 mb-4 flex items-center justify-center">
-              <Award className="w-5 h-5 text-yellow-500 mr-2" />
-              Compare with Competition
-            </h4>
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="p-4 bg-[#e8ede8] rounded-xl border-2 border-[#4a5d4a]">
-                <div className="font-bold text-[#3d4d3d]">Cerebrum</div>
-                <div className="text-2xl font-bold text-[#4a5d4a]">₹6,250/mo</div>
-                <div className="text-xs text-gray-500">25 students/batch</div>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-xl">
-                <div className="font-medium text-gray-700">Allen</div>
-                <div className="text-2xl font-bold text-gray-600">₹8,500/mo</div>
-                <div className="text-xs text-gray-500">100+ students</div>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-xl">
-                <div className="font-medium text-gray-700">Aakash</div>
-                <div className="text-2xl font-bold text-gray-600">₹9,000/mo</div>
-                <div className="text-xs text-gray-500">80+ students</div>
               </div>
             </div>
           </div>
@@ -937,22 +826,22 @@ export default function Class11BiologyPage() {
                     onClick={() =>
                       trackAndOpenWhatsApp({
                         source: 'class-11-parent-cta',
-                        message: WHATSAPP_MESSAGES.parentFees,
+                        message: `Hi! I am a parent enquiring about Class 11 Biology coaching for my child. Track interest: ${track}. Preferred mode: ${mode === 'Offline' ? 'Offline (Delhi NCR)' : mode}. Please share fee structure, batch timings, and how progress is tracked.`,
                         campaign: 'parent-engagement',
                       })
                     }
                     className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-5 rounded-lg shadow-md hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
                   >
                     <MessageCircle className="h-5 w-5" />
-                    Chat as Parent
+                    Chat as parent on WhatsApp
                   </button>
-                  <Link
-                    href="/about"
+                  <a
+                    href="tel:+918826444334"
                     className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-5 rounded-lg border border-gray-300 shadow-sm transition-all duration-300"
                   >
                     <Users className="h-5 w-5" />
-                    Parent Guide
-                  </Link>
+                    Or call +91 88264 44334
+                  </a>
                 </div>
               </div>
               <div className="hidden md:block text-6xl">👨‍👩‍👧‍👦</div>
@@ -996,18 +885,15 @@ export default function Class11BiologyPage() {
         </div>
       </section>
 
-      {/* Floating WhatsApp Button */}
+      {/* Floating WhatsApp Button — sits above the mobile bottom-nav (~80px
+          tall) so it isn't clipped on phones. Sends the same context-rich
+          message the hero quick-context block builds, so the chat opens with
+          full lead context regardless of which surface the visitor tapped. */}
       {showFloatingCTA && (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-24 right-4 sm:bottom-6 sm:right-6 z-50">
           <button
-            onClick={async () => {
-              await trackAndOpenWhatsApp({
-                source: 'class-11-floating',
-                message: WHATSAPP_MESSAGES.courseEnquiry,
-                campaign: 'class-11-course',
-              })
-            }}
-            className="bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 flex items-center justify-center hover:scale-110 animate-pulse cursor-pointer min-w-[48px] min-h-[48px]"
+            onClick={() => sendContextWhatsApp('class-11-floating')}
+            className="bg-[#25D366] hover:bg-[#20BD5A] text-white p-4 rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center hover:scale-110 cursor-pointer min-w-[48px] min-h-[48px]"
             aria-label="Chat with us on WhatsApp"
           >
             <MessageCircle className="w-7 h-7" aria-hidden="true" />
@@ -1049,8 +935,10 @@ export default function Class11BiologyPage() {
         </div>
       </div>
 
-      {/* Visit Our Centers - Cross-linking for SEO */}
-      <VisitOurCenters />
+      {/* VisitOurCenters cross-link block removed — per founder direction
+          this page keeps every visitor locked here on a single WhatsApp path.
+          Centre information is included in the hero coverage statement
+          (South Delhi · Gurugram · Faridabad) without an outbound link. */}
 
       {/* Bottom padding for mobile CTA */}
       <div className="h-20 md:hidden" />
