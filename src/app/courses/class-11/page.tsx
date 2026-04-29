@@ -24,7 +24,7 @@ import {
   AlertCircle,
 } from 'lucide-react'
 import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
-import { DualCurrencyPrice, formatINR } from '@/components/ui/DualCurrencyPrice'
+import { DualCurrencyPrice, formatINR, useForeignPrice } from '@/components/ui/DualCurrencyPrice'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { throttle } from '@/lib/performance'
 
@@ -78,6 +78,10 @@ export default function Class11BiologyPage() {
   }, [])
   const [seatsRemaining, setSeatsRemaining] = useState(12)
   const [showFloatingCTA, setShowFloatingCTA] = useState(false)
+
+  // Hide INR-specific copy (EMI, scholarship percentages) for non-IN
+  // visitors — they don't pay in INR, EMI doesn't apply to them.
+  const isForeign = useForeignPrice(75000) !== null
 
   // Track scroll for sticky nav and floating CTA
   useEffect(() => {
@@ -763,8 +767,8 @@ export default function Class11BiologyPage() {
                   secondaryClassName="text-gray-300/80 text-base font-normal mt-2"
                 />
                 <p className="text-gray-300 mt-2">
-                  For the year — <span className="hidden md:inline">Indian families: </span>EMI from{' '}
-                  {formatINR(6250)}/month
+                  For the year
+                  {!isForeign && <> — EMI from {formatINR(6250)}/month</>}
                 </p>
                 <p className="text-gray-300/80 text-sm mt-1">
                   Merit scholarships available. Free demo class first — no commitment.

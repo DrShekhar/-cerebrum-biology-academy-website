@@ -3,19 +3,16 @@
 import { useEffect, useState } from 'react'
 
 /**
- * Dual-currency price display.
+ * Geo-scoped price display.
  *
- * For Indian visitors (or unknown country), shows INR only ("₹48,000").
- * For non-IN visitors, shows local currency as the primary anchor with
- * INR as secondary context: "$580 USD · ₹48,000 INR".
+ * - Indian visitors (or unknown country): INR only ("₹48,000")
+ * - Non-IN visitors: local currency only ("$580")
  *
- * Why two displays in one component:
- *  - INR is the actual transaction currency for India-coaching products
- *    (NEET, Class 11/12, Dropper). Indian families need to see INR.
- *  - International visitors don't intuit INR. Showing the rupee number
- *    primary anchors them on a number that feels low (\$1k mentally), so
- *    they bounce when they realise the actual ₹85k → \$1k. Showing local
- *    currency primary makes the offer parseable instantly.
+ * Each audience sees one number in their currency. Showing both was
+ * cluttering the non-IN view and US visitors were ignoring the local
+ * anchor when INR sat next to it. The INR figure is hidden entirely
+ * for foreign visitors so they don't double-take on a rupee number
+ * they don't intuit.
  *
  * Geo via the existing /api/geo/country endpoint. Static FX rates are
  * deliberately conservative (we round local-currency UP slightly so we
@@ -106,54 +103,40 @@ interface DualCurrencyPriceProps {
   /** e.g., "/year", "/mo", "" */
   suffix?: string
   className?: string
-  /** Style of the secondary INR line on non-IN view */
+  /**
+   * @deprecated We no longer render a secondary line — kept on the props
+   * type so existing call-sites compile. Will be removed in a follow-up.
+   */
   secondaryClassName?: string
-  /** When true, render INR + local on a single line. Default: stacked. */
+  /**
+   * @deprecated The single-line vs. stacked distinction was only relevant
+   * when we showed both currencies. Kept on the props type so existing
+   * call-sites compile. No-op now.
+   */
   inline?: boolean
 }
 
 /**
- * Drop-in price display. INR-only for Indian visitors; local + INR for
- * everyone else. Use this for simple price strings; reach for
- * useForeignPrice() when you need bespoke layout.
+ * Drop-in price display. INR-only for Indian visitors; local-currency
+ * only for everyone else. Use `useForeignPrice()` for bespoke layouts.
  */
-export function DualCurrencyPrice({
-  inr,
-  suffix = '',
-  className = '',
-  secondaryClassName = 'text-xs text-gray-500 font-normal',
-  inline = false,
-}: DualCurrencyPriceProps) {
+export function DualCurrencyPrice({ inr, suffix = '', className = '' }: DualCurrencyPriceProps) {
   const foreign = useForeignPrice(inr)
-  const inrFormatted = formatINR(inr)
 
   if (!foreign) {
     return (
       <span className={className}>
-        {inrFormatted}
+        {formatINR(inr)}
         {suffix}
       </span>
     )
   }
 
   const localFormatted = `${foreign.symbol}${foreign.amount.toLocaleString('en-US')}`
-
-  if (inline) {
-    return (
-      <span className={className}>
-        {localFormatted} {foreign.code}
-        {suffix} <span className={secondaryClassName}>(≈ {inrFormatted} INR)</span>
-      </span>
-    )
-  }
-
   return (
-    <span className={`inline-flex flex-col ${className}`}>
-      <span>
-        {localFormatted} {foreign.code}
-        {suffix}
-      </span>
-      <span className={secondaryClassName}>≈ {inrFormatted} INR</span>
+    <span className={className}>
+      {localFormatted} {foreign.code}
+      {suffix}
     </span>
   )
 }

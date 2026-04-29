@@ -29,11 +29,15 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
-import { DualCurrencyPrice, formatINR } from '@/components/ui/DualCurrencyPrice'
+import { DualCurrencyPrice, formatINR, useForeignPrice } from '@/components/ui/DualCurrencyPrice'
 
 export default function NEETDropperPage() {
   const router = useRouter()
   const [seatsLeft, setSeatsLeft] = useState(18)
+
+  // Hide INR-specific copy (EMI, scholarship percentages tied to NEET
+  // score) for non-IN visitors — they don't pay in INR or qualify.
+  const isForeign = useForeignPrice(70000) !== null
   // Rolling-week framing: we always position the next batch as starting "next
   // week." The page shows the day-of-week + relative-day count rather than a
   // hardcoded calendar date, so the urgency stays accurate without becoming
@@ -671,11 +675,12 @@ export default function NEETDropperPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="text-xs sm:text-sm text-gray-600 mb-3">
-                    <span className="text-gray-500">Indian families: </span>EMI from{' '}
-                    <span className="font-semibold">{formatINR(5833)}/month</span>. Up to 25%
-                    scholarship on previous NEET score.
-                  </div>
+                  {!isForeign && (
+                    <div className="text-xs sm:text-sm text-gray-600 mb-3">
+                      EMI from <span className="font-semibold">{formatINR(5833)}/month</span>. Up to
+                      25% scholarship on previous NEET score.
+                    </div>
+                  )}
                   <Button
                     variant="primary"
                     size="lg"

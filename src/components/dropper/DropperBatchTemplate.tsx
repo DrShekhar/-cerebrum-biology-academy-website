@@ -401,15 +401,8 @@ export default function DropperBatchTemplate({
                 </div>
                 <div className="flex justify-between py-3 border-b">
                   <span className="text-slate-600">Fee Range</span>
-                  <span className="text-right">
-                    <span className="font-semibold text-green-600">
-                      {feeRangeForeign ?? feeRangeINR}
-                    </span>
-                    {feeRangeForeign && (
-                      <span className="block text-[11px] text-slate-500 font-normal mt-0.5">
-                        ≈ {feeRangeINR}
-                      </span>
-                    )}
+                  <span className="font-semibold text-green-600">
+                    {feeRangeForeign ?? feeRangeINR}
                   </span>
                 </div>
                 <div className="flex justify-between py-3 border-b">

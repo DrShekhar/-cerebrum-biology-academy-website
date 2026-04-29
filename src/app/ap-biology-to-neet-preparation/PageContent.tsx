@@ -336,16 +336,9 @@ export default function PageContent() {
                 )}
                 <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                 <p className="text-gray-600 text-sm mb-1">{tier.duration}</p>
-                {showUsd ? (
-                  <>
-                    <p className="text-3xl font-bold text-gray-900 mb-1">{tier.priceUsd}</p>
-                    <p className="text-xs text-gray-500 mb-4">
-                      ≈ {tier.price} INR · paid to Indian account
-                    </p>
-                  </>
-                ) : (
-                  <p className="text-3xl font-bold text-gray-900 mb-4">{tier.price}</p>
-                )}
+                <p className="text-3xl font-bold text-gray-900 mb-4">
+                  {showUsd ? tier.priceUsd : tier.price}
+                </p>
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((f, fidx) => (
                     <li key={fidx} className="flex gap-2">

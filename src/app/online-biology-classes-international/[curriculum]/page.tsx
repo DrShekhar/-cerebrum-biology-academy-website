@@ -45,7 +45,7 @@ export default function InternationalBiologyPage({
     },
     {
       question: `What is the fee for ${curriculum.name} Biology online classes?`,
-      answer: `Our ${curriculum.name} Biology online classes are priced at $30–50/hour for individual sessions or $540–$6,625 annually for batch programs depending on tier and course (≈ ₹45,000–₹5,50,000 INR for India-based families). All tiers include live classes, recorded lectures, study materials, past paper practice, and personalized doubt support.`,
+      answer: `Our ${curriculum.name} Biology online classes are priced at $30–50/hour for one session or $540–$6,625 annually for batch programs depending on tier and course. All tiers include live classes, recorded lectures, study materials, past paper practice, and personalized doubt support. India-based families: please ask on WhatsApp for INR pricing.`,
     },
     {
       question: `Do you cover ${curriculum.name} practical/lab requirements?`,

@@ -29,9 +29,12 @@ import {
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
-import { DualCurrencyPrice, formatINR } from '@/components/ui/DualCurrencyPrice'
+import { DualCurrencyPrice, formatINR, useForeignPrice } from '@/components/ui/DualCurrencyPrice'
 
 export default function Class12BiologyPage() {
+  // Hide INR-specific copy (early-bird discount, EMI, scholarships) for
+  // non-IN visitors — they don't pay in INR or qualify for INR-bank EMI.
+  const isForeign = useForeignPrice(72200) !== null
   const courseFeatures = [
     {
       icon: BookOpen,
@@ -364,9 +367,11 @@ export default function Class12BiologyPage() {
                       secondaryClassName="text-xs text-gray-300 font-normal mt-0.5"
                     />
                   </div>
-                  <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
-                    Indian Families: Save {formatINR(7800)}
-                  </div>
+                  {!isForeign && (
+                    <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
+                      Save {formatINR(7800)}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -637,10 +642,13 @@ export default function Class12BiologyPage() {
                     secondaryClassName="text-sm text-gray-600 font-normal mt-1"
                   />
                   <p className="text-sm text-gray-600 mt-1">
-                    per year{' '}
-                    <span className="text-gray-500">
-                      (Indian families: EMI available · was {formatINR(80000)})
-                    </span>
+                    per year
+                    {!isForeign && (
+                      <span className="text-gray-500">
+                        {' '}
+                        (EMI available · was {formatINR(80000)})
+                      </span>
+                    )}
                   </p>
                 </div>
                 <div className="space-y-3">
