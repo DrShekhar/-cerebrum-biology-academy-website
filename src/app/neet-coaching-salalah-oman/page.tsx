@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: 'What does NEET coaching cost for Salalah students?',
-    a: 'Online batches start at roughly OMR 25/year (Elixir plan) and go up to OMR 185/year (Intensive plan), depending on the level of support. EMI plans are available. The pricing section below shows the current tiers.',
+    a: 'Online batches start at roughly OMR 25/year and go up to OMR 185/year, depending on the level of support. EMI plans are available. The pricing section below shows the current tiers.',
   },
   {
     q: 'Do you help with NRI quota MBBS admissions in India?',

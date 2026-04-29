@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     q: 'What does NEET coaching cost for Al Ain students?',
-    a: 'Our online batches start at approximately AED 280/year (Elixir plan) and go up to ~AED 2,250/year (Intensive plan), depending on the level of support. EMI plans are available. Exact pricing in AED is shown on our pricing section below.',
+    a: 'Our online batches start at approximately AED 280/year and go up to ~AED 2,250/year, depending on the level of support. EMI plans are available. Exact pricing in AED is shown on our pricing section below.',
   },
   {
     q: 'Do you help with NRI quota MBBS admissions in India?',

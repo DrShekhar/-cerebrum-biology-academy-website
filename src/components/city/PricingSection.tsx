@@ -13,27 +13,45 @@ interface PricingSectionProps {
 
 const plans = [
   {
-    name: 'Elixir',
-    target: 'Class 11-12 / Dropper',
-    price: '5,999',
+    name: 'Pursuit',
+    target: 'Class 11-12',
+    price: '40,000',
     duration: '/year',
-    features: ['NCERT-based NEET prep', 'AIIMS faculty teaching', '3 hrs/week live classes', 'Free MCQ practice tool', 'Monthly option: ₹3,000/mo'],
+    features: [
+      'Full NEET Biology syllabus',
+      'AIIMS faculty teaching',
+      '4.5 hrs/week live classes',
+      'Bi-weekly doubt sessions',
+      'Recorded lectures access',
+    ],
     popular: false,
   },
   {
-    name: 'Comprehensive',
+    name: 'Ascent',
     target: 'Class 11-12',
-    price: '36,000',
+    price: '58,000',
     duration: '/year',
-    features: ['Full NEET Biology syllabus', 'Board + NEET dual prep', '12 full-length mock tests', 'Personal mentor assigned', 'Performance analytics'],
+    features: [
+      'Full NEET Biology syllabus',
+      'Board + NEET dual prep',
+      'Weekly group doubt sessions',
+      'Standard mock test series',
+      'Performance analytics',
+    ],
     popular: true,
   },
   {
-    name: 'Intensive',
+    name: 'Pinnacle',
     target: 'Class 12 / Dropper',
-    price: '48,000',
+    price: '98,000',
     duration: '/year',
-    features: ['Accelerated revision', 'Daily practice papers', 'Previous year analysis', 'One-on-one mentoring', 'AIIMS faculty access'],
+    features: [
+      'Personal mentorship from Dr. Shekhar',
+      '10-12 student small batch',
+      'Weekly 1-on-1 doubt clearing',
+      'Premium mock test series',
+      'Lifetime recorded-lecture access',
+    ],
     popular: false,
   },
 ]
@@ -57,9 +75,7 @@ export function PricingSection({ cityName, city }: PricingSectionProps) {
             <div
               key={plan.name}
               className={`rounded-2xl p-8 border-2 transition-shadow hover:shadow-xl ${
-                plan.popular
-                  ? 'border-teal-600 bg-teal-50 relative'
-                  : 'border-gray-200 bg-white'
+                plan.popular ? 'border-teal-600 bg-teal-50 relative' : 'border-gray-200 bg-white'
               }`}
             >
               {plan.popular && (
@@ -94,7 +110,8 @@ export function PricingSection({ cityName, city }: PricingSectionProps) {
         </div>
 
         <p className="text-center text-sm text-gray-500 mt-8">
-          EMI options available starting Rs 2,000/month. Scholarships up to 50% for meritorious students.
+          EMI options available starting Rs 2,000/month. Scholarships up to 50% for meritorious
+          students.
         </p>
       </div>
     </section>

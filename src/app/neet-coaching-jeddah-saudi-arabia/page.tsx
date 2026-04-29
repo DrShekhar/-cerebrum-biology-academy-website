@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: 'What is the fee structure for Jeddah students?',
-    a: 'Online batches start at roughly SAR 290/year (Elixir plan) and go up to ~SAR 2,300/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly SAR 290/year and go up to ~SAR 2,300/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'Do you cover Class 11 and 12 NEET syllabus?',

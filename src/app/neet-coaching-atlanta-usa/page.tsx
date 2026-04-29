@@ -68,7 +68,7 @@ export const atlantaFaqs = [
   },
   {
     q: 'What does NEET coaching cost for Atlanta students?',
-    a: 'Online batches start at roughly $70/year (Elixir plan) and go up to ~$575/year (Intensive plan), depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
+    a: 'Online batches start at roughly $70/year and go up to ~$575/year, depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
   },
   {
     q: 'Do you help with visas or the NRI quota process?',

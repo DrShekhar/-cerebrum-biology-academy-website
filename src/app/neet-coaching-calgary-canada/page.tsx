@@ -64,7 +64,7 @@ export const calgaryFaqs = [
   },
   {
     q: 'What does NEET coaching cost for Calgary students?',
-    a: 'Online batches start at roughly CAD 95/year (Elixir plan) and go up to ~CAD 790/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly CAD 95/year and go up to ~CAD 790/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'Do you help with visas or the NRI quota process?',

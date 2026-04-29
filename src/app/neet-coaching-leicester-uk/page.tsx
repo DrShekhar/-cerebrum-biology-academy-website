@@ -64,7 +64,7 @@ export const leicesterFaqs = [
   },
   {
     q: 'What does NEET coaching cost for Leicester students?',
-    a: 'Online batches start at roughly £55/year (Elixir plan) and go up to ~£460/year (Intensive plan), depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
+    a: 'Online batches start at roughly £55/year and go up to ~£460/year, depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
   },
   {
     q: 'What is the realistic pathway from NEET to working in the NHS?',

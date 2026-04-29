@@ -64,7 +64,7 @@ export const brisbaneFaqs = [
   },
   {
     q: 'What does NEET coaching cost for Brisbane students?',
-    a: 'Online batches start at roughly AUD 100/year (Elixir plan) and go up to ~AUD 860/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly AUD 100/year and go up to ~AUD 860/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'Do you help with visas or the NRI quota process?',

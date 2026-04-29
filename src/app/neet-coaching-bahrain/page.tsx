@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: 'What is the fee for NEET coaching?',
-    a: 'Online batches start at roughly BHD 28/year (Elixir plan) and go up to ~BHD 225/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly BHD 28/year and go up to ~BHD 225/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'Do you help with NRI quota MBBS admissions in India?',

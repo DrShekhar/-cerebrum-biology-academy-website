@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: 'What is the NEET coaching fee for Muscat students?',
-    a: 'Online batches start at roughly OMR 25/year (Elixir plan) and go up to ~OMR 185/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly OMR 25/year and go up to ~OMR 185/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'Which medical colleges can Muscat students target?',

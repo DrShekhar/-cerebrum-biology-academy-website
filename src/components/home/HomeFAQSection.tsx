@@ -17,7 +17,7 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'What are the course fees for NEET coaching?',
     answer:
-      'We offer four tiers - Pinnacle (small batch, personal mentoring), Ascent (balanced features), Pursuit (affordable quality), and Elixir (budget-friendly NCERT-based). Fees range from ₹5,999 (Elixir) to ₹1,80,000 based on course and tier. Elixir: ₹5,999-₹7,999, Pursuit: ₹48,000-₹75,000, Ascent: ₹76,000-₹90,000, Pinnacle: ₹98,000-₹1,56,000. EMI options and scholarships up to 50% available.',
+      'We offer three tiers — Pinnacle (small batch, personal mentoring), Ascent (balanced features), and Pursuit (affordable quality). Fees range from ₹40,000 to ₹1,56,000 based on class and tier. Pursuit: ₹40,000–₹75,000, Ascent: ₹58,000–₹90,000, Pinnacle: ₹68,000–₹1,56,000. EMI options and scholarships available.',
   },
   {
     question: 'Is there a free demo class available?',

@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: 'What is the NEET coaching fee for Doha students?',
-    a: 'Online batches start at roughly QAR 290/year (Elixir plan) and go up to ~QAR 2,300/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly QAR 290/year and go up to ~QAR 2,300/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'Which medical colleges can Doha students target?',

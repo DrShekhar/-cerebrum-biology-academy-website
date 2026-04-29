@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: 'What is the fee for NEET coaching?',
-    a: 'Online batches start at roughly KWD 22/year (Elixir plan) and go up to ~KWD 180/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly KWD 22/year and go up to ~KWD 180/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'Do you help with NRI quota MBBS admissions in India?',

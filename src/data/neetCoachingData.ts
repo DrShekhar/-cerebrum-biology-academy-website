@@ -275,11 +275,11 @@ export const successStats = [
 export const comparisonData = {
   headers: ['Feature', 'Cerebrum', 'Allen', 'Aakash'],
   rows: [
-    ['Batch Size', '10-25 students', '80-150 students', '60-120 students'],
-    ['Price/Month', 'From Rs 500 (Elixir)', 'Rs 8,000-15,000', 'Rs 7,000-12,000'],
+    ['Batch Size', '10-40 students', '80-150 students', '60-120 students'],
+    ['Price/Year', 'Rs 40,000-1,56,000', 'Rs 1,50,000-2,40,000', 'Rs 1,20,000-2,00,000'],
     ['Faculty', 'AIIMS & IITians', 'Mixed', 'Mixed'],
     ['Success Rate', '98%', '~60%', '~55%'],
-    ['Personal Attention', 'Guaranteed', 'Limited', 'Limited'],
+    ['Personal Attention', 'Small batches by design', 'Limited', 'Limited'],
     ['Doubt Resolution', 'Same Day', '2-3 Days', '2-3 Days'],
     ['Parent Updates', 'Weekly', 'Monthly', 'Monthly'],
     ['Study Material', 'NCERT + PYQs + Custom', 'Module Based', 'Module Based'],
@@ -290,12 +290,12 @@ export const faqs: FAQItem[] = [
   {
     question: 'What are the fees for NEET coaching at Cerebrum Biology Academy?',
     answer:
-      'Our fees range from Rs 5,999 to Rs 1,56,000 per year depending on the course tier. Elixir (Rs 5,999-7,999) is our budget-friendly NCERT-based option with AIIMS faculty and 400+ student mega batches. Pursuit (Rs 48,000-75,000) offers quality coaching at affordable prices, Ascent (Rs 76,000-90,000) is our most popular tier with 16-25 student batches, and Pinnacle (Rs 98,000-1,56,000) provides premium 10-12 student batches with personal mentorship. EMI options are available.',
+      'Our fees range from Rs 40,000 to Rs 1,56,000 per year depending on the course tier and class. Pursuit (Rs 40,000-75,000) offers quality coaching at affordable prices in 30-40 student batches. Ascent (Rs 58,000-90,000) is our most popular tier with 16-25 student batches and weekly doubt sessions. Pinnacle (Rs 68,000-1,56,000) provides premium 10-12 student batches with personal mentorship from Dr. Shekhar. EMI options are available. Refund terms are detailed in our Refund Policy.',
   },
   {
     question: 'What is the difference between Pinnacle, Ascent, and Pursuit tiers?',
     answer:
-      'The tiers differ in batch size and features. Pinnacle (10-12 students) includes personal mentorship from Dr. Shekhar, 1-on-1 doubt sessions, and money-back guarantee. Ascent (16-25 students) offers small-group learning with regular doubt sessions. Pursuit (30-40 students) provides quality teaching by AIIMS & IITians faculties at affordable prices. Elixir (400+ students) is our budget-friendly NCERT-based option starting at just Rs 5,999/year with AIIMS faculty and free MCQ tool. All tiers cover the NEET syllabus.',
+      'The tiers differ in batch size and features. Pinnacle (10-12 students) includes personal mentorship from Dr. Shekhar and weekly 1-on-1 doubt sessions. Ascent (16-25 students) offers small-group learning with regular doubt sessions and standard mock test series. Pursuit (30-40 students) provides quality teaching by AIIMS & IITians faculties at affordable prices, with bi-weekly group doubt sessions. All three tiers cover the complete NEET syllabus.',
   },
   {
     question: 'Do you have a special batch for NEET droppers/repeaters?',

@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: 'What is the fee for NEET coaching?',
-    a: 'Online batches start at roughly AED 280/year (Elixir plan) and go up to ~AED 2,250/year (Intensive plan), depending on the level of support. EMI plans are available. The pricing section below shows the current tiers.',
+    a: 'Online batches start at roughly AED 280/year and go up to ~AED 2,250/year, depending on the level of support. EMI plans are available. The pricing section below shows the current tiers.',
   },
   {
     q: 'Do you help with NRI quota MBBS admissions in India?',

@@ -64,7 +64,7 @@ export const birminghamFaqs = [
   },
   {
     q: 'What does NEET coaching cost for Birmingham students?',
-    a: 'Online batches start at roughly £55/year (Elixir plan) and go up to ~£460/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly £55/year and go up to ~£460/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'What is the realistic pathway from NEET to working in the NHS?',

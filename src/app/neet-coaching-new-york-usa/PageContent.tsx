@@ -49,7 +49,7 @@ const faqData: FAQItem[] = [
     id: '5',
     question: 'What does NEET coaching cost for NY students?',
     answer:
-      'Online batches start at roughly $70/year (Elixir plan) and go up to ~$575/year (Intensive plan), depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
+      'Online batches start at roughly $70/year and go up to ~$575/year, depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
   },
 ]
 

@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: 'What does NEET coaching cost for Brampton students?',
-    a: 'Online batches start at roughly CAD 95/year (Elixir plan) and go up to ~CAD 790/year (Intensive plan), depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
+    a: 'Online batches start at roughly CAD 95/year and go up to ~CAD 790/year, depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
   },
   {
     q: 'Do you help with visas or the NRI quota process?',

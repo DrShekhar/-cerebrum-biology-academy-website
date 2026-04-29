@@ -64,7 +64,7 @@ export const aucklandFaqs = [
   },
   {
     q: 'What does NEET coaching cost for Auckland students?',
-    a: 'Online batches start at roughly NZD 110/year (Elixir plan) and go up to ~NZD 900/year (Intensive plan), depending on the level of support. EMI plans are available.',
+    a: 'Online batches start at roughly NZD 110/year and go up to ~NZD 900/year, depending on the level of support. EMI plans are available.',
   },
   {
     q: 'Do you help with visas or the NRI quota process?',
