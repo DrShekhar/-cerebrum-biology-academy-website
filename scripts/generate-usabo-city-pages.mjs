@@ -117,6 +117,139 @@ const CITIES = [
     rigourBlurb:
       'Houston families recognise the difference between local AP tutoring and the olympiad-grade biology training Cerebrum delivers. Our AIIMS-trained faculty teach biology only — to USABO Semifinal and IBO depth — using the small-batch, weekly-feedback methodology that produces Indian top performers. CT-evening live classes mean no scheduling friction with AP Bio classwork.',
   },
+  // ===== Phase 3 expansion (Apr 2026) =====
+  {
+    slug: 'usabo-coaching-los-angeles',
+    cityName: 'Los Angeles',
+    region: 'Greater Los Angeles (LA + Orange + Ventura counties + San Diego)',
+    timezone: 'PT (Pacific)',
+    schools: [
+      'Pasadena HS',
+      'San Marino HS',
+      'La Cañada HS',
+      'Arcadia HS',
+      'Troy HS (Fullerton)',
+      'Diamond Bar HS',
+      'Walnut HS',
+      'University HS (Irvine)',
+      'Torrey Pines HS (San Diego)',
+      'Canyon Crest Academy',
+    ],
+    heroBlurb:
+      "Greater LA and San Diego host the second-largest USABO talent pool on the West Coast. The San Gabriel Valley schools — Pasadena, San Marino, La Cañada, Arcadia — together with the Orange County prep cluster (Troy, University HS Irvine, Diamond Bar) and Torrey Pines / Canyon Crest in San Diego, consistently send students to Semifinals. PT-evening live classes work for all three sub-regions.",
+    rigourBlurb:
+      "LA and San Diego families weighing options between Curie Learning, individual tutors, and online platforms come to Cerebrum for AIIMS-trained, biology-only faculty teaching at olympiad depth. The Indian small-batch tradition — weekly written feedback, retrieval-heavy methodology, max 12 students per cohort — is exactly what high-achieving STEM students at Pasadena, San Marino, Troy, and Torrey Pines need to convert AP-5 trajectory into Semifinalist standing.",
+  },
+  {
+    slug: 'usabo-coaching-new-jersey',
+    cityName: 'New Jersey',
+    region: 'Central + Northern New Jersey (Middlesex + Mercer + Somerset + Essex counties)',
+    timezone: 'ET (Eastern)',
+    schools: [
+      'West Windsor-Plainsboro HS South',
+      'West Windsor-Plainsboro HS North',
+      'Princeton HS',
+      'Montgomery HS',
+      'Edison Academy / J.P. Stevens HS',
+      'Livingston HS',
+      'Millburn HS',
+      'East Brunswick HS',
+      'Bridgewater-Raritan HS',
+      'Holmdel HS',
+    ],
+    heroBlurb:
+      "Central New Jersey is one of the densest USABO markets per capita — driven by the West Windsor-Plainsboro / Princeton / Montgomery / J.P. Stevens cluster and the strong Indian-American academic community across Middlesex and Mercer counties. ET-evening live classes are scheduled around the heavy AP / dual-enrolment workload these schools run.",
+    rigourBlurb:
+      "New Jersey families come to Cerebrum because the local landscape is over-saturated with all-subject tutoring and under-served on biology specialisation. AIIMS-trained, biology-only faculty teaching with weekly written feedback on every past-paper attempt is structurally different from US AP tutoring — it's the depth that converts AP-5 students at WW-P, Princeton, and Montgomery into national-tier USABO standing.",
+  },
+  {
+    slug: 'usabo-coaching-chicago',
+    cityName: 'Chicago Suburbs',
+    region: 'Greater Chicago (Cook + DuPage + Lake counties)',
+    timezone: 'CT (Central)',
+    schools: [
+      'Naperville Central HS',
+      'Naperville North HS',
+      'Hinsdale Central HS',
+      'New Trier HS',
+      'Northbrook (Glenbrook North)',
+      'Glenbrook South HS',
+      'Stevenson HS',
+      'Neuqua Valley HS',
+      'Maine East HS',
+      'Walter Payton College Prep',
+    ],
+    heroBlurb:
+      "Naperville, Hinsdale, New Trier, and the Glenbrook / Stevenson axis form one of the strongest Midwest USABO clusters. Chicago suburb students consistently appear on Semifinalist rosters — driven heavily by the strong Indian-American academic communities across Naperville, Aurora, and Lake County. CT-evening live classes fit cleanly with these schools' AP and dual-credit workloads.",
+    rigourBlurb:
+      "Chicago-suburb families recognise that olympiad-grade biology is structurally different from AP-test prep — and the local market is short on faculty who can teach to that depth. Cerebrum's AIIMS-trained, biology-only specialists run small-batch live coaching with weekly written feedback on past papers; the same Indian olympiad tradition that produces consistent IBO performance, calibrated for CT evenings.",
+  },
+  {
+    slug: 'usabo-coaching-seattle',
+    cityName: 'Seattle & Bellevue',
+    region: 'Puget Sound (King + Snohomish counties)',
+    timezone: 'PT (Pacific)',
+    schools: [
+      'Bellevue HS',
+      'Interlake HS',
+      'Newport HS',
+      'Issaquah HS',
+      'Skyline HS (Sammamish)',
+      'Lakeside School',
+      'Mercer Island HS',
+      'Redmond HS',
+      'Tesla STEM HS',
+      'Seattle Academy',
+    ],
+    heroBlurb:
+      "Bellevue, Interlake, Newport, Skyline, and Lakeside collectively run one of the strongest USABO concentrations on the West Coast outside the Bay Area. The eastside Indian-American and East-Asian-American academic community drives consistent Semifinalist representation. PT-evening live classes match these schools' AP-heavy and dual-enrolment schedules.",
+    rigourBlurb:
+      "Seattle-area families come to Cerebrum for what local options don't offer: AIIMS-trained, biology-specialist faculty teaching at olympiad depth in a faculty-led, small-batch tradition. Bellevue, Interlake, and Skyline students are already strong in AP Biology — what they need is the additional depth on ethology, biosystematics, and biostats interpretation that converts AP-5 into a Semifinalist score. PT-evening live classes mean no scheduling friction with eastside AP coursework.",
+  },
+  {
+    slug: 'usabo-coaching-dallas-austin',
+    cityName: 'Dallas + Austin',
+    region: 'North + Central Texas (Plano + Frisco + Allen + Round Rock + Austin)',
+    timezone: 'CT (Central)',
+    schools: [
+      'Plano West Senior HS',
+      'Plano East Senior HS',
+      'Frisco Liberty HS',
+      'Allen HS',
+      'TAG Magnet (Dallas)',
+      'Highland Park HS',
+      'Westlake HS (Austin)',
+      'Westwood HS (Austin)',
+      'LASA (Austin)',
+      'McCallum HS (Austin)',
+    ],
+    heroBlurb:
+      "The Plano / Frisco / Allen corridor in North Texas plus the Westlake / Westwood / LASA cluster in Austin together form a strong Texas USABO presence. Plano West, TAG Magnet, LASA, and Westlake are repeat Semifinalist producers — the Indian-American and East-Asian-American academic communities across both metros drive consistent representation. CT-evening live classes work for both Dallas and Austin time zones.",
+    rigourBlurb:
+      "Dallas and Austin families come to Cerebrum for biology-specialist olympiad coaching that local Texas tutoring centres don't offer at this depth. AIIMS-trained faculty, max 12 students per batch, weekly written feedback on every past-paper — the Indian small-batch coaching tradition adapted to CT evenings. Plano West, LASA, and Westlake students already have the AP-5 foundation; what we add is olympiad-shaped depth.",
+  },
+  {
+    slug: 'usabo-coaching-atlanta',
+    cityName: 'Atlanta',
+    region: 'Greater Atlanta (Fulton + Cobb + Gwinnett + Forsyth counties)',
+    timezone: 'ET (Eastern)',
+    schools: [
+      'Walton HS',
+      'Roswell HS',
+      'Alpharetta HS',
+      'Northview HS',
+      'Lambert HS',
+      'South Forsyth HS',
+      'Westminster Schools',
+      'Pace Academy',
+      'Wheeler HS',
+      'Gwinnett School of Mathematics, Science & Technology',
+    ],
+    heroBlurb:
+      "Atlanta's North Fulton and Forsyth corridor — Walton, Roswell, Alpharetta, Northview, Lambert — produces the South-East's strongest USABO concentration outside Houston. The Indian-American academic community across Alpharetta, Johns Creek, Cumming, and Suwanee drives consistent Semifinalist representation each year. ET-evening live classes fit AP and dual-enrolment workloads.",
+    rigourBlurb:
+      "Atlanta families come to Cerebrum because local options are scarce on biology-specialist olympiad coaching — and AIIMS-trained, biology-only faculty teaching with weekly written feedback is genuinely differentiated. The Indian small-batch tradition produces national-tier biology depth; for students at Walton, Northview, Lambert, and Westminster aiming at Emory / Duke / Hopkins / Stanford for STEM, USABO Semifinalist standing is a meaningful credential.",
+  },
 ]
 
 const baseFaqs = (city, region, timezone) => [
