@@ -69,13 +69,11 @@ export const GDPRBanner = ({
   }, [])
 
   const initializeTracking = (consentPreferences: ConsentPreferences) => {
-    // Initialize analytics based on consent
-    if (consentPreferences.analytics) {
-      const gtmId = process.env.NEXT_PUBLIC_GTM_ID
-      if (gtmId) {
-        GTMService.initialize(gtmId)
-      }
-    }
+    // GTM is loaded site-wide by <GoogleTagManager /> in src/app/layout.tsx —
+    // we don't re-initialize it here. The GDPR banner only fires events onto the
+    // existing dataLayer so GTM's consent-mode rules can react. Re-calling
+    // GTMService.initialize() would inject a second gtm.js script for the same
+    // container ID, double-firing pageviews + conversions.
 
     if (consentPreferences.marketing) {
       const fbPixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID
@@ -84,7 +82,7 @@ export const GDPRBanner = ({
       }
     }
 
-    // Track consent preferences
+    // Push consent state into the existing dataLayer (does NOT load GTM).
     if (consentPreferences.analytics) {
       GTMService.trackEvent('gdpr_consent_given', {
         analytics: consentPreferences.analytics,
