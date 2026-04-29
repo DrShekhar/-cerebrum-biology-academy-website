@@ -740,6 +740,68 @@ export default function APBiologyTutorPage() {
         </div>
       </section>
 
+      {/* AP Biology cornerstone guides — pedagogy authority hub. Each
+          card links to a 1,500+ word evidence-based content page that
+          drives "AP Biology FRQ rubric" / "AP Biology score 5" / "AP
+          Biology Anki" informational queries — the differentiation
+          moat vs Wyzant/Princeton/Khan. */}
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+              AP Biology pedagogy guides
+            </h2>
+            <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
+              Evidence-based guides on what actually produces a 5 — FRQ rubric mastery,
+              spaced-repetition study schedules, and an honest pre-med pipeline framing.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                title: 'FRQ Rubric Mastery',
+                desc: 'Annotated College Board rubrics, sample 4-pt vs 3-pt answers, 6-week practice schedule',
+                href: '/ap-biology-frq-rubric-mastery',
+              },
+              {
+                title: 'Score-5 Study Guide',
+                desc: '8-week unit-weighted plan with active recall + spaced repetition (Karpicke & Roediger 2008)',
+                href: '/ap-biology-score-5-study-guide',
+              },
+              {
+                title: 'Free Anki Deck',
+                desc: '~600 cards across 8 AP units with the right card-design methodology',
+                href: '/ap-biology-anki-deck',
+              },
+              {
+                title: 'USABO Past Papers Archive',
+                desc: '16 years of Open + Semifinal exams with worked solutions',
+                href: '/usabo-past-papers-archive',
+              },
+              {
+                title: 'AP Bio → College Bio → MCAT',
+                desc: 'Honest pre-med pipeline framing — what AP Bio does and does not do',
+                href: '/ap-biology-vs-college-bio-mcat-bridge',
+              },
+              {
+                title: 'AP Biology vs USABO',
+                desc: 'Decide which track (or both) fits your goals',
+                href: '/ap-biology-vs-usabo',
+              },
+            ].map((g) => (
+              <Link
+                key={g.href}
+                href={g.href}
+                className="bg-white hover:bg-blue-50 border border-slate-200 hover:border-blue-300 p-5 rounded-xl transition-all"
+              >
+                <div className="font-semibold text-slate-900 mb-1">{g.title}</div>
+                <div className="text-xs text-slate-600 leading-relaxed">{g.desc}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* AP Biology by metro — internal-link cluster for Google indexing.
           Each card targets the city-specific landing page. Critical for
           letting Google find + crawl the 10 metro pages from the

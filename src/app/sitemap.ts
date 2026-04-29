@@ -2832,6 +2832,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     },
+    // AP Biology cornerstone content — pedagogy moat. Priority 0.9 via
+    // normalizePriority (high-authority content spokes that link out
+    // to all 20 metro/school pages).
+    {
+      url: `${baseUrl}/ap-biology-frq-rubric-mastery`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ap-biology-score-5-study-guide`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ap-biology-anki-deck`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/usabo-past-papers-archive`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ap-biology-vs-college-bio-mcat-bridge`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/a-level-biology-tutor`,
       lastModified: lastUpdated,
