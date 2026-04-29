@@ -42,6 +42,7 @@ import {
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import type { APBiologySchool } from '@/data/ap-biology/schools'
+import { getMetroBySlug } from '@/data/ap-biology/metros'
 
 interface APBiologySchoolTemplateProps {
   school: APBiologySchool
@@ -68,20 +69,74 @@ const pricingTiers = [
   },
 ]
 
+// Compact pricing summary for WhatsApp pre-fills.
+const pricingSummary = pricingTiers.map((t) => `• ${t.name} — ${t.price} (${t.perHour})`).join('\n')
+
 export default function APBiologySchoolTemplate({ school }: APBiologySchoolTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
+  // Look up the parent metro so the breadcrumb can display the correct
+  // metro name (e.g. "Northern Virginia / DC") and link to the matching
+  // metro page. Falls back to a state-derived label if the metro is
+  // missing from the config (shouldn't happen — every school has a
+  // metroSlug — but defensive).
+  const metro = getMetroBySlug(school.metroSlug)
+  const metroLabel =
+    metro?.cityName || school.cityState.split(',').pop()?.trim() || school.cityState
+
+  // Hero CTA — counsellor receives the school the student attends + the
+  // full pricing menu they were just shown, so the conversation starts
+  // with shared context, not discovery questions.
   const handleWhatsApp = () => {
+    const message = [
+      `Hi! My child is at ${school.shortName} (${school.cityState}) and we are exploring AP Biology tutoring.`,
+      ``,
+      `Course: AP Biology (College Board, May exam)`,
+      `Pricing tiers I'm considering:`,
+      pricingSummary,
+      ``,
+      `Please share batch start, schedule, and which tier fits my goals (AP-5 only / AP-5 + USABO Semifinal).`,
+    ].join('\n')
     trackAndOpenWhatsApp({
       source: `ap-bio-school-${school.slug}`,
-      message: `Hi! My child is at ${school.shortName} and we are exploring AP Biology tutoring. Please share programme details, schedule, and pricing.`,
+      message,
       campaign: `ap-bio-school-${school.slug}`,
     })
   }
 
-  const counsellingHref = `https://wa.me/${CONTACT_INFO.whatsapp.number}?text=${encodeURIComponent(
-    `Hi! I want to book a free AP Biology counselling call. School: ${school.shortName}. Please share available US-time slots.`
-  )}`
+  // Per-tier CTA — fired from a specific pricing card.
+  const handleTierWhatsApp = (tier: (typeof pricingTiers)[number]) => {
+    const message = [
+      `Hi! My child is at ${school.shortName} (${school.cityState}) and we want to enroll in AP Biology — ${tier.name}.`,
+      ``,
+      `Tier: ${tier.name}`,
+      `Price: ${tier.price} (${tier.perHour})`,
+      `Detail: ${tier.detail}`,
+      ``,
+      `Please confirm availability, batch start, and next steps.`,
+    ].join('\n')
+    const tierSlug = tier.name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')
+    trackAndOpenWhatsApp({
+      source: `ap-bio-school-${school.slug}-tier-${tierSlug}`,
+      message,
+      campaign: `ap-bio-school-${school.slug}-tier`,
+    })
+  }
+
+  const counsellingMessage = [
+    `Hi! I want to book a free AP Biology counselling call.`,
+    ``,
+    `School: ${school.shortName} (${school.cityState})`,
+    `Course: AP Biology (College Board, May exam)`,
+    `Pricing tiers I've seen:`,
+    pricingSummary,
+    ``,
+    `Please share available US-time slots.`,
+  ].join('\n')
+  const counsellingHref = `https://wa.me/${CONTACT_INFO.whatsapp.number}?text=${encodeURIComponent(counsellingMessage)}`
 
   return (
     <main className="min-h-screen bg-white">
@@ -106,7 +161,7 @@ export default function APBiologySchoolTemplate({ school }: APBiologySchoolTempl
                 href={`/ap-biology-tutor-${school.metroSlug}`}
                 className="text-gray-600 hover:text-blue-700"
               >
-                {school.cityState.split(',')[1]?.trim() || school.cityState}
+                {metroLabel}
               </Link>
             </li>
             <li className="flex items-center">
@@ -272,12 +327,20 @@ export default function APBiologySchoolTemplate({ school }: APBiologySchoolTempl
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:shadow-md transition"
+                className="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:shadow-md transition flex flex-col"
               >
                 <h3 className="text-lg font-bold text-slate-900 mb-1">{tier.name}</h3>
                 <p className="text-2xl font-bold text-blue-700 mb-1">{tier.price}</p>
                 <p className="text-sm text-green-700 font-medium mb-3">{tier.perHour}</p>
-                <p className="text-sm text-slate-600">{tier.detail}</p>
+                <p className="text-sm text-slate-600 flex-grow">{tier.detail}</p>
+                <button
+                  type="button"
+                  onClick={() => handleTierWhatsApp(tier)}
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-4 py-2.5 text-sm transition"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Get this package
+                </button>
               </div>
             ))}
           </div>
@@ -364,9 +427,7 @@ export default function APBiologySchoolTemplate({ school }: APBiologySchoolTempl
               href={`/ap-biology-tutor-${school.metroSlug}`}
               className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition"
             >
-              <h3 className="font-semibold text-blue-700">
-                AP Bio for {school.cityState.split(',')[1]?.trim() || school.cityState}
-              </h3>
+              <h3 className="font-semibold text-blue-700">AP Bio for {metroLabel}</h3>
               <p className="text-xs text-slate-600 mt-1">Metro-level programme</p>
             </Link>
             <Link

@@ -91,6 +91,11 @@ const pricingTiers = [
   },
 ]
 
+// Compact pricing summary string used inside WhatsApp pre-fills so
+// counsellors see exactly which tiers were visible to the visitor.
+// Single source of truth — derived from pricingTiers above.
+const pricingSummary = pricingTiers.map((t) => `• ${t.name} — ${t.price} (${t.perHour})`).join('\n')
+
 // Pedagogy method block — the differentiator. Cites Karpicke &
 // Roediger 2008 because it's the canonical research on active recall.
 const pedagogyPillars = [
@@ -123,17 +128,64 @@ const pedagogyPillars = [
 export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
+  // Hero CTA — counsellor receives the visitor's location + the full
+  // pricing menu they were just shown, so the conversation starts with
+  // shared context, not discovery questions.
   const handleWhatsApp = () => {
+    const message = [
+      `Hi! I'm in ${metro.cityName} and interested in AP Biology tutoring.`,
+      ``,
+      `Course: AP Biology (College Board, May exam)`,
+      `Pricing tiers I'm considering:`,
+      pricingSummary,
+      ``,
+      `Please share batch start, schedule, and which tier fits my goals (AP-5 only / AP-5 + USABO Semifinal).`,
+    ].join('\n')
     trackAndOpenWhatsApp({
       source: `ap-bio-city-${metro.slug}`,
-      message: `Hi! I am in ${metro.cityName} and looking for AP Biology tutoring. Please share programme details, schedule, and pricing.`,
+      message,
       campaign: `ap-bio-city-${metro.slug}`,
     })
   }
 
-  const counsellingHref = `https://wa.me/${CONTACT_INFO.whatsapp.number}?text=${encodeURIComponent(
-    `Hi! I want to book a free AP Biology counselling call. Region: ${metro.cityName}. Please share available US-time slots.`
-  )}`
+  // Per-tier CTA — fired from the pricing card the visitor clicked.
+  // Sends a tier-specific intent message so the counsellor knows the
+  // package the visitor was pricing without asking. Tracked separately
+  // (campaign suffix) so we can measure tier-level conversion.
+  const handleTierWhatsApp = (tier: (typeof pricingTiers)[number]) => {
+    const message = [
+      `Hi! I'm in ${metro.cityName} and want to enroll in AP Biology — ${tier.name}.`,
+      ``,
+      `Tier I'm considering: ${tier.name}`,
+      `Price: ${tier.price} (${tier.perHour})`,
+      `Detail: ${tier.detail}`,
+      ``,
+      `Please confirm availability, batch start, and next steps.`,
+    ].join('\n')
+    const tierSlug = tier.name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')
+    trackAndOpenWhatsApp({
+      source: `ap-bio-city-${metro.slug}-tier-${tierSlug}`,
+      message,
+      campaign: `ap-bio-city-${metro.slug}-tier`,
+    })
+  }
+
+  // Counselling-call CTA — same context as hero CTA, but framed as
+  // a discovery call rather than enrolment intent.
+  const counsellingMessage = [
+    `Hi! I want to book a free AP Biology counselling call.`,
+    ``,
+    `Region: ${metro.cityName}`,
+    `Course: AP Biology (College Board, May exam)`,
+    `Pricing tiers I've seen:`,
+    pricingSummary,
+    ``,
+    `Please share available US-time slots.`,
+  ].join('\n')
+  const counsellingHref = `https://wa.me/${CONTACT_INFO.whatsapp.number}?text=${encodeURIComponent(counsellingMessage)}`
 
   const usaboBridgeHref = metro.usaboCitySlug
     ? `/usabo-coaching-${metro.usaboCitySlug}`
@@ -359,12 +411,23 @@ export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplatePr
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:shadow-md transition"
+                className="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:shadow-md transition flex flex-col"
               >
                 <h3 className="text-lg font-bold text-slate-900 mb-1">{tier.name}</h3>
                 <p className="text-2xl font-bold text-blue-700 mb-1">{tier.price}</p>
                 <p className="text-sm text-green-700 font-medium mb-3">{tier.perHour}</p>
-                <p className="text-sm text-slate-600">{tier.detail}</p>
+                <p className="text-sm text-slate-600 flex-grow">{tier.detail}</p>
+                {/* Per-tier CTA — the WhatsApp message includes this
+                    exact tier name + price so the counsellor sees the
+                    package the visitor clicked. */}
+                <button
+                  type="button"
+                  onClick={() => handleTierWhatsApp(tier)}
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-4 py-2.5 text-sm transition"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Get this package
+                </button>
               </div>
             ))}
           </div>
