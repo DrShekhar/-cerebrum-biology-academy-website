@@ -33,6 +33,52 @@ import { throttle } from '@/lib/performance'
 
 export default function Class11BiologyPage() {
   const [activeSection, setActiveSection] = useState('hero')
+
+  // Lead-capture quick-context selectors. Users tap to refine; the WhatsApp
+  // message updates with their selection so the conversation starts with
+  // full context (which course, what mode, what track) — no back-and-forth
+  // discovery needed by the counsellor.
+  const [track, setTrack] = useState<'NEET' | 'Boards' | 'Olympiad' | 'All-round'>('NEET')
+  const [mode, setMode] = useState<'Online' | 'Offline' | 'Either'>('Either')
+
+  const buildContextWhatsAppMessage = () => {
+    const parts = [
+      `Hi! I want to enquire about Class 11 Biology coaching.`,
+      ``,
+      `Track: ${track === 'All-round' ? 'NEET + Boards + Olympiad foundation' : track}`,
+      `Preferred mode: ${
+        mode === 'Offline'
+          ? 'Offline (South Delhi / Gurugram / Faridabad — please advise nearest centre)'
+          : mode === 'Online'
+            ? 'Online'
+            : 'Either online or offline — please advise'
+      }`,
+      ``,
+      `Please share batch start, schedule, and fee structure.`,
+    ]
+    return parts.join('\n')
+  }
+
+  const sendContextWhatsApp = (source: string) => {
+    trackAndOpenWhatsApp({
+      source,
+      message: buildContextWhatsAppMessage(),
+      campaign: 'class-11',
+    })
+  }
+
+  // Rolling-week batch framing — replaces "March 2026 batch" hardcoding so
+  // the urgency badge stays accurate year-round.
+  const [batchStartDay, setBatchStartDay] = useState('Monday')
+
+  useEffect(() => {
+    const now = new Date()
+    const day = now.getDay()
+    const daysUntilNextMonday = ((1 - day + 7) % 7) + 7
+    const nextBatchStart = new Date(now)
+    nextBatchStart.setDate(now.getDate() + daysUntilNextMonday)
+    setBatchStartDay(nextBatchStart.toLocaleDateString('en-IN', { weekday: 'long' }))
+  }, [])
   const [seatsRemaining, setSeatsRemaining] = useState(12)
   const [showFloatingCTA, setShowFloatingCTA] = useState(false)
 
@@ -247,11 +293,12 @@ export default function Class11BiologyPage() {
     { number: '5.0/5', label: 'Student Rating', description: 'Google Reviews' },
   ]
 
+  // Static batch metadata — date is rendered from `batchStartDay` (rolling week)
+  // so we don't ship hardcoded month strings. Seat counters live in the
+  // `seatsRemaining` state declared above.
   const batchInfo = {
-    nextBatch: 'March 2026',
     totalSeats: 25,
-    filledSeats: 13,
-    remainingSeats: 12,
+    filledSeats: 25 - seatsRemaining,
   }
 
   const navItems = [
@@ -336,72 +383,95 @@ export default function Class11BiologyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              {/* Urgency Badge */}
+              {/* Urgency Badge — rolling-week framing, no hardcoded month */}
               <div className="inline-flex items-center bg-yellow-400/20 backdrop-blur-sm text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-yellow-400/30">
                 <AlertCircle className="w-4 h-4 mr-2" />
-                Only {batchInfo.remainingSeats} seats left for March 2026 batch
+                Next batch starts {batchStartDay} · only {seatsRemaining} seats left
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
                 Class 11th Biology
                 <span className="block text-green-300">NEET Foundation Course</span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-                Start your NEET journey in Class 11 with AIIMS-trained faculty. Build an unshakeable
-                foundation while excelling in board exams.
+              <p className="text-base sm:text-lg text-gray-200 mb-3 leading-relaxed">
+                AIIMS-trained faculty. Strong NCERT foundation. Board + NEET dual prep.
               </p>
 
-              {/* Value Props */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
-                  <span className="text-sm">AIIMS Faculty</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
-                  <span className="text-sm">Max 25 Students</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
-                  <span className="text-sm">Board + NEET</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
-                  <span className="text-sm">₹75,000/year</span>
-                </div>
-              </div>
+              {/* Coverage statement — answers the breadth question without linking
+                  out (visitor stays locked on this page). Plain text, intentionally
+                  small + secondary so it doesn't compete with the H1. */}
+              <p className="text-xs sm:text-sm text-gray-300/80 mb-6 leading-relaxed">
+                Cerebrum runs Biology for Class&nbsp;9–12, NEET droppers, Boards, and Olympiad
+                tracks. <strong className="text-white">Offline at South&nbsp;Delhi · Gurugram · Faridabad</strong>,
+                plus live online for everyone else. This page is for Class&nbsp;11.
+              </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* Quick-context capture — selecting chips updates the WhatsApp
+                  message so the conversation starts with full context. No
+                  multi-field form friction; no second page. */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/15 rounded-2xl p-4 sm:p-5 mb-6">
+                <div className="text-[11px] sm:text-xs uppercase tracking-wide text-green-200 font-semibold mb-3">
+                  Tell us in 2 taps · we&apos;ll WhatsApp you back with the right batch
+                </div>
+
+                <div className="mb-3">
+                  <div className="text-xs text-gray-300 mb-1.5">Your goal</div>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {(['NEET', 'Boards', 'Olympiad', 'All-round'] as const).map((t) => (
+                      <button
+                        key={t}
+                        type="button"
+                        onClick={() => setTrack(t)}
+                        className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition ${
+                          track === t
+                            ? 'bg-yellow-400 text-gray-900'
+                            : 'bg-white/10 text-white hover:bg-white/20'
+                        }`}
+                      >
+                        {t}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <div className="text-xs text-gray-300 mb-1.5">Mode</div>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {(['Online', 'Offline', 'Either'] as const).map((m) => (
+                      <button
+                        key={m}
+                        type="button"
+                        onClick={() => setMode(m)}
+                        className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium transition ${
+                          mode === m
+                            ? 'bg-yellow-400 text-gray-900'
+                            : 'bg-white/10 text-white hover:bg-white/20'
+                        }`}
+                      >
+                        {m === 'Offline' ? 'Offline (Delhi NCR)' : m}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Primary CTA — sends WhatsApp with full context based on chip
+                    selections above. WhatsApp brand green = launches WhatsApp. */}
                 <button
-                  onClick={() =>
-                    trackAndOpenWhatsApp({
-                      source: 'class-11-demo',
-                      message:
-                        'Hi! I want to book a FREE demo class for Class 11th NEET Biology. Please share available timings.',
-                      campaign: 'class-11',
-                    })
-                  }
-                  className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] group"
+                  onClick={() => sendContextWhatsApp('class-11-hero-context')}
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 sm:py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-base sm:text-lg rounded-xl shadow-lg transition min-h-[56px] touch-manipulation"
                 >
-                  <Play className="w-5 h-5 mr-2" />
-                  Book Free Demo Class
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+                  Talk on WhatsApp — context attached
                 </button>
-                <button
-                  onClick={async () => {
-                    await trackAndOpenWhatsApp({
-                      source: 'class-11-hero',
-                      message: WHATSAPP_MESSAGES.courseEnquiry,
-                      campaign: 'class-11-course',
-                    })
-                  }}
-                  className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-all duration-300 inline-flex items-center justify-center cursor-pointer"
+
+                {/* Secondary CTA — Call. Forest green to match brand. */}
+                <a
+                  href="tel:+918826444334"
+                  className="mt-2 w-full inline-flex items-center justify-center gap-2 py-2.5 sm:py-3 border border-white/30 hover:bg-white/10 text-white font-medium text-sm rounded-xl transition min-h-[44px] touch-manipulation"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Chat on WhatsApp
-                </button>
+                  Or call +91 88264 44334
+                </a>
               </div>
             </div>
 
@@ -457,9 +527,9 @@ export default function Class11BiologyPage() {
               {/* Batch Info */}
               <div className="mt-6 pt-6 border-t border-white/20">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-300">Next Batch: March 2026</span>
+                  <span className="text-sm text-gray-300">Next batch: {batchStartDay}</span>
                   <span className="text-sm font-semibold text-yellow-400">
-                    {batchInfo.remainingSeats} seats left
+                    {seatsRemaining} seats left
                   </span>
                 </div>
                 <div className="bg-white/20 rounded-full h-3 overflow-hidden">
@@ -815,7 +885,7 @@ export default function Class11BiologyPage() {
               <div className="text-center mt-6">
                 <div className="inline-flex items-center bg-red-500/20 text-red-300 px-4 py-2 rounded-full text-sm">
                   <AlertCircle className="w-4 h-4 mr-2" />
-                  Only {batchInfo.remainingSeats} seats left for March 2026 batch
+                  Only {seatsRemaining} seats left · next batch starts {batchStartDay}
                 </div>
               </div>
             </div>

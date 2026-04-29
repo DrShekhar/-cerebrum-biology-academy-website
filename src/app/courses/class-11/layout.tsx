@@ -2,34 +2,36 @@ import { Metadata } from 'next'
 import { HowToEnrollSchema, CourseWithHowToSchema } from '@/components/seo/HowToEnrollSchema'
 
 export const metadata: Metadata = {
-  title: 'Class 11 Biology NEET Coaching | Foundation Program 2026-2027',
+  title: 'Class 11 Biology Coaching | Online & Offline | NEET + Board Foundation',
   description:
-    'Class 11 Biology coaching for NEET at Cerebrum Academy. Strong NCERT foundation, board exam excellence, AIIMS faculty, 98% success rate. Enroll for 2026-2027!',
+    'Class 11 Biology coaching — online + offline (South Delhi · Gurugram · Faridabad). AIIMS-trained faculty, NCERT-line-by-line foundation, NEET + Board dual prep, Olympiad track available. WhatsApp +91 88264 44334 for the next batch.',
   keywords: [
-    'Class 11 biology',
-    'NEET foundation',
-    'Class 11 NEET coaching',
-    'biology tuition',
-    'NCERT biology',
-    'board exam preparation',
-    'NEET Class 11',
-    'biology classes',
-    'Biology coaching for weak students',
-    'NEET Biology revision classes',
-    'Biology doubt clearing classes',
+    'class 11 biology coaching',
+    'class 11 biology online classes',
+    'class 11 biology offline classes',
+    'class 11 biology tuition',
+    'class 11 biology coaching south delhi',
+    'class 11 biology coaching gurugram',
+    'class 11 biology coaching faridabad',
+    'NEET foundation class 11',
+    'class 11 NEET biology coaching',
+    'class 11 board NEET combined',
+    'class 11 biology olympiad foundation',
+    'NCERT biology class 11',
+    'biology tutor class 11 near me',
   ],
   openGraph: {
-    title: 'Class 11 Biology NEET Foundation | Build Strong Fundamentals',
+    title: 'Class 11 Biology Coaching — Online & Offline | NEET + Board Foundation',
     description:
-      "Start your NEET journey with India's best Class 11 Biology coaching. AIIMS faculty, complete NCERT coverage, board + competitive exam preparation.",
+      'AIIMS-trained Class 11 Biology coaching — online classes everywhere, offline at South Delhi · Gurugram · Faridabad. Complete NCERT foundation, NEET + Board dual prep, Olympiad track.',
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/courses/class-11',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Class 11 Biology NEET Foundation',
-    description: 'AIIMS faculty, NCERT mastery, board + NEET preparation, 98% success rate',
+    title: 'Class 11 Biology Coaching — Online & Offline',
+    description: 'AIIMS faculty. Online + offline (Delhi NCR). NCERT foundation. NEET + Board + Olympiad.',
     images: ['/og-image.jpg'],
   },
   alternates: {
