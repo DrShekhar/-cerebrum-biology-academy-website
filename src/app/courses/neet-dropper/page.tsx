@@ -16,7 +16,6 @@ import {
   Phone,
   MessageCircle,
   Gift,
-  Shield,
   GraduationCap,
   Calendar,
   TrendingUp,
@@ -187,9 +186,9 @@ export default function NEETDropperPage() {
         'The Dropper Course fee ranges from ₹70,000 to ₹1,56,000 depending on the batch type and facilities chosen. We offer flexible EMI options starting at ₹5,833/month and scholarships up to 25% based on previous NEET score.',
     },
     {
-      question: 'Is there a money-back guarantee?',
+      question: 'What if my child doesn\u2019t feel the programme is right after a few classes?',
       answer:
-        'Yes, we offer a 30-day money-back guarantee. If you are not satisfied with our teaching methodology within the first 30 days, you can get a full refund.',
+        'We run a free demo class first so families can experience the methodology before committing. If after enrolment a student attends the first two weeks of classes and decides the programme is not the right fit, our counsellors work with the family case-by-case to either reassign them to a more suitable batch or process an honest refund per the published refund policy at /refund-policy. We don\u2019t treat this like a product return — we treat it as a coaching decision.',
     },
   ]
 
@@ -310,15 +309,6 @@ export default function NEETDropperPage() {
                 ))}
               </div>
 
-              {/* Trust Badge — only the differentiator that isn't already stated above
-                  in stats / description (AIIMS faculty + 89% rank improvement are
-                  already shown in the stats row, so we drop those badges). */}
-              <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
-                <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-sm">
-                  <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-green-400" />
-                  30-day money-back guarantee
-                </div>
-              </div>
 
               {/* Mobile CTA */}
               <div className="lg:hidden flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8">
@@ -592,10 +582,8 @@ export default function NEETDropperPage() {
                       <span className="text-sm sm:text-base">Rank-improvement track record (89% of past droppers added 100+ marks)</span>
                     </div>
                     <div className="flex items-center">
-                      <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base font-semibold text-green-700">
-                        30-day money-back guarantee
-                      </span>
+                      <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
+                      <span className="text-sm sm:text-base">Free demo class before you decide — experience the faculty first</span>
                     </div>
                   </div>
                 </div>
