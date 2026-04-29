@@ -1,10 +1,10 @@
 'use client'
 
 import { Button } from '@/components/ui/Button'
+import { DualCurrencyPrice } from '@/components/ui/DualCurrencyPrice'
 import { courses, courseCategories } from '@/data/courses'
 import {
   Clock,
-  IndianRupee,
   CheckCircle,
   Users,
   Monitor,
@@ -203,13 +203,15 @@ export function CoursesSection() {
                   </div>
                 </div>
 
-                {/* Pricing */}
-                <div className="flex items-center space-x-1.5 xs:space-x-2 mb-4 xs:mb-6">
-                  <IndianRupee className="w-5 xs:w-6 h-5 xs:h-6 text-green-600" />
-                  <span className="text-2xl xs:text-3xl font-bold text-gray-900">
-                    {course.price.toLocaleString('en-IN')}
-                  </span>
-                  <span className="text-sm xs:text-base text-gray-500">/ year</span>
+                {/* Pricing — geo-aware: INR-only for IN visitors, local
+                    currency primary + INR secondary for non-IN visitors. */}
+                <div className="mb-4 xs:mb-6">
+                  <DualCurrencyPrice
+                    inr={course.price}
+                    suffix=" / year"
+                    className="text-2xl xs:text-3xl font-bold text-gray-900"
+                    secondaryClassName="text-xs text-gray-500 font-normal mt-1"
+                  />
                 </div>
               </div>
 

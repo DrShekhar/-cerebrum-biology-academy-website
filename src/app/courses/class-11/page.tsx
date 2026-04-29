@@ -24,6 +24,7 @@ import {
   AlertCircle,
 } from 'lucide-react'
 import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
+import { DualCurrencyPrice, formatINR } from '@/components/ui/DualCurrencyPrice'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { throttle } from '@/lib/performance'
 
@@ -83,14 +84,7 @@ export default function Class11BiologyPage() {
     const handleScroll = () => {
       setShowFloatingCTA(window.scrollY > 500)
 
-      const sections = [
-        'hero',
-        'features',
-        'curriculum',
-        'faculty',
-        'testimonials',
-        'pricing',
-      ]
+      const sections = ['hero', 'features', 'curriculum', 'faculty', 'testimonials', 'pricing']
       for (const section of sections.reverse()) {
         const element = document.getElementById(section)
         if (element && window.scrollY >= element.offsetTop - 100) {
@@ -283,7 +277,11 @@ export default function Class11BiologyPage() {
 
   const successStats = [
     { number: '90%+', label: 'Boards target', description: 'Most of our cohort' },
-    { number: 'NEET-aligned', label: 'NCERT-line-by-line', description: 'Foundation that actually holds' },
+    {
+      number: 'NEET-aligned',
+      label: 'NCERT-line-by-line',
+      description: 'Foundation that actually holds',
+    },
     { number: '2000+', label: 'Students taught', description: 'Since 2018' },
     { number: '5.0/5', label: 'Student rating', description: 'Google Reviews' },
   ]
@@ -397,8 +395,11 @@ export default function Class11BiologyPage() {
                   small + secondary so it doesn't compete with the H1. */}
               <p className="text-xs sm:text-sm text-gray-300/80 mb-6 leading-relaxed">
                 Cerebrum runs Biology for Class&nbsp;9–12, NEET droppers, Boards, and Olympiad
-                tracks. <strong className="text-white">Offline at South&nbsp;Delhi · Gurugram · Faridabad</strong>,
-                plus live online for everyone else. This page is for Class&nbsp;11.
+                tracks.{' '}
+                <strong className="text-white">
+                  Offline at South&nbsp;Delhi · Gurugram · Faridabad
+                </strong>
+                , plus live online for everyone else. This page is for Class&nbsp;11.
               </p>
 
               {/* Quick-context capture — selecting chips updates the WhatsApp
@@ -513,7 +514,9 @@ export default function Class11BiologyPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Foundation that holds</h4>
-                    <p className="text-gray-300 text-sm">Most Class-11 starters carry into Class 12 with a real lead</p>
+                    <p className="text-gray-300 text-sm">
+                      Most Class-11 starters carry into Class 12 with a real lead
+                    </p>
                   </div>
                 </div>
               </div>
@@ -754,8 +757,15 @@ export default function Class11BiologyPage() {
               </div>
 
               <div className="text-center mb-8">
-                <div className="text-5xl sm:text-6xl font-bold">₹75,000</div>
-                <p className="text-gray-300 mt-2">For the year — EMI from ₹6,250/month</p>
+                <DualCurrencyPrice
+                  inr={75000}
+                  className="text-5xl sm:text-6xl font-bold"
+                  secondaryClassName="text-gray-300/80 text-base font-normal mt-2"
+                />
+                <p className="text-gray-300 mt-2">
+                  For the year — <span className="hidden md:inline">Indian families: </span>EMI from{' '}
+                  {formatINR(6250)}/month
+                </p>
                 <p className="text-gray-300/80 text-sm mt-1">
                   Merit scholarships available. Free demo class first — no commitment.
                 </p>

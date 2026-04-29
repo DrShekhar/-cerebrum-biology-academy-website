@@ -29,6 +29,7 @@ import {
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
+import { DualCurrencyPrice, formatINR } from '@/components/ui/DualCurrencyPrice'
 
 export default function Class12BiologyPage() {
   const courseFeatures = [
@@ -268,7 +269,14 @@ export default function Class12BiologyPage() {
               {/* CTAs */}
               <div className="flex flex-col gap-3 sm:gap-4">
                 <button
-                  onClick={() => trackAndOpenWhatsApp({ source: 'class-12-demo', message: 'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.', campaign: 'class-12' })}
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-12-demo',
+                      message:
+                        'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.',
+                      campaign: 'class-12',
+                    })
+                  }
                   className="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-[1.02] min-h-[52px] w-full group"
                 >
                   <Play className="w-5 h-5 mr-2" />
@@ -350,13 +358,14 @@ export default function Class12BiologyPage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-gray-300">Course Fee</p>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-2xl font-bold text-yellow-400">₹72,200</span>
-                      <span className="text-sm text-gray-400 line-through">₹80,000</span>
-                    </div>
+                    <DualCurrencyPrice
+                      inr={72200}
+                      className="text-2xl font-bold text-yellow-400"
+                      secondaryClassName="text-xs text-gray-300 font-normal mt-0.5"
+                    />
                   </div>
                   <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
-                    Save ₹7,800
+                    Indian Families: Save {formatINR(7800)}
                   </div>
                 </div>
               </div>
@@ -404,7 +413,8 @@ export default function Class12BiologyPage() {
               What Results Do Class 12 Students Achieve at Cerebrum?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our Class 12 students consistently score 340+ in NEET Biology and 90+ in board exams. Here is our track record across key metrics.
+              Our Class 12 students consistently score 340+ in NEET Biology and 90+ in board exams.
+              Here is our track record across key metrics.
             </p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -466,7 +476,9 @@ export default function Class12BiologyPage() {
               What Is Covered in Class 12 NEET Biology?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              The Class 12 NEET Biology course at Cerebrum covers complete NCERT mastery, daily MCQ practice, weekly mock tests, and 24/7 doubt resolution -- everything you need to excel in both board exams and NEET.
+              The Class 12 NEET Biology course at Cerebrum covers complete NCERT mastery, daily MCQ
+              practice, weekly mock tests, and 24/7 doubt resolution -- everything you need to excel
+              in both board exams and NEET.
             </p>
           </div>
 
@@ -535,7 +547,9 @@ export default function Class12BiologyPage() {
               How Is the Class 12 NEET Biology Curriculum Structured?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              The curriculum is divided into four units with strategic coverage based on NEET exam weightage and board requirements, ensuring high-weight topics like Genetics and Reproduction receive the most attention.
+              The curriculum is divided into four units with strategic coverage based on NEET exam
+              weightage and board requirements, ensuring high-weight topics like Genetics and
+              Reproduction receive the most attention.
             </p>
           </div>
 
@@ -567,7 +581,10 @@ export default function Class12BiologyPage() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 mt-4">Curriculum aligned with NCERT Class 12 Biology (2024-25 edition) and NTA NEET-UG syllabus. Sources: ncert.nic.in, nta.ac.in</p>
+          <p className="text-xs text-gray-500 mt-4">
+            Curriculum aligned with NCERT Class 12 Biology (2024-25 edition) and NTA NEET-UG
+            syllabus. Sources: ncert.nic.in, nta.ac.in
+          </p>
         </div>
       </section>
 
@@ -614,9 +631,17 @@ export default function Class12BiologyPage() {
 
               <div className="bg-[#e8ede8] rounded-xl p-6">
                 <div className="mb-4">
-                  <span className="text-gray-500 line-through text-lg">₹80,000</span>
-                  <div className="text-4xl font-bold text-[#3d4d3d]">₹72,200</div>
-                  <p className="text-sm text-gray-600 mt-1">per year (EMI available)</p>
+                  <DualCurrencyPrice
+                    inr={72200}
+                    className="text-4xl font-bold text-[#3d4d3d]"
+                    secondaryClassName="text-sm text-gray-600 font-normal mt-1"
+                  />
+                  <p className="text-sm text-gray-600 mt-1">
+                    per year{' '}
+                    <span className="text-gray-500">
+                      (Indian families: EMI available · was {formatINR(80000)})
+                    </span>
+                  </p>
                 </div>
                 <div className="space-y-3">
                   <Link
@@ -627,7 +652,14 @@ export default function Class12BiologyPage() {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <button
-                    onClick={() => trackAndOpenWhatsApp({ source: 'class-12-demo', message: 'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.', campaign: 'class-12' })}
+                    onClick={() =>
+                      trackAndOpenWhatsApp({
+                        source: 'class-12-demo',
+                        message:
+                          'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.',
+                        campaign: 'class-12',
+                      })
+                    }
                     className="w-full bg-yellow-500 text-slate-900 py-3 rounded-xl font-bold hover:bg-yellow-400 transition-all inline-flex items-center justify-center"
                   >
                     <Play className="w-5 h-5 mr-2" />
@@ -752,7 +784,14 @@ export default function Class12BiologyPage() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <button
-              onClick={() => trackAndOpenWhatsApp({ source: 'class-12-demo', message: 'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.', campaign: 'class-12' })}
+              onClick={() =>
+                trackAndOpenWhatsApp({
+                  source: 'class-12-demo',
+                  message:
+                    'Hi! I want to book a FREE demo class for Class 12th NEET Biology. Please share available timings.',
+                  campaign: 'class-12',
+                })
+              }
               className="bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-400 transition-all inline-flex items-center justify-center shadow-lg min-h-[52px]"
               aria-label="Book a free demo class"
             >

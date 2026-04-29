@@ -29,6 +29,7 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 import { VisitOurCenters } from '@/components/seo/InternalCrossLinks'
+import { DualCurrencyPrice, formatINR } from '@/components/ui/DualCurrencyPrice'
 
 export default function NEETDropperPage() {
   const router = useRouter()
@@ -65,7 +66,12 @@ export default function NEETDropperPage() {
         value: 1,
       })
     }
-    trackAndOpenWhatsApp({ source: 'neet-dropper-demo', message: 'Hi! I want to book a FREE demo class for NEET Dropper/Repeater Batch. Please share available timings.', campaign: 'neet-dropper' })
+    trackAndOpenWhatsApp({
+      source: 'neet-dropper-demo',
+      message:
+        'Hi! I want to book a FREE demo class for NEET Dropper/Repeater Batch. Please share available timings.',
+      campaign: 'neet-dropper',
+    })
   }
 
   const courseFeatures = [
@@ -311,7 +317,6 @@ export default function NEETDropperPage() {
                 ))}
               </div>
 
-
               {/* Mobile CTA */}
               <div className="lg:hidden flex flex-col gap-2 sm:gap-3 mb-6 sm:mb-8">
                 <Button
@@ -341,7 +346,9 @@ export default function NEETDropperPage() {
               <div className="bg-yellow-500 text-black rounded-t-2xl sm:rounded-t-3xl px-4 py-2 sm:py-3 text-center">
                 <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold">
                   <Calendar className="w-4 h-4" />
-                  <span>Next batch starts {batchStartLabel} — {batchStartDay}</span>
+                  <span>
+                    Next batch starts {batchStartLabel} — {batchStartDay}
+                  </span>
                   <span className="bg-black text-yellow-500 px-2 py-0.5 rounded text-xs">
                     Only {seatsLeft} seats left
                   </span>
@@ -356,8 +363,8 @@ export default function NEETDropperPage() {
                   </h2>
                   <p className="mt-1.5 text-xs sm:text-sm text-gray-600">
                     Free counselling call + previous-year-attempt analysis. Offline at
-                    <strong> South Delhi · Gurugram · Faridabad</strong>, plus live online
-                    for everyone else.
+                    <strong> South Delhi · Gurugram · Faridabad</strong>, plus live online for
+                    everyone else.
                   </p>
                   <div className="inline-flex items-center gap-1.5 mt-3 bg-[#e8ede8] text-[#3d4d3d] px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold">
                     <BookOpen className="w-3.5 h-3.5" />
@@ -582,23 +589,33 @@ export default function NEETDropperPage() {
                   <div className="space-y-2 sm:space-y-3">
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">10–12 months comprehensive programme</span>
+                      <span className="text-sm sm:text-base">
+                        10–12 months comprehensive programme
+                      </span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Exclusive dropper-only batch environment</span>
+                      <span className="text-sm sm:text-base">
+                        Exclusive dropper-only batch environment
+                      </span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Psychology support &amp; counselling</span>
+                      <span className="text-sm sm:text-base">
+                        Psychology support &amp; counselling
+                      </span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Rank-improvement track record (89% of past droppers added 100+ marks)</span>
+                      <span className="text-sm sm:text-base">
+                        Rank-improvement track record (89% of past droppers added 100+ marks)
+                      </span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Free demo class before you decide — experience the faculty first</span>
+                      <span className="text-sm sm:text-base">
+                        Free demo class before you decide — experience the faculty first
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -609,29 +626,55 @@ export default function NEETDropperPage() {
                     <div className="rounded-lg bg-white px-3 py-2.5 border border-gray-200">
                       <div className="flex justify-between items-baseline">
                         <span className="text-sm font-semibold text-[#3d4d3d]">Pursuit</span>
-                        <span className="text-base font-bold text-[#3d4d3d]">₹70,000</span>
+                        <DualCurrencyPrice
+                          inr={70000}
+                          inline
+                          className="text-base font-bold text-[#3d4d3d]"
+                          secondaryClassName="text-[10px] text-gray-500 font-normal"
+                        />
                       </div>
-                      <div className="text-[11px] text-gray-600 mt-0.5">30–40 students · group format</div>
+                      <div className="text-[11px] text-gray-600 mt-0.5">
+                        30–40 students · group format
+                      </div>
                     </div>
                     <div className="rounded-lg bg-white px-3 py-2.5 border-2 border-yellow-400 ring-1 ring-yellow-300/40">
                       <div className="flex justify-between items-baseline">
                         <span className="text-sm font-semibold text-[#3d4d3d]">
-                          Ascent <span className="ml-1 text-[10px] font-bold text-yellow-700 bg-yellow-100 px-1.5 py-0.5 rounded">Most chosen</span>
+                          Ascent{' '}
+                          <span className="ml-1 text-[10px] font-bold text-yellow-700 bg-yellow-100 px-1.5 py-0.5 rounded">
+                            Most chosen
+                          </span>
                         </span>
-                        <span className="text-base font-bold text-[#3d4d3d]">₹90,000</span>
+                        <DualCurrencyPrice
+                          inr={90000}
+                          inline
+                          className="text-base font-bold text-[#3d4d3d]"
+                          secondaryClassName="text-[10px] text-gray-500 font-normal"
+                        />
                       </div>
-                      <div className="text-[11px] text-gray-600 mt-0.5">16–18 students · weekly mentor call</div>
+                      <div className="text-[11px] text-gray-600 mt-0.5">
+                        16–18 students · weekly mentor call
+                      </div>
                     </div>
                     <div className="rounded-lg bg-white px-3 py-2.5 border border-gray-200">
                       <div className="flex justify-between items-baseline">
                         <span className="text-sm font-semibold text-[#3d4d3d]">Pinnacle ZA</span>
-                        <span className="text-base font-bold text-[#3d4d3d]">₹1,56,000</span>
+                        <DualCurrencyPrice
+                          inr={156000}
+                          inline
+                          className="text-base font-bold text-[#3d4d3d]"
+                          secondaryClassName="text-[10px] text-gray-500 font-normal"
+                        />
                       </div>
-                      <div className="text-[11px] text-gray-600 mt-0.5">10–12 students · personal mentorship from Dr. Shekhar</div>
+                      <div className="text-[11px] text-gray-600 mt-0.5">
+                        10–12 students · personal mentorship from Dr. Shekhar
+                      </div>
                     </div>
                   </div>
                   <div className="text-xs sm:text-sm text-gray-600 mb-3">
-                    EMI from <span className="font-semibold">₹5,833/month</span>. Up to 25% scholarship on previous NEET score.
+                    <span className="text-gray-500">Indian families: </span>EMI from{' '}
+                    <span className="font-semibold">{formatINR(5833)}/month</span>. Up to 25%
+                    scholarship on previous NEET score.
                   </div>
                   <Button
                     variant="primary"
@@ -775,7 +818,8 @@ export default function NEETDropperPage() {
             </div>
 
             <p className="text-xs sm:text-sm opacity-80">
-              Next dropper batch starts {batchStartLabel} ({batchStartDay}) — only {seatsLeft} seats left.
+              Next dropper batch starts {batchStartLabel} ({batchStartDay}) — only {seatsLeft} seats
+              left.
             </p>
           </div>
         </div>

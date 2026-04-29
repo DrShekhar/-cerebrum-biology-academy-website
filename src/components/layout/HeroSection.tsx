@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import { HeroPricingBadge } from '@/components/home/HeroPricingBadge'
 
 // PERFORMANCE: Lazy-load client interactive elements to defer lucide-react icons (~50KB)
 // These elements have animation delays anyway, so deferring doesn't hurt UX
@@ -170,15 +171,14 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             ))}
           </div>
 
-          {/* Pricing Badge — honest grid-aligned anchor. Replaces the old
-              ₹5,999/year claim, which didn't match any course on the page. */}
+          {/* Pricing Badge — honest grid-aligned anchor. Geo-aware: shows
+              INR + EMI to Indian visitors; local currency primary (USD /
+              GBP / EUR / etc.) to international visitors. */}
           <div
             className="inline-flex items-center bg-amber-500/20 backdrop-blur-sm border border-amber-300/30 px-4 py-2 rounded-full mb-4 animate-fade-in-up"
             style={{ animationDelay: '0.25s' }}
           >
-            <span className="text-amber-200 font-semibold text-xs xs:text-sm md:text-base">
-              Courses from ₹48,000/year · EMI from ₹4,000/mo
-            </span>
+            <HeroPricingBadge />
           </div>
 
           {/* PRIMARY CTAs - Book Demo + Call Now */}
