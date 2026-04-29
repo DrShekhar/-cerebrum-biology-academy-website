@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     description: `Intensive 1-year NEET preparation for droppers and repeaters in ${cityName}. Live online classes from AIIMS-trained Biology-specialist faculty.`,
     url,
     type: 'website',
-  },
+    locale: 'en_IN',
+    },
   alternates: {
     canonical: url,
+    languages: {
+      en: url,
+      'en-IN': url,
+      'x-default': url,
+    },
   },
 }
 
@@ -61,6 +67,8 @@ const faqs = [
     "answer": "Dropper batch is intensive: 6 hours/day, 6 days/week. Live classes typically 9 AM – 12 PM and a doubt-clearing/revision slot 4 PM – 7 PM (recordings available if you miss). Weekly tests on Sundays. We design it to be the only thing on your plate — drop year is one shot."
   }
 ]
+
+const cityContext = "Mumbai droppers face a specific cocktail of pressures: a long commute culture, intense parental and peer expectations, and a coaching market dominated by all-subjects giants like Aakash Andheri, Allen Bandra-Kurla, and Resonance Vile Parle. Most of those institutes are excellent for physics and chemistry — but biology is where droppers actually lose marks (typically 30–40 marks per attempt), and biology is where Cerebrum's specialisation matters.\n\nWe see a recurring profile: a student who scored 480–540 on the first attempt, with biology dragging the total down because the chapter coverage was too quick and the question practice was too generic. A focused 1-year biology programme — 2 hours a day of live classes calibrated to the IST evening — typically lifts that biology score by 30–50 marks in itself. Combine that with disciplined physics-chemistry self-study and most students cross the 600 mark.\n\nOur Mumbai cohort skews toward Andheri, Bandra, Powai, Thane, Navi Mumbai, and Vashi students who prefer online over the daily 2-hour commute to coaching. Printed study material ships pan-Maharashtra at no extra cost."
 
 export default function NEETDropperBatchMumbaiPage() {
   const courseSchema = {
@@ -183,6 +191,7 @@ export default function NEETDropperBatchMumbaiPage() {
         citySlug={citySlug}
         modeLabel="online"
         nearestCenterName="Delhi NCR"
+        cityContext={cityContext}
         faqs={faqs}
       />
     </>

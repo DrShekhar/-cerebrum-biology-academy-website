@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     description: `Intensive 1-year NEET preparation for droppers and repeaters in ${cityName}. Live online classes from AIIMS-trained Biology-specialist faculty.`,
     url,
     type: 'website',
-  },
+    locale: 'en_IN',
+    },
   alternates: {
     canonical: url,
+    languages: {
+      en: url,
+      'en-IN': url,
+      'x-default': url,
+    },
   },
 }
 
@@ -61,6 +67,8 @@ const faqs = [
     "answer": "Dropper batch is intensive: 6 hours/day, 6 days/week. Live classes typically 9 AM – 12 PM and a doubt-clearing/revision slot 4 PM – 7 PM (recordings available if you miss). Weekly tests on Sundays. We design it to be the only thing on your plate — drop year is one shot."
   }
 ]
+
+const cityContext = "The Bangalore NEET dropper market has grown fast in the last 5 years, reflecting the city's expanding Indian-American return population and a strong tech-family preference for subject-specialist coaching over generalist big-batch institutes. Local dropper options range from Sri Chaitanya, Narayana, Aakash Jayanagar, and Allen Bangalore down to dozens of smaller neighbourhood coaching centres.\n\nThe recurring dropper profile we see in Bangalore: a student from Koramangala, Indiranagar, Whitefield, Electronic City, HSR Layout, or Jayanagar who scored 500–560 on attempt one — strong in physics/chemistry from a CBSE/ICSE background but weaker in NCERT-line-by-line biology depth. Bangalore students are also more likely to ask about online over offline (commute time across the city is real), so the live online format works well — recordings cover the case where Bangalore traffic delays your evening.\n\nMany Bangalore droppers also sit additional Karnataka medical-college-specific exams; our biology preparation maps cleanly to those because the Karnataka state medical syllabus follows NCERT."
 
 export default function NEETDropperBatchBangalorePage() {
   const courseSchema = {
@@ -183,6 +191,7 @@ export default function NEETDropperBatchBangalorePage() {
         citySlug={citySlug}
         modeLabel="online"
         nearestCenterName="Delhi NCR"
+        cityContext={cityContext}
         faqs={faqs}
       />
     </>

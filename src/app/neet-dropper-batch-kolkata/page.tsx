@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     description: `Intensive 1-year NEET preparation for droppers and repeaters in ${cityName}. Live online classes from AIIMS-trained Biology-specialist faculty.`,
     url,
     type: 'website',
-  },
+    locale: 'en_IN',
+    },
   alternates: {
     canonical: url,
+    languages: {
+      en: url,
+      'en-IN': url,
+      'x-default': url,
+    },
   },
 }
 
@@ -61,6 +67,8 @@ const faqs = [
     "answer": "Dropper batch is intensive: 6 hours/day, 6 days/week. Live classes typically 9 AM – 12 PM and a doubt-clearing/revision slot 4 PM – 7 PM (recordings available if you miss). Weekly tests on Sundays. We design it to be the only thing on your plate — drop year is one shot."
   }
 ]
+
+const cityContext = "Kolkata's NEET dropper market is smaller in absolute volume than Mumbai or Bangalore but distinguished by historical academic depth — a strong tradition of biology-strong students from Bengali-medium and English-medium schools alike. Local options are led by Aakash Kolkata, FIITJEE, and the neighbourhood tutor network around Park Street, Salt Lake, and New Town.\n\nThe recurring dropper profile we see: a student from South Kolkata, Salt Lake, New Town, Behala, or Howrah who scored 480–540 on attempt one with biology underweighted in their preparation. West Bengal state-board students often have strong fundamentals but need NCERT-line-by-line discipline; CBSE/ICSE Kolkata students often have the discipline but need more depth and question-style adaptation.\n\nWe see strong demand in Kolkata for a 6-day-a-week intensive online format. Printed material ships to all major Kolkata neighbourhoods at no extra cost."
 
 export default function NEETDropperBatchKolkataPage() {
   const courseSchema = {
@@ -183,6 +191,7 @@ export default function NEETDropperBatchKolkataPage() {
         citySlug={citySlug}
         modeLabel="online"
         nearestCenterName="Delhi NCR"
+        cityContext={cityContext}
         faqs={faqs}
       />
     </>

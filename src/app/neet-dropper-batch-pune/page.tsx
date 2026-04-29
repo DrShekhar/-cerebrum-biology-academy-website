@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     description: `Intensive 1-year NEET preparation for droppers and repeaters in ${cityName}. Live online classes from AIIMS-trained Biology-specialist faculty.`,
     url,
     type: 'website',
-  },
+    locale: 'en_IN',
+    },
   alternates: {
     canonical: url,
+    languages: {
+      en: url,
+      'en-IN': url,
+      'x-default': url,
+    },
   },
 }
 
@@ -61,6 +67,8 @@ const faqs = [
     "answer": "Dropper batch is intensive: 6 hours/day, 6 days/week. Live classes typically 9 AM – 12 PM and a doubt-clearing/revision slot 4 PM – 7 PM (recordings available if you miss). Weekly tests on Sundays. We design it to be the only thing on your plate — drop year is one shot."
   }
 ]
+
+const cityContext = "Pune's NEET dropper market sits in the shadow of Mumbai but has its own distinct character: a strong Maharashtra-state-medical-seat ecosystem, dense engineering/pharma/biotech parental influence, and a growing Indian-American return population in Hinjewadi and Kharadi. Local options include Aakash JM Road, Allen Pune, Resonance, and a long tail of neighbourhood institutes.\n\nWe see two recurring dropper profiles in Pune: (1) the Maharashtra state-medical aspirant who needs ~590+ for a Government Medical College seat, dragged down by biology weakness; and (2) the Hinjewadi/Kharadi tech-family student aiming for AIIMS or top central-pool seats, where every biology mark counts. Both benefit from biology specialisation in different ways — the first needs depth at NCERT level done thoroughly; the second needs Campbell-tier depth on the high-yield chapters.\n\nLive online classes calibrated for IST evenings work well for Pune students because weekday traffic between Hinjewadi/Kharadi and central Pune coaching centres can eat 60+ minutes each way."
 
 export default function NEETDropperBatchPunePage() {
   const courseSchema = {
@@ -183,6 +191,7 @@ export default function NEETDropperBatchPunePage() {
         citySlug={citySlug}
         modeLabel="online"
         nearestCenterName="Delhi NCR"
+        cityContext={cityContext}
         faqs={faqs}
       />
     </>

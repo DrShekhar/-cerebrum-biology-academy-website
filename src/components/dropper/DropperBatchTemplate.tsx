@@ -56,6 +56,9 @@ export interface DropperBatchTemplateProps {
   modeLabel?: string
   // Optional override of success stories
   successStories?: SuccessStory[]
+  // Per-city differentiation paragraph — covers local NEET ecosystem,
+  // coaching competition, student profile. Reduces template-clone signals.
+  cityContext?: string
   faqs: FAQ[]
 }
 
@@ -86,8 +89,9 @@ const defaultProgramHighlights = [
     icon: RefreshCw,
   },
   {
-    title: 'Score Improvement',
-    description: 'Average improvement of 100-150 marks in second attempt',
+    title: 'Score Improvement Track Record',
+    description:
+      'Many of our droppers improve by 100+ marks vs their first attempt — outcomes vary by starting score, discipline, and target.',
     icon: TrendingUp,
   },
 ]
@@ -125,6 +129,7 @@ export default function DropperBatchTemplate({
   nearestCenterName,
   modeLabel = 'online',
   successStories = defaultSuccessStories,
+  cityContext,
   faqs,
 }: DropperBatchTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -186,15 +191,15 @@ export default function DropperBatchTemplate({
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Your second attempt is your best attempt. Join our specialised dropper programme for
-              {' '}{cityName} students — designed to help you improve by 100–150 marks. Previous-attempt
-              analysis + personalised strategy, delivered {modeLabel}
+              {' '}{cityName} students — designed to help motivated droppers reliably add 100+ marks
+              over their first attempt. Previous-attempt analysis + personalised strategy, delivered {modeLabel}
               {nearestCenterName ? ` (with optional offline access at our ${nearestCenterName} centre)` : ''}.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <TrendingUp className="w-5 h-5 text-green-400" />
-                <span>+100–150 Marks</span>
+                <span>Target: +100 Marks</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Users className="w-5 h-5 text-yellow-400" />
@@ -228,6 +233,20 @@ export default function DropperBatchTemplate({
           </div>
         </div>
       </section>
+
+      {/* City-specific context (additive — only renders if prop provided) */}
+      {cityContext && (
+        <section className="py-12 md:py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+              Dropper coaching for {cityName} — what to know
+            </h2>
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed whitespace-pre-line">
+              {cityContext}
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* Why Dropper Batch */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 to-orange-50">
@@ -305,8 +324,11 @@ export default function DropperBatchTemplate({
       <section className="py-16 bg-gradient-to-br from-green-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl font-bold mb-4">Dropper Success Stories</h2>
-            <p className="text-green-100">Real improvements from our previous dropper batches</p>
+            <h2 className="text-3xl font-bold mb-4">Dropper Improvement Examples</h2>
+            <p className="text-green-100">
+              Illustrative score-improvement profiles from past dropper cohorts. Names anonymised /
+              shortened for privacy.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -490,7 +512,7 @@ export default function DropperBatchTemplate({
             Your Second Attempt is Your Best Attempt
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join NEET Dropper Batch 2026-27 from {cityName} and improve by 100–150 marks
+            Join NEET Dropper Batch 2026-27 from {cityName} — most students who follow the programme add 100+ marks
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={counsellingHref} target="_blank" rel="noopener noreferrer">

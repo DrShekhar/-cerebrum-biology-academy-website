@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     description: `Intensive 1-year NEET preparation for droppers and repeaters in ${cityName}. Live online classes from AIIMS-trained Biology-specialist faculty.`,
     url,
     type: 'website',
-  },
+    locale: 'en_IN',
+    },
   alternates: {
     canonical: url,
+    languages: {
+      en: url,
+      'en-IN': url,
+      'x-default': url,
+    },
   },
 }
 
@@ -61,6 +67,8 @@ const faqs = [
     "answer": "Dropper batch is intensive: 6 hours/day, 6 days/week. Live classes typically 9 AM – 12 PM and a doubt-clearing/revision slot 4 PM – 7 PM (recordings available if you miss). Weekly tests on Sundays. We design it to be the only thing on your plate — drop year is one shot."
   }
 ]
+
+const cityContext = "Hyderabad and Secunderabad together produce one of the densest NEET dropper markets in India — driven heavily by the strong tradition of Telangana and Andhra Pradesh students aiming for Telangana, AP, and central India medical seats. The local coaching market is dominated by Sri Chaitanya, Narayana, FIITJEE, and Aakash Hyderabad, all running large multi-subject batches.\n\nThe recurring dropper profile we see: a student from Banjara Hills, Jubilee Hills, Madhapur, Hitec City, Kukatpally, or Secunderabad with a strong physics/chemistry foundation but inconsistent biology depth — particularly on plant physiology and human anatomy where Sri Chaitanya / Narayana cohorts often skim. A focused 1-year biology specialist programme adds the depth that closes the 30–50 mark biology gap most droppers carry into attempt two.\n\nTelugu-medium students from rural Telangana / AP frequently transition to English-medium NEET preparation in Hyderabad; our Hindi/English bilingual study material support is available on request."
 
 export default function NEETDropperBatchHyderabadPage() {
   const courseSchema = {
@@ -183,6 +191,7 @@ export default function NEETDropperBatchHyderabadPage() {
         citySlug={citySlug}
         modeLabel="online"
         nearestCenterName="Delhi NCR"
+        cityContext={cityContext}
         faqs={faqs}
       />
     </>

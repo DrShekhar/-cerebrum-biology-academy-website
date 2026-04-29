@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     description: `Intensive 1-year NEET preparation for droppers and repeaters in ${cityName}. Live online classes from AIIMS-trained Biology-specialist faculty.`,
     url,
     type: 'website',
-  },
+    locale: 'en_IN',
+    },
   alternates: {
     canonical: url,
+    languages: {
+      en: url,
+      'en-IN': url,
+      'x-default': url,
+    },
   },
 }
 
@@ -61,6 +67,8 @@ const faqs = [
     "answer": "Dropper batch is intensive: 6 hours/day, 6 days/week. Live classes typically 9 AM – 12 PM and a doubt-clearing/revision slot 4 PM – 7 PM (recordings available if you miss). Weekly tests on Sundays. We design it to be the only thing on your plate — drop year is one shot."
   }
 ]
+
+const cityContext = "Chennai's NEET dropper market is shaped by the strong Tamil Nadu state medical seat ecosystem (the TN state cutoff regularly demands 600+) and a deeply biology-strong student base — Tamil Nadu state-board syllabus has historically over-prepared biology relative to physics and chemistry. The local coaching market is led by Aakash T Nagar, Sri Chaitanya Chennai, FIITJEE, and a strong network of neighbourhood specialist tutors.\n\nThe recurring dropper profile we see in Chennai: a student from T. Nagar, Adyar, Velachery, Anna Nagar, OMR, or further south who has a fundamentally strong biology base from state-board prep but whose biology score on attempt one was hurt by NEET-specific question style — the 720-mark NEET paper rewards rapid-recall NCERT detail differently from how Tamil Nadu state board tests it. We focus on bridging that style gap: same biology depth, but NEET-shaped question discipline.\n\nMany Chennai droppers are also strong in Tamil-medium content; we provide Hindi/English bilingual material on request."
 
 export default function NEETDropperBatchChennaiPage() {
   const courseSchema = {
@@ -183,6 +191,7 @@ export default function NEETDropperBatchChennaiPage() {
         citySlug={citySlug}
         modeLabel="online"
         nearestCenterName="Delhi NCR"
+        cityContext={cityContext}
         faqs={faqs}
       />
     </>

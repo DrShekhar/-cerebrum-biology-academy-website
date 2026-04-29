@@ -61,6 +61,10 @@ interface PaperEntry {
 // downloads. Until then we mark them as "request-only" — students can ask via
 // WhatsApp and we share the relevant year directly. This avoids broken-link
 // SEO penalties and keeps the page truthful.
+//
+// Year-specific notes ("2024: Open emphasised molecular signaling…") are based
+// on Cerebrum faculty review of the official CEE papers — they are
+// summary characterisations and not authoritative answer keys.
 const papers: PaperEntry[] = [
   {
     year: '2024',
@@ -334,6 +338,8 @@ export default function USABOPastPapersPage() {
             <p className="text-slate-600 mb-8">
               Listed newest first. Each year includes both the Open Exam paper and the
               corresponding Semifinal paper, plus our worked solutions and topic tagging.
+              Year-specific notes below are summary characterisations from Cerebrum faculty
+              review — not authoritative answer keys.
             </p>
             <div className="overflow-x-auto rounded-xl border border-slate-200">
               <table className="w-full text-left">

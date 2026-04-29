@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     description: `Intensive 1-year NEET preparation for droppers and repeaters in ${cityName}. Live online classes from AIIMS-trained Biology-specialist faculty.`,
     url,
     type: 'website',
-  },
+    locale: 'en_IN',
+    },
   alternates: {
     canonical: url,
+    languages: {
+      en: url,
+      'en-IN': url,
+      'x-default': url,
+    },
   },
 }
 
@@ -61,6 +67,8 @@ const faqs = [
     "answer": "Dropper batch is intensive: 6 hours/day, 6 days/week. Live classes typically 9 AM – 12 PM and a doubt-clearing/revision slot 4 PM – 7 PM (recordings available if you miss). Weekly tests on Sundays. We design it to be the only thing on your plate — drop year is one shot."
   }
 ]
+
+const cityContext = "Kota is unique. Most students reading this page are already in town, already enrolled in Allen / Aakash / Resonance / Motion / Vibrant for the dropper year, and looking for something to add to their preparation rather than replace it. We don't compete with the Kota physics-chemistry juggernaut — Allen-Kota's PCM teaching is genuinely excellent — but we know from years of working with Kota dropper alumni that biology is consistently the soft spot.\n\nThe recurring profile: a Kota dropper who is on track to score 90+ in physics and chemistry by mid-batch but is sitting at 65–70 in biology and can't see how to push it past 80. The reason is structural — large-batch Kota coaching can't give the per-question discussion time that biology depth requires, and most Kota droppers don't have an extra 4 hours a day for self-study because their physics/chemistry workload is already maximal.\n\nOur Kota integration runs as 6 hours a week of live online biology — early morning before main batches start, or late-evening slots after Allen/Aakash class hours. Specifically designed not to disrupt your existing Kota schedule."
 
 export default function NEETDropperBatchKotaPage() {
   const courseSchema = {
@@ -183,6 +191,7 @@ export default function NEETDropperBatchKotaPage() {
         citySlug={citySlug}
         modeLabel="online"
         nearestCenterName="Delhi NCR"
+        cityContext={cityContext}
         faqs={faqs}
       />
     </>
