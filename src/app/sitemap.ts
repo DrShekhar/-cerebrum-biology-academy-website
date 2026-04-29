@@ -2768,6 +2768,70 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // AP Biology US per-school feeder pages — built from
+    // APBiologySchoolTemplate + src/data/ap-biology/schools.ts.
+    // Priority 0.7 via normalizePriority. Long-tail "AP Biology
+    // tutor near {school}" intent.
+    {
+      url: `${baseUrl}/ap-biology-tutor-tjhsst`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-stuyvesant`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-bronx-science`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-harker`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-phillips-exeter`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-andover`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-mission-san-jose`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-gunn-palo-alto`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-walter-payton`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-hunter-college-hs`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/a-level-biology-tutor`,
       lastModified: lastUpdated,
