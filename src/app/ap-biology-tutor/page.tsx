@@ -243,9 +243,7 @@ export default function APBiologyTutorPage() {
         <div className="absolute inset-0 bg-indigo-100" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/20">
               <Medal className="w-5 h-5 mr-2 text-yellow-300" />
               College Board Curriculum Experts
@@ -267,7 +265,11 @@ export default function APBiologyTutorPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20AP%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20AP%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -314,9 +316,7 @@ export default function APBiologyTutorPage() {
       {/* AP Biology Units (College Board Curriculum) */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete College Board Curriculum Coverage
             </h2>
@@ -358,9 +358,7 @@ export default function APBiologyTutorPage() {
       {/* Exam Format Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               AP Biology Exam Format
             </h2>
@@ -416,9 +414,7 @@ export default function APBiologyTutorPage() {
             ))}
           </div>
 
-          <div
-            className="mt-12 bg-blue-600 text-white rounded-xl p-8 max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="mt-12 bg-blue-600 text-white rounded-xl p-8 max-w-4xl mx-auto animate-fadeInUp">
             <h3 className="text-2xl font-bold mb-4 flex items-center">
               <Lightbulb className="w-8 h-8 mr-3 text-yellow-300" />
               Scoring Strategy
@@ -436,9 +432,7 @@ export default function APBiologyTutorPage() {
       {/* Score Distribution */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               AP Biology Score Distribution
             </h2>
@@ -478,9 +472,7 @@ export default function APBiologyTutorPage() {
             ))}
           </div>
 
-          <div
-            className="mt-12 bg-[#4a5d4a] text-white rounded-xl p-8 max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="mt-12 bg-[#4a5d4a] text-white rounded-xl p-8 max-w-4xl mx-auto animate-fadeInUp">
             <h3 className="text-2xl font-bold mb-4 flex items-center">
               <Trophy className="w-8 h-8 mr-3 text-yellow-300" />
               How We Help You Reach Top Scores
@@ -504,9 +496,7 @@ export default function APBiologyTutorPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               What Makes Our AP Bio Tutoring Special
             </h2>
@@ -532,12 +522,133 @@ export default function APBiologyTutorPage() {
         </div>
       </section>
 
+      {/* Pricing Section — transparent USD pricing so US visitors don't
+          have to WhatsApp before they understand cost. Numbers mirror the
+          canonical grid in /ap-biology-online-tutor (Senior Faculty + Batch
+          tracks) so we stay consistent across the AP cluster. */}
+      <section id="pricing" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fadeInUp">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              AP Biology Tutoring — Transparent Pricing
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Pay-as-you-go hour packages in USD. No long-term lock-in. Score-5 focused curriculum
+              across all tiers.
+            </p>
+          </div>
+
+          {/* 1:1 Senior Faculty — flagship tier most US visitors choose */}
+          <div className="mb-10">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+              1:1 with Senior Faculty
+            </h3>
+            <p className="text-sm text-gray-600 mb-6">
+              PhD-level instructors · $120–$150/hour · College Board–aligned curriculum
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'Starter', hours: 12, price: 1800, perHour: 150 },
+                { name: 'Foundation', hours: 24, price: 3360, perHour: 140, popular: true },
+                { name: 'Comprehensive', hours: 36, price: 4680, perHour: 130 },
+                { name: 'Elite', hours: 48, price: 5760, perHour: 120 },
+              ].map((tier) => (
+                <div
+                  key={tier.name}
+                  className={`relative rounded-xl border bg-white p-6 transition-all hover:shadow-lg ${
+                    tier.popular ? 'border-blue-600 ring-2 ring-blue-600/20' : 'border-gray-200'
+                  }`}
+                >
+                  {tier.popular && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
+                      Most Popular
+                    </span>
+                  )}
+                  <h4 className="text-lg font-bold text-gray-900">{tier.name}</h4>
+                  <p className="mt-1 text-xs text-gray-500">{tier.hours} hours · 1:1</p>
+                  <p className="mt-3 text-3xl font-bold text-gray-900">
+                    ${tier.price.toLocaleString('en-US')}
+                  </p>
+                  <p className="mt-1 text-sm text-green-700 font-medium">${tier.perHour}/hour</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Small-Batch — value tier for budget-conscious families */}
+          <div className="mb-10">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+              Small-Batch (4–6 students)
+            </h3>
+            <p className="text-sm text-gray-600 mb-6">
+              Group rate · $40/hour flat · same curriculum, peer learning
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'Unit Review', hours: 16, price: 640 },
+                { name: 'Semester Prep', hours: 24, price: 960, popular: true },
+                { name: 'Exam Intensive', hours: 32, price: 1280 },
+                { name: 'Full Year', hours: 40, price: 1600 },
+              ].map((tier) => (
+                <div
+                  key={tier.name}
+                  className={`relative rounded-xl border bg-white p-6 transition-all hover:shadow-lg ${
+                    tier.popular ? 'border-blue-600 ring-2 ring-blue-600/20' : 'border-gray-200'
+                  }`}
+                >
+                  {tier.popular && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
+                      Most Popular
+                    </span>
+                  )}
+                  <h4 className="text-lg font-bold text-gray-900">{tier.name}</h4>
+                  <p className="mt-1 text-xs text-gray-500">{tier.hours} hours · group</p>
+                  <p className="mt-3 text-3xl font-bold text-gray-900">
+                    ${tier.price.toLocaleString('en-US')}
+                  </p>
+                  <p className="mt-1 text-sm text-green-700 font-medium">$40/hour</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer line — surfaces Junior-Faculty option + WhatsApp CTA
+              without leaving this page for the price-shopping visitor. */}
+          <div className="rounded-xl bg-blue-50 border border-blue-100 p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="text-sm md:text-base text-gray-700">
+              Looking for a lower-cost option? <strong>1:1 with Junior Faculty</strong> starts at
+              <strong> $60/hour</strong> ($900 for 12 hours).{' '}
+              <Link
+                href="/ap-biology-online-tutor#pricing"
+                className="font-semibold text-blue-700 underline hover:no-underline"
+              >
+                See all packages →
+              </Link>
+            </div>
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={() =>
+                trackAndOpenWhatsApp({
+                  source: 'ap-biology-tutor-pricing',
+                  message:
+                    "Hi! I'm interested in AP Biology tutoring. Please help me pick the right package and share next batch availability.",
+                  campaign: 'ap-bio-pricing',
+                })
+              }
+              className="flex-shrink-0"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask on WhatsApp
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* FAQs Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -566,8 +677,7 @@ export default function APBiologyTutorPage() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Score 5 on Your AP Biology Exam?
             </h2>
@@ -577,7 +687,11 @@ export default function APBiologyTutorPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20AP%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20AP%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -588,7 +702,11 @@ export default function APBiologyTutorPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20AP%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20AP%20Biology.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"
