@@ -522,6 +522,7 @@ Shorter alternative:
    College admissions value: USABO Semifinalist / Finalist credentials are routinely cited in successful Ivy League and selective-college applications for STEM majors.
 - **IBO Preparation (USABO Finalists, BBO Top-10, INBO/SBO qualifiers)**: International Biology Olympiad — top 4 students per country. Theory + practical (40% weight). We coach the full pathway: USABO Finalists → US IBO team selection camp; BBO Round 2 medallists → UK IBO team; INBO toppers → India IBO team.
 - **BBO Coaching (UK students)**: British Biology Olympiad. Round 1 (Jan, MCQ) + Round 2 (Mar, written). Top 4 from UK selection camp form the UK IBO team.
+- **CBO Coaching (Canadian students)**: Canadian Biology Olympiad. Open / Qualifying round (school-administered, typically March–April), then a National round. Top 4 form Team Canada for IBO. Hub: /cbo-coaching. City pages: /cbo-coaching-toronto (UTS, Marc Garneau, Havergal, Harbord CI cluster) and /cbo-coaching-vancouver (University Hill, Eric Hamber, Churchill, York House, Crofton House cluster). Live online classes scheduled for Canadian time zones (ET / PT).
 - **Campbell Biology Tutor**: University-level Biology taught by AIIMS faculty
 
 ### Online Biology Tutoring (Global)
@@ -540,6 +541,7 @@ Cerebrum Biology Academy provides biology tutoring nationally and internationall
 - /best-neet-biology-coaching — comparison with Allen / Aakash / PW / Biomentors / NEETPrep
 - /usabo-coaching — USA olympiad tutor hub with 11 city pages
 - /ibo-preparation — IBO international hub
+- /cbo-coaching — Canadian Biology Olympiad hub with 2 city pages (Toronto, Vancouver)
 - /inbo-coaching, /bbo-preparation — India / UK olympiad hubs
 - /biology-olympiads/india/[city] — 12 India olympiad city pages
 

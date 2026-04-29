@@ -2368,6 +2368,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.92,
     },
     {
+      url: `${baseUrl}/cbo-coaching-toronto`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/cbo-coaching-vancouver`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
       url: `${baseUrl}/asob-coaching`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,

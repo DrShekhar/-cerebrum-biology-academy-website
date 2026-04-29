@@ -106,6 +106,16 @@ const olympiads: OlympiadEntry[] = [
     tier: 'country',
   },
   {
+    id: 'cbo',
+    flag: '🇨🇦',
+    name: 'Canadian Biology Olympiad',
+    shortName: 'CBO',
+    country: 'Canada',
+    href: '/cbo-coaching',
+    note: "Canada's pathway to IBO. Top 4 represent Canada at the international round.",
+    tier: 'country',
+  },
+  {
     id: 'inbo',
     flag: '🇮🇳',
     name: 'Indian National Biology Olympiad',

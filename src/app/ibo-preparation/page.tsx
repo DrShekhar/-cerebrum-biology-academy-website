@@ -217,7 +217,7 @@ const countryOlympiads = [
   { country: 'India', name: 'INBO', link: '/inbo-coaching/' },
   { country: 'China', name: 'CNBO', link: '/biology-olympiad-preparation/' },
   { country: 'Australia', name: 'ASOB', link: '/biology-olympiad-preparation/' },
-  { country: 'Canada', name: 'CBO', link: '/biology-olympiad-preparation/' },
+  { country: 'Canada', name: 'CBO', link: '/cbo-coaching' },
 ]
 
 export default function IBOPreparationPage() {
@@ -263,9 +263,10 @@ export default function IBOPreparationPage() {
                 <Link href="/usabo-coaching" className="underline hover:text-yellow-100">
                   USABO Open + Semifinal
                 </Link>
-                . For UK, India, Singapore students: through{' '}
+                . For UK, India, Canada, Singapore students: through{' '}
                 <Link href="/bbo-preparation" className="underline hover:text-yellow-100">BBO</Link>,{' '}
                 <Link href="/inbo-coaching" className="underline hover:text-yellow-100">INBO</Link>,{' '}
+                <Link href="/cbo-coaching" className="underline hover:text-yellow-100">CBO</Link>,{' '}
                 <Link href="/sbo-coaching" className="underline hover:text-yellow-100">SBO</Link>.
                 We coach the full pathway in your timezone.
               </span>

@@ -8,14 +8,30 @@ export const metadata: Metadata = {
     'cbo coaching',
     'canadian biology olympiad',
     'cbo preparation',
+    'cbo tutor',
+    'cbo tutor near me',
     'biology olympiad canada',
+    'biology olympiad tutor canada',
+    'biology olympiad tutor near me canada',
+    'biology olympiad coaching near me',
     'cbo online classes',
     'canadian biology olympiad preparation',
     'ibo canada',
+    'ibo tutor canada',
     'biology olympiad training canada',
     'cbo exam preparation',
     'campbell biology canada',
+    'best biology olympiad tutor canada',
+    'private cbo tutor',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/cbo-coaching',
+    languages: {
+      en: 'https://cerebrumbiologyacademy.com/cbo-coaching',
+      'en-CA': 'https://cerebrumbiologyacademy.com/cbo-coaching',
+      'x-default': 'https://cerebrumbiologyacademy.com/cbo-coaching',
+    },
+  },
   openGraph: {
     title: 'CBO Coaching Online | Canadian Biology Olympiad Preparation',
     description:
@@ -37,9 +53,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CBO Coaching Online | Canadian Biology Olympiad',
     description: 'Expert coaching for Canadian Biology Olympiad. Join now!',
-  },
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/cbo-coaching',
   },
 }
 
