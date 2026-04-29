@@ -6,7 +6,7 @@ import { z } from 'zod'
 
 // Validation schema for OTP verification
 const verifyOtpSchema = z.object({
-  mobile: z.string().regex(/^[6-9]\d{9}$/, 'Invalid Indian mobile number'),
+  mobile: z.string().regex(/^\+?[1-9]\d{7,14}$/, 'Enter phone with country code (e.g. +1 415 555 0123)'),
   otp: z.string().length(6, 'OTP must be 6 digits'),
   otpId: z.string().uuid('Invalid OTP ID'),
   purpose: z.enum(['registration', 'login', 'password_reset', 'mobile_verification']),
@@ -16,13 +16,13 @@ const verifyOtpSchema = z.object({
   email: z.string().email('Invalid email').optional(),
   whatsapp: z
     .string()
-    .regex(/^[6-9]\d{9}$/, 'Invalid WhatsApp number')
+    .regex(/^\+?[1-9]\d{7,14}$/, 'Invalid WhatsApp number')
     .optional(),
   role: z.enum(['STUDENT', 'PARENT']).optional(),
   currentClass: z.enum(['10th', '11th', '12th', 'Dropper']).optional(),
   parentMobile: z
     .string()
-    .regex(/^[6-9]\d{9}$/, 'Invalid parent mobile')
+    .regex(/^\+?[1-9]\d{7,14}$/, 'Invalid parent mobile')
     .optional(),
   referralCode: z.string().optional(),
 

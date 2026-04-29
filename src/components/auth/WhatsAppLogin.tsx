@@ -45,16 +45,25 @@ export function WhatsAppLogin() {
     }
   }, [resendCountdown])
 
+  /**
+   * Normalise a user-entered phone number to E.164 (`+<country><number>`).
+   *
+   * - If the user typed `+...` we honour it verbatim (their country code wins).
+   * - A bare 10-digit number starting with 6-9 is the legacy Indian-mobile
+   *   pattern → we prepend `+91` for backward compatibility.
+   * - Anything else (US/UK/UAE/Singapore/etc. — typically 11+ digits with a
+   *   country code prefix) is passed through with a `+` prepended. We do NOT
+   *   force `+91` onto international numbers any more — that broke login for
+   *   every non-Indian student.
+   */
   const formatPhoneNumber = (value: string) => {
+    // Preserve a user-entered '+' so we don't accidentally drop their country code.
+    const hasPlus = value.trim().startsWith('+')
     const cleaned = value.replace(/\D/g, '')
 
-    if (cleaned.startsWith('91')) {
-      return `+${cleaned}`
-    } else if (cleaned.startsWith('+91')) {
-      return cleaned
-    } else if (cleaned.length === 10) {
-      return `+91${cleaned}`
-    }
+    if (hasPlus) return `+${cleaned}`
+    if (cleaned.startsWith('91') && cleaned.length === 12) return `+${cleaned}`
+    if (/^[6-9]\d{9}$/.test(cleaned)) return `+91${cleaned}`
     return `+${cleaned}`
   }
 

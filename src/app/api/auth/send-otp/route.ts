@@ -5,15 +5,42 @@ import { z } from 'zod'
 import axios from 'axios'
 import crypto from 'crypto'
 
+// E.164-compatible phone validator: accepts an optional leading '+', then
+// 8–15 digits starting with 1–9. Examples that pass:
+//   "9876543210"        Indian 10-digit (legacy form, treated as +91)
+//   "+919876543210"     Indian E.164
+//   "+12155551234"      US E.164
+//   "+447911123456"     UK E.164
+//   "+971501234567"     UAE E.164
+const phoneRegex = /^\+?[1-9]\d{7,14}$/
+
 // Validation schema for OTP request
 const sendOtpSchema = z.object({
-  mobile: z.string().regex(/^[6-9]\d{9}$/, 'Invalid Indian mobile number'),
+  mobile: z.string().regex(phoneRegex, 'Enter phone with country code (e.g. +1 415 555 0123)'),
   purpose: z.enum(['registration', 'login', 'password_reset', 'mobile_verification']),
-  whatsapp: z
-    .string()
-    .regex(/^[6-9]\d{9}$/, 'Invalid WhatsApp number')
-    .optional(),
+  whatsapp: z.string().regex(phoneRegex, 'Invalid WhatsApp number').optional(),
 })
+
+/**
+ * Normalise a user-entered phone number to international E.164 digits-only
+ * (MSG91 expects e.g. "919876543210" for India, "12155551234" for US — no '+').
+ *
+ * Rules:
+ *  - If the input starts with '+', strip it. Whatever remains is treated as
+ *    already-prefixed with a country code.
+ *  - If the input is exactly 10 digits and starts with 6–9, treat it as the
+ *    legacy Indian-only format and prepend '91'. This preserves backward
+ *    compatibility with every existing Indian user who enters their bare
+ *    10-digit mobile.
+ *  - Otherwise return the digits as-is (assume the user entered a country
+ *    code).
+ */
+function toE164Digits(raw: string): string {
+  const cleaned = raw.replace(/[^\d+]/g, '')
+  if (cleaned.startsWith('+')) return cleaned.slice(1)
+  if (/^[6-9]\d{9}$/.test(cleaned)) return `91${cleaned}`
+  return cleaned
+}
 
 // Generate cryptographically secure 6-digit OTP
 function generateOTP(): string {
@@ -108,7 +135,7 @@ async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
       url,
       {
         template_id: templateId,
-        mobile: `91${mobile}`,
+        mobile: toE164Digits(mobile),
         authkey: authKey,
         otp: otp,
         otp_expiry: 10,
@@ -159,7 +186,7 @@ async function sendWhatsAppOTP(whatsapp: string, otp: string, name?: string): Pr
         payload: {
           messaging_product: 'whatsapp',
           recipient_type: 'individual',
-          to: `91${whatsapp}`,
+          to: toE164Digits(whatsapp),
           type: 'template',
           template: {
             name: whatsappTemplateId,
@@ -254,11 +281,23 @@ export async function POST(request: NextRequest) {
     const expiresAt = Date.now() + 10 * 60 * 1000 // 10 minutes
     const otpId = crypto.randomUUID()
 
-    // Check if user exists for login purpose (check both phone formats)
+    // Check if user exists for login purpose. Accepts every form the user
+    // might have stored historically (bare 10-digit, +91-prefixed, full E.164,
+    // etc.) so legacy Indian users keep matching while international E.164
+    // numbers also resolve.
     if (purpose === 'login') {
+      const e164 = toE164Digits(mobile)
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: mobile }, { phone: `+91${mobile}` }],
+          OR: [
+            { phone: mobile },
+            { phone: `+${e164}` },
+            { phone: e164 },
+            // Legacy Indian-only formats kept for backward compatibility
+            ...(/^[6-9]\d{9}$/.test(mobile)
+              ? [{ phone: `+91${mobile}` }, { phone: `91${mobile}` }]
+              : []),
+          ],
         },
       })
 

@@ -88,30 +88,25 @@ export function initRecaptcha(buttonId: string): RecaptchaVerifier | null {
 }
 
 /**
- * Format phone number to E.164 format for Firebase
- * Handles Indian numbers specifically
+ * Format phone number to E.164 format for Firebase.
+ *
+ * Rules — country-aware so we don't force +91 onto international students:
+ *  1. If the user typed a leading '+', honour their country code verbatim.
+ *  2. If the digits are 91-prefixed and 12 long → +91 Indian (already formatted).
+ *  3. If the digits are exactly 10 long AND start with 6-9 (the Indian mobile
+ *     pattern) → prepend +91 (legacy Indian-only behaviour preserved).
+ *  4. Otherwise — typically an international number entered without the leading
+ *     '+' — return `+<digits>` and let Firebase / the API validate. We do NOT
+ *     blindly stamp +91 on numbers that look international.
  */
 export function formatPhoneNumber(phone: string): string {
-  // Remove all non-digit characters
-  const digits = phone.replace(/\D/g, '')
+  const trimmed = phone.trim()
+  const digits = trimmed.replace(/\D/g, '')
 
-  // If starts with 91 and has 12 digits, it's already formatted
-  if (digits.startsWith('91') && digits.length === 12) {
-    return `+${digits}`
-  }
-
-  // If 10 digits, assume Indian number
-  if (digits.length === 10) {
-    return `+91${digits}`
-  }
-
-  // If already has + prefix
-  if (phone.startsWith('+')) {
-    return phone
-  }
-
-  // Default: add +91 prefix
-  return `+91${digits}`
+  if (trimmed.startsWith('+')) return `+${digits}`
+  if (digits.startsWith('91') && digits.length === 12) return `+${digits}`
+  if (/^[6-9]\d{9}$/.test(digits)) return `+91${digits}`
+  return `+${digits}`
 }
 
 /**
