@@ -70,6 +70,30 @@ export function NearMeKeywordInjector({
           text: `Cerebrum Biology Academy is rated #1 for NEET biology coaching in ${parentLocation} with 5.0/5 Google rating. We have centers near ${location}${nearbyAreas.length > 0 ? `, ${nearbyAreas.slice(0, 3).join(', ')}` : ''} and other areas in ${parentLocation}. Call ${centerPhone} to book a free demo.`,
         },
       },
+      {
+        '@type': 'Question',
+        name: `Where can I find a biology tutor near me in ${location}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Cerebrum Biology Academy provides biology tutoring near ${location} — both at our ${centerAddress} centre and via live online classes for students who prefer not to commute. Our tutors are AIIMS-trained biology specialists, not generalist tutors. We cover NEET, Class 11/12 board, and Olympiad preparation. Call ${centerPhone} to book a free demo class.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Who is the best biology tutor in ${location} for NEET?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `For NEET biology specifically in ${location}, the most effective tutoring is delivered by biology-only specialists rather than generalist NEET tutors. Cerebrum Biology Academy is led by Dr. Shekhar (AIIMS) and runs small-batch (10–20 students) live classes covering Campbell-level depth. We coach students from across ${parentLocation} including ${location} and nearby areas.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Is there a biology olympiad tutor near me in ${location}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Yes — Cerebrum coaches NSEB / INBO / IBO biology olympiad pathways in ${location} and across ${parentLocation}. Olympiad preparation runs alongside NEET tracking for students who want both. Call ${centerPhone} for the olympiad-track schedule.`,
+        },
+      },
     ],
   }
 
@@ -121,7 +145,7 @@ export function NearMeKeywordInjector({
       <section className="bg-gray-50 py-8 px-4 md:px-6 mt-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-            Best NEET Biology Coaching Near Me in {location}
+            Best NEET Biology Coaching & Biology Tutor Near Me in {location}
           </h2>
           <p className="text-gray-700 text-base leading-relaxed mb-4">
             Looking for the <strong>best NEET coaching near me in {location}</strong>? Cerebrum Biology
@@ -138,6 +162,15 @@ export function NearMeKeywordInjector({
             preparation near {location}. Whether you are searching for{' '}
             <em>NEET coaching near me</em>, <em>biology classes near {location}</em>, or{' '}
             <em>best NEET institute in {parentLocation}</em> — Cerebrum Academy is your answer.
+          </p>
+          <p className="text-gray-700 text-base leading-relaxed mb-4">
+            We also serve searches for{' '}
+            <em>biology tutor near me in {location}</em>,{' '}
+            <em>best biology tutor in {location}</em>,{' '}
+            <em>private biology tutor for NEET in {parentLocation}</em>, and{' '}
+            <em>biology olympiad tutor near me {location}</em>. Whether you need 1-on-1 tutoring,
+            a small batch, or olympiad-track depth, our biology-only specialisation matches the
+            intent more directly than generalist NEET coaching.
           </p>
 
           {/* Nearby areas for internal linking */}

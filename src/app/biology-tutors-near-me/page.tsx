@@ -94,6 +94,21 @@ const faqs = [
     answer:
       'Our online program is comprehensive with live classes, recorded lectures, and 24/7 doubt support. Many students have achieved excellent results through online coaching. However, for students aiming for top 500 ranks, we strongly recommend the offline experience for at least 6 months.',
   },
+  {
+    question: 'Do you have a biology olympiad tutor near me?',
+    answer:
+      'Yes — we coach NSEB, INBO, IBO (India), USABO, and BBO biology olympiad pathways. Olympiad coaching runs alongside NEET / Class 11–12 board prep for students who want both tracks. India students see /inbo-coaching and the city-specific /biology-olympiads/india/[city] pages; US students see /usabo-coaching with regional pages for Bay Area, Northern Virginia / DC, NYC, Boston, Houston, LA, NJ, Chicago, Seattle, Dallas + Austin, and Atlanta. UK students see /bbo-preparation.',
+  },
+  {
+    question: 'Is your biology tutor near me service available for international students?',
+    answer:
+      'Yes — we run live online biology tutoring in your local time zone. Indian students study in IST evenings; US students get ET / CT / PT slots; UK students get GMT slots. We have city-specific landing pages for the highest-density olympiad markets (TJHSST / Bay Area / NYC / etc.) but coach students from any school worldwide.',
+  },
+  {
+    question: 'Who is the best biology tutor for NEET, IB Biology, or AP Biology?',
+    answer:
+      'There is no single "best" tutor for all curricula — the question is who specialises in your specific syllabus. Cerebrum is biology-only and covers NEET (NCERT-line-by-line + question-style discipline), IB Biology HL/SL (Campbell-aligned), AP Biology (Campbell + College Board rubric), USABO/IBO (Campbell + Alberts + Lehninger), and CBSE/ICSE Class 11–12 boards. The best tutor for you is the one whose specialism matches your exam — see /best-neet-biology-coaching for NEET comparison, /ib-biology-tutor for IB, and /ap-biology-online-tutor for AP.',
+  },
 ]
 
 export default function BiologyTutorsNearMePage() {
