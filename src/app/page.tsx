@@ -13,6 +13,7 @@ import { SpeakableSchema } from '@/components/seo/SpeakableSchema'
 import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 import { ContentFreshness } from '@/components/seo/ContentFreshness'
 import { GeoAwarePriceChip } from '@/components/home/GeoAwarePriceChip'
+import { GeoSuggestionBanner } from '@/components/home/GeoSuggestionBanner'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
@@ -162,6 +163,11 @@ export default function Home() {
         cssSelectors={['[data-speakable="title"]', '[data-speakable="summary"]', '.faq-answer']}
         url="https://cerebrumbiologyacademy.com"
       />
+
+      {/* Geo suggestion banner — non-IN visitors get a dismissable nudge to
+          our International hub. JS-only render so SEO is unaffected (Google
+          crawls and indexes the IN-default page as canonical). */}
+      <GeoSuggestionBanner />
 
       {/* 1. Hero Section - Server rendered for instant LCP */}
       {/* LCP Critical: No content-visibility, inline styles for immediate paint */}
