@@ -310,19 +310,13 @@ export default function NEETDropperPage() {
                 ))}
               </div>
 
-              {/* Trust Badges */}
+              {/* Trust Badge — only the differentiator that isn't already stated above
+                  in stats / description (AIIMS faculty + 89% rank improvement are
+                  already shown in the stats row, so we drop those badges). */}
               <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
                 <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-sm">
                   <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-green-400" />
-                  30-Day Money Back
-                </div>
-                <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-sm">
-                  <GraduationCap className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-yellow-400" />
-                  AIIMS Faculty
-                </div>
-                <div className="flex items-center bg-white/10 backdrop-blur-sm px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-sm">
-                  <Award className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-orange-400" />
-                  89% Rank Improvement
+                  30-day money-back guarantee
                 </div>
               </div>
 
@@ -364,31 +358,18 @@ export default function NEETDropperPage() {
 
               {/* Lead Collection Form */}
               <div className="bg-white rounded-b-2xl sm:rounded-b-3xl p-4 sm:p-6 md:p-8 shadow-2xl">
-                <div className="text-center mb-4 sm:mb-6">
-                  <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-green-100 text-green-700 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
-                    <Gift className="w-3 h-3 sm:w-4 sm:h-4" />
-                    FREE Dropper Success Kit Worth ₹4,999
-                  </div>
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">
-                    Get Your Personalized Study Plan
+                <div className="text-center mb-4 sm:mb-5">
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
+                    Get your personalised study plan
                   </h2>
-                  <p className="text-gray-600 text-xs sm:text-sm">
-                    Register for free counseling + previous year analysis
+                  <p className="mt-1.5 text-xs sm:text-sm text-gray-600">
+                    Free counselling call + previous-year-attempt analysis. Live online +
+                    offline at Rohini, Gurugram, South Delhi, Faridabad.
                   </p>
-                </div>
-
-                {/* Next-batch callout */}
-                <div className="bg-[#e8ede8] rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 text-center">
-                  <div className="flex items-center justify-center gap-2 text-[#3d4d3d]">
-                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span className="text-xs sm:text-sm font-medium">
-                      Next batch starts <strong>{batchStartLabel}</strong> ({batchStartDay})
-                    </span>
+                  <div className="inline-flex items-center gap-1.5 mt-3 bg-green-50 text-green-700 px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold">
+                    <Gift className="w-3.5 h-3.5" />
+                    Free Dropper Success Kit (₹4,999) included
                   </div>
-                  <p className="mt-1 text-[10px] sm:text-xs text-gray-600">
-                    Online + offline (Rohini · Gurugram · South Delhi · Faridabad). Live classes —
-                    not pre-recorded.
-                  </p>
                 </div>
 
                 <div className="space-y-3 sm:space-y-4">
