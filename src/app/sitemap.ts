@@ -2706,6 +2706,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.94,
     },
+    // AP Biology US metro pages — built from APBiologyCityTemplate +
+    // src/data/ap-biology/metros.ts. Priority 0.8 via normalizePriority.
+    {
+      url: `${baseUrl}/ap-biology-tutor-new-york`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/a-level-biology-tutor`,
       lastModified: lastUpdated,
