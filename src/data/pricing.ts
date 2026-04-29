@@ -9,16 +9,9 @@ export type ClassLevel =
   | 'dropper'
   | '2-year'
 
-export type TierLevel = 'pinnacle' | 'ascent' | 'pursuit' | 'elixir'
+export type TierLevel = 'pinnacle' | 'ascent' | 'pursuit'
 
-export type CourseType =
-  | 'academic'
-  | 'neet'
-  | 'board-only'
-  | 'board-neet'
-  | 'flagship'
-  | 'elixir-neet'
-  | 'elixir-board'
+export type CourseType = 'academic' | 'neet' | 'board-only' | 'board-neet' | 'flagship'
 
 export interface PricingTier {
   tier: TierLevel
@@ -34,7 +27,6 @@ export interface PricingTier {
     pinnacle: string[]
     ascent: string[]
     pursuit: string[]
-    elixir: string[]
   }[TierLevel]
 }
 
@@ -62,7 +54,6 @@ const commonFeaturesByTier = {
     analytics: 'Detailed performance analytics',
     recordings: 'Lifetime access to recorded lectures',
     parentMeet: 'Monthly parent-teacher meetings',
-    guarantee: 'Money-back guarantee',
     priority: 'Priority support & assistance',
   },
   ascent: {
@@ -86,15 +77,6 @@ const commonFeaturesByTier = {
     recordings: 'Access to recorded lectures',
     support: 'Standard support',
   },
-  elixir: {
-    batch: '400+ students mega batch',
-    hours: '3 hours/week',
-    aiims: 'AIIMS faculty teaching',
-    materials: 'NCERT-based syllabus',
-    tests: 'Mock test series included',
-    mcq: 'Free MCQ practice tool access',
-    monthly: 'Monthly payment option (₹3,000/mo)',
-  },
 }
 
 //=============================================================================
@@ -116,7 +98,6 @@ const foundationPinnacleFeatures = [
   commonFeaturesByTier.pinnacle.recordings,
   commonFeaturesByTier.pinnacle.parentMeet,
   'Conceptual clarity focus',
-  commonFeaturesByTier.pinnacle.guarantee,
 ]
 
 const foundationAscentFeatures = [
@@ -342,7 +323,6 @@ const class11PinnacleFeatures = [
   'Weekly strategy sessions',
   commonFeaturesByTier.pinnacle.recordings,
   commonFeaturesByTier.pinnacle.parentMeet,
-  commonFeaturesByTier.pinnacle.guarantee,
 ]
 
 const class11AscentFeatures = [
@@ -372,36 +352,12 @@ const class11PursuitFeatures = [
   'Affordable NEET coaching',
 ]
 
-const elixirNeetFeatures = [
-  commonFeaturesByTier.elixir.batch,
-  commonFeaturesByTier.elixir.hours,
-  commonFeaturesByTier.elixir.aiims,
-  'NCERT-based NEET preparation',
-  commonFeaturesByTier.elixir.materials,
-  commonFeaturesByTier.elixir.tests,
-  commonFeaturesByTier.elixir.mcq,
-  'Access to recorded lectures',
-  commonFeaturesByTier.elixir.monthly,
-]
-
-const elixirBoardFeatures = [
-  commonFeaturesByTier.elixir.batch,
-  commonFeaturesByTier.elixir.hours,
-  commonFeaturesByTier.elixir.aiims,
-  'NCERT-based Board Biology preparation',
-  commonFeaturesByTier.elixir.materials,
-  commonFeaturesByTier.elixir.tests,
-  commonFeaturesByTier.elixir.mcq,
-  'Access to recorded lectures',
-  commonFeaturesByTier.elixir.monthly,
-]
-
 const class11: ClassPricing = {
   class: 'class-11',
   displayName: 'Class XI',
   duration: '1 Year',
   description: 'Foundation for NEET & Board exams',
-  availableCourseTypes: ['academic', 'neet', 'board-neet', 'elixir-neet', 'elixir-board'],
+  availableCourseTypes: ['academic', 'neet', 'board-neet'],
   tiers: {
     academic: [
       {
@@ -472,24 +428,6 @@ const class11: ClassPricing = {
         features: class11PursuitFeatures,
       },
     ],
-    'elixir-neet': [
-      {
-        tier: 'elixir',
-        batchSize: '400+',
-        hours: '3 hrs/week',
-        prices: { lumpSum: 5999, twoInstallments: 5999, threeInstallments: 5999, monthly: 3000 },
-        features: elixirNeetFeatures,
-      },
-    ],
-    'elixir-board': [
-      {
-        tier: 'elixir',
-        batchSize: '400+',
-        hours: '3 hrs/week',
-        prices: { lumpSum: 5999, twoInstallments: 5999, threeInstallments: 5999, monthly: 3000 },
-        features: elixirBoardFeatures,
-      },
-    ],
   },
 }
 
@@ -514,7 +452,6 @@ const class12PinnacleFeatures = [
   commonFeaturesByTier.pinnacle.analytics,
   commonFeaturesByTier.pinnacle.recordings,
   'NEET counseling assistance',
-  commonFeaturesByTier.pinnacle.guarantee,
 ]
 
 const class12AscentFeatures = [
@@ -550,7 +487,7 @@ const class12: ClassPricing = {
   displayName: 'Class XII',
   duration: '1 Year',
   description: 'Final year NEET preparation',
-  availableCourseTypes: ['board-only', 'neet', 'board-neet', 'flagship', 'elixir-neet', 'elixir-board'],
+  availableCourseTypes: ['board-only', 'neet', 'board-neet', 'flagship'],
   tiers: {
     'board-only': [
       {
@@ -660,24 +597,6 @@ const class12: ClassPricing = {
         ],
       },
     ],
-    'elixir-neet': [
-      {
-        tier: 'elixir',
-        batchSize: '400+',
-        hours: '3 hrs/week',
-        prices: { lumpSum: 5999, twoInstallments: 5999, threeInstallments: 5999, monthly: 3000 },
-        features: elixirNeetFeatures,
-      },
-    ],
-    'elixir-board': [
-      {
-        tier: 'elixir',
-        batchSize: '400+',
-        hours: '3 hrs/week',
-        prices: { lumpSum: 5999, twoInstallments: 5999, threeInstallments: 5999, monthly: 3000 },
-        features: elixirBoardFeatures,
-      },
-    ],
   },
 }
 
@@ -686,7 +605,7 @@ const dropper: ClassPricing = {
   displayName: 'Dropper/Repeater Batch',
   duration: '1 Year',
   description: 'Intensive preparation for NEET retakers',
-  availableCourseTypes: ['neet', 'elixir-neet'],
+  availableCourseTypes: ['neet'],
   tiers: {
     neet: [
       {
@@ -718,15 +637,6 @@ const dropper: ClassPricing = {
         features: class12PursuitFeatures,
       },
     ],
-    'elixir-neet': [
-      {
-        tier: 'elixir',
-        batchSize: '400+',
-        hours: '3 hrs/week',
-        prices: { lumpSum: 7999, twoInstallments: 7999, threeInstallments: 7999, monthly: 3000 },
-        features: elixirNeetFeatures,
-      },
-    ],
   },
 }
 
@@ -751,7 +661,6 @@ const twoYearPinnacleFeatures = [
   commonFeaturesByTier.pinnacle.recordings,
   commonFeaturesByTier.pinnacle.parentMeet,
   'NEET counseling assistance',
-  commonFeaturesByTier.pinnacle.guarantee,
   'Comprehensive 2-year support',
 ]
 
@@ -1005,12 +914,6 @@ export function getTierDetails(tier: TierLevel) {
       subtitle: 'Budget-Friendly Quality',
       popular: false,
       color: 'green',
-    },
-    elixir: {
-      name: 'Elixir',
-      subtitle: 'Affordable NCERT-Based Coaching',
-      popular: false,
-      color: 'amber',
     },
   }[tier]
 }

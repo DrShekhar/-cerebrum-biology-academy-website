@@ -9,15 +9,12 @@ function generateOfferSchema() {
     pinnacle: 'Pinnacle (Premium)',
     ascent: 'Ascent (Most Popular)',
     pursuit: 'Pursuit (Budget-Friendly)',
-    elixir: 'Elixir (Affordable NCERT-Based)',
   }
 
   const courseTypeNames: Record<string, string> = {
     academic: 'Academic Biology',
     neet: 'NEET Biology',
     'board-neet': 'Board + NEET Biology',
-    'elixir-neet': 'Elixir NEET',
-    'elixir-board': 'Elixir Board',
   }
 
   const offers = allClassPricing.flatMap((classPricing) =>

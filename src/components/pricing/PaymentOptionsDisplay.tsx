@@ -25,8 +25,6 @@ export function PaymentOptionsDisplay({
         return 'bg-blue-700'
       case 'pursuit':
         return 'bg-green-700'
-      case 'elixir':
-        return 'bg-amber-600'
       default:
         return 'bg-indigo-700'
     }
