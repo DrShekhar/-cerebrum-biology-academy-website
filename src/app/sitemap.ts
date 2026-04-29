@@ -2244,6 +2244,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.93,
     },
+    // ===== USABO content cluster (Apr 2026) =====
+    {
+      url: `${baseUrl}/ap-biology-vs-usabo`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/usabo-6-month-prep-plan`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/usabo-2026-results`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/usabo-past-papers`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
     {
       url: `${baseUrl}/usabo-coaching`,
       lastModified: lastUpdated,
