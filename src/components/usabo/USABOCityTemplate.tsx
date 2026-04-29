@@ -58,6 +58,16 @@ export interface USABOCityTemplateProps {
   rigourBlurb: string
   /** FAQs (5–8 city-tailored) */
   faqs: USABOFaq[]
+  /**
+   * Slug for the matching /ap-biology-tutor-{slug} page (e.g. "new-york",
+   * "northern-virginia-dc"). When set, the related-guides grid surfaces
+   * a city-specific AP Biology card so AP-track visitors can pivot to
+   * the AP-5 funnel without leaving the USABO cluster. Reciprocal cross-
+   * cluster linking — strengthens both pages' authority signal.
+   */
+  apBiologyCitySlug?: string
+  /** Display label for the AP Biology card; defaults to cityName */
+  apBiologyCityLabel?: string
 }
 
 const usaboPathway = [
@@ -131,6 +141,8 @@ export default function USABOCityTemplate({
   heroBlurb,
   rigourBlurb,
   faqs,
+  apBiologyCitySlug,
+  apBiologyCityLabel,
 }: USABOCityTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
@@ -276,10 +288,7 @@ export default function USABOCityTemplate({
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f) => (
-              <div
-                key={f.title}
-                className="bg-slate-50 rounded-xl p-6 border border-slate-200"
-              >
+              <div key={f.title} className="bg-slate-50 rounded-xl p-6 border border-slate-200">
                 <f.icon className="w-8 h-8 text-teal-600 mb-3" />
                 <h3 className="font-semibold text-slate-900 mb-2">{f.title}</h3>
                 <p className="text-sm text-slate-600">{f.description}</p>
@@ -296,15 +305,12 @@ export default function USABOCityTemplate({
             The USABO → IBO pathway, explained
           </h2>
           <p className="text-slate-600 mb-8 max-w-3xl">
-            We coach all four stages — and we coach them with continuity. The same faculty who
-            run Open prep run Semifinal and Finals camp prep.
+            We coach all four stages — and we coach them with continuity. The same faculty who run
+            Open prep run Semifinal and Finals camp prep.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {usaboPathway.map((p, i) => (
-              <div
-                key={p.stage}
-                className="bg-white rounded-xl p-5 border border-slate-200"
-              >
+              <div key={p.stage} className="bg-white rounded-xl p-5 border border-slate-200">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="w-7 h-7 rounded-full bg-yellow-500 text-slate-900 text-sm font-bold flex items-center justify-center">
                     {i + 1}
@@ -356,8 +362,8 @@ export default function USABOCityTemplate({
             Start preparing for USABO 2026 from {cityName}
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book a free 30-minute counselling call. We&apos;ll review your school, current
-            biology level, and target stage (Open / Semifinal / Finalist).
+            Book a free 30-minute counselling call. We&apos;ll review your school, current biology
+            level, and target stage (Open / Semifinal / Finalist).
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -380,11 +386,17 @@ export default function USABOCityTemplate({
         </div>
       </section>
 
-      {/* Related */}
+      {/* Related — when apBiologyCitySlug is set we surface a 5th card
+          for the matching AP Biology metro page. Reciprocal cross-cluster
+          linking from USABO city → AP city, completing the link graph. */}
       <section className="py-12 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-xl font-bold text-slate-900 mb-6 text-center">Related guides</h2>
-          <div className="grid md:grid-cols-4 gap-4">
+          <div
+            className={`grid gap-4 md:grid-cols-2 ${
+              apBiologyCitySlug ? 'lg:grid-cols-5' : 'md:grid-cols-4'
+            }`}
+          >
             <Link
               href="/usabo-coaching"
               className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
@@ -399,6 +411,17 @@ export default function USABOCityTemplate({
               <h3 className="font-semibold text-teal-700">AP Biology vs USABO</h3>
               <p className="text-xs text-slate-600 mt-1">Bridge for AP-5 students</p>
             </Link>
+            {apBiologyCitySlug && (
+              <Link
+                href={`/ap-biology-tutor-${apBiologyCitySlug}`}
+                className="bg-blue-50 p-4 rounded-xl border border-blue-200 hover:border-blue-400 hover:shadow-md transition"
+              >
+                <h3 className="font-semibold text-blue-700">
+                  AP Biology in {apBiologyCityLabel || cityName}
+                </h3>
+                <p className="text-xs text-slate-600 mt-1">AP-5 track + USABO bridge</p>
+              </Link>
+            )}
             <Link
               href="/usabo-6-month-prep-plan"
               className="bg-slate-50 p-4 rounded-xl border border-slate-200 hover:border-teal-300 hover:shadow-md transition"
@@ -421,9 +444,8 @@ export default function USABOCityTemplate({
       <section className="py-8 bg-slate-50 border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4 text-center text-xs text-slate-500">
           <CheckCircle2 className="w-4 h-4 text-teal-600 inline mr-1" />
-          Independent coaching provider — not affiliated with CEE or USABO administration. We
-          coach the official syllabus and use publicly published past papers + our worked
-          solutions.
+          Independent coaching provider — not affiliated with CEE or USABO administration. We coach
+          the official syllabus and use publicly published past papers + our worked solutions.
         </div>
       </section>
     </main>
