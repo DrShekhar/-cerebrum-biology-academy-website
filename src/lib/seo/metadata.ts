@@ -5,6 +5,19 @@ export interface PageMetadata {
   ogImage?: string
   canonical?: string
   noindex?: boolean
+  /**
+   * Override the OpenGraph locale for this page (default: seoConfig.locale).
+   * Use 'en_US' for US-targeted pages (AP Biology metro/school pages,
+   * USABO city pages), 'en_GB' for UK-targeted, etc.
+   */
+  ogLocale?: string
+  /**
+   * Hreflang alternates for international targeting. Map of language tag
+   * (e.g., 'en-US', 'en-GB', 'x-default') to canonical URL. The page's
+   * canonical is automatically included as 'en' if not overridden.
+   * Only set on pages explicitly targeting non-IN audiences.
+   */
+  hreflangAlternates?: Record<string, string>
 }
 
 export const seoConfig = {
@@ -179,7 +192,8 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/book-free-demo',
   },
   results: {
-    title: 'NEET Results 2026 | 98% Success Rate, 67+ AIIMS Selections | Cerebrum Academy Delhi NCR',
+    title:
+      'NEET Results 2026 | 98% Success Rate, 67+ AIIMS Selections | Cerebrum Academy Delhi NCR',
     description:
       'Cerebrum Academy NEET results: 98% qualification rate, 67+ AIIMS selections, AIIMS & JIPMER toppers from Delhi NCR. Book a free demo today!',
     keywords: [
@@ -248,7 +262,8 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/mock-tests',
   },
   testimonials: {
-    title: 'NEET Results 2026 | 98% Success Rate, 67+ AIIMS Selections | Cerebrum Academy Delhi NCR',
+    title:
+      'NEET Results 2026 | 98% Success Rate, 67+ AIIMS Selections | Cerebrum Academy Delhi NCR',
     description:
       'Read real NEET success stories at Cerebrum Academy — 67+ AIIMS selections, 98% success rate, 15,000+ students trained. Watch video testimonials today!',
     keywords: [
@@ -1135,7 +1150,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   neetCoachingHub: {
     title: 'NEET Coaching 2026 | 98% Success Rate | AIIMS Faculty | Cerebrum',
     description:
-      'India\'s top NEET coaching by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers in Delhi NCR + Online. Call 88264-44334.',
+      "India's top NEET coaching by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers in Delhi NCR + Online. Call 88264-44334.",
     keywords: [
       'neet coaching',
       'best neet coaching',
@@ -1173,6 +1188,11 @@ export function generateMetadata(pageKey: string): PageMetadata {
 
 export function generatePageMetadata(pageKey: string) {
   const meta = generateMetadata(pageKey)
+  const canonicalUrl = `${seoConfig.siteUrl}${meta.canonical}`
+
+  // Per-page locale override for US/UK/other-targeted pages. Falls back
+  // to the site-wide en_IN if the page metadata didn't set ogLocale.
+  const ogLocale = meta.ogLocale || seoConfig.locale
 
   return {
     title: meta.title,
@@ -1181,7 +1201,7 @@ export function generatePageMetadata(pageKey: string) {
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `${seoConfig.siteUrl}${meta.canonical}`,
+      url: canonicalUrl,
       siteName: seoConfig.siteName,
       images: [
         {
@@ -1191,7 +1211,7 @@ export function generatePageMetadata(pageKey: string) {
           alt: meta.title,
         },
       ],
-      locale: seoConfig.locale,
+      locale: ogLocale,
       type: 'website',
     },
     twitter: {
@@ -1213,7 +1233,90 @@ export function generatePageMetadata(pageKey: string) {
       },
     },
     alternates: {
-      canonical: `${seoConfig.siteUrl}${meta.canonical}`,
+      canonical: canonicalUrl,
+      // Emit hreflang alternates only when explicitly set on the page.
+      // For US-targeted pages we map 'en-US' and 'en' to the canonical
+      // URL so Google knows this is the US-locale variant.
+      ...(meta.hreflangAlternates && {
+        languages: meta.hreflangAlternates,
+      }),
     },
   }
 }
+
+/**
+ * Build a metadata object for an AP Biology US metro page (en-US locale).
+ * Use this in the route's `export const metadata` declaration.
+ *
+ * Example:
+ *   export const metadata = buildAPBiologyMetroMetadata({
+ *     title: 'AP Biology Tutor New York | NYC + LI | Cerebrum',
+ *     description: '...',
+ *     keywords: ['ap biology tutor new york', ...],
+ *     canonical: '/ap-biology-tutor-new-york',
+ *   })
+ */
+export function buildAPBiologyMetroMetadata(input: {
+  title: string
+  description: string
+  keywords: string[]
+  canonical: string
+  ogImage?: string
+}) {
+  const canonicalUrl = `${seoConfig.siteUrl}${input.canonical}`
+
+  return {
+    title: input.title,
+    description: input.description,
+    keywords: input.keywords,
+    openGraph: {
+      title: input.title,
+      description: input.description,
+      url: canonicalUrl,
+      siteName: seoConfig.siteName,
+      images: [
+        {
+          url: `${seoConfig.siteUrl}${input.ogImage || seoConfig.defaultOgImage}`,
+          width: 1200,
+          height: 630,
+          alt: input.title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title: input.title,
+      description: input.description,
+      site: seoConfig.twitterHandle,
+      images: [`${seoConfig.siteUrl}${input.ogImage || seoConfig.defaultOgImage}`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large' as const,
+        'max-snippet': -1,
+      },
+    },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en-US': canonicalUrl,
+        en: canonicalUrl,
+        'x-default': canonicalUrl,
+      },
+    },
+  }
+}
+
+/**
+ * Same as buildAPBiologyMetroMetadata but for per-school feeder pages.
+ * Identical structure today; kept as a separate generator so we can
+ * tune per-school OG images / structured data per Phase 4 plans.
+ */
+export const buildAPBiologySchoolMetadata = buildAPBiologyMetroMetadata

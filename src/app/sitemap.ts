@@ -128,6 +128,56 @@ function normalizePriority(path: string, currentPriority: number): number {
     return 1.0
   }
 
+  // AP Biology hub + cornerstone content: highest priority within the
+  // AP cluster. Hub `/ap-biology-tutor` is the canonical for the
+  // entire cluster; cornerstone pages (FRQ rubric, score-5 guide,
+  // anki deck, USABO past papers) carry the pedagogy authority.
+  if (
+    path === '/ap-biology-tutor' ||
+    path === '/ap-biology-online-tutor' ||
+    path === '/ap-biology-frq-rubric-mastery' ||
+    path === '/ap-biology-score-5-study-guide' ||
+    path === '/ap-biology-anki-deck' ||
+    path === '/usabo-past-papers-archive' ||
+    path === '/ap-biology-vs-college-bio-mcat-bridge'
+  ) {
+    return 0.9
+  }
+
+  // AP Biology metro pages — `/ap-biology-tutor-{metro}`. Targets
+  // "AP Biology tutor [city]" — high-intent US queries.
+  if (
+    path === '/ap-biology-tutor-new-york' ||
+    path === '/ap-biology-tutor-bay-area' ||
+    path === '/ap-biology-tutor-boston' ||
+    path === '/ap-biology-tutor-northern-virginia-dc' ||
+    path === '/ap-biology-tutor-chicago' ||
+    path === '/ap-biology-tutor-los-angeles' ||
+    path === '/ap-biology-tutor-houston-dallas' ||
+    path === '/ap-biology-tutor-seattle' ||
+    path === '/ap-biology-tutor-atlanta' ||
+    path === '/ap-biology-tutor-new-jersey'
+  ) {
+    return 0.8
+  }
+
+  // AP Biology per-school feeder pages — `/ap-biology-tutor-{school}`.
+  // Long-tail "AP Biology tutor near {school}" intent.
+  if (
+    path === '/ap-biology-tutor-tjhsst' ||
+    path === '/ap-biology-tutor-stuyvesant' ||
+    path === '/ap-biology-tutor-bronx-science' ||
+    path === '/ap-biology-tutor-harker' ||
+    path === '/ap-biology-tutor-phillips-exeter' ||
+    path === '/ap-biology-tutor-andover' ||
+    path === '/ap-biology-tutor-mission-san-jose' ||
+    path === '/ap-biology-tutor-gunn-palo-alto' ||
+    path === '/ap-biology-tutor-walter-payton' ||
+    path === '/ap-biology-tutor-hunter-college-hs'
+  ) {
+    return 0.7
+  }
+
   // Tier 2 (0.8): High-intent landing pages
   if (
     path.startsWith('/locations/') ||
@@ -798,11 +848,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.88,
     },
     ...[
-      'usa', 'uk', 'uae', 'singapore', 'canada', 'australia', 'saudi-arabia',
-      'qatar', 'oman', 'bahrain', 'kuwait', 'malaysia', 'thailand',
-      'philippines', 'indonesia', 'vietnam', 'south-africa', 'nigeria',
-      'kenya', 'new-zealand', 'germany', 'netherlands', 'hong-kong',
-      'mauritius', 'nepal', 'bangladesh', 'sri-lanka',
+      'usa',
+      'uk',
+      'uae',
+      'singapore',
+      'canada',
+      'australia',
+      'saudi-arabia',
+      'qatar',
+      'oman',
+      'bahrain',
+      'kuwait',
+      'malaysia',
+      'thailand',
+      'philippines',
+      'indonesia',
+      'vietnam',
+      'south-africa',
+      'nigeria',
+      'kenya',
+      'new-zealand',
+      'germany',
+      'netherlands',
+      'hong-kong',
+      'mauritius',
+      'nepal',
+      'bangladesh',
+      'sri-lanka',
     ].map((slug) => ({
       url: `${baseUrl}/programs/biology-olympiad/${slug}`,
       lastModified: lastUpdated,
