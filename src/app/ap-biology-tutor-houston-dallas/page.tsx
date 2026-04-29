@@ -16,10 +16,9 @@ const SLUG = 'houston-dallas'
 const metro = getMetroBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
-  title:
-    'AP Biology Tutor Houston · Dallas · Austin | TAMS · Clements · Plano West · St. Mark’s | Cerebrum Academy',
+  title: 'AP Biology Tutor Houston · Dallas · Austin · Cerebrum',
   description:
-    "AP Biology tutoring for Texas students — Bellaire, DeBakey, Carnegie Vanguard, Strake Jesuit, St. John's, Clements, Seven Lakes, Plano West, Highland Park, St. Mark's, TAMS, LASA Austin and more. PhD biology faculty, FRQ rubric mastery, Central Time. From $1,800.",
+    "AP Biology tutoring for Texas students — Bellaire, DeBakey, Plano West, St. Mark's, TAMS, LASA Austin. PhD faculty, FRQ mastery, CT live classes. From $1,800.",
   keywords: [
     'AP Biology tutor Houston',
     'AP Biology tutor Dallas',

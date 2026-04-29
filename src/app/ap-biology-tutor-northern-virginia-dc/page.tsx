@@ -17,10 +17,9 @@ const SLUG = 'northern-virginia-dc'
 const metro = getMetroBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
-  title:
-    'AP Biology Tutor Northern Virginia & DC | TJHSST · Sidwell · Walt Whitman | Cerebrum Academy',
+  title: 'AP Biology Tutor NoVa & DC · TJHSST · Sidwell · Cerebrum',
   description:
-    'AP Biology tutoring for NoVa / DC students — Thomas Jefferson HSST, Sidwell Friends, St. Albans, Walt Whitman, Bethesda-Chevy Chase, Langley, McLean and more. Integrated AP-5 + USABO Semifinal track. PhD biology faculty, FRQ rubric mastery, Eastern Time. From $1,800.',
+    'AP Biology tutoring for NoVa & DC students — TJHSST, Sidwell Friends, St. Albans, Walt Whitman. AP-5 + USABO Semifinal track. PhD faculty, ET live. From $1,800.',
   keywords: [
     'AP Biology tutor Northern Virginia',
     'AP Biology tutor Fairfax',

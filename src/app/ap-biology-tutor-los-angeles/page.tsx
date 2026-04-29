@@ -16,10 +16,9 @@ const SLUG = 'los-angeles'
 const metro = getMetroBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
-  title:
-    'AP Biology Tutor Los Angeles | Harvard-Westlake · Marlborough · LA Westside | Cerebrum Academy',
+  title: 'AP Biology Tutor Los Angeles · Westside + OC · Cerebrum',
   description:
-    'AP Biology tutoring for Los Angeles students — Harvard-Westlake, Marlborough, Buckley, Brentwood, Polytechnic, Crossroads, Loyola, North Hollywood STEM Magnet and more. PhD biology faculty, FRQ rubric mastery, Pacific Time live classes. From $1,800.',
+    'AP Biology tutoring for LA students — Harvard-Westlake, Marlborough, Brentwood, Polytechnic, Canyon Crest. PhD faculty, FRQ mastery, PT live classes. From $1,800.',
   keywords: [
     'AP Biology tutor Los Angeles',
     'AP Biology tutor LA',

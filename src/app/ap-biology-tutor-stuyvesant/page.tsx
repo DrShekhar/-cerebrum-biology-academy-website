@@ -17,9 +17,9 @@ const SLUG = 'stuyvesant'
 const school = getSchoolBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
-  title: 'AP Biology Tutor for Stuyvesant Students | Stuyvesant High School NYC | Cerebrum Academy',
+  title: 'AP Biology Tutor for Stuyvesant Students · NYC · Cerebrum',
   description:
-    "AP Biology tutoring for Stuyvesant High School students — calibrated to Stuy's commute and pace. PhD biology faculty, FRQ rubric mastery, USABO Semifinal track for serious-biology students. Eastern Time. From $1,800.",
+    "AP Biology tutoring for Stuyvesant HS students — calibrated to Stuy's pace. PhD faculty, FRQ mastery, USABO Semifinal track. ET live classes. From $1,800.",
   keywords: [
     'AP Biology tutor Stuyvesant',
     'AP Biology tutor Stuyvesant High School',

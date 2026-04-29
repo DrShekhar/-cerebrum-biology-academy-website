@@ -16,10 +16,9 @@ const SLUG = 'chicago'
 const metro = getMetroBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
-  title:
-    'AP Biology Tutor Chicago | Whitney Young · Walter Payton · IMSA · New Trier | Cerebrum Academy',
+  title: 'AP Biology Tutor Chicago · IMSA · Whitney Young · Cerebrum',
   description:
-    'AP Biology tutoring for Chicago students — Whitney M. Young, Walter Payton, Northside College Prep, Jones, IMSA, New Trier, Stevenson, Naperville and more. PhD biology faculty, FRQ rubric mastery, Central Time live classes. From $1,800.',
+    'AP Biology tutoring for Chicago students — Whitney Young, Walter Payton, Northside, IMSA, New Trier. PhD faculty, FRQ mastery, CT live classes. From $1,800.',
   keywords: [
     'AP Biology tutor Chicago',
     'AP Biology tutor Naperville',

@@ -17,10 +17,9 @@ const SLUG = 'gunn-palo-alto'
 const school = getSchoolBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
-  title:
-    'AP Biology Tutor for Henry M. Gunn High School Students | Palo Alto CA | Cerebrum Academy',
+  title: 'AP Biology Tutor for Gunn Students · Palo Alto · Cerebrum',
   description:
-    'AP Biology tutoring for Henry M. Gunn High School students (Palo Alto, CA) — coordinates with Stanford-affiliated research schedules. PhD biology faculty, FRQ rubric mastery, USABO Semifinal track. Pacific Time. From $1,800.',
+    'AP Biology tutoring for Henry M. Gunn HS students (Palo Alto) — fits Stanford-research schedules. PhD faculty, FRQ mastery, USABO track. PT live. From $1,800.',
   keywords: [
     'AP Biology tutor Gunn',
     'AP Biology tutor Henry M. Gunn High School',

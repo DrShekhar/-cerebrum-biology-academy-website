@@ -17,9 +17,9 @@ const SLUG = 'bay-area'
 const metro = getMetroBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
-  title: 'AP Biology Tutor Bay Area | San Francisco · Silicon Valley · East Bay | Cerebrum Academy',
+  title: 'AP Biology Tutor Bay Area · SF + Silicon Valley · Cerebrum',
   description:
-    'AP Biology tutoring for Bay Area students — Harker, Mission San Jose, Lynbrook, Saratoga, Monta Vista, Henry M. Gunn, Palo Alto and more. PhD biology faculty, FRQ rubric mastery, Pacific Time live classes. From $1,800.',
+    'AP Biology tutoring for Bay Area students — Harker, Mission SJ, Lynbrook, Gunn, Palo Alto. PhD faculty, FRQ rubric mastery, PT live classes. From $1,800.',
   keywords: [
     'AP Biology tutor Bay Area',
     'AP Biology tutor San Francisco',

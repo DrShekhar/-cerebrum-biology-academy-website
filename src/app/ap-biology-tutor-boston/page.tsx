@@ -18,10 +18,9 @@ const SLUG = 'boston'
 const metro = getMetroBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
-  title:
-    'AP Biology Tutor Boston | Greater Boston · Cambridge · Phillips Exeter / Andover | Cerebrum Academy',
+  title: 'AP Biology Tutor Boston · Cambridge + Suburbs · Cerebrum',
   description:
-    'AP Biology tutoring for Boston-area students — Boston Latin, Lexington, Newton North/South, Brookline, Phillips Exeter, Andover, Roxbury Latin and more. PhD biology faculty, FRQ rubric mastery, Eastern Time live classes. From $1,800.',
+    'AP Biology tutoring for Boston students — Boston Latin, Lexington, Newton, Phillips Exeter, Andover. PhD faculty, FRQ rubric mastery, ET live classes. From $1,800.',
   keywords: [
     'AP Biology tutor Boston',
     'AP Biology tutor Cambridge',

@@ -17,10 +17,9 @@ const SLUG = 'mission-san-jose'
 const school = getSchoolBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
-  title:
-    'AP Biology Tutor for Mission San Jose High School Students | Fremont CA | Cerebrum Academy',
+  title: 'AP Biology Tutor for Mission San Jose · Fremont · Cerebrum',
   description:
-    'AP Biology tutoring for Mission San Jose High School students (Fremont, CA) — PhD biology faculty, FRQ rubric mastery, integrated AP-5 + USABO Semifinal track. Pacific Time. From $1,800.',
+    'AP Biology tutoring for Mission San Jose HS students (Fremont, CA) — PhD faculty, FRQ mastery, AP-5 + USABO Semifinal track. PT live. From $1,800.',
   keywords: [
     'AP Biology tutor Mission San Jose',
     'AP Biology tutor Mission San Jose High School',

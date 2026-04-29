@@ -16,9 +16,9 @@ const SLUG = 'harker'
 const school = getSchoolBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
-  title: 'AP Biology Tutor for Harker School Students | Harker San Jose | Cerebrum Academy',
+  title: 'AP Biology Tutor for Harker School Students · San Jose · Cerebrum',
   description:
-    'AP Biology tutoring for The Harker School Upper School students — PhD biology faculty, FRQ rubric mastery, integrated AP-5 + USABO Semifinal track. Pacific Time. Coordinates with Stanford/UCSF research schedule. From $1,800.',
+    'AP Biology tutoring for Harker Upper School students — PhD faculty, FRQ mastery, AP-5 + USABO Semifinal track. PT live, fits Stanford/UCSF research. From $1,800.',
   keywords: [
     'AP Biology tutor Harker',
     'AP Biology tutor Harker School',

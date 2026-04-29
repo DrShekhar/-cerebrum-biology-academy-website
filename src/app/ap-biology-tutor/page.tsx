@@ -740,6 +740,103 @@ export default function APBiologyTutorPage() {
         </div>
       </section>
 
+      {/* AP Biology by metro — internal-link cluster for Google indexing.
+          Each card targets the city-specific landing page. Critical for
+          letting Google find + crawl the 10 metro pages from the
+          flagship; without this internal-link cluster the metro pages
+          would be sitemap-only orphans. */}
+      <section className="py-16 bg-white border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+              AP Biology Tutor near you
+            </h2>
+            <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
+              City-specific AP Biology tutoring with PhD biology faculty in your time zone. Each
+              programme is calibrated to local school calendars and AP-pace expectations.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            {[
+              { city: 'New York', region: 'NYC + LI', slug: 'new-york', tz: 'ET' },
+              { city: 'Bay Area', region: 'SF + Silicon Valley', slug: 'bay-area', tz: 'PT' },
+              { city: 'Boston', region: 'Cambridge + Suburbs', slug: 'boston', tz: 'ET' },
+              {
+                city: 'NoVa & DC',
+                region: 'TJHSST · Sidwell',
+                slug: 'northern-virginia-dc',
+                tz: 'ET',
+              },
+              { city: 'Chicago', region: 'IMSA · New Trier', slug: 'chicago', tz: 'CT' },
+              { city: 'Los Angeles', region: 'Westside + OC', slug: 'los-angeles', tz: 'PT' },
+              {
+                city: 'Houston · Dallas',
+                region: 'Texas STEM corridor',
+                slug: 'houston-dallas',
+                tz: 'CT',
+              },
+              { city: 'Seattle', region: 'Eastside + Lakeside', slug: 'seattle', tz: 'PT' },
+              { city: 'Atlanta', region: 'North Fulton', slug: 'atlanta', tz: 'ET' },
+              { city: 'New Jersey', region: 'BCA · Princeton', slug: 'new-jersey', tz: 'ET' },
+            ].map((m) => (
+              <Link
+                key={m.slug}
+                href={`/ap-biology-tutor-${m.slug}`}
+                className="bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 p-4 rounded-xl transition-all"
+              >
+                <div className="font-semibold text-slate-900">{m.city}</div>
+                <div className="text-xs text-slate-600 mt-1">{m.region}</div>
+                <div className="mt-2 inline-block text-[10px] font-medium text-blue-700 bg-blue-100 px-2 py-0.5 rounded-full">
+                  {m.tz} live classes
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AP Biology by school — same indexing logic for the per-school
+          feeder pages. Long-tail "AP Bio tutor near {school}" intent. */}
+      <section className="py-16 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+              AP Biology Tutoring by school
+            </h2>
+            <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
+              Dedicated guidance for students at the top USABO-feeder and AP-eminence high schools.
+              Each page is calibrated to the school&apos;s biology curriculum pace.
+            </p>
+            <p className="text-xs text-slate-500 mt-2">
+              School names used descriptively. No affiliation, sponsorship, or endorsement implied.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            {[
+              { school: 'TJHSST', city: 'Alexandria, VA', slug: 'tjhsst' },
+              { school: 'Stuyvesant', city: 'NYC', slug: 'stuyvesant' },
+              { school: 'Bronx Science', city: 'NYC', slug: 'bronx-science' },
+              { school: 'Hunter College HS', city: 'NYC', slug: 'hunter-college-hs' },
+              { school: 'Harker', city: 'San Jose, CA', slug: 'harker' },
+              { school: 'Mission San Jose', city: 'Fremont, CA', slug: 'mission-san-jose' },
+              { school: 'Henry M. Gunn', city: 'Palo Alto, CA', slug: 'gunn-palo-alto' },
+              { school: 'Phillips Exeter', city: 'Exeter, NH', slug: 'phillips-exeter' },
+              { school: 'Andover', city: 'Andover, MA', slug: 'andover' },
+              { school: 'Walter Payton', city: 'Chicago, IL', slug: 'walter-payton' },
+            ].map((s) => (
+              <Link
+                key={s.slug}
+                href={`/ap-biology-tutor-${s.slug}`}
+                className="bg-white hover:bg-blue-50 border border-slate-200 hover:border-blue-300 p-4 rounded-xl transition-all"
+              >
+                <div className="font-semibold text-slate-900">{s.school}</div>
+                <div className="text-xs text-slate-600 mt-1">{s.city}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Related Pages */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">

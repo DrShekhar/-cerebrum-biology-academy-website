@@ -17,10 +17,9 @@ const SLUG = 'walter-payton'
 const school = getSchoolBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologySchoolMetadata({
-  title:
-    'AP Biology Tutor for Walter Payton College Prep Students | Chicago Selective Enrollment | Cerebrum Academy',
+  title: 'AP Biology Tutor for Walter Payton Students · Chicago · Cerebrum',
   description:
-    'AP Biology tutoring for Walter Payton College Prep students (Chicago). PhD biology faculty, FRQ rubric mastery, USABO Semifinal track. Central Time live classes. From $1,800.',
+    'AP Biology tutoring for Walter Payton College Prep students (Chicago). PhD faculty, FRQ mastery, USABO Semifinal track. CT live classes. From $1,800.',
   keywords: [
     'AP Biology tutor Walter Payton',
     'AP Biology tutor Walter Payton College Prep',

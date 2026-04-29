@@ -17,10 +17,9 @@ const SLUG = 'new-jersey'
 const metro = getMetroBySlug(SLUG)
 
 export const metadata: Metadata = buildAPBiologyMetroMetadata({
-  title:
-    'AP Biology Tutor New Jersey | Bergen Academies · High Tech HS · Lawrenceville · Princeton | Cerebrum Academy',
+  title: 'AP Biology Tutor New Jersey · BCA · Princeton · Cerebrum',
   description:
-    'AP Biology tutoring for New Jersey students — Bergen County Academies, High Tech HS Lincroft, Edison Academy Magnet, Lawrenceville, Princeton High School, West Windsor-Plainsboro, Millburn, Pingry, Newark Academy, Peddie and more. PhD biology faculty, FRQ rubric mastery, Eastern Time. From $1,800.',
+    'AP Biology tutoring for NJ students — Bergen County Academies, High Tech HS, Lawrenceville, Princeton, Pingry. PhD faculty, FRQ mastery, ET live. From $1,800.',
   keywords: [
     'AP Biology tutor New Jersey',
     'AP Biology tutor Bergen County',
