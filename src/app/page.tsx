@@ -12,6 +12,7 @@ const HomePageClient = dynamic(
 import { SpeakableSchema } from '@/components/seo/SpeakableSchema'
 import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 import { ContentFreshness } from '@/components/seo/ContentFreshness'
+import { GeoAwarePriceChip } from '@/components/home/GeoAwarePriceChip'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
@@ -201,7 +202,7 @@ export default function Home() {
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
                 Biology Olympiad coaching —
                 <br />
-                <span className="text-green-400">14 countries, one curriculum.</span>
+                <span className="text-green-400">27 countries, one curriculum.</span>
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
                 NSEB, INBO, USABO, IBO, BBO, SBO and more. Campbell Biology coverage, 15 years of
@@ -231,8 +232,8 @@ export default function Home() {
                 { label: '🇺🇸 USABO', href: '/usabo-coaching' },
                 { label: '🌍 IBO', href: '/ibo-preparation' },
                 { label: '🇬🇧 BBO', href: '/bbo-preparation' },
+                { label: '🇨🇦 CBO', href: '/cbo-coaching' },
                 { label: '🇸🇬 SBO', href: '/sbo-coaching' },
-                { label: '🇳🇿 NZIBO', href: '/biology-olympiad/new-zealand' },
               ].map((o) => (
                 <Link
                   key={o.href}
@@ -287,6 +288,9 @@ export default function Home() {
                 Expert Biology coaching for A-Level, IB, IGCSE, AP curricula and NRI students
                 worldwide
               </p>
+              <div className="mt-4 flex justify-center">
+                <GeoAwarePriceChip />
+              </div>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[

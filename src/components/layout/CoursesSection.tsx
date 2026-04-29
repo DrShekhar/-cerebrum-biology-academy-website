@@ -62,8 +62,13 @@ export function CoursesSection() {
   const categoriesAnim = useScrollAnimation()
   const ctaAnim = useScrollAnimation()
 
-  const handleEnrollClick = (courseId: string) => {
-    window.open(`https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll%20in%20${courseId}.%20Please%20share%20details.`, '_blank')
+  const handleEnrollClick = (courseId: string, courseTitle: string) => {
+    trackAndOpenWhatsApp({
+      source: 'home-courses-section',
+      message: `Hi! I want to enroll in the "${courseTitle}" course. Please share fees, batch schedule, and admission details.`,
+      campaign: 'home-enroll-now',
+      buttonText: courseId,
+    })
   }
 
   const handleViewDetails = (courseId: string) => {
@@ -73,7 +78,12 @@ export function CoursesSection() {
   }
 
   const handleCounselingClick = () => {
-    window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20counseling%20session.', '_blank')
+    trackAndOpenWhatsApp({
+      source: 'home-courses-section',
+      message:
+        'Hi! I want to book a free counseling session — please help me choose the right course for my class and exam goals.',
+      campaign: 'home-counseling',
+    })
   }
 
   const handleBrochureDownload = () => {
@@ -232,7 +242,7 @@ export function CoursesSection() {
                       variant="primary"
                       size="lg"
                       className="flex-1"
-                      onClick={() => handleEnrollClick(course.id)}
+                      onClick={() => handleEnrollClick(course.id, course.title)}
                     >
                       {t('enrollNow')}
                     </Button>

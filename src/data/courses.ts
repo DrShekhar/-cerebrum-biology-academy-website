@@ -40,6 +40,25 @@ export const courses: BasicCourse[] = [
     ],
   },
   {
+    id: 'class-11',
+    title: 'Class 11th Biology — Boards + NEET',
+    description:
+      'Comprehensive Class 11 Biology coaching for CBSE Boards + NEET dual preparation. NCERT line-by-line foundation covering The Living World, Biological Classification, Plant & Animal Kingdom, Cell Biology, Biomolecules, Plant Physiology and Human Physiology. Taught by AIIMS-trained faculty across South Delhi (South Extension), Gurugram, Faridabad and online. Olympiad foundation track (INBO / USABO / IBO basics) available for high-performers.',
+    duration: '1 Year',
+    price: 48000,
+    targetClass: '11th',
+    features: [
+      'Live Interactive Classes',
+      'Boards + NEET Dual Prep',
+      'Complete NCERT Coverage',
+      'Weekly Tests & Analysis',
+      'Doubt Resolution Sessions',
+      'Olympiad Foundation Track',
+      'Online + Offline (Delhi NCR)',
+      'Personal Mentorship',
+    ],
+  },
+  {
     id: 'class-12th-neet-ascent',
     title: 'NEET 2026 - Class 12th Ascent',
     description:

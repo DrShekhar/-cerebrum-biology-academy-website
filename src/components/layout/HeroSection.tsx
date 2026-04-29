@@ -116,13 +116,25 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             </span>
           </h1>
 
-          {/* H2 - LCP element. Simplified inline styles for faster render. No clamp(). */}
+          {/* H2 - LCP element. Audience-led subheading: who we teach + which
+              exam tracks we cover. Kept to one line at desktop with a wrap on
+              mobile. Replaces the old location-only H2; location info moved
+              to the smaller line below to avoid hero clutter. */}
           <h2
-            className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-3 text-yellow-200"
+            className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-yellow-200"
             style={{ color: '#fef08a', fontWeight: 600 }}
           >
-            Delhi NCR - Offline in South Extension, Gurugram, Rohini • Online - Serving Worldwide
+            Biology for Class 9–12 (Boards + NEET) · NEET Droppers / Long-term / Repeaters
           </h2>
+
+          {/* Locations + reach line — smaller weight than H2 so the hero
+              stays readable without two competing headlines. */}
+          <p
+            className="text-sm xs:text-base md:text-lg font-medium text-yellow-100/90 mb-3 animate-fade-in-up"
+            style={{ animationDelay: '0.15s' }}
+          >
+            Delhi NCR — South Extension · Gurugram · Rohini · Online worldwide
+          </p>
 
           {/* Subtext - Animated with delay (non-LCP) */}
           <p
@@ -133,13 +145,39 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             AIIMS Selections
           </p>
 
-          {/* Pricing Badge */}
+          {/* Class deep-link chips — let Google-Ads visitors jump straight to
+              the page that matches their search intent without scrolling
+              through the whole home page. */}
+          <div
+            className="flex flex-wrap gap-2 mb-5 animate-fade-in-up"
+            style={{ animationDelay: '0.22s' }}
+          >
+            {[
+              { label: 'Class 9', href: '/courses/class-9-foundation' },
+              { label: 'Class 10', href: '/courses/class-10-foundation' },
+              { label: 'Class 11', href: '/courses/class-11' },
+              { label: 'Class 12', href: '/courses/class-12' },
+              { label: 'NEET Droppers', href: '/courses/neet-dropper' },
+              { label: 'Olympiads', href: '/programs/biology-olympiad' },
+            ].map((chip) => (
+              <a
+                key={chip.href}
+                href={chip.href}
+                className="inline-flex items-center rounded-full border border-white/30 bg-white/10 backdrop-blur-sm px-3 py-1.5 text-xs xs:text-sm font-medium text-white hover:bg-white/20 hover:border-white/50 transition"
+              >
+                {chip.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Pricing Badge — honest grid-aligned anchor. Replaces the old
+              ₹5,999/year claim, which didn't match any course on the page. */}
           <div
             className="inline-flex items-center bg-amber-500/20 backdrop-blur-sm border border-amber-300/30 px-4 py-2 rounded-full mb-4 animate-fade-in-up"
             style={{ animationDelay: '0.25s' }}
           >
             <span className="text-amber-200 font-semibold text-xs xs:text-sm md:text-base">
-              Courses from ₹5,999/year
+              Courses from ₹48,000/year · EMI from ₹4,000/mo
             </span>
           </div>
 
@@ -175,23 +213,11 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             <a
               href="tel:+918826444334"
               aria-label="Call Cerebrum Biology Academy at +91 88264 44334"
-              className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/40 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400 hover:scale-[1.02] active:scale-[0.98] group"
-              style={{
-                backgroundColor: '#22c55e',
-                color: '#ffffff',
-                fontWeight: 700,
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-              }}
+              className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white font-semibold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg border-2 border-white/40 hover:border-white/70 active:scale-[0.98] group"
             >
               <PhoneIcon />
-              <span className="hidden sm:inline">CALL NOW: +91 88264 44334</span>
-              <span className="sm:hidden">CALL: 88264 44334</span>
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-              </span>
+              <span className="hidden sm:inline">Or call +91 88264 44334</span>
+              <span className="sm:hidden">Or call +91 88264 44334</span>
             </a>
           </div>
 
