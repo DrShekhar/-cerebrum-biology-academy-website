@@ -355,8 +355,9 @@ export default function NEETDropperPage() {
                     Get your personalised study plan
                   </h2>
                   <p className="mt-1.5 text-xs sm:text-sm text-gray-600">
-                    Free counselling call + previous-year-attempt analysis. Live online +
-                    offline at Rohini, Gurugram, South Delhi, Faridabad.
+                    Free counselling call + previous-year-attempt analysis. Offline at
+                    <strong> South Delhi · Gurugram · Faridabad</strong>, plus live online
+                    for everyone else.
                   </p>
                   <div className="inline-flex items-center gap-1.5 mt-3 bg-[#e8ede8] text-[#3d4d3d] px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-semibold">
                     <BookOpen className="w-3.5 h-3.5" />
@@ -419,6 +420,13 @@ export default function NEETDropperPage() {
           <BookFreeDemoCard courseName="NEET Dropper Batch" source="neet-dropper-hero-form" />
         </div>
       </section>
+
+      {/* Real student video testimonials — moved up so Sadhna's video is the
+          first social proof a visitor sees, not buried 60% down the page. */}
+      <VideoTestimonialsSection
+        title="Hear from droppers who got in"
+        subtitle="Real students. Real ranks. Real videos. Sadhna scored 695/720 with us — start with her story."
+      />
 
       {/* Why Droppers Choose Us */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
@@ -727,12 +735,6 @@ export default function NEETDropperPage() {
 
       {/* NEET Toppers Showcase */}
       <NEETToppersShowcase maxToppers={6} showVideos={true} />
-
-      {/* Real student video testimonials — Sadhna Sirin (LHMC, 695/720), Dattatreya, Nishita, Abhishek (AFMC) etc. */}
-      <VideoTestimonialsSection
-        title="Hear from droppers who got in"
-        subtitle="Real students. Real ranks. Real videos. No paid actors."
-      />
 
       {/* Parent Testimonials */}
       <ParentTestimonialsSection />
