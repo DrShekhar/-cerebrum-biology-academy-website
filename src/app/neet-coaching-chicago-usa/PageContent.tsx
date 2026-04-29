@@ -6,6 +6,7 @@ import LocalitySchema from '@/components/seo/LocalitySchema'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 export default function NEETCoachingPageContent() {
   const faqData = [
@@ -276,6 +277,8 @@ export default function NEETCoachingPageContent() {
           </div>
         </div>
       </section>
+
+            <USABOPathwayCallout cityName="Chicago suburbs" schools={["Naperville Central","Hinsdale Central","Northbrook","New Trier"]} />
 
       {/* Related Cities */}
       <RelatedCityLinks currentCity="chicago" />

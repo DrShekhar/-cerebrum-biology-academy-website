@@ -14,6 +14,7 @@ import { VideoTestimonialsSection } from "@/components/testimonials/VideoTestimo
 import { PricingSection } from "@/components/city/PricingSection";
 import { CostComparisonSection } from "@/components/city/CostComparisonSection";
 import { RelatedCityLinks } from "@/components/seo/RelatedCityLinks";
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 export default function PageContent() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
@@ -347,6 +348,8 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+
+            <USABOPathwayCallout cityName="the United States"  />
 
       {/* Related City Links */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white border-t">

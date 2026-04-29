@@ -6,6 +6,7 @@ import { SmartWhatsAppCTA } from '@/components/conversion/SmartWhatsAppCTA'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { PricingSection, CostComparisonSection } from '@/components/city'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 interface FAQItem {
   id: string
@@ -294,6 +295,8 @@ export function PageContent() {
           />
         </div>
       </section>
+
+            <USABOPathwayCallout cityName="Houston" schools={["Clements HS","Memorial HS","BASIS Houston","Cinco Ranch HS"]} />
 
       {/* Related Cities */}
       <section className="py-16 px-4">

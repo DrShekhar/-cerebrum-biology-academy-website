@@ -15,6 +15,7 @@ import {
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 interface PageContentProps {
   faqs: Array<{ q: string; a: string }>
@@ -260,6 +261,9 @@ export default function PageContent({ faqs }: PageContentProps) {
           </Link>
         </div>
       </section>
+
+            <USABOPathwayCallout cityName="Central New Jersey" schools={["West Windsor-Plainsboro HS","Princeton HS","Montgomery HS","Edison Academy / JP Stevens","Livingston HS"]} />
+
 
       <RelatedCityLinks currentCity="edisonNJ" variant="default" />
     </div>

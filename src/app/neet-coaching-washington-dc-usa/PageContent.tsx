@@ -15,6 +15,7 @@ import {
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 interface PageContentProps {
   faqs: Array<{ q: string; a: string }>
@@ -256,6 +257,9 @@ export default function PageContent({ faqs }: PageContentProps) {
           </Link>
         </div>
       </section>
+
+            <USABOPathwayCallout cityName="DC / Northern Virginia" schools={["TJHSST","McLean HS","Langley HS","Walt Whitman HS","Winston Churchill HS","Bethesda-Chevy Chase"]} />
+
 
       <RelatedCityLinks currentCity="washingtonDC" variant="default" />
     </div>

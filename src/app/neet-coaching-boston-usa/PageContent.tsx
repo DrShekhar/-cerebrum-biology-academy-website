@@ -15,6 +15,7 @@ import {
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 interface PageContentProps {
   faqs: Array<{ q: string; a: string }>
@@ -256,6 +257,9 @@ export default function PageContent({ faqs }: PageContentProps) {
           </Link>
         </div>
       </section>
+
+            <USABOPathwayCallout cityName="Greater Boston" schools={["Lexington HS","Acton-Boxborough","Newton South","Belmont HS"]} />
+
 
       <RelatedCityLinks currentCity="boston" variant="default" />
     </div>

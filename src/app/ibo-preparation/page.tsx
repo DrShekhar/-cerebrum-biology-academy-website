@@ -411,6 +411,50 @@ export default function IBOPreparationPage() {
         </div>
       </section>
 
+      {/* AIIMS / Indian-rigour positioning */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fadeInUp">
+            <Trophy className="w-4 h-4" />
+            Why our IBO students perform
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fadeInUp">
+            AIIMS-trained faculty. Olympiad-grade depth. Same standard, every country.
+          </h2>
+          <p className="text-lg text-slate-300 mb-8 max-w-3xl">
+            Our IBO coaching is delivered by faculty trained at the All India Institute of Medical
+            Sciences (AIIMS) — alongside former IBO medallists. The training methodology is the
+            same Indian olympiad tradition that has produced consistent IBO medal performances:
+            small-batch, faculty-led, retrieval-heavy, with weekly written feedback on every
+            past-paper attempt.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h3 className="font-bold text-yellow-300 mb-2">Theory at IBO depth</h3>
+              <p className="text-sm text-slate-300">
+                We cover Campbell to its ceiling, then move into Alberts (cell + molecular),
+                Lehninger (biochem), and primary research literature. No shallow coverage.
+              </p>
+            </div>
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h3 className="font-bold text-yellow-300 mb-2">Practical-round rehearsal</h3>
+              <p className="text-sm text-slate-300">
+                Virtual lab walk-throughs of molecular biology, biochem assays, plant + animal
+                anatomy, and bioinformatics — mapped to past IBO practical themes.
+              </p>
+            </div>
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h3 className="font-bold text-yellow-300 mb-2">National-team ready</h3>
+              <p className="text-sm text-slate-300">
+                Whether you are a USABO Finalist heading to the US team camp, a BBO Round 2
+                medallist, or an INBO topper — our preparation maps to your country&apos;s
+                selection format.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing section rendered by layout.tsx via GeoAwareSharedPricingMatrix
           (server-side geo detection — appears after this page's content) */}
 

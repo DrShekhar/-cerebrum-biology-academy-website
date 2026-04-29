@@ -16,6 +16,7 @@ import LocalitySchema from '@/components/seo/LocalitySchema'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 const faqs = [
   {
@@ -304,6 +305,9 @@ export default function NEETCoachingPageContent() {
             </Link>
           </div>
         </section>
+
+              <USABOPathwayCallout cityName="the SF Bay Area" schools={["Monta Vista HS","Lynbrook HS","Mission San Jose","Saratoga HS","Cupertino HS","Fremont (Irvington/Mission)"]} />
+
 
         <RelatedCityLinks currentCity="sanJose" variant="default" />
       </div>

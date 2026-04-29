@@ -15,6 +15,7 @@ import {
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 interface PageContentProps {
   faqs: Array<{ q: string; a: string }>
@@ -257,6 +258,9 @@ export default function PageContent({ faqs }: PageContentProps) {
           </Link>
         </div>
       </section>
+
+            <USABOPathwayCallout cityName="Atlanta + suburbs" schools={["Walton HS","Roswell HS","Alpharetta HS","Northview HS"]} />
+
 
       <RelatedCityLinks currentCity="atlanta" variant="default" />
     </div>

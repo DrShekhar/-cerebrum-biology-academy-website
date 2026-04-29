@@ -390,6 +390,52 @@ export default function USABOCoachingPage() {
         </div>
       </section>
 
+      {/* AIIMS / Indian-rigour positioning — speaks to high-achieving USA families */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fadeInUp">
+            <span className="w-2 h-2 rounded-full bg-yellow-400" />
+            Why Indian-American families choose Cerebrum
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fadeInUp">
+            AIIMS-trained faculty. Biology specialists. Olympiad-grade rigour.
+          </h2>
+          <p className="text-lg text-slate-300 mb-8 max-w-3xl">
+            Cerebrum is taught by faculty trained at the All India Institute of Medical Sciences
+            (AIIMS) — India&apos;s most selective medical institution. The same depth-first,
+            methodical biology training that produces Indian top-rankers is what we bring to
+            USABO and IBO preparation. We don&apos;t teach 11 subjects badly; we teach biology to
+            olympiad depth.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h3 className="font-bold text-yellow-300 mb-2">Depth, not breadth</h3>
+              <p className="text-sm text-slate-300">
+                We teach biology only — at AIIMS-entrance depth. That&apos;s the depth USABO
+                Semifinal and IBO theory rounds actually need. Most US tutoring services are
+                AP-Bio-shaped; ours is olympiad-shaped from day one.
+              </p>
+            </div>
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h3 className="font-bold text-yellow-300 mb-2">Faculty-led, not platform-led</h3>
+              <p className="text-sm text-slate-300">
+                Live classes with the same instructor for the year — not a video library.
+                Weekly written feedback on your past-paper attempts. The Indian coaching tradition
+                of small-batch, faculty-driven mentorship, run on US-friendly time slots.
+              </p>
+            </div>
+            <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+              <h3 className="font-bold text-yellow-300 mb-2">Proven across competitive schools</h3>
+              <p className="text-sm text-slate-300">
+                Students from TJHSST, Stuyvesant, Bronx Science, Monta Vista, Lynbrook,
+                Bellevue, Lexington, Clements, BASIS, and Plano West already train with us. We
+                understand what their school workload looks like — the schedule respects it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing section rendered by layout.tsx via GeoAwareSharedPricingMatrix
           (server-side geo detection — appears after this page's content) */}
 

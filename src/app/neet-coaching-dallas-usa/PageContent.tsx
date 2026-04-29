@@ -6,6 +6,7 @@ import LocalitySchema from '@/components/seo/LocalitySchema'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { USABOPathwayCallout } from '@/components/seo/USABOPathwayCallout'
 
 export default function NEETCoachingPageContent() {
   const faqData = [
@@ -275,6 +276,8 @@ export default function NEETCoachingPageContent() {
           </div>
         </div>
       </section>
+
+            <USABOPathwayCallout cityName="Dallas–Plano" schools={["Plano West Senior HS","TAG Magnet","Highland Park HS"]} />
 
       {/* Related Cities */}
       <RelatedCityLinks currentCity="dallas" />
