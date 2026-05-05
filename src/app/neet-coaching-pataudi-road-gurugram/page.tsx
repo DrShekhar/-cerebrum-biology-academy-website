@@ -36,24 +36,28 @@ const nearbyAreas = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Pataudi Road?',
+    question:
+      'Which route along NH-352W and the Pataudi Road corridor is fastest to reach Sector 51 in evening traffic?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 12-14 km from Pataudi Road area. Via NH-48 or Dwarka Expressway, it takes 18-22 minutes.',
+      'For families in the Sector 86-95 New Gurugram belt, the fastest evening route is Pataudi Road (NH-352W) to Sector 9-10 crossing, then onto Hero Honda Chowk and across to Sector 51 via Sohna Road, covering 16-18 km in roughly 35-45 minutes. After 8 PM the same drive drops to about 25 minutes. Students in Sectors 99-104 typically prefer Dwarka Expressway and SPR for the return leg.',
   },
   {
-    question: 'Is Pataudi Road area emerging for residential?',
+    question:
+      'Are there hybrid options for Sector 86-95 students who cannot drive 35 minutes daily on the Pataudi Road corridor?',
     answer:
-      'Yes, Pataudi Road (Sectors 99-112) is an emerging affordable housing zone with many new projects. We serve families moving to this developing area.',
+      'Yes. Many of our Sector 86, 89, 92 and 95 students take a hybrid plan: two physical days at the Sector 51 centre (typically Saturday and one weekday) plus three live online sessions for theory and doubt-clearing. Weekend-only intensive batches are also available for students whose parents prefer weekday focus on school and Class 11 boards.',
   },
   {
-    question: 'What options are available for students from Pataudi Road?',
+    question:
+      'How does Cerebrum support New Gurugram students moving from Sectors 67-80 schools to NEET prep?',
     answer:
-      'Three options: 1) Weekend-only batch (minimize travel), 2) Hybrid (2 days offline + online), 3) Full offline with evening timing to avoid peak traffic.',
+      'The Sectors 67-80 corridor is well-served by schools like Excelsior American School, GD Goenka Sector 48 and Suncity School Sector 54. Several of our Pataudi Road corridor students attend these schools. We coordinate batch timings around their bus drop-off windows and provide chapter-wise NCERT pacing aligned to their school exam calendar so Class 11 boards and NEET foundation move together.',
   },
   {
-    question: 'Is the drive worth it from Pataudi Road?',
+    question:
+      'Is the residential growth on Pataudi Road and Sectors 99-112 changing how Cerebrum schedules batches?',
     answer:
-      'Yes! Local coaching options are limited in this emerging area. 20 min for AIIMS faculty, small batches, and 98% success rate is a smart investment.',
+      'Yes. The Pataudi Road residential corridor — Signature Global, ROF Amaltas, GLS Avenue, Pivotal Devaan and others — has added thousands of families over the last few years. We have responded by adding a dedicated Saturday-Sunday 9 AM-1 PM weekend intensive batch and a Friday evening doubt-clearing session, both of which most New Gurugram students from this corridor opt into.',
   },
 ]
 
@@ -81,10 +85,15 @@ export default function NEETCoachingPataudiRoadGurugram() {
               For Emerging Gurugram Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Pataudi Road Gurugram
+              NEET Biology Prep for the Pataudi Road and New Gurugram Corridor (Sectors 86-95)
             </h1>
             <p className="text-xl text-lime-100 mb-4">
-              Just 20 minutes from Pataudi Road! Premium NEET biology coaching at M2K Sector 51.
+              Pataudi Road is the NH-352W corridor running south-west out of old Gurgaon (now
+              Gurugram), threading past Sectors 9 and 10 and feeding the New Gurugram residential
+              belt of Sectors 81-95. Families in Signature Global, ROF Amaltas, GLS Avenue and the
+              Sector 99-112 expansion sit roughly 16-18 km from our Sector 51 centre — reachable in
+              25-35 minutes via Hero Honda Chowk and Sohna Road. We schedule weekend-intensive and
+              hybrid batches specifically around this commute.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

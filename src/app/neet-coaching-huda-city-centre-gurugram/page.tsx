@@ -36,24 +36,27 @@ const nearbyAreas = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from HUDA City Centre?',
+    question:
+      'My family commutes daily from Delhi via the Yellow Line to HUDA City Centre - is the onward leg to Sector 51 manageable for a NEET student?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 7-8 km from HUDA City Centre. By car via Golf Course Road or Sector 44, it takes 12-15 minutes.',
+      'Very manageable. Because HUDA City Centre is the Yellow Line terminus, Delhi students arrive with no transfers from anywhere on the line - Hauz Khas, Saket, Qutab Minar, Chhatarpur. From HUDA City Centre, they catch a 10-minute shared auto or a 12-minute Rapid Metro feeder route to Sector 53-54 station, then a short auto to M2K Corporate Park. The whole Delhi-to-classroom journey runs 60-75 minutes.',
   },
   {
-    question: 'Can I reach via Metro from HUDA City Centre?',
+    question:
+      'Which metro plus auto combination is fastest from the MGF Mall / Sector 29 side of HUDA City Centre?',
     answer:
-      'Yes! HUDA City Centre is Yellow Line terminus. Take Metro towards Samaypur Badli, get off at Sector 53-54, then 10 min auto. Total: 25-30 min.',
+      'From the MGF Mall / Sector 29 / Leisure Valley flank of HUDA City Centre, do not bother with the metro - you would walk further to the platform than save in transit. A direct auto via Sector 44 -> Golf Course Road -> Sector 51 takes 12-15 minutes for under 200 rupees. From the HUDA station entry on the Sector 44 side, this is the fastest end-to-end option for evening batches.',
   },
   {
-    question: 'Is HUDA City Centre a good location for coaching?',
+    question:
+      'HUDA City Centre is a major commercial and metro footfall hub - do you cater to working parents who finish their day there?',
     answer:
-      'HUDA City Centre area has many coaching centers but most are crowded. Our Sector 51 center offers smaller batches (20 students) with AIIMS faculty - worth the 15 min drive.',
+      'Yes, this is a strong segment for us. Parents working in MGF Mall offices, Sector 29 corporates, or visiting HUDA City Centre for retail or banking errands often pick up students after our 5-8 PM batch on their way home. Most Gurgaon families call our area "Gurugram Sector 51" on Google Maps for parent-driver coordination, and the route from HUDA City Centre to Sector 51 is straightforward via Sector 44 link road.',
   },
   {
-    question: 'What about parking at your center?',
+    question: 'Are there coaching centers right at HUDA City Centre? Why pick one further out?',
     answer:
-      'M2K Corporate Park has ample parking - free for students. Unlike crowded HUDA area coaching centers, parking is never an issue here.',
+      'Yes - HUDA City Centre and Sector 14 have multiple high-volume coaching brands. Several of our current HUDA-area students transferred specifically because those centers run 100-150 student lecture halls, while our biology batches cap at 20-25. The 12-15 minute extra drive buys daily faculty access, individual doubt-clearing, and a low-noise Sector 51 corporate park environment over a chaotic coaching market location.',
   },
 ]
 
@@ -73,10 +76,15 @@ export default function NEETCoachingHUDACityCentreGurugram() {
               Yellow Line Terminus
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for HUDA City Centre
+              NEET Coaching at the HUDA City Centre Metro Terminus, Gurugram
             </h1>
-            <p className="text-xl text-violet-100 mb-4">
-              Just 15 minutes from HUDA City Centre! Premium NEET biology coaching at M2K Sector 51.
+            <p className="text-lg md:text-xl text-violet-100 mb-4 leading-relaxed">
+              HUDA City Centre is the Yellow Line terminus and a major commercial gravity well - MGF
+              Mall, Sector 29 nightlife, and a dense retail and office footprint. For Delhi
+              students, it means a no-transfer metro ride straight from Hauz Khas or Saket; for
+              Gurugram working parents, it is the natural after-work pickup hub. Cerebrum sits 7-8
+              km east at M2K Corporate Park, Sector 51, reachable in 12-15 minutes via Sector 44 or
+              Golf Course Road.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

@@ -26,34 +26,38 @@ export const metadata: Metadata = {
 }
 
 const nearbyAreas = [
-  { name: 'Sector 67', distance: '15 min drive' },
-  { name: 'Sector 65', distance: '12 min drive' },
   { name: 'Sector 66', distance: '14 min drive' },
   { name: 'Sector 68', distance: '16 min drive' },
-  { name: 'Golf Course Extension', distance: '10 min drive' },
-  { name: 'Sector 58', distance: '8 min drive' },
+  { name: 'Sector 70', distance: '17 min drive' },
+  { name: 'Sohna Road', distance: '8 min drive' },
+  { name: 'Subhash Chowk', distance: '11 min drive' },
+  { name: 'Sector 51 (Our Location)', distance: '15 min drive' },
 ]
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Sector 67?',
+    question:
+      'The Sohna elevated road and metro extension are coming — does that change the Sector 67 commute?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 7-8 km from Sector 67. Via Golf Course Extension Road, it takes 12-15 minutes by car.',
+      'The Sohna elevated corridor already cuts the Subhash Chowk bottleneck on the Sector 67 side, which has shaved roughly 4–6 minutes off the drive to our M2K Sector 51 center. The proposed Gurgaon Metro extension along Sohna Road would matter more for parents than students, since our weekday batches end at 8 PM and Sector 67 families today rely on private cabs or self-drive rather than transit.',
   },
   {
-    question: 'Is Sector 67 a premium residential area?',
+    question:
+      'Which Sector 67 schools send students to Cerebrum, and do batch timings clash with their dispersal?',
     answer:
-      'Yes, Sector 67 is on Golf Course Extension Road with premium projects like M3M, Ireo, and Emaar. We serve many families from these societies.',
+      'Most of our Sector 67 NEET students come from Heritage Xperiential Sector 62, GD Goenka Sector 48, and Pathways World School (bus route from Sector 67). Heritage and GD Goenka disperse at 3:15 PM and 3:30 PM respectively, so the 5–8 PM weekday batch lands cleanly with a 90-minute home buffer for snacks and a quick recap before our 5 PM start.',
   },
   {
-    question: 'What batch timings work for Sector 67 students?',
+    question:
+      'We live in Adani Samsara or M3M Sky City — is parking inside the gated community an issue for Cerebrum cab pickup?',
     answer:
-      'Evening batch (5-8 PM) works well - leave by 4:40 PM. Weekend batches (Sat-Sun) are popular for avoiding weekday traffic on Golf Course Extension.',
+      'Adani Samsara has a controlled visitor lane near Tower 1 where our shared evening cab does drop-offs without entering the resident parking. M3M Sky City is similar — drop-off happens at the boom barrier on the Sohna Road side rather than the inner clubhouse loop. Tulip Violet families typically use the Tulip side gate, which avoids the longer internal road.',
   },
   {
-    question: 'Do you have students from M3M and Ireo projects?',
+    question:
+      'South Gurgaon is still developing — is there a meaningful Cerebrum peer group from Sector 67 specifically?',
     answer:
-      'Yes! We have 20+ students from M3M Golf Estate, Ireo Grand Arch, and Emaar projects in Sector 65-70. Premium families trust our AIIMS faculty.',
+      'Yes — even though Sector 67 is younger than core Gurgaon, we have around 14 active students from Adani Samsara, M3M Sky City, Tulip Violet and the surrounding plotted pockets. Density is high enough that two of these families now share a weekday evening cab to Sector 51, and weekend Intensive students from Sector 67 typically know one or two batchmates already.',
   },
 ]
 
@@ -80,11 +84,15 @@ export default function NEETCoachingSector67Gurgaon() {
               For Golf Course Extension Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Sector 67 Gurgaon
+              South Gurgaon NEET Coaching — Sector 67
             </h1>
             <p className="text-xl text-amber-100 mb-4">
-              Just 15 minutes from Golf Course Extension! Premium NEET biology coaching at M2K
-              Sector 51.
+              Sector 67 is part of the South Gurgaon Sohna Road belt (the city is officially
+              Gurugram since 2016) and is still maturing as a residential pocket, anchored by Adani
+              Samsara, M3M Sky City and Tulip Violet alongside newer family-friendly projects. Our
+              M2K Corporate Park, Sector 51 center is about a 15-minute drive via Sohna Road and the
+              Golf Course Extension Road link, comfortable for both weekday evening and weekend
+              Intensive batches.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

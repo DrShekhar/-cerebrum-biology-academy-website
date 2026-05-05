@@ -26,34 +26,38 @@ export const metadata: Metadata = {
 }
 
 const nearbyAreas = [
-  { name: 'Sector 69', distance: '18 min drive' },
-  { name: 'Sector 70', distance: '17 min drive' },
   { name: 'Sector 68', distance: '16 min drive' },
-  { name: 'Sector 70A', distance: '19 min drive' },
-  { name: 'Sohna Road', distance: '12 min drive' },
-  { name: 'Sector 67', distance: '15 min drive' },
+  { name: 'Sector 70', distance: '17 min drive' },
+  { name: 'Sector 71', distance: '20 min drive' },
+  { name: 'Sohna Road', distance: '10 min drive' },
+  { name: 'Subhash Chowk', distance: '13 min drive' },
+  { name: 'Sector 51 (Our Location)', distance: '18 min drive' },
 ]
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Sector 69?',
+    question:
+      'We live near M3M Sky City or Tata Primanti — what is the realistic morning drive to Sector 51?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 8-9 km from Sector 69. Via Sohna Road or Golf Course Extension, it takes 15-18 minutes.',
+      'From M3M Sky City and Tata Primanti, the 9 AM weekend batch drive to M2K Corporate Park, Sector 51 is around 17–20 minutes via Sohna Road and the Sector 56 service road. On weekdays for the 5 PM batch, plan 20–22 minutes because the Subhash Chowk merge slows down after 4:45 PM. Leaving by 4:30 PM keeps things stress-free.',
   },
   {
-    question: 'Is Sector 69 a developing area?',
+    question:
+      'Sector 69 is close to KMP Expressway and IMT Manesar — does that affect Cerebrum logistics?',
     answer:
-      'Yes, Sector 69 is part of New Gurugram with new residential projects. Many young families are moving here, and we serve this growing community with quality NEET coaching.',
+      'For families commuting in from IMT Manesar offices, the KMP–Sohna Road link makes the school-pickup-then-Cerebrum loop viable: parents can leave IMT by 4:15 PM, pick up the child near the Sector 69 society, and reach Sector 51 by 5 PM. We have a few Tata Primanti and M3M Sky City families running exactly this route, and our weekday batch holds attendance for up to 10 minutes for the IMT loop.',
   },
   {
-    question: 'What is the best route from Sector 69?',
+    question:
+      'Is the Sohna Road elevated stretch actually faster from Sector 69 than Golf Course Extension Road?',
     answer:
-      'Two options: 1) Via Sohna Road → Sector 49 → Sector 51 (faster), 2) Via Sector 67 → Golf Course Extension. Choose based on traffic.',
+      'Yes, marginally. The Sohna Road elevated section, post-completion, gets you to Subhash Chowk in roughly 11 minutes from Sector 69, after which you cut left to Sector 51 in another 6–7 minutes. Golf Course Extension Road via Sector 67 is scenic but adds two signal-heavy junctions and tends to run 3–4 minutes longer on weekday evenings.',
   },
   {
-    question: 'Are online classes available for Sector 69 students?',
+    question:
+      'Given the longer commute, should Sector 69 students consider hybrid (online + offline) attendance?',
     answer:
-      'Yes! We offer hybrid mode - attend some classes online, some offline. Perfect for students who find daily travel challenging.',
+      'It is a sensible call for Class 11 students still building stamina. Our hybrid Sector 69 plan typically has students attend offline at M2K Sector 51 on Tuesday, Thursday and Saturday (anchor days for live problem-solving), with Monday/Wednesday/Friday switched to live online. By Class 12 most Sector 69 students move to fully offline once the syllabus weight makes the in-person sessions worth the 18-minute drive each way.',
   },
 ]
 
@@ -72,10 +76,15 @@ export default function NEETCoachingSector69Gurgaon() {
               For Sector 69 Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Sector 69 Gurgaon
+              Sector 69 Sohna Road — AIIMS-Faculty NEET Coaching
             </h1>
             <p className="text-xl text-cyan-100 mb-4">
-              Just 18 minutes from New Gurugram! Premium NEET biology coaching at M2K Sector 51.
+              Sector 69 sits further south on the Sohna Road corridor of new Gurgaon (officially
+              Gurugram since 2016), anchored by M3M Sky City, Tata Primanti and the surrounding
+              low-rise plotted pockets, with quick access to KMP Expressway and IMT Manesar. Our M2K
+              Corporate Park, Sector 51 center is roughly a 17–20 minute drive via the Sohna Road
+              elevated stretch and the Subhash Chowk left turn — long enough to plan around traffic,
+              short enough to do daily.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />
@@ -208,7 +217,7 @@ export default function NEETCoachingSector69Gurgaon() {
 
       <section className="py-16 bg-cyan-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Join New Gurugram Students</h2>
+          <h2 className="text-3xl font-bold mb-4">Join New Gurgaon Students</h2>
           <p className="text-xl text-cyan-100 mb-8">
             Book a free demo class. Quality matters more than distance.
           </p>

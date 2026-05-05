@@ -38,24 +38,26 @@ const nearbyAreas = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from MG Road?',
+    question:
+      'What is the cleanest Yellow Line + Rapid Metro route from MG Road station to Sector 51?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 8-10 km from MG Road. By car, it takes 15-18 minutes via Golf Course Road. Metro + cab option also available for students.',
+      'Board Yellow Line at MG Road, exit one stop later at Sikanderpur, transfer to Rapid Metro and ride to Sector 55-56 station - 10-12 minutes total on rails. From there, autos to M2K Corporate Park run 8-10 minutes. The whole MG Road-to-classroom door is roughly 25-30 minutes, which beats driving Golf Course Road during 5-7 PM peak.',
   },
   {
-    question: 'Is MG Road Metro station connected to your center?',
+    question: 'Do you take students from both old Gurugram and DLF Phase 1 around MG Road?',
     answer:
-      'MG Road Metro (Yellow Line) is well-connected. From MG Road station, take Rapid Metro to Sector 54-55, then 10 min auto to our center. Total journey: 25-30 min by public transport.',
+      'Yes - the MG Road corridor sits exactly between the two. Our current MG Road cohort splits roughly evenly between long-time Gurgaon families near Sahara Mall and Sector 14 and DLF Phase 1 residents on the south side. Most Gurgaon families call our area "Gurugram Sector 51" on Google Maps; both groups arrive at the same Sector 51 center via different routes.',
   },
   {
-    question: 'What are the best timings for MG Road area students?',
+    question:
+      'Can parents combine class drop-off with shopping at MGF Metropolitan or Sahara Mall?',
     answer:
-      'Evening batch (5-8 PM) is popular - less traffic after 4 PM. Weekend batch (Sat-Sun 9 AM - 1 PM) avoids weekday congestion. We also offer online classes for ultimate flexibility.',
+      'Many do. The 5-8 PM evening batch gives parents three full hours - enough to handle MGF Metropolitan, Sahara Mall, or a meal at Galleria Market and return for pickup without rushing. Several MG Road families have made this their weekly routine, especially on Saturday batches when malls are less crowded.',
   },
   {
-    question: 'Are there students from MG Road area at Cerebrum?',
+    question: 'Is there a quicker bypass route from MG Road to Sector 51 outside metro hours?',
     answer:
-      'Yes! We have 45+ students from MG Road, Sikanderpur, DLF Phase 1, and nearby sectors. Many travel together via Metro + shared cab.',
+      'For evening drives, take MG Road -> Sikanderpur underpass -> Golf Course Road -> Sector 54 cloverleaf -> Sector 51. This avoids the IFFCO Chowk signal and saves 4-5 minutes versus the NH-48 service road. Total drive: 15-18 minutes off-peak, up to 25 minutes during 6-7 PM. Sundays before noon clear the route to a 12-minute run.',
   },
 ]
 
@@ -85,10 +87,14 @@ export default function NEETCoachingMGRoadGurugram() {
               Metro Accessible
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for MG Road Gurugram
+              AIIMS-Faculty NEET Coaching Near MG Road, Gurugram
             </h1>
-            <p className="text-xl text-purple-100 mb-4">
-              Just 15 minutes from MG Road! Premium NEET biology coaching at M2K Sector 51.
+            <p className="text-lg md:text-xl text-purple-100 mb-4 leading-relaxed">
+              MG Road is the central spine of Gurugram - Yellow Line metro, Sahara Mall and MGF
+              Metropolitan, plus a residential mix of long-time Gurugram families and DLF Phase 1
+              households. From MG Road station, students reach Cerebrum at M2K Corporate Park,
+              Sector 51 in roughly 25 minutes via Yellow Line + Rapid Metro to Sector 55-56, or in
+              15-18 minutes by car along Golf Course Road during off-peak windows.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

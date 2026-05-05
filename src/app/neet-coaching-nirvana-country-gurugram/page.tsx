@@ -39,24 +39,28 @@ const nearbyAreas = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Nirvana Country?',
+    question:
+      'Do you handle the IB Biology HL syllabus for Pathways and Heritage Xperiential students alongside NEET prep?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is just 3-4 km from Nirvana Country. It takes only 8-10 minutes by car. We are literally the nearest quality NEET coaching for Nirvana Country residents.',
+      'Yes. A meaningful share of our Nirvana Country students come from Pathways World School Aravali, Heritage Xperiential Learning School and Lancers International, all on the IB and Cambridge tracks. We map IB Biology HL topics like cell respiration, genetics and human physiology against the NEET NCERT chapters so students cover internal assessments, paper 2/3 long-response writing and NEET MCQ practice in the same year without doubling their workload.',
   },
   {
-    question: 'What makes Cerebrum ideal for Nirvana Country students?',
+    question:
+      'What is the typical commute from Sector 50 Nirvana Country to Sector 51 M2K Corporate Park?',
     answer:
-      'Proximity (10 min), premium infrastructure matching Nirvana Country standards, small batches (25 students), AIIMS faculty, and convenient evening timings for school students.',
+      'Nirvana Country sits inside Sector 50 and is barely 3-4 km from our centre — one signal at the Sector 50-51 divider, then a 200-metre drive to M2K Corporate Park. End-to-end the trip is 8-10 minutes outside peak hour and seldom over 12 even at evening rush. This is the shortest commute of any of our Gurugram catchment areas, which is why several Pathways parents drop off after the school bus run.',
   },
   {
-    question: 'Are there other Nirvana Country students at Cerebrum?',
+    question:
+      'How do you balance internal IB and Cambridge assessments with NEET test-series timelines for South Gurugram families?',
     answer:
-      'Yes! We have 30+ students from Nirvana Country and nearby premium societies like The Close South, Central Park, and Uppal Southend. Many form study groups.',
+      'We share a year-long calendar with parents in March showing IB internal assessment windows, IGCSE mocks and our NEET phase tests. For Heritage Xperiential and Lancers students, we shift NEET full-length tests away from the IB IA submission month and add extra Saturday revision in the gap weeks. This stops the typical March-April collision that Sector 50 IB families struggle with.',
   },
   {
-    question: 'What are the best batch timings for Nirvana Country students?',
+    question:
+      'Are there Nirvana Country and The Close South neighbours already studying at Cerebrum we can connect with?',
     answer:
-      'Evening batch (5-8 PM) is most popular - students reach in 10 min after school. Weekend batch (Sat-Sun 9 AM - 1 PM) is also convenient given the short distance.',
+      'Yes. We have current Class 11 and 12 students from Nirvana Country, The Close South, Central Park 2 and Uppal Southend. With permission we can introduce a parent or two so you can hear their experience first-hand — especially useful if your child is moving from a Cambridge IGCSE board to NCERT-driven NEET prep, which is the most common shift among Sector 50 IB-school families.',
   },
 ]
 
@@ -76,10 +80,16 @@ export default function NEETCoachingNirvanaCountryGurugram() {
               For Nirvana Country Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Nirvana Country
+              IB and NEET Biology Coaching for Nirvana Country — Sector 50 South Gurugram Families
             </h1>
             <p className="text-xl text-emerald-100 mb-4">
-              Just 10 minutes from your home! Premium NEET biology coaching at M2K Sector 51.
+              Nirvana Country is a premium gated community in Sector 50, South Gurugram (locally
+              still called South Gurgaon), neighbouring Pathways World School Aravali, Heritage
+              Xperiential Learning School and Lancers International. Many residents are
+              Cambridge-IGCSE or IB families balancing internal assessments with NEET prep. Our M2K
+              Corporate Park centre in Sector 51 is just 3-4 km away — an 8-10 minute drive across
+              one signal — and we map IB Biology HL chapters directly to the NEET NCERT syllabus so
+              South Gurugram students do not study twice.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

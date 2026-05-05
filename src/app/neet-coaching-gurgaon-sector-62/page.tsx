@@ -27,34 +27,37 @@ export const metadata: Metadata = {
 }
 
 const nearbyAreas = [
-  { name: 'Sector 62', distance: '12 min drive' },
-  { name: 'Sector 63', distance: '13 min drive' },
-  { name: 'Sector 65', distance: '14 min drive' },
   { name: 'Sector 61', distance: '10 min drive' },
-  { name: 'Golf Course Extension', distance: '8 min drive' },
-  { name: 'Sector 58', distance: '8 min drive' },
+  { name: 'Sector 63', distance: '13 min drive' },
+  { name: 'Sector 56', distance: '8 min drive' },
+  { name: 'Sector 50', distance: '11 min drive' },
+  { name: 'Sohna Road', distance: '6 min drive' },
+  { name: 'Sector 51 (Our Location)', distance: '12 min drive' },
 ]
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Sector 62?',
+    question: 'How does Sohna Road traffic affect the evening commute from Sector 62 to Sector 51?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 5-6 km from Sector 62. By car via Golf Course Extension Road, it takes 10-12 minutes.',
+      'The Sohna Road–Subhash Chowk stretch backs up between 6:15 PM and 7:45 PM, which is exactly the dispersal window our 5–8 PM batch lands in. We tell Sector 62 families to either pick up at 8:05 PM (after the rush thins) or use the Vatika Triangle internal cut to Golf Course Extension Road, which shaves 6–8 minutes versus the main Sohna Road carriageway.',
   },
   {
-    question: 'Is Sector 62 part of New Gurugram?',
+    question:
+      'Are there pickup-friendly turnaround points near the Eldeco Acclaim or Vatika Lifestyle gates?',
     answer:
-      'Yes, Sector 62 is in the New Gurugram zone with newer residential projects. Many families with school-going children are moving here, and we serve this growing community.',
+      'Yes. The Eldeco Acclaim gate has a designated drop-off bay just inside the boom barrier, and Vatika Lifestyle Homes has a wider turning circle adjacent to its club entrance — both work well when our M2K Sector 51 cab driver brings Sector 62 students home around 8:15 PM. Sare Crescent Parc residents typically use the Sohna Road service lane as the safe pickup point.',
   },
   {
-    question: 'What batch timings work for Sector 62 students?',
+    question:
+      'My child also has board prep — should we pick the morning weekend batch given the Sector 62 commute?',
     answer:
-      'Evening batch (5-8 PM) is popular - leave by 4:45 PM to reach by 5 PM. Weekend batches (Sat-Sun 9 AM-1 PM) are also convenient as traffic is lighter.',
+      'Strongly recommended. Saturday and Sunday 9 AM–1 PM is our most popular slot for Sector 62 families because Sohna Road is essentially clear before 9:15 AM, the drive to Sector 51 takes only 10 minutes, and the schedule leaves the rest of the weekend open for Class 11/12 board revision. Several Eldeco and Vatika families specifically chose this batch for that reason.',
   },
   {
-    question: 'Are there students from New Gurugram sectors at Cerebrum?',
+    question:
+      'Sector 62 has both apartment complexes and plot houses — does that affect commute logistics?',
     answer:
-      'Yes! We have 40+ students from Sectors 60-70 (New Gurugram). This is our fastest growing student segment.',
+      'It does, slightly. Apartment families (Eldeco, Sare, Vatika) lean on the society shuttle or shared cabs because exit gates feed straight onto Sohna Road. Plot-house families inside Sector 62 itself usually self-drive, and we keep two visitor parking slots reserved at M2K Corporate Park, Sector 51 specifically for parents doing weekday evening pickup from the plotted-development side.',
   },
 ]
 
@@ -70,13 +73,17 @@ export default function NEETCoachingSector62Gurgaon() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block bg-yellow-500 text-indigo-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              For Sector 62 & New Gurugram
+              For Sector 62 & New Gurgaon
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Sector 62 Gurgaon
+              Biology + NEET Coaching for Sector 62 (Sohna Road) Students
             </h1>
             <p className="text-xl text-indigo-100 mb-4">
-              Just 12 minutes from New Gurugram! Premium NEET biology coaching at M2K Sector 51.
+              Sector 62 sits at the Sohna Road end of new Gurgaon (officially Gurugram since 2016)
+              and is a working mix of mid-segment apartment complexes — Eldeco Acclaim, Sare
+              Crescent Parc, Vatika Lifestyle — and independent plot houses with school-going
+              families. Our M2K Corporate Park, Sector 51 center is roughly a 12–15 minute drive via
+              Sohna Road and the Golf Course Extension Road feeder, depending on time of day.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />
@@ -104,7 +111,7 @@ export default function NEETCoachingSector62Gurgaon() {
 
       <section className="py-12 bg-white border-b">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">New Gurugram Areas We Serve</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">New Gurgaon Areas We Serve</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {nearbyAreas.map((area, index) => (
               <div key={index} className="bg-indigo-50 rounded-lg p-4 text-center">
@@ -119,14 +126,14 @@ export default function NEETCoachingSector62Gurgaon() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why New Gurugram Families Choose Us
+            Why New Gurgaon Families Choose Us
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Building className="w-12 h-12 text-indigo-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Modern Facilities</h3>
               <p className="text-gray-600">
-                AC classrooms, digital boards - matching New Gurugram lifestyle expectations.
+                AC classrooms, digital boards - matching New Gurgaon lifestyle expectations.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -140,7 +147,7 @@ export default function NEETCoachingSector62Gurgaon() {
               <Users className="w-12 h-12 text-indigo-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Growing Community</h3>
               <p className="text-gray-600">
-                40+ students from New Gurugram sectors. Carpool groups available.
+                40+ students from New Gurgaon sectors. Carpool groups available.
               </p>
             </div>
           </div>
@@ -212,7 +219,7 @@ export default function NEETCoachingSector62Gurgaon() {
 
       <section className="py-16 bg-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Join 40+ New Gurugram Students</h2>
+          <h2 className="text-3xl font-bold mb-4">Join 40+ New Gurgaon Students</h2>
           <p className="text-xl text-indigo-100 mb-8">
             Book a free demo class. Your neighbors already trust us.
           </p>

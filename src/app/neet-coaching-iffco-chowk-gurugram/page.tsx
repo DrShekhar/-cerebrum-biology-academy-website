@@ -36,24 +36,27 @@ const nearbyAreas = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from IFFCO Chowk?',
+    question:
+      'I live in Sadar Bazar / Civil Lines side of old Gurugram - is the IFFCO Chowk route easier than going through DLF?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 6-7 km from IFFCO Chowk. By car via NH-48 or Golf Course Road, it takes 10-12 minutes.',
+      'Yes, by a clear margin. Old Gurugram families typically reach IFFCO Chowk in 10-12 minutes via Hero Honda Chowk, then take Golf Course Road extension or the Sector 53-54 link to Sector 51. Total door-to-door is 22-25 minutes, versus 35+ minutes if you cut through DLF Phase 2-3 internal roads. We see this pattern from Civil Lines, Sector 4-7, and Jacobpura families weekly.',
   },
   {
-    question: 'Is IFFCO Chowk Metro connected to your center?',
+    question:
+      'Is the Yellow Line metro from IFFCO Chowk a viable daily commute for a NEET student?',
     answer:
-      'IFFCO Chowk Metro (Yellow Line) is well connected. Take Metro to Sector 53-54, then 10 min auto/cab to our center. Total: 25-30 min by public transport.',
+      'It is. Board at IFFCO Chowk, exit at Sector 53-54 metro after 4 stops (~9 minutes), then a 10-minute shared auto to M2K Corporate Park. The full trip is 25-30 minutes and avoids NH-48 traffic entirely. Several DLF Phase 2 and Phase 3 students take this route specifically because it is rain-proof and predictable - critical when board exam mocks run on tight evening schedules.',
   },
   {
-    question: 'What batch timings work for IFFCO Chowk students?',
+    question:
+      'IFFCO Chowk sits between Old Gurugram and DLF - which feeder neighborhoods do most of your students come from?',
     answer:
-      'Evening batch (5-8 PM) is popular - avoid NH-48 peak hours. Weekend batches (Sat-Sun) are ideal for avoiding weekday traffic.',
+      'Our IFFCO Chowk cohort draws from a mixed catchment: DLF Phase 1, 2 and 3 (the largest share), Sector 28-29 around Leisure Valley, Signature Tower side, and Sector 14-15 from old Gurgaon. Most Gurgaon families call our area "Gurugram Sector 51" on Google Maps when their drivers ask for directions. Several students carpool from Phase 2 weekly.',
   },
   {
-    question: 'Are there students from Leisure Valley at Cerebrum?',
+    question: 'How do you handle the IFFCO Chowk bypass/NH-48 chaos for evening batches?',
     answer:
-      'Yes! We have 30+ students from IFFCO Chowk area including Leisure Valley, Sector 29, and nearby residential areas.',
+      'Our 5-8 PM batch starts after the worst NH-48 outflow window and we deliberately encourage Golf Course Road extension (not NH-48 service road) for IFFCO Chowk parents. For students who get caught in unexpected jams during monsoon or VIP movement closures, we offer same-day switch to the live online stream and recordings stay available for 7 days.',
   },
 ]
 
@@ -73,10 +76,14 @@ export default function NEETCoachingIFFCOChowkGurugram() {
               Metro Connected
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for IFFCO Chowk Gurugram
+              IFFCO Chowk NEET Coaching - The Old Gurugram to DLF Bridge
             </h1>
-            <p className="text-xl text-blue-100 mb-4">
-              Just 12 minutes from IFFCO Chowk! Premium NEET biology coaching at M2K Sector 51.
+            <p className="text-lg md:text-xl text-blue-100 mb-4 leading-relaxed">
+              IFFCO Chowk is the gateway between old Gurugram (Sadar Bazar, Civil Lines, Sector 4-7)
+              and the DLF Phase 1, 2 and 3 belt - and it is a Yellow Line metro stop on the NH-48
+              bypass. Cerebrum sits 6-7 km east at M2K Corporate Park, Sector 51, reachable in 10-12
+              minutes by car or 25-30 minutes via Yellow Line + auto from Sector 53-54 metro. The
+              route works equally well from old Gurugram lanes or DLF towers.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

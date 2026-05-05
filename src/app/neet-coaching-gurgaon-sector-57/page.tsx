@@ -26,34 +26,35 @@ export const metadata: Metadata = {
 }
 
 const nearbyAreas = [
-  { name: 'Sector 57', distance: '5 min drive' },
   { name: 'Sector 56', distance: '4 min drive' },
   { name: 'Sector 55', distance: '6 min drive' },
   { name: 'Sector 54', distance: '7 min drive' },
-  { name: 'Golf Course Extension', distance: '8 min drive' },
+  { name: 'Sector 58', distance: '6 min drive' },
+  { name: 'Golf Course Ext Road', distance: '5 min drive' },
   { name: 'Sector 51 (Our Location)', distance: '0 min' },
 ]
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Sector 57?',
+    question:
+      'Is parking at M3M Merlin / Tata Raheja Atrium a hassle when parents come for weekend pickup?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is just 2-3 km from Sector 57. By car, it takes only 5-7 minutes. We are literally neighbors!',
+      'No. Both societies have visitor parking that absorbs weekend Cerebrum pickup traffic without trouble — and we stagger Sat-Sun batch dismissals by 10 minutes precisely to avoid clusters at the M3M Merlin and Tata Raheja Atrium gates. Parents typically wait inside the M2K Corporate Park drop-off bay (Sector 51) instead, which is a 5-minute return loop.',
   },
   {
-    question: 'What makes Sector 57 students choose Cerebrum?',
+    question: 'Can my Class 11 child cycle from Sector 57 to Sector 51 safely?',
     answer:
-      'Proximity (5 min), premium facilities matching Sector 57 standards, small batches of 20 students, AIIMS faculty, and convenient evening timings.',
+      'Several of our Sector 57 students cycle in via the Sector 56–55 internal road, which avoids Golf Course Extension Road traffic almost entirely. The 2.5 km route takes 12–15 minutes on a cycle. We recommend it only for daylight slots (4–6 PM weekdays, weekend mornings) and ask families to skip cycling during monsoon waterlogging on the Sector 55 stretch.',
   },
   {
-    question: 'Are there other Sector 57 students at Cerebrum?',
+    question: 'Which Sector 57 builder community has the most Cerebrum students?',
     answer:
-      'Yes! We have 25+ students from Sector 57 and nearby sectors (54-58). Many walk or cycle to our center given the short distance.',
+      'CHD Avenue 71 and ATS Kocoon together account for the majority of our Sector 57 enrolment, followed by Vatika Sovereign Next and the M3M Merlin towers. We currently have around 25 active students across these communities, which is dense enough that several CHD parents now run an informal evening carpool to our Sector 51 center.',
   },
   {
-    question: 'What batch timings work for Sector 57 students?',
+    question: 'My child studies at GD Goenka or DPS Sector 45 — do batch timings clash?',
     answer:
-      'All batches work well given the proximity! Evening (5-8 PM) and weekend (Sat-Sun 9 AM-1 PM) are most popular.',
+      'Our 5–8 PM weekday batch starts after GD Goenka Sector 48 and DPS Sector 45 dispersal, so most Sector 57 students reach M2K Sector 51 with 15 minutes to spare. If your child is in a longer school day (extended-curriculum stream), the 6 PM start slot works better, and our weekend Intensive (Sat-Sun 9 AM–1 PM) is the cleanest fit.',
   },
 ]
 
@@ -72,10 +73,14 @@ export default function NEETCoachingSector57Gurgaon() {
               For Sector 57 Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Sector 57 Gurgaon
+              Sector 57 NEET Coaching — 5 Min from M2K Corporate Park
             </h1>
             <p className="text-xl text-teal-100 mb-4">
-              Just 5 minutes from your home! Premium NEET biology coaching at M2K Sector 51.
+              Sector 57 sits inside the new Gurgaon belt (officially Gurugram since 2016) and is one
+              of the most premium residential pockets along Golf Course Extension Road, with
+              families from M3M Merlin, Tata Raheja Atrium, CHD, ATS and Vatika developments. Our
+              M2K Corporate Park, Sector 51 center is just a 5-minute drive away — close enough that
+              many Sector 57 students walk or cycle to evening batches.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

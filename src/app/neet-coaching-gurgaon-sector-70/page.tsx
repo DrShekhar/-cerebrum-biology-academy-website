@@ -26,34 +26,37 @@ export const metadata: Metadata = {
 }
 
 const nearbyAreas = [
-  { name: 'Sector 70', distance: '17 min drive' },
-  { name: 'Sector 70A', distance: '18 min drive' },
   { name: 'Sector 69', distance: '18 min drive' },
-  { name: 'Sector 71', distance: '19 min drive' },
-  { name: 'SPR Road', distance: '15 min drive' },
-  { name: 'Sector 68', distance: '16 min drive' },
+  { name: 'Sector 70A', distance: '20 min drive' },
+  { name: 'Sector 71', distance: '21 min drive' },
+  { name: 'Sohna Road', distance: '13 min drive' },
+  { name: 'Subhash Chowk', distance: '15 min drive' },
+  { name: 'Sector 51 (Our Location)', distance: '22 min drive' },
 ]
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Sector 70?',
+    question:
+      'Sector 70 is mostly plotted-development — how do families typically arrange transport to Sector 51?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 8-9 km from Sector 70. Via SPR or Golf Course Extension, it takes 15-17 minutes by car.',
+      'Sector 70 plotted-colony density is lower than the Sohna Road high-rise belt, so society-level shuttles and shared cabs do not pre-exist the way they do in Adani or Tata projects. In practice, our Sector 70 families self-drive in pairs — two households alternate weekday evenings — or use a dedicated school-cab operator that already runs the Sector 70 → Sector 51 corridor. We help connect new families with existing Sector 70 carpools when slots are open.',
   },
   {
-    question: 'Is online option available?',
+    question:
+      'Is the longer commute (around 22 minutes) actually workable for daily Class 12 NEET coaching?',
     answer:
-      'Yes! We offer hybrid learning for Sector 70 students. Attend 2-3 days offline, rest online. Perfect for managing travel time.',
+      'For Class 12 it is, with one important caveat: weekday batches that run 5–8 PM put Sector 70 students back home around 8:35 PM, which only works if school dispersal is by 3 PM and the child has a 90-minute rest window. Families with longer school days (Pathways World, certain DPS branches) usually keep Class 11 on the weekend Intensive (Sat-Sun 9 AM–1 PM) and switch to weekday offline only in Class 12.',
   },
   {
-    question: 'Which route is faster from Sector 70?',
+    question: 'What is the realistic best-case route from Sector 70 to M2K Corporate Park?',
     answer:
-      'Via SPR → Golf Course Extension → Sector 56 → Sector 51 is usually faster. Avoid peak hours (8-10 AM, 6-8 PM) for smoother travel.',
+      'Sector 70 → Sohna Road via the Sector 71 link → Subhash Chowk → Golf Course Extension Road → Sector 51. Off-peak that is 18–20 minutes, peak weekday evening it stretches to 24–26 minutes. The SPR (Southern Peripheral Road) variant via Sector 71 is slightly longer in distance but more predictable around 7 PM, which is when our weekday batch ends and parents start their pickup drive.',
   },
   {
-    question: 'Are there weekend-only batches?',
+    question:
+      'How often do Sector 70 families switch to fully online if the commute becomes a problem?',
     answer:
-      'Yes, our Weekend Intensive batch (Sat-Sun 9 AM - 1 PM) is ideal for Sector 70 students who prefer fewer travel days.',
+      'In practice, very rarely past Class 11. Sector 70 students who try fully-online find the discipline harder to maintain through Class 12 NEET prep, and most return to offline at M2K Sector 51 by the second quarter. The compromise that works best is hybrid through Class 11 (live online Mon/Wed/Fri, offline Tue/Thu/Sat) and full offline once the Class 12 mock-test cycle starts in October.',
   },
 ]
 
@@ -72,10 +75,15 @@ export default function NEETCoachingSector70Gurgaon() {
               For Sector 70 & SPR Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Sector 70 Gurgaon
+              Sector 70 NEET Biology Coaching for Plotted-Colony Families
             </h1>
             <p className="text-xl text-rose-100 mb-4">
-              Just 17 minutes from SPR area! Premium NEET biology coaching at M2K Sector 51.
+              Sector 70 is part of the South Gurgaon plotted-development belt (the city is
+              officially Gurugram since 2016) — a lower-density residential pocket of independent
+              homes and small builder floors, distinct from the Sohna Road high-rise corridor next
+              door. Our M2K Corporate Park, Sector 51 center is roughly a 22-minute drive via Sohna
+              Road and Subhash Chowk; longer than most of new Gurgaon, but still very doable for
+              daily weekday or weekend batches.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

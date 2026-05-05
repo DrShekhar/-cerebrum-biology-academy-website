@@ -37,24 +37,28 @@ const nearbyAreas = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from South City?',
+    question:
+      'Should South City 1 students target M2K Sector 51, or are MG Road metro commute options better?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 6-7 km from South City. By car, it takes 12-15 minutes via Sohna Road or Golf Course Road.',
+      'For Class 11-12 daily classes, the M2K Sector 51 centre is the more practical choice for South City 1 (Sector 41) families. The drive is 6-7 km via Sohna Road and takes 12-15 minutes. MG Road Metro is closer to your colony, but Sector 51 is not on a metro line, so the metro route ends up being a longer combined commute than just driving via Sector 49 to 50.',
   },
   {
-    question: 'Which route is best from South City?',
+    question:
+      'How does the commute differ for South City 2 (Sector 49) versus South City 1 (Sector 41) students?',
     answer:
-      'Two options: 1) Via Sohna Road → Sector 49/50 → Sector 51 (12 min), 2) Via Golf Course Road (during peak hours, may take 15-18 min). Most students prefer Sohna Road route.',
+      'South City 2 sits in Sector 49, directly adjacent to Sector 50 and 51, so the drive to M2K is barely 4-5 km and 8-10 minutes off Sohna Road. South City 1 in Sector 41 is older and slightly further at 6-7 km via Subhash Chowk. South City 2 students can comfortably make our 5 PM evening batch even on a school day finishing at 3:30 PM.',
   },
   {
-    question: 'Are there South City students at Cerebrum?',
+    question:
+      'South City Phase 1 has been around since the 1980s — do you teach the older NCERT pattern many parents grew up with?',
     answer:
-      'Yes! We have 40+ students from South City 1 & 2 and nearby sectors (41, 43, 45). Many carpool together.',
+      'Our curriculum is built on the latest NCERT Class 11 and 12 Biology aligned to the current NMC NEET syllabus, but we explain concepts in the same first-principles way many South City parents remember from their own school years. Long-time Sector 41 residents in South City 1 often appreciate that we teach human physiology and genetics with proper diagrams and derivations, not just MCQ shortcuts.',
   },
   {
-    question: 'What batch timings work for South City students?',
+    question:
+      'Do South City families and Sushant Lok 1 students share batches and carpools at Cerebrum?',
     answer:
-      'Evening batch (5-8 PM) is most popular. Leave South City by 4:40 PM, reach by 5 PM. Weekend batch (Sat-Sun 9 AM - 1 PM) avoids weekday traffic.',
+      'Yes. South City 1, South City 2, Sushant Lok 1 and Sector 43-45 students often end up in the same evening or Saturday morning batch because they share the Sohna Road and Golf Course Extension corridor. Several parents have organised informal carpool rotations, especially for the 5-8 PM weekday slot, so the per-family drive load drops to two days a week.',
   },
 ]
 
@@ -74,10 +78,15 @@ export default function NEETCoachingSouthCityGurugram() {
               For South City Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for South City Gurugram
+              NEET Preparation Tailored to South City Gurugram — Phase 1, Phase 2 and Sector 41-49
+              Students
             </h1>
             <p className="text-xl text-orange-100 mb-4">
-              Just 12 minutes from your home! Premium NEET biology coaching at M2K Sector 51.
+              South City is really two neighbourhoods: South City Phase 1 in Sector 41, an
+              established old Gurgaon (now Gurugram) township close to the MG Road Metro corridor,
+              and the newer South City Phase 2 in Sector 49 sharing a wall with Sector 50. Our M2K
+              Corporate Park centre in Sector 51 is 4-7 km away depending on which phase you live
+              in, an easy 8-15 minute drive via Sohna Road for serious Class 11-12 Biology prep.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

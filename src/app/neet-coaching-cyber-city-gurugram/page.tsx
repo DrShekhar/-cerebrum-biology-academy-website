@@ -48,24 +48,24 @@ const nearbyAreas = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Cyber City?',
+    question: 'Can my parents drop me off on their way to DLF Cyber Hub or Building 8?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 5-6 km from DLF Cyber City. By car, it takes 10-12 minutes via Golf Course Road. Many children of IT professionals from Cyber City area attend our evening batches.',
+      'Yes - this is the single most common arrangement we see for Cyber City families. The drive from Sector 51 (M2K Corporate Park) back toward DLF Cyber City takes 10-12 minutes via Golf Course Road. Parents heading to Building 5, 8, 9, or Cyber Hub typically drop students at 4:45 PM, then continue to office. Pickup at 8 PM works because Cyber City office hours often run late.',
   },
   {
-    question: 'What timings suit working parents from Cyber City?',
+    question: 'Do your batch timings account for Golf Course Road peak traffic from Cyber City?',
     answer:
-      'Evening batch (5-8 PM) works well as parents can drop kids after office. Weekend batch (Sat-Sun 9 AM - 1 PM) is popular for families wanting quality time during weekdays. We also offer online option for flexibility.',
+      'Yes. Our 5-8 PM evening batch starts after the worst Cyber City exit congestion (3:30-4:30 PM peak), and ends before the 8:30-9:30 PM second wave when late-shift IT employees head home. Weekend Sat-Sun 9 AM-1 PM batches sidestep weekday Cyber City traffic entirely - most preferred by families with parents working hybrid Mon-Wed-Fri or Tue-Thu schedules.',
   },
   {
-    question: 'Are there students from IT professional families?',
+    question: 'Which IT companies do current Cerebrum families work at?',
     answer:
-      'Yes! 60+ students are from IT professional families working in Cyber City, DLF towers, and nearby tech parks. They appreciate our structured approach, regular progress reports, and parent-teacher meetings.',
+      'Our Cyber City cohort includes parents from Google, Microsoft, Accenture, Deloitte, EY, KPMG, Infosys, TCS, Wipro, and HCL - reflecting the DLF Cyber City and Udyog Vihar tenant mix. Most Gurgaon parents call our area "Gurugram Sector 51" on Google Maps for navigation. Word-of-mouth referrals run strongly within company WhatsApp parent groups.',
   },
   {
-    question: 'Is there metro connectivity?',
+    question: 'How do you handle kids whose parents have unpredictable IT project deadlines?',
     answer:
-      'Yes, our center is accessible via Rapid Metro. Take Rapid Metro to Cyber City station, then 15 min auto/cab to Sector 51. Many students use this route especially during peak traffic hours.',
+      'We accommodate Cyber City reality directly. Parents can switch a child to our online live batch any week with 24-hour notice if a sprint deadline or on-call rotation changes their drop-off plan. Recordings are available for 7 days. We also share weekly written progress reports via email so working parents can review at their own time without needing PTM leave.',
   },
 ]
 
@@ -99,10 +99,15 @@ export default function NEETCoachingCyberCityGurugram() {
               For IT Professional Families
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Cyber City Gurugram
+              Cyber City NEET Coaching Built Around IT-Family Schedules
             </h1>
-            <p className="text-xl text-blue-100 mb-4">
-              Just 10 minutes from DLF Cyber Hub! Premium NEET biology coaching at M2K Sector 51.
+            <p className="text-lg md:text-xl text-blue-100 mb-4 leading-relaxed">
+              Cerebrum sits 5-6 km east of DLF Cyber City - a 10-12 minute Golf Course Road drive
+              from Building 5, 8, 9 and Cyber Hub. Parents commuting to Google, Microsoft, Accenture
+              or Deloitte offices drop students at our Sector 51 center on the way in, and our
+              evening 5-8 PM batch is designed around DLF traffic patterns and hybrid work
+              calendars. Online live classes back up any week a sprint deadline interrupts the
+              routine.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

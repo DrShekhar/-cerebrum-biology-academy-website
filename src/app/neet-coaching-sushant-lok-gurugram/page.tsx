@@ -37,24 +37,26 @@ const nearbyAreas = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from Sushant Lok?',
+    question:
+      'My son studies at GD Goenka Sushant Lok or DPS Sushant Lok - can he reach Cerebrum directly after school?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 7-9 km from Sushant Lok. By car, it takes 13-18 minutes depending on which phase you are in and traffic.',
+      'Yes - this is one of our most common patterns. School ends around 2:30-3 PM at GD Goenka Sushant Lok and DPS Sushant Lok 1; students reach Sector 51 in 12-15 minutes by school bus drop or chauffeur. They have time for snacks and revision before the 5 PM evening batch begins. Several families have set up direct school-to-Cerebrum routing through their school transport.',
   },
   {
-    question: 'Which route is best from Sushant Lok?',
+    question: 'How does the route differ from Sushant Lok 1, 2, and 3?',
     answer:
-      'From Sushant Lok 1/2: Via Golf Course Road → Sector 54/56 → Sector 51 (15 min). From Sushant Lok 3: Via Sector 43 → Sector 49 → Sector 51 (13 min).',
+      'From Sushant Lok 1 (next to Sector 27/28): take Golf Course Road past Sector 42 to Sector 54 cloverleaf, then to Sector 51 - about 15 minutes. From Sushant Lok 2: cut via Sector 43 internal road to Sector 49, then to 51 - 13 minutes. From Sushant Lok 3 (closest to Sector 56): a quick run via Sector 56 to Sector 51 in 10-12 minutes. Phase 3 has the shortest commute by 5 minutes.',
   },
   {
-    question: 'Are there Sushant Lok students at Cerebrum?',
+    question: 'Are there families from my Sushant Lok block already enrolled?',
     answer:
-      'Yes! We have 35+ students from all three phases of Sushant Lok. Many families from the same society send their children together.',
+      'Likely yes - the Sushant Lok cohort runs across all three phases plus the bordering Sectors 27, 28 and 43. Most Gurgaon families register their address as "Gurugram Sector 51, near M2K Corporate Park" on Google Maps for clean cab routing. We can share batch composition (number of students from each phase, schools represented) on a counselling call without revealing names.',
   },
   {
-    question: 'What batch timings work for Sushant Lok students?',
+    question:
+      'Sushant Lok internal roads have limited parking - can my driver wait near your center for pickup?',
     answer:
-      'Evening batch (5-8 PM) works well - leave by 4:40 PM to reach by 5 PM. Weekend batch (Sat-Sun 9 AM - 1 PM) is popular as mornings have less traffic.',
+      'Yes - M2K Corporate Park has open parking on the Sector 51 side and a wider service lane than the cramped Sushant Lok internal lanes. Drivers wait comfortably for 5-10 minutes around 8 PM pickup without traffic-warden hassles. Many Sushant Lok 1 families specifically cite this as a relief versus their previous coaching center near Sector 14, where parking was a nightly problem.',
   },
 ]
 
@@ -74,10 +76,14 @@ export default function NEETCoachingSushantLokGurugram() {
               For Sushant Lok Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for Sushant Lok Gurugram
+              NEET Biology Coaching for Sushant Lok 1, 2 and 3 Residents
             </h1>
-            <p className="text-xl text-purple-100 mb-4">
-              Just 15 minutes from your home! Premium NEET biology coaching at M2K Sector 51.
+            <p className="text-lg md:text-xl text-purple-100 mb-4 leading-relaxed">
+              Sushant Lok is a premium villa and high-rise community spanning three distinct phases
+              and bordering Sectors 27, 28 and 43 - home to GD Goenka Sushant Lok and DPS Sushant
+              Lok students. Cerebrum sits 7-9 km east at M2K Corporate Park, Sector 51, reachable in
+              10-15 minutes depending on which phase you live in. Phase 3 is closest at 10 minutes;
+              Phase 1 takes 15 via Golf Course Road past Sector 42.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />

@@ -38,24 +38,27 @@ const nearbyLandmarks = [
 
 const faqs = [
   {
-    question: 'How far is Cerebrum from DLF Phase 1?',
+    question:
+      'How long is the drive from DLF Phase 1 (Sector 26/26A) to Sector 51 via Golf Course Road?',
     answer:
-      'Our center at M2K Corporate Park, Sector 51 is approximately 8-10 km from DLF Phase 1. By car, it takes 15-20 minutes via Golf Course Road. Many DLF residents attend our evening batch (5-8 PM) after school.',
+      'From the Galleria Market end of DLF Phase 1, the drive to M2K Corporate Park, Sector 51 is roughly 8-10 km and 15-20 minutes via Golf Course Road, dropping to about 12 minutes off-peak. Households closer to the Sector 26A boundary save 2-3 minutes by exiting through the Golf Course Road service lane near Sikanderpur Metro instead of the main Galleria signal.',
   },
   {
-    question: 'Is there parking available at the center?',
+    question: 'Which DLF Phase 1 schools have students currently enrolled at Cerebrum?',
     answer:
-      'Yes, M2K Corporate Park has ample parking. Students can be dropped off at the gate. For self-driving students, free parking is available in the building basement.',
+      'We have NEET aspirants from Heritage School (DLF Phase 1), DPS Sector 45, Shri Ram School Aravali, and Pathways Aravali. CBSE Class 11-12 students typically join the evening batch right after school dispersal, while IB/IGCSE students usually pick the weekend morning slot so it does not clash with their internal assessment cycles.',
   },
   {
-    question: 'What batch timings suit DLF Phase 1 students?',
+    question:
+      'Is the original DLF colony layout in Phase 1 a parking concern when dropping students at M2K?',
     answer:
-      'Most DLF students prefer: Evening batch (5-8 PM) - reach by 4:45 PM, return by 8:15 PM. Weekend batch (Sat-Sun 9 AM - 1 PM) is also popular. We can adjust timing based on school schedules.',
+      'No. DLF Phase 1 was built in the late 1980s with narrow internal lanes, but the route via Golf Course Road avoids those entirely. M2K Corporate Park, Sector 51 has a basement car park and a clean drop-off lane on the building approach road, so parents can pull up for a 30-second drop without the colony-style parking hassles common inside Phase 1.',
   },
   {
-    question: 'Are there other DLF students at Cerebrum?',
+    question:
+      'Are weekend morning batches doable for DLF Phase 1 families heading from Cyberhub-side?',
     answer:
-      'Yes! We have 50+ students from various DLF phases (1-5), Cyber City, and nearby areas. Many form study groups and carpool together.',
+      'Yes, our Saturday-Sunday 9 AM-1 PM batch is the most popular slot among Phase 1 students whose parents work weekdays in Cyberhub or DLF Cyber City. Sunday traffic on Golf Course Road is light, so the trip from Galleria to Sector 51 typically takes 12-14 minutes. Several families carpool with neighbours from Phase 2 and Phase 3 to share the drive.',
   },
 ]
 
@@ -75,10 +78,14 @@ export default function NEETCoachingDLFPhase1Gurugram() {
               For DLF Phase 1 Residents
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for DLF Phase 1 Gurugram
+              Biology Coaching for DLF Phase 1 Families — A 15-Minute Drive on Golf Course Road
             </h1>
             <p className="text-xl text-blue-100 mb-4">
-              Just 15 minutes from your home! Premium NEET biology coaching at M2K Sector 51.
+              DLF Phase 1 is the original DLF colony, planned in the late 1980s and anchored around
+              Galleria Market and Sectors 26 and 26A. Cerebrum&apos;s Sector 51 centre at M2K
+              Corporate Park sits roughly 8 km away — an easy 15-minute Golf Course Road drive past
+              Cyberhub. We work with NEET aspirants from Heritage, DPS 45 and Shri Ram who want
+              serious Class 11-12 Biology prep without leaving old Gurgaon for Sector 14 traffic.
             </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />
