@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { IntentLandingPage } from '@/components/seo/IntentLandingPage'
 import { getIntentPageData } from '@/data/intent-seo/intent-pages-data'
 import { BreadcrumbSchema } from '@/components/seo'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 const pageData = getIntentPageData('affordable-neet-coaching-delhi')!
 
@@ -31,6 +32,7 @@ export const metadata: Metadata = {
 export default function AffordableNEETCoachingDelhiPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="affordable-neet-coaching-delhi" />
       <div className="mx-auto max-w-7xl px-4 pt-4">
         <BreadcrumbSchema
           items={[{ label: 'Affordable NEET Coaching Delhi', isCurrentPage: true }]}

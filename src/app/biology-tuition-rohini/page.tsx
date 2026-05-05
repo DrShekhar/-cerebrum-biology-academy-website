@@ -20,6 +20,7 @@ import {
   Navigation,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 const rohiniAreas = [
   { name: 'Sector 3', highlight: 'Near Center' },
@@ -63,6 +64,7 @@ const faqs = [
 export default function BiologyTuitionRohiniPage() {
   return (
     <div className="min-h-screen">
+      <DelhiAreaSchema pageSlug="biology-tuition-rohini" subArea="Rohini" />
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
@@ -115,7 +117,10 @@ export default function BiologyTuitionRohiniPage() {
                 { icon: Award, value: '1,100+', label: 'NEET Selections' },
                 { icon: Star, value: '5.0', label: 'Google Rating' },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <div
+                  key={stat.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
+                >
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
@@ -152,7 +157,11 @@ export default function BiologyTuitionRohiniPage() {
                 {[
                   ['Monthly Fee', '\u20B95,000-8,000/month', '\u20B94,000/month (\u20B948K/year)'],
                   ['Faculty', 'B.Sc/M.Sc Graduate', 'AIIMS-Trained Doctor'],
-                  ['Batch Size', '1 Student (no peer learning)', '15 Students (healthy competition)'],
+                  [
+                    'Batch Size',
+                    '1 Student (no peer learning)',
+                    '15 Students (healthy competition)',
+                  ],
                   ['Test Series', 'No structured tests', 'Weekly tests + monthly assessments'],
                   ['Study Material', 'No material provided', 'Complete NCERT notes + MCQ bank'],
                   ['Recorded Lectures', 'Not available', 'All classes recorded for revision'],
@@ -188,7 +197,12 @@ export default function BiologyTuitionRohiniPage() {
                 Boards Covered
               </h3>
               <ul className="space-y-3">
-                {['CBSE (most Rohini/Delhi schools)', 'ICSE', 'IB (International Baccalaureate)', 'IGCSE'].map((board) => (
+                {[
+                  'CBSE (most Rohini/Delhi schools)',
+                  'ICSE',
+                  'IB (International Baccalaureate)',
+                  'IGCSE',
+                ].map((board) => (
                   <li key={board} className="flex items-center text-gray-700">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 shrink-0" />
                     {board}
@@ -231,7 +245,10 @@ export default function BiologyTuitionRohiniPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {rohiniAreas.map((area) => (
-              <div key={area.name} className="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+              <div
+                key={area.name}
+                className="bg-green-50 rounded-xl p-4 text-center border border-green-100"
+              >
                 <MapPin className="w-6 h-6 text-green-600 mx-auto mb-2" />
                 <div className="font-bold text-gray-900">{area.name}</div>
                 <div className="text-xs text-gray-500">{area.highlight}</div>
@@ -247,8 +264,16 @@ export default function BiologyTuitionRohiniPage() {
               <Navigation className="w-4 h-4 inline mr-1" />
               Nearest Metro: Rohini West / Rithala (Yellow Line)
             </p>
-            <a href="https://maps.google.com/?q=DC+Chowk+Rohini+Delhi" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white">
+            <a
+              href="https://maps.google.com/?q=DC+Chowk+Rohini+Delhi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white"
+              >
                 <MapPin className="w-5 h-5 mr-2" />
                 Get Directions
               </Button>
@@ -294,7 +319,11 @@ export default function BiologyTuitionRohiniPage() {
                 Book Free Demo Class
               </Button>
             </Link>
-            <a href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20biology%20tuition%20in%20Rohini" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20biology%20tuition%20in%20Rohini"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline"
                 size="xl"
@@ -306,9 +335,15 @@ export default function BiologyTuitionRohiniPage() {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/pricing" className="underline opacity-80 hover:opacity-100">View Pricing</Link>
-            <Link href="/courses" className="underline opacity-80 hover:opacity-100">All Courses</Link>
-            <Link href="/neet-coaching-rohini" className="underline opacity-80 hover:opacity-100">NEET Coaching Rohini</Link>
+            <Link href="/pricing" className="underline opacity-80 hover:opacity-100">
+              View Pricing
+            </Link>
+            <Link href="/courses" className="underline opacity-80 hover:opacity-100">
+              All Courses
+            </Link>
+            <Link href="/neet-coaching-rohini" className="underline opacity-80 hover:opacity-100">
+              NEET Coaching Rohini
+            </Link>
           </div>
         </div>
       </section>
@@ -330,21 +365,44 @@ export default function BiologyTuitionRohiniPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-                { '@type': 'ListItem', position: 2, name: 'Biology Tuition Rohini', item: 'https://cerebrumbiologyacademy.com/biology-tuition-rohini' },
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://cerebrumbiologyacademy.com',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Biology Tuition Rohini',
+                  item: 'https://cerebrumbiologyacademy.com/biology-tuition-rohini',
+                },
               ],
             },
             {
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Cerebrum Biology Academy - Biology Tuition Rohini',
-              description: 'Best biology tuition in Rohini, Delhi. CBSE Board + NEET by AIIMS Alumnus at DC Chowk center.',
+              description:
+                'Best biology tuition in Rohini, Delhi. CBSE Board + NEET by AIIMS Alumnus at DC Chowk center.',
               url: 'https://cerebrumbiologyacademy.com/biology-tuition-rohini',
               telephone: '+918826444334',
-              address: { '@type': 'PostalAddress', streetAddress: 'DC Chowk', addressLocality: 'Rohini, New Delhi', addressRegion: 'Delhi', postalCode: '110085', addressCountry: 'IN' },
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'DC Chowk',
+                addressLocality: 'Rohini, New Delhi',
+                addressRegion: 'Delhi',
+                postalCode: '110085',
+                addressCountry: 'IN',
+              },
               areaServed: { '@type': 'Place', name: 'Rohini, Delhi' },
               priceRange: '\u20B948,000 - \u20B91,56,000/year',
-              aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '38', bestRating: '5' },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '5.0',
+                reviewCount: '38',
+                bestRating: '5',
+              },
             },
           ]),
         }}

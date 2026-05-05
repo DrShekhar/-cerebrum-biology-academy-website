@@ -176,7 +176,12 @@ export default function BiologyTuitionFeesDelhiNCR() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -202,7 +207,9 @@ export default function BiologyTuitionFeesDelhiNCR() {
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 py-16 text-white md:py-24">
           <div className="mx-auto max-w-6xl px-4">
             <nav className="mb-8 text-sm text-blue-200">
-              <Link href="/" className="hover:text-white">Home</Link>
+              <Link href="/" className="hover:text-white">
+                Home
+              </Link>
               <span className="mx-2">/</span>
               <span>Biology Tuition Fees Delhi NCR</span>
             </nav>
@@ -210,8 +217,8 @@ export default function BiologyTuitionFeesDelhiNCR() {
               Biology Tuition Fees in Delhi NCR — Complete Comparison 2026
             </h1>
             <p className="mb-8 max-w-2xl text-lg text-blue-100">
-              Don&apos;t overpay for biology tuition. Compare fees across home tutors, online tutors,
-              and coaching institutes. See exactly what you get for your money.
+              Don&apos;t overpay for biology tuition. Compare fees across home tutors, online
+              tutors, and coaching institutes. See exactly what you get for your money.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -237,8 +244,8 @@ export default function BiologyTuitionFeesDelhiNCR() {
               Biology Tuition Fees by City — Monthly Comparison
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">
-              Fee ranges based on 2025-26 market rates. Cerebrum offers consistent pricing across all
-              Delhi NCR locations.
+              Fee ranges based on 2025-26 market rates. Cerebrum offers consistent pricing across
+              all Delhi NCR locations.
             </p>
 
             <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
@@ -246,9 +253,15 @@ export default function BiologyTuitionFeesDelhiNCR() {
                 <thead>
                   <tr className="bg-gray-50">
                     <th className="px-4 py-3 text-left font-semibold text-gray-700">City</th>
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">Home Tutor</th>
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">Online Tutor</th>
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">Local Coaching</th>
+                    <th className="px-4 py-3 text-center font-semibold text-gray-700">
+                      Home Tutor
+                    </th>
+                    <th className="px-4 py-3 text-center font-semibold text-gray-700">
+                      Online Tutor
+                    </th>
+                    <th className="px-4 py-3 text-center font-semibold text-gray-700">
+                      Local Coaching
+                    </th>
                     <th className="bg-green-50 px-4 py-3 text-center font-semibold text-green-800">
                       Cerebrum Academy
                     </th>
@@ -270,7 +283,8 @@ export default function BiologyTuitionFeesDelhiNCR() {
               </table>
             </div>
             <p className="mt-4 text-center text-xs text-gray-400">
-              *Cerebrum fees shown as monthly equivalent of annual pricing. All fees are per month for biology only.
+              *Cerebrum fees shown as monthly equivalent of annual pricing. All fees are per month
+              for biology only.
             </p>
           </div>
         </section>
@@ -290,7 +304,9 @@ export default function BiologyTuitionFeesDelhiNCR() {
                 <div
                   key={plan.course}
                   className={`relative rounded-xl border bg-white p-6 shadow-sm transition hover:shadow-md ${
-                    plan.tag === 'Most Popular' ? 'border-green-500 ring-2 ring-green-200' : 'border-gray-200'
+                    plan.tag === 'Most Popular'
+                      ? 'border-green-500 ring-2 ring-green-200'
+                      : 'border-gray-200'
                   }`}
                 >
                   {plan.tag === 'Most Popular' && (
@@ -323,13 +339,16 @@ export default function BiologyTuitionFeesDelhiNCR() {
               What&apos;s Included at Cerebrum (That Tutors Don&apos;t Offer)
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">
-              Every Cerebrum enrollment includes these at no extra cost. Home tutors charge ₹8,000–12,000
-              extra per year for equivalent services — if they offer them at all.
+              Every Cerebrum enrollment includes these at no extra cost. Home tutors charge
+              ₹8,000–12,000 extra per year for equivalent services — if they offer them at all.
             </p>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {includedFeatures.map((feature) => (
-                <div key={feature.text} className="flex items-start gap-4 rounded-xl border border-gray-200 p-5">
+                <div
+                  key={feature.text}
+                  className="flex items-start gap-4 rounded-xl border border-gray-200 p-5"
+                >
                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-green-100">
                     <feature.icon className="h-5 w-5 text-green-700" />
                   </div>
@@ -436,7 +455,8 @@ export default function BiologyTuitionFeesDelhiNCR() {
               Get the Best Value for Biology Tuition
             </h2>
             <p className="mb-8 text-lg text-blue-100">
-              AIIMS faculty, 19,000+ MCQs, recorded lectures, weekly tests — all included from ₹4,000/month.
+              AIIMS faculty, 19,000+ MCQs, recorded lectures, weekly tests — all included from
+              ₹4,000/month.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link

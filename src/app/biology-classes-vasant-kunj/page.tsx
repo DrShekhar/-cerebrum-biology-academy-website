@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/cities'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 const cityData = getCityData('vasant-kunj')!
 
@@ -27,5 +28,10 @@ export const metadata: Metadata = {
 }
 
 export default function BiologyClassesVasantKunjPage() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <DelhiAreaSchema pageSlug="biology-classes-vasant-kunj" subArea="Vasant Kunj" />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }

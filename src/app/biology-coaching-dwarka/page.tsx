@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/cities'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 const cityData = getCityData('dwarka')!
 
@@ -27,5 +28,10 @@ export const metadata: Metadata = {
 }
 
 export default function BiologyCoachingDwarka() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <DelhiAreaSchema pageSlug="biology-coaching-dwarka" subArea="Dwarka" />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/cities'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 const cityData = getCityData('biology-classes-east-delhi')!
 
@@ -18,5 +19,10 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <DelhiAreaSchema pageSlug="biology-classes-east-delhi" />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }

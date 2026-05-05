@@ -10,6 +10,7 @@ import {
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 import type { USP, FAQ } from '@/components/landing-pages'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching in Delhi NCR | Top Institute 2026',
@@ -139,6 +140,7 @@ const faqs: FAQ[] = [
 export default function NEETBiologyCoachingDelhiNCRPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="neet-biology-coaching-delhi-ncr" />
       <LandingHero
         h1="Premier NEET Biology Coaching in Delhi NCR"
         subheadline="Achieve Your Medical Dream with Expert Faculty, Small Batches, and Proven Results. Join India's Leading NEET Biology Institute."

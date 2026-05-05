@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -107,6 +108,7 @@ export default function BiologyTutorRohiniPage() {
 
   return (
     <div className="min-h-screen">
+      <DelhiAreaSchema pageSlug="biology-tutor-rohini" subArea="Rohini" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

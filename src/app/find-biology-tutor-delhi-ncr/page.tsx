@@ -188,7 +188,12 @@ export default function FindBiologyTutorDelhiNCR() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -214,7 +219,9 @@ export default function FindBiologyTutorDelhiNCR() {
         <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-teal-900 py-16 text-white md:py-24">
           <div className="mx-auto max-w-6xl px-4">
             <nav className="mb-8 text-sm text-green-200">
-              <Link href="/" className="hover:text-white">Home</Link>
+              <Link href="/" className="hover:text-white">
+                Home
+              </Link>
               <span className="mx-2">/</span>
               <span>Find Biology Tutor Delhi NCR</span>
             </nav>
@@ -223,7 +230,8 @@ export default function FindBiologyTutorDelhiNCR() {
             </h1>
             <p className="mb-8 max-w-2xl text-lg text-green-100">
               Stop scrolling through listing sites. Compare home tutors, online tutors, and coaching
-              institutes side-by-side. Make an informed decision for your child&apos;s NEET + Board preparation.
+              institutes side-by-side. Make an informed decision for your child&apos;s NEET + Board
+              preparation.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -249,8 +257,8 @@ export default function FindBiologyTutorDelhiNCR() {
               3 Ways to Find Biology Tuition in Delhi NCR
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">
-              Each option has trade-offs. Here&apos;s an honest comparison so you can decide what works
-              for your child.
+              Each option has trade-offs. Here&apos;s an honest comparison so you can decide what
+              works for your child.
             </p>
 
             <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
@@ -258,8 +266,12 @@ export default function FindBiologyTutorDelhiNCR() {
                 <thead>
                   <tr className="bg-gray-50">
                     <th className="px-4 py-3 text-left font-semibold text-gray-700">Feature</th>
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">Home Tutor</th>
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">Online Tutor</th>
+                    <th className="px-4 py-3 text-center font-semibold text-gray-700">
+                      Home Tutor
+                    </th>
+                    <th className="px-4 py-3 text-center font-semibold text-gray-700">
+                      Online Tutor
+                    </th>
                     <th className="bg-green-50 px-4 py-3 text-center font-semibold text-green-800">
                       Cerebrum Academy
                     </th>
@@ -289,8 +301,9 @@ export default function FindBiologyTutorDelhiNCR() {
               Why Smart Parents Skip Listing Sites
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-center text-gray-600">
-              Aggregator platforms like Sulekha, UrbanPro, and JustDial charge tutors 15-30% commission.
-              That cost gets passed to you — or the tutor cuts corners to stay profitable.
+              Aggregator platforms like Sulekha, UrbanPro, and JustDial charge tutors 15-30%
+              commission. That cost gets passed to you — or the tutor cuts corners to stay
+              profitable.
             </p>
 
             <div className="grid gap-6 md:grid-cols-2">
@@ -361,7 +374,10 @@ export default function FindBiologyTutorDelhiNCR() {
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {cityData.map((city) => (
-                <div key={city.city} className="rounded-xl border border-gray-200 p-6 transition hover:shadow-md">
+                <div
+                  key={city.city}
+                  className="rounded-xl border border-gray-200 p-6 transition hover:shadow-md"
+                >
                   <h3 className="mb-2 flex items-center gap-2 text-lg font-semibold text-gray-900">
                     <MapPin className="h-5 w-5 text-green-600" />
                     Biology Tutors in {city.city}
@@ -394,7 +410,10 @@ export default function FindBiologyTutorDelhiNCR() {
             </p>
             <div className="mx-auto grid max-w-3xl gap-4 md:grid-cols-2">
               {checklist.map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-sm">
+                <div
+                  key={item}
+                  className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-sm"
+                >
                   <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                   <span className="text-gray-700">{item}</span>
                 </div>
@@ -423,11 +442,10 @@ export default function FindBiologyTutorDelhiNCR() {
         {/* CTA */}
         <section className="bg-gradient-to-br from-green-900 via-green-800 to-teal-900 py-16 text-white">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="mb-4 text-2xl font-bold md:text-3xl">
-              Stop Searching. Start Learning.
-            </h2>
+            <h2 className="mb-4 text-2xl font-bold md:text-3xl">Stop Searching. Start Learning.</h2>
             <p className="mb-8 text-lg text-green-100">
-              Book a free demo class with AIIMS faculty. See the difference yourself before committing.
+              Book a free demo class with AIIMS faculty. See the difference yourself before
+              committing.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link

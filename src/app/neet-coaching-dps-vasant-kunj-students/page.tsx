@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { SchoolLandingPage } from '@/components/seo/SchoolLandingPage'
 import { getSchoolPageData } from '@/data/school-seo/school-pages-data'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 const pageData = getSchoolPageData('neet-coaching-dps-vasant-kunj-students')!
 
@@ -27,5 +28,13 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingDPSVasantKunjPage() {
-  return <SchoolLandingPage data={pageData} />
+  return (
+    <>
+      <DelhiAreaSchema
+        pageSlug="neet-coaching-dps-vasant-kunj-students"
+        subArea="DPS Vasant Kunj"
+      />
+      <SchoolLandingPage data={pageData} />
+    </>
+  )
 }

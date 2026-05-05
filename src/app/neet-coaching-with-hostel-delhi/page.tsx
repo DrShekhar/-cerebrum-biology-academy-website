@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { IntentLandingPage } from '@/components/seo/IntentLandingPage'
 import { getIntentPageData } from '@/data/intent-seo/intent-pages-data'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 const pageData = getIntentPageData('neet-coaching-with-hostel-delhi')!
 
@@ -27,5 +28,10 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingWithHostelDelhiPage() {
-  return <IntentLandingPage data={pageData} />
+  return (
+    <>
+      <DelhiAreaSchema pageSlug="neet-coaching-with-hostel-delhi" />
+      <IntentLandingPage data={pageData} />
+    </>
+  )
 }

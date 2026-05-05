@@ -10,6 +10,7 @@ import {
 import type { USP, FAQ } from '@/components/landing-pages'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 export const metadata: Metadata = {
   title: 'CBSE Biology Coaching Delhi | Class 11-12 | Board + NEET',
@@ -91,6 +92,7 @@ const faqs: FAQ[] = [
 export default function CBSEBiologyCoachingDelhiPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="cbse-biology-coaching-delhi" />
       <LandingHero
         h1="CBSE Biology Coaching in Delhi NCR - Class 11-12"
         subheadline="Expert CBSE Biology coaching for Class 11-12. Prepare for both board exams and competitive exams with integrated approach."

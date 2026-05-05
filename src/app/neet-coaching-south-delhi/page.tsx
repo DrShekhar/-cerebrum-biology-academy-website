@@ -223,7 +223,8 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: 'How to Enroll in NEET Coaching in South Delhi',
-  description: 'Step-by-step guide to enroll in Cerebrum Biology Academy for NEET preparation in South Delhi.',
+  description:
+    'Step-by-step guide to enroll in Cerebrum Biology Academy for NEET preparation in South Delhi.',
   totalTime: 'P3D',
   estimatedCost: {
     '@type': 'MonetaryAmount',
@@ -272,7 +273,6 @@ const speakableSchema = {
   },
 }
 
-
 export default function NEETCoachingSouthDelhiPage() {
   return (
     <>
@@ -303,14 +303,25 @@ export default function NEETCoachingSouthDelhiPage() {
         pageTitle="Best NEET Coaching in South Delhi"
         pageDescription={`Join South Delhi's #1 NEET Biology coaching. Expert AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate, ${CEREBRUM_METRICS.topScoreText} top score. Hauz Khas, GK, Defence Colony, Vasant Vihar.`}
         pageType="coaching"
-      coordinates={{ lat: "28.5355", lng: "77.2290" }} faqs={faqs} />
+        coordinates={{ lat: '28.5355', lng: '77.2290' }}
+        faqs={faqs}
+      />
       <PageContent />
       <NearMeKeywordInjector
         location="South Delhi"
         parentLocation="Delhi NCR"
         centerAddress="D 35, South Extension Part 2, New Delhi - 110049"
         centerPhone="+91-8826-444-334"
-        nearbyAreas={['Hauz Khas', 'Greater Kailash', 'Defence Colony', 'Vasant Vihar', 'Lajpat Nagar', 'Malviya Nagar', 'Saket', 'Green Park']}
+        nearbyAreas={[
+          'Hauz Khas',
+          'Greater Kailash',
+          'Defence Colony',
+          'Vasant Vihar',
+          'Lajpat Nagar',
+          'Malviya Nagar',
+          'Saket',
+          'Green Park',
+        ]}
       />
     </>
   )

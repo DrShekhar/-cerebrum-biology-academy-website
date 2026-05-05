@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/cities'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 
 // ISR: Revalidate every 1 hour - SEO pages are relatively static
 export const revalidate = 3600
@@ -34,5 +35,10 @@ export const metadata: Metadata = {
 }
 
 export default function BestBiologyTuitionCRParkPage() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <DelhiAreaSchema pageSlug="best-biology-tuition-cr-park" subArea="CR Park" />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }

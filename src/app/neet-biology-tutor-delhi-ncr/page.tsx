@@ -2,18 +2,19 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 const PHONE = '88264-44334'
-const WA_LINK = 'https://wa.me/918826444334?text=Hi%2C%20I%20want%20to%20know%20about%20NEET%20Biology%20tutor%20options'
+const WA_LINK =
+  'https://wa.me/918826444334?text=Hi%2C%20I%20want%20to%20know%20about%20NEET%20Biology%20tutor%20options'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Tutor Delhi NCR | AIIMS Faculty | ₹4K/Month | 98% Success',
   description:
-    "Stop wasting ₹8K/month on the wrong biology tutor. Get AIIMS faculty, test series, recordings & 19,000+ MCQs at ₹4K/month. 98% success rate. Call 88264-44334.",
+    'Stop wasting ₹8K/month on the wrong biology tutor. Get AIIMS faculty, test series, recordings & 19,000+ MCQs at ₹4K/month. 98% success rate. Call 88264-44334.',
   keywords:
     'neet biology tutor delhi ncr, neet biology tutor near me, neet biology tutors delhi, biology tutor for neet noida, neet biology tutor gurugram, best neet biology tutor, private neet biology tutor, biology for neet tutor india',
   openGraph: {
     title: 'NEET Biology Tutor Delhi NCR | AIIMS Faculty | ₹4K/Month | 98% Success',
     description:
-      "Stop wasting ₹8K/month on the wrong biology tutor. Get AIIMS faculty, test series, recordings & 19,000+ MCQs at ₹4K/month. 98% success rate.",
+      'Stop wasting ₹8K/month on the wrong biology tutor. Get AIIMS faculty, test series, recordings & 19,000+ MCQs at ₹4K/month. 98% success rate.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-tutor-delhi-ncr',
   },
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Biology Tutor Delhi NCR | AIIMS Faculty | ₹4K/Month | 98% Success',
     description:
-      "Stop wasting ₹8K/month on the wrong biology tutor. Get AIIMS faculty, test series, recordings & 19,000+ MCQs at ₹4K/month.",
+      'Stop wasting ₹8K/month on the wrong biology tutor. Get AIIMS faculty, test series, recordings & 19,000+ MCQs at ₹4K/month.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-tutor-delhi-ncr',
@@ -65,7 +66,12 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://cerebrumbiologyacademy.com',
+        },
         {
           '@type': 'ListItem',
           position: 2,
@@ -92,7 +98,8 @@ export default function NEETBiologyTutorDelhiNCRPage() {
             NEET Biology Tutor — Delhi NCR
           </p>
           <h1 className="mb-4 text-4xl font-bold leading-tight md:text-5xl">
-            Stop Wasting <span className="text-yellow-400">₹8,000/Month</span> on the Wrong Biology Tutor
+            Stop Wasting <span className="text-yellow-400">₹8,000/Month</span> on the Wrong Biology
+            Tutor
           </h1>
           <p className="mb-8 text-lg text-slate-300">
             Most private tutors cannot teach NEET Biology. Here is what you actually need.
@@ -120,12 +127,17 @@ export default function NEETBiologyTutorDelhiNCRPage() {
           <h2 className="mb-6 text-3xl font-bold text-slate-900">The ₹2.4 Lakh Mistake</h2>
           <div className="rounded-xl bg-white p-8 shadow-lg">
             <p className="mb-4 text-lg text-slate-700">
-              Ramesh hired <strong>3 tutors in 2 years</strong>. Spent <strong className="text-red-600">₹2.4 lakhs</strong>. His NEET score? Still <strong className="text-red-600">420</strong>.
+              Ramesh hired <strong>3 tutors in 2 years</strong>. Spent{' '}
+              <strong className="text-red-600">₹2.4 lakhs</strong>. His NEET score? Still{' '}
+              <strong className="text-red-600">420</strong>.
             </p>
             <p className="text-lg text-slate-700">
-              Then he found Cerebrum. Score after 8 months: <strong className="text-green-600">635</strong>.
+              Then he found Cerebrum. Score after 8 months:{' '}
+              <strong className="text-green-600">635</strong>.
             </p>
-            <p className="mt-4 text-sm text-slate-500">NEET 2025 Qualifier, Cerebrum Biology Academy</p>
+            <p className="mt-4 text-sm text-slate-500">
+              NEET 2025 Qualifier, Cerebrum Biology Academy
+            </p>
           </div>
         </div>
       </section>
@@ -144,7 +156,10 @@ export default function NEETBiologyTutorDelhiNCRPage() {
               'Charges per hour — incentivized to go slow, not to get results',
               'No recorded classes — miss a class, miss the topic forever',
             ].map((sign, i) => (
-              <div key={i} className="flex items-start gap-4 rounded-lg border border-red-100 bg-red-50 p-5">
+              <div
+                key={i}
+                className="flex items-start gap-4 rounded-lg border border-red-100 bg-red-50 p-5"
+              >
                 <span className="text-xl text-red-500">&#10060;</span>
                 <p className="text-lg text-slate-800">{sign}</p>
               </div>
@@ -185,17 +200,23 @@ export default function NEETBiologyTutorDelhiNCRPage() {
       {/* The Math */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="mb-8 text-center text-3xl font-bold text-slate-900">The Math Does Not Lie</h2>
+          <h2 className="mb-8 text-center text-3xl font-bold text-slate-900">
+            The Math Does Not Lie
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border-2 border-red-200 bg-red-50 p-8 text-center">
               <p className="mb-2 text-lg font-semibold text-red-600">Private Tutor</p>
-              <p className="text-4xl font-bold text-slate-900">₹96,000<span className="text-lg">/year</span></p>
+              <p className="text-4xl font-bold text-slate-900">
+                ₹96,000<span className="text-lg">/year</span>
+              </p>
               <p className="mt-2 text-slate-500">₹8K x 12 months</p>
               <p className="mt-4 text-red-600">Result: Uncertain</p>
             </div>
             <div className="rounded-xl border-2 border-green-200 bg-green-50 p-8 text-center">
               <p className="mb-2 text-lg font-semibold text-green-600">Cerebrum</p>
-              <p className="text-4xl font-bold text-slate-900">₹48,000<span className="text-lg">/year</span></p>
+              <p className="text-4xl font-bold text-slate-900">
+                ₹48,000<span className="text-lg">/year</span>
+              </p>
               <p className="mt-2 text-slate-500">₹4K x 12 months</p>
               <p className="mt-4 font-bold text-green-600">98% Qualify for NEET</p>
             </div>
@@ -243,7 +264,10 @@ export default function NEETBiologyTutorDelhiNCRPage() {
               { city: 'Faridabad', center: 'Visit Sector 17 Center' },
               { city: 'South Delhi', center: 'Visit South Extension Center' },
             ].map((loc) => (
-              <div key={loc.city} className="rounded-lg border border-teal-200 bg-teal-50 p-5 text-center">
+              <div
+                key={loc.city}
+                className="rounded-lg border border-teal-200 bg-teal-50 p-5 text-center"
+              >
                 <p className="text-lg font-bold text-slate-900">{loc.city}</p>
                 <p className="text-teal-700">{loc.center}</p>
               </div>
@@ -352,7 +376,10 @@ export default function NEETBiologyTutorDelhiNCRPage() {
           >
             WhatsApp
           </a>
-          <Link href="/book-free-demo" className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-bold text-white">
+          <Link
+            href="/book-free-demo"
+            className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-bold text-white"
+          >
             Free Demo
           </Link>
         </div>
