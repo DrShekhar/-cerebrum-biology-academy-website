@@ -1,11 +1,21 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, CheckCircle, Users, Clock, IndianRupee, Award, ArrowRight } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  CheckCircle,
+  Users,
+  Clock,
+  IndianRupee,
+  Award,
+  ArrowRight,
+} from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'Best FIITJEE Alternative in Gurugram 2026 | Better Results, Lower Fees',
   description:
-    'Looking for FIITJEE alternative in Gurugram? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 88264-44334!',
+    'Looking for FIITJEE alternative in Gurugram (Gurgaon)? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 88264-44334!',
   keywords: [
     'fiitjee alternative gurugram',
     'fiitjee alternative gurgaon',
@@ -22,7 +32,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Best FIITJEE Alternative in Gurugram 2026',
-    description: 'Looking for FIITJEE alternative? Cerebrum offers 60% lower fees with 98% success rate.',
+    description:
+      'Looking for FIITJEE alternative? Cerebrum offers 60% lower fees with 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/fiitjee-alternative-gurugram',
   },
   alternates: {
@@ -31,54 +42,103 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: 'Annual Fee', fiitjee: '₹1.8-2.5 Lakh', cerebrum: '₹45,000-75,000', winner: 'cerebrum' },
-  { feature: 'Batch Size', fiitjee: '50-80 students', cerebrum: '25 students max', winner: 'cerebrum' },
-  { feature: 'Biology Focus', fiitjee: 'Secondary (JEE-focused)', cerebrum: 'Primary Specialization', winner: 'cerebrum' },
-  { feature: 'Faculty', fiitjee: 'Mixed background', cerebrum: 'AIIMS-trained', winner: 'cerebrum' },
-  { feature: 'Doubt Resolution', fiitjee: 'Queue-based', cerebrum: 'Same-day WhatsApp', winner: 'cerebrum' },
-  { feature: 'Study Material', fiitjee: 'Generic all-subjects', cerebrum: 'NEET-specific biology', winner: 'cerebrum' },
-  { feature: 'Success Rate (Biology)', fiitjee: 'Not published', cerebrum: '98%', winner: 'cerebrum' },
-  { feature: 'Brand Recognition', fiitjee: 'National brand', cerebrum: 'Regional specialist', winner: 'fiitjee' },
+  {
+    feature: 'Annual Fee',
+    fiitjee: '₹1.8-2.5 Lakh',
+    cerebrum: '₹45,000-75,000',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Batch Size',
+    fiitjee: '50-80 students',
+    cerebrum: '25 students max',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Biology Focus',
+    fiitjee: 'Secondary (JEE-focused)',
+    cerebrum: 'Primary Specialization',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Faculty',
+    fiitjee: 'Mixed background',
+    cerebrum: 'AIIMS-trained',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Doubt Resolution',
+    fiitjee: 'Queue-based',
+    cerebrum: 'Same-day WhatsApp',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Study Material',
+    fiitjee: 'Generic all-subjects',
+    cerebrum: 'NEET-specific biology',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Success Rate (Biology)',
+    fiitjee: 'Not published',
+    cerebrum: '98%',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Brand Recognition',
+    fiitjee: 'National brand',
+    cerebrum: 'Regional specialist',
+    winner: 'fiitjee',
+  },
 ]
 
 const faqs = [
   {
     question: 'Why consider Cerebrum over FIITJEE Gurugram?',
-    answer: 'Key differences: 1) Specialized in NEET biology (FIITJEE focuses on JEE), 2) 60% lower fees (₹75K vs ₹2L+), 3) Smaller batches (25 vs 50+ students), 4) AIIMS-trained faculty, 5) 98% success rate in NEET biology. For NEET aspirants, biology specialist coaching gives better results.',
+    answer:
+      'Key differences: 1) Specialized in NEET biology (FIITJEE focuses on JEE), 2) 60% lower fees (₹75K vs ₹2L+), 3) Smaller batches (25 vs 50+ students), 4) AIIMS-trained faculty, 5) 98% success rate in NEET biology. For NEET aspirants, biology specialist coaching gives better results.',
   },
   {
     question: 'How do fees compare: FIITJEE vs Cerebrum?',
-    answer: 'FIITJEE Gurugram: ₹1.8-2.5 Lakh/year for integrated programs. Cerebrum: ₹45,000-75,000/year for complete NEET biology coaching. You save ₹1.2-1.75 Lakh while getting specialized biology coaching with better student-teacher ratio.',
+    answer:
+      'FIITJEE Gurugram: ₹1.8-2.5 Lakh/year for integrated programs. Cerebrum: ₹45,000-75,000/year for complete NEET biology coaching. You save ₹1.2-1.75 Lakh while getting specialized biology coaching with better student-teacher ratio.',
   },
   {
     question: 'Is FIITJEE good for NEET preparation?',
-    answer: "FIITJEE is excellent for JEE/Engineering preparation but treats NEET as secondary. Their biology faculty often handles 100+ students. For serious NEET aspirants, biology-focused coaching like Cerebrum (25-student batches, AIIMS faculty) delivers better NEET biology results.",
+    answer:
+      'FIITJEE is excellent for JEE/Engineering preparation but treats NEET as secondary. Their biology faculty often handles 100+ students. For serious NEET aspirants, biology-focused coaching like Cerebrum (25-student batches, AIIMS faculty) delivers better NEET biology results.',
   },
   {
     question: 'What if I am already enrolled in FIITJEE Gurugram?',
-    answer: 'Many FIITJEE students join Cerebrum for supplementary biology coaching. Options: 1) Complete biology-only batch (₹35,000/year), 2) NEET biology crash course (₹25,000), 3) Test series only (₹8,000). Timings adjusted to not clash with FIITJEE classes.',
+    answer:
+      'Many FIITJEE students join Cerebrum for supplementary biology coaching. Options: 1) Complete biology-only batch (₹35,000/year), 2) NEET biology crash course (₹25,000), 3) Test series only (₹8,000). Timings adjusted to not clash with FIITJEE classes.',
   },
   {
     question: 'Which coaching has better results: FIITJEE or Cerebrum?',
-    answer: "For NEET biology specifically: Cerebrum has 98% success rate with 50+ students scoring 350+/360 in biology annually. FIITJEE publishes overall results but doesn't break down biology scores. Our specialization means deeper coverage of NEET biology patterns.",
+    answer:
+      "For NEET biology specifically: Cerebrum has 98% success rate with 50+ students scoring 350+/360 in biology annually. FIITJEE publishes overall results but doesn't break down biology scores. Our specialization means deeper coverage of NEET biology patterns.",
   },
   {
     question: 'Is batch size really smaller at Cerebrum?',
-    answer: 'Yes, verified difference: FIITJEE Gurugram has 50-80 students per batch. Cerebrum maintains strict 25-student limit for personal attention. This means 3x more doubt-resolution time per student and better faculty-student interaction.',
+    answer:
+      'Yes, verified difference: FIITJEE Gurugram has 50-80 students per batch. Cerebrum maintains strict 25-student limit for personal attention. This means 3x more doubt-resolution time per student and better faculty-student interaction.',
   },
   {
     question: 'Do you offer demo classes before switching?',
-    answer: 'Absolutely! Free 3-day trial: Attend classes, compare teaching quality, meet faculty, see infrastructure. No payment required. Many FIITJEE students switched after experiencing our focused teaching methodology. Book trial at 88264-44334.',
+    answer:
+      'Absolutely! Free 3-day trial: Attend classes, compare teaching quality, meet faculty, see infrastructure. No payment required. Many FIITJEE students switched after experiencing our focused teaching methodology. Book trial at 88264-44334.',
   },
   {
     question: 'What about study material comparison?',
-    answer: "FIITJEE provides generic material for all subjects. Cerebrum provides: NEET-specific biology modules, NCERT line-by-line analysis, 10-year PYQ bank, chapter-wise mock tests, diagram practice sheets. Our material is updated after every NEET exam for latest patterns.",
+    answer:
+      'FIITJEE provides generic material for all subjects. Cerebrum provides: NEET-specific biology modules, NCERT line-by-line analysis, 10-year PYQ bank, chapter-wise mock tests, diagram practice sheets. Our material is updated after every NEET exam for latest patterns.',
   },
 ]
 
 export default function FIITJEEAlternativeGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="fiitjee-alternative-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -90,7 +150,8 @@ export default function FIITJEEAlternativeGurugram() {
               Best FIITJEE Alternative in Gurugram
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Why pay ₹2+ Lakh when you can get better NEET results at ₹75K? Compare Cerebrum vs FIITJEE.
+              Why pay ₹2+ Lakh when you can get better NEET results at ₹75K? Compare Cerebrum vs
+              FIITJEE.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -139,7 +200,9 @@ export default function FIITJEEAlternativeGurugram() {
       {/* Comparison Table */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">FIITJEE vs Cerebrum: Head-to-Head</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            FIITJEE vs Cerebrum: Head-to-Head
+          </h2>
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-blue-900 text-white">
@@ -153,12 +216,18 @@ export default function FIITJEEAlternativeGurugram() {
                 {comparisonData.map((row, index) => (
                   <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="px-6 py-4 font-medium">{row.feature}</td>
-                    <td className={`px-6 py-4 text-center ${row.winner === 'fiitjee' ? 'text-green-600 font-semibold' : ''}`}>
+                    <td
+                      className={`px-6 py-4 text-center ${row.winner === 'fiitjee' ? 'text-green-600 font-semibold' : ''}`}
+                    >
                       {row.fiitjee}
                     </td>
-                    <td className={`px-6 py-4 text-center ${row.winner === 'cerebrum' ? 'text-green-600 font-semibold' : ''}`}>
+                    <td
+                      className={`px-6 py-4 text-center ${row.winner === 'cerebrum' ? 'text-green-600 font-semibold' : ''}`}
+                    >
                       {row.cerebrum}
-                      {row.winner === 'cerebrum' && <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />}
+                      {row.winner === 'cerebrum' && (
+                        <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />
+                      )}
                     </td>
                   </tr>
                 ))}
@@ -177,21 +246,24 @@ export default function FIITJEEAlternativeGurugram() {
               <IndianRupee className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Save ₹1.2+ Lakh</h3>
               <p className="text-gray-600">
-                FIITJEE charges ₹2L+ for integrated programs. Cerebrum offers complete NEET biology coaching at ₹75K. Same quality, 60% savings.
+                FIITJEE charges ₹2L+ for integrated programs. Cerebrum offers complete NEET biology
+                coaching at ₹75K. Same quality, 60% savings.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Users className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">3x More Attention</h3>
               <p className="text-gray-600">
-                FIITJEE batches have 50-80 students. Our 25-student batches mean 3x more doubt-resolution time per student.
+                FIITJEE batches have 50-80 students. Our 25-student batches mean 3x more
+                doubt-resolution time per student.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Award className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Biology Specialists</h3>
               <p className="text-gray-600">
-                FIITJEE focuses on JEE. We specialize in NEET biology with AIIMS-trained faculty dedicated to biology excellence.
+                FIITJEE focuses on JEE. We specialize in NEET biology with AIIMS-trained faculty
+                dedicated to biology excellence.
               </p>
             </div>
           </div>
@@ -210,7 +282,9 @@ export default function FIITJEEAlternativeGurugram() {
                   <div>
                     <p className="font-semibold">M2K Corporate Park</p>
                     <p className="text-gray-600">Sector 51, Gurugram 122018</p>
-                    <p className="text-sm text-gray-500 mt-1">FIITJEE is in Sector 14 (8 km away)</p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      FIITJEE is in Sector 14 (8 km away)
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 mb-4">
@@ -255,7 +329,9 @@ export default function FIITJEEAlternativeGurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-blue-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

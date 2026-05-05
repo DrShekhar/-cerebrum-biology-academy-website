@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/cities'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const cityData = getCityData('best-biology-coaching-gurugram')!
 
@@ -18,5 +19,10 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="best-biology-coaching-gurugram" />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }

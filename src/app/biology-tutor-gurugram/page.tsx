@@ -24,6 +24,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 // WhatsApp contact constants
 const WHATSAPP_PHONE = '918826444334'
@@ -97,7 +98,8 @@ const whyChooseUs = [
   {
     icon: Laptop,
     title: 'Online Classes Ideal',
-    description: 'Best option for Gurugram students - high-quality online learning from home.',
+    description:
+      'Best option for Gurugram (Gurgaon) students - high-quality online learning from home.',
   },
   {
     icon: GraduationCap,
@@ -236,6 +238,7 @@ export default function BiologyTutorGurugramPage() {
 
   return (
     <div className="min-h-screen">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="biology-tutor-gurugram" />
       {/* Sticky CTA Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-slate-900 border-t border-slate-700 p-3 z-50 md:hidden">
         <div className="flex gap-2 max-w-lg mx-auto">
@@ -319,7 +322,11 @@ export default function BiologyTutorGurugramPage() {
 
             {/* Secondary CTAs - Book Demo */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="lg"
@@ -866,7 +873,11 @@ export default function BiologyTutorGurugramPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="lg"

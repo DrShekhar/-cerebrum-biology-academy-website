@@ -13,11 +13,12 @@ import {
   Award,
   BookOpen,
 } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'Free NEET Demo Class Gurugram | Book Now',
   description:
-    'Book your FREE NEET Biology demo class in Gurugram. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
+    'Book your FREE NEET Biology demo class in Gurugram (Gurgaon). Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
   keywords: [
     'free neet demo class gurugram',
     'free neet trial class gurgaon',
@@ -76,7 +77,7 @@ const faqs = [
   {
     question: 'Can parents attend the demo class?',
     answer:
-      'Absolutely! We encourage parents to sit in for the first 15-20 minutes to understand our teaching approach. You can also discuss your child\'s preparation with our counselors afterward.',
+      "Absolutely! We encourage parents to sit in for the first 15-20 minutes to understand our teaching approach. You can also discuss your child's preparation with our counselors afterward.",
   },
   {
     question: 'How do I book a demo class?',
@@ -100,6 +101,7 @@ const demoSlots = [
 export default function FreeNEETDemoClassGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="free-neet-demo-class-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-700 to-teal-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -135,7 +137,9 @@ export default function FreeNEETDemoClassGurugram() {
                 Book Demo: 88264-44334
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 hover:bg-green-50 transition"
               >
                 Book Online

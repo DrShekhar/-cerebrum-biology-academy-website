@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, GraduationCap, Award, Clock } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for Bal Bharati School Gurugram',
@@ -27,7 +28,8 @@ export const metadata: Metadata = {
 const whyBalBharatiStudents = [
   {
     title: 'CBSE Foundation',
-    description: 'Build on your strong CBSE base. NCERT-first approach perfectly aligned with your curriculum.',
+    description:
+      'Build on your strong CBSE base. NCERT-first approach perfectly aligned with your curriculum.',
     icon: GraduationCap,
   },
   {
@@ -53,25 +55,34 @@ const nearbyAreas = [
 const faqs = [
   {
     question: 'How far is Cerebrum from Bal Bharati School?',
-    answer: 'Our center at M2K Corporate Park, Sector 51 is approximately 6-7 km from Bal Bharati Public School Brij Vihar. Takes 12-15 minutes by car.',
+    answer:
+      'Our center at M2K Corporate Park, Sector 51 is approximately 6-7 km from Bal Bharati Public School Brij Vihar. Takes 12-15 minutes by car.',
   },
   {
     question: 'What batch timings work for Bal Bharati students?',
-    answer: 'Our 4-7 PM evening batch is perfect for Bal Bharati students. We also have weekend batches (Sat-Sun 9 AM - 1 PM) for those preferring fewer weekday commitments.',
+    answer:
+      'Our 4-7 PM evening batch is perfect for Bal Bharati students. We also have weekend batches (Sat-Sun 9 AM - 1 PM) for those preferring fewer weekday commitments.',
   },
   {
     question: 'Do you follow CBSE pattern?',
-    answer: 'Yes! Our approach is NCERT-first, perfectly aligned with CBSE curriculum. We build NEET preparation on top of your school foundation rather than creating parallel tracks.',
+    answer:
+      'Yes! Our approach is NCERT-first, perfectly aligned with CBSE curriculum. We build NEET preparation on top of your school foundation rather than creating parallel tracks.',
   },
   {
     question: 'Are there other Bal Bharati students at Cerebrum?',
-    answer: 'Yes, we have 8-10 students from Bal Bharati School. They often study together and form study groups which helps in peer learning.',
+    answer:
+      'Yes, we have 8-10 students from Bal Bharati School. They often study together and form study groups which helps in peer learning.',
   },
 ]
 
 export default function NEETCoachingBalBharatiSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-coaching-bal-bharati-school-gurugram"
+        subArea="Bal Bharati School Gurugram"
+      />
       <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -79,18 +90,30 @@ export default function NEETCoachingBalBharatiSchool() {
               <GraduationCap className="w-4 h-4" />
               For Bal Bharati Students
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Coaching for Bal Bharati School</h1>
-            <p className="text-xl text-orange-100 mb-4">CBSE-aligned NEET preparation just 15 min from your school</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              NEET Coaching for Bal Bharati School
+            </h1>
+            <p className="text-xl text-orange-100 mb-4">
+              CBSE-aligned NEET preparation just 15 min from your school
+            </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />
               <span>12-15 min from Brij Vihar campus</span>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+918826444334" className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-orange-50 transition">
-                <Phone className="w-5 h-5" />Call 88264-44334
+              <a
+                href="tel:+918826444334"
+                className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-orange-50 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Call 88264-44334
               </a>
-              <Link href="/neet-coaching-gurugram" className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-orange-800 transition">
-                View All Locations<ArrowRight className="w-5 h-5" />
+              <Link
+                href="/neet-coaching-gurugram"
+                className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-orange-800 transition"
+              >
+                View All Locations
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -113,7 +136,9 @@ export default function NEETCoachingBalBharatiSchool() {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Bal Bharati Students Choose Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Bal Bharati Students Choose Us
+          </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {whyBalBharatiStudents.map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
@@ -141,14 +166,28 @@ export default function NEETCoachingBalBharatiSchool() {
                   </div>
                 </div>
                 <div className="bg-orange-50 p-4 rounded-lg mb-4">
-                  <p className="text-sm text-orange-800"><strong>Route:</strong> Bal Bharati → Sector 46 → Golf Course Rd → Sector 51</p>
+                  <p className="text-sm text-orange-800">
+                    <strong>Route:</strong> Bal Bharati → Sector 46 → Golf Course Rd → Sector 51
+                  </p>
                 </div>
-                <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition">
-                  <Phone className="w-5 h-5" />Book Free Demo
+                <a
+                  href="tel:+918826444334"
+                  className="inline-flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
+                >
+                  <Phone className="w-5 h-5" />
+                  Book Free Demo
                 </a>
               </div>
               <div className="md:w-1/2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1!2d77.07!3d28.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sM2K%20Corporate%20Park!5e0!3m2!1sen!2sin!4v1" width="100%" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1!2d77.07!3d28.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sM2K%20Corporate%20Park!5e0!3m2!1sen!2sin!4v1"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>
@@ -163,7 +202,9 @@ export default function NEETCoachingBalBharatiSchool() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-orange-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-orange-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -175,18 +216,33 @@ export default function NEETCoachingBalBharatiSchool() {
       <section className="py-16 bg-orange-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Join Bal Bharati Students at Cerebrum</h2>
-          <p className="text-xl text-orange-100 mb-8">CBSE foundation + NEET expertise = Success formula.</p>
-          <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition">
-            <Phone className="w-5 h-5" />Call Now: 88264-44334
+          <p className="text-xl text-orange-100 mb-8">
+            CBSE foundation + NEET expertise = Success formula.
+          </p>
+          <a
+            href="tel:+918826444334"
+            className="inline-flex items-center gap-2 bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition"
+          >
+            <Phone className="w-5 h-5" />
+            Call Now: 88264-44334
           </a>
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
     </div>
   )
 }

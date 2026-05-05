@@ -1,11 +1,22 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Clock, Calendar, CheckCircle, Trophy, GraduationCap, ArrowRight, Star } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Calendar,
+  CheckCircle,
+  Trophy,
+  GraduationCap,
+  ArrowRight,
+  Star,
+} from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: '2 Year NEET Course Gurugram 2026 | Class 11-12 Integrated',
   description:
-    'Join 2-year NEET course in Gurugram from Class 11. Complete foundation + advanced coaching. M2K Sector 51. Best results with 98% success rate. Call 88264-44334!',
+    'Join 2-year NEET course in Gurugram (Gurgaon) from Class 11. Complete foundation + advanced coaching. M2K Sector 51. Best results with 98% success rate. Call 88264-44334!',
   keywords: [
     '2 year neet course gurugram',
     'two year neet coaching gurgaon',
@@ -20,7 +31,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: '2 Year NEET Course Gurugram 2026',
-    description: 'Start early, succeed confidently! 2-year integrated NEET biology program from Class 11.',
+    description:
+      'Start early, succeed confidently! 2-year integrated NEET biology program from Class 11.',
     url: 'https://cerebrumbiologyacademy.com/2-year-neet-course-gurugram',
   },
   alternates: {
@@ -72,41 +84,50 @@ const advantages = [
 const faqs = [
   {
     question: 'What is the 2-year NEET course structure?',
-    answer: 'Year 1 (Class 11): Foundation building - Cell Biology, Plant Physiology, Human Physiology basics, Structural Organisation. Year 2 (Class 12): Advanced topics - Genetics, Evolution, Ecology, Biotechnology + Full revision + NEET practice. Total: 1500+ hours of coaching.',
+    answer:
+      'Year 1 (Class 11): Foundation building - Cell Biology, Plant Physiology, Human Physiology basics, Structural Organisation. Year 2 (Class 12): Advanced topics - Genetics, Evolution, Ecology, Biotechnology + Full revision + NEET practice. Total: 1500+ hours of coaching.',
   },
   {
     question: 'Why is 2-year course better than 1-year?',
-    answer: "Advantages: 1) Relaxed pace - better understanding, 2) Strong foundation in Class 11 itself, 3) More revision cycles, 4) Lower daily study hours (3-4 hrs vs 6 hrs), 5) Time for school activities, 6) Higher success rate (98% vs 94%). Our toppers are mostly 2-year students.",
+    answer:
+      'Advantages: 1) Relaxed pace - better understanding, 2) Strong foundation in Class 11 itself, 3) More revision cycles, 4) Lower daily study hours (3-4 hrs vs 6 hrs), 5) Time for school activities, 6) Higher success rate (98% vs 94%). Our toppers are mostly 2-year students.',
   },
   {
     question: 'What is the fee for 2-year NEET course?',
-    answer: '2-year complete package: ₹1,20,000-1,40,000 (both years combined). Per year: ₹60,000-70,000. Includes: All study material for 2 years, complete test series, doubt support, parent counseling. 10% discount for full payment upfront.',
+    answer:
+      '2-year complete package: ₹1,20,000-1,40,000 (both years combined). Per year: ₹60,000-70,000. Includes: All study material for 2 years, complete test series, doubt support, parent counseling. 10% discount for full payment upfront.',
   },
   {
     question: 'When should I enroll for 2-year course?',
-    answer: 'Best time: April-June of Class 11 year (right after Class 10 boards). Late enrollment accepted till August. Starting early gives maximum advantage. Some students join after Class 10 results in May-June.',
+    answer:
+      'Best time: April-June of Class 11 year (right after Class 10 boards). Late enrollment accepted till August. Starting early gives maximum advantage. Some students join after Class 10 results in May-June.',
   },
   {
     question: 'How to balance school and 2-year coaching?',
-    answer: "Our schedule is designed for balance: 3-4 hours coaching daily (evening batch) + 2 hours self-study. Weekends: 4-5 hours. Total: 25-30 hours/week for NEET + full school attendance. Many DPS, Ryan, Shiv Nadar students manage both successfully.",
+    answer:
+      'Our schedule is designed for balance: 3-4 hours coaching daily (evening batch) + 2 hours self-study. Weekends: 4-5 hours. Total: 25-30 hours/week for NEET + full school attendance. Many DPS, Ryan, Shiv Nadar students manage both successfully.',
   },
   {
     question: 'What if Class 11 concepts are weak?',
-    answer: 'Our 2-year course specifically addresses this: 1) Foundation module before main syllabus, 2) Basic concepts reinforced multiple times, 3) Extra help sessions for weak students, 4) No assumption of prior knowledge. Even students from Hindi medium schools adapt well.',
+    answer:
+      'Our 2-year course specifically addresses this: 1) Foundation module before main syllabus, 2) Basic concepts reinforced multiple times, 3) Extra help sessions for weak students, 4) No assumption of prior knowledge. Even students from Hindi medium schools adapt well.',
   },
   {
     question: 'Is there a difference in faculty for 2-year course?',
-    answer: "Same senior faculty teaches both batches. However, 2-year students benefit from: 1) More time with each faculty member, 2) Better understanding of teaching style, 3) Personalized attention over longer period, 4) Faculty knows each student's weaknesses by Year 2.",
+    answer:
+      "Same senior faculty teaches both batches. However, 2-year students benefit from: 1) More time with each faculty member, 2) Better understanding of teaching style, 3) Personalized attention over longer period, 4) Faculty knows each student's weaknesses by Year 2.",
   },
   {
     question: 'What is the success rate of 2-year program?',
-    answer: '2-year program statistics: 98% qualify NEET, 65% score above 600, 25% score above 650, 5% in top 5000 All India Rank. Compare to 1-year: 94% qualify, 50% above 600. The extra year clearly shows in results.',
+    answer:
+      '2-year program statistics: 98% qualify NEET, 65% score above 600, 25% score above 650, 5% in top 5000 All India Rank. Compare to 1-year: 94% qualify, 50% above 600. The extra year clearly shows in results.',
   },
 ]
 
 export default function TwoYearNEETCourseGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="2-year-neet-course-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-800 to-emerald-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -114,11 +135,10 @@ export default function TwoYearNEETCourseGurugram() {
             <span className="inline-block bg-yellow-500 text-emerald-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               Best for Class 11 Students
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              2 Year NEET Course in Gurugram
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">2 Year NEET Course in Gurugram</h1>
             <p className="text-xl text-emerald-100 mb-8">
-              Start early, succeed confidently! 2-year integrated NEET biology program from Class 11.
+              Start early, succeed confidently! 2-year integrated NEET biology program from Class
+              11.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -275,7 +295,9 @@ export default function TwoYearNEETCourseGurugram() {
                   </tr>
                   <tr>
                     <td className="px-6 py-4 font-medium">School Balance</td>
-                    <td className="px-6 py-4 text-center font-bold text-emerald-600">Comfortable</td>
+                    <td className="px-6 py-4 text-center font-bold text-emerald-600">
+                      Comfortable
+                    </td>
                     <td className="px-6 py-4 text-center">Challenging</td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -348,7 +370,9 @@ export default function TwoYearNEETCourseGurugram() {
                 >
                   Enroll Now - Call 88264-44334
                 </a>
-                <p className="text-center text-sm text-gray-500 mt-3">Year-wise payment & EMI options available</p>
+                <p className="text-center text-sm text-gray-500 mt-3">
+                  Year-wise payment & EMI options available
+                </p>
               </div>
             </div>
           </div>
@@ -465,7 +489,9 @@ export default function TwoYearNEETCourseGurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-emerald-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

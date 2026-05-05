@@ -1,10 +1,11 @@
 import { Metadata } from 'next'
 import { Top10NEETCoachingContent } from './Top10Content'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'Top 10 NEET Coaching in Gurugram 2026 | Ranking & Comparison',
   description:
-    'Honest ranking of top 10 NEET coaching institutes in Gurugram 2026. Based on results, faculty, fees, reviews. Cerebrum #1 with 98% success rate. 88264-44334!',
+    'Honest ranking of top 10 NEET coaching institutes in Gurugram (Gurgaon) 2026. Based on results, faculty, fees, reviews. Cerebrum #1 with 98% success rate. 88264-44334!',
   keywords: [
     'top 10 neet coaching gurugram',
     'best 10 neet coaching gurgaon',
@@ -33,5 +34,10 @@ export const metadata: Metadata = {
 }
 
 export default function Top10NEETCoachingGurugramPage() {
-  return <Top10NEETCoachingContent />
+  return (
+    <>
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="top-10-neet-coaching-gurugram" />
+      <Top10NEETCoachingContent />
+    </>
+  )
 }

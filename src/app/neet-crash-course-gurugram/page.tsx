@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import NEETCrashCourseContent from './NEETCrashCourseContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'NEET Crash Course in Gurugram | 45-Day Intensive Biology Program',
   description:
-    'Join our 45-day NEET Biology crash course in Gurugram. Complete syllabus revision, 1000+ questions, daily tests. Perfect for last-minute preparation. Starting ₹25,000.',
+    'Join our 45-day NEET Biology crash course in Gurugram (Gurgaon). Complete syllabus revision, 1000+ questions, daily tests. Perfect for last-minute preparation. Starting ₹25,000.',
   keywords: [
     'neet crash course gurugram',
     'neet biology crash course',
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Crash Course in Gurugram | 45-Day Intensive Program',
-    description: 'Complete NEET Biology syllabus in 45 days. Daily tests, 1000+ questions, expert faculty.',
+    description:
+      'Complete NEET Biology syllabus in 45 days. Daily tests, 1000+ questions, expert faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-crash-course-gurugram',
   },
   alternates: {
@@ -71,7 +73,8 @@ export default function NEETCrashCourseGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Biology Crash Course - Gurugram',
-    description: '45-day intensive NEET Biology revision course with complete syllabus coverage and 1000+ practice questions',
+    description:
+      '45-day intensive NEET Biology revision course with complete syllabus coverage and 1000+ practice questions',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -114,17 +117,42 @@ export default function NEETCrashCourseGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Crash Course', item: 'https://cerebrumbiologyacademy.com/neet-crash-course-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Crash Course',
+        item: 'https://cerebrumbiologyacademy.com/neet-crash-course-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-crash-course-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <NEETCrashCourseContent faqs={faqs} />
     </>
   )

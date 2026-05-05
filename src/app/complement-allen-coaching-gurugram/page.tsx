@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import ComplementAllenContent from './ComplementAllenContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Complement Allen with Cerebrum Biology Coaching | Gurugram',
-    description: 'Keep your Allen enrollment. Add focused Biology coaching from AIIMS faculty. Same building location.',
+    description:
+      'Keep your Allen enrollment. Add focused Biology coaching from AIIMS faculty. Same building location.',
     url: 'https://cerebrumbiologyacademy.com/complement-allen-coaching-gurugram',
   },
   alternates: {
@@ -70,7 +72,8 @@ export default function ComplementAllenCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'Biology Coaching for Allen Students - Gurugram',
-    description: 'Supplementary NEET Biology coaching designed for students already enrolled at Allen Career Institute',
+    description:
+      'Supplementary NEET Biology coaching designed for students already enrolled at Allen Career Institute',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -106,17 +109,45 @@ export default function ComplementAllenCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Complement Allen Coaching', item: 'https://cerebrumbiologyacademy.com/complement-allen-coaching-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Complement Allen Coaching',
+        item: 'https://cerebrumbiologyacademy.com/complement-allen-coaching-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="complement-allen-coaching-gurugram"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ComplementAllenContent faqs={faqs} />
     </>
   )

@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import AffordableNEETCoachingContent from './AffordableNEETCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'Affordable NEET Coaching in Gurugram | Budget-Friendly Biology Preparation',
   description:
-    'Best affordable NEET coaching in Gurugram starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than Allen, Aakash. EMI options available.',
+    'Best affordable NEET coaching in Gurugram (Gurgaon) starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than Allen, Aakash. EMI options available.',
   keywords: [
     'affordable neet coaching gurugram',
     'cheap neet coaching gurgaon',
@@ -21,7 +22,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Affordable NEET Coaching in Gurugram | Quality at Lower Cost',
-    description: 'Premium NEET Biology coaching at 30-40% lower fees than big institutes. Starting ₹45,000/year.',
+    description:
+      'Premium NEET Biology coaching at 30-40% lower fees than big institutes. Starting ₹45,000/year.',
     url: 'https://cerebrumbiologyacademy.com/affordable-neet-coaching-gurugram',
   },
   alternates: {
@@ -48,7 +50,7 @@ const faqs = [
   {
     question: 'Is the quality compromised due to lower fees?',
     answer:
-      'Absolutely not! Lower fees don\'t mean lower quality. Our faculty is from AIIMS, we have 98% success rate, and smaller batches (10-20 students) compared to 100+ at big institutes. Quality is actually better.',
+      "Absolutely not! Lower fees don't mean lower quality. Our faculty is from AIIMS, we have 98% success rate, and smaller batches (10-20 students) compared to 100+ at big institutes. Quality is actually better.",
   },
   {
     question: 'Are there any scholarships available?',
@@ -72,7 +74,8 @@ export default function AffordableNEETCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'Affordable NEET Biology Coaching - Gurugram',
-    description: 'Budget-friendly NEET Biology preparation with AIIMS faculty, small batches, and 98% success rate',
+    description:
+      'Budget-friendly NEET Biology preparation with AIIMS faculty, small batches, and 98% success rate',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -109,17 +112,42 @@ export default function AffordableNEETCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Affordable NEET Coaching', item: 'https://cerebrumbiologyacademy.com/affordable-neet-coaching-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Affordable NEET Coaching',
+        item: 'https://cerebrumbiologyacademy.com/affordable-neet-coaching-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="affordable-neet-coaching-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <AffordableNEETCoachingContent faqs={faqs} />
     </>
   )

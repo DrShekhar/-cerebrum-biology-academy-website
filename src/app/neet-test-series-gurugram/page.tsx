@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import NEETTestSeriesContent from './NEETTestSeriesContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'NEET Test Series in Gurugram | 50+ Mock Tests with Analysis',
   description:
-    'Join our comprehensive NEET Biology test series in Gurugram. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+    'Join our comprehensive NEET Biology test series in Gurugram (Gurgaon). 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
   keywords: [
     'neet test series gurugram',
     'neet mock test gurugram',
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Test Series in Gurugram | 50+ Mock Tests',
-    description: 'Comprehensive NEET test series with detailed analysis, rank prediction, and performance tracking.',
+    description:
+      'Comprehensive NEET test series with detailed analysis, rank prediction, and performance tracking.',
     url: 'https://cerebrumbiologyacademy.com/neet-test-series-gurugram',
   },
   alternates: {
@@ -71,7 +73,8 @@ export default function NEETTestSeriesGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Biology Test Series - Gurugram',
-    description: 'Comprehensive NEET Biology mock test series with 50+ tests, detailed analysis, and rank prediction',
+    description:
+      'Comprehensive NEET Biology mock test series with 50+ tests, detailed analysis, and rank prediction',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -113,17 +116,42 @@ export default function NEETTestSeriesGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Test Series', item: 'https://cerebrumbiologyacademy.com/neet-test-series-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Test Series',
+        item: 'https://cerebrumbiologyacademy.com/neet-test-series-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-test-series-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <NEETTestSeriesContent faqs={faqs} />
     </>
   )

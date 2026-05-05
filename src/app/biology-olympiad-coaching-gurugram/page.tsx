@@ -2,13 +2,14 @@ import { Metadata } from 'next'
 import BiologyOlympiadGurugramContent from './BiologyOlympiadGurugramContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'Biology Olympiad Coaching in Gurugram | NSEB, IBO, INBO Preparation',
   description:
-    'Expert Biology Olympiad coaching in Gurugram for NSEB, INBO, and IBO preparation. Experienced faculty, comprehensive syllabus coverage, practical training. Join our Sector 51 center.',
+    'Expert Biology Olympiad coaching in Gurugram (Gurgaon) for NSEB, INBO, and IBO preparation. Experienced faculty, comprehensive syllabus coverage, practical training. Join our Sector 51 center.',
   keywords: [
     'biology olympiad coaching gurugram',
     'olympiad preparation gurugram',
@@ -206,6 +207,10 @@ export default function BiologyOlympiadCoachingGurugramPage() {
 
   return (
     <>
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="biology-olympiad-coaching-gurugram"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

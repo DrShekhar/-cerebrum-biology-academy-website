@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import OnlineNEETClassesContent from './OnlineNEETClassesContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'Online NEET Classes in Gurugram | Live Biology Classes from Home',
   description:
-    'Join online NEET Biology classes from Gurugram. Live interactive sessions, recorded lectures, doubt clearing. Same AIIMS faculty as offline. Starting ₹45,000/year.',
+    'Join online NEET Biology classes from Gurugram (Gurgaon). Live interactive sessions, recorded lectures, doubt clearing. Same AIIMS faculty as offline. Starting ₹45,000/year.',
   keywords: [
     'online neet classes gurugram',
     'online neet coaching gurgaon',
@@ -22,7 +23,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Online NEET Classes in Gurugram | Live Interactive Sessions',
-    description: 'Premium online NEET Biology coaching for Gurugram students. Live classes, recordings, doubt support.',
+    description:
+      'Premium online NEET Biology coaching for Gurugram students. Live classes, recordings, doubt support.',
     url: 'https://cerebrumbiologyacademy.com/online-neet-classes-gurugram',
   },
   alternates: {
@@ -98,7 +100,8 @@ export default function OnlineNEETClassesGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'Online NEET Biology Classes - Gurugram',
-    description: 'Live interactive online NEET Biology coaching for Gurugram students with AIIMS faculty',
+    description:
+      'Live interactive online NEET Biology coaching for Gurugram students with AIIMS faculty',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -141,17 +144,42 @@ export default function OnlineNEETClassesGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Online Classes', item: 'https://cerebrumbiologyacademy.com/online-neet-classes-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Online Classes',
+        item: 'https://cerebrumbiologyacademy.com/online-neet-classes-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="online-neet-classes-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <OnlineNEETClassesContent faqs={faqs} />
     </>
   )

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/cities'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const cityData = getCityData('dlf-gurgaon')!
 
@@ -26,5 +27,14 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingDLFGurgaon() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <GurgaonGurugramAreaSchema
+        spelling="gurgaon"
+        pageSlug="neet-coaching-dlf-gurgaon"
+        subArea="DLF"
+      />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }

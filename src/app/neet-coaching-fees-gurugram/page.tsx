@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import NEETCoachingFeesContent from './NEETCoachingFeesContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
@@ -99,7 +100,8 @@ export default function NEETCoachingFeesGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'NEET Coaching Fees in Gurugram 2026 - Complete Fee Comparison Guide',
-    description: 'Comprehensive comparison of NEET coaching fees in Gurugram with scholarships, EMI options, and value analysis.',
+    description:
+      'Comprehensive comparison of NEET coaching fees in Gurugram with scholarships, EMI options, and value analysis.',
     author: {
       '@type': 'Organization',
       name: 'Cerebrum Biology Academy',
@@ -130,17 +132,42 @@ export default function NEETCoachingFeesGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Fees Comparison', item: 'https://cerebrumbiologyacademy.com/neet-coaching-fees-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Fees Comparison',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-fees-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-coaching-fees-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <NEETCoachingFeesContent faqs={faqs} />
     </>
   )

@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import NSEBCoachingGurugramContent from './NSEBCoachingGurugramContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'NSEB Coaching in Gurugram | National Standard Examination in Biology',
   description:
-    'Expert NSEB coaching in Gurugram for National Standard Examination in Biology. Comprehensive syllabus coverage, past paper practice, experienced faculty at Sector 51 center.',
+    'Expert NSEB coaching in Gurugram (Gurgaon) for National Standard Examination in Biology. Comprehensive syllabus coverage, past paper practice, experienced faculty at Sector 51 center.',
   keywords: [
     'NSEB coaching gurugram',
     'NSEB preparation gurugram',
@@ -147,6 +148,7 @@ export default function NSEBCoachingGurugramPage() {
 
   return (
     <>
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="nseb-coaching-gurugram" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

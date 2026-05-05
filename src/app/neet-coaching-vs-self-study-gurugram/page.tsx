@@ -1,11 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, ArrowRight, CheckCircle, XCircle, Users, BookOpen, Target } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching vs Self-Study: Which is Better? 2025 Guide | Gurugram',
   description:
-    'NEET coaching vs self-study comparison. Pros, cons, success rates, and who should choose what. Expert advice from AIIMS faculty in Gurugram. Call 88264-44334!',
+    'NEET coaching vs self-study comparison. Pros, cons, success rates, and who should choose what. Expert advice from AIIMS faculty in Gurugram (Gurgaon). Call 88264-44334!',
   keywords: [
     'neet coaching vs self study',
     'coaching or self study for neet',
@@ -72,25 +73,33 @@ const selfStudyCons = [
 const faqs = [
   {
     question: 'What percentage of NEET toppers use coaching?',
-    answer: '80-85% of NEET toppers (AIR under 1000) have some form of coaching - either full-time, part-time, or at least test series. Pure self-study toppers are 15-20%.',
+    answer:
+      '80-85% of NEET toppers (AIR under 1000) have some form of coaching - either full-time, part-time, or at least test series. Pure self-study toppers are 15-20%.',
   },
   {
     question: 'Is self-study enough for 600+ in NEET?',
-    answer: 'Possible but difficult. 600+ requires strong foundation, excellent resources, and consistent 8-10 hours daily. Consider at least test series and doubt support even if not full coaching.',
+    answer:
+      'Possible but difficult. 600+ requires strong foundation, excellent resources, and consistent 8-10 hours daily. Consider at least test series and doubt support even if not full coaching.',
   },
   {
     question: 'Can I combine coaching and self-study?',
-    answer: 'Yes! This is often the best approach. Join coaching for classes and tests, but dedicate 3-4 hours daily to self-study for revision and practice.',
+    answer:
+      'Yes! This is often the best approach. Join coaching for classes and tests, but dedicate 3-4 hours daily to self-study for revision and practice.',
   },
   {
     question: 'Which is better for repeaters/droppers?',
-    answer: 'Depends on first attempt score. If 550+: self-study with test series may work. Below 500: coaching recommended to fix fundamentals. Analyze what went wrong first.',
+    answer:
+      'Depends on first attempt score. If 550+: self-study with test series may work. Below 500: coaching recommended to fix fundamentals. Analyze what went wrong first.',
   },
 ]
 
 export default function NEETCoachingVsSelfStudy() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-coaching-vs-self-study-gurugram"
+      />
       <section className="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -110,7 +119,11 @@ export default function NEETCoachingVsSelfStudy() {
             <div className="bg-gradient-to-r from-teal-50 to-cyan-50 border-l-4 border-teal-600 p-6 rounded-lg mb-8">
               <h2 className="text-xl font-bold text-teal-900 mb-3">Quick Answer</h2>
               <p className="text-lg text-teal-800">
-                <strong>Coaching has higher success rate</strong> (25-30% vs 10-15% for self-study) but costs more. <strong>Self-study works if</strong> you have exceptional discipline, strong foundation, and access to good resources. <strong>Best approach</strong>: Combine both - join coaching for structure, dedicate daily self-study time for mastery.
+                <strong>Coaching has higher success rate</strong> (25-30% vs 10-15% for self-study)
+                but costs more. <strong>Self-study works if</strong> you have exceptional
+                discipline, strong foundation, and access to good resources.{' '}
+                <strong>Best approach</strong>: Combine both - join coaching for structure, dedicate
+                daily self-study time for mastery.
               </p>
             </div>
           </div>
@@ -290,7 +303,9 @@ export default function NEETCoachingVsSelfStudy() {
                   </ul>
                 </div>
               </div>
-              <p className="mt-4 text-center">Our Weekend Batch at ₹45,000/year offers exactly this.</p>
+              <p className="mt-4 text-center">
+                Our Weekend Batch at ₹45,000/year offers exactly this.
+              </p>
             </div>
           </div>
         </div>
@@ -304,7 +319,9 @@ export default function NEETCoachingVsSelfStudy() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-teal-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-teal-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -316,33 +333,57 @@ export default function NEETCoachingVsSelfStudy() {
       <section className="py-16 bg-teal-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Not Sure What's Right for You?</h2>
-          <p className="text-xl text-teal-100 mb-8">Free counseling to help you decide. No obligation.</p>
+          <p className="text-xl text-teal-100 mb-8">
+            Free counseling to help you decide. No obligation.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-teal-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
-              <Phone className="w-5 h-5" />Call 88264-44334
+            <a
+              href="tel:+918826444334"
+              className="inline-flex items-center gap-2 bg-yellow-500 text-teal-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+            >
+              <Phone className="w-5 h-5" />
+              Call 88264-44334
             </a>
-            <Link href="/free-neet-demo-class-gurugram" className="inline-flex items-center gap-2 bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition">
-              Try Free Demo<ArrowRight className="w-5 h-5" />
+            <Link
+              href="/free-neet-demo-class-gurugram"
+              className="inline-flex items-center gap-2 bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
+            >
+              Try Free Demo
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: 'NEET Coaching vs Self-Study: Which is Better?',
-        description: 'Complete comparison of coaching and self-study for NEET',
-        author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-        publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-        datePublished: '2025-01-01',
-        dateModified: '2025-01-26',
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: 'NEET Coaching vs Self-Study: Which is Better?',
+            description: 'Complete comparison of coaching and self-study for NEET',
+            author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+            publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+            datePublished: '2025-01-01',
+            dateModified: '2025-01-26',
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
     </div>
   )
 }

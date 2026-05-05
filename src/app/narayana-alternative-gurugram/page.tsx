@@ -1,11 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, CheckCircle, Clock, Award, ArrowRight, UserCheck } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'Best Narayana Alternative in Gurugram 2026 | Small Batch Personal Attention',
   description:
-    "Looking for Narayana alternative in Gurugram? Cerebrum: 25-student batches vs Narayana's 100+. AIIMS faculty, 98% success rate. Personal attention guaranteed. Call 88264-44334!",
+    "Looking for Narayana alternative in Gurugram (Gurgaon)? Cerebrum: 25-student batches vs Narayana's 100+. AIIMS faculty, 98% success rate. Personal attention guaranteed. Call 88264-44334!",
   keywords: [
     'narayana alternative gurugram',
     'narayana alternative gurgaon',
@@ -21,7 +22,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Best Narayana Alternative in Gurugram 2026',
-    description: 'Tired of crowded Narayana batches? Get personal attention with 25-student batches.',
+    description:
+      'Tired of crowded Narayana batches? Get personal attention with 25-student batches.',
     url: 'https://cerebrumbiologyacademy.com/narayana-alternative-gurugram',
   },
   alternates: {
@@ -30,48 +32,96 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: 'Batch Size', narayana: '100-150 students', cerebrum: '25 students max', winner: 'cerebrum' },
-  { feature: 'Annual Fee', narayana: '₹1.2-1.8 Lakh', cerebrum: '₹45,000-75,000', winner: 'cerebrum' },
-  { feature: 'Doubt Resolution', narayana: 'Days/weeks wait', cerebrum: 'Same-day WhatsApp', winner: 'cerebrum' },
-  { feature: 'Faculty Access', narayana: 'Limited/queue', cerebrum: 'Direct contact', winner: 'cerebrum' },
-  { feature: 'Biology Focus', narayana: 'One of 3 subjects', cerebrum: 'Primary Specialization', winner: 'cerebrum' },
-  { feature: 'Personal Attention', narayana: 'Minimal', cerebrum: '4x more time', winner: 'cerebrum' },
-  { feature: 'Faculty Stability', narayana: 'High turnover', cerebrum: 'Consistent team', winner: 'cerebrum' },
-  { feature: 'Brand Network', narayana: 'Pan-India', cerebrum: 'Regional focus', winner: 'narayana' },
+  {
+    feature: 'Batch Size',
+    narayana: '100-150 students',
+    cerebrum: '25 students max',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Annual Fee',
+    narayana: '₹1.2-1.8 Lakh',
+    cerebrum: '₹45,000-75,000',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Doubt Resolution',
+    narayana: 'Days/weeks wait',
+    cerebrum: 'Same-day WhatsApp',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Faculty Access',
+    narayana: 'Limited/queue',
+    cerebrum: 'Direct contact',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Biology Focus',
+    narayana: 'One of 3 subjects',
+    cerebrum: 'Primary Specialization',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Personal Attention',
+    narayana: 'Minimal',
+    cerebrum: '4x more time',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Faculty Stability',
+    narayana: 'High turnover',
+    cerebrum: 'Consistent team',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Brand Network',
+    narayana: 'Pan-India',
+    cerebrum: 'Regional focus',
+    winner: 'narayana',
+  },
 ]
 
 const faqs = [
   {
     question: 'Why switch from Narayana to Cerebrum?',
-    answer: "Top reasons students switch: 1) Batch size - Narayana has 100-150 students, Cerebrum has 25, 2) Personal attention - doubts answered same day vs weeks later, 3) Faculty access - direct WhatsApp for doubts, 4) Specialized biology focus vs general coaching, 5) Better success rate in biology (98%).",
+    answer:
+      'Top reasons students switch: 1) Batch size - Narayana has 100-150 students, Cerebrum has 25, 2) Personal attention - doubts answered same day vs weeks later, 3) Faculty access - direct WhatsApp for doubts, 4) Specialized biology focus vs general coaching, 5) Better success rate in biology (98%).',
   },
   {
     question: 'How do Narayana and Cerebrum fees compare?',
-    answer: 'Narayana Gurugram: ₹1.2-1.8 Lakh/year for NEET programs. Cerebrum: ₹45,000-75,000/year for comprehensive NEET biology coaching. Save ₹75K-1L while getting 4x more personal attention per student.',
+    answer:
+      'Narayana Gurugram: ₹1.2-1.8 Lakh/year for NEET programs. Cerebrum: ₹45,000-75,000/year for comprehensive NEET biology coaching. Save ₹75K-1L while getting 4x more personal attention per student.',
   },
   {
     question: 'Is Narayana good for NEET in Gurugram?',
-    answer: "Narayana has a strong brand but Gurugram branches are known for very large batches (100-150 students). Good for self-motivated students who don't need much personal guidance. If you need doubt resolution and personal attention, smaller batches work better.",
+    answer:
+      "Narayana has a strong brand but Gurugram branches are known for very large batches (100-150 students). Good for self-motivated students who don't need much personal guidance. If you need doubt resolution and personal attention, smaller batches work better.",
   },
   {
     question: 'What is the main problem with Narayana Gurugram?',
-    answer: "Common complaints from ex-Narayana students: 1) Too crowded - can't ask doubts in class, 2) Faculty turnover - teachers change mid-session, 3) Focus on quantity over quality, 4) Generic study material, 5) Long wait for doubt resolution. Cerebrum solves all these with small batches.",
+    answer:
+      "Common complaints from ex-Narayana students: 1) Too crowded - can't ask doubts in class, 2) Faculty turnover - teachers change mid-session, 3) Focus on quantity over quality, 4) Generic study material, 5) Long wait for doubt resolution. Cerebrum solves all these with small batches.",
   },
   {
     question: 'Can I join Cerebrum after leaving Narayana mid-year?',
-    answer: 'Yes! We have flexible joining options: 1) Mid-session joining with catch-up support, 2) Backlog clearing batches for specific chapters, 3) Fast-track revision for already-covered syllabus, 4) No penalty or extra fees for mid-year joiners.',
+    answer:
+      'Yes! We have flexible joining options: 1) Mid-session joining with catch-up support, 2) Backlog clearing batches for specific chapters, 3) Fast-track revision for already-covered syllabus, 4) No penalty or extra fees for mid-year joiners.',
   },
   {
     question: 'What makes Cerebrum better for biology specifically?',
-    answer: "Cerebrum is a biology-specialized institute: 1) All faculty are biology experts (AIIMS/medical background), 2) Daily biology classes (not alternate days), 3) NEET biology pattern expertise, 4) Diagram-focused teaching, 5) NCERT line-by-line coverage. Narayana treats biology as just one of 3 subjects.",
+    answer:
+      'Cerebrum is a biology-specialized institute: 1) All faculty are biology experts (AIIMS/medical background), 2) Daily biology classes (not alternate days), 3) NEET biology pattern expertise, 4) Diagram-focused teaching, 5) NCERT line-by-line coverage. Narayana treats biology as just one of 3 subjects.',
   },
   {
     question: 'Do Narayana students join for supplementary biology?',
-    answer: 'Yes, many Narayana students take our: 1) Biology-only batch (weekends, ₹35,000/year), 2) Test series membership (₹8,000/year), 3) Crash courses before exams (₹15,000-25,000). Timings designed to complement Narayana schedule.',
+    answer:
+      'Yes, many Narayana students take our: 1) Biology-only batch (weekends, ₹35,000/year), 2) Test series membership (₹8,000/year), 3) Crash courses before exams (₹15,000-25,000). Timings designed to complement Narayana schedule.',
   },
   {
     question: 'How to decide between Narayana and Cerebrum?',
-    answer: "Choose Narayana if: You want all-subjects coaching, you are highly self-motivated, you don't need personal attention. Choose Cerebrum if: Biology is your weak subject, you need doubt resolution, you want small batches, you are serious about biology score in NEET.",
+    answer:
+      "Choose Narayana if: You want all-subjects coaching, you are highly self-motivated, you don't need personal attention. Choose Cerebrum if: Biology is your weak subject, you need doubt resolution, you want small batches, you are serious about biology score in NEET.",
   },
 ]
 
@@ -101,6 +151,7 @@ const painPoints = [
 export default function NarayanaAlternativeGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="narayana-alternative-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-800 to-green-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -112,7 +163,8 @@ export default function NarayanaAlternativeGurugram() {
               Best Narayana Alternative in Gurugram
             </h1>
             <p className="text-xl text-green-100 mb-8">
-              Tired of crowded Narayana batches? Get personal attention with 25-student batches at Cerebrum.
+              Tired of crowded Narayana batches? Get personal attention with 25-student batches at
+              Cerebrum.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -188,7 +240,9 @@ export default function NarayanaAlternativeGurugram() {
       {/* Comparison Table */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Narayana vs Cerebrum: Head-to-Head</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Narayana vs Cerebrum: Head-to-Head
+          </h2>
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-green-800 text-white">
@@ -202,12 +256,18 @@ export default function NarayanaAlternativeGurugram() {
                 {comparisonData.map((row, index) => (
                   <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="px-6 py-4 font-medium">{row.feature}</td>
-                    <td className={`px-6 py-4 text-center ${row.winner === 'narayana' ? 'text-green-600 font-semibold' : ''}`}>
+                    <td
+                      className={`px-6 py-4 text-center ${row.winner === 'narayana' ? 'text-green-600 font-semibold' : ''}`}
+                    >
                       {row.narayana}
                     </td>
-                    <td className={`px-6 py-4 text-center ${row.winner === 'cerebrum' ? 'text-green-600 font-semibold' : ''}`}>
+                    <td
+                      className={`px-6 py-4 text-center ${row.winner === 'cerebrum' ? 'text-green-600 font-semibold' : ''}`}
+                    >
                       {row.cerebrum}
-                      {row.winner === 'cerebrum' && <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />}
+                      {row.winner === 'cerebrum' && (
+                        <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />
+                      )}
                     </td>
                   </tr>
                 ))}
@@ -220,27 +280,32 @@ export default function NarayanaAlternativeGurugram() {
       {/* Why Switch */}
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Students Switch from Narayana</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Students Switch from Narayana
+          </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <UserCheck className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Personal Attention</h3>
               <p className="text-gray-600">
-                Narayana batches have 100-150 students. You become just a number. Our 25-student limit ensures every student gets individual focus.
+                Narayana batches have 100-150 students. You become just a number. Our 25-student
+                limit ensures every student gets individual focus.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Clock className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Instant Doubt Resolution</h3>
               <p className="text-gray-600">
-                At Narayana, doubts pile up for days. At Cerebrum, WhatsApp your doubt and get answers the same day. No waiting, no queues.
+                At Narayana, doubts pile up for days. At Cerebrum, WhatsApp your doubt and get
+                answers the same day. No waiting, no queues.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Award className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Biology Specialists</h3>
               <p className="text-gray-600">
-                Narayana treats biology as one of many subjects. We specialize in NEET biology with AIIMS-trained faculty who live and breathe biology.
+                Narayana treats biology as one of many subjects. We specialize in NEET biology with
+                AIIMS-trained faculty who live and breathe biology.
               </p>
             </div>
           </div>
@@ -258,17 +323,23 @@ export default function NarayanaAlternativeGurugram() {
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
               <div className="text-2xl font-bold text-green-600 mb-2">₹35,000/year</div>
               <div className="font-semibold mb-2">Weekend Biology Batch</div>
-              <p className="text-sm text-gray-600">Sat-Sun classes that complement Narayana weekday schedule</p>
+              <p className="text-sm text-gray-600">
+                Sat-Sun classes that complement Narayana weekday schedule
+              </p>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
               <div className="text-2xl font-bold text-green-600 mb-2">₹8,000/year</div>
               <div className="font-semibold mb-2">Test Series Only</div>
-              <p className="text-sm text-gray-600">Weekly tests + analysis without regular classes</p>
+              <p className="text-sm text-gray-600">
+                Weekly tests + analysis without regular classes
+              </p>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
               <div className="text-2xl font-bold text-green-600 mb-2">₹15-25,000</div>
               <div className="font-semibold mb-2">Crash Courses</div>
-              <p className="text-sm text-gray-600">Pre-exam intensive revision for specific topics</p>
+              <p className="text-sm text-gray-600">
+                Pre-exam intensive revision for specific topics
+              </p>
             </div>
           </div>
         </div>
@@ -286,7 +357,9 @@ export default function NarayanaAlternativeGurugram() {
                   <div>
                     <p className="font-semibold">M2K Corporate Park</p>
                     <p className="text-gray-600">Sector 51, Gurugram 122018</p>
-                    <p className="text-sm text-gray-500 mt-1">Narayana is in Sector 14 (8 km away)</p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      Narayana is in Sector 14 (8 km away)
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 mb-4">
@@ -331,7 +404,9 @@ export default function NarayanaAlternativeGurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-green-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-green-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

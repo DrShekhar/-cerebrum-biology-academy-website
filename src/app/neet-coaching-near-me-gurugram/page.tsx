@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import NEETCoachingNearMeContent from './NEETCoachingNearMeContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Near Me in Gurugram | Find Best Biology Classes Nearby',
   description:
-    'Looking for NEET coaching near me in Gurugram? Find the best NEET Biology coaching within 5km. Sector 51 location accessible from DLF, Sohna Road, Golf Course Road. Book free demo today.',
+    'Looking for NEET coaching near me in Gurugram (Gurgaon)? Find the best NEET Biology coaching within 5km. Sector 51 location accessible from DLF, Sohna Road, Golf Course Road. Book free demo today.',
   keywords: [
     'neet coaching near me gurugram',
     'neet coaching near me gurgaon',
@@ -22,7 +23,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Coaching Near Me in Gurugram | Biology Classes Nearby',
-    description: 'Find the best NEET coaching near you in Gurugram. Central Sector 51 location, accessible from all major areas.',
+    description:
+      'Find the best NEET coaching near you in Gurugram. Central Sector 51 location, accessible from all major areas.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-near-me-gurugram',
   },
   alternates: {
@@ -98,7 +100,8 @@ export default function NEETCoachingNearMeGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
     name: 'Cerebrum Biology Academy - NEET Coaching Near Me Gurugram',
-    description: 'Best NEET Biology coaching center in Gurugram. Centrally located in Sector 51, accessible from all major areas.',
+    description:
+      'Best NEET Biology coaching center in Gurugram. Centrally located in Sector 51, accessible from all major areas.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-near-me-gurugram',
     telephone: CONTACT_INFO.phone.primary,
     address: {
@@ -143,17 +146,42 @@ export default function NEETCoachingNearMeGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Near Me', item: 'https://cerebrumbiologyacademy.com/neet-coaching-near-me-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Near Me',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-near-me-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-coaching-near-me-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <NEETCoachingNearMeContent faqs={faqs} />
     </>
   )

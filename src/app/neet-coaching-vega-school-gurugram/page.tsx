@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, Users, Sparkles, Globe } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for Vega School Gurugram',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
 const whyVegaStudents = [
   {
     title: 'Progressive to Traditional Bridge',
-    description: 'Vega\'s inquiry-based learning meets NEET\'s exam-focused requirements seamlessly.',
+    description: "Vega's inquiry-based learning meets NEET's exam-focused requirements seamlessly.",
     icon: Sparkles,
   },
   {
@@ -37,7 +38,7 @@ const whyVegaStudents = [
   },
   {
     title: 'Flexible Scheduling',
-    description: 'Batch timings designed around Vega\'s unique school calendar.',
+    description: "Batch timings designed around Vega's unique school calendar.",
     icon: Users,
   },
 ]
@@ -53,25 +54,34 @@ const nearbyAreas = [
 const faqs = [
   {
     question: 'How far is Cerebrum from Vega School?',
-    answer: 'Our center at M2K Corporate Park, Sector 51 is approximately 3-4 km from Vega School Sector 48. It takes just 6-8 minutes by car.',
+    answer:
+      'Our center at M2K Corporate Park, Sector 51 is approximately 3-4 km from Vega School Sector 48. It takes just 6-8 minutes by car.',
   },
   {
-    question: 'Does Vega\'s progressive approach affect NEET prep?',
-    answer: 'Vega students have strong conceptual understanding from inquiry-based learning. We channel this into NEET-specific application and MCQ practice.',
+    question: "Does Vega's progressive approach affect NEET prep?",
+    answer:
+      'Vega students have strong conceptual understanding from inquiry-based learning. We channel this into NEET-specific application and MCQ practice.',
   },
   {
     question: 'Do you support both IGCSE and CBSE Vega students?',
-    answer: 'Yes! Vega offers both curricula. For IGCSE students, we have bridge modules. CBSE students get direct NEET alignment.',
+    answer:
+      'Yes! Vega offers both curricula. For IGCSE students, we have bridge modules. CBSE students get direct NEET alignment.',
   },
   {
     question: 'How is your teaching style compatible with Vega approach?',
-    answer: 'We use conceptual discussions and application-based learning - similar to Vega. MCQ training is added systematically to prepare for exam format.',
+    answer:
+      'We use conceptual discussions and application-based learning - similar to Vega. MCQ training is added systematically to prepare for exam format.',
   },
 ]
 
 export default function NEETCoachingVegaSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-violet-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-coaching-vega-school-gurugram"
+        subArea="Vega School Gurugram"
+      />
       <section className="bg-gradient-to-r from-violet-700 to-violet-600 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -86,11 +96,19 @@ export default function NEETCoachingVegaSchool() {
               <span>Just 8 min from Sector 48 campus</span>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+918826444334" className="bg-yellow-500 text-violet-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition">
-                <Phone className="w-5 h-5" />Call 88264-44334
+              <a
+                href="tel:+918826444334"
+                className="bg-yellow-500 text-violet-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Call 88264-44334
               </a>
-              <Link href="/neet-coaching-gurugram" className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/30 transition">
-                View All Locations<ArrowRight className="w-5 h-5" />
+              <Link
+                href="/neet-coaching-gurugram"
+                className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/30 transition"
+              >
+                View All Locations
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -141,14 +159,28 @@ export default function NEETCoachingVegaSchool() {
                   </div>
                 </div>
                 <div className="bg-violet-50 p-4 rounded-lg mb-4">
-                  <p className="text-sm text-violet-800"><strong>Route:</strong> Vega Sec 48 → Sector 49 → Sector 51 (8 min)</p>
+                  <p className="text-sm text-violet-800">
+                    <strong>Route:</strong> Vega Sec 48 → Sector 49 → Sector 51 (8 min)
+                  </p>
                 </div>
-                <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-700 transition">
-                  <Phone className="w-5 h-5" />Book Free Demo
+                <a
+                  href="tel:+918826444334"
+                  className="inline-flex items-center gap-2 bg-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-700 transition"
+                >
+                  <Phone className="w-5 h-5" />
+                  Book Free Demo
                 </a>
               </div>
               <div className="md:w-1/2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1!2d77.07!3d28.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sM2K%20Corporate%20Park!5e0!3m2!1sen!2sin!4v1" width="100%" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1!2d77.07!3d28.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sM2K%20Corporate%20Park!5e0!3m2!1sen!2sin!4v1"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>
@@ -163,7 +195,9 @@ export default function NEETCoachingVegaSchool() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-violet-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-violet-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -175,18 +209,33 @@ export default function NEETCoachingVegaSchool() {
       <section className="py-16 bg-violet-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Join Vega Students at Cerebrum</h2>
-          <p className="text-xl text-violet-100 mb-8">Inquiry-based learners thrive with our conceptual approach.</p>
-          <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-violet-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
-            <Phone className="w-5 h-5" />Call Now: 88264-44334
+          <p className="text-xl text-violet-100 mb-8">
+            Inquiry-based learners thrive with our conceptual approach.
+          </p>
+          <a
+            href="tel:+918826444334"
+            className="inline-flex items-center gap-2 bg-yellow-500 text-violet-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+          >
+            <Phone className="w-5 h-5" />
+            Call Now: 88264-44334
           </a>
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
     </div>
   )
 }

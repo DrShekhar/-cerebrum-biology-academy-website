@@ -1,11 +1,22 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, Quote, Award, Star, BookOpen, Clock, Target, ArrowRight, GraduationCap } from 'lucide-react'
+import {
+  Phone,
+  Quote,
+  Award,
+  Star,
+  BookOpen,
+  Clock,
+  Target,
+  ArrowRight,
+  GraduationCap,
+} from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Topper Interviews Gurugram | Success Stories',
   description:
-    'Read inspiring NEET topper interviews from Cerebrum Biology Academy Gurugram. Learn strategies from students who scored 650+. Real stories, real success. Call 88264-44334!',
+    'Read inspiring NEET topper interviews from Cerebrum Biology Academy Gurugram (Gurgaon). Learn strategies from students who scored 650+. Real stories, real success. Call 88264-44334!',
   keywords: [
     'neet topper interview gurugram',
     'neet success stories gurugram',
@@ -34,15 +45,21 @@ const topperInterviews = [
     school: 'DPS Sector 45',
     program: '2-Year Program',
     photo: '/testimonials/student-1.jpg',
-    quote: 'The small batch size at Cerebrum made all the difference. I could ask doubts freely without hesitation.',
+    quote:
+      'The small batch size at Cerebrum made all the difference. I could ask doubts freely without hesitation.',
     interview: {
-      dailyRoutine: '6 AM wake up, 2 hours self-study, school, 3 hours coaching, 2 hours revision, sleep by 10:30 PM',
+      dailyRoutine:
+        '6 AM wake up, 2 hours self-study, school, 3 hours coaching, 2 hours revision, sleep by 10:30 PM',
       studyHours: '8-9 hours on weekdays, 10-12 hours on weekends',
-      favoriteSubject: 'Genetics - it\'s like solving puzzles!',
-      challengingTopic: 'Plant Physiology initially, but our faculty made it clear with diagrams and mnemonics',
-      neetTips: '1) NCERT is your Bible - read it 10 times minimum. 2) Start PYQs from day one. 3) Don\'t skip any topic. 4) Sleep well before exam.',
-      whyCerebrum: 'The faculty actually cares. Dr. Sharma sir knew my weak areas better than me and helped me overcome them.',
-      messageToAspirants: 'There\'s no shortcut. Consistent daily effort beats last-minute cramming. Trust your coaching and work hard.',
+      favoriteSubject: "Genetics - it's like solving puzzles!",
+      challengingTopic:
+        'Plant Physiology initially, but our faculty made it clear with diagrams and mnemonics',
+      neetTips:
+        "1) NCERT is your Bible - read it 10 times minimum. 2) Start PYQs from day one. 3) Don't skip any topic. 4) Sleep well before exam.",
+      whyCerebrum:
+        'The faculty actually cares. Dr. Sharma sir knew my weak areas better than me and helped me overcome them.',
+      messageToAspirants:
+        "There's no shortcut. Consistent daily effort beats last-minute cramming. Trust your coaching and work hard.",
     },
   },
   {
@@ -56,15 +73,20 @@ const topperInterviews = [
     previousScore: 567,
     improvement: '+112 marks',
     photo: '/testimonials/student-2.jpg',
-    quote: 'I failed once but Cerebrum helped me understand why. The second attempt was about smart work, not just hard work.',
+    quote:
+      'I failed once but Cerebrum helped me understand why. The second attempt was about smart work, not just hard work.',
     interview: {
-      dailyRoutine: '5 AM start, morning revision, full day at Cerebrum, evening self-study, daily mock questions',
+      dailyRoutine:
+        '5 AM start, morning revision, full day at Cerebrum, evening self-study, daily mock questions',
       studyHours: '10-12 hours daily as a dropper',
       favoriteSubject: 'Human Physiology - very scoring if you understand the logic',
       challengingTopic: 'Ecology - too many facts. Made flashcards and revised daily.',
-      neetTips: '1) Analyze your mistakes in mock tests. 2) Focus on Biology - it\'s 50% marks. 3) Don\'t compare with others. 4) Take one day off per week.',
-      whyCerebrum: 'After my first attempt failure, other institutes weren\'t interested. Cerebrum counselors believed in me and created a personalized plan.',
-      messageToAspirants: 'Dropping a year is not the end. Many AIIMS toppers are droppers. What matters is how you use that year.',
+      neetTips:
+        "1) Analyze your mistakes in mock tests. 2) Focus on Biology - it's 50% marks. 3) Don't compare with others. 4) Take one day off per week.",
+      whyCerebrum:
+        "After my first attempt failure, other institutes weren't interested. Cerebrum counselors believed in me and created a personalized plan.",
+      messageToAspirants:
+        'Dropping a year is not the end. Many AIIMS toppers are droppers. What matters is how you use that year.',
     },
   },
   {
@@ -76,15 +98,20 @@ const topperInterviews = [
     school: 'Shiv Nadar School',
     program: '2-Year Program',
     photo: '/testimonials/student-3.jpg',
-    quote: 'Biology became fun when I started connecting concepts instead of memorizing them. Cerebrum taught me that.',
+    quote:
+      'Biology became fun when I started connecting concepts instead of memorizing them. Cerebrum taught me that.',
     interview: {
-      dailyRoutine: 'School mornings, coaching evenings, 2-hour revision before sleep. No compromise on sleep.',
+      dailyRoutine:
+        'School mornings, coaching evenings, 2-hour revision before sleep. No compromise on sleep.',
       studyHours: '6-7 hours on weekdays, 9-10 hours on weekends',
       favoriteSubject: 'Genetics and Biotechnology - lots of application-based questions',
       challengingTopic: 'Classification - made comparative charts for all phyla and kingdoms',
-      neetTips: '1) Make your own notes - writing helps memory. 2) Teach concepts to someone. 3) Do 100 MCQs daily. 4) Don\'t ignore Physics/Chemistry.',
-      whyCerebrum: 'Small batch, personal attention, and faculty who genuinely want you to succeed. Not just another student number.',
-      messageToAspirants: 'Start early if you can. 2-year program gives you time to enjoy the learning process without stress.',
+      neetTips:
+        "1) Make your own notes - writing helps memory. 2) Teach concepts to someone. 3) Do 100 MCQs daily. 4) Don't ignore Physics/Chemistry.",
+      whyCerebrum:
+        'Small batch, personal attention, and faculty who genuinely want you to succeed. Not just another student number.',
+      messageToAspirants:
+        'Start early if you can. 2-year program gives you time to enjoy the learning process without stress.',
     },
   },
 ]
@@ -95,31 +122,36 @@ const commonTips = [
   { tip: 'Daily MCQ practice', votes: 10, icon: Clock },
   { tip: 'Regular sleep schedule', votes: 9, icon: Star },
   { tip: 'Teach what you learn', votes: 8, icon: GraduationCap },
-  { tip: 'Don\'t skip any topic', votes: 8, icon: Award },
+  { tip: "Don't skip any topic", votes: 8, icon: Award },
 ]
 
 const faqs = [
   {
     question: 'How many hours did NEET toppers study?',
-    answer: 'Our toppers studied 6-8 hours on weekdays and 10-12 hours on weekends. Quality matters more than quantity. Focused 6 hours beats distracted 12 hours.',
+    answer:
+      'Our toppers studied 6-8 hours on weekdays and 10-12 hours on weekends. Quality matters more than quantity. Focused 6 hours beats distracted 12 hours.',
   },
   {
     question: 'What is the most important tip from toppers?',
-    answer: 'All 12 of our 650+ scorers emphasized NCERT as the primary source. They read NCERT at least 10 times and knew every line, diagram, and example.',
+    answer:
+      'All 12 of our 650+ scorers emphasized NCERT as the primary source. They read NCERT at least 10 times and knew every line, diagram, and example.',
   },
   {
     question: 'Did toppers attend coaching or self-study?',
-    answer: 'All our toppers attended Cerebrum coaching + dedicated self-study time. Coaching provides structure, doubts clearing, and tests. Self-study builds depth.',
+    answer:
+      'All our toppers attended Cerebrum coaching + dedicated self-study time. Coaching provides structure, doubts clearing, and tests. Self-study builds depth.',
   },
   {
     question: 'How did droppers improve 100+ marks?',
-    answer: 'Droppers focused on: 1) Identifying exact weak areas from first attempt, 2) Full-time dedication without school distractions, 3) 50+ full mock tests, 4) Personalized weak-area coaching.',
+    answer:
+      'Droppers focused on: 1) Identifying exact weak areas from first attempt, 2) Full-time dedication without school distractions, 3) 50+ full mock tests, 4) Personalized weak-area coaching.',
   },
 ]
 
 export default function NEETTopperInterviewGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-topper-interview-gurugram" />
       <section className="bg-gradient-to-r from-purple-800 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -128,7 +160,9 @@ export default function NEETTopperInterviewGurugram() {
               Success Stories
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Topper Interviews</h1>
-            <p className="text-xl text-purple-100 mb-8">Learn strategies from students who scored 650+ at Cerebrum Academy</p>
+            <p className="text-xl text-purple-100 mb-8">
+              Learn strategies from students who scored 650+ at Cerebrum Academy
+            </p>
           </div>
         </div>
       </section>
@@ -153,17 +187,25 @@ export default function NEETTopperInterviewGurugram() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className={`p-6 ${index === 0 ? 'bg-gradient-to-r from-purple-600 to-indigo-600' : 'bg-purple-600'} text-white`}>
+                <div
+                  className={`p-6 ${index === 0 ? 'bg-gradient-to-r from-purple-600 to-indigo-600' : 'bg-purple-600'} text-white`}
+                >
                   <div className="flex flex-wrap items-center justify-between gap-4">
                     <div>
                       <h2 className="text-2xl font-bold">{topper.name}</h2>
-                      <p className="text-purple-200">{topper.school} | {topper.program}</p>
+                      <p className="text-purple-200">
+                        {topper.school} | {topper.program}
+                      </p>
                     </div>
                     <div className="text-right">
                       <p className="text-3xl font-bold">{topper.score}/720</p>
-                      <p className="text-purple-200">{topper.rank} | {topper.college}</p>
+                      <p className="text-purple-200">
+                        {topper.rank} | {topper.college}
+                      </p>
                       {topper.improvement && (
-                        <p className="text-yellow-300 font-semibold">{topper.improvement} improvement!</p>
+                        <p className="text-yellow-300 font-semibold">
+                          {topper.improvement} improvement!
+                        </p>
                       )}
                     </div>
                   </div>
@@ -223,7 +265,9 @@ export default function NEETTopperInterviewGurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-purple-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -236,19 +280,31 @@ export default function NEETTopperInterviewGurugram() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-8">Explore More</h2>
           <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <Link href="/neet-result-2025-gurugram" className="bg-green-50 p-4 rounded-lg hover:bg-green-100 transition text-center">
+            <Link
+              href="/neet-result-2025-gurugram"
+              className="bg-green-50 p-4 rounded-lg hover:bg-green-100 transition text-center"
+            >
               <h3 className="font-semibold text-green-800">2025 Results</h3>
               <p className="text-sm text-gray-600">Our best year - 98% success</p>
             </Link>
-            <Link href="/neet-biology-faculty-gurugram" className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition text-center">
+            <Link
+              href="/neet-biology-faculty-gurugram"
+              className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition text-center"
+            >
               <h3 className="font-semibold text-blue-800">Our Faculty</h3>
               <p className="text-sm text-gray-600">Meet our AIIMS-trained teachers</p>
             </Link>
-            <Link href="/free-neet-demo-class-gurugram" className="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition text-center">
+            <Link
+              href="/free-neet-demo-class-gurugram"
+              className="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition text-center"
+            >
               <h3 className="font-semibold text-amber-800">Free Demo Class</h3>
               <p className="text-sm text-gray-600">Experience our teaching style</p>
             </Link>
-            <Link href="/neet-coaching-gurugram" className="bg-purple-50 p-4 rounded-lg hover:bg-purple-100 transition text-center">
+            <Link
+              href="/neet-coaching-gurugram"
+              className="bg-purple-50 p-4 rounded-lg hover:bg-purple-100 transition text-center"
+            >
               <h3 className="font-semibold text-purple-800">NEET Coaching</h3>
               <p className="text-sm text-gray-600">Complete program details</p>
             </Link>
@@ -259,33 +315,57 @@ export default function NEETTopperInterviewGurugram() {
       <section className="py-16 bg-purple-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Write Your Own Success Story</h2>
-          <p className="text-xl text-purple-100 mb-8">Join the batch that produces toppers. Limited seats for 2026.</p>
+          <p className="text-xl text-purple-100 mb-8">
+            Join the batch that produces toppers. Limited seats for 2026.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
-              <Phone className="w-5 h-5" />Call 88264-44334
+            <a
+              href="tel:+918826444334"
+              className="inline-flex items-center gap-2 bg-yellow-500 text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+            >
+              <Phone className="w-5 h-5" />
+              Call 88264-44334
             </a>
-            <Link href="/neet-result-2025-gurugram" className="inline-flex items-center gap-2 bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition">
-              See All Results<ArrowRight className="w-5 h-5" />
+            <Link
+              href="/neet-result-2025-gurugram"
+              className="inline-flex items-center gap-2 bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
+            >
+              See All Results
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: 'NEET Topper Interviews - Cerebrum Biology Academy Gurugram',
-        description: 'Inspiring success stories and strategies from NEET toppers',
-        author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-        publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-        datePublished: '2025-07-01',
-        dateModified: '2025-07-01',
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: 'NEET Topper Interviews - Cerebrum Biology Academy Gurugram',
+            description: 'Inspiring success stories and strategies from NEET toppers',
+            author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+            publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+            datePublished: '2025-07-01',
+            dateModified: '2025-07-01',
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
     </div>
   )
 }

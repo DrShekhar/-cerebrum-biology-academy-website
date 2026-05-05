@@ -20,6 +20,7 @@ import {
   Building,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramAreas = [
   { name: 'DLF Phase 1-5', highlight: 'Premium' },
@@ -63,6 +64,7 @@ const faqs = [
 export default function BiologyTuitionGurugramPage() {
   return (
     <div className="min-h-screen">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="biology-tuition-gurugram" />
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
@@ -81,8 +83,8 @@ export default function BiologyTuitionGurugramPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto">
-              Expert biology coaching for CBSE, IB &amp; IGCSE boards + NEET by AIIMS Alumnus.
-              Visit our center at M2K Corporate Park, Sector 51. DLF, Golf Course Road, Sushant Lok
+              Expert biology coaching for CBSE, IB &amp; IGCSE boards + NEET by AIIMS Alumnus. Visit
+              our center at M2K Corporate Park, Sector 51. DLF, Golf Course Road, Sushant Lok
               students welcome.
             </p>
 
@@ -116,7 +118,10 @@ export default function BiologyTuitionGurugramPage() {
                 { icon: Award, value: '1,100+', label: 'NEET Selections' },
                 { icon: Star, value: '5.0', label: 'Google Rating' },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <div
+                  key={stat.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
+                >
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
@@ -154,7 +159,11 @@ export default function BiologyTuitionGurugramPage() {
                   ['Monthly Fee', '\u20B98,000-15,000/month', '\u20B94,000-8,000/month'],
                   ['Faculty', 'B.Sc/M.Sc Graduate', 'AIIMS-Trained Doctor'],
                   ['Board Coverage', 'Usually 1 board only', 'CBSE + IB + IGCSE + NEET'],
-                  ['Batch Size', '1 Student (no peer learning)', '15 Students (healthy competition)'],
+                  [
+                    'Batch Size',
+                    '1 Student (no peer learning)',
+                    '15 Students (healthy competition)',
+                  ],
                   ['Test Series', 'No structured tests', 'Weekly tests + monthly assessments'],
                   ['Study Material', 'No material provided', 'Board-specific notes + MCQ bank'],
                   ['Recorded Lectures', 'Not available', 'All classes recorded for revision'],
@@ -238,7 +247,10 @@ export default function BiologyTuitionGurugramPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {gurugramAreas.map((area) => (
-              <div key={area.name} className="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+              <div
+                key={area.name}
+                className="bg-green-50 rounded-xl p-4 text-center border border-green-100"
+              >
                 <MapPin className="w-6 h-6 text-green-600 mx-auto mb-2" />
                 <div className="font-bold text-gray-900">{area.name}</div>
                 <div className="text-xs text-gray-500">{area.highlight}</div>
@@ -252,8 +264,16 @@ export default function BiologyTuitionGurugramPage() {
             <p className="text-gray-700 mb-4">
               M2K Corporate Park, Sector 51, Gurugram, Haryana 122003
             </p>
-            <a href="https://maps.google.com/?q=M2K+Corporate+Park+Sector+51+Gurugram" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white">
+            <a
+              href="https://maps.google.com/?q=M2K+Corporate+Park+Sector+51+Gurugram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white"
+              >
                 <MapPin className="w-5 h-5 mr-2" />
                 Get Directions
               </Button>
@@ -299,7 +319,11 @@ export default function BiologyTuitionGurugramPage() {
                 Book Free Demo Class
               </Button>
             </Link>
-            <a href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20biology%20tuition%20in%20Gurugram" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20biology%20tuition%20in%20Gurugram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline"
                 size="xl"
@@ -311,9 +335,15 @@ export default function BiologyTuitionGurugramPage() {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/pricing" className="underline opacity-80 hover:opacity-100">View Pricing</Link>
-            <Link href="/courses" className="underline opacity-80 hover:opacity-100">All Courses</Link>
-            <Link href="/neet-coaching-gurugram" className="underline opacity-80 hover:opacity-100">NEET Coaching Gurugram</Link>
+            <Link href="/pricing" className="underline opacity-80 hover:opacity-100">
+              View Pricing
+            </Link>
+            <Link href="/courses" className="underline opacity-80 hover:opacity-100">
+              All Courses
+            </Link>
+            <Link href="/neet-coaching-gurugram" className="underline opacity-80 hover:opacity-100">
+              NEET Coaching Gurugram
+            </Link>
           </div>
         </div>
       </section>
@@ -335,21 +365,48 @@ export default function BiologyTuitionGurugramPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-                { '@type': 'ListItem', position: 2, name: 'Biology Tuition Gurugram', item: 'https://cerebrumbiologyacademy.com/biology-tuition-gurugram' },
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://cerebrumbiologyacademy.com',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Biology Tuition Gurugram',
+                  item: 'https://cerebrumbiologyacademy.com/biology-tuition-gurugram',
+                },
               ],
             },
             {
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Cerebrum Biology Academy - Biology Tuition Gurugram',
-              description: 'Best biology tuition in Gurugram for CBSE, IB, IGCSE + NEET by AIIMS Alumnus.',
+              description:
+                'Best biology tuition in Gurugram (Gurgaon) for CBSE, IB, IGCSE + NEET by AIIMS Alumnus.',
               url: 'https://cerebrumbiologyacademy.com/biology-tuition-gurugram',
               telephone: '+918826444334',
-              address: { '@type': 'PostalAddress', streetAddress: 'M2K Corporate Park', addressLocality: 'Sector 51, Gurugram', addressRegion: 'Haryana', postalCode: '122003', addressCountry: 'IN' },
-              areaServed: { '@type': 'City', name: 'Gurugram', containedInPlace: { '@type': 'State', name: 'Haryana' } },
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'M2K Corporate Park',
+                addressLocality: 'Sector 51, Gurugram',
+                addressRegion: 'Haryana',
+                postalCode: '122003',
+                addressCountry: 'IN',
+              },
+              areaServed: {
+                '@type': 'City',
+                name: 'Gurugram',
+                containedInPlace: { '@type': 'State', name: 'Haryana' },
+              },
               priceRange: '\u20B948,000 - \u20B91,56,000/year',
-              aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '38', bestRating: '5' },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '5.0',
+                reviewCount: '38',
+                bestRating: '5',
+              },
             },
           ]),
         }}

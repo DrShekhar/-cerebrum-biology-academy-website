@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import HaryanaBoardNEETCoachingContent from './HaryanaBoardNEETCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'Haryana Board NEET Coaching in Gurugram | HBSE Students NEET Prep',
   description:
-    'Specialized NEET Biology coaching for Haryana Board (HBSE) students in Gurugram. Hindi + English medium support, NCERT bridging, affordable fees. For Govt & private school students.',
+    'Specialized NEET Biology coaching for Haryana Board (HBSE) students in Gurugram (Gurgaon). Hindi + English medium support, NCERT bridging, affordable fees. For Govt & private school students.',
   keywords: [
     'haryana board neet coaching gurugram',
     'hbse neet coaching',
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Haryana Board NEET Coaching in Gurugram | HBSE-to-NCERT Bridge',
-    description: 'NEET Biology coaching for Haryana Board students. Hindi/English support, NCERT bridging, 78% success rate.',
+    description:
+      'NEET Biology coaching for Haryana Board students. Hindi/English support, NCERT bridging, 78% success rate.',
     url: 'https://cerebrumbiologyacademy.com/haryana-board-neet-coaching-gurugram',
   },
   alternates: {
@@ -71,7 +73,8 @@ export default function HaryanaBoardNEETCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'Haryana Board NEET Biology Coaching - Gurugram',
-    description: 'Specialized NEET Biology coaching for HBSE students with Hindi-English bilingual support and NCERT bridging',
+    description:
+      'Specialized NEET Biology coaching for HBSE students with Hindi-English bilingual support and NCERT bridging',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -114,17 +117,45 @@ export default function HaryanaBoardNEETCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Haryana Board NEET Coaching', item: 'https://cerebrumbiologyacademy.com/haryana-board-neet-coaching-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Haryana Board NEET Coaching',
+        item: 'https://cerebrumbiologyacademy.com/haryana-board-neet-coaching-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="haryana-board-neet-coaching-gurugram"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <HaryanaBoardNEETCoachingContent faqs={faqs} />
     </>
   )

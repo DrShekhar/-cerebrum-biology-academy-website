@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import NEETRevisionBatchContent from './NEETRevisionBatchContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'NEET Revision Batch in Gurugram | Final 3-Month Revision Program',
   description:
-    'Join our intensive 3-month NEET Biology revision batch in Gurugram. Complete NCERT revision, high-yield topics focus, 2000+ MCQs, and mock tests. Starting ₹40,000.',
+    'Join our intensive 3-month NEET Biology revision batch in Gurugram (Gurgaon). Complete NCERT revision, high-yield topics focus, 2000+ MCQs, and mock tests. Starting ₹40,000.',
   keywords: [
     'neet revision batch gurugram',
     'neet final revision',
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Revision Batch in Gurugram | 3-Month Final Revision',
-    description: 'Complete NCERT revision with high-yield topic focus. 2000+ MCQs, mock tests, and expert guidance.',
+    description:
+      'Complete NCERT revision with high-yield topic focus. 2000+ MCQs, mock tests, and expert guidance.',
     url: 'https://cerebrumbiologyacademy.com/neet-revision-batch-gurugram',
   },
   alternates: {
@@ -71,7 +73,8 @@ export default function NEETRevisionBatchGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Biology Revision Batch - Gurugram',
-    description: '3-month intensive NEET Biology revision program with complete NCERT revision and 2000+ MCQ practice',
+    description:
+      '3-month intensive NEET Biology revision program with complete NCERT revision and 2000+ MCQ practice',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -114,17 +117,42 @@ export default function NEETRevisionBatchGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Revision Batch', item: 'https://cerebrumbiologyacademy.com/neet-revision-batch-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Revision Batch',
+        item: 'https://cerebrumbiologyacademy.com/neet-revision-batch-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-revision-batch-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <NEETRevisionBatchContent faqs={faqs} />
     </>
   )

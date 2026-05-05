@@ -1,11 +1,23 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Clock, Calendar, CheckCircle, Target, Zap, BookOpen, ArrowRight, Award } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Calendar,
+  CheckCircle,
+  Target,
+  Zap,
+  BookOpen,
+  ArrowRight,
+  Award,
+} from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: '1 Year NEET Course Gurugram 2026 | Class 12 + Dropper',
   description:
-    'Join 1-year NEET course in Gurugram for Class 12 students & droppers. Complete syllabus in 12 months. M2K Sector 51. Intensive coaching. Call 88264-44334!',
+    'Join 1-year NEET course in Gurugram (Gurgaon) for Class 12 students & droppers. Complete syllabus in 12 months. M2K Sector 51. Intensive coaching. Call 88264-44334!',
   keywords: [
     '1 year neet course gurugram',
     'one year neet coaching gurgaon',
@@ -20,7 +32,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: '1 Year NEET Course Gurugram 2026',
-    description: 'Complete NEET biology syllabus in 12 months! Ideal for Class 12 students and droppers.',
+    description:
+      'Complete NEET biology syllabus in 12 months! Ideal for Class 12 students and droppers.',
     url: 'https://cerebrumbiologyacademy.com/1-year-neet-course-gurugram',
   },
   alternates: {
@@ -34,8 +47,9 @@ const coursePhases = [
     duration: 'April - August',
     months: '5 months',
     focus: 'Complete Theory',
-    description: 'Class 11 + Class 12 complete theory coverage. Foundation building with NCERT focus.',
-    hours: '300+ hours'
+    description:
+      'Class 11 + Class 12 complete theory coverage. Foundation building with NCERT focus.',
+    hours: '300+ hours',
   },
   {
     phase: 'Phase 2',
@@ -43,7 +57,7 @@ const coursePhases = [
     months: '3 months',
     focus: 'Revision + Practice',
     description: 'Full syllabus revision. NEET pattern MCQ practice. Previous year papers.',
-    hours: '200+ hours'
+    hours: '200+ hours',
   },
   {
     phase: 'Phase 3',
@@ -51,7 +65,7 @@ const coursePhases = [
     months: '3 months',
     focus: 'Mock Tests + Weak Areas',
     description: 'Full-length mock tests. Weak area identification and focused improvement.',
-    hours: '200+ hours'
+    hours: '200+ hours',
   },
   {
     phase: 'Phase 4',
@@ -59,7 +73,7 @@ const coursePhases = [
     months: '2 months',
     focus: 'Final Revision',
     description: 'Exam strategy. High-yield topics revision. Last-minute preparation.',
-    hours: '100+ hours'
+    hours: '100+ hours',
   },
 ]
 
@@ -74,41 +88,50 @@ const idealFor = [
 const faqs = [
   {
     question: 'What is the 1-year NEET course structure?',
-    answer: 'Phase 1 (Apr-Aug): Complete Class 11+12 theory, Phase 2 (Sep-Nov): Revision + NEET pattern practice, Phase 3 (Dec-Feb): Mock tests + weak area focus, Phase 4 (Mar-Apr): Final revision + exam strategy. Total: 800+ hours of biology coaching.',
+    answer:
+      'Phase 1 (Apr-Aug): Complete Class 11+12 theory, Phase 2 (Sep-Nov): Revision + NEET pattern practice, Phase 3 (Dec-Feb): Mock tests + weak area focus, Phase 4 (Mar-Apr): Final revision + exam strategy. Total: 800+ hours of biology coaching.',
   },
   {
     question: 'Who should join 1-year course?',
-    answer: 'Ideal for: 1) Class 12 students wanting integrated coaching, 2) NEET droppers taking one more attempt, 3) Students who scored below 500 in previous NEET, 4) Those who started late in Class 11. Not recommended for complete beginners.',
+    answer:
+      'Ideal for: 1) Class 12 students wanting integrated coaching, 2) NEET droppers taking one more attempt, 3) Students who scored below 500 in previous NEET, 4) Those who started late in Class 11. Not recommended for complete beginners.',
   },
   {
     question: 'What is the fee for 1-year NEET course?',
-    answer: '1-year complete course: ₹65,000-85,000 (includes all modules). Breakdown: Tuition ₹60,000 + Material ₹10,000 + Tests ₹5,000 + Doubt sessions included. Scholarship available based on previous NEET/board scores. EMI available.',
+    answer:
+      '1-year complete course: ₹65,000-85,000 (includes all modules). Breakdown: Tuition ₹60,000 + Material ₹10,000 + Tests ₹5,000 + Doubt sessions included. Scholarship available based on previous NEET/board scores. EMI available.',
   },
   {
     question: 'Is 1 year enough to crack NEET?',
-    answer: 'Yes, if you: 1) Have basic Class 11 foundation, 2) Can dedicate 8-10 hours daily, 3) Follow the structured plan strictly. Many of our 1-year students score 600+ in NEET. Key is consistency and completing 5000+ MCQs.',
+    answer:
+      'Yes, if you: 1) Have basic Class 11 foundation, 2) Can dedicate 8-10 hours daily, 3) Follow the structured plan strictly. Many of our 1-year students score 600+ in NEET. Key is consistency and completing 5000+ MCQs.',
   },
   {
     question: 'How is 1-year course different from regular 2-year?',
-    answer: 'Key differences: 1) Faster pace (2x speed), 2) More daily hours (4-5 hrs vs 2-3 hrs), 3) Lesser buffer time for revision, 4) Higher self-study requirement, 5) More intensive testing schedule. Requires more dedication but equally effective.',
+    answer:
+      'Key differences: 1) Faster pace (2x speed), 2) More daily hours (4-5 hrs vs 2-3 hrs), 3) Lesser buffer time for revision, 4) Higher self-study requirement, 5) More intensive testing schedule. Requires more dedication but equally effective.',
   },
   {
     question: 'What is the daily schedule for 1-year batch?',
-    answer: 'Typical day: Morning batch 8 AM - 12 PM (theory) + Evening 5-7 PM (practice/tests). Total 6 hours daily. Alternative: Morning only 8 AM - 2 PM for droppers who need more self-study time. Both options available.',
+    answer:
+      'Typical day: Morning batch 8 AM - 12 PM (theory) + Evening 5-7 PM (practice/tests). Total 6 hours daily. Alternative: Morning only 8 AM - 2 PM for droppers who need more self-study time. Both options available.',
   },
   {
     question: 'Can I complete syllabus if joining in June/July?',
-    answer: 'Yes, with adjusted pace! Late joiner support: 1) Extra classes for missed chapters, 2) Recorded sessions for catch-up, 3) One-on-one doubt sessions, 4) Slightly faster pace. Many students join till August and still complete syllabus.',
+    answer:
+      'Yes, with adjusted pace! Late joiner support: 1) Extra classes for missed chapters, 2) Recorded sessions for catch-up, 3) One-on-one doubt sessions, 4) Slightly faster pace. Many students join till August and still complete syllabus.',
   },
   {
     question: 'What test series is included?',
-    answer: '1-year program includes: 50+ chapter tests, 15 full syllabus tests, 10 NEET pattern mocks, 5 AIIMS pattern tests, Daily practice MCQs (20/day). All India rank provided in mock tests. Performance analytics shared weekly.',
+    answer:
+      '1-year program includes: 50+ chapter tests, 15 full syllabus tests, 10 NEET pattern mocks, 5 AIIMS pattern tests, Daily practice MCQs (20/day). All India rank provided in mock tests. Performance analytics shared weekly.',
   },
 ]
 
 export default function OneYearNEETCourseGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="1-year-neet-course-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-700 to-red-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -116,9 +139,7 @@ export default function OneYearNEETCourseGurugram() {
             <span className="inline-block bg-yellow-500 text-red-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               Intensive 12-Month Program
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              1 Year NEET Course in Gurugram
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">1 Year NEET Course in Gurugram</h1>
             <p className="text-xl text-red-100 mb-8">
               Complete NEET biology syllabus in 12 months! Ideal for Class 12 students and droppers.
             </p>
@@ -175,7 +196,10 @@ export default function OneYearNEETCourseGurugram() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6">
               {coursePhases.map((phase, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500">
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500"
+                >
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <span className="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">
@@ -223,21 +247,23 @@ export default function OneYearNEETCourseGurugram() {
               <Zap className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Intensive Focus</h3>
               <p className="text-gray-600">
-                No distractions. 100% focus on NEET for 12 months. Concentrated effort yields faster results.
+                No distractions. 100% focus on NEET for 12 months. Concentrated effort yields faster
+                results.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <BookOpen className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Proven Curriculum</h3>
               <p className="text-gray-600">
-                Our 1-year syllabus is designed by AIIMS faculty. Covers exactly what NEET tests, nothing extra.
+                Our 1-year syllabus is designed by AIIMS faculty. Covers exactly what NEET tests,
+                nothing extra.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Award className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Track Record</h3>
               <p className="text-gray-600">
-               98% of our 1-year students qualify NEET. Many score 600+ with dedicated preparation.
+                98% of our 1-year students qualify NEET. Many score 600+ with dedicated preparation.
               </p>
             </div>
           </div>
@@ -275,16 +301,22 @@ export default function OneYearNEETCourseGurugram() {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden mt-6">
               <div className="bg-gray-600 text-white py-4 px-6">
-                <h3 className="text-xl font-bold">Option B: Evening Only (For Class 12 Students)</h3>
+                <h3 className="text-xl font-bold">
+                  Option B: Evening Only (For Class 12 Students)
+                </h3>
               </div>
               <div className="p-6 space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-28 text-center font-bold text-gray-600">5 - 8 PM</div>
-                  <div className="flex-1 bg-gray-50 p-3 rounded-lg">Theory + Practice (3 hours weekdays)</div>
+                  <div className="flex-1 bg-gray-50 p-3 rounded-lg">
+                    Theory + Practice (3 hours weekdays)
+                  </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-28 text-center font-bold text-gray-600">Sat 9 AM - 1 PM</div>
-                  <div className="flex-1 bg-gray-50 p-3 rounded-lg">Extra Classes + Tests (4 hours)</div>
+                  <div className="flex-1 bg-gray-50 p-3 rounded-lg">
+                    Extra Classes + Tests (4 hours)
+                  </div>
                 </div>
               </div>
             </div>
@@ -443,7 +475,8 @@ export default function OneYearNEETCourseGurugram() {
             '@context': 'https://schema.org',
             '@type': 'Course',
             name: '1 Year NEET Course Gurugram',
-            description: 'Intensive 1-year NEET biology coaching for Class 12 students and droppers',
+            description:
+              'Intensive 1-year NEET biology coaching for Class 12 students and droppers',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',

@@ -2,11 +2,12 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Clock, CheckCircle, Car, ArrowRight } from 'lucide-react'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Nirvana Country Gurugram | 10 Min Drive',
   description:
-    'Best NEET coaching near Nirvana Country Gurugram. Just 10 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Nirvana Country residents. Call 88264-44334!',
+    'Best NEET coaching near Nirvana Country Gurugram (Gurgaon). Just 10 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Nirvana Country residents. Call 88264-44334!',
   keywords: [
     'neet coaching nirvana country gurugram',
     'neet classes nirvana country gurgaon',
@@ -39,25 +40,34 @@ const nearbyAreas = [
 const faqs = [
   {
     question: 'How far is Cerebrum from Nirvana Country?',
-    answer: 'Our center at M2K Corporate Park, Sector 51 is just 3-4 km from Nirvana Country. It takes only 8-10 minutes by car. We are literally the nearest quality NEET coaching for Nirvana Country residents.',
+    answer:
+      'Our center at M2K Corporate Park, Sector 51 is just 3-4 km from Nirvana Country. It takes only 8-10 minutes by car. We are literally the nearest quality NEET coaching for Nirvana Country residents.',
   },
   {
     question: 'What makes Cerebrum ideal for Nirvana Country students?',
-    answer: 'Proximity (10 min), premium infrastructure matching Nirvana Country standards, small batches (25 students), AIIMS faculty, and convenient evening timings for school students.',
+    answer:
+      'Proximity (10 min), premium infrastructure matching Nirvana Country standards, small batches (25 students), AIIMS faculty, and convenient evening timings for school students.',
   },
   {
     question: 'Are there other Nirvana Country students at Cerebrum?',
-    answer: 'Yes! We have 30+ students from Nirvana Country and nearby premium societies like The Close South, Central Park, and Uppal Southend. Many form study groups.',
+    answer:
+      'Yes! We have 30+ students from Nirvana Country and nearby premium societies like The Close South, Central Park, and Uppal Southend. Many form study groups.',
   },
   {
     question: 'What are the best batch timings for Nirvana Country students?',
-    answer: 'Evening batch (5-8 PM) is most popular - students reach in 10 min after school. Weekend batch (Sat-Sun 9 AM - 1 PM) is also convenient given the short distance.',
+    answer:
+      'Evening batch (5-8 PM) is most popular - students reach in 10 min after school. Weekend batch (Sat-Sun 9 AM - 1 PM) is also convenient given the short distance.',
   },
 ]
 
 export default function NEETCoachingNirvanaCountryGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-coaching-nirvana-country-gurugram"
+        subArea="Nirvana Country"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-800 to-emerald-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -113,20 +123,24 @@ export default function NEETCoachingNirvanaCountryGurugram() {
       {/* Why Choose */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Nirvana Country Students Choose Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Nirvana Country Students Choose Us
+          </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Car className="w-12 h-12 text-emerald-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Nearest Quality Coaching</h3>
               <p className="text-gray-600">
-                Just 10 min away. Sector 14 coaching hubs are 20+ min with traffic. We save you time daily.
+                Just 10 min away. Sector 14 coaching hubs are 20+ min with traffic. We save you time
+                daily.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Premium Standards</h3>
               <p className="text-gray-600">
-                Nirvana Country residents expect quality. AC classrooms, modern infra, AIIMS faculty.
+                Nirvana Country residents expect quality. AC classrooms, modern infra, AIIMS
+                faculty.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -152,7 +166,9 @@ export default function NEETCoachingNirvanaCountryGurugram() {
                   <div>
                     <p className="font-semibold">M2K Corporate Park</p>
                     <p className="text-gray-600">Sector 51, Gurugram 122018</p>
-                    <p className="text-sm text-emerald-600 mt-1">Just 3-4 km from Nirvana Country</p>
+                    <p className="text-sm text-emerald-600 mt-1">
+                      Just 3-4 km from Nirvana Country
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 mb-4">
@@ -165,7 +181,8 @@ export default function NEETCoachingNirvanaCountryGurugram() {
                 </div>
                 <div className="bg-emerald-50 p-4 rounded-lg mb-4">
                   <p className="text-sm text-emerald-800">
-                    <strong>Route:</strong> Nirvana Country Gate → Sector 50 → Sector 51 → M2K Corporate Park
+                    <strong>Route:</strong> Nirvana Country Gate → Sector 50 → Sector 51 → M2K
+                    Corporate Park
                   </p>
                 </div>
                 <a
@@ -196,13 +213,17 @@ export default function NEETCoachingNirvanaCountryGurugram() {
       {/* FAQs */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">FAQs for Nirvana Country Students</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            FAQs for Nirvana Country Students
+          </h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-emerald-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

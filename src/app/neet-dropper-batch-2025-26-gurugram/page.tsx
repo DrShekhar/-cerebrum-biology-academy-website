@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import NEETDropperBatchContent from './NEETDropperBatchContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'NEET Dropper Batch 2026-27 in Gurugram | Repeater Course',
   description:
-    'Join NEET Dropper Batch 2026-27 in Gurugram. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
+    'Join NEET Dropper Batch 2026-27 in Gurugram (Gurgaon). Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
   keywords: [
     'neet dropper batch 2026-27 gurugram',
     'neet repeater course gurugram',
@@ -65,7 +66,8 @@ export default function NEETDropperBatch2025GurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Dropper Batch 2026-27 - Gurugram',
-    description: 'Intensive 1-year NEET preparation program for droppers and repeaters targeting NEET 2026.',
+    description:
+      'Intensive 1-year NEET preparation program for droppers and repeaters targeting NEET 2026.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -103,17 +105,45 @@ export default function NEETDropperBatch2025GurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Dropper Batch 2026-27', item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Dropper Batch 2026-27',
+        item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-dropper-batch-2025-26-gurugram"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <NEETDropperBatchContent faqs={faqs} />
     </>
   )

@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import ICSENEETCoachingContent from './ICSENEETCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'ICSE Board NEET Coaching in Gurugram | Biology for ICSE Students',
   description:
-    'Specialized NEET Biology coaching for ICSE board students in Gurugram. Bridge ICSE to NCERT syllabus, conceptual depth advantage. Perfect for Pathways, Lancers students.',
+    'Specialized NEET Biology coaching for ICSE board students in Gurugram (Gurgaon). Bridge ICSE to NCERT syllabus, conceptual depth advantage. Perfect for Pathways, Lancers students.',
   keywords: [
     'icse neet coaching gurugram',
     'neet coaching for icse students',
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'ICSE Board NEET Coaching in Gurugram | ICSE-to-NCERT Bridge',
-    description: 'NEET Biology coaching designed specifically for ICSE students. Bridge ICSE concepts to NCERT format with 98% success rate.',
+    description:
+      'NEET Biology coaching designed specifically for ICSE students. Bridge ICSE concepts to NCERT format with 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/icse-neet-coaching-gurugram',
   },
   alternates: {
@@ -71,7 +73,8 @@ export default function ICSENEETCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'ICSE Board NEET Biology Coaching - Gurugram',
-    description: 'Specialized NEET Biology coaching for ICSE board students with ICSE-to-NCERT bridge program',
+    description:
+      'Specialized NEET Biology coaching for ICSE board students with ICSE-to-NCERT bridge program',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -107,17 +110,42 @@ export default function ICSENEETCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'ICSE NEET Coaching', item: 'https://cerebrumbiologyacademy.com/icse-neet-coaching-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'ICSE NEET Coaching',
+        item: 'https://cerebrumbiologyacademy.com/icse-neet-coaching-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="icse-neet-coaching-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ICSENEETCoachingContent faqs={faqs} />
     </>
   )

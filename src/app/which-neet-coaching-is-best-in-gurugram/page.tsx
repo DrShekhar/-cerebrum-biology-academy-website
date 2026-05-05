@@ -11,11 +11,12 @@ import {
   TrendingUp,
   Wallet,
 } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'Which NEET Coaching is Best in Gurugram? | 2026 Honest Comparison',
   description:
-    'Looking for the best NEET coaching in Gurugram? Compare Aakash, Allen, Physics Wallah & Cerebrum on fees, batch size, results, faculty. Honest analysis from parents. Read before deciding!',
+    'Looking for the best NEET coaching in Gurugram (Gurgaon)? Compare Aakash, Allen, Physics Wallah & Cerebrum on fees, batch size, results, faculty. Honest analysis from parents. Read before deciding!',
   keywords: [
     'which neet coaching is best in gurugram',
     'best neet coaching gurugram 2026',
@@ -154,6 +155,10 @@ const faqs = [
 export default function WhichNEETCoachingBestGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="which-neet-coaching-is-best-in-gurugram"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16">
         <div className="container mx-auto px-4">
@@ -354,9 +359,7 @@ export default function WhichNEETCoachingBestGurugram() {
       {/* FAQs */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Frequently Asked Questions
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <details key={index} className="bg-gray-50 rounded-lg shadow-md group">

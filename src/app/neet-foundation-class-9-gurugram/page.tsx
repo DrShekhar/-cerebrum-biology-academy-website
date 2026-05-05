@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import NEETFoundationClass9Content from './NEETFoundationClass9Content'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'NEET Foundation Class 9 in Gurugram | Early NEET Preparation',
   description:
-    'Start NEET preparation from Class 9 in Gurugram. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 51 center. Book free demo.',
+    'Start NEET preparation from Class 9 in Gurugram (Gurgaon). 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 51 center. Book free demo.',
   keywords: [
     'neet foundation class 9 gurugram',
     'class 9 neet preparation gurugram',
@@ -71,7 +72,8 @@ export default function NEETFoundationClass9GurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Foundation Class 9 - Gurugram',
-    description: 'Early NEET preparation program for Class 9 students in Gurugram. 4-year head start with strong conceptual foundation.',
+    description:
+      'Early NEET preparation program for Class 9 students in Gurugram. 4-year head start with strong conceptual foundation.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -85,7 +87,13 @@ export default function NEETFoundationClass9GurugramPage() {
       },
     },
     educationalLevel: 'Class 9',
-    teaches: ['Cell Biology', 'Tissues', 'Diversity in Living Organisms', 'Life Processes Basics', 'Scientific Methodology'],
+    teaches: [
+      'Cell Biology',
+      'Tissues',
+      'Diversity in Living Organisms',
+      'Life Processes Basics',
+      'Scientific Methodology',
+    ],
     timeRequired: 'P1Y',
     hasCourseInstance: {
       '@type': 'CourseInstance',
@@ -108,17 +116,42 @@ export default function NEETFoundationClass9GurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'NEET Foundation Class 9', item: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'NEET Foundation Class 9',
+        item: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-foundation-class-9-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <NEETFoundationClass9Content faqs={faqs} />
     </>
   )

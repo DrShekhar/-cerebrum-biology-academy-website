@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, GraduationCap, Users, Award } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for K R Mangalam World School Gurugram',
@@ -51,25 +52,34 @@ const whyKRMStudents = [
 const faqs = [
   {
     question: 'Which KRM campus is closest to Cerebrum?',
-    answer: 'KRM Sector 88 campus is closest at about 20 minutes. GK-2 campus is 25 minutes via NH-48, and Vaishali campus is 35 minutes via Golf Course Road.',
+    answer:
+      'KRM Sector 88 campus is closest at about 20 minutes. GK-2 campus is 25 minutes via NH-48, and Vaishali campus is 35 minutes via Golf Course Road.',
   },
   {
     question: 'Do you have students from K R Mangalam?',
-    answer: 'Yes! We have 15+ students from various KRM campuses. They appreciate our small batches and personalized attention compared to large coaching centers.',
+    answer:
+      'Yes! We have 15+ students from various KRM campuses. They appreciate our small batches and personalized attention compared to large coaching centers.',
   },
   {
     question: 'Can KRM students balance school and NEET prep?',
-    answer: 'Absolutely. Our 4-7 PM evening batch and weekend batches are designed for school students. We also coordinate with school exam schedules for test planning.',
+    answer:
+      'Absolutely. Our 4-7 PM evening batch and weekend batches are designed for school students. We also coordinate with school exam schedules for test planning.',
   },
   {
     question: 'Is there carpool from KRM area?',
-    answer: 'Yes, we can connect you with other KRM students for carpooling. Many students share rides, reducing travel burden and costs.',
+    answer:
+      'Yes, we can connect you with other KRM students for carpooling. Many students share rides, reducing travel burden and costs.',
   },
 ]
 
 export default function NEETCoachingKRMangalamWorldSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-coaching-kr-mangalam-world-school-gurugram"
+        subArea="KR Mangalam World School Gurugram"
+      />
       <section className="bg-gradient-to-r from-blue-800 to-blue-700 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -77,18 +87,30 @@ export default function NEETCoachingKRMangalamWorldSchool() {
               <GraduationCap className="w-4 h-4" />
               For KRM Students
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Coaching for K R Mangalam World School</h1>
-            <p className="text-xl text-blue-100 mb-4">Serving all KRM campuses - GK-2, Vaishali, Sector 88</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              NEET Coaching for K R Mangalam World School
+            </h1>
+            <p className="text-xl text-blue-100 mb-4">
+              Serving all KRM campuses - GK-2, Vaishali, Sector 88
+            </p>
             <div className="flex items-center justify-center gap-2 text-yellow-300 mb-8">
               <Car className="w-5 h-5" />
               <span>20-35 min from various campuses</span>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+918826444334" className="bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition">
-                <Phone className="w-5 h-5" />Call 88264-44334
+              <a
+                href="tel:+918826444334"
+                className="bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 transition"
+              >
+                <Phone className="w-5 h-5" />
+                Call 88264-44334
               </a>
-              <Link href="/neet-coaching-gurugram" className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/30 transition">
-                View All Locations<ArrowRight className="w-5 h-5" />
+              <Link
+                href="/neet-coaching-gurugram"
+                className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/30 transition"
+              >
+                View All Locations
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -136,18 +158,34 @@ export default function NEETCoachingKRMangalamWorldSchool() {
                   <div>
                     <p className="font-semibold">M2K Corporate Park</p>
                     <p className="text-gray-600">Sector 51, Gurugram 122018</p>
-                    <p className="text-sm text-blue-600 mt-1">Central location for all KRM campuses</p>
+                    <p className="text-sm text-blue-600 mt-1">
+                      Central location for all KRM campuses
+                    </p>
                   </div>
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg mb-4">
-                  <p className="text-sm text-blue-800"><strong>From Sector 88:</strong> Dwarka Exp → Sector 56 → Sector 51 (20 min)</p>
+                  <p className="text-sm text-blue-800">
+                    <strong>From Sector 88:</strong> Dwarka Exp → Sector 56 → Sector 51 (20 min)
+                  </p>
                 </div>
-                <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-                  <Phone className="w-5 h-5" />Book Free Demo
+                <a
+                  href="tel:+918826444334"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+                >
+                  <Phone className="w-5 h-5" />
+                  Book Free Demo
                 </a>
               </div>
               <div className="md:w-1/2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1!2d77.07!3d28.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sM2K%20Corporate%20Park!5e0!3m2!1sen!2sin!4v1" width="100%" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1!2d77.07!3d28.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sM2K%20Corporate%20Park!5e0!3m2!1sen!2sin!4v1"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>
@@ -162,7 +200,9 @@ export default function NEETCoachingKRMangalamWorldSchool() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-blue-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -174,18 +214,33 @@ export default function NEETCoachingKRMangalamWorldSchool() {
       <section className="py-16 bg-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Join 15+ KRM Students at Cerebrum</h2>
-          <p className="text-xl text-blue-100 mb-8">Small batches, big results. Book your free demo today.</p>
-          <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
-            <Phone className="w-5 h-5" />Call Now: 88264-44334
+          <p className="text-xl text-blue-100 mb-8">
+            Small batches, big results. Book your free demo today.
+          </p>
+          <a
+            href="tel:+918826444334"
+            className="inline-flex items-center gap-2 bg-yellow-500 text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+          >
+            <Phone className="w-5 h-5" />
+            Call Now: 88264-44334
           </a>
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
     </div>
   )
 }

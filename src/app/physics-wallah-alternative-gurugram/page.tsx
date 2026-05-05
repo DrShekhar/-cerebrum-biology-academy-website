@@ -1,11 +1,22 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, CheckCircle, Users, Clock, Video, ArrowRight, Monitor, Building } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  CheckCircle,
+  Users,
+  Clock,
+  Video,
+  ArrowRight,
+  Monitor,
+  Building,
+} from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'Physics Wallah Alternative Gurugram | Offline Expert Biology',
   description:
-    'Need offline alternative to Physics Wallah in Gurugram? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
+    'Need offline alternative to Physics Wallah in Gurugram (Gurgaon)? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
   keywords: [
     'physics wallah alternative gurugram',
     'physics wallah alternative gurgaon',
@@ -20,7 +31,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Physics Wallah Alternative Gurugram',
-    description: 'Want real classroom interaction instead of video lectures? Experience offline NEET biology coaching.',
+    description:
+      'Want real classroom interaction instead of video lectures? Experience offline NEET biology coaching.',
     url: 'https://cerebrumbiologyacademy.com/physics-wallah-alternative-gurugram',
   },
   alternates: {
@@ -29,48 +41,81 @@ export const metadata: Metadata = {
 }
 
 const comparisonData = [
-  { feature: 'Teaching Mode', pw: 'Video lectures', cerebrum: 'Live offline classes', winner: 'cerebrum' },
-  { feature: 'Doubt Resolution', pw: '24-48 hours wait', cerebrum: 'Instant in class', winner: 'cerebrum' },
+  {
+    feature: 'Teaching Mode',
+    pw: 'Video lectures',
+    cerebrum: 'Live offline classes',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Doubt Resolution',
+    pw: '24-48 hours wait',
+    cerebrum: 'Instant in class',
+    winner: 'cerebrum',
+  },
   { feature: 'Batch Size', pw: '500+ per video', cerebrum: '25 students max', winner: 'cerebrum' },
   { feature: 'Annual Fee', pw: '₹5,000-15,000', cerebrum: '₹45,000-75,000', winner: 'pw' },
   { feature: 'Personal Attention', pw: 'None', cerebrum: 'Individual focus', winner: 'cerebrum' },
-  { feature: 'Discipline/Structure', pw: 'Self-managed', cerebrum: 'Classroom discipline', winner: 'cerebrum' },
-  { feature: 'Diagram Learning', pw: 'Limited (video)', cerebrum: 'Whiteboard + hands-on', winner: 'cerebrum' },
-  { feature: 'Peer Learning', pw: 'Online forums', cerebrum: 'Real classmates', winner: 'cerebrum' },
+  {
+    feature: 'Discipline/Structure',
+    pw: 'Self-managed',
+    cerebrum: 'Classroom discipline',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Diagram Learning',
+    pw: 'Limited (video)',
+    cerebrum: 'Whiteboard + hands-on',
+    winner: 'cerebrum',
+  },
+  {
+    feature: 'Peer Learning',
+    pw: 'Online forums',
+    cerebrum: 'Real classmates',
+    winner: 'cerebrum',
+  },
 ]
 
 const faqs = [
   {
     question: 'Why consider offline coaching over Physics Wallah?',
-    answer: 'Key differences: 1) Real classroom interaction vs passive video watching, 2) Instant doubt resolution vs waiting for replies, 3) Structured discipline vs self-study challenges, 4) Peer learning environment, 5) Regular assessments with immediate feedback. Online works for some, but many need offline structure.',
+    answer:
+      'Key differences: 1) Real classroom interaction vs passive video watching, 2) Instant doubt resolution vs waiting for replies, 3) Structured discipline vs self-study challenges, 4) Peer learning environment, 5) Regular assessments with immediate feedback. Online works for some, but many need offline structure.',
   },
   {
     question: 'How do Physics Wallah and Cerebrum compare for biology?',
-    answer: 'PW: Video-based, low-cost (₹5-15K), 500+ students in batch, doubt resolution in 24-48 hrs. Cerebrum: Live offline classes, ₹45-75K, 25 students max, doubts cleared instantly. For biology (visual subject with diagrams), offline teaching is significantly more effective.',
+    answer:
+      'PW: Video-based, low-cost (₹5-15K), 500+ students in batch, doubt resolution in 24-48 hrs. Cerebrum: Live offline classes, ₹45-75K, 25 students max, doubts cleared instantly. For biology (visual subject with diagrams), offline teaching is significantly more effective.',
   },
   {
     question: 'Is Physics Wallah enough for NEET biology?',
-    answer: "PW content is good but biology needs visual learning - diagrams, specimen study, hands-on understanding. Video lectures can't replace: 1) Whiteboard diagram explanations, 2) Instant doubt clearing, 3) Peer discussions, 4) Regular tests with personal feedback. Many PW students supplement with offline coaching.",
+    answer:
+      "PW content is good but biology needs visual learning - diagrams, specimen study, hands-on understanding. Video lectures can't replace: 1) Whiteboard diagram explanations, 2) Instant doubt clearing, 3) Peer discussions, 4) Regular tests with personal feedback. Many PW students supplement with offline coaching.",
   },
   {
     question: "What if I can't afford both PW and offline coaching?",
-    answer: 'Options at Cerebrum: 1) Weekend-only batch: ₹35,000/year (use PW for weekdays), 2) Test series membership: ₹8,000/year, 3) Doubt-clearing sessions: ₹500/session, 4) Chapter-specific workshops: ₹2,000-3,000 per topic. Mix and match based on budget.',
+    answer:
+      'Options at Cerebrum: 1) Weekend-only batch: ₹35,000/year (use PW for weekdays), 2) Test series membership: ₹8,000/year, 3) Doubt-clearing sessions: ₹500/session, 4) Chapter-specific workshops: ₹2,000-3,000 per topic. Mix and match based on budget.',
   },
   {
     question: 'Why do PW students struggle with biology?',
-    answer: "Common issues: 1) Passive watching ≠ active learning, 2) Diagram practice neglected in videos, 3) NCERT assertions need teacher explanation, 4) MCQ patterns need guided practice, 5) Motivation drops without classroom environment. Our 25-student batch solves these issues.",
+    answer:
+      'Common issues: 1) Passive watching ≠ active learning, 2) Diagram practice neglected in videos, 3) NCERT assertions need teacher explanation, 4) MCQ patterns need guided practice, 5) Motivation drops without classroom environment. Our 25-student batch solves these issues.',
   },
   {
     question: 'Can I use PW videos alongside Cerebrum classes?',
-    answer: "Absolutely! Many students do this: 1) Attend Cerebrum for live teaching + doubts, 2) Revise using PW videos at home, 3) Use Cerebrum tests for assessment, 4) Best of both worlds approach. We don't restrict supplementary learning.",
+    answer:
+      "Absolutely! Many students do this: 1) Attend Cerebrum for live teaching + doubts, 2) Revise using PW videos at home, 3) Use Cerebrum tests for assessment, 4) Best of both worlds approach. We don't restrict supplementary learning.",
   },
   {
     question: 'What about PW Vidyapeeth offline centers?',
-    answer: 'PW Vidyapeeth has offline centers but: 1) Very large batches (80-120 students), 2) Recent entrant - less track record, 3) Generic all-subject approach, 4) Fees similar to traditional coaching (₹80K-1.2L). Cerebrum offers biology specialization with 25-student batches at lower cost.',
+    answer:
+      'PW Vidyapeeth has offline centers but: 1) Very large batches (80-120 students), 2) Recent entrant - less track record, 3) Generic all-subject approach, 4) Fees similar to traditional coaching (₹80K-1.2L). Cerebrum offers biology specialization with 25-student batches at lower cost.',
   },
   {
     question: 'How to decide: PW online vs Cerebrum offline?',
-    answer: 'Choose PW if: Budget is tight (<₹20K), you have strong self-discipline, you don\'t need personal attention. Choose Cerebrum if: You need structured learning, you have doubt-heavy learning style, biology is your weak subject, you want guaranteed classroom discipline.',
+    answer:
+      "Choose PW if: Budget is tight (<₹20K), you have strong self-discipline, you don't need personal attention. Choose Cerebrum if: You need structured learning, you have doubt-heavy learning style, biology is your weak subject, you want guaranteed classroom discipline.",
   },
 ]
 
@@ -100,6 +145,10 @@ const pwProblems = [
 export default function PhysicsWallahAlternativeGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="physics-wallah-alternative-gurugram"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-900 to-purple-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -111,7 +160,8 @@ export default function PhysicsWallahAlternativeGurugram() {
               Physics Wallah Alternative in Gurugram
             </h1>
             <p className="text-xl text-purple-100 mb-8">
-              Want real classroom interaction instead of video lectures? Experience offline NEET biology coaching at Cerebrum.
+              Want real classroom interaction instead of video lectures? Experience offline NEET
+              biology coaching at Cerebrum.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -205,7 +255,9 @@ export default function PhysicsWallahAlternativeGurugram() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 mt-1" />
-                  <span className="text-gray-700">Ask doubts instantly, get answers immediately</span>
+                  <span className="text-gray-700">
+                    Ask doubts instantly, get answers immediately
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 mt-1" />
@@ -227,7 +279,9 @@ export default function PhysicsWallahAlternativeGurugram() {
       {/* PW Problems */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Common Problems with Video-Based Learning</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Common Problems with Video-Based Learning
+          </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Why many PW students struggle with biology and seek offline coaching
           </p>
@@ -249,7 +303,9 @@ export default function PhysicsWallahAlternativeGurugram() {
       {/* Comparison Table */}
       <section className="py-16 bg-purple-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Physics Wallah vs Cerebrum: Feature Comparison</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Physics Wallah vs Cerebrum: Feature Comparison
+          </h2>
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-purple-900 text-white">
@@ -263,13 +319,21 @@ export default function PhysicsWallahAlternativeGurugram() {
                 {comparisonData.map((row, index) => (
                   <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="px-6 py-4 font-medium">{row.feature}</td>
-                    <td className={`px-6 py-4 text-center ${row.winner === 'pw' ? 'text-green-600 font-semibold' : ''}`}>
+                    <td
+                      className={`px-6 py-4 text-center ${row.winner === 'pw' ? 'text-green-600 font-semibold' : ''}`}
+                    >
                       {row.pw}
-                      {row.winner === 'pw' && <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />}
+                      {row.winner === 'pw' && (
+                        <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />
+                      )}
                     </td>
-                    <td className={`px-6 py-4 text-center ${row.winner === 'cerebrum' ? 'text-green-600 font-semibold' : ''}`}>
+                    <td
+                      className={`px-6 py-4 text-center ${row.winner === 'cerebrum' ? 'text-green-600 font-semibold' : ''}`}
+                    >
                       {row.cerebrum}
-                      {row.winner === 'cerebrum' && <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />}
+                      {row.winner === 'cerebrum' && (
+                        <CheckCircle className="w-4 h-4 inline ml-2 text-green-600" />
+                      )}
                     </td>
                   </tr>
                 ))}
@@ -290,17 +354,23 @@ export default function PhysicsWallahAlternativeGurugram() {
             <div className="bg-purple-50 border border-purple-200 rounded-xl p-6 text-center">
               <div className="text-2xl font-bold text-purple-600 mb-2">₹35,000/year</div>
               <div className="font-semibold mb-2">Weekend Batch</div>
-              <p className="text-sm text-gray-600">Use PW for weekday revision, attend Cerebrum on weekends for live teaching</p>
+              <p className="text-sm text-gray-600">
+                Use PW for weekday revision, attend Cerebrum on weekends for live teaching
+              </p>
             </div>
             <div className="bg-purple-50 border border-purple-200 rounded-xl p-6 text-center">
               <div className="text-2xl font-bold text-purple-600 mb-2">₹8,000/year</div>
               <div className="font-semibold mb-2">Test Series</div>
-              <p className="text-sm text-gray-600">Watch PW videos, take Cerebrum tests for assessment and feedback</p>
+              <p className="text-sm text-gray-600">
+                Watch PW videos, take Cerebrum tests for assessment and feedback
+              </p>
             </div>
             <div className="bg-purple-50 border border-purple-200 rounded-xl p-6 text-center">
               <div className="text-2xl font-bold text-purple-600 mb-2">₹500/session</div>
               <div className="font-semibold mb-2">Doubt Sessions</div>
-              <p className="text-sm text-gray-600">Clear biology doubts one-on-one that PW forums couldn&apos;t answer</p>
+              <p className="text-sm text-gray-600">
+                Clear biology doubts one-on-one that PW forums couldn&apos;t answer
+              </p>
             </div>
           </div>
         </div>
@@ -313,7 +383,9 @@ export default function PhysicsWallahAlternativeGurugram() {
             <div className="md:flex">
               <div className="md:w-1/2 p-8">
                 <h2 className="text-2xl font-bold mb-4">Visit Our Gurugram Center</h2>
-                <p className="text-gray-600 mb-4">Experience a real classroom - something online can never replace.</p>
+                <p className="text-gray-600 mb-4">
+                  Experience a real classroom - something online can never replace.
+                </p>
                 <div className="flex items-start gap-3 mb-4">
                   <MapPin className="w-5 h-5 text-purple-600 mt-1" />
                   <div>
@@ -363,7 +435,9 @@ export default function PhysicsWallahAlternativeGurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-purple-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

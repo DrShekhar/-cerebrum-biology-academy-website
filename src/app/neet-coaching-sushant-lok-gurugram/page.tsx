@@ -1,11 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Clock, CheckCircle, Car, ArrowRight } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Sushant Lok Gurugram | 15 Min Drive',
   description:
-    'Best NEET coaching near Sushant Lok Gurugram. Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Sushant Lok 1, 2, 3 residents. Call 88264-44334!',
+    'Best NEET coaching near Sushant Lok Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Sushant Lok 1, 2, 3 residents. Call 88264-44334!',
   keywords: [
     'neet coaching sushant lok gurugram',
     'neet classes sushant lok gurgaon',
@@ -37,25 +38,34 @@ const nearbyAreas = [
 const faqs = [
   {
     question: 'How far is Cerebrum from Sushant Lok?',
-    answer: 'Our center at M2K Corporate Park, Sector 51 is approximately 7-9 km from Sushant Lok. By car, it takes 13-18 minutes depending on which phase you are in and traffic.',
+    answer:
+      'Our center at M2K Corporate Park, Sector 51 is approximately 7-9 km from Sushant Lok. By car, it takes 13-18 minutes depending on which phase you are in and traffic.',
   },
   {
     question: 'Which route is best from Sushant Lok?',
-    answer: 'From Sushant Lok 1/2: Via Golf Course Road → Sector 54/56 → Sector 51 (15 min). From Sushant Lok 3: Via Sector 43 → Sector 49 → Sector 51 (13 min).',
+    answer:
+      'From Sushant Lok 1/2: Via Golf Course Road → Sector 54/56 → Sector 51 (15 min). From Sushant Lok 3: Via Sector 43 → Sector 49 → Sector 51 (13 min).',
   },
   {
     question: 'Are there Sushant Lok students at Cerebrum?',
-    answer: 'Yes! We have 35+ students from all three phases of Sushant Lok. Many families from the same society send their children together.',
+    answer:
+      'Yes! We have 35+ students from all three phases of Sushant Lok. Many families from the same society send their children together.',
   },
   {
     question: 'What batch timings work for Sushant Lok students?',
-    answer: 'Evening batch (5-8 PM) works well - leave by 4:40 PM to reach by 5 PM. Weekend batch (Sat-Sun 9 AM - 1 PM) is popular as mornings have less traffic.',
+    answer:
+      'Evening batch (5-8 PM) works well - leave by 4:40 PM to reach by 5 PM. Weekend batch (Sat-Sun 9 AM - 1 PM) is popular as mornings have less traffic.',
   },
 ]
 
 export default function NEETCoachingSushantLokGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-coaching-sushant-lok-gurugram"
+        subArea="Sushant Lok"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-800 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -96,7 +106,9 @@ export default function NEETCoachingSushantLokGurugram() {
       {/* Distance Info */}
       <section className="py-12 bg-white border-b">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">All Sushant Lok Phases & Nearby Areas</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">
+            All Sushant Lok Phases & Nearby Areas
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {nearbyAreas.map((area, index) => (
               <div key={index} className="bg-purple-50 rounded-lg p-4 text-center">
@@ -111,27 +123,32 @@ export default function NEETCoachingSushantLokGurugram() {
       {/* Why Choose */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Sushant Lok Families Choose Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Sushant Lok Families Choose Us
+          </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Car className="w-12 h-12 text-purple-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Convenient Location</h3>
               <p className="text-gray-600">
-                15 min via Golf Course Road. Easier than going to crowded Sector 14 coaching centers.
+                15 min via Golf Course Road. Easier than going to crowded Sector 14 coaching
+                centers.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <CheckCircle className="w-12 h-12 text-purple-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Premium Quality</h3>
               <p className="text-gray-600">
-                Sushant Lok residents expect the best. AIIMS faculty, 25-student batches, modern facilities.
+                Sushant Lok residents expect the best. AIIMS faculty, 25-student batches, modern
+                facilities.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Clock className="w-12 h-12 text-purple-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Flexible Timing</h3>
               <p className="text-gray-600">
-                Evening and weekend batches designed for school-going students. Multiple timing options.
+                Evening and weekend batches designed for school-going students. Multiple timing
+                options.
               </p>
             </div>
           </div>
@@ -155,7 +172,8 @@ export default function NEETCoachingSushantLokGurugram() {
                 </div>
                 <div className="bg-purple-50 p-4 rounded-lg mb-4">
                   <p className="text-sm text-purple-800">
-                    <strong>Route:</strong> Sushant Lok → Golf Course Road → Sector 54/56 → Sector 51
+                    <strong>Route:</strong> Sushant Lok → Golf Course Road → Sector 54/56 → Sector
+                    51
                   </p>
                 </div>
                 <a
@@ -191,7 +209,9 @@ export default function NEETCoachingSushantLokGurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-purple-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

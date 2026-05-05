@@ -1,11 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Clock, CheckCircle, Car, ArrowRight } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for DLF Phase 1 Gurugram | 15 Min from Your Home',
   description:
-    'Best NEET coaching near DLF Phase 1 Gurugram. Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Evening & weekend batches for DLF residents. Call 88264-44334!',
+    'Best NEET coaching near DLF Phase 1 Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Evening & weekend batches for DLF residents. Call 88264-44334!',
   keywords: [
     'neet coaching dlf phase 1 gurugram',
     'neet classes dlf gurgaon',
@@ -38,25 +39,34 @@ const nearbyLandmarks = [
 const faqs = [
   {
     question: 'How far is Cerebrum from DLF Phase 1?',
-    answer: 'Our center at M2K Corporate Park, Sector 51 is approximately 8-10 km from DLF Phase 1. By car, it takes 15-20 minutes via Golf Course Road. Many DLF residents attend our evening batch (5-8 PM) after school.',
+    answer:
+      'Our center at M2K Corporate Park, Sector 51 is approximately 8-10 km from DLF Phase 1. By car, it takes 15-20 minutes via Golf Course Road. Many DLF residents attend our evening batch (5-8 PM) after school.',
   },
   {
     question: 'Is there parking available at the center?',
-    answer: 'Yes, M2K Corporate Park has ample parking. Students can be dropped off at the gate. For self-driving students, free parking is available in the building basement.',
+    answer:
+      'Yes, M2K Corporate Park has ample parking. Students can be dropped off at the gate. For self-driving students, free parking is available in the building basement.',
   },
   {
     question: 'What batch timings suit DLF Phase 1 students?',
-    answer: 'Most DLF students prefer: Evening batch (5-8 PM) - reach by 4:45 PM, return by 8:15 PM. Weekend batch (Sat-Sun 9 AM - 1 PM) is also popular. We can adjust timing based on school schedules.',
+    answer:
+      'Most DLF students prefer: Evening batch (5-8 PM) - reach by 4:45 PM, return by 8:15 PM. Weekend batch (Sat-Sun 9 AM - 1 PM) is also popular. We can adjust timing based on school schedules.',
   },
   {
     question: 'Are there other DLF students at Cerebrum?',
-    answer: 'Yes! We have 50+ students from various DLF phases (1-5), Cyber City, and nearby areas. Many form study groups and carpool together.',
+    answer:
+      'Yes! We have 50+ students from various DLF phases (1-5), Cyber City, and nearby areas. Many form study groups and carpool together.',
   },
 ]
 
 export default function NEETCoachingDLFPhase1Gurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-coaching-dlf-phase-1-gurugram"
+        subArea="DLF Phase 1"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -120,14 +130,16 @@ export default function NEETCoachingDLFPhase1Gurugram() {
               <Car className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Easy Commute</h3>
               <p className="text-gray-600">
-                15-20 min via Golf Course Road. No traffic hassles like going to Sector 14 coaching hubs.
+                15-20 min via Golf Course Road. No traffic hassles like going to Sector 14 coaching
+                hubs.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Clock className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Flexible Timings</h3>
               <p className="text-gray-600">
-                Evening batch (5-8 PM) and weekend batches designed for school-going students from DLF.
+                Evening batch (5-8 PM) and weekend batches designed for school-going students from
+                DLF.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -166,7 +178,8 @@ export default function NEETCoachingDLFPhase1Gurugram() {
                 </div>
                 <div className="bg-blue-50 p-4 rounded-lg mb-4">
                   <p className="text-sm text-blue-800">
-                    <strong>Route:</strong> DLF Phase 1 → Golf Course Road → Sector 51 → M2K Corporate Park
+                    <strong>Route:</strong> DLF Phase 1 → Golf Course Road → Sector 51 → M2K
+                    Corporate Park
                   </p>
                 </div>
                 <a
@@ -202,7 +215,9 @@ export default function NEETCoachingDLFPhase1Gurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-blue-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -216,7 +231,14 @@ export default function NEETCoachingDLFPhase1Gurugram() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Also Serving Other DLF Areas</h2>
           <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-            {['DLF Phase 2', 'DLF Phase 3', 'DLF Phase 4', 'DLF Phase 5', 'DLF Cyber City', 'DLF Golf Links'].map((area) => (
+            {[
+              'DLF Phase 2',
+              'DLF Phase 3',
+              'DLF Phase 4',
+              'DLF Phase 5',
+              'DLF Cyber City',
+              'DLF Golf Links',
+            ].map((area) => (
               <span key={area} className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">
                 {area}
               </span>

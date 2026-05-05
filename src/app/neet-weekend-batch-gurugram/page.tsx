@@ -1,11 +1,21 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Clock, Calendar, CheckCircle, BookOpen, Users, ArrowRight } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Calendar,
+  CheckCircle,
+  BookOpen,
+  Users,
+  ArrowRight,
+} from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Weekend Batch Gurugram 2026 | Saturday-Sunday Classes',
   description:
-    'Join NEET weekend batch in Gurugram - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. M2K Sector 51. Call 88264-44334!',
+    'Join NEET weekend batch in Gurugram (Gurgaon) - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. M2K Sector 51. Call 88264-44334!',
   keywords: [
     'neet weekend batch gurugram',
     'neet weekend classes gurgaon',
@@ -20,7 +30,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Weekend Batch Gurugram 2026',
-    description: 'Balance school and NEET prep! Saturday-Sunday intensive classes at M2K Sector 51.',
+    description:
+      'Balance school and NEET prep! Saturday-Sunday intensive classes at M2K Sector 51.',
     url: 'https://cerebrumbiologyacademy.com/neet-weekend-batch-gurugram',
   },
   alternates: {
@@ -29,9 +40,24 @@ export const metadata: Metadata = {
 }
 
 const schedule = [
-  { day: 'Saturday', time: '9:00 AM - 1:00 PM', activity: 'Theory + Practice MCQs', duration: '4 hours' },
-  { day: 'Sunday', time: '9:00 AM - 1:00 PM', activity: 'Theory + Weekly Test', duration: '4 hours' },
-  { day: 'Sunday', time: '2:00 PM - 4:00 PM', activity: 'Doubt Session (Optional)', duration: '2 hours' },
+  {
+    day: 'Saturday',
+    time: '9:00 AM - 1:00 PM',
+    activity: 'Theory + Practice MCQs',
+    duration: '4 hours',
+  },
+  {
+    day: 'Sunday',
+    time: '9:00 AM - 1:00 PM',
+    activity: 'Theory + Weekly Test',
+    duration: '4 hours',
+  },
+  {
+    day: 'Sunday',
+    time: '2:00 PM - 4:00 PM',
+    activity: 'Doubt Session (Optional)',
+    duration: '2 hours',
+  },
 ]
 
 const idealFor = [
@@ -45,41 +71,50 @@ const idealFor = [
 const faqs = [
   {
     question: 'What are the weekend batch timings in Gurugram?',
-    answer: 'Weekend batch schedule: Saturday 9 AM - 1 PM (4 hours), Sunday 9 AM - 1 PM (4 hours). Total 8 hours of intensive biology coaching per week. Optional doubt session: Sunday 2-4 PM. This covers complete NEET biology syllabus over 10-12 months.',
+    answer:
+      'Weekend batch schedule: Saturday 9 AM - 1 PM (4 hours), Sunday 9 AM - 1 PM (4 hours). Total 8 hours of intensive biology coaching per week. Optional doubt session: Sunday 2-4 PM. This covers complete NEET biology syllabus over 10-12 months.',
   },
   {
     question: 'Is weekend-only coaching enough for NEET?',
-    answer: 'Yes, with proper utilization! Our weekend batch covers: 8 hours class time + 6-8 hours self-study assignments = 14-16 hours/week biology preparation. Many students score 300+/360 with weekend-only coaching plus dedicated home study.',
+    answer:
+      'Yes, with proper utilization! Our weekend batch covers: 8 hours class time + 6-8 hours self-study assignments = 14-16 hours/week biology preparation. Many students score 300+/360 with weekend-only coaching plus dedicated home study.',
   },
   {
     question: 'Who is the weekend batch ideal for?',
-    answer: 'Perfect for: 1) Class 11-12 students attending regular school, 2) Students in integrated schools (DPS, Ryan, etc.), 3) Working professionals (rare but some), 4) Students already taking coaching for Physics/Chemistry elsewhere, 5) Those needing biology supplementary coaching.',
+    answer:
+      'Perfect for: 1) Class 11-12 students attending regular school, 2) Students in integrated schools (DPS, Ryan, etc.), 3) Working professionals (rare but some), 4) Students already taking coaching for Physics/Chemistry elsewhere, 5) Those needing biology supplementary coaching.',
   },
   {
     question: 'What is the fee for weekend NEET batch?',
-    answer: 'Weekend batch fee: ₹45,000-55,000/year (vs ₹65,000-75,000 for regular batch). Includes: All study material, weekend tests, online doubt support during weekdays, monthly parent meetings. Same faculty as regular batches.',
+    answer:
+      'Weekend batch fee: ₹45,000-55,000/year (vs ₹65,000-75,000 for regular batch). Includes: All study material, weekend tests, online doubt support during weekdays, monthly parent meetings. Same faculty as regular batches.',
   },
   {
     question: 'How do you cover full syllabus in weekends only?',
-    answer: 'Efficient curriculum design: 1) 4-hour focused sessions (no time waste), 2) Pre-class reading assignments, 3) Flipped classroom model, 4) Recorded summaries for revision, 5) WhatsApp doubt support on weekdays. Syllabus completed in 10-12 months with 2 months for revision.',
+    answer:
+      'Efficient curriculum design: 1) 4-hour focused sessions (no time waste), 2) Pre-class reading assignments, 3) Flipped classroom model, 4) Recorded summaries for revision, 5) WhatsApp doubt support on weekdays. Syllabus completed in 10-12 months with 2 months for revision.',
   },
   {
     question: 'What if I miss a weekend class?',
-    answer: "Backup options: 1) Recorded class summary shared on WhatsApp, 2) Extra weekday session available (by appointment), 3) Notes and assignments shared digitally, 4) One-on-one catch-up with faculty (₹500/session if needed). Missing 1-2 classes won't affect your preparation.",
+    answer:
+      "Backup options: 1) Recorded class summary shared on WhatsApp, 2) Extra weekday session available (by appointment), 3) Notes and assignments shared digitally, 4) One-on-one catch-up with faculty (₹500/session if needed). Missing 1-2 classes won't affect your preparation.",
   },
   {
     question: 'Can I switch from weekend to regular batch?',
-    answer: 'Yes, flexible switching allowed: 1) Mid-year switch with syllabus sync, 2) Fee difference adjusted, 3) Catch-up support for additional chapters. Many Class 12 students switch to regular batch after boards for intensive prep.',
+    answer:
+      'Yes, flexible switching allowed: 1) Mid-year switch with syllabus sync, 2) Fee difference adjusted, 3) Catch-up support for additional chapters. Many Class 12 students switch to regular batch after boards for intensive prep.',
   },
   {
     question: 'What about tests and assessments?',
-    answer: 'Test schedule: 1) Weekly chapter test every Sunday (last hour), 2) Monthly cumulative test (full 3 hours, Sunday), 3) Quarterly NEET pattern test, 4) Online practice tests available 24/7. Results shared with parents via app.',
+    answer:
+      'Test schedule: 1) Weekly chapter test every Sunday (last hour), 2) Monthly cumulative test (full 3 hours, Sunday), 3) Quarterly NEET pattern test, 4) Online practice tests available 24/7. Results shared with parents via app.',
   },
 ]
 
 export default function NEETWeekendBatchGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-weekend-batch-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16">
         <div className="container mx-auto px-4">
@@ -87,11 +122,10 @@ export default function NEETWeekendBatchGurugram() {
             <span className="inline-block bg-white text-orange-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               Weekend Batch for School Students
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Weekend Batch in Gurugram
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Weekend Batch in Gurugram</h1>
             <p className="text-xl text-orange-100 mb-8">
-              Balance school and NEET prep! Saturday-Sunday intensive classes at M2K Corporate Park, Sector 51.
+              Balance school and NEET prep! Saturday-Sunday intensive classes at M2K Corporate Park,
+              Sector 51.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -201,7 +235,8 @@ export default function NEETWeekendBatchGurugram() {
               </div>
               <h3 className="text-xl font-bold mb-3">Weekday Prep</h3>
               <p className="text-gray-600">
-                Pre-class reading assignments sent via WhatsApp. Come prepared to maximize classroom time.
+                Pre-class reading assignments sent via WhatsApp. Come prepared to maximize classroom
+                time.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg text-center">
@@ -210,7 +245,8 @@ export default function NEETWeekendBatchGurugram() {
               </div>
               <h3 className="text-xl font-bold mb-3">Weekend Classes</h3>
               <p className="text-gray-600">
-                4-hour intensive sessions on Sat & Sun. Theory, practice MCQs, and weekly tests included.
+                4-hour intensive sessions on Sat & Sun. Theory, practice MCQs, and weekly tests
+                included.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg text-center">
@@ -219,7 +255,8 @@ export default function NEETWeekendBatchGurugram() {
               </div>
               <h3 className="text-xl font-bold mb-3">Weekday Support</h3>
               <p className="text-gray-600">
-                WhatsApp doubt support Mon-Fri. Get answers within hours, not days. Never feel stuck.
+                WhatsApp doubt support Mon-Fri. Get answers within hours, not days. Never feel
+                stuck.
               </p>
             </div>
           </div>
@@ -290,7 +327,9 @@ export default function NEETWeekendBatchGurugram() {
                   <div>
                     <p className="font-semibold">M2K Corporate Park</p>
                     <p className="text-gray-600">Sector 51, Gurugram 122018</p>
-                    <p className="text-sm text-gray-500 mt-1">Easy access from Golf Course Extension Road</p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      Easy access from Golf Course Extension Road
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 mb-4">
@@ -335,7 +374,9 @@ export default function NEETWeekendBatchGurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-orange-500 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-orange-500 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

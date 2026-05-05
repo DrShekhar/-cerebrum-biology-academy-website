@@ -1,13 +1,15 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const PHONE = '88264-44334'
-const WA_LINK = 'https://wa.me/918826444334?text=Hi%2C%20I%20want%20to%20know%20about%20IB%2FIGCSE%20Biology%20tuition%20in%20Gurugram'
+const WA_LINK =
+  'https://wa.me/918826444334?text=Hi%2C%20I%20want%20to%20know%20about%20IB%2FIGCSE%20Biology%20tuition%20in%20Gurugram'
 
 export const metadata: Metadata = {
   title: 'IB & IGCSE Biology Tuition Gurugram | AIIMS Doctor | Pathways, DPS International',
   description:
-    'IB HL/SL & IGCSE Biology tuition in Gurugram by AIIMS Alumnus. Serving Pathways, DPS International, Scottish High. IA support, dual NEET prep. Visit Sector 51. Call 88264-44334.',
+    'IB HL/SL & IGCSE Biology tuition in Gurugram (Gurgaon) by AIIMS Alumnus. Serving Pathways, DPS International, Scottish High. IA support, dual NEET prep. Visit Sector 51. Call 88264-44334.',
   keywords:
     'IB biology tuition gurugram, IGCSE biology tuition gurgaon, IB biology tutor gurugram, IGCSE biology coaching gurugram, IB HL biology gurugram, international school biology tuition, DPS international biology tutor, pathways biology coaching',
   openGraph: {
@@ -65,7 +67,12 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://cerebrumbiologyacademy.com',
+        },
         {
           '@type': 'ListItem',
           position: 2,
@@ -80,6 +87,7 @@ const schema = {
 export default function IBIGCSEBiologyTuitionGurugramPage() {
   return (
     <>
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="ib-igcse-biology-tuition-gurugram" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
@@ -168,7 +176,8 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
               The 120-hour gap = your child&apos;s grade dropping from a 7 to a 5.
             </p>
             <p className="mt-2 text-slate-600">
-              And the IA (Internal Assessment) is 20% of the grade — most tutors ignore it completely.
+              And the IA (Internal Assessment) is 20% of the grade — most tutors ignore it
+              completely.
             </p>
           </div>
         </div>
@@ -188,7 +197,10 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
               'Precise terminology coaching — the #1 reason students lose marks',
               'Past paper practice — 10+ years of IB and IGCSE papers with marking scheme analysis',
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <div
+                key={item}
+                className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4"
+              >
                 <span className="mt-0.5 text-xl text-green-500">&#10004;</span>
                 <p className="text-slate-700">{item}</p>
               </div>
@@ -249,7 +261,9 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
               { label: 'NEET Biology', stat: '98%', desc: 'qualify for NEET' },
             ].map((r) => (
               <div key={r.label} className="rounded-xl bg-slate-50 p-8 shadow-lg">
-                <p className="text-sm font-semibold uppercase tracking-wide text-teal-600">{r.label}</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-teal-600">
+                  {r.label}
+                </p>
                 <p className="mt-2 text-5xl font-bold text-slate-900">{r.stat}</p>
                 <p className="mt-1 text-slate-600">{r.desc}</p>
               </div>
@@ -267,12 +281,16 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border-2 border-red-200 bg-red-50 p-8 text-center">
               <p className="mb-2 text-lg font-semibold text-red-600">Private IB Tutor</p>
-              <p className="text-4xl font-bold text-slate-900">₹2.5L+<span className="text-lg">/year</span></p>
+              <p className="text-4xl font-bold text-slate-900">
+                ₹2.5L+<span className="text-lg">/year</span>
+              </p>
               <p className="mt-2 text-slate-500">₹2-3K/hour, no tests, no IA help</p>
             </div>
             <div className="rounded-xl border-2 border-green-200 bg-green-50 p-8 text-center">
               <p className="mb-2 text-lg font-semibold text-green-600">Cerebrum</p>
-              <p className="text-4xl font-bold text-slate-900">₹60-98K<span className="text-lg">/year</span></p>
+              <p className="text-4xl font-bold text-slate-900">
+                ₹60-98K<span className="text-lg">/year</span>
+              </p>
               <p className="mt-2 text-slate-500">AIIMS faculty + tests + recordings + IA support</p>
             </div>
           </div>
@@ -289,7 +307,9 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
         <div className="mx-auto max-w-3xl px-4 text-center">
           <div className="rounded-xl bg-slate-50 p-10 shadow-lg">
             <p className="mb-4 text-xl italic text-slate-700">
-              &ldquo;We switched from an IB tutor charging ₹3,000/hour. My son scored 7 in HL Biology. We saved over ₹1.5 lakhs and got better results. Cerebrum understood the IB system better than any tutor we tried.&rdquo;
+              &ldquo;We switched from an IB tutor charging ₹3,000/hour. My son scored 7 in HL
+              Biology. We saved over ₹1.5 lakhs and got better results. Cerebrum understood the IB
+              system better than any tutor we tried.&rdquo;
             </p>
             <p className="font-bold text-slate-900">Mrs. Kapoor</p>
             <p className="text-sm text-slate-500">Parent, DLF Phase 4, Gurugram</p>
@@ -327,11 +347,10 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
       {/* Premium CTA */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 text-center text-white">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="mb-4 text-3xl font-bold">
-            Book a Private Consultation with Dr. Shekhar
-          </h2>
+          <h2 className="mb-4 text-3xl font-bold">Book a Private Consultation with Dr. Shekhar</h2>
           <p className="mb-8 text-lg text-slate-300">
-            Discuss your child&apos;s specific syllabus, school, and goals. Get a personalized study plan.
+            Discuss your child&apos;s specific syllabus, school, and goals. Get a personalized study
+            plan.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
@@ -399,7 +418,10 @@ export default function IBIGCSEBiologyTuitionGurugramPage() {
           >
             WhatsApp
           </a>
-          <Link href="/book-free-demo" className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-bold text-white">
+          <Link
+            href="/book-free-demo"
+            className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-bold text-white"
+          >
             Free Demo
           </Link>
         </div>

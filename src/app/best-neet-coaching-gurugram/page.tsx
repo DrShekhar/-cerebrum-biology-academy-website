@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import BestNEETCoachingContent from './BestNEETCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Gurugram 2026 | Top Institutes Compared',
   description:
-    'Compare the best NEET coaching institutes in Gurugram for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
+    'Compare the best NEET coaching institutes in Gurugram (Gurgaon) for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
   keywords: [
     'best neet coaching gurugram',
     'best neet coaching in gurgaon',
@@ -22,7 +23,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Best NEET Coaching in Gurugram 2026 | Top Institutes Compared',
-    description: 'Compare top NEET coaching institutes in Gurugram. Fees, faculty, results compared.',
+    description:
+      'Compare top NEET coaching institutes in Gurugram. Fees, faculty, results compared.',
     url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-gurugram',
   },
   alternates: {
@@ -98,7 +100,8 @@ export default function BestNEETCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Best NEET Coaching in Gurugram 2026 - Complete Comparison Guide',
-    description: 'Comprehensive comparison of top NEET coaching institutes in Gurugram with fees, faculty details, and success rates.',
+    description:
+      'Comprehensive comparison of top NEET coaching institutes in Gurugram with fees, faculty details, and success rates.',
     author: {
       '@type': 'Organization',
       name: 'Cerebrum Biology Academy',
@@ -129,17 +132,42 @@ export default function BestNEETCoachingGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Best NEET Coaching', item: 'https://cerebrumbiologyacademy.com/best-neet-coaching-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Best NEET Coaching',
+        item: 'https://cerebrumbiologyacademy.com/best-neet-coaching-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="best-neet-coaching-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <BestNEETCoachingContent faqs={faqs} />
     </>
   )

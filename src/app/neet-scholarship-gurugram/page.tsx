@@ -11,11 +11,12 @@ import {
   Users,
   Trophy,
 } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Scholarship Gurugram 2026 | Up to 100% Fee Waiver',
   description:
-    'Apply for NEET scholarship in Gurugram. Merit-based scholarships up to 100% fee waiver. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
+    'Apply for NEET scholarship in Gurugram (Gurgaon). Merit-based scholarships up to 100% fee waiver. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
   keywords: [
     'neet scholarship gurugram',
     'neet coaching scholarship gurgaon',
@@ -156,6 +157,7 @@ const testimonials = [
 export default function NEETScholarshipGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-scholarship-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-500 text-white py-16">
         <div className="container mx-auto px-4">
@@ -164,9 +166,7 @@ export default function NEETScholarshipGurugram() {
               <Gift className="w-4 h-4" />
               Merit-Based Scholarships Available
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Scholarship Gurugram 2026
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Scholarship Gurugram 2026</h1>
             <p className="text-xl text-yellow-100 mb-4">
               Up to 100% fee waiver based on merit! Dont let finances stop your medical dream.
             </p>
@@ -189,7 +189,9 @@ export default function NEETScholarshipGurugram() {
                 Apply Now: 88264-44334
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-yellow-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-800 transition border-2 border-white/30"
               >
                 Book Demo First
@@ -387,7 +389,8 @@ export default function NEETScholarshipGurugram() {
             '@context': 'https://schema.org',
             '@type': 'Scholarship',
             name: 'Cerebrum NEET Biology Scholarship 2026',
-            description: 'Merit-based scholarship for NEET Biology preparation, up to 100% fee waiver',
+            description:
+              'Merit-based scholarship for NEET Biology preparation, up to 100% fee waiver',
             provider: {
               '@type': 'EducationalOrganization',
               name: 'Cerebrum Biology Academy',

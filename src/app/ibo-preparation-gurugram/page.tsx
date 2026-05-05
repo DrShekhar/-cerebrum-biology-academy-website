@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import IBOPreparationGurugramContent from './IBOPreparationGurugramContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'IBO Preparation in Gurugram | International Biology Olympiad Coaching',
   description:
-    'Expert IBO preparation in Gurugram for International Biology Olympiad. Advanced training for INBO qualifiers, practical skills, research paper analysis at Sector 51 center.',
+    'Expert IBO preparation in Gurugram (Gurgaon) for International Biology Olympiad. Advanced training for INBO qualifiers, practical skills, research paper analysis at Sector 51 center.',
   keywords: [
     'IBO preparation gurugram',
     'international biology olympiad gurugram',
@@ -114,6 +115,7 @@ export default function IBOPreparationGurugramPage() {
 
   return (
     <>
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="ibo-preparation-gurugram" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

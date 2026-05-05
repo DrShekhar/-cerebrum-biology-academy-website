@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { SchoolLandingPage } from '@/components/seo/SchoolLandingPage'
 import { getSchoolPageData } from '@/data/school-seo/school-pages-data'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const pageData = getSchoolPageData('neet-coaching-amity-gurgaon-students')!
 
@@ -27,5 +28,14 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingAmityGurgaonPage() {
-  return <SchoolLandingPage data={pageData} />
+  return (
+    <>
+      <GurgaonGurugramAreaSchema
+        spelling="gurgaon"
+        pageSlug="neet-coaching-amity-gurgaon-students"
+        subArea="Amity School Gurgaon"
+      />
+      <SchoolLandingPage data={pageData} />
+    </>
+  )
 }

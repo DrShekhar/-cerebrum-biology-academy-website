@@ -1,11 +1,22 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Clock, Car, ArrowRight, Building, Briefcase, Train, Users } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Car,
+  ArrowRight,
+  Building,
+  Briefcase,
+  Train,
+  Users,
+} from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Cyber City Gurugram | 10 Min from DLF Cyber Hub',
   description:
-    'Best NEET coaching near Cyber City Gurugram. Just 10 min drive to M2K Sector 51. Perfect for IT professional families. AIIMS faculty, 98% success rate. Call 88264-44334!',
+    'Best NEET coaching near Cyber City Gurugram (Gurgaon). Just 10 min drive to M2K Sector 51. Perfect for IT professional families. AIIMS faculty, 98% success rate. Call 88264-44334!',
   keywords: [
     'neet coaching cyber city gurugram',
     'neet classes cyber city gurgaon',
@@ -74,6 +85,11 @@ const itCompanies = [
 export default function NEETCoachingCyberCityGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="neet-coaching-cyber-city-gurugram"
+        subArea="Cyber City"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-16">
         <div className="container mx-auto px-4">

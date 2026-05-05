@@ -171,7 +171,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Sector 51 Gurgaon | NEET Coaching Center | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes in Sector 51 Gurgaon at M2K Corporate Park. AIIMS faculty, 98% success rate. Walk-in for NEET & Board prep. Call 88264-44334!',
+      'Best biology classes in Sector 51 Gurgaon (Gurugram) at M2K Corporate Park. AIIMS faculty, 98% success rate. Walk-in for NEET & Board prep. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 51 Gurgaon',
     heroSubtitle:
       'Visit our flagship Gurgaon center at M2K Corporate Park, Sector 51. Premium NEET coaching with AIIMS-trained faculty.',
@@ -240,7 +240,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Sector 56 Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Top biology classes for Sector 56 Gurgaon students. Center in nearby Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334 for demo!',
+      'Top biology classes for Sector 56 Gurgaon (Gurugram) students. Center in nearby Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Sector 56 Gurgaon',
     heroSubtitle:
       'Premium NEET biology coaching just 5 minutes from Sector 56. Join our Sector 51 center with AIIMS-trained faculty.',
@@ -295,7 +295,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Sector 49 Gurgaon | NEET Coaching Near You | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Sector 49 Gurgaon. Center in adjacent Sector 51 (3 min). AIIMS faculty, 98% success rate. Book free demo today!',
+      'Best biology classes for Sector 49 Gurgaon (Gurugram). Center in adjacent Sector 51 (3 min). AIIMS faculty, 98% success rate. Book free demo today!',
     heroTitle: 'Biology Classes for Sector 49 Gurgaon',
     heroSubtitle:
       'Top NEET biology coaching right next to Sector 49. Walk to our Sector 51 center in just 3 minutes!',
@@ -344,7 +344,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Sector 57 Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Premium biology classes for Sector 57 Gurgaon students. Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Premium biology classes for Sector 57 Gurgaon (Gurugram) students. Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for Sector 57 Gurgaon',
     heroSubtitle:
       'Top-rated NEET coaching for Sector 57 students. Our Sector 51 center is just 7 minutes away via Golf Course Extension Road.',
@@ -394,7 +394,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in DLF Gurgaon | NEET Coaching DLF Phase 1-5 | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for DLF Phase 1, 2, 3, 4, 5 Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
+      'Best biology classes for DLF Phase 1, 2, 3, 4, 5 Gurgaon (Gurugram). Center in Sector 51 (15 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'Biology Classes for DLF Gurgaon Students',
     heroSubtitle:
       'Premium NEET coaching for DLF Phase 1, 2, 3, 4, 5 residents. Join our Sector 51 center or attend live online classes.',
@@ -449,7 +449,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes on Golf Course Road Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes near Golf Course Road Gurgaon. Center on Golf Course Extension Road Sector 51. AIIMS faculty. Call 88264-44334!',
+      'Best biology classes near Golf Course Road Gurgaon (Gurugram). Center on Golf Course Extension Road Sector 51. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes near Golf Course Road Gurgaon',
     heroSubtitle:
       'Premium NEET coaching on Golf Course Extension Road. Our Sector 51 center is directly accessible from Golf Course Road.',
@@ -504,7 +504,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes on Sohna Road Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Top biology classes for Sohna Road Gurgaon students. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
+      'Top biology classes for Sohna Road Gurgaon (Gurugram) students. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'Biology Classes for Sohna Road Gurgaon',
     heroSubtitle:
       'Premium NEET coaching for Sohna Road residents. Our Sector 51 center is 10 minutes via Golf Course Extension Road.',
@@ -557,7 +557,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes near MG Road Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for MG Road Gurgaon students. Center in Sector 51. AIIMS faculty, 98% success rate. Call 88264-44334 for demo!',
+      'Best biology classes for MG Road Gurgaon (Gurugram) students. Center in Sector 51. AIIMS faculty, 98% success rate. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for MG Road Gurgaon Students',
     heroSubtitle:
       'Premium NEET coaching accessible from MG Road. Join our Sector 51 center or attend live online classes.',
@@ -606,7 +606,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Palam Vihar Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Palam Vihar Gurgaon. Center in Sector 51 or join online. AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best biology classes for Palam Vihar Gurgaon (Gurugram). Center in Sector 51 or join online. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for Palam Vihar Gurgaon',
     heroSubtitle:
       'Top NEET coaching for Palam Vihar students. Join our Sector 51 center (25 min) or attend live online classes.',
@@ -655,7 +655,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in South City Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for South City 1 & 2 Gurgaon. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
+      'Best biology classes for South City 1 & 2 Gurgaon (Gurugram). Center in Sector 51 (12 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'Biology Classes for South City Gurgaon',
     heroSubtitle:
       'Premium NEET coaching for South City 1 & 2 residents. Our Sector 51 center is just 12 minutes away.',
@@ -704,7 +704,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Nirvana Country Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Nirvana Country Gurgaon residents. Center in Sector 51 (8 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best biology classes for Nirvana Country Gurgaon (Gurugram) residents. Center in Sector 51 (8 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for Nirvana Country Gurgaon',
     heroSubtitle:
       'Premium NEET coaching for Nirvana Country residents. Our Sector 51 center is just 8 minutes via Golf Course Extension Road.',
@@ -757,7 +757,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Best NEET Coaching in Gurgaon | Top NEET Classes Gurugram | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching in Gurgaon with center in Sector 51. AIIMS-trained Dr. Shekhar Singh, 98% success rate. Class 11, 12 & Dropper batches. Call 88264-44334!',
+      'Best NEET coaching in Gurgaon (Gurugram) with center in Sector 51. AIIMS-trained Dr. Shekhar Singh, 98% success rate. Class 11, 12 & Dropper batches. Call 88264-44334!',
     heroTitle: 'Best NEET Coaching in Gurgaon',
     heroSubtitle:
       'Top-rated NEET preparation at our Sector 51 center. AIIMS faculty, proven 98% success rate, personalized attention.',
@@ -821,7 +821,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 51 Gurgaon | Best NEET Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Top NEET coaching at M2K Corporate Park, Sector 51 Gurgaon. AIIMS faculty Dr. Shekhar Singh. 98% success. Class 11, 12, Droppers. Call 88264-44334!',
+      'Top NEET coaching at M2K Corporate Park, Sector 51 Gurgaon (Gurugram). AIIMS faculty Dr. Shekhar Singh. 98% success. Class 11, 12, Droppers. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 51 Gurgaon',
     heroSubtitle:
       'Join our flagship NEET center at M2K Corporate Park. AIIMS-trained faculty, proven track record, small batch sizes.',
@@ -878,7 +878,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching near Sector 56 Gurgaon | Best NEET Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 56 Gurgaon students. Center in Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best NEET coaching for Sector 56 Gurgaon (Gurugram) students. Center in Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 56 Gurgaon',
     heroSubtitle:
       'Top NEET preparation just 5 minutes from Sector 56. Join our Sector 51 center with AIIMS-trained faculty.',
@@ -926,7 +926,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 49 Gurgaon | Eldeco Acacia | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 49 Gurgaon, Eldeco Acacia, Uppal Southend. Center in Sector 51 (3 min). 98% success. Call 88264-44334!',
+      'Best NEET coaching for Sector 49 Gurgaon (Gurugram), Eldeco Acacia, Uppal Southend. Center in Sector 51 (3 min). 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 49 Gurgaon',
     heroSubtitle:
       'Top NEET classes just 3 minutes from Sector 49. Perfect for Eldeco Acacia and Uppal Southend residents.',
@@ -975,7 +975,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 14 Gurgaon 2026 | Best Biology Classes | Cerebrum',
     metaDescription:
-      'Top NEET coaching for Sector 14 Gurgaon students. Better alternative to crowded Sector 14 institutes. AIIMS faculty, small batches, 98% results. Call 88264-44334!',
+      'Top NEET coaching for Sector 14 Gurgaon (Gurugram) students. Better alternative to crowded Sector 14 institutes. AIIMS faculty, small batches, 98% results. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 14 Gurgaon Students',
     heroSubtitle:
       'Looking for NEET coaching in Sector 14? Our Sector 51 center offers personalized attention with AIIMS faculty - just 20 minutes away.',
@@ -1041,7 +1041,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in DLF Gurgaon | Phase 1-5 | Cyber City | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for DLF Phase 1, 2, 3, 4, 5 Gurgaon. Center in Sector 51. AIIMS faculty, 98% success. Book demo: 88264-44334',
+      'Best NEET coaching for DLF Phase 1, 2, 3, 4, 5 Gurgaon (Gurugram). Center in Sector 51. AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'NEET Coaching for DLF Gurgaon Students',
     heroSubtitle:
       'Premium NEET preparation for DLF Phase 1-5 residents. Join our Sector 51 center or attend live online classes.',
@@ -1093,7 +1093,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching on Golf Course Road Gurgaon | Magnolias Aralias | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching near Golf Course Road Gurgaon. DLF Magnolias, Aralias, Camellias, Palm Springs. Center in Sector 51. Call 88264-44334!',
+      'Best NEET coaching near Golf Course Road Gurgaon (Gurugram). DLF Magnolias, Aralias, Camellias, Palm Springs. Center in Sector 51. Call 88264-44334!',
     heroTitle: 'NEET Coaching near Golf Course Road Gurgaon',
     heroSubtitle:
       'Premium NEET preparation on Golf Course Extension Road. Serving Magnolias, Aralias, Palm Springs, and all GCR societies.',
@@ -1145,7 +1145,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching on Sohna Road Gurgaon | Central Park Vatika | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sohna Road Gurgaon. Central Park, Vatika City, BPTP, Bestech. Center in Sector 51 (10 min). Call 88264-44334!',
+      'Best NEET coaching for Sohna Road Gurgaon (Gurugram). Central Park, Vatika City, BPTP, Bestech. Center in Sector 51 (10 min). Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sohna Road Gurgaon',
     heroSubtitle:
       'Top NEET preparation for Sohna Road residents. Serving Central Park, Vatika, BPTP, and all Sohna Road societies.',
@@ -1197,7 +1197,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in South City Gurgaon | South City 1 & 2 | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for South City 1 & 2 Gurgaon students. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best NEET coaching for South City 1 & 2 Gurgaon (Gurugram) students. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching for South City Gurgaon',
     heroSubtitle:
       'Top NEET preparation for South City 1 & 2 residents. Our Sector 51 center is just 12 minutes away.',
@@ -1246,7 +1246,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Nirvana Country Gurgaon | The Close | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Nirvana Country, The Close South/North Gurgaon. Center in Sector 51 (8 min). AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for Nirvana Country, The Close South/North Gurgaon (Gurugram). Center in Sector 51 (8 min). AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Nirvana Country Gurgaon',
     heroSubtitle:
       'Top NEET preparation for Nirvana Country and The Close residents. Just 8 minutes to our Sector 51 center.',
@@ -3806,7 +3806,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for DPS Gurgaon Students | NEET Coaching Near DPS | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for DPS Gurgaon students (Sector 45 & 67C). NEET coaching in Sector 51 near DPS campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
+      'Best biology classes for DPS Gurgaon (Gurugram) students (Sector 45 & 67C). NEET coaching in Sector 51 near DPS campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
     heroTitle: 'Biology Classes for DPS Gurgaon Students',
     heroSubtitle:
       'Specialized NEET biology coaching for DPS Gurgaon (Sector 45 & 67C) students. Our Sector 51 center is just 10-15 minutes from both DPS campuses.',
@@ -3868,7 +3868,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for Shri Ram School Students | NEET Coaching Aravali Moulsari | Cerebrum',
     metaDescription:
-      'Best biology classes for The Shri Ram School (Aravali & Moulsari) students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. 98% success. Call 88264-44334!',
+      'Best biology classes for The Shri Ram School (Aravali & Moulsari) students. NEET coaching in Sector 51 Gurgaon (Gurugram). AIIMS faculty. 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for The Shri Ram School Students',
     heroSubtitle:
       'Premium NEET biology coaching for The Shri Ram School students (Aravali & Moulsari Avenue). Our curriculum complements TSRS pedagogy.',
@@ -3991,7 +3991,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for GD Goenka Students | NEET Coaching Sohna Road | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for GD Goenka World School students. NEET coaching in Sector 51 Gurgaon, near Sohna Road. AIIMS faculty. Call 88264-44334 for demo!',
+      'Best biology classes for GD Goenka World School students. NEET coaching in Sector 51 Gurgaon (Gurugram), near Sohna Road. AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for GD Goenka World School Students',
     heroSubtitle:
       'Expert NEET biology coaching for GD Goenka students. Our Sector 51 center is conveniently accessible from Sohna Road.',
@@ -4052,7 +4052,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for Heritage School Students | NEET Coaching Sector 62 | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Heritage Xperiential Learning School students. NEET coaching near Sector 62 Gurgaon. AIIMS faculty. Call 88264-44334!',
+      'Best biology classes for Heritage Xperiential Learning School students. NEET coaching near Sector 62 Gurgaon (Gurugram). AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Heritage School Students',
     heroSubtitle:
       'Specialized NEET biology coaching for Heritage Xperiential Learning School students. Experience-based learning meets exam-focused preparation.',
@@ -4113,7 +4113,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for Amity Gurgaon Students | NEET Coaching Sector 46 | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Amity International School Gurgaon students. NEET coaching in Sector 51, near Sector 46. AIIMS faculty. Call 88264-44334!',
+      'Best biology classes for Amity International School Gurgaon (Gurugram) students. NEET coaching in Sector 51, near Sector 46. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Amity International School Students',
     heroSubtitle:
       'Expert NEET biology coaching for Amity Gurgaon students. Our Sector 51 center is just 10 minutes from Amity campus.',
@@ -4174,7 +4174,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for Scottish High Students | NEET Coaching Sushant Lok | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Scottish High International School students. NEET coaching in Sector 51 Gurgaon, near Sushant Lok. Call 88264-44334 for demo!',
+      'Best biology classes for Scottish High International School students. NEET coaching in Sector 51 Gurgaon (Gurugram), near Sushant Lok. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Scottish High Students',
     heroSubtitle:
       'Premium NEET biology coaching for Scottish High International School students. Bridge IB/Cambridge curriculum with NEET preparation.',
@@ -4235,7 +4235,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for Suncity School Students | NEET Coaching Sector 54 | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Suncity World School students. NEET coaching in Sector 51 Gurgaon, near Sector 54. AIIMS faculty. Call 88264-44334!',
+      'Best biology classes for Suncity World School students. NEET coaching in Sector 51 Gurgaon (Gurugram), near Sector 54. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Suncity World School Students',
     heroSubtitle:
       'Expert NEET biology coaching for Suncity World School students. Just 5 minutes from your school campus!',
@@ -4296,7 +4296,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Tuition in Gurgaon | Best Biology Tutor Gurugram | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology tuition in Gurgaon with offline center in Sector 51. AIIMS faculty for NEET & Board prep. Class 9-12 biology tutor. Call 88264-44334 for demo!',
+      'Best biology tuition in Gurgaon (Gurugram) with offline center in Sector 51. AIIMS faculty for NEET & Board prep. Class 9-12 biology tutor. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Tuition in Gurgaon',
     heroSubtitle:
       'Expert biology tuition for NEET and Board exams. Personal attention with small batch sizes at our Sector 51 Gurugram center.',
@@ -4357,7 +4357,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Best Biology Tutor in Gurgaon | AIIMS Faculty | NEET Expert | Cerebrum Biology Academy',
     metaDescription:
-      'Find the best biology tutor in Gurgaon for NEET & Boards. AIIMS-trained faculty at Sector 51 center. 98% success rate. Book demo: 88264-44334!',
+      'Find the best biology tutor in Gurgaon (Gurugram) for NEET & Boards. AIIMS-trained faculty at Sector 51 center. 98% success rate. Book demo: 88264-44334!',
     heroTitle: 'Best Biology Tutor in Gurgaon',
     heroSubtitle:
       'Learn from AIIMS-trained biology experts at our Gurgaon center. Personal mentorship and proven teaching methodology.',
@@ -4417,7 +4417,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Best Biology Tutor in Gurugram 2026 | AIIMS Faculty | Cerebrum Biology Academy',
     metaDescription:
-      'Top biology tutor in Gurugram for NEET & Boards. AIIMS-trained faculty, 98% success rate. Class 9-12, NEET. Sector 51 center. Call 88264-44334!',
+      'Top biology tutor in Gurugram (Gurgaon) for NEET & Boards. AIIMS-trained faculty, 98% success rate. Class 9-12, NEET. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Best Biology Tutor in Gurugram',
     heroSubtitle:
       'Learn from AIIMS-trained biology experts. Personal attention in small batches at our Gurugram center.',
@@ -4477,7 +4477,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'AIIMS Coaching in Gurugram 2026 | Medical Entrance Prep | Cerebrum Biology Academy',
     metaDescription:
-      'Top AIIMS coaching in Gurugram for NEET-UG. AIIMS alumni faculty, 65+ AIIMS selections, 98% success. Medical entrance preparation. Call 88264-44334!',
+      'Top AIIMS coaching in Gurugram (Gurgaon) for NEET-UG. AIIMS alumni faculty, 65+ AIIMS selections, 98% success. Medical entrance preparation. Call 88264-44334!',
     heroTitle: 'AIIMS Coaching in Gurugram',
     heroSubtitle:
       'Prepare for AIIMS and top medical colleges with faculty who studied there. 65+ AIIMS selections from our center.',
@@ -4537,7 +4537,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Coaching for 10th Boards Gurgaon | CBSE Class 10 | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology coaching for Class 10 board exams in Gurgaon. CBSE, ICSE, Haryana Board. Strong foundation for NEET. Sector 51 center. Call 88264-44334!',
+      'Best biology coaching for Class 10 board exams in Gurgaon (Gurugram). CBSE, ICSE, Haryana Board. Strong foundation for NEET. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Biology Coaching for 10th Board Exams Gurgaon',
     heroSubtitle:
       'Build a strong biology foundation in Class 10. Perfect preparation for boards and future NEET success.',
@@ -4597,7 +4597,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 9 Biology Tuition in Gurugram 2026 | Foundation Course | Cerebrum Biology Academy',
     metaDescription:
-      'Best Class 9 biology tuition in Gurugram. Build strong foundation for NEET. CBSE, ICSE curriculum. Sector 51 center. Call 88264-44334!',
+      'Best Class 9 biology tuition in Gurugram (Gurgaon). Build strong foundation for NEET. CBSE, ICSE curriculum. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Class 9 Biology Tuition in Gurugram',
     heroSubtitle:
       'Start your NEET journey early with our Class 9 biology foundation. Build concepts that matter for Class 10, 11, 12 and NEET.',
@@ -4646,7 +4646,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 10 Biology Tuition in Gurugram 2026 | Board + NEET Prep | Cerebrum Biology Academy',
     metaDescription:
-      'Best Class 10 biology tuition in Gurugram for boards and NEET foundation. CBSE, ICSE, Haryana Board. Sector 51 center. Call 88264-44334!',
+      'Best Class 10 biology tuition in Gurugram (Gurgaon) for boards and NEET foundation. CBSE, ICSE, Haryana Board. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Class 10 Biology Tuition in Gurugram',
     heroSubtitle:
       'Excel in board exams while building NEET foundation. Comprehensive Class 10 biology coaching.',
@@ -4695,7 +4695,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 11 Biology Tuition in Gurugram 2026 | NEET Foundation | Cerebrum Biology Academy',
     metaDescription:
-      'Top Class 11 biology tuition in Gurugram for NEET preparation. AIIMS faculty, 98% results. Botany + Zoology. Sector 51. Call 88264-44334!',
+      'Top Class 11 biology tuition in Gurugram (Gurgaon) for NEET preparation. AIIMS faculty, 98% results. Botany + Zoology. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 11 Biology Tuition in Gurugram',
     heroSubtitle:
       'The most important year for NEET prep begins. Master Class 11 Biology with AIIMS-trained faculty.',
@@ -4744,7 +4744,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 12 Biology Tuition in Gurugram 2026 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
-      'Best Class 12 biology tuition in Gurugram for boards and NEET. AIIMS faculty, 98% results. Intensive preparation. Sector 51. Call 88264-44334!',
+      'Best Class 12 biology tuition in Gurugram (Gurgaon) for boards and NEET. AIIMS faculty, 98% results. Intensive preparation. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 12 Biology Tuition in Gurugram',
     heroSubtitle:
       'Final year, maximum stakes. Excel in boards and crack NEET with our intensive Class 12 program.',
@@ -4793,7 +4793,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Coaching for 12th Boards Gurgaon | Class 12 CBSE | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology coaching for Class 12 board exams in Gurgaon. CBSE, Haryana Board. Score 95%+ in boards while preparing for NEET. Sector 51 center. Call 88264-44334!',
+      'Best biology coaching for Class 12 board exams in Gurgaon (Gurugram). CBSE, Haryana Board. Score 95%+ in boards while preparing for NEET. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Biology Coaching for 12th Board Exams Gurgaon',
     heroSubtitle:
       'Final year biology - score 95%+ in boards while preparing for NEET. Human physiology, genetics, biotechnology, ecology experts.',
@@ -4854,7 +4854,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Home Tuition Gurgaon | Best Alternative - Center Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Looking for biology home tuition in Gurgaon? Try our superior center-based coaching in Sector 51. Better resources, peer learning, 98% results. 88264-44334!',
+      'Looking for biology home tuition in Gurgaon (Gurugram)? Try our superior center-based coaching in Sector 51. Better resources, peer learning, 98% results. 88264-44334!',
     heroTitle: 'Biology Coaching Near Your Home in Gurgaon',
     heroSubtitle:
       'Why home tuition when you can get better? Our Sector 51 center offers superior biology coaching with resources no home tutor can match.',
@@ -4916,7 +4916,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 11 NEET Coaching Gurugram 2026 | Foundation Year | Cerebrum Biology Academy',
     metaDescription:
-      'Best Class 11 NEET coaching in Gurugram. Build strong foundation in Physics, Chemistry, Biology. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
+      'Best Class 11 NEET coaching in Gurugram (Gurgaon). Build strong foundation in Physics, Chemistry, Biology. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 11 NEET Coaching in Gurugram',
     heroSubtitle:
       'Your NEET journey begins here. Build unshakeable foundation in Class 11 for NEET 2027 success.',
@@ -4976,7 +4976,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 12 NEET Coaching Gurugram 2026 | Final Year Prep | Cerebrum Biology Academy',
     metaDescription:
-      'Best Class 12 NEET coaching in Gurugram. Intensive preparation for NEET 2026. AIIMS faculty, daily tests, 98% results. Sector 51. Call 88264-44334!',
+      'Best Class 12 NEET coaching in Gurugram (Gurgaon). Intensive preparation for NEET 2026. AIIMS faculty, daily tests, 98% results. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 12 NEET Coaching in Gurugram',
     heroSubtitle:
       'Final year, maximum stakes. Intensive NEET preparation with board exam excellence guaranteed.',
@@ -5037,7 +5037,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: '1 Year NEET Course Gurugram 2026 | Intensive Program | Cerebrum Biology Academy',
     metaDescription:
-      'Best 1 year NEET course in Gurugram for Class 12 and dropper students. Complete syllabus coverage, 500+ tests, AIIMS faculty. Sector 51. Call 88264-44334!',
+      'Best 1 year NEET course in Gurugram (Gurgaon) for Class 12 and dropper students. Complete syllabus coverage, 500+ tests, AIIMS faculty. Sector 51. Call 88264-44334!',
     heroTitle: '1 Year NEET Course in Gurugram',
     heroSubtitle:
       'Intensive 12-month program designed for focused NEET preparation. Ideal for Class 12 students and first-time droppers.',
@@ -5096,7 +5096,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: '2 Year NEET Course Gurugram 2026-27 | Class 11-12 Integrated | Cerebrum Biology Academy',
     metaDescription:
-      'Best 2 year NEET course in Gurugram for Class 11 students. Integrated school + NEET preparation. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
+      'Best 2 year NEET course in Gurugram (Gurgaon) for Class 11 students. Integrated school + NEET preparation. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
     heroTitle: '2 Year NEET Course in Gurugram',
     heroSubtitle:
       'The gold standard for NEET preparation. Start from Class 11 and build unshakeable foundation over 24 months.',
@@ -5155,7 +5155,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: '6 Month NEET Coaching Gurugram 2026 | Crash Course | Cerebrum Biology Academy',
     metaDescription:
-      'Intensive 6 month NEET coaching in Gurugram. Fast-track revision and practice. For droppers and late starters. Sector 51 center. Call 88264-44334!',
+      'Intensive 6 month NEET coaching in Gurugram (Gurgaon). Fast-track revision and practice. For droppers and late starters. Sector 51 center. Call 88264-44334!',
     heroTitle: '6 Month NEET Coaching in Gurugram',
     heroSubtitle:
       'Short on time but big on ambition? Our intensive 6-month program covers everything you need to crack NEET.',
@@ -5215,7 +5215,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Weekend NEET Batch Gurugram 2026 | Saturday-Sunday Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Weekend NEET coaching in Gurugram for school students. Saturday-Sunday batches. Balance school and NEET prep. Sector 51 center. Call 88264-44334!',
+      'Weekend NEET coaching in Gurugram (Gurgaon) for school students. Saturday-Sunday batches. Balance school and NEET prep. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Weekend NEET Batch in Gurugram',
     heroSubtitle:
       'Perfect for school-going students. Intensive Saturday-Sunday classes to prepare for NEET without missing school.',
@@ -5274,7 +5274,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Evening Batch NEET Coaching Gurugram | After School | Cerebrum Biology Academy',
     metaDescription:
-      'Evening NEET coaching in Gurugram after school hours. 4 PM - 8 PM batches. Perfect for Class 11-12 students. Sector 51. Call 88264-44334!',
+      'Evening NEET coaching in Gurugram (Gurgaon) after school hours. 4 PM - 8 PM batches. Perfect for Class 11-12 students. Sector 51. Call 88264-44334!',
     heroTitle: 'Evening Batch NEET Coaching Gurugram',
     heroSubtitle:
       'Finish school, start NEET prep. Our evening batches run after school hours for seamless dual preparation.',
@@ -5333,7 +5333,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Offline NEET Coaching Gurugram 2026 | Classroom Program | Cerebrum Biology Academy',
     metaDescription:
-      'Best offline NEET coaching in Gurugram. In-person classroom teaching at Sector 51 center. AIIMS faculty, small batches, 98% results. Call 88264-44334!',
+      'Best offline NEET coaching in Gurugram (Gurgaon). In-person classroom teaching at Sector 51 center. AIIMS faculty, small batches, 98% results. Call 88264-44334!',
     heroTitle: 'Offline NEET Coaching in Gurugram',
     heroSubtitle:
       'Nothing beats classroom learning. Join our offline batches for face-to-face interaction with AIIMS faculty.',
@@ -5394,7 +5394,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'FIITJEE Alternative in Gurugram | Better for NEET Biology | Cerebrum Biology Academy',
     metaDescription:
-      'Looking for FIITJEE alternative in Gurugram for NEET? Cerebrum offers specialized biology coaching with AIIMS faculty. 50% lower fees, 98% results. 88264-44334!',
+      'Looking for FIITJEE alternative in Gurugram (Gurgaon) for NEET? Cerebrum offers specialized biology coaching with AIIMS faculty. 50% lower fees, 98% results. 88264-44334!',
     heroTitle: 'FIITJEE Alternative for NEET in Gurugram',
     heroSubtitle:
       'FIITJEE excels in IIT-JEE, but for NEET you need biology specialists. Cerebrum offers dedicated NEET coaching at half the cost.',
@@ -5453,7 +5453,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Narayana Alternative in Gurugram | Personal Attention | Cerebrum Biology Academy',
     metaDescription:
-      'Better than Narayana for NEET in Gurugram? Cerebrum offers small batches, personal attention, AIIMS faculty. No factory coaching. Call 88264-44334!',
+      'Better than Narayana for NEET in Gurugram (Gurgaon)? Cerebrum offers small batches, personal attention, AIIMS faculty. No factory coaching. Call 88264-44334!',
     heroTitle: 'Narayana Alternative for NEET in Gurugram',
     heroSubtitle:
       'Tired of crowded Narayana batches? Get personal attention with our 25-student batches and dedicated mentors.',
@@ -5512,7 +5512,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Physics Wallah (PW) Alternative Gurugram | Offline Expert | Cerebrum Biology Academy',
     metaDescription:
-      'Looking for Physics Wallah alternative in Gurugram? Cerebrum offers offline classes with AIIMS faculty. Real classroom experience. Call 88264-44334!',
+      'Looking for Physics Wallah alternative in Gurugram (Gurgaon)? Cerebrum offers offline classes with AIIMS faculty. Real classroom experience. Call 88264-44334!',
     heroTitle: 'Physics Wallah Alternative for NEET in Gurugram',
     heroSubtitle:
       'PW videos are great for basics. For serious NEET prep, you need classroom coaching with real interaction and discipline.',
@@ -5571,7 +5571,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Unacademy Alternative Gurugram | Real Classroom | Cerebrum Biology Academy',
     metaDescription:
-      'Better than Unacademy for NEET? Cerebrum offers real classroom coaching in Gurugram. No screen fatigue. AIIMS faculty. Call 88264-44334!',
+      'Better than Unacademy for NEET? Cerebrum offers real classroom coaching in Gurugram (Gurgaon). No screen fatigue. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Unacademy Alternative for NEET in Gurugram',
     heroSubtitle:
       'Tired of watching videos all day? Real NEET preparation happens in classrooms with actual teachers and peer competition.',
@@ -5631,7 +5631,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 15 Gurgaon | Near HUDA Market | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 15 Gurgaon students. 15 min from our Sector 51 center. AIIMS faculty, 98% results. Call 88264-44334!',
+      'Best NEET coaching for Sector 15 Gurgaon (Gurugram) students. 15 min from our Sector 51 center. AIIMS faculty, 98% results. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 15 Gurgaon',
     heroSubtitle:
       'Sector 15 students - join Gurugram\'s top NEET coaching. Just 15 minutes from HUDA Market to our Sector 51 center.',
@@ -5670,7 +5670,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 17 Gurgaon | Old Gurgaon | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 17 Gurgaon students. Serving Old Gurgaon since 2014. AIIMS faculty, small batches. Call 88264-44334!',
+      'Best NEET coaching for Sector 17 Gurgaon (Gurugram) students. Serving Old Gurgaon since 2014. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 17 Gurgaon',
     heroSubtitle:
       'Old Gurgaon\'s trusted NEET coaching partner. Students from Sectors 17, 18, 21 join our Sector 51 center.',
@@ -5709,7 +5709,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 18 Gurgaon | Near Vyapar Kendra | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 18 Gurgaon students. Near Vyapar Kendra. AIIMS faculty, 98% results. Sector 51 center. Call 88264-44334!',
+      'Best NEET coaching for Sector 18 Gurgaon (Gurugram) students. Near Vyapar Kendra. AIIMS faculty, 98% results. Sector 51 center. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 18 Gurgaon',
     heroSubtitle:
       'Sector 18 students - premium NEET coaching just 12 minutes away. Escape the crowd, join small batches.',
@@ -5748,7 +5748,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 40 Gurgaon | Near Huda City Centre | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 40 Gurgaon. 10 min from Huda City Centre Metro. AIIMS faculty, small batches. Call 88264-44334!',
+      'Best NEET coaching for Sector 40 Gurgaon (Gurugram). 10 min from Huda City Centre Metro. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 40 Gurgaon',
     heroSubtitle:
       'Sector 40 residents - top NEET coaching just 10 minutes away. Near Huda City Centre Metro for easy commute.',
@@ -5787,7 +5787,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 42 Gurgaon | Near Medanta | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 42 Gurgaon students. Near Medanta Hospital. AIIMS faculty, 98% results. Call 88264-44334!',
+      'Best NEET coaching for Sector 42 Gurgaon (Gurugram) students. Near Medanta Hospital. AIIMS faculty, 98% results. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 42 Gurgaon',
     heroSubtitle:
       'Sector 42 students - inspired by Medanta nearby? Join top NEET coaching to become a doctor yourself.',
@@ -5826,7 +5826,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 44 Gurgaon | Premium Locality | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 44 Gurgaon. Premium coaching for premium locality. AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for Sector 44 Gurgaon (Gurugram). Premium coaching for premium locality. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 44 Gurgaon',
     heroSubtitle:
       'Sector 44 families deserve premium education. Our AIIMS faculty delivers results that match your expectations.',
@@ -5865,7 +5865,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 46 Gurgaon | Near Paras Hospital | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 46 Gurgaon. Near Paras Hospital. See doctors daily, become one yourself. Call 88264-44334!',
+      'Best NEET coaching for Sector 46 Gurgaon (Gurugram). Near Paras Hospital. See doctors daily, become one yourself. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 46 Gurgaon',
     heroSubtitle:
       'Sector 46 - with Paras Hospital nearby, medical aspirations run high. Channel that motivation with expert coaching.',
@@ -5904,7 +5904,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 47 Gurgaon | Central Location | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 47 Gurgaon students. Centrally located. AIIMS faculty, small batches. Call 88264-44334!',
+      'Best NEET coaching for Sector 47 Gurgaon (Gurugram) students. Centrally located. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 47 Gurgaon',
     heroSubtitle:
       'Sector 47 students - you\'re in the heart of New Gurgaon. Access the best NEET coaching just 5 minutes away.',
@@ -5943,7 +5943,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 48 Gurgaon | Near Vega School | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 48 Gurgaon. Vega School, Presidium students welcome. AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for Sector 48 Gurgaon (Gurugram). Vega School, Presidium students welcome. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 48 Gurgaon',
     heroSubtitle:
       'Sector 48 - home to Vega School and premium societies. Get premium NEET coaching to match.',
@@ -5982,7 +5982,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 50 Gurgaon | Near Lotus Valley | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 50 Gurgaon. Lotus Valley, Ryan International students. 3 min walk to our center. Call 88264-44334!',
+      'Best NEET coaching for Sector 50 Gurgaon (Gurugram). Lotus Valley, Ryan International students. 3 min walk to our center. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 50 Gurgaon',
     heroSubtitle:
       'Sector 50 students - you\'re our closest neighbors! Walk to class and maximize your study time.',
@@ -6021,7 +6021,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 52 Gurgaon | Rapid Metro | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 52 Gurgaon. Near Rapid Metro station. Easy commute, AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for Sector 52 Gurgaon (Gurugram). Near Rapid Metro station. Easy commute, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 52 Gurgaon',
     heroSubtitle:
       'Sector 52 - well connected by Rapid Metro. Quick commute to our Sector 51 center for quality NEET prep.',
@@ -6060,7 +6060,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 53 Gurgaon | Golf Course Extension | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 53 Gurgaon on Golf Course Extension Road. Premium coaching, AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for Sector 53 Gurgaon (Gurugram) on Golf Course Extension Road. Premium coaching, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 53 Gurgaon',
     heroSubtitle:
       'Sector 53 families on Golf Course Extension - premium NEET coaching just minutes away.',
@@ -6099,7 +6099,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 54 Gurgaon | Near Golf Course Road | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 54 Gurgaon. Near Golf Course Road. Premium location, AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for Sector 54 Gurgaon (Gurugram). Near Golf Course Road. Premium location, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 54 Gurgaon',
     heroSubtitle:
       'Sector 54 - at the intersection of Golf Course and Golf Course Extension. Premium coaching for premium location.',
@@ -6138,7 +6138,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 58 Gurgaon | Growing Locality | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 58 Gurgaon. Serving growing families in this developing sector. AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for Sector 58 Gurgaon (Gurugram). Serving growing families in this developing sector. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 58 Gurgaon',
     heroSubtitle:
       'Sector 58 - a growing locality deserves quality education. Top NEET coaching just 10 minutes away.',
@@ -6266,7 +6266,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in New Gurgaon 2026 | Sectors 80-115 | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for New Gurgaon (Sectors 80-115). Premium coaching for premium localities. AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for New Gurgaon (Gurugram) (Sectors 80-115). Premium coaching for premium localities. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for New Gurgaon (Sectors 80-115)',
     heroSubtitle:
       'New Gurgaon families chose premium homes. Now choose premium education for your child\'s medical dreams.',
@@ -6310,7 +6310,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching SPR Road Gurgaon 2026 | Southern Peripheral Road | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for SPR Road Gurgaon students. Sectors 68-84. Easy expressway access. AIIMS faculty. Call 88264-44334!',
+      'Best NEET coaching for SPR Road Gurgaon (Gurugram) students. Sectors 68-84. Easy expressway access. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for SPR Road Gurgaon',
     heroSubtitle:
       'SPR (Southern Peripheral Road) - quick expressway access to premium NEET coaching in Sector 51.',
@@ -6351,7 +6351,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Which is the Best NEET Coaching in Gurugram 2026? | Expert Answer',
     metaDescription:
-      'Looking for the best NEET coaching in Gurugram? Compare top institutes, fees, results. Cerebrum Biology Academy - 98% success, AIIMS faculty. Call 88264-44334!',
+      'Looking for the best NEET coaching in Gurugram (Gurgaon)? Compare top institutes, fees, results. Cerebrum Biology Academy - 98% success, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Which is the Best NEET Coaching in Gurugram?',
     heroSubtitle:
       'An honest comparison of NEET coaching options in Gurugram to help you make the right choice for your medical career.',
@@ -6399,7 +6399,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'How to Prepare for NEET in Gurugram 2026 | Complete Guide | Cerebrum Biology Academy',
     metaDescription:
-      'Complete guide on how to prepare for NEET in Gurugram. Study plan, coaching options, tips from toppers. Expert guidance from AIIMS faculty. 88264-44334!',
+      'Complete guide on how to prepare for NEET in Gurugram (Gurgaon). Study plan, coaching options, tips from toppers. Expert guidance from AIIMS faculty. 88264-44334!',
     heroTitle: 'How to Prepare for NEET in Gurugram - Complete Guide',
     heroSubtitle:
       'A comprehensive roadmap for Gurugram students preparing for NEET 2026. From choosing coaching to cracking the exam.',
@@ -6447,7 +6447,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'What is NEET Coaching Fee in Gurugram 2026? | Fee Comparison | Cerebrum',
     metaDescription:
-      'Complete NEET coaching fees comparison in Gurugram. Aakash, Allen, Cerebrum fees compared. Best value coaching at ₹75K-95K. Call 88264-44334!',
+      'Complete NEET coaching fees comparison in Gurugram (Gurgaon). Aakash, Allen, Cerebrum fees compared. Best value coaching at ₹75K-95K. Call 88264-44334!',
     heroTitle: 'What is NEET Coaching Fee in Gurugram?',
     heroSubtitle:
       'Transparent fee comparison of all major NEET coaching institutes in Gurugram. Find the best value for your investment.',
@@ -6496,7 +6496,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Top 10 NEET Coaching in Gurugram 2026 | Ranking & Comparison | Cerebrum',
     metaDescription:
-      'Honest ranking of top 10 NEET coaching institutes in Gurugram 2026. Based on results, faculty, fees, reviews. Find your perfect fit. 88264-44334!',
+      'Honest ranking of top 10 NEET coaching institutes in Gurugram (Gurgaon) 2026. Based on results, faculty, fees, reviews. Find your perfect fit. 88264-44334!',
     heroTitle: 'Top 10 NEET Coaching Institutes in Gurugram 2026',
     heroSubtitle:
       'Unbiased ranking based on results, faculty credentials, student reviews, and value for money.',
@@ -6540,7 +6540,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching Reviews Gurugram 2026 | Student Testimonials | Cerebrum',
     metaDescription:
-      'Real student reviews of NEET coaching in Gurugram. Read experiences, results, faculty feedback. Cerebrum - 5.0/5 rating. Make informed choice. 88264-44334!',
+      'Real student reviews of NEET coaching in Gurugram (Gurgaon). Read experiences, results, faculty feedback. Cerebrum - 5.0/5 rating. Make informed choice. 88264-44334!',
     heroTitle: 'NEET Coaching Reviews in Gurugram',
     heroSubtitle:
       'Real feedback from real students. Read verified reviews before choosing your NEET coaching.',
@@ -6585,7 +6585,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Girls NEET Coaching Gurugram 2026 | Safe Environment | Cerebrum Biology Academy',
     metaDescription:
-      'Safe and supportive NEET coaching for girls in Gurugram. Female faculty available, women-friendly environment. 60% female students. Call 88264-44334!',
+      'Safe and supportive NEET coaching for girls in Gurugram (Gurgaon). Female faculty available, women-friendly environment. 60% female students. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Girls in Gurugram',
     heroSubtitle:
       'A safe, supportive environment where female medical aspirants thrive. 60% of our toppers are girls.',
@@ -6633,7 +6633,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'English Medium NEET Coaching Gurugram 2026 | Premium Quality | Cerebrum',
     metaDescription:
-      'English medium NEET coaching in Gurugram. Perfect for CBSE, ICSE, international school students. AIIMS faculty, premium teaching. Call 88264-44334!',
+      'English medium NEET coaching in Gurugram (Gurgaon). Perfect for CBSE, ICSE, international school students. AIIMS faculty, premium teaching. Call 88264-44334!',
     heroTitle: 'English Medium NEET Coaching in Gurugram',
     heroSubtitle:
       'Premium English-medium coaching for students from CBSE, ICSE, IB, IGCSE backgrounds.',
@@ -6677,7 +6677,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Small Batch NEET Coaching Gurugram 2026 | 25 Students Only | Cerebrum',
     metaDescription:
-      'Small batch NEET coaching in Gurugram with only 25 students per batch. Personal attention, better results. Not a factory. Call 88264-44334!',
+      'Small batch NEET coaching in Gurugram (Gurgaon) with only 25 students per batch. Personal attention, better results. Not a factory. Call 88264-44334!',
     heroTitle: 'Small Batch NEET Coaching in Gurugram',
     heroSubtitle:
       'Maximum 25 students per batch. Because personal attention creates doctors, not assembly lines.',
@@ -6725,7 +6725,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'PCB Coaching Gurugram 2026 | Physics Chemistry Biology | Cerebrum Biology Academy',
     metaDescription:
-      'Complete PCB coaching in Gurugram for NEET. Physics, Chemistry, Biology by expert faculty. Integrated preparation. Sector 51. Call 88264-44334!',
+      'Complete PCB coaching in Gurugram (Gurgaon) for NEET. Physics, Chemistry, Biology by expert faculty. Integrated preparation. Sector 51. Call 88264-44334!',
     heroTitle: 'PCB Coaching for NEET in Gurugram',
     heroSubtitle:
       'Complete Physics, Chemistry, Biology coaching under one roof. Integrated NEET preparation with subject experts.',
@@ -6774,7 +6774,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 11 Biology Coaching Gurgaon | NEET Foundation | Cerebrum Biology Academy',
     metaDescription:
-      'Best Class 11 biology coaching in Gurgaon. Build strong NEET foundation with AIIMS faculty. School + NEET integrated program. Sector 51 center. 88264-44334!',
+      'Best Class 11 biology coaching in Gurgaon (Gurugram). Build strong NEET foundation with AIIMS faculty. School + NEET integrated program. Sector 51 center. 88264-44334!',
     heroTitle: 'Class 11 Biology Coaching in Gurgaon',
     heroSubtitle:
       'Build your NEET foundation early! Our Class 11 program integrates school curriculum with competitive exam preparation.',
@@ -6834,7 +6834,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 12 Biology Coaching Gurgaon | Board + NEET Prep | Cerebrum Biology Academy',
     metaDescription:
-      'Best Class 12 biology coaching in Gurgaon for Boards and NEET. Dual focus program. AIIMS faculty at Sector 51. 98% success rate. Call 88264-44334!',
+      'Best Class 12 biology coaching in Gurgaon (Gurugram) for Boards and NEET. Dual focus program. AIIMS faculty at Sector 51. 98% success rate. Call 88264-44334!',
     heroTitle: 'Class 12 Biology Coaching in Gurgaon',
     heroSubtitle:
       'Master Class 12 Biology for both Board exams and NEET. Our dual-focus program ensures excellence in both.',
@@ -6894,7 +6894,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 9 & 10 Biology Coaching Gurgaon | Foundation Program | Cerebrum Biology Academy',
     metaDescription:
-      'Build strong biology foundation in Class 9-10 for future NEET success. School curriculum + competitive exam prep in Gurgaon Sector 51. Call 88264-44334!',
+      'Build strong biology foundation in Class 9-10 for future NEET success. School curriculum + competitive exam prep in Gurgaon (Gurugram) Sector 51. Call 88264-44334!',
     heroTitle: 'Class 9 & 10 Biology Foundation in Gurgaon',
     heroSubtitle:
       'Start early, win big! Our Class 9-10 program builds strong biology concepts for school success and future NEET preparation.',
@@ -6954,7 +6954,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for Manav Rachna Students | NEET Coaching Faridabad | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Manav Rachna School students. NEET coaching accessible from Faridabad & Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
+      'Best biology classes for Manav Rachna School students. NEET coaching accessible from Faridabad & Gurgaon (Gurugram). AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Manav Rachna Students',
     heroSubtitle:
       'Quality NEET biology coaching for Manav Rachna International School students. Accessible from both Faridabad and South Gurgaon locations.',
@@ -7015,7 +7015,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for Shikshanter Students | NEET Coaching Sector 40 | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Shikshanter School Gurgaon students. NEET coaching in Sector 51, near Sector 40. AIIMS faculty. Call 88264-44334!',
+      'Best biology classes for Shikshanter School Gurgaon (Gurugram) students. NEET coaching in Sector 51, near Sector 40. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Shikshanter School Students',
     heroSubtitle:
       "Expert NEET biology coaching for Shikshanter students. Our progressive teaching complements your school's experiential approach.",
@@ -7076,7 +7076,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes for RPS International Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for RPS International School Gurgaon students. NEET coaching in Sector 51. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
+      'Best biology classes for RPS International School Gurgaon (Gurugram) students. NEET coaching in Sector 51. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for RPS International School Students',
     heroSubtitle:
       'Expert NEET biology coaching for RPS International School students. Quality education with proven results.',
@@ -7137,7 +7137,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Biology Classes for Euro International Students | NEET Coaching Gurgaon | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Euro International School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
+      'Best biology classes for Euro International School students. NEET coaching in Sector 51 Gurgaon (Gurugram). AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Euro International School Students',
     heroSubtitle:
       'Premium NEET biology coaching for Euro International School students. Bridge your school curriculum with competitive exam preparation.',
@@ -7197,7 +7197,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes for Ryan International Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Ryan International School Gurgaon. NEET coaching in Sector 51 with AIIMS faculty. Call 88264-44334 for free demo!',
+      'Best biology classes for Ryan International School Gurgaon (Gurugram). NEET coaching in Sector 51 with AIIMS faculty. Call 88264-44334 for free demo!',
     heroTitle: 'Biology Classes for Ryan International School Students',
     heroSubtitle:
       'Expert NEET biology coaching for Ryan International School students. Strong foundation meets competitive exam excellence.',
@@ -7257,7 +7257,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes for DAV Public School Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for DAV Public School Gurgaon students. NEET coaching in Sector 51. AIIMS faculty, proven results. Call 88264-44334!',
+      'Best biology classes for DAV Public School Gurgaon (Gurugram) students. NEET coaching in Sector 51. AIIMS faculty, proven results. Call 88264-44334!',
     heroTitle: 'Biology Classes for DAV Public School Students',
     heroSubtitle:
       'Expert NEET biology coaching for DAV students. Build on your strong CBSE foundation with targeted NEET preparation.',
@@ -7317,7 +7317,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes for Lotus Valley Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Lotus Valley International School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334!',
+      'Best biology classes for Lotus Valley International School students. NEET coaching in Sector 51 Gurgaon (Gurugram). AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Lotus Valley International School Students',
     heroSubtitle:
       'Premium NEET biology coaching for Lotus Valley students. Complement your international curriculum with competitive exam mastery.',
@@ -7377,7 +7377,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes for Blue Bells School Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Blue Bells Model School students. NEET coaching in Sector 51 Gurgaon. AIIMS faculty. Call 88264-44334 for demo!',
+      'Best biology classes for Blue Bells Model School students. NEET coaching in Sector 51 Gurgaon (Gurugram). AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Blue Bells School Students',
     heroSubtitle:
       'Expert NEET biology coaching for Blue Bells Model School students. Quality coaching at our convenient Sector 51 center.',
@@ -7437,7 +7437,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Droppers Batch Gurgaon | Repeater Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Dedicated NEET droppers batch in Gurgaon. Gap year coaching with intensive preparation. Proven results for repeaters. Sector 51 center. Call 88264-44334!',
+      'Dedicated NEET droppers batch in Gurgaon (Gurugram). Gap year coaching with intensive preparation. Proven results for repeaters. Sector 51 center. Call 88264-44334!',
     heroTitle: 'NEET Droppers Batch in Gurgaon',
     heroSubtitle:
       'Your second chance, our full commitment. Dedicated full-year program for NEET repeaters with proven success strategies.',
@@ -7736,7 +7736,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching for DPS Gurgaon Students | Cerebrum Biology Academy',
     metaDescription:
-      'NEET biology coaching for DPS Gurgaon students. Sector 51 Gurgaon center, after-school batches. Expert AIIMS faculty. Call 88264-44334.',
+      'NEET biology coaching for DPS Gurgaon (Gurugram) students. Sector 51 Gurgaon center, after-school batches. Expert AIIMS faculty. Call 88264-44334.',
     heroTitle: 'NEET Coaching for DPS Gurgaon Students',
     heroSubtitle:
       'Convenient NEET coaching for DPS Gurgaon students at our Sector 51 center. After-school batches designed for your schedule.',
@@ -10129,7 +10129,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 43 Gurgaon | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 43 Gurgaon. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best NEET coaching for Sector 43 Gurgaon (Gurugram). Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 43 Gurgaon',
     heroSubtitle:
       'Top-rated biology coaching for Sector 43 students. Visit our Sector 51 center, just 10 minutes away.',
@@ -10186,7 +10186,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 45 Gurgaon | DPS Area Biology Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching near Sector 45 Gurgaon & DPS. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best NEET coaching near Sector 45 Gurgaon (Gurugram) & DPS. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 45 Gurgaon',
     heroSubtitle:
       'Top-rated biology coaching for Sector 45 & DPS Gurgaon students. Visit our Sector 51 center, just 10 minutes away.',
@@ -10244,7 +10244,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Sector 55 Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Sector 55 Gurgaon. Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best biology classes for Sector 55 Gurgaon (Gurugram). Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 55 Gurgaon',
     heroSubtitle:
       'Top-rated NEET coaching for Sector 55 students. Visit our Sector 51 center, just 7 minutes away.',
@@ -10301,7 +10301,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Sector 60 Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Sector 60 Gurgaon. Center in Sector 51 (12 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best biology classes for Sector 60 Gurgaon (Gurugram). Center in Sector 51 (12 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 60 Gurgaon',
     heroSubtitle:
       'Top-rated NEET coaching for Sector 60 students. Visit our Sector 51 center, just 12 minutes away.',
@@ -10358,7 +10358,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 61 Gurgaon | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 61 Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best NEET coaching for Sector 61 Gurgaon (Gurugram). Center in Sector 51 (15 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 61 Gurgaon',
     heroSubtitle:
       'Top-rated biology coaching for Sector 61 students. Visit our Sector 51 center, just 15 minutes away.',
@@ -10415,7 +10415,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Sector 73 Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Sector 73 Gurgaon. Center in Sector 51 (20 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best biology classes for Sector 73 Gurgaon (Gurugram). Center in Sector 51 (20 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 73 Gurgaon',
     heroSubtitle:
       'Top-rated NEET coaching for Sector 73 students. Visit our Sector 51 center or join online classes.',
@@ -10473,7 +10473,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 82 Gurgaon | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching for Sector 82 Gurgaon. Center in Sector 51 (25 min) or online. AIIMS faculty, 98% success!',
+      'Best NEET coaching for Sector 82 Gurgaon (Gurugram). Center in Sector 51 (25 min) or online. AIIMS faculty, 98% success!',
     heroTitle: 'NEET Coaching in Sector 82 Gurgaon',
     heroSubtitle:
       'Top-rated biology coaching for Sector 82 students. Visit our Sector 51 center or join live online classes.',
@@ -10533,7 +10533,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in Cyber City Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes for Cyber City Gurgaon. Center in Sector 51 (15 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best biology classes for Cyber City Gurgaon (Gurugram). Center in Sector 51 (15 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in Cyber City Gurgaon',
     heroSubtitle:
       'Top-rated NEET coaching for Cyber City professionals and students. Visit our Sector 51 center.',
@@ -10592,7 +10592,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Biology Classes in New Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
-      'Best biology classes in New Gurgaon. Center in Sector 51 or online. AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best biology classes in New Gurgaon (Gurugram). Center in Sector 51 or online. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes in New Gurgaon',
     heroSubtitle:
       'Top-rated NEET coaching for New Gurgaon students. Visit our Sector 51 center or join online classes.',
@@ -10651,7 +10651,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Udyog Vihar Gurgaon | Biology Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching in Udyog Vihar Gurgaon. Center in Sector 51 (20 min). AIIMS faculty, 98% success. Call 88264-44334!',
+      'Best NEET coaching in Udyog Vihar Gurgaon (Gurugram). Center in Sector 51 (20 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Udyog Vihar Gurgaon',
     heroSubtitle:
       'Top-rated biology coaching for Udyog Vihar students. Visit our Sector 51 center, just 20 minutes away.',
@@ -11952,7 +11952,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 11 Biology Tuition in Gurugram | CBSE & NEET | Cerebrum Biology Academy',
     metaDescription:
-      'Best Class 11 Biology coaching in Gurugram. CBSE Board + NEET integrated. AIIMS faculty, small batches (15 max), ₹48K-90K/year. DLF, Sector 14-57. Free demo class!',
+      'Best Class 11 Biology coaching in Gurugram (Gurgaon). CBSE Board + NEET integrated. AIIMS faculty, small batches (15 max), ₹48K-90K/year. DLF, Sector 14-57. Free demo class!',
     heroTitle: 'Class 11 Biology Tuition in Gurugram',
     heroSubtitle:
       'Class 11 is when Biology gets real — Cell Biology, Plant Physiology, Human Anatomy. Our integrated Board + NEET approach means your child aces school exams AND builds a NEET foundation simultaneously. No need for separate tuition and coaching.',
@@ -12026,7 +12026,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Class 12 Biology Tuition Gurugram | Board Exam + NEET 2026 | Cerebrum Biology Academy',
     metaDescription:
-      'Class 12 Biology coaching in Gurugram for CBSE Board + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty, 98% pass rate, ₹48K-90K. DLF, Sohna Road, Sector 14-57.',
+      'Class 12 Biology coaching in Gurugram (Gurgaon) for CBSE Board + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty, 98% pass rate, ₹48K-90K. DLF, Sohna Road, Sector 14-57.',
     heroTitle: 'Class 12 Biology — Board + NEET Coaching in Gurugram',
     heroSubtitle:
       'Class 12 is the make-or-break year. Board exam marks matter for college admission. NEET score decides your medical career. Our dual-focus program ensures you excel at BOTH — no compromises, no separate coaching needed.',
@@ -13056,7 +13056,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'Best Biology Coaching in Gurugram 2026 | Offline + Online | Cerebrum Biology Academy',
     metaDescription:
-      'Best Biology coaching in Gurugram with offline center at Sector 51. AIIMS faculty, 15-student batches, Board (avg 92) + NEET (98% success). DLF, Sohna Road. ₹48K-90K. Free demo!',
+      'Best Biology coaching in Gurugram (Gurgaon) with offline center at Sector 51. AIIMS faculty, 15-student batches, Board (avg 92) + NEET (98% success). DLF, Sohna Road. ₹48K-90K. Free demo!',
     heroTitle: 'Best Biology Coaching in Gurugram — Offline Center',
     heroSubtitle:
       'Gurugram\'s only Biology-specialist coaching with a physical classroom. Walk-in to our Sector 51 center for offline classes, or attend online. Either way, you get AIIMS faculty, 15-student batches, and the best Board + NEET Biology results in the city.',
@@ -13091,7 +13091,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'CBSE Biology Coaching Gurugram | Class 11-12 Board Prep | Cerebrum Biology Academy',
     metaDescription:
-      'CBSE Biology coaching in Gurugram — score 90+ in board exams. Offline at Sector 51 + online. AIIMS faculty, diagram/practical/viva prep, sample papers. ₹48,000-65,000/year. Free demo!',
+      'CBSE Biology coaching in Gurugram (Gurgaon) — score 90+ in board exams. Offline at Sector 51 + online. AIIMS faculty, diagram/practical/viva prep, sample papers. ₹48,000-65,000/year. Free demo!',
     heroTitle: 'CBSE Biology Coaching in Gurugram',
     heroSubtitle:
       'CBSE Biology board exam needs more than textbook reading — it needs diagram perfection, practical/viva confidence, HOTS question mastery, and sample paper practice. Our CBSE-focused coaching covers all of this with AIIMS-faculty depth. Average board score: 92/100.',
@@ -13121,7 +13121,7 @@ export const cityHubData: Record<string, CityHubData> = {
   'biology-classes-gurugram': {
     slug: 'biology-classes-gurugram', cityName: 'Gurugram', stateName: 'Haryana',
     metaTitle: 'Biology Classes in Gurugram 2026 | Class 9-12 | Offline + Online | Cerebrum Biology Academy',
-    metaDescription: 'Biology classes in Gurugram — offline at Sector 51 center. Class 9-12, CBSE + Haryana Board + NEET. AIIMS faculty, 15-student batches. ₹35,000-90,000/year. Free demo!',
+    metaDescription: 'Biology classes in Gurugram (Gurgaon) — offline at Sector 51 center. Class 9-12, CBSE + Haryana Board + NEET. AIIMS faculty, 15-student batches. ₹35,000-90,000/year. Free demo!',
     heroTitle: 'Biology Classes in Gurugram — Offline Center Available', heroSubtitle: 'Gurugram\'s only dedicated Biology coaching with a physical classroom. Walk-in classes at Sector 51 for all levels — Class 9 foundation through Class 12 Board + NEET. CBSE and Haryana Board patterns both covered.',
     hasOfflineCenter: true, nearestCenter: { name: 'Gurugram Center', address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram', distance: 'In Gurugram' },
     localities: [{ name: 'DLF Phase 1-5', url: '/neet-coaching-gurugram/dlf-phase-1' }, { name: 'Sohna Road', url: '/neet-coaching-gurugram/sohna-road' }, { name: 'Sector 14', url: '/neet-coaching-gurugram/sector-14' }],
@@ -13407,7 +13407,7 @@ export const cityHubData: Record<string, CityHubData> = {
   'board-exam-biology-gurugram': {
     slug: 'board-exam-biology-gurugram', cityName: 'Gurugram', stateName: 'Haryana',
     metaTitle: 'Board Exam Biology Preparation Gurugram | CBSE + Haryana Board | Cerebrum Biology Academy',
-    metaDescription: 'Board exam Biology prep in Gurugram — score 90+ in CBSE/Haryana Board. Offline at Sector 51. Diagrams, practicals, HOTS, sample papers. AIIMS faculty. ₹40,000-55,000/year.',
+    metaDescription: 'Board exam Biology prep in Gurugram (Gurgaon) — score 90+ in CBSE/Haryana Board. Offline at Sector 51. Diagrams, practicals, HOTS, sample papers. AIIMS faculty. ₹40,000-55,000/year.',
     heroTitle: 'Board Exam Biology Preparation — Gurugram', heroSubtitle: 'Focused preparation for CBSE and Haryana Board Biology exams. Our board-specific program covers everything that gets marks: diagram perfection, practical/viva confidence, HOTS answers, and sample paper mastery. Offline at Sector 51.',
     hasOfflineCenter: true, nearestCenter: { name: 'Gurugram Center', address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram', distance: 'In Gurugram' },
     localities: [{ name: 'DLF Phase 1-5', url: '/neet-coaching-gurugram/dlf-phase-1' }, { name: 'Sohna Road', url: '/neet-coaching-gurugram/sohna-road' }, { name: 'Sector 14', url: '/neet-coaching-gurugram/sector-14' }],

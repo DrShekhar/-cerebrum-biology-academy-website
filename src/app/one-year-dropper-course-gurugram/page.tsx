@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import OneYearDropperCourseContent from './OneYearDropperCourseContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'One Year NEET Dropper Course in Gurugram | Intensive Program',
   description:
-    'One year intensive NEET dropper course in Gurugram. Complete syllabus revision, 5000+ questions practice, daily tests. Transform your NEET score at Sector 51 center.',
+    'One year intensive NEET dropper course in Gurugram (Gurgaon). Complete syllabus revision, 5000+ questions practice, daily tests. Transform your NEET score at Sector 51 center.',
   keywords: [
     'one year neet dropper course gurugram',
     '1 year neet course gurugram',
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'One Year NEET Dropper Course in Gurugram | Complete Transformation',
-    description: 'Intensive 1-year NEET program designed for droppers to achieve their dream score.',
+    description:
+      'Intensive 1-year NEET program designed for droppers to achieve their dream score.',
     url: 'https://cerebrumbiologyacademy.com/one-year-dropper-course-gurugram',
   },
   alternates: {
@@ -70,7 +72,8 @@ export default function OneYearDropperCourseGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'One Year NEET Dropper Course - Gurugram',
-    description: 'Intensive one-year NEET preparation program for droppers with complete syllabus coverage and extensive practice.',
+    description:
+      'Intensive one-year NEET preparation program for droppers with complete syllabus coverage and extensive practice.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -84,7 +87,12 @@ export default function OneYearDropperCourseGurugramPage() {
       },
     },
     educationalLevel: 'Post-12th',
-    teaches: ['Complete NEET Biology', 'Question Practice', 'Test Taking Strategy', 'Score Improvement'],
+    teaches: [
+      'Complete NEET Biology',
+      'Question Practice',
+      'Test Taking Strategy',
+      'Score Improvement',
+    ],
     timeRequired: 'P1Y',
     hasCourseInstance: {
       '@type': 'CourseInstance',
@@ -107,17 +115,42 @@ export default function OneYearDropperCourseGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'One Year Dropper Course', item: 'https://cerebrumbiologyacademy.com/one-year-dropper-course-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'One Year Dropper Course',
+        item: 'https://cerebrumbiologyacademy.com/one-year-dropper-course-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="one-year-dropper-course-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <OneYearDropperCourseContent faqs={faqs} />
     </>
   )

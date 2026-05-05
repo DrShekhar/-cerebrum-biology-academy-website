@@ -39,6 +39,7 @@ import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const areasForAccordion: AreaCardData[] = getAllGurugramAreaSlugs().map((slug) => {
   const area = getGurugramAreaBySlug(slug)
@@ -350,6 +351,7 @@ export default function NeetCoachingGurugramPage() {
 
   return (
     <div className="min-h-screen">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-coaching-gurugram" />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -376,7 +378,11 @@ export default function NeetCoachingGurugramPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -443,9 +449,7 @@ export default function NeetCoachingGurugramPage() {
       {/* Why Gurugram Students Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Gurugram Students Choose Online NEET Coaching
             </h2>
@@ -488,9 +492,7 @@ export default function NeetCoachingGurugramPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Cerebrum for NEET Coaching in Gurugram?
             </h2>
@@ -514,9 +516,7 @@ export default function NeetCoachingGurugramPage() {
       {/* Video Testimonials Section - Phase 1 */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
               Real Student Success Stories
@@ -533,9 +533,7 @@ export default function NeetCoachingGurugramPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* Video 1: Sadhna Sirin */}
-            <div
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="relative aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/bk6wQCh6b9w"
@@ -572,9 +570,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Video 2: Abhisek */}
-            <div
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="relative aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/NfhkGqOQXzk"
@@ -611,9 +607,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Video 3: Nishita */}
-            <div
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="relative aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/t5F8RBuHITM"
@@ -651,9 +645,7 @@ export default function NeetCoachingGurugramPage() {
           </div>
 
           {/* Watch More CTA */}
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <Link
               href="https://www.youtube.com/@CerebrumBiologyAcademy"
               target="_blank"
@@ -675,9 +667,7 @@ export default function NeetCoachingGurugramPage() {
       {/* Google Business Profile & Reviews Section - Phase 2 */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by 800+ Gurugram Students & Parents
             </h2>
@@ -689,9 +679,7 @@ export default function NeetCoachingGurugramPage() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             {/* Google Rating Card */}
-            <div
-              className="lg:col-span-1 animate-fadeInUp"
-            >
+            <div className="lg:col-span-1 animate-fadeInUp">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-xl sticky top-24">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg mx-auto">
                   <svg className="w-12 h-12" viewBox="0 0 48 48">
@@ -751,9 +739,7 @@ export default function NeetCoachingGurugramPage() {
             {/* Review Highlights */}
             <div className="lg:col-span-2 space-y-5">
               {/* Review 1: GD Goenka Student */}
-              <div
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -782,9 +768,7 @@ export default function NeetCoachingGurugramPage() {
               </div>
 
               {/* Review 2: Scottish High Student */}
-              <div
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -815,9 +799,7 @@ export default function NeetCoachingGurugramPage() {
               </div>
 
               {/* Review 3: Sushant Lok Parent */}
-              <div
-                className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -850,9 +832,7 @@ export default function NeetCoachingGurugramPage() {
               </div>
 
               {/* Review 4: Golf Course Road Student */}
-              <div
-                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
-              >
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -883,9 +863,7 @@ export default function NeetCoachingGurugramPage() {
           </div>
 
           {/* Online Classes Benefits for Gurugram */}
-          <div
-            className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 animate-fadeInUp"
-          >
+          <div className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 animate-fadeInUp">
             {/* Google Maps */}
             <div className="rounded-xl overflow-hidden shadow-lg">
               <LazyGoogleMap
@@ -895,7 +873,7 @@ export default function NeetCoachingGurugramPage() {
                 placeholder={{
                   lat: 28.4295,
                   lng: 77.0426,
-                  address: "M2K Corporate Park, Sector 51, Gurugram"
+                  address: 'M2K Corporate Park, Sector 51, Gurugram',
                 }}
               />
             </div>
@@ -976,9 +954,7 @@ export default function NeetCoachingGurugramPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
               Detailed Success Stories
@@ -995,9 +971,7 @@ export default function NeetCoachingGurugramPage() {
           {/* 3 Success Story Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Story 1: Arjun Mehta - Purple-pink gradient */}
-            <div
-              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp">
               {/* Gradient Header */}
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-3">
@@ -1071,9 +1045,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Story 2: Sneha Kapoor - Red-orange gradient */}
-            <div
-              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp">
               {/* Gradient Header */}
               <div className="bg-gradient-to-r from-red-600 to-orange-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-3">
@@ -1147,9 +1119,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Story 3: Tanvi Sharma - Green-teal gradient */}
-            <div
-              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp">
               {/* Gradient Header */}
               <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-3">
@@ -1225,9 +1195,7 @@ export default function NeetCoachingGurugramPage() {
           </div>
 
           {/* Stats Banner */}
-          <div
-            className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp">
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
               Proven Success Across All Batches
             </h3>
@@ -1274,9 +1242,7 @@ export default function NeetCoachingGurugramPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why 800+ Gurugram Students Trust Cerebrum Biology Academy
             </h2>
@@ -1288,9 +1254,7 @@ export default function NeetCoachingGurugramPage() {
           {/* 6 Trust Badges Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Badge 1: 15+ Years of Excellence */}
-            <div
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp">
               <div className="bg-gradient-to-br from-blue-600 to-blue-700 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Award className="w-10 h-10 text-white" />
               </div>
@@ -1304,9 +1268,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Badge 2: 800+ Gurugram Students */}
-            <div
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp">
               <div className="bg-gradient-to-br from-green-600 to-teal-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Users className="w-10 h-10 text-white" />
               </div>
@@ -1322,9 +1284,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Badge 3: 5.0/5 Google Rating */}
-            <div
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp">
               <div className="bg-gradient-to-br from-yellow-500 to-orange-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Star className="w-10 h-10 text-white fill-white" />
               </div>
@@ -1338,9 +1298,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Badge 4: AIIMS Trained Faculty */}
-            <div
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp">
               <div className="bg-gradient-to-br from-purple-600 to-purple-700 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <GraduationCap className="w-10 h-10 text-white" />
               </div>
@@ -1353,9 +1311,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Badge 5: 98% Success Rate */}
-            <div
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp">
               <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Trophy className="w-10 h-10 text-white" />
               </div>
@@ -1371,9 +1327,7 @@ export default function NeetCoachingGurugramPage() {
             </div>
 
             {/* Badge 6: Live Online Classes */}
-            <div
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
-            >
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp">
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Monitor className="w-10 h-10 text-white" />
               </div>
@@ -1390,9 +1344,7 @@ export default function NeetCoachingGurugramPage() {
           </div>
 
           {/* Bottom CTA Banner */}
-          <div
-            className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl animate-fadeInUp"
-          >
+          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl animate-fadeInUp">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Join 800+ Successful Gurugram Students
             </h3>
@@ -1429,36 +1381,63 @@ export default function NeetCoachingGurugramPage() {
       {/* School-Specific NEET Coaching Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               School-Specific NEET Coaching
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We serve students from all major Gurugram schools with batch timings aligned to their schedules
+              We serve students from all major Gurugram schools with batch timings aligned to their
+              schedules
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
               { name: 'DPS Gurugram', href: '/biology-classes-dps-gurgaon', students: '85+' },
-              { name: 'Amity International', href: '/biology-classes-amity-gurgaon', students: '45+' },
-              { name: 'GD Goenka World School', href: '/biology-classes-gd-goenka-gurgaon', students: '55+' },
-              { name: 'The Shri Ram School', href: '/biology-classes-shri-ram-school-gurgaon', students: '65+' },
-              { name: 'Scottish High International', href: '/biology-classes-scottish-high-gurgaon', students: '40+' },
-              { name: 'Heritage Xperiential', href: '/biology-classes-heritage-school-gurgaon', students: '25+' },
-              { name: 'Suncity World School', href: '/biology-classes-suncity-school-gurgaon', students: '35+' },
-              { name: 'Manav Rachna School', href: '/biology-classes-manav-rachna-gurgaon', students: '30+' },
+              {
+                name: 'Amity International',
+                href: '/biology-classes-amity-gurgaon',
+                students: '45+',
+              },
+              {
+                name: 'GD Goenka World School',
+                href: '/biology-classes-gd-goenka-gurgaon',
+                students: '55+',
+              },
+              {
+                name: 'The Shri Ram School',
+                href: '/biology-classes-shri-ram-school-gurgaon',
+                students: '65+',
+              },
+              {
+                name: 'Scottish High International',
+                href: '/biology-classes-scottish-high-gurgaon',
+                students: '40+',
+              },
+              {
+                name: 'Heritage Xperiential',
+                href: '/biology-classes-heritage-school-gurgaon',
+                students: '25+',
+              },
+              {
+                name: 'Suncity World School',
+                href: '/biology-classes-suncity-school-gurgaon',
+                students: '35+',
+              },
+              {
+                name: 'Manav Rachna School',
+                href: '/biology-classes-manav-rachna-gurgaon',
+                students: '30+',
+              },
             ].map((school, index) => (
-              <div
-                key={school.name}
-               className="animate-fadeInUp">
+              <div key={school.name} className="animate-fadeInUp">
                 <Link href={school.href}>
                   <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
                     <h3 className="font-bold text-gray-900 mb-1">{school.name}</h3>
                     <div className="flex items-center justify-between">
-                      <span className="text-green-600 font-semibold">{school.students} students</span>
+                      <span className="text-green-600 font-semibold">
+                        {school.students} students
+                      </span>
                       <ArrowRight className="w-4 h-4 text-gray-400" />
                     </div>
                   </div>
@@ -1472,9 +1451,7 @@ export default function NeetCoachingGurugramPage() {
       {/* Board-Specific Coaching Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Board-Specific NEET Coaching
             </h2>
@@ -1484,15 +1461,16 @@ export default function NeetCoachingGurugramPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Link href="/cbse-neet-coaching-gurugram">
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-blue-100">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
                     <BookOpen className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">CBSE Board Students</h3>
-                  <p className="text-gray-600 mb-4">100% NCERT-aligned coaching. Perfect for DPS, Shri Ram, GD Goenka students.</p>
+                  <p className="text-gray-600 mb-4">
+                    100% NCERT-aligned coaching. Perfect for DPS, Shri Ram, GD Goenka students.
+                  </p>
                   <div className="flex items-center text-blue-600 font-semibold">
                     <span>View CBSE Program</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -1501,15 +1479,16 @@ export default function NeetCoachingGurugramPage() {
               </Link>
             </div>
 
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Link href="/icse-neet-coaching-gurugram">
                 <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-purple-100">
                   <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
                     <BookOpen className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">ICSE/ISC Board Students</h3>
-                  <p className="text-gray-600 mb-4">ICSE-to-NCERT bridge program. For Pathways, Lancers, Suncity students.</p>
+                  <p className="text-gray-600 mb-4">
+                    ICSE-to-NCERT bridge program. For Pathways, Lancers, Suncity students.
+                  </p>
                   <div className="flex items-center text-purple-600 font-semibold">
                     <span>View ICSE Program</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -1518,15 +1497,16 @@ export default function NeetCoachingGurugramPage() {
               </Link>
             </div>
 
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <Link href="/haryana-board-neet-coaching-gurugram">
                 <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-green-100">
                   <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4">
                     <BookOpen className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Haryana Board Students</h3>
-                  <p className="text-gray-600 mb-4">Hindi + English bilingual support. Affordable fees starting ₹35,000.</p>
+                  <p className="text-gray-600 mb-4">
+                    Hindi + English bilingual support. Affordable fees starting ₹35,000.
+                  </p>
                   <div className="flex items-center text-green-600 font-semibold">
                     <span>View HBSE Program</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -1541,39 +1521,65 @@ export default function NeetCoachingGurugramPage() {
       {/* Related Pages Section */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Explore More NEET Resources</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            Explore More NEET Resources
+          </h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/neet-coaching-near-me-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+            <Link
+              href="/neet-coaching-near-me-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">NEET Coaching Near Me</h3>
               <p className="text-sm text-gray-600">Find coaching by location</p>
             </Link>
-            <Link href="/online-neet-classes-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+            <Link
+              href="/online-neet-classes-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">Online NEET Classes</h3>
               <p className="text-sm text-gray-600">Live interactive sessions</p>
             </Link>
-            <Link href="/neet-study-material-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+            <Link
+              href="/neet-study-material-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">NEET Study Material</h3>
               <p className="text-sm text-gray-600">Notes, MCQs, tests</p>
             </Link>
-            <Link href="/neet-dropper-batch-2026-27-gurugram" className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow">
+            <Link
+              href="/neet-dropper-batch-2026-27-gurugram"
+              className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
+            >
               <h3 className="font-semibold text-teal-600">Dropper Batch 2026-27</h3>
               <p className="text-sm text-gray-600">Intensive preparation</p>
             </Link>
           </div>
           <div className="grid md:grid-cols-4 gap-4 mt-4">
-            <Link href="/neet-result-2025-gurugram" className="bg-green-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-green-100">
+            <Link
+              href="/neet-result-2025-gurugram"
+              className="bg-green-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-green-100"
+            >
               <h3 className="font-semibold text-green-700">NEET 2025 Results</h3>
               <p className="text-sm text-gray-600">98% success rate</p>
             </Link>
-            <Link href="/neet-topper-interview-gurugram" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-purple-100">
+            <Link
+              href="/neet-topper-interview-gurugram"
+              className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-purple-100"
+            >
               <h3 className="font-semibold text-purple-700">Topper Interviews</h3>
               <p className="text-sm text-gray-600">Learn from 650+ scorers</p>
             </Link>
-            <Link href="/neet-biology-faculty-gurugram" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-blue-100">
+            <Link
+              href="/neet-biology-faculty-gurugram"
+              className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-blue-100"
+            >
               <h3 className="font-semibold text-blue-700">Our Faculty</h3>
               <p className="text-sm text-gray-600">AIIMS-trained teachers</p>
             </Link>
-            <Link href="/free-neet-demo-class-gurugram" className="bg-amber-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-amber-100">
+            <Link
+              href="/free-neet-demo-class-gurugram"
+              className="bg-amber-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-amber-100"
+            >
               <h3 className="font-semibold text-amber-700">Free Demo Class</h3>
               <p className="text-sm text-gray-600">Experience our teaching</p>
             </Link>
@@ -1584,9 +1590,7 @@ export default function NeetCoachingGurugramPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions - NEET Coaching Gurugram
             </h2>
@@ -1594,10 +1598,7 @@ export default function NeetCoachingGurugramPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -1612,8 +1613,7 @@ export default function NeetCoachingGurugramPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your NEET Journey from Gurugram Today
             </h2>
@@ -1623,7 +1623,11 @@ export default function NeetCoachingGurugramPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -1635,7 +1639,11 @@ export default function NeetCoachingGurugramPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"
@@ -1670,9 +1678,7 @@ export default function NeetCoachingGurugramPage() {
       </section>
 
       {/* WhatsApp Floating Button */}
-      <div
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group animate-fadeInUp"
-      >
+      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group animate-fadeInUp">
         {/* Hover Tooltip */}
         <div className="absolute bottom-full mb-2 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           <div className="bg-gray-900 text-white text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
@@ -1702,7 +1708,10 @@ export default function NeetCoachingGurugramPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-          { name: 'NEET Coaching', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+          {
+            name: 'NEET Coaching',
+            url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+          },
           { name: 'Gurugram', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
         ]}
       />

@@ -1,13 +1,14 @@
 import { Metadata } from 'next'
 import AakashAlternativeContent from './AakashAlternativeContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
 export const metadata: Metadata = {
   title: 'Aakash Alternative in Gurugram | Personalized NEET Biology Coaching',
   description:
-    'Looking for Aakash alternative in Gurugram? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% success rate.',
+    'Looking for Aakash alternative in Gurugram (Gurgaon)? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% success rate.',
   keywords: [
     'aakash alternative gurugram',
     'aakash coaching alternative gurgaon',
@@ -21,7 +22,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Aakash Alternative in Gurugram | Personalized NEET Biology Coaching',
-    description: 'Why 400+ Gurugram students chose Cerebrum over Aakash for NEET Biology preparation.',
+    description:
+      'Why 400+ Gurugram students chose Cerebrum over Aakash for NEET Biology preparation.',
     url: 'https://cerebrumbiologyacademy.com/aakash-alternative-gurugram',
   },
   alternates: {
@@ -56,9 +58,9 @@ const faqs = [
       'Cerebrum offers competitive pricing with better value. Our fees range from ₹45,000 to ₹1,56,000 depending on the tier and program, often 30-40% lower than Aakash for comparable quality with significantly smaller batch sizes.',
   },
   {
-    question: 'Is Aakash affected by the BYJU\'s crisis?',
+    question: "Is Aakash affected by the BYJU's crisis?",
     answer:
-      'Aakash was acquired by BYJU\'S in 2021. While Aakash continues operations, some students prefer independent institutes like Cerebrum that are not part of large corporate structures. We focus purely on quality education without corporate distractions.',
+      "Aakash was acquired by BYJU'S in 2021. While Aakash continues operations, some students prefer independent institutes like Cerebrum that are not part of large corporate structures. We focus purely on quality education without corporate distractions.",
   },
   {
     question: 'Where is Cerebrum located in Gurugram?',
@@ -71,11 +73,13 @@ export default function AakashAlternativeGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Aakash Alternative in Gurugram - Cerebrum Biology Academy',
-    description: 'Comparison of Cerebrum Biology Academy vs Aakash Institute for NEET preparation in Gurugram',
+    description:
+      'Comparison of Cerebrum Biology Academy vs Aakash Institute for NEET preparation in Gurugram',
     mainEntity: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
-      description: 'Specialized NEET Biology coaching with small batches and personalized attention',
+      description:
+        'Specialized NEET Biology coaching with small batches and personalized attention',
       address: {
         '@type': 'PostalAddress',
         streetAddress: gurugramLocation.streetAddress,
@@ -100,17 +104,42 @@ export default function AakashAlternativeGurugramPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-      { '@type': 'ListItem', position: 3, name: 'Aakash Alternative', item: 'https://cerebrumbiologyacademy.com/aakash-alternative-gurugram' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Gurugram',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Aakash Alternative',
+        item: 'https://cerebrumbiologyacademy.com/aakash-alternative-gurugram',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="aakash-alternative-gurugram" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <AakashAlternativeContent faqs={faqs} />
     </>
   )

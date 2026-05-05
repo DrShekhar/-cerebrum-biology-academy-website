@@ -1,11 +1,22 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Clock, Moon, CheckCircle, School, Users, ArrowRight, Coffee } from 'lucide-react'
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Moon,
+  CheckCircle,
+  School,
+  Users,
+  ArrowRight,
+  Coffee,
+} from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Evening Batch Gurugram 2026 | After-School Classes 5-8 PM',
   description:
-    'Join NEET evening batch in Gurugram - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. M2K Sector 51. Call 88264-44334!',
+    'Join NEET evening batch in Gurugram (Gurgaon) - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. M2K Sector 51. Call 88264-44334!',
   keywords: [
     'neet evening batch gurugram',
     'neet evening classes gurgaon',
@@ -29,12 +40,42 @@ export const metadata: Metadata = {
 }
 
 const schedule = [
-  { day: 'Monday', time: '5:00 PM - 8:00 PM', activity: 'Theory Class', chapters: 'As per syllabus' },
-  { day: 'Tuesday', time: '5:00 PM - 8:00 PM', activity: 'Theory + Practice', chapters: 'As per syllabus' },
-  { day: 'Wednesday', time: '5:00 PM - 8:00 PM', activity: 'Theory Class', chapters: 'As per syllabus' },
-  { day: 'Thursday', time: '5:00 PM - 8:00 PM', activity: 'Theory + Practice', chapters: 'As per syllabus' },
-  { day: 'Friday', time: '5:00 PM - 8:00 PM', activity: 'Revision + Weekly Test', chapters: 'Cumulative' },
-  { day: 'Saturday', time: '10:00 AM - 1:00 PM', activity: 'Optional Revision', chapters: 'Doubt Clearing' },
+  {
+    day: 'Monday',
+    time: '5:00 PM - 8:00 PM',
+    activity: 'Theory Class',
+    chapters: 'As per syllabus',
+  },
+  {
+    day: 'Tuesday',
+    time: '5:00 PM - 8:00 PM',
+    activity: 'Theory + Practice',
+    chapters: 'As per syllabus',
+  },
+  {
+    day: 'Wednesday',
+    time: '5:00 PM - 8:00 PM',
+    activity: 'Theory Class',
+    chapters: 'As per syllabus',
+  },
+  {
+    day: 'Thursday',
+    time: '5:00 PM - 8:00 PM',
+    activity: 'Theory + Practice',
+    chapters: 'As per syllabus',
+  },
+  {
+    day: 'Friday',
+    time: '5:00 PM - 8:00 PM',
+    activity: 'Revision + Weekly Test',
+    chapters: 'Cumulative',
+  },
+  {
+    day: 'Saturday',
+    time: '10:00 AM - 1:00 PM',
+    activity: 'Optional Revision',
+    chapters: 'Doubt Clearing',
+  },
 ]
 
 const compatibleSchools = [
@@ -51,41 +92,50 @@ const compatibleSchools = [
 const faqs = [
   {
     question: 'What are the evening batch timings?',
-    answer: 'Evening batch: 5:00 PM - 8:00 PM (Monday to Friday). 3 hours daily x 5 days = 15 hours/week of intensive coaching. Optional Saturday revision: 10 AM - 1 PM. Perfect for students whose school ends by 3-4 PM.',
+    answer:
+      'Evening batch: 5:00 PM - 8:00 PM (Monday to Friday). 3 hours daily x 5 days = 15 hours/week of intensive coaching. Optional Saturday revision: 10 AM - 1 PM. Perfect for students whose school ends by 3-4 PM.',
   },
   {
     question: 'Which schools can conveniently attend evening batch?',
-    answer: 'Ideal for students from: DPS Sector 45/67, Ryan International, GD Goenka, Shiv Nadar, Scottish High, Pathways World School, Heritage Xperiential, Amity International, The Shri Ram School. All these schools end by 3-4 PM.',
+    answer:
+      'Ideal for students from: DPS Sector 45/67, Ryan International, GD Goenka, Shiv Nadar, Scottish High, Pathways World School, Heritage Xperiential, Amity International, The Shri Ram School. All these schools end by 3-4 PM.',
   },
   {
     question: 'Is evening batch as effective as morning batch?',
-    answer: "Equally effective! Same faculty teaches both batches. Evening advantages: 1) Fresh after school rest, 2) Can revise morning's school topics, 3) Same study material and tests, 4) Smaller batches (many prefer morning). Results show no difference between batches.",
+    answer:
+      "Equally effective! Same faculty teaches both batches. Evening advantages: 1) Fresh after school rest, 2) Can revise morning's school topics, 3) Same study material and tests, 4) Smaller batches (many prefer morning). Results show no difference between batches.",
   },
   {
     question: 'What is the fee for evening NEET batch?',
-    answer: 'Evening batch fee: Same as regular batch - ₹45,000-75,000/year depending on course. No premium for evening timing. Includes: Complete study material, daily tests, doubt sessions, WhatsApp support, parent meetings.',
+    answer:
+      'Evening batch fee: Same as regular batch - ₹45,000-75,000/year depending on course. No premium for evening timing. Includes: Complete study material, daily tests, doubt sessions, WhatsApp support, parent meetings.',
   },
   {
     question: 'How to manage school + evening coaching?',
-    answer: "Recommended routine: School (8 AM-3 PM) → Rest/Lunch (3-4:30 PM) → Coaching (5-8 PM) → Dinner (8:30 PM) → Self-study/Homework (9-10:30 PM) → Sleep. Our syllabus aligns with CBSE, so school and coaching complement each other.",
+    answer:
+      'Recommended routine: School (8 AM-3 PM) → Rest/Lunch (3-4:30 PM) → Coaching (5-8 PM) → Dinner (8:30 PM) → Self-study/Homework (9-10:30 PM) → Sleep. Our syllabus aligns with CBSE, so school and coaching complement each other.',
   },
   {
     question: 'What if school has extra classes/activities?',
-    answer: "Flexible attendance: 1) Inform us in advance for planned absences, 2) Recorded summaries available, 3) Weekend catch-up sessions, 4) No penalty for occasional misses. We understand school schedules vary.",
+    answer:
+      'Flexible attendance: 1) Inform us in advance for planned absences, 2) Recorded summaries available, 3) Weekend catch-up sessions, 4) No penalty for occasional misses. We understand school schedules vary.',
   },
   {
     question: 'Do you provide snacks/refreshments?',
-    answer: 'Yes! Light refreshments provided during break (6:30-6:45 PM): Biscuits, juice/water. Students can also bring their own snacks. AC classroom ensures comfort after long school day.',
+    answer:
+      'Yes! Light refreshments provided during break (6:30-6:45 PM): Biscuits, juice/water. Students can also bring their own snacks. AC classroom ensures comfort after long school day.',
   },
   {
     question: 'Can droppers join evening batch?',
-    answer: 'Droppers typically prefer morning batches (more time for self-study). But evening batch is available if preferred. Dropper-specific: Additional morning doubt sessions available, extra test series, extended library hours.',
+    answer:
+      'Droppers typically prefer morning batches (more time for self-study). But evening batch is available if preferred. Dropper-specific: Additional morning doubt sessions available, extra test series, extended library hours.',
   },
 ]
 
 export default function NEETEveningBatchGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
+      <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-evening-batch-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-900 to-indigo-700 text-white py-16">
         <div className="container mx-auto px-4">
@@ -93,11 +143,10 @@ export default function NEETEveningBatchGurugram() {
             <span className="inline-block bg-yellow-500 text-indigo-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               After-School NEET Coaching
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              NEET Evening Batch in Gurugram
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">NEET Evening Batch in Gurugram</h1>
             <p className="text-xl text-indigo-100 mb-8">
-              After-school NEET preparation! Evening classes from 5 PM at M2K Corporate Park, Sector 51.
+              After-school NEET preparation! Evening classes from 5 PM at M2K Corporate Park, Sector
+              51.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -148,7 +197,9 @@ export default function NEETEveningBatchGurugram() {
       {/* Compatible Schools */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Schools Compatible with Evening Batch</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Schools Compatible with Evening Batch
+          </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Students from these schools can comfortably reach our Sector 51 center by 5 PM
           </p>
@@ -256,21 +307,24 @@ export default function NEETEveningBatchGurugram() {
               <Coffee className="w-12 h-12 text-indigo-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Refreshed Mind</h3>
               <p className="text-gray-600">
-                After school rest means you come to class fresh and alert. Better concentration = better learning.
+                After school rest means you come to class fresh and alert. Better concentration =
+                better learning.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <School className="w-12 h-12 text-indigo-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">School Alignment</h3>
               <p className="text-gray-600">
-                Our syllabus complements CBSE curriculum. What you learn in school reinforces coaching, and vice versa.
+                Our syllabus complements CBSE curriculum. What you learn in school reinforces
+                coaching, and vice versa.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Users className="w-12 h-12 text-indigo-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Smaller Batches</h3>
               <p className="text-gray-600">
-                Many students prefer morning, so evening batches are often smaller. More personal attention for you.
+                Many students prefer morning, so evening batches are often smaller. More personal
+                attention for you.
               </p>
             </div>
           </div>
@@ -343,7 +397,9 @@ export default function NEETEveningBatchGurugram() {
                   <div>
                     <p className="font-semibold">M2K Corporate Park</p>
                     <p className="text-gray-600">Sector 51, Gurugram 122018</p>
-                    <p className="text-sm text-gray-500 mt-1">Easy reach from most Gurugram schools</p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      Easy reach from most Gurugram schools
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 mb-4">
@@ -387,7 +443,9 @@ export default function NEETEveningBatchGurugram() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-indigo-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-indigo-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>

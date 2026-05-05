@@ -1,11 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, CheckCircle, ArrowRight, BookOpen, Target, AlertTriangle } from 'lucide-react'
+import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 
 export const metadata: Metadata = {
   title: 'Is Coaching Necessary for NEET? Gurugram Expert Answer | 2025',
   description:
-    'Is coaching necessary for NEET? Expert analysis from Gurugram NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
+    'Is coaching necessary for NEET? Expert analysis from Gurugram (Gurgaon) NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
   keywords: [
     'is coaching necessary for neet',
     'neet coaching vs self study',
@@ -44,25 +45,33 @@ const whenSelfStudyWorks = [
 const faqs = [
   {
     question: 'Can I crack NEET without coaching?',
-    answer: 'Yes, but statistics show only 15-20% of toppers are purely self-study. Most successful self-study students have exceptional discipline, prior strong foundation, and access to quality resources.',
+    answer:
+      'Yes, but statistics show only 15-20% of toppers are purely self-study. Most successful self-study students have exceptional discipline, prior strong foundation, and access to quality resources.',
   },
   {
     question: 'Is expensive coaching necessary?',
-    answer: 'No. Expensive doesn\'t mean better. Small batch coaching (like ours with 20 students) often outperforms large institutes. Focus on faculty quality and personal attention, not brand name.',
+    answer:
+      "No. Expensive doesn't mean better. Small batch coaching (like ours with 20 students) often outperforms large institutes. Focus on faculty quality and personal attention, not brand name.",
   },
   {
-    question: 'What if I can\'t afford coaching?',
-    answer: 'Apply for scholarships! We offer 25-100% fee waiver based on merit and need. Many coaching centers have scholarship programs for deserving students.',
+    question: "What if I can't afford coaching?",
+    answer:
+      'Apply for scholarships! We offer 25-100% fee waiver based on merit and need. Many coaching centers have scholarship programs for deserving students.',
   },
   {
     question: 'Is online coaching as effective?',
-    answer: 'For motivated students, hybrid (online + offline) works well. Pure online requires exceptional self-discipline. We recommend at least weekend offline classes for doubt clearing.',
+    answer:
+      'For motivated students, hybrid (online + offline) works well. Pure online requires exceptional self-discipline. We recommend at least weekend offline classes for doubt clearing.',
   },
 ]
 
 export default function IsCoachingNecessaryForNEET() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <GurgaonGurugramAreaSchema
+        spelling="gurugram"
+        pageSlug="is-coaching-necessary-for-neet-gurugram"
+      />
       <section className="bg-gradient-to-r from-slate-800 to-slate-700 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -71,7 +80,9 @@ export default function IsCoachingNecessaryForNEET() {
               Expert Analysis
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Is Coaching Necessary for NEET?</h1>
-            <p className="text-xl text-slate-200 mb-8">Honest answer from AIIMS faculty with 15+ years experience</p>
+            <p className="text-xl text-slate-200 mb-8">
+              Honest answer from AIIMS faculty with 15+ years experience
+            </p>
           </div>
         </div>
       </section>
@@ -82,14 +93,19 @@ export default function IsCoachingNecessaryForNEET() {
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
               <h2 className="text-xl font-bold text-blue-900 mb-3">Quick Answer</h2>
               <p className="text-lg text-blue-800">
-                <strong>Not always necessary, but highly recommended.</strong> Statistics show 80-85% of NEET toppers have some form of coaching. However, the right question is not "Is coaching necessary?" but "What kind of support do I need?" Self-study can work if you have exceptional discipline, strong foundation, and quality resources.
+                <strong>Not always necessary, but highly recommended.</strong> Statistics show
+                80-85% of NEET toppers have some form of coaching. However, the right question is
+                not "Is coaching necessary?" but "What kind of support do I need?" Self-study can
+                work if you have exceptional discipline, strong foundation, and quality resources.
               </p>
             </div>
 
             <div className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-bold mb-4">The Honest Truth About NEET Coaching</h2>
               <p className="text-gray-700 mb-6">
-                As an AIIMS faculty member who has guided 500+ NEET aspirants, I've seen both successful self-study students and those who needed coaching. The answer depends entirely on YOUR situation.
+                As an AIIMS faculty member who has guided 500+ NEET aspirants, I've seen both
+                successful self-study students and those who needed coaching. The answer depends
+                entirely on YOUR situation.
               </p>
             </div>
           </div>
@@ -163,7 +179,9 @@ export default function IsCoachingNecessaryForNEET() {
             <div className="flex items-start gap-4">
               <AlertTriangle className="w-8 h-8 text-amber-600 flex-shrink-0 mt-1" />
               <div>
-                <h2 className="text-xl font-bold text-amber-900 mb-2">Warning: Avoid These Mistakes</h2>
+                <h2 className="text-xl font-bold text-amber-900 mb-2">
+                  Warning: Avoid These Mistakes
+                </h2>
                 <ul className="space-y-2 text-amber-800">
                   <li>• Joining coaching just because everyone else is</li>
                   <li>• Choosing expensive coaching assuming it's better</li>
@@ -184,7 +202,9 @@ export default function IsCoachingNecessaryForNEET() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-slate-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -196,33 +216,57 @@ export default function IsCoachingNecessaryForNEET() {
       <section className="py-16 bg-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Still Confused? Get Free Counseling</h2>
-          <p className="text-xl text-slate-200 mb-8">Book a free session. We'll honestly tell you if you need coaching or not.</p>
+          <p className="text-xl text-slate-200 mb-8">
+            Book a free session. We'll honestly tell you if you need coaching or not.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
-              <Phone className="w-5 h-5" />Call 88264-44334
+            <a
+              href="tel:+918826444334"
+              className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+            >
+              <Phone className="w-5 h-5" />
+              Call 88264-44334
             </a>
-            <Link href="/free-neet-demo-class-gurugram" className="inline-flex items-center gap-2 bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition">
-              Book Free Demo<ArrowRight className="w-5 h-5" />
+            <Link
+              href="/free-neet-demo-class-gurugram"
+              className="inline-flex items-center gap-2 bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
+            >
+              Book Free Demo
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: 'Is Coaching Necessary for NEET?',
-        description: 'Expert analysis on whether coaching is necessary for NEET preparation',
-        author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-        publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-        datePublished: '2025-01-01',
-        dateModified: '2025-01-26',
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: 'Is Coaching Necessary for NEET?',
+            description: 'Expert analysis on whether coaching is necessary for NEET preparation',
+            author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+            publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
+            datePublished: '2025-01-01',
+            dateModified: '2025-01-26',
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
     </div>
   )
 }
