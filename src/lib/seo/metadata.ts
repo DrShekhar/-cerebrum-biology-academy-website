@@ -1320,3 +1320,76 @@ export function buildAPBiologyMetroMetadata(input: {
  * tune per-school OG images / structured data per Phase 4 plans.
  */
 export const buildAPBiologySchoolMetadata = buildAPBiologyMetroMetadata
+
+/**
+ * Build metadata for an IB Biology per-school landing page.
+ *
+ * IB schools span multiple countries (Singapore, UAE, Thailand, India)
+ * so this is locale-aware — the caller passes the BCP-47 tag for the
+ * school's primary audience, and we emit matching hreflang + ogLocale.
+ * Falls back to en-US when no locale is provided.
+ *
+ * Used by /ib-biology-tutor-{slug} page.tsx files that target the
+ * "IB Biology tutor {SchoolName}" long-tail query.
+ */
+export function buildIBBiologySchoolMetadata(input: {
+  title: string
+  description: string
+  keywords: string[]
+  canonical: string
+  /** BCP-47 tag e.g. 'en-SG', 'en-AE', 'en-TH', 'en-IN'. Default 'en-US'. */
+  inLanguage?: string
+  ogImage?: string
+}) {
+  const canonicalUrl = `${seoConfig.siteUrl}${input.canonical}`
+  const lang = input.inLanguage ?? 'en-US'
+  const ogLocale = lang.replace('-', '_')
+
+  return {
+    title: input.title,
+    description: input.description,
+    keywords: input.keywords,
+    openGraph: {
+      title: input.title,
+      description: input.description,
+      url: canonicalUrl,
+      siteName: seoConfig.siteName,
+      images: [
+        {
+          url: `${seoConfig.siteUrl}${input.ogImage || seoConfig.defaultOgImage}`,
+          width: 1200,
+          height: 630,
+          alt: input.title,
+        },
+      ],
+      locale: ogLocale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title: input.title,
+      description: input.description,
+      site: seoConfig.twitterHandle,
+      images: [`${seoConfig.siteUrl}${input.ogImage || seoConfig.defaultOgImage}`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large' as const,
+        'max-snippet': -1,
+      },
+    },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        [lang]: canonicalUrl,
+        en: canonicalUrl,
+        'x-default': canonicalUrl,
+      },
+    },
+  }
+}

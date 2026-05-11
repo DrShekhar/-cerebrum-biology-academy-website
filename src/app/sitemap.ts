@@ -186,9 +186,35 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-tutor-mission-san-jose' ||
     path === '/ap-biology-tutor-gunn-palo-alto' ||
     path === '/ap-biology-tutor-walter-payton' ||
-    path === '/ap-biology-tutor-hunter-college-hs'
+    path === '/ap-biology-tutor-hunter-college-hs' ||
+    // IB Biology per-school feeder pages — same tier as AP schools.
+    path === '/ib-biology-tutor-uwcsea' ||
+    path === '/ib-biology-tutor-asd-dubai' ||
+    path === '/ib-biology-tutor-gems-dubai-american-academy' ||
+    path === '/ib-biology-tutor-tanglin-trust' ||
+    path === '/ib-biology-tutor-nist-bangkok' ||
+    path === '/ib-biology-tutor-pathways-aravali' ||
+    path === '/ib-biology-tutor-uwc-mahindra-pune' ||
+    path === '/ib-biology-tutor-stonehill-bangalore' ||
+    path === '/ib-biology-tutor-inventure-bangalore' ||
+    path === '/ib-biology-tutor-oberoi-mumbai' ||
+    path === '/ib-biology-tutor-asb-mumbai' ||
+    path === '/ib-biology-tutor-stamford-american-singapore' ||
+    path === '/ib-biology-tutor-mahatma-gandhi-international-ahmedabad' ||
+    path === '/ib-biology-tutor-dhirubhai-ambani-mumbai' ||
+    path === '/ib-biology-tutor-cathedral-mumbai'
   ) {
     return 0.7
+  }
+
+  // IB Biology pre-exam crash courses + TOK essay guide — high-intent
+  // April-May search window for HL/SL; year-round for TOK essay help.
+  if (
+    path === '/ib-biology-hl-crash-course' ||
+    path === '/ib-biology-sl-crash-course' ||
+    path === '/ib-biology-tok-essay-guide'
+  ) {
+    return 0.85
   }
 
   // Tier 2 (0.8): High-intent landing pages
@@ -4603,6 +4629,123 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    // IB Biology pre-exam crash courses — April-May high-intent window.
+    // Distinct primary keywords ("HL crash course", "SL crash course")
+    // not targeted by any other IB page.
+    {
+      url: `${baseUrl}/ib-biology-hl-crash-course`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ib-biology-sl-crash-course`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    // TOK essay through Biology lens — zero competing pages on the
+    // site target "IB Biology TOK essay" today.
+    {
+      url: `${baseUrl}/ib-biology-tok-essay-guide`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    // IB Biology per-school feeder pages — long-tail "IB Biology tutor
+    // {SchoolName}" intent. Each page targets a school-name keyword
+    // no other route on the site targets. Mirrors the AP per-school
+    // pattern (32 AP school pages live).
+    {
+      url: `${baseUrl}/ib-biology-tutor-uwcsea`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-asd-dubai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-gems-dubai-american-academy`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-tanglin-trust`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-nist-bangkok`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-pathways-aravali`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-uwc-mahindra-pune`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-stonehill-bangalore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-inventure-bangalore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-oberoi-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-asb-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-stamford-american-singapore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-mahatma-gandhi-international-ahmedabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-dhirubhai-ambani-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-cathedral-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/ib-extended-essay-vs-ia`,
