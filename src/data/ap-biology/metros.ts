@@ -1099,6 +1099,386 @@ export const apBiologyMetros: APBiologyMetro[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 17. VANCOUVER
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'vancouver',
+    cityName: 'Vancouver',
+    region: 'Vancouver + Burnaby + Richmond + Surrey + West Van',
+    timezone: 'PT (Pacific)',
+    timezoneIana: 'America/Vancouver',
+    addressRegion: 'BC',
+    heroBlurb:
+      'British Columbia has been one of the fastest-growing AP markets in Canada — BCCAT reports a 72% jump in AP participation from 2006 to 2016, with steady +3%/year growth since. Vancouver feeder schools like Sir Winston Churchill, Lord Byng, Eric Hamber, University Hill, and the independent cluster (York House, Crofton House, St. George’s, West Point Grey) run serious AP Biology cohorts every year. The Lower Mainland’s deep Indo-Canadian, Chinese, and Korean academic communities — particularly across Richmond, Burnaby, and Surrey — drive heavy AP-5 demand from families dual-applying to UBC, McGill, Waterloo, and US schools like UCLA, Berkeley, and Ivies.',
+    positioningBlurb:
+      'The Canadian AP tutoring market is fragmented — Tutorfair, Spires, MyTutor, and a long tail of local Vancouver agencies charge CAD $50–100/hr for mostly undergraduate or recent-graduate tutors with no biology specialism. Cerebrum is structurally different: AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch tradition (max 12) calibrated to retrieval practice. Saturday-morning PT live classes work cleanly with BC school schedules. Senior-faculty 1:1 from USD $1,800 for 12 hours — competitive once you compare like-for-like specialist expertise.',
+    schools: [
+      'Sir Winston Churchill Secondary',
+      'Lord Byng Secondary',
+      'University Hill Secondary',
+      'Eric Hamber Secondary',
+      'David Thompson Secondary',
+      'Prince of Wales Secondary',
+      'Magee Secondary',
+      'York House School',
+      'Crofton House School',
+      'St. George’s School',
+      'West Point Grey Academy',
+      'Mulgrave School',
+      'Burnaby North Secondary',
+      'Steveston-London Secondary',
+      'Richmond Secondary',
+    ],
+    faqs: [
+      {
+        question:
+          'How do PT live classes fit a Lord Byng or Sir Winston Churchill student’s weekly schedule?',
+        answer:
+          'BC public schools dismiss around 3:00 PM, and most Vancouver AP Biology students have club, sport, or extension lab commitments through 5:00 PM. We schedule 90-minute 1:1 sessions in PT evenings (7–9 PM) on weekdays or Saturday mornings (9 AM–noon PT). The Saturday slot is especially popular with Lord Byng and Churchill cohorts because it leaves weekday evenings clear for school homework. All sessions are recorded for replay.',
+      },
+      {
+        question:
+          'My child is applying to UBC and US colleges — does AP Biology help both tracks, or just the US one?',
+        answer:
+          'Both, but asymmetrically. UBC, SFU, McGill, and Waterloo recognise AP Biology for first-year credit (typically BIOL 111/112 equivalents with a 4 or 5) and treat the score as supplementary signal in a transcript-dominated Canadian admissions read. For US adcoms, AP-5 is a far stronger differentiator — it’s the only universally-recognised US-curriculum credential and reads as serious science readiness. A BC student dual-applying gets meaningful value on both sides, with the bigger lift on US apps.',
+      },
+      {
+        question:
+          'Richmond, Burnaby, and Surrey families face long commutes for in-person tutoring — does 100% online actually work as well?',
+        answer:
+          'Better, in our experience. A Richmond family at Steveston-London or Richmond Secondary, or a Burnaby family at Burnaby North, would otherwise spend 60–90 minutes round-trip for a 90-minute Vancouver session. With live Zoom 1:1, your child opens a laptop at home, joins the same PhD faculty member they would have driven to see, and uses the saved 90 minutes for school homework or sleep. We have not had a Lower Mainland family who tried online and asked to switch back to in-person.',
+      },
+      {
+        question:
+          'York House, Crofton House, and St. George’s run their own AP Bio classes — what does external tutoring add?',
+        answer:
+          'The independent schools teach AP Biology well at a class level, but they cannot deliver the weekly 1:1 FRQ rubric feedback that converts school A grades into AP-5 scores. School AP teachers manage 20–30 students; they cannot mark every FRQ attempt to College Board rubric weekly. That gap is exactly what our 1:1 layer fills: same syllabus your school teaches, plus dedicated rubric calibration, timed full-length mocks, and the FRQ-specific writing skill that the May exam tests.',
+      },
+      {
+        question: 'How do we pay — CAD bank transfer, USD card, or both?',
+        answer:
+          'Both work. We accept CAD via Wise transfer or international card (your bank handles the FX), and USD directly on international Visa / Mastercard / Amex. Several Vancouver families split the USD $1,800 senior-faculty package across two CAD transfers spaced 60 days apart at no extra charge. We also accept Interac e-Transfer for smaller installment amounts through a partner account on request. Invoices issued in the currency of payment.',
+      },
+      {
+        question:
+          'For Indo-Canadian families thinking about Indian medicine — does AP Biology help with NEET or Indian MBBS?',
+        answer:
+          'No. AP Biology has zero recognition with India’s National Medical Commission, and NEET is the only pathway to Indian MBBS / BDS. Additionally, NEET admission requires Indian citizenship or specific OCI / NRI seat eligibility, which most Canadian permanent residents and citizens do not qualify for. AP Biology is purely a US/Canadian-college application enhancer. If your family is exploring Indian medicine specifically, that needs separate NEET prep and citizenship-pathway research — we will be straight about which track is which.',
+      },
+      {
+        question: 'When should a Vancouver student start AP Biology tutoring for the May exam?',
+        answer:
+          'For a May AP exam, an August or September start gives full runway: Campbell Biology units 1–4 close by November, units 5–8 by February, and March–April is dedicated to timed full-length practice and FRQ rubric tightening. January starts can still produce AP-5 with focused weekly work and an honest student. Crash plans of 8–12 weeks pre-exam are possible but cap the FRQ writing depth that separates 4 from 5.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 18. TORONTO (GTA)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'toronto-gta',
+    cityName: 'Toronto (GTA)',
+    region: 'Toronto + North York + Scarborough + Markham + Vaughan + Oakville',
+    timezone: 'ET (Eastern)',
+    timezoneIana: 'America/Toronto',
+    addressRegion: 'ON',
+    heroBlurb:
+      'The Greater Toronto Area is Canada’s largest AP Biology market and one of its fastest growing — BCCAT and College Board Canada data show AP participation up 72% between 2006 and 2016, with sustained +3%/year growth in Ontario since. The public TDSB AP cluster (Earl Haig, Marc Garneau, William Lyon Mackenzie, North Toronto CI, Don Mills CI, Harbord, A.Y. Jackson) and the independent cluster (UCC, UTS, Branksome Hall, Havergal, Crescent, Bishop Strachan, St. Michael’s) together run some of the deepest AP Bio cohorts outside the US. The GTA’s strong Indo-Canadian, Chinese, and Korean academic communities — especially in Markham, Vaughan, and North York — drive heavy dual UofT/McGill + US Ivy applications.',
+    positioningBlurb:
+      'Toronto AP tutoring options run from boutique agencies (Prep Academy, The Tutoring Expert) at CAD $80–120/hr to platform tutors (Tutorfair, Spires) at CAD $50–90/hr — typically undergraduate or master’s-level tutors with no biology specialism. Cerebrum is biology-only: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12). ET-evening live classes (7–9 PM ET) slot cleanly into TDSB and Peel/York Region school rhythms. Senior-faculty 1:1 from USD $1,800 for 12 hours.',
+    schools: [
+      'Earl Haig Secondary School',
+      'North Toronto Collegiate Institute',
+      'Marc Garneau Collegiate Institute',
+      'William Lyon Mackenzie Collegiate Institute',
+      'Don Mills Collegiate Institute',
+      'Harbord Collegiate Institute',
+      'A.Y. Jackson Secondary School',
+      'University of Toronto Schools (UTS)',
+      'Upper Canada College',
+      'Branksome Hall',
+      'Havergal College',
+      'Crescent School',
+      'Bishop Strachan School',
+      'St. Michael’s College School',
+      'Trinity College School',
+      'Ridley College',
+      'Appleby College',
+      'Pickering College',
+    ],
+    faqs: [
+      {
+        question:
+          'My child is at Earl Haig or Marc Garneau and already carries 6 APs — how do you schedule around that load?',
+        answer:
+          'Earl Haig, Marc Garneau, and Mackenzie students typically run 5–7 APs concurrently in Grade 11 or 12, with AP Biology often paired tight against AP Chem and AP Calc. We schedule two 90-minute 1:1 sessions per week — most commonly Tuesday and Thursday evenings 7–9 PM ET, with Saturday morning reserved for full-length FRQ practice in March–April. We deliberately do not duplicate what the school teacher covers; we layer the College Board FRQ rubric feedback and timed-mock skill that converts school A grades into AP-5 outcomes.',
+      },
+      {
+        question:
+          'How does AP Biology relate to Ontario’s Grade 12 SBI4U — is one enough, or do students do both?',
+        answer:
+          'Most TDSB AP students do both. SBI4U is the Ontario provincial biology credit needed for OUAC applications to UofT, Western, Queen’s, McMaster, and Waterloo Health Sciences — that requirement is non-negotiable for Ontario university apps. AP Biology overlaps roughly 60% with SBI4U content but tests differently (FRQ-style writing, integrated MCQ) and carries the US-curriculum signal valued by US adcoms. The two complement each other; AP-5 also typically secures first-year biology credit at UofT, Western, and McMaster.',
+      },
+      {
+        question:
+          'UTS, Branksome, and UCC families want top US schools — does AP Biology actually move the needle there?',
+        answer:
+          'Yes, meaningfully. For Ivy, MIT, Stanford, Duke, and UC-system applications from a Canadian transcript, US adcoms read AP scores as the single universally-comparable credential against their domestic applicant pool. A UTS or Branksome student with a 5 in AP Bio plus a strong USABO Open performance and a research extension reads strongly. Without AP, the transcript is harder to benchmark against US applicants — it is not disqualifying, but it removes a clean comparator.',
+      },
+      {
+        question:
+          'Markham, Vaughan, and Oakville students face real commute distances — does online really replicate in-person results?',
+        answer:
+          'For 1:1 biology tutoring, our outcomes data shows online matching or exceeding in-person. A Markham family at A.Y. Jackson or a Vaughan family at Mackenzie would lose 45–90 minutes per round trip to a Toronto in-person tutor; that time goes back into school homework or sleep. The Zoom interface actually supports better FRQ work — we annotate the student’s writing live on a shared document, which is harder to do at a kitchen table. After three sessions, families almost never ask to switch back to in-person.',
+      },
+      {
+        question:
+          'Can my child sit USABO or the Canadian Biology Olympiad (CBO) alongside AP Biology preparation?',
+        answer:
+          'Yes — that is a strong combined track for top-tier GTA students. The Canadian Biology Olympiad (CBO) typically runs in March, with the team selected for the International Biology Olympiad. USABO is school-administered in early February and open to students enrolled in US-recognised programmes; some GTA independent schools register cohorts. We coach AP Biology as the base, with optional Campbell + Alberts depth overlay for CBO / IBO / USABO contenders. Several UTS and Branksome students have used this dual track.',
+      },
+      {
+        question: 'How do we pay — CAD bank transfer, Interac e-Transfer, or USD card?',
+        answer:
+          'All three work. We accept CAD via Wise transfer or international card (your bank handles the FX), Interac e-Transfer for smaller installments via a partner account on request, and USD directly on international Visa / Mastercard / Amex. Several Toronto families split the USD $1,800 senior-faculty package across two CAD transfers spaced 60 days apart at no extra charge. Invoices issued in the currency of payment, with HST-equivalent details on request.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 19. BRAMPTON-MISSISSAUGA
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'brampton-mississauga',
+    cityName: 'Brampton-Mississauga',
+    region: 'Brampton + Mississauga + Erin Mills + Streetsville (Peel Region)',
+    timezone: 'ET (Eastern)',
+    timezoneIana: 'America/Toronto',
+    addressRegion: 'ON',
+    heroBlurb:
+      'Peel Region — Brampton and Mississauga — is the most heavily Indo-Canadian metro in North America, with Brampton over 50% South Asian and Mississauga a close second. AP Biology demand here has grown sharply alongside the BCCAT-tracked 72% national AP expansion from 2006–2016 and sustained Ontario growth since. Peel feeder schools like Turner Fenton, Mayfield, Lorne Park, John Fraser, Glenforest, and Iona Catholic run committed AP cohorts, and many families are dual-applying to UofT Mississauga, Western, Waterloo, and US universities. For Indo-Canadian families who grew up in Indian academic culture, our AIIMS-trained PhD faculty and small-batch tradition feels structurally familiar — same rigour, calibrated to North American admissions.',
+    positioningBlurb:
+      'Peel Region AP tutoring is thin: the local Mississauga / Brampton supply leans toward generalist test-prep franchises and individual freelancers at CAD $50–90/hr, with no biology specialism. Indo-Canadian families often feel under-served by the local options. Cerebrum brings the Indian small-batch coaching tradition (max 12, retrieval-heavy) with AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and ET-evening live classes (7–9 PM ET). Senior-faculty 1:1 from USD $1,800 for 12 hours — pricing that respects the dual-currency reality many Peel families navigate.',
+    schools: [
+      'Lorne Park Secondary School',
+      'Erindale Secondary School',
+      'John Fraser Secondary School',
+      'Iona Catholic Secondary School',
+      'Glenforest Secondary School',
+      'Stephen Lewis Secondary School',
+      'Cawthra Park Secondary School',
+      'Castlebrooke Secondary School',
+      'Heart Lake Secondary School',
+      'Mayfield Secondary School',
+      'Turner Fenton Secondary School',
+      'Bramalea Secondary School',
+      'Central Peel Secondary School',
+      'North Park Secondary School',
+      'Rick Hansen Secondary School',
+    ],
+    faqs: [
+      {
+        question:
+          'Brampton is the most Indo-Canadian city in North America — does that community context show up in your coaching?',
+        answer:
+          'Yes, in two practical ways. First, our AIIMS-trained PhD faculty and Indian small-batch coaching method are culturally legible to most Brampton-Mississauga families — the rigor, the retrieval practice, the daily-discipline expectation are familiar. Second, we calibrate honest expectations for the South Asian academic pressure context: AP-5 is achievable for most committed students, but it is not a substitute for genuine biology depth, and we will say so. The Indo-Canadian families we coach consistently appreciate that we do not over-promise, and that the standard is rigorous without being unkind.',
+      },
+      {
+        question:
+          'How does a Peel student differentiate against the Toronto independent-school applicant pool when US adcoms read the file?',
+        answer:
+          'US admissions officers reading a Brampton or Mississauga public-school transcript benchmark it against the broader Ontario / Canadian applicant pool, which is dominated by Toronto independent schools (UCC, UTS, Branksome) in the top tier. A 5 on AP Biology is one of the cleanest ways for a Turner Fenton or Lorne Park or Mayfield student to read on equal terms — AP scores are universally comparable across schools, while school grades carry context the adcom may not parse. Pair AP-5 with strong SAT IIs, USABO Open participation, or research, and the differentiation becomes meaningful.',
+      },
+      {
+        question:
+          'My child does the Ontario provincial curriculum at John Fraser — does AP Biology add real load on top of SBI4U?',
+        answer:
+          'Some, but less than parents fear. SBI4U content overlaps roughly 60% with AP Biology Units 4–6 (genetics, cell signalling, regulation, animal physiology). The genuine additional load is the FRQ-style writing, integration across units, and the timed full-length exam skill — not the biology content itself. We typically run two 90-minute 1:1 sessions a week against an Ontario SBI4U student, with focused FRQ work and unit-integration drills. Most students absorb the additional load with school grades held steady or improved.',
+      },
+      {
+        question:
+          'For a STEM applicant targeting US engineering or biological sciences, how should AP Biology pair with SAT II or other APs?',
+        answer:
+          'For a US STEM target — Cornell Engineering, Carnegie Mellon, UMich, UCLA, Berkeley, Georgia Tech — the strongest combo is AP Biology + AP Chemistry + AP Calculus BC + AP Physics, with SAT (or ACT) and at least one subject test if the applicant pool requires it. AP Biology alone is moderately useful; AP Bio + AP Chem together is a strong signal for bioengineering and biological-sciences programmes. We focus on AP-5 in biology; you will likely need a separate math/physics tutor to round out the STEM signal — happy to advise on referrals.',
+      },
+      {
+        question:
+          'My family in India wants to help pay — can grandparents or relatives transfer fees from an Indian bank account?',
+        answer:
+          'Yes, this is common for Brampton-Mississauga families. We accept INR bank transfer to HDFC / ICICI / SBI from relatives in India with no FX charged to you, and we provide a payment receipt in the student-parent name regardless of which family member initiates the transfer. We also accept CAD via Wise, Interac e-Transfer through a partner account on request, and USD on international Visa / Mastercard / Amex. The $1,800 senior-faculty package can be split across two or three transfers across both Canada and India at no extra charge.',
+      },
+      {
+        question:
+          'We are Canadian permanent residents — can my child use AP Biology to apply to NEET or Indian MBBS as a backup?',
+        answer:
+          'Honestly: no. AP Biology has zero recognition with India’s National Medical Commission, and NEET is the only pathway to Indian MBBS / BDS. Even more critical for Peel families: NEET admission for Indian medicine requires Indian citizenship or qualifying NRI / OCI seat eligibility, and most Canadian permanent residents and citizens do not qualify. AP Biology is purely a US and Canadian college application credential. If your family is genuinely exploring Indian medicine, that is a different conversation about citizenship status and NEET prep — and we will be straight with you about whether that path is realistic.',
+      },
+      {
+        question:
+          'Saturday-morning batch class versus weekday-evening 1:1 — which works better for a Peel high schooler?',
+        answer:
+          'It depends on the student. Saturday-morning small batch (4–6 students, 9 AM–noon ET) suits self-directed learners who benefit from peer comparison and parents managing tighter budgets — at USD $640 for 16 hours, it is the most cost-effective tier. Weekday-evening 1:1 (90-minute sessions, 7–9 PM ET, two per week) suits students who need pace calibration, struggle with FRQ writing, or are juggling multiple APs with tight homework windows. Many Brampton-Mississauga families start in small batch and graduate to 1:1 for the March–April rubric-tightening phase.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 20. SINGAPORE
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'singapore',
+    cityName: 'Singapore',
+    region: 'Singapore Island + Tanglin + Woodlands + Bukit Timah',
+    timezone: 'SGT (Singapore)',
+    timezoneIana: 'Asia/Singapore',
+    addressRegion: 'Singapore',
+    heroBlurb:
+      'Singapore’s AP Biology market is concentrated around Singapore American School (SAS) in Woodlands — the anchor with one of the deepest AP cohorts in Asia — and Stamford American International School (SAIS), which publicly reports 62% of its AP students scoring 4 or 5. Feeder cohorts come from GEMS World Academy, Hwa Chong International, NPS International, and the IB-primary UWC and ISS clusters where ambitious students add AP Biology for US-college applications. Singapore’s South Asian, East Asian, and Western expat communities drive serious AP-5 demand from families targeting Ivy League, UC system, Johns Hopkins, and Duke. Live SGT evening classes (7–10 PM) fit SAS and SAIS schedules cleanly.',
+    positioningBlurb:
+      'Local Singapore AP tutoring runs S$50–150/hr (~US$40–110/hr) through agencies like SmileTutor, Tutor City, ChampionTutor, and a long tail of freelance NUS / NTU undergraduates with no biology specialism. Cerebrum is structurally different: AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12) calibrated to retrieval practice and timed full-length mocks. SGT evening live classes (7–10 PM) slot cleanly into SAS, SAIS, and Hwa Chong International schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — competitive once you compare like-for-like specialist depth.',
+    schools: [
+      'Singapore American School (SAS)',
+      'Stamford American International School (SAIS)',
+      'GEMS World Academy Singapore',
+      'Hwa Chong International School',
+      'NPS International School Singapore',
+      'Anglo-Chinese School (Independent)',
+      'Hwa Chong Institution',
+      'Raffles Institution',
+      'United World College of South East Asia (Dover)',
+      'United World College of South East Asia (East)',
+      'International Community School (ICS Singapore)',
+      'Chatsworth International School',
+      'Overseas Family School',
+      'ISS International School',
+      'Tanglin Trust School',
+      'Dover Court International School',
+    ],
+    faqs: [
+      {
+        question:
+          'My child is at Singapore American School — how do SGT evening live classes fit the SAS junior-year AP load?',
+        answer:
+          'SAS dismisses around 3:15 PM at the Woodlands campus, with most AP Biology students carrying 4–6 APs concurrently in junior year alongside athletics or service commitments running through 5:30–6:00 PM. We schedule 90-minute 1:1 sessions 7:00–10:00 PM SGT, two evenings per week, which sits between school commitments and the late homework block. The Saturday morning slot (9 AM–noon SGT) is also popular for full-length FRQ practice runs in March–April. All sessions are recorded for replay during exam-prep crunch.',
+      },
+      {
+        question:
+          'Stamford American reports 62% of AP students scoring 4 or 5 — what does external tutoring add on top of strong school teaching?',
+        answer:
+          'SAIS, like SAS, teaches AP Biology well at a class level, but the 38% who do not hit a 4 or 5 are usually losing points on FRQ writing — not on content. School AP teachers manage 20–25 students per class and cannot mark every FRQ to College Board rubric weekly. That is precisely the layer our 1:1 tutoring adds: same syllabus your school teaches, plus dedicated weekly rubric calibration, timed full-length mocks, and the FRQ writing skill that separates a school A from the AP-5 score.',
+      },
+      {
+        question:
+          'How does Cerebrum compare to local Singapore tutoring like SmileTutor, Tutor City, or freelance NUS undergraduates?',
+        answer:
+          'Three structural differences. First, faculty: AIIMS-trained PhD biologists as your dedicated tutor for the year, not a rotating bench of NUS or NTU undergraduates with no biology specialism. Second, methodology: retrieval-heavy coaching with weekly written FRQ feedback against the College Board rubric, not generic platform tutoring. Third, value: senior-faculty 1:1 at US$1,800 for 12 hours works out to US$150/hr — comparable to the S$120–150/hr top end of local rates, but with PhD specialists rather than undergraduates at the lower S$50–80/hr tiers.',
+      },
+      {
+        question:
+          'My child is at UWC Dover and doing the IB Diploma — can we add AP Biology specifically for US applications?',
+        answer:
+          'Yes, and it is a recognised UWC pattern. UWC Dover and ISS are IB-primary, but ambitious students applying to top US universities sometimes add AP Biology as an external credential because the AP-5 reads as a clean US-curriculum signal that complements the IB transcript. We coach the full College Board syllabus end-to-end regardless of base curriculum. The challenge is workload — IB Diploma is already heavy — so we typically start in the IB1 summer (June–August) to front-load Campbell units before the IB2 year intensifies.',
+      },
+      {
+        question:
+          'Do you accept SGD bank transfer, or do payments need to be in USD on an international card?',
+        answer:
+          'Both work. We accept SGD via PayNow / DBS / OCBC / UOB bank transfer (no FX charged to you), and USD directly on international Visa / Mastercard / Amex. Several Singapore families split the US$1,800 senior-faculty package across two SGD transfers spaced 60 days apart at no extra charge. We do not currently integrate GrabPay or Atome BNPL for tuition fees. Invoices are issued in the currency of payment, and we can issue a GST-style invoice on request for corporate-reimbursement situations.',
+      },
+      {
+        question:
+          'My son is approaching National Service — can he sit AP Biology and still apply to US universities on the deferred-entry path?',
+        answer:
+          'Yes, and this is a common Singapore pattern for boys. Most US universities — including the Ivies, MIT, Stanford, and the UC system — accept applications during senior year with deferred enrolment after the two-year NS commitment. AP-5 in Biology sits on the transcript and remains valid through the NS deferral. We coach the AP Biology exam in junior or senior year before NS begins; the score does not expire. Several of our Singapore students have used this exact path to Cornell, Duke, and Berkeley.',
+      },
+      {
+        question:
+          'How do you coordinate with my child’s school AP Biology teacher at SAS or Hwa Chong International — do you ever conflict?',
+        answer:
+          'No — we deliberately complement, not duplicate. Our standard approach is to mirror the school’s pacing (Campbell Biology units 1–8 in the same sequence the school teacher uses), then layer the FRQ rubric calibration and timed-mock practice that schools cannot deliver at class size. We ask the parent for the school AP Bio syllabus and unit-test schedule in our first session so we are aligned. If a school teacher uses a non-Campbell text (rare), we adapt; the College Board exam itself is what we anchor to.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 21. HONG KONG
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'hong-kong',
+    cityName: 'Hong Kong',
+    region: 'Hong Kong Island + Kowloon + Sai Kung + New Territories',
+    timezone: 'HKT (Hong Kong)',
+    timezoneIana: 'Asia/Hong_Kong',
+    addressRegion: 'Hong Kong',
+    heroBlurb:
+      'Hong Kong International School (HKIS) is the anchor of AP Biology demand in the region — HKIS publicly reports 95% of AP candidates scoring 3 or higher and 82% scoring 4 or 5, making it one of the strongest AP cohorts in Asia. Feeder demand also comes from Canadian International School of Hong Kong (CDNIS) and the IB-primary cluster (CIS, ESF schools, RCHK, ISF Academy) where students add AP Biology for US-college applications. Hong Kong’s deep expat and local academic communities drive serious AP-5 demand from families dual-applying to HKU, CUHK, and US universities — particularly Ivy League, UC system, and Johns Hopkins.',
+    positioningBlurb:
+      'Hong Kong AP tutoring agencies — ITS Education Asia, ++tutors, TutorChase, Aegis Advisors, and the long tail of independent tutors — charge HKD 470–1,000+/hr (~US$60–130/hr) for mostly graduate-level tutors with limited biology specialism. Cerebrum is biology-only: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, and the Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. HKT evening live classes (7–10 PM) slot cleanly into HKIS, CDNIS, and CIS schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — competitive once you compare like-for-like PhD specialist depth.',
+    schools: [
+      'Hong Kong International School (HKIS)',
+      'Chinese International School (CIS)',
+      'Canadian International School of Hong Kong (CDNIS)',
+      'Hong Kong Academy',
+      'Yew Chung International School Hong Kong',
+      'German Swiss International School',
+      'Carmel School',
+      'Diocesan Boys’ School (DBS)',
+      'King George V School (ESF)',
+      'Independent Schools Foundation Academy (ISF Academy)',
+      'Discovery College',
+      'Renaissance College Hong Kong (RCHK)',
+      'French International School (FIS)',
+      'Australian International School Hong Kong (AISHK)',
+      'Po Leung Kuk Choi Kai Yau School (PLK CKY)',
+    ],
+    faqs: [
+      {
+        question:
+          'HKIS reports 95% of AP candidates scoring 3+ and 82% scoring 4–5 — what does external tutoring add for a HKIS student?',
+        answer:
+          'Those are excellent class-level numbers, but the 18% who land at 3 rather than 4 or 5 are usually losing points on FRQ writing and timed-exam composure — not on content knowledge. HKIS AP Biology teachers run sections of 20–25 students and cannot mark every FRQ attempt to College Board rubric weekly. Our 1:1 layer fills exactly that: same Campbell-aligned syllabus HKIS teaches, plus dedicated weekly rubric calibration, timed full-length mocks, and the FRQ writing skill that converts a strong 3 into a clean 5.',
+      },
+      {
+        question:
+          'How does Cerebrum compare to TutorChase, ++tutors, or Aegis Advisors in Hong Kong on price and quality?',
+        answer:
+          'Local HK agencies charge HKD 470–1,000+/hr (~US$60–130/hr) for mostly graduate or recent-graduate tutors with no biology specialism. Senior-faculty 1:1 with us is US$1,800 for 12 hours — about US$150/hr — but you are getting AIIMS-trained PhD biologists as your dedicated tutor for the year, weekly written FRQ feedback against the College Board rubric, and continuity across the full AP cycle. At the HKD 800–1,000/hr tier you would be paying for a tutor still building biology depth; at our rate you get a published specialist.',
+      },
+      {
+        question:
+          'My child is at CIS or CDNIS doing the IB Diploma — can we add AP Biology specifically for US applications?',
+        answer:
+          'Yes, and this is a common pattern at CIS, CDNIS, and the ESF schools, where the base curriculum is IB Diploma but ambitious students add AP Biology for US-college applications. The AP-5 reads as a clean US-curriculum signal that complements an IB Higher-Level Biology transcript. We coach the full College Board AP syllabus end-to-end, regardless of base curriculum. Workload is the real constraint — IB is already heavy — so we typically start in the IB1 summer to front-load Campbell content before the IB2 year intensifies.',
+      },
+      {
+        question:
+          'HKT evening live classes — how do they fit a HKIS or CDNIS student’s after-school commitments?',
+        answer:
+          'HKIS dismisses around 3:15 PM at the Repulse Bay campus; CDNIS around 3:00 PM in Aberdeen. Most AP Biology students carry sport, music, or service commitments through 5:30–6:30 PM. We schedule 90-minute 1:1 sessions 7:00–10:00 PM HKT, two evenings per week, which sits between school commitments and the late homework block. Saturday morning sessions (9 AM–noon HKT) are also popular for full-length FRQ practice runs in March–April. All sessions are recorded so students can replay them during exam-prep crunch.',
+      },
+      {
+        question:
+          'My family travels to mainland China during summer break — can we continue AP Biology classes from Beijing or Shanghai?',
+        answer:
+          'Yes, with one practical note. Sessions are 100% live video on Zoom or Google Meet, so as long as your child has a laptop and reliable Wi-Fi we keep going from anywhere — Beijing, Shanghai, Shenzhen, Hangzhou, or family homes elsewhere in the region. The practical caveat is the Great Firewall: Zoom usually works in mainland China but can be unreliable, so we recommend a stable VPN setup before travel. We have run successful summer sessions for HK families travelling to mainland cities for July–August every year.',
+      },
+      {
+        question:
+          'Do you accept HKD bank transfer, or do payments need to be in USD on an international card?',
+        answer:
+          'Both work. We accept HKD via HSBC / Hang Seng / Bank of China (HK) wire transfer (no FX charged to you), and USD directly on international Visa / Mastercard / Amex. Several Hong Kong families split the US$1,800 senior-faculty package across two HKD transfers spaced 60 days apart at no extra charge. We do not currently integrate FPS for tuition fees but can on request through a partner account. Invoices are issued in the currency of payment for corporate-reimbursement or tax-record use.',
+      },
+      {
+        question:
+          'My child is at a local school like Diocesan Boys’ or PLK CKY — can AP Biology realistically work alongside HKDSE?',
+        answer:
+          'Yes, and we have coached this pattern. Local Hong Kong schools follow HKDSE as the primary curriculum, with AP Biology added by a smaller subset of students specifically aiming at US universities. The content overlap between HKDSE Biology and AP Biology is roughly 55–65%, but the FRQ-style writing and integrated MCQ format are genuinely different from HKDSE. We typically start in the year before the AP exam with two 90-minute 1:1 sessions per week, holding HKDSE prep continuous. The AP-5 reads strongly to US adcoms benchmarking a local-school transcript.',
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup metro by slug. */

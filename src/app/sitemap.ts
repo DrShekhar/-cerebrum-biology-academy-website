@@ -164,7 +164,12 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-tutor-mumbai' ||
     path === '/ap-biology-tutor-delhi-ncr' ||
     path === '/ap-biology-tutor-bangalore' ||
-    path === '/ap-biology-tutor-hyderabad'
+    path === '/ap-biology-tutor-hyderabad' ||
+    path === '/ap-biology-tutor-vancouver' ||
+    path === '/ap-biology-tutor-toronto-gta' ||
+    path === '/ap-biology-tutor-brampton-mississauga' ||
+    path === '/ap-biology-tutor-singapore' ||
+    path === '/ap-biology-tutor-hong-kong'
   ) {
     return 0.8
   }
@@ -2824,6 +2829,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
+    },
+    // AP Biology Tier 2 international metros — Canada + APAC. Targets
+    // BC + Ontario AP cohorts (Indo-Canadian heavy in BC + Brampton)
+    // plus SAS/SAIS Singapore and HKIS Hong Kong.
+    {
+      url: `${baseUrl}/ap-biology-tutor-vancouver`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-toronto-gta`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-brampton-mississauga`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-singapore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-hong-kong`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
     },
     // AP Biology US per-school feeder pages — built from
     // APBiologySchoolTemplate + src/data/ap-biology/schools.ts.
