@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
+import { buildAPBiologyMetroMetadata } from '@/lib/seo/metadata'
 
-export const metadata: Metadata = {
+// USD pricing + College-Board AP curriculum = US-primary audience. Use the
+// shared AP Biology US-locale builder so hreflang and ogLocale are emitted
+// (the prior hand-rolled metadata was missing alternates.languages).
+export const metadata: Metadata = buildAPBiologyMetroMetadata({
   title: 'AP Biology Online Tutor | College Board Aligned Coaching',
   description:
     'Expert AP Biology tutoring aligned with Campbell Biology textbook. Master all 8 units, ace your labs, and score 5 on the AP exam with personalized online coaching.',
@@ -15,23 +19,8 @@ export const metadata: Metadata = {
     'AP Biology labs',
     'AP Biology FRQ',
   ],
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AP Biology Online Tutor | College Board Aligned Coaching',
-    description: 'Expert AP Biology tutoring aligned with Campbell Biology textbook.',
-  },
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/ap-biology-online-tutor',
-  },
-  openGraph: {
-    locale: 'en_US',
-    title: 'AP Biology Online Tutor | College Board Aligned Coaching',
-    description:
-      'Expert AP Biology tutoring aligned with Campbell Biology textbook. Score 5 on your AP exam with personalized coaching.',
-    type: 'website',
-    siteName: 'Cerebrum Biology Academy',
-  },
-}
+  canonical: '/ap-biology-online-tutor',
+})
 
 export default function APBiologyLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>

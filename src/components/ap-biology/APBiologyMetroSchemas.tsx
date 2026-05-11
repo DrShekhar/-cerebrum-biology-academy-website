@@ -43,9 +43,22 @@ const PRICE_OFFERS = [
 
 interface APBiologyMetroSchemasProps {
   metro: APBiologyMetro
+  /** BCP-47 language tag for the page. Defaults to 'en-US' (the existing
+   *  US metros). Set to 'en-AE', 'en-IN', etc. for international pages. */
+  inLanguage?: string
+  /** ISO-3166 country code for areaServed.address. Defaults to 'US'. */
+  addressCountry?: string
+  /** Languages this course is delivered in. Defaults to ['English'].
+   *  For India NRI pages pass ['English', 'Hindi']. */
+  availableLanguage?: string[]
 }
 
-export function APBiologyMetroSchemas({ metro }: APBiologyMetroSchemasProps) {
+export function APBiologyMetroSchemas({
+  metro,
+  inLanguage = 'en-US',
+  addressCountry = 'US',
+  availableLanguage = ['English'],
+}: APBiologyMetroSchemasProps) {
   const canonical = `${SITE_URL}/ap-biology-tutor-${metro.slug}`
 
   const courseSchema = {
@@ -54,7 +67,8 @@ export function APBiologyMetroSchemas({ metro }: APBiologyMetroSchemasProps) {
     name: `AP Biology Tutoring for ${metro.cityName} Students`,
     description: `AP Biology 1:1 tutoring for ${metro.cityName} students with PhD biology faculty, College Board–aligned curriculum, and FRQ rubric mastery. Live in ${metro.timezone}.`,
     url: canonical,
-    inLanguage: 'en-US',
+    inLanguage,
+    availableLanguage,
     educationalLevel: 'High School',
     educationalCredentialAwarded: 'AP Biology Exam Preparation',
     provider: {
@@ -69,7 +83,7 @@ export function APBiologyMetroSchemas({ metro }: APBiologyMetroSchemasProps) {
       address: {
         '@type': 'PostalAddress',
         addressRegion: metro.addressRegion,
-        addressCountry: 'US',
+        addressCountry,
       },
     },
     hasCourseInstance: {
