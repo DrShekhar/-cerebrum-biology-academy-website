@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import Script from 'next/script'
+import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
@@ -85,7 +86,7 @@ const faqs = [
   },
   {
     q: 'What is the fee structure for Canadian students?',
-    a: 'Foundation (Class 11): CAD ~1,250/year (~$900 USD), Comprehensive (Class 12): CAD ~1,200/year (~$870 USD), Dropper Batch: CAD ~1,420/year (~$1,025 USD). Billed in CAD or USD via international card or wire. EMI plans available. A small fraction of Canadian med-school tuition.',
+    a: 'Annual NRI tuition in Canada runs roughly CAD 5,700–7,400 (≈ $4,200–$5,400 USD) across Foundation, Comprehensive, and Dropper tiers — see the regional pricing tiers below for the exact CAD amount plus a monthly equivalent. Billed in CAD or USD via international card or wire. EMI plans available. A small fraction of Canadian med-school tuition.',
   },
 ]
 
@@ -116,7 +117,7 @@ const faqSchema = {
   })),
 }
 
-export default function NEETCoachingNRICanadaPage() {
+export default async function NEETCoachingNRICanadaPage() {
   return (
     <>
       <Script
@@ -130,6 +131,7 @@ export default function NEETCoachingNRICanadaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PageContent />
+      <NEETNRIPricingTiers />
     </>
   )
 }

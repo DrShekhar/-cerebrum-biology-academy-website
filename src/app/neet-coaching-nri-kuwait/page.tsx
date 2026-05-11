@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Page() {
+export default async function Page() {
   const jsonld = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -147,6 +148,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }}
       />
       <PageContent />
+      <NEETNRIPricingTiers />
     </>
   )
 }

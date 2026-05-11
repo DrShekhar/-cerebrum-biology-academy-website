@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { cboPricingForDisplay } from '@/data/cbo/pricing-matrix'
 
 const cboPathway = [
   {
@@ -197,52 +198,17 @@ const testimonials = [
   },
 ]
 
-const pricing = [
-  {
-    name: 'CBO Foundation',
-    price: 'CAD 499',
-    priceUSD: '$375 USD',
-    duration: '3 months',
-    features: [
-      'Complete Campbell Biology coverage',
-      'Weekly live classes (2 hrs/week)',
-      'CBO past papers (10 years)',
-      'WhatsApp doubt support',
-      'Performance tracking',
-    ],
-    popular: false,
-  },
-  {
-    name: 'CBO Intensive',
-    price: 'CAD 899',
-    priceUSD: '$675 USD',
-    duration: '6 months',
-    features: [
-      'Everything in Foundation',
-      '1-on-1 mentoring sessions',
-      'Extended live classes (4 hrs/week)',
-      'Mock tests with analysis',
-      'IBO-level problem solving',
-      'Training camp preparation',
-    ],
-    popular: true,
-  },
-  {
-    name: 'CBO Elite',
-    price: 'CAD 1,499',
-    priceUSD: '$1,125 USD',
-    duration: '12 months',
-    features: [
-      'Everything in Intensive',
-      'Daily doubt clearing',
-      'Practical exam preparation',
-      'Priority faculty access',
-      'International competition prep',
-      'Lifetime recorded access',
-    ],
-    popular: false,
-  },
-]
+// Pricing tiers sourced from src/data/cbo/pricing-matrix.ts so the
+// CAD display values stay aligned with the canonical USD base when
+// FX rates are updated in sharedCurrencies.
+const pricing = cboPricingForDisplay().map((p) => ({
+  name: p.name,
+  price: p.price,
+  priceUSD: p.priceUSD,
+  duration: p.duration,
+  features: p.features,
+  popular: !!p.popular,
+}))
 
 export default function CBOCoachingPage() {
   const handleWhatsAppClick = (source: string) => {
@@ -260,9 +226,7 @@ export default function CBOCoachingPage() {
       <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <div className="flex items-center justify-center gap-2 mb-4">
               <MapPin className="h-5 w-5 text-red-500" />
               <span className="text-red-400 font-medium">For Students in Canada</span>
@@ -295,9 +259,7 @@ export default function CBOCoachingPage() {
           </div>
 
           {/* Stats */}
-          <div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fadeInUp"
-          >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fadeInUp">
             {[
               { value: '50+', label: 'CBO Medalists Trained' },
               { value: '95%', label: 'Training Camp Selection' },
@@ -326,10 +288,7 @@ export default function CBOCoachingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {cboPathway.map((stage, index) => (
-              <div
-                key={index}
-                className="relative animate-fadeInUp"
-              >
+              <div key={index} className="relative animate-fadeInUp">
                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 h-full">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                     <stage.icon className="h-6 w-6 text-red-600" />
@@ -548,10 +507,7 @@ export default function CBOCoachingPage() {
           </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -584,15 +540,22 @@ export default function CBOCoachingPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Practice CBO MCQs Online</h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Prepare for the Canadian Biology Olympiad with our free MCQ practice tool — 5,900+ Campbell
-            Biology level questions with instant feedback and detailed explanations.
+            Prepare for the Canadian Biology Olympiad with our free MCQ practice tool — 5,900+
+            Campbell Biology level questions with instant feedback and detailed explanations.
           </p>
           <Link
             href="/neet-biology-mcq?source=olympiad"
             className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
           >
             Start CBO Practice
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
           </Link>
         </div>
       </section>

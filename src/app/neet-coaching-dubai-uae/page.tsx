@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Dubai'
@@ -86,7 +87,7 @@ const faqs = [
   },
 ]
 
-export default function NEETCoachingDubaiPage() {
+export default async function NEETCoachingDubaiPage() {
   return (
     <>
       <LocalitySchema
@@ -99,6 +100,7 @@ export default function NEETCoachingDubaiPage() {
         faqs={faqs}
       />
       <PageContent />
+      <NEETNRIPricingTiers />
     </>
   )
 }

@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'New York'
@@ -65,7 +66,7 @@ export const nyFaqs = [
   },
   {
     q: 'What does NEET coaching cost for NY students?',
-    a: 'Online batches start at roughly $70/year and go up to ~$575/year, depending on the level of support. EMI plans are available. See the pricing section below for current tiers.',
+    a: 'Annual NRI tuition ranges roughly $4,800–$6,000 in the USA across Foundation / Comprehensive / Dropper tiers — see the regional pricing tiers below for the current USD amount plus a $/month equivalent. EMI plans available.',
   },
   {
     q: 'Where does NEET actually get taken from the US?',
@@ -77,7 +78,7 @@ export const nyFaqs = [
   },
 ]
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <LocalitySchema
@@ -90,6 +91,7 @@ export default function Page() {
         faqs={nyFaqs}
       />
       <PageContent />
+      <NEETNRIPricingTiers />
     </>
   )
 }

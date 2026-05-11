@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
+import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Al Wakrah, Qatar',
@@ -10,6 +11,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Page() {
-  return <PageContent />
+export default async function Page() {
+  return (
+    <>
+      <PageContent />
+      <NEETNRIPricingTiers />
+    </>
+  )
 }

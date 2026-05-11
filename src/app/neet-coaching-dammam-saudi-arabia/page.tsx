@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Dammam, Saudi Arabia | Online Biology Classes for NRI Students',
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function Page() {
+export default async function Page() {
   const localityData = {
     name: 'Dammam, Saudi Arabia',
     latitude: 26.3927,
@@ -50,6 +51,7 @@ export default function Page() {
         }}
       />
       <PageContent city="Dammam" country="Saudi Arabia" />
+      <NEETNRIPricingTiers />
     </>
   )
 }

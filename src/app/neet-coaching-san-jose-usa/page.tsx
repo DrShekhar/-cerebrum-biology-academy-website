@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import NEETCoachingPageContent from './PageContent'
+import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
@@ -39,6 +40,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function SanJoseNEETCoachingPage() {
-  return <NEETCoachingPageContent />
+export default async function SanJoseNEETCoachingPage() {
+  return (
+    <>
+      <NEETCoachingPageContent />
+      <NEETNRIPricingTiers />
+    </>
+  )
 }
