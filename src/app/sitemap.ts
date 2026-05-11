@@ -132,6 +132,7 @@ function normalizePriority(path: string, currentPriority: number): number {
   // AP cluster. Hub `/ap-biology-tutor` is the canonical for the
   // entire cluster; cornerstone pages (FRQ rubric, score-5 guide,
   // anki deck, USABO past papers) carry the pedagogy authority.
+  // The India-NRI hub also sits at 0.9 — top of its own funnel.
   if (
     path === '/ap-biology-tutor' ||
     path === '/ap-biology-online-tutor' ||
@@ -139,13 +140,14 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-score-5-study-guide' ||
     path === '/ap-biology-anki-deck' ||
     path === '/usabo-past-papers-archive' ||
-    path === '/ap-biology-vs-college-bio-mcat-bridge'
+    path === '/ap-biology-vs-college-bio-mcat-bridge' ||
+    path === '/ap-biology-tutor-india-for-us-college-admissions'
   ) {
     return 0.9
   }
 
   // AP Biology metro pages — `/ap-biology-tutor-{metro}`. Targets
-  // "AP Biology tutor [city]" — high-intent US queries.
+  // "AP Biology tutor [city]" — high-intent queries (US + intl).
   if (
     path === '/ap-biology-tutor-new-york' ||
     path === '/ap-biology-tutor-bay-area' ||
@@ -156,7 +158,13 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-tutor-houston-dallas' ||
     path === '/ap-biology-tutor-seattle' ||
     path === '/ap-biology-tutor-atlanta' ||
-    path === '/ap-biology-tutor-new-jersey'
+    path === '/ap-biology-tutor-new-jersey' ||
+    path === '/ap-biology-tutor-dubai' ||
+    path === '/ap-biology-tutor-abu-dhabi' ||
+    path === '/ap-biology-tutor-mumbai' ||
+    path === '/ap-biology-tutor-delhi-ncr' ||
+    path === '/ap-biology-tutor-bangalore' ||
+    path === '/ap-biology-tutor-hyderabad'
   ) {
     return 0.8
   }
@@ -2767,6 +2775,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+    },
+    // AP Biology international metros — UAE + India. Targets non-US
+    // AP-Biology demand (GEMS DAA, ASB, AES Delhi, Pathways, Oakridge,
+    // CHIREC, etc.). Schemas pass en-AE / en-IN inLanguage so Google
+    // attributes regional traffic correctly.
+    {
+      url: `${baseUrl}/ap-biology-tutor-dubai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-abu-dhabi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-delhi-ncr`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-bangalore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-hyderabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    // India NRI hub: "AP Biology for Indian Students Applying to US
+    // Colleges" — top-of-funnel page for the India NRI audience that
+    // routes into the 4 city metros above.
+    {
+      url: `${baseUrl}/ap-biology-tutor-india-for-us-college-admissions`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
     // AP Biology US per-school feeder pages — built from
     // APBiologySchoolTemplate + src/data/ap-biology/schools.ts.
