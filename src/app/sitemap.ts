@@ -217,6 +217,30 @@ function normalizePriority(path: string, currentPriority: number): number {
     return 0.85
   }
 
+  // MCAT Biology — section-specific pages + cornerstone content
+  // sit at 0.85 (high-intent biology-section specialist wedge).
+  // City pages (NJ, Bay Area, Houston, Atlanta, Boston) sit at 0.8.
+  if (
+    path === '/mcat-biology-bb-section-prep' ||
+    path === '/mcat-biochemistry-prep' ||
+    path === '/mcat-biology-passage-strategy' ||
+    path === '/aamc-content-outline-mapped-campbell-chapters' ||
+    path === '/mcat-biology-high-yield-topics-2026' ||
+    path === '/mcat-bb-passage-strategy-guide' ||
+    path === '/mcat-biology-vs-neet-biology'
+  ) {
+    return 0.85
+  }
+  if (
+    path === '/mcat-biology-tutor-new-jersey' ||
+    path === '/mcat-biology-tutor-bay-area' ||
+    path === '/mcat-biology-tutor-houston' ||
+    path === '/mcat-biology-tutor-atlanta' ||
+    path === '/mcat-biology-tutor-boston'
+  ) {
+    return 0.8
+  }
+
   // Tier 2 (0.8): High-intent landing pages
   if (
     path.startsWith('/locations/') ||
@@ -4907,6 +4931,84 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+    },
+    // MCAT section-specific landing pages — each targets a distinct
+    // query intent (B/B section, biochem-only, passage strategy).
+    {
+      url: `${baseUrl}/mcat-biology-bb-section-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/mcat-biochemistry-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/mcat-biology-passage-strategy`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    // MCAT city-level Indian-American hubs — long-tail "MCAT Biology
+    // tutor {City}" intent. Mirrors AP Biology US metro pattern.
+    {
+      url: `${baseUrl}/mcat-biology-tutor-new-jersey`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/mcat-biology-tutor-bay-area`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/mcat-biology-tutor-houston`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/mcat-biology-tutor-atlanta`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/mcat-biology-tutor-boston`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    // MCAT cornerstone content — informational authority pages with
+    // Article schema + Dr. Shekhar author byline.
+    {
+      url: `${baseUrl}/aamc-content-outline-mapped-campbell-chapters`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/mcat-biology-high-yield-topics-2026`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/mcat-bb-passage-strategy-guide`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/mcat-biology-vs-neet-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/molecular-biology-tuition`,
