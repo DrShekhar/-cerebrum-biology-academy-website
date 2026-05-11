@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
   Trophy,
@@ -358,6 +359,28 @@ const breadcrumbSchema = {
 }
 
 export default function APBiologyIndiaForUSAdmissionsPage() {
+  // Gate the INR equivalents to Indian-IP visitors only. US/UAE/Canada
+  // visitors should never see ₹ on this page — the INR↔USD comparison
+  // breaks trust because Indian NEET pricing is much lower in absolute
+  // currency terms than US-targeted AP Biology pricing. Default to
+  // hidden (USD-only) and reveal INR after geo detection confirms IN.
+  const [isIndianIP, setIsIndianIP] = useState(false)
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/geo/country', { cache: 'force-cache' })
+      .then((res) => res.json())
+      .then((data: { country: string | null }) => {
+        if (cancelled) return
+        if (data.country?.toUpperCase() === 'IN') setIsIndianIP(true)
+      })
+      .catch(() => {
+        // Geo lookup failed — stay in default-safe USD-only mode.
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
   return (
     <div className="min-h-screen">
       {/* JSON-LD schemas */}
@@ -606,8 +629,10 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
               Pricing for Indian students
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Transparent USD pricing (we sell internationally in USD). INR equivalents shown at an
-              approximate rate of ₹84 / US$1 and may vary with currency movement.
+              Transparent USD pricing (we sell internationally in USD).
+              {isIndianIP
+                ? ' INR equivalents shown below at an approximate rate of ₹84 / US$1 and may vary with currency movement.'
+                : ' Indian families: WhatsApp us to receive INR equivalents at the current rate.'}
             </p>
           </div>
 
@@ -639,10 +664,12 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
                     ${tier.price.toLocaleString('en-US')}
                   </p>
                   <p className="mt-1 text-sm text-green-700 font-medium">${tier.perHour}/hour</p>
-                  <p className="mt-2 text-xs text-gray-500 flex items-center">
-                    <IndianRupee className="w-3 h-3 mr-1" aria-hidden="true" />
-                    {tier.inr.replace('≈ ₹', '')}
-                  </p>
+                  {isIndianIP && (
+                    <p className="mt-2 text-xs text-gray-500 flex items-center">
+                      <IndianRupee className="w-3 h-3 mr-1" aria-hidden="true" />
+                      {tier.inr.replace('≈ ₹', '')}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -676,10 +703,12 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
                     ${tier.price.toLocaleString('en-US')}
                   </p>
                   <p className="mt-1 text-sm text-green-700 font-medium">${tier.perHour}/hour</p>
-                  <p className="mt-2 text-xs text-gray-500 flex items-center">
-                    <IndianRupee className="w-3 h-3 mr-1" aria-hidden="true" />
-                    {tier.inr.replace('≈ ₹', '')}
-                  </p>
+                  {isIndianIP && (
+                    <p className="mt-2 text-xs text-gray-500 flex items-center">
+                      <IndianRupee className="w-3 h-3 mr-1" aria-hidden="true" />
+                      {tier.inr.replace('≈ ₹', '')}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -712,10 +741,12 @@ export default function APBiologyIndiaForUSAdmissionsPage() {
                     ${tier.price.toLocaleString('en-US')}
                   </p>
                   <p className="mt-1 text-sm text-green-700 font-medium">$40/hour</p>
-                  <p className="mt-2 text-xs text-gray-500 flex items-center">
-                    <IndianRupee className="w-3 h-3 mr-1" aria-hidden="true" />
-                    {tier.inr.replace('≈ ₹', '')}
-                  </p>
+                  {isIndianIP && (
+                    <p className="mt-2 text-xs text-gray-500 flex items-center">
+                      <IndianRupee className="w-3 h-3 mr-1" aria-hidden="true" />
+                      {tier.inr.replace('≈ ₹', '')}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

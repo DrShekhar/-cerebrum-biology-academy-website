@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react'
 
 // Minimum monthly price in each major market — sourced from
 // `/programs/biology-olympiad/[country]` and IB pricing matrices.
-// Falls back to INR for unknown / IN / no-signal cases.
+// Falls back to USD for unknown / no-signal cases so we never
+// surface INR pricing to overseas visitors when geo detection
+// fails (slow network, blocked /api/geo/country, search crawlers).
 const PRICE_BY_COUNTRY: Record<string, string> = {
   US: 'From $99/month',
   CA: 'From C$129/month',
@@ -30,7 +32,7 @@ const PRICE_BY_COUNTRY: Record<string, string> = {
   IN: 'From ₹6,500/month',
 }
 
-const DEFAULT_PRICE = 'From ₹6,500/month'
+const DEFAULT_PRICE = 'From $99/month'
 
 export function GeoAwarePriceChip() {
   const [price, setPrice] = useState<string | null>(null)

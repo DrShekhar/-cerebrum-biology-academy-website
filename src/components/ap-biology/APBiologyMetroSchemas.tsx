@@ -16,30 +16,60 @@
  */
 
 import type { APBiologyMetro } from '@/data/ap-biology/metros'
+import { sharedCurrencies } from '@/data/shared/currencies'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
 
 // Canonical USD pricing tiers — must match
 // src/components/ap-biology/APBiologyCityTemplate.tsx and
 // /ap-biology-online-tutor (the price source of truth).
-const PRICE_OFFERS = [
+const PRICE_OFFERS_USD = [
   {
     name: 'Senior Faculty 1:1 — 12 hours',
-    price: '1800',
+    priceUSD: 1800,
   },
   {
     name: 'Senior Faculty 1:1 — 48 hours (Elite)',
-    price: '5760',
+    priceUSD: 5760,
   },
   {
     name: 'Junior Faculty 1:1 — 12 hours',
-    price: '900',
+    priceUSD: 900,
   },
   {
     name: 'Small Batch (4–6 students) — 16 hours',
-    price: '640',
+    priceUSD: 640,
   },
 ]
+
+// Map ISO-2 country code to the currency code we should emit in
+// schema.org Offer.priceCurrency. Keeps Google's rich result aligned
+// with the audience's local currency — Indian searchers see INR,
+// UAE searchers see AED, etc. Anything not listed defaults to USD.
+const COUNTRY_TO_CURRENCY: Record<string, string> = {
+  US: 'USD',
+  IN: 'INR',
+  AE: 'AED',
+  CA: 'CAD',
+  SG: 'SGD',
+  HK: 'HKD',
+  GB: 'GBP',
+  AU: 'AUD',
+}
+
+function currencyForCountry(country: string): string {
+  return COUNTRY_TO_CURRENCY[country.toUpperCase()] || 'USD'
+}
+
+function convertPrice(priceUSD: number, currencyCode: string): string {
+  if (currencyCode === 'USD') return String(priceUSD)
+  const currency = sharedCurrencies.find((c) => c.code === currencyCode)
+  if (!currency) return String(priceUSD)
+  const raw = priceUSD * currency.rate
+  // INR rounds to nearest 100; everything else to nearest whole unit.
+  const rounded = currencyCode === 'INR' ? Math.round(raw / 100) * 100 : Math.round(raw)
+  return String(rounded)
+}
 
 interface APBiologyMetroSchemasProps {
   metro: APBiologyMetro
@@ -60,6 +90,7 @@ export function APBiologyMetroSchemas({
   availableLanguage = ['English'],
 }: APBiologyMetroSchemasProps) {
   const canonical = `${SITE_URL}/ap-biology-tutor-${metro.slug}`
+  const offerCurrency = currencyForCountry(addressCountry)
 
   const courseSchema = {
     '@context': 'https://schema.org',
@@ -94,11 +125,11 @@ export function APBiologyMetroSchemas({
         '@type': 'VirtualLocation',
         url: canonical,
       },
-      offers: PRICE_OFFERS.map((offer) => ({
+      offers: PRICE_OFFERS_USD.map((offer) => ({
         '@type': 'Offer',
         name: offer.name,
-        price: offer.price,
-        priceCurrency: 'USD',
+        price: convertPrice(offer.priceUSD, offerCurrency),
+        priceCurrency: offerCurrency,
         availability: 'https://schema.org/InStock',
       })),
     },
