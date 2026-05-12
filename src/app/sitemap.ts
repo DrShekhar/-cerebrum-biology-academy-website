@@ -3,6 +3,7 @@ import { getAllPosts, blogCategories, getAllTags } from '@/lib/blog/mdx'
 import { getAllSEOSlugs } from '@/data/seo-landing/slugs-static'
 import { allChapters } from '@/data/campbell-biology'
 import { campbellUnits } from '@/data/campbell-biology/units'
+import { citySlugs as ibBiologyCitySlugs } from '@/data/ib-biology/cities'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
 import { detailedCourses } from '@/data/detailedCourses'
 import { SUPPORTED_COUNTRIES } from '@/lib/international/countries'
@@ -4964,45 +4965,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
-    ...[
-      'london',
-      'singapore',
-      'dubai',
-      'hong-kong',
-      'toronto',
-      'vancouver',
-      'sydney',
-      'melbourne',
-      'new-york',
-      'boston',
-      'geneva',
-      'zurich',
-      'amsterdam',
-      'bangkok',
-      'kuala-lumpur',
-      // 2026 P0 expansion — additive (no edits to existing IB pages)
-      'tokyo',
-      'seoul',
-      'shanghai',
-      'beijing',
-      'houston',
-      'chicago',
-      'san-francisco',
-      'paris',
-      // India — home market
-      'delhi',
-      'south-delhi',
-      'gurugram',
-      'noida',
-      'faridabad',
-      'rohini',
-      'mumbai',
-      'bangalore',
-      'pune',
-      'hyderabad',
-      'chennai',
-      'kolkata',
-    ].map((city) => ({
+    // IB Biology city pages — sourced dynamically from
+    // src/data/ib-biology/cities.ts so future additions to citySlugs()
+    // automatically register in the sitemap (no risk of orphaned
+    // pages drifting from the data layer).
+    ...ibBiologyCitySlugs().map((city) => ({
       url: `${baseUrl}/ib-biology/${city}`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
