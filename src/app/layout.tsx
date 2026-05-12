@@ -33,6 +33,7 @@ import {
   DynamicFooter,
   DynamicMobileNavigation,
   DynamicPWAProvider,
+  DynamicReNEETBanner,
   DynamicTrialBanner,
   DynamicWhatsAppDesktopModal,
 } from '@/components/layout/DynamicComponents'
@@ -216,6 +217,10 @@ export default function RootLayout({
                           </div>
                         </ConditionalHeaderFooter>
                         <ConditionalHeaderFooter>
+                          {/* RE-NEET 2026 reconduct announcement — sits
+                              above the trial banner so the time-sensitive
+                              CTA gets the top-of-page slot. */}
+                          <DynamicReNEETBanner />
                           <DynamicTrialBanner />
                         </ConditionalHeaderFooter>
                         <main

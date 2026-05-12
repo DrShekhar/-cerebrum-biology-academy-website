@@ -121,6 +121,14 @@ export const DynamicTrialBanner = dynamic(
   { ssr: true }
 )
 
+// ANNOUNCEMENT: Site-wide RE-NEET 2026 banner. Surfaces WhatsApp
+// chat + call CTAs as a lead-magnet for the crash course. SSR-rendered
+// for SEO + zero CLS; client-side dismiss with 24h cooldown.
+export const DynamicReNEETBanner = dynamic(
+  () => import('@/components/announcement/ReNEETBanner').then((mod) => mod.ReNEETBanner),
+  { ssr: true }
+)
+
 // Maintenance popup - SSR enabled for reduced FOUC
 export const DynamicMaintenancePopup = dynamic(
   () => import('@/components/ui/MaintenancePopup').then((mod) => mod.MaintenancePopup),

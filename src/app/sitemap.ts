@@ -124,7 +124,10 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/about' ||
     path === '/success-stories' ||
     path === '/results' ||
-    path === '/contact'
+    path === '/contact' ||
+    // RE-NEET 2026 reconduct article — time-sensitive top-of-funnel
+    // lead magnet. Surface at priority 1.0 until the re-exam concludes.
+    path === '/re-neet-2026'
   ) {
     return 1.0
   }
@@ -360,6 +363,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
+      lastModified: lastUpdated,
+      changeFrequency: 'daily' as const,
+      priority: 1.0,
+    },
+    // RE-NEET 2026 — time-sensitive article + crash-course lead magnet.
+    // Updated daily until the official re-exam date is notified by NTA.
+    // Priority 1.0 + daily change frequency to maximise crawl frequency
+    // during the news window.
+    {
+      url: `${baseUrl}/re-neet-2026`,
       lastModified: lastUpdated,
       changeFrequency: 'daily' as const,
       priority: 1.0,
