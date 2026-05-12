@@ -241,6 +241,38 @@ function normalizePriority(path: string, currentPriority: number): number {
     return 0.8
   }
 
+  // India biology olympiad — hubs at 0.9 (NSEB / INBO are highest-tier
+  // national-pathway content), cornerstone content at 0.85, per-school
+  // pages at 0.7 matching the AP / IB school tier.
+  if (path === '/nseb-coaching' || path === '/inbo-coaching') {
+    return 0.9
+  }
+  if (
+    path === '/ocsc-orientation-cum-selection-camp-prep' ||
+    path === '/india-ibo-team-selection-guide'
+  ) {
+    return 0.85
+  }
+  if (
+    path === '/biology-olympiad-tutor-dps-rk-puram' ||
+    path === '/biology-olympiad-tutor-modern-school-barakhamba' ||
+    path === '/biology-olympiad-tutor-sanskriti-school-delhi' ||
+    path === '/biology-olympiad-tutor-vasant-valley-school' ||
+    path === '/biology-olympiad-tutor-mothers-international-school' ||
+    path === '/biology-olympiad-tutor-sardar-patel-vidyalaya' ||
+    path === '/biology-olympiad-tutor-pathways-world-school-aravali' ||
+    path === '/biology-olympiad-tutor-shri-ram-school-aravali' ||
+    path === '/biology-olympiad-tutor-heritage-xperiential-learning-school' ||
+    path === '/biology-olympiad-tutor-dais-mumbai-olympiad' ||
+    path === '/biology-olympiad-tutor-cathedral-school-mumbai-olympiad' ||
+    path === '/biology-olympiad-tutor-asb-mumbai-olympiad' ||
+    path === '/biology-olympiad-tutor-stonehill-bangalore-olympiad' ||
+    path === '/biology-olympiad-tutor-inventure-bangalore-olympiad' ||
+    path === '/biology-olympiad-tutor-nps-bangalore-olympiad'
+  ) {
+    return 0.7
+  }
+
   // Tier 2 (0.8): High-intent landing pages
   if (
     path.startsWith('/locations/') ||
@@ -2569,6 +2601,119 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.92,
+    },
+    // India biology olympiad cornerstone content — OCSC (Stage 3) and
+    // the full NSEB→INBO→OCSC→IBO funnel narrative. Authority pages
+    // with Article schema + Dr. Shekhar author byline.
+    {
+      url: `${baseUrl}/ocsc-orientation-cum-selection-camp-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/india-ibo-team-selection-guide`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    // India olympiad per-school feeder pages — "Biology Olympiad tutor
+    // {School}" long-tail intent. Schools span Delhi NCR (DPS RK Puram,
+    // Modern School, Sanskriti, Vasant Valley, Mother's International,
+    // Sardar Patel Vidyalaya, Pathways Aravali, Shri Ram Aravali,
+    // Heritage Xperiential), Mumbai (DAIS, Cathedral, ASB), Bangalore
+    // (Stonehill, Inventure, NPS). Distinct slug namespace from
+    // /ib-biology-tutor-* and /ap-biology-tutor-* to prevent cluster
+    // collision.
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-dps-rk-puram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-modern-school-barakhamba`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-sanskriti-school-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-vasant-valley-school`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-mothers-international-school`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-sardar-patel-vidyalaya`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-pathways-world-school-aravali`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-shri-ram-school-aravali`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-heritage-xperiential-learning-school`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-dais-mumbai-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-cathedral-school-mumbai-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-asb-mumbai-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-stonehill-bangalore-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-inventure-bangalore-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-nps-bangalore-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     },
     // Class 11 Biology — cross-board hub + AP Class 11 feeder
     {

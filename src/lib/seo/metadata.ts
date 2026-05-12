@@ -1393,3 +1393,76 @@ export function buildIBBiologySchoolMetadata(input: {
     },
   }
 }
+
+/**
+ * Build metadata for an India Biology Olympiad per-school landing page.
+ *
+ * Targets schools whose students populate the NSEB / INBO / OCSC funnel
+ * (DPS RK Puram, Modern Barakhamba, Sanskriti, DAIS Mumbai, NPS Bangalore,
+ * etc.). Defaults to en-IN ogLocale + en-IN/en/x-default hreflang so
+ * Google and LLMs route the page to Indian regional English first.
+ *
+ * Used by /biology-olympiad-tutor-{slug} page.tsx files that target the
+ * "Biology Olympiad tutor {SchoolName}" long-tail query.
+ */
+export function buildIndiaOlympiadSchoolMetadata(input: {
+  title: string
+  description: string
+  keywords: string[]
+  canonical: string
+  /** BCP-47 tag — defaults to 'en-IN'. */
+  inLanguage?: string
+  ogImage?: string
+}) {
+  const canonicalUrl = `${seoConfig.siteUrl}${input.canonical}`
+  const lang = input.inLanguage ?? 'en-IN'
+  const ogLocale = lang.replace('-', '_')
+
+  return {
+    title: input.title,
+    description: input.description,
+    keywords: input.keywords,
+    openGraph: {
+      title: input.title,
+      description: input.description,
+      url: canonicalUrl,
+      siteName: seoConfig.siteName,
+      images: [
+        {
+          url: `${seoConfig.siteUrl}${input.ogImage || seoConfig.defaultOgImage}`,
+          width: 1200,
+          height: 630,
+          alt: input.title,
+        },
+      ],
+      locale: ogLocale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title: input.title,
+      description: input.description,
+      site: seoConfig.twitterHandle,
+      images: [`${seoConfig.siteUrl}${input.ogImage || seoConfig.defaultOgImage}`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large' as const,
+        'max-snippet': -1,
+      },
+    },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        [lang]: canonicalUrl,
+        en: canonicalUrl,
+        'x-default': canonicalUrl,
+      },
+    },
+  }
+}
