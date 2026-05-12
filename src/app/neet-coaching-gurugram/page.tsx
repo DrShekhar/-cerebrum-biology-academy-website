@@ -430,6 +430,47 @@ export default function NeetCoachingGurugramPage() {
         </div>
       </section>
 
+      {/* RE-NEET 2026 announcement — purely additive lead-magnet block.
+          Surfaces the news + crash-course CTA on high-traffic NEET hubs. */}
+      <section className="mx-auto max-w-4xl px-4">
+        <aside
+          className="my-6 rounded-xl border-2 border-red-200 bg-red-50 p-5"
+          aria-label="RE-NEET 2026 announcement"
+        >
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0 mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700">
+              <span aria-hidden="true">!</span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-base font-bold text-red-900">
+                NEET-UG 2026 cancelled — RE-NEET reconduct confirmed by NTA
+              </h3>
+              <p className="mt-1 text-sm leading-snug text-slate-700">
+                ~22 lakh candidates across India affected, with Gurugram aspirants in the worst-hit
+                Delhi NCR cohort. New exam expected late June / early July 2026. Our 6–8 week crash
+                course is built for the window — free demo today.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <a
+                  href="/re-neet-2026"
+                  className="inline-flex items-center gap-1.5 rounded-md bg-red-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-700"
+                >
+                  Read the full update →
+                </a>
+                <a
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20join%20the%20RE-NEET%202026%20crash%20course.%20Please%20share%20batch%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md bg-green-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-green-700"
+                >
+                  WhatsApp the crash course
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
       {/* Trust Signals — Social Proof */}
       <TrustSignalsBanner variant="compact" />
 

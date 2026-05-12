@@ -127,7 +127,10 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/contact' ||
     // RE-NEET 2026 reconduct article — time-sensitive top-of-funnel
     // lead magnet. Surface at priority 1.0 until the re-exam concludes.
-    path === '/re-neet-2026'
+    path === '/re-neet-2026' ||
+    // Dedicated crash-course product landing page for the RE-NEET
+    // window. Same priority tier as the news article above.
+    path === '/re-neet-crash-course'
   ) {
     return 1.0
   }
@@ -373,6 +376,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // during the news window.
     {
       url: `${baseUrl}/re-neet-2026`,
+      lastModified: lastUpdated,
+      changeFrequency: 'daily' as const,
+      priority: 1.0,
+    },
+    // RE-NEET 2026 Crash Course — dedicated product landing page with
+    // concrete pricing (₹14,500 / ₹24,500 / ₹49,500 across 3 tiers),
+    // Course schema with hasCourseInstance per tier, and conversion
+    // funnel separate from the news article above. Paid-ads landing
+    // surface during the news window.
+    {
+      url: `${baseUrl}/re-neet-crash-course`,
       lastModified: lastUpdated,
       changeFrequency: 'daily' as const,
       priority: 1.0,

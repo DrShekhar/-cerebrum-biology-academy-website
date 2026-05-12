@@ -114,12 +114,12 @@ const faqs = [
   {
     question: 'Why was NEET-UG 2026 cancelled?',
     answer:
-      "The National Testing Agency cancelled the NEET-UG 2026 examination held on 3 May 2026 after inputs from central and law-enforcement agencies indicated serious irregularities. Rajasthan Police's Special Operations Group (SOG) recovered a handwritten document — described as a 'guess paper' — with around 120 questions that matched the actual exam (approximately 90 Biology and 30 Chemistry). The Centre has handed the investigation to the CBI. The cancellation was announced on 12 May 2026 with the approval of the Government of India.",
+      "NTA cancelled NEET-UG 2026 (held 3 May 2026) on 12 May after Rajasthan Police's Special Operations Group recovered a handwritten 'guess paper' with around 120 questions matching the actual exam — roughly 90 Biology and 30 Chemistry. The Centre has handed the investigation to the CBI. The cancellation has the approval of the Government of India.",
   },
   {
     question: 'When will the RE-NEET 2026 exam be held?',
     answer:
-      'The new exam date has not yet been officially notified as of 12 May 2026. NTA Director General Abhishek Singh has publicly stated that the revised schedule will be announced within 7–10 days of the cancellation. Major outlets are reporting that the re-exam is expected in late June or the first week of July 2026, but this is a media expectation — not an NTA confirmation. Watch neet.nta.nic.in for the official notification.',
+      'The new exam date has not yet been officially notified as of 12 May 2026. NTA Director General Abhishek Singh has said the revised schedule will be announced within 7–10 days. Late June or early July 2026 is widely reported but not yet confirmed by NTA. Watch neet.nta.nic.in for the official notification.',
   },
   {
     question: 'Do I need to re-register for RE-NEET 2026?',
@@ -154,7 +154,7 @@ const faqs = [
   {
     question: 'My child is anxious / mentally overwhelmed. What should we do as parents?',
     answer:
-      'This is the most important question of all. Major newspapers have quoted psychiatrists (including doctors at GMC Thiruvananthapuram, Narayana Health and Delhi-based clinicians) warning that anticipatory anxiety, sleep disruption, and post-stress crash are common after exam cancellations. Practical guidance from those clinicians: protect 6+ hours of sleep, limit news doomscrolling, get daily sunlight and exercise, and avoid panic study-plan rewrites in the first week. Do not pile additional pressure on. If symptoms are severe, please seek professional help — the iCall helpline (9152987821) and Vandrevala Foundation (1860-2662-345) are free and confidential.',
+      'Psychiatrists quoted in major newspapers (GMC Thiruvananthapuram, Narayana Health, Delhi clinicians) warn that anticipatory anxiety, sleep disruption and post-stress crash are common after exam cancellations. Protect 6+ hours of sleep, limit doomscrolling, get daily sunlight and exercise, avoid panic study-plan rewrites in week one. Free confidential helplines: iCall 9152987821, Vandrevala Foundation 1860-2662-345.',
   },
   {
     question: 'What does the Cerebrum RE-NEET 2026 crash course cover?',
@@ -164,7 +164,7 @@ const faqs = [
   {
     question: 'How do I join the crash course?',
     answer:
-      'WhatsApp +91 88264-44334 — we will respond same-day with the next demo class slot and crash-course start date. The free demo class is genuinely free and there is no obligation to enrol. Most students enrol after attending one demo. EMI / instalment plans are available.',
+      'WhatsApp +91 88264-44334 — we respond same-day with the next demo class slot and crash-course start date. The free demo is genuinely free and there is no obligation to enrol; most students enrol after one demo. EMI / instalment plans are available, batches are filling on a first-come basis as the news cycle peaks, and our team can route you to an English or Hindi mentor depending on preference.',
   },
 ]
 
@@ -259,6 +259,76 @@ const courseSchema = {
   },
 }
 
+// HowTo schema — the 5-step study strategy for the 6-8 week window.
+// Voice assistants and Perplexity extract HowTo specifically for
+// "how to prepare for RE-NEET" / "how to study for RE-NEET 2026"
+// type queries. Each step name + text mirrors the article body.
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': `${CANONICAL}#how-to-prep`,
+  name: 'How to prepare for RE-NEET 2026 in 6-8 weeks',
+  description:
+    'A 5-step study strategy for the 6-8 week RE-NEET 2026 window. Built around a diagnostic mock, focused Botany then Zoology revision, biweekly full-length practice, and a final speed-pass.',
+  totalTime: 'P8W',
+  inLanguage: 'en-IN',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Week 1 — Diagnostic mock',
+      text: 'Take a full-length mock under exam conditions. Identify the 3-5 weakest topics. Resist the urge to re-read everything; the data from this mock drives the next 5 weeks.',
+      url: `${CANONICAL}#study-strategy`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Weeks 2-3 — Botany revision',
+      text: 'NCERT chapter-by-chapter with annotated highlights and 50+ MCQs per chapter. End-of-day passage review on the day topics. Cross-link to your weak-topic list from week 1.',
+      url: `${CANONICAL}#study-strategy`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Weeks 4-5 — Zoology revision',
+      text: 'Same chapter-by-chapter pattern as Botany. Add the high-yield cross-system retrieval drills: endocrine + nervous, respiration + circulation, digestion + excretion.',
+      url: `${CANONICAL}#study-strategy`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Week 6 — Full-length mocks',
+      text: 'Full-length NEET-pattern mocks every 48 hours. Error-analysis after each. Targeted re-drill of weak topics. Stop adding new content; consolidate.',
+      url: `${CANONICAL}#study-strategy`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Weeks 7-8 — Speed-pass + finals',
+      text: 'Speed-pass through the entire syllabus. Final mocks. Sleep, exercise, no all-nighters — exam form is now physical, not academic. Mental rehearsal of exam-day routine.',
+      url: `${CANONICAL}#study-strategy`,
+    },
+  ],
+}
+
+// Speakable schema — explicit cssSelector for LLM voice extraction
+// (ChatGPT voice, Google Assistant, Perplexity audio). The HTML uses
+// data-speakable="title|summary|key-info" attributes; this schema
+// tells AEO systems which DOM nodes to read aloud.
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${CANONICAL}#webpage`,
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: [
+      '[data-speakable="title"]',
+      '[data-speakable="summary"]',
+      '[data-speakable="key-info"]',
+    ],
+  },
+}
+
 // ---------- Page ----------
 
 export default function ReNEET2026Page() {
@@ -279,6 +349,14 @@ export default function ReNEET2026Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       {/* Hero */}
@@ -392,6 +470,15 @@ export default function ReNEET2026Page() {
                 Request a call back
               </a>
             </div>
+            <p className="mt-4 text-center text-xs text-slate-600">
+              Looking for pricing tiers + batch details?{' '}
+              <Link
+                href="/re-neet-crash-course"
+                className="font-semibold text-red-700 underline underline-offset-2 hover:text-red-800"
+              >
+                See the crash-course pricing page →
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -485,7 +572,10 @@ export default function ReNEET2026Page() {
           </div>
 
           {/* Study strategy */}
-          <h2 className="mt-12 text-2xl font-bold text-slate-900 sm:text-3xl">
+          <h2
+            id="study-strategy"
+            className="mt-12 scroll-mt-24 text-2xl font-bold text-slate-900 sm:text-3xl"
+          >
             How to plan the 6–8 week window
           </h2>
           <div className="prose prose-slate mt-5 max-w-none text-slate-700">

@@ -206,8 +206,7 @@ export default function DropperPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 pt-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <RefreshCw className="w-5 h-5 mr-2" />
                 NEET Dropper Intensive Program
@@ -276,10 +275,7 @@ export default function DropperPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
-                  <div
-                    key={metric.label}
-                    className="text-center animate-fadeInUp"
-                  >
+                  <div key={metric.label} className="text-center animate-fadeInUp">
                     <metric.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <div className="text-lg font-bold">{metric.label}</div>
                     <div className="text-xs opacity-80">{metric.sublabel}</div>
@@ -288,9 +284,7 @@ export default function DropperPage() {
               </div>
             </div>
 
-            <div
-              className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               {/* Dropper Success Stories */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold mb-6 text-center">
@@ -299,10 +293,7 @@ export default function DropperPage() {
 
                 <div className="space-y-6">
                   {successStories.map((story, index) => (
-                    <div
-                      key={story.name}
-                      className="bg-white/10 rounded-lg p-4 animate-fadeInUp"
-                    >
+                    <div key={story.name} className="bg-white/10 rounded-lg p-4 animate-fadeInUp">
                       <div className="flex items-center justify-between mb-2">
                         <div className="font-semibold">{story.name}</div>
                         <div className="text-green-300 font-bold">+{story.improvement} marks</div>
@@ -335,12 +326,52 @@ export default function DropperPage() {
         </div>
       </section>
 
+      {/* RE-NEET 2026 announcement — purely additive lead-magnet block.
+          Surfaces the news + crash-course CTA on high-traffic NEET hubs. */}
+      <section className="mx-auto max-w-4xl px-4">
+        <aside
+          className="my-6 rounded-xl border-2 border-red-200 bg-red-50 p-5"
+          aria-label="RE-NEET 2026 announcement"
+        >
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0 mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-100 text-red-700">
+              <span aria-hidden="true">!</span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-base font-bold text-red-900">
+                NEET-UG 2026 cancelled — RE-NEET reconduct confirmed by NTA
+              </h3>
+              <p className="mt-1 text-sm leading-snug text-slate-700">
+                Droppers hit hardest by the cancellation — ~22 lakh candidates affected and the
+                window before the next attempt is short. New exam expected late June / early July
+                2026. Our 6–8 week dropper-focused crash course is built for the window — free demo
+                today.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <a
+                  href="/re-neet-2026"
+                  className="inline-flex items-center gap-1.5 rounded-md bg-red-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-700"
+                >
+                  Read the full update →
+                </a>
+                <a
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20a%20dropper%20—%20I%20want%20to%20join%20the%20RE-NEET%202026%20crash%20course.%20Please%20share%20batch%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md bg-green-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-green-700"
+                >
+                  WhatsApp the crash course
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
       {/* Why Choose Dropper Program */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why Our Dropper Program is Different
             </h2>
@@ -372,9 +403,7 @@ export default function DropperPage() {
       {/* 10-Month Dropper Program Structure */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Strategic 10-Month Dropper Program
             </h2>
@@ -497,9 +526,7 @@ export default function DropperPage() {
             ))}
           </div>
 
-          <div
-            className="text-center mt-16 animate-fadeInUp"
-          >
+          <div className="text-center mt-16 animate-fadeInUp">
             <div className="bg-orange-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 🎯 Average Score Improvement: 156+ marks in dropper year
@@ -531,8 +558,7 @@ export default function DropperPage() {
       {/* Final Motivational CTA */}
       <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">
               <div className="flex items-center justify-center mb-6">
                 <Heart className="w-8 h-8 mr-3 text-red-300" />
