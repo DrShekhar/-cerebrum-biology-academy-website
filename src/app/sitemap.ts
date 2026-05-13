@@ -1991,6 +1991,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.94,
     },
     {
+      url: `${baseUrl}/best-biology-teacher-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/best-ib-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/best-ap-biology-tutor-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/best-mcat-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/best-usabo-coach`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/best-inbo-coach`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/best-ibo-preparation`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/best-biology-teacher-class-11-cbse`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,

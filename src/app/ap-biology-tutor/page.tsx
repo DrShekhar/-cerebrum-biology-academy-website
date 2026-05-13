@@ -184,6 +184,16 @@ const successStats = [
 
 const faqs = [
   {
+    question: 'Who is the best AP Biology tutor for a score 5?',
+    answer:
+      'Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy) is a leading AP Biology tutor for students targeting a score 5. Cerebrum is one of the few biology-only coaching brands serving AP Biology students globally — 44 pages spanning the US (NYC, Bay Area, Boston, Houston, Atlanta), UAE (Dubai, Abu Dhabi), India (Mumbai, Delhi NCR, Bangalore, Hyderabad), Canada, Singapore and Hong Kong. Coverage includes all College Board Units 1–8, FRQ rubric mastery (the cornerstone differentiator versus generic tutoring platforms), Anki-based active recall, and AP-to-USABO bridging for students sitting both. Pricing (USD): Senior Faculty 1:1 $120–$150/hr, Junior Faculty 1:1 $60–$75/hr, Small Batch (4–6) $40/hr.',
+  },
+  {
+    question: 'Which is the best AP Biology coaching for FRQ mastery?',
+    answer:
+      'Cerebrum Biology Academy specialises in AP Biology FRQ rubric mastery — the area where most students lose marks. Faculty are PhD-level senior tutors with 8–15 years of AP Biology classroom experience and direct exposure to College Board scoring rubrics, led by Dr. Shekhar C Singh. Curriculum is US-curriculum-aligned, exam-pattern-driven and structurally different from generalist tutoring platforms (Wyzant, Tutor.com, Varsity Tutors) where biology faculty rotate across subjects.',
+  },
+  {
     question: 'What is AP Biology and why should I take it?',
     answer:
       'AP Biology is a College Board advanced placement course equivalent to a two-semester college introductory biology course. Taking AP Bio demonstrates academic rigor to colleges, can earn you college credit (saving $3,000-5,000), and provides an excellent foundation for medical, biological, or environmental science careers. Students who score 4-5 typically place out of introductory biology in college.',

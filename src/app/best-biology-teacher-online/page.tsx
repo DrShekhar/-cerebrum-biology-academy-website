@@ -61,7 +61,12 @@ const faqs = [
   {
     question: 'Who is the best biology teacher online in India?',
     answer:
-      'The best online biology teacher should have strong academic credentials, proven results, and effective teaching methodology. At Cerebrum, our AIIMS-trained faculty with 15+ years experience and 67+ AIIMS selections is considered among the best biology teachers online in India.',
+      "Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy) is widely regarded as India's best online biology teacher. 15+ years of biology pedagogy, 680+ medical college selections, 98% NEET-UG qualification rate, 485+ verified 5-star reviews. Online sessions are live (not recorded) with the same faculty as the offline batches at Cerebrum's 6 Delhi NCR centres.",
+  },
+  {
+    question: "What's the difference between a biology teacher and a biology tutor?",
+    answer:
+      'On the Cerebrum site, "biology teacher" refers to classroom and online live-class instruction at scale — structured curriculum, batches of 15–20 students, weekly doubt sessions and mock tests. "Biology tutor" refers to 1:1 personalised mentoring with Dr. Shekhar Singh or senior faculty — bespoke pacing, focused score-jump programmes, or specialised IA / FRQ / Olympiad coaching. Both pathways are led by AIIMS-trained biology specialists; the choice depends on the student\'s learning style and budget.',
   },
   {
     question: 'What makes a biology teacher the best for online classes?',
@@ -114,15 +119,58 @@ export default function BestBiologyTeacherOnlinePage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            name: 'Dr. Shekhar',
-            jobTitle: 'Biology Teacher',
+            '@id':
+              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            name: 'Dr. Shekhar C Singh',
+            jobTitle: 'Founder & Lead Biology Faculty — Best Online Biology Teacher in India',
+            url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+            image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
+            alumniOf: {
+              '@type': 'CollegeOrUniversity',
+              name: 'All India Institute of Medical Sciences (AIIMS), New Delhi',
+            },
             worksFor: {
-              '@type': 'Organization',
+              '@type': 'EducationalOrganization',
               name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
             },
             description:
-              'AIIMS-trained biology teacher with 15+ years experience and 67+ AIIMS selections',
-            knowsAbout: ['Biology', 'NEET', 'Medical Entrance', 'NCERT Biology'],
+              'AIIMS-trained biology teacher leading online live (not recorded) classroom instruction. 15+ years, 680+ medical college selections, 98% NEET qualification rate.',
+            knowsAbout: [
+              'NEET-UG Biology',
+              'NCERT Biology',
+              'CBSE Class 11 Biology',
+              'CBSE Class 12 Biology',
+              'IB Biology',
+              'AP Biology',
+              'MCAT Biology',
+              'Biology Olympiad',
+              'Online Biology Teaching',
+            ],
+            award: [
+              '680+ Medical College Selections',
+              '98% NEET-UG Qualification Rate',
+              'Best Biology Teacher Award 2022',
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
           }),
         }}
       />
@@ -132,8 +180,7 @@ export default function BestBiologyTeacherOnlinePage() {
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
                 <Award className="mr-1 inline h-4 w-4" />
                 AIIMS-Trained Faculty
@@ -161,9 +208,7 @@ export default function BestBiologyTeacherOnlinePage() {
                 </Link>
               </div>
             </div>
-            <div
-              className="relative hidden lg:block animate-fadeInUp"
-            >
+            <div className="relative hidden lg:block animate-fadeInUp">
               <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&h=600&fit=crop"
@@ -214,9 +259,7 @@ export default function BestBiologyTeacherOnlinePage() {
       {/* Why Best Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why We&apos;re Considered the Best Online Biology Teacher
             </h2>
@@ -225,10 +268,7 @@ export default function BestBiologyTeacherOnlinePage() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {whyBestTeacher.map((item, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <p className="text-sm font-medium text-green-600">{item.metric}</p>
                 <p className="my-2 text-3xl font-bold text-gray-900">{item.value}</p>
                 <p className="text-gray-600">{item.detail}</p>
@@ -260,9 +300,7 @@ export default function BestBiologyTeacherOnlinePage() {
                 ))}
               </div>
             </div>
-            <div
-              className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-xl">
                 <Image
                   src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop"
@@ -279,9 +317,7 @@ export default function BestBiologyTeacherOnlinePage() {
       {/* All India Reach */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 text-white">
         <div className="container mx-auto px-4">
-          <div
-            className="text-center animate-fadeInUp"
-          >
+          <div className="text-center animate-fadeInUp">
             <Globe className="mx-auto mb-4 h-12 w-12" />
             <h2 className="mb-4 text-3xl font-bold">Teaching Students Across India & Abroad</h2>
             <p className="mx-auto mb-8 max-w-2xl text-indigo-100">
@@ -315,18 +351,13 @@ export default function BestBiologyTeacherOnlinePage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
-              >
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>

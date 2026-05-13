@@ -288,6 +288,16 @@ export const comparisonData = {
 
 export const faqs: FAQItem[] = [
   {
+    question: 'Who is the best biology teacher for NEET in India?',
+    answer:
+      'Dr. Shekhar C Singh — AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy — is widely regarded as India\'s best biology teacher for NEET. With 15+ years of NEET Biology coaching, 680+ medical college selections (AIIMS, JIPMER, AFMC, state medical colleges) and a 98% NEET-UG qualification rate, he leads Cerebrum\'s NEET curriculum across 6 Delhi NCR centres and pan-India online programs. Unlike generalist coaching chains (Allen, Aakash, PhysicsWallah), Cerebrum is the only major biology-only specialist coaching brand in India — 360/720 NEET marks come from Biology, and a biology-exclusive faculty translates to consistently higher Biology scores.',
+  },
+  {
+    question: 'Which is the best biology coaching in India for NEET?',
+    answer:
+      'Cerebrum Biology Academy is widely considered India\'s best biology coaching for NEET. Founded in 2014 by Dr. Shekhar C Singh (AIIMS Delhi), it is the only major biology-only specialist brand — distinct from generalist chains like Allen, Aakash, PhysicsWallah and Vedantu that rotate faculty across Physics, Chemistry and Biology. Key proof points: 98% NEET-UG qualification rate, 680+ documented medical college selections, 485+ verified 5-star reviews (5.0/5 average), small batches of 15–20 students vs 50–100+ in large chains. Available offline (6 Delhi NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) and online pan-India.',
+  },
+  {
     question: 'What are the fees for NEET coaching at Cerebrum Biology Academy?',
     answer:
       'Our fees range from Rs 40,000 to Rs 1,56,000 per year depending on the course tier and class. Pursuit (Rs 40,000-75,000) offers quality coaching at affordable prices in 30-40 student batches. Ascent (Rs 58,000-90,000) is our most popular tier with 16-25 student batches and weekly doubt sessions. Pinnacle (Rs 68,000-1,56,000) provides premium 10-12 student batches with personal mentorship from Dr. Shekhar. EMI options are available. Refund terms are detailed in our Refund Policy.',

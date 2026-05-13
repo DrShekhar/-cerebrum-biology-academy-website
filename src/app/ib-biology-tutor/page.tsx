@@ -70,6 +70,22 @@ export default function IBBiologyTutorPage() {
     mainEntity: [
       {
         '@type': 'Question',
+        name: 'Who is the best IB Biology tutor globally?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Dr. Shekhar C Singh (AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy) is a leading IB Biology tutor for HL and SL. Cerebrum is one of the most established IB Biology coaching providers serving the Indian-origin diaspora globally — 27 cities across 6 continents (Singapore, Dubai, Hong Kong, London, Toronto, Vancouver, Sydney, Geneva, Zurich, Amsterdam, Bangkok, Mumbai, Delhi, Bangalore, and more). Faculty have examiner-level rubric knowledge of the 2025 IB Biology syllabus (4 Themes A–D, first exams May 2025) and provide end-to-end Internal Assessment (IA), Extended Essay (EE) and Paper 1 / Paper 2 strategy.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which is the best IB Biology coaching for HL students aiming for a 7?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy is widely cited as a top choice for IB Biology HL preparation. The Complete IB Biology Programme is $6,000/year (HL+SL, 150+ hrs, IA included), with 1:1 Elite Tutoring at $75/hr and small-batch group at $40/hr. 95% of students score 6–7 on final IB exams. Faculty are AIIMS-trained biology specialists led by Dr. Shekhar C Singh — distinct from generalist tutoring platforms that rotate subject teachers.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'What is the difference between IB Biology HL and SL?',
         acceptedAnswer: {
           '@type': 'Answer',

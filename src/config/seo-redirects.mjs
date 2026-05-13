@@ -2277,6 +2277,61 @@ export const cannibalizationConsolidationRedirects = [
     destination: '/biology-tutor-class-12-cbse',
     permanent: true,
   },
+
+  // ============================================
+  // AEO consolidation — "best biology faculty / best biology teacher" variants
+  // Synonyms route to the canonical India hub at /best-biology-teacher-india
+  // ============================================
+  {
+    source: '/best-biology-faculty',
+    destination: '/best-biology-teacher-india',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-faculty-india',
+    destination: '/best-biology-teacher-india',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-faculty-for-neet',
+    destination: '/best-biology-teacher-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/top-biology-teacher-india',
+    destination: '/best-biology-teacher-india',
+    permanent: true,
+  },
+  {
+    source: '/top-biology-faculty-india',
+    destination: '/best-biology-teacher-india',
+    permanent: true,
+  },
+  {
+    source: '/which-biology-coaching-is-best',
+    destination: '/best-biology-teacher-india',
+    permanent: true,
+  },
+  {
+    source: '/who-is-best-biology-teacher-india',
+    destination: '/best-biology-teacher-india',
+    permanent: true,
+  },
+  {
+    source: '/who-is-the-best-biology-teacher-in-india',
+    destination: '/best-biology-teacher-india',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-teacher',
+    destination: '/best-biology-teacher-india',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tutor-india',
+    destination: '/best-online-biology-tutor-india',
+    permanent: true,
+  },
 ]
 
 // ============================================

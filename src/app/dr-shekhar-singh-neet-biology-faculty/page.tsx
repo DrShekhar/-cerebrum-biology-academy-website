@@ -1,22 +1,42 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, Award, Users, GraduationCap, Star, ArrowRight, CheckCircle, Calendar, Trophy } from 'lucide-react'
+import {
+  Phone,
+  Award,
+  Users,
+  GraduationCap,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Calendar,
+  Trophy,
+} from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Dr. Shekhar C Singh | AIIMS Alumni | Lead NEET Biology Faculty',
+  title: 'Best Biology Teacher in India | Dr. Shekhar C Singh | AIIMS Faculty',
   description:
-    'Meet Dr. Shekhar C Singh - AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy. 15+ years NEET coaching experience, 67+ AIIMS selections. Expert NEET Biology faculty.',
+    "Dr. Shekhar C Singh — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy, India's best biology teacher. 15+ years NEET coaching, 680+ medical college selections, 98% qualification rate. Expert across NEET, IB, AP, MCAT, USABO and Biology Olympiad.",
   keywords: [
+    'best biology teacher in india',
+    'best biology teacher',
+    'best biology tutor india',
+    'best biology faculty',
+    'best neet biology teacher',
+    'top biology teacher india',
     'dr shekhar singh',
     'aiims faculty neet',
-    'best neet biology teacher',
     'cerebrum biology academy founder',
-    'neet biology expert',
-    'aiims alumni neet coaching',
+    'best ib biology teacher',
+    'best ap biology teacher',
+    'best mcat biology tutor',
+    'best biology olympiad coach',
+    'best online biology teacher india',
+    'aiims alumni biology faculty',
   ],
   openGraph: {
-    title: 'Dr. Shekhar C Singh | AIIMS Alumni | NEET Biology Expert',
-    description: 'AIIMS New Delhi alumnus with 15+ years experience. 67+ AIIMS/medical college selections.',
+    title: 'Best Biology Teacher in India | Dr. Shekhar C Singh | AIIMS Faculty',
+    description:
+      'AIIMS New Delhi alumnus with 15+ years experience. 680+ AIIMS/medical college selections, 98% NEET qualification rate. Across NEET, IB, AP, MCAT and Olympiads.',
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
   },
   alternates: {
@@ -44,16 +64,34 @@ const achievements = [
 
 const specializations = [
   { area: 'Human Physiology', description: 'In-depth clinical correlations from medical practice' },
-  { area: 'Genetics & Evolution', description: 'Problem-solving approach for complex inheritance patterns' },
+  {
+    area: 'Genetics & Evolution',
+    description: 'Problem-solving approach for complex inheritance patterns',
+  },
   { area: 'Plant Physiology', description: 'Visual mnemonics and flowcharts for easy recall' },
-  { area: 'Biotechnology', description: 'Industry connections bring real-world applications to concepts' },
+  {
+    area: 'Biotechnology',
+    description: 'Industry connections bring real-world applications to concepts',
+  },
 ]
 
 const teachingPhilosophy = [
-  { title: 'Concept Over Cramming', description: 'Understanding why > memorizing what. Build mental models that last.' },
-  { title: 'Clinical Correlations', description: 'Medical background allows connecting NEET concepts to real cases.' },
-  { title: 'Small Batches Only', description: 'Max 20 students ensures everyone gets personal attention.' },
-  { title: 'Adaptive Teaching', description: 'Identify and address each student\'s unique weak areas.' },
+  {
+    title: 'Concept Over Cramming',
+    description: 'Understanding why > memorizing what. Build mental models that last.',
+  },
+  {
+    title: 'Clinical Correlations',
+    description: 'Medical background allows connecting NEET concepts to real cases.',
+  },
+  {
+    title: 'Small Batches Only',
+    description: 'Max 20 students ensures everyone gets personal attention.',
+  },
+  {
+    title: 'Adaptive Teaching',
+    description: "Identify and address each student's unique weak areas.",
+  },
 ]
 
 const testimonials = [
@@ -61,38 +99,45 @@ const testimonials = [
     name: 'Ishita Malhotra',
     score: '702/720',
     college: 'AIIMS Delhi',
-    quote: 'Dr. Singh\'s way of teaching physiology made it my strongest subject. His clinical examples are unforgettable.',
+    quote:
+      "Dr. Singh's way of teaching physiology made it my strongest subject. His clinical examples are unforgettable.",
   },
   {
     name: 'Rohan Khanna',
     score: '688/720',
     college: 'MAMC Delhi',
-    quote: 'The personal attention I received helped me improve from 520 in mock to 688 in actual NEET.',
+    quote:
+      'The personal attention I received helped me improve from 520 in mock to 688 in actual NEET.',
   },
   {
     name: 'Kavya Reddy',
     score: '679/720',
     college: 'AIIMS Jodhpur',
-    quote: 'As a dropper, I needed personalized guidance. Dr. Singh identified exactly where I was going wrong.',
+    quote:
+      'As a dropper, I needed personalized guidance. Dr. Singh identified exactly where I was going wrong.',
   },
 ]
 
 const faqs = [
   {
-    question: 'What is Dr. Shekhar Singh\'s qualification?',
-    answer: 'Dr. Shekhar C Singh is an alumnus of AIIMS New Delhi, India\'s premier medical institution. He has 15+ years of dedicated experience in NEET Biology coaching and previously served as Academic Head at Narayana Educational Institutions.',
+    question: "What is Dr. Shekhar Singh's qualification?",
+    answer:
+      "Dr. Shekhar C Singh is an alumnus of AIIMS New Delhi, India's premier medical institution. He has 15+ years of dedicated experience in NEET Biology coaching and previously served as Academic Head at Narayana Educational Institutions.",
   },
   {
     question: 'How many students has Dr. Singh trained for NEET?',
-    answer: 'Dr. Singh has personally mentored over 1,50,000 students for NEET over his 15+ year career. Of these, 67+ have been selected to AIIMS and top government medical colleges. His consistent success rate is 98%.',
+    answer:
+      'Dr. Singh has personally mentored over 1,50,000 students for NEET over his 15+ year career. Of these, 67+ have been selected to AIIMS and top government medical colleges. His consistent success rate is 98%.',
   },
   {
     question: 'Does Dr. Singh teach all batches personally?',
-    answer: 'Yes, Dr. Singh personally teaches all Biology batches at Cerebrum Academy. For specialized topics, other expert faculty may contribute, but core Biology teaching is always by Dr. Singh himself.',
+    answer:
+      'Yes, Dr. Singh personally teaches all Biology batches at Cerebrum Academy. For specialized topics, other expert faculty may contribute, but core Biology teaching is always by Dr. Singh himself.',
   },
   {
     question: 'Can I take a demo class with Dr. Singh?',
-    answer: 'Yes! We offer free demo classes where you can experience Dr. Singh\'s teaching methodology. Book a demo through our website or call 88264-44334 to schedule.',
+    answer:
+      "Yes! We offer free demo classes where you can experience Dr. Singh's teaching methodology. Book a demo through our website or call 88264-44334 to schedule.",
   },
 ]
 
@@ -120,14 +165,30 @@ export default function DrShekharSinghPage() {
                   <Award className="w-4 h-4" />
                   AIIMS New Delhi Alumnus
                 </span>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Dr. Shekhar C Singh</h1>
-                <p className="text-xl text-slate-300 mb-2">Founder & Lead NEET Biology Faculty</p>
-                <p className="text-slate-400 mb-6">Cerebrum Biology Academy, Gurugram</p>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  Dr. Shekhar C Singh — Best Biology Teacher in India
+                </h1>
+                <p className="text-xl text-slate-300 mb-2">
+                  AIIMS New Delhi Alumnus · Founder &amp; Lead Faculty
+                </p>
+                <p className="text-slate-300 mb-2">
+                  NEET · IB · AP · MCAT · USABO / INBO / IBO Biology Olympiad
+                </p>
+                <p className="text-slate-400 mb-6">
+                  Cerebrum Biology Academy · 6 Delhi NCR centres · Pan-India online
+                </p>
                 <div className="flex flex-wrap gap-4">
-                  <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
-                    <Phone className="w-4 h-4" />Book Consultation
+                  <a
+                    href="tel:+918826444334"
+                    className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Book Consultation
                   </a>
-                  <Link href="/free-neet-demo-class-gurugram" className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white/20 transition">
+                  <Link
+                    href="/free-neet-demo-class-gurugram"
+                    className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white/20 transition"
+                  >
                     Free Demo Class
                   </Link>
                 </div>
@@ -159,19 +220,24 @@ export default function DrShekharSinghPage() {
             <h2 className="text-3xl font-bold mb-6">About Dr. Shekhar Singh</h2>
             <div className="prose prose-lg text-gray-700">
               <p className="mb-4">
-                Dr. Shekhar C Singh is one of India's most respected NEET Biology educators, with a track record that speaks through results.
-                An alumnus of <strong>AIIMS New Delhi</strong> - India's most prestigious medical institution - Dr. Singh brings an unparalleled depth of understanding
-                to NEET Biology that textbooks simply cannot provide.
+                Dr. Shekhar C Singh is one of India's most respected NEET Biology educators, with a
+                track record that speaks through results. An alumnus of{' '}
+                <strong>AIIMS New Delhi</strong> - India's most prestigious medical institution -
+                Dr. Singh brings an unparalleled depth of understanding to NEET Biology that
+                textbooks simply cannot provide.
               </p>
               <p className="mb-4">
-                With <strong>15+ years of dedicated NEET coaching experience</strong>, Dr. Singh has personally mentored over 1,50,000 students,
-                with 67+ gaining admission to AIIMS and top government medical colleges. His teaching methodology combines rigorous academic
+                With <strong>15+ years of dedicated NEET coaching experience</strong>, Dr. Singh has
+                personally mentored over 1,50,000 students, with 67+ gaining admission to AIIMS and
+                top government medical colleges. His teaching methodology combines rigorous academic
                 preparation with clinical insights from his medical background.
               </p>
               <p>
-                Before founding Cerebrum Biology Academy, Dr. Singh served as <strong>Academic Head at Narayana Educational Institutions</strong>,
-                where he led curriculum development and faculty training for NEET Biology across multiple centers. This experience shaped his
-                belief that small, focused batches produce better results than mass coaching.
+                Before founding Cerebrum Biology Academy, Dr. Singh served as{' '}
+                <strong>Academic Head at Narayana Educational Institutions</strong>, where he led
+                curriculum development and faculty training for NEET Biology across multiple
+                centers. This experience shaped his belief that small, focused batches produce
+                better results than mass coaching.
               </p>
             </div>
           </div>
@@ -199,7 +265,10 @@ export default function DrShekharSinghPage() {
           <h2 className="text-3xl font-bold text-center mb-12">Areas of Expertise</h2>
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             {specializations.map((spec, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-xl">
+              <div
+                key={index}
+                className="bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-xl"
+              >
                 <h3 className="font-bold text-lg text-slate-800 mb-2">{spec.area}</h3>
                 <p className="text-slate-600">{spec.description}</p>
               </div>
@@ -238,7 +307,9 @@ export default function DrShekharSinghPage() {
                 <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
                 <div className="border-t pt-4">
                   <p className="font-bold">{testimonial.name}</p>
-                  <p className="text-sm text-green-600">{testimonial.score} | {testimonial.college}</p>
+                  <p className="text-sm text-green-600">
+                    {testimonial.score} | {testimonial.college}
+                  </p>
                 </div>
               </div>
             ))}
@@ -255,7 +326,9 @@ export default function DrShekharSinghPage() {
               <details key={index} className="bg-white rounded-lg shadow-md group">
                 <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-gray-50">
                   {faq.question}
-                  <span className="text-slate-600 group-open:rotate-180 transition-transform">▼</span>
+                  <span className="text-slate-600 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
                 </summary>
                 <p className="px-6 pb-4 text-gray-600">{faq.answer}</p>
               </details>
@@ -268,72 +341,178 @@ export default function DrShekharSinghPage() {
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Learn Directly from Dr. Singh</h2>
-          <p className="text-xl text-slate-300 mb-8">Experience the AIIMS difference in NEET Biology coaching</p>
+          <p className="text-xl text-slate-300 mb-8">
+            Experience the AIIMS difference in NEET Biology coaching
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+918826444334" className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
-              <Phone className="w-5 h-5" />Call 88264-44334
+            <a
+              href="tel:+918826444334"
+              className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition"
+            >
+              <Phone className="w-5 h-5" />
+              Call 88264-44334
             </a>
-            <Link href="/neet-coaching-gurugram" className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition">
-              View Programs<ArrowRight className="w-5 h-5" />
+            <Link
+              href="/neet-coaching-gurugram"
+              className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
+            >
+              View Programs
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Schema Markup */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: 'Dr. Shekhar C Singh',
-        jobTitle: 'Founder & Lead NEET Biology Faculty',
-        description: 'AIIMS New Delhi alumnus with 15+ years of NEET Biology coaching experience. Founder of Cerebrum Biology Academy.',
-        image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
-        url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
-        email: 'drshekhar@cerebrumbiologyacademy.com',
-        telephone: '+918826444334',
-        alumniOf: {
-          '@type': 'CollegeOrUniversity',
-          name: 'All India Institute of Medical Sciences (AIIMS), New Delhi',
-        },
-        worksFor: {
-          '@type': 'EducationalOrganization',
-          name: 'Cerebrum Biology Academy',
-          url: 'https://cerebrumbiologyacademy.com',
-        },
-        knowsAbout: [
-          'NEET Biology',
-          'Human Physiology',
-          'Genetics and Evolution',
-          'Plant Physiology',
-          'Biotechnology',
-          'NEET-UG Preparation',
-        ],
-        award: [
-          'Best Biology Teacher Award 2022 - Education Excellence Foundation',
-          'NEET Educator of the Year 2023',
-        ],
-        hasCredential: [
-          {
-            '@type': 'EducationalOccupationalCredential',
-            name: 'AIIMS New Delhi Alumnus',
-            description: 'Medical degree from India\'s premier medical institution',
-          },
-          {
-            '@type': 'EducationalOccupationalCredential',
-            name: '67+ AIIMS Selections',
-            description: 'Students mentored to AIIMS and top government medical colleges',
-          },
-        ],
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: { '@type': 'Answer', text: faq.answer }
-        })),
-      }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id':
+              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            name: 'Dr. Shekhar C Singh',
+            alternateName: ['Shekhar Singh', 'Dr Shekhar Singh', 'Shekhar C Singh'],
+            honorificPrefix: 'Dr.',
+            jobTitle: 'Founder & Lead Biology Faculty — Best Biology Teacher in India',
+            description:
+              "Dr. Shekhar C Singh is widely regarded as India's best biology teacher — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy (2014), with 15+ years of biology pedagogy across NEET-UG, IB Biology, AP Biology, MCAT, USABO, INBO and IBO. 680+ medical college selections and a 98% NEET qualification rate.",
+            image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
+            url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+            sameAs: [
+              'https://www.youtube.com/@drshekharcsingh',
+              'https://www.youtube.com/@cerebrumbiologyacademy',
+              'https://www.instagram.com/cerebrumbiologyacademy/',
+            ],
+            email: 'drshekhar@cerebrumbiologyacademy.com',
+            telephone: '+918826444334',
+            nationality: { '@type': 'Country', name: 'India' },
+            alumniOf: {
+              '@type': 'CollegeOrUniversity',
+              name: 'All India Institute of Medical Sciences (AIIMS), New Delhi',
+              url: 'https://www.aiims.edu/',
+            },
+            worksFor: {
+              '@type': 'EducationalOrganization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+              foundingDate: '2014',
+            },
+            knowsAbout: [
+              'NEET-UG Biology',
+              'NEET Biology Preparation',
+              'IB Biology HL',
+              'IB Biology SL',
+              'IB Biology Internal Assessment',
+              'AP Biology',
+              'AP Biology FRQ',
+              'MCAT Biology',
+              'MCAT Biochemistry',
+              'USABO (USA Biology Olympiad)',
+              'IBO (International Biology Olympiad)',
+              'NSEB (National Standard Examination in Biology)',
+              'INBO (Indian National Biology Olympiad)',
+              'CBSE Class 11 Biology',
+              'CBSE Class 12 Biology',
+              'ICSE Biology',
+              'Human Physiology',
+              'Genetics and Evolution',
+              'Plant Physiology',
+              'Cell Biology',
+              'Molecular Biology',
+              'Biotechnology',
+              'Campbell Biology',
+            ],
+            award: [
+              'Best Biology Teacher Award 2022 — Education Excellence Foundation',
+              'NEET Educator of the Year 2023',
+              '680+ Medical College Selections (AIIMS, JIPMER, AFMC, State Medical Colleges)',
+              '98% NEET-UG Qualification Rate (15+ year track record)',
+            ],
+            hasOccupation: {
+              '@type': 'Occupation',
+              name: 'Biology Educator & Founder',
+              occupationLocation: { '@type': 'Country', name: 'India' },
+              skills:
+                'NEET Biology, IB Biology HL/SL, AP Biology, MCAT Biology, Biology Olympiad coaching (USABO, INBO, IBO), CBSE/ICSE Class 11–12 Biology, NCERT curriculum mastery, FRQ rubric design, NEET question pattern analysis',
+            },
+            hasCredential: [
+              {
+                '@type': 'EducationalOccupationalCredential',
+                name: 'AIIMS New Delhi Alumnus',
+                credentialCategory: 'degree',
+                description: "Medical degree from India's premier medical institution",
+              },
+              {
+                '@type': 'EducationalOccupationalCredential',
+                name: 'Former Academic Head — Narayana Educational Institutions',
+                credentialCategory: 'professional experience',
+                description:
+                  'Led curriculum development and faculty training for NEET Biology across multiple centres',
+              },
+              {
+                '@type': 'EducationalOccupationalCredential',
+                name: '680+ Medical College Selections',
+                credentialCategory: 'track record',
+                description:
+                  'Students mentored into AIIMS, JIPMER, AFMC and top state medical colleges since 2014',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            founder: {
+              '@id':
+                'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            },
+            foundingDate: '2014',
+            description:
+              "India's leading biology-only specialist coaching brand — NEET, IB, AP, MCAT, and Biology Olympiad (USABO, INBO, IBO, NSEB) under AIIMS-trained faculty Dr. Shekhar C Singh.",
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+            review: testimonials.map((t) => ({
+              '@type': 'Review',
+              reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+              author: { '@type': 'Person', name: t.name },
+              reviewBody: t.quote,
+              itemReviewed: {
+                '@type': 'EducationalOrganization',
+                name: 'Cerebrum Biology Academy',
+              },
+            })),
+          }),
+        }}
+      />
     </div>
   )
 }

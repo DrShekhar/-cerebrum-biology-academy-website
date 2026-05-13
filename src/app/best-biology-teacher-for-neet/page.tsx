@@ -143,6 +143,110 @@ export default function BestBiologyTeacherForNeetPage() {
         }}
       />
 
+      {/* Person Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id':
+              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            name: 'Dr. Shekhar C Singh',
+            jobTitle: 'Founder & Lead NEET Biology Faculty — Best Biology Teacher for NEET',
+            url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+            image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
+            alumniOf: {
+              '@type': 'CollegeOrUniversity',
+              name: 'All India Institute of Medical Sciences (AIIMS), New Delhi',
+            },
+            worksFor: {
+              '@type': 'EducationalOrganization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+            },
+            knowsAbout: [
+              'NEET-UG Biology',
+              'NCERT Biology',
+              'Human Physiology',
+              'Genetics and Evolution',
+              'Plant Physiology',
+              'Cell Biology',
+              'Biotechnology',
+              'NEET Question Pattern Analysis',
+            ],
+            award: [
+              '680+ Medical College Selections (AIIMS, JIPMER, AFMC, State Medical Colleges)',
+              '98% NEET-UG Qualification Rate (15+ year track record)',
+            ],
+          }),
+        }}
+      />
+
+      {/* Organization + AggregateRating + Reviews Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            founder: {
+              '@id':
+                'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            },
+            foundingDate: '2014',
+            description:
+              "India's leading biology-only specialist coaching brand. 680+ medical college selections, 98% NEET-UG qualification rate.",
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+            review: [
+              {
+                '@type': 'Review',
+                reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+                author: { '@type': 'Person', name: 'Ishita Malhotra' },
+                reviewBody:
+                  "Dr. Singh's way of teaching physiology made it my strongest subject. NEET 702/720, AIIMS Delhi.",
+                itemReviewed: {
+                  '@type': 'EducationalOrganization',
+                  name: 'Cerebrum Biology Academy',
+                },
+              },
+              {
+                '@type': 'Review',
+                reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+                author: { '@type': 'Person', name: 'Rohan Khanna' },
+                reviewBody:
+                  'Personal attention helped me improve from 520 in mock to 688 in actual NEET. MAMC Delhi.',
+                itemReviewed: {
+                  '@type': 'EducationalOrganization',
+                  name: 'Cerebrum Biology Academy',
+                },
+              },
+              {
+                '@type': 'Review',
+                reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+                author: { '@type': 'Person', name: 'Kavya Reddy' },
+                reviewBody:
+                  'As a dropper, I needed personalized guidance. Dr. Singh identified exactly where I was going wrong. NEET 679, AIIMS Jodhpur.',
+                itemReviewed: {
+                  '@type': 'EducationalOrganization',
+                  name: 'Cerebrum Biology Academy',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -173,7 +277,11 @@ export default function BestBiologyTeacherForNeetPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20teacher%20for%20neet.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20teacher%20for%20neet.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -418,7 +526,11 @@ export default function BestBiologyTeacherForNeetPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20teacher%20for%20neet.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20teacher%20for%20neet.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -429,7 +541,11 @@ export default function BestBiologyTeacherForNeetPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20biology%20teacher%20for%20neet.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20biology%20teacher%20for%20neet.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"
