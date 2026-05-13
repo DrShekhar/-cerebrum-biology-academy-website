@@ -37,6 +37,8 @@ import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
+import { LocalityCues } from '@/components/seo/LocalityCues'
+import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
@@ -486,6 +488,8 @@ export default function NeetCoachingGurugramPage() {
           nearbyLandmark: 'HUDA City Centre Metro (Yellow Line)',
         }}
       />
+
+      <LocalityCues {...delhiNCRLocalityCues.gurugram} />
 
       {/* Why Gurugram Students Choose Us */}
       <section className="py-20 bg-white">

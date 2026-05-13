@@ -27,6 +27,8 @@ import { Button } from '@/components/ui/Button'
 import { LocalBusinessSchema, FAQSchema, VideoSchema } from '@/components/seo/StructuredData'
 import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { LocalityCues } from '@/components/seo/LocalityCues'
+import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 import {
   faridabadAreaDetails,
   getAllFaridabadAreaSlugs,
@@ -315,6 +317,8 @@ export default function NeetCoachingFaridabadPage() {
           nearbyLandmark: 'Bata Chowk Metro (Violet Line) — 5 min walk',
         }}
       />
+
+      <LocalityCues {...delhiNCRLocalityCues.faridabad} />
 
       {/* Greater Faridabad Sectors Section */}
       <section className="py-16 md:py-20 bg-white">

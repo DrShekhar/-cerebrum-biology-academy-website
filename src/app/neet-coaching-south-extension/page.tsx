@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/cities'
+import { LocalityCues } from '@/components/seo/LocalityCues'
+import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 
 const cityData = getCityData('south-delhi')!
 
@@ -27,5 +29,10 @@ export const metadata: Metadata = {
 }
 
 export default function NEETCoachingSouthExtensionPage() {
-  return <CityHubPage data={cityData} />
+  return (
+    <>
+      <CityHubPage data={cityData} />
+      <LocalityCues {...delhiNCRLocalityCues['south-extension']} />
+    </>
+  )
 }

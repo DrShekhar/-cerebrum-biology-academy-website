@@ -32,10 +32,9 @@ import {
 } from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
-import {
-  getAllNoidaAreaSlugs,
-  getNoidaAreaBySlug,
-} from '@/data/noida-areas'
+import { LocalityCues } from '@/components/seo/LocalityCues'
+import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
+import { getAllNoidaAreaSlugs, getNoidaAreaBySlug } from '@/data/noida-areas'
 
 // Get all areas from centralized data
 const allAreaSlugs = getAllNoidaAreaSlugs()
@@ -245,7 +244,11 @@ export default function NeetCoachingNoidaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -284,6 +287,8 @@ export default function NeetCoachingNoidaPage() {
           </div>
         </div>
       </section>
+
+      <LocalityCues {...delhiNCRLocalityCues.noida} />
 
       {/* Noida Sectors Coverage */}
       <section className="py-16 md:py-20 bg-gray-50">
@@ -1814,7 +1819,11 @@ export default function NeetCoachingNoidaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

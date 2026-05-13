@@ -22,6 +22,8 @@ import {
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { VideoSchema } from '@/components/seo/StructuredData'
+import { LocalityCues } from '@/components/seo/LocalityCues'
+import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -198,6 +200,8 @@ export default function NEETCoachingRohiniPage() {
             </div>
           </div>
         </section>
+
+        <LocalityCues {...delhiNCRLocalityCues.rohini} />
 
         {/* Why Rohini Students Choose Us */}
         <section className="py-16">
