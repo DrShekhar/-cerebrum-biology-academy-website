@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import { BestVerticalLanding } from '@/components/seo/BestVerticalLanding'
 import { buildReNEETCityConfig } from '@/data/re-neet-city-config'
 
@@ -28,5 +29,10 @@ export const metadata: Metadata = {
 }
 
 export default function ReNEETDelhiPage() {
-  return <BestVerticalLanding config={buildReNEETCityConfig('delhi')} />
+  return (
+    <>
+      <DelhiAreaSchema pageSlug="re-neet-2026-delhi" />
+      <BestVerticalLanding config={buildReNEETCityConfig('delhi')} />
+    </>
+  )
 }

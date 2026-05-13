@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -331,4 +332,29 @@ const localBusinessSchema = {
       closes: '17:00',
     },
   ],
+}
+
+export default function NeetCoachingCivilLinesDelhiPage() {
+  return (
+    <>
+      <DelhiAreaSchema pageSlug="neet-coaching-civil-lines-delhi" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <LocalitySchema
+        locality={locality}
+        slug="neet-coaching-civil-lines-delhi"
+        pageTitle="Best NEET Coaching in Civil Lines Delhi"
+        pageDescription="AIIMS-trained NEET biology coaching for Civil Lines students."
+        pageType="coaching"
+        coordinates={{ lat: '28.6817', lng: '77.2249' }}
+      />
+      <PageContent faqs={faqs} />
+    </>
+  )
 }

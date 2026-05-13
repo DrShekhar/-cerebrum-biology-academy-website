@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import Link from 'next/link'
 import {
   Phone,
@@ -205,6 +206,7 @@ export default function FindBiologyTutorDelhiNCR() {
 
   return (
     <>
+      <DelhiAreaSchema pageSlug="find-biology-tutor-delhi-ncr" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

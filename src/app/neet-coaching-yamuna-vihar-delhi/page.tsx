@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
@@ -90,6 +91,7 @@ const faqs = [
 export default function NEETCoachingYamunaViharPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="neet-coaching-yamuna-vihar-delhi" />
       <LocalitySchema
         locality="Yamuna Vihar"
         slug="neet-coaching-yamuna-vihar-delhi"

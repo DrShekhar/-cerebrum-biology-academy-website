@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
@@ -66,6 +67,7 @@ const faqs = [
 export default function ModernSchoolDelhiPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="neet-coaching-modern-school-delhi" />
       <LocalitySchema
         locality="Delhi"
         slug="neet-coaching-modern-school-delhi"

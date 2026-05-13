@@ -1,3 +1,4 @@
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 'use client'
 
 import Link from 'next/link'
@@ -195,282 +196,285 @@ const faqs = [
 
 export default function NEETCoachingEastDelhiPage() {
   return (
-    <main className="min-h-screen">
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'EducationalOrganization',
-            name: 'Cerebrum Biology Academy - NEET Coaching for East Delhi',
-            description:
-              'Best NEET coaching for East Delhi students. Expert faculty, small batches, 98% success rate.',
-            url: 'https://cerebrumbiologyacademy.com/neet-coaching-east-delhi',
-            telephone: '+91-8826444334',
-            areaServed: [
-              'Laxmi Nagar',
-              'Preet Vihar',
-              'Mayur Vihar',
-              'Patparganj',
-              'IP Extension',
-              'Karkardooma',
-              'Anand Vihar',
-            ],
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'New Delhi',
-              addressRegion: 'Delhi',
-              addressCountry: 'IN',
-            },
-          }),
-        }}
-      />
-
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-green-800 py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
-            <span className="inline-block px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
-              #1 NEET Coaching for East Delhi Students
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Best NEET Coaching in{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-400">
-                East Delhi
+    <>
+      <DelhiAreaSchema pageSlug="neet-coaching-east-delhi" />
+      <main className="min-h-screen">
+        {/* Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'EducationalOrganization',
+              name: 'Cerebrum Biology Academy - NEET Coaching for East Delhi',
+              description:
+                'Best NEET coaching for East Delhi students. Expert faculty, small batches, 98% success rate.',
+              url: 'https://cerebrumbiologyacademy.com/neet-coaching-east-delhi',
+              telephone: '+91-8826444334',
+              areaServed: [
+                'Laxmi Nagar',
+                'Preet Vihar',
+                'Mayur Vihar',
+                'Patparganj',
+                'IP Extension',
+                'Karkardooma',
+                'Anand Vihar',
+              ],
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'New Delhi',
+                addressRegion: 'Delhi',
+                addressCountry: 'IN',
+              },
+            }),
+          }}
+        />
+  
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-green-800 py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
+              <span className="inline-block px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
+                #1 NEET Coaching for East Delhi Students
               </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Expert NEET preparation for students from Laxmi Nagar, Preet Vihar, Mayur Vihar, and
-              all East Delhi localities. AIIMS faculty, small batches, 98% success rate.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="primary" asChild>
-                <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20East.%20Please%20share%20available%20timings."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Play className="w-5 h-5 mr-2" />
-                  Book FREE Demo Class
-                </Link>
-              </Button>
-              <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+918826444334">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call: 8826-444-334
-                </a>
-              </Button>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                Best NEET Coaching in{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-400">
+                  East Delhi
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Expert NEET preparation for students from Laxmi Nagar, Preet Vihar, Mayur Vihar, and
+                all East Delhi localities. AIIMS faculty, small batches, 98% success rate.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="primary" asChild>
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20East.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Play className="w-5 h-5 mr-2" />
+                    Book FREE Demo Class
+                  </Link>
+                </Button>
+                <Button size="lg" variant="secondary" asChild>
+                  <a href="tel:+918826444334">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call: 8826-444-334
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-12 bg-white border-b">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className="text-center p-6 rounded-xl bg-gray-50 animate-fadeInUp"
-              >
-                <stat.icon className="w-8 h-8 mx-auto mb-3 text-green-600" />
-                <div className="text-3xl font-bold text-navy-900">{stat.value}</div>
-                <div className="text-gray-600 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <AreasServedSection cityName="East Delhi" areas={areasForAccordion} />
-
-      {/* Why Choose Us Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-              Why East Delhi Students Choose Cerebrum
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Better than Laxmi Nagar coaching centers with personalized attention and proven
-              results
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="bg-gray-50 rounded-xl p-6 text-center animate-fadeInUp"
-              >
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="font-semibold text-navy-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Section */}
-      <section className="py-16 bg-navy-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Cerebrum vs Laxmi Nagar Coaching Centers
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              See why students are choosing quality over convenience
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl overflow-hidden">
-              <div className="grid grid-cols-3 bg-gray-100 p-4 font-semibold">
-                <div className="text-gray-600">Feature</div>
-                <div className="text-green-600 text-center">Cerebrum Academy</div>
-                <div className="text-gray-600 text-center">Laxmi Nagar Centers</div>
-              </div>
-              {[
-                ['Batch Size', '15-20 Students', '50-100 Students'],
-                ['Faculty', 'AIIMS/MAMC Doctors', 'Mixed Quality'],
-                ['Success Rate', '98%', '60-70%'],
-                ['Personal Attention', 'Guaranteed', 'Rare'],
-                ['Doubt Sessions', 'Daily 1-on-1', 'Weekly Group'],
-                ['Study Material', 'Premium + Digital', 'Basic'],
-              ].map(([feature, cerebrum, others], index) => (
+        </section>
+  
+        {/* Stats Section */}
+        <section className="py-12 bg-white border-b">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
                 <div
-                  key={feature}
-                  className={`grid grid-cols-3 p-4 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                  key={stat.label}
+                  className="text-center p-6 rounded-xl bg-gray-50 animate-fadeInUp"
                 >
-                  <div className="text-gray-700">{feature}</div>
-                  <div className="text-center text-green-600 font-medium flex items-center justify-center gap-2">
-                    <CheckCircle className="w-4 h-4" /> {cerebrum}
-                  </div>
-                  <div className="text-center text-gray-500">{others}</div>
+                  <stat.icon className="w-8 h-8 mx-auto mb-3 text-green-600" />
+                  <div className="text-3xl font-bold text-navy-900">{stat.value}</div>
+                  <div className="text-gray-600 text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-              Success Stories from East Delhi
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Hear from students who made the journey from East Delhi to medical colleges
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.name}
-                className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
-              >
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4 italic">&quot;{testimonial.quote}&quot;</p>
-                <div className="border-t pt-4">
-                  <div className="font-semibold text-navy-900">{testimonial.name}</div>
-                  <div className="text-sm text-gray-500 flex items-center gap-2">
-                    <MapPin className="w-3 h-3" /> {testimonial.area}
-                  </div>
-                  <div className="text-sm text-green-600 font-medium mt-1">{testimonial.score}</div>
-                  <div className="text-sm text-gray-600">{testimonial.college}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-              FAQs for East Delhi Students
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
-                <h3 className="font-semibold text-navy-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* FAQ Schema */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: faqs.map((faq) => ({
-                  '@type': 'Question',
-                  name: faq.question,
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: faq.answer,
-                  },
-                })),
-              }),
-            }}
-          />
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600">
-        <div className="container mx-auto px-4 text-center">
-          <div className="animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Start Your NEET Journey?
-            </h2>
-            <p className="text-green-100 mb-8 max-w-2xl mx-auto">
-              Join 15,000+ successful students from East Delhi. Book your FREE demo class today!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20East.%20Please%20share%20available%20timings."
-                  target="_blank"
-                  rel="noopener noreferrer"
+        </section>
+  
+        <AreasServedSection cityName="East Delhi" areas={areasForAccordion} />
+  
+        {/* Why Choose Us Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 animate-fadeInUp">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+                Why East Delhi Students Choose Cerebrum
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Better than Laxmi Nagar coaching centers with personalized attention and proven
+                results
+              </p>
+            </div>
+  
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature, index) => (
+                <div
+                  key={feature.title}
+                  className="bg-gray-50 rounded-xl p-6 text-center animate-fadeInUp"
                 >
-                  Book FREE Demo Class
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-white text-white hover:bg-white hover:text-green-600"
-                asChild
-              >
-                <a href="tel:+918826444334">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now: 8826-444-334
-                </a>
-              </Button>
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="font-semibold text-navy-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-  )
+        </section>
+  
+        {/* Comparison Section */}
+        <section className="py-16 bg-navy-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 animate-fadeInUp">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Cerebrum vs Laxmi Nagar Coaching Centers
+              </h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                See why students are choosing quality over convenience
+              </p>
+            </div>
+  
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-2xl overflow-hidden">
+                <div className="grid grid-cols-3 bg-gray-100 p-4 font-semibold">
+                  <div className="text-gray-600">Feature</div>
+                  <div className="text-green-600 text-center">Cerebrum Academy</div>
+                  <div className="text-gray-600 text-center">Laxmi Nagar Centers</div>
+                </div>
+                {[
+                  ['Batch Size', '15-20 Students', '50-100 Students'],
+                  ['Faculty', 'AIIMS/MAMC Doctors', 'Mixed Quality'],
+                  ['Success Rate', '98%', '60-70%'],
+                  ['Personal Attention', 'Guaranteed', 'Rare'],
+                  ['Doubt Sessions', 'Daily 1-on-1', 'Weekly Group'],
+                  ['Study Material', 'Premium + Digital', 'Basic'],
+                ].map(([feature, cerebrum, others], index) => (
+                  <div
+                    key={feature}
+                    className={`grid grid-cols-3 p-4 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                  >
+                    <div className="text-gray-700">{feature}</div>
+                    <div className="text-center text-green-600 font-medium flex items-center justify-center gap-2">
+                      <CheckCircle className="w-4 h-4" /> {cerebrum}
+                    </div>
+                    <div className="text-center text-gray-500">{others}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        {/* Testimonials Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 animate-fadeInUp">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+                Success Stories from East Delhi
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Hear from students who made the journey from East Delhi to medical colleges
+              </p>
+            </div>
+  
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.name}
+                  className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
+                >
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4 italic">&quot;{testimonial.quote}&quot;</p>
+                  <div className="border-t pt-4">
+                    <div className="font-semibold text-navy-900">{testimonial.name}</div>
+                    <div className="text-sm text-gray-500 flex items-center gap-2">
+                      <MapPin className="w-3 h-3" /> {testimonial.area}
+                    </div>
+                    <div className="text-sm text-green-600 font-medium mt-1">{testimonial.score}</div>
+                    <div className="text-sm text-gray-600">{testimonial.college}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+  
+        {/* FAQ Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 animate-fadeInUp">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+                FAQs for East Delhi Students
+              </h2>
+            </div>
+  
+            <div className="max-w-3xl mx-auto space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
+                  <h3 className="font-semibold text-navy-900 mb-2">{faq.question}</h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+  
+            {/* FAQ Schema */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'FAQPage',
+                  mainEntity: faqs.map((faq) => ({
+                    '@type': 'Question',
+                    name: faq.question,
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: faq.answer,
+                    },
+                  })),
+                }),
+              }}
+            />
+          </div>
+        </section>
+  
+        {/* CTA Section */}
+        <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600">
+          <div className="container mx-auto px-4 text-center">
+            <div className="animate-fadeInUp">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Start Your NEET Journey?
+              </h2>
+              <p className="text-green-100 mb-8 max-w-2xl mx-auto">
+                Join 15,000+ successful students from East Delhi. Book your FREE demo class today!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="secondary" asChild>
+                  <Link
+                    href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20East.%20Please%20share%20available%20timings."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book FREE Demo Class
+                  </Link>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-transparent border-white text-white hover:bg-white hover:text-green-600"
+                  asChild
+                >
+                  <a href="tel:+918826444334">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Now: 8826-444-334
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+    )
 }

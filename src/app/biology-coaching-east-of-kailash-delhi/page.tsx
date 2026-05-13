@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
 export default function BiologyCoachingEOKPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="biology-coaching-east-of-kailash-delhi" />
       <LocalitySchema
         locality="East of Kailash"
         slug="biology-coaching-east-of-kailash-delhi"

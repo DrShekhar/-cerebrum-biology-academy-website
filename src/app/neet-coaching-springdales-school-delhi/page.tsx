@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import { BestVerticalLanding } from '@/components/seo/BestVerticalLanding'
 import { buildNEETFeederSchoolConfig } from '@/data/neet-feeder-schools'
 
@@ -25,5 +26,10 @@ export const metadata: Metadata = {
 }
 
 export default function FeederSchoolPage() {
-  return <BestVerticalLanding config={buildNEETFeederSchoolConfig('springdales-school-delhi')} />
+  return (
+    <>
+      <DelhiAreaSchema pageSlug="neet-coaching-springdales-school-delhi" />
+      <BestVerticalLanding config={buildNEETFeederSchoolConfig('springdales-school-delhi')} />
+    </>
+  )
 }

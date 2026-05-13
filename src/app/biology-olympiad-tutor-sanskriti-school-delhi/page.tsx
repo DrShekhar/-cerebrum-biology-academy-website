@@ -1,3 +1,4 @@
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 /**
  * /biology-olympiad-tutor-sanskriti-school-delhi
  *
@@ -39,6 +40,7 @@ export default function Page() {
   if (!school) notFound()
   return (
     <>
+      <DelhiAreaSchema pageSlug="biology-olympiad-tutor-sanskriti-school-delhi" />
       <IndiaOlympiadSchoolSchemas school={school} />
       <IndiaOlympiadSchoolTemplate school={school} />
     </>

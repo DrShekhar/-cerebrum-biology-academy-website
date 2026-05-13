@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
 export default function BiologyCoachingVasantViharPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="biology-coaching-vasant-vihar-delhi" />
       <LocalitySchema
         locality="Vasant Vihar"
         slug="biology-coaching-vasant-vihar-delhi"

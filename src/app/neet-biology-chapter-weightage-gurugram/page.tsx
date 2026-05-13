@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const quickAnswer = {
   question: 'What is the chapter-wise weightage for NEET Biology 2026?',
   answer:
-    'NEET Biology has 90 questions worth 360 marks. Top weightage chapters: Human Physiology (20%, 18 Qs), Genetics & Evolution (18%, 16 Qs), Plant Physiology (12%, 11 Qs), Cell Biology (10%, 9 Qs), Ecology (10%, 9 Qs). Class 11 contributes 40% and Class 12 contributes 60% of questions.',
+    'NEET Biology has 90 questions worth 360 marks. Top weightage chapters: Human Physiology (20%, 18 Qs), Genetics & Evolution (18%, 16 Qs), Plant Physiology (14%, 13 Qs), Cell Biology (12%, 11 Qs), Ecology (12%, 11 Qs). Together these top 5 chapters = 76% of biology marks. Class 11 contributes 40% and Class 12 contributes 60% of questions.',
 }
 
 const chapterWeightage = [
@@ -51,25 +51,25 @@ const chapterWeightage = [
   {
     chapter: 'Plant Physiology',
     class: '11',
+    weightage: 14,
+    questions: 13,
+    marks: 52,
+    priority: 'High',
+  },
+  {
+    chapter: 'Cell Biology & Cell Division',
+    class: '11',
     weightage: 12,
     questions: 11,
     marks: 44,
     priority: 'High',
   },
   {
-    chapter: 'Cell Biology & Cell Division',
-    class: '11',
-    weightage: 10,
-    questions: 9,
-    marks: 36,
-    priority: 'High',
-  },
-  {
     chapter: 'Ecology & Environment',
     class: '12',
-    weightage: 10,
-    questions: 9,
-    marks: 36,
+    weightage: 12,
+    questions: 11,
+    marks: 44,
     priority: 'High',
   },
   { chapter: 'Reproduction', class: '12', weightage: 9, questions: 8, marks: 32, priority: 'High' },
@@ -145,7 +145,7 @@ const faqs = [
   {
     question: 'Which chapters have highest weightage in NEET Biology?',
     answer:
-      'Human Physiology (20%), Genetics & Evolution (18%), and Plant Physiology (12%) together contribute 50% of NEET Biology marks. Focus maximum time on these three areas.',
+      'Human Physiology (20%), Genetics & Evolution (18%), and Plant Physiology (14%) together contribute 52% of NEET Biology marks. Add Cell Biology (12%) and Ecology (12%) and you cover 76% of biology marks. Focus maximum time on these five chapters.',
   },
   {
     question: 'Is Class 11 or Class 12 Biology more important for NEET?',

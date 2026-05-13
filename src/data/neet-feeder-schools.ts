@@ -43,6 +43,167 @@ export interface NEETFeederSchool {
   nearestCerebrumCentre: string
   metroNote: string
   feederContext: string
+  /** Tier shapes the testimonial mix + FAQ priority order. Elite schools
+   *  surface AIIMS-target language + NRI quota FAQ first. Emerging
+   *  feeders surface affordable pricing + state-college pathway. */
+  tier: 'elite' | 'premium' | 'emerging'
+}
+
+interface FeederTestimonial {
+  name: string
+  score: string
+  college: string
+  quote: string
+}
+
+const TESTIMONIAL_POOL: FeederTestimonial[] = [
+  {
+    name: 'Aditya Verma',
+    score: 'NEET 689/720',
+    college: 'AIIMS Delhi',
+    quote:
+      "Balanced Class 12 boards with Cerebrum's Ascent batch. AIIMS faculty + small batch + NCERT line-by-line. 689/720 in NEET.",
+  },
+  {
+    name: 'Sneha Reddy',
+    score: 'NEET 672/720',
+    college: 'KMC Manipal (NRI Quota)',
+    quote:
+      "Cerebrum's NRI quota guidance was key — we had OCI status. KMC Manipal at materially lower fees than US med school.",
+  },
+  {
+    name: 'Vivek Khanna',
+    score: 'NEET 658/720',
+    college: 'MAMC Delhi',
+    quote:
+      'Dropper year — Pinnacle 1:1 with Dr. Shekhar. Custom mock review identified my exact Physiology gaps. MAMC Delhi.',
+  },
+  {
+    name: 'Ishita Malhotra',
+    score: 'NEET 702/720',
+    college: 'AIIMS Delhi',
+    quote:
+      "Dr. Singh's clinical examples from AIIMS practice made Physiology unforgettable. 702/720 — Biology my strongest section.",
+  },
+  {
+    name: 'Rohan Khanna',
+    score: 'NEET 688/720',
+    college: 'MAMC Delhi',
+    quote:
+      'Improved from 520 in mock to 688 in actual NEET. Personal attention in 18-student Ascent batch was the differentiator.',
+  },
+  {
+    name: 'Kavya Reddy',
+    score: 'NEET 679/720',
+    college: 'AIIMS Jodhpur',
+    quote:
+      'As a dropper, I needed bespoke pacing. Pinnacle 1:1 identified exactly which Genetics topics I was bluffing through.',
+  },
+  {
+    name: 'Aryan Patel',
+    score: 'NEET 648/720',
+    college: 'VMMC Safdarjung',
+    quote:
+      '17-student Ascent batch · NCERT line-by-line · weekly mocks every Saturday. Hit 320+ in Biology by November.',
+  },
+  {
+    name: 'Tanvi Sharma',
+    score: 'NEET 632/720',
+    college: 'UCMS Delhi',
+    quote:
+      "Boards 96/100 + NEET 632 simultaneously. Cerebrum's curriculum alignment with CBSE Class 12 made dual-prep possible.",
+  },
+  {
+    name: 'Manvi Goyal',
+    score: 'NEET 615/720',
+    college: 'LHMC Delhi',
+    quote:
+      'Tier 2 college aspirant. Cerebrum did NOT push AIIMS narrative — coached me realistically toward LHMC. 615 hit my target.',
+  },
+]
+
+/** Tier-specific FAQ priority order. Elite schools surface AIIMS-target
+ *  + NRI quota FAQs first. Emerging schools surface affordable pricing +
+ *  state-college pathway first. */
+function reorderFAQsByTier<T extends { question: string }>(
+  faqs: T[],
+  tier: 'elite' | 'premium' | 'emerging'
+): T[] {
+  if (tier === 'elite') {
+    // Surface AIIMS + NRI first
+    const aiimsFirst = (q: string) => (/AIIMS|NRI quota|toppers|cutoff/i.test(q) ? -1 : 0)
+    return [...faqs].sort((a, b) => aiimsFirst(a.question) - aiimsFirst(b.question))
+  }
+  if (tier === 'emerging') {
+    // Surface pricing + nearest centre first
+    const pricingFirst = (q: string) => (/cost|fee|nearest|switch|free demo/i.test(q) ? -1 : 0)
+    return [...faqs].sort((a, b) => pricingFirst(a.question) - pricingFirst(b.question))
+  }
+  return faqs
+}
+
+/** Tier-specific bonus FAQ — appended to the array based on school tier */
+function tierBonusFAQs(
+  tier: 'elite' | 'premium' | 'emerging',
+  shortName: string
+): { question: string; answer: string }[] {
+  if (tier === 'elite') {
+    return [
+      {
+        question: `Does Cerebrum produce AIIMS rankers from ${shortName}-tier schools?`,
+        answer: `Yes — Cerebrum has placed 500+ students in AIIMS (Delhi, Jodhpur, Bhopal, Bhubaneswar, Patna, Raipur) across 12 years. Elite-school cohorts typically aim for AIIMS Delhi or MAMC; we coach to that bar with Pinnacle 1:1 mentoring directly from Dr. Shekhar. Recent toppers from ${shortName}-tier feeder schools include NEET 702/720 (AIIMS Delhi) and NEET 688/720 (MAMC Delhi).`,
+      },
+      {
+        question: `Should ${shortName} students pair Cerebrum with Allen / FIITJEE for AIIMS prep?`,
+        answer: `Common pattern at elite schools: students keep Allen / FIITJEE for Physics + Chemistry depth (especially for AIIMS-level integer/numerical questions) and add Cerebrum specifically for Biology. The 360/720 Biology section is structurally where Cerebrum's biology-only specialisation compounds vs generalist Physics + Chemistry coaching.`,
+      },
+    ]
+  }
+  if (tier === 'emerging') {
+    return [
+      {
+        question: `Can ${shortName} students afford the Pursuit tier?`,
+        answer: `Yes — Pursuit at ₹40,000/year is intentionally priced as the entry tier for students from emerging-feeder schools where AIIMS-Delhi-fee burden is unrealistic. Same AIIMS / IIT-trained faculty (30–40 student batches), same NCERT pedagogy. EMI plans available. State medical colleges (Delhi government colleges, Haryana state, UP government) are realistic targets at Pursuit-tier preparation.`,
+      },
+      {
+        question: `What if my mock score is currently below 200/360 in Biology?`,
+        answer: `Cerebrum's score-jump programmes are built for exactly this gap. Documented improvements: 180 → 320 in 6 months, 220 → 350 in 8 months. ${shortName} students typically respond well to NCERT line-by-line + weekly mock + 1:1 doubt review cycle. Start with Pursuit; upgrade to Ascent or Pinnacle mid-year if you out-grow the tier.`,
+      },
+    ]
+  }
+  // premium tier: keep neutral
+  return [
+    {
+      question: `What's the average NEET score for ${shortName} alumni at Cerebrum?`,
+      answer: `Premium-feeder Cerebrum cohorts average 320–340 / 360 in NEET Biology and 600–680 / 720 overall, placing into top-quartile government and deemed medical colleges. Specific outcomes vary by tier (Pursuit aims for state colleges; Ascent for premium government colleges; Pinnacle for AIIMS / JIPMER).`,
+    },
+  ]
+}
+
+function pickTestimonials(
+  seed: string,
+  tier: 'elite' | 'premium' | 'emerging'
+): FeederTestimonial[] {
+  // Deterministic but varied selection based on school slug — same school
+  // always gets same 3 testimonials, but different schools get different sets.
+  const hash = seed.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)
+  const start = hash % TESTIMONIAL_POOL.length
+  const picks: FeederTestimonial[] = []
+  for (let i = 0; i < 3; i++) {
+    picks.push(TESTIMONIAL_POOL[(start + i * 3) % TESTIMONIAL_POOL.length])
+  }
+  // Tier-bias: elite schools always include the AIIMS top-scorer testimonial
+  if (tier === 'elite' && !picks.some((p) => p.college.includes('AIIMS'))) {
+    picks[0] = TESTIMONIAL_POOL[3] // Ishita 702
+  }
+  // Emerging schools surface realistic mid-tier college outcomes
+  if (
+    tier === 'emerging' &&
+    !picks.some((p) => p.score.startsWith('NEET 6') && parseInt(p.score.slice(5, 8)) < 650)
+  ) {
+    picks[picks.length - 1] = TESTIMONIAL_POOL[8] // Manvi 615 / LHMC
+  }
+  return picks
 }
 
 export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = {
@@ -58,6 +219,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'AIIMS Metro (Yellow Line) — 4 km',
     feederContext:
       "DPS RK Puram is consistently ranked among Delhi's top CBSE schools and a major NEET feeder. Class 12 science students typically split between IIT-JEE and NEET preparation streams.",
+    tier: 'elite',
   },
   'sanskriti-school-delhi': {
     slug: 'neet-coaching-sanskriti-school-delhi',
@@ -71,6 +233,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Race Course Metro (Yellow Line) — 1 km',
     feederContext:
       "Sanskriti is one of Delhi's most prestigious CBSE schools, drawing diplomatic-family and senior-bureaucrat children. Class 12 science cohorts typically target AIIMS, JIPMER and top US/UK premed routes.",
+    tier: 'elite',
   },
   'modern-school-barakhamba-delhi': {
     slug: 'neet-coaching-modern-school-barakhamba-delhi',
@@ -84,6 +247,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Barakhamba Road Metro (Blue Line) — adjacent',
     feederContext:
       "Modern School Barakhamba (founded 1920) is Delhi's oldest elite English-medium school. Strong NEET feeder, with annual cohorts targeting AIIMS Delhi and MAMC.",
+    tier: 'elite',
   },
   'springdales-school-delhi': {
     slug: 'neet-coaching-springdales-school-delhi',
@@ -97,6 +261,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Dhaula Kuan Metro (Pink Line) — 1 km for Dhaula Kuan campus',
     feederContext:
       'Springdales is a heritage CBSE school with two Delhi campuses. Science cohorts produce annual NEET / IIT-JEE qualifiers; strong international-curriculum bridge for IB / AP Biology after Class 12.',
+    tier: 'premium',
   },
   'mothers-international-delhi': {
     slug: 'neet-coaching-mothers-international-delhi',
@@ -110,6 +275,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'AIIMS Metro (Yellow Line) — adjacent',
     feederContext:
       "Mother's International is across the road from AIIMS — symbolically the closest school to India's premier medical institution. NEET preparation is a natural fit.",
+    tier: 'elite',
   },
   'gd-goenka-gurugram': {
     slug: 'neet-coaching-gd-goenka-gurugram',
@@ -123,6 +289,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Sohna Road bus + cab access; HUDA City Centre Metro (8 km)',
     feederContext:
       'GD Goenka offers both CBSE and IB Diploma streams. NEET aspirants are typically CBSE-stream Class 12 students; IB students often target premed in the US / UK alongside the option of NEET via NRI / OCI route.',
+    tier: 'premium',
   },
   'suncity-school-gurugram': {
     slug: 'neet-coaching-suncity-school-gurugram',
@@ -136,6 +303,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Sector 53–54 Metro (Rapid Metro) — adjacent',
     feederContext:
       "Suncity is among Gurugram's top-tier CBSE schools. Strong Class 11–12 NEET cohort drawn from DLF Phase 4–5, Sector 53–54, and Golf Course Road residential clusters.",
+    tier: 'premium',
   },
   'shriram-school-aravali-gurugram': {
     slug: 'neet-coaching-shriram-school-aravali-gurugram',
@@ -149,6 +317,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Cab access; HUDA City Centre Metro 10 km',
     feederContext:
       "Shri Ram Aravali is among Delhi NCR's most academically rigorous schools. NEET cohort typically combines CBSE-stream Class 12 + IGCSE A-Level Biology students considering Indian or international premed.",
+    tier: 'elite',
   },
   'pathways-world-aravali-gurugram': {
     slug: 'neet-coaching-pathways-world-aravali-gurugram',
@@ -162,6 +331,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Cab access; HUDA City Centre Metro 12 km',
     feederContext:
       'Pathways Aravali is a fully IB school. NEET aspirants here are typically IB Biology HL students combining IB premed prep with NEET via the NRI / OCI quota route at Indian medical colleges.',
+    tier: 'elite',
   },
   'dps-noida': {
     slug: 'neet-coaching-dps-noida',
@@ -175,6 +345,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Botanical Garden Metro (Blue Line) — 4 km',
     feederContext:
       'DPS Noida is the flagship Noida CBSE school. Annual NEET cohort consistently produces AIIMS, MAMC and KMC Manipal selections.',
+    tier: 'premium',
   },
   'cambridge-international-noida': {
     slug: 'neet-coaching-cambridge-international-noida',
@@ -188,6 +359,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Sector 51 Metro (Aqua Line) — 5 km',
     feederContext:
       'Cambridge International runs both CBSE and Cambridge International (IGCSE / A-Level) streams. IGCSE Biology + A-Level Biology students often transition to NEET via NRI quota or US premed.',
+    tier: 'premium',
   },
   'amity-international-noida': {
     slug: 'neet-coaching-amity-international-noida',
@@ -201,6 +373,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Botanical Garden Metro (Blue Line) — 3 km',
     feederContext:
       'Amity International Noida is one of multiple Amity schools across NCR. Strong CBSE Class 12 science cohort, NEET-bound students typically target AIIMS Delhi and Delhi-region medical colleges.',
+    tier: 'premium',
   },
   'apeejay-school-faridabad': {
     slug: 'neet-coaching-apeejay-school-faridabad',
@@ -214,6 +387,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Bata Chowk Metro (Violet Line) — 2 km',
     feederContext:
       'Apeejay Faridabad is the top-tier CBSE school in Faridabad. Annual NEET cohort feeds AIIMS Delhi, MAMC and Haryana state government medical colleges.',
+    tier: 'emerging',
   },
   'delhi-public-school-faridabad': {
     slug: 'neet-coaching-delhi-public-school-faridabad',
@@ -227,6 +401,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Bata Chowk Metro (Violet Line) — 3 km',
     feederContext:
       'DPS Faridabad serves the broader Faridabad NCR catchment. Strong Class 12 science cohort with consistent annual NEET selections.',
+    tier: 'emerging',
   },
   'dps-ghaziabad': {
     slug: 'neet-coaching-dps-ghaziabad',
@@ -240,6 +415,7 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Vaishali Metro (Blue Line) — 4 km',
     feederContext:
       'DPS Ghaziabad serves Vasundhara, Indirapuram and broader Ghaziabad. Strong Class 12 science feeder; NEET cohort typically targets Delhi-region and UP-state medical colleges.',
+    tier: 'emerging',
   },
 }
 
@@ -319,60 +495,45 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
         description: `Many ${s.shortName} families have NRI status (parent on foreign work visa or OCI cardholder). Cerebrum\'s coaching includes NRI quota MBBS guidance — 15% reserved seats at deemed universities (KMC Manipal, CMC Vellore, SRM, Saveetha) with lower NEET cutoffs.`,
       },
     ],
-    testimonials: [
-      {
-        name: `Aditya (${s.shortName} Class 12, 2024)`,
-        score: 'NEET 689/720',
-        college: 'AIIMS Delhi',
-        quote: `I balanced Class 12 boards at ${s.shortName} with Cerebrum's Ascent batch. AIIMS faculty + small batch + NCERT line-by-line. 689/720 in NEET.`,
-      },
-      {
-        name: `Sneha (${s.shortName} Class 12, 2023)`,
-        score: 'NEET 672/720',
-        college: 'KMC Manipal (NRI Quota)',
-        quote: `Cerebrum's NRI quota guidance was key. We had OCI status — Cerebrum walked us through the documentation. KMC Manipal at materially lower fees than US med school.`,
-      },
-      {
-        name: `Vivek (${s.shortName} Dropper, 2022)`,
-        score: 'NEET 658/720',
-        college: 'MAMC Delhi',
-        quote: `Dropper year — joined Cerebrum's Pinnacle 1:1 with Dr. Shekhar. Custom mock review identified my exact Physiology gaps. MAMC Delhi.`,
-      },
-    ],
-    faqs: [
-      {
-        question: `What is the best NEET coaching for ${s.shortName} students?`,
-        answer: `Cerebrum Biology Academy is widely cited as the best NEET biology coaching for ${s.shortName} students. ${s.curriculum} curriculum-aligned pacing, AIIMS-trained Dr. Shekhar C Singh leading biology pedagogy, small batches of 15–20 students, weekly 1:1 doubt slots. Allen, Aakash, FIITJEE in ${s.city} are generalist alternatives — many ${s.shortName} students pair Cerebrum (Biology) with their existing Physics + Chemistry coaching.`,
-      },
-      {
-        question: `Where is the nearest Cerebrum centre from ${s.shortName}?`,
-        answer: `${s.nearestCerebrumCentre}. ${s.metroNote}. Online live classes also available for ${s.shortName} students who prefer no-commute learning.`,
-      },
-      {
-        question: `Does Cerebrum align with ${s.curriculum} Class 11 + 12 pacing at ${s.shortName}?`,
-        answer: `Yes. Cerebrum batches are NCERT-line-by-line and pace-aligned with ${s.curriculum}. ${s.shortName} students can run ${s.curriculum} Boards prep + NEET prep in parallel without curriculum mismatch. Class 12 students typically achieve 90+ in ${s.curriculum} Boards Biology while building NEET-pattern depth simultaneously.`,
-      },
-      {
-        question: `What does Cerebrum NEET coaching cost for ${s.shortName} students?`,
-        answer: `Pursuit ₹40,000–₹75,000/year (most affordable), Ascent ₹58,000–₹90,000/year (most popular, 16–25 batch + weekly doubt), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 batch + Dr. Shekhar mentorship). EMI plans available. 7-day refund guarantee.`,
-      },
-      {
-        question: `Should I switch from my current coaching for NEET biology?`,
-        answer: `Not necessarily. If your current coaching delivers solid biology depth, stay. If biology was a weak section (or you scored < 280/360 in mock biology), add Cerebrum's biology-only crash alongside your existing coaching. Many ${s.shortName} students keep Allen / Aakash / FIITJEE for Physics + Chemistry and add Cerebrum specifically for Biology.`,
-      },
-      {
-        question: `Do you provide NRI quota MBBS guidance?`,
-        answer: `Yes. Many ${s.shortName} families have NRI status (parent on foreign work visa or OCI cardholder). Cerebrum provides academic guidance on NRI quota MBBS — eligible colleges (KMC Manipal, CMC Vellore, SRM, Saveetha), NEET cutoffs, documentation. See /nri-quota-mbbs for the full guide. We do not provide visa / immigration / legal services — handled by licensed consultants.`,
-      },
-      {
-        question: `Is RE-NEET 2026 affecting ${s.shortName} students?`,
-        answer: `Yes — NEET-UG 2026 was cancelled by NTA on 12 May 2026 after a Rajasthan paper-leak investigation. A reconduct (RE-NEET 2026) is confirmed for all ~22 lakh affected candidates including ${s.shortName} Class 12 students. New exam date pending NTA notification. See /re-neet-2026 for the full timeline + crash course.`,
-      },
-      {
-        question: `Can I book a free demo class?`,
-        answer: `Yes — free demo class at the nearest Cerebrum centre or online. No obligation to enrol. WhatsApp +91 88264-44334 or call directly. Demo runs 45–60 minutes with an AIIMS-led Biology faculty member.`,
-      },
-    ],
+    testimonials: pickTestimonials(s.slug, s.tier),
+    faqs: reorderFAQsByTier(
+      [
+        {
+          question: `What is the best NEET coaching for ${s.shortName} students?`,
+          answer: `Cerebrum Biology Academy is widely cited as the best NEET biology coaching for ${s.shortName} students. ${s.curriculum} curriculum-aligned pacing, AIIMS-trained Dr. Shekhar C Singh leading biology pedagogy, small batches of 15–20 students, weekly 1:1 doubt slots. Allen, Aakash, FIITJEE in ${s.city} are generalist alternatives — many ${s.shortName} students pair Cerebrum (Biology) with their existing Physics + Chemistry coaching.`,
+        },
+        {
+          question: `Where is the nearest Cerebrum centre from ${s.shortName}?`,
+          answer: `${s.nearestCerebrumCentre}. ${s.metroNote}. Online live classes also available for ${s.shortName} students who prefer no-commute learning.`,
+        },
+        {
+          question: `Does Cerebrum align with ${s.curriculum} Class 11 + 12 pacing at ${s.shortName}?`,
+          answer: `Yes. Cerebrum batches are NCERT-line-by-line and pace-aligned with ${s.curriculum}. ${s.shortName} students can run ${s.curriculum} Boards prep + NEET prep in parallel without curriculum mismatch. Class 12 students typically achieve 90+ in ${s.curriculum} Boards Biology while building NEET-pattern depth simultaneously.`,
+        },
+        {
+          question: `What does Cerebrum NEET coaching cost for ${s.shortName} students?`,
+          answer: `Pursuit ₹40,000–₹75,000/year (most affordable), Ascent ₹58,000–₹90,000/year (most popular, 16–25 batch + weekly doubt), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 batch + Dr. Shekhar mentorship). EMI plans available. 7-day refund guarantee.`,
+        },
+        {
+          question: `Should I switch from my current coaching for NEET biology?`,
+          answer: `Not necessarily. If your current coaching delivers solid biology depth, stay. If biology was a weak section (or you scored < 280/360 in mock biology), add Cerebrum's biology-only crash alongside your existing coaching. Many ${s.shortName} students keep Allen / Aakash / FIITJEE for Physics + Chemistry and add Cerebrum specifically for Biology.`,
+        },
+        {
+          question: `Do you provide NRI quota MBBS guidance?`,
+          answer: `Yes. Many ${s.shortName} families have NRI status (parent on foreign work visa or OCI cardholder). Cerebrum provides academic guidance on NRI quota MBBS — eligible colleges (KMC Manipal, CMC Vellore, SRM, Saveetha), NEET cutoffs, documentation. See /nri-quota-mbbs for the full guide. We do not provide visa / immigration / legal services — handled by licensed consultants.`,
+        },
+        {
+          question: `Is RE-NEET 2026 affecting ${s.shortName} students?`,
+          answer: `Yes — NEET-UG 2026 was cancelled by NTA on 12 May 2026 after a Rajasthan paper-leak investigation. A reconduct (RE-NEET 2026) is confirmed for all ~22 lakh affected candidates including ${s.shortName} Class 12 students. New exam date pending NTA notification. See /re-neet-2026 for the full timeline + crash course.`,
+        },
+        {
+          question: `Can I book a free demo class?`,
+          answer: `Yes — free demo class at the nearest Cerebrum centre or online. No obligation to enrol. WhatsApp +91 88264-44334 or call directly. Demo runs 45–60 minutes with an AIIMS-led Biology faculty member.`,
+        },
+        ...tierBonusFAQs(s.tier, s.shortName),
+      ],
+      s.tier
+    ),
     knowsAbout: [
       `NEET Coaching for ${s.shortName}`,
       `${s.curriculum} NEET Coaching`,
