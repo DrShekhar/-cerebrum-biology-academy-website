@@ -1,5 +1,5 @@
 import { headers } from 'next/headers'
-import { CheckCircle, Star, MessageCircle } from 'lucide-react'
+import { CheckCircle, Star, MessageCircle, Clock } from 'lucide-react'
 import {
   neetNRIPricingProducts,
   priceUSDForCountry,
@@ -7,6 +7,30 @@ import {
   COUNTRY_TO_NRI_ZONE,
 } from '@/data/neet-nri/pricing-matrix'
 import { sharedCurrencies, currencyForCountry, convertForDisplay } from '@/data/shared/currencies'
+
+/**
+ * Per-country class-timing label. Used to show "Evening EST batches",
+ * "GST batches" etc. on the pricing section based on the visitor's region.
+ */
+const COUNTRY_TIMING_LABEL: Record<string, string> = {
+  US: 'Live classes in US-friendly evening slots — EST · CST · MST · PST',
+  CA: 'Live classes in Canadian evening slots — ET · CT · MT · PT',
+  GB: 'Live classes in UK-friendly evening slots — GMT / BST',
+  UK: 'Live classes in UK-friendly evening slots — GMT / BST',
+  IE: 'Live classes in Ireland-friendly evening slots — GMT / IST (Irish)',
+  AE: 'Live classes in UAE-friendly slots — GST (UTC+4)',
+  SA: 'Live classes in Gulf-friendly slots — AST (UTC+3)',
+  QA: 'Live classes in Gulf-friendly slots — AST (UTC+3)',
+  KW: 'Live classes in Gulf-friendly slots — AST (UTC+3)',
+  BH: 'Live classes in Gulf-friendly slots — AST (UTC+3)',
+  OM: 'Live classes in Gulf-friendly slots — GST (UTC+4)',
+  SG: 'Live classes in Singapore-friendly slots — SGT (UTC+8)',
+  HK: 'Live classes in Hong Kong-friendly slots — HKT (UTC+8)',
+  MY: 'Live classes in Malaysia-friendly slots — MYT (UTC+8)',
+  AU: 'Live classes in Australia-friendly slots — AEST · ACST · AWST',
+  NZ: 'Live classes in NZ-friendly slots — NZST',
+  NP: 'Live classes in Nepal-friendly slots — NPT (UTC+5:45)',
+}
 
 /**
  * Server component. Reads the visitor's country from Vercel edge
@@ -74,6 +98,9 @@ export async function NEETNRIPricingTiers({ forceCountry, hideIndianPrompt }: Pr
   const localCurrency = (country && currencyForCountry(country)) || null
   const isLocalRendered =
     !!localCurrency && localCurrency.code !== 'USD' && localCurrency.code !== 'INR'
+  const timingLabel =
+    (country && COUNTRY_TIMING_LABEL[country]) ||
+    'Live classes in NRI-friendly evening / weekend slots — pick a time that suits your timezone'
 
   return (
     <section
@@ -94,6 +121,10 @@ export async function NEETNRIPricingTiers({ forceCountry, hideIndianPrompt }: Pr
               : 'Local currency conversion shown to detected regions.'}{' '}
             Annual programmes — billed yearly via international card or wire. EMI plans available.
           </p>
+          <div className="mt-4 inline-flex items-center gap-2 bg-green-50 text-green-800 border border-green-200 px-4 py-2 rounded-full text-sm font-medium">
+            <Clock className="w-4 h-4" />
+            {timingLabel}
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">

@@ -30,6 +30,13 @@ interface LocalitySchemaProps {
   whatsapp?: string
   region?: string
   data?: Record<string, unknown>
+  /**
+   * Skip the INR-priced CourseList schema + INR speakable-courses paragraph.
+   * Use on NRI pages where pricing renders in USD/AED/CAD/GBP via
+   * NEETNRIPricingTiers, and you emit a USD Course schema separately via
+   * neetNRIOffersForSchema().
+   */
+  skipCourseList?: boolean
 }
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -42,43 +49,49 @@ export function LocalitySchema({
   pageType = 'coaching',
   coordinates,
   faqs = [],
+  skipCourseList = false,
 }: LocalitySchemaProps) {
   const pageUrl = `${BASE_URL}/${slug}`
 
   // FAQPage schema for Google rich results
-  const faqSchema = faqs.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => {
-      const question = 'question' in faq ? faq.question : faq.q
-      const answer = 'answer' in faq ? faq.answer : faq.a
-      return {
-        '@type': 'Question',
-        name: question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: answer,
-        },
-      }
-    }),
-  } : null
+  const faqSchema =
+    faqs.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((faq) => {
+            const question = 'question' in faq ? faq.question : faq.q
+            const answer = 'answer' in faq ? faq.answer : faq.a
+            return {
+              '@type': 'Question',
+              name: question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: answer,
+              },
+            }
+          }),
+        }
+      : null
 
   // GeoCoordinates schema for local search
-  const geoSchema = coordinates ? {
-    '@context': 'https://schema.org',
-    '@type': 'Place',
-    name: `Cerebrum Biology Academy - ${locality}`,
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: coordinates.lat,
-      longitude: coordinates.lng,
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: locality,
-      addressCountry: 'IN',
-    },
-  } : null
+  const geoSchema = coordinates
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Place',
+        name: `Cerebrum Biology Academy - ${locality}`,
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: coordinates.lat,
+          longitude: coordinates.lng,
+        },
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: locality,
+          addressCountry: 'IN',
+        },
+      }
+    : null
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -386,10 +399,12 @@ export function LocalitySchema({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseListSchema) }}
-      />
+      {!skipCourseList && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(courseListSchema) }}
+        />
+      )}
 
       {geoSchema && (
         <script
@@ -414,17 +429,19 @@ export function LocalitySchema({
           small batches of 25 students maximum.
         </p>
         <p className="speakable-features">
-          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar C Singh, small batch
-          sizes of maximum 25 students, comprehensive study material aligned with NCERT, regular
-          mock tests and performance tracking, unlimited doubt clearing sessions, and flexible batch
-          timings for school students in {locality}.
+          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar C Singh, small
+          batch sizes of maximum 25 students, comprehensive study material aligned with NCERT,
+          regular mock tests and performance tracking, unlimited doubt clearing sessions, and
+          flexible batch timings for school students in {locality}.
         </p>
-        <p className="speakable-courses">
-          Available courses for {locality} students: Foundation Program for Class 11 at 60,000
-          rupees per year, Advanced Program for Class 12 at 75,000 rupees per year, Dropper Batch
-          for NEET repeaters at 65,000 rupees per year, and Crash Course at 25,000 rupees for 3
-          months. Both online and offline modes available. EMI payment options available.
-        </p>
+        {!skipCourseList && (
+          <p className="speakable-courses">
+            Available courses for {locality} students: Foundation Program for Class 11 at 60,000
+            rupees per year, Advanced Program for Class 12 at 75,000 rupees per year, Dropper Batch
+            for NEET repeaters at 65,000 rupees per year, and Crash Course at 25,000 rupees for 3
+            months. Both online and offline modes available. EMI payment options available.
+          </p>
+        )}
         <p className="speakable-cta">
           To join the best NEET biology {pageType} in {locality}, call us at{' '}
           {CONTACT_INFO.phone.primary} or message on WhatsApp for instant response. Book your free

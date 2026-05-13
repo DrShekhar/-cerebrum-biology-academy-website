@@ -79,7 +79,43 @@ export function FloatingWhatsAppButton({
 
   if (!visible) return null
 
-  const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`
+  // Detect city / centre from current URL slug to add location context to
+  // the message (helps centre staff respond faster + gives us attribution).
+  const detectLocationContext = (): string => {
+    if (typeof window === 'undefined') return ''
+    const path = window.location.pathname.toLowerCase()
+    const cityMap: Array<[RegExp, string]> = [
+      [/(gurugram|gurgaon)/, 'Gurugram'],
+      [/noida/, 'Noida'],
+      [/faridabad/, 'Faridabad'],
+      [/ghaziabad/, 'Ghaziabad'],
+      [/(rohini)/, 'Rohini (North Delhi)'],
+      [
+        /(south-extension|green-park|hauz-khas|defence-colony|vasant-vihar|saket|cr-park)/,
+        'South Delhi',
+      ],
+      [/(delhi-ncr|delhi)/, 'Delhi NCR'],
+      [/mumbai/, 'Mumbai'],
+      [/bangalore/, 'Bangalore'],
+      [/hyderabad/, 'Hyderabad'],
+      [/chennai/, 'Chennai'],
+      [/kolkata/, 'Kolkata'],
+      [/pune/, 'Pune'],
+      [/kota/, 'Kota'],
+    ]
+    for (const [re, label] of cityMap) {
+      if (re.test(path)) return label
+    }
+    return ''
+  }
+
+  const locationContext = detectLocationContext()
+  const enriched = locationContext
+    ? `${message}\n\n[Location: ${locationContext} · Page: ${typeof window !== 'undefined' ? window.location.pathname : ''}]`
+    : message
+  // Attribution params for WhatsApp Business API analytics
+  const utm = `utm_source=floating_cta&utm_medium=whatsapp&utm_campaign=${encodeURIComponent(campaign)}${locationContext ? `&utm_content=${encodeURIComponent(locationContext.toLowerCase().replace(/\s+/g, '_'))}` : ''}`
+  const href = `https://wa.me/${number}?text=${encodeURIComponent(enriched)}&${utm}`
 
   return (
     <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 sm:bottom-6 sm:right-6">

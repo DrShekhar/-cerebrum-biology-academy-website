@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -337,6 +338,7 @@ export default function BiologyClassesDelhiPage() {
 
   return (
     <>
+      <DelhiAreaSchema pageSlug="biology-classes-delhi" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

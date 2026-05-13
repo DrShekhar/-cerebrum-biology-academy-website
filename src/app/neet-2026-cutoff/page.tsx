@@ -217,6 +217,25 @@ export default function NEET2026CutoffPage() {
       <BreadcrumbSchema />
 
       <main className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+        {/* RE-NEET 2026 Cancellation Banner */}
+        <div className="bg-red-600 text-white py-4 px-4 border-b-4 border-red-700">
+          <div className="container mx-auto flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6">
+            <span className="flex-shrink-0 inline-flex items-center gap-2 bg-red-700 px-3 py-1 rounded-full text-sm font-semibold">
+              UPDATE · 12 May 2026
+            </span>
+            <p className="flex-grow font-semibold">
+              Cutoff numbers below were for the cancelled 3 May 2026 NEET-UG paper. Updated values
+              will follow the RE-NEET 2026 result. Track the latest on /re-neet-2026.
+            </p>
+            <a
+              href="/re-neet-2026"
+              className="flex-shrink-0 inline-block bg-white text-red-700 px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition whitespace-nowrap"
+            >
+              Read RE-NEET 2026 Update →
+            </a>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-[#4a5d4a] pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 opacity-10">

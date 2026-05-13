@@ -98,6 +98,7 @@ export default async function NEETCoachingMuscatPage() {
         pageType="coaching"
         coordinates={{ lat: '23.5880', lng: '58.3829' }}
         faqs={faqs}
+        skipCourseList
       />
       <PageContent />
       <NEETNRIPricingTiers />

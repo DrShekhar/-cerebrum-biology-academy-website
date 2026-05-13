@@ -154,7 +154,7 @@ const faqs = [
   {
     question: 'My child is anxious / mentally overwhelmed. What should we do as parents?',
     answer:
-      'Psychiatrists quoted in major newspapers (GMC Thiruvananthapuram, Narayana Health, Delhi clinicians) warn that anticipatory anxiety, sleep disruption and post-stress crash are common after exam cancellations. Protect 6+ hours of sleep, limit doomscrolling, get daily sunlight and exercise, avoid panic study-plan rewrites in week one. Free confidential helplines: iCall 9152987821, Vandrevala Foundation 1860-2662-345.',
+      'Psychiatrists quoted in major newspapers (GMC Thiruvananthapuram, Narayana Health, Delhi clinicians) warn that anticipatory anxiety, sleep disruption and post-stress crash are common after exam cancellations. Protect 6+ hours of sleep, limit doomscrolling, get daily sunlight and exercise, avoid panic study-plan rewrites in week one. Free confidential helplines: Tele-MANAS 14416 (Govt of India, 24×7, NTA-recommended), iCall 9152987821 (Mon–Sat, 8 AM–10 PM), Vandrevala Foundation 1860-2662-345 (24×7).',
   },
   {
     question: 'What does the Cerebrum RE-NEET 2026 crash course cover?',
@@ -631,10 +631,33 @@ export default function ReNEET2026Page() {
                 candidates equally.
               </p>
               <p>
-                If symptoms are severe, please seek professional support. Two free, confidential
-                helplines: <strong>iCall</strong> at 9152987821 (Mon–Sat, 8 AM–10 PM) and{' '}
-                <strong>Vandrevala Foundation</strong> at 1860-2662-345 (24×7).
+                If symptoms are severe, please seek professional support. Three free, confidential
+                helplines:
               </p>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>
+                  <strong>Tele-MANAS</strong> at{' '}
+                  <a href="tel:14416" className="underline">
+                    14416
+                  </a>{' '}
+                  — Government of India, 24×7, multi-lingual. This is the NTA-recommended mental
+                  health helpline (per the official 2026 NTA advisory).
+                </li>
+                <li>
+                  <strong>iCall</strong> at{' '}
+                  <a href="tel:+919152987821" className="underline">
+                    9152987821
+                  </a>{' '}
+                  (Mon–Sat, 8 AM–10 PM).
+                </li>
+                <li>
+                  <strong>Vandrevala Foundation</strong> at{' '}
+                  <a href="tel:+918602662345" className="underline">
+                    1860-2662-345
+                  </a>{' '}
+                  (24×7).
+                </li>
+              </ul>
             </div>
           </div>
 

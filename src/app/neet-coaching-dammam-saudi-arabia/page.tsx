@@ -49,6 +49,7 @@ export default async function Page() {
           website: 'https://cerebrumbiologyacademy.com',
           doctor: 'Dr. Shekhar C Singh',
         }}
+        skipCourseList
       />
       <PageContent city="Dammam" country="Saudi Arabia" />
       <NEETNRIPricingTiers />

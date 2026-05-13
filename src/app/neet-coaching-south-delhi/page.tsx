@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
@@ -276,6 +277,7 @@ const speakableSchema = {
 export default function NEETCoachingSouthDelhiPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="neet-coaching-south-delhi" />
       {/* FAQPage Schema for Featured Snippets */}
       <script
         type="application/ld+json"

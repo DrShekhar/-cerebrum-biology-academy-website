@@ -88,6 +88,7 @@ export default async function Page() {
         pageType="coaching"
         coordinates={{ lat: '33.7490', lng: '-84.3880' }}
         faqs={atlantaFaqs}
+        skipCourseList
       />
       <PageContent faqs={atlantaFaqs} />
       <NEETNRIPricingTiers />

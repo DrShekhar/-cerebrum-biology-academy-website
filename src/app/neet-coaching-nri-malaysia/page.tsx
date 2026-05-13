@@ -148,7 +148,7 @@ export default async function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonld) }}
       />
-      <LocalitySchema locality="Malaysia" region="Malaysia" country="Malaysia" />
+      <LocalitySchema locality="Malaysia" region="Malaysia" country="Malaysia" skipCourseList />
       <PageContent />
       <NEETNRIPricingTiers />
     </>

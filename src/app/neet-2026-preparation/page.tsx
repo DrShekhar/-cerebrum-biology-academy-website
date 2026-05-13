@@ -33,7 +33,10 @@ export default function NEET2026PreparationPage() {
         value: 1,
       })
     }
-    window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class.', '_blank')
+    window.open(
+      'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class.',
+      '_blank'
+    )
   }
 
   const neet2026Highlights = [
@@ -170,6 +173,26 @@ export default function NEET2026PreparationPage() {
 
   return (
     <div className="min-h-screen">
+      {/* RE-NEET 2026 Cancellation Banner */}
+      <div className="bg-red-600 text-white py-4 px-4 border-b-4 border-red-700">
+        <div className="container mx-auto flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6">
+          <span className="flex-shrink-0 inline-flex items-center gap-2 bg-red-700 px-3 py-1 rounded-full text-sm font-semibold">
+            UPDATE · 12 May 2026
+          </span>
+          <p className="flex-grow font-semibold">
+            NEET-UG 2026 (held 3 May 2026) was cancelled by NTA after a Rajasthan SOG paper-leak
+            investigation. A full reconduct (RE-NEET 2026) has been confirmed. New exam date pending
+            notification.
+          </p>
+          <a
+            href="/re-neet-2026"
+            className="flex-shrink-0 inline-block bg-white text-red-700 px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition whitespace-nowrap"
+          >
+            Read RE-NEET 2026 Update →
+          </a>
+        </div>
+      </div>
+
       {/* Floating Contact Buttons */}
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2 sm:gap-3">
         <button

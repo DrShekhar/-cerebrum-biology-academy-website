@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/seo/StructuredData'
+import { CerebrumOrgSchema } from '@/components/seo/CerebrumOrgSchema'
 import { PageErrorBoundary } from '@/components/ErrorBoundary'
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 import { SEOHealthCheck } from '@/components/seo/SEOHealthCheck'
@@ -179,6 +180,7 @@ export default function RootLayout({
         {/* Non-critical: GTM, StructuredData, SEOHealthCheck moved to end of <head> */}
         <GoogleTagManager />
         <StructuredData />
+        <CerebrumOrgSchema />
         <SEOHealthCheck />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

@@ -1,3 +1,4 @@
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 /**
  * /ap-biology-tutor-delhi-ncr
  *
@@ -53,6 +54,7 @@ export default function APBiologyTutorDelhiNCRPage() {
   if (!metro) notFound()
   return (
     <>
+      <DelhiAreaSchema pageSlug="ap-biology-tutor-delhi-ncr" />
       <APBiologyMetroSchemas
         metro={metro}
         inLanguage="en-IN"

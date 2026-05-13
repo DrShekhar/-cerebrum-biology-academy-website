@@ -261,6 +261,30 @@ export default function NEET2026ExamDatePage() {
       <BreadcrumbSchema />
 
       <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+        {/* RE-NEET 2026 Cancellation Banner */}
+        <div className="bg-red-600 text-white py-4 px-4 sm:px-6 lg:px-8 border-b-4 border-red-700">
+          <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6">
+            <div className="flex-shrink-0 inline-flex items-center gap-2 bg-red-700 px-3 py-1 rounded-full text-sm font-semibold">
+              <AlertCircle className="w-4 h-4" />
+              UPDATE — 12 May 2026
+            </div>
+            <div className="flex-grow">
+              <p className="font-semibold">
+                NEET-UG 2026 (held 3 May 2026) was cancelled by NTA on 12 May 2026 after a Rajasthan
+                SOG paper-leak investigation. A full reconduct (RE-NEET 2026) has been confirmed for
+                all ~22 lakh affected candidates. New exam date pending NTA notification.
+              </p>
+            </div>
+            <Link
+              href="/re-neet-2026"
+              className="flex-shrink-0 inline-flex items-center gap-2 bg-white text-red-700 px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition whitespace-nowrap"
+            >
+              Read RE-NEET 2026 Update
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-blue-600 pt-16 pb-24 text-white md:pt-24 md:pb-32">
           <div className="absolute inset-0 opacity-10">

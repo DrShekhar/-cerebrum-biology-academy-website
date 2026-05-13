@@ -65,17 +65,21 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.3910',
     },
     localContext: {
-      nearbyLandmarks: 'Serving students across Noida — Sectors 18, 50, 62, 137, and Greater Noida.',
-      transportOptions: 'Blue Line Metro to Noida Sector 18/City Centre. Our South Delhi center is 25 min via Noida-Greater Noida Expressway. Online classes available for all Noida students.',
+      nearbyLandmarks:
+        'Serving students across Noida — Sectors 18, 50, 62, 137, and Greater Noida.',
+      transportOptions:
+        'Blue Line Metro to Noida Sector 18/City Centre. Our South Delhi center is 25 min via Noida-Greater Noida Expressway. Online classes available for all Noida students.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Noida has 1,200+ NEET aspirants but lacks dedicated Biology coaching. Most students commute to Delhi or settle for generic coaching. Our live online classes bring AIIMS-faculty teaching directly to Noida homes, saving 2+ hours of daily commute. Students can also attend our South Delhi center on weekends for practical sessions.',
+      whyThisArea:
+        'Noida has 1,200+ NEET aspirants but lacks dedicated Biology coaching. Most students commute to Delhi or settle for generic coaching. Our live online classes bring AIIMS-faculty teaching directly to Noida homes, saving 2+ hours of daily commute. Students can also attend our South Delhi center on weekends for practical sessions.',
     },
     studentSuccessStory: {
       name: 'Aarav T.',
       area: 'Sector 62, Noida',
       achievement: 'NEET 2025 — 630/720, VMMC Delhi',
-      quote: 'Online classes from Cerebrum were better than the offline coaching I attended in Kota. The interactive sessions and WhatsApp doubt support made up for not being physically present.',
+      quote:
+        'Online classes from Cerebrum were better than the offline coaching I attended in Kota. The interactive sessions and WhatsApp doubt support made up for not being physically present.',
     },
   },
 
@@ -83,7 +87,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Gurgaon | Best NEET Coaching Gurugram | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Gurgaon | Best NEET Coaching Gurugram | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Gurgaon with offline center in Sector 51. AIIMS faculty, 98% success rate. NEET & Board prep. Book free demo at M2K Corporate Park!',
     heroTitle: 'Best Biology Classes in Gurgaon',
@@ -147,21 +152,26 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.0266',
     },
     localContext: {
-      nearbyLandmarks: 'M2K Corporate Park, Sector 51, opposite Unitech Cyber Park. Near Rapid Metro Sector 53-54 station.',
-      transportOptions: 'Rapid Metro to Sector 53-54, then 5 min auto. Delhi Metro Yellow Line to HUDA City Centre, then auto/cab (20 min). NH-48 expressway exit at Sector 51.',
+      nearbyLandmarks:
+        'M2K Corporate Park, Sector 51, opposite Unitech Cyber Park. Near Rapid Metro Sector 53-54 station.',
+      transportOptions:
+        'Rapid Metro to Sector 53-54, then 5 min auto. Delhi Metro Yellow Line to HUDA City Centre, then auto/cab (20 min). NH-48 expressway exit at Sector 51.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Gurgaon has the highest concentration of premium schools in Haryana — DPS, Pathways World School, Shri Ram School, GD Goenka. With 800+ students from across Gurgaon sectors, our M2K Corporate Park center is the only AIIMS-faculty biology coaching in the Millennium City. Students from Sector 14 to Sector 82, DLF Phase 1-5, and Sohna Road all attend here.',
+      whyThisArea:
+        'Gurgaon has the highest concentration of premium schools in Haryana — DPS, Pathways World School, Shri Ram School, GD Goenka. With 800+ students from across Gurgaon sectors, our M2K Corporate Park center is the only AIIMS-faculty biology coaching in the Millennium City. Students from Sector 14 to Sector 82, DLF Phase 1-5, and Sohna Road all attend here.',
     },
     studentSuccessStory: {
       name: 'Riya M.',
       area: 'DLF Phase 4',
       achievement: 'NEET 2025 — 665/720, Maulana Azad Medical College',
-      quote: 'I switched from a big coaching chain to Cerebrum. The small batch size and Dr. Shekhar\'s direct mentoring made all the difference. Biology went from my weakest to my strongest subject.',
+      quote:
+        "I switched from a big coaching chain to Cerebrum. The small batch size and Dr. Shekhar's direct mentoring made all the difference. Biology went from my weakest to my strongest subject.",
     },
     competitorComparison: {
       localAlternatives: 'Aakash Gurgaon, Allen Gurgaon, FIITJEE Gurgaon, Narayana Gurgaon',
-      differentiator: 'Only dedicated Biology-only institute in Gurgaon. AIIMS-alumni faculty vs generic science teachers. 15-student batches vs 80+ at big chains. Direct WhatsApp access to faculty.',
+      differentiator:
+        'Only dedicated Biology-only institute in Gurgaon. AIIMS-alumni faculty vs generic science teachers. 15-student batches vs 80+ at big chains. Direct WhatsApp access to faculty.',
     },
   },
 
@@ -169,7 +179,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-51',
     cityName: 'Sector 51 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 51 Gurgaon | NEET Coaching Center | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Sector 51 Gurgaon | NEET Coaching Center | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Sector 51 Gurgaon (Gurugram) at M2K Corporate Park. AIIMS faculty, 98% success rate. Walk-in for NEET & Board prep. Call 88264-44334!',
     heroTitle: 'Biology Classes in Sector 51 Gurgaon',
@@ -238,7 +249,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-56',
     cityName: 'Sector 56 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 56 Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Sector 56 Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes for Sector 56 Gurgaon (Gurugram) students. Center in nearby Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Sector 56 Gurgaon',
@@ -293,7 +305,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-49',
     cityName: 'Sector 49 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 49 Gurgaon | NEET Coaching Near You | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Sector 49 Gurgaon | NEET Coaching Near You | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Sector 49 Gurgaon (Gurugram). Center in adjacent Sector 51 (3 min). AIIMS faculty, 98% success rate. Book free demo today!',
     heroTitle: 'Biology Classes for Sector 49 Gurgaon',
@@ -342,7 +355,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-57',
     cityName: 'Sector 57 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Sector 57 Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Sector 57 Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes for Sector 57 Gurgaon (Gurugram) students. Center in Sector 51 (7 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for Sector 57 Gurgaon',
@@ -392,7 +406,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'dlf-gurgaon',
     cityName: 'DLF Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in DLF Gurgaon | NEET Coaching DLF Phase 1-5 | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in DLF Gurgaon | NEET Coaching DLF Phase 1-5 | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for DLF Phase 1, 2, 3, 4, 5 Gurgaon (Gurugram). Center in Sector 51 (15 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'Biology Classes for DLF Gurgaon Students',
@@ -447,7 +462,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'golf-course-road-gurgaon',
     cityName: 'Golf Course Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes on Golf Course Road Gurgaon | NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes on Golf Course Road Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes near Golf Course Road Gurgaon (Gurugram). Center on Golf Course Extension Road Sector 51. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes near Golf Course Road Gurgaon',
@@ -502,7 +518,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'sohna-road-gurgaon',
     cityName: 'Sohna Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes on Sohna Road Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes on Sohna Road Gurgaon | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes for Sohna Road Gurgaon (Gurugram) students. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Book demo: 88264-44334',
     heroTitle: 'Biology Classes for Sohna Road Gurgaon',
@@ -702,7 +719,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'nirvana-country-gurgaon',
     cityName: 'Nirvana Country Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Nirvana Country Gurgaon | NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Nirvana Country Gurgaon | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Nirvana Country Gurgaon (Gurugram) residents. Center in Sector 51 (8 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Biology Classes for Nirvana Country Gurgaon',
@@ -755,7 +773,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Best NEET Coaching in Gurgaon | Top NEET Classes Gurugram | Cerebrum Biology Academy',
+    metaTitle:
+      'Best NEET Coaching in Gurgaon | Top NEET Classes Gurugram | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching in Gurgaon (Gurugram) with center in Sector 51. AIIMS-trained Dr. Shekhar Singh, 98% success rate. Class 11, 12 & Dropper batches. Call 88264-44334!',
     heroTitle: 'Best NEET Coaching in Gurgaon',
@@ -876,7 +895,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-56',
     cityName: 'Sector 56 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching near Sector 56 Gurgaon | Best NEET Classes | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching near Sector 56 Gurgaon | Best NEET Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 56 Gurgaon (Gurugram) students. Center in Sector 51 (5 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 56 Gurgaon',
@@ -1091,7 +1111,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-golf-course-road-gurgaon',
     cityName: 'Golf Course Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching on Golf Course Road Gurgaon | Magnolias Aralias | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching on Golf Course Road Gurgaon | Magnolias Aralias | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching near Golf Course Road Gurgaon (Gurugram). DLF Magnolias, Aralias, Camellias, Palm Springs. Center in Sector 51. Call 88264-44334!',
     heroTitle: 'NEET Coaching near Golf Course Road Gurgaon',
@@ -1143,7 +1164,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-sohna-road-gurgaon',
     cityName: 'Sohna Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching on Sohna Road Gurgaon | Central Park Vatika | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching on Sohna Road Gurgaon | Central Park Vatika | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sohna Road Gurgaon (Gurugram). Central Park, Vatika City, BPTP, Bestech. Center in Sector 51 (10 min). Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sohna Road Gurgaon',
@@ -1295,7 +1317,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'faridabad',
     cityName: 'Faridabad',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Faridabad | Best NEET Biology Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Faridabad | Best NEET Biology Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Faridabad for NEET & Boards. AIIMS-trained faculty, 98% success rate. Online classes + nearby Delhi centers. Book free demo!',
     heroTitle: 'Best Biology Classes in Faridabad',
@@ -1347,17 +1370,21 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.3178',
     },
     localContext: {
-      nearbyLandmarks: 'Serving all Faridabad sectors, Ballabhgarh, and NIT areas. Nearest center: South Delhi (Ring Road).',
-      transportOptions: 'Violet Line Metro to Badarpur Border, then auto to South Delhi center (30 min total). Online classes available for all Faridabad students.',
+      nearbyLandmarks:
+        'Serving all Faridabad sectors, Ballabhgarh, and NIT areas. Nearest center: South Delhi (Ring Road).',
+      transportOptions:
+        'Violet Line Metro to Badarpur Border, then auto to South Delhi center (30 min total). Online classes available for all Faridabad students.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Faridabad has 650+ NEET aspirants with limited quality Biology coaching options locally. Our hybrid model lets students attend online on weekdays and visit the South Delhi center for weekend doubt sessions. Many Faridabad students have topped NEET from our coaching — the Violet Line metro makes our center very accessible.',
+      whyThisArea:
+        'Faridabad has 650+ NEET aspirants with limited quality Biology coaching options locally. Our hybrid model lets students attend online on weekdays and visit the South Delhi center for weekend doubt sessions. Many Faridabad students have topped NEET from our coaching — the Violet Line metro makes our center very accessible.',
     },
     studentSuccessStory: {
       name: 'Kavya R.',
       area: 'Sector 21C, Faridabad',
       achievement: 'NEET 2025 — 610/720, Safdarjung Hospital',
-      quote: 'Faridabad doesn\'t have good Biology-specific coaching. Cerebrum\'s online classes + weekend offline sessions were perfect. I could study at home and still get that classroom interaction.',
+      quote:
+        "Faridabad doesn't have good Biology-specific coaching. Cerebrum's online classes + weekend offline sessions were perfect. I could study at home and still get that classroom interaction.",
     },
   },
 
@@ -1483,7 +1510,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'crossings-republik',
     cityName: 'Crossings Republik',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Crossings Republik | Best NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Crossings Republik | Best NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Crossings Republik for NEET preparation. AIIMS faculty, 98% success rate. Online + Rohini offline options. Book free demo today!',
     heroTitle: 'Best Biology Classes in Crossings Republik',
@@ -1700,6 +1728,120 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  delhi: {
+    slug: 'delhi',
+    cityName: 'Delhi',
+    stateName: 'Delhi',
+    metaTitle: 'Best NEET Biology Coaching in Delhi 2026 | 3 Centres + Online | AIIMS Faculty',
+    metaDescription:
+      "Delhi's #1 biology-only NEET coaching by Dr. Shekhar C Singh (AIIMS). 3 offline centres — South Extension, Rohini, Green Park — plus online live classes. 680+ medical college selections, 98% NEET qualification, 485+ 5-star reviews. Free demo class.",
+    heroTitle: 'Best NEET Biology Coaching in Delhi',
+    heroSubtitle:
+      "India's only biology-only specialist coaching brand in Delhi. AIIMS-trained Dr. Shekhar C Singh, 3 offline centres (South Extension flagship, Rohini, Green Park) + online live classes, small batches of 15–20 students. 680+ medical college selections.",
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Flagship Centre',
+      address: 'Block D, South Extension Part 2, New Delhi 110049',
+      distance: '5 min from South Extension Metro (Pink Line)',
+    },
+    localities: [
+      { name: 'South Extension (Flagship)', url: '/neet-coaching-south-extension-delhi' },
+      { name: 'Rohini', url: '/neet-coaching-rohini' },
+      { name: 'Green Park', url: '/neet-coaching-green-park' },
+      { name: 'South Delhi (Hub)', url: '/neet-coaching-south-delhi' },
+      { name: 'North Delhi', url: '/neet-coaching-north-delhi' },
+      { name: 'East Delhi', url: '/neet-coaching-east-delhi' },
+      { name: 'West Delhi', url: '/neet-coaching-west-delhi' },
+      { name: 'Central Delhi', url: '/neet-coaching-central-delhi' },
+      { name: 'Defence Colony', url: '/biology-classes-south-delhi/defence-colony' },
+      { name: 'Greater Kailash', url: '/biology-classes-south-delhi/gk' },
+      { name: 'Hauz Khas', url: '/biology-classes-south-delhi/hauz-khas' },
+      { name: 'Vasant Kunj', url: '/biology-classes-south-delhi/vasant-kunj' },
+    ],
+    relatedCities: [
+      { name: 'Gurugram', url: '/neet-coaching-gurugram' },
+      { name: 'Noida', url: '/neet-coaching-noida' },
+      { name: 'Faridabad', url: '/neet-coaching-faridabad' },
+      { name: 'Ghaziabad', url: '/neet-coaching-ghaziabad' },
+      { name: 'Delhi NCR (All NCR)', url: '/best-neet-coaching-delhi-ncr' },
+      { name: 'Near Me (Geo Hub)', url: '/best-neet-coaching-near-me' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET biology coaching in Delhi?',
+        answer:
+          "Cerebrum Biology Academy is widely cited as Delhi's best NEET biology coaching — India's only major biology-only specialist coaching brand, founded by Dr. Shekhar C Singh (AIIMS Delhi alumnus) in 2014. 3 offline centres in Delhi (South Extension flagship, Rohini, Green Park) plus pan-India online live classes. 680+ documented medical college selections, 98% NEET-UG qualification rate, 485+ verified 5-star reviews. Small batches of 15–20 students vs 100–400 at Allen, Aakash, FIITJEE.",
+      },
+      {
+        question: 'Where are the Cerebrum Delhi centres located?',
+        answer:
+          'Three Delhi centres: (1) South Extension Flagship — Block D, South Extension Part 2, New Delhi 110049 — 5 min from South Extension Metro (Pink Line). (2) Rohini — 211 Vikas Surya Tower, DC Chauk, Sector 9, Delhi 110085 — close to Rohini West Metro (Red Line). (3) Green Park — B-113 FF Gulmohar Park, New Delhi 110049 — central South Delhi. Plus 3 NCR centres at Gurugram (Sector 51), Faridabad (Sector 17), and Noida (Sector 62).',
+      },
+      {
+        question: 'What is the fee for NEET biology coaching in Delhi?',
+        answer:
+          'Pursuit ₹40,000–₹75,000/year (30–40 student batches), Ascent ₹58,000–₹90,000/year (16–25 student batches with weekly doubt sessions — most popular), Pinnacle ₹1,20,000–₹1,56,000/year (10–12 student batches + personal mentorship from Dr. Shekhar). EMI plans available. 7-day full refund guarantee. 50–60% lower than premium chain fees with structurally better biology depth.',
+      },
+      {
+        question: 'How does Cerebrum compare to Allen / Aakash / FIITJEE in Delhi?',
+        answer:
+          'Cerebrum is biology-only (360/720 NEET marks specialist). Allen, Aakash and FIITJEE in Delhi are generalists with rotating Physics + Chemistry + Biology faculty and 150–400 student batches. Cerebrum runs 15–20 student batches with AIIMS-trained biology-only faculty. Many serious Delhi NEET aspirants pair their existing Allen / Aakash / FIITJEE coaching (for Physics + Chemistry) with Cerebrum (for Biology specifically). See /cerebrum-vs-allen-neet-coaching and /cerebrum-vs-aakash-neet-coaching.',
+      },
+      {
+        question: 'Which schools in Delhi do you support?',
+        answer:
+          "All Delhi schools — NEET is NCERT-based and curriculum-agnostic. Common feeder schools: DPS RK Puram, DPS Vasant Kunj, DPS Mathura Road, Sanskriti School (Chanakyapuri), Modern School Barakhamba, Springdales (Pusa Road and Dhaula Kuan), Mother's International, Tagore International, Delhi Public School Dwarka, Ahlcon International (Mayur Vihar), Apeejay (Pitampura), DAV (multiple).",
+      },
+      {
+        question: 'Do you offer NEET dropper batch in Delhi?',
+        answer:
+          'Yes — dedicated Dropper Batch for NEET repeaters with complete Class 11 + 12 revision in one year. Intensive daily classes, 50+ mock tests, personal mentorship, exam psychology sessions. Available at all 3 Delhi centres + online. After the 12 May 2026 NEET cancellation, see also /re-neet-2026-delhi for the RE-NEET 2026 6–8 week crash course.',
+      },
+      {
+        question: 'Can I take online NEET coaching from Delhi?',
+        answer:
+          'Yes. Cerebrum offers online live (not recorded) classes with the same AIIMS-trained faculty as the offline batches at the 3 Delhi centres. Whiteboard-style teaching, real-time doubt resolution, recorded sessions for revision. Many Delhi students choose online for the commute-free convenience, especially during weekday peak-traffic windows.',
+      },
+      {
+        question: 'How many students from Delhi have you placed in AIIMS?',
+        answer:
+          '500+ Delhi students placed in AIIMS, MAMC, UCMS, LHMC, VMMC, Hindu Rao Medical College and other top Delhi medical colleges over 12 years. 680+ medical college selections total across all locations. Notable recent: Ishita Malhotra (NEET 702/720, AIIMS Delhi), Rohan Khanna (NEET 688, MAMC Delhi), Kavya Reddy (AIIMS Jodhpur via Delhi dropper batch).',
+      },
+    ],
+    stats: {
+      studentsFromCity: '800+',
+      successRate: '98%',
+      rating: '5.0',
+    },
+    geoCoordinates: {
+      lat: '28.5694',
+      lng: '77.2256',
+    },
+    localContext: {
+      nearbyLandmarks:
+        'South Extension Metro (Pink Line) · AIIMS Delhi · Defence Colony · Greater Kailash · Hauz Khas · Rohini Metro (Red Line) · Connaught Place · INA Market',
+      transportOptions:
+        'Delhi Metro Pink Line (South Extension), Yellow Line (Hauz Khas, AIIMS), Red Line (Rohini West), Magenta Line · DTC buses · Auto / cabs across all 3 centres',
+    },
+    areaSpecificContent: {
+      whyThisArea:
+        "Delhi has India's second-highest concentration of NEET aspirants (after Kota) spread across South Delhi (Vasant Kunj, Saket, Lajpat Nagar), Central / Old Delhi, North Delhi (Rohini, Pitampura), East Delhi (Mayur Vihar, Preet Vihar) and West Delhi (Dwarka, Janakpuri, Paschim Vihar). Cerebrum's 3 strategic Delhi centres — South Extension (flagship, serving central/south), Rohini (north Delhi), Green Park (south-central) — cover the city with maximum 30-minute travel time from most Delhi addresses.",
+    },
+    studentSuccessStory: {
+      name: 'Ishita Malhotra',
+      area: 'Defence Colony, South Delhi',
+      achievement: 'NEET 702/720 · AIIMS Delhi',
+      quote:
+        "Dr. Singh's 1:1 way of teaching physiology made it my strongest subject. His clinical examples from AIIMS practice are unforgettable. South Extension centre was a 15-minute drive from home in Defence Colony.",
+    },
+    competitorComparison: {
+      localAlternatives:
+        'Allen Career Institute (multiple Delhi centres), Aakash Institute Delhi (15+ centres), FIITJEE Delhi (Punjabi Bagh, Kalu Sarai), PhysicsWallah Vidyapeeth Delhi, Career Launcher, Resonance Delhi',
+      differentiator:
+        'Cerebrum is biology-only (360/720 NEET marks specialist) while all Delhi alternatives are generalist Physics + Chemistry + Biology chains. Cerebrum runs 15–20 student batches vs 100–400 at the chains. AIIMS-trained founder (Dr. Shekhar C Singh) vs IIT/NIT-trained engineering faculty at generalist coaching. Pair with Allen / Aakash for Physics + Chemistry if needed.',
+    },
+  },
+
   'south-delhi': {
     slug: 'south-delhi',
     cityName: 'South Delhi',
@@ -1772,21 +1914,26 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.2189',
     },
     localContext: {
-      nearbyLandmarks: 'Near Select Citywalk Mall, 5 min walk from South Extension Metro (Pink Line). Opposite Masjid Moth.',
-      transportOptions: 'Pink Line to South Extension Metro, then 5 min walk. Auto from AIIMS Metro (15 min). Bus routes 502, 522 stop at Ring Road.',
+      nearbyLandmarks:
+        'Near Select Citywalk Mall, 5 min walk from South Extension Metro (Pink Line). Opposite Masjid Moth.',
+      transportOptions:
+        'Pink Line to South Extension Metro, then 5 min walk. Auto from AIIMS Metro (15 min). Bus routes 502, 522 stop at Ring Road.',
     },
     areaSpecificContent: {
-      whyThisArea: 'South Delhi is home to some of India\'s top schools — DPS RK Puram, Sanskriti School, Modern School, Sardar Patel Vidyalaya. Our Ring Road center serves 1,students from GK, Lajpat Nagar, Defence Colony, and surrounding areas. The location was chosen specifically for its metro connectivity, making it accessible from Hauz Khas to Nehru Place.',
+      whyThisArea:
+        "South Delhi is home to some of India's top schools — DPS RK Puram, Sanskriti School, Modern School, Sardar Patel Vidyalaya. Our Ring Road center serves 1,students from GK, Lajpat Nagar, Defence Colony, and surrounding areas. The location was chosen specifically for its metro connectivity, making it accessible from Hauz Khas to Nehru Place.",
     },
     studentSuccessStory: {
       name: 'Ananya S.',
       area: 'Greater Kailash',
       achievement: 'NEET 2025 — 680/720, AIIMS Delhi',
-      quote: 'The South Extension center was just 10 minutes from my home in GK. Dr. Shekhar Sir\'s teaching made Biology my strongest subject. I scored 360/360 in Biology!',
+      quote:
+        "The South Extension center was just 10 minutes from my home in GK. Dr. Shekhar Sir's teaching made Biology my strongest subject. I scored 360/360 in Biology!",
     },
     competitorComparison: {
       localAlternatives: 'Aakash South Ex, Allen South Delhi, Physics Wallah offline center',
-      differentiator: 'Only AIIMS-alumni faculty in South Delhi. 15-20 student batches vs 60+ at Aakash/Allen. Personalized doubt resolution via WhatsApp, not just classroom hours.',
+      differentiator:
+        'Only AIIMS-alumni faculty in South Delhi. 15-20 student batches vs 60+ at Aakash/Allen. Personalized doubt resolution via WhatsApp, not just classroom hours.',
     },
   },
 
@@ -1853,21 +2000,26 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.1117',
     },
     localContext: {
-      nearbyLandmarks: 'Near DC Chowk, Sector 7 Rohini. Adjacent to Rohini West Metro Station (Red Line). Opposite Metro Pillar 397.',
-      transportOptions: 'Red Line to Rohini West Metro, then 2 min walk. Also accessible from Rithala Metro. Bus routes 871, 908 stop at DC Chowk.',
+      nearbyLandmarks:
+        'Near DC Chowk, Sector 7 Rohini. Adjacent to Rohini West Metro Station (Red Line). Opposite Metro Pillar 397.',
+      transportOptions:
+        'Red Line to Rohini West Metro, then 2 min walk. Also accessible from Rithala Metro. Bus routes 871, 908 stop at DC Chowk.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Rohini is North Delhi\'s largest planned residential area with 1,200+ NEET aspirants. Our DC Chowk center serves students from all 25 Rohini sectors, Pitampura, Model Town, Shalimar Bagh, and even Sonipat (via Red Line). The center is strategically located at the Red Line metro, making it the most accessible biology coaching in North-West Delhi.',
+      whyThisArea:
+        "Rohini is North Delhi's largest planned residential area with 1,200+ NEET aspirants. Our DC Chowk center serves students from all 25 Rohini sectors, Pitampura, Model Town, Shalimar Bagh, and even Sonipat (via Red Line). The center is strategically located at the Red Line metro, making it the most accessible biology coaching in North-West Delhi.",
     },
     studentSuccessStory: {
       name: 'Priya K.',
       area: 'Sector 16, Rohini',
       achievement: 'NEET 2025 — 645/720, Lady Hardinge Medical College',
-      quote: 'I used to travel to South Delhi for coaching but the 2-hour commute was draining. Cerebrum Rohini saved me 4 hours daily. Used that time for self-study and cracked NEET in first attempt!',
+      quote:
+        'I used to travel to South Delhi for coaching but the 2-hour commute was draining. Cerebrum Rohini saved me 4 hours daily. Used that time for self-study and cracked NEET in first attempt!',
     },
     competitorComparison: {
       localAlternatives: 'Aakash Rohini, Allen Pitampura, FIITJEE Rohini',
-      differentiator: 'Only Biology-specialist institute in North Delhi. AIIMS-trained Dr. Shekhar Sir teaches directly. Batches of 15 vs 100+ at Aakash/Allen Rohini. Weekend batches for school-going students.',
+      differentiator:
+        'Only Biology-specialist institute in North Delhi. AIIMS-trained Dr. Shekhar Sir teaches directly. Batches of 15 vs 100+ at Aakash/Allen Rohini. Weekend batches for school-going students.',
     },
   },
 
@@ -1875,7 +2027,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'dwarka',
     cityName: 'Dwarka',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Dwarka | Best NEET Coaching Dwarka Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Dwarka | Best NEET Coaching Dwarka Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Dwarka, Delhi for NEET & Boards. AIIMS faculty, 98% success rate. Near Dwarka Sector 21 Metro. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Dwarka',
@@ -2057,7 +2210,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'karol-bagh',
     cityName: 'Karol Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Karol Bagh | Best NEET Coaching Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Karol Bagh | Best NEET Coaching Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Karol Bagh, Delhi for NEET preparation. AIIMS-trained faculty, 98% success rate. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Karol Bagh',
@@ -2113,7 +2267,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'laxmi-nagar',
     cityName: 'Laxmi Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Laxmi Nagar | Best NEET Coaching East Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Laxmi Nagar | Best NEET Coaching East Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Laxmi Nagar, East Delhi. AIIMS faculty, 98% success rate. Online + offline options. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Laxmi Nagar',
@@ -2170,7 +2325,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'preet-vihar',
     cityName: 'Preet Vihar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Preet Vihar | NEET Coaching East Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Preet Vihar | NEET Coaching East Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Preet Vihar, East Delhi. AIIMS-trained faculty, 98% success. Online & offline options. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Preet Vihar',
@@ -2221,7 +2377,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'mayur-vihar',
     cityName: 'Mayur Vihar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Mayur Vihar | NEET Coaching East Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Mayur Vihar | NEET Coaching East Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Mayur Vihar, East Delhi. AIIMS faculty, 98% success rate. Near Noida border. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Mayur Vihar',
@@ -2272,7 +2429,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'uttam-nagar',
     cityName: 'Uttam Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Uttam Nagar | Affordable NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Uttam Nagar | Affordable NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Uttam Nagar, West Delhi. Affordable NEET coaching with AIIMS faculty. Book free demo! Call 88264-44334',
     heroTitle: 'Best Biology Classes in Uttam Nagar',
@@ -2322,7 +2480,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'patel-nagar',
     cityName: 'Patel Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Patel Nagar | NEET Coaching Central Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Patel Nagar | NEET Coaching Central Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Patel Nagar, Central Delhi. AIIMS-trained faculty, 98% success. Near Karol Bagh. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Patel Nagar',
@@ -2372,7 +2531,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'vasant-kunj',
     cityName: 'Vasant Kunj',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Vasant Kunj | Best NEET Coaching South Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Vasant Kunj | Best NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Vasant Kunj, South Delhi. AIIMS faculty, 98% success. Near South Extension center. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Vasant Kunj',
@@ -2424,7 +2584,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'saket',
     cityName: 'Saket',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Saket | Best NEET Coaching South Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Saket | Best NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Saket, South Delhi. Near South Extension center (5 km). AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Saket',
@@ -2474,7 +2635,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'green-park',
     cityName: 'Green Park',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Green Park | NEET Coaching South Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Green Park | NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Green Park, South Delhi. Walking distance from South Extension. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Green Park',
@@ -2524,7 +2686,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'model-town',
     cityName: 'Model Town',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Model Town | NEET Coaching North Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Model Town | NEET Coaching North Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Model Town, North Delhi. Near Rohini center. AIIMS faculty, 98% success rate. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Model Town',
@@ -2574,7 +2737,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'shalimar-bagh',
     cityName: 'Shalimar Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Shalimar Bagh | NEET Coaching North Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Shalimar Bagh | NEET Coaching North Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Shalimar Bagh, North Delhi. 5 km from Rohini center. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Shalimar Bagh',
@@ -2624,7 +2788,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'ashok-vihar',
     cityName: 'Ashok Vihar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Ashok Vihar | NEET Coaching North Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Ashok Vihar | NEET Coaching North Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Ashok Vihar, North Delhi. Near Rohini center. AIIMS faculty, 98% success rate. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Ashok Vihar',
@@ -2674,7 +2839,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'nehru-place',
     cityName: 'Nehru Place',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Nehru Place | NEET Coaching South Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Nehru Place | NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes near Nehru Place, South Delhi. Close to South Extension center. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Nehru Place',
@@ -2725,7 +2891,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'defence-colony',
     cityName: 'Defence Colony',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Defence Colony | NEET Coaching South Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Defence Colony | NEET Coaching South Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Defence Colony, South Delhi. 3 km from South Extension. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in Defence Colony',
@@ -2839,7 +3006,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'hauz-khas',
     cityName: 'Hauz Khas',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Hauz Khas | NEET Coaching Near IIT Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Hauz Khas | NEET Coaching Near IIT Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Hauz Khas, near IIT Delhi. Premier coaching hub location. AIIMS faculty, 98% success. Call 88264-44334 for free demo!',
     heroTitle: 'Best Biology Classes in Hauz Khas',
@@ -2955,7 +3123,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'malviya-nagar',
     cityName: 'Malviya Nagar',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Malviya Nagar | Affordable NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Malviya Nagar | Affordable NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Malviya Nagar, South Delhi. Affordable quality coaching. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Malviya Nagar',
@@ -3012,7 +3181,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'cr-park',
     cityName: 'CR Park',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in CR Park | NEET Coaching Chittaranjan Park | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in CR Park | NEET Coaching Chittaranjan Park | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in CR Park (Chittaranjan Park), South Delhi. Academic community focus. AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'Best Biology Classes in CR Park',
@@ -3070,7 +3240,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'kalkaji',
     cityName: 'Kalkaji',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Kalkaji | NEET Coaching Near Lotus Temple | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Kalkaji | NEET Coaching Near Lotus Temple | Cerebrum Biology Academy',
     metaDescription:
       'Top biology classes in Kalkaji, South Delhi. Near Kalkaji Temple & Lotus Temple. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Classes in Kalkaji',
@@ -3352,7 +3523,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'moti-bagh',
     cityName: 'Moti Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Moti Bagh | NEET Coaching Govt Colony | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Moti Bagh | NEET Coaching Govt Colony | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Moti Bagh for govt officers families. NEET & Board preparation with AIIMS faculty. Near Bhikaji Cama Place. Call 88264-44334.',
     heroTitle: 'Best Biology Classes in Moti Bagh',
@@ -3452,7 +3624,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'jor-bagh',
     cityName: 'Jor Bagh',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Jor Bagh | Premium NEET Coaching Lutyens | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Jor Bagh | Premium NEET Coaching Lutyens | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Jor Bagh near Lodhi Gardens. Exclusive NEET coaching for diplomats and elite families. AIIMS faculty. Call 88264-44334.',
     heroTitle: 'Premium Biology Classes in Jor Bagh',
@@ -3552,7 +3725,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'munirka',
     cityName: 'Munirka',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Munirka | Affordable NEET Coaching Near JNU | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Munirka | Affordable NEET Coaching Near JNU | Cerebrum Biology Academy',
     metaDescription:
       'Affordable biology classes in Munirka near JNU. Best NEET coaching for serious aspirants. Student-friendly fees. Call 88264-44334 for enrollment.',
     heroTitle: 'Affordable Biology Classes in Munirka',
@@ -3652,7 +3826,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'east-of-kailash',
     cityName: 'East of Kailash',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in East of Kailash | NEET Coaching DPS EOK | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in East of Kailash | NEET Coaching DPS EOK | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in East of Kailash for DPS EOK students. Expert NEET coaching near Greater Kailash. AIIMS faculty. Call 88264-44334 for demo.',
     heroTitle: 'Best Biology Classes in East of Kailash',
@@ -3702,7 +3877,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'panchsheel-park',
     cityName: 'Panchsheel Park',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Panchsheel Park | Premium NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Panchsheel Park | Premium NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Premium biology classes in Panchsheel Park. Expert NEET coaching for upscale South Delhi families. Near GK & Chirag Delhi. Call 88264-44334.',
     heroTitle: 'Premium Biology Classes in Panchsheel Park',
@@ -3752,7 +3928,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'alaknanda',
     cityName: 'Alaknanda',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in Alaknanda | NEET Coaching Near Nehru Place | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Alaknanda | NEET Coaching Near Nehru Place | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Alaknanda for NEET & Boards. Quality coaching near Nehru Place & Lotus Temple. Affordable fees. Call 88264-44334 for enrollment.',
     heroTitle: 'Best Biology Classes in Alaknanda',
@@ -4294,7 +4471,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-tuition-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Tuition in Gurgaon | Best Biology Tutor Gurugram | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Tuition in Gurgaon | Best Biology Tutor Gurugram | Cerebrum Biology Academy',
     metaDescription:
       'Best biology tuition in Gurgaon (Gurugram) with offline center in Sector 51. AIIMS faculty for NEET & Board prep. Class 9-12 biology tutor. Call 88264-44334 for demo!',
     heroTitle: 'Best Biology Tuition in Gurgaon',
@@ -4355,7 +4533,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-tutor-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Best Biology Tutor in Gurgaon | AIIMS Faculty | NEET Expert | Cerebrum Biology Academy',
+    metaTitle:
+      'Best Biology Tutor in Gurgaon | AIIMS Faculty | NEET Expert | Cerebrum Biology Academy',
     metaDescription:
       'Find the best biology tutor in Gurgaon (Gurugram) for NEET & Boards. AIIMS-trained faculty at Sector 51 center. 98% success rate. Book demo: 88264-44334!',
     heroTitle: 'Best Biology Tutor in Gurgaon',
@@ -4535,7 +4714,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-10th-boards-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Coaching for 10th Boards Gurgaon | CBSE Class 10 | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Coaching for 10th Boards Gurgaon | CBSE Class 10 | Cerebrum Biology Academy',
     metaDescription:
       'Best biology coaching for Class 10 board exams in Gurgaon (Gurugram). CBSE, ICSE, Haryana Board. Strong foundation for NEET. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Biology Coaching for 10th Board Exams Gurgaon',
@@ -4595,7 +4775,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-9-biology-tuition-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 9 Biology Tuition in Gurugram 2026 | Foundation Course | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 9 Biology Tuition in Gurugram 2026 | Foundation Course | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 9 biology tuition in Gurugram (Gurgaon). Build strong foundation for NEET. CBSE, ICSE curriculum. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Class 9 Biology Tuition in Gurugram',
@@ -4644,7 +4825,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-10-biology-tuition-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 10 Biology Tuition in Gurugram 2026 | Board + NEET Prep | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 10 Biology Tuition in Gurugram 2026 | Board + NEET Prep | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 10 biology tuition in Gurugram (Gurgaon) for boards and NEET foundation. CBSE, ICSE, Haryana Board. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Class 10 Biology Tuition in Gurugram',
@@ -4693,7 +4875,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-11-biology-tuition-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 11 Biology Tuition in Gurugram 2026 | NEET Foundation | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 11 Biology Tuition in Gurugram 2026 | NEET Foundation | Cerebrum Biology Academy',
     metaDescription:
       'Top Class 11 biology tuition in Gurugram (Gurgaon) for NEET preparation. AIIMS faculty, 98% results. Botany + Zoology. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 11 Biology Tuition in Gurugram',
@@ -4742,7 +4925,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'class-12-biology-tuition-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 12 Biology Tuition in Gurugram 2026 | Board + NEET | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 12 Biology Tuition in Gurugram 2026 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Best Class 12 biology tuition in Gurugram (Gurgaon) for boards and NEET. AIIMS faculty, 98% results. Intensive preparation. Sector 51. Call 88264-44334!',
     heroTitle: 'Class 12 Biology Tuition in Gurugram',
@@ -4791,7 +4975,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-12th-boards-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Coaching for 12th Boards Gurgaon | Class 12 CBSE | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Coaching for 12th Boards Gurgaon | Class 12 CBSE | Cerebrum Biology Academy',
     metaDescription:
       'Best biology coaching for Class 12 board exams in Gurgaon (Gurugram). CBSE, Haryana Board. Score 95%+ in boards while preparing for NEET. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Biology Coaching for 12th Board Exams Gurgaon',
@@ -5094,7 +5279,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: '2-year-neet-course-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: '2 Year NEET Course Gurugram 2026-27 | Class 11-12 Integrated | Cerebrum Biology Academy',
+    metaTitle:
+      '2 Year NEET Course Gurugram 2026-27 | Class 11-12 Integrated | Cerebrum Biology Academy',
     metaDescription:
       'Best 2 year NEET course in Gurugram (Gurgaon) for Class 11 students. Integrated school + NEET preparation. AIIMS faculty, 98% results. Sector 51. Call 88264-44334!',
     heroTitle: '2 Year NEET Course in Gurugram',
@@ -5213,7 +5399,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'weekend-neet-batch-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Weekend NEET Batch Gurugram 2026 | Saturday-Sunday Classes | Cerebrum Biology Academy',
+    metaTitle:
+      'Weekend NEET Batch Gurugram 2026 | Saturday-Sunday Classes | Cerebrum Biology Academy',
     metaDescription:
       'Weekend NEET coaching in Gurugram (Gurgaon) for school students. Saturday-Sunday batches. Balance school and NEET prep. Sector 51 center. Call 88264-44334!',
     heroTitle: 'Weekend NEET Batch in Gurugram',
@@ -5392,7 +5579,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'fiitjee-alternative-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'FIITJEE Alternative in Gurugram | Better for NEET Biology | Cerebrum Biology Academy',
+    metaTitle:
+      'FIITJEE Alternative in Gurugram | Better for NEET Biology | Cerebrum Biology Academy',
     metaDescription:
       'Looking for FIITJEE alternative in Gurugram (Gurgaon) for NEET? Cerebrum offers specialized biology coaching with AIIMS faculty. 50% lower fees, 98% results. 88264-44334!',
     heroTitle: 'FIITJEE Alternative for NEET in Gurugram',
@@ -5510,7 +5698,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'physics-wallah-alternative-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Physics Wallah (PW) Alternative Gurugram | Offline Expert | Cerebrum Biology Academy',
+    metaTitle:
+      'Physics Wallah (PW) Alternative Gurugram | Offline Expert | Cerebrum Biology Academy',
     metaDescription:
       'Looking for Physics Wallah alternative in Gurugram (Gurgaon)? Cerebrum offers offline classes with AIIMS faculty. Real classroom experience. Call 88264-44334!',
     heroTitle: 'Physics Wallah Alternative for NEET in Gurugram',
@@ -5634,7 +5823,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET coaching for Sector 15 Gurgaon (Gurugram) students. 15 min from our Sector 51 center. AIIMS faculty, 98% results. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 15 Gurgaon',
     heroSubtitle:
-      'Sector 15 students - join Gurugram\'s top NEET coaching. Just 15 minutes from HUDA Market to our Sector 51 center.',
+      "Sector 15 students - join Gurugram's top NEET coaching. Just 15 minutes from HUDA Market to our Sector 51 center.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Gurugram Center',
@@ -5653,11 +5842,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How far is Cerebrum center from Sector 15?',
-        answer: 'Our Sector 51 center is 15 minutes by car from Sector 15 HUDA Market. Direct route via Golf Course Extension Road.',
+        answer:
+          'Our Sector 51 center is 15 minutes by car from Sector 15 HUDA Market. Direct route via Golf Course Extension Road.',
       },
       {
         question: 'Is there any coaching in Sector 15 itself?',
-        answer: 'Major coaching centers are in Sector 14. Cerebrum in Sector 51 offers better faculty and smaller batches compared to crowded Sector 14 institutes.',
+        answer:
+          'Major coaching centers are in Sector 14. Cerebrum in Sector 51 offers better faculty and smaller batches compared to crowded Sector 14 institutes.',
       },
     ],
     stats: { studentsFromCity: '150+', successRate: '98%', rating: '5.0' },
@@ -5673,7 +5864,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET coaching for Sector 17 Gurgaon (Gurugram) students. Serving Old Gurgaon since 2014. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 17 Gurgaon',
     heroSubtitle:
-      'Old Gurgaon\'s trusted NEET coaching partner. Students from Sectors 17, 18, 21 join our Sector 51 center.',
+      "Old Gurgaon's trusted NEET coaching partner. Students from Sectors 17, 18, 21 join our Sector 51 center.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Gurugram Center',
@@ -5692,11 +5883,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How do Sector 17 students reach the center?',
-        answer: 'Via Mehrauli-Gurgaon Road to Golf Course Extension. 12 minutes by car. Many students carpool from Sector 17-18 area.',
+        answer:
+          'Via Mehrauli-Gurgaon Road to Golf Course Extension. 12 minutes by car. Many students carpool from Sector 17-18 area.',
       },
       {
         question: 'Any pickup facility from Sector 17?',
-        answer: 'We can arrange carpool groups. Contact us to connect with other Sector 17 students already attending.',
+        answer:
+          'We can arrange carpool groups. Contact us to connect with other Sector 17 students already attending.',
       },
     ],
     stats: { studentsFromCity: '120+', successRate: '96%', rating: '5.0' },
@@ -5731,11 +5924,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Is there direct route from Sector 18 to center?',
-        answer: 'Yes! Sector 18 → MG Road → Golf Course Extension → Sector 51. 12 minutes with minimal traffic.',
+        answer:
+          'Yes! Sector 18 → MG Road → Golf Course Extension → Sector 51. 12 minutes with minimal traffic.',
       },
       {
         question: 'What schools in Sector 18 do you serve?',
-        answer: 'Students from DAV, St. Xaviers, and schools in nearby sectors regularly attend. We understand their curriculum.',
+        answer:
+          'Students from DAV, St. Xaviers, and schools in nearby sectors regularly attend. We understand their curriculum.',
       },
     ],
     stats: { studentsFromCity: '100+', successRate: '98%', rating: '5.0' },
@@ -5746,7 +5941,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-40',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 40 Gurgaon | Near Huda City Centre | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching in Sector 40 Gurgaon | Near Huda City Centre | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 40 Gurgaon (Gurugram). 10 min from Huda City Centre Metro. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 40 Gurgaon',
@@ -5770,11 +5966,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Can I come by metro from Sector 40?',
-        answer: 'Yes! Take metro to Huda City Centre, then 10-minute auto/cab to Sector 51. Many students use this route.',
+        answer:
+          'Yes! Take metro to Huda City Centre, then 10-minute auto/cab to Sector 51. Many students use this route.',
       },
       {
         question: 'Which societies in Sector 40 do students come from?',
-        answer: 'Students from Vatika City, Vipul Greens, and other Sector 40 societies attend. Short, safe commute.',
+        answer:
+          'Students from Vatika City, Vipul Greens, and other Sector 40 societies attend. Short, safe commute.',
       },
     ],
     stats: { studentsFromCity: '180+', successRate: '98%', rating: '5.0' },
@@ -5809,11 +6007,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How close is the center to Sector 42?',
-        answer: 'Just 8 minutes via Golf Course Extension Road. Many Sector 42 students cycle to our center.',
+        answer:
+          'Just 8 minutes via Golf Course Extension Road. Many Sector 42 students cycle to our center.',
       },
       {
         question: 'Do students from Medanta Colony area attend?',
-        answer: 'Yes! Several students from Medanta staff families study with us. They see medical careers daily and are highly motivated.',
+        answer:
+          'Yes! Several students from Medanta staff families study with us. They see medical careers daily and are highly motivated.',
       },
     ],
     stats: { studentsFromCity: '140+', successRate: '98%', rating: '5.0' },
@@ -5848,11 +6048,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'What makes your coaching suitable for Sector 44 families?',
-        answer: 'Premium infrastructure, AC classrooms, small batches of 25 students, and AIIMS-trained faculty. Quality that matches Sector 44 standards.',
+        answer:
+          'Premium infrastructure, AC classrooms, small batches of 25 students, and AIIMS-trained faculty. Quality that matches Sector 44 standards.',
       },
       {
         question: 'Do you offer personalized attention?',
-        answer: 'Yes! Each student gets a dedicated mentor. Weekly parent updates. Personal attention that premium families expect.',
+        answer:
+          'Yes! Each student gets a dedicated mentor. Weekly parent updates. Personal attention that premium families expect.',
       },
     ],
     stats: { studentsFromCity: '120+', successRate: '98%', rating: '5.0' },
@@ -5863,7 +6065,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-46',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 46 Gurgaon | Near Paras Hospital | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching in Sector 46 Gurgaon | Near Paras Hospital | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 46 Gurgaon (Gurugram). Near Paras Hospital. See doctors daily, become one yourself. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 46 Gurgaon',
@@ -5887,11 +6090,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How far is the center from Sector 46?',
-        answer: 'Just 6 minutes via Golf Course Extension Road. Sector 46 is one of our highest-contributing localities.',
+        answer:
+          'Just 6 minutes via Golf Course Extension Road. Sector 46 is one of our highest-contributing localities.',
       },
       {
         question: 'Any students from Paras World School?',
-        answer: 'Yes! Many Paras World School students from Sector 46 and nearby areas attend our coaching.',
+        answer:
+          'Yes! Many Paras World School students from Sector 46 and nearby areas attend our coaching.',
       },
     ],
     stats: { studentsFromCity: '160+', successRate: '98%', rating: '5.0' },
@@ -5907,7 +6112,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET coaching for Sector 47 Gurgaon (Gurugram) students. Centrally located. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 47 Gurgaon',
     heroSubtitle:
-      'Sector 47 students - you\'re in the heart of New Gurgaon. Access the best NEET coaching just 5 minutes away.',
+      "Sector 47 students - you're in the heart of New Gurgaon. Access the best NEET coaching just 5 minutes away.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Gurugram Center',
@@ -5926,11 +6131,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'What is the commute time from Sector 47?',
-        answer: 'Just 5 minutes by any mode - car, auto, or even bicycle. Many students walk during good weather.',
+        answer:
+          'Just 5 minutes by any mode - car, auto, or even bicycle. Many students walk during good weather.',
       },
       {
         question: 'Which Sector 47 societies do students come from?',
-        answer: 'Students from Orchid Petals, Uppal Southend, Vipul Belmonte and other Sector 47 societies attend regularly.',
+        answer:
+          'Students from Orchid Petals, Uppal Southend, Vipul Belmonte and other Sector 47 societies attend regularly.',
       },
     ],
     stats: { studentsFromCity: '200+', successRate: '98%', rating: '5.0' },
@@ -5965,11 +6172,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Do you have students from Vega School?',
-        answer: 'Yes! Vega School students form a significant group. We understand their IB/IGCSE curriculum and bridge to NEET.',
+        answer:
+          'Yes! Vega School students form a significant group. We understand their IB/IGCSE curriculum and bridge to NEET.',
       },
       {
         question: 'How close is Sector 48 to your center?',
-        answer: 'Sector 48 is our neighboring sector - just 4 minutes away. Some students walk to class.',
+        answer:
+          'Sector 48 is our neighboring sector - just 4 minutes away. Some students walk to class.',
       },
     ],
     stats: { studentsFromCity: '180+', successRate: '98%', rating: '5.0' },
@@ -5985,7 +6194,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET coaching for Sector 50 Gurgaon (Gurugram). Lotus Valley, Ryan International students. 3 min walk to our center. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 50 Gurgaon',
     heroSubtitle:
-      'Sector 50 students - you\'re our closest neighbors! Walk to class and maximize your study time.',
+      "Sector 50 students - you're our closest neighbors! Walk to class and maximize your study time.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Gurugram Center',
@@ -6004,11 +6213,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How close is the center to Sector 50?',
-        answer: 'We are literally next door! 3-minute walk from most Sector 50 societies. No commute hassle.',
+        answer:
+          'We are literally next door! 3-minute walk from most Sector 50 societies. No commute hassle.',
       },
       {
         question: 'Do Lotus Valley students attend?',
-        answer: 'Yes! Lotus Valley School (Sector 50) students form a large group. We coordinate with their school schedule.',
+        answer:
+          'Yes! Lotus Valley School (Sector 50) students form a large group. We coordinate with their school schedule.',
       },
     ],
     stats: { studentsFromCity: '220+', successRate: '98%', rating: '5.0' },
@@ -6043,11 +6254,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Can I use Rapid Metro to reach the center?',
-        answer: 'Yes! Sector 52 Rapid Metro station is 5 minutes from our center. Many students use this route.',
+        answer:
+          'Yes! Sector 52 Rapid Metro station is 5 minutes from our center. Many students use this route.',
       },
       {
         question: 'Which Sector 52 societies do students come from?',
-        answer: 'Students from Tulip Violet, Ansal API, and other Sector 52 societies attend regularly.',
+        answer:
+          'Students from Tulip Violet, Ansal API, and other Sector 52 societies attend regularly.',
       },
     ],
     stats: { studentsFromCity: '150+', successRate: '98%', rating: '5.0' },
@@ -6058,7 +6271,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-53',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 53 Gurgaon | Golf Course Extension | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching in Sector 53 Gurgaon | Golf Course Extension | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 53 Gurgaon (Gurugram) on Golf Course Extension Road. Premium coaching, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 53 Gurgaon',
@@ -6082,11 +6296,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How do I reach from Sector 53?',
-        answer: 'Direct drive via Golf Course Extension Road - 6 minutes. Or use the internal sector roads.',
+        answer:
+          'Direct drive via Golf Course Extension Road - 6 minutes. Or use the internal sector roads.',
       },
       {
         question: 'Is parking available at the center?',
-        answer: 'Yes! Ample parking at M2K Corporate Park. Both car and two-wheeler parking available.',
+        answer:
+          'Yes! Ample parking at M2K Corporate Park. Both car and two-wheeler parking available.',
       },
     ],
     stats: { studentsFromCity: '130+', successRate: '98%', rating: '5.0' },
@@ -6097,7 +6313,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-gurgaon-sector-54',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 54 Gurgaon | Near Golf Course Road | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching in Sector 54 Gurgaon | Near Golf Course Road | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for Sector 54 Gurgaon (Gurugram). Near Golf Course Road. Premium location, AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 54 Gurgaon',
@@ -6121,11 +6338,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Which Sector 54 societies do students come from?',
-        answer: 'Students from Puri Emerald Bay, Godrej Frontier, and other premium Sector 54 projects attend.',
+        answer:
+          'Students from Puri Emerald Bay, Godrej Frontier, and other premium Sector 54 projects attend.',
       },
       {
         question: 'Is the coaching quality suitable for Sector 54 standards?',
-        answer: 'Absolutely! AIIMS faculty, AC classrooms, small batches. Quality that matches your expectations.',
+        answer:
+          'Absolutely! AIIMS faculty, AC classrooms, small batches. Quality that matches your expectations.',
       },
     ],
     stats: { studentsFromCity: '140+', successRate: '98%', rating: '5.0' },
@@ -6160,11 +6379,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How do Sector 58 students commute?',
-        answer: 'Via Sector 56/57 - about 10 minutes by car. Carpool groups available with other Sector 58 students.',
+        answer:
+          'Via Sector 56/57 - about 10 minutes by car. Carpool groups available with other Sector 58 students.',
       },
       {
         question: 'Is Sector 58 well-represented at your center?',
-        answer: 'Yes! As Sector 58 grows, more families discover us. Strong community of students from this area.',
+        answer:
+          'Yes! As Sector 58 grows, more families discover us. Strong community of students from this area.',
       },
     ],
     stats: { studentsFromCity: '100+', successRate: '96%', rating: '5.0' },
@@ -6201,15 +6422,18 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Is 25 minutes commute worth it for NEET coaching?',
-        answer: 'Many Manesar students commute daily. Quality faculty and small batches make it worthwhile. Weekend batch also available to reduce travel.',
+        answer:
+          'Many Manesar students commute daily. Quality faculty and small batches make it worthwhile. Weekend batch also available to reduce travel.',
       },
       {
         question: 'Do you offer online classes for Manesar students?',
-        answer: 'Yes! Our online classes have the same faculty and curriculum. Many Manesar students attend online on weekdays and offline on weekends.',
+        answer:
+          'Yes! Our online classes have the same faculty and curriculum. Many Manesar students attend online on weekdays and offline on weekends.',
       },
       {
         question: 'Any carpool from Manesar?',
-        answer: 'We can connect you with other Manesar students for carpool. Several groups already operate from IMT area.',
+        answer:
+          'We can connect you with other Manesar students for carpool. Several groups already operate from IMT area.',
       },
     ],
     stats: { studentsFromCity: '80+', successRate: '95%', rating: '4.8' },
@@ -6225,7 +6449,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET coaching for Dwarka Expressway residents. Sectors 99-115. Growing area, quality coaching. 20 min drive. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Dwarka Expressway Gurgaon',
     heroSubtitle:
-      'Dwarka Expressway - Gurgaon\'s fastest growing corridor. Get premium NEET coaching before the crowd.',
+      "Dwarka Expressway - Gurgaon's fastest growing corridor. Get premium NEET coaching before the crowd.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Gurugram Center',
@@ -6245,15 +6469,18 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How do I reach from Dwarka Expressway?',
-        answer: 'Direct drive via SPR to Golf Course Extension - 20 minutes. Smooth expressway driving most of the way.',
+        answer:
+          'Direct drive via SPR to Golf Course Extension - 20 minutes. Smooth expressway driving most of the way.',
       },
       {
         question: 'Which Dwarka Expressway projects do students come from?',
-        answer: 'Students from Sobha City, Godrej Summit, Puri Diplomatic Greens, Conscient Heritage Max attend regularly.',
+        answer:
+          'Students from Sobha City, Godrej Summit, Puri Diplomatic Greens, Conscient Heritage Max attend regularly.',
       },
       {
         question: 'Is there coaching closer to Dwarka Expressway?',
-        answer: 'Major quality coaching is in central Gurgaon. The 20-minute drive is worth it for AIIMS faculty and proven results.',
+        answer:
+          'Major quality coaching is in central Gurgaon. The 20-minute drive is worth it for AIIMS faculty and proven results.',
       },
     ],
     stats: { studentsFromCity: '120+', successRate: '96%', rating: '5.0' },
@@ -6269,7 +6496,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET coaching for New Gurgaon (Gurugram) (Sectors 80-115). Premium coaching for premium localities. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for New Gurgaon (Sectors 80-115)',
     heroSubtitle:
-      'New Gurgaon families chose premium homes. Now choose premium education for your child\'s medical dreams.',
+      "New Gurgaon families chose premium homes. Now choose premium education for your child's medical dreams.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Gurugram Center',
@@ -6289,15 +6516,18 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Which New Gurgaon sectors do you serve?',
-        answer: 'All sectors from 80 to 115. Students from Emaar, Raheja, BPTP, M3M projects attend our center.',
+        answer:
+          'All sectors from 80 to 115. Students from Emaar, Raheja, BPTP, M3M projects attend our center.',
       },
       {
         question: 'Is the commute from New Gurgaon manageable?',
-        answer: '15-25 minutes depending on exact location. Many students use the expressway drive for self-study (audio lectures).',
+        answer:
+          '15-25 minutes depending on exact location. Many students use the expressway drive for self-study (audio lectures).',
       },
       {
         question: 'Any plans for a center in New Gurgaon?',
-        answer: 'We focus on one premium center with the best faculty. Quality over quantity. The commute ensures you get the best teachers.',
+        answer:
+          'We focus on one premium center with the best faculty. Quality over quantity. The commute ensures you get the best teachers.',
       },
     ],
     stats: { studentsFromCity: '200+', successRate: '98%', rating: '5.0' },
@@ -6308,7 +6538,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-spr-gurgaon',
     cityName: 'SPR Road Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching SPR Road Gurgaon 2026 | Southern Peripheral Road | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching SPR Road Gurgaon 2026 | Southern Peripheral Road | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching for SPR Road Gurgaon (Gurugram) students. Sectors 68-84. Easy expressway access. AIIMS faculty. Call 88264-44334!',
     heroTitle: 'NEET Coaching for SPR Road Gurgaon',
@@ -6333,11 +6564,13 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How is the commute from SPR road?',
-        answer: 'Smooth 12-18 minute drive via the expressway. No traffic signals, quick access to our Sector 51 center.',
+        answer:
+          'Smooth 12-18 minute drive via the expressway. No traffic signals, quick access to our Sector 51 center.',
       },
       {
         question: 'Which SPR projects do students come from?',
-        answer: 'Students from Ireo Skyon, Ramprastha Edge Towers, Pareena Coban Residences, and other SPR projects attend.',
+        answer:
+          'Students from Ireo Skyon, Ramprastha Edge Towers, Pareena Coban Residences, and other SPR projects attend.',
       },
     ],
     stats: { studentsFromCity: '150+', successRate: '98%', rating: '5.0' },
@@ -6374,19 +6607,23 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Which is the best NEET coaching in Gurugram?',
-        answer: 'Based on results (98% selection), faculty (AIIMS-trained), and student reviews (5.0/5), Cerebrum Biology Academy is the top choice. Located in Sector 51 with small batches of 25 students.',
+        answer:
+          'Based on results (98% selection), faculty (AIIMS-trained), and student reviews (5.0/5), Cerebrum Biology Academy is the top choice. Located in Sector 51 with small batches of 25 students.',
       },
       {
         question: 'How to choose the best NEET coaching?',
-        answer: 'Check: 1) Faculty credentials (AIIMS/MBBS), 2) Batch size (<30 ideal), 3) Past results (ask for proof), 4) Student reviews, 5) Fee transparency. Visit and take demo class.',
+        answer:
+          'Check: 1) Faculty credentials (AIIMS/MBBS), 2) Batch size (<30 ideal), 3) Past results (ask for proof), 4) Student reviews, 5) Fee transparency. Visit and take demo class.',
       },
       {
         question: 'Is Aakash or Allen better in Gurugram?',
-        answer: 'Both are large chains with 100+ student batches. For personalized attention and biology focus, consider specialized institutes like Cerebrum with 25-student batches and AIIMS faculty.',
+        answer:
+          'Both are large chains with 100+ student batches. For personalized attention and biology focus, consider specialized institutes like Cerebrum with 25-student batches and AIIMS faculty.',
       },
       {
         question: 'What is the fee of best NEET coaching in Gurugram?',
-        answer: 'Top coaching fees range ₹75,000-2,50,000/year. Cerebrum offers premium quality at ₹75,000-95,000 - best value for AIIMS faculty and small batches.',
+        answer:
+          'Top coaching fees range ₹75,000-2,50,000/year. Cerebrum offers premium quality at ₹75,000-95,000 - best value for AIIMS faculty and small batches.',
       },
     ],
     stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
@@ -6397,7 +6634,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'how-to-prepare-for-neet-in-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'How to Prepare for NEET in Gurugram 2026 | Complete Guide | Cerebrum Biology Academy',
+    metaTitle:
+      'How to Prepare for NEET in Gurugram 2026 | Complete Guide | Cerebrum Biology Academy',
     metaDescription:
       'Complete guide on how to prepare for NEET in Gurugram (Gurgaon). Study plan, coaching options, tips from toppers. Expert guidance from AIIMS faculty. 88264-44334!',
     heroTitle: 'How to Prepare for NEET in Gurugram - Complete Guide',
@@ -6422,19 +6660,23 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'How to start NEET preparation in Gurugram?',
-        answer: 'Step 1: Join quality coaching (check faculty, batch size). Step 2: Follow NCERT thoroughly. Step 3: Practice 100+ MCQs daily. Step 4: Take weekly tests. Cerebrum provides all this in one place.',
+        answer:
+          'Step 1: Join quality coaching (check faculty, batch size). Step 2: Follow NCERT thoroughly. Step 3: Practice 100+ MCQs daily. Step 4: Take weekly tests. Cerebrum provides all this in one place.',
       },
       {
         question: 'Is self-study enough for NEET in Gurugram?',
-        answer: 'Self-study success rate is 5-10%. With coaching, it rises to 40-50%. With quality coaching like Cerebrum (98% success), your chances multiply significantly.',
+        answer:
+          'Self-study success rate is 5-10%. With coaching, it rises to 40-50%. With quality coaching like Cerebrum (98% success), your chances multiply significantly.',
       },
       {
         question: 'How many hours to study for NEET daily?',
-        answer: 'Class 11: 4-5 hours. Class 12: 6-8 hours. Dropper: 10-12 hours. Quality matters more than quantity. Our structured program optimizes your study time.',
+        answer:
+          'Class 11: 4-5 hours. Class 12: 6-8 hours. Dropper: 10-12 hours. Quality matters more than quantity. Our structured program optimizes your study time.',
       },
       {
         question: 'What books are best for NEET preparation?',
-        answer: 'NCERT is 85% of NEET. Add: MTG for Biology, HC Verma for Physics, MS Chouhan for Chemistry. Our study material covers everything with NEET-focused approach.',
+        answer:
+          'NCERT is 85% of NEET. Add: MTG for Biology, HC Verma for Physics, MS Chouhan for Chemistry. Our study material covers everything with NEET-focused approach.',
       },
     ],
     stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
@@ -6470,19 +6712,23 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'What is the fee for NEET coaching in Gurugram?',
-        answer: 'Fees range: Aakash ₹1.5-2.5L, Allen ₹1.2-2L, FIITJEE ₹1.8-2.5L, Cerebrum ₹75K-95K. Cerebrum offers best value with AIIMS faculty and small batches.',
+        answer:
+          'Fees range: Aakash ₹1.5-2.5L, Allen ₹1.2-2L, FIITJEE ₹1.8-2.5L, Cerebrum ₹75K-95K. Cerebrum offers best value with AIIMS faculty and small batches.',
       },
       {
         question: 'Which is the cheapest NEET coaching in Gurugram?',
-        answer: 'Local tutors: ₹30-50K (low results). Quality coaching: ₹75K-95K (Cerebrum - 98% results). Big brands: ₹1.5-2.5L. Cerebrum offers best quality-price ratio.',
+        answer:
+          'Local tutors: ₹30-50K (low results). Quality coaching: ₹75K-95K (Cerebrum - 98% results). Big brands: ₹1.5-2.5L. Cerebrum offers best quality-price ratio.',
       },
       {
         question: 'Is EMI available for NEET coaching fees?',
-        answer: 'Yes! Cerebrum offers 0% EMI for 6-12 months. Pay ₹8,000-15,000/month instead of lump sum. No financial barrier to quality education.',
+        answer:
+          'Yes! Cerebrum offers 0% EMI for 6-12 months. Pay ₹8,000-15,000/month instead of lump sum. No financial barrier to quality education.',
       },
       {
         question: 'Are there scholarships for NEET coaching?',
-        answer: 'Cerebrum offers up to 50% scholarship based on entrance test. Toppers from Class 10/12 boards get additional discounts. Merit rewarded.',
+        answer:
+          'Cerebrum offers up to 50% scholarship based on entrance test. Toppers from Class 10/12 boards get additional discounts. Merit rewarded.',
       },
     ],
     stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
@@ -6519,15 +6765,18 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'What are the top 10 NEET coaching in Gurugram?',
-        answer: '1. Cerebrum (98% results, AIIMS faculty), 2. Aakash (brand, large batches), 3. Allen (Kota-style), 4. FIITJEE (IIT focus), 5. Narayana, 6. VMC, 7. Career Point, 8. Resonance, 9. Physics Wallah, 10. Local institutes.',
+        answer:
+          '1. Cerebrum (98% results, AIIMS faculty), 2. Aakash (brand, large batches), 3. Allen (Kota-style), 4. FIITJEE (IIT focus), 5. Narayana, 6. VMC, 7. Career Point, 8. Resonance, 9. Physics Wallah, 10. Local institutes.',
       },
       {
         question: 'How is Cerebrum ranked #1?',
-        answer: 'Criteria: Results (98% - highest), Faculty (AIIMS-trained), Batch size (25 - smallest), Reviews (5.0/5 - highest), Value (₹75-95K - best ratio).',
+        answer:
+          'Criteria: Results (98% - highest), Faculty (AIIMS-trained), Batch size (25 - smallest), Reviews (5.0/5 - highest), Value (₹75-95K - best ratio).',
       },
       {
         question: 'Should I join a ranked institute or local tutor?',
-        answer: 'Ranked institutes have proven systems, experienced faculty, and peer competition. Local tutors lack resources for comprehensive NEET prep. Invest in quality.',
+        answer:
+          'Ranked institutes have proven systems, experienced faculty, and peer competition. Local tutors lack resources for comprehensive NEET prep. Invest in quality.',
       },
     ],
     stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
@@ -6563,15 +6812,18 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'What do students say about Cerebrum?',
-        answer: 'Common themes: "Best biology teaching", "Personal attention", "Small batches helped", "Faculty actually cares", "Worth every rupee". 5.0/5 average on Google with 500+ reviews.',
+        answer:
+          'Common themes: "Best biology teaching", "Personal attention", "Small batches helped", "Faculty actually cares", "Worth every rupee". 5.0/5 average on Google with 500+ reviews.',
       },
       {
         question: 'How to verify coaching reviews?',
-        answer: 'Check Google reviews (verified), ask for student contacts, visit and talk to current students, check social media for organic feedback. We welcome your due diligence.',
+        answer:
+          'Check Google reviews (verified), ask for student contacts, visit and talk to current students, check social media for organic feedback. We welcome your due diligence.',
       },
       {
         question: 'Are online reviews reliable?',
-        answer: 'Look for detailed reviews with specific experiences, not just star ratings. Cerebrum reviews mention specific faculty, topics, and experiences - indicating authenticity.',
+        answer:
+          'Look for detailed reviews with specific experiences, not just star ratings. Cerebrum reviews mention specific faculty, topics, and experiences - indicating authenticity.',
       },
     ],
     stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
@@ -6608,19 +6860,23 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Is the coaching environment safe for girls?',
-        answer: 'Absolutely. CCTV monitored campus, female staff, strict anti-harassment policy, well-lit premises, and 60% female student population creates comfortable environment.',
+        answer:
+          'Absolutely. CCTV monitored campus, female staff, strict anti-harassment policy, well-lit premises, and 60% female student population creates comfortable environment.',
       },
       {
         question: 'Are there female faculty members?',
-        answer: 'Yes! We have female biology and chemistry faculty. Students can request female mentors if preferred.',
+        answer:
+          'Yes! We have female biology and chemistry faculty. Students can request female mentors if preferred.',
       },
       {
         question: 'What are batch timings suitable for girls?',
-        answer: 'We offer morning (8 AM-12 PM) and afternoon (2 PM-6 PM) batches ensuring girls reach home before dark. Weekend batches also available.',
+        answer:
+          'We offer morning (8 AM-12 PM) and afternoon (2 PM-6 PM) batches ensuring girls reach home before dark. Weekend batches also available.',
       },
       {
         question: 'Any special facilities for female students?',
-        answer: 'Separate washrooms, rest room, dedicated female counselor, parent communication for safety, and girls study groups for peer support.',
+        answer:
+          'Separate washrooms, rest room, dedicated female counselor, parent communication for safety, and girls study groups for peer support.',
       },
     ],
     stats: { studentsFromCity: '1,500+', successRate: '98%', rating: '5.0' },
@@ -6656,15 +6912,18 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Is coaching only in English?',
-        answer: 'Yes! All teaching, study material, and tests are in English. Faculty are fluent English speakers from top medical colleges.',
+        answer:
+          'Yes! All teaching, study material, and tests are in English. Faculty are fluent English speakers from top medical colleges.',
       },
       {
         question: 'Is NEET easier in English or Hindi?',
-        answer: 'NCERT (85% of NEET) is originally in English. English medium students have slight advantage. Our English coaching aligns perfectly with NCERT.',
+        answer:
+          'NCERT (85% of NEET) is originally in English. English medium students have slight advantage. Our English coaching aligns perfectly with NCERT.',
       },
       {
         question: 'Do you teach IB/IGCSE students?',
-        answer: 'Yes! We bridge IB/IGCSE curriculum to NEET. Special batches help international school students adapt to NCERT-based competitive exam pattern.',
+        answer:
+          'Yes! We bridge IB/IGCSE curriculum to NEET. Special batches help international school students adapt to NCERT-based competitive exam pattern.',
       },
     ],
     stats: { studentsFromCity: '1,800+', successRate: '98%', rating: '5.0' },
@@ -6700,19 +6959,23 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Why small batch size matters?',
-        answer: 'In 100+ student batches, teachers cannot track individual progress. In our 25-student batches, faculty knows each student by name, understands their weaknesses, and provides targeted help.',
+        answer:
+          'In 100+ student batches, teachers cannot track individual progress. In our 25-student batches, faculty knows each student by name, understands their weaknesses, and provides targeted help.',
       },
       {
         question: 'How does small batch improve results?',
-        answer: 'More questions answered, more doubt sessions, more test feedback, more personal motivation. Our 98% success rate vs industry average 20% proves the impact.',
+        answer:
+          'More questions answered, more doubt sessions, more test feedback, more personal motivation. Our 98% success rate vs industry average 20% proves the impact.',
       },
       {
         question: 'Is small batch more expensive?',
-        answer: 'Surprisingly, no! We charge ₹75-95K/year while big institutes with 100+ batches charge ₹1.5-2.5L. Better quality at lower cost.',
+        answer:
+          'Surprisingly, no! We charge ₹75-95K/year while big institutes with 100+ batches charge ₹1.5-2.5L. Better quality at lower cost.',
       },
       {
         question: 'Do you have limited seats?',
-        answer: 'Yes! Only 4 batches × 25 students = 100 students per program. Book early to secure your seat. Quality over quantity.',
+        answer:
+          'Yes! Only 4 batches × 25 students = 100 students per program. Book early to secure your seat. Quality over quantity.',
       },
     ],
     stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
@@ -6748,19 +7011,23 @@ export const cityHubData: Record<string, CityHubData> = {
     faqs: [
       {
         question: 'Do you teach all three subjects?',
-        answer: 'Yes! Complete PCB coaching with: Biology (AIIMS faculty), Physics (IIT-trained), Chemistry (PhD holders). All subjects under one roof.',
+        answer:
+          'Yes! Complete PCB coaching with: Biology (AIIMS faculty), Physics (IIT-trained), Chemistry (PhD holders). All subjects under one roof.',
       },
       {
         question: 'What is weightage of each subject in NEET?',
-        answer: 'Biology: 360/720 (50%), Chemistry: 180/720 (25%), Physics: 180/720 (25%). We allocate teaching time proportionally with biology focus.',
+        answer:
+          'Biology: 360/720 (50%), Chemistry: 180/720 (25%), Physics: 180/720 (25%). We allocate teaching time proportionally with biology focus.',
       },
       {
         question: 'Can I join only for Biology?',
-        answer: 'Yes! We offer Biology-only program at ₹45,000/year. Many students take Physics/Chemistry elsewhere and Biology from us.',
+        answer:
+          'Yes! We offer Biology-only program at ₹45,000/year. Many students take Physics/Chemistry elsewhere and Biology from us.',
       },
       {
         question: 'How is the schedule organized?',
-        answer: 'Typically: Mon-Tue Physics, Wed-Thu Chemistry, Fri-Sat Biology. Sunday tests and doubt sessions. Balanced coverage of all subjects.',
+        answer:
+          'Typically: Mon-Tue Physics, Wed-Thu Chemistry, Fri-Sat Biology. Sunday tests and doubt sessions. Balanced coverage of all subjects.',
       },
     ],
     stats: { studentsFromCity: '15,000+', successRate: '98%', rating: '5.0' },
@@ -6892,7 +7159,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-9-10-gurgaon',
     cityName: 'Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Class 9 & 10 Biology Coaching Gurgaon | Foundation Program | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 9 & 10 Biology Coaching Gurgaon | Foundation Program | Cerebrum Biology Academy',
     metaDescription:
       'Build strong biology foundation in Class 9-10 for future NEET success. School curriculum + competitive exam prep in Gurgaon (Gurugram) Sector 51. Call 88264-44334!',
     heroTitle: 'Class 9 & 10 Biology Foundation in Gurgaon',
@@ -7074,7 +7342,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-rps-gurgaon',
     cityName: 'RPS International Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for RPS International Students | NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes for RPS International Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for RPS International School Gurgaon (Gurugram) students. NEET coaching in Sector 51. AIIMS faculty, 98% success. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for RPS International School Students',
@@ -7195,7 +7464,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-ryan-gurgaon',
     cityName: 'Ryan International Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Ryan International Students | NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes for Ryan International Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Ryan International School Gurgaon (Gurugram). NEET coaching in Sector 51 with AIIMS faculty. Call 88264-44334 for free demo!',
     heroTitle: 'Biology Classes for Ryan International School Students',
@@ -7255,7 +7525,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-dav-gurgaon',
     cityName: 'DAV Public School Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for DAV Public School Students | NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes for DAV Public School Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for DAV Public School Gurgaon (Gurugram) students. NEET coaching in Sector 51. AIIMS faculty, proven results. Call 88264-44334!',
     heroTitle: 'Biology Classes for DAV Public School Students',
@@ -7315,7 +7586,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-lotus-valley-gurgaon',
     cityName: 'Lotus Valley Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Lotus Valley Students | NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes for Lotus Valley Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Lotus Valley International School students. NEET coaching in Sector 51 Gurgaon (Gurugram). AIIMS faculty. Call 88264-44334!',
     heroTitle: 'Biology Classes for Lotus Valley International School Students',
@@ -7375,7 +7647,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-classes-blue-bells-gurgaon',
     cityName: 'Blue Bells Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes for Blue Bells School Students | NEET Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes for Blue Bells School Students | NEET Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes for Blue Bells Model School students. NEET coaching in Sector 51 Gurgaon (Gurugram). AIIMS faculty. Call 88264-44334 for demo!',
     heroTitle: 'Biology Classes for Blue Bells School Students',
@@ -8401,7 +8674,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-with-hostel-delhi',
     cityName: 'Delhi',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching with Hostel Delhi | Residential NEET Preparation | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching with Hostel Delhi | Residential NEET Preparation | Cerebrum Biology Academy',
     metaDescription:
       'NEET coaching with nearby hostel facilities in Delhi. Safe PG accommodations near all 4 centers - Rohini, Gurugram, South Extension, Green Park. Call 88264-44334 for hostel assistance!',
     heroTitle: 'NEET Coaching with Hostel Facilities in Delhi',
@@ -8532,7 +8806,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-coaching-working-students',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching for Working Students | Flexible Timing Classes | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching for Working Students | Flexible Timing Classes | Cerebrum Biology Academy',
     metaDescription:
       'NEET coaching designed for working professionals & job holders. Weekend batches, evening classes, online options. Balance work & NEET prep. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Working Students & Professionals',
@@ -8598,7 +8873,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-dropper-crash-course-2025',
     cityName: 'Delhi NCR',
     stateName: 'Delhi',
-    metaTitle: 'NEET Dropper Crash Course 2027 | Intensive 3-6 Month Program | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Dropper Crash Course 2027 | Intensive 3-6 Month Program | Cerebrum Biology Academy',
     metaDescription:
       'Last-minute NEET 2027 crash course for droppers. Intensive 3-6 month program with rapid revision, daily tests, weak topic focus. 4 centers in Delhi. Call 88264-44334!',
     heroTitle: 'NEET 2027 Crash Course for Droppers',
@@ -8783,7 +9059,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'greater-noida',
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Greater Noida | Best NEET Biology Coaching | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Greater Noida | Best NEET Biology Coaching | Cerebrum Biology Academy',
     metaDescription:
       'Best biology classes in Greater Noida for NEET & Board preparation. AIIMS-trained faculty, 98% success rate. Online & hybrid classes available. Book free demo!',
     heroTitle: 'Best Biology Classes in Greater Noida',
@@ -9395,7 +9672,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'dc-chowk-rohini',
     cityName: 'DC Chowk Rohini',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching at DC Chowk Rohini | Biology Center Sector 9 | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching at DC Chowk Rohini | Biology Center Sector 9 | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching at DC Chowk Rohini center. AIIMS faculty, 98% success rate. Walk-in at Sector 9! Call 88264-44334',
     heroTitle: 'NEET Coaching at DC Chowk Rohini',
@@ -10184,7 +10462,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'gurgaon-sector-45',
     cityName: 'Sector 45 Gurgaon',
     stateName: 'Haryana',
-    metaTitle: 'NEET Coaching in Sector 45 Gurgaon | DPS Area Biology Classes | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching in Sector 45 Gurgaon | DPS Area Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching near Sector 45 Gurgaon (Gurugram) & DPS. Center in Sector 51 (10 min). AIIMS faculty, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 45 Gurgaon',
@@ -11027,7 +11306,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'netaji-subhash-place',
     cityName: 'Netaji Subhash Place',
     stateName: 'Delhi',
-    metaTitle: 'NEET Coaching Netaji Subhash Place | Biology Classes NSP Delhi | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Coaching Netaji Subhash Place | Biology Classes NSP Delhi | Cerebrum Biology Academy',
     metaDescription:
       'Best NEET coaching near Netaji Subhash Place (NSP) Delhi. 15-20 min from Rohini center via metro. AIIMS faculty, 98% success rate. WhatsApp 88264-44334!',
     heroTitle: 'Best NEET Coaching near Netaji Subhash Place',
@@ -11098,11 +11378,12 @@ export const cityHubData: Record<string, CityHubData> = {
 
   // ===== CHANDIGARH TRICITY & PUNJAB REGION =====
 
-  'chandigarh': {
+  chandigarh: {
     slug: 'chandigarh',
     cityName: 'Chandigarh',
     stateName: 'Chandigarh',
-    metaTitle: 'Best NEET Coaching in Chandigarh 2026 | Biology Classes Tricity | Cerebrum Biology Academy',
+    metaTitle:
+      'Best NEET Coaching in Chandigarh 2026 | Biology Classes Tricity | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Chandigarh with 98% success rate. AIIMS faculty, online classes for Tricity. Target PGIMER, GMCH. 780+ students. Book free demo!',
     heroTitle: 'Best NEET Coaching in Chandigarh',
@@ -11181,11 +11462,12 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'mohali': {
+  mohali: {
     slug: 'mohali',
     cityName: 'Mohali',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Mohali 2026 | Biology Classes SAS Nagar | Cerebrum Biology Academy',
+    metaTitle:
+      'Best NEET Coaching in Mohali 2026 | Biology Classes SAS Nagar | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Mohali (SAS Nagar) with AIIMS faculty. Online classes for Phase 1-11, IT City, Aerocity. 180+ students. Target PGIMER. Book demo!',
     heroTitle: 'Best NEET Coaching in Mohali',
@@ -11230,7 +11512,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which schools in Mohali do your students come from?',
         answer:
-          'We have students from all major Mohali schools: DPS Mohali, Oakridge International, Gillco International, Manav Mangal School, Learning Paths School, Saupin\'s School, and St. Soldier School. Our flexible timings work with all school schedules.',
+          "We have students from all major Mohali schools: DPS Mohali, Oakridge International, Gillco International, Manav Mangal School, Learning Paths School, Saupin's School, and St. Soldier School. Our flexible timings work with all school schedules.",
       },
     ],
     stats: {
@@ -11244,11 +11526,12 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'panchkula': {
+  panchkula: {
     slug: 'panchkula',
     cityName: 'Panchkula',
     stateName: 'Haryana',
-    metaTitle: 'Best NEET Coaching in Panchkula 2026 | Biology Classes Haryana | Cerebrum Biology Academy',
+    metaTitle:
+      'Best NEET Coaching in Panchkula 2026 | Biology Classes Haryana | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Panchkula with AIIMS faculty. Online classes for all sectors. 150+ students. Target Haryana quota seats. Book free demo!',
     heroTitle: 'Best NEET Coaching in Panchkula',
@@ -11293,7 +11576,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which schools in Panchkula do your students come from?',
         answer:
-          'Students from all major Panchkula schools: Bhavan Vidyalaya, St. Mary\'s Convent, Satluj Public School, AKSIPS, Mount Carmel, and Shivalik Public School trust us. Our timings are flexible to accommodate school schedules.',
+          "Students from all major Panchkula schools: Bhavan Vidyalaya, St. Mary's Convent, Satluj Public School, AKSIPS, Mount Carmel, and Shivalik Public School trust us. Our timings are flexible to accommodate school schedules.",
       },
     ],
     stats: {
@@ -11307,11 +11590,12 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'ludhiana': {
+  ludhiana: {
     slug: 'ludhiana',
     cityName: 'Ludhiana',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Ludhiana 2026 | Online Biology Classes Punjab | Cerebrum Biology Academy',
+    metaTitle:
+      'Best NEET Coaching in Ludhiana 2026 | Online Biology Classes Punjab | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Ludhiana with AIIMS faculty. Online classes for Model Town, Sarabha Nagar, Civil Lines. Target DMC Ludhiana. Book free demo!',
     heroTitle: 'Best NEET Coaching in Ludhiana',
@@ -11370,11 +11654,12 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'jalandhar': {
+  jalandhar: {
     slug: 'jalandhar',
     cityName: 'Jalandhar',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Jalandhar 2026 | Online Biology Classes | Cerebrum Biology Academy',
+    metaTitle:
+      'Best NEET Coaching in Jalandhar 2026 | Online Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Jalandhar with AIIMS faculty. Online classes for Model Town, Defence Colony, Maqsudan. Target Punjab medical colleges. Book demo!',
     heroTitle: 'Best NEET Coaching in Jalandhar',
@@ -11414,7 +11699,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What is the fee for NEET coaching in Jalandhar?',
         answer:
-          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. This is a fraction of what you\'d spend relocating to Chandigarh (₹3-4 lakhs). Same quality, better economics. EMI available.',
+          "Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. This is a fraction of what you'd spend relocating to Chandigarh (₹3-4 lakhs). Same quality, better economics. EMI available.",
       },
       {
         question: 'Which schools in Jalandhar do your students come from?',
@@ -11433,11 +11718,12 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'amritsar': {
+  amritsar: {
     slug: 'amritsar',
     cityName: 'Amritsar',
     stateName: 'Punjab',
-    metaTitle: 'Best NEET Coaching in Amritsar 2026 | Online Biology Classes | Cerebrum Biology Academy',
+    metaTitle:
+      'Best NEET Coaching in Amritsar 2026 | Online Biology Classes | Cerebrum Biology Academy',
     metaDescription:
       'Top NEET Biology coaching in Amritsar with AIIMS faculty. Online classes for Lawrence Road, Mall Road, Ranjit Avenue. Target GMC Amritsar. Book demo!',
     heroTitle: 'Best NEET Coaching in Amritsar',
@@ -11496,7 +11782,7 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'zirakpur': {
+  zirakpur: {
     slug: 'zirakpur',
     cityName: 'Zirakpur',
     stateName: 'Punjab',
@@ -11545,7 +11831,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which areas in Zirakpur do you serve?',
         answer:
-          'We serve all Zirakpur areas: VIP Road, Patiala Road, Baltana, Dhakoli, Peer Muchalla, Gazipur, Lohgarh, and surroundings. Online classes mean location doesn\'t matter.',
+          "We serve all Zirakpur areas: VIP Road, Patiala Road, Baltana, Dhakoli, Peer Muchalla, Gazipur, Lohgarh, and surroundings. Online classes mean location doesn't matter.",
       },
     ],
     stats: {
@@ -11620,20 +11906,25 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     localContext: {
       nearbyLandmarks: 'Gaur Chowk, Pari Chowk, Knowledge Park, Greater Noida Expressway',
-      transportOptions: 'Aqua Line Metro to Pari Chowk (under construction). Currently 25 min drive to Sector 62 center via Noida Extension Expressway. Shared cab pools organized by student groups.',
+      transportOptions:
+        'Aqua Line Metro to Pari Chowk (under construction). Currently 25 min drive to Sector 62 center via Noida Extension Expressway. Shared cab pools organized by student groups.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Noida Extension (Greater Noida West) is Delhi NCR\'s fastest-growing residential belt with 50,000+ families in Gaur City alone. Despite this massive student population, the area has no dedicated NEET Biology coaching. Students waste 2-3 hours daily commuting to Noida or Delhi for coaching. Our hybrid model eliminates this — live online classes during the week, practical sessions on weekends. We\'ve already helped 200+ Noida Extension students crack NEET, including 12 who secured government medical college seats in 2024.',
+      whyThisArea:
+        "Noida Extension (Greater Noida West) is Delhi NCR's fastest-growing residential belt with 50,000+ families in Gaur City alone. Despite this massive student population, the area has no dedicated NEET Biology coaching. Students waste 2-3 hours daily commuting to Noida or Delhi for coaching. Our hybrid model eliminates this — live online classes during the week, practical sessions on weekends. We've already helped 200+ Noida Extension students crack NEET, including 12 who secured government medical college seats in 2024.",
     },
     studentSuccessStory: {
       name: 'Priya K.',
       area: 'Gaur City 2, Noida Extension',
       achievement: 'NEET 2025 — 598/720, Government Medical College Allahabad',
-      quote: 'Living in Gaur City, I had no good Biology coaching options nearby. Cerebrum\'s online classes were a lifesaver — I could study from home during weekdays and go to the Sector 62 center on Saturdays for labs. Saved 3 hours of daily travel and scored better than students who went to Kota.',
+      quote:
+        "Living in Gaur City, I had no good Biology coaching options nearby. Cerebrum's online classes were a lifesaver — I could study from home during weekdays and go to the Sector 62 center on Saturdays for labs. Saved 3 hours of daily travel and scored better than students who went to Kota.",
     },
     competitorComparison: {
-      localAlternatives: 'Generic tuition centers in Gaur City (unstructured, no NEET focus). Nearest Aakash/Allen branches in Noida Sector 18 (18 km away, 45-60 min commute each way).',
-      differentiator: 'Only Biology-specialist coaching serving Noida Extension. Zero commute with online classes. 40% cheaper than Aakash/Allen. Small batches (15 vs 60+ at coaching chains).',
+      localAlternatives:
+        'Generic tuition centers in Gaur City (unstructured, no NEET focus). Nearest Aakash/Allen branches in Noida Sector 18 (18 km away, 45-60 min commute each way).',
+      differentiator:
+        'Only Biology-specialist coaching serving Noida Extension. Zero commute with online classes. 40% cheaper than Aakash/Allen. Small batches (15 vs 60+ at coaching chains).',
     },
   },
 
@@ -11697,20 +11988,25 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     localContext: {
       nearbyLandmarks: 'Gaur City Mall, Gaur City Club, Near Gaur Chowk, Greater Noida West',
-      transportOptions: 'Shared cab pools to Sector 62 center (20 min drive). Upcoming Aqua Line Metro extension will connect Gaur City to Noida. Bus route to Pari Chowk available.',
+      transportOptions:
+        'Shared cab pools to Sector 62 center (20 min drive). Upcoming Aqua Line Metro extension will connect Gaur City to Noida. Bus route to Pari Chowk available.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Gaur City is Delhi NCR\'s largest residential township with 50,000+ apartments. The sheer density of NEET aspirants here — estimated 2,000+ students across Classes 9-12 — makes it one of our highest-priority catchment areas. Despite this, the township has no specialized coaching for Biology. Students previously commuted to Noida Sector 18 or Kota for quality NEET prep. Our 120+ student base from Gaur City proves that community-based, zero-commute coaching works better than long-distance solutions.',
+      whyThisArea:
+        "Gaur City is Delhi NCR's largest residential township with 50,000+ apartments. The sheer density of NEET aspirants here — estimated 2,000+ students across Classes 9-12 — makes it one of our highest-priority catchment areas. Despite this, the township has no specialized coaching for Biology. Students previously commuted to Noida Sector 18 or Kota for quality NEET prep. Our 120+ student base from Gaur City proves that community-based, zero-commute coaching works better than long-distance solutions.",
     },
     studentSuccessStory: {
       name: 'Ankit S.',
       area: 'Gaur City 1, Tower C-14',
       achievement: 'NEET 2024 — 612/720, LHMC Delhi',
-      quote: 'I was about to go to Kota when my neighbor in Tower C-14 told me about Cerebrum. Their online classes are genuinely interactive — Dr. Shekhar asks questions, gives instant feedback. I studied from my room in Gaur City and got into Lady Hardinge. My parents saved ₹8 lakhs compared to Kota.',
+      quote:
+        'I was about to go to Kota when my neighbor in Tower C-14 told me about Cerebrum. Their online classes are genuinely interactive — Dr. Shekhar asks questions, gives instant feedback. I studied from my room in Gaur City and got into Lady Hardinge. My parents saved ₹8 lakhs compared to Kota.',
     },
     competitorComparison: {
-      localAlternatives: 'Small tuition centers in Gaur City Mall area (no NEET expertise). Nearest Aakash in Sector 18 Noida (18 km). Some parents send children to Kota (1,200 km).',
-      differentiator: 'Largest student base from any single township (120+). Community WhatsApp group. Zero commute weekdays. 60% cheaper than Kota. Biology-only specialization vs generic coaching.',
+      localAlternatives:
+        'Small tuition centers in Gaur City Mall area (no NEET expertise). Nearest Aakash in Sector 18 Noida (18 km). Some parents send children to Kota (1,200 km).',
+      differentiator:
+        'Largest student base from any single township (120+). Community WhatsApp group. Zero commute weekdays. 60% cheaper than Kota. Biology-only specialization vs generic coaching.',
     },
   },
 
@@ -11723,7 +12019,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET Biology coaching for Raj Nagar Extension students. Serving 80+ students from RNE societies. AIIMS faculty, live online classes, ₹35K-60K. Free demo available!',
     heroTitle: 'NEET Biology Coaching for Raj Nagar Extension Students',
     heroSubtitle:
-      'Raj Nagar Extension is Ghaziabad\'s fastest-growing residential corridor with 150+ societies. We serve 80+ NEET aspirants from RNE through live online classes and weekend sessions at our center — no more 45-minute commutes to Indirapuram or Delhi for coaching.',
+      "Raj Nagar Extension is Ghaziabad's fastest-growing residential corridor with 150+ societies. We serve 80+ NEET aspirants from RNE through live online classes and weekend sessions at our center — no more 45-minute commutes to Indirapuram or Delhi for coaching.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Noida Sector 62 Center',
@@ -11773,20 +12069,25 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     localContext: {
       nearbyLandmarks: 'NH-24, Wave City, Hindon River, Near Meerut Expressway junction',
-      transportOptions: 'NH-24 road connectivity. Upcoming RRTS (Rapid Rail). Currently 30-35 min drive to center. Online classes available.',
+      transportOptions:
+        'NH-24 road connectivity. Upcoming RRTS (Rapid Rail). Currently 30-35 min drive to center. Online classes available.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Raj Nagar Extension is Ghaziabad\'s largest new residential belt with 150+ housing societies and an estimated 1 lakh+ families. The area lacks quality education infrastructure — students commute 45+ minutes to Indirapuram or Delhi for NEET coaching. Our online model serves this underserved market perfectly. With 80+ students already enrolled and growing 30% year-over-year, RNE is our fastest-growing catchment in Ghaziabad.',
+      whyThisArea:
+        "Raj Nagar Extension is Ghaziabad's largest new residential belt with 150+ housing societies and an estimated 1 lakh+ families. The area lacks quality education infrastructure — students commute 45+ minutes to Indirapuram or Delhi for NEET coaching. Our online model serves this underserved market perfectly. With 80+ students already enrolled and growing 30% year-over-year, RNE is our fastest-growing catchment in Ghaziabad.",
     },
     studentSuccessStory: {
       name: 'Kavya R.',
       area: 'Saya Zion, Raj Nagar Extension',
       achievement: 'NEET 2025 — 585/720, GMC Lucknow',
-      quote: 'Before Cerebrum, I was spending 3 hours daily commuting to Indirapuram for coaching. The online classes gave me that time back for self-study. Dr. Shekhar\'s teaching made Biology my strongest subject — I scored 168/180 in Biology alone.',
+      quote:
+        "Before Cerebrum, I was spending 3 hours daily commuting to Indirapuram for coaching. The online classes gave me that time back for self-study. Dr. Shekhar's teaching made Biology my strongest subject — I scored 168/180 in Biology alone.",
     },
     competitorComparison: {
-      localAlternatives: 'No dedicated NEET coaching in RNE. Nearest: Aakash Indirapuram (12 km), generic tuition in Wave City. Students commute to Delhi/Noida for quality coaching.',
-      differentiator: 'Only Biology-specialist coaching accessible from RNE without commute. 80+ student base in 2 years. 40% cheaper than Indirapuram coaching centers.',
+      localAlternatives:
+        'No dedicated NEET coaching in RNE. Nearest: Aakash Indirapuram (12 km), generic tuition in Wave City. Students commute to Delhi/Noida for quality coaching.',
+      differentiator:
+        'Only Biology-specialist coaching accessible from RNE without commute. 80+ student base in 2 years. 40% cheaper than Indirapuram coaching centers.',
     },
   },
 
@@ -11799,7 +12100,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Best NEET Biology coaching near Sector 18 & Atta Market Noida. 5 min from Sector 18 Metro. AIIMS faculty, small batches, 98% success. ₹45K-90K. Free demo class!',
     heroTitle: 'NEET Biology Coaching Near Sector 18 Noida',
     heroSubtitle:
-      'Sector 18 is Noida\'s commercial and educational hub — home to Atta Market, GIP Mall, and some of the city\'s best schools. Our Sector 62 center is just 10 minutes from Sector 18 Metro, making us the most accessible quality NEET coaching for this area.',
+      "Sector 18 is Noida's commercial and educational hub — home to Atta Market, GIP Mall, and some of the city's best schools. Our Sector 62 center is just 10 minutes from Sector 18 Metro, making us the most accessible quality NEET coaching for this area.",
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Noida Sector 62 Center',
@@ -11822,12 +12123,12 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Where is the nearest NEET coaching to Sector 18 Noida?',
         answer:
-          'Cerebrum Biology Academy in Sector 62 is just 4 km from Sector 18 — a 10-minute metro ride on the Blue Line (Sector 18 Metro → Sector 62 Metro). We\'re also accessible by auto-rickshaw (₹30-40) or 10-minute drive via the internal Noida road.',
+          "Cerebrum Biology Academy in Sector 62 is just 4 km from Sector 18 — a 10-minute metro ride on the Blue Line (Sector 18 Metro → Sector 62 Metro). We're also accessible by auto-rickshaw (₹30-40) or 10-minute drive via the internal Noida road.",
       },
       {
         question: 'Which schools near Sector 18 do your students attend?',
         answer:
-          'Our Sector 18 area students come from DPS Noida (Sector 30), Amity International (Sector 44), Lotus Valley (Sector 126), St. Xavier\'s, and JM International. We align our curriculum with both CBSE and ICSE board patterns to complement school biology.',
+          "Our Sector 18 area students come from DPS Noida (Sector 30), Amity International (Sector 44), Lotus Valley (Sector 126), St. Xavier's, and JM International. We align our curriculum with both CBSE and ICSE board patterns to complement school biology.",
       },
       {
         question: 'Can students come after school from Sector 18?',
@@ -11850,21 +12151,27 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.3214',
     },
     localContext: {
-      nearbyLandmarks: 'Atta Market, Great India Place (GIP) Mall, Wave Mall, Brahmaputra Market, Sector 18 Metro Station',
-      transportOptions: 'Blue Line Metro: Sector 18 → Sector 62 (3 stops, 10 min). Auto-rickshaw: ₹30-40. By road: 10 min via Sector 18-62 internal road.',
+      nearbyLandmarks:
+        'Atta Market, Great India Place (GIP) Mall, Wave Mall, Brahmaputra Market, Sector 18 Metro Station',
+      transportOptions:
+        'Blue Line Metro: Sector 18 → Sector 62 (3 stops, 10 min). Auto-rickshaw: ₹30-40. By road: 10 min via Sector 18-62 internal road.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Sector 18 is Noida\'s most connected area — the Blue Line Metro makes our Sector 62 center just 10 minutes away. Students from Sectors 12, 15, 16, 18, and 25 all converge here. With 180+ students from this catchment, it\'s our highest-density area. The after-school timing works perfectly: students finish at 2 PM, reach us by 3:30 PM, and attend the 4 PM batch.',
+      whyThisArea:
+        "Sector 18 is Noida's most connected area — the Blue Line Metro makes our Sector 62 center just 10 minutes away. Students from Sectors 12, 15, 16, 18, and 25 all converge here. With 180+ students from this catchment, it's our highest-density area. The after-school timing works perfectly: students finish at 2 PM, reach us by 3:30 PM, and attend the 4 PM batch.",
     },
     studentSuccessStory: {
       name: 'Meera S.',
       area: 'Sector 15, Noida (near Sector 18)',
       achievement: 'NEET 2024 — 645/720, Maulana Azad Medical College',
-      quote: 'I used to take the metro from Sector 18 to the center every day after school. The 10-minute commute was nothing compared to friends who traveled to Delhi. Dr. Shekhar\'s cell biology classes were the reason I scored 175/180 in Biology.',
+      quote:
+        "I used to take the metro from Sector 18 to the center every day after school. The 10-minute commute was nothing compared to friends who traveled to Delhi. Dr. Shekhar's cell biology classes were the reason I scored 175/180 in Biology.",
     },
     competitorComparison: {
-      localAlternatives: 'Generic coaching in Atta Market area (all subjects, 50+ batch size). Aakash Noida (Sector 18, large batches). Allen (no Noida branch, students go to Delhi).',
-      differentiator: 'Only Biology-specialist within 10 min of Sector 18. Batch size 15 vs 60+. AIIMS faculty vs general science teachers. 30% cheaper than Aakash.',
+      localAlternatives:
+        'Generic coaching in Atta Market area (all subjects, 50+ batch size). Aakash Noida (Sector 18, large batches). Allen (no Noida branch, students go to Delhi).',
+      differentiator:
+        'Only Biology-specialist within 10 min of Sector 18. Batch size 15 vs 60+. AIIMS faculty vs general science teachers. 30% cheaper than Aakash.',
     },
   },
 
@@ -11877,7 +12184,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'NEET Biology coaching for Knowledge Park students. Near Sharda University, Galgotias, NIET. AIIMS faculty, 97% success, ₹35K-60K/year. Free demo + lab kit. Enroll now!',
     heroTitle: 'NEET Biology Coaching for Knowledge Park Students',
     heroSubtitle:
-      'Knowledge Park is Greater Noida\'s educational hub — surrounded by Sharda University, Galgotias, NIET, and GL Bajaj. Our students from this area benefit from an academic environment plus our specialized NEET Biology coaching that these colleges don\'t offer.',
+      "Knowledge Park is Greater Noida's educational hub — surrounded by Sharda University, Galgotias, NIET, and GL Bajaj. Our students from this area benefit from an academic environment plus our specialized NEET Biology coaching that these colleges don't offer.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Noida Sector 62 Center',
@@ -11905,7 +12212,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Do dropper students from Greater Noida colleges enroll?',
         answer:
-          'Yes! We have a growing dropper batch with students from Sharda University, Galgotias, and other Greater Noida colleges who didn\'t clear NEET in their first attempt. Our intensive dropper program runs parallel to their college schedule with evening classes.',
+          "Yes! We have a growing dropper batch with students from Sharda University, Galgotias, and other Greater Noida colleges who didn't clear NEET in their first attempt. Our intensive dropper program runs parallel to their college schedule with evening classes.",
       },
       {
         question: 'What is unique about NEET coaching for Knowledge Park students?',
@@ -11929,20 +12236,25 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     localContext: {
       nearbyLandmarks: 'Sharda University, Galgotias University, NIET, GL Bajaj, Pari Chowk',
-      transportOptions: 'Greater Noida Expressway to Noida (30 min). Upcoming Aqua Line extension. Online classes eliminate commute.',
+      transportOptions:
+        'Greater Noida Expressway to Noida (30 min). Upcoming Aqua Line extension. Online classes eliminate commute.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Knowledge Park is Greater Noida\'s educational corridor with 15+ universities and colleges. While these institutions offer broad education, none provide specialized NEET Biology coaching with the intensity needed for competitive exam success. Our 60+ students from this area include both school students from nearby sectors and dropper-year students from local colleges. The combination of university proximity (for library/lab access) and our specialized coaching creates an ideal environment for NEET preparation.',
+      whyThisArea:
+        "Knowledge Park is Greater Noida's educational corridor with 15+ universities and colleges. While these institutions offer broad education, none provide specialized NEET Biology coaching with the intensity needed for competitive exam success. Our 60+ students from this area include both school students from nearby sectors and dropper-year students from local colleges. The combination of university proximity (for library/lab access) and our specialized coaching creates an ideal environment for NEET preparation.",
     },
     studentSuccessStory: {
       name: 'Rohit M.',
       area: 'Knowledge Park III, Greater Noida',
       achievement: 'NEET 2025 — 560/720 (Dropper), GSVM Medical College Kanpur',
-      quote: 'After failing NEET in my first attempt while studying at Galgotias, I joined Cerebrum\'s dropper batch. The online evening classes fit perfectly around my college schedule. Dr. Shekhar\'s teaching converted my weakest subject into my strongest — I jumped from 280 to 560 in one year.',
+      quote:
+        "After failing NEET in my first attempt while studying at Galgotias, I joined Cerebrum's dropper batch. The online evening classes fit perfectly around my college schedule. Dr. Shekhar's teaching converted my weakest subject into my strongest — I jumped from 280 to 560 in one year.",
     },
     competitorComparison: {
-      localAlternatives: 'University coaching cells (free but unstructured). Generic tuition near Pari Chowk. Nearest Aakash in Noida Sector 18 (22 km).',
-      differentiator: 'Only NEET Biology specialist serving Knowledge Park. Dropper-friendly schedule. College student discount. Online model eliminates commute from remote Greater Noida location.',
+      localAlternatives:
+        'University coaching cells (free but unstructured). Generic tuition near Pari Chowk. Nearest Aakash in Noida Sector 18 (22 km).',
+      differentiator:
+        'Only NEET Biology specialist serving Knowledge Park. Dropper-friendly schedule. College student discount. Online model eliminates commute from remote Greater Noida location.',
     },
   },
 
@@ -12002,21 +12314,27 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     geoCoordinates: { lat: '28.4595', lng: '77.0266' },
     localContext: {
-      nearbyLandmarks: 'Sector 51 center, near Huda City Centre Metro, DLF Cyber City, Golf Course Road',
-      transportOptions: 'Yellow Line Metro to Huda City Centre, then 10 min auto. Direct from DLF, Sohna Road, Sector 14-57.',
+      nearbyLandmarks:
+        'Sector 51 center, near Huda City Centre Metro, DLF Cyber City, Golf Course Road',
+      transportOptions:
+        'Yellow Line Metro to Huda City Centre, then 10 min auto. Direct from DLF, Sohna Road, Sector 14-57.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Gurugram has 200+ schools with CBSE/ICSE boards but very few Biology-specialist coaching centers. Most students rely on generic tuition or all-subject coaching where Biology is an afterthought. Our Class 11 program treats Biology as a primary subject — not a side subject. With AIIMS-trained Dr. Shekhar Singh teaching, students get medical-college-level conceptual depth that both aces board exams and builds NEET readiness.',
+      whyThisArea:
+        'Gurugram has 200+ schools with CBSE/ICSE boards but very few Biology-specialist coaching centers. Most students rely on generic tuition or all-subject coaching where Biology is an afterthought. Our Class 11 program treats Biology as a primary subject — not a side subject. With AIIMS-trained Dr. Shekhar Singh teaching, students get medical-college-level conceptual depth that both aces board exams and builds NEET readiness.',
     },
     studentSuccessStory: {
       name: 'Aanya M.',
       area: 'DLF Phase 4, Gurugram',
       achievement: 'Class 11 Board: 96/100 Biology | NEET Mock: 340/360',
-      quote: 'I joined for Board exam prep but ended up falling in love with Biology. Dr. Shekhar teaches concepts like stories — I understand WHY things happen, not just memorize. Scored 96 in school and my NEET mock scores are already competitive.',
+      quote:
+        'I joined for Board exam prep but ended up falling in love with Biology. Dr. Shekhar teaches concepts like stories — I understand WHY things happen, not just memorize. Scored 96 in school and my NEET mock scores are already competitive.',
     },
     competitorComparison: {
-      localAlternatives: 'Generic tuition centers in Sector 14 and DLF (all subjects, Biology = 1 hour/week). Aakash Gurugram (NEET only, no board focus, 60+ batch). Home tutors (₹1,500-3,000/hour, inconsistent quality).',
-      differentiator: 'Only Biology-specialist in Gurugram. Integrated Board + NEET. AIIMS faculty. 15-student batches. 50% cheaper than private tutors.',
+      localAlternatives:
+        'Generic tuition centers in Sector 14 and DLF (all subjects, Biology = 1 hour/week). Aakash Gurugram (NEET only, no board focus, 60+ batch). Home tutors (₹1,500-3,000/hour, inconsistent quality).',
+      differentiator:
+        'Only Biology-specialist in Gurugram. Integrated Board + NEET. AIIMS faculty. 15-student batches. 50% cheaper than private tutors.',
     },
   },
 
@@ -12024,7 +12342,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-12-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Class 12 Biology Tuition Gurugram | Board Exam + NEET 2026 | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 12 Biology Tuition Gurugram | Board Exam + NEET 2026 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology coaching in Gurugram (Gurgaon) for CBSE Board + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty, 98% pass rate, ₹48K-90K. DLF, Sohna Road, Sector 14-57.',
     heroTitle: 'Class 12 Biology — Board + NEET Coaching in Gurugram',
@@ -12077,20 +12396,25 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: { lat: '28.4595', lng: '77.0266' },
     localContext: {
       nearbyLandmarks: 'Sector 51 center, Huda City Centre Metro, Golf Course Road, DLF Cyber City',
-      transportOptions: 'Yellow Line Metro, auto from Huda City Centre. Cabs from all Gurugram sectors.',
+      transportOptions:
+        'Yellow Line Metro, auto from Huda City Centre. Cabs from all Gurugram sectors.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Gurugram Class 12 students face a dual challenge: scoring 90+ for college cutoffs AND preparing for NEET in the same year. Generic coaching treats these as separate goals, forcing students to attend 2 different classes. Our integrated approach covers both in 6 hours/week — saving 10+ hours vs separate board tuition + NEET coaching. With 180+ Class 12 students from Gurugram schools scoring an average of 92% in boards, our approach is proven.',
+      whyThisArea:
+        'Gurugram Class 12 students face a dual challenge: scoring 90+ for college cutoffs AND preparing for NEET in the same year. Generic coaching treats these as separate goals, forcing students to attend 2 different classes. Our integrated approach covers both in 6 hours/week — saving 10+ hours vs separate board tuition + NEET coaching. With 180+ Class 12 students from Gurugram schools scoring an average of 92% in boards, our approach is proven.',
     },
     studentSuccessStory: {
       name: 'Riya T.',
       area: 'Sohna Road, Gurugram',
       achievement: 'Board: 95/100 | NEET 2025: 642/720 (MAMC Delhi)',
-      quote: 'I was terrified of choosing between board prep and NEET. Cerebrum solved both. Dr. Shekhar showed me that understanding Genetics deeply for NEET automatically makes board questions easy. I got 95 in boards and 642 in NEET — both from one class.',
+      quote:
+        'I was terrified of choosing between board prep and NEET. Cerebrum solved both. Dr. Shekhar showed me that understanding Genetics deeply for NEET automatically makes board questions easy. I got 95 in boards and 642 in NEET — both from one class.',
     },
     competitorComparison: {
-      localAlternatives: 'Aakash Gurugram (NEET only, ignores boards). School tuition teachers (board only, no NEET depth). Private tutors (₹2,000-4,000/hour for Biology alone).',
-      differentiator: 'Only integrated Board + NEET Biology coaching in Gurugram. Covers both in 6 hrs/week. AIIMS faculty. 50-70% cheaper than private tutors. 95% of students score 90+ in boards.',
+      localAlternatives:
+        'Aakash Gurugram (NEET only, ignores boards). School tuition teachers (board only, no NEET depth). Private tutors (₹2,000-4,000/hour for Biology alone).',
+      differentiator:
+        'Only integrated Board + NEET Biology coaching in Gurugram. Covers both in 6 hrs/week. AIIMS faculty. 50-70% cheaper than private tutors. 95% of students score 90+ in boards.',
     },
   },
 
@@ -12098,7 +12422,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-11-ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 11 Biology Tuition Ghaziabad | Indirapuram, Vaishali | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 11 Biology Tuition Ghaziabad | Indirapuram, Vaishali | Cerebrum Biology Academy',
     metaDescription:
       'Class 11 Biology coaching in Ghaziabad — Indirapuram, Vaishali, Raj Nagar. Board + NEET integrated. AIIMS faculty, 15-student batches. ₹35K-60K. Free demo!',
     heroTitle: 'Class 11 Biology Tuition in Ghaziabad',
@@ -12135,7 +12460,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which Ghaziabad schools do your students come from?',
         answer:
-          'DPS Indirapuram, Cambridge School, Ryan International, Delhi Public School Raj Nagar, St. Mary\'s Ghaziabad, Indirapuram Public School, and 20+ other schools. We stay ahead of school syllabi so our students find school Biology easy.',
+          "DPS Indirapuram, Cambridge School, Ryan International, Delhi Public School Raj Nagar, St. Mary's Ghaziabad, Indirapuram Public School, and 20+ other schools. We stay ahead of school syllabi so our students find school Biology easy.",
       },
       {
         question: 'What are the fees for Ghaziabad students?',
@@ -12151,20 +12476,25 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: { lat: '28.6692', lng: '77.4538' },
     localContext: {
       nearbyLandmarks: 'Indirapuram, Vaishali, Kaushambi, Raj Nagar Extension, NH-24',
-      transportOptions: 'Blue Line Metro to Vaishali. Red Line to Shaheed Sthal. NH-24 road to Noida center (20 min).',
+      transportOptions:
+        'Blue Line Metro to Vaishali. Red Line to Shaheed Sthal. NH-24 road to Noida center (20 min).',
     },
     areaSpecificContent: {
-      whyThisArea: 'Ghaziabad has 500+ schools but lacks specialized Biology coaching. Most students travel to Delhi or settle for all-subject tuition where Biology is an afterthought. Our online model brings AIIMS-faculty Biology coaching directly to Ghaziabad homes. With 100+ students from Indirapuram, Vaishali, and Raj Nagar Extension, we are the largest Biology-specialist serving Ghaziabad.',
+      whyThisArea:
+        'Ghaziabad has 500+ schools but lacks specialized Biology coaching. Most students travel to Delhi or settle for all-subject tuition where Biology is an afterthought. Our online model brings AIIMS-faculty Biology coaching directly to Ghaziabad homes. With 100+ students from Indirapuram, Vaishali, and Raj Nagar Extension, we are the largest Biology-specialist serving Ghaziabad.',
     },
     studentSuccessStory: {
       name: 'Sneha P.',
       area: 'Indirapuram, Ghaziabad',
       achievement: 'Class 11 Board: 94/100 Biology | Started NEET prep early',
-      quote: 'My school Biology teacher covered chapters superficially. Cerebrum taught me the WHY behind every concept. I scored 94 in Class 11 and my NEET foundation is already stronger than most Class 12 students at my school.',
+      quote:
+        'My school Biology teacher covered chapters superficially. Cerebrum taught me the WHY behind every concept. I scored 94 in Class 11 and my NEET foundation is already stronger than most Class 12 students at my school.',
     },
     competitorComparison: {
-      localAlternatives: 'Local tuition in Indirapuram (generic, all subjects). Aakash Vaishali (NEET only, 60+ batch). Home tutors (₹1,000-2,000/hour, inconsistent).',
-      differentiator: 'Biology specialist. Board + NEET integrated. AIIMS faculty. 15-student batches. Online = zero commute from Ghaziabad.',
+      localAlternatives:
+        'Local tuition in Indirapuram (generic, all subjects). Aakash Vaishali (NEET only, 60+ batch). Home tutors (₹1,000-2,000/hour, inconsistent).',
+      differentiator:
+        'Biology specialist. Board + NEET integrated. AIIMS faculty. 15-student batches. Online = zero commute from Ghaziabad.',
     },
   },
 
@@ -12177,7 +12507,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Class 12 Biology tuition in Ghaziabad for Board + NEET. Indirapuram, Vaishali, Raj Nagar. Score 90+ boards AND crack NEET. AIIMS faculty. ₹35K-75K. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Ghaziabad',
     heroSubtitle:
-      'The decisive year. Board marks determine your college options. NEET score determines your medical career. Don\'t choose between them — our integrated Class 12 Biology program covers both at NEET depth, which automatically handles board-level questions.',
+      "The decisive year. Board marks determine your college options. NEET score determines your medical career. Don't choose between them — our integrated Class 12 Biology program covers both at NEET depth, which automatically handles board-level questions.",
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Noida Sector 62 Center',
@@ -12227,17 +12557,21 @@ export const cityHubData: Record<string, CityHubData> = {
       transportOptions: 'Blue Line Metro (Vaishali). Online classes for all Ghaziabad areas.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Class 12 Ghaziabad students face immense pressure — school exams, board practicals, NEET prep, and college applications all in one year. Most coaching centers force students to choose between board prep and NEET. Our integrated approach saves 10+ hours/week by covering both in one program. With 120+ Class 12 students from Ghaziabad and an average board score of 92%, our approach works.',
+      whyThisArea:
+        'Class 12 Ghaziabad students face immense pressure — school exams, board practicals, NEET prep, and college applications all in one year. Most coaching centers force students to choose between board prep and NEET. Our integrated approach saves 10+ hours/week by covering both in one program. With 120+ Class 12 students from Ghaziabad and an average board score of 92%, our approach works.',
     },
     studentSuccessStory: {
       name: 'Arjun K.',
       area: 'Vaishali, Ghaziabad',
       achievement: 'Board: 93/100 | NEET 2025: 618/720 (KGMU Lucknow)',
-      quote: 'I was attending Aakash in Vaishali but Biology was just one hour a week with 80 students. Switched to Cerebrum online in September — 3 hours/week of pure Biology with 15 students. My Biology shot from 120 to 168 in NEET. And I got 93 in boards without separate tuition.',
+      quote:
+        'I was attending Aakash in Vaishali but Biology was just one hour a week with 80 students. Switched to Cerebrum online in September — 3 hours/week of pure Biology with 15 students. My Biology shot from 120 to 168 in NEET. And I got 93 in boards without separate tuition.',
     },
     competitorComparison: {
-      localAlternatives: 'Aakash Vaishali (NEET focus, 60+ batch, Biology is 1 hr/week). School tuition teachers (board only). Home tutors (expensive, inconsistent).',
-      differentiator: 'Biology-specialist. 3 hrs/week of dedicated Biology. Board + NEET integrated. 92% average board score. 50% cheaper than private tutors.',
+      localAlternatives:
+        'Aakash Vaishali (NEET focus, 60+ batch, Biology is 1 hr/week). School tuition teachers (board only). Home tutors (expensive, inconsistent).',
+      differentiator:
+        'Biology-specialist. 3 hrs/week of dedicated Biology. Board + NEET integrated. 92% average board score. 50% cheaper than private tutors.',
     },
   },
 
@@ -12298,20 +12632,25 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: { lat: '28.4089', lng: '77.3178' },
     localContext: {
       nearbyLandmarks: 'NIT Faridabad, Crown Plaza, Sector 15-21, Badkhal Lake, Surajkund',
-      transportOptions: 'Violet Line Metro to Faridabad (HUDA City Centre → Badkhal Mor). Online classes eliminate commute.',
+      transportOptions:
+        'Violet Line Metro to Faridabad (HUDA City Centre → Badkhal Mor). Online classes eliminate commute.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Faridabad is the largest city in Haryana but severely lacks specialized Biology coaching. Students travel to Delhi or South Extension for quality NEET/Board prep — wasting 2-3 hours daily. Our online-first approach serves 70+ Faridabad students from NIT, Sector 15-21, Ballabgarh, and Greater Faridabad. We also serve Haryana Board students with state-specific practice material.',
+      whyThisArea:
+        'Faridabad is the largest city in Haryana but severely lacks specialized Biology coaching. Students travel to Delhi or South Extension for quality NEET/Board prep — wasting 2-3 hours daily. Our online-first approach serves 70+ Faridabad students from NIT, Sector 15-21, Ballabgarh, and Greater Faridabad. We also serve Haryana Board students with state-specific practice material.',
     },
     studentSuccessStory: {
       name: 'Divya S.',
       area: 'NIT Faridabad',
       achievement: 'Class 11 Board: 91/100 Biology | Started NEET foundation',
-      quote: 'Before Cerebrum, Biology was my weakest subject. The visual teaching with 3D models and animations made everything click. I went from 68 to 91 in school Biology in just one year. Now I am confident about NEET.',
+      quote:
+        'Before Cerebrum, Biology was my weakest subject. The visual teaching with 3D models and animations made everything click. I went from 68 to 91 in school Biology in just one year. Now I am confident about NEET.',
     },
     competitorComparison: {
-      localAlternatives: 'Generic tuition in NIT (all subjects). Velocity Faridabad (engineering focus). No Biology-specialist in Faridabad.',
-      differentiator: 'First Biology-specialist coaching serving Faridabad. Board + NEET integrated. AIIMS faculty. Online = zero commute.',
+      localAlternatives:
+        'Generic tuition in NIT (all subjects). Velocity Faridabad (engineering focus). No Biology-specialist in Faridabad.',
+      differentiator:
+        'First Biology-specialist coaching serving Faridabad. Board + NEET integrated. AIIMS faculty. Online = zero commute.',
     },
   },
 
@@ -12319,7 +12658,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'biology-class-12-faridabad',
     cityName: 'Faridabad',
     stateName: 'Haryana',
-    metaTitle: 'Class 12 Biology Coaching Faridabad | Board Exam + NEET 2026 | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 12 Biology Coaching Faridabad | Board Exam + NEET 2026 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology tuition in Faridabad — CBSE & Haryana Board + NEET prep. Score 90+ boards AND crack NEET. AIIMS faculty. ₹35K-75K. NIT, Sector 15-21. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Faridabad',
@@ -12374,17 +12714,21 @@ export const cityHubData: Record<string, CityHubData> = {
       transportOptions: 'Violet Line Metro. Online classes for all Faridabad areas.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Faridabad Class 12 students have limited Biology coaching options — generic tuition or expensive Delhi commutes. Our online model brings AIIMS-level Biology teaching to 85+ Faridabad students. The integrated Board + NEET approach means parents pay one fee for complete preparation instead of separate board tuition + NEET coaching.',
+      whyThisArea:
+        'Faridabad Class 12 students have limited Biology coaching options — generic tuition or expensive Delhi commutes. Our online model brings AIIMS-level Biology teaching to 85+ Faridabad students. The integrated Board + NEET approach means parents pay one fee for complete preparation instead of separate board tuition + NEET coaching.',
     },
     studentSuccessStory: {
       name: 'Mohit V.',
       area: 'Sector 16, Faridabad',
       achievement: 'Board: 94/100 | NEET 2025: 595/720 (GMC Chandigarh)',
-      quote: 'I was spending 3 hours daily commuting to South Delhi for coaching. Switched to Cerebrum online in August. Got that time back for self-study. Board result: 94. NEET: 595. Both from one coaching.',
+      quote:
+        'I was spending 3 hours daily commuting to South Delhi for coaching. Switched to Cerebrum online in August. Got that time back for self-study. Board result: 94. NEET: 595. Both from one coaching.',
     },
     competitorComparison: {
-      localAlternatives: 'No Biology-specialist in Faridabad. Students commute to Delhi (South Extension, Kalkaji). Generic tuition in NIT. Home tutors (₹1,500-2,500/hour).',
-      differentiator: 'Only Biology-specialist serving Faridabad. Board + NEET integrated. Online = zero commute. 50% cheaper than Delhi coaching + travel.',
+      localAlternatives:
+        'No Biology-specialist in Faridabad. Students commute to Delhi (South Extension, Kalkaji). Generic tuition in NIT. Home tutors (₹1,500-2,500/hour).',
+      differentiator:
+        'Only Biology-specialist serving Faridabad. Board + NEET integrated. Online = zero commute. 50% cheaper than Delhi coaching + travel.',
     },
   },
 
@@ -12445,16 +12789,19 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: { lat: '28.5355', lng: '77.3910' },
     localContext: {
       nearbyLandmarks: 'Sector 62 Metro Station, Electronic City, Noida Film City',
-      transportOptions: 'Blue Line Metro to Sector 62 (direct). All Noida sectors accessible within 20 min.',
+      transportOptions:
+        'Blue Line Metro to Sector 62 (direct). All Noida sectors accessible within 20 min.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Noida is our home base — the Sector 62 center is purpose-built for intensive revision programs. Students from all 40+ Noida sectors, Greater Noida, and Noida Extension attend the revision batch. The offline option is popular for revision because in-person mock exam practice simulates actual NEET conditions better than online.',
+      whyThisArea:
+        'Noida is our home base — the Sector 62 center is purpose-built for intensive revision programs. Students from all 40+ Noida sectors, Greater Noida, and Noida Extension attend the revision batch. The offline option is popular for revision because in-person mock exam practice simulates actual NEET conditions better than online.',
     },
     studentSuccessStory: {
       name: 'Tanvi S.',
       area: 'Sector 137, Noida',
       achievement: 'NEET 2025 — 632/720 (Revision Batch)',
-      quote: 'I had covered syllabus twice on my own but my mock scores were stuck at 520. The revision batch at Sector 62 center changed everything — the mock exam analysis showed me I was losing 60 marks on silly mistakes. Fixed that in 3 weeks. Final score: 632.',
+      quote:
+        'I had covered syllabus twice on my own but my mock scores were stuck at 520. The revision batch at Sector 62 center changed everything — the mock exam analysis showed me I was losing 60 marks on silly mistakes. Fixed that in 3 weeks. Final score: 632.',
     },
   },
 
@@ -12462,7 +12809,8 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'neet-revision-batch-ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'NEET Revision Batch Ghaziabad 2026 | Final 3-Month Revision | Cerebrum Biology Academy',
+    metaTitle:
+      'NEET Revision Batch Ghaziabad 2026 | Final 3-Month Revision | Cerebrum Biology Academy',
     metaDescription:
       'NEET Biology revision batch for Ghaziabad students — Indirapuram, Vaishali, Raj Nagar. 3-month intensive, NCERT x2, 12 mock exams. Online + offline. ₹35,000-50,000.',
     heroTitle: 'NEET Final Revision Batch — Ghaziabad',
@@ -12498,7 +12846,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which Ghaziabad schools do revision batch students come from?',
         answer:
-          'DPS Indirapuram, Cambridge School, Ryan International, Delhi Public School Raj Nagar, St. Mary\'s Ghaziabad, and 15+ other schools. Post-board exam is the most popular joining time — students finish boards in March and join revision batch immediately.',
+          "DPS Indirapuram, Cambridge School, Ryan International, Delhi Public School Raj Nagar, St. Mary's Ghaziabad, and 15+ other schools. Post-board exam is the most popular joining time — students finish boards in March and join revision batch immediately.",
       },
       {
         question: 'What are the fees for Ghaziabad students?',
@@ -12514,16 +12862,19 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: { lat: '28.6692', lng: '77.4538' },
     localContext: {
       nearbyLandmarks: 'Indirapuram, Vaishali Metro, NH-24, Raj Nagar Extension',
-      transportOptions: 'Online classes eliminate commute. Weekend offline at Noida Sector 62 (15 min from Vaishali via Blue Line Metro).',
+      transportOptions:
+        'Online classes eliminate commute. Weekend offline at Noida Sector 62 (15 min from Vaishali via Blue Line Metro).',
     },
     areaSpecificContent: {
-      whyThisArea: 'Ghaziabad\'s 80+ revision batch students primarily come from Indirapuram and Vaishali — areas with high NEET aspirant density. The online format is crucial for Ghaziabad students as it saves 2-3 hours of daily commute. Post-board joining is the most popular pattern — students finish CBSE/UP Board exams in March and immediately start intensive revision.',
+      whyThisArea:
+        "Ghaziabad's 80+ revision batch students primarily come from Indirapuram and Vaishali — areas with high NEET aspirant density. The online format is crucial for Ghaziabad students as it saves 2-3 hours of daily commute. Post-board joining is the most popular pattern — students finish CBSE/UP Board exams in March and immediately start intensive revision.",
     },
     studentSuccessStory: {
       name: 'Priyanshu M.',
       area: 'Indirapuram, Ghaziabad',
       achievement: 'NEET 2025 — 605/720 (Revision Batch)',
-      quote: 'After boards I had 3 months. Joined the online revision batch from home in Indirapuram. The structured plan — NCERT twice + 12 mocks — was exactly what I needed. I was scoring 490 in March, finished at 605 in May.',
+      quote:
+        'After boards I had 3 months. Joined the online revision batch from home in Indirapuram. The structured plan — NCERT twice + 12 mocks — was exactly what I needed. I was scoring 490 in March, finished at 605 in May.',
     },
   },
 
@@ -12558,7 +12909,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is the revision batch suitable for Greater Noida college students (droppers)?',
         answer:
-          'Yes! Many of our Greater Noida revision batch students are droppers from Sharda University, Galgotias, and NIET who are reattempting NEET. The program runs on evenings/weekends so it doesn\'t conflict with college schedules. Dropper students get an additional 15% discount.',
+          "Yes! Many of our Greater Noida revision batch students are droppers from Sharda University, Galgotias, and NIET who are reattempting NEET. The program runs on evenings/weekends so it doesn't conflict with college schedules. Dropper students get an additional 15% discount.",
       },
       {
         question: 'How do Greater Noida students attend?',
@@ -12584,16 +12935,19 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: { lat: '28.4744', lng: '77.5030' },
     localContext: {
       nearbyLandmarks: 'Knowledge Park, Pari Chowk, Gaur City, Greater Noida Expressway',
-      transportOptions: 'Online classes eliminate commute. Greater Noida Expressway to Noida center (25-30 min). Shared cabs organized by students.',
+      transportOptions:
+        'Online classes eliminate commute. Greater Noida Expressway to Noida center (25-30 min). Shared cabs organized by students.',
     },
     areaSpecificContent: {
-      whyThisArea: 'Greater Noida and Noida Extension have a growing population of NEET aspirants — including many dropper students at local universities. The revision batch serves 50+ students from Knowledge Park, Pari Chowk, Gaur City, and surrounding sectors. The online format is essential given the 18-25 km distance from the nearest quality coaching center.',
+      whyThisArea:
+        'Greater Noida and Noida Extension have a growing population of NEET aspirants — including many dropper students at local universities. The revision batch serves 50+ students from Knowledge Park, Pari Chowk, Gaur City, and surrounding sectors. The online format is essential given the 18-25 km distance from the nearest quality coaching center.',
     },
     studentSuccessStory: {
       name: 'Sakshi J.',
       area: 'Gaur City, Noida Extension',
       achievement: 'NEET 2025 — 572/720 (Dropper, Revision Batch)',
-      quote: 'As a Galgotias student retaking NEET, I needed evening revision classes that fit around college. The online revision batch was perfect — attended from my hostel room in Gaur City. Improved from 420 to 572 in 3 months.',
+      quote:
+        'As a Galgotias student retaking NEET, I needed evening revision classes that fit around college. The online revision batch was perfect — attended from my hostel room in Gaur City. Improved from 420 to 572 in 3 months.',
     },
   },
 
@@ -12601,14 +12955,19 @@ export const cityHubData: Record<string, CityHubData> = {
     slug: 'best-biology-coaching-delhi-ncr',
     cityName: 'Delhi NCR',
     stateName: 'Delhi / UP / Haryana',
-    metaTitle: 'Best Biology Coaching in Delhi NCR 2026 | #1 for Board + NEET | Cerebrum Biology Academy',
+    metaTitle:
+      'Best Biology Coaching in Delhi NCR 2026 | #1 for Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Ranked #1 Biology coaching in Delhi NCR — Board exam (95% score 90+) AND NEET (98% success). AIIMS faculty Dr. Shekhar Singh. Centers in Gurugram, Delhi. Online for Noida, Ghaziabad, Faridabad.',
     heroTitle: 'Best Biology Coaching in Delhi NCR — Board + NEET',
     heroSubtitle:
       'Parents searching for "best Biology coaching" want one thing: results. Our students average 92/100 in CBSE Biology boards AND 160+/180 in NEET Biology. We are the only institute in Delhi NCR that specializes exclusively in Biology — not Physics, not Chemistry, just Biology done right.',
     hasOfflineCenter: true,
-    nearestCenter: { name: 'Gurugram Center', address: 'M2K Corporate Park, Sector 51, Gurugram', distance: 'Centers in Gurugram + South Delhi' },
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'Centers in Gurugram + South Delhi',
+    },
     localities: [
       { name: 'Gurugram', url: '/locations/gurugram' },
       { name: 'Noida', url: '/neet-coaching-noida' },
@@ -12622,31 +12981,70 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Biology Tuition Noida', url: '/biology-tuition-noida' },
     ],
     faqs: [
-      { question: 'What makes Cerebrum the best Biology coaching in Delhi NCR?', answer: 'Three things no competitor offers together: (1) Biology-only specialization — we don\'t teach Physics or Chemistry, so 100% of our 5 daily hours go to Biology. (2) AIIMS faculty — Dr. Shekhar Singh (Ph.D Botany) teaches every batch. (3) Dual results — 95% of our students score 90+ in board exams AND 160+ in NEET Biology. No other institute in Delhi NCR matches this combination.' },
-      { question: 'Do you only prepare for NEET or also for board exams?', answer: 'Both equally. 70% of NEET Biology overlaps with CBSE Class 12. We teach at NEET depth, which automatically covers board level. Plus we add board-specific prep: diagram practice, HOTS questions, practical/viva preparation, and sample papers. Many parents choose us specifically for board exam improvement — NEET is a bonus.' },
-      { question: 'Which cities in Delhi NCR do you serve?', answer: 'Offline classes at our Gurugram (Sector 51) and South Delhi (South Extension) centers. Live online classes for Noida, Ghaziabad, Faridabad, Greater Noida, Dwarka, Rohini, and all Delhi NCR areas. Same faculty, same batch size (15 students), same quality regardless of mode.' },
-      { question: 'What are the fees for the best Biology coaching?', answer: 'Board-only coaching: ₹35,000-60,000/year. Board + NEET integrated: ₹45,000-90,000/year. This is 40-60% less than Aakash/Allen (who teach all 3 subjects with Biology getting only 1/3 of attention). EMI available. Scholarship test for additional 10-30% discount.' },
-      { question: 'Is this suitable for students who don\'t want to give NEET?', answer: 'Absolutely! 30% of our students are board-only — they want strong Biology scores for college admission but aren\'t pursuing medicine. Our board-focused batches cover NCERT thoroughly with practical exam prep, without NEET-specific pressure.' },
+      {
+        question: 'What makes Cerebrum the best Biology coaching in Delhi NCR?',
+        answer:
+          "Three things no competitor offers together: (1) Biology-only specialization — we don't teach Physics or Chemistry, so 100% of our 5 daily hours go to Biology. (2) AIIMS faculty — Dr. Shekhar Singh (Ph.D Botany) teaches every batch. (3) Dual results — 95% of our students score 90+ in board exams AND 160+ in NEET Biology. No other institute in Delhi NCR matches this combination.",
+      },
+      {
+        question: 'Do you only prepare for NEET or also for board exams?',
+        answer:
+          'Both equally. 70% of NEET Biology overlaps with CBSE Class 12. We teach at NEET depth, which automatically covers board level. Plus we add board-specific prep: diagram practice, HOTS questions, practical/viva preparation, and sample papers. Many parents choose us specifically for board exam improvement — NEET is a bonus.',
+      },
+      {
+        question: 'Which cities in Delhi NCR do you serve?',
+        answer:
+          'Offline classes at our Gurugram (Sector 51) and South Delhi (South Extension) centers. Live online classes for Noida, Ghaziabad, Faridabad, Greater Noida, Dwarka, Rohini, and all Delhi NCR areas. Same faculty, same batch size (15 students), same quality regardless of mode.',
+      },
+      {
+        question: 'What are the fees for the best Biology coaching?',
+        answer:
+          'Board-only coaching: ₹35,000-60,000/year. Board + NEET integrated: ₹45,000-90,000/year. This is 40-60% less than Aakash/Allen (who teach all 3 subjects with Biology getting only 1/3 of attention). EMI available. Scholarship test for additional 10-30% discount.',
+      },
+      {
+        question: "Is this suitable for students who don't want to give NEET?",
+        answer:
+          "Absolutely! 30% of our students are board-only — they want strong Biology scores for college admission but aren't pursuing medicine. Our board-focused batches cover NCERT thoroughly with practical exam prep, without NEET-specific pressure.",
+      },
     ],
     stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.4595', lng: '77.0266' },
-    areaSpecificContent: { whyThisArea: 'Delhi NCR has 10,000+ Biology students across Classes 9-12, yet lacks a single Biology-specialist coaching institute. Every major chain (Aakash, Allen, FIITJEE) teaches all subjects — Biology gets 1/3 of the time with non-specialist teachers. Cerebrum is the only institute where Biology is the ENTIRE focus. This specialization translates to better results: our students average 92/100 in boards vs 78/100 at generalist coaching.' },
-    studentSuccessStory: { name: 'Kriti A.', area: 'DLF Phase 3, Gurugram', achievement: 'Board: 97/100 | NEET: 672/720 | AIIMS Delhi', quote: 'I joined Cerebrum only for Biology. The depth of teaching was incredible — Dr. Shekhar made Genetics feel like solving puzzles, not memorizing. Got 97 in boards and 672 in NEET. Both from one coaching.' },
-    competitorComparison: { localAlternatives: 'Aakash (all subjects, 60+ batch, ₹1.5L+). Allen (all subjects, 80+ batch). Private tutors (₹2,000-4,000/hour). School tuition (generic, group).', differentiator: 'Only Biology-specialist in Delhi NCR. 5 hrs/day pure Biology vs 1 hr at chains. 15-student batches. 40-60% cheaper. Dual Board + NEET results.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Delhi NCR has 10,000+ Biology students across Classes 9-12, yet lacks a single Biology-specialist coaching institute. Every major chain (Aakash, Allen, FIITJEE) teaches all subjects — Biology gets 1/3 of the time with non-specialist teachers. Cerebrum is the only institute where Biology is the ENTIRE focus. This specialization translates to better results: our students average 92/100 in boards vs 78/100 at generalist coaching.',
+    },
+    studentSuccessStory: {
+      name: 'Kriti A.',
+      area: 'DLF Phase 3, Gurugram',
+      achievement: 'Board: 97/100 | NEET: 672/720 | AIIMS Delhi',
+      quote:
+        'I joined Cerebrum only for Biology. The depth of teaching was incredible — Dr. Shekhar made Genetics feel like solving puzzles, not memorizing. Got 97 in boards and 672 in NEET. Both from one coaching.',
+    },
+    competitorComparison: {
+      localAlternatives:
+        'Aakash (all subjects, 60+ batch, ₹1.5L+). Allen (all subjects, 80+ batch). Private tutors (₹2,000-4,000/hour). School tuition (generic, group).',
+      differentiator:
+        'Only Biology-specialist in Delhi NCR. 5 hrs/day pure Biology vs 1 hr at chains. 15-student batches. 40-60% cheaper. Dual Board + NEET results.',
+    },
   },
 
   'biology-classes-ghaziabad': {
     slug: 'biology-classes-ghaziabad',
     cityName: 'Ghaziabad',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Classes in Ghaziabad 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Ghaziabad 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Best Biology classes in Ghaziabad for Class 9-12. CBSE + UP Board. Indirapuram, Vaishali, Raj Nagar. AIIMS faculty, 15-student batches. ₹35,000-60,000/year. Free demo!',
     heroTitle: 'Biology Classes in Ghaziabad — Class 9 to 12',
     heroSubtitle:
       'Whether your child is in Class 9 building foundations or Class 12 preparing for boards and NEET — our Biology classes cover every level. CBSE and UP Board patterns both covered. Live online classes from Ghaziabad with optional weekend offline at our Noida center.',
     hasOfflineCenter: false,
-    nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km from Ghaziabad' },
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '15-20 km from Ghaziabad',
+    },
     localities: [
       { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
       { name: 'Vaishali', url: '/neet-coaching-vaishali' },
@@ -12659,29 +13057,59 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'NEET Coaching Ghaziabad', url: '/neet-coaching-ghaziabad' },
     ],
     faqs: [
-      { question: 'Which classes do you offer Biology for in Ghaziabad?', answer: 'Class 9 Foundation (₹35,000/year), Class 10 Board Prep (₹38,000/year), Class 11 CBSE + NEET (₹48,000-65,000/year), Class 12 Board + NEET (₹48,000-90,000/year). All classes available online for Ghaziabad students.' },
-      { question: 'Do you cover UP Board pattern for Ghaziabad schools?', answer: 'Yes! While NCERT is common to CBSE and UP Board, we include UP Board-specific question patterns, marking schemes, and previous year papers. Many Ghaziabad students are from UP Board schools and benefit from this dual coverage.' },
-      { question: 'Which Ghaziabad schools do your students come from?', answer: 'DPS Indirapuram, Cambridge School, Ryan International, Delhi Public School Raj Nagar, St. Mary\'s Ghaziabad, Indirapuram Public School, and 20+ other schools across Indirapuram, Vaishali, and Raj Nagar Extension.' },
-      { question: 'Is this only for NEET students?', answer: 'No! 35% of our Ghaziabad students are board-only — they want strong Biology scores for college admission without NEET pressure. We have separate board-focused batches that cover NCERT thoroughly with practical/viva prep, without competitive exam intensity.' },
+      {
+        question: 'Which classes do you offer Biology for in Ghaziabad?',
+        answer:
+          'Class 9 Foundation (₹35,000/year), Class 10 Board Prep (₹38,000/year), Class 11 CBSE + NEET (₹48,000-65,000/year), Class 12 Board + NEET (₹48,000-90,000/year). All classes available online for Ghaziabad students.',
+      },
+      {
+        question: 'Do you cover UP Board pattern for Ghaziabad schools?',
+        answer:
+          'Yes! While NCERT is common to CBSE and UP Board, we include UP Board-specific question patterns, marking schemes, and previous year papers. Many Ghaziabad students are from UP Board schools and benefit from this dual coverage.',
+      },
+      {
+        question: 'Which Ghaziabad schools do your students come from?',
+        answer:
+          "DPS Indirapuram, Cambridge School, Ryan International, Delhi Public School Raj Nagar, St. Mary's Ghaziabad, Indirapuram Public School, and 20+ other schools across Indirapuram, Vaishali, and Raj Nagar Extension.",
+      },
+      {
+        question: 'Is this only for NEET students?',
+        answer:
+          'No! 35% of our Ghaziabad students are board-only — they want strong Biology scores for college admission without NEET pressure. We have separate board-focused batches that cover NCERT thoroughly with practical/viva prep, without competitive exam intensity.',
+      },
     ],
     stats: { studentsFromCity: '200+', successRate: '96%', rating: '4.8' },
     geoCoordinates: { lat: '28.6692', lng: '77.4538' },
-    areaSpecificContent: { whyThisArea: 'Ghaziabad has 500+ schools but zero Biology-specialist coaching. Parents spend ₹2,000-4,000/hour on private tutors or send children to Delhi for coaching — wasting 2-3 hours daily commuting. Our online Biology classes bring AIIMS-faculty teaching directly to Ghaziabad homes. 200+ students across Classes 9-12 already enrolled from Indirapuram, Vaishali, and Raj Nagar Extension.' },
-    studentSuccessStory: { name: 'Aadhya K.', area: 'Indirapuram, Ghaziabad', achievement: 'Class 12 Board: 94/100 Biology | Improved from 72 to 94', quote: 'I wasn\'t preparing for NEET — just wanted good board marks for DU admission. Cerebrum\'s board-focused batch improved my Biology from 72 to 94 in one year. The practical/viva prep was especially helpful.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Ghaziabad has 500+ schools but zero Biology-specialist coaching. Parents spend ₹2,000-4,000/hour on private tutors or send children to Delhi for coaching — wasting 2-3 hours daily commuting. Our online Biology classes bring AIIMS-faculty teaching directly to Ghaziabad homes. 200+ students across Classes 9-12 already enrolled from Indirapuram, Vaishali, and Raj Nagar Extension.',
+    },
+    studentSuccessStory: {
+      name: 'Aadhya K.',
+      area: 'Indirapuram, Ghaziabad',
+      achievement: 'Class 12 Board: 94/100 Biology | Improved from 72 to 94',
+      quote:
+        "I wasn't preparing for NEET — just wanted good board marks for DU admission. Cerebrum's board-focused batch improved my Biology from 72 to 94 in one year. The practical/viva prep was especially helpful.",
+    },
   },
 
   'biology-tuition-greater-noida': {
     slug: 'biology-tuition-greater-noida',
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Tuition in Greater Noida 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Tuition in Greater Noida 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Biology tuition for Greater Noida students — Gaur City, Knowledge Park, Pari Chowk. Class 9-12, CBSE board + NEET. AIIMS faculty, online + offline. ₹35,000-60,000/year.',
     heroTitle: 'Biology Tuition in Greater Noida',
     heroSubtitle:
       'Greater Noida and Noida Extension have 5 lakh+ families but zero dedicated Biology coaching. Our live online classes bring AIIMS-faculty Biology teaching to Gaur City, Knowledge Park, Pari Chowk, and all Greater Noida sectors — for board exam prep, NEET, or both.',
     hasOfflineCenter: false,
-    nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km from Greater Noida' },
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km from Greater Noida',
+    },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
       { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
@@ -12694,15 +13122,40 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Biology Classes Noida', url: '/biology-tuition-noida' },
     ],
     faqs: [
-      { question: 'Is there Biology tuition available in Greater Noida?', answer: 'Yes! Cerebrum Biology Academy serves 100+ Greater Noida students through live online classes. Our Noida Sector 62 center is accessible for weekend lab/practical sessions. We cover Class 9-12 Biology for CBSE board exams and NEET.' },
-      { question: 'Which Greater Noida societies are your students from?', answer: 'Gaur City 1 & 2 (80+ students), Ace City, Supertech Ecovillage, Knowledge Park sectors, Pari Chowk area, Alpha 1 & 2, Mahagun, and Amrapali townships. Also serving Crossing Republik on the Ghaziabad border.' },
-      { question: 'Do you offer board-only Biology tuition?', answer: 'Yes! Not every student wants NEET. We have board-focused batches covering NCERT thoroughly with practical exam prep, diagram practice, and sample paper solving. Board-only fee: ₹35,000-50,000/year — no NEET pressure.' },
-      { question: 'Can dropper students from Greater Noida colleges join?', answer: 'Yes! Students from Sharda University, Galgotias, NIET, and GL Bajaj who are reattempting NEET can join our evening dropper batch. 15% college student discount available.' },
+      {
+        question: 'Is there Biology tuition available in Greater Noida?',
+        answer:
+          'Yes! Cerebrum Biology Academy serves 100+ Greater Noida students through live online classes. Our Noida Sector 62 center is accessible for weekend lab/practical sessions. We cover Class 9-12 Biology for CBSE board exams and NEET.',
+      },
+      {
+        question: 'Which Greater Noida societies are your students from?',
+        answer:
+          'Gaur City 1 & 2 (80+ students), Ace City, Supertech Ecovillage, Knowledge Park sectors, Pari Chowk area, Alpha 1 & 2, Mahagun, and Amrapali townships. Also serving Crossing Republik on the Ghaziabad border.',
+      },
+      {
+        question: 'Do you offer board-only Biology tuition?',
+        answer:
+          'Yes! Not every student wants NEET. We have board-focused batches covering NCERT thoroughly with practical exam prep, diagram practice, and sample paper solving. Board-only fee: ₹35,000-50,000/year — no NEET pressure.',
+      },
+      {
+        question: 'Can dropper students from Greater Noida colleges join?',
+        answer:
+          'Yes! Students from Sharda University, Galgotias, NIET, and GL Bajaj who are reattempting NEET can join our evening dropper batch. 15% college student discount available.',
+      },
     ],
     stats: { studentsFromCity: '100+', successRate: '95%', rating: '4.8' },
     geoCoordinates: { lat: '28.4744', lng: '77.5030' },
-    areaSpecificContent: { whyThisArea: 'Greater Noida is one of Delhi NCR\'s fastest-growing regions with 5 lakh+ families, yet has zero Biology-specialist coaching. Students commute to Noida or Delhi for quality Biology teaching — wasting 2-3 hours daily. Our online model eliminates this entirely while providing the same AIIMS-faculty quality.' },
-    studentSuccessStory: { name: 'Nidhi R.', area: 'Gaur City 1, Greater Noida West', achievement: 'Class 11 Board: 91/100 Biology | Foundation for NEET', quote: 'No Biology coaching existed in Greater Noida. Cerebrum\'s online classes were a lifesaver — attended from my flat in Gaur City, scored 91 in Class 11. Now continuing for NEET prep.' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Greater Noida is one of Delhi NCR's fastest-growing regions with 5 lakh+ families, yet has zero Biology-specialist coaching. Students commute to Noida or Delhi for quality Biology teaching — wasting 2-3 hours daily. Our online model eliminates this entirely while providing the same AIIMS-faculty quality.",
+    },
+    studentSuccessStory: {
+      name: 'Nidhi R.',
+      area: 'Gaur City 1, Greater Noida West',
+      achievement: 'Class 11 Board: 91/100 Biology | Foundation for NEET',
+      quote:
+        "No Biology coaching existed in Greater Noida. Cerebrum's online classes were a lifesaver — attended from my flat in Gaur City, scored 91 in Class 11. Now continuing for NEET prep.",
+    },
   },
 
   'class-11-biology-coaching-greater-noida': {
@@ -12716,7 +13169,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroSubtitle:
       'Class 11 Biology is the foundation year — Cell Biology, Plant Physiology, Human Anatomy all start here. Our integrated Board + NEET approach means your child builds deep understanding from Day 1, scoring well in school AND preparing for NEET simultaneously.',
     hasOfflineCenter: false,
-    nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km',
+    },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
       { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
@@ -12728,29 +13185,59 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Class 11 Biology Noida', url: '/biology-class-11-noida' },
     ],
     faqs: [
-      { question: 'What topics are covered in Class 11 Biology?', answer: 'Complete NCERT Class 11: Living World, Biological Classification, Plant & Animal Kingdom, Morphology, Anatomy, Cell Structure, Biomolecules, Cell Cycle, Transport in Plants, Mineral Nutrition, Photosynthesis, Respiration, Plant Growth, Digestion, Breathing, Body Fluids, Excretion, Locomotion, Neural Control, Chemical Coordination. Each taught at NEET + Board depth.' },
-      { question: 'Is this for board exam or NEET?', answer: 'Both! 70% overlap between CBSE Class 11 and NEET syllabus. We teach at NEET depth (which is deeper than board) so board questions become easy. Students score 90+ in school AND build a strong NEET foundation. No separate tuition needed.' },
-      { question: 'What are the fees?', answer: 'Online: ₹48,000-65,000/year. Hybrid (online + weekend offline): ₹55,000-75,000/year. Includes study material, weekly tests, doubt support. EMI available. Scholarship test for 90%+ students.' },
-      { question: 'How do Greater Noida students attend?', answer: 'Weekday classes: fully online (live, interactive). Weekend: optional offline at Noida Sector 62 for practicals. Many Gaur City and Knowledge Park students organize shared transport for Saturday sessions.' },
+      {
+        question: 'What topics are covered in Class 11 Biology?',
+        answer:
+          'Complete NCERT Class 11: Living World, Biological Classification, Plant & Animal Kingdom, Morphology, Anatomy, Cell Structure, Biomolecules, Cell Cycle, Transport in Plants, Mineral Nutrition, Photosynthesis, Respiration, Plant Growth, Digestion, Breathing, Body Fluids, Excretion, Locomotion, Neural Control, Chemical Coordination. Each taught at NEET + Board depth.',
+      },
+      {
+        question: 'Is this for board exam or NEET?',
+        answer:
+          'Both! 70% overlap between CBSE Class 11 and NEET syllabus. We teach at NEET depth (which is deeper than board) so board questions become easy. Students score 90+ in school AND build a strong NEET foundation. No separate tuition needed.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Online: ₹48,000-65,000/year. Hybrid (online + weekend offline): ₹55,000-75,000/year. Includes study material, weekly tests, doubt support. EMI available. Scholarship test for 90%+ students.',
+      },
+      {
+        question: 'How do Greater Noida students attend?',
+        answer:
+          'Weekday classes: fully online (live, interactive). Weekend: optional offline at Noida Sector 62 for practicals. Many Gaur City and Knowledge Park students organize shared transport for Saturday sessions.',
+      },
     ],
     stats: { studentsFromCity: '50+', successRate: '95%', rating: '4.8' },
     geoCoordinates: { lat: '28.4744', lng: '77.5030' },
-    areaSpecificContent: { whyThisArea: 'Greater Noida Class 11 students previously had two bad options: commute to Noida/Delhi daily or settle for generic tuition where Biology is an afterthought. Our online model brings AIIMS-faculty Class 11 Biology directly to Greater Noida homes — saving 3 hours daily commute while providing specialist-level teaching.' },
-    studentSuccessStory: { name: 'Harsh M.', area: 'Knowledge Park III', achievement: 'Class 11: 93/100 Biology | NEET Mock: 320/360', quote: 'My school in Greater Noida barely covered half the syllabus properly. Cerebrum taught me everything at NEET depth — my school exams felt like a joke. Scored 93 without any separate board prep.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Greater Noida Class 11 students previously had two bad options: commute to Noida/Delhi daily or settle for generic tuition where Biology is an afterthought. Our online model brings AIIMS-faculty Class 11 Biology directly to Greater Noida homes — saving 3 hours daily commute while providing specialist-level teaching.',
+    },
+    studentSuccessStory: {
+      name: 'Harsh M.',
+      area: 'Knowledge Park III',
+      achievement: 'Class 11: 93/100 Biology | NEET Mock: 320/360',
+      quote:
+        'My school in Greater Noida barely covered half the syllabus properly. Cerebrum taught me everything at NEET depth — my school exams felt like a joke. Scored 93 without any separate board prep.',
+    },
   },
 
   'class-12-biology-coaching-greater-noida': {
     slug: 'class-12-biology-coaching-greater-noida',
     cityName: 'Greater Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Class 12 Biology Coaching Greater Noida | Board + NEET 2026 | Cerebrum Biology Academy',
+    metaTitle:
+      'Class 12 Biology Coaching Greater Noida | Board + NEET 2026 | Cerebrum Biology Academy',
     metaDescription:
       'Class 12 Biology in Greater Noida — Board exam + NEET dual focus. Score 90+ in boards AND crack NEET. AIIMS faculty. ₹48,000-90,000/year. Gaur City, Knowledge Park. Free demo!',
     heroTitle: 'Class 12 Biology — Board + NEET in Greater Noida',
     heroSubtitle:
       'Class 12 is the decisive year — board marks for college, NEET score for medical career. Our integrated program covers both without doubling study hours. Genetics, Ecology, Reproduction, Biotechnology — all taught at NEET depth, board exams covered automatically.',
     hasOfflineCenter: false,
-    nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km',
+    },
     localities: [
       { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
       { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
@@ -12761,29 +13248,59 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'NEET Crash Course', url: '/neet-crash-course-greater-noida' },
     ],
     faqs: [
-      { question: 'Can I prepare for both Board and NEET from Greater Noida?', answer: '70% of NEET Biology overlaps with Class 12 CBSE. We teach at NEET depth — which automatically covers board level. Plus dedicated board revision program in January-March: sample papers, diagram practice, practical/viva prep. Our Greater Noida students average 91/100 in boards AND 550+ in NEET.' },
-      { question: 'Is this for dropper students too?', answer: 'Yes! We have a separate dropper batch for Greater Noida students — many from Sharda University, Galgotias, NIET. Evening classes (6-9 PM) fit around college schedule. 15% college student discount.' },
-      { question: 'What board revision support is provided?', answer: '60-day board revision program (January-March): chapter-wise revision, 10 sample papers, diagram practice, HOTS questions, practical exam prep, mock board exams. We cover both CBSE and UP Board patterns.' },
-      { question: 'What are the fees?', answer: 'Online: ₹48,000-65,000/year. Hybrid: ₹55,000-90,000/year. Dropper batch: ₹45,000-75,000/year (15% college discount). EMI available. All include material, tests, doubt support.' },
+      {
+        question: 'Can I prepare for both Board and NEET from Greater Noida?',
+        answer:
+          '70% of NEET Biology overlaps with Class 12 CBSE. We teach at NEET depth — which automatically covers board level. Plus dedicated board revision program in January-March: sample papers, diagram practice, practical/viva prep. Our Greater Noida students average 91/100 in boards AND 550+ in NEET.',
+      },
+      {
+        question: 'Is this for dropper students too?',
+        answer:
+          'Yes! We have a separate dropper batch for Greater Noida students — many from Sharda University, Galgotias, NIET. Evening classes (6-9 PM) fit around college schedule. 15% college student discount.',
+      },
+      {
+        question: 'What board revision support is provided?',
+        answer:
+          '60-day board revision program (January-March): chapter-wise revision, 10 sample papers, diagram practice, HOTS questions, practical exam prep, mock board exams. We cover both CBSE and UP Board patterns.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Online: ₹48,000-65,000/year. Hybrid: ₹55,000-90,000/year. Dropper batch: ₹45,000-75,000/year (15% college discount). EMI available. All include material, tests, doubt support.',
+      },
     ],
     stats: { studentsFromCity: '60+', successRate: '96%', rating: '4.8' },
     geoCoordinates: { lat: '28.4744', lng: '77.5030' },
-    areaSpecificContent: { whyThisArea: 'Greater Noida Class 12 students face the dual challenge of board exams + NEET in the same year. With no Biology-specialist coaching locally, students either commute 2-3 hours daily or settle for generic tuition. Our integrated online program saves time and delivers results — 91/100 average board score from Greater Noida students.' },
-    studentSuccessStory: { name: 'Sakshi J.', area: 'Pari Chowk, Greater Noida', achievement: 'Board: 93/100 | NEET 2025: 585/720', quote: 'Commuting to Noida for coaching wasn\'t an option in Class 12 — too much time wasted. Cerebrum\'s online classes were exactly what I needed. Got 93 in boards and 585 in NEET, all from home.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Greater Noida Class 12 students face the dual challenge of board exams + NEET in the same year. With no Biology-specialist coaching locally, students either commute 2-3 hours daily or settle for generic tuition. Our integrated online program saves time and delivers results — 91/100 average board score from Greater Noida students.',
+    },
+    studentSuccessStory: {
+      name: 'Sakshi J.',
+      area: 'Pari Chowk, Greater Noida',
+      achievement: 'Board: 93/100 | NEET 2025: 585/720',
+      quote:
+        "Commuting to Noida for coaching wasn't an option in Class 12 — too much time wasted. Cerebrum's online classes were exactly what I needed. Got 93 in boards and 585 in NEET, all from home.",
+    },
   },
 
   'biology-classes-faridabad': {
     slug: 'biology-classes-faridabad',
     cityName: 'Faridabad',
     stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Faridabad 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in Faridabad 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Best Biology classes in Faridabad — Class 9-12, CBSE + Haryana Board. NIT, Sector 15-21, Ballabgarh. AIIMS faculty, ₹35,000-60,000/year. Board exam + NEET prep. Free demo!',
     heroTitle: 'Biology Classes in Faridabad — All Classes',
     heroSubtitle:
-      'Faridabad\'s largest city in Haryana, yet no dedicated Biology coaching. Our classes cover Class 9 Foundation through Class 12 Board + NEET — CBSE and Haryana Board patterns both included. Online classes eliminate the Delhi commute.',
+      "Faridabad's largest city in Haryana, yet no dedicated Biology coaching. Our classes cover Class 9 Foundation through Class 12 Board + NEET — CBSE and Haryana Board patterns both included. Online classes eliminate the Delhi commute.",
     hasOfflineCenter: false,
-    nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km from Faridabad' },
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '15-20 km from Faridabad',
+    },
     localities: [
       { name: 'NIT Faridabad', url: '/neet-coaching-faridabad' },
       { name: 'Sector 15-21', url: '/neet-coaching-faridabad' },
@@ -12795,15 +13312,40 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'NEET Coaching Faridabad', url: '/neet-coaching-faridabad' },
     ],
     faqs: [
-      { question: 'Which classes do you offer Biology for in Faridabad?', answer: 'Class 9 Foundation (₹35,000), Class 10 Board Prep (₹38,000), Class 11 Board + NEET (₹48,000-65,000), Class 12 Board + NEET (₹48,000-90,000). All online for Faridabad students.' },
-      { question: 'Do you cover Haryana Board pattern?', answer: 'Yes! Many Faridabad schools follow Haryana Board. Our curriculum covers NCERT (common to CBSE and Haryana Board) with state-specific question patterns and previous year papers.' },
-      { question: 'Is this for board exams only or NEET also?', answer: 'Both! 35% of our Faridabad students are board-only. We have separate board-focused and Board+NEET batches. Board-only is cheaper (₹35,000-50,000) and focuses on NCERT, practicals, and viva prep.' },
-      { question: 'Which Faridabad schools do your students attend?', answer: 'DAV Faridabad, Modern School NIT, Apeejay School, GD Goenka, DPS Faridabad, KR Mangalam, and 15+ other schools. Both CBSE and Haryana Board students benefit.' },
+      {
+        question: 'Which classes do you offer Biology for in Faridabad?',
+        answer:
+          'Class 9 Foundation (₹35,000), Class 10 Board Prep (₹38,000), Class 11 Board + NEET (₹48,000-65,000), Class 12 Board + NEET (₹48,000-90,000). All online for Faridabad students.',
+      },
+      {
+        question: 'Do you cover Haryana Board pattern?',
+        answer:
+          'Yes! Many Faridabad schools follow Haryana Board. Our curriculum covers NCERT (common to CBSE and Haryana Board) with state-specific question patterns and previous year papers.',
+      },
+      {
+        question: 'Is this for board exams only or NEET also?',
+        answer:
+          'Both! 35% of our Faridabad students are board-only. We have separate board-focused and Board+NEET batches. Board-only is cheaper (₹35,000-50,000) and focuses on NCERT, practicals, and viva prep.',
+      },
+      {
+        question: 'Which Faridabad schools do your students attend?',
+        answer:
+          'DAV Faridabad, Modern School NIT, Apeejay School, GD Goenka, DPS Faridabad, KR Mangalam, and 15+ other schools. Both CBSE and Haryana Board students benefit.',
+      },
     ],
     stats: { studentsFromCity: '120+', successRate: '95%', rating: '4.8' },
     geoCoordinates: { lat: '28.4089', lng: '77.3178' },
-    areaSpecificContent: { whyThisArea: 'Faridabad is Haryana\'s largest city with 300+ schools but no Biology-specialist coaching. Students commute to Delhi — spending 2-3 hours daily — or settle for generic tuition. Our online Biology classes serve 120+ Faridabad students from NIT, Sector 15-21, and Ballabgarh with Haryana Board + CBSE dual coverage.' },
-    studentSuccessStory: { name: 'Priya S.', area: 'NIT Faridabad', achievement: 'Class 12 Board: 92/100 | First time above 80', quote: 'Biology was my weakest subject — I was scoring 68 in Class 11. Joined Cerebrum\'s online batch in Class 12 and jumped to 92. The practical/viva prep sessions made a huge difference for Haryana Board.' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Faridabad is Haryana's largest city with 300+ schools but no Biology-specialist coaching. Students commute to Delhi — spending 2-3 hours daily — or settle for generic tuition. Our online Biology classes serve 120+ Faridabad students from NIT, Sector 15-21, and Ballabgarh with Haryana Board + CBSE dual coverage.",
+    },
+    studentSuccessStory: {
+      name: 'Priya S.',
+      area: 'NIT Faridabad',
+      achievement: 'Class 12 Board: 92/100 | First time above 80',
+      quote:
+        "Biology was my weakest subject — I was scoring 68 in Class 11. Joined Cerebrum's online batch in Class 12 and jumped to 92. The practical/viva prep sessions made a huge difference for Haryana Board.",
+    },
   },
 
   'class-10-biology-coaching-noida': {
@@ -12817,7 +13359,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroSubtitle:
       'Class 10 Biology is the gateway — strong foundation here determines Class 11-12 performance and NEET readiness. Our coaching covers complete NCERT Class 10 at a depth that makes both board exams easy AND prepares students for the leap to Class 11.',
     hasOfflineCenter: true,
-    nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: 'In Noida' },
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: 'In Noida',
+    },
     localities: [
       { name: 'Sector 18', url: '/neet-coaching-noida/sector-18' },
       { name: 'Sector 62', url: '/neet-coaching-noida/sector-62' },
@@ -12829,15 +13375,40 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Biology Tuition Noida', url: '/biology-tuition-noida' },
     ],
     faqs: [
-      { question: 'Is Class 10 too early for Biology coaching?', answer: 'Not at all! Class 10 Biology topics — Life Processes, Control & Coordination, Reproduction, Heredity, Environment — are directly tested in NEET. Students who build strong foundations in Class 10 have a 2-year advantage when serious NEET prep starts in Class 11.' },
-      { question: 'How does this help with CBSE board exams?', answer: 'Our coaching follows 100% NCERT Class 10 syllabus with deeper understanding. Students score 90+ in board Science exams. We also cover practical exam preparation, viva questions, and diagram drawing — all critical for board marks.' },
-      { question: 'What are the fees?', answer: 'Board prep: ₹38,000/year. Board + NEET foundation: ₹45,000-50,000/year. Offline at Sector 62 or online. Includes study material, weekly tests, practical prep. EMI available.' },
-      { question: 'What is the weekly time commitment?', answer: 'Just 3-4 hours/week — two sessions of 1.5-2 hours each. Designed to complement school studies without creating burden. Weekend batch also available.' },
+      {
+        question: 'Is Class 10 too early for Biology coaching?',
+        answer:
+          'Not at all! Class 10 Biology topics — Life Processes, Control & Coordination, Reproduction, Heredity, Environment — are directly tested in NEET. Students who build strong foundations in Class 10 have a 2-year advantage when serious NEET prep starts in Class 11.',
+      },
+      {
+        question: 'How does this help with CBSE board exams?',
+        answer:
+          'Our coaching follows 100% NCERT Class 10 syllabus with deeper understanding. Students score 90+ in board Science exams. We also cover practical exam preparation, viva questions, and diagram drawing — all critical for board marks.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Board prep: ₹38,000/year. Board + NEET foundation: ₹45,000-50,000/year. Offline at Sector 62 or online. Includes study material, weekly tests, practical prep. EMI available.',
+      },
+      {
+        question: 'What is the weekly time commitment?',
+        answer:
+          'Just 3-4 hours/week — two sessions of 1.5-2 hours each. Designed to complement school studies without creating burden. Weekend batch also available.',
+      },
     ],
     stats: { studentsFromCity: '80+', successRate: '96%', rating: '4.9' },
     geoCoordinates: { lat: '28.5355', lng: '77.3910' },
-    areaSpecificContent: { whyThisArea: 'Noida parents start thinking about Biology coaching in Class 10 when children show interest in medicine. Our Class 10 program is the bridge — it\'s light enough (3-4 hrs/week) to not interfere with school but deep enough to build real foundations for Class 11-12 Biology.' },
-    studentSuccessStory: { name: 'Aryan D.', area: 'Sector 137, Noida', achievement: 'Class 10 Board: 95/100 Science | Smooth transition to Class 11', quote: 'Class 10 Biology at Cerebrum made Class 11 so much easier. While my classmates struggled with Cell Biology, I already knew the concepts. Scored 95 in Class 10 Science board.' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Noida parents start thinking about Biology coaching in Class 10 when children show interest in medicine. Our Class 10 program is the bridge — it's light enough (3-4 hrs/week) to not interfere with school but deep enough to build real foundations for Class 11-12 Biology.",
+    },
+    studentSuccessStory: {
+      name: 'Aryan D.',
+      area: 'Sector 137, Noida',
+      achievement: 'Class 10 Board: 95/100 Science | Smooth transition to Class 11',
+      quote:
+        'Class 10 Biology at Cerebrum made Class 11 so much easier. While my classmates struggled with Cell Biology, I already knew the concepts. Scored 95 in Class 10 Science board.',
+    },
   },
 
   'class-10-biology-coaching-delhi': {
@@ -12851,7 +13422,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroSubtitle:
       'Build a strong Biology foundation in Class 10 — score 90+ in CBSE boards and prepare for the Class 11 leap. Offline classes at South Extension and Rohini centers. Online for all Delhi areas.',
     hasOfflineCenter: true,
-    nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: 'In Delhi' },
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: 'In Delhi',
+    },
     localities: [
       { name: 'South Delhi', url: '/neet-coaching-south-delhi' },
       { name: 'North Delhi', url: '/neet-coaching-north-delhi' },
@@ -12864,15 +13439,40 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Biology Classes Delhi', url: '/biology-classes-delhi' },
     ],
     faqs: [
-      { question: 'Which areas in Delhi do you serve for Class 10 Biology?', answer: 'Offline at South Extension (South Delhi) and Rohini (North Delhi) centers. Online for all Delhi areas — East Delhi, West Delhi, Dwarka, Pitampura, and every locality. Same faculty and quality across all modes.' },
-      { question: 'Is this just Science tuition or Biology-specific?', answer: 'Biology-specific! In Class 10, Science is divided into Physics, Chemistry, and Biology. Most tuition centers teach all three generically. We focus exclusively on the Biology portion (Life Processes, Heredity, Evolution, Environment) with depth that prepares for Class 11.' },
-      { question: 'What are the fees for Delhi students?', answer: 'Offline: ₹40,000-50,000/year. Online: ₹38,000-45,000/year. Board-only or Board + NEET foundation options. Includes study material, weekly tests, practical prep. EMI available.' },
-      { question: 'How does this help with Class 11 transition?', answer: 'Class 10 Biology topics directly connect to Class 11: Life Processes → Human Physiology, Heredity → Genetics, Environment → Ecology. Students who take our Class 10 course find Class 11 Biology 50% easier than peers who start fresh.' },
+      {
+        question: 'Which areas in Delhi do you serve for Class 10 Biology?',
+        answer:
+          'Offline at South Extension (South Delhi) and Rohini (North Delhi) centers. Online for all Delhi areas — East Delhi, West Delhi, Dwarka, Pitampura, and every locality. Same faculty and quality across all modes.',
+      },
+      {
+        question: 'Is this just Science tuition or Biology-specific?',
+        answer:
+          'Biology-specific! In Class 10, Science is divided into Physics, Chemistry, and Biology. Most tuition centers teach all three generically. We focus exclusively on the Biology portion (Life Processes, Heredity, Evolution, Environment) with depth that prepares for Class 11.',
+      },
+      {
+        question: 'What are the fees for Delhi students?',
+        answer:
+          'Offline: ₹40,000-50,000/year. Online: ₹38,000-45,000/year. Board-only or Board + NEET foundation options. Includes study material, weekly tests, practical prep. EMI available.',
+      },
+      {
+        question: 'How does this help with Class 11 transition?',
+        answer:
+          'Class 10 Biology topics directly connect to Class 11: Life Processes → Human Physiology, Heredity → Genetics, Environment → Ecology. Students who take our Class 10 course find Class 11 Biology 50% easier than peers who start fresh.',
+      },
     ],
     stats: { studentsFromCity: '150+', successRate: '97%', rating: '4.9' },
     geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Delhi parents are the most education-conscious in India — they start planning for NEET from Class 10. Our Class 10 Biology program serves this early-start market with a light 3-4 hour/week commitment that builds real foundations without academic pressure. With offline options at two centers and online everywhere, we serve all 11 districts of Delhi.' },
-    studentSuccessStory: { name: 'Tanvi G.', area: 'Green Park, South Delhi', achievement: 'Class 10: 96/100 Science | Now Class 11 topper', quote: 'I attended Cerebrum\'s Class 10 Biology at South Extension center on weekends. When Class 11 started, Biology was my easiest subject while everyone else was struggling. That head start made all the difference.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Delhi parents are the most education-conscious in India — they start planning for NEET from Class 10. Our Class 10 Biology program serves this early-start market with a light 3-4 hour/week commitment that builds real foundations without academic pressure. With offline options at two centers and online everywhere, we serve all 11 districts of Delhi.',
+    },
+    studentSuccessStory: {
+      name: 'Tanvi G.',
+      area: 'Green Park, South Delhi',
+      achievement: 'Class 10: 96/100 Science | Now Class 11 topper',
+      quote:
+        "I attended Cerebrum's Class 10 Biology at South Extension center on weekends. When Class 11 started, Biology was my easiest subject while everyone else was struggling. That head start made all the difference.",
+    },
   },
 
   'class-9-biology-tuition-noida': {
@@ -12886,7 +13486,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroSubtitle:
       'Class 9 is when Biology gets interesting — Cells, Tissues, Diversity of Life, Life Processes. Our age-appropriate teaching makes these topics fun while building conceptual depth that pays off in Class 10, 11, and beyond. Just 3 hours/week.',
     hasOfflineCenter: true,
-    nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: 'In Noida' },
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: 'In Noida',
+    },
     localities: [
       { name: 'Sector 18', url: '/neet-coaching-noida/sector-18' },
       { name: 'Sector 62', url: '/neet-coaching-noida/sector-62' },
@@ -12899,15 +13503,40 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Biology Tuition Noida', url: '/biology-tuition-noida' },
     ],
     faqs: [
-      { question: 'Is Class 9 too early for Biology coaching?', answer: 'It\'s the perfect time! Class 9 Biology introduces Cell Biology, Tissues, Classification, and Life Processes — all of which are tested in NEET. Students who start in Class 9 have a 3-year advantage. Plus, they score 90+ in school Science without extra effort.' },
-      { question: 'How many hours per week?', answer: 'Just 3 hours/week — one weekend session of 2 hours + 1 hour of guided practice. Light enough to complement school without adding pressure. Most parents find it actually improves overall study habits.' },
-      { question: 'What is the fee?', answer: '₹35,000/year (Pursuit tier, 20 students). ₹45,000/year (Ascent tier, 15 students). ₹60,000/year (Pinnacle tier, 12 students + mentoring). Offline at Sector 62 or online. Free lab kit included with Pinnacle tier.' },
-      { question: 'What makes this different from school Biology?', answer: 'School covers topics superficially in 35-40 periods/year. We go deeper — using 3D models, microscope sessions, hands-on experiments, and story-based teaching. Students understand WHY biological processes happen, not just memorize facts.' },
+      {
+        question: 'Is Class 9 too early for Biology coaching?',
+        answer:
+          "It's the perfect time! Class 9 Biology introduces Cell Biology, Tissues, Classification, and Life Processes — all of which are tested in NEET. Students who start in Class 9 have a 3-year advantage. Plus, they score 90+ in school Science without extra effort.",
+      },
+      {
+        question: 'How many hours per week?',
+        answer:
+          'Just 3 hours/week — one weekend session of 2 hours + 1 hour of guided practice. Light enough to complement school without adding pressure. Most parents find it actually improves overall study habits.',
+      },
+      {
+        question: 'What is the fee?',
+        answer:
+          '₹35,000/year (Pursuit tier, 20 students). ₹45,000/year (Ascent tier, 15 students). ₹60,000/year (Pinnacle tier, 12 students + mentoring). Offline at Sector 62 or online. Free lab kit included with Pinnacle tier.',
+      },
+      {
+        question: 'What makes this different from school Biology?',
+        answer:
+          'School covers topics superficially in 35-40 periods/year. We go deeper — using 3D models, microscope sessions, hands-on experiments, and story-based teaching. Students understand WHY biological processes happen, not just memorize facts.',
+      },
     ],
     stats: { studentsFromCity: '60+', successRate: '95%', rating: '4.9' },
     geoCoordinates: { lat: '28.5355', lng: '77.3910' },
-    areaSpecificContent: { whyThisArea: 'Noida parents increasingly recognize the value of early Biology coaching. With 60+ Class 9 students from Sectors 18, 62, 137, 150, and Greater Noida, our foundation program is proven. The 3 hours/week commitment is designed for busy Noida families who want quality without burnout.' },
-    studentSuccessStory: { name: 'Aanya S.', area: 'Sector 50, Noida', achievement: 'Class 9 Board: 93/100 Science | Now Class 10 topper', quote: 'Biology went from my most boring subject to my favorite. The microscope sessions at Sector 62 center were amazing — actually seeing cells and tissues made everything click. Scored 93 in Class 9 Science.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Noida parents increasingly recognize the value of early Biology coaching. With 60+ Class 9 students from Sectors 18, 62, 137, 150, and Greater Noida, our foundation program is proven. The 3 hours/week commitment is designed for busy Noida families who want quality without burnout.',
+    },
+    studentSuccessStory: {
+      name: 'Aanya S.',
+      area: 'Sector 50, Noida',
+      achievement: 'Class 9 Board: 93/100 Science | Now Class 10 topper',
+      quote:
+        'Biology went from my most boring subject to my favorite. The microscope sessions at Sector 62 center were amazing — actually seeing cells and tissues made everything click. Scored 93 in Class 9 Science.',
+    },
   },
 
   'class-9-biology-tuition-delhi': {
@@ -12921,7 +13550,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroSubtitle:
       'Give your child a head start in Biology. Our Class 9 foundation course makes Cell Biology, Tissues, and Life Processes fun and memorable through hands-on experiments and visual learning. Just 3 hours/week at our South Extension or Rohini center.',
     hasOfflineCenter: true,
-    nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: 'In Delhi' },
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: 'In Delhi',
+    },
     localities: [
       { name: 'South Delhi', url: '/neet-coaching-south-delhi' },
       { name: 'North Delhi (Rohini)', url: '/neet-coaching-north-delhi' },
@@ -12934,29 +13567,59 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'Biology Classes Delhi', url: '/biology-classes-delhi' },
     ],
     faqs: [
-      { question: 'Which Delhi schools do your Class 9 students come from?', answer: 'DPS RK Puram, Modern School, Sanskriti School, KV schools, DPS Vasant Kunj, Bal Bharati, The Shri Ram School, and 20+ other Delhi schools. Both South Delhi and North Delhi students attend our centers.' },
-      { question: 'Is this only for future NEET aspirants?', answer: 'No! Many parents enroll their Class 9 children simply to improve Biology understanding and school scores. NEET is a bonus — the primary benefit is building curiosity and conceptual clarity in Biology from an early age.' },
-      { question: 'What are the fees and schedule?', answer: '₹35,000-45,000/year depending on tier. Just 3 hours/week (1 weekend session). Offline at South Extension (South Delhi) or Rohini (North Delhi). Online for East/West Delhi. Includes lab kit for Pinnacle tier.' },
-      { question: 'How is this different from Science tuition?', answer: 'We teach ONLY Biology — not Physics or Chemistry. This means 100% of our time goes to making Biology interesting. Microscope sessions, 3D cell models, specimen observation — things no generic Science tuition center offers.' },
+      {
+        question: 'Which Delhi schools do your Class 9 students come from?',
+        answer:
+          'DPS RK Puram, Modern School, Sanskriti School, KV schools, DPS Vasant Kunj, Bal Bharati, The Shri Ram School, and 20+ other Delhi schools. Both South Delhi and North Delhi students attend our centers.',
+      },
+      {
+        question: 'Is this only for future NEET aspirants?',
+        answer:
+          'No! Many parents enroll their Class 9 children simply to improve Biology understanding and school scores. NEET is a bonus — the primary benefit is building curiosity and conceptual clarity in Biology from an early age.',
+      },
+      {
+        question: 'What are the fees and schedule?',
+        answer:
+          '₹35,000-45,000/year depending on tier. Just 3 hours/week (1 weekend session). Offline at South Extension (South Delhi) or Rohini (North Delhi). Online for East/West Delhi. Includes lab kit for Pinnacle tier.',
+      },
+      {
+        question: 'How is this different from Science tuition?',
+        answer:
+          'We teach ONLY Biology — not Physics or Chemistry. This means 100% of our time goes to making Biology interesting. Microscope sessions, 3D cell models, specimen observation — things no generic Science tuition center offers.',
+      },
     ],
     stats: { studentsFromCity: '80+', successRate: '96%', rating: '4.9' },
     geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Delhi has the highest density of competitive exam aspirants in India. Starting Biology coaching in Class 9 gives Delhi students a 3-year head start. Our two centers (South Extension + Rohini) serve most Delhi areas, with online classes for those who prefer home learning.' },
-    studentSuccessStory: { name: 'Ishaan R.', area: 'Greater Kailash, South Delhi', achievement: 'Class 9: 95/100 Science | Biology is now favorite subject', quote: 'I used to hate Biology — too much memorization. Cerebrum\'s approach changed everything. They teach through stories and experiments, not rote learning. Now Biology is my favorite subject and I scored 95 in Science.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Delhi has the highest density of competitive exam aspirants in India. Starting Biology coaching in Class 9 gives Delhi students a 3-year head start. Our two centers (South Extension + Rohini) serve most Delhi areas, with online classes for those who prefer home learning.',
+    },
+    studentSuccessStory: {
+      name: 'Ishaan R.',
+      area: 'Greater Kailash, South Delhi',
+      achievement: 'Class 9: 95/100 Science | Biology is now favorite subject',
+      quote:
+        "I used to hate Biology — too much memorization. Cerebrum's approach changed everything. They teach through stories and experiments, not rote learning. Now Biology is my favorite subject and I scored 95 in Science.",
+    },
   },
 
   'biology-classes-east-delhi': {
     slug: 'biology-classes-east-delhi',
     cityName: 'East Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in East Delhi 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in East Delhi 2026 | Class 9-12 | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Biology classes in East Delhi — Laxmi Nagar, Preet Vihar, IP Extension, Mayur Vihar. Class 9-12, CBSE board + NEET. AIIMS faculty, ₹35,000-60,000/year. Online + offline. Free demo!',
     heroTitle: 'Biology Classes in East Delhi',
     heroSubtitle:
       'East Delhi students no longer need to cross the Yamuna for quality Biology coaching. Our live online classes bring AIIMS-faculty teaching to Laxmi Nagar, Preet Vihar, Mayur Vihar, and Shahdara — with optional offline at our South Extension center.',
     hasOfflineCenter: false,
-    nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '10-15 km from East Delhi areas' },
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '10-15 km from East Delhi areas',
+    },
     localities: [
       { name: 'Laxmi Nagar', url: '/neet-coaching-east-delhi' },
       { name: 'Preet Vihar', url: '/neet-coaching-east-delhi' },
@@ -12969,29 +13632,59 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'NEET Coaching East Delhi', url: '/neet-coaching-east-delhi' },
     ],
     faqs: [
-      { question: 'Are there Biology classes available in East Delhi?', answer: 'Yes! Cerebrum Biology Academy serves 60+ students from East Delhi through live online classes. Our South Extension center is accessible via Blue Line Metro (Laxmi Nagar → South Extension in 20 min). We cover Class 9-12 Biology for board exams and NEET.' },
-      { question: 'Which East Delhi areas do you cover?', answer: 'Laxmi Nagar, Preet Vihar, IP Extension, Mayur Vihar Phase 1-3, Patparganj, Pandav Nagar, Shahdara, Dilshad Garden, Vivek Vihar, and Anand Vihar. Online classes available for all East Delhi areas.' },
-      { question: 'Is this for board exams or NEET?', answer: 'Both! We have separate board-focused and Board+NEET batches. 30% of our East Delhi students are board-only — they want strong scores for DU/IP admission without NEET pressure. Board-only fee: ₹35,000-50,000/year.' },
-      { question: 'Do East Delhi students attend offline classes?', answer: 'Some do — our South Extension center is 20 min by Blue Line Metro from Laxmi Nagar. But 70% of East Delhi students prefer online classes to save commute time. Same faculty, same batch size, same quality.' },
+      {
+        question: 'Are there Biology classes available in East Delhi?',
+        answer:
+          'Yes! Cerebrum Biology Academy serves 60+ students from East Delhi through live online classes. Our South Extension center is accessible via Blue Line Metro (Laxmi Nagar → South Extension in 20 min). We cover Class 9-12 Biology for board exams and NEET.',
+      },
+      {
+        question: 'Which East Delhi areas do you cover?',
+        answer:
+          'Laxmi Nagar, Preet Vihar, IP Extension, Mayur Vihar Phase 1-3, Patparganj, Pandav Nagar, Shahdara, Dilshad Garden, Vivek Vihar, and Anand Vihar. Online classes available for all East Delhi areas.',
+      },
+      {
+        question: 'Is this for board exams or NEET?',
+        answer:
+          'Both! We have separate board-focused and Board+NEET batches. 30% of our East Delhi students are board-only — they want strong scores for DU/IP admission without NEET pressure. Board-only fee: ₹35,000-50,000/year.',
+      },
+      {
+        question: 'Do East Delhi students attend offline classes?',
+        answer:
+          'Some do — our South Extension center is 20 min by Blue Line Metro from Laxmi Nagar. But 70% of East Delhi students prefer online classes to save commute time. Same faculty, same batch size, same quality.',
+      },
     ],
     stats: { studentsFromCity: '60+', successRate: '94%', rating: '4.8' },
     geoCoordinates: { lat: '28.6280', lng: '77.2800' },
-    areaSpecificContent: { whyThisArea: 'East Delhi has a massive student population but most quality coaching is concentrated in South and West Delhi. Students from Laxmi Nagar, Preet Vihar, and Mayur Vihar previously commuted 1-2 hours for Biology coaching. Our online classes + accessible South Extension center (20 min by metro) solve this problem.' },
-    studentSuccessStory: { name: 'Ritika P.', area: 'Mayur Vihar Phase 2', achievement: 'Board: 91/100 | First time above 80 in Biology', quote: 'No good Biology coaching in East Delhi. I tried 3 tuition centers in Laxmi Nagar — all taught Biology as a side subject. Cerebrum\'s online classes were life-changing. Biology-only focus, AIIMS faculty. Went from 72 to 91.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'East Delhi has a massive student population but most quality coaching is concentrated in South and West Delhi. Students from Laxmi Nagar, Preet Vihar, and Mayur Vihar previously commuted 1-2 hours for Biology coaching. Our online classes + accessible South Extension center (20 min by metro) solve this problem.',
+    },
+    studentSuccessStory: {
+      name: 'Ritika P.',
+      area: 'Mayur Vihar Phase 2',
+      achievement: 'Board: 91/100 | First time above 80 in Biology',
+      quote:
+        "No good Biology coaching in East Delhi. I tried 3 tuition centers in Laxmi Nagar — all taught Biology as a side subject. Cerebrum's online classes were life-changing. Biology-only focus, AIIMS faculty. Went from 72 to 91.",
+    },
   },
 
   'biology-classes-north-delhi': {
     slug: 'biology-classes-north-delhi',
     cityName: 'North Delhi',
     stateName: 'Delhi',
-    metaTitle: 'Biology Classes in North Delhi 2026 | Rohini Center | Board + NEET | Cerebrum Biology Academy',
+    metaTitle:
+      'Biology Classes in North Delhi 2026 | Rohini Center | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Biology classes in North Delhi — offline at Rohini center + online. Pitampura, Model Town, Civil Lines, Rohini. Class 9-12, CBSE board + NEET. AIIMS faculty. ₹35,000-60,000/year.',
     heroTitle: 'Biology Classes in North Delhi — Rohini Center',
     heroSubtitle:
       'North Delhi finally has a dedicated Biology coaching center. Our Rohini center offers offline classroom coaching for Pitampura, Model Town, Shalimar Bagh, and all North Delhi areas. Board exam + NEET preparation under one roof.',
     hasOfflineCenter: true,
-    nearestCenter: { name: 'Rohini Center', address: 'Block-A, Sector 7, Rohini, Delhi 110085', distance: 'In North Delhi (Rohini)' },
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'Block-A, Sector 7, Rohini, Delhi 110085',
+      distance: 'In North Delhi (Rohini)',
+    },
     localities: [
       { name: 'Rohini', url: '/neet-coaching-north-delhi' },
       { name: 'Pitampura', url: '/neet-coaching-north-delhi' },
@@ -13004,29 +13697,59 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'NEET Coaching North Delhi', url: '/neet-coaching-north-delhi' },
     ],
     faqs: [
-      { question: 'Do you have offline Biology classes in North Delhi?', answer: 'Yes! Our Rohini center (Sector 7, near Rohini East Metro) offers offline classroom coaching. Walk-in classes for all North Delhi areas — Rohini, Pitampura, Model Town, Shalimar Bagh, Civil Lines, and beyond. Online option also available.' },
-      { question: 'What classes and boards do you cover?', answer: 'Class 9-12 Biology for CBSE board exams and NEET. Our Rohini center serves both board-only students (35% of enrollment) and NEET aspirants. Both get AIIMS-faculty teaching in small 15-student batches.' },
-      { question: 'What are the fees at the Rohini center?', answer: 'Offline: ₹40,000-60,000/year. Online: ₹35,000-50,000/year. Board-only batches available at lower fees. Includes study material, weekly tests, practical prep. EMI available.' },
-      { question: 'Which North Delhi schools do your students attend?', answer: 'DPS Rohini, Mount Abu School, Bal Bharati Pitampura, Ryan International Rohini, GD Goenka Model Town, and 15+ other schools. Our Rohini center is within 5 km of most North Delhi schools.' },
+      {
+        question: 'Do you have offline Biology classes in North Delhi?',
+        answer:
+          'Yes! Our Rohini center (Sector 7, near Rohini East Metro) offers offline classroom coaching. Walk-in classes for all North Delhi areas — Rohini, Pitampura, Model Town, Shalimar Bagh, Civil Lines, and beyond. Online option also available.',
+      },
+      {
+        question: 'What classes and boards do you cover?',
+        answer:
+          'Class 9-12 Biology for CBSE board exams and NEET. Our Rohini center serves both board-only students (35% of enrollment) and NEET aspirants. Both get AIIMS-faculty teaching in small 15-student batches.',
+      },
+      {
+        question: 'What are the fees at the Rohini center?',
+        answer:
+          'Offline: ₹40,000-60,000/year. Online: ₹35,000-50,000/year. Board-only batches available at lower fees. Includes study material, weekly tests, practical prep. EMI available.',
+      },
+      {
+        question: 'Which North Delhi schools do your students attend?',
+        answer:
+          'DPS Rohini, Mount Abu School, Bal Bharati Pitampura, Ryan International Rohini, GD Goenka Model Town, and 15+ other schools. Our Rohini center is within 5 km of most North Delhi schools.',
+      },
     ],
     stats: { studentsFromCity: '100+', successRate: '95%', rating: '4.8' },
     geoCoordinates: { lat: '28.7320', lng: '77.1100' },
-    areaSpecificContent: { whyThisArea: 'North Delhi students previously travelled to South Delhi for quality Biology coaching — a 45-60 min commute each way. Our Rohini center (near Rohini East Metro) brings AIIMS-faculty Biology coaching to North Delhi. With 100+ students from Rohini, Pitampura, Model Town, and Civil Lines, we are the area\'s preferred Biology institute.' },
-    studentSuccessStory: { name: 'Varun M.', area: 'Pitampura, North Delhi', achievement: 'Board: 94/100 | NEET 2025: 610/720', quote: 'The Rohini center is 10 minutes from my home in Pitampura. No more wasting 2 hours going to South Extension. Same quality, same faculty. Got 94 in boards and 610 in NEET.' },
+    areaSpecificContent: {
+      whyThisArea:
+        "North Delhi students previously travelled to South Delhi for quality Biology coaching — a 45-60 min commute each way. Our Rohini center (near Rohini East Metro) brings AIIMS-faculty Biology coaching to North Delhi. With 100+ students from Rohini, Pitampura, Model Town, and Civil Lines, we are the area's preferred Biology institute.",
+    },
+    studentSuccessStory: {
+      name: 'Varun M.',
+      area: 'Pitampura, North Delhi',
+      achievement: 'Board: 94/100 | NEET 2025: 610/720',
+      quote:
+        'The Rohini center is 10 minutes from my home in Pitampura. No more wasting 2 hours going to South Extension. Same quality, same faculty. Got 94 in boards and 610 in NEET.',
+    },
   },
 
   'best-biology-coaching-noida': {
     slug: 'best-biology-coaching-noida',
     cityName: 'Noida',
     stateName: 'Uttar Pradesh',
-    metaTitle: 'Best Biology Coaching in Noida 2026 | #1 Rated | Board + NEET | Cerebrum Biology Academy',
+    metaTitle:
+      'Best Biology Coaching in Noida 2026 | #1 Rated | Board + NEET | Cerebrum Biology Academy',
     metaDescription:
       'Ranked #1 Biology coaching in Noida. 98% success rate, AIIMS faculty, 15-student batches. Board exam (avg 92/100) + NEET (avg 160+/180 Biology). ₹45,000-90,000/year. Free demo!',
     heroTitle: 'Best Biology Coaching in Noida — Ranked #1',
     heroSubtitle:
       'Searching for the "best Biology coaching in Noida"? Here\'s why 1,200+ Noida students chose us: AIIMS faculty (not generic teachers), 15-student batches (not 60+), and dual results — 92/100 average board score AND 160+/180 average NEET Biology score. No other institute in Noida delivers both.',
     hasOfflineCenter: true,
-    nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: 'In Noida' },
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: 'In Noida',
+    },
     localities: [
       { name: 'Sector 18', url: '/neet-coaching-sector-18-noida' },
       { name: 'Sector 62', url: '/neet-coaching-sector-62-noida' },
@@ -13039,29 +13762,59 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'NEET Coaching Noida', url: '/neet-coaching-noida' },
     ],
     faqs: [
-      { question: 'Why is Cerebrum rated the best Biology coaching in Noida?', answer: 'Three reasons: (1) Only Biology-specialist in Noida — 100% of teaching time goes to Biology, (2) AIIMS faculty Dr. Shekhar Singh teaches every batch personally, (3) Verified results — 1,200+ students, 98% success rate, 92/100 average board score. No generic coaching center matches this.' },
-      { question: 'How does Cerebrum compare to Aakash and Allen in Noida?', answer: 'Aakash/Allen teach all 3 subjects — Biology gets 1/3 of time with non-specialist teachers. Batch size: 60-100. Fee: ₹1.5L+. Cerebrum: Biology-only, 5 hrs/day, AIIMS faculty, 15-student batch, ₹45K-90K. Our Biology score improvement is 2x better.' },
-      { question: 'Is this only for NEET or also for board exams?', answer: 'Both! 30% of our Noida students are board-only. We have separate board-focused batches. Our board students average 92/100 without NEET pressure. NEET students get board prep included at no extra cost.' },
-      { question: 'What are the fees for the best Biology coaching?', answer: 'Board-only: ₹35,000-50,000/year. Board + NEET: ₹45,000-90,000/year. Compare this to Aakash (₹1.5L for all subjects with Biology as 1/3). EMI available. Scholarship test for 10-30% discount.' },
+      {
+        question: 'Why is Cerebrum rated the best Biology coaching in Noida?',
+        answer:
+          'Three reasons: (1) Only Biology-specialist in Noida — 100% of teaching time goes to Biology, (2) AIIMS faculty Dr. Shekhar Singh teaches every batch personally, (3) Verified results — 1,200+ students, 98% success rate, 92/100 average board score. No generic coaching center matches this.',
+      },
+      {
+        question: 'How does Cerebrum compare to Aakash and Allen in Noida?',
+        answer:
+          'Aakash/Allen teach all 3 subjects — Biology gets 1/3 of time with non-specialist teachers. Batch size: 60-100. Fee: ₹1.5L+. Cerebrum: Biology-only, 5 hrs/day, AIIMS faculty, 15-student batch, ₹45K-90K. Our Biology score improvement is 2x better.',
+      },
+      {
+        question: 'Is this only for NEET or also for board exams?',
+        answer:
+          'Both! 30% of our Noida students are board-only. We have separate board-focused batches. Our board students average 92/100 without NEET pressure. NEET students get board prep included at no extra cost.',
+      },
+      {
+        question: 'What are the fees for the best Biology coaching?',
+        answer:
+          'Board-only: ₹35,000-50,000/year. Board + NEET: ₹45,000-90,000/year. Compare this to Aakash (₹1.5L for all subjects with Biology as 1/3). EMI available. Scholarship test for 10-30% discount.',
+      },
     ],
     stats: { studentsFromCity: '1,200+', successRate: '98%', rating: '5.0' },
     geoCoordinates: { lat: '28.5355', lng: '77.3910' },
-    areaSpecificContent: { whyThisArea: 'Noida has 200+ coaching centers but zero Biology-specialists. Every institute teaches Biology as a side subject — Physics and Chemistry get the spotlight. Cerebrum flipped this. With 1,200+ students exclusively studying Biology with us, we are the undisputed #1 Biology coaching in Noida by volume, results, and student satisfaction.' },
-    studentSuccessStory: { name: 'Meera S.', area: 'Sector 15, Noida', achievement: 'Board: 96/100 | NEET: 645/720 | MAMC Delhi', quote: 'I compared 7 coaching centers before choosing Cerebrum. The 15-student batch and AIIMS faculty sealed the deal. Got 96 in boards and 645 in NEET. No other Noida coaching delivers both.' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Noida has 200+ coaching centers but zero Biology-specialists. Every institute teaches Biology as a side subject — Physics and Chemistry get the spotlight. Cerebrum flipped this. With 1,200+ students exclusively studying Biology with us, we are the undisputed #1 Biology coaching in Noida by volume, results, and student satisfaction.',
+    },
+    studentSuccessStory: {
+      name: 'Meera S.',
+      area: 'Sector 15, Noida',
+      achievement: 'Board: 96/100 | NEET: 645/720 | MAMC Delhi',
+      quote:
+        'I compared 7 coaching centers before choosing Cerebrum. The 15-student batch and AIIMS faculty sealed the deal. Got 96 in boards and 645 in NEET. No other Noida coaching delivers both.',
+    },
   },
 
   'best-biology-coaching-gurugram': {
     slug: 'best-biology-coaching-gurugram',
     cityName: 'Gurugram',
     stateName: 'Haryana',
-    metaTitle: 'Best Biology Coaching in Gurugram 2026 | Offline + Online | Cerebrum Biology Academy',
+    metaTitle:
+      'Best Biology Coaching in Gurugram 2026 | Offline + Online | Cerebrum Biology Academy',
     metaDescription:
       'Best Biology coaching in Gurugram (Gurgaon) with offline center at Sector 51. AIIMS faculty, 15-student batches, Board (avg 92) + NEET (98% success). DLF, Sohna Road. ₹48K-90K. Free demo!',
     heroTitle: 'Best Biology Coaching in Gurugram — Offline Center',
     heroSubtitle:
-      'Gurugram\'s only Biology-specialist coaching with a physical classroom. Walk-in to our Sector 51 center for offline classes, or attend online. Either way, you get AIIMS faculty, 15-student batches, and the best Board + NEET Biology results in the city.',
+      "Gurugram's only Biology-specialist coaching with a physical classroom. Walk-in to our Sector 51 center for offline classes, or attend online. Either way, you get AIIMS faculty, 15-student batches, and the best Board + NEET Biology results in the city.",
     hasOfflineCenter: true,
-    nearestCenter: { name: 'Gurugram Center', address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram', distance: 'In Gurugram' },
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'In Gurugram',
+    },
     localities: [
       { name: 'DLF Phase 1-5', url: '/neet-coaching-gurugram/dlf-phase-1' },
       { name: 'Sohna Road', url: '/neet-coaching-gurugram/sohna-road' },
@@ -13074,15 +13827,40 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
     ],
     faqs: [
-      { question: 'Why is Cerebrum the best Biology coaching in Gurugram?', answer: 'Only Biology-specialist with a physical center in Gurugram. AIIMS faculty, 15-student batches, dual Board + NEET results. Our Gurugram students average 92/100 in CBSE boards. No generic coaching center in Gurugram offers Biology-only specialization.' },
-      { question: 'Do you have offline classes in Gurugram?', answer: 'Yes! Walk-in classes at our Sector 51 center (M2K Corporate Park, Mayfield Garden). Near HUDA City Centre Metro. Offline + online hybrid option also available — attend in-person on some days, online on others.' },
-      { question: 'Is this suitable for CBSE and Haryana Board students?', answer: 'Both! We cover NCERT (common to CBSE and Haryana Board) with board-specific practice material. 40% of our Gurugram students are from Haryana Board schools.' },
-      { question: 'How do you compare to coaching chains in Gurugram?', answer: 'Aakash Gurugram: all subjects, 60+ batch, ₹1.5L+, Biology = 1 hr/week. Cerebrum: Biology-only, 15 batch, ₹48K-90K, Biology = 5 hrs/day. Result: our students improve 80+ marks in Biology vs 30 marks at chains.' },
+      {
+        question: 'Why is Cerebrum the best Biology coaching in Gurugram?',
+        answer:
+          'Only Biology-specialist with a physical center in Gurugram. AIIMS faculty, 15-student batches, dual Board + NEET results. Our Gurugram students average 92/100 in CBSE boards. No generic coaching center in Gurugram offers Biology-only specialization.',
+      },
+      {
+        question: 'Do you have offline classes in Gurugram?',
+        answer:
+          'Yes! Walk-in classes at our Sector 51 center (M2K Corporate Park, Mayfield Garden). Near HUDA City Centre Metro. Offline + online hybrid option also available — attend in-person on some days, online on others.',
+      },
+      {
+        question: 'Is this suitable for CBSE and Haryana Board students?',
+        answer:
+          'Both! We cover NCERT (common to CBSE and Haryana Board) with board-specific practice material. 40% of our Gurugram students are from Haryana Board schools.',
+      },
+      {
+        question: 'How do you compare to coaching chains in Gurugram?',
+        answer:
+          'Aakash Gurugram: all subjects, 60+ batch, ₹1.5L+, Biology = 1 hr/week. Cerebrum: Biology-only, 15 batch, ₹48K-90K, Biology = 5 hrs/day. Result: our students improve 80+ marks in Biology vs 30 marks at chains.',
+      },
     ],
     stats: { studentsFromCity: '300+', successRate: '97%', rating: '5.0' },
     geoCoordinates: { lat: '28.4595', lng: '77.0266' },
-    areaSpecificContent: { whyThisArea: 'Gurugram has 100+ coaching centers but Cerebrum is the only one focused exclusively on Biology. Our Sector 51 center is a purpose-built Biology coaching facility — not a shared classroom. With 300+ students from DLF, Sohna Road, Golf Course Road, and all Gurugram sectors, we are the city\'s most trusted Biology institute.' },
-    studentSuccessStory: { name: 'Riya T.', area: 'Sohna Road, Gurugram', achievement: 'Board: 95/100 | NEET: 642/720 | MAMC Delhi', quote: 'The Sector 51 center is 15 minutes from my home. Offline classes with just 15 students — Dr. Shekhar knew my weak areas by name. Got 95 in boards and 642 in NEET.' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Gurugram has 100+ coaching centers but Cerebrum is the only one focused exclusively on Biology. Our Sector 51 center is a purpose-built Biology coaching facility — not a shared classroom. With 300+ students from DLF, Sohna Road, Golf Course Road, and all Gurugram sectors, we are the city's most trusted Biology institute.",
+    },
+    studentSuccessStory: {
+      name: 'Riya T.',
+      area: 'Sohna Road, Gurugram',
+      achievement: 'Board: 95/100 | NEET: 642/720 | MAMC Delhi',
+      quote:
+        'The Sector 51 center is 15 minutes from my home. Offline classes with just 15 students — Dr. Shekhar knew my weak areas by name. Got 95 in boards and 642 in NEET.',
+    },
   },
 
   'cbse-biology-coaching-gurugram': {
@@ -13096,7 +13874,11 @@ export const cityHubData: Record<string, CityHubData> = {
     heroSubtitle:
       'CBSE Biology board exam needs more than textbook reading — it needs diagram perfection, practical/viva confidence, HOTS question mastery, and sample paper practice. Our CBSE-focused coaching covers all of this with AIIMS-faculty depth. Average board score: 92/100.',
     hasOfflineCenter: true,
-    nearestCenter: { name: 'Gurugram Center', address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram', distance: 'In Gurugram' },
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'In Gurugram',
+    },
     localities: [
       { name: 'DLF Phase 1-5', url: '/neet-coaching-gurugram/dlf-phase-1' },
       { name: 'Sohna Road', url: '/neet-coaching-gurugram/sohna-road' },
@@ -13108,432 +13890,2026 @@ export const cityHubData: Record<string, CityHubData> = {
       { name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' },
     ],
     faqs: [
-      { question: 'What does CBSE Biology coaching include?', answer: 'Complete NCERT Class 11-12 coverage at depth, plus: (1) Diagram practice — every important Biology diagram with labeling technique, (2) Practical/viva preparation — experiment procedures, specimen identification, (3) HOTS questions — Higher Order Thinking Skills for 4-5 mark questions, (4) Sample papers — 10 board-pattern papers with time management training, (5) Previous year analysis — chapter-wise weightage and question patterns.' },
-      { question: 'Is this also useful for NEET or only for boards?', answer: '70% of NEET Biology is CBSE Class 12 syllabus. Our CBSE coaching goes to NEET depth — so board questions become easy while NEET foundation is built automatically. Students who want NEET-only focus can join our NEET batch instead.' },
-      { question: 'What is the average board score of your students?', answer: 'Our Gurugram CBSE Biology students average 92/100 in board exams. 25% score 95+. We specifically train for the 4-5 mark answer format, diagram marks, and practical exam scoring.' },
-      { question: 'Do you cover Haryana Board also?', answer: 'Yes! NCERT is common. We add Haryana Board-specific question patterns and previous year papers for students from state board schools in Gurugram.' },
+      {
+        question: 'What does CBSE Biology coaching include?',
+        answer:
+          'Complete NCERT Class 11-12 coverage at depth, plus: (1) Diagram practice — every important Biology diagram with labeling technique, (2) Practical/viva preparation — experiment procedures, specimen identification, (3) HOTS questions — Higher Order Thinking Skills for 4-5 mark questions, (4) Sample papers — 10 board-pattern papers with time management training, (5) Previous year analysis — chapter-wise weightage and question patterns.',
+      },
+      {
+        question: 'Is this also useful for NEET or only for boards?',
+        answer:
+          '70% of NEET Biology is CBSE Class 12 syllabus. Our CBSE coaching goes to NEET depth — so board questions become easy while NEET foundation is built automatically. Students who want NEET-only focus can join our NEET batch instead.',
+      },
+      {
+        question: 'What is the average board score of your students?',
+        answer:
+          'Our Gurugram CBSE Biology students average 92/100 in board exams. 25% score 95+. We specifically train for the 4-5 mark answer format, diagram marks, and practical exam scoring.',
+      },
+      {
+        question: 'Do you cover Haryana Board also?',
+        answer:
+          'Yes! NCERT is common. We add Haryana Board-specific question patterns and previous year papers for students from state board schools in Gurugram.',
+      },
     ],
     stats: { studentsFromCity: '150+', successRate: '95%', rating: '4.9' },
     geoCoordinates: { lat: '28.4595', lng: '77.0266' },
-    areaSpecificContent: { whyThisArea: 'Gurugram CBSE students need Board-specific preparation that generic coaching doesn\'t provide. Our CBSE Biology coaching focuses on what actually gets marks in board exams: diagram perfection, practical confidence, HOTS answers, and sample paper mastery. The offline center at Sector 51 allows hands-on practical sessions that online-only coaching can\'t match.' },
-    studentSuccessStory: { name: 'Aanya M.', area: 'DLF Phase 4, Gurugram', achievement: 'CBSE Board: 96/100 Biology | School topper', quote: 'Cerebrum\'s CBSE Biology coaching was exactly what I needed. The diagram practice sessions alone added 8-10 marks to my board score. The practical/viva prep made me the most confident student in my school\'s practical exam.' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Gurugram CBSE students need Board-specific preparation that generic coaching doesn't provide. Our CBSE Biology coaching focuses on what actually gets marks in board exams: diagram perfection, practical confidence, HOTS answers, and sample paper mastery. The offline center at Sector 51 allows hands-on practical sessions that online-only coaching can't match.",
+    },
+    studentSuccessStory: {
+      name: 'Aanya M.',
+      area: 'DLF Phase 4, Gurugram',
+      achievement: 'CBSE Board: 96/100 Biology | School topper',
+      quote:
+        "Cerebrum's CBSE Biology coaching was exactly what I needed. The diagram practice sessions alone added 8-10 marks to my board score. The practical/viva prep made me the most confident student in my school's practical exam.",
+    },
   },
   'biology-classes-gurugram': {
-    slug: 'biology-classes-gurugram', cityName: 'Gurugram', stateName: 'Haryana',
-    metaTitle: 'Biology Classes in Gurugram 2026 | Class 9-12 | Offline + Online | Cerebrum Biology Academy',
-    metaDescription: 'Biology classes in Gurugram (Gurgaon) — offline at Sector 51 center. Class 9-12, CBSE + Haryana Board + NEET. AIIMS faculty, 15-student batches. ₹35,000-90,000/year. Free demo!',
-    heroTitle: 'Biology Classes in Gurugram — Offline Center Available', heroSubtitle: 'Gurugram\'s only dedicated Biology coaching with a physical classroom. Walk-in classes at Sector 51 for all levels — Class 9 foundation through Class 12 Board + NEET. CBSE and Haryana Board patterns both covered.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Gurugram Center', address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram', distance: 'In Gurugram' },
-    localities: [{ name: 'DLF Phase 1-5', url: '/neet-coaching-gurugram/dlf-phase-1' }, { name: 'Sohna Road', url: '/neet-coaching-gurugram/sohna-road' }, { name: 'Sector 14', url: '/neet-coaching-gurugram/sector-14' }],
-    relatedCities: [{ name: 'Best Biology Gurugram', url: '/best-biology-coaching-gurugram' }, { name: 'Class 11 Biology Gurugram', url: '/biology-class-11-gurugram' }, { name: 'CBSE Biology Gurugram', url: '/cbse-biology-coaching-gurugram' }],
-    faqs: [{ question: 'Do you offer offline Biology classes in Gurugram?', answer: 'Yes! Walk-in classes at our Sector 51 center. Class 9-12 Biology for CBSE, Haryana Board, and NEET. 15-student batches with AIIMS faculty.' }, { question: 'What classes are available?', answer: 'Class 9 Foundation (₹35K), Class 10 Board (₹38K), Class 11 Board+NEET (₹48K-65K), Class 12 Board+NEET (₹48K-90K). Board-only batches also available at lower fees.' }, { question: 'Which schools do your Gurugram students come from?', answer: 'DPS Gurugram, The Shri Ram School, Pathways World School, GD Goenka, Amity, Scottish High, Heritage School, and 20+ other Gurugram schools.' }, { question: 'Is this only for NEET or also for board exams?', answer: '35% of our Gurugram students are board-only. We have separate board-focused batches covering NCERT, practicals, viva prep, and sample papers. No NEET pressure required.' }],
-    stats: { studentsFromCity: '300+', successRate: '97%', rating: '5.0' }, geoCoordinates: { lat: '28.4595', lng: '77.0266' },
-    areaSpecificContent: { whyThisArea: 'Gurugram has 100+ coaching centers but Cerebrum is the only Biology-specialist with a physical center. Our Sector 51 campus is purpose-built for Biology teaching with lab equipment and microscopes.' },
-    studentSuccessStory: { name: 'Aarav P.', area: 'DLF Phase 3, Gurugram', achievement: 'Board: 94/100 Biology', quote: 'The offline classes at Sector 51 were amazing. Small batch, personal attention, and the lab sessions made everything real. Scored 94 without any separate board tuition.' },
+    slug: 'biology-classes-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle:
+      'Biology Classes in Gurugram 2026 | Class 9-12 | Offline + Online | Cerebrum Biology Academy',
+    metaDescription:
+      'Biology classes in Gurugram (Gurgaon) — offline at Sector 51 center. Class 9-12, CBSE + Haryana Board + NEET. AIIMS faculty, 15-student batches. ₹35,000-90,000/year. Free demo!',
+    heroTitle: 'Biology Classes in Gurugram — Offline Center Available',
+    heroSubtitle:
+      "Gurugram's only dedicated Biology coaching with a physical classroom. Walk-in classes at Sector 51 for all levels — Class 9 foundation through Class 12 Board + NEET. CBSE and Haryana Board patterns both covered.",
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'In Gurugram',
+    },
+    localities: [
+      { name: 'DLF Phase 1-5', url: '/neet-coaching-gurugram/dlf-phase-1' },
+      { name: 'Sohna Road', url: '/neet-coaching-gurugram/sohna-road' },
+      { name: 'Sector 14', url: '/neet-coaching-gurugram/sector-14' },
+    ],
+    relatedCities: [
+      { name: 'Best Biology Gurugram', url: '/best-biology-coaching-gurugram' },
+      { name: 'Class 11 Biology Gurugram', url: '/biology-class-11-gurugram' },
+      { name: 'CBSE Biology Gurugram', url: '/cbse-biology-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Do you offer offline Biology classes in Gurugram?',
+        answer:
+          'Yes! Walk-in classes at our Sector 51 center. Class 9-12 Biology for CBSE, Haryana Board, and NEET. 15-student batches with AIIMS faculty.',
+      },
+      {
+        question: 'What classes are available?',
+        answer:
+          'Class 9 Foundation (₹35K), Class 10 Board (₹38K), Class 11 Board+NEET (₹48K-65K), Class 12 Board+NEET (₹48K-90K). Board-only batches also available at lower fees.',
+      },
+      {
+        question: 'Which schools do your Gurugram students come from?',
+        answer:
+          'DPS Gurugram, The Shri Ram School, Pathways World School, GD Goenka, Amity, Scottish High, Heritage School, and 20+ other Gurugram schools.',
+      },
+      {
+        question: 'Is this only for NEET or also for board exams?',
+        answer:
+          '35% of our Gurugram students are board-only. We have separate board-focused batches covering NCERT, practicals, viva prep, and sample papers. No NEET pressure required.',
+      },
+    ],
+    stats: { studentsFromCity: '300+', successRate: '97%', rating: '5.0' },
+    geoCoordinates: { lat: '28.4595', lng: '77.0266' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Gurugram has 100+ coaching centers but Cerebrum is the only Biology-specialist with a physical center. Our Sector 51 campus is purpose-built for Biology teaching with lab equipment and microscopes.',
+    },
+    studentSuccessStory: {
+      name: 'Aarav P.',
+      area: 'DLF Phase 3, Gurugram',
+      achievement: 'Board: 94/100 Biology',
+      quote:
+        'The offline classes at Sector 51 were amazing. Small batch, personal attention, and the lab sessions made everything real. Scored 94 without any separate board tuition.',
+    },
   },
   'biology-tutor-greater-noida': {
-    slug: 'biology-tutor-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
-    metaTitle: 'Biology Tutor in Greater Noida | Class 9-12 | Online + Offline | Cerebrum Biology Academy',
-    metaDescription: 'Expert Biology tutor for Greater Noida — Gaur City, Knowledge Park, Pari Chowk. AIIMS faculty, 1-on-1 attention in 15-student batches. ₹35,000-60,000/year. Free demo!',
-    heroTitle: 'Biology Tutor for Greater Noida Students', heroSubtitle: 'Expert Biology tutoring by AIIMS faculty for Greater Noida students. Better than private tutors — structured curriculum, regular tests, and 15-student batches that give personal attention at 1/3 the cost of home tutors.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
-    localities: [{ name: 'Gaur City', url: '/neet-coaching-gaur-city' }, { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' }, { name: 'Pari Chowk', url: '/neet-coaching-noida/pari-chowk' }],
-    relatedCities: [{ name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' }, { name: 'Biology Tutor Noida', url: '/biology-tutor-noida' }, { name: 'Best Biology Greater Noida', url: '/best-biology-coaching-greater-noida' }],
-    faqs: [{ question: 'Is a Biology tutor available in Greater Noida?', answer: 'Yes! Cerebrum provides expert Biology tutoring for Greater Noida students via live online classes. Our AIIMS-trained faculty offers better quality than private tutors at 1/3 the cost.' }, { question: 'How is this different from a home tutor?', answer: 'Home tutors: ₹1,500-3,000/hour, inconsistent quality, no tests. Cerebrum: ₹300/hour effective cost, AIIMS faculty, weekly tests, study material, doubt support 7 days.' }, { question: 'What classes do you cover?', answer: 'Class 9-12 Biology. Board exam prep, NEET prep, or both. CBSE and UP Board patterns covered.' }, { question: 'What is the fee?', answer: '₹35,000-60,000/year — equivalent to ₹300/hour. Compare with private tutors at ₹1,500-3,000/hour. EMI available.' }],
-    stats: { studentsFromCity: '80+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.4744', lng: '77.5030' },
-    areaSpecificContent: { whyThisArea: 'Greater Noida families rely on expensive home tutors (₹1,500-3,000/hour) for Biology due to lack of specialist coaching. Our online tutoring model provides AIIMS-faculty quality at ₹300/hour effective cost — 5x cheaper with better results.' },
-    studentSuccessStory: { name: 'Sanya L.', area: 'Alpha 1, Greater Noida', achievement: 'Improved from 65 to 90 in Biology boards', quote: 'My home tutor was charging ₹2,000/hour and my marks weren\'t improving. Cerebrum\'s online tutoring at a fraction of the cost took me from 65 to 90. The weekly tests made all the difference.' },
+    slug: 'biology-tutor-greater-noida',
+    cityName: 'Greater Noida',
+    stateName: 'Uttar Pradesh',
+    metaTitle:
+      'Biology Tutor in Greater Noida | Class 9-12 | Online + Offline | Cerebrum Biology Academy',
+    metaDescription:
+      'Expert Biology tutor for Greater Noida — Gaur City, Knowledge Park, Pari Chowk. AIIMS faculty, 1-on-1 attention in 15-student batches. ₹35,000-60,000/year. Free demo!',
+    heroTitle: 'Biology Tutor for Greater Noida Students',
+    heroSubtitle:
+      'Expert Biology tutoring by AIIMS faculty for Greater Noida students. Better than private tutors — structured curriculum, regular tests, and 15-student batches that give personal attention at 1/3 the cost of home tutors.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km',
+    },
+    localities: [
+      { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
+      { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
+      { name: 'Pari Chowk', url: '/neet-coaching-noida/pari-chowk' },
+    ],
+    relatedCities: [
+      { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' },
+      { name: 'Biology Tutor Noida', url: '/biology-tutor-noida' },
+      { name: 'Best Biology Greater Noida', url: '/best-biology-coaching-greater-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Is a Biology tutor available in Greater Noida?',
+        answer:
+          'Yes! Cerebrum provides expert Biology tutoring for Greater Noida students via live online classes. Our AIIMS-trained faculty offers better quality than private tutors at 1/3 the cost.',
+      },
+      {
+        question: 'How is this different from a home tutor?',
+        answer:
+          'Home tutors: ₹1,500-3,000/hour, inconsistent quality, no tests. Cerebrum: ₹300/hour effective cost, AIIMS faculty, weekly tests, study material, doubt support 7 days.',
+      },
+      {
+        question: 'What classes do you cover?',
+        answer:
+          'Class 9-12 Biology. Board exam prep, NEET prep, or both. CBSE and UP Board patterns covered.',
+      },
+      {
+        question: 'What is the fee?',
+        answer:
+          '₹35,000-60,000/year — equivalent to ₹300/hour. Compare with private tutors at ₹1,500-3,000/hour. EMI available.',
+      },
+    ],
+    stats: { studentsFromCity: '80+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4744', lng: '77.5030' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Greater Noida families rely on expensive home tutors (₹1,500-3,000/hour) for Biology due to lack of specialist coaching. Our online tutoring model provides AIIMS-faculty quality at ₹300/hour effective cost — 5x cheaper with better results.',
+    },
+    studentSuccessStory: {
+      name: 'Sanya L.',
+      area: 'Alpha 1, Greater Noida',
+      achievement: 'Improved from 65 to 90 in Biology boards',
+      quote:
+        "My home tutor was charging ₹2,000/hour and my marks weren't improving. Cerebrum's online tutoring at a fraction of the cost took me from 65 to 90. The weekly tests made all the difference.",
+    },
   },
   'biology-tuition-east-delhi': {
-    slug: 'biology-tuition-east-delhi', cityName: 'East Delhi', stateName: 'Delhi',
-    metaTitle: 'Biology Tuition in East Delhi 2026 | Laxmi Nagar, Preet Vihar | Cerebrum Biology Academy',
-    metaDescription: 'Biology tuition in East Delhi — Laxmi Nagar, Preet Vihar, Mayur Vihar, IP Extension. Class 9-12, CBSE Board + NEET. AIIMS faculty. ₹35,000-60,000/year. Free demo!',
-    heroTitle: 'Biology Tuition in East Delhi', heroSubtitle: 'East Delhi students deserve quality Biology tuition without crossing the Yamuna. Our live online classes bring AIIMS-faculty teaching to Laxmi Nagar, Preet Vihar, Mayur Vihar, and all East Delhi areas.',
-    hasOfflineCenter: false, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '10-15 km via Blue Line Metro' },
-    localities: [{ name: 'Laxmi Nagar', url: '/neet-coaching-east-delhi' }, { name: 'Preet Vihar', url: '/neet-coaching-east-delhi' }, { name: 'Mayur Vihar', url: '/neet-coaching-east-delhi' }],
-    relatedCities: [{ name: 'Biology Classes East Delhi', url: '/biology-classes-east-delhi' }, { name: 'Biology Tuition West Delhi', url: '/biology-tuition-west-delhi' }, { name: 'NEET Coaching East Delhi', url: '/neet-coaching-east-delhi' }],
-    faqs: [{ question: 'Is Biology tuition available in East Delhi?', answer: 'Yes! Live online classes for all East Delhi areas. South Extension center accessible via Blue Line Metro (20 min from Laxmi Nagar). Class 9-12 Biology for board exams and NEET.' }, { question: 'Which East Delhi schools do your students attend?', answer: 'DPS East Delhi, Ryan International, DAV schools, KV Mayur Vihar, Cambridge School, and 15+ other East Delhi schools.' }, { question: 'Is this for board exams or NEET?', answer: 'Both! Board-only batches available at ₹35,000-50,000/year. Board+NEET at ₹48,000-90,000/year.' }, { question: 'What makes this better than local tuition?', answer: 'AIIMS faculty (not generic teachers), Biology-only specialization, structured curriculum with weekly tests, and 15-student batches for personal attention.' }],
-    stats: { studentsFromCity: '60+', successRate: '94%', rating: '4.8' }, geoCoordinates: { lat: '28.6280', lng: '77.2800' },
-    areaSpecificContent: { whyThisArea: 'East Delhi has a massive student population but quality Biology tuition is concentrated in South/West Delhi. Our online model brings AIIMS-faculty teaching to East Delhi homes without the Yamuna crossing commute.' },
-    studentSuccessStory: { name: 'Amit K.', area: 'Preet Vihar, East Delhi', achievement: 'Board: 89/100 Biology | First time above 75', quote: 'No good Biology tuition in East Delhi. Tried 3 centers in Laxmi Nagar — all generic. Cerebrum\'s online tuition changed everything. 89 in boards from a starting point of 63.' },
+    slug: 'biology-tuition-east-delhi',
+    cityName: 'East Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Biology Tuition in East Delhi 2026 | Laxmi Nagar, Preet Vihar | Cerebrum Biology Academy',
+    metaDescription:
+      'Biology tuition in East Delhi — Laxmi Nagar, Preet Vihar, Mayur Vihar, IP Extension. Class 9-12, CBSE Board + NEET. AIIMS faculty. ₹35,000-60,000/year. Free demo!',
+    heroTitle: 'Biology Tuition in East Delhi',
+    heroSubtitle:
+      'East Delhi students deserve quality Biology tuition without crossing the Yamuna. Our live online classes bring AIIMS-faculty teaching to Laxmi Nagar, Preet Vihar, Mayur Vihar, and all East Delhi areas.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '10-15 km via Blue Line Metro',
+    },
+    localities: [
+      { name: 'Laxmi Nagar', url: '/neet-coaching-east-delhi' },
+      { name: 'Preet Vihar', url: '/neet-coaching-east-delhi' },
+      { name: 'Mayur Vihar', url: '/neet-coaching-east-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Biology Classes East Delhi', url: '/biology-classes-east-delhi' },
+      { name: 'Biology Tuition West Delhi', url: '/biology-tuition-west-delhi' },
+      { name: 'NEET Coaching East Delhi', url: '/neet-coaching-east-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Is Biology tuition available in East Delhi?',
+        answer:
+          'Yes! Live online classes for all East Delhi areas. South Extension center accessible via Blue Line Metro (20 min from Laxmi Nagar). Class 9-12 Biology for board exams and NEET.',
+      },
+      {
+        question: 'Which East Delhi schools do your students attend?',
+        answer:
+          'DPS East Delhi, Ryan International, DAV schools, KV Mayur Vihar, Cambridge School, and 15+ other East Delhi schools.',
+      },
+      {
+        question: 'Is this for board exams or NEET?',
+        answer:
+          'Both! Board-only batches available at ₹35,000-50,000/year. Board+NEET at ₹48,000-90,000/year.',
+      },
+      {
+        question: 'What makes this better than local tuition?',
+        answer:
+          'AIIMS faculty (not generic teachers), Biology-only specialization, structured curriculum with weekly tests, and 15-student batches for personal attention.',
+      },
+    ],
+    stats: { studentsFromCity: '60+', successRate: '94%', rating: '4.8' },
+    geoCoordinates: { lat: '28.6280', lng: '77.2800' },
+    areaSpecificContent: {
+      whyThisArea:
+        'East Delhi has a massive student population but quality Biology tuition is concentrated in South/West Delhi. Our online model brings AIIMS-faculty teaching to East Delhi homes without the Yamuna crossing commute.',
+    },
+    studentSuccessStory: {
+      name: 'Amit K.',
+      area: 'Preet Vihar, East Delhi',
+      achievement: 'Board: 89/100 Biology | First time above 75',
+      quote:
+        "No good Biology tuition in East Delhi. Tried 3 centers in Laxmi Nagar — all generic. Cerebrum's online tuition changed everything. 89 in boards from a starting point of 63.",
+    },
   },
   'biology-tuition-west-delhi': {
-    slug: 'biology-tuition-west-delhi', cityName: 'West Delhi', stateName: 'Delhi',
+    slug: 'biology-tuition-west-delhi',
+    cityName: 'West Delhi',
+    stateName: 'Delhi',
     metaTitle: 'Biology Tuition in West Delhi 2026 | Dwarka, Janakpuri | Cerebrum Biology Academy',
-    metaDescription: 'Biology tuition in West Delhi — Dwarka, Janakpuri, Rajouri Garden, Tilak Nagar. CBSE Board + NEET. AIIMS faculty, ₹35,000-60,000/year. Online + Rohini center. Free demo!',
-    heroTitle: 'Biology Tuition in West Delhi', heroSubtitle: 'West Delhi students from Dwarka, Janakpuri, Rajouri Garden — access AIIMS-faculty Biology tuition online or at our Rohini center. Board exam + NEET preparation for Class 9-12.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Rohini Center', address: 'Block-A, Sector 7, Rohini, Delhi 110085', distance: '5-15 km from West Delhi areas' },
-    localities: [{ name: 'Dwarka', url: '/neet-coaching-dwarka' }, { name: 'Janakpuri', url: '/neet-coaching-west-delhi' }, { name: 'Rajouri Garden', url: '/neet-coaching-west-delhi' }],
-    relatedCities: [{ name: 'Biology Classes North Delhi', url: '/biology-classes-north-delhi' }, { name: 'NEET Coaching West Delhi', url: '/neet-coaching-west-delhi' }, { name: 'Biology Tuition East Delhi', url: '/biology-tuition-east-delhi' }],
-    faqs: [{ question: 'Do you have offline Biology tuition in West Delhi?', answer: 'Our Rohini center serves most West Delhi areas (5-15 km). Dwarka students can attend via Blue Line Metro. Online classes also available for all West Delhi.' }, { question: 'What classes are covered?', answer: 'Class 9-12 Biology. Board-only or Board+NEET options. CBSE focused with practical/viva prep.' }, { question: 'What are the fees?', answer: 'Offline at Rohini: ₹40,000-60,000/year. Online: ₹35,000-50,000/year. Board-only batches available at lower fees.' }, { question: 'Which West Delhi schools do your students come from?', answer: 'DPS Dwarka, Mount Abu, Bal Bharati Dwarka, DAV Janakpuri, Modern School Dwarka, and 15+ other schools.' }],
-    stats: { studentsFromCity: '70+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.6517', lng: '77.0519' },
-    areaSpecificContent: { whyThisArea: 'West Delhi students previously traveled to South Delhi for quality Biology tuition. Our Rohini center (accessible from Dwarka via Blue Line) and online classes eliminate this commute while providing AIIMS-faculty quality.' },
-    studentSuccessStory: { name: 'Kavita S.', area: 'Dwarka Sector 10', achievement: 'Board: 92/100 Biology', quote: 'I take the metro from Dwarka to Rohini center — 25 minutes. Worth every minute. Went from 74 to 92 in Biology boards.' },
+    metaDescription:
+      'Biology tuition in West Delhi — Dwarka, Janakpuri, Rajouri Garden, Tilak Nagar. CBSE Board + NEET. AIIMS faculty, ₹35,000-60,000/year. Online + Rohini center. Free demo!',
+    heroTitle: 'Biology Tuition in West Delhi',
+    heroSubtitle:
+      'West Delhi students from Dwarka, Janakpuri, Rajouri Garden — access AIIMS-faculty Biology tuition online or at our Rohini center. Board exam + NEET preparation for Class 9-12.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'Block-A, Sector 7, Rohini, Delhi 110085',
+      distance: '5-15 km from West Delhi areas',
+    },
+    localities: [
+      { name: 'Dwarka', url: '/neet-coaching-dwarka' },
+      { name: 'Janakpuri', url: '/neet-coaching-west-delhi' },
+      { name: 'Rajouri Garden', url: '/neet-coaching-west-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Biology Classes North Delhi', url: '/biology-classes-north-delhi' },
+      { name: 'NEET Coaching West Delhi', url: '/neet-coaching-west-delhi' },
+      { name: 'Biology Tuition East Delhi', url: '/biology-tuition-east-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Do you have offline Biology tuition in West Delhi?',
+        answer:
+          'Our Rohini center serves most West Delhi areas (5-15 km). Dwarka students can attend via Blue Line Metro. Online classes also available for all West Delhi.',
+      },
+      {
+        question: 'What classes are covered?',
+        answer:
+          'Class 9-12 Biology. Board-only or Board+NEET options. CBSE focused with practical/viva prep.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Offline at Rohini: ₹40,000-60,000/year. Online: ₹35,000-50,000/year. Board-only batches available at lower fees.',
+      },
+      {
+        question: 'Which West Delhi schools do your students come from?',
+        answer:
+          'DPS Dwarka, Mount Abu, Bal Bharati Dwarka, DAV Janakpuri, Modern School Dwarka, and 15+ other schools.',
+      },
+    ],
+    stats: { studentsFromCity: '70+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.6517', lng: '77.0519' },
+    areaSpecificContent: {
+      whyThisArea:
+        'West Delhi students previously traveled to South Delhi for quality Biology tuition. Our Rohini center (accessible from Dwarka via Blue Line) and online classes eliminate this commute while providing AIIMS-faculty quality.',
+    },
+    studentSuccessStory: {
+      name: 'Kavita S.',
+      area: 'Dwarka Sector 10',
+      achievement: 'Board: 92/100 Biology',
+      quote:
+        'I take the metro from Dwarka to Rohini center — 25 minutes. Worth every minute. Went from 74 to 92 in Biology boards.',
+    },
   },
   'class-11-biology-coaching-delhi': {
-    slug: 'class-11-biology-coaching-delhi', cityName: 'Delhi', stateName: 'Delhi',
+    slug: 'class-11-biology-coaching-delhi',
+    cityName: 'Delhi',
+    stateName: 'Delhi',
     metaTitle: 'Class 11 Biology Coaching Delhi 2026 | Board + NEET | Cerebrum Biology Academy',
-    metaDescription: 'Class 11 Biology coaching in Delhi — South Extension + Rohini centers. CBSE Board + NEET integrated. AIIMS faculty, 15-student batches. ₹48,000-90,000/year. Free demo!',
-    heroTitle: 'Class 11 Biology Coaching in Delhi', heroSubtitle: 'Class 11 is when Biology gets serious — Cell Biology, Plant Physiology, Human Anatomy. Our integrated Board + NEET program at two Delhi centers (South Extension + Rohini) ensures your child masters every chapter at depth.',
-    hasOfflineCenter: true, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: 'In Delhi' },
-    localities: [{ name: 'South Delhi', url: '/neet-coaching-south-delhi' }, { name: 'North Delhi (Rohini)', url: '/neet-coaching-north-delhi' }, { name: 'East Delhi', url: '/class-11-biology-coaching-east-delhi' }, { name: 'West Delhi', url: '/neet-coaching-west-delhi' }],
-    relatedCities: [{ name: 'Class 12 Biology Delhi', url: '/class-12-biology-coaching-delhi' }, { name: 'Biology Classes Delhi', url: '/biology-classes-delhi' }, { name: 'Class 11 Biology Noida', url: '/biology-class-11-noida' }],
-    faqs: [{ question: 'Where are your Class 11 Biology centers in Delhi?', answer: 'South Extension (South Delhi) and Rohini (North Delhi). Online for East/West Delhi. Same AIIMS faculty across all modes.' }, { question: 'Is this for board exam or NEET?', answer: 'Both! 70% syllabus overlap. We teach at NEET depth — board questions become easy. Board-only batch also available at ₹40,000-50,000/year.' }, { question: 'What are the fees?', answer: 'Offline: ₹48,000-90,000/year. Online: ₹40,000-65,000/year. Board-only: ₹40,000-50,000/year. EMI available.' }, { question: 'Which Delhi schools do Class 11 students come from?', answer: 'DPS RK Puram, Modern School, Sanskriti, KV schools, DPS Vasant Kunj, Bal Bharati, The Shri Ram School, DPS Rohini, Mount Abu, and 30+ other Delhi schools.' }],
-    stats: { studentsFromCity: '250+', successRate: '96%', rating: '4.9' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Delhi has India\'s highest concentration of NEET aspirants but most coaching teaches Biology as a side subject. Our two-center model (South Extension + Rohini) covers all 11 districts with Biology-only specialization.' },
-    studentSuccessStory: { name: 'Nandini R.', area: 'Vasant Vihar, Delhi', achievement: 'Class 11: 95/100 Biology | School topper', quote: 'Attended the South Extension center after school. The small batch and AIIMS faculty made Class 11 Biology my strongest subject. Scored 95 — highest in my school.' },
+    metaDescription:
+      'Class 11 Biology coaching in Delhi — South Extension + Rohini centers. CBSE Board + NEET integrated. AIIMS faculty, 15-student batches. ₹48,000-90,000/year. Free demo!',
+    heroTitle: 'Class 11 Biology Coaching in Delhi',
+    heroSubtitle:
+      'Class 11 is when Biology gets serious — Cell Biology, Plant Physiology, Human Anatomy. Our integrated Board + NEET program at two Delhi centers (South Extension + Rohini) ensures your child masters every chapter at depth.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: 'In Delhi',
+    },
+    localities: [
+      { name: 'South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'North Delhi (Rohini)', url: '/neet-coaching-north-delhi' },
+      { name: 'East Delhi', url: '/class-11-biology-coaching-east-delhi' },
+      { name: 'West Delhi', url: '/neet-coaching-west-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Class 12 Biology Delhi', url: '/class-12-biology-coaching-delhi' },
+      { name: 'Biology Classes Delhi', url: '/biology-classes-delhi' },
+      { name: 'Class 11 Biology Noida', url: '/biology-class-11-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Where are your Class 11 Biology centers in Delhi?',
+        answer:
+          'South Extension (South Delhi) and Rohini (North Delhi). Online for East/West Delhi. Same AIIMS faculty across all modes.',
+      },
+      {
+        question: 'Is this for board exam or NEET?',
+        answer:
+          'Both! 70% syllabus overlap. We teach at NEET depth — board questions become easy. Board-only batch also available at ₹40,000-50,000/year.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Offline: ₹48,000-90,000/year. Online: ₹40,000-65,000/year. Board-only: ₹40,000-50,000/year. EMI available.',
+      },
+      {
+        question: 'Which Delhi schools do Class 11 students come from?',
+        answer:
+          'DPS RK Puram, Modern School, Sanskriti, KV schools, DPS Vasant Kunj, Bal Bharati, The Shri Ram School, DPS Rohini, Mount Abu, and 30+ other Delhi schools.',
+      },
+    ],
+    stats: { studentsFromCity: '250+', successRate: '96%', rating: '4.9' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Delhi has India's highest concentration of NEET aspirants but most coaching teaches Biology as a side subject. Our two-center model (South Extension + Rohini) covers all 11 districts with Biology-only specialization.",
+    },
+    studentSuccessStory: {
+      name: 'Nandini R.',
+      area: 'Vasant Vihar, Delhi',
+      achievement: 'Class 11: 95/100 Biology | School topper',
+      quote:
+        'Attended the South Extension center after school. The small batch and AIIMS faculty made Class 11 Biology my strongest subject. Scored 95 — highest in my school.',
+    },
   },
   'class-11-biology-coaching-north-delhi': {
-    slug: 'class-11-biology-coaching-north-delhi', cityName: 'North Delhi', stateName: 'Delhi',
+    slug: 'class-11-biology-coaching-north-delhi',
+    cityName: 'North Delhi',
+    stateName: 'Delhi',
     metaTitle: 'Class 11 Biology Coaching North Delhi | Rohini Center | Cerebrum Biology Academy',
-    metaDescription: 'Class 11 Biology at Rohini center — offline classes for North Delhi. Pitampura, Model Town, Shalimar Bagh. Board + NEET. AIIMS faculty. ₹48,000-65,000/year. Free demo!',
-    heroTitle: 'Class 11 Biology — Rohini Center, North Delhi', heroSubtitle: 'North Delhi students: attend Class 11 Biology at our Rohini center (Sector 7, near Rohini East Metro). No more traveling to South Delhi. Offline classroom coaching with AIIMS faculty.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Rohini Center', address: 'Block-A, Sector 7, Rohini, Delhi 110085', distance: 'In North Delhi' },
-    localities: [{ name: 'Rohini', url: '/neet-coaching-north-delhi' }, { name: 'Pitampura', url: '/neet-coaching-north-delhi' }, { name: 'Model Town', url: '/neet-coaching-north-delhi' }],
-    relatedCities: [{ name: 'Class 12 Biology North Delhi', url: '/class-12-biology-coaching-north-delhi' }, { name: 'Biology Classes North Delhi', url: '/biology-classes-north-delhi' }, { name: 'Class 11 Biology Delhi', url: '/class-11-biology-coaching-delhi' }],
-    faqs: [{ question: 'Is there offline Class 11 Biology coaching in North Delhi?', answer: 'Yes! Our Rohini center (Sector 7, near Rohini East Metro) offers offline classroom coaching. Walk-in classes with AIIMS faculty and 15-student batches.' }, { question: 'What are the fees?', answer: 'Offline at Rohini: ₹48,000-65,000/year. Online: ₹40,000-55,000/year. Board-only: ₹38,000-48,000/year. EMI available.' }, { question: 'Which North Delhi schools do students come from?', answer: 'DPS Rohini, Mount Abu School, Bal Bharati Pitampura, Ryan International Rohini, GD Goenka Model Town, and 15+ other schools.' }, { question: 'Is this for CBSE only?', answer: 'Primarily CBSE, but we also cover ICSE patterns. The NCERT foundation is common to both boards.' }],
-    stats: { studentsFromCity: '80+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.7320', lng: '77.1100' },
-    areaSpecificContent: { whyThisArea: 'North Delhi students previously had to travel 45-60 min to South Delhi for quality Biology coaching. Our Rohini center eliminates this — AIIMS-faculty Class 11 Biology within 10 minutes of most North Delhi schools.' },
-    studentSuccessStory: { name: 'Rohit S.', area: 'Pitampura, North Delhi', achievement: 'Class 11: 93/100 Biology', quote: 'Rohini center is 10 min from my school in Pitampura. Attended the after-school batch. Scored 93 in Class 11 Biology — highest in my batch at school.' },
+    metaDescription:
+      'Class 11 Biology at Rohini center — offline classes for North Delhi. Pitampura, Model Town, Shalimar Bagh. Board + NEET. AIIMS faculty. ₹48,000-65,000/year. Free demo!',
+    heroTitle: 'Class 11 Biology — Rohini Center, North Delhi',
+    heroSubtitle:
+      'North Delhi students: attend Class 11 Biology at our Rohini center (Sector 7, near Rohini East Metro). No more traveling to South Delhi. Offline classroom coaching with AIIMS faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'Block-A, Sector 7, Rohini, Delhi 110085',
+      distance: 'In North Delhi',
+    },
+    localities: [
+      { name: 'Rohini', url: '/neet-coaching-north-delhi' },
+      { name: 'Pitampura', url: '/neet-coaching-north-delhi' },
+      { name: 'Model Town', url: '/neet-coaching-north-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Class 12 Biology North Delhi', url: '/class-12-biology-coaching-north-delhi' },
+      { name: 'Biology Classes North Delhi', url: '/biology-classes-north-delhi' },
+      { name: 'Class 11 Biology Delhi', url: '/class-11-biology-coaching-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Is there offline Class 11 Biology coaching in North Delhi?',
+        answer:
+          'Yes! Our Rohini center (Sector 7, near Rohini East Metro) offers offline classroom coaching. Walk-in classes with AIIMS faculty and 15-student batches.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Offline at Rohini: ₹48,000-65,000/year. Online: ₹40,000-55,000/year. Board-only: ₹38,000-48,000/year. EMI available.',
+      },
+      {
+        question: 'Which North Delhi schools do students come from?',
+        answer:
+          'DPS Rohini, Mount Abu School, Bal Bharati Pitampura, Ryan International Rohini, GD Goenka Model Town, and 15+ other schools.',
+      },
+      {
+        question: 'Is this for CBSE only?',
+        answer:
+          'Primarily CBSE, but we also cover ICSE patterns. The NCERT foundation is common to both boards.',
+      },
+    ],
+    stats: { studentsFromCity: '80+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.7320', lng: '77.1100' },
+    areaSpecificContent: {
+      whyThisArea:
+        'North Delhi students previously had to travel 45-60 min to South Delhi for quality Biology coaching. Our Rohini center eliminates this — AIIMS-faculty Class 11 Biology within 10 minutes of most North Delhi schools.',
+    },
+    studentSuccessStory: {
+      name: 'Rohit S.',
+      area: 'Pitampura, North Delhi',
+      achievement: 'Class 11: 93/100 Biology',
+      quote:
+        'Rohini center is 10 min from my school in Pitampura. Attended the after-school batch. Scored 93 in Class 11 Biology — highest in my batch at school.',
+    },
   },
   'class-11-biology-coaching-east-delhi': {
-    slug: 'class-11-biology-coaching-east-delhi', cityName: 'East Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 11 Biology Coaching East Delhi | Online + Metro Access | Cerebrum Biology Academy',
-    metaDescription: 'Class 11 Biology for East Delhi — Laxmi Nagar, Preet Vihar, Mayur Vihar. Live online + South Extension via Blue Line. AIIMS faculty. ₹40,000-65,000/year. Free demo!',
-    heroTitle: 'Class 11 Biology Coaching — East Delhi', heroSubtitle: 'East Delhi Class 11 students: access AIIMS-faculty Biology coaching online from home or visit our South Extension center (20 min by Blue Line Metro from Laxmi Nagar). Board + NEET integrated.',
-    hasOfflineCenter: false, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '20 min by Blue Line Metro' },
-    localities: [{ name: 'Laxmi Nagar', url: '/neet-coaching-east-delhi' }, { name: 'Preet Vihar', url: '/neet-coaching-east-delhi' }, { name: 'Mayur Vihar', url: '/neet-coaching-east-delhi' }],
-    relatedCities: [{ name: 'Class 12 Biology East Delhi', url: '/class-12-biology-coaching-east-delhi' }, { name: 'Biology Tuition East Delhi', url: '/biology-tuition-east-delhi' }, { name: 'Class 11 Biology Delhi', url: '/class-11-biology-coaching-delhi' }],
-    faqs: [{ question: 'How do East Delhi students attend Class 11 Biology?', answer: 'Most attend online (live, interactive). Some visit our South Extension center on weekends — 20 min by Blue Line Metro from Laxmi Nagar. Same faculty, same quality either way.' }, { question: 'What are the fees?', answer: 'Online: ₹40,000-55,000/year. Hybrid: ₹48,000-65,000/year. Board-only: ₹38,000-48,000/year.' }, { question: 'Which East Delhi schools do your students attend?', answer: 'DPS East Delhi, Ryan International, DAV schools, KV Mayur Vihar, Cambridge School, and 10+ other East Delhi schools.' }, { question: 'Is this for board exam or NEET?', answer: 'Both — or board-only if preferred. Our integrated approach covers CBSE Class 11 at NEET depth.' }],
-    stats: { studentsFromCity: '45+', successRate: '94%', rating: '4.8' }, geoCoordinates: { lat: '28.6280', lng: '77.2800' },
-    areaSpecificContent: { whyThisArea: 'East Delhi Class 11 students lack local Biology-specialist coaching. Most commute to Mukherjee Nagar or South Delhi. Our online + metro-accessible model serves this underserved market.' },
-    studentSuccessStory: { name: 'Preeti M.', area: 'Mayur Vihar Phase 2', achievement: 'Class 11: 90/100 Biology', quote: 'Attended online from Mayur Vihar. The live classes felt like being in a real classroom — Dr. Shekhar asked me questions, gave feedback. Scored 90 in Class 11 boards.' },
+    slug: 'class-11-biology-coaching-east-delhi',
+    cityName: 'East Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Class 11 Biology Coaching East Delhi | Online + Metro Access | Cerebrum Biology Academy',
+    metaDescription:
+      'Class 11 Biology for East Delhi — Laxmi Nagar, Preet Vihar, Mayur Vihar. Live online + South Extension via Blue Line. AIIMS faculty. ₹40,000-65,000/year. Free demo!',
+    heroTitle: 'Class 11 Biology Coaching — East Delhi',
+    heroSubtitle:
+      'East Delhi Class 11 students: access AIIMS-faculty Biology coaching online from home or visit our South Extension center (20 min by Blue Line Metro from Laxmi Nagar). Board + NEET integrated.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '20 min by Blue Line Metro',
+    },
+    localities: [
+      { name: 'Laxmi Nagar', url: '/neet-coaching-east-delhi' },
+      { name: 'Preet Vihar', url: '/neet-coaching-east-delhi' },
+      { name: 'Mayur Vihar', url: '/neet-coaching-east-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Class 12 Biology East Delhi', url: '/class-12-biology-coaching-east-delhi' },
+      { name: 'Biology Tuition East Delhi', url: '/biology-tuition-east-delhi' },
+      { name: 'Class 11 Biology Delhi', url: '/class-11-biology-coaching-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'How do East Delhi students attend Class 11 Biology?',
+        answer:
+          'Most attend online (live, interactive). Some visit our South Extension center on weekends — 20 min by Blue Line Metro from Laxmi Nagar. Same faculty, same quality either way.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Online: ₹40,000-55,000/year. Hybrid: ₹48,000-65,000/year. Board-only: ₹38,000-48,000/year.',
+      },
+      {
+        question: 'Which East Delhi schools do your students attend?',
+        answer:
+          'DPS East Delhi, Ryan International, DAV schools, KV Mayur Vihar, Cambridge School, and 10+ other East Delhi schools.',
+      },
+      {
+        question: 'Is this for board exam or NEET?',
+        answer:
+          'Both — or board-only if preferred. Our integrated approach covers CBSE Class 11 at NEET depth.',
+      },
+    ],
+    stats: { studentsFromCity: '45+', successRate: '94%', rating: '4.8' },
+    geoCoordinates: { lat: '28.6280', lng: '77.2800' },
+    areaSpecificContent: {
+      whyThisArea:
+        'East Delhi Class 11 students lack local Biology-specialist coaching. Most commute to Mukherjee Nagar or South Delhi. Our online + metro-accessible model serves this underserved market.',
+    },
+    studentSuccessStory: {
+      name: 'Preeti M.',
+      area: 'Mayur Vihar Phase 2',
+      achievement: 'Class 11: 90/100 Biology',
+      quote:
+        'Attended online from Mayur Vihar. The live classes felt like being in a real classroom — Dr. Shekhar asked me questions, gave feedback. Scored 90 in Class 11 boards.',
+    },
   },
   'class-12-biology-coaching-delhi': {
-    slug: 'class-12-biology-coaching-delhi', cityName: 'Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 12 Biology Coaching Delhi 2026 | Board + NEET | Two Centers | Cerebrum Biology Academy',
-    metaDescription: 'Class 12 Biology in Delhi — Board exam (avg 92/100) + NEET dual focus. South Extension + Rohini centers. AIIMS faculty. ₹48,000-90,000/year. Free demo!',
-    heroTitle: 'Class 12 Biology — Board + NEET in Delhi', heroSubtitle: 'The decisive year: board marks for college, NEET for medical career. Our integrated program at two Delhi centers covers both without doubling study hours. Average board score: 92/100.',
-    hasOfflineCenter: true, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: 'In Delhi' },
-    localities: [{ name: 'South Delhi', url: '/neet-coaching-south-delhi' }, { name: 'North Delhi (Rohini)', url: '/class-12-biology-coaching-north-delhi' }, { name: 'East Delhi', url: '/class-12-biology-coaching-east-delhi' }],
-    relatedCities: [{ name: 'Class 11 Biology Delhi', url: '/class-11-biology-coaching-delhi' }, { name: 'Board Exam Biology Delhi', url: '/board-exam-biology-delhi' }, { name: 'NEET Crash Course', url: '/neet-crash-course' }],
-    faqs: [{ question: 'Can I prepare for both Board and NEET in Class 12?', answer: '70% overlap between NEET and CBSE Class 12 Biology. We teach at NEET depth — board exams become easy. Plus dedicated board revision Jan-March: sample papers, diagram practice, practical/viva prep.' }, { question: 'What are the fees?', answer: 'Offline: ₹48,000-90,000/year. Online: ₹40,000-65,000/year. Board-only: ₹40,000-55,000/year.' }, { question: 'What board revision support is provided?', answer: '60-day revision program: chapter-wise revision, 10 sample papers, diagram practice, HOTS questions, practical prep, mock boards.' }, { question: 'Which Delhi schools do Class 12 students come from?', answer: 'DPS RK Puram, Modern School, Sanskriti, KV schools, DPS Vasant Kunj, DPS Rohini, and 30+ other Delhi schools.' }],
-    stats: { studentsFromCity: '300+', successRate: '97%', rating: '5.0' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Delhi Class 12 students face the most competitive environment in India. Our two-center model serves all districts while the integrated Board+NEET approach saves 10+ hours/week vs separate coaching.' },
-    studentSuccessStory: { name: 'Shreya G.', area: 'Defence Colony, Delhi', achievement: 'Board: 96/100 | NEET: 655/720', quote: 'South Extension center is walking distance from my school. Got 96 in boards and 655 in NEET — both from one coaching. Saved ₹2 lakhs vs taking separate tuition + coaching.' },
+    slug: 'class-12-biology-coaching-delhi',
+    cityName: 'Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Class 12 Biology Coaching Delhi 2026 | Board + NEET | Two Centers | Cerebrum Biology Academy',
+    metaDescription:
+      'Class 12 Biology in Delhi — Board exam (avg 92/100) + NEET dual focus. South Extension + Rohini centers. AIIMS faculty. ₹48,000-90,000/year. Free demo!',
+    heroTitle: 'Class 12 Biology — Board + NEET in Delhi',
+    heroSubtitle:
+      'The decisive year: board marks for college, NEET for medical career. Our integrated program at two Delhi centers covers both without doubling study hours. Average board score: 92/100.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: 'In Delhi',
+    },
+    localities: [
+      { name: 'South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'North Delhi (Rohini)', url: '/class-12-biology-coaching-north-delhi' },
+      { name: 'East Delhi', url: '/class-12-biology-coaching-east-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Class 11 Biology Delhi', url: '/class-11-biology-coaching-delhi' },
+      { name: 'Board Exam Biology Delhi', url: '/board-exam-biology-delhi' },
+      { name: 'NEET Crash Course', url: '/neet-crash-course' },
+    ],
+    faqs: [
+      {
+        question: 'Can I prepare for both Board and NEET in Class 12?',
+        answer:
+          '70% overlap between NEET and CBSE Class 12 Biology. We teach at NEET depth — board exams become easy. Plus dedicated board revision Jan-March: sample papers, diagram practice, practical/viva prep.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Offline: ₹48,000-90,000/year. Online: ₹40,000-65,000/year. Board-only: ₹40,000-55,000/year.',
+      },
+      {
+        question: 'What board revision support is provided?',
+        answer:
+          '60-day revision program: chapter-wise revision, 10 sample papers, diagram practice, HOTS questions, practical prep, mock boards.',
+      },
+      {
+        question: 'Which Delhi schools do Class 12 students come from?',
+        answer:
+          'DPS RK Puram, Modern School, Sanskriti, KV schools, DPS Vasant Kunj, DPS Rohini, and 30+ other Delhi schools.',
+      },
+    ],
+    stats: { studentsFromCity: '300+', successRate: '97%', rating: '5.0' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Delhi Class 12 students face the most competitive environment in India. Our two-center model serves all districts while the integrated Board+NEET approach saves 10+ hours/week vs separate coaching.',
+    },
+    studentSuccessStory: {
+      name: 'Shreya G.',
+      area: 'Defence Colony, Delhi',
+      achievement: 'Board: 96/100 | NEET: 655/720',
+      quote:
+        'South Extension center is walking distance from my school. Got 96 in boards and 655 in NEET — both from one coaching. Saved ₹2 lakhs vs taking separate tuition + coaching.',
+    },
   },
   'class-12-biology-coaching-north-delhi': {
-    slug: 'class-12-biology-coaching-north-delhi', cityName: 'North Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 12 Biology North Delhi | Rohini Center | Board + NEET 2026 | Cerebrum Biology Academy',
-    metaDescription: 'Class 12 Biology at Rohini center — Board exam + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty. ₹48,000-90,000/year. Pitampura, Model Town. Free demo!',
-    heroTitle: 'Class 12 Biology — Board + NEET at Rohini Center', heroSubtitle: 'North Delhi Class 12 students: walk-in to our Rohini center for offline Biology coaching. Board revision + NEET prep integrated. 60-day board revision program included.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Rohini Center', address: 'Block-A, Sector 7, Rohini, Delhi 110085', distance: 'In North Delhi' },
-    localities: [{ name: 'Rohini', url: '/neet-coaching-north-delhi' }, { name: 'Pitampura', url: '/neet-coaching-north-delhi' }, { name: 'Model Town', url: '/neet-coaching-north-delhi' }],
-    relatedCities: [{ name: 'Class 11 Biology North Delhi', url: '/class-11-biology-coaching-north-delhi' }, { name: 'Biology Classes North Delhi', url: '/biology-classes-north-delhi' }, { name: 'Class 12 Biology Delhi', url: '/class-12-biology-coaching-delhi' }],
-    faqs: [{ question: 'Is there offline Class 12 Biology coaching in North Delhi?', answer: 'Yes! Rohini center, Sector 7, near Rohini East Metro. Offline classes with AIIMS faculty and 15-student batches.' }, { question: 'What board revision is included?', answer: '60-day program: 10 sample papers, diagram practice, practical/viva prep, HOTS questions, mock board exams. All included in fee.' }, { question: 'What are the fees?', answer: 'Offline: ₹48,000-90,000/year. Board-only: ₹40,000-55,000/year. EMI available.' }, { question: 'Can I start mid-year?', answer: 'Yes! We have rolling admissions. Bridge course covers missed chapters in first 2 weeks.' }],
-    stats: { studentsFromCity: '90+', successRate: '96%', rating: '4.9' }, geoCoordinates: { lat: '28.7320', lng: '77.1100' },
-    areaSpecificContent: { whyThisArea: 'North Delhi Class 12 students no longer need to commute to South Delhi. Our Rohini center provides the same AIIMS-faculty quality with offline classroom teaching.' },
-    studentSuccessStory: { name: 'Ankit V.', area: 'Model Town, North Delhi', achievement: 'Board: 93/100 | NEET: 608/720', quote: 'The Rohini center saved me 2 hours daily vs going to South Extension. Got 93 in boards and 608 in NEET from the same coaching.' },
+    slug: 'class-12-biology-coaching-north-delhi',
+    cityName: 'North Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Class 12 Biology North Delhi | Rohini Center | Board + NEET 2026 | Cerebrum Biology Academy',
+    metaDescription:
+      'Class 12 Biology at Rohini center — Board exam + NEET. Score 90+ in boards AND crack NEET. AIIMS faculty. ₹48,000-90,000/year. Pitampura, Model Town. Free demo!',
+    heroTitle: 'Class 12 Biology — Board + NEET at Rohini Center',
+    heroSubtitle:
+      'North Delhi Class 12 students: walk-in to our Rohini center for offline Biology coaching. Board revision + NEET prep integrated. 60-day board revision program included.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: 'Block-A, Sector 7, Rohini, Delhi 110085',
+      distance: 'In North Delhi',
+    },
+    localities: [
+      { name: 'Rohini', url: '/neet-coaching-north-delhi' },
+      { name: 'Pitampura', url: '/neet-coaching-north-delhi' },
+      { name: 'Model Town', url: '/neet-coaching-north-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Class 11 Biology North Delhi', url: '/class-11-biology-coaching-north-delhi' },
+      { name: 'Biology Classes North Delhi', url: '/biology-classes-north-delhi' },
+      { name: 'Class 12 Biology Delhi', url: '/class-12-biology-coaching-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Is there offline Class 12 Biology coaching in North Delhi?',
+        answer:
+          'Yes! Rohini center, Sector 7, near Rohini East Metro. Offline classes with AIIMS faculty and 15-student batches.',
+      },
+      {
+        question: 'What board revision is included?',
+        answer:
+          '60-day program: 10 sample papers, diagram practice, practical/viva prep, HOTS questions, mock board exams. All included in fee.',
+      },
+      {
+        question: 'What are the fees?',
+        answer: 'Offline: ₹48,000-90,000/year. Board-only: ₹40,000-55,000/year. EMI available.',
+      },
+      {
+        question: 'Can I start mid-year?',
+        answer:
+          'Yes! We have rolling admissions. Bridge course covers missed chapters in first 2 weeks.',
+      },
+    ],
+    stats: { studentsFromCity: '90+', successRate: '96%', rating: '4.9' },
+    geoCoordinates: { lat: '28.7320', lng: '77.1100' },
+    areaSpecificContent: {
+      whyThisArea:
+        'North Delhi Class 12 students no longer need to commute to South Delhi. Our Rohini center provides the same AIIMS-faculty quality with offline classroom teaching.',
+    },
+    studentSuccessStory: {
+      name: 'Ankit V.',
+      area: 'Model Town, North Delhi',
+      achievement: 'Board: 93/100 | NEET: 608/720',
+      quote:
+        'The Rohini center saved me 2 hours daily vs going to South Extension. Got 93 in boards and 608 in NEET from the same coaching.',
+    },
   },
   'class-12-biology-coaching-east-delhi': {
-    slug: 'class-12-biology-coaching-east-delhi', cityName: 'East Delhi', stateName: 'Delhi',
-    metaTitle: 'Class 12 Biology East Delhi | Board + NEET 2026 | Online | Cerebrum Biology Academy',
-    metaDescription: 'Class 12 Biology for East Delhi students — Board exam + NEET. Online + South Extension via metro. AIIMS faculty. ₹40,000-65,000/year. Laxmi Nagar, Mayur Vihar. Free demo!',
-    heroTitle: 'Class 12 Biology — Board + NEET for East Delhi', heroSubtitle: 'East Delhi Class 12 students: prepare for both board exams and NEET with our online coaching. South Extension center accessible via Blue Line Metro for weekend lab sessions.',
-    hasOfflineCenter: false, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '20 min by Blue Line' },
-    localities: [{ name: 'Laxmi Nagar', url: '/neet-coaching-east-delhi' }, { name: 'Mayur Vihar', url: '/neet-coaching-east-delhi' }, { name: 'Preet Vihar', url: '/neet-coaching-east-delhi' }],
-    relatedCities: [{ name: 'Class 11 Biology East Delhi', url: '/class-11-biology-coaching-east-delhi' }, { name: 'Biology Tuition East Delhi', url: '/biology-tuition-east-delhi' }, { name: 'Class 12 Biology Delhi', url: '/class-12-biology-coaching-delhi' }],
-    faqs: [{ question: 'How do East Delhi students attend Class 12 Biology?', answer: 'Primarily online (live, interactive). Weekend lab/practical sessions at South Extension center (20 min metro from Laxmi Nagar). Board revision intensive in Jan-March.' }, { question: 'What are the fees?', answer: 'Online: ₹40,000-55,000/year. Hybrid: ₹48,000-65,000/year. Board-only: ₹38,000-48,000/year.' }, { question: 'Is board revision included?', answer: 'Yes! 60-day board revision program: sample papers, diagram practice, practical prep, mock board exams.' }, { question: 'Can I join in Class 12 without prior coaching?', answer: 'Yes! Bridge course covers essential Class 11 topics in 2 weeks before starting Class 12 syllabus.' }],
-    stats: { studentsFromCity: '50+', successRate: '93%', rating: '4.8' }, geoCoordinates: { lat: '28.6280', lng: '77.2800' },
-    areaSpecificContent: { whyThisArea: 'East Delhi Class 12 students need integrated Board+NEET coaching but lack local options. Online classes + metro-accessible center is the ideal solution.' },
-    studentSuccessStory: { name: 'Megha T.', area: 'IP Extension, East Delhi', achievement: 'Board: 90/100 | NEET: 575/720', quote: 'Online classes from East Delhi plus Saturday sessions at South Extension — perfect combo. Got 90 in boards and 575 in NEET.' },
+    slug: 'class-12-biology-coaching-east-delhi',
+    cityName: 'East Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Class 12 Biology East Delhi | Board + NEET 2026 | Online | Cerebrum Biology Academy',
+    metaDescription:
+      'Class 12 Biology for East Delhi students — Board exam + NEET. Online + South Extension via metro. AIIMS faculty. ₹40,000-65,000/year. Laxmi Nagar, Mayur Vihar. Free demo!',
+    heroTitle: 'Class 12 Biology — Board + NEET for East Delhi',
+    heroSubtitle:
+      'East Delhi Class 12 students: prepare for both board exams and NEET with our online coaching. South Extension center accessible via Blue Line Metro for weekend lab sessions.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '20 min by Blue Line',
+    },
+    localities: [
+      { name: 'Laxmi Nagar', url: '/neet-coaching-east-delhi' },
+      { name: 'Mayur Vihar', url: '/neet-coaching-east-delhi' },
+      { name: 'Preet Vihar', url: '/neet-coaching-east-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Class 11 Biology East Delhi', url: '/class-11-biology-coaching-east-delhi' },
+      { name: 'Biology Tuition East Delhi', url: '/biology-tuition-east-delhi' },
+      { name: 'Class 12 Biology Delhi', url: '/class-12-biology-coaching-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'How do East Delhi students attend Class 12 Biology?',
+        answer:
+          'Primarily online (live, interactive). Weekend lab/practical sessions at South Extension center (20 min metro from Laxmi Nagar). Board revision intensive in Jan-March.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Online: ₹40,000-55,000/year. Hybrid: ₹48,000-65,000/year. Board-only: ₹38,000-48,000/year.',
+      },
+      {
+        question: 'Is board revision included?',
+        answer:
+          'Yes! 60-day board revision program: sample papers, diagram practice, practical prep, mock board exams.',
+      },
+      {
+        question: 'Can I join in Class 12 without prior coaching?',
+        answer:
+          'Yes! Bridge course covers essential Class 11 topics in 2 weeks before starting Class 12 syllabus.',
+      },
+    ],
+    stats: { studentsFromCity: '50+', successRate: '93%', rating: '4.8' },
+    geoCoordinates: { lat: '28.6280', lng: '77.2800' },
+    areaSpecificContent: {
+      whyThisArea:
+        'East Delhi Class 12 students need integrated Board+NEET coaching but lack local options. Online classes + metro-accessible center is the ideal solution.',
+    },
+    studentSuccessStory: {
+      name: 'Megha T.',
+      area: 'IP Extension, East Delhi',
+      achievement: 'Board: 90/100 | NEET: 575/720',
+      quote:
+        'Online classes from East Delhi plus Saturday sessions at South Extension — perfect combo. Got 90 in boards and 575 in NEET.',
+    },
   },
   'class-9-biology-tuition-ghaziabad': {
-    slug: 'class-9-biology-tuition-ghaziabad', cityName: 'Ghaziabad', stateName: 'Uttar Pradesh',
+    slug: 'class-9-biology-tuition-ghaziabad',
+    cityName: 'Ghaziabad',
+    stateName: 'Uttar Pradesh',
     metaTitle: 'Class 9 Biology Tuition Ghaziabad | Foundation Course | Cerebrum Biology Academy',
-    metaDescription: 'Class 9 Biology tuition in Ghaziabad — fun, interactive learning. Indirapuram, Vaishali. AIIMS faculty, ₹35,000/year. CBSE + UP Board. Free demo!',
-    heroTitle: 'Class 9 Biology Tuition — Ghaziabad', heroSubtitle: 'Build strong Biology foundations in Class 9. Interactive teaching with hands-on experiments — just 3 hours/week. Perfect for Ghaziabad students who want to ace school exams and prepare for the Class 10-11 leap.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km' },
-    localities: [{ name: 'Indirapuram', url: '/neet-coaching-indirapuram' }, { name: 'Vaishali', url: '/neet-coaching-vaishali' }, { name: 'Raj Nagar Extension', url: '/neet-coaching-raj-nagar-extension' }],
-    relatedCities: [{ name: 'Class 10 Biology Ghaziabad', url: '/class-10-biology-coaching-ghaziabad' }, { name: 'Biology Classes Ghaziabad', url: '/biology-classes-ghaziabad' }, { name: 'Class 9 Biology Noida', url: '/class-9-biology-tuition-noida' }],
-    faqs: [{ question: 'Is Class 9 too early for Biology coaching?', answer: 'It\'s the perfect time! Class 9 Biology topics (Cell Biology, Tissues, Life Processes) are directly tested in NEET. Starting early gives a 3-year advantage. Plus school scores improve immediately.' }, { question: 'What is the weekly commitment?', answer: 'Just 3 hours/week. Designed to complement school, not add pressure.' }, { question: 'What are the fees?', answer: '₹35,000/year (online). CBSE + UP Board patterns covered. Includes study material and weekly tests.' }, { question: 'Which Ghaziabad schools do Class 9 students come from?', answer: 'DPS Indirapuram, Cambridge School, Ryan International, Indirapuram Public School, and 10+ other schools.' }],
-    stats: { studentsFromCity: '30+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.6692', lng: '77.4538' },
-    areaSpecificContent: { whyThisArea: 'Ghaziabad parents are increasingly starting Biology coaching in Class 9. Our light 3-hour/week online program is perfect for busy Ghaziabad families.' },
-    studentSuccessStory: { name: 'Ananya P.', area: 'Indirapuram', achievement: 'Class 9: 92/100 Science | Biology is now favorite', quote: 'The hands-on experiments and 3D models made Biology fun. Went from finding it boring to scoring 92. Now excited for Class 10.' },
+    metaDescription:
+      'Class 9 Biology tuition in Ghaziabad — fun, interactive learning. Indirapuram, Vaishali. AIIMS faculty, ₹35,000/year. CBSE + UP Board. Free demo!',
+    heroTitle: 'Class 9 Biology Tuition — Ghaziabad',
+    heroSubtitle:
+      'Build strong Biology foundations in Class 9. Interactive teaching with hands-on experiments — just 3 hours/week. Perfect for Ghaziabad students who want to ace school exams and prepare for the Class 10-11 leap.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '15-20 km',
+    },
+    localities: [
+      { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
+      { name: 'Vaishali', url: '/neet-coaching-vaishali' },
+      { name: 'Raj Nagar Extension', url: '/neet-coaching-raj-nagar-extension' },
+    ],
+    relatedCities: [
+      { name: 'Class 10 Biology Ghaziabad', url: '/class-10-biology-coaching-ghaziabad' },
+      { name: 'Biology Classes Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Class 9 Biology Noida', url: '/class-9-biology-tuition-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Is Class 9 too early for Biology coaching?',
+        answer:
+          "It's the perfect time! Class 9 Biology topics (Cell Biology, Tissues, Life Processes) are directly tested in NEET. Starting early gives a 3-year advantage. Plus school scores improve immediately.",
+      },
+      {
+        question: 'What is the weekly commitment?',
+        answer: 'Just 3 hours/week. Designed to complement school, not add pressure.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          '₹35,000/year (online). CBSE + UP Board patterns covered. Includes study material and weekly tests.',
+      },
+      {
+        question: 'Which Ghaziabad schools do Class 9 students come from?',
+        answer:
+          'DPS Indirapuram, Cambridge School, Ryan International, Indirapuram Public School, and 10+ other schools.',
+      },
+    ],
+    stats: { studentsFromCity: '30+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.6692', lng: '77.4538' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Ghaziabad parents are increasingly starting Biology coaching in Class 9. Our light 3-hour/week online program is perfect for busy Ghaziabad families.',
+    },
+    studentSuccessStory: {
+      name: 'Ananya P.',
+      area: 'Indirapuram',
+      achievement: 'Class 9: 92/100 Science | Biology is now favorite',
+      quote:
+        'The hands-on experiments and 3D models made Biology fun. Went from finding it boring to scoring 92. Now excited for Class 10.',
+    },
   },
   'class-10-biology-coaching-ghaziabad': {
-    slug: 'class-10-biology-coaching-ghaziabad', cityName: 'Ghaziabad', stateName: 'Uttar Pradesh',
+    slug: 'class-10-biology-coaching-ghaziabad',
+    cityName: 'Ghaziabad',
+    stateName: 'Uttar Pradesh',
     metaTitle: 'Class 10 Biology Coaching Ghaziabad | CBSE Board Prep | Cerebrum Biology Academy',
-    metaDescription: 'Class 10 Biology coaching in Ghaziabad — board prep + foundation. Indirapuram, Vaishali. AIIMS faculty. ₹38,000-50,000/year. CBSE + UP Board. Free demo!',
-    heroTitle: 'Class 10 Biology Coaching — Ghaziabad', heroSubtitle: 'Class 10 Biology is the gateway to Class 11-12. Our coaching builds deep understanding of Life Processes, Heredity, and Environment — scoring well in boards AND preparing for the Class 11 leap.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km' },
-    localities: [{ name: 'Indirapuram', url: '/neet-coaching-indirapuram' }, { name: 'Vaishali', url: '/neet-coaching-vaishali' }],
-    relatedCities: [{ name: 'Class 9 Biology Ghaziabad', url: '/class-9-biology-tuition-ghaziabad' }, { name: 'Class 11 Biology Ghaziabad', url: '/biology-class-11-ghaziabad' }, { name: 'Biology Classes Ghaziabad', url: '/biology-classes-ghaziabad' }],
-    faqs: [{ question: 'What is covered in Class 10 Biology?', answer: 'Life Processes, Control & Coordination, Reproduction, Heredity & Evolution, Our Environment. All taught at depth that prepares for Class 11.' }, { question: 'Is this for board exams?', answer: 'Yes! CBSE + UP Board patterns. Includes practical exam prep, viva questions, and diagram practice.' }, { question: 'What are the fees?', answer: '₹38,000-50,000/year. Online for Ghaziabad. Includes study material, tests, practical prep.' }, { question: 'How does this help with Class 11?', answer: 'Class 10 topics connect directly to Class 11: Life Processes → Physiology, Heredity → Genetics. Students who take our Class 10 course find Class 11 Biology 50% easier.' }],
-    stats: { studentsFromCity: '35+', successRate: '96%', rating: '4.8' }, geoCoordinates: { lat: '28.6692', lng: '77.4538' },
-    areaSpecificContent: { whyThisArea: 'Ghaziabad Class 10 students need Biology coaching that prepares for both board exams and the critical Class 11 transition. Our program serves both needs in just 3-4 hours/week.' },
-    studentSuccessStory: { name: 'Rahul D.', area: 'Vaishali, Ghaziabad', achievement: 'Class 10: 94/100 Science', quote: 'Class 10 Biology at Cerebrum made Class 11 so much easier. My classmates struggled while I already knew the concepts. Scored 94 in board Science.' },
+    metaDescription:
+      'Class 10 Biology coaching in Ghaziabad — board prep + foundation. Indirapuram, Vaishali. AIIMS faculty. ₹38,000-50,000/year. CBSE + UP Board. Free demo!',
+    heroTitle: 'Class 10 Biology Coaching — Ghaziabad',
+    heroSubtitle:
+      'Class 10 Biology is the gateway to Class 11-12. Our coaching builds deep understanding of Life Processes, Heredity, and Environment — scoring well in boards AND preparing for the Class 11 leap.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '15-20 km',
+    },
+    localities: [
+      { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
+      { name: 'Vaishali', url: '/neet-coaching-vaishali' },
+    ],
+    relatedCities: [
+      { name: 'Class 9 Biology Ghaziabad', url: '/class-9-biology-tuition-ghaziabad' },
+      { name: 'Class 11 Biology Ghaziabad', url: '/biology-class-11-ghaziabad' },
+      { name: 'Biology Classes Ghaziabad', url: '/biology-classes-ghaziabad' },
+    ],
+    faqs: [
+      {
+        question: 'What is covered in Class 10 Biology?',
+        answer:
+          'Life Processes, Control & Coordination, Reproduction, Heredity & Evolution, Our Environment. All taught at depth that prepares for Class 11.',
+      },
+      {
+        question: 'Is this for board exams?',
+        answer:
+          'Yes! CBSE + UP Board patterns. Includes practical exam prep, viva questions, and diagram practice.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          '₹38,000-50,000/year. Online for Ghaziabad. Includes study material, tests, practical prep.',
+      },
+      {
+        question: 'How does this help with Class 11?',
+        answer:
+          'Class 10 topics connect directly to Class 11: Life Processes → Physiology, Heredity → Genetics. Students who take our Class 10 course find Class 11 Biology 50% easier.',
+      },
+    ],
+    stats: { studentsFromCity: '35+', successRate: '96%', rating: '4.8' },
+    geoCoordinates: { lat: '28.6692', lng: '77.4538' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Ghaziabad Class 10 students need Biology coaching that prepares for both board exams and the critical Class 11 transition. Our program serves both needs in just 3-4 hours/week.',
+    },
+    studentSuccessStory: {
+      name: 'Rahul D.',
+      area: 'Vaishali, Ghaziabad',
+      achievement: 'Class 10: 94/100 Science',
+      quote:
+        'Class 10 Biology at Cerebrum made Class 11 so much easier. My classmates struggled while I already knew the concepts. Scored 94 in board Science.',
+    },
   },
   'class-9-biology-tuition-faridabad': {
-    slug: 'class-9-biology-tuition-faridabad', cityName: 'Faridabad', stateName: 'Haryana',
+    slug: 'class-9-biology-tuition-faridabad',
+    cityName: 'Faridabad',
+    stateName: 'Haryana',
     metaTitle: 'Class 9 Biology Tuition Faridabad | Foundation | Cerebrum Biology Academy',
-    metaDescription: 'Class 9 Biology tuition in Faridabad — interactive learning, 3 hrs/week. NIT, Sector 15-21. CBSE + Haryana Board. AIIMS faculty. ₹35,000/year. Free demo!',
-    heroTitle: 'Class 9 Biology Tuition — Faridabad', heroSubtitle: 'Start your child\'s Biology journey in Class 9 with fun, interactive teaching. Hands-on experiments and visual learning — just 3 hours/week. CBSE and Haryana Board patterns covered.',
-    hasOfflineCenter: false, nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km' },
-    localities: [{ name: 'NIT Faridabad', url: '/neet-coaching-faridabad' }, { name: 'Sector 15-21', url: '/neet-coaching-faridabad' }],
-    relatedCities: [{ name: 'Class 10 Biology Faridabad', url: '/class-10-biology-coaching-faridabad' }, { name: 'Biology Classes Faridabad', url: '/biology-classes-faridabad' }, { name: 'Class 9 Biology Delhi', url: '/class-9-biology-tuition-delhi' }],
-    faqs: [{ question: 'Is Class 9 Biology coaching available in Faridabad?', answer: 'Yes! Online classes with AIIMS faculty. 3 hours/week — light enough for school, deep enough for foundations.' }, { question: 'Do you cover Haryana Board?', answer: 'Yes! NCERT (common to CBSE and Haryana Board) with state-specific question patterns.' }, { question: 'What is the fee?', answer: '₹35,000/year. Includes study material, weekly tests, hands-on activities.' }, { question: 'Which Faridabad schools do students attend?', answer: 'DAV Faridabad, Modern School NIT, Apeejay, GD Goenka, DPS Faridabad, and 10+ other schools.' }],
-    stats: { studentsFromCity: '25+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.4089', lng: '77.3178' },
-    areaSpecificContent: { whyThisArea: 'Faridabad parents starting Biology coaching early in Class 9 is a growing trend. Our affordable online program (₹35K/year) makes this accessible for all families.' },
-    studentSuccessStory: { name: 'Kriti R.', area: 'NIT Faridabad', achievement: 'Class 9: 91/100 Science', quote: 'Biology was boring at school. Cerebrum made it fun with experiments and stories. Scored 91 in Class 9 Science — my best subject now!' },
+    metaDescription:
+      'Class 9 Biology tuition in Faridabad — interactive learning, 3 hrs/week. NIT, Sector 15-21. CBSE + Haryana Board. AIIMS faculty. ₹35,000/year. Free demo!',
+    heroTitle: 'Class 9 Biology Tuition — Faridabad',
+    heroSubtitle:
+      "Start your child's Biology journey in Class 9 with fun, interactive teaching. Hands-on experiments and visual learning — just 3 hours/week. CBSE and Haryana Board patterns covered.",
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '15-20 km',
+    },
+    localities: [
+      { name: 'NIT Faridabad', url: '/neet-coaching-faridabad' },
+      { name: 'Sector 15-21', url: '/neet-coaching-faridabad' },
+    ],
+    relatedCities: [
+      { name: 'Class 10 Biology Faridabad', url: '/class-10-biology-coaching-faridabad' },
+      { name: 'Biology Classes Faridabad', url: '/biology-classes-faridabad' },
+      { name: 'Class 9 Biology Delhi', url: '/class-9-biology-tuition-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Is Class 9 Biology coaching available in Faridabad?',
+        answer:
+          'Yes! Online classes with AIIMS faculty. 3 hours/week — light enough for school, deep enough for foundations.',
+      },
+      {
+        question: 'Do you cover Haryana Board?',
+        answer:
+          'Yes! NCERT (common to CBSE and Haryana Board) with state-specific question patterns.',
+      },
+      {
+        question: 'What is the fee?',
+        answer: '₹35,000/year. Includes study material, weekly tests, hands-on activities.',
+      },
+      {
+        question: 'Which Faridabad schools do students attend?',
+        answer:
+          'DAV Faridabad, Modern School NIT, Apeejay, GD Goenka, DPS Faridabad, and 10+ other schools.',
+      },
+    ],
+    stats: { studentsFromCity: '25+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4089', lng: '77.3178' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Faridabad parents starting Biology coaching early in Class 9 is a growing trend. Our affordable online program (₹35K/year) makes this accessible for all families.',
+    },
+    studentSuccessStory: {
+      name: 'Kriti R.',
+      area: 'NIT Faridabad',
+      achievement: 'Class 9: 91/100 Science',
+      quote:
+        'Biology was boring at school. Cerebrum made it fun with experiments and stories. Scored 91 in Class 9 Science — my best subject now!',
+    },
   },
   'class-10-biology-coaching-faridabad': {
-    slug: 'class-10-biology-coaching-faridabad', cityName: 'Faridabad', stateName: 'Haryana',
+    slug: 'class-10-biology-coaching-faridabad',
+    cityName: 'Faridabad',
+    stateName: 'Haryana',
     metaTitle: 'Class 10 Biology Coaching Faridabad | Board Prep | Cerebrum Biology Academy',
-    metaDescription: 'Class 10 Biology coaching in Faridabad — CBSE + Haryana Board prep. NIT, Sector 15-21. AIIMS faculty. ₹38,000-50,000/year. Free demo!',
-    heroTitle: 'Class 10 Biology Coaching — Faridabad', heroSubtitle: 'Score 90+ in Class 10 CBSE/Haryana Board Biology and build a strong foundation for Class 11. Practical exam prep, viva practice, and diagram techniques included.',
-    hasOfflineCenter: false, nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km' },
-    localities: [{ name: 'NIT Faridabad', url: '/neet-coaching-faridabad' }, { name: 'Sector 15-21', url: '/neet-coaching-faridabad' }],
-    relatedCities: [{ name: 'Class 9 Biology Faridabad', url: '/class-9-biology-tuition-faridabad' }, { name: 'Class 11 Biology Faridabad', url: '/biology-class-11-faridabad' }, { name: 'Biology Classes Faridabad', url: '/biology-classes-faridabad' }],
-    faqs: [{ question: 'What is covered?', answer: 'Complete Class 10 NCERT Biology: Life Processes, Control & Coordination, Reproduction, Heredity, Environment. Plus practical/viva prep and diagram practice.' }, { question: 'Is Haryana Board covered?', answer: 'Yes! NCERT is common. We add Haryana Board question patterns and previous year papers.' }, { question: 'What are the fees?', answer: '₹38,000-50,000/year. Online for Faridabad students. EMI available.' }, { question: 'How does this prepare for Class 11?', answer: 'Class 10 topics directly connect to Class 11 Biology. Students who take our course find Class 11 significantly easier.' }],
-    stats: { studentsFromCity: '30+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.4089', lng: '77.3178' },
-    areaSpecificContent: { whyThisArea: 'Faridabad Class 10 students need board-focused Biology coaching with Haryana Board pattern coverage. Our online program serves this need affordably.' },
-    studentSuccessStory: { name: 'Manish K.', area: 'Sector 16, Faridabad', achievement: 'Class 10: 93/100 Science', quote: 'Cerebrum\'s Class 10 coaching gave me the foundation I needed. Now in Class 11, Biology is my easiest subject.' },
+    metaDescription:
+      'Class 10 Biology coaching in Faridabad — CBSE + Haryana Board prep. NIT, Sector 15-21. AIIMS faculty. ₹38,000-50,000/year. Free demo!',
+    heroTitle: 'Class 10 Biology Coaching — Faridabad',
+    heroSubtitle:
+      'Score 90+ in Class 10 CBSE/Haryana Board Biology and build a strong foundation for Class 11. Practical exam prep, viva practice, and diagram techniques included.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '15-20 km',
+    },
+    localities: [
+      { name: 'NIT Faridabad', url: '/neet-coaching-faridabad' },
+      { name: 'Sector 15-21', url: '/neet-coaching-faridabad' },
+    ],
+    relatedCities: [
+      { name: 'Class 9 Biology Faridabad', url: '/class-9-biology-tuition-faridabad' },
+      { name: 'Class 11 Biology Faridabad', url: '/biology-class-11-faridabad' },
+      { name: 'Biology Classes Faridabad', url: '/biology-classes-faridabad' },
+    ],
+    faqs: [
+      {
+        question: 'What is covered?',
+        answer:
+          'Complete Class 10 NCERT Biology: Life Processes, Control & Coordination, Reproduction, Heredity, Environment. Plus practical/viva prep and diagram practice.',
+      },
+      {
+        question: 'Is Haryana Board covered?',
+        answer:
+          'Yes! NCERT is common. We add Haryana Board question patterns and previous year papers.',
+      },
+      {
+        question: 'What are the fees?',
+        answer: '₹38,000-50,000/year. Online for Faridabad students. EMI available.',
+      },
+      {
+        question: 'How does this prepare for Class 11?',
+        answer:
+          'Class 10 topics directly connect to Class 11 Biology. Students who take our course find Class 11 significantly easier.',
+      },
+    ],
+    stats: { studentsFromCity: '30+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4089', lng: '77.3178' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Faridabad Class 10 students need board-focused Biology coaching with Haryana Board pattern coverage. Our online program serves this need affordably.',
+    },
+    studentSuccessStory: {
+      name: 'Manish K.',
+      area: 'Sector 16, Faridabad',
+      achievement: 'Class 10: 93/100 Science',
+      quote:
+        "Cerebrum's Class 10 coaching gave me the foundation I needed. Now in Class 11, Biology is my easiest subject.",
+    },
   },
   'class-9-biology-tuition-greater-noida': {
-    slug: 'class-9-biology-tuition-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
+    slug: 'class-9-biology-tuition-greater-noida',
+    cityName: 'Greater Noida',
+    stateName: 'Uttar Pradesh',
     metaTitle: 'Class 9 Biology Tuition Greater Noida | Foundation | Cerebrum Biology Academy',
-    metaDescription: 'Class 9 Biology tuition for Greater Noida — Gaur City, Knowledge Park. Interactive learning, 3 hrs/week. AIIMS faculty. ₹35,000/year. Free demo!',
-    heroTitle: 'Class 9 Biology Tuition — Greater Noida', heroSubtitle: 'Greater Noida students: start Biology early with fun, interactive classes. Hands-on experiments and 3D models make Cell Biology and Life Processes memorable. Just 3 hours/week online.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
-    localities: [{ name: 'Gaur City', url: '/neet-coaching-gaur-city' }, { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' }],
-    relatedCities: [{ name: 'Class 10 Biology Greater Noida', url: '/class-10-biology-coaching-greater-noida' }, { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' }, { name: 'Class 9 Biology Noida', url: '/class-9-biology-tuition-noida' }],
-    faqs: [{ question: 'Is Class 9 Biology coaching available in Greater Noida?', answer: 'Yes! Online classes with AIIMS faculty. 3 hrs/week from home. Weekend lab sessions available at Noida center.' }, { question: 'What is the fee?', answer: '₹35,000/year. Includes material, tests, lab kit for Pinnacle tier.' }, { question: 'Which schools do students come from?', answer: 'DPS Greater Noida, Ryan International, Somerville, KR Mangalam, GD Goenka, and schools in Gaur City/Knowledge Park area.' }, { question: 'Is this for UP Board also?', answer: 'Yes! NCERT (common to CBSE and UP Board) with board-specific question patterns.' }],
-    stats: { studentsFromCity: '20+', successRate: '94%', rating: '4.8' }, geoCoordinates: { lat: '28.4744', lng: '77.5030' },
-    areaSpecificContent: { whyThisArea: 'Greater Noida has zero local Biology coaching for Class 9 students. Our online program fills this gap with affordable, quality teaching.' },
-    studentSuccessStory: { name: 'Ishita G.', area: 'Gaur City 2', achievement: 'Class 9: 90/100 Science', quote: 'No Biology coaching in Greater Noida for Class 9. Cerebrum\'s online classes were perfect — fun, interactive, and my scores jumped from 72 to 90.' },
+    metaDescription:
+      'Class 9 Biology tuition for Greater Noida — Gaur City, Knowledge Park. Interactive learning, 3 hrs/week. AIIMS faculty. ₹35,000/year. Free demo!',
+    heroTitle: 'Class 9 Biology Tuition — Greater Noida',
+    heroSubtitle:
+      'Greater Noida students: start Biology early with fun, interactive classes. Hands-on experiments and 3D models make Cell Biology and Life Processes memorable. Just 3 hours/week online.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km',
+    },
+    localities: [
+      { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
+      { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
+    ],
+    relatedCities: [
+      { name: 'Class 10 Biology Greater Noida', url: '/class-10-biology-coaching-greater-noida' },
+      { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' },
+      { name: 'Class 9 Biology Noida', url: '/class-9-biology-tuition-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Is Class 9 Biology coaching available in Greater Noida?',
+        answer:
+          'Yes! Online classes with AIIMS faculty. 3 hrs/week from home. Weekend lab sessions available at Noida center.',
+      },
+      {
+        question: 'What is the fee?',
+        answer: '₹35,000/year. Includes material, tests, lab kit for Pinnacle tier.',
+      },
+      {
+        question: 'Which schools do students come from?',
+        answer:
+          'DPS Greater Noida, Ryan International, Somerville, KR Mangalam, GD Goenka, and schools in Gaur City/Knowledge Park area.',
+      },
+      {
+        question: 'Is this for UP Board also?',
+        answer: 'Yes! NCERT (common to CBSE and UP Board) with board-specific question patterns.',
+      },
+    ],
+    stats: { studentsFromCity: '20+', successRate: '94%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4744', lng: '77.5030' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Greater Noida has zero local Biology coaching for Class 9 students. Our online program fills this gap with affordable, quality teaching.',
+    },
+    studentSuccessStory: {
+      name: 'Ishita G.',
+      area: 'Gaur City 2',
+      achievement: 'Class 9: 90/100 Science',
+      quote:
+        "No Biology coaching in Greater Noida for Class 9. Cerebrum's online classes were perfect — fun, interactive, and my scores jumped from 72 to 90.",
+    },
   },
   'class-10-biology-coaching-greater-noida': {
-    slug: 'class-10-biology-coaching-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
+    slug: 'class-10-biology-coaching-greater-noida',
+    cityName: 'Greater Noida',
+    stateName: 'Uttar Pradesh',
     metaTitle: 'Class 10 Biology Coaching Greater Noida | Board Prep | Cerebrum Biology Academy',
-    metaDescription: 'Class 10 Biology in Greater Noida — board prep + Class 11 foundation. Gaur City, Knowledge Park. AIIMS faculty. ₹38,000-50,000/year. Online. Free demo!',
-    heroTitle: 'Class 10 Biology Coaching — Greater Noida', heroSubtitle: 'Score 90+ in Class 10 Biology boards and build the foundation for Class 11. Online coaching for Gaur City, Knowledge Park, and all Greater Noida areas.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
-    localities: [{ name: 'Gaur City', url: '/neet-coaching-gaur-city' }, { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' }],
-    relatedCities: [{ name: 'Class 9 Biology Greater Noida', url: '/class-9-biology-tuition-greater-noida' }, { name: 'Class 11 Biology Greater Noida', url: '/class-11-biology-coaching-greater-noida' }, { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' }],
-    faqs: [{ question: 'What is covered?', answer: 'Complete Class 10 NCERT Biology. Board prep + Class 11 foundation. Practical/viva prep included.' }, { question: 'What are the fees?', answer: '₹38,000-50,000/year. Online for Greater Noida. EMI available.' }, { question: 'Is UP Board covered?', answer: 'Yes! NCERT common to both boards. UP Board question patterns included.' }, { question: 'How does this prepare for Class 11?', answer: 'Class 10 Life Processes → Class 11 Physiology. Heredity → Genetics. Environment → Ecology. Direct connections taught explicitly.' }],
-    stats: { studentsFromCity: '25+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.4744', lng: '77.5030' },
-    areaSpecificContent: { whyThisArea: 'Greater Noida Class 10 students need board-focused Biology coaching that also prepares for the Class 11 transition. Our online model serves this dual need.' },
-    studentSuccessStory: { name: 'Aditya N.', area: 'Knowledge Park III', achievement: 'Class 10: 92/100 Science', quote: 'Online Biology coaching from Greater Noida. Made Class 11 transition smooth — already knew half the concepts before school even started teaching them.' },
+    metaDescription:
+      'Class 10 Biology in Greater Noida — board prep + Class 11 foundation. Gaur City, Knowledge Park. AIIMS faculty. ₹38,000-50,000/year. Online. Free demo!',
+    heroTitle: 'Class 10 Biology Coaching — Greater Noida',
+    heroSubtitle:
+      'Score 90+ in Class 10 Biology boards and build the foundation for Class 11. Online coaching for Gaur City, Knowledge Park, and all Greater Noida areas.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km',
+    },
+    localities: [
+      { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
+      { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
+    ],
+    relatedCities: [
+      { name: 'Class 9 Biology Greater Noida', url: '/class-9-biology-tuition-greater-noida' },
+      { name: 'Class 11 Biology Greater Noida', url: '/class-11-biology-coaching-greater-noida' },
+      { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' },
+    ],
+    faqs: [
+      {
+        question: 'What is covered?',
+        answer:
+          'Complete Class 10 NCERT Biology. Board prep + Class 11 foundation. Practical/viva prep included.',
+      },
+      {
+        question: 'What are the fees?',
+        answer: '₹38,000-50,000/year. Online for Greater Noida. EMI available.',
+      },
+      {
+        question: 'Is UP Board covered?',
+        answer: 'Yes! NCERT common to both boards. UP Board question patterns included.',
+      },
+      {
+        question: 'How does this prepare for Class 11?',
+        answer:
+          'Class 10 Life Processes → Class 11 Physiology. Heredity → Genetics. Environment → Ecology. Direct connections taught explicitly.',
+      },
+    ],
+    stats: { studentsFromCity: '25+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4744', lng: '77.5030' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Greater Noida Class 10 students need board-focused Biology coaching that also prepares for the Class 11 transition. Our online model serves this dual need.',
+    },
+    studentSuccessStory: {
+      name: 'Aditya N.',
+      area: 'Knowledge Park III',
+      achievement: 'Class 10: 92/100 Science',
+      quote:
+        'Online Biology coaching from Greater Noida. Made Class 11 transition smooth — already knew half the concepts before school even started teaching them.',
+    },
   },
   'cbse-biology-coaching-ghaziabad': {
-    slug: 'cbse-biology-coaching-ghaziabad', cityName: 'Ghaziabad', stateName: 'Uttar Pradesh',
-    metaTitle: 'CBSE Biology Coaching Ghaziabad | Class 11-12 Board Prep | Cerebrum Biology Academy',
-    metaDescription: 'CBSE Biology coaching in Ghaziabad — score 90+ in board exams. Indirapuram, Vaishali. Diagram practice, practical/viva prep, sample papers. AIIMS faculty. ₹40,000-60,000/year.',
-    heroTitle: 'CBSE Biology Coaching in Ghaziabad', heroSubtitle: 'CBSE Biology needs diagram perfection, practical confidence, and HOTS mastery. Our board-focused coaching covers all of this while optionally building NEET readiness. Average board score: 91/100.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km' },
-    localities: [{ name: 'Indirapuram', url: '/neet-coaching-indirapuram' }, { name: 'Vaishali', url: '/neet-coaching-vaishali' }],
-    relatedCities: [{ name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' }, { name: 'CBSE Biology Gurugram', url: '/cbse-biology-coaching-gurugram' }, { name: 'Biology Classes Ghaziabad', url: '/biology-classes-ghaziabad' }],
-    faqs: [{ question: 'What does CBSE Biology coaching include?', answer: 'NCERT coverage, diagram practice, practical/viva prep, HOTS questions, 10 sample papers, previous year analysis, mock board exams.' }, { question: 'Is UP Board also covered?', answer: 'Yes! NCERT is common. We add UP Board question patterns and previous year papers.' }, { question: 'What is the average board score?', answer: 'Our Ghaziabad students average 91/100 in CBSE Biology. 20% score 95+.' }, { question: 'What are the fees?', answer: '₹40,000-60,000/year. Board-only: ₹38,000-48,000/year. Online for Ghaziabad.' }],
-    stats: { studentsFromCity: '80+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.6692', lng: '77.4538' },
-    areaSpecificContent: { whyThisArea: 'Ghaziabad CBSE students need board-specific Biology prep that generic coaching doesn\'t provide. Our focus on diagrams, practicals, and HOTS questions directly improves board scores.' },
-    studentSuccessStory: { name: 'Simran K.', area: 'Indirapuram', achievement: 'CBSE Board: 93/100 Biology', quote: 'The diagram practice alone added 8 marks to my score. Cerebrum\'s CBSE coaching is focused on what actually gets marks in boards.' },
+    slug: 'cbse-biology-coaching-ghaziabad',
+    cityName: 'Ghaziabad',
+    stateName: 'Uttar Pradesh',
+    metaTitle:
+      'CBSE Biology Coaching Ghaziabad | Class 11-12 Board Prep | Cerebrum Biology Academy',
+    metaDescription:
+      'CBSE Biology coaching in Ghaziabad — score 90+ in board exams. Indirapuram, Vaishali. Diagram practice, practical/viva prep, sample papers. AIIMS faculty. ₹40,000-60,000/year.',
+    heroTitle: 'CBSE Biology Coaching in Ghaziabad',
+    heroSubtitle:
+      'CBSE Biology needs diagram perfection, practical confidence, and HOTS mastery. Our board-focused coaching covers all of this while optionally building NEET readiness. Average board score: 91/100.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '15-20 km',
+    },
+    localities: [
+      { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
+      { name: 'Vaishali', url: '/neet-coaching-vaishali' },
+    ],
+    relatedCities: [
+      { name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' },
+      { name: 'CBSE Biology Gurugram', url: '/cbse-biology-coaching-gurugram' },
+      { name: 'Biology Classes Ghaziabad', url: '/biology-classes-ghaziabad' },
+    ],
+    faqs: [
+      {
+        question: 'What does CBSE Biology coaching include?',
+        answer:
+          'NCERT coverage, diagram practice, practical/viva prep, HOTS questions, 10 sample papers, previous year analysis, mock board exams.',
+      },
+      {
+        question: 'Is UP Board also covered?',
+        answer: 'Yes! NCERT is common. We add UP Board question patterns and previous year papers.',
+      },
+      {
+        question: 'What is the average board score?',
+        answer: 'Our Ghaziabad students average 91/100 in CBSE Biology. 20% score 95+.',
+      },
+      {
+        question: 'What are the fees?',
+        answer: '₹40,000-60,000/year. Board-only: ₹38,000-48,000/year. Online for Ghaziabad.',
+      },
+    ],
+    stats: { studentsFromCity: '80+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.6692', lng: '77.4538' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Ghaziabad CBSE students need board-specific Biology prep that generic coaching doesn't provide. Our focus on diagrams, practicals, and HOTS questions directly improves board scores.",
+    },
+    studentSuccessStory: {
+      name: 'Simran K.',
+      area: 'Indirapuram',
+      achievement: 'CBSE Board: 93/100 Biology',
+      quote:
+        "The diagram practice alone added 8 marks to my score. Cerebrum's CBSE coaching is focused on what actually gets marks in boards.",
+    },
   },
   'cbse-biology-coaching-faridabad': {
-    slug: 'cbse-biology-coaching-faridabad', cityName: 'Faridabad', stateName: 'Haryana',
-    metaTitle: 'CBSE Biology Coaching Faridabad | Board Prep + Haryana Board | Cerebrum Biology Academy',
-    metaDescription: 'CBSE & Haryana Board Biology coaching in Faridabad. Score 90+ in boards. Diagram practice, practical/viva prep. AIIMS faculty. ₹38,000-55,000/year. Free demo!',
-    heroTitle: 'CBSE & Haryana Board Biology — Faridabad', heroSubtitle: 'Faridabad students from both CBSE and Haryana Board schools — score 90+ with our board-specific Biology coaching. Diagram perfection, practical prep, and HOTS mastery included.',
-    hasOfflineCenter: false, nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km' },
-    localities: [{ name: 'NIT Faridabad', url: '/neet-coaching-faridabad' }, { name: 'Sector 15-21', url: '/neet-coaching-faridabad' }],
-    relatedCities: [{ name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' }, { name: 'Biology Classes Faridabad', url: '/biology-classes-faridabad' }, { name: 'Board Exam Biology Gurugram', url: '/board-exam-biology-gurugram' }],
-    faqs: [{ question: 'Do you cover Haryana Board Biology?', answer: 'Yes! NCERT common to both. Haryana Board-specific question patterns, marking schemes, and previous year papers included.' }, { question: 'What board score do your students average?', answer: '90/100 average for Faridabad CBSE students. Haryana Board students average 88/100.' }, { question: 'What is included?', answer: 'NCERT coverage, diagram practice, practical/viva prep, HOTS questions, sample papers, mock boards.' }, { question: 'What are the fees?', answer: '₹38,000-55,000/year. Online for Faridabad. EMI available.' }],
-    stats: { studentsFromCity: '50+', successRate: '94%', rating: '4.8' }, geoCoordinates: { lat: '28.4089', lng: '77.3178' },
-    areaSpecificContent: { whyThisArea: 'Faridabad has both CBSE and Haryana Board schools. Our coaching covers both patterns — the only Biology-specialist doing so in the city.' },
-    studentSuccessStory: { name: 'Neha P.', area: 'NIT Faridabad', achievement: 'Haryana Board: 90/100 Biology', quote: 'Haryana Board Biology prep was impossible to find locally. Cerebrum covered both CBSE and state board patterns. Scored 90 — highest in my school.' },
+    slug: 'cbse-biology-coaching-faridabad',
+    cityName: 'Faridabad',
+    stateName: 'Haryana',
+    metaTitle:
+      'CBSE Biology Coaching Faridabad | Board Prep + Haryana Board | Cerebrum Biology Academy',
+    metaDescription:
+      'CBSE & Haryana Board Biology coaching in Faridabad. Score 90+ in boards. Diagram practice, practical/viva prep. AIIMS faculty. ₹38,000-55,000/year. Free demo!',
+    heroTitle: 'CBSE & Haryana Board Biology — Faridabad',
+    heroSubtitle:
+      'Faridabad students from both CBSE and Haryana Board schools — score 90+ with our board-specific Biology coaching. Diagram perfection, practical prep, and HOTS mastery included.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '15-20 km',
+    },
+    localities: [
+      { name: 'NIT Faridabad', url: '/neet-coaching-faridabad' },
+      { name: 'Sector 15-21', url: '/neet-coaching-faridabad' },
+    ],
+    relatedCities: [
+      { name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' },
+      { name: 'Biology Classes Faridabad', url: '/biology-classes-faridabad' },
+      { name: 'Board Exam Biology Gurugram', url: '/board-exam-biology-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Do you cover Haryana Board Biology?',
+        answer:
+          'Yes! NCERT common to both. Haryana Board-specific question patterns, marking schemes, and previous year papers included.',
+      },
+      {
+        question: 'What board score do your students average?',
+        answer:
+          '90/100 average for Faridabad CBSE students. Haryana Board students average 88/100.',
+      },
+      {
+        question: 'What is included?',
+        answer:
+          'NCERT coverage, diagram practice, practical/viva prep, HOTS questions, sample papers, mock boards.',
+      },
+      {
+        question: 'What are the fees?',
+        answer: '₹38,000-55,000/year. Online for Faridabad. EMI available.',
+      },
+    ],
+    stats: { studentsFromCity: '50+', successRate: '94%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4089', lng: '77.3178' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Faridabad has both CBSE and Haryana Board schools. Our coaching covers both patterns — the only Biology-specialist doing so in the city.',
+    },
+    studentSuccessStory: {
+      name: 'Neha P.',
+      area: 'NIT Faridabad',
+      achievement: 'Haryana Board: 90/100 Biology',
+      quote:
+        'Haryana Board Biology prep was impossible to find locally. Cerebrum covered both CBSE and state board patterns. Scored 90 — highest in my school.',
+    },
   },
   'cbse-biology-coaching-greater-noida': {
-    slug: 'cbse-biology-coaching-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
+    slug: 'cbse-biology-coaching-greater-noida',
+    cityName: 'Greater Noida',
+    stateName: 'Uttar Pradesh',
     metaTitle: 'CBSE Biology Coaching Greater Noida | Board Prep | Cerebrum Biology Academy',
-    metaDescription: 'CBSE Biology coaching for Greater Noida — Gaur City, Knowledge Park. Score 90+ in boards. Diagram practice, practical prep. ₹38,000-55,000/year. Free demo!',
-    heroTitle: 'CBSE Biology Coaching — Greater Noida', heroSubtitle: 'Greater Noida CBSE students: score 90+ in Biology boards with focused coaching on diagrams, practicals, and HOTS questions. Online classes with AIIMS faculty.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
-    localities: [{ name: 'Gaur City', url: '/neet-coaching-gaur-city' }, { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' }],
-    relatedCities: [{ name: 'CBSE Biology Noida', url: '/cbse-biology-coaching-noida' }, { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' }, { name: 'Best Biology Greater Noida', url: '/best-biology-coaching-greater-noida' }],
-    faqs: [{ question: 'Is CBSE Biology coaching available for Greater Noida?', answer: 'Yes! Online coaching with AIIMS faculty. NCERT coverage + board-specific prep (diagrams, practicals, HOTS, sample papers).' }, { question: 'Is UP Board also covered?', answer: 'Yes! NCERT common to both boards. UP Board question patterns and previous year papers included.' }, { question: 'What are the fees?', answer: '₹38,000-55,000/year. Online for Greater Noida. EMI available.' }, { question: 'What is the average board score?', answer: 'Our Greater Noida CBSE students average 89/100. UP Board students average 87/100.' }],
-    stats: { studentsFromCity: '40+', successRate: '93%', rating: '4.8' }, geoCoordinates: { lat: '28.4744', lng: '77.5030' },
-    areaSpecificContent: { whyThisArea: 'Greater Noida CBSE students lack local Biology coaching focused on board marks. Our online program fills this gap with diagram-intensive, practical-focused teaching.' },
-    studentSuccessStory: { name: 'Prachi S.', area: 'Gaur City 1', achievement: 'CBSE: 91/100 Biology', quote: 'The focused diagram practice and practical prep made all the difference. Scored 91 in CBSE Biology from Greater Noida — without any offline coaching.' },
+    metaDescription:
+      'CBSE Biology coaching for Greater Noida — Gaur City, Knowledge Park. Score 90+ in boards. Diagram practice, practical prep. ₹38,000-55,000/year. Free demo!',
+    heroTitle: 'CBSE Biology Coaching — Greater Noida',
+    heroSubtitle:
+      'Greater Noida CBSE students: score 90+ in Biology boards with focused coaching on diagrams, practicals, and HOTS questions. Online classes with AIIMS faculty.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km',
+    },
+    localities: [
+      { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
+      { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
+    ],
+    relatedCities: [
+      { name: 'CBSE Biology Noida', url: '/cbse-biology-coaching-noida' },
+      { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' },
+      { name: 'Best Biology Greater Noida', url: '/best-biology-coaching-greater-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Is CBSE Biology coaching available for Greater Noida?',
+        answer:
+          'Yes! Online coaching with AIIMS faculty. NCERT coverage + board-specific prep (diagrams, practicals, HOTS, sample papers).',
+      },
+      {
+        question: 'Is UP Board also covered?',
+        answer:
+          'Yes! NCERT common to both boards. UP Board question patterns and previous year papers included.',
+      },
+      {
+        question: 'What are the fees?',
+        answer: '₹38,000-55,000/year. Online for Greater Noida. EMI available.',
+      },
+      {
+        question: 'What is the average board score?',
+        answer: 'Our Greater Noida CBSE students average 89/100. UP Board students average 87/100.',
+      },
+    ],
+    stats: { studentsFromCity: '40+', successRate: '93%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4744', lng: '77.5030' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Greater Noida CBSE students lack local Biology coaching focused on board marks. Our online program fills this gap with diagram-intensive, practical-focused teaching.',
+    },
+    studentSuccessStory: {
+      name: 'Prachi S.',
+      area: 'Gaur City 1',
+      achievement: 'CBSE: 91/100 Biology',
+      quote:
+        'The focused diagram practice and practical prep made all the difference. Scored 91 in CBSE Biology from Greater Noida — without any offline coaching.',
+    },
   },
   'best-biology-coaching-ghaziabad': {
-    slug: 'best-biology-coaching-ghaziabad', cityName: 'Ghaziabad', stateName: 'Uttar Pradesh',
+    slug: 'best-biology-coaching-ghaziabad',
+    cityName: 'Ghaziabad',
+    stateName: 'Uttar Pradesh',
     metaTitle: 'Best Biology Coaching in Ghaziabad 2026 | #1 Rated | Cerebrum Biology Academy',
-    metaDescription: 'Best Biology coaching in Ghaziabad — 96% success rate, AIIMS faculty, 15-student batches. Board (avg 91/100) + NEET. Indirapuram, Vaishali. ₹35,000-65,000/year. Free demo!',
-    heroTitle: 'Best Biology Coaching in Ghaziabad', heroSubtitle: 'Why 200+ Ghaziabad students chose Cerebrum: AIIMS faculty, 15-student batches, 91/100 average board score. The only Biology-specialist serving Indirapuram, Vaishali, and Raj Nagar Extension.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '15-20 km' },
-    localities: [{ name: 'Indirapuram', url: '/neet-coaching-indirapuram' }, { name: 'Vaishali', url: '/neet-coaching-vaishali' }, { name: 'Raj Nagar Extension', url: '/neet-coaching-raj-nagar-extension' }],
-    relatedCities: [{ name: 'Best Biology Delhi NCR', url: '/best-biology-coaching-delhi-ncr' }, { name: 'Biology Classes Ghaziabad', url: '/biology-classes-ghaziabad' }, { name: 'Best Biology Noida', url: '/best-biology-coaching-noida' }],
-    faqs: [{ question: 'Why is Cerebrum the best Biology coaching in Ghaziabad?', answer: 'Only Biology-specialist. AIIMS faculty. 15-student batches. 91/100 average board score. 200+ students from Indirapuram, Vaishali, RNE. No other coaching in Ghaziabad offers Biology-only specialization.' }, { question: 'How does this compare to Aakash Vaishali?', answer: 'Aakash: all subjects, 60+ batch, Biology = 1 hr/week. Cerebrum: Biology-only, 5 hrs/day, 15-student batch. Our students improve 80+ marks vs 30 at chains.' }, { question: 'Is this for board exams or NEET?', answer: 'Both! 30% of our Ghaziabad students are board-only. Separate batches available.' }, { question: 'What are the fees?', answer: 'Board-only: ₹35,000-48,000/year. Board+NEET: ₹48,000-65,000/year. 40-50% less than chains.' }],
-    stats: { studentsFromCity: '200+', successRate: '96%', rating: '4.9' }, geoCoordinates: { lat: '28.6692', lng: '77.4538' },
-    areaSpecificContent: { whyThisArea: 'Ghaziabad has generic coaching but zero Biology-specialists. Cerebrum fills this gap with 200+ students across Indirapuram, Vaishali, and RNE — the largest Biology student base in Ghaziabad.' },
-    studentSuccessStory: { name: 'Arjun K.', area: 'Vaishali, Ghaziabad', achievement: 'Board: 93/100 | NEET: 618/720', quote: 'Switched from Aakash Vaishali to Cerebrum. Biology went from my weakest to my strongest subject. 93 in boards, 618 in NEET.' },
+    metaDescription:
+      'Best Biology coaching in Ghaziabad — 96% success rate, AIIMS faculty, 15-student batches. Board (avg 91/100) + NEET. Indirapuram, Vaishali. ₹35,000-65,000/year. Free demo!',
+    heroTitle: 'Best Biology Coaching in Ghaziabad',
+    heroSubtitle:
+      'Why 200+ Ghaziabad students chose Cerebrum: AIIMS faculty, 15-student batches, 91/100 average board score. The only Biology-specialist serving Indirapuram, Vaishali, and Raj Nagar Extension.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '15-20 km',
+    },
+    localities: [
+      { name: 'Indirapuram', url: '/neet-coaching-indirapuram' },
+      { name: 'Vaishali', url: '/neet-coaching-vaishali' },
+      { name: 'Raj Nagar Extension', url: '/neet-coaching-raj-nagar-extension' },
+    ],
+    relatedCities: [
+      { name: 'Best Biology Delhi NCR', url: '/best-biology-coaching-delhi-ncr' },
+      { name: 'Biology Classes Ghaziabad', url: '/biology-classes-ghaziabad' },
+      { name: 'Best Biology Noida', url: '/best-biology-coaching-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Why is Cerebrum the best Biology coaching in Ghaziabad?',
+        answer:
+          'Only Biology-specialist. AIIMS faculty. 15-student batches. 91/100 average board score. 200+ students from Indirapuram, Vaishali, RNE. No other coaching in Ghaziabad offers Biology-only specialization.',
+      },
+      {
+        question: 'How does this compare to Aakash Vaishali?',
+        answer:
+          'Aakash: all subjects, 60+ batch, Biology = 1 hr/week. Cerebrum: Biology-only, 5 hrs/day, 15-student batch. Our students improve 80+ marks vs 30 at chains.',
+      },
+      {
+        question: 'Is this for board exams or NEET?',
+        answer: 'Both! 30% of our Ghaziabad students are board-only. Separate batches available.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Board-only: ₹35,000-48,000/year. Board+NEET: ₹48,000-65,000/year. 40-50% less than chains.',
+      },
+    ],
+    stats: { studentsFromCity: '200+', successRate: '96%', rating: '4.9' },
+    geoCoordinates: { lat: '28.6692', lng: '77.4538' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Ghaziabad has generic coaching but zero Biology-specialists. Cerebrum fills this gap with 200+ students across Indirapuram, Vaishali, and RNE — the largest Biology student base in Ghaziabad.',
+    },
+    studentSuccessStory: {
+      name: 'Arjun K.',
+      area: 'Vaishali, Ghaziabad',
+      achievement: 'Board: 93/100 | NEET: 618/720',
+      quote:
+        'Switched from Aakash Vaishali to Cerebrum. Biology went from my weakest to my strongest subject. 93 in boards, 618 in NEET.',
+    },
   },
   'best-biology-coaching-faridabad': {
-    slug: 'best-biology-coaching-faridabad', cityName: 'Faridabad', stateName: 'Haryana',
+    slug: 'best-biology-coaching-faridabad',
+    cityName: 'Faridabad',
+    stateName: 'Haryana',
     metaTitle: 'Best Biology Coaching in Faridabad 2026 | #1 Rated | Cerebrum Biology Academy',
-    metaDescription: 'Best Biology coaching in Faridabad — AIIMS faculty, 95% success rate. Board + NEET. NIT, Sector 15-21. CBSE + Haryana Board. ₹35,000-60,000/year. Free demo!',
-    heroTitle: 'Best Biology Coaching in Faridabad', heroSubtitle: 'Faridabad\'s only Biology-specialist coaching. AIIMS faculty, 15-student batches, and results that speak: 90/100 average board score. CBSE and Haryana Board both covered.',
-    hasOfflineCenter: false, nearestCenter: { name: 'South Delhi Center', address: 'Block D, South Extension Part 2, New Delhi', distance: '15-20 km' },
-    localities: [{ name: 'NIT Faridabad', url: '/neet-coaching-faridabad' }, { name: 'Sector 15-21', url: '/neet-coaching-faridabad' }, { name: 'Ballabgarh', url: '/neet-coaching-faridabad' }],
-    relatedCities: [{ name: 'Best Biology Delhi NCR', url: '/best-biology-coaching-delhi-ncr' }, { name: 'Biology Classes Faridabad', url: '/biology-classes-faridabad' }, { name: 'Best Biology Gurugram', url: '/best-biology-coaching-gurugram' }],
-    faqs: [{ question: 'Why is Cerebrum the best Biology coaching in Faridabad?', answer: 'Only Biology-specialist in Faridabad. AIIMS faculty. 90/100 average board score. CBSE + Haryana Board coverage. 120+ Faridabad students enrolled.' }, { question: 'Is this for CBSE and Haryana Board?', answer: 'Yes! Both patterns covered. Haryana Board-specific previous year papers and marking schemes included.' }, { question: 'What are the fees?', answer: 'Board-only: ₹35,000-48,000/year. Board+NEET: ₹48,000-60,000/year. 40% less than Delhi coaching.' }, { question: 'Is this only online?', answer: 'Primarily online for Faridabad. Weekend offline at South Delhi center (Violet Line Metro accessible). 85% of Faridabad students prefer online.' }],
-    stats: { studentsFromCity: '120+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.4089', lng: '77.3178' },
-    areaSpecificContent: { whyThisArea: 'Faridabad is Haryana\'s largest city but has no Biology-specialist coaching. Students commute to Delhi or settle for generic tuition. Cerebrum serves 120+ Faridabad students with online Biology-only coaching.' },
-    studentSuccessStory: { name: 'Divya M.', area: 'NIT Faridabad', achievement: 'Board: 92/100 | NEET: 585/720', quote: 'No good Biology coaching in Faridabad. Cerebrum\'s online classes changed that. 92 in boards, 585 in NEET — all from home.' },
+    metaDescription:
+      'Best Biology coaching in Faridabad — AIIMS faculty, 95% success rate. Board + NEET. NIT, Sector 15-21. CBSE + Haryana Board. ₹35,000-60,000/year. Free demo!',
+    heroTitle: 'Best Biology Coaching in Faridabad',
+    heroSubtitle:
+      "Faridabad's only Biology-specialist coaching. AIIMS faculty, 15-student batches, and results that speak: 90/100 average board score. CBSE and Haryana Board both covered.",
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'South Delhi Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: '15-20 km',
+    },
+    localities: [
+      { name: 'NIT Faridabad', url: '/neet-coaching-faridabad' },
+      { name: 'Sector 15-21', url: '/neet-coaching-faridabad' },
+      { name: 'Ballabgarh', url: '/neet-coaching-faridabad' },
+    ],
+    relatedCities: [
+      { name: 'Best Biology Delhi NCR', url: '/best-biology-coaching-delhi-ncr' },
+      { name: 'Biology Classes Faridabad', url: '/biology-classes-faridabad' },
+      { name: 'Best Biology Gurugram', url: '/best-biology-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why is Cerebrum the best Biology coaching in Faridabad?',
+        answer:
+          'Only Biology-specialist in Faridabad. AIIMS faculty. 90/100 average board score. CBSE + Haryana Board coverage. 120+ Faridabad students enrolled.',
+      },
+      {
+        question: 'Is this for CBSE and Haryana Board?',
+        answer:
+          'Yes! Both patterns covered. Haryana Board-specific previous year papers and marking schemes included.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Board-only: ₹35,000-48,000/year. Board+NEET: ₹48,000-60,000/year. 40% less than Delhi coaching.',
+      },
+      {
+        question: 'Is this only online?',
+        answer:
+          'Primarily online for Faridabad. Weekend offline at South Delhi center (Violet Line Metro accessible). 85% of Faridabad students prefer online.',
+      },
+    ],
+    stats: { studentsFromCity: '120+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4089', lng: '77.3178' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Faridabad is Haryana's largest city but has no Biology-specialist coaching. Students commute to Delhi or settle for generic tuition. Cerebrum serves 120+ Faridabad students with online Biology-only coaching.",
+    },
+    studentSuccessStory: {
+      name: 'Divya M.',
+      area: 'NIT Faridabad',
+      achievement: 'Board: 92/100 | NEET: 585/720',
+      quote:
+        "No good Biology coaching in Faridabad. Cerebrum's online classes changed that. 92 in boards, 585 in NEET — all from home.",
+    },
   },
   'best-biology-coaching-greater-noida': {
-    slug: 'best-biology-coaching-greater-noida', cityName: 'Greater Noida', stateName: 'Uttar Pradesh',
-    metaTitle: 'Best Biology Coaching Greater Noida 2026 | Gaur City, Knowledge Park | Cerebrum Biology Academy',
-    metaDescription: 'Best Biology coaching for Greater Noida — Gaur City, Knowledge Park, Pari Chowk. AIIMS faculty, 95% success. Board + NEET. ₹35,000-60,000/year. Free demo!',
-    heroTitle: 'Best Biology Coaching — Greater Noida', heroSubtitle: 'Greater Noida finally has access to the best Biology coaching in Delhi NCR. 100+ students from Gaur City, Knowledge Park, and Pari Chowk chose Cerebrum for AIIMS-faculty quality at affordable prices.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Noida Sector 62 Center', address: 'B-45, Sector 62, Noida - 201301', distance: '18-25 km' },
-    localities: [{ name: 'Gaur City', url: '/neet-coaching-gaur-city' }, { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' }, { name: 'Noida Extension', url: '/neet-coaching-noida-extension' }],
-    relatedCities: [{ name: 'Best Biology Delhi NCR', url: '/best-biology-coaching-delhi-ncr' }, { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' }, { name: 'Best Biology Noida', url: '/best-biology-coaching-noida' }],
-    faqs: [{ question: 'Is there quality Biology coaching in Greater Noida?', answer: 'Yes! Cerebrum serves 100+ Greater Noida students with AIIMS-faculty online coaching. The only Biology-specialist accessible from Greater Noida without commute.' }, { question: 'How do Greater Noida students attend?', answer: 'Online weekdays (live, interactive). Optional weekend offline at Noida Sector 62 center. Shared transport from Gaur City organized by students.' }, { question: 'What are the fees?', answer: 'Board-only: ₹35,000-48,000/year. Board+NEET: ₹45,000-60,000/year. Dropper discount: 15% for college students.' }, { question: 'Is this for college students (droppers) too?', answer: 'Yes! Evening dropper batch for Sharda/Galgotias/NIET students. 15% college student discount.' }],
-    stats: { studentsFromCity: '100+', successRate: '95%', rating: '4.8' }, geoCoordinates: { lat: '28.4744', lng: '77.5030' },
-    areaSpecificContent: { whyThisArea: 'Greater Noida has zero local Biology coaching despite 5 lakh+ families. Cerebrum\'s online model brings the best Biology coaching in Delhi NCR to Greater Noida homes.' },
-    studentSuccessStory: { name: 'Nidhi R.', area: 'Gaur City 1', achievement: 'Board: 91/100 | Now preparing for NEET', quote: 'No Biology coaching existed in Greater Noida. Cerebrum\'s online classes were a lifesaver — scored 91 in boards from Gaur City.' },
+    slug: 'best-biology-coaching-greater-noida',
+    cityName: 'Greater Noida',
+    stateName: 'Uttar Pradesh',
+    metaTitle:
+      'Best Biology Coaching Greater Noida 2026 | Gaur City, Knowledge Park | Cerebrum Biology Academy',
+    metaDescription:
+      'Best Biology coaching for Greater Noida — Gaur City, Knowledge Park, Pari Chowk. AIIMS faculty, 95% success. Board + NEET. ₹35,000-60,000/year. Free demo!',
+    heroTitle: 'Best Biology Coaching — Greater Noida',
+    heroSubtitle:
+      'Greater Noida finally has access to the best Biology coaching in Delhi NCR. 100+ students from Gaur City, Knowledge Park, and Pari Chowk chose Cerebrum for AIIMS-faculty quality at affordable prices.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Noida Sector 62 Center',
+      address: 'B-45, Sector 62, Noida - 201301',
+      distance: '18-25 km',
+    },
+    localities: [
+      { name: 'Gaur City', url: '/neet-coaching-gaur-city' },
+      { name: 'Knowledge Park', url: '/neet-coaching-knowledge-park' },
+      { name: 'Noida Extension', url: '/neet-coaching-noida-extension' },
+    ],
+    relatedCities: [
+      { name: 'Best Biology Delhi NCR', url: '/best-biology-coaching-delhi-ncr' },
+      { name: 'Biology Tuition Greater Noida', url: '/biology-tuition-greater-noida' },
+      { name: 'Best Biology Noida', url: '/best-biology-coaching-noida' },
+    ],
+    faqs: [
+      {
+        question: 'Is there quality Biology coaching in Greater Noida?',
+        answer:
+          'Yes! Cerebrum serves 100+ Greater Noida students with AIIMS-faculty online coaching. The only Biology-specialist accessible from Greater Noida without commute.',
+      },
+      {
+        question: 'How do Greater Noida students attend?',
+        answer:
+          'Online weekdays (live, interactive). Optional weekend offline at Noida Sector 62 center. Shared transport from Gaur City organized by students.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Board-only: ₹35,000-48,000/year. Board+NEET: ₹45,000-60,000/year. Dropper discount: 15% for college students.',
+      },
+      {
+        question: 'Is this for college students (droppers) too?',
+        answer:
+          'Yes! Evening dropper batch for Sharda/Galgotias/NIET students. 15% college student discount.',
+      },
+    ],
+    stats: { studentsFromCity: '100+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.4744', lng: '77.5030' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Greater Noida has zero local Biology coaching despite 5 lakh+ families. Cerebrum's online model brings the best Biology coaching in Delhi NCR to Greater Noida homes.",
+    },
+    studentSuccessStory: {
+      name: 'Nidhi R.',
+      area: 'Gaur City 1',
+      achievement: 'Board: 91/100 | Now preparing for NEET',
+      quote:
+        "No Biology coaching existed in Greater Noida. Cerebrum's online classes were a lifesaver — scored 91 in boards from Gaur City.",
+    },
   },
   'board-exam-biology-gurugram': {
-    slug: 'board-exam-biology-gurugram', cityName: 'Gurugram', stateName: 'Haryana',
-    metaTitle: 'Board Exam Biology Preparation Gurugram | CBSE + Haryana Board | Cerebrum Biology Academy',
-    metaDescription: 'Board exam Biology prep in Gurugram (Gurgaon) — score 90+ in CBSE/Haryana Board. Offline at Sector 51. Diagrams, practicals, HOTS, sample papers. AIIMS faculty. ₹40,000-55,000/year.',
-    heroTitle: 'Board Exam Biology Preparation — Gurugram', heroSubtitle: 'Focused preparation for CBSE and Haryana Board Biology exams. Our board-specific program covers everything that gets marks: diagram perfection, practical/viva confidence, HOTS answers, and sample paper mastery. Offline at Sector 51.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Gurugram Center', address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram', distance: 'In Gurugram' },
-    localities: [{ name: 'DLF Phase 1-5', url: '/neet-coaching-gurugram/dlf-phase-1' }, { name: 'Sohna Road', url: '/neet-coaching-gurugram/sohna-road' }, { name: 'Sector 14', url: '/neet-coaching-gurugram/sector-14' }],
-    relatedCities: [{ name: 'CBSE Biology Gurugram', url: '/cbse-biology-coaching-gurugram' }, { name: 'Class 12 Biology Gurugram', url: '/biology-class-12-gurugram' }, { name: 'Board Exam Biology Delhi', url: '/board-exam-biology-delhi' }],
-    faqs: [{ question: 'What does board exam Biology prep include?', answer: '100% NCERT coverage, diagram practice (every important Biology diagram), practical/viva preparation, HOTS questions, 10 board-pattern sample papers, previous year analysis, mock board exams. All at our Sector 51 center.' }, { question: 'Is Haryana Board covered?', answer: 'Yes! NCERT common to both CBSE and Haryana Board. We add state-specific question patterns, marking schemes, and previous year papers.' }, { question: 'What is the average board score?', answer: 'Our Gurugram students average 92/100 in CBSE Biology. Haryana Board students average 89/100.' }, { question: 'What are the fees for board-only prep?', answer: '₹40,000-55,000/year. No NEET pressure — pure board focus. Includes 60-day revision program in Jan-March.' }],
-    stats: { studentsFromCity: '120+', successRate: '95%', rating: '4.9' }, geoCoordinates: { lat: '28.4595', lng: '77.0266' },
-    areaSpecificContent: { whyThisArea: 'Gurugram board exam students need focused Biology prep that generic coaching doesn\'t provide. Our offline center at Sector 51 offers hands-on practical sessions and diagram practice that online-only coaching can\'t match.' },
-    studentSuccessStory: { name: 'Meera J.', area: 'Golf Course Road, Gurugram', achievement: 'CBSE Board: 95/100 Biology | School topper', quote: 'I only wanted board prep, not NEET. Cerebrum\'s board-only batch was perfect — focused on diagrams, practicals, and sample papers. Scored 95 and topped my school in Biology.' },
+    slug: 'board-exam-biology-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle:
+      'Board Exam Biology Preparation Gurugram | CBSE + Haryana Board | Cerebrum Biology Academy',
+    metaDescription:
+      'Board exam Biology prep in Gurugram (Gurgaon) — score 90+ in CBSE/Haryana Board. Offline at Sector 51. Diagrams, practicals, HOTS, sample papers. AIIMS faculty. ₹40,000-55,000/year.',
+    heroTitle: 'Board Exam Biology Preparation — Gurugram',
+    heroSubtitle:
+      'Focused preparation for CBSE and Haryana Board Biology exams. Our board-specific program covers everything that gets marks: diagram perfection, practical/viva confidence, HOTS answers, and sample paper mastery. Offline at Sector 51.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'Unit 17, M2K Corporate Park, Sector 51, Gurugram',
+      distance: 'In Gurugram',
+    },
+    localities: [
+      { name: 'DLF Phase 1-5', url: '/neet-coaching-gurugram/dlf-phase-1' },
+      { name: 'Sohna Road', url: '/neet-coaching-gurugram/sohna-road' },
+      { name: 'Sector 14', url: '/neet-coaching-gurugram/sector-14' },
+    ],
+    relatedCities: [
+      { name: 'CBSE Biology Gurugram', url: '/cbse-biology-coaching-gurugram' },
+      { name: 'Class 12 Biology Gurugram', url: '/biology-class-12-gurugram' },
+      { name: 'Board Exam Biology Delhi', url: '/board-exam-biology-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'What does board exam Biology prep include?',
+        answer:
+          '100% NCERT coverage, diagram practice (every important Biology diagram), practical/viva preparation, HOTS questions, 10 board-pattern sample papers, previous year analysis, mock board exams. All at our Sector 51 center.',
+      },
+      {
+        question: 'Is Haryana Board covered?',
+        answer:
+          'Yes! NCERT common to both CBSE and Haryana Board. We add state-specific question patterns, marking schemes, and previous year papers.',
+      },
+      {
+        question: 'What is the average board score?',
+        answer:
+          'Our Gurugram students average 92/100 in CBSE Biology. Haryana Board students average 89/100.',
+      },
+      {
+        question: 'What are the fees for board-only prep?',
+        answer:
+          '₹40,000-55,000/year. No NEET pressure — pure board focus. Includes 60-day revision program in Jan-March.',
+      },
+    ],
+    stats: { studentsFromCity: '120+', successRate: '95%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4595', lng: '77.0266' },
+    areaSpecificContent: {
+      whyThisArea:
+        "Gurugram board exam students need focused Biology prep that generic coaching doesn't provide. Our offline center at Sector 51 offers hands-on practical sessions and diagram practice that online-only coaching can't match.",
+    },
+    studentSuccessStory: {
+      name: 'Meera J.',
+      area: 'Golf Course Road, Gurugram',
+      achievement: 'CBSE Board: 95/100 Biology | School topper',
+      quote:
+        "I only wanted board prep, not NEET. Cerebrum's board-only batch was perfect — focused on diagrams, practicals, and sample papers. Scored 95 and topped my school in Biology.",
+    },
   },
   'board-exam-biology-delhi': {
-    slug: 'board-exam-biology-delhi', cityName: 'Delhi', stateName: 'Delhi',
-    metaTitle: 'Board Exam Biology Preparation Delhi 2026 | CBSE | Score 90+ | Cerebrum Biology Academy',
-    metaDescription: 'Board exam Biology prep in Delhi — score 90+ in CBSE. Two centers: South Extension + Rohini. Diagrams, practicals, HOTS, sample papers. AIIMS faculty. ₹40,000-55,000/year.',
-    heroTitle: 'Board Exam Biology Preparation — Delhi', heroSubtitle: 'Not every student wants NEET. If your goal is scoring 90+ in CBSE Biology boards for DU/IP admission, our board-focused program is exactly what you need. No competitive exam pressure — pure board preparation with AIIMS-quality teaching.',
-    hasOfflineCenter: true, nearestCenter: { name: 'South Extension Center', address: 'Block D, South Extension Part 2, New Delhi', distance: 'In Delhi' },
-    localities: [{ name: 'South Delhi', url: '/neet-coaching-south-delhi' }, { name: 'North Delhi (Rohini)', url: '/biology-classes-north-delhi' }, { name: 'East Delhi', url: '/biology-classes-east-delhi' }, { name: 'West Delhi', url: '/biology-tuition-west-delhi' }],
-    relatedCities: [{ name: 'Board Exam Biology Gurugram', url: '/board-exam-biology-gurugram' }, { name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' }, { name: 'Class 12 Biology Delhi', url: '/class-12-biology-coaching-delhi' }],
-    faqs: [{ question: 'Is this for students who are NOT giving NEET?', answer: 'Yes! 30% of our students are board-only — they want strong CBSE Biology scores for DU, IP University, or other college admissions. No NEET pressure. Pure board focus.' }, { question: 'What is included in board exam prep?', answer: 'NCERT thorough coverage, diagram practice, practical/viva preparation, HOTS questions, 10 sample papers, previous year analysis, mock board exams, 60-day revision program.' }, { question: 'What are the fees for board-only prep?', answer: 'Offline: ₹40,000-55,000/year. Online: ₹35,000-48,000/year. No NEET components = lower fee. EMI available.' }, { question: 'Where are the centers?', answer: 'South Extension (South Delhi) and Rohini (North Delhi). Online for East/West Delhi. All with the same AIIMS faculty.' }],
-    stats: { studentsFromCity: '200+', successRate: '96%', rating: '4.9' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Many Delhi students want strong Biology board scores for college admission without NEET pressure. Our board-only program serves this market with focused preparation at two convenient centers — without the intensity and cost of full NEET coaching.' },
-    studentSuccessStory: { name: 'Tanya A.', area: 'Hauz Khas, Delhi', achievement: 'CBSE Board: 94/100 Biology | Got into Lady Shri Ram College', quote: 'I didn\'t want NEET — I wanted a BSc Biology admission at a good DU college. Cerebrum\'s board-only batch gave me 94 in Biology. Got into Lady Shri Ram College. Worth every rupee.' },
+    slug: 'board-exam-biology-delhi',
+    cityName: 'Delhi',
+    stateName: 'Delhi',
+    metaTitle:
+      'Board Exam Biology Preparation Delhi 2026 | CBSE | Score 90+ | Cerebrum Biology Academy',
+    metaDescription:
+      'Board exam Biology prep in Delhi — score 90+ in CBSE. Two centers: South Extension + Rohini. Diagrams, practicals, HOTS, sample papers. AIIMS faculty. ₹40,000-55,000/year.',
+    heroTitle: 'Board Exam Biology Preparation — Delhi',
+    heroSubtitle:
+      'Not every student wants NEET. If your goal is scoring 90+ in CBSE Biology boards for DU/IP admission, our board-focused program is exactly what you need. No competitive exam pressure — pure board preparation with AIIMS-quality teaching.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'South Extension Center',
+      address: 'Block D, South Extension Part 2, New Delhi',
+      distance: 'In Delhi',
+    },
+    localities: [
+      { name: 'South Delhi', url: '/neet-coaching-south-delhi' },
+      { name: 'North Delhi (Rohini)', url: '/biology-classes-north-delhi' },
+      { name: 'East Delhi', url: '/biology-classes-east-delhi' },
+      { name: 'West Delhi', url: '/biology-tuition-west-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Board Exam Biology Gurugram', url: '/board-exam-biology-gurugram' },
+      { name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' },
+      { name: 'Class 12 Biology Delhi', url: '/class-12-biology-coaching-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Is this for students who are NOT giving NEET?',
+        answer:
+          'Yes! 30% of our students are board-only — they want strong CBSE Biology scores for DU, IP University, or other college admissions. No NEET pressure. Pure board focus.',
+      },
+      {
+        question: 'What is included in board exam prep?',
+        answer:
+          'NCERT thorough coverage, diagram practice, practical/viva preparation, HOTS questions, 10 sample papers, previous year analysis, mock board exams, 60-day revision program.',
+      },
+      {
+        question: 'What are the fees for board-only prep?',
+        answer:
+          'Offline: ₹40,000-55,000/year. Online: ₹35,000-48,000/year. No NEET components = lower fee. EMI available.',
+      },
+      {
+        question: 'Where are the centers?',
+        answer:
+          'South Extension (South Delhi) and Rohini (North Delhi). Online for East/West Delhi. All with the same AIIMS faculty.',
+      },
+    ],
+    stats: { studentsFromCity: '200+', successRate: '96%', rating: '4.9' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Many Delhi students want strong Biology board scores for college admission without NEET pressure. Our board-only program serves this market with focused preparation at two convenient centers — without the intensity and cost of full NEET coaching.',
+    },
+    studentSuccessStory: {
+      name: 'Tanya A.',
+      area: 'Hauz Khas, Delhi',
+      achievement: 'CBSE Board: 94/100 Biology | Got into Lady Shri Ram College',
+      quote:
+        "I didn't want NEET — I wanted a BSc Biology admission at a good DU college. Cerebrum's board-only batch gave me 94 in Biology. Got into Lady Shri Ram College. Worth every rupee.",
+    },
   },
 
   'biology-tutor-near-me': {
-    slug: 'biology-tutor-near-me', cityName: 'Delhi NCR', stateName: 'Delhi / UP / Haryana',
+    slug: 'biology-tutor-near-me',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi / UP / Haryana',
     metaTitle: 'Biology Tutor Near Me | Class 9-12 | AIIMS Faculty | Cerebrum Biology Academy',
-    metaDescription: 'Find the best Biology tutor near you — Delhi, Noida, Gurugram, Ghaziabad, Faridabad. AIIMS faculty, 15-student batches, ₹35,000-90,000/year. Online + 3 offline centers. Free demo!',
-    heroTitle: 'Biology Tutor Near Me — Find Your Nearest Center', heroSubtitle: 'Stop searching — you found the best Biology tutor. AIIMS-trained Dr. Shekhar Singh teaches every batch. 3 offline centers + online everywhere. 2,500+ students enrolled.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Multiple Centers', address: 'South Extension | Rohini | Gurugram Sector 51', distance: 'Centers across Delhi NCR' },
-    localities: [{ name: 'Noida', url: '/biology-tutor-noida' }, { name: 'Gurugram', url: '/biology-tutor-gurugram' }, { name: 'Ghaziabad', url: '/biology-tutor-ghaziabad' }, { name: 'South Delhi', url: '/biology-tutor-south-delhi' }],
-    relatedCities: [{ name: 'Best Biology Tutor Near Me', url: '/best-biology-tutor-near-me' }, { name: 'Home Biology Tutor', url: '/biology-home-tutor' }, { name: 'Online Biology Tutor', url: '/online-biology-tutor' }],
-    faqs: [{ question: 'Where can I find a Biology tutor near me?', answer: 'Cerebrum Biology Academy has 3 offline centers: South Extension (South Delhi), Rohini (North Delhi), and Sector 51 (Gurugram). Online for Noida, Ghaziabad, Faridabad, Greater Noida, and all India.' }, { question: 'How is this different from a private home tutor?', answer: 'Home tutors: ₹1,500-3,000/hour, inconsistent quality. Cerebrum: ₹300/hour, AIIMS faculty, structured curriculum, weekly tests. Better results at 1/5th cost.' }, { question: 'What classes do you cover?', answer: 'Class 9-12 Biology. Board-only and NEET batches. CBSE, ICSE, Haryana Board, UP Board.' }, { question: 'What are the fees?', answer: 'Board-only: ₹35,000-55,000/year. Board+NEET: ₹48,000-90,000/year. EMI available. Scholarship up to 30%.' }],
-    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Whether in Noida, Gurugram, Ghaziabad, or Delhi — we have a Biology tutor near you. 3 centers + online serve every corner of Delhi NCR.' },
-    studentSuccessStory: { name: 'Ananya R.', area: 'Vasant Kunj, Delhi', achievement: 'Board: 95/100 | Switched from home tutor', quote: 'Switched from a ₹2,500/hour home tutor to Cerebrum. Better teacher, structured tests, saved ₹80,000/year. Board score: 78 to 95.' },
+    metaDescription:
+      'Find the best Biology tutor near you — Delhi, Noida, Gurugram, Ghaziabad, Faridabad. AIIMS faculty, 15-student batches, ₹35,000-90,000/year. Online + 3 offline centers. Free demo!',
+    heroTitle: 'Biology Tutor Near Me — Find Your Nearest Center',
+    heroSubtitle:
+      'Stop searching — you found the best Biology tutor. AIIMS-trained Dr. Shekhar Singh teaches every batch. 3 offline centers + online everywhere. 2,500+ students enrolled.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'South Extension | Rohini | Gurugram Sector 51',
+      distance: 'Centers across Delhi NCR',
+    },
+    localities: [
+      { name: 'Noida', url: '/biology-tutor-noida' },
+      { name: 'Gurugram', url: '/biology-tutor-gurugram' },
+      { name: 'Ghaziabad', url: '/biology-tutor-ghaziabad' },
+      { name: 'South Delhi', url: '/biology-tutor-south-delhi' },
+    ],
+    relatedCities: [
+      { name: 'Best Biology Tutor Near Me', url: '/best-biology-tutor-near-me' },
+      { name: 'Home Biology Tutor', url: '/biology-home-tutor' },
+      { name: 'Online Biology Tutor', url: '/online-biology-tutor' },
+    ],
+    faqs: [
+      {
+        question: 'Where can I find a Biology tutor near me?',
+        answer:
+          'Cerebrum Biology Academy has 3 offline centers: South Extension (South Delhi), Rohini (North Delhi), and Sector 51 (Gurugram). Online for Noida, Ghaziabad, Faridabad, Greater Noida, and all India.',
+      },
+      {
+        question: 'How is this different from a private home tutor?',
+        answer:
+          'Home tutors: ₹1,500-3,000/hour, inconsistent quality. Cerebrum: ₹300/hour, AIIMS faculty, structured curriculum, weekly tests. Better results at 1/5th cost.',
+      },
+      {
+        question: 'What classes do you cover?',
+        answer:
+          'Class 9-12 Biology. Board-only and NEET batches. CBSE, ICSE, Haryana Board, UP Board.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          'Board-only: ₹35,000-55,000/year. Board+NEET: ₹48,000-90,000/year. EMI available. Scholarship up to 30%.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Whether in Noida, Gurugram, Ghaziabad, or Delhi — we have a Biology tutor near you. 3 centers + online serve every corner of Delhi NCR.',
+    },
+    studentSuccessStory: {
+      name: 'Ananya R.',
+      area: 'Vasant Kunj, Delhi',
+      achievement: 'Board: 95/100 | Switched from home tutor',
+      quote:
+        'Switched from a ₹2,500/hour home tutor to Cerebrum. Better teacher, structured tests, saved ₹80,000/year. Board score: 78 to 95.',
+    },
   },
   'best-biology-tutor-near-me': {
-    slug: 'best-biology-tutor-near-me', cityName: 'Delhi NCR', stateName: 'Delhi / UP / Haryana',
+    slug: 'best-biology-tutor-near-me',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi / UP / Haryana',
     metaTitle: 'Best Biology Tutor Near Me 2026 | 1:1 AIIMS Faculty | Cerebrum Biology Academy',
-    metaDescription: 'Best Biology tutor near you — personalised 1:1 mentoring + 15-student micro-batches in Delhi NCR. AIIMS faculty Dr. Shekhar Singh. 98% success, 2,500+ students. Board + NEET. 3 centers + online.',
-    heroTitle: 'Best Biology Tutor Near Me — 1:1 Mentoring in Delhi NCR', heroSubtitle: 'A "tutor" means personalised, focused attention. Cerebrum delivers 1:1 mentoring with Dr. Shekhar Singh (AIIMS) and 15-student micro-batches. Boards average 92/100, NEET Biology 160+/180. Only biology-only specialist in Delhi NCR.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Multiple Centers', address: 'South Extension | Rohini | Gurugram', distance: '3 centers + online' },
-    localities: [{ name: 'Best Biology Noida', url: '/best-biology-coaching-noida' }, { name: 'Best Biology Gurugram', url: '/best-biology-coaching-gurugram' }, { name: 'Best Biology Ghaziabad', url: '/best-biology-coaching-ghaziabad' }, { name: 'Best Biology NCR', url: '/best-biology-coaching-delhi-ncr' }],
-    relatedCities: [{ name: 'Biology Tutor Near Me', url: '/biology-tutor-near-me' }, { name: 'Private Biology Tutor', url: '/private-biology-tutor' }, { name: 'Home Biology Tutor', url: '/biology-home-tutor' }],
-    faqs: [{ question: 'Who is the best Biology tutor near me?', answer: 'Dr. Shekhar Singh (AIIMS-trained, 15+ years) — rated #1 in Delhi NCR. Provides 1:1 personalised mentoring plus 15-student micro-batches. 2,500+ students, 98% success, 92/100 avg board score.' }, { question: 'What\'s the difference between a biology tutor and a biology teacher at Cerebrum?', answer: '"Tutor" means 1:1 personalised mentoring — bespoke pacing, score-jump programmes, focused IA / FRQ / Olympiad coaching. "Teacher" means classroom and online live-class instruction at scale (batches of 15–20, structured curriculum). Same AIIMS-trained faculty across both pathways — choose by learning style and budget.' }, { question: 'What makes Cerebrum the best?', answer: 'Biology-ONLY specialisation, AIIMS faculty, 1:1 + 15-student micro-batch options. No other institute in Delhi NCR offers all three.' }, { question: 'Where are the centers?', answer: 'Noida Sector 62, Gurugram Sector 51, South Delhi South Extension, North Delhi Rohini. Online everywhere.' }, { question: 'What are the fees?', answer: '₹35,000-90,000/year for the batch tier; 1:1 mentoring at premium pricing — still 1/5th the cost of comparable home tutors with significantly better results.' }],
-    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Parents want verified quality. Our 92/100 avg board score and 98% NEET success are backed by 2,500+ real students.' },
-    studentSuccessStory: { name: 'Kriti A.', area: 'DLF Phase 3, Gurugram', achievement: 'Board: 97/100 | NEET: 672/720 | AIIMS Delhi', quote: 'Searched "best Biology tutor near me," found Cerebrum. 97 in boards, 672 in NEET, AIIMS Delhi.' },
+    metaDescription:
+      'Best Biology tutor near you — personalised 1:1 mentoring + 15-student micro-batches in Delhi NCR. AIIMS faculty Dr. Shekhar Singh. 98% success, 2,500+ students. Board + NEET. 3 centers + online.',
+    heroTitle: 'Best Biology Tutor Near Me — 1:1 Mentoring in Delhi NCR',
+    heroSubtitle:
+      'A "tutor" means personalised, focused attention. Cerebrum delivers 1:1 mentoring with Dr. Shekhar Singh (AIIMS) and 15-student micro-batches. Boards average 92/100, NEET Biology 160+/180. Only biology-only specialist in Delhi NCR.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'South Extension | Rohini | Gurugram',
+      distance: '3 centers + online',
+    },
+    localities: [
+      { name: 'Best Biology Noida', url: '/best-biology-coaching-noida' },
+      { name: 'Best Biology Gurugram', url: '/best-biology-coaching-gurugram' },
+      { name: 'Best Biology Ghaziabad', url: '/best-biology-coaching-ghaziabad' },
+      { name: 'Best Biology NCR', url: '/best-biology-coaching-delhi-ncr' },
+    ],
+    relatedCities: [
+      { name: 'Biology Tutor Near Me', url: '/biology-tutor-near-me' },
+      { name: 'Private Biology Tutor', url: '/private-biology-tutor' },
+      { name: 'Home Biology Tutor', url: '/biology-home-tutor' },
+    ],
+    faqs: [
+      {
+        question: 'Who is the best Biology tutor near me?',
+        answer:
+          'Dr. Shekhar Singh (AIIMS-trained, 15+ years) — rated #1 in Delhi NCR. Provides 1:1 personalised mentoring plus 15-student micro-batches. 2,500+ students, 98% success, 92/100 avg board score.',
+      },
+      {
+        question:
+          "What's the difference between a biology tutor and a biology teacher at Cerebrum?",
+        answer:
+          '"Tutor" means 1:1 personalised mentoring — bespoke pacing, score-jump programmes, focused IA / FRQ / Olympiad coaching. "Teacher" means classroom and online live-class instruction at scale (batches of 15–20, structured curriculum). Same AIIMS-trained faculty across both pathways — choose by learning style and budget.',
+      },
+      {
+        question: 'What makes Cerebrum the best?',
+        answer:
+          'Biology-ONLY specialisation, AIIMS faculty, 1:1 + 15-student micro-batch options. No other institute in Delhi NCR offers all three.',
+      },
+      {
+        question: 'Where are the centers?',
+        answer:
+          'Noida Sector 62, Gurugram Sector 51, South Delhi South Extension, North Delhi Rohini. Online everywhere.',
+      },
+      {
+        question: 'What are the fees?',
+        answer:
+          '₹35,000-90,000/year for the batch tier; 1:1 mentoring at premium pricing — still 1/5th the cost of comparable home tutors with significantly better results.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Parents want verified quality. Our 92/100 avg board score and 98% NEET success are backed by 2,500+ real students.',
+    },
+    studentSuccessStory: {
+      name: 'Kriti A.',
+      area: 'DLF Phase 3, Gurugram',
+      achievement: 'Board: 97/100 | NEET: 672/720 | AIIMS Delhi',
+      quote:
+        'Searched "best Biology tutor near me," found Cerebrum. 97 in boards, 672 in NEET, AIIMS Delhi.',
+    },
   },
   'best-biology-coaching-near-me': {
-    slug: 'best-biology-coaching-near-me', cityName: 'Delhi NCR', stateName: 'Delhi / UP / Haryana',
+    slug: 'best-biology-coaching-near-me',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi / UP / Haryana',
     metaTitle: 'Best Biology Coaching Near Me 2026 | #1 in Delhi NCR | Cerebrum Biology Academy',
-    metaDescription: 'Best Biology coaching near you — 3 centers + online. AIIMS faculty, 98% success, 15-student batches. Board + NEET. ₹35,000-90,000/year. Free demo!',
-    heroTitle: 'Best Biology Coaching Near Me', heroSubtitle: 'The best Biology coaching delivers results, not promises. 98% success rate, AIIMS faculty, 15-student batches. Ranked #1 in Delhi NCR. Find your nearest center.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Multiple Centers', address: 'South Extension | Rohini | Gurugram', distance: '3 centers + online' },
-    localities: [{ name: 'Best Biology Noida', url: '/best-biology-coaching-noida' }, { name: 'Best Biology Gurugram', url: '/best-biology-coaching-gurugram' }, { name: 'Best Biology NCR', url: '/best-biology-coaching-delhi-ncr' }],
-    relatedCities: [{ name: 'Biology Coaching Near Me', url: '/biology-coaching-near-me' }, { name: 'Best Biology Tutor', url: '/best-biology-tutor-near-me' }, { name: 'Affordable Biology', url: '/affordable-biology-coaching' }],
-    faqs: [{ question: 'Which is the best Biology coaching near me?', answer: 'Cerebrum Biology Academy — only Biology-specialist in Delhi NCR. 3 centers + online. AIIMS faculty, 15-student batches, 98% success rate.' }, { question: 'Better than Aakash or Allen?', answer: 'They teach all subjects — Biology gets 1/3 time. Cerebrum: Biology-ONLY, 5 hrs/day, 15-student batches, 40-60% lower fees.' }, { question: 'Board-only option?', answer: 'Yes! 30% of students are board-only. ₹35,000-55,000/year.' }, { question: 'How to join?', answer: 'Free demo via WhatsApp (+91 88264 44334). Same-day enrollment possible.' }],
-    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: '2,500+ students, 92/100 avg board score, 98% NEET success. Three centers ensure there is always a "near me" option.' },
-    studentSuccessStory: { name: 'Aditya M.', area: 'Sector 62, Noida', achievement: 'Board: 94/100 | NEET: 638/720', quote: 'Found Cerebrum searching "best Biology coaching near me." 94 in boards, 638 in NEET.' },
+    metaDescription:
+      'Best Biology coaching near you — 3 centers + online. AIIMS faculty, 98% success, 15-student batches. Board + NEET. ₹35,000-90,000/year. Free demo!',
+    heroTitle: 'Best Biology Coaching Near Me',
+    heroSubtitle:
+      'The best Biology coaching delivers results, not promises. 98% success rate, AIIMS faculty, 15-student batches. Ranked #1 in Delhi NCR. Find your nearest center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'South Extension | Rohini | Gurugram',
+      distance: '3 centers + online',
+    },
+    localities: [
+      { name: 'Best Biology Noida', url: '/best-biology-coaching-noida' },
+      { name: 'Best Biology Gurugram', url: '/best-biology-coaching-gurugram' },
+      { name: 'Best Biology NCR', url: '/best-biology-coaching-delhi-ncr' },
+    ],
+    relatedCities: [
+      { name: 'Biology Coaching Near Me', url: '/biology-coaching-near-me' },
+      { name: 'Best Biology Tutor', url: '/best-biology-tutor-near-me' },
+      { name: 'Affordable Biology', url: '/affordable-biology-coaching' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best Biology coaching near me?',
+        answer:
+          'Cerebrum Biology Academy — only Biology-specialist in Delhi NCR. 3 centers + online. AIIMS faculty, 15-student batches, 98% success rate.',
+      },
+      {
+        question: 'Better than Aakash or Allen?',
+        answer:
+          'They teach all subjects — Biology gets 1/3 time. Cerebrum: Biology-ONLY, 5 hrs/day, 15-student batches, 40-60% lower fees.',
+      },
+      {
+        question: 'Board-only option?',
+        answer: 'Yes! 30% of students are board-only. ₹35,000-55,000/year.',
+      },
+      {
+        question: 'How to join?',
+        answer: 'Free demo via WhatsApp (+91 88264 44334). Same-day enrollment possible.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        '2,500+ students, 92/100 avg board score, 98% NEET success. Three centers ensure there is always a "near me" option.',
+    },
+    studentSuccessStory: {
+      name: 'Aditya M.',
+      area: 'Sector 62, Noida',
+      achievement: 'Board: 94/100 | NEET: 638/720',
+      quote: 'Found Cerebrum searching "best Biology coaching near me." 94 in boards, 638 in NEET.',
+    },
   },
   'private-biology-tutor': {
-    slug: 'private-biology-tutor', cityName: 'Delhi NCR', stateName: 'Delhi / UP / Haryana',
-    metaTitle: 'Private Biology Tutor | Personal Attention at Coaching Prices | Cerebrum Biology Academy',
-    metaDescription: 'Private Biology tutor experience at coaching prices. AIIMS faculty, 15-student batches = personal attention. 5x cheaper than home tutors. Board + NEET. Free demo!',
-    heroTitle: 'Private Biology Tutor — Personal Attention, Coaching Results', heroSubtitle: 'Want private tutor attention at coaching prices? 15-student micro-batches give personal attention from AIIMS faculty at ₹300/hour vs ₹2,000-3,000/hour for home tutors.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Multiple Centers', address: 'South Extension | Rohini | Gurugram', distance: '3 centers + online' },
-    localities: [{ name: 'Home Biology Tutor', url: '/biology-home-tutor-delhi-ncr' }, { name: 'Biology Tutor Noida', url: '/biology-tutor-noida' }, { name: 'Biology Tutor Gurugram', url: '/biology-tutor-gurugram' }],
-    relatedCities: [{ name: 'Biology Tutor Near Me', url: '/biology-tutor-near-me' }, { name: '1-on-1 Biology', url: '/1-on-1-biology-tuition-neet' }, { name: 'Best Biology Tutor', url: '/best-biology-tutor-near-me' }],
-    faqs: [{ question: 'How is this like a private tutor?', answer: '15-student batches: teacher knows your name, tracks weak chapters, adjusts pace, gives personal feedback. Like private attention at 80% lower cost.' }, { question: 'Why not a home tutor?', answer: 'Home tutors: ₹1,500-3,000/hour, no tests, no material. Cerebrum: ₹300/hour, AIIMS faculty, weekly tests, complete material, 7-day doubt support.' }, { question: 'Do you offer actual 1-on-1?', answer: 'Pinnacle tier (₹90,000/year) includes monthly 1-on-1 mentoring. Full 1-on-1 available on request.' }, { question: 'Fee comparison?', answer: 'Cerebrum: ₹35,000-90,000/year. Home tutor: ₹72,000-1,44,000/year. Save ₹40,000-80,000 with better quality.' }],
-    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Delhi NCR parents spend ₹72K-1.4L/year on home tutors — often BSc graduates. Cerebrum offers AIIMS-faculty private experience at 1/5th cost.' },
-    studentSuccessStory: { name: 'Kavya P.', area: 'Greater Kailash, Delhi', achievement: 'Board: 96/100 | Saved ₹80,000 vs home tutor', quote: 'Switched from ₹2,500/hour home tutor. Cerebrum: AIIMS faculty, weekly tests, personal feedback. 96 in boards, saved ₹80,000.' },
+    slug: 'private-biology-tutor',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi / UP / Haryana',
+    metaTitle:
+      'Private Biology Tutor | Personal Attention at Coaching Prices | Cerebrum Biology Academy',
+    metaDescription:
+      'Private Biology tutor experience at coaching prices. AIIMS faculty, 15-student batches = personal attention. 5x cheaper than home tutors. Board + NEET. Free demo!',
+    heroTitle: 'Private Biology Tutor — Personal Attention, Coaching Results',
+    heroSubtitle:
+      'Want private tutor attention at coaching prices? 15-student micro-batches give personal attention from AIIMS faculty at ₹300/hour vs ₹2,000-3,000/hour for home tutors.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'South Extension | Rohini | Gurugram',
+      distance: '3 centers + online',
+    },
+    localities: [
+      { name: 'Home Biology Tutor', url: '/biology-home-tutor-delhi-ncr' },
+      { name: 'Biology Tutor Noida', url: '/biology-tutor-noida' },
+      { name: 'Biology Tutor Gurugram', url: '/biology-tutor-gurugram' },
+    ],
+    relatedCities: [
+      { name: 'Biology Tutor Near Me', url: '/biology-tutor-near-me' },
+      { name: '1-on-1 Biology', url: '/1-on-1-biology-tuition-neet' },
+      { name: 'Best Biology Tutor', url: '/best-biology-tutor-near-me' },
+    ],
+    faqs: [
+      {
+        question: 'How is this like a private tutor?',
+        answer:
+          '15-student batches: teacher knows your name, tracks weak chapters, adjusts pace, gives personal feedback. Like private attention at 80% lower cost.',
+      },
+      {
+        question: 'Why not a home tutor?',
+        answer:
+          'Home tutors: ₹1,500-3,000/hour, no tests, no material. Cerebrum: ₹300/hour, AIIMS faculty, weekly tests, complete material, 7-day doubt support.',
+      },
+      {
+        question: 'Do you offer actual 1-on-1?',
+        answer:
+          'Pinnacle tier (₹90,000/year) includes monthly 1-on-1 mentoring. Full 1-on-1 available on request.',
+      },
+      {
+        question: 'Fee comparison?',
+        answer:
+          'Cerebrum: ₹35,000-90,000/year. Home tutor: ₹72,000-1,44,000/year. Save ₹40,000-80,000 with better quality.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Delhi NCR parents spend ₹72K-1.4L/year on home tutors — often BSc graduates. Cerebrum offers AIIMS-faculty private experience at 1/5th cost.',
+    },
+    studentSuccessStory: {
+      name: 'Kavya P.',
+      area: 'Greater Kailash, Delhi',
+      achievement: 'Board: 96/100 | Saved ₹80,000 vs home tutor',
+      quote:
+        'Switched from ₹2,500/hour home tutor. Cerebrum: AIIMS faculty, weekly tests, personal feedback. 96 in boards, saved ₹80,000.',
+    },
   },
   'one-on-one-biology-coaching': {
-    slug: 'one-on-one-biology-coaching', cityName: 'Delhi NCR', stateName: 'Delhi / UP / Haryana',
+    slug: 'one-on-one-biology-coaching',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi / UP / Haryana',
     metaTitle: 'One-on-One Biology Coaching | AIIMS Faculty | Cerebrum Biology Academy',
-    metaDescription: 'One-on-one Biology coaching with AIIMS faculty. Pinnacle tier: 12-student batch + monthly 1-on-1 mentoring. Custom 1-on-1 plans available. Board + NEET. Free demo!',
-    heroTitle: 'One-on-One Biology Coaching — Personalized for You', heroSubtitle: 'Some students thrive with personal attention. Pinnacle tier: 12-student batch + monthly 1-on-1 mentoring with Dr. Shekhar Singh. Full 1-on-1 custom plans also available.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Multiple Centers', address: 'South Extension | Rohini | Gurugram', distance: '3 centers + online' },
-    localities: [{ name: 'Private Biology Tutor', url: '/private-biology-tutor' }, { name: '1-on-1 Biology Tuition', url: '/1-on-1-biology-tuition-neet' }, { name: 'Best Biology Tutor', url: '/best-biology-tutor-near-me' }],
-    relatedCities: [{ name: 'Biology Tutor Near Me', url: '/biology-tutor-near-me' }, { name: 'Online Biology Tutor', url: '/online-biology-tutor' }, { name: 'Best Biology Coaching', url: '/best-biology-coaching-near-me' }],
-    faqs: [{ question: 'What does 1-on-1 coaching include?', answer: 'Pinnacle (₹90,000/year): 12-student batch + monthly 1-on-1 mentoring + personal study plan. Full 1-on-1: contact for custom pricing.' }, { question: 'Who teaches?', answer: 'Dr. Shekhar Singh (AIIMS-trained, Ph.D) personally conducts all mentoring sessions.' }, { question: 'Available online?', answer: 'Yes! Video call with screen sharing, digital whiteboard, recorded playback.' }, { question: 'Different from private tutor?', answer: 'Private tutors are often BSc graduates. Our 1-on-1 is with AIIMS faculty — medical-college-level depth with verified results.' }],
-    stats: { studentsFromCity: '500+', successRate: '99%', rating: '5.0' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'One-on-one coaching for students needing personalized pacing, targeted weak-area work, or exam anxiety support. AIIMS-faculty quality no home tutor can match.' },
-    studentSuccessStory: { name: 'Rohan M.', area: 'DLF Phase 5, Gurugram', achievement: 'NEET: 692/720 | AIR 85 | Pinnacle student', quote: 'Monthly 1-on-1 with Dr. Shekhar identified my diagram weakness. Fixed it, scored 692.' },
+    metaDescription:
+      'One-on-one Biology coaching with AIIMS faculty. Pinnacle tier: 12-student batch + monthly 1-on-1 mentoring. Custom 1-on-1 plans available. Board + NEET. Free demo!',
+    heroTitle: 'One-on-One Biology Coaching — Personalized for You',
+    heroSubtitle:
+      'Some students thrive with personal attention. Pinnacle tier: 12-student batch + monthly 1-on-1 mentoring with Dr. Shekhar Singh. Full 1-on-1 custom plans also available.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'South Extension | Rohini | Gurugram',
+      distance: '3 centers + online',
+    },
+    localities: [
+      { name: 'Private Biology Tutor', url: '/private-biology-tutor' },
+      { name: '1-on-1 Biology Tuition', url: '/1-on-1-biology-tuition-neet' },
+      { name: 'Best Biology Tutor', url: '/best-biology-tutor-near-me' },
+    ],
+    relatedCities: [
+      { name: 'Biology Tutor Near Me', url: '/biology-tutor-near-me' },
+      { name: 'Online Biology Tutor', url: '/online-biology-tutor' },
+      { name: 'Best Biology Coaching', url: '/best-biology-coaching-near-me' },
+    ],
+    faqs: [
+      {
+        question: 'What does 1-on-1 coaching include?',
+        answer:
+          'Pinnacle (₹90,000/year): 12-student batch + monthly 1-on-1 mentoring + personal study plan. Full 1-on-1: contact for custom pricing.',
+      },
+      {
+        question: 'Who teaches?',
+        answer:
+          'Dr. Shekhar Singh (AIIMS-trained, Ph.D) personally conducts all mentoring sessions.',
+      },
+      {
+        question: 'Available online?',
+        answer: 'Yes! Video call with screen sharing, digital whiteboard, recorded playback.',
+      },
+      {
+        question: 'Different from private tutor?',
+        answer:
+          'Private tutors are often BSc graduates. Our 1-on-1 is with AIIMS faculty — medical-college-level depth with verified results.',
+      },
+    ],
+    stats: { studentsFromCity: '500+', successRate: '99%', rating: '5.0' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        'One-on-one coaching for students needing personalized pacing, targeted weak-area work, or exam anxiety support. AIIMS-faculty quality no home tutor can match.',
+    },
+    studentSuccessStory: {
+      name: 'Rohan M.',
+      area: 'DLF Phase 5, Gurugram',
+      achievement: 'NEET: 692/720 | AIR 85 | Pinnacle student',
+      quote:
+        'Monthly 1-on-1 with Dr. Shekhar identified my diagram weakness. Fixed it, scored 692.',
+    },
   },
   'online-biology-tuition': {
-    slug: 'online-biology-tuition', cityName: 'India', stateName: 'All States',
-    metaTitle: 'Online Biology Tuition | Class 9-12 | All Boards + NEET | AIIMS Faculty | Cerebrum Biology Academy',
-    metaDescription: 'Online Biology tuition for Class 9-12 — CBSE, ICSE, State Boards + NEET. Live classes (not recorded). AIIMS faculty, 15-student batches. ₹35,000-90,000/year. Free demo!',
-    heroTitle: 'Online Biology Tuition — Live Classes, Real Results', heroSubtitle: 'Not recorded videos. Not AI chatbots. Real live classes with AIIMS faculty — interact, ask questions, get instant feedback. 2,500+ students across India. Board + NEET for Class 9-12.',
-    hasOfflineCenter: false, nearestCenter: { name: 'Online + Delhi NCR Centers', address: 'Live online from anywhere', distance: 'No location restriction' },
-    localities: [{ name: 'Online Biology Classes', url: '/online-biology-classes' }, { name: 'Online Biology Tutor', url: '/online-biology-tutor' }, { name: 'Online Class 11', url: '/online-biology-classes-class-11' }, { name: 'Online Class 12', url: '/online-biology-classes-class-12' }],
-    relatedCities: [{ name: 'Biology Tuition Near Me', url: '/biology-tuition-near-me' }, { name: 'Best Online Biology', url: '/best-online-biology-tutor-india' }, { name: 'Online NEET Biology', url: '/online-neet-biology-coaching' }],
-    faqs: [{ question: 'How does online Biology tuition work?', answer: 'Live classes via Zoom/Meet. AIIMS faculty, screen sharing, digital whiteboard, real-time Q&A. 15-student batches. Recorded for revision. WhatsApp doubt support 7 AM-11 PM.' }, { question: 'As effective as offline?', answer: 'Yes — online students score within 2-3 marks of offline on average. Key: LIVE interaction + small batches. 70% prefer online for saved commute time.' }, { question: 'What boards covered?', answer: 'CBSE, ICSE, Karnataka PUC, Maharashtra HSC, Telangana Inter, Tamil Nadu, all state boards. Board-only or Board+NEET.' }, { question: 'Fees?', answer: 'Class 9-10: ₹35,000-45,000/year. Class 11-12 Board: ₹40,000-55,000. Board+NEET: ₹48,000-90,000. EMI available.' }],
-    stats: { studentsFromCity: '2,500+', successRate: '97%', rating: '4.9' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Online Biology tuition breaks geographic barriers. Delhi, Mumbai, Bangalore, or small town — same AIIMS-faculty quality. 2,500+ students spanning 15+ states.' },
-    studentSuccessStory: { name: 'Priya V.', area: 'Pune, Maharashtra', achievement: 'Board: 93/100 | NEET: 605/720', quote: 'From Pune. Live online classes felt like a real classroom. 93 in Maharashtra HSC Biology, 605 in NEET.' },
+    slug: 'online-biology-tuition',
+    cityName: 'India',
+    stateName: 'All States',
+    metaTitle:
+      'Online Biology Tuition | Class 9-12 | All Boards + NEET | AIIMS Faculty | Cerebrum Biology Academy',
+    metaDescription:
+      'Online Biology tuition for Class 9-12 — CBSE, ICSE, State Boards + NEET. Live classes (not recorded). AIIMS faculty, 15-student batches. ₹35,000-90,000/year. Free demo!',
+    heroTitle: 'Online Biology Tuition — Live Classes, Real Results',
+    heroSubtitle:
+      'Not recorded videos. Not AI chatbots. Real live classes with AIIMS faculty — interact, ask questions, get instant feedback. 2,500+ students across India. Board + NEET for Class 9-12.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Online + Delhi NCR Centers',
+      address: 'Live online from anywhere',
+      distance: 'No location restriction',
+    },
+    localities: [
+      { name: 'Online Biology Classes', url: '/online-biology-classes' },
+      { name: 'Online Biology Tutor', url: '/online-biology-tutor' },
+      { name: 'Online Class 11', url: '/online-biology-classes-class-11' },
+      { name: 'Online Class 12', url: '/online-biology-classes-class-12' },
+    ],
+    relatedCities: [
+      { name: 'Biology Tuition Near Me', url: '/biology-tuition-near-me' },
+      { name: 'Best Online Biology', url: '/best-online-biology-tutor-india' },
+      { name: 'Online NEET Biology', url: '/online-neet-biology-coaching' },
+    ],
+    faqs: [
+      {
+        question: 'How does online Biology tuition work?',
+        answer:
+          'Live classes via Zoom/Meet. AIIMS faculty, screen sharing, digital whiteboard, real-time Q&A. 15-student batches. Recorded for revision. WhatsApp doubt support 7 AM-11 PM.',
+      },
+      {
+        question: 'As effective as offline?',
+        answer:
+          'Yes — online students score within 2-3 marks of offline on average. Key: LIVE interaction + small batches. 70% prefer online for saved commute time.',
+      },
+      {
+        question: 'What boards covered?',
+        answer:
+          'CBSE, ICSE, Karnataka PUC, Maharashtra HSC, Telangana Inter, Tamil Nadu, all state boards. Board-only or Board+NEET.',
+      },
+      {
+        question: 'Fees?',
+        answer:
+          'Class 9-10: ₹35,000-45,000/year. Class 11-12 Board: ₹40,000-55,000. Board+NEET: ₹48,000-90,000. EMI available.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Online Biology tuition breaks geographic barriers. Delhi, Mumbai, Bangalore, or small town — same AIIMS-faculty quality. 2,500+ students spanning 15+ states.',
+    },
+    studentSuccessStory: {
+      name: 'Priya V.',
+      area: 'Pune, Maharashtra',
+      achievement: 'Board: 93/100 | NEET: 605/720',
+      quote:
+        'From Pune. Live online classes felt like a real classroom. 93 in Maharashtra HSC Biology, 605 in NEET.',
+    },
   },
   'affordable-biology-coaching': {
-    slug: 'affordable-biology-coaching', cityName: 'Delhi NCR', stateName: 'Delhi / UP / Haryana',
-    metaTitle: 'Affordable Biology Coaching | ₹35,000/year | AIIMS Faculty | Cerebrum Biology Academy',
-    metaDescription: 'Affordable Biology coaching from ₹35,000/year — 40-60% less than Aakash/Allen. AIIMS faculty, 15-student batches. EMI from ₹3,000/month. Scholarship up to 30%. Free demo!',
-    heroTitle: 'Affordable Biology Coaching — Quality at Fair Prices', heroSubtitle: 'AIIMS-faculty coaching starting ₹35,000/year. 40-60% less than chains, 80% less than home tutors. EMI from ₹3,000/month. Scholarship test for 10-30% more off. Quality = results, not price tag.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Multiple Centers', address: 'South Extension | Rohini | Gurugram', distance: '3 centers + online' },
-    localities: [{ name: 'Affordable NEET Delhi', url: '/affordable-neet-coaching-delhi' }, { name: 'Affordable NEET Gurugram', url: '/affordable-neet-coaching-gurugram' }, { name: 'Biology Coaching Near Me', url: '/biology-coaching-near-me' }],
-    relatedCities: [{ name: 'Best Biology Coaching', url: '/best-biology-coaching-near-me' }, { name: 'Online Biology Tuition', url: '/online-biology-tuition' }, { name: 'Board Exam Biology', url: '/board-exam-biology-delhi' }],
-    faqs: [{ question: 'How can you be affordable with AIIMS faculty?', answer: 'Biology-only = no Physics/Chemistry overhead. No TV ads. Online reduces costs. Lower cost ≠ lower quality — 98% success rate proves it.' }, { question: 'Cheapest option?', answer: 'Board-only online: ₹35,000/year (₹2,917/month). Scholarship test can cut 10-30% more. Pinnacle at ₹90,000 is still cheaper than Aakash (₹1.5L+).' }, { question: 'Scholarship available?', answer: 'Free test (30 min online). 80%+ = 10% off. 90%+ = 20% off. 95%+ = 30% off. Can bring fee to ₹24,500/year.' }, { question: 'What is included?', answer: 'Everything: live classes, material, weekly tests, mocks, PYQs, doubt support, parent reports. Zero hidden charges.' }],
-    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: 'Many families cannot afford ₹1.5L+ chains or ₹2,000/hour tutors. Cerebrum makes AIIMS-faculty Biology coaching accessible to middle-class families at ₹35,000-90,000/year.' },
-    studentSuccessStory: { name: 'Aman S.', area: 'Raj Nagar Extension, Ghaziabad', achievement: 'Board: 91/100 | Scholarship student (₹28,000/year)', quote: 'Family couldn\'t afford Aakash. Got 90% on scholarship test — fee reduced to ₹28,000/year. 91 in boards, 575 in NEET. Affordable ≠ low quality.' },
+    slug: 'affordable-biology-coaching',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi / UP / Haryana',
+    metaTitle:
+      'Affordable Biology Coaching | ₹35,000/year | AIIMS Faculty | Cerebrum Biology Academy',
+    metaDescription:
+      'Affordable Biology coaching from ₹35,000/year — 40-60% less than Aakash/Allen. AIIMS faculty, 15-student batches. EMI from ₹3,000/month. Scholarship up to 30%. Free demo!',
+    heroTitle: 'Affordable Biology Coaching — Quality at Fair Prices',
+    heroSubtitle:
+      'AIIMS-faculty coaching starting ₹35,000/year. 40-60% less than chains, 80% less than home tutors. EMI from ₹3,000/month. Scholarship test for 10-30% more off. Quality = results, not price tag.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'South Extension | Rohini | Gurugram',
+      distance: '3 centers + online',
+    },
+    localities: [
+      { name: 'Affordable NEET Delhi', url: '/affordable-neet-coaching-delhi' },
+      { name: 'Affordable NEET Gurugram', url: '/affordable-neet-coaching-gurugram' },
+      { name: 'Biology Coaching Near Me', url: '/biology-coaching-near-me' },
+    ],
+    relatedCities: [
+      { name: 'Best Biology Coaching', url: '/best-biology-coaching-near-me' },
+      { name: 'Online Biology Tuition', url: '/online-biology-tuition' },
+      { name: 'Board Exam Biology', url: '/board-exam-biology-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'How can you be affordable with AIIMS faculty?',
+        answer:
+          'Biology-only = no Physics/Chemistry overhead. No TV ads. Online reduces costs. Lower cost ≠ lower quality — 98% success rate proves it.',
+      },
+      {
+        question: 'Cheapest option?',
+        answer:
+          'Board-only online: ₹35,000/year (₹2,917/month). Scholarship test can cut 10-30% more. Pinnacle at ₹90,000 is still cheaper than Aakash (₹1.5L+).',
+      },
+      {
+        question: 'Scholarship available?',
+        answer:
+          'Free test (30 min online). 80%+ = 10% off. 90%+ = 20% off. 95%+ = 30% off. Can bring fee to ₹24,500/year.',
+      },
+      {
+        question: 'What is included?',
+        answer:
+          'Everything: live classes, material, weekly tests, mocks, PYQs, doubt support, parent reports. Zero hidden charges.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '5.0' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        'Many families cannot afford ₹1.5L+ chains or ₹2,000/hour tutors. Cerebrum makes AIIMS-faculty Biology coaching accessible to middle-class families at ₹35,000-90,000/year.',
+    },
+    studentSuccessStory: {
+      name: 'Aman S.',
+      area: 'Raj Nagar Extension, Ghaziabad',
+      achievement: 'Board: 91/100 | Scholarship student (₹28,000/year)',
+      quote:
+        "Family couldn't afford Aakash. Got 90% on scholarship test — fee reduced to ₹28,000/year. 91 in boards, 575 in NEET. Affordable ≠ low quality.",
+    },
   },
   'board-exam-biology-coaching-near-me': {
-    slug: 'board-exam-biology-coaching-near-me', cityName: 'Delhi NCR', stateName: 'Delhi / UP / Haryana',
-    metaTitle: 'Board Exam Biology Coaching Near Me | Score 90+ | CBSE/ICSE | Cerebrum Biology Academy',
-    metaDescription: 'Board exam Biology coaching near you — score 90+. Diagram practice, practical/viva prep, sample papers. 3 centers in Delhi NCR + online. ₹35,000-55,000/year. Free demo!',
-    heroTitle: 'Board Exam Biology Coaching Near Me — Score 90+', heroSubtitle: 'Not every student wants NEET. Score 90+ in Biology boards for college admission. Diagram perfection, practical/viva confidence, HOTS mastery, sample papers. Average board score: 92/100.',
-    hasOfflineCenter: true, nearestCenter: { name: 'Multiple Centers', address: 'South Extension | Rohini | Gurugram', distance: '3 centers + online' },
-    localities: [{ name: 'Board Exam Biology Delhi', url: '/board-exam-biology-delhi' }, { name: 'Board Exam Biology Gurugram', url: '/board-exam-biology-gurugram' }, { name: 'CBSE Biology Coaching', url: '/cbse-biology-board-coaching' }, { name: 'Class 12 Board Prep', url: '/class-12-board-biology-preparation' }],
-    relatedCities: [{ name: 'Biology Coaching Near Me', url: '/biology-coaching-near-me' }, { name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' }, { name: 'Best Biology Coaching', url: '/best-biology-coaching-near-me' }],
-    faqs: [{ question: 'Is this for non-NEET students?', answer: 'Yes! 30% of our students are board-only — strong Biology for DU, IP, BSc, or foreign university. No NEET pressure.' }, { question: 'What is included?', answer: 'NCERT coverage, diagram practice, practical/viva prep, HOTS questions, 10 sample papers, previous year analysis, 60-day revision program.' }, { question: 'Average board score?', answer: '92/100 average. 25% score 95+. We train for diagram marks (15-20 marks), practical exam (30 marks), and 4-5 mark HOTS answers.' }, { question: 'Fees for board-only?', answer: '₹35,000-55,000/year. Cheaper than Board+NEET since we skip NEET components. EMI available.' }],
-    stats: { studentsFromCity: '800+', successRate: '96%', rating: '4.9' }, geoCoordinates: { lat: '28.6139', lng: '77.2090' },
-    areaSpecificContent: { whyThisArea: '40% of Biology students just want good board scores — but every coaching assumes they want NEET. Our board-focused program serves this ignored market with targeted diagram, practical, and HOTS preparation.' },
-    studentSuccessStory: { name: 'Tanya A.', area: 'Hauz Khas, Delhi', achievement: 'CBSE: 94/100 | Lady Shri Ram College', quote: 'Didn\'t want NEET. Cerebrum board-only batch gave me 94 in Biology. Got into Lady Shri Ram. Diagram and practical prep made the difference.' },
+    slug: 'board-exam-biology-coaching-near-me',
+    cityName: 'Delhi NCR',
+    stateName: 'Delhi / UP / Haryana',
+    metaTitle:
+      'Board Exam Biology Coaching Near Me | Score 90+ | CBSE/ICSE | Cerebrum Biology Academy',
+    metaDescription:
+      'Board exam Biology coaching near you — score 90+. Diagram practice, practical/viva prep, sample papers. 3 centers in Delhi NCR + online. ₹35,000-55,000/year. Free demo!',
+    heroTitle: 'Board Exam Biology Coaching Near Me — Score 90+',
+    heroSubtitle:
+      'Not every student wants NEET. Score 90+ in Biology boards for college admission. Diagram perfection, practical/viva confidence, HOTS mastery, sample papers. Average board score: 92/100.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Multiple Centers',
+      address: 'South Extension | Rohini | Gurugram',
+      distance: '3 centers + online',
+    },
+    localities: [
+      { name: 'Board Exam Biology Delhi', url: '/board-exam-biology-delhi' },
+      { name: 'Board Exam Biology Gurugram', url: '/board-exam-biology-gurugram' },
+      { name: 'CBSE Biology Coaching', url: '/cbse-biology-board-coaching' },
+      { name: 'Class 12 Board Prep', url: '/class-12-board-biology-preparation' },
+    ],
+    relatedCities: [
+      { name: 'Biology Coaching Near Me', url: '/biology-coaching-near-me' },
+      { name: 'CBSE Biology Delhi', url: '/cbse-biology-coaching-delhi' },
+      { name: 'Best Biology Coaching', url: '/best-biology-coaching-near-me' },
+    ],
+    faqs: [
+      {
+        question: 'Is this for non-NEET students?',
+        answer:
+          'Yes! 30% of our students are board-only — strong Biology for DU, IP, BSc, or foreign university. No NEET pressure.',
+      },
+      {
+        question: 'What is included?',
+        answer:
+          'NCERT coverage, diagram practice, practical/viva prep, HOTS questions, 10 sample papers, previous year analysis, 60-day revision program.',
+      },
+      {
+        question: 'Average board score?',
+        answer:
+          '92/100 average. 25% score 95+. We train for diagram marks (15-20 marks), practical exam (30 marks), and 4-5 mark HOTS answers.',
+      },
+      {
+        question: 'Fees for board-only?',
+        answer:
+          '₹35,000-55,000/year. Cheaper than Board+NEET since we skip NEET components. EMI available.',
+      },
+    ],
+    stats: { studentsFromCity: '800+', successRate: '96%', rating: '4.9' },
+    geoCoordinates: { lat: '28.6139', lng: '77.2090' },
+    areaSpecificContent: {
+      whyThisArea:
+        '40% of Biology students just want good board scores — but every coaching assumes they want NEET. Our board-focused program serves this ignored market with targeted diagram, practical, and HOTS preparation.',
+    },
+    studentSuccessStory: {
+      name: 'Tanya A.',
+      area: 'Hauz Khas, Delhi',
+      achievement: 'CBSE: 94/100 | Lady Shri Ram College',
+      quote:
+        "Didn't want NEET. Cerebrum board-only batch gave me 94 in Biology. Got into Lady Shri Ram. Diagram and practical prep made the difference.",
+    },
   },
 }
 

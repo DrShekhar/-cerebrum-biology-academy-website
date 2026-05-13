@@ -153,11 +153,35 @@ export const Footer = memo(function Footer() {
 
   const centerLinks = [
     { name: 'All Locations', href: '/all-locations' },
+    { name: 'NEET Coaching Delhi', href: '/neet-coaching-delhi' },
+    { name: 'NEET Coaching Gurugram', href: '/neet-coaching-gurugram' },
+    { name: 'NEET Coaching Noida', href: '/neet-coaching-noida' },
+    { name: 'NEET Coaching Faridabad', href: '/neet-coaching-faridabad' },
+    { name: 'NEET Coaching Ghaziabad', href: '/neet-coaching-ghaziabad' },
+    { name: 'Best NEET Coaching Near Me', href: '/best-neet-coaching-near-me' },
     { name: 'South Extension (Flagship)', href: '/locations/south-extension' },
     { name: 'Rohini - DC Chowk', href: '/locations/rohini' },
-    { name: 'Gurugram - Sector 51', href: '/locations/gurugram' },
-    { name: 'Faridabad - Sector 17', href: '/locations/faridabad' },
     { name: 'Online Classes — 14+ Countries', href: '/online-neet-biology-coaching' },
+  ]
+
+  const reNEETLinks = [
+    { name: 'RE-NEET 2026 News Hub', href: '/re-neet-2026' },
+    { name: 'Best Coaching for RE-NEET 2026', href: '/best-coaching-for-re-neet-2026' },
+    { name: 'RE-NEET 2026 Crash Course', href: '/re-neet-crash-course' },
+    {
+      name: 'What to Do After NEET Cancellation',
+      href: '/what-to-do-after-neet-2026-cancellation',
+    },
+    { name: 'RE-NEET 2026 Syllabus & Difficulty', href: '/re-neet-2026-syllabus-difficulty' },
+    { name: 'RE-NEET Coaching in Delhi', href: '/re-neet-2026-delhi' },
+  ]
+
+  const phraseLinks = [
+    { name: 'Best Biology Teacher in India', href: '/best-biology-teacher-india' },
+    { name: 'Biology Tutor for NEET', href: '/biology-tutor-for-neet' },
+    { name: 'Best Biology Classes for NEET', href: '/best-biology-classes-for-neet' },
+    { name: '1-on-1 NEET Biology Tutor', href: '/1-on-1-neet-biology-tutor' },
+    { name: 'NRI Quota MBBS Guide', href: '/nri-quota-mbbs' },
   ]
 
   const resourceLinks = [
@@ -241,7 +265,7 @@ export const Footer = memo(function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-8 divide-y divide-gray-800 lg:divide-y-0">
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-0 lg:gap-8 divide-y divide-gray-800 lg:divide-y-0">
             <FooterSection
               title="Programs"
               links={programLinks}
@@ -253,6 +277,18 @@ export const Footer = memo(function Footer() {
               links={centerLinks}
               isOpen={openSection === 'Centers'}
               onToggle={() => toggleSection('Centers')}
+            />
+            <FooterSection
+              title="RE-NEET 2026"
+              links={reNEETLinks}
+              isOpen={openSection === 'RE-NEET'}
+              onToggle={() => toggleSection('RE-NEET')}
+            />
+            <FooterSection
+              title="Popular"
+              links={phraseLinks}
+              isOpen={openSection === 'Popular'}
+              onToggle={() => toggleSection('Popular')}
             />
             <FooterSection
               title="Free Resources"

@@ -1,3 +1,4 @@
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BreadcrumbSchema } from '@/components/seo'
@@ -263,6 +264,7 @@ const articleSchema = {
 export default function BiologyHomeTutorDelhiNCRPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="biology-home-tutor-delhi-ncr" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

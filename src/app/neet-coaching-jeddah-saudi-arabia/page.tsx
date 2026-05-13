@@ -98,6 +98,7 @@ export default async function NEETCoachingJeddahPage() {
         pageType="coaching"
         coordinates={{ lat: '21.4858', lng: '39.1925' }}
         faqs={faqs}
+        skipCourseList
       />
       <PageContent />
       <NEETNRIPricingTiers />

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import Link from 'next/link'
 
 const PHONE = '88264-44334'
@@ -86,6 +87,7 @@ const schema = {
 export default function NEETBiologyTutorDelhiNCRPage() {
   return (
     <>
+      <DelhiAreaSchema pageSlug="neet-biology-tutor-delhi-ncr" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

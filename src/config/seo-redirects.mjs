@@ -2128,7 +2128,9 @@ export const gsc404CleanupBatch3Redirects = [
     permanent: true,
   },
   { source: '/jbo-preparation/', destination: '/biology-olympiad-coaching', permanent: true },
-  { source: '/online-neet-biology-classes', destination: '/online-neet-coaching', permanent: true },
+  // Removed conflicting redirect for /online-neet-biology-classes — kept in
+  // cannibalizationConsolidationRedirects which routes to the more specific
+  // /biology-classes-for-neet landing page (semantically accurate).
 
   // --- Crawled-not-indexed: missing pages (March 2026 batch) ---
   {
@@ -2406,6 +2408,195 @@ export const cannibalizationConsolidationRedirects = [
   {
     source: '/cerebrum-vs-physics-wallah',
     destination: '/cerebrum-vs-physicswallah',
+    permanent: true,
+  },
+
+  // ============================================
+  // NRI NEET phrase consolidation — country & strategic-hub synonyms
+  // ============================================
+  { source: '/neet-coaching-usa', destination: '/neet-coaching-nri-usa', permanent: true },
+  { source: '/neet-coaching-canada', destination: '/neet-coaching-nri-canada', permanent: true },
+  { source: '/neet-coaching-uae', destination: '/neet-coaching-nri-uae', permanent: true },
+  { source: '/neet-coaching-uk', destination: '/neet-coaching-nri-uk', permanent: true },
+  { source: '/neet-coaching-britain', destination: '/neet-coaching-nri-uk', permanent: true },
+  {
+    source: '/neet-coaching-australia',
+    destination: '/neet-coaching-nri-australia',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-saudi',
+    destination: '/neet-coaching-nri-saudi-arabia',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-saudi-arabia',
+    destination: '/neet-coaching-nri-saudi-arabia',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-singapore',
+    destination: '/neet-coaching-nri-singapore',
+    permanent: true,
+  },
+  { source: '/neet-coaching-qatar', destination: '/neet-coaching-nri-qatar', permanent: true },
+  { source: '/neet-coaching-oman', destination: '/neet-coaching-nri-oman', permanent: true },
+  { source: '/neet-coaching-kuwait', destination: '/neet-coaching-nri-kuwait', permanent: true },
+  { source: '/neet-coaching-bahrain', destination: '/neet-coaching-nri-bahrain', permanent: true },
+  {
+    source: '/neet-coaching-malaysia',
+    destination: '/neet-coaching-nri-malaysia',
+    permanent: true,
+  },
+  { source: '/neet-coaching-nepal', destination: '/neet-coaching-nri-nepal', permanent: true },
+  { source: '/neet-coaching-for-nri', destination: '/nri-quota-mbbs', permanent: true },
+  { source: '/neet-coaching-abroad', destination: '/nri-quota-mbbs', permanent: true },
+  { source: '/neet-for-nri-students', destination: '/nri-quota-mbbs', permanent: true },
+  { source: '/nri-mbbs', destination: '/nri-quota-mbbs', permanent: true },
+  { source: '/nri-mbbs-india', destination: '/nri-quota-mbbs', permanent: true },
+  { source: '/mbbs-for-nri', destination: '/nri-quota-mbbs', permanent: true },
+  { source: '/oci-mbbs-india', destination: '/nri-quota-mbbs', permanent: true },
+  {
+    source: '/neet-overseas-exam-centres',
+    destination: '/neet-exam-centres-abroad',
+    permanent: true,
+  },
+  {
+    source: '/neet-international-exam-centres',
+    destination: '/neet-exam-centres-abroad',
+    permanent: true,
+  },
+  {
+    source: '/where-can-i-take-neet-abroad',
+    destination: '/neet-exam-centres-abroad',
+    permanent: true,
+  },
+  { source: '/cbse-abroad-neet', destination: '/cbse-students-abroad-neet', permanent: true },
+  {
+    source: '/gulf-sahodaya-neet-coaching',
+    destination: '/cbse-students-abroad-neet',
+    permanent: true,
+  },
+  { source: '/nri-quota-fees', destination: '/nri-neet-fees-documents', permanent: true },
+  { source: '/nri-mbbs-documents', destination: '/nri-neet-fees-documents', permanent: true },
+  { source: '/neet-coaching-fremont', destination: '/neet-coaching-bay-area-usa', permanent: true },
+  {
+    source: '/neet-coaching-sunnyvale',
+    destination: '/neet-coaching-bay-area-usa',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-cupertino',
+    destination: '/neet-coaching-bay-area-usa',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-palo-alto',
+    destination: '/neet-coaching-bay-area-usa',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-perth',
+    destination: '/neet-coaching-perth-australia',
+    permanent: true,
+  },
+
+  // ============================================
+  // RE-NEET 2026 synonym moat (post 12 May 2026 cancellation)
+  // ============================================
+  { source: '/neet-2026-cancelled', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-ug-2026-cancelled', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-2026-cancellation', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-reconduct-2026', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-retest-2026', destination: '/re-neet-2026', permanent: true },
+  { source: '/re-neet-ug-2026', destination: '/re-neet-2026', permanent: true },
+  { source: '/re-neet-ug', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-2026-phase-2', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-2026-second-exam', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-2026-paper-leak', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-2026-cbi-probe', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-guess-paper-2026', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-2026-new-date', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-2026-re-exam', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-2026-rexam', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-reconduct-crash-course', destination: '/re-neet-crash-course', permanent: true },
+  { source: '/neet-retest-crash-course', destination: '/re-neet-crash-course', permanent: true },
+  { source: '/re-neet-crash-course-2026', destination: '/re-neet-crash-course', permanent: true },
+  {
+    source: '/neet-2026-6-week-crash-course',
+    destination: '/re-neet-crash-course',
+    permanent: true,
+  },
+  { source: '/re-neet-2026-crash-course', destination: '/re-neet-crash-course', permanent: true },
+  {
+    source: '/best-re-neet-2026-coaching',
+    destination: '/best-coaching-for-re-neet-2026',
+    permanent: true,
+  },
+  {
+    source: '/best-coaching-re-neet-2026',
+    destination: '/best-coaching-for-re-neet-2026',
+    permanent: true,
+  },
+  {
+    source: '/best-reneet-coaching',
+    destination: '/best-coaching-for-re-neet-2026',
+    permanent: true,
+  },
+  {
+    source: '/re-neet-2026-syllabus',
+    destination: '/re-neet-2026-syllabus-difficulty',
+    permanent: true,
+  },
+  {
+    source: '/re-neet-2026-difficulty',
+    destination: '/re-neet-2026-syllabus-difficulty',
+    permanent: true,
+  },
+  {
+    source: '/will-re-neet-syllabus-change',
+    destination: '/re-neet-2026-syllabus-difficulty',
+    permanent: true,
+  },
+  {
+    source: '/will-re-neet-2026-be-tougher',
+    destination: '/re-neet-2026-syllabus-difficulty',
+    permanent: true,
+  },
+  {
+    source: '/neet-cancellation-what-next',
+    destination: '/what-to-do-after-neet-2026-cancellation',
+    permanent: true,
+  },
+  {
+    source: '/neet-2026-what-to-do',
+    destination: '/what-to-do-after-neet-2026-cancellation',
+    permanent: true,
+  },
+  {
+    source: '/re-neet-vs-aakash',
+    destination: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
+    permanent: true,
+  },
+  {
+    source: '/re-neet-vs-pw',
+    destination: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
+    permanent: true,
+  },
+  {
+    source: '/re-neet-comparison',
+    destination: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
+    permanent: true,
+  },
+  {
+    source: '/re-neet-online-coaching',
+    destination: '/re-neet-2026-online-coaching',
+    permanent: true,
+  },
+  { source: '/re-neet-droppers', destination: '/re-neet-2026-droppers', permanent: true },
+  {
+    source: '/re-neet-biology',
+    destination: '/re-neet-2026-biology-crash-course',
     permanent: true,
   },
 ]
