@@ -2332,6 +2332,82 @@ export const cannibalizationConsolidationRedirects = [
     destination: '/best-online-biology-tutor-india',
     permanent: true,
   },
+
+  // ============================================
+  // NEET phrase consolidation — synonyms route to canonical landings
+  // ============================================
+  {
+    source: '/neet-biology-classes-online',
+    destination: '/biology-classes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/online-neet-biology-classes',
+    destination: '/biology-classes-for-neet',
+    permanent: true,
+  },
+  { source: '/best-neet-classes', destination: '/best-biology-classes-for-neet', permanent: true },
+  {
+    source: '/best-online-neet-classes',
+    destination: '/best-biology-classes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/best-online-neet-biology-classes',
+    destination: '/best-biology-classes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/best-neet-classes-for-biology',
+    destination: '/best-biology-classes-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tutor-for-neet',
+    destination: '/biology-tutor-for-neet',
+    permanent: true,
+  },
+  {
+    source: '/neet-biology-tutor-online-1-on-1',
+    destination: '/1-on-1-neet-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/private-neet-biology-tutor',
+    destination: '/1-on-1-neet-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/personal-neet-biology-tutor',
+    destination: '/1-on-1-neet-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/best-neet-coaching-near-me-online',
+    destination: '/best-neet-coaching-near-me',
+    permanent: true,
+  },
+  {
+    source: '/neet-coaching-near-me-online',
+    destination: '/best-neet-coaching-near-me',
+    permanent: true,
+  },
+  {
+    source: '/neet-biology-recorded-lectures',
+    destination: '/neet-biology-video-lectures',
+    permanent: true,
+  },
+  {
+    source: '/neet-biology-video-course',
+    destination: '/neet-biology-video-lectures',
+    permanent: true,
+  },
+  { source: '/cerebrum-vs-pw', destination: '/cerebrum-vs-physicswallah', permanent: true },
+  {
+    source: '/cerebrum-vs-physics-wallah',
+    destination: '/cerebrum-vs-physicswallah',
+    permanent: true,
+  },
 ]
 
 // ============================================

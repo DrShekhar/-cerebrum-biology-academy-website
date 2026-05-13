@@ -364,6 +364,141 @@ export default function BestNeetCoachingIndiaPage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'NEET Biology Coaching — Best NEET Biology Coaching in India',
+            description:
+              "India's best NEET Biology coaching by Cerebrum Biology Academy — AIIMS-trained faculty, small batches (15–20 students), 98% NEET-UG qualification rate, 680+ medical college selections.",
+            provider: {
+              '@type': 'EducationalOrganization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+              sameAs: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+            },
+            url: 'https://cerebrumbiologyacademy.com/best-neet-coaching-india',
+            hasCourseInstance: [
+              {
+                '@type': 'CourseInstance',
+                name: 'Pursuit (Affordable Small Group)',
+                description:
+                  '30–40 student batches taught by AIIMS / IIT-trained faculty. Bi-weekly group doubt sessions. Most affordable tier.',
+                courseMode: ['Onsite', 'Online'],
+                instructor: {
+                  '@type': 'Person',
+                  name: 'Dr. Shekhar C Singh',
+                  jobTitle: 'AIIMS-trained Lead Biology Faculty',
+                },
+                offers: {
+                  '@type': 'Offer',
+                  name: 'Pursuit Plan',
+                  price: '40000',
+                  priceCurrency: 'INR',
+                  category: 'Coaching',
+                  availability: 'https://schema.org/InStock',
+                  url: 'https://cerebrumbiologyacademy.com/courses',
+                },
+              },
+              {
+                '@type': 'CourseInstance',
+                name: 'Ascent (Most Popular)',
+                description:
+                  '16–25 student batches with weekly doubt sessions and standard mock-test series. Most popular tier.',
+                courseMode: ['Onsite', 'Online'],
+                instructor: {
+                  '@type': 'Person',
+                  name: 'Dr. Shekhar C Singh',
+                  jobTitle: 'AIIMS-trained Lead Biology Faculty',
+                },
+                offers: {
+                  '@type': 'Offer',
+                  name: 'Ascent Plan',
+                  price: '58000',
+                  priceCurrency: 'INR',
+                  category: 'Coaching',
+                  availability: 'https://schema.org/InStock',
+                  url: 'https://cerebrumbiologyacademy.com/courses',
+                },
+              },
+              {
+                '@type': 'CourseInstance',
+                name: 'Pinnacle (Premium 1:1 + Micro-Batch)',
+                description:
+                  '10–12 student batches with personal 1:1 mentorship from Dr. Shekhar C Singh. Best for AIIMS / Top medical college aspirants.',
+                courseMode: ['Onsite', 'Online'],
+                instructor: {
+                  '@type': 'Person',
+                  name: 'Dr. Shekhar C Singh',
+                  jobTitle: 'Founder & Lead Biology Faculty — AIIMS New Delhi',
+                },
+                offers: {
+                  '@type': 'Offer',
+                  name: 'Pinnacle Plan',
+                  price: '120000',
+                  priceCurrency: 'INR',
+                  category: 'Coaching',
+                  availability: 'https://schema.org/InStock',
+                  url: 'https://cerebrumbiologyacademy.com/courses',
+                },
+              },
+            ],
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            telephone: '+918826444334',
+            email: 'info@cerebrumbiologyacademy.com',
+            founder: {
+              '@id':
+                'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            },
+            foundingDate: '2014',
+            areaServed: [
+              { '@type': 'City', name: 'Delhi' },
+              { '@type': 'City', name: 'Gurugram' },
+              { '@type': 'City', name: 'Noida' },
+              { '@type': 'City', name: 'Faridabad' },
+              { '@type': 'City', name: 'Ghaziabad' },
+              { '@type': 'City', name: 'Mumbai' },
+              { '@type': 'City', name: 'Bangalore' },
+              { '@type': 'City', name: 'Hyderabad' },
+              { '@type': 'City', name: 'Chennai' },
+              { '@type': 'City', name: 'Kolkata' },
+              { '@type': 'City', name: 'Pune' },
+              { '@type': 'City', name: 'Kota' },
+              { '@type': 'Country', name: 'India' },
+            ],
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
