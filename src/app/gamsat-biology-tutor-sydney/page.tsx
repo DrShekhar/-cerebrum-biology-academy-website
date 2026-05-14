@@ -8,6 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/gamsat-biology-tutor-sydney'
 
@@ -295,6 +296,7 @@ export default function GAMSATBiologyTutorSydneyPage() {
           </a>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

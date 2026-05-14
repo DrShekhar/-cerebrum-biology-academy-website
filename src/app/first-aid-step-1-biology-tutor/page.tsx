@@ -9,6 +9,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/first-aid-step-1-biology-tutor'
 
@@ -248,6 +249,7 @@ export default function FirstAidStep1BiologyTutorPage() {
           </a>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

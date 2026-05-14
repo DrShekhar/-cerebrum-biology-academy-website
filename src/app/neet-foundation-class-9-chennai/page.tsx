@@ -6,6 +6,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-chennai'
 
@@ -311,6 +312,7 @@ export default function NEETFoundationClass9ChennaiPage() {
           </a>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

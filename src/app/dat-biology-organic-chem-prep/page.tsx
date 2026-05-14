@@ -8,6 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/dat-biology-organic-chem-prep'
 
@@ -204,6 +205,7 @@ export default function DATBiologyOrganicChemPage() {
           </div>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

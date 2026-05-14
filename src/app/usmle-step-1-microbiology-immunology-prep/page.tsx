@@ -8,6 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/usmle-step-1-microbiology-immunology-prep'
 
@@ -237,6 +238,7 @@ export default function USMLEStep1MicroImmunoPage() {
           </div>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

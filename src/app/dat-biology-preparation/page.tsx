@@ -8,6 +8,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import { datPricingAsCourseOffers } from '@/data/dat/pricing-matrix'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/dat-biology-preparation'
@@ -288,6 +289,7 @@ export default function DATBiologyPreparationPage() {
           </a>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

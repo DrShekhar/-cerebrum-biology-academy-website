@@ -7,6 +7,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import { usmleStep1PricingAsCourseOffers } from '@/data/usmle-step-1/pricing-matrix'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/usmle-step-1-biology-preparation'
@@ -307,6 +308,7 @@ export default function USMLEStep1BiologyPreparationPage() {
           </a>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

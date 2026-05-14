@@ -9,6 +9,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/usmle-step-1-physiology-prep'
 
@@ -228,6 +229,7 @@ export default function USMLEStep1PhysiologyPrepPage() {
           </div>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

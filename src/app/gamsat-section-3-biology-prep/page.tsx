@@ -7,6 +7,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import { gamsatPricingAsCourseOffers } from '@/data/gamsat/pricing-matrix'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/gamsat-section-3-biology-prep'
@@ -271,6 +272,7 @@ export default function GAMSATSectionIIIBiologyPage() {
           </a>
         </div>
       </section>
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }
