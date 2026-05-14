@@ -411,7 +411,7 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
             <div className="space-y-4">
               {config.faqs.map((faq) => (
                 <details key={faq.question} className="bg-slate-50 rounded-lg group">
-                  <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-slate-100">
+                  <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-lg">
                     {faq.question}
                     <span className="text-slate-500 group-open:rotate-180 transition-transform">
                       ▼

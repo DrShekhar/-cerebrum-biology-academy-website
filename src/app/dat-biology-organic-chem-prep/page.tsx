@@ -95,6 +95,21 @@ const faqSchema = {
   })),
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Best DAT Biology Tutor',
+      item: 'https://cerebrumbiologyacademy.com/best-dat-biology-tutor',
+    },
+    { '@type': 'ListItem', position: 3, name: 'DAT Biology + Organic Chem', item: PAGE_URL },
+  ],
+}
+
 const wa =
   'https://wa.me/918826444334?text=' +
   encodeURIComponent(
@@ -111,6 +126,10 @@ export default function DATBiologyOrganicChemPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16">
@@ -196,7 +215,7 @@ export default function DATBiologyOrganicChemPage() {
           <div className="space-y-6">
             {faqs.map((f, i) => (
               <details key={i} className="bg-white rounded-xl p-6 border border-slate-200">
-                <summary className="text-lg font-semibold text-slate-900 cursor-pointer">
+                <summary className="text-lg font-semibold text-slate-900 cursor-pointer focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-lg">
                   {f.question}
                 </summary>
                 <p className="mt-4 text-slate-700 leading-relaxed faq-answer">{f.answer}</p>

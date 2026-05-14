@@ -316,7 +316,7 @@ export default function NEETFoundationClass10DelhiPage() {
           <div className="space-y-6">
             {faqs.map((f, i) => (
               <details key={i} className="bg-white rounded-xl p-6 border border-slate-200">
-                <summary className="text-lg font-semibold text-slate-900 cursor-pointer">
+                <summary className="text-lg font-semibold text-slate-900 cursor-pointer focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-lg">
                   {f.question}
                 </summary>
                 <p className="mt-4 text-slate-700 leading-relaxed faq-answer">{f.answer}</p>

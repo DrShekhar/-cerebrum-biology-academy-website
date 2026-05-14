@@ -191,7 +191,8 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
               Cerebrum Biology Academy vs {config.competitorName} — across the criteria that
               actually matter for NEET Biology.
             </p>
-            <div className="overflow-x-auto">
+            {/* Desktop / tablet: full table */}
+            <div className="hidden md:block overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="bg-slate-100">
@@ -230,6 +231,45 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
                   ))}
                 </tbody>
               </table>
+            </div>
+            {/* Mobile (<768px): stacked card list — table columns compress unreadably at 375px */}
+            <div className="md:hidden space-y-4">
+              {config.table.map((row) => (
+                <div
+                  key={row.criterion}
+                  className="bg-white border border-slate-200 rounded-xl p-4"
+                >
+                  <div className="font-semibold text-slate-900 mb-3 text-sm uppercase tracking-wide">
+                    {row.criterion}
+                  </div>
+                  <div className="space-y-3">
+                    <div
+                      className={`rounded-lg p-3 border ${row.cerebrumWins ? 'bg-green-50 border-green-200' : 'bg-slate-50 border-slate-200'}`}
+                    >
+                      <div className="flex items-center gap-2 mb-1 text-xs font-semibold text-green-700 uppercase">
+                        {row.cerebrumWins ? (
+                          <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                        ) : null}
+                        Cerebrum
+                      </div>
+                      <p className="text-sm text-slate-800 leading-relaxed">{row.cerebrum}</p>
+                    </div>
+                    <div
+                      className={`rounded-lg p-3 border ${!row.cerebrumWins ? 'bg-slate-100 border-slate-300' : 'bg-slate-50 border-slate-200'}`}
+                    >
+                      <div className="flex items-center gap-2 mb-1 text-xs font-semibold text-slate-600 uppercase">
+                        {!row.cerebrumWins ? (
+                          <CheckCircle className="w-4 h-4 text-slate-500 flex-shrink-0" />
+                        ) : (
+                          <X className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                        )}
+                        {config.competitorName}
+                      </div>
+                      <p className="text-sm text-slate-700 leading-relaxed">{row.competitor}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
             <div className="mt-10 bg-gradient-to-r from-green-700 to-blue-700 text-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
               <div>
@@ -358,7 +398,7 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
             <div className="space-y-4">
               {config.faqs.map((faq) => (
                 <details key={faq.question} className="bg-slate-50 rounded-lg group">
-                  <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-slate-100">
+                  <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-blue-600 focus-visible:outline-offset-2 rounded-lg">
                     {faq.question}
                     <span className="text-slate-500 group-open:rotate-180 transition-transform">
                       ▼
