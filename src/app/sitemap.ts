@@ -270,6 +270,20 @@ function normalizePriority(path: string, currentPriority: number): number {
     return 0.8
   }
 
+  // USMLE Step 1 cluster (US medical licensing + IMG ECFMG).
+  // Programme hub + section pages at 0.85; AEO hub at 0.92 (handled
+  // in the canonical-service-hubs block). First Aid walkthrough is
+  // cornerstone authority content.
+  if (
+    path === '/usmle-step-1-biology-preparation' ||
+    path === '/usmle-step-1-biochemistry-prep' ||
+    path === '/usmle-step-1-microbiology-immunology-prep' ||
+    path === '/usmle-step-1-physiology-prep' ||
+    path === '/first-aid-step-1-biology-tutor'
+  ) {
+    return 0.85
+  }
+
   // India biology olympiad — hubs at 0.9 (NSEB / INBO are highest-tier
   // national-pathway content), cornerstone content at 0.85, per-school
   // pages at 0.7 matching the AP / IB school tier.
@@ -333,6 +347,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/best-mcat-biology-tutor' ||
     path === '/best-dat-biology-tutor' ||
     path === '/best-gamsat-biology-tutor' ||
+    path === '/best-usmle-step-1-biology-tutor' ||
     path === '/best-usabo-coach' ||
     path === '/best-inbo-coach' ||
     path === '/best-ibo-preparation' ||
@@ -5758,6 +5773,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+    },
+    // USMLE Step 1 cluster (US medical licensing + IMG ECFMG). AEO hub
+    // at 0.92, programme hub + section + cornerstone at 0.85.
+    {
+      url: `${baseUrl}/best-usmle-step-1-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/usmle-step-1-biology-preparation`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/usmle-step-1-biochemistry-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/usmle-step-1-microbiology-immunology-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/usmle-step-1-physiology-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/first-aid-step-1-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/molecular-biology-tuition`,

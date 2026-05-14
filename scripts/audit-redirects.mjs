@@ -14,6 +14,8 @@ import {
   faridabadConsolidationRedirects,
   ghaziabadConsolidationRedirects,
   rohiniConsolidationRedirects,
+  datGamsatSynonymRedirects,
+  usmleStep1SynonymRedirects,
 } from '../src/config/seo-redirects.mjs'
 
 const arrays = {
@@ -32,6 +34,8 @@ const arrays = {
   faridabad: faridabadConsolidationRedirects,
   ghaziabad: ghaziabadConsolidationRedirects,
   rohini: rohiniConsolidationRedirects,
+  datGamsatSynonym: datGamsatSynonymRedirects,
+  usmleStep1Synonym: usmleStep1SynonymRedirects,
 }
 
 // Collect all sources with their destinations and origin array
@@ -53,12 +57,19 @@ for (const [src, entries] of sourceMap) {
     if (dests.length > 1) {
       conflicting.push({ source: src, entries })
     } else {
-      redundant.push({ source: src, count: entries.length, dest: dests[0], arrays: entries.map((e) => e.array) })
+      redundant.push({
+        source: src,
+        count: entries.length,
+        dest: dests[0],
+        arrays: entries.map((e) => e.array),
+      })
     }
   }
 }
 
-console.log(`Total redirects in exported arrays: ${Object.values(arrays).reduce((s, a) => s + a.length, 0)}`)
+console.log(
+  `Total redirects in exported arrays: ${Object.values(arrays).reduce((s, a) => s + a.length, 0)}`
+)
 console.log(`Unique sources: ${sourceMap.size}`)
 console.log(`Conflicting duplicates (different destinations): ${conflicting.length}`)
 console.log(`Redundant duplicates (same destination): ${redundant.length}`)

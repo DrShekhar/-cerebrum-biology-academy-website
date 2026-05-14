@@ -23,6 +23,7 @@ import {
   areaPageConsolidationRedirects,
   gscCrawledNotIndexedRedirects,
   datGamsatSynonymRedirects,
+  usmleStep1SynonymRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1651,6 +1652,7 @@ const nextConfig = {
       ...areaPageConsolidationRedirects,
       ...gscCrawledNotIndexedRedirects,
       ...datGamsatSynonymRedirects,
+      ...usmleStep1SynonymRedirects,
     ]
   },
 

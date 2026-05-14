@@ -4029,3 +4029,152 @@ export const datGamsatSynonymRedirects = [
     permanent: true,
   },
 ]
+
+// ============================================
+// USMLE Step 1 cluster synonyms (May 2026)
+// Funnels common keyword variants to the canonical hub / programme
+// pages built for /best-usmle-step-1-biology-tutor.
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const usmleStep1SynonymRedirects = [
+  // AEO hub aliases
+  {
+    source: '/usmle-step-1-biology-tutor',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/best-usmle-tutor',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/usmle-biology-tutor',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/best-usmle-biology-tutor',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/best-usmle-tutor-img',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/img-usmle-step-1-tutor',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/aiims-usmle-tutor',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  // Programme hub aliases
+  {
+    source: '/usmle-step-1-preparation',
+    destination: '/usmle-step-1-biology-preparation',
+    permanent: true,
+  },
+  {
+    source: '/usmle-step-1-coaching',
+    destination: '/usmle-step-1-biology-preparation',
+    permanent: true,
+  },
+  {
+    source: '/usmle-step-1-course',
+    destination: '/usmle-step-1-biology-preparation',
+    permanent: true,
+  },
+  {
+    source: '/usmle-step-1-foundations',
+    destination: '/usmle-step-1-biology-preparation',
+    permanent: true,
+  },
+  {
+    source: '/usmle-step1-biology',
+    destination: '/usmle-step-1-biology-preparation',
+    permanent: true,
+  },
+  {
+    source: '/step-1-usmle-biology',
+    destination: '/usmle-step-1-biology-preparation',
+    permanent: true,
+  },
+  // Section page aliases
+  {
+    source: '/usmle-step-1-biochemistry',
+    destination: '/usmle-step-1-biochemistry-prep',
+    permanent: true,
+  },
+  {
+    source: '/usmle-biochemistry-tutor',
+    destination: '/usmle-step-1-biochemistry-prep',
+    permanent: true,
+  },
+  {
+    source: '/usmle-step-1-microbiology',
+    destination: '/usmle-step-1-microbiology-immunology-prep',
+    permanent: true,
+  },
+  {
+    source: '/usmle-step-1-immunology',
+    destination: '/usmle-step-1-microbiology-immunology-prep',
+    permanent: true,
+  },
+  {
+    source: '/usmle-microbiology-tutor',
+    destination: '/usmle-step-1-microbiology-immunology-prep',
+    permanent: true,
+  },
+  {
+    source: '/usmle-immunology-tutor',
+    destination: '/usmle-step-1-microbiology-immunology-prep',
+    permanent: true,
+  },
+  {
+    source: '/usmle-step-1-physiology',
+    destination: '/usmle-step-1-physiology-prep',
+    permanent: true,
+  },
+  {
+    source: '/usmle-physiology-tutor',
+    destination: '/usmle-step-1-physiology-prep',
+    permanent: true,
+  },
+  // First Aid aliases
+  {
+    source: '/first-aid-step-1-tutor',
+    destination: '/first-aid-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/first-aid-usmle-tutor',
+    destination: '/first-aid-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/first-aid-step-1-walkthroughs',
+    destination: '/first-aid-step-1-biology-tutor',
+    permanent: true,
+  },
+  // ECFMG / IMG-specific aliases
+  {
+    source: '/ecfmg-biology-tutor',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/ecfmg-certification-tutor',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/img-step-1-coaching',
+    destination: '/best-usmle-step-1-biology-tutor',
+    permanent: true,
+  },
+]
