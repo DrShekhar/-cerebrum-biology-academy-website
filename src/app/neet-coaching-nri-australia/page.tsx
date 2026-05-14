@@ -86,7 +86,7 @@ const faqs = [
   },
   {
     q: 'What is the fee structure for Australian students?',
-    a: 'Foundation (Class 11): Rs 75,000/year, Comprehensive (Class 12): Rs 72,000/year, Dropper Batch: Rs 85,000/year. EMI options available.',
+    a: 'USD-anchored pricing displayed in AUD for Australian visitors. Foundation (Class 11): ~AUD 6,300/year ($4,200 USD base), Comprehensive (Class 12): ~AUD 7,200/year ($4,800 USD base), Dropper Batch: ~AUD 8,100/year ($5,400 USD base). Local currency conversion shown at checkout. EMI options available.',
   },
 ]
 
@@ -131,7 +131,7 @@ export default async function NEETCoachingNRIAustraliaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PageContent />
-      <NEETNRIPricingTiers />
+      <NEETNRIPricingTiers forceCountry="AU" />
     </>
   )
 }

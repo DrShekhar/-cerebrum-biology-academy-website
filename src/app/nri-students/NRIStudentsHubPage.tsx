@@ -121,46 +121,52 @@ const stats = [
   { label: 'AIIMS Faculty', value: '15+ Yrs', icon: Star },
 ]
 
+// USD-anchored pricing for NRI students worldwide. Aligned with the
+// NEETNRIPricingTiers matrix (Foundation $4,800, Comprehensive $5,400,
+// Dropper $6,000 per year base prices; geo-tier scaling applies at
+// render time via x-vercel-ip-country detection in the live pricing
+// section below). These card prices are display anchors — actual
+// quotes use the geo-aware tier matrix.
 const courses = [
   {
     name: 'Class 9th Foundation',
     duration: '1 Year',
-    fee: '₹58,000',
+    fee: '$3,600 / year',
     seats: 12,
     popular: false,
   },
   {
     name: 'Class 10th Foundation',
     duration: '1 Year',
-    fee: '₹68,000',
+    fee: '$4,200 / year',
     seats: 15,
     popular: false,
   },
   {
     name: 'Class 11th NEET',
     duration: '1 Year',
-    fee: '₹75,000',
+    fee: '$4,800 / year',
     seats: 8,
     popular: true,
   },
   {
     name: 'Class 12th NEET',
     duration: '1 Year',
-    fee: '₹72,000',
+    fee: '$5,400 / year',
     seats: 10,
     popular: true,
   },
   {
     name: 'NEET Dropper',
     duration: '1 Year',
-    fee: '₹85,000',
+    fee: '$6,000 / year',
     seats: 6,
     popular: false,
   },
   {
     name: 'Crash Course',
     duration: '3-6 Months',
-    fee: '₹35,000',
+    fee: '$2,500',
     seats: 20,
     popular: false,
   },
@@ -367,7 +373,11 @@ export function NRIStudentsHubPage() {
                     WhatsApp Us
                   </Button>
                 </a>
-                <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button
                     variant="outline"
                     size="lg"
@@ -962,7 +972,12 @@ export function NRIStudentsHubPage() {
                   <span className="truncate">WhatsApp Us</span>
                 </Button>
               </a>
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
                 <Button
                   variant="outline"
                   size="lg"

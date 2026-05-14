@@ -95,9 +95,9 @@ const courseSchema = {
     '@type': 'Offer',
     category: 'NRI Students',
     availability: 'https://schema.org/InStock',
-    priceCurrency: 'INR',
-    price: '45000',
-    priceValidUntil: '2026-05-31',
+    priceCurrency: 'USD',
+    price: '4800',
+    priceValidUntil: '2026-12-31',
     url: 'https://cerebrumbiologyacademy.com/nri-students',
   },
   aggregateRating: {
