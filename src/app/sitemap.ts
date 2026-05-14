@@ -5933,6 +5933,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
+    // Metro Foundation expansion — Chennai, Pune, Kolkata (Class 9 + 10).
+    {
+      url: `${baseUrl}/neet-foundation-class-9-chennai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-10-chennai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-9-pune`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-10-pune`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-9-kolkata`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-10-kolkata`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
     {
       url: `${baseUrl}/molecular-biology-tuition`,
       lastModified: lastUpdated,
