@@ -24,6 +24,8 @@ import {
   gscCrawledNotIndexedRedirects,
   datGamsatSynonymRedirects,
   usmleStep1SynonymRedirects,
+  neetUGBiologySynonymRedirects,
+  neetFoundationSynonymRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1653,6 +1655,8 @@ const nextConfig = {
       ...gscCrawledNotIndexedRedirects,
       ...datGamsatSynonymRedirects,
       ...usmleStep1SynonymRedirects,
+      ...neetUGBiologySynonymRedirects,
+      ...neetFoundationSynonymRedirects,
     ]
   },
 

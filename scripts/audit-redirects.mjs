@@ -16,6 +16,8 @@ import {
   rohiniConsolidationRedirects,
   datGamsatSynonymRedirects,
   usmleStep1SynonymRedirects,
+  neetUGBiologySynonymRedirects,
+  neetFoundationSynonymRedirects,
 } from '../src/config/seo-redirects.mjs'
 
 const arrays = {
@@ -36,6 +38,8 @@ const arrays = {
   rohini: rohiniConsolidationRedirects,
   datGamsatSynonym: datGamsatSynonymRedirects,
   usmleStep1Synonym: usmleStep1SynonymRedirects,
+  neetUGBiologySynonym: neetUGBiologySynonymRedirects,
+  neetFoundationSynonym: neetFoundationSynonymRedirects,
 }
 
 // Collect all sources with their destinations and origin array

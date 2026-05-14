@@ -4178,3 +4178,161 @@ export const usmleStep1SynonymRedirects = [
     permanent: true,
   },
 ]
+
+// ============================================
+// NEET UG Biology AEO cluster synonyms (May 2026)
+// Funnels common keyword variants to the canonical AEO hubs built
+// for /best-neet-biology-tutor + Class 11/12 variants.
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const neetUGBiologySynonymRedirects = [
+  // National AEO hub aliases
+  {
+    source: '/neet-biology-tutor',
+    destination: '/best-neet-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tutor-neet',
+    destination: '/best-neet-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/top-neet-biology-tutor',
+    destination: '/best-neet-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/aiims-biology-tutor-neet',
+    destination: '/best-neet-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/best-neet-biology-online-tutor',
+    destination: '/best-neet-biology-tutor',
+    permanent: true,
+  },
+  // Class 11 / Class 12 aliases
+  {
+    source: '/class-11-neet-biology-tutor',
+    destination: '/best-neet-biology-tutor-class-11',
+    permanent: true,
+  },
+  {
+    source: '/class-12-neet-biology-tutor',
+    destination: '/best-neet-biology-tutor-class-12',
+    permanent: true,
+  },
+  {
+    source: '/neet-biology-tutor-11',
+    destination: '/best-neet-biology-tutor-class-11',
+    permanent: true,
+  },
+  {
+    source: '/neet-biology-tutor-12',
+    destination: '/best-neet-biology-tutor-class-12',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tutor-class-11-neet',
+    destination: '/best-neet-biology-tutor-class-11',
+    permanent: true,
+  },
+  {
+    source: '/best-biology-tutor-class-12-neet',
+    destination: '/best-neet-biology-tutor-class-12',
+    permanent: true,
+  },
+  // Comparison page aliases
+  {
+    source: '/aakash-vs-cerebrum-neet-biology',
+    destination: '/cerebrum-vs-aakash-neet-biology',
+    permanent: true,
+  },
+  {
+    source: '/allen-vs-cerebrum-neet-biology',
+    destination: '/cerebrum-vs-allen-neet-biology',
+    permanent: true,
+  },
+  {
+    source: '/unacademy-vs-cerebrum-neet-biology',
+    destination: '/cerebrum-vs-unacademy-neet-biology',
+    permanent: true,
+  },
+]
+
+// ============================================
+// NEET Foundation Class 9-10 synonyms (May 2026)
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const neetFoundationSynonymRedirects = [
+  // AEO hub aliases
+  {
+    source: '/neet-foundation-tutor',
+    destination: '/best-neet-foundation-tutor',
+    permanent: true,
+  },
+  {
+    source: '/best-foundation-tutor-neet',
+    destination: '/best-neet-foundation-tutor',
+    permanent: true,
+  },
+  {
+    source: '/pre-neet-foundation-tutor',
+    destination: '/best-neet-foundation-tutor',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-class-9-10',
+    destination: '/best-neet-foundation-tutor',
+    permanent: true,
+  },
+  // Class 9 / Class 10 AEO aliases
+  {
+    source: '/neet-foundation-9',
+    destination: '/best-neet-foundation-class-9',
+    permanent: true,
+  },
+  {
+    source: '/neet-foundation-10',
+    destination: '/best-neet-foundation-class-10',
+    permanent: true,
+  },
+  {
+    source: '/best-class-9-neet-foundation',
+    destination: '/best-neet-foundation-class-9',
+    permanent: true,
+  },
+  {
+    source: '/best-class-10-neet-foundation',
+    destination: '/best-neet-foundation-class-10',
+    permanent: true,
+  },
+  // Delhi page aliases
+  {
+    source: '/neet-foundation-delhi',
+    destination: '/best-neet-foundation-tutor',
+    permanent: true,
+  },
+  {
+    source: '/class-9-foundation-delhi',
+    destination: '/neet-foundation-class-9-delhi',
+    permanent: true,
+  },
+  {
+    source: '/class-10-foundation-delhi',
+    destination: '/neet-foundation-class-10-delhi',
+    permanent: true,
+  },
+  // Comparison aliases
+  {
+    source: '/aakash-scholastics-vs-cerebrum',
+    destination: '/cerebrum-vs-aakash-foundation',
+    permanent: true,
+  },
+  {
+    source: '/aakash-foundation-vs-cerebrum',
+    destination: '/cerebrum-vs-aakash-foundation',
+    permanent: true,
+  },
+]

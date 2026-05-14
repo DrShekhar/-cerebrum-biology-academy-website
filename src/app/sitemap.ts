@@ -348,6 +348,12 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/best-dat-biology-tutor' ||
     path === '/best-gamsat-biology-tutor' ||
     path === '/best-usmle-step-1-biology-tutor' ||
+    path === '/best-neet-biology-tutor' ||
+    path === '/best-neet-biology-tutor-class-11' ||
+    path === '/best-neet-biology-tutor-class-12' ||
+    path === '/best-neet-foundation-tutor' ||
+    path === '/best-neet-foundation-class-9' ||
+    path === '/best-neet-foundation-class-10' ||
     path === '/best-usabo-coach' ||
     path === '/best-inbo-coach' ||
     path === '/best-ibo-preparation' ||
@@ -5808,6 +5814,82 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/first-aid-step-1-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    // NEET UG Biology AEO cluster (national hubs + Class 11/12 specific
+    // + biology-specific competitor comparisons). AEO hubs at 0.92.
+    {
+      url: `${baseUrl}/best-neet-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/best-neet-biology-tutor-class-11`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/best-neet-biology-tutor-class-12`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/cerebrum-vs-aakash-neet-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/cerebrum-vs-allen-neet-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/cerebrum-vs-unacademy-neet-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    // NEET Foundation Class 9 & 10 cluster — AEO hubs + Delhi city
+    // pages + Aakash Scholastics comparison.
+    {
+      url: `${baseUrl}/best-neet-foundation-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/best-neet-foundation-class-9`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/best-neet-foundation-class-10`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-9-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-10-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/cerebrum-vs-aakash-foundation`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.85,
