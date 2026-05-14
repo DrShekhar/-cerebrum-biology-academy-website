@@ -2134,6 +2134,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92,
     },
+    // CBO Canadian Biology Olympiad hub (P0 May 2026)
+    {
+      url: `${baseUrl}/best-cbo-coach`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
     // Delhi NCR canonical hub (P0 fix May 2026)
     {
       url: `${baseUrl}/neet-coaching-delhi`,

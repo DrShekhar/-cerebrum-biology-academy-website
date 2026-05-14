@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import PageContent from './PageContent'
 import Script from 'next/script'
 
@@ -6,12 +7,20 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Mock Test 2026 | Free Online | 90 Questions',
-  description: 'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEET readiness. By AIIMS faculty.',
-  keywords: ['NEET biology mock test', 'free NEET test online', 'NEET practice test biology', 'NEET 2026 mock test', 'biology test series NEET'],
+  description:
+    'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEET readiness. By AIIMS faculty.',
+  keywords: [
+    'NEET biology mock test',
+    'free NEET test online',
+    'NEET practice test biology',
+    'NEET 2026 mock test',
+    'biology test series NEET',
+  ],
   openGraph: {
     title: 'NEET Biology Mock Test 2026 | Free Online | 90 Questions',
     images: ['/og-image.jpg'],
-    description: 'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEET readiness. By AIIMS faculty.',
+    description:
+      'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEET readiness. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-mock-test`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -20,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Mock Test 2026',
-    description: 'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEE',
+    description:
+      'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEE',
   },
   alternates: { canonical: `${BASE_URL}/free-neet-biology-mock-test` },
 }
@@ -59,7 +69,20 @@ const faqSchema = {
 export default function FreeNeetBiologyMockTestPage() {
   return (
     <>
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'NEET Biology Mock Tests',
+          'NEET Biology Practice MCQs',
+          'NEET Biology PYQ Practice',
+          'Free NEET Resources',
+          'NEET Biology Sample Papers',
+        ]}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageContent />
     </>
   )

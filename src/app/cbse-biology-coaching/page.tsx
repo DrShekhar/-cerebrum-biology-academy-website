@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -29,6 +30,15 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'CBSE Class 11 Biology',
+          'CBSE Class 12 Biology',
+          'CBSE Board Exam Biology',
+          'NCERT Biology',
+          'CBSE Boards + NEET Dual Prep',
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

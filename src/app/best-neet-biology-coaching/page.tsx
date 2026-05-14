@@ -1,17 +1,21 @@
 import { Metadata } from 'next'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import BestNEETBiologyCoachingContent from './BestNEETBiologyCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 export const metadata: Metadata = {
   title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
-  description: 'Compare the best NEET biology coaching institutes in India. Cerebrum vs Allen vs Aakash vs Physics Wallah. AIIMS faculty, small batches, 98% success rate. Book FREE demo.',
-  keywords: 'best neet biology coaching, neet biology coaching comparison, cerebrum vs allen, neet coaching fees, best biology coaching for neet, neet biology coaching online',
+  description:
+    'Compare the best NEET biology coaching institutes in India. Cerebrum vs Allen vs Aakash vs Physics Wallah. AIIMS faculty, small batches, 98% success rate. Book FREE demo.',
+  keywords:
+    'best neet biology coaching, neet biology coaching comparison, cerebrum vs allen, neet coaching fees, best biology coaching for neet, neet biology coaching online',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/best-neet-biology-coaching',
   },
   openGraph: {
     title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
-    description: 'Compare 7 top NEET biology coaching institutes. AIIMS faculty, 10-12 batch size, 98% success. See why students switch to Cerebrum.',
+    description:
+      'Compare 7 top NEET biology coaching institutes. AIIMS faculty, 10-12 batch size, 98% success. See why students switch to Cerebrum.',
     url: 'https://cerebrumbiologyacademy.com/best-neet-biology-coaching',
     type: 'website',
   },
@@ -92,16 +96,48 @@ export default function BestNEETBiologyCoachingPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'Best NEET Biology Coaching', item: 'https://cerebrumbiologyacademy.com/best-neet-biology-coaching' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Best NEET Biology Coaching',
+        item: 'https://cerebrumbiologyacademy.com/best-neet-biology-coaching',
+      },
     ],
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'Best NEET Biology Coaching',
+          'NEET Biology 360/720',
+          'NCERT Class 11 Biology',
+          'NCERT Class 12 Biology',
+          'Human Physiology',
+          'Genetics and Evolution',
+          'Plant Physiology',
+          'Cell Biology',
+          'Ecology',
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <BestNEETBiologyCoachingContent faqs={faqs} />
     </>
   )

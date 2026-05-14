@@ -1,5 +1,6 @@
 'use client'
 
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import React from 'react'
 import {
   BookOpen,
@@ -129,6 +130,16 @@ export default function IBBiologyTutorPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'IB Biology HL',
+          'IB Biology SL',
+          'IB Biology 2025 Syllabus',
+          'IB Biology Internal Assessment',
+          'IB Biology Extended Essay',
+          'IB Themes A-D',
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -145,37 +156,25 @@ export default function IBBiologyTutorPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-green-800/20 to-transparent"></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div
-             
-             
-              className="text-center animate-fadeInUp"
-            >
-              <div
-                className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white mb-6 animate-fadeInUp"
-              >
+            <div className="text-center animate-fadeInUp">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white mb-6 animate-fadeInUp">
                 <Award className="w-5 h-5" />
                 <span className="text-sm font-semibold">IB Certified Methods</span>
               </div>
 
-              <h1
-                className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeInUp"
-              >
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeInUp">
                 IB Biology Tutor
                 <br />
                 <span className="text-green-100">HL & SL Expert Tutoring</span>
               </h1>
 
-              <p
-                className="text-xl text-green-50 mb-8 max-w-3xl mx-auto animate-fadeInUp"
-              >
+              <p className="text-xl text-green-50 mb-8 max-w-3xl mx-auto animate-fadeInUp">
                 Master the IB Diploma Programme Biology with personalized tutoring from experienced
                 educators. Specialized support for both Higher Level and Standard Level students.
               </p>
 
               {/* Stats */}
-              <div
-                className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12 animate-fadeInUp"
-              >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12 animate-fadeInUp">
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl font-bold text-white mb-2">250+</div>
                   <div className="text-green-50">IB Students Taught</div>
@@ -191,11 +190,11 @@ export default function IBBiologyTutorPage() {
               </div>
 
               {/* CTAs */}
-              <div
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp"
-              >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20IB%20Biology%20(HL%2FSL).%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20IB%20Biology%20(HL%2FSL).%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-50 transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   Book Free Demo Class
@@ -222,11 +221,7 @@ export default function IBBiologyTutorPage() {
         {/* HL vs SL Comparison Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div
-             
-             
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 IB Biology: HL vs SL
               </h2>
@@ -237,11 +232,7 @@ export default function IBBiologyTutorPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Standard Level */}
-              <div
-               
-               
-                className="bg-white rounded-3xl p-8 shadow-xl border-2 border-green-200 animate-fadeInUp"
-              >
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-green-200 animate-fadeInUp">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="bg-green-100 p-3 rounded-xl">
                     <BookOpen className="w-8 h-8 text-green-600" />
@@ -296,11 +287,7 @@ export default function IBBiologyTutorPage() {
               </div>
 
               {/* Higher Level */}
-              <div
-               
-               
-                className="bg-[#4a5d4a] rounded-3xl p-8 shadow-xl border-2 border-green-500 relative overflow-hidden animate-fadeInUp"
-              >
+              <div className="bg-[#4a5d4a] rounded-3xl p-8 shadow-xl border-2 border-green-500 relative overflow-hidden animate-fadeInUp">
                 <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
                   RECOMMENDED
                 </div>
@@ -368,11 +355,7 @@ export default function IBBiologyTutorPage() {
         {/* Core Topics Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div
-             
-             
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Core Topics Coverage
               </h2>
@@ -381,11 +364,7 @@ export default function IBBiologyTutorPage() {
               </p>
             </div>
 
-            <div
-             
-             
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeInUp"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeInUp">
               {[
                 {
                   icon: Microscope,
@@ -449,14 +428,8 @@ export default function IBBiologyTutorPage() {
         {/* Additional HL Topics Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
           <div className="max-w-7xl mx-auto">
-            <div
-             
-             
-              className="text-center mb-16 animate-fadeInUp"
-            >
-              <div
-                className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 animate-fadeInUp"
-              >
+            <div className="text-center mb-16 animate-fadeInUp">
+              <div className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 animate-fadeInUp">
                 <Star className="w-4 h-4" />
                 HIGHER LEVEL ONLY
               </div>
@@ -468,11 +441,7 @@ export default function IBBiologyTutorPage() {
               </p>
             </div>
 
-            <div
-             
-             
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeInUp"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeInUp">
               {[
                 {
                   title: 'Nucleic Acids',
@@ -550,11 +519,7 @@ export default function IBBiologyTutorPage() {
         {/* Assessment Components Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div
-             
-             
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Assessment Components
               </h2>
@@ -563,11 +528,7 @@ export default function IBBiologyTutorPage() {
               </p>
             </div>
 
-            <div
-             
-             
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp">
               {[
                 {
                   title: 'Paper 1',
@@ -634,11 +595,7 @@ export default function IBBiologyTutorPage() {
         {/* IA Support Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#4a5d4a]">
           <div className="max-w-7xl mx-auto">
-            <div
-             
-             
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl font-bold text-white mb-4 animate-fadeInUp">
                 Internal Assessment (IA) Support
               </h2>
@@ -676,8 +633,6 @@ export default function IBBiologyTutorPage() {
               ].map((item, index) => (
                 <div
                   key={index}
-                 
-                 
                   className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 animate-fadeInUp"
                 >
                   <div className="bg-white/20 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
@@ -702,11 +657,7 @@ export default function IBBiologyTutorPage() {
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div
-             
-             
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Why Choose Our IB Biology Tutoring
               </h2>
@@ -715,11 +666,7 @@ export default function IBBiologyTutorPage() {
               </p>
             </div>
 
-            <div
-             
-             
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeInUp"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeInUp">
               {[
                 {
                   icon: Target,
@@ -776,11 +723,7 @@ export default function IBBiologyTutorPage() {
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
           <div className="max-w-4xl mx-auto">
-            <div
-             
-             
-              className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Frequently Asked Questions
               </h2>
@@ -789,11 +732,7 @@ export default function IBBiologyTutorPage() {
               </p>
             </div>
 
-            <div
-             
-             
-              className="space-y-4 animate-fadeInUp"
-            >
+            <div className="space-y-4 animate-fadeInUp">
               {[
                 {
                   question: 'What is the difference between IB Biology HL and SL?',
@@ -851,24 +790,19 @@ export default function IBBiologyTutorPage() {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#4a5d4a]">
           <div className="max-w-4xl mx-auto text-center">
-            <div
-             
-             
-             className="animate-fadeInUp">
-              <h2
-                className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fadeInUp"
-              >
+            <div className="animate-fadeInUp">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fadeInUp">
                 Ready to Excel in IB Biology?
               </h2>
               <p className="text-xl text-green-50 mb-8 animate-fadeInUp">
                 Join 250+ successful IB Biology students. Book your free demo class today!
               </p>
 
-              <div
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fadeInUp"
-              >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fadeInUp">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20IB%20Biology%20(HL%2FSL).%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20IB%20Biology%20(HL%2FSL).%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-50 transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   Book Free Demo Class
@@ -889,9 +823,7 @@ export default function IBBiologyTutorPage() {
                 </button>
               </div>
 
-              <div
-                className="flex items-center justify-center gap-6 text-green-50 animate-fadeInUp"
-              >
+              <div className="flex items-center justify-center gap-6 text-green-50 animate-fadeInUp">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
                   <span>No commitment required</span>
