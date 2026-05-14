@@ -21,13 +21,18 @@ export type NEETFeederSchoolKey =
   | 'modern-school-barakhamba-delhi'
   | 'springdales-school-delhi'
   | 'mothers-international-delhi'
+  | 'dps-mathura-road-delhi'
+  | 'tagore-international-delhi'
   | 'gd-goenka-gurugram'
   | 'suncity-school-gurugram'
   | 'shriram-school-aravali-gurugram'
   | 'pathways-world-aravali-gurugram'
+  | 'heritage-xperiential-gurugram'
+  | 'dps-sector-45-gurugram'
   | 'dps-noida'
   | 'cambridge-international-noida'
   | 'amity-international-noida'
+  | 'lotus-valley-international-noida'
   | 'apeejay-school-faridabad'
   | 'delhi-public-school-faridabad'
   | 'dps-ghaziabad'
@@ -277,6 +282,34 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
       "Mother's International is across the road from AIIMS — symbolically the closest school to India's premier medical institution. NEET preparation is a natural fit.",
     tier: 'elite',
   },
+  'dps-mathura-road-delhi': {
+    slug: 'neet-coaching-dps-mathura-road-delhi',
+    schoolName: 'Delhi Public School (DPS) Mathura Road',
+    shortName: 'DPS Mathura Road',
+    city: 'South-East Delhi',
+    cityHubUrl: '/neet-coaching-delhi',
+    curriculum: 'CBSE',
+    area: 'New Friends Colony, Mathura Road',
+    nearestCerebrumCentre: 'South Extension (5 km · 18 min)',
+    metroNote: 'Nehru Place Metro (Violet Line) — 3 km',
+    feederContext:
+      'DPS Mathura Road serves New Friends Colony, Sukhdev Vihar and East-of-Kailash residents. Strong CBSE Class 12 science cohort with consistent annual NEET selections.',
+    tier: 'premium',
+  },
+  'tagore-international-delhi': {
+    slug: 'neet-coaching-tagore-international-delhi',
+    schoolName: 'Tagore International School',
+    shortName: 'Tagore International',
+    city: 'Vasant Vihar, Delhi',
+    cityHubUrl: '/neet-coaching-delhi',
+    curriculum: 'CBSE',
+    area: 'Vasant Vihar',
+    nearestCerebrumCentre: 'South Extension (7 km · 22 min) · Green Park (5 km · 15 min)',
+    metroNote: 'Vasant Vihar Metro (Magenta Line) — 1 km',
+    feederContext:
+      'Tagore International Vasant Vihar serves diplomatic-family and senior-bureaucrat children. Class 12 science cohort typically targets AIIMS Delhi, JIPMER, MAMC and overseas premed.',
+    tier: 'elite',
+  },
   'gd-goenka-gurugram': {
     slug: 'neet-coaching-gd-goenka-gurugram',
     schoolName: 'GD Goenka World School',
@@ -333,6 +366,34 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
       'Pathways Aravali is a fully IB school. NEET aspirants here are typically IB Biology HL students combining IB premed prep with NEET via the NRI / OCI quota route at Indian medical colleges.',
     tier: 'elite',
   },
+  'heritage-xperiential-gurugram': {
+    slug: 'neet-coaching-heritage-xperiential-gurugram',
+    schoolName: 'Heritage Xperiential Learning School',
+    shortName: 'Heritage Xperiential Gurugram',
+    city: 'Sector 62, Gurugram',
+    cityHubUrl: '/neet-coaching-gurugram',
+    curriculum: 'CBSE + IGCSE / IB Diploma',
+    area: 'Sector 62, Gurugram',
+    nearestCerebrumCentre: 'Gurugram Sector 51 (3 km · 10 min)',
+    metroNote: 'Sector 54 Chowk (Rapid Metro) — 3 km',
+    feederContext:
+      "Heritage Xperiential is among Gurugram's academically rigorous experiential-learning schools. Multi-curriculum: CBSE + IGCSE + IB Diploma streams. NEET cohort typically combines CBSE Class 12 + IB Biology HL students.",
+    tier: 'premium',
+  },
+  'dps-sector-45-gurugram': {
+    slug: 'neet-coaching-dps-sector-45-gurugram',
+    schoolName: 'Delhi Public School (DPS) Sector 45',
+    shortName: 'DPS Sector 45 Gurugram',
+    city: 'Sector 45, Gurugram',
+    cityHubUrl: '/neet-coaching-gurugram',
+    curriculum: 'CBSE',
+    area: 'Sector 45, Gurugram',
+    nearestCerebrumCentre: 'Gurugram Sector 51 (5 km · 12 min)',
+    metroNote: 'HUDA City Centre Metro (Yellow Line) — 5 km',
+    feederContext:
+      "DPS Sector 45 is among Gurugram's top-tier CBSE schools, serving DLF Phase 4–5 and Golf Course Road residential clusters. Strong Class 12 science cohort with consistent NEET selections.",
+    tier: 'premium',
+  },
   'dps-noida': {
     slug: 'neet-coaching-dps-noida',
     schoolName: 'Delhi Public School (DPS) Noida',
@@ -373,6 +434,20 @@ export const neetFeederSchools: Record<NEETFeederSchoolKey, NEETFeederSchool> = 
     metroNote: 'Botanical Garden Metro (Blue Line) — 3 km',
     feederContext:
       'Amity International Noida is one of multiple Amity schools across NCR. Strong CBSE Class 12 science cohort, NEET-bound students typically target AIIMS Delhi and Delhi-region medical colleges.',
+    tier: 'premium',
+  },
+  'lotus-valley-international-noida': {
+    slug: 'neet-coaching-lotus-valley-international-noida',
+    schoolName: 'Lotus Valley International School',
+    shortName: 'Lotus Valley Noida',
+    city: 'Sector 126, Noida',
+    cityHubUrl: '/neet-coaching-noida',
+    curriculum: 'CBSE + IGCSE / IB Diploma',
+    area: 'Sector 126, Noida',
+    nearestCerebrumCentre: 'Noida Sector 62 (12 km · 28 min) · Online preferred',
+    metroNote: 'Botanical Garden Metro (Blue Line) — 6 km',
+    feederContext:
+      'Lotus Valley International is a premium multi-curriculum school in Noida (CBSE + IGCSE + IB Diploma). NEET cohort combines CBSE-stream Class 12 + IB Biology HL students considering Indian medical colleges via NRI quota.',
     tier: 'premium',
   },
   'apeejay-school-faridabad': {

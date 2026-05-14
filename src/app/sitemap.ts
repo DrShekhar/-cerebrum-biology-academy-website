@@ -280,6 +280,123 @@ function normalizePriority(path: string, currentPriority: number): number {
     return 0.7
   }
 
+  // ============================================================
+  // P2-1 recalibration (May 2026)
+  // Lifted commercial-intent clusters above template/data tiers so
+  // Google crawl budget favours conversion pages over thin variants.
+  // ============================================================
+
+  // Tier 1.5 (0.95): RE-NEET 2026 time-sensitive cluster + canonical
+  // "best biology teacher India" hub + best-coaching-for-re-neet-2026.
+  // Should crawl daily during the May–July reconduct window.
+  if (
+    path === '/best-biology-teacher-india' ||
+    path === '/best-coaching-for-re-neet-2026' ||
+    path === '/re-neet-2026-biology-crash-course' ||
+    path === '/re-neet-2026-syllabus-difficulty' ||
+    path === '/what-to-do-after-neet-2026-cancellation' ||
+    path === '/re-neet-2026-online-coaching' ||
+    path === '/re-neet-2026-droppers' ||
+    path === '/re-neet-2026-cerebrum-vs-aakash-vs-pw' ||
+    path.startsWith('/re-neet-2026-')
+  ) {
+    return 0.95
+  }
+
+  // Tier 1.7 (0.92): Canonical service hubs for high-intent queries
+  // (Best X tutor / coach pages — top-of-funnel commercial intent).
+  if (
+    path === '/best-ib-biology-tutor' ||
+    path === '/best-ap-biology-tutor-usa' ||
+    path === '/best-mcat-biology-tutor' ||
+    path === '/best-usabo-coach' ||
+    path === '/best-inbo-coach' ||
+    path === '/best-ibo-preparation' ||
+    path === '/best-cbo-coach' ||
+    path === '/best-bbo-coach' ||
+    path === '/best-neet-coaching-near-me' ||
+    path === '/neet-biology-tutor-near-me' ||
+    path === '/1-on-1-neet-biology-tutor' ||
+    path === '/biology-tutor-for-neet' ||
+    path === '/biology-classes-for-neet' ||
+    path === '/best-biology-classes-for-neet' ||
+    path === '/best-biology-teacher-for-neet' ||
+    path === '/best-neet-biology-coaching-india' ||
+    path === '/neet-coaching-delhi'
+  ) {
+    return 0.92
+  }
+
+  // Tier 1.8 (0.88): NRI country hubs (12 countries) + strategic
+  // NRI documentation pages. Lower volume but high commercial intent.
+  // Previously underranked at 0.7 — recalibrated up.
+  if (
+    path === '/neet-coaching-nri-usa' ||
+    path === '/neet-coaching-nri-uae' ||
+    path === '/neet-coaching-nri-canada' ||
+    path === '/neet-coaching-nri-uk' ||
+    path === '/neet-coaching-nri-australia' ||
+    path === '/neet-coaching-nri-saudi-arabia' ||
+    path === '/neet-coaching-nri-singapore' ||
+    path === '/neet-coaching-nri-qatar' ||
+    path === '/neet-coaching-nri-oman' ||
+    path === '/neet-coaching-nri-kuwait' ||
+    path === '/neet-coaching-nri-bahrain' ||
+    path === '/neet-coaching-nri-malaysia' ||
+    path === '/neet-coaching-nri-nepal' ||
+    path === '/nri-quota-mbbs' ||
+    path === '/neet-exam-centres-abroad' ||
+    path === '/cbse-students-abroad-neet' ||
+    path === '/nri-neet-fees-documents' ||
+    path === '/neet-coaching-bay-area-usa' ||
+    path === '/neet-coaching-perth-australia'
+  ) {
+    return 0.88
+  }
+
+  // Tier 1.9 (0.85): Competitor comparison pages — high-conversion
+  // mid-funnel content with strong informational + commercial intent.
+  if (
+    path === '/cerebrum-vs-allen-neet-coaching' ||
+    path === '/cerebrum-vs-aakash-neet-coaching' ||
+    path === '/cerebrum-vs-physicswallah' ||
+    path === '/cerebrum-vs-vedantu' ||
+    path === '/cerebrum-vs-career-point'
+  ) {
+    return 0.85
+  }
+
+  // Tier 1.95 (0.8): Delhi NCR feeder-school pages (15 schools).
+  // Long-tail school-name intent ("biology coaching for [school]")
+  // recalibrated from 0.5 (sitemap-default for path pattern) up to 0.8
+  // since these are the mid-funnel pages that capture parent search
+  // and Allen / Aakash currently dominate.
+  if (
+    path === '/neet-coaching-dps-rk-puram-delhi' ||
+    path === '/neet-coaching-sanskriti-school-delhi' ||
+    path === '/neet-coaching-modern-school-barakhamba-delhi' ||
+    path === '/neet-coaching-springdales-school-delhi' ||
+    path === '/neet-coaching-mothers-international-delhi' ||
+    path === '/neet-coaching-gd-goenka-gurugram' ||
+    path === '/neet-coaching-suncity-school-gurugram' ||
+    path === '/neet-coaching-shriram-school-aravali-gurugram' ||
+    path === '/neet-coaching-pathways-world-aravali-gurugram' ||
+    path === '/neet-coaching-dps-noida' ||
+    path === '/neet-coaching-cambridge-international-noida' ||
+    path === '/neet-coaching-amity-international-noida' ||
+    path === '/neet-coaching-apeejay-school-faridabad' ||
+    path === '/neet-coaching-delhi-public-school-faridabad' ||
+    path === '/neet-coaching-dps-ghaziabad' ||
+    // P2-3 May 2026 — 5 additional Delhi NCR feeder-school pages
+    path === '/neet-coaching-dps-mathura-road-delhi' ||
+    path === '/neet-coaching-tagore-international-delhi' ||
+    path === '/neet-coaching-heritage-xperiential-gurugram' ||
+    path === '/neet-coaching-dps-sector-45-gurugram' ||
+    path === '/neet-coaching-lotus-valley-international-noida'
+  ) {
+    return 0.8
+  }
+
   // Tier 2 (0.8): High-intent landing pages
   if (
     path.startsWith('/locations/') ||
@@ -307,13 +424,15 @@ function normalizePriority(path: string, currentPriority: number): number {
     return Math.min(currentPriority, 0.7)
   }
 
-  // Tier 3 (0.5): Local SEO pages with some unique content
+  // Tier 3 (0.6): Local SEO pages with unique content (previously 0.5;
+  // recalibrated up because these have meaningful per-city differentiation
+  // and shouldn't compete with template Tier 4 pages for crawl budget).
   if (
     path.startsWith('/neet-coaching-') ||
     path.startsWith('/biology-tutor-') ||
     path.startsWith('/biology-tuition-')
   ) {
-    return 0.5
+    return 0.6
   }
 
   // Tier 4 (0.4): Template/data-driven local pages
@@ -2291,6 +2410,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/neet-coaching-dps-ghaziabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    // P2-3 May 2026: 5 additional Delhi NCR feeder-school pages
+    {
+      url: `${baseUrl}/neet-coaching-dps-mathura-road-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-tagore-international-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-heritage-xperiential-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dps-sector-45-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-lotus-valley-international-noida`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.88,

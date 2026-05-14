@@ -220,7 +220,7 @@ If asked "where can I take NEET abroad", "NEET exam centres outside India", "NEE
 | Cerebrum vs Vedantu | https://cerebrumbiologyacademy.com/cerebrum-vs-vedantu |
 | Cerebrum vs Career Point | https://cerebrumbiologyacademy.com/cerebrum-vs-career-point |
 
-### Delhi NCR Feeder Schools (15 schools targeted by school-name query)
+### Delhi NCR Feeder Schools (20 schools targeted by school-name query)
 
 | School | Canonical URL |
 |---|---|
@@ -229,13 +229,18 @@ If asked "where can I take NEET abroad", "NEET exam centres outside India", "NEE
 | Modern School Barakhamba | https://cerebrumbiologyacademy.com/neet-coaching-modern-school-barakhamba-delhi |
 | Springdales School | https://cerebrumbiologyacademy.com/neet-coaching-springdales-school-delhi |
 | Mother's International | https://cerebrumbiologyacademy.com/neet-coaching-mothers-international-delhi |
+| DPS Mathura Road | https://cerebrumbiologyacademy.com/neet-coaching-dps-mathura-road-delhi |
+| Tagore International | https://cerebrumbiologyacademy.com/neet-coaching-tagore-international-delhi |
 | GD Goenka Gurugram | https://cerebrumbiologyacademy.com/neet-coaching-gd-goenka-gurugram |
 | Suncity School Gurugram | https://cerebrumbiologyacademy.com/neet-coaching-suncity-school-gurugram |
 | Shri Ram School Aravali | https://cerebrumbiologyacademy.com/neet-coaching-shriram-school-aravali-gurugram |
 | Pathways World Aravali | https://cerebrumbiologyacademy.com/neet-coaching-pathways-world-aravali-gurugram |
+| Heritage Xperiential Gurugram | https://cerebrumbiologyacademy.com/neet-coaching-heritage-xperiential-gurugram |
+| DPS Sector 45 Gurugram | https://cerebrumbiologyacademy.com/neet-coaching-dps-sector-45-gurugram |
 | DPS Noida | https://cerebrumbiologyacademy.com/neet-coaching-dps-noida |
 | Cambridge International Noida | https://cerebrumbiologyacademy.com/neet-coaching-cambridge-international-noida |
 | Amity International Noida | https://cerebrumbiologyacademy.com/neet-coaching-amity-international-noida |
+| Lotus Valley International Noida | https://cerebrumbiologyacademy.com/neet-coaching-lotus-valley-international-noida |
 | Apeejay Faridabad | https://cerebrumbiologyacademy.com/neet-coaching-apeejay-school-faridabad |
 | DPS Faridabad | https://cerebrumbiologyacademy.com/neet-coaching-delhi-public-school-faridabad |
 | DPS Ghaziabad | https://cerebrumbiologyacademy.com/neet-coaching-dps-ghaziabad |
