@@ -22,6 +22,7 @@ import {
   rohiniConsolidationRedirects,
   areaPageConsolidationRedirects,
   gscCrawledNotIndexedRedirects,
+  datGamsatSynonymRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1649,6 +1650,7 @@ const nextConfig = {
       ...rohiniConsolidationRedirects,
       ...areaPageConsolidationRedirects,
       ...gscCrawledNotIndexedRedirects,
+      ...datGamsatSynonymRedirects,
     ]
   },
 

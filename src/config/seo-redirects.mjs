@@ -3910,3 +3910,122 @@ export const gscCrawledNotIndexedRedirects = [
   { source: '/mr', destination: '/', permanent: true },
   { source: '/pt', destination: '/', permanent: true },
 ]
+
+// ============================================
+// DAT + GAMSAT cluster synonyms (May 2026)
+// Funnels common keyword variants to the canonical hub / programme
+// pages built for /best-dat-biology-tutor and /best-gamsat-biology-tutor.
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const datGamsatSynonymRedirects = [
+  // DAT — synonyms funnel to AEO hub
+  { source: '/dat-biology-tutor', destination: '/best-dat-biology-tutor', permanent: true },
+  { source: '/best-dat-tutor', destination: '/best-dat-biology-tutor', permanent: true },
+  { source: '/dat-bio-tutor', destination: '/best-dat-biology-tutor', permanent: true },
+  { source: '/best-dat-bio-tutor', destination: '/best-dat-biology-tutor', permanent: true },
+  {
+    source: '/dat-biology-section-prep',
+    destination: '/dat-biology-preparation',
+    permanent: true,
+  },
+  { source: '/dat-bio-prep', destination: '/dat-biology-preparation', permanent: true },
+  { source: '/dat-bio-course', destination: '/dat-biology-preparation', permanent: true },
+  {
+    source: '/dat-survey-natural-sciences-biology',
+    destination: '/dat-biology-preparation',
+    permanent: true,
+  },
+  {
+    source: '/best-dat-bio-tutor-usa',
+    destination: '/best-dat-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/dat-biology-tutor-nj',
+    destination: '/dat-biology-tutor-new-jersey',
+    permanent: true,
+  },
+  {
+    source: '/dat-biology-tutor-sf',
+    destination: '/dat-biology-tutor-bay-area',
+    permanent: true,
+  },
+  {
+    source: '/dat-biology-tutor-san-francisco',
+    destination: '/dat-biology-tutor-bay-area',
+    permanent: true,
+  },
+
+  // GAMSAT — synonyms funnel to AEO hub
+  {
+    source: '/gamsat-biology-tutor',
+    destination: '/best-gamsat-biology-tutor',
+    permanent: true,
+  },
+  { source: '/best-gamsat-tutor', destination: '/best-gamsat-biology-tutor', permanent: true },
+  {
+    source: '/gamsat-bio-tutor',
+    destination: '/best-gamsat-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/gamsat-section-iii-biology',
+    destination: '/gamsat-section-3-biology-prep',
+    permanent: true,
+  },
+  {
+    source: '/gamsat-section-3-biology',
+    destination: '/gamsat-section-3-biology-prep',
+    permanent: true,
+  },
+  {
+    source: '/gamsat-biology-coaching',
+    destination: '/gamsat-section-3-biology-prep',
+    permanent: true,
+  },
+  {
+    source: '/gamsat-bio-prep',
+    destination: '/gamsat-section-3-biology-prep',
+    permanent: true,
+  },
+  {
+    source: '/gamsat-reasoning-biological-sciences',
+    destination: '/gamsat-section-3-biology-prep',
+    permanent: true,
+  },
+  {
+    source: '/best-gamsat-biology-tutor-uk',
+    destination: '/best-gamsat-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/best-gamsat-biology-tutor-australia',
+    destination: '/best-gamsat-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/gamsat-biology-tutor-melbourne',
+    destination: '/gamsat-biology-tutor-sydney',
+    permanent: true,
+  },
+  {
+    source: '/gamsat-biology-tutor-manchester',
+    destination: '/gamsat-biology-tutor-london',
+    permanent: true,
+  },
+  {
+    source: '/gamsat-biology-tutor-dublin',
+    destination: '/gamsat-biology-tutor-london',
+    permanent: true,
+  },
+  {
+    source: '/graduate-medicine-biology-tutor',
+    destination: '/best-gamsat-biology-tutor',
+    permanent: true,
+  },
+  {
+    source: '/uk-graduate-medicine-biology',
+    destination: '/best-gamsat-biology-tutor',
+    permanent: true,
+  },
+]

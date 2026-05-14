@@ -248,6 +248,28 @@ function normalizePriority(path: string, currentPriority: number): number {
     return 0.8
   }
 
+  // DAT cluster (US/Canada pre-dental). Programme hub at 0.85,
+  // city pages at 0.8. AEO hub /best-dat-biology-tutor handled at 0.92.
+  if (
+    path === '/dat-biology-preparation' ||
+    path === '/dat-biology-organic-chem-prep' ||
+    path === '/dat-perceptual-ability-biology'
+  ) {
+    return 0.85
+  }
+  if (path === '/dat-biology-tutor-new-jersey' || path === '/dat-biology-tutor-bay-area') {
+    return 0.8
+  }
+
+  // GAMSAT cluster (UK / Ireland / Australia graduate medicine).
+  // Programme hub at 0.85, city pages at 0.8.
+  if (path === '/gamsat-section-3-biology-prep') {
+    return 0.85
+  }
+  if (path === '/gamsat-biology-tutor-london' || path === '/gamsat-biology-tutor-sydney') {
+    return 0.8
+  }
+
   // India biology olympiad — hubs at 0.9 (NSEB / INBO are highest-tier
   // national-pathway content), cornerstone content at 0.85, per-school
   // pages at 0.7 matching the AP / IB school tier.
@@ -309,6 +331,8 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/best-ib-biology-tutor' ||
     path === '/best-ap-biology-tutor-usa' ||
     path === '/best-mcat-biology-tutor' ||
+    path === '/best-dat-biology-tutor' ||
+    path === '/best-gamsat-biology-tutor' ||
     path === '/best-usabo-coach' ||
     path === '/best-inbo-coach' ||
     path === '/best-ibo-preparation' ||
@@ -5670,6 +5694,70 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.85,
+    },
+    // DAT cluster (US/Canada pre-dental) — AEO hub at 0.92 (handled
+    // via normalizePriority), programme + section pages at 0.85, city
+    // pages at 0.8.
+    {
+      url: `${baseUrl}/best-dat-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/dat-biology-preparation`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/dat-biology-organic-chem-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/dat-perceptual-ability-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/dat-biology-tutor-new-jersey`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/dat-biology-tutor-bay-area`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    // GAMSAT cluster (UK / Ireland / Australia graduate medicine).
+    {
+      url: `${baseUrl}/best-gamsat-biology-tutor`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/gamsat-section-3-biology-prep`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/gamsat-biology-tutor-london`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/gamsat-biology-tutor-sydney`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/molecular-biology-tuition`,
