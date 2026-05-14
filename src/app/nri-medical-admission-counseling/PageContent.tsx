@@ -4,7 +4,7 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 const stats = [
   '500+ NRI students counseled',
   '98% admission success rate for qualified students',
-  '$99 - $599 USD pricing',
+  'Custom quote per family',
   '15% NRI quota expertise',
 ]
 
@@ -83,14 +83,24 @@ export function PageContent() {
         </div>
       </section>
 
+      {/* Counseling Service Tiers — Pricing on Request
+          Each family's counselling scope differs (college shortlist, document
+          prep, loan guidance, post-admission support). Pricing depends on
+          country of residence, NRI/OCI status, target college tier, and
+          scope of admission cycle support. We share a custom quote on the
+          discovery call — no public price list. */}
       <section className="py-12 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Program Pricing</h2>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">Counselling Service Tiers</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Every NRI family&apos;s admission journey is different. Pricing is custom-quoted on
+              the discovery call based on your scope, target colleges, and country of residence.
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold text-blue-600 mb-2">Basic Guide</h3>
-              <p className="text-3xl font-bold text-gray-900 mb-4">$99 USD</p>
-              <p className="text-sm text-gray-500 mb-4">Local currency at checkout</p>
+              <h3 className="text-xl font-bold text-blue-600 mb-4">Basic Guide</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">✓</span>
@@ -110,15 +120,13 @@ export function PageContent() {
                 </li>
               </ul>
               <SmartWhatsAppCTA
-                message="Interested in NRI Medical Admission Counseling - Basic Guide"
-                buttonText="Enroll Now"
+                message="I'd like a quote for NRI Medical Admission Counseling - Basic Guide"
+                buttonText="Get Quote"
                 className="w-full bg-green-500 hover:bg-green-600"
               />
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold text-blue-600 mb-2">Full Counseling</h3>
-              <p className="text-3xl font-bold text-gray-900 mb-4">$349 USD</p>
-              <p className="text-sm text-gray-500 mb-4">Local currency at checkout</p>
+            <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border-2 border-blue-100">
+              <h3 className="text-xl font-bold text-blue-600 mb-4">Full Counseling</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">✓</span>
@@ -142,15 +150,13 @@ export function PageContent() {
                 </li>
               </ul>
               <SmartWhatsAppCTA
-                message="Interested in NRI Medical Admission Counseling - Full Counseling"
-                buttonText="Enroll Now"
+                message="I'd like a quote for NRI Medical Admission Counseling - Full Counseling"
+                buttonText="Get Quote"
                 className="w-full bg-green-500 hover:bg-green-600"
               />
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold text-blue-600 mb-2">Premium Support</h3>
-              <p className="text-3xl font-bold text-gray-900 mb-4">$599 USD</p>
-              <p className="text-sm text-gray-500 mb-4">Local currency at checkout</p>
+              <h3 className="text-xl font-bold text-blue-600 mb-4">Premium Support</h3>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">✓</span>
@@ -174,16 +180,16 @@ export function PageContent() {
                 </li>
               </ul>
               <SmartWhatsAppCTA
-                message="Interested in NRI Medical Admission Counseling - Premium Support"
-                buttonText="Enroll Now"
+                message="I'd like a quote for NRI Medical Admission Counseling - Premium Support"
+                buttonText="Get Quote"
                 className="w-full bg-green-500 hover:bg-green-600"
               />
             </div>
           </div>
           <div className="mt-8 text-center">
             <SmartWhatsAppCTA
-              message="Compare NRI Medical Admission Counseling plans"
-              buttonText="Get Plan Comparison"
+              message="I'd like a custom counselling quote — please share details and a discovery call link"
+              buttonText="Talk to Counsellor"
               className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-bold text-white"
             />
           </div>
