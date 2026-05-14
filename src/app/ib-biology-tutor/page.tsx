@@ -1,6 +1,7 @@
 'use client'
 
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { CerebrumAggregateRating } from '@/components/seo/CerebrumAggregateRating'
 import React from 'react'
 import {
   BookOpen,
@@ -140,6 +141,7 @@ export default function IBBiologyTutorPage() {
           'IB Themes A-D',
         ]}
       />
+      <CerebrumAggregateRating />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

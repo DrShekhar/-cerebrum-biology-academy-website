@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { CerebrumAggregateRating } from '@/components/seo/CerebrumAggregateRating'
 import PageContent from './PageContent'
 import Script from 'next/script'
 
@@ -78,6 +79,7 @@ export default function FreeNeetBiologyMockTestPage() {
           'NEET Biology Sample Papers',
         ]}
       />
+      <CerebrumAggregateRating />
       <Script
         id="faq-schema"
         type="application/ld+json"

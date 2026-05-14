@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { CerebrumAggregateRating } from '@/components/seo/CerebrumAggregateRating'
 import BestNEETBiologyCoachingContent from './BestNEETBiologyCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
@@ -126,6 +127,7 @@ export default function BestNEETBiologyCoachingPage() {
           'Ecology',
         ]}
       />
+      <CerebrumAggregateRating />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

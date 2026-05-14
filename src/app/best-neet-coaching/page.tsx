@@ -1,6 +1,7 @@
 'use client'
 
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { CerebrumAggregateRating } from '@/components/seo/CerebrumAggregateRating'
 
 import {
   Trophy,
@@ -177,6 +178,7 @@ export default function BestNeetCoachingPage() {
           'NEET Coaching Delhi NCR',
         ]}
       />
+      <CerebrumAggregateRating />
       <div className="min-h-screen">
         {/* FAQ Schema */}
         <script

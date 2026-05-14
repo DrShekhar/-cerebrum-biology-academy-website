@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { CerebrumAggregateRating } from '@/components/seo/CerebrumAggregateRating'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export default function Page() {
           'CBSE Boards + NEET Dual Prep',
         ]}
       />
+      <CerebrumAggregateRating />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -1,6 +1,7 @@
 'use client'
 
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { CerebrumAggregateRating } from '@/components/seo/CerebrumAggregateRating'
 
 import {
   Trophy,
@@ -233,6 +234,7 @@ export default function CBOCoachingPage() {
           'University of Toronto CBO Syllabus',
         ]}
       />
+      <CerebrumAggregateRating />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 overflow-hidden">
