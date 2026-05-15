@@ -96,6 +96,24 @@ const config: BestVerticalConfig = {
       title: 'India → US College Admissions',
       href: '/ap-biology-tutor-india-for-us-college-admissions',
     },
+    // USABO + IBO bridge — AP-5 students targeting top US colleges
+    // (Stanford, MIT, Harvard, Caltech, Hopkins, Cornell) materially
+    // strengthen biology applications with USABO Semifinal / National
+    // Finalist credentials. AP Biology is the natural feeder into
+    // USABO; same Campbell + active-recall pedagogy carries over.
+    {
+      title: 'USABO Coaching (US Biology Olympiad)',
+      href: '/usabo-coaching',
+      note: 'AP-5 ↔ USABO bridge',
+    },
+    { title: 'Best USABO Coach', href: '/best-usabo-coach', note: 'AEO hub' },
+    {
+      title: 'IBO Preparation (International)',
+      href: '/ibo-preparation',
+      note: 'Global olympiad team',
+    },
+    { title: 'Best IBO Preparation Coach', href: '/best-ibo-preparation' },
+    { title: 'CBO Coaching (Canadian)', href: '/cbo-coaching', note: 'For Canadian AP students' },
   ],
   pricing: [
     {

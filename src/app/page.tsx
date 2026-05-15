@@ -14,6 +14,7 @@ import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 import { ContentFreshness } from '@/components/seo/ContentFreshness'
 import { GeoAwarePriceChip } from '@/components/home/GeoAwarePriceChip'
 import { GeoSuggestionBanner } from '@/components/home/GeoSuggestionBanner'
+import { CountryClassInjector } from '@/components/home/CountryClassInjector'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
@@ -177,6 +178,7 @@ export default function Home() {
           our International hub. JS-only render so SEO is unaffected (Google
           crawls and indexes the IN-default page as canonical). */}
       <GeoSuggestionBanner />
+      <CountryClassInjector />
 
       {/* 1. Hero Section - Server rendered for instant LCP */}
       {/* LCP Critical: No content-visibility, inline styles for immediate paint */}
@@ -188,8 +190,11 @@ export default function Home() {
       </section>
 
       {/* RE-NEET 2026 announcement — purely additive lead-magnet block.
-          Surfaces the news + crash-course CTA on high-traffic NEET hubs. */}
-      <section className="mx-auto max-w-4xl px-4">
+          Surfaces the news + crash-course CTA on high-traffic NEET hubs.
+          data-region="india-only" — hidden from non-IN visitors via
+          CountryClassInjector CSS. RE-NEET is a NTA-specific Indian
+          government announcement; irrelevant to US/UK/AU visitors. */}
+      <section className="mx-auto max-w-4xl px-4" data-region="india-only">
         <aside
           className="my-6 rounded-xl border-2 border-red-200 bg-red-50 p-5"
           aria-label="RE-NEET 2026 announcement"
@@ -246,8 +251,14 @@ export default function Home() {
         <CoursesSection />
       </section>
 
-      {/* 4b. Biology Olympiads callout — cross-sell to olympiad funnel */}
-      <section className="content-visibility-auto-sm bg-slate-950 py-14 text-white md:py-20">
+      {/* 4b. Biology Olympiads callout — cross-sell to olympiad funnel.
+          data-region="olympiads" — gets a green border emphasis for
+          Americas + Commonwealth visitors (USABO/IBO/BBO/CBO are local
+          olympiad pathways relevant to AP/A-Level high schoolers). */}
+      <section
+        className="content-visibility-auto-sm bg-slate-950 py-14 text-white md:py-20"
+        data-region="olympiads"
+      >
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-8 lg:grid-cols-5 lg:items-center lg:gap-12">
             <div className="lg:col-span-3">
@@ -328,8 +339,10 @@ export default function Home() {
         <MCQPromoBanner />
       </section>
 
-      {/* 8.6 International Programs — for NRI/A-Level/IB/IGCSE/AP students */}
-      <section className="content-visibility-auto-sm">
+      {/* 8.6 International Programs — for NRI/A-Level/IB/IGCSE/AP students.
+          data-region="international" — gets indigo border emphasis for
+          non-IN visitors via CountryClassInjector CSS. */}
+      <section className="content-visibility-auto-sm" data-region="international">
         <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-violet-50 py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-10">
@@ -446,8 +459,10 @@ export default function Home() {
       {/* 8.7 Advanced Medical Pathways + NEET Foundation — surfaces newer
           AEO clusters (MCAT/DAT/GAMSAT/USMLE Step 1) plus the early-pathway
           Class 9-10 Foundation track. These verticals previously lived
-          only in llms.txt and were invisible to on-page crawlers. */}
-      <section className="content-visibility-auto-sm">
+          only in llms.txt and were invisible to on-page crawlers.
+          data-region="advanced-medical" — gets dark border emphasis for
+          non-IN visitors via CountryClassInjector CSS. */}
+      <section className="content-visibility-auto-sm" data-region="advanced-medical">
         <div className="bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-10">
@@ -535,8 +550,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. Locations Section */}
-      <section className="content-visibility-auto-sm">
+      {/* 9. Locations Section — Delhi NCR offline centres (South Extension,
+          Rohini, Green Park, Gurugram, Faridabad, Noida).
+          data-region="india-only" — hidden from non-IN visitors since
+          they cannot commute to NCR; online-only is the relevant model
+          for them. Section still in DOM for Google to crawl. */}
+      <section className="content-visibility-auto-sm" data-region="india-only">
         <LocationsSection />
       </section>
 
