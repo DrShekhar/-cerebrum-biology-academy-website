@@ -128,6 +128,65 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
     })),
   }
 
+  // Derive priceCurrency + numeric prices from config.pricing tier strings.
+  // Tier strings look like "$1,499 full programme · $150/hr ad-hoc" (USD),
+  // "£399 / A$799 / €469" (GBP primary), "₹40,000–₹75,000 / year" (INR),
+  // etc. We extract the first numeric amount and infer currency from the
+  // leading symbol/sequence.
+  const detectCurrency = (s: string): string => {
+    if (s.includes('$') && !s.includes('A$') && !s.includes('S$') && !s.includes('HK$'))
+      return 'USD'
+    if (s.startsWith('A$') || s.includes(' A$')) return 'AUD'
+    if (s.startsWith('£') || s.includes(' £')) return 'GBP'
+    if (s.startsWith('€') || s.includes(' €')) return 'EUR'
+    if (s.startsWith('₹') || s.includes(' ₹')) return 'INR'
+    if (s.startsWith('S$')) return 'SGD'
+    if (s.startsWith('HK$')) return 'HKD'
+    return 'USD'
+  }
+  const extractNumericPrice = (s: string): number | null => {
+    // Strip currency symbols then capture the first integer/decimal,
+    // multiply if "L" (lakh) or "K" suffix present.
+    const stripped = s.replace(/[\$£€₹]|A\$|S\$|HK\$/g, '')
+    const match = stripped.match(/(\d{1,3}(?:[,\d]{0,5})?)(\.\d+)?(\s*[LlKk])?/)
+    if (!match) return null
+    const raw = match[1].replace(/,/g, '')
+    const value = parseFloat(raw + (match[2] || ''))
+    const suffix = (match[3] || '').trim().toUpperCase()
+    if (suffix === 'L') return value * 100000
+    if (suffix === 'K') return value * 1000
+    return value
+  }
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: config.headline,
+    description: config.intro,
+    url: canonicalUrl,
+    provider: {
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+    },
+    hasCourseInstance: config.pricing
+      .map((tier) => {
+        const price = extractNumericPrice(tier.price)
+        if (price === null) return null
+        return {
+          '@type': 'CourseInstance' as const,
+          name: tier.tier,
+          description: tier.description,
+          courseMode: 'Online',
+          offers: {
+            '@type': 'Offer' as const,
+            price: price,
+            priceCurrency: detectCurrency(tier.price),
+            url: canonicalUrl,
+            availability: 'https://schema.org/InStock' as const,
+          },
+        }
+      })
+      .filter((x): x is NonNullable<typeof x> => x !== null),
+  }
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -172,6 +231,10 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
 
       <section className="bg-gradient-to-br from-green-800 via-green-800 to-blue-900 text-white py-20">
