@@ -16,14 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 10 in Mumbai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board parallel with NEET-pattern pedagogy. ₹35K-95K/year.',
   keywords: [
     'neet foundation class 10 mumbai',
-    'class 10 neet preparation mumbai',
     'class 10 biology coaching mumbai',
-    'class 10 cbse board neet mumbai',
+    'class 10 cbse board biology mumbai',
     'class 10 icse biology mumbai',
-    'class 10 maharashtra board neet',
-    'class 10 neet andheri thane',
-    'class 10 neet borivali powai',
+    'class 10 maharashtra ssc biology',
     'best class 10 foundation mumbai',
+    'class 10 board + neet parallel coaching',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -40,7 +38,7 @@ const faqs = [
   {
     question: 'How is Class 10 NEET Foundation delivered in Mumbai?',
     answer:
-      'Cerebrum Class 10 NEET Foundation in Mumbai is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty that teach the Delhi NCR offline batches. Sessions are 2 hours twice weekly in weekend-friendly slots (Saturday 10 AM IST, Sunday 10 AM IST, plus weekday 6 PM IST option). Q4 (January - March) intensifies board exam preparation specifically for CBSE / ICSE / Maharashtra Board Class 10 finals.',
+      "Cerebrum Class 10 NEET Foundation in Mumbai is delivered via online live (not recorded) sessions because Class 10 board pressure makes train-commute time unaffordable — most Mumbai Class 10 students lose 7-12 study hours weekly to offline batch commute (Mumbai Suburban Railway peak congestion plus auto/cab to centre). Cerebrum's twice-weekly 2-hour slots run Saturday 10 AM IST, Sunday 10 AM IST, and weekday 6 PM IST — calibrated around Mumbai school dismissal (2:30-4 PM at DAIS BKC, Cathedral, Bombay Scottish). Maharashtra State Board (SSC) Class 10 students additionally benefit because SSC board prep peaks Jan-March, exactly when Cerebrum's Q4 board-intensive sprint runs (weekly long-answer mocks in Maharashtra Board format with diagram standards). The Mumbai cohort skews heavier toward CBSE/ICSE (BKC, Bandra, Powai) vs SSC, but the parallel pedagogy covers both.",
   },
   {
     question:
@@ -61,7 +59,7 @@ const faqs = [
   {
     question: 'What does Class 10 NEET Foundation cost in Mumbai?',
     answer:
-      'Cerebrum Class 10 Foundation pricing (pan-India online, applies to Mumbai): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Aakash Scholastics Mumbai Class 10 combined PCB Foundation (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+      'Cerebrum Class 10 Foundation pricing for Mumbai families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board + NEET mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Three Mumbai-specific cost comparisons: (1) Aakash Scholastics Mumbai Class 10 combined PCB Foundation runs ~₹95K-1.2L/year at 250-student batches across Andheri/Borivali/Thane/Powai centres; (2) Allen Mumbai Class 10 Foundation ~₹1.1L-1.3L at 6 centres; (3) The hidden Mumbai cost: 8-12 hours weekly commute saved by Cerebrum online vs offline centres in Borivali or Thane. Cerebrum biology-only Ascent ₹65K + PhysicsWallah PCB ₹15K = ₹80K total with better biology pedagogy than Aakash standalone — common Mumbai pattern for CBSE families targeting AIIMS / state quota via SSC parallel.',
   },
 ]
 

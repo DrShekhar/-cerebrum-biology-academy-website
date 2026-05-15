@@ -16,16 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 9 in Pune at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board + NEET parallel. Koregaon Park, Kalyani Nagar, Aundh, Baner, Hinjewadi, Kothrud catchments. ₹35K-90K/year.',
   keywords: [
     'neet foundation class 9 pune',
-    'class 9 neet preparation pune',
     'class 9 biology coaching pune',
-    'class 9 cbse biology pune neet',
+    'class 9 cbse biology pune',
     'class 9 icse biology pune',
-    'class 9 maharashtra board pune neet',
-    'class 9 neet koregaon park',
-    'class 9 neet aundh',
-    'class 9 neet hinjewadi',
-    'class 9 neet kothrud',
+    'class 9 maharashtra ssc biology pune',
     'best class 9 foundation pune',
+    'symbiosis school neet class 9',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -42,7 +38,7 @@ const faqs = [
   {
     question: 'How is NEET Foundation Class 9 delivered in Pune?',
     answer:
-      'Cerebrum Class 9 NEET Foundation in Pune is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). ~180+ Pune students across Class 9-12 are actively enrolled across Koregaon Park, Kalyani Nagar, Aundh, Baner, Hinjewadi, Wakad, Kothrud, Bavdhan, Camp, Magarpatta catchments.',
+      "Cerebrum Class 9 NEET Foundation in Pune is delivered online live (not recorded) and resonates structurally with Pune's unusual academic-family base. Pune has the highest density of postgraduate-medical and biomedical-research families in India outside Delhi NCR (driven by AFMC Pune, BJ Medical College, IISER Pune, NCL, Symbiosis Medical, NIO biology research), and these families select coaching by pedagogy depth rather than mass-batch brand recall. Cerebrum's 15-20 student online live batches with AIIMS-trained faculty match this preference. ~180+ Pune students across Class 9-12 enrolled, density in Koregaon Park-Kalyani Nagar (Symbiosis International, Mercedes-Benz International, The Bishop's Co-Ed), Aundh-Baner-Hinjewadi (Pawar Public, Vibgyor, DPS Pune), Bavdhan-Kothrud (Indus International, MIT Vishwashanti), and the Camp legacy school cluster (Bishop's Camp, Loyola, Hutchings).",
   },
   {
     question: 'Does Cerebrum support Maharashtra State Board Class 9 alongside NEET in Pune?',
@@ -62,7 +58,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Pune?',
     answer:
-      'Cerebrum Class 9 Foundation pricing (pan-India online, applies to Pune): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Aakash Scholastics Pune Class 9 combined PCB Foundation (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers materially deeper biology pedagogy and 15-20 student structure at lower price.',
+      "Cerebrum Class 9 Foundation pricing for Pune families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. Pune-specific competitive context: Aakash Scholastics Pune Class 9 combined PCB (~₹85K-1L, 200-student, 5 centres Camp/Pimpri/Kothrud/Aundh/Hadapsar); Sinhgad Foundation Class 9 (Pune-headquartered, ~₹70K-90K, 250-student); Lakshya by Bansal Pune (~₹75K-95K); Allen Pune (~₹95K-1.15L). Pune's postgraduate-medical-family demographic disproportionately selects pedagogy depth over mass-batch test series — Cerebrum biology Ascent (₹65K) + PhysicsWallah PC (₹15K) = ₹80K total with materially deeper biology than Aakash standalone, and AIIMS faculty resonates with AFMC/BJMC academic-family preference.",
   },
 ]
 

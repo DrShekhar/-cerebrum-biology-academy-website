@@ -16,16 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 9 in Chennai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Tamil Nadu Samacheer Kalvi + NEET parallel. T. Nagar, Adyar, Anna Nagar, Velachery, OMR catchments. ₹35K-90K/year.',
   keywords: [
     'neet foundation class 9 chennai',
-    'class 9 neet preparation chennai',
     'class 9 biology coaching chennai',
-    'class 9 samacheer kalvi neet',
+    'class 9 samacheer kalvi biology',
     'class 9 cbse biology chennai',
-    'class 9 neet t nagar',
-    'class 9 neet adyar',
-    'class 9 neet anna nagar',
-    'class 9 neet velachery',
-    'class 9 neet omr',
+    'class 9 icse biology chennai',
     'best class 9 foundation chennai',
+    'velammal vs cerebrum class 9 neet',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -42,7 +38,7 @@ const faqs = [
   {
     question: 'How is NEET Foundation Class 9 delivered in Chennai?',
     answer:
-      'Cerebrum Class 9 NEET Foundation in Chennai is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). ~210+ Chennai students across Class 9-12 are actively enrolled across T. Nagar, Adyar, Anna Nagar, Velachery, OMR (IT corridor), ECR, Nungambakkam, Mylapore, Mogappair, Porur catchments.',
+      "Cerebrum Class 9 NEET Foundation in Chennai is delivered online live (not recorded) with two Chennai-specific structural realities driving the choice. (1) Velammal Group runs integrated school-plus-NEET coaching from Class 9 onwards (claims 2,800+ NEET selections annually) with 200-400 student batches — students at non-Velammal schools (PSBB, DAV, Vidya Mandir, Sishya, Chettinad Vidyashram) need a parallel NEET pathway that does not require switching schools. Cerebrum fills this gap. (2) Tamil Nadu's TNMSC weighted scoring system uses Class 12 board marks alongside NEET for state government medical college admissions — making Class 9 the right time to start Tamil Nadu Samacheer Kalvi board-strength training, not just NEET-pattern drilling. ~210+ Chennai students enrolled, density in T. Nagar/Anna Nagar (PSBB, DAV families), Adyar (Vidya Mandir, Sishya), OMR (international school feeders like AISC), and Velachery (Chettinad Vidyashram).",
   },
   {
     question: 'Does Cerebrum support Tamil Nadu Samacheer Kalvi Class 9 alongside NEET?',
@@ -63,7 +59,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Chennai?',
     answer:
-      'Cerebrum Class 9 Foundation pricing (pan-India online, applies to Chennai): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Velammal integrated NEET coaching (~₹1.2L-1.5L/year combined PCB) and Aakash Scholastics Chennai (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers materially deeper biology pedagogy and 15-20 student structure.',
+      'Cerebrum Class 9 Foundation pricing for Chennai families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. Chennai-specific cost calculus: Velammal Group integrated school + NEET Foundation runs ₹1.2L-1.5L/year combined PCB but requires school transfer to Velammal Vidyalaya — most existing PSBB/DAV/Vidya Mandir families will not switch schools for this. P. Obul Reddy Hall (~₹90K-1.1L). Aakash Scholastics Chennai (~₹85K-1L, 200-student batch). Career Point Chennai (~₹70K-90K). Cerebrum biology-only Ascent (₹65K) is the structural alternative for non-Velammal-school families wanting biology specialist depth without switching schools, paired with PhysicsWallah PC (₹15K) for total ₹80K with Samacheer Kalvi board parallel pedagogy that the mass-batch alternatives deprioritise.',
   },
 ]
 

@@ -16,16 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 9 in Kolkata at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / West Bengal Board (Madhyamik) + NEET parallel. Ballygunge, Park Street, Salt Lake, New Town, Alipore catchments. ₹35K-90K/year.',
   keywords: [
     'neet foundation class 9 kolkata',
-    'class 9 neet preparation kolkata',
     'class 9 biology coaching kolkata',
-    'class 9 madhyamik biology neet',
-    'class 9 west bengal board neet',
+    'class 9 icse biology kolkata',
     'class 9 cbse biology kolkata',
-    'class 9 neet ballygunge',
-    'class 9 neet salt lake',
-    'class 9 neet new town',
-    'class 9 neet park street alipore',
+    'class 9 madhyamik biology wbbse',
     'best class 9 foundation kolkata',
+    'la martiniere neet preparation',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -42,7 +38,7 @@ const faqs = [
   {
     question: 'How is NEET Foundation Class 9 delivered in Kolkata?',
     answer:
-      'Cerebrum Class 9 NEET Foundation in Kolkata is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). ~140+ Kolkata students across Class 9-12 are actively enrolled across Ballygunge, Park Street, Alipore, Salt Lake, New Town, Garia, Tollygunge, Howrah, Behala, Jadavpur catchments.',
+      "Cerebrum Class 9 NEET Foundation in Kolkata is delivered online live (not recorded) and resonates structurally with Kolkata's distinctive ICSE-legacy academic culture. Kolkata holds India's strongest ICSE convent tradition — La Martiniere, Don Bosco Park Circus, St. Xavier's Collegiate, South Point, Modern High, Loreto, Pratt Memorial all run pedagogy that materially outperforms the national CBSE average on conceptual depth (ICSE Class 9-10 Biology terminology is more rigorous than CBSE NCERT). Cerebrum's biology-only specialist positioning with small-batch (15-20) AIIMS-trained pedagogy matches the ICSE-school cultural preference for depth over volume. ~140+ Kolkata students across Class 9-12 enrolled, density in South Kolkata (Ballygunge, Park Street, Alipore feeding from La Martiniere / Don Bosco / St. Xavier's / Modern High), Salt Lake-New Town (DPS Ruby Park / Megacity, Heritage School, BD Memorial), and Tollygunge-Behala south-extensions.",
   },
   {
     question: 'Does Cerebrum support West Bengal Board (Madhyamik) Class 9 alongside NEET?',
@@ -63,7 +59,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Kolkata?',
     answer:
-      'Cerebrum Class 9 Foundation pricing (pan-India online, applies to Kolkata): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Aakash Scholastics Kolkata Class 9 combined PCB Foundation (~₹75K-95K/year, 200-student batch) and Pathfinder Kolkata (~₹70K-90K/year), Cerebrum biology-only Ascent at ₹65K offers materially deeper biology pedagogy and 15-20 student structure.',
+      "Cerebrum Class 9 Foundation pricing for Kolkata families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. Kolkata Class 9 competitive context: Aakash Scholastics Kolkata Class 9 PCB (~₹75K-95K, 4 centres Park Street/Salt Lake/Howrah/Behala, 200-student batches); Pathfinder Kolkata (Kolkata-headquartered, ~₹70K-90K, strong local brand with ICSE-aware pedagogy); FIITJEE Kolkata Class 9 (~₹85K-1L, JEE-leaning); Future Foundation Class 9 prep (~₹65K-85K). Kolkata's ICSE-legacy families pattern: Cerebrum biology Ascent (₹65K) + PhysicsWallah live PC (₹15K) = ₹80K total with materially deeper biology than Aakash standalone, suited to families who value academic depth over mass-batch volume.",
   },
 ]
 
@@ -226,6 +222,35 @@ export default function NEETFoundationClass9KolkataPage() {
             small-batch attention over mass-batch test series. AIIMS-trained faculty (Dr. Shekhar C
             Singh) leading 15-20 student online live batches matches the Kolkata convent-school
             academic culture well.
+          </p>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
+            Kolkata feeder schools and board coverage
+          </h2>
+          <p>
+            ICSE legacy (Kolkata&apos;s strongest tradition): La Martiniere for Boys (Loudon
+            Street), La Martiniere for Girls (Rawdon Street), Don Bosco Park Circus, St.
+            Xavier&apos;s Collegiate School (Mother Teresa Sarani), South Point School (Mandeville
+            Gardens), Modern High School for Girls (Syed Amir Ali Avenue), Loreto House (Middleton
+            Row), Pratt Memorial School (Mandeville Gardens), St. James&apos; School (Park Street).
+            CBSE feeders: Delhi Public School Ruby Park, DPS Megacity Newtown, Lakshmipat Singhania
+            Academy, Sushila Birla Girls&apos; School, Birla High School (Ranikuthi + Mukundapur),
+            BD Memorial Institute, Future Foundation School, Heritage School (Anandapur).
+            International curriculum feeders: Calcutta International School (Anandapur), Indus
+            Valley World School (Newtown), Akshar School (Newtown). West Bengal Board (WBBSE
+            Madhyamik) feeders span the broader Kolkata Municipal Corporation and Bidhannagar
+            Municipal Corporation school ecosystem, plus aided Bengali-medium-with-English-section
+            schools in greater Kolkata (Howrah district, North 24 Parganas, South 24 Parganas).
+          </p>
+          <p>
+            <strong>Board context.</strong> Most Cerebrum Kolkata Class 9 cohort skews ICSE (~55%),
+            CBSE (~30%), WBBSE Madhyamik (~15%) reflecting the South Kolkata / Salt Lake / Newtown
+            academic family demographic. Cerebrum runs all three board tracks in parallel with
+            separate weekly tests in each format — ICSE long-answer descriptive (most rigorous
+            terminology requirement of the three), CBSE NCERT-aligned multi-format, and Madhyamik
+            bilingual-friendly diagram-heavy paper structure. WBBSE Madhyamik Class 9 Life Science
+            curriculum covers Levels of Organisation of Life, Physiological Processes, Heredity,
+            Continuity and Evolution.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

@@ -16,14 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 10 in Hyderabad at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Telangana SSC / AP SSC + NEET parallel. ₹35K-95K/year.',
   keywords: [
     'neet foundation class 10 hyderabad',
-    'class 10 neet preparation hyderabad',
     'class 10 biology coaching hyderabad',
-    'class 10 cbse board neet hyderabad',
-    'class 10 telangana ssc biology neet',
-    'class 10 ap ssc biology neet',
-    'class 10 neet ameerpet kukatpally',
-    'class 10 neet hitec city',
+    'class 10 cbse board biology hyderabad',
+    'class 10 telangana ssc biology',
+    'class 10 ap ssc biology',
     'best class 10 foundation hyderabad',
+    'class 10 ipe + neet parallel coaching',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -40,7 +38,7 @@ const faqs = [
   {
     question: 'How is Class 10 NEET Foundation delivered in Hyderabad?',
     answer:
-      'Cerebrum Class 10 NEET Foundation in Hyderabad is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching the Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). Q4 (January - March) intensifies board exam preparation for CBSE / ICSE / Telangana SSC / AP SSC Class 10 finals.',
+      "Cerebrum Class 10 NEET Foundation in Hyderabad is delivered online live (not recorded) with Telangana-specific Class 10 context: SSC + Intermediate (IPE) pathway. Class 10 SSC marks set Class 11-12 Intermediate eligibility at junior colleges, and Telangana/AP medical college quota systems (TS EAMCET adjacent) reference Intermediate first-year + second-year marks weighted against NEET. Cerebrum's Class 10 board-parallel pedagogy is calibrated for both SSC long-answer descriptive format (5-mark + 2-mark + 1-mark sections) AND NEET MCQ format. Twice-weekly 2-hour slots (Saturday 10 AM IST, Sunday 10 AM IST, weekday 6 PM IST) work for HITEC City IT-professional families. Q4 (Jan-March) intensifies SSC board format mocks specifically — different from CBSE strategy because TS/AP SSC papers are bilingual-friendly and rely heavily on diagram-labelling questions.",
   },
   {
     question:
@@ -62,7 +60,7 @@ const faqs = [
   {
     question: 'What does Class 10 NEET Foundation cost in Hyderabad?',
     answer:
-      'Cerebrum Class 10 Foundation pricing (pan-India online, applies to Hyderabad): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board + NEET mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Sri Chaitanya / Narayana Hyderabad Class 10 Foundation (~₹85K-1.1L/year, 350-student batch) and Aakash Scholastics Hyderabad (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+      'Cerebrum Class 10 Foundation pricing for Hyderabad families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Hyderabad Class 10 specifically: Sri Chaitanya integrated Class 10 Foundation (~₹85K-1.1L, 350-student) traditionally dominates this segment because of integrated school + coaching bundling that locks Class 10 → Intermediate → NEET in one ecosystem. Narayana similar (~₹85K-1.05L, 300-student). Aakash Scholastics Class 10 (~₹95K-1.2L, 250-student). Cerebrum biology-only Ascent (₹65K) is the structural alternative for families targeting AIIMS/JIPMER (where small-batch depth beats mass-volume drilling) rather than median state quota. Common Hyderabad pattern: Cerebrum biology + Sri Chaitanya/Narayana PC stream for combined PCB at lower total cost than full Aakash.',
   },
 ]
 

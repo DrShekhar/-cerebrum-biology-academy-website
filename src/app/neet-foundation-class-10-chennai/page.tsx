@@ -16,14 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 10 in Chennai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Tamil Nadu Samacheer Kalvi + NEET parallel. T. Nagar, Adyar, Anna Nagar, Velachery, OMR catchments. ₹35K-95K/year.',
   keywords: [
     'neet foundation class 10 chennai',
-    'class 10 neet preparation chennai',
     'class 10 biology coaching chennai',
-    'class 10 samacheer kalvi biology neet',
-    'class 10 cbse board neet chennai',
-    'class 10 tamil nadu board neet',
-    'class 10 neet adyar omr',
-    'class 10 neet anna nagar',
+    'class 10 samacheer kalvi biology',
+    'class 10 cbse board biology chennai',
+    'tnmsc class 10 board strategy',
     'best class 10 foundation chennai',
+    'velammal vs cerebrum class 10',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -40,7 +38,7 @@ const faqs = [
   {
     question: 'How is Class 10 NEET Foundation delivered in Chennai?',
     answer:
-      'Cerebrum Class 10 NEET Foundation in Chennai is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching the Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). Q4 (January - March) intensifies board exam preparation for CBSE / ICSE / Tamil Nadu Samacheer Kalvi Class 10 finals.',
+      "Cerebrum Class 10 NEET Foundation in Chennai is delivered online live with TNMSC-aware Class 10 pedagogy. Tamil Nadu's state government medical college admission system uses a weighted average of Class 12 Tamil Nadu Board (Samacheer Kalvi) marks AND NEET-UG — unique among Indian states. This means Class 10 SSLC performance materially affects Class 11-12 Tamil Nadu Board trajectory, which materially affects TNMSC ranking, which affects state medical seat allocation. Cerebrum's Class 10 parallel pedagogy includes Samacheer Kalvi long-answer descriptive format weekly mocks (different from CBSE structure — SSLC papers test memorisation of textbook diagrams and Tamil-English bilingual technical terminology). Q4 (Jan-March) intensifies SSLC board prep specifically, with separate Tamil-medium-friendly diagram practice for state-board students.",
   },
   {
     question:
@@ -67,7 +65,7 @@ const faqs = [
   {
     question: 'What does Class 10 NEET Foundation cost in Chennai?',
     answer:
-      'Cerebrum Class 10 Foundation pricing (pan-India online, applies to Chennai): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board + NEET mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Velammal integrated coaching (~₹1.3L-1.6L/year combined PCB) and Aakash Scholastics Chennai Class 10 (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure.',
+      "Cerebrum Class 10 Foundation pricing for Chennai families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Chennai Class 10 cost comparison: Velammal integrated Class 10 ₹1.3L-1.6L (requires Velammal school transfer); Aakash Scholastics Chennai Class 10 (~₹95K-1.2L, 250-student batch); P. Obul Reddy Hall Class 10 (~₹1.05L-1.25L); T.I.M.E. NEET Foundation Class 10 (~₹85K-1L). For families targeting strong TNMSC ranking (which weights Samacheer Kalvi Class 12 board marks), Cerebrum's SSLC parallel pedagogy at Ascent (₹65K) is structurally better than NEET-only generalist alternatives — Class 10 SSLC depth feeds directly into Class 11-12 board strength that TNMSC measures.",
   },
 ]
 

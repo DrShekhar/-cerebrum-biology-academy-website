@@ -16,14 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 10 in Pune at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra SSC + NEET parallel. Koregaon Park, Aundh, Hinjewadi, Kothrud catchments. ₹35K-95K/year.',
   keywords: [
     'neet foundation class 10 pune',
-    'class 10 neet preparation pune',
     'class 10 biology coaching pune',
-    'class 10 cbse board neet pune',
-    'class 10 maharashtra ssc biology neet',
+    'class 10 cbse board biology pune',
+    'class 10 maharashtra ssc biology',
     'class 10 icse biology pune',
-    'class 10 neet koregaon park',
-    'class 10 neet hinjewadi',
     'best class 10 foundation pune',
+    'pune fyjc science stream prep',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -40,7 +38,7 @@ const faqs = [
   {
     question: 'How is Class 10 NEET Foundation delivered in Pune?',
     answer:
-      'Cerebrum Class 10 NEET Foundation in Pune is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching the Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). Q4 (January - March) intensifies board exam preparation for CBSE / ICSE / Maharashtra SSC Class 10 finals.',
+      "Cerebrum Class 10 NEET Foundation in Pune is delivered online live (not recorded) with Maharashtra SSC pedagogy parallel to NEET. Pune Class 10 students have a unique constraint: Maharashtra State Board (SSC) results determine eligibility for Junior College PCB stream selection at top FYJC colleges (Fergusson Junior, BMCC Junior, Symbiosis Junior, MIT Junior, Sinhgad Junior) where competition for science seats is severe. Cerebrum's Q4 (Jan-March) board-intensive sprint runs separate Maharashtra SSC format mocks (descriptive 5/3/2/1-mark answers, diagram precision) alongside CBSE/ICSE alternatives. Pune families typically split: 60% CBSE/ICSE (Symbiosis International, Bishop's, DPS, Vibgyor) and 40% Maharashtra SSC (Pune Municipal Corporation school network plus aided English-medium SSC schools). Cerebrum runs all three board tracks plus NEET in parallel.",
   },
   {
     question: 'Will Cerebrum prepare my child for Maharashtra SSC Class 10 boards alongside NEET?',
@@ -60,7 +58,7 @@ const faqs = [
   {
     question: 'What does Class 10 NEET Foundation cost in Pune?',
     answer:
-      'Cerebrum Class 10 Foundation pricing (pan-India online, applies to Pune): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board + NEET mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Aakash Scholastics Pune Class 10 combined PCB Foundation (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+      'Cerebrum Class 10 Foundation pricing for Pune families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Pune Class 10 cost comparison: Aakash Scholastics Pune Class 10 combined PCB (~₹95K-1.2L, 250-student batch); Sinhgad Foundation Class 10 (~₹85K-1.05L, 300-student); Lakshya Pune Class 10 (~₹85K-1.1L); Allen Pune Class 10 (~₹1.05L-1.25L); FIITJEE Pune (~₹90K-1.1L, biased toward JEE pathway). Postgraduate-medical-family Pune cohort selects Cerebrum biology Ascent (₹65K) + PhysicsWallah PC (₹15-20K) for total ₹80-85K with materially better biology and Maharashtra SSC parallel pedagogy that the mass-batch alternatives deprioritise (most Pune mass-batch Foundation deprioritises SSC in favour of NEET-only drilling, which hurts FYJC science stream eligibility).',
   },
 ]
 

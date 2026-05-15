@@ -16,15 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 10 in Kolkata at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / West Bengal Board Madhyamik + NEET parallel. Ballygunge, Salt Lake, New Town, Park Street catchments. ₹35K-95K/year.',
   keywords: [
     'neet foundation class 10 kolkata',
-    'class 10 neet preparation kolkata',
     'class 10 biology coaching kolkata',
-    'class 10 madhyamik biology neet',
-    'class 10 west bengal board neet',
     'class 10 icse biology kolkata',
+    'class 10 madhyamik biology wbbse',
     'class 10 cbse biology kolkata',
-    'class 10 neet salt lake new town',
-    'class 10 neet ballygunge alipore',
     'best class 10 foundation kolkata',
+    'la martiniere south point class 10',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -41,7 +38,7 @@ const faqs = [
   {
     question: 'How is Class 10 NEET Foundation delivered in Kolkata?',
     answer:
-      'Cerebrum Class 10 NEET Foundation in Kolkata is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching the Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). Q4 (January - March) intensifies board exam preparation for CBSE / ICSE / West Bengal Board Madhyamik Class 10 finals.',
+      "Cerebrum Class 10 NEET Foundation in Kolkata is delivered online live (not recorded) with three-track parallel pedagogy: CBSE Class 10, ICSE Class 10, AND West Bengal Madhyamik (WBBSE). Kolkata is unique in that ICSE Class 10 (ICSE board, not ISC) holds the strongest academic prestige in the local family hierarchy — La Martiniere, Don Bosco, St. Xavier's Class 10 ICSE results are widely benchmarked against CBSE 90%+. Cerebrum runs ICSE-specific weekly mocks with examiner-aligned long-answer format alongside CBSE descriptive format and Madhyamik's bilingual-friendly diagram-heavy paper structure. Q4 (Jan-March) intensifies whichever board the student's school follows. Madhyamik students additionally get state-board terminology drilling (different from NCERT English-medium phrasing).",
   },
   {
     question:
@@ -63,7 +60,7 @@ const faqs = [
   {
     question: 'What does Class 10 NEET Foundation cost in Kolkata?',
     answer:
-      'Cerebrum Class 10 Foundation pricing (pan-India online, applies to Kolkata): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board + NEET mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Aakash Scholastics Kolkata Class 10 combined PCB Foundation (~₹85K-1L/year, 250-student batch) and Pathfinder Kolkata (~₹85K-1.05L), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure.',
+      'Cerebrum Class 10 Foundation pricing for Kolkata families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Kolkata Class 10 cost comparison: Aakash Scholastics Kolkata Class 10 PCB (~₹85K-1L, 250-student); Pathfinder Kolkata Class 10 (Kolkata-headquartered, ~₹85K-1.05L, strong ICSE-aware mass batches); FIITJEE Kolkata Class 10 (~₹90K-1.15L); Future Foundation Class 10 (~₹80K-95K). The Kolkata ICSE-legacy academic-family pattern strongly favours pedagogy depth: Cerebrum biology Ascent (₹65K) + PhysicsWallah PC (₹15-20K) = ₹80-85K total with materially deeper biology, ICSE-specific board parallel, and 15-20 student attention vs Pathfinder/Aakash 200-300 student batches.',
   },
 ]
 
@@ -223,6 +220,30 @@ export default function NEETFoundationClass10KolkataPage() {
             college quota equivalence and which set Class 11-12 stream selection). Cerebrum runs all
             three board tracks plus NEET in parallel — separate weekly tests in each format, with Q4
             board prep intensified specifically for Class 10 finals.
+          </p>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
+            Kolkata Class 10 feeder schools
+          </h2>
+          <p>
+            ICSE Class 10 (the most prestigious local academic credential, often weighted more than
+            CBSE 95%+ by South Kolkata families): La Martiniere for Boys, La Martiniere for Girls,
+            Don Bosco Park Circus, St. Xavier&apos;s Collegiate School, South Point High School,
+            Modern High School for Girls, Loreto House, Pratt Memorial, St. James&apos;. CBSE Class
+            10 feeders: DPS Ruby Park, DPS Megacity Newtown, Lakshmipat Singhania Academy, Sushila
+            Birla Girls&apos;, Birla High School (Ranikuthi, Mukundapur), BD Memorial, Future
+            Foundation School, Heritage School (Anandapur). International curriculum (IGCSE Class
+            10): Calcutta International School, Indus Valley World School (Newtown). WBBSE Madhyamik
+            feeders include Bengali-medium-with-English-section schools across Kolkata Municipal
+            Corporation, Howrah, and the Bidhannagar (Salt Lake / New Town) corridor.
+          </p>
+          <p>
+            <strong>Madhyamik Class 10 Life Science specifics.</strong> WBBSE Madhyamik Class 10
+            Life Science covers Life and its Diversity, Continuity of Life, Heredity, Evolution,
+            Environment, Human Health and Diseases. Madhyamik examination paper format is heavily
+            descriptive (5-mark + 3-mark + 2-mark + 1-mark sections) with significant diagram
+            labelling — different from CBSE multi-format and ICSE long-answer. Cerebrum runs
+            separate Madhyamik-format weekly mocks for state-board students.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

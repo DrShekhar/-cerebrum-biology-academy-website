@@ -19,15 +19,10 @@ export const metadata: Metadata = {
     'NEET Foundation Class 9 in Mumbai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board + NEET parallel. Andheri, Thane, Borivali, Powai, BKC catchments. ₹35K-90K/year.',
   keywords: [
     'neet foundation class 9 mumbai',
-    'class 9 neet preparation mumbai',
     'class 9 biology coaching mumbai',
-    'class 9 cbse biology mumbai neet',
+    'class 9 cbse biology mumbai',
     'class 9 icse biology mumbai',
-    'class 9 maharashtra board neet',
-    'class 9 neet andheri',
-    'class 9 neet thane',
-    'class 9 neet powai',
-    'class 9 neet borivali',
+    'class 9 maharashtra board biology',
     'best class 9 foundation mumbai',
     'online class 9 neet mumbai',
   ],
@@ -46,7 +41,7 @@ const faqs = [
   {
     question: 'How is NEET Foundation Class 9 delivered in Mumbai?',
     answer:
-      'Cerebrum Class 9 NEET Foundation in Mumbai is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty that teach the Delhi NCR offline batches. Sessions are 2 hours, twice weekly, in weekend-friendly slots — Saturday morning (10 AM - 12 PM IST), Sunday morning (10 AM - 12 PM), plus a weekday evening 6 PM - 8 PM IST option. ~320+ Mumbai students across Class 9-12 are actively enrolled across Andheri, Thane, Borivali, Powai, BKC, Bandra, Juhu, Goregaon catchments.',
+      "Cerebrum Class 9 NEET Foundation in Mumbai is delivered via online live (not recorded) sessions — which matters structurally because the Western and Central Line local-train commute to a typical 4 PM offline batch costs a Class 9 student 90-150 minutes round-trip on weekday afternoons, eating into actual study time. Cerebrum's twice-weekly 2-hour slots run Saturday 10 AM IST, Sunday 10 AM IST, and weekday 6 PM IST — calibrated around Mumbai school dismissal (2:30-4 PM at most top CBSE/ICSE schools) without the commute tax. The Saturday morning slot specifically avoids Western Express Highway weekend traffic toward Powai/Thane. ~320+ Mumbai students across Class 9-12 are actively enrolled, with heaviest density in BKC (DAIS, AISB families), Andheri-West (Bombay Scottish, Jamnabai), Powai (Hiranandani Foundation), and the Thane Wagle Estate / Hiranandani Estate corridor.",
   },
   {
     question: 'Does Cerebrum support Maharashtra State Board Class 9 alongside NEET?',
@@ -66,7 +61,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Mumbai?',
     answer:
-      'Cerebrum Class 9 Foundation pricing (pan-India online, applies to Mumbai): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Aakash Scholastics Mumbai Class 9 combined PCB Foundation (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers materially deeper biology pedagogy and 15-20 student structure at lower price.',
+      'Cerebrum Class 9 Foundation pricing for Mumbai families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. The Mumbai cost calculus runs deeper than headline fees — for an Andheri or Thane family, the unmeasured cost of a Class 9 child commuting to a BKC or Mulund offline batch is 7-10 hours per week of train + auto-rickshaw time (Mumbai Suburban Railway peak-hour data, school year). Cerebrum online eliminates this entirely. Headline price comparison: Aakash Scholastics Mumbai Class 9 combined PCB (~₹85K-1L/year, 200-student batch at Andheri/Borivali/Thane); Allen Mumbai (~₹95K-1.1L, 6 centres). Cerebrum biology-only Ascent ₹65K + PhysicsWallah PCB ₹15K = ₹80K total with materially better biology pedagogy and zero commute.',
   },
 ]
 

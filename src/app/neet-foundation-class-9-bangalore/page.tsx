@@ -16,15 +16,10 @@ export const metadata: Metadata = {
     'NEET Foundation Class 9 in Bangalore at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Karnataka Board + NEET parallel. Koramangala, Indiranagar, Whitefield, HSR, Jayanagar catchments. ₹35K-90K/year.',
   keywords: [
     'neet foundation class 9 bangalore',
-    'class 9 neet preparation bangalore',
     'class 9 biology coaching bangalore',
-    'class 9 cbse biology bangalore neet',
+    'class 9 cbse biology bangalore',
     'class 9 icse biology bangalore',
-    'class 9 karnataka board neet',
-    'class 9 neet koramangala',
-    'class 9 neet indiranagar',
-    'class 9 neet whitefield',
-    'class 9 neet hsr layout',
+    'class 9 karnataka sslc biology',
     'best class 9 foundation bangalore',
     'online class 9 neet bengaluru',
   ],
@@ -43,7 +38,7 @@ const faqs = [
   {
     question: 'How is NEET Foundation Class 9 delivered in Bangalore?',
     answer:
-      'Cerebrum Class 9 NEET Foundation in Bangalore is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching the Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots — Saturday morning (10 AM - 12 PM IST), Sunday morning, plus weekday evening 6 PM - 8 PM IST. ~280+ Bangalore students across Class 9-12 are actively enrolled across Koramangala, Indiranagar, Whitefield, HSR Layout, Jayanagar, Hebbal, Sarjapur Road catchments.',
+      "Cerebrum Class 9 NEET Foundation in Bangalore is delivered online live (not recorded) — calibrated around Bangalore's distinctive dual-working-parent IT-professional family pattern. Most Cerebrum Bangalore families have both parents in tech/consulting with 9-11 hour workdays plus Outer Ring Road commute (Marathahalli-Whitefield-Sarjapur traffic regularly hits 2 hours one-way). Cerebrum's twice-weekly slots — Saturday 10 AM IST, Sunday 10 AM IST, and weekday 6 PM IST — let parents who finish work at 5:30-6:30 PM still attend the Wednesday session live with the child. This is structurally different from most Bangalore offline coaching that runs 4-7 PM weekday slots assuming a non-working parent does drop-off/pickup. ~280+ Bangalore students across Class 9-12 are enrolled, with heaviest density in Koramangala-HSR (NPS Indiranagar/Koramangala/HSR families), Indiranagar-CBD (Bishop Cottons, Sophia, Mallya Aditi feeders), Whitefield-Sarjapur (Inventure, Stonehill, Indus, Greenwood families).",
   },
   {
     question: 'Does Cerebrum support Karnataka State Board Class 9 alongside NEET?',
@@ -64,7 +59,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Bangalore?',
     answer:
-      'Cerebrum Class 9 Foundation pricing (pan-India online, applies to Bangalore): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Aakash Scholastics Bangalore Class 9 combined PCB Foundation (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers materially deeper biology pedagogy and 15-20 student structure at lower price.',
+      "Cerebrum Class 9 Foundation pricing for Bangalore families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Bangalore-specific competitive context: Aakash Scholastics Bangalore Class 9 combined PCB Foundation runs ₹85K-1L/year at 200-student batches across Koramangala, HSR, Marathahalli, Banashankari centres. BYJU's NEET Foundation runs primarily on recorded video with limited live (₹40K-65K). Vidyamandir Classes Foundation Bangalore (~₹95K). Allen Bangalore ~₹1L. Most Bangalore IT-professional families pair Cerebrum biology (₹55K-70K Ascent) with BYJU's recorded PC (₹20K) or PhysicsWallah live PC (₹15K) for total ₹70K-90K — comparable to single-shop Aakash but with materially deeper biology and live small-batch attention vs 200-student recorded-heavy alternatives.",
   },
 ]
 
@@ -220,12 +215,29 @@ export default function NEETFoundationClass9BangalorePage() {
           </h2>
           <p>
             Bangalore is Cerebrum&apos;s second-largest pan-India online cohort after Mumbai, with
-            ~280+ active students across Class 9-12. Bangalore IT-professional families
-            disproportionately prioritise both board academic excellence (Karnataka SSLC, CBSE,
-            ICSE) and serious NEET preparation. Cerebrum&apos;s biology-only specialist positioning
-            resonates with this cohort because most Bangalore generalist NEET coaching (Aakash,
-            Allen, BYJU&apos;s) is engineered for the broader market while AIIMS-trained biology
-            pedagogy is a specialist differentiator.
+            ~280+ active students across Class 9-12 — heavily concentrated in three demographic
+            pockets that share a common preference for pedagogy depth over mass-batch volume. (1)
+            South Bangalore IT-professional families (Koramangala, HSR Layout, Bellandur, Sarjapur
+            Road) where one or both parents work at MNC tech companies (Microsoft, Google, Amazon,
+            Cisco, Goldman Sachs, ThoughtWorks). These families typically target AIIMS / JIPMER /
+            top-100 NEET ranks rather than median state government college admission, which biases
+            them toward small-batch specialist coaching. (2) NRI return families (Indiranagar,
+            Hebbal, Sahakar Nagar, Whitefield) — Bangalore receives a disproportionate share of tech
+            families returning from USA / UK / Australia after 5-15 years abroad, often with Class 9
+            children entering Indian schooling for the first time mid-curriculum. These families
+            need rapid NEET-pattern onboarding without the cultural friction of mass-batch Indian
+            coaching. (3) ICSE legacy families (Bishop Cottons, Sophia, Mallya Aditi, Frank Anthony)
+            — Bangalore&apos;s convent-school cohort sharing the same academic-depth preference as
+            Kolkata&apos;s ICSE families.
+          </p>
+          <p>
+            Cerebrum&apos;s biology-only specialist positioning with AIIMS-trained faculty (Dr.
+            Shekhar C Singh) and 15-20 student online live batches resonates with all three pockets
+            because the structural alternative — Aakash Scholastics 8 centres with 200-student PCB
+            Foundation batches, Allen 4 centres similar, BYJU&apos;s NEET Foundation primarily
+            recorded-video — does not match the depth-first preference of Bangalore tech-academic
+            families. Karnataka SSLC parallel pedagogy additionally serves families maintaining
+            state-board pathway optionality for KCET / state quota seats.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">

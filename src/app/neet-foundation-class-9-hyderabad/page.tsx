@@ -16,16 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 9 in Hyderabad at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Telangana Board + NEET parallel. Ameerpet, Kukatpally, HITEC City, Banjara Hills, Jubilee Hills catchments. ₹35K-90K/year.',
   keywords: [
     'neet foundation class 9 hyderabad',
-    'class 9 neet preparation hyderabad',
     'class 9 biology coaching hyderabad',
-    'class 9 cbse biology hyderabad neet',
-    'class 9 telangana board neet',
-    'class 9 neet ameerpet',
-    'class 9 neet kukatpally',
-    'class 9 neet hitec city',
-    'class 9 neet banjara hills',
+    'class 9 cbse biology hyderabad',
+    'class 9 telangana ssc biology',
+    'class 9 ap ssc biology neet',
     'best class 9 foundation hyderabad',
-    'class 9 neet online hyderabad',
+    'sri chaitanya vs cerebrum class 9',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -42,7 +38,7 @@ const faqs = [
   {
     question: 'How is NEET Foundation Class 9 delivered in Hyderabad?',
     answer:
-      'Cerebrum Class 9 NEET Foundation in Hyderabad is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). ~260+ Hyderabad students across Class 9-12 are actively enrolled across Ameerpet, Kukatpally, HITEC City, Banjara Hills, Jubilee Hills, Gachibowli, Madhapur, Begumpet, Secunderabad catchments.',
+      "Cerebrum Class 9 NEET Foundation in Hyderabad is delivered online live (not recorded). Hyderabad is uniquely competitive in the local NEET coaching market — Sri Chaitanya and Narayana run integrated school-plus-coaching operations with 300-500 student batches and a hyper-intensive culture that produces strong volume but limited individual attention. Cerebrum's positioning is the structural opposite: 15-20 student online live batches with AIIMS-trained biology faculty leading curriculum directly. Twice-weekly 2-hour slots (Saturday 10 AM IST, Sunday 10 AM IST, weekday 6 PM IST) suit families who want depth over volume — typically Banjara Hills, Jubilee Hills, Gachibowli, HITEC City IT-professional families with both parents working at Microsoft / Amazon / Google / Genpact corridor offices. ~260+ Hyderabad students across Class 9-12 enrolled, with heaviest density in HITEC City-Kondapur (Chirec, Oakridge feeders), Banjara Hills (HPS Begumpet), and Gachibowli (Indus, Sancta Maria).",
   },
   {
     question:
@@ -64,7 +60,7 @@ const faqs = [
   {
     question: 'What does Class 9 NEET Foundation cost in Hyderabad?',
     answer:
-      'Cerebrum Class 9 Foundation pricing (pan-India online, applies to Hyderabad): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Sri Chaitanya / Narayana Hyderabad Foundation (~₹70K-1L/year, 300-400 student batch) and Aakash Scholastics Hyderabad (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers materially deeper biology pedagogy and 15-20 student structure.',
+      'Cerebrum Class 9 Foundation pricing for Hyderabad families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. The Hyderabad competitive landscape is the most aggressive in India for NEET Foundation pricing: Sri Chaitanya integrated school-plus-Foundation (~₹70K-1L) with 300-400 student batches; Narayana similar (~₹65K-95K, 350-student); Aakash Scholastics Hyderabad (~₹85K-1L, 200-student); FIITJEE Hyderabad (~₹90K-1.1L). Cerebrum biology-only Ascent (₹65K) is mid-tier on price but uniquely small-batch (15-20 vs 300-400) and AIIMS-trained — the structural alternative for families wanting depth rather than the mass-volume Sri Chaitanya/Narayana model that dominates the local market.',
   },
 ]
 

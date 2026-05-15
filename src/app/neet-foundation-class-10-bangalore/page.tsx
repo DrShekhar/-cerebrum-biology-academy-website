@@ -16,14 +16,12 @@ export const metadata: Metadata = {
     'NEET Foundation Class 10 in Bangalore at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Karnataka SSLC + NEET parallel. ₹35K-95K/year.',
   keywords: [
     'neet foundation class 10 bangalore',
-    'class 10 neet preparation bangalore',
     'class 10 biology coaching bangalore',
-    'class 10 cbse board neet bangalore',
+    'class 10 cbse board biology bangalore',
     'class 10 icse biology bangalore',
-    'class 10 karnataka sslc biology neet',
-    'class 10 neet koramangala indiranagar',
-    'class 10 neet whitefield hsr',
+    'class 10 karnataka sslc biology',
     'best class 10 foundation bangalore',
+    'class 10 board + puc transition coaching',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -40,7 +38,7 @@ const faqs = [
   {
     question: 'How is Class 10 NEET Foundation delivered in Bangalore?',
     answer:
-      'Cerebrum Class 10 NEET Foundation in Bangalore is delivered via pan-India online live (not recorded) sessions with the same AIIMS-trained biology faculty teaching Delhi NCR offline batches. Sessions are 2 hours twice weekly in IST-aligned slots (Saturday 10 AM, Sunday 10 AM, weekday 6 PM IST option). Q4 (January - March) intensifies board exam preparation for CBSE / ICSE / Karnataka SSLC Class 10 finals.',
+      "Cerebrum Class 10 NEET Foundation in Bangalore is delivered online live (not recorded), with two Bangalore-specific structural advantages. (1) Karnataka SSLC → 1st PUC transition: Class 10 SSLC marks set 1st PUC science stream eligibility at most Bangalore PU colleges (NPS PUC, Jain PU, Christ PU, Mount Carmel PU), and certain government quota seats reference SSLC aggregate. Cerebrum's parallel SSLC + NEET pedagogy positions students for both pathways. (2) Dual-working-parent scheduling: Saturday 10 AM IST, Sunday 10 AM IST, and weekday 6 PM IST slots let Outer Ring Road and Whitefield IT-corridor parents attend live with their Class 10 child after a 9-11 hour workday. Q4 (Jan-March) board-prep intensification specifically targets Karnataka SSLC long-answer descriptive format (different from CBSE multi-select structure).",
   },
   {
     question: 'Will Cerebrum prepare my child for Karnataka SSLC Class 10 boards alongside NEET?',
@@ -61,7 +59,7 @@ const faqs = [
   {
     question: 'What does Class 10 NEET Foundation cost in Bangalore?',
     answer:
-      'Cerebrum Class 10 Foundation pricing (pan-India online, applies to Bangalore): Pursuit ₹35K-55K, Ascent ₹55K-75K (with weekly 1:1 doubt slots + biweekly board + NEET mocks), Pinnacle ₹75K-95K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Compared to Aakash Scholastics Bangalore Class 10 combined PCB Foundation (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+      "Cerebrum Class 10 Foundation pricing for Bangalore families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Bangalore-specific Class 10 comparison: Aakash Scholastics Bangalore Class 10 PCB (~₹95K-1.2L, 250-student batch); BYJU's NEET Foundation Class 10 (₹50K-75K, recorded-heavy with limited live); Allen Bangalore Class 10 (~₹1.1L-1.3L). The Bangalore IT-family pattern: Cerebrum biology Ascent (₹65K) + PhysicsWallah live PC (₹15-20K) = ₹80-85K total with materially deeper biology than Aakash standalone and meaningful Karnataka SSLC parallel prep (which the mass-batch alternatives deprioritise in favour of NEET-only drilling).",
   },
 ]
 
