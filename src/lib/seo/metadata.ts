@@ -35,10 +35,9 @@ export const seoConfig = {
 
 export const pageMetadata: Record<string, PageMetadata> = {
   home: {
-    title:
-      'Best NEET Biology Coaching in Delhi NCR | South Extension, Rohini, Gurugram, Faridabad | Cerebrum Academy',
+    title: 'Best NEET Biology Coaching Delhi NCR | Cerebrum Biology Academy',
     description:
-      'Top NEET Biology coaching in Delhi NCR by AIIMS faculty Dr. Shekhar. 98% success rate, 67+ AIIMS selections. Book a free demo at Cerebrum Academy!',
+      'AIIMS-trained NEET Biology coaching by Dr. Shekhar C Singh. 98% NEET qualification, 680+ medical selections. 6 NCR centres + online. Free demo.',
     keywords: [
       'NEET coaching in Delhi',
       'NEET coaching Delhi NCR',

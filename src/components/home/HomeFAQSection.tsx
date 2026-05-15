@@ -12,7 +12,7 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'What is the success rate of Cerebrum Biology Academy?',
     answer:
-      'We have a 98% success rate with 67+ AIIMS selections, 98% qualification rate. Our toppers have secured ranks under 1000 AIR, with many getting into AIIMS, JIPMER, and other top medical colleges. Our star achiever Sadhna Sirin scored 695 marks in NEET 2023 with 100 percentile in Biology.',
+      'We have a 98% NEET-UG qualification rate with 680+ medical college selections since 2014 (including 67+ AIIMS, plus JIPMER, AFMC, and state government colleges). Our toppers have secured ranks under 1000 AIR. Star achiever Sadhna Sirin scored 695 marks in NEET 2023 with 100 percentile in Biology.',
   },
   {
     question: 'What are the course fees for NEET coaching?',
@@ -21,11 +21,11 @@ const homepageFAQs: FAQ[] = [
   },
   {
     question: 'Is there a free demo class available?',
-    answer: `Yes! We offer a FREE 45-minute demo class with our AIIMS Trained faculty. You can experience our teaching methodology and receive free study materials worth ₹2,000. Book your demo on our website or call ${CONTACT_INFO.phone.display.primary}.`,
+    answer: `Yes! We offer a FREE 45-minute demo class with our AIIMS-trained faculty. You can experience our teaching methodology and receive free study materials worth ₹2,000. Book your demo on our website or call ${CONTACT_INFO.phone.display.primary}.`,
   },
   {
-    question: 'Where are Cerebrum Biology Academy centers located?',
-    answer: `We have physical centers in Delhi NCR including Rohini, Gurugram, and South Delhi. We also offer pan-India online classes with the same faculty and curriculum. Contact ${CONTACT_INFO.phone.display.primary} to find the center nearest to you.`,
+    question: 'Where are Cerebrum Biology Academy centres located?',
+    answer: `We operate 6 offline centres across Delhi NCR: South Extension Part II (flagship), Rohini, Green Park, Gurugram, Faridabad, and Noida. We also offer pan-India online classes with the same AIIMS-trained faculty and curriculum, serving students from Mumbai, Bangalore, Hyderabad, Chennai, Kolkata, Pune, plus 14+ international countries (USA, UAE, UK, Canada, Singapore, Australia, etc.). Contact ${CONTACT_INFO.phone.display.primary} to find the centre nearest to you.`,
   },
   {
     question: 'Do you offer online NEET Biology coaching?',
@@ -35,7 +35,27 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'What is the batch size at Cerebrum Biology Academy?',
     answer:
-      "We maintain small batches of maximum 15 students per class to ensure personalized attention for every student. This optimal batch size allows our AIIMS Trained faculty to focus on individual learning needs, provide detailed doubt clarification, and track each student's progress effectively.",
+      "We maintain small batches of 15-20 students per class to ensure personalised attention. This is materially smaller than generalist NEET chains (Allen / Aakash / PhysicsWallah typically run 150-400 students per batch) and lets our AIIMS-trained faculty track each student's chapter-level weaknesses and provide weekly 1:1 doubt slots in the Ascent and Pinnacle tiers.",
+  },
+  {
+    question: 'Do you offer NEET Foundation coaching for Class 9 and Class 10 students?',
+    answer:
+      'Yes. The Cerebrum NEET Foundation track is built specifically for Class 9 and Class 10 students on a 4-year NEET pathway, with board (CBSE / ICSE / state board) and NEET-pattern MCQ drilling running in parallel. Foundation pricing runs ₹35K–₹95K/year across three tiers. Foundation runs offline at all 6 NCR centres plus pan-India online with the same AIIMS-trained faculty. See /best-neet-foundation-tutor for the full pathway.',
+  },
+  {
+    question: 'Do you coach beyond NEET — MCAT, DAT, GAMSAT, USMLE Step 1, IB, AP, or Olympiads?',
+    answer:
+      'Yes. Cerebrum is a biology-only specialist across 9 verticals: NEET-UG, NEET Foundation Class 9-10, IB Biology (HL/SL), AP Biology, MCAT Bio/Biochem (US/Canada med school entrance), DAT Biology (US/Canada pre-dental), GAMSAT Section III (UK/Ireland/Australia graduate medicine), USMLE Step 1 biology-foundations (US licensing + IMG ECFMG pathway), and Biology Olympiads (NSEB, INBO, USABO, IBO, BBO, CBO, SBO). Same AIIMS-trained faculty (Dr. Shekhar C Singh and senior team) lead all verticals — biology pedagogy depth compounds across the stack.',
+  },
+  {
+    question: 'What is the IB Biology Internal Assessment (IA) and how do you coach it?',
+    answer:
+      "The IB Biology IA is the 20%-weighted internal assessment piece in the IB Biology HL/SL programme — a single scientific investigation graded against 4 criteria (Personal Engagement, Exploration, Analysis, Evaluation + Communication). Cerebrum's IB Biology coaching includes IA mentorship: research-question scaffolding, methodology critique, statistical analysis support (chi-square, t-test, error propagation), and final-draft examiner-aligned review. See /ib-biology-ia-guide for the 4-criteria breakdown.",
+  },
+  {
+    question: 'Do you offer Olympiad coaching for serious biology students in Class 9-12?',
+    answer:
+      'Yes. Cerebrum coaches across the full Biology Olympiad pathway: India (NSEB → INBO → OCSC → IBO team selection — ~75,000-student annual NSEB market), USA (USABO Open → Semifinal → National Finals), UK (BBO), Canada (CBO), Singapore (SBO), plus the International Biology Olympiad (IBO). Single biology-specialist faculty stack across all stages — distinct from generalist HBCSE-prep agencies that rotate physics-chemistry-biology coverage. See /biology-olympiads for the complete cluster.',
   },
 ]
 

@@ -90,7 +90,7 @@ export default function Home() {
     '@id': 'https://cerebrumbiologyacademy.com/#webpage',
     name: 'Best NEET Biology Coaching in Delhi NCR | Cerebrum Biology Academy',
     description:
-      'Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. 4 centers: South Extension Delhi, Rohini Delhi, Gurugram, Faridabad. Online + offline classes.',
+      'Top NEET Biology coaching in Delhi NCR with AIIMS-trained faculty led by Dr. Shekhar C Singh. 98% NEET-UG qualification rate, 680+ medical college selections since 2014. 6 NCR centres: South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida. Online + offline. Also: NEET Foundation Class 9-10, IB, AP, MCAT, DAT, GAMSAT, USMLE Step 1 Biology + Olympiads.',
     url: 'https://cerebrumbiologyacademy.com',
     isPartOf: {
       '@type': 'WebSite',
@@ -127,6 +127,15 @@ export default function Home() {
       'https://cerebrumbiologyacademy.com/all-locations',
       'https://cerebrumbiologyacademy.com/book-free-demo',
       'https://cerebrumbiologyacademy.com/results',
+      'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+      'https://cerebrumbiologyacademy.com/best-neet-foundation-tutor',
+      'https://cerebrumbiologyacademy.com/best-mcat-biology-tutor',
+      'https://cerebrumbiologyacademy.com/best-dat-biology-tutor',
+      'https://cerebrumbiologyacademy.com/best-gamsat-biology-tutor',
+      'https://cerebrumbiologyacademy.com/best-usmle-step-1-biology-tutor',
+      'https://cerebrumbiologyacademy.com/best-ib-biology-tutor',
+      'https://cerebrumbiologyacademy.com/best-ap-biology-tutor-usa',
+      'https://cerebrumbiologyacademy.com/biology-olympiads',
     ],
   }
 
@@ -159,7 +168,7 @@ export default function Home() {
       {/* Speakable Schema for Voice Search Optimization */}
       <SpeakableSchema
         headline="Best NEET Biology Coaching Delhi NCR | Cerebrum Academy"
-        description="Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. Get expert guidance for NEET preparation with personalized coaching."
+        description="Top NEET Biology coaching in Delhi NCR with AIIMS-trained faculty led by Dr. Shekhar C Singh. 98% NEET-UG qualification rate, 680+ medical college selections since 2014. 6 NCR centres plus online classes for NEET, NEET Foundation Class 9-10, IB, AP, MCAT, DAT, GAMSAT, USMLE Step 1, and Biology Olympiads."
         cssSelectors={['[data-speakable="title"]', '[data-speakable="summary"]', '.faq-answer']}
         url="https://cerebrumbiologyacademy.com"
       />
@@ -434,6 +443,98 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 8.7 Advanced Medical Pathways + NEET Foundation — surfaces newer
+          AEO clusters (MCAT/DAT/GAMSAT/USMLE Step 1) plus the early-pathway
+          Class 9-10 Foundation track. These verticals previously lived
+          only in llms.txt and were invisible to on-page crawlers. */}
+      <section className="content-visibility-auto-sm">
+        <div className="bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-10">
+              <span className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                Biology-Only Specialist · 9 Verticals
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                Advanced Medical Pathways + NEET Foundation
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Beyond NEET — graduate-medicine entrance exams, US medical licensing for IMGs, and
+                the early-pathway Class 9-10 Foundation track.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {[
+                {
+                  title: 'NEET Foundation Class 9-10',
+                  desc: 'Board + NEET parallel · 4-year pathway',
+                  href: '/best-neet-foundation-tutor',
+                  badge: 'Early Pathway',
+                  emoji: '🏫',
+                },
+                {
+                  title: 'MCAT Biology',
+                  desc: 'US/Canada med school · B/B section · $499–$1,499',
+                  href: '/best-mcat-biology-tutor',
+                  badge: 'Pre-Med USA',
+                  emoji: '🇺🇸',
+                },
+                {
+                  title: 'DAT Biology',
+                  desc: 'US/Canada pre-dental · Campbell + ADA outline · $449–$1,399',
+                  href: '/best-dat-biology-tutor',
+                  badge: 'Pre-Dental',
+                  emoji: '🦷',
+                },
+                {
+                  title: 'GAMSAT Section III',
+                  desc: 'UK/Ireland/Australia graduate medicine · £399–£1,249',
+                  href: '/best-gamsat-biology-tutor',
+                  badge: 'Grad Medicine',
+                  emoji: '🇬🇧',
+                },
+                {
+                  title: 'USMLE Step 1 Biology',
+                  desc: 'US licensing + IMG ECFMG · Biochem/Micro/Immuno · $799–$2,499',
+                  href: '/best-usmle-step-1-biology-tutor',
+                  badge: 'IMG Path',
+                  emoji: '🩺',
+                },
+              ].map((program) => (
+                <Link
+                  key={program.href}
+                  href={program.href}
+                  className="group bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:border-slate-700 hover:shadow-lg transition-all"
+                >
+                  <span className="inline-block bg-slate-100 text-slate-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3">
+                    {program.emoji} {program.badge}
+                  </span>
+                  <h3 className="font-bold text-gray-900 text-base mb-1 group-hover:text-slate-800 transition-colors">
+                    {program.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-snug">{program.desc}</p>
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 mt-8">
+              <Link
+                href="/best-neet-biology-tutor"
+                className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors"
+              >
+                NEET UG Biology — main hub
+              </Link>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20Which%20Cerebrum%20programme%20fits%20my%20pathway%3F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              >
+                WhatsApp for pathway guidance
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 9. Locations Section */}
       <section className="content-visibility-auto-sm">
         <LocationsSection />
@@ -450,7 +551,7 @@ export default function Home() {
       {/* Content Freshness Schema for E-E-A-T signals */}
       <ContentFreshness
         datePublished="2024-01-15"
-        dateModified="2026-02-25"
+        dateModified="2026-05-15"
         author={{
           name: 'Dr. Shekhar C Singh',
           url: 'https://cerebrumbiologyacademy.com/faculty',
