@@ -648,6 +648,7 @@ export const cities: Record<CitySlug, CityConfig> = {
       'Heritage Xperiential Learning School',
       'Shikshantar School',
       'The Shri Ram School, Aravali',
+      'GD Goenka World School (Sohna)',
       'GD Goenka Signature School',
     ],
     neighbourhoods: [

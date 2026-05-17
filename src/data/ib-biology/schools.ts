@@ -1408,6 +1408,79 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 20. GD GOENKA WORLD SCHOOL (Sohna, Gurugram, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'gd-goenka-world-school-gurgaon',
+    schoolName: 'GD Goenka World School',
+    shortName: 'GD Goenka World',
+    cityCountry: 'Gurugram, India',
+    citySlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      "GD Goenka World School is a residential and day co-educational IB World School on the Sohna Road south of Gurugram, founded in the mid-2000s as the flagship international campus of the broader GD Goenka education group. The school sits on a substantial green campus and runs a full IB Continuum — PYP, MYP, and DP — which places it among the longer-running full-continuum IB schools in north India (alongside Pathways Aravali and a small handful of others). Boarders and day students mix in the senior school; many boarders come from across India and from neighbouring countries.",
+      "GD Goenka World School's IB Biology cohort has historically been one of the more substantial IB DP Biology cohorts in the Delhi NCR region. Both HL and SL are offered, with full Section 6 (Practical Programme) coverage. The school's biology laboratories support the full IB practical programme, and the Biology department is staffed by IB-experienced teachers. The school publicly reports IB Diploma performance and recent cohort averages have read as competitive within the NCR IB cluster.",
+      "For GD Goenka World School students, the two most common drivers of external IB Biology tutoring are: (1) Paper 2 long-response rubric calibration where strong classroom answers can still drop marks against the IB's specific mark scheme, and (2) IA mentorship through the DP1 topic-selection and design cycle. Boarding students also benefit from the timezone match — our IST evening live sessions sit at 7–9 PM, which fits cleanly into the boarding study-hall schedule and removes the bandwidth concern of overseas-based tutors operating in mismatched timezones.",
+      "GD Goenka World School's Sohna Road location is south of central Gurgaon, which means day students from DLF Phase 1–5, Golf Course Road, Sushant Lok, and the broader Sector 50–60 belt face a non-trivial commute (40–60 minutes each way in peak hours). For boarding students this is irrelevant; for day students, our online live tutoring removes a second commute on top of the school commute. The residential structure also means many GD Goenka World students stay back through Saturday afternoons; we run weekend morning blocks (Saturday and Sunday 10 AM–12 PM IST) as one of our most popular slots for this cohort.",
+    ],
+    reputationBullets: [
+      'Founded mid-2000s — among the longer-running full-continuum IB schools in north India',
+      'IB Continuum: PYP + MYP + DP',
+      'Residential + day campus on Sohna Road, south Gurugram',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Boarders come from across India and neighbouring countries',
+      'Substantial IB Diploma cohort relative to other NCR IB schools',
+      'Strong matriculation to UK, US, Canadian, Australian, and Indian universities',
+    ],
+    collegeContext:
+      "GD Goenka World School IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, top liberal arts, NYU, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from GD Goenka World most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The residential cohort context produces a meaningful share of students choosing UK undergraduate degrees specifically — UCAS familiarity is higher than at day-only schools because boarding houses develop their own UCAS-application support culture.",
+    paceAlignment:
+      "GD Goenka World School follows the standard two-year DP cycle. IST timezone aligns directly with our India-based live tutoring schedule — a critical structural advantage over overseas-based IB tutors operating in mismatched timezones. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting both the day-student commute window and the boarding study-hall schedule) or weekend morning blocks (Saturday/Sunday 10 AM–12 PM is popular among boarders). For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window.",
+    faqs: [
+      {
+        question: 'My child is a boarder at GD Goenka World School — can they join live tutoring sessions from the boarding house?',
+        answer:
+          "Yes, this is a common pattern in our roster. Sessions are 100% online live video and can be joined from any quiet space with a reliable internet connection — the boarding house study halls and dorm rooms typically work fine. Our IST evening sessions at 7–9 PM fit cleanly into the school's boarding study-hall schedule, and we provide session recordings for review during the next day's study time. Many GD Goenka World boarders prefer our weekend morning blocks (Saturday and Sunday 10 AM–12 PM) which sit naturally in the boarding-house weekend rhythm without competing with weekday classroom load.",
+      },
+      {
+        question: "How does GD Goenka World School's IB Biology compare to Pathways Aravali — both are full IB Continuum schools in Gurugram?",
+        answer:
+          "Both schools run full PYP + MYP + DP IB Continuums and both have substantial DP Biology cohorts. Differences are in campus model and pedagogical character: GD Goenka World is residential-plus-day on a large Sohna campus; Pathways Aravali is also residential-plus-day but is positioned differently within the IB landscape, with its own pedagogical identity. Both schools produce competitive DP Biology scores. The decision between them for families is usually about school culture fit, residential preferences, and faculty cohort — not the IB Biology programme specifically. Our coaching adapts to either profile; we have students from both schools.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for GD Goenka World School students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. GD Goenka World IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that fits the school's term calendar.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. India-resident families pay in INR; international family options available for boarders from neighbouring countries paying in USD.',
+      },
+      {
+        question: "Sohna Road from central Gurgaon is a 40–60 minute peak-hour commute — does that affect tutoring if my child is a day student at GD Goenka World?",
+        answer:
+          "Not at all — coaching is 100% online live video, so the school commute itself doesn't add a second commute for tutoring. Day students arrive home from GD Goenka World in the 5–7 PM window depending on Sohna Road traffic, eat, and join the IST evening live session at 7 PM or the slightly later 8 PM slot we keep for the longer-commute cohort. Sessions run 90 minutes. The no-commute tutoring model returns 60–90 minutes per session compared to driving to a Cyber City or MG Road tutoring centre — meaningful over a year of weekly sessions.",
+      },
+      {
+        question: 'When should a GD Goenka World student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several GD Goenka World students each cohort who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+      },
+      {
+        question: 'How does the IST timezone match matter for GD Goenka World families compared to overseas IB tutors?',
+        answer:
+          "It matters more than parents initially expect. Overseas-based IB tutors (UK, US, Canada) operating into India are usually awake during their own daytime, which is the middle of the night in India. They schedule sessions in awkward early-morning or late-night IST slots that compete with school sleep or homework. Our IST-based tutors run their full schedule in India local time — your child's 7 PM IST evening is our tutor's 7 PM working evening, with no fatigue or timezone-shift compromise. For weekend morning blocks, the same applies. This is a structural advantage of choosing an India-based IB tutor for an India-based school, not a marketing claim.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
