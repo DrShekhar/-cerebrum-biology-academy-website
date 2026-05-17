@@ -1115,6 +1115,79 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 16. THE SHRI RAM SCHOOL ARAVALI (Gurugram, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'shri-ram-aravali',
+    schoolName: 'The Shri Ram School Aravali',
+    shortName: 'TSRS Aravali',
+    cityCountry: 'Gurugram, India',
+    citySlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['MYP', 'DP'],
+    historyParagraphs: [
+      "The Shri Ram School Aravali is the senior campus of The Shri Ram Schools (TSRS) network, founded in 2008 in Sector V-37 Gurugram on the wooded southern edge of the Aravali range. The Shri Ram Schools group itself was founded in 1988 by Manika Sharma, with the original Gurgaon campus at Moulsari (Sector 46) opening earlier and now operating through MYP. TSRS Aravali is the IB Diploma Programme campus — many TSRS students transition from the Moulsari MYP track to the Aravali DP track for Grades 11 and 12, although Aravali also enrols students directly from other schools at the DP entry point.",
+      "TSRS Aravali runs a full MYP-to-DP secondary programme and is recognised in the Delhi NCR IB landscape for its progressive pedagogy and a humanities-and-arts-strong identity that the school has actively cultivated since its founding. The Biology department offers both HL and SL with full Section 6 (Practical Programme) coverage, and the school's overall IB Diploma results have publicly read as competitive within the NCR cluster — a meaningful share of each graduating cohort has historically scored at or above the global mean per school communications, though TSRS does not publish per-subject IB Biology distributions in the way some schools do.",
+      "For TSRS Aravali students, the most common driver of external IB Biology tutoring is twofold: (1) Paper 2 rubric calibration where TSRS's inquiry-led classroom culture produces conceptually strong students who sometimes still drop marks against the IB's specific long-response mark scheme, and (2) IA topic-selection and mentorship through the DP1 cycle, where Biology IA's design + data-analysis demands often benefit from a one-to-one tutor who has examined IAs against the rubric. Several TSRS Aravali families also pursue the integrated IB+NEET track because the Sector V-37 location keeps the dual-track preserved without an unrealistic commute to a separate NEET coaching centre.",
+      "TSRS Aravali's wooded Aravali-range location and its day-school structure (not residential) shape the rhythm of tutoring scheduling. Day students commute from across the Gurgaon catchment — Sohna Road, Golf Course Extension, Sushant Lok, DLF Phase 5, and the newer Sector 70–80 belt — with door-to-door commutes that can run 30–60 minutes each way. Our IST live sessions at 7–9 PM work for this profile: students arrive home, eat, and join the session at the same time they would otherwise be in homework. For IB+NEET integrated students we also offer Saturday weekend intensive blocks (3 hours each morning) so the additional NEET Chemistry and Physics workload sits in a single weekend window rather than spread thinly through the week.",
+    ],
+    reputationBullets: [
+      "Founded 2008 — TSRS group's senior IB Diploma campus in Gurgaon",
+      'Part of The Shri Ram Schools network (founded 1988 by Manika Sharma)',
+      'IB MYP through DP — sister campus Moulsari runs the junior MYP feed',
+      'Located in Sector V-37 on the Aravali range, south Gurgaon',
+      'Recognised for inquiry-led pedagogy and a humanities-and-arts-strong identity',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Day school (not residential) — students commute from across Gurgaon',
+    ],
+    collegeContext:
+      'TSRS Aravali graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Manchester, Edinburgh), US (Ivy+, top liberal arts colleges, NYU, Northwestern), Canada (McGill, Toronto, UBC, Western, Queen\'s), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for the IB+NEET dual-track students). Biology HL students from TSRS most commonly target UK medicine, US pre-med (followed by Indian medical schools via NEET on the dual-track), or biosciences degrees at top UK and Canadian universities. For TSRS\'s humanities-and-arts cohort, Biology HL is also common as a foundation for environmental science, neuroscience, and public-health degrees.',
+    paceAlignment:
+      "TSRS Aravali follows the standard two-year DP cycle with the IA submission window centred on DP1-end / early DP2. IST timezone aligns with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule that compresses IB Biology + NEET Biology + NEET Chemistry + NEET Physics into a manageable weekly load that doesn't break either syllabus. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window.",
+    faqs: [
+      {
+        question: 'Do you offer the IB+NEET integrated track for TSRS Aravali students?',
+        answer:
+          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. A meaningful share of TSRS Aravali Biology HL students pursue the dual IB+NEET pathway because it preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options. We coordinate the IB Biology HL syllabus with NEET Biology + Chemistry + Physics on a single weekly schedule.',
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. India-resident families pay in INR; TSRS Aravali families can opt for either USD international or INR domestic pricing.',
+      },
+      {
+        question: "How does TSRS Aravali's IB Biology compare to Pathways Aravali (the other major IB school in the area)?",
+        answer:
+          'Both schools run IB Biology HL and SL at a serious level and both campuses sit on the Aravali range within a short driving distance. Pathways Aravali is a residential + day school with a larger full IB Continuum from PYP through DP and a publicly-larger DP Biology cohort. TSRS Aravali is day-only with a smaller, more humanities-and-arts-tilted cohort. Both produce competitive DP scores; the choice between them is typically about school culture fit (boarding option, pedagogical style, peer cohort) rather than the IB Biology programme itself. Our coaching works equally with students from either school.',
+      },
+      {
+        question: 'What is TSRS Aravali\'s IB Diploma cohort average — and is that a useful comparator?',
+        answer:
+          'TSRS Aravali does not publish per-subject IB Biology distributions in the way some schools do, but the school\'s overall diploma performance has publicly read as competitive within the NCR cluster. Per-school averages are weaker comparators than they look — the more useful question for a specific student is "what is my target score, and what is the gap between my current trajectory and that target". Our DP1 diagnostic identifies the gap and the coaching plan closes it; cohort averages are an aggregate signal, not an individual prediction.',
+      },
+      {
+        question: "When should a TSRS Aravali student start IB Biology tutoring?",
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and lets the coaching shape the IA topic from proposal to final submission. For IB+NEET students, ideally even earlier (during Grade 10 / MYP5) to build the Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October or November of DP2 (after the school's mocks) is still effective and we have a number of TSRS students who join at that point specifically for Paper 2 + Paper 3 rubric drilling.",
+      },
+      {
+        question: 'Do you tutor TSRS Moulsari MYP5 students preparing to transition into the Aravali DP programme?',
+        answer:
+          'Yes — pre-DP MYP5 preparation is a useful entry point for students planning the Moulsari-to-Aravali transition. We coach the MYP-to-DP Biology bridge specifically: introducing the IB Diploma command terms ("explain", "evaluate", "discuss"), the data-analysis style that Paper 2 rewards, and the IA-style of designing a personal investigation. Many TSRS families start this in MYP5 summer so the student arrives at DP1 with the rubric language already familiar.',
+      },
+      {
+        question: 'TSRS Aravali is in Sector V-37 — what about the commute and live-class scheduling?',
+        answer:
+          'Coaching is 100% online live video — there is no physical commute to a tutoring centre. Your child opens a laptop at home after the school day (most TSRS Aravali students arrive home between 4:30–6 PM depending on the Sector V-37 commute window), eats, and joins the IST evening live session at 7 PM. Sessions run 90 minutes. For families based deeper in south Gurgaon or in the new Sector 70+ belt, the no-commute model returns roughly 90 minutes per session compared to driving to a Sohna Road or Cyber City tutoring centre.',
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */

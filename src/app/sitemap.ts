@@ -202,6 +202,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ib-biology-tutor-tanglin-trust' ||
     path === '/ib-biology-tutor-nist-bangkok' ||
     path === '/ib-biology-tutor-pathways-aravali' ||
+    path === '/ib-biology-tutor-shri-ram-aravali' ||
     path === '/ib-biology-tutor-uwc-mahindra-pune' ||
     path === '/ib-biology-tutor-stonehill-bangalore' ||
     path === '/ib-biology-tutor-inventure-bangalore' ||
@@ -5486,6 +5487,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ib-biology-tutor-pathways-aravali`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-shri-ram-aravali`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
