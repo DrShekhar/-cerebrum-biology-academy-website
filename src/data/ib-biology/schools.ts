@@ -1188,6 +1188,80 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 17. HERITAGE XPERIENTIAL LEARNING SCHOOL (Gurugram, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'heritage-xperiential-gurgaon',
+    schoolName: 'Heritage Xperiential Learning School',
+    shortName: 'Heritage Xperiential',
+    cityCountry: 'Gurugram, India',
+    citySlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Heritage Xperiential Learning School (HXLS) is a co-educational day school in Sector 62 Gurugram, founded in 2002 as the flagship campus of the Heritage Schools group co-founded by Manit Jain and Vishnu Karthik. The school is built around an experiential-learning philosophy that emphasises inquiry, outdoor education, arts and theatre, and project-based assessment in the junior and middle years; in the senior school, students choose between the IB Diploma Programme and the CBSE/Indian board pathway, with the IB DP authorised under the IB World School framework.",
+      "Heritage Xperiential's IB Biology cohort is smaller than Pathways Aravali's because the school also runs a CBSE senior-school track and many Heritage students continue on CBSE rather than switching to IB at Grade 11. The students who do choose IB are typically self-selecting toward international university applications — UK, US, Canada, Australia — and want the IB's breadth and IA-driven assessment to read on a Common-App or UCAS transcript. IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage, and the school's senior-school Biology department draws on the broader Heritage commitment to lab-based and field-based inquiry.",
+      "For Heritage Xperiential students, the most common driver of external IB Biology tutoring is the transition from the school's inquiry-led junior pedagogy into the rubric-tight assessment style that the IB Diploma demands. Heritage students often arrive at DP1 with strong conceptual instincts and natural enquiry-driven curiosity (the experiential learning culture builds this from K-1), but the IB's command-term vocabulary (\"explain\", \"evaluate\", \"discuss\", \"distinguish\") and the precise mark-scheme structure of Paper 2 long-response answers benefit from explicit calibration. Our DP1 coaching adds that rubric scaffolding without compromising the conceptual fluency the school has built; we are deliberately not trying to convert Heritage students into rote learners, only to help them translate their conceptual strength into the IB-rubric language that scores marks.",
+      "Heritage's IA (Internal Assessment) culture is particularly aligned with our coaching model. The school's experiential-learning DNA produces students who genuinely enjoy designing a personal investigation — the IB Biology IA's 10-hour 20-percent-weight independent investigation plays to Heritage students' strengths rather than against them. Our IA mentorship for Heritage students typically focuses less on \"how to design an investigation\" and more on \"how to write up the design + data analysis + evaluation against the four IB-specific assessment criteria\" — converting a strong piece of inquiry into a well-scoring IA report. Several Heritage IB Biology students each cohort also pursue Extended Essay (EE) in Biology; our EE mentorship runs in parallel with the IA work to keep the DP1 research load manageable.",
+    ],
+    reputationBullets: [
+      'Founded 2002 — flagship campus of the Heritage Schools group',
+      'Co-founders: Manit Jain and Vishnu Karthik',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school offers both IB DP and CBSE — students choose at Grade 11',
+      'Experiential-learning philosophy: inquiry, outdoor ed, arts, project-based',
+      'Located in Sector 62 Gurugram (Sohna-Gurgaon Road corridor)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Strong IA / EE culture aligned with the school\'s inquiry-driven pedagogy',
+    ],
+    collegeContext:
+      'Heritage Xperiential IB graduates matriculate to UK (Russell Group, Oxbridge, Imperial, UCL, Edinburgh, Warwick, KCL, SOAS for humanities cross-applicants), US (Ivy+, top liberal arts colleges, NYU, Berkeley, Michigan, Northwestern), Canada (McGill, Toronto, UBC, Western, Queen\'s), Australia (Melbourne, Sydney, ANU), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for the IB+NEET dual-track students). The Heritage profile is unusually strong for liberal-arts-oriented US applications (Williams, Amherst, Pomona, Wesleyan, Brown) because the experiential-learning transcript reads as authentically distinctive on US admissions side. Biology HL students from Heritage most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or interdisciplinary science programmes that reward an inquiry-and-arts profile.',
+    paceAlignment:
+      "Heritage Xperiential follows the standard two-year DP cycle with the IA submission window in late DP1 / early DP2. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common) or weekend morning blocks. For IB+NEET integrated students, we run a combined weekly schedule that layers NEET Biology + Chemistry + Physics on top of IB Biology HL without doubling the workload — many Heritage students value this efficiency because the school's culture is anti-burnout. IA mentorship aligns to the school's DP1 IA proposal deadlines; EE mentorship runs in parallel for the cohort that takes Biology as their EE subject.",
+    faqs: [
+      {
+        question: "My child is at Heritage Xperiential's experiential-learning programme through Grade 10 — will they adjust to the IB DP's rubric-tight assessment style?",
+        answer:
+          "Yes, and the adjustment is typically faster than parents expect. Heritage students arrive at DP1 with strong conceptual instincts and a natural inquiry-driven curiosity that the school's K-10 experiential model builds. The IB DP layer is essentially adding rubric vocabulary (\"explain\", \"evaluate\", \"discuss\", \"distinguish\") and Paper 2 long-response structure on top of that conceptual foundation. Most Heritage students internalise the rubric language within the first DP1 term once it is taught explicitly. Our DP1 coaching adds that scaffolding without converting them into rote learners — we are deliberately keeping the conceptual fluency the school has built.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Heritage Xperiential students?',
+        answer:
+          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Some Heritage IB Biology HL students pursue the dual IB+NEET pathway because it preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. Heritage students often value this efficiency because the school\'s culture is anti-burnout — we calibrate the integrated load explicitly to avoid the 60-hour weekly trap.',
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. India-resident families pay in INR; Heritage Xperiential families can opt for either USD international or INR domestic pricing.',
+      },
+      {
+        question: "Heritage's senior school offers both IB and CBSE — when does IB Biology coaching make sense, and when is the student better off staying on CBSE?",
+        answer:
+          'The honest answer depends on the application target. If your child is realistically applying to UK / US / Canada / Australia universities, IB is the better signal and the workload is justified. If your child is realistically going to study in India (AIIMS, state medical colleges, IITs, Ashoka, Krea), CBSE is the cleaner path — NEET-eligibility and Indian-university processes are CBSE-aligned. The grey zone is dual-application students who want both options open: we work with these students on the IB+NEET integrated track to preserve both paths. We will be straight with you about which track to prioritise based on your application target.',
+      },
+      {
+        question: 'My child is doing Biology IA at Heritage and wants the rubric to actually translate into marks — can you help with that specifically?',
+        answer:
+          "Yes — IA mentorship is one of our highest-leverage offers for Heritage students because the experiential pedagogy already produces strong investigation design. The gap, when it exists, is in writing up the design + data + evaluation against the four IB-specific assessment criteria (Personal Engagement, Exploration, Analysis, Evaluation, Communication). We work through draft-by-draft rewrites with explicit criterion-by-criterion feedback. Several Heritage Biology IAs each cohort move from low-7s to high-7s with two or three rounds of this feedback, because the underlying inquiry is already strong; the gap is in the formal write-up.",
+      },
+      {
+        question: 'Do you support Biology Extended Essay (EE) for Heritage students taking it as their EE subject?',
+        answer:
+          'Yes. EE mentorship runs alongside IA mentorship in DP1 so the research load is manageable. Biology EE is a 4,000-word independent research essay marked against the IB EE rubric — distinct from but related to the IA. We help with research-question formulation (a tighter question scores better than a broader one), source-material selection, the EE-specific writing style (more formal than the IA, more open-ended than a school report), and the reflective Researcher\'s Reflection Space (RRS) entries. Several Heritage IB Biology EE candidates each cohort target high-B / low-A scores; this is achievable with focused mentorship from the proposal stage.',
+      },
+      {
+        question: 'When should a Heritage Xperiential student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA + EE mentorship window for Heritage students who take Biology as their EE subject. For IB+NEET students, ideally even earlier (during Grade 10) to build the Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October or November of DP2 (after the school's mocks) is still effective and we have a number of Heritage students who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to the May exams.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
