@@ -1709,6 +1709,84 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 24. SHIV NADAR SCHOOL NOIDA (Sector 168, Noida, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Founded by the Shiv Nadar Foundation — the philanthropic arm of HCL
+  // Technologies founder Shiv Nadar. Sister campuses also operate in
+  // Gurgaon and Faridabad. STEM-strong scientific orientation distinguishes
+  // this school's IB cohort from the arts-and-humanities-tilted cohorts
+  // at other NCR IB schools.
+  {
+    slug: 'shiv-nadar-school-noida',
+    schoolName: 'Shiv Nadar School Noida',
+    shortName: 'Shiv Nadar Noida',
+    cityCountry: 'Noida, India',
+    citySlug: 'noida',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Shiv Nadar School Noida is a co-educational day school in Sector 168 Noida, opened in the early 2010s as the first of the Shiv Nadar School network's campuses. The school was founded under the Shiv Nadar Foundation — the philanthropic arm of HCL Technologies founder Shiv Nadar (one of India's most prominent tech-industry philanthropists) — and the schools share a leadership-and-STEM-strong educational philosophy that visibly reflects the founder's industrial-and-scientific roots. Sister campuses operate in Gurgaon (Sector 73) and Faridabad, with overlapping curriculum and faculty frameworks.",
+      "Shiv Nadar School Noida runs CBSE as its primary curriculum through Class 10 and offers the IB Diploma Programme as the senior-school international option at Classes 11–12 alongside the CBSE Class 11–12 continuation track. Cambridge IGCSE / A-Level options are also available at some senior-school cohorts. IB Biology HL and SL are both offered with full Section 6 (Practical Programme) coverage; the school's laboratory infrastructure and emphasis on hands-on STEM exploration give the Biology programme a strong investigation-and-data orientation that aligns well with the IB's IA-and-Paper-2 assessment style.",
+      "For Shiv Nadar School Noida IB Biology students, the most common drivers of external tutoring are: (1) Paper 2 rubric calibration where the school's strong conceptual culture sometimes produces answers that are scientifically sound but score below their potential against the IB's specific long-response mark scheme, and (2) IA mentorship — the school's STEM-strong culture produces students who genuinely enjoy designing personal investigations, but the IA write-up against the IB-specific four-criterion rubric benefits from explicit external coaching. Several Shiv Nadar IB Biology HL students each cohort also pursue our integrated IB+NEET track for the standard dual-application reasons.",
+      "Shiv Nadar School Noida's Sector 168 location keeps it accessible across the Noida residential belt, though Sector 168 is on the eastern Yamuna Expressway side rather than the central Noida sectors that house most of the other IB schools (Pathways at Sector 100, Lotus Valley further west). Many Shiv Nadar families commute from across the broader Noida and Greater Noida footprint, and the school operates a transport network that extends to Sectors 50, 62, 75, 93, 100, 128, 132 and Greater Noida. For our coaching, the school commute is irrelevant — IST evening live sessions at 7–9 PM fit after the school day regardless of which Noida sector students live in.",
+    ],
+    reputationBullets: [
+      'Founded under the Shiv Nadar Foundation (philanthropic arm of HCL Technologies founder)',
+      'Opened early 2010s — first of three Shiv Nadar School campuses (Noida / Gurgaon / Faridabad)',
+      'CBSE primary curriculum + IB DP at senior school',
+      'STEM-and-leadership-strong educational philosophy reflecting founder\'s industrial-scientific roots',
+      'Located in Sector 168 Noida (eastern Yamuna Expressway side)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Strong laboratory infrastructure for hands-on scientific investigation',
+    ],
+    collegeContext:
+      "Shiv Nadar School Noida IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Michigan, Carnegie Mellon, Northwestern, MIT for the STEM-leaning subset, public flagships), Canada (Toronto, UBC, McGill, Waterloo for the engineering-leaning subset, Western, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University in Greater Noida — note: a distinct institution from the school, both founded by the Shiv Nadar Foundation — Plaksha IIT, IIITs, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Shiv Nadar School Noida most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, biomedical / biotechnology programmes, or interdisciplinary STEM tracks combining biology with computer science or data science (a natural fit for the school's STEM identity).",
+    paceAlignment:
+      "Shiv Nadar School Noida follows the standard two-year DP cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the school day regardless of which Noida sector students live in — the school's transport network spans Sectors 50/62/75/93/100/128/132 + Greater Noida) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. IA mentorship aligns to the school's DP1 IA proposal deadlines. The STEM-strong culture at Shiv Nadar means many students approach the IA as a genuine scientific investigation rather than a tick-box exercise; our coaching adds the rubric scaffolding that converts good investigation into high-scoring write-up.",
+    faqs: [
+      {
+        question: "Shiv Nadar School Noida is STEM-strong with strong lab facilities — does my child really need external IB Biology tutoring?",
+        answer:
+          "The honest answer depends on the target score. For an AP-4-equivalent target (IB Biology HL score 6), the school's in-house teaching is typically sufficient for engaged students. For an IB-7 target — required for top UK medical schools, US pre-med at Ivies, or competitive Canadian biosciences — the gap is usually rubric mastery: converting strong conceptual understanding into the precise IB Paper 2 long-response mark-scheme structure. The school's STEM-strong culture produces conceptually fluent students; our 1:1 coaching adds the specific rubric calibration that takes a 6 to a 7. Several Shiv Nadar Noida students each cohort use us specifically for this rubric layer alongside the school's strong in-house teaching.",
+      },
+      {
+        question: 'Is Shiv Nadar School Noida the same as Shiv Nadar University (also in Greater Noida)?',
+        answer:
+          "They're related but distinct institutions, both founded under the Shiv Nadar Foundation. Shiv Nadar School Noida is a co-educational K-12 day school in Sector 168 with CBSE primary + IB DP senior options. Shiv Nadar University (formally Shiv Nadar Institution of Eminence) is an independent private research university in Dadri, Greater Noida (NH-9 / Yamuna Expressway corridor) offering undergraduate and graduate degrees. Several Shiv Nadar School graduates do matriculate to Shiv Nadar University, but the institutions operate as separate entities with separate admissions processes and academic structures.",
+      },
+      {
+        question: 'How does Shiv Nadar School Noida compare to Pathways School Noida for IB Biology?',
+        answer:
+          "Both run rigorous IB Biology HL and SL programmes. Pathways Noida is a longer-established full IB Continuum (PYP through DP) with a more international-from-inception cohort culture; Shiv Nadar is CBSE-primary with IB DP added at senior school and has a more STEM-strong, leadership-oriented identity that reflects the founder's tech-industry roots. The IB Biology programmes are comparable in quality; the school cultures are genuinely different. Cohort sizes vary year to year. We have students from both schools — they're complementary positioning rather than competing on the IB Biology dimension specifically.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Shiv Nadar School Noida students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Shiv Nadar Noida IB Biology HL students each cohort pursue the dual IB+NEET pathway because the STEM-strong school culture produces students who are realistically considering both medical school in India (AIIMS, state medical colleges) and abroad (UK medicine, US pre-med, Canadian life-sciences). We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the school's STEM-rigour academic load.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. Shiv Nadar Noida families typically pay in INR with payment plans across 3–4 instalments; GST-compliant invoices issued for corporate-reimbursement claims (common for Noida-based MNC IT-employee families, including HCL Technologies employees).',
+      },
+      {
+        question: "Sector 168 is on the Yamuna Expressway side — does that affect tutoring scheduling for my child?",
+        answer:
+          "Not at all — coaching is 100% online live video, so the school's eastern-Noida location doesn't add any commute overhead for tutoring. Your child arrives home via the school's transport network (which extends across Sectors 50/62/75/93/100/128/132 and Greater Noida) and joins the IST evening live session at 7 PM. Sessions run 90 minutes. For students whose families are based further east on the Yamuna Expressway corridor (where commute to any Delhi-side or central-Noida tutoring centre would be 60+ minutes round-trip), the online-delivery model is structurally the right choice.",
+      },
+      {
+        question: 'When should a Shiv Nadar School Noida student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. The school's STEM-strong Class 10 already builds strong scientific foundations; our IB+NEET coaching layers the NEET-specific content and the IB-specific rubric work on top. For exam-only coaching, October DP2 (after the school's mocks) is still effective and several Shiv Nadar Noida students each cohort join then for Paper 2 + Paper 3 rubric drilling.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
