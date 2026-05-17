@@ -1787,6 +1787,82 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 25. STEP BY STEP SCHOOL NOIDA (Sector 132, Noida, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // One of the longer-established schools in Noida; the senior-school IB DP
+  // authorisation has been in place for years, giving Step by Step one of
+  // the longer IB track records in the Noida IB cluster.
+  {
+    slug: 'step-by-step-noida',
+    schoolName: 'Step by Step School',
+    shortName: 'Step by Step',
+    cityCountry: 'Noida, India',
+    citySlug: 'noida',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Step by Step School is a co-educational day school on the Noida–Greater Noida Expressway in Sector 132 Noida, founded in the mid-1990s and now one of the longer-established schools in the Noida IB cluster. The school built its early reputation on a CBSE primary-and-secondary curriculum with strong academics and pastoral care; the IB Diploma Programme authorisation was added later as a senior-school international option alongside the school's continuing CBSE Class 11-12 track. This dual-track senior school produces a student body where IB and CBSE students share the same school culture and faculty network but follow distinct curricula in their final two years.",
+      "Step by Step's IB DP cohort has historically been one of the longer-running in the Noida IB cluster — meaningfully predating the newer entrants (Pathways Noida early-2010s, Shiv Nadar Noida 2012). Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The Biology department is staffed by IB-experienced teachers, and the school's emphasis on careful pedagogy and student wellbeing produces an IB cohort culture that is academically serious without being burnout-driven.",
+      "For Step by Step IB Biology students, the most common driver of external tutoring is the parallel-curriculum context: because Step by Step runs IB alongside CBSE in senior school, the in-school IB-rubric peer benchmarking is thinner than at single-curriculum IB schools (Pathways Aravali, UWCSEA). Our 1:1 coaching replaces that with explicit weekly written feedback on Paper 2 long-response answers against the IB mark scheme. Several Step by Step IB Biology HL students each cohort also pursue our integrated IB+NEET track because the school's broader student body (with its strong CBSE cohort matriculating to Indian universities and AIIMS) creates a cultural context where keeping the India medical-college option open is naturally considered.",
+      "Step by Step's Sector 132 location places it on the Noida-Greater Noida Expressway corridor — a different commute axis from the central-Noida schools (Pathways at Sector 100) and the eastern-Noida cluster (Shiv Nadar at Sector 168). The school operates a transport network reaching across Sectors 50, 62, 75, 93, 100, 128, 132 and Greater Noida. Many Step by Step IB families commute from across this broader belt, and our IST evening live sessions at 7–9 PM fit cleanly after the school day regardless of which Noida sector students live in. The online-delivery model removes any concern about cross-sector physical commute to a tutoring centre.",
+    ],
+    reputationBullets: [
+      'Founded mid-1990s — one of the longer-established schools in the Noida IB cluster',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11–12',
+      'Located in Sector 132 on the Noida–Greater Noida Expressway',
+      'Strong reputation for academics combined with pastoral care and student wellbeing',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Among the longer-running IB DP cohorts in Noida (predates Pathways Noida and Shiv Nadar Noida)',
+    ],
+    collegeContext:
+      "Step by Step IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Step by Step most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The dual-curriculum senior school context produces an unusually wide range of matriculation destinations — IB students go primarily abroad while their CBSE schoolmates stay in India via AIIMS/IIT/AIIMS-equivalent processes, and the IB+NEET dual-track subset within the IB cohort spans both.",
+    paceAlignment:
+      "Step by Step's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the Noida-Greater Noida Expressway school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The school's careful-pedagogy culture means many Step by Step IB students arrive at DP1 with strong study habits and pastoral support already in place; our coaching adds the IB-specific rubric layer that the parallel-curriculum context structurally leaves thinner.",
+    faqs: [
+      {
+        question: "Step by Step has had IB DP for years — does the long-established status mean my child doesn't need external IB Biology coaching?",
+        answer:
+          "Long IB track record at a school is a real positive — it usually means stable IB-experienced teaching staff, clear IA submission processes, and well-developed mock exam culture. What it doesn't automatically solve is the individual-student gap between in-school Paper 2 attempts and the precise IB long-response mark-scheme. Our 1:1 coaching provides weekly written feedback against the rubric on practice Paper 2 answers, which the in-school class doesn't have bandwidth to do at that frequency. The school's IB experience and our coaching are complementary — we have several Step by Step IB Biology students each cohort using exactly this combination.",
+      },
+      {
+        question: "How does Step by Step's IB Biology compare to Pathways Noida and Shiv Nadar Noida?",
+        answer:
+          "Three different positioning profiles. Step by Step is the longest-established (mid-1990s founding, longer IB track record), dual-track senior school (IB + CBSE in parallel), strong pastoral-care culture. Pathways Noida is the international-from-inception full IB Continuum (PYP through DP). Shiv Nadar Noida is STEM-strong with founder's tech-industry identity. The IB Biology programmes are comparable in quality; the school cultures differ. None of these school differences predict an individual student's IB Biology score — that depends on engagement and rubric calibration. Our coaching adapts to each school's profile; we have students from all three.",
+      },
+      {
+        question: "Step by Step runs IB DP and CBSE in parallel at Class 11-12 — does the parallel-curriculum context affect IB Biology results?",
+        answer:
+          "The cohort size on the IB track at Step by Step is smaller than at single-curriculum IB schools (Pathways Aravali, UWCSEA). What this means in practice is that peer-driven rubric awareness — what students at larger IB cohorts absorb partly through cohort-density-driven peer benchmarking — is structurally thinner. Our 1:1 coaching fills that gap with explicit weekly written feedback on long-response answers against the IB Biology mark scheme. The result is rubric-tight Paper 2 answers regardless of in-school IB cohort size. Several Step by Step IB Biology HL students score competitively despite the smaller in-school IB peer group.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Step by Step students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Step by Step IB Biology HL students each cohort pursue the dual IB+NEET pathway. The dual-curriculum senior-school context at Step by Step (IB + CBSE in parallel) creates a cultural environment where the India medical-college path is naturally considered — many Step by Step IB families have extended-family connections to the school's CBSE cohort and the AIIMS/NEET track. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. Step by Step families typically pay in INR with payment plans across 3–4 instalments; GST-compliant invoices issued for corporate-reimbursement claims (common for Noida-based MNC IT-employee families).',
+      },
+      {
+        question: 'My child is at Step by Step CBSE Class 10 and considering switching to IB DP for senior school — what should we factor in?',
+        answer:
+          "Two factors matter most. First, the application target: IB is the cleaner signal for US / UK / Canada / Australia universities; CBSE is the more direct route for Indian universities and NEET-track medical school. Second, the assessment-style shift: CBSE Class 10 prioritises content recall and standardised-answer structures; IB DP Paper 2 rewards data-analysis-and-evaluation writing — a real shift that needs explicit DP1 first-term work. Dual-application students who want both options open can pursue IBDP at Step by Step and add NEET via our IB+NEET integrated track. We'll be straight about which path fits your application target.",
+      },
+      {
+        question: 'When should a Step by Step student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and includes an explicit CBSE-Class-10-to-IB-DP bridge for students transitioning from the school's CBSE track. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have Step by Step students each cohort who join then for focused Paper 2 + Paper 3 rubric drilling.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */

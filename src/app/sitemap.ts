@@ -212,6 +212,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ib-biology-tutor-gd-goenka-signature-gurgaon' ||
     path === '/ib-biology-tutor-pathways-noida' ||
     path === '/ib-biology-tutor-shiv-nadar-school-noida' ||
+    path === '/ib-biology-tutor-step-by-step-noida' ||
     path === '/ib-biology-tutor-uwc-mahindra-pune' ||
     path === '/ib-biology-tutor-stonehill-bangalore' ||
     path === '/ib-biology-tutor-inventure-bangalore' ||
@@ -5556,6 +5557,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ib-biology-tutor-shiv-nadar-school-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-step-by-step-noida`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
