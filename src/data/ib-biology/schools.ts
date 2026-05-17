@@ -1554,6 +1554,82 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 22. GD GOENKA SIGNATURE SCHOOL (Sector 48, Gurugram, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Sister-campus distinction: GD Goenka World School (Sohna Road, residential
+  // + day, full PYP+MYP+DP continuum) is covered at entry #20. Signature is
+  // the day-only Sector 48 campus with IB DP + CBSE dual-track senior school.
+  {
+    slug: 'gd-goenka-signature-gurgaon',
+    schoolName: 'GD Goenka Signature School',
+    shortName: 'GD Goenka Signature',
+    cityCountry: 'Gurugram, India',
+    citySlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "GD Goenka Signature School is a co-educational day school in Sector 48 Gurugram, opened in the mid-2010s as a newer addition to the GD Goenka education group. The 'Signature' branding within the GD Goenka network is used to distinguish a smaller set of premium internationally-credentialled campuses from the more numerous GD Goenka Public School CBSE network — students at Signature can opt for the IB Diploma Programme or the CBSE Class 11-12 track at senior school, with both pathways supported by the school's senior-school faculty.",
+      "Signature sits in central-south Gurugram on the Sohna Road side, making it more accessible to families based in DLF Phase 1-5, Sushant Lok, Sohna Road, Golf Course Road, and Sector 49-50 than the sister GD Goenka World School in Sohna (which is significantly further south and primarily serves residential families). The day-only model and the more central location together produce a distinctly different cohort profile from GD Goenka World — Signature's IB cohort is composed of children of central-Gurgaon working professionals who want the GD Goenka brand and IB credential without the boarding commitment.",
+      "GD Goenka Signature offers IB Biology HL and SL with full Section 6 (Practical Programme) coverage. The IB cohort is smaller than the school's CBSE cohort because the senior school runs both tracks in parallel and many families continue on CBSE. Students choosing IB are typically self-selecting toward US, UK, Canadian, or Australian university applications — and the school's brand recognition from the broader GD Goenka network produces strong India-university connections for dual-application students who want to keep AIIMS / state medical colleges open via NEET.",
+      "For GD Goenka Signature IB Biology students, the most common driver of external tutoring is the parallel-track context: because Signature runs IB alongside CBSE in senior school, the in-school IB-rubric peer benchmarking is thinner than at single-curriculum IB schools (Pathways Aravali, UWCSEA). Our 1:1 coaching replaces that with explicit weekly written feedback on Paper 2 long-response answers against the IB mark scheme. Several Signature IB Biology HL students each cohort also pursue our integrated IB+NEET track because the central-Gurgaon family profile often values keeping both abroad and India medical-college routes open through Class 12.",
+    ],
+    reputationBullets: [
+      'Opened mid-2010s — newer day-only campus in the GD Goenka network',
+      "'Signature' branding distinguishes premium IB/IGCSE campuses within the broader GD Goenka group",
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11-12',
+      'Located in Sector 48 Gurgaon (central-south Gurgaon, Sohna Road side)',
+      'Day school (not residential) — sister GD Goenka World at Sohna is residential',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+    ],
+    collegeContext:
+      "GD Goenka Signature IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Signature most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The central-Gurgaon working-professional family profile often produces strong dual-application interest — both abroad and India options kept open through Class 12.",
+    paceAlignment:
+      "GD Goenka Signature's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Sector 48 day-school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window. The DP1 coaching can include an explicit prior-curriculum-to-IB-DP bridge for students who transitioned into the IB track from a CBSE Class 10 background.",
+    faqs: [
+      {
+        question: "Is GD Goenka Signature different from GD Goenka World School? My friends mention both as Gurgaon IB options.",
+        answer:
+          "Yes — they're sister campuses within the broader GD Goenka network, but they're structurally different schools with distinct cohort profiles. GD Goenka World School is in Sohna (significantly further south) and runs a residential + day model with a full IB Continuum (PYP + MYP + DP) — many of its boarders come from across India and from neighbouring countries. GD Goenka Signature is in Sector 48 (more central, Sohna Road side) and is day-only with IB DP + CBSE dual-track senior school. Day families based in DLF, Sushant Lok, or Golf Course Road typically find Signature more accessible; families wanting boarding or full PYP-through-DP go to the World School. Both are part of the GD Goenka brand network.",
+      },
+      {
+        question: 'My child is choosing between Signature\'s IB DP and CBSE tracks at senior school — which is better for medicine applications?',
+        answer:
+          "Depends on the target country. For UK medicine, IB is well-received and reads strongly when paired with HL Biology + HL Chemistry. For US pre-med, IB is the cleaner transcript signal — US admissions officers parse IB more fluently than CBSE. For Canada / Australia, IB works well. For India (AIIMS / state medical via NEET), CBSE is the more direct route because NEET-eligibility and the Class 12 board-exam framework are CBSE-aligned. Dual-application students can pursue IBDP at Signature and add NEET via our IB+NEET integrated track. We'll be straight with you about which path best fits your application target.",
+      },
+      {
+        question: "Signature's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group affect IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a parallel-curriculum school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, GD Goenka World) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that with explicit weekly written feedback on long-response answers against the IB Biology mark scheme. The result is rubric-tight Paper 2 answers regardless of in-school IB cohort size.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for GD Goenka Signature students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Signature IB Biology HL students each cohort pursue the dual IB+NEET pathway because the central-Gurgaon working-professional family profile often values keeping both abroad and India medical-college options open. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that fits the school's term calendar and the day-student commute window.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000-₹98,000 per year for the complete integrated programme. Signature families typically pay in INR with payment plans across 3-4 instalments.',
+      },
+      {
+        question: "Sector 48 to Cyber City / MG Road tutoring centres is a 25-40 minute peak-hour drive — does that affect tutoring scheduling?",
+        answer:
+          "Not at all — coaching is 100% online live video, so there is no physical tutoring-centre commute. Your child arrives home from Signature (typically between 4:30 and 6 PM depending on Sector 48 traffic), eats, and joins the IST evening live session at 7 PM. Sessions run 90 minutes. The no-commute model returns roughly 50-80 minutes per session compared to driving to a Cyber City or MG Road tutoring centre — meaningful over a year of weekly sessions, especially for working-professional families coordinating around their own commutes.",
+      },
+      {
+        question: 'When should a GD Goenka Signature student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Signature students each cohort who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
