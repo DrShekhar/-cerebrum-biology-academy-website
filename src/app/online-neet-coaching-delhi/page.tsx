@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'aiims faculty online neet delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Online NEET Coaching in Delhi | AIIMS Faculty',
     description:
       'Live online NEET coaching for Delhi students. Same AIIMS faculty as offline, no commute.',

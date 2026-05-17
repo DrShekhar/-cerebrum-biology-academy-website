@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     'book free neet class greater noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Free NEET Demo Class Greater Noida',
     description:
       'Book your FREE NEET demo class. Online from Greater Noida home or offline at Sector 62 Noida. Experience our teaching before you decide.',

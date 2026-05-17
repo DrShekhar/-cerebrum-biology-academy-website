@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   keywords:
     'NEET coaching Rohini, neet classes Rohini, neet institute Rohini, physics chemistry biology coaching Rohini, biology tuition Rohini, NEET classes Rohini Sector 9, biology coaching DC Chowk, NEET coaching Rohini West, medical coaching Rohini, NEET preparation Rohini, Board Biology, CBSE Biology, Biology Olympiad, NBO, IBO, Class 11 Biology Rohini, Class 12 Biology Rohini, Foundation Biology',
   openGraph: {
+    locale: 'en_IN',
     title: 'Best NEET Coaching in Rohini',
     description:
       'Premium NEET coaching in Rohini. Expert AIIMS faculty, small batches, 98% success rate. Serving Sector 9, DC Chowk, Sector 3 & more.',

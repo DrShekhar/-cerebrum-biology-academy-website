@@ -103,6 +103,7 @@ export const metadata: Metadata = {
     title: 'NEET Coaching Near Hauz Khas Metro',
     description: `Online & Offline NEET Biology classes for students near Hauz Khas Metro. ${metroData.studentCount} students from South Delhi enrolled. 5 min to Green Park center.`,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-hauz-khas-metro',
+    type: 'website',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-hauz-khas-metro',

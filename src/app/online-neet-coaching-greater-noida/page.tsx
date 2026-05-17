@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     'online biology coaching greater noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Online NEET Coaching for Greater Noida | Live Interactive Sessions',
     description:
       'Study NEET Biology from your Greater Noida home. Live classes, instant doubts, recorded lectures. Hybrid mode available.',

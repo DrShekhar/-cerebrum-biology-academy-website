@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     'neet 650 plus noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Toppers from Noida 2025 | 23 AIIMS Selections',
     description: 'Meet our toppers: Priya Sharma (698), Rahul Verma (685). 47 students scored 650+ from Noida.',
     url: 'https://cerebrumbiologyacademy.com/neet-toppers-noida',

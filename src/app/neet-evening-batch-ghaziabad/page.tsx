@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     'indirapuram students neet coaching',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Evening Batch Ghaziabad 2026',
     description:
       'After-school NEET preparation! Evening classes from 5 PM at Sector 62 Noida, accessible via Blue Line Metro.',

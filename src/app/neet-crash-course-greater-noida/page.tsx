@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'online neet crash course greater noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Crash Course for Greater Noida | 45-Day Intensive Program',
     description:
       'Complete NEET Biology syllabus in 45 days. Daily tests, 1000+ questions, expert faculty. Online + hybrid for Greater Noida.',

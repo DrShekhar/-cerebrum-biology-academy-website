@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'aiims faculty re-neet delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'RE-NEET 2026 Coaching in Delhi NCR | 6 Centres + Online',
     description: '6 NCR centres + online live AIIMS-trained RE-NEET crash course.',
     url: 'https://cerebrumbiologyacademy.com/re-neet-2026-delhi',

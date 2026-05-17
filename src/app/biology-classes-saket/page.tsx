@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'medical coaching saket delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Biology Classes in Saket | NEET Coaching Near Select Citywalk Delhi',
     description:
       'Top biology classes in Saket for NEET & board exams. Near Saket metro & Select Citywalk.',

@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     'physics wallah supplement noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Physics Wallah Alternative Noida',
     description:
       'Want real classroom interaction instead of video lectures? Experience offline NEET biology coaching.',

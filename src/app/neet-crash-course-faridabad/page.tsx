@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'short term neet coaching faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Crash Course in Faridabad | 45-Day Intensive Program',
     description:
       'Complete NEET Biology syllabus in 45 days. Daily tests, 1000+ questions, expert faculty.',

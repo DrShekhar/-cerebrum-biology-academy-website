@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet coaching with stay',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: pageData.metaTitle,
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-with-hostel-delhi',

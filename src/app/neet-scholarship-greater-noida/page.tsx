@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     'online neet scholarship greater noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Scholarship Greater Noida 2026',
     description: 'Merit-based NEET scholarships up to 100% fee waiver for Greater Noida students. Apply now!',
     url: 'https://cerebrumbiologyacademy.com/neet-scholarship-greater-noida',

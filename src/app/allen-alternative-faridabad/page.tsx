@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'switch from allen faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Allen Alternative in Faridabad | Personalized NEET Biology Coaching',
     description:
       'Why 500+ Faridabad students chose Cerebrum over Allen for NEET Biology preparation.',

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'biology coaching sector 62 noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Narayana Alternative in Noida 2026',
     description:
       'Tired of crowded Narayana batches? Get personal attention with 25-student batches.',

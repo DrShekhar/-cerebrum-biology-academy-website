@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     'dps noida students neet coaching',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Evening Batch Noida 2026',
     description: 'After-school NEET preparation! Evening classes from 5 PM at Sector 62.',
     url: 'https://cerebrumbiologyacademy.com/neet-evening-batch-noida',

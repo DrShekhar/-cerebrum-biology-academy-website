@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'neet biology coaching faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology',
     images: ['/og-image.jpg'],
     description:

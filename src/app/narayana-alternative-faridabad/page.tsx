@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'biology coaching sector 17 faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Narayana Alternative in Faridabad 2026',
     description:
       'Tired of crowded Narayana batches? Get personal attention with 25-student batches.',

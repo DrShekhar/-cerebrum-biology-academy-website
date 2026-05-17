@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'aiims coaching faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best NEET Coaching in Faridabad 2026 | Top Institutes Compared',
     description:
       'Compare top NEET coaching institutes in Faridabad. Fees, faculty, results compared.',

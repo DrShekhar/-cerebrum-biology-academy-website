@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'switch from allen ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Allen Alternative in Ghaziabad | Personalized NEET Biology Coaching',
     description:
       'Allen has no center in Ghaziabad. Cerebrum Biology Academy offers better personalized NEET coaching for Ghaziabad students.',

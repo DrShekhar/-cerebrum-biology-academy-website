@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     'affordable neet coaching faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Fees in Faridabad 2026 | Compare & Save',
     description:
       'Detailed fee comparison of all major NEET coaching institutes in Faridabad. Find the best value.',

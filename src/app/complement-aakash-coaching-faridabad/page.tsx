@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'evening biology coaching faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Complement Aakash with Cerebrum Biology Coaching | Faridabad',
     description: 'Keep your Aakash enrollment. Add focused Biology coaching from AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/complement-aakash-coaching-faridabad',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'ncert biology class 12 noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Class 12 Board Biology Noida | Score 95%+ in CBSE/ISC',
     description: 'Expert coaching for Class 12 Board Biology exam. NCERT mastery + practical preparation.',
     url: 'https://cerebrumbiologyacademy.com/class-12-board-biology-noida',

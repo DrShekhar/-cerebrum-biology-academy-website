@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'neet coaching pari chowk',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best NEET Coaching in Greater Noida 2026 | Top Institutes Compared',
     description:
       'Compare top NEET coaching institutes for Greater Noida students. Fees, faculty, results compared.',

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'medical coaching green park delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Biology Classes in Green Park | NEET Coaching South Delhi',
     description:
       'Expert biology classes in Green Park for NEET & board exams. Near Green Park metro.',

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   keywords:
     'NEET coaching North Delhi, NEET coaching Rohini, NEET coaching Pitampura, NEET coaching Model Town, biology coaching North Delhi, medical coaching North Delhi, NEET preparation North Delhi',
   openGraph: {
+    locale: 'en_IN',
     title: 'Best NEET Coaching in North Delhi',
     description:
       'Top NEET coaching for North Delhi students. Expert AIIMS faculty, small batches, 98% success rate. Serving Rohini, Pitampura, Model Town & more.',

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'best neet test series',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Test Series in Noida | 50+ Mock Tests',
     description:
       'Comprehensive NEET test series with detailed analysis, rank prediction, and performance tracking.',

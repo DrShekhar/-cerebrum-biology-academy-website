@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     'biology institute delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Classes in Delhi | NEET & Board Preparation',
     description:
       'Top-rated biology coaching in Delhi NCR. AIIMS faculty, 98% success rate. Centers in Rohini, South Delhi, Gurugram.',

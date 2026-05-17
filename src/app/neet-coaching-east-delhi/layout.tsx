@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   keywords:
     'NEET coaching East Delhi, NEET coaching Laxmi Nagar, NEET coaching Preet Vihar, NEET coaching Mayur Vihar, biology coaching East Delhi, medical coaching East Delhi, NEET preparation East Delhi',
   openGraph: {
+    locale: 'en_IN',
     title: 'Best NEET Coaching in East Delhi',
     description:
       'Top NEET coaching for East Delhi students. Expert AIIMS faculty, small batches, 98% success rate. Serving Laxmi Nagar, Preet Vihar, Mayur Vihar & more.',

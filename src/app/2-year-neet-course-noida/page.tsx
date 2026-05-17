@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     'neet biology 2 year course',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: '2 Year NEET Course Noida 2026',
     description:
       'Start early, succeed confidently! 2-year integrated NEET biology program from Class 11.',

@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-delhi-ncr',
+    locale: 'en_IN',
     title: 'NEET Biology Coaching in Delhi NCR',
     description:
       'Premier NEET Biology coaching with 15+ years experience. Small batches, expert faculty, 98% results. Book free demo.',

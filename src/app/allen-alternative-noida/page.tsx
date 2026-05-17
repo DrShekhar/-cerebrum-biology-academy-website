@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'switch from allen noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Allen Alternative in Noida | Personalized NEET Biology Coaching',
     description:
       'Why 500+ Noida students chose Cerebrum over Allen for NEET Biology preparation. Allen has no Noida center - Cerebrum does.',

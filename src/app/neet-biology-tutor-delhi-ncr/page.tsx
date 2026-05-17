@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   keywords:
     'neet biology tutor delhi ncr, neet biology tutor near me, neet biology tutors delhi, biology tutor for neet noida, neet biology tutor gurugram, best neet biology tutor, private neet biology tutor, biology for neet tutor india',
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Biology Tutor Delhi NCR | AIIMS Faculty | ₹4K/Month | 98% Success',
     description:
       'Stop wasting ₹8K/month on the wrong biology tutor. Get AIIMS faculty, test series, recordings & 19,000+ MCQs at ₹4K/month. 98% success rate.',

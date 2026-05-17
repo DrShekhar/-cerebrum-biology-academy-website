@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'short term neet coaching noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Crash Course in Noida | 45-Day Intensive Program',
     description:
       'Complete NEET Biology syllabus in 45 days. Daily tests, 1000+ questions, expert faculty.',

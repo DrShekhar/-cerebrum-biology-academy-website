@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'aiims coaching ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best NEET Coaching in Ghaziabad 2026 | Top Institutes Compared',
     description:
       'Compare top NEET coaching institutes in Ghaziabad. Fees, faculty, results compared.',

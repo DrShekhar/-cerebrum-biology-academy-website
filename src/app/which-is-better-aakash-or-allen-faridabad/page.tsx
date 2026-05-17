@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     'aakash vs allen fees faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Aakash vs Allen: Which is Better for NEET? | Faridabad',
     description: 'Complete comparison of Aakash and Allen for NEET coaching in Faridabad.',
     url: 'https://cerebrumbiologyacademy.com/which-is-better-aakash-or-allen-faridabad',

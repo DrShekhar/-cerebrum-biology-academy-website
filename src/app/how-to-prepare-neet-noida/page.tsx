@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     'how to score 650 in neet noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'How to Prepare for NEET in Noida | Complete Guide',
     description:
       'Step-by-step NEET preparation guide for Noida students by AIIMS faculty. Proven strategy to score 650+.',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet institute near me greater noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Near Me in Greater Noida | Biology Classes Nearby',
     description:
       'Find the best NEET coaching near you in Greater Noida. Online + hybrid classes available. Nearest center: Sector 62, Noida.',

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
   openGraph: {
+    locale: 'en_IN',
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: `https://cerebrumbiologyacademy.com/biology-classes-north-delhi`,

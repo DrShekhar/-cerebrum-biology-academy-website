@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'scholarship neet coaching',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: pageData.metaTitle,
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/affordable-neet-coaching-delhi',

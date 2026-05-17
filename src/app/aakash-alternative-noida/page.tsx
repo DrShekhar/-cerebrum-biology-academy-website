@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'aakash byju alternative',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Aakash Alternative in Noida | Personalized NEET Biology Coaching',
     description:
       'Why 400+ Noida students chose Cerebrum over Aakash for NEET Biology preparation.',

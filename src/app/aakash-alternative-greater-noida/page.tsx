@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'neet biology specialist greater noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Aakash Alternative in Greater Noida | Personalized NEET Biology Coaching',
     description:
       'Why Greater Noida students choose Cerebrum over Aakash Knowledge Park for NEET Biology preparation. Small batches, AIIMS faculty, 19600+ MCQ bank.',

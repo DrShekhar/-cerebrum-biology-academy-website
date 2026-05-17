@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     'aakash vs allen fees noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Aakash vs Allen: Which is Better for NEET? | Noida',
     description: 'Complete comparison of Aakash and Allen for NEET coaching in Noida.',
     url: 'https://cerebrumbiologyacademy.com/which-is-better-aakash-or-allen-noida',

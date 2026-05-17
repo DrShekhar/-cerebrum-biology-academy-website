@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     'book free neet class faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Free NEET Demo Class Faridabad',
     description: 'Book your FREE NEET demo class. Experience our teaching before you decide.',
     url: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-faridabad',

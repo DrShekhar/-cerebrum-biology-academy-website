@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'best neet coaching faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'YVS Institute Alternative in Faridabad',
     description:
       'Looking for biology-specialist alternative to YVS? Get AIIMS faculty and small batches.',

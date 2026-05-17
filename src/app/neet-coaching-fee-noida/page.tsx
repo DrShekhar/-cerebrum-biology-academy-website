@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     'neet coaching scholarship noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Fee Noida 2026 | Complete Fee Comparison',
     description: 'NEET coaching fees in Noida range from Rs 45,000 to Rs 3,50,000. Compare all institutes.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-noida',

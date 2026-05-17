@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     'biology scholarship ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Scholarship Ghaziabad 2026',
     description: 'Merit-based NEET scholarships up to 100% fee waiver. Apply now!',
     url: 'https://cerebrumbiologyacademy.com/neet-scholarship-ghaziabad',

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'intensive neet revision',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Revision Batch in Faridabad | 3-Month Final Revision',
     description: 'Complete NCERT revision with high-yield topic focus. 2000+ MCQs, mock tests, and expert guidance.',
     url: 'https://cerebrumbiologyacademy.com/neet-revision-batch-faridabad',

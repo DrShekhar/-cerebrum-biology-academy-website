@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'aiims coaching noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best NEET Coaching in Noida 2026 | Top Institutes Compared',
     description:
       'Compare top NEET coaching institutes in Noida. Fees, faculty, results compared.',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'intensive neet revision',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: `https://cerebrumbiologyacademy.com/neet-revision-batch-greater-noida`,

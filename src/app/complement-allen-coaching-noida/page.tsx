@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'evening biology coaching noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Complement Allen with Cerebrum Biology Coaching | Noida',
     description: 'Keep your Allen enrollment. Add focused Biology coaching from AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/complement-allen-coaching-noida',

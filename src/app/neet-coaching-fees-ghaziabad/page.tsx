@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     'affordable neet coaching ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Fees in Ghaziabad 2026 | Compare & Save',
     description:
       'Detailed fee comparison of all major NEET coaching institutes for Ghaziabad students. Find the best value.',

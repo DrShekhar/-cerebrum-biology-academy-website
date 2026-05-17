@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'short term neet coaching ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Crash Course in Ghaziabad | 45-Day Intensive Program',
     description:
       'Complete NEET Biology syllabus in 45 days. Daily tests, 1000+ questions, expert faculty for Ghaziabad students.',

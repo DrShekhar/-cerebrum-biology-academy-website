@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     'integrated neet coaching weekend ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Weekend Batch Ghaziabad 2026',
     description:
       'Balance school and NEET prep! Saturday-Sunday intensive classes at Sector 62 Noida for Ghaziabad students.',

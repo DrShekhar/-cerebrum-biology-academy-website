@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     'affordable neet coaching greater noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Fees in Greater Noida 2026 | Compare & Save',
     description:
       'Detailed fee comparison of all major NEET coaching institutes for Greater Noida students. Find the best value.',

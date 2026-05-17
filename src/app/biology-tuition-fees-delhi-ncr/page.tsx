@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     'affordable biology tuition delhi ncr',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Biology Tuition Fees in Delhi NCR 2026 | ₹3K-8K/Month | Compare & Save',
     description:
       'Compare biology tuition fees across Delhi NCR. Home tutors ₹5-8K/month, online ₹3-5K/month, Cerebrum ₹4K/month with AIIMS faculty + test series included.',

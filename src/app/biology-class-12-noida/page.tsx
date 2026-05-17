@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'board exam biology noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Class 12 Biology Coaching Noida | NEET + Board 2026',
     description: 'Expert Class 12 Biology coaching for NEET & Boards. AIIMS faculty, proven results.',
     url: 'https://cerebrumbiologyacademy.com/biology-class-12-noida',

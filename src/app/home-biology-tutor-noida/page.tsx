@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'private home tutor biology noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Home Biology Tutor Noida | Learn from Home | AIIMS Faculty',
     description: 'Best home Biology tutor in Noida. Online classes from your home with AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/home-biology-tutor-noida',

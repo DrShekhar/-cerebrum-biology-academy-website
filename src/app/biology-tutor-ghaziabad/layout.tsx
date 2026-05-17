@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   description:
     'Best biology tutor in Ghaziabad for NEET preparation. AIIMS-trained faculty, small batches, personalized attention. Online & offline classes available. Free demo!',
   openGraph: {
+    locale: 'en_IN',
     title: 'Biology Tutor in Ghaziabad | NEET Biology Coaching Near You',
     description:
       'Best biology tutor in Ghaziabad for NEET preparation. AIIMS-trained faculty, small batches, personalized attention. Online & offline classes available. Free demo!',

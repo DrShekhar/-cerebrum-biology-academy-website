@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'class 11 biology tuition cr park',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: cityData.metaTitle,
     images: ['/og-image.jpg'],
     description: cityData.metaDescription,

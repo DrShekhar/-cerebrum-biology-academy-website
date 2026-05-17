@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'neet institute near me faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Near Me in Faridabad | Biology Classes Nearby',
     description:
       'Find the best NEET coaching near you in Faridabad. Central Sector 17 location, accessible from all major areas.',

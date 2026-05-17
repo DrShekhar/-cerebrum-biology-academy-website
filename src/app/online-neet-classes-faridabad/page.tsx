@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'home neet coaching faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Online NEET Classes in Faridabad | Live Interactive Sessions',
     description: 'Premium online NEET Biology coaching for Faridabad students. Live classes, recordings, doubt support.',
     url: 'https://cerebrumbiologyacademy.com/online-neet-classes-faridabad',

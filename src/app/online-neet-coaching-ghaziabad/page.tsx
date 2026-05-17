@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     'online biology coaching ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Online NEET Coaching for Ghaziabad | Live Interactive Sessions',
     description:
       'Study NEET Biology from your Ghaziabad home. Live classes, instant doubts, recorded lectures. Hybrid mode available.',

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'neet preparation coaching or self study',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Is Coaching Necessary for NEET? Expert Answer',
     description: 'Honest analysis: when coaching helps and when self-study works.',
     url: 'https://cerebrumbiologyacademy.com/is-coaching-necessary-for-neet-noida',

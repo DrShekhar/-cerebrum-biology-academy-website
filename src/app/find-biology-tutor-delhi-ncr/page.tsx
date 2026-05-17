@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     'find biology coaching delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Find Best Biology Tutor in Delhi NCR 2026 | Class 11, 12 | NEET + Board',
     description:
       'Looking for a biology tutor in Delhi NCR? Compare home tutors vs coaching institutes. AIIMS faculty, 15-student batches, ₹4K/month. 4 centers + online.',

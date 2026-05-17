@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'neet coaching indirapuram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Near Me in Ghaziabad | Biology Classes Nearby',
     description:
       'Find the best NEET coaching near you in Ghaziabad. Sector 62 Noida location, accessible via Blue Line Metro from all Ghaziabad areas.',

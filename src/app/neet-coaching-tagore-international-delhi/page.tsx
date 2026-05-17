@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty tagore international',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Tagore International Students',
     description: 'AIIMS-trained NEET biology coaching for Tagore International students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-tagore-international-delhi',

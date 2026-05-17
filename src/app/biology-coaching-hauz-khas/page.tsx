@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'biology classes south delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/biology-coaching-hauz-khas',

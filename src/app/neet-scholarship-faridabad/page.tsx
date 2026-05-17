@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     'biology scholarship faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Scholarship Faridabad 2026',
     description: 'Merit-based NEET scholarships up to 100% fee waiver. Apply now!',
     url: 'https://cerebrumbiologyacademy.com/neet-scholarship-faridabad',

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   keywords:
     'NEET coaching West Delhi, NEET coaching Dwarka, NEET coaching Janakpuri, NEET coaching Rajouri Garden, biology coaching West Delhi, medical coaching West Delhi, NEET preparation West Delhi',
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching in West Delhi | Biology Classes Near You',
     images: ['/og-image.jpg'],
     description:
