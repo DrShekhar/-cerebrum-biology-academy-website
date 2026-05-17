@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 import {
   LandingHero,
   LeadForm,
@@ -99,7 +100,25 @@ export default function NEETBiologyPreparationTipsPage() {
         highlightedBadge="🎯 Proven by 1000+ NEET Qualifiers"
         trustBadges={['Expert Strategies', 'Topper Methods', 'Free Counseling']}
       />
-
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-biology-preparation-tips"
+        pageName="NEET Biology Preparation Tips"
+        parentHub={{
+          name: 'Best NEET Biology Tutor',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Preparation Strategy',
+          'NEET Biology Study Plan',
+          'NEET Biology Time Management',
+          'NEET Biology Chapter Weightage',
+          'NEET Biology Mock Test Strategy',
+          'NEET Biology Revision Plan',
+        ]}
+        courseName="NEET Biology Preparation — Tips & Strategy Hub"
+        courseDescription="Comprehensive NEET Biology preparation strategy: NCERT line-by-line mapping, chapter-wise weightage, mock test cadence, revision cycle, error-log methodology. Based on 12+ years of NEET pedagogy and 680+ medical college selections."
+        faqs={faqs}
+      />
       {/* Urgency Banner */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

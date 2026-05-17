@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const biologyTopics = [
   {
@@ -113,6 +114,24 @@ export default function NeetBiologyCoachingIndiaPage() {
 
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-biology-coaching-india"
+        pageName="Best NEET Biology Coaching in India"
+        parentHub={{
+          name: 'Best NEET Biology Tutor',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching India',
+          'Best NEET Biology Coaching India',
+          'NEET-UG Biology India',
+          'NEET Coaching Pan-India',
+          'Online NEET Biology India',
+          'AIIMS MBBS Pan-India',
+        ]}
+        courseName="NEET Biology Coaching India — National Hub"
+        courseDescription="India's only biology-only specialist NEET coaching. 680+ medical college selections, 98% NEET-UG qualification rate, 15-20 student batches across 6 Delhi NCR offline centres + pan-India online live. Same AIIMS-trained faculty from Mumbai to Chennai to Kolkata."
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -138,7 +157,11 @@ export default function NeetBiologyCoachingIndiaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20coaching%20india.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20coaching%20india.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -336,7 +359,11 @@ export default function NeetBiologyCoachingIndiaPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20coaching%20india.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20coaching%20india.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -348,7 +375,11 @@ export default function NeetBiologyCoachingIndiaPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20biology%20coaching%20india.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20biology%20coaching%20india.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

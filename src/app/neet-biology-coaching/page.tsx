@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const credentials = [
   { label: 'AIIMS Alumni', value: 'Faculty' },
@@ -132,6 +133,24 @@ const faqs = [
 export default function NEETBiologyCoachingPage() {
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-biology-coaching"
+        pageName="NEET Biology Coaching"
+        parentHub={{
+          name: 'Best NEET Biology Tutor',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching',
+          'NEET-UG Biology',
+          'NEET Botany',
+          'NEET Zoology',
+          'NEET Class 11 Class 12 Biology',
+          'AIIMS MBBS Preparation',
+        ]}
+        courseName="NEET Biology Coaching — Complete Programme"
+        courseDescription="End-to-end NEET-UG Biology coaching covering full NCERT Class 11 + Class 12 syllabus, NEET-pattern MCQ drilling, weekly mock tests, biweekly 1:1 doubt sessions. Same AIIMS-trained faculty across all tiers."
+      />
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
@@ -155,9 +174,7 @@ export default function NEETBiologyCoachingPage() {
       <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-4xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
               NEET Biology Specialists
@@ -178,7 +195,11 @@ export default function NEETBiologyCoachingPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20coaching.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -216,9 +237,7 @@ export default function NEETBiologyCoachingPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our NEET Biology Coaching?
             </h2>
@@ -245,9 +264,7 @@ export default function NEETBiologyCoachingPage() {
       {/* Related Pages - NEET Coaching */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Explore NEET Coaching Options
             </h2>
@@ -256,9 +273,7 @@ export default function NEETBiologyCoachingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {neetCoachingLinks.map((link, index) => (
-              <div
-                key={link.href}
-               className="animate-fadeInUp">
+              <div key={link.href} className="animate-fadeInUp">
                 <Link
                   href={link.href}
                   className="block bg-green-50 rounded-xl p-6 hover:bg-green-100 transition group"
@@ -282,9 +297,7 @@ export default function NEETBiologyCoachingPage() {
       {/* Online NEET Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <div className="inline-flex items-center bg-blue-100 px-4 py-2 rounded-full mb-4">
               <Laptop className="w-5 h-5 mr-2 text-blue-600" />
               <span className="text-blue-700 font-medium">Online Learning</span>
@@ -297,9 +310,7 @@ export default function NEETBiologyCoachingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {onlineNeetLinks.map((link, index) => (
-              <div
-                key={link.href}
-               className="animate-fadeInUp">
+              <div key={link.href} className="animate-fadeInUp">
                 <Link
                   href={link.href}
                   className="block bg-white rounded-xl p-6 shadow hover:shadow-lg transition group"
@@ -319,9 +330,7 @@ export default function NEETBiologyCoachingPage() {
       {/* NEET Tools & Resources */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Tools & Resources
             </h2>
@@ -330,9 +339,7 @@ export default function NEETBiologyCoachingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {neetToolsLinks.map((link, index) => (
-              <div
-                key={link.href}
-               className="animate-fadeInUp">
+              <div key={link.href} className="animate-fadeInUp">
                 <Link
                   href={link.href}
                   className="block bg-purple-50 rounded-xl p-6 hover:bg-purple-100 transition group"
@@ -356,9 +363,7 @@ export default function NEETBiologyCoachingPage() {
       {/* Biology Tutoring Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tutoring Options
             </h2>
@@ -367,9 +372,7 @@ export default function NEETBiologyCoachingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {biologyLinks.map((link, index) => (
-              <div
-                key={link.href}
-               className="animate-fadeInUp">
+              <div key={link.href} className="animate-fadeInUp">
                 <Link
                   href={link.href}
                   className="block bg-white rounded-xl p-6 shadow hover:shadow-lg transition group"
@@ -389,9 +392,7 @@ export default function NEETBiologyCoachingPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
@@ -399,10 +400,7 @@ export default function NEETBiologyCoachingPage() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
-                key={faq.question}
-                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
@@ -417,15 +415,18 @@ export default function NEETBiologyCoachingPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Book a free demo class and experience our teaching methodology!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20coaching.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20biology%20coaching.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -436,7 +437,11 @@ export default function NEETBiologyCoachingPage() {
                 </Button>
               </Link>
 
-              <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20biology%20coaching.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="outline"
                   size="xl"

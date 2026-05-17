@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 import {
   LandingHero,
   LeadForm,
@@ -90,7 +91,28 @@ export default function NEETBiologyClass12Page() {
         highlightedBadge="⚡ NEET 2026 - Only 150 Days Left"
         trustBadges={['340+ Score Strategy', 'Mock Tests', '98% Results']}
       />
-
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-biology-class-12"
+        pageName="NEET Biology Class 12 Coaching"
+        parentHub={{
+          name: 'Best NEET Biology Tutor for Class 12',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor-class-12',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Class 12',
+          'NCERT Class 12 Biology',
+          'NEET Zoology',
+          'NEET Human Physiology',
+          'NEET Genetics',
+          'NEET Reproduction',
+          'NEET Biotechnology',
+          'NEET Ecology',
+          'AIIMS MBBS Class 12 Preparation',
+        ]}
+        courseName="NEET Biology Class 12 — Zoology + Genetics"
+        courseDescription="Class 12 NEET Biology focused on Zoology + Genetics — Human Physiology Part 2, Reproduction, Genetics + Inheritance, Biotechnology, Ecology, Evolution. ~180 NEET marks. Board + NEET parallel pedagogy."
+        faqs={faqs}
+      />
       {/* Urgency Banner */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 import {
   LandingHero,
   LeadForm,
@@ -102,7 +103,27 @@ export default function NEETBiologyClass11Page() {
         highlightedBadge="🎓 Class 11 Batch Starting Soon"
         trustBadges={['NCERT + NEET Coverage', 'School-Friendly Schedule', '98% Results']}
       />
-
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-biology-class-11"
+        pageName="NEET Biology Class 11 Coaching"
+        parentHub={{
+          name: 'Best NEET Biology Tutor for Class 11',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor-class-11',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Class 11',
+          'NCERT Class 11 Biology',
+          'NEET Botany',
+          'NEET Plant Diversity',
+          'NEET Cell Biology',
+          'NEET Plant Physiology',
+          'NEET Plant Morphology',
+          'AIIMS MBBS Class 11 Preparation',
+        ]}
+        courseName="NEET Biology Class 11 — Botany Foundation"
+        courseDescription="Class 11 NEET Biology focused on Botany — Plant Diversity, Plant Morphology + Anatomy, Cell Biology, Plant Physiology, Animal Tissues. ~180 NEET marks (50% of Biology section). NCERT line-by-line mapped with NEET PYQ cross-references."
+        faqs={faqs}
+      />
       {/* Urgency Banner */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
