@@ -11,6 +11,7 @@ import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimo
 import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 import type { USP, FAQ } from '@/components/landing-pages'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching in Delhi NCR | Top Institute 2026',
@@ -142,6 +143,9 @@ const faqs: FAQ[] = [
 export default function NEETBiologyCoachingDelhiNCRPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+      />
       <DelhiAreaSchema pageSlug="neet-biology-coaching-delhi-ncr" />
       <LandingHero
         h1="Premier NEET Biology Coaching in Delhi NCR"

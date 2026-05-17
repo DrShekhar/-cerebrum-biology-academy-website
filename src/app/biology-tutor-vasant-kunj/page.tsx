@@ -16,6 +16,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -108,6 +109,9 @@ export default function BiologyTutorVasantKunjPage() {
 
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Vasant Kunj', 'NEET Biology Vasant Kunj', 'Medical entrance coaching Vasant Kunj']}
+      />
       <DelhiAreaSchema pageSlug="biology-tutor-vasant-kunj" subArea="Vasant Kunj" />
       <script
         type="application/ld+json"

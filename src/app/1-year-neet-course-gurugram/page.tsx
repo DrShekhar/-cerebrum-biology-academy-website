@@ -13,6 +13,7 @@ import {
   Award,
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: '1 Year NEET Course Gurugram 2026 | Class 12 + Dropper',
@@ -131,6 +132,9 @@ const faqs = [
 export default function OneYearNEETCourseGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="1-year-neet-course-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-700 to-red-600 text-white py-16">

@@ -11,6 +11,7 @@ import {
   Clock,
   Star,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Greater Noida 2026 | Compare Coaching Fees',
@@ -152,6 +153,9 @@ const faqs = [
 export default function NEETCoachingFeesGreaterNoidaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-700 to-blue-900 text-white py-16">
         <div className="container mx-auto px-4">

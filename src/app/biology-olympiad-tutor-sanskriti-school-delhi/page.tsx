@@ -15,6 +15,7 @@ import { buildIndiaOlympiadSchoolMetadata } from '@/lib/seo/metadata'
 import IndiaOlympiadSchoolTemplate from '@/components/india-olympiad/IndiaOlympiadSchoolTemplate'
 import { IndiaOlympiadSchoolSchemas } from '@/components/india-olympiad/IndiaOlympiadSchoolSchemas'
 import { getSchoolBySlug } from '@/data/india-olympiad/schools'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const SLUG = 'sanskriti-school-delhi'
 const school = getSchoolBySlug(SLUG)
@@ -40,6 +41,9 @@ export default function Page() {
   if (!school) notFound()
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi', 'NEET Biology Delhi', 'Medical entrance coaching Delhi']}
+      />
       <DelhiAreaSchema pageSlug="biology-olympiad-tutor-sanskriti-school-delhi" />
       <IndiaOlympiadSchoolSchemas school={school} />
       <IndiaOlympiadSchoolTemplate school={school} />

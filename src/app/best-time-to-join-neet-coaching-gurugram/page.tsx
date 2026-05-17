@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, ArrowRight, Calendar, CheckCircle, AlertTriangle } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Best Time to Join NEET Coaching 2027 | April vs July | Gurugram',
@@ -122,6 +123,9 @@ const faqs = [
 export default function BestTimeToJoinNEETCoaching() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="best-time-to-join-neet-coaching-gurugram"

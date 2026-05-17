@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, IndianRupee, ArrowRight, CheckCircle } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Faridabad 2025 | ₹45K-₹3L Comparison',
@@ -66,6 +67,9 @@ const faqs = [
 export default function HowMuchFeesForNEETCoachingFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+      />
       <section className="bg-gradient-to-r from-emerald-700 to-emerald-600 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

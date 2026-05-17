@@ -12,6 +12,7 @@ import {
   Trophy,
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Scholarship Gurugram 2026 | Up to 100% Fee Waiver',
@@ -157,6 +158,9 @@ const testimonials = [
 export default function NEETScholarshipGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-scholarship-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-500 text-white py-16">

@@ -12,6 +12,7 @@ import {
   Building,
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Physics Wallah Alternative Gurugram | Offline Expert Biology',
@@ -145,6 +146,9 @@ const pwProblems = [
 export default function PhysicsWallahAlternativeGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="physics-wallah-alternative-gurugram"

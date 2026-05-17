@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import AakashAlternativeGhaziabadContent from './AakashAlternativeGhaziabadContent'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const noidaAddress = 'B-45, Sector 62, Noida, UP 201301'
 
@@ -126,6 +127,9 @@ export default function AakashAlternativeGhaziabadPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}

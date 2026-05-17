@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import NEETCoachingNearMeNoidaContent from './NEETCoachingNearMeNoidaContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const noidaLocation = CONTACT_INFO.location.noida
 
@@ -165,6 +166,9 @@ export default function NEETCoachingNearMeNoidaPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

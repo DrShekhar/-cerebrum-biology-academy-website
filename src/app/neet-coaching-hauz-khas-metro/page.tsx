@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const metroData = {
   name: 'Hauz Khas',
@@ -178,6 +179,9 @@ export default function NEETCoachingHauzKhasMetroPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Hauz Khas', 'NEET Biology Hauz Khas', 'Medical entrance coaching Hauz Khas']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

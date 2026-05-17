@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import BestNEETCoachingContent from './BestNEETCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
@@ -155,6 +156,9 @@ export default function BestNEETCoachingGurugramPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="best-neet-coaching-gurugram" />
       <script
         type="application/ld+json"

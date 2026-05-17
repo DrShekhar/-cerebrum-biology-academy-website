@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Phone, MapPin, Clock, CheckCircle, Car, ArrowRight } from 'lucide-react'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Nirvana Country Gurugram | 10 Min Drive',
@@ -67,6 +68,9 @@ const faqs = [
 export default function NEETCoachingNirvanaCountryGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Nirvana Country', 'NEET Biology Nirvana Country', 'Medical entrance coaching Nirvana Country']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="neet-coaching-nirvana-country-gurugram"

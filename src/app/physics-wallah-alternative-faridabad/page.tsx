@@ -11,6 +11,7 @@ import {
   Monitor,
   Building,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Physics Wallah Alternative Faridabad | Offline Expert Biology',
@@ -144,6 +145,9 @@ const pwProblems = [
 export default function PhysicsWallahAlternativeFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-900 to-purple-700 text-white py-16">
         <div className="container mx-auto px-4">

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in CR Park Delhi | Medical Entrance Biology',
@@ -68,6 +69,9 @@ const faqs = [
 export default function NEETCoachingCRParkPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET CR Park', 'NEET Biology CR Park', 'Medical entrance coaching CR Park']}
+      />
       <DelhiAreaSchema pageSlug="neet-coaching-cr-park-delhi" />
       <LocalitySchema
         locality="CR Park"

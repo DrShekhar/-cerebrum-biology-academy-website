@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/north-delhi-areas'
 import { CEREBRUM_METRICS, ROHINI_CENTER_METRICS, AREA_COORDINATES } from '@/lib/constants/metrics'
 import AreaPageContent from './AreaPageContent'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 interface PageProps {
   params: Promise<{ area: string }>
@@ -336,6 +337,9 @@ export default async function NorthDelhiAreaPage({ params }: PageProps) {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET North Delhi', 'NEET Biology North Delhi', 'Medical entrance coaching North Delhi']}
+      />
       <AreaPageContent area={area} areaSlug={areaSlug} />
 
       <script

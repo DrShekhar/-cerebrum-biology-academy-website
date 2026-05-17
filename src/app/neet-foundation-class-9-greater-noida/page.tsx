@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import NEETFoundationClass9GreaterNoidaContent from './NEETFoundationClass9GreaterNoidaContent'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const greaterNoidaAddress = 'B-45, Sector 62, Noida, UP 201301 (nearest center)'
 
@@ -138,6 +139,9 @@ export default function NEETFoundationClass9GreaterNoidaPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import NEETDropperBatchContent from './NEETDropperBatchContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
@@ -128,6 +129,9 @@ export default function NEETDropperBatch2025GurugramPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="neet-dropper-batch-2025-26-gurugram"

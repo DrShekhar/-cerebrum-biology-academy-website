@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Car, ArrowRight, Train, Building, Users, ShoppingBag } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching HUDA City Centre Gurugram | 15 Min',
@@ -63,6 +64,9 @@ const faqs = [
 export default function NEETCoachingHUDACityCentreGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-violet-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="neet-coaching-huda-city-centre-gurugram"

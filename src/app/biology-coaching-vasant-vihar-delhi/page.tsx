@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Biology Coaching in Vasant Vihar Delhi | NEET & IB Biology Tutor',
@@ -35,6 +36,9 @@ export const metadata: Metadata = {
 export default function BiologyCoachingVasantViharPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Vasant Vihar', 'NEET Biology Vasant Vihar', 'Medical entrance coaching Vasant Vihar']}
+      />
       <DelhiAreaSchema pageSlug="biology-coaching-vasant-vihar-delhi" />
       <LocalitySchema
         locality="Vasant Vihar"

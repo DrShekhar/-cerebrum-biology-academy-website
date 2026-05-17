@@ -24,6 +24,7 @@ import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export default function RohiniLocationPage() {
   useEffect(() => {
@@ -106,6 +107,9 @@ export default function RohiniLocationPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Rohini', 'NEET Biology Rohini', 'Medical entrance coaching Rohini']}
+      />
       <BreadcrumbSchema
         items={[
           { label: 'Centers', href: '/locations' },

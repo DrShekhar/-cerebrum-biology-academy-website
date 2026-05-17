@@ -11,6 +11,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-delhi'
 
@@ -163,6 +164,9 @@ const wa =
 export default function NEETFoundationClass9DelhiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi', 'NEET Biology Delhi', 'Medical entrance coaching Delhi']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

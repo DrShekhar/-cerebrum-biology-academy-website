@@ -15,6 +15,7 @@ import {
   Star,
   MessageCircle,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Find Best Biology Tutor in Delhi NCR 2026 | Class 11, 12 | NEET + Board',
@@ -207,6 +208,9 @@ export default function FindBiologyTutorDelhiNCR() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+      />
       <DelhiAreaSchema pageSlug="find-biology-tutor-delhi-ncr" />
       <script
         type="application/ld+json"

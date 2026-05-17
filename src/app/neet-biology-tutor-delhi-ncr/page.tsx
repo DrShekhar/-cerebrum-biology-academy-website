@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const PHONE = '88264-44334'
 const WA_LINK =
@@ -88,6 +89,9 @@ const schema = {
 export default function NEETBiologyTutorDelhiNCRPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+      />
       <DelhiAreaSchema pageSlug="neet-biology-tutor-delhi-ncr" />
       <script
         type="application/ld+json"

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, CheckCircle, ArrowRight, BookOpen, Target, AlertTriangle } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Is Coaching Necessary for NEET? Gurugram Expert Answer | 2025',
@@ -68,6 +69,9 @@ const faqs = [
 export default function IsCoachingNecessaryForNEET() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="is-coaching-necessary-for-neet-gurugram"

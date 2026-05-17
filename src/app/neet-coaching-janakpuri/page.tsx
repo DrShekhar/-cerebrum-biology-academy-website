@@ -15,6 +15,7 @@ import {
   GraduationCap,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -133,6 +134,9 @@ const whyJanakpuri = [
 export default function NEETCoachingJanakpuri() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Janakpuri', 'NEET Biology Janakpuri', 'Medical entrance coaching Janakpuri']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

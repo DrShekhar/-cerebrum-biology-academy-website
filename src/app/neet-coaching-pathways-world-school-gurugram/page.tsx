@@ -11,6 +11,7 @@ import {
   Globe,
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for Pathways World School Gurugram',
@@ -87,6 +88,9 @@ const faqs = [
 export default function NEETCoachingPathwaysWorldSchool() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="neet-coaching-pathways-world-school-gurugram"

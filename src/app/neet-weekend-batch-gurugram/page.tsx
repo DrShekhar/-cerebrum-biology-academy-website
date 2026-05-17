@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Weekend Batch Gurugram 2026 | Saturday-Sunday Classes',
@@ -114,6 +115,9 @@ const faqs = [
 export default function NEETWeekendBatchGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-weekend-batch-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16">

@@ -12,6 +12,7 @@ import {
   ArrowRight,
   Award,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: '1 Year NEET Course Noida 2026 | Class 12 + Dropper',
@@ -131,6 +132,9 @@ const faqs = [
 export default function OneYearNEETCourseNoida() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-700 to-red-600 text-white py-16">
         <div className="container mx-auto px-4">

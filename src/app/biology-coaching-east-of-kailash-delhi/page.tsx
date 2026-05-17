@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Biology Coaching in East of Kailash Delhi | NEET & CBSE Tutor',
@@ -35,6 +36,9 @@ export const metadata: Metadata = {
 export default function BiologyCoachingEOKPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi', 'NEET Biology Delhi', 'Medical entrance coaching Delhi']}
+      />
       <DelhiAreaSchema pageSlug="biology-coaching-east-of-kailash-delhi" />
       <LocalitySchema
         locality="East of Kailash"

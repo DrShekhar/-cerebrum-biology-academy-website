@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, ArrowRight, Target, BookOpen, Clock, AlertTriangle, Users } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Can I Crack NEET Without Coaching? Self-Study Guide 2025',
@@ -98,6 +99,9 @@ const faqs = [
 export default function CanICrackNEETWithoutCoaching() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="can-i-crack-neet-without-coaching-gurugram"

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, Trophy, TrendingUp, ArrowRight, CheckCircle, Star, Target } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Success Rate Gurugram 2026 | Coaching Results Comparison',
@@ -148,6 +149,9 @@ const faqs = [
 export default function NEETSuccessRateGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-success-rate-gurugram" />
       {/* Quick Answer Box */}
       <section className="bg-gradient-to-r from-purple-700 to-indigo-600 text-white py-12">

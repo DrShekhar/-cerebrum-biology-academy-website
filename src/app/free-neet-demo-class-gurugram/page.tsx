@@ -14,6 +14,7 @@ import {
   BookOpen,
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Free NEET Demo Class Gurugram | Book Now',
@@ -101,6 +102,9 @@ const demoSlots = [
 export default function FreeNEETDemoClassGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="free-neet-demo-class-gurugram" />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-700 to-teal-600 text-white py-16">

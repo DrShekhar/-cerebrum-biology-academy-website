@@ -3,6 +3,7 @@ import BiologyOlympiadGurugramContent from './BiologyOlympiadGurugramContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
@@ -207,6 +208,9 @@ export default function BiologyOlympiadCoachingGurugramPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="biology-olympiad-coaching-gurugram"

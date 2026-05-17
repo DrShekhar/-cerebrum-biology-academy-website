@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Defence Colony'
@@ -91,6 +92,9 @@ const faqs = [
 export default function NEETCoachingDefenceColonyPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Defence Colony', 'NEET Biology Defence Colony', 'Medical entrance coaching Defence Colony']}
+      />
       <DelhiAreaSchema pageSlug="neet-coaching-defence-colony-delhi" />
       <LocalitySchema
         locality="Defence Colony"

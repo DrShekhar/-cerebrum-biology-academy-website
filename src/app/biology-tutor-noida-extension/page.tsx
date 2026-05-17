@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -108,6 +109,9 @@ export default function BiologyTutorNoidaExtensionPage() {
 
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

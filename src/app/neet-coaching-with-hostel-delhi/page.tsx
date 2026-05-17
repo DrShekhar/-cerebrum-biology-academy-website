@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { IntentLandingPage } from '@/components/seo/IntentLandingPage'
 import { getIntentPageData } from '@/data/intent-seo/intent-pages-data'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const pageData = getIntentPageData('neet-coaching-with-hostel-delhi')!
 
@@ -31,6 +32,9 @@ export const metadata: Metadata = {
 export default function NEETCoachingWithHostelDelhiPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi', 'NEET Biology Delhi', 'Medical entrance coaching Delhi']}
+      />
       <DelhiAreaSchema pageSlug="neet-coaching-with-hostel-delhi" />
       <IntentLandingPage data={pageData} />
     </>

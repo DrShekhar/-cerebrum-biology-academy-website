@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, BookOpen, ArrowRight, CheckCircle, AlertTriangle } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Chapter Weightage 2026 | Important Topics',
@@ -167,6 +168,9 @@ const faqs = [
 export default function NEETBiologyChapterWeightageGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="neet-biology-chapter-weightage-gurugram"

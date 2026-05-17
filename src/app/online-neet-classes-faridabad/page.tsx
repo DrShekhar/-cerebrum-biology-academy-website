@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import OnlineNEETClassesFaridabadContent from './OnlineNEETClassesFaridabadContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const faridabadLocation = CONTACT_INFO.location.faridabad
 
@@ -150,6 +151,9 @@ export default function OnlineNEETClassesFaridabadPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />

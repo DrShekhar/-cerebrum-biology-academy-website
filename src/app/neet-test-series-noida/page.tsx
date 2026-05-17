@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import NEETTestSeriesNoidaContent from './NEETTestSeriesNoidaContent'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Test Series in Noida | 50+ Mock Tests with Analysis',
@@ -136,6 +137,9 @@ export default function NEETTestSeriesNoidaPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

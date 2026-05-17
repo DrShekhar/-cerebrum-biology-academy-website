@@ -10,6 +10,7 @@ import {
   Award,
   Target,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Aakash vs Allen: Which is Better for NEET in Faridabad? 2026',
@@ -140,6 +141,9 @@ const faqs = [
 export default function AakashVsAllenFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+      />
       <section className="bg-gradient-to-r from-indigo-700 to-indigo-600 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

@@ -19,6 +19,7 @@ import {
   Building,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const faridabadAreas = [
   { name: 'Sector 15', highlight: 'Central Hub' },
@@ -62,6 +63,9 @@ const faqs = [
 export default function BiologyTuitionFaridabadPage() {
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+      />
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">

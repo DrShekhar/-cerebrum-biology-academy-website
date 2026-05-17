@@ -9,6 +9,7 @@ import {
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { AreaPageContent } from './AreaPageContent'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 type Props = {
   params: Promise<{ area: string }>
@@ -414,6 +415,9 @@ export default async function GhaziabadAreaPage({ params }: Props) {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+      />
       {/* Schema Markup */}
       <script
         type="application/ld+json"

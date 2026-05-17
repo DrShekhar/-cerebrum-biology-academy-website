@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import NEETCoachingNearMeGhaziabadContent from './NEETCoachingNearMeGhaziabadContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Near Me in Ghaziabad | Find Best Biology Classes Nearby',
@@ -167,6 +168,9 @@ export default function NEETCoachingNearMeGhaziabadPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, IndianRupee, ArrowRight, CheckCircle } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Gurugram 2025 | ₹45K-₹3L Comparison',
@@ -95,6 +96,9 @@ const faqs = [
 export default function HowMuchFeesForNEETCoaching() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="how-much-fees-for-neet-coaching-gurugram"

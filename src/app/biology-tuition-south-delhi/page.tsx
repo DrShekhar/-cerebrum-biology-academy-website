@@ -20,6 +20,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const southDelhiAreas = [
   { name: 'South Extension', highlight: 'Center Location' },
@@ -74,6 +75,9 @@ const faqs = [
 export default function BiologyTuitionSouthDelhiPage() {
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET South Delhi', 'NEET Biology South Delhi', 'Medical entrance coaching South Delhi']}
+      />
       <DelhiAreaSchema pageSlug="biology-tuition-south-delhi" />
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

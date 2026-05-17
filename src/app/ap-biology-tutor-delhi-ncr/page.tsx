@@ -16,6 +16,7 @@ import { buildAPBiologyMetroMetadata } from '@/lib/seo/metadata'
 import APBiologyCityTemplate from '@/components/ap-biology/APBiologyCityTemplate'
 import { APBiologyMetroSchemas } from '@/components/ap-biology/APBiologyMetroSchemas'
 import { getMetroBySlug } from '@/data/ap-biology/metros'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const SLUG = 'delhi-ncr'
 const metro = getMetroBySlug(SLUG)
@@ -54,6 +55,9 @@ export default function APBiologyTutorDelhiNCRPage() {
   if (!metro) notFound()
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+      />
       <DelhiAreaSchema pageSlug="ap-biology-tutor-delhi-ncr" />
       <APBiologyMetroSchemas
         metro={metro}

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Yamuna Vihar'
@@ -91,6 +92,9 @@ const faqs = [
 export default function NEETCoachingYamunaViharPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Yamuna Vihar', 'NEET Biology Yamuna Vihar', 'Medical entrance coaching Yamuna Vihar']}
+      />
       <DelhiAreaSchema pageSlug="neet-coaching-yamuna-vihar-delhi" />
       <LocalitySchema
         locality="Yamuna Vihar"

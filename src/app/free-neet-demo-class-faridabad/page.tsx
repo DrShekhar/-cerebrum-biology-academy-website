@@ -13,6 +13,7 @@ import {
   Award,
   BookOpen,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Free NEET Demo Class Faridabad | Book Now',
@@ -100,6 +101,9 @@ const demoSlots = [
 export default function FreeNEETDemoClassFaridabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-700 to-teal-600 text-white py-16">
         <div className="container mx-auto px-4">

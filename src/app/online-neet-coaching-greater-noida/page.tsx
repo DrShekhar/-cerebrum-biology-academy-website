@@ -16,6 +16,7 @@ import {
   MessageCircle,
   BookOpen,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Online NEET Coaching for Greater Noida Students | Live & Hybrid Mode',
@@ -114,6 +115,9 @@ const faqs = [
 export default function OnlineNEETCoachingGreaterNoidaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-16">
         <div className="container mx-auto px-4">

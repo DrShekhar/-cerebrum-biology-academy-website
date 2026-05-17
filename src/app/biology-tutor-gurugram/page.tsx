@@ -25,6 +25,7 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 // WhatsApp contact constants
 const WHATSAPP_PHONE = '918826444334'
@@ -238,6 +239,9 @@ export default function BiologyTutorGurugramPage() {
 
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="biology-tutor-gurugram" />
       {/* Sticky CTA Bar */}
       <div className="fixed bottom-0 left-0 right-0 bg-slate-900 border-t border-slate-700 p-3 z-50 md:hidden">

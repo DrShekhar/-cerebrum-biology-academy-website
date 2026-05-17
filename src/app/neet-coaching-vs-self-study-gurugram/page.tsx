@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, ArrowRight, CheckCircle, XCircle, Users, BookOpen, Target } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching vs Self-Study: Which is Better? 2025 Guide | Gurugram',
@@ -96,6 +97,9 @@ const faqs = [
 export default function NEETCoachingVsSelfStudy() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="neet-coaching-vs-self-study-gurugram"

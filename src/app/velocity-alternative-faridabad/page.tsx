@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import VelocityAlternativeContent from './VelocityAlternativeContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const faridabadLocation = CONTACT_INFO.location.faridabad
 
@@ -123,6 +124,9 @@ export default function VelocityAlternativeFaridabadPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}

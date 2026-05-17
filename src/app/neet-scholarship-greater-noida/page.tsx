@@ -11,6 +11,7 @@ import {
   Users,
   Trophy,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Scholarship Greater Noida 2026 | Up to 100% Fee Waiver',
@@ -158,6 +159,9 @@ const testimonials = [
 export default function NEETScholarshipGreaterNoida() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Greater Noida', 'NEET Biology Greater Noida', 'Medical entrance coaching Greater Noida']}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-500 text-white py-16">
         <div className="container mx-auto px-4">

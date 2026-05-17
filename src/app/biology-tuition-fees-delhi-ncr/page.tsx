@@ -14,6 +14,7 @@ import {
   MessageCircle,
   GraduationCap,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Biology Tuition Fees in Delhi NCR 2026 | ₹3K-8K/Month | Compare & Save',
@@ -195,6 +196,9 @@ export default function BiologyTuitionFeesDelhiNCR() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+      />
       <DelhiAreaSchema pageSlug="biology-tuition-fees-delhi-ncr" />
       <script
         type="application/ld+json"

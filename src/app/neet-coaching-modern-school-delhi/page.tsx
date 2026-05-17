@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const school = 'Modern School, Delhi'
@@ -68,6 +69,9 @@ const faqs = [
 export default function ModernSchoolDelhiPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi', 'NEET Biology Delhi', 'Medical entrance coaching Delhi']}
+      />
       <DelhiAreaSchema pageSlug="neet-coaching-modern-school-delhi" />
       <LocalitySchema
         locality="Delhi"

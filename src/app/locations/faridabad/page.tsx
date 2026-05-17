@@ -31,6 +31,7 @@ import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export default function FaridabadLocationPage() {
   useEffect(() => {
@@ -125,6 +126,9 @@ export default function FaridabadLocationPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+      />
       <BreadcrumbSchema
         items={[
           { label: 'Centers', href: '/locations' },

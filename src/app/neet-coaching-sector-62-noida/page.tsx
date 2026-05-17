@@ -4,6 +4,7 @@ import { Phone, MapPin, Users, Trophy, Zap, Award } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const revalidate = 3600
 
@@ -69,6 +70,9 @@ const faqItems = [
 export default function NEETCoachingSector62NoidaPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
         <div className="max-w-6xl mx-auto px-4">

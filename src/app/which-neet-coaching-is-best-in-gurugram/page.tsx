@@ -12,6 +12,7 @@ import {
   Wallet,
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Which NEET Coaching is Best in Gurugram? | 2026 Honest Comparison',
@@ -155,6 +156,9 @@ const faqs = [
 export default function WhichNEETCoachingBestGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="which-neet-coaching-is-best-in-gurugram"

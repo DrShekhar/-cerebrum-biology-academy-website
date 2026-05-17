@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, CheckCircle, ArrowRight, BookOpen, Target, AlertTriangle } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Is Coaching Necessary for NEET? Noida Expert Answer | 2026',
@@ -68,6 +69,9 @@ const faqs = [
 export default function IsCoachingNecessaryForNEETNoida() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       <section className="bg-gradient-to-r from-slate-800 to-slate-700 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

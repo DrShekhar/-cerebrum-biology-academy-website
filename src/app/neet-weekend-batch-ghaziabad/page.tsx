@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Weekend Batch Ghaziabad 2026 | Saturday-Sunday Classes',
@@ -115,6 +116,9 @@ const faqs = [
 export default function NEETWeekendBatchGhaziabad() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16">
         <div className="container mx-auto px-4">

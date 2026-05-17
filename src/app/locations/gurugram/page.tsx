@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import GurugramLocationContent from './GurugramLocationContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
@@ -295,6 +296,9 @@ export default function GurugramLocationPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

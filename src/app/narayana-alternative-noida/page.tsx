@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, CheckCircle, Clock, Award, ArrowRight, UserCheck } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Best Narayana Alternative in Noida 2026 | Small Batch Personal Attention',
@@ -150,6 +151,9 @@ const painPoints = [
 export default function NarayanaAlternativeNoida() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-800 to-green-600 text-white py-16">
         <div className="container mx-auto px-4">

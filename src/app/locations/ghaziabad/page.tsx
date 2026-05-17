@@ -27,6 +27,7 @@ import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export default function GhaziabadLocationPage() {
   useEffect(() => {
@@ -113,6 +114,9 @@ export default function GhaziabadLocationPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+      />
       <BreadcrumbSchema
         items={[
           { label: 'Centers', href: '/locations' },

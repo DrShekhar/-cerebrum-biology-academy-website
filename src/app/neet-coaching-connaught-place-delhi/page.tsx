@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Connaught Place'
@@ -91,6 +92,9 @@ const faqs = [
 export default function NEETCoachingConnaughtPlacePage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Connaught Place', 'NEET Biology Connaught Place', 'Medical entrance coaching Connaught Place']}
+      />
       <DelhiAreaSchema pageSlug="neet-coaching-connaught-place-delhi" />
       <LocalitySchema
         locality="Connaught Place"

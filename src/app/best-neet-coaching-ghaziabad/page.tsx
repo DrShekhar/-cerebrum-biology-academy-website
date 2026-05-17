@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import BestNEETCoachingGhaziabadContent from './BestNEETCoachingGhaziabadContent'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Ghaziabad 2026 | Top Institutes Compared',
@@ -152,6 +153,9 @@ export default function BestNEETCoachingGhaziabadPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

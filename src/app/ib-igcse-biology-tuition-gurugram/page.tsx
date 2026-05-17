@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const PHONE = '88264-44334'
 const WA_LINK =
@@ -87,6 +88,9 @@ const schema = {
 export default function IBIGCSEBiologyTuitionGurugramPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="ib-igcse-biology-tuition-gurugram" />
       <script
         type="application/ld+json"

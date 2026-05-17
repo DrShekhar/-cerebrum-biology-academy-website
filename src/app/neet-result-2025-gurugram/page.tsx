@@ -12,6 +12,7 @@ import {
   GraduationCap,
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET 2025 Results Gurugram | 97% Success',
@@ -155,6 +156,9 @@ const faqs = [
 export default function NEETResult2025Gurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-result-2025-gurugram" />
       <section className="bg-gradient-to-r from-green-700 to-emerald-600 text-white py-16">
         <div className="container mx-auto px-4">
