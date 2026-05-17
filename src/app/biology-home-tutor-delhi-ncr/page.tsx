@@ -20,6 +20,7 @@ import {
   Headphones,
   AlertTriangle,
 } from 'lucide-react'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'Biology Home Tutor in Delhi NCR? Try This Better Alternative | ₹4K/Month',
@@ -264,6 +265,9 @@ const articleSchema = {
 export default function BiologyHomeTutorDelhiNCRPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Delhi NCR', 'NEET Biology Delhi NCR', 'Medical entrance coaching Delhi NCR']}
+      />
       <DelhiAreaSchema pageSlug="biology-home-tutor-delhi-ncr" />
       <script
         type="application/ld+json"

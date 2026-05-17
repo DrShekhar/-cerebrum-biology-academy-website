@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Malviya Nagar'
@@ -66,6 +67,9 @@ const faqs = [
 export default function NEETCoachingMalviyaNagarJaipurPage() {
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Malviya Nagar', 'NEET Biology Malviya Nagar', 'Medical entrance coaching Malviya Nagar']}
+      />
       <LocalitySchema
         locality="Malviya Nagar"
         slug="neet-coaching-malviya-nagar-jaipur"

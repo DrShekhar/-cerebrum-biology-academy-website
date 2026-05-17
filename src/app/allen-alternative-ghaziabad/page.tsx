@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import AllenAlternativeGhaziabadContent from './AllenAlternativeGhaziabadContent'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const noidaAddress = 'B-45, Sector 62, Noida, UP 201301'
 
@@ -125,6 +126,9 @@ export default function AllenAlternativeGhaziabadPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }}

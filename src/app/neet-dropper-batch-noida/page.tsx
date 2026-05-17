@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import NEETDropperBatchNoidaContent from './NEETDropperBatchNoidaContent'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
   title: 'NEET Dropper Batch 2026-27 in Noida | Repeater Course',
@@ -126,6 +127,9 @@ export default function NEETDropperBatchNoidaPage() {
 
   return (
     <>
+      <CerebrumPersonSchema
+        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
