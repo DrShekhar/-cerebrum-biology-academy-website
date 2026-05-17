@@ -35,6 +35,7 @@ import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/A
 import { LocalityCues } from '@/components/seo/LocalityCues'
 import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 import { getAllNoidaAreaSlugs, getNoidaAreaBySlug } from '@/data/noida-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 // Get all areas from centralized data
 const allAreaSlugs = getAllNoidaAreaSlugs()
@@ -217,6 +218,27 @@ export default function NeetCoachingNoidaPage() {
 
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-noida"
+        pageName="Best NEET Coaching in Noida"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching Noida',
+          'NEET Coaching Noida',
+          'Best NEET Coaching Noida',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology Noida Catchment (Noida-Sector 18-62-15-Greater Noida-Indirapuram-Knowledge Park)',
+        ]}
+        courseName="Best NEET Coaching in Noida — Programme"
+        courseDescription="Biology-only specialist NEET coaching for Noida aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

@@ -1,5 +1,5 @@
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
-'use client'
+;('use client')
 
 import Link from 'next/link'
 import {
@@ -16,6 +16,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/north-delhi-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {
   const area = getAreaBySlug(slug)
@@ -196,6 +197,27 @@ const faqs = [
 export default function NEETCoachingNorthDelhiPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-north-delhi"
+        pageName="Best NEET Coaching in North Delhi"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching North Delhi',
+          'NEET Coaching North Delhi',
+          'Best NEET Coaching North Delhi',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology North Delhi Catchment (North Delhi-Civil Lines-Model Town-Kashmere Gate-Rohini (border)-Pitampura)',
+        ]}
+        courseName="Best NEET Coaching in North Delhi — Programme"
+        courseDescription="Biology-only specialist NEET coaching for North Delhi aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       <DelhiAreaSchema pageSlug="neet-coaching-north-delhi" />
       <main className="min-h-screen">
         {/* Schema Markup */}
@@ -228,7 +250,7 @@ export default function NEETCoachingNorthDelhiPage() {
             }),
           }}
         />
-  
+
         {/* Hero Section */}
         <section className="relative bg-indigo-900 py-20">
           <div className="container mx-auto px-4">
@@ -244,7 +266,8 @@ export default function NEETCoachingNorthDelhiPage() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Expert NEET preparation for students from Rohini, Pitampura, Model Town, Shalimar
-                Bagh, and all North Delhi localities. AIIMS faculty, small batches, 98% success rate.
+                Bagh, and all North Delhi localities. AIIMS faculty, small batches, 98% success
+                rate.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="primary" asChild>
@@ -267,7 +290,7 @@ export default function NEETCoachingNorthDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* Stats Section */}
         <section className="py-12 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -285,7 +308,7 @@ export default function NEETCoachingNorthDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         <AreasServedSection
           cityName="North Delhi"
           areas={areasForAccordion}
@@ -298,7 +321,7 @@ export default function NEETCoachingNorthDelhiPage() {
             nearbyLandmark: 'Rohini West Metro (Red Line)',
           }}
         />
-  
+
         {/* Why Choose Us Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -310,7 +333,7 @@ export default function NEETCoachingNorthDelhiPage() {
                 Better than local coaching centers with personalized attention and proven results
               </p>
             </div>
-  
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <div
@@ -327,7 +350,7 @@ export default function NEETCoachingNorthDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* Testimonials Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -339,7 +362,7 @@ export default function NEETCoachingNorthDelhiPage() {
                 Hear from students who made the journey from North Delhi to medical colleges
               </p>
             </div>
-  
+
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -367,7 +390,7 @@ export default function NEETCoachingNorthDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* FAQ Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -376,7 +399,7 @@ export default function NEETCoachingNorthDelhiPage() {
                 FAQs for North Delhi Students
               </h2>
             </div>
-  
+
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
@@ -385,7 +408,7 @@ export default function NEETCoachingNorthDelhiPage() {
                 </div>
               ))}
             </div>
-  
+
             {/* FAQ Schema */}
             <script
               type="application/ld+json"
@@ -406,7 +429,7 @@ export default function NEETCoachingNorthDelhiPage() {
             />
           </div>
         </section>
-  
+
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600">
           <div className="container mx-auto px-4 text-center">
@@ -444,5 +467,5 @@ export default function NEETCoachingNorthDelhiPage() {
         </section>
       </main>
     </>
-    )
+  )
 }

@@ -36,6 +36,7 @@ import {
   getFaridabadAreaBySlug,
 } from '@/data/faridabad-areas'
 import { faridabadMetroStations } from '@/data/faridabad-metros'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const areasForAccordion: AreaCardData[] = getAllFaridabadAreaSlugs().map((slug) => {
   const area = getFaridabadAreaBySlug(slug)
@@ -234,6 +235,27 @@ export default function NeetCoachingFaridabadPage() {
 
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-faridabad"
+        pageName="Best NEET Coaching in Faridabad"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching Faridabad',
+          'NEET Coaching Faridabad',
+          'Best NEET Coaching Faridabad',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology Faridabad Catchment (Faridabad-Sector 21-Sector 28-NIT Faridabad-Crown Plaza-Old Faridabad-Surajkund)',
+        ]}
+        courseName="Best NEET Coaching in Faridabad — Programme"
+        courseDescription="Biology-only specialist NEET coaching for Faridabad aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-900 via-red-800 to-rose-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

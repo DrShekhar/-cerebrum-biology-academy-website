@@ -1,5 +1,5 @@
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
-'use client'
+;('use client')
 
 import Link from 'next/link'
 import {
@@ -16,6 +16,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/west-delhi-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {
   const area = getAreaBySlug(slug)
@@ -196,6 +197,27 @@ const faqs = [
 export default function NEETCoachingWestDelhiPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-west-delhi"
+        pageName="Best NEET Coaching in West Delhi"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching West Delhi',
+          'NEET Coaching West Delhi',
+          'Best NEET Coaching West Delhi',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology West Delhi Catchment (West Delhi-Janakpuri-Dwarka-Rajouri Garden-Tilak Nagar-Punjabi Bagh-Paschim Vihar)',
+        ]}
+        courseName="Best NEET Coaching in West Delhi — Programme"
+        courseDescription="Biology-only specialist NEET coaching for West Delhi aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       <DelhiAreaSchema pageSlug="neet-coaching-west-delhi" />
       <main className="min-h-screen">
         {/* Schema Markup */}
@@ -228,7 +250,7 @@ export default function NEETCoachingWestDelhiPage() {
             }),
           }}
         />
-  
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-red-800 to-rose-900 py-20">
           <div className="container mx-auto px-4">
@@ -268,7 +290,7 @@ export default function NEETCoachingWestDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* Stats Section */}
         <section className="py-12 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -286,7 +308,7 @@ export default function NEETCoachingWestDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         <AreasServedSection
           cityName="West Delhi"
           areas={areasForAccordion}
@@ -299,7 +321,7 @@ export default function NEETCoachingWestDelhiPage() {
             nearbyLandmark: 'Rohini West Metro (Red Line)',
           }}
         />
-  
+
         {/* Why Choose Us Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -311,7 +333,7 @@ export default function NEETCoachingWestDelhiPage() {
                 Better than local coaching centers with personalized attention and proven results
               </p>
             </div>
-  
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <div
@@ -328,7 +350,7 @@ export default function NEETCoachingWestDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* Testimonials Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -340,7 +362,7 @@ export default function NEETCoachingWestDelhiPage() {
                 Hear from students who made the journey from West Delhi to medical colleges
               </p>
             </div>
-  
+
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -368,7 +390,7 @@ export default function NEETCoachingWestDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* FAQ Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -377,7 +399,7 @@ export default function NEETCoachingWestDelhiPage() {
                 FAQs for West Delhi Students
               </h2>
             </div>
-  
+
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
@@ -386,7 +408,7 @@ export default function NEETCoachingWestDelhiPage() {
                 </div>
               ))}
             </div>
-  
+
             {/* FAQ Schema */}
             <script
               type="application/ld+json"
@@ -407,7 +429,7 @@ export default function NEETCoachingWestDelhiPage() {
             />
           </div>
         </section>
-  
+
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-orange-600 to-rose-600">
           <div className="container mx-auto px-4 text-center">
@@ -445,5 +467,5 @@ export default function NEETCoachingWestDelhiPage() {
         </section>
       </main>
     </>
-    )
+  )
 }

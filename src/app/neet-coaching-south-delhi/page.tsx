@@ -4,6 +4,7 @@ import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'South Delhi'
@@ -277,6 +278,27 @@ const speakableSchema = {
 export default function NEETCoachingSouthDelhiPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-south-delhi"
+        pageName="Best NEET Coaching in South Delhi"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching South Delhi',
+          'NEET Coaching South Delhi',
+          'Best NEET Coaching South Delhi',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology South Delhi Catchment (South Delhi-Hauz Khas-Greater Kailash-Lajpat Nagar-Vasant Vihar-CR Park-Saket-Malviya Nagar)',
+        ]}
+        courseName="Best NEET Coaching in South Delhi — Programme"
+        courseDescription="Biology-only specialist NEET coaching for South Delhi aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       <DelhiAreaSchema pageSlug="neet-coaching-south-delhi" />
       {/* FAQPage Schema for Featured Snippets */}
       <script

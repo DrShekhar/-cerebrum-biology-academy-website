@@ -24,6 +24,7 @@ import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { VideoSchema } from '@/components/seo/StructuredData'
 import { LocalityCues } from '@/components/seo/LocalityCues'
 import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -141,6 +142,27 @@ const features = [
 export default function NEETCoachingRohiniPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-rohini"
+        pageName="Best NEET Coaching in Rohini (North-West Delhi)"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching Rohini Delhi',
+          'NEET Coaching Rohini Delhi',
+          'Best NEET Coaching Rohini Delhi',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology Rohini Delhi Catchment (Rohini-Sector 3-Sector 13-Sector 24-Pitampura-Avantika-Pushpanjali)',
+        ]}
+        courseName="Best NEET Coaching in Rohini (North-West Delhi) — Programme"
+        courseDescription="Biology-only specialist NEET coaching for Rohini Delhi aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

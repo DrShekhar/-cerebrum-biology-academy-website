@@ -42,6 +42,7 @@ import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllGurugramAreaSlugs, getGurugramAreaBySlug } from '@/data/gurugram-areas'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const areasForAccordion: AreaCardData[] = getAllGurugramAreaSlugs().map((slug) => {
   const area = getGurugramAreaBySlug(slug)
@@ -353,6 +354,27 @@ export default function NeetCoachingGurugramPage() {
 
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-gurugram"
+        pageName="Best NEET Coaching in Gurugram"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching Gurugram',
+          'NEET Coaching Gurugram',
+          'Best NEET Coaching Gurugram',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology Gurugram Catchment (Gurugram-DLF-Sushant Lok-Sector 14-MG Road-Sohna Road-Cyber City)',
+        ]}
+        courseName="Best NEET Coaching in Gurugram — Programme"
+        courseDescription="Biology-only specialist NEET coaching for Gurugram aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-coaching-gurugram" />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">

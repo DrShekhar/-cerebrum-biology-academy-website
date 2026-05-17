@@ -1,5 +1,5 @@
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
-'use client'
+;('use client')
 
 import Link from 'next/link'
 import {
@@ -17,6 +17,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { AreasServedSection, AreaCardData, CenterInfo } from '@/components/seo/AreasServedSection'
 import { getAllAreaSlugs, getAreaBySlug } from '@/data/east-delhi-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const areasForAccordion: AreaCardData[] = getAllAreaSlugs().map((slug) => {
   const area = getAreaBySlug(slug)
@@ -197,6 +198,27 @@ const faqs = [
 export default function NEETCoachingEastDelhiPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-east-delhi"
+        pageName="Best NEET Coaching in East Delhi"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching East Delhi',
+          'NEET Coaching East Delhi',
+          'Best NEET Coaching East Delhi',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology East Delhi Catchment (East Delhi-Mayur Vihar-Preet Vihar-Laxmi Nagar-Shahdara-Vivek Vihar-Patparganj)',
+        ]}
+        courseName="Best NEET Coaching in East Delhi — Programme"
+        courseDescription="Biology-only specialist NEET coaching for East Delhi aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       <DelhiAreaSchema pageSlug="neet-coaching-east-delhi" />
       <main className="min-h-screen">
         {/* Schema Markup */}
@@ -229,7 +251,7 @@ export default function NEETCoachingEastDelhiPage() {
             }),
           }}
         />
-  
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-green-800 py-20">
           <div className="container mx-auto px-4">
@@ -268,7 +290,7 @@ export default function NEETCoachingEastDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* Stats Section */}
         <section className="py-12 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -286,9 +308,9 @@ export default function NEETCoachingEastDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         <AreasServedSection cityName="East Delhi" areas={areasForAccordion} />
-  
+
         {/* Why Choose Us Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -301,7 +323,7 @@ export default function NEETCoachingEastDelhiPage() {
                 results
               </p>
             </div>
-  
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <div
@@ -318,7 +340,7 @@ export default function NEETCoachingEastDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* Comparison Section */}
         <section className="py-16 bg-navy-900">
           <div className="container mx-auto px-4">
@@ -330,7 +352,7 @@ export default function NEETCoachingEastDelhiPage() {
                 See why students are choosing quality over convenience
               </p>
             </div>
-  
+
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-2xl overflow-hidden">
                 <div className="grid grid-cols-3 bg-gray-100 p-4 font-semibold">
@@ -361,7 +383,7 @@ export default function NEETCoachingEastDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* Testimonials Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -373,7 +395,7 @@ export default function NEETCoachingEastDelhiPage() {
                 Hear from students who made the journey from East Delhi to medical colleges
               </p>
             </div>
-  
+
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -391,7 +413,9 @@ export default function NEETCoachingEastDelhiPage() {
                     <div className="text-sm text-gray-500 flex items-center gap-2">
                       <MapPin className="w-3 h-3" /> {testimonial.area}
                     </div>
-                    <div className="text-sm text-green-600 font-medium mt-1">{testimonial.score}</div>
+                    <div className="text-sm text-green-600 font-medium mt-1">
+                      {testimonial.score}
+                    </div>
                     <div className="text-sm text-gray-600">{testimonial.college}</div>
                   </div>
                 </div>
@@ -399,7 +423,7 @@ export default function NEETCoachingEastDelhiPage() {
             </div>
           </div>
         </section>
-  
+
         {/* FAQ Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -408,7 +432,7 @@ export default function NEETCoachingEastDelhiPage() {
                 FAQs for East Delhi Students
               </h2>
             </div>
-  
+
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
@@ -417,7 +441,7 @@ export default function NEETCoachingEastDelhiPage() {
                 </div>
               ))}
             </div>
-  
+
             {/* FAQ Schema */}
             <script
               type="application/ld+json"
@@ -438,7 +462,7 @@ export default function NEETCoachingEastDelhiPage() {
             />
           </div>
         </section>
-  
+
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600">
           <div className="container mx-auto px-4 text-center">
@@ -476,5 +500,5 @@ export default function NEETCoachingEastDelhiPage() {
         </section>
       </main>
     </>
-    )
+  )
 }

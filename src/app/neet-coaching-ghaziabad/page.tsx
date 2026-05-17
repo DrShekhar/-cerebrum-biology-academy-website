@@ -28,6 +28,7 @@ import {
   getGhaziabadAreasByType,
   getGhaziabadAreasByMetroLine,
 } from '@/data/ghaziabad-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 // Build AreasServedSection data
 const areasForAccordion: AreaCardData[] = getAllGhaziabadAreaSlugs().map((slug) => {
@@ -208,13 +209,33 @@ export default function NeetCoachingGhaziabadPage() {
 
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad"
+        pageName="Best NEET Coaching in Ghaziabad"
+        parentHub={{
+          name: 'NEET Coaching Delhi',
+          url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Coaching Ghaziabad',
+          'NEET Coaching Ghaziabad',
+          'Best NEET Coaching Ghaziabad',
+          'NEET-UG Biology Delhi NCR',
+          'NCERT Class 11 Class 12 Biology',
+          'AIIMS MBBS Admission',
+          'AIIMS NCR Selection',
+          'NEET Biology Ghaziabad Catchment (UP-Ghaziabad-Indirapuram-Vasundhara-Vaishali-Raj Nagar-Kaushambi)',
+        ]}
+        courseName="Best NEET Coaching in Ghaziabad — Programme"
+        courseDescription="Biology-only specialist NEET coaching for Ghaziabad aspirants. AIIMS-trained faculty led by Dr. Shekhar C Singh, 6 Delhi NCR offline centres plus online live with 15-20 student batches. Pursuit/Ascent/Pinnacle tier options at ₹40K-₹1.56L/year. 680+ medical college selections, 98% NEET-UG qualification rate."
+      />
+
       {/* Hero Section */}
       <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               #1 NEET Coaching in Ghaziabad
@@ -235,7 +256,11 @@ export default function NeetCoachingGhaziabadPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -261,7 +286,10 @@ export default function NeetCoachingGhaziabadPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {successStats.map((stat, index) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp">
+                <div
+                  key={stat.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp"
+                >
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
@@ -277,8 +305,7 @@ export default function NeetCoachingGhaziabadPage() {
       {/* Indirapuram Khands */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching for All Indirapuram Khands
             </h2>
@@ -289,7 +316,10 @@ export default function NeetCoachingGhaziabadPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {indirapuramKhands.map((khand, index) => (
-              <div key={khand.name} className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-5 border border-purple-100 animate-fadeInUp">
+              <div
+                key={khand.name}
+                className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-5 border border-purple-100 animate-fadeInUp"
+              >
                 <div className="font-bold text-gray-900 mb-2">{khand.name}</div>
                 <div className="text-sm text-gray-600">{khand.societies}</div>
               </div>
@@ -301,8 +331,7 @@ export default function NeetCoachingGhaziabadPage() {
       {/* Premium Societies */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Premium Ghaziabad Societies
             </h2>
@@ -313,7 +342,10 @@ export default function NeetCoachingGhaziabadPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {premiumSocieties.map((society, index) => (
-              <div key={society.name} className="bg-white rounded-xl p-5 shadow-md border border-gray-100 animate-fadeInUp">
+              <div
+                key={society.name}
+                className="bg-white rounded-xl p-5 shadow-md border border-gray-100 animate-fadeInUp"
+              >
                 <Building2 className="w-6 h-6 text-purple-600 mb-2" />
                 <div className="font-bold text-gray-900">{society.name}</div>
                 <div className="text-sm text-gray-500">{society.location}</div>
@@ -329,8 +361,7 @@ export default function NeetCoachingGhaziabadPage() {
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Near Top Ghaziabad Schools
             </h2>
@@ -354,8 +385,7 @@ export default function NeetCoachingGhaziabadPage() {
       {/* Metro Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Near Ghaziabad Metro Stations
             </h2>
@@ -405,8 +435,7 @@ export default function NeetCoachingGhaziabadPage() {
       {/* Colleges Section */}
       <section className="py-16 md:py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Droppers from Ghaziabad Colleges
             </h2>
@@ -417,7 +446,10 @@ export default function NeetCoachingGhaziabadPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {colleges.map((college, index) => (
-              <div key={college.name} className="bg-white rounded-xl p-5 shadow-md animate-fadeInUp">
+              <div
+                key={college.name}
+                className="bg-white rounded-xl p-5 shadow-md animate-fadeInUp"
+              >
                 <GraduationCap className="w-6 h-6 text-purple-600 mb-2" />
                 <div className="font-bold text-gray-900 text-sm">{college.name}</div>
                 <div className="text-xs text-gray-500">{college.type}</div>
@@ -431,8 +463,7 @@ export default function NeetCoachingGhaziabadPage() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Ghaziabad Students Choose Cerebrum Biology Academy
             </h2>
@@ -457,7 +488,10 @@ export default function NeetCoachingGhaziabadPage() {
                 desc: 'NCERT notes, tests, PYQs included',
               },
             ].map((feature, index) => (
-              <div key={feature.title} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
+              <div
+                key={feature.title}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
+              >
                 <feature.icon className="w-10 h-10 text-yellow-400 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.desc}</p>
@@ -470,8 +504,7 @@ export default function NeetCoachingGhaziabadPage() {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching in Ghaziabad - FAQs
             </h2>
@@ -500,7 +533,11 @@ export default function NeetCoachingGhaziabadPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -545,8 +582,7 @@ export default function NeetCoachingGhaziabadPage() {
       <FAQSchema />
 
       {/* WhatsApp Floating Button */}
-      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group animate-fadeInUp"
-      >
+      <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group animate-fadeInUp">
         {/* Hover Tooltip */}
         <div className="absolute bottom-full mb-2 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           <div className="bg-gray-900 text-white text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
