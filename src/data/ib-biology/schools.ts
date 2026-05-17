@@ -1262,6 +1262,79 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 18. SCOTTISH HIGH INTERNATIONAL SCHOOL (Gurugram, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'scottish-high-gurgaon',
+    schoolName: 'Scottish High International School',
+    shortName: 'Scottish High',
+    cityCountry: 'Gurugram, India',
+    citySlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Scottish High International School is a co-educational day school in Sector 57 (G Block, Sushant Lok II) Gurugram, founded in the mid-2000s and led from inception by Shomie Das — former principal of The Doon School and Mayo College — whose name in Indian school circles carries the weight of two of the country's most established boarding institutions. The school took its identity from the Scottish education tradition: tartan uniforms, a four-house system named after Scottish clans, and a structured-but-balanced academic culture that visibly differs from the more recently-established progressive schools in the Gurgaon belt.",
+      "Scottish High runs multiple senior-school pathways in parallel — CBSE, Cambridge IGCSE / A-Levels, and the IB Diploma Programme — so students self-select at the senior-school transition based on their target universities. The IB DP track at Scottish High is smaller than the CBSE and IGCSE/A-Level tracks but is the chosen path for students targeting US, Canadian, and Australian universities specifically, and for the subset of UK applicants who want the IB's six-subject breadth over A-Levels' three-subject depth. IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage, and the school's Biology department is staffed by IB-experienced teachers.",
+      "For Scottish High IB Biology students, the most common driver of external tutoring is the parallel-curriculum context: because the school runs IB alongside CBSE and Cambridge, the IB cohort is smaller and the in-school peer benchmark for IB-specific rubric work can feel thinner than at a single-curriculum IB school. Our 1:1 coaching fills that gap with rubric-tight Paper 2 calibration and weekly written feedback on long-response answers — replicating the peer-pressure-driven rubric awareness that students at larger IB cohorts (Pathways, ASD, UWCSEA) get from sheer cohort density.",
+      "Scottish High's Sushant Lok II / Sector 57 location keeps the school accessible from across the central Gurgaon residential belt — Sushant Lok I, DLF Phase 1, 2, 3, and 4, Sector 49, Sector 56, Nirvana Country, Malibu Towne, Suncity, Rosewood City. Day-school commutes for IB students are typically in the 20–45 minute range each way. Our IST evening live sessions (7–9 PM) fit cleanly after the school commute. The school's structured academic culture means IB students typically arrive at DP1 with strong study-discipline habits but sometimes need explicit help converting that discipline into the IB-rubric vocabulary, which is what our coaching adds.",
+    ],
+    reputationBullets: [
+      "Founded mid-2000s under Shomie Das (former Doon School + Mayo College principal)",
+      'IB World School authorised for the Diploma Programme',
+      'Multi-curriculum senior school: CBSE + Cambridge IGCSE/A-Levels + IB DP',
+      'Distinctive Scottish identity: tartan uniforms, four-house system',
+      'Located in Sector 57 (G Block, Sushant Lok II), central Gurgaon',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Structured academic culture with strong study-discipline orientation',
+    ],
+    collegeContext:
+      "Scottish High IB graduates matriculate to US (Ivy+, NYU, top liberal arts, public flagships), UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh — the IB-vs-A-Level decision at Scottish High is often driven by exactly this UK university-versus-US application choice), Canada (Toronto, UBC, McGill, Waterloo, Western), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Scottish High most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical engineering programmes. The school's structured academic culture produces students who are typically strong on standardised-test components (SAT, AP) where Indian-school discipline reads well.",
+    paceAlignment:
+      "Scottish High's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the central-Gurgaon school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule that compresses IB Biology + NEET Biology + NEET Chemistry + NEET Physics into a manageable weekly load. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window. The structured-discipline study culture at Scottish High typically lets students absorb a tighter weekly tutoring schedule than at more open-ended-pedagogy schools.",
+    faqs: [
+      {
+        question: "Scottish High runs CBSE, Cambridge A-Levels, and IB DP in parallel — does that smaller IB cohort hurt my child's IB Biology results?",
+        answer:
+          "Not directly — the cohort size at the school does not change the IB exam grading, which is criterion-referenced against the same global rubric every year. What can be thinner at a multi-curriculum school is the peer-driven rubric awareness — students at larger single-curriculum IB schools (Pathways, ASD, UWCSEA) absorb rubric vocabulary partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that peer-driven calibration with explicit weekly written feedback on long-response answers against the IB Biology mark scheme. The result is rubric-tight Paper 2 answers regardless of in-school IB cohort size.",
+      },
+      {
+        question: 'My child is choosing between IB DP and Cambridge A-Levels at Scottish High — which is better for medicine applications?',
+        answer:
+          "It depends on the target country. For UK medicine, both IB and A-Levels are accepted; UK medical schools have well-developed offer matrices for both, and the choice is often about whether your child wants six-subject breadth (IB) or three-subject depth (A-Levels). For US pre-med, IB reads more cleanly because US admissions officers parse IB transcripts more fluently than A-Level transcripts. For Canada / Australia, both work. For India (AIIMS / state medical via NEET), neither matters directly — NEET is a separate Class 12 + entrance-exam track. We work with Scottish High students on either curriculum but the IB Biology coaching is most directly leveraged on the IB DP track; for A-Level Biology students we have a separate offering.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Scottish High IB students?',
+        answer:
+          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Scottish High IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. The structured study-discipline culture at Scottish High typically suits this integrated load well.',
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. India-resident families pay in INR; Scottish High families can opt for either USD international or INR domestic pricing.',
+      },
+      {
+        question: "How does Scottish High's IB Biology compare to Pathways Aravali or TSRS Aravali?",
+        answer:
+          "All three run IB Biology HL and SL at a serious level. The differences are in scale and pedagogy: Pathways Aravali has a larger full-IB-continuum cohort with cohort-density-driven peer benchmarking; TSRS Aravali is humanities-and-arts-tilted with a smaller more curated cohort; Scottish High is structured-and-disciplined with a multi-curriculum context. None of these school differences predict an individual student's IB Biology score — that depends on the student's own engagement and the quality of rubric calibration they get. Our coaching adapts to each profile; we have students from all three schools.",
+      },
+      {
+        question: "Sushant Lok II / Sector 57 to anywhere in Gurgaon is a 20–45 minute commute — does that affect tutoring scheduling?",
+        answer:
+          'Not at all — coaching is 100% online live video, no physical tutoring-centre commute. Your child arrives home from Scottish High (typically between 4:30 and 6 PM depending on school-day end and Sector 57 traffic), eats, and joins the IST evening live session at 7 PM. Sessions run 90 minutes. The no-commute model returns about 60–90 minutes per session compared to driving to a Cyber City or MG Road tutoring centre, which compounds across a year of weekly sessions.',
+      },
+      {
+        question: 'When should a Scottish High IB student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and gives our coaching time to layer the IB-rubric vocabulary onto the strong study-discipline foundation Scottish High students typically bring. For IB+NEET students, ideally earlier (during Grade 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and many Scottish High students join then for focused Paper 2 + Paper 3 rubric drilling.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
