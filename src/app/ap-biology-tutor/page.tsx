@@ -268,7 +268,7 @@ export default function APBiologyTutorPage() {
             name: 'Dr. Shekhar C Singh',
             jobTitle: 'Founder & Lead AP Biology Faculty',
             description:
-              'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy. Lead curriculum architect for the AP Biology programme, with a focus on FRQ rubric mastery and AP-5 conversion methodology.',
+              'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). Lead curriculum architect for the AP Biology programme, with 680+ medical college selections, 98% NEET-UG qualification rate, and a focus on AP-5 conversion via FRQ rubric mastery.',
             alumniOf: {
               '@type': 'CollegeOrUniversity',
               name: 'All India Institute of Medical Sciences (AIIMS Delhi)',
@@ -293,6 +293,148 @@ export default function APBiologyTutorPage() {
               'https://cerebrumbiologyacademy.com/dr-shekhar-singh',
               'https://www.youtube.com/@drshekharcsingh',
               'https://www.linkedin.com/in/drshekharsingh',
+            ],
+          }),
+        }}
+      />
+      {/* Organization schema with AggregateRating — references the main
+          Cerebrum entity so Google + AI assistants connect this page to
+          the brand's 5.0/485-review rating. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            foundingDate: '2014',
+            founder: {
+              '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh#ap-biology',
+            },
+            description:
+              'Biology-only specialist coaching brand led by AIIMS-trained faculty Dr. Shekhar C Singh. AP Biology cluster covers 44 pages across 10 US metros, 10 US school feeders (TJHSST / Stuyvesant / Harker / Andover / etc.), plus UAE / India / Canada / Singapore / Hong Kong international hubs.',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+      {/* Course schema with priced Offers — unlocks pricing rich results
+          in SERPs for "AP Biology tutor cost / pricing" queries. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'AP Biology Tutor — Score 5 on Your AP Bio Exam',
+            description:
+              'Comprehensive AP Biology tutoring covering College Board Units 1-8, FRQ rubric mastery, 13 lab investigations, AP-to-USABO bridge content. Led by AIIMS-trained PhD-level senior faculty.',
+            url: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
+            inLanguage: 'en-US',
+            educationalLevel: 'Advanced Placement',
+            educationalCredentialAwarded: 'AP Biology Score 5 Preparation',
+            provider: {
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            },
+            hasCourseInstance: [
+              {
+                '@type': 'CourseInstance',
+                name: 'AP Biology Senior Faculty 1:1',
+                description:
+                  'PhD-level senior tutors, 12-48 hour packages, FRQ rubric mastery + Campbell Biology coverage.',
+                courseMode: 'Online',
+                offers: {
+                  '@type': 'Offer',
+                  price: 120,
+                  priceCurrency: 'USD',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: 120,
+                    priceCurrency: 'USD',
+                    unitText: 'HOUR',
+                  },
+                  url: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
+                  availability: 'https://schema.org/InStock',
+                },
+              },
+              {
+                '@type': 'CourseInstance',
+                name: 'AP Biology Junior Faculty 1:1',
+                description:
+                  'Junior tutor 1:1 for AP-4 / AP-5 target students. Same Campbell + FRQ curriculum, lower hourly.',
+                courseMode: 'Online',
+                offers: {
+                  '@type': 'Offer',
+                  price: 60,
+                  priceCurrency: 'USD',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: 60,
+                    priceCurrency: 'USD',
+                    unitText: 'HOUR',
+                  },
+                  url: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
+                  availability: 'https://schema.org/InStock',
+                },
+              },
+              {
+                '@type': 'CourseInstance',
+                name: 'AP Biology Small-Batch (4-6 students)',
+                description:
+                  'Small group AP Biology coaching, weekly live sessions + FRQ practice library.',
+                courseMode: 'Online',
+                offers: {
+                  '@type': 'Offer',
+                  price: 40,
+                  priceCurrency: 'USD',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: 40,
+                    priceCurrency: 'USD',
+                    unitText: 'HOUR',
+                  },
+                  url: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
+                  availability: 'https://schema.org/InStock',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {/* BreadcrumbList schema — pathway from home to AP Biology hub. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Best AP Biology Tutor USA',
+                item: 'https://cerebrumbiologyacademy.com/best-ap-biology-tutor-usa',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'AP Biology Tutor — Programme Hub',
+                item: 'https://cerebrumbiologyacademy.com/ap-biology-tutor',
+              },
             ],
           }),
         }}

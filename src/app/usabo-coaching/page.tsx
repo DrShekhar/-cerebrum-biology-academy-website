@@ -258,11 +258,9 @@ export default function USABOCoachingPage() {
             '@type': 'Course',
             name: 'USABO Coaching - USA Biology Olympiad Preparation',
             description:
-              'Expert coaching for USA Biology Olympiad preparation covering Open Exam, Semifinals, and National Finals.',
+              'Expert coaching for USA Biology Olympiad covering Open Exam → Semifinals → National Finals pathway. AP Biology → USABO bridge methodology for AP-5 students targeting top US colleges with biology research credentials.',
             provider: {
-              '@type': 'Organization',
-              name: 'Cerebrum Biology Academy',
-              url: 'https://cerebrumbiologyacademy.com',
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
             },
             offers: {
               '@type': 'AggregateOffer',
@@ -272,6 +270,60 @@ export default function USABOCoachingPage() {
               offerCount: '8',
             },
             educationalLevel: 'High School',
+          }),
+        }}
+      />
+      {/* Organization with AggregateRating — brand authority signal. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            foundingDate: '2014',
+            description:
+              'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. Full USABO pathway coverage: USABO Open Exam → Semifinal → National Finals → USA IBO team. AP Biology / USABO bridge methodology unique to Cerebrum (most generalist tutoring platforms cover one or the other; we cover both with the same Campbell + Alberts + Lehninger faculty stack).',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+      {/* BreadcrumbList — pathway from home → AEO hub → USABO programme. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Best USABO Coach',
+                item: 'https://cerebrumbiologyacademy.com/best-usabo-coach',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'USABO Coaching — Programme',
+                item: 'https://cerebrumbiologyacademy.com/usabo-coaching',
+              },
+            ],
           }),
         }}
       />

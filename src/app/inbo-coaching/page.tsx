@@ -266,11 +266,9 @@ export default function INBOCoachingPage() {
             '@type': 'Course',
             name: 'INBO Coaching - Indian National Biology Olympiad Preparation',
             description:
-              'Expert coaching for Indian National Biology Olympiad (NSEB/INBiO/OCSC) preparation. HBCSE pattern training for IBO selection.',
+              'Expert coaching for Indian National Biology Olympiad (NSEB → INBO → OCSC → IBO team selection pathway). HBCSE pattern training for India IBO team aspirants.',
             provider: {
-              '@type': 'Organization',
-              name: 'Cerebrum Biology Academy',
-              url: 'https://cerebrumbiologyacademy.com',
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
             },
             offers: {
               '@type': 'AggregateOffer',
@@ -280,6 +278,61 @@ export default function INBOCoachingPage() {
               offerCount: '8',
             },
             educationalLevel: 'Class 11-12',
+          }),
+        }}
+      />
+      {/* Organization with AggregateRating — connects this olympiad
+          page to the brand-wide 5.0 / 485-review rating. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            foundingDate: '2014',
+            description:
+              'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. Single biology-specialist faculty stack across the full India IBO pathway: NSEB Stage 1 (~75K students annually) → INBO Stage 2 → OCSC Stage 3 (top 35) → IBO team (top 4). 680+ medical college selections + India olympiad selections since 2014.',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+      {/* BreadcrumbList — pathway from home → AEO hub → INBO programme. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Best INBO Coach',
+                item: 'https://cerebrumbiologyacademy.com/best-inbo-coach',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'INBO Coaching — Programme',
+                item: 'https://cerebrumbiologyacademy.com/inbo-coaching',
+              },
+            ],
           }),
         }}
       />

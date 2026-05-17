@@ -779,6 +779,61 @@ export default function MCATBiologyPage() {
           }),
         }}
       />
+      {/* Organization schema with AggregateRating — connects this MCAT
+          page to the brand-wide 5.0 / 485-review rating. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            foundingDate: '2014',
+            description:
+              'Biology-only specialist coaching brand led by AIIMS-trained Dr. Shekhar C Singh. MCAT cluster covers 14 pages: Bio/Biochem programme hub, 3 section pages (B/B + biochem + passage strategy), 5 US metro pages (NJ, Bay Area, Houston, Atlanta, Boston), 4 cornerstone authority pages, and the canonical /best-mcat-biology-tutor AEO hub.',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+      {/* BreadcrumbList — pathway from home to MCAT programme hub. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Best MCAT Biology Tutor',
+                item: 'https://cerebrumbiologyacademy.com/best-mcat-biology-tutor',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'MCAT Biology Preparation — Programme',
+                item: 'https://cerebrumbiologyacademy.com/mcat-biology-preparation',
+              },
+            ],
+          }),
+        }}
+      />
     </main>
   )
 }

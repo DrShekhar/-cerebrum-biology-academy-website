@@ -150,6 +150,121 @@ export default function IBBiologyTutorPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      {/* Course schema with priced Offers — unlocks pricing rich
+          results for "IB Biology tutor cost" queries. Tiers match the
+          FAQ-stated pricing: Complete IB Programme $6,000/year,
+          1:1 Elite $75/hr, Small-Batch group $40/hr. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'IB Biology Tutor — HL & SL Expert Tutoring',
+            description:
+              'Complete IB Diploma Programme Biology tutoring with examiner-level rubric knowledge of the 2025 IB Biology syllabus (4 Themes A–D, first exams May 2025). End-to-end Internal Assessment (IA), Extended Essay (EE), Paper 1 / Paper 2 strategy across HL + SL.',
+            url: 'https://cerebrumbiologyacademy.com/ib-biology-tutor',
+            inLanguage: 'en-GB',
+            educationalLevel: 'IB Diploma Programme',
+            educationalCredentialAwarded: 'IB Biology HL/SL Score 6-7 Preparation',
+            provider: {
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            },
+            hasCourseInstance: [
+              {
+                '@type': 'CourseInstance',
+                name: 'Complete IB Biology Programme (HL+SL, 150+ hrs, IA included)',
+                description:
+                  'Full-year IB Biology HL + SL coverage with Internal Assessment mentorship, Extended Essay support, Paper 1 + Paper 2 examiner strategy. Most popular tier for 6-7 score aspirants.',
+                courseMode: 'Online',
+                offers: {
+                  '@type': 'Offer',
+                  price: 6000,
+                  priceCurrency: 'USD',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: 6000,
+                    priceCurrency: 'USD',
+                    unitText: 'ANN',
+                  },
+                  url: 'https://cerebrumbiologyacademy.com/ib-biology-tutor',
+                  availability: 'https://schema.org/InStock',
+                },
+              },
+              {
+                '@type': 'CourseInstance',
+                name: 'IB Biology 1:1 Elite Tutoring',
+                description:
+                  '1:1 ad-hoc tutoring with senior IB-certified faculty. Gap-fill on weak topics, IA last-mile review, EE methodology consult.',
+                courseMode: 'Online',
+                offers: {
+                  '@type': 'Offer',
+                  price: 75,
+                  priceCurrency: 'USD',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: 75,
+                    priceCurrency: 'USD',
+                    unitText: 'HOUR',
+                  },
+                  url: 'https://cerebrumbiologyacademy.com/ib-biology-tutor',
+                  availability: 'https://schema.org/InStock',
+                },
+              },
+              {
+                '@type': 'CourseInstance',
+                name: 'IB Biology Small-Batch Group',
+                description:
+                  '4–6 student small-batch IB Biology coaching with weekly live sessions, peer learning, and shared IA review.',
+                courseMode: 'Online',
+                offers: {
+                  '@type': 'Offer',
+                  price: 40,
+                  priceCurrency: 'USD',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: 40,
+                    priceCurrency: 'USD',
+                    unitText: 'HOUR',
+                  },
+                  url: 'https://cerebrumbiologyacademy.com/ib-biology-tutor',
+                  availability: 'https://schema.org/InStock',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {/* BreadcrumbList — pathway from home to IB Biology hub. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Best IB Biology Tutor',
+                item: 'https://cerebrumbiologyacademy.com/best-ib-biology-tutor',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'IB Biology Tutor — Programme Hub',
+                item: 'https://cerebrumbiologyacademy.com/ib-biology-tutor',
+              },
+            ],
+          }),
+        }}
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}
