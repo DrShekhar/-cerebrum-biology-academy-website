@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { SEOLandingPage } from '@/components/seo-landing'
 import { dropperSEOPages } from '@/data/seo-landing'
 
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 const content = dropperSEOPages.neetDropperBatch
 
 export const metadata: Metadata = {
@@ -27,6 +28,24 @@ export const metadata: Metadata = {
 export default function NeetDropperBatchPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-dropper-batch"
+        pageName="NEET Dropper Batch"
+        parentHub={{
+          name: 'Best NEET Biology Tutor',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+        }}
+        personKnowsAbout={[
+          'NEET Dropper Batch',
+          'Compressed NEET Curriculum',
+          'NEET Dropper Mock Schedule',
+          'NEET Class 11 + 12 Revision',
+          'Repeat Aspirant Strategy',
+        ]}
+        courseName="NEET Dropper Batch Programme"
+        courseDescription="Compressed 6-10 month NEET dropper batch programme covering Class 11 + 12 NCERT revision with biweekly full-length NEET mocks from month 2 onwards. Higher baseline calibration for repeat aspirants."
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

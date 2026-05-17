@@ -20,6 +20,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -129,6 +130,24 @@ export default function NEETBiologyTutorDroppersPage() {
 
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-biology-tutor-for-droppers"
+        pageName="NEET Biology Tutor for Droppers"
+        parentHub={{
+          name: 'Best NEET Biology Tutor',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+        }}
+        personKnowsAbout={[
+          'NEET Biology Tutor for Droppers',
+          'Dropper 1:1 Biology Mentoring',
+          'Dropper Biology Weakness Fix',
+          'NEET Botany Zoology Dropper',
+          'Dropper Mock Strategy',
+        ]}
+        courseName="NEET Biology 1:1 Tutor for Droppers"
+        courseDescription="1:1 NEET Biology tutoring for droppers — personalised dropper-year study plan, weekly 90-min 1:1 sessions with senior faculty, custom drilling on previous-year weak chapters identified from earlier NEET attempt. Pinnacle tier (₹1.2L-1.56L) or ad-hoc 1:1 (₹2.5K-4.5K/hour)."
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -197,7 +216,11 @@ export default function NEETBiologyTutorDroppersPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -365,7 +388,11 @@ export default function NEETBiologyTutorDroppersPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

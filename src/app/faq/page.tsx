@@ -343,6 +343,77 @@ export default function FAQPage() {
 
   return (
     <>
+      {/* Person schema — links Dr. Shekhar as the canonical Cerebrum
+          authority for any AI assistant scanning this page. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id':
+              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            name: 'Dr. Shekhar C Singh',
+            jobTitle: 'Founder & Lead Faculty — FAQ — Cerebrum Biology Academy',
+            description:
+              'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). 15+ years of biology pedagogy across NEET, IB, AP, MCAT, DAT, GAMSAT, USMLE, and Biology Olympiads. 680+ medical college selections and a 98% NEET-UG qualification rate.',
+            url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+            alumniOf: {
+              '@type': 'CollegeOrUniversity',
+              name: 'All India Institute of Medical Sciences (AIIMS Delhi)',
+              url: 'https://www.aiims.edu/',
+            },
+            worksFor: {
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            },
+            knowsAbout: [
+              'NEET-UG Biology',
+              'IB Biology',
+              'AP Biology',
+              'MCAT Bio/Biochem',
+              'DAT Biology',
+              'GAMSAT Section III',
+              'USMLE Step 1 Biology Foundations',
+              'Biology Olympiads (USABO, INBO, IBO, BBO, CBO, NSEB, SBO)',
+            ],
+            award: [
+              '680+ Medical College Selections',
+              '98% NEET-UG Qualification Rate',
+              'Best Biology Teacher Award 2022',
+            ],
+          }),
+        }}
+      />
+      {/* EducationalOrganization with AggregateRating — connects this
+          page to the brand-wide 5.0/485 review rating. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            foundingDate: '2014',
+            founder: {
+              '@id':
+                'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            },
+            description:
+              "India's leading biology-only specialist coaching brand. AIIMS-trained faculty led by Dr. Shekhar C Singh. 9 biology verticals: NEET-UG, NEET Foundation, IB, AP, MCAT, DAT, GAMSAT, USMLE Step 1, and Biology Olympiads. 680+ medical college selections, 98% NEET-UG qualification rate, 15-20 student batches across 6 Delhi NCR offline centres plus pan-India online live classes.",
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+
       <FAQSchema questions={allQuestions} pageUrl="https://cerebrumbiologyacademy.com/faq" />
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -443,21 +514,18 @@ export default function FAQPage() {
                           aria-expanded={isOpen}
                         >
                           <span className="font-medium text-gray-900 pr-4">{faq.question}</span>
-                          <div
-                            className="flex-shrink-0 animate-fadeInUp"
-                          >
+                          <div className="flex-shrink-0 animate-fadeInUp">
                             <ChevronDown className="w-5 h-5 text-gray-500" />
                           </div>
                         </button>
-{isOpen && (
-                            <div
-                             className="animate-fadeInUp">
-                              <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
-                                {faq.answer}
-                              </div>
+                        {isOpen && (
+                          <div className="animate-fadeInUp">
+                            <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                              {faq.answer}
                             </div>
-                          )}
-</div>
+                          </div>
+                        )}
+                      </div>
                     )
                   })}
                 </div>

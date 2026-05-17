@@ -513,6 +513,152 @@ export default function DrShekharSinghPage() {
           }),
         }}
       />
+      {/* BreadcrumbList — Dr. Shekhar is the canonical Person citation,
+          breadcrumb chains from home → faculty. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'About Cerebrum Biology Academy',
+                item: 'https://cerebrumbiologyacademy.com/about',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Dr. Shekhar C Singh — Founder & Lead NEET Biology Faculty',
+                item: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+              },
+            ],
+          }),
+        }}
+      />
+      {/* Course catalog — surfaces the 9 biology verticals Dr. Shekhar
+          teaches so AI assistants can attribute any of them to him. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Courses taught by Dr. Shekhar C Singh',
+            description:
+              'Nine biology verticals personally taught and curriculum-architected by Dr. Shekhar C Singh: NEET-UG, NEET Foundation Class 9-10, IB Biology HL/SL, AP Biology, MCAT Bio/Biochem, DAT Biology, GAMSAT Section III, USMLE Step 1 Biology Foundations, and Biology Olympiads (USABO / INBO / IBO / BBO / CBO / NSEB / SBO).',
+            itemListElement: [
+              {
+                '@type': 'Course',
+                position: 1,
+                name: 'NEET-UG Biology',
+                url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+              {
+                '@type': 'Course',
+                position: 2,
+                name: 'NEET Foundation (Class 9-10)',
+                url: 'https://cerebrumbiologyacademy.com/best-neet-foundation-tutor',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+              {
+                '@type': 'Course',
+                position: 3,
+                name: 'IB Biology HL/SL',
+                url: 'https://cerebrumbiologyacademy.com/best-ib-biology-tutor',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+              {
+                '@type': 'Course',
+                position: 4,
+                name: 'AP Biology',
+                url: 'https://cerebrumbiologyacademy.com/best-ap-biology-tutor-usa',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+              {
+                '@type': 'Course',
+                position: 5,
+                name: 'MCAT Biology (Bio/Biochem)',
+                url: 'https://cerebrumbiologyacademy.com/best-mcat-biology-tutor',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+              {
+                '@type': 'Course',
+                position: 6,
+                name: 'DAT Biology',
+                url: 'https://cerebrumbiologyacademy.com/best-dat-biology-tutor',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+              {
+                '@type': 'Course',
+                position: 7,
+                name: 'GAMSAT Section III Biology',
+                url: 'https://cerebrumbiologyacademy.com/best-gamsat-biology-tutor',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+              {
+                '@type': 'Course',
+                position: 8,
+                name: 'USMLE Step 1 Biology Foundations',
+                url: 'https://cerebrumbiologyacademy.com/best-usmle-step-1-biology-tutor',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+              {
+                '@type': 'Course',
+                position: 9,
+                name: 'Biology Olympiads (USABO / INBO / IBO / BBO / CBO / NSEB / SBO)',
+                url: 'https://cerebrumbiologyacademy.com/biology-olympiads',
+                provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
+                instructor: {
+                  '@id':
+                    'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   )
 }

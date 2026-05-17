@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 const dropperProgram = [
   {
     phase: 'Phase 1: Gap Analysis',
@@ -127,15 +128,31 @@ export default function BiologyDroppersPage() {
 
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/biology-coaching-droppers"
+        pageName="Biology Coaching for NEET Droppers"
+        parentHub={{
+          name: 'Best NEET Biology Tutor',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+        }}
+        personKnowsAbout={[
+          'Biology Coaching for Droppers',
+          'NEET Dropper Biology Strategy',
+          'Biology 360 Dropper Track',
+          'NCERT Revision for Droppers',
+          'NEET PYQ Pattern Drilling',
+        ]}
+        courseName="Biology Coaching for NEET Droppers"
+        courseDescription="Biology-only dropper coaching with compressed Class 11 + 12 NCERT revision, NEET PYQ pattern drilling, biweekly full-length NEET mocks. Built for repeat aspirants targeting 30-60 mark biology improvement year-over-year."
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-red-900 via-rose-800 to-pink-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-5 h-5 mr-2 text-yellow-300" />
               NEET 2026 Dropper Batch
@@ -155,7 +172,11 @@ export default function BiologyDroppersPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -202,9 +223,7 @@ export default function BiologyDroppersPage() {
       {/* Program Phases */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               12-Month Dropper Program Structure
             </h2>
@@ -239,9 +258,7 @@ export default function BiologyDroppersPage() {
       {/* Success Stories */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Dropper Success Stories
             </h2>
@@ -301,9 +318,7 @@ export default function BiologyDroppersPage() {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Dropper Coaching - FAQs
             </h2>
@@ -311,10 +326,7 @@ export default function BiologyDroppersPage() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
-              >
+              <div key={index} className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
@@ -326,15 +338,18 @@ export default function BiologyDroppersPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Make Your Gap Year Count</h2>
             <p className="text-xl mb-8 opacity-90">
               Join our dropper batch and improve by 100+ marks. Book free counseling today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Dropper%20batch.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"

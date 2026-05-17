@@ -25,6 +25,7 @@ import { NEETToppersShowcase } from '@/components/layout/NEETToppersShowcase'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
 import Link from 'next/link'
 
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 export default function DropperPage() {
   // Add Course Schema via useEffect
   useEffect(() => {
@@ -187,6 +188,24 @@ export default function DropperPage() {
 
   return (
     <div className="min-h-screen">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/dropper"
+        pageName="NEET Dropper Programme"
+        parentHub={{
+          name: 'Best NEET Biology Tutor',
+          url: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
+        }}
+        personKnowsAbout={[
+          'NEET Dropper Programme',
+          '1-Year NEET Repeat',
+          'Dropper Year Strategy',
+          'NEET 650+ Repeat Target',
+          'Dropper Mental Health Support',
+        ]}
+        courseName="Cerebrum NEET Dropper Programme"
+        courseDescription="End-to-end 1-year NEET dropper programme combining compressed Class 11 + 12 NCERT revision, biweekly full-length mocks, weekly 1:1 mentor reviews, and dropper-specific psychological support. Same AIIMS-trained faculty as fresh batches."
+      />
+
       {/* Hero Section - Motivational & Urgent */}
       <section className="relative bg-gradient-to-br from-orange-600 via-red-600 to-purple-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
