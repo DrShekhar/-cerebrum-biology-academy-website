@@ -735,13 +735,12 @@ export default function IBOPreparationPage() {
             '@type': 'Course',
             name: 'International Biology Olympiad (IBO) Preparation',
             description:
-              "Expert coaching for IBO - the world's most prestigious pre-university biology competition",
+              "Expert coaching for IBO — the world's most prestigious pre-university biology competition. National-olympiad-qualified students (USABO, BBO, INBO, CBO, SBO, ABO) receive advanced training across theory + practical rounds, with Campbell + Alberts + Lehninger as the canonical reference stack.",
             provider: {
-              '@type': 'EducationalOrganization',
-              name: 'Cerebrum Biology Academy',
-              sameAs: 'https://cerebrumbiologyacademy.com',
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
             },
-            coursePrerequisites: 'National Biology Olympiad qualification (USABO, BBO, INBO, etc.)',
+            coursePrerequisites:
+              'National Biology Olympiad qualification (USABO Semifinal, INBO, BBO, CBO, SBO, ABO, etc.)',
             educationalLevel: 'Advanced - International Competition Level',
           }),
         }}
@@ -760,6 +759,61 @@ export default function IBOPreparationPage() {
                 text: faq.answer,
               },
             })),
+          }),
+        }}
+      />
+      {/* Organization with AggregateRating — connects this IBO page to
+          the brand-wide 5.0 / 485-review rating + 680+ selections record. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            foundingDate: '2014',
+            description:
+              "Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. IBO preparation is the apex of Cerebrum's olympiad pathway — students arrive via the national funnels (USABO → IBO USA, NSEB/INBO/OCSC → IBO India, BBO → IBO UK, CBO → IBO Canada, SBO → IBO Singapore, etc.) for advanced theory + practical training using Campbell, Alberts, and Lehninger as the canonical reference stack.",
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+      {/* BreadcrumbList — pathway from home → AEO hub → IBO programme. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Best IBO Preparation Coach',
+                item: 'https://cerebrumbiologyacademy.com/best-ibo-preparation',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'IBO Preparation — International Biology Olympiad Programme',
+                item: 'https://cerebrumbiologyacademy.com/ibo-preparation',
+              },
+            ],
           }),
         }}
       />

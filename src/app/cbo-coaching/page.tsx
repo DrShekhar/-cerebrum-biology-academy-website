@@ -236,6 +236,95 @@ export default function CBOCoachingPage() {
       />
       <CerebrumAggregateRating />
       <div className="min-h-screen bg-white">
+        {/* Person schema — vertical-specific knowsAbout so LLMs attribute
+          Dr. Shekhar to CBO / Canada olympiad queries. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh#cbo',
+              name: 'Dr. Shekhar C Singh',
+              jobTitle: 'Founder & Lead CBO Coach',
+              description:
+                'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). Lead curriculum architect for Canadian Biology Olympiad (CBO) preparation, using Campbell Biology, Alberts Molecular Biology, and Lehninger Biochemistry as canonical references.',
+              alumniOf: {
+                '@type': 'CollegeOrUniversity',
+                name: 'All India Institute of Medical Sciences (AIIMS Delhi)',
+              },
+              worksFor: {
+                '@id': 'https://cerebrumbiologyacademy.com/#organization',
+              },
+              knowsAbout: [
+                'Canadian Biology Olympiad (CBO)',
+                'Biology Olympiad Canada Selection',
+                'IBO Team Canada',
+                'Campbell Biology',
+                'Alberts Molecular Biology',
+                'Lehninger Biochemistry',
+                'Ontario Biology (Grade 12 SBI4U)',
+                'BC Biology 12',
+                'AP Biology to CBO bridge',
+              ],
+            }),
+          }}
+        />
+        {/* Organization with AggregateRating. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'EducationalOrganization',
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+              logo: 'https://cerebrumbiologyacademy.com/logo.png',
+              foundingDate: '2014',
+              description:
+                'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. CBO coaching covers Canadian Biology Olympiad pathway (Round 1 → Round 2 → IBO Team Canada selection) for Grade 11-12 students from Ontario / BC / Quebec / Alberta. Same biology-specialist faculty stack as our INBO / USABO / BBO / SBO / IBO programmes.',
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '5.0',
+                reviewCount: '485',
+                bestRating: '5',
+                worstRating: '1',
+              },
+            }),
+          }}
+        />
+        {/* BreadcrumbList — pathway from home → AEO hub → CBO programme. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://cerebrumbiologyacademy.com',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Best CBO Coach',
+                  item: 'https://cerebrumbiologyacademy.com/best-cbo-coach',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: 'CBO Coaching — Canadian Biology Olympiad Programme',
+                  item: 'https://cerebrumbiologyacademy.com/cbo-coaching',
+                },
+              ],
+            }),
+          }}
+        />
+
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />

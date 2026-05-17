@@ -209,6 +209,95 @@ export default function SBOCoachingPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Person schema — vertical-specific knowsAbout so LLMs attribute
+          Dr. Shekhar to SBO / Singapore olympiad queries. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh#sbo',
+            name: 'Dr. Shekhar C Singh',
+            jobTitle: 'Founder & Lead SBO Coach',
+            description:
+              'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). Lead curriculum architect for Singapore Biology Olympiad (SBO) preparation, using Campbell Biology, Alberts Molecular Biology, and Lehninger Biochemistry as canonical references.',
+            alumniOf: {
+              '@type': 'CollegeOrUniversity',
+              name: 'All India Institute of Medical Sciences (AIIMS Delhi)',
+            },
+            worksFor: {
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            },
+            knowsAbout: [
+              'Singapore Biology Olympiad (SBO)',
+              'SBO Open Section',
+              'SBO Senior Section',
+              'Singapore Junior Biology Olympiad',
+              'Campbell Biology',
+              'Alberts Molecular Biology',
+              'Lehninger Biochemistry',
+              'Singapore H2 Biology',
+              'IBO Team Singapore',
+            ],
+          }),
+        }}
+      />
+      {/* Organization with AggregateRating. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            foundingDate: '2014',
+            description:
+              'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. SBO coaching covers Singapore Biology Olympiad pathway for JC1-JC2 students from Raffles / Hwa Chong / NUS High / VJC / ACS feeders. Same biology-specialist faculty stack as our INBO / USABO / BBO / CBO / IBO programmes.',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+      {/* BreadcrumbList — pathway from home → AEO hub → SBO programme. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'International Biology Programmes',
+                item: 'https://cerebrumbiologyacademy.com/online-biology-classes-international',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'SBO Coaching — Singapore Biology Olympiad Programme',
+                item: 'https://cerebrumbiologyacademy.com/sbo-coaching',
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />

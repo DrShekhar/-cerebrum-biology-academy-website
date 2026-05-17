@@ -224,6 +224,95 @@ export default function BBOPreparationPage() {
         }}
       />
 
+      {/* Person schema — vertical-specific knowsAbout so LLMs attribute
+          Dr. Shekhar to BBO / UK olympiad queries. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh#bbo',
+            name: 'Dr. Shekhar C Singh',
+            jobTitle: 'Founder & Lead BBO Coach',
+            description:
+              'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). Lead curriculum architect for British Biology Olympiad (BBO) preparation — Round 1 → Round 2 → IBO Team UK pathway — using Campbell Biology, Alberts Molecular Biology, and Lehninger Biochemistry as canonical references aligned to RSB and UK A-Level Biology depth.',
+            alumniOf: {
+              '@type': 'CollegeOrUniversity',
+              name: 'All India Institute of Medical Sciences (AIIMS Delhi)',
+            },
+            worksFor: {
+              '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            },
+            knowsAbout: [
+              'British Biology Olympiad (BBO)',
+              'BBO Round 1',
+              'BBO Round 2',
+              'UK A-Level Biology',
+              'RSB (Royal Society of Biology)',
+              'Campbell Biology',
+              'Alberts Molecular Biology',
+              'Lehninger Biochemistry',
+              'IBO Team UK',
+            ],
+          }),
+        }}
+      />
+      {/* Organization with AggregateRating. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOrganization',
+            '@id': 'https://cerebrumbiologyacademy.com/#organization',
+            name: 'Cerebrum Biology Academy',
+            url: 'https://cerebrumbiologyacademy.com',
+            logo: 'https://cerebrumbiologyacademy.com/logo.png',
+            foundingDate: '2014',
+            description:
+              'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. BBO coaching covers the full UK olympiad pathway (Round 1 → Round 2 → IBO Team UK selection) for sixth-form students. Same biology-specialist faculty stack as our INBO / USABO / CBO / SBO / IBO programmes.',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '485',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+      {/* BreadcrumbList — pathway from home → AEO hub → BBO programme. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Best BBO Coach',
+                item: 'https://cerebrumbiologyacademy.com/best-bbo-coach',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'BBO Preparation — British Biology Olympiad Programme',
+                item: 'https://cerebrumbiologyacademy.com/bbo-preparation',
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-[#3d4d3d] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#3d4d3d] via-[#4a5d4a] to-[#3d4d3d]" />
