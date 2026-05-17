@@ -1765,6 +1765,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    // Tier-2 Delhi locality pages — closes coverage gap on major
+    // catchments that previously had zero or 1 generic landing page.
+    {
+      url: `${baseUrl}/neet-coaching-dwarka`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-mayur-vihar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-karol-bagh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-connaught-place`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
     {
       url: `${baseUrl}/neet-coaching-cr-park-delhi`,
       lastModified: lastUpdated,
