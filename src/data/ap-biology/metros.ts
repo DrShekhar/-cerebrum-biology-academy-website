@@ -1481,6 +1481,82 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
 
   // ──────────────────────────────────────────────────────────────────────────
+  // 23. NOIDA (sub-metro of Delhi NCR — IT-corridor AP Bio demand)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'noida',
+    cityName: 'Noida',
+    region: 'Noida + Greater Noida + Sectors 18 / 62 / 132 / 50 / 93 / 128',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    addressRegion: 'Uttar Pradesh',
+    heroBlurb:
+      'Noida\'s AP Biology demand is shaped by its IT-corridor demographics — tech-employee households at Sector 18 / 62 / 132 / 128, Sector 50 and 93 residential clusters, and the Greater Noida international-school belt (Pathways Noida, Shiv Nadar School, Step by Step, Genesis Global, Lotus Valley, GD Goenka Public, Amity International Sector 44). The typical Noida student in our AP programme is an IBDP or Cambridge IGCSE+A-Level student layering AP Biology for US college applications, or a CBSE Class 12 student dual-applying to Indian universities and US colleges. The IT-family parent profile is unusually methodology-literate — vendor-SLA-style scrutiny is common, and we have built our coaching delivery to match that expectation.',
+    positioningBlurb:
+      'Noida is structurally a different AP tutoring market from Gurugram and Delhi — denser tech-employee demographics, more price-sensitive than the Gurgaon Aravali / DLF cohort, more methodology-conscious than the central-Delhi old-money cohort. Generalist test-prep agencies (Jamboree Noida Sec 18, The Princeton Review Sector 18, Karan Gupta, Manya, Edu-Mentor, Genesis Test Prep) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff at ₹2,500–4,500 per hour. Cerebrum is structurally different: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes (so your child finishes by 7:30 PM regardless of which Noida sector you live in), and the option of in-person consultations at our South Extension hub (about 60 minutes via DND Flyway off-peak, longer at peak hours). Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — well below US-based tutors\' $150–400/hr Zoom rates.',
+    schools: [
+      'Pathways School Noida',
+      'Shiv Nadar School Noida',
+      'Step by Step School Noida',
+      'Genesis Global School',
+      'Lotus Valley International School Noida',
+      'GD Goenka Public School Noida',
+      'Amity International School Sector 44',
+      'Amity International School Sector 6',
+      'DPS Noida Sector 30',
+      'Cambridge School Noida',
+      'Delhi Public School Greater Noida',
+      'The Khaitan School',
+      'Apeejay School Noida',
+      'Somerville School Noida',
+      'Mayoor School Noida',
+      'Indus Valley Public School',
+    ],
+    faqs: [
+      {
+        question:
+          'My child is at Pathways Noida or Shiv Nadar — does adding AP Biology on top of IBDP HL actually move the needle for US applications?',
+        answer:
+          'For US-targeted applicants, yes — AP Biology layered on top of IB Biology HL is a meaningful application signal. American admissions officers read thousands of IB transcripts but parse AP scores as the canonical US-curriculum benchmark. A Pathways Noida or Shiv Nadar IBDP-HL student who also scores AP-5 reads as both globally rigorous and US-curriculum literate. The trade-off is workload during IA / EE crunch (November–February in Year 12). For pure UK / Europe / Australia / Canada applicants, IB alone is sufficient — AP adds little.',
+      },
+      {
+        question:
+          'Noida has multiple AP-offering international schools — Step by Step, Genesis Global, Lotus Valley, Amity. When is external AP Biology tutoring useful, and when is it overkill?',
+        answer:
+          'In-school AP Biology classes at the strong international schools are typically solid for concept coverage. External tutoring is high-leverage for three things the school class doesn\'t have bandwidth to do at depth: (1) FRQ rubric mastery with weekly written feedback against the College Board rubric, (2) timed full-length mock exams in the 6 weeks before the May AP, and (3) personalised remediation when a student hits a specific topic wall (typically biochem energetics, signal transduction, or population genetics). If your child is comfortably running AP-4 on internal school assessments, school is enough. If they\'re targeting AP-5 specifically or struggling on a topic, external 1:1 is high-leverage.',
+      },
+      {
+        question:
+          'My child is at DPS Noida Sector 30 doing CBSE 12, preparing for NEET, AND wants US college options. Can AP Biology realistically fit?',
+        answer:
+          'This dual-application profile is common in our Noida roster. The honest assessment: it is hard but doable if you start early (Class 11 summer). CBSE 12 + NEET prep is itself a 60-hour-per-week load; layering AP Biology adds another 4–6 hours per week of focused work. The conceptual overlap with NEET helps — cell biology, genetics, physiology, ecology cover much of the AP syllabus — but FRQ format and US-style data interpretation require dedicated practice. We typically run two 90-minute IST evening sessions for these students, calibrated to keep NEET prep as the primary track and AP as the secondary US-application layer. Be honest with your child about which track is primary.',
+      },
+      {
+        question:
+          'Noida to South Extension is a 60+ minute drive in peak hours — does that affect tutoring at all?',
+        answer:
+          'Not for online classes — which is the entire delivery model. Your child opens a laptop in Sector 44 / 50 / 62 / 132 / Greater Noida at 6 PM, finishes at 7:30, and the Noida-to-Delhi DND Flyway traffic at that hour is irrelevant. The only time commute matters is for the optional in-person consultations at South Extension; those we schedule on weekends or off-peak windows by appointment. Noida families consistently tell us removing the commute is half the benefit — your child gets an extra 90 minutes per session compared to in-person tutoring at any Delhi-side coaching centre.',
+      },
+      {
+        question: 'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
+        answer:
+          'No. AP Biology is a US-curriculum exam administered by the College Board and is not recognised by Indian medical councils (NMC), Indian universities, or NEET admissions. AP credit transfers to many US universities (typically a 4 or 5 earns 6–8 credit hours toward general biology), but it has zero standing in Indian higher education. If your child is realistically going to study medicine in India, NEET is the only path that matters — AP Biology is purely a US college application enhancer.',
+      },
+      {
+        question: 'How do we pay — INR transfer or USD card? GST invoice for IT-employer reimbursement available?',
+        answer:
+          'Both currencies and yes on the invoice. INR transfer to HDFC / ICICI / SBI / Axis is the most common (no FX charged to you), UPI works for smaller installments, international Visa / Mastercard / Amex in USD, and Wise transfers. Several Noida IT-employer families split the $1,800 senior-faculty package across two or three INR transfers at no extra charge. GST-compliant invoices are issued for corporate-reimbursement claims — common for Adobe, HCL, Wipro, TCS, Infosys, and other Noida-based MNC employees.',
+      },
+      {
+        question:
+          'My child is at Amity International or Cambridge School Noida doing Cambridge IGCSE — when should we start AP Biology prep?',
+        answer:
+          'For students continuing on Cambridge A-Levels at senior school, AP Biology as a parallel layer typically starts in Year 12 (the year the AP exam is taken in May). For students transitioning from Cambridge IGCSE to IBDP or CBSE Class 11-12 at senior school, AP can layer onto either track. The earlier-start advantage (starting in Year 11) is most useful for students aiming at top-tier US universities where AP-5 + a strong school transcript together signal preparedness. We run an AP Biology prep diagnostic to recommend the right start point — book a free consultation and we\'ll calibrate to your child\'s specific trajectory.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
   // 22. GURUGRAM (sub-metro of Delhi NCR — distinct AP Bio demand corridor)
   // ──────────────────────────────────────────────────────────────────────────
   {
