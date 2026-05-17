@@ -29,6 +29,7 @@ import {
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { areaDetails } from '@/data/south-delhi-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function VasantViharLocationPage() {
   useEffect(() => {
@@ -98,6 +99,13 @@ export default function VasantViharLocationPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/vasant-vihar"
+        pageName="NEET Biology Coaching for Vasant Vihar Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Vasant Vihar', 'NEET Biology Vasant Vihar', 'Medical entrance coaching Vasant Vihar']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 text-white py-12 md:py-20">

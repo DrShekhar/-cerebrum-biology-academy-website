@@ -28,6 +28,7 @@ import {
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { areaDetails } from '@/data/south-delhi-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function DefenceColonyPage() {
   useEffect(() => {
@@ -81,6 +82,13 @@ export default function DefenceColonyPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/defence-colony"
+        pageName="NEET Biology Coaching for Defence Colony Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Defence Colony', 'NEET Biology Defence Colony', 'Medical entrance coaching Defence Colony']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">

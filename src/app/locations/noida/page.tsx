@@ -25,6 +25,7 @@ import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import Link from 'next/link'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { getAllNoidaAreaSlugs, getNoidaAreaBySlug, getNoidaAreasByMetroLine } from '@/data/noida-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function NoidaLocationPage() {
   useEffect(() => {
@@ -102,6 +103,13 @@ export default function NoidaLocationPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/noida"
+        pageName="NEET Biology Coaching for Noida Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       {/* Hero Section with Map */}
       <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">

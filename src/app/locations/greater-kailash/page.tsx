@@ -28,6 +28,7 @@ import {
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { areaDetails } from '@/data/south-delhi-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function GreaterKailashLocationPage() {
   useEffect(() => {
@@ -97,6 +98,13 @@ export default function GreaterKailashLocationPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/greater-kailash"
+        pageName="NEET Biology Coaching for Greater Kailash Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Greater Kailash', 'NEET Biology Greater Kailash', 'Medical entrance coaching Greater Kailash']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-pink-800 to-purple-900 text-white py-12 md:py-20">

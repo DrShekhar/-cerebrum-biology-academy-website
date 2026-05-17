@@ -27,6 +27,7 @@ import {
 } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function NeetiBaghPage() {
   useEffect(() => {
@@ -80,6 +81,13 @@ export default function NeetiBaghPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/neeti-bagh"
+        pageName="NEET Biology Coaching for Neeti Bagh Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Neeti Bagh', 'NEET Biology Neeti Bagh', 'Medical entrance coaching Neeti Bagh']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">

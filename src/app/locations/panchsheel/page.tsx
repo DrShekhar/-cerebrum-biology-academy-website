@@ -25,6 +25,7 @@ import {
 } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function PanchsheelPage() {
   useEffect(() => {
@@ -78,6 +79,13 @@ export default function PanchsheelPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/panchsheel"
+        pageName="NEET Biology Coaching for Panchsheel Park Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Panchsheel Park', 'NEET Biology Panchsheel Park', 'Medical entrance coaching Panchsheel Park']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-indigo-900 via-violet-800 to-indigo-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">

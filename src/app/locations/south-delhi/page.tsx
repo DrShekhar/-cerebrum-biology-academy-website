@@ -22,6 +22,7 @@ import { trackPhoneCallConversion } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function SouthDelhiLocationPage() {
   useEffect(() => {
@@ -109,6 +110,13 @@ export default function SouthDelhiLocationPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/south-delhi"
+        pageName="NEET Biology Coaching for South Delhi Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET South Delhi', 'NEET Biology South Delhi', 'Medical entrance coaching South Delhi']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">

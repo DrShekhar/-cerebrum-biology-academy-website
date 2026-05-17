@@ -26,6 +26,7 @@ import {
 } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function GreenParkLocationPage() {
   useEffect(() => {
@@ -107,6 +108,13 @@ export default function GreenParkLocationPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/green-park"
+        pageName="NEET Biology Coaching for Green Park Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Green Park', 'NEET Biology Green Park', 'Medical entrance coaching Green Park']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">

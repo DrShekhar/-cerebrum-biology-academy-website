@@ -27,6 +27,7 @@ import {
 } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function WestendPage() {
   useEffect(() => {
@@ -88,6 +89,13 @@ export default function WestendPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/westend"
+        pageName="NEET Biology Coaching for West End Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET West End', 'NEET Biology West End', 'Medical entrance coaching West End']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-blue-900 via-sky-800 to-blue-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">

@@ -29,6 +29,7 @@ import {
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { areaDetails } from '@/data/south-delhi-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function SundarNagarPage() {
   useEffect(() => {
@@ -83,6 +84,13 @@ export default function SundarNagarPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/sundar-nagar"
+        pageName="NEET Biology Coaching for Sundar Nagar Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Sundar Nagar', 'NEET Biology Sundar Nagar', 'Medical entrance coaching Sundar Nagar']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-violet-900 via-purple-800 to-violet-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">

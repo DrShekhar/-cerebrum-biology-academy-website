@@ -28,6 +28,7 @@ import {
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
 import { areaDetails } from '@/data/south-delhi-areas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function MalviyaNagarPage() {
   useEffect(() => {
@@ -90,6 +91,13 @@ export default function MalviyaNagarPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/malviya-nagar"
+        pageName="NEET Biology Coaching for Malviya Nagar Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Malviya Nagar', 'NEET Biology Malviya Nagar', 'Medical entrance coaching Malviya Nagar']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-teal-900 via-emerald-800 to-teal-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">

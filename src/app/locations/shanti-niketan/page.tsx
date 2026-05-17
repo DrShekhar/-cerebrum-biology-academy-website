@@ -27,6 +27,7 @@ import {
 } from '@/components/locations/RelatedLocations'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { ExploreCourses } from '@/components/seo/InternalCrossLinks'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export default function ShantiNiketanPage() {
   useEffect(() => {
@@ -80,6 +81,13 @@ export default function ShantiNiketanPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/locations/shanti-niketan"
+        pageName="NEET Biology Coaching for Shanti Niketan Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Shanti Niketan', 'NEET Biology Shanti Niketan', 'Medical entrance coaching Shanti Niketan']}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-slate-800 via-gray-700 to-slate-800 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
