@@ -207,6 +207,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ib-biology-tutor-scottish-high-gurgaon' ||
     path === '/ib-biology-tutor-dps-international-gurgaon' ||
     path === '/ib-biology-tutor-gd-goenka-world-school-gurgaon' ||
+    path === '/ib-biology-tutor-shikshantar-gurgaon' ||
     path === '/ib-biology-tutor-uwc-mahindra-pune' ||
     path === '/ib-biology-tutor-stonehill-bangalore' ||
     path === '/ib-biology-tutor-inventure-bangalore' ||
@@ -5521,6 +5522,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ib-biology-tutor-gd-goenka-world-school-gurgaon`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-shikshantar-gurgaon`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,

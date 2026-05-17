@@ -1481,6 +1481,79 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 21. SHIKSHANTAR SCHOOL (Sector 31, Gurugram, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'shikshantar-gurgaon',
+    schoolName: 'Shikshantar School',
+    shortName: 'Shikshantar',
+    cityCountry: 'Gurugram, India',
+    citySlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Shikshantar School is a co-educational day school in Sector 31 Gurugram, founded in 1986 — making it one of the oldest established schools in Gurgaon, predating the city's IB-school boom (Pathways, Heritage Xperiential, Scottish High, GD Goenka, DPS International) by 15–25 years. The school was founded by Dr. Pramod Sharma and a group of educators with a vision of combining academic rigour with strong music, performing arts, and cultural traditions. Shikshantar's identity is distinctively traditional-and-cultural compared to the more progressive (Heritage) or international-from-inception (Pathways) schools that came later.",
+      "Shikshantar's primary curriculum is CBSE through Class 10, after which students can choose between continuing on the CBSE Class 12 track or moving to the school's IB Diploma Programme stream for Classes 11–12. The IB DP authorisation was added to broaden senior-school options for families targeting international universities. The IB cohort at Shikshantar is smaller than the CBSE cohort because the school's identity and most of its alumni are CBSE-rooted; students choosing IB are typically self-selecting toward US, UK, Canadian, or Australian university applications.",
+      "For Shikshantar IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition. Shikshantar's CBSE Class 10 Biology is rigorous on content depth and recall, but the IB DP's data-analysis-and-evaluation style writing on Paper 2 and the 20-percent-weight Internal Assessment require a different assessment skillset that the in-school Class 10 path does not directly develop. Our DP1 coaching makes this transition explicit, calibrating the IB-rubric language and the IA personal-investigation style in the first DP1 term so students arrive at the May DP2 exams with rubric-tight Paper 2 answers.",
+      "Several Shikshantar families also pursue the integrated IB+NEET track. Because the school's identity is CBSE-rooted, household conversations about medical college often default to AIIMS and Indian state medical colleges as the primary aspiration even when the abroad application is the primary planned route. The IB+NEET pathway preserves both options. Our integrated weekly schedule sits in IST evenings (7–9 PM) and weekend mornings so it fits cleanly around Shikshantar's school day and after-school music and performing-arts commitments (a meaningful share of Shikshantar IB students continue music and performing-arts training in parallel with their academics).",
+    ],
+    reputationBullets: [
+      'Founded 1986 — one of the oldest established schools in Gurgaon',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school offers both CBSE and IB DP — students self-select at Grade 11',
+      'Strong tradition in music, performing arts, and cultural programming',
+      'Located in Sector 31 Gurgaon (central Gurgaon, established residential belt)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Distinctively traditional-and-cultural identity vs newer progressive IB schools',
+    ],
+    collegeContext:
+      "Shikshantar IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Shikshantar most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. A subset of Shikshantar's Biology HL students continue music or performing arts as a parallel undergraduate interest, which produces an unusual share of cross-applications to US liberal arts colleges (Williams, Amherst, Brown, Wesleyan) where the dual-academic-and-arts profile reads strongly.",
+    paceAlignment:
+      "Shikshantar's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the central-Gurgaon Sector 31 school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge so the assessment-style shift doesn't catch students off-guard. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window. Schedule flexibility for students continuing music or performing arts training is built into our slot allocation.",
+    faqs: [
+      {
+        question: "My child finished Shikshantar's CBSE Class 10 with strong Biology marks — what changes when they start IB Biology HL at DP1?",
+        answer:
+          "Three things change. First, the assessment shifts: CBSE Class 10 prioritises content recall and standardised-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — CBSE Class 10 has nothing equivalent. Third, the syllabus depth in selected topics (especially cell biology, genetics, and physiology) goes meaningfully beyond CBSE Class 10. Our DP1 coaching makes all three transitions explicit in the first term.",
+      },
+      {
+        question: "Does my child's parallel music or performing-arts training conflict with IB Biology tutoring scheduling?",
+        answer:
+          "No — and this is a common pattern in our Shikshantar roster. Many Shikshantar IB students continue serious music or performing-arts training alongside their academics, with rehearsals or classes typically in late-afternoon or early-evening slots. We schedule live tutoring around those commitments — IST evening sessions can move to the 8 PM or 9 PM slot, and weekend morning blocks (Saturday 10 AM–12 PM) are often the cleanest fit for students whose weekday evenings are committed to rehearsals. Schedule flexibility is built into how we allocate slots; the music or performing-arts commitment does not have to be sacrificed for IB Biology coaching.",
+      },
+      {
+        question: "Shikshantar's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group hurt my child's IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a CBSE-primary school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, GD Goenka World) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that peer calibration with explicit weekly written feedback on long-response answers against the IB Biology mark scheme. Many Shikshantar IB students score competitively despite the smaller in-school IB cohort.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Shikshantar students?',
+        answer:
+          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Shikshantar IB Biology HL students each cohort pursue the dual IB+NEET pathway because the school\'s CBSE-rooted identity means household conversations about medical college often default to AIIMS and Indian state medical colleges as a valued option even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the music or performing-arts commitments many Shikshantar students maintain.',
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. Shikshantar families typically pay in INR with payment plans across 3–4 instalments.',
+      },
+      {
+        question: "My child is choosing between Shikshantar's CBSE Class 11–12 and the school's IB DP track — which is better for medicine applications?",
+        answer:
+          "Depends on the target country. For UK medicine, IB is well-received and reads strongly when paired with HL Biology + HL Chemistry. For US pre-med, IB is the cleaner transcript signal — US admissions officers parse IB more fluently than CBSE. For Canada / Australia, IB works well. For India (AIIMS / state medical via NEET), CBSE is the more direct route because NEET-eligibility and the Class 12 board-exam framework are CBSE-aligned. Dual-application students who want both options can pursue IBDP at Shikshantar and add NEET via our IB+NEET integrated track. We'll be straight with you about which path best fits your application target — not every Shikshantar IB student needs the dual track.",
+      },
+      {
+        question: 'When should a Shikshantar student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Shikshantar students each cohort who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
