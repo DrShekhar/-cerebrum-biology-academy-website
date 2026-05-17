@@ -16,6 +16,7 @@ import { buildIndiaOlympiadSchoolMetadata } from '@/lib/seo/metadata'
 import IndiaOlympiadSchoolTemplate from '@/components/india-olympiad/IndiaOlympiadSchoolTemplate'
 import { IndiaOlympiadSchoolSchemas } from '@/components/india-olympiad/IndiaOlympiadSchoolSchemas'
 import { getSchoolBySlug } from '@/data/india-olympiad/schools'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const SLUG = 'dps-rk-puram'
 const school = getSchoolBySlug(SLUG)
@@ -42,6 +43,12 @@ export default function Page() {
   if (!school) notFound()
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/biology-olympiad-tutor-dps-rk-puram"
+        pageName="Biology Olympiad Tutor for DPS RK Puram"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET DPS RK Puram', 'NEET Biology DPS RK Puram', 'Medical entrance coaching DPS RK Puram']}
+      />
       <IndiaOlympiadSchoolSchemas school={school} />
       <IndiaOlympiadSchoolTemplate school={school} />
     </>

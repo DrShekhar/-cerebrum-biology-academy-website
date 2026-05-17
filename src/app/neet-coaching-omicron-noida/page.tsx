@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Omicron Sector'
@@ -67,6 +68,12 @@ const faqs = [
 export default function NEETCoachingOmicronPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-omicron-noida"
+        pageName="NEET Coaching in Omicron Noida"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Omicron Noida', 'NEET Biology Omicron Noida', 'Medical entrance coaching Omicron Noida']}
+      />
       <LocalitySchema
         locality="Omicron Sector"
         slug="neet-coaching-omicron-noida"

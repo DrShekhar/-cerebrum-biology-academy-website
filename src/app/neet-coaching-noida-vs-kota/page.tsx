@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import { NoidaPageSchemas, NoidaEventSchema, NOIDA_COMPREHENSIVE_FAQS } from '@/components/seo/NoidaSchemas'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching: Noida vs Kota 2026 | Which is Better?',
@@ -164,6 +165,12 @@ export default function NoidaVsKotaPage() {
 
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-noida-vs-kota"
+        pageName="NEET Coaching: Noida vs Kota"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Noida vs Kota', 'NEET Biology Noida vs Kota', 'Medical entrance coaching Noida vs Kota']}
+      />
       <NoidaPageSchemas
         area="Noida"
         pageName="NEET Coaching: Noida vs Kota Comparison"

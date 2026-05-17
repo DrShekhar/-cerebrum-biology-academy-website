@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Monitor, Users, Trophy, Star, Building2 } from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for Jaypee Greens Noida | Online & Hybrid Classes',
@@ -43,6 +44,12 @@ const faqs = [
 export default function NEETCoachingJaypeeGreensPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-jaypee-greens-noida"
+        pageName="NEET Coaching at Jaypee Greens Noida"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET NEET Coaching at Jaypee Greens Noida', 'NEET Biology NEET Coaching at Jaypee Greens Noida', 'Medical entrance coaching NEET Coaching at Jaypee Greens Noida']}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-emerald-800 to-emerald-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">

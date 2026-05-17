@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Bhondsi'
@@ -91,6 +92,12 @@ const faqs = [
 export default function NEETCoachingBhondsiPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-bhondsi-gurgaon"
+        pageName="NEET Coaching in Bhondsi Gurgaon"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Bhondsi Gurgaon', 'NEET Biology Bhondsi Gurgaon', 'Medical entrance coaching Bhondsi Gurgaon']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurgaon"
         pageSlug="neet-coaching-bhondsi-gurgaon"

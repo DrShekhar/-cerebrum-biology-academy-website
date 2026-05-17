@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { MapPin, Phone, Users, ArrowRight, Building2 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Near Noida Societies',
@@ -35,6 +36,12 @@ const societies = [
 export default function NeetCoachingNoidaSocietyPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-noida-society"
+        pageName="NEET Coaching by Noida Society"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET NEET Coaching by Noida Society', 'NEET Biology NEET Coaching by Noida Society', 'Medical entrance coaching NEET Coaching by Noida Society']}
+      />
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">

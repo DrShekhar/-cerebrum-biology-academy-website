@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'IMT Manesar'
@@ -92,6 +93,12 @@ const faqs = [
 export default function NEETCoachingIMTManesarPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-imt-manesar-gurgaon"
+        pageName="NEET Coaching in IMT Manesar Gurgaon"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET IMT Manesar Gurgaon', 'NEET Biology IMT Manesar Gurgaon', 'Medical entrance coaching IMT Manesar Gurgaon']}
+      />
       <GurgaonGurugramAreaSchema
         spelling="gurgaon"
         pageSlug="neet-coaching-imt-manesar-gurgaon"

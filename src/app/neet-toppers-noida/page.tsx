@@ -17,6 +17,7 @@ import {
   NOIDA_COMPREHENSIVE_FAQS,
 } from '@/components/seo/NoidaSchemas'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'NEET Toppers from Noida 2025 | 23 AIIMS Selections',
@@ -115,6 +116,12 @@ const faqs = [
 export default function NEETToppersNoidaPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-toppers-noida"
+        pageName="NEET Toppers from Noida"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET NEET Toppers from Noida', 'NEET Biology NEET Toppers from Noida', 'Medical entrance coaching NEET Toppers from Noida']}
+      />
       <NoidaPageSchemas
         area="Noida"
         pageName="NEET Toppers from Noida 2025"

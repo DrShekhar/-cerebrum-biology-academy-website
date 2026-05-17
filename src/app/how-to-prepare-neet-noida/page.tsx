@@ -20,6 +20,7 @@ import {
   NOIDA_COMPREHENSIVE_FAQS,
 } from '@/components/seo/NoidaSchemas'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'How to Prepare for NEET in Noida | Step-by-Step Guide 2026',
@@ -164,6 +165,12 @@ const faqs = [
 export default function HowToPrepareNEETNoida() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/how-to-prepare-neet-noida"
+        pageName="How to Prepare for NEET in Noida"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       <NoidaPageSchemas
         area="Noida"
         pageName="How to Prepare for NEET in Noida"

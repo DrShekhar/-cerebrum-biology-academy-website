@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'Biology Tutor in Defence Colony Delhi | NEET & CBSE Coaching',
@@ -34,6 +35,12 @@ export const metadata: Metadata = {
 export default function BiologyTutorDefenceColonyPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/biology-tutor-defence-colony"
+        pageName="Biology Tutor in Defence Colony"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Defence Colony', 'NEET Biology Defence Colony', 'Medical entrance coaching Defence Colony']}
+      />
       <LocalitySchema
         locality="Defence Colony"
         slug="biology-tutor-defence-colony"

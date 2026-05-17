@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MessageCircle, Star, Users, Trophy, Building2, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap, Award, Quote } from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'Best Biology Tutor in Noida 2026 | AIIMS Faculty | Dr. Shekhar',
@@ -101,6 +102,12 @@ const faqs = [
 export default function BestBiologyTutorNoidaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/best-biology-tutor-noida"
+        pageName="Best Biology Tutor in Noida"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
         <div className="container mx-auto px-4">

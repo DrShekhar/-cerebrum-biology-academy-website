@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, Building2, Clock, Wifi, Video, MessageCircle, BookOpen } from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'Online NEET Classes for Noida Students | Live & Hybrid Mode',
@@ -78,6 +79,12 @@ const faqs = [
 export default function OnlineNEETClassesNoidaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/online-neet-classes-noida"
+        pageName="Online NEET Classes for Noida Students"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Noida Students', 'NEET Biology Noida Students', 'Medical entrance coaching Noida Students']}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-16">
         <div className="container mx-auto px-4">

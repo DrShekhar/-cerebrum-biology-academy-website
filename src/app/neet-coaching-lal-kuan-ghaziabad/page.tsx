@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Lal Kuan'
@@ -67,6 +68,12 @@ const faqs = [
 export default function NEETCoachingLalKuanPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-lal-kuan-ghaziabad"
+        pageName="NEET Coaching in Lal Kuan Ghaziabad"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Lal Kuan Ghaziabad', 'NEET Biology Lal Kuan Ghaziabad', 'Medical entrance coaching Lal Kuan Ghaziabad']}
+      />
       <LocalitySchema
         locality="Lal Kuan"
         slug="neet-coaching-lal-kuan-ghaziabad"

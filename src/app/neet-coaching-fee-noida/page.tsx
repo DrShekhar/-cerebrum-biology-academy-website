@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, IndianRupee, CheckCircle, ArrowRight, Star, Monitor, MapPin, Building2 } from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison Rs 48,000-3,50,000',
@@ -151,6 +152,12 @@ const faqs = [
 export default function NEETCoachingFeeNoidaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-fee-noida"
+        pageName="NEET Coaching Fees in Noida"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
+      />
       {/* Quick Answer - Featured Snippet */}
       <section className="bg-gradient-to-r from-green-700 to-teal-600 text-white py-12">
         <div className="container mx-auto px-4">

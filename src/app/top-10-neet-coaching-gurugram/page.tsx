@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Top10NEETCoachingContent } from './Top10Content'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
+import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 
 export const metadata: Metadata = {
   title: 'Top 10 NEET Coaching in Gurugram 2026 | Ranking & Comparison',
@@ -36,6 +37,12 @@ export const metadata: Metadata = {
 export default function Top10NEETCoachingGurugramPage() {
   return (
     <>
+      <NEETSchemaStack
+        pageUrl="https://cerebrumbiologyacademy.com/top-10-neet-coaching-gurugram"
+        pageName="Top 10 NEET Coaching in Gurugram"
+        parentHub={{ name: 'NEET Biology Coaching India', url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching-india' }}
+        personKnowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+      />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="top-10-neet-coaching-gurugram" />
       <Top10NEETCoachingContent />
     </>
