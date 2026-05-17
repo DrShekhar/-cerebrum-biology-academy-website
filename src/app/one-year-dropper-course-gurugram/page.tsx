@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'long term neet dropper batch',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'One Year NEET Dropper Course in Gurugram | Complete Transformation',
     description:
       'Intensive 1-year NEET program designed for droppers to achieve their dream score.',

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'cerebrum academy faculty',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Biology Faculty Gurugram',
     images: ['/og-image.jpg'],
     description: 'AIIMS graduates with 15+ years experience. 98% success rate.',

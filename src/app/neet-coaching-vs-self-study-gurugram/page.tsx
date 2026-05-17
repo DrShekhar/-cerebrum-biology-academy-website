@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet coaching worth it',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching vs Self-Study: Which is Better?',
     description: 'Complete comparison with success rates and expert advice.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-vs-self-study-gurugram',

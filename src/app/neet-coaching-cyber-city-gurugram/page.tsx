@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     'medical coaching cyber city gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Cyber City Gurugram',
     description: 'Best NEET coaching near Cyber City. Just 10 min from DLF Cyber Hub.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-cyber-city-gurugram',

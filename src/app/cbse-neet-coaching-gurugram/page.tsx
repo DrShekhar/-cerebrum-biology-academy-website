@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'cbse neet batch gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'CBSE Board NEET Coaching in Gurugram | NCERT-Aligned Preparation',
     description:
       'NEET Biology coaching designed specifically for CBSE students. NCERT-focused curriculum with 98% success rate.',

@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     'neet coaching ranking gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Which NEET Coaching is Best in Gurugram? | 2026 Comparison',
     description:
       'Honest comparison of NEET coaching institutes in Gurugram. Compare fees, batch size, results.',

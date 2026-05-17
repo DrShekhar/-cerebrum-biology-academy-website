@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     'neet coaching cost gurugram 2026',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Fees in Gurugram 2026 | Fee Comparison',
     description: 'Compare fees of top NEET institutes in Gurugram. Find scholarships, EMI options.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-fees-gurugram',

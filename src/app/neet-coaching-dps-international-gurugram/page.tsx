@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition dps international',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for DPS International',
     description: 'Specialized NEET coaching for DPSI students. IGCSE/IB support.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-international-gurugram',

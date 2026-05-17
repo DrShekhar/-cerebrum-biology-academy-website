@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     'home neet coaching gurgaon',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Online NEET Classes in Gurugram | Live Interactive Sessions',
     description:
       'Premium online NEET Biology coaching for Gurugram students. Live classes, recordings, doubt support.',

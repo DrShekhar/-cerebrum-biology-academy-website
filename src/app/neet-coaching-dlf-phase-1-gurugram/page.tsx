@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'biology tuition dlf gurgaon',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for DLF Phase 1 Gurugram',
     description: 'Best NEET coaching near DLF Phase 1. Just 15 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dlf-phase-1-gurugram',

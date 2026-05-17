@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     '1 year neet dropper course gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Dropper Batch 2026-27 in Gurugram | Intensive Repeater Course',
     description: 'Intensive 1-year NEET preparation for droppers and repeaters in Gurugram.',
     url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram',

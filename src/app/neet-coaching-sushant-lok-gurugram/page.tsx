@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'biology tuition sushant lok gurgaon',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Sushant Lok Gurugram',
     description: 'Best NEET coaching near Sushant Lok. Just 15 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-sushant-lok-gurugram',

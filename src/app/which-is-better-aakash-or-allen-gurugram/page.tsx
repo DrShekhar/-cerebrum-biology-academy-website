@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     'aakash vs allen fees gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Aakash vs Allen: Which is Better for NEET? | Gurugram',
     description: 'Complete comparison of Aakash and Allen for NEET coaching in Gurugram.',
     url: 'https://cerebrumbiologyacademy.com/which-is-better-aakash-or-allen-gurugram',

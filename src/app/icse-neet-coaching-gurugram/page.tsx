@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'icse neet batch gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'ICSE Board NEET Coaching in Gurugram | ICSE-to-NCERT Bridge',
     description:
       'NEET Biology coaching designed specifically for ICSE students. Bridge ICSE concepts to NCERT format with 98% success rate.',

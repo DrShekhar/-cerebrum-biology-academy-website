@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     'neet 700 scorer interview',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Topper Interviews Gurugram',
     description: 'Inspiring success stories from our NEET toppers. Learn their strategies.',
     url: 'https://cerebrumbiologyacademy.com/neet-topper-interview-gurugram',

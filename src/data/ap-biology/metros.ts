@@ -1479,6 +1479,86 @@ export const apBiologyMetros: APBiologyMetro[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 22. GURUGRAM (sub-metro of Delhi NCR — distinct AP Bio demand corridor)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'gurugram',
+    cityName: 'Gurugram',
+    region: 'Gurugram + DLF + Sushant Lok + Aravali + Cyber City',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    addressRegion: 'Haryana',
+    heroBlurb:
+      'Gurugram has the densest concentration of US-admissions families in India. The Aravali corridor (Pathways Aravali, Shri Ram Aravali, Heritage Xperiential, GD Goenka World, Suncity, KR Mangalam, Lancers, Pathways Gurgaon) runs the IBDP + AP overlay; the DLF / Sushant Lok / Cyber City families on the Golf Course Road axis send children to Pathways Gurgaon, DPS International Sector 45, Scottish High, Vega, Amity, and Bal Bharati. AP Biology coaching here is structurally an "applied to US college admissions" decision — not a curriculum-credit decision — and our Gurugram roster reflects that.',
+    positioningBlurb:
+      'Gurugram is the highest-CPC AP tutoring market in India — generalist agencies (Jamboree, The Princeton Review Cyber City, Karan Gupta, Manya, Edu-Mentor MG Road, ALevel and IGCSE Tutors Sector 49) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff at ₹3,000–6,000 per hour. Cerebrum is structurally different: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes (so your child finishes by 7:30 PM and the Gurgaon-Delhi commute is irrelevant), and an optional in-person consultation at our South Extension hub (40 min via Yellow Line from MG Road) for families who want a face-to-face progress review. Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — well below US-based tutors’ $150–400/hr Zoom rates and the local Gurgaon agencies’ generalist-tutor rates.',
+    schools: [
+      'Pathways World School Aravali',
+      'Pathways School Gurgaon',
+      'Shri Ram School Aravali',
+      'Shri Ram School Moulsari',
+      'Heritage Xperiential Learning School',
+      'GD Goenka World School',
+      'Lancers International School',
+      'DPS International Sector 45 Gurgaon',
+      'Suncity School',
+      'Scottish High International School',
+      'Vega Schools',
+      'KR Mangalam World School',
+      'Amity International School Sector 46',
+      'Bal Bharati Public School Pinnacle',
+      'Presidium Sector 57',
+      'Apeejay School Sector 15',
+      'Hillwoods Academy',
+      'Paras World School',
+    ],
+    faqs: [
+      {
+        question:
+          'My child is at Pathways Aravali doing IBDP HL — is layering AP Biology on top worth the extra workload?',
+        answer:
+          'For US-targeted applicants, yes — AP Biology added to IB Biology HL is a meaningful application signal. US admissions officers read thousands of IB transcripts but parse AP scores as the canonical US-curriculum benchmark, so a Pathways IBDP-HL student who also scores AP-5 reads as both globally rigorous and US-curriculum literate. The honest trade-off is workload during IA / EE crunch (November–February in Year 12). For pure UK / Europe / Australia / Canada applicants, IB alone is sufficient — AP adds little. Decide based on the application target, not reflexively.',
+      },
+      {
+        question:
+          'Heritage Xperiential and Shri Ram Aravali are inquiry-driven schools — does AP Biology’s rubric-heavy testing clash with that philosophy?',
+        answer:
+          'Less than parents fear. The College Board AP Biology FRQ rubric is genuinely conceptual — it rewards mechanism-level explanation, not memorisation. Inquiry-school students often produce strong FRQs once they internalise the rubric language ("explain how X causes Y", "predict Z and justify"), because that vocabulary is closer to their classroom voice than rote MCQ work. The bottleneck is usually MCQ pace (60 questions in 90 minutes), not the FRQ. We calibrate practice toward MCQ speed-drills for this cohort, with FRQ work serving as the strength they already have.',
+      },
+      {
+        question:
+          'My child commutes from DLF Phase 1 or Sushant Lok to school — does AP Biology tutoring add another physical commute on top?',
+        answer:
+          'No. Coaching delivery is 100% online live video — that is structurally the right model for the depth and pace AP Biology requires. Your child opens a laptop at home in Aravali, Sushant Lok, DLF, or Cyber City at 6 PM, finishes by 7:30, and the Gurgaon-internal traffic at that hour is irrelevant. Optional in-person consultations at our South Extension hub (40 min via Yellow Line from MG Road; 50 min off-peak by car via NH-48) are by appointment for families who want a face-to-face progress review — most Gurugram families never use these and are fully satisfied with online delivery.',
+      },
+      {
+        question:
+          'Pathways Gurgaon and Pathways Aravali have in-school AP Biology classes — when is external tutoring useful, and when is it overkill?',
+        answer:
+          'Pathways’ in-school AP Bio class is solid for concept coverage. External tutoring is typically useful for three things the school class doesn’t have bandwidth to do at depth: (1) FRQ rubric mastery with weekly written feedback against the College Board rubric, (2) timed full-length mock exams in the 6 weeks before the May AP, and (3) personalised remediation when a student hits a specific topic wall (typically biochem energetics, signal transduction, or population genetics). If your child is comfortably running AP-4 on internal Pathways assessments, school is enough. If they’re targeting AP-5 specifically or struggling on a topic, external 1:1 is high-leverage.',
+      },
+      {
+        question:
+          'My child at DPS International Sector 45 is doing CBSE 12, preparing for NEET, AND wants US college options. Can AP Biology realistically fit?',
+        answer:
+          'This dual-application profile is the most common pattern in our Gurugram roster. The honest assessment: it is hard but doable if you start early (Class 11 summer). CBSE 12 + NEET prep is itself a 60-hour-per-week load; layering AP Biology adds another 4–6 hours per week of focused work. The conceptual overlap with NEET helps — cell biology, genetics, physiology, ecology cover much of the AP syllabus — but FRQ format and US-style data interpretation require dedicated practice. We typically run two 90-minute IST evening sessions for these students, calibrated to keep NEET prep as the primary track and AP as the secondary US-application layer. Be honest with your child about which track is primary.',
+      },
+      {
+        question:
+          'Will an AP-5 in Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
+        answer:
+          'No. AP Biology is a US-curriculum exam administered by the College Board and is not recognised by Indian medical councils (NMC), Indian universities, or NEET admissions. AP credit transfers to many US universities (typically a 4 or 5 earns 6–8 credit hours toward general biology), but it has zero standing in Indian higher education. If your child is realistically going to study medicine in India, NEET is the only path that matters — AP Biology is purely a US college application enhancer. Several Gurugram families confuse this; we will be straight with you about which track to prioritise.',
+      },
+      {
+        question:
+          'How do we pay — INR transfer or USD card? GST invoice for corporate reimbursement available?',
+        answer:
+          'Both currencies and yes on the invoice. INR transfer to HDFC / ICICI / SBI / Axis is the most common (no FX charged to you), UPI works for smaller installments, international Visa / Mastercard / Amex in USD, and Wise transfers. Several Gurugram corporate-family parents split the $1,800 senior-faculty package across two or three INR transfers at no extra charge, and GST-compliant invoices are issued for corporate-reimbursement claims (common for IT executive and MNC-employee families).',
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup metro by slug. */

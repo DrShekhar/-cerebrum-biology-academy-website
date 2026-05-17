@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition presidium students',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Presidium School',
     description: 'Specialized NEET coaching for Presidium students. Multiple campuses.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-presidium-school-gurugram',

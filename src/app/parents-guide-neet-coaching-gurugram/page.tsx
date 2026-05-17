@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet coaching tips parents gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Parents Guide to NEET Coaching | Gurugram',
     description: 'Everything parents need to know about NEET coaching.',
     url: 'https://cerebrumbiologyacademy.com/parents-guide-neet-coaching-gurugram',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition bal bharati students',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Bal Bharati School',
     description: 'Specialized NEET coaching for Bal Bharati students. CBSE aligned.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-bal-bharati-school-gurugram',

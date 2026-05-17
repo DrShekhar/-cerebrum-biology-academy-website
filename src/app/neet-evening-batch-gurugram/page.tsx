@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     'dps students neet coaching',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Evening Batch Gurugram 2026',
     description: 'After-school NEET preparation! Evening classes from 5 PM at M2K Sector 51.',
     url: 'https://cerebrumbiologyacademy.com/neet-evening-batch-gurugram',

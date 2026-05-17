@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition kr mangalam students',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for K R Mangalam World School',
     description: 'Specialized NEET coaching for KRM students from multiple campuses.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-kr-mangalam-world-school-gurugram',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'best biology coaching gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Top 5 NEET Coaching Institutes in Gurugram 2026',
     description: 'Official ranking based on success rate, faculty, and student reviews.',
     url: 'https://cerebrumbiologyacademy.com/top-5-neet-coaching-gurugram',

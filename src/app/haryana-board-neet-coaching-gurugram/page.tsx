@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'affordable neet coaching gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Haryana Board NEET Coaching in Gurugram | HBSE-to-NCERT Bridge',
     description:
       'NEET Biology coaching for Haryana Board students. Hindi/English support, NCERT bridging, 78% success rate.',

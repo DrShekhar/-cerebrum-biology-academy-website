@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'neet coaching under 50000',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Affordable NEET Coaching in Gurugram | Quality at Lower Cost',
     description:
       'Premium NEET Biology coaching at 30-40% lower fees than big institutes. Starting ₹45,000/year.',

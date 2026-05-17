@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet topper coaching gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Success Rate by Coaching Institute | Gurugram 2026',
     description: 'Compare NEET success rates: Cerebrum 98%, see detailed selection statistics.',
     url: 'https://cerebrumbiologyacademy.com/neet-success-rate-gurugram',

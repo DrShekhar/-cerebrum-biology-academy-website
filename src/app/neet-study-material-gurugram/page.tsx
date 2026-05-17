@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     'neet preparation material gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Study Material in Gurugram | Notes, MCQs & Tests',
     description:
       'Comprehensive NEET Biology study material. NCERT-based, 5000+ MCQs, chapter tests.',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet self study tips',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Can I Crack NEET Without Coaching? Expert Guide',
     description: 'Honest analysis with self-study strategy and when you might need help.',
     url: 'https://cerebrumbiologyacademy.com/can-i-crack-neet-without-coaching-gurugram',

@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     'book free neet class gurgaon',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Free NEET Demo Class Gurugram',
     images: ['/og-image.jpg'],
     description: 'Book your FREE NEET demo class. Experience our teaching before you decide.',

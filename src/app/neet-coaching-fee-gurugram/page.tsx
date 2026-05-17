@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'best value neet coaching',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Fee Gurugram 2026 | Complete Fee Comparison',
     description:
       'NEET coaching fees in Gurugram range from Rs 45,000 to Rs 2,50,000. Compare all institutes.',

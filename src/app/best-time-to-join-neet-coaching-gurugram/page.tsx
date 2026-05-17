@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'when to start neet coaching gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Time to Join NEET Coaching 2027',
     description: 'April vs July batch comparison and month-wise joining guide.',
     url: 'https://cerebrumbiologyacademy.com/best-time-to-join-neet-coaching-gurugram',

@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     'integrated neet coaching weekend',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Weekend Batch Gurugram 2026',
     description:
       'Balance school and NEET prep! Saturday-Sunday intensive classes at M2K Sector 51.',

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'evening biology coaching gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Complement Allen with Cerebrum Biology Coaching | Gurugram',
     description:
       'Keep your Allen enrollment. Add focused Biology coaching from AIIMS faculty. Same building location.',

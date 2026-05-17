@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     'neet preparation timeline',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'When to Start NEET Preparation? Expert Timing Guide',
     description: 'Ideal timing for NEET prep - Class 9, 10, 11, or 12. Complete strategy.',
     url: 'https://cerebrumbiologyacademy.com/when-to-start-neet-preparation-gurugram',

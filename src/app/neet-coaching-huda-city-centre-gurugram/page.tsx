@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition huda city centre',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching HUDA City Centre Gurugram',
     description: 'Best NEET coaching near HUDA City Centre. Yellow Line terminus.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-huda-city-centre-gurugram',

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition vega school students',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Vega School',
     description: 'Specialized NEET coaching for Vega School students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-vega-school-gurugram',

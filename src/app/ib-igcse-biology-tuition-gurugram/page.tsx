@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   keywords:
     'IB biology tuition gurugram, IGCSE biology tuition gurgaon, IB biology tutor gurugram, IGCSE biology coaching gurugram, IB HL biology gurugram, international school biology tuition, DPS international biology tutor, pathways biology coaching',
   openGraph: {
+    locale: 'en_IN',
     title: 'IB & IGCSE Biology Tuition Gurugram | AIIMS Doctor | Pathways, DPS International',
     description:
       'IB HL/SL & IGCSE Biology tuition in Gurugram by AIIMS Alumnus. Serving Pathways, DPS International, Scottish High. IA support, dual NEET prep. Visit Sector 51.',

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     'biology coaching sector 51 gurgaon',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Narayana Alternative in Gurugram 2026',
     description:
       'Tired of crowded Narayana batches? Get personal attention with 25-student batches.',

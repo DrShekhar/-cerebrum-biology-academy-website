@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'affordable neet coaching gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Fees in Gurugram 2025 | Complete Comparison',
     description: 'Compare NEET coaching fees from ₹45K to ₹3L. Find best value.',
     url: 'https://cerebrumbiologyacademy.com/how-much-fees-for-neet-coaching-gurugram',

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'switch from allen gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Allen Alternative in Gurugram | Personalized NEET Biology Coaching',
     description:
       'Why 500+ Gurugram students chose Cerebrum over Allen for NEET Biology preparation.',

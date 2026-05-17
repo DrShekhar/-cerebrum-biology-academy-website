@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     'aiims coaching gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best NEET Coaching in Gurugram 2026 | Top Institutes Compared',
     description:
       'Compare top NEET coaching institutes in Gurugram. Fees, faculty, results compared.',

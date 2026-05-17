@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition iffco chowk',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching IFFCO Chowk Gurugram',
     description: 'Best NEET coaching near IFFCO Chowk. Metro connected.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-iffco-chowk-gurugram',

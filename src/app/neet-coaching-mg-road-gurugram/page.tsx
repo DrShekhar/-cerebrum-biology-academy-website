@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'medical coaching mg road gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching MG Road Gurugram',
     description: 'Best NEET coaching near MG Road. Just 15 min from MG Road Metro.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-mg-road-gurugram',

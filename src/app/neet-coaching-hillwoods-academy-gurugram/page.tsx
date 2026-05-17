@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition hillwoods students',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Hillwoods Academy',
     description: 'Specialized NEET coaching for Hillwoods Academy students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-hillwoods-academy-gurugram',

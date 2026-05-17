@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     'neet coaching results gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET 2024 Results Gurugram',
     description: '98% success rate, 12 students 650+, 3 in top 5000 AIR.',
     url: 'https://cerebrumbiologyacademy.com/neet-result-2024-gurugram',

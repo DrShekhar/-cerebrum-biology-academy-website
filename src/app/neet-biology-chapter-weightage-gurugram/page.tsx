@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet biology preparation gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Biology Chapter Weightage 2026 | Marks Distribution',
     description: 'Complete chapter-wise weightage for NEET Biology. Know which topics to focus on.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-chapter-weightage-gurugram',

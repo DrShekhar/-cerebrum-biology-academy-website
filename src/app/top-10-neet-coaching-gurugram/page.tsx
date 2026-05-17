@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'neet biology coaching gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Top 10 NEET Coaching in Gurugram 2026 | Ranking & Comparison',
     description:
       'Honest ranking of top 10 NEET coaching institutes in Gurugram 2026. Based on results, faculty, fees, reviews. Cerebrum #1 with 98% success rate.',

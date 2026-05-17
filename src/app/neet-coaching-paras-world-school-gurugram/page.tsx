@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition paras world school',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Paras World School',
     description: 'Specialized NEET coaching for Paras World School students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-paras-world-school-gurugram',

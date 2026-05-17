@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'biology tuition pataudi road',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Pataudi Road Gurugram',
     description: 'Best NEET coaching near Pataudi Road. Emerging area.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-pataudi-road-gurugram',

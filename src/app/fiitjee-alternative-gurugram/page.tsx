@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     'biology coaching sector 51 gurgaon',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best FIITJEE Alternative in Gurugram 2026',
     description:
       'Looking for FIITJEE alternative? Cerebrum offers 60% lower fees with 98% success rate.',

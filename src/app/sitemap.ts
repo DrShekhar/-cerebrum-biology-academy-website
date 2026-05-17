@@ -170,6 +170,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-tutor-abu-dhabi' ||
     path === '/ap-biology-tutor-mumbai' ||
     path === '/ap-biology-tutor-delhi-ncr' ||
+    path === '/ap-biology-tutor-gurugram' ||
     path === '/ap-biology-tutor-bangalore' ||
     path === '/ap-biology-tutor-hyderabad' ||
     path === '/ap-biology-tutor-vancouver' ||
@@ -3621,6 +3622,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ap-biology-tutor-delhi-ncr`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-gurugram`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.8,

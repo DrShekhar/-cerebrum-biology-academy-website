@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     'neet institute near me gurgaon',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Near Me in Gurugram | Biology Classes Nearby',
     description:
       'Find the best NEET coaching near you in Gurugram. Central Sector 51 location, accessible from all major areas.',
