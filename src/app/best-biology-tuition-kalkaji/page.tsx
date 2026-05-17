@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'biology teacher near lotus temple',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Tuition in Kalkaji | Expert Tutors Near Nehru Place',
     description:
       'Best biology tuition in Kalkaji, South Delhi. Expert tutors near Nehru Place & Lotus Temple. Class 11, 12 & NEET prep.',

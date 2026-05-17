@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet biology tutor noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Tutor in Noida | AIIMS Faculty | 500+ Selections',
     description: 'Learn from Dr. Shekhar C Singh, AIIMS alumnus with 15+ years experience and 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/best-biology-tutor-noida',

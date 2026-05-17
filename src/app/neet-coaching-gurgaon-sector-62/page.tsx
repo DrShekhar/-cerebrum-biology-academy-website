@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet coaching new gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Sector 62 Gurgaon',
     description: 'Best NEET coaching near Sector 62. Just 12 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurgaon-sector-62',

@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     'igcse neet preparation gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Pathways World School',
     description: 'Specialized NEET coaching for Pathways students. IB/IGCSE support.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-pathways-world-school-gurugram',

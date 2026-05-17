@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'biology teacher vasant vihar',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Tuition in Vasant Vihar | Premium Tutors South Delhi',
     description:
       'Best biology tuition in Vasant Vihar, South Delhi. Premium tutors for Vasant Valley School students. Class 11, 12 & NEET prep.',

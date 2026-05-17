@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'foundation neet biology class 9',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Foundation Class 9 in Noida | 4-Year Head Start',
     images: ['/og-image.jpg'],
     description:

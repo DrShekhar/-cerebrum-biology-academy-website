@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'class 11 biology gaur city',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Class 11 Biology Coaching Noida | NEET Foundation 2026',
     description: 'Expert Class 11 Biology coaching with NEET foundation. AIIMS faculty, 15-student batches.',
     url: 'https://cerebrumbiologyacademy.com/biology-class-11-noida',

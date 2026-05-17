@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty gd goenka gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for GD Goenka Gurugram Students',
     description: 'AIIMS-trained NEET biology coaching for GD Goenka Gurugram students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gd-goenka-gurugram',

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'best coaching for jaypee noida neet',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: pageData.metaTitle,
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-jaypee-noida-students',

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-noida-society',
   },
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Near Noida Societies',
     description:
       'Find NEET Biology coaching near your Noida society. Online & hybrid classes available.',

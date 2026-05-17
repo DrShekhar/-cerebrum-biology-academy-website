@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'NEET preparation south delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-saket',

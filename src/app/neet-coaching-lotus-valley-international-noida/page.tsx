@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty lotus valley noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Lotus Valley Noida Students',
     description: 'AIIMS-trained NEET biology coaching for Lotus Valley Noida students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-lotus-valley-international-noida',

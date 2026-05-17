@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'aiims faculty mothers international',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: "NEET Coaching for Mother's International Students",
     description: "AIIMS-trained NEET biology coaching for Mother's International students.",
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-mothers-international-delhi',

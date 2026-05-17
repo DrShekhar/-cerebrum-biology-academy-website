@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'top school biology coaching',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: `NEET Coaching for ${school} Students`,
     description: `Expert NEET coaching for ${school} students with proven science excellence track record.`,
     url: `${BASE_URL}/neet-coaching-modern-school-delhi`,

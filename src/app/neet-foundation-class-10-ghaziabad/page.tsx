@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'foundation neet biology class 10 ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Foundation Class 10 in Ghaziabad | 2-Year Head Start',
     description: 'Get 2-year head start for NEET from Class 10 in Ghaziabad.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-ghaziabad',

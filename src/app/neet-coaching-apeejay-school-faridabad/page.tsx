@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty apeejay school faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Apeejay School Faridabad Students',
     description: 'AIIMS-trained NEET biology coaching for Apeejay School Faridabad students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-apeejay-school-faridabad',

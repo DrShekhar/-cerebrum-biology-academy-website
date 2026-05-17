@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     'neet preparation noida vs kota',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching: Noida vs Kota - Complete Comparison 2026',
     description: 'Should you go to Kota or stay in Noida for NEET? Complete comparison of costs, results, and lifestyle.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida-vs-kota',

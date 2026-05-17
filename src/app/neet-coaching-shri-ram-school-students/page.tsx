@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'best coaching for shri ram school neet',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: pageData.metaTitle,
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-shri-ram-school-students',

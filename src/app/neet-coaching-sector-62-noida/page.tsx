@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     'class 11 12 biology noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching in Sector 62 Noida | Best Biology Classes',
     description: 'Expert NEET biology coaching at Sector 62, Noida. 98% success rate, AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-sector-62-noida',

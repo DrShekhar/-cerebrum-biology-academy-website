@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'aiims faculty modern school barakhamba',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Modern School Barakhamba Students',
     description: 'AIIMS-trained NEET biology coaching for Modern School Barakhamba students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-modern-school-barakhamba-delhi',

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'aiims faculty springdales school',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Springdales School Students',
     description: 'AIIMS-trained NEET biology coaching for Springdales School students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-springdales-school-delhi',

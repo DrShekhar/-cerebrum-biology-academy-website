@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'biology teacher rk puram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Tuition in RK Puram | Tutors for DPS RKP Students',
     description:
       'Best biology tuition in RK Puram, Delhi. Expert tutors for DPS RK Puram students. Class 11, 12 & NEET preparation.',

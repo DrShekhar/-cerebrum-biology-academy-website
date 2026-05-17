@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'online biology teacher noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Online Biology Tuition Noida | Live Classes from Home',
     description: 'Live online Biology classes for Noida students. AIIMS faculty, recorded lectures, WhatsApp support.',
     url: 'https://cerebrumbiologyacademy.com/online-biology-tuition-noida',

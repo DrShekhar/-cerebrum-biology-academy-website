@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'biology teacher gk delhi',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Tuition in Greater Kailash | Top Tutors GK Delhi',
     description:
       'Best biology tuition in Greater Kailash, Delhi. Expert tutors for Class 11, 12 & NEET preparation. Personalized coaching in GK-1, GK-2.',

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'biology tuition apeejay students',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Apeejay School',
     description: 'Specialized NEET coaching for Apeejay students. CBSE aligned.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-apeejay-school-gurugram',

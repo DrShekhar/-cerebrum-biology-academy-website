@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'biology tuition near me gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Class 9 Biology Tuition in Gurugram | CBSE, ICSE',
     description: 'Expert Class 9 Biology tuition for CBSE & ICSE boards in Gurugram.',
     url: 'https://cerebrumbiologyacademy.com/class-9-biology-tuition-gurugram',

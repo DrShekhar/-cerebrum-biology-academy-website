@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'aiims faculty dps rk puram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for DPS RK Puram Students',
     description: 'AIIMS-trained NEET biology coaching for DPS RK Puram students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-rk-puram-delhi',

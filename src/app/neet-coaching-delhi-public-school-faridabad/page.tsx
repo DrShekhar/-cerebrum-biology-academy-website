@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'aiims faculty dps faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for DPS Faridabad Students',
     description: 'AIIMS-trained NEET biology coaching for DPS Faridabad students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-delhi-public-school-faridabad',

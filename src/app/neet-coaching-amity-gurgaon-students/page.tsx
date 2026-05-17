@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'best coaching for amity students neet',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: pageData.metaTitle,
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-amity-gurgaon-students',

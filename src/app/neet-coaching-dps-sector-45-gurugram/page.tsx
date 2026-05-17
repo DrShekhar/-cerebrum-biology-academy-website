@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty dps sector 45 gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for DPS Sector 45 Gurugram Students',
     description: 'AIIMS-trained NEET biology coaching for DPS Sector 45 Gurugram students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-sector-45-gurugram',

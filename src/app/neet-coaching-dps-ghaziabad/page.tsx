@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty dps ghaziabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for DPS Ghaziabad Students',
     description: 'AIIMS-trained NEET biology coaching for DPS Ghaziabad students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-ghaziabad',

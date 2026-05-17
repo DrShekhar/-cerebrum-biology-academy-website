@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'board exam biology gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Class 10 Biology Coaching in Gurugram | Board Exam Excellence',
     description: 'Expert Class 10 Biology coaching for board exams in Gurugram.',
     url: 'https://cerebrumbiologyacademy.com/class-10-biology-coaching-gurugram',

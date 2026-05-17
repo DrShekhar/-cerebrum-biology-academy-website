@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     'NEET online classes Pitampura',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: `https://cerebrumbiologyacademy.com/neet-coaching-pitampura`,

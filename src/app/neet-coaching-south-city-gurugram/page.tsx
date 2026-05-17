@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'neet classes sector 41 gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching South City Gurugram',
     description: 'Best NEET coaching near South City. Just 12 min from your home.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-south-city-gurugram',

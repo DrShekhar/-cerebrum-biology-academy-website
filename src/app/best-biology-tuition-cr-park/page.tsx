@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     'biology teacher cr park',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Tuition in CR Park | Top Tutors Chittaranjan Park',
     description:
       'Best biology tuition in CR Park (Chittaranjan Park), South Delhi. Expert tutors for Class 11, 12 & NEET preparation.',

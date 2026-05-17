@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'best coaching for sharda greater noida neet',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: pageData.metaTitle,
     images: ['/og-image.jpg'],
     description: pageData.metaDescription,

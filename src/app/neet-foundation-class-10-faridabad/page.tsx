@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'foundation neet biology class 10',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Foundation Class 10 in Faridabad | 2-Year Head Start',
     description: 'Get 2-year head start for NEET from Class 10 in Faridabad.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-faridabad',

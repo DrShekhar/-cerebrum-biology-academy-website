@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty suncity school gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Suncity School Gurugram Students',
     description: 'AIIMS-trained NEET biology coaching for Suncity School Gurugram students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-suncity-school-gurugram',

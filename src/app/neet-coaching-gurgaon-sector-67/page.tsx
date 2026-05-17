@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'neet coaching golf course extension',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Sector 67 Gurgaon',
     description: 'Best NEET coaching near Sector 67. Premium Golf Course Extension area.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurgaon-sector-67',

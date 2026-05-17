@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     'online neet dropper batch greater noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Dropper Batch 2026-27 for Greater Noida | Intensive Repeater Course',
     description:
       'Intensive 1-year NEET preparation for droppers and repeaters from Greater Noida. Online + hybrid available.',

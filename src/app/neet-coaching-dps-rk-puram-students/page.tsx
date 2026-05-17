@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'best coaching for dps students neet',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: pageData.metaTitle,
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-rk-puram-students',

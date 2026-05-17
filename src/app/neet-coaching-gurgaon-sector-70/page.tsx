@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'neet coaching spr gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Sector 70 Gurgaon',
     description: 'Best NEET coaching near Sector 70. SPR area.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurgaon-sector-70',

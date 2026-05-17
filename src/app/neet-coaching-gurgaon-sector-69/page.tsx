@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'neet coaching new gurugram sohna',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching Sector 69 Gurgaon',
     description: 'Best NEET coaching near Sector 69. New Gurugram area.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurgaon-sector-69',

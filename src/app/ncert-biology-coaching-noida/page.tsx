@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     'biology ncert coaching noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NCERT Biology Coaching Noida | NEET + Board Prep',
     description: 'Complete NCERT Biology coaching for NEET success. AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/ncert-biology-coaching-noida',

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty heritage xperiential gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Heritage Xperiential Gurugram Students',
     description: 'AIIMS-trained NEET biology coaching for Heritage Xperiential Gurugram students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-heritage-xperiential-gurugram',

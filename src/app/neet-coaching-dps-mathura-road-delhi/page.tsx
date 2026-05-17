@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty dps mathura road',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for DPS Mathura Road Students',
     description: 'AIIMS-trained NEET biology coaching for DPS Mathura Road students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-mathura-road-delhi',

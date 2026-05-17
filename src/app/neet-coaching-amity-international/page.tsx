@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'competitive NEET preparation',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: `NEET Coaching for ${school} Students`,
     description: `Expert NEET coaching for ${school} with CBSE curriculum expertise.`,
     url: `${BASE_URL}/neet-coaching-amity-international`,

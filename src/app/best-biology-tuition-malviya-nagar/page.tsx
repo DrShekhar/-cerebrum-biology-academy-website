@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'biology teacher malviya nagar',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Tuition in Malviya Nagar | Affordable Tutors Delhi',
     description:
       'Best biology tuition in Malviya Nagar, South Delhi. Affordable & quality tutors for Class 11, 12 & NEET. Shivalik area.',

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty cambridge international noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Cambridge International Noida Students',
     description: 'AIIMS-trained NEET biology coaching for Cambridge International Noida students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-cambridge-international-noida',

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'aiims faculty pathways aravali gurugram',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Pathways Aravali Gurugram Students',
     description: 'AIIMS-trained NEET biology coaching for Pathways Aravali Gurugram students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-pathways-world-aravali-gurugram',

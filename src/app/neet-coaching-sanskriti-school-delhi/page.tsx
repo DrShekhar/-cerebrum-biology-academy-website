@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     'aiims faculty sanskriti school',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Coaching for Sanskriti School Students',
     description: 'AIIMS-trained NEET biology coaching for Sanskriti School students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-sanskriti-school-delhi',

@@ -110,11 +110,94 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
     ],
   }
 
+  // Course schema with priced NEET tiers — closes the schema gap that
+  // previously made school feeder pages weak signals for "best NEET
+  // coaching for {school} students" queries. All school pages share the
+  // canonical Cerebrum NEET pricing tiers.
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: `NEET Biology Coaching for ${data.schoolName} Students`,
+    description: `Specialised NEET Biology coaching for ${data.schoolName} students — AIIMS-trained faculty, 15-20 student small batches, board (CBSE/ICSE) + NEET parallel pedagogy. Same pricing tiers as the broader Cerebrum NEET programme.`,
+    url: `${baseUrl}/${data.slug}`,
+    inLanguage: 'en-IN',
+    educationalLevel: 'NEET-UG Aspirant',
+    provider: {
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+    },
+    hasCourseInstance: [
+      {
+        '@type': 'CourseInstance' as const,
+        name: 'Pursuit (Small-Batch 30-40)',
+        description:
+          'Live small-batch NEET biology with senior faculty. Most affordable tier (₹40,000-75,000/year).',
+        courseMode: 'Online',
+        offers: {
+          '@type': 'Offer' as const,
+          price: 40000,
+          priceCurrency: 'INR',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification' as const,
+            price: 40000,
+            priceCurrency: 'INR',
+            unitText: 'ANN',
+          },
+          url: `${baseUrl}/${data.slug}`,
+          availability: 'https://schema.org/InStock' as const,
+        },
+      },
+      {
+        '@type': 'CourseInstance' as const,
+        name: 'Ascent (Pro Batch 16-25)',
+        description:
+          'Pro batch with weekly 1:1 doubt slots and biweekly NEET-pattern mocks (₹58,000-90,000/year).',
+        courseMode: 'Online',
+        offers: {
+          '@type': 'Offer' as const,
+          price: 58000,
+          priceCurrency: 'INR',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification' as const,
+            price: 58000,
+            priceCurrency: 'INR',
+            unitText: 'ANN',
+          },
+          url: `${baseUrl}/${data.slug}`,
+          availability: 'https://schema.org/InStock' as const,
+        },
+      },
+      {
+        '@type': 'CourseInstance' as const,
+        name: 'Pinnacle (Direct Dr. Shekhar 10-12)',
+        description:
+          'Direct AIIMS Delhi alumnus Dr. Shekhar 1:1 micro-batch mentoring for AIIMS / top-100 rank aspirants (₹1,20,000-1,56,000/year).',
+        courseMode: 'Online',
+        offers: {
+          '@type': 'Offer' as const,
+          price: 120000,
+          priceCurrency: 'INR',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification' as const,
+            price: 120000,
+            priceCurrency: 'INR',
+            unitText: 'ANN',
+          },
+          url: `${baseUrl}/${data.slug}`,
+          availability: 'https://schema.org/InStock' as const,
+        },
+      },
+    ],
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       <script
         type="application/ld+json"

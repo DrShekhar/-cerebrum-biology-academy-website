@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     'cbse biology classes noida',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'CBSE Biology Coaching Noida | Class 11-12 | Score 95%+',
     description: 'Expert CBSE Biology coaching with NCERT mastery. AIIMS faculty, proven results.',
     url: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida',

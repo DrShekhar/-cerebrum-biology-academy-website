@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     '1 year neet dropper course faridabad',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'NEET Dropper Batch 2026-27 in Faridabad | Intensive Repeater Course',
     description: 'Intensive 1-year NEET preparation for droppers and repeaters in Faridabad.',
     url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-faridabad',

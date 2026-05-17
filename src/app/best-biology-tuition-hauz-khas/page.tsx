@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'biology teacher hauz khas',
   ],
   openGraph: {
+    locale: 'en_IN',
     title: 'Best Biology Tuition in Hauz Khas | Expert Tutors South Delhi',
     description:
       'Best biology tuition in Hauz Khas, South Delhi. Expert tutors near IIT Delhi & SDA. Class 11, 12 & NEET biology preparation.',
