@@ -1630,6 +1630,85 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 23. PATHWAYS SCHOOL NOIDA (Sector 100, Noida, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Sister-campus distinction: This is the Pathways Noida campus (Sector 100,
+  // day-only). Pathways Aravali (entry #6, residential + day, Sohna-side
+  // Gurgaon) and Pathways Gurgaon (Sector 70, day-only) are separate
+  // entities within the broader Pathways group. The IB cohort at Pathways
+  // Noida is structurally smaller than at Pathways Aravali but the
+  // pedagogical framework and faculty model are shared across the group.
+  {
+    slug: 'pathways-noida',
+    schoolName: 'Pathways School Noida',
+    shortName: 'Pathways Noida',
+    cityCountry: 'Noida, India',
+    citySlug: 'noida',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      "Pathways School Noida is a co-educational day school in Sector 100 Noida, opened in the early 2010s as the Noida campus of the Pathways group (sister to Pathways World School Aravali in Gurgaon and Pathways School Gurgaon in Sector 70). The school runs a full IB Continuum — PYP, MYP, and DP — making it one of the longer-established full-continuum IB day schools in the Noida cluster. The Sector 100 location keeps it accessible to families across Sectors 44, 50, 62, 75, 93, 100, 121, 128, and 132, as well as to families coming over the DND Flyway from the Mayur Vihar and IP Extension belt of east Delhi.",
+      "Pathways Noida's IB Biology cohort is one of the more substantial Noida-region DP Biology cohorts. Both HL and SL are offered, with full Section 6 (Practical Programme) coverage. The Biology department is staffed by IB-experienced teachers and the school's laboratory facilities support the full IB practical programme. Recent diploma performance has read as competitive within the NCR IB cluster per the school's publicly-reported results, though Pathways group schools tend not to publish per-subject IB Biology distributions in granular form.",
+      "For Pathways Noida students, the most common drivers of external IB Biology tutoring are: (1) Paper 2 long-response rubric calibration where strong classroom answers can still drop marks against the IB's specific mark scheme, (2) IA mentorship through the DP1 topic-selection cycle, and (3) the integrated IB+NEET track — a meaningful share of Pathways Noida families want to keep India medical-college options open via NEET while pursuing IB Diploma for abroad applications. Our coaching combines Paper 2 + IA rubric work with the integrated IB+NEET schedule for the dual-application cohort.",
+      "Pathways Noida's day-only structure (no boarding option, unlike the Aravali sister campus) shapes scheduling. Day students typically arrive home from Sector 100 in the 4:30–6 PM window depending on the home-sector and Noida-internal traffic, and our IST evening live sessions at 7–9 PM fit cleanly into the post-school routine. For IB+NEET integrated students we also offer weekend morning blocks (Saturday and Sunday 10 AM–12 PM) which sit naturally for the dual-syllabus weekly load. The Sector 100 location is far enough from the DND-Flyway-to-South-Extension axis that physical commute to any Delhi-side tutoring centre would add 75–90 minutes round-trip in peak hours — the online-delivery model removes that overhead entirely.",
+    ],
+    reputationBullets: [
+      'Opened early 2010s — Noida campus of the broader Pathways group',
+      'Full IB Continuum: PYP + MYP + DP',
+      'Sister campuses: Pathways World School Aravali (Gurgaon, residential + day) and Pathways School Gurgaon (Sector 70, day-only)',
+      'Located in Sector 100 Noida (central-east Noida residential belt)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Day school (no boarding option — Aravali sister campus is the residential option)',
+      'Strong NCR-cluster matriculation to UK, US, Canadian, Australian, and Indian universities',
+    ],
+    collegeContext:
+      "Pathways Noida IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Michigan, Northwestern, UCLA, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar — note: distinct from the school of the same name in Noida — Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Pathways Noida most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The Noida tech-corridor family profile produces an unusually-high share of dual-application interest — keeping both abroad and India options open through Class 12.",
+    paceAlignment:
+      "Pathways Noida follows the standard two-year DP cycle on the IB May exam timeline. IST timezone aligns directly with our India-based live tutoring schedule — a structural advantage over UK / US / Canada-based IB tutors operating in mismatched timezones. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the Sector 100 school commute) or weekend morning blocks. For IB+NEET integrated students, we run a combined weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window.",
+    faqs: [
+      {
+        question: 'Is Pathways Noida the same as Pathways Aravali — the IB school in Gurgaon? My friends mention both.',
+        answer:
+          "They're sister campuses within the broader Pathways group but they're structurally different schools. Pathways World School Aravali is in Sector V-37 Gurgaon (Aravali range, south Gurgaon) and runs a residential + day model — boarders come from across India and from neighbouring countries. Pathways School Noida is in Sector 100 Noida and is day-only — local NCR families predominate. Both run full PYP+MYP+DP IB Continuums with the same pedagogical framework and overlapping faculty network. Day families based in Noida (Sectors 44/50/62/93/100/128/132 + Greater Noida) typically find Pathways Noida more accessible; families wanting boarding go to Aravali; families based in central or south Gurgaon often choose Pathways School Gurgaon (Sector 70). We coach students from all three Pathways campuses.",
+      },
+      {
+        question: "How does Pathways Noida's IB Biology compare to the other Noida IB schools — Shiv Nadar, Step by Step, Genesis Global?",
+        answer:
+          "All four schools run rigorous IB Biology HL and SL programmes. Differences are in pedagogical character, cohort size, and curriculum mix: Pathways Noida is a long-established full IB Continuum (PYP through DP); Shiv Nadar is a newer school (tech-philanthropist-founded) with strong scientific orientation; Step by Step has the longest senior-school IB track record in the NCR; Genesis Global is residential + day in Greater Noida. None of these school differences predict an individual student's IB Biology score — that depends on engagement and the rubric calibration the student gets. Our coaching adapts to each school's profile; we have students from all four.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Pathways Noida students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. A meaningful share of Pathways Noida Biology HL students pursue the dual IB+NEET pathway because the Noida tech-corridor family profile values keeping both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options open through Class 12. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. The integrated programme is structurally the same as we run for Pathways Aravali students.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          "IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. India-resident Noida families pay in INR; USD pricing available for international payment preferences. GST-compliant invoices issued for corporate-reimbursement claims (common for Noida-based MNC IT-employee families).",
+      },
+      {
+        question: 'Sector 100 to DND Flyway to South Extension is a 75–90 minute peak-hour drive — does that affect tutoring scheduling?',
+        answer:
+          "Not at all — coaching is 100% online live video, so there is no physical tutoring-centre commute. Your child arrives home from Pathways Noida (typically between 4:30 and 6 PM depending on Sector 100 and inter-sector traffic), eats, and joins the IST evening live session at 7 PM. Sessions run 90 minutes. The no-commute model returns roughly 90 minutes per session compared to driving across the DND Flyway to any Delhi-side tutoring centre — a meaningful saving over a year of weekly sessions, especially for families coordinating around dual-working-parent IT-corridor schedules.",
+      },
+      {
+        question: 'When should a Pathways Noida student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Pathways Noida students each cohort who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+      },
+      {
+        question: 'Do you tutor Pathways Noida MYP5 students preparing to transition into DP1?',
+        answer:
+          'Yes — pre-DP MYP5 preparation is a useful entry point. We coach the MYP-to-DP Biology bridge specifically: introducing the IB Diploma command terms ("explain", "evaluate", "discuss"), the data-analysis style that Paper 2 rewards, and the IA-style of designing a personal investigation. Many Pathways families start this in MYP5 summer so the student arrives at DP1 with the rubric language already familiar. This is most useful for students aiming at HL Biology and especially for those planning the IB+NEET integrated track who need Chemistry / Physics foundations built early.',
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
