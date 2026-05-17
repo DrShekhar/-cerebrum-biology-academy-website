@@ -1335,6 +1335,79 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 19. DPS INTERNATIONAL SCHOOL (Sector 45, Gurgaon, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'dps-international-gurgaon',
+    schoolName: 'DPS International School',
+    shortName: 'DPS International',
+    cityCountry: 'Gurugram, India',
+    citySlug: 'gurugram',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "DPS International School (Sector 45, Gurugram) is the IB-and-Cambridge international arm of the Delhi Public School (DPS) network in Gurugram, operating as a co-educational day school co-located with the larger DPS Sector 45 CBSE flagship. The IB campus opened in the late 2000s / early 2010s as the DPS network's response to parents asking for an internationally-credentialled senior-school option without leaving the DPS umbrella — a meaningful number of DPS Sector 45 CBSE students transition into the international stream at Grade 9 or Grade 11.",
+      "DPS International offers Cambridge IGCSE through Class 10 and the IB Diploma Programme at Classes 11–12, giving students a clean IGCSE-to-IB Diploma senior-school pathway. Both IB Biology HL and SL are offered with full Section 6 (Practical Programme) coverage, and the Biology department is staffed by IB-experienced teachers. Cohort sizes have grown steadily as DPS network families have increasingly chosen the international route alongside the parallel CBSE option at DPS Sector 45 next door.",
+      "For DPS International students, the most common driver of external IB Biology tutoring is the IGCSE-to-DP transition. IGCSE Biology Class 10 is rigorous on content but assessed differently from IB Diploma Biology — IGCSE prioritises clear recall and standard-answer structures, while IB DP requires data-analysis-and-evaluation style writing on Paper 2 and a 20-percent-weight Internal Assessment that asks for personal-investigation design. Our DP1 coaching makes the IGCSE-to-DP bridge explicit so students arrive at the May DP2 exams with rubric-tight Paper 2 answers and a strong IA.",
+      "Several DPS International families also pursue the IB+NEET integrated track because the DPS-brand household recognition means many extended-family conversations come back to medical college in India as a valued option, even when the primary application track is abroad. Our IB+NEET coaching for DPS International students preserves the abroad pathway (UK medicine, US pre-med, Canadian biosciences) while keeping AIIMS / state medical colleges via NEET as a parallel option. The integrated weekly schedule sits in IST evenings and weekend mornings to fit around the school's academic load.",
+    ],
+    reputationBullets: [
+      "International arm of the Delhi Public School (DPS) network in Gurgaon",
+      'IB World School authorised for the Diploma Programme',
+      'Cambridge IGCSE through Class 10 → IB Diploma Programme Classes 11–12',
+      'Co-located in Sector 45 Gurgaon with the DPS Sector 45 CBSE flagship',
+      'Strong DPS-network feeder pipeline from sister CBSE schools',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Senior-school IBDP is the school\'s flagship academic track',
+    ],
+    collegeContext:
+      "DPS International IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Michigan, Northwestern, UCLA), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). The DPS-network brand recognition matters for Indian-university applications where the DPS name signals academic rigour; for international applications, the IB transcript is the primary signal. Biology HL students from DPS International most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+    paceAlignment:
+      "DPS International follows the standard two-year DP cycle on the IB May exam timeline. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the Sector 45 commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule that compresses IB Biology + NEET Biology + NEET Chemistry + NEET Physics into a manageable weekly load. IA mentorship aligns to the school's DP1 IA proposal deadlines. For DP1 students transitioning from the school's Cambridge IGCSE Class 10, our coaching includes an explicit IGCSE-to-DP bridge so the assessment-style shift doesn't catch students off-guard.",
+    faqs: [
+      {
+        question: "My child finished IGCSE Biology at DPS International with strong grades — what changes when they start IB Biology HL at DP1?",
+        answer:
+          "Three things change. First, the assessment shifts: IGCSE prioritises clear recall and standard-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students need to learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\", \"distinguish\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — IGCSE has nothing equivalent. Third, the syllabus depth in selected topics (especially cell biology, genetics, and physiology) goes meaningfully beyond IGCSE. Our DP1 coaching makes all three transitions explicit in the first term.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for DPS International students?',
+        answer:
+          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. DPS International IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. Many DPS-network families value the integrated option because the DPS household identity is closely tied to India university aspirations even when the primary track is abroad.',
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. DPS International families typically pay in INR; USD pricing is available for families with international payment preferences.',
+      },
+      {
+        question: 'My child is choosing between DPS International (IGCSE/IB) and DPS Sector 45 (CBSE) for senior school — does the IB pathway pay off for medicine applications?',
+        answer:
+          "Depends on the target country. For UK medicine, IB is well-received; the IB Biology HL + Chemistry HL combination reads strongly. For US pre-med, IB is the cleaner transcript signal — US admissions officers parse IB more fluently than CBSE. For Canada / Australia, IB works well. For India (AIIMS / state medical via NEET), CBSE is the more direct route because NEET-eligibility and the Class 12 board-exam framework are CBSE-aligned. Dual-application students who want both options can do IBDP at DPS International and pursue NEET via our IB+NEET integrated track. We'll be straight with you about which track best fits your application target.",
+      },
+      {
+        question: "How does DPS International compare to Pathways World School (Aravali / Gurgaon) or Scottish High?",
+        answer:
+          'All four run IB Biology HL and SL at a serious level. The differences are in pedagogy and curriculum mix: Pathways runs a full IB Continuum from PYP through DP with a larger DP Biology cohort; Scottish High runs IB DP alongside Cambridge A-Levels and CBSE; DPS International runs Cambridge IGCSE through Class 10 then IB DP at senior. The DPS-brand network effect is unique — DPS International has structurally stronger India-university connections through the DPS Society alumni base. None of these school differences predict an individual student\'s IB Biology score; that depends on engagement and rubric calibration. Our coaching adapts to each profile.',
+      },
+      {
+        question: "DPS International is in Sector 45 — how does the school commute affect tutoring scheduling?",
+        answer:
+          "Sector 45 is central Gurgaon and accessible from across the residential belt — DLF, Sushant Lok, Sohna Road, Golf Course Road, Cyber City, MG Road. Day-school commutes are typically 20–45 minutes each way. Coaching is 100% online live video, so the school commute itself doesn't conflict with tutoring scheduling. Students arrive home in the 4:30–6 PM window depending on the day's traffic and join the IST evening live session at 7 PM. Sessions run 90 minutes. The no-commute model returns about 60–90 minutes per session compared to driving to a tutoring centre.",
+      },
+      {
+        question: 'When should a DPS International student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IGCSE-to-DP bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Cambridge IGCSE Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have many DPS International students who join then for focused Paper 2 + Paper 3 rubric drilling.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
