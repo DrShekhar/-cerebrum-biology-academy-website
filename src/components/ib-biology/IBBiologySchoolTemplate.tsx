@@ -140,6 +140,59 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
   ].join('\n')
   const counsellingHref = `https://wa.me/${CONTACT_INFO.whatsapp.number}?text=${encodeURIComponent(counsellingMessage)}`
 
+  // Cross-sell WhatsApp handlers — same school context, different product
+  // intent. Counsellor sees the school name + product so the conversation
+  // starts with shared context for the multi-product upsell path.
+  const isIndiaSchool = school.countryCode === 'IN'
+
+  const handleNEETWhatsApp = () => {
+    const message = [
+      `Hi! My child is at ${school.shortName} (${school.cityCountry}) currently doing IB Biology.`,
+      ``,
+      `We'd like to add NEET preparation alongside the IB Diploma — keeping the India medical-college option open (AIIMS / state medical) in parallel with abroad applications.`,
+      ``,
+      `Please share the IB + NEET integrated weekly schedule, fees, and how the timetable fits around the school's IB load.`,
+    ].join('\n')
+    trackAndOpenWhatsApp({
+      source: `ib-bio-school-${school.slug}-neet`,
+      message,
+      campaign: `ib-bio-school-${school.slug}-neet-crosssell`,
+    })
+  }
+
+  const handleOlympiadWhatsApp = () => {
+    const olympiadPipeline = isIndiaSchool
+      ? `NSEB → INBO → IBO (India Biology Olympiad pipeline)`
+      : `Biology Olympiads (USABO / BBO / national-level + IBO)`
+    const message = [
+      `Hi! My child is at ${school.shortName} (${school.cityCountry}) and we're interested in Biology Olympiad coaching.`,
+      ``,
+      `Pipeline: ${olympiadPipeline}`,
+      ``,
+      `Please share schedule, eligibility, past results, and how it complements the IB Biology HL track.`,
+    ].join('\n')
+    trackAndOpenWhatsApp({
+      source: `ib-bio-school-${school.slug}-olympiad`,
+      message,
+      campaign: `ib-bio-school-${school.slug}-olympiad-crosssell`,
+    })
+  }
+
+  const handleBoardBiologyWhatsApp = () => {
+    const message = [
+      `Hi! My child is at ${school.shortName} (${school.cityCountry}) and we'd like to discuss Cerebrum's broader Biology coaching options beyond IB.`,
+      ``,
+      `Specifically interested in: Class 11/12 board Biology, AP Biology overlay, exam-only crash courses, or year-round Biology support across curricula.`,
+      ``,
+      `Please share what fits our goals and the school's academic calendar.`,
+    ].join('\n')
+    trackAndOpenWhatsApp({
+      source: `ib-bio-school-${school.slug}-board-biology`,
+      message,
+      campaign: `ib-bio-school-${school.slug}-board-biology-crosssell`,
+    })
+  }
+
   return (
     <main className="min-h-screen bg-white">
       {/* Breadcrumb */}
@@ -428,6 +481,99 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
               Call us
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Cross-sell — Beyond IB Biology: NEET + Olympiad + Board Biology */}
+      <section className="py-14 md:py-20 bg-gradient-to-br from-emerald-50 via-white to-blue-50 border-y border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2">
+              Same faculty · same school context
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+              Beyond IB Biology — what else Cerebrum coaches for {school.shortName} students
+            </h2>
+            <p className="text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
+              Cerebrum Biology Academy is biology-only across NEET, Biology Olympiads (NSEB / INBO /
+              IBO + USABO / BBO), IB Biology, AP Biology, and board Biology (CBSE, ICSE, IGCSE,
+              A-Level). The {school.shortName} context stays attached when you switch from IB to
+              NEET or Olympiad enquiries — your counsellor knows where your child studies.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+            {/* NEET Biology */}
+            <div className="bg-white rounded-2xl border-2 border-emerald-200 p-6 hover:border-emerald-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                  <Target className="w-5 h-5 text-emerald-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">NEET Biology</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                {isIndiaSchool
+                  ? `IB + NEET integrated weekly schedule — preserve both abroad (UK med, US pre-med) and India (AIIMS, state medical) options through Class 12.`
+                  : `IB + NEET integrated track for India-returning families — keep AIIMS / state medical via NEET as an option even while based at ${school.shortName}.`}
+              </p>
+              <button
+                onClick={handleNEETWhatsApp}
+                className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: NEET enquiry
+              </button>
+            </div>
+
+            {/* Biology Olympiads */}
+            <div className="bg-white rounded-2xl border-2 border-amber-200 p-6 hover:border-amber-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
+                  <Trophy className="w-5 h-5 text-amber-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">Biology Olympiads</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                {isIndiaSchool
+                  ? `NSEB → INBO → OCSC → IBO India team pipeline. We coach the full funnel — IB HL students often have a meaningful Olympiad advantage from the Section 6 practical work.`
+                  : `IBO and country-level olympiads (USABO / BBO / equivalents). The IB HL syllabus overlaps meaningfully with the Olympiad core.`}
+              </p>
+              <button
+                onClick={handleOlympiadWhatsApp}
+                className="w-full inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: Olympiad enquiry
+              </button>
+            </div>
+
+            {/* Board / Multi-curriculum Biology */}
+            <div className="bg-white rounded-2xl border-2 border-blue-200 p-6 hover:border-blue-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-blue-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">Board & Multi-Curriculum Biology</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                Beyond IB: CBSE / ICSE / IGCSE / A-Level / AP Biology, exam-only crash courses,
+                year-round Biology support. Useful for {school.shortName} families with siblings on
+                different curricula or students adding AP Bio alongside IB.
+              </p>
+              <button
+                onClick={handleBoardBiologyWhatsApp}
+                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: Biology coaching
+              </button>
+            </div>
+          </div>
+
+          <p className="text-center text-xs text-slate-500 mt-8">
+            Founded by Dr. Shekhar C Singh (AIIMS New Delhi alumnus) · 680+ medical college
+            selections · 98% NEET qualification rate · Biology-only since 2014
+          </p>
         </div>
       </section>
 
