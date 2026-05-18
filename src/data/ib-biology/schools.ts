@@ -1940,6 +1940,82 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 27. LOTUS VALLEY INTERNATIONAL SCHOOL NOIDA (Sector 126, Noida, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Distinct from Lotus Valley campuses in other NCR locations — this entry
+  // is the Sector 126 Noida campus specifically. Newer-generation IB-and-
+  // CBSE dual-track school with growing IB DP cohort.
+  {
+    slug: 'lotus-valley-noida',
+    schoolName: 'Lotus Valley International School',
+    shortName: 'Lotus Valley',
+    cityCountry: 'Noida, India',
+    citySlug: 'noida',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Lotus Valley International School Noida is a co-educational day school in Sector 126 Noida, opened in the late 2000s as one of the newer-generation international schools serving the rapidly-growing Noida residential belt. The school runs CBSE as its primary curriculum through Class 10 and offers the IB Diploma Programme as a senior-school international option at Classes 11–12 alongside the continuing CBSE Class 11–12 track. This dual-track senior-school structure is common across the Noida IB cluster (Step by Step, Shiv Nadar) and reflects the typical Noida-family pattern of weighing both Indian and abroad university applications during Class 10.",
+      "Lotus Valley's IB DP cohort is among the newer IB cohorts in Noida — the school added IB DP authorisation as part of its growing international-school positioning over the past decade. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The Biology department is staffed by IB-experienced teachers and the school's lab infrastructure supports the full IB practical programme.",
+      "For Lotus Valley IB Biology students, the most common driver of external tutoring is the CBSE-Class-10-to-IB-DP transition. The shift from CBSE's recall-and-standard-answer-structure assessment to the IB DP's data-analysis-and-evaluation Paper 2 style is the single biggest assessment-style change students encounter at DP1 — a real shift that benefits from explicit external coaching in the first DP1 term. Our DP1 coaching makes this transition explicit, calibrating the IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching. Several Lotus Valley IB Biology HL students each cohort also pursue our integrated IB+NEET track for the standard dual-application reasons.",
+      "Lotus Valley's Sector 126 location places it on the central-east Noida belt, accessible from the Sector 50/62/93/100/128/132 residential cluster as well as the broader Sector 75 and Greater Noida footprint. The school operates a transport network across this footprint. For our coaching, the school commute is irrelevant — IST evening live sessions at 7–9 PM fit cleanly after the school day regardless of which Noida sector students live in, and the no-commute online-delivery model returns roughly 60–90 minutes per session compared to physical tutoring at a Cyber City / South Delhi / central-Noida tutoring centre.",
+    ],
+    reputationBullets: [
+      'Opened late 2000s — newer-generation Noida international school',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11-12',
+      'Located in Sector 126 Noida (central-east Noida residential belt)',
+      'CBSE primary curriculum through Class 10',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Day school (not residential)',
+    ],
+    collegeContext:
+      "Lotus Valley IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Lotus Valley most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The dual-curriculum senior-school context produces a wider matriculation range than at single-curriculum schools — IB-track students go primarily abroad while their CBSE schoolmates stay in India.",
+    paceAlignment:
+      "Lotus Valley's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the Sector 126 school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge — the single biggest assessment-style transition Lotus Valley IB students face — calibrated to be substantially complete by mid-DP1. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
+    faqs: [
+      {
+        question: "My child finished Lotus Valley's CBSE Class 10 with strong Biology marks — what changes when they start IB Biology HL at DP1?",
+        answer:
+          "Three things change. First, the assessment shifts: CBSE Class 10 prioritises content recall and standardised-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — CBSE Class 10 has nothing equivalent. Third, the syllabus depth in selected topics (cell biology, genetics, physiology) goes meaningfully beyond CBSE Class 10. Our DP1 coaching makes all three transitions explicit in the first term. This is the single highest-leverage external-coaching value for Lotus Valley CBSE-to-IB transitioners.",
+      },
+      {
+        question: "How does Lotus Valley's IB Biology compare to the other Noida IB schools — Pathways, Shiv Nadar, Step by Step, Genesis Global?",
+        answer:
+          "Five different positioning profiles. Lotus Valley is newer-generation day-only (CBSE primary + IB DP senior, comparable to Shiv Nadar's structural pattern). Pathways Noida is full IB Continuum (PYP+MYP+DP), day-only. Shiv Nadar is STEM-strong with tech-industry founder identity, day-only. Step by Step is the longest-established Noida IB school, dual-track senior. Genesis Global is the only residential option in the Noida cluster. The IB Biology programmes are comparable in quality; school cultures differ. We have students from all five schools — they're complementary positioning within the Noida IB market rather than directly competing on IB Biology specifically.",
+      },
+      {
+        question: "Lotus Valley's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group affect IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a CBSE-primary school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, UWCSEA) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that with explicit weekly written feedback on long-response answers against the IB Biology mark scheme. Several Lotus Valley IB Biology HL students score competitively despite the smaller in-school IB peer group.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Lotus Valley students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Lotus Valley IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted school culture means India medical-college options (AIIMS, state medical) are naturally in family conversations even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. Lotus Valley families typically pay in INR with payment plans across 3–4 instalments; GST-compliant invoices issued for corporate-reimbursement claims (common for Noida-based MNC IT-employee families).',
+      },
+      {
+        question: "My child is choosing between continuing CBSE Class 11-12 at Lotus Valley or switching to the school's IB DP — which is better for medicine applications?",
+        answer:
+          "Depends on the target country. For UK medicine, IB is well-received and reads strongly when paired with HL Biology + HL Chemistry. For US pre-med, IB is the cleaner transcript signal — US admissions officers parse IB more fluently than CBSE. For Canada / Australia, IB works well. For India (AIIMS / state medical via NEET), CBSE is the more direct route because NEET-eligibility and the Class 12 board-exam framework are CBSE-aligned. Dual-application students who want both options open can pursue IBDP at Lotus Valley and add NEET via our IB+NEET integrated track. We'll be straight about which path best fits your target.",
+      },
+      {
+        question: 'When should a Lotus Valley student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have Lotus Valley students each cohort who join then for focused Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
