@@ -2250,6 +2250,86 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 31. THE SHRI RAM SCHOOL FARIDABAD (Faridabad, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Third TSRS entry in this catalogue. Sister campuses:
+  //   - TSRS Aravali (Sector V-37 Gurgaon, entry #16) — the senior IB DP
+  //     campus where many TSRS Faridabad MYP graduates transition for DP1
+  //   - TSRS Moulsari (Sec 46 Gurgaon) — MYP campus that also feeds Aravali
+  // TSRS Faridabad operates as a co-ed day school in the Faridabad
+  // residential belt with the broader TSRS group's inquiry-led + arts-
+  // strong pedagogical identity.
+  {
+    slug: 'shri-ram-faridabad',
+    schoolName: 'The Shri Ram School Faridabad',
+    shortName: 'TSRS Faridabad',
+    cityCountry: 'Faridabad, India',
+    citySlug: 'faridabad',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['MYP'],
+    historyParagraphs: [
+      "The Shri Ram School Faridabad (TSRS Faridabad) is a co-educational day school operating as part of the broader Shri Ram Schools (TSRS) network — the same group that runs TSRS Aravali (Sector V-37 Gurgaon, the senior IB Diploma Programme campus) and TSRS Moulsari (Sector 46 Gurgaon, MYP). The TSRS group itself was founded in 1988 by Manika Sharma and is recognised in the Delhi NCR educational landscape for an inquiry-led pedagogy and a strong humanities-and-arts identity that the network has actively cultivated since founding.",
+      "TSRS Faridabad operates as a junior + middle-school campus, with students typically transitioning to the TSRS Aravali campus in Gurgaon for the senior IB Diploma Programme (Classes 11-12) — the same MYP-to-DP feeder pattern that operates between TSRS Moulsari and Aravali. For families whose children are currently at TSRS Faridabad, the senior IB DP pathway therefore typically involves the Aravali campus transition. Our IB Biology coaching supports both the pre-DP MYP-to-DP bridge for Faridabad students preparing to make this transition and the full DP1-DP2 cycle for TSRS Faridabad alumni now studying at the Aravali campus.",
+      "For TSRS Faridabad families planning the senior-school IB DP pathway, the most common driver of starting external IB Biology coaching early is the MYP-to-DP transition. We coach the MYP5 → DP1 Biology bridge specifically: introducing the IB Diploma command terms (\"explain\", \"evaluate\", \"discuss\"), the data-analysis style that Paper 2 rewards, and the IA-style of designing a personal investigation. Starting in MYP5 summer means students arrive at DP1 (typically at TSRS Aravali) with the rubric language already familiar, which materially eases the first-term DP1 academic load.",
+      "TSRS Faridabad's Faridabad-sector location keeps the school accessible across the central-Faridabad belt and Greater Faridabad. For our coaching, the school's location is irrelevant because delivery is 100% online live video; students join from home in IST evenings (7-9 PM is most common). For families exploring whether the TSRS Faridabad → TSRS Aravali transition is the right pathway vs an alternative senior IB school in Faridabad (Manav Rachna, DPS Faridabad, Apeejay), our counselling calls can walk through the IB Biology programme differences across these options.",
+    ],
+    reputationBullets: [
+      "Co-ed day school in the TSRS network",
+      'TSRS group founded 1988 by Manika Sharma — well-established in Delhi NCR',
+      'Sister campuses: TSRS Aravali (Gurgaon senior IB DP) and TSRS Moulsari (Gurgaon MYP)',
+      'Junior + middle-school IB MYP campus — DP students typically transition to TSRS Aravali',
+      'Located in Faridabad with broader Faridabad-sector accessibility',
+      'Inquiry-led pedagogy and strong humanities-and-arts identity (TSRS group culture)',
+      'Day school (not residential)',
+    ],
+    collegeContext:
+      "TSRS Faridabad → TSRS Aravali IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern), Canada (McGill, Toronto, UBC, Western, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students typically target UK medicine, US pre-med, biosciences at top UK / Canadian universities, environmental science, or interdisciplinary STEM programmes. The TSRS network's inquiry-and-arts-strong identity produces an unusual share of cross-applications to US liberal arts colleges (Williams, Amherst, Brown, Wesleyan) where the dual-academic-and-arts profile reads strongly.",
+    paceAlignment:
+      "TSRS Faridabad MYP follows the standard MYP cycle, with the typical MYP5 → DP1 transition at the TSRS Aravali campus for Classes 11-12. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For MYP5 students preparing to transition into DP1 at TSRS Aravali, our MYP-to-DP coaching introduces the Diploma command terms, the IA personal-investigation style, and the Paper 2 data-analysis rubric. For TSRS Faridabad alumni now at TSRS Aravali doing DP1-DP2, the standard DP coaching applies (see TSRS Aravali entry).",
+    faqs: [
+      {
+        question: 'My child is currently at TSRS Faridabad — will they need to transition to TSRS Aravali for IB Diploma?',
+        answer:
+          "This is the typical pathway for TSRS Faridabad students who want to continue on the IB track. TSRS Faridabad operates as a junior + middle-school campus, with the senior IB Diploma Programme (Classes 11-12) at the TSRS Aravali campus in Gurgaon. Many TSRS Faridabad MYP5 students transition to Aravali for DP1 — the same MYP-to-DP feeder pattern that operates from TSRS Moulsari (the other Gurgaon TSRS campus) to Aravali. Alternatively, TSRS Faridabad MYP5 students can transition to a senior IB DP school in Faridabad itself (Manav Rachna, DPS Faridabad, Apeejay) — which has the advantage of avoiding the Faridabad-to-Gurgaon daily commute but means switching school networks.",
+      },
+      {
+        question: 'My child is in MYP5 at TSRS Faridabad preparing to start IB DP1 at TSRS Aravali — when should we begin IB Biology coaching?',
+        answer:
+          "For students planning the Faridabad-to-Aravali transition for DP1, MYP5 summer is the highest-leverage start point. The MYP-to-DP coaching introduces the IB Diploma command terms (\"explain\", \"evaluate\", \"discuss\"), the data-analysis style that Paper 2 rewards, and the IA personal-investigation style — so the student arrives at DP1 with the rubric language already familiar. This materially eases the first-term DP1 academic load and lets the student focus on the new content rather than the new assessment style. For IB+NEET students, we can also begin Chemistry and Physics foundation-building in parallel.",
+      },
+      {
+        question: 'What about the Faridabad-to-Gurgaon commute for senior school at TSRS Aravali — is this realistic?',
+        answer:
+          "Honestly, the Faridabad-to-Gurgaon daily commute is meaningful: 45-75 minutes each way depending on traffic and time of day, with the Mehrauli-Gurgaon Road / DLF-Cyber City stretch being the bottleneck. Some TSRS families relocate within Gurgaon for the senior school years; others maintain the commute; others choose a senior IB DP school in Faridabad itself (Manav Rachna, DPS Faridabad) to avoid the cross-city commute. Our coaching is online so it removes the IB-Biology-specific tutoring travel overhead regardless of which school the student attends.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for TSRS Faridabad → Aravali students?',
+        answer:
+          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. TSRS families who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. For TSRS Faridabad MYP5 students planning the Aravali DP1 transition, starting the IB+NEET track in MYP5 summer builds the Chemistry / Physics NEET foundation early.',
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000-₹98,000 per year for the complete integrated programme. TSRS Faridabad families typically pay in INR with payment plans across 3-4 instalments.',
+      },
+      {
+        question: "How does TSRS Faridabad → Aravali pathway compare to staying in Faridabad at DPS Faridabad or Manav Rachna for senior school?",
+        answer:
+          "Three meaningful differences. (1) School network continuity — staying at TSRS preserves the TSRS pedagogical identity (inquiry-led + arts-strong) into senior years; switching to DPS or Manav Rachna means entering a different school culture for Classes 11-12. (2) Cohort — TSRS Aravali has a larger IB DP cohort than DPS Faridabad's IB cohort (DPS is CBSE-primary); Manav Rachna has a multi-curriculum cohort. (3) Commute — staying in Faridabad means no daily cross-city commute; Aravali means 45-75 min each way unless the family relocates. None of these factors predict IB Biology results directly; the choice is about cultural / logistical fit. Our coaching adapts to whichever pathway the family chooses.",
+      },
+      {
+        question: 'When should a TSRS Faridabad student start IB Biology tutoring?',
+        answer:
+          "For families planning the Faridabad-to-Aravali transition, MYP5 summer is the highest-leverage start point for the MYP-to-DP bridge. For families staying in Faridabad for senior school (transitioning to DPS Faridabad, Manav Rachna, or another local senior IB school), the start point depends on the receiving school's DP cycle — typically August or September of DP1. For IB+NEET students, ideally even earlier (during Class 10 / MYP5) to build Chemistry and Physics foundations.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
