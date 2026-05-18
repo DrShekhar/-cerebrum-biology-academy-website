@@ -2016,6 +2016,86 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 28. GD GOENKA PUBLIC SCHOOL NOIDA (Noida, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Third GD Goenka entry in this catalogue (after World #20 — Sohna
+  // residential — and Signature #22 — Sec 48 Gurgaon day-only premium).
+  // GD Goenka Public School is the most numerous sub-brand within the
+  // broader GD Goenka network; the Noida campus runs CBSE primary with
+  // IB DP added as a senior-school option, making it the CBSE-rooted
+  // entry-point to GD Goenka's IB offering rather than the World/
+  // Signature international-from-inception positioning.
+  {
+    slug: 'gd-goenka-public-noida',
+    schoolName: 'GD Goenka Public School',
+    shortName: 'GD Goenka Public',
+    cityCountry: 'Noida, India',
+    citySlug: 'noida',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "GD Goenka Public School Noida is a co-educational day school operating as part of the broader GD Goenka Public Schools network — the most numerous sub-brand within the GD Goenka education group, distinct from the premium GD Goenka World School (Sohna, residential + day, full IB Continuum) and GD Goenka Signature School (Sector 48 Gurgaon, day-only premium IB). The Public School Noida campus is among the GD Goenka campuses that have added IB Diploma Programme authorisation alongside their established CBSE programme, giving Noida families an IB DP option within a school brand they already recognise.",
+      "The school's senior-school structure runs CBSE Class 11–12 as the larger of the two tracks and IB DP as the international-application track for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. This dual-track parallel pattern is structurally similar to other CBSE-primary Noida IB schools (Step by Step, Shiv Nadar, Lotus Valley) — students self-select into IB or CBSE at the Grade 11 transition based on their application target. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage.",
+      "For GD Goenka Public Noida IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. Because the school's primary curriculum and broader cohort identity is CBSE, IB DP students arrive at DP1 from a recall-and-standard-answer-structure assessment background and need to internalise the IB's data-analysis-and-evaluation Paper 2 style. Our DP1 coaching makes this transition explicit in the first term, alongside IA topic-selection mentorship and rubric calibration. The integrated IB+NEET track is also a natural fit because the school's CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with the abroad IB pathway.",
+      "The Noida campus location keeps GD Goenka Public accessible across the broader Noida residential belt — Sectors 50, 62, 75, 93, 100, 128, 132 — with the school's transport network spanning this footprint. For our coaching, the school's location is irrelevant because delivery is 100% online live video; students join from home after the school day regardless of which Noida sector they live in. The IST evening live session window (7–9 PM) fits cleanly after the school commute, and weekend morning blocks (Saturday/Sunday 10 AM–12 PM IST) are available for IB+NEET integrated students who prefer to absorb the dual-syllabus weekly load in a single weekend block.",
+    ],
+    reputationBullets: [
+      'Part of the broader GD Goenka Public Schools network — the most numerous sub-brand within the GD Goenka group',
+      'Distinct from sister campuses GD Goenka World (Sohna, residential + IB Continuum) and GD Goenka Signature (Sector 48 Gurgaon, day-only premium)',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11–12 (CBSE is the larger track)',
+      'Located in Noida (central-Noida residential belt)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'CBSE-rooted brand identity with IB DP as the abroad-applications track',
+    ],
+    collegeContext:
+      "GD Goenka Public Noida IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from GD Goenka Public Noida most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The school's CBSE-rooted family base produces an unusually-high share of IB+NEET dual-track students because India medical-college options remain naturally in family conversations alongside the abroad applications.",
+    paceAlignment:
+      "GD Goenka Public Noida follows the standard two-year DP cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the Noida school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge that is the single highest-leverage external coaching value for GD Goenka Public IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
+    faqs: [
+      {
+        question: "Is GD Goenka Public Noida the same as GD Goenka World School or GD Goenka Signature? I have heard of all three.",
+        answer:
+          "All three are part of the broader GD Goenka education group but they're structurally different schools with distinct positioning. GD Goenka World School is in Sohna (south of Gurugram) and runs a residential + day model with a full IB Continuum (PYP + MYP + DP) — boarders come from across India. GD Goenka Signature School is in Sector 48 Gurgaon, day-only, IB DP + CBSE senior school — the premium central-Gurgaon day school. GD Goenka Public Noida is the CBSE-rooted Noida campus with IB DP added as a senior-school option alongside the larger CBSE Class 11-12 track. For families in Noida wanting the GD Goenka brand with an IB DP option, the Noida Public campus is the natural choice; for boarding, the World School in Sohna; for the premium Gurgaon day school with strong international identity, the Signature campus.",
+      },
+      {
+        question: "My child finished GD Goenka Public Noida's CBSE Class 10 with strong Biology marks — what changes when they start IB Biology HL at DP1?",
+        answer:
+          "Three things change. First, the assessment shifts: CBSE Class 10 prioritises content recall and standardised-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — CBSE Class 10 has nothing equivalent. Third, the syllabus depth in selected topics (cell biology, genetics, physiology) goes meaningfully beyond CBSE Class 10. Our DP1 coaching makes all three transitions explicit in the first term. This is the highest-leverage external-coaching value for GD Goenka Public CBSE-to-IB transitioners.",
+      },
+      {
+        question: "GD Goenka Public Noida's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group affect IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a CBSE-primary school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, UWCSEA) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that with explicit weekly written feedback on long-response answers against the IB Biology mark scheme. Several GD Goenka Public Noida IB Biology HL students score competitively despite the smaller in-school IB peer group.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for GD Goenka Public Noida students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. The CBSE-rooted family identity at GD Goenka Public Noida makes this an unusually-natural fit: India medical-college conversations (AIIMS, state medical via NEET) are already part of household discussions even for IB-track students, so the dual IB+NEET pathway preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India options. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. GD Goenka Public Noida families typically pay in INR with payment plans across 3–4 instalments; GST-compliant invoices issued for corporate-reimbursement claims (common for Noida-based MNC IT-employee families).',
+      },
+      {
+        question: "How does GD Goenka Public Noida compare to the other Noida IB schools — Pathways, Shiv Nadar, Step by Step, Genesis, Lotus Valley?",
+        answer:
+          "Six different positioning profiles. GD Goenka Public is the CBSE-rooted Goenka-brand entry, day-only. Pathways Noida is the international-from-inception full IB Continuum, day-only. Shiv Nadar is STEM-strong with tech-industry founder identity. Step by Step is the longest-established Noida IB school with strong pastoral-care culture. Genesis Global is the only residential option. Lotus Valley is newer-generation CBSE-rooted day-only. The IB Biology programmes across all six are comparable in quality; school cultures and brand identities differ. We have students from all six schools.",
+      },
+      {
+        question: 'When should a GD Goenka Public Noida student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and several GD Goenka Public Noida students each cohort join then for focused Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
