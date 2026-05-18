@@ -1863,6 +1863,83 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 26. GENESIS GLOBAL SCHOOL (Sector 132 / Noida–Greater Noida Expressway)
+  // ──────────────────────────────────────────────────────────────────────────
+  // The Noida-region residential IB option. Most Noida IB schools are day-
+  // only (Pathways Noida, Shiv Nadar, Step by Step are all day-only). Genesis
+  // Global offers residential + day, which makes it the Noida equivalent of
+  // Pathways Aravali / GD Goenka World in the Gurgaon cluster.
+  {
+    slug: 'genesis-global-noida',
+    schoolName: 'Genesis Global School',
+    shortName: 'Genesis Global',
+    cityCountry: 'Noida (Greater Noida), India',
+    citySlug: 'noida',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      "Genesis Global School is a co-educational residential and day IB World School on the Noida–Greater Noida Expressway, opened in the mid-to-late 2000s as one of the relatively few residential international schools in the Delhi NCR region. The school runs a full IB Continuum — PYP, MYP, and DP — alongside CBSE as a parallel curriculum option, and the residential cohort draws boarders from across India and from a small number of neighbouring countries. Day students commute primarily from the broader Noida residential belt (Sectors 50, 62, 75, 93, 100, 128, 132) and from Greater Noida itself.",
+      "Genesis Global is structurally the Noida-cluster equivalent of Pathways Aravali / GD Goenka World in the Gurgaon cluster — the residential IB option that gives families a boarding choice within an India IB World School. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The school's boarding-house infrastructure includes academic support and evening study halls, which the IB Biology cohort uses for both prescribed homework and (when families opt in) external 1:1 tutoring sessions.",
+      "For Genesis Global IB Biology students, the most common drivers of external tutoring are the same as at the other major IB schools: Paper 2 long-response rubric calibration, IA mentorship through the DP1 topic-selection cycle, and — for the dual-application subset — the integrated IB+NEET track. The residential context adds one additional factor: IST timezone is the natural match for India-based tutors, which means our IST evening live sessions at 7–9 PM fit cleanly into the school's boarding study-hall schedule, without the awkward late-night-IST timing that boarders would experience with UK or US-based tutors operating into the evening of their own local timezone.",
+      "Genesis Global's Noida–Greater Noida Expressway location is south-east of the central Noida sectors and meaningfully east of central Delhi. For day students commuting from across the Noida residential belt, the school's transport network spans most of the Sector 50–132 footprint plus Greater Noida. For boarders, the campus is the student's primary location through term — and our online live tutoring removes any concern about boarders being structurally distant from physical tutoring centres in Delhi or central Gurgaon. Coaching is delivered into the boarding house or study hall via laptop and headphones; many Genesis boarders join Saturday morning weekend blocks (10 AM–12 PM IST) as one of our most popular slots for the cohort.",
+    ],
+    reputationBullets: [
+      'Opened mid-to-late 2000s — among the longer-running residential IB schools in NCR',
+      'Full IB Continuum: PYP + MYP + DP',
+      'Co-educational residential + day school',
+      'Located on the Noida–Greater Noida Expressway',
+      'The Noida-cluster residential IB option (most other Noida IB schools are day-only)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Boarding cohort from across India and a small number of neighbouring countries',
+    ],
+    collegeContext:
+      "Genesis Global IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester, Bristol), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Genesis Global most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The residential cohort context produces an unusually-strong UCAS-application familiarity from boarding-house application-coaching culture, similar to the dynamic at Pathways Aravali and GD Goenka World.",
+    paceAlignment:
+      "Genesis Global follows the standard two-year DP cycle. IST timezone aligns directly with our India-based live tutoring schedule — a critical structural advantage over UK / US / Canada-based IB tutors operating in mismatched timezones, especially for boarding students whose study-hall schedules are fixed in IST. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting both day-student post-commute and boarder study-hall windows) or weekend morning blocks (Saturday/Sunday 10 AM–12 PM is popular among boarders). For IB+NEET integrated students, we run a combined weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window.",
+    faqs: [
+      {
+        question: 'My child is a boarder at Genesis Global — can they join live tutoring sessions from the boarding house?',
+        answer:
+          "Yes, this is a common pattern in our Genesis Global roster. Sessions are 100% online live video and can be joined from any quiet space with a reliable internet connection — the boarding house study halls and dorm rooms typically work fine. Our IST evening sessions at 7–9 PM fit cleanly into the school's boarding study-hall schedule, and we provide session recordings for review during the next day's study time. Many Genesis Global boarders prefer our weekend morning blocks (Saturday and Sunday 10 AM–12 PM) which sit naturally in the boarding-house weekend rhythm without competing with weekday classroom load.",
+      },
+      {
+        question: "How is Genesis Global different from Pathways Noida, Shiv Nadar Noida, and Step by Step — the other major Noida IB schools?",
+        answer:
+          "Genesis Global is the residential option in the Noida IB cluster; Pathways Noida, Shiv Nadar, and Step by Step are all day-only. For families specifically wanting boarding (whether for child-development reasons, parent-travel reasons, or because the family is based outside the Delhi NCR commute belt), Genesis is the natural choice within the Noida footprint. For day-only families, all four schools are viable IB options with different pedagogical profiles — Pathways for international-from-inception full Continuum, Shiv Nadar for STEM-strong identity, Step by Step for longest IB track record, Genesis for the residential + day model. The IB Biology programmes are comparable in quality; the choice between them is driven by school culture fit and residential preferences.",
+      },
+      {
+        question: 'Is Genesis Global similar to Pathways Aravali in Gurgaon — both are residential IB schools in NCR?',
+        answer:
+          "Structurally similar (both residential + day, both full IB Continuum), but located on opposite sides of NCR — Pathways Aravali sits south of Gurgaon on the Aravali range; Genesis Global sits south-east of Noida on the Noida–Greater Noida Expressway. Families typically choose between them based on home-region (Gurgaon families pick Aravali; Noida and east-Delhi families pick Genesis; out-of-NCR boarding families weigh both based on travel logistics from their home city). The IB Biology programmes are comparable at both. We coach students from both schools and the coaching framework is essentially identical.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Genesis Global students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Genesis Global IB Biology HL students each cohort pursue the dual IB+NEET pathway. Boarding students particularly benefit from the integrated weekly schedule because the boarding-house study-hall structure can accommodate a longer-and-more-structured weekly tutoring load than typical day-student schedules. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single schedule that fits the school's term calendar and the boarding study-hall windows.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000–₹98,000 per year for the complete integrated programme. India-resident families pay in INR; international family options available for boarders from neighbouring countries paying in USD.',
+      },
+      {
+        question: "How does the IST timezone match matter for Genesis Global boarders compared to overseas-based IB tutors?",
+        answer:
+          "It matters more than parents initially expect. Overseas-based IB tutors (UK, US, Canada) operating into India are usually awake during their own daytime, which is the middle of the night in India. They schedule sessions in awkward early-morning or late-night IST slots that compete with school sleep or homework — especially difficult for boarders whose study-hall windows are fixed in IST. Our IST-based tutors run their full schedule in India local time: your child's 7 PM IST evening is our tutor's 7 PM working evening, with no fatigue or timezone-shift compromise. The IST-match is a structural advantage of choosing India-based IB tutors for an India-based residential school.",
+      },
+      {
+        question: 'When should a Genesis Global student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective. Several Genesis boarders each cohort join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams, often using the school's weekend study-hall slots as the live-session window.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
