@@ -1481,6 +1481,79 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
 
   // ──────────────────────────────────────────────────────────────────────────
+  // 24. FARIDABAD (sub-metro of Delhi NCR — industrial-base AP Bio demand)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'faridabad',
+    cityName: 'Faridabad',
+    region: 'Faridabad + Greater Faridabad + NIT Faridabad + Sectors 14 / 15 / 17 / 19 / 80',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    addressRegion: 'Haryana',
+    heroBlurb:
+      'Faridabad\'s AP Biology demand is shaped by its industrial-base demographics — a meaningful share of MNC engineering and management families, multi-generational business households, and the Greater Faridabad / NIT Faridabad professional cohort. The international-school cluster (Manav Rachna International, DPS Faridabad, Shri Ram Faridabad, Apeejay Faridabad, Modern DPS, Ryan International) layers AP Biology onto IBDP or CBSE Class 12 tracks for the US-application subset of families. Faridabad sits closer to South Delhi than to central Gurgaon or Noida, which gives our South Extension hub a useful proximity advantage for the optional in-person consultations.',
+    positioningBlurb:
+      'Faridabad is structurally a different AP tutoring market from Gurgaon and Noida — older, more industrial, more price-sensitive than the Gurgaon DLF cluster, less methodology-conscious than the Noida tech cohort. Generalist test-prep agencies (Jamboree, The Princeton Review, Karan Gupta, Manya, Edu-Mentor — most operating from Delhi-side branches rather than Faridabad itself) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff. Cerebrum is structurally different: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes, and the option of in-person consultations at our South Extension hub (35-45 minutes from Faridabad via the new Faridabad-Noida-Ghaziabad Expressway off-peak). Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr).',
+    schools: [
+      'Manav Rachna International School',
+      'Delhi Public School Faridabad',
+      'The Shri Ram School Faridabad',
+      'Apeejay School Faridabad',
+      'Modern Delhi Public School',
+      'Ryan International School Faridabad',
+      'DAV Public School',
+      'Vidya Mandir Public School',
+      'Eicher School',
+      'Faridabad Public School',
+      'Mount Carmel School',
+      'St. Anthony\'s School',
+      'Greenfield Public School',
+    ],
+    faqs: [
+      {
+        question:
+          'Manav Rachna and DPS Faridabad have in-school AP Biology — when is external tutoring useful, and when is it overkill?',
+        answer:
+          'In-school AP Biology classes at the strong international schools are typically solid for concept coverage. External tutoring is high-leverage for three things the school class doesn\'t have bandwidth to do at depth: (1) FRQ rubric mastery with weekly written feedback against the College Board rubric, (2) timed full-length mock exams in the 6 weeks before the May AP, and (3) personalised remediation when a student hits a specific topic wall (typically biochem energetics, signal transduction, or population genetics). If your child is comfortably running AP-4 on internal school assessments, school is enough. If they\'re targeting AP-5 specifically or struggling on a topic, external 1:1 is high-leverage.',
+      },
+      {
+        question:
+          'My child is at Shri Ram School Faridabad and considering AP Biology alongside IBDP — does that combination work for US college applications?',
+        answer:
+          'For US-targeted applicants, yes — AP Biology layered on top of IB Biology HL is a meaningful application signal. US admissions officers read thousands of IB transcripts but parse AP scores as the canonical US-curriculum benchmark, so a Shri Ram Faridabad IBDP-HL student who also scores AP-5 reads as both globally rigorous and US-curriculum literate. The trade-off is workload during IA / EE crunch (November-February in Year 12). For pure UK / Europe / Australia / Canada applicants, IB alone is sufficient — AP adds little.',
+      },
+      {
+        question:
+          'My child is at DPS Faridabad doing CBSE 12, preparing for NEET, AND wants US college options. Can AP Biology realistically fit?',
+        answer:
+          'This dual-application profile is common in our Faridabad roster. The honest assessment: it is hard but doable if you start early (Class 11 summer). CBSE 12 + NEET prep is itself a 60-hour-per-week load; layering AP Biology adds another 4-6 hours per week of focused work. The conceptual overlap with NEET helps — cell biology, genetics, physiology, ecology cover much of the AP syllabus — but FRQ format and US-style data interpretation require dedicated practice. We typically run two 90-minute IST evening sessions for these students, calibrated to keep NEET prep as the primary track and AP as the secondary US-application layer.',
+      },
+      {
+        question:
+          'Faridabad to South Extension is 35-45 minutes off-peak via the new Faridabad-Noida-Ghaziabad Expressway — does that affect tutoring?',
+        answer:
+          'Not for online classes — which is the entire delivery model. Your child opens a laptop in Sector 14/15/17/19/80 or Greater Faridabad at 6 PM, finishes at 7:30, and the Faridabad-to-Delhi traffic at that hour is irrelevant. The only time commute matters is for the optional in-person consultations at South Extension; those are 35-45 minutes off-peak via the FNG Expressway, scheduled on weekends or off-peak windows by appointment. Faridabad families consistently use the online-delivery model for weekly sessions and reserve the in-person option for 1-2 progress-review touchpoints per year.',
+      },
+      {
+        question: 'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
+        answer:
+          'No. AP Biology is a US-curriculum exam administered by the College Board and is not recognised by Indian medical councils (NMC), Indian universities, or NEET admissions. AP credit transfers to many US universities (typically a 4 or 5 earns 6-8 credit hours toward general biology), but it has zero standing in Indian higher education. If your child is realistically going to study medicine in India, NEET is the only path that matters — AP Biology is purely a US college application enhancer.',
+      },
+      {
+        question: 'How do we pay — INR transfer or USD card? GST invoice for Faridabad MNC employer reimbursement available?',
+        answer:
+          'Both currencies and yes on the invoice. INR transfer to HDFC / ICICI / SBI / Axis is the most common (no FX charged to you), UPI works for smaller installments, international Visa / Mastercard / Amex in USD, and Wise transfers. Several Faridabad business-family and MNC-employee families split the $1,800 senior-faculty package across two or three INR transfers at no extra charge. GST-compliant invoices are issued for corporate-reimbursement claims — common for MNC-employee families and family-business households claiming education-related expenses.',
+      },
+      {
+        question:
+          'My child is at Manav Rachna International doing IGCSE or IBDP — when should we start AP Biology prep?',
+        answer:
+          'For students continuing on Cambridge A-Levels at senior school, AP Biology as a parallel layer typically starts in Year 12 (the year the AP exam is taken in May). For students transitioning from Cambridge IGCSE to IBDP or CBSE Class 11-12 at senior school, AP can layer onto either track. The earlier-start advantage (starting in Year 11) is most useful for students aiming at top-tier US universities where AP-5 + a strong school transcript together signal preparedness. We run an AP Biology prep diagnostic to recommend the right start point — book a free consultation and we\'ll calibrate to your child\'s specific trajectory.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
   // 23. NOIDA (sub-metro of Delhi NCR — IT-corridor AP Bio demand)
   // ──────────────────────────────────────────────────────────────────────────
   {
