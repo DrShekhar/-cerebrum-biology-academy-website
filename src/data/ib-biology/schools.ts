@@ -2173,6 +2173,83 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 30. DELHI PUBLIC SCHOOL FARIDABAD (Faridabad, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Distinct from DPS International Gurgaon (#19, the explicitly-international
+  // Gurgaon campus) and the broader DPS network's other branches. DPS
+  // Faridabad runs CBSE primary with IB DP added as a senior-school option
+  // alongside the larger CBSE Class 11-12 track.
+  {
+    slug: 'dps-faridabad',
+    schoolName: 'Delhi Public School Faridabad',
+    shortName: 'DPS Faridabad',
+    cityCountry: 'Faridabad, India',
+    citySlug: 'faridabad',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Delhi Public School Faridabad (DPS Faridabad) is a co-educational day school operating as part of the broader Delhi Public School (DPS) national network — one of India's largest and most established educational networks, with sister campuses across Delhi, NCR, and the broader country (including DPS RK Puram and DPS Vasant Kunj in Delhi, DPS Sector 45 in Gurgaon, and DPS Noida Sector 30). The Faridabad campus serves the Faridabad residential belt with a CBSE-primary academic culture inherited from the broader DPS network's CBSE-focused identity.",
+      "DPS Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as a senior-school international option for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is meaningfully smaller than the CBSE cohort because the school's identity and most of its alumni are CBSE-rooted; students choosing IB are typically self-selecting toward international university applications.",
+      "For DPS Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. The shift from CBSE Class 10's recall-and-standard-answer-structure assessment to the IB DP's data-analysis-and-evaluation Paper 2 style is the single biggest assessment-style change students encounter — a real shift that benefits from explicit external coaching in the first DP1 term. Our DP1 coaching makes this transition explicit, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching.",
+      "DPS Faridabad's broader DPS network identity gives families unusually-strong India-university connections through the DPS Society alumni base. For IB+NEET dual-track students, this matters: many extended-family conversations at DPS households default to AIIMS / state medical colleges as a valued option even when the abroad track is the primary planned route. The integrated IB+NEET pathway is a natural fit for this profile, preserving both Indian and abroad medical-college pathways through Class 12. The school's Faridabad sector location keeps it accessible from across the central-Faridabad belt and from NIT Faridabad.",
+    ],
+    reputationBullets: [
+      'Part of the broader Delhi Public School (DPS) national network',
+      'Sister campuses include DPS RK Puram, DPS Vasant Kunj, DPS Sector 45 Gurgaon, DPS Noida Sector 30',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
+      'Located in Faridabad with broader Faridabad-sector accessibility',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'CBSE-rooted brand identity with IB DP as the abroad-applications track',
+    ],
+    collegeContext:
+      "DPS Faridabad IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from DPS Faridabad most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The DPS-brand network effect matters for Indian-university applications where DPS alumni connections and the brand's academic-rigour signal carry weight; for international applications, the IB transcript is the primary signal.",
+    paceAlignment:
+      "DPS Faridabad's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge that is the single highest-leverage external coaching value for DPS Faridabad IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
+    faqs: [
+      {
+        question: "Is DPS Faridabad the same school as DPS International Gurgaon? My friend's child goes to DPS International — are they connected?",
+        answer:
+          "Both are part of the broader Delhi Public School (DPS) national network but they're structurally different schools with distinct profiles. DPS Faridabad is the Faridabad campus running CBSE-primary with IB DP added at senior school — the CBSE cohort is larger, the IB cohort smaller. DPS International is the Gurgaon Sector 45 campus that's explicitly positioned as the international-curriculum arm of DPS Gurgaon — Cambridge IGCSE through Class 10 → IB DP at Classes 11-12, no parallel CBSE senior track. The DPS network has multiple branches (Faridabad, RK Puram, Vasant Kunj, Sector 45 Gurgaon, Noida Sector 30) with varying senior-school structures.",
+      },
+      {
+        question: "My child finished DPS Faridabad's CBSE Class 10 with strong Biology marks — what changes at IB Biology HL?",
+        answer:
+          "Three things change. First, the assessment shifts: CBSE Class 10 prioritises content recall and standardised-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — CBSE Class 10 has nothing equivalent. Third, the syllabus depth in selected topics (cell biology, genetics, physiology) goes meaningfully beyond CBSE Class 10. Our DP1 coaching makes all three transitions explicit in the first term.",
+      },
+      {
+        question: "DPS Faridabad's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group affect IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a CBSE-primary school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, UWCSEA) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that with explicit weekly written feedback on long-response answers against the IB Biology mark scheme.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for DPS Faridabad students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. The DPS-network brand identity makes IB+NEET an unusually-natural fit: extended-family conversations at DPS households often default to AIIMS / state medical colleges as a valued option even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000-₹98,000 per year for the complete integrated programme. DPS Faridabad families typically pay in INR with payment plans across 3-4 instalments.',
+      },
+      {
+        question: "How does DPS Faridabad's IB Biology compare to Manav Rachna and Shri Ram Faridabad?",
+        answer:
+          "Three different positioning profiles. DPS Faridabad is the DPS-network CBSE-rooted school with IB DP added at senior — strong India-university alumni connections, CBSE-brand household identity. Manav Rachna International is the flagship of the Manav Rachna education group (including MRIIRS university + dental college) with multi-curriculum senior school (IB + Cambridge + CBSE). Shri Ram School Faridabad is a sister to TSRS Aravali in Gurgaon with the broader TSRS humanities-and-arts identity. The IB Biology programmes are comparable in quality; school cultures and brand contexts differ. We coach students from all three.",
+      },
+      {
+        question: 'When should a DPS Faridabad student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have DPS Faridabad students each cohort who join then for focused Paper 2 + Paper 3 rubric drilling.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
