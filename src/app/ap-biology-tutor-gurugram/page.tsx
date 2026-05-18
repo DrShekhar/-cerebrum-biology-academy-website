@@ -49,6 +49,7 @@ export const metadata: Metadata = buildAPBiologyMetroMetadata({
     'ap biology sushant lok',
   ],
   canonical: `/ap-biology-tutor-${SLUG}`,
+  inLanguage: 'en-IN',
 })
 
 export default function APBiologyTutorGurugramPage() {

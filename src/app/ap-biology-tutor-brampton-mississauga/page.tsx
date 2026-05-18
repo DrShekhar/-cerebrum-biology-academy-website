@@ -53,6 +53,7 @@ export const metadata: Metadata = buildAPBiologyMetroMetadata({
     'best ap biology tutor ontario',
   ],
   canonical: `/ap-biology-tutor-${SLUG}`,
+  inLanguage: 'en-CA',
 })
 
 export default function APBiologyTutorBramptonMississaugaPage() {

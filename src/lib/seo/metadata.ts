@@ -1260,9 +1260,25 @@ export function buildAPBiologyMetroMetadata(input: {
   description: string
   keywords: string[]
   canonical: string
+  /**
+   * BCP-47 tag for the page's primary audience. Drives the `og:locale`
+   * Open Graph tag AND the `hreflang` alternates so Google serves the
+   * page to the right regional audience. Examples:
+   *   'en-US' (default) — US metros (NYC, Boston, Bay Area, ...)
+   *   'en-IN' — India metros (Delhi NCR, Gurugram, Noida, Mumbai, ...)
+   *   'en-AE' — UAE metros (Dubai, Abu Dhabi)
+   *   'en-CA' — Canada metros (Vancouver, Toronto-GTA, Brampton)
+   *   'en-SG' — Singapore
+   *   'en-HK' — Hong Kong
+   * Foreign-targeted pages MUST pass this so Indian Google does not
+   * preferentially serve US-targeted pages (and vice versa).
+   */
+  inLanguage?: string
   ogImage?: string
 }) {
   const canonicalUrl = `${seoConfig.siteUrl}${input.canonical}`
+  const lang = input.inLanguage ?? 'en-US'
+  const ogLocale = lang.replace('-', '_')
 
   return {
     title: input.title,
@@ -1281,7 +1297,7 @@ export function buildAPBiologyMetroMetadata(input: {
           alt: input.title,
         },
       ],
-      locale: 'en_US',
+      locale: ogLocale,
       type: 'website',
     },
     twitter: {
@@ -1305,7 +1321,7 @@ export function buildAPBiologyMetroMetadata(input: {
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en-US': canonicalUrl,
+        [lang]: canonicalUrl,
         en: canonicalUrl,
         'x-default': canonicalUrl,
       },

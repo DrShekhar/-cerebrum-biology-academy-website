@@ -45,6 +45,7 @@ export const metadata: Metadata = buildAPBiologyMetroMetadata({
     'best ap biology tutor india',
   ],
   canonical: `/ap-biology-tutor-${SLUG}`,
+  inLanguage: 'en-IN',
 })
 
 export default function APBiologyTutorBangalorePage() {

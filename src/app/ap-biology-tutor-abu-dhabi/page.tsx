@@ -41,6 +41,7 @@ export const metadata: Metadata = buildAPBiologyMetroMetadata({
     'best ap biology tutor uae',
   ],
   canonical: `/ap-biology-tutor-${SLUG}`,
+  inLanguage: 'en-AE',
 })
 
 export default function APBiologyTutorAbuDhabiPage() {
