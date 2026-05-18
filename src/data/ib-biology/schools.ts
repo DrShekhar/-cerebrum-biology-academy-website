@@ -2096,6 +2096,83 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 29. MANAV RACHNA INTERNATIONAL SCHOOL (Faridabad, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Flagship international school of the Manav Rachna education group
+  // (which also runs Manav Rachna International University and engineering /
+  // dental colleges). Multi-curriculum senior school: IB DP + Cambridge
+  // IGCSE/A-Levels + CBSE in parallel.
+  {
+    slug: 'manav-rachna-faridabad',
+    schoolName: 'Manav Rachna International School',
+    shortName: 'Manav Rachna',
+    cityCountry: 'Faridabad, India',
+    citySlug: 'faridabad',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Manav Rachna International School (MRIS) is a co-educational day school in Faridabad, operating as the flagship international school of the Manav Rachna education group — which also runs Manav Rachna International Institute of Research and Studies (a UGC-recognised university), Manav Rachna Dental College, and engineering programmes. The school sits in the broader MRIS / Manav Rachna campus footprint in Faridabad and draws students from across the Faridabad residential belt and from Greater Faridabad.",
+      "Manav Rachna's senior school is multi-curriculum: students can choose between the IB Diploma Programme, the Cambridge IGCSE / A-Levels track, or the CBSE Class 11-12 continuation track. This multi-pathway structure makes MRIS the most curriculum-flexible school in the Faridabad IB cluster, and the IB DP cohort is composed of students self-selecting toward US, UK, Canadian, and Australian university applications. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage.",
+      "For Manav Rachna IB Biology students, the most common driver of external tutoring is the multi-curriculum senior-school context: because MRIS runs IB alongside Cambridge and CBSE, the in-school IB-specific peer benchmarking is structurally thinner than at single-curriculum IB schools (Pathways Aravali, UWCSEA). Our 1:1 coaching fills that gap with explicit weekly written feedback on Paper 2 long-response answers against the IB mark scheme. Several Manav Rachna IB Biology HL students each cohort also pursue our integrated IB+NEET track — given the Manav Rachna group's own medical and dental college operations, India medical-college pathways are naturally in family conversations.",
+      "Manav Rachna's Faridabad location and the broader Manav Rachna campus footprint mean students typically commute from across the Faridabad sector belt (14, 15, 17, 19, 80) and from NIT Faridabad. The school operates a transport network spanning these areas. For our coaching, the school commute is irrelevant — IST evening live sessions at 7-9 PM fit cleanly after the school day. The Manav Rachna group's own medical and dental colleges also create a useful local biology context that students often draw on for IA topic-selection inspiration.",
+    ],
+    reputationBullets: [
+      'Flagship international school of the Manav Rachna education group',
+      'Group also runs MRIIRS university + Manav Rachna Dental College + engineering programmes',
+      'IB World School authorised for the Diploma Programme',
+      'Multi-curriculum senior school: IB DP + Cambridge IGCSE/A-Levels + CBSE',
+      'Located in Faridabad (Manav Rachna campus footprint)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'Day school (not residential)',
+    ],
+    collegeContext:
+      "Manav Rachna IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges and Manav Rachna's own dental and medical programmes for the relevant subset of IB+NEET dual-track students). Biology HL students from Manav Rachna most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, biomedical / biotechnology programmes, or dentistry programmes (including the Manav Rachna Dental College option for students who want to stay in the network).",
+    paceAlignment:
+      "Manav Rachna's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. IA mentorship aligns to the school's DP1 IA proposal deadlines. For students transitioning from MRIS's Cambridge IGCSE or CBSE Class 10 track, our DP1 coaching includes an explicit prior-curriculum-to-IB-DP bridge.",
+    faqs: [
+      {
+        question: "Manav Rachna offers IB DP, Cambridge A-Levels, AND CBSE in senior school — which track is best for medicine applications?",
+        answer:
+          "Depends on the target country. For UK medicine, both IB and A-Levels are well-received; UK medical schools have well-developed offer matrices for both. For US pre-med, IB is the cleaner transcript signal — US admissions officers parse IB more fluently than Cambridge or CBSE. For Canada / Australia, IB works well. For India (AIIMS / state medical via NEET, including potentially Manav Rachna Dental), CBSE is the more direct route because NEET-eligibility and the Class 12 board-exam framework are CBSE-aligned. Dual-application students who want both abroad and India open can pursue IBDP at Manav Rachna and add NEET via our IB+NEET integrated track.",
+      },
+      {
+        question: "How does Manav Rachna's IB Biology compare to DPS Faridabad and Shri Ram Faridabad — the other Faridabad IB schools?",
+        answer:
+          "Three different profiles. Manav Rachna is multi-curriculum (IB + Cambridge + CBSE) with a flagship-school identity within a broader education-group network (MRIIRS university, dental college). DPS Faridabad is part of the DPS national network with strong CBSE roots and IB DP added at senior. Shri Ram School Faridabad is a sister to TSRS Aravali in Gurgaon with the broader TSRS humanities-and-arts identity. The IB Biology programmes are comparable in quality; school cultures and curriculum mixes differ. None of these school differences predict an individual student's IB Biology score — that depends on engagement and rubric calibration. We coach students from all three.",
+      },
+      {
+        question: 'The Manav Rachna group includes a dental college — does that influence how IB Biology students approach medicine applications?',
+        answer:
+          "For some students, yes — Manav Rachna Dental College is a within-network option that some MRIS families consider as part of the broader medicine / dentistry application portfolio. This is one reason the integrated IB+NEET pathway has unusually-strong demand at Manav Rachna: families want to keep dentistry-in-India open (which requires NEET) alongside abroad medical / pre-med applications (which require IB or A-Level credentials). Our IB+NEET integrated coaching is well-suited to this dual-application profile.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Manav Rachna students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Manav Rachna IB Biology HL students each cohort pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the school's multi-curriculum academic load.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000-₹98,000 per year for the complete integrated programme. Manav Rachna families typically pay in INR with payment plans across 3-4 instalments; GST-compliant invoices issued for corporate-reimbursement claims.',
+      },
+      {
+        question: "Faridabad has limited dedicated IB tutoring centres — does that make external 1:1 coaching harder to find?",
+        answer:
+          "Locally, yes — Faridabad has fewer dedicated IB-specialist tutoring centres than Gurgaon or central Delhi, which makes the choice typically between (a) in-school class only, (b) generalist Delhi-side test-prep agencies operating into Faridabad, or (c) online-delivery specialist IB tutors. Cerebrum is option (c): IB Biology-only AIIMS-trained faculty delivering live online sessions in IST evenings. The online-delivery model removes the Faridabad geography constraint entirely — no driving to Delhi for IB-specific specialist coaching.",
+      },
+      {
+        question: 'When should a Manav Rachna student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For students transitioning from MRIS's Cambridge IGCSE or CBSE Class 10 track, the first-term coaching includes a prior-curriculum-to-IB-DP bridge. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
