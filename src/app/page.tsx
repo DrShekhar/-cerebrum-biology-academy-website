@@ -573,12 +573,14 @@ export default function Home() {
         dateModified="2026-05-15"
         author={{
           name: 'Dr. Shekhar C Singh',
-          url: 'https://cerebrumbiologyacademy.com/faculty',
-          jobTitle: 'Founder & Head Faculty, AIIMS Graduate',
+          url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india',
+          jobTitle:
+            'Founder & Lead Biology Faculty — Best Biology Teacher in India (NEET, IB, AP, CBSE, Olympiads)',
         }}
         reviewedBy={{
           name: 'Dr. Shekhar C Singh',
-          credentials: 'MBBS, AIIMS Delhi',
+          credentials:
+            'MBBS, AIIMS New Delhi · Founder, Cerebrum Biology Academy (2014) · 15+ years cross-vertical Biology pedagogy',
         }}
         showVisual={false}
       />
