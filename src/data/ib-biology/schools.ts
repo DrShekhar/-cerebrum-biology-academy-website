@@ -438,7 +438,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     historyParagraphs: [
       'Pathways World School Aravali is a residential and day IB Continuum school in the Aravali range south of Gurgaon, founded in 2003. The school runs PYP, MYP, and DP, making it one of the longer-running full-continuum IB schools in India. The Aravali campus sits on a large green campus designed by architect Sanjay Mohe; students board on-campus or commute from across the Gurgaon catchment (DLF, Golf Course Road, Sohna Road).',
       "Pathways Aravali's IB Biology cohort is one of the larger DP Biology cohorts in the Delhi NCR region. Both HL and SL are offered, and the school has publicly reported strong IB results — recent cohort averages have been at or above the global mean, with a meaningful share of candidates scoring 40+ (publicly reported in the school's annual results communications). The Biology department is staffed by IB-experienced teachers and the laboratory facilities support the full Section 6 (Practical Programme) syllabus.",
-      "For Pathways Aravali students, the most common driver of external tutoring is twofold: (1) Paper 2 mark-scheme calibration, where strong classroom answers can still drop points against the IB's specific long-response rubric, and (2) IA mentorship through the DP1 topic-selection cycle. Many Pathways families also want a parallel IB+NEET option — Cerebrum is the only IB Biology tutor in India that runs the integrated IB+NEET track, and a substantive share of Pathways Aravali students pursue that combined pathway.",
+      "For Pathways Aravali students, the most common driver of external tutoring is twofold: (1) Paper 2 mark-scheme calibration, where strong classroom answers can still drop points against the IB's specific long-response rubric, and (2) IA mentorship through the DP1 topic-selection cycle. Many Pathways families also want a parallel IB+NEET option — We coach an IB+NEET integrated weekly schedule — a specialised track that few biology coaching providers in India run, and a substantive share of Pathways Aravali students pursue that combined pathway.",
       "Pathways Aravali's residential structure shapes tutoring scheduling specifically — day students from DLF, Golf Course Road, and Sohna Road commute up to 60 minutes each way, while boarders study on campus through the evening. Our IST live sessions sit at 7–9 PM, which works for both — day students join from home after the school commute, boarders join from the school's study halls during scheduled evening study time. For IB+NEET students, we also run weekend intensive blocks (Saturday and Sunday mornings, 3 hours each) that compress the additional NEET Chemistry and Physics into manageable weekly batches without colliding with the school's own weekend testing schedule.",
     ],
     reputationBullets: [
@@ -457,7 +457,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Pathways Aravali students?',
         answer:
-          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. A substantive share of Pathways Aravali Biology HL students pursue the dual IB+NEET pathway because it preserves both the abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options. We coordinate the IB Biology HL syllabus with the NEET Biology + Chemistry + Physics syllabuses on a single weekly schedule.',
+          'Yes — Cerebrum runs an IB+NEET integrated track that few India-based providers offer. A substantive share of Pathways Aravali Biology HL students pursue the dual IB+NEET pathway because it preserves both the abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options. We coordinate the IB Biology HL syllabus with the NEET Biology + Chemistry + Physics syllabuses on a single weekly schedule.',
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -483,7 +483,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
         question:
           'How does the Pathways Aravali Biology HL syllabus connect to NEET Biology for IB+NEET students?',
         answer:
-          'Roughly 60–70% of NEET Biology content overlaps with IB Biology HL (cell biology, plant and human physiology, genetics, ecology, evolution). The remaining 30–40% — primarily kingdom classification depth and certain Indian-context botanical and zoological detail — needs separate NEET-specific coverage. Our integrated weekly schedule layers NEET-specific topics on top of the IB HL content so students do not re-learn material; they extend it.',
+          'Significant content overlap exists across cell biology, plant and human physiology, genetics, ecology, and evolution — topics where IB Biology HL coverage maps closely to NEET requirements. Other areas — particularly kingdom classification depth and certain Indian-context botanical and zoological detail in the NEET syllabus — need separate NEET-specific coverage that the IB HL course does not provide. Our integrated weekly schedule layers the NEET-specific topics on top of the IB HL content so students extend their existing knowledge rather than re-learning it.',
       },
     ],
   },
@@ -601,7 +601,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Stonehill students?',
         answer:
-          'Yes. Cerebrum is the only IB Biology tutor in India that runs this integrated track. Stonehill students who want to preserve both the abroad (UK medicine, US pre-med) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway with us. The schedule integrates IB Biology HL with NEET Biology + Chemistry + Physics on a single weekly load.',
+          'Yes. We are among the small number of India-based providers running an IB+NEET integrated coaching track. Stonehill students who want to preserve both the abroad (UK medicine, US pre-med) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway with us. The schedule integrates IB Biology HL with NEET Biology + Chemistry + Physics on a single weekly load.',
       },
       {
         question: 'How does pricing work for Stonehill Bangalore families?',
@@ -670,7 +670,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Inventure students?',
         answer:
-          'Yes. Cerebrum is the only IB Biology tutor in India that runs this integrated track. Inventure students with strong ICSE foundations are typically well-positioned for the IB+NEET dual pathway because their ICSE Biology and Chemistry already provide a NEET-relevant base. We coordinate the IB Biology HL syllabus with NEET Biology + Chemistry + Physics on a single weekly schedule.',
+          'Yes. Cerebrum runs a dedicated IB+NEET integrated coaching track — a niche programme few biology-only providers in India offer. Inventure students with strong ICSE foundations are typically well-positioned for the IB+NEET dual pathway because their ICSE Biology and Chemistry already provide a NEET-relevant base. We coordinate the IB Biology HL syllabus with NEET Biology + Chemistry + Physics on a single weekly schedule.',
       },
       {
         question:
@@ -715,7 +715,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     historyParagraphs: [
       'Oberoi International School (OIS) is a full IB Continuum school with two Mumbai campuses — JVLR (Goregaon) and OGC (Powai) — operated by Oberoi Realty as a not-for-profit. The school runs PYP, MYP, and DP, and is one of the most-applied-to international schools in Mumbai. Oberoi sits in the broader top-tier Mumbai IB cluster alongside Dhirubhai Ambani International, JBCN, Ecole Mondiale, ASB, and Aditya Birla World Academy.',
       "Oberoi's IB Diploma cohort is one of the larger DP cohorts in Mumbai, with IB Biology HL and SL both offered each year across the two campuses. The school has publicly reported strong IB results — recent cohort averages have been at or above the global mean, with a substantive share of candidates scoring 40+ (publicly reported in the school's annual results communications). The Biology departments at both campuses are staffed by IB-experienced teachers and the laboratory facilities support the full Section 6 syllabus.",
-      'For Oberoi students, the most common driver of external tutoring is the same as at the other top-tier Mumbai IB schools: Paper 2 mark-scheme calibration and IA mentorship through the DP1 topic-selection cycle. Many Oberoi families also pursue the dual IB+NEET track — Cerebrum is the only IB Biology tutor in India that runs this integrated programme, which is particularly valuable for students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options.',
+      'For Oberoi students, the most common driver of external tutoring is the same as at the other top-tier Mumbai IB schools: Paper 2 mark-scheme calibration and IA mentorship through the DP1 topic-selection cycle. Many Oberoi families also pursue the dual IB+NEET track — Cerebrum offers a structured IB+NEET integrated coaching track — among the few such programmes from India-based biology providers, which is particularly valuable for students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options.',
       "Oberoi's two-campus structure (JVLR and OGC) is operationally important for tutoring scheduling because the campuses run on broadly aligned but not identical IA submission and mock-exam calendars. We track both campus calendars and our 1:1 examiners adapt session content to the specific campus's deadlines — IA topic-selection windows, mock-exam dates, and the school's own Section 6 practical schedule. For Oberoi students who switch campuses during DP1 (rare but it happens with family relocation within Mumbai), we transition the coaching seamlessly because the underlying IB Biology HL syllabus is identical.",
       "Mumbai's IB market is one of the most concentrated in India — Oberoi, Dhirubhai Ambani International, JBCN, Ecole Mondiale, ASB, Aditya Birla World Academy, and Cathedral all sit within roughly the same Mumbai catchment. Families regularly compare these schools and their respective IB Biology HL outcomes. Our position is that the school choice is upstream of tutoring choice — once enrolled at Oberoi, our 1:1 coaching layers Paper 2 mark-scheme calibration and IA mentorship on top of the school's already-strong content delivery, with no implicit comparison to other Mumbai schools. The coaching is school-specific because the IA submission rhythms and mock-exam calendars are school-specific.",
     ],
@@ -740,7 +740,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Oberoi students?',
         answer:
-          'Yes. Cerebrum is the only IB Biology tutor in India that runs this integrated track. Many Oberoi students pursue the dual IB+NEET pathway because it preserves both abroad and India medical-college options. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule, typically ₹60,000–₹98,000 per year for the complete coaching.',
+          'Yes. We coach an IB+NEET integrated weekly schedule — a specialised track that few biology coaching providers in India run. Many Oberoi students pursue the dual IB+NEET pathway because it preserves both abroad and India medical-college options. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule, typically ₹60,000–₹98,000 per year for the complete coaching.',
       },
       {
         question: "How does Oberoi's IB Biology compare to Dhirubhai Ambani International?",
@@ -802,7 +802,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for ASB students?',
         answer:
-          'Yes. Cerebrum is the only IB Biology tutor in India that runs this integrated track. ASB IB students who want to preserve both abroad (US pre-med, UK medicine) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway with us. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics, typically ₹60,000–₹98,000 per year.',
+          'Yes. Cerebrum offers a structured IB+NEET integrated coaching track — among the few such programmes from India-based biology providers. ASB IB students who want to preserve both abroad (US pre-med, UK medicine) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway with us. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics, typically ₹60,000–₹98,000 per year.',
       },
       {
         question: "How does ASB's IB Biology compare to Oberoi and Dhirubhai Ambani?",
@@ -947,7 +947,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for MGIS students?',
         answer:
-          'Yes. Cerebrum is the only IB Biology tutor in India that runs this integrated track. MGIS students who want to preserve both abroad and India medical-college options can pursue the dual IB+NEET pathway. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics, typically ₹60,000–₹98,000 per year.',
+          'Yes. Cerebrum runs an IB+NEET integrated track that few India-based providers offer. MGIS students who want to preserve both abroad and India medical-college options can pursue the dual IB+NEET pathway. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics, typically ₹60,000–₹98,000 per year.',
       },
       {
         question:
@@ -1027,7 +1027,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for DAIS students?',
         answer:
-          'Yes. Cerebrum is the only IB Biology tutor in India that runs this integrated track. A meaningful share of DAIS students pursue the dual IB+NEET pathway because it preserves both abroad and India medical-college options. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics, typically ₹60,000–₹98,000 per year.',
+          'Yes. We are among the small number of India-based providers running an IB+NEET integrated coaching track. A meaningful share of DAIS students pursue the dual IB+NEET pathway because it preserves both abroad and India medical-college options. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics, typically ₹60,000–₹98,000 per year.',
       },
       {
         question: "How does DAIS's IB Biology compare to Oberoi International?",
@@ -1101,7 +1101,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Cathedral students?',
         answer:
-          'Yes. Cerebrum is the only IB Biology tutor in India that runs this integrated track. Cathedral students who want to preserve both abroad and India medical-college options can pursue the dual IB+NEET pathway. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics, typically ₹60,000–₹98,000 per year.',
+          'Yes. Cerebrum runs a dedicated IB+NEET integrated coaching track — a niche programme few biology-only providers in India offer. Cathedral students who want to preserve both abroad and India medical-college options can pursue the dual IB+NEET pathway. The integrated programme covers IB Biology HL + NEET Biology + Chemistry + Physics, typically ₹60,000–₹98,000 per year.',
       },
       {
         question: "How does Cathedral's IB Biology compare to DAIS and Oberoi?",
@@ -1154,7 +1154,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for TSRS Aravali students?',
         answer:
-          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. A meaningful share of TSRS Aravali Biology HL students pursue the dual IB+NEET pathway because it preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options. We coordinate the IB Biology HL syllabus with NEET Biology + Chemistry + Physics on a single weekly schedule.',
+          'Yes — We coach an IB+NEET integrated weekly schedule — a specialised track that few biology coaching providers in India run. A meaningful share of TSRS Aravali Biology HL students pursue the dual IB+NEET pathway because it preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options. We coordinate the IB Biology HL syllabus with NEET Biology + Chemistry + Physics on a single weekly schedule.',
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1233,7 +1233,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Heritage Xperiential students?',
         answer:
-          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Some Heritage IB Biology HL students pursue the dual IB+NEET pathway because it preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. Heritage students often value this efficiency because the school\'s culture is anti-burnout — we calibrate the integrated load explicitly to avoid the 60-hour weekly trap.',
+          'Yes — Cerebrum offers a structured IB+NEET integrated coaching track — among the few such programmes from India-based biology providers. Some Heritage IB Biology HL students pursue the dual IB+NEET pathway because it preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. Heritage students often value this efficiency because the school\'s culture is anti-burnout — we calibrate the integrated load explicitly to avoid the 60-hour weekly trap.',
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1311,7 +1311,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Scottish High IB students?',
         answer:
-          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Scottish High IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. The structured study-discipline culture at Scottish High typically suits this integrated load well.',
+          'Yes — Cerebrum runs an IB+NEET integrated track that few India-based providers offer. Scottish High IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. The structured study-discipline culture at Scottish High typically suits this integrated load well.',
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1379,7 +1379,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for DPS International students?',
         answer:
-          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. DPS International IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. Many DPS-network families value the integrated option because the DPS household identity is closely tied to India university aspirations even when the primary track is abroad.',
+          'Yes — We are among the small number of India-based providers running an IB+NEET integrated coaching track. DPS International IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. Many DPS-network families value the integrated option because the DPS household identity is closely tied to India university aspirations even when the primary track is abroad.',
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1457,7 +1457,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for GD Goenka World School students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. GD Goenka World IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that fits the school's term calendar.",
+          "Yes — Cerebrum runs a dedicated IB+NEET integrated coaching track — a niche programme few biology-only providers in India offer. GD Goenka World IB Biology HL students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that fits the school's term calendar.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1513,7 +1513,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Distinctively traditional-and-cultural identity vs newer progressive IB schools',
     ],
     collegeContext:
-      "Shikshantar IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Shikshantar most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. A subset of Shikshantar's Biology HL students continue music or performing arts as a parallel undergraduate interest, which produces an unusual share of cross-applications to US liberal arts colleges (Williams, Amherst, Brown, Wesleyan) where the dual-academic-and-arts profile reads strongly.",
+      "Shikshantar IB graduates show an unusually arts-and-humanities-balanced matriculation pattern reflecting the traditional-and-cultural identity of the school. UK applications cluster around Russell Group institutions including Oxbridge, UCL, KCL, Warwick, and Edinburgh, with humanities programmes sometimes preferred over pure STEM. US matriculations include the standard Ivy+ targets but also an unusually-high share of top liberal arts colleges (Williams, Amherst, Pomona, Wesleyan, Brown) where the dual academic-and-arts profile reads strongly. Canadian destinations include McGill and UBC. For Biology HL students, UK medicine, US pre-med, and environmental-science or public-health combinations are common; for IB+NEET dual-track students, AIIMS and state medical colleges via NEET remain a parallel option.",
     paceAlignment:
       "Shikshantar's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the central-Gurgaon Sector 31 school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge so the assessment-style shift doesn't catch students off-guard. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window. Schedule flexibility for students continuing music or performing arts training is built into our slot allocation.",
     faqs: [
@@ -1535,7 +1535,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Shikshantar students?',
         answer:
-          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Shikshantar IB Biology HL students each cohort pursue the dual IB+NEET pathway because the school\'s CBSE-rooted identity means household conversations about medical college often default to AIIMS and Indian state medical colleges as a valued option even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the music or performing-arts commitments many Shikshantar students maintain.',
+          'Yes — We coach an IB+NEET integrated weekly schedule — a specialised track that few biology coaching providers in India run. Several Shikshantar IB Biology HL students each cohort pursue the dual IB+NEET pathway because the school\'s CBSE-rooted identity means household conversations about medical college often default to AIIMS and Indian state medical colleges as a valued option even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the music or performing-arts commitments many Shikshantar students maintain.',
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1589,7 +1589,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'IB Biology HL and SL with full Section 6 practical coverage',
     ],
     collegeContext:
-      "GD Goenka Signature IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Signature most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The central-Gurgaon working-professional family profile often produces strong dual-application interest — both abroad and India options kept open through Class 12.",
+      "GD Goenka Signature IB graduates target a US-heavy mix reflecting the central-Gurgaon working-professional family profile. UK matriculations include Oxbridge, Imperial, UCL, KCL, Warwick, and Manchester. US destinations skew toward Ivy+, NYU, Berkeley, and Carnegie Mellon — with the IT-employee parent base producing an unusually-high share of CS-and-Biology dual-major applicants at schools like Stanford, MIT, and CMU. Canadian programmes (Toronto, UBC, Waterloo) are common for engineering-leaning students. Indian universities — Ashoka, Krea, Shiv Nadar — round out the abroad-versus-India dual application set. Biology HL students from Signature typically aim at UK medicine, US pre-med, or biomedical-engineering tracks; IB+NEET dual-track students keep AIIMS and state medical colleges open in parallel.",
     paceAlignment:
       "GD Goenka Signature's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Sector 48 day-school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. IA mentorship aligns to the school's DP1 IA proposal deadlines and the November DP2 mock exam window. The DP1 coaching can include an explicit prior-curriculum-to-IB-DP bridge for students who transitioned into the IB track from a CBSE Class 10 background.",
     faqs: [
@@ -1611,7 +1611,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for GD Goenka Signature students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Signature IB Biology HL students each cohort pursue the dual IB+NEET pathway because the central-Gurgaon working-professional family profile often values keeping both abroad and India medical-college options open. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that fits the school's term calendar and the day-student commute window.",
+          "Yes — Cerebrum offers a structured IB+NEET integrated coaching track — among the few such programmes from India-based biology providers. Several Signature IB Biology HL students each cohort pursue the dual IB+NEET pathway because the central-Gurgaon working-professional family profile often values keeping both abroad and India medical-college options open. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that fits the school's term calendar and the day-student commute window.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1685,7 +1685,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Pathways Noida students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. A meaningful share of Pathways Noida Biology HL students pursue the dual IB+NEET pathway because the Noida tech-corridor family profile values keeping both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options open through Class 12. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. The integrated programme is structurally the same as we run for Pathways Aravali students.",
+          "Yes — Cerebrum runs an IB+NEET integrated track that few India-based providers offer. A meaningful share of Pathways Noida Biology HL students pursue the dual IB+NEET pathway because the Noida tech-corridor family profile values keeping both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options open through Class 12. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. The integrated programme is structurally the same as we run for Pathways Aravali students.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1768,7 +1768,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Shiv Nadar School Noida students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Shiv Nadar Noida IB Biology HL students each cohort pursue the dual IB+NEET pathway because the STEM-strong school culture produces students who are realistically considering both medical school in India (AIIMS, state medical colleges) and abroad (UK medicine, US pre-med, Canadian life-sciences). We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the school's STEM-rigour academic load.",
+          "Yes — We are among the small number of India-based providers running an IB+NEET integrated coaching track. Several Shiv Nadar Noida IB Biology HL students each cohort pursue the dual IB+NEET pathway because the STEM-strong school culture produces students who are realistically considering both medical school in India (AIIMS, state medical colleges) and abroad (UK medicine, US pre-med, Canadian life-sciences). We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the school's STEM-rigour academic load.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1822,7 +1822,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Among the longer-running IB DP cohorts in Noida (predates Pathways Noida and Shiv Nadar Noida)',
     ],
     collegeContext:
-      "Step by Step IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Step by Step most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The dual-curriculum senior school context produces an unusually wide range of matriculation destinations — IB students go primarily abroad while their CBSE schoolmates stay in India via AIIMS/IIT/AIIMS-equivalent processes, and the IB+NEET dual-track subset within the IB cohort spans both.",
+      "Step by Step IB graduates matriculate across a broader spread than the typical Noida IB school because the dual-curriculum senior school produces an IB cohort that self-selects for international applications. UK matriculations span Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, and Bristol. US destinations include Ivy+, NYU, top liberal arts (Williams, Amherst, Brown), Berkeley, and public flagships. Canadian institutions — Toronto, UBC, McGill, Queen Mary — are common. For Biology HL students specifically, UK medicine and US pre-med are the most frequent abroad tracks; the IB+NEET dual-track subset within the IB cohort additionally targets AIIMS and state medical colleges via NEET. The older alumni network at Step by Step strengthens applications to Indian universities (Ashoka, Krea, Shiv Nadar University) where alumni-mentoring helps.",
     paceAlignment:
       "Step by Step's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the Noida-Greater Noida Expressway school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The school's careful-pedagogy culture means many Step by Step IB students arrive at DP1 with strong study habits and pastoral support already in place; our coaching adds the IB-specific rubric layer that the parallel-curriculum context structurally leaves thinner.",
     faqs: [
@@ -1844,7 +1844,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Step by Step students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Step by Step IB Biology HL students each cohort pursue the dual IB+NEET pathway. The dual-curriculum senior-school context at Step by Step (IB + CBSE in parallel) creates a cultural environment where the India medical-college path is naturally considered — many Step by Step IB families have extended-family connections to the school's CBSE cohort and the AIIMS/NEET track. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+          "Yes — Cerebrum runs a dedicated IB+NEET integrated coaching track — a niche programme few biology-only providers in India offer. Several Step by Step IB Biology HL students each cohort pursue the dual IB+NEET pathway. The dual-curriculum senior-school context at Step by Step (IB + CBSE in parallel) creates a cultural environment where the India medical-college path is naturally considered — many Step by Step IB families have extended-family connections to the school's CBSE cohort and the AIIMS/NEET track. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1921,7 +1921,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Genesis Global students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Genesis Global IB Biology HL students each cohort pursue the dual IB+NEET pathway. Boarding students particularly benefit from the integrated weekly schedule because the boarding-house study-hall structure can accommodate a longer-and-more-structured weekly tutoring load than typical day-student schedules. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single schedule that fits the school's term calendar and the boarding study-hall windows.",
+          "Yes — We coach an IB+NEET integrated weekly schedule — a specialised track that few biology coaching providers in India run. Several Genesis Global IB Biology HL students each cohort pursue the dual IB+NEET pathway. Boarding students particularly benefit from the integrated weekly schedule because the boarding-house study-hall structure can accommodate a longer-and-more-structured weekly tutoring load than typical day-student schedules. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single schedule that fits the school's term calendar and the boarding study-hall windows.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -1975,7 +1975,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Day school (not residential)',
     ],
     collegeContext:
-      "Lotus Valley IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Lotus Valley most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The dual-curriculum senior-school context produces a wider matriculation range than at single-curriculum schools — IB-track students go primarily abroad while their CBSE schoolmates stay in India.",
+      "Lotus Valley International IB graduates show a UK-and-Canada-heavy matriculation mix that reflects the newer-generation Noida international cohort. UK destinations include Russell Group institutions — Oxbridge, Imperial, UCL, KCL, Warwick, Manchester. US destinations include the standard Ivy+, NYU, and top liberal arts targets but with the cohort weighted toward research-active US universities (Berkeley, Northwestern, public flagships). Canadian matriculations are particularly strong: Toronto, UBC, McGill, Western, Waterloo all see Lotus Valley alumni. Indian universities — Ashoka, Krea, Shiv Nadar — also feature; IB+NEET dual-track students additionally pursue AIIMS and state medical colleges via NEET. Biology HL students typically target UK medicine, biosciences at top UK or Canadian universities, or biomedical and biotechnology programmes.",
     paceAlignment:
       "Lotus Valley's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the Sector 126 school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge — the single biggest assessment-style transition Lotus Valley IB students face — calibrated to be substantially complete by mid-DP1. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
     faqs: [
@@ -1997,7 +1997,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Lotus Valley students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Lotus Valley IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted school culture means India medical-college options (AIIMS, state medical) are naturally in family conversations even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+          "Yes — Cerebrum offers a structured IB+NEET integrated coaching track — among the few such programmes from India-based biology providers. Several Lotus Valley IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted school culture means India medical-college options (AIIMS, state medical) are naturally in family conversations even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -2055,7 +2055,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'CBSE-rooted brand identity with IB DP as the abroad-applications track',
     ],
     collegeContext:
-      "GD Goenka Public Noida IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from GD Goenka Public Noida most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The school's CBSE-rooted family base produces an unusually-high share of IB+NEET dual-track students because India medical-college options remain naturally in family conversations alongside the abroad applications.",
+      "GD Goenka Public Noida IB graduates show the GD Goenka network characteristic CBSE-rooted matriculation mix overlaid with international applications from the IB cohort. UK destinations include Oxbridge, Imperial, UCL, KCL, Warwick, and Edinburgh. US matriculations include Ivy+, NYU, top liberal arts colleges, Berkeley, and public flagships. Canadian universities (Toronto, UBC, McGill, Waterloo) take a meaningful share. Indian university connections via the broader GD Goenka network alumni base strengthen applications to Ashoka, Krea, Shiv Nadar University, and Plaksha. Biology HL students most often pursue UK medicine, US pre-med, or Canadian biosciences; IB+NEET dual-track students additionally target AIIMS and state medical colleges via NEET — a track that fits the CBSE-rooted family conversation pattern common at GD Goenka households.",
     paceAlignment:
       "GD Goenka Public Noida follows the standard two-year DP cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM is most common, fitting after the Noida school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge that is the single highest-leverage external coaching value for GD Goenka Public IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
     faqs: [
@@ -2077,7 +2077,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for GD Goenka Public Noida students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. The CBSE-rooted family identity at GD Goenka Public Noida makes this an unusually-natural fit: India medical-college conversations (AIIMS, state medical via NEET) are already part of household discussions even for IB-track students, so the dual IB+NEET pathway preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India options. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+          "Yes — Cerebrum runs an IB+NEET integrated track that few India-based providers offer. The CBSE-rooted family identity at GD Goenka Public Noida makes this an unusually-natural fit: India medical-college conversations (AIIMS, state medical via NEET) are already part of household discussions even for IB-track students, so the dual IB+NEET pathway preserves both abroad (UK medicine, US pre-med, Canadian life-sciences) and India options. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -2132,7 +2132,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Day school (not residential)',
     ],
     collegeContext:
-      "Manav Rachna IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges and Manav Rachna's own dental and medical programmes for the relevant subset of IB+NEET dual-track students). Biology HL students from Manav Rachna most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, biomedical / biotechnology programmes, or dentistry programmes (including the Manav Rachna Dental College option for students who want to stay in the network).",
+      "Manav Rachna IB graduates have an unusually within-network pathway available because the broader Manav Rachna education group operates MRIIRS university, Manav Rachna Dental College, and engineering programmes. UK matriculations cluster around Oxbridge, Imperial, UCL, KCL, Warwick, and Edinburgh. US destinations include the standard Ivy+, NYU, top liberal arts, Berkeley, and public flagships. Canadian institutions (Toronto, UBC, McGill, Western, Waterloo) feature meaningfully. Indian university destinations include Ashoka, Krea, Shiv Nadar University, and Plaksha, plus AIIMS and state medical colleges for IB+NEET dual-track students. Biology HL students from Manav Rachna often add Manav Rachna Dental College as a within-network India option — particularly common for the IB+NEET dual-track cohort wanting to preserve dentistry-in-India alongside abroad medical-school applications.",
     paceAlignment:
       "Manav Rachna's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. IA mentorship aligns to the school's DP1 IA proposal deadlines. For students transitioning from MRIS's Cambridge IGCSE or CBSE Class 10 track, our DP1 coaching includes an explicit prior-curriculum-to-IB-DP bridge.",
     faqs: [
@@ -2154,7 +2154,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Manav Rachna students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Manav Rachna IB Biology HL students each cohort pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the school's multi-curriculum academic load.",
+          "Yes — We are among the small number of India-based providers running an IB+NEET integrated coaching track. Several Manav Rachna IB Biology HL students each cohort pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule that respects the school's multi-curriculum academic load.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -2209,7 +2209,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'CBSE-rooted brand identity with IB DP as the abroad-applications track',
     ],
     collegeContext:
-      "DPS Faridabad IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from DPS Faridabad most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes. The DPS-brand network effect matters for Indian-university applications where DPS alumni connections and the brand's academic-rigour signal carry weight; for international applications, the IB transcript is the primary signal.",
+      "DPS Faridabad IB graduates benefit from the broader DPS Society unusually-strong India-university alumni network. UK applications target Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, and Manchester. US destinations include Ivy+, NYU, top liberal arts, Berkeley, Northwestern, and public flagships. Canadian institutions (Toronto, UBC, McGill, Waterloo) feature; the Canadian-pathway share is sometimes higher than at less DPS-network-connected schools because DPS alumni mentoring is strong on UK and Canadian transitions. Indian universities — Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS and state medical colleges — receive a notable share of applications because the DPS-network family identity keeps India tracks naturally in conversation. Biology HL students most commonly pursue UK medicine, US pre-med, or AIIMS via NEET on the dual-track.",
     paceAlignment:
       "DPS Faridabad's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge that is the single highest-leverage external coaching value for DPS Faridabad IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
     faqs: [
@@ -2231,7 +2231,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for DPS Faridabad students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. The DPS-network brand identity makes IB+NEET an unusually-natural fit: extended-family conversations at DPS households often default to AIIMS / state medical colleges as a valued option even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+          "Yes — Cerebrum runs a dedicated IB+NEET integrated coaching track — a niche programme few biology-only providers in India offer. The DPS-network brand identity makes IB+NEET an unusually-natural fit: extended-family conversations at DPS households often default to AIIMS / state medical colleges as a valued option even when the abroad track is the primary planned route. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -2311,7 +2311,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for TSRS Faridabad → Aravali students?',
         answer:
-          'Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. TSRS families who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. For TSRS Faridabad MYP5 students planning the Aravali DP1 transition, starting the IB+NEET track in MYP5 summer builds the Chemistry / Physics NEET foundation early.',
+          'Yes — We coach an IB+NEET integrated weekly schedule — a specialised track that few biology coaching providers in India run. TSRS families who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options can pursue the dual IB+NEET pathway. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule. For TSRS Faridabad MYP5 students planning the Aravali DP1 transition, starting the IB+NEET track in MYP5 summer builds the Chemistry / Physics NEET foundation early.',
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -2366,7 +2366,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
     ],
     collegeContext:
-      "Apeejay Faridabad IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students, and the Apeejay group's own Apeejay Stya University as a within-network option for some). Biology HL students from Apeejay Faridabad most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+      "Apeejay Faridabad IB graduates show the Apeejay Education Society network diverse matriculation pattern. UK destinations include Russell Group institutions — Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester. US matriculations include Ivy+, NYU, top liberal arts, Berkeley, and public flagships. Canadian universities (Toronto, UBC, McGill, Western, Waterloo) feature steadily. Indian university destinations include Ashoka, Krea, Shiv Nadar University, and Plaksha, plus Apeejay Stya University in Gurgaon as a within-network option for some Apeejay-network families. Biology HL students most commonly pursue UK medicine, US pre-med, biosciences at top UK or Canadian universities, or biomedical and biotechnology programmes; IB+NEET dual-track students additionally target AIIMS and state medical colleges via NEET.",
     paceAlignment:
       "Apeejay Faridabad's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge that is the single highest-leverage external coaching value for Apeejay Faridabad IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
     faqs: [
@@ -2388,7 +2388,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Apeejay Faridabad students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Apeejay Faridabad IB Biology HL students each cohort pursue the dual IB+NEET pathway because the school's CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+          "Yes — Cerebrum offers a structured IB+NEET integrated coaching track — among the few such programmes from India-based biology providers. Several Apeejay Faridabad IB Biology HL students each cohort pursue the dual IB+NEET pathway because the school's CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -2442,7 +2442,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
     ],
     collegeContext:
-      "Modern DPS Faridabad IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Modern DPS Faridabad most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+      "Modern DPS Faridabad IB graduates show a relatively standard matriculation mix reflecting the independent-managed school curriculum-driven (rather than network-driven) outcome pattern. UK destinations include Oxbridge, Imperial, UCL, KCL, Warwick, and Edinburgh. US matriculations include Ivy+, NYU, top liberal arts, Berkeley, and public flagships. Canadian institutions (Toronto, UBC, McGill, Western, Waterloo, Queen Mary) feature meaningfully. Indian universities — Ashoka, Krea, Shiv Nadar University, Plaksha — and AIIMS or state medical colleges via NEET for the IB+NEET dual-track subset round out the picture. Biology HL students from Modern DPS most often target UK medicine, US pre-med, or Canadian biosciences; the independent-management status of the school means matriculations reflect individual student strength rather than network-pipeline effects.",
     paceAlignment:
       "Modern DPS Faridabad's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge — the single highest-leverage external coaching value for Modern DPS IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
     faqs: [
@@ -2464,7 +2464,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Modern DPS Faridabad students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Modern DPS IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+          "Yes — Cerebrum runs an IB+NEET integrated track that few India-based providers offer. Several Modern DPS IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -2488,8 +2488,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
   // 34. RYAN INTERNATIONAL SCHOOL FARIDABAD (Faridabad, India)
   // ──────────────────────────────────────────────────────────────────────────
   // Part of the broader Ryan International Group of Institutions network —
-  // one of India's larger private school networks with 130+ campuses across
-  // India and a small number of international campuses. The Faridabad
+  // one of India's larger private school networks with a multi-city Indian
+  // footprint and a small number of international campuses. The Faridabad
   // campus operates as a co-ed day school with CBSE primary + IB DP senior.
   {
     slug: 'ryan-international-faridabad',
@@ -2504,14 +2504,14 @@ export const ibBiologySchools: IBBiologySchool[] = [
     schoolType: 'International (IB World School)',
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
-      "Ryan International School Faridabad is a co-educational day school operating as part of the broader Ryan International Group of Institutions network — one of India's larger private school networks with 130+ campuses across India and a small number of international campuses. The Faridabad campus has built its identity on CBSE academic delivery within the Ryan network's broader brand identity, and added IB Diploma Programme authorisation at senior school as an international-application option for the subset of families targeting overseas universities.",
+      "Ryan International School Faridabad is a co-educational day school operating as part of the broader Ryan International Group of Institutions network — one of India's larger private school networks with a substantial multi-city Indian footprint and a small number of international campuses. The Faridabad campus has built its identity on CBSE academic delivery within the Ryan network's broader brand identity, and added IB Diploma Programme authorisation at senior school as an international-application option for the subset of families targeting overseas universities.",
       "Ryan International Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is meaningfully smaller than the CBSE cohort — typical of CBSE-primary schools that have added IB DP — and students choosing IB are self-selecting toward international university applications.",
       "For Ryan International Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. CBSE Class 10's recall-and-standard-answer-structure assessment differs meaningfully from IB DP Paper 2's data-analysis-and-evaluation style. Our DP1 coaching makes this transition explicit in the first term, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching. Several Ryan International IB Biology HL students each cohort pursue our integrated IB+NEET track for the standard dual-application reasons.",
       "Ryan International Faridabad's location keeps the school accessible across the central-Faridabad belt. The Ryan network's broader presence across NCR (Ryan International Sector 56 Gurgaon, Ryan International Sector 25 Rohini, etc.) gives families useful cross-network reference points when considering senior-school IB choices. For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day regardless of which Faridabad sector students live in.",
     ],
     reputationBullets: [
       'Part of the broader Ryan International Group of Institutions network',
-      'Ryan network has 130+ campuses across India and small international footprint',
+      'Ryan network has a substantial multi-city Indian footprint and small international footprint',
       'IB World School authorised for the Diploma Programme',
       'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
       'Located in Faridabad (central-Faridabad accessibility)',
@@ -2519,7 +2519,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
     ],
     collegeContext:
-      "Ryan International Faridabad IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Ryan International Faridabad most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+      "Ryan International Faridabad IB graduates show the multi-city Ryan-network character of broad-based matriculation across regions. UK destinations include Oxbridge, Imperial, UCL, KCL, Warwick, Manchester, and Edinburgh. US universities include Ivy+, NYU, top liberal arts, Berkeley, and public flagships. Canadian institutions (Toronto, UBC, McGill, Western, Waterloo) are common. Indian university destinations include Ashoka, Krea, Shiv Nadar University, and Plaksha; for IB+NEET dual-track students, AIIMS and state medical colleges via NEET remain the primary India track. Biology HL students from Ryan typically pursue UK medicine, US pre-med, biosciences at top UK or Canadian universities, or biomedical and biotechnology programmes — the Ryan-network presence across Indian cities sometimes helps with peer-mentoring during the application process.",
     paceAlignment:
       "Ryan International Faridabad's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge — the single highest-leverage external coaching value for Ryan International IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
     faqs: [
@@ -2541,7 +2541,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Ryan International Faridabad students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Ryan International Faridabad IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+          "Yes — We are among the small number of India-based providers running an IB+NEET integrated coaching track. Several Ryan International Faridabad IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
@@ -2596,7 +2596,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
     ],
     collegeContext:
-      "Jaipuria Vasundhara IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Jaipuria Vasundhara most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+      "Jaipuria Vasundhara IB graduates draw on the broader Jaipuria Schools network multi-city alumni footprint (Lucknow, Kanpur, Ghaziabad). UK matriculations include Oxbridge, Imperial, UCL, KCL, Warwick, and Edinburgh. US destinations include Ivy+, NYU, top liberal arts, Berkeley, Northwestern, and public flagships. Canadian institutions — Toronto, UBC, McGill, Western, Waterloo — feature regularly. Indian university destinations include Ashoka, Krea, Shiv Nadar University, and Plaksha; for IB+NEET dual-track students, AIIMS and state medical colleges via NEET — the east-NCR family base typically considers both abroad and India tracks. Biology HL students most commonly pursue UK medicine, US pre-med, biosciences at top UK or Canadian universities, or biomedical and biotechnology programmes; the Lucknow campus of the Jaipuria network also produces an unusual share of AIIMS Lucknow applicants for the dual-track cohort.",
     paceAlignment:
       "Jaipuria Vasundhara's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Vasundhara school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge — the single highest-leverage external coaching value for Jaipuria IB students transitioning from the school's CBSE Class 10.",
     faqs: [
@@ -2618,7 +2618,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you offer the IB+NEET integrated track for Jaipuria Vasundhara students?',
         answer:
-          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Jaipuria IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+          "Yes — Cerebrum runs a dedicated IB+NEET integrated coaching track — a niche programme few biology-only providers in India offer. Several Jaipuria IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
       },
       {
         question: 'How does pricing differ for IB-only vs IB+NEET tracks?',

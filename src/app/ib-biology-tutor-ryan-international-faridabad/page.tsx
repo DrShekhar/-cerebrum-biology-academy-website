@@ -3,7 +3,7 @@
  *
  * Per-school IB Biology landing page for Ryan International School
  * Faridabad. Part of the broader Ryan International Group of
- * Institutions network (130+ campuses across India). CBSE primary +
+ * Institutions network (multi-city Indian footprint). CBSE primary +
  * IB DP senior.
  *
  * Built from IBBiologySchoolTemplate +
