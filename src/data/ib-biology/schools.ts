@@ -2407,6 +2407,82 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 33. MODERN DELHI PUBLIC SCHOOL FARIDABAD (Faridabad, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Distinct from Delhi Public School Faridabad (entry #30, the broader-DPS-
+  // network campus). Modern DPS Faridabad operates as a separate institution
+  // and is independently positioned within the Faridabad IB landscape.
+  {
+    slug: 'modern-dps-faridabad',
+    schoolName: 'Modern Delhi Public School',
+    shortName: 'Modern DPS Faridabad',
+    cityCountry: 'Faridabad, India',
+    citySlug: 'faridabad',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Modern Delhi Public School (Modern DPS) Faridabad is a co-educational day school in Faridabad, operating as an independently-managed institution distinct from the broader Delhi Public School (DPS) national network campus also located in Faridabad. The school built its early reputation on CBSE academic excellence and added the IB Diploma Programme authorisation as a senior-school option for the subset of families targeting international universities.",
+      "Modern DPS Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is meaningfully smaller than the CBSE cohort — typical of the CBSE-primary-plus-IB-senior model — and students choosing IB are self-selecting toward international university applications.",
+      "For Modern DPS Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. The shift from CBSE Class 10's recall-and-standard-answer-structure assessment to IB DP Paper 2's data-analysis-and-evaluation style is the single biggest assessment-style change students encounter. Our DP1 coaching makes this transition explicit in the first term, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching.",
+      "Modern DPS Faridabad's Faridabad location keeps the school accessible across the central-Faridabad belt and from Greater Faridabad. For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day. Several Modern DPS IB Biology HL students each cohort pursue our integrated IB+NEET track for the standard dual-application reasons — abroad applications via IB Diploma while keeping AIIMS / state medical colleges open via NEET.",
+    ],
+    reputationBullets: [
+      'Independently-managed school in Faridabad',
+      'Distinct from Delhi Public School Faridabad (separate national-DPS-network campus)',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
+      'Located in Faridabad with broader Faridabad-sector accessibility',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
+    ],
+    collegeContext:
+      "Modern DPS Faridabad IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Modern DPS Faridabad most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+    paceAlignment:
+      "Modern DPS Faridabad's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge — the single highest-leverage external coaching value for Modern DPS IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
+    faqs: [
+      {
+        question: "Is Modern DPS Faridabad the same as Delhi Public School Faridabad? Both have 'DPS' in the name.",
+        answer:
+          "No — these are two structurally different schools that both operate in Faridabad. Delhi Public School (DPS) Faridabad is part of the broader DPS national network (sister to DPS RK Puram, DPS Vasant Kunj, DPS Noida Sector 30, DPS Sector 45 Gurgaon, etc.) — institutionally connected to the DPS Society. Modern Delhi Public School Faridabad is an independently-managed school that uses the 'Delhi Public School' naming but operates separately from the DPS Society network. Both offer IB DP at senior school alongside CBSE Class 11-12; the institutional and management contexts differ.",
+      },
+      {
+        question: "My child finished Modern DPS's CBSE Class 10 with strong Biology marks — what changes at IB Biology HL?",
+        answer:
+          "Three things change. First, the assessment shifts: CBSE Class 10 prioritises content recall and standardised-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — CBSE Class 10 has nothing equivalent. Third, the syllabus depth in selected topics (cell biology, genetics, physiology) goes meaningfully beyond CBSE Class 10. Our DP1 coaching makes all three transitions explicit in the first term.",
+      },
+      {
+        question: "Modern DPS's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group affect IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a CBSE-primary school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, UWCSEA) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that with explicit weekly written feedback on long-response answers against the IB Biology mark scheme.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Modern DPS Faridabad students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Modern DPS IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000-₹98,000 per year for the complete integrated programme. Modern DPS Faridabad families typically pay in INR with payment plans across 3-4 instalments.',
+      },
+      {
+        question: "How does Modern DPS Faridabad's IB Biology compare to Manav Rachna, DPS Faridabad, Shri Ram, and Apeejay?",
+        answer:
+          "Five different positioning profiles in the Faridabad IB cluster. Manav Rachna International is the flagship of the Manav Rachna education group (multi-curriculum IB + Cambridge + CBSE). DPS Faridabad is part of the DPS national network. Shri Ram Faridabad is TSRS junior + middle-school feeding into TSRS Aravali (Gurgaon). Apeejay Faridabad is part of the Apeejay Education Society network. Modern DPS Faridabad is independently managed. The IB Biology programmes across all five are comparable in quality; school cultures and brand contexts differ. We coach students from all five.",
+      },
+      {
+        question: 'When should a Modern DPS Faridabad student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
