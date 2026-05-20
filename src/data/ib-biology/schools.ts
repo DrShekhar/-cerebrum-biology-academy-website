@@ -2560,6 +2560,83 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 35. SETH ANANDRAM JAIPURIA SCHOOL VASUNDHARA (Ghaziabad, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Part of the broader Jaipuria network (Jaipuria Schools group has campuses
+  // across India including Lucknow, Kanpur, Ghaziabad). The Vasundhara
+  // Ghaziabad campus is among the longer-established IB-offering schools in
+  // east NCR. CBSE primary + IB DP at senior school.
+  {
+    slug: 'jaipuria-vasundhara-ghaziabad',
+    schoolName: 'Seth Anandram Jaipuria School Vasundhara',
+    shortName: 'Jaipuria Vasundhara',
+    cityCountry: 'Ghaziabad, India',
+    citySlug: 'ghaziabad',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Seth Anandram Jaipuria School Vasundhara is a co-educational day school in Vasundhara, Ghaziabad, operating as part of the broader Jaipuria Schools network — the group also runs Seth Anandram Jaipuria School campuses in Lucknow, Kanpur, and other Indian cities. The Vasundhara campus has been a meaningful part of Ghaziabad's east-NCR international-curriculum landscape and added IB Diploma Programme authorisation as a senior-school option alongside its established CBSE programme.",
+      "Jaipuria Vasundhara's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as the international-application option. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is smaller than the CBSE cohort — typical of the CBSE-primary-plus-IB-senior structure common across NCR — and students choosing IB are self-selecting toward international university applications from the broader Indirapuram-Vaishali-Vasundhara residential cohort.",
+      "For Jaipuria Vasundhara IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. CBSE Class 10's recall-and-standard-answer-structure assessment differs meaningfully from IB DP Paper 2's data-analysis-and-evaluation style. Our DP1 coaching makes this transition explicit in the first term, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching. Several Jaipuria IB Biology HL students each cohort also pursue our integrated IB+NEET track.",
+      "Jaipuria's Vasundhara location keeps it accessible from across the east-NCR belt — Indirapuram, Vaishali, Kaushambi, Crossings Republik, and the broader Ghaziabad-Noida border area via the Mayur Vihar corridor. The school's broader Jaipuria network gives families cross-campus reference points when considering senior-school IB options (the Lucknow and Kanpur Jaipuria campuses also have international-curriculum offerings). For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day.",
+    ],
+    reputationBullets: [
+      'Part of the broader Jaipuria Schools network (campuses in Lucknow, Kanpur, and other cities)',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
+      'Located in Vasundhara, Ghaziabad (east NCR residential belt)',
+      'Among the longer-established IB-offering schools in east NCR',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
+    ],
+    collegeContext:
+      "Jaipuria Vasundhara IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Jaipuria Vasundhara most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+    paceAlignment:
+      "Jaipuria Vasundhara's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Vasundhara school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge — the single highest-leverage external coaching value for Jaipuria IB students transitioning from the school's CBSE Class 10.",
+    faqs: [
+      {
+        question: "Jaipuria has multiple campuses (Lucknow, Kanpur, Vasundhara). Is the Vasundhara campus's IB Biology comparable?",
+        answer:
+          "All Jaipuria campuses are part of the broader Jaipuria Schools network but each operates independently with its own faculty and senior-school curriculum mix. The Vasundhara Ghaziabad campus runs CBSE + IB DP at senior, with IB Biology HL and SL offered. The Lucknow and Kanpur campuses may differ on senior-school IB availability. For Ghaziabad / east-NCR families specifically, Jaipuria Vasundhara is the network's local IB-offering campus — comparable to other Ghaziabad IB schools like Cambridge School Indirapuram or DPS Indirapuram in IB Biology programme quality.",
+      },
+      {
+        question: "My child finished Jaipuria Vasundhara's CBSE Class 10 with strong Biology marks — what changes at IB Biology HL?",
+        answer:
+          "Three things change. First, the assessment shifts: CBSE Class 10 prioritises content recall and standardised-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — CBSE Class 10 has nothing equivalent. Third, the syllabus depth in selected topics (cell biology, genetics, physiology) goes meaningfully beyond CBSE Class 10. Our DP1 coaching makes all three transitions explicit in the first term.",
+      },
+      {
+        question: "Jaipuria's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group affect IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a CBSE-primary school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, UWCSEA) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that with explicit weekly written feedback on long-response answers against the IB Biology mark scheme.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Jaipuria Vasundhara students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Jaipuria IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000-₹98,000 per year for the complete integrated programme. Jaipuria families typically pay in INR with payment plans across 3-4 instalments.',
+      },
+      {
+        question: "How does Jaipuria Vasundhara's IB Biology compare to Cambridge School Indirapuram or DPS Indirapuram?",
+        answer:
+          "Three different positioning profiles in the Ghaziabad IB cluster. Jaipuria Vasundhara is the Jaipuria network's east-NCR IB-offering campus, CBSE-primary + IB DP senior. Cambridge School Indirapuram is Cambridge-curriculum-strong (IGCSE / A-Level / sometimes IB). DPS Indirapuram is part of the DPS national network. The IB Biology programmes are comparable in quality; school cultures and curriculum mixes differ. We coach students from all three; the choice between them is usually about school culture fit and the specific senior-school curriculum architecture.",
+      },
+      {
+        question: 'When should a Jaipuria Vasundhara student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
