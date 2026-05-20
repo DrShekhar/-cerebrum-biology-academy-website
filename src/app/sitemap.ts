@@ -130,7 +130,12 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/re-neet-2026' ||
     // Dedicated crash-course product landing page for the RE-NEET
     // window. Same priority tier as the news article above.
-    path === '/re-neet-crash-course'
+    path === '/re-neet-crash-course' ||
+    // Master entity page — Dr. Shekhar Singh all-vertical authority hub.
+    // Citation target for AI grounding (Perplexity / ChatGPT / Claude /
+    // Gemini), sameAs anchor, and the canonical "Best Biology Teacher
+    // in India" entity page spanning NEET + IB + AP + CBSE + Olympiads.
+    path === '/dr-shekhar-singh-biology-faculty-india'
   ) {
     return 1.0
   }
@@ -1473,6 +1478,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     // E-E-A-T Authority Pages
+    // Master entity page (all verticals: NEET + IB + AP + CBSE + Olympiads)
+    // Priority 1.0 enforced by normalizePriority — this is the citation target
+    // for LLM grounding and the sameAs anchor across all schemas.
+    {
+      url: `${baseUrl}/dr-shekhar-singh-biology-faculty-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 1.0,
+    },
     {
       url: `${baseUrl}/dr-shekhar-singh-neet-biology-faculty`,
       lastModified: lastUpdated,

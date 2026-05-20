@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { SEOLandingPage } from '@/components/seo-landing'
 import { universalSEOPages } from '@/data/seo-landing'
 import { BreadcrumbSchema } from '@/components/seo'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const content = universalSEOPages.bestBiologyTeacherNeet
 
@@ -33,6 +34,15 @@ export default function BestBiologyTeacherNeetPage() {
           items={[{ label: 'Best Biology Teacher for NEET', isCurrentPage: true }]}
         />
       </div>
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'NEET-UG Biology Coaching',
+          'AIIMS Selection',
+          'Medical Entrance Biology India',
+          'NCERT NEET Preparation',
+        ]}
+        jobTitle="Founder & Lead Biology Faculty — Best Biology Teacher for NEET in India"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

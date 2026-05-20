@@ -19,6 +19,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 // Lightweight scroll animation hook (replaces framer-motion)
 function useScrollAnimation(threshold = 0.1) {
@@ -124,6 +125,16 @@ export default function BestBiologyTeacherForNeetPage() {
 
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'NEET-UG Biology',
+          'AIIMS Selection',
+          'NCERT Biology',
+          'Medical College Admissions India',
+          'NEET-PG Foundation',
+        ]}
+        jobTitle="Founder & Lead Biology Faculty — Best Biology Teacher for NEET in India"
+      />
       {/* FAQ Schema */}
       <script
         type="application/ld+json"

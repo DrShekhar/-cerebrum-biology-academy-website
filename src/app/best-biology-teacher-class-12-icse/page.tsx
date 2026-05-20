@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const iscClass12Syllabus = [
   {
@@ -100,6 +101,18 @@ const faqs = [
 export default function BestBiologyTeacherClass12ICSEPage() {
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'ICSE Class 12 Biology',
+          'ISC Biology Syllabus',
+          'CISCE Board Biology',
+          'ICSE Board Exam Biology',
+          'Genetics and Evolution',
+          'Reproduction',
+          'Biotechnology',
+        ]}
+        jobTitle="Founder & Lead Biology Faculty — Best Biology Teacher for Class 12 ICSE / ISC in India"
+      />
       {/* FAQ Schema */}
       <script
         type="application/ld+json"

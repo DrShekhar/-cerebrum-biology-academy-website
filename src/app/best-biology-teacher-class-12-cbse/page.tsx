@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const class12Syllabus = [
   {
@@ -100,6 +101,18 @@ const faqs = [
 export default function BestBiologyTeacherClass12CBSEPage() {
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'CBSE Class 12 Biology',
+          'NCERT Class 12 Biology',
+          'CBSE Board Exam Biology',
+          'Genetics and Evolution',
+          'Reproduction in Organisms',
+          'Biotechnology and its Applications',
+          'Ecology and Environment',
+        ]}
+        jobTitle="Founder & Lead Biology Faculty — Best Biology Teacher for Class 12 CBSE in India"
+      />
       {/* FAQ Schema */}
       <script
         type="application/ld+json"

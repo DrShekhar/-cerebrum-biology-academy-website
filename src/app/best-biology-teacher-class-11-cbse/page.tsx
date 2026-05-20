@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const class11Syllabus = [
   {
@@ -101,6 +102,19 @@ const faqs = [
 export default function BestBiologyTeacherClass11CBSEPage() {
   return (
     <div className="min-h-screen">
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'CBSE Class 11 Biology',
+          'NCERT Class 11 Biology',
+          'NEET Foundation Biology',
+          'Diversity in Living World',
+          'Structural Organisation in Plants and Animals',
+          'Cell Structure and Function',
+          'Plant Physiology',
+          'Human Physiology',
+        ]}
+        jobTitle="Founder & Lead Biology Faculty — Best Biology Teacher for Class 11 CBSE in India"
+      />
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
