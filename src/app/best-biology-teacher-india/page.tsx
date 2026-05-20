@@ -415,7 +415,7 @@ export default function BestBiologyTeacherIndiaPage() {
                 Book Free Consultation
               </a>
               <Link
-                href="/dr-shekhar-singh-neet-biology-faculty"
+                href="/dr-shekhar-singh-biology-faculty-india"
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
               >
                 Meet Dr. Shekhar Singh
