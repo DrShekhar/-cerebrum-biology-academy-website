@@ -324,6 +324,97 @@ export default function BiologyTutorClass12CBSEPage() {
         </div>
       </section>
 
+      {/* Cross-sell — Beyond Class 12 CBSE: NEET + Dropper + Olympiads */}
+      <section className="py-14 md:py-20 bg-gradient-to-br from-purple-50 via-white to-emerald-50 border-y border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold text-purple-700 uppercase tracking-wider mb-2">
+              Same faculty · Class 12 boards + NEET this May
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+              Beyond Class 12 boards — NEET this year, or next
+            </h2>
+            <p className="text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
+              Class 12 is the year of the CBSE boards AND the NEET exam. Cerebrum Biology Academy
+              coaches both side-by-side, plus the Repeat / Dropper batch for students who need
+              another year. Biology Olympiads (NSEB / INBO) remain eligible in Class 12.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+            <div className="bg-white rounded-2xl border-2 border-emerald-200 p-6 hover:border-emerald-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                  <Target className="w-5 h-5 text-emerald-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">NEET Biology (this May)</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                Class 12 NCERT is ~50% of NEET Biology syllabus. We coach boards + NEET together
+                — same chapters, dual-purpose. Intensive Class 12 + NEET integrated track for the
+                final-year push.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2012%20CBSE%20and%20we%20want%20intensive%20NEET%20Biology%20coaching%20alongside%20boards.%20Please%20share%20the%20Class%2012%20%2B%20NEET%20integrated%20track%20details%20and%20remaining-year%20schedule."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: NEET track
+              </Link>
+            </div>
+            <div className="bg-white rounded-2xl border-2 border-rose-200 p-6 hover:border-rose-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center">
+                  <ArrowRight className="w-5 h-5 text-rose-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">NEET Repeat / Dropper Batch</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                For students considering one more year after Class 12 if NEET this May
+                doesn&apos;t land the target college. Dedicated Repeat / Dropper Biology batch —
+                full NEET-only intensive, no board distractions.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2012%20CBSE%20and%20we%20are%20also%20considering%20the%20NEET%20Repeat%20%2F%20Dropper%20batch%20option%20for%20next%20year.%20Please%20share%20the%20Dropper%20Biology%20coaching%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-rose-600 hover:bg-rose-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: Dropper plan
+              </Link>
+            </div>
+            <div className="bg-white rounded-2xl border-2 border-amber-200 p-6 hover:border-amber-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
+                  <Trophy className="w-5 h-5 text-amber-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">Biology Olympiads (NSEB / INBO)</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                NSEB → INBO → OCSC → IBO India team eligibility runs through Class 12. Strong
+                Class 12 students can layer Olympiad coaching alongside NEET — the biology
+                content overlaps meaningfully.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2012%20CBSE%20with%20strong%20biology%20marks.%20We%20want%20to%20layer%20Biology%20Olympiad%20coaching%20%E2%80%94%20NSEB%20%2F%20INBO%20%2F%20IBO%20%E2%80%94%20alongside%20NEET.%20Please%20share%20schedule%20and%20how%20they%20combine."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: Olympiad enquiry
+              </Link>
+            </div>
+          </div>
+          <p className="text-center text-xs text-slate-500 mt-8">
+            Founded by Dr. Shekhar C Singh (AIIMS New Delhi alumnus) · 680+ medical college
+            selections · 98% NEET qualification rate · Biology-only since 2014
+          </p>
+        </div>
+      </section>
+
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">

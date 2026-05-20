@@ -306,6 +306,95 @@ export default function BiologyTutorClass11CBSEPage() {
         </div>
       </section>
 
+      {/* Cross-sell — Beyond Class 11 CBSE: NEET + Olympiads + Class 12 */}
+      <section className="py-14 md:py-20 bg-gradient-to-br from-blue-50 via-white to-emerald-50 border-y border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold text-blue-700 uppercase tracking-wider mb-2">
+              Same faculty · Class 11 + NEET + Olympiad
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+              Beyond Class 11 CBSE — what else Cerebrum coaches
+            </h2>
+            <p className="text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
+              Class 11 is the start of the NEET track. Cerebrum Biology Academy is biology-only
+              across Class 11 → Class 12 → NEET, with Biology Olympiad coaching for high-marks
+              students wanting an extra layer.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+            <div className="bg-white rounded-2xl border-2 border-emerald-200 p-6 hover:border-emerald-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center">
+                  <Target className="w-5 h-5 text-emerald-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">NEET Biology (Class 11 + 12)</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                Class 11 NCERT is ~50% of NEET Biology syllabus. We coach board + NEET together
+                so the same chapters serve both purposes. AIIMS-trained faculty.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2011%20CBSE%20and%20we%20want%20to%20start%20NEET%20Biology%20coaching%20alongside%20boards.%20Please%20share%20the%20Class%2011%20%2B%20NEET%20integrated%20track%20details%20and%20fees."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: NEET track
+              </Link>
+            </div>
+            <div className="bg-white rounded-2xl border-2 border-amber-200 p-6 hover:border-amber-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
+                  <Trophy className="w-5 h-5 text-amber-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">Biology Olympiads (NSEB / INBO)</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                Class 11 is when NSEB (the entry stage to INBO → IBO India team selection)
+                becomes eligible. Strong CBSE Class 11 students are perfectly placed to add the
+                Olympiad layer.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2011%20CBSE%20with%20strong%20biology%20marks.%20We%20want%20to%20add%20Biology%20Olympiad%20coaching%20%E2%80%94%20NSEB%20%2F%20INBO%20%2F%20IBO%20pipeline.%20Please%20share%20schedule%20and%20eligibility."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: Olympiad enquiry
+              </Link>
+            </div>
+            <div className="bg-white rounded-2xl border-2 border-blue-200 p-6 hover:border-blue-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-blue-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">Class 12 CBSE Biology</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                Natural continuation. Same faculty, same conceptual depth. Class 12 NCERT is the
+                other ~50% of NEET Biology syllabus — boards + NEET integrated coaching.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%2011%20CBSE%20and%20we%20want%20to%20continue%20into%20Class%2012%20Biology%20%2B%20NEET%20preparation.%20Please%20share%20the%20Class%2011%20%E2%86%92%20Class%2012%20continuation%20track."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: Class 12 plan
+              </Link>
+            </div>
+          </div>
+          <p className="text-center text-xs text-slate-500 mt-8">
+            Founded by Dr. Shekhar C Singh (AIIMS New Delhi alumnus) · 680+ medical college
+            selections · 98% NEET qualification rate · Biology-only since 2014
+          </p>
+        </div>
+      </section>
+
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">

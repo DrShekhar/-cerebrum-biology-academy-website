@@ -301,6 +301,95 @@ export default function BiologyTutorClass9CBSEPage() {
         </div>
       </section>
 
+      {/* Cross-sell — Beyond Class 9: Class 10 + NEET Foundation + Olympiads */}
+      <section className="py-14 md:py-20 bg-gradient-to-br from-green-50 via-white to-blue-50 border-y border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold text-green-700 uppercase tracking-wider mb-2">
+              Same faculty · Class 9 foundation + everything next
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+              Beyond Class 9 — what else Cerebrum coaches
+            </h2>
+            <p className="text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
+              Cerebrum Biology Academy is biology-only across CBSE Class 9 → Class 10 boards →
+              Class 11-12 → NEET, plus Biology Olympiads (NSEB / INBO / IBO) and IB / IGCSE / AP
+              Biology for international-curriculum students.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+            <div className="bg-white rounded-2xl border-2 border-green-200 p-6 hover:border-green-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-green-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">Class 10 CBSE Biology</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                The natural next step after Class 9. Class 10 is the board exam year — same
+                faculty, same NCERT mastery approach, full board + diagram preparation.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%209%20CBSE%20and%20we%20want%20to%20continue%20into%20Class%2010%20Biology%20coaching.%20Please%20share%20the%20Class%209%20%E2%86%92%20Class%2010%20continuation%20track%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: Class 10 plan
+              </Link>
+            </div>
+            <div className="bg-white rounded-2xl border-2 border-amber-200 p-6 hover:border-amber-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
+                  <Target className="w-5 h-5 text-amber-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">Class 9 → NEET Foundation</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                Build the NEET foundation early — Class 9 concepts (Cell, Tissues, Diversity)
+                directly link to NEET Class 11. Boards primary, NEET-foundation depth secondary.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%209%20CBSE%20and%20we%20want%20to%20add%20NEET%20foundation%20alongside%20board%20preparation.%20Please%20share%20the%20Class%209%20%E2%86%92%20NEET%20foundation%20track%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: NEET foundation
+              </Link>
+            </div>
+            <div className="bg-white rounded-2xl border-2 border-blue-200 p-6 hover:border-blue-400 hover:shadow-lg transition">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                  <Trophy className="w-5 h-5 text-blue-700" />
+                </div>
+                <h3 className="font-bold text-slate-900">Biology Olympiads</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                Class 9 is a great year to start the Olympiad layer. NSEB eligibility begins
+                Class 11, but the conceptual foundation builds from Class 9. Strong students
+                often start Olympiad-style problem-solving here.
+              </p>
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20My%20child%20is%20in%20Class%209%20CBSE%20and%20we%20want%20to%20explore%20Biology%20Olympiad%20coaching%20%E2%80%94%20NSEB%20%2F%20INBO%20%2F%20IBO%20pipeline.%20Please%20share%20the%20Class%209%20olympiad-foundation%20track."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp: Olympiad enquiry
+              </Link>
+            </div>
+          </div>
+          <p className="text-center text-xs text-slate-500 mt-8">
+            Founded by Dr. Shekhar C Singh (AIIMS New Delhi alumnus) · 680+ medical college
+            selections · 98% NEET qualification rate · Biology-only since 2014
+          </p>
+        </div>
+      </section>
+
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
