@@ -18,6 +18,7 @@ import {
 import Link from 'next/link'
 import Image from 'next/image'
 import { FacultyListSchema } from '@/components/seo/PersonSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { BreadcrumbSchema } from '@/components/seo'
 
 export default function FacultyPage() {
@@ -77,6 +78,21 @@ export default function FacultyPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden">
+      {/* Dr. Shekhar C Singh — cross-vertical Person authority on the
+          /faculty hub. Schema @id is shared site-wide; Google merges
+          this entity across NEET, IB, AP, CBSE, Olympiads. */}
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'Biology Pedagogy India',
+          'Faculty Leadership',
+          'NEET Biology',
+          'IB Biology',
+          'AP Biology',
+          'CBSE Class 11-12 Biology',
+          'Biology Olympiad Coaching',
+        ]}
+        jobTitle="Founder & Lead Biology Faculty — Cerebrum Biology Academy"
+      />
       {/* Breadcrumb Navigation + Schema */}
       <div className="mx-auto max-w-7xl px-4 pt-4 bg-gray-50">
         <BreadcrumbSchema items={[{ label: 'Faculty', isCurrentPage: true }]} />
