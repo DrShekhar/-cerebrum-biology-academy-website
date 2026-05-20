@@ -2330,6 +2330,83 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 32. APEEJAY SCHOOL FARIDABAD (Faridabad, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Part of the broader Apeejay Education Society network (which also runs
+  // Apeejay School Noida, Apeejay Stya University, Apeejay School Delhi
+  // campuses). The Faridabad campus runs CBSE primary with IB DP added as
+  // a senior-school international option.
+  {
+    slug: 'apeejay-faridabad',
+    schoolName: 'Apeejay School Faridabad',
+    shortName: 'Apeejay Faridabad',
+    cityCountry: 'Faridabad, India',
+    citySlug: 'faridabad',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Apeejay School Faridabad is a co-educational day school operating as part of the broader Apeejay Education Society network — one of India's older educational groups, which also runs Apeejay School Noida, Apeejay School Pitampura, Apeejay School Sheikh Sarai, Apeejay School Saket, and Apeejay Stya University (in Gurgaon). The Faridabad campus has been part of the Apeejay network for decades and built its identity on CBSE academic excellence before adding the IB Diploma Programme as a senior-school international option.",
+      "Apeejay Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is smaller than the CBSE cohort — typical of CBSE-primary schools that have added IB DP — and students choosing IB are self-selecting toward international university applications.",
+      "For Apeejay Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. CBSE Class 10's recall-and-standard-answer-structure assessment is meaningfully different from IB DP Paper 2's data-analysis-and-evaluation style. Our DP1 coaching makes this transition explicit in the first term — IB-rubric command terms, long-response mark scheme, IA personal-investigation design. Several Apeejay IB Biology HL students each cohort also pursue our integrated IB+NEET track for the standard dual-application reasons.",
+      "Apeejay Faridabad's location in central Faridabad keeps the school accessible across the Sector belt (14, 15, 17, 19, 80) and from NIT Faridabad. The Apeejay group's broader network (including the Stya University in Gurgaon and Apeejay School Noida) gives families useful cross-network reference points when considering senior-school IB choices. For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day.",
+    ],
+    reputationBullets: [
+      'Part of the broader Apeejay Education Society network',
+      'Sister institutions: Apeejay School Noida, Apeejay School Pitampura, Apeejay Stya University (Gurgaon)',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
+      'Located in Faridabad (central Faridabad)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
+    ],
+    collegeContext:
+      "Apeejay Faridabad IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students, and the Apeejay group's own Apeejay Stya University as a within-network option for some). Biology HL students from Apeejay Faridabad most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+    paceAlignment:
+      "Apeejay Faridabad's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge that is the single highest-leverage external coaching value for Apeejay Faridabad IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
+    faqs: [
+      {
+        question: "Is Apeejay Faridabad the same as Apeejay School Noida or other Apeejay schools? My friends mention different Apeejay campuses.",
+        answer:
+          "All Apeejay schools are part of the broader Apeejay Education Society network but they're structurally different schools with distinct cohort profiles. Apeejay Faridabad is the Faridabad campus running CBSE primary + IB DP senior. Apeejay School Noida and other NCR campuses (Pitampura, Sheikh Sarai, Saket) are also CBSE-rooted but may differ on senior-school IB availability. Apeejay Stya University (Gurgaon) is the network's higher-education arm — distinct from the K-12 schools. Each campus operates independently; the network connection is brand + curriculum framework, not single-campus management.",
+      },
+      {
+        question: "My child finished Apeejay Faridabad's CBSE Class 10 with strong Biology marks — what changes at IB Biology HL?",
+        answer:
+          "Three things change. First, the assessment shifts: CBSE Class 10 prioritises content recall and standardised-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — CBSE Class 10 has nothing equivalent. Third, the syllabus depth in selected topics (cell biology, genetics, physiology) goes meaningfully beyond CBSE Class 10. Our DP1 coaching makes all three transitions explicit in the first term.",
+      },
+      {
+        question: "Apeejay Faridabad's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group affect IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a CBSE-primary school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, UWCSEA) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that with explicit weekly written feedback on long-response answers against the IB Biology mark scheme.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Apeejay Faridabad students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Apeejay Faridabad IB Biology HL students each cohort pursue the dual IB+NEET pathway because the school's CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000-₹98,000 per year for the complete integrated programme. Apeejay Faridabad families typically pay in INR with payment plans across 3-4 instalments.',
+      },
+      {
+        question: "How does Apeejay Faridabad's IB Biology compare to Manav Rachna, DPS Faridabad, and Shri Ram Faridabad?",
+        answer:
+          "Four different positioning profiles. Apeejay Faridabad is part of the older Apeejay Education Society network, CBSE-primary + IB senior. Manav Rachna International is the flagship of the Manav Rachna education group (with MRIIRS university + dental college), multi-curriculum senior (IB + Cambridge + CBSE). DPS Faridabad is part of the DPS national network, CBSE-primary + IB senior. Shri Ram School Faridabad is a TSRS junior + middle-school feeding into TSRS Aravali (Gurgaon) for IB DP. The IB Biology programmes are comparable in quality; school cultures and brand contexts differ. We coach students from all four.",
+      },
+      {
+        question: 'When should an Apeejay Faridabad student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */

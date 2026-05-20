@@ -220,6 +220,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ib-biology-tutor-manav-rachna-faridabad' ||
     path === '/ib-biology-tutor-dps-faridabad' ||
     path === '/ib-biology-tutor-shri-ram-faridabad' ||
+    path === '/ib-biology-tutor-apeejay-faridabad' ||
     path === '/ib-biology-tutor-uwc-mahindra-pune' ||
     path === '/ib-biology-tutor-stonehill-bangalore' ||
     path === '/ib-biology-tutor-inventure-bangalore' ||
@@ -5619,6 +5620,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ib-biology-tutor-shri-ram-faridabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-apeejay-faridabad`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
