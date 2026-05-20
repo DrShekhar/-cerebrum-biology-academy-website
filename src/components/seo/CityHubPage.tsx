@@ -20,6 +20,9 @@ import {
   Zap,
   Shield,
   Award,
+  Target,
+  BookOpen,
+  MessageCircle,
 } from 'lucide-react'
 import type { CityHubData } from '@/data/city-seo/cities'
 import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'
@@ -736,6 +739,99 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 Online Biology Classes
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Cross-sell — Multi-product with city-context-filled WhatsApp.
+            Promotes Class 11/12 + NEET + Olympiad coaching from the same
+            Cerebrum faculty network, with the city / school context already
+            attached to each WhatsApp message so the counsellor sees full
+            context immediately. Affects all ~100 CityHubPage-rendered city
+            and class pages. */}
+        <section className="border-y border-slate-200 bg-gradient-to-br from-emerald-50 via-white to-blue-50 py-14 md:py-20">
+          <div className="mx-auto max-w-5xl px-4">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-xs font-bold uppercase tracking-wider text-emerald-700">
+                Same faculty across boards · NEET · Olympiad · IB
+              </p>
+              <h2 className="mb-3 text-2xl font-bold text-slate-900 md:text-3xl">
+                Beyond this — what else Cerebrum coaches for {data.cityName} students
+              </h2>
+              <p className="mx-auto max-w-3xl text-sm text-slate-600 md:text-base">
+                Cerebrum Biology Academy is biology-only across CBSE Class 9 → Class 10 boards →
+                Class 11-12 → NEET, plus Biology Olympiads (NSEB / INBO / IBO) and international
+                curricula (IB, IGCSE, AP). One faculty network across your child&apos;s entire
+                Biology journey — counsellor sees your {data.cityName} context immediately.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3 md:gap-6">
+              {/* NEET Biology */}
+              <div className="rounded-2xl border-2 border-emerald-200 bg-white p-6 transition hover:border-emerald-400 hover:shadow-lg">
+                <div className="mb-3 flex items-center gap-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100">
+                    <Target className="h-5 w-5 text-emerald-700" />
+                  </div>
+                  <h3 className="font-bold text-slate-900">NEET Biology Coaching</h3>
+                </div>
+                <p className="mb-4 text-sm leading-relaxed text-slate-600">
+                  Class 11 + 12 NEET Biology with same AIIMS-trained faculty. Board-and-NEET
+                  integrated weekly schedule — single faculty, single timetable, dual outcome.
+                </p>
+                <WhatsAppCTAButton
+                  source={`city-hub-crosssell-neet-${data.slug}`}
+                  message={`Hi! I'm from ${data.cityName} and we want to discuss NEET Biology coaching (Class 11 + 12 integrated). Please share fees, schedule, and the board + NEET integrated plan.`}
+                  campaign="city-hub-crosssell-neet"
+                  label="WhatsApp: NEET enquiry"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-700"
+                />
+              </div>
+              {/* Biology Olympiads */}
+              <div className="rounded-2xl border-2 border-amber-200 bg-white p-6 transition hover:border-amber-400 hover:shadow-lg">
+                <div className="mb-3 flex items-center gap-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100">
+                    <Trophy className="h-5 w-5 text-amber-700" />
+                  </div>
+                  <h3 className="font-bold text-slate-900">Biology Olympiads</h3>
+                </div>
+                <p className="mb-4 text-sm leading-relaxed text-slate-600">
+                  Full India funnel: NSEB → INBO → OCSC → IBO India team selection. Suitable for
+                  strong Class 11 / 12 students. {data.cityName} students with school Biology
+                  scores 90+ are typical candidates.
+                </p>
+                <WhatsAppCTAButton
+                  source={`city-hub-crosssell-olympiad-${data.slug}`}
+                  message={`Hi! I'm from ${data.cityName}. My child has strong Biology marks and we want to explore Biology Olympiad coaching — NSEB / INBO / IBO pipeline. Please share schedule, eligibility, and past results.`}
+                  campaign="city-hub-crosssell-olympiad"
+                  label="WhatsApp: Olympiad enquiry"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-amber-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700"
+                />
+              </div>
+              {/* Board Biology / Multi-Curriculum */}
+              <div className="rounded-2xl border-2 border-blue-200 bg-white p-6 transition hover:border-blue-400 hover:shadow-lg">
+                <div className="mb-3 flex items-center gap-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+                    <BookOpen className="h-5 w-5 text-blue-700" />
+                  </div>
+                  <h3 className="font-bold text-slate-900">Class 9 / 10 / 11 / 12 Boards</h3>
+                </div>
+                <p className="mb-4 text-sm leading-relaxed text-slate-600">
+                  Year-round CBSE / ICSE / IGCSE / IB / AP Biology coaching. Class 10 board year
+                  + Class 11 NEET-foundation + Class 12 board-plus-NEET integrated track for{' '}
+                  {data.cityName} families.
+                </p>
+                <WhatsAppCTAButton
+                  source={`city-hub-crosssell-boards-${data.slug}`}
+                  message={`Hi! I'm from ${data.cityName} and we want to discuss broader Biology coaching options — Class 9 / 10 / 11 / 12 board coaching, CBSE / ICSE / IGCSE / IB / AP. Please share what fits our child's class and board.`}
+                  campaign="city-hub-crosssell-boards"
+                  label="WhatsApp: Board coaching"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
+                />
+              </div>
+            </div>
+            <p className="mt-8 text-center text-xs text-slate-500">
+              Founded by Dr. Shekhar C Singh (AIIMS New Delhi alumnus) · 680+ medical college
+              selections · 98% NEET qualification rate · Biology-only since 2014
+            </p>
           </div>
         </section>
 
