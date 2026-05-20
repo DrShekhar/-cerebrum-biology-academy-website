@@ -535,7 +535,7 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
               </div>
               <p className="text-sm text-slate-600 mb-4 leading-relaxed">
                 {isIndiaSchool
-                  ? `NSEB → INBO → OCSC → IBO India team pipeline. We coach the full funnel — IB HL students often have a meaningful Olympiad advantage from the Section 6 practical work.`
+                  ? `NSEB → INBO → OCSC → IBO India team pipeline. We coach the full funnel — IB HL students often have a meaningful Olympiad advantage from their practical-investigation experience built across the IB themes.`
                   : `IBO and country-level olympiads (USABO / BBO / equivalents). The IB HL syllabus overlaps meaningfully with the Olympiad core.`}
               </p>
               <button
@@ -631,8 +631,8 @@ export default function IBBiologySchoolTemplate({ school }: IBBiologySchoolTempl
           the International Baccalaureate Organization, or any IB World School. The school name is
           used descriptively to indicate the audience this page is written for; no endorsement,
           sponsorship, or affiliation is implied. We coach the official IB Biology Diploma Programme
-          (2025 syllabus, HL and SL) using publicly published past papers and the IB&apos;s own
-          Section 6 (Practical Programme) specifications.
+          (2025 syllabus, HL and SL) using publicly published past papers and the IB&apos;s
+          published practical-programme requirements.
         </div>
       </section>
     </main>

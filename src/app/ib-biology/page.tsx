@@ -60,7 +60,7 @@ const hubFAQs = [
   {
     question: 'What changed in the 2025 IB Biology syllabus?',
     answer:
-      'The 2025 IB Biology syllabus is reorganized around four themes — Unity and Diversity, Form and Function, Interaction and Interdependence, and Continuity and Change. Paper 3 (options) has been removed, assessment is now split across two papers, and Internal Assessment criteria give more weight (around 50%) to Conclusion and Evaluation. First assessment is May 2025.',
+      'The 2025 IB Biology syllabus is reorganized around four themes — Unity and Diversity, Form and Function, Interaction and Interdependence, and Continuity and Change. Paper 3 (options) has been removed, so assessment is now split across Paper 1 (MCQs) and Paper 2 (data response + extended response). The Internal Assessment uses four equally weighted criteria — Research Design, Data Analysis, Conclusion, and Evaluation — each worth 6 marks (24 marks total). First assessment is May 2025.',
   },
   {
     question: 'How is IB Biology HL different from SL?',

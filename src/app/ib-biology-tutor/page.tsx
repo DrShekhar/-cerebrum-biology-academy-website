@@ -380,19 +380,15 @@ export default function IBBiologyTutorPage() {
                   </div>
 
                   <div className="bg-gray-50 rounded-xl p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Assessment Breakdown</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">Assessment Breakdown (2025 syllabus)</h4>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex justify-between">
                         <span>Paper 1 (Multiple Choice)</span>
-                        <span className="font-semibold">20%</span>
+                        <span className="font-semibold">36%</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Paper 2 (Data-based & Short)</span>
-                        <span className="font-semibold">40%</span>
-                      </li>
-                      <li className="flex justify-between">
-                        <span>Paper 3 (Option Topic)</span>
-                        <span className="font-semibold">20%</span>
+                        <span>Paper 2 (Data + Short + Extended Response)</span>
+                        <span className="font-semibold">44%</span>
                       </li>
                       <li className="flex justify-between">
                         <span>Internal Assessment</span>
@@ -433,29 +429,21 @@ export default function IBBiologyTutorPage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-200 mt-0.5 flex-shrink-0" />
-                        <span>One option topic (25 hours)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-200 mt-0.5 flex-shrink-0" />
-                        <span>Practical work & IA (60 hours)</span>
+                        <span>Practical work & IA (40+ prescribed hours)</span>
                       </li>
                     </ul>
                   </div>
 
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <h4 className="font-semibold text-white mb-2">Assessment Breakdown</h4>
+                    <h4 className="font-semibold text-white mb-2">Assessment Breakdown (2025 syllabus)</h4>
                     <ul className="space-y-2 text-green-50">
                       <li className="flex justify-between">
                         <span>Paper 1 (Multiple Choice)</span>
-                        <span className="font-semibold">20%</span>
-                      </li>
-                      <li className="flex justify-between">
-                        <span>Paper 2 (Data-based & Extended)</span>
                         <span className="font-semibold">36%</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Paper 3 (Option Topic)</span>
-                        <span className="font-semibold">24%</span>
+                        <span>Paper 2 (Data + Short + Extended Response)</span>
+                        <span className="font-semibold">44%</span>
                       </li>
                       <li className="flex justify-between">
                         <span>Internal Assessment</span>
@@ -650,37 +638,28 @@ export default function IBBiologyTutorPage() {
                 {
                   title: 'Paper 1',
                   subtitle: 'Multiple Choice',
-                  sl: '30 questions, 45 min',
-                  hl: '40 questions, 60 min',
-                  weight: '20%',
-                  description: 'Core and option topics',
+                  sl: '1h 30 min, 60 marks',
+                  hl: '2h, 100 marks (MC + data)',
+                  weight: '36%',
+                  description: 'Themes A-D content',
                   icon: CheckCircle,
                 },
                 {
                   title: 'Paper 2',
-                  subtitle: 'Data-based Questions',
-                  sl: '3 sections, 75 min',
-                  hl: '3 sections, 135 min',
-                  weight: 'SL: 40%, HL: 36%',
-                  description: 'Short and extended response',
+                  subtitle: 'Data + Short + Extended Response',
+                  sl: '1h 30 min, 60 marks',
+                  hl: '2h 30 min, 100 marks',
+                  weight: '44%',
+                  description: 'Data response + short and extended response',
                   icon: FileText,
                 },
                 {
-                  title: 'Paper 3',
-                  subtitle: 'Extended Response',
-                  sl: '2 sections, 60 min',
-                  hl: '3 sections, 75 min',
-                  weight: 'SL: 20%, HL: 24%',
-                  description: 'Option topic questions',
-                  icon: BookOpen,
-                },
-                {
                   title: 'Internal Assessment',
-                  subtitle: 'Individual Investigation',
+                  subtitle: 'Scientific Investigation',
                   sl: '10 hours',
                   hl: '10 hours',
                   weight: '20%',
-                  description: 'Independent research project',
+                  description: 'Independent investigation, 4 IA criteria',
                   icon: Microscope,
                 },
               ].map((paper, index) => (

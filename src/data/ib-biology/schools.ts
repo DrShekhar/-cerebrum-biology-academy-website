@@ -88,7 +88,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "United World College of South East Asia (UWCSEA) is one of the four flagship campuses of the United World Colleges movement, with two large Singapore campuses at Dover and East. Both campuses run the IB Diploma Programme in High School with combined enrolments that make UWCSEA one of the largest single IBDP cohorts anywhere in the world — over 1,000 IBDP candidates per year across both campuses, publicly reported in the school's annual diploma results communications.",
-      'UWCSEA Biology students benefit from a department staffed by IB-trained teachers, several with examiner experience, and laboratory facilities that comfortably support every prescribed Section 6 (Practical Programme) investigation in the 2025 IB Biology guide. Both HL and SL options run in parallel each year, and the school publishes IB diploma averages well above the global mean — recent UWCSEA cohort averages have been around 36 points out of 45, with a meaningful share of students scoring above 40.',
+      'UWCSEA Biology students benefit from a department staffed by IB-trained teachers, several with examiner experience, and laboratory facilities that comfortably support every prescribed practical investigation prescribed in the 2025 IB Biology guide. Both HL and SL streams run in parallel each year, and the school publishes IB diploma averages well above the global mean — recent UWCSEA cohort averages have been around 36 points out of 45, with a meaningful share of students scoring above 40.',
       "For UWCSEA students, the gap that drives external tutoring is rarely concept exposure. The school covers the syllabus thoroughly. The gap is rubric calibration — translating UWCSEA's deep classroom work into the specific Paper 2 long-response mark scheme structure the IB rewards — plus IA scaffolding through the May–November DP1 internal-assessment cycle and final EE submission in early DP2. Our 1:1 sessions plug into precisely those two windows.",
       "UWCSEA's CAS programme is intense by design — the UWC ethos places service, activity, and outdoor leadership at the heart of student life — so weekday tutoring has to be compact and focused rather than long and repetitive. We have spent years calibrating session structure to UWCSEA's weekly load: 60–90 minute 1:1 blocks, no homework that duplicates school work, and asynchronous WhatsApp turnaround on past-paper questions inside 24 hours so students get feedback without losing momentum. This compact-and-precise approach is what most UWCSEA parents tell us made the difference between adding tutoring and removing it.",
     ],
@@ -98,34 +98,34 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Annual IBDP cohort exceeds 1,000 candidates combined (publicly reported)',
       'Recent school-reported diploma averages around 36 points (vs global mean ~30)',
       'Strong matriculation to UK, US, Canadian, Australian, and Singapore universities',
-      'Dedicated IB Biology HL and SL streams; full Section 6 practical coverage',
+      'Dedicated IB Biology HL and SL streams; full full practical-programme coverage',
     ],
     diplomaContext:
       "UWCSEA publicly reports IBDP cohort averages around 36 points across both campuses, with a meaningful share of candidates scoring 40+ (publicly reported in the school's annual diploma communications). HL Biology is one of the most popular Group 4 choices.",
     collegeContext:
       "UWCSEA graduates matriculate across UK (Oxbridge, Imperial, UCL, King's, Edinburgh), US (Harvard, Yale, Princeton, MIT, Stanford, the Ivy+ band), Canada (Toronto, McGill, UBC), Australia (Melbourne, Sydney, ANU, Monash), and Singapore (NUS, NTU, SMU, Yale-NUS while it existed). For Biology HL students, common pathways include UK medicine (with the additional UCAT/BMAT requirements), Singapore NUS Medicine, and US pre-med through Ivy+ and Stanford. The school's university guidance reports are published annually.",
     paceAlignment:
-      'UWCSEA IB Biology follows the standard two-year DP track with IA topic selection in late DP1 and submission early DP2; EE submission in DP2 for those choosing Biology as their EE subject. Our coaching aligns to this: HL conceptual reinforcement and Paper 2 mark-scheme drilling during DP1, IA mentorship through the data-analysis and evaluation phase, then full-length Paper 1/2/3 mocks across November DP2 mocks and the May final-exam window. Live sessions are scheduled in SGT evenings (7–9 PM) to fit the long UWCSEA school day and CAS commitments; weekend morning blocks accommodate sport-heavy schedules. For students with significant outdoor leadership commitments (Project Week, the UWCSEA outdoor education programme), we adjust the weekly cadence around extended-trip dates rather than missing sessions outright.',
+      'UWCSEA IB Biology follows the standard two-year DP track with IA topic selection in late DP1 and submission early DP2; EE submission in DP2 for those choosing Biology as their EE subject. Our coaching aligns to this: HL conceptual reinforcement and Paper 2 mark-scheme drilling during DP1, IA mentorship through the data-analysis and evaluation phase, then full-length Paper 1 and Paper 2 mocks across November DP2 mocks and the May final-exam window. Live sessions are scheduled in SGT evenings (7–9 PM) to fit the long UWCSEA school day and CAS commitments; weekend morning blocks accommodate sport-heavy schedules. For students with significant outdoor leadership commitments (Project Week, the UWCSEA outdoor education programme), we adjust the weekly cadence around extended-trip dates rather than missing sessions outright.',
     faqs: [
       {
         question: 'Do UWCSEA students typically need outside IB Biology tutoring?',
         answer:
-          "UWCSEA's Biology department is strong, so most students do not need content tutoring. The two specific gaps that drive families to engage us are (1) Paper 2 mark-scheme calibration — converting UWCSEA's deep classroom work into the IB's specific long-response rubric — and (2) IA scaffolding through the topic-to-submission cycle, especially for students aiming for a 6 or 7 with a strong Section 6 connection.",
+          "UWCSEA's Biology department is strong, so most students do not need content tutoring. The two specific gaps that drive families to engage us are (1) Paper 2 mark-scheme calibration — converting UWCSEA's deep classroom work into the IB's specific long-response rubric — and (2) IA scaffolding through the topic-to-submission cycle, especially for students aiming for a 6 or 7 with a strong practical-programme connection.",
       },
       {
         question: 'What is the difference between UWCSEA Dover and East for IB Biology coaching?',
         answer:
-          "The two campuses follow the same IB Biology syllabus on broadly aligned schedules but have different teacher cohorts and IA submission rhythms. Our 1:1 sessions adapt to your campus's internal calendar — IA deadlines, mock exam windows, and the school's own Section 6 practical schedule — so the coaching does not collide with school-set due dates.",
+          "The two campuses follow the same IB Biology syllabus on broadly aligned schedules but have different teacher cohorts and IA submission rhythms. Our 1:1 sessions adapt to your campus's internal calendar — IA deadlines, mock exam windows, and the school's own practical-work schedule — so the coaching does not collide with school-set due dates.",
       },
       {
         question: 'Do you coach Biology HL and SL for UWCSEA students?',
         answer:
-          'Yes. HL coaching covers the additional HL-only material (cellular respiration depth, neurobiology, animal physiology, plant biology HL extensions) plus the extra Paper 1 and Paper 2 long-response items. SL coaching focuses on Paper 1 multiple-choice precision and Paper 2 structured-response timing. Both streams use Paper 3 lab-data practice from past papers.',
+          'Yes. HL coaching covers the additional HL-only material (cellular respiration depth, neurobiology, animal physiology, plant biology HL extensions) plus the extra Paper 1 and Paper 2 long-response items. SL coaching focuses on Paper 1 multiple-choice precision and Paper 2 structured-response timing. Both streams use Paper 2 data-response practice from past papers.',
       },
       {
         question: 'When should a UWCSEA student start IB Biology tutoring?',
         answer:
-          'For the integrated 2-year programme, August or September of DP1 is the ideal start — that maximises the IA mentorship window. For students who only need exam-focused coaching, October DP2 (after the November mocks) is still effective for the May final exams, with focus on Paper 2 mark-scheme calibration and Paper 3 lab-data drills.',
+          'For the integrated 2-year programme, August or September of DP1 is the ideal start — that maximises the IA mentorship window. For students who only need exam-focused coaching, October DP2 (after the November mocks) is still effective for the May final exams, with focus on Paper 2 mark-scheme calibration and data-response drills.',
       },
       {
         question:
@@ -158,7 +158,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       'The American School of Dubai (ASD) is a not-for-profit, US-accredited international school in Al Barsha, Dubai, founded in 1966. ASD is dual-accredited by the IB Organization (for the Diploma Programme) and the New England Association of Schools and Colleges (NEASC) — a combination that lets students pursue either a US high-school diploma with AP coursework or the full IB Diploma. The school is part of the Near East South Asia Council of Overseas Schools (NESA) network.',
-      "ASD's science department runs IB Biology HL and SL alongside AP Biology, with parallel laboratory facilities that support every prescribed Section 6 investigation. The school has publicly reported strong IB results in its annual school profile, and IB Biology is one of the most-chosen Group 4 subjects for students targeting medicine or biosciences. ASD's university counselling is US-style — Naviance-driven, college-fair-rich — which shapes how the IB Biology cohort thinks about their HL choices.",
+      "ASD's science department runs IB Biology HL and SL alongside AP Biology, with parallel laboratory facilities that support every prescribed practical-programme investigation. The school has publicly reported strong IB results in its annual school profile, and IB Biology is one of the most-chosen Group 4 subjects for students targeting medicine or biosciences. ASD's university counselling is US-style — Naviance-driven, college-fair-rich — which shapes how the IB Biology cohort thinks about their HL choices.",
       "For ASD students, the most common reasons to engage outside IB Biology tutoring are (1) Paper 2 mark-scheme calibration, because ASD's in-school assessments are typically more discursive than the IB's specific 6/7-marker rubric requires, and (2) IA mentorship — Dubai students often want a second pair of eyes on their data-analysis and evaluation sections before the school's internal moderation pass. Our 1:1 sessions plug into both gaps, and our timezone overlap with GST is direct.",
       "ASD's residential pattern — a large share of families are in Jumeirah, Emirates Hills, Arabian Ranches, and the Springs — means many students lose 45–60 minutes a day to school commute. Our online tutoring removes that loss entirely: sessions run from the student's desk at home, with sessions recorded for next-day review during car time. We have ASD students who treat the morning commute as a structured pre-class revision window, listening to the previous evening's recorded session at 1.25× speed. This is a small workflow detail, but for an ASD HL Biology student carrying six DP subjects plus the EE, it can add up to 4–5 hours of recovered study time per week.",
     ],
@@ -178,7 +178,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Does ASD Dubai offer both AP Biology and IB Biology?',
         answer:
-          'Yes — ASD is one of the few schools globally that runs both the IB Diploma Programme and AP coursework in parallel. Students typically choose one pathway by Grade 10. For IB Biology specifically, the school offers both HL and SL streams with full Section 6 practical coverage. Our coaching is IB-specific — if your student is on the AP track, see our AP Biology pages instead.',
+          'Yes — ASD is one of the few schools globally that runs both the IB Diploma Programme and AP coursework in parallel. Students typically choose one pathway by Grade 10. For IB Biology specifically, the school offers both HL and SL streams with full full practical-programme coverage. Our coaching is IB-specific — if your student is on the AP track, see our AP Biology pages instead.',
       },
       {
         question: 'How does the Sunday–Thursday school week affect live tutoring slots?',
@@ -203,7 +203,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'How early should an ASD Dubai student start IB Biology coaching?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 is the ideal start — that maximises the IA mentorship window through the school's February DP2 internal moderation. For students who only need exam-focused coaching, October DP2 (after the school's first DP2 mock) is still effective for May finals, focusing on Paper 2 mark-scheme calibration and Paper 3 lab-data drills using past papers from 2016 onwards.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 is the ideal start — that maximises the IA mentorship window through the school's February DP2 internal moderation. For students who only need exam-focused coaching, October DP2 (after the school's first DP2 mock) is still effective for May finals, focusing on Paper 2 mark-scheme calibration and data-response drills using past papers from May 2025 onwards.",
       },
     ],
   },
@@ -225,7 +225,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['MYP', 'DP'],
     historyParagraphs: [
       'GEMS Dubai American Academy (DAA) is one of the most established schools in the GEMS Education network, located in Al Barsha South. DAA runs an IB Continuum from Middle Years Programme (MYP) through to Diploma Programme (DP), and additionally offers an American high-school diploma with AP options for students who choose that pathway. The school has been operating for over three decades and is consistently among the most-applied-to international schools in the UAE.',
-      "DAA's IB Biology cohort sits within a large school of around 2,500 students across all sections. The Diploma Programme cohort is typically several hundred students per year, with Biology HL and SL both offered. The science faculty is staffed by experienced IB teachers and the laboratory facilities cover the full Section 6 practical programme. DAA's Biology cohort also sees students who came up through the school's MYP — meaning a meaningful share have already completed three or four years of inquiry-based science before reaching DP.",
+      "DAA's IB Biology cohort sits within a large school of around 2,500 students across all sections. The Diploma Programme cohort is typically several hundred students per year, with Biology HL and SL both offered. The science faculty is staffed by experienced IB teachers and the laboratory facilities cover the full the practical-programme section practical programme. DAA's Biology cohort also sees students who came up through the school's MYP — meaning a meaningful share have already completed three or four years of inquiry-based science before reaching DP.",
       "For DAA students, the value-add of outside tutoring is most often in two specific areas: (1) IA scaffolding, because the IA carries 20% of the final grade and is the single most-controllable score component, and (2) Paper 2 long-response mark-scheme calibration, where strong DAA classroom answers can still drop points against the IB's very specific rubric. Our 1:1 sessions plug into both — GST live time, weekly through the DP2 cycle.",
       "GEMS DAA's large cohort size has a specific implication for how families approach external tutoring: with several hundred DP students, individual feedback from school teachers on practice papers is necessarily rationed. Our 1:1 Elite tier ($75/hour) and our Complete Programme both build in unlimited written-feedback turnaround on past-paper attempts — students send a photo of their attempted Paper 2 long response over WhatsApp, and they receive examiner-style annotation back within 24 hours. For DAA HL Biology students in their final mock-exam push (January through March DP2), this written-feedback loop is the highest-leverage tutoring component we offer.",
     ],
@@ -245,7 +245,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Is GEMS DAA an IB Continuum school?',
         answer:
-          'Yes — DAA runs MYP through DP, meaning students who came up through the school typically have several years of inquiry-based science before reaching DP1. This is an advantage: the conceptual framework of "scientific investigation" maps directly onto IB Biology Section 6 (Practical Programme) work. Our coaching builds on that foundation rather than introducing it.',
+          'Yes — DAA runs MYP through DP, meaning students who came up through the school typically have several years of inquiry-based science before reaching DP1. This is an advantage: the conceptual framework of "scientific investigation" maps directly onto IB Biology the IB practical programme work. Our coaching builds on that foundation rather than introducing it.',
       },
       {
         question: 'How does the Dubai weekend affect tutoring scheduling?',
@@ -260,7 +260,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Can DAA MYP students start IB Biology preparation early?',
         answer:
-          "Our coaching is DP-focused (Grade 11 and Grade 12). For MYP students, we recommend strong engagement with the school's MYP Sciences and Personal Project — these directly build the scientific-method foundation that pays off in DP1 Section 6 work. We start formal IB Biology coaching at the start of DP1 (August/September of Grade 11).",
+          "Our coaching is DP-focused (Grade 11 and Grade 12). For MYP students, we recommend strong engagement with the school's MYP Sciences and Personal Project — these directly build the scientific-method foundation that pays off in DP1 practical-programme work. We start formal IB Biology coaching at the start of DP1 (August/September of Grade 11).",
       },
       {
         question: 'How does pricing work for DAA families?',
@@ -298,16 +298,16 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Tanglin Trust School is one of the oldest British international schools in Asia, founded in 1925 in Singapore. Tanglin runs a dual-pathway senior school in which Sixth Form students choose between A Levels and the IB Diploma Programme — uniquely, a number of students each year opt for IB after considering both. This dual-track structure means Tanglin's IB Biology cohort is self-selecting toward students who specifically prefer the IB's breadth and IA-driven assessment over A Levels' depth-and-finals model.",
-      "Tanglin's IB Biology runs both HL and SL. The Sixth Form is sited at the Portsdown Road campus, and the school has publicly reported strong IB results — recent diploma averages above the global mean, with a meaningful share of candidates scoring 40+ (publicly reported in the school's annual results communications). The Biology department is staffed by IB-experienced teachers and offers full Section 6 (Practical Programme) coverage. Tanglin's cohort sits inside the highly competitive Singapore IB market alongside UWCSEA, SAS, Dulwich, and Stamford.",
-      'For Tanglin students, the most common driver of external tutoring is the dual-track A-Level / IB context: students who chose IB over A Levels often want a tutor who can fully commit to the IB rubric without any A-Level-style "depth-over-breadth" framing creeping in. Our 1:1 sessions are 100% IB-rubric-aligned — Paper 2 mark-scheme calibration, IA mentorship, Paper 3 lab-data drills — and our examiners have experience with both Tanglin\'s internal moderation rhythm and the November DP2 mock cycle.',
-      "Tanglin's Sixth Form is academically settled — students have made an active choice between A Levels and IB, which means by the time they reach DP1 they are typically self-motivated and clear about their university targets. Our coaching adapts to that profile: we do not over-explain or duplicate school work; instead, we focus on the highest-leverage rubric and IA components. For Tanglin students aiming for UK medicine, a 7 in Biology HL combined with a strong UCAT score is the standard target, and our 1:1 Elite Tutoring tier is calibrated to that exact endpoint with examiner-led Paper 2 and Paper 3 drilling through the final spring before May exams.",
+      "Tanglin's IB Biology runs both HL and SL. The Sixth Form is sited at the Portsdown Road campus, and the school has publicly reported strong IB results — recent diploma averages above the global mean, with a meaningful share of candidates scoring 40+ (publicly reported in the school's annual results communications). The Biology department is staffed by IB-experienced teachers and offers full the IB practical programme coverage. Tanglin's cohort sits inside the highly competitive Singapore IB market alongside UWCSEA, SAS, Dulwich, and Stamford.",
+      'For Tanglin students, the most common driver of external tutoring is the dual-track A-Level / IB context: students who chose IB over A Levels often want a tutor who can fully commit to the IB rubric without any A-Level-style "depth-over-breadth" framing creeping in. Our 1:1 sessions are 100% IB-rubric-aligned — Paper 2 mark-scheme calibration, IA mentorship, and data-response practice — and our examiners have experience with both Tanglin\'s internal moderation rhythm and the November DP2 mock cycle.',
+      "Tanglin's Sixth Form is academically settled — students have made an active choice between A Levels and IB, which means by the time they reach DP1 they are typically self-motivated and clear about their university targets. Our coaching adapts to that profile: we do not over-explain or duplicate school work; instead, we focus on the highest-leverage rubric and IA components. For Tanglin students aiming for UK medicine, a 7 in Biology HL combined with a strong UCAT score is the standard target, and our 1:1 Elite Tutoring tier is calibrated to that exact endpoint with examiner-led Paper 2 drilling and data-response practice through the final spring before May exams.",
     ],
     reputationBullets: [
       'Founded 1925 — one of the oldest British international schools in Asia',
       'Dual-pathway Sixth Form: A Levels and IB Diploma both offered',
       'Located at Portsdown Road, Singapore',
       'Recent school-reported IB diploma averages above the global mean',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong matriculation to UK (Oxbridge, Russell Group), US, Singapore (NUS, NTU), and Australian universities',
     ],
     collegeContext:
@@ -328,12 +328,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you coach Tanglin students for UK medicine via IB Biology?',
         answer:
-          "Yes. UK medicine is the most common matriculation pathway for Tanglin's IB Biology HL students. We coach the Biology HL component (Paper 2 long-response, Paper 3 lab-data, IA at 6/7 level) and coordinate with the school's timing on UCAT/BMAT — but we do not coach UCAT/BMAT directly. For that, your school's university counselling office or a specialist medical-admissions service is the right place.",
+          "Yes. UK medicine is the most common matriculation pathway for Tanglin's IB Biology HL students. We coach the Biology HL component (Paper 2 long-response, data-response sections, IA at 6/7 level) and coordinate with the school's timing on UCAT/BMAT — but we do not coach UCAT/BMAT directly. For that, your school's university counselling office or a specialist medical-admissions service is the right place.",
       },
       {
         question: 'When should a Tanglin student start IB Biology tutoring?',
         answer:
-          'For the integrated 2-year Complete Programme, start in August or September of DP1 — that maximises the IA mentorship window. For students who only need exam-focused coaching, October DP2 (after November mocks) is still effective for May finals, focusing on Paper 2 mark-scheme calibration and Paper 3 lab-data drills.',
+          'For the integrated 2-year Complete Programme, start in August or September of DP1 — that maximises the IA mentorship window. For students who only need exam-focused coaching, October DP2 (after November mocks) is still effective for May finals, focusing on Paper 2 mark-scheme calibration and data-response drills.',
       },
       {
         question: 'How does pricing work for Tanglin Trust families?',
@@ -365,7 +365,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'NIST International School Bangkok is a not-for-profit IB Continuum school located in Sukhumvit. NIST has the distinction of being the first school in Thailand to offer all three core IB programmes — Primary Years Programme, Middle Years Programme, and Diploma Programme — making it a full-continuum IB World School. The school was established in 1992 with founding involvement of the UN community in Bangkok and remains one of the leading international schools in Southeast Asia.',
-      "NIST's IB Diploma cohort is one of the larger DP cohorts in Bangkok, with IB Biology HL and SL both offered each year. The school has publicly reported diploma averages well above the global mean — recent NIST cohort averages have been in the 35–37 point range, with a substantive share of students scoring 40+ (publicly reported in the school's annual results communications). The Biology department is staffed by IB-experienced teachers and the laboratory facilities support every prescribed Section 6 investigation.",
+      "NIST's IB Diploma cohort is one of the larger DP cohorts in Bangkok, with IB Biology HL and SL both offered each year. The school has publicly reported diploma averages well above the global mean — recent NIST cohort averages have been in the 35–37 point range, with a substantive share of students scoring 40+ (publicly reported in the school's annual results communications). The Biology department is staffed by IB-experienced teachers and the laboratory facilities support every prescribed practical-programme investigation.",
       "For NIST students, the most common driver of external tutoring is the same as at the other top regional IB schools: Paper 2 mark-scheme calibration and IA mentorship through the DP1 topic-selection to DP2 final-submission window. Bangkok's ICT timezone overlaps cleanly with our SGT-Asia tutoring schedule, and our 1:1 sessions sit in ICT evenings (7–9 PM) or weekend morning blocks.",
       "NIST students often have a dual application strategy: UK and US universities for most graduates, with a meaningful share also targeting the Mahidol International College direct-entry medical track for students who want to stay in Thailand. This dual strategy shapes how we calibrate Biology HL coaching — a strong 6 or 7 in Biology HL is competitive for both UK medicine (with UCAT/BMAT) and the Mahidol pathway, so the coaching itself is the same; the surrounding application support diverges by destination. We coordinate with NIST's university counselling office on the academic-signal side (Biology HL score, IA quality, EE topic where chosen) and leave the destination-specific application work to specialists.",
     ],
@@ -374,7 +374,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Not-for-profit, founded 1992 with UN community involvement',
       'Located in Sukhumvit, Bangkok',
       'Recent school-reported diploma averages in the 35–37 point range',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong matriculation to UK, US, Canadian, Australian, and Asian universities',
     ],
     collegeContext:
@@ -385,7 +385,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Is NIST a full IB Continuum school?',
         answer:
-          'Yes — NIST was the first school in Thailand to offer PYP + MYP + DP. Students who came up through NIST typically have a strong inquiry-based science foundation by the time they reach DP1, which makes the Section 6 Practical Programme work more intuitive. Our coaching builds on that foundation rather than introducing the inquiry framework.',
+          'Yes — NIST was the first school in Thailand to offer PYP + MYP + DP. Students who came up through NIST typically have a strong inquiry-based science foundation by the time they reach DP1, which makes the IB practical programme work more intuitive. Our coaching builds on that foundation rather than introducing the inquiry framework.',
       },
       {
         question: 'How does the ICT timezone affect live tutoring?',
@@ -395,12 +395,12 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you coach NIST students for the Mahidol International medical pathway?',
         answer:
-          "Yes for the Biology HL component. Mahidol International College's direct-entry medical track has specific Biology requirements that map well to IB Biology HL with a 6 or 7. We coach the Biology HL syllabus (Paper 2 long-response, Paper 3 lab-data, IA at 6/7 level); the Thai-medical-admissions specifics — interview prep, the Mahidol-specific entrance test — are best handled through your school's counselling office or a specialist Thai medical admissions service.",
+          "Yes for the Biology HL component. Mahidol International College's direct-entry medical track has specific Biology requirements that map well to IB Biology HL with a 6 or 7. We coach the Biology HL syllabus (Paper 2 long-response, data-response sections, IA at 6/7 level); the Thai-medical-admissions specifics — interview prep, the Mahidol-specific entrance test — are best handled through your school's counselling office or a specialist Thai medical admissions service.",
       },
       {
         question: 'When should a NIST student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1. For students who only need exam-focused coaching, October DP2 (after November mocks) is still effective for May finals. NIST's strong content delivery means students who join us mid-DP2 already have the core syllabus exposure; we focus on Paper 2 mark-scheme calibration and Paper 3 lab-data drills.",
+          "For the integrated 2-year Complete Programme, August or September of DP1. For students who only need exam-focused coaching, October DP2 (after November mocks) is still effective for May finals. NIST's strong content delivery means students who join us mid-DP2 already have the core syllabus exposure; we focus on Paper 2 mark-scheme calibration and data-response drills.",
       },
       {
         question: 'How does pricing work for NIST Bangkok families?',
@@ -437,7 +437,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Pathways World School Aravali is a residential and day IB Continuum school in the Aravali range south of Gurgaon, founded in 2003. The school runs PYP, MYP, and DP, making it one of the longer-running full-continuum IB schools in India. The Aravali campus sits on a large green campus designed by architect Sanjay Mohe; students board on-campus or commute from across the Gurgaon catchment (DLF, Golf Course Road, Sohna Road).',
-      "Pathways Aravali's IB Biology cohort is one of the larger DP Biology cohorts in the Delhi NCR region. Both HL and SL are offered, and the school has publicly reported strong IB results — recent cohort averages have been at or above the global mean, with a meaningful share of candidates scoring 40+ (publicly reported in the school's annual results communications). The Biology department is staffed by IB-experienced teachers and the laboratory facilities support the full Section 6 (Practical Programme) syllabus.",
+      "Pathways Aravali's IB Biology cohort is one of the larger DP Biology cohorts in the Delhi NCR region. Both HL and SL are offered, and the school has publicly reported strong IB results — recent cohort averages have been at or above the global mean, with a meaningful share of candidates scoring 40+ (publicly reported in the school's annual results communications). The Biology department is staffed by IB-experienced teachers and the laboratory facilities support the full the IB practical programme syllabus.",
       "For Pathways Aravali students, the most common driver of external tutoring is twofold: (1) Paper 2 mark-scheme calibration, where strong classroom answers can still drop points against the IB's specific long-response rubric, and (2) IA mentorship through the DP1 topic-selection cycle. Many Pathways families also want a parallel IB+NEET option — We coach an IB+NEET integrated weekly schedule — a specialised track that few biology coaching providers in India run, and a substantive share of Pathways Aravali students pursue that combined pathway.",
       "Pathways Aravali's residential structure shapes tutoring scheduling specifically — day students from DLF, Golf Course Road, and Sohna Road commute up to 60 minutes each way, while boarders study on campus through the evening. Our IST live sessions sit at 7–9 PM, which works for both — day students join from home after the school commute, boarders join from the school's study halls during scheduled evening study time. For IB+NEET students, we also run weekend intensive blocks (Saturday and Sunday mornings, 3 hours each) that compress the additional NEET Chemistry and Physics into manageable weekly batches without colliding with the school's own weekend testing schedule.",
     ],
@@ -446,7 +446,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Founded 2003 — among the longer-running full-continuum IB schools in India',
       'Located in the Aravali range south of Gurgaon — residential + day campus',
       'Recent school-reported diploma averages at or above the global mean',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong matriculation to UK, US, Canadian, Australian, and Indian universities',
     ],
     collegeContext:
@@ -531,7 +531,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
         question:
           'Do you support UWC Mahindra students applying through the Davis UWC Scholars Program?',
         answer:
-          "For the IB Biology component — yes. The Davis Scholar network includes 100+ US partner colleges, and a strong IB Biology HL score (6 or 7) is part of the academic signal for the most competitive Davis placements. We coach the Biology HL syllabus (Paper 2 long-response, Paper 3 lab-data, IA at 6/7 level); the Davis application itself and the US-college-specific essays are best handled through the college's university counselling office.",
+          "For the IB Biology component — yes. The Davis Scholar network includes 100+ US partner colleges, and a strong IB Biology HL score (6 or 7) is part of the academic signal for the most competitive Davis placements. We coach the Biology HL syllabus (Paper 2 long-response, data-response sections, IA at 6/7 level); the Davis application itself and the US-college-specific essays are best handled through the college's university counselling office.",
       },
       {
         question: 'Do you coach UWC Mahindra students for UK medicine?',
@@ -574,7 +574,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Stonehill International School is a full IB Continuum school in north Bangalore, founded in 2008. Stonehill runs PYP, MYP, and DP, sitting on a large campus near Yelahanka. The school is operated by the Embassy Group as a not-for-profit and is one of the higher-fee international schools in Bangalore. Day and weekly-boarding options are both offered.',
-      "Stonehill's IB Diploma cohort is mid-sized for a Bangalore IB school, with IB Biology HL and SL both offered each year. The school has publicly reported diploma averages above the global mean — recent cohort averages have been in the 33–36 point range, with the strongest students scoring 40+ (publicly reported in the school's annual results communications). The Biology department supports the full Section 6 (Practical Programme) syllabus.",
+      "Stonehill's IB Diploma cohort is mid-sized for a Bangalore IB school, with IB Biology HL and SL both offered each year. The school has publicly reported diploma averages above the global mean — recent cohort averages have been in the 33–36 point range, with the strongest students scoring 40+ (publicly reported in the school's annual results communications). The Biology department supports the full the IB practical programme syllabus.",
       "For Stonehill students, the most common driver of external tutoring is the Bangalore IB context: students at Stonehill, Canadian International, Indus, TISB, and Inventure form a tightly competitive set, and families want their student's IB Biology HL score to differentiate. Our 1:1 sessions focus on Paper 2 mark-scheme calibration (the single biggest source of dropped points among strong-classroom students) plus IA mentorship through the DP1 topic-selection cycle. IST timezone aligns directly with our India-based live tutoring schedule.",
       'Bangalore IB families also tend to be highly information-driven — many parents are tech-industry professionals who research tutoring options exhaustively before committing. We have responded to that profile with full transparency on pricing (USD-denominated, no hidden costs), session structure (recorded for review, written feedback inside 24 hours), and outcomes (we publish typical score improvements rather than individual case studies). For Stonehill students considering the dual IB+NEET track, we also publish a full week-by-week schedule of how the integrated programme works across DP1, DP2, and the final NEET season so families can audit the time commitment before signing up.',
       "Stonehill's weekly-boarding option means a meaningful share of students spend Monday through Friday on campus and return home for the weekend. This bifurcates the tutoring schedule cleanly: 1:1 evening sessions during the week from the boarding house (with the school's awareness), and longer 2–3 hour weekend morning blocks at home where the student has uninterrupted desk space for IA work or extended past-paper practice. Day students typically take 60–90 minute weekday evening sessions, which means our scheduling can accommodate both modes within the same examiner's weekly calendar.",
@@ -585,7 +585,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Operated by Embassy Group on a not-for-profit basis',
       'Day and weekly-boarding options',
       'Recent school-reported diploma averages in the 33–36 point range',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
     ],
     collegeContext:
       'Stonehill graduates matriculate to UK (Russell Group, Oxbridge, Imperial, UCL), US (Ivy+, NYU, top liberal arts, public flagships), Canada (McGill, Toronto, Waterloo, UBC), Australia (Melbourne, Sydney, ANU), and Indian universities (Ashoka, Krea, Shiv Nadar, plus AIIMS / state medical colleges for IB+NEET students). For Biology HL students, common pathways include UK medicine, US pre-med, and Canadian life-sciences direct entry; the IB+NEET track is available for students staying in India.',
@@ -644,7 +644,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Inventure Academy is a co-educational K-12 school in Whitefield, Bangalore, founded in 2005. Inventure runs an Indian board curriculum (ICSE/ISC) through Grade 10, then offers the IB Diploma Programme as the senior school option for Grades 11 and 12. This board-to-IB transition is distinctive — it means Inventure's IB Biology DP1 cohort typically arrives with strong ICSE Biology foundations rather than MYP science.",
-      "Inventure's IB Biology cohort is mid-sized for a Bangalore IB school, with both HL and SL offered. The school has publicly reported diploma results above the global mean — recent cohort averages have been in the 33–35 point range, with the strongest students scoring 40+ (publicly reported in the school's annual communications). The Biology department supports the full Section 6 (Practical Programme) syllabus on the school's Whitefield campus.",
+      "Inventure's IB Biology cohort is mid-sized for a Bangalore IB school, with both HL and SL offered. The school has publicly reported diploma results above the global mean — recent cohort averages have been in the 33–35 point range, with the strongest students scoring 40+ (publicly reported in the school's annual communications). The Biology department supports the full the IB practical programme syllabus on the school's Whitefield campus.",
       'For Inventure students, the most common driver of external tutoring is the ICSE-to-IB transition: ICSE Biology is a content-dense, recall-heavy syllabus, while IB Biology HL rewards data analysis, evaluation, and the specific Paper 2 long-response rubric. Students with strong ICSE habits sometimes over-write or over-recall on Paper 2. Our 1:1 sessions explicitly calibrate the ICSE-to-IB writing-style transition and add IA mentorship through the DP1 topic-selection cycle.',
       'The ICSE-to-IB transition has a specific practical implication for IB+NEET-track students at Inventure: ICSE Class 10 already covers a substantive portion of the NEET Biology and Chemistry syllabus (kingdom classification, plant and human physiology, basic organic chemistry), so Inventure students arrive at DP1 with a stronger NEET-relevant base than students from MYP-fed schools. We exploit that advantage in the integrated IB+NEET schedule: the first six months of DP1 emphasise IB Biology HL depth and the IA topic-selection process, with NEET Chemistry and Physics building in parallel rather than starting from zero. By DP2, the integrated programme is in steady-state weekly rhythm.',
       "Inventure's Whitefield location is convenient for the technology-corridor Bangalore IB families but also means commute times to and from school are significant — Inventure students living in Koramangala, Indiranagar, or JP Nagar can spend 60–75 minutes each way during peak traffic. Our online-first tutoring removes that loss: 1:1 sessions run from the student's home desk, with recordings available for next-day review on the commute. For weekend intensive blocks (most relevant in the final spring before May exams), we run Saturday and Sunday morning 2-hour sessions that align with Inventure's lighter weekend testing schedule.",
@@ -652,7 +652,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     reputationBullets: [
       'K-12 school in Whitefield, Bangalore, founded 2005',
       'ICSE/ISC through Grade 10, then IB Diploma Programme in Grades 11-12',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Recent school-reported diploma averages in the 33–35 point range',
       'Day and limited weekly-boarding options',
       'Strong matriculation to UK, US, Canadian, Australian, and Indian universities',
@@ -714,9 +714,9 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Oberoi International School (OIS) is a full IB Continuum school with two Mumbai campuses — JVLR (Goregaon) and OGC (Powai) — operated by Oberoi Realty as a not-for-profit. The school runs PYP, MYP, and DP, and is one of the most-applied-to international schools in Mumbai. Oberoi sits in the broader top-tier Mumbai IB cluster alongside Dhirubhai Ambani International, JBCN, Ecole Mondiale, ASB, and Aditya Birla World Academy.',
-      "Oberoi's IB Diploma cohort is one of the larger DP cohorts in Mumbai, with IB Biology HL and SL both offered each year across the two campuses. The school has publicly reported strong IB results — recent cohort averages have been at or above the global mean, with a substantive share of candidates scoring 40+ (publicly reported in the school's annual results communications). The Biology departments at both campuses are staffed by IB-experienced teachers and the laboratory facilities support the full Section 6 syllabus.",
+      "Oberoi's IB Diploma cohort is one of the larger DP cohorts in Mumbai, with IB Biology HL and SL both offered each year across the two campuses. The school has publicly reported strong IB results — recent cohort averages have been at or above the global mean, with a substantive share of candidates scoring 40+ (publicly reported in the school's annual results communications). The Biology departments at both campuses are staffed by IB-experienced teachers and the laboratory facilities support the full practical-programme requirements.",
       'For Oberoi students, the most common driver of external tutoring is the same as at the other top-tier Mumbai IB schools: Paper 2 mark-scheme calibration and IA mentorship through the DP1 topic-selection cycle. Many Oberoi families also pursue the dual IB+NEET track — Cerebrum offers a structured IB+NEET integrated coaching track — among the few such programmes from India-based biology providers, which is particularly valuable for students who want to preserve both abroad (UK medicine, US pre-med, Canadian life-sciences) and India (AIIMS, state medical college) options.',
-      "Oberoi's two-campus structure (JVLR and OGC) is operationally important for tutoring scheduling because the campuses run on broadly aligned but not identical IA submission and mock-exam calendars. We track both campus calendars and our 1:1 examiners adapt session content to the specific campus's deadlines — IA topic-selection windows, mock-exam dates, and the school's own Section 6 practical schedule. For Oberoi students who switch campuses during DP1 (rare but it happens with family relocation within Mumbai), we transition the coaching seamlessly because the underlying IB Biology HL syllabus is identical.",
+      "Oberoi's two-campus structure (JVLR and OGC) is operationally important for tutoring scheduling because the campuses run on broadly aligned but not identical IA submission and mock-exam calendars. We track both campus calendars and our 1:1 examiners adapt session content to the specific campus's deadlines — IA topic-selection windows, mock-exam dates, and the school's own practical-work schedule. For Oberoi students who switch campuses during DP1 (rare but it happens with family relocation within Mumbai), we transition the coaching seamlessly because the underlying IB Biology HL syllabus is identical.",
       "Mumbai's IB market is one of the most concentrated in India — Oberoi, Dhirubhai Ambani International, JBCN, Ecole Mondiale, ASB, Aditya Birla World Academy, and Cathedral all sit within roughly the same Mumbai catchment. Families regularly compare these schools and their respective IB Biology HL outcomes. Our position is that the school choice is upstream of tutoring choice — once enrolled at Oberoi, our 1:1 coaching layers Paper 2 mark-scheme calibration and IA mentorship on top of the school's already-strong content delivery, with no implicit comparison to other Mumbai schools. The coaching is school-specific because the IA submission rhythms and mock-exam calendars are school-specific.",
     ],
     reputationBullets: [
@@ -724,7 +724,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Two Mumbai campuses: JVLR (Goregaon) and OGC (Powai)',
       'Operated by Oberoi Realty on a not-for-profit basis',
       'Recent school-reported diploma averages at or above the global mean',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong matriculation to UK, US, Canadian, Australian, and Indian universities',
     ],
     collegeContext:
@@ -735,7 +735,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'Do you coach IB Biology for both Oberoi JVLR and OGC campuses?',
         answer:
-          "Yes. The two campuses follow the same IB Biology syllabus on broadly aligned schedules but have different teacher cohorts and IA submission rhythms. Our 1:1 sessions adapt to your specific campus's internal calendar — IA deadlines, mock exam windows, and the school's own Section 6 practical schedule.",
+          "Yes. The two campuses follow the same IB Biology syllabus on broadly aligned schedules but have different teacher cohorts and IA submission rhythms. Our 1:1 sessions adapt to your specific campus's internal calendar — IA deadlines, mock exam windows, and the school's own practical-work schedule.",
       },
       {
         question: 'Do you offer the IB+NEET integrated track for Oberoi students?',
@@ -777,8 +777,8 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "The American School of Bombay (ASB) is a not-for-profit international school in Mumbai, founded in 1981. ASB runs an American high-school curriculum from K-12 and offers the IB Diploma Programme as the senior school option, alongside AP coursework. The school is US-accredited (NEASC) and is part of the East Asia Regional Council of Schools (EARCOS). ASB's primary campus is in Bandra Kurla Complex (BKC), with a secondary campus in Kohinoor.",
-      "ASB's IB Biology cohort is smaller than Mumbai's larger IB Continuum schools (Oberoi, Dhirubhai Ambani) because ASB also offers an American-diploma-only pathway — many students choose AP Biology instead. However, the IB students at ASB are typically self-selecting toward the IB's breadth-and-IA assessment model and the international university applications that benefit from it. IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage.",
-      "For ASB students, the most common driver of external tutoring is the dual American-and-IB context: the school's academic culture is shaped by both AP and IB rhythms, and IB students sometimes want a tutor who can fully commit to the IB rubric without any AP-style framing creeping in. Our 1:1 sessions are 100% IB-rubric-aligned — Paper 2 long-response calibration, IA mentorship, Paper 3 lab-data drills. We also coach the dual IB+NEET track for students who want to preserve Indian medical college options.",
+      "ASB's IB Biology cohort is smaller than Mumbai's larger IB Continuum schools (Oberoi, Dhirubhai Ambani) because ASB also offers an American-diploma-only pathway — many students choose AP Biology instead. However, the IB students at ASB are typically self-selecting toward the IB's breadth-and-IA assessment model and the international university applications that benefit from it. IB Biology HL and SL are both offered, with full the IB practical programme coverage.",
+      "For ASB students, the most common driver of external tutoring is the dual American-and-IB context: the school's academic culture is shaped by both AP and IB rhythms, and IB students sometimes want a tutor who can fully commit to the IB rubric without any AP-style framing creeping in. Our 1:1 sessions are 100% IB-rubric-aligned — Paper 2 long-response calibration, IA mentorship, and data-response practice. We also coach the dual IB+NEET track for students who want to preserve Indian medical college options.",
       "ASB's location in BKC means the school sits at the centre of Mumbai's expat-and-corporate residential belt — students live in BKC itself, Bandra, Worli, and a wider catchment that includes Powai for some families. Commute times are relatively short by Mumbai standards, but the school day plus extracurriculars still pushes many DP students to a 7 PM finish before they start independent study. Our IST live sessions sit at 7:30–9 PM most weekdays, with weekend morning intensives an option during the final March-April push before May exams. For IB+NEET students at ASB, the integrated weekly schedule is heavier and we recommend starting Chemistry and Physics buildup in Grade 10 (the year before DP1).",
     ],
     reputationBullets: [
@@ -786,7 +786,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'NEASC-accredited (US) with EARCOS membership',
       'Dual-pathway senior school: American diploma with AP OR IB Diploma',
       'Primary campus in Bandra Kurla Complex (BKC)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong matriculation to US (Ivy+, top liberal arts) and UK universities',
     ],
     collegeContext:
@@ -829,7 +829,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
         question:
           'What is the typical Biology HL trajectory for an ASB Mumbai student over the full DP1+DP2 cycle?',
         answer:
-          "DP1: foundational content (cells, biochemistry, genetics, ecology), IA topic-selection in late DP1. DP2: HL extensions (cellular respiration depth, neurobiology, animal and plant physiology), IA submission early DP2, November DP2 mocks, then full-length Paper 1/2/3 mocks January–April leading to May finals. Our 1:1 coaching typically runs 2–3 hours per week through this cycle, calibrated to the school's specific calendar.",
+          "DP1: foundational content (cells, biochemistry, genetics, ecology), IA topic-selection in late DP1. DP2: HL extensions (cellular respiration depth, neurobiology, animal and plant physiology), IA submission early DP2, November DP2 mocks, then full-length Paper 1 and Paper 2 mocks January–April leading to May finals. Our 1:1 coaching typically runs 2–3 hours per week through this cycle, calibrated to the school's specific calendar.",
       },
     ],
   },
@@ -851,7 +851,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP', 'CP'],
     historyParagraphs: [
       "Stamford American International School (Stamford American) is a full IB Continuum school in Singapore's Woodleigh and Early Learning Village campuses, founded in 2009. Stamford American runs PYP, MYP, DP, and the IB Career-related Programme (CP) — making it one of the few schools globally offering all four IB programmes. The school is part of Cognita Schools, the international school operator.",
-      "Stamford American's IB Diploma cohort sits inside the highly competitive Singapore IB market alongside UWCSEA, Tanglin Trust, SAS, and Dulwich. IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage. The school has publicly reported strong IB results — recent cohort averages above the global mean, with a meaningful share of candidates scoring 40+ (publicly reported in the school's annual results communications).",
+      "Stamford American's IB Diploma cohort sits inside the highly competitive Singapore IB market alongside UWCSEA, Tanglin Trust, SAS, and Dulwich. IB Biology HL and SL are both offered, with full the IB practical programme coverage. The school has publicly reported strong IB results — recent cohort averages above the global mean, with a meaningful share of candidates scoring 40+ (publicly reported in the school's annual results communications).",
       'For Stamford American students, the most common driver of external tutoring is Paper 2 mark-scheme calibration and IA mentorship — the same pattern as at the other top Singapore IB schools. The Singapore IB market is small enough that our group batches often include peers from Stamford American, Tanglin Trust, UWCSEA, and SAS sharing the same SGT live-class slot.',
       "Stamford American's distinctive offering — running all four IB programmes including the Career-related Programme (CP) — means a small number of students each year take Biology as part of a CP rather than the full DP. The CP combines two DP subjects with a career-related study and reflective project. For students on this pathway with Biology as one of their DP courses, the academic content is identical to the standard DP Biology HL or SL syllabus, and our 1:1 coaching is the same. The IA workflow differs slightly because CP students have less concurrent DP workload, which sometimes means more time available for IA refinement; we adapt the weekly pacing accordingly.",
       "Stamford American sits inside Cognita Schools, a global international-school network, which means the school's policies and academic calendar are aligned with Cognita's broader systems. For families relocating between Cognita schools (e.g., Stamford American in Singapore to another Cognita school in Bangkok or Hong Kong), the IB Biology DP curriculum transfers cleanly because the IB syllabus is identical worldwide. Our coaching adapts to the new school's specific IA submission rhythm and mock-exam calendar without requiring students to restart any content sequence — a meaningful advantage for the relocating-expat families that make up a substantive share of the Stamford American community.",
@@ -861,7 +861,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Founded 2009; campuses at Woodleigh and Early Learning Village',
       'Part of Cognita Schools international network',
       'Recent school-reported diploma averages above the global mean',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong matriculation to UK, US, Canadian, Australian, and Singapore universities',
     ],
     collegeContext:
@@ -888,7 +888,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Stamford American student start IB Biology tutoring?',
         answer:
-          'For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For exam-only coaching, October DP2 (after November mocks) is still effective for the May session, focusing on Paper 2 mark-scheme calibration and Paper 3 lab-data drills.',
+          'For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For exam-only coaching, October DP2 (after November mocks) is still effective for the May session, focusing on Paper 2 mark-scheme calibration and data-response drills.',
       },
       {
         question: 'How does pricing work for Stamford American families?',
@@ -921,16 +921,16 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Mahatma Gandhi International School (MGIS) is a full IB Continuum school in Ahmedabad, Gujarat — distinctively, one of the earliest IB World Schools in India to offer all three core programmes (PYP, MYP, DP). MGIS was founded in 1998 and authorised for the DP in 2000, making it among the longer-running IB Diploma schools in the country. The school is located on Mirambika campus and operates on a not-for-profit basis.',
-      "MGIS's IB Biology cohort is smaller than the larger Delhi NCR and Mumbai IB schools — Ahmedabad has a more concentrated IB market — but the cohort is academically self-selected. IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage. The school has publicly reported diploma results above the global mean, with strong students scoring 40+ (publicly reported in the school's annual results communications).",
+      "MGIS's IB Biology cohort is smaller than the larger Delhi NCR and Mumbai IB schools — Ahmedabad has a more concentrated IB market — but the cohort is academically self-selected. IB Biology HL and SL are both offered, with full the IB practical programme coverage. The school has publicly reported diploma results above the global mean, with strong students scoring 40+ (publicly reported in the school's annual results communications).",
       'For MGIS students, the most common driver of external tutoring is the Ahmedabad context: the local IB tutoring market is small, and families want access to examiner-led 1:1 coaching that may not be available locally. Our online IB Biology programme runs in IST and serves Ahmedabad students with the same examiner-led 1:1 model used at Mumbai, Delhi, and Bangalore IB schools. We also coach the dual IB+NEET track for students who want to preserve Indian medical college options.',
-      "MGIS's not-for-profit operating model and pedagogical lineage — its Gandhian framing emphasises inquiry, sustainability, and community — give the school a distinct academic culture compared to the more commercial international-school chains in India. Biology HL at MGIS is taught with strong emphasis on ecology and the human-environment systems strand of the syllabus, which is a natural fit for the school's broader pedagogy. Our IA mentorship coordinates well with this: ecology-themed IA topics are common at MGIS, and our examiners have specific experience supervising field-data and longitudinal-ecology IAs through the IB's Section 6 rubric.",
+      "MGIS's not-for-profit operating model and pedagogical lineage — its Gandhian framing emphasises inquiry, sustainability, and community — give the school a distinct academic culture compared to the more commercial international-school chains in India. Biology HL at MGIS is taught with strong emphasis on ecology and the human-environment systems strand of the syllabus, which is a natural fit for the school's broader pedagogy. Our IA mentorship coordinates well with this: ecology-themed IA topics are common at MGIS, and our examiners have specific experience supervising field-data and longitudinal-ecology IAs through the IB's practical-work rubric.",
       "Ahmedabad's IB student community is small enough that students often have close cohort relationships across schools (MGIS, Ahmedabad International, others). Our online format makes it practical for two or three friends to join a Group Batch ($40/hour) together — sometimes the same friends from different schools — preserving the peer-discussion benefit even when the local IB ecosystem is geographically compact. For Ahmedabad students who later relocate (a common pattern with parents transferred to Mumbai, Bangalore, or abroad), the IB Biology syllabus transfers cleanly worldwide, so the coaching continues without restart.",
     ],
     reputationBullets: [
       'Full IB Continuum: PYP + MYP + DP (one of the earliest in India)',
       'Founded 1998; DP authorised 2000',
       'Not-for-profit, located in Ahmedabad, Gujarat',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Recent school-reported diploma averages above the global mean',
       'Strong matriculation to UK, US, Canadian, Australian, and Indian universities',
     ],
@@ -969,7 +969,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
         question:
           "How does ecology-themed IA work for MGIS students given the school's Gandhian pedagogy?",
         answer:
-          "Ecology-themed IAs (e.g., abundance studies, population dynamics, plant-community surveys, water-quality biomonitoring) are a natural fit for MGIS's broader pedagogical emphasis on environment and sustainability. Our examiners have specific experience supervising field-data IAs through the IB's Section 6 rubric: research-question precision, ethics and environmental impact framing, data collection rigour, and the evaluation section that distinguishes 6/7 IAs from 5-level work. We coach the rubric specifics, not the Gandhian framing.",
+          "Ecology-themed IAs (e.g., abundance studies, population dynamics, plant-community surveys, water-quality biomonitoring) are a natural fit for MGIS's broader pedagogical emphasis on environment and sustainability. Our examiners have specific experience supervising field-data IAs through the IB's practical-work rubric: research-question precision, ethics and environmental impact framing, data collection rigour, and the evaluation section that distinguishes 6/7 IAs from 5-level work. We coach the rubric specifics, not the Gandhian framing.",
       },
       {
         question:
@@ -997,9 +997,9 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       'Dhirubhai Ambani International School (DAIS) is one of the most selective international schools in India, located in Bandra Kurla Complex (BKC), Mumbai. Operated by the Reliance Foundation, DAIS runs PYP, MYP, and DP as a full IB Continuum. The school admits via a competitive selection process and is consistently among the highest-fee international schools in India.',
-      "DAIS's IB Diploma cohort has one of the strongest publicly reported academic profiles in India. Recent cohort averages have been well above the global mean — DAIS has publicly reported diploma averages in the 38–40+ range with multiple candidates each year scoring 44 or 45 (publicly reported in the school's annual results communications and Mumbai-press coverage). IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage.",
+      "DAIS's IB Diploma cohort has one of the strongest publicly reported academic profiles in India. Recent cohort averages have been well above the global mean — DAIS has publicly reported diploma averages in the 38–40+ range with multiple candidates each year scoring 44 or 45 (publicly reported in the school's annual results communications and Mumbai-press coverage). IB Biology HL and SL are both offered, with full the IB practical programme coverage.",
       "For DAIS students, the most common driver of external tutoring is the differentiation challenge: the cohort is so academically strong that turning a 6 into a 7 is the marginal value, and that's typically a Paper 2 mark-scheme calibration question. Our 1:1 sessions focus on this exact margin — turning strong classroom answers into 6/7-marker rubric-aligned responses — plus IA mentorship at the 6/7 level where the school's internal moderation rewards distinctive evaluation work.",
-      "DAIS's selective admissions process means the cohort enters DP1 with already-exceptional academic preparation, and the school's pace through the two-year DP track is correspondingly fast. Most of the IB Biology syllabus is comprehensively covered by mid-DP2, which leaves February through April of DP2 for full-length Paper 1/2/3 mocks and IA finalisation. Our coaching schedule respects that pace: rather than introducing new content, we use the final spring window for examiner-led mock-exam debriefs, IA polish at the 6/7 level, and Paper 3 lab-data drills using past papers across all 2016–2025 sessions. For DAIS students aiming for Oxbridge medicine or US Ivy+ pre-med, a clean 7 in HL Biology paired with a strong overall DP score is the standard academic-signal target, and our 1:1 Elite Tutoring tier ($75/hour) is calibrated to that endpoint.",
+      "DAIS's selective admissions process means the cohort enters DP1 with already-exceptional academic preparation, and the school's pace through the two-year DP track is correspondingly fast. Most of the IB Biology syllabus is comprehensively covered by mid-DP2, which leaves February through April of DP2 for full-length Paper 1 and Paper 2 mocks and IA finalisation. Our coaching schedule respects that pace: rather than introducing new content, we use the final spring window for examiner-led mock-exam debriefs, IA polish at the 6/7 level, and Paper 2 data-response drills using past papers across recent IB sessions. For DAIS students aiming for Oxbridge medicine or US Ivy+ pre-med, a clean 7 in HL Biology paired with a strong overall DP score is the standard academic-signal target, and our 1:1 Elite Tutoring tier ($75/hour) is calibrated to that endpoint.",
     ],
     reputationBullets: [
       'Full IB Continuum: PYP + MYP + DP',
@@ -1012,7 +1012,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     collegeContext:
       'DAIS graduates have one of the strongest matriculation profiles among Indian international schools. Common destinations include UK (Oxbridge, Imperial, UCL, KCL, LSE), US (Harvard, Yale, Princeton, MIT, Stanford, the Ivy+, top liberal arts), Canada (McGill, Toronto, UBC, Waterloo), Singapore (NUS, NTU, SMU), and Australia (Melbourne, Sydney, Monash). For Biology HL students, the most common pathways are UK medicine and US pre-med through Ivy+ universities; the IB+NEET track is also available for students who want to preserve AIIMS and state medical college options.',
     paceAlignment:
-      "DAIS's IB Biology follows the standard two-year DP cycle at a pace that's among the fastest in India — most of the syllabus is comprehensively covered by mid-DP2, leaving February–April for full-length Paper 1/2/3 mocks and IA finalisation. IST timezone aligns directly with our tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM) or weekend mornings; the coaching focus is at the 6-to-7 margin rather than building base content.",
+      "DAIS's IB Biology follows the standard two-year DP cycle at a pace that's among the fastest in India — most of the syllabus is comprehensively covered by mid-DP2, leaving February–April for full-length Paper 1 and Paper 2 mocks and IA finalisation. IST timezone aligns directly with our tutoring schedule. Our 1:1 sessions schedule in IST evenings (7–9 PM) or weekend mornings; the coaching focus is at the 6-to-7 margin rather than building base content.",
     faqs: [
       {
         question: 'Do DAIS Mumbai students typically need outside IB Biology tutoring?',
@@ -1048,7 +1048,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a DAIS student start IB Biology tutoring?',
         answer:
-          "Given DAIS's strong content delivery, families often start later than at other schools. For students confident in school content but wanting the 6-to-7 margin work, October–December DP2 (focused exclusively on Paper 2 mark-scheme calibration and Paper 3 lab-data drills) is a viable timeline. For students wanting full IA mentorship at the 6/7 level, August or September of DP1 is still the ideal start.",
+          "Given DAIS's strong content delivery, families often start later than at other schools. For students confident in school content but wanting the 6-to-7 margin work, October–December DP2 (focused exclusively on Paper 2 mark-scheme calibration and data-response drills) is a viable timeline. For students wanting full IA mentorship at the 6/7 level, August or September of DP1 is still the ideal start.",
       },
     ],
   },
@@ -1070,7 +1070,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       'The Cathedral and John Connon School is one of the oldest schools in Mumbai, founded in 1860 as a parish school and now operating as a tri-curriculum private school in Fort, Mumbai. The school runs ICSE/ISC through Grade 10, then offers both ISC and the IB Diploma Programme as senior school options for Grades 11 and 12 — making it a dual-pathway senior school where IB sits alongside the Indian Senior School Certificate.',
-      "Cathedral's IB Diploma cohort is smaller than the dedicated IB Continuum schools in Mumbai (Oberoi, DAIS, Ecole Mondiale) — many Cathedral students continue on the ISC track — but the students who choose IB are self-selecting toward the IB's breadth and IA-driven assessment model. IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage. The school has a strong overall academic reputation in Mumbai and publicly reports diploma results above the global mean for its IB cohort.",
+      "Cathedral's IB Diploma cohort is smaller than the dedicated IB Continuum schools in Mumbai (Oberoi, DAIS, Ecole Mondiale) — many Cathedral students continue on the ISC track — but the students who choose IB are self-selecting toward the IB's breadth and IA-driven assessment model. IB Biology HL and SL are both offered, with full the IB practical programme coverage. The school has a strong overall academic reputation in Mumbai and publicly reports diploma results above the global mean for its IB cohort.",
       "For Cathedral students, the most common driver of external tutoring is the dual ISC-and-IB context: the school's academic culture is shaped by both ISC and IB rhythms, and IB students sometimes arrive at DP1 with strong ISC habits — which is a different starting profile than students who came up through MYP. Our DP1 coaching explicitly bridges the ICSE/ISC-to-IB transition, calibrating the IB's data-analysis-driven Paper 2 style. We also coach the dual IB+NEET track for students who want to preserve Indian medical college options.",
       "Cathedral's Fort location and its long-running ICSE/ISC tradition make it different in character from the BKC and western-suburbs IB Continuum schools. Many Cathedral families have multi-generational relationships with the school, and the cultural expectation often includes considering both ISC and IB before committing to one in Grade 11. Students who choose IB are typically self-selecting toward international university applications (UK, US, Canada), while ISC-track students more often stay in India. Our IB Biology coaching adapts to this profile: we work most often with students who have explicitly chosen the international pathway and want a clean 6 or 7 in Biology HL as a key academic-signal input for UK medicine or US pre-med applications.",
       'The ICSE-to-IB transition at Cathedral is sharper than at MYP-fed schools because ICSE Grade 10 is content-dense and finals-focused, while IB DP1 expects students to start producing the data-analysis-and-evaluation style of writing that Paper 2 rewards. Our explicit DP1 coaching includes side-by-side comparisons of ICSE-style answers and IB-rubric-aligned answers on the same biological topic, so students see the writing-style shift concretely. By mid-DP1, most Cathedral IB Biology students have internalised the transition; the remaining DP1 work focuses on IA topic-selection and the standard syllabus content.',
@@ -1080,7 +1080,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Located in Fort, Mumbai',
       'Tri-curriculum: ICSE through Grade 10, then ISC + IB Diploma in senior school',
       'Dual-pathway senior school (ISC OR IB)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong matriculation to UK, US, Canadian, Australian, and Indian universities',
     ],
     collegeContext:
@@ -1133,7 +1133,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['MYP', 'DP'],
     historyParagraphs: [
       "The Shri Ram School Aravali is the senior campus of The Shri Ram Schools (TSRS) network, founded in 2008 in Sector V-37 Gurugram on the wooded southern edge of the Aravali range. The Shri Ram Schools group itself was founded in 1988 by Manika Sharma, with the original Gurgaon campus at Moulsari (Sector 46) opening earlier and now operating through MYP. TSRS Aravali is the IB Diploma Programme campus — many TSRS students transition from the Moulsari MYP track to the Aravali DP track for Grades 11 and 12, although Aravali also enrols students directly from other schools at the DP entry point.",
-      "TSRS Aravali runs a full MYP-to-DP secondary programme and is recognised in the Delhi NCR IB landscape for its progressive pedagogy and a humanities-and-arts-strong identity that the school has actively cultivated since its founding. The Biology department offers both HL and SL with full Section 6 (Practical Programme) coverage, and the school's overall IB Diploma results have publicly read as competitive within the NCR cluster — a meaningful share of each graduating cohort has historically scored at or above the global mean per school communications, though TSRS does not publish per-subject IB Biology distributions in the way some schools do.",
+      "TSRS Aravali runs a full MYP-to-DP secondary programme and is recognised in the Delhi NCR IB landscape for its progressive pedagogy and a humanities-and-arts-strong identity that the school has actively cultivated since its founding. The Biology department offers both HL and SL with full the IB practical programme coverage, and the school's overall IB Diploma results have publicly read as competitive within the NCR cluster — a meaningful share of each graduating cohort has historically scored at or above the global mean per school communications, though TSRS does not publish per-subject IB Biology distributions in the way some schools do.",
       "For TSRS Aravali students, the most common driver of external IB Biology tutoring is twofold: (1) Paper 2 rubric calibration where TSRS's inquiry-led classroom culture produces conceptually strong students who sometimes still drop marks against the IB's specific long-response mark scheme, and (2) IA topic-selection and mentorship through the DP1 cycle, where Biology IA's design + data-analysis demands often benefit from a one-to-one tutor who has examined IAs against the rubric. Several TSRS Aravali families also pursue the integrated IB+NEET track because the Sector V-37 location keeps the dual-track preserved without an unrealistic commute to a separate NEET coaching centre.",
       "TSRS Aravali's wooded Aravali-range location and its day-school structure (not residential) shape the rhythm of tutoring scheduling. Day students commute from across the Gurgaon catchment — Sohna Road, Golf Course Extension, Sushant Lok, DLF Phase 5, and the newer Sector 70–80 belt — with door-to-door commutes that can run 30–60 minutes each way. Our IST live sessions at 7–9 PM work for this profile: students arrive home, eat, and join the session at the same time they would otherwise be in homework. For IB+NEET integrated students we also offer Saturday weekend intensive blocks (3 hours each morning) so the additional NEET Chemistry and Physics workload sits in a single weekend window rather than spread thinly through the week.",
     ],
@@ -1143,7 +1143,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'IB MYP through DP — sister campus Moulsari runs the junior MYP feed',
       'Located in Sector V-37 on the Aravali range, south Gurgaon',
       'Recognised for inquiry-led pedagogy and a humanities-and-arts-strong identity',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Day school (not residential) — students commute from across Gurgaon',
     ],
     collegeContext:
@@ -1174,7 +1174,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: "When should a TSRS Aravali student start IB Biology tutoring?",
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and lets the coaching shape the IA topic from proposal to final submission. For IB+NEET students, ideally even earlier (during Grade 10 / MYP5) to build the Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October or November of DP2 (after the school's mocks) is still effective and we have a number of TSRS students who join at that point specifically for Paper 2 + Paper 3 rubric drilling.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and lets the coaching shape the IA topic from proposal to final submission. For IB+NEET students, ideally even earlier (during Grade 10 / MYP5) to build the Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October or November of DP2 (after the school's mocks) is still effective and we have a number of TSRS students who join at that point specifically for Paper 2 long-response and data-response rubric drilling.",
       },
       {
         question: 'Do you tutor TSRS Moulsari MYP5 students preparing to transition into the Aravali DP programme?',
@@ -1206,7 +1206,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Heritage Xperiential Learning School (HXLS) is a co-educational day school in Sector 62 Gurugram, founded in 2002 as the flagship campus of the Heritage Schools group co-founded by Manit Jain and Vishnu Karthik. The school is built around an experiential-learning philosophy that emphasises inquiry, outdoor education, arts and theatre, and project-based assessment in the junior and middle years; in the senior school, students choose between the IB Diploma Programme and the CBSE/Indian board pathway, with the IB DP authorised under the IB World School framework.",
-      "Heritage Xperiential's IB Biology cohort is smaller than Pathways Aravali's because the school also runs a CBSE senior-school track and many Heritage students continue on CBSE rather than switching to IB at Grade 11. The students who do choose IB are typically self-selecting toward international university applications — UK, US, Canada, Australia — and want the IB's breadth and IA-driven assessment to read on a Common-App or UCAS transcript. IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage, and the school's senior-school Biology department draws on the broader Heritage commitment to lab-based and field-based inquiry.",
+      "Heritage Xperiential's IB Biology cohort is smaller than Pathways Aravali's because the school also runs a CBSE senior-school track and many Heritage students continue on CBSE rather than switching to IB at Grade 11. The students who do choose IB are typically self-selecting toward international university applications — UK, US, Canada, Australia — and want the IB's breadth and IA-driven assessment to read on a Common-App or UCAS transcript. IB Biology HL and SL are both offered, with full the IB practical programme coverage, and the school's senior-school Biology department draws on the broader Heritage commitment to lab-based and field-based inquiry.",
       "For Heritage Xperiential students, the most common driver of external IB Biology tutoring is the transition from the school's inquiry-led junior pedagogy into the rubric-tight assessment style that the IB Diploma demands. Heritage students often arrive at DP1 with strong conceptual instincts and natural enquiry-driven curiosity (the experiential learning culture builds this from K-1), but the IB's command-term vocabulary (\"explain\", \"evaluate\", \"discuss\", \"distinguish\") and the precise mark-scheme structure of Paper 2 long-response answers benefit from explicit calibration. Our DP1 coaching adds that rubric scaffolding without compromising the conceptual fluency the school has built; we are deliberately not trying to convert Heritage students into rote learners, only to help them translate their conceptual strength into the IB-rubric language that scores marks.",
       "Heritage's IA (Internal Assessment) culture is particularly aligned with our coaching model. The school's experiential-learning DNA produces students who genuinely enjoy designing a personal investigation — the IB Biology IA's 10-hour 20-percent-weight independent investigation plays to Heritage students' strengths rather than against them. Our IA mentorship for Heritage students typically focuses less on \"how to design an investigation\" and more on \"how to write up the design + data analysis + evaluation against the four IB-specific assessment criteria\" — converting a strong piece of inquiry into a well-scoring IA report. Several Heritage IB Biology students each cohort also pursue Extended Essay (EE) in Biology; our EE mentorship runs in parallel with the IA work to keep the DP1 research load manageable.",
     ],
@@ -1217,7 +1217,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Senior school offers both IB DP and CBSE — students choose at Grade 11',
       'Experiential-learning philosophy: inquiry, outdoor ed, arts, project-based',
       'Located in Sector 62 Gurugram (Sohna-Gurgaon Road corridor)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong IA / EE culture aligned with the school\'s inquiry-driven pedagogy',
     ],
     collegeContext:
@@ -1258,7 +1258,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Heritage Xperiential student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA + EE mentorship window for Heritage students who take Biology as their EE subject. For IB+NEET students, ideally even earlier (during Grade 10) to build the Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October or November of DP2 (after the school's mocks) is still effective and we have a number of Heritage students who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to the May exams.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA + EE mentorship window for Heritage students who take Biology as their EE subject. For IB+NEET students, ideally even earlier (during Grade 10) to build the Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October or November of DP2 (after the school's mocks) is still effective and we have a number of Heritage students who join then specifically for Paper 2 long-response and data-response rubric drilling in the run-up to the May exams.",
       },
     ],
   },
@@ -1280,7 +1280,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Scottish High International School is a co-educational day school in Sector 57 (G Block, Sushant Lok II) Gurugram, founded in the mid-2000s and led from inception by Shomie Das — former principal of The Doon School and Mayo College — whose name in Indian school circles carries the weight of two of the country's most established boarding institutions. The school took its identity from the Scottish education tradition: tartan uniforms, a four-house system named after Scottish clans, and a structured-but-balanced academic culture that visibly differs from the more recently-established progressive schools in the Gurgaon belt.",
-      "Scottish High runs multiple senior-school pathways in parallel — CBSE, Cambridge IGCSE / A-Levels, and the IB Diploma Programme — so students self-select at the senior-school transition based on their target universities. The IB DP track at Scottish High is smaller than the CBSE and IGCSE/A-Level tracks but is the chosen path for students targeting US, Canadian, and Australian universities specifically, and for the subset of UK applicants who want the IB's six-subject breadth over A-Levels' three-subject depth. IB Biology HL and SL are both offered, with full Section 6 (Practical Programme) coverage, and the school's Biology department is staffed by IB-experienced teachers.",
+      "Scottish High runs multiple senior-school pathways in parallel — CBSE, Cambridge IGCSE / A-Levels, and the IB Diploma Programme — so students self-select at the senior-school transition based on their target universities. The IB DP track at Scottish High is smaller than the CBSE and IGCSE/A-Level tracks but is the chosen path for students targeting US, Canadian, and Australian universities specifically, and for the subset of UK applicants who want the IB's six-subject breadth over A-Levels' three-subject depth. IB Biology HL and SL are both offered, with full the IB practical programme coverage, and the school's Biology department is staffed by IB-experienced teachers.",
       "For Scottish High IB Biology students, the most common driver of external tutoring is the parallel-curriculum context: because the school runs IB alongside CBSE and Cambridge, the IB cohort is smaller and the in-school peer benchmark for IB-specific rubric work can feel thinner than at a single-curriculum IB school. Our 1:1 coaching fills that gap with rubric-tight Paper 2 calibration and weekly written feedback on long-response answers — replicating the peer-pressure-driven rubric awareness that students at larger IB cohorts (Pathways, ASD, UWCSEA) get from sheer cohort density.",
       "Scottish High's Sushant Lok II / Sector 57 location keeps the school accessible from across the central Gurgaon residential belt — Sushant Lok I, DLF Phase 1, 2, 3, and 4, Sector 49, Sector 56, Nirvana Country, Malibu Towne, Suncity, Rosewood City. Day-school commutes for IB students are typically in the 20–45 minute range each way. Our IST evening live sessions (7–9 PM) fit cleanly after the school commute. The school's structured academic culture means IB students typically arrive at DP1 with strong study-discipline habits but sometimes need explicit help converting that discipline into the IB-rubric vocabulary, which is what our coaching adds.",
     ],
@@ -1290,7 +1290,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Multi-curriculum senior school: CBSE + Cambridge IGCSE/A-Levels + IB DP',
       'Distinctive Scottish identity: tartan uniforms, four-house system',
       'Located in Sector 57 (G Block, Sushant Lok II), central Gurgaon',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Structured academic culture with strong study-discipline orientation',
     ],
     collegeContext:
@@ -1331,7 +1331,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Scottish High IB student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and gives our coaching time to layer the IB-rubric vocabulary onto the strong study-discipline foundation Scottish High students typically bring. For IB+NEET students, ideally earlier (during Grade 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and many Scottish High students join then for focused Paper 2 + Paper 3 rubric drilling.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and gives our coaching time to layer the IB-rubric vocabulary onto the strong study-discipline foundation Scottish High students typically bring. For IB+NEET students, ideally earlier (during Grade 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and many Scottish High students join then for focused Paper 2 long-response and data-response rubric drilling.",
       },
     ],
   },
@@ -1353,7 +1353,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "DPS International School (Sector 45, Gurugram) is the IB-and-Cambridge international arm of the Delhi Public School (DPS) network in Gurugram, operating as a co-educational day school co-located with the larger DPS Sector 45 CBSE flagship. The IB campus opened in the late 2000s / early 2010s as the DPS network's response to parents asking for an internationally-credentialled senior-school option without leaving the DPS umbrella — a meaningful number of DPS Sector 45 CBSE students transition into the international stream at Grade 9 or Grade 11.",
-      "DPS International offers Cambridge IGCSE through Class 10 and the IB Diploma Programme at Classes 11–12, giving students a clean IGCSE-to-IB Diploma senior-school pathway. Both IB Biology HL and SL are offered with full Section 6 (Practical Programme) coverage, and the Biology department is staffed by IB-experienced teachers. Cohort sizes have grown steadily as DPS network families have increasingly chosen the international route alongside the parallel CBSE option at DPS Sector 45 next door.",
+      "DPS International offers Cambridge IGCSE through Class 10 and the IB Diploma Programme at Classes 11–12, giving students a clean IGCSE-to-IB Diploma senior-school pathway. Both IB Biology HL and SL are offered with full the IB practical programme coverage, and the Biology department is staffed by IB-experienced teachers. Cohort sizes have grown steadily as DPS network families have increasingly chosen the international route alongside the parallel CBSE option at DPS Sector 45 next door.",
       "For DPS International students, the most common driver of external IB Biology tutoring is the IGCSE-to-DP transition. IGCSE Biology Class 10 is rigorous on content but assessed differently from IB Diploma Biology — IGCSE prioritises clear recall and standard-answer structures, while IB DP requires data-analysis-and-evaluation style writing on Paper 2 and a 20-percent-weight Internal Assessment that asks for personal-investigation design. Our DP1 coaching makes the IGCSE-to-DP bridge explicit so students arrive at the May DP2 exams with rubric-tight Paper 2 answers and a strong IA.",
       "Several DPS International families also pursue the IB+NEET integrated track because the DPS-brand household recognition means many extended-family conversations come back to medical college in India as a valued option, even when the primary application track is abroad. Our IB+NEET coaching for DPS International students preserves the abroad pathway (UK medicine, US pre-med, Canadian biosciences) while keeping AIIMS / state medical colleges via NEET as a parallel option. The integrated weekly schedule sits in IST evenings and weekend mornings to fit around the school's academic load.",
     ],
@@ -1363,7 +1363,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Cambridge IGCSE through Class 10 → IB Diploma Programme Classes 11–12',
       'Co-located in Sector 45 Gurgaon with the DPS Sector 45 CBSE flagship',
       'Strong DPS-network feeder pipeline from sister CBSE schools',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Senior-school IBDP is the school\'s flagship academic track',
     ],
     collegeContext:
@@ -1404,7 +1404,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a DPS International student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IGCSE-to-DP bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Cambridge IGCSE Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have many DPS International students who join then for focused Paper 2 + Paper 3 rubric drilling.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IGCSE-to-DP bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Cambridge IGCSE Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have many DPS International students who join then for focused Paper 2 long-response and data-response rubric drilling.",
       },
     ],
   },
@@ -1426,7 +1426,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       "GD Goenka World School is a residential and day co-educational IB World School on the Sohna Road south of Gurugram, founded in the mid-2000s as the flagship international campus of the broader GD Goenka education group. The school sits on a substantial green campus and runs a full IB Continuum — PYP, MYP, and DP — which places it among the longer-running full-continuum IB schools in north India (alongside Pathways Aravali and a small handful of others). Boarders and day students mix in the senior school; many boarders come from across India and from neighbouring countries.",
-      "GD Goenka World School's IB Biology cohort has historically been one of the more substantial IB DP Biology cohorts in the Delhi NCR region. Both HL and SL are offered, with full Section 6 (Practical Programme) coverage. The school's biology laboratories support the full IB practical programme, and the Biology department is staffed by IB-experienced teachers. The school publicly reports IB Diploma performance and recent cohort averages have read as competitive within the NCR IB cluster.",
+      "GD Goenka World School's IB Biology cohort has historically been one of the more substantial IB DP Biology cohorts in the Delhi NCR region. Both HL and SL are offered, with full the IB practical programme coverage. The school's biology laboratories support the full IB practical programme, and the Biology department is staffed by IB-experienced teachers. The school publicly reports IB Diploma performance and recent cohort averages have read as competitive within the NCR IB cluster.",
       "For GD Goenka World School students, the two most common drivers of external IB Biology tutoring are: (1) Paper 2 long-response rubric calibration where strong classroom answers can still drop marks against the IB's specific mark scheme, and (2) IA mentorship through the DP1 topic-selection and design cycle. Boarding students also benefit from the timezone match — our IST evening live sessions sit at 7–9 PM, which fits cleanly into the boarding study-hall schedule and removes the bandwidth concern of overseas-based tutors operating in mismatched timezones.",
       "GD Goenka World School's Sohna Road location is south of central Gurgaon, which means day students from DLF Phase 1–5, Golf Course Road, Sushant Lok, and the broader Sector 50–60 belt face a non-trivial commute (40–60 minutes each way in peak hours). For boarding students this is irrelevant; for day students, our online live tutoring removes a second commute on top of the school commute. The residential structure also means many GD Goenka World students stay back through Saturday afternoons; we run weekend morning blocks (Saturday and Sunday 10 AM–12 PM IST) as one of our most popular slots for this cohort.",
     ],
@@ -1434,7 +1434,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Founded mid-2000s — among the longer-running full-continuum IB schools in north India',
       'IB Continuum: PYP + MYP + DP',
       'Residential + day campus on Sohna Road, south Gurugram',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Boarders come from across India and neighbouring countries',
       'Substantial IB Diploma cohort relative to other NCR IB schools',
       'Strong matriculation to UK, US, Canadian, Australian, and Indian universities',
@@ -1472,7 +1472,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a GD Goenka World student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several GD Goenka World students each cohort who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several GD Goenka World students each cohort who join then specifically for Paper 2 long-response and data-response rubric drilling in the run-up to May exams.",
       },
       {
         question: 'How does the IST timezone match matter for GD Goenka World families compared to overseas IB tutors?',
@@ -1509,7 +1509,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Senior school offers both CBSE and IB DP — students self-select at Grade 11',
       'Strong tradition in music, performing arts, and cultural programming',
       'Located in Sector 31 Gurgaon (central Gurgaon, established residential belt)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Distinctively traditional-and-cultural identity vs newer progressive IB schools',
     ],
     collegeContext:
@@ -1550,7 +1550,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Shikshantar student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Shikshantar students each cohort who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Shikshantar students each cohort who join then specifically for Paper 2 long-response and data-response rubric drilling in the run-up to May exams.",
       },
     ],
   },
@@ -1576,7 +1576,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     historyParagraphs: [
       "GD Goenka Signature School is a co-educational day school in Sector 48 Gurugram, opened in the mid-2010s as a newer addition to the GD Goenka education group. The 'Signature' branding within the GD Goenka network is used to distinguish a smaller set of premium internationally-credentialled campuses from the more numerous GD Goenka Public School CBSE network — students at Signature can opt for the IB Diploma Programme or the CBSE Class 11-12 track at senior school, with both pathways supported by the school's senior-school faculty.",
       "Signature sits in central-south Gurugram on the Sohna Road side, making it more accessible to families based in DLF Phase 1-5, Sushant Lok, Sohna Road, Golf Course Road, and Sector 49-50 than the sister GD Goenka World School in Sohna (which is significantly further south and primarily serves residential families). The day-only model and the more central location together produce a distinctly different cohort profile from GD Goenka World — Signature's IB cohort is composed of children of central-Gurgaon working professionals who want the GD Goenka brand and IB credential without the boarding commitment.",
-      "GD Goenka Signature offers IB Biology HL and SL with full Section 6 (Practical Programme) coverage. The IB cohort is smaller than the school's CBSE cohort because the senior school runs both tracks in parallel and many families continue on CBSE. Students choosing IB are typically self-selecting toward US, UK, Canadian, or Australian university applications — and the school's brand recognition from the broader GD Goenka network produces strong India-university connections for dual-application students who want to keep AIIMS / state medical colleges open via NEET.",
+      "GD Goenka Signature offers IB Biology HL and SL with full the IB practical programme coverage. The IB cohort is smaller than the school's CBSE cohort because the senior school runs both tracks in parallel and many families continue on CBSE. Students choosing IB are typically self-selecting toward US, UK, Canadian, or Australian university applications — and the school's brand recognition from the broader GD Goenka network produces strong India-university connections for dual-application students who want to keep AIIMS / state medical colleges open via NEET.",
       "For GD Goenka Signature IB Biology students, the most common driver of external tutoring is the parallel-track context: because Signature runs IB alongside CBSE in senior school, the in-school IB-rubric peer benchmarking is thinner than at single-curriculum IB schools (Pathways Aravali, UWCSEA). Our 1:1 coaching replaces that with explicit weekly written feedback on Paper 2 long-response answers against the IB mark scheme. Several Signature IB Biology HL students each cohort also pursue our integrated IB+NEET track because the central-Gurgaon family profile often values keeping both abroad and India medical-college routes open through Class 12.",
     ],
     reputationBullets: [
@@ -1586,7 +1586,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Senior school: IB DP + CBSE dual-track at Classes 11-12',
       'Located in Sector 48 Gurgaon (central-south Gurgaon, Sohna Road side)',
       'Day school (not residential) — sister GD Goenka World at Sohna is residential',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
     ],
     collegeContext:
       "GD Goenka Signature IB graduates target a US-heavy mix reflecting the central-Gurgaon working-professional family profile. UK matriculations include Oxbridge, Imperial, UCL, KCL, Warwick, and Manchester. US destinations skew toward Ivy+, NYU, Berkeley, and Carnegie Mellon — with the IT-employee parent base producing an unusually-high share of CS-and-Biology dual-major applicants at schools like Stanford, MIT, and CMU. Canadian programmes (Toronto, UBC, Waterloo) are common for engineering-leaning students. Indian universities — Ashoka, Krea, Shiv Nadar — round out the abroad-versus-India dual application set. Biology HL students from Signature typically aim at UK medicine, US pre-med, or biomedical-engineering tracks; IB+NEET dual-track students keep AIIMS and state medical colleges open in parallel.",
@@ -1626,7 +1626,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a GD Goenka Signature student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Signature students each cohort who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Signature students each cohort who join then specifically for Paper 2 long-response and data-response rubric drilling in the run-up to May exams.",
       },
     ],
   },
@@ -1654,7 +1654,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       "Pathways School Noida is a co-educational day school in Sector 100 Noida, opened in the early 2010s as the Noida campus of the Pathways group (sister to Pathways World School Aravali in Gurgaon and Pathways School Gurgaon in Sector 70). The school runs a full IB Continuum — PYP, MYP, and DP — making it one of the longer-established full-continuum IB day schools in the Noida cluster. The Sector 100 location keeps it accessible to families across Sectors 44, 50, 62, 75, 93, 100, 121, 128, and 132, as well as to families coming over the DND Flyway from the Mayur Vihar and IP Extension belt of east Delhi.",
-      "Pathways Noida's IB Biology cohort is one of the more substantial Noida-region DP Biology cohorts. Both HL and SL are offered, with full Section 6 (Practical Programme) coverage. The Biology department is staffed by IB-experienced teachers and the school's laboratory facilities support the full IB practical programme. Recent diploma performance has read as competitive within the NCR IB cluster per the school's publicly-reported results, though Pathways group schools tend not to publish per-subject IB Biology distributions in granular form.",
+      "Pathways Noida's IB Biology cohort is one of the more substantial Noida-region DP Biology cohorts. Both HL and SL are offered, with full the IB practical programme coverage. The Biology department is staffed by IB-experienced teachers and the school's laboratory facilities support the full IB practical programme. Recent diploma performance has read as competitive within the NCR IB cluster per the school's publicly-reported results, though Pathways group schools tend not to publish per-subject IB Biology distributions in granular form.",
       "For Pathways Noida students, the most common drivers of external IB Biology tutoring are: (1) Paper 2 long-response rubric calibration where strong classroom answers can still drop marks against the IB's specific mark scheme, (2) IA mentorship through the DP1 topic-selection cycle, and (3) the integrated IB+NEET track — a meaningful share of Pathways Noida families want to keep India medical-college options open via NEET while pursuing IB Diploma for abroad applications. Our coaching combines Paper 2 + IA rubric work with the integrated IB+NEET schedule for the dual-application cohort.",
       "Pathways Noida's day-only structure (no boarding option, unlike the Aravali sister campus) shapes scheduling. Day students typically arrive home from Sector 100 in the 4:30–6 PM window depending on the home-sector and Noida-internal traffic, and our IST evening live sessions at 7–9 PM fit cleanly into the post-school routine. For IB+NEET integrated students we also offer weekend morning blocks (Saturday and Sunday 10 AM–12 PM) which sit naturally for the dual-syllabus weekly load. The Sector 100 location is far enough from the DND-Flyway-to-South-Extension axis that physical commute to any Delhi-side tutoring centre would add 75–90 minutes round-trip in peak hours — the online-delivery model removes that overhead entirely.",
     ],
@@ -1663,7 +1663,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Full IB Continuum: PYP + MYP + DP',
       'Sister campuses: Pathways World School Aravali (Gurgaon, residential + day) and Pathways School Gurgaon (Sector 70, day-only)',
       'Located in Sector 100 Noida (central-east Noida residential belt)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Day school (no boarding option — Aravali sister campus is the residential option)',
       'Strong NCR-cluster matriculation to UK, US, Canadian, Australian, and Indian universities',
     ],
@@ -1700,7 +1700,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Pathways Noida student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Pathways Noida students each cohort who join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have several Pathways Noida students each cohort who join then specifically for Paper 2 long-response and data-response rubric drilling in the run-up to May exams.",
       },
       {
         question: 'Do you tutor Pathways Noida MYP5 students preparing to transition into DP1?',
@@ -1732,7 +1732,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Shiv Nadar School Noida is a co-educational day school in Sector 168 Noida, opened in the early 2010s as the first of the Shiv Nadar School network's campuses. The school was founded under the Shiv Nadar Foundation — the philanthropic arm of HCL Technologies founder Shiv Nadar (one of India's most prominent tech-industry philanthropists) — and the schools share a leadership-and-STEM-strong educational philosophy that visibly reflects the founder's industrial-and-scientific roots. Sister campuses operate in Gurgaon (Sector 73) and Faridabad, with overlapping curriculum and faculty frameworks.",
-      "Shiv Nadar School Noida runs CBSE as its primary curriculum through Class 10 and offers the IB Diploma Programme as the senior-school international option at Classes 11–12 alongside the CBSE Class 11–12 continuation track. Cambridge IGCSE / A-Level options are also available at some senior-school cohorts. IB Biology HL and SL are both offered with full Section 6 (Practical Programme) coverage; the school's laboratory infrastructure and emphasis on hands-on STEM exploration give the Biology programme a strong investigation-and-data orientation that aligns well with the IB's IA-and-Paper-2 assessment style.",
+      "Shiv Nadar School Noida runs CBSE as its primary curriculum through Class 10 and offers the IB Diploma Programme as the senior-school international option at Classes 11–12 alongside the CBSE Class 11–12 continuation track. Cambridge IGCSE / A-Level options are also available at some senior-school cohorts. IB Biology HL and SL are both offered with full the IB practical programme coverage; the school's laboratory infrastructure and emphasis on hands-on STEM exploration give the Biology programme a strong investigation-and-data orientation that aligns well with the IB's IA-and-Paper-2 assessment style.",
       "For Shiv Nadar School Noida IB Biology students, the most common drivers of external tutoring are: (1) Paper 2 rubric calibration where the school's strong conceptual culture sometimes produces answers that are scientifically sound but score below their potential against the IB's specific long-response mark scheme, and (2) IA mentorship — the school's STEM-strong culture produces students who genuinely enjoy designing personal investigations, but the IA write-up against the IB-specific four-criterion rubric benefits from explicit external coaching. Several Shiv Nadar IB Biology HL students each cohort also pursue our integrated IB+NEET track for the standard dual-application reasons.",
       "Shiv Nadar School Noida's Sector 168 location keeps it accessible across the Noida residential belt, though Sector 168 is on the eastern Yamuna Expressway side rather than the central Noida sectors that house most of the other IB schools (Pathways at Sector 100, Lotus Valley further west). Many Shiv Nadar families commute from across the broader Noida and Greater Noida footprint, and the school operates a transport network that extends to Sectors 50, 62, 75, 93, 100, 128, 132 and Greater Noida. For our coaching, the school commute is irrelevant — IST evening live sessions at 7–9 PM fit after the school day regardless of which Noida sector students live in.",
     ],
@@ -1742,7 +1742,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'CBSE primary curriculum + IB DP at senior school',
       'STEM-and-leadership-strong educational philosophy reflecting founder\'s industrial-scientific roots',
       'Located in Sector 168 Noida (eastern Yamuna Expressway side)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Strong laboratory infrastructure for hands-on scientific investigation',
     ],
     collegeContext:
@@ -1783,7 +1783,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Shiv Nadar School Noida student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. The school's STEM-strong Class 10 already builds strong scientific foundations; our IB+NEET coaching layers the NEET-specific content and the IB-specific rubric work on top. For exam-only coaching, October DP2 (after the school's mocks) is still effective and several Shiv Nadar Noida students each cohort join then for Paper 2 + Paper 3 rubric drilling.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. The school's STEM-strong Class 10 already builds strong scientific foundations; our IB+NEET coaching layers the NEET-specific content and the IB-specific rubric work on top. For exam-only coaching, October DP2 (after the school's mocks) is still effective and several Shiv Nadar Noida students each cohort join then for Paper 2 long-response and data-response rubric drilling.",
       },
     ],
   },
@@ -1808,7 +1808,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Step by Step School is a co-educational day school on the Noida–Greater Noida Expressway in Sector 132 Noida, founded in the mid-1990s and now one of the longer-established schools in the Noida IB cluster. The school built its early reputation on a CBSE primary-and-secondary curriculum with strong academics and pastoral care; the IB Diploma Programme authorisation was added later as a senior-school international option alongside the school's continuing CBSE Class 11-12 track. This dual-track senior school produces a student body where IB and CBSE students share the same school culture and faculty network but follow distinct curricula in their final two years.",
-      "Step by Step's IB DP cohort has historically been one of the longer-running in the Noida IB cluster — meaningfully predating the newer entrants (Pathways Noida early-2010s, Shiv Nadar Noida 2012). Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The Biology department is staffed by IB-experienced teachers, and the school's emphasis on careful pedagogy and student wellbeing produces an IB cohort culture that is academically serious without being burnout-driven.",
+      "Step by Step's IB DP cohort has historically been one of the longer-running in the Noida IB cluster — meaningfully predating the newer entrants (Pathways Noida early-2010s, Shiv Nadar Noida 2012). Both IB Biology HL and SL are offered, with full the IB practical programme coverage. The Biology department is staffed by IB-experienced teachers, and the school's emphasis on careful pedagogy and student wellbeing produces an IB cohort culture that is academically serious without being burnout-driven.",
       "For Step by Step IB Biology students, the most common driver of external tutoring is the parallel-curriculum context: because Step by Step runs IB alongside CBSE in senior school, the in-school IB-rubric peer benchmarking is thinner than at single-curriculum IB schools (Pathways Aravali, UWCSEA). Our 1:1 coaching replaces that with explicit weekly written feedback on Paper 2 long-response answers against the IB mark scheme. Several Step by Step IB Biology HL students each cohort also pursue our integrated IB+NEET track because the school's broader student body (with its strong CBSE cohort matriculating to Indian universities and AIIMS) creates a cultural context where keeping the India medical-college option open is naturally considered.",
       "Step by Step's Sector 132 location places it on the Noida-Greater Noida Expressway corridor — a different commute axis from the central-Noida schools (Pathways at Sector 100) and the eastern-Noida cluster (Shiv Nadar at Sector 168). The school operates a transport network reaching across Sectors 50, 62, 75, 93, 100, 128, 132 and Greater Noida. Many Step by Step IB families commute from across this broader belt, and our IST evening live sessions at 7–9 PM fit cleanly after the school day regardless of which Noida sector students live in. The online-delivery model removes any concern about cross-sector physical commute to a tutoring centre.",
     ],
@@ -1818,7 +1818,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Senior school: IB DP + CBSE dual-track at Classes 11–12',
       'Located in Sector 132 on the Noida–Greater Noida Expressway',
       'Strong reputation for academics combined with pastoral care and student wellbeing',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Among the longer-running IB DP cohorts in Noida (predates Pathways Noida and Shiv Nadar Noida)',
     ],
     collegeContext:
@@ -1859,7 +1859,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Step by Step student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and includes an explicit CBSE-Class-10-to-IB-DP bridge for students transitioning from the school's CBSE track. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have Step by Step students each cohort who join then for focused Paper 2 + Paper 3 rubric drilling.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window and includes an explicit CBSE-Class-10-to-IB-DP bridge for students transitioning from the school's CBSE track. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have Step by Step students each cohort who join then for focused Paper 2 long-response and data-response rubric drilling.",
       },
     ],
   },
@@ -1885,7 +1885,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
     historyParagraphs: [
       "Genesis Global School is a co-educational residential and day IB World School on the Noida–Greater Noida Expressway, opened in the mid-to-late 2000s as one of the relatively few residential international schools in the Delhi NCR region. The school runs a full IB Continuum — PYP, MYP, and DP — alongside CBSE as a parallel curriculum option, and the residential cohort draws boarders from across India and from a small number of neighbouring countries. Day students commute primarily from the broader Noida residential belt (Sectors 50, 62, 75, 93, 100, 128, 132) and from Greater Noida itself.",
-      "Genesis Global is structurally the Noida-cluster equivalent of Pathways Aravali / GD Goenka World in the Gurgaon cluster — the residential IB option that gives families a boarding choice within an India IB World School. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The school's boarding-house infrastructure includes academic support and evening study halls, which the IB Biology cohort uses for both prescribed homework and (when families opt in) external 1:1 tutoring sessions.",
+      "Genesis Global is structurally the Noida-cluster equivalent of Pathways Aravali / GD Goenka World in the Gurgaon cluster — the residential IB option that gives families a boarding choice within an India IB World School. Both IB Biology HL and SL are offered, with full the IB practical programme coverage. The school's boarding-house infrastructure includes academic support and evening study halls, which the IB Biology cohort uses for both prescribed homework and (when families opt in) external 1:1 tutoring sessions.",
       "For Genesis Global IB Biology students, the most common drivers of external tutoring are the same as at the other major IB schools: Paper 2 long-response rubric calibration, IA mentorship through the DP1 topic-selection cycle, and — for the dual-application subset — the integrated IB+NEET track. The residential context adds one additional factor: IST timezone is the natural match for India-based tutors, which means our IST evening live sessions at 7–9 PM fit cleanly into the school's boarding study-hall schedule, without the awkward late-night-IST timing that boarders would experience with UK or US-based tutors operating into the evening of their own local timezone.",
       "Genesis Global's Noida–Greater Noida Expressway location is south-east of the central Noida sectors and meaningfully east of central Delhi. For day students commuting from across the Noida residential belt, the school's transport network spans most of the Sector 50–132 footprint plus Greater Noida. For boarders, the campus is the student's primary location through term — and our online live tutoring removes any concern about boarders being structurally distant from physical tutoring centres in Delhi or central Gurgaon. Coaching is delivered into the boarding house or study hall via laptop and headphones; many Genesis boarders join Saturday morning weekend blocks (10 AM–12 PM IST) as one of our most popular slots for the cohort.",
     ],
@@ -1895,7 +1895,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Co-educational residential + day school',
       'Located on the Noida–Greater Noida Expressway',
       'The Noida-cluster residential IB option (most other Noida IB schools are day-only)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Boarding cohort from across India and a small number of neighbouring countries',
     ],
     collegeContext:
@@ -1936,7 +1936,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Genesis Global student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective. Several Genesis boarders each cohort join then specifically for Paper 2 + Paper 3 rubric drilling in the run-up to May exams, often using the school's weekend study-hall slots as the live-session window.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the IA mentorship window. For IB+NEET students, ideally earlier (during Grade 10 / MYP5) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective. Several Genesis boarders each cohort join then specifically for Paper 2 long-response and data-response rubric drilling in the run-up to May exams, often using the school's weekend study-hall slots as the live-session window.",
       },
     ],
   },
@@ -1961,7 +1961,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Lotus Valley International School Noida is a co-educational day school in Sector 126 Noida, opened in the late 2000s as one of the newer-generation international schools serving the rapidly-growing Noida residential belt. The school runs CBSE as its primary curriculum through Class 10 and offers the IB Diploma Programme as a senior-school international option at Classes 11–12 alongside the continuing CBSE Class 11–12 track. This dual-track senior-school structure is common across the Noida IB cluster (Step by Step, Shiv Nadar) and reflects the typical Noida-family pattern of weighing both Indian and abroad university applications during Class 10.",
-      "Lotus Valley's IB DP cohort is among the newer IB cohorts in Noida — the school added IB DP authorisation as part of its growing international-school positioning over the past decade. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The Biology department is staffed by IB-experienced teachers and the school's lab infrastructure supports the full IB practical programme.",
+      "Lotus Valley's IB DP cohort is among the newer IB cohorts in Noida — the school added IB DP authorisation as part of its growing international-school positioning over the past decade. Both IB Biology HL and SL are offered, with full the IB practical programme coverage. The Biology department is staffed by IB-experienced teachers and the school's lab infrastructure supports the full IB practical programme.",
       "For Lotus Valley IB Biology students, the most common driver of external tutoring is the CBSE-Class-10-to-IB-DP transition. The shift from CBSE's recall-and-standard-answer-structure assessment to the IB DP's data-analysis-and-evaluation Paper 2 style is the single biggest assessment-style change students encounter at DP1 — a real shift that benefits from explicit external coaching in the first DP1 term. Our DP1 coaching makes this transition explicit, calibrating the IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching. Several Lotus Valley IB Biology HL students each cohort also pursue our integrated IB+NEET track for the standard dual-application reasons.",
       "Lotus Valley's Sector 126 location places it on the central-east Noida belt, accessible from the Sector 50/62/93/100/128/132 residential cluster as well as the broader Sector 75 and Greater Noida footprint. The school operates a transport network across this footprint. For our coaching, the school commute is irrelevant — IST evening live sessions at 7–9 PM fit cleanly after the school day regardless of which Noida sector students live in, and the no-commute online-delivery model returns roughly 60–90 minutes per session compared to physical tutoring at a Cyber City / South Delhi / central-Noida tutoring centre.",
     ],
@@ -1971,7 +1971,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Senior school: IB DP + CBSE dual-track at Classes 11-12',
       'Located in Sector 126 Noida (central-east Noida residential belt)',
       'CBSE primary curriculum through Class 10',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Day school (not residential)',
     ],
     collegeContext:
@@ -2012,7 +2012,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a Lotus Valley student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have Lotus Valley students each cohort who join then for focused Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have Lotus Valley students each cohort who join then for focused Paper 2 long-response and data-response rubric drilling in the run-up to May exams.",
       },
     ],
   },
@@ -2041,7 +2041,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "GD Goenka Public School Noida is a co-educational day school operating as part of the broader GD Goenka Public Schools network — the most numerous sub-brand within the GD Goenka education group, distinct from the premium GD Goenka World School (Sohna, residential + day, full IB Continuum) and GD Goenka Signature School (Sector 48 Gurgaon, day-only premium IB). The Public School Noida campus is among the GD Goenka campuses that have added IB Diploma Programme authorisation alongside their established CBSE programme, giving Noida families an IB DP option within a school brand they already recognise.",
-      "The school's senior-school structure runs CBSE Class 11–12 as the larger of the two tracks and IB DP as the international-application track for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. This dual-track parallel pattern is structurally similar to other CBSE-primary Noida IB schools (Step by Step, Shiv Nadar, Lotus Valley) — students self-select into IB or CBSE at the Grade 11 transition based on their application target. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage.",
+      "The school's senior-school structure runs CBSE Class 11–12 as the larger of the two tracks and IB DP as the international-application track for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. This dual-track parallel pattern is structurally similar to other CBSE-primary Noida IB schools (Step by Step, Shiv Nadar, Lotus Valley) — students self-select into IB or CBSE at the Grade 11 transition based on their application target. Both IB Biology HL and SL are offered, with full the IB practical programme coverage.",
       "For GD Goenka Public Noida IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. Because the school's primary curriculum and broader cohort identity is CBSE, IB DP students arrive at DP1 from a recall-and-standard-answer-structure assessment background and need to internalise the IB's data-analysis-and-evaluation Paper 2 style. Our DP1 coaching makes this transition explicit in the first term, alongside IA topic-selection mentorship and rubric calibration. The integrated IB+NEET track is also a natural fit because the school's CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with the abroad IB pathway.",
       "The Noida campus location keeps GD Goenka Public accessible across the broader Noida residential belt — Sectors 50, 62, 75, 93, 100, 128, 132 — with the school's transport network spanning this footprint. For our coaching, the school's location is irrelevant because delivery is 100% online live video; students join from home after the school day regardless of which Noida sector they live in. The IST evening live session window (7–9 PM) fits cleanly after the school commute, and weekend morning blocks (Saturday/Sunday 10 AM–12 PM IST) are available for IB+NEET integrated students who prefer to absorb the dual-syllabus weekly load in a single weekend block.",
     ],
@@ -2051,7 +2051,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'IB World School authorised for the Diploma Programme',
       'Senior school: IB DP + CBSE dual-track at Classes 11–12 (CBSE is the larger track)',
       'Located in Noida (central-Noida residential belt)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'CBSE-rooted brand identity with IB DP as the abroad-applications track',
     ],
     collegeContext:
@@ -2092,7 +2092,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a GD Goenka Public Noida student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and several GD Goenka Public Noida students each cohort join then for focused Paper 2 + Paper 3 rubric drilling in the run-up to May exams.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and several GD Goenka Public Noida students each cohort join then for focused Paper 2 long-response and data-response rubric drilling in the run-up to May exams.",
       },
     ],
   },
@@ -2118,7 +2118,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Manav Rachna International School (MRIS) is a co-educational day school in Faridabad, operating as the flagship international school of the Manav Rachna education group — which also runs Manav Rachna International Institute of Research and Studies (a UGC-recognised university), Manav Rachna Dental College, and engineering programmes. The school sits in the broader MRIS / Manav Rachna campus footprint in Faridabad and draws students from across the Faridabad residential belt and from Greater Faridabad.",
-      "Manav Rachna's senior school is multi-curriculum: students can choose between the IB Diploma Programme, the Cambridge IGCSE / A-Levels track, or the CBSE Class 11-12 continuation track. This multi-pathway structure makes MRIS the most curriculum-flexible school in the Faridabad IB cluster, and the IB DP cohort is composed of students self-selecting toward US, UK, Canadian, and Australian university applications. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage.",
+      "Manav Rachna's senior school is multi-curriculum: students can choose between the IB Diploma Programme, the Cambridge IGCSE / A-Levels track, or the CBSE Class 11-12 continuation track. This multi-pathway structure makes MRIS the most curriculum-flexible school in the Faridabad IB cluster, and the IB DP cohort is composed of students self-selecting toward US, UK, Canadian, and Australian university applications. Both IB Biology HL and SL are offered, with full the IB practical programme coverage.",
       "For Manav Rachna IB Biology students, the most common driver of external tutoring is the multi-curriculum senior-school context: because MRIS runs IB alongside Cambridge and CBSE, the in-school IB-specific peer benchmarking is structurally thinner than at single-curriculum IB schools (Pathways Aravali, UWCSEA). Our 1:1 coaching fills that gap with explicit weekly written feedback on Paper 2 long-response answers against the IB mark scheme. Several Manav Rachna IB Biology HL students each cohort also pursue our integrated IB+NEET track — given the Manav Rachna group's own medical and dental college operations, India medical-college pathways are naturally in family conversations.",
       "Manav Rachna's Faridabad location and the broader Manav Rachna campus footprint mean students typically commute from across the Faridabad sector belt (14, 15, 17, 19, 80) and from NIT Faridabad. The school operates a transport network spanning these areas. For our coaching, the school commute is irrelevant — IST evening live sessions at 7-9 PM fit cleanly after the school day. The Manav Rachna group's own medical and dental colleges also create a useful local biology context that students often draw on for IA topic-selection inspiration.",
     ],
@@ -2128,7 +2128,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'IB World School authorised for the Diploma Programme',
       'Multi-curriculum senior school: IB DP + Cambridge IGCSE/A-Levels + CBSE',
       'Located in Faridabad (Manav Rachna campus footprint)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'Day school (not residential)',
     ],
     collegeContext:
@@ -2195,7 +2195,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Delhi Public School Faridabad (DPS Faridabad) is a co-educational day school operating as part of the broader Delhi Public School (DPS) national network — one of India's largest and most established educational networks, with sister campuses across Delhi, NCR, and the broader country (including DPS RK Puram and DPS Vasant Kunj in Delhi, DPS Sector 45 in Gurgaon, and DPS Noida Sector 30). The Faridabad campus serves the Faridabad residential belt with a CBSE-primary academic culture inherited from the broader DPS network's CBSE-focused identity.",
-      "DPS Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as a senior-school international option for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is meaningfully smaller than the CBSE cohort because the school's identity and most of its alumni are CBSE-rooted; students choosing IB are typically self-selecting toward international university applications.",
+      "DPS Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as a senior-school international option for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. Both IB Biology HL and SL are offered, with full the IB practical programme coverage. The IB cohort is meaningfully smaller than the CBSE cohort because the school's identity and most of its alumni are CBSE-rooted; students choosing IB are typically self-selecting toward international university applications.",
       "For DPS Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. The shift from CBSE Class 10's recall-and-standard-answer-structure assessment to the IB DP's data-analysis-and-evaluation Paper 2 style is the single biggest assessment-style change students encounter — a real shift that benefits from explicit external coaching in the first DP1 term. Our DP1 coaching makes this transition explicit, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching.",
       "DPS Faridabad's broader DPS network identity gives families unusually-strong India-university connections through the DPS Society alumni base. For IB+NEET dual-track students, this matters: many extended-family conversations at DPS households default to AIIMS / state medical colleges as a valued option even when the abroad track is the primary planned route. The integrated IB+NEET pathway is a natural fit for this profile, preserving both Indian and abroad medical-college pathways through Class 12. The school's Faridabad sector location keeps it accessible from across the central-Faridabad belt and from NIT Faridabad.",
     ],
@@ -2205,7 +2205,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'IB World School authorised for the Diploma Programme',
       'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
       'Located in Faridabad with broader Faridabad-sector accessibility',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'CBSE-rooted brand identity with IB DP as the abroad-applications track',
     ],
     collegeContext:
@@ -2246,7 +2246,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       {
         question: 'When should a DPS Faridabad student start IB Biology tutoring?',
         answer:
-          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have DPS Faridabad students each cohort who join then for focused Paper 2 + Paper 3 rubric drilling.",
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective and we have DPS Faridabad students each cohort who join then for focused Paper 2 long-response and data-response rubric drilling.",
       },
     ],
   },
@@ -2352,7 +2352,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Apeejay School Faridabad is a co-educational day school operating as part of the broader Apeejay Education Society network — one of India's older educational groups, which also runs Apeejay School Noida, Apeejay School Pitampura, Apeejay School Sheikh Sarai, Apeejay School Saket, and Apeejay Stya University (in Gurgaon). The Faridabad campus has been part of the Apeejay network for decades and built its identity on CBSE academic excellence before adding the IB Diploma Programme as a senior-school international option.",
-      "Apeejay Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is smaller than the CBSE cohort — typical of CBSE-primary schools that have added IB DP — and students choosing IB are self-selecting toward international university applications.",
+      "Apeejay Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option for the subset of families targeting US, UK, Canadian, Australian, or other abroad universities. Both IB Biology HL and SL are offered, with full the IB practical programme coverage. The IB cohort is smaller than the CBSE cohort — typical of CBSE-primary schools that have added IB DP — and students choosing IB are self-selecting toward international university applications.",
       "For Apeejay Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. CBSE Class 10's recall-and-standard-answer-structure assessment is meaningfully different from IB DP Paper 2's data-analysis-and-evaluation style. Our DP1 coaching makes this transition explicit in the first term — IB-rubric command terms, long-response mark scheme, IA personal-investigation design. Several Apeejay IB Biology HL students each cohort also pursue our integrated IB+NEET track for the standard dual-application reasons.",
       "Apeejay Faridabad's location in central Faridabad keeps the school accessible across the Sector belt (14, 15, 17, 19, 80) and from NIT Faridabad. The Apeejay group's broader network (including the Stya University in Gurgaon and Apeejay School Noida) gives families useful cross-network reference points when considering senior-school IB choices. For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day.",
     ],
@@ -2362,7 +2362,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'IB World School authorised for the Diploma Programme',
       'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
       'Located in Faridabad (central Faridabad)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
     ],
     collegeContext:
@@ -2428,7 +2428,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Modern Delhi Public School (Modern DPS) Faridabad is a co-educational day school in Faridabad, operating as an independently-managed institution distinct from the broader Delhi Public School (DPS) national network campus also located in Faridabad. The school built its early reputation on CBSE academic excellence and added the IB Diploma Programme authorisation as a senior-school option for the subset of families targeting international universities.",
-      "Modern DPS Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is meaningfully smaller than the CBSE cohort — typical of the CBSE-primary-plus-IB-senior model — and students choosing IB are self-selecting toward international university applications.",
+      "Modern DPS Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option. Both IB Biology HL and SL are offered, with full the IB practical programme coverage. The IB cohort is meaningfully smaller than the CBSE cohort — typical of the CBSE-primary-plus-IB-senior model — and students choosing IB are self-selecting toward international university applications.",
       "For Modern DPS Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. The shift from CBSE Class 10's recall-and-standard-answer-structure assessment to IB DP Paper 2's data-analysis-and-evaluation style is the single biggest assessment-style change students encounter. Our DP1 coaching makes this transition explicit in the first term, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching.",
       "Modern DPS Faridabad's Faridabad location keeps the school accessible across the central-Faridabad belt and from Greater Faridabad. For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day. Several Modern DPS IB Biology HL students each cohort pursue our integrated IB+NEET track for the standard dual-application reasons — abroad applications via IB Diploma while keeping AIIMS / state medical colleges open via NEET.",
     ],
@@ -2438,7 +2438,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'IB World School authorised for the Diploma Programme',
       'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
       'Located in Faridabad with broader Faridabad-sector accessibility',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
     ],
     collegeContext:
@@ -2505,7 +2505,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Ryan International School Faridabad is a co-educational day school operating as part of the broader Ryan International Group of Institutions network — one of India's larger private school networks with a substantial multi-city Indian footprint and a small number of international campuses. The Faridabad campus has built its identity on CBSE academic delivery within the Ryan network's broader brand identity, and added IB Diploma Programme authorisation at senior school as an international-application option for the subset of families targeting overseas universities.",
-      "Ryan International Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is meaningfully smaller than the CBSE cohort — typical of CBSE-primary schools that have added IB DP — and students choosing IB are self-selecting toward international university applications.",
+      "Ryan International Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option. Both IB Biology HL and SL are offered, with full the IB practical programme coverage. The IB cohort is meaningfully smaller than the CBSE cohort — typical of CBSE-primary schools that have added IB DP — and students choosing IB are self-selecting toward international university applications.",
       "For Ryan International Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. CBSE Class 10's recall-and-standard-answer-structure assessment differs meaningfully from IB DP Paper 2's data-analysis-and-evaluation style. Our DP1 coaching makes this transition explicit in the first term, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching. Several Ryan International IB Biology HL students each cohort pursue our integrated IB+NEET track for the standard dual-application reasons.",
       "Ryan International Faridabad's location keeps the school accessible across the central-Faridabad belt. The Ryan network's broader presence across NCR (Ryan International Sector 56 Gurgaon, Ryan International Sector 25 Rohini, etc.) gives families useful cross-network reference points when considering senior-school IB choices. For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day regardless of which Faridabad sector students live in.",
     ],
@@ -2515,7 +2515,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'IB World School authorised for the Diploma Programme',
       'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
       'Located in Faridabad (central-Faridabad accessibility)',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
     ],
     collegeContext:
@@ -2582,7 +2582,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
     ibProgrammeOffered: ['DP'],
     historyParagraphs: [
       "Seth Anandram Jaipuria School Vasundhara is a co-educational day school in Vasundhara, Ghaziabad, operating as part of the broader Jaipuria Schools network — the group also runs Seth Anandram Jaipuria School campuses in Lucknow, Kanpur, and other Indian cities. The Vasundhara campus has been a meaningful part of Ghaziabad's east-NCR international-curriculum landscape and added IB Diploma Programme authorisation as a senior-school option alongside its established CBSE programme.",
-      "Jaipuria Vasundhara's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as the international-application option. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is smaller than the CBSE cohort — typical of the CBSE-primary-plus-IB-senior structure common across NCR — and students choosing IB are self-selecting toward international university applications from the broader Indirapuram-Vaishali-Vasundhara residential cohort.",
+      "Jaipuria Vasundhara's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as the international-application option. Both IB Biology HL and SL are offered, with full the IB practical programme coverage. The IB cohort is smaller than the CBSE cohort — typical of the CBSE-primary-plus-IB-senior structure common across NCR — and students choosing IB are self-selecting toward international university applications from the broader Indirapuram-Vaishali-Vasundhara residential cohort.",
       "For Jaipuria Vasundhara IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. CBSE Class 10's recall-and-standard-answer-structure assessment differs meaningfully from IB DP Paper 2's data-analysis-and-evaluation style. Our DP1 coaching makes this transition explicit in the first term, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching. Several Jaipuria IB Biology HL students each cohort also pursue our integrated IB+NEET track.",
       "Jaipuria's Vasundhara location keeps it accessible from across the east-NCR belt — Indirapuram, Vaishali, Kaushambi, Crossings Republik, and the broader Ghaziabad-Noida border area via the Mayur Vihar corridor. The school's broader Jaipuria network gives families cross-campus reference points when considering senior-school IB options (the Lucknow and Kanpur Jaipuria campuses also have international-curriculum offerings). For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day.",
     ],
@@ -2592,7 +2592,7 @@ export const ibBiologySchools: IBBiologySchool[] = [
       'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
       'Located in Vasundhara, Ghaziabad (east NCR residential belt)',
       'Among the longer-established IB-offering schools in east NCR',
-      'IB Biology HL and SL with full Section 6 practical coverage',
+      'IB Biology HL and SL with full full practical-programme coverage',
       'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
     ],
     collegeContext:

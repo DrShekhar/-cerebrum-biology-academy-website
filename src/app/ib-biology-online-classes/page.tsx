@@ -361,9 +361,9 @@ const faqs = [
       'Yes, we cover all four options: Option A (Neurobiology and Behaviour), Option B (Biotechnology and Bioinformatics), Option C (Ecology and Conservation), and Option D (Human Physiology). We help you choose the best option for your interests and strengths.',
   },
   {
-    question: 'How do you prepare students for Paper 1, 2, and 3?',
+    question: 'How do you prepare students for Paper 1 and Paper 2?',
     answer:
-      'Paper 1 (MCQ): Focused drilling on common question types and elimination strategies. Paper 2 (Short/Extended): Structure templates and marking scheme analysis. Paper 3 (Data-based + Options): Scientific methodology and option-specific preparation.',
+      'Paper 1 (MCQ): focused drilling on common question types and elimination strategies. Paper 2 (data-based + short-response + extended-response): structure templates, marking-scheme analysis, and timed long-response practice. The 2025 syllabus has only two papers — Paper 3 (options) was removed when the new themes-based syllabus took effect.',
   },
 ]
 
