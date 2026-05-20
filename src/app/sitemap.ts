@@ -3007,6 +3007,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.93,
     },
+    // Class 10 Biology SEO Pages
+    {
+      url: `${baseUrl}/biology-tutor-class-10-cbse`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
     {
       url: `${baseUrl}/biology-tutor-class-9-icse`,
       lastModified: lastUpdated,
