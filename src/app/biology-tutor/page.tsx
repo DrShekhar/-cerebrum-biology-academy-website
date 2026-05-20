@@ -25,7 +25,7 @@ const whyChooseUs = [
     icon: Award,
     title: 'AIIMS Trained Faculty',
     description:
-      'Learn from Dr. Shekhar Singh and faculty trained at premier medical institutions.',
+      'Learn from Dr. Shekhar C Singh and faculty trained at premier medical institutions.',
     stat: 'AIIMS',
   },
   {
@@ -52,7 +52,7 @@ const tutorBenefits = [
   {
     icon: UserCheck,
     title: 'Personal Mentorship',
-    description: 'Direct guidance from Dr. Shekhar Singh, AIIMS-trained biology expert.',
+    description: 'Direct guidance from Dr. Shekhar C Singh, AIIMS-trained biology expert.',
   },
   {
     icon: Brain,
@@ -100,7 +100,7 @@ const faqs = [
   {
     question: 'Why should I choose Cerebrum for biology tutoring?',
     answer:
-      'Cerebrum Biology Academy offers AIIMS-trained faculty led by Dr. Shekhar Singh, 98% success rate, small batch sizes (10-15 students), personalized attention, and comprehensive study material. Our 15+ years experience and 15,000+ successful students prove our teaching methodology works.',
+      'Cerebrum Biology Academy offers AIIMS-trained faculty led by Dr. Shekhar C Singh, 98% success rate, small batch sizes (10-15 students), personalized attention, and comprehensive study material. Our 15+ years experience and 15,000+ successful students prove our teaching methodology works.',
   },
   {
     question: 'What makes a good biology tutor?',
@@ -167,7 +167,7 @@ export default function BiologyTutorPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Looking for the best biology tutor? Learn from Dr. Shekhar Singh and AIIMS-trained
+              Looking for the best biology tutor? Learn from Dr. Shekhar C Singh and AIIMS-trained
               faculty. Whether you&apos;re preparing for NEET, CBSE, or ICSE - we make biology
               simple and scoring!
             </p>

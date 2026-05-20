@@ -37,7 +37,7 @@ export interface Tutor {
 export const tutors: Record<TutorSlug, Tutor> = {
   'dr-shekhar-singh': {
     slug: 'dr-shekhar-singh',
-    name: 'Dr. Shekhar Singh',
+    name: 'Dr. Shekhar C Singh',
     tier: 'Examiner',
     hourlyRateUSD: 165,
     credentials: [
@@ -56,7 +56,7 @@ export const tutors: Record<TutorSlug, Tutor> = {
     languages: ['English', 'Hindi'],
     yearsExperience: 15,
     studentsSupported: 500,
-    bio: 'Dr. Shekhar Singh is the founder and lead IB Biology faculty at Cerebrum Biology Academy. An AIIMS-trained physician and former IB Biology examiner, he has personally coached students to 7s in IB Biology at schools across Singapore, Dubai, London, and New Delhi.',
+    bio: 'Dr. Shekhar C Singh is the founder and lead IB Biology faculty at Cerebrum Biology Academy. An AIIMS-trained physician and former IB Biology examiner, he has personally coached students to 7s in IB Biology at schools across Singapore, Dubai, London, and New Delhi.',
     philosophy:
       'IB Biology is learnable. The 7-scoring pattern is not innate talent — it is a combination of clean IA writing, examiner-accurate command-term use, and mechanism-grounded answers. My coaching focuses on the specific student habits that convert 5s into 7s.',
     availableForDemo: true,

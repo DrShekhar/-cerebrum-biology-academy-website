@@ -94,7 +94,7 @@ const faqs = [
   {
     question: 'What makes a good NEET Biology tutor?',
     answer:
-      'A good NEET Biology tutor should have: (1) Deep subject knowledge with medical background, (2) Understanding of NEET exam pattern and weightage, (3) Ability to explain complex concepts simply, (4) Regular testing and feedback system, and (5) Proven track record of results. Dr. Shekhar Singh, AIIMS Alumnus, brings all these qualities with 15+ years of experience.',
+      'A good NEET Biology tutor should have: (1) Deep subject knowledge with medical background, (2) Understanding of NEET exam pattern and weightage, (3) Ability to explain complex concepts simply, (4) Regular testing and feedback system, and (5) Proven track record of results. Dr. Shekhar C Singh, AIIMS Alumnus, brings all these qualities with 15+ years of experience.',
   },
   {
     question: 'How important is Biology in NEET?',

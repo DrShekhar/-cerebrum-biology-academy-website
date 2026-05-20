@@ -55,7 +55,7 @@ const courseSchema = {
   ],
   instructor: {
     '@type': 'Person',
-    name: 'Dr. Shekhar Singh',
+    name: 'Dr. Shekhar C Singh',
     jobTitle: 'Founder & Lead IB Biology Faculty',
     worksFor: {
       '@type': 'EducationalOrganization',

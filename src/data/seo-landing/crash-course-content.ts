@@ -1195,7 +1195,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'Best NEET Crash Course 2026 | #1 Rated Biology Crash Course Delhi NCR',
     metaDescription:
-      'Ranked #1 NEET Biology crash course in Delhi NCR. 92% success rate, AIIMS faculty Dr. Shekhar Singh, 12-student batches. Compare fees, results & features. ₹14,999-34,999.',
+      'Ranked #1 NEET Biology crash course in Delhi NCR. 92% success rate, AIIMS faculty Dr. Shekhar C Singh, 12-student batches. Compare fees, results & features. ₹14,999-34,999.',
     keywords: [
       'best neet crash course',
       'best neet crash course delhi',
@@ -1240,7 +1240,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '👨‍⚕️',
           title: 'AIIMS Faculty — Not Just "Experienced Teachers"',
-          description: 'Dr. Shekhar Singh (Ph.D Botany, AIIMS-trained) teaches every batch personally. No junior faculty substitutions.',
+          description: 'Dr. Shekhar C Singh (Ph.D Botany, AIIMS-trained) teaches every batch personally. No junior faculty substitutions.',
         },
         {
           icon: '🎯',
@@ -1318,7 +1318,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       features: [
         '30-Day Sprint: ₹14,999 (starting now) — for revision-ready students',
         '45-Day Intensive: ₹34,999 (starting now) — for gap-filling + revision',
-        'AIIMS faculty Dr. Shekhar Singh teaches every batch',
+        'AIIMS faculty Dr. Shekhar C Singh teaches every batch',
         '12-student micro-batches (not 60-100 like chains)',
         '92% verified success rate across 500+ students',
         'Biology-only: 4-5 hours/day of pure Biology',
@@ -1461,7 +1461,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
       {
         question: 'Do all durations have the same faculty?',
-        answer: 'Yes. Dr. Shekhar Singh (AIIMS-trained, Ph.D Botany) teaches all crash course batches personally. Same quality of teaching across 45, 60, and 90-day programs. The only difference is depth and pace of coverage.',
+        answer: 'Yes. Dr. Shekhar C Singh (AIIMS-trained, Ph.D Botany) teaches all crash course batches personally. Same quality of teaching across 45, 60, and 90-day programs. The only difference is depth and pace of coverage.',
       },
       {
         question: 'What is included in each crash course?',

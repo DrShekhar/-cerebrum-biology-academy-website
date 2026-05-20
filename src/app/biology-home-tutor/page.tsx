@@ -69,7 +69,7 @@ const cerebrumAdvantages = [
     icon: Award,
     title: 'AIIMS-Trained Faculty',
     description:
-      'Dr. Shekhar Singh and team are trained at premier medical institutions. They know exactly what NEET demands.',
+      'Dr. Shekhar C Singh and team are trained at premier medical institutions. They know exactly what NEET demands.',
     highlight: true,
   },
   {
@@ -133,7 +133,7 @@ const faqs = [
   {
     question: "But I want personalized attention. Won't I get that with a home tutor?",
     answer:
-      'Our small batches of 10-15 students ensure personalized attention from AIIMS-trained faculty. Plus, you get 24/7 WhatsApp doubt support. The quality of attention from Dr. Shekhar Singh (AIIMS trained) is incomparable to an average home tutor with a basic degree.',
+      'Our small batches of 10-15 students ensure personalized attention from AIIMS-trained faculty. Plus, you get 24/7 WhatsApp doubt support. The quality of attention from Dr. Shekhar C Singh (AIIMS trained) is incomparable to an average home tutor with a basic degree.',
   },
   {
     question: 'What if I cannot travel to your centers?',
@@ -357,7 +357,7 @@ export default function BiologyHomeTutorPage() {
               problems.
             </p>
             <p className="text-lg opacity-80">
-              - Dr. Shekhar Singh, AIIMS Trained, Founder of Cerebrum Biology Academy
+              - Dr. Shekhar C Singh, AIIMS Trained, Founder of Cerebrum Biology Academy
             </p>
           </div>
         </div>

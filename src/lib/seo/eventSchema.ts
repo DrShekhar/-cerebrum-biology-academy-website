@@ -87,7 +87,7 @@ export const upcomingEvents: EventData[] = [
   {
     name: 'Free NEET Biology Demo Class - March 2026',
     description:
-      "Experience Dr. Shekhar Singh's teaching methodology in this free demo class. Topic: Human Physiology - Cardiovascular System. Limited seats available.",
+      "Experience Dr. Shekhar C Singh's teaching methodology in this free demo class. Topic: Human Physiology - Cardiovascular System. Limited seats available.",
     startDate: '2026-03-01T10:00:00+05:30',
     endDate: '2026-03-01T12:00:00+05:30',
     location: {

@@ -1192,7 +1192,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
           icon: 'user',
           question: 'Worried about faculty quality in online coaching?',
           solution:
-            'Dr. Shekhar Singh (AIIMS) teaches directly. Verify credentials, check demo classes, and read authentic reviews.',
+            'Dr. Shekhar C Singh (AIIMS) teaches directly. Verify credentials, check demo classes, and read authentic reviews.',
         },
         {
           icon: 'chart',
@@ -1307,7 +1307,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'How is Cerebrum Academy different from other online coaching?',
         answer:
-          'Key differentiators: (1) Direct teaching by Dr. Shekhar Singh (AIIMS), (2) Batch size limited to 15 students, (3) 24/7 WhatsApp support with 2-hour response time, (4) 67+ AIIMS selections with verifiable results, (5) 7-day refund policy if not satisfied, (6) Free demo class to evaluate before joining.',
+          'Key differentiators: (1) Direct teaching by Dr. Shekhar C Singh (AIIMS), (2) Batch size limited to 15 students, (3) 24/7 WhatsApp support with 2-hour response time, (4) 67+ AIIMS selections with verifiable results, (5) 7-day refund policy if not satisfied, (6) Free demo class to evaluate before joining.',
       },
     ],
     courseSummary: {
@@ -1315,7 +1315,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       duration: '12-month comprehensive program',
       batchSize: '10-15 students per batch',
       features: [
-        'Live classes by Dr. Shekhar Singh (AIIMS)',
+        'Live classes by Dr. Shekhar C Singh (AIIMS)',
         'Small batches with personal attention',
         '24/7 WhatsApp doubt support',
         'Complete NCERT-based study material',

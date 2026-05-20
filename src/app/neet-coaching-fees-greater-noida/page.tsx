@@ -101,7 +101,7 @@ const valueProps = [
     icon: Award,
     title: 'AIIMS Faculty',
     description:
-      'Learn from Dr. Shekhar Singh (AIIMS) and team. No junior teachers or recorded lectures - direct interaction with experts.',
+      'Learn from Dr. Shekhar C Singh (AIIMS) and team. No junior teachers or recorded lectures - direct interaction with experts.',
   },
   {
     icon: Shield,

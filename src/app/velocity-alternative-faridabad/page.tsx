@@ -37,7 +37,7 @@ const faqs = [
   {
     question: 'Why should I consider Cerebrum over Velocity Institute for NEET Biology?',
     answer:
-      'While Velocity is popular in Faridabad, Cerebrum offers key advantages: smaller batches (15-20 vs 50-80 at Velocity), AIIMS-trained faculty (Dr. Shekhar Singh), Biology-only specialization for deeper coverage, and online + hybrid options. Our 98% success rate in Biology speaks for itself.',
+      'While Velocity is popular in Faridabad, Cerebrum offers key advantages: smaller batches (15-20 vs 50-80 at Velocity), AIIMS-trained faculty (Dr. Shekhar C Singh), Biology-only specialization for deeper coverage, and online + hybrid options. Our 98% success rate in Biology speaks for itself.',
   },
   {
     question: 'How is Cerebrum different from Velocity Institute Faridabad?',

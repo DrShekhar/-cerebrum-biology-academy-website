@@ -5,7 +5,7 @@ import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching Dwarka 2026 | All Subjects | Online + Offline',
   description:
-    'Top NEET coaching for Dwarka — Physics, Chemistry & Biology by AIIMS Alumnus Dr. Shekhar Singh. 98% success, 67+ AIIMS selections. All sectors covered. Call 88264-44334. Free Demo!',
+    'Top NEET coaching for Dwarka — Physics, Chemistry & Biology by AIIMS Alumnus Dr. Shekhar C Singh. 98% success, 67+ AIIMS selections. All sectors covered. Call 88264-44334. Free Demo!',
   keywords:
     'NEET coaching Dwarka, neet classes Dwarka, neet institute Dwarka, physics chemistry biology coaching Dwarka, NEET coaching Dwarka Sector 6, NEET coaching Dwarka Sector 10, NEET coaching Dwarka Sector 12, biology coaching Dwarka, NEET tuition Dwarka, NEET coaching Palam, Board Biology, CBSE Biology, Biology Olympiad, NBO, IBO, Class 11 Biology Dwarka, Class 12 Biology Dwarka, Foundation Biology',
   openGraph: {

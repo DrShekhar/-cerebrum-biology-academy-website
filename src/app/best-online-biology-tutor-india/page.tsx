@@ -121,7 +121,7 @@ const studentLocations = [
 
 const faqs = [
   {
-    question: 'Why is Dr. Shekhar Singh considered the best online Biology tutor in India?',
+    question: 'Why is Dr. Shekhar C Singh considered the best online Biology tutor in India?',
     answer:
       'Dr. Shekhar C Singh is an AIIMS Alumnus and former Narayana Academic Head with 15+ years of experience. He has trained 5000+ students with a 98% NEET success rate. His teaching methodology, developed at premier institutes, is now accessible to students across India through online classes.',
   },

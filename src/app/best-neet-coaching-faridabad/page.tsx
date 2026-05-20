@@ -37,7 +37,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching institute in Faridabad?',
     answer:
-      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. For Physics-Chemistry focused, students also consider Allen, Aakash, and Velocity Institute.',
+      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. For Physics-Chemistry focused, students also consider Allen, Aakash, and Velocity Institute.',
   },
   {
     question: 'What are the fees for NEET coaching in Faridabad?',

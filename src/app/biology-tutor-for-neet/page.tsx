@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology Tutor for NEET | 1:1 AIIMS Faculty',
     description:
-      '1:1 personalised biology tutoring for NEET. Dr. Shekhar Singh (AIIMS) + senior faculty. 680+ medical college selections.',
+      '1:1 personalised biology tutoring for NEET. Dr. Shekhar C Singh (AIIMS) + senior faculty. 680+ medical college selections.',
     url: 'https://cerebrumbiologyacademy.com/biology-tutor-for-neet',
     type: 'website',
   },
@@ -62,7 +62,7 @@ const config: BestVerticalConfig = {
     { title: 'Biology Tutor Class 11 (NEET Foundation)', href: '/best-biology-tutor-class-11' },
     { title: 'Biology Tutor Class 12 (Board + NEET)', href: '/best-biology-tutor-class-12' },
     {
-      title: 'Dr. Shekhar Singh — Faculty Profile',
+      title: 'Dr. Shekhar C Singh — Faculty Profile',
       href: '/dr-shekhar-singh-neet-biology-faculty',
     },
   ],
@@ -71,7 +71,7 @@ const config: BestVerticalConfig = {
       tier: 'Pinnacle 1:1 (Premium)',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
-        'Direct mentoring with Dr. Shekhar Singh. 10–12 student micro-batches + 1:1 sessions. Best for AIIMS / Top medical college aspirants.',
+        'Direct mentoring with Dr. Shekhar C Singh. 10–12 student micro-batches + 1:1 sessions. Best for AIIMS / Top medical college aspirants.',
     },
     {
       tier: 'Ascent (Small Batch)',
@@ -100,7 +100,7 @@ const config: BestVerticalConfig = {
     {
       title: 'AIIMS Clinical Correlations',
       description:
-        'Dr. Shekhar Singh studied at AIIMS New Delhi. Clinical correlations in Human Physiology, Genetics and Biotechnology make difficult chapters memorable — something textbook-only tutors cannot replicate.',
+        'Dr. Shekhar C Singh studied at AIIMS New Delhi. Clinical correlations in Human Physiology, Genetics and Biotechnology make difficult chapters memorable — something textbook-only tutors cannot replicate.',
     },
     {
       title: 'Biology-Only Specialisation',

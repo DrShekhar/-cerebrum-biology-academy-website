@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'NEET preparation Saraswati Vihar',
     'DC Chauk biology coaching',
     'Rohini NEET coaching',
-    'Dr Shekhar Singh',
+    'Dr Shekhar C Singh',
     'AIIMS trained faculty',
     'biology coaching Delhi',
     'medical entrance coaching',

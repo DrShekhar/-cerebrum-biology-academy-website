@@ -104,7 +104,7 @@ export function FacultyVideoSection() {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Watch Dr. Shekhar Singh in action - see the proven teaching methodology that has helped
+            Watch Dr. Shekhar C Singh in action - see the proven teaching methodology that has helped
             15,000+ students secure medical seats with our industry-leading 98% success rate.
           </p>
 

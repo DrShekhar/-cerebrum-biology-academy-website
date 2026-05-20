@@ -2705,7 +2705,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
           icon: 'user',
           title: 'AIIMS Faculty Teaching',
           description:
-            'Dr. Shekhar Singh (AIIMS) teaches directly. 15+ years of NEET coaching experience.',
+            'Dr. Shekhar C Singh (AIIMS) teaches directly. 15+ years of NEET coaching experience.',
         },
         {
           icon: 'users',
@@ -3424,7 +3424,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'Free NEET Biology Video Lectures | 50+ Hours Free',
     metaDescription:
-      'Free NEET biology video lectures by Dr. Shekhar Singh (AIIMS). 50+ hours of concept lectures covering all chapters.',
+      'Free NEET biology video lectures by Dr. Shekhar C Singh (AIIMS). 50+ hours of concept lectures covering all chapters.',
     keywords: [
       'free neet biology lectures',
       'free biology video lectures neet',
@@ -3438,7 +3438,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'Free NEET Biology Video Lectures',
       subheadline:
-        '50+ hours of free concept lectures by Dr. Shekhar Singh (AIIMS). Start learning free today.',
+        '50+ hours of free concept lectures by Dr. Shekhar C Singh (AIIMS). Start learning free today.',
       ctaText: 'Start Learning Free',
       ctaLink: '/video-lectures',
       backgroundGradient: 'from-orange-800 to-red-800',

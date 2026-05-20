@@ -41,7 +41,7 @@ const topCoachings = [
     successRate: '98%',
     batchSize: '15-20',
     fee: '₹45,000 - 65,000/year',
-    faculty: 'AIIMS-trained (Dr. Shekhar Singh)',
+    faculty: 'AIIMS-trained (Dr. Shekhar C Singh)',
     rating: 5.0,
     pros: ['Highest success rate', 'Small batches', 'Personal attention', 'Biology expertise'],
     cons: ['Biology only (not PCB)', 'Limited seats'],

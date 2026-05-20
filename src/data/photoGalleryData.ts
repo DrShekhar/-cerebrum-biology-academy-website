@@ -252,7 +252,7 @@ export const photoGallery: PhotoItem[] = [
     url: '/images/gallery/dr-shekhar-teaching-moment.jpg',
     title: 'Dr. Shekhar - Chief Educator in Action',
     description:
-      'Dr. Shekhar Singh, Director & Chief Educator of Cerebrum, explaining complex NEET Biology concepts with his signature teaching style.',
+      'Dr. Shekhar C Singh, Director & Chief Educator of Cerebrum, explaining complex NEET Biology concepts with his signature teaching style.',
     category: 'classroom',
     date: '2024-03-10',
     location: 'Cerebrum Main Classroom',

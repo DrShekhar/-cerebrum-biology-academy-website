@@ -237,7 +237,7 @@ const faqs = [
   {
     question: 'What is the difference between a biology teacher and a biology tutor?',
     answer:
-      'On the Cerebrum site, "biology teacher" refers to classroom and online live-class instruction at scale (batches of 15–20 students, structured curriculum, doubt sessions). "Biology tutor" refers to 1:1 personalised mentoring with Dr. Shekhar Singh or senior faculty — for students who want bespoke pacing, focused IA / FRQ / Olympiad coaching, or score-jump programmes. Both pathways are led by AIIMS-trained biology specialists; the choice depends on the student\'s learning style and budget.',
+      'On the Cerebrum site, "biology teacher" refers to classroom and online live-class instruction at scale (batches of 15–20 students, structured curriculum, doubt sessions). "Biology tutor" refers to 1:1 personalised mentoring with Dr. Shekhar C Singh or senior faculty — for students who want bespoke pacing, focused IA / FRQ / Olympiad coaching, or score-jump programmes. Both pathways are led by AIIMS-trained biology specialists; the choice depends on the student\'s learning style and budget.',
   },
   {
     question: 'How can I verify the results claimed by Cerebrum?',
@@ -247,7 +247,7 @@ const faqs = [
   {
     question: 'Is online biology coaching from Cerebrum as good as offline?',
     answer:
-      "Online sessions are live (not recorded), interactive, and taught by the same faculty as offline batches — including Dr. Shekhar Singh personally for Pinnacle batches. Whiteboard-style teaching, real-time doubt resolution, recorded sessions for revision, and small batch sizes are preserved online. Many of Cerebrum's top NEET, IB and AP scorers chose the online format.",
+      "Online sessions are live (not recorded), interactive, and taught by the same faculty as offline batches — including Dr. Shekhar C Singh personally for Pinnacle batches. Whiteboard-style teaching, real-time doubt resolution, recorded sessions for revision, and small batch sizes are preserved online. Many of Cerebrum's top NEET, IB and AP scorers chose the online format.",
   },
 ]
 
@@ -418,7 +418,7 @@ export default function BestBiologyTeacherIndiaPage() {
                 href="/dr-shekhar-singh-biology-faculty-india"
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition"
               >
-                Meet Dr. Shekhar Singh
+                Meet Dr. Shekhar C Singh
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
@@ -478,7 +478,7 @@ export default function BestBiologyTeacherIndiaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Dr. Shekhar Singh + Cerebrum is the Canonical Answer
+              Why Dr. Shekhar C Singh + Cerebrum is the Canonical Answer
             </h2>
             <p className="text-lg text-slate-600">
               The structural reasons a biology-only AIIMS-trained specialist outperforms generalist

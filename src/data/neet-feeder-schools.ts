@@ -523,7 +523,7 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
       { title: 'RE-NEET 2026 News Hub', href: '/re-neet-2026' },
       { title: 'NRI Quota MBBS Guide', href: '/nri-quota-mbbs' },
       {
-        title: 'Dr. Shekhar Singh — Faculty Profile',
+        title: 'Dr. Shekhar C Singh — Faculty Profile',
         href: '/dr-shekhar-singh-neet-biology-faculty',
       },
     ],
@@ -541,7 +541,7 @@ export function buildNEETFeederSchoolConfig(key: NEETFeederSchoolKey): BestVerti
       {
         tier: 'Pinnacle (1:1 Premium)',
         price: '₹1,20,000–₹1,56,000 / year',
-        description: `10–12 student batches + personal mentorship from Dr. Shekhar Singh. Best for ${s.shortName} students targeting AIIMS / Top medical college.`,
+        description: `10–12 student batches + personal mentorship from Dr. Shekhar C Singh. Best for ${s.shortName} students targeting AIIMS / Top medical college.`,
       },
     ],
     whyBest: [

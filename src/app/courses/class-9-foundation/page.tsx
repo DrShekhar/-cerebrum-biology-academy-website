@@ -252,7 +252,7 @@ export default function Class9FoundationPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
             <div>
               <p className="text-blue-200 font-medium mb-2 text-sm sm:text-base">
-                Taught by Dr. Shekhar Singh (AIIMS Faculty) | 600+ Students
+                Taught by Dr. Shekhar C Singh (AIIMS Faculty) | 600+ Students
               </p>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                 Class 9 Biology Foundation
@@ -308,7 +308,7 @@ export default function Class9FoundationPage() {
                 </div>
                 <div className="flex items-center">
                   <GraduationCap className="w-6 h-6 mr-3 text-blue-300 flex-shrink-0" />
-                  <span>AIIMS Faculty — Dr. Shekhar Singh</span>
+                  <span>AIIMS Faculty — Dr. Shekhar C Singh</span>
                 </div>
                 <div className="flex items-center">
                   <Microscope className="w-6 h-6 mr-3 text-blue-300 flex-shrink-0" />
@@ -360,7 +360,7 @@ export default function Class9FoundationPage() {
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
-                Dr. Shekhar Singh
+                Dr. Shekhar C Singh
               </h3>
               <p className="text-blue-600 font-medium mb-3">Founder & Lead Biology Faculty</p>
               <p className="text-gray-700 mb-3">

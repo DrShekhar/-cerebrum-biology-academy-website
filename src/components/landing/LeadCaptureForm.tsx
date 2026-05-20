@@ -361,13 +361,13 @@ export function LeadCaptureForm({
         <div className="mt-6 flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3">
           <Image
             src="/faculty/dr-shekhar-singh.jpg"
-            alt="Dr. Shekhar Singh, Founder, Cerebrum Biology Academy"
+            alt="Dr. Shekhar C Singh, Founder, Cerebrum Biology Academy"
             width={56}
             height={56}
             className="h-14 w-14 flex-shrink-0 rounded-full object-cover"
           />
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-slate-900">Dr. Shekhar Singh</p>
+            <p className="text-sm font-semibold text-slate-900">Dr. Shekhar C Singh</p>
             <p className="text-xs text-slate-600">
               AIIMS New Delhi alumnus · 15+ years teaching · Director, Cerebrum
             </p>

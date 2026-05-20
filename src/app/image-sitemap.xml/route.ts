@@ -121,7 +121,7 @@ const imageEntries: ImageSitemapEntry[] = [
     images: [
       {
         loc: `${IMAGES_BASE_URL}/faculty/dr-shekhar-singh.jpg`,
-        title: 'Dr. Shekhar Singh - NEET Biology Faculty',
+        title: 'Dr. Shekhar C Singh - NEET Biology Faculty',
         caption: 'Expert biology faculty and founder of Cerebrum Biology Academy',
       },
     ],

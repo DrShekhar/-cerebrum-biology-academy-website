@@ -120,7 +120,7 @@ const testimonials = [
 
 const faqs = [
   {
-    question: "What is Dr. Shekhar Singh's qualification?",
+    question: "What is Dr. Shekhar C Singh's qualification?",
     answer:
       "Dr. Shekhar C Singh is an alumnus of AIIMS New Delhi, India's premier medical institution. He has 15+ years of dedicated experience in NEET Biology coaching and previously served as Academic Head at Narayana Educational Institutions.",
   },
@@ -217,7 +217,7 @@ export default function DrShekharSinghPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">About Dr. Shekhar Singh</h2>
+            <h2 className="text-3xl font-bold mb-6">About Dr. Shekhar C Singh</h2>
             <div className="prose prose-lg text-gray-700">
               <p className="mb-4">
                 Dr. Shekhar C Singh is one of India's most respected NEET Biology educators, with a

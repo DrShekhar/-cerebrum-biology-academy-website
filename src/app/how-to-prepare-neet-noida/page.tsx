@@ -25,7 +25,7 @@ import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
 export const metadata: Metadata = {
   title: 'How to Prepare for NEET in Noida | Step-by-Step Guide 2026',
   description:
-    'Complete guide on how to prepare for NEET from Noida. 5-step strategy by AIIMS faculty Dr. Shekhar Singh. Score 650+ with our proven methodology. Free demo class available.',
+    'Complete guide on how to prepare for NEET from Noida. 5-step strategy by AIIMS faculty Dr. Shekhar C Singh. Score 650+ with our proven methodology. Free demo class available.',
   keywords: [
     'how to prepare for neet in noida',
     'neet preparation strategy noida',
@@ -82,7 +82,7 @@ const preparationSteps = [
       'Ensure doubt-solving support is available daily',
       'Look for mock test series with detailed analysis',
     ],
-    tip: 'Cerebrum offers AIIMS faculty (Dr. Shekhar Singh), 98% success rate, and batches of just 10-40 students.',
+    tip: 'Cerebrum offers AIIMS faculty (Dr. Shekhar C Singh), 98% success rate, and batches of just 10-40 students.',
   },
   {
     step: 3,
@@ -174,7 +174,7 @@ export default function HowToPrepareNEETNoida() {
       <NoidaPageSchemas
         area="Noida"
         pageName="How to Prepare for NEET in Noida"
-        pageDescription="Complete step-by-step guide on how to prepare for NEET from Noida by AIIMS faculty Dr. Shekhar Singh."
+        pageDescription="Complete step-by-step guide on how to prepare for NEET from Noida by AIIMS faculty Dr. Shekhar C Singh."
         pageUrl="https://cerebrumbiologyacademy.com/how-to-prepare-neet-noida"
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
@@ -191,7 +191,7 @@ export default function HowToPrepareNEETNoida() {
       />
       <NoidaHowToSchema
         title="How to Prepare for NEET in Noida"
-        description="Complete step-by-step guide to crack NEET from Noida with Cerebrum Biology Academy's proven 5-step methodology. Learn from AIIMS faculty Dr. Shekhar Singh."
+        description="Complete step-by-step guide to crack NEET from Noida with Cerebrum Biology Academy's proven 5-step methodology. Learn from AIIMS faculty Dr. Shekhar C Singh."
         steps={DEFAULT_NEET_HOWTO_STEPS}
         totalTime="P12M"
         estimatedCost="48000"
@@ -203,7 +203,7 @@ export default function HowToPrepareNEETNoida() {
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-2 text-yellow-400 mb-4">
               <Star className="h-5 w-5 fill-current" />
-              <span className="text-sm font-medium">By AIIMS Faculty Dr. Shekhar Singh</span>
+              <span className="text-sm font-medium">By AIIMS Faculty Dr. Shekhar C Singh</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-6" data-speakable="true">
               How to Prepare for NEET in Noida

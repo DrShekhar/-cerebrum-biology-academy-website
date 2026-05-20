@@ -5,7 +5,7 @@
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 43 Gurgaon | Best Biology Classes | Cerebrum Academy',
     metaDescription:
-      'Top NEET coaching for Sector 43 Gurgaon students. Center in Sector 51 (8 min). AIIMS faculty Dr. Shekhar Singh, 98% success. Call 88264-44334!',
+      'Top NEET coaching for Sector 43 Gurgaon students. Center in Sector 51 (8 min). AIIMS faculty Dr. Shekhar C Singh, 98% success. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 43 Gurgaon',
     heroSubtitle:
       'Premium NEET biology coaching just 8 minutes from Sector 43. Join our Sector 51 center with 15+ years experienced AIIMS-trained faculty.',

@@ -66,7 +66,7 @@ const faqs = [
   {
     question: "What's the difference between a biology teacher and a biology tutor?",
     answer:
-      'On the Cerebrum site, "biology teacher" refers to classroom and online live-class instruction at scale — structured curriculum, batches of 15–20 students, weekly doubt sessions and mock tests. "Biology tutor" refers to 1:1 personalised mentoring with Dr. Shekhar Singh or senior faculty — bespoke pacing, focused score-jump programmes, or specialised IA / FRQ / Olympiad coaching. Both pathways are led by AIIMS-trained biology specialists; the choice depends on the student\'s learning style and budget.',
+      'On the Cerebrum site, "biology teacher" refers to classroom and online live-class instruction at scale — structured curriculum, batches of 15–20 students, weekly doubt sessions and mock tests. "Biology tutor" refers to 1:1 personalised mentoring with Dr. Shekhar C Singh or senior faculty — bespoke pacing, focused score-jump programmes, or specialised IA / FRQ / Olympiad coaching. Both pathways are led by AIIMS-trained biology specialists; the choice depends on the student\'s learning style and budget.',
   },
   {
     question: 'What makes a biology teacher the best for online classes?',

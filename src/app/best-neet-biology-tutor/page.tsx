@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/BestVerticalLanding'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Biology Tutor in India | AIIMS-Trained Dr. Shekhar Singh',
+  title: 'Best NEET Biology Tutor in India | AIIMS-Trained Dr. Shekhar C Singh',
   description:
     "Dr. Shekhar C Singh (AIIMS Delhi) leads India's only biology-only NEET coaching. 680+ AIIMS/JIPMER/AFMC selections, 98% qualification rate, batches of 15-20. ₹40K–₹1.56L/year — half the cost of Kota relocation. Online + 6 NCR centres.",
   keywords: [

@@ -233,7 +233,7 @@ export default function CampbellBiologyHubPage() {
               </div>
               <h3 className="font-bold text-slate-900 mb-2">Expert Faculty</h3>
               <p className="text-slate-600 text-sm">
-                Taught by Dr. Shekhar Singh with 15+ years of experience in competitive biology
+                Taught by Dr. Shekhar C Singh with 15+ years of experience in competitive biology
                 coaching.
               </p>
             </div>

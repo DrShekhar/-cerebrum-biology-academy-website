@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Online Biology Tutor in India | 1:1 AIIMS Faculty',
     description:
-      'Best online biology tutor in India — 1:1 personalised mentoring with Dr. Shekhar Singh (AIIMS). 680+ medical college selections, 98% NEET qualification rate.',
+      'Best online biology tutor in India — 1:1 personalised mentoring with Dr. Shekhar C Singh (AIIMS). 680+ medical college selections, 98% NEET qualification rate.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/best-online-biology-tutor-india',

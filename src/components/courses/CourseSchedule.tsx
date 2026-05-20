@@ -62,7 +62,7 @@ function getRealBatchesForCourse(targetClass: string) {
       availableSeats: b.status === 'AVAILABLE' ? 5 : 0,
       totalSeats: 12,
       startDate: '1st Week of April 2026',
-      faculty: 'Dr. Shekhar Singh',
+      faculty: 'Dr. Shekhar C Singh',
       mode: b.hasOnline ? 'Hybrid' : 'Offline',
       location: b.hasOnline
         ? `${locationLabels[b.offlineLocation]} + Online`

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Meet Dr. Shekhar C Singh, AIIMS faculty and Director of Cerebrum Biology Academy. 15+ years experience, 15,000+ students mentored, 98% NEET success rate. Book a demo class today.',
   keywords:
-    'Dr. Shekhar Singh, AIIMS faculty, NEET biology teacher, Cerebrum Biology Academy, NEET coach, biology mentor',
+    'Dr. Shekhar C Singh, AIIMS faculty, NEET biology teacher, Cerebrum Biology Academy, NEET coach, biology mentor',
   openGraph: {
     title: 'Dr. Shekhar C Singh - Expert NEET Biology Educator',
     description:

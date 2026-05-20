@@ -65,7 +65,7 @@ export default function Class11NeetPreparationOnlinePage() {
             Online vs Offline: Why Online Works Better for Class 11
           </h3>
           <p className="text-gray-700 leading-relaxed">
-            Class 11 students juggle school, coaching, and self-study. Online NEET preparation eliminates travel time (2-3 hours daily for Delhi NCR students), allows flexible scheduling around school exams, and provides recorded lectures for revision. At Cerebrum Biology Academy, our online Class 11 batches maintain the same 10-15 student batch size as offline, ensuring personal attention through live interactive sessions with Dr. Shekhar Singh.
+            Class 11 students juggle school, coaching, and self-study. Online NEET preparation eliminates travel time (2-3 hours daily for Delhi NCR students), allows flexible scheduling around school exams, and provides recorded lectures for revision. At Cerebrum Biology Academy, our online Class 11 batches maintain the same 10-15 student batch size as offline, ensuring personal attention through live interactive sessions with Dr. Shekhar C Singh.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4 not-prose">

@@ -165,7 +165,7 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
       { title: 'Best NEET Coaching Near Me', href: '/best-neet-coaching-near-me' },
       { title: 'RE-NEET 2026 Online Coaching', href: '/re-neet-2026-online-coaching' },
       {
-        title: 'Dr. Shekhar Singh — Faculty Profile',
+        title: 'Dr. Shekhar C Singh — Faculty Profile',
         href: '/dr-shekhar-singh-neet-biology-faculty',
       },
     ],

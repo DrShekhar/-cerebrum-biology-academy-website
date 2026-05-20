@@ -207,7 +207,7 @@ const config: BestVerticalConfig = {
     'MCAT Biology',
   ],
   whatsappMessage:
-    'Hi! I want to book a FREE demo class for IB Biology (HL/SL) with Dr. Shekhar Singh — best IB Biology tutor. Please share available timings.',
+    'Hi! I want to book a FREE demo class for IB Biology (HL/SL) with Dr. Shekhar C Singh — best IB Biology tutor. Please share available timings.',
 }
 
 export default function BestIBBiologyTutorPage() {

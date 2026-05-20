@@ -179,7 +179,7 @@ const config: CompetitorComparisonConfig = {
     },
     {
       question:
-        "Is Cerebrum founder Dr. Shekhar Singh different from PhysicsWallah's Alakh Pandey?",
+        "Is Cerebrum founder Dr. Shekhar C Singh different from PhysicsWallah's Alakh Pandey?",
       answer:
         'Yes — different backgrounds. Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years of biology pedagogy. Alakh Pandey is an IIT-BHU dropout who started as a YouTube physics teacher and built PhysicsWallah into a mass-online NEET / JEE platform. Different domain expertise — Dr. Shekhar is biology-specific, Alakh is physics-specific.',
     },

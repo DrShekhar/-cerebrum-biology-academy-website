@@ -375,7 +375,9 @@ export function CourseSchema() {
         instructor: [
           {
             '@type': 'Person',
-            name: 'Dr. Shekhar Singh',
+            '@id':
+              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            name: 'Dr. Shekhar C Singh',
             jobTitle: 'AIIMS Trained Biology Faculty',
             description: '15+ years NEET coaching experience',
           },
@@ -651,7 +653,9 @@ export function LocalBusinessSchema() {
     ],
     founder: {
       '@type': 'Person',
-      name: 'Dr. Shekhar Singh',
+      '@id':
+        'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+      name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Lead Faculty',
       alumniOf: {
         '@type': 'CollegeOrUniversity',

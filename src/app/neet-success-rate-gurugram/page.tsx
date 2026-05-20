@@ -112,7 +112,7 @@ const whyHighSuccessRate = [
   },
   {
     title: 'AIIMS-Trained Faculty',
-    description: 'Dr. Shekhar Singh (AIIMS Delhi) leads with 15+ years experience.',
+    description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads with 15+ years experience.',
   },
   {
     title: 'Biology Specialist',

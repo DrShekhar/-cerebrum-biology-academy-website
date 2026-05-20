@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Campbell Biology Online Coaching | 56 Chapters | Biology Olympiad & NEET Prep',
   description:
-    'Expert online coaching for Campbell Biology. Master all 56 chapters for Biology Olympiad (USABO, BBO, IBO), NEET, MCAT, AP Biology & IB Biology. Personal tutoring by Dr. Shekhar Singh.',
+    'Expert online coaching for Campbell Biology. Master all 56 chapters for Biology Olympiad (USABO, BBO, IBO), NEET, MCAT, AP Biology & IB Biology. Personal tutoring by Dr. Shekhar C Singh.',
   keywords: [
     'Campbell Biology online coaching',
     'Campbell Biology tutor',

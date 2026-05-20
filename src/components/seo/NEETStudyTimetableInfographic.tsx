@@ -196,7 +196,7 @@ export function NEETStudyTimetableInfographic({ variant = 'full', className = ''
 
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-500">
-              This study plan is designed by Dr. Shekhar Singh and the Cerebrum Biology Academy faculty
+              This study plan is designed by Dr. Shekhar C Singh and the Cerebrum Biology Academy faculty
               based on 15+ years of NEET coaching experience.
             </p>
           </div>

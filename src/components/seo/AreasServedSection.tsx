@@ -150,7 +150,7 @@ function OnlineAdvantagesBanner({ cityName }: { cityName: string }) {
       <div className="grid sm:grid-cols-2 gap-4 mb-4">
         <div className="flex items-start gap-2">
           <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">1</div>
-          <p className="text-sm text-gray-700"><span className="font-medium">Same AIIMS faculty</span> — Dr. Shekhar Singh teaches every batch, whether online or offline. No compromise on quality.</p>
+          <p className="text-sm text-gray-700"><span className="font-medium">Same AIIMS faculty</span> — Dr. Shekhar C Singh teaches every batch, whether online or offline. No compromise on quality.</p>
         </div>
         <div className="flex items-start gap-2">
           <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white text-xs font-bold">2</div>

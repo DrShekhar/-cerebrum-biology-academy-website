@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Class 9 Biology Foundation Course | Pre-NEET | Cerebrum Academy',
     description:
-      'Build strong Biology foundation in Class 9 with Dr. Shekhar Singh. 95% board success rate, small batches, NCERT + NEET-aligned. Free demo available.',
+      'Build strong Biology foundation in Class 9 with Dr. Shekhar C Singh. 95% board success rate, small batches, NCERT + NEET-aligned. Free demo available.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/courses/class-9-foundation',
   },
@@ -94,7 +94,7 @@ export default function Class9FoundationLayout({ children }: { children: React.R
               courseMode: 'Blended',
               instructor: {
                 '@type': 'Person',
-                name: 'Dr. Shekhar Singh',
+                name: 'Dr. Shekhar C Singh',
                 jobTitle: 'Founder & Biology Faculty',
                 description:
                   'M.Sc Biology, Ph.D Botany, 8+ years teaching experience, 100+ NEET qualifiers',

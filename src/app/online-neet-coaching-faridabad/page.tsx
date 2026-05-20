@@ -56,7 +56,7 @@ const onlineFeatures = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-    desc: 'Real-time sessions with Dr. Shekhar Singh. Ask questions instantly.',
+    desc: 'Real-time sessions with Dr. Shekhar C Singh. Ask questions instantly.',
   },
   {
     icon: MessageCircle,

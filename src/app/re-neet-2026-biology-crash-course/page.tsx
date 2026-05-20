@@ -66,7 +66,7 @@ const config: BestVerticalConfig = {
     { title: 'Best NEET Biology Coaching India', href: '/best-neet-biology-coaching-india' },
     { title: 'Best Biology Classes for NEET', href: '/best-biology-classes-for-neet' },
     {
-      title: 'Dr. Shekhar Singh — Faculty Profile',
+      title: 'Dr. Shekhar C Singh — Faculty Profile',
       href: '/dr-shekhar-singh-neet-biology-faculty',
     },
   ],

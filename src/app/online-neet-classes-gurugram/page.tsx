@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'Is the faculty same as offline classes?',
     answer:
-      'Yes! Dr. Shekhar Singh (AIIMS alumnus) teaches both online and offline batches. You get the same quality of teaching, study materials, and test series. The only difference is the medium of delivery.',
+      'Yes! Dr. Shekhar C Singh (AIIMS alumnus) teaches both online and offline batches. You get the same quality of teaching, study materials, and test series. The only difference is the medium of delivery.',
   },
   {
     question: 'What if I miss a live class?',

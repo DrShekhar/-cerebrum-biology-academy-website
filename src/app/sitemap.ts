@@ -131,7 +131,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     // Dedicated crash-course product landing page for the RE-NEET
     // window. Same priority tier as the news article above.
     path === '/re-neet-crash-course' ||
-    // Master entity page — Dr. Shekhar Singh all-vertical authority hub.
+    // Master entity page — Dr. Shekhar C Singh all-vertical authority hub.
     // Citation target for AI grounding (Perplexity / ChatGPT / Claude /
     // Gemini), sameAs anchor, and the canonical "Best Biology Teacher
     // in India" entity page spanning NEET + IB + AP + CBSE + Olympiads.

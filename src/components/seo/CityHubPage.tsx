@@ -162,7 +162,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
     },
     founder: {
       '@type': 'Person',
-      name: 'Dr. Shekhar Singh',
+      name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
     },

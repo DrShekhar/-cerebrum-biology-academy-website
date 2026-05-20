@@ -301,7 +301,7 @@ export default function DrShekharSinghPage() {
         <section
           className="relative pt-28 pb-16 px-6 bg-[#e8ede8] overflow-hidden"
           role="region"
-          aria-label="Dr. Shekhar Singh profile overview"
+          aria-label="Dr. Shekhar C Singh profile overview"
         >
           <div className="absolute inset-0 opacity-5" aria-hidden="true">
             <div className="absolute inset-0 bg-gradient-to-br from-[#3d4d3d] to-[#4a5d4a]" />
@@ -410,7 +410,7 @@ export default function DrShekharSinghPage() {
                   <Link
                     href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20dr%20shekhar%20singh.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-[#3d4d3d]/20 transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:ring-offset-2"
-                    aria-label="Book a demo class with Dr. Shekhar Singh"
+                    aria-label="Book a demo class with Dr. Shekhar C Singh"
                   >
                     <BookOpen className="w-5 h-5 mr-2" aria-hidden="true" />
                     Book Demo Class
@@ -418,7 +418,7 @@ export default function DrShekharSinghPage() {
                   <Link
                     href="/contact"
                     className="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-[#3d4d3d] font-semibold px-8 py-4 rounded-xl border border-[#3d4d3d]/30 transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-[#3d4d3d] focus:ring-offset-2"
-                    aria-label="Contact Dr. Shekhar Singh"
+                    aria-label="Contact Dr. Shekhar C Singh"
                   >
                     <Phone className="w-5 h-5 mr-2" aria-hidden="true" />
                     Contact Dr. Shekhar
@@ -1036,7 +1036,7 @@ export default function DrShekharSinghPage() {
                       await trackAndOpenWhatsApp({
                         source: 'dr-shekhar-singh-cta',
                         message:
-                          'Hi, I would like to know more about NEET Biology coaching with Dr. Shekhar Singh',
+                          'Hi, I would like to know more about NEET Biology coaching with Dr. Shekhar C Singh',
                         campaign: 'faculty-page',
                       })
                     }}

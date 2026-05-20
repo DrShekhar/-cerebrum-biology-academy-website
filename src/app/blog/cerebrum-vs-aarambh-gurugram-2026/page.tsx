@@ -59,7 +59,7 @@ const comparisonData = [
   },
   {
     feature: 'Faculty Background',
-    cerebrum: 'AIIMS Senior Faculty (Dr. Shekhar Singh)',
+    cerebrum: 'AIIMS Senior Faculty (Dr. Shekhar C Singh)',
     aarambh: 'IIT/NIT Alumni',
     winner: 'cerebrum',
     note: 'For Biology, AIIMS background is directly relevant to NEET',
@@ -136,7 +136,7 @@ const faqs = [
   {
     question: 'Which has better faculty — Cerebrum or Aarambh?',
     answer:
-      'For Biology, Cerebrum has superior faculty. Dr. Shekhar Singh is an AIIMS Senior Faculty member with 15+ years of medical teaching. Aarambh has IIT/NIT alumni who are strong in Physics and Maths but lack medical background for Biology. Since Biology carries 360/720 marks in NEET, this faculty difference matters significantly.',
+      'For Biology, Cerebrum has superior faculty. Dr. Shekhar C Singh is an AIIMS Senior Faculty member with 15+ years of medical teaching. Aarambh has IIT/NIT alumni who are strong in Physics and Maths but lack medical background for Biology. Since Biology carries 360/720 marks in NEET, this faculty difference matters significantly.',
   },
   {
     question: 'Can I join both Cerebrum and Aarambh?',
@@ -420,7 +420,7 @@ export default function CerebrumVsAarambhPage() {
           <div className="mb-10">
             <h3 className="text-xl font-bold text-gray-900 mb-3">2. Faculty Credentials</h3>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              This is where the biggest difference lies. Cerebrum is led by Dr. Shekhar Singh, an
+              This is where the biggest difference lies. Cerebrum is led by Dr. Shekhar C Singh, an
               AIIMS Senior Faculty member with 15+ years of teaching Biology to medical students.
               His clinical background means students learn Biology with real-world medical context —
               exactly what NEET examiners test. Every Biology concept is connected to its medical

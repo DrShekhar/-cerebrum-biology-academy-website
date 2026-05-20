@@ -135,7 +135,7 @@ const config: BestVerticalConfig = {
     {
       tier: 'Pinnacle (Premium)',
       price: '₹1,20,000–₹1,56,000 / year',
-      description: '10–12 student batches + personal mentorship from Dr. Shekhar Singh (AIIMS).',
+      description: '10–12 student batches + personal mentorship from Dr. Shekhar C Singh (AIIMS).',
     },
   ],
   whyBest: [

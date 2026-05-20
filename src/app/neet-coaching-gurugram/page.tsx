@@ -1861,7 +1861,7 @@ export default function NeetCoachingGurugramPage() {
               {
                 '@type': 'ListItem',
                 position: 6,
-                name: 'Dr. Shekhar Singh - NEET Biology Faculty',
+                name: 'Dr. Shekhar C Singh - NEET Biology Faculty',
                 url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
               },
             ],

@@ -36,7 +36,7 @@ const coachingComparison = [
     highlight: true,
     location: 'Sector 17, Faridabad',
     specialty: 'Biology Specialist',
-    faculty: 'AIIMS Alumni (Dr. Shekhar Singh)',
+    faculty: 'AIIMS Alumni (Dr. Shekhar C Singh)',
     batchSize: '15-20 students',
     fees: '₹60,000/year',
     successRate: '98%',
@@ -108,7 +108,7 @@ const whyChooseCerebrum = [
   {
     title: 'AIIMS Faculty',
     description:
-      'Dr. Shekhar Singh is an AIIMS New Delhi alumnus with 15+ years teaching experience',
+      'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years teaching experience',
     icon: GraduationCap,
   },
   {

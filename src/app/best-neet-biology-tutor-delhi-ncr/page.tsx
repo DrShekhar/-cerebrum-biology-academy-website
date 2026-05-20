@@ -105,7 +105,7 @@ const faqs = [
   {
     question: 'How does your coaching compare to Kota coaching?',
     answer:
-      "We offer Kota-level quality without the need to relocate. Dr. Shekhar Singh's teaching methodology, developed through years at premier institutes, is comparable to top Kota faculties. Many of our students have outperformed students from expensive Kota coaching.",
+      "We offer Kota-level quality without the need to relocate. Dr. Shekhar C Singh's teaching methodology, developed through years at premier institutes, is comparable to top Kota faculties. Many of our students have outperformed students from expensive Kota coaching.",
   },
   {
     question: 'What areas of Delhi NCR do you cover?',

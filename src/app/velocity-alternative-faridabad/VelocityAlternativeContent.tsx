@@ -110,7 +110,7 @@ const reasons = [
   {
     title: 'No AIIMS-Trained Faculty',
     description:
-      'Learn from Dr. Shekhar Singh (AIIMS alumnus) who brings real medical college perspective to NEET Biology preparation.',
+      'Learn from Dr. Shekhar C Singh (AIIMS alumnus) who brings real medical college perspective to NEET Biology preparation.',
     icon: Zap,
   },
   {

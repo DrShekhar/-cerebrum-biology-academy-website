@@ -134,7 +134,7 @@ export default function DrShekhartYoutubeChannelPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Does Dr. Shekhar Singh have a YouTube channel?',
+        name: 'Does Dr. Shekhar C Singh have a YouTube channel?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Yes! Dr. Shekhar C Singh has a personal YouTube channel @drshekharcsingh with free NEET Biology lectures, exam tips, and preparation strategies. Additionally, Cerebrum Biology Academy has a channel @cerebrumbiologyacademy featuring comprehensive course lectures and expert guidance.',
@@ -226,7 +226,7 @@ export default function DrShekhartYoutubeChannelPage() {
 
   const faqs = [
     {
-      question: 'Does Dr. Shekhar Singh have a YouTube channel?',
+      question: 'Does Dr. Shekhar C Singh have a YouTube channel?',
       answer:
         'Yes! Dr. Shekhar C Singh has a personal YouTube channel @drshekharcsingh with free NEET Biology lectures, exam tips, and preparation strategies. Additionally, Cerebrum Biology Academy has a channel @cerebrumbiologyacademy featuring comprehensive course lectures and expert guidance.',
     },

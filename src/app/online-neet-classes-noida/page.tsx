@@ -38,7 +38,7 @@ const travelTimes = [
 ]
 
 const onlineFeatures = [
-  { icon: Video, title: 'Live Interactive Classes', desc: 'Real-time sessions with Dr. Shekhar Singh. Ask questions instantly.' },
+  { icon: Video, title: 'Live Interactive Classes', desc: 'Real-time sessions with Dr. Shekhar C Singh. Ask questions instantly.' },
   { icon: MessageCircle, title: '24/7 Doubt Resolution', desc: 'WhatsApp doubt support. Get answers within hours, not days.' },
   { icon: BookOpen, title: 'Recorded Lectures', desc: 'Miss a class? Watch recordings anytime. Revise at your pace.' },
   { icon: Wifi, title: 'Digital Study Material', desc: 'Notes, tests, question banks - all accessible online.' },

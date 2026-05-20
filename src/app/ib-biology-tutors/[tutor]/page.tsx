@@ -100,7 +100,7 @@ export default async function TutorProfilePage({ params }: PageProps) {
           s.toLowerCase().includes('neet')
       )
         ? `Yes. ${t.name} has specific experience with medical school pathway coaching and can help you choose HL targets that match UK/US/India medical admissions.`
-        : `${t.name} teaches IB Biology content that is foundational for medical school. For application-specific coaching (personal statements, MCAT/BMAT), we can pair you with Dr. Shekhar Singh.`,
+        : `${t.name} teaches IB Biology content that is foundational for medical school. For application-specific coaching (personal statements, MCAT/BMAT), we can pair you with Dr. Shekhar C Singh.`,
     },
   ]
 

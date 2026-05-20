@@ -421,7 +421,7 @@ export const DEFAULT_CONFIG: SEOMarketingConfig = {
   draftsDir: 'content/drafts',
   publishedDir: 'content/blog',
   defaultAuthor: {
-    name: 'Dr. Shekhar Singh',
+    name: 'Dr. Shekhar C Singh',
     role: 'Founder & Senior Faculty',
   },
   defaultPriority: 'normal',

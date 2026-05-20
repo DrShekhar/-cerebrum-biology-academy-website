@@ -231,7 +231,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What courses are available at Sector 51 Gurgaon center?',
         answer:
-          'We offer Class 11 NEET Foundation, Class 12 NEET + Boards, and NEET Dropper intensive batches. All taught by AIIMS-trained Dr. Shekhar Singh.',
+          'We offer Class 11 NEET Foundation, Class 12 NEET + Boards, and NEET Dropper intensive batches. All taught by AIIMS-trained Dr. Shekhar C Singh.',
       },
     ],
     stats: {
@@ -776,7 +776,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Best NEET Coaching in Gurgaon | Top NEET Classes Gurugram | Cerebrum Biology Academy',
     metaDescription:
-      'Best NEET coaching in Gurgaon (Gurugram) with center in Sector 51. AIIMS-trained Dr. Shekhar Singh, 98% success rate. Class 11, 12 & Dropper batches. Call 88264-44334!',
+      'Best NEET coaching in Gurgaon (Gurugram) with center in Sector 51. AIIMS-trained Dr. Shekhar C Singh, 98% success rate. Class 11, 12 & Dropper batches. Call 88264-44334!',
     heroTitle: 'Best NEET Coaching in Gurgaon',
     heroSubtitle:
       'Top-rated NEET preparation at our Sector 51 center. AIIMS faculty, proven 98% success rate, personalized attention.',
@@ -805,7 +805,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which is the best NEET coaching in Gurgaon?',
         answer:
-          'Cerebrum Biology Academy at M2K Corporate Park, Sector 51 is rated the best NEET coaching in Gurgaon. With AIIMS-trained Dr. Shekhar Singh, 98% success rate, and small batches of 15-20 students, we deliver exceptional results.',
+          'Cerebrum Biology Academy at M2K Corporate Park, Sector 51 is rated the best NEET coaching in Gurgaon. With AIIMS-trained Dr. Shekhar C Singh, 98% success rate, and small batches of 15-20 students, we deliver exceptional results.',
       },
       {
         question: 'What is the fee for NEET coaching in Gurgaon?',
@@ -840,7 +840,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 51 Gurgaon | Best NEET Classes | Cerebrum Biology Academy',
     metaDescription:
-      'Top NEET coaching at M2K Corporate Park, Sector 51 Gurgaon (Gurugram). AIIMS faculty Dr. Shekhar Singh. 98% success. Class 11, 12, Droppers. Call 88264-44334!',
+      'Top NEET coaching at M2K Corporate Park, Sector 51 Gurgaon (Gurugram). AIIMS faculty Dr. Shekhar C Singh. 98% success. Class 11, 12, Droppers. Call 88264-44334!',
     heroTitle: 'NEET Coaching in Sector 51 Gurgaon',
     heroSubtitle:
       'Join our flagship NEET center at M2K Corporate Park. AIIMS-trained faculty, proven track record, small batch sizes.',
@@ -872,7 +872,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Who teaches NEET at Sector 51 center?',
         answer:
-          'Dr. Shekhar Singh, AIIMS-trained faculty with 15+ years experience, personally teaches Biology. Our 98% success rate speaks for the quality of teaching.',
+          'Dr. Shekhar C Singh, AIIMS-trained faculty with 15+ years experience, personally teaches Biology. Our 98% success rate speaks for the quality of teaching.',
       },
       {
         question: 'What NEET courses are available at Sector 51?',
@@ -1021,7 +1021,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Why choose Cerebrum over Sector 14 coaching institutes?',
         answer:
-          'Sector 14 has crowded institutes with 60-100+ students per batch. At Cerebrum Sector 51, you get: 15-20 student batches, AIIMS-trained faculty (Dr. Shekhar Singh), 98% success rate, and personalized attention. Just 20 minutes from Sector 14.',
+          'Sector 14 has crowded institutes with 60-100+ students per batch. At Cerebrum Sector 51, you get: 15-20 student batches, AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, and personalized attention. Just 20 minutes from Sector 14.',
       },
       {
         question: 'Which coaching institutes are in Sector 14 Gurgaon?',
@@ -4621,7 +4621,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Who is the best biology tutor in Gurugram?',
         answer:
-          'Dr. Shekhar Singh (AIIMS alumnus) at Cerebrum Biology Academy is considered one of the best biology tutors in Gurugram. With 15+ years experience and 98% success rate, he has helped thousands crack NEET.',
+          'Dr. Shekhar C Singh (AIIMS alumnus) at Cerebrum Biology Academy is considered one of the best biology tutors in Gurugram. With 15+ years experience and 98% success rate, he has helped thousands crack NEET.',
       },
       {
         question: 'What classes do you offer biology tutoring for?',
@@ -4696,7 +4696,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Who teaches AIIMS coaching at Cerebrum?',
         answer:
-          'Dr. Shekhar Singh (AIIMS alumnus with 15+ years experience) leads our faculty. All teachers are from top medical colleges and understand the NEET pattern thoroughly.',
+          'Dr. Shekhar C Singh (AIIMS alumnus with 15+ years experience) leads our faculty. All teachers are from top medical colleges and understand the NEET pattern thoroughly.',
       },
     ],
     stats: {
@@ -12321,7 +12321,7 @@ export const cityHubData: Record<string, CityHubData> = {
     },
     areaSpecificContent: {
       whyThisArea:
-        'Gurugram has 200+ schools with CBSE/ICSE boards but very few Biology-specialist coaching centers. Most students rely on generic tuition or all-subject coaching where Biology is an afterthought. Our Class 11 program treats Biology as a primary subject — not a side subject. With AIIMS-trained Dr. Shekhar Singh teaching, students get medical-college-level conceptual depth that both aces board exams and builds NEET readiness.',
+        'Gurugram has 200+ schools with CBSE/ICSE boards but very few Biology-specialist coaching centers. Most students rely on generic tuition or all-subject coaching where Biology is an afterthought. Our Class 11 program treats Biology as a primary subject — not a side subject. With AIIMS-trained Dr. Shekhar C Singh teaching, students get medical-college-level conceptual depth that both aces board exams and builds NEET readiness.',
     },
     studentSuccessStory: {
       name: 'Aanya M.',
@@ -12958,7 +12958,7 @@ export const cityHubData: Record<string, CityHubData> = {
     metaTitle:
       'Best Biology Coaching in Delhi NCR 2026 | #1 for Board + NEET | Cerebrum Biology Academy',
     metaDescription:
-      'Ranked #1 Biology coaching in Delhi NCR — Board exam (95% score 90+) AND NEET (98% success). AIIMS faculty Dr. Shekhar Singh. Centers in Gurugram, Delhi. Online for Noida, Ghaziabad, Faridabad.',
+      'Ranked #1 Biology coaching in Delhi NCR — Board exam (95% score 90+) AND NEET (98% success). AIIMS faculty Dr. Shekhar C Singh. Centers in Gurugram, Delhi. Online for Noida, Ghaziabad, Faridabad.',
     heroTitle: 'Best Biology Coaching in Delhi NCR — Board + NEET',
     heroSubtitle:
       'Parents searching for "best Biology coaching" want one thing: results. Our students average 92/100 in CBSE Biology boards AND 160+/180 in NEET Biology. We are the only institute in Delhi NCR that specializes exclusively in Biology — not Physics, not Chemistry, just Biology done right.',
@@ -12984,7 +12984,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What makes Cerebrum the best Biology coaching in Delhi NCR?',
         answer:
-          "Three things no competitor offers together: (1) Biology-only specialization — we don't teach Physics or Chemistry, so 100% of our 5 daily hours go to Biology. (2) AIIMS faculty — Dr. Shekhar Singh (Ph.D Botany) teaches every batch. (3) Dual results — 95% of our students score 90+ in board exams AND 160+ in NEET Biology. No other institute in Delhi NCR matches this combination.",
+          "Three things no competitor offers together: (1) Biology-only specialization — we don't teach Physics or Chemistry, so 100% of our 5 daily hours go to Biology. (2) AIIMS faculty — Dr. Shekhar C Singh (Ph.D Botany) teaches every batch. (3) Dual results — 95% of our students score 90+ in board exams AND 160+ in NEET Biology. No other institute in Delhi NCR matches this combination.",
       },
       {
         question: 'Do you only prepare for NEET or also for board exams?',
@@ -13765,7 +13765,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Why is Cerebrum rated the best Biology coaching in Noida?',
         answer:
-          'Three reasons: (1) Only Biology-specialist in Noida — 100% of teaching time goes to Biology, (2) AIIMS faculty Dr. Shekhar Singh teaches every batch personally, (3) Verified results — 1,200+ students, 98% success rate, 92/100 average board score. No generic coaching center matches this.',
+          'Three reasons: (1) Only Biology-specialist in Noida — 100% of teaching time goes to Biology, (2) AIIMS faculty Dr. Shekhar C Singh teaches every batch personally, (3) Verified results — 1,200+ students, 98% success rate, 92/100 average board score. No generic coaching center matches this.',
       },
       {
         question: 'How does Cerebrum compare to Aakash and Allen in Noida?',
@@ -15414,7 +15414,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'Find the best Biology tutor near you — Delhi, Noida, Gurugram, Ghaziabad, Faridabad. AIIMS faculty, 15-student batches, ₹35,000-90,000/year. Online + 3 offline centers. Free demo!',
     heroTitle: 'Biology Tutor Near Me — Find Your Nearest Center',
     heroSubtitle:
-      'Stop searching — you found the best Biology tutor. AIIMS-trained Dr. Shekhar Singh teaches every batch. 3 offline centers + online everywhere. 2,500+ students enrolled.',
+      'Stop searching — you found the best Biology tutor. AIIMS-trained Dr. Shekhar C Singh teaches every batch. 3 offline centers + online everywhere. 2,500+ students enrolled.',
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Multiple Centers',
@@ -15474,10 +15474,10 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Delhi / UP / Haryana',
     metaTitle: 'Best Biology Tutor Near Me 2026 | 1:1 AIIMS Faculty | Cerebrum Biology Academy',
     metaDescription:
-      'Best Biology tutor near you — personalised 1:1 mentoring + 15-student micro-batches in Delhi NCR. AIIMS faculty Dr. Shekhar Singh. 98% success, 2,500+ students. Board + NEET. 3 centers + online.',
+      'Best Biology tutor near you — personalised 1:1 mentoring + 15-student micro-batches in Delhi NCR. AIIMS faculty Dr. Shekhar C Singh. 98% success, 2,500+ students. Board + NEET. 3 centers + online.',
     heroTitle: 'Best Biology Tutor Near Me — 1:1 Mentoring in Delhi NCR',
     heroSubtitle:
-      'A "tutor" means personalised, focused attention. Cerebrum delivers 1:1 mentoring with Dr. Shekhar Singh (AIIMS) and 15-student micro-batches. Boards average 92/100, NEET Biology 160+/180. Only biology-only specialist in Delhi NCR.',
+      'A "tutor" means personalised, focused attention. Cerebrum delivers 1:1 mentoring with Dr. Shekhar C Singh (AIIMS) and 15-student micro-batches. Boards average 92/100, NEET Biology 160+/180. Only biology-only specialist in Delhi NCR.',
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Multiple Centers',
@@ -15499,7 +15499,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Who is the best Biology tutor near me?',
         answer:
-          'Dr. Shekhar Singh (AIIMS-trained, 15+ years) — rated #1 in Delhi NCR. Provides 1:1 personalised mentoring plus 15-student micro-batches. 2,500+ students, 98% success, 92/100 avg board score.',
+          'Dr. Shekhar C Singh (AIIMS-trained, 15+ years) — rated #1 in Delhi NCR. Provides 1:1 personalised mentoring plus 15-student micro-batches. 2,500+ students, 98% success, 92/100 avg board score.',
       },
       {
         question:
@@ -15668,7 +15668,7 @@ export const cityHubData: Record<string, CityHubData> = {
       'One-on-one Biology coaching with AIIMS faculty. Pinnacle tier: 12-student batch + monthly 1-on-1 mentoring. Custom 1-on-1 plans available. Board + NEET. Free demo!',
     heroTitle: 'One-on-One Biology Coaching — Personalized for You',
     heroSubtitle:
-      'Some students thrive with personal attention. Pinnacle tier: 12-student batch + monthly 1-on-1 mentoring with Dr. Shekhar Singh. Full 1-on-1 custom plans also available.',
+      'Some students thrive with personal attention. Pinnacle tier: 12-student batch + monthly 1-on-1 mentoring with Dr. Shekhar C Singh. Full 1-on-1 custom plans also available.',
     hasOfflineCenter: true,
     nearestCenter: {
       name: 'Multiple Centers',
@@ -15694,7 +15694,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Who teaches?',
         answer:
-          'Dr. Shekhar Singh (AIIMS-trained, Ph.D) personally conducts all mentoring sessions.',
+          'Dr. Shekhar C Singh (AIIMS-trained, Ph.D) personally conducts all mentoring sessions.',
       },
       {
         question: 'Available online?',

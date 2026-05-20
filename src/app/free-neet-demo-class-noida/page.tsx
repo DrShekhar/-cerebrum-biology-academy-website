@@ -48,7 +48,7 @@ const demoIncludes = [
   },
   {
     icon: Users,
-    title: 'Meet Dr. Shekhar Singh',
+    title: 'Meet Dr. Shekhar C Singh',
     description: 'Interact with our AIIMS-trained faculty who will teach your batch',
   },
   {
@@ -214,7 +214,7 @@ export default function FreeNEETDemoClassNoida() {
                 <div>
                   <h3 className="font-bold mb-1">See Teaching Quality First-Hand</h3>
                   <p className="text-gray-600">
-                    Dont rely on reviews alone. Experience how Dr. Shekhar Singh explains complex
+                    Dont rely on reviews alone. Experience how Dr. Shekhar C Singh explains complex
                     concepts simply.
                   </p>
                 </div>

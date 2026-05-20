@@ -141,7 +141,7 @@ export const navigationMenus = {
 
   company: [
     { label: 'About Us', href: routes.about },
-    { label: 'Dr. Shekhar Singh', href: routes.company.drShekharSingh },
+    { label: 'Dr. Shekhar C Singh', href: routes.company.drShekharSingh },
     { label: 'Our Faculty', href: routes.company.faculty },
     { label: 'Success Stories', href: routes.company.testimonials },
     { label: 'Results', href: routes.company.results },

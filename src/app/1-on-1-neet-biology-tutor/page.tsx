@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '1-on-1 NEET Biology Tutor | Direct AIIMS Faculty Mentoring',
     description:
-      'Direct 1-on-1 NEET biology mentoring with Dr. Shekhar Singh (AIIMS). 680+ medical college selections.',
+      'Direct 1-on-1 NEET biology mentoring with Dr. Shekhar C Singh (AIIMS). 680+ medical college selections.',
     url: 'https://cerebrumbiologyacademy.com/1-on-1-neet-biology-tutor',
     type: 'website',
   },
@@ -40,7 +40,7 @@ const config: BestVerticalConfig = {
   clusterSummary:
     'Pinnacle tier · 10–12 student micro-batches + 1:1 sessions · Ad-hoc hourly tutoring · WhatsApp doubt support.',
   credentials: [
-    { label: 'Dr. Shekhar Singh Direct' },
+    { label: 'Dr. Shekhar C Singh Direct' },
     { label: 'AIIMS Delhi Pedagogy' },
     { label: 'Custom Mock Review' },
     { label: 'Bespoke Pacing' },
@@ -58,7 +58,7 @@ const config: BestVerticalConfig = {
     { title: 'NEET Biology Tutor for Droppers', href: '/neet-biology-tutor-for-droppers' },
     { title: 'Pinnacle Programme', href: '/courses' },
     {
-      title: 'Dr. Shekhar Singh — Faculty Profile',
+      title: 'Dr. Shekhar C Singh — Faculty Profile',
       href: '/dr-shekhar-singh-neet-biology-faculty',
     },
   ],
@@ -67,7 +67,7 @@ const config: BestVerticalConfig = {
       tier: 'Pinnacle (1:1 + 10–12 Batch)',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
-        'Direct mentoring from Dr. Shekhar Singh + 10–12 student micro-batches + weekly 1-on-1 sessions. Best for AIIMS aspirants.',
+        'Direct mentoring from Dr. Shekhar C Singh + 10–12 student micro-batches + weekly 1-on-1 sessions. Best for AIIMS aspirants.',
     },
     {
       tier: 'Ad-hoc 1-on-1 Hourly',
@@ -84,7 +84,7 @@ const config: BestVerticalConfig = {
   ],
   whyBest: [
     {
-      title: 'Direct Dr. Shekhar Singh Mentoring (Pinnacle)',
+      title: 'Direct Dr. Shekhar C Singh Mentoring (Pinnacle)',
       description:
         'In the Pinnacle programme, Dr. Shekhar C Singh personally mentors every student. Not an "introduction call" — actual weekly 1-on-1 sessions plus 10–12 student micro-batches. This level of access is structurally impossible at chains running 100+ student batches.',
     },
@@ -149,7 +149,7 @@ const config: BestVerticalConfig = {
         'Cerebrum: Pinnacle programme ₹1,20,000–₹1,56,000/year (1:1 + 10–12 batch + weekly Dr. Shekhar sessions). Ad-hoc 1:1 hourly: ₹2,500–₹4,500/hour depending on faculty. Most Delhi NCR home biology tutors charge ₹2,500–₹3,500/hour with no curriculum or mock structure — Cerebrum delivers more for less.',
     },
     {
-      question: 'Does Dr. Shekhar Singh personally tutor 1-on-1?',
+      question: 'Does Dr. Shekhar C Singh personally tutor 1-on-1?',
       answer:
         'Yes — in the Pinnacle programme. Every Pinnacle student gets weekly 1-on-1 sessions with Dr. Shekhar C Singh (AIIMS Delhi). Not an "introduction call" or "occasional appearance." Other tiers (Ascent, Pursuit) have Dr. Shekhar as core faculty plus weekly 1-on-1 doubt slots with senior faculty.',
     },

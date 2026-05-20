@@ -113,7 +113,7 @@ const features = [
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Learn from Dr. Shekhar Singh and faculty from premier medical institutions.',
+    description: 'Learn from Dr. Shekhar C Singh and faculty from premier medical institutions.',
   },
   {
     icon: BookOpen,

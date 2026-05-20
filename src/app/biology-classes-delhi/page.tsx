@@ -147,7 +147,7 @@ const faqs = [
   {
     question: 'What makes Cerebrum different from other biology coaching in Delhi?',
     answer:
-      'Cerebrum stands out due to: 1) AIIMS-trained founder Dr. Shekhar Singh, 2) Small batch sizes of 15-20 students, 3) 98% success rate in NEET, 4) Hybrid learning option (online + offline), 5) 24/7 doubt resolution via WhatsApp, 6) Free demo class before enrollment.',
+      'Cerebrum stands out due to: 1) AIIMS-trained founder Dr. Shekhar C Singh, 2) Small batch sizes of 15-20 students, 3) 98% success rate in NEET, 4) Hybrid learning option (online + offline), 5) 24/7 doubt resolution via WhatsApp, 6) Free demo class before enrollment.',
   },
   {
     question: 'Is there online option if I cannot attend offline classes in Delhi?',
@@ -274,7 +274,7 @@ export default function BiologyClassesDelhiPage() {
     },
     founder: {
       '@type': 'Person',
-      name: 'Dr. Shekhar Singh',
+      name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
     },
@@ -587,7 +587,7 @@ export default function BiologyClassesDelhiPage() {
                     Meet Your Mentor
                   </span>
                   <h2 className="mb-4 text-3xl font-bold text-gray-900">
-                    Dr. Shekhar Singh - AIIMS Alumnus
+                    Dr. Shekhar C Singh - AIIMS Alumnus
                   </h2>
                   <p className="mb-6 text-gray-600">
                     With over 15 years of teaching experience and an AIIMS Delhi background, Dr.
@@ -613,7 +613,7 @@ export default function BiologyClassesDelhiPage() {
                   <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200">
                     <Image
                       src="/faculty/dr-shekhar-singh.jpg"
-                      alt="Dr. Shekhar Singh - Best Biology Teacher in Delhi"
+                      alt="Dr. Shekhar C Singh - Best Biology Teacher in Delhi"
                       fill
                       className="object-cover"
                     />

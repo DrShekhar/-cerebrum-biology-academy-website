@@ -28,7 +28,7 @@ const MAX_TOKENS = 4096
 
 // Default author for generated content
 const DEFAULT_AUTHOR: BlogAuthor = {
-  name: 'Dr. Shekhar Singh',
+  name: 'Dr. Shekhar C Singh',
   role: 'Founder & Senior Faculty',
 }
 
@@ -454,7 +454,7 @@ ${classLevel ? `Target class level: ${classLevel}` : ''}
 ${location ? `Target location: ${location}` : 'Location: Kolkata / Online'}
 
 Brand: Cerebrum Biology Academy
-USP: Expert NEET Biology coaching by Dr. Shekhar Singh
+USP: Expert NEET Biology coaching by Dr. Shekhar C Singh
 CTA: WhatsApp contact - +918826444334
 
 Return a JSON object with this structure:

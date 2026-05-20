@@ -69,7 +69,7 @@ export default function Class12BiologyPage() {
     {
       icon: GraduationCap,
       title: 'AIIMS Faculty',
-      description: 'Learn from Dr. Shekhar Singh, AIIMS alumnus',
+      description: 'Learn from Dr. Shekhar C Singh, AIIMS alumnus',
     },
     {
       icon: TrendingUp,
@@ -156,7 +156,7 @@ export default function Class12BiologyPage() {
       icon: GraduationCap,
       title: 'AIIMS-Trained Faculty',
       stat: '15+ Years',
-      description: 'Dr. Shekhar Singh brings AIIMS expertise to every class',
+      description: 'Dr. Shekhar C Singh brings AIIMS expertise to every class',
     },
     {
       icon: Target,
@@ -351,7 +351,7 @@ export default function Class12BiologyPage() {
                   </div>
                   <div>
                     <span className="font-semibold">AIIMS Faculty</span>
-                    <p className="text-sm text-gray-300">Dr. Shekhar Singh, 15+ years exp</p>
+                    <p className="text-sm text-gray-300">Dr. Shekhar C Singh, 15+ years exp</p>
                   </div>
                 </div>
               </div>

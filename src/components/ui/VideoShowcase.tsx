@@ -147,7 +147,7 @@ export function VideoShowcase({
               <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center mr-3">
                 <BookOpen className="w-4 h-4 text-white" />
               </div>
-              <span className="font-medium">Dr. Shekhar Singh - Cerebrum Faculty</span>
+              <span className="font-medium">Dr. Shekhar C Singh - Cerebrum Faculty</span>
             </div>
 
             <div className="text-right text-sm text-gray-500">

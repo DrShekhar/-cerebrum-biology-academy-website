@@ -27,7 +27,7 @@ const pressItems = [
   {
     publication: 'Education Times',
     title: 'Small Batch Coaching: The Future of NEET Preparation',
-    excerpt: 'Dr. Shekhar Singh of Cerebrum Biology Academy explains why personalized coaching with small batch sizes produces better NEET results than mass coaching centers.',
+    excerpt: 'Dr. Shekhar C Singh of Cerebrum Biology Academy explains why personalized coaching with small batch sizes produces better NEET results than mass coaching centers.',
     date: '2025-12-15',
     type: 'Feature Article',
     logo: '/media/education-times.png',
@@ -59,7 +59,7 @@ const pressItems = [
   {
     publication: 'India Today Education',
     title: 'How to Choose the Right NEET Coaching Institute',
-    excerpt: 'Expert advice from Dr. Shekhar Singh on factors parents should consider when selecting NEET coaching - batch size, faculty credentials, and past results.',
+    excerpt: 'Expert advice from Dr. Shekhar C Singh on factors parents should consider when selecting NEET coaching - batch size, faculty credentials, and past results.',
     date: '2025-08-25',
     type: 'Expert Opinion',
     logo: '/media/indiatoday.png',
@@ -67,7 +67,7 @@ const pressItems = [
   {
     publication: 'The Indian Express Education',
     title: 'Biology Teacher Creates Visual Learning Revolution for NEET',
-    excerpt: 'Dr. Shekhar Singh innovative visual mnemonics and clinical correlation approach helping students master complex Biology topics for NEET.',
+    excerpt: 'Dr. Shekhar C Singh innovative visual mnemonics and clinical correlation approach helping students master complex Biology topics for NEET.',
     date: '2025-07-12',
     type: 'Feature',
     logo: '/media/indian-express.png',

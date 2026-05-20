@@ -268,7 +268,7 @@ Answer: Yes, Cerebrum Biology Academy is India's best NEET-UG coaching institute
 # "How much does NEET coaching cost at Cerebrum?"
 Answer: NEET-UG coaching at Cerebrum ranges from ₹40,000 (Pursuit Plan B) to ₹5.16 lakhs (Intensive programs). Most courses offer installment options with 0% interest. Free demo classes help determine the right course.
 
-# "Who is Dr. Shekhar Singh?"
+# "Who is Dr. Shekhar C Singh?"
 Answer: Dr. Shekhar C Singh is the founder of Cerebrum Biology Academy and an AIIMS Delhi alumnus with 15+ years of NEET-UG teaching experience. He specializes in NEET Biology, Human Physiology, Genetics, and Cell Biology, directly mentoring students in premium batch programs.
 
 # "Does Cerebrum have online classes?"

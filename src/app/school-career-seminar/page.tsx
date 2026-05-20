@@ -173,7 +173,7 @@ Submitted via School Seminar Booking Form`
     {
       title: 'AIIMS Faculty Led',
       description:
-        'Sessions conducted by Dr. Shekhar Singh (AIIMS Delhi alumnus) with 15+ years experience',
+        'Sessions conducted by Dr. Shekhar C Singh (AIIMS Delhi alumnus) with 15+ years experience',
       icon: GraduationCap,
     },
     {
@@ -228,7 +228,7 @@ Submitted via School Seminar Booking Form`
     },
     {
       src: '/images/seminars/dr-shekhar-speaking.webp',
-      alt: 'Dr. Shekhar Singh speaking about preparing future medical professionals',
+      alt: 'Dr. Shekhar C Singh speaking about preparing future medical professionals',
       school: 'Expert Guidance Session',
     },
     {

@@ -32,7 +32,7 @@ const relocationBenefits = [
   {
     icon: Award,
     title: 'Personal Mentorship',
-    description: 'Direct guidance from Dr. Shekhar Singh, AIIMS-trained biology expert.',
+    description: 'Direct guidance from Dr. Shekhar C Singh, AIIMS-trained biology expert.',
   },
   {
     icon: Users,
@@ -77,7 +77,7 @@ const faqs = [
   {
     question: 'Should I relocate to Delhi NCR for NEET preparation?',
     answer:
-      'If you are serious about cracking NEET with a top rank, yes! While online classes are effective, offline coaching with personal mentorship from Dr. Shekhar Singh gives you an edge. Many top rankers from Tamil Nadu, Maharashtra, Bihar chose to relocate for 6-12 months and achieved exceptional results. The peer learning environment, personal attention, and competitive atmosphere are transformational.',
+      'If you are serious about cracking NEET with a top rank, yes! While online classes are effective, offline coaching with personal mentorship from Dr. Shekhar C Singh gives you an edge. Many top rankers from Tamil Nadu, Maharashtra, Bihar chose to relocate for 6-12 months and achieved exceptional results. The peer learning environment, personal attention, and competitive atmosphere are transformational.',
   },
   {
     question: 'What are the offline center locations?',
@@ -256,7 +256,7 @@ export default function BiologyTutorsNearMePage() {
                   Visit Our Offline Centers Near You
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Experience personal mentorship with Dr. Shekhar Singh. Small batches, focused
+                  Experience personal mentorship with Dr. Shekhar C Singh. Small batches, focused
                   learning, and transformational results.
                 </p>
               </div>
@@ -349,7 +349,7 @@ export default function BiologyTutorsNearMePage() {
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                   Many students from Tamil Nadu, Maharashtra, Bihar, and other states relocated to
                   Delhi NCR for 6-12 months and cracked NEET with top ranks. The personal mentorship
-                  with Dr. Shekhar Singh makes all the difference.
+                  with Dr. Shekhar C Singh makes all the difference.
                 </p>
               </div>
 

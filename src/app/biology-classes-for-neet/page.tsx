@@ -82,7 +82,7 @@ const config: BestVerticalConfig = {
       tier: 'Pinnacle (Premium 1:1)',
       price: '₹1,20,000–₹1,56,000 / year',
       description:
-        '10–12 student micro-batches + personal mentorship from Dr. Shekhar Singh. Best for AIIMS / Top medical college aspirants.',
+        '10–12 student micro-batches + personal mentorship from Dr. Shekhar C Singh. Best for AIIMS / Top medical college aspirants.',
     },
   ],
   whyBest: [

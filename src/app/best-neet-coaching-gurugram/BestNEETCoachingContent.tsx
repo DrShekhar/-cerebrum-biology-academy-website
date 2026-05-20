@@ -19,7 +19,7 @@ const coachingComparison = [
     highlight: true,
     location: 'Sector 51, Gurugram',
     specialty: 'Biology Specialist',
-    faculty: 'AIIMS Alumni (Dr. Shekhar Singh)',
+    faculty: 'AIIMS Alumni (Dr. Shekhar C Singh)',
     batchSize: '15-20 students',
     fees: '₹60,000/year',
     successRate: '98%',
@@ -77,7 +77,7 @@ const coachingComparison = [
 ]
 
 const whyChooseCerebrum = [
-  { title: 'AIIMS Faculty', description: 'Dr. Shekhar Singh is an AIIMS New Delhi alumnus with 15+ years teaching experience', icon: GraduationCap },
+  { title: 'AIIMS Faculty', description: 'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years teaching experience', icon: GraduationCap },
   { title: 'Small Batches', description: 'Only 15-20 students per batch ensures personalized attention and doubt clearing', icon: Users },
   { title: 'Biology Specialist', description: 'We focus exclusively on Biology - the highest scoring subject in NEET (360/720)', icon: BookOpen },
   { title: 'Local Convenience', description: 'Gurugram-based center saves 2-3 hours daily commute to Delhi', icon: MapPin },
