@@ -1481,6 +1481,80 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
 
   // ──────────────────────────────────────────────────────────────────────────
+  // 25. GHAZIABAD (sub-metro of Delhi NCR — east NCR AP Bio demand)
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'ghaziabad',
+    cityName: 'Ghaziabad',
+    region: 'Ghaziabad + Indirapuram + Vaishali + Vasundhara + Crossings Republik',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    addressRegion: 'Uttar Pradesh',
+    heroBlurb:
+      "Ghaziabad's AP Biology demand sits in the Indirapuram-Vaishali-Vasundhara residential belt — the east NCR cluster that draws from professional households commuting to Noida, Anand Vihar, and central Delhi. The international-school cluster (Seth Anandram Jaipuria Vasundhara, Cambridge School Indirapuram, DPS Indirapuram, KR Mangalam Vaishali, Amity Vasundhara, GD Goenka Vasundhara) layers AP Biology onto IBDP or CBSE Class 12 tracks for the US-application subset. The cohort is structurally different from Noida (less tech-corridor) or Gurgaon (less affluent-international); the Ghaziabad family profile leans toward CBSE-rooted dual-application planning with AP as a US-admissions enhancer.",
+    positioningBlurb:
+      'Ghaziabad is meaningfully under-served for AP Biology tutoring relative to its growing international-curriculum cohort — most generalist test-prep agencies (Jamboree, The Princeton Review, Karan Gupta, Manya) operate out of Delhi-side branches and require a 30-60 minute commute through Anand Vihar traffic. Cerebrum is biology-only AIIMS-trained PhD faculty delivering 100% online live video sessions — your child opens a laptop in Indirapuram, Vaishali, or Vasundhara at 6 PM and finishes by 7:30 with no commute. The optional in-person consultations at South Extension are 45-60 minutes via the FNG Expressway or the new Mayur Vihar - Anand Vihar metro corridor. Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr).',
+    schools: [
+      'Seth Anandram Jaipuria School Vasundhara',
+      'Cambridge School Indirapuram',
+      'Delhi Public School Indirapuram',
+      'KR Mangalam World School Vaishali',
+      'Amity International School Vasundhara',
+      'GD Goenka Public School Vasundhara',
+      'Sapphire International School',
+      'Ahlcon International School',
+      'DAV Public School Ghaziabad',
+      'St. Mary\'s School',
+      'Khaitan Public School Vaishali',
+      'Uttam School for Girls',
+      'Salwan Public School',
+      'Presidium Vaishali',
+    ],
+    faqs: [
+      {
+        question:
+          'Seth Anandram Jaipuria and Cambridge School Indirapuram have international-curriculum tracks — when is external AP Biology tutoring useful?',
+        answer:
+          'In-school AP Biology classes at the strong international-track schools are typically solid for concept coverage. External tutoring is high-leverage for three things the school class does not have bandwidth to do at depth: (1) FRQ rubric mastery with weekly written feedback against the College Board rubric, (2) timed full-length mock exams in the 6 weeks before the May AP, and (3) personalised remediation when a student hits a specific topic wall (biochem energetics, signal transduction, population genetics). If your child is comfortably running AP-4 on internal school assessments, school is enough. If they are targeting AP-5 specifically, external 1:1 is high-leverage.',
+      },
+      {
+        question:
+          'My child is at DPS Indirapuram doing CBSE Class 12, preparing for NEET, AND wants US college options. Can AP Biology realistically fit?',
+        answer:
+          "This dual-application profile is common in our Ghaziabad roster. The honest assessment: it is hard but doable if you start early (Class 11 summer). CBSE 12 + NEET prep is itself a 60-hour-per-week load; layering AP Biology adds another 4-6 hours per week of focused work. The conceptual overlap with NEET helps — cell biology, genetics, physiology, ecology cover much of the AP syllabus — but FRQ format and US-style data interpretation require dedicated practice. We typically run two 90-minute IST evening sessions for these students, calibrated to keep NEET prep as the primary track and AP as the secondary US-application layer.",
+      },
+      {
+        question:
+          'Ghaziabad to South Extension is 45-60 minutes via FNG Expressway or Anand Vihar - does that affect tutoring?',
+        answer:
+          'Not for online classes — which is the entire delivery model. Your child opens a laptop in Indirapuram, Vaishali, Vasundhara, Kaushambi, or Crossings Republik at 6 PM, finishes at 7:30, and the Ghaziabad-to-Delhi traffic at that hour is irrelevant. The only time commute matters is for the optional in-person consultations at South Extension; those we schedule on weekends or off-peak windows by appointment. Ghaziabad families consistently tell us removing the daily Delhi-side commute is the biggest practical benefit.',
+      },
+      {
+        question:
+          'Cambridge School Indirapuram is Cambridge-focused (IGCSE / A-Level). Does AP Biology work alongside Cambridge A-Level Biology?',
+        answer:
+          'Yes — and the combination is meaningful for US-targeted applicants. Cambridge A-Level Biology and AP Biology have ~70% content overlap, but the assessment formats are genuinely different. A-Level is essay-style with long-form questions; AP combines MCQ + FRQ in a tighter time budget. We coach the AP-specific format alongside the A-Level coursework — most students need 4-6 hours per week of AP-specific work in the year before the May AP exam.',
+      },
+      {
+        question: 'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
+        answer:
+          'No. AP Biology is a US-curriculum exam administered by the College Board and is not recognised by Indian medical councils (NMC), Indian universities, or NEET admissions. AP credit transfers to many US universities (typically a 4 or 5 earns 6-8 credit hours toward general biology), but it has zero standing in Indian higher education. If your child is realistically going to study medicine in India, NEET is the only path that matters — AP Biology is purely a US college application enhancer.',
+      },
+      {
+        question: 'How do we pay — INR transfer or USD card? GST invoice for corporate reimbursement available?',
+        answer:
+          'Both currencies and yes on the invoice. INR transfer to HDFC / ICICI / SBI / Axis is the most common (no FX charged to you), UPI works for smaller installments, international Visa / Mastercard / Amex in USD, and Wise transfers. Several Ghaziabad MNC-employee families split the $1,800 senior-faculty package across two or three INR transfers at no extra charge. GST-compliant invoices issued for corporate-reimbursement claims.',
+      },
+      {
+        question:
+          'My child is at Amity Vasundhara doing IBDP — when should we start AP Biology prep?',
+        answer:
+          "For students continuing on IBDP at senior school, AP Biology as a parallel layer typically starts in Year 12 (the year the AP exam is taken in May). For students transitioning between curricula at the Grade 10-11 boundary, AP can layer onto IBDP, CBSE Class 11-12, or Cambridge A-Level. The earlier-start advantage (Year 11) is most useful for students aiming at top-tier US universities. We run an AP Biology prep diagnostic to recommend the right start point — book a free consultation and we'll calibrate to your child's specific trajectory.",
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
   // 24. FARIDABAD (sub-metro of Delhi NCR — industrial-base AP Bio demand)
   // ──────────────────────────────────────────────────────────────────────────
   {

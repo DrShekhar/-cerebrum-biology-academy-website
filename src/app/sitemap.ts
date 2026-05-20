@@ -173,6 +173,7 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-tutor-gurugram' ||
     path === '/ap-biology-tutor-noida' ||
     path === '/ap-biology-tutor-faridabad' ||
+    path === '/ap-biology-tutor-ghaziabad' ||
     path === '/ap-biology-tutor-bangalore' ||
     path === '/ap-biology-tutor-hyderabad' ||
     path === '/ap-biology-tutor-vancouver' ||
@@ -3668,6 +3669,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ap-biology-tutor-faridabad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-ghaziabad`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.8,

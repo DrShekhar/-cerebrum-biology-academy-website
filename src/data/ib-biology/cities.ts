@@ -48,6 +48,7 @@ export type CitySlug =
   | 'south-delhi'
   | 'faridabad'
   | 'rohini'
+  | 'ghaziabad'
   | 'kolkata'
 
 export interface CityConfig {
@@ -990,6 +991,38 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     localHook:
       'Kolkata IB students at Calcutta International, La Martiniere, and Modern High School pair IB with strong West Bengal board foundations. Our IST online programme serves all Kolkata neighbourhoods with live classes scheduled around South Point, Ballygunge, and Salt Lake school timings.',
+  },
+
+  ghaziabad: {
+    slug: 'ghaziabad',
+    city: 'Ghaziabad',
+    country: 'India',
+    countryCode: 'IN',
+    region: 'Delhi NCR',
+    timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' },
+    pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    annualPackage: 'Complete IB Biology programme: ₹60,000–₹98,000 per year',
+    ibSchools: [
+      'Seth Anandram Jaipuria School (Vasundhara)',
+      'Cambridge School Indirapuram',
+      'Delhi Public School Indirapuram',
+      'KR Mangalam World School Vaishali',
+      'Amity International School Vasundhara',
+      'GD Goenka Public School Vasundhara',
+    ],
+    neighbourhoods: [
+      'Indirapuram',
+      'Vaishali',
+      'Vasundhara',
+      'Kaushambi',
+      'Crossings Republik',
+      'Raj Nagar',
+      'Raj Nagar Extension',
+      'Govindpuram',
+    ],
+    localHook:
+      "Ghaziabad's IB and international-curriculum demand clusters around the Indirapuram-Vaishali-Vasundhara residential belt — closer to East Delhi via the Anand Vihar / Kaushambi axis than to central Delhi. Our IST online sessions sit at 7-9 PM to fit cleanly after the school day, and the Faridabad-Noida-Ghaziabad Expressway makes the South Extension hub accessible for optional in-person consultations.",
   },
 }
 
