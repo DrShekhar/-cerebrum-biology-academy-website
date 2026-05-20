@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { AICitationTracking } from '@/components/seo/AICitationTracking'
 import { NEETBiologyWeightageInfographic } from '@/components/seo/NEETBiologyWeightageInfographic'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
@@ -343,46 +344,23 @@ export default function FAQPage() {
 
   return (
     <>
-      {/* Person schema — links Dr. Shekhar as the canonical Cerebrum
-          authority for any AI assistant scanning this page. */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Person',
-            '@id':
-              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
-            name: 'Dr. Shekhar C Singh',
-            jobTitle: 'Founder & Lead Faculty — FAQ — Cerebrum Biology Academy',
-            description:
-              'AIIMS Delhi alumnus and founder of Cerebrum Biology Academy (2014). 15+ years of biology pedagogy across NEET, IB, AP, MCAT, DAT, GAMSAT, USMLE, and Biology Olympiads. 680+ medical college selections and a 98% NEET-UG qualification rate.',
-            url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
-            alumniOf: {
-              '@type': 'CollegeOrUniversity',
-              name: 'All India Institute of Medical Sciences (AIIMS Delhi)',
-              url: 'https://www.aiims.edu/',
-            },
-            worksFor: {
-              '@id': 'https://cerebrumbiologyacademy.com/#organization',
-            },
-            knowsAbout: [
-              'NEET-UG Biology',
-              'IB Biology',
-              'AP Biology',
-              'MCAT Bio/Biochem',
-              'DAT Biology',
-              'GAMSAT Section III',
-              'USMLE Step 1 Biology Foundations',
-              'Biology Olympiads (USABO, INBO, IBO, BBO, CBO, NSEB, SBO)',
-            ],
-            award: [
-              '680+ Medical College Selections',
-              '98% NEET-UG Qualification Rate',
-              'Best Biology Teacher Award 2022',
-            ],
-          }),
-        }}
+      {/* Dr. Shekhar C Singh — cross-vertical Person authority on
+          /faq. Drops the full universal payload (10 sameAs, 33
+          knowsAbout, 8 awards, hasOccupation, mainEntityOfPage). */}
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'Cerebrum Biology Academy FAQ',
+          'NEET-UG Biology',
+          'IB Biology',
+          'AP Biology',
+          'CBSE / ICSE Class 11-12 Biology',
+          'Biology Olympiads (USABO, INBO, IBO, BBO, CBO, NSEB, SBO)',
+          'MCAT Biology / Biochemistry',
+          'DAT Biology',
+          'GAMSAT Section III',
+          'USMLE Step 1 Biology Foundations',
+        ]}
+        jobTitle="Founder & Lead Biology Faculty — FAQ — Cerebrum Biology Academy"
       />
       {/* EducationalOrganization with AggregateRating — connects this
           page to the brand-wide 5.0/485 review rating. */}
