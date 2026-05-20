@@ -38,14 +38,32 @@ export function ArticleSchema({
     image: featuredImage
       ? `https://cerebrumbiologyacademy.com${featuredImage}`
       : 'https://cerebrumbiologyacademy.com/og-image.jpg',
-    author: {
-      '@type': 'Person',
-      name: author.name,
-      jobTitle: author.role,
-      url: 'https://cerebrumbiologyacademy.com/about',
+    // When the author is Dr. Shekhar C Singh (canonical name), wire the
+    // schema to the site-wide Person @id so Google merges the article
+    // author with the master entity. Cerebrum-staffed articles inherit
+    // the cross-vertical Person authority signals.
+    author:
+      /^Dr\.?\s+Shekhar\s+C?\s*Singh/i.test(author.name)
+        ? {
+            '@type': 'Person',
+            '@id':
+              'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+            name: 'Dr. Shekhar C Singh',
+            jobTitle: author.role,
+            url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india',
+          }
+        : {
+            '@type': 'Person',
+            name: author.name,
+            jobTitle: author.role,
+            url: 'https://cerebrumbiologyacademy.com/about',
+          },
+    creator: {
+      '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
     },
     publisher: {
       '@type': 'EducationalOrganization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
       name: 'Cerebrum Biology Academy',
       logo: {
         '@type': 'ImageObject',

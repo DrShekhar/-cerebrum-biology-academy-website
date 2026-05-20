@@ -70,7 +70,7 @@ const Header = () => {
         priority: 2,
       },
       {
-        href: '/faculty',
+        href: '/dr-shekhar-singh-biology-faculty-india',
         labelKey: 'faculty' as const,
         icon: Users,
         priority: 3,
