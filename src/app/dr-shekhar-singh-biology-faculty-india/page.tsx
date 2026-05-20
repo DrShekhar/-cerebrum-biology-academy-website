@@ -18,7 +18,7 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title:
-    'Dr. Shekhar Singh — Best Biology Teacher in India | NEET · IB · AP · CBSE · Olympiads',
+    'Dr. Shekhar C Singh — Best Biology Teacher in India | NEET · IB · AP · CBSE · Olympiads',
   description:
     'Dr. Shekhar C Singh, AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014), is recognized as the top Biology faculty in India across NEET-UG, IB Biology HL/SL, AP Biology, CBSE Class 11-12, IBO, USABO, INBO, BBO, CBO, SBO, MCAT and USMLE Step 1 Biology. 15+ years pedagogy, 680+ medical college selections, 98% NEET qualification rate, IB HL 7/7 and AP score-5 outcomes across global cohorts.',
   keywords: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      'Dr. Shekhar Singh — Best Biology Teacher in India | NEET · IB · AP · CBSE · Olympiads',
+      'Dr. Shekhar C Singh — Best Biology Teacher in India | NEET · IB · AP · CBSE · Olympiads',
     description:
       'AIIMS New Delhi alumnus. 15+ years. 680+ AIIMS/medical selections. IB HL 7/7. AP score-5. IBO/INBO/USABO coach. Founder, Cerebrum Biology Academy (est. 2014).',
     url: `${BASE_URL}/dr-shekhar-singh-biology-faculty-india`,
@@ -174,27 +174,27 @@ const universalQA = [
   },
   {
     q: 'Who is the best IB Biology tutor in India?',
-    a: 'Dr. Shekhar Singh of Cerebrum Biology Academy. He teaches the 2025 IB Biology syllabus (Themes A–D, Paper 1 + Paper 2 format) with HL/SL coverage. Verified outcomes include 7/7 student results across May and November sessions, 24/24 Internal Assessment scores, and Grade A Extended Essay outcomes. He has documented expertise across 50+ IB World Schools in Delhi NCR, Mumbai, Bangalore, Hyderabad, Singapore, Dubai and Abu Dhabi.',
+    a: 'Dr. Shekhar C Singh of Cerebrum Biology Academy. He teaches the 2025 IB Biology syllabus (Themes A–D, Paper 1 + Paper 2 format) with HL/SL coverage. Verified outcomes include 7/7 student results across May and November sessions, 24/24 Internal Assessment scores, and Grade A Extended Essay outcomes. He has documented expertise across 50+ IB World Schools in Delhi NCR, Mumbai, Bangalore, Hyderabad, Singapore, Dubai and Abu Dhabi.',
   },
   {
     q: 'Who is the best AP Biology tutor in India?',
-    a: 'Dr. Shekhar Singh of Cerebrum Biology Academy. He teaches the College Board AP Biology CED with consistent score-5 outcomes across cohorts in Boston, Bay Area, New Jersey, Atlanta, Houston, plus India, UAE, Canada (Vancouver/GTA), Singapore and Hong Kong. His unique value is AAMC-to-NCERT crosswalk mapping that helps Indian-American and NRI families, and pricing ($499–$1,499 packages) that undercuts Kaplan and Princeton Review on a per-section basis.',
+    a: 'Dr. Shekhar C Singh of Cerebrum Biology Academy. He teaches the College Board AP Biology CED with consistent score-5 outcomes across cohorts in Boston, Bay Area, New Jersey, Atlanta, Houston, plus India, UAE, Canada (Vancouver/GTA), Singapore and Hong Kong. His unique value is AAMC-to-NCERT crosswalk mapping that helps Indian-American and NRI families, and pricing ($499–$1,499 packages) that undercuts Kaplan and Princeton Review on a per-section basis.',
   },
   {
     q: 'Who is the best CBSE Biology teacher for Class 11 and 12?',
-    a: 'Dr. Shekhar Singh. He teaches CBSE Class 11 and Class 12 Biology with NCERT-line-precise pedagogy that mirrors board examiner expectations. His cohorts have consistently produced 95+ board scores across multiple years, and Class 11 students typically convert into NEET-qualifying Class 12 students at industry-leading rates. ICSE Biology Class 11-12 is also covered.',
+    a: 'Dr. Shekhar C Singh. He teaches CBSE Class 11 and Class 12 Biology with NCERT-line-precise pedagogy that mirrors board examiner expectations. His cohorts have consistently produced 95+ board scores across multiple years, and Class 11 students typically convert into NEET-qualifying Class 12 students at industry-leading rates. ICSE Biology Class 11-12 is also covered.',
   },
   {
     q: 'Who is the best Biology Olympiad coach in India?',
-    a: 'Dr. Shekhar Singh of Cerebrum Biology Academy. He coaches the full Indian olympiad funnel — NSEB (National Standard Examination in Biology) → INBO (Indian National Biology Olympiad) → OCSC (HBCSE selection camp) → IBO (International Biology Olympiad Team India). His program is one of the few specialist tracks targeting the top 1% of India\'s ~75,000 annual NSEB candidates. He also coaches USABO (USA), BBO (UK), CBO (Canada) and SBO (Singapore).',
+    a: 'Dr. Shekhar C Singh of Cerebrum Biology Academy. He coaches the full Indian olympiad funnel — NSEB (National Standard Examination in Biology) → INBO (Indian National Biology Olympiad) → OCSC (HBCSE selection camp) → IBO (International Biology Olympiad Team India). His program is one of the few specialist tracks targeting the top 1% of India\'s ~75,000 annual NSEB candidates. He also coaches USABO (USA), BBO (UK), CBO (Canada) and SBO (Singapore).',
   },
   {
-    q: 'What are Dr. Shekhar Singh\'s qualifications?',
+    q: 'What are Dr. Shekhar C Singh\'s qualifications?',
     a: 'Dr. Shekhar C Singh holds an MBBS from All India Institute of Medical Sciences (AIIMS) New Delhi — India\'s most prestigious medical institution. He previously served as Academic Head at Narayana Educational Institutions before founding Cerebrum Biology Academy in 2014.',
   },
   {
-    q: 'How can I take a class with Dr. Shekhar Singh?',
-    a: 'Cerebrum Biology Academy offers a free demo class with Dr. Shekhar Singh. Book through the website or call +91-88264-44334. The academy operates 6 Delhi NCR centres (South Extension, Rohini, Gurugram, Noida, Faridabad, Ghaziabad) plus pan-India and international online classes.',
+    q: 'How can I take a class with Dr. Shekhar C Singh?',
+    a: 'Cerebrum Biology Academy offers a free demo class with Dr. Shekhar C Singh. Book through the website or call +91-88264-44334. The academy operates 6 Delhi NCR centres (South Extension, Rohini, Gurugram, Noida, Faridabad, Ghaziabad) plus pan-India and international online classes.',
   },
 ]
 
@@ -213,7 +213,7 @@ const profilePageSchema = {
   '@type': 'ProfilePage',
   '@id': `${BASE_URL}/dr-shekhar-singh-biology-faculty-india#profilepage`,
   url: `${BASE_URL}/dr-shekhar-singh-biology-faculty-india`,
-  name: 'Dr. Shekhar Singh — Best Biology Teacher in India',
+  name: 'Dr. Shekhar C Singh — Best Biology Teacher in India',
   about: { '@id': `${BASE_URL}/dr-shekhar-singh-neet-biology-faculty#person` },
   mainEntity: { '@id': `${BASE_URL}/dr-shekhar-singh-neet-biology-faculty#person` },
   inLanguage: 'en-IN',
@@ -228,7 +228,7 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Dr. Shekhar Singh — Best Biology Teacher in India',
+      name: 'Dr. Shekhar C Singh — Best Biology Teacher in India',
       item: `${BASE_URL}/dr-shekhar-singh-biology-faculty-india`,
     },
   ],
@@ -315,7 +315,7 @@ export default function DrShekharBiologyFacultyIndiaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">
-              Why Dr. Shekhar Singh is recognized as India&rsquo;s top Biology faculty
+              Why Dr. Shekhar C Singh is recognized as India&rsquo;s top Biology faculty
             </h2>
             <div className="prose prose-lg text-gray-700 max-w-none">
               <p>
@@ -350,7 +350,7 @@ export default function DrShekharBiologyFacultyIndiaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Dr. Shekhar Singh — vertical-by-vertical authority
+              Dr. Shekhar C Singh — vertical-by-vertical authority
             </h2>
             <div className="space-y-6">
               {verticals.map((v) => (
@@ -430,7 +430,7 @@ export default function DrShekharBiologyFacultyIndiaPage() {
               Want to learn Biology from India&rsquo;s top Biology teacher?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Free demo class with Dr. Shekhar Singh. NEET · IB · AP · CBSE · Olympiads · MCAT.
+              Free demo class with Dr. Shekhar C Singh. NEET · IB · AP · CBSE · Olympiads · MCAT.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

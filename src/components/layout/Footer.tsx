@@ -195,7 +195,7 @@ export const Footer = memo(function Footer() {
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
-    { name: 'Dr. Shekhar Singh', href: '/dr-shekhar-singh' },
+    { name: 'Dr. Shekhar C Singh — Faculty Profile', href: '/dr-shekhar-singh-biology-faculty-india' },
     { name: 'Our Faculty', href: '/faculty' },
     { name: 'Results & Success Stories', href: '/results' },
     { name: 'Blog', href: '/blog' },
