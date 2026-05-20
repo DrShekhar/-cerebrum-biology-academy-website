@@ -2483,6 +2483,83 @@ export const ibBiologySchools: IBBiologySchool[] = [
       },
     ],
   },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  // 34. RYAN INTERNATIONAL SCHOOL FARIDABAD (Faridabad, India)
+  // ──────────────────────────────────────────────────────────────────────────
+  // Part of the broader Ryan International Group of Institutions network —
+  // one of India's larger private school networks with 130+ campuses across
+  // India and a small number of international campuses. The Faridabad
+  // campus operates as a co-ed day school with CBSE primary + IB DP senior.
+  {
+    slug: 'ryan-international-faridabad',
+    schoolName: 'Ryan International School',
+    shortName: 'Ryan International',
+    cityCountry: 'Faridabad, India',
+    citySlug: 'faridabad',
+    timezone: 'IST (India)',
+    timezoneIana: 'Asia/Kolkata',
+    countryCode: 'IN',
+    inLanguage: 'en-IN',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      "Ryan International School Faridabad is a co-educational day school operating as part of the broader Ryan International Group of Institutions network — one of India's larger private school networks with 130+ campuses across India and a small number of international campuses. The Faridabad campus has built its identity on CBSE academic delivery within the Ryan network's broader brand identity, and added IB Diploma Programme authorisation at senior school as an international-application option for the subset of families targeting overseas universities.",
+      "Ryan International Faridabad's senior school runs CBSE Class 11-12 as the larger of the two tracks, with the IB Diploma Programme added as an internationally-credentialled senior-school option. Both IB Biology HL and SL are offered, with full Section 6 (Practical Programme) coverage. The IB cohort is meaningfully smaller than the CBSE cohort — typical of CBSE-primary schools that have added IB DP — and students choosing IB are self-selecting toward international university applications.",
+      "For Ryan International Faridabad IB Biology students, the most common driver of external tutoring is the CBSE-to-IB transition at DP1. CBSE Class 10's recall-and-standard-answer-structure assessment differs meaningfully from IB DP Paper 2's data-analysis-and-evaluation style. Our DP1 coaching makes this transition explicit in the first term, calibrating IB-rubric command terms and the IA personal-investigation style alongside the school's in-house teaching. Several Ryan International IB Biology HL students each cohort pursue our integrated IB+NEET track for the standard dual-application reasons.",
+      "Ryan International Faridabad's location keeps the school accessible across the central-Faridabad belt. The Ryan network's broader presence across NCR (Ryan International Sector 56 Gurgaon, Ryan International Sector 25 Rohini, etc.) gives families useful cross-network reference points when considering senior-school IB choices. For our coaching, the school's location is irrelevant because delivery is 100% online live video; IST evening live sessions (7-9 PM) fit cleanly after the school day regardless of which Faridabad sector students live in.",
+    ],
+    reputationBullets: [
+      'Part of the broader Ryan International Group of Institutions network',
+      'Ryan network has 130+ campuses across India and small international footprint',
+      'IB World School authorised for the Diploma Programme',
+      'Senior school: IB DP + CBSE dual-track at Classes 11-12 (CBSE is the larger track)',
+      'Located in Faridabad (central-Faridabad accessibility)',
+      'IB Biology HL and SL with full Section 6 practical coverage',
+      'CBSE-rooted brand identity with IB DP added as the abroad-applications track',
+    ],
+    collegeContext:
+      "Ryan International Faridabad IB graduates matriculate to UK (Russell Group including Oxbridge, Imperial, UCL, KCL, Warwick, Edinburgh, Manchester), US (Ivy+, NYU, top liberal arts colleges, Berkeley, Northwestern, public flagships), Canada (Toronto, UBC, McGill, Western, Waterloo, Queen's), Australia (Melbourne, Sydney, ANU, Monash), and Indian universities (Ashoka, Krea, Shiv Nadar University, Plaksha, plus AIIMS / state medical colleges for IB+NEET dual-track students). Biology HL students from Ryan International Faridabad most commonly target UK medicine, US pre-med, biosciences at top UK / Canadian universities, or biomedical / biotechnology programmes.",
+    paceAlignment:
+      "Ryan International Faridabad's IB DP follows the standard two-year cycle. IST timezone aligns directly with our India-based live tutoring schedule. Our 1:1 sessions schedule in IST evenings (7-9 PM is most common, fitting after the Faridabad school commute) or weekend morning blocks. For IB+NEET students, we run an integrated weekly schedule covering IB Biology + NEET Biology + NEET Chemistry + NEET Physics. The DP1 coaching includes an explicit CBSE-Class-10-to-IB-DP bridge — the single highest-leverage external coaching value for Ryan International IB students transitioning from the school's CBSE Class 10. IA mentorship aligns to the school's DP1 IA proposal deadlines.",
+    faqs: [
+      {
+        question: "Ryan International has many campuses across India — is Ryan Faridabad the same as Ryan in other NCR locations?",
+        answer:
+          "All Ryan International schools are part of the broader Ryan International Group of Institutions network but each campus operates independently with its own faculty, cohort, and senior-school curriculum mix. Ryan International Faridabad runs CBSE + IB DP at senior; other Ryan campuses (Gurgaon Sector 56, Rohini Sector 25, Noida, etc.) may differ on senior-school IB availability and curriculum mix. The Ryan network is brand + framework, not single-campus management — each campus's IB Biology cohort and faculty are distinct.",
+      },
+      {
+        question: "My child finished Ryan Faridabad's CBSE Class 10 with strong Biology marks — what changes at IB Biology HL?",
+        answer:
+          "Three things change. First, the assessment shifts: CBSE Class 10 prioritises content recall and standardised-answer structures, while IB DP Paper 2 rewards data-analysis-and-evaluation style writing — students learn the IB-specific command terms (\"explain\", \"evaluate\", \"discuss\") and the long-response mark scheme. Second, the Internal Assessment adds a 10-hour personal-investigation worth 20 percent of the final grade — CBSE Class 10 has nothing equivalent. Third, the syllabus depth in selected topics (cell biology, genetics, physiology) goes meaningfully beyond CBSE Class 10. Our DP1 coaching makes all three transitions explicit in the first term.",
+      },
+      {
+        question: "Ryan Faridabad's IB cohort is smaller than the CBSE cohort — does the smaller IB peer group affect IB Biology results?",
+        answer:
+          "Not directly — IB exam grading is criterion-referenced against the same global rubric every year, regardless of in-school cohort size. What can be thinner at a CBSE-primary school is the peer-driven rubric awareness that students at larger single-curriculum IB schools (Pathways Aravali, UWCSEA) absorb partly through cohort-density-driven peer benchmarking. Our 1:1 coaching replaces that with explicit weekly written feedback on long-response answers against the IB Biology mark scheme.",
+      },
+      {
+        question: 'Do you offer the IB+NEET integrated track for Ryan International Faridabad students?',
+        answer:
+          "Yes — Cerebrum is the only IB Biology tutor in India that runs this integrated track. Several Ryan International Faridabad IB Biology HL students each cohort pursue the dual IB+NEET pathway because the CBSE-rooted family base often values keeping India medical-college options open via NEET in parallel with abroad applications. We coordinate IB Biology HL + NEET Biology + Chemistry + Physics on a single weekly schedule.",
+      },
+      {
+        question: 'How does pricing differ for IB-only vs IB+NEET tracks?',
+        answer:
+          'IB-only: Complete IB Biology Programme $6,000 per year (HL + SL, 150+ hours), 1:1 Elite Tutoring $75 per hour, Group Batch $40 per hour. IB+NEET: pricing scales with the additional Chemistry and Physics coaching plus increased Biology hours — typically ₹60,000-₹98,000 per year for the complete integrated programme. Ryan International Faridabad families typically pay in INR with payment plans across 3-4 instalments.',
+      },
+      {
+        question: "How does Ryan International Faridabad's IB Biology compare to the other Faridabad IB schools?",
+        answer:
+          "Six different positioning profiles in the Faridabad IB cluster. Manav Rachna International is the flagship of the Manav Rachna education group (multi-curriculum IB + Cambridge + CBSE). DPS Faridabad is part of the DPS national network. Shri Ram Faridabad is TSRS junior + middle-school feeding into TSRS Aravali (Gurgaon). Apeejay Faridabad is part of the Apeejay Education Society network. Modern DPS Faridabad is independently managed. Ryan International Faridabad is part of the broader Ryan network. The IB Biology programmes across all six are comparable in quality; school cultures and brand contexts differ. We coach students from all six.",
+      },
+      {
+        question: 'When should a Ryan International Faridabad student start IB Biology tutoring?',
+        answer:
+          "For the integrated 2-year Complete Programme, August or September of DP1 — that maximises the CBSE-to-IB bridge in the first term and the IA mentorship window across DP1. For IB+NEET students, ideally earlier (during Class 10) to build Chemistry and Physics foundations before DP1's heavier weekly load. For exam-only coaching, October DP2 (after the school's mocks) is still effective.",
+      },
+    ],
+  },
 ]
 
 /** Helper: lookup school by slug. */
