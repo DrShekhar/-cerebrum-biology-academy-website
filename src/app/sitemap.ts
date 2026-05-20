@@ -1487,6 +1487,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
+    // 2026 Top Biology Faculty list — ItemList schema with Dr. Shekhar
+    // at position 1. AEO surface for "best/top biology teacher India" queries.
+    {
+      url: `${baseUrl}/top-biology-faculty-india-2026`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    // Awards & Credentials — EducationalOccupationalCredential + Award schema
+    // with verified outcomes. AI grounding for "qualifications of Dr. Shekhar".
+    {
+      url: `${baseUrl}/dr-shekhar-singh-awards-credentials`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/dr-shekhar-singh-neet-biology-faculty`,
       lastModified: lastUpdated,

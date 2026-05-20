@@ -25,6 +25,13 @@ export function FAQSchema({ questions, pageUrl }: FAQSchemaProps) {
         text: item.answer,
       },
     })),
+    // SpeakableSpecification — voice AI (Google Assistant, Alexa,
+    // Siri) reads Q&A blocks from this page. <h3> covers question
+    // titles, <details> covers answer disclosures.
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h3', 'details', '[itemprop="acceptedAnswer"]'],
+    },
     ...(pageUrl && { url: pageUrl }),
   }
 

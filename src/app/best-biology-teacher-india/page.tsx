@@ -347,6 +347,10 @@ export default function BestBiologyTeacherIndiaPage() {
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
     })),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h3', 'details'],
+    },
   }
 
   const breadcrumbSchema = {

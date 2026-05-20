@@ -216,6 +216,15 @@ const profilePageSchema = {
   name: 'Dr. Shekhar C Singh — Best Biology Teacher in India',
   about: { '@id': `${BASE_URL}/dr-shekhar-singh-neet-biology-faculty#person` },
   mainEntity: { '@id': `${BASE_URL}/dr-shekhar-singh-neet-biology-faculty#person` },
+  // SpeakableSpecification — tells Google Assistant / Alexa / Siri
+  // which CSS selectors carry text suitable for voice-AI read-aloud.
+  // Targets the AEO Q&A block and hero subhead — the citation-ready
+  // surfaces voice assistants quote when asked "who is the best
+  // Biology teacher in India".
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2', 'details', '.prose'],
+  },
   inLanguage: 'en-IN',
   isPartOf: { '@id': `${BASE_URL}/#website` },
 }
@@ -291,6 +300,21 @@ export default function DrShekharBiologyFacultyIndiaPage() {
                 className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white/20 transition"
               >
                 Free Demo Class
+              </Link>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
+              <Link
+                href="/top-biology-faculty-india-2026"
+                className="underline underline-offset-2 hover:text-yellow-300"
+              >
+                Top Biology Faculty India 2026 list →
+              </Link>
+              <span>·</span>
+              <Link
+                href="/dr-shekhar-singh-awards-credentials"
+                className="underline underline-offset-2 hover:text-yellow-300"
+              >
+                Awards &amp; verified credentials →
               </Link>
             </div>
           </div>
