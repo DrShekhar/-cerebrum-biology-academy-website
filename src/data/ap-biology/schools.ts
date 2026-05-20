@@ -68,7 +68,7 @@ export const apBiologySchools: APBiologySchool[] = [
     historyParagraphs: [
       "Thomas Jefferson High School for Science and Technology — universally known as TJHSST or TJ — is a regional Governor's magnet school operated by Fairfax County Public Schools. It is consistently ranked the #1 STEM high school in the United States by US News and Niche, and its admissions process is one of the most selective in the public-school landscape.",
       "TJ's biology programme operates at near-college pace. AP Biology is typically taken in tenth or eleventh grade; the school also offers post-AP biology coursework (research methods, biotechnology, neuroscience) for seniors. The faculty include several PhD-credentialed teachers, and the lab facilities — including TJ's mentorship programme connected to Naval Research, NIH, and George Mason — are among the strongest at any US high school.",
-      "TJ has produced more USABO Semifinalists and Finalists than any other US high school over the past decade. For students at TJ targeting AP-5, our role is to layer FRQ rubric mastery and timed full-length practice exams on top of the school's already-rigorous content delivery — closing the gap between strong school grades and a 5 on the May exam.",
+      "TJ has consistently produced a top-tier share of USABO Semifinalists and Finalists nationally over the past decade. For students at TJ targeting AP-5, our role is to layer FRQ rubric mastery and timed full-length practice exams on top of the school's already-rigorous content delivery — closing the gap between strong school grades and a 5 on the May exam.",
     ],
     reputationBullets: [
       'Ranked #1 STEM high school in the US by US News (2025)',
