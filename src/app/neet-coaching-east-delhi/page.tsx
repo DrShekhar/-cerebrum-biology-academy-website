@@ -1,6 +1,6 @@
-import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
-;('use client')
+'use client'
 
+import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import Link from 'next/link'
 import {
   MapPin,
