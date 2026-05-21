@@ -24,7 +24,12 @@ export function CitySchema({
   areaServed,
   faqs = [],
   studentCount = '2000',
-  coordinates = { lat: '28.6139', lng: '77.2090' },
+  // No default fallback — previously this defaulted to Delhi coords
+  // (28.6139, 77.2090) which leaked into every non-Delhi caller (Noida,
+  // Gurugram, etc.), torpedoing local-pack ranking for those cities.
+  // When coordinates are not provided, we omit the `geo` field entirely
+  // rather than emit wrong coords to Google.
+  coordinates,
   description,
   url,
 }: CitySchemaProps) {
@@ -68,11 +73,17 @@ export function CitySchema({
       addressRegion: stateValue,
       addressCountry: 'IN',
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: coordinates.lat,
-      longitude: coordinates.lng,
-    },
+    // Conditional geo — only emit when caller provides real coordinates.
+    // Spreading {} when absent keeps the object clean and skips the field.
+    ...(coordinates
+      ? {
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: coordinates.lat,
+            longitude: coordinates.lng,
+          },
+        }
+      : {}),
     areaServed:
       localitiesValue.length > 0
         ? localitiesValue.map((locality) => ({ '@type': 'City', name: locality }))

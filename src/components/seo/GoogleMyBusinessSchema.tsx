@@ -43,9 +43,12 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     },
     phone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Su 00:00-23:59'],
+    openingHours: ['Mo-Sa 09:00-20:00', 'Su 10:00-18:00'],
     priceRange: '₹45,000 - ₹1,80,000',
-    images: ['https://cerebrumbiologyacademy.com/images/center-south-extension.jpg'],
+    // Center photos pending — use canonical OG image as fallback so the
+    // schema validates and Google sees a real image instead of a 404.
+    // Replace per-center with real exterior/classroom photos when available.
+    images: ['https://cerebrumbiologyacademy.com/og-image.jpg'],
     description:
       'Flagship NEET Biology coaching in South Delhi. Small batch sizes with personalized attention and expert AIIMS faculty.',
     areaServed: [
@@ -80,9 +83,9 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     },
     phone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Su 00:00-23:59'],
+    openingHours: ['Mo-Sa 09:00-20:00', 'Su 10:00-18:00'],
     priceRange: '₹45,000 - ₹1,80,000',
-    images: ['https://cerebrumbiologyacademy.com/images/center-rohini.jpg'],
+    images: ['https://cerebrumbiologyacademy.com/og-image.jpg'],
     description:
       'NEET Biology coaching in North-West Delhi. Convenient location for Rohini, Pitampura, and Shalimar Bagh students.',
     areaServed: [
@@ -115,9 +118,9 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     },
     phone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Su 00:00-23:59'],
+    openingHours: ['Mo-Sa 09:00-20:00', 'Su 10:00-18:00'],
     priceRange: '₹45,000 - ₹1,80,000',
-    images: ['https://cerebrumbiologyacademy.com/images/center-green-park.jpg'],
+    images: ['https://cerebrumbiologyacademy.com/og-image.jpg'],
     description:
       'NEET Biology coaching near Green Park Metro. Expert faculty for students from South Delhi, Noida, and Ghaziabad.',
     areaServed: [
@@ -154,10 +157,10 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     },
     phone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Su 00:00-23:59'],
+    openingHours: ['Mo-Sa 09:00-20:00', 'Su 10:00-18:00'],
     priceRange: '₹45,000 - ₹1,80,000',
     images: [
-      'https://cerebrumbiologyacademy.com/images/center-gurugram.jpg',
+      'https://cerebrumbiologyacademy.com/og-image.jpg',
       'https://cerebrumbiologyacademy.com/images/classroom-gurugram.jpg',
     ],
     description:
@@ -196,9 +199,9 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     },
     phone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Su 00:00-23:59'],
+    openingHours: ['Mo-Sa 09:00-20:00', 'Su 10:00-18:00'],
     priceRange: '₹45,000 - ₹1,80,000',
-    images: ['https://cerebrumbiologyacademy.com/images/center-faridabad.jpg'],
+    images: ['https://cerebrumbiologyacademy.com/og-image.jpg'],
     description:
       'Quality NEET Biology coaching in Faridabad. No need to travel to Delhi - expert faculty right in your city.',
     areaServed: [
@@ -229,9 +232,9 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     },
     phone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Su 00:00-23:59'],
+    openingHours: ['Mo-Sa 09:00-20:00', 'Su 10:00-18:00'],
     priceRange: '₹45,000 - ₹1,80,000',
-    images: ['https://cerebrumbiologyacademy.com/images/center-noida.jpg'],
+    images: ['https://cerebrumbiologyacademy.com/og-image.jpg'],
     description:
       'NEET Biology coaching in Noida. Expert AIIMS faculty for students from Noida, Greater Noida, and Ghaziabad.',
     areaServed: [

@@ -97,7 +97,7 @@ export const CONTACT_INFO = {
       isPhysicalCenter: true,
     },
     greenPark: {
-      name: 'Cerebrum Biology Academy - Green Park (Online)',
+      name: 'Cerebrum Biology Academy - Green Park',
       streetAddress: 'B 113 FF Gulmohar Park',
       addressLocality: 'Green Park, New Delhi',
       addressRegion: 'Delhi',
@@ -114,8 +114,11 @@ export const CONTACT_INFO = {
         'Green Park Market',
         'Near Hauz Khas',
       ],
-      isPhysicalCenter: false,
-      nearestCenter: 'southExtension',
+      // Green Park is a physical center serving both online + offline
+      // batches. The previous "(Online)" suffix + isPhysicalCenter=false
+      // contradicted the full street address and confused Google's
+      // local-pack signal. (Fixed May 2026 per user direction.)
+      isPhysicalCenter: true,
     },
     gurugram: {
       name: 'Cerebrum Biology Academy - Gurugram',
@@ -301,18 +304,22 @@ export const CONTACT_INFO = {
   },
 
   // Operating Hours
+  // Physical centers: realistic coaching-center hours so Google doesn't
+  // flag the listing as low-quality. Online sessions still operate
+  // outside these windows but aren't represented as "open 24/7" — that
+  // misled Google's map-pack ranking for the physical centers.
   hours: {
     weekdays: {
-      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      open: '00:00',
-      close: '23:59',
+      days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      open: '09:00',
+      close: '20:00',
     },
     sunday: {
       days: ['Sunday'],
-      open: '00:00',
-      close: '23:59',
+      open: '10:00',
+      close: '18:00',
     },
-    displayText: 'Open 24/7 — Online Classes Available Globally',
+    displayText: 'Mon–Sat: 9:00 AM – 8:00 PM · Sun: 10:00 AM – 6:00 PM (online sessions available outside these hours)',
   },
 
   // Social media
