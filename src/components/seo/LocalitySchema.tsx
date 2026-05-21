@@ -114,6 +114,7 @@ export function LocalitySchema({
     slogan: 'Where Biology Becomes Your Strength',
     founder: {
       '@type': 'Person',
+      '@id': `${BASE_URL}/dr-shekhar-singh-neet-biology-faculty#person`,
       name: 'Dr. Shekhar C Singh',
       honorificPrefix: 'Dr.',
       jobTitle: 'Founder & Head Faculty',

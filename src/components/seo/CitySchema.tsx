@@ -41,6 +41,10 @@ export function CitySchema({
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
     '@id': `${pageUrl}#organization`,
+    parentOrganization: {
+      '@type': 'EducationalOrganization',
+      '@id': `${baseUrl}/#organization`,
+    },
     name: `Cerebrum Biology Academy - ${cityName}`,
     description:
       description ||

@@ -89,34 +89,40 @@ export default function PageContent() {
 
   const faqs = [
     {
-      id: "faq-1",
-      question: "Is NEET preparation necessary for United States of America students?",
-      answer: "Yes, NEET is the mandatory entrance exam for admission to medical colleges in India. Our specialized coaching helps United States of America students master the NEET curriculum while balancing work, studies, and timezone differences. We have proven success with United States of America NRI students."
+      id: 'faq-1',
+      question: 'Why would an Indian-American student take NEET?',
+      answer:
+        'Because NEET is the gateway to MBBS admission in Indian medical colleges, including the 15% NRI quota seats. Indian-American families pursue this route when they want a direct-to-MBBS pathway at lower cost and shorter timeline than US pre-med + med school. NEET does not play any role in US medical school admission — that requires MCAT + a US undergraduate degree.',
     },
     {
-      id: "faq-2",
-      question: "What is your success rate for United States of America students?",
-      answer: "We maintain a 98% success rate across all students including United States of America NRI students. Many of our United States of America students secure admissions in top AIIMS and medical colleges across India."
+      id: 'faq-2',
+      question: 'Is there a NEET exam centre inside the United States?',
+      answer:
+        'No. The NTA-designated overseas NEET exam centres are in Dubai, Sharjah, Abu Dhabi, Doha, Kuwait City, Riyadh, Muscat, Manama, Singapore, Bangkok, Kuala Lumpur, Lagos, Colombo and Kathmandu. US candidates typically fly to Dubai or India to sit NEET-UG. We help enrolled students plan the travel and registration.',
     },
     {
-      id: "faq-3",
-      question: "Do you offer online and offline coaching?",
-      answer: "Yes! We offer online, offline, and hybrid batches. United States of America students can choose based on their convenience with timings suited to EST/PST."
+      id: 'faq-3',
+      question: 'Can I prepare for NEET while taking AP Biology?',
+      answer:
+        'Yes. AP Biology and NEET Biology overlap on cell biology, genetics, physiology, and ecology. NEET adds depth on human physiology and NCERT-specific content. Students running AP Bio and NEET prep in parallel typically find both easier because the fundamentals are shared.',
     },
     {
-      id: "faq-4",
-      question: "Can United States of America students take NEET exam in United States of America?",
-      answer: "NEET is conducted at exam centers across India. We provide complete guidance for NRI students including exam registration, travel planning, accommodation, and exam day logistics."
+      id: 'faq-4',
+      question: 'What are typical class timings for US students?',
+      answer:
+        "Live classes run in IST blocks that translate to weekday evenings (CST/EST/PST) and weekend mornings local time. All sessions are recorded, so time-zone mismatches don't block progress.",
     },
     {
-      id: "faq-5",
-      question: "What about visa and sponsorship support?",
-      answer: "F-1 visa to medical education visa transition support We provide counseling to ensure smooth transition to medical education in India."
+      id: 'faq-5',
+      question: 'Do you provide visa or immigration services?',
+      answer:
+        'No. We are an academic coaching institute only. We do not provide visa, immigration, or legal documentation services. Visa matters should be handled by your family, school, or licensed immigration consultants.',
     },
     {
-      id: "faq-6",
-      question: "How do you bridge United States of America's curriculum with NEET?",
-      answer: "Our expert faculty understands United States of America's education system and CBSE requirements. We customize batches to bridge the gap, ensuring United States of America students excel in NEET while leveraging their existing knowledge."
+      id: 'faq-6',
+      question: 'What about the NRI quota for Indian MBBS admissions?',
+      answer:
+        '15% of seats at eligible Indian medical colleges are reserved for NRI/OCI candidates. We help you understand which colleges offer NRI seats, typical NEET cut-offs for those seats, and broad admission timelines. We do not act as an admissions consultant.',
     },
   ];
 

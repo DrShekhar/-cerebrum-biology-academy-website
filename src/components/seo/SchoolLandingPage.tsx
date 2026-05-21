@@ -57,6 +57,10 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
     '@id': `${baseUrl}/${data.slug}#organization`,
+    parentOrganization: {
+      '@type': 'EducationalOrganization',
+      '@id': `${baseUrl}/#organization`,
+    },
     name: 'Cerebrum Biology Academy',
     description: data.metaDescription,
     url: `${baseUrl}/${data.slug}`,
@@ -65,6 +69,7 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
     logo: `${baseUrl}/logo.png`,
     founder: {
       '@type': 'Person',
+      '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
       name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',

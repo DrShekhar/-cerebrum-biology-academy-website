@@ -132,6 +132,10 @@ export function CityHubPage({ data }: CityHubPageProps) {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
     '@id': `${baseUrl}/biology-classes-${data.slug}#organization`,
+    parentOrganization: {
+      '@type': 'EducationalOrganization',
+      '@id': `${baseUrl}/#organization`,
+    },
     name: `Cerebrum Biology Academy - ${data.cityName}`,
     description: data.metaDescription,
     url: `${baseUrl}/biology-classes-${data.slug}`,

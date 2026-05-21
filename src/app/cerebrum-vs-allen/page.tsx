@@ -41,7 +41,7 @@ const jsonLdSchema = {
       name: 'Is Cerebrum better than Allen for Biology?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cerebrum is specifically designed for Biology-focused NEET preparation with AIIMS-trained faculty, smaller batch sizes (25-30), and specialized curriculum. Allen offers comprehensive NEET coaching across all subjects. For students prioritizing Biology excellence, Cerebrum provides specialized attention.',
+        text: 'Cerebrum is specifically designed for Biology-focused NEET preparation with AIIMS-trained faculty and smaller batches. If you want specialized Biology training with personal attention, Cerebrum is the better choice. Allen is suitable if you need comprehensive coaching across Physics, Chemistry, and Biology.',
       },
     },
     {
@@ -49,31 +49,31 @@ const jsonLdSchema = {
       name: 'What is the fee difference between Cerebrum and Allen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cerebrum Biology-specific course ranges from ₹45,000-₹1,20,000, while Allen general NEET courses range from ₹1,50,000-₹3,00,000. Cerebrum offers more cost-effective specialized Biology training.',
+        text: 'Cerebrum charges ₹45,000-₹1,20,000 for Biology-specific courses, while Allen charges ₹1,50,000-₹3,00,000 for complete NEET coaching. Cerebrum is 40-60% more affordable, especially for students focused on Biology excellence.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Does Cerebrum have online coaching like Allen?',
+      name: 'Does Cerebrum provide online coaching?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, Cerebrum offers both offline classes at 4 centers in Delhi NCR and online coaching options. Students can choose the mode that best fits their schedule.',
+        text: 'Yes, Cerebrum offers both offline classes at 6 Delhi NCR centers and comprehensive online programs. Students can choose hybrid (combination of online and offline) or fully online modes based on their preferences.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is Cerebrum success rate compared to Allen?',
+      name: "What is Cerebrum's success rate compared to Allen?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cerebrum has a 98% selection rate among students who complete the course consistently. Allen does not publicly disclose individual success rates separately, making direct comparison difficult.',
+        text: "Cerebrum has a transparent 98% selection rate among students who complete the course consistently. Allen does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum's transparent metrics demonstrate accountability.",
       },
     },
     {
       '@type': 'Question',
-      name: 'Why choose Cerebrum Biology Academy for NEET?',
+      name: 'Can I shift from Allen to Cerebrum mid-course?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Choose Cerebrum for AIIMS-trained specialized faculty, dedicated Biology expertise, smaller batch sizes ensuring personal attention, superior success rate, comprehensive study material, and cost-effectiveness.',
+        text: 'Yes, many students transition to Cerebrum for Biology specialization. Cerebrum can evaluate your current progress and create a customized plan to optimize your remaining preparation time. Contact us for a personalized consultation.',
       },
     },
   ],
