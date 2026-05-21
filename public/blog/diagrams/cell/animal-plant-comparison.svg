@@ -37,7 +37,7 @@
     <circle cx="103" cy="120" r="2" fill="#5b21b6"/>
     <circle cx="98" cy="140" r="2" fill="#5b21b6"/>
     <circle cx="105" cy="170" r="2" fill="#5b21b6"/>
-    <text x="80" y="240" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="600">rough ER</text>
+    <text x="75" y="215" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="600">rough ER</text>
 
     <!-- Golgi apparatus (stacked discs) -->
     <g transform="translate(245, 90)">
@@ -47,8 +47,8 @@
       <text x="0" y="38" text-anchor="middle" fill="#831843" font-size="9" font-weight="600">Golgi</text>
     </g>
 
-    <!-- Centrioles (UNIQUE to animal) -->
-    <g transform="translate(75, 220)">
+    <!-- Centrioles (UNIQUE to animal) — bottom-right of cell, away from ER -->
+    <g transform="translate(215, 265)">
       <rect x="-12" y="-6" width="12" height="12" fill="#0f172a"/>
       <rect x="2" y="-6" width="12" height="12" fill="#0f172a"/>
       <text x="0" y="22" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="700">centrioles</text>

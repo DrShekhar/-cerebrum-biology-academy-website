@@ -34,9 +34,9 @@
   <!-- ===== PCT — Proximal Convoluted Tubule ===== -->
   <path d="M 175 145 Q 230 130 280 145 Q 320 160 340 145 Q 370 130 400 150 Q 420 160 410 175 Q 380 195 350 178 Q 320 170 290 185 Q 260 200 230 180 Q 215 170 200 175"
         stroke="#0891b2" stroke-width="6" fill="none" stroke-linecap="round"/>
-  <text x="270" y="115" fill="#0f172a" font-size="14" font-weight="600">PCT</text>
-  <text x="270" y="132" fill="#475569" font-size="12">Proximal Convoluted Tubule</text>
-  <line x1="295" y1="135" x2="290" y2="148" stroke="#475569" stroke-width="1"/>
+  <text x="385" y="100" fill="#0f172a" font-size="14" font-weight="600">PCT</text>
+  <text x="385" y="116" fill="#475569" font-size="11">Proximal Convoluted Tubule</text>
+  <line x1="410" y1="120" x2="395" y2="148" stroke="#475569" stroke-width="1"/>
 
   <!-- ===== Loop of Henle ===== -->
   <!-- Descending limb -->

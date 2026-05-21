@@ -97,9 +97,9 @@
   <g transform="translate(40, 300)">
     <rect x="0" y="0" width="720" height="60" rx="10" fill="#0f172a"/>
     <text x="20" y="22" fill="#facc15" font-size="12" font-weight="700">Key NEET points:</text>
-    <text x="20" y="40" fill="#e2e8f0" font-size="11">• Nissl bodies (rough ER) found ONLY in cell body + dendrites — never in axon</text>
-    <text x="20" y="54" fill="#e2e8f0" font-size="11">• Myelinated axons conduct ~100× faster than unmyelinated (saltatory conduction jumps node-to-node)</text>
-    <text x="450" y="40" fill="#e2e8f0" font-size="11">• Resting potential: −70 mV</text>
-    <text x="450" y="54" fill="#e2e8f0" font-size="11">• Action potential threshold: ~−55 mV</text>
+    <text x="20" y="40" fill="#e2e8f0" font-size="11">• Nissl bodies: only in cell body + dendrites (never in axon)</text>
+    <text x="20" y="54" fill="#e2e8f0" font-size="11">• Myelinated axons: ~100× faster (saltatory conduction)</text>
+    <text x="430" y="40" fill="#e2e8f0" font-size="11">• Resting potential: −70 mV</text>
+    <text x="430" y="54" fill="#e2e8f0" font-size="11">• Action potential threshold: ~−55 mV</text>
   </g>
 </svg>
