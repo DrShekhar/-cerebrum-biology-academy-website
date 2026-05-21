@@ -12,10 +12,10 @@
       "options": [
         "The SAM terminates prematurely because stem cells are not maintained",
         "The root apical meristem enlarges but the shoot meristem is unaffected",
-        "Lateral organ primordia fail to initiate because CLV3 is required for organ boundary specification",
-        "The SAM enlarges dramatically due to unrestricted WUS expression and stem cell overproliferation"
+        "The SAM enlarges dramatically due to unrestricted WUS expression and stem cell overproliferation",
+        "Lateral organ primordia fail to initiate because CLV3 is required for organ boundary specification"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "C",
       "explanation": "The WUS-CLV feedback loop maintains SAM homeostasis. WUS, expressed in the organizing center, promotes stem cell identity and induces CLV3 expression in the central zone. CLV3 peptide binds the CLV1 receptor kinase, which signals to repress WUS transcription, limiting stem cell number. Loss of CLV3 eliminates this negative feedback: WUS expression expands unchecked, leading to excessive stem cell accumulation and a dramatically enlarged, fasciated meristem. This is a classic Arabidopsis phenotype. Option A describes the opposite (WUS loss-of-function). Option C is incorrect because organ initiation depends on auxin maxima, not CLV3. Option B is wrong because CLV3 acts primarily in the SAM, though the related CLE peptide family functions in the RAM via a WOX5/CLE40 pathway.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -30,12 +30,12 @@
       "type": "MCQ",
       "question": "A cross-section of a woody dicot stem reveals a ring of vascular cambium. Which of the following correctly describes the pattern of cell division and differentiation in this lateral meristem?",
       "options": [
-        "Vascular cambium divides only periclinally, producing secondary xylem toward the outside and secondary phloem toward the pith",
         "Vascular cambium divides periclinally, producing secondary xylem centripetally (toward the pith) and secondary phloem centrifugally (toward the bark), with far more xylem produced than phloem",
+        "Vascular cambium divides only periclinally, producing secondary xylem toward the outside and secondary phloem toward the pith",
         "Vascular cambium produces equal amounts of secondary xylem and secondary phloem, both through anticlinal divisions",
         "Vascular cambium produces secondary xylem from fusiform initials only and secondary phloem from ray initials only"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The vascular cambium is a lateral meristem that undergoes periclinal (tangential) divisions to produce secondary vascular tissues. Cells cut off toward the interior (centripetally, toward the pith) differentiate into secondary xylem (wood), while cells cut off toward the exterior (centrifugally) differentiate into secondary phloem. The cambium produces substantially more xylem than phloem, which is why wood accumulates massively while the phloem layer remains relatively thin. The cambium also undergoes anticlinal (radial) divisions to increase its circumference as the stem expands, but these do not directly produce vascular tissues. Both fusiform initials (producing axial elements) and ray initials (producing ray parenchyma) contribute to both xylem and phloem, not one each.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -72,10 +72,10 @@
       "options": [
         "It prevents all water from entering the vascular cylinder, forcing water to be actively pumped by root pressure",
         "It creates a reservoir of ions in the cortex that can be released during drought stress",
-        "It forces water and dissolved solutes moving via the apoplast to cross the selectively permeable plasma membrane of endodermal cells before entering the stele, enabling the plant to regulate ion uptake",
-        "It prevents backflow of water from the xylem to the cortex by creating a one-way valve mechanism"
+        "It prevents backflow of water from the xylem to the cortex by creating a one-way valve mechanism",
+        "It forces water and dissolved solutes moving via the apoplast to cross the selectively permeable plasma membrane of endodermal cells before entering the stele, enabling the plant to regulate ion uptake"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "The Casparian strip blocks the apoplastic pathway at the endodermis by sealing the spaces between endodermal cell walls. Minerals and water that have traveled through the apoplast (cell walls and intercellular spaces) in the cortex cannot bypass endodermal cells. They must enter the symplast by crossing the selectively permeable plasma membrane of the endodermal cells, which contains specific ion channels and transporters. This gives the plant control over which minerals enter the xylem and at what concentrations, functioning as a selective filter. Option A is wrong because water can still enter via the symplastic and transmembrane pathways. Option B describes no real function of the Casparian strip. Option D is partially relevant (backflow prevention occurs) but is not the primary function — selective ion regulation is the key role.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -90,12 +90,12 @@
       "type": "MCQ",
       "question": "According to the pressure-flow (Munch) hypothesis of phloem transport, sucrose loading into sieve-tube elements at the source creates a high osmotic pressure that drives bulk flow to sinks. Which of the following would most directly inhibit phloem loading in an apoplastic loader?",
       "options": [
-        "Applying a protonophore (H+ ionophore like CCCP) to the source leaf, which dissipates the proton gradient across the companion cell plasma membrane",
+        "Removing all potassium ions from the soil solution",
         "Increasing the turgor pressure in sink tissues by flooding the roots",
         "Blocking aquaporins in the sieve-tube elements to prevent water entry",
-        "Removing all potassium ions from the soil solution"
+        "Applying a protonophore (H+ ionophore like CCCP) to the source leaf, which dissipates the proton gradient across the companion cell plasma membrane"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": "In apoplastic phloem loading, sucrose is exported from mesophyll cells into the apoplast and then actively loaded into the companion cell-sieve element complex by a sucrose-H+ symporter (SUT1/SUC2). This secondary active transport is driven by the proton motive force generated by H+-ATPases on the companion cell plasma membrane. A protonophore like CCCP would dissipate the H+ gradient, abolishing the driving force for sucrose uptake. Without active loading, sucrose cannot accumulate to high concentrations in the sieve tube, and the osmotic gradient required for pressure flow collapses. Option B would affect sink unloading, not source loading. Option C would reduce water influx but not sucrose loading directly. Option D affects mineral nutrition but K+ is not directly required for sucrose-H+ symport.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -110,12 +110,12 @@
       "type": "MCQ",
       "question": "Nitrogenase, the enzyme complex responsible for biological nitrogen fixation, is irreversibly inactivated by oxygen. How do legume root nodules protect nitrogenase from O2 while still supporting the aerobic respiration needed to supply ATP for nitrogen fixation?",
       "options": [
-        "Leghemoglobin in the nodule cytosol binds O2 with high affinity, buffering free O2 at very low concentrations (~10 nM) while delivering it to bacteroid terminal oxidases for respiration",
         "Nodule cells are entirely anaerobic and generate ATP exclusively through fermentation",
+        "Leghemoglobin in the nodule cytosol binds O2 with high affinity, buffering free O2 at very low concentrations (~10 nM) while delivering it to bacteroid terminal oxidases for respiration",
         "The bacteroids switch to an O2-independent terminal oxidase (nitrate reductase) that uses NO3- as the terminal electron acceptor",
         "A thick suberized cortex completely excludes O2 from the nodule interior, and bacteroids use substrate-level phosphorylation for ATP production"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "Leghemoglobin is a plant-encoded oxygen-binding protein (analogous to animal myoglobin) present at high concentrations (~1 mM) in the cytosol of infected nodule cells. It binds O2 with very high affinity (Kd ~10 nM), maintaining free O2 at approximately 10 nM — low enough to protect nitrogenase from irreversible oxidation. However, bound O2 is continuously delivered to the bacteroid surface, where high-affinity terminal oxidases (cytochrome bd, cytochrome cbb3) accept it for aerobic respiration. This produces the 16 ATP per N2 required by nitrogenase. The nodule cortex also has an oxygen diffusion barrier, but it is leghemoglobin that critically buffers intracellular O2. Option B is wrong because 16 ATP per N2 cannot be generated by fermentation alone. Options C and D describe mechanisms that would not supply sufficient ATP.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -172,10 +172,10 @@
       "options": [
         "Auxin binds to ABP1 in the cytoplasm → activates MAP kinase cascade → phosphorylates expansins → expansins break cellulose microfibrils",
         "Auxin binds to TIR1 (nuclear receptor) → activates gene transcription of proton pump genes → H+-ATPases are synthesized de novo → wall acidification occurs hours later",
-        "Auxin activates plasma membrane H+-ATPases (via phosphorylation of the C-terminal autoinhibitory domain), pumping H+ into the cell wall → lowered apoplastic pH activates expansins → expansins disrupt hydrogen bonds between cellulose and hemicellulose → turgor-driven cell expansion",
-        "Auxin directly acidifies the cell wall by releasing stored H+ from the vacuole through tonoplast channels → low pH dissolves pectin → cell wall disintegrates"
+        "Auxin directly acidifies the cell wall by releasing stored H+ from the vacuole through tonoplast channels → low pH dissolves pectin → cell wall disintegrates",
+        "Auxin activates plasma membrane H+-ATPases (via phosphorylation of the C-terminal autoinhibitory domain), pumping H+ into the cell wall → lowered apoplastic pH activates expansins → expansins disrupt hydrogen bonds between cellulose and hemicellulose → turgor-driven cell expansion"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "The acid growth hypothesis, supported by extensive evidence, proceeds as follows: auxin (IAA) rapidly activates plasma membrane H+-ATPases, in part through SAUR proteins that inhibit PP2C.D phosphatases, keeping the H+-ATPase C-terminal regulatory domain phosphorylated (active). Protons are pumped into the cell wall space, lowering apoplastic pH from ~5.5 to ~4.5. At this acidic pH, expansins (non-enzymatic wall-loosening proteins) become active and disrupt the non-covalent hydrogen bonds between cellulose microfibrils and hemicellulose (xyloglucan) chains. This wall loosening reduces wall pressure (Ψp of wall), allowing turgor-driven water uptake and irreversible cell expansion. Option A incorrectly claims expansins break cellulose (they disrupt H-bonds between polymers, not covalent bonds). Option B conflates the rapid acid growth response (minutes) with slower transcriptional effects. Option D incorrectly describes vacuolar H+ release and wall disintegration.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -191,11 +191,11 @@
       "question": "The phytochrome system allows plants to detect the red:far-red (R:FR) ratio in their light environment. In a forest understory where canopy leaves have filtered out most red light, the R:FR ratio is very low. What is the molecular state of phytochrome under these conditions and what physiological response does it trigger?",
       "options": [
         "Most phytochrome exists as Pfr (the active form), which inhibits stem elongation to keep the plant compact under the canopy",
-        "Most phytochrome exists as Pr (the inactive form) because far-red light converts Pfr back to Pr; low Pfr:Ptotal ratio triggers shade avoidance responses including accelerated stem elongation, reduced branching, and early flowering",
         "Phytochrome is degraded in low-light conditions, and the plant relies exclusively on cryptochrome signaling",
+        "Most phytochrome exists as Pr (the inactive form) because far-red light converts Pfr back to Pr; low Pfr:Ptotal ratio triggers shade avoidance responses including accelerated stem elongation, reduced branching, and early flowering",
         "The R:FR ratio does not affect phytochrome; only absolute light intensity determines the shade avoidance response"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Phytochrome exists in two photointerconvertible forms: Pr (red-absorbing, inactive, λmax = 660 nm) and Pfr (far-red-absorbing, biologically active, λmax = 730 nm). Red light converts Pr to Pfr; far-red light converts Pfr back to Pr. Under a canopy, chlorophyll in overhead leaves absorbs red light but transmits far-red, creating a low R:FR ratio. This shifts the phytochrome equilibrium toward the Pr form, reducing the Pfr/Ptotal ratio. Since Pfr is the form that suppresses shade avoidance, low Pfr levels de-repress shade avoidance syndrome (SAS): increased stem/petiole elongation (via auxin and gibberellin pathways), hyponastic leaf movement, reduced branching, and accelerated flowering. This is mediated primarily by phyB, whose depletion stabilizes PIF (Phytochrome Interacting Factor) transcription factors. Option A reverses the phytochrome response. Options C and D are factually incorrect.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -351,12 +351,12 @@
       "question": "Based on the data, which conclusion about the relationship between transpiration rate and environmental factors is best supported?",
       "dataContext": "A plant physiologist measured transpiration rate in sunflower plants under different environmental conditions. All plants were well-watered, same age, and kept under 1000 μmol photons/m2/s PAR.\n\n| Condition | Temperature (°C) | Relative Humidity (%) | Wind Speed (m/s) | Stomatal Conductance (mmol/m2/s) | Transpiration Rate (mmol H2O/m2/s) |\n|---|---|---|---|---|---|\n| A | 25 | 60 | 0.5 | 320 | 3.2 |\n| B | 25 | 30 | 0.5 | 315 | 5.8 |\n| C | 25 | 60 | 3.0 | 318 | 4.9 |\n| D | 35 | 60 | 0.5 | 310 | 5.1 |\n| E | 35 | 30 | 0.5 | 295 | 8.7 |\n| F | 25 | 90 | 0.5 | 325 | 1.1 |",
       "options": [
-        "Stomatal conductance is the sole determinant of transpiration rate, as conditions with similar conductance show identical transpiration",
         "Reducing humidity from 60% to 30% nearly doubles transpiration (A vs B), increasing wind reduces boundary layer resistance and increases transpiration (A vs C), and higher temperature increases vapor pressure deficit — all while stomatal conductance remains relatively constant, demonstrating that the leaf-to-air vapor pressure difference (VPD) is the primary driver of transpiration rate",
+        "Stomatal conductance is the sole determinant of transpiration rate, as conditions with similar conductance show identical transpiration",
         "Wind speed has a greater effect on transpiration than humidity, as shown by comparing conditions A and C",
         "Temperature has no significant effect on transpiration when humidity is held constant"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The data reveal that stomatal conductance is remarkably similar across all conditions (295-325 mmol/m2/s), yet transpiration rates vary from 1.1 to 8.7 mmol/m2/s. This demonstrates that transpiration is not solely determined by stomatal aperture. Transpiration rate = conductance x VPD (vapor pressure deficit). Comparing A vs B: humidity drops from 60% to 30% while everything else is constant — transpiration nearly doubles (3.2 → 5.8), because lower humidity increases the leaf-to-air water vapor gradient. Comparing A vs C: wind increases from 0.5 to 3.0 m/s — transpiration increases (3.2 → 4.9) because wind reduces the boundary layer (unstirred air layer) around the leaf, decreasing boundary layer resistance. Comparing A vs D: temperature rises from 25°C to 35°C at constant 60% RH — transpiration increases (3.2 → 5.1) because higher temperature increases the saturated vapor pressure inside the leaf more than the ambient vapor pressure, increasing VPD. Condition E (high temp, low humidity) shows the highest rate (8.7). Condition F (90% humidity) shows the lowest (1.1), confirming VPD dominance. Option A is contradicted by the data directly. Option C is wrong — humidity change (A vs B: 2.6 increase) exceeds wind change (A vs C: 1.7 increase). Option D is wrong — compare A vs D.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -415,11 +415,11 @@
       "dataContext": "Researchers investigated phototropism in oat coleoptiles exposed to unilateral blue light. They measured auxin (IAA) concentration and cell elongation on the illuminated (light) and shaded (dark) sides.\n\n| Measurement | Light Side | Dark Side | Intact Control (uniform light) |\n|---|---|---|---|\n| IAA concentration (ng/g FW) | 28 | 57 | 42 |\n| Total IAA in both halves (ng) | 28 + 57 = 85 | — | 42 + 42 = 84 |\n| Cell elongation rate (μm/h) | 15 | 38 | 26 |\n| H+-ATPase activity (relative) | 0.6 | 1.5 | 1.0 |\n| Apoplastic pH | 5.8 | 4.6 | 5.2 |\n\nAdditional experiment: Application of the auxin transport inhibitor NPA (naphthylphthalamic acid) to the coleoptile tip abolished the asymmetric IAA distribution and prevented curvature.",
       "options": [
         "Unilateral light destroys auxin on the illuminated side, reducing total auxin and causing differential growth through auxin deficiency",
-        "Blue light causes lateral redistribution of auxin from the illuminated to the shaded side (via PIN3 relocalization) without destroying auxin (total IAA is conserved: 85 ≈ 84 ng); higher auxin on the shaded side activates H+-ATPases, lowers apoplastic pH, and promotes acid growth-mediated cell elongation, producing curvature toward the light",
         "Light directly inhibits cell elongation on the illuminated side independently of auxin, through flavin-mediated reactive oxygen species production",
+        "Blue light causes lateral redistribution of auxin from the illuminated to the shaded side (via PIN3 relocalization) without destroying auxin (total IAA is conserved: 85 ≈ 84 ng); higher auxin on the shaded side activates H+-ATPases, lowers apoplastic pH, and promotes acid growth-mediated cell elongation, producing curvature toward the light",
         "Auxin concentration is equal on both sides, and differential growth is caused solely by blue light-induced Ca2+ signaling on the illuminated side"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The data strongly support the Cholodny-Went model with modern molecular details: (1) Auxin redistribution, not destruction: Total IAA is conserved (85 ng in phototropically stimulated vs 84 ng in control), proving that light does not photo-oxidize auxin. Instead, IAA is laterally redistributed from the light side (28 ng) to the dark side (57 ng). NPA abolishes this asymmetry, confirming that active polar transport (PIN-mediated) is required. Modern research shows that blue light perceived by phototropin 1 (phot1) causes relocalization of PIN3 in endodermal cells to direct auxin toward the shaded side. (2) Acid growth correlation: The dark side shows higher H+-ATPase activity (1.5 vs 0.6), lower apoplastic pH (4.6 vs 5.8), and greater cell elongation (38 vs 15 μm/h) — exactly as predicted by the acid growth hypothesis. Higher auxin → more H+ pumping → wall acidification → expansin activation → cell elongation. (3) Differential elongation produces curvature: faster-growing dark side causes the coleoptile to bend toward the light. Option A (Blaauw's photodestruction hypothesis) is disproved by the total IAA conservation data. Options C and D are contradicted by the clear auxin asymmetry and its correlation with growth.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -436,11 +436,11 @@
       "dataContext": "Researchers studied flowering in Xanthium (cocklebur), a short-day plant (SDP) with a critical night length of 9.5 hours. They performed grafting experiments between induced (flowering) and non-induced (vegetative) plants.\n\n| Experiment | Donor (Grafted Leaf) | Recipient Plant | Night Length for Recipient | Result |\n|---|---|---|---|---|\n| 1 | Induced Xanthium leaf (16h dark) | Non-induced Xanthium | 8h dark (non-inductive) | Recipient flowered |\n| 2 | Non-induced Xanthium leaf (8h dark) | Non-induced Xanthium | 8h dark | No flowering |\n| 3 | Induced Xanthium leaf (16h dark) | Non-induced Xanthium | 8h dark (with night break) | Recipient flowered |\n| 4 | Induced Xanthium leaf | Non-induced tobacco (LDP) kept in non-inductive SD | — | Tobacco flowered |\n| 5 | Induced Xanthium leaf (16h dark) treated with phloem-girdling (steam) | Non-induced Xanthium | 8h dark | No flowering |\n\nNote: Night break = brief red light pulse during the dark period. LDP = long-day plant.",
       "options": [
         "The induced leaf produces an inhibitor of flowering that is transmitted through the xylem to the recipient",
-        "Flowering is induced by direct light perception at the shoot apical meristem, and grafting merely provides nutritional support",
         "A transmissible florigenic signal (florigen/FT protein) is produced in induced leaves and travels through the phloem to the SAM to induce flowering; this signal is universal across species (can induce both SDP and LDP), and its production depends on the leaf receiving inductive photoperiods — but once produced, it acts independently of the recipient's photoperiod",
+        "Flowering is induced by direct light perception at the shoot apical meristem, and grafting merely provides nutritional support",
         "The grafting results are artifacts of wounding stress, which triggers ethylene production and premature flowering"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "The grafting experiments demonstrate several key properties of florigen (now identified as FT protein): (1) Transmissibility: Experiment 1 shows that an induced leaf can cause flowering in a non-induced recipient, proving a mobile signal exists. (2) Phloem transport: Experiment 5 shows that phloem girdling (steam-killing phloem while xylem remains functional) blocks signal transmission, proving the signal travels through the phloem, not xylem. (3) Universality: Experiment 4 is remarkable — an induced SDP (Xanthium) leaf can cause flowering in an LDP (tobacco) kept in non-inductive conditions. This proves the flowering signal is the same molecule (or functionally equivalent) across species with different photoperiodic requirements. The difference between SDPs and LDPs lies in how they regulate FT production (the photoperiodic sensing mechanism in leaves), not in the nature of FT itself. (4) Experiment 3 confirms that the signal acts at the recipient meristem independently of the recipient's light conditions — even a night break (which would normally inhibit SDP flowering by converting Pfr) doesn't matter if the signal has already been produced in the donor leaf. (5) Experiment 2 is the negative control showing non-induced leaves do not produce the signal. Option A proposes an inhibitor model, contradicted by the cross-species induction. Option B is wrong because the meristem does not need to perceive light directly. Option D is contradicted by the girdling control.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -456,12 +456,12 @@
       "question": "Which experimental approach would most rigorously test whether the observed root growth inhibition is caused specifically by a plant-derived systemic signal rather than direct local effects of the pathogen?",
       "experimentContext": "A researcher discovers that when Arabidopsis leaves are infected with a bacterial pathogen (Pseudomonas syringae), root growth slows by 40% within 24 hours, even though the pathogen is confined to the leaves (confirmed by plating root homogenates — no bacteria detected in roots). The researcher hypothesizes that a systemic defense signal (possibly salicylic acid or jasmonic acid) travels from the infected leaf to the roots and inhibits root growth as part of a growth-defense trade-off. Available tools: (1) SA-deficient mutant (sid2, lacking isochorismate synthase), (2) JA signaling mutant (coi1), (3) split-root systems, (4) petiole girdling, (5) GUS reporter lines for SA-responsive (PR1:GUS) and JA-responsive (VSP2:GUS) promoters, (6) LC-MS for hormone quantification.",
       "options": [
-        "Simply measure SA and JA levels in the roots after leaf infection — if they increase, the hypothesis is proven",
         "Use a multifactorial approach: (i) Gird the petiole of the infected leaf to block phloem transport and test whether root inhibition is abolished; (ii) Infect leaves of sid2 and coi1 mutants to identify whether SA or JA signaling is required; (iii) Apply exogenous SA or JA to roots of uninfected plants to test sufficiency; (iv) Use PR1:GUS and VSP2:GUS reporters to confirm activation of SA/JA signaling in roots after leaf infection; (v) Quantify root SA/JA by LC-MS over a time course",
+        "Simply measure SA and JA levels in the roots after leaf infection — if they increase, the hypothesis is proven",
         "Grow plants in sterile agar and add antibiotics to ensure no bacterial contamination reaches the roots",
         "Compare root growth inhibition in wild-type plants infected with live pathogen versus heat-killed pathogen, as this distinguishes pathogen-derived signals from plant-derived signals"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Option B provides the most rigorous experimental design by testing the hypothesis through multiple complementary approaches addressing both necessity, sufficiency, and mechanism: (i) Petiole girdling tests whether the signal is phloem-mobile — if girdling blocks root inhibition, a phloem-transported signal is required. This is the most direct test for systemic signaling. (ii) Genetic mutants test which pathway is NECESSARY: if sid2 (SA-deficient) shows normal root growth after infection, SA is required for root inhibition. Similarly for coi1 (JA-insensitive). (iii) Exogenous hormone application tests SUFFICIENCY: if applying SA alone to uninfected roots mimics the 40% growth reduction, SA is sufficient. (iv) Reporter genes provide spatial and temporal resolution of where and when defense pathways are activated in roots. (v) LC-MS quantification provides direct biochemical evidence of hormone accumulation in roots. Option A (hormone measurement alone) demonstrates correlation but not causation — hormones might increase without being the causal signal. Option C addresses contamination (already controlled) but doesn't test the signaling hypothesis. Option D is a useful control but doesn't identify the plant signal or its transport mechanism.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -477,12 +477,12 @@
       "question": "What is the most critical control experiment needed to validate that the observed phenotype is due to disruption of polar auxin transport rather than an unintended secondary effect of the manipulation?",
       "experimentContext": "Researchers investigate the role of polar auxin transport in lateral root formation. They treat Arabidopsis seedlings with NPA (naphthylphthalamic acid, a polar auxin transport inhibitor that blocks PIN efflux carriers) and observe that lateral root initiation is almost completely abolished. They also generate transgenic plants overexpressing PIN1 specifically in pericycle cells (the lateral root founder cells) using the GATA23 promoter. They hypothesize that if polar auxin transport is the causal factor, restoring auxin efflux in founder cells should rescue lateral root formation even in the presence of NPA. Available tools: (1) DR5:GFP auxin response reporter, (2) PIN1-GFP translational fusion, (3) IAA quantification by LC-MS, (4) various auxin-related mutants (pin1, pin3, pin7, tir1), (5) exogenous IAA application, (6) iaa28 gain-of-function mutant (constitutive Aux/IAA repressor, blocks auxin signaling).",
       "options": [
-        "Apply exogenous IAA to NPA-treated seedlings — if lateral roots are restored, the NPA effect is solely due to auxin depletion rather than transport disruption",
         "Use the iaa28 gain-of-function mutant to test whether auxin signaling (rather than transport) is required: if lateral root formation is abolished in iaa28, and NPA treatment of iaa28 shows no additional effect, this demonstrates that NPA acts through disrupted auxin signaling rather than having non-specific toxicity; combine with DR5:GFP imaging of NPA-treated roots to confirm whether auxin response maxima at lateral root initiation sites are lost",
+        "Apply exogenous IAA to NPA-treated seedlings — if lateral roots are restored, the NPA effect is solely due to auxin depletion rather than transport disruption",
         "Simply use a higher concentration of NPA to achieve complete inhibition, then conclude that polar auxin transport is essential",
         "Count lateral roots in untreated wild-type plants of different ages as a developmental time course control"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The critical concern is whether NPA's effect on lateral root formation is specifically due to disrupted polar auxin transport or could involve non-specific/off-target effects (NPA can also affect vesicle trafficking). Option B addresses this with a well-designed multi-pronged approach: (1) The iaa28 gain-of-function mutant constitutively represses auxin-responsive gene expression regardless of auxin levels. If iaa28 alone abolishes lateral roots (demonstrating auxin signaling is required), and NPA treatment of iaa28 shows no additional reduction, this epistasis analysis confirms NPA acts through the auxin signaling pathway, not through an independent mechanism. (2) DR5:GFP imaging in NPA-treated roots directly visualizes whether auxin response maxima (which normally mark lateral root founder cells at xylem pole pericycle positions) are disrupted. Loss of these maxima upon NPA treatment provides visual confirmation that auxin transport disruption prevents the local auxin accumulation needed for founder cell specification. Together, these experiments establish that NPA's effect operates through the auxin signaling pathway and correlates with loss of localized auxin responses. Option A is informative but exogenous IAA application floods all tissues non-specifically and doesn't rescue polar transport directionality. Option C merely intensifies the treatment without addressing specificity. Option D is a basic control but doesn't address the mechanism question.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",

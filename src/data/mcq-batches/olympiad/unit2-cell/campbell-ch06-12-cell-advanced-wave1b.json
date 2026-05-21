@@ -10,12 +10,12 @@
       "type": "MCQ",
       "question": "A mutation in the KDEL receptor renders it unable to bind the KDEL retrieval signal. Which of the following is the most direct consequence of this mutation?",
       "options": [
-        "ER-resident chaperones such as BiP/GRP78 will be progressively secreted from the cell via the default secretory pathway",
-        "COPII vesicle budding from ER exit sites will be completely abolished",
         "Lysosomal hydrolases will accumulate in the ER lumen instead of reaching lysosomes",
+        "COPII vesicle budding from ER exit sites will be completely abolished",
+        "ER-resident chaperones such as BiP/GRP78 will be progressively secreted from the cell via the default secretory pathway",
         "The Golgi apparatus will fragment and redistribute into the ER"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "The KDEL retrieval system functions to recapture ER-resident soluble proteins (such as BiP/GRP78, PDI, and calreticulin) that escape to the cis-Golgi via bulk flow in COPII vesicles. The KDEL receptor in the cis-Golgi binds the C-terminal KDEL sequence at the lower pH of the Golgi and packages these proteins into COPI retrograde vesicles for return to the ER. Without a functional KDEL receptor, these ER-resident proteins will continue along the default secretory pathway and be secreted extracellularly. COPII budding (B) is independent of KDEL retrieval. Lysosomal targeting uses mannose-6-phosphate, not KDEL (C). Golgi fragmentation (D) occurs with brefeldin A treatment, not KDEL receptor loss.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -91,11 +91,11 @@
       "question": "Cancer cells frequently exhibit the Warburg effect. Which of the following most accurately describes this metabolic reprogramming and its advantage for tumor growth?",
       "options": [
         "Cancer cells exclusively use oxidative phosphorylation even under hypoxic conditions, generating maximal ATP to fuel rapid division",
-        "Cancer cells upregulate beta-oxidation of fatty acids as their primary energy source, bypassing the need for glucose entirely",
         "Cancer cells preferentially perform aerobic glycolysis, converting glucose to lactate even in the presence of oxygen, which provides biosynthetic intermediates for rapid cell growth despite lower ATP yield per glucose",
+        "Cancer cells upregulate beta-oxidation of fatty acids as their primary energy source, bypassing the need for glucose entirely",
         "Cancer cells switch to glutamine as their sole carbon source, completely abolishing glycolysis and the citric acid cycle"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "The Warburg effect describes the observation that cancer cells preferentially ferment glucose to lactate even when oxygen is abundant (aerobic glycolysis). While this yields only 2 ATP per glucose compared to ~30-32 from complete oxidation, the high glycolytic flux generates abundant biosynthetic precursors: glucose-6-phosphate feeds the pentose phosphate pathway (producing NADPH and ribose-5-phosphate for nucleotide synthesis), 3-phosphoglycerate is diverted to serine biosynthesis, and dihydroxyacetone phosphate provides glycerol for lipid synthesis. The rapid glucose consumption with lactate export also acidifies the tumor microenvironment, which can suppress immune responses and promote invasion. HIF-1-alpha and oncogenes like Myc and Akt drive this metabolic shift by upregulating glucose transporters and glycolytic enzymes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -111,11 +111,11 @@
       "question": "Paul Boyer's binding change mechanism for ATP synthase (F1Fo-ATPase) proposes three catalytic states for the beta subunits. Which sequence correctly describes one complete 120-degree rotation of the gamma subunit?",
       "options": [
         "All three beta subunits simultaneously bind ADP + Pi, synthesize ATP, and release ATP in a synchronized burst",
-        "The gamma subunit acts as a static scaffold while the alpha subunits rotate around it, each sequentially catalyzing ATP synthesis",
+        "The gamma subunit rotation drives sequential conformational changes: one beta subunit transitions from the O (open/empty) state to L (loose, binds ADP+Pi), another from L to T (tight, catalyzes ATP synthesis), and the third from T to O (releases ATP)",
         "Proton flow through Fo directly phosphorylates ADP at the gamma subunit, which then transfers the ATP to beta subunits for release",
-        "The gamma subunit rotation drives sequential conformational changes: one beta subunit transitions from the O (open/empty) state to L (loose, binds ADP+Pi), another from L to T (tight, catalyzes ATP synthesis), and the third from T to O (releases ATP)"
+        "The gamma subunit acts as a static scaffold while the alpha subunits rotate around it, each sequentially catalyzing ATP synthesis"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "B",
       "explanation": "Boyer's binding change mechanism, confirmed by structural studies (Walker) and single-molecule experiments (Yoshida), describes rotary catalysis in F1-ATPase. The three beta subunits exist in three different conformational states at any moment: O (open, empty, low affinity), L (loose, binds ADP + Pi loosely), and T (tight, catalytically active, converts ADP + Pi to ATP). Proton flow through the Fo channel drives rotation of the central gamma subunit stalk. Each 120-degree rotation step causes all three beta subunits to simultaneously shift to the next state in the cycle: O to L, L to T, T to O. Thus, one ATP is synthesized (at T) and one is released (at O) per 120-degree step, and a full 360-degree rotation produces 3 ATP. The key insight is that the energy from the proton gradient drives substrate binding and product release, not the chemistry of phosphorylation itself.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -150,12 +150,12 @@
       "type": "MCQ",
       "question": "In the ubiquitin-proteasome pathway, a polyubiquitin chain linked through lysine-48 (K48) of ubiquitin serves as a degradation signal. Which of the following correctly describes the enzymatic cascade required to attach ubiquitin to a substrate protein?",
       "options": [
-        "E3 directly binds free ubiquitin and attaches it to the substrate without requiring E1 or E2, using GTP as the energy source",
         "E1 (ubiquitin-activating enzyme) activates ubiquitin in an ATP-dependent reaction forming a thioester bond, transfers it to E2 (ubiquitin-conjugating enzyme), and E3 (ubiquitin ligase) then catalyzes transfer of ubiquitin from E2 to a lysine residue on the substrate",
+        "E3 directly binds free ubiquitin and attaches it to the substrate without requiring E1 or E2, using GTP as the energy source",
         "E2 activates ubiquitin by adenylation, E1 transfers it to E3, and E3 attaches it to an N-terminal methionine on the substrate",
         "A single ubiquitin is sufficient for proteasomal recognition; the polyubiquitin chain is assembled on the proteasome itself after substrate binding"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The ubiquitin-proteasome pathway involves a three-enzyme cascade. E1 (ubiquitin-activating enzyme) adenylates the C-terminal glycine of ubiquitin using ATP, then forms a high-energy thioester bond between E1's active-site cysteine and ubiquitin. Ubiquitin is then transferred to the active-site cysteine of E2 (ubiquitin-conjugating enzyme) via a transthiolation reaction. E3 (ubiquitin ligase) provides substrate specificity by binding both the E2~ubiquitin conjugate and the target protein, catalyzing the formation of an isopeptide bond between ubiquitin's C-terminal glycine and a lysine epsilon-amino group on the substrate. Multiple rounds produce a K48-linked polyubiquitin chain (minimum 4 ubiquitins), which is recognized by the 19S regulatory particle of the 26S proteasome. There are only ~2 E1s, ~40 E2s, and >600 E3s in humans, reflecting the specificity residing in E3 ligases.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -171,11 +171,11 @@
       "question": "Ferroptosis is a recently characterized form of regulated cell death. Which of the following best distinguishes ferroptosis from classical apoptosis?",
       "options": [
         "Ferroptosis involves caspase-3/7 activation and DNA fragmentation into nucleosomal ladders, while apoptosis is caspase-independent",
-        "Ferroptosis is driven by iron-dependent lipid peroxidation and failure of GPX4 (glutathione peroxidase 4) to detoxify lipid hydroperoxides, and is morphologically characterized by mitochondrial shrinkage with no chromatin condensation or nuclear fragmentation",
         "Ferroptosis requires MLKL pore formation in the plasma membrane downstream of RIPK3 phosphorylation, similar to necroptosis",
+        "Ferroptosis is driven by iron-dependent lipid peroxidation and failure of GPX4 (glutathione peroxidase 4) to detoxify lipid hydroperoxides, and is morphologically characterized by mitochondrial shrinkage with no chromatin condensation or nuclear fragmentation",
         "Ferroptosis is triggered by gasdermin-D cleavage by inflammatory caspases, leading to pyroptotic pore formation and IL-1-beta release"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Ferroptosis is a distinct form of regulated cell death that depends on iron-catalyzed lipid peroxidation. It occurs when the lipid repair enzyme GPX4 (glutathione peroxidase 4) is inhibited or when cellular glutathione (GSH) is depleted (e.g., by system Xc- cystine/glutamate antiporter inhibition). Without GPX4 activity, polyunsaturated fatty acid (PUFA)-containing phospholipids in membranes undergo iron-dependent Fenton chemistry, generating lethal lipid hydroperoxides. Morphologically, ferroptosis features shrunken mitochondria with increased membrane density and reduced cristae, but importantly lacks the hallmarks of apoptosis (no chromatin condensation, no nuclear fragmentation, no caspase activation) and necroptosis (no MLKL pores). Option C describes necroptosis (RIPK1-RIPK3-MLKL pathway). Option D describes pyroptosis (inflammatory caspase-gasdermin D pathway).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -190,12 +190,12 @@
       "type": "MCQ",
       "question": "During integrative metabolism, skeletal muscle cells performing intense anaerobic exercise export lactate into the blood. Which pathway describes the subsequent metabolic fate of this lactate in the Cori cycle?",
       "options": [
-        "Lactate is transported to the liver, oxidized to pyruvate by lactate dehydrogenase, converted to glucose via gluconeogenesis, and exported back to the blood for muscle uptake",
         "Lactate is directly oxidized to CO2 and H2O in the liver mitochondria via the citric acid cycle without any prior conversion",
+        "Lactate is transported to the liver, oxidized to pyruvate by lactate dehydrogenase, converted to glucose via gluconeogenesis, and exported back to the blood for muscle uptake",
         "Lactate is converted to acetyl-CoA in the liver and used exclusively for fatty acid synthesis, never returning to the muscle",
         "Lactate is excreted by the kidneys without further metabolism because it is a metabolic waste product"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "The Cori cycle is a metabolic cooperation between skeletal muscle and liver. During anaerobic exercise, muscle glycolysis produces pyruvate faster than mitochondrial oxidation can process it. Lactate dehydrogenase reduces pyruvate to lactate, regenerating NAD+ for continued glycolysis. Lactate is exported to the blood and taken up by hepatocytes, where lactate dehydrogenase oxidizes it back to pyruvate (this reaction is reversible and is driven toward pyruvate in the liver by the NAD+/NADH ratio). Pyruvate then enters gluconeogenesis to produce glucose, which is released into the blood and can be taken up by muscle again. The Cori cycle effectively shifts the metabolic burden of gluconeogenesis (which costs 6 ATP equivalents per glucose) from the energy-depleted muscle to the liver, which can use fatty acid oxidation to power gluconeogenesis.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -371,12 +371,12 @@
       "question": "Researchers investigated ATP synthase activity by measuring ATP production rates in isolated mitochondria under different conditions. Examine the data below and determine which conclusion is best supported.",
       "dataContext": "Condition 1 (Control): Intact mitochondria with succinate as substrate — ATP production rate: 180 nmol/min/mg protein. Condition 2: Addition of oligomycin (2 microg/mL) — ATP production rate: 12 nmol/min/mg protein; oxygen consumption decreased by 90%. Condition 3: Addition of oligomycin + FCCP (1 microM uncoupler) — ATP production rate: 5 nmol/min/mg protein; oxygen consumption restored to 95% of control. Condition 4: Addition of DCCD (reacts with Asp-61 in the c-ring of Fo) — ATP production rate: 8 nmol/min/mg protein; oxygen consumption decreased by 88%. Condition 5: Addition of DCCD + FCCP — ATP production rate: 4 nmol/min/mg protein; oxygen consumption restored to 90% of control.",
       "options": [
-        "Oligomycin and DCCD block ATP synthesis by different mechanisms — oligomycin inhibits the F1 catalytic site while DCCD blocks the proton channel",
         "FCCP restores oxygen consumption in the presence of oligomycin or DCCD because uncoupling dissipates the proton gradient, relieving the backpressure on the ETC, but ATP synthesis remains blocked because the synthase is still inhibited",
+        "Oligomycin and DCCD block ATP synthesis by different mechanisms — oligomycin inhibits the F1 catalytic site while DCCD blocks the proton channel",
         "FCCP stimulates ATP synthesis by providing an alternative proton pathway through the F1 subunit",
         "The residual ATP production in conditions 2 and 4 (~5-12 nmol/min/mg) represents ATP generated by oxidative phosphorylation through a secondary proton channel unaffected by either inhibitor"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The data demonstrate the coupling between electron transport and ATP synthesis. In the control (Condition 1), both O2 consumption and ATP production are high. Oligomycin (Condition 2) blocks the Fo proton channel, preventing proton flow through ATP synthase. This inhibits ATP synthesis directly AND causes the proton gradient to build up to a point where it opposes further proton pumping by the ETC, thereby reducing O2 consumption (respiratory control). DCCD (Condition 4) similarly blocks the Fo channel by covalently modifying Asp-61 in the c-ring subunits, producing essentially the same effect. When FCCP (a protonophore uncoupler) is added with either inhibitor (Conditions 3 and 5), it provides an alternative path for protons across the inner membrane, dissipating the gradient. This relieves the backpressure on the ETC, restoring O2 consumption. However, since protons now flow through FCCP instead of through ATP synthase, ATP synthesis remains negligible. Option A is incorrect because both oligomycin and DCCD target the Fo subunit (proton channel), not the F1 catalytic site. The residual ATP (Option D) likely represents substrate-level phosphorylation (from succinyl-CoA synthetase in the citric acid cycle), not a secondary proton channel.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -393,11 +393,11 @@
       "dataContext": "Construct A: Reporter with N-terminal signal peptide + C-terminal KDEL sequence — Location by immunofluorescence: primarily ER (85%), some cis-Golgi (12%), trace secreted (3%). Construct B: Reporter with N-terminal signal peptide only (no KDEL) — Location: primarily extracellular/secreted (78%), Golgi (15%), ER (7%). Construct C: Reporter with N-terminal signal peptide + KKXX cytoplasmic tail motif — Location: primarily ER membrane (82%), Golgi (14%), plasma membrane (4%). Construct D: Reporter with N-terminal signal peptide + mannose-6-phosphate tag added enzymatically — Location: primarily lysosomes (71%), late endosomes (18%), Golgi (8%), secreted (3%). Construct E: Reporter with no signal peptide (cytosolic) + added NLS (nuclear localization signal) — Location: primarily nucleus (89%), cytoplasm (11%).",
       "options": [
         "The data show that all protein sorting in the cell depends exclusively on the N-terminal signal peptide, with no role for additional sorting signals",
-        "The 3% secretion of Construct A suggests that the KDEL retrieval system is imperfect, with a small fraction of ER-resident proteins escaping to the cell surface, while Construct B confirms that proteins without retention signals follow the default secretory pathway",
         "Construct E demonstrates that nuclear import uses the same signal peptide-SRP-ER pathway as secretory proteins before being redirected to the nucleus",
+        "The 3% secretion of Construct A suggests that the KDEL retrieval system is imperfect, with a small fraction of ER-resident proteins escaping to the cell surface, while Construct B confirms that proteins without retention signals follow the default secretory pathway",
         "Construct D's lysosomal targeting proves that the mannose-6-phosphate pathway operates entirely within the ER, without involving the Golgi apparatus"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The data beautifully illustrate the principle that protein sorting depends on specific sorting signals at multiple points along the secretory pathway. Construct A (KDEL-tagged) is retained in the ER because the KDEL receptor in the cis-Golgi captures escaped ER-resident proteins and returns them via COPI retrograde vesicles. The 3% secretion demonstrates that this retrieval system, while efficient, is not perfect — a small fraction of KDEL-bearing proteins escape recapture. Construct B (no retention signal) follows the default secretory pathway and is secreted, confirming that secretion is the default fate for proteins entering the ER. Construct C (KKXX motif) is retained in the ER membrane via COPI-mediated retrograde transport that recognizes the cytoplasmic di-lysine motif. Construct D shows mannose-6-phosphate targeting to lysosomes via clathrin-coated vesicles from the TGN. Construct E shows that NLS-mediated nuclear import is independent of the ER/secretory pathway (no signal peptide means the protein remains cytosolic and is imported through NPCs). Option A is wrong because multiple signals (KDEL, KKXX, M6P, NLS) contribute to sorting. Option C is wrong because Construct E lacks a signal peptide and uses an entirely different pathway. Option D is wrong because M6P tagging occurs in the cis-Golgi (by GlcNAc-phosphotransferase).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -413,12 +413,12 @@
       "question": "Researchers measured metabolic parameters in cancer cells versus normal cells under identical oxygen concentrations (21% O2). Analyze the data to determine which conclusion is best supported.",
       "dataContext": "Normal fibroblasts: Glucose uptake: 5.2 micromol/h/10^6 cells; Lactate production: 1.8 micromol/h/10^6 cells; O2 consumption: 4.1 micromol/h/10^6 cells; ATP production rate: 28.5 micromol/h/10^6 cells. HeLa cancer cells: Glucose uptake: 24.7 micromol/h/10^6 cells; Lactate production: 21.3 micromol/h/10^6 cells; O2 consumption: 3.8 micromol/h/10^6 cells; ATP production rate: 31.2 micromol/h/10^6 cells. HeLa + 2-deoxyglucose (glycolysis inhibitor): Glucose uptake: 2.1 micromol/h/10^6 cells; Lactate production: 0.4 micromol/h/10^6 cells; O2 consumption: 5.9 micromol/h/10^6 cells; ATP production rate: 14.8 micromol/h/10^6 cells. HeLa + oligomycin (ATP synthase inhibitor): Glucose uptake: 38.1 micromol/h/10^6 cells; Lactate production: 35.6 micromol/h/10^6 cells; O2 consumption: 0.3 micromol/h/10^6 cells; ATP production rate: 18.4 micromol/h/10^6 cells.",
       "options": [
-        "Cancer cells have completely non-functional mitochondria, as evidenced by their high lactate production and reliance on glycolysis",
         "HeLa cells exhibit the Warburg effect: despite functional mitochondria (comparable O2 consumption to normal cells), they preferentially convert most glucose to lactate; when glycolysis is inhibited, they compensate by increasing oxidative phosphorylation, and when OXPHOS is blocked, they further upregulate glycolysis, demonstrating metabolic flexibility",
+        "Cancer cells have completely non-functional mitochondria, as evidenced by their high lactate production and reliance on glycolysis",
         "The 2-deoxyglucose data show that cancer cells cannot perform oxidative phosphorylation at all, since ATP production drops dramatically when glycolysis is inhibited",
         "Normal fibroblasts produce less lactate because they lack lactate dehydrogenase and therefore cannot perform any fermentation"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The data comprehensively demonstrate the Warburg effect and metabolic flexibility of cancer cells. Key observations: (1) HeLa cells consume nearly 5x more glucose than normal fibroblasts (24.7 vs 5.2) and convert most of it to lactate (21.3, ~86% of glucose carbon), even though oxygen is abundant — this is aerobic glycolysis (Warburg effect). (2) Their O2 consumption (3.8) is comparable to normal cells (4.1), proving mitochondria are functional. (3) When glycolysis is inhibited by 2-DG, O2 consumption increases to 5.9 (compensatory upregulation of OXPHOS), though total ATP drops because glycolysis contributed significantly. (4) When OXPHOS is blocked by oligomycin, glucose uptake skyrockets to 38.1 and lactate to 35.6 (compensatory glycolysis), while O2 consumption drops to 0.3. Option A is wrong because O2 consumption proves mitochondria are functional. Option C is wrong because 2-DG treatment shows increased O2 consumption (5.9), meaning OXPHOS is upregulated. Option D is wrong because normal cells do produce some lactate (1.8), indicating LDH is present. In normal cells, most pyruvate enters mitochondria (low lactate:glucose ratio), while in cancer cells, most pyruvate is diverted to lactate (high lactate:glucose ratio).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -436,10 +436,10 @@
       "options": [
         "The data show that nuclear import is a passive diffusion process that requires no energy or protein factors",
         "WGA blocks import by degrading the NLS on the cargo protein, not by interacting with the nuclear pore complex",
-        "Nuclear import requires soluble cytoplasmic factors (importins), a Ran-GTP/GDP cycle (GTP hydrolysis for recycling of import factors), energy (ATP for Ran-GDP re-import and RanGEF activity), and intact nuclear pores (blocked by WGA); the weak accumulation with GTPgammaS reflects cargo docking at NPCs without efficient Ran-dependent translocation/recycling",
-        "Importin-alpha is only required for the initial recognition of NLS but plays no role in translocation through the NPC"
+        "Importin-alpha is only required for the initial recognition of NLS but plays no role in translocation through the NPC",
+        "Nuclear import requires soluble cytoplasmic factors (importins), a Ran-GTP/GDP cycle (GTP hydrolysis for recycling of import factors), energy (ATP for Ran-GDP re-import and RanGEF activity), and intact nuclear pores (blocked by WGA); the weak accumulation with GTPgammaS reflects cargo docking at NPCs without efficient Ran-dependent translocation/recycling"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "This classic in vitro nuclear import assay dissects the requirements for active nuclear import. Condition 1 shows that the complete system supports robust import. Condition 2 proves that soluble cytoplasmic factors are essential (importins, Ran, NTF2). Condition 3 specifically identifies importin-alpha as a required factor — it serves as the NLS receptor/adaptor that bridges NLS-bearing cargo to importin-beta, which mediates NPC translocation. Condition 4 (GTPgammaS) is particularly informative: non-hydrolyzable GTP locks Ran in the GTP-bound state. Importin-beta can still dock at the NPC and even partially translocate, but without GTP hydrolysis by Ran, the import complex cannot be efficiently disassembled in the nucleus (Ran-GTP normally binds importin-beta to release cargo), and importin cannot be efficiently recycled. The weak signal reflects initial docking without productive import cycles. Condition 5 shows that ATP is also needed — ATP is required by RanGEF (RCC1) to maintain the Ran-GTP gradient and by NTF2 for Ran-GDP re-import. Condition 6 shows WGA blocks import by binding GlcNAc residues on FG-repeat nucleoporins, physically occluding the NPC central channel.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -455,12 +455,12 @@
       "question": "Researchers measured mitochondrial morphology in wild-type and mutant cells under nutrient-rich and starvation conditions. The data shows percentage of cells with fragmented, tubular, or hyperfused mitochondrial networks. What conclusion is best supported?",
       "dataContext": "Wild-type (nutrient-rich): Fragmented 15%, Tubular 70%, Hyperfused 15%. Wild-type (starvation, 6h): Fragmented 5%, Tubular 25%, Hyperfused 70%. Drp1-knockout (nutrient-rich): Fragmented 2%, Tubular 30%, Hyperfused 68%. Drp1-knockout (starvation): Fragmented 1%, Tubular 15%, Hyperfused 84%. Mfn1/Mfn2 double knockout (nutrient-rich): Fragmented 88%, Tubular 10%, Hyperfused 2%. Mfn1/Mfn2 double knockout (starvation): Fragmented 82%, Tubular 14%, Hyperfused 4%. OPA1-knockout (nutrient-rich): Fragmented 91%, Tubular 7%, Hyperfused 2%. OPA1-knockout (starvation): Fragmented 85%, Tubular 12%, Hyperfused 3%.",
       "options": [
-        "Mitochondrial morphology is entirely genetically determined and cannot be altered by metabolic conditions such as nutrient availability",
         "Starvation promotes mitochondrial hyperfusion in wild-type cells, likely as a protective mechanism against mitophagy; this response requires fusion machinery (Mfn1/2 and OPA1) and is constitutively mimicked by loss of the fission factor Drp1, while loss of fusion factors locks mitochondria in a fragmented state regardless of nutrient status",
+        "Mitochondrial morphology is entirely genetically determined and cannot be altered by metabolic conditions such as nutrient availability",
         "Drp1 knockout causes mitochondrial fragmentation because Drp1 is required for fusion, not fission",
         "OPA1 knockout and Mfn1/Mfn2 double knockout produce identical phenotypes because all three proteins function in the same complex on the outer mitochondrial membrane"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The data reveal important principles of mitochondrial dynamics. Wild-type cells shift from predominantly tubular (70%) to hyperfused (70%) mitochondria upon starvation. This stress-induced mitochondrial hyperfusion (SiMH) is a well-documented protective response: elongated mitochondria are too large to be engulfed by autophagosomes, protecting them from mitophagy during nutrient stress. Additionally, hyperfused mitochondria have greater cristae surface area and maintain more efficient ATP production. Drp1-KO cells are constitutively hyperfused (68%) because fission is abolished while fusion continues unopposed — this mimics the starvation response. They show a slight further increase in hyperfusion during starvation (84%) due to enhanced fusion activity. Mfn1/2-DKO cells are overwhelmingly fragmented (88%) because outer membrane fusion is abolished while Drp1-mediated fission continues; starvation barely changes this because fusion machinery is absent. OPA1-KO shows similar fragmentation (91%) because inner membrane fusion failure also prevents net fusion. Option C is backwards — Drp1 mediates fission, not fusion. Option D is incorrect because Mfn1/2 act on the outer membrane and OPA1 on the inner membrane; they form separate complexes.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -477,11 +477,11 @@
       "experimentContext": "Protein X is a short-lived protein (half-life ~2 hours) that is rapidly degraded under normal growth conditions. Preliminary data show that Protein X levels increase when cells are treated with the general protease inhibitor leupeptin, but the specific degradation pathway is unknown. The protein localizes to both cytoplasm and mitochondrial outer membrane by immunofluorescence.",
       "options": [
         "Treat cells with cycloheximide alone and measure Protein X levels at 0, 1, 2, and 4 hours by Western blot. If levels decrease, the protein is degraded by the proteasome; if levels remain stable, it is degraded by autophagy",
-        "Perform a cycloheximide chase experiment with and without MG132 (proteasome inhibitor) or bafilomycin A1 (lysosomal inhibitor): if MG132 stabilizes Protein X (prevents degradation) while bafilomycin A1 does not, the proteasome pathway is responsible (and vice versa). Confirm by immunoprecipitating Protein X and blotting for ubiquitin (if proteasomal) or by checking co-localization with LC3-positive autophagosomes (if autophagic)",
+        "Knock out all lysosomes using CRISPR by deleting the LAMP1 gene. If Protein X accumulates, it is degraded by lysosomes; if not, it is degraded by the proteasome",
         "Simply overexpress ubiquitin in the cells and check if Protein X levels decrease. If they do, it proves proteasomal degradation; if they do not change, it proves lysosomal degradation",
-        "Knock out all lysosomes using CRISPR by deleting the LAMP1 gene. If Protein X accumulates, it is degraded by lysosomes; if not, it is degraded by the proteasome"
+        "Perform a cycloheximide chase experiment with and without MG132 (proteasome inhibitor) or bafilomycin A1 (lysosomal inhibitor): if MG132 stabilizes Protein X (prevents degradation) while bafilomycin A1 does not, the proteasome pathway is responsible (and vice versa). Confirm by immunoprecipitating Protein X and blotting for ubiquitin (if proteasomal) or by checking co-localization with LC3-positive autophagosomes (if autophagic)"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Option B provides the most rigorous experimental design with proper controls and confirmatory assays. The cycloheximide chase blocks new protein synthesis, allowing measurement of the degradation rate of existing Protein X. Comparing degradation rates in the presence of pathway-specific inhibitors distinguishes the responsible pathway: MG132 specifically inhibits the 26S proteasome, while bafilomycin A1 blocks lysosomal acidification (preventing acid hydrolase activity and autophagic flux). If Protein X accumulates with MG132 but not bafilomycin A1, the proteasome is responsible. Confirmatory experiments (IP + ubiquitin blot for proteasomal substrates; LC3 co-localization for autophagic substrates) provide mechanistic validation. Given that Protein X localizes partly to the mitochondrial outer membrane, it could be a substrate for PINK1/Parkin-mediated mitophagy — the bafilomycin A1 and LC3 experiments would detect this. Option A only measures whether the protein is degraded at all, not which pathway is responsible. Option C is flawed because ubiquitin overexpression does not specifically enhance degradation and ubiquitin also has non-degradative roles (K63-linked chains, monoubiquitination). Option D is technically infeasible — LAMP1 knockout does not eliminate lysosomes, as LAMP1 is not essential for lysosome biogenesis.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -497,12 +497,12 @@
       "question": "You hypothesize that the Warburg effect in cancer cells is driven by HIF-1-alpha stabilization even under normoxic conditions (pseudohypoxia), rather than by mitochondrial defects. Design an experiment to test this hypothesis using a panel of cancer cell lines. Which experimental strategy would most effectively distinguish between HIF-1-alpha-driven metabolic reprogramming and intrinsic mitochondrial dysfunction?",
       "experimentContext": "You have four cancer cell lines (A-D) that all exhibit the Warburg effect (high glycolysis, high lactate production under normoxia). You also have access to: HIF-1-alpha shRNA knockdown constructs, a VHL-overexpression plasmid (VHL targets HIF-1-alpha for proteasomal degradation), the mitochondrial uncoupler FCCP, Seahorse XF analyzer for measuring oxygen consumption rate (OCR) and extracellular acidification rate (ECAR), and transmission electron microscopy (TEM) for mitochondrial ultrastructure.",
       "options": [
-        "Simply measure lactate production in all four lines. If they all produce high lactate, the Warburg effect is confirmed and no further experiments are needed to determine the mechanism",
         "Treat all cell lines with FCCP and measure maximum OCR on the Seahorse analyzer. If OCR increases, mitochondria are functional. Then knock down HIF-1-alpha with shRNA or overexpress VHL in each line and measure ECAR and OCR: if HIF-1-alpha knockdown reduces ECAR (glycolysis) and increases OCR (oxidative phosphorylation), this supports HIF-1-alpha-driven reprogramming. For lines showing no FCCP-responsive OCR increase, examine mitochondrial ultrastructure by TEM to check for structural defects",
+        "Simply measure lactate production in all four lines. If they all produce high lactate, the Warburg effect is confirmed and no further experiments are needed to determine the mechanism",
         "Overexpress HIF-1-alpha in normal fibroblasts. If they become cancerous, HIF-1-alpha causes the Warburg effect in all cancer types",
         "Delete all mitochondrial DNA from the cancer cells using ethidium bromide to create rho-zero cells. If the Warburg effect persists, mitochondria are irrelevant"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Option B is the most comprehensive and well-controlled experimental strategy. It tests the hypothesis in a stepwise manner: (1) FCCP treatment on the Seahorse analyzer measures maximum respiratory capacity (spare respiratory capacity) by dissipating the proton gradient, forcing the ETC to run at maximum rate. If OCR increases substantially with FCCP, mitochondria are structurally and functionally intact, arguing against intrinsic mitochondrial dysfunction as the cause of the Warburg effect. (2) HIF-1-alpha knockdown (or VHL overexpression to promote HIF-1-alpha degradation) directly tests whether HIF-1-alpha drives the glycolytic phenotype. If reducing HIF-1-alpha levels causes a metabolic shift from glycolysis (decreased ECAR) to oxidative phosphorylation (increased OCR), this supports the pseudohypoxia hypothesis. (3) For any cell lines that do NOT show FCCP-responsive OCR increase, TEM examination of mitochondrial cristae structure provides an independent assessment of mitochondrial integrity. This design distinguishes between the two hypotheses for each cell line individually. Option A only confirms the phenotype without addressing the mechanism. Option C is too indirect — HIF-1-alpha overexpression alone does not cause cancer (it may induce metabolic changes but tumorigenesis requires multiple hits). Option D is extreme and eliminates both normal and abnormal mitochondrial function, making it impossible to assess the contribution of mitochondrial dysfunction versus HIF-1-alpha.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",

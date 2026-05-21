@@ -90,12 +90,12 @@
       "type": "MCQ",
       "question": "Rotenone inhibits Complex I of the mitochondrial electron transport chain. If rotenone is added to isolated mitochondria supplied with NADH and succinate as substrates, what would you expect to observe?",
       "options": [
-        "Complete cessation of oxygen consumption and ATP synthesis",
         "Reduced but not eliminated oxygen consumption, with some ATP synthesis from succinate oxidation",
+        "Complete cessation of oxygen consumption and ATP synthesis",
         "Normal oxygen consumption rate because succinate bypasses the block at Complex I",
         "Increased ATP synthesis due to compensatory upregulation of Complex II activity"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Rotenone specifically blocks electron transfer from Complex I to ubiquinone, so electrons from NADH cannot enter the ETC. However, succinate donates electrons to Complex II (succinate dehydrogenase), which transfers them to ubiquinone DOWNSTREAM of the rotenone block. Therefore, electrons from succinate can still flow through Complexes III and IV to reduce oxygen. This means oxygen consumption and ATP synthesis will continue at a reduced rate (only from succinate-derived electrons, pumping protons at Complexes III and IV but not Complex I).",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -110,12 +110,12 @@
       "type": "MCQ",
       "question": "Which of the following correctly describes the P/O ratio and its significance?",
       "options": [
-        "It represents the number of ATP molecules produced per oxygen atom consumed — approximately 2.5 for NADH and 1.5 for FADH2",
-        "It represents the ratio of phosphorylated to oxidized cytochrome c in the ETC",
         "It measures the proton-to-electron ratio at each complex of the ETC",
+        "It represents the ratio of phosphorylated to oxidized cytochrome c in the ETC",
+        "It represents the number of ATP molecules produced per oxygen atom consumed — approximately 2.5 for NADH and 1.5 for FADH2",
         "It indicates the number of protons pumped per molecule of oxygen reduced to water"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "The P/O ratio measures the efficiency of oxidative phosphorylation as ATP produced per oxygen atom consumed. For NADH, which enters at Complex I, approximately 10 protons are pumped per NADH, yielding ~2.5 ATP (with ~4 H+ needed per ATP by ATP synthase). For FADH2, which enters at Complex II, only ~6 protons are pumped, yielding ~1.5 ATP. These are theoretical maximum values; the actual ratio may be slightly lower due to proton leak.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -194,12 +194,12 @@
       "question": "To determine whether a drug inhibits Complex III specifically (rather than other complexes), which combination of substrates and inhibitors would provide the most informative results?",
       "experimentContext": "A pharmaceutical company has developed drug Y that reduces oxygen consumption in isolated mitochondria. They need to identify which ETC complex is targeted. Available reagents: NADH, succinate, TMPD/ascorbate (artificial electron donor to cytochrome c), rotenone (Complex I inhibitor), antimycin A (Complex III inhibitor), and cyanide (Complex IV inhibitor).",
       "options": [
-        "Compare O2 consumption with NADH alone vs NADH + drug Y",
         "Test O2 consumption with succinate + drug Y vs succinate + antimycin A, and verify that TMPD/ascorbate + drug Y still supports O2 consumption",
+        "Compare O2 consumption with NADH alone vs NADH + drug Y",
         "Add drug Y and measure changes in mitochondrial membrane potential",
         "Compare the effects of drug Y in intact cells vs isolated mitochondria"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "To pinpoint Complex III inhibition, you need a strategic approach: (1) Use succinate (enters at Complex II) to bypass Complex I — if drug Y inhibits O2 consumption like antimycin A, the block is at Complex III or IV. (2) Use TMPD/ascorbate to donate electrons directly to cytochrome c, bypassing Complexes I-III — if O2 consumption is RESTORED with drug Y present, the block must be upstream of Complex IV (i.e., at Complex III). This combination uniquely identifies Complex III. Option A cannot distinguish between Complex I and III. Options C and D provide indirect evidence.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -215,11 +215,11 @@
       "question": "During fermentation, the primary purpose of converting pyruvate to ethanol or lactate is to:",
       "options": [
         "Generate additional ATP beyond what glycolysis produces",
-        "Regenerate NAD+ so that glycolysis can continue in the absence of oxygen",
         "Produce metabolic intermediates for biosynthetic pathways",
+        "Regenerate NAD+ so that glycolysis can continue in the absence of oxygen",
         "Remove toxic pyruvate from the cytoplasm"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Fermentation does NOT produce additional ATP. Its sole purpose is to regenerate NAD+ from NADH so that glycolysis can continue when the ETC is not available (anaerobic conditions). Without NAD+ regeneration, the glyceraldehyde-3-phosphate dehydrogenase step of glycolysis would halt, stopping all ATP production from glucose. The 2 ATP from glycolysis via substrate-level phosphorylation is critical for cell survival under anaerobic conditions.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -235,11 +235,11 @@
       "question": "Brown adipose tissue generates heat through non-shivering thermogenesis. Which mechanism best explains how UCP1 (thermogenin) produces heat?",
       "options": [
         "UCP1 directly converts ATP to heat by hydrolyzing the high-energy phosphate bond",
-        "UCP1 allows protons to flow back into the matrix without passing through ATP synthase, dissipating the gradient energy as heat",
         "UCP1 increases the activity of all ETC complexes, generating excess heat from electron transfer",
+        "UCP1 allows protons to flow back into the matrix without passing through ATP synthase, dissipating the gradient energy as heat",
         "UCP1 blocks Complex V (ATP synthase), forcing the ETC to dissipate energy as heat through proton leak at each complex"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "UCP1 (thermogenin) is a proton channel in the inner mitochondrial membrane of brown adipocytes. It provides an alternative pathway for protons to return to the matrix, bypassing ATP synthase. The energy stored in the proton gradient is released as heat instead of being used for ATP synthesis. This is the mechanism of non-shivering thermogenesis, important for maintaining body temperature in neonates and hibernating mammals.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -276,10 +276,10 @@
       "options": [
         "It occurs only during glycolysis and produces a total of 4 ATP per glucose",
         "It requires a proton gradient across a membrane to drive ATP synthesis",
-        "It involves the direct transfer of a phosphate group from a substrate to ADP, occurring in both glycolysis and the citric acid cycle",
-        "It accounts for the majority of ATP production during aerobic respiration"
+        "It accounts for the majority of ATP production during aerobic respiration",
+        "It involves the direct transfer of a phosphate group from a substrate to ADP, occurring in both glycolysis and the citric acid cycle"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Substrate-level phosphorylation involves the direct enzymatic transfer of a phosphate group from a phosphorylated substrate to ADP, forming ATP. It occurs in glycolysis (at phosphoglycerate kinase and pyruvate kinase steps) and in the citric acid cycle (at succinyl-CoA synthetase, producing GTP). Unlike oxidative phosphorylation, it does not require a membrane or proton gradient. It produces only about 4 ATP per glucose (2 from glycolysis net + 2 from CAC), compared to ~30-32 from oxidative phosphorylation.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -294,12 +294,12 @@
       "type": "MCQ",
       "question": "Cyanide and carbon monoxide both inhibit the same mitochondrial complex. Which complex is the target, and what is the mechanism?",
       "options": [
-        "Complex I — both bind to the FMN prosthetic group, blocking NADH oxidation",
-        "Complex III — both bind to the Qi site, blocking electron transfer through the Q cycle",
         "Complex IV (cytochrome c oxidase) — both bind to the iron and copper centers, preventing oxygen reduction",
+        "Complex III — both bind to the Qi site, blocking electron transfer through the Q cycle",
+        "Complex I — both bind to the FMN prosthetic group, blocking NADH oxidation",
         "ATP synthase — both block the proton channel, preventing coupled ATP synthesis"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "explanation": "Both cyanide (CN-) and carbon monoxide (CO) are potent inhibitors of Complex IV (cytochrome c oxidase). Cyanide binds to the Fe3+ in the heme a3-CuB binuclear center, while CO binds to the Fe2+ form. Both prevent the final transfer of electrons to molecular oxygen, which is the terminal electron acceptor. This completely stops the ETC and is the basis for the lethal toxicity of both agents. Without electron flow, no proton gradient can be maintained, and oxidative phosphorylation ceases entirely.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -356,11 +356,11 @@
       "dataContext": "Isolated mitochondria oxygen consumption measured under different conditions:\n\nState 1 (mitochondria only): 8 nmol O2/min/mg\nState 2 (+ substrate, no ADP): 12 nmol O2/min/mg\nState 3 (+ substrate + ADP): 175 nmol O2/min/mg\nState 4 (ADP depleted, substrate present): 22 nmol O2/min/mg\nState 5 (anoxia): 0 nmol O2/min/mg\n\nADP:O ratio measured in State 3 = 2.4 for NADH-linked substrates",
       "options": [
         "State 1 — basal rate represents maximum coupling efficiency",
-        "State 3 — maximal ADP-stimulated respiration with active ATP synthesis",
         "State 4 — low respiration rate means all available energy is stored as ATP",
+        "State 3 — maximal ADP-stimulated respiration with active ATP synthesis",
         "State 2 — substrate availability without ADP demand represents optimal efficiency"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "State 3 represents maximal coupled respiration where ADP availability drives rapid electron transport and ATP synthesis. This state shows the highest rate of ATP production with oxygen consumption tightly coupled to phosphorylation (ADP:O ratio of 2.4, close to the theoretical 2.5 for NADH substrates). State 4 represents controlled respiration limited by ADP availability — while coupling is maintained, no net ATP is being produced. State 1 and 2 have low rates because essential components are missing. The transition from State 4 to State 3 upon ADP addition demonstrates respiratory control.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -375,12 +375,12 @@
       "type": "MCQ",
       "question": "The Q cycle at Complex III is important because it:",
       "options": [
-        "Directly reduces molecular oxygen, serving as a secondary terminal oxidase",
         "Enables the net transfer of 4 protons per pair of electrons from ubiquinol to cytochrome c",
+        "Directly reduces molecular oxygen, serving as a secondary terminal oxidase",
         "Generates superoxide radicals as a signaling molecule under normal conditions",
         "Bypasses the need for cytochrome c in the electron transport chain"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The Q cycle is the mechanism by which Complex III (cytochrome bc1 complex) oxidizes ubiquinol (QH2) and reduces cytochrome c while maximizing proton translocation. In each full Q cycle, two QH2 molecules are oxidized: one electron from each goes to cytochrome c (reducing it), and one electron is recycled to reduce ubiquinone (Q) back to QH2 at the Qi site. The net result is: 1 QH2 oxidized, 2 electrons passed to 2 cytochrome c molecules, and 4 H+ released to the intermembrane space. This doubles the proton-pumping efficiency compared to simple one-electron transfer.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -395,12 +395,12 @@
       "type": "MCQ",
       "question": "Beta-oxidation of a 16-carbon saturated fatty acid (palmitate) yields how many acetyl-CoA, NADH, and FADH2 molecules?",
       "options": [
-        "8 acetyl-CoA, 7 NADH, 7 FADH2",
+        "16 acetyl-CoA, 7 NADH, 7 FADH2",
         "7 acetyl-CoA, 8 NADH, 8 FADH2",
         "8 acetyl-CoA, 8 NADH, 8 FADH2",
-        "16 acetyl-CoA, 7 NADH, 7 FADH2"
+        "8 acetyl-CoA, 7 NADH, 7 FADH2"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": "Palmitate (C16) undergoes 7 rounds of beta-oxidation (n/2 - 1 = 16/2 - 1 = 7 rounds). Each round cleaves a 2-carbon acetyl-CoA unit and produces 1 NADH + 1 FADH2. After 7 rounds, you get 8 acetyl-CoA molecules, 7 NADH, and 7 FADH2. Total ATP yield from complete oxidation of palmitate: (8 x 10 from CAC) + (7 x 2.5 from NADH) + (7 x 1.5 from FADH2) - 2 ATP (activation) = 80 + 17.5 + 10.5 - 2 = 106 ATP.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -435,12 +435,12 @@
       "type": "MCQ",
       "question": "Metformin, a common diabetes drug, mildly inhibits Complex I of the mitochondrial ETC. How does this relate to its blood glucose-lowering effect?",
       "options": [
-        "Complex I inhibition reduces ATP production, activating AMPK which enhances glucose uptake and inhibits gluconeogenesis",
+        "Complex I inhibition increases fatty acid oxidation, which consumes blood glucose as a co-substrate",
         "Complex I inhibition generates more ROS, which directly degrades blood glucose",
         "Metformin blocks NADH production in hepatocytes, reducing the substrate for gluconeogenesis",
-        "Complex I inhibition increases fatty acid oxidation, which consumes blood glucose as a co-substrate"
+        "Complex I inhibition reduces ATP production, activating AMPK which enhances glucose uptake and inhibits gluconeogenesis"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": "Metformin's mild inhibition of Complex I reduces the ATP/AMP ratio in hepatocytes. The resulting increase in AMP activates AMP-activated protein kinase (AMPK), a master metabolic regulator. AMPK activation leads to: (1) increased glucose uptake via GLUT4 translocation in muscle, (2) inhibition of gluconeogenesis in the liver (by phosphorylating and inhibiting transcription factors like CRTC2 that drive gluconeogenic gene expression), and (3) enhanced fatty acid oxidation. This multi-pronged effect lowers blood glucose levels.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -456,11 +456,11 @@
       "question": "Which of the following most accurately describes the chemiosmotic hypothesis proposed by Peter Mitchell?",
       "options": [
         "Electron transport generates heat that directly drives a conformational change in ATP synthase",
-        "Electron transport creates a transmembrane electrochemical proton gradient whose potential energy drives ATP synthesis by ATP synthase",
+        "Protons are consumed by the ETC to reduce oxygen, and the resulting water drives ATP synthase rotation",
         "The ETC generates high-energy phosphorylated intermediates that directly transfer phosphate to ADP",
-        "Protons are consumed by the ETC to reduce oxygen, and the resulting water drives ATP synthase rotation"
+        "Electron transport creates a transmembrane electrochemical proton gradient whose potential energy drives ATP synthesis by ATP synthase"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Mitchell's chemiosmotic hypothesis, which won the 1978 Nobel Prize, proposed that the energy from electron transport is used to pump protons across a membrane, creating an electrochemical gradient (proton-motive force, PMF). This PMF has two components: a chemical gradient (delta pH) and an electrical gradient (membrane potential, delta psi). The PMF drives protons back through ATP synthase (a molecular turbine), causing conformational changes that catalyze ATP synthesis from ADP + Pi. This was revolutionary because it showed that ATP synthesis does not require high-energy chemical intermediates but instead uses the energy stored in a transmembrane gradient.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -477,11 +477,11 @@
       "experimentContext": "In 1966, Andre Jagendorf performed a landmark experiment using isolated spinach chloroplast thylakoids to test the chemiosmotic hypothesis. He needed to show that a pH gradient, independent of electron transport, could drive ATP synthesis.",
       "options": [
         "Thylakoids were illuminated to generate a proton gradient, then ADP + Pi were added in the dark",
-        "Thylakoids were equilibrated at pH 4 in the dark, then rapidly transferred to pH 8 buffer containing ADP + Pi",
         "Thylakoids were treated with an ionophore to equilibrate pH, then electron transport was activated",
+        "Thylakoids were equilibrated at pH 4 in the dark, then rapidly transferred to pH 8 buffer containing ADP + Pi",
         "Thylakoids were incubated with exogenous NADPH and ADP, with and without light"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Jagendorf equilibrated thylakoids at pH 4 in the dark (no electron transport), allowing protons to accumulate inside the thylakoid lumen to reach pH 4. He then rapidly transferred them to pH 8 buffer containing ADP + Pi. This created an artificial proton gradient (delta pH of 4 units) across the thylakoid membrane WITHOUT any electron transport. ATP was synthesized, providing direct evidence that a proton gradient alone is sufficient to drive ATP synthesis — a key prediction of Mitchell's chemiosmotic hypothesis. This experiment elegantly separated the proton gradient from electron transport.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -496,12 +496,12 @@
       "type": "MCQ",
       "question": "During intense exercise, skeletal muscle switches from aerobic to anaerobic metabolism. Which metabolic shift occurs FIRST as oxygen supply becomes limiting?",
       "options": [
-        "Decreased citric acid cycle activity due to NADH accumulation",
         "Activation of lactate dehydrogenase to regenerate NAD+ for glycolysis",
+        "Decreased citric acid cycle activity due to NADH accumulation",
         "Increased fatty acid oxidation to compensate for reduced glucose oxidation",
         "Shutdown of the electron transport chain due to oxygen depletion"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "As oxygen becomes limiting, the ETC slows down because oxygen is the terminal electron acceptor. This causes NADH to accumulate (cannot be oxidized). The most immediate metabolic response is activation of lactate dehydrogenase (LDH), which converts pyruvate to lactate while oxidizing NADH to NAD+. This regeneration of NAD+ is essential because it allows glycolysis to continue producing 2 ATP per glucose — the only ATP source under fully anaerobic conditions. The CAC slowdown (option A) is a consequence, not the first response. Fatty acid oxidation (option C) actually requires more oxygen per ATP than glucose oxidation.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
