@@ -20,6 +20,7 @@ interface ChapterPageProps {
 }
 
 export const dynamicParams = false
+export const revalidate = 86400
 
 export async function generateStaticParams() {
   return allChapters.map((chapter) => ({

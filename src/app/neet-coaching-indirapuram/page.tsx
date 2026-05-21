@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   },
 }
 
+export const revalidate = 86400
+
 export default function NEETCoachingIndirapiramPage() {
   return <CityHubPage data={cityData} />
 }

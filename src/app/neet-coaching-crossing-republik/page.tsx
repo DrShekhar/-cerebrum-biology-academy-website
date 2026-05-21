@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   },
 }
 
+export const revalidate = 86400
+
 export default function NEETCoachingCrossingRepublikPage() {
   return <CityHubPage data={cityData} />
 }

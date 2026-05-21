@@ -13,6 +13,7 @@ interface PageProps {
 }
 
 export const dynamicParams = false
+export const revalidate = 86400
 
 // Generate static params for all published topics (for ISR)
 export async function generateStaticParams() {

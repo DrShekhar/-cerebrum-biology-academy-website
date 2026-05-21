@@ -15,6 +15,8 @@ import { getChaptersByUnitId } from '@/data/campbell-biology'
 import { CampbellWhatsAppCTA } from '@/components/campbell/CampbellWhatsAppCTA'
 import { CampbellFloatingWhatsApp } from '@/components/campbell/CampbellFloatingWhatsApp'
 
+export const revalidate = 86400
+
 export default function CampbellBiologyHubPage() {
   return (
     <main className="min-h-screen">
