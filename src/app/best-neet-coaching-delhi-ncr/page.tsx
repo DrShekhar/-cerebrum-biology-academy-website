@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { BestNEETCoachingDelhiNCRClient } from './BestNEETCoachingDelhiNCRClient'
-import { BreadcrumbSchema } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 

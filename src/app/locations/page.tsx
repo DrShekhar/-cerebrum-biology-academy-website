@@ -21,7 +21,7 @@ import { centerSpecificFAQs } from '@/data/faqs/center-specific-faqs'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { LocationsPageWebPageSchema } from '@/components/seo'
+import { LocationsPageWebPageSchema } from '@/components/seo/StructuredData'
 
 export default function LocationsPage() {
   const tier1Cities = getLocationsByTier('tier1')

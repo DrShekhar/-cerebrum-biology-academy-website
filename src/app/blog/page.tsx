@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import { getAllPosts, getAllCategories } from '@/lib/blog/mdx'
-import { BreadcrumbSchema, BlogPageWebPageSchema } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { BlogPageWebPageSchema } from '@/components/seo/StructuredData'
 import { BlogListingPage } from '@/components/blog/BlogListingPage'
 
 // Revalidate every hour — page is statically generated and cached at CDN edge

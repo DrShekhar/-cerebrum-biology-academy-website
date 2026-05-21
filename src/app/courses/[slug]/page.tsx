@@ -4,7 +4,7 @@ import { coursePrograms } from '@/data/courseSystemData'
 import { detailedCourses } from '@/data/detailedCourses'
 import { CourseDetailPage } from '@/components/courses/CourseDetailPage'
 import { EnhancedCourseDetailPage } from '@/components/courses/EnhancedCourseDetailPage'
-import { BreadcrumbSchema, COMMON_BREADCRUMBS } from '@/components/seo'
+import { BreadcrumbSchema, COMMON_BREADCRUMBS } from '@/components/seo/BreadcrumbSchema'
 import { LearningResourceSchema } from '@/components/seo/ContentFreshness'
 import { CourseDetailSchema } from '@/components/seo/CourseDetailSchema'
 
