@@ -211,10 +211,12 @@ export function VideoTestimonialsSection(_props: { city?: string; country?: stri
                   </p>
                   <p className="text-sm text-gray-600">Improvement</p>
                 </div>
-                <div className="bg-purple-50 rounded-xl p-4 text-center">
-                  <p className="text-2xl font-bold text-purple-600">AIR {activeTestimonial.rank}</p>
-                  <p className="text-sm text-gray-600">All India Rank</p>
-                </div>
+                {activeTestimonial.rank !== undefined && (
+                  <div className="bg-purple-50 rounded-xl p-4 text-center">
+                    <p className="text-2xl font-bold text-purple-600">AIR {activeTestimonial.rank}</p>
+                    <p className="text-sm text-gray-600">All India Rank</p>
+                  </div>
+                )}
               </div>
 
               {/* Navigation */}
@@ -222,27 +224,32 @@ export function VideoTestimonialsSection(_props: { city?: string; country?: stri
                 <div className="flex gap-2">
                   <button
                     onClick={handlePrev}
-                    className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                    aria-label="Previous testimonial"
+                    className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   >
                     <ChevronLeft className="w-6 h-6 text-gray-700" />
                   </button>
                   <button
                     onClick={handleNext}
-                    className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+                    aria-label="Next testimonial"
+                    className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   >
                     <ChevronRight className="w-6 h-6 text-gray-700" />
                   </button>
                 </div>
 
                 {/* Dots */}
-                <div className="flex gap-2">
+                <div className="flex gap-2" role="tablist" aria-label="Testimonial selector">
                   {VIDEO_TESTIMONIALS.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => {
                         setActiveIndex(index)
                       }}
-                      className={`w-3 h-3 rounded-full transition-colors ${
+                      aria-label={`Show testimonial ${index + 1}`}
+                      aria-selected={index === activeIndex}
+                      role="tab"
+                      className={`w-3 h-3 rounded-full transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ${
                         index === activeIndex ? 'bg-blue-600' : 'bg-gray-300'
                       }`}
                     />

@@ -19,19 +19,20 @@ import {
   Quote,
 } from 'lucide-react'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const revalidate = 86400
 
 export const metadata: Metadata = {
-  title: 'NEET Results 2024-25 | 98% Success Rate | 67 AIIMS Selections | Cerebrum Biology Academy',
+  title: 'NEET Results 2024 | 98% Success Rate | Cerebrum Biology Academy',
   description:
-    'Cerebrum Biology Academy NEET results: 98% success rate, 67 AIIMS selections, AIR 127 best rank. Watch video testimonials. Board exam avg 92/100. 2,500+ students. See proof.',
+    'NEET 2024 results: 98% qualification rate, 67+ AIIMS selections, AIR 127 best rank, 450+ qualifiers. Watch video testimonials. Board avg 92/100.',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/results',
   },
   openGraph: {
     title: 'NEET Results | 98% Success Rate | Cerebrum Biology Academy',
-    description: '98% success rate, 67 AIIMS selections, 2,500+ students. Watch video testimonials from our toppers.',
+    description: '98% success rate, 67+ AIIMS selections, 2,500+ students coached. Video testimonials from our toppers.',
     url: 'https://cerebrumbiologyacademy.com/results',
   },
 }
@@ -114,11 +115,66 @@ const testimonials = [
   },
 ]
 
+// Review schemas — wrap text testimonials so LLMs + Google can ingest as
+// structured reviews with author + rating + date.
+const reviewSchemas = testimonials.map((t) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  itemReviewed: {
+    '@type': 'EducationalOrganization',
+    name: 'Cerebrum Biology Academy',
+    '@id': 'https://cerebrumbiologyacademy.com/#organization',
+  },
+  reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
+  author: { '@type': 'Person', name: t.name },
+  reviewBody: t.quote,
+  datePublished: '2024-08-01',
+}))
+
+// ItemList schema — exposes the topper transformations to Google as an
+// indexable ranked list for "NEET topper" / "score improvement" queries.
+const topperListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'NEET 2024 Top Score Improvements — Cerebrum Biology Academy',
+  itemListOrder: 'https://schema.org/ItemListOrderDescending',
+  numberOfItems: scoreTransformations.length,
+  itemListElement: scoreTransformations.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Person',
+      name: s.name,
+      affiliation: { '@type': 'EducationalOrganization', name: s.school },
+      alumniOf: { '@type': 'CollegeOrUniversity', name: s.college },
+      description: `Improved from NEET ${s.before} to ${s.after} (+${s.improvement} marks), secured ${s.rank} at ${s.college}.`,
+    },
+  })),
+}
+
 export default function ResultsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(topperListSchema) }} />
+      {reviewSchemas.map((schema, i) => (
+        <script
+          key={`review-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      {/* Canonical site-wide Person @id — same component used by 97 city hubs */}
+      <CerebrumPersonSchema
+        knowsAbout={[
+          'NEET-UG Results 2024',
+          'AIIMS Selection Coaching',
+          '680+ Medical College Selections',
+          '98% NEET Qualification Rate',
+          'NEET Biology Coaching Outcomes',
+        ]}
+      />
 
       <div className="min-h-screen bg-white">
 
@@ -449,6 +505,41 @@ export default function ResultsPage() {
                     Explore <ChevronRight className="w-4 h-4 ml-1" />
                   </span>
                 </div>
+              </Link>
+            </div>
+
+            {/* Conversion-funnel cross-links — surfaces the canonical
+                service hub, faculty entity, and course page so prospects
+                can move from "wow, results are real" → "see Dr. Shekhar /
+                book a course" without bouncing to navigation. */}
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+              <Link
+                href="/faculty"
+                className="flex items-center gap-3 bg-gray-50 hover:bg-blue-50 rounded-lg px-4 py-3 text-sm font-medium text-gray-800 hover:text-blue-700 transition-colors group"
+              >
+                <Users className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
+                Meet Dr. Shekhar &amp; faculty
+              </Link>
+              <Link
+                href="/best-neet-biology-tutor"
+                className="flex items-center gap-3 bg-gray-50 hover:bg-blue-50 rounded-lg px-4 py-3 text-sm font-medium text-gray-800 hover:text-blue-700 transition-colors group"
+              >
+                <Trophy className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
+                Best NEET Biology tutor
+              </Link>
+              <Link
+                href="/neet"
+                className="flex items-center gap-3 bg-gray-50 hover:bg-blue-50 rounded-lg px-4 py-3 text-sm font-medium text-gray-800 hover:text-blue-700 transition-colors group"
+              >
+                <Target className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
+                NEET coaching hub
+              </Link>
+              <Link
+                href="/courses/neet-complete"
+                className="flex items-center gap-3 bg-gray-50 hover:bg-blue-50 rounded-lg px-4 py-3 text-sm font-medium text-gray-800 hover:text-blue-700 transition-colors group"
+              >
+                <GraduationCap className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
+                Full course curriculum
               </Link>
             </div>
           </div>
