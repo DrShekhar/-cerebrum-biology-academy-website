@@ -1,13 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
+import { emailService } from '@/lib/email/emailService'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
+// Accept any string with at least 10 digits after stripping non-digits.
+// Examples that now pass: 8826444334, +91 88264 44334, 91-8826444334,
+// (+91) 88264-44334. Server normalises to last-10-digits in cleanPhone.
+const phoneSchema = z.string().refine(
+  (val) => val.replace(/\D/g, '').length >= 10 && val.replace(/\D/g, '').length <= 15,
+  { message: 'Please enter a valid phone number (10–15 digits, with or without country code)' }
+)
 
 const enquirySchema = z.object({
   name: z
     .string()
     .min(2, 'Name must be at least 2 characters')
     .max(100, 'Name must be less than 100 characters'),
-  phone: z.string().regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number'),
+  phone: phoneSchema,
   email: z.string().email('Invalid email address').optional().or(z.literal('')),
   area: z.string().optional(),
   message: z.string().max(1000, 'Message must be less than 1000 characters').optional(),
@@ -83,14 +93,39 @@ export async function POST(request: NextRequest) {
     })
 
 
-    // Send WhatsApp notification to admin
-    await notifyAdmin(data, cleanPhone)
+    // Build the pre-filled WhatsApp message addressed to admin.
+    // After the client redirects to this URL, the lead's own WhatsApp opens
+    // with this text composed for them — they tap Send, message lands on
+    // the admin number. Zero dependency on Interakt or any third-party API.
+    const whatsappUrl = buildAdminWhatsAppUrl({
+      name: data.name,
+      phone: cleanPhone,
+      email: data.email,
+      area: data.area,
+      message: data.message,
+      source: data.source,
+      pageUrl: data.pageUrl,
+    })
+
+    // Backup notification — email the admin so leads land in two places.
+    // Fire-and-forget (don't block the user response if email is slow/fails).
+    void sendAdminEmail({
+      name: data.name,
+      phone: cleanPhone,
+      email: data.email,
+      area: data.area,
+      message: data.message,
+      source: data.source,
+      pageUrl: data.pageUrl,
+      enquiryId: enquiry.id,
+    })
 
     return NextResponse.json(
       {
         success: true,
         enquiryId: enquiry.id,
-        message: 'Thank you! We will contact you shortly.',
+        whatsappUrl,
+        message: 'Thank you! Opening WhatsApp to confirm — please tap Send.',
       },
       { status: 201 }
     )
@@ -104,42 +139,91 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Notify admin via WhatsApp
-async function notifyAdmin(data: z.infer<typeof enquirySchema>, phone: string) {
-  if (!process.env.INTERAKT_API_KEY) {
-    return
-  }
+// Build a wa.me URL pre-filled with lead details so the prospect's tap
+// of "Send" delivers the message directly to the admin's WhatsApp.
+function buildAdminWhatsAppUrl(lead: {
+  name: string
+  phone: string
+  email?: string | null
+  area?: string | null
+  message?: string | null
+  source: string
+  pageUrl?: string | null
+}): string {
+  const adminNumber = CONTACT_INFO.whatsapp.number // 918826444334
+  const text =
+    `🆕 NEW LEAD from cerebrumbiologyacademy.com\n\n` +
+    `👤 Name: ${lead.name}\n` +
+    `📞 Phone: ${lead.phone}\n` +
+    `📧 Email: ${lead.email || '—'}\n` +
+    `📍 Area: ${lead.area || '—'}\n` +
+    `💬 Interest: ${lead.message || '—'}\n` +
+    `🌐 Source: ${lead.source}\n` +
+    `📄 Page: ${lead.pageUrl || '—'}\n\n` +
+    `(Sent from the enquiry form — please call me back.)`
+  return `https://wa.me/${adminNumber}?text=${encodeURIComponent(text)}`
+}
 
-  const adminMessage = `🆕 NEW ENQUIRY
-
-👤 Name: ${data.name}
-📞 Phone: ${phone}
-📧 Email: ${data.email || 'Not provided'}
-📍 Area: ${data.area || 'Not specified'}
-💬 Message: ${data.message || 'No message'}
-🌐 Source: ${data.source}
-📄 Page: ${data.pageUrl || 'Unknown'}
-
-💡 Follow up ASAP!`
+// Email backup to admin. Uses the existing emailService (Resend / SendGrid)
+// already wired up in src/lib/email/emailService. Best-effort; logged.
+async function sendAdminEmail(lead: {
+  name: string
+  phone: string
+  email?: string | null
+  area?: string | null
+  message?: string | null
+  source: string
+  pageUrl?: string | null
+  enquiryId: string
+}): Promise<void> {
+  const adminEmail = process.env.ADMIN_LEAD_EMAIL || 'support@cerebrumbiologyacademy.com'
+  const html = `
+    <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px; margin: 0 auto;">
+      <h2 style="color: #15803d; margin: 0 0 16px;">🆕 New Lead — Cerebrum Biology Academy</h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+        <tr><td style="padding: 8px 0; color: #475569; width: 120px;">Name</td><td style="padding: 8px 0; font-weight: 600;">${escapeHtml(lead.name)}</td></tr>
+        <tr><td style="padding: 8px 0; color: #475569;">Phone</td><td style="padding: 8px 0; font-weight: 600;">${escapeHtml(lead.phone)}</td></tr>
+        <tr><td style="padding: 8px 0; color: #475569;">Email</td><td style="padding: 8px 0;">${escapeHtml(lead.email || '—')}</td></tr>
+        <tr><td style="padding: 8px 0; color: #475569;">Area</td><td style="padding: 8px 0;">${escapeHtml(lead.area || '—')}</td></tr>
+        <tr><td style="padding: 8px 0; color: #475569; vertical-align: top;">Message</td><td style="padding: 8px 0;">${escapeHtml(lead.message || '—')}</td></tr>
+        <tr><td style="padding: 8px 0; color: #475569;">Source</td><td style="padding: 8px 0;">${escapeHtml(lead.source)}</td></tr>
+        <tr><td style="padding: 8px 0; color: #475569;">Page</td><td style="padding: 8px 0;"><a href="${escapeHtml(lead.pageUrl || '#')}" style="color: #2563eb;">${escapeHtml(lead.pageUrl || '—')}</a></td></tr>
+        <tr><td style="padding: 8px 0; color: #475569;">Lead ID</td><td style="padding: 8px 0; font-family: monospace; font-size: 12px;">${escapeHtml(lead.enquiryId)}</td></tr>
+      </table>
+      <div style="margin-top: 24px; padding: 16px; background: #f1f5f9; border-radius: 8px;">
+        <a href="tel:+91${escapeHtml(lead.phone)}" style="display: inline-block; padding: 10px 16px; background: #15803d; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600;">📞 Call Now</a>
+        <a href="https://wa.me/91${escapeHtml(lead.phone)}" style="display: inline-block; padding: 10px 16px; background: #25d366; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600; margin-left: 8px;">💬 WhatsApp</a>
+      </div>
+    </div>
+  `
+  const text =
+    `NEW LEAD — Cerebrum Biology Academy\n\n` +
+    `Name: ${lead.name}\nPhone: ${lead.phone}\nEmail: ${lead.email || '—'}\n` +
+    `Area: ${lead.area || '—'}\nMessage: ${lead.message || '—'}\nSource: ${lead.source}\n` +
+    `Page: ${lead.pageUrl || '—'}\nLead ID: ${lead.enquiryId}\n\n` +
+    `Call: +91${lead.phone}\nWhatsApp: https://wa.me/91${lead.phone}\n`
 
   try {
-    await fetch('https://api.interakt.ai/v1/public/message/', {
-      method: 'POST',
-      headers: {
-        Authorization: `Basic ${Buffer.from(process.env.INTERAKT_API_KEY + ':').toString('base64')}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        countryCode: '+91',
-        phoneNumber: process.env.ADMIN_PHONE_NUMBER || '8826444334',
-        type: 'Text',
-        data: {
-          message: adminMessage,
-        },
-      }),
+    await emailService.send({
+      to: adminEmail,
+      from: 'leads@cerebrumbiologyacademy.com',
+      subject: `🆕 New lead: ${lead.name} (${lead.phone}) — ${lead.source}`,
+      html,
+      text,
     })
-
   } catch (error) {
-    console.error('❌ Admin notification failed:', error)
+    // Don't surface email failures to the user — the wa.me redirect is the
+    // primary channel and the DB record always exists. Just log.
+    console.error('❌ Admin lead email failed (lead still saved to DB):', error)
   }
+}
+
+function escapeHtml(value: string | null | undefined): string {
+  if (!value) return ''
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
 }

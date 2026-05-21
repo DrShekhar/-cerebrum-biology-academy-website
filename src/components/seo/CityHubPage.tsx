@@ -27,6 +27,7 @@ import {
 import type { CityHubData } from '@/data/city-seo/cities'
 import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { CityInlineEnquiryForm } from '@/components/seo/CityInlineEnquiryForm'
 import { CredibilityBar } from '@/components/seo/EEATSignals'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { WhatsAppCTAButton } from '@/components/seo/WhatsAppCTAButton'
@@ -322,6 +323,14 @@ export function CityHubPage({ data }: CityHubPageProps) {
                   Call: {getDisplayPhone()}
                 </a>
               </div>
+            </div>
+
+            {/* Inline lead-capture form — non-WhatsApp conversion path.
+                On success the API returns a wa.me URL pre-filled with the
+                lead's details and we redirect there, so the lead lands
+                both in the DB and directly on the admin's WhatsApp. */}
+            <div className="mx-auto mt-12 max-w-xl">
+              <CityInlineEnquiryForm cityName={data.cityName} slug={data.slug} />
             </div>
 
             {/* Stats */}
