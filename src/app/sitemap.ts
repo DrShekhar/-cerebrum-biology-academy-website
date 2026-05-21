@@ -9311,6 +9311,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }))
 
+  // Parent-guide pages — high-intent decision-stage content. Aimed at the
+  // searcher who is actively comparing institutes for their child. Shipped
+  // as NCR cluster (Gurugram + Delhi + Noida + Faridabad).
+  const parentsGuidePages = [
+    'parents-guide-neet-coaching-gurugram',
+    'parents-guide-neet-coaching-delhi',
+    'parents-guide-neet-coaching-noida',
+    'parents-guide-neet-coaching-faridabad',
+  ]
+  const parentsGuideRoutes: MetadataRoute.Sitemap = parentsGuidePages.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: lastUpdated,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }))
+
   // === Dynamic Route Generation ===
 
   // Campbell Biology chapters (56 chapters)
@@ -9557,6 +9573,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogRoutes,
     ...seoLandingRoutes,
     ...missingPageRoutes,
+    ...parentsGuideRoutes,
   ]
 
   // Deduplicate: later entries (hardcoded routes) take priority over dynamic ones

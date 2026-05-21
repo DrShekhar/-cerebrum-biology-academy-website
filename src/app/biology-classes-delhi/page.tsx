@@ -221,7 +221,7 @@ export default function BiologyClassesDelhiPage() {
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/og/biology-classes-delhi.jpg`,
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     address: [
       {
         '@type': 'PostalAddress',

@@ -178,7 +178,7 @@ export function LocalBusinessSpeakable({
     description: description,
     url: url,
     telephone: CONTACT_INFO.phone.primary,
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'D 35, South Extension Part 2',

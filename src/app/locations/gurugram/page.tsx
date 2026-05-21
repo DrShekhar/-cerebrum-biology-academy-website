@@ -99,7 +99,7 @@ export default function GurugramLocationPage() {
     email: CONTACT_INFO.email.info,
     image: 'https://cerebrumbiologyacademy.com/images/gurugram-center.jpg',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     address: {
       '@type': 'PostalAddress',
       streetAddress: gurugramLocation.streetAddress,

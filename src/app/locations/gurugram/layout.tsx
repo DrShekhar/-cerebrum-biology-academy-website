@@ -26,7 +26,7 @@ function GurugramLocalBusinessSchema() {
       longitude: 77.0426,
     },
     url: 'https://cerebrumbiologyacademy.com/locations/gurugram',
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

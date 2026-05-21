@@ -163,7 +163,7 @@ export default async function NorthDelhiAreaPage({ params }: PageProps) {
     url: `https://cerebrumbiologyacademy.com/neet-coaching-north-delhi/${areaSlug}`,
     telephone: CEREBRUM_METRICS.phone,
     email: CEREBRUM_METRICS.email,
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     image: 'https://cerebrumbiologyacademy.com/logo.png',
     parentOrganization: { '@id': organizationId },
     address: {

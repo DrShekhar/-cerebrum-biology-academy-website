@@ -24,7 +24,7 @@ function RohiniServiceSchema() {
       longitude: 77.1025,
     },
     url: 'https://cerebrumbiologyacademy.com/locations/rohini',
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

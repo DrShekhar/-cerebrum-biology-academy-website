@@ -894,6 +894,20 @@ export function calculateSavings(lumpSum: number, installments: number): number 
   return installments - lumpSum
 }
 
+//=============================================================================
+// CANONICAL PRICE-RANGE STRINGS (single source of truth for schema markup)
+//=============================================================================
+// These are the display ranges emitted to schema.org `priceRange` and any
+// "fees from ₹X" copy. Derived from allClassPricing above — change them only
+// when the underlying tiers change.
+//
+// Lower bound: ₹40,000 = Pursuit Class 11/12 NEET (cheapest annual program).
+// Upper bound: ₹1,80,000 = 2-yr Pinnacle (most premium full programme).
+
+export const CEREBRUM_PRICE_RANGE = '₹40,000 - ₹1,80,000'
+export const CEREBRUM_PRICE_RANGE_ANNUAL = '₹40,000 - ₹1,56,000' // per-year max
+export const CEREBRUM_FEE_RANGE_TEXT = '₹40,000 - ₹1,80,000/year'
+
 // Helper function to get tier details
 export function getTierDetails(tier: TierLevel) {
   return {

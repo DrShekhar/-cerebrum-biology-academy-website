@@ -69,7 +69,7 @@ export default function LajpatNagarLayout({ children }: { children: React.ReactN
               'Bhogal',
             ],
             serviceType: 'NEET Biology Coaching',
-            priceRange: '₹45,000 - ₹1,80,000',
+            priceRange: '₹40,000 - ₹1,80,000',
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '5.0',
@@ -111,7 +111,7 @@ export default function LajpatNagarLayout({ children }: { children: React.ReactN
                 'closes': '23:59',
               },
             ],
-            'priceRange': '₹45,000 - ₹1,80,000',
+            'priceRange': '₹40,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
               'ratingValue': '5.0',

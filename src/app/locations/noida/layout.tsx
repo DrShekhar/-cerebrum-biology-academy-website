@@ -97,7 +97,7 @@ function NoidaServiceSchema() {
       bestRating: '5',
       worstRating: '1',
     },
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

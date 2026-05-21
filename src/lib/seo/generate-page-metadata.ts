@@ -188,7 +188,7 @@ export function generateLocalBusinessSchema(params: {
       worstRating: '1',
     },
     areaServed: [params.locality, 'South Delhi', 'Delhi NCR'],
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',

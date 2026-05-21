@@ -65,7 +65,7 @@ export function generateLocalBusinessSchema(keyword: string, centers: NearMeCent
     geo: getCoordinates(center.locationId),
     openingHours: ['Mo-Sa 09:00-20:00', 'Su 10:00-18:00'],
     image: 'https://cerebrumbiologyacademy.com/images/centers/center-exterior.jpg',
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',

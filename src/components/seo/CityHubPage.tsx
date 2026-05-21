@@ -143,7 +143,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
     telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     address: data.hasOfflineCenter
       ? {
           '@type': 'PostalAddress',

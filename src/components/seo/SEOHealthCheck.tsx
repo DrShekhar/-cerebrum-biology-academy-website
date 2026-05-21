@@ -131,7 +131,7 @@ function LocalBusinessSchema() {
     description: 'Leading NEET coaching and biology tuition center',
     telephone: '+91-88264-44334',
     email: 'info@cerebrumbiologyacademy.com',
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'D 35, South Extension Part 2',

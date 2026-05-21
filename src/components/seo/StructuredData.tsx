@@ -530,7 +530,7 @@ export function LocalBusinessSchema() {
       'https://cerebrumbiologyacademy.com/images/faculty.jpg',
     ],
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
-    priceRange: '₹45,000 - ₹1,80,000',
+    priceRange: '₹40,000 - ₹1,80,000',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, Credit Card, Debit Card, UPI, Bank Transfer',
     address: {

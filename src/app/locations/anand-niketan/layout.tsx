@@ -92,7 +92,7 @@ export default function AnandNiketanLayout({ children }: { children: React.React
                 'closes': '23:59',
               },
             ],
-            'priceRange': '₹45,000 - ₹1,80,000',
+            'priceRange': '₹40,000 - ₹1,80,000',
             'aggregateRating': {
               '@type': 'AggregateRating',
               'ratingValue': '5.0',
