@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="cellcomp-title cellcomp-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="cellcomp-title">Animal cell vs plant cell — side-by-side comparison</title>
+  <desc id="cellcomp-desc">Comparative diagram showing structures unique to and shared between animal and plant cells. Animal cell features include centrioles and lysosomes. Plant cell features include cell wall, large central vacuole, chloroplasts, and plasmodesmata.</desc>
+
+  <rect width="800" height="560" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#0f172a" font-size="20" font-weight="700">Animal Cell vs Plant Cell</text>
+  <text x="400" y="54" text-anchor="middle" fill="#475569" font-size="13">Both are eukaryotic — same core organelles plus a few unique structures</text>
+
+  <!-- ====================== ANIMAL CELL (left) ====================== -->
+  <g transform="translate(40, 90)">
+    <text x="170" y="0" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="700">Animal Cell</text>
+
+    <!-- Outer cell shape (irregular blob, no wall) -->
+    <path d="M 20 40 Q 60 20 110 25 Q 180 15 240 30 Q 310 25 320 80 Q 330 140 320 200 Q 325 260 280 290 Q 220 320 150 305 Q 80 315 30 280 Q 10 240 15 180 Q 5 110 20 40 Z"
+          fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+
+    <!-- Nucleus -->
+    <circle cx="180" cy="155" r="48" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+    <circle cx="180" cy="155" r="14" fill="#a16207" opacity="0.6"/>
+    <text x="180" y="160" text-anchor="middle" fill="#451a03" font-size="9" font-weight="700">nucleolus</text>
+    <text x="180" y="220" text-anchor="middle" fill="#7c2d12" font-size="11" font-weight="600">Nucleus</text>
+
+    <!-- Mitochondria (2 of them, oval) -->
+    <ellipse cx="70" cy="110" rx="22" ry="11" fill="#fbbf24" stroke="#7c2d12" stroke-width="1.5"/>
+    <line x1="55" y1="105" x2="85" y2="105" stroke="#7c2d12" stroke-width="1"/>
+    <line x1="55" y1="113" x2="85" y2="113" stroke="#7c2d12" stroke-width="1"/>
+    <text x="70" y="135" text-anchor="middle" fill="#7c2d12" font-size="9" font-weight="600">mitochondrion</text>
+
+    <ellipse cx="260" cy="240" rx="22" ry="11" fill="#fbbf24" stroke="#7c2d12" stroke-width="1.5"/>
+    <line x1="245" y1="235" x2="275" y2="235" stroke="#7c2d12" stroke-width="1"/>
+    <line x1="245" y1="245" x2="275" y2="245" stroke="#7c2d12" stroke-width="1"/>
+
+    <!-- Rough ER (lines next to nucleus) -->
+    <path d="M 110 110 Q 100 130 105 160 Q 95 180 110 200" stroke="#7c3aed" stroke-width="2" fill="none"/>
+    <circle cx="103" cy="120" r="2" fill="#5b21b6"/>
+    <circle cx="98" cy="140" r="2" fill="#5b21b6"/>
+    <circle cx="105" cy="170" r="2" fill="#5b21b6"/>
+    <text x="75" y="215" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="600">rough ER</text>
+
+    <!-- Golgi apparatus (stacked discs) -->
+    <g transform="translate(245, 90)">
+      <ellipse cx="0" cy="0" rx="22" ry="5" fill="#f472b6" stroke="#9f1239" stroke-width="1.5"/>
+      <ellipse cx="0" cy="8" rx="22" ry="5" fill="#f472b6" stroke="#9f1239" stroke-width="1.5"/>
+      <ellipse cx="0" cy="16" rx="22" ry="5" fill="#f472b6" stroke="#9f1239" stroke-width="1.5"/>
+      <text x="0" y="38" text-anchor="middle" fill="#831843" font-size="9" font-weight="600">Golgi</text>
+    </g>
+
+    <!-- Centrioles (UNIQUE to animal) — bottom-right of cell, away from ER -->
+    <g transform="translate(215, 265)">
+      <rect x="-12" y="-6" width="12" height="12" fill="#0f172a"/>
+      <rect x="2" y="-6" width="12" height="12" fill="#0f172a"/>
+      <text x="0" y="22" text-anchor="middle" fill="#dc2626" font-size="9" font-weight="700">centrioles</text>
+      <text x="0" y="34" text-anchor="middle" fill="#dc2626" font-size="8" font-style="italic">(animal only)</text>
+    </g>
+
+    <!-- Lysosome (UNIQUE-ish — animal feature) -->
+    <circle cx="240" cy="180" r="11" fill="#86efac" stroke="#15803d" stroke-width="1.5"/>
+    <text x="240" y="184" text-anchor="middle" fill="#14532d" font-size="9" font-weight="700">L</text>
+    <text x="265" y="183" fill="#dc2626" font-size="9" font-weight="700">lysosome</text>
+
+    <!-- Cell membrane label -->
+    <text x="170" y="345" text-anchor="middle" fill="#7f1d1d" font-size="10" font-style="italic">plasma membrane (no cell wall)</text>
+  </g>
+
+  <!-- ====================== PLANT CELL (right) ====================== -->
+  <g transform="translate(420, 90)">
+    <text x="170" y="0" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="700">Plant Cell</text>
+
+    <!-- Cell wall (outer rigid rectangle) -->
+    <rect x="20" y="25" width="300" height="280" rx="14" fill="#dcfce7" stroke="#14532d" stroke-width="4"/>
+    <text x="170" y="20" text-anchor="middle" fill="#14532d" font-size="9" font-weight="700">CELL WALL (cellulose, rigid)</text>
+
+    <!-- Plasma membrane (just inside) -->
+    <rect x="28" y="33" width="284" height="264" rx="10" fill="#bbf7d0" stroke="#15803d" stroke-width="1.5" stroke-dasharray="2 3"/>
+
+    <!-- Large central vacuole -->
+    <rect x="60" y="60" width="220" height="160" rx="20" fill="#bae6fd" stroke="#0369a1" stroke-width="2"/>
+    <text x="170" y="135" text-anchor="middle" fill="#0c4a6e" font-size="14" font-weight="700">Large Central</text>
+    <text x="170" y="155" text-anchor="middle" fill="#0c4a6e" font-size="14" font-weight="700">Vacuole</text>
+    <text x="170" y="178" text-anchor="middle" fill="#075985" font-size="10">(stores water + solutes)</text>
+    <text x="170" y="195" text-anchor="middle" fill="#075985" font-size="9" font-style="italic">often 50–90% of cell volume</text>
+
+    <!-- Nucleus (pushed to side by vacuole) -->
+    <circle cx="290" cy="250" r="26" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+    <circle cx="290" cy="250" r="8" fill="#a16207" opacity="0.6"/>
+    <text x="290" y="290" text-anchor="middle" fill="#7c2d12" font-size="10" font-weight="600">nucleus</text>
+
+    <!-- Chloroplasts (UNIQUE to plant) -->
+    <ellipse cx="50" cy="245" rx="20" ry="11" fill="#22c55e" stroke="#14532d" stroke-width="1.5"/>
+    <circle cx="42" cy="244" r="3" fill="#14532d" opacity="0.7"/>
+    <circle cx="52" cy="246" r="3" fill="#14532d" opacity="0.7"/>
+    <circle cx="62" cy="244" r="3" fill="#14532d" opacity="0.7"/>
+    <text x="50" y="272" text-anchor="middle" fill="#15803d" font-size="9" font-weight="700">chloroplast</text>
+    <text x="50" y="284" text-anchor="middle" fill="#15803d" font-size="8" font-style="italic">(plant only)</text>
+
+    <ellipse cx="120" cy="270" rx="20" ry="11" fill="#22c55e" stroke="#14532d" stroke-width="1.5"/>
+    <circle cx="112" cy="269" r="3" fill="#14532d" opacity="0.7"/>
+    <circle cx="122" cy="271" r="3" fill="#14532d" opacity="0.7"/>
+    <circle cx="132" cy="269" r="3" fill="#14532d" opacity="0.7"/>
+
+    <!-- Mitochondrion -->
+    <ellipse cx="200" cy="265" rx="18" ry="9" fill="#fbbf24" stroke="#7c2d12" stroke-width="1.5"/>
+    <line x1="187" y1="261" x2="213" y2="261" stroke="#7c2d12" stroke-width="1"/>
+    <line x1="187" y1="269" x2="213" y2="269" stroke="#7c2d12" stroke-width="1"/>
+    <text x="200" y="290" text-anchor="middle" fill="#7c2d12" font-size="9" font-weight="600">mitochondrion</text>
+
+    <!-- Plasmodesma (channel through wall) -->
+    <line x1="20" y1="120" x2="0" y2="120" stroke="#14532d" stroke-width="2"/>
+    <line x1="20" y1="125" x2="0" y2="125" stroke="#14532d" stroke-width="2"/>
+    <text x="-30" y="125" text-anchor="middle" fill="#14532d" font-size="9" font-weight="700">plasmodesma</text>
+    <text x="-30" y="138" text-anchor="middle" fill="#14532d" font-size="8" font-style="italic">(plant only)</text>
+
+    <!-- Cell membrane label -->
+    <text x="170" y="345" text-anchor="middle" fill="#14532d" font-size="10" font-style="italic">rigid wall outside membrane</text>
+  </g>
+
+  <!-- ====================== Differences table ====================== -->
+  <g transform="translate(40, 450)">
+    <rect x="0" y="0" width="720" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="20" y="22" fill="#0f172a" font-size="14" font-weight="700">Key Differences</text>
+
+    <!-- Animal column -->
+    <text x="40" y="48" fill="#dc2626" font-size="12" font-weight="700">Animal only</text>
+    <text x="40" y="65" fill="#475569" font-size="11">• Centrioles (for mitotic spindle)</text>
+    <text x="40" y="80" fill="#475569" font-size="11">• Lysosomes (digestive enzymes)</text>
+
+    <!-- Plant column -->
+    <text x="320" y="48" fill="#15803d" font-size="12" font-weight="700">Plant only</text>
+    <text x="320" y="65" fill="#475569" font-size="11">• Cell wall (cellulose) + plasmodesmata</text>
+    <text x="320" y="80" fill="#475569" font-size="11">• Chloroplasts + large central vacuole</text>
+
+    <!-- Shared column -->
+    <text x="555" y="48" fill="#0f172a" font-size="12" font-weight="700">Shared</text>
+    <text x="555" y="65" fill="#475569" font-size="11">Nucleus, mitochondria,</text>
+    <text x="555" y="80" fill="#475569" font-size="11">ER, Golgi, ribosomes</text>
+  </g>
+</svg>

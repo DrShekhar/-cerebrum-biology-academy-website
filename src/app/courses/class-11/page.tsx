@@ -476,10 +476,10 @@ export default function Class11BiologyPage() {
 
             {/* Course Highlights Card */}
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-6 flex items-center">
+              <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <Sparkles className="w-6 h-6 mr-2 text-yellow-400" />
                 Why Start in Class 11?
-              </h3>
+              </h2>
 
               <div className="space-y-4">
                 <div className="flex items-start">

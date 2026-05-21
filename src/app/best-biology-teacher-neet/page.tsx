@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { SEOLandingPage } from '@/components/seo-landing'
 import { universalSEOPages } from '@/data/seo-landing'
-import { BreadcrumbSchema } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 const content = universalSEOPages.bestBiologyTeacherNeet

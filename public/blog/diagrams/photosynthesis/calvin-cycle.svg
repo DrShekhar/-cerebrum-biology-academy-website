@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" role="img" aria-labelledby="calvin-title calvin-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="calvin-title">Calvin cycle — light-independent reactions (C3 pathway)</title>
+  <desc id="calvin-desc">Three-phase Calvin cycle: carbon fixation (CO2 + RuBP via Rubisco → 2 × 3-PGA), reduction (3-PGA → G3P using ATP and NADPH), and regeneration (G3P → RuBP using ATP). Net product is glucose; one full turn fixes 1 CO2, three turns produce one G3P that exits the cycle.</desc>
+
+  <rect width="800" height="560" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#0f172a" font-size="20" font-weight="700">Calvin Cycle — Carbon Fixation (Stroma)</text>
+  <text x="400" y="54" text-anchor="middle" fill="#475569" font-size="13">3 phases × 3 turns fix 3 CO₂ → 1 G3P (precursor of glucose)</text>
+
+  <!-- Central circular cycle -->
+  <g transform="translate(400, 300)">
+    <!-- Outer cycle ring -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 6"/>
+
+    <!-- Phase 1: Carbon Fixation (top-left arc) -->
+    <g transform="rotate(-30)">
+      <path d="M 0 -160 A 160 160 0 0 1 138.6 -80" stroke="#a16207" stroke-width="6" fill="none"/>
+    </g>
+    <!-- Phase 2: Reduction (bottom-right arc) -->
+    <g transform="rotate(90)">
+      <path d="M 0 -160 A 160 160 0 0 1 138.6 -80" stroke="#15803d" stroke-width="6" fill="none"/>
+    </g>
+    <!-- Phase 3: Regeneration (bottom-left arc) -->
+    <g transform="rotate(210)">
+      <path d="M 0 -160 A 160 160 0 0 1 138.6 -80" stroke="#1d4ed8" stroke-width="6" fill="none"/>
+    </g>
+
+    <!-- Direction-of-cycle arrows -->
+    <g fill="#475569">
+      <path d="M 152 -50 L 165 -55 L 158 -42 Z"/>
+      <path d="M 50 152 L 55 165 L 42 158 Z"/>
+      <path d="M -152 50 L -165 55 L -158 42 Z"/>
+    </g>
+
+    <!-- ===== Key molecules ===== -->
+    <!-- RuBP at top -->
+    <g transform="translate(0, -170)">
+      <rect x="-50" y="-22" width="100" height="44" rx="8" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" fill="#7c2d12" font-size="13" font-weight="700">RuBP</text>
+      <text x="0" y="14" text-anchor="middle" fill="#854d0e" font-size="10">5-C • starting molecule</text>
+    </g>
+
+    <!-- 3-PGA at right -->
+    <g transform="translate(170, 0)">
+      <rect x="-50" y="-22" width="100" height="44" rx="8" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" fill="#7c2d12" font-size="13" font-weight="700">2 × 3-PGA</text>
+      <text x="0" y="14" text-anchor="middle" fill="#854d0e" font-size="10">3-C • first stable product</text>
+    </g>
+
+    <!-- G3P at bottom -->
+    <g transform="translate(0, 170)">
+      <rect x="-50" y="-22" width="100" height="44" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" fill="#14532d" font-size="13" font-weight="700">2 × G3P</text>
+      <text x="0" y="14" text-anchor="middle" fill="#14532d" font-size="10">3-C • can exit → glucose</text>
+    </g>
+
+    <!-- 1,3-BPG (between 3-PGA and G3P) - shown small -->
+    <g transform="translate(120, 120)">
+      <rect x="-38" y="-15" width="76" height="30" rx="6" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+      <text x="0" y="5" text-anchor="middle" fill="#334155" font-size="10" font-weight="600">1,3-BPG</text>
+    </g>
+  </g>
+
+  <!-- ===== Phase labels around the cycle ===== -->
+  <!-- Phase 1 label (top-right) -->
+  <g transform="translate(560, 175)">
+    <rect x="0" y="0" width="200" height="80" rx="10" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+    <text x="100" y="22" text-anchor="middle" fill="#7c2d12" font-size="13" font-weight="700">Phase 1: Carbon Fixation</text>
+    <text x="100" y="42" text-anchor="middle" fill="#854d0e" font-size="11">CO₂ + RuBP → 2 × 3-PGA</text>
+    <text x="100" y="58" text-anchor="middle" fill="#854d0e" font-size="11">Enzyme: <tspan font-style="italic" font-weight="700">Rubisco</tspan></text>
+    <text x="100" y="72" text-anchor="middle" fill="#a16207" font-size="10">(most abundant enzyme on Earth)</text>
+  </g>
+  <line x1="555" y1="215" x2="500" y2="220" stroke="#a16207" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Phase 2 label (bottom-right) -->
+  <g transform="translate(560, 380)">
+    <rect x="0" y="0" width="200" height="80" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <text x="100" y="22" text-anchor="middle" fill="#14532d" font-size="13" font-weight="700">Phase 2: Reduction</text>
+    <text x="100" y="42" text-anchor="middle" fill="#15803d" font-size="11">3-PGA → G3P</text>
+    <text x="100" y="58" text-anchor="middle" fill="#15803d" font-size="11">Uses 6 ATP + 6 NADPH</text>
+    <text x="100" y="72" text-anchor="middle" fill="#15803d" font-size="10">(per 3 CO₂ fixed)</text>
+  </g>
+  <line x1="555" y1="420" x2="500" y2="400" stroke="#15803d" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Phase 3 label (left) -->
+  <g transform="translate(40, 280)">
+    <rect x="0" y="0" width="200" height="80" rx="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="100" y="22" text-anchor="middle" fill="#1e3a8a" font-size="13" font-weight="700">Phase 3: Regeneration</text>
+    <text x="100" y="42" text-anchor="middle" fill="#1d4ed8" font-size="11">5 G3P → 3 RuBP</text>
+    <text x="100" y="58" text-anchor="middle" fill="#1d4ed8" font-size="11">Uses 3 ATP</text>
+    <text x="100" y="72" text-anchor="middle" fill="#1d4ed8" font-size="10">to restart the cycle</text>
+  </g>
+  <line x1="240" y1="320" x2="290" y2="320" stroke="#1d4ed8" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- ===== Inputs/Outputs flags ===== -->
+  <!-- CO2 in (positioned above RuBP, with leader arrow into it) -->
+  <g transform="translate(400, 75)">
+    <rect x="-32" y="-15" width="64" height="30" rx="14" fill="#0f172a"/>
+    <text x="0" y="5" text-anchor="middle" fill="#facc15" font-size="13" font-weight="700">CO₂</text>
+    <path d="M 0 18 L 0 50" stroke="#0f172a" stroke-width="2"/>
+    <path d="M 0 50 L -5 42 L 5 42 Z" fill="#0f172a"/>
+  </g>
+
+  <!-- ATP + NADPH in (from light reactions) -->
+  <g transform="translate(700, 305)">
+    <rect x="-50" y="-22" width="100" height="44" rx="8" fill="#facc15" stroke="#a16207" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" fill="#7c2d12" font-size="11" font-weight="700">ATP + NADPH</text>
+    <text x="0" y="14" text-anchor="middle" fill="#7c2d12" font-size="10">(from light reactions)</text>
+    <path d="M -50 0 L -85 0" stroke="#a16207" stroke-width="2"/>
+    <path d="M -85 0 L -78 -5 L -78 5 Z" fill="#a16207"/>
+  </g>
+
+  <!-- G3P out → glucose -->
+  <g transform="translate(400, 510)">
+    <rect x="-90" y="-18" width="180" height="36" rx="8" fill="#86efac" stroke="#15803d" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" fill="#14532d" font-size="13" font-weight="700">1 G3P exits → Glucose (C₆H₁₂O₆)</text>
+    <path d="M 0 -20 L 0 -38" stroke="#15803d" stroke-width="2"/>
+    <path d="M 0 -38 L -5 -32 L 5 -32 Z" fill="#15803d"/>
+  </g>
+
+  <!-- ===== Net equation strip (full width below G3P) ===== -->
+  <g transform="translate(40, 560)">
+    <rect x="0" y="0" width="720" height="40" rx="8" fill="#0f172a"/>
+    <text x="20" y="25" fill="#facc15" font-size="13" font-weight="700">Net per glucose:</text>
+    <text x="155" y="25" fill="#e2e8f0" font-size="13">6 CO₂ + 18 ATP + 12 NADPH → C₆H₁₂O₆ (glucose)</text>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="neuron-title neuron-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="neuron-title">Neuron structure — dendrites, soma, axon, myelin sheath, axon terminals</title>
+  <desc id="neuron-desc">Labeled diagram of a motor neuron showing dendrites (input), cell body (soma) with nucleus, axon hillock, axon insulated by myelin sheath formed by Schwann cells with Nodes of Ranvier between segments, and axon terminals (synaptic knobs) at the end.</desc>
+
+  <rect width="800" height="380" fill="#f8fafc"/>
+  <text x="400" y="32" text-anchor="middle" fill="#0f172a" font-size="20" font-weight="700">Neuron — Structural Unit of the Nervous System</text>
+  <text x="400" y="54" text-anchor="middle" fill="#475569" font-size="13">Signal travels: Dendrites → Soma → Axon hillock → Axon → Axon terminals</text>
+
+  <!-- ===== Dendrites (left) ===== -->
+  <g stroke="#7c3aed" stroke-width="2" fill="none">
+    <path d="M 80 130 Q 110 145 130 155"/>
+    <path d="M 75 165 Q 105 170 130 175"/>
+    <path d="M 80 200 Q 110 195 130 195"/>
+    <path d="M 90 145 Q 100 152 120 158"/>
+    <path d="M 95 185 Q 110 188 125 190"/>
+  </g>
+  <text x="65" y="120" fill="#5b21b6" font-size="12" font-weight="700">Dendrites</text>
+  <text x="65" y="225" fill="#475569" font-size="10">(receive signals)</text>
+
+  <!-- ===== Cell body (soma) ===== -->
+  <ellipse cx="170" cy="175" rx="42" ry="38" fill="#fef3c7" stroke="#a16207" stroke-width="2.5"/>
+  <circle cx="170" cy="175" r="15" fill="#fbbf24" stroke="#7c2d12" stroke-width="1.5"/>
+  <circle cx="170" cy="175" r="5" fill="#7c2d12"/>
+  <text x="170" y="245" text-anchor="middle" fill="#7c2d12" font-size="12" font-weight="700">Cell body (Soma)</text>
+  <text x="170" y="260" text-anchor="middle" fill="#475569" font-size="10">contains nucleus + Nissl bodies</text>
+
+  <!-- ===== Axon hillock ===== -->
+  <path d="M 210 165 L 240 170 L 240 180 L 210 185 Z" fill="#fde68a" stroke="#a16207" stroke-width="2"/>
+  <text x="225" y="135" text-anchor="middle" fill="#7c2d12" font-size="11" font-weight="600">Axon hillock</text>
+  <text x="225" y="150" text-anchor="middle" fill="#475569" font-size="9">(action potential starts)</text>
+  <line x1="225" y1="155" x2="225" y2="165" stroke="#475569" stroke-width="1"/>
+
+  <!-- ===== Axon with myelin sheath ===== -->
+  <!-- Bare axon segments (Nodes of Ranvier) -->
+  <line x1="240" y1="175" x2="260" y2="175" stroke="#94a3b8" stroke-width="6"/>
+
+  <!-- Myelin sheath segment 1 -->
+  <ellipse cx="295" cy="175" rx="35" ry="14" fill="#cffafe" stroke="#0e7490" stroke-width="2"/>
+  <line x1="260" y1="175" x2="330" y2="175" stroke="#94a3b8" stroke-width="6"/>
+
+  <!-- Node 1 -->
+  <line x1="330" y1="175" x2="345" y2="175" stroke="#94a3b8" stroke-width="6"/>
+
+  <!-- Myelin sheath segment 2 -->
+  <ellipse cx="380" cy="175" rx="35" ry="14" fill="#cffafe" stroke="#0e7490" stroke-width="2"/>
+  <line x1="345" y1="175" x2="415" y2="175" stroke="#94a3b8" stroke-width="6"/>
+
+  <!-- Node 2 -->
+  <line x1="415" y1="175" x2="430" y2="175" stroke="#94a3b8" stroke-width="6"/>
+
+  <!-- Myelin sheath segment 3 -->
+  <ellipse cx="465" cy="175" rx="35" ry="14" fill="#cffafe" stroke="#0e7490" stroke-width="2"/>
+  <line x1="430" y1="175" x2="500" y2="175" stroke="#94a3b8" stroke-width="6"/>
+
+  <!-- Node 3 -->
+  <line x1="500" y1="175" x2="515" y2="175" stroke="#94a3b8" stroke-width="6"/>
+
+  <!-- Myelin sheath segment 4 -->
+  <ellipse cx="550" cy="175" rx="35" ry="14" fill="#cffafe" stroke="#0e7490" stroke-width="2"/>
+  <line x1="515" y1="175" x2="585" y2="175" stroke="#94a3b8" stroke-width="6"/>
+
+  <!-- Axon label -->
+  <text x="295" y="135" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="700">Axon</text>
+  <line x1="295" y1="158" x2="295" y2="139" stroke="#475569" stroke-width="1"/>
+
+  <!-- Myelin sheath label -->
+  <text x="380" y="218" text-anchor="middle" fill="#0e7490" font-size="11" font-weight="700">Myelin sheath</text>
+  <text x="380" y="232" text-anchor="middle" fill="#475569" font-size="9">(Schwann cells in PNS,</text>
+  <text x="380" y="244" text-anchor="middle" fill="#475569" font-size="9">oligodendrocytes in CNS)</text>
+  <line x1="380" y1="190" x2="380" y2="208" stroke="#0e7490" stroke-width="1"/>
+
+  <!-- Node of Ranvier label -->
+  <text x="465" y="135" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="700">Node of Ranvier</text>
+  <text x="465" y="150" text-anchor="middle" fill="#475569" font-size="9">(saltatory conduction)</text>
+  <line x1="430" y1="175" x2="465" y2="158" stroke="#dc2626" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- Direction arrow inside axon -->
+  <path d="M 240 195 L 580 195" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M 580 195 L 572 191 L 572 199 Z" fill="#16a34a"/>
+  <text x="410" y="210" text-anchor="middle" fill="#15803d" font-size="10" font-style="italic">→ direction of impulse →</text>
+
+  <!-- ===== Axon terminals (right) ===== -->
+  <g>
+    <line x1="585" y1="175" x2="615" y2="155" stroke="#94a3b8" stroke-width="4"/>
+    <circle cx="625" cy="148" r="10" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+    <line x1="585" y1="175" x2="615" y2="175" stroke="#94a3b8" stroke-width="4"/>
+    <circle cx="625" cy="175" r="10" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+    <line x1="585" y1="175" x2="615" y2="195" stroke="#94a3b8" stroke-width="4"/>
+    <circle cx="625" cy="202" r="10" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+  </g>
+  <text x="700" y="148" text-anchor="middle" fill="#9f1239" font-size="12" font-weight="700">Axon terminals</text>
+  <text x="700" y="163" text-anchor="middle" fill="#475569" font-size="10">(synaptic knobs)</text>
+  <text x="700" y="180" text-anchor="middle" fill="#475569" font-size="10">release</text>
+  <text x="700" y="195" text-anchor="middle" fill="#475569" font-size="10">neurotransmitters</text>
+
+  <!-- Key facts -->
+  <g transform="translate(40, 300)">
+    <rect x="0" y="0" width="720" height="60" rx="10" fill="#0f172a"/>
+    <text x="20" y="22" fill="#facc15" font-size="12" font-weight="700">Key NEET points:</text>
+    <text x="20" y="40" fill="#e2e8f0" font-size="11">• Nissl bodies: only in cell body + dendrites (never in axon)</text>
+    <text x="20" y="54" fill="#e2e8f0" font-size="11">• Myelinated axons: ~100× faster (saltatory conduction)</text>
+    <text x="430" y="40" fill="#e2e8f0" font-size="11">• Resting potential: −70 mV</text>
+    <text x="430" y="54" fill="#e2e8f0" font-size="11">• Action potential threshold: ~−55 mV</text>
+  </g>
+</svg>

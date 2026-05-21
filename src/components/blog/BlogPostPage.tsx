@@ -454,17 +454,32 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                     hr: () => <hr className="my-8 border-gray-200" />,
                     img: ({ src, alt }) => {
                       const imageSrc = typeof src === 'string' ? src : '/blog/default-image.jpg'
+                      // SVG diagrams have varying aspect ratios and labels at the edges —
+                      // forcing aspect-video + object-cover clips them. Render SVGs at
+                      // their natural aspect ratio using a plain <img>. Next/Image doesn't
+                      // optimize SVG anyway.
+                      const isSvg = imageSrc.toLowerCase().endsWith('.svg')
                       return (
                         <figure className="my-8">
-                          <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-100">
-                            <Image
+                          {isSvg ? (
+                            <img
                               src={imageSrc}
-                              alt={alt || 'Blog image'}
-                              fill
-                              className="object-cover"
-                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+                              alt={alt || 'Diagram'}
+                              loading="lazy"
+                              decoding="async"
+                              className="block w-full h-auto rounded-xl bg-white border border-gray-100"
                             />
-                          </div>
+                          ) : (
+                            <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-100">
+                              <Image
+                                src={imageSrc}
+                                alt={alt || 'Blog image'}
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+                              />
+                            </div>
+                          )}
                           {alt && (
                             <figcaption className="mt-2 text-center text-sm text-gray-500 italic">
                               {alt}
@@ -509,8 +524,9 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   {meta.tags.map((tag, index) => (
                     <Link
                       key={index}
-                      href={`/blog?search=${encodeURIComponent(tag)}`}
+                      href={`/blog/tag/${encodeURIComponent(tag.toLowerCase().replace(/\s+/g, '-'))}`}
                       className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                      aria-label={`View all posts tagged ${tag}`}
                     >
                       #{tag}
                     </Link>

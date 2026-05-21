@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="mito-title mito-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="mito-title">Mitochondrion — detailed structure and function</title>
+  <desc id="mito-desc">Detailed cross-section of a mitochondrion showing outer membrane, inner membrane folded into cristae, intermembrane space, matrix containing 70S ribosomes and circular mtDNA, and ATP synthase units on cristae. Site of Krebs cycle, electron transport chain, and oxidative phosphorylation.</desc>
+
+  <rect width="800" height="480" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#0f172a" font-size="20" font-weight="700">Mitochondrion — the Powerhouse of the Cell</text>
+  <text x="400" y="54" text-anchor="middle" fill="#475569" font-size="13">Site of Krebs cycle, electron transport chain, and oxidative phosphorylation</text>
+
+  <!-- ============ Mitochondrion shape ============ -->
+  <g transform="translate(80, 100)">
+    <!-- Outer membrane -->
+    <ellipse cx="220" cy="155" rx="220" ry="120" fill="#fef3c7" stroke="#a16207" stroke-width="3"/>
+
+    <!-- Inner membrane with cristae folds -->
+    <path d="M 30 155
+             Q 30 100 60 80 L 80 80 Q 95 95 100 115 L 100 145
+             Q 120 120 140 105 L 160 105 Q 175 125 175 145 L 175 165
+             Q 195 145 215 130 L 235 130 Q 250 150 250 170
+             Q 270 145 290 135 L 310 135 Q 325 155 325 175
+             Q 345 155 365 145 L 385 145 Q 400 165 410 185
+             Q 410 215 380 232 L 60 232 Q 30 215 30 155 Z"
+          fill="#fde68a" stroke="#7c2d12" stroke-width="2.5" fill-opacity="0.8"/>
+
+    <!-- ATP synthase knobs on cristae (small lollipops) -->
+    <g fill="#dc2626" stroke="#991b1b" stroke-width="1">
+      <circle cx="80" cy="130" r="4"/>
+      <line x1="80" y1="134" x2="80" y2="140" stroke="#991b1b" stroke-width="1.5"/>
+      <circle cx="150" cy="135" r="4"/>
+      <line x1="150" y1="139" x2="150" y2="145" stroke="#991b1b" stroke-width="1.5"/>
+      <circle cx="225" cy="155" r="4"/>
+      <line x1="225" y1="159" x2="225" y2="165" stroke="#991b1b" stroke-width="1.5"/>
+      <circle cx="300" cy="160" r="4"/>
+      <line x1="300" y1="164" x2="300" y2="170" stroke="#991b1b" stroke-width="1.5"/>
+      <circle cx="375" cy="170" r="4"/>
+      <line x1="375" y1="174" x2="375" y2="180" stroke="#991b1b" stroke-width="1.5"/>
+    </g>
+
+    <!-- mtDNA (small circular loops in matrix) -->
+    <g fill="none" stroke="#7c3aed" stroke-width="2">
+      <ellipse cx="220" cy="210" rx="14" ry="8"/>
+      <ellipse cx="190" cy="225" rx="10" ry="6" transform="rotate(20, 190, 225)"/>
+    </g>
+    <text x="200" y="248" text-anchor="middle" fill="#5b21b6" font-size="10" font-weight="600">mtDNA</text>
+    <text x="200" y="261" text-anchor="middle" fill="#5b21b6" font-size="9" font-style="italic">(circular)</text>
+
+    <!-- 70S ribosomes in matrix -->
+    <g fill="#0f172a">
+      <circle cx="115" cy="200" r="3"/>
+      <circle cx="280" cy="200" r="3"/>
+      <circle cx="345" cy="210" r="3"/>
+      <circle cx="160" cy="225" r="3"/>
+      <circle cx="340" cy="225" r="3"/>
+    </g>
+  </g>
+
+  <!-- ============ Labels with leader lines ============ -->
+
+  <!-- Outer membrane label -->
+  <text x="540" y="120" fill="#0f172a" font-size="13" font-weight="700">Outer membrane</text>
+  <text x="540" y="138" fill="#475569" font-size="11">• Smooth, porin-permeable</text>
+  <text x="540" y="153" fill="#475569" font-size="11">• Small molecules pass freely</text>
+  <line x1="535" y1="125" x2="495" y2="115" stroke="#a16207" stroke-width="1.5"/>
+
+  <!-- Inner membrane / cristae label -->
+  <text x="540" y="190" fill="#0f172a" font-size="13" font-weight="700">Inner membrane (cristae)</text>
+  <text x="540" y="208" fill="#475569" font-size="11">• Folded → huge surface area</text>
+  <text x="540" y="223" fill="#475569" font-size="11">• Hosts ETC + ATP synthase</text>
+  <text x="540" y="238" fill="#475569" font-size="11">• Impermeable except via transporters</text>
+  <line x1="535" y1="195" x2="490" y2="195" stroke="#7c2d12" stroke-width="1.5"/>
+
+  <!-- ATP synthase label -->
+  <text x="50" y="80" fill="#dc2626" font-size="13" font-weight="700">ATP synthase (F₀F₁)</text>
+  <text x="50" y="98" fill="#475569" font-size="11">H⁺ flow → rotation → ATP</text>
+  <circle cx="160" cy="78" r="5" fill="#dc2626"/>
+  <line x1="160" y1="83" x2="160" y2="92" stroke="#991b1b" stroke-width="1.5"/>
+  <line x1="160" y1="78" x2="178" y2="103" stroke="#dc2626" stroke-width="1.5"/>
+
+  <!-- Matrix label -->
+  <text x="50" y="290" fill="#0f172a" font-size="13" font-weight="700">Matrix</text>
+  <text x="50" y="308" fill="#475569" font-size="11">• Krebs (TCA) cycle</text>
+  <text x="50" y="323" fill="#475569" font-size="11">• β-oxidation of fatty acids</text>
+  <text x="50" y="338" fill="#475569" font-size="11">• Contains mtDNA + 70S ribosomes</text>
+  <line x1="80" y1="285" x2="170" y2="270" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- Intermembrane space label -->
+  <text x="540" y="280" fill="#0f172a" font-size="13" font-weight="700">Intermembrane space</text>
+  <text x="540" y="298" fill="#475569" font-size="11">• H⁺ accumulates here</text>
+  <text x="540" y="313" fill="#475569" font-size="11">• Creates proton gradient</text>
+  <line x1="535" y1="285" x2="500" y2="265" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- ============ Functional summary bar ============ -->
+  <g transform="translate(40, 410)">
+    <rect x="0" y="0" width="720" height="50" rx="10" fill="#0f172a"/>
+    <text x="20" y="20" fill="#facc15" font-size="13" font-weight="700">Net ATP yield per glucose:</text>
+    <text x="220" y="20" fill="#e2e8f0" font-size="13">~30–32 ATP (Glycolysis 2 + Krebs 2 + ETC 26–28)</text>
+    <text x="20" y="38" fill="#facc15" font-size="11" font-weight="600">Endosymbiotic theory:</text>
+    <text x="180" y="38" fill="#e2e8f0" font-size="11">mtDNA + 70S ribosomes suggest origin from an engulfed α-proteobacterium.</text>
+  </g>
+</svg>

@@ -25,7 +25,7 @@ import Link from 'next/link'
 import { facultyStats, facultyHighlights } from '@/data/faculty'
 import { EEATSignals } from '@/components/seo/EEATSignals'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
-import { BreadcrumbSchema } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 
 import { FAQDisplay } from '@/components/seo/FAQSchema'
 

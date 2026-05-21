@@ -18,7 +18,7 @@ import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 const faqs = [
   {
     q: 'Is there a NEET exam centre in Bahrain?',
-    a: 'Yes. Manama is one of the 14 official NTA overseas NEET exam centres. Bahrain-based candidates can sit NEET-UG locally without flying to India or another GCC country.',
+    a: 'Yes. Manama is one of the 14 official NTA overseas NEET exam centres. Bahrain-based candidates can sit NEET-UG locally without travelling to India or another GCC country.',
   },
   {
     q: 'Why would an Indian student in Bahrain take NEET?',
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'What are typical class timings for Bahrain students?',
-    a: 'Live classes run on AST (UTC+3), typically 4:00–6:30 PM Bahrain time — after school hours. Every session is recorded.',
+    a: 'Live classes run on AST (UTC+3), typically 4:00–6:30 PM Bahrain time — after school hours. Every session is recorded. Weekend doubt-clearing sessions also available.',
   },
   {
     q: 'Which schools in Bahrain do you support?',
@@ -34,11 +34,11 @@ const faqs = [
   },
   {
     q: 'Do you provide visa or immigration services?',
-    a: 'No. We are an academic coaching institute only. Visa, immigration, or legal matters should be handled by your family, school, or licensed consultants.',
+    a: 'No. We are an academic coaching institute only. We do not provide visa, immigration, or legal documentation services. Visa matters should be handled by your family, school, or licensed immigration consultants.',
   },
   {
     q: 'What about the NRI quota for Indian MBBS admissions?',
-    a: 'We help you understand which Indian colleges offer NRI seats, typical NEET cut-offs, and broad admission timelines. We are not an admissions consultancy.',
+    a: '15% of seats at eligible Indian medical colleges are reserved for NRI/OCI candidates. We help you understand which colleges offer NRI seats, typical NEET cut-offs, and broad admission timelines. We are not an admissions consultancy.',
   },
 ]
 

@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
-import { BreadcrumbSchema } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 
 const neetExpertise = [
   {

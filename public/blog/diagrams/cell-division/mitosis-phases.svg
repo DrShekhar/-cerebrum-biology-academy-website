@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="mitosis-title mitosis-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="mitosis-title">Mitosis — five phases (prophase, metaphase, anaphase, telophase, cytokinesis)</title>
+  <desc id="mitosis-desc">Five-panel diagram showing the sequential phases of mitosis: prophase (chromosomes condense, nuclear membrane breaks), metaphase (chromosomes align at the equator), anaphase (sister chromatids separate to opposite poles), telophase (nuclear membranes re-form), and cytokinesis (cytoplasm divides into two identical daughter cells).</desc>
+
+  <rect width="800" height="380" fill="#f8fafc"/>
+  <text x="400" y="32" text-anchor="middle" fill="#0f172a" font-size="20" font-weight="700">Mitosis — Five Phases of M-Phase</text>
+  <text x="400" y="54" text-anchor="middle" fill="#475569" font-size="13">One parent cell (2n) → two genetically identical daughter cells (2n)</text>
+
+  <!-- ===== Panel 1: Prophase ===== -->
+  <g transform="translate(40, 90)">
+    <ellipse cx="60" cy="80" rx="58" ry="60" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+    <!-- Condensed X-shaped chromosomes -->
+    <g stroke="#7c2d12" stroke-width="3" fill="none">
+      <path d="M 40 60 L 50 75 M 50 60 L 40 75 M 45 75 L 45 95 M 40 95 L 50 110 M 50 95 L 40 110"/>
+      <path d="M 75 65 L 85 80 M 85 65 L 75 80 M 80 80 L 80 100 M 75 100 L 85 115 M 85 100 L 75 115"/>
+    </g>
+    <text x="60" y="160" text-anchor="middle" fill="#0f172a" font-size="13" font-weight="700">Prophase</text>
+    <text x="60" y="178" text-anchor="middle" fill="#475569" font-size="10">• chromosomes condense</text>
+    <text x="60" y="192" text-anchor="middle" fill="#475569" font-size="10">• nuclear envelope breaks</text>
+    <text x="60" y="206" text-anchor="middle" fill="#475569" font-size="10">• spindle fibers form</text>
+  </g>
+
+  <!-- ===== Panel 2: Metaphase ===== -->
+  <g transform="translate(190, 90)">
+    <ellipse cx="60" cy="80" rx="58" ry="60" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+    <!-- Equatorial alignment -->
+    <line x1="10" y1="80" x2="110" y2="80" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+    <g stroke="#1e3a8a" stroke-width="3" fill="none">
+      <path d="M 35 72 L 45 88 M 45 72 L 35 88"/>
+      <path d="M 60 72 L 70 88 M 70 72 L 60 88"/>
+      <path d="M 85 72 L 95 88 M 95 72 L 85 88"/>
+    </g>
+    <!-- Spindle fibers -->
+    <line x1="10" y1="20" x2="60" y2="80" stroke="#475569" stroke-width="1"/>
+    <line x1="110" y1="20" x2="60" y2="80" stroke="#475569" stroke-width="1"/>
+    <line x1="10" y1="140" x2="60" y2="80" stroke="#475569" stroke-width="1"/>
+    <line x1="110" y1="140" x2="60" y2="80" stroke="#475569" stroke-width="1"/>
+    <text x="60" y="160" text-anchor="middle" fill="#0f172a" font-size="13" font-weight="700">Metaphase</text>
+    <text x="60" y="178" text-anchor="middle" fill="#475569" font-size="10">• chromosomes align at</text>
+    <text x="60" y="192" text-anchor="middle" fill="#475569" font-size="10">  metaphase plate (equator)</text>
+    <text x="60" y="206" text-anchor="middle" fill="#475569" font-size="10">• centromeres attach to spindle</text>
+  </g>
+
+  <!-- ===== Panel 3: Anaphase ===== -->
+  <g transform="translate(340, 90)">
+    <ellipse cx="60" cy="80" rx="58" ry="60" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <!-- Chromatids moving to poles -->
+    <g stroke="#14532d" stroke-width="3" fill="none">
+      <path d="M 25 50 L 35 60 M 35 50 L 25 60"/>
+      <path d="M 25 80 L 35 90 M 35 80 L 25 90"/>
+      <path d="M 25 110 L 35 120 M 35 110 L 25 120"/>
+      <path d="M 85 50 L 95 60 M 95 50 L 85 60"/>
+      <path d="M 85 80 L 95 90 M 95 80 L 85 90"/>
+      <path d="M 85 110 L 95 120 M 95 110 L 85 120"/>
+    </g>
+    <!-- Arrows showing separation -->
+    <path d="M 50 55 L 40 55" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 40 55 L 46 51 L 46 59 Z" fill="#dc2626"/>
+    <path d="M 72 55 L 82 55" stroke="#dc2626" stroke-width="2"/>
+    <path d="M 82 55 L 76 51 L 76 59 Z" fill="#dc2626"/>
+    <text x="60" y="160" text-anchor="middle" fill="#0f172a" font-size="13" font-weight="700">Anaphase</text>
+    <text x="60" y="178" text-anchor="middle" fill="#475569" font-size="10">• sister chromatids separate</text>
+    <text x="60" y="192" text-anchor="middle" fill="#475569" font-size="10">• pulled to opposite poles</text>
+    <text x="60" y="206" text-anchor="middle" fill="#475569" font-size="10">• shortest phase</text>
+  </g>
+
+  <!-- ===== Panel 4: Telophase ===== -->
+  <g transform="translate(490, 90)">
+    <ellipse cx="60" cy="80" rx="58" ry="60" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <!-- Two nuclear envelopes reforming -->
+    <ellipse cx="32" cy="80" rx="18" ry="22" fill="none" stroke="#5b21b6" stroke-width="2" stroke-dasharray="2 2"/>
+    <ellipse cx="88" cy="80" rx="18" ry="22" fill="none" stroke="#5b21b6" stroke-width="2" stroke-dasharray="2 2"/>
+    <!-- Decondensing chromatin (squiggles) -->
+    <g stroke="#5b21b6" stroke-width="1.5" fill="none">
+      <path d="M 25 73 Q 30 76 35 73 Q 30 80 35 86"/>
+      <path d="M 82 73 Q 87 76 92 73 Q 87 80 92 86"/>
+    </g>
+    <text x="60" y="160" text-anchor="middle" fill="#0f172a" font-size="13" font-weight="700">Telophase</text>
+    <text x="60" y="178" text-anchor="middle" fill="#475569" font-size="10">• 2 nuclear envelopes form</text>
+    <text x="60" y="192" text-anchor="middle" fill="#475569" font-size="10">• chromatin decondenses</text>
+    <text x="60" y="206" text-anchor="middle" fill="#475569" font-size="10">• nucleoli reappear</text>
+  </g>
+
+  <!-- ===== Panel 5: Cytokinesis ===== -->
+  <g transform="translate(640, 90)">
+    <!-- Two daughter cells -->
+    <circle cx="35" cy="80" r="32" fill="#fce7f3" stroke="#9f1239" stroke-width="2"/>
+    <circle cx="35" cy="80" r="12" fill="#fbcfe8" stroke="#9f1239" stroke-width="1.5"/>
+    <circle cx="95" cy="80" r="32" fill="#fce7f3" stroke="#9f1239" stroke-width="2"/>
+    <circle cx="95" cy="80" r="12" fill="#fbcfe8" stroke="#9f1239" stroke-width="1.5"/>
+    <text x="65" y="160" text-anchor="middle" fill="#0f172a" font-size="13" font-weight="700">Cytokinesis</text>
+    <text x="65" y="178" text-anchor="middle" fill="#475569" font-size="10">• cytoplasm divides</text>
+    <text x="65" y="192" text-anchor="middle" fill="#475569" font-size="10">• 2 identical daughter cells</text>
+    <text x="65" y="206" text-anchor="middle" fill="#475569" font-size="10">• cleavage furrow (animal)</text>
+    <text x="65" y="220" text-anchor="middle" fill="#475569" font-size="10">  or cell plate (plant)</text>
+  </g>
+
+  <!-- Direction arrows between panels -->
+  <g fill="#94a3b8">
+    <path d="M 160 165 L 175 158 L 175 172 Z"/>
+    <path d="M 310 165 L 325 158 L 325 172 Z"/>
+    <path d="M 460 165 L 475 158 L 475 172 Z"/>
+    <path d="M 610 165 L 625 158 L 625 172 Z"/>
+  </g>
+
+  <!-- Key takeaway strip -->
+  <g transform="translate(40, 320)">
+    <rect x="0" y="0" width="720" height="40" rx="10" fill="#0f172a"/>
+    <text x="20" y="25" fill="#facc15" font-size="13" font-weight="700">Outcome:</text>
+    <text x="110" y="25" fill="#e2e8f0" font-size="13">1 parent (2n) → 2 identical daughter cells (2n) • genetic identity preserved • used for growth + repair</text>
+  </g>
+</svg>

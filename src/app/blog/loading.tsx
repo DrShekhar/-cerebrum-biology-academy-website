@@ -1,18 +1,21 @@
 export default function BlogLoading() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section Skeleton */}
-      <div className="bg-indigo-600 py-12">
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section Skeleton — matches real BlogListingPage hero (white bg, dark text) */}
+      <div className="bg-white border-b border-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="h-10 bg-white/20 rounded-lg w-80 mx-auto mb-4 animate-pulse" />
-          <div className="h-6 bg-white/10 rounded-lg w-[28rem] max-w-full mx-auto mb-8 animate-pulse" />
+          <div className="h-10 bg-gray-200 rounded-lg w-80 mx-auto mb-4 animate-pulse" />
+          <div className="h-6 bg-gray-100 rounded-lg w-[28rem] max-w-full mx-auto mb-8 animate-pulse" />
 
           {/* Stats Cards Skeleton */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 animate-pulse">
-                <div className="h-8 bg-white/20 rounded mb-2" />
-                <div className="h-4 bg-white/10 rounded w-16 mx-auto" />
+              <div
+                key={i}
+                className="bg-gray-50 border border-gray-100 rounded-xl p-4 animate-pulse"
+              >
+                <div className="h-8 bg-gray-200 rounded mb-2" />
+                <div className="h-4 bg-gray-100 rounded w-16 mx-auto" />
               </div>
             ))}
           </div>

@@ -153,7 +153,10 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-anki-deck' ||
     path === '/usabo-past-papers-archive' ||
     path === '/ap-biology-vs-college-bio-mcat-bridge' ||
-    path === '/ap-biology-tutor-india-for-us-college-admissions'
+    path === '/ap-biology-tutor-india-for-us-college-admissions' ||
+    // MCAT Biology hub — bio-only specialist wedge vs Kaplan/Princeton.
+    // Canonical entry point for the MCAT cluster.
+    path === '/mcat-biology'
   ) {
     return 0.9
   }
@@ -5434,6 +5437,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/ap-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/neet`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/mcat-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/ib-biology-ia-guide`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -8421,12 +8442,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
-    {
-      url: `${baseUrl}/about-cerebrum-biology-academy`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.86,
-    },
+    // /about-cerebrum-biology-academy removed — 301 → /about (Phase 4a, May 2026)
     {
       url: `${baseUrl}/cbse-biology-coaching-delhi`,
       lastModified: lastUpdated,

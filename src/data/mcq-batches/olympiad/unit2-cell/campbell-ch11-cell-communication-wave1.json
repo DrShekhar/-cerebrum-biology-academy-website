@@ -29,8 +29,13 @@
     {
       "type": "MCQ",
       "question": "In RTK signaling, autophosphorylation of the receptor creates docking sites for downstream effectors. Which structural domain on Grb2 recognizes phosphotyrosine residues on the activated RTK?",
-      "options": ["SH2 domain", "SH3 domain", "Pleckstrin homology (PH) domain", "PDZ domain"],
-      "correctAnswer": "A",
+      "options": [
+        "Pleckstrin homology (PH) domain",
+        "SH3 domain",
+        "SH2 domain",
+        "PDZ domain"
+      ],
+      "correctAnswer": "C",
       "explanation": "SH2 (Src Homology 2) domains specifically bind to phosphotyrosine residues on activated RTKs. Grb2 is an adaptor protein that contains one SH2 domain (which binds phosphotyrosine on the RTK) and two SH3 domains (which bind proline-rich motifs on Sos, a Ras-GEF). The SH3 domains on Grb2 do not bind phosphotyrosine. PH domains bind phosphoinositides in the membrane, not phosphotyrosine. PDZ domains recognize C-terminal peptide sequences and are involved in scaffolding at synapses and tight junctions.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -45,12 +50,12 @@
       "type": "MCQ",
       "question": "A researcher finds that adding a non-hydrolyzable GTP analog (GTPgammaS) to a cell-free system containing purified Gs protein and adenylyl cyclase causes sustained cAMP production. What does this demonstrate about the Gs alpha subunit?",
       "options": [
-        "The alpha subunit's intrinsic GTPase activity normally terminates signaling, and preventing GTP hydrolysis locks it in the active state",
-        "The alpha subunit requires GDP binding to activate adenylyl cyclase",
         "GTPgammaS acts as a competitive inhibitor at the adenylyl cyclase catalytic site",
+        "The alpha subunit requires GDP binding to activate adenylyl cyclase",
+        "The alpha subunit's intrinsic GTPase activity normally terminates signaling, and preventing GTP hydrolysis locks it in the active state",
         "The beta-gamma subunit complex is the true activator of adenylyl cyclase"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "The Gs alpha subunit has intrinsic GTPase activity that hydrolyzes bound GTP to GDP, returning the subunit to its inactive state and terminating the signal. GTPgammaS is a non-hydrolyzable GTP analog that binds to the alpha subunit but cannot be hydrolyzed. This locks Gs-alpha in the active, GTP-bound conformation, leading to persistent activation of adenylyl cyclase and sustained cAMP production. This experiment elegantly demonstrates that the built-in GTPase acts as a molecular timer. Option B is incorrect because GDP-bound alpha is the inactive form. Option C is wrong because GTPgammaS binds to Gs-alpha, not adenylyl cyclase. While beta-gamma can activate certain effectors, in this canonical pathway it is the alpha subunit that activates adenylyl cyclase.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -65,12 +70,12 @@
       "type": "MCQ",
       "question": "In the Wnt/beta-catenin signaling pathway, what is the fate of beta-catenin in the ABSENCE of a Wnt ligand?",
       "options": [
-        "Beta-catenin translocates to the nucleus and activates TCF/LEF transcription factors",
-        "Beta-catenin is stabilized by the destruction complex and accumulates in the cytoplasm",
         "Beta-catenin is phosphorylated by the APC/Axin/GSK-3beta destruction complex and targeted for ubiquitin-mediated proteasomal degradation",
+        "Beta-catenin is stabilized by the destruction complex and accumulates in the cytoplasm",
+        "Beta-catenin translocates to the nucleus and activates TCF/LEF transcription factors",
         "Beta-catenin is cleaved by gamma-secretase and the intracellular domain enters the nucleus"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "explanation": "In the absence of Wnt signaling, the destruction complex (comprising APC, Axin, CK1alpha, and GSK-3beta) phosphorylates beta-catenin at specific serine and threonine residues. CK1alpha phosphorylates Ser45 first, priming subsequent phosphorylation by GSK-3beta at Thr41, Ser37, and Ser33. Phosphorylated beta-catenin is recognized by beta-TrCP (an E3 ubiquitin ligase), polyubiquitinated, and degraded by the 26S proteasome. This keeps cytoplasmic beta-catenin levels low and prevents inappropriate gene activation. Option A describes what happens when Wnt IS present. Option B is backwards. Option D describes Notch signaling, not Wnt.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -105,12 +110,12 @@
       "type": "MCQ",
       "question": "Signal amplification in the GPCR-cAMP pathway occurs at multiple steps. If one ligand-bound receptor activates 10 Gs proteins, each Gs protein activates 1 adenylyl cyclase that produces 100 cAMP molecules, and each PKA phosphorylates 50 substrate molecules, approximately how many substrate molecules are ultimately affected by a single ligand binding event?",
       "options": [
-        "160 substrate molecules",
+        "50,000 substrate molecules",
         "5,000 substrate molecules",
         "500,000 substrate molecules",
-        "50,000 substrate molecules"
+        "160 substrate molecules"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "A",
       "explanation": "Signal amplification is multiplicative at each step of the cascade. One ligand activates 1 receptor, which activates 10 Gs proteins. Each Gs activates 1 adenylyl cyclase producing 100 cAMP each (total: 10 x 100 = 1,000 cAMP). Each cAMP activates PKA (2 cAMP per regulatory subunit, but simplifying to 1,000 activated PKA catalytic subunits for this calculation). Each PKA phosphorylates 50 substrates: 1,000 x 50 = 50,000 substrate molecules. This enormous amplification — from 1 ligand to 50,000 phosphorylation events — explains why cells can respond to extremely low concentrations of hormones (picomolar to nanomolar). The cascade acts as a molecular amplifier at each enzymatic step.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -125,12 +130,12 @@
       "type": "MCQ",
       "question": "In the intrinsic apoptotic pathway, what event at the mitochondrial outer membrane commits the cell to death?",
       "options": [
-        "Binding of Fas ligand (FasL) to Fas receptor on the mitochondrial surface",
         "Release of cytochrome c through pores formed by Bax/Bak oligomers, which then binds Apaf-1 to assemble the apoptosome and activate caspase-9",
+        "Binding of Fas ligand (FasL) to Fas receptor on the mitochondrial surface",
         "Direct activation of caspase-8 by mitochondrial DISC formation",
         "Release of ATP from mitochondria, which directly activates executioner caspases"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The intrinsic (mitochondrial) pathway of apoptosis is triggered by intracellular stress signals (DNA damage, ER stress, growth factor withdrawal). Pro-apoptotic Bcl-2 family members Bax and Bak oligomerize in the mitochondrial outer membrane, forming pores that cause mitochondrial outer membrane permeabilization (MOMP). This releases cytochrome c into the cytosol, where it binds Apaf-1 (apoptotic protease-activating factor 1). Apaf-1 oligomerizes with cytochrome c and dATP to form the apoptosome, a wheel-shaped heptameric complex that recruits and activates procaspase-9 (an initiator caspase). Active caspase-9 then cleaves and activates executioner caspases-3 and -7. Option A describes the extrinsic pathway component. Option C is incorrect because DISC formation occurs at death receptors on the plasma membrane, not mitochondria.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -145,12 +150,12 @@
       "type": "MCQ",
       "question": "In Notch signaling, lateral inhibition ensures that adjacent cells adopt different fates. What proteolytic event is essential for Notch signal transduction after ligand binding?",
       "options": [
-        "Sequential cleavage by ADAM metalloprotease (S2 cleavage) and gamma-secretase (S3 cleavage), releasing the Notch intracellular domain (NICD) that enters the nucleus",
+        "Caspase-mediated cleavage of Notch at the plasma membrane, triggering apoptosis in the signal-receiving cell",
         "Cleavage of the Notch receptor by phospholipase C, releasing the intracellular domain into the cytoplasm",
         "Ubiquitin-mediated degradation of the Notch extracellular domain by the proteasome",
-        "Caspase-mediated cleavage of Notch at the plasma membrane, triggering apoptosis in the signal-receiving cell"
+        "Sequential cleavage by ADAM metalloprotease (S2 cleavage) and gamma-secretase (S3 cleavage), releasing the Notch intracellular domain (NICD) that enters the nucleus"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": "Notch signaling requires regulated intramembrane proteolysis (RIP). When Delta or Jagged on the signal-sending cell binds Notch on the adjacent cell, endocytosis by the sending cell exerts a mechanical pulling force that exposes the S2 cleavage site. An ADAM family metalloprotease (ADAM10 or TACE/ADAM17) cleaves at S2, removing the extracellular domain. The remaining transmembrane stub is then cleaved within the membrane by gamma-secretase (the same presenilin-containing complex that processes APP in Alzheimer's disease) at the S3 site, releasing the Notch intracellular domain (NICD). NICD translocates to the nucleus and converts the CSL/RBP-Jk transcriptional repressor into an activator of Notch target genes like Hes and Hey.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -388,11 +393,11 @@
       "dataContext": "Researchers measured ERK phosphorylation (pERK, as % of maximum) in response to increasing concentrations of EGF in wild-type cells and cells expressing a dominant-negative Ras (DN-Ras).\n\nEGF (ng/mL) | WT pERK (%) | DN-Ras pERK (%)\n0 | 2 | 1\n0.1 | 8 | 3\n1 | 35 | 5\n5 | 72 | 8\n10 | 88 | 10\n50 | 95 | 12\n100 | 100 | 14",
       "options": [
         "EGF activates ERK primarily through a Ras-independent pathway since DN-Ras cells still show some pERK",
-        "EGF-induced ERK activation is almost entirely Ras-dependent, as DN-Ras reduces pERK by approximately 85-90% at all concentrations tested",
         "The data indicate that high concentrations of EGF can overcome the Ras blockade, suggesting receptor-level saturation",
+        "EGF-induced ERK activation is almost entirely Ras-dependent, as DN-Ras reduces pERK by approximately 85-90% at all concentrations tested",
         "DN-Ras appears to enhance ERK signaling at low EGF concentrations"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The data clearly demonstrate that DN-Ras dramatically reduces EGF-induced ERK phosphorylation at every concentration tested. At saturating EGF (100 ng/mL), WT cells show 100% pERK while DN-Ras cells show only 14%, representing an ~86% reduction. This reduction is consistent across all doses (at 10 ng/mL: 88% vs 10%, ~89% reduction). The small residual pERK in DN-Ras cells (10-14%) likely reflects either incomplete dominant-negative suppression or minor Ras-independent ERK activation pathways (such as through PKC or Src family kinases). Option A is incorrect because the residual signal is minor (~10-14%), not indicative of a primary alternative pathway. Option C is wrong because increasing EGF does NOT overcome the block — the ratio of WT to DN-Ras pERK remains relatively constant across concentrations. Option D is factually incorrect as DN-Ras reduces pERK at all concentrations.",
       "topic": "Cell Structure and Function",
       "difficulty": "HARD",
@@ -409,11 +414,11 @@
       "dataContext": "NIH 3T3 fibroblasts were stimulated with PDGF (50 ng/mL) and ERK phosphorylation was tracked over time. Sodium orthovanadate (a tyrosine phosphatase inhibitor) was added at t=0 in one condition.\n\nTime (min) | Control pERK (fold over basal) | + Orthovanadate pERK (fold)\n0 | 1.0 | 1.0\n2 | 8.5 | 9.0\n5 | 12.0 | 13.5\n10 | 8.0 | 14.0\n20 | 3.5 | 15.5\n40 | 1.5 | 16.0\n60 | 1.0 | 15.0",
       "options": [
         "Phosphatases have no significant role in ERK dephosphorylation since orthovanadate only marginally increases peak ERK activation",
-        "Tyrosine phosphatases are critical for signal termination, as orthovanadate prevents ERK dephosphorylation and maintains signaling at ~15-fold elevation even 60 minutes after stimulation",
+        "The data show that ERK signaling in control cells terminates due to receptor degradation, not phosphatase activity",
         "Orthovanadate activates a separate ERK phosphorylation pathway independent of PDGF signaling",
-        "The data show that ERK signaling in control cells terminates due to receptor degradation, not phosphatase activity"
+        "Tyrosine phosphatases are critical for signal termination, as orthovanadate prevents ERK dephosphorylation and maintains signaling at ~15-fold elevation even 60 minutes after stimulation"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The control data show a classic transient ERK activation pattern: rapid rise to 12-fold peak at 5 min, followed by return to baseline by 60 min. In contrast, orthovanadate (a broad-spectrum tyrosine phosphatase inhibitor) causes ERK to remain phosphorylated at 15-16-fold even at 40-60 minutes. The initial peak is nearly identical (12 vs 13.5 at 5 min), indicating that phosphatase inhibition does not significantly affect the activation phase but dramatically prevents signal termination. This demonstrates that tyrosine phosphatases (including dual-specificity phosphatases/DUSPs/MKPs that dephosphorylate ERK on both pThr and pTyr) are essential for returning ERK to baseline. Option A is wrong because orthovanadate has a dramatic effect on signal duration. Option C is incorrect because orthovanadate does not increase the initial activation, ruling out an independent pathway. Option D cannot be concluded because the sustained signaling with orthovanadate shows the receptor is still intact and capable of maintaining the signal when phosphatases are blocked.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -429,12 +434,12 @@
       "question": "Based on the calcium imaging data, what mechanism best explains the observed pattern of calcium signaling?",
       "dataContext": "Individual HeLa cells were loaded with the calcium indicator Fura-2 and stimulated with histamine (10 microM, a Gq-coupled receptor agonist). Cytoplasmic Ca2+ concentration was measured in calcium-free medium (no extracellular Ca2+) vs normal medium (1.8 mM extracellular Ca2+).\n\nCondition | Peak Ca2+ (nM) | Time to peak (s) | Duration above 200 nM (s) | Oscillations observed?\nNormal medium | 850 | 8 | 180 | Yes (6-8 spikes over 3 min)\nCa2+-free medium | 820 | 9 | 35 | No (single transient peak)\nNormal medium + thapsigargin pretreat | 60 | N/A | 0 | No\nCa2+-free + thapsigargin pretreat | 55 | N/A | 0 | No",
       "options": [
-        "Histamine directly opens plasma membrane Ca2+ channels, and the ER plays no role in the calcium response",
         "The initial Ca2+ peak is primarily from ER stores (similar peak in both media), but sustained oscillations require store-operated calcium entry from the extracellular space to refill the ER between spikes",
+        "Histamine directly opens plasma membrane Ca2+ channels, and the ER plays no role in the calcium response",
         "Thapsigargin activates the Gq pathway independently of histamine, depleting calcium stores before histamine can act",
         "Calcium oscillations are caused by rhythmic opening and closing of voltage-gated calcium channels in the plasma membrane"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The data provide strong evidence for a two-phase calcium signaling model. First, the initial peak amplitude is nearly identical in normal medium (850 nM) and Ca2+-free medium (820 nM), demonstrating that the initial release is almost entirely from internal (ER) stores via IP3 receptors, not from extracellular influx. Second, in Ca2+-free medium, only a single transient peak occurs (duration above 200 nM = 35 s vs 180 s), and no oscillations are observed. This indicates that sustained oscillations require extracellular Ca2+ — specifically, store-operated calcium entry (SOCE via STIM1/Orai1) to refill the ER between IP3-mediated release events. Third, thapsigargin (a SERCA pump inhibitor) pretreatment eliminates the response entirely in both conditions, confirming that ER stores are essential. Thapsigargin passively depletes ER Ca2+ by blocking re-uptake, so when histamine triggers IP3 production, the stores are already empty. Option A is refuted by the similar peaks in both media. Option C is wrong because thapsigargin inhibits SERCA, not Gq. Option D is incorrect as HeLa cells lack voltage-gated Ca2+ channels.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -450,12 +455,12 @@
       "question": "What does this cAMP accumulation data reveal about the mechanism of action of the two bacterial toxins?",
       "dataContext": "S49 lymphoma cells (which express both Gs-coupled beta-adrenergic and Gi-coupled M2 muscarinic receptors) were treated with bacterial toxins and then stimulated. Intracellular cAMP was measured.\n\nCondition | cAMP (pmol/10^6 cells)\nBasal (no stimulation) | 5\n+ Isoproterenol (beta-agonist) | 45\n+ Isoproterenol + carbachol (M2 agonist) | 18\n+ Cholera toxin pretreatment, then basal | 120\n+ Cholera toxin + isoproterenol | 125\n+ Pertussis toxin pretreatment, then basal | 8\n+ Pertussis toxin + isoproterenol | 50\n+ Pertussis toxin + isoproterenol + carbachol | 48",
       "options": [
-        "Both toxins activate Gs, as both increase cAMP above basal levels",
         "Cholera toxin constitutively activates Gs (cAMP elevated even basally to 120), while pertussis toxin uncouples Gi from its receptor (carbachol can no longer reduce isoproterenol-stimulated cAMP from 50 to a lower value)",
+        "Both toxins activate Gs, as both increase cAMP above basal levels",
         "Pertussis toxin inhibits adenylyl cyclase directly, reducing maximal cAMP production",
         "Cholera toxin blocks Gi signaling while pertussis toxin blocks Gs signaling"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The data reveal distinct mechanisms for each toxin. Cholera toxin: Basal cAMP jumps from 5 to 120, and adding isoproterenol barely increases it further (125). This shows Gs is constitutively maximally active regardless of receptor stimulation, consistent with cholera toxin locking Gs-alpha in the GTP-bound state via ADP-ribosylation. Pertussis toxin: Basal cAMP is only slightly elevated (8 vs 5). Isoproterenol increases cAMP normally (50 vs 45 in untreated). The critical observation is that carbachol (an M2 agonist that activates Gi to inhibit adenylyl cyclase) has NO effect in pertussis toxin-treated cells (48 vs 50, compared to the normal reduction from 45 to 18). This demonstrates that pertussis toxin ADP-ribosylates Gi-alpha, locking it in the GDP-bound (inactive) state so it cannot couple to the M2 receptor. Option A is wrong because pertussis toxin has minimal effect on basal cAMP. Option C is incorrect as isoproterenol-stimulated cAMP with pertussis toxin (50) is comparable to control (45). Option D reverses the toxin targets.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",
@@ -472,11 +477,11 @@
       "experimentContext": "Receptor X is a seven-transmembrane receptor cloned from zebrafish neurons. It is stably expressed in HEK293 cells (which endogenously express Gs, Gi, and Gq). The student has access to: isoproterenol (beta-AR agonist), carbachol (M2/M3 agonist), synthetic agonist for Receptor X, cholera toxin, pertussis toxin, U73122 (PLC inhibitor), forskolin (direct adenylyl cyclase activator), IBMX (phosphodiesterase inhibitor), Fura-2 (calcium indicator), and ELISA kits for cAMP.",
       "options": [
         "Treat cells with the Receptor X agonist and measure cAMP levels; if cAMP increases, it couples to Gs; if cAMP decreases, it couples to Gi; if unchanged, it couples to Gq",
-        "Measure three readouts in parallel: (1) cAMP levels +/- Receptor X agonist with pertussis toxin and cholera toxin controls, (2) intracellular Ca2+ with Fura-2 +/- U73122 to test for Gq/PLC coupling, and (3) cAMP response to forskolin +/- Receptor X agonist to detect Gi-mediated inhibition",
+        "Knock out all three G protein classes individually using CRISPR and observe which knockout abolishes the Receptor X response",
         "Perform co-immunoprecipitation of Receptor X with anti-Gs, anti-Gi, and anti-Gq antibodies in the absence of agonist to identify physical interaction",
-        "Knock out all three G protein classes individually using CRISPR and observe which knockout abolishes the Receptor X response"
+        "Measure three readouts in parallel: (1) cAMP levels +/- Receptor X agonist with pertussis toxin and cholera toxin controls, (2) intracellular Ca2+ with Fura-2 +/- U73122 to test for Gq/PLC coupling, and (3) cAMP response to forskolin +/- Receptor X agonist to detect Gi-mediated inhibition"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The comprehensive approach in option B tests for all three G protein classes simultaneously using functional readouts. For Gs: stimulate with Receptor X agonist and measure cAMP; if it rises, cholera toxin pretreatment should potentiate or occlude the response. For Gi: stimulate with forskolin (to elevate cAMP basally) and then add Receptor X agonist; if cAMP decreases, this indicates Gi coupling. Pertussis toxin should block this inhibition. For Gq: load cells with Fura-2 and stimulate; a Ca2+ transient indicates PLC activation. U73122 (a PLC inhibitor) should block this response. This multi-readout approach with appropriate pharmacological controls provides definitive identification. Option A is incomplete because it cannot definitively distinguish Gi coupling from no coupling (both could show unchanged cAMP if the Gi effect is subtle), and it does not test for Gq. Option C tests physical association in the inactive state, which may not reflect functional coupling (G proteins associate with GPCRs transiently). Option D is technically feasible but extremely labor-intensive and may have compensatory effects or cell viability issues.",
       "topic": "Cell Structure and Function",
       "difficulty": "EXPERT",

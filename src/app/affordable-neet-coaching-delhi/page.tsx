@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { IntentLandingPage } from '@/components/seo/IntentLandingPage'
 import { getIntentPageData } from '@/data/intent-seo/intent-pages-data'
-import { BreadcrumbSchema } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 

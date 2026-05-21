@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { BreadcrumbSchema } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { FAQSchema, FAQDisplay } from '@/components/seo/FAQSchema'
 
 // Metadata export (requires static generation in production)

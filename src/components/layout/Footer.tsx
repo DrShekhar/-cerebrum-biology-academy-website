@@ -195,7 +195,10 @@ export const Footer = memo(function Footer() {
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
-    { name: 'Dr. Shekhar C Singh — Faculty Profile', href: '/dr-shekhar-singh-biology-faculty-india' },
+    {
+      name: 'Dr. Shekhar C Singh — Faculty Profile',
+      href: '/dr-shekhar-singh-biology-faculty-india',
+    },
     { name: 'Our Faculty', href: '/faculty' },
     { name: 'Results & Success Stories', href: '/results' },
     { name: 'Blog', href: '/blog' },
@@ -428,6 +431,12 @@ export const Footer = memo(function Footer() {
 
                 {subscribeMessage && (
                   <p
+                    role={
+                      subscribeMessage.includes('Thank') || subscribeMessage.includes('subscribed')
+                        ? 'status'
+                        : 'alert'
+                    }
+                    aria-live="polite"
                     className={`text-sm ${subscribeMessage.includes('Thank') || subscribeMessage.includes('subscribed') ? 'text-green-400' : 'text-red-400'}`}
                   >
                     {subscribeMessage}

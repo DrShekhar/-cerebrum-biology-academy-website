@@ -19,7 +19,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FacultyListSchema } from '@/components/seo/PersonSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
-import { BreadcrumbSchema } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 
 export default function FacultyPage() {
   const specializations = [

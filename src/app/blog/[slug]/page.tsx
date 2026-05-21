@@ -2,7 +2,8 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPostSlugs, getRelatedPosts, getCategoryBySlug } from '@/lib/blog/mdx'
 import { BlogPostPage } from '@/components/blog/BlogPostPage'
-import { BreadcrumbSchema, COMMON_BREADCRUMBS, HowToSchema } from '@/components/seo'
+import { BreadcrumbSchema, COMMON_BREADCRUMBS } from '@/components/seo/BreadcrumbSchema'
+import { HowToSchema } from '@/components/seo/StructuredData'
 import { TechArticleSchema } from '@/components/seo/TechArticleSchema'
 import { HOWTO_CONFIGS } from '@/data/howto-schemas'
 
@@ -60,6 +61,7 @@ export async function generateStaticParams() {
 
 // Return 404 for any slug not in generateStaticParams
 export const dynamicParams = false
+export const revalidate = 3600
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params

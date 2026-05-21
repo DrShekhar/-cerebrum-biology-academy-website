@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import { getPostsByCategory, getCategoryBySlug, blogCategories } from '@/lib/blog/mdx'
 import { CategoryArchivePage } from '@/components/blog/CategoryArchivePage'
 
+export const revalidate = 3600
+
 interface Props {
   params: Promise<{ slug: string }>
 }

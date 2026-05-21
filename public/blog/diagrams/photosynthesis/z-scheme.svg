@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" role="img" aria-labelledby="zscheme-title zscheme-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="zscheme-title">Z-scheme of light-dependent reactions in photosynthesis</title>
+  <desc id="zscheme-desc">Energy diagram showing the Z-scheme of photosynthesis: water splits at PS II, electrons travel through plastoquinone, cytochrome b6f, plastocyanin, get re-excited at PS I, then reduce NADP+ to NADPH via ferredoxin and FNR. ATP is generated via chemiosmosis at cytochrome b6f.</desc>
+
+  <rect width="800" height="540" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" fill="#0f172a" font-size="20" font-weight="700">Z-Scheme — Light-Dependent Reactions</text>
+  <text x="400" y="54" text-anchor="middle" fill="#475569" font-size="13">Non-cyclic electron transport: H₂O → PS II → PQ → Cyt b₆f → PC → PS I → Fd → NADPH</text>
+
+  <!-- Y-axis: redox potential -->
+  <line x1="80" y1="100" x2="80" y2="450" stroke="#475569" stroke-width="2"/>
+  <text x="40" y="105" fill="#475569" font-size="11">−1.2 V</text>
+  <text x="40" y="270" fill="#475569" font-size="11">  0.0 V</text>
+  <text x="40" y="450" fill="#475569" font-size="11">+0.8 V</text>
+  <text x="25" y="275" fill="#0f172a" font-size="12" font-weight="600" transform="rotate(-90, 25, 275)">Redox potential (E°') →</text>
+
+  <!-- X-axis baseline -->
+  <line x1="80" y1="455" x2="760" y2="455" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- ============ PS II (Photosystem II) cluster ============ -->
+  <g>
+    <!-- H2O at bottom-left -->
+    <rect x="100" y="425" width="80" height="36" rx="6" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="140" y="447" text-anchor="middle" fill="#1e3a8a" font-size="13" font-weight="700">H₂O</text>
+    <text x="140" y="478" text-anchor="middle" fill="#1e40af" font-size="10">→ ½O₂ + 2H⁺ + 2e⁻</text>
+
+    <!-- PS II (P680) at bottom -->
+    <rect x="200" y="370" width="110" height="80" rx="8" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+    <text x="255" y="396" text-anchor="middle" fill="#854d0e" font-size="14" font-weight="700">PS II</text>
+    <text x="255" y="416" text-anchor="middle" fill="#854d0e" font-size="11">(P680)</text>
+    <text x="255" y="437" text-anchor="middle" fill="#854d0e" font-size="10">absorbs 680 nm</text>
+
+    <!-- Excited P680* at top of first peak -->
+    <rect x="200" y="110" width="110" height="56" rx="8" fill="#fbbf24" stroke="#a16207" stroke-width="2"/>
+    <text x="255" y="135" text-anchor="middle" fill="#7c2d12" font-size="14" font-weight="700">P680*</text>
+    <text x="255" y="155" text-anchor="middle" fill="#7c2d12" font-size="10">excited state</text>
+
+    <!-- Photon arrow into PS II (upward) -->
+    <path d="M 255 365 L 255 175" stroke="#facc15" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <path d="M 255 175 L 250 187 L 260 187 Z" fill="#facc15"/>
+    <text x="270" y="285" fill="#a16207" font-size="11" font-weight="600">hν</text>
+    <text x="270" y="300" fill="#a16207" font-size="10">photon</text>
+
+    <!-- Water-splitting electron arrow into PS II -->
+    <path d="M 180 443 L 200 410" stroke="#0891b2" stroke-width="2"/>
+    <path d="M 200 410 L 194 414 L 196 405 Z" fill="#0891b2"/>
+  </g>
+
+  <!-- ============ ETC: PS II to PS I ============ -->
+  <g>
+    <!-- PQ (Plastoquinone) -->
+    <circle cx="380" cy="195" r="22" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+    <text x="380" y="200" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">PQ</text>
+
+    <!-- Cyt b6f -->
+    <rect x="425" y="220" width="64" height="40" rx="6" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="457" y="240" text-anchor="middle" fill="#5b21b6" font-size="11" font-weight="700">Cyt b₆f</text>
+    <text x="457" y="254" text-anchor="middle" fill="#5b21b6" font-size="9">ATP synth</text>
+
+    <!-- PC (Plastocyanin) -->
+    <circle cx="525" cy="280" r="22" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+    <text x="525" y="285" text-anchor="middle" fill="#991b1b" font-size="11" font-weight="700">PC</text>
+
+    <!-- Electron transport path: P680* → PQ → Cyt b6f → PC → PS I -->
+    <path d="M 310 140 Q 350 165 380 175" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+    <path d="M 380 175 L 372 173 L 376 182 Z" fill="#0891b2"/>
+
+    <path d="M 380 218 Q 405 230 425 240" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+    <path d="M 425 240 L 418 235 L 419 244 Z" fill="#0891b2"/>
+
+    <path d="M 489 250 Q 510 265 525 260" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+    <path d="M 525 260 L 519 254 L 521 262 Z" fill="#0891b2"/>
+  </g>
+
+  <!-- ATP marker (chemiosmosis at cyt b6f) -->
+  <g transform="translate(420, 165)">
+    <rect x="0" y="0" width="76" height="32" rx="14" fill="#facc15" stroke="#a16207" stroke-width="2"/>
+    <text x="38" y="22" text-anchor="middle" fill="#7c2d12" font-size="13" font-weight="700">ATP ★</text>
+    <text x="38" y="-4" text-anchor="middle" fill="#a16207" font-size="9">made here</text>
+  </g>
+  <line x1="457" y1="220" x2="457" y2="197" stroke="#a16207" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- ============ PS I (Photosystem I) cluster ============ -->
+  <g>
+    <!-- PS I (P700) at middle-right -->
+    <rect x="560" y="305" width="110" height="80" rx="8" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+    <text x="615" y="331" text-anchor="middle" fill="#854d0e" font-size="14" font-weight="700">PS I</text>
+    <text x="615" y="351" text-anchor="middle" fill="#854d0e" font-size="11">(P700)</text>
+    <text x="615" y="372" text-anchor="middle" fill="#854d0e" font-size="10">absorbs 700 nm</text>
+
+    <!-- Excited P700* at second peak (higher than P680*) -->
+    <rect x="560" y="85" width="110" height="56" rx="8" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <text x="615" y="110" text-anchor="middle" fill="#7c2d12" font-size="14" font-weight="700">P700*</text>
+    <text x="615" y="130" text-anchor="middle" fill="#7c2d12" font-size="10">excited state</text>
+
+    <!-- Photon into PS I -->
+    <path d="M 615 300 L 615 150" stroke="#facc15" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <path d="M 615 150 L 610 162 L 620 162 Z" fill="#facc15"/>
+    <text x="630" y="225" fill="#a16207" font-size="11" font-weight="600">hν</text>
+  </g>
+
+  <!-- PC to PS I -->
+  <path d="M 547 280 Q 565 320 605 340" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+  <path d="M 605 340 L 596 337 L 599 346 Z" fill="#0891b2"/>
+
+  <!-- ============ PS I to NADPH ============ -->
+  <g>
+    <!-- Fd (Ferredoxin) -->
+    <circle cx="720" cy="160" r="22" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+    <text x="720" y="165" text-anchor="middle" fill="#831843" font-size="11" font-weight="700">Fd</text>
+
+    <!-- FNR / NADPH -->
+    <rect x="690" y="225" width="80" height="40" rx="6" fill="#86efac" stroke="#15803d" stroke-width="2"/>
+    <text x="730" y="244" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">NADP⁺</text>
+    <text x="730" y="258" text-anchor="middle" fill="#14532d" font-size="11" font-weight="700">→ NADPH</text>
+
+    <!-- P700* → Fd -->
+    <path d="M 670 115 Q 710 130 720 140" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+    <path d="M 720 140 L 713 137 L 716 146 Z" fill="#0891b2"/>
+
+    <!-- Fd → NADPH -->
+    <path d="M 720 182 L 720 225" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+    <path d="M 720 225 L 715 218 L 725 218 Z" fill="#0891b2"/>
+  </g>
+
+  <!-- ============ Outputs panel ============ -->
+  <g transform="translate(80, 490)">
+    <rect x="0" y="0" width="680" height="40" rx="10" fill="#0f172a"/>
+    <text x="20" y="25" fill="#facc15" font-size="13" font-weight="700">Net output:</text>
+    <text x="120" y="25" fill="#e2e8f0" font-size="13">2 H₂O + 2 NADP⁺ + 3 ADP + 3 Pᵢ + light → O₂ + 2 NADPH + 3 ATP</text>
+  </g>
+</svg>

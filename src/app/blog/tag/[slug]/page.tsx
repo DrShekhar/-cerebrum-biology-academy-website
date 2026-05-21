@@ -3,6 +3,8 @@ import { permanentRedirect } from 'next/navigation'
 import { getPostsByTag, getAllTags } from '@/lib/blog/mdx'
 import { TagArchivePage } from '@/components/blog/TagArchivePage'
 
+export const revalidate = 3600
+
 interface Props {
   params: Promise<{ slug: string }>
 }

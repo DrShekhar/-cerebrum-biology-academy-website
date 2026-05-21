@@ -314,6 +314,34 @@ export default async function middleware(req: NextRequest) {
     ) {
       response.headers.set('X-Robots-Tag', 'noindex, follow')
     }
+
+    // Defensive noindex on internal / dashboard / auth / staff / utility routes.
+    // These pages either gate behind auth client-side or are role-scoped portals;
+    // none should ever surface in Google search results. Belt-and-suspenders with
+    // the auth-protected redirect logic below.
+    const noindexPrefixes = [
+      '/admin',
+      '/consultant',
+      '/counselor',
+      '/parent',
+      '/student',
+      '/teacher',
+      '/dashboard',
+      '/auth',
+      '/sign-in',
+      '/sign-up',
+      '/onboarding',
+      '/purchase',
+      '/free-resources/admin',
+      '/neet-tools/quiz-competition',
+    ]
+    if (
+      noindexPrefixes.some(
+        (prefix) => pathname === prefix || pathname.startsWith(prefix + '/')
+      )
+    ) {
+      response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+    }
   }
 
   // PERFORMANCE: Check public routes BEFORE JWT verification to skip auth on 90%+ of traffic

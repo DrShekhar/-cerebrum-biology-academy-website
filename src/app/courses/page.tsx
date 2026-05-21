@@ -1,7 +1,9 @@
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { generatePageMetadata } from '@/lib/seo/metadata'
-import { BreadcrumbSchema, CoursesPageWebPageSchema, ContentFreshness } from '@/components/seo'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { CoursesPageWebPageSchema } from '@/components/seo/StructuredData'
+import { ContentFreshness } from '@/components/seo/ContentFreshness'
 import { generateSpeakableWebPageSchema, speakablePages } from '@/lib/seo/speakableSchema'
 
 // Lazy load the heavy courses listing component

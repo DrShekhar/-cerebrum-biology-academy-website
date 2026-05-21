@@ -20,6 +20,8 @@ import {
 } from 'lucide-react'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 
+export const revalidate = 86400
+
 export const metadata: Metadata = {
   title: 'NEET Results 2024-25 | 98% Success Rate | 67 AIIMS Selections | Cerebrum Biology Academy',
   description:

@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { FAQSchema } from '@/components/seo'
+import { FAQSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'NEET 2026 Preparation Roadmap | Month-by-Month Study Plan',

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Trophy, Star, ArrowRight, Medal, Target, TrendingUp, Crown, Zap } from 'lucide-react'
 import Script from 'next/script'
-import { ResultsPageWebPageSchema } from '@/components/seo'
+import { ResultsPageWebPageSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Student Results & Success Stories | NEET Biology Achievements',

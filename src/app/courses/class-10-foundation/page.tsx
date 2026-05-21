@@ -166,14 +166,28 @@ export default function Class10FoundationPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => trackAndOpenWhatsApp({ source: 'class-10-foundation-enroll', message: 'Hi! I want to enroll in Class 10 Foundation Biology. Please share fee structure, batch timings, and enrollment process.', campaign: 'class-10-foundation' })}
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-10-foundation-enroll',
+                      message:
+                        'Hi! I want to enroll in Class 10 Foundation Biology. Please share fee structure, batch timings, and enrollment process.',
+                      campaign: 'class-10-foundation',
+                    })
+                  }
                   className="w-full sm:w-auto bg-white text-green-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Join Class 10 Foundation
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button
-                  onClick={() => trackAndOpenWhatsApp({ source: 'class-10-foundation-demo', message: 'Hi! I want to book a FREE demo class for Class 10 Foundation Biology. Please share available timings.', campaign: 'class-10-foundation' })}
+                  onClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-10-foundation-demo',
+                      message:
+                        'Hi! I want to book a FREE demo class for Class 10 Foundation Biology. Please share available timings.',
+                      campaign: 'class-10-foundation',
+                    })
+                  }
                   className="w-full sm:w-auto border border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center min-h-[44px]"
                 >
                   Book Free Demo
@@ -181,7 +195,7 @@ export default function Class10FoundationPage() {
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Class 10 Highlights</h3>
+              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Class 10 Highlights</h2>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Clock className="w-6 h-6 mr-3 text-green-400" />
@@ -426,7 +440,14 @@ export default function Class10FoundationPage() {
                 <PricingDisplay
                   courseId="class-10-foundation-biology"
                   showCompetitiveAdvantage={true}
-                  onEnrollClick={() => trackAndOpenWhatsApp({ source: 'class-10-foundation-enroll', message: 'Hi! I want to enroll in Class 10 Foundation Biology. Please share fee structure, batch timings, and enrollment process.', campaign: 'class-10-foundation' })}
+                  onEnrollClick={() =>
+                    trackAndOpenWhatsApp({
+                      source: 'class-10-foundation-enroll',
+                      message:
+                        'Hi! I want to enroll in Class 10 Foundation Biology. Please share fee structure, batch timings, and enrollment process.',
+                      campaign: 'class-10-foundation',
+                    })
+                  }
                 />
               </div>
             </div>

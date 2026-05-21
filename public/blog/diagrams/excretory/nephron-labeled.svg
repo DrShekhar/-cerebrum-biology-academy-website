@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="nephron-title nephron-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="nephron-title">Nephron — the functional unit of the kidney</title>
+  <desc id="nephron-desc">Labeled diagram showing Bowman's capsule, glomerulus, proximal convoluted tubule, loop of Henle (descending and ascending limbs), distal convoluted tubule, and collecting duct, along with the associated blood supply.</desc>
+
+  <!-- Background -->
+  <rect width="800" height="560" fill="#f8fafc"/>
+
+  <!-- Cortex / Medulla separator (subtle) -->
+  <line x1="60" y1="220" x2="740" y2="220" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="70" y="210" fill="#64748b" font-size="13" font-style="italic">Cortex</text>
+  <text x="70" y="240" fill="#64748b" font-size="13" font-style="italic">Medulla</text>
+
+  <!-- ===== Bowman's capsule + glomerulus ===== -->
+  <!-- Bowman's capsule (cup shape) -->
+  <path d="M 130 110 Q 110 140 130 170 L 175 170 L 175 110 Z" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+  <!-- Glomerulus (tangled capillary tuft) -->
+  <g stroke="#dc2626" stroke-width="2" fill="none">
+    <circle cx="148" cy="140" r="20" fill="#fecaca"/>
+    <path d="M 135 130 Q 145 125 155 132 Q 152 138 145 140 Q 153 145 158 138 Q 152 155 140 150 Q 145 142 138 138 Q 145 132 152 142"/>
+  </g>
+  <!-- Afferent arteriole -->
+  <path d="M 50 130 Q 90 130 130 138" stroke="#dc2626" stroke-width="4" fill="none"/>
+  <text x="55" y="120" fill="#991b1b" font-size="12">Afferent arteriole</text>
+  <!-- Efferent arteriole -->
+  <path d="M 130 150 Q 100 165 65 175" stroke="#dc2626" stroke-width="3" fill="none"/>
+  <text x="50" y="195" fill="#991b1b" font-size="12">Efferent arteriole</text>
+
+  <!-- Bowman's capsule label -->
+  <text x="190" y="125" fill="#0f172a" font-size="14" font-weight="600">Bowman's capsule</text>
+  <text x="190" y="142" fill="#475569" font-size="12">(double-walled cup)</text>
+  <text x="190" y="160" fill="#0f172a" font-size="14" font-weight="600">Glomerulus</text>
+  <text x="190" y="177" fill="#475569" font-size="12">(filtration site)</text>
+
+  <!-- ===== PCT — Proximal Convoluted Tubule ===== -->
+  <path d="M 175 145 Q 230 130 280 145 Q 320 160 340 145 Q 370 130 400 150 Q 420 160 410 175 Q 380 195 350 178 Q 320 170 290 185 Q 260 200 230 180 Q 215 170 200 175"
+        stroke="#0891b2" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <text x="385" y="100" fill="#0f172a" font-size="14" font-weight="600">PCT</text>
+  <text x="385" y="116" fill="#475569" font-size="11">Proximal Convoluted Tubule</text>
+  <line x1="410" y1="120" x2="395" y2="148" stroke="#475569" stroke-width="1"/>
+
+  <!-- ===== Loop of Henle ===== -->
+  <!-- Descending limb -->
+  <line x1="200" y1="178" x2="200" y2="380" stroke="#0891b2" stroke-width="5"/>
+  <!-- Hairpin bottom -->
+  <path d="M 200 380 Q 200 420 240 420 Q 280 420 280 380" stroke="#0891b2" stroke-width="5" fill="none"/>
+  <!-- Ascending limb (thicker = water-impermeable) -->
+  <line x1="280" y1="380" x2="280" y2="178" stroke="#0e7490" stroke-width="6"/>
+
+  <!-- Loop labels -->
+  <text x="120" y="295" fill="#0f172a" font-size="14" font-weight="600">Descending limb</text>
+  <text x="120" y="312" fill="#475569" font-size="11">(water-permeable)</text>
+  <line x1="190" y1="295" x2="200" y2="295" stroke="#475569" stroke-width="1"/>
+
+  <text x="305" y="295" fill="#0f172a" font-size="14" font-weight="600">Ascending limb</text>
+  <text x="305" y="312" fill="#475569" font-size="11">(salt-permeable, water-impermeable)</text>
+  <line x1="290" y1="295" x2="300" y2="295" stroke="#475569" stroke-width="1"/>
+
+  <text x="305" y="425" fill="#0f172a" font-size="14" font-weight="600">Loop of Henle</text>
+  <text x="305" y="442" fill="#475569" font-size="11">(counter-current multiplier)</text>
+  <line x1="290" y1="420" x2="300" y2="425" stroke="#475569" stroke-width="1"/>
+
+  <!-- ===== DCT — Distal Convoluted Tubule ===== -->
+  <path d="M 280 180 Q 310 165 345 178 Q 380 195 410 180 Q 445 165 480 180 Q 510 195 530 180"
+        stroke="#16a34a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <text x="425" y="160" fill="#0f172a" font-size="14" font-weight="600">DCT</text>
+  <text x="425" y="177" fill="#475569" font-size="12">Distal Convoluted Tubule</text>
+  <line x1="450" y1="180" x2="450" y2="170" stroke="#475569" stroke-width="1"/>
+
+  <!-- ===== Collecting Duct ===== -->
+  <line x1="530" y1="180" x2="530" y2="490" stroke="#7c3aed" stroke-width="8"/>
+  <text x="555" y="335" fill="#0f172a" font-size="14" font-weight="600">Collecting duct</text>
+  <text x="555" y="352" fill="#475569" font-size="11">(final urine concentration,</text>
+  <text x="555" y="367" fill="#475569" font-size="11">ADH regulates water reabsorption)</text>
+  <line x1="540" y1="345" x2="530" y2="345" stroke="#475569" stroke-width="1"/>
+
+  <!-- Renal pelvis arrow -->
+  <path d="M 526 500 L 530 515 L 534 500 Z" fill="#7c3aed"/>
+  <text x="555" y="510" fill="#475569" font-size="11">→ renal pelvis → ureter</text>
+
+  <!-- ===== Direction-of-flow arrows ===== -->
+  <g fill="#64748b">
+    <path d="M 263 178 L 271 173 L 271 183 Z"/>
+    <path d="M 200 280 L 195 272 L 205 272 Z"/>
+    <path d="M 280 280 L 285 288 L 275 288 Z"/>
+    <path d="M 393 178 L 401 173 L 401 183 Z"/>
+    <path d="M 530 430 L 525 422 L 535 422 Z"/>
+  </g>
+
+  <!-- ===== Legend ===== -->
+  <g transform="translate(40, 470)">
+    <text x="0" y="0" fill="#0f172a" font-size="13" font-weight="700">Legend</text>
+    <line x1="0" y1="14" x2="24" y2="14" stroke="#0891b2" stroke-width="5" stroke-linecap="round"/>
+    <text x="30" y="18" fill="#334155" font-size="12">PCT &amp; descending limb</text>
+    <line x1="0" y1="34" x2="24" y2="34" stroke="#0e7490" stroke-width="6" stroke-linecap="round"/>
+    <text x="30" y="38" fill="#334155" font-size="12">Ascending limb (active salt pump)</text>
+    <line x1="0" y1="54" x2="24" y2="54" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+    <text x="30" y="58" fill="#334155" font-size="12">DCT (selective reabsorption)</text>
+    <line x1="0" y1="74" x2="24" y2="74" stroke="#7c3aed" stroke-width="6" stroke-linecap="round"/>
+    <text x="30" y="78" fill="#334155" font-size="12">Collecting duct (ADH-controlled)</text>
+  </g>
+</svg>
