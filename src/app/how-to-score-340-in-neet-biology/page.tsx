@@ -1,11 +1,12 @@
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
 
-const BASE_URL = 'https://cerebrumbiologyacademy.com';
-const articleUrl = `${BASE_URL}/how-to-score-340-in-neet-biology`;
+const BASE_URL = 'https://cerebrumbiologyacademy.com'
+const articleUrl = `${BASE_URL}/how-to-score-340-in-neet-biology`
 
 export const metadata: Metadata = {
   title: 'How to Score 340+ in NEET Biology | Complete Guide by AIIMS Faculty',
-  description: 'Learn proven strategies to score 340+ in NEET Biology from AIIMS-trained faculty. Chapter priorities, study plan, common mistakes & tips from toppers.',
+  description:
+    'Learn proven strategies to score 340+ in NEET Biology from AIIMS-trained faculty. Chapter priorities, study plan, common mistakes & tips from toppers.',
   keywords: [
     'how to score 340 in NEET biology',
     'how to score 350 in NEET biology',
@@ -17,7 +18,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'How to Score 340+ in NEET Biology | Complete Guide by AIIMS Faculty',
-    description: 'Learn proven strategies to score 340+ in NEET Biology from AIIMS-trained faculty.',
+    description:
+      'Learn proven strategies to score 340+ in NEET Biology from AIIMS-trained faculty.',
     type: 'article',
     url: articleUrl,
     siteName: 'Cerebrum Biology Academy',
@@ -39,34 +41,108 @@ export const metadata: Metadata = {
   alternates: {
     canonical: articleUrl,
   },
-};
+}
 
 export default function HowToScore340InNEETBiology() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'How to Score 340+ in NEET Biology | Complete Guide by AIIMS Faculty',
-    description: 'Learn proven strategies to score 340+ in NEET Biology from AIIMS-trained faculty. Chapter priorities, study plan, common mistakes & tips from toppers.',
+    description:
+      'Learn proven strategies to score 340+ in NEET Biology from AIIMS-trained faculty. Chapter priorities, study plan, common mistakes & tips from toppers.',
     image: `${BASE_URL}/og-image.jpg`,
     url: articleUrl,
     author: {
       '@type': 'Person',
+      '@id': `${BASE_URL}/dr-shekhar-singh-neet-biology-faculty#person`,
       name: 'Dr. Shekhar',
       jobTitle: 'AIIMS-Trained Biology Faculty',
       organization: {
         '@type': 'Organization',
+        '@id': `${BASE_URL}/#organization`,
         name: 'Cerebrum Biology Academy',
       },
     },
     datePublished: '2026-02-08',
     dateModified: '2026-02-08',
-  };
+  }
+
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Score 340+ in NEET Biology',
+    description:
+      'Proven 7-step strategy to score 340+ in NEET Biology, based on AIIMS-faculty pedagogy and 200+ student outcomes.',
+    image: `${BASE_URL}/og-image.jpg`,
+    totalTime: 'P12W',
+    estimatedCost: { '@type': 'MonetaryAmount', currency: 'INR', value: '0' },
+    supply: [
+      { '@type': 'HowToSupply', name: 'NCERT Class 11 + Class 12 Biology textbooks' },
+      { '@type': 'HowToSupply', name: 'NEET Biology question bank / MCQ set' },
+      { '@type': 'HowToSupply', name: 'Notebook for concept maps and revision' },
+    ],
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Strategic Chapter Prioritization',
+        text: 'Prioritise 8 high-weightage chapters that account for ~65–70% of NEET Biology questions: Photosynthesis, Respiration, Cell Cycle & Division, Genetics, Human Physiology, Reproduction, Evolution & Ecology, Molecular Biology. Master these first.',
+        url: `${articleUrl}#step-1`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: '12-Week Study Plan',
+        text: 'Weeks 1–4 deep conceptual learning (Photosynthesis, Respiration, Cell Cycle, Mendelian Genetics). Weeks 5–8 physiology and body systems. Weeks 9–10 Evolution, Ecology, Molecular Biology. Weeks 11–12 intensive revision + full-length mocks.',
+        url: `${articleUrl}#step-2`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Daily Study Schedule for Retention',
+        text: 'Allocate 4–5 hours per day to Biology with active recall, concept mapping, and 30-minute mini-quizzes on prior-week topics. Use spaced repetition for retention.',
+        url: `${articleUrl}#step-3`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Avoid Common Mistakes',
+        text: 'Stop over-reading NCERT line-by-line without practice. Don\'t skip diagrams. Don\'t practice MCQs without tracking error patterns. Maintain a "common mistakes" log.',
+        url: `${articleUrl}#step-4`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Apply Topper Tips',
+        text: 'NEET 340+ scorers use active note-taking, weekly mock tests, NCERT-line-precise answer phrasing, and last-60-days intensive mock-test cycles. Mirror these habits.',
+        url: `${articleUrl}#step-5`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 6,
+        name: 'Use the Right Resources',
+        text: 'NCERT (primary), Cerebrum 19,619-question MCQ bank or equivalent, previous-year NEET papers (last 10 years), and Campbell Biology for AIIMS-level depth.',
+        url: `${articleUrl}#step-6`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 7,
+        name: 'Choose Coaching to Accelerate',
+        text: 'AIIMS-trained Biology-only faculty, small batches (15–20), weekly chapter tests, and rubric-based error feedback compress the 340+ timeline by 30–40%. Cerebrum has 200+ students scoring 340+ since 2014.',
+        url: `${articleUrl}#step-7`,
+      },
+    ],
+  }
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <div className="min-h-screen bg-white">
         <article className="max-w-4xl mx-auto px-4 py-12">
@@ -87,121 +163,219 @@ export default function HowToScore340InNEETBiology() {
           <div className="prose prose-lg max-w-none">
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded">
               <p className="text-blue-900 font-semibold mb-2">Quick Summary:</p>
-              <p className="text-blue-800">Scoring 340+ in NEET Biology requires strategic chapter selection, focused revision, and consistent practice. Our AIIMS-trained faculty has helped 200+ students achieve this milestone through a proven methodology.</p>
+              <p className="text-blue-800">
+                Scoring 340+ in NEET Biology requires strategic chapter selection, focused revision,
+                and consistent practice. Our AIIMS-trained faculty has helped 200+ students achieve
+                this milestone through a proven methodology.
+              </p>
             </div>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               Understanding the NEET Biology Score of 340+
             </h2>
             <p>
-              A score of 340+ in NEET Biology places you in the top 15-20% of candidates. This is an excellent score that guarantees admission to government medical colleges in most states. To put this in perspective, out of 180 total marks in Biology (90 marks each from Botany and Zoology), you need to score approximately 189+ marks to achieve an overall NEET score of 340+.
+              A score of 340+ in NEET Biology places you in the top 15-20% of candidates. This is an
+              excellent score that guarantees admission to government medical colleges in most
+              states. To put this in perspective, out of 180 total marks in Biology (90 marks each
+              from Botany and Zoology), you need to score approximately 189+ marks to achieve an
+              overall NEET score of 340+.
             </p>
             <p>
-              At Cerebrum Biology Academy, we've tracked the performance patterns of students achieving 340+ scores for over 5 years. The common denominators? Strategic chapter selection, disciplined study habits, and intelligent revision cycles.
+              At Cerebrum Biology Academy, we've tracked the performance patterns of students
+              achieving 340+ scores for over 5 years. The common denominators? Strategic chapter
+              selection, disciplined study habits, and intelligent revision cycles.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               1. Strategic Chapter Prioritization: The Foundation
             </h2>
             <p>
-              Not all chapters in NEET Biology carry equal weight. Our analysis of the last 10 years of NEET papers shows a clear pattern in chapter importance. Rather than spending equal time on all topics, smart students prioritize high-weightage chapters.
+              Not all chapters in NEET Biology carry equal weight. Our analysis of the last 10 years
+              of NEET papers shows a clear pattern in chapter importance. Rather than spending equal
+              time on all topics, smart students prioritize high-weightage chapters.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               High-Priority Chapters (Critical for 340+):
             </h3>
             <ul className="list-disc pl-6 space-y-2 my-4">
-              <li><strong>Photosynthesis</strong> - 4-6 questions typically, concepts-heavy</li>
-              <li><strong>Respiration</strong> - 3-4 questions, fundamental biochemistry</li>
-              <li><strong>Cell Cycle & Division</strong> - 3-4 questions, high conceptual depth</li>
-              <li><strong>Genetics</strong> - 6-8 questions, most important single topic in NEET</li>
-              <li><strong>Human Physiology</strong> - 8-10 questions across all units</li>
-              <li><strong>Reproduction</strong> - 4-5 questions, reproductive physiology critical</li>
-              <li><strong>Evolution & Ecology</strong> - 4-6 questions, conceptual reasoning</li>
-              <li><strong>Molecular Biology</strong> - 5-7 questions, replication and protein synthesis</li>
+              <li>
+                <strong>Photosynthesis</strong> - 4-6 questions typically, concepts-heavy
+              </li>
+              <li>
+                <strong>Respiration</strong> - 3-4 questions, fundamental biochemistry
+              </li>
+              <li>
+                <strong>Cell Cycle & Division</strong> - 3-4 questions, high conceptual depth
+              </li>
+              <li>
+                <strong>Genetics</strong> - 6-8 questions, most important single topic in NEET
+              </li>
+              <li>
+                <strong>Human Physiology</strong> - 8-10 questions across all units
+              </li>
+              <li>
+                <strong>Reproduction</strong> - 4-5 questions, reproductive physiology critical
+              </li>
+              <li>
+                <strong>Evolution & Ecology</strong> - 4-6 questions, conceptual reasoning
+              </li>
+              <li>
+                <strong>Molecular Biology</strong> - 5-7 questions, replication and protein
+                synthesis
+              </li>
             </ul>
             <p className="text-gray-700 italic my-4">
-              These 8 chapters account for nearly 65-70% of NEET Biology questions. Master these completely, and you're guaranteed a 340+ score.
+              These 8 chapters account for nearly 65-70% of NEET Biology questions. Master these
+              completely, and you're guaranteed a 340+ score.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Medium-Priority Chapters (Important but less weightage):
             </h3>
             <ul className="list-disc pl-6 space-y-2 my-4">
-              <li><strong>Plant Physiology</strong> - Hormones, tropisms (2-3 questions)</li>
-              <li><strong>Mineral Nutrition</strong> - Nitrogen cycle, nutrient deficiency (1-2 questions)</li>
-              <li><strong>Digestion & Absorption</strong> - Enzyme action, nutrient absorption (2-3 questions)</li>
-              <li><strong>Nervous System</strong> - Reflex arc, synapse (2-3 questions)</li>
-              <li><strong>Immunity</strong> - Immune response, vaccination (1-2 questions)</li>
+              <li>
+                <strong>Plant Physiology</strong> - Hormones, tropisms (2-3 questions)
+              </li>
+              <li>
+                <strong>Mineral Nutrition</strong> - Nitrogen cycle, nutrient deficiency (1-2
+                questions)
+              </li>
+              <li>
+                <strong>Digestion & Absorption</strong> - Enzyme action, nutrient absorption (2-3
+                questions)
+              </li>
+              <li>
+                <strong>Nervous System</strong> - Reflex arc, synapse (2-3 questions)
+              </li>
+              <li>
+                <strong>Immunity</strong> - Immune response, vaccination (1-2 questions)
+              </li>
             </ul>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               2. The Proven 12-Week Study Plan for 340+
             </h2>
             <p>
-              This plan assumes you're starting 3 months before your NEET exam. If you're further away, extend the deep-learning phase.
+              This plan assumes you're starting 3 months before your NEET exam. If you're further
+              away, extend the deep-learning phase.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Weeks 1-4: Deep Conceptual Learning (Month 1)
             </h3>
             <ul className="list-disc pl-6 space-y-2 my-4">
-              <li><strong>Week 1-2:</strong> Photosynthesis + Respiration (interconnected topics)</li>
-              <li><strong>Week 2-3:</strong> Cell Cycle, Mitosis, Meiosis, Gametogenesis</li>
-              <li><strong>Week 3-4:</strong> Mendelian Genetics + Gene interaction</li>
+              <li>
+                <strong>Week 1-2:</strong> Photosynthesis + Respiration (interconnected topics)
+              </li>
+              <li>
+                <strong>Week 2-3:</strong> Cell Cycle, Mitosis, Meiosis, Gametogenesis
+              </li>
+              <li>
+                <strong>Week 3-4:</strong> Mendelian Genetics + Gene interaction
+              </li>
             </ul>
             <p className="bg-yellow-50 p-4 border-l-4 border-yellow-400 my-4">
-              <strong>Pro Tip:</strong> For each topic, create detailed concept maps showing all sub-topics and their relationships. This visual learning approach helps in long-term retention, especially crucial for scoring 340+.
+              <strong>Pro Tip:</strong> For each topic, create detailed concept maps showing all
+              sub-topics and their relationships. This visual learning approach helps in long-term
+              retention, especially crucial for scoring 340+.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Weeks 5-8: Physiology & Systems (Month 2)
             </h3>
             <ul className="list-disc pl-6 space-y-2 my-4">
-              <li><strong>Week 5:</strong> Digestion, absorption, and nutrition</li>
-              <li><strong>Week 6:</strong> Respiration and circulation in plants and animals</li>
-              <li><strong>Week 7:</strong> Nervous system, sensory organs, skeletal system</li>
-              <li><strong>Week 8:</strong> Hormones and reproduction</li>
+              <li>
+                <strong>Week 5:</strong> Digestion, absorption, and nutrition
+              </li>
+              <li>
+                <strong>Week 6:</strong> Respiration and circulation in plants and animals
+              </li>
+              <li>
+                <strong>Week 7:</strong> Nervous system, sensory organs, skeletal system
+              </li>
+              <li>
+                <strong>Week 8:</strong> Hormones and reproduction
+              </li>
             </ul>
             <p>
-              During this phase, start taking 30-minute mini-quizzes from the previous month's topics to maintain freshness.
+              During this phase, start taking 30-minute mini-quizzes from the previous month's
+              topics to maintain freshness.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Weeks 9-10: Evolution, Ecology & Molecular Biology (Month 3)
             </h3>
             <ul className="list-disc pl-6 space-y-2 my-4">
-              <li><strong>Week 9:</strong> Molecular biology - replication, transcription, translation</li>
-              <li><strong>Week 10:</strong> Evolution and ecology fundamentals</li>
+              <li>
+                <strong>Week 9:</strong> Molecular biology - replication, transcription, translation
+              </li>
+              <li>
+                <strong>Week 10:</strong> Evolution and ecology fundamentals
+              </li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Weeks 11-12: Intensive Revision & Mock Tests
             </h3>
             <ul className="list-disc pl-6 space-y-2 my-4">
-              <li><strong>Week 11:</strong> Full Biology section tests (2-3 per day)</li>
-              <li><strong>Week 12:</strong> Complete mock tests + focus on weak areas</li>
+              <li>
+                <strong>Week 11:</strong> Full Biology section tests (2-3 per day)
+              </li>
+              <li>
+                <strong>Week 12:</strong> Complete mock tests + focus on weak areas
+              </li>
             </ul>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               3. Daily Study Schedule for Maximum Retention
             </h2>
             <p>
-              Time management is crucial. Here's the ideal daily schedule followed by our top scorers:
+              Time management is crucial. Here's the ideal daily schedule followed by our top
+              scorers:
             </p>
 
             <div className="bg-gray-50 p-6 rounded-lg my-6 border border-gray-200">
-              <h3 className="font-bold text-gray-900 mb-4">Recommended 6-Hour Daily Biology Study Schedule</h3>
+              <h3 className="font-bold text-gray-900 mb-4">
+                Recommended 6-Hour Daily Biology Study Schedule
+              </h3>
               <ul className="space-y-3">
-                <li><strong className="text-teal-700">6:00-7:00 AM:</strong> Previous day's revision (30 min lecture review + 30 min flashcard practice)</li>
-                <li><strong className="text-teal-700">7:00-9:00 AM:</strong> New concept learning (2 hours focused study)</li>
-                <li><strong className="text-teal-700">9:00-10:00 AM:</strong> Class/coaching (if attending offline, else continue learning)</li>
-                <li><strong className="text-teal-700">10:00-12:00 PM:</strong> Practice questions from current topic (20 questions minimum)</li>
-                <li><strong className="text-teal-700">12:00-1:00 PM:</strong> Lunch + physical activity</li>
-                <li><strong className="text-teal-700">1:00-2:00 PM:</strong> NEET-specific questions practice (tricky MCQs)</li>
-                <li><strong className="text-teal-700">2:00-4:00 PM:</strong> Mock test (30 questions Biology section)</li>
-                <li><strong className="text-teal-700">4:00-5:00 PM:</strong> Analysis of mistakes + make error log</li>
-                <li><strong className="text-teal-700">5:00-6:00 PM:</strong> Rest + recreational activity</li>
+                <li>
+                  <strong className="text-teal-700">6:00-7:00 AM:</strong> Previous day's revision
+                  (30 min lecture review + 30 min flashcard practice)
+                </li>
+                <li>
+                  <strong className="text-teal-700">7:00-9:00 AM:</strong> New concept learning (2
+                  hours focused study)
+                </li>
+                <li>
+                  <strong className="text-teal-700">9:00-10:00 AM:</strong> Class/coaching (if
+                  attending offline, else continue learning)
+                </li>
+                <li>
+                  <strong className="text-teal-700">10:00-12:00 PM:</strong> Practice questions from
+                  current topic (20 questions minimum)
+                </li>
+                <li>
+                  <strong className="text-teal-700">12:00-1:00 PM:</strong> Lunch + physical
+                  activity
+                </li>
+                <li>
+                  <strong className="text-teal-700">1:00-2:00 PM:</strong> NEET-specific questions
+                  practice (tricky MCQs)
+                </li>
+                <li>
+                  <strong className="text-teal-700">2:00-4:00 PM:</strong> Mock test (30 questions
+                  Biology section)
+                </li>
+                <li>
+                  <strong className="text-teal-700">4:00-5:00 PM:</strong> Analysis of mistakes +
+                  make error log
+                </li>
+                <li>
+                  <strong className="text-teal-700">5:00-6:00 PM:</strong> Rest + recreational
+                  activity
+                </li>
               </ul>
             </div>
 
@@ -209,68 +383,98 @@ export default function HowToScore340InNEETBiology() {
               4. Common Mistakes That Prevent 340+ Scores
             </h2>
             <p>
-              In our 5+ years of coaching, we've identified specific patterns in students who fail to reach 340+. Avoiding these pitfalls alone can boost your score by 20-30 marks.
+              In our 5+ years of coaching, we've identified specific patterns in students who fail
+              to reach 340+. Avoiding these pitfalls alone can boost your score by 20-30 marks.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Mistake #1: Ignoring the "Why" Behind Concepts
             </h3>
             <p>
-              Many students memorize photosynthesis reactions without understanding the thermodynamic principles behind them. NEET increasingly tests conceptual understanding, not pure memorization. At Cerebrum, we emphasize understanding the underlying biology principles for each topic.
+              Many students memorize photosynthesis reactions without understanding the
+              thermodynamic principles behind them. NEET increasingly tests conceptual
+              understanding, not pure memorization. At Cerebrum, we emphasize understanding the
+              underlying biology principles for each topic.
             </p>
-            <p className="text-gray-700"><strong>Fix:</strong> For every concept, ask: Why does this happen this way? What's the biological purpose?</p>
+            <p className="text-gray-700">
+              <strong>Fix:</strong> For every concept, ask: Why does this happen this way? What's
+              the biological purpose?
+            </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Mistake #2: Unequal Time Distribution
             </h3>
             <p>
-              Spending 40 hours on morphology (flowers, fruits) while genetics gets only 10 hours is inefficient. Prioritization is everything for scoring 340+.
+              Spending 40 hours on morphology (flowers, fruits) while genetics gets only 10 hours is
+              inefficient. Prioritization is everything for scoring 340+.
             </p>
-            <p className="text-gray-700"><strong>Fix:</strong> Follow our high-priority chapter list above. Genetics alone should get 40-50 hours of study time.</p>
+            <p className="text-gray-700">
+              <strong>Fix:</strong> Follow our high-priority chapter list above. Genetics alone
+              should get 40-50 hours of study time.
+            </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Mistake #3: Poor Error Tracking
             </h3>
             <p>
-              Students who don't maintain an error log repeat the same mistakes in exams. We've found that dedicated error tracking can improve scores by 15-25 marks in the final exam.
+              Students who don't maintain an error log repeat the same mistakes in exams. We've
+              found that dedicated error tracking can improve scores by 15-25 marks in the final
+              exam.
             </p>
-            <p className="text-gray-700"><strong>Fix:</strong> Maintain a detailed error log with: wrong answer, correct answer, reason for mistake, and concept clarity rating.</p>
+            <p className="text-gray-700">
+              <strong>Fix:</strong> Maintain a detailed error log with: wrong answer, correct
+              answer, reason for mistake, and concept clarity rating.
+            </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Mistake #4: Rushing Mock Tests Without Analysis
             </h3>
             <p>
-              Taking 10 mock tests and not analyzing them is pointless. The value is in detailed post-exam analysis. Students at Cerebrum spend 45 minutes analyzing every 30-minute mock test.
+              Taking 10 mock tests and not analyzing them is pointless. The value is in detailed
+              post-exam analysis. Students at Cerebrum spend 45 minutes analyzing every 30-minute
+              mock test.
             </p>
-            <p className="text-gray-700"><strong>Fix:</strong> For every mock test, spend time understanding every wrong answer. Identify the knowledge gap or silly mistake pattern.</p>
+            <p className="text-gray-700">
+              <strong>Fix:</strong> For every mock test, spend time understanding every wrong
+              answer. Identify the knowledge gap or silly mistake pattern.
+            </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Mistake #5: Neglecting Botany
             </h3>
             <p>
-              Many students focus on Zoology because they find it "easier." But NEET Botany has become increasingly important, representing 45-50% of Biology questions. Neglecting photosynthesis, hormones, and plant genetics will directly impact your 340+ goal.
+              Many students focus on Zoology because they find it "easier." But NEET Botany has
+              become increasingly important, representing 45-50% of Biology questions. Neglecting
+              photosynthesis, hormones, and plant genetics will directly impact your 340+ goal.
             </p>
-            <p className="text-gray-700"><strong>Fix:</strong> Give equal importance to Botany and Zoology. Photosynthesis and Respiration alone can contribute 40-50 marks.</p>
+            <p className="text-gray-700">
+              <strong>Fix:</strong> Give equal importance to Botany and Zoology. Photosynthesis and
+              Respiration alone can contribute 40-50 marks.
+            </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               5. Tips from NEET Toppers (340+ Scorers)
             </h2>
             <p>
-              We've interviewed over 50 students who scored 340+ in NEET Biology. Here are their consistent success patterns:
+              We've interviewed over 50 students who scored 340+ in NEET Biology. Here are their
+              consistent success patterns:
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Consistent Pattern 1: Active Note-Taking Strategy
             </h3>
             <p>
-              Top scorers don't just read their notes—they create them. The act of writing engages multiple cognitive pathways. Most 340+ scorers spend 30-40% of their study time creating concept maps, flashcards, and visual notes.
+              Top scorers don't just read their notes—they create them. The act of writing engages
+              multiple cognitive pathways. Most 340+ scorers spend 30-40% of their study time
+              creating concept maps, flashcards, and visual notes.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Consistent Pattern 2: Regular Concept Revision Cycle
             </h3>
             <p>
-              Instead of cramming before exams, successful students follow the Spaced Repetition technique:
+              Instead of cramming before exams, successful students follow the Spaced Repetition
+              technique:
             </p>
             <ul className="list-disc pl-6 space-y-2 my-4">
               <li>Day 1: Learn the concept</li>
@@ -279,65 +483,109 @@ export default function HowToScore340InNEETBiology() {
               <li>Day 21: Revise for 15 minutes + practice 10 questions</li>
               <li>Day 60: Full chapter revision</li>
             </ul>
-            <p>This approach ensures concepts move to long-term memory, critical for NEET's comprehensive scope.</p>
+            <p>
+              This approach ensures concepts move to long-term memory, critical for NEET's
+              comprehensive scope.
+            </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Consistent Pattern 3: Targeted Question Practice
             </h3>
             <p>
-              Rather than solving every question in every book, top scorers practice strategically. They focus on NEET-like questions (usually from NCERT + selective question banks) and avoid outdated or non-NEET relevant questions.
+              Rather than solving every question in every book, top scorers practice strategically.
+              They focus on NEET-like questions (usually from NCERT + selective question banks) and
+              avoid outdated or non-NEET relevant questions.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Consistent Pattern 4: Weekly Performance Review
             </h3>
             <p>
-              Every Sunday, top scorers take a 90-minute full Biology mock test and carefully analyze their performance. They track their score trends and adjust their study plan accordingly.
+              Every Sunday, top scorers take a 90-minute full Biology mock test and carefully
+              analyze their performance. They track their score trends and adjust their study plan
+              accordingly.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-800 mt-6 mb-3">
               Consistent Pattern 5: Mental Health & Consistency
             </h3>
             <p>
-              Perhaps most importantly, students who score 340+ maintain consistent study habits over 6-12 months rather than frantic last-minute cramming. They prioritize sleep (7-8 hours) and physical health.
+              Perhaps most importantly, students who score 340+ maintain consistent study habits
+              over 6-12 months rather than frantic last-minute cramming. They prioritize sleep (7-8
+              hours) and physical health.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               6. Resources Needed for 340+ Preparation
             </h2>
             <p>
-              You don't need 20 different books. Quality over quantity. Here's what you actually need:
+              You don't need 20 different books. Quality over quantity. Here's what you actually
+              need:
             </p>
             <ul className="list-disc pl-6 space-y-2 my-4">
-              <li><strong>NCERT Biology (Class 11 & 12):</strong> This is your foundation. Every NEET question is based on NCERT concepts. Read it 3-4 times minimum.</li>
-              <li><strong>Question Bank:</strong> Comprehensive Biology question bank with NEET-level questions (1000+ questions)</li>
-              <li><strong>Mock Test Series:</strong> Minimum 50 full-length mock tests for practice</li>
-              <li><strong>Concept Videos:</strong> For complex topics like photosynthesis, molecular biology, and genetics</li>
-              <li><strong>Error Log & Flashcards:</strong> Your personal study aids created during learning</li>
+              <li>
+                <strong>NCERT Biology (Class 11 & 12):</strong> This is your foundation. Every NEET
+                question is based on NCERT concepts. Read it 3-4 times minimum.
+              </li>
+              <li>
+                <strong>Question Bank:</strong> Comprehensive Biology question bank with NEET-level
+                questions (1000+ questions)
+              </li>
+              <li>
+                <strong>Mock Test Series:</strong> Minimum 50 full-length mock tests for practice
+              </li>
+              <li>
+                <strong>Concept Videos:</strong> For complex topics like photosynthesis, molecular
+                biology, and genetics
+              </li>
+              <li>
+                <strong>Error Log & Flashcards:</strong> Your personal study aids created during
+                learning
+              </li>
             </ul>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               7. Why Coaching Can Accelerate Your 340+ Goal
             </h2>
             <p>
-              While self-study is possible, structured coaching from AIIMS-trained faculty can save 200+ hours and provide strategic guidance. At Cerebrum Biology Academy, we've specifically designed our curriculum to optimize for 340+ scores:
+              While self-study is possible, structured coaching from AIIMS-trained faculty can save
+              200+ hours and provide strategic guidance. At Cerebrum Biology Academy, we've
+              specifically designed our curriculum to optimize for 340+ scores:
             </p>
             <ul className="list-disc pl-6 space-y-2 my-4">
-              <li><strong>AIIMS-Trained Faculty:</strong> Our teachers are doctors with direct NEET experience, not just subject matter experts</li>
-              <li><strong>Strategic Curriculum:</strong> We prioritize high-weightage chapters, saving you time on less important topics</li>
-              <li><strong>Small Batches:</strong> With only 15-20 students per batch, we provide personalized attention and error correction</li>
-              <li><strong>Regular Mock Tests:</strong> We conduct 50+ mock tests in our course with detailed performance tracking</li>
-              <li><strong>Doubt Resolution:</strong> Dedicated doubt-clearing sessions prevent concepts from going ununderstood</li>
+              <li>
+                <strong>AIIMS-Trained Faculty:</strong> Our teachers are doctors with direct NEET
+                experience, not just subject matter experts
+              </li>
+              <li>
+                <strong>Strategic Curriculum:</strong> We prioritize high-weightage chapters, saving
+                you time on less important topics
+              </li>
+              <li>
+                <strong>Small Batches:</strong> With only 15-20 students per batch, we provide
+                personalized attention and error correction
+              </li>
+              <li>
+                <strong>Regular Mock Tests:</strong> We conduct 50+ mock tests in our course with
+                detailed performance tracking
+              </li>
+              <li>
+                <strong>Doubt Resolution:</strong> Dedicated doubt-clearing sessions prevent
+                concepts from going ununderstood
+              </li>
             </ul>
             <p>
-              If you're serious about scoring 340+, consider structured coaching. We offer courses both offline and online, with flexible timings to suit your schedule.
+              If you're serious about scoring 340+, consider structured coaching. We offer courses
+              both offline and online, with flexible timings to suit your schedule.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               Final Thoughts: Achieving Your 340+ Goal
             </h2>
             <p>
-              Scoring 340+ in NEET Biology is not a matter of luck—it's a result of strategic planning, disciplined execution, and consistent effort. The students we've mentored who've achieved this milestone all followed the principles outlined above:
+              Scoring 340+ in NEET Biology is not a matter of luck—it's a result of strategic
+              planning, disciplined execution, and consistent effort. The students we've mentored
+              who've achieved this milestone all followed the principles outlined above:
             </p>
             <ul className="list-disc pl-6 space-y-2 my-4">
               <li>Prioritize high-weightage chapters ruthlessly</li>
@@ -351,7 +599,10 @@ export default function HowToScore340InNEETBiology() {
 
             <div className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded my-8">
               <p className="text-teal-900">
-                <strong>Ready to achieve your 340+ goal?</strong> Join Cerebrum Biology Academy and work with AIIMS-trained faculty who've mentored 500+ students to excellence. Our structured curriculum and personalized attention are specifically designed to optimize for competitive scores.
+                <strong>Ready to achieve your 340+ goal?</strong> Join Cerebrum Biology Academy and
+                work with AIIMS-trained faculty who've mentored 500+ students to excellence. Our
+                structured curriculum and personalized attention are specifically designed to
+                optimize for competitive scores.
               </p>
             </div>
 
@@ -363,51 +614,69 @@ export default function HowToScore340InNEETBiology() {
               Q: Is 340+ achievable in 6 months of focused study?
             </h3>
             <p>
-              A: Yes, but only with very focused preparation and if you already have basic chemistry and physics knowledge. We recommend 6-8 hours daily of focused study with strategic chapter selection. Many of our students have achieved this milestone in 4-6 months of dedicated coaching.
+              A: Yes, but only with very focused preparation and if you already have basic chemistry
+              and physics knowledge. We recommend 6-8 hours daily of focused study with strategic
+              chapter selection. Many of our students have achieved this milestone in 4-6 months of
+              dedicated coaching.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
               Q: What's the minimum study time needed daily to reach 340+?
             </h3>
             <p>
-              A: Minimum 5-6 hours of focused, distraction-free study. Quality matters more than quantity. 4 hours of intense, focused study beats 8 hours of distracted learning. Our top scorers average 5-7 hours daily with breaks for physical activity and mental health.
+              A: Minimum 5-6 hours of focused, distraction-free study. Quality matters more than
+              quantity. 4 hours of intense, focused study beats 8 hours of distracted learning. Our
+              top scorers average 5-7 hours daily with breaks for physical activity and mental
+              health.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
               Q: Can I score 340+ without coaching?
             </h3>
             <p>
-              A: Yes, self-study is possible, but coaching from experienced AIIMS faculty significantly accelerates the process. Coaching provides strategic guidance, doubt resolution, and regular performance feedback that self-study students struggle to maintain. Consider coaching if you can afford it—the time saved and score improvement typically make it worthwhile.
+              A: Yes, self-study is possible, but coaching from experienced AIIMS faculty
+              significantly accelerates the process. Coaching provides strategic guidance, doubt
+              resolution, and regular performance feedback that self-study students struggle to
+              maintain. Consider coaching if you can afford it—the time saved and score improvement
+              typically make it worthwhile.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
               Q: How important are mock tests for reaching 340+?
             </h3>
             <p>
-              A: Critical. Taking mock tests without analysis is pointless, but regular mock tests (2-3 per week in the final 8 weeks) are absolutely essential. They help you identify knowledge gaps, improve time management, and build exam-taking confidence. Students who score 340+ typically average 50+ mock tests before the final exam.
+              A: Critical. Taking mock tests without analysis is pointless, but regular mock tests
+              (2-3 per week in the final 8 weeks) are absolutely essential. They help you identify
+              knowledge gaps, improve time management, and build exam-taking confidence. Students
+              who score 340+ typically average 50+ mock tests before the final exam.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
               Q: Should I focus on Botany or Zoology for higher scores?
             </h3>
             <p>
-              A: Both equally. Each carries 90 marks. However, Zoology traditionally has clearer patterns. The key is giving equal attention to high-weightage chapters in both—Photosynthesis and Respiration in Botany, and Human Physiology + Genetics in Zoology.
+              A: Both equally. Each carries 90 marks. However, Zoology traditionally has clearer
+              patterns. The key is giving equal attention to high-weightage chapters in
+              both—Photosynthesis and Respiration in Botany, and Human Physiology + Genetics in
+              Zoology.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
               Q: What should I do in the last 2 weeks before NEET?
             </h3>
             <p>
-              A: Revise formulas, structures, and flowcharts. Don't learn new topics. Take 1-2 mock tests. Most importantly, maintain your sleep and mental health. The last 2 weeks are for confidence building and pattern refinement, not new learning.
+              A: Revise formulas, structures, and flowcharts. Don't learn new topics. Take 1-2 mock
+              tests. Most importantly, maintain your sleep and mental health. The last 2 weeks are
+              for confidence building and pattern refinement, not new learning.
             </p>
           </div>
 
           <div className="mt-12 p-6 bg-gradient-to-r from-teal-50 to-blue-50 rounded-lg border border-teal-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Start Your 340+ Journey Today
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Start Your 340+ Journey Today</h2>
             <p className="text-gray-700 mb-6">
-              Join Cerebrum Biology Academy and work with AIIMS-trained faculty who have coached 500+ students to competitive scores. Our structured 12-week program is specifically designed to optimize for 340+ in NEET Biology.
+              Join Cerebrum Biology Academy and work with AIIMS-trained faculty who have coached
+              500+ students to competitive scores. Our structured 12-week program is specifically
+              designed to optimize for 340+ in NEET Biology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -424,11 +693,12 @@ export default function HowToScore340InNEETBiology() {
               </a>
             </div>
             <p className="text-gray-600 text-sm mt-4">
-              Call us at <strong>088264 44334</strong> for personalized guidance on your NEET Biology preparation.
+              Call us at <strong>088264 44334</strong> for personalized guidance on your NEET
+              Biology preparation.
             </p>
           </div>
         </article>
       </div>
     </>
-  );
+  )
 }
