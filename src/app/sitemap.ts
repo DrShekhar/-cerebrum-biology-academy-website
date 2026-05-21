@@ -153,7 +153,10 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-anki-deck' ||
     path === '/usabo-past-papers-archive' ||
     path === '/ap-biology-vs-college-bio-mcat-bridge' ||
-    path === '/ap-biology-tutor-india-for-us-college-admissions'
+    path === '/ap-biology-tutor-india-for-us-college-admissions' ||
+    // MCAT Biology hub — bio-only specialist wedge vs Kaplan/Princeton.
+    // Canonical entry point for the MCAT cluster.
+    path === '/mcat-biology'
   ) {
     return 0.9
   }
@@ -5429,6 +5432,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/ib-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ap-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/neet`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/mcat-biology`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
