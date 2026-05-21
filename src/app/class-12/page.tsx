@@ -151,8 +151,7 @@ export default function Class12Page() {
 
         <div className="relative max-w-7xl mx-auto px-4 pt-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Class 12 Biology + NEET Program
@@ -168,10 +167,10 @@ export default function Class12Page() {
               </p>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
-                <h3 className="text-lg font-bold mb-3 flex items-center">
+                <h2 className="text-lg font-bold mb-3 flex items-center">
                   <AlertCircle className="w-5 h-5 mr-2 text-yellow-300" />
                   Why You Need to Start NOW:
-                </h3>
+                </h2>
                 <ul className="space-y-2 text-sm">
                   {urgencyReasons.map((reason, index) => (
                     <li key={index} className="flex items-center">
@@ -206,10 +205,7 @@ export default function Class12Page() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
-                  <div
-                    key={metric.label}
-                    className="text-center animate-fadeInUp"
-                  >
+                  <div key={metric.label} className="text-center animate-fadeInUp">
                     <metric.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <div className="text-lg font-bold">{metric.label}</div>
                     <div className="text-xs opacity-80">{metric.sublabel}</div>
@@ -218,9 +214,7 @@ export default function Class12Page() {
               </div>
             </div>
 
-            <div
-              className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               {/* NEET 2026 Countdown */}
               <div className="bg-red-600 rounded-3xl p-8 text-center mb-6">
                 <h3 className="text-2xl font-bold mb-4">NEET 2026 Countdown</h3>
@@ -303,9 +297,7 @@ export default function Class12Page() {
       {/* Dual Preparation Strategy */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Master Board Exams + NEET Simultaneously
             </h2>
@@ -337,9 +329,7 @@ export default function Class12Page() {
       {/* Class 12 Biology Curriculum - NEET Focused */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Class 12 Biology - Complete NEET Syllabus
             </h2>
@@ -418,9 +408,7 @@ export default function Class12Page() {
             ))}
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="bg-gradient-to-r bg-red-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 🎯 Total NEET Biology Weightage: 70 marks (Class 12 contributes 50+ marks)
@@ -452,8 +440,7 @@ export default function Class12Page() {
       {/* Final Urgent CTA */}
       <section className="py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
               <div className="flex items-center justify-center mb-4">
                 <AlertCircle className="w-8 h-8 mr-3 text-yellow-300" />

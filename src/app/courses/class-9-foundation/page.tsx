@@ -296,7 +296,7 @@ export default function Class9FoundationPage() {
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Course Highlights</h3>
+              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Course Highlights</h2>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Clock className="w-6 h-6 mr-3 text-blue-300 flex-shrink-0" />

@@ -316,7 +316,7 @@ export default function Class12BiologyPage() {
 
             {/* Course Highlights Card */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Course Highlights</h3>
+              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Course Highlights</h2>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-yellow-500/20 rounded-xl flex items-center justify-center mr-4">

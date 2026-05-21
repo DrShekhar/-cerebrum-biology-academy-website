@@ -236,8 +236,7 @@ export default function Class10FoundationPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div
-             className="animate-fadeInUp">
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Class 10 Biology Foundation Program
@@ -278,10 +277,7 @@ export default function Class10FoundationPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
-                  <div
-                    key={metric.label}
-                    className="text-center animate-fadeInUp"
-                  >
+                  <div key={metric.label} className="text-center animate-fadeInUp">
                     <metric.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <div className="text-lg font-bold">{metric.label}</div>
                     <div className="text-xs opacity-80">{metric.sublabel}</div>
@@ -290,14 +286,12 @@ export default function Class10FoundationPage() {
               </div>
             </div>
 
-            <div
-              className="relative animate-fadeInUp"
-            >
+            <div className="relative animate-fadeInUp">
               {/* Timeline Highlight */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold mb-6 text-center">
+                <h2 className="text-2xl font-bold mb-6 text-center">
                   Your 3-Year Success Timeline
-                </h3>
+                </h2>
 
                 <div className="space-y-4">
                   <div className="flex items-start bg-white/10 rounded-lg p-4">
@@ -359,9 +353,7 @@ export default function Class10FoundationPage() {
       {/* Program Options - Current vs Passed */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Choose Your Starting Point
             </h2>
@@ -412,9 +404,7 @@ export default function Class10FoundationPage() {
       {/* Learning Features */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why Class 10 is the Perfect Time to Start
             </h2>
@@ -446,9 +436,7 @@ export default function Class10FoundationPage() {
       {/* Curriculum Coverage */}
       <section className="py-20 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-16 animate-fadeInUp"
-          >
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Class 10 Biology Syllabus + NEET Foundation
             </h2>
@@ -523,9 +511,7 @@ export default function Class10FoundationPage() {
             ))}
           </div>
 
-          <div
-            className="text-center mt-12 animate-fadeInUp"
-          >
+          <div className="text-center mt-12 animate-fadeInUp">
             <div className="bg-gradient-to-r from-green-100 to-green-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Class 10 Concepts Form the Foundation for NEET Success
@@ -557,8 +543,7 @@ export default function Class10FoundationPage() {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Start Your NEET Journey at the Perfect Time
             </h2>

@@ -53,7 +53,7 @@ const DefaultErrorFallback = ({
           An unexpected error occurred while loading this section. Please try again.
         </p>
         {errorId && (
-          <p className="text-xs text-gray-400 mb-4">
+          <p className="text-xs text-gray-600 mb-4">
             Reference: <code className="font-mono">{errorId}</code>
           </p>
         )}
@@ -269,7 +269,7 @@ export function PageErrorBoundary({ children }: { children: ReactNode }) {
                     support@cerebrumbiologyacademy.com
                   </a>
                 </p>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-600">
                   Please include the Reference ID above when contacting support.
                 </p>
               </div>
