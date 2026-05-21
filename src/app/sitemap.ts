@@ -8421,12 +8421,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
-    {
-      url: `${baseUrl}/about-cerebrum-biology-academy`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.86,
-    },
+    // /about-cerebrum-biology-academy removed — 301 → /about (Phase 4a, May 2026)
     {
       url: `${baseUrl}/cbse-biology-coaching-delhi`,
       lastModified: lastUpdated,

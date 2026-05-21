@@ -1,6 +1,19 @@
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const seoPageConsolidationRedirects = [
   // ============================================
+  // About-page consolidation (May 2026 audit-fix Phase 4a)
+  // ============================================
+  // /about-cerebrum-biology-academy → /about
+  // Reasoning: /about has more content (1017 vs 747 lines), live sub-routes
+  // (/careers, /media), full layout.tsx metadata, and is the canonical short URL.
+  // /about-cerebrum-biology-academy has no internal links from elsewhere on site.
+  {
+    source: '/about-cerebrum-biology-academy',
+    destination: '/about',
+    permanent: true,
+  },
+
+  // ============================================
   // Batch 1 sector entries consolidated into wildcard patterns in next.config.mjs
   // ============================================
 
