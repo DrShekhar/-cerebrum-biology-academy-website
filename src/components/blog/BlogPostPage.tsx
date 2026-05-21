@@ -509,8 +509,9 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   {meta.tags.map((tag, index) => (
                     <Link
                       key={index}
-                      href={`/blog?search=${encodeURIComponent(tag)}`}
+                      href={`/blog/tag/${encodeURIComponent(tag.toLowerCase().replace(/\s+/g, '-'))}`}
                       className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-blue-100 hover:text-blue-700 transition-colors"
+                      aria-label={`View all posts tagged ${tag}`}
                     >
                       #{tag}
                     </Link>
