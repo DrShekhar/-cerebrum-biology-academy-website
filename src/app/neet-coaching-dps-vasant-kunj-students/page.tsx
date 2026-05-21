@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     'weekend neet coaching south delhi',
     'best coaching for dps vasant kunj',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,

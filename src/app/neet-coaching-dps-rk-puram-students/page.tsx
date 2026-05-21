@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'after school neet coaching south delhi',
     'best coaching for dps students neet',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,

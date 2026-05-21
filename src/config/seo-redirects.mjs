@@ -1034,6 +1034,10 @@ export const localAreaPageRedirects = [
 // ============================================
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const gsc404CleanupRedirects = [
+  // Phase C (May 2026) note: 5 Rohini school-doorway slugs already redirect
+  // to /neet-coaching-rohini via rohiniSchoolStudentRedirects (below). No
+  // additions here — adding duplicates here triggers audit-redirects warnings.
+
   // --- /cities/ phantom routes (route doesn't exist) ---
   // Specific international city redirects MUST come before the catch-all
   { source: '/cities/neet-coaching-london-uk', destination: '/international', permanent: true },

@@ -4660,12 +4660,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/biology-classes-bal-bharati-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/biology-classes-blue-bells-gurgaon`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -6396,18 +6390,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // NEET Coaching Location Pages
     {
-      url: `${baseUrl}/neet-coaching-amity-gurgaon-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-bal-bharati-rohini-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/neet-coaching-cr-park`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -6421,30 +6403,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/neet-coaching-dlf-gurgaon`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-dps-gurgaon-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-dps-rk-puram-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-dps-rohini-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-dps-vasant-kunj-students`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
@@ -6490,12 +6448,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/neet-coaching-malviya-nagar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-modern-school-students`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
@@ -6645,18 +6597,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/neet-coaching-sanskriti-school-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-shri-ram-school-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/neet-coaching-sohna-road-gurgaon`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -6694,12 +6634,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/neet-coaching-vasundhara-ghaziabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-venkateshwar-rohini-students`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
@@ -7834,24 +7768,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.92, // NSP Metro area
     },
     // School-Specific SEO Pages - Rohini Area (Jan 2026)
-    {
-      url: `${baseUrl}/neet-coaching-mount-abu-school-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.93, // Top Rohini school
-    },
-    {
-      url: `${baseUrl}/neet-coaching-gd-goenka-rohini-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.93, // #1 Elite School North Zone
-    },
-    {
-      url: `${baseUrl}/neet-coaching-heritage-school-rohini-students`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.92, // Premium school
-    },
     // Comparison Pages - AEO/GEO Optimized (Jan 2026)
     {
       url: `${baseUrl}/cerebrum-vs-allen-neet-coaching`,
@@ -9338,8 +9254,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'dr-shekhar-youtube-channel',
     'neet-coaching',
     // School-specific pages not yet consolidated
-    'neet-coaching-dps-indirapuram-students',
-    'neet-coaching-kr-mangalam-ghaziabad-students',
     // Board-specific pages
     'boards/west-bengal-hs',
     'boards/up-intermediate',

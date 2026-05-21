@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'neet coaching sector 46 faridabad',
     'best coaching for manav rachna neet',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,

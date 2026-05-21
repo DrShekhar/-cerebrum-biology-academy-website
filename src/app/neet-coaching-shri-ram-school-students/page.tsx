@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'elite neet coaching gurgaon',
     'best coaching for shri ram school neet',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,

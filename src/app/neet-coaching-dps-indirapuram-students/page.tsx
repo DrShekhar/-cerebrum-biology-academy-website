@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'after school neet coaching indirapuram',
     'best coaching for dps indirapuram neet',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     title: pageData.metaTitle,
     description: pageData.metaDescription,

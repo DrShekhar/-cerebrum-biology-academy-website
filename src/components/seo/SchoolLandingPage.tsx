@@ -14,6 +14,26 @@ import {
   Navigation,
 } from 'lucide-react'
 import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { CityInlineEnquiryForm } from '@/components/seo/CityInlineEnquiryForm'
+
+// Map a school's locality/center to the canonical parent city hub.
+// Used to push users from doorway pages back to the indexed hub.
+function resolveParentCityHub(locality: string, centerName: string): { url: string; label: string } {
+  const hay = `${locality} ${centerName}`.toLowerCase()
+  if (hay.includes('rohini')) return { url: '/neet-coaching-rohini', label: 'NEET Coaching Rohini' }
+  if (hay.includes('faridabad'))
+    return { url: '/neet-coaching-faridabad', label: 'NEET Coaching Faridabad' }
+  if (hay.includes('gurgaon') || hay.includes('gurugram'))
+    return { url: '/neet-coaching-gurugram', label: 'NEET Coaching Gurugram' }
+  if (
+    hay.includes('noida') ||
+    hay.includes('indirapuram') ||
+    hay.includes('ghaziabad') ||
+    hay.includes('greater noida')
+  )
+    return { url: '/neet-coaching-noida', label: 'NEET Coaching Noida' }
+  return { url: '/neet-coaching-south-delhi', label: 'NEET Coaching South Delhi' }
+}
 
 export interface SchoolPageData {
   slug: string
@@ -52,6 +72,7 @@ interface SchoolLandingPageProps {
 
 export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
+  const parentHub = resolveParentCityHub(data.locality, data.centerDetails.name)
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -261,6 +282,28 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
           </div>
         </section>
 
+        {/* Inline lead capture — replaces silent /demo route bounces. Phase A
+            installed this on city hubs; now propagated to school doorway pages
+            so PPC / direct traffic actually converts. */}
+        <section className="bg-white py-12">
+          <div className="container mx-auto px-4">
+            <CityInlineEnquiryForm cityName={data.schoolName} slug={data.slug} />
+          </div>
+        </section>
+
+        {/* Parent city hub upsell — sends users to the indexed hub when this
+            doorway doesn't match their specific need. Reduces cannibalization
+            pressure (these pages are noindex) by funneling intent upward. */}
+        <section className="border-y border-blue-100 bg-blue-50 py-4">
+          <div className="container mx-auto px-4 text-center text-sm text-blue-900">
+            <span>Looking at multiple coaching options? See our full </span>
+            <Link href={parentHub.url} className="font-semibold underline hover:text-blue-700">
+              {parentHub.label} guide
+            </Link>
+            <span> with all centers, batches, and fees.</span>
+          </div>
+        </section>
+
         {/* School Highlights */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -378,7 +421,8 @@ export function SchoolLandingPage({ data }: SchoolLandingPageProps) {
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="h-5 w-5 flex-shrink-0 text-gray-400" />
-                    <span className="text-gray-700">Open: {data.centerDetails.timing}</span>
+                    {/* Ignore data.centerDetails.timing (legacy "Open 24/7") — show realistic CONTACT_INFO hours */}
+                    <span className="text-gray-700">{CONTACT_INFO.hours.displayText}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 flex-shrink-0 text-gray-400" />

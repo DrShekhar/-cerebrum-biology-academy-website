@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'after school neet coaching vaishali ghaziabad',
     'best coaching for kr mangalam neet',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,

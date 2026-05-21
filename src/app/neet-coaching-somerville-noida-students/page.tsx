@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'after school neet coaching somerville noida',
     'best coaching for somerville noida neet',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,

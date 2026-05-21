@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     'after school neet coaching gurgaon',
     'best coaching for amity students neet',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,

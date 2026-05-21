@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'hybrid neet coaching south delhi',
     'best coaching for sanskriti school neet',
   ],
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
   openGraph: {
     locale: 'en_IN',
     title: pageData.metaTitle,
