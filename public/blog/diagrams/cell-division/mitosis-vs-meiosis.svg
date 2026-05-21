@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="mvm-title mvm-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="mvm-title">Mitosis vs meiosis comparison</title>
+  <desc id="mvm-desc">Side-by-side comparison of mitosis (one division, 2 diploid daughter cells, identical to parent) and meiosis (two divisions, 4 haploid daughter cells with crossing over and independent assortment for genetic variation).</desc>
+
+  <rect width="800" height="480" fill="#f8fafc"/>
+  <text x="400" y="32" text-anchor="middle" fill="#0f172a" font-size="20" font-weight="700">Mitosis vs Meiosis</text>
+  <text x="400" y="54" text-anchor="middle" fill="#475569" font-size="13">Both start with one diploid parent, but produce very different outcomes</text>
+
+  <!-- ===== MITOSIS column ===== -->
+  <g transform="translate(60, 90)">
+    <rect x="0" y="0" width="300" height="340" rx="14" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="150" y="28" text-anchor="middle" fill="#1e3a8a" font-size="16" font-weight="700">MITOSIS</text>
+
+    <!-- Parent cell -->
+    <circle cx="150" cy="70" r="24" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="150" y="76" text-anchor="middle" fill="#1e3a8a" font-size="13" font-weight="700">2n</text>
+    <text x="150" y="110" text-anchor="middle" fill="#1e40af" font-size="11">Parent cell</text>
+
+    <!-- Arrow -->
+    <path d="M 150 122 L 150 145" stroke="#1d4ed8" stroke-width="2"/>
+    <path d="M 150 145 L 144 138 L 156 138 Z" fill="#1d4ed8"/>
+    <text x="170" y="138" fill="#1e40af" font-size="10" font-style="italic">1 division</text>
+
+    <!-- Daughter cells -->
+    <circle cx="110" cy="190" r="20" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="110" y="195" text-anchor="middle" fill="#1e3a8a" font-size="12" font-weight="700">2n</text>
+    <circle cx="190" cy="190" r="20" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="190" y="195" text-anchor="middle" fill="#1e3a8a" font-size="12" font-weight="700">2n</text>
+
+    <text x="150" y="232" text-anchor="middle" fill="#1e40af" font-size="11">2 daughter cells • identical</text>
+
+    <!-- Key facts -->
+    <g transform="translate(20, 255)">
+      <text x="0" y="0" fill="#1e3a8a" font-size="12" font-weight="700">Key features</text>
+      <text x="0" y="18" fill="#475569" font-size="11">• 1 round of division</text>
+      <text x="0" y="35" fill="#475569" font-size="11">• Diploid → diploid (2n → 2n)</text>
+      <text x="0" y="52" fill="#475569" font-size="11">• No crossing over</text>
+      <text x="0" y="69" fill="#475569" font-size="11">• Genetically identical clones</text>
+    </g>
+  </g>
+
+  <!-- ===== MEIOSIS column ===== -->
+  <g transform="translate(440, 90)">
+    <rect x="0" y="0" width="300" height="340" rx="14" fill="#fce7f3" stroke="#be185d" stroke-width="2"/>
+    <text x="150" y="28" text-anchor="middle" fill="#9f1239" font-size="16" font-weight="700">MEIOSIS</text>
+
+    <!-- Parent cell -->
+    <circle cx="150" cy="70" r="24" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+    <text x="150" y="76" text-anchor="middle" fill="#9f1239" font-size="13" font-weight="700">2n</text>
+    <text x="150" y="110" text-anchor="middle" fill="#9f1239" font-size="11">Parent cell</text>
+
+    <!-- Meiosis I arrow -->
+    <path d="M 150 122 L 150 140" stroke="#be185d" stroke-width="2"/>
+    <path d="M 150 140 L 144 134 L 156 134 Z" fill="#be185d"/>
+    <text x="170" y="135" fill="#9f1239" font-size="10" font-style="italic">Meiosis I</text>
+    <text x="170" y="148" fill="#9f1239" font-size="9" font-style="italic">(reductional)</text>
+
+    <!-- After Meiosis I — 2 haploid cells -->
+    <circle cx="100" cy="178" r="18" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+    <text x="100" y="183" text-anchor="middle" fill="#9f1239" font-size="11" font-weight="700">n</text>
+    <circle cx="200" cy="178" r="18" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+    <text x="200" y="183" text-anchor="middle" fill="#9f1239" font-size="11" font-weight="700">n</text>
+
+    <!-- Meiosis II arrows -->
+    <path d="M 100 200 L 80 220" stroke="#be185d" stroke-width="2"/>
+    <path d="M 80 220 L 80 213 L 87 217 Z" fill="#be185d"/>
+    <path d="M 100 200 L 120 220" stroke="#be185d" stroke-width="2"/>
+    <path d="M 120 220 L 113 217 L 120 213 Z" fill="#be185d"/>
+    <path d="M 200 200 L 180 220" stroke="#be185d" stroke-width="2"/>
+    <path d="M 180 220 L 180 213 L 187 217 Z" fill="#be185d"/>
+    <path d="M 200 200 L 220 220" stroke="#be185d" stroke-width="2"/>
+    <path d="M 220 220 L 213 217 L 220 213 Z" fill="#be185d"/>
+    <text x="150" y="218" text-anchor="middle" fill="#9f1239" font-size="9" font-style="italic">Meiosis II</text>
+
+    <!-- Four daughter gametes -->
+    <circle cx="70" cy="245" r="14" fill="#fbcfe8" stroke="#be185d" stroke-width="1.5"/>
+    <text x="70" y="250" text-anchor="middle" fill="#9f1239" font-size="10" font-weight="700">n</text>
+    <circle cx="125" cy="245" r="14" fill="#fbcfe8" stroke="#be185d" stroke-width="1.5"/>
+    <text x="125" y="250" text-anchor="middle" fill="#9f1239" font-size="10" font-weight="700">n</text>
+    <circle cx="175" cy="245" r="14" fill="#fbcfe8" stroke="#be185d" stroke-width="1.5"/>
+    <text x="175" y="250" text-anchor="middle" fill="#9f1239" font-size="10" font-weight="700">n</text>
+    <circle cx="230" cy="245" r="14" fill="#fbcfe8" stroke="#be185d" stroke-width="1.5"/>
+    <text x="230" y="250" text-anchor="middle" fill="#9f1239" font-size="10" font-weight="700">n</text>
+
+    <text x="150" y="277" text-anchor="middle" fill="#9f1239" font-size="11">4 gametes • genetically varied</text>
+
+    <!-- Key facts -->
+    <g transform="translate(20, 295)">
+      <text x="0" y="0" fill="#9f1239" font-size="12" font-weight="700">Key features</text>
+      <text x="0" y="18" fill="#475569" font-size="11">• 2 rounds of division (I + II)</text>
+      <text x="0" y="35" fill="#475569" font-size="11">• Diploid → haploid (2n → n)</text>
+      <text x="0" y="52" fill="#475569" font-size="11">• Crossing over in prophase I</text>
+      <text x="0" y="69" fill="#475569" font-size="11">• Independent assortment</text>
+    </g>
+  </g>
+
+  <!-- Comparison table at bottom -->
+  <g transform="translate(60, 445)">
+    <text x="0" y="0" fill="#0f172a" font-size="12" font-weight="700">Where it happens:</text>
+    <text x="145" y="0" fill="#1e40af" font-size="12">Mitosis = somatic cells (growth, repair)</text>
+    <text x="430" y="0" fill="#9f1239" font-size="12">Meiosis = gonads only (gamete formation)</text>
+  </g>
+</svg>

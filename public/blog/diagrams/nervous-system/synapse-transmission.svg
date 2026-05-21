@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="syn-title syn-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="syn-title">Chemical synapse — neurotransmitter release and signal transmission</title>
+  <desc id="syn-desc">Diagram of a chemical synapse showing presynaptic axon terminal with synaptic vesicles, voltage-gated calcium channels triggering vesicle fusion, neurotransmitters released into the synaptic cleft, and postsynaptic membrane receptors generating an excitatory or inhibitory postsynaptic potential.</desc>
+
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <text x="400" y="32" text-anchor="middle" fill="#0f172a" font-size="20" font-weight="700">Chemical Synapse — Signal Transmission Between Neurons</text>
+  <text x="400" y="54" text-anchor="middle" fill="#475569" font-size="13">Action potential → Ca²⁺ entry → vesicle fusion → neurotransmitter release → receptor binding</text>
+
+  <!-- ===== Presynaptic neuron (top) ===== -->
+  <g transform="translate(180, 90)">
+    <text x="220" y="0" text-anchor="middle" fill="#0f172a" font-size="13" font-weight="700">Presynaptic neuron (axon terminal)</text>
+
+    <!-- Axon ending shape -->
+    <path d="M 100 20 L 340 20 L 360 60 L 340 100 L 100 100 L 80 60 Z"
+          fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+
+    <!-- Action potential arrow incoming -->
+    <path d="M 20 50 L 75 50" stroke="#dc2626" stroke-width="3"/>
+    <path d="M 75 50 L 67 45 L 67 55 Z" fill="#dc2626"/>
+    <text x="20" y="35" fill="#991b1b" font-size="11" font-weight="600">Action potential</text>
+
+    <!-- Synaptic vesicles (small circles) -->
+    <g fill="#bbf7d0" stroke="#15803d" stroke-width="1.5">
+      <circle cx="140" cy="50" r="9"/>
+      <circle cx="170" cy="65" r="9"/>
+      <circle cx="200" cy="48" r="9"/>
+      <circle cx="230" cy="62" r="9"/>
+      <circle cx="265" cy="50" r="9"/>
+      <circle cx="295" cy="60" r="9"/>
+    </g>
+    <!-- Neurotransmitter dots inside vesicles -->
+    <g fill="#15803d">
+      <circle cx="140" cy="50" r="2"/>
+      <circle cx="137" cy="48" r="1.5"/>
+      <circle cx="143" cy="52" r="1.5"/>
+      <circle cx="170" cy="65" r="2"/>
+      <circle cx="167" cy="63" r="1.5"/>
+      <circle cx="173" cy="67" r="1.5"/>
+      <circle cx="200" cy="48" r="2"/>
+      <circle cx="265" cy="50" r="2"/>
+      <circle cx="295" cy="60" r="2"/>
+      <circle cx="230" cy="62" r="2"/>
+    </g>
+    <text x="170" y="22" fill="#15803d" font-size="11" font-weight="600">Synaptic vesicles</text>
+    <text x="170" y="13" fill="#475569" font-size="9">(contain neurotransmitter)</text>
+    <line x1="170" y1="38" x2="170" y2="55" stroke="#15803d" stroke-width="1"/>
+
+    <!-- Vesicle fusing with membrane (one open) -->
+    <path d="M 322 88 Q 322 78 332 78 Q 342 78 342 88" stroke="#15803d" stroke-width="2" fill="#dcfce7"/>
+
+    <!-- Ca2+ channels at membrane -->
+    <g>
+      <rect x="105" y="98" width="14" height="6" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+      <rect x="190" y="98" width="14" height="6" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+      <rect x="290" y="98" width="14" height="6" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+    </g>
+    <text x="20" y="115" fill="#1e3a8a" font-size="11" font-weight="600">Voltage-gated Ca²⁺ channel</text>
+    <line x1="125" y1="113" x2="115" y2="106" stroke="#1e3a8a" stroke-width="1"/>
+
+    <!-- Ca2+ ions entering -->
+    <g fill="#1e40af" font-size="10" font-weight="700">
+      <text x="108" y="125">Ca²⁺</text>
+      <text x="193" y="125">Ca²⁺</text>
+      <text x="293" y="125">Ca²⁺</text>
+    </g>
+    <g fill="#1e40af">
+      <path d="M 112 132 L 112 138 M 110 136 L 114 138 L 112 142 L 110 138"/>
+      <path d="M 197 132 L 197 138 M 195 136 L 199 138 L 197 142 L 195 138"/>
+      <path d="M 297 132 L 297 138 M 295 136 L 299 138 L 297 142 L 295 138"/>
+    </g>
+  </g>
+
+  <!-- ===== Synaptic cleft ===== -->
+  <text x="60" y="225" fill="#7c2d12" font-size="12" font-weight="700">Synaptic cleft</text>
+  <text x="60" y="240" fill="#475569" font-size="10">(20–40 nm gap)</text>
+
+  <!-- Neurotransmitters in cleft -->
+  <g fill="#15803d">
+    <circle cx="380" cy="225" r="3"/>
+    <circle cx="400" cy="232" r="3"/>
+    <circle cx="420" cy="220" r="3"/>
+    <circle cx="440" cy="230" r="3"/>
+    <circle cx="460" cy="225" r="3"/>
+    <circle cx="480" cy="232" r="3"/>
+    <circle cx="395" cy="218" r="3"/>
+    <circle cx="445" cy="218" r="3"/>
+    <circle cx="475" cy="218" r="3"/>
+  </g>
+  <text x="430" y="208" text-anchor="middle" fill="#15803d" font-size="11" font-weight="700">Neurotransmitter</text>
+  <text x="430" y="220" text-anchor="middle" fill="#475569" font-size="9">(e.g., ACh, glutamate, GABA)</text>
+
+  <!-- ===== Postsynaptic neuron (bottom) ===== -->
+  <g transform="translate(180, 260)">
+    <rect x="80" y="0" width="280" height="100" rx="10" fill="#fce7f3" stroke="#be185d" stroke-width="2"/>
+    <text x="220" y="20" text-anchor="middle" fill="#9f1239" font-size="13" font-weight="700">Postsynaptic neuron (dendrite)</text>
+
+    <!-- Receptors on membrane -->
+    <g fill="#be185d" stroke="#831843" stroke-width="1.5">
+      <path d="M 130 -6 L 130 8 L 138 8 L 138 -6 Z"/>
+      <path d="M 175 -6 L 175 8 L 183 8 L 183 -6 Z"/>
+      <path d="M 220 -6 L 220 8 L 228 8 L 228 -6 Z"/>
+      <path d="M 265 -6 L 265 8 L 273 8 L 273 -6 Z"/>
+      <path d="M 310 -6 L 310 8 L 318 8 L 318 -6 Z"/>
+    </g>
+    <text x="220" y="-15" text-anchor="middle" fill="#9f1239" font-size="11" font-weight="700">Postsynaptic receptors</text>
+
+    <!-- Na+/K+ ions entering after receptor binding -->
+    <g fill="#1e40af" font-size="9" font-weight="700">
+      <text x="125" y="40">Na⁺</text>
+      <text x="170" y="40">Na⁺</text>
+      <text x="215" y="40">Na⁺</text>
+      <text x="260" y="40">Na⁺</text>
+    </g>
+    <g fill="#1e40af">
+      <path d="M 132 47 L 132 53"/>
+      <path d="M 177 47 L 177 53"/>
+      <path d="M 222 47 L 222 53"/>
+      <path d="M 267 47 L 267 53"/>
+    </g>
+
+    <!-- New action potential -->
+    <text x="220" y="78" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="700">→ New action potential</text>
+    <text x="220" y="93" text-anchor="middle" fill="#475569" font-size="10">(if depolarization exceeds −55 mV threshold)</text>
+  </g>
+
+  <!-- ===== Step-by-step bar ===== -->
+  <g transform="translate(40, 380)">
+    <rect x="0" y="0" width="720" height="32" rx="8" fill="#0f172a"/>
+    <text x="20" y="20" fill="#facc15" font-size="11" font-weight="700">5-step process:</text>
+    <text x="115" y="20" fill="#e2e8f0" font-size="11">1. AP arrives  →  2. Ca²⁺ enters  →  3. vesicles fuse + release NT  →  4. NT binds receptors  →  5. new AP fires</text>
+  </g>
+</svg>
