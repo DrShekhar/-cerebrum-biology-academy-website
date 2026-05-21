@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
+export const revalidate = 86400
+
 export const metadata: Metadata = {
   title: 'Cerebrum vs Aarambh Coaching Gurugram 2026 | Fees, Results, Faculty',
   description:
