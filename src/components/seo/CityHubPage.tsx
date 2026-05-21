@@ -26,6 +26,7 @@ import {
 } from 'lucide-react'
 import type { CityHubData } from '@/data/city-seo/cities'
 import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { CredibilityBar } from '@/components/seo/EEATSignals'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { WhatsAppCTAButton } from '@/components/seo/WhatsAppCTAButton'
@@ -162,6 +163,7 @@ export function CityHubPage({ data }: CityHubPageProps) {
     },
     founder: {
       '@type': 'Person',
+      '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
       name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
@@ -208,6 +210,17 @@ export function CityHubPage({ data }: CityHubPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      {/* Site-wide canonical Person @id — Google merges Dr. Shekhar entity
+          across all city hubs into a single authoritative node. */}
+      <CerebrumPersonSchema
+        knowsAbout={[
+          `NEET Biology Coaching ${data.cityName}`,
+          `Biology Tuition ${data.cityName}`,
+          'NEET-UG Biology',
+          'Medical College Admissions India',
+        ]}
       />
 
       {/* AI/LLM Optimized Schemas for ChatGPT, Google AI, and voice assistants */}

@@ -64,7 +64,19 @@ export function BlogPostHeader({ meta, category }: BlogPostHeaderProps) {
                   {meta.author.name.charAt(0)}
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">{meta.author.name}</div>
+                  {/* Link Dr. Shekhar's byline to the canonical entity page so
+                      Google + LLMs can resolve author → master entity. */}
+                  {meta.author.name.toLowerCase().includes('shekhar') ? (
+                    <Link
+                      href="/dr-shekhar-singh-biology-faculty-india"
+                      className="font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+                      rel="author"
+                    >
+                      {meta.author.name}
+                    </Link>
+                  ) : (
+                    <div className="font-semibold text-gray-900">{meta.author.name}</div>
+                  )}
                   <div className="text-gray-500 text-sm">{meta.author.role}</div>
                 </div>
               </div>
