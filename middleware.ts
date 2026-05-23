@@ -238,9 +238,54 @@ async function getUserFromToken(
   }
 }
 
+/**
+ * Paths that must be hidden from India IPs. Used by the geo-gate below.
+ *
+ * China-region cluster (HK / Shanghai / Beijing + HKDSE) targets local +
+ * expat international-school families. Indian traffic almost never converts
+ * here and dilutes our India NEET authority in Google ranking signals.
+ *
+ * The geo-gate fires in middleware (not the page component) because the
+ * /ib-biology/[city] route is statically generated (dynamicParams=false +
+ * generateStaticParams), so any runtime header check inside the page would
+ * be bypassed by the static cache. Middleware runs on every request before
+ * the static cache is hit.
+ */
+const HIDE_FROM_INDIA_PATHS = new Set<string>([
+  '/ib-biology/hong-kong',
+  '/ib-biology/shanghai',
+  '/ib-biology/beijing',
+  '/dse-biology-tutor-hong-kong',
+])
+
 export default async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl
   const hostname = req.headers.get('host') || ''
+
+  // ============================================
+  // GEO: Hide China-region cluster from India IPs
+  // ============================================
+  // Runs on Vercel before the static-page cache is served, so it gates even
+  // pre-rendered routes like /ib-biology/[city]. Note: middleware is NOT
+  // invoked for statically-generated pages in `next dev` — verify behaviour
+  // post-deploy by curling the URL with an India IP (or via Vercel's
+  // edge-region testing).
+  if (HIDE_FROM_INDIA_PATHS.has(pathname)) {
+    const country = (
+      req.headers.get('x-vercel-ip-country') ||
+      req.headers.get('x-debug-country') ||
+      ''
+    ).toUpperCase()
+    if (country === 'IN') {
+      return new NextResponse(
+        '<!doctype html><html><head><title>404 - Not Found</title><meta name="robots" content="noindex"></head><body><h1>404 - Page Not Found</h1></body></html>',
+        {
+          status: 404,
+          headers: { 'content-type': 'text/html; charset=utf-8', 'x-geo-blocked': 'IN' },
+        }
+      )
+    }
+  }
 
   // ============================================
   // SEO: Redirect www to non-www (canonical domain)
@@ -336,9 +381,7 @@ export default async function middleware(req: NextRequest) {
       '/neet-tools/quiz-competition',
     ]
     if (
-      noindexPrefixes.some(
-        (prefix) => pathname === prefix || pathname.startsWith(prefix + '/')
-      )
+      noindexPrefixes.some((prefix) => pathname === prefix || pathname.startsWith(prefix + '/'))
     ) {
       response.headers.set('X-Robots-Tag', 'noindex, nofollow')
     }

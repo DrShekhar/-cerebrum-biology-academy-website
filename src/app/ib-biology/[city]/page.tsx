@@ -4,7 +4,25 @@ import { notFound } from 'next/navigation'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { cities, citySlugs, getCity, type CityConfig } from '@/data/ib-biology/cities'
+import { hideFromCountries } from '@/lib/geo/hideFromCountries'
 import { MessageCircle, MapPin, Clock, CheckCircle2 } from 'lucide-react'
+
+/**
+ * City slugs whose pages must NOT be served to visitors in India.
+ *
+ * The China-region IB Biology cluster targets local + expat international-
+ * school families. India-based traffic to these pages is almost never
+ * qualified and dilutes our India NEET authority in Google ranking signals.
+ *
+ * Two-layer defence:
+ *   1. middleware.ts — fires on Vercel edge before static cache (production)
+ *   2. hideFromCountries() page-level check below — works in dev + as
+ *      belt-and-suspenders against any middleware miss
+ *
+ * Note: Googlebot crawls from US so this gate does NOT prevent Indian SERP
+ * appearances. hreflang (en-HK / en-CN) tells Google these target HK/CN.
+ */
+const CHINA_REGION_CITIES_HIDDEN_FROM_INDIA = new Set(['hong-kong', 'shanghai', 'beijing'])
 
 // Map IB city slugs to olympiad city slugs. Used for the
 // "beyond HL" cross-sell block shown only on India pages.
@@ -136,6 +154,14 @@ export default async function CityPage({ params }: PageProps) {
   const { city } = await params
   const config = getCity(city)
   if (!config) notFound()
+
+  // Page-level geo-gate. For the China cluster, this complements the
+  // middleware-level gate. Calling headers() (inside hideFromCountries) opts
+  // the request into dynamic rendering, so the gate fires on every request
+  // instead of being baked into the static export.
+  if (CHINA_REGION_CITIES_HIDDEN_FROM_INDIA.has(city)) {
+    await hideFromCountries(['IN'])
+  }
 
   const url = `https://cerebrumbiologyacademy.com/ib-biology/${config.slug}`
 

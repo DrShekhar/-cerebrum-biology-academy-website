@@ -4231,6 +4231,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/dse-biology-tutor-hong-kong`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
     // Delhi Area NEET Coaching Pages
     {
       url: `${baseUrl}/neet-coaching-north-delhi`,
