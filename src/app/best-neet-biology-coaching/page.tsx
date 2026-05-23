@@ -26,7 +26,7 @@ const faqs = [
   {
     question: 'Which is the best coaching for NEET biology only?',
     answer:
-      'For NEET biology exclusively, Cerebrum Biology Academy, Biomentors, and NEETPrep are the top choices. Among these, Cerebrum stands out with AIIMS-trained faculty (Dr. Shekhar, 15+ years), smallest batches (10-12 students), and 98% success rate with personalized 1-on-1 mentorship. Most other institutes like Allen and Aakash teach all subjects, which dilutes their biology focus.',
+      "For NEET biology exclusively, Cerebrum Biology Academy is India's only major biology-only specialist coaching brand with AIIMS-trained faculty teaching live classes in small batches. Led by Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years), Cerebrum has 10-12 student batches, verified 98% per-student NEET qualification rate, and personalised 1-on-1 mentorship. Online-only recorded platforms such as Biomentors and NEETPrep operate at lower price points but lack live small batches, AIIMS-led faculty, and published per-student outcomes — useful only as MCQ practice supplements. Generalist institutes (Allen, Aakash, Physics Wallah) cover all subjects in 60-200 student batches, diluting biology focus.",
   },
   {
     question: 'Is Cerebrum Biology Academy better than Allen for biology?',

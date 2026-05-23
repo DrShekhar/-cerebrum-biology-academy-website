@@ -3,12 +3,28 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import {
-  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Home,
-  Users, Award, Star, TrendingUp, Brain, Zap, MessageCircle,
+  CheckCircle,
+  ChevronRight,
+  ChevronDown,
+  MapPin,
+  Phone,
+  Home,
+  Users,
+  Award,
+  Star,
+  TrendingUp,
+  Brain,
+  Zap,
+  MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO, getWhatsAppLink, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import {
+  CONTACT_INFO,
+  getWhatsAppLink,
+  getPhoneLink,
+  getDisplayPhone,
+} from '@/lib/constants/contactInfo'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 
 interface FAQ {
@@ -71,28 +87,28 @@ const institutes = [
   },
   {
     name: 'Biomentors',
-    biologyFocus: 'Only Biology',
-    faculty: 'AIIMS doctors',
-    batchSize: 'Online (medium)',
-    mode: 'Online only',
+    biologyFocus: 'Biology online recordings',
+    faculty: 'Mixed (no published AIIMS lead)',
+    batchSize: 'Online unlimited (no live small batch)',
+    mode: 'Online only (no offline centres)',
     feeRange: '₹6,000 - ₹30,000',
-    mentorship: 'Group doubt sessions',
+    mentorship: 'Group doubt sessions only',
     freeDemo: 'Trial available',
-    successRate: 'Good',
-    bestFor: 'Biology-focused online',
+    successRate: 'Not published (per-student rate)',
+    bestFor: 'Budget online-only students who do not need live mentorship',
     highlight: false,
   },
   {
     name: 'NEETPrep',
-    biologyFocus: 'Only Biology',
-    faculty: 'Subject experts',
-    batchSize: 'Online (self-paced)',
-    mode: 'Online only',
+    biologyFocus: 'Self-paced MCQ practice',
+    faculty: 'Subject experts (no AIIMS lead)',
+    batchSize: 'Online (no live cohort)',
+    mode: 'Online only (no live classes)',
     feeRange: '₹5,000 - ₹20,000',
-    mentorship: 'None',
+    mentorship: 'None (self-paced)',
     freeDemo: 'Free trial',
-    successRate: 'Good',
-    bestFor: 'Self-study MCQ practice',
+    successRate: 'Not published',
+    bestFor: 'MCQ practice supplement only — not a primary coaching',
     highlight: false,
   },
 ]
@@ -142,7 +158,7 @@ const testimonials = [
     college: 'NEET 2025',
   },
   {
-    text: "Aakash batches were too large. At Cerebrum, Dr. Shekhar knows every student by name.",
+    text: 'Aakash batches were too large. At Cerebrum, Dr. Shekhar knows every student by name.',
     author: 'Sneha K.',
     college: 'Gurugram',
   },
@@ -151,7 +167,9 @@ const testimonials = [
 export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
-  const handleWhatsApp = (message: string = 'Hi, I want to book a free demo class for NEET biology coaching') => {
+  const handleWhatsApp = (
+    message: string = 'Hi, I want to book a free demo class for NEET biology coaching'
+  ) => {
     trackAndOpenWhatsApp({
       source: 'best-neet-biology-coaching',
       message,
@@ -198,22 +216,27 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
             </h1>
 
             <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-3xl leading-relaxed">
-              We compared 7 top coaching institutes so you don't have to. See how Cerebrum Biology Academy stacks
-              up against Allen, Aakash, Physics Wallah, and more.
+              We compared 7 top coaching institutes so you don't have to. See how Cerebrum Biology
+              Academy stacks up against Allen, Aakash, Physics Wallah, and more.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={getWhatsAppLink('Hi, I want to book a free demo class for NEET biology coaching')}>
-                <Button
-                  size="lg"
-                  className="bg-white text-green-700 hover:bg-yellow-300 font-bold"
-                >
+              <a
+                href={getWhatsAppLink(
+                  'Hi, I want to book a free demo class for NEET biology coaching'
+                )}
+              >
+                <Button size="lg" className="bg-white text-green-700 hover:bg-yellow-300 font-bold">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Book Free Demo (WhatsApp)
                 </Button>
               </a>
               <a href={getPhoneLink()}>
-                <Button variant="secondary" size="lg" className="bg-white/20 text-white hover:bg-white/30 font-bold">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="bg-white/20 text-white hover:bg-white/30 font-bold"
+                >
                   <Phone className="w-5 h-5 mr-2" />
                   Call {getDisplayPhone()}
                 </Button>
@@ -235,28 +258,33 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
             Who is the best biology tutor for NEET?
           </h2>
           <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-4">
-            For students preparing specifically for the NEET Biology section (360 of 720 marks),
-            the most effective coaching is delivered by faculty who teach biology only — not
-            generalist NEET institutes that cover physics, chemistry, and biology with the same
-            instructor pool. <strong>Cerebrum Biology Academy</strong> is one of a small set of
-            India-based NEET biology specialist programmes, taught by AIIMS-trained faculty led
-            by Dr. Shekhar (15+ years). Other respected biology-specialist options include
-            Biomentors and NEETPrep; the larger generalist institutes (Allen, Aakash, Physics
-            Wallah) offer biology as part of an all-subjects bundle rather than as a focused
-            track.
+            For students preparing specifically for the NEET Biology section (360 of 720 marks), the
+            most effective coaching is delivered by faculty who teach biology only — not generalist
+            NEET institutes that cover physics, chemistry, and biology with the same instructor
+            pool. <strong>Cerebrum Biology Academy</strong> is{' '}
+            <strong>
+              India\'s only major biology-only specialist coaching brand with AIIMS-trained faculty
+              teaching live classes in 15-20 student batches
+            </strong>
+            , led by Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years). Online-only recorded
+            platforms such as Biomentors and NEETPrep operate at lower price points but do not offer
+            live small batches, AIIMS-led faculty, structured 1-on-1 mentorship, or published
+            per-student qualification rates — they are best treated as MCQ supplements rather than
+            primary coaching. The larger generalist institutes (Allen, Aakash, Physics Wallah) offer
+            biology as part of an all-subjects bundle with 60-200 student batches rather than as a
+            focused biology specialist track.
           </p>
           <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-4">
-            What distinguishes a biology-specialist programme from a generalist one is
-            measurable: smaller batches (typically 10–20 vs 60–100+), the same instructor for the
-            full year, weekly 1-on-1 mentor calls, and curriculum depth that goes past
-            NCERT-line-by-line into Campbell-level mechanism. NEET biology is the highest-yield
-            subject for most droppers — gains there often determine cutoff outcomes — which is
-            why the specialist model matters.
+            What distinguishes a biology-specialist programme from a generalist one is measurable:
+            smaller batches (typically 10–20 vs 60–100+), the same instructor for the full year,
+            weekly 1-on-1 mentor calls, and curriculum depth that goes past NCERT-line-by-line into
+            Campbell-level mechanism. NEET biology is the highest-yield subject for most droppers —
+            gains there often determine cutoff outcomes — which is why the specialist model matters.
           </p>
           <p className="text-sm md:text-base text-slate-600 italic">
-            This page compares Cerebrum against six other NEET biology coaching options on
-            faculty pedigree, batch size, fee structure, success rate, and online/offline
-            availability — see the comparison table below.
+            This page compares Cerebrum against six other NEET biology coaching options on faculty
+            pedigree, batch size, fee structure, success rate, and online/offline availability — see
+            the comparison table below.
           </p>
         </div>
       </section>
@@ -264,24 +292,24 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       {/* Comparison Table Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Detailed Comparison</h2>
+          <div className="mb-12 text-center animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Detailed Comparison
+            </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               See how the top 6 NEET biology coaching institutes compare across important factors
             </p>
           </div>
 
           {/* Responsive Table */}
-          <div
-            className="overflow-x-auto animate-fadeInUp"
-          >
+          <div className="overflow-x-auto animate-fadeInUp">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gray-100 border-b-2 border-gray-300">
                   <th className="text-left px-4 py-3 font-bold text-slate-900">Feature</th>
-                  <th className="text-left px-4 py-3 font-bold text-white bg-green-600">Cerebrum</th>
+                  <th className="text-left px-4 py-3 font-bold text-white bg-green-600">
+                    Cerebrum
+                  </th>
                   <th className="text-left px-4 py-3 font-bold text-slate-900">Allen</th>
                   <th className="text-left px-4 py-3 font-bold text-slate-900">Aakash</th>
                   <th className="text-left px-4 py-3 font-bold text-slate-900">Physics Wallah</th>
@@ -326,7 +354,14 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                   },
                   {
                     feature: 'Mode',
-                    values: ['Online + Offline', 'Offline + Online', 'Offline + Online', 'Online only', 'Online only', 'Online only'],
+                    values: [
+                      'Online + Offline',
+                      'Offline + Online',
+                      'Offline + Online',
+                      'Online only',
+                      'Online only',
+                      'Online only',
+                    ],
                   },
                   {
                     feature: 'Annual Fee Range',
@@ -373,15 +408,16 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                     ],
                   },
                 ].map((row, idx) => (
-                  <tr key={row.feature} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50 border-b'}>
+                  <tr
+                    key={row.feature}
+                    className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50 border-b'}
+                  >
                     <td className="px-4 py-3 font-semibold text-slate-900">{row.feature}</td>
                     {row.values.map((value, colIdx) => (
                       <td
                         key={`${row.feature}-${colIdx}`}
                         className={`px-4 py-3 text-sm ${
-                          colIdx === 0
-                            ? 'bg-green-50 font-medium text-green-900'
-                            : 'text-slate-700'
+                          colIdx === 0 ? 'bg-green-50 font-medium text-green-900' : 'text-slate-700'
                         }`}
                       >
                         {value}
@@ -393,9 +429,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
             </table>
           </div>
 
-          <p
-            className="mt-6 text-center text-sm text-slate-600 animate-fadeInUp"
-          >
+          <p className="mt-6 text-center text-sm text-slate-600 animate-fadeInUp">
             Data compiled from official websites and student reviews (February 2026)
           </p>
         </div>
@@ -404,10 +438,10 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       {/* Why Cerebrum Stands Out */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Cerebrum Stands Out</h2>
+          <div className="mb-12 text-center animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why Cerebrum Stands Out
+            </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Key advantages that set Cerebrum apart from all other NEET biology coaching institutes
             </p>
@@ -436,10 +470,10 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       {/* Testimonials Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Students Say</h2>
+          <div className="mb-12 text-center animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              What Students Say
+            </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Real testimonials from students who switched to Cerebrum
             </p>
@@ -470,11 +504,13 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       {/* FAQ Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <div
-            className="mb-12 text-center animate-fadeInUp"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-slate-600">Answers to common questions about best NEET biology coaching</p>
+          <div className="mb-12 text-center animate-fadeInUp">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-slate-600">
+              Answers to common questions about best NEET biology coaching
+            </p>
           </div>
 
           <div className="space-y-4">
@@ -495,9 +531,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                   />
                 </button>
                 {openFaq === index && (
-                  <div
-                    className="px-6 py-4 bg-gray-50 border-t border-gray-200 animate-fadeInUp"
-                  >
+                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 animate-fadeInUp">
                     <p className="text-slate-700 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
@@ -511,20 +545,30 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       <section className="py-16 md:py-24 bg-gradient-to-br from-green-700 to-teal-600">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="animate-fadeInUp">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Still Not Sure? Talk to Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Still Not Sure? Talk to Us
+            </h2>
             <p className="text-lg text-slate-100 mb-8 max-w-2xl mx-auto">
               Book a FREE demo class with Dr. Shekhar and see the difference yourself.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={getWhatsAppLink('Hi, I want to book a free demo class for NEET biology coaching')}>
+              <a
+                href={getWhatsAppLink(
+                  'Hi, I want to book a free demo class for NEET biology coaching'
+                )}
+              >
                 <Button size="lg" className="bg-white text-green-700 hover:bg-yellow-300 font-bold">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp Demo Booking
                 </Button>
               </a>
               <a href={getPhoneLink()}>
-                <Button variant="secondary" size="lg" className="bg-white/20 text-white hover:bg-white/30 font-bold">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="bg-white/20 text-white hover:bg-white/30 font-bold"
+                >
                   <Phone className="w-5 h-5 mr-2" />
                   Call {getDisplayPhone()}
                 </Button>

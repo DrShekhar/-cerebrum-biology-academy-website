@@ -4177,6 +4177,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    {
+      url: `${baseUrl}/top-biology-coaching-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.98,
+    },
+    {
+      url: `${baseUrl}/top-ib-biology-coaching-global`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/top-ap-biology-coaching-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
     // Delhi Area NEET Coaching Pages
     {
       url: `${baseUrl}/neet-coaching-north-delhi`,
