@@ -338,7 +338,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 2,
-    name: 'Aakash Institute',
+    name: 'SKY Coaching',
     description: 'Large established chain with comprehensive PCB coaching',
     score: 8.5,
     rating: 4.3,
@@ -365,7 +365,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 3,
-    name: 'Allen Career Institute',
+    name: 'XYZ Coaching',
     description: 'Kota-style intensive coaching with proven track record',
     score: 8.3,
     rating: 4.2,
@@ -392,7 +392,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 4,
-    name: 'FIITJEE',
+    name: 'Other IIT-JEE-First Coaching (NEET Division)',
     description: 'Known for IIT-JEE, also offers medical coaching',
     score: 7.8,
     rating: 4.1,
@@ -413,7 +413,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 5,
-    name: 'Narayana',
+    name: 'Other South-Indian Chain',
     description: 'South Indian chain with systematic approach',
     score: 7.5,
     rating: 4.0,
@@ -430,7 +430,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 6,
-    name: 'VMC (Vidyamandir Classes)',
+    name: 'Other Delhi-Origin Mid-Tier Coaching',
     description: 'Delhi-based institute with balanced approach',
     score: 7.2,
     rating: 3.9,
@@ -447,7 +447,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 7,
-    name: 'Career Point',
+    name: 'Other Kota-Origin Chain',
     description: 'Kota-origin institute with affordable options',
     score: 7.0,
     rating: 3.8,
@@ -464,7 +464,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 8,
-    name: 'Resonance',
+    name: 'Other Kota-Origin Generalist Chain',
     description: 'Another Kota chain with franchise model',
     score: 6.8,
     rating: 3.7,
@@ -481,7 +481,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
   },
   {
     rank: 9,
-    name: 'Physics Wallah',
+    name: 'Other Online-First Generalist Platform',
     description: 'Online-first platform with affordable options',
     score: 6.5,
     rating: 4.2,
@@ -560,7 +560,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 2,
-    name: 'Aakash Institute',
+    name: 'SKY Coaching',
     description: 'Large established chain with comprehensive PCB coaching',
     score: 8.5,
     rating: 4.3,
@@ -587,7 +587,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 3,
-    name: 'Allen Career Institute',
+    name: 'XYZ Coaching',
     description: 'Kota-style intensive coaching with proven track record',
     score: 8.3,
     rating: 4.2,
@@ -614,7 +614,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 4,
-    name: 'Velocity Institute',
+    name: 'Other Faridabad-Local Coaching',
     description: 'Popular Faridabad-based coaching for NEET and JEE',
     score: 7.8,
     rating: 4.0,
@@ -635,7 +635,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 5,
-    name: 'Narayana',
+    name: 'Other South-Indian Chain',
     description: 'South Indian chain with systematic approach',
     score: 7.5,
     rating: 4.0,
@@ -652,7 +652,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 6,
-    name: 'YVS Institute',
+    name: 'Other Faridabad-Local Coaching (NIT Area)',
     description: 'Local Faridabad coaching with focus on NEET and boards',
     score: 7.2,
     rating: 3.9,
@@ -669,7 +669,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 7,
-    name: 'VMC (Vidyamandir Classes)',
+    name: 'Other Delhi-Origin Mid-Tier Coaching',
     description: 'Delhi-based institute with balanced approach',
     score: 7.0,
     rating: 3.9,
@@ -686,7 +686,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 8,
-    name: 'Para Classes',
+    name: 'Other Local Personalised Coaching',
     description: 'Local coaching with personalized approach',
     score: 6.8,
     rating: 3.7,
@@ -703,7 +703,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 9,
-    name: 'Physics Wallah',
+    name: 'Other Online-First Generalist Platform',
     description: 'Online-first platform with affordable options',
     score: 6.5,
     rating: 4.2,
@@ -724,7 +724,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
   },
   {
     rank: 10,
-    name: 'Bansal Learning',
+    name: 'Other Local Faridabad Coaching',
     description: 'Faridabad-based coaching with moderate track record',
     score: 6.0,
     rating: 3.5,
