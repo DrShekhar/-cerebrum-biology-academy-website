@@ -149,9 +149,7 @@ export function Top10List({
                   </span>
                 )}
               </span>
-              {item.score && (
-                <span className="ml-auto text-sm text-gray-500">{item.score}/10</span>
-              )}
+              {item.score && <span className="ml-auto text-sm text-gray-500">{item.score}/10</span>}
             </li>
           ))}
         </ol>
@@ -218,87 +216,85 @@ export function Top10List({
                       <span className="font-semibold">{item.rating}</span>
                     </div>
                   )}
-                  <div
-                   className="animate-fadeInUp">
+                  <div className="animate-fadeInUp">
                     <ChevronDown className="w-5 h-5 text-gray-400" />
                   </div>
                 </div>
               </button>
 
               {/* Expanded Content */}
-{isExpanded && (
-                  <div
-                   className="animate-fadeInUp">
-                    <div className="px-4 pb-4 border-t border-gray-100 pt-4">
-                      {/* Key Features Grid */}
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                        {item.keyFeatures.map((feature, idx) => (
-                          <div key={idx} className="text-center p-3 bg-gray-50 rounded-lg">
-                            <div className="text-xs text-gray-500 mb-1">{feature.label}</div>
-                            <div className="font-semibold text-gray-900">{feature.value}</div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Pros & Cons */}
-                      <div className="grid md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                          <h4 className="text-sm font-semibold text-green-700 mb-2 flex items-center gap-1">
-                            <CheckCircle className="w-4 h-4" /> Pros
-                          </h4>
-                          <ul className="space-y-1">
-                            {item.pros.map((pro, idx) => (
-                              <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
-                                <CheckCircle className="w-3 h-3 text-green-500 mt-1 flex-shrink-0" />
-                                {pro}
-                              </li>
-                            ))}
-                          </ul>
+              {isExpanded && (
+                <div className="animate-fadeInUp">
+                  <div className="px-4 pb-4 border-t border-gray-100 pt-4">
+                    {/* Key Features Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                      {item.keyFeatures.map((feature, idx) => (
+                        <div key={idx} className="text-center p-3 bg-gray-50 rounded-lg">
+                          <div className="text-xs text-gray-500 mb-1">{feature.label}</div>
+                          <div className="font-semibold text-gray-900">{feature.value}</div>
                         </div>
-                        <div>
-                          <h4 className="text-sm font-semibold text-red-700 mb-2 flex items-center gap-1">
-                            <XCircle className="w-4 h-4" /> Cons
-                          </h4>
-                          <ul className="space-y-1">
-                            {item.cons.map((con, idx) => (
-                              <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
-                                <XCircle className="w-3 h-3 text-red-500 mt-1 flex-shrink-0" />
-                                {con}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
+                      ))}
+                    </div>
 
-                      {/* Footer with Fee & Location */}
-                      <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-gray-100">
-                        {item.feeRange && (
-                          <div className="flex items-center gap-1 text-sm text-gray-600">
-                            <IndianRupee className="w-4 h-4" />
-                            {item.feeRange}
-                          </div>
-                        )}
-                        {item.location && (
-                          <div className="flex items-center gap-1 text-sm text-gray-600">
-                            <MapPin className="w-4 h-4" />
-                            {item.location}
-                          </div>
-                        )}
-                        {item.website && (
-                          <a
-                            href={item.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1 text-sm text-blue-600 hover:underline ml-auto"
-                          >
-                            Visit Website <ExternalLink className="w-3 h-3" />
-                          </a>
-                        )}
+                    {/* Pros & Cons */}
+                    <div className="grid md:grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <h4 className="text-sm font-semibold text-green-700 mb-2 flex items-center gap-1">
+                          <CheckCircle className="w-4 h-4" /> Pros
+                        </h4>
+                        <ul className="space-y-1">
+                          {item.pros.map((pro, idx) => (
+                            <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                              <CheckCircle className="w-3 h-3 text-green-500 mt-1 flex-shrink-0" />
+                              {pro}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-red-700 mb-2 flex items-center gap-1">
+                          <XCircle className="w-4 h-4" /> Cons
+                        </h4>
+                        <ul className="space-y-1">
+                          {item.cons.map((con, idx) => (
+                            <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                              <XCircle className="w-3 h-3 text-red-500 mt-1 flex-shrink-0" />
+                              {con}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
+
+                    {/* Footer with Fee & Location */}
+                    <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-gray-100">
+                      {item.feeRange && (
+                        <div className="flex items-center gap-1 text-sm text-gray-600">
+                          <IndianRupee className="w-4 h-4" />
+                          {item.feeRange}
+                        </div>
+                      )}
+                      {item.location && (
+                        <div className="flex items-center gap-1 text-sm text-gray-600">
+                          <MapPin className="w-4 h-4" />
+                          {item.location}
+                        </div>
+                      )}
+                      {item.website && (
+                        <a
+                          href={item.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-sm text-blue-600 hover:underline ml-auto"
+                        >
+                          Visit Website <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
+                    </div>
                   </div>
-                )}
-</div>
+                </div>
+              )}
+            </div>
           )
         })}
       </div>
@@ -400,11 +396,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
     description: 'Known for IIT-JEE, also offers medical coaching',
     score: 7.8,
     rating: 4.1,
-    pros: [
-      'Strong analytical approach',
-      'Good for Physics',
-      'Reputed brand',
-    ],
+    pros: ['Strong analytical approach', 'Good for Physics', 'Reputed brand'],
     cons: [
       'Primary focus is IIT-JEE',
       'Biology is secondary priority',
@@ -425,16 +417,8 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
     description: 'South Indian chain with systematic approach',
     score: 7.5,
     rating: 4.0,
-    pros: [
-      'Systematic teaching methodology',
-      'Good study material',
-      'Regular assessments',
-    ],
-    cons: [
-      'Large batch sizes',
-      'Limited personalization',
-      'Factory-style coaching',
-    ],
+    pros: ['Systematic teaching methodology', 'Good study material', 'Regular assessments'],
+    cons: ['Large batch sizes', 'Limited personalization', 'Factory-style coaching'],
     keyFeatures: [
       { label: 'Success Rate', value: '68%' },
       { label: 'Batch Size', value: '60-80' },
@@ -450,16 +434,8 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
     description: 'Delhi-based institute with balanced approach',
     score: 7.2,
     rating: 3.9,
-    pros: [
-      'Balanced curriculum',
-      'Experienced Delhi faculty',
-      'Good for board preparation',
-    ],
-    cons: [
-      'Medium batch sizes',
-      'Limited NEET-specific focus',
-      'Average success rate',
-    ],
+    pros: ['Balanced curriculum', 'Experienced Delhi faculty', 'Good for board preparation'],
+    cons: ['Medium batch sizes', 'Limited NEET-specific focus', 'Average success rate'],
     keyFeatures: [
       { label: 'Success Rate', value: '65%' },
       { label: 'Batch Size', value: '40-60' },
@@ -475,16 +451,8 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
     description: 'Kota-origin institute with affordable options',
     score: 7.0,
     rating: 3.8,
-    pros: [
-      'Affordable fees',
-      'Kota methodology',
-      'Good for middle-range students',
-    ],
-    cons: [
-      'Average faculty quality',
-      'Less premium feel',
-      'Limited advanced resources',
-    ],
+    pros: ['Affordable fees', 'Kota methodology', 'Good for middle-range students'],
+    cons: ['Average faculty quality', 'Less premium feel', 'Limited advanced resources'],
     keyFeatures: [
       { label: 'Success Rate', value: '60%' },
       { label: 'Batch Size', value: '50-70' },
@@ -500,16 +468,8 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
     description: 'Another Kota chain with franchise model',
     score: 6.8,
     rating: 3.7,
-    pros: [
-      'Established brand',
-      'Good study material',
-      'Multiple batches',
-    ],
-    cons: [
-      'Franchise quality varies',
-      'Large batches',
-      'Less personal attention',
-    ],
+    pros: ['Established brand', 'Good study material', 'Multiple batches'],
+    cons: ['Franchise quality varies', 'Large batches', 'Less personal attention'],
     keyFeatures: [
       { label: 'Success Rate', value: '58%' },
       { label: 'Batch Size', value: '50-70' },
@@ -525,11 +485,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
     description: 'Online-first platform with affordable options',
     score: 6.5,
     rating: 4.2,
-    pros: [
-      'Very affordable',
-      'Good online content',
-      'Accessible to all',
-    ],
+    pros: ['Very affordable', 'Good online content', 'Accessible to all'],
     cons: [
       'Primarily online (offline limited)',
       'Less personal attention',
@@ -550,11 +506,7 @@ export const TOP_10_NEET_COACHING_GURUGRAM: RankedItem[] = [
     description: 'Various local tutors and small institutes',
     score: 6.0,
     rating: 3.5,
-    pros: [
-      'Low fees',
-      'Personal attention possible',
-      'Flexible timings',
-    ],
+    pros: ['Low fees', 'Personal attention possible', 'Flexible timings'],
     cons: [
       'Unproven track record',
       'Limited resources',
@@ -666,11 +618,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
     description: 'Popular Faridabad-based coaching for NEET and JEE',
     score: 7.8,
     rating: 4.0,
-    pros: [
-      'Strong local reputation',
-      'Moderate batch sizes',
-      'Affordable fees',
-    ],
+    pros: ['Strong local reputation', 'Moderate batch sizes', 'Affordable fees'],
     cons: [
       'Limited national track record',
       'Less brand recognition outside Faridabad',
@@ -691,16 +639,8 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
     description: 'South Indian chain with systematic approach',
     score: 7.5,
     rating: 4.0,
-    pros: [
-      'Systematic teaching methodology',
-      'Good study material',
-      'Regular assessments',
-    ],
-    cons: [
-      'Large batch sizes',
-      'Limited personalization',
-      'Factory-style coaching',
-    ],
+    pros: ['Systematic teaching methodology', 'Good study material', 'Regular assessments'],
+    cons: ['Large batch sizes', 'Limited personalization', 'Factory-style coaching'],
     keyFeatures: [
       { label: 'Success Rate', value: '68%' },
       { label: 'Batch Size', value: '60-80' },
@@ -716,16 +656,8 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
     description: 'Local Faridabad coaching with focus on NEET and boards',
     score: 7.2,
     rating: 3.9,
-    pros: [
-      'Local expertise',
-      'Personal attention',
-      'Affordable fees',
-    ],
-    cons: [
-      'Limited brand recognition',
-      'Smaller faculty pool',
-      'Average infrastructure',
-    ],
+    pros: ['Local expertise', 'Personal attention', 'Affordable fees'],
+    cons: ['Limited brand recognition', 'Smaller faculty pool', 'Average infrastructure'],
     keyFeatures: [
       { label: 'Success Rate', value: '62%' },
       { label: 'Batch Size', value: '30-50' },
@@ -741,16 +673,8 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
     description: 'Delhi-based institute with balanced approach',
     score: 7.0,
     rating: 3.9,
-    pros: [
-      'Balanced curriculum',
-      'Experienced Delhi faculty',
-      'Good for board preparation',
-    ],
-    cons: [
-      'Medium batch sizes',
-      'Limited NEET-specific focus',
-      'Average success rate',
-    ],
+    pros: ['Balanced curriculum', 'Experienced Delhi faculty', 'Good for board preparation'],
+    cons: ['Medium batch sizes', 'Limited NEET-specific focus', 'Average success rate'],
     keyFeatures: [
       { label: 'Success Rate', value: '65%' },
       { label: 'Batch Size', value: '40-60' },
@@ -766,16 +690,8 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
     description: 'Local coaching with personalized approach',
     score: 6.8,
     rating: 3.7,
-    pros: [
-      'Small batch sizes',
-      'Personalized attention',
-      'Affordable fees',
-    ],
-    cons: [
-      'Limited track record',
-      'Less structured curriculum',
-      'Basic infrastructure',
-    ],
+    pros: ['Small batch sizes', 'Personalized attention', 'Affordable fees'],
+    cons: ['Limited track record', 'Less structured curriculum', 'Basic infrastructure'],
     keyFeatures: [
       { label: 'Success Rate', value: '58%' },
       { label: 'Batch Size', value: '20-40' },
@@ -791,11 +707,7 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
     description: 'Online-first platform with affordable options',
     score: 6.5,
     rating: 4.2,
-    pros: [
-      'Very affordable',
-      'Good online content',
-      'Accessible to all',
-    ],
+    pros: ['Very affordable', 'Good online content', 'Accessible to all'],
     cons: [
       'Primarily online (offline limited)',
       'Less personal attention',
@@ -816,16 +728,8 @@ export const TOP_10_NEET_COACHING_FARIDABAD: RankedItem[] = [
     description: 'Faridabad-based coaching with moderate track record',
     score: 6.0,
     rating: 3.5,
-    pros: [
-      'Local presence',
-      'Affordable fees',
-      'Flexible timings',
-    ],
-    cons: [
-      'Limited track record',
-      'Basic resources',
-      'Variable quality',
-    ],
+    pros: ['Local presence', 'Affordable fees', 'Flexible timings'],
+    cons: ['Limited track record', 'Basic resources', 'Variable quality'],
     keyFeatures: [
       { label: 'Success Rate', value: '50%' },
       { label: 'Batch Size', value: '30-50' },

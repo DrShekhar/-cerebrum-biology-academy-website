@@ -121,7 +121,14 @@ export {
 } from './SpeakableSchema'
 
 // Top 10 List component with ItemList schema for ranking pages
-export { Top10List, TOP_10_NEET_COACHING_GURUGRAM, type RankedItem } from './Top10ListSchema'
+export {
+  Top10List,
+  TOP_10_NEET_COACHING_GURUGRAM,
+  TOP_10_NEET_COACHING_FARIDABAD,
+  type RankedItem,
+} from './Top10ListSchema'
+// Delhi NCR ranking dataset — server-safe data module (no 'use client' boundary)
+export { TOP_10_BIOLOGY_COACHING_DELHI_NCR } from '@/data/top-10-biology-coaching-delhi-ncr'
 
 // Hinglish keywords for long-tail SEO targeting
 export {

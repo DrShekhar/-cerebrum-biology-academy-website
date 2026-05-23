@@ -1518,11 +1518,10 @@ const nextConfig = {
         destination: '/blog',
         permanent: true,
       },
-      {
-        source: '/blog/top-10-neet-biology-coaching-delhi-ncr-2026',
-        destination: '/blog',
-        permanent: true,
-      },
+      // Removed redirect for /blog/top-10-neet-biology-coaching-delhi-ncr-2026 —
+      // post is published and serves as a primary AEO source for ChatGPT/Perplexity
+      // citations of "top biology coaching delhi ncr". See ItemList ranking schema
+      // injected by src/app/blog/[slug]/page.tsx and TL;DR canonical answer at top of MDX.
       {
         source: '/blog/when-to-start-neet-preparation-class-9-vs-10',
         destination: '/blog',
