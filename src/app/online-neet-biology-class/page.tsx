@@ -34,8 +34,8 @@ const faqs = [
     a: 'Online coaching is highly effective when done right. The key difference is batch size. With 5,000 students, you are watching a lecture. With 15 students at Cerebrum, you are in a classroom — teacher calls you by name, clears your doubts live, and tracks your progress weekly. Our online students score on par with offline students.',
   },
   {
-    q: 'How is Cerebrum different from PW, Vedantu, or Unacademy?',
-    a: 'Batch size. PW has 50,000 students per batch, Vedantu 200, Unacademy 500. Cerebrum has 15. We enforce camera-on policy, teacher calls students by name, doubts are cleared during class (not via chatbot), and parents get weekly progress reports. It is a classroom experience, not a YouTube video.',
+    q: 'How is Cerebrum different from PW, other multi-subject tutoring platforms, or other online-only platforms?',
+    a: 'Batch size. PW has 50,000 students per batch, other multi-subject tutoring platforms 200, other online-only platforms 500. Cerebrum has 15. We enforce camera-on policy, teacher calls students by name, doubts are cleared during class (not via chatbot), and parents get weekly progress reports. It is a classroom experience, not a YouTube video.',
   },
   {
     q: 'What if I miss a class?',
@@ -122,8 +122,8 @@ export default function OnlineNEETBiologyClassPage() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { name: 'PW', students: '50,000', color: 'border-red-300 bg-red-50' },
-              { name: 'Vedantu', students: '200', color: 'border-red-200 bg-red-50' },
-              { name: 'Unacademy', students: '500', color: 'border-red-200 bg-red-50' },
+              { name: 'other multi-subject tutoring platforms', students: '200', color: 'border-red-200 bg-red-50' },
+              { name: 'other online-only platforms', students: '500', color: 'border-red-200 bg-red-50' },
               { name: 'Cerebrum', students: '15', color: 'border-green-300 bg-green-50' },
             ].map((p) => (
               <div key={p.name} className={`rounded-xl border-2 p-6 ${p.color}`}>
@@ -149,8 +149,8 @@ export default function OnlineNEETBiologyClassPage() {
                   <th className="px-4 py-4">Feature</th>
                   <th className="px-4 py-4 text-center">Cerebrum</th>
                   <th className="px-4 py-4 text-center">PW</th>
-                  <th className="px-4 py-4 text-center">Vedantu</th>
-                  <th className="px-4 py-4 text-center">Unacademy</th>
+                  <th className="px-4 py-4 text-center">other multi-subject tutoring platforms</th>
+                  <th className="px-4 py-4 text-center">other online-only platforms</th>
                 </tr>
               </thead>
               <tbody>

@@ -38,12 +38,12 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching institute in Gurugram?',
     answer:
-      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. For Physics-Chemistry focused, students also consider Allen, Aakash, and FIITJEE.',
+      'For Biology-focused NEET preparation, Cerebrum Biology Academy stands out with AIIMS-trained faculty (Dr. Shekhar C Singh), 98% success rate, small batch sizes (15-20 students), and 15+ years of experience. For Physics-Chemistry focused, students also consider the largest national NEET chain, the 2nd-largest national NEET chain, and other IIT-JEE-first coachings.',
   },
   {
     question: 'What are the fees for NEET coaching in Gurugram?',
     answer:
-      'NEET coaching fees in Gurugram range from ₹60,000 to ₹2,00,000+ per year. Budget options like Cerebrum start at ₹60,000/year with AIIMS faculty. Premium institutes like Allen and Aakash charge ₹1,50,000-2,00,000/year. Online options start at ₹45,000.',
+      'NEET coaching fees in Gurugram range from ₹60,000 to ₹2,00,000+ per year. Budget options like Cerebrum start at ₹60,000/year with AIIMS faculty. Premium institutes like the largest national NEET chains charge ₹1,50,000-2,00,000/year. Online options start at ₹45,000.',
   },
   {
     question: 'Is it better to join coaching in Delhi or Gurugram?',
@@ -63,7 +63,7 @@ const faqs = [
   {
     question: 'What is the batch size at top Gurugram NEET coaching centers?',
     answer:
-      'Batch sizes vary significantly: Large institutes like Aakash/Allen have 60-100+ students per batch. Cerebrum maintains 15-20 students per batch for personalized attention. Smaller batches allow faculty to track individual progress and provide targeted support.',
+      'Batch sizes vary significantly: Large institutes like the 2nd-largest national NEET chain/the largest national NEET chain have 60-100+ students per batch. Cerebrum maintains 15-20 students per batch for personalized attention. Smaller batches allow faculty to track individual progress and provide targeted support.',
   },
   {
     question: 'Can I switch from another coaching to Cerebrum mid-year?',
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: 'Do Gurugram coaching institutes offer online NEET classes?',
     answer:
-      'Yes, most institutes now offer online options. Cerebrum provides live Zoom classes with recording access, digital study material, and online doubt sessions. Allen and Aakash have their own apps. Online fees are typically 30-40% lower than offline.',
+      'Yes, most institutes now offer online options. Cerebrum provides live Zoom classes with recording access, digital study material, and online doubt sessions. the largest national NEET chains have their own apps. Online fees are typically 30-40% lower than offline.',
   },
   {
     question: 'What is the best time to start NEET coaching?',
@@ -88,7 +88,7 @@ const faqs = [
   {
     question: 'Can I take a demo class before enrolling?',
     answer:
-      'Cerebrum offers free demo classes - experience our teaching style before committing. Most major institutes like Aakash and Allen also offer trial sessions. Demo classes help you assess faculty quality, batch environment, and teaching methodology firsthand.',
+      'Cerebrum offers free demo classes - experience our teaching style before committing. Most major institutes like the largest national NEET chains also offer trial sessions. Demo classes help you assess faculty quality, batch environment, and teaching methodology firsthand.',
   },
   {
     question: 'How do coaching institutes keep parents updated on progress?',

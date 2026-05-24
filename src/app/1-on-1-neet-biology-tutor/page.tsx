@@ -156,7 +156,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Can I take 1-on-1 NEET biology tutoring alongside my main coaching?',
       answer:
-        'Yes — and many serious aspirants do exactly this. Common pattern: students keep their main coaching at Allen, Aakash, PhysicsWallah or Vedantu for Physics/Chemistry and add Cerebrum 1:1 specifically for Biology gap-fill. Ad-hoc hourly tutoring is designed for exactly this use case.',
+        'Yes — and many serious aspirants do exactly this. Common pattern: students keep their main coaching at the largest national NEET chains and online-first generalist platforms or other multi-subject tutoring platforms for Physics/Chemistry and add Cerebrum 1:1 specifically for Biology gap-fill. Ad-hoc hourly tutoring is designed for exactly this use case.',
     },
     {
       question: 'Is online 1-on-1 NEET biology tutoring as effective as offline?',

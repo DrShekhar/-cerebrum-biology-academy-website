@@ -52,14 +52,14 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum compare to Velammal, Aakash Chennai, or local NEET coaching for Class 9?',
+      'How does Cerebrum compare to Velammal, the 2nd-largest national NEET chain Chennai, or local NEET coaching for Class 9?',
     answer:
-      'Chennai has uniquely strong local NEET infrastructure — Velammal Group runs integrated school + NEET coaching from Class 9 onwards (claims 2,800+ NEET selections annually). Aakash Chennai operates ~5 centres with 200-300 student PCB Foundation batches. P. Obul Reddy Hall, T.I.M.E., Career Point Chennai are smaller local players. Cerebrum is biology-only with 15-20 student online live batches and AIIMS-trained faculty — structurally different positioning. Many Chennai families pair Velammal/Aakash for PC with Cerebrum biology specifically for AIIMS/JIPMER-target depth. Note: Tamil Nadu has its own state government medical college quota system (TNMSC) which weights Tamil Nadu Class 12 board marks alongside NEET — making Tamil Nadu board parallel pedagogy uniquely important.',
+      'Chennai has uniquely strong local NEET infrastructure — Velammal Group runs integrated school + NEET coaching from Class 9 onwards (claims 2,800+ NEET selections annually). the 2nd-largest national NEET chain Chennai operates ~5 centres with 200-300 student PCB Foundation batches. P. Obul Reddy Hall, T.I.M.E., other Kota-origin chains Chennai are smaller local players. Cerebrum is biology-only with 15-20 student online live batches and AIIMS-trained faculty — structurally different positioning. Many Chennai families pair Velammal/the 2nd-largest national NEET chain for PC with Cerebrum biology specifically for AIIMS/JIPMER-target depth. Note: Tamil Nadu has its own state government medical college quota system (TNMSC) which weights Tamil Nadu Class 12 board marks alongside NEET — making Tamil Nadu board parallel pedagogy uniquely important.',
   },
   {
     question: 'What does Class 9 NEET Foundation cost in Chennai?',
     answer:
-      'Cerebrum Class 9 Foundation pricing for Chennai families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. Chennai-specific cost calculus: Velammal Group integrated school + NEET Foundation runs ₹1.2L-1.5L/year combined PCB but requires school transfer to Velammal Vidyalaya — most existing PSBB/DAV/Vidya Mandir families will not switch schools for this. P. Obul Reddy Hall (~₹90K-1.1L). Aakash Scholastics Chennai (~₹85K-1L, 200-student batch). Career Point Chennai (~₹70K-90K). Cerebrum biology-only Ascent (₹65K) is the structural alternative for non-Velammal-school families wanting biology specialist depth without switching schools, paired with PhysicsWallah PC (₹15K) for total ₹80K with Samacheer Kalvi board parallel pedagogy that the mass-batch alternatives deprioritise.',
+      'Cerebrum Class 9 Foundation pricing for Chennai families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. Chennai-specific cost calculus: Velammal Group integrated school + NEET Foundation runs ₹1.2L-1.5L/year combined PCB but requires school transfer to Velammal Vidyalaya — most existing PSBB/DAV/Vidya Mandir families will not switch schools for this. P. Obul Reddy Hall (~₹90K-1.1L). the 2nd-largest national NEET chain Scholastics Chennai (~₹85K-1L, 200-student batch). other Kota-origin chains Chennai (~₹70K-90K). Cerebrum biology-only Ascent (₹65K) is the structural alternative for non-Velammal-school families wanting biology specialist depth without switching schools, paired with other online-only platforms PC (₹15K) for total ₹80K with Samacheer Kalvi board parallel pedagogy that the mass-batch alternatives deprioritise.',
   },
 ]
 
@@ -215,8 +215,8 @@ export default function NEETFoundationClass9ChennaiPage() {
           <p>
             Chennai has uniquely strong local NEET infrastructure — Velammal Group runs integrated
             school-plus-NEET coaching from Class 9 onwards, claiming 2,800+ NEET selections
-            annually. Aakash Chennai operates ~5 centres. Local players P. Obul Reddy Hall, T.I.M.E.
-            (NEET division), Career Point Chennai round out the market. Cerebrum&apos;s positioning
+            annually. the 2nd-largest national NEET chain Chennai operates ~5 centres. Local players P. Obul Reddy Hall, T.I.M.E.
+            (NEET division), other Kota-origin chains Chennai round out the market. Cerebrum&apos;s positioning
             in Chennai is biology-only specialist with 15-20 student online live batches led by
             AIIMS-trained faculty — structurally different from local mass-batch coaching. The
             Chennai differentiator: Tamil Nadu&apos;s state government medical college quota system

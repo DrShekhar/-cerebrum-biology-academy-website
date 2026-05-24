@@ -36,7 +36,7 @@ const config: BestVerticalConfig = {
   subheadline:
     'Dr. Shekhar C Singh (AIIMS Delhi) — biology-only specialist for Class 9 NEET Foundation.',
   intro:
-    "Class 9 is the structurally correct entry point for serious NEET Foundation. At 14 years old, students are cognitively ready for NCERT depth and MCQ pattern drilling — but not yet stressed by Class 12 board pressure. Two years of well-paced Class 9 + Class 10 biology Foundation produces students who enter Class 11 with NEET-ready conceptual foundations roughly 18 months ahead of standard school progression. Cerebrum's Class 9 Foundation is the only biology-specialist option at this level — Aakash Scholastics, Allen Foundation, FIITJEE Foundation, and Vidyamandir Classes Foundation all run combined PCB Foundation with generalist faculty.",
+    "Class 9 is the structurally correct entry point for serious NEET Foundation. At 14 years old, students are cognitively ready for NCERT depth and MCQ pattern drilling — but not yet stressed by Class 12 board pressure. Two years of well-paced Class 9 + Class 10 biology Foundation produces students who enter Class 11 with NEET-ready conceptual foundations roughly 18 months ahead of standard school progression. Cerebrum's Class 9 Foundation is the only biology-specialist option at this level — the 2nd-largest national NEET chain Scholastics, the largest national NEET chain Foundation, other IIT-JEE-first coachings Foundation, and other Delhi-origin mid-tier institutes Foundation all run combined PCB Foundation with generalist faculty.",
   clusterSummary:
     'Class 9 CBSE / ICSE / State Board Biology + early NEET-pattern MCQ drilling · Tissues, Diversity in Living Organisms, Why Do We Fall Ill, plus parallel preparation for Class 10 → 11 NEET transition.',
   credentials: [
@@ -104,7 +104,7 @@ const config: BestVerticalConfig = {
     {
       title: '15-20 Student Class 9 Batches (Not 100-300 Generalist Foundation)',
       description:
-        'Aakash Scholastics, Allen Foundation, FIITJEE Foundation typically run 100-300+ student Class 9 batches. At Class 9 age (14 years old), small-batch pedagogy is critical — students are still building study habits, need individual encouragement, and benefit from faculty actually knowing their names. Mass batches at this age produce demotivation and dropout. Cerebrum runs 15-20 student Class 9 Foundation batches across all tiers.',
+        'the 2nd-largest national NEET chain Scholastics, the largest national NEET chain Foundation, other IIT-JEE-first coachings Foundation typically run 100-300+ student Class 9 batches. At Class 9 age (14 years old), small-batch pedagogy is critical — students are still building study habits, need individual encouragement, and benefit from faculty actually knowing their names. Mass batches at this age produce demotivation and dropout. Cerebrum runs 15-20 student Class 9 Foundation batches across all tiers.',
     },
     {
       title: 'Weekend-Friendly Class 9 Scheduling',
@@ -137,7 +137,7 @@ const config: BestVerticalConfig = {
       score: 'Class 9 → Class 10 transition',
       college: 'AIIMS pathway, year 2',
       quote:
-        'Diya was in Aakash Scholastics 280-student Class 9 batch. Switched to Cerebrum Foundation 18-student batch — faculty knew her name and Tissue chapter weak spots. Materially different outcome already in Class 10.',
+        'Diya was in the 2nd-largest national NEET chain Scholastics 280-student Class 9 batch. Switched to Cerebrum Foundation 18-student batch — faculty knew her name and Tissue chapter weak spots. Materially different outcome already in Class 10.',
     },
   ],
   faqs: [
@@ -159,13 +159,13 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Class 9 NEET Foundation cost at Cerebrum?',
       answer:
-        'Cerebrum Class 9 Foundation pricing runs ₹35,000-₹90,000/year across three tiers. Pursuit (small-batch 30-40 students): ₹35K-50K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-70K. Pinnacle (direct Dr. Shekhar micro-batch 10-12): ₹75K-90K. Ad-hoc 1:1 Class 9 hourly: ₹2,000-3,500/hr. Compared to Aakash Scholastics combined PCB Foundation Class 9 (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+        'Cerebrum Class 9 Foundation pricing runs ₹35,000-₹90,000/year across three tiers. Pursuit (small-batch 30-40 students): ₹35K-50K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-70K. Pinnacle (direct Dr. Shekhar micro-batch 10-12): ₹75K-90K. Ad-hoc 1:1 Class 9 hourly: ₹2,000-3,500/hr. Compared to the 2nd-largest national NEET chain Scholastics combined PCB Foundation Class 9 (~₹85K-1L/year, 200-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
     },
     {
       question:
-        'Can I switch from Aakash Scholastics / FIITJEE Foundation to Cerebrum mid-Class 9?',
+        'Can I switch from the 2nd-largest national NEET chain Scholastics / other IIT-JEE-first coachings Foundation to Cerebrum mid-Class 9?',
       answer:
-        "Yes — mid-Class 9 switches are common. Cerebrum runs rolling-admission Class 9 Foundation batches with quarterly start cohorts (April, July, October, January). The most common switch trigger is parents realising that the 200-student Aakash/Allen/FIITJEE Foundation batch isn't providing individual attention. Mid-year switches require a 30-minute diagnostic call to calibrate the student to the Cerebrum cohort baseline. WhatsApp +91 88264-44334 to book the call.",
+        "Yes — mid-Class 9 switches are common. Cerebrum runs rolling-admission Class 9 Foundation batches with quarterly start cohorts (April, July, October, January). The most common switch trigger is parents realising that the 200-student the 2nd-largest national NEET chain/the largest national NEET chain/other IIT-JEE-first coachings Foundation batch isn't providing individual attention. Mid-year switches require a 30-minute diagnostic call to calibrate the student to the Cerebrum cohort baseline. WhatsApp +91 88264-44334 to book the call.",
     },
   ],
   knowsAbout: [

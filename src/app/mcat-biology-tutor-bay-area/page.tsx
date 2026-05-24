@@ -77,7 +77,7 @@ const faqs = [
     question:
       'How does Cerebrum compare to Bay Area in-person providers like AltiusPrep or NextStep?',
     answer:
-      'Altius is an excellent 1:1 generalist at ~$175/hour — they cover all four sections with subject-rotating tutors. NextStep (Blueprint) is a popular full-course generalist. Cerebrum is a biology-section specialist — we go deeper on the Bio/Biochem section than a generalist rotation does, and our $150/hour ad-hoc rate is below Altius. Many Bay Area students use Altius or Blueprint for the full course and add our Bio/Biochem 1:1 for gap-fill on the biology side.',
+      'other generalist MCAT brands is an excellent 1:1 generalist at ~$175/hour — they cover all four sections with subject-rotating tutors. NextStep (Blueprint) is a popular full-course generalist. Cerebrum is a biology-section specialist — we go deeper on the Bio/Biochem section than a generalist rotation does, and our $150/hour ad-hoc rate is below other generalist MCAT brands. Many Bay Area students use other generalist MCAT brands or Blueprint for the full course and add our Bio/Biochem 1:1 for gap-fill on the biology side.',
   },
   {
     question: 'Will UCSF or Stanford BS/MD or feeder-track students be coached differently?',
@@ -367,7 +367,7 @@ export default function MCATBiologyTutorBayAreaPage() {
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $150/hour</strong> outside the packaged programme. For
-              students using Altius / Blueprint / Princeton Review as the generalist provider and
+              students using other generalist MCAT brands / Blueprint / other generalist test-prep brands as the generalist provider and
               wanting a biology specialist for gap-fill.
             </li>
           </ul>

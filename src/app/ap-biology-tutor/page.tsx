@@ -191,7 +191,7 @@ const faqs = [
   {
     question: 'Which is the best AP Biology coaching for FRQ mastery?',
     answer:
-      'Cerebrum Biology Academy specialises in AP Biology FRQ rubric mastery — the area where most students lose marks. Faculty are PhD-level senior tutors with 8–15 years of AP Biology classroom experience and direct exposure to College Board scoring rubrics, led by Dr. Shekhar C Singh. Curriculum is US-curriculum-aligned, exam-pattern-driven and structurally different from generalist tutoring platforms (Wyzant, Tutor.com, Varsity Tutors) where biology faculty rotate across subjects.',
+      'Cerebrum Biology Academy specialises in AP Biology FRQ rubric mastery — the area where most students lose marks. Faculty are PhD-level senior tutors with 8–15 years of AP Biology classroom experience and direct exposure to College Board scoring rubrics, led by Dr. Shekhar C Singh. Curriculum is US-curriculum-aligned, exam-pattern-driven and structurally different from generalist tutoring platforms (other tutor marketplaces) where biology faculty rotate across subjects.',
   },
   {
     question: 'What is AP Biology and why should I take it?',
@@ -947,7 +947,7 @@ export default function APBiologyTutorPage() {
           card links to a 1,500+ word evidence-based content page that
           drives "AP Biology FRQ rubric" / "AP Biology score 5" / "AP
           Biology Anki" informational queries — the differentiation
-          moat vs Wyzant/Princeton/Khan. */}
+          moat vs other tutor marketplaces/Princeton/Khan. */}
       <section className="py-16 bg-gradient-to-b from-slate-50 to-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">

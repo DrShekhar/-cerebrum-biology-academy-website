@@ -1,5 +1,5 @@
 // Server Component - Comparison Schema for competitive SEO
-// Enables comparison queries like "Cerebrum vs Kota" or "best NEET coaching comparison"
+// Enables comparison queries like "Cerebrum vs Kota model" or "best NEET coaching comparison"
 import Script from 'next/script'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
@@ -20,7 +20,7 @@ export interface CompetitorData {
 // Competitor/Alternative data for comparisons
 export const COMPETITORS: Record<string, CompetitorData> = {
   'kota-coaching': {
-    name: 'Kota Coaching (Allen/Aakash)',
+    name: 'Kota Coaching Model (national chains)',
     slug: 'kota-coaching',
     location: 'Kota, Rajasthan',
     type: 'city',
@@ -33,7 +33,7 @@ export const COMPETITORS: Record<string, CompetitorData> = {
     bestFor: 'Students who thrive in highly competitive, high-pressure environments',
   },
   'allen-career': {
-    name: 'Allen Career Institute',
+    name: 'XYZ Coaching (largest national NEET chain)',
     slug: 'allen-career',
     location: 'Kota & Pan-India',
     type: 'institute',
@@ -46,7 +46,7 @@ export const COMPETITORS: Record<string, CompetitorData> = {
     bestFor: 'All-subject preparation with Physics/Chemistry focus',
   },
   'aakash-institute': {
-    name: 'Aakash Institute',
+    name: 'SKY Coaching (2nd-largest national NEET chain)',
     slug: 'aakash-institute',
     location: 'Pan-India (300+ centers)',
     type: 'institute',

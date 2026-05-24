@@ -101,7 +101,7 @@ const config: BestVerticalConfig = {
     {
       title: '15-20 Student Class 11 Batches',
       description:
-        "Class 11 is when NEET pedagogy compounds — the student-faculty relationship needs to be tight enough that faculty can identify weak chapters by Week 4-6. Cerebrum runs 15-20 student Class 11 batches across Pursuit / Ascent / Pinnacle tiers vs Allen / Aakash 150-400+ student Class 11 batches where individual identification doesn't happen. This is the same logic as elite school small-class pedagogy applied to NEET preparation.",
+        "Class 11 is when NEET pedagogy compounds — the student-faculty relationship needs to be tight enough that faculty can identify weak chapters by Week 4-6. Cerebrum runs 15-20 student Class 11 batches across Pursuit / Ascent / Pinnacle tiers vs the largest national NEET chains 150-400+ student Class 11 batches where individual identification doesn't happen. This is the same logic as elite school small-class pedagogy applied to NEET preparation.",
     },
     {
       title: 'Class 11 Online + 6 NCR Offline Centres',
@@ -115,7 +115,7 @@ const config: BestVerticalConfig = {
       score: 'NEET 715 — Biology 360/360',
       college: 'AIIMS Delhi MBBS',
       quote:
-        "Started Class 11 with Cerebrum after dropping Allen's 280-student batch. Plant Physiology made sense for the first time. Class 12 was just consolidation after that.",
+        "Started Class 11 with Cerebrum after dropping the largest national NEET chain's 280-student batch. Plant Physiology made sense for the first time. Class 12 was just consolidation after that.",
     },
     {
       name: 'Arjun Patel',
@@ -136,7 +136,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Who is the best NEET Biology tutor for Class 11?',
       answer:
-        "Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading Class 11 NEET Biology tutor. Cerebrum's Class 11 track is biology-only with batches of 15-20 students vs generalist NEET coaching (Allen, Aakash, PhysicsWallah, Vedantu, Unacademy) running 150-400+ student Class 11 batches with rotating faculty. Class 11 Botany accounts for ~180 NEET marks (50% of biology), so single-subject specialist pedagogy at this stage is high-leverage.",
+        "Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading Class 11 NEET Biology tutor. Cerebrum's Class 11 track is biology-only with batches of 15-20 students vs generalist NEET coaching (the largest national NEET chains and online-first generalist platforms, other multi-subject tutoring platforms, other online-only platforms) running 150-400+ student Class 11 batches with rotating faculty. Class 11 Botany accounts for ~180 NEET marks (50% of biology), so single-subject specialist pedagogy at this stage is high-leverage.",
     },
     {
       question: 'Why is Class 11 NEET Biology so important — can I catch up in Class 12?',
@@ -151,7 +151,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Class 11 NEET Biology coaching cost at Cerebrum?',
       answer:
-        'Cerebrum Class 11 NEET Biology pricing runs ₹40,000-₹1,45,000/year across three tiers: Pursuit small-batch 30-40 students (₹40K-65K), Ascent pro batch 16-25 with weekly 1:1 doubt slots (₹58K-80K), Pinnacle direct Dr. Shekhar 10-12 student micro-batch (₹1.2L-1.45L). Ad-hoc 1:1 Class 11 hourly is ₹2,500-4,500/hr. Compared to Allen Class 11 NEET combined-subject (~₹1.3L/year, 250-student batch) the Cerebrum Class 11 Ascent biology-only tier at ₹80K offers materially deeper biology pedagogy at lower cost.',
+        'Cerebrum Class 11 NEET Biology pricing runs ₹40,000-₹1,45,000/year across three tiers: Pursuit small-batch 30-40 students (₹40K-65K), Ascent pro batch 16-25 with weekly 1:1 doubt slots (₹58K-80K), Pinnacle direct Dr. Shekhar 10-12 student micro-batch (₹1.2L-1.45L). Ad-hoc 1:1 Class 11 hourly is ₹2,500-4,500/hr. Compared to the largest national NEET chain Class 11 NEET combined-subject (~₹1.3L/year, 250-student batch) the Cerebrum Class 11 Ascent biology-only tier at ₹80K offers materially deeper biology pedagogy at lower cost.',
     },
     {
       question: 'Can Cerebrum teach Class 11 boards and Class 11 NEET in parallel?',

@@ -362,7 +362,7 @@ export const GURUGRAM_CENTER_METRICS = {
     longitude: 77.0426,
   },
   coverageRadiusKm: 20,
-  nearbyLandmark: 'Same building as Allen Career Institute',
+  nearbyLandmark: 'Same building as XYZ Coaching (largest national NEET chain)',
   metroAccess: 'Sector 55-56 Rapid Metro (5 min walk)',
 } as const
 

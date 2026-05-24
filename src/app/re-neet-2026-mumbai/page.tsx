@@ -5,7 +5,7 @@ import { buildReNEETCityConfig } from '@/data/re-neet-city-config'
 export const metadata: Metadata = {
   title: 'RE-NEET 2026 Coaching in Mumbai | Online Biology Crash Course',
   description:
-    'RE-NEET 2026 coaching for Mumbai students (Andheri, Thane, Borivali) after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash — alongside your Mahesh Tutorials / Allen Mumbai / Aakash main coaching.',
+    'RE-NEET 2026 coaching for Mumbai students (Andheri, Thane, Borivali) after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash — alongside your Mahesh Tutorials / the largest national NEET chain Mumbai / the 2nd-largest national NEET chain main coaching.',
   keywords: [
     're-neet 2026 mumbai',
     're-neet coaching mumbai',

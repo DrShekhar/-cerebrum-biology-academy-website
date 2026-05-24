@@ -4,14 +4,14 @@ import { CEREBRUM_DATA, getAllCompetitors } from '@/components/seo/ComparisonSch
 import { ArrowRight, Trophy, IndianRupee, Users, Target, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Comparison | Cerebrum vs Kota, Allen, Aakash | 2026 Guide',
+  title: 'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
   description:
-    'Compare Cerebrum Biology Academy with Kota coaching, Allen, Aakash, and local institutes. See fees, batch sizes, success rates. Make an informed decision for NEET 2026.',
+    'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an informed decision for NEET 2026.',
   keywords: [
     'NEET coaching comparison',
     'Cerebrum vs Kota',
-    'Cerebrum vs Allen',
-    'Cerebrum vs Aakash',
+    'Cerebrum vs the largest national NEET chain',
+    'Cerebrum vs the 2nd-largest national NEET chain',
     'best NEET Biology coaching',
     'NEET coaching fees comparison',
     'Kota coaching alternative',

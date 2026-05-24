@@ -247,7 +247,7 @@ export default function Class10BiologyCoachingContent({ faqs }: { faqs: FAQ[] })
                 <h2 className="text-2xl font-bold text-gray-900">Our Gurugram Center</h2>
               </div>
               <p className="text-gray-700 mb-4"><strong>Address:</strong> {CONTACT_INFO.location.gurugram.streetAddress}, {CONTACT_INFO.location.gurugram.addressLocality}</p>
-              <p className="text-gray-700 mb-4"><strong>Landmark:</strong> Same building as Allen Career Institute</p>
+              <p className="text-gray-700 mb-4"><strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET chain)</p>
               <p className="text-gray-700 mb-6"><strong>Metro:</strong> Sector 55-56 Rapid Metro (5 min walk)</p>
               <div className="flex gap-4">
                 <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>

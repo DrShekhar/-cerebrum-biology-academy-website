@@ -60,7 +60,7 @@ const config: BestVerticalConfig = {
     { title: 'RE-NEET Biology Crash Course', href: '/re-neet-2026-biology-crash-course' },
     { title: 'RE-NEET 2026 for Droppers', href: '/re-neet-2026-droppers' },
     {
-      title: 'Cerebrum vs Aakash vs PhysicsWallah',
+      title: 'Cerebrum vs the 2nd-largest national NEET chain vs other online-only platforms',
       href: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
     },
     { title: 'RE-NEET Coaching in Kota', href: '/re-neet-2026-kota' },
@@ -133,7 +133,7 @@ const config: BestVerticalConfig = {
       score: 'NEET 672/720',
       college: 'KMC Manipal',
       quote:
-        'I used Sri Chaitanya for Physics/Chemistry and Cerebrum online for Biology. Pairing was the winning move.',
+        'I used other South-Indian chains for Physics/Chemistry and Cerebrum online for Biology. Pairing was the winning move.',
     },
     {
       name: 'Ankit Sharma (Kota Returner)',
@@ -160,9 +160,9 @@ const config: BestVerticalConfig = {
         'Yes. Every live class is recorded and available within hours. Students get unlimited rewatch access during the course period plus speed control (0.5x to 2x) for revision passes. The live class is the primary learning event; recordings are for catch-up and revision.',
     },
     {
-      question: 'How is the Cerebrum online RE-NEET different from PhysicsWallah?',
+      question: 'How is the Cerebrum online RE-NEET different from other online-only platforms?',
       answer:
-        'PhysicsWallah operates at mass online scale (300–2,000+ students per live class at ₹10K–₹20K). Cerebrum operates at small-batch scale (15–20 students at ₹25K–₹45K). PW is more affordable; Cerebrum has materially smaller class size and structurally deeper biology depth. Pair PW (Physics + Chemistry) with Cerebrum (Biology) for the best of both.',
+        'other online-only platforms operates at mass online scale (300–2,000+ students per live class at ₹10K–₹20K). Cerebrum operates at small-batch scale (15–20 students at ₹25K–₹45K). PW is more affordable; Cerebrum has materially smaller class size and structurally deeper biology depth. Pair PW (Physics + Chemistry) with Cerebrum (Biology) for the best of both.',
     },
     {
       question: 'Do I need special software or hardware for online RE-NEET classes?',

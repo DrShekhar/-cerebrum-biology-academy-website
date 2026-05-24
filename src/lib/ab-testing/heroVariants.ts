@@ -21,7 +21,7 @@ export const heroVariants: HeroVariant[] = [
     name: 'Small Batch Differentiator (Content Optimized)',
     headline: {
       main: '12 Students per Batch',
-      highlight1: 'vs 100+ in Allen/Aakash',
+      highlight1: 'vs 100+ in the largest national NEET chains',
       highlight2: 'Personal Attention. Proven Results.',
     },
     subtext:

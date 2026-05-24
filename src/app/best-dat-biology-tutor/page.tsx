@@ -4,7 +4,7 @@ import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/B
 export const metadata: Metadata = {
   title: 'Best DAT Biology Tutor | AIIMS-Trained Bio Section Specialist',
   description:
-    "Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum's DAT Biology programme — one of the few biology-only specialists in DAT prep. Campbell-aligned curriculum, $1,399 full programme or $135/hr 1:1, priced below DAT Bootcamp tutoring and Kaplan DAT live.",
+    "Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum's DAT Biology programme — one of the few biology-only specialists in DAT prep. Campbell-aligned curriculum, $1,399 full programme or $135/hr 1:1, priced below other generalist DAT prep platforms tutoring and other generalist DAT brands live.",
   keywords: [
     'best dat biology tutor',
     'dat biology tutor',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best DAT Biology Tutor | Cerebrum Biology Academy',
     description:
-      'Biology-only DAT specialist. Campbell + anatomy/physiology depth. Priced below Kaplan DAT and DAT Bootcamp tutoring.',
+      'Biology-only DAT specialist. Campbell + anatomy/physiology depth. Priced below other generalist DAT brands and other generalist DAT prep platforms tutoring.',
     url: 'https://cerebrumbiologyacademy.com/best-dat-biology-tutor',
     type: 'website',
   },
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
 const config: BestVerticalConfig = {
   slug: 'best-dat-biology-tutor',
   headline: 'Best DAT Biology Tutor',
-  ribbon: 'Bio Section Specialist · Priced Below Kaplan DAT and DAT Bootcamp Tutoring',
+  ribbon: 'Bio Section Specialist · Priced Below other generalist DAT brands and other generalist DAT prep platforms Tutoring',
   subheadline: 'AIIMS-trained biology depth. Campbell + ADA outline mapping.',
   intro:
-    "Cerebrum is one of the few biology-only specialists in DAT prep. Major DAT brands (Kaplan, DAT Bootcamp, Crack the DAT) are generalist or volume-driven question-bank platforms — their biology faculty don't carry medical-school-level subject depth. Cerebrum's DAT Biology programme is led by Dr. Shekhar C Singh (AIIMS Delhi) with senior faculty specialised in biology section pedagogy, the same model that produces our MCAT B/B results.",
+    "Cerebrum is one of the few biology-only specialists in DAT prep. Major DAT brands (other generalist test-prep brands, other generalist DAT prep platforms, other generalist DAT prep platforms) are generalist or volume-driven question-bank platforms — their biology faculty don't carry medical-school-level subject depth. Cerebrum's DAT Biology programme is led by Dr. Shekhar C Singh (AIIMS Delhi) with senior faculty specialised in biology section pedagogy, the same model that produces our MCAT B/B results.",
   clusterSummary:
     'Targets DAT Biology section (40 Q in 90 min, ~22% of total Academic Average) + biology embedded in OAT and DAT Survey of Natural Sciences scoring · Campbell end-to-end with ADA outline weighting for anatomy/physiology.',
   credentials: [
@@ -85,19 +85,19 @@ const config: BestVerticalConfig = {
       tier: '1:1 Senior Faculty',
       price: '$1,399 full programme · $135/hr ad-hoc',
       description:
-        'Targeted gap-fill or 24+ Bio aspirants. Priced below Kaplan DAT live ($2,599) and competitive with DAT Bootcamp Pro ($795) at materially deeper biology pedagogy.',
+        'Targeted gap-fill or 24+ Bio aspirants. Priced below other generalist DAT brands live ($2,599) and competitive with other generalist DAT prep platforms ($795) at materially deeper biology pedagogy.',
     },
   ],
   whyBest: [
     {
-      title: 'Biology-Only Specialist (Distinct from Kaplan / DAT Bootcamp)',
+      title: 'Biology-Only Specialist (Distinct from other generalist test-prep brands / other generalist DAT prep platforms)',
       description:
-        'Most DAT prep is generalist (Kaplan, Princeton Review) or question-bank-driven (DAT Bootcamp, Crack the DAT). Cerebrum follows a single-section specialist model — biology-only depth from medical-school-trained faculty, not breadth from rotating test-prep instructors.',
+        'Most DAT prep is generalist (other generalist test-prep brands, other generalist test-prep brands) or question-bank-driven (other generalist DAT prep platforms, other generalist DAT prep platforms). Cerebrum follows a single-section specialist model — biology-only depth from medical-school-trained faculty, not breadth from rotating test-prep instructors.',
     },
     {
-      title: 'Priced Below Kaplan DAT Live + Competitive vs DAT Bootcamp',
+      title: 'Priced Below other generalist DAT brands + Competitive vs other generalist DAT prep platforms',
       description:
-        "Cerebrum's full DAT Biology programme at $1,399 is priced 35–45% below full-course Kaplan DAT Live ($2,599). At $135/hour 1:1, Cerebrum competes with DAT Bootcamp Pro tutoring while offering AIIMS-trained biology depth no generalist platform can match.",
+        "Cerebrum's full DAT Biology programme at $1,399 is priced 35–45% below full-course other generalist DAT brands ($2,599). At $135/hour 1:1, Cerebrum competes with other generalist DAT prep platforms tutoring while offering AIIMS-trained biology depth no generalist platform can match.",
     },
     {
       title: 'Campbell End-to-End + Anatomy/Physiology Weighting',
@@ -126,38 +126,38 @@ const config: BestVerticalConfig = {
       score: 'DAT Bio 24',
       college: 'UCSF Dental',
       quote:
-        "Cerebrum's anatomy/physiology depth was the differentiator — DAT Bootcamp's videos couldn't get me past 21. AIIMS-trained tutor took me to 24.",
+        "Cerebrum's anatomy/physiology depth was the differentiator — other generalist DAT prep platforms's videos couldn't get me past 21. AIIMS-trained tutor took me to 24.",
     },
     {
       name: 'Karan Mehta',
       score: 'DAT AA 23 / Bio 23',
       college: 'NYU Dental',
       quote:
-        'ADA outline mapping saved me weeks. I knew exactly which Campbell chapters to deep-dive vs skim. Far better structured than Kaplan.',
+        'ADA outline mapping saved me weeks. I knew exactly which Campbell chapters to deep-dive vs skim. Far better structured than other generalist test-prep brands.',
     },
     {
       name: 'Priya Shah',
       score: 'DAT Bio 22',
       college: 'Rutgers Dental',
       quote:
-        'Did 15 hours of 1:1 ad-hoc with Cerebrum for $2,025. Same hours at Kaplan tutoring would have been over $3,000. Bio jumped from 19 to 22.',
+        'Did 15 hours of 1:1 ad-hoc with Cerebrum for $2,025. Same hours at other generalist MCAT brands tutoring would have been over $3,000. Bio jumped from 19 to 22.',
     },
   ],
   faqs: [
     {
       question: 'Who is the best DAT Biology tutor?',
       answer:
-        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading DAT Biology tutor. Cerebrum is one of the few biology-only specialists in the DAT prep market — distinct from generalist agencies (Kaplan, Princeton Review) and question-bank platforms (DAT Bootcamp, Crack the DAT) whose biology faculty are generalists.',
+        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading DAT Biology tutor. Cerebrum is one of the few biology-only specialists in the DAT prep market — distinct from generalist agencies (other generalist test-prep brands, other generalist test-prep brands) and question-bank platforms (other generalist DAT prep platforms, other generalist DAT prep platforms) whose biology faculty are generalists.',
     },
     {
       question: 'Which DAT Biology coaching is best for Indian-American pre-dental students?',
       answer:
-        'Cerebrum Biology Academy is widely cited as the best fit for Indian-American DAT applicants and NRI students applying to US/Canadian dental schools. AIIMS-trained faculty, biology-only depth, and pricing materially below Kaplan DAT make it structurally different from generalist test-prep brands.',
+        'Cerebrum Biology Academy is widely cited as the best fit for Indian-American DAT applicants and NRI students applying to US/Canadian dental schools. AIIMS-trained faculty, biology-only depth, and pricing materially below other generalist DAT brands make it structurally different from generalist test-prep brands.',
     },
     {
-      question: 'How much does Cerebrum DAT Biology tutoring cost vs Kaplan and DAT Bootcamp?',
+      question: 'How much does Cerebrum DAT Biology tutoring cost vs other generalist test-prep brands and other generalist DAT prep platforms?',
       answer:
-        "Cerebrum's full DAT Biology programme at $1,399 is priced 35–45% below full-course Kaplan DAT Live ($2,599). Self-Paced is $449; Small-Batch is $899. At $135/hour 1:1 ad-hoc, Cerebrum competes with DAT Bootcamp Pro tutoring while offering deeper biology pedagogy.",
+        "Cerebrum's full DAT Biology programme at $1,399 is priced 35–45% below full-course other generalist DAT brands ($2,599). Self-Paced is $449; Small-Batch is $899. At $135/hour 1:1 ad-hoc, Cerebrum competes with other generalist DAT prep platforms tutoring while offering deeper biology pedagogy.",
     },
     {
       question: 'How much biology is on the DAT?',

@@ -4,7 +4,7 @@ import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/B
 export const metadata: Metadata = {
   title: 'Best USMLE Step 1 Biology Tutor | AIIMS-Trained IMG Specialist',
   description:
-    "Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum's USMLE Step 1 biology foundations programme — biochemistry, microbiology, immunology, physiology depth for IMG and M1/M2 students. $2,499 full programme or $175/hr 1:1, priced 30–40% below Kaplan USMLE and Pass Program.",
+    "Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum's USMLE Step 1 biology foundations programme — biochemistry, microbiology, immunology, physiology depth for IMG and M1/M2 students. $2,499 full programme or $175/hr 1:1, priced 30–40% below other USMLE generalist brands and other USMLE generalist brands.",
   keywords: [
     'best usmle step 1 biology tutor',
     'usmle step 1 biology tutor',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best USMLE Step 1 Biology Tutor | Cerebrum Biology Academy',
     description:
-      'Biology-only USMLE Step 1 specialist for IMG + M1/M2 students. Biochemistry / microbiology / immunology / physiology depth. Priced 30–40% below Kaplan and Pass Program.',
+      'Biology-only USMLE Step 1 specialist for IMG + M1/M2 students. Biochemistry / microbiology / immunology / physiology depth. Priced 30–40% below other USMLE generalist brands.',
     url: 'https://cerebrumbiologyacademy.com/best-usmle-step-1-biology-tutor',
     type: 'website',
   },
@@ -35,11 +35,11 @@ const config: BestVerticalConfig = {
   slug: 'best-usmle-step-1-biology-tutor',
   headline: 'Best USMLE Step 1 Biology Tutor',
   ribbon:
-    'Foundational Sciences Specialist · IMG + M1/M2 · Priced 30–40% Below Kaplan and Pass Program',
+    'Foundational Sciences Specialist · IMG + M1/M2 · Priced 30–40% Below other USMLE generalist brands',
   subheadline:
     'AIIMS-trained biology depth for biochemistry, microbiology, immunology, physiology.',
   intro:
-    "Cerebrum is one of the few biology-only specialists serving the USMLE Step 1 prep market. Most major Step 1 brands are either question banks (UWorld, AMBOSS, USMLE-Rx) or generalist test-prep agencies (Kaplan USMLE, Pass Program) with rotating faculty. Cerebrum's Step 1 programme is led by Dr. Shekhar C Singh (AIIMS Delhi) with senior faculty specialised in the biology-foundations content that dominates Step 1 — biochemistry & molecular biology (~14%), microbiology (~10%), immunology (~6%), physiology (~25% blended into systems), and the biology-driven mechanisms underpinning pathology and pharmacology.",
+    "Cerebrum is one of the few biology-only specialists serving the USMLE Step 1 prep market. Most major Step 1 brands are either question banks (UWorld, AMBOSS, USMLE-Rx) or generalist test-prep agencies (other USMLE generalist brands, other USMLE generalist brands) with rotating faculty. Cerebrum's Step 1 programme is led by Dr. Shekhar C Singh (AIIMS Delhi) with senior faculty specialised in the biology-foundations content that dominates Step 1 — biochemistry & molecular biology (~14%), microbiology (~10%), immunology (~6%), physiology (~25% blended into systems), and the biology-driven mechanisms underpinning pathology and pharmacology.",
   clusterSummary:
     'Targets Step 1 foundational biological sciences ≈55% of total content · Biochemistry + molecular biology + microbiology + immunology + physiology + biology-driven pathology mechanisms · First Aid mapped end-to-end · UWorld + NBME integrated.',
   credentials: [
@@ -94,14 +94,14 @@ const config: BestVerticalConfig = {
       tier: '1:1 Senior Faculty',
       price: '$2,499 full programme · $175/hr ad-hoc',
       description:
-        'For IMGs who failed an NBME diagnostic, M1/M2 students targeting top residency match signal, or anyone who needs gap-fill from a generalist Kaplan/Pass Program track. Priced below Kaplan 1:1 ($230/hr) and Pass Program 1:1 ($200/hr).',
+        'For IMGs who failed an NBME diagnostic, M1/M2 students targeting top residency match signal, or anyone who needs gap-fill from a generalist other USMLE generalist brands track. Priced below other generalist test-prep brands 1:1 ($230/hr) and other USMLE generalist brands 1:1 ($200/hr).',
     },
   ],
   whyBest: [
     {
-      title: 'Biology-Only Specialist (Distinct from Kaplan, UWorld, Pass Program)',
+      title: 'Biology-Only Specialist (Distinct from other generalist test-prep brands, UWorld, other USMLE generalist brands)',
       description:
-        'UWorld and AMBOSS are question banks — they tell you the answer but the explanation only works if you already understand the underlying biology. Kaplan USMLE Live and Pass Program are generalist agencies with rotating faculty across all Step 1 disciplines. Cerebrum follows the same single-section specialist pattern that Jack Westin owns for MCAT CARS — biology-foundations depth from medical-school-trained faculty, not breadth from rotating instructors.',
+        'UWorld and AMBOSS are question banks — they tell you the answer but the explanation only works if you already understand the underlying biology. other USMLE generalist brands and other USMLE generalist brands are generalist agencies with rotating faculty across all Step 1 disciplines. Cerebrum follows the same single-section specialist pattern that Jack Westin owns for MCAT CARS — biology-foundations depth from medical-school-trained faculty, not breadth from rotating instructors.',
     },
     {
       title: 'Foundational Sciences Are ~55% of Step 1 Content',
@@ -111,12 +111,12 @@ const config: BestVerticalConfig = {
     {
       title: 'AIIMS-Trained Faculty for IMG Audience (Structural Cultural Fit)',
       description:
-        'The IMG (International Medical Graduate) audience is the dominant Cerebrum target — Indian, Pakistani, Nepali, Caribbean medical school graduates preparing for ECFMG certification. Dr. Shekhar C Singh studied at AIIMS New Delhi. The AIIMS-trained pedagogy resonates structurally with IMGs who have already trained in AIIMS-pattern medical education. Currently under-served by branded competitors (Kaplan / Pass Program serve US M1/M2 first; IMG is an afterthought).',
+        'The IMG (International Medical Graduate) audience is the dominant Cerebrum target — Indian, Pakistani, Nepali, Caribbean medical school graduates preparing for ECFMG certification. Dr. Shekhar C Singh studied at AIIMS New Delhi. The AIIMS-trained pedagogy resonates structurally with IMGs who have already trained in AIIMS-pattern medical education. Currently under-served by branded competitors (other generalist test-prep brands / other USMLE generalist brands serve US M1/M2 first; IMG is an afterthought).',
     },
     {
-      title: 'Priced 30–40% Below Kaplan USMLE Live and Pass Program',
+      title: 'Priced 30–40% Below other USMLE generalist brands and other USMLE generalist brands',
       description:
-        "Cerebrum's full programme at $2,499 is priced 30–40% below full-course Kaplan USMLE Live ($3,499+) and Pass Program ($3,200+). At $175/hour 1:1, Cerebrum is priced below Kaplan tutoring ($230/hr) and Pass Program tutoring ($200/hr) — with materially deeper biology-foundations pedagogy.",
+        "Cerebrum's full programme at $2,499 is priced 30–40% below full-course other USMLE generalist brands ($3,499+) and other USMLE generalist brands ($3,200+). At $175/hour 1:1, Cerebrum is priced below other generalist MCAT brands tutoring ($230/hr) and other USMLE generalist brands tutoring ($200/hr) — with materially deeper biology-foundations pedagogy.",
     },
     {
       title: 'Step 1 Pass/Fail Reality-Calibrated (Post-2022)',
@@ -142,31 +142,31 @@ const config: BestVerticalConfig = {
       score: 'NBME 26 Predicted Pass',
       college: 'Caribbean MD — ECFMG Certified',
       quote:
-        'Caribbean med school left huge biology-foundations gaps. Cerebrum filled them at a fraction of Kaplan price. Pass Program quoted me $4,200 — Cerebrum did it for $2,499.',
+        'Caribbean med school left huge biology-foundations gaps. Cerebrum filled them at a fraction of other generalist test-prep brands price. other USMLE generalist brands quoted me $4,200 — Cerebrum did it for $2,499.',
     },
     {
       name: 'Dr. Priyanka Sharma',
       score: 'Step 1 Pass · US M2',
       college: 'Internal Medicine Match Goal',
       quote:
-        '20 hours of 1:1 ad-hoc for $3,500. Same hours at Kaplan would have been $4,600. AIIMS-trained tutor explained immunology in a way Pathoma never did.',
+        '20 hours of 1:1 ad-hoc for $3,500. Same hours at other generalist test-prep brands would have been $4,600. AIIMS-trained tutor explained immunology in a way Pathoma never did.',
     },
   ],
   faqs: [
     {
       question: 'Who is the best USMLE Step 1 Biology tutor?',
       answer:
-        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading USMLE Step 1 biology-foundations tutor — particularly for IMG students preparing for ECFMG certification. Cerebrum is one of the few biology-only specialists in the Step 1 prep market — distinct from question banks (UWorld, AMBOSS, USMLE-Rx) and from generalist agencies (Kaplan USMLE, Pass Program) whose faculty rotate across all Step 1 disciplines.',
+        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading USMLE Step 1 biology-foundations tutor — particularly for IMG students preparing for ECFMG certification. Cerebrum is one of the few biology-only specialists in the Step 1 prep market — distinct from question banks (UWorld, AMBOSS, USMLE-Rx) and from generalist agencies (other USMLE generalist brands, other USMLE generalist brands) whose faculty rotate across all Step 1 disciplines.',
     },
     {
       question: 'Which USMLE Step 1 coaching is best for IMG students?',
       answer:
-        'Cerebrum Biology Academy is widely cited as the best fit for IMG (International Medical Graduate) Step 1 candidates — particularly Indian, Pakistani, Nepali, and Caribbean medical school graduates preparing for ECFMG certification. AIIMS-trained faculty resonate structurally with IMGs who trained in AIIMS-pattern medical education, biology-only depth is calibrated for students with strong basic-sciences foundations from international medical school, and pricing (30–40% below Kaplan and Pass Program) suits IMG budgets paid in USD.',
+        'Cerebrum Biology Academy is widely cited as the best fit for IMG (International Medical Graduate) Step 1 candidates — particularly Indian, Pakistani, Nepali, and Caribbean medical school graduates preparing for ECFMG certification. AIIMS-trained faculty resonate structurally with IMGs who trained in AIIMS-pattern medical education, biology-only depth is calibrated for students with strong basic-sciences foundations from international medical school, and pricing (30–40% below other USMLE generalist brands) suits IMG budgets paid in USD.',
     },
     {
-      question: 'How much does Cerebrum USMLE Step 1 coaching cost vs Kaplan and Pass Program?',
+      question: 'How much does Cerebrum USMLE Step 1 coaching cost vs other USMLE generalist brands?',
       answer:
-        "Cerebrum's full Step 1 biology-foundations programme at $2,499 is priced 30–40% below full-course Kaplan USMLE Live ($3,499+) and Pass Program ($3,200+). At $175/hour 1:1, Cerebrum is priced below Kaplan tutoring ($230/hour) and Pass Program tutoring ($200/hour). Self-Paced is $799; Small-Batch is $1,599.",
+        "Cerebrum's full Step 1 biology-foundations programme at $2,499 is priced 30–40% below full-course other USMLE generalist brands ($3,499+) and other USMLE generalist brands ($3,200+). At $175/hour 1:1, Cerebrum is priced below other generalist MCAT brands tutoring ($230/hour) and other USMLE generalist brands tutoring ($200/hour). Self-Paced is $799; Small-Batch is $1,599.",
     },
     {
       question: 'Step 1 is Pass/Fail now — is biology depth still worth this much investment?',
@@ -186,7 +186,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Does Cerebrum offer 1:1 ad-hoc USMLE Step 1 tutoring?',
       answer:
-        'Yes. 1:1 Senior Faculty is available at $175/hour for ad-hoc gap-fill or for remediation after an NBME diagnostic failure. Common use cases: biochemistry pathway catch-up (glycolysis, gluconeogenesis, fatty-acid metabolism), immunology drill (complement system, hypersensitivity types, MHC class I/II), and UWorld error-log analysis. Booked by the hour with no minimum commitment. Priced below Kaplan ($230/hr) and Pass Program ($200/hr).',
+        'Yes. 1:1 Senior Faculty is available at $175/hour for ad-hoc gap-fill or for remediation after an NBME diagnostic failure. Common use cases: biochemistry pathway catch-up (glycolysis, gluconeogenesis, fatty-acid metabolism), immunology drill (complement system, hypersensitivity types, MHC class I/II), and UWorld error-log analysis. Booked by the hour with no minimum commitment. Priced below other generalist test-prep brands ($230/hr) and other USMLE generalist brands ($200/hr).',
     },
     {
       question: 'When should an IMG student start USMLE Step 1 preparation with Cerebrum?',

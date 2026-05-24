@@ -142,7 +142,7 @@ const config: BestVerticalConfig = {
         'Most AP Biology students lose marks on the Free Response (50% of the exam). Cerebrum tutors have direct exposure to College Board scoring rubrics and run weekly FRQ drills with peer review — not just multiple-choice prep.',
     },
     {
-      title: 'Biology-Only (vs Wyzant / Tutor.com / Varsity Tutors)',
+      title: 'Biology-Only (vs other tutor marketplaces / other tutor marketplaces / other tutor marketplaces)',
       description:
         'Generalist tutoring platforms rotate biology tutors across subjects. Cerebrum tutors teach only biology — AP, IB, NEET, USABO, MCAT. Same AIIMS-trained pedagogy across verticals; structurally different from one-tutor-fits-all platforms.',
     },
@@ -164,7 +164,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Pricing Transparent and Competitive',
       description:
-        '1:1 Senior Faculty at $120–$150/hour is priced below comparable Princeton Review ($183/hr) and Altius ($175/hr) tutoring, with materially deeper biology pedagogy.',
+        '1:1 Senior Faculty at $120–$150/hour is priced below comparable other generalist test-prep brands ($183/hr) and other generalist MCAT brands ($175/hr) tutoring, with materially deeper biology pedagogy.',
     },
   ],
   testimonials: [
@@ -204,7 +204,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does the best AP Biology tutoring cost?',
       answer:
-        "Cerebrum's pricing: Senior Faculty 1:1 $120–$150/hr (12–48 hour packages from $1,800 to $5,760), Junior Faculty 1:1 $60–$75/hr, Small Batch (4–6 students) $40/hr. Comparable Princeton Review tutoring is $183/hr and Altius is $175/hr — Cerebrum is priced below with materially deeper biology depth.",
+        "Cerebrum's pricing: Senior Faculty 1:1 $120–$150/hr (12–48 hour packages from $1,800 to $5,760), Junior Faculty 1:1 $60–$75/hr, Small Batch (4–6 students) $40/hr. Comparable other generalist MCAT brands tutoring is $183/hr and other generalist MCAT brands is $175/hr — Cerebrum is priced below with materially deeper biology depth.",
     },
     {
       question: 'Does Cerebrum prepare students for both AP Biology and USABO?',

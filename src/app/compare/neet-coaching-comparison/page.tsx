@@ -322,7 +322,7 @@ export default function NEETCoachingComparisonPage() {
         primaryKeywords={[
           'best NEET coaching Delhi',
           'NEET coaching comparison',
-          'Cerebrum vs Allen vs Aakash',
+          'Cerebrum vs the largest national NEET chain vs the 2nd-largest national NEET chain',
           'NEET Biology coaching South Delhi',
           'top NEET institutes Delhi',
         ]}

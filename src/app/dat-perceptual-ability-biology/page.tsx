@@ -41,7 +41,7 @@ const faqs = [
   {
     question: 'Does Cerebrum offer DAT PAT as a standalone section?',
     answer:
-      'No — Cerebrum is a biology specialist. We do not coach PAT as a standalone product. We do offer PAT instruction as a complementary module within the DAT Biology Small-Batch and 1:1 programmes, taught through anatomy visualisation drills. Students wanting a pure PAT bootcamp should use DAT Bootcamp or Crack the DAT alongside our Biology programme.',
+      'No — Cerebrum is a biology specialist. We do not coach PAT as a standalone product. We do offer PAT instruction as a complementary module within the DAT Biology Small-Batch and 1:1 programmes, taught through anatomy visualisation drills. Students wanting a pure PAT bootcamp should use other generalist DAT prep platforms or other generalist DAT prep platforms alongside our Biology programme.',
   },
   {
     question: 'What anatomy structures help PAT visualisation?',
@@ -51,7 +51,7 @@ const faqs = [
   {
     question: 'How is the PAT module priced?',
     answer:
-      'The PAT module is included free for Small-Batch and 1:1 Senior Faculty Biology programme students. Approximately 8 hours of PAT drilling is interleaved across the 3–5 month programme, focused on the highest-transfer skills (keyhole, top-front-end). Students wanting deeper PAT-specific drill should add DAT Bootcamp Pro ($795).',
+      'The PAT module is included free for Small-Batch and 1:1 Senior Faculty Biology programme students. Approximately 8 hours of PAT drilling is interleaved across the 3–5 month programme, focused on the highest-transfer skills (keyhole, top-front-end). Students wanting deeper PAT-specific drill should add other generalist DAT prep platforms ($795).',
   },
 ]
 

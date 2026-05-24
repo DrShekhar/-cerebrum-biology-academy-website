@@ -347,7 +347,7 @@ export default function MCATBiochemistryPrepPage() {
             <p className="text-slate-700 leading-relaxed mb-4">
               Marks&apos; Basic Medical Biochemistry is excellent but pitched at medical-school
               biochemistry, which is more clinical and less MCAT-aligned. Save it for your first
-              year of med school. Kaplan and Princeton Review biochem review books are condensed
+              year of med school. other generalist test-prep brands and other generalist test-prep brands biochem review books are condensed
               summaries — useful for last-month revision, not for primary learning.
             </p>
             <p className="text-slate-700 leading-relaxed">

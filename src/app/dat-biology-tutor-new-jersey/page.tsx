@@ -56,9 +56,9 @@ const faqs = [
       'Payment is in USD via card, ACH, or international wire (for parents paying from outside the US). Faculty are biology specialists led by Dr. Shekhar C Singh (AIIMS Delhi), with senior faculty fluent in English and Hindi if family communication is preferred in Hindi. All sessions are online — no commute. Parents typically attend the diagnostic and milestone check-ins; the rest is direct student-tutor over Zoom + WhatsApp.',
   },
   {
-    question: 'How does Cerebrum compare to Kaplan DAT or DAT Bootcamp for an NJ pre-dental?',
+    question: 'How does Cerebrum compare to other generalist DAT brands or other generalist DAT prep platforms for an NJ pre-dental?',
     answer:
-      'Kaplan DAT Live is $2,599 — full-DAT generalist covering all four sections with rotating subject faculty. DAT Bootcamp is $295 (basic) to $795 (Pro) — primarily a question-bank platform with video library. Cerebrum is a biology-only specialist — we cover the Biology section in depth ($1,399 1:1 full programme, $135/hr ad-hoc) and most NJ students pair us with DAT Bootcamp for drill volume.',
+      'other generalist DAT brands is $2,599 — full-DAT generalist covering all four sections with rotating subject faculty. other generalist DAT prep platforms is $295 (basic) to $795 (Pro) — primarily a question-bank platform with video library. Cerebrum is a biology-only specialist — we cover the Biology section in depth ($1,399 1:1 full programme, $135/hr ad-hoc) and most NJ students pair us with other generalist DAT prep platforms for drill volume.',
   },
   {
     question: 'When should an NJ pre-dental student start DAT Biology prep?',

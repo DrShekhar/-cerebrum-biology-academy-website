@@ -53,14 +53,14 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum compare to Aakash Kolkata, Pathfinder, or FIITJEE Kolkata for Class 10 NEET?',
+      'How does Cerebrum compare to the 2nd-largest national NEET chain Kolkata, Pathfinder, or other IIT-JEE-first coachings Kolkata for Class 10 NEET?',
     answer:
-      'Aakash Scholastics Kolkata operates ~4 centres with 150-300 student Class 10 PCB Foundation batches. Pathfinder Kolkata (locally-headquartered) runs strong NEET prep with similar mass-batch model. FIITJEE Kolkata operates 1-2 centres focused on JEE+NEET combined. For Class 10 specifically, all three deprioritise Madhyamik/ICSE board strategy in favour of NEET-only drilling. For families targeting both Kolkata board 90%+ AND NEET-ready foundations, Cerebrum is structurally different (biology-only, 15-20 student batches, AIIMS-trained faculty, parallel board + NEET pedagogy). Many Kolkata families pair Cerebrum biology (₹55K-75K Ascent) with Aakash/Pathfinder for PC.',
+      'the 2nd-largest national NEET chain Scholastics Kolkata operates ~4 centres with 150-300 student Class 10 PCB Foundation batches. Pathfinder Kolkata (locally-headquartered) runs strong NEET prep with similar mass-batch model. other IIT-JEE-first coachings Kolkata operates 1-2 centres focused on JEE+NEET combined. For Class 10 specifically, all three deprioritise Madhyamik/ICSE board strategy in favour of NEET-only drilling. For families targeting both Kolkata board 90%+ AND NEET-ready foundations, Cerebrum is structurally different (biology-only, 15-20 student batches, AIIMS-trained faculty, parallel board + NEET pedagogy). Many Kolkata families pair Cerebrum biology (₹55K-75K Ascent) with the 2nd-largest national NEET chain/Pathfinder for PC.',
   },
   {
     question: 'What does Class 10 NEET Foundation cost in Kolkata?',
     answer:
-      'Cerebrum Class 10 Foundation pricing for Kolkata families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Kolkata Class 10 cost comparison: Aakash Scholastics Kolkata Class 10 PCB (~₹85K-1L, 250-student); Pathfinder Kolkata Class 10 (Kolkata-headquartered, ~₹85K-1.05L, strong ICSE-aware mass batches); FIITJEE Kolkata Class 10 (~₹90K-1.15L); Future Foundation Class 10 (~₹80K-95K). The Kolkata ICSE-legacy academic-family pattern strongly favours pedagogy depth: Cerebrum biology Ascent (₹65K) + PhysicsWallah PC (₹15-20K) = ₹80-85K total with materially deeper biology, ICSE-specific board parallel, and 15-20 student attention vs Pathfinder/Aakash 200-300 student batches.',
+      'Cerebrum Class 10 Foundation pricing for Kolkata families (pan-India online): Pursuit ₹35K-55K, Ascent ₹55K-75K, Pinnacle ₹75K-95K, ad-hoc 1:1 ₹2,000-3,500/hr. Kolkata Class 10 cost comparison: the 2nd-largest national NEET chain Scholastics Kolkata Class 10 PCB (~₹85K-1L, 250-student); Pathfinder Kolkata Class 10 (Kolkata-headquartered, ~₹85K-1.05L, strong ICSE-aware mass batches); other IIT-JEE-first coachings Kolkata Class 10 (~₹90K-1.15L); Future Foundation Class 10 (~₹80K-95K). The Kolkata ICSE-legacy academic-family pattern strongly favours pedagogy depth: Cerebrum biology Ascent (₹65K) + other online-only platforms PC (₹15-20K) = ₹80-85K total with materially deeper biology, ICSE-specific board parallel, and 15-20 student attention vs Pathfinder/the 2nd-largest national NEET chain 200-300 student batches.',
   },
 ]
 

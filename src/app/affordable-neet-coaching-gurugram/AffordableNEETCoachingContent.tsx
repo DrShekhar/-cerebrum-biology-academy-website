@@ -62,7 +62,7 @@ const scholarships = [
 ]
 
 const valueProps = [
-  { stat: '30-40%', label: 'Lower than Allen/Aakash fees' },
+  { stat: '30-40%', label: 'Lower than the largest national NEET chains fees' },
   { stat: '98%', label: 'Success rate (Biology)' },
   { stat: '10-40', label: 'Students per batch (vs 100+)' },
   { stat: '0%', label: 'EMI interest (3 months)' },
@@ -216,8 +216,8 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center bg-green-700">Cerebrum</th>
-                  <th className="px-6 py-4 text-center">Allen</th>
-                  <th className="px-6 py-4 text-center">Aakash</th>
+                  <th className="px-6 py-4 text-center">the largest national NEET chain</th>
+                  <th className="px-6 py-4 text-center">the 2nd-largest national NEET chain</th>
                 </tr>
               </thead>
               <tbody>
@@ -377,8 +377,8 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Pages</h2>
           <div className="grid md:grid-cols-4 gap-4">
-            <Link href="/allen-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Allen Alternative</h3><p className="text-sm text-gray-600">Lower fees, better ratio</p></Link>
-            <Link href="/aakash-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Aakash Alternative</h3><p className="text-sm text-gray-600">Quality at lower cost</p></Link>
+            <Link href="/allen-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative</h3><p className="text-sm text-gray-600">Lower fees, better ratio</p></Link>
+            <Link href="/aakash-alternative-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative</h3><p className="text-sm text-gray-600">Quality at lower cost</p></Link>
             <Link href="/courses/foundation" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">Class 11 Foundation</h3><p className="text-sm text-gray-600">Start early, save more</p></Link>
             <Link href="/neet-coaching-gurugram" className="bg-gray-50 p-4 rounded-xl hover:shadow-md"><h3 className="font-semibold text-teal-600">NEET Coaching Hub</h3><p className="text-sm text-gray-600">All programs</p></Link>
           </div>

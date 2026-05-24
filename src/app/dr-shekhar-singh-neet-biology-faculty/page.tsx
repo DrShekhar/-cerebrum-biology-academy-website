@@ -52,7 +52,7 @@ const credentials = [
 ]
 
 const achievements = [
-  'Former Academic Head at Narayana Educational Institutions',
+  'Former Academic Head at a leading national educational institution',
   'Trained 45+ students scoring 650+ in NEET',
   '15 students admitted to AIIMS Delhi alone',
   'Author of "NEET Biology Made Easy" study material',
@@ -122,7 +122,7 @@ const faqs = [
   {
     question: "What is Dr. Shekhar C Singh's qualification?",
     answer:
-      "Dr. Shekhar C Singh is an alumnus of AIIMS New Delhi, India's premier medical institution. He has 15+ years of dedicated experience in NEET Biology coaching and previously served as Academic Head at Narayana Educational Institutions.",
+      "Dr. Shekhar C Singh is an alumnus of AIIMS New Delhi, India's premier medical institution. He has 15+ years of dedicated experience in NEET Biology coaching and previously served as Academic Head at a leading national educational institution.",
   },
   {
     question: 'How many students has Dr. Singh trained for NEET?',
@@ -234,7 +234,7 @@ export default function DrShekharSinghPage() {
               </p>
               <p>
                 Before founding Cerebrum Biology Academy, Dr. Singh served as{' '}
-                <strong>Academic Head at Narayana Educational Institutions</strong>, where he led
+                <strong>Academic Head at a leading national educational institution</strong>, where he led
                 curriculum development and faculty training for NEET Biology across multiple
                 centers. This experience shaped his belief that small, focused batches produce
                 better results than mass coaching.
@@ -446,7 +446,7 @@ export default function DrShekharSinghPage() {
               },
               {
                 '@type': 'EducationalOccupationalCredential',
-                name: 'Former Academic Head — Narayana Educational Institutions',
+                name: 'Former Academic Head — a leading national educational institution',
                 credentialCategory: 'professional experience',
                 description:
                   'Led curriculum development and faculty training for NEET Biology across multiple centres',

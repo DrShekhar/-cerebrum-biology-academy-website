@@ -32,23 +32,23 @@ const benefits = [
   {
     title: 'Convenient Location',
     description:
-      'Cerebrum Sector 17 is centrally located in Faridabad, near Bata Chowk Metro. Easy access for Allen students.',
+      'Cerebrum Sector 17 is centrally located in Faridabad, near Bata Chowk Metro. Easy access for the largest national NEET chain students.',
     icon: MapPin,
   },
   {
     title: 'Flexible Scheduling',
-    description: 'Weekend intensives or evening sessions. Choose what fits your Allen schedule.',
+    description: 'Weekend intensives or evening sessions. Choose what fits your the largest national NEET chain schedule.',
     icon: Calendar,
   },
   {
     title: 'Biology Deep-Dive',
     description:
-      'While Allen covers breadth, we focus on depth. Master concepts that matter for NEET.',
+      'While the largest national NEET chain covers breadth, we focus on depth. Master concepts that matter for NEET.',
     icon: BookOpen,
   },
   {
     title: 'Personal Attention',
-    description: "10-20 students vs Allen's 100+. Your doubts get answered properly.",
+    description: "10-20 students vs the largest national NEET chain's 100+. Your doubts get answered properly.",
     icon: Users,
   },
 ]
@@ -84,21 +84,21 @@ const testimonials = [
   {
     name: 'Rohit M.',
     score: '615/720',
-    combo: 'Allen + Cerebrum',
+    combo: 'the largest national NEET chain + Cerebrum',
     quote:
-      'Continued Allen for Physics/Chemistry but joined Cerebrum for Biology. Best decision - Biology became my strongest subject with 340/360.',
+      'Continued the largest national NEET chain for Physics/Chemistry but joined Cerebrum for Biology. Best decision - Biology became my strongest subject with 340/360.',
   },
   {
     name: 'Ananya S.',
     score: '642/720',
-    combo: 'Allen + Cerebrum Weekend',
+    combo: 'the largest national NEET chain + Cerebrum Weekend',
     quote:
-      'The weekend batch at Cerebrum perfectly complemented my Allen weekday classes. Sector 17 location is very convenient.',
+      'The weekend batch at Cerebrum perfectly complemented my the largest national NEET chain weekday classes. Sector 17 location is very convenient.',
   },
   {
     name: 'Vikram R.',
     score: '598/720',
-    combo: 'Allen + Cerebrum Evening',
+    combo: 'the largest national NEET chain + Cerebrum Evening',
     quote:
       'My Biology score jumped from 260 to 310 after joining Cerebrum evening sessions. The personal attention made all the difference.',
   },
@@ -107,7 +107,7 @@ const testimonials = [
 const successStats = [
   { stat: '50-70', label: 'Average marks improvement in Biology' },
   { stat: '85%', label: 'Score 320+ in Biology' },
-  { stat: '200+', label: 'Allen students enrolled with us' },
+  { stat: '200+', label: 'the largest national NEET chain students enrolled with us' },
   { stat: '5.0/5', label: 'Student satisfaction rating' },
 ]
 
@@ -118,7 +118,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
     trackAndOpenWhatsApp({
       source: 'complement-allen-coaching-faridabad',
       message:
-        'Hi! I am an Allen student in Faridabad and want to join Cerebrum for extra Biology coaching. Please share the schedule and fees.',
+        'Hi! I am an the largest national NEET chain student in Faridabad and want to join Cerebrum for extra Biology coaching. Please share the schedule and fees.',
       campaign: 'complement-allen-faridabad',
     })
   }
@@ -141,7 +141,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">Complement Allen Coaching</span>
+              <span className="text-teal-700 font-medium">Complement the largest national NEET chain Coaching</span>
             </li>
           </ol>
         </div>
@@ -158,16 +158,16 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
-              For Allen Students Only
+              For the largest national NEET chain Students Only
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Keep Allen. Add
+              Keep the largest national NEET chain. Add
               <span className="block text-yellow-400 mt-2">Expert Biology Coaching</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Don't leave Allen. Just boost your Biology with focused coaching from AIIMS faculty.
+              Don't leave the largest national NEET chain. Just boost your Biology with focused coaching from AIIMS faculty.
               Flexible timing, guaranteed improvement.
             </p>
 
@@ -202,7 +202,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
-                Get Schedule for Allen Students
+                Get Schedule for the largest national NEET chain Students
               </button>
             </div>
           </div>
@@ -228,7 +228,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Allen Students Add Cerebrum
+              Why the largest national NEET chain Students Add Cerebrum
             </h2>
             <p className="text-xl text-slate-600">Get the best of both worlds</p>
           </div>
@@ -255,7 +255,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Flexible Batches for Allen Students
+              Flexible Batches for the largest national NEET chain Students
             </h2>
             <p className="text-xl text-slate-600">Choose what fits your schedule</p>
           </div>
@@ -294,7 +294,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Allen + Cerebrum Success Stories
+              the largest national NEET chain + Cerebrum Success Stories
             </h2>
             <p className="text-xl text-slate-600">Real results from students who combined both</p>
           </div>
@@ -335,7 +335,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Finish Allen class, start Cerebrum session
+                  Finish the largest national NEET chain class, start Cerebrum session
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -358,7 +358,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
               </a>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
-              <h3 className="text-2xl font-bold mb-6">Special Package for Allen Students</h3>
+              <h3 className="text-2xl font-bold mb-6">Special Package for the largest national NEET chain Students</h3>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-white/20">
                   <span>Weekend Only</span>
@@ -378,7 +378,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
                 </div>
               </div>
               <p className="text-sm text-blue-200 mt-4">
-                *Fee depends on batch type and intensity. Discounts for Allen referrals.
+                *Fee depends on batch type and intensity. Discounts for the largest national NEET chain referrals.
               </p>
             </div>
           </div>
@@ -429,15 +429,15 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
               href="/allen-alternative-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">Allen Alternative</h3>
-              <p className="text-sm text-gray-600">Full switch from Allen</p>
+              <h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative</h3>
+              <p className="text-sm text-gray-600">Full switch from the largest national NEET chain</p>
             </Link>
             <Link
               href="/complement-aakash-coaching-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">Complement Aakash</h3>
-              <p className="text-sm text-gray-600">For Aakash students</p>
+              <h3 className="font-semibold text-teal-600">Complement the 2nd-largest national NEET chain</h3>
+              <p className="text-sm text-gray-600">For the 2nd-largest national NEET chain students</p>
             </Link>
             <Link
               href="/courses/foundation"
@@ -464,7 +464,7 @@ export default function ComplementAllenFaridabadContent({ faqs }: { faqs: FAQ[] 
             Ready to Boost Your Biology Score?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join 200+ Allen students who complement their coaching with Cerebrum
+            Join 200+ the largest national NEET chain students who complement their coaching with Cerebrum
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Faridabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">

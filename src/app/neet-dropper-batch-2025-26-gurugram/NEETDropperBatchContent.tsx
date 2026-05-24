@@ -223,7 +223,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                 <h2 className="text-2xl font-bold">Our Gurugram Center</h2>
               </div>
               <p className="text-slate-300 mb-4"><strong className="text-white">Address:</strong> {CONTACT_INFO.location.gurugram.streetAddress}, {CONTACT_INFO.location.gurugram.addressLocality}</p>
-              <p className="text-slate-300 mb-4"><strong className="text-white">Landmark:</strong> Same building as Allen Career Institute</p>
+              <p className="text-slate-300 mb-4"><strong className="text-white">Landmark:</strong> Same building as XYZ Coaching (largest national NEET chain)</p>
               <p className="text-slate-300 mb-6"><strong className="text-white">Metro:</strong> Sector 55-56 Rapid Metro (5 min walk)</p>
               <div className="flex gap-4">
                 <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>

@@ -105,7 +105,7 @@ const reasons = [
   {
     title: 'Lost in Large Batches?',
     description:
-      "Aakash Knowledge Park has large batches of 60-80+ students. At Cerebrum, you're never a number - we know every student personally.",
+      "the 2nd-largest national NEET chain Knowledge Park has large batches of 60-80+ students. At Cerebrum, you're never a number - we know every student personally.",
     icon: Zap,
   },
   {
@@ -123,7 +123,7 @@ const reasons = [
   {
     title: 'Value for Money',
     description:
-      'Get premium coaching at 30-40% lower fees than Aakash Greater Noida with significantly better student-teacher ratio.',
+      'Get premium coaching at 30-40% lower fees than the 2nd-largest national NEET chain Greater Noida with significantly better student-teacher ratio.',
     icon: Target,
   },
 ]
@@ -132,21 +132,21 @@ const testimonials = [
   {
     name: 'Kavya T.',
     score: '648/720',
-    previous: 'Ex-Aakash Greater Noida Student',
+    previous: 'Ex-the 2nd-largest national NEET chain Greater Noida Student',
     quote:
-      'Left Aakash Knowledge Park after Class 11. The personal mentorship at Cerebrum helped me focus on my weak areas. Biology score improved by 50 marks.',
+      'Left the 2nd-largest national NEET chain Knowledge Park after Class 11. The personal mentorship at Cerebrum helped me focus on my weak areas. Biology score improved by 50 marks.',
   },
   {
     name: 'Arjun P.',
     score: '625/720',
-    previous: 'Aakash + Cerebrum',
+    previous: 'the 2nd-largest national NEET chain + Cerebrum',
     quote:
-      'Continued Aakash for their test series but joined Cerebrum for Biology concepts. The combination worked perfectly for me.',
+      'Continued the 2nd-largest national NEET chain for their test series but joined Cerebrum for Biology concepts. The combination worked perfectly for me.',
   },
   {
     name: 'Sneha K.',
     score: '632/720',
-    previous: 'Dropper from Aakash',
+    previous: 'Dropper from the 2nd-largest national NEET chain',
     quote:
       'After a disappointing first attempt, switched to Cerebrum. The small batch and focused approach helped me crack NEET in second attempt.',
   },
@@ -159,7 +159,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
     trackAndOpenWhatsApp({
       source: 'aakash-alternative-greater-noida',
       message:
-        'Hi! I am currently at Aakash Greater Noida/considering Aakash and want to know about Cerebrum as an alternative for NEET Biology. Please share details.',
+        'Hi! I am currently at the 2nd-largest national NEET chain Greater Noida/considering the 2nd-largest national NEET chain and want to know about Cerebrum as an alternative for NEET Biology. Please share details.',
       campaign: 'aakash-alternative-greater-noida',
     })
   }
@@ -185,7 +185,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">Aakash Alternative</span>
+              <span className="text-teal-700 font-medium">the 2nd-largest national NEET chain Alternative</span>
             </li>
           </ol>
         </div>
@@ -202,18 +202,18 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
-              400+ Students Switched from Aakash
+              400+ Students Switched from the 2nd-largest national NEET chain
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Looking for an
               <span className="block text-yellow-400 mt-2">
-                Aakash Alternative in Greater Noida?
+                the 2nd-largest national NEET chain Alternative in Greater Noida?
               </span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Overwhelmed by large batches at Aakash Knowledge Park? Want real classroom interaction
+              Overwhelmed by large batches at the 2nd-largest national NEET chain Knowledge Park? Want real classroom interaction
               with expert AIIMS faculty? Discover why Greater Noida students choose Cerebrum for
               focused NEET Biology preparation. 19,600+ MCQ bank, small batches, biology-only.
             </p>
@@ -249,7 +249,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
-                Compare with Aakash Expert
+                Compare with the 2nd-largest national NEET chain Expert
               </button>
             </div>
           </div>
@@ -261,10 +261,10 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Students Switch from Aakash Greater Noida
+              Why Students Switch from the 2nd-largest national NEET chain Greater Noida
             </h2>
             <p className="text-xl text-slate-600">
-              Common pain points that bring students from Aakash Knowledge Park to Cerebrum
+              Common pain points that bring students from the 2nd-largest national NEET chain Knowledge Park to Cerebrum
             </p>
           </div>
 
@@ -290,7 +290,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Cerebrum vs Aakash Greater Noida: Head-to-Head
+              Cerebrum vs the 2nd-largest national NEET chain Greater Noida: Head-to-Head
             </h2>
             <p className="text-xl text-slate-600">
               See why focused coaching beats corporate chains
@@ -303,7 +303,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center bg-teal-700">Cerebrum</th>
-                  <th className="px-6 py-4 text-center">Aakash (Greater Noida)</th>
+                  <th className="px-6 py-4 text-center">the 2nd-largest national NEET chain (Greater Noida)</th>
                 </tr>
               </thead>
               <tbody>
@@ -338,18 +338,18 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don&apos;t Want to Leave Aakash?
+                Don&apos;t Want to Leave the 2nd-largest national NEET chain?
                 <br />
                 Complement Your Coaching!
               </h2>
               <p className="text-xl text-indigo-100 mb-6">
-                Many Greater Noida students continue at Aakash for Physics &amp; Chemistry while
+                Many Greater Noida students continue at the 2nd-largest national NEET chain for Physics &amp; Chemistry while
                 joining Cerebrum specifically for Biology. Get the best of both worlds.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Weekend batches that don&apos;t clash with Aakash
+                  Weekend batches that don&apos;t clash with the 2nd-largest national NEET chain
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -357,7 +357,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Use Aakash&apos;s digital resources + our expert teaching
+                  Use the 2nd-largest national NEET chain&apos;s digital resources + our expert teaching
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -375,7 +375,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
               </Link>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
-              <h3 className="text-2xl font-bold mb-6">Success Stories: Aakash + Cerebrum</h3>
+              <h3 className="text-2xl font-bold mb-6">Success Stories: the 2nd-largest national NEET chain + Cerebrum</h3>
               {testimonials.slice(1, 2).map((t) => (
                 <div key={t.name} className="mb-6">
                   <p className="text-indigo-100 italic">&quot;{t.quote}&quot;</p>
@@ -397,12 +397,12 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
         </div>
       </section>
 
-      {/* Testimonials from Aakash Switchers */}
+      {/* Testimonials from the 2nd-largest national NEET chain Switchers */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              From Aakash Greater Noida Students Who Switched
+              From the 2nd-largest national NEET chain Greater Noida Students Who Switched
             </h2>
             <p className="text-xl text-slate-600">Real results from students who made the change</p>
           </div>
@@ -578,7 +578,7 @@ export default function AakashAlternativeGreaterNoidaContent({ faqs }: { faqs: F
             Ready to Experience the Difference?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join students who chose Cerebrum over Aakash Greater Noida for better Biology coaching
+            Join students who chose Cerebrum over the 2nd-largest national NEET chain Greater Noida for better Biology coaching
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Noida.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">

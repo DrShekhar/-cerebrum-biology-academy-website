@@ -4,7 +4,7 @@ import { BestVerticalLanding, type BestVerticalConfig } from '@/components/seo/B
 export const metadata: Metadata = {
   title: 'Best Coaching for RE-NEET 2026 | 6–8 Week Crash Course Comparison',
   description:
-    'Best coaching for RE-NEET 2026 (post 12 May 2026 cancellation). Compare biology-only AIIMS-trained Cerebrum, generalist Aakash, Allen, PhysicsWallah crash courses. Biology depth, batch size, fees, AIIMS faculty access.',
+    'Best coaching for RE-NEET 2026 (post 12 May 2026 cancellation). Compare biology-only AIIMS-trained Cerebrum, generalist the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms crash courses. Biology depth, batch size, fees, AIIMS faculty access.',
   keywords: [
     'best coaching for re-neet 2026',
     'best re neet 2026 coaching',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Coaching for RE-NEET 2026 | Crash Course Comparison',
     description:
-      'Compare the top RE-NEET 2026 crash courses. Cerebrum (biology-only AIIMS) vs Aakash / Allen / PhysicsWallah.',
+      'Compare the top RE-NEET 2026 crash courses. Cerebrum (biology-only AIIMS) vs the 2nd-largest national NEET chain / the largest national NEET chain / other online-only platforms.',
     url: 'https://cerebrumbiologyacademy.com/best-coaching-for-re-neet-2026',
     type: 'website',
   },
@@ -38,7 +38,7 @@ const config: BestVerticalConfig = {
   intro:
     "NEET-UG 2026 was cancelled on 12 May 2026 after Rajasthan SOG's paper-leak investigation. A reconduct (RE-NEET 2026) is confirmed; NTA will notify the new date within 7–10 days. Students now need a focused 6–8 week crash course — not a year-long programme. Below is an honest comparison of the leading RE-NEET 2026 crash options.",
   clusterSummary:
-    'Biology = 360/720 NEET marks (50%) · Cerebrum specialises in biology-only AIIMS-trained pedagogy · Aakash, Allen, PhysicsWallah, Vedantu, Career Point are generalist alternatives',
+    'Biology = 360/720 NEET marks (50%) · Cerebrum specialises in biology-only AIIMS-trained pedagogy · the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms, other multi-subject tutoring platforms, other Kota-origin chains are generalist alternatives',
   credentials: [
     { label: '6–8 Week Crash Window' },
     { label: 'AIIMS-Trained Biology Faculty' },
@@ -69,7 +69,7 @@ const config: BestVerticalConfig = {
       href: '/what-to-do-after-neet-2026-cancellation',
     },
     {
-      title: 'Cerebrum vs Aakash vs PhysicsWallah (RE-NEET)',
+      title: 'Cerebrum vs the 2nd-largest national NEET chain vs other online-only platforms (RE-NEET)',
       href: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
     },
     { title: 'RE-NEET Coaching in Kota', href: '/re-neet-2026-kota' },
@@ -85,13 +85,13 @@ const config: BestVerticalConfig = {
         'AIIMS-trained biology-only faculty, 15–20 student batches, daily mocks, WhatsApp same-day doubts. Most rigorous biology depth for the 360/720 NEET Biology section.',
     },
     {
-      tier: 'Aakash / Allen Generalist Crash',
+      tier: 'the 2nd-largest national NEET chain / the largest national NEET chain Generalist Crash',
       price: '₹35,000–₹50,000 / 6–8 weeks',
       description:
         'Multi-subject (Physics + Chemistry + Biology) crash courses. 150–400 student batches. Strong brand recall but biology depth lower than biology-only specialists.',
     },
     {
-      tier: 'PhysicsWallah Crash',
+      tier: 'other online-only platforms Crash',
       price: '₹10,000–₹20,000 / 6–8 weeks',
       description:
         'Mass-online live + recorded sessions, 300–2,000+ students per live class. Most affordable option but with structurally limited personal attention.',
@@ -101,12 +101,12 @@ const config: BestVerticalConfig = {
     {
       title: 'Biology = 50% of NEET Marks (360/720)',
       description:
-        "A biology-only AIIMS-trained crash course compounds. Cerebrum's Dr. Shekhar C Singh leads biology pedagogy across NEET, IB, AP, MCAT, Olympiads — generalist faculty at Aakash / Allen / PW rotate across Physics + Chemistry + Biology, so biology depth is structurally shallower.",
+        "A biology-only AIIMS-trained crash course compounds. Cerebrum's Dr. Shekhar C Singh leads biology pedagogy across NEET, IB, AP, MCAT, Olympiads — generalist faculty at the 2nd-largest national NEET chain / the largest national NEET chain / PW rotate across Physics + Chemistry + Biology, so biology depth is structurally shallower.",
     },
     {
       title: 'Small Batches (15–20) vs Mass Batches',
       description:
-        'In a 6–8 week crash window, individual attention matters most. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). Aakash and Allen typically run 150–400 students per batch. PhysicsWallah runs 300–2,000+ per live session. The smaller batch = the more weak-topic 1:1 fixing.',
+        'In a 6–8 week crash window, individual attention matters most. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). the largest national NEET chains typically run 150–400 students per batch. other online-only platforms runs 300–2,000+ per live session. The smaller batch = the more weak-topic 1:1 fixing.',
     },
     {
       title: 'AIIMS-Trained Faculty (Not Just Coaching-Trained)',
@@ -114,9 +114,9 @@ const config: BestVerticalConfig = {
         'Dr. Shekhar C Singh studied at AIIMS New Delhi. Most coaching faculty hold engineering or generalist science degrees. The AIIMS background brings clinical correlations to Physiology, Genetics and Biotechnology that textbook-only crash courses cannot replicate.',
     },
     {
-      title: 'Mid-Tier Pricing (Lower Than Aakash / Allen, More Than PW)',
+      title: 'Mid-Tier Pricing (Lower Than the 2nd-largest national NEET chain / the largest national NEET chain, More Than PW)',
       description:
-        "Cerebrum's ₹25K–₹45K is positioned between PhysicsWallah's mass-online tier (₹10K–₹20K) and the premium generalists (Aakash / Allen at ₹35K–₹50K). Mid-tier in price, top-tier in biology depth — the cost / depth Pareto frontier.",
+        "Cerebrum's ₹25K–₹45K is positioned between other online-only platforms's mass-online tier (₹10K–₹20K) and the premium generalists (the 2nd-largest national NEET chain / the largest national NEET chain at ₹35K–₹50K). Mid-tier in price, top-tier in biology depth — the cost / depth Pareto frontier.",
     },
     {
       title: '6–8 Week Programme Structure (Not Year-Long Compressed)',
@@ -156,17 +156,17 @@ const config: BestVerticalConfig = {
     {
       question: 'Which is the best coaching for RE-NEET 2026?',
       answer:
-        'For biology depth in the 6–8 week RE-NEET window, Cerebrum Biology Academy is widely cited as the best choice — biology-only AIIMS-trained faculty, 15–20 student batches, Dr. Shekhar C Singh leading curriculum. For multi-subject generalist crash courses, Aakash, Allen, and PhysicsWallah are the main alternatives. Many serious aspirants pair Cerebrum (Biology) with one of the generalists (Physics + Chemistry).',
+        'For biology depth in the 6–8 week RE-NEET window, Cerebrum Biology Academy is widely cited as the best choice — biology-only AIIMS-trained faculty, 15–20 student batches, Dr. Shekhar C Singh leading curriculum. For multi-subject generalist crash courses, the 2nd-largest national NEET chain, the largest national NEET chain, and other online-only platforms are the main alternatives. Many serious aspirants pair Cerebrum (Biology) with one of the generalists (Physics + Chemistry).',
     },
     {
-      question: 'How does Cerebrum compare to Aakash / Allen for RE-NEET 2026?',
+      question: 'How does Cerebrum compare to the 2nd-largest national NEET chain / the largest national NEET chain for RE-NEET 2026?',
       answer:
-        'Cerebrum: biology-only AIIMS-trained, 15–20 batch, ₹25K–₹45K. Aakash: generalist, 150–300 batch, ₹35K–₹45K. Allen: generalist, 200–400 batch, ₹40K–₹50K. The fee delta reflects batch size and faculty specialisation — Cerebrum delivers materially deeper biology at materially lower cost. Aakash/Allen win on Physics/Chemistry depth and brand recall.',
+        'Cerebrum: biology-only AIIMS-trained, 15–20 batch, ₹25K–₹45K. the 2nd-largest national NEET chain: generalist, 150–300 batch, ₹35K–₹45K. the largest national NEET chain: generalist, 200–400 batch, ₹40K–₹50K. The fee delta reflects batch size and faculty specialisation — Cerebrum delivers materially deeper biology at materially lower cost. the 2nd-largest national NEET chain/the largest national NEET chain win on Physics/Chemistry depth and brand recall.',
     },
     {
-      question: 'How does Cerebrum compare to PhysicsWallah for RE-NEET 2026?',
+      question: 'How does Cerebrum compare to other online-only platforms for RE-NEET 2026?',
       answer:
-        'PhysicsWallah operates at mass online scale (300–2,000+ student live classes at ₹10K–₹20K). Cerebrum operates at small-batch scale (15–20 students at ₹25K–₹45K). PW is more affordable; Cerebrum has materially smaller class size and structurally deeper biology. Common pattern: students pair PW (Physics + Chemistry) with Cerebrum (Biology).',
+        'other online-only platforms operates at mass online scale (300–2,000+ student live classes at ₹10K–₹20K). Cerebrum operates at small-batch scale (15–20 students at ₹25K–₹45K). PW is more affordable; Cerebrum has materially smaller class size and structurally deeper biology. Common pattern: students pair PW (Physics + Chemistry) with Cerebrum (Biology).',
     },
     {
       question: 'What does the Cerebrum RE-NEET 2026 crash course cover?',

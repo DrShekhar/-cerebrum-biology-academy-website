@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 }
 
 const feeComparison = [
-  { institute: 'Large Coaching (Velocity/Aakash)', fees: '₹1.5L - ₹3L', batch: '100-200', included: 'Books, Tests', hidden: 'Hostel, Extra courses' },
+  { institute: 'Large Coaching (Velocity/the 2nd-largest national NEET chain)', fees: '₹1.5L - ₹3L', batch: '100-200', included: 'Books, Tests', hidden: 'Hostel, Extra courses' },
   { institute: 'Cerebrum Biology Academy', fees: '₹75K - ₹1.2L', batch: '15-20', included: 'Books, Tests, Doubt Sessions', hidden: 'None' },
   { institute: 'Local Tuition Centers', fees: '₹30K - ₹60K', batch: '30-50', included: 'Basic material', hidden: 'Test series extra' },
-  { institute: 'Online Only (PW, Unacademy)', fees: '₹15K - ₹45K', batch: 'Unlimited', included: 'Video lectures, Tests', hidden: 'Offline support extra' },
+  { institute: 'Online Only (PW, other online-only platforms)', fees: '₹15K - ₹45K', batch: 'Unlimited', included: 'Video lectures, Tests', hidden: 'Offline support extra' },
 ]
 
 const whatAffectsFees = [
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     question: 'Can I get scholarship for NEET coaching?',
-    answer: 'Yes! We offer 25-100% scholarship based on merit (10th/11th marks) and need. Aakash/Allen also have scholarship tests. Apply for iNEET or ACST.',
+    answer: 'Yes! We offer 25-100% scholarship based on merit (10th/11th marks) and need. the 2nd-largest national NEET chain/the largest national NEET chain also have scholarship tests. Apply for iNEET or ACST.',
   },
   {
     question: 'Is EMI available for NEET coaching fees?',

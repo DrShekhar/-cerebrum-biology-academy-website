@@ -27,7 +27,7 @@ function getMetaDescriptionByType(area: ReturnType<typeof getGurugramAreaBySlug>
 
   switch (area.type) {
     case 'ultra-premium':
-      return `Exclusive NEET Biology coaching for ${area.name} elite families. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Residents of ${societiesText}. Same building as Allen. Personalized ${CEREBRUM_METRICS.batchSizeText} batches. Book consultation!`
+      return `Exclusive NEET Biology coaching for ${area.name} elite families. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Residents of ${societiesText}. Same building as the largest national NEET chain. Personalized ${CEREBRUM_METRICS.batchSizeText} batches. Book consultation!`
 
     case 'premium':
       return `Premium NEET coaching in ${area.name}, Gurugram. ${CEREBRUM_METRICS.successRateText} success rate. Serving ${schoolsText} students. Near ${metroText}. Expert AIIMS faculty, small batches. Book free demo!`

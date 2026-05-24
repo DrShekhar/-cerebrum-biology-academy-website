@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MCAT Biology Tutoring Hub | Bio-Only Specialist | Cerebrum',
     description:
-      'Bio-only MCAT specialist — AAMC-aligned B/B coaching, biochem mastery, passage strategy. Bundles from $499 (vs Kaplan/Princeton).',
+      'Bio-only MCAT specialist — AAMC-aligned B/B coaching, biochem mastery, passage strategy. Bundles from $499 (vs other generalist test-prep brands/Princeton).',
     type: 'website',
     url: PAGE_URL,
     siteName: 'Cerebrum Biology Academy',
@@ -79,12 +79,12 @@ const hubFAQs = [
   {
     question: 'What is the Cerebrum MCAT Biology pricing structure?',
     answer:
-      'We offer three flat-fee bundles plus ad-hoc hourly tutoring. The Starter bundle is $499 for 10 hours of focused tutoring covering one section or a targeted weak area. The Standard bundle is $999 for 25 hours covering full B/B plus biochem. The Comprehensive bundle is $1,499 for 50 hours covering B/B, biochem, passage strategy, full-length review, and exam-week coaching. Ad-hoc lessons are $150 per hour. Pricing is intentionally lower per section than Kaplan or Princeton Review because we are bio-only specialists, not a general prep company.',
+      'We offer three flat-fee bundles plus ad-hoc hourly tutoring. The Starter bundle is $499 for 10 hours of focused tutoring covering one section or a targeted weak area. The Standard bundle is $999 for 25 hours covering full B/B plus biochem. The Comprehensive bundle is $1,499 for 50 hours covering B/B, biochem, passage strategy, full-length review, and exam-week coaching. Ad-hoc lessons are $150 per hour. Pricing is intentionally lower per section than other generalist MCAT brands because we are bio-only specialists, not a general prep company.',
   },
   {
-    question: 'Why pick a bio-only MCAT specialist instead of Kaplan or Princeton Review?',
+    question: 'Why pick a bio-only MCAT specialist instead of other generalist MCAT brands?',
     answer:
-      'Generalist prep companies (Kaplan, Princeton Review, Blueprint, Altius) bundle all four MCAT sections at $2,500 to $7,000, with rotating instructors who often teach only one section well. If your strength is C/P or CARS but you need rescue on Bio and Biochem, you are still paying for sections you have already mastered. Cerebrum is led by Dr. Shekhar C Singh, who has trained biology students for NEET, IB, AP, and Olympiad pathways for 20+ years. Our model mirrors Jack Westin’s CARS-specialist wedge: deep, single-vertical mastery at lower cost than a general bundle.',
+      'Generalist prep companies (other generalist MCAT brands, other generalist MCAT brands) bundle all four MCAT sections at $2,500 to $7,000, with rotating instructors who often teach only one section well. If your strength is C/P or CARS but you need rescue on Bio and Biochem, you are still paying for sections you have already mastered. Cerebrum is led by Dr. Shekhar C Singh, who has trained biology students for NEET, IB, AP, and Olympiad pathways for 20+ years. Our model mirrors Jack Westin’s CARS-specialist wedge: deep, single-vertical mastery at lower cost than a general bundle.',
   },
   {
     question: 'What is the Cerebrum MCAT B/B passage-strategy framework?',
@@ -99,7 +99,7 @@ const hubFAQs = [
   {
     question: 'Who is the ideal Cerebrum MCAT Biology student?',
     answer:
-      'Our typical student is an Indian-American or NRI premed paying in USD, often with a sub-510 B/B section score on a diagnostic or first official MCAT. They have already invested in a general prep platform (UWorld, AAMC bundle, sometimes Kaplan or Princeton) and need a specialist to rescue Bio and Biochem specifically. Many are second-attempt MCAT takers or students whose science GPA is strong but who under-performed on the B/B section in their first sitting.',
+      'Our typical student is an Indian-American or NRI premed paying in USD, often with a sub-510 B/B section score on a diagnostic or first official MCAT. They have already invested in a general prep platform (UWorld, AAMC bundle, sometimes other generalist test-prep brands or Princeton) and need a specialist to rescue Bio and Biochem specifically. Many are second-attempt MCAT takers or students whose science GPA is strong but who under-performed on the B/B section in their first sitting.',
   },
   {
     question: 'How are Cerebrum MCAT Biology lessons delivered?',
@@ -378,7 +378,7 @@ export default function MCATBiologyHubPage() {
             </h1>
 
             <p className="mb-8 max-w-3xl text-lg text-gray-300 sm:text-xl">
-              The bio-only MCAT specialist alternative to Kaplan and Princeton Review. AAMC-aligned
+              The bio-only MCAT specialist alternative to other generalist test-prep brands and other generalist test-prep brands. AAMC-aligned
               B/B (Biological &amp; Biochemical Foundations) coaching, biochem mastery, and a
               4-phase passage-strategy framework. Built for{' '}
               <strong>Indian-American and NRI premed families</strong> paying in USD who want
@@ -417,8 +417,8 @@ export default function MCATBiologyHubPage() {
                 Indian-American &amp; NRI Premed Families Paying USD
               </h2>
               <p className="text-base text-gray-700 sm:text-lg">
-                If you have already invested in a generalist platform (Kaplan, Princeton Review,
-                Blueprint, Altius, UWorld) and your <strong>B/B section is the weak point</strong>,
+                If you have already invested in a generalist platform (other generalist test-prep brands, other generalist test-prep brands,
+                Blueprint, other generalist MCAT brands, UWorld) and your <strong>B/B section is the weak point</strong>,
                 Cerebrum is the bio-only specialist alternative. We do not teach C/P, CARS, or P/S —
                 we own the biology and biochem half of your MCAT prep and charge accordingly.
               </p>
@@ -631,7 +631,7 @@ export default function MCATBiologyHubPage() {
                 MCAT Biology Pricing
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
-                Bundles priced per section, not per platform. Kaplan and Princeton Review charge
+                Bundles priced per section, not per platform. other generalist test-prep brands and other generalist test-prep brands charge
                 $2,500 to $7,000 for all four sections — we charge less for the biology half.
               </p>
             </div>
@@ -682,7 +682,7 @@ export default function MCATBiologyHubPage() {
           </div>
         </section>
 
-        {/* Strategic wedge — vs Kaplan / Princeton */}
+        {/* Strategic wedge — vs other generalist test-prep brands / Princeton */}
         <section className="bg-gray-50 py-16 sm:py-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -690,7 +690,7 @@ export default function MCATBiologyHubPage() {
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p>
-                Kaplan, Princeton Review, Blueprint, and Altius bundle all four MCAT sections at
+                other generalist MCAT brands, and other generalist MCAT brands bundle all four MCAT sections at
                 $2,500 to $7,000. Their instructors rotate — the same teacher may have to cover C/P,
                 B/B, CARS, and P/S in a single course. <strong>Single-section depth suffers</strong>
                 . If your weakness is B/B but you have already mastered C/P, you are paying for
@@ -708,7 +708,7 @@ export default function MCATBiologyHubPage() {
                 We are the right fit if: you have already paid for a generalist platform, you are an
                 Indian-American or NRI premed, your B/B diagnostic is sub-510, or you are
                 second-attempt and need targeted Bio + Biochem rescue. We are not the right fit if
-                you want a one-stop full-MCAT solution — in that case stick with Kaplan or Blueprint
+                you want a one-stop full-MCAT solution — in that case stick with other generalist test-prep brands or Blueprint
                 and add Cerebrum for B/B only.
               </p>
             </div>

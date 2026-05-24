@@ -46,9 +46,9 @@ export default function ParentsGuideFaridabadPage() {
             'Faridabad parents face a unique trade-off: Velocity and a few local institutes are cheaper, but face-time with senior biology faculty is limited. We run a Sector 17 offline centre plus online batches — many DPS / Apeejay / DAV / MVN families combine Cerebrum biology with their existing physics/chemistry coaching.',
           cityFaq: {
             question:
-              'Velocity / Aakash Faridabad charge less. Is the premium for Cerebrum worth it?',
+              'Velocity / the 2nd-largest national NEET chain Faridabad charge less. Is the premium for Cerebrum worth it?',
             answer:
-              'For biology specifically — yes, in most cases. Velocity / Aakash run large batches (40-60+) with rotating part-time biology faculty. Cerebrum runs 16-25 student Ascent batches with full-time AIIMS-trained biology faculty (Dr. Shekhar Singh) and a focused biology-only curriculum. If your child is strong in physics and chemistry but biology is the gap to a competitive NEET score, the ₹15-30K/year premium is the highest-ROI line item in your NEET budget. If biology is already strong, Velocity is reasonable for revision-only support.',
+              'For biology specifically — yes, in most cases. Velocity / the 2nd-largest national NEET chain run large batches (40-60+) with rotating part-time biology faculty. Cerebrum runs 16-25 student Ascent batches with full-time AIIMS-trained biology faculty (Dr. Shekhar Singh) and a focused biology-only curriculum. If your child is strong in physics and chemistry but biology is the gap to a competitive NEET score, the ₹15-30K/year premium is the highest-ROI line item in your NEET budget. If biology is already strong, Velocity is reasonable for revision-only support.',
           },
         }}
       />

@@ -148,7 +148,7 @@ const faqs = [
   {
     question: 'Which coaching has smaller batches?',
     answer:
-      'Aarambh has slightly smaller batches (10-15 students) compared to Cerebrum (15-20 students). However, both are far smaller than large institutes like Aakash (60-120) or Allen (80-150). The practical difference between 15 and 10 students per batch is minimal — both allow genuine personal attention.',
+      'Aarambh has slightly smaller batches (10-15 students) compared to Cerebrum (15-20 students). However, both are far smaller than large institutes like the 2nd-largest national NEET chain (60-120) or the largest national NEET chain (80-150). The practical difference between 15 and 10 students per batch is minimal — both allow genuine personal attention.',
   },
   {
     question: 'How do I decide between Cerebrum and Aarambh for NEET 2026?',
@@ -646,7 +646,7 @@ export default function CerebrumVsAarambhPage() {
               href="/cerebrum-vs-aakash"
               className="block p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-colors"
             >
-              <div className="font-medium text-gray-900">Cerebrum vs Aakash</div>
+              <div className="font-medium text-gray-900">Cerebrum vs the 2nd-largest national NEET chain</div>
               <p className="text-sm text-gray-500 mt-1">Another head-to-head comparison</p>
             </Link>
           </div>

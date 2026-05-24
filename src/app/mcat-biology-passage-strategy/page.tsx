@@ -92,7 +92,7 @@ const passageFAQs = [
   {
     question: 'Should I drill passages from third-party prep books or only AAMC official passages?',
     answer:
-      "Both, in that order. Third-party passages (Kaplan, Princeton Review, Blueprint, Jack Westin) are useful for the first 60-80 passages of practice because they're higher volume and let you build pattern recognition cheaply. Once you've done that volume, switch to AAMC official material — the AAMC Question Pack 1, Question Pack 2, AAMC Section Bank, and the four AAMC official full-length practice tests. AAMC passages are calibrated more accurately to test-day difficulty and reasoning style. Save the AAMC officials for the final 6-8 weeks before your test date.",
+      "Both, in that order. Third-party passages (other generalist MCAT brands, Jack Westin) are useful for the first 60-80 passages of practice because they're higher volume and let you build pattern recognition cheaply. Once you've done that volume, switch to AAMC official material — the AAMC Question Pack 1, Question Pack 2, AAMC Section Bank, and the four AAMC official full-length practice tests. AAMC passages are calibrated more accurately to test-day difficulty and reasoning style. Save the AAMC officials for the final 6-8 weeks before your test date.",
   },
   {
     question: 'I keep getting passages right in practice but losing time. How do I fix it?',
@@ -491,7 +491,7 @@ export default function MCATBiologyPassageStrategyPage() {
             <p className="text-slate-700 leading-relaxed mb-4">
               Source quality matters. The hierarchy in descending priority: AAMC official material
               (Question Pack 1, Question Pack 2, Section Bank, four official full-length practice
-              tests) ≫ Jack Westin / UWorld passages ≥ Kaplan / Princeton Review passages ≥
+              tests) ≫ Jack Westin / UWorld passages ≥ other generalist MCAT brands passages ≥
               everything else. Save AAMC officials for the last 6-8 weeks because they are the
               closest calibration to test-day style — there is no substitute for AAMC&apos;s own
               question writers.

@@ -119,14 +119,14 @@ const SCHOLARSHIPS: ScholarshipCriteria[] = [
 // Competitor pricing data
 const COMPETITOR_PRICING: CompetitorPrice[] = [
   {
-    name: 'Aakash Institute',
+    name: 'SKY Coaching (2nd-largest national NEET chain)',
     price: 95000,
     features: 8,
     successRate: 87.5,
     batchSize: 30,
   },
   {
-    name: 'Allen Career',
+    name: 'XYZ Coaching',
     price: 110000,
     features: 9,
     successRate: 91.2,
@@ -140,14 +140,14 @@ const COMPETITOR_PRICING: CompetitorPrice[] = [
     batchSize: 40,
   },
   {
-    name: 'Unacademy',
+    name: 'other online-only platforms',
     price: 75000,
     features: 6,
     successRate: 82.4,
     batchSize: 50,
   },
   {
-    name: 'Resonance',
+    name: 'other Kota-origin chains',
     price: 125000,
     features: 10,
     successRate: 93.1,

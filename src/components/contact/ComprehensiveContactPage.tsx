@@ -106,7 +106,7 @@ export function ComprehensiveContactPage({
       timings: '7:00 AM - 9:00 PM (Mon-Sun)',
       centerHead: 'Dr. Raj Kumar',
       headImage: getPlaceholderAvatar('Dr. Raj Kumar', 100, '1E40AF', 'fff'),
-      specialNote: 'Just 500m from JPT Academy - Easy comparison visits',
+      specialNote: 'Rohini Sector-18 — easy metro access, walking distance from local landmarks',
       coordinates: { lat: 28.7041, lng: 77.1025 },
       features: ['AC Classrooms', 'Parking', 'Metro Connectivity', 'Food Court'],
       mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.2',

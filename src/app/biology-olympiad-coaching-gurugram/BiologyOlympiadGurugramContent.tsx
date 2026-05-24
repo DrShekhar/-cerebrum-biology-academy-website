@@ -544,7 +544,7 @@ export default function BiologyOlympiadGurugramContent({ faqs }: BiologyOlympiad
                   {CONTACT_INFO.location.gurugram.postalCode}
                 </p>
                 <p className="text-gray-700 mb-4">
-                  <strong>Landmark:</strong> Same building as Allen Career Institute
+                  <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET chain)
                 </p>
                 <p className="text-gray-700 mb-4">
                   <strong>Metro Access:</strong> Sector 55-56 Rapid Metro (5 min walk)

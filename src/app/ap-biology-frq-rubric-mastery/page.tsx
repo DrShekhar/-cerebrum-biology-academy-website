@@ -1,8 +1,8 @@
 /**
  * /ap-biology-frq-rubric-mastery
  *
- * Cornerstone pedagogy page — the differentiator vs Wyzant / Princeton
- * Review / Khan Academy / Tutor.com. None of those competitors own the
+ * Cornerstone pedagogy page — the differentiator vs other tutor marketplaces / Princeton
+ * Review / Khan Academy / other tutor marketplaces. None of those competitors own the
  * "AP Biology FRQ rubric" content vertical. We do.
  *
  * Targets the high-volume informational query "AP Biology FRQ" and

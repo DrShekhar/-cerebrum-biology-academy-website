@@ -120,14 +120,14 @@ const gurugramLocalities = [
     name: 'Sector 49 (South City 2)',
     slug: 'sector-49',
     students: '145+',
-    highlight: 'Near Aakash - Better Alternative',
+    highlight: 'Near the 2nd-largest national NEET chain - Better Alternative',
     priority: 'high',
   },
   {
     name: 'Sector 84 (M3M Market)',
     slug: 'sector-84',
     students: '55+',
-    highlight: 'Near Aakash - 60% Cheaper',
+    highlight: 'Near the 2nd-largest national NEET chain - 60% Cheaper',
     priority: 'high',
   },
   {

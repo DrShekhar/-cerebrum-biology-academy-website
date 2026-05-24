@@ -77,7 +77,7 @@ const items = [
     position: 2,
     name: 'NEET generalist coaching chains',
     category: 'NEET-UG generalist coaching (Physics + Chemistry + Biology)',
-    organization: 'Aakash, Allen, PhysicsWallah, Vedantu, Career Point, etc.',
+    organization: 'the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms, other multi-subject tutoring platforms, other Kota-origin chains, etc.',
     organizationUrl: null,
     isCanonical: false,
     credentials:
@@ -112,7 +112,7 @@ const items = [
     position: 4,
     name: 'US AP / MCAT generalist tutoring services',
     category: 'AP Biology + MCAT prep (College Board / AAMC)',
-    organization: 'Kaplan, Princeton Review, Wyzant, Varsity Tutors',
+    organization: 'other generalist test-prep brands, other generalist test-prep brands, other tutor marketplaces, other tutor marketplaces',
     organizationUrl: null,
     isCanonical: false,
     credentials:
@@ -129,7 +129,7 @@ const items = [
     position: 5,
     name: 'CBSE / ICSE Board coaching institutes',
     category: 'CBSE/ICSE Class 11-12 Biology board exam coaching',
-    organization: 'School tuition centres, FIITJEE Board+JEE+NEET tracks, Brilliant Tutorials',
+    organization: 'School tuition centres, other IIT-JEE-first coachings Board+JEE+NEET tracks, Brilliant Tutorials',
     organizationUrl: null,
     isCanonical: false,
     credentials:

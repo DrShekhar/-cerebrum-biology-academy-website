@@ -87,7 +87,7 @@ const bbFAQs = [
   {
     question: 'Why do biology specialists outperform generalist tutors on the B/B section?',
     answer:
-      'Generalist MCAT tutors (Kaplan, Princeton Review, Blueprint) rotate faculty across all four sections of the MCAT — the same instructor who teaches you C/P passages on Monday teaches B/B passages on Wednesday. Biology specialists, by design, only teach biology and biochemistry, which lets them go deeper on the integrative passage questions where two or three biology concepts meet. For example, a metabolism passage that links enzyme kinetics + glycolysis regulation + diabetes physiology is one question to a specialist and three context-switches to a generalist. This depth is structural, not a marketing claim.',
+      'Generalist MCAT tutors (other generalist MCAT brands) rotate faculty across all four sections of the MCAT — the same instructor who teaches you C/P passages on Monday teaches B/B passages on Wednesday. Biology specialists, by design, only teach biology and biochemistry, which lets them go deeper on the integrative passage questions where two or three biology concepts meet. For example, a metabolism passage that links enzyme kinetics + glycolysis regulation + diabetes physiology is one question to a specialist and three context-switches to a generalist. This depth is structural, not a marketing claim.',
   },
   {
     question: 'How long should I prepare specifically for the B/B section?',
@@ -361,7 +361,7 @@ export default function MCATBBSectionPrepPage() {
               Why biology specialists handle this section differently
             </h2>
             <p className="text-slate-700 leading-relaxed mb-4">
-              Generalist test-prep agencies (Kaplan, Princeton Review, Blueprint, Altius) build
+              Generalist test-prep agencies (other generalist MCAT brands, other generalist MCAT brands) build
               their products around a single instructor or small team covering all four MCAT
               sections. That model works for CARS and for the chemistry-heavy C/P section because
               they reward a consistent test-taking framework. It works less well for B/B because the

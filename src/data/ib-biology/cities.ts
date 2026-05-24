@@ -51,6 +51,23 @@ export type CitySlug =
   | 'rohini'
   | 'ghaziabad'
   | 'kolkata'
+  // 2026 Rich-country EU + CH expansion (Phase 1 — 15 NEW city pages;
+  // geneva, zurich, amsterdam already configured above)
+  | 'basel'
+  | 'zug'
+  | 'lausanne'
+  | 'frankfurt'
+  | 'berlin'
+  | 'munich'
+  | 'duesseldorf'
+  | 'hamburg'
+  | 'the-hague'
+  | 'rotterdam'
+  | 'eindhoven'
+  | 'stockholm'
+  | 'malmo'
+  | 'gothenburg'
+  | 'dublin'
 
 export interface CityConfig {
   slug: CitySlug
@@ -1047,6 +1064,305 @@ export const cities: Record<CitySlug, CityConfig> = {
     ],
     localHook:
       "Ghaziabad's IB and international-curriculum demand clusters around the Indirapuram-Vaishali-Vasundhara residential belt — closer to East Delhi via the Anand Vihar / Kaushambi axis than to central Delhi. Our IST online sessions sit at 7-9 PM to fit cleanly after the school day, and the Faridabad-Noida-Ghaziabad Expressway makes the South Extension hub accessible for optional in-person consultations.",
+  },
+
+  // ============================================================================
+  // RICH-COUNTRY EU + CH CLUSTER (2026 expansion)
+  // ============================================================================
+
+  // ─── SWITZERLAND (non-EU; no VAT complexity) — geneva + zurich exist above ──
+  basel: {
+    slug: 'basel',
+    city: 'Basel',
+    country: 'Switzerland',
+    countryCode: 'CH',
+    region: 'Basel-Stadt',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'CHF', symbol: 'CHF' },
+    pricing: { perHour: 85, perHourText: 'CHF 75–110/hr' },
+    ibSchools: [
+      'International School Basel (ISB)',
+      'SIS Swiss International School Basel',
+      'Academia International School Basel',
+    ],
+    neighbourhoods: ['Bruderholz', 'Riehen', 'Bottmingen', 'Allschwil', 'Reinach'],
+    localHook:
+      "Basel's IB cohort is anchored by International School Basel (ISB) in Reinach and SIS Basel — both serving the pharma-corporate expat community around Novartis, Roche, and Lonza. Our CET evening sessions (5–8 PM Basel) fit the after-school window. We coach for Swiss medicine eligibility (largely closed to non-EU) plus the more realistic UK Russell Group / US / Asia medical pathways that Basel IB graduates actually pursue.",
+  },
+
+  zug: {
+    slug: 'zug',
+    city: 'Zug',
+    country: 'Switzerland',
+    countryCode: 'CH',
+    region: 'Zug',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'CHF', symbol: 'CHF' },
+    pricing: { perHour: 85, perHourText: 'CHF 75–110/hr' },
+    ibSchools: [
+      'International School of Zug and Luzern (ISZL)',
+      'SIS Swiss International School Zug',
+      'Montessori School Zug',
+    ],
+    neighbourhoods: ['Baar', 'Cham', 'Steinhausen', 'Hünenberg', 'Walchwil'],
+    localHook:
+      "Zug's tax-favoured corporate expat density (commodity-trading, crypto, biotech) drives consistent IB demand. International School of Zug and Luzern (ISZL) anchors the local IB cohort. Our CET evening sessions accommodate the financial-sector working-parent schedule with weekday flexibility.",
+  },
+
+  lausanne: {
+    slug: 'lausanne',
+    city: 'Lausanne',
+    country: 'Switzerland',
+    countryCode: 'CH',
+    region: 'Vaud',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'CHF', symbol: 'CHF' },
+    pricing: { perHour: 85, perHourText: 'CHF 75–110/hr' },
+    ibSchools: [
+      'International School of Lausanne (ISL)',
+      'Champittet Collège',
+      'SIS Swiss International School Lausanne',
+    ],
+    neighbourhoods: ['Pully', 'Lutry', 'Belmont-sur-Lausanne', 'Morges', 'Nyon'],
+    localHook:
+      "Lausanne's IB community is centred on International School of Lausanne (ISL) in Pully, with feeder demand from the Vaud expat corridor stretching to Morges and Nyon. Our CET evening sessions (5–8 PM Lausanne) fit cleanly after ISL's typical 3:30 PM dismissal. EPFL and CHUV proximity drives consistent biology/medicine application interest.",
+  },
+
+  // ─── GERMANY (EU — WhatsApp-only CTA until VAT setup complete) ──────────────
+  frankfurt: {
+    slug: 'frankfurt',
+    city: 'Frankfurt',
+    country: 'Germany',
+    countryCode: 'DE',
+    region: 'Hesse',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'Frankfurt International School (FIS)',
+      'International School of Frankfurt-Rhein-Main (ISF)',
+      'Strothoff International School',
+      'Metropolitan School Frankfurt',
+    ],
+    neighbourhoods: ['Oberursel', 'Bad Homburg', 'Sachsenhausen', 'Westend', 'Niederrad'],
+    localHook:
+      "Frankfurt is Germany's deepest IB market — anchored by FIS in Oberursel and ISF Rhein-Main. The financial-sector expat density drives consistent year-on-year IB demand. Following the IB recognition uplift of May 2025, IB Diploma graduates now qualify for German universities when HL includes a language, math, or natural science — meaningful tailwind for IB Biology HL enrolment.",
+  },
+
+  berlin: {
+    slug: 'berlin',
+    city: 'Berlin',
+    country: 'Germany',
+    countryCode: 'DE',
+    region: 'Berlin',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'Berlin Brandenburg International School (BBIS)',
+      'Berlin Cosmopolitan School',
+      'Berlin Metropolitan School',
+      'Nelson Mandela State International School',
+    ],
+    neighbourhoods: ['Kladow', 'Charlottenburg', 'Wilmersdorf', 'Zehlendorf', 'Mitte'],
+    localHook:
+      "Berlin's IB cohort is centred on BBIS in Kladow plus an active inner-city cluster (Cosmopolitan, Metropolitan). The growing Indian tech-sector diaspora in Mitte and Friedrichshain adds steady IB Biology HL demand. The May 2025 German IB recognition upgrade makes IB a viable pathway to Charité Medical School Berlin and Humboldt / TU Berlin life sciences for students who choose Biology HL.",
+  },
+
+  munich: {
+    slug: 'munich',
+    city: 'Munich',
+    country: 'Germany',
+    countryCode: 'DE',
+    region: 'Bavaria',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'Munich International School (MIS)',
+      'Bavarian International School (BIS)',
+      'European School Munich',
+      'Lycée Jean Renoir (IB option)',
+    ],
+    neighbourhoods: ['Starnberg', 'Haimhausen', 'Bogenhausen', 'Grünwald', 'Pullach'],
+    localHook:
+      "Munich's IB demand is anchored by MIS in Starnberg and BIS in Haimhausen — both serving the BMW / Siemens / Allianz expat corporate community. Bavaria's traditional Gymnasium-only conservatism has softened post-2025 IB recognition, opening LMU Munich Medical School to IB Diploma applicants with strong Biology HL grades.",
+  },
+
+  duesseldorf: {
+    slug: 'duesseldorf',
+    city: 'Düsseldorf',
+    country: 'Germany',
+    countryCode: 'DE',
+    region: 'North Rhine-Westphalia',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'International School of Düsseldorf (ISD)',
+      'Düsseldorf International School',
+      'St. George\'s School Düsseldorf-Köln',
+    ],
+    neighbourhoods: ['Kaiserswerth', 'Niederkassel', 'Oberkassel', 'Meerbusch', 'Krefeld'],
+    localHook:
+      "Düsseldorf's IB cluster is anchored by ISD in Kaiserswerth — historically one of Germany's longest-established international schools. The Japanese, Korean, and South Asian expat communities along the Rhine drive consistent IB demand. Cross-cluster pickup from Köln (Cologne) families is significant.",
+  },
+
+  hamburg: {
+    slug: 'hamburg',
+    city: 'Hamburg',
+    country: 'Germany',
+    countryCode: 'DE',
+    region: 'Hamburg',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'International School of Hamburg (ISH)',
+      'Hamburg International School',
+      'Phorms Hamburg',
+    ],
+    neighbourhoods: ['Othmarschen', 'Blankenese', 'HafenCity', 'Eppendorf', 'Winterhude'],
+    localHook:
+      "Hamburg's IB cohort is anchored by ISH in Othmarschen — one of Germany's longest-running IB schools. The shipping, finance, and media corporate expat community along the Elbe drives steady IB demand. Universitätsklinikum Hamburg-Eppendorf medical pathways now accept IB Diploma post-2025 recognition uplift.",
+  },
+
+  // ─── NETHERLANDS (EU — WhatsApp-only CTA until VAT setup) ────────────────────
+  'the-hague': {
+    slug: 'the-hague',
+    city: 'The Hague',
+    country: 'Netherlands',
+    countryCode: 'NL',
+    region: 'South Holland',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'British School in the Netherlands (BSN)',
+      'International School of The Hague (ISH)',
+      'American School of The Hague (ASH)',
+      'Lycée français Vincent van Gogh',
+    ],
+    neighbourhoods: ['Wassenaar', 'Voorschoten', 'Scheveningen', 'Benoordenhout', 'Statenkwartier'],
+    localHook:
+      "The Hague hosts the densest international-organisation expat community in continental Europe — ICC, ICJ, OPCW, Europol — driving consistent IB DP enrolment at BSN, ISH, and ASH. Our CET evening sessions (5–8 PM Hague time) fit the typical international-school after-school window. Strong cross-demand from biology/medicine applicants targeting UK Russell Group and US Ivy League.",
+  },
+
+  rotterdam: {
+    slug: 'rotterdam',
+    city: 'Rotterdam',
+    country: 'Netherlands',
+    countryCode: 'NL',
+    region: 'South Holland',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'Rotterdam International Secondary School (RISS)',
+      'American International School of Rotterdam',
+      'De Blijberg International',
+    ],
+    neighbourhoods: ['Kralingen', 'Hillegersberg', 'Nesselande', 'Capelle aan den IJssel'],
+    localHook:
+      "Rotterdam's IB community is anchored by RISS — South Holland's longest-established IB school. The port-and-shipping plus tech-startup expat density drives steady IB Diploma demand. Erasmus University Medical Center (EMC) recognition of IB Biology HL is well-established for Erasmus MC Medicine applications.",
+  },
+
+  eindhoven: {
+    slug: 'eindhoven',
+    city: 'Eindhoven',
+    country: 'Netherlands',
+    countryCode: 'NL',
+    region: 'North Brabant',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'International School Eindhoven (ISE)',
+      'St. Joriscollege International Stream',
+    ],
+    neighbourhoods: ['Veldhoven', 'Geldrop', 'Waalre', 'Best', 'Nuenen'],
+    localHook:
+      "Eindhoven's IB cohort is anchored by ISE — serving the ASML / Philips / NXP semiconductor expat community in the Brainport region. The Indian tech-sector diaspora at ASML and the broader semiconductor cluster drives consistent IB Biology HL demand. CET evening sessions fit the post-school window cleanly.",
+  },
+
+  // ─── SWEDEN (EU — WhatsApp-only CTA until VAT setup) ────────────────────────
+  stockholm: {
+    slug: 'stockholm',
+    city: 'Stockholm',
+    country: 'Sweden',
+    countryCode: 'SE',
+    region: 'Stockholm',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'SEK', symbol: 'kr' },
+    pricing: { perHour: 750, perHourText: 'SEK 600–950/hr' },
+    ibSchools: [
+      'Stockholm International School (SIS)',
+      'Internationella Engelska Skolan (IES Södermalm)',
+      'International School of the Stockholm Region (ISSR)',
+      'SSHL Sigtuna (Sigtunaskolan Humanistiska Läroverket)',
+    ],
+    neighbourhoods: ['Östermalm', 'Djurgården', 'Lidingö', 'Bromma', 'Saltsjöbaden'],
+    localHook:
+      "Stockholm's IB cohort is anchored by Stockholm International School (SIS) on Djurgården and SSHL Sigtuna boarding north of the city. The Karolinska Institutet medical pathway is the dominant local biology-related university target — Karolinska accepts IB Biology HL as the 'Biology 2 or equivalent' entry requirement. Stockholm's 91%+ adult English fluency (EF EPI 617) means online English-medium tutoring is culturally seamless.",
+  },
+
+  malmo: {
+    slug: 'malmo',
+    city: 'Malmö',
+    country: 'Sweden',
+    countryCode: 'SE',
+    region: 'Skåne',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'SEK', symbol: 'kr' },
+    pricing: { perHour: 750, perHourText: 'SEK 600–950/hr' },
+    ibSchools: [
+      'Katedralskolan Lund (IB)',
+      'Malmö Borgarskola (IB Diploma stream)',
+      'Internationella Engelska Gymnasiet Södermalm satellite',
+    ],
+    neighbourhoods: ['Limhamn', 'Västra Hamnen', 'Bunkeflostrand', 'Lund (commuter)'],
+    localHook:
+      "The Malmö-Lund corridor's IB cohort is anchored by Katedralskolan Lund (one of Sweden's oldest IB schools, founded 14th-century gymnasium) and Malmö Borgarskola IB Diploma stream. Cross-strait proximity to Copenhagen (Øresund Bridge, 30 minutes) adds Danish expat-family demand. Lund University Medical School is a meaningful local target; we coach IB Biology HL for both Karolinska and Lund medical pathways.",
+  },
+
+  gothenburg: {
+    slug: 'gothenburg',
+    city: 'Gothenburg',
+    country: 'Sweden',
+    countryCode: 'SE',
+    region: 'Västra Götaland',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'SEK', symbol: 'kr' },
+    pricing: { perHour: 750, perHourText: 'SEK 600–950/hr' },
+    ibSchools: [
+      'International School of the Gothenburg Region (ISGR)',
+      'Donnergymnasiet Göteborg (IB)',
+      'Hvitfeldtska Gymnasiet IB',
+    ],
+    neighbourhoods: ['Långedrag', 'Örgryte', 'Hovås', 'Mölndal', 'Kungsbacka (commuter)'],
+    localHook:
+      "Gothenburg's IB cohort is anchored by ISGR plus Hvitfeldtska's IB Diploma stream. The Volvo / AstraZeneca corporate expat community drives consistent IB demand, and AstraZeneca's biotech R&D presence in Mölndal adds biology-major university interest. Sahlgrenska University Hospital (Göteborg University Medical School) accepts IB Biology HL as the 'Biology 2 equivalent' entry requirement.",
+  },
+
+  // ─── IRELAND (EU — WhatsApp-only CTA until VAT setup) ───────────────────────
+  dublin: {
+    slug: 'dublin',
+    city: 'Dublin',
+    country: 'Ireland',
+    countryCode: 'IE',
+    region: 'Leinster',
+    timezoneAbbr: 'GMT/IST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€55–80/hr' },
+    ibSchools: [
+      'Nord Anglia International School Dublin',
+      'SEK International School Dublin',
+      "St Andrew's College Dublin",
+      'International School of Dublin',
+    ],
+    neighbourhoods: ['Dún Laoghaire', 'Booterstown', 'Dundrum', 'Sandyford', 'Ranelagh'],
+    localHook:
+      "Dublin's IB community is small but English-native — only 4 IB DP schools nationally, but the rapidly-growing Indian tech-sector diaspora and the Irish medical-school pipeline (RCSI, Trinity College Dublin, UCD) targeting NEET-track Indian families create distinctive demand. RCSI's strong Indian-student admission preference makes IB Biology HL a recognised path. Our GMT evening sessions (5–8 PM Dublin) fit cleanly after the international-school day.",
   },
 }
 

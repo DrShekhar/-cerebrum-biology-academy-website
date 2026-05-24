@@ -42,7 +42,7 @@ const feeComparison = [
     highlights: ['AIIMS Faculty', '98% Success', 'Small Batches', 'Personalized Attention'],
   },
   {
-    institute: 'Aakash Institute',
+    institute: 'SKY Coaching (2nd-largest national NEET chain)',
     highlight: false,
     class11Fee: '₹1,50,000 - ₹1,80,000',
     class12Fee: '₹1,60,000 - ₹2,00,000',
@@ -55,7 +55,7 @@ const feeComparison = [
     highlights: ['All Subjects', 'Pan-India Network', 'Large Infrastructure'],
   },
   {
-    institute: 'Allen Career Institute',
+    institute: 'XYZ Coaching (largest national NEET chain)',
     highlight: false,
     class11Fee: '₹1,40,000 - ₹1,70,000',
     class12Fee: '₹1,50,000 - ₹1,90,000',
@@ -68,7 +68,7 @@ const feeComparison = [
     highlights: ['Kota Brand', 'All Subjects', 'Study Material'],
   },
   {
-    institute: 'FIITJEE',
+    institute: 'other IIT-JEE-first coachings',
     highlight: false,
     class11Fee: '₹1,60,000 - ₹2,00,000',
     class12Fee: '₹1,80,000 - ₹2,20,000',
@@ -81,7 +81,7 @@ const feeComparison = [
     highlights: ['JEE Focus (NEET secondary)', 'Premium Fees', 'IIT Brand'],
   },
   {
-    institute: 'Narayana',
+    institute: 'a leading national educational institution',
     highlight: false,
     class11Fee: '₹1,30,000 - ₹1,60,000',
     class12Fee: '₹1,40,000 - ₹1,80,000',

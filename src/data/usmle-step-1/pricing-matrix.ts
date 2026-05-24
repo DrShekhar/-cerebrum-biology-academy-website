@@ -13,11 +13,11 @@
  * graduates preparing for ECFMG certification.
  *
  * Pricing wedge: UWorld Step 1 QBank ($499–$799), AMBOSS ($479–$799),
- * Sketchy ($299–$499), Kaplan USMLE Live ($3,499+), Pass Program
+ * Sketchy ($299–$499), other USMLE generalist brands ($3,499+), other USMLE generalist brands
  * ($3,200), USMLE-Rx ($339+). Cerebrum competes on biology-foundation
  * pedagogy — specifically biochemistry, molecular biology, microbiology,
  * immunology, and pathophysiology — at biology-specialist price points
- * 30–40% below Kaplan and Pass Program.
+ * 30–40% below other USMLE generalist brands.
  *
  * USD-only — Step 1 audience pays in USD regardless of home country.
  */
@@ -106,8 +106,8 @@ export const usmleStep1PricingProducts: USMLEStep1PricingProduct[] = [
 ]
 
 /** Hourly tutoring rate for ad-hoc / gap-fill sessions outside the
- *  packaged programmes. Compared to Kaplan USMLE 1:1 ($230/hr) and
- *  Pass Program ($200/hr), this is Cerebrum's per-hour wedge. */
+ *  packaged programmes. Compared to other USMLE generalist brands 1:1 ($230/hr) and
+ *  other USMLE generalist brands ($200/hr), this is Cerebrum's per-hour wedge. */
 export const USMLE_STEP1_ADHOC_TUTORING_USD_PER_HOUR = 175
 
 /** Course-schema offers[] for USMLE Step 1 pages. All USD base. */

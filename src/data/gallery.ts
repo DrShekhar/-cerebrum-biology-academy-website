@@ -10,15 +10,15 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 'shekhar-narayana-director',
     url: '/images/gallery/untitled-design-10.png',
-    title: "Dr. Shekhar with Sharani Narayana Ma'am",
-    description: 'Director of Cerebrum with Director of Narayana Group',
+    title: "Dr. Shekhar with Sharani a leading national educational institution Ma'am",
+    description: 'Director of Cerebrum with Director of a leading national educational institution',
     category: 'faculty',
   },
   {
     id: 'dean-south-city',
     url: '/images/gallery/shekhar-sir-dean-south-city.png',
-    title: 'Academic Leadership at Narayana',
-    description: 'Dr. Shekhar Sir at Narayana e-techno School South City 2',
+    title: 'Academic Leadership at a leading national educational institution',
+    description: 'Dr. Shekhar Sir at a leading national educational institution e-techno School South City 2',
     category: 'faculty',
   },
   {
@@ -32,7 +32,7 @@ export const galleryImages: GalleryImage[] = [
     id: 'educational-seminar',
     url: '/images/gallery/untitled-design-11.png',
     title: 'Expert Seminar Session',
-    description: 'Educational seminar featuring Sharani Narayana',
+    description: 'Educational seminar featuring Sharani a leading national educational institution',
     category: 'seminars',
   },
   {

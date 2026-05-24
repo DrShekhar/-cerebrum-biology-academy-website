@@ -16,7 +16,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Greater Noida 2026 | Compare Coaching Fees',
   description:
-    'Compare NEET coaching fees in Greater Noida 2026. Fee comparison of Aakash Greater Noida, WiseTurtle Academy vs Cerebrum Biology Academy. Best value with small batches. Call 99536-43938!',
+    'Compare NEET coaching fees in Greater Noida 2026. Fee comparison of the 2nd-largest national NEET chain Greater Noida, WiseTurtle Academy vs Cerebrum Biology Academy. Best value with small batches. Call 99536-43938!',
   keywords: [
     'neet coaching fees greater noida',
     'neet coaching cost greater noida',
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
 
 const feeComparison = [
   {
-    institute: 'Aakash Greater Noida',
+    institute: 'the 2nd-largest national NEET chain Greater Noida',
     class11_12: '1.36-3.5 Lakh',
     dropper: '1-2 Lakh',
     batchSize: '100-200',
     highlight: false,
   },
   {
-    institute: 'Allen (Online)',
+    institute: 'the largest national NEET chain (Online)',
     class11_12: '1.2-2 Lakh',
     dropper: '1-1.8 Lakh',
     batchSize: '60-100',
@@ -62,7 +62,7 @@ const feeComparison = [
     highlight: false,
   },
   {
-    institute: 'Narayana (Greater Noida)',
+    institute: 'a leading national educational institution (Greater Noida)',
     class11_12: '70,000-1,20,000',
     dropper: '80,000',
     batchSize: '40-60',
@@ -134,7 +134,7 @@ const faqs = [
       'We offer merit-based scholarships up to 100% fee waiver. Based on your Class 10/11/12 marks or our scholarship test. Students with 90%+ marks can get 50-75% scholarship.',
   },
   {
-    question: 'Why is Cerebrum cheaper than Aakash Greater Noida?',
+    question: 'Why is Cerebrum cheaper than the 2nd-largest national NEET chain Greater Noida?',
     answer:
       'We focus on Biology only (not all 3 subjects), keep batches small (15-20 students), and have minimal overhead. This allows us to offer premium quality at affordable fees. Our results prove that expensive does not mean better.',
   },
@@ -458,7 +458,7 @@ export default function NEETCoachingFeesGreaterNoidaPage() {
             '@type': 'Article',
             headline: 'NEET Coaching Fees in Greater Noida 2026 - Complete Comparison',
             description:
-              'Detailed comparison of NEET coaching fees for Greater Noida students including Aakash Greater Noida, WiseTurtle Academy, Narayana, and Cerebrum Biology Academy.',
+              'Detailed comparison of NEET coaching fees for Greater Noida students including the 2nd-largest national NEET chain Greater Noida, WiseTurtle Academy, a leading national educational institution, and Cerebrum Biology Academy.',
             author: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',

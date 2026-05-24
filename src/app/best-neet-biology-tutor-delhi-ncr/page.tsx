@@ -61,8 +61,8 @@ const whyDelhiNCR = [
   },
   {
     icon: Building,
-    title: 'Former Narayana Head',
-    description: 'Academic Head experience at Narayana, bringing proven methodologies.',
+    title: 'Former a leading national educational institution Head',
+    description: 'Academic Head experience at a leading national educational institution, bringing proven methodologies.',
   },
   {
     icon: Trophy,
@@ -90,7 +90,7 @@ const faqs = [
   {
     question: 'Where is the best NEET Biology tutor in Delhi NCR?',
     answer:
-      'Cerebrum Biology Academy in Greater Noida offers the best NEET Biology coaching in Delhi NCR. Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head, provides expert coaching. Students from Delhi, Noida, Ghaziabad, Faridabad, and Gurugram join us for quality education.',
+      'Cerebrum Biology Academy in Greater Noida offers the best NEET Biology coaching in Delhi NCR. Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution, provides expert coaching. Students from Delhi, Noida, Ghaziabad, Faridabad, and Gurugram join us for quality education.',
   },
   {
     question: 'Can students from Delhi join classes in Greater Noida?',
@@ -159,7 +159,7 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
             founder: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Narayana Academic Head',
+              description: 'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
             },
           }),
         }}
@@ -190,7 +190,7 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Get top NEET Biology coaching from{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head</strong>.
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution</strong>.
               The best NEET Biology tutor accessible to all of Delhi NCR.
             </p>
 

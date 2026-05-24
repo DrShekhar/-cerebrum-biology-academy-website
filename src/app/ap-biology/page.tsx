@@ -21,7 +21,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/ap-biology'
 export const metadata: Metadata = {
   title: 'AP Biology Tutoring Hub | Score-5 Coaching, FRQ Mastery | Cerebrum',
   description:
-    'Biology-only specialist AP Biology tutors — beat Kaplan/Princeton on per-section depth. Score-5 study guide, FRQ rubric mastery, AAMC-to-NCERT crosswalk, US metros + APAC + UAE + India coverage.',
+    'Biology-only specialist AP Biology tutors — beat other generalist test-prep brands/Princeton on per-section depth. Score-5 study guide, FRQ rubric mastery, AAMC-to-NCERT crosswalk, US metros + APAC + UAE + India coverage.',
   keywords: [
     'AP Biology',
     'AP Biology tutor',
@@ -72,9 +72,9 @@ const hubFAQs = [
       'AP Biology is a College-Board administered, college-level introductory biology course taken by US high-school students (typically Grade 11 or 12). The Course and Exam Description (CED) organizes content into 8 units — Unit 1: Chemistry of Life; Unit 2: Cell Structure and Function; Unit 3: Cellular Energetics; Unit 4: Cell Communication and Cell Cycle; Unit 5: Heredity; Unit 6: Gene Expression and Regulation; Unit 7: Natural Selection; Unit 8: Ecology. The exam is 3 hours long — 60 multiple-choice questions (50% of score) and 6 free-response questions (50% of score). Scores range from 1 to 5; a 4 or 5 typically earns college credit.',
   },
   {
-    question: 'Why pick a biology-only specialist tutor over Kaplan or Princeton Review?',
+    question: 'Why pick a biology-only specialist tutor over other generalist MCAT brands?',
     answer:
-      'Generalist test-prep companies like Kaplan and Princeton Review staff tutors who teach Biology, Chemistry, Physics, English, and Maths interchangeably — they are exam-format experts, not subject experts. Cerebrum tutors only teach Biology, every day, across NEET, IB HL, AP Biology, MCAT B/B, USABO, and IBO. That depth shows up in three places: (1) FRQ scoring — we know exactly which Big-Idea language anchors a rubric point; (2) misconception repair — we have seen the same wrong mental model thousands of times; (3) cross-curriculum bridging — for Indian-American students we can map AP CED topics directly to NCERT chapter equivalents. The trade-off: we cost less per hour than Kaplan ($120-150 vs their $200+) because we do not subsidize departments we do not run.',
+      'Generalist test-prep companies like other generalist test-prep brands and other generalist test-prep brands staff tutors who teach Biology, Chemistry, Physics, English, and Maths interchangeably — they are exam-format experts, not subject experts. Cerebrum tutors only teach Biology, every day, across NEET, IB HL, AP Biology, MCAT B/B, USABO, and IBO. That depth shows up in three places: (1) FRQ scoring — we know exactly which Big-Idea language anchors a rubric point; (2) misconception repair — we have seen the same wrong mental model thousands of times; (3) cross-curriculum bridging — for Indian-American students we can map AP CED topics directly to NCERT chapter equivalents. The trade-off: we cost less per hour than other generalist test-prep brands ($120-150 vs their $200+) because we do not subsidize departments we do not run.',
   },
   {
     question: 'What does AP Biology tutoring cost at Cerebrum?',
@@ -129,7 +129,7 @@ const serviceHubs = [
     title: 'Best AP Biology Tutor (USA)',
     href: '/best-ap-biology-tutor-usa',
     description:
-      'Why specialist-tutor outcomes beat the Kaplan/Princeton/Khan generic-test-prep model — head-to-head comparison.',
+      'Why specialist-tutor outcomes beat the other generalist test-prep brands/Princeton/Khan generic-test-prep model — head-to-head comparison.',
     icon: Award,
     accent: 'text-purple-600',
   },
@@ -491,7 +491,7 @@ export default function APBiologyHubPage() {
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6">
             <h2 className="mb-6 text-3xl font-bold text-gray-900 sm:text-4xl">
-              Why a Biology-Only Specialist Beats Kaplan / Princeton Review
+              Why a Biology-Only Specialist Beats other generalist MCAT brands
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p>
@@ -521,8 +521,8 @@ export default function APBiologyHubPage() {
                 </li>
               </ol>
               <p>
-                The trade-off is honest: we cost less per hour than Kaplan ($120–$150 vs their
-                $200+) because we do not subsidize departments we do not run. Kaplan needs to fund
+                The trade-off is honest: we cost less per hour than other generalist test-prep brands ($120–$150 vs their
+                $200+) because we do not subsidize departments we do not run. other generalist test-prep brands needs to fund
                 LSAT, MCAT, GRE, GMAT, USMLE, NCLEX, and SAT teams from the same fee base. Cerebrum
                 only teaches Biology.
               </p>

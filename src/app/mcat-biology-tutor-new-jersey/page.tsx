@@ -58,7 +58,7 @@ const faqs = [
     question:
       'Do you coach Princeton pre-meds working with the Health Professions Advising office?',
     answer:
-      'Yes. Princeton pre-meds typically apply to medical school in the gap year after graduation, so most book MCAT prep in the summer between junior and senior year or during the gap year itself. Our 4–6 month Bio/Biochem programme aligns with the Princeton HPA timeline — finishing content review by January, then heavy passage practice through the spring test date. We coach the Bio/Biochem section; students usually pair us with a generalist provider (Kaplan, Princeton Review, Blueprint) for C/P and CARS.',
+      'Yes. Princeton pre-meds typically apply to medical school in the gap year after graduation, so most book MCAT prep in the summer between junior and senior year or during the gap year itself. Our 4–6 month Bio/Biochem programme aligns with the Princeton HPA timeline — finishing content review by January, then heavy passage practice through the spring test date. We coach the Bio/Biochem section; students usually pair us with a generalist provider (other generalist MCAT brands) for C/P and CARS.',
   },
   {
     question:
@@ -79,9 +79,9 @@ const faqs = [
       'Yes. Rutgers BA/MD students (Robert Wood Johnson and New Jersey Medical School tracks) typically sit the MCAT in the spring of sophomore or junior year, which is earlier than most pre-meds. We adjust the programme to compress content review when the student has not yet completed all standard pre-med coursework — particularly biochemistry, which is often a junior-year course. Our Lehninger first-semester biochem coverage closes this gap.',
   },
   {
-    question: 'How does Cerebrum compare to Princeton Review or Kaplan for an NJ pre-med?',
+    question: 'How does Cerebrum compare to other generalist MCAT brands for an NJ pre-med?',
     answer:
-      'Princeton Review and Kaplan are full-MCAT generalist providers — they cover all four sections (Bio/Biochem, C/P, CARS, Psych/Soc) with rotating subject faculty. Cerebrum is a biology specialist — we cover the Bio/Biochem section and the biology content in the Psych/Soc section, with biology faculty who do not rotate. Many NJ students pair us with a generalist for the non-biology sections. Our Small-Batch is $999 vs Kaplan In-Person ~$2,700; Senior Faculty 1:1 is $1,499 vs Princeton Review tutoring at $183/hour.',
+      'other generalist test-prep brands and other generalist test-prep brands are full-MCAT generalist providers — they cover all four sections (Bio/Biochem, C/P, CARS, Psych/Soc) with rotating subject faculty. Cerebrum is a biology specialist — we cover the Bio/Biochem section and the biology content in the Psych/Soc section, with biology faculty who do not rotate. Many NJ students pair us with a generalist for the non-biology sections. Our Small-Batch is $999 vs other generalist MCAT brands in-person ~$2,700; Senior Faculty 1:1 is $1,499 vs other generalist MCAT brands tutoring at $183/hour.',
   },
   {
     question: 'When should an NJIT or Rutgers Newark pre-med start MCAT Biology prep?',

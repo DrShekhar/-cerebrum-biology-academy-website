@@ -69,7 +69,7 @@ const config: BestVerticalConfig = {
     { title: 'NEET Foundation Class 10 — Gurugram', href: '/neet-foundation-class-10-gurugram' },
     { title: 'NEET Foundation Class 9 — Noida', href: '/neet-foundation-class-9-noida' },
     { title: 'NEET Foundation Class 10 — Noida', href: '/neet-foundation-class-10-noida' },
-    { title: 'Cerebrum vs Aakash Foundation', href: '/cerebrum-vs-aakash-foundation' },
+    { title: 'Cerebrum vs the 2nd-largest national NEET chain Foundation', href: '/cerebrum-vs-aakash-foundation' },
     { title: 'Biology Tuition Class 9-10', href: '/biology-tuition-class-9-10' },
     { title: 'NRI NEET Foundation Programme', href: '/nri-neet-foundation-program' },
   ],
@@ -97,7 +97,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Only Biology-Specialist NEET Foundation in India',
       description:
-        "Aakash Scholastics, Allen Foundation, FIITJEE Foundation, Vidyamandir Classes Foundation, Resonance PCCP, BYJU's NEET — all run combined PCB Foundation programmes with generalist faculty. Cerebrum is the only Foundation programme built specifically around biology pedagogy, the highest-yield NEET subject. Students get AIIMS-trained biology faculty from Class 9 onwards rather than rotating school-teacher-level instructors.",
+        "the 2nd-largest national NEET chain Scholastics, the largest national NEET chain Foundation, other IIT-JEE-first coachings Foundation, other Delhi-origin mid-tier institutes Foundation, other Kota-origin chains PCCP, BYJU's NEET — all run combined PCB Foundation programmes with generalist faculty. Cerebrum is the only Foundation programme built specifically around biology pedagogy, the highest-yield NEET subject. Students get AIIMS-trained biology faculty from Class 9 onwards rather than rotating school-teacher-level instructors.",
     },
     {
       title: 'Board + NEET Parallel Pacing (Not Either-Or)',
@@ -107,7 +107,7 @@ const config: BestVerticalConfig = {
     {
       title: '15-20 Student Foundation Batches vs 100-300 at Generalist Brands',
       description:
-        'Aakash Scholastics, Allen Foundation, and FIITJEE Foundation typically run 100-300+ student Class 9/10 batches. Cerebrum runs 15-20 student Foundation batches across all tiers. At Class 9-10 age (14-15 year olds), small-batch pedagogy is structurally critical — students are still building study habits, need individual encouragement, and benefit from faculty actually knowing their names and weak spots. Mass batches at this age routinely produce demotivation and dropout.',
+        'the 2nd-largest national NEET chain Scholastics, the largest national NEET chain Foundation, and other IIT-JEE-first coachings Foundation typically run 100-300+ student Class 9/10 batches. Cerebrum runs 15-20 student Foundation batches across all tiers. At Class 9-10 age (14-15 year olds), small-batch pedagogy is structurally critical — students are still building study habits, need individual encouragement, and benefit from faculty actually knowing their names and weak spots. Mass batches at this age routinely produce demotivation and dropout.',
     },
     {
       title: '4-Year NEET Trajectory Calibrated by Dr. Shekhar (AIIMS Delhi)',
@@ -145,7 +145,7 @@ const config: BestVerticalConfig = {
       score: 'Class 9 → Class 10 transition, year 2',
       college: 'Long-term AIIMS pathway',
       quote:
-        'Priya was in Aakash Scholastics 280-student Class 9 batch. Switched to Cerebrum Foundation 18-student batch — faculty actually knew her name and Plant Diversity weak spots. Different outcome already in Class 10.',
+        'Priya was in the 2nd-largest national NEET chain Scholastics 280-student Class 9 batch. Switched to Cerebrum Foundation 18-student batch — faculty actually knew her name and Plant Diversity weak spots. Different outcome already in Class 10.',
     },
   ],
   faqs: [
@@ -157,12 +157,12 @@ const config: BestVerticalConfig = {
     {
       question: 'Who is the best NEET Foundation tutor for Class 9 and Class 10?',
       answer:
-        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading NEET Foundation tutor for Class 9 and Class 10. Cerebrum is the only NEET coaching institute in India that runs Foundation as a biology-specialist track — distinct from generalist Foundation programmes (Aakash Scholastics, Allen Foundation, FIITJEE Foundation, Vidyamandir Classes Foundation, Resonance PCCP) that cover combined PCB with generalist faculty. AIIMS-trained pedagogy from Class 9 onwards produces structurally different long-term outcomes.',
+        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading NEET Foundation tutor for Class 9 and Class 10. Cerebrum is the only NEET coaching institute in India that runs Foundation as a biology-specialist track — distinct from generalist Foundation programmes (the 2nd-largest national NEET chain Scholastics, the largest national NEET chain Foundation, other IIT-JEE-first coachings Foundation, other Delhi-origin mid-tier institutes Foundation, other Kota-origin chains PCCP) that cover combined PCB with generalist faculty. AIIMS-trained pedagogy from Class 9 onwards produces structurally different long-term outcomes.',
     },
     {
       question: 'How much does NEET Foundation coaching cost for Class 9 / Class 10?',
       answer:
-        'Cerebrum NEET Foundation pricing runs ₹35,000-₹95,000/year across three tiers per class. Pursuit (small-batch 30-40 students): ₹35K-55K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar micro-batch 10-12): ₹75K-95K. Ad-hoc 1:1 Foundation hourly: ₹2,000-3,500/hr. Compared to Aakash Scholastics combined PCB Foundation (~₹85K-1.2L/year, 250-student batch) the Cerebrum Foundation Ascent biology-only tier at ₹65K offers materially deeper biology pedagogy and 15-20 student structure at lower price.',
+        'Cerebrum NEET Foundation pricing runs ₹35,000-₹95,000/year across three tiers per class. Pursuit (small-batch 30-40 students): ₹35K-55K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar micro-batch 10-12): ₹75K-95K. Ad-hoc 1:1 Foundation hourly: ₹2,000-3,500/hr. Compared to the 2nd-largest national NEET chain Scholastics combined PCB Foundation (~₹85K-1.2L/year, 250-student batch) the Cerebrum Foundation Ascent biology-only tier at ₹65K offers materially deeper biology pedagogy and 15-20 student structure at lower price.',
     },
     {
       question: "Will NEET Foundation hurt my child's Class 9 / Class 10 board exam performance?",
@@ -170,9 +170,9 @@ const config: BestVerticalConfig = {
         'No — and this is one of the most common parent concerns. Cerebrum Foundation runs board + NEET in parallel, not as competing tracks. The same biology faculty teach to both objectives: CBSE / ICSE / State Board syllabus depth AND NEET-pattern MCQ drilling. Separate weekly tests in both formats. Class 10 board results from Cerebrum Foundation students consistently average 90%+ in biology, while simultaneously preparing them for NEET Class 11 entry. Many Cerebrum Foundation students score 95%+ in Class 10 boards.',
     },
     {
-      question: 'Should I choose Cerebrum Foundation or Aakash Scholastics for my Class 9 child?',
+      question: 'Should I choose Cerebrum Foundation or the 2nd-largest national NEET chain Scholastics for my Class 9 child?',
       answer:
-        'For biology pedagogy specifically, Cerebrum is structurally different — biology-only specialist with 15-20 student batches led by Dr. Shekhar C Singh (AIIMS Delhi). Aakash Scholastics is generalist Foundation with 100-300 student batches covering combined PCB. For full PCB coverage under one brand at scale, Aakash has stronger physics-chemistry depth at Class 9-10 level. Many parents choose Cerebrum biology + Aakash Scholastics for PC (or self-study supplemented with school) — best of both worlds. See /cerebrum-vs-aakash-foundation for the full comparison.',
+        'For biology pedagogy specifically, Cerebrum is structurally different — biology-only specialist with 15-20 student batches led by Dr. Shekhar C Singh (AIIMS Delhi). the 2nd-largest national NEET chain Scholastics is generalist Foundation with 100-300 student batches covering combined PCB. For full PCB coverage under one brand at scale, the 2nd-largest national NEET chain has stronger physics-chemistry depth at Class 9-10 level. Many parents choose Cerebrum biology + the 2nd-largest national NEET chain Scholastics for PC (or self-study supplemented with school) — best of both worlds. See /cerebrum-vs-aakash-foundation for the full comparison.',
     },
     {
       question: 'Can NEET Foundation be done online for Class 9-10 students?',

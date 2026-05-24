@@ -58,7 +58,7 @@ const config: BestVerticalConfig = {
     { title: 'RE-NEET Biology Crash Course', href: '/re-neet-2026-biology-crash-course' },
     { title: 'RE-NEET Online Coaching', href: '/re-neet-2026-online-coaching' },
     {
-      title: 'Cerebrum vs Aakash vs PhysicsWallah',
+      title: 'Cerebrum vs the 2nd-largest national NEET chain vs other online-only platforms',
       href: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
     },
     { title: 'RE-NEET Coaching in Kota', href: '/re-neet-2026-kota' },
@@ -168,7 +168,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Can I take ad-hoc 1:1 sessions instead of joining the full crash?',
       answer:
-        'Yes — ad-hoc 1:1 hourly is ₹2,500–₹4,500/hour depending on faculty seniority. Common use case: droppers already enrolled at Aakash / Allen / PW for Physics + Chemistry adding Cerebrum 1:1 for biology gap-fill. Most effective when used 20–40 hours across the 6–8 week window targeting your specific weak chapters.',
+        'Yes — ad-hoc 1:1 hourly is ₹2,500–₹4,500/hour depending on faculty seniority. Common use case: droppers already enrolled at the 2nd-largest national NEET chain / the largest national NEET chain / PW for Physics + Chemistry adding Cerebrum 1:1 for biology gap-fill. Most effective when used 20–40 hours across the 6–8 week window targeting your specific weak chapters.',
     },
     {
       question: "What if I'm a 2x or 3x dropper?",

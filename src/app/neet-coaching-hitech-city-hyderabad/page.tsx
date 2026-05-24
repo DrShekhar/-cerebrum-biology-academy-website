@@ -150,7 +150,7 @@ const faqs = [
   {
     question: 'Do you support CBSE and international school students?',
     answer:
-      'Yes! We have specialized batches for CBSE, Telangana State Board, and international curriculum (IB, IGCSE) students. Many of our Hitech City students are from DPS, Oakridge, Chirec, and FIITJEE schools. Our faculty bridges all curricula with NEET requirements.',
+      'Yes! We have specialized batches for CBSE, Telangana State Board, and international curriculum (IB, IGCSE) students. Many of our Hitech City students are from DPS, Oakridge, Chirec, and other IIT-JEE-first coachings schools. Our faculty bridges all curricula with NEET requirements.',
   },
   {
     question: 'What medical colleges can Hitech City students target?',
@@ -163,7 +163,7 @@ const premiumSchools = [
   'DPS Hitech City',
   'Oakridge International',
   'Chirec Public School',
-  'FIITJEE World School',
+  'other IIT-JEE-first coachings World School',
   'Delhi Public School Madhapur',
   'Glendale Academy',
   'The Hyderabad Public School',
@@ -189,7 +189,7 @@ const whyHitechCity = [
     icon: GraduationCap,
     title: 'Premium School Expert',
     description:
-      'We understand DPS, Oakridge, Chirec, FIITJEE curriculums. Our faculty bridges school learning with NEET.',
+      'We understand DPS, Oakridge, Chirec, other IIT-JEE-first coachings curriculums. Our faculty bridges school learning with NEET.',
   },
 ]
 

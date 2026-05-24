@@ -101,7 +101,7 @@ const mockActiveStudents: ActiveStudent[] = [
     email: 'sneha.reddy@email.com',
     phone: '+91 9876543216',
     class: 'Dropper',
-    school: 'Narayana Junior College',
+    school: 'a leading national educational institution Junior College',
     city: 'Hyderabad',
     state: 'Telangana',
     coursesEnrolled: ['NEET Biology Dropper', 'Intensive Biology'],

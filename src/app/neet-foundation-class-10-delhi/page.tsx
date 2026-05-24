@@ -53,14 +53,14 @@ const faqs = [
       'Class 10 Foundation in Delhi runs in 2-hour weekend-friendly slots: Saturday morning (10 AM - 12 PM IST), Sunday morning (10 AM - 12 PM), and a weekday evening 6 PM - 8 PM IST option. Most students attend twice weekly (4 hours total). Q4 (January - March) intensifies board exam preparation with weekly board-format mocks and additional Sunday-afternoon revision slots specifically for CBSE / ICSE Class 10 finals.',
   },
   {
-    question: 'How does Cerebrum Delhi compare to Aakash Scholastics in Delhi for Class 10?',
+    question: 'How does Cerebrum Delhi compare to the 2nd-largest national NEET chain Scholastics in Delhi for Class 10?',
     answer:
-      'Three structural differences specifically for Class 10. (1) Subject focus: Cerebrum Delhi is biology-only specialist with AIIMS-trained Class 10 faculty; Aakash Scholastics is combined PCB Foundation with school-teacher-level Class 10 instructors. (2) Batch size: Cerebrum 15-20 students vs Aakash 200-300+. (3) Board strategy: Cerebrum runs separate weekly board-format mocks with examiner-aligned answer-writing standards; Aakash deprioritises boards in favour of NEET-only drilling. For students targeting 90%+ in Class 10 boards AND NEET-ready foundations, Cerebrum Delhi is structurally different.',
+      'Three structural differences specifically for Class 10. (1) Subject focus: Cerebrum Delhi is biology-only specialist with AIIMS-trained Class 10 faculty; the 2nd-largest national NEET chain Scholastics is combined PCB Foundation with school-teacher-level Class 10 instructors. (2) Batch size: Cerebrum 15-20 students vs the 2nd-largest national NEET chain 200-300+. (3) Board strategy: Cerebrum runs separate weekly board-format mocks with examiner-aligned answer-writing standards; the 2nd-largest national NEET chain deprioritises boards in favour of NEET-only drilling. For students targeting 90%+ in Class 10 boards AND NEET-ready foundations, Cerebrum Delhi is structurally different.',
   },
   {
     question: 'What does Class 10 NEET Foundation cost in Delhi?',
     answer:
-      'Cerebrum Class 10 Foundation in Delhi runs ₹35,000-₹95,000/year. Pursuit (small-batch 30-40): ₹35K-55K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar 10-12 student micro-batch at South Extension flagship): ₹75K-95K. Ad-hoc 1:1 Class 10 hourly: ₹2,000-3,500/hr. Board exam preparation included in all tiers. Compared to Aakash Scholastics combined PCB Foundation Class 10 in Delhi (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
+      'Cerebrum Class 10 Foundation in Delhi runs ₹35,000-₹95,000/year. Pursuit (small-batch 30-40): ₹35K-55K. Ascent (pro batch 16-25 with weekly 1:1 doubt slots): ₹55K-75K. Pinnacle (direct Dr. Shekhar 10-12 student micro-batch at South Extension flagship): ₹75K-95K. Ad-hoc 1:1 Class 10 hourly: ₹2,000-3,500/hr. Board exam preparation included in all tiers. Compared to the 2nd-largest national NEET chain Scholastics combined PCB Foundation Class 10 in Delhi (~₹95K-1.2L/year, 250-student batch), Cerebrum biology-only Ascent at ₹65K offers deeper biology pedagogy and 15-20 student structure at lower price.',
   },
   {
     question:

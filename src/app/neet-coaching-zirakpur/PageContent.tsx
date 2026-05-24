@@ -159,7 +159,7 @@ const faqs = [
   },
   {
     question: 'How does Cerebrum compare to Chandigarh coaching?',
-    answer: 'Cerebrum advantages: (1) Batch 10-15 vs 60-120 at Allen/Aakash, (2) AIIMS faculty, (3) Fees Rs 24-68K vs Rs 1.5-3.5 Lakhs, (4) No Chandigarh commute from Zirakpur, (5) 98% success rate.',
+    answer: 'Cerebrum advantages: (1) Batch 10-15 vs 60-120 at the largest national NEET chains, (2) AIIMS faculty, (3) Fees Rs 24-68K vs Rs 1.5-3.5 Lakhs, (4) No Chandigarh commute from Zirakpur, (5) 98% success rate.',
   },
   {
     question: 'Is NEET coaching available on VIP Road Zirakpur?',

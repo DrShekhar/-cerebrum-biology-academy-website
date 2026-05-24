@@ -465,7 +465,7 @@ export default function PageContent() {
             Students from These Vizag Schools Trust Us
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Delhi Public School Vizag', 'Timpany School', 'Sri Prakash Vidyaniketan', 'Bhashyam School', 'Oakridge International', 'Navy Children School', 'Sri Chaitanya Techno School', 'Visakha Valley School'].map((school) => (
+            {['Delhi Public School Vizag', 'Timpany School', 'Sri Prakash Vidyaniketan', 'Bhashyam School', 'Oakridge International', 'Navy Children School', 'other South-Indian chains Techno School', 'Visakha Valley School'].map((school) => (
               <div
                 key={school}
                 className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"

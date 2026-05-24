@@ -331,7 +331,7 @@ export default function NSEBCoachingGurugramContent({ faqs }: NSEBCoachingGurugr
                   {CONTACT_INFO.location.gurugram.addressLocality} - {CONTACT_INFO.location.gurugram.postalCode}
                 </p>
                 <p className="text-gray-700 mb-4">
-                  <strong>Landmark:</strong> Same building as Allen Career Institute
+                  <strong>Landmark:</strong> Same building as XYZ Coaching (largest national NEET chain)
                 </p>
                 <div className="flex gap-4 mt-6">
                   <a href={`tel:${CONTACT_INFO.phone.primary}`}>

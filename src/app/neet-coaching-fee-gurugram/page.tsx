@@ -7,7 +7,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching Fee in Gurugram 2026 | Fee Comparison',
   description:
-    'Complete NEET coaching fee comparison in Gurugram (Gurgaon) 2026. Fees range from Rs 45,000 to Rs 2,50,000. Compare Aakash, Allen, Physics Wallah, Cerebrum fees. Call 88264-44334!',
+    'Complete NEET coaching fee comparison in Gurugram (Gurgaon) 2026. Fees range from Rs 45,000 to Rs 2,50,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms, Cerebrum fees. Call 88264-44334!',
   keywords: [
     'neet coaching fee gurugram',
     'neet coaching fees gurgaon',
@@ -40,7 +40,7 @@ const feeComparison = [
     highlight: true,
   },
   {
-    institute: 'Aakash Institute',
+    institute: 'SKY Coaching (2nd-largest national NEET chain)',
     courseType: 'Full NEET (PCB)',
     fee1Year: '1,50,000 - 2,00,000',
     fee2Year: '2,50,000 - 3,50,000',
@@ -49,7 +49,7 @@ const feeComparison = [
     rating: 4.2,
   },
   {
-    institute: 'Allen Career Institute',
+    institute: 'XYZ Coaching (largest national NEET chain)',
     courseType: 'Full NEET (PCB)',
     fee1Year: '1,40,000 - 1,80,000',
     fee2Year: '2,20,000 - 3,00,000',
@@ -58,7 +58,7 @@ const feeComparison = [
     rating: 4.3,
   },
   {
-    institute: 'Physics Wallah (Offline)',
+    institute: 'other online-only platforms (Offline)',
     courseType: 'Full NEET (PCB)',
     fee1Year: '35,000 - 50,000',
     fee2Year: '60,000 - 90,000',
@@ -80,7 +80,7 @@ const feeComparison = [
 const quickAnswer = {
   question: 'What is the fee for NEET coaching in Gurugram?',
   answer:
-    'NEET coaching fees in Gurugram range from Rs 25,000 to Rs 3,50,000 per year depending on the institute, course type (Biology-only vs Full NEET), and batch size. Biology-specialist coaching like Cerebrum Academy costs Rs 45,000-65,000/year with 15-20 student batches. Large institutes like Aakash charge Rs 1,50,000-2,00,000/year for full NEET coaching.',
+    'NEET coaching fees in Gurugram range from Rs 25,000 to Rs 3,50,000 per year depending on the institute, course type (Biology-only vs Full NEET), and batch size. Biology-specialist coaching like Cerebrum Academy costs Rs 45,000-65,000/year with 15-20 student batches. Large institutes like the 2nd-largest national NEET chain charge Rs 1,50,000-2,00,000/year for full NEET coaching.',
 }
 
 const feeFactors = [
@@ -116,7 +116,7 @@ const faqs = [
   {
     question: 'Which is the most affordable NEET coaching in Gurugram?',
     answer:
-      'Physics Wallah offers the most affordable full NEET coaching at Rs 35,000-50,000/year. For biology-focused preparation, Cerebrum Biology Academy offers excellent value at Rs 45,000-65,000/year with small batches of 15-20 students.',
+      'other online-only platforms offers the most affordable full NEET coaching at Rs 35,000-50,000/year. For biology-focused preparation, Cerebrum Biology Academy offers excellent value at Rs 45,000-65,000/year with small batches of 15-20 students.',
   },
   {
     question: 'Is expensive NEET coaching worth it?',
@@ -326,7 +326,7 @@ export default function NEETCoachingFeeGurugram() {
               className="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition text-center"
             >
               <h3 className="font-semibold text-amber-800">Institute Comparison</h3>
-              <p className="text-sm text-gray-600">Aakash vs Allen vs others</p>
+              <p className="text-sm text-gray-600">the 2nd-largest national NEET chain vs the largest national NEET chain vs others</p>
             </Link>
           </div>
         </div>

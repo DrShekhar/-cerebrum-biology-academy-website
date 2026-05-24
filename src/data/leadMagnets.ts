@@ -269,7 +269,7 @@ export const localLeadMagnets: LeadMagnet[] = [
     id: 'sector-34-vs-online-comparison',
     title: 'Sector 34 vs Online Coaching: Honest Comparison 2026',
     description:
-      'Unbiased comparison of Chandigarh Sector 34 coaching centers (Allen, Aakash, PW) with online alternatives. Includes cost analysis and success rate data.',
+      'Unbiased comparison of Chandigarh Sector 34 coaching centers (the largest national NEET chains and online-first generalist platforms) with online alternatives. Includes cost analysis and success rate data.',
     type: 'pdf',
     value: 'Insider Report - FREE',
     ctaText: 'Get Sector 34 Comparison Report',
@@ -278,7 +278,7 @@ export const localLeadMagnets: LeadMagnet[] = [
     targetAreas: ['chandigarh', 'chandigarh-sector-34', 'mohali', 'panchkula', 'zirakpur'],
     targetStudents: ['class-11', 'class-12', 'dropper'],
     conversionBenefits: [
-      'Allen vs Aakash vs PW vs Online comparison',
+      'the largest national NEET chain vs the 2nd-largest national NEET chain vs PW vs Online comparison',
       'Hidden costs revealed (transport, food, PG)',
       'Batch size and faculty qualification analysis',
       'Success rate data with verification',

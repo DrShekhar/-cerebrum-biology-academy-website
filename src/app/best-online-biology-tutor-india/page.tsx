@@ -123,7 +123,7 @@ const faqs = [
   {
     question: 'Why is Dr. Shekhar C Singh considered the best online Biology tutor in India?',
     answer:
-      'Dr. Shekhar C Singh is an AIIMS Alumnus and former Narayana Academic Head with 15+ years of experience. He has trained 5000+ students with a 98% NEET success rate. His teaching methodology, developed at premier institutes, is now accessible to students across India through online classes.',
+      'Dr. Shekhar C Singh is an AIIMS Alumnus and former Academic Head at a leading national educational institution with 15+ years of experience. He has trained 5000+ students with a 98% NEET success rate. His teaching methodology, developed at premier institutes, is now accessible to students across India through online classes.',
   },
   {
     question: 'How do online classes compare to Kota coaching?',
@@ -188,7 +188,7 @@ export default function BestOnlineBiologyTutorIndiaPage() {
             founder: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Narayana Academic Head',
+              description: 'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
               alumniOf: 'AIIMS',
             },
           }),
@@ -220,7 +220,7 @@ export default function BestOnlineBiologyTutorIndiaPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Join India's top-rated online Biology classes with{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head</strong>.
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution</strong>.
               World-class NEET preparation accessible from anywhere in India.
             </p>
 

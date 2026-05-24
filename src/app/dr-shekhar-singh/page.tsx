@@ -632,7 +632,7 @@ export default function DrShekharSinghPage() {
                   <Award className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Academic Leadership</h3>
-                <p className="text-gray-600">Former Academic Head at Narayana Group</p>
+                <p className="text-gray-600">Former Academic Head at a leading national educational institution</p>
               </div>
 
               <div
@@ -926,7 +926,7 @@ export default function DrShekharSinghPage() {
                 },
                 {
                   year: '2015-2020',
-                  title: 'Academic Head at Narayana Group',
+                  title: 'Academic Head at a leading national educational institution',
                   description:
                     'Led academic programs and mentored faculty across multiple campuses',
                   icon: School,

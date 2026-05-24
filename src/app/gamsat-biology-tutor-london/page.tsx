@@ -62,9 +62,9 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum compare to Gold Standard GAMSAT or Griffiths for a London applicant?',
+      'How does Cerebrum compare to other generalist GAMSAT brands or Griffiths for a London applicant?',
     answer:
-      'Gold Standard GAMSAT Live Online is £1,995+ — full GAMSAT generalist covering all three sections with rotating faculty. Griffiths GAMSAT is similar in scope and price. Cerebrum is a Section III biology specialist — we cover the biology component in depth (£1,249 1:1 full programme, £110/hr ad-hoc) and most London applicants pair us with Gold Standard or Griffiths for Sections I and II.',
+      'other generalist GAMSAT brands is £1,995+ — full GAMSAT generalist covering all three sections with rotating faculty. other generalist GAMSAT brands is similar in scope and price. Cerebrum is a Section III biology specialist — we cover the biology component in depth (£1,249 1:1 full programme, £110/hr ad-hoc) and most London applicants pair us with other generalist GAMSAT brands for Sections I and II.',
   },
 ]
 

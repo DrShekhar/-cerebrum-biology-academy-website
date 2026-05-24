@@ -149,18 +149,18 @@ const successStories = [
     name: 'Priya Sharma',
     score: '655/720',
     biologyScore: '345/360',
-    previous: 'Switched from Aakash',
+    previous: 'Switched from the 2nd-largest national NEET chain',
     quote:
-      'At Aakash, I was lost in a batch of 150 students. Biology concepts were rushed. At Cerebrum, every doubt was addressed. My Biology score jumped from 280 to 345.',
+      'At the 2nd-largest national NEET chain, I was lost in a batch of 150 students. Biology concepts were rushed. At Cerebrum, every doubt was addressed. My Biology score jumped from 280 to 345.',
     year: 'NEET 2025',
   },
   {
     name: 'Rahul Verma',
     score: '638/720',
     biologyScore: '340/360',
-    previous: 'Joined Cerebrum + Aakash',
+    previous: 'Joined Cerebrum + the 2nd-largest national NEET chain',
     quote:
-      'I kept Aakash for Physics but joined Cerebrum for Biology. Best decision! The small batch made a huge difference in understanding complex topics like Genetics.',
+      'I kept the 2nd-largest national NEET chain for Physics but joined Cerebrum for Biology. Best decision! The small batch made a huge difference in understanding complex topics like Genetics.',
     year: 'NEET 2025',
   },
   {
@@ -204,7 +204,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
     trackAndOpenWhatsApp({
       source: 'cerebrum-vs-aakash-comparison',
       message:
-        'Hi! I was comparing Cerebrum and Aakash for NEET Biology coaching. Can you help me understand which would be better for my preparation?',
+        'Hi! I was comparing Cerebrum and the 2nd-largest national NEET chain for NEET Biology coaching. Can you help me understand which would be better for my preparation?',
       campaign: 'cerebrum-vs-aakash-comparison',
     })
   }
@@ -222,7 +222,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">Cerebrum vs Aakash</span>
+              <span className="text-teal-700 font-medium">Cerebrum vs the 2nd-largest national NEET chain</span>
             </li>
           </ol>
         </div>
@@ -245,13 +245,13 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Cerebrum vs Aakash
+              Cerebrum vs the 2nd-largest national NEET chain
               <span className="block text-teal-400 mt-2">NEET Coaching Comparison</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Making the right coaching decision can define your NEET journey. Compare Cerebrum and
-              Aakash on key parameters like batch size, faculty, fees, and specialization to find
+              the 2nd-largest national NEET chain on key parameters like batch size, faculty, fees, and specialization to find
               your best fit.
             </p>
 
@@ -344,7 +344,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               </p>
             </div>
 
-            {/* Aakash Card */}
+            {/* the 2nd-largest national NEET chain Card */}
             <div
               className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-lg animate-fadeInUp"
             >
@@ -353,7 +353,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                   <Building2 className="w-6 h-6 text-slate-600" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-900">Aakash</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">the 2nd-largest national NEET chain</h3>
                   <p className="text-slate-600 font-medium">All-Subject Coaching</p>
                 </div>
               </div>
@@ -404,7 +404,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Detailed Comparison: Cerebrum vs Aakash
+              Detailed Comparison: Cerebrum vs the 2nd-largest national NEET chain
             </h2>
             <p className="text-xl text-slate-600">
               Feature-by-feature analysis to help you decide
@@ -417,7 +417,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center bg-teal-700">Cerebrum</th>
-                  <th className="px-6 py-4 text-center">Aakash</th>
+                  <th className="px-6 py-4 text-center">the 2nd-largest national NEET chain</th>
                   <th className="px-6 py-4 text-left hidden md:table-cell">Why It Matters</th>
                 </tr>
               </thead>
@@ -609,17 +609,17 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Best of Both Worlds?
                 <br />
-                Join Aakash + Cerebrum
+                Join the 2nd-largest national NEET chain + Cerebrum
               </h2>
               <p className="text-xl text-blue-100 mb-6">
-                Many students continue at Aakash for Physics and Chemistry while joining Cerebrum
+                Many students continue at the 2nd-largest national NEET chain for Physics and Chemistry while joining Cerebrum
                 specifically for Biology. Get comprehensive coverage without compromising on Biology
                 depth.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Weekend batches that complement Aakash schedule
+                  Weekend batches that complement the 2nd-largest national NEET chain schedule
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -627,7 +627,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Use Aakash study material + Cerebrum expert teaching
+                  Use the 2nd-largest national NEET chain study material + Cerebrum expert teaching
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -724,15 +724,15 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               href="/aakash-alternative-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">Aakash Alternative Gurugram</h3>
+              <h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative Gurugram</h3>
               <p className="text-sm text-gray-600">For Gurugram students</p>
             </Link>
             <Link
               href="/allen-alternative-gurugram"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md transition-shadow"
             >
-              <h3 className="font-semibold text-teal-600">Allen Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with Allen</p>
+              <h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with the largest national NEET chain</p>
             </Link>
             <Link
               href="/best-neet-coaching-gurugram"

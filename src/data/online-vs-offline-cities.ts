@@ -206,7 +206,7 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
       {
         title: 'Small Batches Preserved Online (15–20)',
         description:
-          'Many online coaching platforms run 300–2,000+ students per live session (PhysicsWallah, Vedantu mass tiers). Cerebrum keeps batches small (15–20 in Ascent, 10–12 in Pinnacle). Personal attention is preserved structurally.',
+          'Many online coaching platforms run 300–2,000+ students per live session (other online-only platforms, other multi-subject tutoring platforms mass tiers). Cerebrum keeps batches small (15–20 in Ascent, 10–12 in Pinnacle). Personal attention is preserved structurally.',
       },
       {
         title: 'No Hostel, No Mess, No Travel — Total Savings',
@@ -253,9 +253,9 @@ export function buildOnlineOfflineCityConfig(key: OnlineOfflineCityKey): BestVer
           'Each class is LIVE (not pre-recorded) — but the live session is recorded and available within hours for revision. Students get unlimited rewatch access during the course period plus speed control (0.5x to 2x) for revision passes.',
       },
       {
-        question: 'How is Cerebrum online different from PhysicsWallah / Vedantu?',
+        question: 'How is Cerebrum online different from other online-only platforms / other multi-subject tutoring platforms?',
         answer:
-          'PhysicsWallah and Vedantu operate at mass scale (300–2,000+ students per live class) at ₹4K–₹85K/year. Cerebrum operates at small-batch scale (15–20 students) at ₹40K–₹1.56L/year. Different value props: mass platforms win on affordability; Cerebrum wins on small-batch attention + biology-only AIIMS depth. Many students pair PW (Physics + Chemistry) with Cerebrum (Biology online).',
+          'other online-only platforms and other multi-subject tutoring platforms operate at mass scale (300–2,000+ students per live class) at ₹4K–₹85K/year. Cerebrum operates at small-batch scale (15–20 students) at ₹40K–₹1.56L/year. Different value props: mass platforms win on affordability; Cerebrum wins on small-batch attention + biology-only AIIMS depth. Many students pair PW (Physics + Chemistry) with Cerebrum (Biology online).',
       },
       {
         question: `Does Cerebrum have an offline centre in ${city}?`,

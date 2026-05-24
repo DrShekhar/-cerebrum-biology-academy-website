@@ -76,7 +76,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare to Houston-based in-person MCAT centers?',
     answer:
-      'Houston has several in-person MCAT prep options including Princeton Review Houston, Kaplan Houston, and smaller Texas-based providers. These are full-MCAT generalists ($2,500–$3,000 for the in-person course) covering all four sections with rotating faculty. Cerebrum is a biology-section specialist — we cover Bio/Biochem and the biology content in Psych/Soc with biology-only faculty. Our Small-Batch is $999 vs Kaplan in-person around $2,700. Many Houston students pair us with a generalist for the non-biology sections.',
+      'Houston has several in-person MCAT prep options including other generalist MCAT brands, other generalist MCAT brands, and smaller Texas-based providers. These are full-MCAT generalists ($2,500–$3,000 for the in-person course) covering all four sections with rotating faculty. Cerebrum is a biology-section specialist — we cover Bio/Biochem and the biology content in Psych/Soc with biology-only faculty. Our Small-Batch is $999 vs other generalist MCAT brands in-person around $2,700. Many Houston students pair us with a generalist for the non-biology sections.',
   },
   {
     question:
@@ -365,7 +365,7 @@ export default function MCATBiologyTutorHoustonPage() {
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $150/hour</strong> outside the packaged programme. For
-              students using a generalist (Kaplan / Princeton Review / Blueprint) and wanting a
+              students using a generalist (other generalist MCAT brands / Blueprint) and wanting a
               biology specialist for gap-fill.
             </li>
           </ul>

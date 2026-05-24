@@ -103,7 +103,7 @@ const faqs = [
   {
     question: 'Who teaches online biology at Cerebrum Academy?',
     answer:
-      'Our online classes are led by Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head, along with a team of experienced biology educators. You get the same quality teaching online as offline.',
+      'Our online classes are led by Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution, along with a team of experienced biology educators. You get the same quality teaching online as offline.',
   },
   {
     question: 'What technology do I need for online classes?',
@@ -174,7 +174,7 @@ export default function OnlineBiologyTutorPage() {
             instructor: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Narayana Academic Head',
+              description: 'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
             },
             courseMode: 'online',
             educationalLevel: 'High School',
@@ -207,7 +207,7 @@ export default function OnlineBiologyTutorPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Learn NEET Biology from{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head</strong>.
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution</strong>.
               Live online classes with personalized attention, doubt resolution, and comprehensive
               study material.
             </p>

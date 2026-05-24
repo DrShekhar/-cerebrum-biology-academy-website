@@ -5,9 +5,9 @@ import {
 } from '@/components/seo/CompetitorComparisonLanding'
 
 export const metadata: Metadata = {
-  title: 'Cerebrum vs Career Point NEET Biology | Detailed Comparison',
+  title: 'Cerebrum vs other Kota-origin chains NEET Biology | Detailed Comparison',
   description:
-    'Cerebrum Biology Academy vs Career Point for NEET Biology — biology-only AIIMS faculty vs Kota-based generalist coaching. Compare batch sizes, faculty depth, fees and biology results. 680+ medical college selections.',
+    'Cerebrum Biology Academy vs other Kota-origin chains for NEET Biology — biology-only AIIMS faculty vs Kota-based generalist coaching. Compare batch sizes, faculty depth, fees and biology results. 680+ medical college selections.',
   keywords: [
     'cerebrum vs career point',
     'cerebrum vs career point neet',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'kota coaching alternative biology',
   ],
   openGraph: {
-    title: 'Cerebrum vs Career Point NEET Biology | Detailed Comparison',
+    title: 'Cerebrum vs other Kota-origin chains NEET Biology | Detailed Comparison',
     description:
       'Biology-only AIIMS faculty vs Kota-based generalist coaching. Small batches vs Kota factory model.',
     url: 'https://cerebrumbiologyacademy.com/cerebrum-vs-career-point',
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
 
 const config: CompetitorComparisonConfig = {
   slug: 'cerebrum-vs-career-point',
-  competitorName: 'Career Point',
-  headline: 'Cerebrum vs Career Point for NEET Biology',
+  competitorName: 'other Kota-origin chains',
+  headline: 'Cerebrum vs other Kota-origin chains for NEET Biology',
   ribbon: 'Biology-Only AIIMS Faculty vs Kota Generalist Coaching',
   subheadline: 'Specialist depth. Small batches. Documented selections. No Kota relocation needed.',
   intro:
-    "Career Point is a Kota-based generalist coaching institute serving NEET and JEE aspirants for over 30 years. Cerebrum Biology Academy chose specialisation over Kota mass-scale: biology-only AIIMS-trained faculty in small batches of 15–20. Both have merit — the question is whether you need full-spectrum Kota coaching or biology depth without relocating. Here's the honest comparison.",
+    "other Kota-origin chains is a Kota-based generalist coaching institute serving NEET and JEE aspirants for over 30 years. Cerebrum Biology Academy chose specialisation over Kota mass-scale: biology-only AIIMS-trained faculty in small batches of 15–20. Both have merit — the question is whether you need full-spectrum Kota coaching or biology depth without relocating. Here's the honest comparison.",
   table: [
     {
       criterion: 'Faculty Specialisation',
@@ -48,7 +48,7 @@ const config: CompetitorComparisonConfig = {
     {
       criterion: 'Founder Background',
       cerebrum: 'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, 15+ years biology pedagogy',
-      competitor: 'Pramod Maheshwari — IIT-Delhi alumnus, founded Career Point in 1993 in Kota',
+      competitor: 'Pramod Maheshwari — IIT-Delhi alumnus, founded other Kota-origin chains in 1993 in Kota',
       cerebrumWins: true,
     },
     {
@@ -84,7 +84,7 @@ const config: CompetitorComparisonConfig = {
     {
       criterion: 'Location Footprint',
       cerebrum: '6 Delhi NCR centres + pan-India online live classes',
-      competitor: 'Kota flagship + city centres across India · Online via Career Point e-Learning',
+      competitor: 'Kota flagship + city centres across India · Online via other Kota-origin chains e-Learning',
       cerebrumWins: false,
     },
     {
@@ -104,12 +104,12 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'AIIMS-Trained Biology Specialist vs IIT-Trained Generalist',
       description:
-        "Career Point's founder Pramod Maheshwari and most senior faculty are IIT/NIT-trained engineers — strong for Physics and Math, structurally less aligned with medical-domain biology. Dr. Shekhar C Singh (Cerebrum founder) is an AIIMS New Delhi medical alumnus. For the 360/720 NEET Biology section, AIIMS pedagogy compounds.",
+        "other Kota-origin chains's founder Pramod Maheshwari and most senior faculty are IIT/NIT-trained engineers — strong for Physics and Math, structurally less aligned with medical-domain biology. Dr. Shekhar C Singh (Cerebrum founder) is an AIIMS New Delhi medical alumnus. For the 360/720 NEET Biology section, AIIMS pedagogy compounds.",
     },
     {
       title: 'No Kota Relocation Required',
       description:
-        "Kota coaching at Career Point's flagship typically requires relocation — hostel, mess, parental separation, mental-health stressors well-documented in recent NTA and media coverage. Cerebrum delivers AIIMS-grade biology coaching online live or at 6 Delhi NCR centres. Study from home.",
+        "Kota coaching at other Kota-origin chains's flagship typically requires relocation — hostel, mess, parental separation, mental-health stressors well-documented in recent NTA and media coverage. Cerebrum delivers AIIMS-grade biology coaching online live or at 6 Delhi NCR centres. Study from home.",
     },
     {
       title: 'Small Batches (15–20 vs 100–250)',
@@ -119,24 +119,24 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'Biology-Only (vs Mixed NEET + JEE Faculty)',
       description:
-        'Career Point operates NEET and JEE preparation under one roof with faculty rotating across exams. Cerebrum is biology-only — across NEET, Class 11, Class 12, IB, AP, MCAT and Olympiads. Biology depth compounds across specialist verticals.',
+        'other Kota-origin chains operates NEET and JEE preparation under one roof with faculty rotating across exams. Cerebrum is biology-only — across NEET, Class 11, Class 12, IB, AP, MCAT and Olympiads. Biology depth compounds across specialist verticals.',
     },
     {
       title: "Total Cost: ₹40K–₹1.56L vs Kota's ₹1L–₹2.5L (Including Living)",
       description:
-        'Career Point Kota classroom fees are ₹1L–₹1.5L/year before hostel (~₹70K) + mess (~₹40K) + travel + miscellaneous = ₹2L–₹2.5L total. Cerebrum at ₹40K–₹1.56L/year is structurally more affordable for biology specifically.',
+        'other Kota-origin chains Kota classroom fees are ₹1L–₹1.5L/year before hostel (~₹70K) + mess (~₹40K) + travel + miscellaneous = ₹2L–₹2.5L total. Cerebrum at ₹40K–₹1.56L/year is structurally more affordable for biology specifically.',
     },
     {
       title: 'Documented 680+ Selections (12-Year Track Record)',
       description:
-        "680+ documented Cerebrum medical college selections (AIIMS, JIPMER, AFMC, state colleges) published with student names and college admissions since 2014. Career Point's 30+ year track record is aggregated across NEET + JEE; biology-specific isolation is less transparent.",
+        "680+ documented Cerebrum medical college selections (AIIMS, JIPMER, AFMC, state colleges) published with student names and college admissions since 2014. other Kota-origin chains's 30+ year track record is aggregated across NEET + JEE; biology-specific isolation is less transparent.",
     },
   ],
   whenCompetitorMightBeBetter: [
     'You want classical Kota intensive coaching with strict discipline and structured hostel + study routine',
     "You're preparing for both NEET and JEE under one roof and want a single coaching brand",
     'Your family is comfortable with Kota relocation and you respond well to large-batch competitive environments',
-    "You're in a Tier-2 city with a Career Point centre and prefer in-person coaching from a 30-year-established brand",
+    "You're in a Tier-2 city with a other Kota-origin chains centre and prefer in-person coaching from a 30-year-established brand",
   ],
   testimonials: [
     {
@@ -163,9 +163,9 @@ const config: CompetitorComparisonConfig = {
   ],
   faqs: [
     {
-      question: 'Cerebrum or Career Point — which is better for NEET Biology?',
+      question: 'Cerebrum or other Kota-origin chains — which is better for NEET Biology?',
       answer:
-        'For biology-specific preparation, Cerebrum is structurally deeper: AIIMS-trained biology-only faculty, 15–20 student batches, clinical correlations from medical training, 680+ documented medical college selections. Career Point is a 30-year-established Kota-based generalist offering NEET + JEE under one roof — strong if you want classical Kota intensive coaching, less optimal for biology depth specifically.',
+        'For biology-specific preparation, Cerebrum is structurally deeper: AIIMS-trained biology-only faculty, 15–20 student batches, clinical correlations from medical training, 680+ documented medical college selections. other Kota-origin chains is a 30-year-established Kota-based generalist offering NEET + JEE under one roof — strong if you want classical Kota intensive coaching, less optimal for biology depth specifically.',
     },
     {
       question: 'Do I need to relocate to Kota for the best NEET biology coaching?',
@@ -173,14 +173,14 @@ const config: CompetitorComparisonConfig = {
         'No. Cerebrum offers online live (not recorded) biology classes pan-India with the same AIIMS-trained faculty as the 6 Delhi NCR offline centres. Many top NEET scorers chose the Cerebrum online format from Kota itself, Patna, Mumbai, Bangalore, and other cities — without relocating.',
     },
     {
-      question: 'How does Cerebrum compare to Career Point on total cost?',
+      question: 'How does Cerebrum compare to other Kota-origin chains on total cost?',
       answer:
-        'Career Point Kota classroom: ₹1L–₹1.5L/year tuition + hostel (~₹70K) + mess (~₹40K) + travel = ₹2L–₹2.5L total. Cerebrum: ₹40K–₹1.56L/year all-inclusive (no relocation, no hostel, no mess). Online tier is even more affordable. For biology specifically, Cerebrum delivers more depth at materially lower total cost.',
+        'other Kota-origin chains Kota classroom: ₹1L–₹1.5L/year tuition + hostel (~₹70K) + mess (~₹40K) + travel = ₹2L–₹2.5L total. Cerebrum: ₹40K–₹1.56L/year all-inclusive (no relocation, no hostel, no mess). Online tier is even more affordable. For biology specifically, Cerebrum delivers more depth at materially lower total cost.',
     },
     {
-      question: 'Does Career Point have AIIMS-trained biology faculty?',
+      question: 'Does other Kota-origin chains have AIIMS-trained biology faculty?',
       answer:
-        "Career Point's founder Pramod Maheshwari is IIT-Delhi-trained and most senior faculty come from IIT/NIT backgrounds — strong engineering credentials. Cerebrum's founder Dr. Shekhar C Singh is an AIIMS New Delhi medical alumnus, and the entire biology faculty stack is biology-only. For biology depth specifically, Cerebrum is structurally more aligned.",
+        "other Kota-origin chains's founder Pramod Maheshwari is IIT-Delhi-trained and most senior faculty come from IIT/NIT backgrounds — strong engineering credentials. Cerebrum's founder Dr. Shekhar C Singh is an AIIMS New Delhi medical alumnus, and the entire biology faculty stack is biology-only. For biology depth specifically, Cerebrum is structurally more aligned.",
     },
     {
       question: 'Is the Kota model still the best for NEET in 2026?',
@@ -188,18 +188,18 @@ const config: CompetitorComparisonConfig = {
         "The Kota model has merits — discipline, intensity, peer pressure for motivation. But documented mental-health concerns at Kota (covered by NTA, Ministry of Health, leading psychiatrists) and the rise of high-quality online live coaching mean the relocation case is weaker than 10 years ago. For students who can't relocate or don't respond well to mass-batch pressure, Cerebrum-style small-batch online or NCR-based coaching is increasingly competitive.",
     },
     {
-      question: 'Can I switch from Career Point to Cerebrum mid-year?',
+      question: 'Can I switch from other Kota-origin chains to Cerebrum mid-year?',
       answer:
         "Yes. Many serious students switch mid-year for biology specifically when they realise generalist coaching isn't meeting their biology depth needs. Cerebrum offers a free demo + 7-day refund guarantee. Mid-year admission is possible across all tiers (Pursuit / Ascent / Pinnacle) with prorated fees.",
     },
     {
-      question: 'What is the NEET biology success rate at Cerebrum vs Career Point?',
+      question: 'What is the NEET biology success rate at Cerebrum vs other Kota-origin chains?',
       answer:
-        'Cerebrum: 98% NEET-UG qualification rate, average 330+/360 NEET Biology score, 680+ documented medical college selections published with student names. Career Point publishes aggregate NEET + JEE selection numbers across its 30+ year history but does not isolate biology-section performance publicly. Direct comparison is difficult due to different reporting standards.',
+        'Cerebrum: 98% NEET-UG qualification rate, average 330+/360 NEET Biology score, 680+ documented medical college selections published with student names. other Kota-origin chains publishes aggregate NEET + JEE selection numbers across its 30+ year history but does not isolate biology-section performance publicly. Direct comparison is difficult due to different reporting standards.',
     },
   ],
   whatsappMessage:
-    'Hi! I want to compare Cerebrum and Career Point for NEET biology. Please share batch details and demo timings.',
+    'Hi! I want to compare Cerebrum and other Kota-origin chains for NEET biology. Please share batch details and demo timings.',
 }
 
 export default function CerebrumVsCareerPointPage() {

@@ -81,7 +81,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare to Boston-area in-person prep providers?',
     answer:
-      'Boston has the standard full-MCAT generalists (Princeton Review Boston, Kaplan Boston) plus several boutique tutoring services around Cambridge and Harvard Square. Generalists are $2,500–$3,000 for full-MCAT in-person courses covering all four sections with rotating subject faculty. Boutique tutors typically charge $150–$250/hour. Cerebrum is a biology-section specialist — Bio/Biochem only, with biology-specialist faculty led by Dr. Shekhar C Singh (AIIMS Delhi). Our Small-Batch is $999 vs Kaplan around $2,700; ad-hoc 1:1 is $150/hour vs $175–$250 for Boston boutique. Many Boston students pair us with a generalist provider for C/P and CARS.',
+      'Boston has the standard full-MCAT generalists (other generalist test-prep brands Boston, other generalist test-prep brands Boston) plus several boutique tutoring services around Cambridge and Harvard Square. Generalists are $2,500–$3,000 for full-MCAT in-person courses covering all four sections with rotating subject faculty. Boutique tutors typically charge $150–$250/hour. Cerebrum is a biology-section specialist — Bio/Biochem only, with biology-specialist faculty led by Dr. Shekhar C Singh (AIIMS Delhi). Our Small-Batch is $999 vs other generalist test-prep brands around $2,700; ad-hoc 1:1 is $150/hour vs $175–$250 for Boston boutique. Many Boston students pair us with a generalist provider for C/P and CARS.',
   },
 ]
 
@@ -372,7 +372,7 @@ export default function MCATBiologyTutorBostonPage() {
             </li>
             <li>
               <strong>Ad-hoc 1:1 tutoring — $150/hour</strong> outside the packaged programme. For
-              students using a generalist (Kaplan / Princeton Review / Blueprint) and wanting a
+              students using a generalist (other generalist MCAT brands / Blueprint) and wanting a
               biology specialist for gap-fill — particularly common with Harvard / MIT students.
             </li>
           </ul>

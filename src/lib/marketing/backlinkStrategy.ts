@@ -540,7 +540,7 @@ export class BacklinkStrategy {
         },
       },
       {
-        organization: 'Byjus/Unacademy/Vedantu',
+        organization: 'Byjus/other online-only platforms/other multi-subject tutoring platforms',
         type: 'EDTECH',
         partnership: 'CROSS_PROMOTION',
         mutualBenefit: 'Collaborative content creation and audience sharing',

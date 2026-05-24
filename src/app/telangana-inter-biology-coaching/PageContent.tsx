@@ -79,10 +79,10 @@ const successMetrics = [
 ]
 
 const premiumSchools = [
-  'Narayana Junior Colleges',
-  'Sri Chaitanya Colleges',
-  'FIITJEE Junior College',
-  'Resonance Junior College',
+  'a leading national educational institution Junior Colleges',
+  'other South-Indian chains Colleges',
+  'other IIT-JEE-first coachings Junior College',
+  'other Kota-origin chains Junior College',
   'Delhi Public School Hyderabad',
   'Oakridge International',
   'Chirec Public School',

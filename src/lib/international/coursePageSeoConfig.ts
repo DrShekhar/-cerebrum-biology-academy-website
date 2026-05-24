@@ -199,9 +199,9 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
     ],
     competitorKeywords: [
       'Khan Academy biology alternative',
-      'Varsity Tutors biology',
-      'Princeton Review MCAT',
-      'Kaplan biology',
+      'other tutor marketplaces biology',
+      'other generalist test-prep brands MCAT',
+      'other generalist test-prep brands biology',
     ],
     seasonalKeywords: [
       'summer biology course',
@@ -530,8 +530,8 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
     },
     geographicModifiers: ['Canada', 'Toronto', 'Vancouver', 'Ontario', 'BC', 'Alberta', 'online'],
     competitorKeywords: [
-      'Wyzant biology Canada',
-      'Varsity Tutors Canada',
+      'other tutor marketplaces biology Canada',
+      'other tutor marketplaces Canada',
       'TutorOcean biology',
       'Prep101 biology',
     ],
@@ -1511,7 +1511,7 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
     competitorKeywords: [
       'Cluey Learning NZ',
       'MyTutor NZ',
-      'Crimson Education biology',
+      'other international tutoring agencies biology',
       'StudyTime biology',
     ],
     seasonalKeywords: [

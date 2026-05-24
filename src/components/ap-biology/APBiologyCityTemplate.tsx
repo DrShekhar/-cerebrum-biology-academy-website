@@ -8,7 +8,7 @@
  *
  * Design principles (per the AP Biology US domination plan):
  *  1. Pedagogy-first — active recall + spaced repetition + FRQ rubric
- *     mastery is the differentiator vs Wyzant / Princeton / Khan.
+ *     mastery is the differentiator vs other tutor marketplaces / Princeton / Khan.
  *  2. School-name leverage — every metro lists 8–20 named schools so we
  *     capture the long-tail "AP Bio tutor near {school}" intent without
  *     paying for trademark risk.

@@ -127,7 +127,7 @@ const faqs = [
   {
     question: 'What makes your online Biology tutoring different from Superprof or Preply?',
     answer:
-      'Unlike marketplace platforms (Superprof, Preply, Wyzant) where tutor quality varies, Cerebrum provides: (1) AIIMS-trained faculty (not freelance tutors), (2) Structured curriculum for each exam board, (3) Small live batches (15-20 students) not 1-on-1 only, (4) 92% A*/A success rate with verified results, (5) Weekly tests and progress tracking. We are a specialist Biology academy, not a tutor marketplace.',
+      'Unlike marketplace platforms (Superprof, Preply, other tutor marketplaces) where tutor quality varies, Cerebrum provides: (1) AIIMS-trained faculty (not freelance tutors), (2) Structured curriculum for each exam board, (3) Small live batches (15-20 students) not 1-on-1 only, (4) 92% A*/A success rate with verified results, (5) Weekly tests and progress tracking. We are a specialist Biology academy, not a tutor marketplace.',
   },
   {
     question: 'Do you offer classes in my timezone?',
@@ -292,7 +292,7 @@ export default function OnlineBiologyTutorWorldwidePage() {
         <section className="py-16 bg-gray-50">
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Why Choose Us Over Superprof, Preply, or Wyzant
+              Why Choose Us Over Superprof, Preply, or other tutor marketplaces
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">

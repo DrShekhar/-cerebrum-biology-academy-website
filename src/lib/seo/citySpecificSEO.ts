@@ -23,10 +23,10 @@ export class CitySpecificSEOService {
         'kota coaching',
         'kota biology classes',
         'kota NEET preparation',
-        'resonance alternative',
-        'allen alternative',
+        'kota chain alternative',
+        'mass-batch coaching alternative',
       ],
-      competitors: ['Allen', 'Resonance', 'Bansal Classes', 'Career Point', 'Vibrant Academy'],
+      competitors: ['the largest national NEET chains', 'other Kota-origin chains'],
       studentVolume: 250000,
     },
     {
@@ -40,7 +40,7 @@ export class CitySpecificSEOService {
         'NCR NEET classes',
         'connaught place coaching',
       ],
-      competitors: ['Aakash', 'Bansal Classes', 'FIITJEE', 'VMC', 'Unacademy'],
+      competitors: ['the 2nd-largest national NEET chain', 'other Delhi-origin mid-tier institutes', 'other IIT-JEE-first coachings'],
       studentVolume: 180000,
     },
     {
@@ -51,10 +51,10 @@ export class CitySpecificSEOService {
       keywords: [
         'hyderabad coaching',
         'telangana NEET preparation',
-        'chaitanya alternative',
-        'narayana alternative',
+        'south indian chain alternative',
+        'mass-batch coaching alternative',
       ],
-      competitors: ['Chaitanya', 'Narayana', 'Sri Gayatri', 'Aakash', 'FIITJEE'],
+      competitors: ['other South-Indian chains', 'the 2nd-largest national NEET chain'],
       studentVolume: 150000,
     },
     // Tier 2 Cities
@@ -64,7 +64,7 @@ export class CitySpecificSEOService {
       region: 'South',
       coachingRank: 'tier2',
       keywords: ['bangalore coaching', 'bengaluru NEET classes', 'karnataka biology coaching'],
-      competitors: ['Deeksha', 'BASE', 'PU Science', 'Aakash', "BYJU'S"],
+      competitors: ['other South-Indian chains', 'the 2nd-largest national NEET chain'],
       studentVolume: 120000,
     },
     {
@@ -73,7 +73,7 @@ export class CitySpecificSEOService {
       region: 'West',
       coachingRank: 'tier2',
       keywords: ['mumbai coaching', 'mumbai biology classes', 'maharashtra NEET preparation'],
-      competitors: ['PACE IIT & Medical', 'Vidyalankar', 'FIITJEE', 'Aakash'],
+      competitors: ['other IIT-JEE-first coachings', 'the 2nd-largest national NEET chain'],
       studentVolume: 100000,
     },
     {
@@ -82,7 +82,7 @@ export class CitySpecificSEOService {
       region: 'West',
       coachingRank: 'tier2',
       keywords: ['pune coaching', 'pune biology tuition', 'maharashtra CET coaching'],
-      competitors: ['Ace Academy', 'PACE', 'Vidyalankar', 'FIITJEE'],
+      competitors: ['other IIT-JEE-first coachings', 'other Delhi-origin mid-tier institutes'],
       studentVolume: 80000,
     },
     {
@@ -91,7 +91,7 @@ export class CitySpecificSEOService {
       region: 'South',
       coachingRank: 'tier2',
       keywords: ['chennai coaching', 'tamil nadu NEET preparation', 'madras biology classes'],
-      competitors: ['Pace Junior Science College', 'T.I.M.E.', 'Aakash', 'FIITJEE'],
+      competitors: ['other South-Indian chains', 'the 2nd-largest national NEET chain'],
       studentVolume: 90000,
     },
     // Emerging Coaching Centers
@@ -101,7 +101,7 @@ export class CitySpecificSEOService {
       region: 'Central',
       coachingRank: 'tier2',
       keywords: ['indore coaching', 'MP NEET preparation', 'indore biology classes'],
-      competitors: ['Career Point', 'Bansal Classes', 'Aakash'],
+      competitors: ['other Kota-origin chains', 'the 2nd-largest national NEET chain'],
       studentVolume: 60000,
     },
     {
@@ -110,7 +110,7 @@ export class CitySpecificSEOService {
       region: 'North',
       coachingRank: 'tier2',
       keywords: ['lucknow coaching', 'UP NEET preparation', 'lucknow biology tuition'],
-      competitors: ['Motion Education', 'Aakash', 'Career Point'],
+      competitors: ['other Kota-origin chains', 'the 2nd-largest national NEET chain'],
       studentVolume: 70000,
     },
     {
@@ -119,7 +119,7 @@ export class CitySpecificSEOService {
       region: 'East',
       coachingRank: 'tier3',
       keywords: ['patna coaching', 'bihar NEET preparation', 'patna biology classes'],
-      competitors: ['Super 30', 'Aakash', 'Career Point'],
+      competitors: ['other Kota-origin chains', 'the 2nd-largest national NEET chain'],
       studentVolume: 50000,
     },
     {
@@ -128,7 +128,7 @@ export class CitySpecificSEOService {
       region: 'East',
       coachingRank: 'tier3',
       keywords: ['bhubaneswar coaching', 'odisha NEET preparation', 'kalinga coaching'],
-      competitors: ['Kalinga Institute', 'Career Point', 'Aakash'],
+      competitors: ['other Kota-origin chains', 'the 2nd-largest national NEET chain'],
       studentVolume: 40000,
     },
     {
@@ -137,7 +137,7 @@ export class CitySpecificSEOService {
       region: 'North',
       coachingRank: 'tier2',
       keywords: ['jaipur coaching', 'rajasthan NEET preparation', 'pink city biology'],
-      competitors: ['Allen', 'Career Point', 'Resonance'],
+      competitors: ['the largest national NEET chains', 'other Kota-origin chains'],
       studentVolume: 75000,
     },
   ]

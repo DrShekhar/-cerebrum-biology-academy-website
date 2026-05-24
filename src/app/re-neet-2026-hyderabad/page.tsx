@@ -5,7 +5,7 @@ import { buildReNEETCityConfig } from '@/data/re-neet-city-config'
 export const metadata: Metadata = {
   title: 'RE-NEET 2026 Coaching in Hyderabad | Online Biology Crash Course',
   description:
-    'RE-NEET 2026 coaching for Hyderabad students (Telangana + AP) after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash — alongside your Sri Chaitanya / Narayana / Aakash Hyderabad main coaching.',
+    'RE-NEET 2026 coaching for Hyderabad students (Telangana + AP) after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash — alongside your other South-Indian chains / a leading national educational institution / the 2nd-largest national NEET chain Hyderabad main coaching.',
   keywords: [
     're-neet 2026 hyderabad',
     're-neet coaching hyderabad',

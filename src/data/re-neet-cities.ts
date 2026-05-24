@@ -30,7 +30,7 @@ export const reNEETCityProfiles: Record<ReNEETCityKey, ReNEETCityProfile> = {
       "Kota is India's highest-concentration NEET dropper hub — but the cancellation hit Kota families hardest. Hostel + mess + relocation costs continue while the exam is rescheduled. Cerebrum's online RE-NEET crash course is the no-relocation alternative — same AIIMS-trained biology depth without continuing to pay for Kota infrastructure.",
     studentVolume: '~85,000 NEET aspirants in Kota (largest single-city concentration)',
     competitorContext:
-      'Allen Career Institute, Aakash, Career Point — all Kota-based generalist chains',
+      'XYZ Coaching (largest national NEET chain), the 2nd-largest national NEET chain, other Kota-origin chains — all Kota-based generalist chains',
     uniqueAngle: 'No relocation, no hostel, no mess — same RE-NEET depth from your home',
     testimonialCity: 'Kota',
   },
@@ -43,7 +43,7 @@ export const reNEETCityProfiles: Record<ReNEETCityKey, ReNEETCityProfile> = {
       "Delhi NCR has India's second-highest concentration of NEET aspirants (after Kota), spread across South Extension, Rohini, Green Park, Gurugram, Faridabad and Noida. Cerebrum operates 6 offline centres across NCR + online live classes. The 6–8 week RE-NEET window is exactly when small-batch attention matters most.",
     studentVolume:
       '~60,000 NEET aspirants across Delhi NCR (Delhi + Gurugram + Faridabad + Noida + Ghaziabad)',
-    competitorContext: 'Aakash, Allen, FIITJEE, PhysicsWallah Vidyapeeth (offline Delhi centres)',
+    competitorContext: 'the 2nd-largest national NEET chain, the largest national NEET chain, other IIT-JEE-first coachings, other online-only platforms Vidyapeeth (offline Delhi centres)',
     uniqueAngle: '6 NCR centres + the same AIIMS-trained faculty online',
     testimonialCity: 'Delhi NCR',
   },
@@ -53,11 +53,11 @@ export const reNEETCityProfiles: Record<ReNEETCityKey, ReNEETCityProfile> = {
     cityLowercase: 'hyderabad',
     ribbonContext: 'Hyderabad · Online Live · Telugu / English Tracks · AIIMS Faculty',
     introContext:
-      "Hyderabad has a large NEET aspirant pool from Telangana + Andhra Pradesh combined. Local coaching chains (Sri Chaitanya, Narayana, Aakash Hyderabad) dominate offline. Cerebrum's biology-only online RE-NEET crash is the specialist add-on most Hyderabad students lack — AIIMS-trained biology depth that generalist Telugu-speaking institutes cannot match.",
+      "Hyderabad has a large NEET aspirant pool from Telangana + Andhra Pradesh combined. Local coaching chains (other South-Indian chains, a leading national educational institution, the 2nd-largest national NEET chain Hyderabad) dominate offline. Cerebrum's biology-only online RE-NEET crash is the specialist add-on most Hyderabad students lack — AIIMS-trained biology depth that generalist Telugu-speaking institutes cannot match.",
     studentVolume: '~45,000 NEET aspirants in Telangana + AP (Hyderabad hub)',
-    competitorContext: 'Sri Chaitanya, Narayana, Aakash Hyderabad, FIITJEE',
+    competitorContext: 'other South-Indian chains, a leading national educational institution, the 2nd-largest national NEET chain Hyderabad, other IIT-JEE-first coachings',
     uniqueAngle:
-      'Biology-only specialist alongside your Sri Chaitanya / Narayana / Aakash main coaching',
+      'Biology-only specialist alongside your other South-Indian chains / a leading national educational institution / the 2nd-largest national NEET chain main coaching',
     testimonialCity: 'Hyderabad',
   },
   mumbai: {
@@ -66,9 +66,9 @@ export const reNEETCityProfiles: Record<ReNEETCityKey, ReNEETCityProfile> = {
     cityLowercase: 'mumbai',
     ribbonContext: 'Mumbai · Online Live · IST Evening Batches · AIIMS Faculty',
     introContext:
-      "Mumbai has a strong NEET aspirant pool concentrated in Andheri, Thane and Borivali. Local coaching (Mahesh Tutorials, Allen Mumbai, Aakash) dominates offline. Cerebrum's biology-only online RE-NEET crash gives Mumbai students AIIMS-trained biology depth without the Mumbai-traffic commute to offline centres.",
+      "Mumbai has a strong NEET aspirant pool concentrated in Andheri, Thane and Borivali. Local coaching (Mahesh Tutorials, the largest national NEET chain Mumbai, the 2nd-largest national NEET chain) dominates offline. Cerebrum's biology-only online RE-NEET crash gives Mumbai students AIIMS-trained biology depth without the Mumbai-traffic commute to offline centres.",
     studentVolume: '~30,000 NEET aspirants in Mumbai (Andheri + Thane + Borivali concentrated)',
-    competitorContext: 'Mahesh Tutorials, Allen Mumbai, Aakash Mumbai, PhysicsWallah',
+    competitorContext: 'Mahesh Tutorials, the largest national NEET chain Mumbai, the 2nd-largest national NEET chain Mumbai, other online-only platforms',
     uniqueAngle: 'No commute, no traffic — same biology depth from home',
     testimonialCity: 'Mumbai',
   },

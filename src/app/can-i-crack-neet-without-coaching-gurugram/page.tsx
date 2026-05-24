@@ -49,7 +49,7 @@ const selfStudyResources = [
   },
   { resource: 'MTG/Trueman Biology', purpose: 'Advanced concepts and MCQs', mandatory: false },
   { resource: 'HC Verma / DC Pandey', purpose: 'Physics problem solving', mandatory: false },
-  { resource: 'Allen/Aakash Test Series', purpose: 'Mock tests and analysis', mandatory: true },
+  { resource: 'the largest national NEET chains Test Series', purpose: 'Mock tests and analysis', mandatory: true },
   { resource: 'PYQs (Last 10 years)', purpose: 'Exam pattern understanding', mandatory: true },
 ]
 
@@ -64,7 +64,7 @@ const successStories = [
     name: 'Rohit M.',
     score: '650/720',
     method: 'Self-Study + Test Series',
-    note: 'Used Allen test series only',
+    note: 'Used the largest national NEET chain test series only',
   },
   {
     name: 'Priya K.',

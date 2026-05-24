@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { ChevronRight, Check, X, Phone, MessageCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Cerebrum vs Allen: Which is Better for NEET Biology 2026?',
+  title: 'Cerebrum vs the largest national NEET chain: Which is Better for NEET Biology 2026?',
   description:
-    'Compare Cerebrum Biology Academy vs Allen Career Institute for NEET coaching. Specialized biology training, AIIMS faculty, 98% success rate. Free demo available.',
+    'Compare Cerebrum Biology Academy vs XYZ Coaching (largest national NEET chain) for NEET coaching. Specialized biology training, AIIMS faculty, 98% success rate. Free demo available.',
   keywords: [
     'cerebrum vs allen',
     'best neet coaching delhi',
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Cerebrum vs Allen: Which is Better for NEET Biology 2026?',
+    title: 'Cerebrum vs the largest national NEET chain: Which is Better for NEET Biology 2026?',
     description:
-      'Compare Cerebrum Biology Academy vs Allen Career Institute for NEET coaching. Specialized biology training, AIIMS faculty, 98% success rate.',
+      'Compare Cerebrum Biology Academy vs XYZ Coaching (largest national NEET chain) for NEET coaching. Specialized biology training, AIIMS faculty, 98% success rate.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/cerebrum-vs-allen',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cerebrum vs Allen: NEET Biology Coaching Comparison',
+    title: 'Cerebrum vs the largest national NEET chain: NEET Biology Coaching Comparison',
     description: 'Specialized Biology Coaching vs General NEET Institute',
   },
 }
@@ -38,18 +38,18 @@ const jsonLdSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Is Cerebrum better than Allen for Biology?',
+      name: 'Is Cerebrum better than the largest national NEET chain for Biology?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cerebrum is specifically designed for Biology-focused NEET preparation with AIIMS-trained faculty and smaller batches. If you want specialized Biology training with personal attention, Cerebrum is the better choice. Allen is suitable if you need comprehensive coaching across Physics, Chemistry, and Biology.',
+        text: 'Cerebrum is specifically designed for Biology-focused NEET preparation with AIIMS-trained faculty and smaller batches. If you want specialized Biology training with personal attention, Cerebrum is the better choice. the largest national NEET chain is suitable if you need comprehensive coaching across Physics, Chemistry, and Biology.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What is the fee difference between Cerebrum and Allen?',
+      name: 'What is the fee difference between Cerebrum and the largest national NEET chain?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cerebrum charges ₹45,000-₹1,20,000 for Biology-specific courses, while Allen charges ₹1,50,000-₹3,00,000 for complete NEET coaching. Cerebrum is 40-60% more affordable, especially for students focused on Biology excellence.',
+        text: 'Cerebrum charges ₹45,000-₹1,20,000 for Biology-specific courses, while the largest national NEET chain charges ₹1,50,000-₹3,00,000 for complete NEET coaching. Cerebrum is 40-60% more affordable, especially for students focused on Biology excellence.',
       },
     },
     {
@@ -62,15 +62,15 @@ const jsonLdSchema = {
     },
     {
       '@type': 'Question',
-      name: "What is Cerebrum's success rate compared to Allen?",
+      name: "What is Cerebrum's success rate compared to the largest national NEET chain?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Cerebrum has a transparent 98% selection rate among students who complete the course consistently. Allen does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum's transparent metrics demonstrate accountability.",
+        text: "Cerebrum has a transparent 98% selection rate among students who complete the course consistently. the largest national NEET chain does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum's transparent metrics demonstrate accountability.",
       },
     },
     {
       '@type': 'Question',
-      name: 'Can I shift from Allen to Cerebrum mid-course?',
+      name: 'Can I shift from the largest national NEET chain to Cerebrum mid-course?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes, many students transition to Cerebrum for Biology specialization. Cerebrum can evaluate your current progress and create a customized plan to optimize your remaining preparation time. Contact us for a personalized consultation.',
@@ -91,11 +91,11 @@ export default function CerebrumVsAllenPage() {
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Cerebrum vs Allen: Which is Better for NEET Biology 2026?
+            Cerebrum vs the largest national NEET chain: Which is Better for NEET Biology 2026?
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-6">
             Comprehensive comparison between specialized Biology coaching (Cerebrum) and general
-            NEET institute (Allen) to help you make the right choice.
+            NEET institute (the largest national NEET chain) to help you make the right choice.
           </p>
           <p className="text-sm text-gray-600">
             Last updated:{' '}
@@ -126,7 +126,7 @@ export default function CerebrumVsAllenPage() {
                     Cerebrum Biology Academy
                   </th>
                   <th className="p-4 text-left font-semibold text-gray-700 text-sm md:text-base">
-                    Allen Career Institute
+                    XYZ Coaching (largest national NEET chain)
                   </th>
                 </tr>
               </thead>
@@ -221,7 +221,7 @@ export default function CerebrumVsAllenPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-4">Allen Career Institute</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-4">XYZ Coaching (largest national NEET chain)</h3>
               <ul className="space-y-3">
                 {[
                   'Mix of experienced and trained faculty members',
@@ -281,7 +281,7 @@ export default function CerebrumVsAllenPage() {
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-700 mb-4">Allen Career Institute</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-4">XYZ Coaching (largest national NEET chain)</h3>
               <div className="mb-6">
                 <p className="text-gray-700 mb-2">
                   <strong>Fee Range (Complete NEET):</strong>
@@ -349,14 +349,14 @@ export default function CerebrumVsAllenPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-4">Allen Career Institute</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-4">XYZ Coaching (largest national NEET chain)</h3>
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded-lg border border-gray-200">
                   <p className="text-gray-700">
                     <strong>Overall Success Metrics:</strong>
                   </p>
                   <p className="text-sm text-gray-700 mt-2">
-                    Allen publishes aggregate data but doesn't disclose Biology-specific success
+                    the largest national NEET chain publishes aggregate data but doesn't disclose Biology-specific success
                     rates separately.
                   </p>
                 </div>
@@ -413,7 +413,7 @@ export default function CerebrumVsAllenPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-4">Allen Career Institute</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-4">XYZ Coaching (largest national NEET chain)</h3>
               <ul className="space-y-3">
                 {[
                   'Comprehensive NEET coaching material',
@@ -464,7 +464,7 @@ export default function CerebrumVsAllenPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-gray-700 mb-4">Allen Career Institute</h3>
+              <h3 className="text-xl font-semibold text-gray-700 mb-4">XYZ Coaching (largest national NEET chain)</h3>
               <div className="bg-white p-6 rounded-lg border border-gray-200">
                 <p className="font-semibold text-gray-900 mb-3">Pan-India Presence:</p>
                 <ul className="space-y-2 text-gray-700 text-sm mb-4">
@@ -486,7 +486,7 @@ export default function CerebrumVsAllenPage() {
             <p className="text-gray-800">
               <strong>For Delhi NCR Students:</strong> Cerebrum offers localized attention with 6
               strategically placed centers. Students benefit from knowing their center staff
-              personally and getting community-based support. Allen's larger network is beneficial
+              personally and getting community-based support. the largest national NEET chain's larger network is beneficial
               for students relocating to different cities.
             </p>
           </div>
@@ -577,23 +577,23 @@ export default function CerebrumVsAllenPage() {
           <div className="space-y-6">
             {[
               {
-                q: 'Is Cerebrum better than Allen for Biology?',
-                a: 'Cerebrum is specifically designed for Biology-focused NEET preparation with AIIMS-trained faculty and smaller batches. If you want specialized Biology training with personal attention, Cerebrum is the better choice. Allen is suitable if you need comprehensive coaching across Physics, Chemistry, and Biology.',
+                q: 'Is Cerebrum better than the largest national NEET chain for Biology?',
+                a: 'Cerebrum is specifically designed for Biology-focused NEET preparation with AIIMS-trained faculty and smaller batches. If you want specialized Biology training with personal attention, Cerebrum is the better choice. the largest national NEET chain is suitable if you need comprehensive coaching across Physics, Chemistry, and Biology.',
               },
               {
-                q: 'What is the fee difference between Cerebrum and Allen?',
-                a: 'Cerebrum charges ₹45,000-₹1,20,000 for Biology-specific courses, while Allen charges ₹1,50,000-₹3,00,000 for complete NEET coaching. Cerebrum is 40-60% more affordable, especially for students focused on Biology excellence.',
+                q: 'What is the fee difference between Cerebrum and the largest national NEET chain?',
+                a: 'Cerebrum charges ₹45,000-₹1,20,000 for Biology-specific courses, while the largest national NEET chain charges ₹1,50,000-₹3,00,000 for complete NEET coaching. Cerebrum is 40-60% more affordable, especially for students focused on Biology excellence.',
               },
               {
                 q: 'Does Cerebrum provide online coaching?',
                 a: 'Yes, Cerebrum offers both offline classes at 6 Delhi NCR centers and comprehensive online programs. Students can choose hybrid (combination of online and offline) or fully online modes based on their preferences.',
               },
               {
-                q: "What is Cerebrum's success rate compared to Allen?",
-                a: "Cerebrum has a transparent 98% selection rate among students who complete the course consistently. Allen does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum's transparent metrics demonstrate accountability.",
+                q: "What is Cerebrum's success rate compared to the largest national NEET chain?",
+                a: "Cerebrum has a transparent 98% selection rate among students who complete the course consistently. the largest national NEET chain does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum's transparent metrics demonstrate accountability.",
               },
               {
-                q: 'Can I shift from Allen to Cerebrum mid-course?',
+                q: 'Can I shift from the largest national NEET chain to Cerebrum mid-course?',
                 a: 'Yes, many students transition to Cerebrum for Biology specialization. Cerebrum can evaluate your current progress and create a customized plan to optimize your remaining preparation time. Contact us for a personalized consultation.',
               },
             ].map((item, i) => (
@@ -675,7 +675,7 @@ export default function CerebrumVsAllenPage() {
           <p className="text-sm text-gray-700 text-center">
             <strong>Disclaimer:</strong> This comparison is based on publicly available information
             and Cerebrum Biology Academy's verified track record. We have not made any defamatory
-            claims against Allen Career Institute. Both institutions are reputable in their
+            claims against XYZ Coaching (largest national NEET chain). Both institutions are reputable in their
             respective domains. The choice depends on your specific learning needs and preferences.
           </p>
         </div>

@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'What reference texts does Cerebrum use for Step 1 biochemistry?',
     answer:
-      'Lippincott Illustrated Reviews: Biochemistry (the canonical USMLE biochemistry text) is the primary reference, paired with First Aid Step 1 biochemistry chapter for content mapping. We do not use Kaplan Lecture Notes (too dense for high-yield Step 1 study) or Goljan biochemistry (more pathology-focused). UWorld biochemistry blocks are walked through live for application drilling.',
+      'Lippincott Illustrated Reviews: Biochemistry (the canonical USMLE biochemistry text) is the primary reference, paired with First Aid Step 1 biochemistry chapter for content mapping. We do not use other generalist test-prep brands Lecture Notes (too dense for high-yield Step 1 study) or Goljan biochemistry (more pathology-focused). UWorld biochemistry blocks are walked through live for application drilling.',
   },
   {
     question: 'Which biochemistry topics are highest yield for Step 1?',

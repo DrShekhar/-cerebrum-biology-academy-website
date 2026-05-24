@@ -119,17 +119,17 @@ const SCHOLARSHIP_PROGRAMS: ScholarshipEligibility[] = [
 
 const COMPETITOR_DATA = [
   {
-    name: 'Allen Digital',
+    name: 'the largest national NEET chain Digital',
     price: 50000,
     features: ['Online Classes', 'Test Series', 'Study Material'],
   },
   {
-    name: 'Aakash Digital',
+    name: 'the 2nd-largest national NEET chain Digital',
     price: 65000,
     features: ['Live Classes', 'Recorded Content', 'Doubt Sessions'],
   },
   {
-    name: 'Resonance',
+    name: 'other Kota-origin chains',
     price: 80000,
     features: ['Comprehensive Program', 'Personal Mentoring', 'Advanced Tests'],
   },

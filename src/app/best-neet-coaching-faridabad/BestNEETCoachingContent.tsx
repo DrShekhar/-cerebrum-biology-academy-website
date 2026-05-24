@@ -53,7 +53,7 @@ const coachingComparison = [
     reviews: 400,
   },
   {
-    name: 'Allen Career Institute',
+    name: 'XYZ Coaching (largest national NEET chain)',
     highlight: false,
     location: 'Multiple centers',
     specialty: 'All subjects',
@@ -73,7 +73,7 @@ const coachingComparison = [
     reviews: 2500,
   },
   {
-    name: 'Aakash Institute',
+    name: 'SKY Coaching (2nd-largest national NEET chain)',
     highlight: false,
     location: 'Faridabad',
     specialty: 'All subjects',

@@ -157,7 +157,7 @@ export default function NEETBiologyTutorPage() {
             instructor: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Narayana Academic Head',
+              description: 'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
               alumniOf: 'AIIMS',
             },
             educationalLevel: 'NEET UG',
@@ -194,7 +194,7 @@ export default function NEETBiologyTutorPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Master NEET Biology with{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head</strong>.
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution</strong>.
               Comprehensive coaching covering all 38 NCERT chapters with expert guidance.
             </p>
 

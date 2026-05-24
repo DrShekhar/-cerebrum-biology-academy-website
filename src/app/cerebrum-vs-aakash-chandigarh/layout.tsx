@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cerebrum vs Aakash Chandigarh | NEET Biology Coaching Comparison 2026',
+  title: 'Cerebrum vs the 2nd-largest national NEET chain Chandigarh | NEET Biology Coaching Comparison 2026',
   description:
-    'Compare Cerebrum Biology Academy vs Aakash Institute Chandigarh for NEET preparation. Batch size (10-15 vs 100+), fees (Rs 24K-68K vs Rs 1-3.5 Lakhs), AIIMS faculty, 98% success rate. All 7 Aakash centers compared.',
+    'Compare Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain) Chandigarh for NEET preparation. Batch size (10-15 vs 100+), fees (Rs 24K-68K vs Rs 1-3.5 Lakhs), AIIMS faculty, 98% success rate. All 7 the 2nd-largest national NEET chain centers compared.',
   keywords: [
     'cerebrum vs aakash chandigarh',
     'aakash chandigarh alternative',
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     'neet 2026 coaching chandigarh',
   ],
   openGraph: {
-    title: 'Cerebrum vs Aakash Chandigarh | Which is Better for NEET Biology 2026?',
+    title: 'Cerebrum vs the 2nd-largest national NEET chain Chandigarh | Which is Better for NEET Biology 2026?',
     description:
-      'Honest comparison of Cerebrum Biology Academy vs Aakash Institute Chandigarh (7 centers). See why students switch from 100+ batches to personalized 10-15 student coaching with AIIMS faculty.',
+      'Honest comparison of Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain) Chandigarh (7 centers). See why students switch from 100+ batches to personalized 10-15 student coaching with AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/cerebrum-vs-aakash-chandigarh',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cerebrum vs Aakash Chandigarh | NEET Biology Coaching Comparison 2026',
-    description: 'Compare Cerebrum Biology Academy vs Aakash Institute Chandigarh for NEET preparation.',
+    title: 'Cerebrum vs the 2nd-largest national NEET chain Chandigarh | NEET Biology Coaching Comparison 2026',
+    description: 'Compare Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain) Chandigarh for NEET preparation.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-aakash-chandigarh',

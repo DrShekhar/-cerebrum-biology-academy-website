@@ -50,7 +50,7 @@ const faqs = [
   {
     question: 'Can I join just the test series without coaching?',
     answer:
-      'Yes! Our test series is available as a standalone product. Many students from Allen, Aakash, Velocity Institute, and other institutes join our test series for additional practice and analysis.',
+      'Yes! Our test series is available as a standalone product. Many students from the largest national NEET chain, the 2nd-largest national NEET chain, Velocity Institute, and other institutes join our test series for additional practice and analysis.',
   },
   {
     question: 'What is the fee for the test series?',

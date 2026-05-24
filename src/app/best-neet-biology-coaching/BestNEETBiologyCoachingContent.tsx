@@ -47,7 +47,7 @@ const institutes = [
     highlight: true,
   },
   {
-    name: 'Allen',
+    name: 'the largest national NEET chain',
     biologyFocus: 'All subjects',
     faculty: 'Mix of experienced',
     batchSize: '60-100+ students',
@@ -60,7 +60,7 @@ const institutes = [
     highlight: false,
   },
   {
-    name: 'Aakash',
+    name: 'the 2nd-largest national NEET chain',
     biologyFocus: 'All subjects',
     faculty: 'Mix, varies by center',
     batchSize: '40-80 students',
@@ -73,7 +73,7 @@ const institutes = [
     highlight: false,
   },
   {
-    name: 'Physics Wallah',
+    name: 'other online-only platforms',
     biologyFocus: 'All subjects',
     faculty: 'Top educators',
     batchSize: 'Online (unlimited)',
@@ -86,7 +86,7 @@ const institutes = [
     highlight: false,
   },
   {
-    name: 'Biomentors',
+    name: 'other online-only biology platforms',
     biologyFocus: 'Biology online recordings',
     faculty: 'Mixed (no published AIIMS lead)',
     batchSize: 'Online unlimited (no live small batch)',
@@ -99,7 +99,7 @@ const institutes = [
     highlight: false,
   },
   {
-    name: 'NEETPrep',
+    name: 'other online-only biology platforms',
     biologyFocus: 'Self-paced MCQ practice',
     faculty: 'Subject experts (no AIIMS lead)',
     batchSize: 'Online (no live cohort)',
@@ -148,7 +148,7 @@ const standoutReasons = [
 
 const testimonials = [
   {
-    text: 'Switched from Allen to Cerebrum. The personal attention changed everything. Scored 680/720 in NEET.',
+    text: 'Switched from the largest national NEET chain to Cerebrum. The personal attention changed everything. Scored 680/720 in NEET.',
     author: 'Priya S.',
     college: 'AIIMS Delhi',
   },
@@ -158,7 +158,7 @@ const testimonials = [
     college: 'NEET 2025',
   },
   {
-    text: 'Aakash batches were too large. At Cerebrum, Dr. Shekhar knows every student by name.',
+    text: 'the 2nd-largest national NEET chain batches were too large. At Cerebrum, Dr. Shekhar knows every student by name.',
     author: 'Sneha K.',
     college: 'Gurugram',
   },
@@ -217,7 +217,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
 
             <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-3xl leading-relaxed">
               We compared 7 top coaching institutes so you don't have to. See how Cerebrum Biology
-              Academy stacks up against Allen, Aakash, Physics Wallah, and more.
+              Academy stacks up against the largest national NEET chains and online-first generalist platforms, and more.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -267,10 +267,10 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
               teaching live classes in 15-20 student batches
             </strong>
             , led by Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years). Online-only recorded
-            platforms such as Biomentors and NEETPrep operate at lower price points but do not offer
+            platforms such as other online-only biology platforms and other online-only biology platforms operate at lower price points but do not offer
             live small batches, AIIMS-led faculty, structured 1-on-1 mentorship, or published
             per-student qualification rates — they are best treated as MCQ supplements rather than
-            primary coaching. The larger generalist institutes (Allen, Aakash, Physics Wallah) offer
+            primary coaching. The larger generalist institutes (the largest national NEET chains and online-first generalist platforms) offer
             biology as part of an all-subjects bundle with 60-200 student batches rather than as a
             focused biology specialist track.
           </p>
@@ -310,11 +310,11 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                   <th className="text-left px-4 py-3 font-bold text-white bg-green-600">
                     Cerebrum
                   </th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">Allen</th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">Aakash</th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">Physics Wallah</th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">Biomentors</th>
-                  <th className="text-left px-4 py-3 font-bold text-slate-900">NEETPrep</th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">the largest national NEET chain</th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">the 2nd-largest national NEET chain</th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">other online-only platforms</th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">other online-only biology platforms</th>
+                  <th className="text-left px-4 py-3 font-bold text-slate-900">other online-only biology platforms</th>
                 </tr>
               </thead>
               <tbody>

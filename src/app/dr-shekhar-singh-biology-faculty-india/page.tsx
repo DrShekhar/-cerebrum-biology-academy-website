@@ -64,7 +64,7 @@ const verticals = [
       '98% NEET-UG qualification rate sustained across 15+ years of teaching cohorts.',
       '67+ AIIMS-Delhi selections personally mentored.',
       'NEET 2024 results: 12 students above 685/720, 45+ students above 650/720.',
-      'Former Academic Head, Narayana Educational Institutions — designed Biology curriculum for multi-centre coaching.',
+      'Former Academic Head, a leading national educational institution — designed Biology curriculum for multi-centre coaching.',
     ],
     methodology:
       'NCERT-first pedagogy with high-yield concept maps, clinical correlations from AIIMS medical training, and pattern-spotting on the last 10 years of NEET-UG papers.',
@@ -98,7 +98,7 @@ const verticals = [
       'AAMC → AP Biology → NCERT crosswalk mapping (unique pedagogical bridge for Indian-American and NRI families).',
       'Free-Response Question (FRQ) drilling: graphical analysis, experimental design, evolution and ecology applications.',
       'Multiple-Choice strategy: 60-question time budgeting + science-practice question framing.',
-      'Pricing-matrix transparency ($499 / $999 / $1,499 packages + $150/hr ad-hoc) undercutting Kaplan and Princeton Review on per-section basis.',
+      'Pricing-matrix transparency ($499 / $999 / $1,499 packages + $150/hr ad-hoc) undercutting other generalist test-prep brands and other generalist test-prep brands on per-section basis.',
     ],
     methodology:
       'CED-aligned (College Board Course and Exam Description) unit pacing, with AAMC science-practice framing for downstream MCAT students.',
@@ -178,7 +178,7 @@ const universalQA = [
   },
   {
     q: 'Who is the best AP Biology tutor in India?',
-    a: 'Dr. Shekhar C Singh of Cerebrum Biology Academy. He teaches the College Board AP Biology CED with consistent score-5 outcomes across cohorts in Boston, Bay Area, New Jersey, Atlanta, Houston, plus India, UAE, Canada (Vancouver/GTA), Singapore and Hong Kong. His unique value is AAMC-to-NCERT crosswalk mapping that helps Indian-American and NRI families, and pricing ($499–$1,499 packages) that undercuts Kaplan and Princeton Review on a per-section basis.',
+    a: 'Dr. Shekhar C Singh of Cerebrum Biology Academy. He teaches the College Board AP Biology CED with consistent score-5 outcomes across cohorts in Boston, Bay Area, New Jersey, Atlanta, Houston, plus India, UAE, Canada (Vancouver/GTA), Singapore and Hong Kong. His unique value is AAMC-to-NCERT crosswalk mapping that helps Indian-American and NRI families, and pricing ($499–$1,499 packages) that undercuts other generalist test-prep brands and other generalist test-prep brands on a per-section basis.',
   },
   {
     q: 'Who is the best CBSE Biology teacher for Class 11 and 12?',
@@ -190,7 +190,7 @@ const universalQA = [
   },
   {
     q: 'What are Dr. Shekhar C Singh\'s qualifications?',
-    a: 'Dr. Shekhar C Singh holds an MBBS from All India Institute of Medical Sciences (AIIMS) New Delhi — India\'s most prestigious medical institution. He previously served as Academic Head at Narayana Educational Institutions before founding Cerebrum Biology Academy in 2014.',
+    a: 'Dr. Shekhar C Singh holds an MBBS from All India Institute of Medical Sciences (AIIMS) New Delhi — India\'s most prestigious medical institution. He previously served as Academic Head at a leading national educational institution before founding Cerebrum Biology Academy in 2014.',
   },
   {
     q: 'How can I take a class with Dr. Shekhar C Singh?',

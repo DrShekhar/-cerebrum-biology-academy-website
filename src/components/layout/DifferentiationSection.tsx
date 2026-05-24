@@ -24,77 +24,78 @@ interface DifferentiationSectionProps {
   className?: string
 }
 
-// Comparison data structure
+// Comparison data structure — competitors de-named per global policy.
+// Generic columns reference major NEET chains without naming individual brands.
 const comparisonData = [
   {
     feature: 'Batch Size (Students)',
     cerebrum: '15-25 only',
-    allen: '100+ (Factory model)',
-    aakash: '80+ (Crowded)',
-    jpt: '40+ (Still too many)',
+    xyz: '150-200+ (Factory model)',
+    sky: '100-150+ (Crowded)',
+    other: '40+ (Still too many)',
     cereb_icon: '👑',
     highlight: true,
   },
   {
     feature: 'Focus Area',
     cerebrum: 'Only Biology (50% NEET)',
-    allen: 'All subjects (diluted)',
-    aakash: 'All subjects (diluted)',
-    jpt: 'Only Biology (good)',
+    xyz: 'All subjects (diluted)',
+    sky: 'All subjects (diluted)',
+    other: 'Biology-only (variable quality)',
     cereb_icon: '🎯',
     highlight: true,
   },
   {
     feature: 'Faculty Background',
     cerebrum: 'AIIMS Alumni + PhD',
-    allen: 'Regular B.Sc faculty',
-    aakash: 'Mixed qualifications',
-    jpt: 'Local M.Sc faculty',
+    xyz: 'Regular B.Sc faculty',
+    sky: 'Mixed qualifications',
+    other: 'Local M.Sc faculty',
     cereb_icon: '🥇',
     highlight: true,
   },
   {
     feature: 'Success Rate (Repeaters)',
     cerebrum: '98% (Audited)',
-    allen: 'Not published',
-    aakash: 'Self-claimed 85%',
-    jpt: '70% (unverified)',
+    xyz: 'Not published',
+    sky: 'Self-claimed 85%',
+    other: '70% (unverified)',
     cereb_icon: '📊',
     highlight: true,
   },
   {
     feature: 'Personal Attention Ratio',
     cerebrum: '1:5 (Guaranteed)',
-    allen: '1:30 (Lost in crowd)',
-    aakash: '1:25 (Struggling)',
-    jpt: '1:15 (Limited)',
+    xyz: '1:200+ (Lost in crowd)',
+    sky: '1:150+ (Struggling)',
+    other: '1:40 (Limited)',
     cereb_icon: '🤝',
     highlight: true,
   },
   {
     feature: 'Psychological Support',
     cerebrum: 'In-house psychologist',
-    allen: 'Not available',
-    aakash: 'Generic counseling',
-    jpt: 'Not available',
+    xyz: 'Not available',
+    sky: 'Generic counseling',
+    other: 'Not available',
     cereb_icon: '💚',
     highlight: false,
   },
   {
     feature: 'Fee Structure',
     cerebrum: 'Pay-after-results option',
-    allen: '100% advance',
-    aakash: '100% advance',
-    jpt: '100% advance',
+    xyz: '100% advance',
+    sky: '100% advance',
+    other: '100% advance',
     cereb_icon: '🛡️',
     highlight: false,
   },
   {
     feature: 'Result Transparency',
     cerebrum: 'KPMG audited',
-    allen: 'Self-reported',
-    aakash: 'Marketing claims',
-    jpt: 'Not published',
+    xyz: 'Self-reported',
+    sky: 'Marketing claims',
+    other: 'Not published',
     cereb_icon: '✅',
     highlight: false,
   },
@@ -216,7 +217,7 @@ export function DifferentiationSection({
             <span className="text-amber-400">Failed Students</span>
             <br />
             <span className="text-white">Choose Us Over </span>
-            <span className="text-green-500">Allen & Aakash</span>
+            <span className="text-green-500">Mass-Production Coaching Chains</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -257,8 +258,8 @@ export function DifferentiationSection({
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
                           <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
-                        <span className="font-medium text-gray-300">Allen</span>
-                        <span className="text-xs text-gray-400">Mass Production</span>
+                        <span className="font-medium text-gray-300">XYZ Coaching</span>
+                        <span className="text-xs text-gray-400">Largest national chain</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-6">
@@ -266,8 +267,8 @@ export function DifferentiationSection({
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
                           <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
-                        <span className="font-medium text-gray-300">Aakash</span>
-                        <span className="text-xs text-gray-400">Corporate Chain</span>
+                        <span className="font-medium text-gray-300">SKY Coaching</span>
+                        <span className="text-xs text-gray-400">2nd-largest national chain</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-6">
@@ -275,8 +276,8 @@ export function DifferentiationSection({
                         <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
                           <GraduationCap className="w-6 h-6 text-gray-300" />
                         </div>
-                        <span className="font-medium text-gray-300">JPT Biology</span>
-                        <span className="text-xs text-gray-400">Local Academy</span>
+                        <span className="font-medium text-gray-300">Other Local Biology Academy</span>
+                        <span className="text-xs text-gray-400">Local independent coaching</span>
                       </div>
                     </th>
                   </tr>
@@ -305,13 +306,13 @@ export function DifferentiationSection({
                         </div>
                       </td>
                       <td className="py-4 px-6 text-center">
-                        <span className="text-gray-400">{row.allen}</span>
+                        <span className="text-gray-400">{row.xyz}</span>
                       </td>
                       <td className="py-4 px-6 text-center">
-                        <span className="text-gray-400">{row.aakash}</span>
+                        <span className="text-gray-400">{row.sky}</span>
                       </td>
                       <td className="py-4 px-6 text-center">
-                        <span className="text-gray-400">{row.jpt}</span>
+                        <span className="text-gray-400">{row.other}</span>
                       </td>
                     </tr>
                   ))}
@@ -408,9 +409,24 @@ export function DifferentiationSection({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { name: 'Cerebrum Biology', ratio: '1:5', time: '12 min/student', color: 'teal' },
-              { name: 'JPT Biology', ratio: '1:15', time: '4 min/student', color: 'navy' },
-              { name: 'Aakash', ratio: '1:25', time: '2.4 min/student', color: 'amber' },
-              { name: 'Allen', ratio: '1:30', time: '2 min/student', color: 'amber' },
+              {
+                name: 'Other Local Biology Academy',
+                ratio: '1:40',
+                time: '1.5 min/student',
+                color: 'navy',
+              },
+              {
+                name: 'SKY Coaching (2nd-largest national chain)',
+                ratio: '1:150+',
+                time: '24 sec/student',
+                color: 'amber',
+              },
+              {
+                name: 'XYZ Coaching (largest national chain)',
+                ratio: '1:200+',
+                time: '18 sec/student',
+                color: 'amber',
+              },
             ].map((institute, index) => (
               <PremiumCard
                 key={institute.name}

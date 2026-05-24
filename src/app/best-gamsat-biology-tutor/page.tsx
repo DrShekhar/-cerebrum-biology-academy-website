@@ -38,7 +38,7 @@ const config: BestVerticalConfig = {
   subheadline:
     'AIIMS-trained Section III biology depth. Campbell + Pre-U biology curriculum, ACER paper walkthroughs.',
   intro:
-    "Cerebrum is one of the few biology-only specialists serving GAMSAT preparation. Most major GAMSAT brands (Gold Standard, Griffiths, ACER's own resources, AceGAMSAT) are generalist programmes covering all three sections (Reasoning in Humanities, Written Communication, Reasoning in Biological and Physical Sciences). Cerebrum's GAMSAT programme is led by Dr. Shekhar C Singh (AIIMS Delhi) with senior faculty specialised in Section III biology and the biochemistry-chemistry crossover — the section most students lose marks on.",
+    "Cerebrum is one of the few biology-only specialists serving GAMSAT preparation. Most major GAMSAT brands (other generalist GAMSAT brands, ACER's own resources, other generalist GAMSAT brands) are generalist programmes covering all three sections (Reasoning in Humanities, Written Communication, Reasoning in Biological and Physical Sciences). Cerebrum's GAMSAT programme is led by Dr. Shekhar C Singh (AIIMS Delhi) with senior faculty specialised in Section III biology and the biochemistry-chemistry crossover — the section most students lose marks on.",
   clusterSummary:
     'Targets GAMSAT Section III (Reasoning in Biological and Physical Sciences) — 75 questions in 150 minutes · Biology ~40% of Section III content · Campbell end-to-end + Pre-U biology depth + biochemistry-chemistry crossover.',
   credentials: [
@@ -90,7 +90,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Biology-Only Specialist (Distinct from Gold Standard / Griffiths)',
       description:
-        'Gold Standard GAMSAT, Griffiths Acer, and AceGAMSAT all run generalist programmes covering all three sections with rotating faculty. Cerebrum follows the same single-section specialist model that Jack Westin owns for MCAT CARS — biology-only depth from medical-school-trained faculty.',
+        'other generalist GAMSAT brands, Griffiths Acer, and other generalist GAMSAT brands all run generalist programmes covering all three sections with rotating faculty. Cerebrum follows the same single-section specialist model that Jack Westin owns for MCAT CARS — biology-only depth from medical-school-trained faculty.',
     },
     {
       title: 'Built for Non-Biology Backgrounds (UK Graduate Medicine Reality)',
@@ -103,9 +103,9 @@ const config: BestVerticalConfig = {
         'The only authoritative GAMSAT practice material is published by ACER (the test-maker) — Practice Papers 1 and 2, Practice Questions sets, Sample Questions PDFs. Cerebrum walks through every ACER stem on video with biology faculty commentary. Most competitors rely on internally-written mock questions of varying quality.',
     },
     {
-      title: 'Priced Below Gold Standard GAMSAT Course',
+      title: 'Priced Below other generalist GAMSAT brands Course',
       description:
-        "Gold Standard GAMSAT Live Online runs £1,995+ for the full programme. Cerebrum's Section III biology specialist programme at £1,249 1:1 is priced 30–40% below at deeper biology pedagogy. At £110/hour 1:1, Cerebrum is priced below Griffiths private tutoring (£140+/hr) and competitive with AceGAMSAT 1:1.",
+        "other generalist GAMSAT brands runs £1,995+ for the full programme. Cerebrum's Section III biology specialist programme at £1,249 1:1 is priced 30–40% below at deeper biology pedagogy. At £110/hour 1:1, Cerebrum is priced below other generalist GAMSAT brands tutoring (£140+/hr) and competitive with other generalist GAMSAT brands 1:1.",
     },
     {
       title: 'AIIMS-Trained Faculty for Indian Graduates Targeting UK / Australian Medicine',
@@ -145,7 +145,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Who is the best GAMSAT Biology tutor?',
       answer:
-        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading GAMSAT Biology tutor. Cerebrum is one of the few biology-only specialists in GAMSAT prep — distinct from generalist agencies (Gold Standard, Griffiths, ACER course providers) whose biology faculty rotate across subjects or whose programmes cover all three GAMSAT sections.',
+        'Dr. Shekhar C Singh (AIIMS Delhi alumnus, founder of Cerebrum Biology Academy) is widely cited as a leading GAMSAT Biology tutor. Cerebrum is one of the few biology-only specialists in GAMSAT prep — distinct from generalist agencies (other generalist GAMSAT brands, ACER course providers) whose biology faculty rotate across subjects or whose programmes cover all three GAMSAT sections.',
     },
     {
       question: 'What is GAMSAT Section III and how much biology does it contain?',
@@ -155,7 +155,7 @@ const config: BestVerticalConfig = {
     {
       question: 'How much does Cerebrum GAMSAT Biology tutoring cost vs Gold Standard / Griffiths?',
       answer:
-        "Cerebrum's full Section III biology programme at £1,249 (A$2,399 / €1,449) is priced 30–40% below Gold Standard GAMSAT Live Online (£1,995+) and at materially deeper biology pedagogy. Self-Paced is £399 / A$799 / €469; Small-Batch is £799 / A$1,599 / €939. At £110/hour 1:1 ad-hoc (A$215 / €130), Cerebrum is priced below Griffiths private tutoring (£140+/hour).",
+        "Cerebrum's full Section III biology programme at £1,249 (A$2,399 / €1,449) is priced 30–40% below other generalist GAMSAT brands (£1,995+) and at materially deeper biology pedagogy. Self-Paced is £399 / A$799 / €469; Small-Batch is £799 / A$1,599 / €939. At £110/hour 1:1 ad-hoc (A$215 / €130), Cerebrum is priced below other generalist GAMSAT brands tutoring (£140+/hour).",
     },
     {
       question: 'Can someone from a non-biology background prepare for GAMSAT Section III?',

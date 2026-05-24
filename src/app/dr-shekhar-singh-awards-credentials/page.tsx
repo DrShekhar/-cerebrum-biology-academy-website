@@ -126,10 +126,10 @@ const professionalRoles = [
   },
   {
     role: 'Academic Head',
-    organization: 'Narayana Educational Institutions',
+    organization: 'a leading national educational institution',
     period: 'Pre-2014',
     description:
-      'Led curriculum development and faculty training for NEET Biology across multiple Narayana centres before founding Cerebrum.',
+      'Led curriculum development and faculty training for NEET Biology across multiple a leading national educational institution centres before founding Cerebrum.',
   },
 ]
 

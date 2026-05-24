@@ -269,7 +269,7 @@ export const iaTopics: IATopic[] = [
       'Light/dark cycle',
     ],
     difficulty: 'Challenging',
-    suggestedStatTest: 'ANOVA with post-hoc; Kaplan–Meier survival curves for viability',
+    suggestedStatTest: 'ANOVA with post-hoc; other generalist test-prep brands–Meier survival curves for viability',
     notes: 'Strong selection-pressure discussion — links directly to resistance evolution.',
   },
   {

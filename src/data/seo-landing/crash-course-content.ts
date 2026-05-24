@@ -1208,7 +1208,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'Best NEET Crash Course 2026 — Only 42 Days Until May 2 Exam',
       subheadline:
-        'NEET is May 2, 2026. 500+ students chose Cerebrum\'s crash course over Aakash, Allen & PW: 12-student batches, AIIMS faculty, 92% success rate. 30-day (₹14,999) and 45-day (₹34,999) batches starting NOW.',
+        'NEET is May 2, 2026. 500+ students chose Cerebrum\'s crash course over the largest national NEET chains and online-first generalist platforms: 12-student batches, AIIMS faculty, 92% success rate. 30-day (₹14,999) and 45-day (₹34,999) batches starting NOW.',
       highlightedText: '#1 Rated',
       ctaText: 'Claim Your Seat',
       ctaLink: '/admissions',
@@ -1245,7 +1245,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '🎯',
           title: '12-Student Micro-Batches',
-          description: 'While Aakash/Allen run 60-100 student crash batches, we cap at 12. Every student gets daily doubt resolution.',
+          description: 'While the largest national NEET chains run 60-100 student crash batches, we cap at 12. Every student gets daily doubt resolution.',
         },
         {
           icon: '📊',
@@ -1269,7 +1269,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Aditya Sharma',
         achievement: 'NEET 2024 - 678/720 (45-Day Course)',
-        quote: 'I tried Allen\'s crash course first — 80 students, zero personal attention. Switched to Cerebrum with 45 days left. Dr. Shekhar identified my weak areas in Day 1 and created a custom plan. Jumped from 520 to 678.',
+        quote: 'I tried a major national chain\'s crash course first — 80 students, zero personal attention. Switched to Cerebrum with 45 days left. Dr. Shekhar identified my weak areas in Day 1 and created a custom plan. Jumped from 520 to 678.',
         score: '678/720',
       },
       {
@@ -1291,8 +1291,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         answer: 'Three things: (1) AIIMS faculty teaching every batch personally — not junior teachers, (2) 12-student micro-batches where your teacher knows your weak chapters, and (3) 92% verified success rate over 500+ students. No other crash course in Delhi NCR offers all three.',
       },
       {
-        question: 'How does Cerebrum compare to Aakash and Allen crash courses?',
-        answer: 'Aakash/Allen crash courses run 60-100 student batches, cost ₹40,000-80,000, and teach all 3 subjects (Physics, Chemistry, Biology). Cerebrum: 12-student batches, ₹14,999-34,999, Biology-only with 4-5 hours daily dedicated Biology teaching. Result: our students improve 80-120 marks vs 30-50 marks at chain coaching.',
+        question: 'How does Cerebrum compare to the largest national NEET chain crash courses?',
+        answer: 'The largest national NEET chains run 60-100 student crash batches, cost ₹40,000-80,000, and teach all 3 subjects (Physics, Chemistry, Biology). Cerebrum: 12-student batches, ₹14,999-34,999, Biology-only with 4-5 hours daily dedicated Biology teaching. Result: our students improve 80-120 marks vs 30-50 marks at chain coaching.',
       },
       {
         question: 'Which crash course duration should I choose?',
@@ -1304,7 +1304,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
       {
         question: 'What is the fee for the best NEET crash course?',
-        answer: '30-day Sprint: ₹14,999. 45-day Intensive: ₹34,999. Both include study material, daily tests, mock exams, PYQ booklet, and WhatsApp doubt support. EMI available. Compare this to Aakash (₹45,000-60,000) or private tutors (₹1,500-3,000/hour). NEET is May 2 — enroll now.',
+        answer: '30-day Sprint: ₹14,999. 45-day Intensive: ₹34,999. Both include study material, daily tests, mock exams, PYQ booklet, and WhatsApp doubt support. EMI available. Compare this to national NEET chains (₹45,000-60,000) or private tutors (₹1,500-3,000/hour). NEET is May 2 — enroll now.',
       },
       {
         question: 'Can I join if my basics are weak?',
@@ -1671,7 +1671,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Crash Course Fees 2026 | ₹14,999 for 30-Day | May 2 Exam',
     metaDescription:
-      'NEET crash course fees: ₹14,999 (30-day) to ₹34,999 (45-day) at Cerebrum vs ₹40,000-80,000 at Aakash/Allen. NEET May 2 — enroll now. EMI, scholarships available.',
+      'NEET crash course fees: ₹14,999 (30-day) to ₹34,999 (45-day) at Cerebrum vs ₹40,000-80,000 at the largest national NEET chains. NEET May 2 — enroll now. EMI, scholarships available.',
     keywords: [
       'neet crash course fees',
       'neet crash course price',
@@ -1685,7 +1685,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'NEET Crash Course Fees — ₹14,999 for 30-Day | NEET May 2, 2026',
       subheadline:
-        'Only ~42 days until NEET 2026. Our 30-day crash course starts at ₹14,999 — 70% less than Aakash/Allen. 45-day option at ₹34,999 for students who need deeper coverage. Both include AIIMS faculty and 12-student batches.',
+        'Only ~42 days until NEET 2026. Our 30-day crash course starts at ₹14,999 — 70% less than the largest national NEET chains. 45-day option at ₹34,999 for students who need deeper coverage. Both include AIIMS faculty and 12-student batches.',
       highlightedText: 'From ₹14,999',
       ctaText: 'View Pricing Plans',
       ctaLink: '#pricing',
@@ -1731,14 +1731,14 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         },
         {
           icon: '🔴',
-          title: 'Aakash/Allen Crash: ₹45,000-80,000',
+          title: 'National NEET chain crash: ₹45,000-80,000',
           description: 'All 3 subjects (Biology gets 1/3 time). Batch: 60-100 students. Material extra. No personal attention.',
         },
       ],
     },
     stats: [
       { value: '₹14,999', label: 'Starting Price (30-Day)', icon: '💰' },
-      { value: '70%', label: 'Cheaper Than Aakash', icon: '📉' },
+      { value: '70%', label: 'Cheaper Than National Chains', icon: '📉' },
       { value: '42', label: 'Days Left Until NEET', icon: '⏰' },
       { value: '30%', label: 'Max Scholarship', icon: '🎓' },
     ],
@@ -1746,7 +1746,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Aman Singh (Parent)',
         achievement: 'Son scored 635/720 in 90-Day Course',
-        quote: 'We spent ₹4.5 lakhs at Aakash for 2 years with average results. Cerebrum\'s 90-day crash course at ₹27,999 gave better results. My son improved 180 marks. Cost per mark improvement: ₹155 at Cerebrum vs ₹2,500 at Aakash.',
+        quote: 'We spent ₹4.5 lakhs at a major national NEET chain for 2 years with average results. Cerebrum\'s 90-day crash course at ₹27,999 gave better results. My son improved 180 marks. Cost per mark improvement: ₹155 at Cerebrum vs ₹2,500 at the chain.',
         score: '635/720',
       },
       {
@@ -1758,7 +1758,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     ],
     faqs: [
       {
-        question: 'Why is Cerebrum\'s crash course cheaper than Aakash and Allen?',
+        question: 'Why is Cerebrum\'s crash course cheaper than the largest national NEET chains?',
         answer: 'Three reasons: (1) We teach only Biology, not all 3 subjects — lower infrastructure cost, (2) We don\'t spend on TV ads and billboards — savings passed to students, (3) We run online classes — no massive real estate costs. Lower cost ≠ lower quality. Our 92% success rate is higher than most ₹80,000 crash courses.',
       },
       {
@@ -1817,7 +1817,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       '@type': 'Course',
       courseName: 'NEET Crash Course — Affordable Pricing Plans',
       provider: 'Cerebrum Biology Academy',
-      description: 'NEET crash course fees starting ₹14,999. Compare pricing with Aakash, Allen. EMI available, scholarship up to 30%.',
+      description: 'NEET crash course fees starting ₹14,999. Compare pricing with the largest national NEET chains. EMI available, scholarship up to 30%.',
       duration: '30-45 days',
       price: 14999,
       priceCurrency: 'INR',

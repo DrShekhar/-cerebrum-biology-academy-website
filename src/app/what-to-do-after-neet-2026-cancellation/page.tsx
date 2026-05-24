@@ -56,7 +56,7 @@ const config: BestVerticalConfig = {
     { title: 'RE-NEET Online Coaching', href: '/re-neet-2026-online-coaching' },
     { title: 'RE-NEET for Droppers', href: '/re-neet-2026-droppers' },
     {
-      title: 'Cerebrum vs Aakash vs PhysicsWallah (RE-NEET)',
+      title: 'Cerebrum vs the 2nd-largest national NEET chain vs other online-only platforms (RE-NEET)',
       href: '/re-neet-2026-cerebrum-vs-aakash-vs-pw',
     },
     { title: 'RE-NEET Coaching in Kota', href: '/re-neet-2026-kota' },
@@ -86,7 +86,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Step 1: Do NOT Panic-Rewrite Your Plan in Week 1',
       description:
-        'Psychiatrists quoted in major newspapers (GMC Thiruvananthapuram, Narayana Health, Delhi clinicians) consistently warn against panic study-plan rewrites in the first week. Protect 6+ hours of sleep, limit doomscrolling, get daily sunlight + exercise. Week 1 is for emotional regulation, not strategy revision.',
+        'Psychiatrists quoted in major newspapers (GMC Thiruvananthapuram, leading private healthcare, Delhi clinicians) consistently warn against panic study-plan rewrites in the first week. Protect 6+ hours of sleep, limit doomscrolling, get daily sunlight + exercise. Week 1 is for emotional regulation, not strategy revision.',
     },
     {
       title: 'Step 2: Wait for NTA Notification (7–10 Days)',

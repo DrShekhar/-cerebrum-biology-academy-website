@@ -873,7 +873,7 @@ export const class11NeetPreparationOnline: SEOLandingContent = {
       score: '334/360',
     },
     {
-      name: 'Aakash Gupta',
+      name: 'the 2nd-largest national NEET chain Gupta',
       achievement: 'AIR 756 | BHU Medical',
       quote:
         'Online NEET preparation from Class 11 meant I could balance school and competitive prep perfectly. Cerebrum made both manageable.',

@@ -52,14 +52,14 @@ const faqs = [
   },
   {
     question:
-      "How does Cerebrum compare to Aakash Scholastics, Allen, or BYJU's NEET Foundation in Bangalore?",
+      "How does Cerebrum compare to the 2nd-largest national NEET chain Scholastics, the largest national NEET chain, or BYJU's NEET Foundation in Bangalore?",
     answer:
-      "Aakash Scholastics Bangalore operates ~8 centres (Koramangala, Indiranagar, HSR, Jayanagar, Hebbal, Marathahalli, Banashankari, Whitefield) with 150-300 student PCB Foundation. Allen Bangalore operates ~4 centres. BYJU's NEET Foundation runs primarily online with recorded content + occasional live sessions. Cerebrum is biology-only with 15-20 student online live (not recorded) batches and AIIMS-trained biology faculty. Many Bangalore IT-professional families combine Cerebrum biology (₹55K-75K Ascent) with Aakash for PC for total ₹1L-1.4L.",
+      "the 2nd-largest national NEET chain Scholastics Bangalore operates ~8 centres (Koramangala, Indiranagar, HSR, Jayanagar, Hebbal, Marathahalli, Banashankari, Whitefield) with 150-300 student PCB Foundation. the largest national NEET chain Bangalore operates ~4 centres. BYJU's NEET Foundation runs primarily online with recorded content + occasional live sessions. Cerebrum is biology-only with 15-20 student online live (not recorded) batches and AIIMS-trained biology faculty. Many Bangalore IT-professional families combine Cerebrum biology (₹55K-75K Ascent) with the 2nd-largest national NEET chain for PC for total ₹1L-1.4L.",
   },
   {
     question: 'What does Class 9 NEET Foundation cost in Bangalore?',
     answer:
-      "Cerebrum Class 9 Foundation pricing for Bangalore families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Bangalore-specific competitive context: Aakash Scholastics Bangalore Class 9 combined PCB Foundation runs ₹85K-1L/year at 200-student batches across Koramangala, HSR, Marathahalli, Banashankari centres. BYJU's NEET Foundation runs primarily on recorded video with limited live (₹40K-65K). Vidyamandir Classes Foundation Bangalore (~₹95K). Allen Bangalore ~₹1L. Most Bangalore IT-professional families pair Cerebrum biology (₹55K-70K Ascent) with BYJU's recorded PC (₹20K) or PhysicsWallah live PC (₹15K) for total ₹70K-90K — comparable to single-shop Aakash but with materially deeper biology and live small-batch attention vs 200-student recorded-heavy alternatives.",
+      "Cerebrum Class 9 Foundation pricing for Bangalore families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K (with weekly 1:1 doubt slots), Pinnacle ₹75K-90K (direct Dr. Shekhar micro-batch 10-12). Ad-hoc 1:1 hourly ₹2,000-3,500. Bangalore-specific competitive context: the 2nd-largest national NEET chain Scholastics Bangalore Class 9 combined PCB Foundation runs ₹85K-1L/year at 200-student batches across Koramangala, HSR, Marathahalli, Banashankari centres. BYJU's NEET Foundation runs primarily on recorded video with limited live (₹40K-65K). other Delhi-origin mid-tier institutes Foundation Bangalore (~₹95K). the largest national NEET chain Bangalore ~₹1L. Most Bangalore IT-professional families pair Cerebrum biology (₹55K-70K Ascent) with BYJU's recorded PC (₹20K) or other online-only platforms live PC (₹15K) for total ₹70K-90K — comparable to single-shop the 2nd-largest national NEET chain but with materially deeper biology and live small-batch attention vs 200-student recorded-heavy alternatives.",
   },
 ]
 
@@ -233,8 +233,8 @@ export default function NEETFoundationClass9BangalorePage() {
           <p>
             Cerebrum&apos;s biology-only specialist positioning with AIIMS-trained faculty (Dr.
             Shekhar C Singh) and 15-20 student online live batches resonates with all three pockets
-            because the structural alternative — Aakash Scholastics 8 centres with 200-student PCB
-            Foundation batches, Allen 4 centres similar, BYJU&apos;s NEET Foundation primarily
+            because the structural alternative — the 2nd-largest national NEET chain Scholastics 8 centres with 200-student PCB
+            Foundation batches, the largest national NEET chain 4 centres similar, BYJU&apos;s NEET Foundation primarily
             recorded-video — does not match the depth-first preference of Bangalore tech-academic
             families. Karnataka SSLC parallel pedagogy additionally serves families maintaining
             state-board pathway optionality for KCET / state quota seats.

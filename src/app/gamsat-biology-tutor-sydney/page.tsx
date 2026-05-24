@@ -62,9 +62,9 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum compare to Gold Standard or Griffiths Australia for a Sydney applicant?',
+      'How does Cerebrum compare to other generalist GAMSAT brands Australia for a Sydney applicant?',
     answer:
-      'Gold Standard GAMSAT Live Online and Griffiths GAMSAT are full GAMSAT generalist programmes covering all three sections (A$3,000+ each). Cerebrum is a Section III biology specialist — we cover the biology component in depth (A$2,399 1:1 full programme, A$215/hour ad-hoc) and most Sydney applicants pair us with Gold Standard or Griffiths for Sections I and II.',
+      'other generalist GAMSAT brands and other generalist GAMSAT brands are full GAMSAT generalist programmes covering all three sections (A$3,000+ each). Cerebrum is a Section III biology specialist — we cover the biology component in depth (A$2,399 1:1 full programme, A$215/hour ad-hoc) and most Sydney applicants pair us with other generalist GAMSAT brands for Sections I and II.',
   },
 ]
 

@@ -9,7 +9,7 @@ const gurugramLocation = CONTACT_INFO.location.gurugram
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Gurugram 2026 | Fee Comparison | ₹45K-2L',
   description:
-    'Compare NEET coaching fees in Gurugram for 2026. Aakash, Allen, Cerebrum fees compared. Scholarships, EMI options. Find affordable NEET coaching in Gurgaon.',
+    'Compare NEET coaching fees in Gurugram for 2026. the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees compared. Scholarships, EMI options. Find affordable NEET coaching in Gurgaon.',
   keywords: [
     'neet coaching fees gurugram',
     'neet coaching fees gurgaon',
@@ -38,17 +38,17 @@ const faqs = [
   {
     question: 'What is the average fee for NEET coaching in Gurugram?',
     answer:
-      'NEET coaching fees in Gurugram range from ₹45,000 to ₹2,00,000+ per year. Budget options like Cerebrum start at ₹60,000/year. Premium institutes like Aakash and Allen charge ₹1.5-2 lakh/year. Online-only options start at ₹45,000.',
+      'NEET coaching fees in Gurugram range from ₹45,000 to ₹2,00,000+ per year. Budget options like Cerebrum start at ₹60,000/year. Premium institutes like the largest national NEET chains charge ₹1.5-2 lakh/year. Online-only options start at ₹45,000.',
   },
   {
     question: 'Which is the most affordable NEET coaching in Gurugram?',
     answer:
-      'Cerebrum Biology Academy offers the best value at ₹60,000-75,000/year with AIIMS faculty and 15-20 student batches. This is 50-60% lower than Aakash/Allen while maintaining 98% success rate.',
+      'Cerebrum Biology Academy offers the best value at ₹60,000-75,000/year with AIIMS faculty and 15-20 student batches. This is 50-60% lower than the 2nd-largest national NEET chain/the largest national NEET chain while maintaining 98% success rate.',
   },
   {
     question: 'Are scholarships available for NEET coaching?',
     answer:
-      'Yes! Cerebrum offers merit-based scholarships up to 50% based on school marks and entrance test. Aakash and Allen also have scholarship tests. Apply early for best scholarship opportunities.',
+      'Yes! Cerebrum offers merit-based scholarships up to 50% based on school marks and entrance test. the largest national NEET chains also have scholarship tests. Apply early for best scholarship opportunities.',
   },
   {
     question: 'Can I pay NEET coaching fees in EMI?',
@@ -56,7 +56,7 @@ const faqs = [
       'Most institutes including Cerebrum offer EMI options. We provide 0% interest EMI for 3-6 months. Some banks offer education loans for coaching fees. Contact us for payment plans.',
   },
   {
-    question: 'Why is Cerebrum cheaper than Aakash/Allen?',
+    question: 'Why is Cerebrum cheaper than the 2nd-largest national NEET chain/the largest national NEET chain?',
     answer:
       'We focus exclusively on Biology (not all subjects), have smaller batches (lower overhead), no expensive marketing, and operate from corporate parks (not malls). Lower costs = lower fees for students.',
   },

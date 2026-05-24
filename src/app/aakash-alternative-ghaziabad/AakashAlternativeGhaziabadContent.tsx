@@ -97,7 +97,7 @@ const reasons = [
   {
     title: 'Lost in Digital Overload?',
     description:
-      "Aakash's heavy app-based approach can overwhelm. At Cerebrum, technology enhances - not replaces - personal teaching.",
+      "the 2nd-largest national NEET chain's heavy app-based approach can overwhelm. At Cerebrum, technology enhances - not replaces - personal teaching.",
     icon: Zap,
   },
   {
@@ -115,7 +115,7 @@ const reasons = [
   {
     title: 'Value for Money',
     description:
-      'Get premium coaching at 30-40% lower fees than Aakash Indirapuram with significantly better student-teacher ratio.',
+      'Get premium coaching at 30-40% lower fees than the 2nd-largest national NEET chain Indirapuram with significantly better student-teacher ratio.',
     icon: Target,
   },
 ]
@@ -124,21 +124,21 @@ const testimonials = [
   {
     name: 'Kavya T.',
     score: '648/720',
-    previous: 'Ex-Aakash Indirapuram Student',
+    previous: 'Ex-the 2nd-largest national NEET chain Indirapuram Student',
     quote:
-      'Left Aakash after Class 11. The personal mentorship at Cerebrum helped me focus on my weak areas. Biology score improved by 50 marks.',
+      'Left the 2nd-largest national NEET chain after Class 11. The personal mentorship at Cerebrum helped me focus on my weak areas. Biology score improved by 50 marks.',
   },
   {
     name: 'Arjun P.',
     score: '625/720',
-    previous: 'Aakash + Cerebrum',
+    previous: 'the 2nd-largest national NEET chain + Cerebrum',
     quote:
-      'Continued Aakash for their test series but joined Cerebrum for Biology concepts. The combination worked perfectly for me.',
+      'Continued the 2nd-largest national NEET chain for their test series but joined Cerebrum for Biology concepts. The combination worked perfectly for me.',
   },
   {
     name: 'Sneha K.',
     score: '632/720',
-    previous: 'Dropper from Aakash',
+    previous: 'Dropper from the 2nd-largest national NEET chain',
     quote:
       'After a disappointing first attempt, switched to Cerebrum. The small batch and focused approach helped me crack NEET in second attempt.',
   },
@@ -151,7 +151,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
     trackAndOpenWhatsApp({
       source: 'aakash-alternative-ghaziabad',
       message:
-        'Hi! I am currently at Aakash/considering Aakash and want to know about Cerebrum as an alternative for NEET Biology. I am from Ghaziabad. Please share details.',
+        'Hi! I am currently at the 2nd-largest national NEET chain/considering the 2nd-largest national NEET chain and want to know about Cerebrum as an alternative for NEET Biology. I am from Ghaziabad. Please share details.',
       campaign: 'aakash-alternative-ghaziabad',
     })
   }
@@ -174,7 +174,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
             </li>
             <li className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-              <span className="text-teal-700 font-medium">Aakash Alternative</span>
+              <span className="text-teal-700 font-medium">the 2nd-largest national NEET chain Alternative</span>
             </li>
           </ol>
         </div>
@@ -191,19 +191,19 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
           <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
-              400+ Students Switched from Aakash
+              400+ Students Switched from the 2nd-largest national NEET chain
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Looking for an
               <span className="block text-yellow-400 mt-2">
-                Aakash Alternative in Ghaziabad?
+                the 2nd-largest national NEET chain Alternative in Ghaziabad?
               </span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Overwhelmed by digital overload? Want real classroom interaction with expert faculty?
-              Discover why Ghaziabad students chose Cerebrum over Aakash Indirapuram for focused
+              Discover why Ghaziabad students chose Cerebrum over the 2nd-largest national NEET chain Indirapuram for focused
               NEET Biology preparation. Just 15-20 min via Blue Line Metro.
             </p>
 
@@ -238,7 +238,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
-                Compare with Aakash Expert
+                Compare with the 2nd-largest national NEET chain Expert
               </button>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Students Switch from Aakash
+              Why Students Switch from the 2nd-largest national NEET chain
             </h2>
             <p className="text-xl text-slate-600">
               Common pain points that bring students to Cerebrum
@@ -279,7 +279,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Cerebrum vs Aakash: Head-to-Head
+              Cerebrum vs the 2nd-largest national NEET chain: Head-to-Head
             </h2>
             <p className="text-xl text-slate-600">
               See why focused coaching beats corporate chains
@@ -292,7 +292,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
                   <th className="px-6 py-4 text-center bg-teal-700">Cerebrum</th>
-                  <th className="px-6 py-4 text-center">Aakash</th>
+                  <th className="px-6 py-4 text-center">the 2nd-largest national NEET chain</th>
                 </tr>
               </thead>
               <tbody>
@@ -327,18 +327,18 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don&apos;t Want to Leave Aakash?
+                Don&apos;t Want to Leave the 2nd-largest national NEET chain?
                 <br />
                 Complement Your Coaching!
               </h2>
               <p className="text-xl text-indigo-100 mb-6">
-                Many Ghaziabad students continue at Aakash Indirapuram for Physics &amp; Chemistry
+                Many Ghaziabad students continue at the 2nd-largest national NEET chain Indirapuram for Physics &amp; Chemistry
                 while joining Cerebrum specifically for Biology. Get the best of both worlds.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Weekend batches that don&apos;t clash with Aakash
+                  Weekend batches that don&apos;t clash with the 2nd-largest national NEET chain
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -346,7 +346,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  Use Aakash&apos;s digital resources + our expert teaching
+                  Use the 2nd-largest national NEET chain&apos;s digital resources + our expert teaching
                 </li>
                 <li className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -355,7 +355,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
               </ul>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
-              <h3 className="text-2xl font-bold mb-6">Success Stories: Aakash + Cerebrum</h3>
+              <h3 className="text-2xl font-bold mb-6">Success Stories: the 2nd-largest national NEET chain + Cerebrum</h3>
               {testimonials.slice(1, 2).map((t) => (
                 <div key={t.name} className="mb-6">
                   <p className="text-indigo-100 italic">&ldquo;{t.quote}&rdquo;</p>
@@ -377,12 +377,12 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
         </div>
       </section>
 
-      {/* Testimonials from Aakash Switchers */}
+      {/* Testimonials from the 2nd-largest national NEET chain Switchers */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              From Aakash Students Who Switched
+              From the 2nd-largest national NEET chain Students Who Switched
             </h2>
             <p className="text-xl text-slate-600">Real results from students who made the change</p>
           </div>
@@ -523,8 +523,8 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
               href="/allen-alternative-ghaziabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">Allen Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with Allen</p>
+              <h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with the largest national NEET chain</p>
             </Link>
             <Link
               href="/best-neet-coaching-ghaziabad"
@@ -558,7 +558,7 @@ export default function AakashAlternativeGhaziabadContent({ faqs }: { faqs: FAQ[
             Ready to Experience the Difference?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join students from Ghaziabad who switched from Aakash for better Biology coaching
+            Join students from Ghaziabad who switched from the 2nd-largest national NEET chain for better Biology coaching
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">

@@ -157,7 +157,7 @@ export default function OnlineBiologyTutorClass12Page() {
             instructor: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Narayana Academic Head',
+              description: 'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
             },
             courseMode: 'online',
             educationalLevel: 'Class 12',
@@ -190,7 +190,7 @@ export default function OnlineBiologyTutorClass12Page() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Ace Class 12 Biology with{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head</strong>.
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution</strong>.
               Dual preparation for Board exams and NEET 2026 in one comprehensive online course.
             </p>
 

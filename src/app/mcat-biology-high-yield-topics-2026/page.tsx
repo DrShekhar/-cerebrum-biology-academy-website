@@ -526,7 +526,7 @@ export default function MCATBiologyHighYield2026Page() {
             </h2>
             <p className="text-slate-700 leading-relaxed mb-4">
               The single biggest mistake MCAT students make on high-yield content is to re-read
-              Campbell or Kaplan multiple times instead of drilling AAMC passages. Re-reading builds
+              Campbell or other generalist test-prep brands multiple times instead of drilling AAMC passages. Re-reading builds
               passive recognition; passage practice builds the active reasoning the MCAT actually
               tests. Convert content into exam reflex with this protocol:
             </p>

@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     question: 'Where is your Gurugram center?',
-    answer: `Located at ${gurugramLocation.streetAddress}, same building as Allen Career Institute.`,
+    answer: `Located at ${gurugramLocation.streetAddress}, same building as XYZ Coaching (largest national NEET chain).`,
   },
 ]
 

@@ -5,9 +5,9 @@ import {
 } from '@/components/seo/CompetitorComparisonLanding'
 
 export const metadata: Metadata = {
-  title: 'Cerebrum vs PhysicsWallah NEET Biology | Detailed Comparison',
+  title: 'Cerebrum vs other online-only platforms NEET Biology | Detailed Comparison',
   description:
-    'Cerebrum Biology Academy vs PhysicsWallah for NEET Biology — small-batch AIIMS faculty vs mass online platform. Compare batch sizes, faculty specialisation, fees, and biology depth. 680+ medical college selections.',
+    'Cerebrum Biology Academy vs other online-only platforms for NEET Biology — small-batch AIIMS faculty vs mass online platform. Compare batch sizes, faculty specialisation, fees, and biology depth. 680+ medical college selections.',
   keywords: [
     'cerebrum vs physicswallah',
     'cerebrum vs pw',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'small batch alternative to physicswallah',
   ],
   openGraph: {
-    title: 'Cerebrum vs PhysicsWallah NEET Biology | Detailed Comparison',
+    title: 'Cerebrum vs other online-only platforms NEET Biology | Detailed Comparison',
     description:
       'Small-batch AIIMS faculty vs mass online platform. Biology-only specialist vs generalist coaching.',
     url: 'https://cerebrumbiologyacademy.com/cerebrum-vs-physicswallah',
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
 
 const config: CompetitorComparisonConfig = {
   slug: 'cerebrum-vs-physicswallah',
-  competitorName: 'PhysicsWallah',
-  headline: 'Cerebrum vs PhysicsWallah for NEET Biology',
+  competitorName: 'other online-only platforms',
+  headline: 'Cerebrum vs other online-only platforms for NEET Biology',
   ribbon: 'Small-Batch AIIMS Faculty vs Mass Online Platform',
   subheadline: 'Biology-only specialisation. Personal attention. AIIMS pedagogy. Same fees.',
   intro:
-    'PhysicsWallah scaled NEET coaching to millions through low-cost video lectures and mass online live classes. Cerebrum Biology Academy chose the opposite approach: small-batch (15–20) AIIMS-trained biology-only faculty. Both can work — the choice depends on whether you need cohort-scale economics or biology-depth attention. Below: the honest comparison.',
+    'other online-only platforms scaled NEET coaching to millions through low-cost video lectures and mass online live classes. Cerebrum Biology Academy chose the opposite approach: small-batch (15–20) AIIMS-trained biology-only faculty. Both can work — the choice depends on whether you need cohort-scale economics or biology-depth attention. Below: the honest comparison.',
   table: [
     {
       criterion: 'Faculty Specialisation',
@@ -48,13 +48,13 @@ const config: CompetitorComparisonConfig = {
     {
       criterion: 'Founder Background',
       cerebrum: 'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, 15+ years biology pedagogy',
-      competitor: 'Alakh Pandey — IIT-BHU dropout, started as YouTube physics teacher',
+      competitor: 'Generalist physics-domain founder (no biology specialisation)',
       cerebrumWins: true,
     },
     {
       criterion: 'Batch Size (Live Classes)',
       cerebrum: '15–20 students (Ascent) or 10–12 students (Pinnacle)',
-      competitor: '300–2,000+ students per live class (Lakshya, Yakeen, Arjuna batches)',
+      competitor: '300–2,000+ students per live class (various mass-online batches)',
       cerebrumWins: true,
     },
     {
@@ -72,7 +72,7 @@ const config: CompetitorComparisonConfig = {
     {
       criterion: 'Annual Fees (NEET)',
       cerebrum: '₹40,000–₹1,56,000 / year (Pursuit / Ascent / Pinnacle tiers)',
-      competitor: '₹4,000–₹26,000 / year (Lakshya / Yakeen / Arjuna batches)',
+      competitor: '₹4,000–₹26,000 / year (various mass-online batches)',
       cerebrumWins: false,
     },
     {
@@ -84,7 +84,7 @@ const config: CompetitorComparisonConfig = {
     {
       criterion: 'Offline Centres',
       cerebrum: '6 Delhi NCR centres (South Ext, Rohini, Green Park, Gurugram, Faridabad, Noida)',
-      competitor: '60+ Vidyapeeth offline centres across India (focus: Tier-2 cities)',
+      competitor: '60+ offline centres across India (focus: Tier-2 cities)',
       cerebrumWins: false,
     },
     {
@@ -104,12 +104,12 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'Biology Is 360/720 — A Biology-Only Specialist Compounds',
       description:
-        'NEET Biology accounts for 50% of marks. A biology-only specialist (Cerebrum) builds deeper expertise than a generalist where biology faculty rotate across Lakshya / Yakeen / Arjuna batches. Many top NEET scorers pair PW (Physics + Chemistry) with Cerebrum (Biology) rather than choosing.',
+        'NEET Biology accounts for 50% of marks. A biology-only specialist (Cerebrum) builds deeper expertise than a generalist where biology faculty rotate across various mass-online batches. Many top NEET scorers pair an online-only platform (Physics + Chemistry) with Cerebrum (Biology) rather than choosing.',
     },
     {
       title: 'Small Batches Mean Personal Attention',
       description:
-        "PhysicsWallah's strength is mass-scale economics — 300–2,000+ students per live class. Cerebrum's strength is small-batch attention — 15–20 students per batch with the same faculty all year. Different value propositions; pick by learning style.",
+        "Other online-only platforms' strength is mass-scale economics — 300–2,000+ students per live class. Cerebrum's strength is small-batch attention — 15–20 students per batch with the same faculty all year. Different value propositions; pick by learning style.",
     },
     {
       title: 'AIIMS Founder Credibility',
@@ -119,12 +119,12 @@ const config: CompetitorComparisonConfig = {
     {
       title: 'Documented 680+ Selections vs Aggregated Claims',
       description:
-        "680+ Cerebrum medical college selections published with student names, scores and college admissions. PhysicsWallah's 10K+ selections are aggregated chain-wide without isolating biology contribution. Different transparency standards.",
+        "680+ Cerebrum medical college selections published with student names, scores and college admissions. Other online-only platforms' aggregated 10K+ selections are aggregated chain-wide without isolating biology contribution. Different transparency standards.",
     },
     {
       title: '1:1 Doubt Access (Not 48-Hour Portal Wait)',
       description:
-        'Cerebrum students get WhatsApp same-day doubt resolution from faculty plus weekly 1:1 doubt slots. PhysicsWallah uses a doubt portal with 24–48 hour turnaround — workable for asynchronous learners, not for students needing real-time gap-fill.',
+        'Cerebrum students get WhatsApp same-day doubt resolution from faculty plus weekly 1:1 doubt slots. Other online-only platforms use a doubt portal with 24–48 hour turnaround — workable for asynchronous learners, not for students needing real-time gap-fill.',
     },
     {
       title: 'NCERT Line-by-Line, Not "NCERT + Reference Books"',
@@ -133,10 +133,10 @@ const config: CompetitorComparisonConfig = {
     },
   ],
   whenCompetitorMightBeBetter: [
-    "Budget is the primary constraint — PhysicsWallah's ₹4,000–₹26,000/year is genuinely lower-cost than Cerebrum's ₹40,000+ entry tier",
+    "Budget is the primary constraint — Other online-only platforms' ₹4,000–₹26,000/year is genuinely lower-cost than Cerebrum's ₹40,000+ entry tier",
     "You're self-disciplined and learn well from large-scale recorded video lectures + minimal personal attention",
     'You want one platform for Physics, Chemistry AND Biology under a single brand for convenience',
-    "You're in a Tier-2 or Tier-3 city with a Vidyapeeth centre and prefer offline access",
+    "You're in a Tier-2 or Tier-3 city with another mass online-platform centre and prefer offline access",
   ],
   testimonials: [
     {
@@ -144,14 +144,14 @@ const config: CompetitorComparisonConfig = {
       score: 'NEET 689/720',
       college: 'JIPMER Puducherry',
       quote:
-        'I used PW for Physics and Chemistry — great content at scale. But for Biology, the 18-student Cerebrum batch was a game-changer. Pairing both worked.',
+        'I used an online-only platform for Physics and Chemistry — great content at scale. But for Biology, the 18-student Cerebrum batch was a game-changer. Pairing both worked.',
     },
     {
       name: 'Sneha Reddy',
       score: 'NEET 672/720',
       college: 'KMC Manipal',
       quote:
-        'Switched from PW Yakeen to Cerebrum Ascent specifically for biology depth. AIIMS faculty + 1:1 doubt slots fixed my Physiology gaps in 8 weeks.',
+        'Switched from an online-only platform Yakeen to Cerebrum Ascent specifically for biology depth. AIIMS faculty + 1:1 doubt slots fixed my Physiology gaps in 8 weeks.',
     },
     {
       name: 'Aarav Sharma',
@@ -163,44 +163,44 @@ const config: CompetitorComparisonConfig = {
   ],
   faqs: [
     {
-      question: 'Cerebrum or PhysicsWallah — which is better for NEET Biology?',
+      question: 'Cerebrum or other online-only platforms — which is better for NEET Biology?',
       answer:
-        'For biology-specific preparation, Cerebrum is structurally deeper: biology-only AIIMS-trained faculty, 15–20 student batches, 1:1 doubt slots, NCERT line-by-line with 15+ years of PYQ drilling. PhysicsWallah is more affordable (₹4,000–₹26,000 vs ₹40,000+) and operates at mass scale (300–2,000+ students per live class). Many students choose both: PW for Physics/Chemistry, Cerebrum for Biology.',
+        'For biology-specific preparation, Cerebrum is structurally deeper: biology-only AIIMS-trained faculty, 15–20 student batches, 1:1 doubt slots, NCERT line-by-line with 15+ years of PYQ drilling. other online-only platforms is more affordable (₹4,000–₹26,000 vs ₹40,000+) and operates at mass scale (300–2,000+ students per live class). Many students choose both: an online-only platform for Physics/Chemistry, Cerebrum for Biology.',
     },
     {
-      question: 'Can I use Cerebrum alongside PhysicsWallah for NEET?',
+      question: 'Can I use Cerebrum alongside other online-only platforms for NEET?',
       answer:
-        "Yes — and many serious aspirants do exactly this. Common pattern: students keep PW Lakshya or Yakeen for Physics/Chemistry and add Cerebrum specifically for Biology gap-fill or full-tier coaching. Pairing the two combines PW's affordability for non-biology subjects with Cerebrum's biology depth.",
+        "Yes — and many serious aspirants do exactly this. Common pattern: students keep other mass-online platforms for Physics/Chemistry and add Cerebrum specifically for Biology gap-fill or full-tier coaching. Pairing the two combines the online platform's affordability for non-biology subjects with Cerebrum's biology depth.",
     },
     {
-      question: 'How does Cerebrum compare to PhysicsWallah on fees?',
+      question: 'How does Cerebrum compare to other online-only platforms on fees?',
       answer:
-        "PhysicsWallah is significantly more affordable: ₹4,000–₹26,000/year (Lakshya / Yakeen / Arjuna batches). Cerebrum: ₹40,000–₹1,56,000/year (Pursuit / Ascent / Pinnacle). The fee difference reflects batch size and 1:1 access — PW's 300+ student live classes vs Cerebrum's 15–20 student batches.",
+        "other online-only platforms is significantly more affordable: ₹4,000–₹26,000/year (various mass-online batches). Cerebrum: ₹40,000–₹1,56,000/year (Pursuit / Ascent / Pinnacle). The fee difference reflects batch size and 1:1 access — the online platform's 300+ student live classes vs Cerebrum's 15–20 student batches.",
     },
     {
       question:
-        "Is Cerebrum founder Dr. Shekhar C Singh different from PhysicsWallah's Alakh Pandey?",
+        "Is Cerebrum's founder different from the founders of other online-only platforms?",
       answer:
-        'Yes — different backgrounds. Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years of biology pedagogy. Alakh Pandey is an IIT-BHU dropout who started as a YouTube physics teacher and built PhysicsWallah into a mass-online NEET / JEE platform. Different domain expertise — Dr. Shekhar is biology-specific, Alakh is physics-specific.',
+        'Yes — different backgrounds. Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years of biology pedagogy. Founders of other online-only platforms typically come from physics or engineering backgrounds. Different domain expertise — Dr. Shekhar is biology-specific.',
     },
     {
-      question: 'Does Cerebrum have offline centres like PhysicsWallah Vidyapeeth?',
+      question: 'Does Cerebrum have offline centres like the online platform offline arm?',
       answer:
-        'Cerebrum operates 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida). PhysicsWallah Vidyapeeth has 60+ offline centres across India, focused on Tier-2 cities. Different geographic footprints — Cerebrum is NCR-anchored with pan-India online, PW is broadly distributed offline.',
+        'Cerebrum operates 6 Delhi NCR centres (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida). the online platform offline arm has 60+ offline centres across India, focused on Tier-2 cities. Different geographic footprints — Cerebrum is NCR-anchored with pan-India online, an online-only platform is broadly distributed offline.',
     },
     {
-      question: 'Does PhysicsWallah have AIIMS-trained biology faculty?',
+      question: 'Does other online-only platforms have AIIMS-trained biology faculty?',
       answer:
-        "PhysicsWallah's biology faculty are qualified NEET coaches but the brand's founder, brand identity and primary expertise centre on Physics. Cerebrum's entire faculty stack is biology-only with the founder Dr. Shekhar C Singh holding AIIMS New Delhi credentials. For biology depth specifically, Cerebrum is structurally more specialised.",
+        "Other online-only platforms' biology faculty are qualified NEET coaches but the brand's founder, brand identity and primary expertise centre on Physics. Cerebrum's entire faculty stack is biology-only with the founder Dr. Shekhar C Singh holding AIIMS New Delhi credentials. For biology depth specifically, Cerebrum is structurally more specialised.",
     },
     {
-      question: 'What is the success rate for biology at Cerebrum vs PhysicsWallah?',
+      question: 'What is the success rate for biology at Cerebrum vs other online-only platforms?',
       answer:
-        'Cerebrum: 98% NEET-UG qualification rate, average 330+/360 NEET Biology score, 680+ documented medical college selections. PhysicsWallah claims 10K+ NEET selections aggregated across all subjects, without published biology-isolated benchmarks. Hard to compare directly because of different reporting standards.',
+        'Cerebrum: 98% NEET-UG qualification rate, average 330+/360 NEET Biology score, 680+ documented medical college selections. other online-only platforms claims 10K+ NEET selections aggregated across all subjects, without published biology-isolated benchmarks. Hard to compare directly because of different reporting standards.',
     },
   ],
   whatsappMessage:
-    'Hi! I want to compare Cerebrum and PhysicsWallah for NEET biology. Please share batch details and demo timings.',
+    'Hi! I want to compare Cerebrum and other online-only platforms for NEET biology. Please share batch details and demo timings.',
 }
 
 export default function CerebrumVsPhysicsWallahPage() {

@@ -35,12 +35,12 @@ const successMetrics = [
 
 const faqs = [
   { question: 'Why is online coaching ideal for Mussoorie boarding school students?', answer: 'Boarding school students cant easily access physical coaching. Our online classes at Rs 24,000-48,000/year let you prepare for NEET from your hostel room.' },
-  { question: 'Which schools do you serve in Mussoorie?', answer: 'We serve students from Wynberg Allen, Woodstock, Oak Grove, St. Georges, and all Mussoorie and Dehradun boarding schools.' },
+  { question: 'Which schools do you serve in Mussoorie?', answer: 'We serve students from Wynberg the largest national NEET chain, Woodstock, Oak Grove, St. Georges, and all Mussoorie and Dehradun boarding schools.' },
   { question: 'What is the fee?', answer: 'Rs 24,000 to Rs 48,000 per year with EMI options.' },
   { question: 'Do you understand ICSE/ISC patterns?', answer: 'Yes! Most Mussoorie schools follow ICSE/ISC. Our faculty understand these patterns.' },
 ]
 
-const premiumSchools = ['Wynberg Allen School', 'Woodstock School', 'Oak Grove School', 'St. Georges College', 'Mussoorie International', 'Guru Nanak Fifth Centenary', 'Convent of Jesus and Mary', 'St. Fidelis College']
+const premiumSchools = ['Wynberg the largest national NEET chain School', 'Woodstock School', 'Oak Grove School', 'St. Georges College', 'Mussoorie International', 'Guru Nanak Fifth Centenary', 'Convent of Jesus and Mary', 'St. Fidelis College']
 
 const medicalColleges = ['AIIMS Rishikesh', 'Government Medical College Haldwani', 'SRHU Dehradun', 'AIIMS Delhi', 'PGIMER Chandigarh']
 

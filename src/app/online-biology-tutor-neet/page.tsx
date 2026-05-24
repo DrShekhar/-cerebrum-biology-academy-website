@@ -128,7 +128,7 @@ export default function OnlineBiologyTutorNeetPage() {
             instructor: {
               '@type': 'Person',
               name: 'Dr. Shekhar C Singh',
-              description: 'AIIMS Alumnus, Former Narayana Academic Head',
+              description: 'AIIMS Alumnus, Former Academic Head at a leading national educational institution',
             },
             courseMode: 'online',
           }),
@@ -157,7 +157,7 @@ export default function OnlineBiologyTutorNeetPage() {
 
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Master NEET Biology online with{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head</strong>.
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Academic Head at a leading national educational institution</strong>.
               Live interactive classes with NCERT-focused teaching that has produced 67+ AIIMS
               selections.
             </p>

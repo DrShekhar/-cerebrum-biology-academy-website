@@ -38,7 +38,7 @@ const config: BestVerticalConfig = {
   subheadline:
     'Structured curriculum, cohort dynamics, weekly mocks. Led by Dr. Shekhar C Singh (AIIMS Delhi).',
   intro:
-    'Biology classes for NEET differ from 1:1 tutoring — structured curriculum at scale, peer learning, weekly group mocks, mock-test rankings, and cohort accountability. Cerebrum caps batches at 15–20 students (vs 50–100+ at Allen, Aakash, PhysicsWallah) — close enough for personal attention, large enough for healthy competition.',
+    'Biology classes for NEET differ from 1:1 tutoring — structured curriculum at scale, peer learning, weekly group mocks, mock-test rankings, and cohort accountability. Cerebrum caps batches at 15–20 students (vs 50–100+ at the largest national NEET chains and online-first generalist platforms) — close enough for personal attention, large enough for healthy competition.',
   clusterSummary:
     'Offline at 6 Delhi NCR centres · Online live (not recorded) pan-India · English + Hindi · NCERT-anchored, PYQ-driven.',
   credentials: [
@@ -89,7 +89,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Why Small-Batch Biology Classes Beat 200+ Lecture Halls',
       description:
-        "Allen, Aakash and PhysicsWallah typically run batches of 100–400 students per teacher. At those sizes individual attention is impossible — students become invisible. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). Every student's doubt gets answered every week.",
+        "the largest national NEET chains and online-first generalist platforms typically run batches of 100–400 students per teacher. At those sizes individual attention is impossible — students become invisible. Cerebrum caps batches at 15–20 (Ascent) or 10–12 (Pinnacle). Every student's doubt gets answered every week.",
     },
     {
       title: 'Biology-Only Specialisation',
@@ -177,9 +177,9 @@ const config: BestVerticalConfig = {
         'Ideal: Class 11 onset (April–May) for full 2-year Foundation. Class 12: April for the final-year batch. Droppers: within 30 days of NEET result for a structured 12-month dropper programme covering complete Class 11 + 12 revision. Crash courses (8–12 weeks) available for the final pre-NEET stretch.',
     },
     {
-      question: 'How does Cerebrum compare to Allen, Aakash and PhysicsWallah?',
+      question: 'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms?',
       answer:
-        'Cerebrum is biology-only (360/720 NEET marks). Allen, Aakash and PhysicsWallah teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum runs 15–20 student batches and the same AIIMS-trained biology faculty for the entire term. Fees are typically 40–60% lower for biology-specific quality. Most students keep their main coaching for Physics/Chemistry and add Cerebrum for Biology.',
+        'Cerebrum is biology-only (360/720 NEET marks). the largest national NEET chains and online-first generalist platforms teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum runs 15–20 student batches and the same AIIMS-trained biology faculty for the entire term. Fees are typically 40–60% lower for biology-specific quality. Most students keep their main coaching for Physics/Chemistry and add Cerebrum for Biology.',
     },
   ],
   knowsAbout: [

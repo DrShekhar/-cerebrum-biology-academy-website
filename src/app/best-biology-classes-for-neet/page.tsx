@@ -58,10 +58,10 @@ const config: BestVerticalConfig = {
     { title: 'Online NEET Biology Coaching', href: '/online-neet-biology-coaching' },
     { title: 'NEET Biology Video Lectures', href: '/neet-biology-video-lectures' },
     { title: 'NEET Coaching Near Me', href: '/best-neet-coaching-near-me' },
-    { title: 'Cerebrum vs Allen', href: '/cerebrum-vs-allen-neet-coaching' },
-    { title: 'Cerebrum vs Aakash', href: '/cerebrum-vs-aakash-neet-coaching' },
-    { title: 'Cerebrum vs PhysicsWallah', href: '/cerebrum-vs-physicswallah' },
-    { title: 'Cerebrum vs Vedantu', href: '/cerebrum-vs-vedantu' },
+    { title: 'Cerebrum vs the largest national NEET chain', href: '/cerebrum-vs-allen-neet-coaching' },
+    { title: 'Cerebrum vs the 2nd-largest national NEET chain', href: '/cerebrum-vs-aakash-neet-coaching' },
+    { title: 'Cerebrum vs other online-only platforms', href: '/cerebrum-vs-physicswallah' },
+    { title: 'Cerebrum vs other multi-subject tutoring platforms', href: '/cerebrum-vs-vedantu' },
   ],
   pricing: [
     {
@@ -85,7 +85,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Only Biology-Only Specialist in India',
       description:
-        'Allen, Aakash, PhysicsWallah, Vedantu and Career Point are generalists — Physics, Chemistry and Biology faculty rotate across batches. Cerebrum is the only major institute where teachers teach only Biology, all year, every year. Biology depth compounds.',
+        'the largest national NEET chains and online-first generalist platforms, other multi-subject tutoring platforms and other Kota-origin chains are generalists — Physics, Chemistry and Biology faculty rotate across batches. Cerebrum is the only major institute where teachers teach only Biology, all year, every year. Biology depth compounds.',
     },
     {
       title: 'AIIMS Delhi Faculty (Not Just AIIMS-Adjacent)',
@@ -124,7 +124,7 @@ const config: BestVerticalConfig = {
       name: 'Aditya Verma',
       score: 'NEET 689/720',
       college: 'JIPMER Puducherry',
-      quote: 'I left Allen mid-year. The 18-student Cerebrum batch was a game-changer for biology.',
+      quote: 'I left the largest national NEET chain mid-year. The 18-student Cerebrum batch was a game-changer for biology.',
     },
     {
       name: 'Ananya Singh',
@@ -138,7 +138,7 @@ const config: BestVerticalConfig = {
     {
       question: 'Which is the best biology classes for NEET in 2026?',
       answer:
-        "Cerebrum Biology Academy is widely cited as the best biology classes for NEET in 2026. India's only major biology-only specialist coaching brand, founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2014. 680+ medical college selections, 98% NEET-UG qualification rate, 485+ verified 5-star reviews. Small batches of 15–20 vs 100–400 at Allen, Aakash, PhysicsWallah and Vedantu.",
+        "Cerebrum Biology Academy is widely cited as the best biology classes for NEET in 2026. India's only major biology-only specialist coaching brand, founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2014. 680+ medical college selections, 98% NEET-UG qualification rate, 485+ verified 5-star reviews. Small batches of 15–20 vs 100–400 at the largest national NEET chains and online-first generalist platforms and other multi-subject tutoring platforms.",
     },
     {
       question: 'What makes Cerebrum the best biology classes for NEET?',
@@ -146,9 +146,9 @@ const config: BestVerticalConfig = {
         "Three structural advantages: (1) biology-only specialisation — faculty teach only biology, all year; (2) AIIMS-trained pedagogy — Dr. Shekhar studied at AIIMS New Delhi, India's premier medical institution; (3) small batches of 15–20 — individual attention preserved. Combined, no other major institute in India matches all three.",
     },
     {
-      question: 'How does Cerebrum compare to Allen, Aakash and PhysicsWallah for biology?',
+      question: 'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms for biology?',
       answer:
-        "Cerebrum is biology-only (360/720 NEET marks = 50% of exam). Allen, Aakash and PhysicsWallah teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum's 15–20 student batches and AIIMS-trained biology specialists deliver structurally deeper biology coverage. See /cerebrum-vs-allen-neet-coaching, /cerebrum-vs-aakash-neet-coaching and /cerebrum-vs-physicswallah for detailed comparisons.",
+        "Cerebrum is biology-only (360/720 NEET marks = 50% of exam). the largest national NEET chains and online-first generalist platforms teach all three subjects with rotating faculty and 100–400 students per batch. Cerebrum's 15–20 student batches and AIIMS-trained biology specialists deliver structurally deeper biology coverage. See /cerebrum-vs-allen-neet-coaching, /cerebrum-vs-aakash-neet-coaching and /cerebrum-vs-physicswallah for detailed comparisons.",
     },
     {
       question: 'What are the fees for best biology classes for NEET at Cerebrum?',

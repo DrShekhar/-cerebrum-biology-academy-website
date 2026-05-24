@@ -154,7 +154,7 @@ const faqs = [
   {
     question: 'My child is anxious / mentally overwhelmed. What should we do as parents?',
     answer:
-      'Psychiatrists quoted in major newspapers (GMC Thiruvananthapuram, Narayana Health, Delhi clinicians) warn that anticipatory anxiety, sleep disruption and post-stress crash are common after exam cancellations. Protect 6+ hours of sleep, limit doomscrolling, get daily sunlight and exercise, avoid panic study-plan rewrites in week one. Free confidential helplines: Tele-MANAS 14416 (Govt of India, 24×7, NTA-recommended), iCall 9152987821 (Mon–Sat, 8 AM–10 PM), Vandrevala Foundation 1860-2662-345 (24×7).',
+      'Psychiatrists quoted in major newspapers (GMC Thiruvananthapuram, leading private healthcare, Delhi clinicians) warn that anticipatory anxiety, sleep disruption and post-stress crash are common after exam cancellations. Protect 6+ hours of sleep, limit doomscrolling, get daily sunlight and exercise, avoid panic study-plan rewrites in week one. Free confidential helplines: Tele-MANAS 14416 (Govt of India, 24×7, NTA-recommended), iCall 9152987821 (Mon–Sat, 8 AM–10 PM), Vandrevala Foundation 1860-2662-345 (24×7).',
   },
   {
     question: 'What does the Cerebrum RE-NEET 2026 crash course cover?',
@@ -620,7 +620,7 @@ export default function ReNEET2026Page() {
               <p>
                 Every major newspaper covering this cancellation has quoted psychiatrists warning
                 about anticipatory anxiety, sleep disruption and post-stress crash. Clinicians at
-                Government Medical College Thiruvananthapuram, Narayana Health and Delhi-based
+                Government Medical College Thiruvananthapuram, leading private healthcare and Delhi-based
                 hospitals have given the same practical guidance: protect 6+ hours of sleep, limit
                 doomscrolling, get daily sunlight and exercise, and do not rewrite your study plan
                 in panic mode in the first week.
@@ -745,7 +745,7 @@ export default function ReNEET2026Page() {
               </li>
               <li>
                 Mental-health guidance: The Week, 12 May 2026 (citing GMC Thiruvananthapuram,
-                Narayana Health and Delhi-based psychiatrists).
+                leading private healthcare and Delhi-based psychiatrists).
               </li>
               <li>
                 Official notifications will appear at{' '}

@@ -131,7 +131,7 @@ export default function Class12Layout({ children }: { children: React.ReactNode 
                 name: 'Who teaches Class 12 NEET at Cerebrum?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Dr. Shekhar C Singh, AIIMS alumnus, 15+ years. Former Academic Head at Narayana Group.',
+                  text: 'Dr. Shekhar C Singh, AIIMS alumnus, 15+ years. Former Academic Head at a leading national educational institution.',
                 },
               },
               {

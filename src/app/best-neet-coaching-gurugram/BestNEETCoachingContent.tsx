@@ -30,7 +30,7 @@ const coachingComparison = [
     reviews: 400,
   },
   {
-    name: 'Allen Career Institute',
+    name: 'XYZ Coaching (largest national NEET chain)',
     highlight: false,
     location: 'Multiple centers',
     specialty: 'All subjects',
@@ -45,7 +45,7 @@ const coachingComparison = [
     reviews: 2500,
   },
   {
-    name: 'Aakash Institute',
+    name: 'SKY Coaching (2nd-largest national NEET chain)',
     highlight: false,
     location: 'Sector 14, Gurugram',
     specialty: 'All subjects',
@@ -60,7 +60,7 @@ const coachingComparison = [
     reviews: 1800,
   },
   {
-    name: 'FIITJEE',
+    name: 'other IIT-JEE-first coachings',
     highlight: false,
     location: 'Sector 43, Gurugram',
     specialty: 'IIT-JEE (NEET secondary)',

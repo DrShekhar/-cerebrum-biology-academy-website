@@ -126,7 +126,7 @@ export const cities: CityData[] = [
       'Summer heat makes travel exhausting',
       'Quality coaching concentrated in Ameerpet area',
       'Telugu medium background needs extra support',
-      'Competition from Sri Chaitanya/Narayana factory model',
+      'Competition from other South-Indian chains/a leading national educational institution factory model',
     ],
     whyOnline: [
       'Study in AC comfort - no heat stress',

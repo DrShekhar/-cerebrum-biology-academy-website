@@ -532,22 +532,22 @@ export default function VelocityAlternativeContent({ faqs }: { faqs: FAQ[] }) {
               href="/aakash-alternative-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">Aakash Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with Aakash</p>
+              <h3 className="font-semibold text-teal-600">the 2nd-largest national NEET chain Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with the 2nd-largest national NEET chain</p>
             </Link>
             <Link
               href="/allen-alternative-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">Allen Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with Allen</p>
+              <h3 className="font-semibold text-teal-600">the largest national NEET chain Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with the largest national NEET chain</p>
             </Link>
             <Link
               href="/narayana-alternative-faridabad"
               className="bg-gray-50 p-4 rounded-xl hover:shadow-md"
             >
-              <h3 className="font-semibold text-teal-600">Narayana Alternative</h3>
-              <p className="text-sm text-gray-600">Compare with Narayana</p>
+              <h3 className="font-semibold text-teal-600">a leading national educational institution Alternative</h3>
+              <p className="text-sm text-gray-600">Compare with a leading national educational institution</p>
             </Link>
             <Link
               href="/neet-coaching-faridabad"

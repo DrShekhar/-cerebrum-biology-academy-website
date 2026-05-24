@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     question: 'Where is the center located?',
-    answer: `Our center is at ${gurugramLocation.streetAddress}, ${gurugramLocation.addressLocality}. Same building as Allen Career Institute, easily accessible from all Gurugram areas.`,
+    answer: `Our center is at ${gurugramLocation.streetAddress}, ${gurugramLocation.addressLocality}. Same building as XYZ Coaching (largest national NEET chain), easily accessible from all Gurugram areas.`,
   },
 ]
 

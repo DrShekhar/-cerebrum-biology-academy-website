@@ -182,7 +182,7 @@ const faqs = [
   {
     question: 'What are the fees for NEET coaching in Ghaziabad?',
     answer:
-      'Our NEET Biology coaching fees range from Rs 24,000 to Rs 48,000 per year. This is significantly lower than Aakash, Allen or FIITJEE while offering superior quality with AIIMS faculty and smaller batches of 15-20 students.',
+      'Our NEET Biology coaching fees range from Rs 24,000 to Rs 48,000 per year. This is significantly lower than the 2nd-largest national NEET chain, the largest national NEET chain or other IIT-JEE-first coachings while offering superior quality with AIIMS faculty and smaller batches of 15-20 students.',
   },
   {
     question: 'Is online coaching effective for Ghaziabad students?',

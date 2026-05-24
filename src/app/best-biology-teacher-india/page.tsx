@@ -67,7 +67,7 @@ const verticals = [
     proof: '680+ AIIMS/JIPMER/AFMC selections · 98% qualification rate',
     href: '/best-biology-teacher-for-neet',
     description:
-      'Lead curriculum architect with 15+ years of NEET Biology pedagogy. The only major biology-only specialist coaching brand in India — distinct from Allen, Aakash, PhysicsWallah and Vedantu generalist chains.',
+      'Lead curriculum architect with 15+ years of NEET Biology pedagogy. The only major biology-only specialist coaching brand in India — distinct from the largest national NEET chains, online-first generalist platforms and multi-subject tutoring platforms.',
   },
   {
     title: 'IB Biology HL & SL (Global)',
@@ -85,7 +85,7 @@ const verticals = [
   },
   {
     title: 'MCAT Biology / Biochemistry',
-    proof: 'Bio-section specialist · priced 30–50% below Kaplan / Princeton Review',
+    proof: 'Bio-section specialist · priced 30–50% below other generalist MCAT brands',
     href: '/best-mcat-biology-tutor',
     description:
       'Campbell Biology end-to-end plus Lehninger Biochemistry. Self-Paced $499, Small-Batch $999, 1:1 Senior Faculty $1,499 / $150/hr.',
@@ -124,7 +124,7 @@ const whyBest = [
   {
     title: 'Biology-Only Specialist (Structural Difference)',
     description:
-      'Unlike Allen, Aakash, PhysicsWallah, Vedantu, Career Point — which rotate Physics, Chemistry and Biology faculty — Cerebrum is the only major biology-only coaching brand in India. 360/720 NEET marks come from Biology. A biology-exclusive faculty translates to consistently higher Biology scores.',
+      'Unlike the largest national NEET chains, online-first generalist platforms, multi-subject tutoring platforms and Kota-origin chains — which rotate Physics, Chemistry and Biology faculty — Cerebrum is the only major biology-only coaching brand in India. 360/720 NEET marks come from Biology. A biology-exclusive faculty translates to consistently higher Biology scores.',
   },
   {
     title: 'AIIMS-Trained, Not Just AIIMS-Adjacent',
@@ -202,7 +202,7 @@ const faqs = [
   {
     question: 'Who is the best biology teacher in India?',
     answer:
-      "Dr. Shekhar C Singh — AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014) — is widely regarded as India's best biology teacher. Backed by 680+ documented medical college selections, a 98% NEET-UG qualification rate, 485+ verified 5-star reviews, and 15+ years of continuous biology pedagogy. Cerebrum is the only major biology-only specialist coaching brand in India — distinct from generalist chains (Allen, Aakash, PhysicsWallah) that rotate faculty across Physics, Chemistry and Biology.",
+      "Dr. Shekhar C Singh — AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014) — is widely regarded as India's best biology teacher. Backed by 680+ documented medical college selections, a 98% NEET-UG qualification rate, 485+ verified 5-star reviews, and 15+ years of continuous biology pedagogy. Cerebrum is the only major biology-only specialist coaching brand in India — distinct from the largest national NEET chains and online-first generalist platforms that rotate faculty across Physics, Chemistry and Biology.",
   },
   {
     question: 'Which is the best biology coaching in India?',
@@ -227,7 +227,7 @@ const faqs = [
   {
     question: 'Who is the best MCAT Biology tutor?',
     answer:
-      "Dr. Shekhar C Singh is a leading MCAT Biology tutor — one of the few biology-only specialists in a market dominated by generalist test-prep agencies (Princeton Review, Kaplan, Blueprint MCAT, Altius). Cerebrum's MCAT Bio/Biochem programme covers Campbell Biology end-to-end plus first-semester biochemistry via Lehninger, priced 30–50% below Kaplan and Princeton Review.",
+      "Dr. Shekhar C Singh is a leading MCAT Biology tutor — one of the few biology-only specialists in a market dominated by other generalist MCAT brands. Cerebrum's MCAT Bio/Biochem programme covers Campbell Biology end-to-end plus first-semester biochemistry via Lehninger, priced 30–50% below other generalist MCAT brands.",
   },
   {
     question: 'Who is the best Biology Olympiad coach (USABO / INBO / IBO)?',
@@ -406,8 +406,9 @@ export default function BestBiologyTeacherIndiaPage() {
               Dr. Shekhar C Singh · Founder, Cerebrum Biology Academy
             </p>
             <p className="text-lg text-green-100 mb-8 max-w-3xl mx-auto">
-              India&apos;s only biology-only specialist coaching brand — distinct from Allen,
-              Aakash, PhysicsWallah, Vedantu. AIIMS-trained faculty leading six biology verticals:
+              India&apos;s only biology-only specialist coaching brand — distinct from the largest
+              national NEET chains, online-first generalist platforms and multi-subject tutoring
+              platforms. AIIMS-trained faculty leading six biology verticals:
               NEET, IB, AP, MCAT, USABO/INBO/IBO and CBSE/ICSE board exams.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

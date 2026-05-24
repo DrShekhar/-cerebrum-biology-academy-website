@@ -188,7 +188,7 @@ Recommendation: [Yes/No] because [Reason]
 - **Revenue:** Course fees (₹75K per student)
 - **Target:** 1,50,000+ students across India + international
 - **Seasonality:** Peak during NEET preparation season
-- **Competition:** Allen, Resonance, Aakash, BYJU'S, Unacademy
+- **Competition:** the largest national NEET chains, other Kota-origin chains, the 2nd-largest national NEET chain, other South-Indian chains, other online-only platforms
 - **USP:** 94.2% NEET qualification rate
 
 ### **Student Journey Considerations:**

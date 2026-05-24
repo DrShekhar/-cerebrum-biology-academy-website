@@ -4,7 +4,7 @@
  *
  * Why this matters: LLMs and SGE (Google Generative Search) preferentially
  * surface results with rated brands. Cerebrum's hubs without ratings get
- * downranked vs rated competitors (Aakash, Allen, PhysicsWallah).
+ * downranked vs rated competitor brands in the national NEET coaching category.
  *
  * Universal numbers (485+ reviews · 5.0 average) come from real Google
  * Business + Trustpilot aggregates. Per-service sample reviews are

@@ -14,9 +14,9 @@ import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaS
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'Best FIITJEE Alternative in Gurugram 2026 | Better Results, Lower Fees',
+  title: 'Best other IIT-JEE-first coachings Alternative in Gurugram 2026 | Better Results, Lower Fees',
   description:
-    'Looking for FIITJEE alternative in Gurugram (Gurgaon)? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 88264-44334!',
+    'Looking for other IIT-JEE-first coachings alternative in Gurugram (Gurgaon)? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 88264-44334!',
   keywords: [
     'fiitjee alternative gurugram',
     'fiitjee alternative gurgaon',
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     locale: 'en_IN',
-    title: 'Best FIITJEE Alternative in Gurugram 2026',
+    title: 'Best other IIT-JEE-first coachings Alternative in Gurugram 2026',
     description:
-      'Looking for FIITJEE alternative? Cerebrum offers 60% lower fees with 98% success rate.',
+      'Looking for other IIT-JEE-first coachings alternative? Cerebrum offers 60% lower fees with 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/fiitjee-alternative-gurugram',
   },
   alternates: {
@@ -96,44 +96,44 @@ const comparisonData = [
 
 const faqs = [
   {
-    question: 'Why consider Cerebrum over FIITJEE Gurugram?',
+    question: 'Why consider Cerebrum over other IIT-JEE-first coachings Gurugram?',
     answer:
-      'Key differences: 1) Specialized in NEET biology (FIITJEE focuses on JEE), 2) 60% lower fees (₹75K vs ₹2L+), 3) Smaller batches (25 vs 50+ students), 4) AIIMS-trained faculty, 5) 98% success rate in NEET biology. For NEET aspirants, biology specialist coaching gives better results.',
+      'Key differences: 1) Specialized in NEET biology (other IIT-JEE-first coachings focuses on JEE), 2) 60% lower fees (₹75K vs ₹2L+), 3) Smaller batches (25 vs 50+ students), 4) AIIMS-trained faculty, 5) 98% success rate in NEET biology. For NEET aspirants, biology specialist coaching gives better results.',
   },
   {
-    question: 'How do fees compare: FIITJEE vs Cerebrum?',
+    question: 'How do fees compare: other IIT-JEE-first coachings vs Cerebrum?',
     answer:
-      'FIITJEE Gurugram: ₹1.8-2.5 Lakh/year for integrated programs. Cerebrum: ₹45,000-75,000/year for complete NEET biology coaching. You save ₹1.2-1.75 Lakh while getting specialized biology coaching with better student-teacher ratio.',
+      'other IIT-JEE-first coachings Gurugram: ₹1.8-2.5 Lakh/year for integrated programs. Cerebrum: ₹45,000-75,000/year for complete NEET biology coaching. You save ₹1.2-1.75 Lakh while getting specialized biology coaching with better student-teacher ratio.',
   },
   {
-    question: 'Is FIITJEE good for NEET preparation?',
+    question: 'Is other IIT-JEE-first coachings good for NEET preparation?',
     answer:
-      'FIITJEE is excellent for JEE/Engineering preparation but treats NEET as secondary. Their biology faculty often handles 100+ students. For serious NEET aspirants, biology-focused coaching like Cerebrum (25-student batches, AIIMS faculty) delivers better NEET biology results.',
+      'other IIT-JEE-first coachings is excellent for JEE/Engineering preparation but treats NEET as secondary. Their biology faculty often handles 100+ students. For serious NEET aspirants, biology-focused coaching like Cerebrum (25-student batches, AIIMS faculty) delivers better NEET biology results.',
   },
   {
-    question: 'What if I am already enrolled in FIITJEE Gurugram?',
+    question: 'What if I am already enrolled in other IIT-JEE-first coachings Gurugram?',
     answer:
-      'Many FIITJEE students join Cerebrum for supplementary biology coaching. Options: 1) Complete biology-only batch (₹35,000/year), 2) NEET biology crash course (₹25,000), 3) Test series only (₹8,000). Timings adjusted to not clash with FIITJEE classes.',
+      'Many other IIT-JEE-first coachings students join Cerebrum for supplementary biology coaching. Options: 1) Complete biology-only batch (₹35,000/year), 2) NEET biology crash course (₹25,000), 3) Test series only (₹8,000). Timings adjusted to not clash with other IIT-JEE-first coachings classes.',
   },
   {
-    question: 'Which coaching has better results: FIITJEE or Cerebrum?',
+    question: 'Which coaching has better results: other IIT-JEE-first coachings or Cerebrum?',
     answer:
-      "For NEET biology specifically: Cerebrum has 98% success rate with 50+ students scoring 350+/360 in biology annually. FIITJEE publishes overall results but doesn't break down biology scores. Our specialization means deeper coverage of NEET biology patterns.",
+      "For NEET biology specifically: Cerebrum has 98% success rate with 50+ students scoring 350+/360 in biology annually. other IIT-JEE-first coachings publishes overall results but doesn't break down biology scores. Our specialization means deeper coverage of NEET biology patterns.",
   },
   {
     question: 'Is batch size really smaller at Cerebrum?',
     answer:
-      'Yes, verified difference: FIITJEE Gurugram has 50-80 students per batch. Cerebrum maintains strict 25-student limit for personal attention. This means 3x more doubt-resolution time per student and better faculty-student interaction.',
+      'Yes, verified difference: other IIT-JEE-first coachings Gurugram has 50-80 students per batch. Cerebrum maintains strict 25-student limit for personal attention. This means 3x more doubt-resolution time per student and better faculty-student interaction.',
   },
   {
     question: 'Do you offer demo classes before switching?',
     answer:
-      'Absolutely! Free 3-day trial: Attend classes, compare teaching quality, meet faculty, see infrastructure. No payment required. Many FIITJEE students switched after experiencing our focused teaching methodology. Book trial at 88264-44334.',
+      'Absolutely! Free 3-day trial: Attend classes, compare teaching quality, meet faculty, see infrastructure. No payment required. Many other IIT-JEE-first coachings students switched after experiencing our focused teaching methodology. Book trial at 88264-44334.',
   },
   {
     question: 'What about study material comparison?',
     answer:
-      'FIITJEE provides generic material for all subjects. Cerebrum provides: NEET-specific biology modules, NCERT line-by-line analysis, 10-year PYQ bank, chapter-wise mock tests, diagram practice sheets. Our material is updated after every NEET exam for latest patterns.',
+      'other IIT-JEE-first coachings provides generic material for all subjects. Cerebrum provides: NEET-specific biology modules, NCERT line-by-line analysis, 10-year PYQ bank, chapter-wise mock tests, diagram practice sheets. Our material is updated after every NEET exam for latest patterns.',
   },
 ]
 
@@ -149,14 +149,14 @@ export default function FIITJEEAlternativeGurugram() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block bg-yellow-500 text-blue-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              FIITJEE Alternative in Gurugram
+              other IIT-JEE-first coachings Alternative in Gurugram
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Best FIITJEE Alternative in Gurugram
+              Best other IIT-JEE-first coachings Alternative in Gurugram
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Why pay ₹2+ Lakh when you can get better NEET results at ₹75K? Compare Cerebrum vs
-              FIITJEE.
+              other IIT-JEE-first coachings.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -196,7 +196,7 @@ export default function FIITJEEAlternativeGurugram() {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600">150+</div>
-              <div className="text-gray-600">FIITJEE Switchers</div>
+              <div className="text-gray-600">other IIT-JEE-first coachings Switchers</div>
             </div>
           </div>
         </div>
@@ -206,14 +206,14 @@ export default function FIITJEEAlternativeGurugram() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            FIITJEE vs Cerebrum: Head-to-Head
+            other IIT-JEE-first coachings vs Cerebrum: Head-to-Head
           </h2>
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-blue-900 text-white">
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
-                  <th className="px-6 py-4 text-center">FIITJEE</th>
+                  <th className="px-6 py-4 text-center">other IIT-JEE-first coachings</th>
                   <th className="px-6 py-4 text-center">Cerebrum</th>
                 </tr>
               </thead>
@@ -245,13 +245,13 @@ export default function FIITJEEAlternativeGurugram() {
       {/* Why Switch */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Students Switch from FIITJEE</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Students Switch from other IIT-JEE-first coachings</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <IndianRupee className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Save ₹1.2+ Lakh</h3>
               <p className="text-gray-600">
-                FIITJEE charges ₹2L+ for integrated programs. Cerebrum offers complete NEET biology
+                other IIT-JEE-first coachings charges ₹2L+ for integrated programs. Cerebrum offers complete NEET biology
                 coaching at ₹75K. Same quality, 60% savings.
               </p>
             </div>
@@ -259,7 +259,7 @@ export default function FIITJEEAlternativeGurugram() {
               <Users className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">3x More Attention</h3>
               <p className="text-gray-600">
-                FIITJEE batches have 50-80 students. Our 25-student batches mean 3x more
+                other IIT-JEE-first coachings batches have 50-80 students. Our 25-student batches mean 3x more
                 doubt-resolution time per student.
               </p>
             </div>
@@ -267,7 +267,7 @@ export default function FIITJEEAlternativeGurugram() {
               <Award className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Biology Specialists</h3>
               <p className="text-gray-600">
-                FIITJEE focuses on JEE. We specialize in NEET biology with AIIMS-trained faculty
+                other IIT-JEE-first coachings focuses on JEE. We specialize in NEET biology with AIIMS-trained faculty
                 dedicated to biology excellence.
               </p>
             </div>
@@ -288,7 +288,7 @@ export default function FIITJEEAlternativeGurugram() {
                     <p className="font-semibold">M2K Corporate Park</p>
                     <p className="text-gray-600">Sector 51, Gurugram 122018</p>
                     <p className="text-sm text-gray-500 mt-1">
-                      FIITJEE is in Sector 14 (8 km away)
+                      other IIT-JEE-first coachings is in Sector 14 (8 km away)
                     </p>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default function FIITJEEAlternativeGurugram() {
       {/* CTA */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Switch from FIITJEE?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Switch from other IIT-JEE-first coachings?</h2>
           <p className="text-xl text-blue-100 mb-8">
             Book a free 3-day trial. Experience the Cerebrum difference.
           </p>

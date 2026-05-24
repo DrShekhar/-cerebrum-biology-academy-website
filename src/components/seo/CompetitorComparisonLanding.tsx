@@ -443,11 +443,11 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
           <p className="text-sm text-slate-400 mt-6">
             See also:{' '}
             <Link href="/cerebrum-vs-allen-neet-coaching" className="underline">
-              Cerebrum vs Allen
+              Cerebrum vs largest national NEET chain
             </Link>{' '}
             ·{' '}
             <Link href="/cerebrum-vs-aakash-neet-coaching" className="underline">
-              Cerebrum vs Aakash
+              Cerebrum vs 2nd-largest national NEET chain
             </Link>{' '}
             ·{' '}
             <Link href="/best-neet-biology-coaching-india" className="underline">

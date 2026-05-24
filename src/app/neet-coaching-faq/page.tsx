@@ -278,7 +278,7 @@ const faqData = {
     {
       question: 'What are the best online resources for NEET Biology?',
       answer:
-        'Free online resources: (1) NCERT videos on YouTube (official NCERT channel), (2) Previous year NEET questions on aakash.ac.in and Allen.in (free practice), (3) Doubtnut app (free, but has ads) - Instant video solutions, (4) Khan Academy Biology (free English lessons), (5) Our channel @cerebrumbiologyacademy (YouTube - concept explanations, error analysis). Paid resources: (1) Unacademy Plus/Plus Pro: Live classes + recorded lectures, (2) Toppr: Interactive learning platform, (3) Byjus: Comprehensive but expensive. Cerebrum recommendation: Use free resources for concepts, use Cerebrum lectures for NEET-specific approach, use mock tests for practice. Don\'t overwhelm yourself with too many platforms - One good source beats 10 mediocre sources.',
+        'Free online resources: (1) NCERT videos on YouTube (official NCERT channel), (2) Previous year NEET questions on aakash.ac.in and the largest national NEET chain.in (free practice), (3) Doubtnut app (free, but has ads) - Instant video solutions, (4) Khan Academy Biology (free English lessons), (5) Our channel @cerebrumbiologyacademy (YouTube - concept explanations, error analysis). Paid resources: (1) other online-only platforms Plus/Plus Pro: Live classes + recorded lectures, (2) Toppr: Interactive learning platform, (3) Byjus: Comprehensive but expensive. Cerebrum recommendation: Use free resources for concepts, use Cerebrum lectures for NEET-specific approach, use mock tests for practice. Don\'t overwhelm yourself with too many platforms - One good source beats 10 mediocre sources.',
     },
     {
       question: 'How to prepare chapter-wise Biology quickly?',

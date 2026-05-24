@@ -400,7 +400,7 @@ export const coursePrograms: CourseProgram[] = [
         teachingExperience: '15+ years in NEET coaching',
         achievementHighlights: [
           'AIIMS New Delhi Alumnus',
-          'Former Academic Head at Narayana Group',
+          'Former Academic Head at a leading national educational institution',
           'Student Sadhna Sirin: 695/720 NEET, 100%ile Biology',
           'Mentored 15,000+ students to medical college',
           '98% success rate',
@@ -601,7 +601,7 @@ export const coursePrograms: CourseProgram[] = [
         teachingExperience: '15+ years in NEET coaching',
         achievementHighlights: [
           'AIIMS New Delhi Alumnus',
-          'Former Academic Head at Narayana Group',
+          'Former Academic Head at a leading national educational institution',
           'Student Sadhna Sirin: 695/720 NEET, 100%ile Biology',
           'Mentored 15,000+ students to medical college',
           '98% success rate',
@@ -829,7 +829,7 @@ export const coursePrograms: CourseProgram[] = [
         teachingExperience: '15+ years in NEET coaching',
         achievementHighlights: [
           'AIIMS New Delhi Alumnus',
-          'Former Academic Head at Narayana Group',
+          'Former Academic Head at a leading national educational institution',
           'Student Sadhna Sirin: 695/720 NEET, 100%ile Biology',
           'Mentored 15,000+ students to medical college',
           '98% success rate',
@@ -1036,7 +1036,7 @@ export const coursePrograms: CourseProgram[] = [
         teachingExperience: '15+ years in NEET coaching',
         achievementHighlights: [
           'AIIMS New Delhi Alumnus',
-          'Former Academic Head at Narayana Group',
+          'Former Academic Head at a leading national educational institution',
           'Student Sadhna Sirin: 695/720 NEET, 100%ile Biology',
           'Mentored 15,000+ students to medical college',
           '98% success rate',
@@ -1367,7 +1367,7 @@ export const coursePrograms: CourseProgram[] = [
         teachingExperience: '15+ years in NEET coaching',
         achievementHighlights: [
           'AIIMS New Delhi Alumnus',
-          'Former Academic Head at Narayana Group',
+          'Former Academic Head at a leading national educational institution',
           'Student Sadhna Sirin: 695/720 NEET, 100%ile Biology',
         ],
       },

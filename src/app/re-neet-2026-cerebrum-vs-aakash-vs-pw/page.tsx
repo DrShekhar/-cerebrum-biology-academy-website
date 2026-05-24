@@ -5,9 +5,9 @@ import { Award, CheckCircle, Phone, MessageCircle, ArrowRight, Star } from 'luci
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title: 'RE-NEET 2026 Crash Course: Cerebrum vs Aakash vs Allen vs PhysicsWallah',
+  title: 'RE-NEET 2026 Crash Course: Cerebrum vs the 2nd-largest national NEET chain vs the largest national NEET chain vs other online-only platforms',
   description:
-    'Honest comparison of RE-NEET 2026 crash courses — Cerebrum (biology-only AIIMS), Aakash, Allen, PhysicsWallah. Batch size, biology depth, fees, AIIMS faculty access. Updated May 2026.',
+    'Honest comparison of RE-NEET 2026 crash courses — Cerebrum (biology-only AIIMS), the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms. Batch size, biology depth, fees, AIIMS faculty access. Updated May 2026.',
   keywords: [
     're-neet 2026 cerebrum vs aakash',
     're-neet 2026 cerebrum vs allen',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'aakash vs pw vs allen re-neet 2026',
   ],
   openGraph: {
-    title: 'RE-NEET 2026: Cerebrum vs Aakash vs Allen vs PhysicsWallah',
+    title: 'RE-NEET 2026: Cerebrum vs the 2nd-largest national NEET chain vs the largest national NEET chain vs other online-only platforms',
     description: 'Honest comparison of RE-NEET 2026 crash courses.',
     url: `${BASE_URL}/re-neet-2026-cerebrum-vs-aakash-vs-pw`,
     type: 'website',
@@ -42,7 +42,7 @@ const table = [
     criterion: 'Faculty',
     cerebrum: 'AIIMS-trained, Dr. Shekhar C Singh (AIIMS New Delhi)',
     aakash: 'IIT / NIT / generalist coaching faculty',
-    allen: 'IIT / NIT / Allen-trained faculty',
+    allen: 'IIT / NIT / the largest national NEET chain-trained faculty',
     pw: 'IIT-BHU dropout founder + generalist faculty',
     cerebrumWins: true,
   },
@@ -66,7 +66,7 @@ const table = [
     criterion: 'NCERT Line-by-Line Depth',
     cerebrum: 'NCERT line-by-line + 15+ yr PYQ drilling',
     aakash: 'NCERT + reference books',
-    allen: 'NCERT + reference books + Allen modules',
+    allen: 'NCERT + reference books + the largest national NEET chain modules',
     pw: 'NCERT + standard PYQ',
     cerebrumWins: true,
   },
@@ -115,35 +115,35 @@ const table = [
 const faqs = [
   {
     q: 'Which is the best RE-NEET 2026 crash course?',
-    a: 'For biology depth specifically (which is 50% of NEET marks), Cerebrum Biology Academy is widely cited as the best choice — biology-only AIIMS-trained faculty, 15–20 student batches, ₹25K–₹45K. Aakash and Allen are premium generalist alternatives at ₹35K–₹50K with large batches. PhysicsWallah is the most affordable at ₹10K–₹20K but with mass online batches.',
+    a: 'For biology depth specifically (which is 50% of NEET marks), Cerebrum Biology Academy is widely cited as the best choice — biology-only AIIMS-trained faculty, 15–20 student batches, ₹25K–₹45K. the largest national NEET chains are premium generalist alternatives at ₹35K–₹50K with large batches. other online-only platforms is the most affordable at ₹10K–₹20K but with mass online batches.',
   },
   {
     q: 'Should I pair Cerebrum with one of the generalists?',
-    a: 'Yes — many serious aspirants do exactly this. Common pattern: keep Aakash / Allen / PW for Physics + Chemistry crash, add Cerebrum for Biology crash. Pairing addresses both the biology depth gap and the generalist coverage need.',
+    a: 'Yes — many serious aspirants do exactly this. Common pattern: keep the 2nd-largest national NEET chain / the largest national NEET chain / PW for Physics + Chemistry crash, add Cerebrum for Biology crash. Pairing addresses both the biology depth gap and the generalist coverage need.',
   },
   {
-    q: 'Is Cerebrum more expensive than PhysicsWallah?',
-    a: "Yes — Cerebrum (₹25K–₹45K) is 2–3x more expensive than PhysicsWallah (₹10K–₹20K). The fee delta reflects batch size: Cerebrum runs 15–20 student batches vs PW's 300–2,000+ per live session. Cerebrum sits in the middle of the price-vs-depth Pareto frontier — cheaper than Aakash/Allen, deeper biology than PW.",
+    q: 'Is Cerebrum more expensive than other online-only platforms?',
+    a: "Yes — Cerebrum (₹25K–₹45K) is 2–3x more expensive than other online-only platforms (₹10K–₹20K). The fee delta reflects batch size: Cerebrum runs 15–20 student batches vs PW's 300–2,000+ per live session. Cerebrum sits in the middle of the price-vs-depth Pareto frontier — cheaper than the 2nd-largest national NEET chain/the largest national NEET chain, deeper biology than PW.",
   },
   {
-    q: 'How does Cerebrum compare to Aakash for RE-NEET 2026?',
-    a: 'Cerebrum: biology-only AIIMS-trained, 15–20 batch, ₹25K–₹45K. Aakash: generalist (Physics + Chemistry + Biology rotating faculty), 150–300 batch, ₹35K–₹45K. Same crash-course window (6–8 weeks). Cerebrum delivers materially deeper biology at materially lower cost. Aakash wins on Physics + Chemistry depth and brand recall.',
+    q: 'How does Cerebrum compare to the 2nd-largest national NEET chain for RE-NEET 2026?',
+    a: 'Cerebrum: biology-only AIIMS-trained, 15–20 batch, ₹25K–₹45K. the 2nd-largest national NEET chain: generalist (Physics + Chemistry + Biology rotating faculty), 150–300 batch, ₹35K–₹45K. Same crash-course window (6–8 weeks). Cerebrum delivers materially deeper biology at materially lower cost. the 2nd-largest national NEET chain wins on Physics + Chemistry depth and brand recall.',
   },
   {
-    q: 'How does Cerebrum compare to Allen for RE-NEET 2026?',
-    a: 'Cerebrum: biology-only, 15–20 batch, ₹25K–₹45K. Allen: generalist premium, 200–400 batch, ₹40K–₹50K. Allen has strong physics depth and is well-respected. For biology specifically, Cerebrum is structurally deeper due to biology-only specialisation and AIIMS pedagogy.',
+    q: 'How does Cerebrum compare to the largest national NEET chain for RE-NEET 2026?',
+    a: 'Cerebrum: biology-only, 15–20 batch, ₹25K–₹45K. the largest national NEET chain: generalist premium, 200–400 batch, ₹40K–₹50K. the largest national NEET chain has strong physics depth and is well-respected. For biology specifically, Cerebrum is structurally deeper due to biology-only specialisation and AIIMS pedagogy.',
   },
   {
-    q: 'How does Cerebrum compare to PhysicsWallah for RE-NEET 2026?',
-    a: 'PhysicsWallah operates at mass online scale (300–2,000+ student live classes at ₹10K–₹20K). Cerebrum operates at small-batch scale (15–20 students at ₹25K–₹45K). PW is more affordable; Cerebrum has materially smaller class size and structurally deeper biology. Many students pair PW (Physics + Chemistry) with Cerebrum (Biology).',
+    q: 'How does Cerebrum compare to other online-only platforms for RE-NEET 2026?',
+    a: 'other online-only platforms operates at mass online scale (300–2,000+ student live classes at ₹10K–₹20K). Cerebrum operates at small-batch scale (15–20 students at ₹25K–₹45K). PW is more affordable; Cerebrum has materially smaller class size and structurally deeper biology. Many students pair PW (Physics + Chemistry) with Cerebrum (Biology).',
   },
   {
     q: 'Which crash course has documented biology results?',
-    a: 'Cerebrum publishes 680+ medical college selections with student names, scores and college admissions. Aakash, Allen and PhysicsWallah publish aggregate selection numbers but do not isolate biology-section performance publicly. For biology-specific verification, Cerebrum has the most transparent track record.',
+    a: 'Cerebrum publishes 680+ medical college selections with student names, scores and college admissions. the 2nd-largest national NEET chain, the largest national NEET chain and other online-only platforms publish aggregate selection numbers but do not isolate biology-section performance publicly. For biology-specific verification, Cerebrum has the most transparent track record.',
   },
 ]
 
-const waLink = `https://wa.me/918826444334?text=${encodeURIComponent('Hi! I want to compare Cerebrum, Aakash, Allen and PhysicsWallah RE-NEET 2026 crash courses. Please share Cerebrum details.')}`
+const waLink = `https://wa.me/918826444334?text=${encodeURIComponent('Hi! I want to compare Cerebrum, the 2nd-largest national NEET chain, the largest national NEET chain and other online-only platforms RE-NEET 2026 crash courses. Please share Cerebrum details.')}`
 
 export default function ReNEETCerebrumVsAakashVsPWPage() {
   const pageUrl = `${BASE_URL}/re-neet-2026-cerebrum-vs-aakash-vs-pw`
@@ -151,7 +151,7 @@ export default function ReNEETCerebrumVsAakashVsPWPage() {
   const comparisonSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'RE-NEET 2026 Crash Course Comparison: Cerebrum vs Aakash vs Allen vs PhysicsWallah',
+    name: 'RE-NEET 2026 Crash Course Comparison: Cerebrum vs the 2nd-largest national NEET chain vs the largest national NEET chain vs other online-only platforms',
     url: pageUrl,
     mainEntity: {
       '@type': 'ItemList',
@@ -162,9 +162,9 @@ export default function ReNEETCerebrumVsAakashVsPWPage() {
           name: 'Cerebrum Biology Academy',
           description: 'Biology-only AIIMS-trained specialist',
         },
-        { '@type': 'EducationalOrganization', position: 2, name: 'Aakash Institute' },
-        { '@type': 'EducationalOrganization', position: 3, name: 'Allen Career Institute' },
-        { '@type': 'EducationalOrganization', position: 4, name: 'PhysicsWallah (PW)' },
+        { '@type': 'EducationalOrganization', position: 2, name: 'SKY Coaching (2nd-largest national NEET chain)' },
+        { '@type': 'EducationalOrganization', position: 3, name: 'XYZ Coaching (largest national NEET chain)' },
+        { '@type': 'EducationalOrganization', position: 4, name: 'other online-only platforms' },
       ],
     },
   }
@@ -197,7 +197,7 @@ export default function ReNEETCerebrumVsAakashVsPWPage() {
             RE-NEET 2026 Crash Course Comparison · Updated May 2026
           </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Cerebrum vs Aakash vs Allen vs PhysicsWallah
+            Cerebrum vs the 2nd-largest national NEET chain vs the largest national NEET chain vs other online-only platforms
           </h1>
           <p className="text-xl text-green-50 mb-3">
             Honest comparison of the top RE-NEET 2026 crash courses.
@@ -245,9 +245,9 @@ export default function ReNEETCerebrumVsAakashVsPWPage() {
                     <th className="text-left p-3 font-semibold text-green-700 bg-green-50">
                       Cerebrum
                     </th>
-                    <th className="text-left p-3 font-semibold text-slate-700">Aakash</th>
-                    <th className="text-left p-3 font-semibold text-slate-700">Allen</th>
-                    <th className="text-left p-3 font-semibold text-slate-700">PhysicsWallah</th>
+                    <th className="text-left p-3 font-semibold text-slate-700">the 2nd-largest national NEET chain</th>
+                    <th className="text-left p-3 font-semibold text-slate-700">the largest national NEET chain</th>
+                    <th className="text-left p-3 font-semibold text-slate-700">other online-only platforms</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -271,7 +271,7 @@ export default function ReNEETCerebrumVsAakashVsPWPage() {
               </table>
             </div>
             <p className="text-sm text-slate-500 mt-6 italic text-center">
-              Note: Many serious aspirants pair Cerebrum (Biology) with Aakash / Allen / PW (Physics
+              Note: Many serious aspirants pair Cerebrum (Biology) with the 2nd-largest national NEET chain / the largest national NEET chain / PW (Physics
               + Chemistry) — rather than choosing one. The 360/720 biology section deserves a
               biology-only specialist.
             </p>
@@ -330,7 +330,7 @@ export default function ReNEETCerebrumVsAakashVsPWPage() {
                 name: 'Aditya Verma',
                 score: 'NEET 689/720',
                 college: 'JIPMER Puducherry',
-                quote: 'I left Allen mid-year. The 18-student Cerebrum batch was a game-changer.',
+                quote: 'I left the largest national NEET chain mid-year. The 18-student Cerebrum batch was a game-changer.',
               },
               {
                 name: 'Ankit Sharma',

@@ -600,7 +600,7 @@ export default function AAMCOutlineCampbellChaptersPage() {
                   cascade.
                 </p>
                 <p className="text-sm text-slate-700 leading-relaxed">
-                  <strong>Supplement:</strong> Kaplan MCAT Biology Review chapters on microbiology
+                  <strong>Supplement:</strong> other generalist MCAT brands Biology Review chapters on microbiology
                   and immunology, or the AAMC Bio/Biochem question packs (which contain immunology
                   passages with explanations that fill the conceptual gap). Roughly 5-10 hours.
                 </p>
@@ -633,7 +633,7 @@ export default function AAMCOutlineCampbellChaptersPage() {
                 transmission, sensory systems. Do not try to read the full text.
               </li>
               <li>
-                <strong>Kaplan MCAT Biology Review</strong>. A faster, more exam-targeted resource
+                <strong>other generalist MCAT brands Biology Review</strong>. A faster, more exam-targeted resource
                 that compresses Campbell + Lehninger + Kandel into one volume. Useful as a
                 second-pass review text after a first Campbell pass. Stronger on micro/immuno than
                 Campbell.

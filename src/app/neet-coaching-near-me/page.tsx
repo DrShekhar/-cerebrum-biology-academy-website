@@ -88,12 +88,12 @@ const faqs = [
   {
     question: 'How much does NEET coaching cost near me?',
     answer:
-      'Cerebrum Biology Academy fees: Pursuit batch Rs 40,000-48,000/year (30-40 students), Ascent batch Rs 58,000-78,000/year (16-25 students), Pinnacle batch Rs 98,000-1,56,000/year (10-12 students). EMI options available. Compare: Allen/Aakash charge Rs 1.5-3 lakh for all subjects.',
+      'Cerebrum Biology Academy fees: Pursuit batch Rs 40,000-48,000/year (30-40 students), Ascent batch Rs 58,000-78,000/year (16-25 students), Pinnacle batch Rs 98,000-1,56,000/year (10-12 students). EMI options available. Compare: the largest national NEET chains charge Rs 1.5-3 lakh for all subjects.',
   },
   {
-    question: 'What makes Cerebrum different from Allen or Aakash near me?',
+    question: 'What makes Cerebrum different from the largest national NEET chain or the 2nd-largest national NEET chain near me?',
     answer:
-      'Three key differences: (1) Exclusive Biology focus — Biology is 50% of NEET marks (360/720), (2) Small batches of 15-20 students vs 50-100+ at Allen/Aakash, (3) AIIMS-trained faculty led by Dr. Shekhar C Singh. Our 98% success rate and 680+ medical college selections prove the difference.',
+      'Three key differences: (1) Exclusive Biology focus — Biology is 50% of NEET marks (360/720), (2) Small batches of 15-20 students vs 50-100+ at the largest national NEET chains, (3) AIIMS-trained faculty led by Dr. Shekhar C Singh. Our 98% success rate and 680+ medical college selections prove the difference.',
   },
   {
     question: 'Can I take a free demo class before joining?',
@@ -294,7 +294,7 @@ export default function NEETCoachingNearMePage() {
         <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Why Students Choose Cerebrum Over Allen, Aakash & PW
+              Why Students Choose Cerebrum Over the largest national NEET chain, the 2nd-largest national NEET chain & PW
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -303,10 +303,10 @@ export default function NEETCoachingNearMePage() {
                     <th className="px-4 py-3 text-left font-semibold">Feature</th>
                     <th className="px-4 py-3 text-center font-semibold text-blue-600">Cerebrum</th>
                     <th className="px-4 py-3 text-center font-semibold text-gray-500">
-                      Allen/Aakash
+                      the largest national NEET chains
                     </th>
                     <th className="px-4 py-3 text-center font-semibold text-gray-500">
-                      PhysicsWallah
+                      other online-only platforms
                     </th>
                   </tr>
                 </thead>

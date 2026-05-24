@@ -26,8 +26,8 @@ const comparisonData = [
     fees: '₹45,000-₹1,56,000',
     highlight: true,
   },
-  { institute: 'Allen Career', successRate: '65%', batchSize: '200-400', fees: '₹1,50,000+' },
-  { institute: 'Aakash Institute', successRate: '62%', batchSize: '150-300', fees: '₹1,40,000+' },
+  { institute: 'XYZ Coaching', successRate: '65%', batchSize: '200-400', fees: '₹1,50,000+' },
+  { institute: 'SKY Coaching (2nd-largest national NEET chain)', successRate: '62%', batchSize: '150-300', fees: '₹1,40,000+' },
   {
     institute: 'Kota Coaching',
     successRate: '60%',
@@ -84,7 +84,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in India?',
     answer:
-      'Cerebrum Biology Academy is ranked among the best NEET coaching institutes in India with a 98% success rate, highest in the industry. Unlike large institutes like Allen or Aakash with batch sizes of 200-400, we maintain small batches of 15-20 students for personalized attention.',
+      'Cerebrum Biology Academy is ranked among the best NEET coaching institutes in India with a 98% success rate, highest in the industry. Unlike large institutes like the largest national NEET chain or the 2nd-largest national NEET chain with batch sizes of 200-400, we maintain small batches of 15-20 students for personalized attention.',
   },
   {
     question: 'How does Cerebrum compare with Kota coaching?',
@@ -135,7 +135,7 @@ export default function BestNeetCoachingIndiaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Compare with Allen, Aakash, Kota coaching - see why students from Delhi NCR, Mumbai,
+              Compare with the largest national NEET chain, the 2nd-largest national NEET chain, Kota coaching - see why students from Delhi NCR, Mumbai,
               Bangalore, Hyderabad, Chennai choose Cerebrum Academy for NEET preparation.
             </p>
 

@@ -5,7 +5,7 @@
  * methodology. Targets the high-volume informational query "AP
  * Biology score 5" and "how to get a 5 on AP Biology".
  *
- * Differentiates from PrepScholar / Khan / Albert by being
+ * Differentiates from other generalist test-prep brands / Khan / Albert by being
  * unit-weighted (time allocation matches College Board exam %)
  * and explicitly evidence-based (cites Karpicke, Dunlosky).
  */
@@ -336,7 +336,7 @@ export default function APBiologyScore5StudyGuidePage() {
                   time: '55–80 min',
                   task: 'Practice questions',
                   detail:
-                    "Princeton Review or AP Classroom MCQ on today's topic. ~10 questions. Read explanations for misses.",
+                    "other generalist test-prep brands or AP Classroom MCQ on today's topic. ~10 questions. Read explanations for misses.",
                 },
                 {
                   time: '80–90 min',

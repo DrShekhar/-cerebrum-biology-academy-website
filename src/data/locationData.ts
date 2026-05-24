@@ -44,8 +44,8 @@ export const locationDatabase: LocationData[] = [
     competitionLevel: 'very-high',
     localContext: {
       majorCompetitors: [
-        'Allen Career Institute',
-        'Resonance',
+        'XYZ Coaching (largest national NEET chain)',
+        'other Kota-origin chains',
         'Bansal Classes',
         'Motion Education',
       ],
@@ -103,7 +103,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 15,
     competitionLevel: 'very-high',
     localContext: {
-      majorCompetitors: ['Aakash Institute', 'FIITJEE', 'Brilliant Tutorials', 'Career Point'],
+      majorCompetitors: ['SKY Coaching (2nd-largest national NEET chain)', 'other IIT-JEE-first coachings', 'Brilliant Tutorials', 'other Kota-origin chains'],
       avgCoachingFee: 180000,
       successRate: 15,
       topMedicalColleges: [
@@ -163,7 +163,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 12,
     competitionLevel: 'very-high',
     localContext: {
-      majorCompetitors: ['Sri Chaitanya', 'Narayana', 'Resonance', 'FIITJEE'],
+      majorCompetitors: ['other South-Indian chains', 'a leading national educational institution', 'other Kota-origin chains', 'other IIT-JEE-first coachings'],
       avgCoachingFee: 120000,
       successRate: 18,
       topMedicalColleges: [
@@ -220,7 +220,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 18,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: ["BYJU'S", 'Unacademy', 'BASE', 'Deeksha'],
+      majorCompetitors: ["BYJU'S", 'other online-only platforms', 'BASE', 'Deeksha'],
       avgCoachingFee: 140000,
       successRate: 20,
       topMedicalColleges: ['BMCRI', "St. John's Medical College", 'MS Ramaiah Medical College'],
@@ -269,7 +269,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 20,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: ['IIT Home', 'Pace IIT & Medical', 'FIITJEE', 'Allen'],
+      majorCompetitors: ['IIT Home', 'Pace IIT & Medical', 'other IIT-JEE-first coachings', 'the largest national NEET chain'],
       avgCoachingFee: 200000,
       successRate: 16,
       topMedicalColleges: ['KEM Hospital', 'LTMMC', 'GSMC', 'TNMC'],
@@ -322,7 +322,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 15,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: ['Pace IIT & Medical', 'Career Launcher', 'IITians Pace', 'Allen'],
+      majorCompetitors: ['Pace IIT & Medical', 'Career Launcher', 'IITians Pace', 'the largest national NEET chain'],
       avgCoachingFee: 130000,
       successRate: 22,
       topMedicalColleges: ['AFMC Pune', 'BJ Medical College', 'Dr. D.Y. Patil Medical College'],
@@ -375,7 +375,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 25,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: ['TIME', 'Sri Chaitanya', 'Narayana', 'PACE'],
+      majorCompetitors: ['TIME', 'other South-Indian chains', 'a leading national educational institution', 'PACE'],
       avgCoachingFee: 110000,
       successRate: 25,
       topMedicalColleges: [
@@ -433,7 +433,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 10,
     competitionLevel: 'high',
     localContext: {
-      majorCompetitors: ['Career Point', 'Bansal Classes', 'Allen', 'Motion'],
+      majorCompetitors: ['other Kota-origin chains', 'Bansal Classes', 'the largest national NEET chain', 'Motion'],
       avgCoachingFee: 125000,
       successRate: 20,
       topMedicalColleges: ['SMS Medical College', 'RNT Medical College', 'GMC Jaipur'],
@@ -481,7 +481,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 8,
     competitionLevel: 'moderate',
     localContext: {
-      majorCompetitors: ['Career Launcher', 'Resonance', 'Allen', 'Local institutes'],
+      majorCompetitors: ['Career Launcher', 'other Kota-origin chains', 'the largest national NEET chain', 'Local institutes'],
       avgCoachingFee: 100000,
       successRate: 18,
       topMedicalColleges: ['MGM Medical College', 'AIIMS Bhopal', 'Gandhi Medical College Bhopal'],
@@ -533,7 +533,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 12,
     competitionLevel: 'moderate',
     localContext: {
-      majorCompetitors: ['Career Point', 'FIITJEE', 'Local coaching centers'],
+      majorCompetitors: ['other Kota-origin chains', 'other IIT-JEE-first coachings', 'Local coaching centers'],
       avgCoachingFee: 90000,
       successRate: 15,
       topMedicalColleges: ['KGMU', 'GSVM Medical College', 'UP University of Medical Sciences'],
@@ -586,7 +586,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 8,
     competitionLevel: 'moderate',
     localContext: {
-      majorCompetitors: ['Narayana', 'Career Point', 'Local institutes'],
+      majorCompetitors: ['a leading national educational institution', 'other Kota-origin chains', 'Local institutes'],
       avgCoachingFee: 75000,
       successRate: 12,
       topMedicalColleges: ['PMCH', 'IGIMS', 'ANMMC'],
@@ -639,7 +639,7 @@ export const locationDatabase: LocationData[] = [
     medicalColleges: 6,
     competitionLevel: 'moderate',
     localContext: {
-      majorCompetitors: ['FIITJEE', 'Career Launcher', 'Local coaching'],
+      majorCompetitors: ['other IIT-JEE-first coachings', 'Career Launcher', 'Local coaching'],
       avgCoachingFee: 80000,
       successRate: 20,
       topMedicalColleges: ['SCB Medical College', 'MKCG Medical College', 'VIMSAR'],

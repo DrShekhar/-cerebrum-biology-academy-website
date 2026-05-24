@@ -52,14 +52,14 @@ const faqs = [
   },
   {
     question:
-      'How does Cerebrum compare to Aakash Kolkata, Pathfinder, or FIITJEE Kolkata for Class 9?',
+      'How does Cerebrum compare to the 2nd-largest national NEET chain Kolkata, Pathfinder, or other IIT-JEE-first coachings Kolkata for Class 9?',
     answer:
-      'Aakash Scholastics Kolkata operates ~4 centres (Park Street, Salt Lake, Howrah, Behala) with 150-300 student Class 9 PCB Foundation batches. Pathfinder (Kolkata-headquartered) runs strong local NEET prep with similar mass-batch model. FIITJEE Kolkata operates 1-2 centres focused on JEE+NEET combined. Cerebrum is biology-only with 15-20 student online live batches and AIIMS-trained biology faculty — structurally different positioning. Kolkata families with strong ICSE academic tradition disproportionately value pedagogy depth; Cerebrum biology + Aakash/Pathfinder PC is a common Kolkata pattern.',
+      'the 2nd-largest national NEET chain Scholastics Kolkata operates ~4 centres (Park Street, Salt Lake, Howrah, Behala) with 150-300 student Class 9 PCB Foundation batches. Pathfinder (Kolkata-headquartered) runs strong local NEET prep with similar mass-batch model. other IIT-JEE-first coachings Kolkata operates 1-2 centres focused on JEE+NEET combined. Cerebrum is biology-only with 15-20 student online live batches and AIIMS-trained biology faculty — structurally different positioning. Kolkata families with strong ICSE academic tradition disproportionately value pedagogy depth; Cerebrum biology + the 2nd-largest national NEET chain/Pathfinder PC is a common Kolkata pattern.',
   },
   {
     question: 'What does Class 9 NEET Foundation cost in Kolkata?',
     answer:
-      "Cerebrum Class 9 Foundation pricing for Kolkata families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. Kolkata Class 9 competitive context: Aakash Scholastics Kolkata Class 9 PCB (~₹75K-95K, 4 centres Park Street/Salt Lake/Howrah/Behala, 200-student batches); Pathfinder Kolkata (Kolkata-headquartered, ~₹70K-90K, strong local brand with ICSE-aware pedagogy); FIITJEE Kolkata Class 9 (~₹85K-1L, JEE-leaning); Future Foundation Class 9 prep (~₹65K-85K). Kolkata's ICSE-legacy families pattern: Cerebrum biology Ascent (₹65K) + PhysicsWallah live PC (₹15K) = ₹80K total with materially deeper biology than Aakash standalone, suited to families who value academic depth over mass-batch volume.",
+      "Cerebrum Class 9 Foundation pricing for Kolkata families (pan-India online): Pursuit ₹35K-50K, Ascent ₹55K-70K, Pinnacle ₹75K-90K, ad-hoc 1:1 ₹2,000-3,500/hr. Kolkata Class 9 competitive context: the 2nd-largest national NEET chain Scholastics Kolkata Class 9 PCB (~₹75K-95K, 4 centres Park Street/Salt Lake/Howrah/Behala, 200-student batches); Pathfinder Kolkata (Kolkata-headquartered, ~₹70K-90K, strong local brand with ICSE-aware pedagogy); other IIT-JEE-first coachings Kolkata Class 9 (~₹85K-1L, JEE-leaning); Future Foundation Class 9 prep (~₹65K-85K). Kolkata's ICSE-legacy families pattern: Cerebrum biology Ascent (₹65K) + other online-only platforms live PC (₹15K) = ₹80K total with materially deeper biology than the 2nd-largest national NEET chain standalone, suited to families who value academic depth over mass-batch volume.",
   },
 ]
 

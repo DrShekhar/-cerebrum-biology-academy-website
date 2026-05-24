@@ -167,7 +167,7 @@ const faqs = [
   },
   {
     question: 'How does Cerebrum compare to Chandigarh coaching centers?',
-    answer: 'Cerebrum advantages: (1) Batch size 10-15 vs 60-120 at Allen/Aakash, (2) AIIMS faculty vs regular teachers, (3) Fees Rs 24-68K vs Rs 1-3.5 Lakhs, (4) Online - no Chandigarh commute, (5) 98% success rate, (6) Haryana board support.',
+    answer: 'Cerebrum advantages: (1) Batch size 10-15 vs 60-120 at the largest national NEET chains, (2) AIIMS faculty vs regular teachers, (3) Fees Rs 24-68K vs Rs 1-3.5 Lakhs, (4) Online - no Chandigarh commute, (5) 98% success rate, (6) Haryana board support.',
   },
   {
     question: 'Does Cerebrum provide study material for Panchkula students?',

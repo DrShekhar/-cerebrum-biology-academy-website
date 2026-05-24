@@ -333,7 +333,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     ],
     faqs: [
       {
-        question: 'How does Cerebrum compare to ALLEN, Aakash, or PW?',
+        question: 'How does Cerebrum compare to the largest national NEET chains and online-first generalist platforms?',
         answer:
           'While big institutes have brand value, they often have 100+ student batches where individual attention is impossible. Cerebrum offers AIIMS-trained faculty, 10-15 student batches, and personalized mentoring at 50% lower cost. Our results speak for themselves - 98% selection rate with 330+ average biology scores.',
       },
@@ -707,7 +707,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'What is the typical cost of NEET coaching in India?',
         answer:
-          'NEET coaching costs vary widely: Budget offline coaching: ₹50k-1L, Premium offline (Allen, Aakash): ₹1.2-2L tuition + ₹50k-1L hostel + ₹50k living = ₹2-3.5L total. Online coaching like Cerebrum: ₹25k-75k all-inclusive with no additional costs.',
+          'NEET coaching costs vary widely: Budget offline coaching: ₹50k-1L, Premium offline (largest national NEET chains): ₹1.2-2L tuition + ₹50k-1L hostel + ₹50k living = ₹2-3.5L total. Online coaching like Cerebrum: ₹25k-75k all-inclusive with no additional costs.',
       },
       {
         question: 'Why is Cerebrum cheaper than big coaching?',

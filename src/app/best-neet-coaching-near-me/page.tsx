@@ -152,12 +152,12 @@ const config: BestVerticalConfig = {
     {
       title: 'Biology-Only Specialist (vs Generalist Chains)',
       description:
-        'Most NEET coaching brands "near you" (Allen, Aakash, PhysicsWallah, Vedantu) teach all three subjects with rotating faculty. Cerebrum is biology-only — and 360/720 NEET marks (50%) come from Biology. Pairing Cerebrum (Biology) with your existing Physics/Chemistry coaching is a common winning pattern.',
+        'Most NEET coaching brands "near you" (the largest national NEET chains and online-first generalist platforms, other multi-subject tutoring platforms) teach all three subjects with rotating faculty. Cerebrum is biology-only — and 360/720 NEET marks (50%) come from Biology. Pairing Cerebrum (Biology) with your existing Physics/Chemistry coaching is a common winning pattern.',
     },
     {
       title: 'Small Batches (15–20 vs 100–400 at Big Chains)',
       description:
-        'Individual attention requires small batches. Cerebrum caps Ascent at 16–25 and Pinnacle at 10–12. Allen, Aakash and similar institutes typically run 100–400 students per batch — making personal doubt resolution structurally impossible.',
+        'Individual attention requires small batches. Cerebrum caps Ascent at 16–25 and Pinnacle at 10–12. the largest national NEET chain, the 2nd-largest national NEET chain and similar institutes typically run 100–400 students per batch — making personal doubt resolution structurally impossible.',
     },
     {
       title: '12+ Years of Operating Track Record',

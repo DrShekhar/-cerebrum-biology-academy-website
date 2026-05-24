@@ -113,7 +113,7 @@ const config: BestVerticalConfig = {
     {
       title: 'Biology-Only Specialist (Structural Advantage)',
       description:
-        'Most tutoring platforms (Wyzant, Tutor.com, Varsity Tutors) rotate biology tutors across subjects. Cerebrum tutors teach only biology — across IB HL/SL, AP, NEET, USABO and MCAT. Same AIIMS-trained pedagogy across verticals.',
+        'Most tutoring platforms (other tutor marketplaces) rotate biology tutors across subjects. Cerebrum tutors teach only biology — across IB HL/SL, AP, NEET, USABO and MCAT. Same AIIMS-trained pedagogy across verticals.',
     },
     {
       title: 'Global Reach with Per-City Pricing',
