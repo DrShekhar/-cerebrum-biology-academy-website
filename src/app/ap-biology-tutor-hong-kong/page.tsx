@@ -15,6 +15,14 @@ import { buildAPBiologyMetroMetadata } from '@/lib/seo/metadata'
 import APBiologyCityTemplate from '@/components/ap-biology/APBiologyCityTemplate'
 import { APBiologyMetroSchemas } from '@/components/ap-biology/APBiologyMetroSchemas'
 import { getMetroBySlug } from '@/data/ap-biology/metros'
+import { hideFromCountries } from '@/lib/geo/hideFromCountries'
+
+/**
+ * Force runtime rendering so the India geo-gate fires on every request.
+ * Middleware also gates this path as a second-line defence (see
+ * HIDE_FROM_INDIA_PATHS in middleware.ts).
+ */
+export const dynamic = 'force-dynamic'
 
 const SLUG = 'hong-kong'
 const metro = getMetroBySlug(SLUG)
@@ -47,7 +55,9 @@ export const metadata: Metadata = buildAPBiologyMetroMetadata({
   inLanguage: 'en-HK',
 })
 
-export default function APBiologyTutorHongKongPage() {
+export default async function APBiologyTutorHongKongPage() {
+  await hideFromCountries(['IN'])
+
   if (!metro) notFound()
   return (
     <>

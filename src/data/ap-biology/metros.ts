@@ -1481,6 +1481,83 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
 
   // ──────────────────────────────────────────────────────────────────────────
+  // 24a. SHANGHAI — mainland China AP Biology demand, international school cohort
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'shanghai',
+    cityName: 'Shanghai',
+    region: "Pudong + Puxi + Jing'an + Xuhui + Hongqiao + Minhang",
+    timezone: 'CST (China)',
+    timezoneIana: 'Asia/Shanghai',
+    addressRegion: 'Shanghai',
+    heroBlurb:
+      "Shanghai American School (SAS) Pudong and Puxi twin campuses are the anchor of AP Biology demand in mainland China — SAS has been authorised as an AP Capstone school (first in Asia) and runs one of the deepest AP cohorts on the continent. Shanghai High School International Division (SHSID) runs a full AP programme with strong public reporting, and WLSA Shanghai, Concordia International School, Dulwich Shanghai (Pudong + Puxi), Yew Chung International School Shanghai (YCIS), Wellington College Shanghai, Western International School of Shanghai (WISS), and Shanghai Community International School (SCIS) all carry AP tracks for US-bound students. Despite mainland China's curriculum shift toward A-Level and IB, the Hurun 2025 ranking confirms 63% of mainland ranked international schools still offer AP — AP-5 in Biology remains the cleanest US-curriculum signal for Ivy League, UC system, Johns Hopkins, Duke, and Cornell admissions.",
+    positioningBlurb:
+      'Shanghai AP tutoring market is fragmented across local Chinese-language agencies (Hanlin International Education 翰林国际教育, TestDaily, 渊学通) and Western-style premium tutoring (Crimson Education, ITS Shanghai, individual SAS / SHSID alumni). Local rates run CNY 500–1,500/hr (US$70–210/hr); Crimson and Western agencies run US$250–500/hr for senior tutors with mixed biology specialism. Cerebrum is structurally different: AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, biology-only specialisation, and Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. CST evening live classes (7–10 PM Shanghai time) slot cleanly into SAS, SHSID, and WLSA schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
+    schools: [
+      'Shanghai American School (SAS) Pudong',
+      'Shanghai American School (SAS) Puxi',
+      'Shanghai High School International Division (SHSID)',
+      'WLSA Shanghai',
+      'Dulwich College Shanghai (Pudong)',
+      'Dulwich College Shanghai (Puxi)',
+      'Concordia International School Shanghai',
+      'Yew Chung International School Shanghai (YCIS)',
+      'Wellington College International Shanghai',
+      'Western International School of Shanghai (WISS)',
+      'Shanghai Community International School (SCIS) Hongqiao',
+      'Shanghai Community International School (SCIS) Pudong',
+      'British International School Shanghai (BISS) Puxi',
+      'British International School Shanghai (BISS) Pudong',
+      'NAIS Pudong',
+      'Shanghai SMIC Private School (SMIC)',
+    ],
+    faqs: [
+      {
+        question:
+          'My child is at SAS Pudong or Puxi — how does Cerebrum complement the SAS AP Capstone programme?',
+        answer:
+          'SAS was the first AP Capstone school in Asia and runs AP Biology at a deep level — but class sizes of 18–24 students mean no school teacher can mark every FRQ to College Board rubric weekly. We layer biology-specialist 1:1 tutoring on top: same Campbell-aligned content the SAS teacher uses, plus dedicated weekly FRQ rubric calibration and timed full-length mocks. 90-minute 1:1 sessions twice a week in CST evenings (7–10 PM Shanghai) sit between school dismissal (around 3:15 PM) and the late homework block. The AP-5 conversion rate at SAS is already strong; we work specifically with the 15–25% of SAS students who score 3 or 4 and want a clean 5.',
+      },
+      {
+        question:
+          'Did mainland China kill AP after the 2022 public testing centre restrictions? Is the AP path still viable for Shanghai students?',
+        answer:
+          "AP is shrinking in mainland China but is not dead. The 2022 College Board restriction limited public AP test centres for 'social examinees' (independent test-takers), so AP exams are now sit-only for enrolled international-school students. This concentrated AP demand at the schools that still anchor it — SAS, SHSID, Dulwich, Concordia, WLSA — but did NOT eliminate AP. Hurun 2025 ranking confirms 63% of mainland ranked international schools still offer AP courses. For US-college-bound Shanghai students at AP-authorised schools, AP-5 in Biology remains the cleanest curriculum signal to top US universities. The shift toward A-Level / IB is real but decelerating, not accelerating.",
+      },
+      {
+        question:
+          "CST evening live classes — how do they fit a SAS or SHSID student's after-school schedule, and does Zoom work reliably in mainland China?",
+        answer:
+          'SAS dismisses around 3:15 PM at both Pudong and Puxi campuses; SHSID around 3:30 PM. Most AP Biology students carry 4–6 APs concurrently in junior year plus sport / music / service commitments through 5:30–6:30 PM. We schedule 90-minute 1:1 sessions 7:00–10:00 PM CST (Shanghai time), two evenings per week, with Saturday morning slots (9 AM–noon CST) popular for full-length FRQ practice runs in March–April. On Zoom reliability — Zoom usually works in mainland China but can throttle on residential ISPs. We recommend international-school students use the school VPN (most international schools provide one) or a stable family VPN; SAS and Dulwich Wi-Fi networks are reliable for evening sessions. We have run successful year-long Shanghai cohorts since 2023.',
+      },
+      {
+        question:
+          'How does Cerebrum compare to Crimson Education, Hanlin International Education, TestDaily, or ITS Shanghai on price and quality?',
+        answer:
+          'Crimson Education in Shanghai charges US$250–500/hr for senior tutors with broad academic backgrounds but mixed biology specialism. Local Chinese-language agencies (Hanlin 翰林, TestDaily, 渊学通) charge CNY 500–1,500/hr (US$70–210/hr) for tutors fluent in Mandarin and Chinese-Western curriculum bridge but again with mixed biology depth. Western agencies like ITS Shanghai run mid-range US$120–250/hr. Cerebrum is biology-only specialist: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly FRQ rubric calibration, and continuity across the full AP cycle. Senior-faculty 1:1 at US$1,800 for 12 hours works out to US$150/hr — undercuts Crimson significantly and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
+      },
+      {
+        question: 'Can we pay in CNY via Alipay / WeChat Pay, or do payments need to be in USD?',
+        answer:
+          'Both work. CNY payment via cross-border Alipay or WeChat Pay (single-payment cap USD 5,000, annual USD 50,000 per the 2025 PBOC rules) processed through our Stripe integration — settles in USD on our end at no FX charge to you. USD directly on international Visa / Mastercard / Amex also works. Several Shanghai families split the US$1,800 senior-faculty package across two CNY transfers spaced 60 days apart at no extra charge. We do not currently accept direct UnionPay (Cerebrum has no Chinese entity), but Alipay cross-border covers most family payment preferences.',
+      },
+      {
+        question:
+          'My child is at an IB-primary school like Dulwich or Concordia but wants to add AP Biology specifically for US applications — is this realistic?',
+        answer:
+          'Yes, and this is a recognised Shanghai pattern at Dulwich Shanghai, Concordia, SCIS, and the BISS schools where the base curriculum is IB but ambitious students add AP Biology as a separate US-curriculum credential. The AP-5 reads as a clean signal that complements an IB HL Biology transcript. We coach the full College Board AP syllabus end-to-end regardless of base curriculum. The constraint is workload — IB is already heavy — so we typically start in the IB1 summer (June–August Shanghai break) to front-load Campbell units before the IB2 year intensifies. SAS Capstone students sometimes also take the AP Capstone Seminar + Research alongside AP Bio, which we coordinate with school schedules.',
+      },
+      {
+        question:
+          'Is there a meaningful AP Biology to USABO / IBO China pipeline that Cerebrum can support?',
+        answer:
+          'Yes, particularly for Shanghai students. China dominates the International Biology Olympiad (IBO) — typically 4 gold medals per year — but the path runs through CNBO (Chinese National Biology Olympiad), not USABO. SAS and a few other international schools run small USABO cohorts for US-track students, but the bigger Shanghai opportunity is the CNBO funnel (provincial → national → IBO China team). For students at SAS / SHSID / WLSA who are equally strong in AP Biology and curious about olympiad-level depth, we offer a combined track: AP Biology weekly core sessions + monthly olympiad-extension modules covering Campbell + Lehninger + research-paper analysis. Students targeting both an AP-5 and a CNBO provincial qualification typically work with us from the start of junior year through the following spring.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
   // 25. GHAZIABAD (sub-metro of Delhi NCR — east NCR AP Bio demand)
   // ──────────────────────────────────────────────────────────────────────────
   {
@@ -1504,7 +1581,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       'Sapphire International School',
       'Ahlcon International School',
       'DAV Public School Ghaziabad',
-      'St. Mary\'s School',
+      "St. Mary's School",
       'Khaitan Public School Vaishali',
       'Uttam School for Girls',
       'Salwan Public School',
@@ -1521,7 +1598,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'My child is at DPS Indirapuram doing CBSE Class 12, preparing for NEET, AND wants US college options. Can AP Biology realistically fit?',
         answer:
-          "This dual-application profile is common in our Ghaziabad roster. The honest assessment: it is hard but doable if you start early (Class 11 summer). CBSE 12 + NEET prep is itself a 60-hour-per-week load; layering AP Biology adds another 4-6 hours per week of focused work. The conceptual overlap with NEET helps — cell biology, genetics, physiology, ecology cover much of the AP syllabus — but FRQ format and US-style data interpretation require dedicated practice. We typically run two 90-minute IST evening sessions for these students, calibrated to keep NEET prep as the primary track and AP as the secondary US-application layer.",
+          'This dual-application profile is common in our Ghaziabad roster. The honest assessment: it is hard but doable if you start early (Class 11 summer). CBSE 12 + NEET prep is itself a 60-hour-per-week load; layering AP Biology adds another 4-6 hours per week of focused work. The conceptual overlap with NEET helps — cell biology, genetics, physiology, ecology cover much of the AP syllabus — but FRQ format and US-style data interpretation require dedicated practice. We typically run two 90-minute IST evening sessions for these students, calibrated to keep NEET prep as the primary track and AP as the secondary US-application layer.',
       },
       {
         question:
@@ -1536,12 +1613,14 @@ export const apBiologyMetros: APBiologyMetro[] = [
           'Yes — and the combination is meaningful for US-targeted applicants. Cambridge A-Level Biology and AP Biology have ~70% content overlap, but the assessment formats are genuinely different. A-Level is essay-style with long-form questions; AP combines MCQ + FRQ in a tighter time budget. We coach the AP-specific format alongside the A-Level coursework — most students need 4-6 hours per week of AP-specific work in the year before the May AP exam.',
       },
       {
-        question: 'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
+        question:
+          'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
         answer:
           'No. AP Biology is a College Board exam designed for US college admissions and has no recognition under the NMC, Indian universities, or the NEET admissions process. A 4 or 5 transfers to many US universities as 6 to 8 credit hours of general biology, but Indian higher education awards it zero standing. For Ghaziabad families weighing dual abroad-and-India applications, AP Biology should be treated as an enhancer for the US side of the application portfolio only — NEET is the only pathway that opens MBBS / BDS / BSc admissions in India.',
       },
       {
-        question: 'How do we pay — INR transfer or USD card? GST invoice for corporate reimbursement available?',
+        question:
+          'How do we pay — INR transfer or USD card? GST invoice for corporate reimbursement available?',
         answer:
           'Both currencies and yes on the invoice. INR transfer to HDFC / ICICI / SBI / Axis is the most common (no FX charged to you), UPI works for smaller installments, international Visa / Mastercard / Amex in USD, and Wise transfers. Several Ghaziabad MNC-employee families split the $1,800 senior-faculty package across two or three INR transfers at no extra charge. GST-compliant invoices issued for corporate-reimbursement claims.',
       },
@@ -1565,7 +1644,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
     timezoneIana: 'Asia/Kolkata',
     addressRegion: 'Haryana',
     heroBlurb:
-      'Faridabad\'s AP Biology demand is shaped by its industrial-base demographics — a meaningful share of MNC engineering and management families, multi-generational business households, and the Greater Faridabad / NIT Faridabad professional cohort. The international-school cluster (Manav Rachna International, DPS Faridabad, Shri Ram Faridabad, Apeejay Faridabad, Modern DPS, Ryan International) layers AP Biology onto IBDP or CBSE Class 12 tracks for the US-application subset of families. Faridabad sits closer to South Delhi than to central Gurgaon or Noida, which gives our South Extension hub a useful proximity advantage for the optional in-person consultations.',
+      "Faridabad's AP Biology demand is shaped by its industrial-base demographics — a meaningful share of MNC engineering and management families, multi-generational business households, and the Greater Faridabad / NIT Faridabad professional cohort. The international-school cluster (Manav Rachna International, DPS Faridabad, Shri Ram Faridabad, Apeejay Faridabad, Modern DPS, Ryan International) layers AP Biology onto IBDP or CBSE Class 12 tracks for the US-application subset of families. Faridabad sits closer to South Delhi than to central Gurgaon or Noida, which gives our South Extension hub a useful proximity advantage for the optional in-person consultations.",
     positioningBlurb:
       'Faridabad is structurally a different AP tutoring market from Gurgaon and Noida — older, more industrial, more price-sensitive than the Gurgaon DLF cluster, less methodology-conscious than the Noida tech cohort. Generalist test-prep agencies (Jamboree, The Princeton Review, Karan Gupta, Manya, Edu-Mentor — most operating from Delhi-side branches rather than Faridabad itself) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff. Cerebrum is structurally different: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes, and the option of in-person consultations at our South Extension hub (35-45 minutes from Faridabad via the new Faridabad-Noida-Ghaziabad Expressway off-peak). Our senior-faculty 1:1 starts at $1,800 (12 hours) ($150/hr).',
     schools: [
@@ -1580,7 +1659,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
       'Eicher School',
       'Faridabad Public School',
       'Mount Carmel School',
-      'St. Anthony\'s School',
+      "St. Anthony's School",
       'Greenfield Public School',
     ],
     faqs: [
@@ -1588,7 +1667,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'Manav Rachna and DPS Faridabad have in-school AP Biology — when is external tutoring useful, and when is it overkill?',
         answer:
-          'In-school AP Biology classes at the strong international schools are typically solid for concept coverage. External tutoring is high-leverage for three things the school class doesn\'t have bandwidth to do at depth: (1) FRQ rubric mastery with weekly written feedback against the College Board rubric, (2) timed full-length mock exams in the 6 weeks before the May AP, and (3) personalised remediation when a student hits a specific topic wall (typically biochem energetics, signal transduction, or population genetics). If your child is comfortably running AP-4 on internal school assessments, school is enough. If they\'re targeting AP-5 specifically or struggling on a topic, external 1:1 is high-leverage.',
+          "In-school AP Biology classes at the strong international schools are typically solid for concept coverage. External tutoring is high-leverage for three things the school class doesn't have bandwidth to do at depth: (1) FRQ rubric mastery with weekly written feedback against the College Board rubric, (2) timed full-length mock exams in the 6 weeks before the May AP, and (3) personalised remediation when a student hits a specific topic wall (typically biochem energetics, signal transduction, or population genetics). If your child is comfortably running AP-4 on internal school assessments, school is enough. If they're targeting AP-5 specifically or struggling on a topic, external 1:1 is high-leverage.",
       },
       {
         question:
@@ -1609,12 +1688,14 @@ export const apBiologyMetros: APBiologyMetro[] = [
           'Not for online classes — which is the entire delivery model. Your child opens a laptop in Sector 14/15/17/19/80 or Greater Faridabad at 6 PM, finishes at 7:30, and the Faridabad-to-Delhi traffic at that hour is irrelevant. The only time commute matters is for the optional in-person consultations at South Extension; those are 35-45 minutes off-peak via the FNG Expressway, scheduled on weekends or off-peak windows by appointment. Faridabad families consistently use the online-delivery model for weekly sessions and reserve the in-person option for 1-2 progress-review touchpoints per year.',
       },
       {
-        question: 'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
+        question:
+          'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
         answer:
           'No. AP Biology is not recognised by the National Medical Commission (NMC), by Indian universities, or by the NEET admissions framework — it is a US-curriculum exam delivered by the College Board, intended for US college applications. A score of 4 or 5 typically earns 6 to 8 credit hours at US universities, but it cannot substitute for or supplement NEET-based MBBS, BDS, or BSc admissions in India. Faridabad families pursuing the dual-track abroad-plus-India path should keep these clearly separate: AP for the US application, NEET for the Indian medical college route.',
       },
       {
-        question: 'How do we pay — INR transfer or USD card? GST invoice for Faridabad MNC employer reimbursement available?',
+        question:
+          'How do we pay — INR transfer or USD card? GST invoice for Faridabad MNC employer reimbursement available?',
         answer:
           'Both currencies and yes on the invoice. INR transfer to HDFC / ICICI / SBI / Axis is the most common (no FX charged to you), UPI works for smaller installments, international Visa / Mastercard / Amex in USD, and Wise transfers. Several Faridabad business-family and MNC-employee families split the $1,800 senior-faculty package across two or three INR transfers at no extra charge. GST-compliant invoices are issued for corporate-reimbursement claims — common for MNC-employee families and family-business households claiming education-related expenses.',
       },
@@ -1622,7 +1703,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'My child is at Manav Rachna International doing IGCSE or IBDP — when should we start AP Biology prep?',
         answer:
-          'For students continuing on Cambridge A-Levels at senior school, AP Biology as a parallel layer typically starts in Year 12 (the year the AP exam is taken in May). For students transitioning from Cambridge IGCSE to IBDP or CBSE Class 11-12 at senior school, AP can layer onto either track. The earlier-start advantage (starting in Year 11) is most useful for students aiming at top-tier US universities where AP-5 + a strong school transcript together signal preparedness. We run an AP Biology prep diagnostic to recommend the right start point — book a free consultation and we\'ll calibrate to your child\'s specific trajectory.',
+          "For students continuing on Cambridge A-Levels at senior school, AP Biology as a parallel layer typically starts in Year 12 (the year the AP exam is taken in May). For students transitioning from Cambridge IGCSE to IBDP or CBSE Class 11-12 at senior school, AP can layer onto either track. The earlier-start advantage (starting in Year 11) is most useful for students aiming at top-tier US universities where AP-5 + a strong school transcript together signal preparedness. We run an AP Biology prep diagnostic to recommend the right start point — book a free consultation and we'll calibrate to your child's specific trajectory.",
       },
     ],
   },
@@ -1638,9 +1719,9 @@ export const apBiologyMetros: APBiologyMetro[] = [
     timezoneIana: 'Asia/Kolkata',
     addressRegion: 'Uttar Pradesh',
     heroBlurb:
-      'Noida\'s AP Biology demand is shaped by its IT-corridor demographics — tech-employee households at Sector 18 / 62 / 132 / 128, Sector 50 and 93 residential clusters, and the Greater Noida international-school belt (Pathways Noida, Shiv Nadar School, Step by Step, Genesis Global, Lotus Valley, GD Goenka Public, Amity International Sector 44). The typical Noida student in our AP programme is an IBDP or Cambridge IGCSE+A-Level student layering AP Biology for US college applications, or a CBSE Class 12 student dual-applying to Indian universities and US colleges. The IT-family parent profile is unusually methodology-literate — vendor-SLA-style scrutiny is common, and we have built our coaching delivery to match that expectation.',
+      "Noida's AP Biology demand is shaped by its IT-corridor demographics — tech-employee households at Sector 18 / 62 / 132 / 128, Sector 50 and 93 residential clusters, and the Greater Noida international-school belt (Pathways Noida, Shiv Nadar School, Step by Step, Genesis Global, Lotus Valley, GD Goenka Public, Amity International Sector 44). The typical Noida student in our AP programme is an IBDP or Cambridge IGCSE+A-Level student layering AP Biology for US college applications, or a CBSE Class 12 student dual-applying to Indian universities and US colleges. The IT-family parent profile is unusually methodology-literate — vendor-SLA-style scrutiny is common, and we have built our coaching delivery to match that expectation.",
     positioningBlurb:
-      'Noida is structurally a different AP tutoring market from Gurugram and Delhi — denser tech-employee demographics, more price-sensitive than the Gurgaon Aravali / DLF cohort, more methodology-conscious than the central-Delhi old-money cohort. Generalist test-prep agencies (Jamboree Noida Sec 18, The Princeton Review Sector 18, Karan Gupta, Manya, Edu-Mentor, Genesis Test Prep) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff at ₹2,500–4,500 per hour. Cerebrum is built on a different foundation: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes (so your child finishes by 7:30 PM regardless of which Noida sector you live in), and the option of in-person consultations at our South Extension hub (about 60 minutes via DND Flyway off-peak, longer at peak hours). Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — well below US-based tutors\' $150–400/hr Zoom rates.',
+      "Noida is structurally a different AP tutoring market from Gurugram and Delhi — denser tech-employee demographics, more price-sensitive than the Gurgaon Aravali / DLF cohort, more methodology-conscious than the central-Delhi old-money cohort. Generalist test-prep agencies (Jamboree Noida Sec 18, The Princeton Review Sector 18, Karan Gupta, Manya, Edu-Mentor, Genesis Test Prep) bundle AP Biology into SAT / Common-App stacks tutored by rotating non-specialist staff at ₹2,500–4,500 per hour. Cerebrum is built on a different foundation: biology-only AIIMS-trained PhD faculty as your dedicated year-long tutor, written FRQ feedback against the College Board rubric every week, IST evening live classes (so your child finishes by 7:30 PM regardless of which Noida sector you live in), and the option of in-person consultations at our South Extension hub (about 60 minutes via DND Flyway off-peak, longer at peak hours). Senior-faculty 1:1 from $1,800 for 12 hours ($150/hr) — well below US-based tutors' $150–400/hr Zoom rates.",
     schools: [
       'Pathways School Noida',
       'Shiv Nadar School Noida',
@@ -1670,7 +1751,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'Noida has multiple AP-offering international schools — Step by Step, Genesis Global, Lotus Valley, Amity. When is external AP Biology tutoring useful, and when is it overkill?',
         answer:
-          'In-school AP Biology classes at the strong international schools are typically solid for concept coverage. External tutoring is high-leverage for three things the school class doesn\'t have bandwidth to do at depth: (1) FRQ rubric mastery with weekly written feedback against the College Board rubric, (2) timed full-length mock exams in the 6 weeks before the May AP, and (3) personalised remediation when a student hits a specific topic wall (typically biochem energetics, signal transduction, or population genetics). If your child is comfortably running AP-4 on internal school assessments, school is enough. If they\'re targeting AP-5 specifically or struggling on a topic, external 1:1 is high-leverage.',
+          "In-school AP Biology classes at the strong international schools are typically solid for concept coverage. External tutoring is high-leverage for three things the school class doesn't have bandwidth to do at depth: (1) FRQ rubric mastery with weekly written feedback against the College Board rubric, (2) timed full-length mock exams in the 6 weeks before the May AP, and (3) personalised remediation when a student hits a specific topic wall (typically biochem energetics, signal transduction, or population genetics). If your child is comfortably running AP-4 on internal school assessments, school is enough. If they're targeting AP-5 specifically or struggling on a topic, external 1:1 is high-leverage.",
       },
       {
         question:
@@ -1685,12 +1766,14 @@ export const apBiologyMetros: APBiologyMetro[] = [
           'Not for online classes — which is the entire delivery model. Your child opens a laptop in Sector 44 / 50 / 62 / 132 / Greater Noida at 6 PM, finishes at 7:30, and the Noida-to-Delhi DND Flyway traffic at that hour is irrelevant. The only time commute matters is for the optional in-person consultations at South Extension; those we schedule on weekends or off-peak windows by appointment. Noida families consistently tell us removing the commute is half the benefit — your child gets an extra 90 minutes per session compared to in-person tutoring at any Delhi-side coaching centre.',
       },
       {
-        question: 'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
+        question:
+          'Will AP Biology give my child credit toward an Indian MBBS, BDS, or BSc programme?',
         answer:
           'No. The NEET admissions framework, the National Medical Commission (NMC), and Indian universities all operate independently of the College Board AP system. AP Biology is a US-curriculum credential — useful for US university applications (4 or 5 typically earns 6 to 8 credit hours toward general biology) and entirely separate from Indian medical school admissions. For Noida IT-corridor families running the dual abroad-and-India application track, NEET remains the only relevant credential for MBBS, BDS, or BSc seats in India; AP Biology functions purely as a US-side enhancer.',
       },
       {
-        question: 'How do we pay — INR transfer or USD card? GST invoice for IT-employer reimbursement available?',
+        question:
+          'How do we pay — INR transfer or USD card? GST invoice for IT-employer reimbursement available?',
         answer:
           'Both currencies and yes on the invoice. INR transfer to HDFC / ICICI / SBI / Axis is the most common (no FX charged to you), UPI works for smaller installments, international Visa / Mastercard / Amex in USD, and Wise transfers. Several Noida IT-employer families split the $1,800 senior-faculty package across two or three INR transfers at no extra charge. GST-compliant invoices are issued for corporate-reimbursement claims — common for Adobe, HCL, Wipro, TCS, Infosys, and other Noida-based MNC employees.',
       },
@@ -1698,7 +1781,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
         question:
           'My child is at Amity International or Cambridge School Noida doing Cambridge IGCSE — when should we start AP Biology prep?',
         answer:
-          'For students continuing on Cambridge A-Levels at senior school, AP Biology as a parallel layer typically starts in Year 12 (the year the AP exam is taken in May). For students transitioning from Cambridge IGCSE to IBDP or CBSE Class 11-12 at senior school, AP can layer onto either track. The earlier-start advantage (starting in Year 11) is most useful for students aiming at top-tier US universities where AP-5 + a strong school transcript together signal preparedness. We run an AP Biology prep diagnostic to recommend the right start point — book a free consultation and we\'ll calibrate to your child\'s specific trajectory.',
+          "For students continuing on Cambridge A-Levels at senior school, AP Biology as a parallel layer typically starts in Year 12 (the year the AP exam is taken in May). For students transitioning from Cambridge IGCSE to IBDP or CBSE Class 11-12 at senior school, AP can layer onto either track. The earlier-start advantage (starting in Year 11) is most useful for students aiming at top-tier US universities where AP-5 + a strong school transcript together signal preparedness. We run an AP Biology prep diagnostic to recommend the right start point — book a free consultation and we'll calibrate to your child's specific trajectory.",
       },
     ],
   },

@@ -168,6 +168,18 @@ const faqs = [
     answer:
       'We offer personalized 1-on-1 coaching, complete Campbell Biology coverage, CNBO past paper analysis, practical exam preparation, weekly assessments, and direct access to faculty via WhatsApp.',
   },
+  {
+    question:
+      'Top Chinese schools (Renda Fuzhong, Shanghai Middle School, Hangzhou No.2, Chengdu No.7) have internal 奥赛班 — why would we need external coaching?',
+    answer:
+      "The flagship 奥赛班 (Olympiad classes) at elite Chinese high schools — Renmin University High School (人大附中), Shanghai Middle School (上海中学), Hangzhou No.2 (杭州二中), Chengdu No.7 (成都七中), Huachuang (华师二附中), and a handful of others — are extraordinarily strong and select their own students through internal entrance exams. If your child is enrolled in one of these 奥赛班, the school programme is hard to beat. Cerebrum's wedge is twofold: (1) for tier-2 city students (Wuxi, Hefei, Zhengzhou, Xi'an, Nanchang, Kunming, Fuzhou and dozens of other capital-city families) where the local school 奥赛班 is weaker or simply not available, and (2) for international-school students (SAS Shanghai, SHSID, WAB Beijing, ISB) who want CNBO-level depth in English-medium without leaving their primary curriculum. We complement rather than compete with the top flagship 奥赛班.",
+  },
+  {
+    question:
+      'How does Cerebrum compare to local Chinese-language CNBO coaching agencies (Hanlin International Education 翰林, 渊学通)?',
+    answer:
+      'Local Chinese-language CNBO coaching agencies — 翰林国际教育 (Hanlin), 渊学通, 国际教育优选 — coach in Mandarin with strong knowledge of the Chinese national curriculum and CNBO past papers. They are well-suited to Chinese-passport students at local public schools targeting CNBO Provincial → National. Cerebrum is structurally different: English-medium pedagogy by AIIMS-trained biology specialist faculty (Dr. Shekhar C Singh), aligned with international-school AP / IB / Cambridge curricula, and equally rigorous on Campbell + Lehninger + research-paper depth. Best fit for international-school students or tier-2-city families wanting English-medium IBO-level preparation, not for Chinese-language-medium public-school students. Pricing roughly equivalent to mid-tier Hanlin packages.',
+  },
 ]
 
 const testimonials = [

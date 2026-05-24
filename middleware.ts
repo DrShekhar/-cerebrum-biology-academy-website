@@ -252,10 +252,17 @@ async function getUserFromToken(
  * the static cache is hit.
  */
 const HIDE_FROM_INDIA_PATHS = new Set<string>([
+  // P1 cluster (IB China + HKDSE)
   '/ib-biology/hong-kong',
   '/ib-biology/shanghai',
   '/ib-biology/beijing',
   '/dse-biology-tutor-hong-kong',
+  // P2 cluster (AP Shanghai + AP HK + CNBO + HKBO + IBO China)
+  '/ap-biology-tutor-shanghai',
+  '/ap-biology-tutor-hong-kong',
+  '/cnbo-coaching',
+  '/hkbo-coaching',
+  '/ibo-coaching-china',
 ])
 
 export default async function middleware(req: NextRequest) {

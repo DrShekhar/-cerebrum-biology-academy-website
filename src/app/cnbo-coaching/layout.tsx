@@ -2,6 +2,15 @@ import { Metadata } from 'next'
 import { GeoAwareSharedPricingMatrix } from '@/components/shared/GeoAwarePricingMatrix'
 import { olympiadPricingProducts } from '@/data/olympiads/pricing-matrix'
 import { olympiadCourseSchema } from '@/data/olympiads/schema-helpers'
+import { hideFromCountries } from '@/lib/geo/hideFromCountries'
+
+/**
+ * Force runtime rendering so the India geo-gate fires on every request.
+ * The page itself is a 'use client' component so the gate cannot be placed
+ * inside it — the server-component layout is the right place. Middleware also
+ * gates /cnbo-coaching as a second-line defence (see HIDE_FROM_INDIA_PATHS).
+ */
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'CNBO Coaching Online | Chinese National Biology Olympiad',
@@ -80,7 +89,9 @@ const courseSchema = olympiadCourseSchema({
   areaServed: { type: 'Country', name: 'China' },
 })
 
-export default function CNBOCoachingLayout({ children }: { children: React.ReactNode }) {
+export default async function CNBOCoachingLayout({ children }: { children: React.ReactNode }) {
+  await hideFromCountries(['IN'])
+
   return (
     <>
       <script
