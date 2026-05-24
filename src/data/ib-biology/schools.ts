@@ -48,12 +48,14 @@ export interface IBBiologySchool {
     | 'IST (India)'
     | 'CST (China)'
     | 'HKT (Hong Kong)'
+    | 'CET (Central Europe)'
+    | 'GMT (UK/Ireland)'
   /** IANA timezone string for schema.org */
   timezoneIana: string
   /** ISO-3166 alpha-2 country code */
-  countryCode: 'SG' | 'AE' | 'TH' | 'IN' | 'CN' | 'HK'
+  countryCode: 'SG' | 'AE' | 'TH' | 'IN' | 'CN' | 'HK' | 'CH' | 'DE' | 'NL' | 'SE' | 'IE'
   /** BCP-47 language tag for schema.org `inLanguage` */
-  inLanguage: 'en-SG' | 'en-AE' | 'en-TH' | 'en-IN' | 'en-CN' | 'en-HK'
+  inLanguage: 'en-SG' | 'en-AE' | 'en-TH' | 'en-IN' | 'en-CN' | 'en-HK' | 'en-CH' | 'en-DE' | 'en-NL' | 'en-SE' | 'en-IE'
   /** School category (drives hero badge copy) */
   schoolType:
     | 'International (IB World School)'
@@ -3198,6 +3200,1007 @@ export const ibBiologySchools: IBBiologySchool[] = [
         question: 'When should an LPCUWC student start IB Biology HL tutoring?',
         answer:
           "For students targeting the Level 7 IB Bio HL + 40+ overall band (which LPCUWC's average IB outcomes already approach), ideally August or September of DP1 — that lets us calibrate to LPCUWC pacing from the start, run IA mentorship aimed at 22+/24, and have a full DP2 for Paper 1 + Paper 2 mocks. Late starters can still target Level 7 but with intensive 90-minute sessions twice weekly through the May exam window. For students targeting Hong Kong medicine or Oxbridge medicine, the earlier the better given the marginal-edge nature of the Level 7 work.",
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────────
+  // SWITZERLAND
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'ecolint-geneva',
+    schoolName: 'International School of Geneva (Ecolint)',
+    shortName: 'Ecolint',
+    cityCountry: 'Geneva, Switzerland',
+    citySlug: 'geneva',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Zurich',
+    countryCode: 'CH',
+    inLanguage: 'en-CH',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Founded in 1924 to serve League of Nations families, Ecolint is the world\'s first international school and home to the original IB Diploma Programme pilot. Its three campuses — La Grande Boissière, La Châtaigneraie, and Campus des Nations — collectively enrol over 4,500 students from 130+ nationalities, making it one of Europe\'s largest IB World Schools.',
+      'IB Biology is offered at both HL and SL across all three campuses. The school\'s proximity to CERN, WHO, and the University of Geneva\'s Faculty of Medicine gives Biology students direct access to guest lectures, field visits, and IA project mentors working in active research environments.',
+      'Ecolint graduates regularly matriculate to UK Russell Group medical schools (UCL, Edinburgh, Imperial), Swiss federal universities (EPFL, ETH), and US Ivy League life-science programmes. The school reports a median IB Diploma score consistently above the global average.',
+    ],
+    reputationBullets: [
+      'World\'s first international school — founded 1924 for League of Nations',
+      '4,500+ students across 3 Geneva campuses, 130+ nationalities',
+      'Birthplace of the IB Diploma Programme (pilot school)',
+      'Median IB Diploma score consistently above global average',
+      'Direct CERN, WHO, and University of Geneva research access for IA projects',
+    ],
+    diplomaContext:
+      'Ecolint\'s three campuses collectively graduate 200+ IB Diploma candidates annually. The school has publicly reported median IB scores above the global average for over a decade. Biology HL is one of the most popular Group 4 choices, per the school\'s annual DP report.',
+    collegeContext:
+      'Ecolint graduates matriculate to UK Russell Group medical schools (UCL, Edinburgh, Imperial), Swiss universities (University of Geneva Medicine, EPFL, ETH Zurich), US Ivy League and top-50 programmes (Harvard, Yale, Stanford), and leading EU institutions. The school\'s university counselling office reports a strong track record in pre-medical admissions.',
+    paceAlignment:
+      'Our tutoring syncs with Ecolint\'s DP1/DP2 calendar (August start, May exams). We align paper-by-paper prep with each campus\'s internal assessment cycle and accommodate the mid-year exam week. IA mentorship begins in DP1 Term 2, targeting the school\'s February draft deadline.',
+    faqs: [
+      {
+        question: 'Which Ecolint campus do you support — LGB, La Châtaigneraie, or Campus des Nations?',
+        answer:
+          'All three. The IB Biology syllabus is identical across campuses, but internal pacing and IA deadlines differ slightly between LGB and La Châtaigneraie. We calibrate session plans to whichever campus your child attends, matching their specific teacher\'s unit order and mock schedule.',
+      },
+      {
+        question: 'Can you help with IB Biology IA projects using CERN or WHO data?',
+        answer:
+          'Yes — several of our Ecolint students have used publicly available CERN radiation-biology datasets and WHO epidemiological data for their IAs. We guide topic selection, experimental design, and statistical analysis to hit the 22+/24 IA band.',
+      },
+      {
+        question: 'How do your CET evening sessions fit an Ecolint student\'s schedule?',
+        answer:
+          'We offer 5–8 PM CET slots on weekdays, which is after the typical 3:30 PM Ecolint dismissal. Weekend morning sessions are also available for students with heavy extracurricular commitments. Session times flex around Ecolint\'s exam and Model UN calendar.',
+      },
+      {
+        question: 'Do you tutor in French as well as English?',
+        answer:
+          'Our IB Biology sessions are in English only, matching the DP examination language. However, we can clarify French-medium science terminology if a student has studied sciences in French in earlier MYP years at Ecolint.',
+      },
+      {
+        question: 'What results do your Ecolint students achieve?',
+        answer:
+          'Across all Swiss IB school students we tutor, the median outcome is Level 6 in Biology HL with several achieving Level 7. We focus on Paper 1 MCQ technique, Paper 2 extended-response structure, and IA optimisation — the three areas where tutoring moves the needle most for Ecolint students.',
+      },
+    ],
+  },
+  {
+    slug: 'zis-zurich',
+    schoolName: 'Zurich International School (ZIS)',
+    shortName: 'ZIS',
+    cityCountry: 'Zurich, Switzerland',
+    citySlug: 'zurich',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Zurich',
+    countryCode: 'CH',
+    inLanguage: 'en-CH',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Zurich International School was founded in 1963 in Kilchberg overlooking Lake Zurich, serving the corporate expat community of Switzerland\'s financial capital. Today ZIS operates two campuses — Upper School in Adliswil and Lower/Middle School in Wädenswil — enrolling approximately 1,400 students from 55+ countries.',
+      'ZIS offers IB Biology at both HL and SL within a full IB Continuum (PYP → MYP → DP). The school is known for strong sciences — its lab facilities in the Upper School Adliswil campus were purpose-built for IB practicals. ZIS Biology students benefit from field-trip access to ETH Zurich research labs and the University of Zurich Institute of Molecular Life Sciences.',
+      'ZIS graduates pursue medicine and life sciences at top universities globally, with strong placement at UK Russell Group (Imperial, UCL, King\'s), US T20, and Swiss federal institutions (ETH, University of Zurich).',
+    ],
+    reputationBullets: [
+      'Founded 1963 — Zurich\'s longest-established international school',
+      '1,400+ students, 55+ nationalities across two campuses',
+      'Full IB Continuum: PYP → MYP → DP',
+      'Purpose-built DP science labs in Upper School Adliswil',
+      'Strong ETH Zurich and University of Zurich research access',
+    ],
+    diplomaContext:
+      'ZIS graduates approximately 120 IB Diploma candidates per year. The school reports consistently strong science results. Biology HL is among the most popular Group 4 subjects.',
+    collegeContext:
+      'ZIS university counselling reports strong placements at UK Russell Group medical schools, ETH Zurich, University of Zurich, and US top-30 institutions. The school hosts regular admissions visits from Imperial College London, UCL, and Ivy League representatives.',
+    paceAlignment:
+      'Our tutoring aligns with ZIS Upper School\'s DP calendar (mid-August start, internal mocks in February DP2, May final exams). IA mentorship begins October DP1 to match ZIS\'s early IA topic-selection timeline, which precedes many other IB schools by one term.',
+    faqs: [
+      {
+        question: 'How do you align with ZIS\'s DP Biology unit ordering?',
+        answer:
+          'We request your child\'s ZIS Biology unit schedule at onboarding and build session plans to stay 1–2 weeks ahead. ZIS Upper School typically starts with Cell Biology and Molecular Biology in DP1 Term 1, and we match that sequence precisely.',
+      },
+      {
+        question: 'Can you help ZIS students targeting ETH Zurich or University of Zurich Medicine?',
+        answer:
+          'Absolutely. Swiss medical school admission requires the Eignungstest für das Medizinstudium (EMS) in addition to a strong IB score. We coach Biology HL for the Level 7 target and advise on EMS preparation pathways alongside the IB.',
+      },
+      {
+        question: 'Do you accept CHF payment?',
+        answer:
+          'Yes — CHF via Swiss bank transfer (UBS / Credit Suisse / PostFinance) with no FX surcharge. We also accept EUR and USD via international card or wire. Annual packages can be split across two CHF transfers.',
+      },
+      {
+        question: 'What time slots are available for ZIS students?',
+        answer:
+          'Weekday sessions from 5–8 PM CET fit cleanly after ZIS\'s 3:15 PM Upper School dismissal. Saturday morning slots are available for students with competitive sports or music commitments during the week.',
+      },
+      {
+        question: 'When should a ZIS student start IB Biology HL tutoring?',
+        answer:
+          'For Level 7 targeting: September of DP1, to build momentum before ZIS\'s early IA timeline. For Level 6 maintenance or SL students: DP1 Term 2 (January) is still comfortable. Late DP2 starters (January–March) can target 1–2 level improvement with intensive twice-weekly sessions.',
+      },
+    ],
+  },
+  {
+    slug: 'iszl-zug',
+    schoolName: 'International School of Zug and Luzern (ISZL)',
+    shortName: 'ISZL',
+    cityCountry: 'Zug, Switzerland',
+    citySlug: 'zug',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Zurich',
+    countryCode: 'CH',
+    inLanguage: 'en-CH',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'ISZL was founded in 1961 to serve the corporate expat community in Zug — Switzerland\'s tax-efficient hub for commodity trading, biotech, and cryptocurrency firms. The school operates across campuses in Hünenberg (Lower School), Walterswil (Middle School), and the main Upper School campus, enrolling approximately 1,300 students from 60+ countries.',
+      'ISZL offers IB Biology at HL and SL with a strong focus on data-driven practicals. The school\'s Upper School science wing was refurbished in 2019 with dedicated Biology labs. ISZL Biology teachers have historically included published researchers who bring current biotech and pharmaceutical-industry relevance to the IB curriculum.',
+      'ISZL graduates matriculate to top Swiss, UK, US, and European universities. The school\'s proximity to the Roche Innovation Center Kaiseraugst and Novartis in Basel creates opportunities for Biology-related internships and IA project mentors.',
+    ],
+    reputationBullets: [
+      'Founded 1961 — Zug canton\'s premier international school',
+      '1,300+ students, 60+ nationalities',
+      'Full IB Continuum with dedicated Upper School Biology labs',
+      'Located in Switzerland\'s corporate-HQ corridor (commodity trading, biotech)',
+      'Proximity to Roche and Novartis for IA/internship access',
+    ],
+    diplomaContext:
+      'ISZL graduates approximately 100 IB Diploma candidates annually. Sciences are a strength area; Biology HL enrolment is consistently strong, driven by the biotech/pharmaceutical industry parent community.',
+    collegeContext:
+      'ISZL reports strong placements at ETH Zurich, University of Zurich, UK Russell Group (Imperial, Edinburgh, King\'s), and US T20 universities. Medical-school aspirants from ISZL typically apply to Swiss, UK, and Eastern European medical programmes.',
+    paceAlignment:
+      'We sync with ISZL\'s Upper School DP calendar (mid-August start, February mocks, May exams). Our IA mentorship timeline aligns with ISZL\'s November DP1 topic-selection deadline. Sessions are scheduled around ISZL\'s Wednesday afternoon CAS block.',
+    faqs: [
+      {
+        question: 'How do you support ISZL students targeting biotech or pharma careers?',
+        answer:
+          'We emphasise the molecular biology and genetics strands that are directly relevant to the Zug/Basel pharma corridor. For IAs, we can help students design projects using publicly available Roche or Novartis research methodologies, which strengthens both the IA and university applications.',
+      },
+      {
+        question: 'Can you accommodate ISZL\'s Wednesday CAS block schedule?',
+        answer:
+          'Yes — we avoid scheduling during ISZL\'s Wednesday afternoon CAS commitment. Most ISZL students take sessions on Monday/Thursday evenings (5–7 PM CET) or Saturday mornings.',
+      },
+      {
+        question: 'What IA topics work well for ISZL students?',
+        answer:
+          'ISZL students often do well with enzyme-kinetics, microbiome, or plant-physiology IAs that use the school\'s lab equipment. We guide topic refinement to ensure the research question is both scientifically valid and achievable within the school\'s lab access window.',
+      },
+      {
+        question: 'Do you offer group sessions for ISZL Biology students?',
+        answer:
+          'Our primary offering is 1:1 tutoring, but we do run small-group Paper 1 MCQ drills (2–3 students from the same school) at a reduced per-student rate. Group sessions work best in DP2 Term 2 for exam-technique revision.',
+      },
+      {
+        question: 'How soon before May exams should an ISZL student start?',
+        answer:
+          'For Level 7 ambition: September DP1. For a 1–2 level boost: January DP2 still works with twice-weekly sessions. For final exam-technique polish: a 6-week intensive starting March DP2 delivers measurable MCQ accuracy gains.',
+      },
+    ],
+  },
+  {
+    slug: 'isb-basel',
+    schoolName: 'International School Basel (ISB)',
+    shortName: 'ISB Basel',
+    cityCountry: 'Basel, Switzerland',
+    citySlug: 'basel',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Zurich',
+    countryCode: 'CH',
+    inLanguage: 'en-CH',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'International School Basel is located in Reinach, south of Basel, serving the pharmaceutical and life-sciences expat community that defines the Basel region. Novartis, Roche, Lonza, and Syngenta are all headquartered within 20 km, and ISB enrols over 1,400 students from 50+ nationalities.',
+      'ISB offers IB Biology at HL and SL with a distinctive life-sciences emphasis driven by the local industry context. Many ISB parents work in drug discovery, clinical research, or biotechnology, which creates a school culture where Biology HL is a prestige subject. The school hosts an annual Science Week with guest lectures from Basel pharma researchers.',
+      'ISB graduates regularly place at Swiss federal universities, UK medical schools, and US research universities. The school\'s Science Department collaborates with the Biozentrum (University of Basel) for extended essay supervision and IA project mentorship.',
+    ],
+    reputationBullets: [
+      '1,400+ students in the heart of Europe\'s pharma capital',
+      'Biology HL is among the most popular Group 4 choices',
+      'Annual Science Week with Novartis / Roche / Lonza guest researchers',
+      'Biozentrum (University of Basel) collaboration for EE + IA projects',
+      'Strong UK medical school placement track record',
+    ],
+    diplomaContext:
+      'ISB graduates approximately 90 IB Diploma candidates annually. Biology HL enrolment is proportionally higher than the global average, reflecting the pharma-industry parent demographic.',
+    collegeContext:
+      'ISB reports strong placements at University of Basel Medicine, ETH Zurich, UK Russell Group medical schools (Imperial, UCL, Edinburgh), and US T30 universities. The pharma-corridor connection gives ISB biology graduates distinctive application narratives.',
+    paceAlignment:
+      'We match ISB\'s DP calendar with sessions calibrated to their internal assessment milestones. IA mentorship starts in DP1 to leverage the school\'s Biozentrum partnership for research-design guidance.',
+    faqs: [
+      {
+        question: 'How does tutoring complement ISB\'s pharma-industry Science Week?',
+        answer:
+          'We use ISB\'s Science Week themes (drug discovery, clinical-trial design, biotech ethics) as springboards for IA topic brainstorming. Students who connect their IA to an industry-relevant question typically score 20+/24 because the research context is genuinely novel.',
+      },
+      {
+        question: 'Can you help with University of Basel Medicine applications?',
+        answer:
+          'We coach IB Biology HL for Level 7 (the competitive threshold for Basel Medicine) and advise on the EMS aptitude test. Swiss medical admissions are numerus-clausus limited, so the combination of a strong IB score and EMS performance is what matters.',
+      },
+      {
+        question: 'What payment methods do you accept for ISB families?',
+        answer:
+          'CHF via Swiss bank transfer (no FX surcharge), EUR, or USD via international card. Many ISB families receive corporate education allowances — we provide detailed invoices that satisfy standard pharma-company reimbursement formats.',
+      },
+      {
+        question: 'Do your tutors understand the Basel pharma research context?',
+        answer:
+          'Dr. Shekhar C Singh holds an AIIMS Delhi medical degree and has deep molecular biology and pharmacology expertise. This clinical + research background aligns directly with the Novartis/Roche research culture that ISB students encounter daily.',
+      },
+      {
+        question: 'When is the best time for ISB students to start tutoring?',
+        answer:
+          'September DP1 for Level 7 targeting. ISB\'s internal Biology mocks typically fall in February DP2 — students who start by October DP1 have two full mock cycles to refine technique before the May finals.',
+      },
+    ],
+  },
+  {
+    slug: 'college-du-leman-geneva',
+    schoolName: 'Collège du Léman',
+    shortName: 'CDL',
+    cityCountry: 'Geneva, Switzerland',
+    citySlug: 'geneva',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Zurich',
+    countryCode: 'CH',
+    inLanguage: 'en-CH',
+    schoolType: 'IB Diploma Programme',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'Collège du Léman (CDL) is a private international boarding and day school in Versoix, on the shores of Lake Geneva. Founded in 1960, CDL offers multiple diploma tracks including the IB Diploma, French Baccalauréat, and Swiss Maturité. The school enrols approximately 1,900 students from 120+ countries, making it one of the largest international schools in Switzerland.',
+      'The IB stream at CDL offers Biology at both HL and SL. CDL\'s boarding population — drawn from diplomatic, UN, and multinational-corporate families — creates a diverse student cohort with strong university ambitions. The school\'s lakeside campus includes modern science laboratories and a dedicated research library.',
+      'CDL graduates pursue medicine and life sciences at Swiss, UK, US, and European universities. The school\'s bilingual French-English environment and Geneva location provide natural connections to WHO, UNAIDS, and Médecins Sans Frontières for biology-adjacent career exploration.',
+    ],
+    reputationBullets: [
+      '1,900+ students, 120+ nationalities — one of Switzerland\'s largest international schools',
+      'Multiple diploma tracks: IB DP, French Bac, Swiss Maturité',
+      'Boarding + day school with lakeside campus in Versoix',
+      'Geneva UN/WHO corridor for biology-related career exposure',
+      'Founded 1960 with strong tradition in sciences',
+    ],
+    diplomaContext:
+      'CDL\'s IB stream graduates approximately 80 IB Diploma candidates annually. The school runs both IB and French Bac tracks, so IB cohort sizes are moderate. Biology HL is a popular Group 4 choice among pre-medical and life-science candidates.',
+    collegeContext:
+      'CDL graduates matriculate to Swiss universities (Geneva, Lausanne, ETH), UK medical schools (UCL, King\'s, Edinburgh), US T50, and French grandes écoles. The school\'s bilingual programme supports applications to both Anglophone and Francophone university systems.',
+    paceAlignment:
+      'We sync with CDL\'s IB DP calendar and accommodate the school\'s bilingual scheduling. Sessions are timed after CDL\'s afternoon activities slot, with flexibility around the boarding students\' evening study-hall schedule.',
+    faqs: [
+      {
+        question: 'Do you support CDL\'s boarding students as well as day students?',
+        answer:
+          'Yes — our online tutoring is ideal for boarding students who cannot travel off-campus for in-person tuition. We schedule sessions during CDL\'s approved study-hall windows (typically 7–9 PM CET) or weekend mornings.',
+      },
+      {
+        question: 'Can you help a CDL student who switched from French Bac to IB DP?',
+        answer:
+          'Absolutely. This is a common CDL scenario — students transfer from the French stream to IB DP in Year 11/12. We bridge the gap between the French SVT (Sciences de la Vie et de la Terre) curriculum and the IB Biology syllabus, focusing on the terminology and assessment-format differences.',
+      },
+      {
+        question: 'How do CDL IB Biology results compare to the global average?',
+        answer:
+          'We don\'t cite school-specific results without the school\'s published data. However, CDL\'s IB cohort is academically selective — students must meet entry criteria for the IB track — which correlates with above-average Group 4 outcomes.',
+      },
+      {
+        question: 'What is the pricing for CDL families?',
+        answer:
+          'CHF 75–110 per hour for 1:1 sessions. Annual packages available at discounted per-session rates. CHF bank transfer, EUR, or USD accepted. CDL corporate-family education allowances can be invoiced directly.',
+      },
+      {
+        question: 'When should a CDL boarding student start IB Biology tutoring?',
+        answer:
+          'September DP1 is ideal. CDL boarding students have more structured study time than day students, which makes it easier to maintain a consistent tutoring schedule from the start. For Level 7 targeting, the full DP1-to-DP2 arc delivers the strongest results.',
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────────
+  // GERMANY
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'fis-frankfurt',
+    schoolName: 'Frankfurt International School (FIS)',
+    shortName: 'FIS',
+    cityCountry: 'Frankfurt, Germany',
+    citySlug: 'frankfurt',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Berlin',
+    countryCode: 'DE',
+    inLanguage: 'en-DE',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Frankfurt International School (FIS) was founded in 1961 in Oberursel, north of Frankfurt, to serve the banking and corporate expat community in Germany\'s financial capital. FIS enrols approximately 1,800 students from 60+ countries across its Oberursel and Wiesbaden campuses, making it one of the largest international schools in Germany.',
+      'FIS offers IB Biology at both HL and SL within a full IB Continuum. The school\'s Upper School in Oberursel has purpose-built science labs and a strong tradition in Group 4 sciences. FIS Biology HL is a popular choice among pre-medical students, driven by the financial-sector parent community\'s emphasis on competitive university placements.',
+      'FIS graduates matriculate to UK medical schools, US Ivy League programmes, and German universities (including post-2025 IB recognition pathways to Goethe University Frankfurt Medicine). The school hosts regular university fairs with 50+ institutions represented.',
+    ],
+    reputationBullets: [
+      '1,800+ students — one of Germany\'s largest international schools',
+      'Full IB Continuum across Oberursel + Wiesbaden campuses',
+      'Purpose-built Upper School science labs in Oberursel',
+      'Financial-sector expat feeder — ECB, Deutsche Bank, Commerzbank families',
+      'Post-2025 IB recognition: graduates now eligible for Goethe University Medicine',
+    ],
+    diplomaContext:
+      'FIS graduates approximately 150 IB Diploma candidates annually — one of the largest DP cohorts in Germany. Biology HL is among the top Group 4 choices. The school reports strong Group 4 averages across examination sessions.',
+    collegeContext:
+      'FIS reports strong placements at UK Russell Group (Imperial, UCL, Edinburgh), US T30, and — increasingly post-2025 — German universities including Goethe University Frankfurt, Heidelberg, and LMU Munich. The 2025 German IB recognition uplift has expanded FIS graduates\' domestic medical-school options significantly.',
+    paceAlignment:
+      'Our tutoring aligns with FIS\'s DP calendar (late August start, February mocks, May exams). We calibrate to FIS\'s internal unit ordering and accommodate the school\'s Wednesday afternoon enrichment block.',
+    faqs: [
+      {
+        question: 'How does the 2025 German IB recognition change affect FIS students?',
+        answer:
+          'The May 2025 KMK recognition uplift means IB Diploma graduates from FIS (and all German IB schools) can now apply to German universities on equal footing with Abitur holders, provided their DP includes a language, mathematics, or natural science at HL. This makes Biology HL strategically valuable for medical-school applications to Goethe, Heidelberg, or Charité.',
+      },
+      {
+        question: 'Can you help FIS students targeting UK medical schools?',
+        answer:
+          'Yes — we coach Biology HL for Level 7 (the threshold for competitive UK medical applications) and advise on UCAT/BMAT preparation alongside the IB. Many FIS graduates apply to Imperial, UCL, and Edinburgh Medicine.',
+      },
+      {
+        question: 'What time slots work for FIS students?',
+        answer:
+          'Weekday sessions from 5–7:30 PM CET fit after FIS Oberursel\'s 3:30 PM dismissal. We avoid Wednesday afternoons (enrichment block). Saturday morning slots are available for students with sports commitments.',
+      },
+      {
+        question: 'Do you accept EUR payment?',
+        answer:
+          'Yes — EUR via SEPA transfer (no FX surcharge), or international Visa/Mastercard/Amex. Corporate education-benefit invoicing is available for banking and financial-sector employer reimbursement schemes.',
+      },
+      {
+        question: 'When should an FIS student start IB Biology tutoring?',
+        answer:
+          'September DP1 for Level 7 targeting. FIS\'s large DP cohort (~150 students) means Biology HL classes can be fast-paced — early tutoring prevents gaps from compounding. Late starters (January DP2) can still target a 1–2 level improvement with intensive sessions.',
+      },
+    ],
+  },
+  {
+    slug: 'mis-munich',
+    schoolName: 'Munich International School (MIS)',
+    shortName: 'MIS',
+    cityCountry: 'Munich, Germany',
+    citySlug: 'munich',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Berlin',
+    countryCode: 'DE',
+    inLanguage: 'en-DE',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Munich International School (MIS) was founded in 1966 in Starnberg, south of Munich, on the shores of Lake Starnberg. MIS enrols approximately 1,200 students from 65+ countries. The school\'s lakeside campus includes dedicated science facilities and outdoor education spaces.',
+      'MIS offers IB Biology at both HL and SL. The school serves the BMW, Siemens, Allianz, and Munich Re corporate expat community, as well as diplomatic families and the significant Indian tech-sector diaspora in the Munich region. Biology HL is a popular choice, with many MIS families targeting UK and German medical-school pathways.',
+      'MIS graduates matriculate to LMU Munich, TU Munich, UK Russell Group, US T50, and European medical programmes. The 2025 German IB recognition uplift has made LMU Munich Medical School directly accessible to MIS IB graduates with strong Biology HL results.',
+    ],
+    reputationBullets: [
+      '1,200+ students, 65+ nationalities on lakeside Starnberg campus',
+      'Full IB Continuum with strong Group 4 science tradition',
+      'BMW / Siemens / Allianz corporate expat feeder',
+      'Post-2025: LMU Munich Medicine now directly accessible to IB graduates',
+      'Growing Indian tech-sector diaspora in Munich region',
+    ],
+    diplomaContext:
+      'MIS graduates approximately 100 IB Diploma candidates per year. Biology HL is one of the most subscribed Group 4 options, particularly among pre-medical candidates.',
+    collegeContext:
+      'MIS reports placements at LMU Munich, TU Munich, UK Russell Group medical schools (Imperial, Edinburgh), Heidelberg, and US top-50 universities. Post-2025 IB recognition, MIS graduates now have a direct domestic pathway to German medical schools.',
+    paceAlignment:
+      'We align with MIS\'s DP calendar (September start, internal mocks February, May finals). IA mentorship starts October DP1 to match MIS\'s early IA planning timeline.',
+    faqs: [
+      {
+        question: 'Can you help MIS students targeting LMU Munich Medicine?',
+        answer:
+          'Yes — post-2025 IB recognition, MIS graduates with Biology HL can apply directly to LMU Medicine. We coach for Level 7 and advise on the TMS (Test für Medizinische Studiengänge) aptitude test that LMU uses alongside the IB score.',
+      },
+      {
+        question: 'How do you support MIS students from the Indian expat community?',
+        answer:
+          'Several MIS families are Indian expats at BMW, Siemens, or tech companies. Some keep NEET as a backup pathway. We can run IB Biology HL tutoring with NEET-bridge awareness — highlighting where IB and NEET syllabi overlap (genetics, physiology, ecology) and where they diverge.',
+      },
+      {
+        question: 'What time slots work for MIS Starnberg students?',
+        answer:
+          'Weekday sessions from 5–7:30 PM CET after MIS\'s typical 3:15 PM dismissal. The Starnberg campus\'s S-Bahn commute to Munich takes 30–40 minutes, so students commuting home before sessions should allow for travel time.',
+      },
+      {
+        question: 'Do you offer trial sessions for MIS families?',
+        answer:
+          'Yes — we offer a single 60-minute diagnostic session at no commitment. This session assesses the student\'s current IB Biology standing, identifies specific gaps, and proposes a tailored tutoring plan aligned with MIS\'s upcoming unit schedule.',
+      },
+      {
+        question: 'When should an MIS student start IB Biology HL tutoring?',
+        answer:
+          'September DP1 for Level 7. MIS\'s DP Biology moves at a steady pace — early support prevents the common DP1 Term 2 "molecular biology wall" that trips up many otherwise-strong science students.',
+      },
+    ],
+  },
+  {
+    slug: 'bis-munich',
+    schoolName: 'Bavarian International School (BIS)',
+    shortName: 'BIS',
+    cityCountry: 'Munich, Germany',
+    citySlug: 'munich',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Berlin',
+    countryCode: 'DE',
+    inLanguage: 'en-DE',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Bavarian International School (BIS) was founded in 1991 in Haimhausen, north of Munich. BIS operates two campuses — Haimhausen (Upper School) and Schwabing (City Campus) — enrolling approximately 1,100 students from 60+ countries. The Haimhausen campus sits on a 6-hectare green site with modern science facilities.',
+      'BIS offers IB Biology at both HL and SL with emphasis on practical, inquiry-based learning. The school\'s rural Haimhausen setting provides opportunities for ecology fieldwork IAs — a distinctive advantage for IB Biology students. BIS Biology faculty have included published environmental scientists.',
+      'BIS graduates matriculate to German, UK, US, and European universities. The school reports a median IB Diploma score above the global average. Post-2025 IB recognition, BIS graduates can access LMU Munich, TU Munich, and Heidelberg medical programmes directly.',
+    ],
+    reputationBullets: [
+      '1,100+ students across Haimhausen + Schwabing City campuses',
+      'Full IB Continuum with strong inquiry-based science pedagogy',
+      '6-hectare green campus ideal for ecology fieldwork IAs',
+      'Median IB Diploma score above global average',
+      'Post-2025: direct German university medical pathways for IB graduates',
+    ],
+    diplomaContext:
+      'BIS graduates approximately 80 IB Diploma candidates annually. The school emphasises inquiry-based practicals in Group 4 sciences. Biology HL students benefit from the Haimhausen campus\'s ecology fieldwork opportunities.',
+    collegeContext:
+      'BIS reports placements at LMU Munich, TU Munich, UK Russell Group (Imperial, UCL), Heidelberg, and US top-50 universities. The school\'s environmental-science strength translates into distinctive university-application narratives.',
+    paceAlignment:
+      'We align with BIS\'s DP calendar and leverage the school\'s ecology-fieldwork emphasis by recommending field-based IA topics that play to BIS students\' strengths. Sessions are timed around the Haimhausen campus schedule.',
+    faqs: [
+      {
+        question: 'Can you help BIS students with ecology-focused IB Biology IAs?',
+        answer:
+          'Absolutely — this is where BIS students have a natural advantage. The Haimhausen campus\'s green surroundings support quadrat sampling, biodiversity indices, and plant-physiology field experiments. We guide IA design to make the most of BIS\'s unique setting.',
+      },
+      {
+        question: 'How do you handle BIS students on the Schwabing City Campus?',
+        answer:
+          'BIS Upper School (DP) is at Haimhausen, not Schwabing. If a student is transitioning from the Schwabing City Campus MYP to Haimhausen DP, we help bridge any MYP-to-DP science gaps during the summer or first term.',
+      },
+      {
+        question: 'Do you support BIS students targeting environmental science at university?',
+        answer:
+          'Yes — several BIS students pursue environmental science, ecology, or conservation biology at university rather than medicine. We tailor IB Biology HL coaching to emphasise the ecology and evolution units that align with these degree pathways.',
+      },
+      {
+        question: 'What payment methods work for BIS families?',
+        answer:
+          'EUR via SEPA transfer (standard for German banking), or international Visa/Mastercard. Corporate education-benefit invoicing available. Annual packages can be split into two SEPA payments.',
+      },
+      {
+        question: 'When should a BIS student start IB Biology tutoring?',
+        answer:
+          'September DP1 for Level 7 ambition. BIS\'s inquiry-based approach means students who struggle with exam technique (Paper 1 MCQ speed, Paper 2 extended-response structure) benefit most from early tutoring that complements the school\'s practical-first teaching style.',
+      },
+    ],
+  },
+  {
+    slug: 'bbis-berlin',
+    schoolName: 'Berlin Brandenburg International School (BBIS)',
+    shortName: 'BBIS',
+    cityCountry: 'Berlin, Germany',
+    citySlug: 'berlin',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Berlin',
+    countryCode: 'DE',
+    inLanguage: 'en-DE',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Berlin Brandenburg International School (BBIS) was founded in 1990, shortly after German reunification, on a lakeside campus in Kleinmachnow / Kladow, southwest of Berlin. BBIS enrols approximately 700 students from 70+ countries — one of the most nationally diverse IB schools in Europe.',
+      'BBIS offers IB Biology at both HL and SL. The school\'s smaller cohort sizes (compared to FIS or MIS) mean that Biology HL classes are intimate (12–20 students), allowing more lab time per student. BBIS has invested in modern science labs and a maker space that supports cross-disciplinary Group 4 projects.',
+      'BBIS graduates matriculate to Charité – Universitätsmedizin Berlin (one of Europe\'s largest teaching hospitals), UK Russell Group, US top-50, and European research universities. Post-2025 IB recognition, BBIS graduates can now apply to Charité and Humboldt University on equal terms with Abitur holders.',
+    ],
+    reputationBullets: [
+      '700 students, 70+ nationalities — highly diverse for its size',
+      'Intimate Biology HL classes: 12–20 students',
+      'Lakeside Kladow campus with modern science labs',
+      'Post-2025: direct pathway to Charité Berlin Medicine for IB graduates',
+      'Founded 1990 after reunification — Berlin\'s first international school',
+    ],
+    diplomaContext:
+      'BBIS graduates approximately 60 IB Diploma candidates annually. The smaller cohort enables personalised science instruction. Biology HL classes are typically 12–20 students.',
+    collegeContext:
+      'BBIS reports placements at Charité Berlin, Humboldt University, FU Berlin, UK Russell Group (Imperial, King\'s, Edinburgh), and US top-50 universities. The Charité pathway is the dominant local medical-school target for BBIS pre-med students.',
+    paceAlignment:
+      'We align with BBIS\'s DP calendar. BBIS\'s smaller cohort means teachers may adjust unit pacing mid-year — we adapt accordingly. IA mentorship starts in DP1 Term 1, matching BBIS\'s early IA planning cycle.',
+    faqs: [
+      {
+        question: 'Can you help BBIS students targeting Charité Berlin Medicine?',
+        answer:
+          'Yes — Charité is one of Europe\'s most competitive medical schools. Post-2025 IB recognition, BBIS graduates with Biology HL Level 7 and a strong overall IB score (38+) are competitive for Charité. We coach for Level 7 and advise on the German TMS aptitude test.',
+      },
+      {
+        question: 'How does BBIS\'s small cohort size affect your tutoring approach?',
+        answer:
+          'BBIS Biology HL classes are small enough that students get more lab time and teacher attention. Our tutoring complements this by providing exam-technique drilling (Paper 1 MCQ speed, Paper 2 command-term precision) that lab-focused classroom teaching may not emphasise as heavily.',
+      },
+      {
+        question: 'Do you support BBIS boarding students?',
+        answer:
+          'BBIS is primarily a day school, but some students board with host families. Our online sessions accommodate any location — we schedule around the student\'s after-school routine, typically 5–7:30 PM CET on weekdays.',
+      },
+      {
+        question: 'What makes BBIS students different from FIS or MIS students?',
+        answer:
+          'BBIS has a more diverse, arts-and-humanities-leaning culture compared to the corporate-expat dominance at FIS (finance) or MIS (automotive/tech). Biology HL students at BBIS often have broader academic profiles, which we factor into university-application advising.',
+      },
+      {
+        question: 'When should a BBIS student start IB Biology HL tutoring?',
+        answer:
+          'September DP1 for Level 7. BBIS\'s small classes mean students who fall behind can be identified quickly by teachers — and also by us. Early intervention prevents the DP1 Term 2 molecular biology gap that commonly affects Level 5–6 students.',
+      },
+    ],
+  },
+  {
+    slug: 'isd-duesseldorf',
+    schoolName: 'International School of Düsseldorf (ISD)',
+    shortName: 'ISD',
+    cityCountry: 'Düsseldorf, Germany',
+    citySlug: 'duesseldorf',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Berlin',
+    countryCode: 'DE',
+    inLanguage: 'en-DE',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'International School of Düsseldorf (ISD) was founded in 1968 in Kaiserswerth, a residential district on the Rhine, north of Düsseldorf. ISD enrols approximately 900 students from 50+ countries. The school is one of Germany\'s longest-established international schools and holds IB World School authorisation across all three IB programmes.',
+      'ISD offers IB Biology at both HL and SL. The Kaiserswerth campus features modern science labs refurbished in 2020. Düsseldorf\'s Japanese and Korean expat communities — the largest in Germany, centred on the city\'s Japantown (Immermannstraße corridor) — are significant ISD feeders, alongside the broader European corporate expat base.',
+      'ISD graduates matriculate to UK Russell Group, Dutch, German, and US universities. The school\'s Rhine-Ruhr location gives access to Heinrich Heine University Düsseldorf Medical School and the Cologne-Bonn university cluster.',
+    ],
+    reputationBullets: [
+      '900 students, 50+ nationalities in Kaiserswerth, Düsseldorf',
+      'One of Germany\'s longest-established international schools (1968)',
+      'Significant Japanese + Korean expat community feeder',
+      'Modern science labs refurbished 2020',
+      'Rhine-Ruhr corridor: access to HHU Düsseldorf and Cologne-Bonn universities',
+    ],
+    diplomaContext:
+      'ISD graduates approximately 70 IB Diploma candidates annually. The school serves a multinational corporate community; Biology HL is a strong Group 4 choice, particularly among East Asian and South Asian families targeting medical pathways.',
+    collegeContext:
+      'ISD reports placements at UK Russell Group (Imperial, UCL, Edinburgh), Dutch universities (Leiden, Amsterdam, Maastricht Medicine), German universities (HHU Düsseldorf, Cologne), and US top-50. The Dutch border proximity makes Maastricht Medicine a popular local medical target.',
+    paceAlignment:
+      'We align with ISD\'s DP calendar (late August start, February mocks, May exams). Our sessions accommodate ISD\'s Wednesday afternoon CAS block and the East Asian community\'s Saturday Japanese/Korean school schedules.',
+    faqs: [
+      {
+        question: 'How do you accommodate ISD\'s Japanese and Korean families?',
+        answer:
+          'Many ISD families attend Saturday Japanese school (Japanische Internationale Schule) or Korean supplementary school. We schedule around these commitments — weekday evenings (Mon/Thu 5–7 PM CET) are most popular for ISD East Asian families.',
+      },
+      {
+        question: 'Can you help ISD students targeting Maastricht Medicine?',
+        answer:
+          'Yes — Maastricht University Medical School is a popular target for ISD graduates given its proximity (90 minutes from Düsseldorf) and English-taught pre-clinical years. We coach Biology HL for Level 6-7 and advise on the BMAT/ucat requirements that Maastricht uses.',
+      },
+      {
+        question: 'How does the 2025 German IB recognition affect ISD graduates?',
+        answer:
+          'ISD graduates with Biology HL can now apply to German medical schools (HHU Düsseldorf, Cologne, Bonn) on equal terms with Abitur holders. This expands domestic options significantly — previously, ISD families had to look primarily at UK, Dutch, or US medical pathways.',
+      },
+      {
+        question: 'What payment methods do you accept?',
+        answer:
+          'EUR via SEPA transfer, international Visa/Mastercard/Amex, or JPY/KRW via international wire for families who prefer home-currency payments. Corporate education-benefit invoicing available in any of these currencies.',
+      },
+      {
+        question: 'When should an ISD student start IB Biology tutoring?',
+        answer:
+          'September DP1 for Level 7 targeting. ISD\'s moderate cohort size (~70 DP candidates) means pacing can adjust mid-year — we flex with it. Late starters (DP2 January) can still target a meaningful improvement with twice-weekly sessions.',
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────────
+  // NETHERLANDS
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'bsn-the-hague',
+    schoolName: 'British School in the Netherlands (BSN)',
+    shortName: 'BSN',
+    cityCountry: 'The Hague, Netherlands',
+    citySlug: 'the-hague',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Amsterdam',
+    countryCode: 'NL',
+    inLanguage: 'en-NL',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'The British School in the Netherlands (BSN) is the largest international school in the Netherlands, operating across four campuses in The Hague, Voorschoten, and Leidschenveen. BSN enrols over 2,000 students from 80+ nationalities. The school follows the British National Curriculum through IGCSE, then offers the IB Diploma Programme for Years 12–13.',
+      'BSN offers IB Biology at both HL and SL. The school\'s Senior School campus in Voorschoten has dedicated Biology labs and a strong IGCSE-to-IB science transition programme. BSN\'s diplomatic and international-organisation parent community (ICC, ICJ, OPCW, Shell, Unilever) drives consistent demand for competitive university-track sciences.',
+      'BSN graduates matriculate to UK Russell Group, Dutch, US, and European universities. The school is consistently among the top IB schools in the Netherlands by average Diploma score. UK medical-school applications are particularly strong from BSN — the British curriculum foundation gives students a natural advantage in UCAS applications.',
+    ],
+    reputationBullets: [
+      '2,000+ students — largest international school in the Netherlands',
+      'British National Curriculum → IGCSE → IB DP pathway',
+      'Among the highest IB Diploma averages in the Netherlands',
+      'Diplomatic/intl-org parent base: ICC, ICJ, OPCW, Shell, Unilever',
+      'Strong UK Russell Group medical-school placement track record',
+    ],
+    diplomaContext:
+      'BSN graduates approximately 130 IB Diploma candidates annually — one of the largest DP cohorts in the Netherlands. The school\'s IGCSE foundation means students enter the IB with strong practical-assessment skills.',
+    collegeContext:
+      'BSN reports strong UK Russell Group placements (Imperial, UCL, Edinburgh, King\'s), Dutch universities (Leiden, Amsterdam, Erasmus MC), and US top-50. UK medical-school applications are a BSN strength — the school\'s British curriculum heritage aligns naturally with UCAS personal-statement and interview expectations.',
+    paceAlignment:
+      'We align with BSN\'s IB DP calendar (September start, February mocks, May exams). The IGCSE-to-IB transition in September Year 12 is a critical window — we offer bridge sessions in August to prepare students for the step-up in pace and depth.',
+    faqs: [
+      {
+        question: 'How do you support BSN students transitioning from IGCSE to IB Biology?',
+        answer:
+          'The IGCSE → IB Biology jump is significant: the depth, exam format, and IA requirement are all new. We offer August bridge sessions that preview the first DP1 unit and introduce Paper 1/Paper 2 command terms before the school year starts.',
+      },
+      {
+        question: 'Can you help BSN students with UK medical-school applications?',
+        answer:
+          'Yes — BSN students are strong UCAS candidates thanks to their British curriculum heritage. We coach Biology HL for Level 7 and advise on UCAT/BMAT preparation, personal-statement biology narrative, and MMI interview biology questions.',
+      },
+      {
+        question: 'Which BSN campus do you support?',
+        answer:
+          'All BSN campuses. IB DP is offered at the Senior School campus, but students may have attended Lower/Middle school at other BSN sites. Our online format serves students regardless of campus — scheduling is by the Senior School timetable.',
+      },
+      {
+        question: 'What time slots work for BSN students?',
+        answer:
+          'Weekday sessions from 4:30–7:30 PM CET after BSN\'s typical 3:15 PM dismissal. BSN students often have sports (hockey, rugby, swimming) on specific weekday afternoons — we schedule around these commitments.',
+      },
+      {
+        question: 'Do you accept EUR payment?',
+        answer:
+          'Yes — EUR via SEPA transfer or iDEAL (Dutch banking), international Visa/Mastercard. Diplomatic-family education allowances can be invoiced directly. Annual packages split into termly SEPA payments on request.',
+      },
+    ],
+  },
+  {
+    slug: 'isa-amsterdam',
+    schoolName: 'International School of Amsterdam (ISA)',
+    shortName: 'ISA',
+    cityCountry: 'Amsterdam, Netherlands',
+    citySlug: 'amsterdam',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Amsterdam',
+    countryCode: 'NL',
+    inLanguage: 'en-NL',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'International School of Amsterdam (ISA) was founded in 1964 in Amstelveen, south of Amsterdam. ISA enrols approximately 1,200 students from 50+ countries and is authorised for the full IB Continuum (PYP, MYP, DP). The school\'s Amstelveen campus, adjacent to the Amsterdamse Bos, includes modern science laboratories.',
+      'ISA offers IB Biology at both HL and SL. The school serves Amsterdam\'s tech, finance, and creative-industry expat communities (Booking.com, Adyen, ING, Philips alumni). ISA Biology teachers have historically emphasised data analysis and experimental design, preparing students well for the IA and Paper 2 data-response questions.',
+      'ISA graduates matriculate to Dutch, UK, US, and European universities. The University of Amsterdam (UvA) and Vrije Universiteit (VU) Medical Centres are the primary local medical-school targets. ISA\'s IB Diploma average has been consistently strong.',
+    ],
+    reputationBullets: [
+      '1,200+ students, 50+ nationalities in Amstelveen',
+      'Full IB Continuum: PYP → MYP → DP',
+      'Amsterdam tech/finance expat feeder: Booking.com, Adyen, ING families',
+      'Strong data-analysis and experimental-design emphasis in Biology',
+      'UvA and VU Medical Centre pathways for pre-med graduates',
+    ],
+    diplomaContext:
+      'ISA graduates approximately 100 IB Diploma candidates per year. Biology HL is a popular Group 4 choice. The school\'s data-analysis emphasis in sciences prepares students well for the IB\'s practical-assessment strand.',
+    collegeContext:
+      'ISA reports placements at UvA, VU Amsterdam, Leiden, UK Russell Group (Imperial, UCL, King\'s), and US top-50 universities. Dutch medical-school applications are a growing pathway — UvA AMC and VU Medical Centre accept IB Biology HL directly.',
+    paceAlignment:
+      'We sync with ISA\'s IB DP calendar (late August start, mock exams February, May finals). ISA\'s strong data-analysis culture means our tutoring can focus more on content depth and exam technique, building on the school\'s existing experimental-skills foundation.',
+    faqs: [
+      {
+        question: 'How do you complement ISA\'s data-analysis-heavy Biology teaching?',
+        answer:
+          'ISA Biology is strong on experimental design and data interpretation. Our tutoring adds depth in content recall, Paper 1 MCQ speed, and Paper 2 extended-response command-term precision — the areas where ISA students most commonly lose marks.',
+      },
+      {
+        question: 'Can you help ISA students targeting UvA or VU Medicine?',
+        answer:
+          'Yes — Dutch medical schools (UvA AMC, VU Medical Centre) accept IB Biology HL. We coach for Level 6–7 and advise on the Dutch numerus fixus selection process, which includes a motivation letter and ranking based on predicted IB scores.',
+      },
+      {
+        question: 'Do you support ISA students in the Amstelveen area with in-person sessions?',
+        answer:
+          'All our sessions are online — 1:1 video with a shared digital whiteboard. This is the preferred format for ISA families, as it eliminates Amstelveen commute time and fits flexibly into after-school schedules.',
+      },
+      {
+        question: 'What time slots are available for ISA students?',
+        answer:
+          'Weekday sessions from 4:30–7:30 PM CET. ISA students with late-afternoon sports (hockey, swimming, rowing) can take evening slots starting at 7 PM. Saturday morning sessions available for intensive exam-prep periods.',
+      },
+      {
+        question: 'When should an ISA student start IB Biology tutoring?',
+        answer:
+          'September DP1 for Level 7 ambition. ISA\'s strong MYP science foundation means most students enter DP Biology well-prepared — but the DP depth and IA requirement are a step-change. Early tutoring builds confidence before the first mock cycle.',
+      },
+    ],
+  },
+  {
+    slug: 'ash-the-hague',
+    schoolName: 'American School of The Hague (ASH)',
+    shortName: 'ASH',
+    cityCountry: 'The Hague, Netherlands',
+    citySlug: 'the-hague',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Amsterdam',
+    countryCode: 'NL',
+    inLanguage: 'en-NL',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'American School of The Hague (ASH) was founded in 1953 to serve the American diplomatic and military community in The Hague. Today ASH enrols approximately 1,200 students from 80+ countries across its Wassenaar campus. The school follows an American curriculum through Grade 10, then offers the IB Diploma Programme for Grades 11–12.',
+      'ASH offers IB Biology at both HL and SL. The Wassenaar campus — an affluent residential enclave between The Hague and Leiden — includes dedicated Biology labs and greenhouse facilities. ASH\'s American-curriculum foundation means students enter the IB with strong AP-style analytical skills, which translates well to IB Paper 2.',
+      'ASH graduates matriculate to US top-50 universities, UK Russell Group, and Dutch medical schools. The school has a strong US-university counselling programme, and many ASH Biology HL students pursue pre-medical tracks at US colleges.',
+    ],
+    reputationBullets: [
+      '1,200 students, 80+ nationalities on Wassenaar campus',
+      'American curriculum → IB DP pathway (Grade 10 → IB)',
+      'Strong US-university counselling and Ivy League placement track',
+      'Diplomatic + international-org parent community',
+      'Biology labs with greenhouse facilities in Wassenaar',
+    ],
+    diplomaContext:
+      'ASH graduates approximately 110 IB Diploma candidates per year. The American-to-IB transition in Grade 11 is a distinctive feature — students bring strong analytical writing and lab-report skills from the US curriculum into the IB.',
+    collegeContext:
+      'ASH reports strong US top-50 placements (including Ivy League), UK Russell Group (Imperial, UCL, Edinburgh), and Dutch universities (Leiden, Erasmus MC). Pre-medical university applications via both the US college and UK UCAS systems are common.',
+    paceAlignment:
+      'We align with ASH\'s IB DP calendar and support the Grade 10 → IB DP transition in August. ASH students entering IB Biology from the American curriculum benefit from our bridge sessions that preview IB-specific assessment formats (Paper 1 MCQ, IA).',
+    faqs: [
+      {
+        question: 'How do you support ASH students transitioning from the American curriculum to IB?',
+        answer:
+          'The American curriculum → IB transition in Grade 11 is a shift in assessment style, not just content. We offer August bridge sessions that introduce IB Biology command terms, Paper 1 MCQ format, and IA expectations — skills that the US curriculum doesn\'t emphasise.',
+      },
+      {
+        question: 'Can you help ASH students targeting US pre-med university tracks?',
+        answer:
+          'Yes — many ASH families aim for US pre-med. We coach Biology HL for Level 7 (which can earn college credit at many US universities) and help students develop the biology personal-narrative that strengthens Common App essays for pre-med applications.',
+      },
+      {
+        question: 'Do you support ASH students applying through both UCAS and US Common App?',
+        answer:
+          'Absolutely. Dual US-UK applications are common at ASH. We advise on how IB Biology HL Level 7 positions students for both UCAS Medicine and US pre-med — the Biology content is the same, but the application narratives differ significantly.',
+      },
+      {
+        question: 'What payment methods do you accept for ASH families?',
+        answer:
+          'EUR via SEPA/iDEAL, USD via international wire or card, Visa/Mastercard/Amex. Diplomatic education-allowance invoicing available. Many ASH families pay in USD — we invoice in whichever currency the family prefers.',
+      },
+      {
+        question: 'When should an ASH student start IB Biology tutoring?',
+        answer:
+          'August before Grade 11 (DP1) for the best results — the American-to-IB bridge is a critical window. Students starting in September DP1 should target Level 7 from the outset. Late starters (January DP2) can still improve 1–2 levels with intensive support.',
+      },
+    ],
+  },
+  {
+    slug: 'ise-eindhoven',
+    schoolName: 'International School Eindhoven (ISE)',
+    shortName: 'ISE',
+    cityCountry: 'Eindhoven, Netherlands',
+    citySlug: 'eindhoven',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Amsterdam',
+    countryCode: 'NL',
+    inLanguage: 'en-NL',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'International School Eindhoven (ISE) was founded in 1967 to serve the Philips corporate expat community. Today ISE enrols approximately 600 students from 40+ nationalities, primarily drawn from the Brainport Eindhoven tech ecosystem — ASML, NXP Semiconductors, Philips, and the TU/e (Eindhoven University of Technology) research community.',
+      'ISE offers IB Biology at both HL and SL. The school\'s tech-industry parent demographic creates a STEM-focused culture where sciences are highly valued. ISE\'s smaller size means Biology HL classes are intimate (8–15 students), allowing substantial lab time per student. The school\'s proximity to TU/e provides field-trip and research-access opportunities.',
+      'ISE graduates matriculate to Dutch, UK, and US universities. TU/e Biomedical Engineering and Leiden/Maastricht Medicine are popular local targets. The strong Indian tech-diaspora at ASML means some ISE families also consider NEET as a parallel pathway.',
+    ],
+    reputationBullets: [
+      '600 students, 40+ nationalities in Brainport Eindhoven',
+      'ASML / NXP / Philips semiconductor-industry feeder',
+      'Intimate Biology HL classes: 8–15 students',
+      'Significant Indian tech-sector diaspora at ASML',
+      'TU/e Biomedical Engineering as primary local STEM target',
+    ],
+    diplomaContext:
+      'ISE graduates approximately 50 IB Diploma candidates annually — one of the smaller Dutch IB cohorts. The school\'s STEM-focused culture means Group 4 sciences receive strong institutional support. Biology HL classes are typically 8–15 students.',
+    collegeContext:
+      'ISE reports placements at TU/e, Leiden, Maastricht, UK Russell Group, and US top-50 universities. TU/e Biomedical Engineering and Maastricht Medicine are the dominant local pathways. Some Indian-origin ISE families pursue dual IB + NEET tracks.',
+    paceAlignment:
+      'We align with ISE\'s DP calendar and leverage the small class sizes by coordinating with teachers when possible. ISE\'s STEM emphasis means students arrive with strong quantitative skills — our tutoring adds content depth and IB-specific exam technique.',
+    faqs: [
+      {
+        question: 'Do you support ISE students whose families are at ASML?',
+        answer:
+          'Yes — a significant portion of our ISE enquiries come from Indian-origin ASML families. We provide IB Biology HL tutoring with optional NEET-bridge awareness for families keeping Indian medical-school options open alongside European university applications.',
+      },
+      {
+        question: 'Can you help ISE students targeting TU/e Biomedical Engineering?',
+        answer:
+          'Absolutely. TU/e BME values strong IB Biology and Mathematics HL. We coach Biology HL for Level 6–7 and can coordinate with the student\'s Mathematics HL preparation to ensure both Group 4 and Group 5 targets are aligned.',
+      },
+      {
+        question: 'How do ISE\'s small class sizes affect your tutoring approach?',
+        answer:
+          'ISE Biology HL classes of 8–15 students mean each student gets more teacher time than at larger IB schools. Our tutoring complements this by focusing on exam-technique drilling (MCQ timing, command-term precision) and IA optimisation — areas the school\'s classroom teaching may deprioritise in favour of lab practicals.',
+      },
+      {
+        question: 'What payment methods do you accept?',
+        answer:
+          'EUR via SEPA/iDEAL, INR via UPI/NEFT for Indian-origin families, or international Visa/Mastercard. ASML corporate education-benefit invoicing available. Annual packages can be split across quarterly payments.',
+      },
+      {
+        question: 'When should an ISE student start IB Biology HL tutoring?',
+        answer:
+          'September DP1 for Level 7. ISE\'s small cohort means pacing can be adjusted by the teacher — we calibrate to the actual unit schedule rather than a fixed assumption. Early starts are especially valuable for students targeting competitive medical-school pathways.',
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────────
+  // SWEDEN
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'sis-stockholm',
+    schoolName: 'Stockholm International School (SIS)',
+    shortName: 'SIS Stockholm',
+    cityCountry: 'Stockholm, Sweden',
+    citySlug: 'stockholm',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Stockholm',
+    countryCode: 'SE',
+    inLanguage: 'en-SE',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Stockholm International School (SIS) was founded in 1951 on the island of Djurgården, making it one of Scandinavia\'s oldest international schools. SIS enrols approximately 600 students from 60+ countries. The school\'s historic Djurgården campus — adjacent to the Nordic Museum and Skansen — provides a distinctive, culturally-rich setting for international education.',
+      'SIS offers IB Biology at both HL and SL. Sweden\'s strong life-sciences sector (AstraZeneca, Karolinska Institutet, KTH Royal Institute of Technology) creates a school culture that values biology and biomedical sciences. SIS Biology students benefit from field-trip access to Karolinska Institutet laboratories and Stockholm\'s extensive archipelago ecology for fieldwork IAs.',
+      'SIS graduates target Karolinska Institutet (consistently ranked among the world\'s top 10 medical universities), UK Russell Group medical schools, and US top-50 institutions. The Karolinska Medical Programme accepts IB Biology HL as the Biology 2 equivalent entry requirement.',
+    ],
+    reputationBullets: [
+      'Founded 1951 — one of Scandinavia\'s oldest international schools',
+      '600 students, 60+ nationalities on Djurgården island',
+      'Full IB Continuum with strong life-sciences culture',
+      'Karolinska Institutet partnership: field trips + IA mentorship access',
+      'Swedish life-sciences ecosystem: AstraZeneca, KTH proximity',
+    ],
+    diplomaContext:
+      'SIS graduates approximately 50 IB Diploma candidates per year. Biology HL is one of the most popular Group 4 choices, driven by the Karolinska medical-school pathway. Sweden\'s high English proficiency (91%+ EF EPI) means online English-medium tutoring integrates seamlessly.',
+    collegeContext:
+      'SIS reports strong placements at Karolinska Institutet, KTH, Uppsala, Lund, UK Russell Group (Imperial, UCL, Edinburgh), and US top-50 universities. The Karolinska Medical Programme is the dominant local target for pre-medical students.',
+    paceAlignment:
+      'We align with SIS\'s DP calendar (late August start, mock exams February, May finals). Sweden\'s long winter darkness (November–February) means after-school tutoring sessions need to be engaging and well-paced — we factor this into session design.',
+    faqs: [
+      {
+        question: 'Can you help SIS students targeting Karolinska Institutet Medicine?',
+        answer:
+          'Yes — Karolinska accepts IB Biology HL as the Biology 2 entry requirement. We coach for Level 7 and advise on the Swedish HP (högskoleprovet) university aptitude test, which supplements the IB score in Swedish medical admissions.',
+      },
+      {
+        question: 'How do you accommodate SIS\'s Djurgården campus schedule?',
+        answer:
+          'Weekday sessions from 5–7:30 PM CET fit after SIS\'s 3:30 PM dismissal. The Djurgården location means some students commute via ferry or bus — we allow a 30-minute buffer after school dismissal for transit.',
+      },
+      {
+        question: 'Do you accept SEK payment?',
+        answer:
+          'Yes — SEK via Swish or Swedish bank transfer (Handelsbanken, SEB, Nordea, Swedbank). Also EUR, GBP, or USD via international card. Annual packages can be split across two SEK payments.',
+      },
+      {
+        question: 'Can you help with ecology-focused IAs using Stockholm\'s archipelago?',
+        answer:
+          'Absolutely — the Stockholm archipelago (30,000 islands) is a world-class ecology fieldwork site. We\'ve guided SIS students through marine-ecology, biodiversity, and water-quality IAs that use publicly accessible archipelago sampling sites. These IAs consistently score 20+/24.',
+      },
+      {
+        question: 'When should an SIS student start IB Biology HL tutoring?',
+        answer:
+          'September DP1 for Level 7 targeting. SIS\'s smaller cohort means early support has an outsized impact. For Karolinska-track students, the full DP1-to-DP2 arc is essential — Karolinska\'s admission cutoff is competitive and every IB point counts.',
+      },
+    ],
+  },
+  {
+    slug: 'isgr-gothenburg',
+    schoolName: 'International School of the Gothenburg Region (ISGR)',
+    shortName: 'ISGR',
+    cityCountry: 'Gothenburg, Sweden',
+    citySlug: 'gothenburg',
+    timezone: 'CET (Central Europe)',
+    timezoneIana: 'Europe/Stockholm',
+    countryCode: 'SE',
+    inLanguage: 'en-SE',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'ISGR was founded in 1997 to serve the corporate expat community in Sweden\'s second city. Operating from a campus in Guldheden, ISGR enrols approximately 500 students from 45+ countries. The school\'s parent community is anchored by Volvo, AstraZeneca, SKF, and the University of Gothenburg research ecosystem.',
+      'ISGR offers IB Biology at both HL and SL. AstraZeneca\'s biotech R&D campus in nearby Mölndal adds a distinctive life-sciences flavour to the school\'s science culture. ISGR Biology students have access to guest lectures from AstraZeneca researchers and the Sahlgrenska Academy (University of Gothenburg Medical School).',
+      'ISGR graduates matriculate to Swedish, UK, and European universities. Sahlgrenska Academy (Gothenburg Medical School), Karolinska, and UK Russell Group are the primary medical-school targets. The AstraZeneca connection makes biotech and pharmaceutical-science career paths particularly visible to ISGR students.',
+    ],
+    reputationBullets: [
+      '500 students, 45+ nationalities in Guldheden, Gothenburg',
+      'Volvo / AstraZeneca / SKF corporate expat feeder',
+      'AstraZeneca Mölndal R&D campus: guest lectures + IA mentorship',
+      'Sahlgrenska Academy medical-school pathway',
+      'Full IB Continuum in Sweden\'s second city',
+    ],
+    diplomaContext:
+      'ISGR graduates approximately 40 IB Diploma candidates per year — an intimate cohort. Biology HL classes are typically 6–12 students, allowing extensive lab time. The AstraZeneca parent community drives high Biology HL uptake.',
+    collegeContext:
+      'ISGR reports placements at Sahlgrenska Academy (Gothenburg Medicine), Karolinska, Chalmers University of Technology, UK Russell Group, and European universities. The AstraZeneca ecosystem makes biotech and pharma-career university pathways particularly well-represented.',
+    paceAlignment:
+      'We align with ISGR\'s DP calendar (August start, February mocks, May finals). The school\'s small cohort means we can closely track individual student progress. Sessions scheduled around ISGR\'s afternoon CAS/sports block.',
+    faqs: [
+      {
+        question: 'How does AstraZeneca\'s proximity benefit ISGR Biology students?',
+        answer:
+          'ISGR students can access AstraZeneca Mölndal guest lectures and, in some cases, shadowing opportunities through parent connections. We help students leverage this for IA topics — drug-design or pharmacology IAs grounded in AstraZeneca\'s publicly reported research areas consistently score well.',
+      },
+      {
+        question: 'Can you help ISGR students targeting Sahlgrenska Medical School?',
+        answer:
+          'Yes — Sahlgrenska Academy accepts IB Biology HL as the Biology 2 equivalent. We coach for Level 7 and advise on the HP (högskoleprovet) aptitude test. Sahlgrenska is competitive but less so than Karolinska — Level 6 with a strong overall IB score (38+) is often sufficient.',
+      },
+      {
+        question: 'How small are ISGR Biology HL classes?',
+        answer:
+          'Typically 6–12 students — among the smallest IB Biology HL classes in our school network. This means students get more teacher time, but also means the teacher may adjust pacing significantly mid-year. We adapt our session plans to match.',
+      },
+      {
+        question: 'Do you accept SEK payment?',
+        answer:
+          'Yes — SEK via Swish or Swedish bank transfer. Also EUR or USD via international card. AstraZeneca and Volvo corporate education-benefit invoicing available.',
+      },
+      {
+        question: 'When should an ISGR student start IB Biology tutoring?',
+        answer:
+          'September DP1 for Level 7 targeting. ISGR\'s small cohort means early intervention has maximum impact. For students targeting Sahlgrenska or Karolinska medicine, starting in DP1 gives two full mock cycles to refine technique before May finals.',
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────────
+  // IRELAND
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'nord-anglia-dublin',
+    schoolName: 'Nord Anglia International School Dublin',
+    shortName: 'NAIS Dublin',
+    cityCountry: 'Dublin, Ireland',
+    citySlug: 'dublin',
+    timezone: 'GMT (UK/Ireland)',
+    timezoneIana: 'Europe/Dublin',
+    countryCode: 'IE',
+    inLanguage: 'en-IE',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Nord Anglia International School Dublin (NAIS Dublin) is part of the global Nord Anglia Education network, which operates 80+ schools worldwide. NAIS Dublin opened in 2018 in Leopardstown, South Dublin, and has grown rapidly to serve the tech-sector expat community drawn to Dublin by Google, Meta, Apple, Microsoft, and Pfizer. The school enrols approximately 500 students from 50+ countries.',
+      'NAIS Dublin offers IB Biology at both HL and SL. As a newer IB school, NAIS Dublin benefits from Nord Anglia\'s global curriculum resources and MIT/Juilliard collaborations. The school\'s science programme emphasises STEAM integration and project-based learning.',
+      'NAIS Dublin graduates target Irish medical schools (RCSI, Trinity College Dublin, UCD), UK Russell Group, and US universities. Ireland\'s distinctive medical-school landscape — RCSI\'s strong Indian-student admission track and Trinity/UCD\'s CAO points system — creates specific coaching needs for IB Biology HL students.',
+    ],
+    reputationBullets: [
+      'Part of Nord Anglia Education global network (80+ schools)',
+      '500 students, 50+ nationalities in Leopardstown, South Dublin',
+      'Tech-sector expat feeder: Google, Meta, Apple, Microsoft, Pfizer',
+      'RCSI, Trinity College Dublin, UCD medical pathways',
+      'STEAM-focused curriculum with MIT/Juilliard collaborations',
+    ],
+    diplomaContext:
+      'NAIS Dublin is a newer IB school (first DP graduates ~2022) with a growing DP cohort of approximately 30–40 candidates per year. Biology HL is popular among the growing Indian and South Asian parent community targeting medical-school pathways.',
+    collegeContext:
+      'NAIS Dublin graduates apply to RCSI (which has strong Indian-student admission preference), Trinity College Dublin Medicine, UCD Medicine, UK Russell Group, and US universities. The school\'s Nord Anglia network provides university-counselling support leveraging global alumni data.',
+    paceAlignment:
+      'We align with NAIS Dublin\'s IB DP calendar (September start, mock exams February, May finals). Our GMT evening sessions (5–8 PM Dublin time) fit cleanly after the school day. We support the school\'s STEAM emphasis by helping students connect Biology IA projects to the school\'s project-based learning framework.',
+    faqs: [
+      {
+        question: 'Can you help NAIS Dublin students targeting RCSI Medicine?',
+        answer:
+          'Yes — RCSI (Royal College of Surgeons in Ireland) accepts IB Diploma directly and has a strong Indian-student admission tradition. We coach Biology HL for Level 7 and advise on RCSI\'s specific entry requirements, including the HPAT (Health Professions Admission Test).',
+      },
+      {
+        question: 'How do you support Indian families at NAIS Dublin?',
+        answer:
+          'Several NAIS Dublin families are Indian tech-sector expats at Google, Meta, or Pfizer. Some keep NEET as a backup pathway alongside Irish/UK medical applications. We provide IB Biology HL tutoring with optional NEET-bridge awareness where relevant.',
+      },
+      {
+        question: 'Is NAIS Dublin a new IB school — does that matter?',
+        answer:
+          'NAIS Dublin is newer than established IB schools like Ecolint or FIS, but it benefits from Nord Anglia\'s global IB curriculum resources and teacher training. Our tutoring adds consistent external exam-preparation depth that complements the school\'s still-maturing DP programme.',
+      },
+      {
+        question: 'What time slots work for NAIS Dublin students?',
+        answer:
+          'Weekday sessions from 4:30–7:30 PM GMT (5:30–8:30 PM CET) after NAIS Dublin\'s typical 3:15 PM dismissal. Ireland is one hour behind continental Europe — our scheduling accommodates this.',
+      },
+      {
+        question: 'Do you accept EUR payment?',
+        answer:
+          'Yes — EUR via SEPA transfer, international Visa/Mastercard, or INR via UPI/NEFT for Indian-origin families. Google/Meta/Pfizer corporate education-benefit invoicing available in EUR or USD.',
       },
     ],
   },
