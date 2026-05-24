@@ -50,12 +50,14 @@ export interface IBBiologySchool {
     | 'HKT (Hong Kong)'
     | 'CET (Central Europe)'
     | 'GMT (UK/Ireland)'
+    | 'JST (Japan)'
+    | 'KST (Korea)'
   /** IANA timezone string for schema.org */
   timezoneIana: string
   /** ISO-3166 alpha-2 country code */
-  countryCode: 'SG' | 'AE' | 'TH' | 'IN' | 'CN' | 'HK' | 'CH' | 'DE' | 'NL' | 'SE' | 'IE'
+  countryCode: 'SG' | 'AE' | 'TH' | 'IN' | 'CN' | 'HK' | 'CH' | 'DE' | 'NL' | 'SE' | 'IE' | 'JP' | 'KR'
   /** BCP-47 language tag for schema.org `inLanguage` */
-  inLanguage: 'en-SG' | 'en-AE' | 'en-TH' | 'en-IN' | 'en-CN' | 'en-HK' | 'en-CH' | 'en-DE' | 'en-NL' | 'en-SE' | 'en-IE'
+  inLanguage: 'en-SG' | 'en-AE' | 'en-TH' | 'en-IN' | 'en-CN' | 'en-HK' | 'en-CH' | 'en-DE' | 'en-NL' | 'en-SE' | 'en-IE' | 'en-JP' | 'en-KR'
   /** School category (drives hero badge copy) */
   schoolType:
     | 'International (IB World School)'
@@ -4201,6 +4203,592 @@ export const ibBiologySchools: IBBiologySchool[] = [
         question: 'Do you accept EUR payment?',
         answer:
           'Yes — EUR via SEPA transfer, international Visa/Mastercard, or INR via UPI/NEFT for Indian-origin families. Google/Meta/Pfizer corporate education-benefit invoicing available in EUR or USD.',
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────────
+  // JAPAN
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'asij-tokyo',
+    schoolName: 'American School in Japan (ASIJ)',
+    shortName: 'ASIJ',
+    cityCountry: 'Tokyo, Japan',
+    citySlug: 'tokyo',
+    timezone: 'JST (Japan)',
+    timezoneIana: 'Asia/Tokyo',
+    countryCode: 'JP',
+    inLanguage: 'en-JP',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'American School in Japan (ASIJ) was founded in 1902 in Chofu, western Tokyo. It is Japan\'s oldest and largest international school, enrolling approximately 1,600 students from 50+ countries. ASIJ follows an American curriculum through high school and offers the IB Diploma Programme alongside AP courses for Grades 11–12.',
+      'ASIJ offers IB Biology at both HL and SL. The school\'s Chofu campus includes modern science labs and a dedicated STEM centre. ASIJ\'s strong AP and IB dual-track system means students can combine AP and IB credits — a distinctive feature that appeals to families targeting US university admissions. Biology HL is popular among pre-medical applicants.',
+      'ASIJ graduates matriculate to US Ivy League and top-50 universities, UK Russell Group, and Japanese universities (Keio, Waseda, University of Tokyo\'s English-language programmes). The school has one of the strongest US-university counselling programmes in Asia.',
+    ],
+    reputationBullets: [
+      'Japan\'s oldest international school — founded 1902',
+      '1,600 students, 50+ nationalities in Chofu, western Tokyo',
+      'Dual AP + IB Diploma track — unique in Japan',
+      'Top US-university counselling programme in Asia',
+      'Modern STEM centre with dedicated Biology labs',
+    ],
+    diplomaContext:
+      'ASIJ graduates approximately 130 students annually, with a significant portion taking the IB Diploma alongside AP courses. Biology HL is among the most popular Group 4 options for pre-medical candidates.',
+    collegeContext:
+      'ASIJ reports strong US Ivy League and top-50 placements (Harvard, Stanford, MIT, Yale), UK Russell Group (Imperial, UCL), and Japanese English-programme universities (Keio PEARL, Waseda SILS, ICU). The school\'s US-curriculum heritage makes UCAS and Common App counselling exceptionally strong.',
+    paceAlignment:
+      'We align with ASIJ\'s academic calendar (late August start, semester exams December/May). JST evening sessions (6–9 PM) fit after ASIJ\'s 3:30 PM dismissal and typical after-school activities. We accommodate students doing both AP and IB Biology simultaneously.',
+    faqs: [
+      {
+        question: 'How do you support ASIJ students doing both AP and IB Biology?',
+        answer:
+          'ASIJ\'s dual-track system means some students take AP Biology and IB Biology HL concurrently. The content overlap is significant (~70%), but the assessment formats differ. We coach exam technique for both formats — AP FRQ rubric precision and IB Paper 1/Paper 2 command terms — in an integrated session plan.',
+      },
+      {
+        question: 'Can you help ASIJ students targeting US pre-med university tracks?',
+        answer:
+          'Absolutely. ASIJ has one of Asia\'s strongest US-university pipelines. We coach Biology HL for Level 7 (college credit at many US universities) and help students develop the biology narrative for Common App essays and pre-med supplemental applications.',
+      },
+      {
+        question: 'What time slots work for ASIJ students in Tokyo?',
+        answer:
+          'Weekday sessions from 6–9 PM JST fit after ASIJ\'s school day and after-school activities. Saturday morning sessions (10 AM–12 PM JST) are available for students with weekday cram-school (juku) commitments.',
+      },
+      {
+        question: 'Do you accept JPY payment?',
+        answer:
+          'Yes — JPY via Japanese bank transfer (MUFG, SMBC, Mizuho) with no FX surcharge. Also USD via international card for families with US banking. Annual packages can be split across two JPY transfers.',
+      },
+      {
+        question: 'When should an ASIJ student start IB Biology HL tutoring?',
+        answer:
+          'September of DP1 (Grade 11) for Level 7 targeting. ASIJ\'s dual AP+IB workload is demanding — early tutoring prevents Biology from becoming a low-priority subject amid the busy junior-year schedule.',
+      },
+    ],
+  },
+  {
+    slug: 'nishimachi-tokyo',
+    schoolName: 'Nishimachi International School',
+    shortName: 'Nishimachi',
+    cityCountry: 'Tokyo, Japan',
+    citySlug: 'tokyo',
+    timezone: 'JST (Japan)',
+    timezoneIana: 'Asia/Tokyo',
+    countryCode: 'JP',
+    inLanguage: 'en-JP',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['PYP', 'MYP'],
+    historyParagraphs: [
+      'Nishimachi International School was founded in 1949 in Minato-ku, central Tokyo (Azabu/Roppongi area). Nishimachi is a K–9 school enrolling approximately 450 students from 40+ countries. The school is known for its bilingual Japanese-English programme and its strong emphasis on cultural literacy and global citizenship.',
+      'Nishimachi offers PYP and MYP but not the DP — students graduate after Grade 9 and typically transfer to ASIJ, Saint Maur, K. International, or other IB DP schools for Grades 10–12. This makes Nishimachi a critical feeder school for Tokyo\'s IB Biology pipeline. Students who build strong science foundations in Nishimachi\'s MYP programme transition smoothly into DP Biology HL.',
+      'Nishimachi graduates — once they complete DP at a partner school — matriculate to US top-50, UK Russell Group, and Japanese universities. The school\'s bilingual programme gives graduates a distinctive application profile.',
+    ],
+    reputationBullets: [
+      'Founded 1949 in Azabu, Minato-ku — central Tokyo',
+      '450 students, 40+ nationalities — intimate, bilingual environment',
+      'K–9 feeder: graduates transfer to ASIJ, Saint Maur, K. International for IB DP',
+      'Bilingual Japanese-English programme — strong cultural literacy',
+      'MYP programme builds strong science foundations for DP Biology',
+    ],
+    diplomaContext:
+      'Nishimachi is a K–9 school and does not offer the IB DP directly. However, it is Tokyo\'s most significant MYP-to-DP feeder. Students transferring to DP schools for Biology HL benefit from the rigorous MYP science programme at Nishimachi.',
+    collegeContext:
+      'Nishimachi alumni complete IB DP at partner schools and matriculate to US top-50 (including Ivy League), UK Russell Group, and Japanese universities. The bilingual profile is a distinctive university-application strength.',
+    paceAlignment:
+      'Our tutoring for Nishimachi students focuses on the MYP-to-DP transition: building Grade 9 science skills that directly prepare for DP Biology HL. We offer summer bridge programmes between Nishimachi graduation and DP1 at the receiving school.',
+    faqs: [
+      {
+        question: 'Why does Nishimachi appear in your IB Biology school list if it\'s K–9?',
+        answer:
+          'Nishimachi is Tokyo\'s most important MYP-to-DP feeder. Students transferring from Nishimachi to ASIJ, Saint Maur, or K. International for DP often need tutoring to bridge the MYP science level to DP Biology HL demands. We start in Grade 9 at Nishimachi and continue through DP.',
+      },
+      {
+        question: 'Do you offer a summer bridge programme for Nishimachi graduates entering DP?',
+        answer:
+          'Yes — a 4-week intensive (July–August) that previews DP Biology HL Topic 1 (Cell Biology) and introduces Paper 1/Paper 2 command terms. This gives Nishimachi graduates a head start at whichever DP school they attend.',
+      },
+      {
+        question: 'Can you help Nishimachi Grade 9 students strengthen MYP science?',
+        answer:
+          'Absolutely. We offer MYP Science tutoring for Nishimachi Grades 7–9 that emphasises the biology strand — cell biology, genetics, ecology — to build a strong foundation for DP Biology HL. Sessions are scheduled after Nishimachi\'s 3:15 PM dismissal.',
+      },
+      {
+        question: 'Which DP school do most Nishimachi graduates attend?',
+        answer:
+          'ASIJ (Chofu) and Saint Maur (Yokohama) are the most common destinations for Nishimachi graduates entering the IB DP. We have experience tutoring students at both schools and can advise on which school\'s Biology HL pacing suits the student better.',
+      },
+      {
+        question: 'What payment methods do you accept?',
+        answer:
+          'JPY via Japanese bank transfer (MUFG, SMBC, Mizuho), USD via international card, or credit/debit Visa/Mastercard. Invoice format compatible with corporate education allowances common in the Minato-ku diplomatic/financial community.',
+      },
+    ],
+  },
+  {
+    slug: 'saint-maur-yokohama',
+    schoolName: 'Saint Maur International School',
+    shortName: 'Saint Maur',
+    cityCountry: 'Yokohama, Japan',
+    citySlug: 'tokyo',
+    timezone: 'JST (Japan)',
+    timezoneIana: 'Asia/Tokyo',
+    countryCode: 'JP',
+    inLanguage: 'en-JP',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Saint Maur International School was founded in 1872 in Yokohama — making it one of the oldest international schools in the world and the oldest in Japan. The school enrols approximately 500 students from 45+ countries on its hillside campus overlooking Yokohama harbour in the Yamate (Bluff) area.',
+      'Saint Maur offers IB Biology at both HL and SL within a full IB Continuum. The school\'s smaller size means Biology HL classes are intimate (10–18 students), with strong lab access. Saint Maur\'s long history in the Yokohama international community creates a school culture that values academic rigour and global perspective.',
+      'Saint Maur graduates matriculate to US top-50, UK Russell Group, Japanese, and European universities. The school has strong alumni networks in medicine, law, and diplomacy. Tokyo University\'s PEAK (Programs in English at Komaba) and Keio PEARL programmes are popular local targets.',
+    ],
+    reputationBullets: [
+      'Japan\'s oldest international school — founded 1872',
+      '500 students, 45+ nationalities on Yokohama Yamate hillside',
+      'Full IB Continuum with intimate Biology HL classes (10–18)',
+      'Strong alumni networks in medicine and diplomacy',
+      'Yokohama harbour campus — one of Asia\'s most historic school settings',
+    ],
+    diplomaContext:
+      'Saint Maur graduates approximately 50 IB Diploma candidates per year. Biology HL classes are typically 10–18 students — small enough for individual attention but large enough for meaningful peer discussion.',
+    collegeContext:
+      'Saint Maur reports placements at US top-50 (Ivy League, Stanford, MIT), UK Russell Group (Imperial, UCL, Edinburgh), Tokyo University PEAK, Keio PEARL, and European universities. The school\'s 150+ year history creates distinctive alumni connections for university recommendations.',
+    paceAlignment:
+      'We align with Saint Maur\'s DP calendar (September start, mock exams February, May finals). The Yokohama location means students commuting from central Tokyo need sessions timed carefully — we offer 6:30–8:30 PM JST slots for post-commute scheduling.',
+    faqs: [
+      {
+        question: 'How do you accommodate Saint Maur students commuting from central Tokyo?',
+        answer:
+          'The Yokohama Yamate campus is 30–40 minutes from central Tokyo by train. We offer late-evening JST slots (6:30–8:30 PM) for students who commute home before sessions, or lunchtime weekend sessions for students staying in Yokohama.',
+      },
+      {
+        question: 'Can you help Saint Maur students targeting Tokyo University PEAK?',
+        answer:
+          'Yes — PEAK (Programs in English at Komaba) accepts IB Diploma directly and values strong Group 4 sciences. We coach Biology HL for Level 7 and advise on PEAK\'s application essay, which benefits from a clear biology/science narrative.',
+      },
+      {
+        question: 'How does Saint Maur\'s small Biology HL class size affect tutoring?',
+        answer:
+          'With 10–18 students per class, Saint Maur Biology HL teachers provide more individual feedback than larger IB schools. Our tutoring complements this by providing systematic exam-technique drilling (Paper 1 MCQ timing, Paper 2 extended-response structure) that small-class instruction may not emphasise.',
+      },
+      {
+        question: 'Do you accept JPY payment?',
+        answer:
+          'Yes — JPY via Japanese bank transfer (no FX surcharge), USD via international card, or Visa/Mastercard. Annual packages can be split across two JPY transfers timed to the September and January billing periods.',
+      },
+      {
+        question: 'When should a Saint Maur student start IB Biology tutoring?',
+        answer:
+          'September DP1 for Level 7 targeting. Saint Maur\'s smaller cohort means teachers detect struggling students early — but proactive tutoring prevents gaps from forming in the first place. For Nishimachi feeders entering Saint Maur, the summer bridge programme is especially valuable.',
+      },
+    ],
+  },
+  {
+    slug: 'yis-yokohama',
+    schoolName: 'Yokohama International School (YIS)',
+    shortName: 'YIS',
+    cityCountry: 'Yokohama, Japan',
+    citySlug: 'tokyo',
+    timezone: 'JST (Japan)',
+    timezoneIana: 'Asia/Tokyo',
+    countryCode: 'JP',
+    inLanguage: 'en-JP',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Yokohama International School (YIS) was founded in 1924 and is located in Naka-ku, Yokohama. YIS enrols approximately 700 students from 50+ countries and is authorized for the full IB Continuum (PYP, MYP, DP). The school is a member of the East Asia Regional Council of Schools (EARCOS) and holds CIS accreditation.',
+      'YIS offers IB Biology at both HL and SL. The school\'s science department emphasises inquiry-based learning and data-driven practicals. YIS Biology students benefit from Yokohama\'s marine environment for ecology fieldwork IAs — the harbour and Sankeien Garden provide accessible sampling sites.',
+      'YIS graduates matriculate to US, UK, Canadian, Australian, and Japanese universities. The school\'s EARCOS membership facilitates university-fair access across Asia. Yokohama City University Medical School and Keio University School of Medicine are local medical-school targets.',
+    ],
+    reputationBullets: [
+      'Founded 1924 — one of Japan\'s oldest international schools',
+      '700 students, 50+ nationalities in Naka-ku, Yokohama',
+      'Full IB Continuum with strong inquiry-based science programme',
+      'EARCOS member + CIS accredited',
+      'Marine-environment ecology fieldwork for IB Biology IAs',
+    ],
+    diplomaContext:
+      'YIS graduates approximately 60 IB Diploma candidates per year. Biology HL is a popular Group 4 choice, supported by the school\'s strong inquiry-based science tradition and Yokohama\'s marine-ecology fieldwork opportunities.',
+    collegeContext:
+      'YIS reports placements at US top-50, UK Russell Group, Canadian (UBC, Toronto, McGill), Australian (Melbourne, Sydney), and Japanese universities (Keio, Waseda, ICU, Tokyo University PEAK). The school\'s global alumni network spans Asia-Pacific.',
+    paceAlignment:
+      'We sync with YIS\'s IB DP calendar (August start, mock exams February, May finals). Sessions are timed for after-school (5:30–8 PM JST). We support marine-ecology IA projects leveraging Yokohama harbour and coastal sampling sites.',
+    faqs: [
+      {
+        question: 'Can you help YIS students with marine-ecology IB Biology IAs?',
+        answer:
+          'Yes — Yokohama\'s harbour and coastal environment is excellent for ecology IAs. We\'ve guided YIS students through water-quality, biodiversity-index, and intertidal-zone IAs using publicly accessible Yokohama sampling sites. These field-based IAs consistently score 20+/24.',
+      },
+      {
+        question: 'How do you support YIS students targeting Japanese universities?',
+        answer:
+          'Japanese universities accepting IB Diploma (Keio PEARL, Waseda SILS, ICU, Tokyo PEAK) value strong Group 4 sciences. We coach Biology HL for Level 6–7 and advise on the university-specific application requirements.',
+      },
+      {
+        question: 'What time slots work for YIS students?',
+        answer:
+          'Weekday sessions from 5:30–8 PM JST after YIS\'s 3:15 PM dismissal. Saturday morning slots available for students with sports or cultural commitments during the week.',
+      },
+      {
+        question: 'Do you support students transferring from Nishimachi to YIS?',
+        answer:
+          'Yes — we offer a summer bridge programme for Nishimachi Grade 9 graduates entering YIS for DP. This bridges the MYP-to-DP gap and previews the first DP Biology HL units.',
+      },
+      {
+        question: 'When should a YIS student start IB Biology tutoring?',
+        answer:
+          'August DP1 for Level 7. YIS\'s inquiry-based approach means students are strong on experimental design but may need support with content depth and exam technique — tutoring from DP1 builds both skills in parallel.',
+      },
+    ],
+  },
+  {
+    slug: 'aoba-japan-tokyo',
+    schoolName: 'Aoba-Japan International School',
+    shortName: 'Aoba-Japan',
+    cityCountry: 'Tokyo, Japan',
+    citySlug: 'tokyo',
+    timezone: 'JST (Japan)',
+    timezoneIana: 'Asia/Tokyo',
+    countryCode: 'JP',
+    inLanguage: 'en-JP',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Aoba-Japan International School (A-JIS) operates campuses in Meguro (central Tokyo) and Hikarigaoka (northern Tokyo). The school enrols approximately 600 students from 50+ countries and is authorized for the full IB Continuum. Aoba-Japan is known for its progressive, technology-integrated approach to the IB curriculum.',
+      'Aoba-Japan offers IB Biology at both HL and SL. The school\'s STEAM-focused culture integrates technology into science instruction — Biology students use digital microscopy, bioinformatics databases, and data-visualization tools alongside traditional lab practicals. The Meguro campus houses modern science labs.',
+      'Aoba-Japan graduates matriculate to US, UK, Canadian, and Japanese universities. The school\'s growing reputation and STEAM emphasis attract families from the Tokyo tech and startup ecosystem. University of Tokyo PEAK, Keio PEARL, and US top-50 are common targets.',
+    ],
+    reputationBullets: [
+      '600 students, 50+ nationalities across Meguro + Hikarigaoka campuses',
+      'Full IB Continuum with STEAM-integrated curriculum',
+      'Digital microscopy + bioinformatics in Biology instruction',
+      'Growing Tokyo tech/startup parent community',
+      'Progressive, technology-forward approach to IB sciences',
+    ],
+    diplomaContext:
+      'Aoba-Japan graduates approximately 45 IB Diploma candidates per year. The school\'s STEAM emphasis means Group 4 sciences receive strong institutional support. Biology HL classes benefit from technology-enhanced lab facilities.',
+    collegeContext:
+      'Aoba-Japan reports placements at US top-50, UK Russell Group, Canadian universities (UBC, Toronto), Japanese universities (Tokyo PEAK, Keio PEARL, Waseda), and Australian institutions. The school\'s STEAM profile supports strong science-application narratives.',
+    paceAlignment:
+      'We align with Aoba-Japan\'s DP calendar and leverage the school\'s technology-forward approach by incorporating bioinformatics and data-analysis skills into our tutoring. Sessions scheduled after school hours (5:30–8 PM JST) at either campus.',
+    faqs: [
+      {
+        question: 'How do you complement Aoba-Japan\'s STEAM-integrated Biology teaching?',
+        answer:
+          'Aoba-Japan\'s Biology programme is strong on technology integration (digital microscopy, bioinformatics). Our tutoring adds depth in content recall, Paper 1 MCQ speed, and Paper 2 command-term precision — the exam-technique layer that STEAM-focused classroom instruction may deprioritise.',
+      },
+      {
+        question: 'Which Aoba-Japan campus do you support — Meguro or Hikarigaoka?',
+        answer:
+          'Both — our online format serves students at either campus. IB DP is typically at the Meguro campus, but scheduling is identical. We accommodate students regardless of which campus they attend.',
+      },
+      {
+        question: 'Can you help Aoba-Japan students with bioinformatics-themed IAs?',
+        answer:
+          'Yes — bioinformatics IAs (using BLAST, UniProt, or PDB databases for protein-structure or sequence-analysis investigations) are a natural fit for Aoba-Japan\'s tech culture. We guide the statistical-analysis and biological-interpretation components that make these IAs score well.',
+      },
+      {
+        question: 'Do you accept JPY payment?',
+        answer:
+          'Yes — JPY via Japanese bank transfer, USD via international card, Visa/Mastercard. Tech-startup families often prefer monthly billing — we offer this alongside annual packages.',
+      },
+      {
+        question: 'When should an Aoba-Japan student start IB Biology HL tutoring?',
+        answer:
+          'September DP1 for Level 7. Aoba-Japan\'s smaller DP cohort (~45 students) means early intervention has high impact. For students planning bioinformatics or STEAM-themed university applications, a strong Biology HL result is strategically important.',
+      },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────────
+  // SOUTH KOREA
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'kis-seoul',
+    schoolName: 'Korea International School (KIS)',
+    shortName: 'KIS',
+    cityCountry: 'Seoul, South Korea',
+    citySlug: 'seoul',
+    timezone: 'KST (Korea)',
+    timezoneIana: 'Asia/Seoul',
+    countryCode: 'KR',
+    inLanguage: 'en-KR',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'Korea International School (KIS) was founded in 1999 and operates campuses in Pangyo (Seongnam, south of Seoul) and Gaepo (Gangnam). KIS enrols approximately 2,100 students from 30+ countries, making it one of South Korea\'s largest international schools. The school follows an American curriculum and offers the IB Diploma for Grades 11–12.',
+      'KIS offers IB Biology at both HL and SL. The Pangyo campus — located in South Korea\'s "Silicon Valley" tech corridor (Naver, Kakao, Samsung SDS, NCSoft) — houses state-of-the-art science labs. Biology HL is popular among KIS students targeting US pre-medical tracks, given the strong Korean-American university pipeline.',
+      'KIS graduates matriculate to US Ivy League and top-50 universities, UK Russell Group, and Korean universities (Yonsei, Korea University, KAIST). The school\'s Korean-American student body and strong US-university counselling create a competitive pre-medical and life-sciences pipeline.',
+    ],
+    reputationBullets: [
+      '2,100 students — one of Korea\'s largest international schools',
+      'Pangyo campus in Korea\'s "Silicon Valley" tech corridor',
+      'American curriculum → IB DP pathway',
+      'Strong US Ivy League and top-50 placement track',
+      'Korean-American student body with competitive pre-med pipeline',
+    ],
+    diplomaContext:
+      'KIS graduates approximately 180 IB Diploma candidates annually — one of the largest DP cohorts in East Asia. Biology HL is heavily subscribed, driven by the pre-medical university track. The school\'s American curriculum foundation means students enter IB with strong AP-style analytical skills.',
+    collegeContext:
+      'KIS reports strong US Ivy League placements (Harvard, Yale, Stanford, Cornell), UK Russell Group (Imperial, UCL, Edinburgh), and Korean universities (Yonsei Medicine, Korea University, KAIST). Pre-medical applications dominate the science cohort.',
+    paceAlignment:
+      'We align with KIS\'s academic calendar (late August start, January/May semesters). KST evening sessions (6–9 PM) fit after KIS Pangyo\'s 3:30 PM dismissal and typical hagwon (private academy) commitments.',
+    faqs: [
+      {
+        question: 'How do you accommodate KIS students who also attend hagwon?',
+        answer:
+          'Many KIS students attend hagwon for Korean-language subjects or SAT/ACT prep. We schedule IB Biology sessions to avoid hagwon conflicts — typically late evening (7:30–9 PM KST) on non-hagwon days or Saturday mornings.',
+      },
+      {
+        question: 'Can you help KIS students targeting US pre-med?',
+        answer:
+          'Yes — KIS has a strong Korean-American pre-med pipeline. We coach Biology HL for Level 7 (college credit at many US universities) and help develop the biology narrative for Common App pre-med essays. Many KIS students apply to Cornell, Johns Hopkins, or Duke pre-med.',
+      },
+      {
+        question: 'Which KIS campus do you support — Pangyo or Gaepo?',
+        answer:
+          'Both campuses. IB DP is at the Pangyo campus, but students living near the Gaepo (Gangnam) campus sometimes need flexible scheduling to account for commute time. Our online format eliminates location constraints.',
+      },
+      {
+        question: 'Do you accept KRW payment?',
+        answer:
+          'Yes — KRW via Korean bank transfer (Hana, Shinhan, Kookmin, Woori) with no FX surcharge. Also USD via international card for Korean-American families with US banking. Annual packages can be split across two KRW transfers.',
+      },
+      {
+        question: 'When should a KIS student start IB Biology HL tutoring?',
+        answer:
+          'August DP1 (Grade 11). KIS\'s large DP cohort (~180 students) means Biology HL classes can be fast-paced and competitive. Early tutoring builds the foundation before the demanding junior-year workload peaks.',
+      },
+    ],
+  },
+  {
+    slug: 'dwight-seoul',
+    schoolName: 'Dwight School Seoul',
+    shortName: 'Dwight Seoul',
+    cityCountry: 'Seoul, South Korea',
+    citySlug: 'seoul',
+    timezone: 'KST (Korea)',
+    timezoneIana: 'Asia/Seoul',
+    countryCode: 'KR',
+    inLanguage: 'en-KR',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Dwight School Seoul is part of the global Dwight School network (New York, London, Shanghai, Dubai, Seoul). The Seoul campus, located in Mapo-gu, enrols approximately 350 students from 40+ countries. Dwight Seoul offers the full IB Continuum and emphasises personalised learning through the school\'s "Spark of Genius" programme.',
+      'Dwight Seoul offers IB Biology at both HL and SL. As part of the Dwight global network, the school benefits from shared curriculum resources and cross-campus faculty collaboration. The school\'s intimate size means Biology HL classes are small (8–15 students), with strong lab access and individualised teacher feedback.',
+      'Dwight Seoul graduates matriculate to US top-50, UK Russell Group, and Korean universities. The Dwight network\'s New York headquarters facilitates strong US East Coast university connections, particularly for pre-medical applicants.',
+    ],
+    reputationBullets: [
+      'Part of Dwight global network (NYC, London, Shanghai, Dubai, Seoul)',
+      '350 students, 40+ nationalities in Mapo-gu, Seoul',
+      'Full IB Continuum with "Spark of Genius" personalised learning',
+      'Intimate Biology HL classes: 8–15 students',
+      'Strong US East Coast university connections via Dwight NYC',
+    ],
+    diplomaContext:
+      'Dwight Seoul graduates approximately 30 IB Diploma candidates per year — an intimate cohort. Biology HL classes of 8–15 students enable personalised instruction. The school\'s global network provides cross-campus enrichment opportunities.',
+    collegeContext:
+      'Dwight Seoul reports placements at US top-50 (leveraging the Dwight NYC network), UK Russell Group, and Korean universities (Yonsei, Korea University). The Dwight brand carries recognition in US university admissions offices.',
+    paceAlignment:
+      'We align with Dwight Seoul\'s DP calendar and leverage the small cohort for closely-tracked progress. Sessions are scheduled after school hours (5:30–8 PM KST). The school\'s personalised-learning culture aligns well with our 1:1 tutoring approach.',
+    faqs: [
+      {
+        question: 'How does Dwight Seoul\'s small cohort size affect your tutoring?',
+        answer:
+          'With only 8–15 Biology HL students, Dwight Seoul teachers provide detailed individual feedback. Our tutoring adds systematic exam-technique drilling and IA optimisation — the exam-preparation layer that a small-school environment may deprioritise in favour of inquiry-based learning.',
+      },
+      {
+        question: 'Can you leverage the Dwight global network for enrichment?',
+        answer:
+          'The Dwight network facilitates cross-campus virtual enrichment (e.g., joint seminars with Dwight NYC or London Biology students). We coordinate our tutoring to complement these network events when they occur.',
+      },
+      {
+        question: 'What time slots work for Dwight Seoul students?',
+        answer:
+          'Weekday sessions from 5:30–8 PM KST after Dwight Seoul\'s typical 3:15 PM dismissal. The Mapo-gu campus is well-connected by Seoul Metro — students commuting home have ample time before evening sessions.',
+      },
+      {
+        question: 'Do you accept KRW payment?',
+        answer:
+          'Yes — KRW via Korean bank transfer or international Visa/Mastercard. USD available for families with US banking. The Dwight network\'s international families often prefer USD invoicing.',
+      },
+      {
+        question: 'When should a Dwight Seoul student start IB Biology tutoring?',
+        answer:
+          'September DP1 for Level 7. Dwight Seoul\'s small cohort means early support has maximum impact. For students targeting US medical or life-science programmes, the full DP1-to-DP2 arc provides the strongest outcomes.',
+      },
+    ],
+  },
+  {
+    slug: 'yiss-seoul',
+    schoolName: 'Yongsan International School of Seoul (YISS)',
+    shortName: 'YISS',
+    cityCountry: 'Seoul, South Korea',
+    citySlug: 'seoul',
+    timezone: 'KST (Korea)',
+    timezoneIana: 'Asia/Seoul',
+    countryCode: 'KR',
+    inLanguage: 'en-KR',
+    schoolType: 'International (IB World School)',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'Yongsan International School of Seoul (YISS) was founded in 1990 in Yongsan-gu, central Seoul — historically the US military base district, now a rapidly-developing mixed-use area. YISS enrols approximately 700 students from 35+ countries. The school offers an American curriculum with the IB Diploma for Grades 11–12.',
+      'YISS offers IB Biology at both HL and SL. The school\'s Christian ethos and American-curriculum foundation create a distinctive school culture. Biology HL is popular among pre-medical students, with many YISS families targeting US and Korean medical pathways. The school\'s science labs were upgraded in 2021.',
+      'YISS graduates matriculate to US top-50 universities, Korean universities (Yonsei, Korea University, KAIST), and UK Russell Group. The school has particular strength in US Midwest and West Coast university placements.',
+    ],
+    reputationBullets: [
+      '700 students, 35+ nationalities in Yongsan-gu, central Seoul',
+      'American curriculum → IB DP pathway with Christian ethos',
+      'Upgraded science labs (2021) with dedicated Biology facilities',
+      'Strong US Midwest and West Coast university placements',
+      'Central Seoul location near Itaewon international district',
+    ],
+    diplomaContext:
+      'YISS graduates approximately 80 IB Diploma candidates per year. Biology HL is a popular Group 4 choice, driven by the pre-medical pipeline. The school\'s American curriculum provides strong analytical-writing foundations for IB Paper 2.',
+    collegeContext:
+      'YISS reports placements at US top-50 (including Ivy League and UC system), Korean universities (Yonsei Medicine, Korea University, Sungkyunkwan), and UK Russell Group. US university counselling is a YISS strength, with particular expertise in financial aid for Korean-American students.',
+    paceAlignment:
+      'We align with YISS\'s DP calendar (August start, semester system). KST evening sessions fit after YISS\'s school day. We accommodate the American-to-IB transition that YISS students experience in Grade 11.',
+    faqs: [
+      {
+        question: 'How do you support YISS students transitioning from the American curriculum to IB?',
+        answer:
+          'YISS students enter the IB DP from an American curriculum foundation. The transition involves new assessment formats (Paper 1 MCQ, IA, command-term precision). We offer August bridge sessions that preview IB Biology expectations before the school year starts.',
+      },
+      {
+        question: 'Can you help YISS students targeting Yonsei Medicine?',
+        answer:
+          'Yes — Yonsei University College of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on Yonsei\'s specific entry requirements, including the Korean-language science interview component for some programmes.',
+      },
+      {
+        question: 'What time slots work for YISS students?',
+        answer:
+          'Weekday sessions from 5:30–8 PM KST. YISS\'s central Yongsan-gu location means most students can reach home quickly after school. Weekend morning sessions available for students with church or community commitments.',
+      },
+      {
+        question: 'Do you accept KRW payment?',
+        answer:
+          'Yes — KRW via Korean bank transfer or international card. USD also accepted. YISS families often receive corporate education allowances — we provide invoices compatible with standard reimbursement formats.',
+      },
+      {
+        question: 'When should a YISS student start IB Biology tutoring?',
+        answer:
+          'August before Grade 11 (DP1). The American-to-IB transition is the critical window. Students who start with our bridge programme enter DP Biology HL with confidence in the assessment format.',
+      },
+    ],
+  },
+  {
+    slug: 'chadwick-songdo',
+    schoolName: 'Chadwick International (Songdo)',
+    shortName: 'Chadwick Songdo',
+    cityCountry: 'Incheon, South Korea',
+    citySlug: 'seoul',
+    timezone: 'KST (Korea)',
+    timezoneIana: 'Asia/Seoul',
+    countryCode: 'KR',
+    inLanguage: 'en-KR',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Chadwick International is located in Songdo International City, a purpose-built smart city within Incheon Free Economic Zone, 40 km west of central Seoul. The school is a sister campus of Chadwick School (Palos Verdes, California, founded 1935). Chadwick International opened in 2010 and enrols approximately 1,200 students from 40+ countries across a state-of-the-art campus.',
+      'Chadwick International offers IB Biology at both HL and SL within a full IB Continuum. The school\'s Songdo campus features purpose-built STEM facilities including advanced Biology labs, a greenhouse, and a marine-ecology observation deck overlooking the Songdo tidal flat (Incheon Bay). The school\'s California heritage drives a strong emphasis on environmental science and sustainability.',
+      'Chadwick International graduates matriculate to US top-50 (leveraging the Chadwick California connection), UK Russell Group, and Korean universities. The school\'s IB programme has matured rapidly since 2010 and now produces consistently strong DP results.',
+    ],
+    reputationBullets: [
+      '1,200 students in Songdo smart city — purpose-built campus',
+      'Sister school of Chadwick Palos Verdes, California (est. 1935)',
+      'Full IB Continuum with advanced STEM facilities',
+      'Greenhouse + marine-ecology deck on Incheon Bay tidal flat',
+      'Strong environmental-science and sustainability emphasis',
+    ],
+    diplomaContext:
+      'Chadwick International graduates approximately 100 IB Diploma candidates per year. Biology HL benefits from the school\'s advanced lab facilities and marine-ecology access. The DP programme has matured to produce consistently strong Group 4 results since the school\'s first DP cohort graduated in 2014.',
+    collegeContext:
+      'Chadwick International reports placements at US top-50 (Ivy League, Stanford, UC system — leveraging the Chadwick California network), UK Russell Group (Imperial, UCL), and Korean universities (KAIST, Yonsei, POSTECH). The California sister-school connection provides distinctive US-university counselling depth.',
+    paceAlignment:
+      'We sync with Chadwick\'s DP calendar and leverage the marine-ecology resources (Songdo tidal flat, greenhouse) by recommending field-based IA topics. Sessions are timed for after school (5:30–8 PM KST), accounting for the Songdo campus\'s distance from central Seoul.',
+    faqs: [
+      {
+        question: 'Can you help Chadwick students with marine-ecology IAs using Songdo tidal flat?',
+        answer:
+          'Absolutely — the Songdo tidal flat is a world-class ecology fieldwork site. We\'ve guided Chadwick students through intertidal-zonation, water-quality, and biodiversity IAs using the school\'s marine-ecology observation deck access. These field-based IAs score consistently well.',
+      },
+      {
+        question: 'How does the Chadwick California connection benefit Biology students?',
+        answer:
+          'Chadwick\'s sister-school relationship with Palos Verdes provides cross-campus enrichment, shared curriculum resources, and US-university counselling expertise. For pre-medical applicants, the California connection strengthens applications to UC system and Stanford.',
+      },
+      {
+        question: 'Is Songdo campus far from central Seoul?',
+        answer:
+          'Songdo is approximately 40 km west of central Seoul (50–60 minutes by car or AREX train + Metro). Our online tutoring eliminates the commute — sessions are scheduled for after school at the Songdo campus, regardless of where the student lives.',
+      },
+      {
+        question: 'Do you accept KRW payment?',
+        answer:
+          'Yes — KRW via Korean bank transfer, USD via international card. Chadwick families in the Incheon Free Economic Zone often have international banking — we accommodate multiple currencies. Annual packages can be split across two payments.',
+      },
+      {
+        question: 'When should a Chadwick student start IB Biology HL tutoring?',
+        answer:
+          'September DP1 for Level 7 targeting. Chadwick\'s strong STEM facilities mean students have excellent lab access — our tutoring adds exam-technique depth and IA optimisation that complements the school\'s practical-first approach.',
+      },
+    ],
+  },
+  {
+    slug: 'branksome-hall-jeju',
+    schoolName: 'Branksome Hall Asia (Jeju)',
+    shortName: 'Branksome Hall Asia',
+    cityCountry: 'Jeju, South Korea',
+    citySlug: 'seoul',
+    timezone: 'KST (Korea)',
+    timezoneIana: 'Asia/Seoul',
+    countryCode: 'KR',
+    inLanguage: 'en-KR',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Branksome Hall Asia (BHA) is the sister school of Branksome Hall Toronto (founded 1903, one of Canada\'s premier girls\' schools). BHA opened in 2012 on Jeju Island, South Korea\'s subtropical resort island and UNESCO World Natural Heritage site. The school is co-educational and enrols approximately 1,000 students from 30+ countries, including a significant boarding population.',
+      'BHA offers IB Biology at both HL and SL within a full IB Continuum. Jeju Island\'s unique volcanic geology and subtropical ecosystem provide unparalleled ecology fieldwork opportunities for Biology students. The school\'s campus includes modern science labs, outdoor learning spaces, and access to Jeju\'s Hallasan National Park and coastal UNESCO Biosphere Reserve.',
+      'BHA graduates matriculate to Canadian (UBC, Toronto, McGill), US top-50, UK Russell Group, and Korean universities. The Branksome Hall Toronto connection provides strong Canadian-university counselling and alumni networks.',
+    ],
+    reputationBullets: [
+      'Sister school of Branksome Hall Toronto (est. 1903)',
+      '1,000 students on Jeju Island — UNESCO World Natural Heritage site',
+      'Full IB Continuum with boarding programme',
+      'Subtropical ecology + volcanic geology fieldwork for Biology IAs',
+      'Strong Canadian university pipeline via Toronto sister school',
+    ],
+    diplomaContext:
+      'BHA graduates approximately 80 IB Diploma candidates per year. Biology HL benefits from Jeju Island\'s extraordinary biodiversity — subtropical forests, volcanic landscapes, and marine ecosystems are all within fieldwork range of the campus.',
+    collegeContext:
+      'BHA reports placements at Canadian universities (UBC, Toronto, McGill, Queen\'s), US top-50 (Ivy League, Stanford), UK Russell Group (Imperial, UCL, Edinburgh), and Korean universities (Yonsei, Korea University). The Branksome Hall Toronto heritage provides exceptional Canadian-university counselling.',
+    paceAlignment:
+      'We sync with BHA\'s DP calendar. Jeju\'s subtropical climate means ecology fieldwork is possible year-round — we recommend IA topics that leverage this unique advantage. Boarding students have structured evening study time that accommodates tutoring sessions.',
+    faqs: [
+      {
+        question: 'Can you help BHA students with Jeju-specific ecology IAs?',
+        answer:
+          'Yes — Jeju Island is one of the world\'s best IB Biology ecology IA sites. We\'ve guided students through volcanic-soil microbiology, subtropical-forest biodiversity, coastal-intertidal, and Hallasan altitudinal-gradient IAs. These Jeju-specific IAs produce distinctive, high-scoring work.',
+      },
+      {
+        question: 'Do you support BHA boarding students?',
+        answer:
+          'Absolutely — our online tutoring is ideal for boarding students. We schedule sessions during BHA\'s approved evening study blocks (7–9 PM KST) or weekend mornings. The boarding schedule provides consistent tutoring time that day-school students often lack.',
+      },
+      {
+        question: 'Can you help BHA students targeting Canadian medical schools?',
+        answer:
+          'Yes — the Branksome Hall Toronto connection makes Canadian medical schools (University of Toronto Medicine, McMaster, UBC) natural targets. We coach Biology HL for Level 7 and advise on the MCAT and CASPer requirements that Canadian medical schools use.',
+      },
+      {
+        question: 'Is Jeju Island isolated for IB Biology tutoring?',
+        answer:
+          'Not at all — our online format makes geography irrelevant. Jeju\'s location is actually an advantage: the island\'s UNESCO-designated biodiversity and volcanic ecology give BHA students IA opportunities that mainland Seoul schools cannot match.',
+      },
+      {
+        question: 'When should a BHA student start IB Biology HL tutoring?',
+        answer:
+          'September DP1 for Level 7. BHA\'s boarding structure provides consistent daily routines — students who start early build habits that carry through the demanding DP2 year. For ecology-focused IAs, starting in DP1 Term 1 allows for multi-season fieldwork data collection on Jeju.',
       },
     ],
   },

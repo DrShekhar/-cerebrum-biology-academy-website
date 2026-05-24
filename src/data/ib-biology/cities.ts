@@ -29,6 +29,7 @@ export type CitySlug =
   | 'kuala-lumpur'
   // 2026 P0 expansion — additive only (no edits to existing pages)
   | 'tokyo'
+  | 'osaka'
   | 'seoul'
   | 'shanghai'
   | 'beijing'
@@ -427,6 +428,26 @@ export const cities: Record<CitySlug, CityConfig> = {
     neighbourhoods: ['Minato', 'Shibuya', 'Setagaya', 'Meguro', 'Shinagawa', 'Yokohama'],
     localHook:
       "Tokyo's IB community is concentrated around Minato (Roppongi/Azabu), Setagaya, and the Yokohama international corridor. Our JST-aligned sessions fit the long Japanese school day, with weekend IA workshops timed for after-cram-school slots.",
+  },
+
+  osaka: {
+    slug: 'osaka',
+    city: 'Osaka',
+    country: 'Japan',
+    countryCode: 'JP',
+    region: 'Osaka / Kansai',
+    timezoneAbbr: 'JST',
+    currency: { code: 'JPY', symbol: '¥' },
+    pricing: { perHour: 12500, perHourText: '¥10,000–15,000/hr' },
+    ibSchools: [
+      'Osaka International School of Kwansei Gakuin (OIS)',
+      'Canadian Academy (Kobe)',
+      'Senri International School (SIS)',
+      'AICJ (Hiroshima — Kansai catchment)',
+    ],
+    neighbourhoods: ['Minoh', 'Senri', 'Ashiya', 'Kobe Rokko Island', 'Nishinomiya'],
+    localHook:
+      "The Osaka-Kobe-Kyoto IB corridor spans OIS in Minoh (Kwansei Gakuin affiliated), Canadian Academy on Kobe's Rokko Island, and Senri International near Expo Park. The Kansai pharmaceutical (Takeda, Shionogi, Daiichi Sankyo) and corporate expat community drives steady IB demand. JST evening sessions (6–8 PM) fit the long Japanese school day.",
   },
 
   seoul: {
