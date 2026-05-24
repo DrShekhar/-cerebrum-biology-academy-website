@@ -4255,6 +4255,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.88,
     },
+    // ─── P3 China cluster — IB school-feeders (6) + Shenzhen + AP Beijing ───
+    {
+      url: `${baseUrl}/ib-biology-tutor-shanghai-american-school`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-scie-shenzhen`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-wab-beijing`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-isb-beijing`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-cis-hong-kong`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/ib-biology-tutor-li-po-chun-uwc`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/ib-biology/shenzhen`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/ap-biology-tutor-beijing`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
     // Delhi Area NEET Coaching Pages
     {
       url: `${baseUrl}/neet-coaching-north-delhi`,

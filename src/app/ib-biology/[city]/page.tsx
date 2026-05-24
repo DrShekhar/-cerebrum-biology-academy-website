@@ -22,7 +22,12 @@ import { MessageCircle, MapPin, Clock, CheckCircle2 } from 'lucide-react'
  * Note: Googlebot crawls from US so this gate does NOT prevent Indian SERP
  * appearances. hreflang (en-HK / en-CN) tells Google these target HK/CN.
  */
-const CHINA_REGION_CITIES_HIDDEN_FROM_INDIA = new Set(['hong-kong', 'shanghai', 'beijing'])
+const CHINA_REGION_CITIES_HIDDEN_FROM_INDIA = new Set([
+  'hong-kong',
+  'shanghai',
+  'beijing',
+  'shenzhen',
+])
 
 // Map IB city slugs to olympiad city slugs. Used for the
 // "beyond HL" cross-sell block shown only on India pages.

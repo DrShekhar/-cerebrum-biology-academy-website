@@ -1558,6 +1558,80 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
 
   // ──────────────────────────────────────────────────────────────────────────
+  // 24b. BEIJING — mainland China AP Biology, Shunyi international-school cluster
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'beijing',
+    cityName: 'Beijing',
+    region: 'Shunyi + Chaoyang + Haidian + Lido + CBD',
+    timezone: 'CST (China)',
+    timezoneIana: 'Asia/Shanghai',
+    addressRegion: 'Beijing',
+    heroBlurb:
+      "Beijing's AP Biology demand is anchored in Shunyi district's international school cluster — International School of Beijing (ISB) runs a full IB + AP dual-curriculum senior school, Western Academy of Beijing (WAB) is IB Continuum but a meaningful subset of students add AP Biology for US applications, and Dulwich College Beijing, Yew Chung International School Beijing (YCIS), Keystone Academy, Beijing City International School (BCIS), and Harrow International School Beijing all carry AP tracks. Chaoyang District (CBD) and Haidian district add demand from Chinese-passport students at private bilingual schools applying to US universities. Per the 2025 HSBC Hurun ranking, 63% of mainland China's ranked international schools still offer AP — AP-5 in Biology remains the cleanest US-curriculum signal for Ivy League, Stanford, UC system, Johns Hopkins, and Duke admissions despite the broader market shift toward A-Level and IB.",
+    positioningBlurb:
+      'Beijing AP tutoring market is fragmented across local Chinese-language agencies (Hanlin International Education 翰林国际教育, TestDaily, 渊学通, 国际教育优选), Western premium tutoring (Crimson Education, ITS Beijing, individual ISB / WAB alumni), and freelance international-school teachers. Local rates run CNY 500–1,500/hr (US$70–210/hr); Crimson and Western agencies run US$250–500/hr for senior tutors with mixed biology specialism. Cerebrum is structurally different: AIIMS-trained PhD biology faculty as your dedicated year-long tutor, weekly written FRQ feedback against the College Board rubric, biology-only specialisation, and Indian small-batch coaching tradition (max 12) calibrated to retrieval practice. CST evening live classes (7–10 PM Beijing time) slot cleanly into ISB and WAB schedules. Senior-faculty 1:1 from US$1,800 for 12 hours — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
+    schools: [
+      'International School of Beijing (ISB)',
+      'Western Academy of Beijing (WAB)',
+      'Dulwich College Beijing',
+      'Yew Chung International School Beijing (YCIS)',
+      'Keystone Academy',
+      'Beijing City International School (BCIS)',
+      'Harrow International School Beijing',
+      'Daystar Academy',
+      'Yew Wah International Education School Beijing',
+      'Pakistan Embassy College Beijing',
+      'Beijing International Bilingual Academy (BIBA)',
+      'Tsinghua University High School International Department',
+      'Beijing No.4 High School International Campus',
+      'British School of Beijing',
+      'Canadian International School of Beijing',
+    ],
+    faqs: [
+      {
+        question:
+          'My child is at ISB Shunyi — how does Cerebrum complement the dual IB + AP senior school programme?',
+        answer:
+          'ISB runs both IB DP and AP in parallel for senior school, so families have curriculum choice rare in mainland China. For AP Biology students at ISB, class sizes of 15–22 students mean no school teacher can mark every FRQ to College Board rubric weekly. We layer biology-specialist 1:1 tutoring on top: same Campbell-aligned content the ISB teacher uses, plus dedicated weekly FRQ rubric calibration and timed full-length mocks through April. 90-minute 1:1 sessions twice a week in CST evenings (7–10 PM Beijing) sit between school dismissal (around 3:30 PM) and the late homework block.',
+      },
+      {
+        question:
+          'My child is at WAB and applying primarily to US universities — should they add AP Biology on top of IB DP?',
+        answer:
+          'WAB is an IB Continuum School — IB DP is the primary senior curriculum. Some WAB students applying to US universities add AP Biology as a secondary US-curriculum signal (the AP-5 reads cleanly to US adcoms benchmarking an IB transcript). This is workload-intensive — IB Diploma is already heavy — so we typically start AP Bio coaching in the IB1 summer (June–August Beijing break) to front-load Campbell units before the IB2 year intensifies. About 15–25% of US-applying WAB students take this combined IB HL + AP Biology route; the rest rely on IB HL alone with strong SAT/ACT.',
+      },
+      {
+        question: 'How does Zoom work from Shunyi, and is VPN needed for evening sessions?',
+        answer:
+          'Zoom usually works in mainland China but can throttle on residential ISPs during peak hours (7–10 PM CST). ISB and WAB both provide school VPNs to enrolled families — most of our Beijing students use the school VPN for evening Cerebrum sessions and report consistent video quality. Family VPNs (Astrill, ExpressVPN, NordVPN) also work reliably in Shunyi and Chaoyang. We have run year-long Beijing cohorts since 2023 with very few connectivity issues; for rare disruption, we provide recorded sessions within 24 hours.',
+      },
+      {
+        question:
+          'How does Cerebrum compare to Crimson Education, Hanlin International Education, or local ISB / WAB alumni tutors?',
+        answer:
+          'Crimson Education in Beijing charges US$250–500/hr for senior tutors with broad academic backgrounds but mixed biology specialism. Local Chinese-language agencies (Hanlin 翰林, TestDaily, 渊学通) charge CNY 500–1,500/hr (US$70–210/hr) for Mandarin-medium tutors with strong Chinese-Western curriculum bridge but mixed biology depth. ISB / WAB alumni tutors charge CNY 300–800/hr with variable expertise. Cerebrum is biology-only specialist: AIIMS-trained PhD faculty as your dedicated year-long tutor, weekly FRQ rubric calibration, and continuity across the full AP cycle. Senior-faculty 1:1 at US$1,800 for 12 hours = US$150/hr — undercuts Crimson and matches the local CNY 1,000+/hr tier with materially deeper biology pedagogy.',
+      },
+      {
+        question: 'Can we pay in CNY via Alipay or WeChat Pay?',
+        answer:
+          'Yes. CNY payment via cross-border Alipay or WeChat Pay (single-payment cap USD 5,000, annual USD 50,000 per 2025 PBOC rules) processed through our Stripe integration — settles in USD on our end at no FX charge to you. USD on international Visa / Mastercard / Amex also works. Several Beijing families split the US$1,800 senior-faculty package across two CNY transfers spaced 60 days apart at no extra charge. We do not currently accept direct UnionPay (Cerebrum has no Chinese entity), but Alipay cross-border covers most family payment preferences.',
+      },
+      {
+        question:
+          'My child is at a Chinese-passport private bilingual school in Haidian or Chaoyang — can they realistically pursue AP Biology?',
+        answer:
+          'Yes. A meaningful number of Chinese-passport students at private bilingual schools (Tsinghua University High School International Department, Beijing No.4 High School International Campus, Daystar Academy, BIBA) prepare for AP Biology alongside their primary Gaokao / A-Level / IB track for US-university applications. Workload is challenging — the school primary curriculum is intense — so we typically structure AP Bio coaching as a focused 6–9 month sprint in the year before the May AP exam, with reduced summer load. AP-5 reads cleanly to US adcoms benchmarking a non-US-curriculum transcript.',
+      },
+      {
+        question: 'When should a Beijing student start AP Biology tutoring for a Level 5 target?',
+        answer:
+          'For a serious AP-5 target, August or September of the AP course year (junior year for most US-track students) is ideal. That lets us calibrate to school pacing from the start, layer Campbell Units 1–8 alongside the school sequence, and have 8 months for FRQ rubric drilling and timed full-length mocks through April. Late starters (January AP-year) can still target AP-5 but with intensive 90-minute sessions twice weekly through the May exam window. For students adding AP Bio to a Gaokao / IB / A-Level primary track, we recommend starting earlier in summer to front-load.',
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
   // 25. GHAZIABAD (sub-metro of Delhi NCR — east NCR AP Bio demand)
   // ──────────────────────────────────────────────────────────────────────────
   {

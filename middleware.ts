@@ -263,6 +263,15 @@ const HIDE_FROM_INDIA_PATHS = new Set<string>([
   '/cnbo-coaching',
   '/hkbo-coaching',
   '/ibo-coaching-china',
+  // P3 cluster (6 IB school-feeders + Shenzhen city + AP Beijing)
+  '/ib-biology-tutor-shanghai-american-school',
+  '/ib-biology-tutor-scie-shenzhen',
+  '/ib-biology-tutor-wab-beijing',
+  '/ib-biology-tutor-isb-beijing',
+  '/ib-biology-tutor-cis-hong-kong',
+  '/ib-biology-tutor-li-po-chun-uwc',
+  '/ib-biology/shenzhen',
+  '/ap-biology-tutor-beijing',
 ])
 
 export default async function middleware(req: NextRequest) {

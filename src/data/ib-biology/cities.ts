@@ -32,6 +32,7 @@ export type CitySlug =
   | 'seoul'
   | 'shanghai'
   | 'beijing'
+  | 'shenzhen'
   | 'houston'
   | 'chicago'
   | 'san-francisco'
@@ -479,6 +480,29 @@ export const cities: Record<CitySlug, CityConfig> = {
     neighbourhoods: ['Shunyi', 'Chaoyang', 'Haidian', 'Lido', 'CBD'],
     localHook:
       "Beijing's IB cluster is centered in Shunyi (ISB, WAB, Dulwich) and Chaoyang. Our tutors are familiar with the ISB and WAB IA calendars and the cross-cultural admissions priorities that Beijing IB students face.",
+  },
+
+  shenzhen: {
+    slug: 'shenzhen',
+    city: 'Shenzhen',
+    country: 'China',
+    countryCode: 'CN',
+    region: 'Guangdong',
+    timezoneAbbr: 'CST (China)',
+    currency: { code: 'CNY', symbol: '¥' },
+    pricing: { perHour: 800, perHourText: '¥700–1,000/hr' },
+    ibSchools: [
+      'Shenzhen College of International Education (SCIE)',
+      'Shekou International School (SIS)',
+      'QSI International School of Shenzhen',
+      'Shen Wai International School (SWIS)',
+      'Basis International School Shenzhen',
+      'Shenzhen American International School',
+      'International School of Nansha (Guangzhou-Shenzhen corridor)',
+    ],
+    neighbourhoods: ['Nanshan', 'Shekou', 'Futian', 'Luohu', 'Longgang', "Bao'an"],
+    localHook:
+      'Shenzhen is anchored by SCIE (publicly ranked #1 international school in China, 2025 HSBC Hurun ranking) and Shekou International School (SIS). Strong dual A-Level + IB DP curriculum culture, with significant cross-border Hong Kong family demand given the Shenzhen-HK proximity (commuter rail to West Kowloon under 15 minutes). Our China-time-aligned sessions support both expat and Chinese-national IB students preparing for UK Russell Group, US Ivy League, HKU MBBS, and CUHK MBBS applications.',
   },
 
   houston: {
