@@ -48,11 +48,19 @@ function buildSchemas(metro: GAMSATMetroConfig) {
     ],
   }
 
-  return { courseSchema, faqSchema, breadcrumbSchema }
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `GAMSAT Biology Tutor for ${metro.city} Applicants`,
+    url: pageUrl,
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
+  }
+
+  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema }
 }
 
 export default function GAMSATBiologyCityTemplate({ metro }: { metro: GAMSATMetroConfig }) {
-  const { courseSchema, faqSchema, breadcrumbSchema } = buildSchemas(metro)
+  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema } = buildSchemas(metro)
 
   const wa =
     'https://wa.me/918826444334?text=' +
@@ -63,6 +71,7 @@ export default function GAMSATBiologyCityTemplate({ metro }: { metro: GAMSATMetr
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <section className="bg-gradient-to-br from-purple-900 to-indigo-900 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
@@ -121,6 +130,30 @@ export default function GAMSATBiologyCityTemplate({ metro }: { metro: GAMSATMetr
                 <p className="mt-4 text-slate-700 leading-relaxed">{f.answer}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Biology Programmes</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link href="/gamsat-section-3-biology-prep" className="block p-4 rounded-xl border border-slate-200 hover:border-purple-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">GAMSAT Biology Hub</p>
+              <p className="text-sm text-slate-500">Full Section III programme</p>
+            </Link>
+            <Link href="/best-gamsat-biology-tutor" className="block p-4 rounded-xl border border-slate-200 hover:border-purple-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">Best GAMSAT Biology Tutor</p>
+              <p className="text-sm text-slate-500">Why Cerebrum for GAMSAT</p>
+            </Link>
+            <Link href="/usmle-step-1-biology-preparation" className="block p-4 rounded-xl border border-slate-200 hover:border-purple-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">USMLE Step 1 Biology</p>
+              <p className="text-sm text-slate-500">US medical licensing prep</p>
+            </Link>
+            <Link href="/ib-biology" className="block p-4 rounded-xl border border-slate-200 hover:border-purple-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">IB Biology Tutoring</p>
+              <p className="text-sm text-slate-500">HL & SL for university prep</p>
+            </Link>
           </div>
         </div>
       </section>

@@ -202,6 +202,21 @@ export default async function CityPage({ params }: PageProps) {
   return (
     <>
       <FAQSchema questions={cityFAQs} pageUrl={url} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: `IB Biology Tutor in ${config.city}`,
+            url,
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'],
+            },
+          }),
+        }}
+      />
       <BreadcrumbSchema
         items={[
           { label: 'IB Biology', href: '/ib-biology' },
@@ -251,10 +266,10 @@ export default async function CityPage({ params }: PageProps) {
                 </span>
               )}
             </div>
-            <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl">
+            <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl" data-speakable="title">
               IB Biology Tutor in {config.city} — HL &amp; SL, 2025 Syllabus
             </h1>
-            <p className="max-w-3xl text-lg text-gray-300 sm:text-xl">{config.localHook}</p>
+            <p className="max-w-3xl text-lg text-gray-300 sm:text-xl" data-speakable="summary">{config.localHook}</p>
             {config.annualPackage && (
               <p className="mt-4 text-sm text-green-300">{config.annualPackage}</p>
             )}

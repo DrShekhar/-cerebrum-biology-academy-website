@@ -64,11 +64,22 @@ function buildSchemas(metro: MCATMetroConfig) {
     ],
   }
 
-  return { courseSchema, faqSchema, breadcrumbSchema }
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `MCAT Biology Tutor for ${metro.city} Students`,
+    url: pageUrl,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'],
+    },
+  }
+
+  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema }
 }
 
 export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroConfig }) {
-  const { courseSchema, faqSchema, breadcrumbSchema } = buildSchemas(metro)
+  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema } = buildSchemas(metro)
 
   const wa =
     'https://wa.me/918826444334?text=' +
@@ -81,6 +92,7 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
@@ -200,6 +212,30 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
                 <p className="mt-4 text-slate-700 leading-relaxed faq-answer">{f.answer}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Biology Programmes</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link href="/mcat-biology-preparation" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">MCAT Biology Hub</p>
+              <p className="text-sm text-slate-500">Full programme overview</p>
+            </Link>
+            <Link href="/best-mcat-biology-tutor" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">Best MCAT Biology Tutor</p>
+              <p className="text-sm text-slate-500">Why Cerebrum for MCAT Bio</p>
+            </Link>
+            <Link href="/usmle-step-1-biology-preparation" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">USMLE Step 1 Biology</p>
+              <p className="text-sm text-slate-500">Post-MCAT medical licensing</p>
+            </Link>
+            <Link href="/cerebrum-vs-kaplan-mcat" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">Cerebrum vs Kaplan MCAT</p>
+              <p className="text-sm text-slate-500">Specialist vs generalist</p>
+            </Link>
           </div>
         </div>
       </section>

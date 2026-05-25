@@ -47,11 +47,19 @@ function buildSchemas(metro: DATMetroConfig) {
     ],
   }
 
-  return { courseSchema, faqSchema, breadcrumbSchema }
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `DAT Biology Tutor for ${metro.city} Students`,
+    url: pageUrl,
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
+  }
+
+  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema }
 }
 
 export default function DATBiologyCityTemplate({ metro }: { metro: DATMetroConfig }) {
-  const { courseSchema, faqSchema, breadcrumbSchema } = buildSchemas(metro)
+  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema } = buildSchemas(metro)
 
   const wa =
     'https://wa.me/918826444334?text=' +
@@ -62,6 +70,7 @@ export default function DATBiologyCityTemplate({ metro }: { metro: DATMetroConfi
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <section className="bg-gradient-to-br from-teal-900 to-teal-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
@@ -121,6 +130,30 @@ export default function DATBiologyCityTemplate({ metro }: { metro: DATMetroConfi
                 <p className="mt-4 text-slate-700 leading-relaxed">{f.answer}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Biology Programmes</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link href="/dat-biology-preparation" className="block p-4 rounded-xl border border-slate-200 hover:border-teal-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">DAT Biology Hub</p>
+              <p className="text-sm text-slate-500">Full programme overview</p>
+            </Link>
+            <Link href="/best-dat-biology-tutor" className="block p-4 rounded-xl border border-slate-200 hover:border-teal-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">Best DAT Biology Tutor</p>
+              <p className="text-sm text-slate-500">Why Cerebrum for DAT Bio</p>
+            </Link>
+            <Link href="/mcat-biology-preparation" className="block p-4 rounded-xl border border-slate-200 hover:border-teal-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">MCAT Biology</p>
+              <p className="text-sm text-slate-500">Pre-med alternative track</p>
+            </Link>
+            <Link href="/ap-biology" className="block p-4 rounded-xl border border-slate-200 hover:border-teal-400 hover:shadow transition">
+              <p className="font-semibold text-slate-900">AP Biology</p>
+              <p className="text-sm text-slate-500">High school foundation</p>
+            </Link>
           </div>
         </div>
       </section>
