@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import type { USMLEMetroConfig } from '@/data/usmle-step-1/metros'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
@@ -181,6 +182,8 @@ export default function USMLEStep1CityTemplate({ metro }: { metro: USMLEMetroCon
           <a href={wa} className="inline-flex items-center gap-2 bg-white text-red-700 px-8 py-4 rounded-xl font-semibold text-lg" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
         </div>
       </section>
+
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import type { MCATMetroConfig } from '@/data/mcat/metros'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
@@ -258,6 +259,8 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
           </a>
         </div>
       </section>
+
+      <StickyMobileCTABar waUrl={wa} />
     </main>
   )
 }

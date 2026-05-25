@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { MessageCircle, Trophy, Target, Award, CheckCircle2, BookOpen } from 'lucide-react'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const CANONICAL = 'https://cerebrumbiologyacademy.com/bbo-biology-olympiad-coaching'
 
@@ -127,6 +128,8 @@ export default function Page() {
             <a href={wa} className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold text-lg" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
           </div>
         </section>
+
+        <StickyMobileCTABar waUrl={wa} />
       </main>
     </>
   )
