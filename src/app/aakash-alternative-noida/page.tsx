@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import AakashAlternativeNoidaContent from './AakashAlternativeContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 const noidaLocation = CONTACT_INFO.location.noida
 
@@ -128,6 +129,7 @@ export default function AakashAlternativeNoidaPage() {
 
   return (
     <>
+      <LocalBusinessSchema />
       <CerebrumPersonSchema
         knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />

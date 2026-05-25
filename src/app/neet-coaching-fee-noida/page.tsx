@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Phone, IndianRupee, CheckCircle, ArrowRight, Star, Monitor, MapPin, Building2 } from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison Rs 48,000-3,50,000',
@@ -152,6 +153,7 @@ const faqs = [
 export default function NEETCoachingFeeNoidaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <LocalBusinessSchema />
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-fee-noida"
         pageName="NEET Coaching Fees in Noida"

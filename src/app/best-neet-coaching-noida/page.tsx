@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import BestNEETCoachingNoidaContent from './BestNEETCoachingNoidaContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Noida 2026 | Top Institutes Compared',
@@ -153,6 +154,7 @@ export default function BestNEETCoachingNoidaPage() {
 
   return (
     <>
+      <LocalBusinessSchema />
       <CerebrumPersonSchema
         knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
       />
