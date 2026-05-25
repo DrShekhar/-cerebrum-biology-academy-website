@@ -6,6 +6,8 @@ import { campbellUnits } from '@/data/campbell-biology/units'
 import { citySlugs as ibBiologyCitySlugs } from '@/data/ib-biology/cities'
 import { ibBiologySchoolSlugs } from '@/data/ib-biology/schools'
 import { mcatMetroSlugs } from '@/data/mcat/metros'
+import { datMetroSlugs } from '@/data/dat/metros'
+import { gamsatMetroSlugs } from '@/data/gamsat/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
 import { detailedCourses } from '@/data/detailedCourses'
 import { SUPPORTED_COUNTRIES } from '@/lib/international/countries'
@@ -259,7 +261,11 @@ function normalizePriority(path: string, currentPriority: number): number {
   ) {
     return 0.85
   }
-  if (path === '/dat-biology-tutor-new-jersey' || path === '/dat-biology-tutor-bay-area') {
+  if (
+    path === '/dat-biology-tutor-new-jersey' ||
+    path === '/dat-biology-tutor-bay-area' ||
+    datMetroSlugs.some((slug) => path === `/dat-biology-tutor-${slug}`)
+  ) {
     return 0.8
   }
 
@@ -268,7 +274,11 @@ function normalizePriority(path: string, currentPriority: number): number {
   if (path === '/gamsat-section-3-biology-prep') {
     return 0.85
   }
-  if (path === '/gamsat-biology-tutor-london' || path === '/gamsat-biology-tutor-sydney') {
+  if (
+    path === '/gamsat-biology-tutor-london' ||
+    path === '/gamsat-biology-tutor-sydney' ||
+    gamsatMetroSlugs.some((slug) => path === `/gamsat-biology-tutor-${slug}`)
+  ) {
     return 0.8
   }
 
@@ -5870,6 +5880,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // DAT city pages from metros.ts (Phase 2 expansion)
+    ...datMetroSlugs.map((slug) => ({
+      url: `${baseUrl}/dat-biology-tutor-${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     // GAMSAT cluster (UK / Ireland / Australia graduate medicine).
     {
       url: `${baseUrl}/best-gamsat-biology-tutor`,
@@ -5895,6 +5912,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // GAMSAT city pages from metros.ts (Phase 2 expansion)
+    ...gamsatMetroSlugs.map((slug) => ({
+      url: `${baseUrl}/gamsat-biology-tutor-${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     // USMLE Step 1 cluster (US medical licensing + IMG ECFMG). AEO hub
     // at 0.92, programme hub + section + cornerstone at 0.85.
     {
