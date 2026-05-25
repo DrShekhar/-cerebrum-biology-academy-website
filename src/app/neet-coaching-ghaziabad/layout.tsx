@@ -4,7 +4,8 @@ import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
 
 export const metadata: Metadata = {
   title:
-    'Best NEET Coaching in Ghaziabad | Indirapuram, Vaishali, Crossing Republik | Cerebrum Academy',
+    'NEET Coaching Ghaziabad — Indirapuram, Vaishali | Cerebrum Biology',
+  other: { 'article:modified_time': '2026-05-25' },
   description:
     'Top NEET biology coaching in Ghaziabad. 98% success rate, AIIMS faculty. Best coaching in Indirapuram, Vaishali, Crossing Republik, Raj Nagar Extension. 1,500+ students. Book free demo!',
   keywords:

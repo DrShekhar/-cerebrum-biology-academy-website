@@ -12,6 +12,7 @@ import {
   Star,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Ghaziabad 2026 | Compare Coaching Fees',
@@ -153,6 +154,7 @@ const faqs = [
 export default function NEETCoachingFeesGhaziabadPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <LocalBusinessSchema />
       <CerebrumPersonSchema
         knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
       />

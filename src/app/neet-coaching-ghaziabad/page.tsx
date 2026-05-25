@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import {
   MapPin,
   Train,
@@ -576,6 +577,33 @@ export default function NeetCoachingGhaziabadPage() {
       </section>
 
       <AreasServedSection cityName="Ghaziabad" areas={areasForAccordion} />
+
+      {/* Cross-links — connect Ghaziabad hub to satellites + NCR hubs */}
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Explore NEET Coaching in Ghaziabad</h2>
+          <p className="text-slate-600 mb-6">Compare fees, alternatives, test series, and foundation programmes in Ghaziabad.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link href="/best-neet-coaching-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Best NEET Coaching</span></Link>
+            <Link href="/neet-coaching-fees-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Fee Comparison</span></Link>
+            <Link href="/neet-test-series-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">NEET Test Series</span></Link>
+            <Link href="/aakash-alternative-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Aakash Alternative</span></Link>
+            <Link href="/allen-alternative-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Allen Alternative</span></Link>
+            <Link href="/neet-foundation-class-9-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Foundation Class 9</span></Link>
+            <Link href="/neet-foundation-class-10-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Foundation Class 10</span></Link>
+            <Link href="/neet-crash-course-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Crash Course</span></Link>
+          </div>
+          <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Other Delhi NCR Centres</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <Link href="/neet-coaching-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Delhi</span></Link>
+            <Link href="/neet-coaching-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Noida</span></Link>
+            <Link href="/neet-coaching-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Faridabad</span></Link>
+            <Link href="/neet-coaching-gurugram" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Gurugram</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." />
 
       {/* Schema Markup for SEO */}
       <LocalBusinessSchema />

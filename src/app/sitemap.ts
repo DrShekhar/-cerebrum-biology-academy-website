@@ -1790,6 +1790,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Ghaziabad satellite pages (17 — audit fix May 2026)
+    ...[
+      'best-neet-coaching-ghaziabad', 'neet-coaching-fees-ghaziabad',
+      'neet-coaching-near-me-ghaziabad', 'neet-test-series-ghaziabad',
+      'neet-crash-course-ghaziabad', 'neet-dropper-batch-ghaziabad',
+      'neet-foundation-class-9-ghaziabad', 'neet-foundation-class-10-ghaziabad',
+      'neet-evening-batch-ghaziabad', 'neet-weekend-batch-ghaziabad',
+      'neet-scholarship-ghaziabad',
+      '1-year-neet-course-ghaziabad', '2-year-neet-course-ghaziabad',
+      'aakash-alternative-ghaziabad', 'allen-alternative-ghaziabad',
+      'free-neet-demo-class-ghaziabad', 'online-neet-coaching-ghaziabad',
+      'is-coaching-necessary-for-neet-ghaziabad',
+    ].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     // Faridabad SEO Landing Pages (area sub-pages now dynamic)
     {
       url: `${baseUrl}/neet-coaching-faridabad`,

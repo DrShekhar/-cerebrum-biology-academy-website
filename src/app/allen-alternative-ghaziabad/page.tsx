@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import AllenAlternativeGhaziabadContent from './AllenAlternativeGhaziabadContent'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 const noidaAddress = 'B-45, Sector 62, Noida, UP 201301'
 
@@ -126,6 +127,7 @@ export default function AllenAlternativeGhaziabadPage() {
 
   return (
     <>
+      <LocalBusinessSchema />
       <CerebrumPersonSchema
         knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
       />
