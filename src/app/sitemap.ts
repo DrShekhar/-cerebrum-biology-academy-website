@@ -4,6 +4,7 @@ import { getAllSEOSlugs } from '@/data/seo-landing/slugs-static'
 import { allChapters } from '@/data/campbell-biology'
 import { campbellUnits } from '@/data/campbell-biology/units'
 import { citySlugs as ibBiologyCitySlugs } from '@/data/ib-biology/cities'
+import { ibBiologySchoolSlugs } from '@/data/ib-biology/schools'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
 import { detailedCourses } from '@/data/detailedCourses'
 import { SUPPORTED_COUNTRIES } from '@/lib/international/countries'
@@ -207,41 +208,8 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/ap-biology-tutor-walter-payton' ||
     path === '/ap-biology-tutor-hunter-college-hs' ||
     // IB Biology per-school feeder pages — same tier as AP schools.
-    path === '/ib-biology-tutor-uwcsea' ||
-    path === '/ib-biology-tutor-asd-dubai' ||
-    path === '/ib-biology-tutor-gems-dubai-american-academy' ||
-    path === '/ib-biology-tutor-tanglin-trust' ||
-    path === '/ib-biology-tutor-nist-bangkok' ||
-    path === '/ib-biology-tutor-pathways-aravali' ||
-    path === '/ib-biology-tutor-shri-ram-aravali' ||
-    path === '/ib-biology-tutor-heritage-xperiential-gurgaon' ||
-    path === '/ib-biology-tutor-scottish-high-gurgaon' ||
-    path === '/ib-biology-tutor-dps-international-gurgaon' ||
-    path === '/ib-biology-tutor-gd-goenka-world-school-gurgaon' ||
-    path === '/ib-biology-tutor-shikshantar-gurgaon' ||
-    path === '/ib-biology-tutor-gd-goenka-signature-gurgaon' ||
-    path === '/ib-biology-tutor-pathways-noida' ||
-    path === '/ib-biology-tutor-shiv-nadar-school-noida' ||
-    path === '/ib-biology-tutor-step-by-step-noida' ||
-    path === '/ib-biology-tutor-genesis-global-noida' ||
-    path === '/ib-biology-tutor-lotus-valley-noida' ||
-    path === '/ib-biology-tutor-gd-goenka-public-noida' ||
-    path === '/ib-biology-tutor-manav-rachna-faridabad' ||
-    path === '/ib-biology-tutor-dps-faridabad' ||
-    path === '/ib-biology-tutor-shri-ram-faridabad' ||
-    path === '/ib-biology-tutor-apeejay-faridabad' ||
-    path === '/ib-biology-tutor-modern-dps-faridabad' ||
-    path === '/ib-biology-tutor-ryan-international-faridabad' ||
-    path === '/ib-biology-tutor-jaipuria-vasundhara-ghaziabad' ||
-    path === '/ib-biology-tutor-uwc-mahindra-pune' ||
-    path === '/ib-biology-tutor-stonehill-bangalore' ||
-    path === '/ib-biology-tutor-inventure-bangalore' ||
-    path === '/ib-biology-tutor-oberoi-mumbai' ||
-    path === '/ib-biology-tutor-asb-mumbai' ||
-    path === '/ib-biology-tutor-stamford-american-singapore' ||
-    path === '/ib-biology-tutor-mahatma-gandhi-international-ahmedabad' ||
-    path === '/ib-biology-tutor-dhirubhai-ambani-mumbai' ||
-    path === '/ib-biology-tutor-cathedral-mumbai'
+    // Dynamically checked against ibBiologySchoolSlugs from schools.ts
+    ibBiologySchoolSlugs.some((slug) => path === `/ib-biology-tutor-${slug}`)
   ) {
     return 0.7
   }
@@ -4255,43 +4223,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.88,
     },
-    // ─── P3 China cluster — IB school-feeders (6) + Shenzhen + AP Beijing ───
-    {
-      url: `${baseUrl}/ib-biology-tutor-shanghai-american-school`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.82,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-scie-shenzhen`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.82,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-wab-beijing`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.82,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-isb-beijing`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.82,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-cis-hong-kong`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.82,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-li-po-chun-uwc`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.82,
-    },
+    // ─── P3 China cluster — city pages (Shenzhen + AP Beijing) ───
+    // IB school-feeder pages now generated dynamically from ibBiologySchoolSlugs
     {
       url: `${baseUrl}/ib-biology/shenzhen`,
       lastModified: lastUpdated,
@@ -5676,220 +5609,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
-    // IB Biology per-school feeder pages — long-tail "IB Biology tutor
-    // {SchoolName}" intent. Each page targets a school-name keyword
-    // no other route on the site targets. Mirrors the AP per-school
-    // pattern (32 AP school pages live).
-    {
-      url: `${baseUrl}/ib-biology-tutor-uwcsea`,
+    // IB Biology per-school feeder pages — dynamically generated from
+    // ibBiologySchoolSlugs so new schools are automatically included.
+    ...ibBiologySchoolSlugs.map((slug) => ({
+      url: `${baseUrl}/ib-biology-tutor-${slug}`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-asd-dubai`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-gems-dubai-american-academy`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-tanglin-trust`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-nist-bangkok`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-pathways-aravali`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-shri-ram-aravali`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-heritage-xperiential-gurgaon`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-scottish-high-gurgaon`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-dps-international-gurgaon`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-gd-goenka-world-school-gurgaon`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-shikshantar-gurgaon`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-gd-goenka-signature-gurgaon`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-pathways-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-shiv-nadar-school-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-step-by-step-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-genesis-global-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-lotus-valley-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-gd-goenka-public-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-manav-rachna-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-dps-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-shri-ram-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-apeejay-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-modern-dps-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-ryan-international-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-jaipuria-vasundhara-ghaziabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-uwc-mahindra-pune`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-stonehill-bangalore`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-inventure-bangalore`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-oberoi-mumbai`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-asb-mumbai`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-stamford-american-singapore`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-mahatma-gandhi-international-ahmedabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-dhirubhai-ambani-mumbai`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/ib-biology-tutor-cathedral-mumbai`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
+    })),
     {
       url: `${baseUrl}/ib-extended-essay-vs-ia`,
       lastModified: lastUpdated,
