@@ -8,6 +8,7 @@ import { ibBiologySchoolSlugs } from '@/data/ib-biology/schools'
 import { mcatMetroSlugs } from '@/data/mcat/metros'
 import { datMetroSlugs } from '@/data/dat/metros'
 import { gamsatMetroSlugs } from '@/data/gamsat/metros'
+import { usmleMetroSlugs } from '@/data/usmle-step-1/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
 import { detailedCourses } from '@/data/detailedCourses'
 import { SUPPORTED_COUNTRIES } from '@/lib/international/countries'
@@ -5951,6 +5952,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
+    // USMLE Step 1 city pages from metros.ts (Phase 4 — 3 US + 3 India)
+    ...usmleMetroSlugs.map((slug) => ({
+      url: `${baseUrl}/usmle-step-1-tutor-${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     {
       url: `${baseUrl}/first-aid-step-1-biology-tutor`,
       lastModified: lastUpdated,
