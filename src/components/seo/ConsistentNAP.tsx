@@ -50,7 +50,7 @@ const BUSINESS_INFO = {
     {
       name: 'Cerebrum Biology Academy - Faridabad',
       address:
-        'SCF-124-125, 2nd Floor, Above Union Bank, HUDA Market, Sector 17, Faridabad - 121002',
+        'SCF-130, 2nd Floor, Above Union Bank, HUDA Market, Sector 17, Faridabad - 121002',
       phone: CONTACT_INFO.phone.formatted.primary,
       geo: { lat: '28.4089', lng: '77.3178' },
     },

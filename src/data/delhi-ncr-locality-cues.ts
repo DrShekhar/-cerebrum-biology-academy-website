@@ -163,7 +163,7 @@ export const delhiNCRLocalityCues: Record<DelhiNCRLocalityKey, LocalityCuesProps
     cityName: 'Faridabad',
     cityShortName: 'Faridabad',
     introCopy:
-      'Cerebrum Faridabad at SCF-124-125, HUDA Market, Sector 17 serves Faridabad NEET aspirants from Sectors 15 through 89, NIT Faridabad, Ballabgarh, Old Faridabad, and BPTP Parklands — all within 5 minutes of Bata Chowk Metro on the Violet Line.',
+      'Cerebrum Faridabad at SCF-130, HUDA Market, Sector 17 serves Faridabad NEET aspirants from Sectors 15 through 89, NIT Faridabad, Ballabgarh, Old Faridabad, and BPTP Parklands — all within 5 minutes of Bata Chowk Metro on the Violet Line.',
     feederSchools: [
       { name: 'Apeejay School Faridabad', area: 'Sector 15 · 2 km' },
       { name: 'DPS Faridabad', area: 'Sector 19 · 3 km' },

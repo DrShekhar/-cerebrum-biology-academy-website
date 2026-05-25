@@ -363,7 +363,7 @@ export default function FreeNEETDemoClassFaridabad() {
                 name: 'Cerebrum Biology Academy',
                 address: {
                   '@type': 'PostalAddress',
-                  streetAddress: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
+                  streetAddress: 'SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17',
                   addressLocality: 'Faridabad',
                   addressRegion: 'Haryana',
                   postalCode: '121002',

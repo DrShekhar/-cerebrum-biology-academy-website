@@ -334,7 +334,7 @@ export default function NeetCoachingFaridabadPage() {
         hasOfflineCenter={true}
         centerInfo={{
           name: 'Cerebrum Biology Academy - Faridabad',
-          address: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad',
+          address: 'SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad',
           phone: '+918826444334',
           mapUrl: 'https://maps.google.com/maps?q=Sector+17+Faridabad',
           nearbyLandmark: 'Bata Chowk Metro (Violet Line) — 5 min walk',
@@ -862,7 +862,7 @@ export default function NeetCoachingFaridabadPage() {
                     lat: 28.4089,
                     lng: 77.3178,
                     address:
-                      'Cerebrum Biology Academy, SCF-124-125, Huda Market, Sector 17, Faridabad',
+                      'Cerebrum Biology Academy, SCF-130, Huda Market, Sector 17, Faridabad',
                   }}
                 />
               </div>
@@ -870,7 +870,7 @@ export default function NeetCoachingFaridabadPage() {
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 mr-2 text-blue-600 mt-1 flex-shrink-0" />
                   <span>
-                    <strong>Physical Center:</strong> SCF-124-125, 2nd Floor, Above Union Bank, HUDA
+                    <strong>Physical Center:</strong> SCF-130, 2nd Floor, Above Union Bank, HUDA
                     Market, Sector 17, Faridabad
                   </span>
                 </div>

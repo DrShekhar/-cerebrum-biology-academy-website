@@ -956,7 +956,7 @@ const metroStationData: Record<string, MetroStationData> = {
     lineColor: 'purple',
     area: 'Faridabad',
     description:
-      'Bata Chowk Metro is the CLOSEST station to our Faridabad center — just a 5-minute walk to SCF-124-125, HUDA Market, Sector 17. The most convenient station for our students.',
+      'Bata Chowk Metro is the CLOSEST station to our Faridabad center — just a 5-minute walk to SCF-130, HUDA Market, Sector 17. The most convenient station for our students.',
     studentCount: '200+',
     coordinates: { lat: '28.4050', lng: '77.3150' },
     nearbyAreas: ['Sector 16', 'Sector 17', 'NIT Faridabad', 'HUDA Market', 'Bata Factory'],
@@ -965,12 +965,12 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'Which metro station is closest to Cerebrum Faridabad center?',
         answer:
-          'Bata Chowk Metro is the closest — just a 5-minute walk! Exit the station, walk towards HUDA Market Sector 17. Our center is at SCF-124-125, 2nd Floor, Above Union Bank. 200+ students use this station daily.',
+          'Bata Chowk Metro is the closest — just a 5-minute walk! Exit the station, walk towards HUDA Market Sector 17. Our center is at SCF-130, 2nd Floor, Above Union Bank. 200+ students use this station daily.',
       },
       {
         question: 'How do I walk from Bata Chowk Metro to Cerebrum?',
         answer:
-          'Exit Bata Chowk Metro from Gate 1. Walk towards Sector 17 HUDA Market (5 min). Look for Union Bank on ground floor — we are on the 2nd Floor, SCF-124-125. Very easy to find!',
+          'Exit Bata Chowk Metro from Gate 1. Walk towards Sector 17 HUDA Market (5 min). Look for Union Bank on ground floor — we are on the 2nd Floor, SCF-130. Very easy to find!',
       },
       {
         question: 'Can I come from Delhi to Faridabad center by metro?',
@@ -1030,7 +1030,7 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'How do Old Faridabad students reach your center?',
         answer:
-          'From Old Faridabad Metro, take auto or e-rickshaw to Sector 17 HUDA Market (12 min, Rs 20-30). Our center at SCF-124-125 is above Union Bank.',
+          'From Old Faridabad Metro, take auto or e-rickshaw to Sector 17 HUDA Market (12 min, Rs 20-30). Our center at SCF-130 is above Union Bank.',
       },
       {
         question: 'Do you serve NIT Faridabad students?',
@@ -1186,7 +1186,7 @@ const metroStationData: Record<string, MetroStationData> = {
       {
         question: 'How do I reach Sector 17 from Mewala Maharajpur?',
         answer:
-          'Take Violet Line towards Escorts Mujesar. Get down at Bata Chowk (4 stops, 12 min). Walk 5 min to our center at SCF-124-125, HUDA Market.',
+          'Take Violet Line towards Escorts Mujesar. Get down at Bata Chowk (4 stops, 12 min). Walk 5 min to our center at SCF-130, HUDA Market.',
       },
       {
         question: 'Do you serve industrial area students?',

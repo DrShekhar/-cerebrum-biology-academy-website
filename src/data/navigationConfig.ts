@@ -658,7 +658,7 @@ export const navigationConfig: NavigationSection[] = [
         id: 'center-faridabad',
         title: 'Faridabad - Sector 17',
         href: '/locations/faridabad',
-        description: 'SCF-124-125, HUDA Market, Sector 17',
+        description: 'SCF-130, HUDA Market, Sector 17',
         keywords: ['faridabad', 'sector 17', 'huda market'],
       },
       {

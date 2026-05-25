@@ -65,7 +65,7 @@ const centers = [
   },
   {
     name: 'Faridabad - Sector 17',
-    address: 'SCF-124-125, 2nd Floor, Above Union Bank, HUDA Market, Sector 17, Faridabad 121002',
+    address: 'SCF-130, 2nd Floor, Above Union Bank, HUDA Market, Sector 17, Faridabad 121002',
     areas: 'NIT, Old Faridabad, Ballabgarh, Greater Faridabad, Surajkund',
     metro: '5 min walk from Bata Chowk Metro (Violet Line)',
     href: '/locations/faridabad',

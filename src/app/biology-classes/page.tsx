@@ -78,7 +78,7 @@ const centres = [
   {
     city: 'Faridabad, Haryana',
     tag: 'Sector 17',
-    address: 'SCF-124-125, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad',
+    address: 'SCF-130, 2nd Floor, Above Union Bank, Huda Market, Sector 17, Faridabad',
     serves: 'Sectors 12 to 21, Neelam Chowk, NIT, Greater Faridabad',
   },
   {
