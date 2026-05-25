@@ -3,6 +3,7 @@ import BestNEETCoachingContent from './BestNEETCoachingContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
@@ -161,6 +162,7 @@ export default function BestNEETCoachingGurugramPage() {
         knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="best-neet-coaching-gurugram" />
+      <LocalBusinessSchema />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}

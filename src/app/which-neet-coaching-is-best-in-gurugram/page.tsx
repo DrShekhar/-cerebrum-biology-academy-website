@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Which NEET Coaching is Best in Gurugram? | 2026 Honest Comparison',
@@ -163,6 +164,14 @@ export default function WhichNEETCoachingBestGurugram() {
       <GurgaonGurugramAreaSchema
         spelling="gurugram"
         pageSlug="which-neet-coaching-is-best-in-gurugram"
+      />
+      <LocalBusinessSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'NEET Coaching Gurugram', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+          { name: 'Which is Best', url: 'https://cerebrumbiologyacademy.com/which-neet-coaching-is-best-in-gurugram' },
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16">

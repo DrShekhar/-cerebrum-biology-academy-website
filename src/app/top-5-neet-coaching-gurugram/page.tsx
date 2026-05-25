@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Phone, Trophy, Star, CheckCircle, ArrowRight } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema, BreadcrumbSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Top 5 NEET Coaching in Gurugram 2026 | Ranking by Results',
@@ -153,6 +154,14 @@ export default function Top5NEETCoachingGurugram() {
         knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="top-5-neet-coaching-gurugram" />
+      <LocalBusinessSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'NEET Coaching Gurugram', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+          { name: 'Top 5 NEET Coaching', url: 'https://cerebrumbiologyacademy.com/top-5-neet-coaching-gurugram' },
+        ]}
+      />
       {/* Quick Answer */}
       <section className="bg-gradient-to-r from-amber-600 to-orange-500 text-white py-12">
         <div className="container mx-auto px-4">

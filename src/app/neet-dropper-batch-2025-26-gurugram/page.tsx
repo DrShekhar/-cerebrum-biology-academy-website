@@ -3,6 +3,7 @@ import NEETDropperBatchContent from './NEETDropperBatchContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 
@@ -137,6 +138,7 @@ export default function NEETDropperBatch2025GurugramPage() {
         spelling="gurugram"
         pageSlug="neet-dropper-batch-2025-26-gurugram"
       />
+      <LocalBusinessSchema />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Phone, IndianRupee, CheckCircle, ArrowRight, AlertCircle, Star } from 'lucide-react'
 import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaSchema'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fee in Gurugram 2026 | Fee Comparison',
@@ -137,6 +138,7 @@ export default function NEETCoachingFeeGurugram() {
         knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-coaching-fee-gurugram" />
+      <LocalBusinessSchema />
       {/* Quick Answer Box - Featured Snippet Target */}
       <section className="bg-gradient-to-r from-green-700 to-teal-600 text-white py-12">
         <div className="container mx-auto px-4">
