@@ -5,6 +5,7 @@ import { allChapters } from '@/data/campbell-biology'
 import { campbellUnits } from '@/data/campbell-biology/units'
 import { citySlugs as ibBiologyCitySlugs } from '@/data/ib-biology/cities'
 import { ibBiologySchoolSlugs } from '@/data/ib-biology/schools'
+import { mcatMetroSlugs } from '@/data/mcat/metros'
 import { getAllLocationSlugs } from '@/lib/data/neet-coaching-locations'
 import { detailedCourses } from '@/data/detailedCourses'
 import { SUPPORTED_COUNTRIES } from '@/lib/international/countries'
@@ -243,7 +244,8 @@ function normalizePriority(path: string, currentPriority: number): number {
     path === '/mcat-biology-tutor-bay-area' ||
     path === '/mcat-biology-tutor-houston' ||
     path === '/mcat-biology-tutor-atlanta' ||
-    path === '/mcat-biology-tutor-boston'
+    path === '/mcat-biology-tutor-boston' ||
+    mcatMetroSlugs.some((slug) => path === `/mcat-biology-tutor-${slug}`)
   ) {
     return 0.8
   }
@@ -5796,6 +5798,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // MCAT city pages from metros.ts (Phase 1 expansion — 7 new metros)
+    ...mcatMetroSlugs.map((slug) => ({
+      url: `${baseUrl}/mcat-biology-tutor-${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     // MCAT cornerstone content — informational authority pages with
     // Article schema + Dr. Shekhar author byline.
     {
