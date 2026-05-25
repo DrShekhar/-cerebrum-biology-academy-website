@@ -557,6 +557,27 @@ export default function Home() {
           for them. Section still in DOM for Google to crawl. */}
       <section className="content-visibility-auto-sm" data-region="india-only">
         <LocationsSection />
+        <div className="max-w-5xl mx-auto px-4 py-8">
+          <h3 className="text-lg font-semibold text-slate-900 mb-4">NEET Coaching by City</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <Link href="/neet-coaching-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900">Delhi</span>
+              <span className="block text-xs text-slate-500">3 centres</span>
+            </Link>
+            <Link href="/neet-coaching-gurugram" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900">Gurugram</span>
+              <span className="block text-xs text-slate-500">32 areas</span>
+            </Link>
+            <Link href="/neet-coaching-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900">Noida</span>
+              <span className="block text-xs text-slate-500">Sector 62</span>
+            </Link>
+            <Link href="/neet-coaching-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900">Faridabad</span>
+              <span className="block text-xs text-slate-500">Sector 17</span>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* 10. Booking Section */}

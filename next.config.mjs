@@ -26,6 +26,7 @@ import {
   usmleStep1SynonymRedirects,
   neetUGBiologySynonymRedirects,
   neetFoundationSynonymRedirects,
+  delhiNCRDoorwayConsolidationRedirects,
 } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
@@ -1656,6 +1657,7 @@ const nextConfig = {
       ...usmleStep1SynonymRedirects,
       ...neetUGBiologySynonymRedirects,
       ...neetFoundationSynonymRedirects,
+      ...delhiNCRDoorwayConsolidationRedirects,
     ]
   },
 

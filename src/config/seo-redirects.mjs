@@ -4353,3 +4353,120 @@ export const neetFoundationSynonymRedirects = [
     permanent: true,
   },
 ]
+
+// ============================================
+// Delhi NCR Thin Doorway Consolidation (May 2026)
+//
+// ~80 pages under 50 lines with no unique content (school stubs,
+// biology class stubs, revision batch stubs). 301 to city hubs.
+// Original page files remain on disk — removing an entry here
+// instantly restores the page. Zero-risk rollback.
+// ============================================
+/** @type {Array<{source: string, destination: string, permanent: true}>} */
+export const delhiNCRDoorwayConsolidationRedirects = [
+  // ─── School-specific stubs → city hub (30-38 lines each) ───────────
+  // Delhi schools
+  { source: '/neet-coaching-dps-rk-puram-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/neet-coaching-dps-mathura-road-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/neet-coaching-modern-school-barakhamba-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/neet-coaching-sanskriti-school-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/neet-coaching-springdales-school-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/neet-coaching-mothers-international-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/neet-coaching-tagore-international-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  // Noida schools
+  { source: '/neet-coaching-dps-noida', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-dps-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-amity-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-amity-international-noida', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-cambridge-international-noida', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-lotus-valley-international-noida', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-lotus-valley-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-jaypee-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-kv-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-pathways-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-ryan-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-somerville-noida-students', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-noida-extension', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/neet-coaching-sector-18-noida', destination: '/neet-coaching-noida', permanent: true },
+  // Faridabad schools
+  { source: '/neet-coaching-dps-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-delhi-public-school-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-apeejay-school-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-apeejay-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-aggarwal-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-dav-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-gd-goenka-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-greenfields-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-manav-rachna-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-modern-school-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-mris-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/neet-coaching-mvn-faridabad-students', destination: '/neet-coaching-faridabad', permanent: true },
+  // Ghaziabad schools
+  { source: '/neet-coaching-dps-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-cambridge-ghaziabad-students', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-gd-goenka-ghaziabad-students', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-kr-mangalam-ghaziabad-students', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/neet-coaching-presidium-ghaziabad-students', destination: '/neet-coaching-ghaziabad', permanent: true },
+  // Greater Noida schools
+  { source: '/neet-coaching-dps-greater-noida-students', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/neet-coaching-sharda-greater-noida-students', destination: '/best-neet-coaching-greater-noida', permanent: true },
+
+  // ─── Thin biology class/coaching stubs → city hub (25-35 lines) ────
+  // These are empty stubs with just a title + CTA, no content
+  { source: '/best-biology-coaching-delhi-ncr', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/best-biology-coaching-noida', destination: '/neet-coaching-noida', permanent: true },
+  { source: '/best-biology-coaching-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/best-biology-coaching-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/best-biology-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/biology-classes-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/biology-classes-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/biology-tuition-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/biology-tutor-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/biology-classes-east-delhi', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/biology-classes-north-delhi', destination: '/neet-coaching-north-delhi', permanent: true },
+  { source: '/biology-tuition-east-delhi', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/biology-tuition-west-delhi', destination: '/neet-coaching-west-delhi', permanent: true },
+  { source: '/board-exam-biology-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/biology-coaching-dwarka', destination: '/neet-coaching-dwarka', permanent: true },
+
+  // ─── CBSE/class-level biology stubs → city hub (25-35 lines) ───────
+  { source: '/cbse-biology-coaching-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/cbse-biology-coaching-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/cbse-biology-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/class-9-biology-tuition-faridabad', destination: '/neet-foundation-class-9-faridabad', permanent: true },
+  { source: '/class-9-biology-tuition-ghaziabad', destination: '/neet-foundation-class-9-ghaziabad', permanent: true },
+  { source: '/class-9-biology-tuition-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/class-9-biology-tuition-noida', destination: '/neet-foundation-class-9-noida', permanent: true },
+  { source: '/class-9-biology-tuition-delhi', destination: '/neet-foundation-class-9-delhi', permanent: true },
+  { source: '/class-10-biology-coaching-faridabad', destination: '/neet-foundation-class-10-faridabad', permanent: true },
+  { source: '/class-10-biology-coaching-ghaziabad', destination: '/neet-foundation-class-10-ghaziabad', permanent: true },
+  { source: '/class-10-biology-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/class-10-biology-coaching-noida', destination: '/neet-foundation-class-10-noida', permanent: true },
+  { source: '/class-10-biology-coaching-delhi', destination: '/neet-foundation-class-10-delhi', permanent: true },
+  { source: '/class-11-biology-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/class-11-biology-coaching-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/class-11-biology-coaching-east-delhi', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/class-11-biology-coaching-north-delhi', destination: '/neet-coaching-north-delhi', permanent: true },
+  { source: '/class-12-biology-coaching-greater-noida', destination: '/best-neet-coaching-greater-noida', permanent: true },
+  { source: '/class-12-biology-coaching-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/class-12-biology-coaching-east-delhi', destination: '/neet-coaching-east-delhi', permanent: true },
+  { source: '/class-12-biology-coaching-north-delhi', destination: '/neet-coaching-north-delhi', permanent: true },
+  { source: '/biology-class-11-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/biology-class-11-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+  { source: '/biology-class-12-faridabad', destination: '/neet-coaching-faridabad', permanent: true },
+  { source: '/biology-class-12-ghaziabad', destination: '/neet-coaching-ghaziabad', permanent: true },
+
+  // ─── Revision batch stubs → crash course (34 lines each) ──────────
+  { source: '/neet-revision-batch-noida', destination: '/neet-crash-course-noida', permanent: true },
+  { source: '/neet-revision-batch-greater-noida', destination: '/neet-crash-course-greater-noida', permanent: true },
+  { source: '/neet-revision-batch-ghaziabad', destination: '/neet-crash-course-ghaziabad', permanent: true },
+
+  // ─── Online coaching stubs → city hub (33 lines) ──────────────────
+  { source: '/online-neet-coaching-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/online-neet-coaching-noida', destination: '/neet-coaching-noida', permanent: true },
+
+  // ─── Misc thin pages (39-49 lines) ────────────────────────────────
+  { source: '/re-neet-2026-delhi', destination: '/re-neet-2026', permanent: true },
+  { source: '/neet-coaching-with-hostel-delhi', destination: '/neet-coaching-delhi', permanent: true },
+  { source: '/affordable-neet-coaching-delhi', destination: '/neet-coaching-delhi', permanent: true },
+]
