@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import NEETTestSeriesContent from './NEETTestSeriesContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 const faridabadLocation = CONTACT_INFO.location.faridabad
 
@@ -140,6 +141,7 @@ export default function NEETTestSeriesFaridabadPage() {
 
   return (
     <>
+      <LocalBusinessSchema />
       <CerebrumPersonSchema
         knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
       />

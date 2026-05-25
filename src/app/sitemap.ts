@@ -1759,6 +1759,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Faridabad satellite pages (32 — audit fix May 2026)
+    ...[
+      'best-neet-coaching-faridabad', 'neet-coaching-fees-faridabad',
+      'neet-coaching-near-me-faridabad', 'neet-test-series-faridabad',
+      'neet-crash-course-faridabad', 'neet-dropper-batch-faridabad',
+      'neet-foundation-class-9-faridabad', 'neet-foundation-class-10-faridabad',
+      'neet-evening-batch-faridabad', 'neet-weekend-batch-faridabad',
+      'neet-revision-batch-faridabad', 'neet-scholarship-faridabad',
+      '1-year-neet-course-faridabad', '2-year-neet-course-faridabad',
+      'allen-alternative-faridabad', 'aakash-alternative-faridabad',
+      'complement-allen-coaching-faridabad', 'complement-aakash-coaching-faridabad',
+      'fiitjee-alternative-faridabad', 'narayana-alternative-faridabad',
+      'physics-wallah-alternative-faridabad', 'velocity-alternative-faridabad',
+      'yvs-alternative-faridabad',
+      'which-is-better-aakash-or-allen-faridabad',
+      'how-much-fees-for-neet-coaching-faridabad',
+      'is-coaching-necessary-for-neet-faridabad',
+      'free-neet-demo-class-faridabad',
+      'online-neet-coaching-faridabad', 'online-neet-classes-faridabad',
+      'parents-guide-neet-coaching-faridabad',
+    ].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     // Biology Tuition & Coaching Pages - HIGH PRIORITY
     {
       url: `${baseUrl}/biology-tuition-ghaziabad`,

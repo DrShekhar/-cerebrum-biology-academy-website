@@ -1887,6 +1887,55 @@ export default function NeetCoachingFaridabadPage() {
         </span>
       </a>
 
+      {/* Cross-links — connect Faridabad hub to satellite pages + other NCR hubs */}
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Explore NEET Coaching in Faridabad</h2>
+          <p className="text-slate-600 mb-6">Compare fees, alternatives, test series, and foundation programmes available in Faridabad.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link href="/best-neet-coaching-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Best NEET Coaching</span>
+            </Link>
+            <Link href="/neet-coaching-fees-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Fee Comparison</span>
+            </Link>
+            <Link href="/neet-test-series-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">NEET Test Series</span>
+            </Link>
+            <Link href="/allen-alternative-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Allen Alternative</span>
+            </Link>
+            <Link href="/aakash-alternative-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Aakash Alternative</span>
+            </Link>
+            <Link href="/neet-foundation-class-9-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Foundation Class 9</span>
+            </Link>
+            <Link href="/neet-foundation-class-10-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Foundation Class 10</span>
+            </Link>
+            <Link href="/parents-guide-neet-coaching-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Parents Guide</span>
+            </Link>
+          </div>
+          <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Other Delhi NCR Centres</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <Link href="/neet-coaching-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Delhi</span>
+            </Link>
+            <Link href="/neet-coaching-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Noida</span>
+            </Link>
+            <Link href="/neet-coaching-gurugram" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Gurugram</span>
+            </Link>
+            <Link href="/neet-coaching-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Ghaziabad</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Schema Markup for SEO */}
       <LocalBusinessSchema />
       <FAQSchema />

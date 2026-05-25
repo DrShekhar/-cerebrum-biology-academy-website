@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 import { ParentsGuideTemplate } from '@/components/seo/ParentsGuideTemplate'
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
 export default function ParentsGuideFaridabadPage() {
   return (
     <>
+      <LocalBusinessSchema />
       <CerebrumPersonSchema
         knowsAbout={[
           'NEET Faridabad',
