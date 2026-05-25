@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     'cerebrum biology dwarka',
     'neet 2026 coaching dwarka',
   ],
+  other: { 'article:modified_time': '2026-05-25' },
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Best NEET Coaching in Dwarka | Cerebrum Biology Academy',
@@ -223,7 +224,33 @@ export default function NEETCoachingDwarkaPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Getting to a Cerebrum centre from Dwarka
+            Why Dwarka families choose biology-only coaching over generalist chains
+          </h2>
+          <p>
+            Dwarka has branches of the major generalist NEET chains — but their Dwarka centres run 100-200+ student batches across Physics, Chemistry, and Biology with rotating faculty. The structural problem: Biology is 360/720 NEET marks (50% of total), yet generalist chains allocate it only one-third of teaching time. Dwarka parents — many of whom are AIIMS Delhi staff, IAS/IPS officers, or judiciary professionals — understand this arithmetic. They keep the generalist chain for Physics + Chemistry and add Cerebrum for Biology depth. This "pair-and-specialist" model is the dominant pattern in Dwarka.
+          </p>
+          <p>
+            The Dwarka demographic is distinctive: the sub-city was planned for government housing (DDA flats, AWHO, CGHS), so the parent population skews toward educated professionals who research coaching quality rather than defaulting to brand-name chains. This makes Dwarka one of Cerebrum's highest-conversion catchments in Delhi — families here evaluate on results, not advertising spend.
+          </p>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
+            Dwarka school-by-school NEET Biology analysis
+          </h2>
+          <p>
+            <strong>DPS Dwarka (Sector 3 + Sector 19):</strong> Two campuses, strong CBSE science departments. DPS Dwarka students typically have solid NCERT foundations but need the NEET-specific pattern drilling (assertion-reason, match-the-following, diagram-based MCQs) that school Biology doesn't cover. Most DPS Dwarka families book the Ascent tier (₹58K-90K).
+          </p>
+          <p>
+            <strong>ITL Public School (Sector 9):</strong> Known for academic rigour. ITL students enter NEET prep with above-average Biology foundations. The gap is usually in Human Physiology and Genetics — the two highest-weightage NEET chapters. Our coaching emphasises these for ITL students.
+          </p>
+          <p>
+            <strong>Mount Carmel School:</strong> Strong overall academics but Biology department is smaller than DPS/ITL. Mount Carmel students often need foundational reinforcement alongside NEET-specific coaching — the Pursuit tier (₹40K-75K) is the typical entry point.
+          </p>
+          <p>
+            <strong>Government school students (Sector 8, 12, 17 KVs):</strong> Kendriya Vidyalaya students have NCERT-aligned teaching (advantage for NEET) but less exam-technique exposure. KV families are price-sensitive — the Pursuit tier with online-live delivery is the recommended entry point.
+          </p>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
+            Commute options from Dwarka to Cerebrum centres
           </h2>
           <p>
             <strong>Sectors / localities served:</strong> Sector 8, Sector 10, Sector 11, Sector 12,

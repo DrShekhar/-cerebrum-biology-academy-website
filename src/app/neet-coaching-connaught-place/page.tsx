@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     'cerebrum biology connaught-place',
     'neet 2026 coaching connaught-place',
   ],
+  other: { 'article:modified_time': '2026-05-25' },
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Best NEET Coaching in Connaught Place | Cerebrum Biology Academy',
@@ -231,7 +232,33 @@ export default function NEETCoachingConnaughtPlacePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
-            Getting to a Cerebrum centre from Connaught Place
+            Connaught Place school-by-school NEET Biology analysis
+          </h2>
+          <p>
+            <strong>Modern School Barakhamba Road:</strong> One of India's top 5 feeder schools for AIIMS/JIPMER selections. Modern School students have the strongest academic foundations in the Connaught Place catchment — they typically need minimal content support and maximum exam-technique refinement. Most Modern School families book Pinnacle (₹1.2L-1.56L) for the 1:5 faculty ratio and personalised NEET PYQ pattern drilling.
+          </p>
+          <p>
+            <strong>Sardar Patel Vidyalaya (Lodi Estate):</strong> Another top-tier NEET feeder in the diplomatic corridor. SPV students combine academic rigour with strong extracurricular profiles. NEET Biology coaching for SPV families is typically about adding the examination edge — assertion-reason questions, high-yield chapter deep-dives (Human Physiology, Genetics) — on top of already-strong foundations.
+          </p>
+          <p>
+            <strong>St. Columba's School (Ashok Place):</strong> Strong CBSE science department. St. Columba's feeds into both NEET and engineering tracks. NEET-specific students need the biology-only specialist model because the school's science teaching serves both biology and physics/chemistry tracks equally — NEET aspirants need deeper biology than the school provides.
+          </p>
+          <p>
+            <strong>Convent of Jesus and Mary (Bengali Market):</strong> All-girls school with strong academic traditions. CJM students are often highly disciplined but may start NEET coaching later (mid-Class 11 vs start of Class 11). The Ascent tier with its structured catch-up modules is designed for this timeline.
+          </p>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
+            The Lutyens Delhi advantage: proximity to India's medical research hub
+          </h2>
+          <p>
+            The Connaught Place / Lutyens catchment is within 15 minutes of AIIMS New Delhi, Safdarjung Hospital, RML Hospital, Lady Hardinge Medical College, and Maulana Azad Medical College. This proximity is not just geographic — many CP-area families have direct connections to the medical establishment (AIIMS faculty parents, senior doctors at government hospitals). These families evaluate NEET coaching at a deeper level: they want faculty who understand medical education, not just exam coaching. Dr. Shekhar C Singh's AIIMS Delhi background is the reason Cerebrum resonates in this catchment more than any generalist chain.
+          </p>
+          <p>
+            The CP catchment also includes families of foreign diplomats (Chanakyapuri, Jor Bagh, Lodi Colony) whose children attend Delhi International School or American Embassy School. Some of these students pursue NEET alongside IB/IGCSE — we support this dual-track with integrated scheduling.
+          </p>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
+            Commute options from Connaught Place to Cerebrum centres
           </h2>
           <p>
             <strong>Sectors / localities served:</strong> Connaught Place (Inner/Middle/Outer
