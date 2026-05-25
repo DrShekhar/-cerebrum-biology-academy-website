@@ -69,6 +69,13 @@ export type CitySlug =
   | 'malmo'
   | 'gothenburg'
   | 'dublin'
+  // Phase 6 — global gap-fill (6 cities)
+  | 'brussels'
+  | 'copenhagen'
+  | 'vienna'
+  | 'taipei'
+  | 'manila'
+  | 'jakarta'
 
 export interface CityConfig {
   slug: CitySlug
@@ -1384,6 +1391,129 @@ export const cities: Record<CitySlug, CityConfig> = {
     neighbourhoods: ['Dún Laoghaire', 'Booterstown', 'Dundrum', 'Sandyford', 'Ranelagh'],
     localHook:
       "Dublin's IB community is small but English-native — only 4 IB DP schools nationally, but the rapidly-growing Indian tech-sector diaspora and the Irish medical-school pipeline (RCSI, Trinity College Dublin, UCD) targeting NEET-track Indian families create distinctive demand. RCSI's strong Indian-student admission preference makes IB Biology HL a recognised path. Our GMT evening sessions (5–8 PM Dublin) fit cleanly after the international-school day.",
+  },
+
+  // ─── PHASE 6 — GLOBAL GAP-FILL ─────────────────────────────────────────────
+  brussels: {
+    slug: 'brussels',
+    city: 'Brussels',
+    country: 'Belgium',
+    countryCode: 'BE',
+    region: 'Brussels-Capital',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: [
+      'International School of Brussels (ISB)',
+      'British School of Brussels',
+      "St John's International School",
+      'European School Brussels I–IV',
+      'Bogaerts International School',
+    ],
+    neighbourhoods: ['Tervuren', 'Waterloo', 'Woluwe-Saint-Pierre', 'Uccle', 'Overijse'],
+    localHook:
+      "Brussels hosts the densest cluster of international schools in continental Europe — driven by the EU institutions, NATO, and 200+ multinational HQs. ISB (Tervuren), BSB (Tervuren), St John's (Waterloo), and four European Schools create a massive IB/European Bac cohort. Our CET evening sessions (5–8 PM Brussels) fit the standard international-school day. Many Brussels IB families target UK Russell Group medical schools or Belgian universities (KU Leuven, ULB).",
+  },
+
+  copenhagen: {
+    slug: 'copenhagen',
+    city: 'Copenhagen',
+    country: 'Denmark',
+    countryCode: 'DK',
+    region: 'Capital Region',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'DKK', symbol: 'kr' },
+    pricing: { perHour: 600, perHourText: 'DKK 500–750/hr' },
+    ibSchools: [
+      'Copenhagen International School (CIS)',
+      'Rygaards International School',
+      'Birkerød Gymnasium IB',
+      'Nørre Gymnasium IB',
+    ],
+    neighbourhoods: ['Hellerup', 'Gentofte', 'Nordhavn', 'Frederiksberg', 'Klampenborg'],
+    localHook:
+      "Copenhagen's IB community is anchored by Copenhagen International School (CIS) in Nordhavn — one of Scandinavia's most modern school campuses. The pharma/biotech corridor (Novo Nordisk, Lundbeck, LEO Pharma in Greater Copenhagen) drives consistent IB demand. Danish medical school admission (University of Copenhagen, Aarhus) accepts IB Biology HL. Our CET evening sessions fit the Danish school schedule.",
+  },
+
+  vienna: {
+    slug: 'vienna',
+    city: 'Vienna',
+    country: 'Austria',
+    countryCode: 'AT',
+    region: 'Vienna',
+    timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' },
+    pricing: { perHour: 65, perHourText: '€55–80/hr' },
+    ibSchools: [
+      'Vienna International School (VIS)',
+      'American International School Vienna (AIS)',
+      'Danube International School',
+      'Lycée Français de Vienne (IB option)',
+    ],
+    neighbourhoods: ['Döbling', 'Hietzing', 'Währing', 'Josefstadt', 'Innere Stadt'],
+    localHook:
+      "Vienna's IB community is anchored by Vienna International School (VIS) and the American International School (AIS) — both serving the UN, IAEA, OPEC, and OSCE diplomatic/international-organisation expat community. Vienna is the fourth UN headquarters city (with NYC, Geneva, Nairobi), creating steady IB demand. Medical University of Vienna is the primary local medical-school target; IB Biology HL is accepted for admission. CET evening sessions fit the Austrian school schedule.",
+  },
+
+  taipei: {
+    slug: 'taipei',
+    city: 'Taipei',
+    country: 'Taiwan',
+    countryCode: 'TW',
+    region: 'Taipei',
+    timezoneAbbr: 'CST (UTC+8)',
+    currency: { code: 'TWD', symbol: 'NT$' },
+    pricing: { perHour: 2500, perHourText: 'NT$2,000–3,000/hr' },
+    ibSchools: [
+      'Taipei American School (TAS)',
+      'Taipei European School (TES)',
+      'International Bilingual School at Hsinchu Science Park (IBSH)',
+      'Morrison Academy Taipei',
+    ],
+    neighbourhoods: ['Tianmu', 'Da-an', 'Xinyi', 'Neihu', 'Hsinchu (commuter)'],
+    localHook:
+      "Taipei's IB community is anchored by Taipei American School (TAS) in Tianmu — one of East Asia's top international schools — and Taipei European School (TES). The semiconductor-industry expat community (TSMC, MediaTek, ASUS) in Hsinchu Science Park drives additional IB demand via IBSH. Our CST evening sessions (6–9 PM Taipei time) fit after school. Many Taipei IB students target US Ivy League, UK Russell Group, or National Taiwan University medical programmes.",
+  },
+
+  manila: {
+    slug: 'manila',
+    city: 'Manila',
+    country: 'Philippines',
+    countryCode: 'PH',
+    region: 'Metro Manila',
+    timezoneAbbr: 'PHT (UTC+8)',
+    currency: { code: 'PHP', symbol: '₱' },
+    pricing: { perHour: 3500, perHourText: '₱3,000–4,500/hr' },
+    ibSchools: [
+      'International School Manila (ISM)',
+      'British School Manila',
+      'European International School Manila',
+      'Brent International School Manila',
+    ],
+    neighbourhoods: ['Makati', 'Bonifacio Global City (BGC)', 'Alabang', 'Rockwell', 'Eastwood'],
+    localHook:
+      "Manila's IB community is anchored by International School Manila (ISM) in Bonifacio Global City — the Philippines' premier international school — plus British School Manila, European International School, and Brent International. The BPO/tech expat community and wealthy Filipino families in Makati and BGC drive IB demand. Our PHT evening sessions (6–9 PM Manila) fit the international-school schedule. Many Manila IB students target UK, US, Australian, or Ateneo/UP medical pathways.",
+  },
+
+  jakarta: {
+    slug: 'jakarta',
+    city: 'Jakarta',
+    country: 'Indonesia',
+    countryCode: 'ID',
+    region: 'DKI Jakarta',
+    timezoneAbbr: 'WIB (UTC+7)',
+    currency: { code: 'IDR', symbol: 'Rp' },
+    pricing: { perHour: 900000, perHourText: 'Rp 750,000–1,100,000/hr' },
+    ibSchools: [
+      'Jakarta Intercultural School (JIS)',
+      'British School Jakarta (BSJ)',
+      'ACG School Jakarta',
+      'Binus School Simprug (IB)',
+      'Global Jaya School',
+    ],
+    neighbourhoods: ['Pondok Indah', 'Kemang', 'Cilandak', 'Menteng', 'BSD City (Tangerang)'],
+    localHook:
+      "Jakarta's IB community is anchored by Jakarta Intercultural School (JIS) in Cilandak — Southeast Asia's largest international school — and British School Jakarta (BSJ) in Pondok Indah. The corporate expat community (mining, energy, tech) plus wealthy Indonesian families in South Jakarta drive strong IB demand. Our WIB evening sessions (6–9 PM Jakarta) fit the international-school schedule. Many Jakarta IB students target UK Russell Group, Australian Group of Eight, or Universitas Indonesia medical pathways.",
   },
 }
 
