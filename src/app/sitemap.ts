@@ -2320,6 +2320,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    // Phase 3 MCAT + AP comparison pages (4)
+    { url: `${baseUrl}/cerebrum-vs-kaplan-mcat`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/cerebrum-vs-princeton-review-mcat`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/cerebrum-vs-blueprint-mcat`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/cerebrum-vs-khan-academy-ap-biology`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
     {
       url: `${baseUrl}/neet-coaching-nri-uae`,
       lastModified: lastUpdated,
@@ -3164,6 +3169,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.86,
     },
+    // Phase 6 USABO gap-fill (3)
+    { url: `${baseUrl}/usabo-coaching-philadelphia`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.86 },
+    { url: `${baseUrl}/usabo-coaching-miami`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.86 },
+    { url: `${baseUrl}/usabo-coaching-portland`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.86 },
     // ===== USABO content cluster (Apr 2026) =====
     {
       url: `${baseUrl}/ap-biology-vs-usabo`,
@@ -3642,6 +3651,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // Phase 3 AP gap-fill metros (6)
+    { url: `${baseUrl}/ap-biology-tutor-miami`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/ap-biology-tutor-phoenix`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/ap-biology-tutor-san-diego`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/ap-biology-tutor-denver`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/ap-biology-tutor-austin`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/ap-biology-tutor-portland`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
     // AP Biology international metros — UAE + India. Targets non-US
     // AP-Biology demand (GEMS DAA, ASB, AES Delhi, Pathways, Oakridge,
     // CHIREC, etc.). Schemas pass en-AE / en-IN inLanguage so Google
@@ -4230,6 +4246,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
+    // Phase 6 national olympiad hubs (UK + Australia)
+    { url: `${baseUrl}/bbo-biology-olympiad-coaching`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/abo-biology-olympiad-coaching`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
     {
       url: `${baseUrl}/ibo-coaching-china`,
       lastModified: lastUpdated,
