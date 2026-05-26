@@ -44,8 +44,8 @@ export interface USMLEStep1PricingProduct {
 export const usmleStep1PricingProducts: USMLEStep1PricingProduct[] = [
   {
     id: 'self-paced-foundations',
-    name: 'Step 1 Biology Foundations Self-Paced',
-    subtitle: 'Async track · 4-6 month curriculum',
+    name: 'Pursuit — USMLE Step 1 Biology',
+    subtitle: 'Accessible · Async track · 4-6 month curriculum',
     priceUSD: 799,
     unit: 'package',
     unitLabel: '/ full programme',
@@ -64,7 +64,7 @@ export const usmleStep1PricingProducts: USMLEStep1PricingProduct[] = [
   },
   {
     id: 'small-batch-foundations',
-    name: 'Step 1 Biology Foundations Small-Batch',
+    name: 'Ascent — USMLE Step 1 Biology',
     subtitle: '4-6 IMG / M1-M2 students · Weekly live sessions',
     priceUSD: 1599,
     unit: 'package',
@@ -85,8 +85,8 @@ export const usmleStep1PricingProducts: USMLEStep1PricingProduct[] = [
   },
   {
     id: 'one-on-one-senior',
-    name: 'Step 1 Biology Foundations 1:1 with Senior Faculty',
-    subtitle: 'AIIMS-trained · personalised dedicated period plan',
+    name: 'Pinnacle — USMLE Step 1 Biology',
+    subtitle: 'AIIMS-trained · Weekly 1:1 · Personalised dedicated period plan',
     priceUSD: 2499,
     unit: 'package',
     unitLabel: '/ full programme',

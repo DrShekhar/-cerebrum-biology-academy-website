@@ -32,8 +32,8 @@ export interface DATPricingProduct {
 export const datPricingProducts: DATPricingProduct[] = [
   {
     id: 'self-paced-bio',
-    name: 'DAT Biology Self-Paced',
-    subtitle: 'Async track · 3-5 month curriculum',
+    name: 'Pursuit — DAT Biology',
+    subtitle: 'Accessible · Async track · 3-5 month curriculum',
     priceUSD: 449,
     unit: 'package',
     unitLabel: '/ full programme',
@@ -52,8 +52,8 @@ export const datPricingProducts: DATPricingProduct[] = [
   },
   {
     id: 'small-batch-bio',
-    name: 'DAT Biology Small-Batch',
-    subtitle: '4-6 students · Weekly live sessions',
+    name: 'Ascent — DAT Biology',
+    subtitle: '4-6 students · Bi-weekly office hours · Weekly live sessions',
     priceUSD: 899,
     unit: 'package',
     unitLabel: '/ full programme',
@@ -73,8 +73,8 @@ export const datPricingProducts: DATPricingProduct[] = [
   },
   {
     id: 'one-on-one-senior',
-    name: 'DAT Biology 1:1 with Senior Faculty',
-    subtitle: 'AIIMS-trained · personalised study plan',
+    name: 'Pinnacle — DAT Biology',
+    subtitle: 'AIIMS-trained · Weekly 1:1 · Personalised study plan',
     priceUSD: 1399,
     unit: 'package',
     unitLabel: '/ full programme',
