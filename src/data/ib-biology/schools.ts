@@ -52,12 +52,14 @@ export interface IBBiologySchool {
     | 'GMT (UK/Ireland)'
     | 'JST (Japan)'
     | 'KST (Korea)'
+    | 'ET (Canada East)'
+    | 'PT (Canada West)'
   /** IANA timezone string for schema.org */
   timezoneIana: string
   /** ISO-3166 alpha-2 country code */
-  countryCode: 'SG' | 'AE' | 'TH' | 'IN' | 'CN' | 'HK' | 'CH' | 'DE' | 'NL' | 'SE' | 'IE' | 'JP' | 'KR'
+  countryCode: 'SG' | 'AE' | 'TH' | 'IN' | 'CN' | 'HK' | 'CH' | 'DE' | 'NL' | 'SE' | 'IE' | 'JP' | 'KR' | 'CA'
   /** BCP-47 language tag for schema.org `inLanguage` */
-  inLanguage: 'en-SG' | 'en-AE' | 'en-TH' | 'en-IN' | 'en-CN' | 'en-HK' | 'en-CH' | 'en-DE' | 'en-NL' | 'en-SE' | 'en-IE' | 'en-JP' | 'en-KR'
+  inLanguage: 'en-SG' | 'en-AE' | 'en-TH' | 'en-IN' | 'en-CN' | 'en-HK' | 'en-CH' | 'en-DE' | 'en-NL' | 'en-SE' | 'en-IE' | 'en-JP' | 'en-KR' | 'en-CA'
   /** School category (drives hero badge copy) */
   schoolType:
     | 'International (IB World School)'
@@ -4790,6 +4792,183 @@ export const ibBiologySchools: IBBiologySchool[] = [
         answer:
           'September DP1 for Level 7. BHA\'s boarding structure provides consistent daily routines — students who start early build habits that carry through the demanding DP2 year. For ecology-focused IAs, starting in DP1 Term 1 allows for multi-season fieldwork data collection on Jeju.',
       },
+    ],
+  },
+  // ──────────────────────────────────────────────────────────────────────────
+  // CANADA
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    slug: 'ucc-toronto',
+    schoolName: 'Upper Canada College (UCC)',
+    shortName: 'UCC',
+    cityCountry: 'Toronto, Canada',
+    citySlug: 'toronto',
+    timezone: 'ET (Canada East)',
+    timezoneIana: 'America/Toronto',
+    countryCode: 'CA',
+    inLanguage: 'en-CA',
+    schoolType: 'IB Diploma Programme',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'Upper Canada College (UCC) was founded in 1829 and is one of Canada\'s oldest and most prestigious independent boys\' schools. Located in the Forest Hill neighbourhood of Toronto, UCC enrols approximately 1,200 students from Junior Kindergarten through Grade 12. The school offers the IB Diploma Programme for Grades 11–12 alongside the Ontario Secondary School Diploma.',
+      'UCC offers IB Biology at both HL and SL. The school\'s science department is exceptionally well-resourced, with dedicated Biology labs and a strong tradition of university-bound science students. UCC Biology students benefit from proximity to the University of Toronto\'s Faculty of Medicine and the MaRS Discovery District for research exposure.',
+      'UCC graduates matriculate to Canadian medical schools (U of T, McMaster, Queen\'s, Western), US Ivy League, and UK Russell Group. The school\'s university counselling is among the strongest in Canada, with particular depth in pre-medical and life-science pathways.',
+    ],
+    reputationBullets: [
+      'Founded 1829 — one of Canada\'s oldest independent schools',
+      '1,200 students in Forest Hill, Toronto',
+      'IB Diploma alongside Ontario curriculum',
+      'Proximity to University of Toronto Medicine + MaRS Discovery District',
+      'Strong pre-medical and Ivy League placement track record',
+    ],
+    diplomaContext: 'UCC graduates approximately 60 IB Diploma candidates per year. Biology HL is popular among pre-medical students. The school reports consistently strong IB results.',
+    collegeContext: 'UCC reports placements at U of T, McGill, Queen\'s, Western (Canadian medical pathway), US Ivy League (Harvard, Yale, Princeton), and UK universities (Imperial, UCL). The school has exceptional university counselling for both Canadian and international applications.',
+    paceAlignment: 'Our tutoring aligns with UCC\'s IB DP calendar (September start, mock exams February, May finals). ET evening sessions (5–8 PM Toronto) fit after UCC\'s 3:30 PM dismissal. We coordinate with UCC\'s IA timeline.',
+    faqs: [
+      { question: 'Can you help UCC students targeting U of T Medicine?', answer: 'Yes — University of Toronto Faculty of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on the supplementary application components. Many UCC families target Canadian medical schools as their primary pathway.' },
+      { question: 'How do ET sessions fit a UCC student\'s schedule?', answer: 'Weekday sessions from 5–8 PM ET fit after UCC\'s school day. Weekend morning slots available for students with sports commitments. UCC\'s Forest Hill location means most students are home by 4:30 PM.' },
+      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer (TD, RBC, Scotiabank, BMO, CIBC) or international Visa/Mastercard. Annual packages can be split across two CAD payments.' },
+      { question: 'Does UCC\'s Ontario curriculum overlap with IB?', answer: 'UCC offers IB DP alongside the Ontario curriculum. There is significant overlap in Biology content, but IB assessment (Paper 1 MCQ, Paper 2 extended response, IA) differs from Ontario evaluations. Our coaching focuses on the IB-specific exam technique.' },
+      { question: 'When should a UCC student start IB Biology tutoring?', answer: 'September of DP1 (Grade 11) for Level 7 targeting. UCC\'s strong science department means students enter DP with solid foundations — our coaching adds exam technique and IA optimisation.' },
+    ],
+  },
+  {
+    slug: 'ridley-college',
+    schoolName: 'Ridley College',
+    shortName: 'Ridley',
+    cityCountry: 'St. Catharines, Canada',
+    citySlug: 'toronto',
+    timezone: 'ET (Canada East)',
+    timezoneIana: 'America/Toronto',
+    countryCode: 'CA',
+    inLanguage: 'en-CA',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Ridley College was founded in 1889 in St. Catharines, Ontario, on a 107-acre lakeside campus overlooking Lake Ontario. Ridley is a co-educational boarding and day school enrolling approximately 750 students from 60+ countries. The school is authorized for the full IB Continuum (PYP, MYP, DP) — one of only a handful of Canadian schools with all three programmes.',
+      'Ridley offers IB Biology at both HL and SL. The school\'s boarding environment creates a structured study culture that benefits IB students. Ridley\'s science labs were refurbished in 2019, and the school\'s proximity to the Niagara region provides ecology fieldwork opportunities for Biology IAs.',
+      'Ridley graduates matriculate to Canadian, US, UK, and international universities. The school has strong placements at Queen\'s, Western, McGill, U of T, and US liberal arts colleges. Boarding families from Asia and the Middle East often target North American medical pathways.',
+    ],
+    reputationBullets: [
+      'Founded 1889 — 107-acre lakeside campus in St. Catharines',
+      '750 students, 60+ nationalities — major boarding school',
+      'Full IB Continuum: PYP → MYP → DP',
+      'Refurbished science labs (2019)',
+      'Niagara region ecology fieldwork for Biology IAs',
+    ],
+    diplomaContext: 'Ridley graduates approximately 80 IB Diploma candidates annually. Biology HL benefits from the boarding structure (consistent evening study time) and Niagara ecology access.',
+    collegeContext: 'Ridley reports placements at Queen\'s, Western, McGill, U of T, US universities (including Ivy League), and UK institutions. Boarding families often target dual Canadian/US applications.',
+    paceAlignment: 'Our tutoring aligns with Ridley\'s DP calendar. Boarding students have structured evening study time (7–9 PM ET) that accommodates online tutoring sessions seamlessly.',
+    faqs: [
+      { question: 'Do you support Ridley boarding students?', answer: 'Yes — online tutoring is ideal for boarding students. We schedule during Ridley\'s approved evening study blocks (7–9 PM ET). The boarding schedule provides consistent tutoring time.' },
+      { question: 'Can you help with Niagara ecology IAs?', answer: 'Absolutely — the Niagara region provides excellent ecology fieldwork sites. We\'ve guided students through water-quality, biodiversity, and vine-ecology IAs using publicly accessible Niagara sampling sites.' },
+      { question: 'How does Ridley\'s IB Continuum help Biology HL?', answer: 'Students who completed MYP at Ridley have strong science foundations entering DP. Our coaching extends MYP skills to DP Biology depth — particularly exam technique and IA methodology.' },
+      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer or international Visa/Mastercard. Boarding families from overseas can pay in USD or home currency.' },
+      { question: 'When should a Ridley student start?', answer: 'September DP1 for Level 7. Ridley\'s boarding structure makes consistent weekly tutoring easy to maintain throughout the DP cycle.' },
+    ],
+  },
+  {
+    slug: 'ashbury-college-ottawa',
+    schoolName: 'Ashbury College',
+    shortName: 'Ashbury',
+    cityCountry: 'Ottawa, Canada',
+    citySlug: 'toronto',
+    timezone: 'ET (Canada East)',
+    timezoneIana: 'America/Toronto',
+    countryCode: 'CA',
+    inLanguage: 'en-CA',
+    schoolType: 'IB Diploma Programme',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'Ashbury College was founded in 1891 in Ottawa\'s Rockcliffe Park neighbourhood — one of Canada\'s most prestigious residential areas, home to embassies, the Governor General\'s residence, and senior government officials. Ashbury enrols approximately 700 students and offers the IB Diploma Programme for Grades 11–12.',
+      'Ashbury offers IB Biology at both HL and SL. Ottawa\'s unique position as Canada\'s capital means Ashbury\'s parent community includes diplomats, senior civil servants, and professionals from the National Research Council, Health Canada, and the Public Health Agency of Canada — creating a school culture where science and public policy intersect.',
+      'Ashbury graduates matriculate to Canadian universities (Ottawa, Queen\'s, McGill, U of T), US universities, and UK institutions. The school\'s diplomatic community drives applications to international programmes.',
+    ],
+    reputationBullets: [
+      'Founded 1891 in Rockcliffe Park, Ottawa',
+      '700 students — diplomatic/government community',
+      'IB Diploma Programme with strong sciences',
+      'Proximity to Health Canada, NRC, PHAC for science context',
+      'Governor General\'s neighbourhood — elite residential setting',
+    ],
+    diplomaContext: 'Ashbury graduates approximately 50 IB Diploma candidates annually. The diplomatic community drives diverse university targets across Canadian, US, UK, and European systems.',
+    collegeContext: 'Ashbury reports placements at University of Ottawa, Queen\'s, McGill, U of T, and international universities. The school\'s diplomatic heritage provides strong recommendation networks.',
+    paceAlignment: 'Our tutoring aligns with Ashbury\'s DP calendar. ET evening sessions (5–8 PM Ottawa) fit the standard school schedule.',
+    faqs: [
+      { question: 'Can you help Ashbury students from diplomatic families?', answer: 'Yes — several Ashbury families are diplomats who may relocate mid-DP. Our online tutoring continues seamlessly regardless of relocation. We maintain the same IB Biology curriculum progression even if the student changes countries.' },
+      { question: 'Do Ottawa students have health-science research access?', answer: 'Ottawa is unique: Health Canada, PHAC, and the NRC are all within the city. Some Ashbury students access research opportunities for IA projects. We help students design IAs that leverage these connections.' },
+      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer or international card. Diplomatic families can pay in USD or home currency.' },
+      { question: 'When should an Ashbury student start?', answer: 'September DP1 for Level 7 targeting. Ashbury\'s smaller cohort means early support has high impact.' },
+    ],
+  },
+  {
+    slug: 'crofton-house-vancouver',
+    schoolName: 'Crofton House School',
+    shortName: 'Crofton House',
+    cityCountry: 'Vancouver, Canada',
+    citySlug: 'vancouver',
+    timezone: 'PT (Canada West)',
+    timezoneIana: 'America/Vancouver',
+    countryCode: 'CA',
+    inLanguage: 'en-CA',
+    schoolType: 'IB Diploma Programme',
+    ibProgrammeOffered: ['DP'],
+    historyParagraphs: [
+      'Crofton House School was founded in 1898 in Vancouver\'s Kerrisdale neighbourhood. It is one of British Columbia\'s most respected independent girls\' schools, enrolling approximately 900 students from Junior Kindergarten through Grade 12. Crofton House offers the IB Diploma Programme for Grades 11–12.',
+      'Crofton House offers IB Biology at both HL and SL. The school\'s all-girls environment and strong STEM programme encourage high Biology HL enrolment. Vancouver\'s marine and forest ecosystems provide excellent ecology fieldwork for IAs — the school is 15 minutes from Pacific Spirit Regional Park and the UBC campus.',
+      'Crofton House graduates matriculate to UBC, McGill, U of T, US universities, and UK institutions. The school has particular strength in science-track university placements, with many graduates pursuing medicine, dentistry, and life sciences.',
+    ],
+    reputationBullets: [
+      'Founded 1898 — one of BC\'s top independent girls\' schools',
+      '900 students in Kerrisdale, Vancouver',
+      'IB Diploma with strong STEM emphasis',
+      'Pacific Spirit Park + UBC proximity for ecology IAs',
+      'Strong science-track university placements',
+    ],
+    diplomaContext: 'Crofton House graduates approximately 60 IB Diploma candidates per year. Biology HL enrolment is proportionally higher than co-ed schools, reflecting the all-girls STEM culture.',
+    collegeContext: 'Crofton House reports placements at UBC, McGill, U of T, Queen\'s, US top-50, and UK Russell Group. Pre-medical and life-science pathways are well-represented.',
+    paceAlignment: 'Our tutoring aligns with Crofton House\'s DP calendar. PT evening sessions (5–8 PM Vancouver) fit after the school day. Weekend sessions available for students with extracurricular commitments.',
+    faqs: [
+      { question: 'Can you help with marine-ecology IAs using Pacific Spirit Park?', answer: 'Yes — Pacific Spirit Regional Park and the UBC campus are excellent IA sites. We\'ve guided Vancouver students through forest-ecology, marine-intertidal, and water-quality IAs using these accessible locations.' },
+      { question: 'Do you support students targeting UBC Medicine?', answer: 'Yes — UBC Faculty of Medicine accepts IB Diploma. We coach Biology HL for Level 7 and advise on UBC\'s specific supplementary requirements. UBC Medicine is the primary local target for Crofton House pre-med students.' },
+      { question: 'PT sessions for Vancouver students?', answer: 'Weekday sessions from 5–8 PM PT. Weekend: 9–11 AM PT. Crofton House\'s Kerrisdale location means students are home by 4:30 PM, allowing ample time before evening sessions.' },
+      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer or international Visa/Mastercard.' },
+      { question: 'When should a Crofton House student start?', answer: 'September DP1 for Level 7. Crofton House\'s strong STEM culture means students enter DP Biology with excellent foundations — our coaching adds exam technique and IA optimisation.' },
+    ],
+  },
+  {
+    slug: 'branksome-hall-toronto',
+    schoolName: 'Branksome Hall',
+    shortName: 'Branksome Hall Toronto',
+    cityCountry: 'Toronto, Canada',
+    citySlug: 'toronto',
+    timezone: 'ET (Canada East)',
+    timezoneIana: 'America/Toronto',
+    countryCode: 'CA',
+    inLanguage: 'en-CA',
+    schoolType: 'IB Continuum School',
+    ibProgrammeOffered: ['PYP', 'MYP', 'DP'],
+    historyParagraphs: [
+      'Branksome Hall was founded in 1903 in Toronto\'s Rosedale neighbourhood. It is one of Canada\'s premier independent girls\' schools, enrolling approximately 900 students. Branksome Hall is authorized for the full IB Continuum (PYP, MYP, DP) and is the sister school of Branksome Hall Asia (Jeju, South Korea) — the only IB Continuum school pair spanning two continents.',
+      'Branksome Hall offers IB Biology at both HL and SL. The school\'s all-girls IB Continuum from PYP through DP creates exceptionally well-prepared Biology HL students who have been in the IB system since elementary school. The school\'s Toronto location provides access to the University of Toronto\'s research ecosystem and the MaRS Discovery District for IA project context.',
+      'Branksome Hall graduates matriculate to U of T, McGill, Queen\'s, Western, US Ivy League, and UK universities. The school has a strong track record in pre-medical and life-science placements. The Branksome Hall Asia connection facilitates cross-campus exchanges.',
+    ],
+    reputationBullets: [
+      'Founded 1903 — one of Canada\'s premier girls\' schools',
+      '900 students in Rosedale, Toronto',
+      'Full IB Continuum: PYP → MYP → DP',
+      'Sister school of Branksome Hall Asia (Jeju, South Korea)',
+      'U of T research ecosystem + MaRS Discovery District access',
+    ],
+    diplomaContext: 'Branksome Hall graduates approximately 80 IB Diploma candidates per year. Biology HL benefits from the full IB Continuum — students who started in PYP have the deepest IB preparation of any Canadian school.',
+    collegeContext: 'Branksome Hall reports placements at U of T, McGill, Queen\'s, Western (Canadian medical pathway), US Ivy League, and UK Russell Group. Pre-medical applications are a strength — the school\'s IB Continuum heritage gives students distinctive application profiles.',
+    paceAlignment: 'Our tutoring aligns with Branksome Hall\'s DP calendar. ET evening sessions fit after the school day. We support cross-campus students who spend time at Branksome Hall Asia (Jeju) with timezone-flexible scheduling.',
+    faqs: [
+      { question: 'How does the Branksome Hall IB Continuum help Biology HL?', answer: 'Students who completed PYP and MYP at Branksome Hall have the deepest IB preparation possible — 13+ years in the system. Our coaching extends this exceptional foundation with DP-specific exam technique and IA mentorship.' },
+      { question: 'Can you support students who split time between Toronto and Jeju?', answer: 'Yes — some Branksome Hall students participate in cross-campus exchanges with Branksome Hall Asia Jeju. Our online tutoring accommodates both ET (Toronto) and KST (Jeju) timezones seamlessly.' },
+      { question: 'Do you help Branksome Hall students targeting Canadian med schools?', answer: 'Yes — U of T, McMaster, Queen\'s, and Western medical schools all accept IB Diploma. We coach Biology HL for Level 7 and advise on the Canadian medical school application process.' },
+      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer or international Visa/Mastercard. Annual packages can be split across two payments.' },
+      { question: 'When should a Branksome Hall student start?', answer: 'September DP1. Branksome Hall students are among the best-prepared IB students in Canada — our coaching adds the exam-technique and IA-optimisation layer that pushes Level 6 to Level 7.' },
     ],
   },
 ]
