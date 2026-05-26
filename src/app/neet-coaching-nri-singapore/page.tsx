@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import PageContent from './PageContent'
 import LocalitySchema from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
@@ -150,6 +151,22 @@ export default async function Page() {
       />
       <LocalitySchema locality="Singapore" region="Singapore" country="Singapore" skipCourseList />
       <PageContent />
+
+      {/* Cross-programme links for Singapore families */}
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Other Biology Programmes in Singapore</h2>
+          <p className="text-slate-600 mb-6">Beyond NEET, Cerebrum serves Singapore students across IB Biology, AP Biology, GAMSAT, and Biology Olympiads.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            <Link href="/ib-biology-tutor-uwcsea" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology UWCSEA</span></Link>
+            <Link href="/ib-biology-tutor-stamford-american-singapore" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology Stamford American</span></Link>
+            <Link href="/ib-biology-tutor-tanglin-trust" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology Tanglin Trust</span></Link>
+            <Link href="/ap-biology-tutor-singapore" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">AP Biology Singapore</span></Link>
+            <Link href="/sbo-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">SBO — Singapore Biology Olympiad</span></Link>
+          </div>
+        </div>
+      </section>
+
       <NEETNRIPricingTiers />
     </>
   )

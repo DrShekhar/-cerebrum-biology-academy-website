@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import PageContent from './PageContent'
 import Script from 'next/script'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
@@ -131,6 +132,22 @@ export default async function NEETCoachingNRIAustraliaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <PageContent />
+
+      {/* Cross-programme links for Australia families */}
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Other Biology Programmes in Australia</h2>
+          <p className="text-slate-600 mb-6">Beyond NEET, Cerebrum serves Australia students across IB Biology, AP Biology, GAMSAT, and Biology Olympiads.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            <Link href="/gamsat-biology-tutor-sydney" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">GAMSAT Sydney</span></Link>
+            <Link href="/gamsat-biology-tutor-melbourne" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">GAMSAT Melbourne</span></Link>
+            <Link href="/gamsat-biology-tutor-brisbane" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">GAMSAT Brisbane</span></Link>
+            <Link href="/abo-biology-olympiad-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">ABO — Australian Biology Olympiad</span></Link>
+            <Link href="/ib-biology/sydney" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology Sydney</span></Link>
+          </div>
+        </div>
+      </section>
+
       <NEETNRIPricingTiers forceCountry="AU" />
     </>
   )
