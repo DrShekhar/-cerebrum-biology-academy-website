@@ -36,7 +36,7 @@ export interface MCATPricingProduct {
 export const mcatPricingProducts: MCATPricingProduct[] = [
   {
     id: 'self-paced-bb',
-    name: 'Pursuit — MCAT Bio/Biochem',
+    name: 'MCAT Bio/Biochem — Pursuit',
     subtitle: 'Accessible · Async track · Monthly check-in',
     priceUSD: 499,
     unit: 'package',
@@ -56,7 +56,7 @@ export const mcatPricingProducts: MCATPricingProduct[] = [
   },
   {
     id: 'small-batch-bb',
-    name: 'Ascent — MCAT Bio/Biochem',
+    name: 'MCAT Bio/Biochem — Ascent',
     subtitle: '4-6 students · Bi-weekly office hours · Live sessions',
     priceUSD: 999,
     unit: 'package',
@@ -77,7 +77,7 @@ export const mcatPricingProducts: MCATPricingProduct[] = [
   },
   {
     id: 'one-on-one-senior',
-    name: 'Pinnacle — MCAT Bio/Biochem',
+    name: 'MCAT Bio/Biochem — Pinnacle',
     subtitle: 'AIIMS-trained · Weekly 1:1 · Personalised plan',
     priceUSD: 1499,
     unit: 'package',
