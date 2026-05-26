@@ -67,34 +67,34 @@ const apBiologyUnits = [
   { number: 8, title: 'Ecology', weight: '10–15%' },
 ]
 
-// USD pricing matches /ap-biology-online-tutor (canonical source).
-// Rendered on every metro/school page so US visitors don't need to
-// click through to find numbers.
-const pricingTiers = [
-  {
-    name: 'Senior Faculty 1:1',
-    price: '$1,800 – $5,760',
-    perHour: '$120–$150/hr',
-    detail: '12 / 24 / 36 / 48-hour packages with PhD biology specialists',
-  },
-  {
-    name: 'Junior Faculty 1:1',
-    price: '$900 – $2,880',
-    perHour: '$60–$75/hr',
-    detail: 'Same curriculum, lower price point, 12 / 24 / 36 / 48-hour packages',
-  },
-  {
-    name: 'Small Batch (4–6 students)',
-    price: '$640 – $1,600',
-    perHour: '$40/hr flat',
-    detail: '16 / 24 / 32 / 40-hour group programmes',
-  },
-]
+// USD pricing — geo-tiered. Premium metros (NYC, Bay Area, Boston, DC,
+// Chicago, LA) get $120-$150/hr senior. Standard metros (Miami, Phoenix,
+// San Diego, Denver, Austin, Portland + most international) get $80-$100/hr.
+function getPricingTiers(tier?: 'premium' | 'standard') {
+  const isStandard = tier === 'standard'
+  return [
+    {
+      name: 'Senior Faculty 1:1',
+      price: isStandard ? '$960 – $4,800' : '$1,800 – $5,760',
+      perHour: isStandard ? '$80–$100/hr' : '$120–$150/hr',
+      detail: '12 / 24 / 36 / 48-hour packages with PhD biology specialists',
+    },
+    {
+      name: 'Junior Faculty 1:1',
+      price: isStandard ? '$600 – $2,400' : '$900 – $2,880',
+      perHour: isStandard ? '$50–$60/hr' : '$60–$75/hr',
+      detail: 'Same curriculum, lower price point, 12 / 24 / 36 / 48-hour packages',
+    },
+    {
+      name: 'Small Batch (4–6 students)',
+      price: '$640 – $1,600',
+      perHour: '$40/hr flat',
+      detail: '16 / 24 / 32 / 40-hour group programmes',
+    },
+  ]
+}
 
-// Compact pricing summary string used inside WhatsApp pre-fills so
-// counsellors see exactly which tiers were visible to the visitor.
-// Single source of truth — derived from pricingTiers above.
-const pricingSummary = pricingTiers.map((t) => `• ${t.name} — ${t.price} (${t.perHour})`).join('\n')
+// Compact pricing summary — computed inside the component with the metro's tier.
 
 // Pedagogy method block — the differentiator. Cites Karpicke &
 // Roediger 2008 because it's the canonical research on active recall.
@@ -127,6 +127,8 @@ const pedagogyPillars = [
 
 export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const pricingTiers = getPricingTiers(metro.pricingTier)
+  const pricingSummary = pricingTiers.map((t) => `• ${t.name} — ${t.price} (${t.perHour})`).join('\n')
 
   // Hero CTA — counsellor receives the visitor's location + the full
   // pricing menu they were just shown, so the conversation starts with

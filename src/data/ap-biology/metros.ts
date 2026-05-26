@@ -43,6 +43,10 @@ export interface APBiologyMetro {
   schools: string[]
   /** 5–7 city-tailored FAQs */
   faqs: APBiologyMetroFaq[]
+  /** Pricing tier — 'premium' = $120-$150/hr senior, 'standard' = $80-$100/hr senior.
+   *  Premium: NYC, Bay Area, Boston, Northern Virginia-DC, Chicago, LA.
+   *  Standard: Miami, Phoenix, San Diego, Denver, Austin, Portland + most international. */
+  pricingTier?: 'premium' | 'standard'
 }
 
 export const apBiologyMetros: APBiologyMetro[] = [
@@ -1944,6 +1948,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
   // ──────────────────────────────────────────────────────────────────────────
   {
     slug: 'miami',
+    pricingTier: 'standard',
     cityName: 'Miami',
     region: 'Miami-Dade + Broward + Palm Beach',
     timezone: 'ET (Eastern)',
@@ -1977,6 +1982,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
   {
     slug: 'phoenix',
+    pricingTier: 'standard',
     cityName: 'Phoenix',
     region: 'Phoenix Metro + Scottsdale + Chandler + Gilbert',
     timezone: 'MST (Arizona)',
@@ -2009,6 +2015,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
   {
     slug: 'san-diego',
+    pricingTier: 'standard',
     cityName: 'San Diego',
     region: 'San Diego County + North County',
     timezone: 'PT (Pacific)',
@@ -2040,6 +2047,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
   {
     slug: 'denver',
+    pricingTier: 'standard',
     cityName: 'Denver',
     region: 'Denver Metro + Boulder + Colorado Springs',
     timezone: 'MT (Mountain)',
@@ -2071,6 +2079,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
   {
     slug: 'austin',
+    pricingTier: 'standard',
     cityName: 'Austin',
     region: 'Austin Metro + Round Rock + Cedar Park',
     timezone: 'CT (Central)',
@@ -2102,6 +2111,7 @@ export const apBiologyMetros: APBiologyMetro[] = [
   },
   {
     slug: 'portland',
+    pricingTier: 'standard',
     cityName: 'Portland',
     region: 'Portland Metro + Lake Oswego + Beaverton',
     timezone: 'PT (Pacific)',
