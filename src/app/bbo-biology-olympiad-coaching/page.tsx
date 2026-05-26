@@ -31,7 +31,7 @@ const faqs = [
   { question: 'What makes Cerebrum different from UK-based BBO tutors?', answer: 'Cerebrum is led by Dr. Shekhar C Singh (AIIMS Delhi) — a biology-specialist faculty with 12+ years coaching biology olympiad students across NSEB, INBO, USABO, BBO, and IBO simultaneously. This cross-national perspective means UK BBO students benefit from exposure to question patterns from multiple national olympiads, not just past BBO papers.' },
   { question: 'Can IB Biology HL students enter the BBO?', answer: 'Yes — the BBO is open to all sixth-form students in UK schools, including IB Diploma students. IB Biology HL provides strong foundational coverage. Our coaching extends HL content to the university-level depth the BBO requires (molecular biology, population genetics, advanced physiology).' },
   { question: 'When should a student start BBO preparation?', answer: 'September of Year 12 (or IB DP1) for Gold targeting. The BBO exam is typically in February, so 5–6 months of structured preparation is ideal. Students already scoring A*/Level 7 in school biology can start in November for a concentrated 3-month push.' },
-  { question: 'What does the BBO coaching programme cost?', answer: 'Small-Batch (4–6 students): £50/hour. 1:1 Senior Faculty: £90/hour. Complete BBO Year Programme: £3,500. All sessions online in GMT evening slots (5–8 PM UK time). Sterling bank transfer, international card, or INR payment accepted.' },
+  { question: 'What does BBO coaching cost?', answer: 'Three annual tiers: BBO — Pursuit £2,000/yr (group batch, Bronze+ targeting), BBO — Ascent £3,500/yr (bi-weekly 1:1, Silver/Gold targeting), BBO — Pinnacle £4,500/yr (weekly 1:1, Gold targeting, IBO UK team pathway). All sessions online in GMT evening slots. Sterling bank transfer, international card, or INR accepted.' },
 ]
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent('Hi — I want to discuss British Biology Olympiad (BBO) coaching for my child. Please share programme details, UK scheduling, and pricing.')
@@ -88,9 +88,9 @@ export default function Page() {
 
             <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">BBO Coaching Pricing (GBP)</h2>
             <ul>
-              <li><strong>BBO Small-Batch (4–6 students) — £50/hour.</strong> Weekly 90-minute sessions, September to February, plus monthly mock BBO papers.</li>
-              <li><strong>BBO 1:1 Senior Faculty — £90/hour.</strong> Personalised coaching with AIIMS-trained faculty. Flexible scheduling.</li>
-              <li><strong>Complete BBO Year Programme — £3,500.</strong> September–February intensive: weekly live sessions, 6 mock papers, 1:1 gap-fill, IBO bridge for Gold medalists.</li>
+              <li><strong>BBO — Pursuit: £2,000/yr.</strong> Group batch, Bronze+ targeting, weekend sessions, recorded content, monthly 1:1 check-in.</li>
+              <li><strong>BBO — Ascent: £3,500/yr.</strong> Bi-weekly 1:1, Silver/Gold targeting, monthly mock BBO papers, 6-month intensive.</li>
+              <li><strong>BBO — Pinnacle: £4,500/yr.</strong> Weekly 1:1 with senior faculty, Gold targeting, IBO UK team pathway, cross-national paper practice.</li>
             </ul>
           </div>
         </section>

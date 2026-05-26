@@ -31,7 +31,7 @@ const faqs = [
   { question: 'What makes Cerebrum different from Australian biology tutors?', answer: 'Cerebrum coaches biology olympiad students across NSEB (India), USABO (USA), BBO (UK), and ABO (Australia) simultaneously. This cross-national exposure means Australian students practise against question patterns from 4 national olympiad traditions — not just past ABO papers. Our AIIMS-trained faculty brings clinical + research depth that pure school-teacher tutors lack.' },
   { question: 'Can IB Biology HL students at Australian international schools enter the ABO?', answer: 'Yes — the ABO is open to all secondary students in Australian schools, including IB Diploma students at international schools (e.g., Caulfield Grammar IB, Carey Grammar IB, Wesley College IB). IB Biology HL provides strong foundational coverage; our coaching extends to the university-level depth the ABO and IBO require.' },
   { question: 'When should a student start ABO preparation?', answer: 'January of Year 11 for serious IBO-track ambitions. The ABO qualifying exam is typically in March–April, so 3–4 months of concentrated preparation (January–April) is the standard timeline. Students with strong Year 10 biology foundations can start later (February) for a compressed 2-month push.' },
-  { question: 'What does the ABO coaching programme cost?', answer: 'Small-Batch (4–6 students): A$60/hour. 1:1 Senior Faculty: A$100/hour. Complete ABO Year Programme: A$4,500. All sessions online in AEST evening slots (6–9 PM Australian Eastern). AUD bank transfer, international card, or INR payment accepted.' },
+  { question: 'What does ABO coaching cost?', answer: 'Three annual tiers: ABO — Pursuit A$2,500/yr (group batch, qualifying exam targeting), ABO — Ascent A$4,500/yr (bi-weekly 1:1, Summer School targeting), ABO — Pinnacle A$6,000/yr (weekly 1:1, IBO Australia team pathway). All sessions online in AEST evening slots. AUD bank transfer, international card, or INR accepted.' },
 ]
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent('Hi — I want to discuss Australian Biology Olympiad (ABO) coaching for my child. Please share programme details, AEST scheduling, and pricing.')
@@ -88,9 +88,9 @@ export default function Page() {
 
             <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">ABO Coaching Pricing (AUD)</h2>
             <ul>
-              <li><strong>ABO Small-Batch (4–6 students) — A$60/hour.</strong> Weekly 90-minute sessions, January to April, plus mock ABO papers.</li>
-              <li><strong>ABO 1:1 Senior Faculty — A$100/hour.</strong> Personalised coaching with AIIMS-trained faculty. Flexible AEST scheduling.</li>
-              <li><strong>Complete ABO Year Programme — A$4,500.</strong> January–April intensive: weekly live sessions, 4 mock papers, 1:1 gap-fill, IBO bridge for top performers.</li>
+              <li><strong>ABO — Pursuit: A$2,500/yr.</strong> Group batch, qualifying exam targeting, weekend sessions, recorded content, monthly 1:1.</li>
+              <li><strong>ABO — Ascent: A$4,500/yr.</strong> Bi-weekly 1:1, ASI Summer School targeting, monthly mocks, January–April intensive.</li>
+              <li><strong>ABO — Pinnacle: A$6,000/yr.</strong> Weekly 1:1 with senior faculty, IBO Australia team pathway, cross-national paper practice.</li>
             </ul>
           </div>
         </section>

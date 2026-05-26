@@ -51,32 +51,32 @@ interface IBBiologySchoolTemplateProps {
 
 const pricingTiers = [
   {
-    id: 'complete-annual',
-    name: 'Complete IB Biology Programme',
+    id: 'pursuit',
+    name: 'IB Biology — Pursuit',
+    price: '$3,500',
+    perUnit: '/ year',
+    detail:
+      'HL or SL coverage, group IA workshops, recorded library, doubt support. 12–16 student batch, monthly 1:1 check-in.',
+    icon: Users,
+  },
+  {
+    id: 'ascent',
+    name: 'IB Biology — Ascent',
     price: '$6,000',
     perUnit: '/ year',
     detail:
-      'HL + SL complete coverage, 150+ hours of live classes, small batch (4–8 students), IA guidance from topic to submission, past-paper bank, university guidance bonus.',
+      'HL + SL complete coverage, 150+ live hours, IA guidance, past-paper bank. 8–12 student batch, bi-weekly 1:1.',
     highlight: true,
     icon: Crown,
   },
   {
-    id: 'elite-1on1',
-    name: '1:1 Elite Tutoring',
-    price: '$75',
-    perUnit: '/ hour',
+    id: 'pinnacle',
+    name: 'IB Biology — Pinnacle',
+    price: '$8,000',
+    perUnit: '/ year',
     detail:
-      'Examiner-led one-on-one. Best for targeted weaknesses, IA moderation-level feedback, or a pre-exam crash course. Fully customised, flexible scheduling.',
+      'HL + SL, IA end-to-end (topic→submission), EE supervision, Paper 1+2 mocks. 4–8 student batch, weekly examiner 1:1.',
     icon: Sparkles,
-  },
-  {
-    id: 'group-batch',
-    name: 'Group Batch',
-    price: '$40',
-    perUnit: '/ hour',
-    detail:
-      'Small groups of 4–8 students on a fixed weekly schedule. The most affordable route to the same core curriculum, with peer discussion built in.',
-    icon: Users,
   },
 ]
 

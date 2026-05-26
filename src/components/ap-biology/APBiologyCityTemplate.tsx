@@ -67,32 +67,8 @@ const apBiologyUnits = [
   { number: 8, title: 'Ecology', weight: '10–15%' },
 ]
 
-// USD pricing — geo-tiered. Premium metros (NYC, Bay Area, Boston, DC,
-// Chicago, LA) get $120-$150/hr senior. Standard metros (Miami, Phoenix,
-// San Diego, Denver, Austin, Portland + most international) get $80-$100/hr.
-function getPricingTiers(tier?: 'premium' | 'standard') {
-  const isStandard = tier === 'standard'
-  return [
-    {
-      name: 'Senior Faculty 1:1',
-      price: isStandard ? '$960 – $4,800' : '$1,800 – $5,760',
-      perHour: isStandard ? '$80–$100/hr' : '$120–$150/hr',
-      detail: '12 / 24 / 36 / 48-hour packages with PhD biology specialists',
-    },
-    {
-      name: 'Junior Faculty 1:1',
-      price: isStandard ? '$600 – $2,400' : '$900 – $2,880',
-      perHour: isStandard ? '$50–$60/hr' : '$60–$75/hr',
-      detail: 'Same curriculum, lower price point, 12 / 24 / 36 / 48-hour packages',
-    },
-    {
-      name: 'Small Batch (4–6 students)',
-      price: '$640 – $1,600',
-      perHour: '$40/hr flat',
-      detail: '16 / 24 / 32 / 40-hour group programmes',
-    },
-  ]
-}
+// Annual Pinnacle / Ascent / Pursuit pricing tiers
+import { apBiologyPricingTiers, type APBiologyPricingTier } from '@/data/ap-biology/pricing-matrix'
 
 // Compact pricing summary — computed inside the component with the metro's tier.
 
@@ -127,8 +103,8 @@ const pedagogyPillars = [
 
 export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplateProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const pricingTiers = getPricingTiers(metro.pricingTier)
-  const pricingSummary = pricingTiers.map((t) => `• ${t.name} — ${t.price} (${t.perHour})`).join('\n')
+  const pricingTiers = apBiologyPricingTiers
+  const pricingSummary = pricingTiers.map((t) => `• ${t.name} — ${t.label} (${t.batchSize})`).join('\n')
 
   // Hero CTA — counsellor receives the visitor's location + the full
   // pricing menu they were just shown, so the conversation starts with
@@ -154,15 +130,14 @@ export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplatePr
   // Sends a tier-specific intent message so the counsellor knows the
   // package the visitor was pricing without asking. Tracked separately
   // (campaign suffix) so we can measure tier-level conversion.
-  const handleTierWhatsApp = (tier: (typeof pricingTiers)[number]) => {
+  const handleTierWhatsApp = (tier: APBiologyPricingTier) => {
     const message = [
-      `Hi! I'm in ${metro.cityName} and want to enroll in AP Biology — ${tier.name}.`,
+      `Hi! I'm in ${metro.cityName} and interested in the *${tier.name}* programme (${tier.label}).`,
       ``,
-      `Tier I'm considering: ${tier.name}`,
-      `Price: ${tier.price} (${tier.perHour})`,
-      `Detail: ${tier.detail}`,
+      `Batch size: ${tier.batchSize}`,
+      `1:1 access: ${tier.oneOnOne}`,
       ``,
-      `Please confirm availability, batch start, and next steps.`,
+      `Please share batch schedule, next intake date, and next steps.`,
     ].join('\n')
     const tierSlug = tier.name
       .toLowerCase()
@@ -403,22 +378,25 @@ export default function APBiologyCityTemplate({ metro }: APBiologyCityTemplatePr
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
-            AP Biology tutoring — transparent USD pricing
+            AP Biology — Pinnacle / Ascent / Pursuit
           </h2>
           <p className="text-slate-600 mb-8 max-w-3xl">
-            Pay-as-you-go hour packages. No long-term lock-in. The same pricing nationwide — there
-            is no {metro.cityName} surcharge.
+            Annual programmes with clear tier differentiation. Choose by batch size and 1:1 access level.
           </p>
           <div className="grid md:grid-cols-3 gap-5">
             {pricingTiers.map((tier) => (
               <div
-                key={tier.name}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-6 hover:shadow-md transition flex flex-col"
+                key={tier.id}
+                className={`rounded-xl border ${tier.highlight ? 'border-blue-400 ring-2 ring-blue-100' : 'border-slate-200'} bg-slate-50 p-6 hover:shadow-md transition flex flex-col`}
               >
+                {tier.highlight && <span className="text-xs font-semibold text-blue-600 uppercase mb-2">Most Popular</span>}
                 <h3 className="text-lg font-bold text-slate-900 mb-1">{tier.name}</h3>
-                <p className="text-2xl font-bold text-blue-700 mb-1">{tier.price}</p>
-                <p className="text-sm text-green-700 font-medium mb-3">{tier.perHour}</p>
-                <p className="text-sm text-slate-600 flex-grow">{tier.detail}</p>
+                <p className="text-2xl font-bold text-blue-700 mb-1">{tier.label}</p>
+                <p className="text-sm text-green-700 font-medium mb-1">{tier.batchSize} · {tier.oneOnOne}</p>
+                <p className="text-xs text-slate-500 mb-3">{tier.subtitle}</p>
+                <ul className="text-sm text-slate-600 flex-grow space-y-1 mb-4">
+                  {tier.features.slice(0, 4).map((f) => <li key={f} className="flex items-start gap-1.5"><span className="text-green-500 mt-0.5">✓</span>{f}</li>)}
+                </ul>
                 {/* Per-tier CTA — the WhatsApp message includes this
                     exact tier name + price so the counsellor sees the
                     package the visitor clicked. */}
