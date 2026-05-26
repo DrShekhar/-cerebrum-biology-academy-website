@@ -4465,6 +4465,9 @@ export const delhiNCRDoorwayConsolidationRedirects = [
   { source: '/online-neet-coaching-delhi', destination: '/neet-coaching-delhi', permanent: true },
   { source: '/online-neet-coaching-noida', destination: '/neet-coaching-noida', permanent: true },
 
+  // ─── A-Level duplicate consolidation ────────────────────────────────
+  { source: '/a-level-biology-tuition', destination: '/a-level-biology-tutor', permanent: true },
+
   // ─── Misc thin pages (39-49 lines) ────────────────────────────────
   { source: '/re-neet-2026-delhi', destination: '/re-neet-2026', permanent: true },
   { source: '/neet-coaching-with-hostel-delhi', destination: '/neet-coaching-delhi', permanent: true },

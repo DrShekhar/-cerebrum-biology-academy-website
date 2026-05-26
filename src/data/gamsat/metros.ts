@@ -222,6 +222,98 @@ export const gamsatMetros: Record<string, GAMSATMetroConfig> = {
       { question: 'How does Cerebrum compare to UK GAMSAT prep providers?', answer: 'UK GAMSAT providers charge £600–£1,500 for all three sections. Cerebrum is a Section III biology specialist at £399–£1,249. Most candidates pair us with a generalist for Section I (Reasoning) and Section II (Written Communication).' },
     ],
   },
+
+  manchester: {
+    slug: 'manchester',
+    city: 'Manchester',
+    country: 'United Kingdom',
+    countryCode: 'GB',
+    region: 'North West England',
+    timezone: 'Greenwich Mean Time',
+    timezoneShort: 'GMT',
+    currency: { code: 'GBP', symbol: '£' },
+    pricing: { selfPaced: '£349', smallBatch: '£799', oneOnOne: '£1,099' },
+    locale: 'en_GB',
+    metaTitle: 'GAMSAT Biology Tutor Manchester | Manchester, Lancaster, Keele',
+    metaDescription:
+      'GAMSAT Section III biology tutor for Manchester graduate medicine applicants — University of Manchester, Lancaster, Keele. AIIMS-trained biology specialists. From £349.',
+    keywords: ['GAMSAT biology tutor Manchester', 'GAMSAT tutor Manchester medical school', 'GAMSAT tutor Lancaster', 'GAMSAT tutor Keele', 'graduate medicine tutor Manchester', 'GAMSAT Section III Manchester', 'GAMSAT North West England'],
+    heroSubtitle:
+      'GAMSAT Section III biology coaching for University of Manchester, Lancaster University, and Keele University graduate medicine applicants — North West England\'s graduate medicine cluster. AIIMS-trained biology specialists, GMT evening sessions, £349 to £1,099.',
+    whySection: {
+      heading: 'Why Manchester is the North West graduate medicine hub',
+      paragraphs: [
+        'Manchester anchors the largest graduate medicine cluster outside London and Scotland. The University of Manchester Medical School offers a graduate-entry stream accepting GAMSAT. Lancaster University Medical School and Keele University School of Medicine are within the wider North West catchment, both accepting GAMSAT for graduate entry.',
+        'Manchester has a significant and growing Indian-origin community in Didsbury, Rusholme (Curry Mile corridor), Prestwich, and the wider South Manchester suburbs. NHS junior doctors, pharmacists, and tech professionals in the Northern Quarter and MediaCity (Salford) drive GAMSAT demand as career-changers targeting graduate medicine.',
+      ],
+    },
+    medSchools: [
+      { name: 'University of Manchester Medical School', programmes: 'MBChB (graduate entry, GAMSAT + interview)' },
+      { name: 'Lancaster University Medical School', programmes: 'MBChB (graduate entry, GAMSAT-accepting)' },
+      { name: 'Keele University School of Medicine', programmes: 'MBChB (graduate entry, GAMSAT-accepting)' },
+      { name: 'University of Central Lancashire (UCLan)', programmes: 'MBBS (graduate entry pathway)' },
+    ],
+    timezoneSection: 'All live sessions timed for GMT (BST during summer). Standard Manchester small-batch slot is 7:30 PM to 9:30 PM GMT on weekday evenings. Weekend: 10:00 AM to 12:00 PM GMT.',
+    demographicSection: {
+      heading: 'Didsbury / Rusholme / MediaCity — the graduate medicine conversation',
+      paragraphs: [
+        'Manchester\'s Indian-origin community in Didsbury, Rusholme, and Prestwich, combined with career-changers from the tech/media sector in MediaCity and the Northern Quarter, drives steady GAMSAT demand.',
+        'What we hear from Manchester candidates: (1) University of Manchester is the primary target (GAMSAT 62+ overall); (2) Lancaster and Keele are strong alternatives with slightly lower cut-offs (58–62); (3) NHS professionals from Manchester Royal Infirmary and Christie Hospital form a significant career-changer cohort. We structure the consultation around target programme and March vs September sitting.',
+      ],
+    },
+    faqs: [
+      { question: 'Manchester Medical School — what GAMSAT Section III is competitive?', answer: 'University of Manchester typically requires GAMSAT 62+ overall with strong Section III. Lancaster and Keele accept 58–62+. Our coaching targets Section III 63+ to keep all three North West programmes competitive.' },
+      { question: 'I\'m an NHS professional in Manchester — can I prepare alongside shifts?', answer: 'Yes — many Manchester GAMSAT candidates are NHS staff. We schedule GMT evening sessions (7:30–9:30 PM) after standard shifts. Weekend sessions accommodate rotating patterns.' },
+      { question: 'Do you accept GBP payment?', answer: 'Yes — GBP via UK bank transfer or international Visa/Mastercard. INR also available for Indian-origin candidates.' },
+      { question: 'How does Cerebrum compare to Manchester GAMSAT providers?', answer: 'UK GAMSAT providers charge £600–£1,500 for all sections. Cerebrum is a Section III biology specialist at £349–£1,099. Most candidates pair us with a generalist for Section I and II.' },
+    ],
+  },
+
+  birmingham: {
+    slug: 'birmingham',
+    city: 'Birmingham',
+    country: 'United Kingdom',
+    countryCode: 'GB',
+    region: 'West Midlands',
+    timezone: 'Greenwich Mean Time',
+    timezoneShort: 'GMT',
+    currency: { code: 'GBP', symbol: '£' },
+    pricing: { selfPaced: '£349', smallBatch: '£799', oneOnOne: '£1,099' },
+    locale: 'en_GB',
+    metaTitle: 'GAMSAT Biology Tutor Birmingham | Birmingham, Warwick, Aston',
+    metaDescription:
+      'GAMSAT Section III biology tutor for Birmingham graduate medicine applicants — University of Birmingham, Warwick, Aston. AIIMS-trained biology specialists. From £349.',
+    keywords: ['GAMSAT biology tutor Birmingham', 'GAMSAT tutor Birmingham medical school', 'GAMSAT tutor Warwick', 'GAMSAT tutor Aston', 'graduate medicine tutor Birmingham', 'GAMSAT Section III Birmingham', 'GAMSAT West Midlands'],
+    heroSubtitle:
+      'GAMSAT Section III biology coaching for University of Birmingham, Warwick Medical School, and Aston Medical School graduate medicine applicants. AIIMS-trained biology specialists, GMT evening sessions, £349 to £1,099.',
+    whySection: {
+      heading: 'Why Birmingham is the Midlands graduate medicine centre',
+      paragraphs: [
+        'Birmingham is the UK\'s second city and anchors the Midlands medical education cluster. University of Birmingham Medical School offers a graduate-entry stream accepting GAMSAT. Warwick Medical School (Coventry, 25 miles east) is a 4-year graduate-entry-only programme — one of the UK\'s most competitive GAMSAT pathways. Aston Medical School in central Birmingham adds a newer graduate entry option.',
+        'Birmingham has one of the largest South Asian communities in the UK, concentrated in Handsworth, Sparkbrook, Sparkhill, Edgbaston, and Solihull. Many are healthcare professionals (pharmacists, nurses, optometrists) targeting graduate medicine as a career upgrade. Queen Elizabeth Hospital Birmingham and University Hospitals Birmingham NHS Foundation Trust are major employers.',
+      ],
+    },
+    medSchools: [
+      { name: 'University of Birmingham Medical School', programmes: 'MBChB (graduate entry, GAMSAT + interview)' },
+      { name: 'Warwick Medical School', programmes: 'MB ChB (4-year graduate entry ONLY, GAMSAT + interview)' },
+      { name: 'Aston Medical School', programmes: 'MBChB (graduate entry pathway)' },
+      { name: 'University of Leicester (Midlands catchment)', programmes: 'MBChB (graduate entry, GAMSAT-accepting)' },
+    ],
+    timezoneSection: 'All live sessions timed for GMT. Standard Birmingham small-batch slot is 7:30 PM to 9:30 PM GMT. Weekend: 10:00 AM to 12:00 PM GMT.',
+    demographicSection: {
+      heading: 'Handsworth / Edgbaston / Solihull — the graduate medicine conversation',
+      paragraphs: [
+        'Birmingham\'s South Asian community — one of the UK\'s largest — drives significant GAMSAT demand. Many candidates are pharmacists, optometrists, or NHS Allied Health professionals seeking graduate medicine as a career transition.',
+        'What we hear from Birmingham candidates: (1) Warwick is the dream target (4-year graduate-only, but GAMSAT 65+ required); (2) Birmingham Medical School is the primary realistic target (62+); (3) Leicester is a strong Midlands backup (60+). We structure the consultation around Warwick vs Birmingham vs Leicester and the March GAMSAT sitting.',
+      ],
+    },
+    faqs: [
+      { question: 'Warwick Medical School — what GAMSAT score is competitive?', answer: 'Warwick is among the most competitive GAMSAT programmes in the UK — median accepted GAMSAT is 65+. Our coaching targets Section III 66+ for Warwick candidates. Birmingham Medical School requires 62+; Leicester requires 60+.' },
+      { question: 'I\'m a pharmacist in Birmingham considering graduate medicine — is this feasible?', answer: 'Yes — pharmacists are one of the most common career-changer profiles in our Birmingham cohort. Your pharmacy degree provides strong biology foundations. Our coaching bridges the gap between pharmacy-level biology and GAMSAT Section III reasoning.' },
+      { question: 'Do you accept GBP payment?', answer: 'Yes — GBP via UK bank transfer or international Visa/Mastercard. INR also available for Indian-origin candidates.' },
+      { question: 'How does Cerebrum compare to Birmingham GAMSAT prep?', answer: 'UK GAMSAT providers charge £600–£1,500 for all sections. Cerebrum is a Section III biology specialist at £349–£1,099. Most candidates pair us with a generalist for Section I and II.' },
+    ],
+  },
 }
 
 export function getGAMSATMetro(slug: string): GAMSATMetroConfig | null {

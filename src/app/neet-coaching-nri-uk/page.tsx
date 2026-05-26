@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import PageContent from './PageContent'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
@@ -153,6 +154,36 @@ export default async function Page() {
       />
       <PageContent />
       <NEETNRIPricingTiers />
+
+      {/* Cross-programme links for UK families */}
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Other Biology Programmes for UK Students</h2>
+          <p className="text-slate-600 mb-6">Beyond NEET, Cerebrum serves UK students across GAMSAT, BBO, A-Level Biology, and IB Biology.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            <Link href="/gamsat-biology-tutor-london" className="block p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">GAMSAT London</span>
+              <span className="block text-xs text-slate-500">Graduate medicine</span>
+            </Link>
+            <Link href="/gamsat-biology-tutor-edinburgh" className="block p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">GAMSAT Edinburgh</span>
+              <span className="block text-xs text-slate-500">Scottish med pathway</span>
+            </Link>
+            <Link href="/bbo-biology-olympiad-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-amber-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">BBO Coaching</span>
+              <span className="block text-xs text-slate-500">British Biology Olympiad</span>
+            </Link>
+            <Link href="/a-level-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">A-Level Biology</span>
+              <span className="block text-xs text-slate-500">AQA / Edexcel / OCR</span>
+            </Link>
+            <Link href="/ib-biology/london" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">IB Biology London</span>
+              <span className="block text-xs text-slate-500">HL & SL tutoring</span>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
