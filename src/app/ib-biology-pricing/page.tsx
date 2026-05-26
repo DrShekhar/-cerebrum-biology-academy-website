@@ -5,7 +5,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/ib-biology-pricing'
 
 export const metadata: Metadata = {
   title: 'IB Biology Pricing | HL & SL Tutoring Packages | Cerebrum',
-  description: 'IB Biology tutoring pricing — $6,000/year Complete Programme, $75/hour 1:1 Elite, $40/hour Group Batch. 55 cities, local-currency options. 2025 syllabus, IA + EE coaching included.',
+  description: 'IB Biology tutoring pricing — $6,000/year Complete Programme, $8,000/year 1:1 Elite, $3,500/year Group Batch. 55 cities, local-currency options. 2025 syllabus, IA + EE coaching included.',
   keywords: [
     'IB biology pricing',
     'IB biology tutor cost',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'IB Biology Pricing | HL & SL Tutoring Packages | Cerebrum Biology Academy',
-    description: 'IB Biology tutoring pricing — $6,000/year Complete Programme, $75/hour 1:1 Elite, $40/hour Group Batch. 55 cities, local-currency options. 2025 syllabus, IA + EE coaching included.',
+    description: 'IB Biology tutoring pricing — $6,000/year Complete Programme, $8,000/year 1:1 Elite, $3,500/year Group Batch. 55 cities, local-currency options. 2025 syllabus, IA + EE coaching included.',
     url: PAGE_URL,
     type: 'website',
   },
@@ -37,7 +37,7 @@ export default function Page() {
             <span className="text-white">Pricing</span>
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">IB Biology Pricing | HL & SL Tutoring Packages</h1>
-          <p className="text-xl text-slate-300 mb-6 max-w-3xl">IB Biology tutoring pricing — $6,000/year Complete Programme, $75/hour 1:1 Elite, $40/hour Group Batch. 55 cities, local-currency options. 2025 syllabus, IA + EE coaching included.</p>
+          <p className="text-xl text-slate-300 mb-6 max-w-3xl">IB Biology tutoring pricing — $6,000/year Complete Programme, $8,000/year 1:1 Elite, $3,500/year Group Batch. 55 cities, local-currency options. 2025 syllabus, IA + EE coaching included.</p>
           <a href={wa} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold" target="_blank" rel="noopener noreferrer">
             WhatsApp +91 88264-44334
           </a>
@@ -58,18 +58,18 @@ export default function Page() {
               </thead>
               <tbody>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">Complete IB Biology Programme (2-year)</td>
+              <td className="py-3 px-4 font-medium text-slate-900">IB Biology — Ascent (2-year)</td>
               <td className="py-3 px-4 text-green-700 font-bold">$6,000/year</td>
               <td className="py-3 px-4 text-slate-600 text-sm">HL + SL, 150+ hours, small batch 4–8, IA guidance, past-paper bank</td>
             </tr>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">1:1 Elite Tutoring</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$75/hour</td>
+              <td className="py-3 px-4 font-medium text-slate-900">IB Biology — Pinnacle (1:1)</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$8,000/year</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Examiner-led, fully customised, IA moderation-level feedback</td>
             </tr>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">Group Batch (4–8 students)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$40/hour</td>
+              <td className="py-3 px-4 font-medium text-slate-900">IB Biology — Pursuit (group)</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$3,500/year</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Fixed weekly schedule, peer discussion, most affordable route</td>
             </tr>
               </tbody>
@@ -92,7 +92,7 @@ export default function Page() {
               <tbody>
                 <tr className="border-b border-slate-100 bg-green-50">
                   <td className="py-3 px-4 font-bold text-green-800">Cerebrum Biology Academy (biology section only)</td>
-                  <td className="py-3 px-4 font-bold text-green-700">$6,000/year – $75/hour</td>
+                  <td className="py-3 px-4 font-bold text-green-700">$6,000/year – $8,000/year</td>
                 </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 text-slate-700">Local IB tutors (Singapore/Dubai/London)</td>

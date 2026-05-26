@@ -34,7 +34,7 @@ const config: CompetitorComparisonConfig = {
   intro:
     'Khan Academy offers free AP Biology video lectures and practice questions — an excellent baseline resource used by millions. Cerebrum is a paid, live-coaching specialist with PhD-faculty 1:1 sessions, FRQ rubric mastery, and USABO bridge. The question is whether free content is sufficient for your score-5 target, or whether live coaching provides the marginal lift. For most students scoring 3–4, the answer is live coaching moves the needle; Khan Academy alone keeps them at 3–4.',
   table: [
-    { criterion: 'Cost', cerebrum: '$1,800–$5,760 (12–48 hr packages)', competitor: 'Free', cerebrumWins: false },
+    { criterion: 'Cost', cerebrum: '$2,500–$5,760 (12–48 hr packages)', competitor: 'Free', cerebrumWins: false },
     { criterion: 'Teaching Mode', cerebrum: 'Live 1:1 or small-batch with PhD faculty', competitor: 'Pre-recorded video + practice questions', cerebrumWins: true },
     { criterion: 'FRQ Rubric Coaching', cerebrum: 'Explicit rubric drilling (main score lever)', competitor: 'Minimal FRQ-specific content', cerebrumWins: true },
     { criterion: 'Content Depth', cerebrum: 'Campbell Biology end-to-end, college-level', competitor: 'AP-level review (condensed)', cerebrumWins: true },
@@ -62,7 +62,7 @@ const config: CompetitorComparisonConfig = {
   faqs: [
     { question: 'Is Khan Academy enough for AP Biology score 5?', answer: 'For students with strong self-discipline and natural biology aptitude (scoring 4+ on diagnostics), Khan Academy content plus official College Board practice can be sufficient. For students scoring 3–4 who need the jump to 5, live coaching on FRQ technique is usually the missing piece — and Khan Academy does not provide that.' },
     { question: 'Can I use Khan Academy alongside Cerebrum?', answer: 'Absolutely — this is the recommended approach. Khan Academy for free content review and practice questions; Cerebrum for live FRQ coaching, 1:1 feedback, and USABO bridge. No overlap since Khan is self-paced content and Cerebrum is live instruction.' },
-    { question: 'Why is Cerebrum worth paying for when Khan is free?', answer: 'Khan Academy covers content but cannot assess your FRQ writing, identify your specific weak patterns, or provide real-time faculty feedback. The 3-to-5 jump almost always requires FRQ technique — which is a coached skill, not a watched-video skill. Our $1,800 senior-faculty package for 12 hours of live coaching delivers more score lift per hour than 100 hours of video review.' },
+    { question: 'Why is Cerebrum worth paying for when Khan is free?', answer: 'Khan Academy covers content but cannot assess your FRQ writing, identify your specific weak patterns, or provide real-time faculty feedback. The 3-to-5 jump almost always requires FRQ technique — which is a coached skill, not a watched-video skill. Our $2,500 senior-faculty package for 12 hours of live coaching delivers more score lift per hour than 100 hours of video review.' },
     { question: 'Does Khan Academy offer USABO prep?', answer: 'No. Khan Academy covers the AP Biology curriculum only. Cerebrum bridges AP Biology to USABO for students targeting the Semifinal — extending content into evolutionary biology, population genetics, and experimental design at the olympiad level.' },
   ],
   whatsappMessage: 'Hi — I\'m comparing Cerebrum and Khan Academy for AP Biology. My child is currently scoring [X] on practice exams and targeting score 5. Please share programme details.',

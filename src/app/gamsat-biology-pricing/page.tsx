@@ -5,7 +5,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/gamsat-biology-pricing'
 
 export const metadata: Metadata = {
   title: 'GAMSAT Section III Pricing | Biology Coaching Packages | Cerebrum',
-  description: 'GAMSAT Section III biology pricing — £399/€449/A$599 Self-Paced to £1,249/€1,399/A$1,799 1:1. UK, Ireland, Australia. Biology-section specialist for graduate medicine.',
+  description: 'GAMSAT Section III biology pricing — £349/€399/A$539 Self-Paced to £1,099/€1,249/A$1,599 1:1. UK, Ireland, Australia. Biology-section specialist for graduate medicine.',
   keywords: [
     'GAMSAT biology pricing',
     'GAMSAT section 3 cost',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'GAMSAT Section III Pricing | Biology Coaching Packages | Cerebrum Biology Academy',
-    description: 'GAMSAT Section III biology pricing — £399/€449/A$599 Self-Paced to £1,249/€1,399/A$1,799 1:1. UK, Ireland, Australia. Biology-section specialist for graduate medicine.',
+    description: 'GAMSAT Section III biology pricing — £349/€399/A$539 Self-Paced to £1,099/€1,249/A$1,599 1:1. UK, Ireland, Australia. Biology-section specialist for graduate medicine.',
     url: PAGE_URL,
     type: 'website',
   },
@@ -37,7 +37,7 @@ export default function Page() {
             <span className="text-white">Pricing</span>
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">GAMSAT Section III Pricing | Biology Coaching Packages</h1>
-          <p className="text-xl text-slate-300 mb-6 max-w-3xl">GAMSAT Section III biology pricing — £399/€449/A$599 Self-Paced to £1,249/€1,399/A$1,799 1:1. UK, Ireland, Australia. Biology-section specialist for graduate medicine.</p>
+          <p className="text-xl text-slate-300 mb-6 max-w-3xl">GAMSAT Section III biology pricing — £349/€399/A$539 Self-Paced to £1,099/€1,249/A$1,599 1:1. UK, Ireland, Australia. Biology-section specialist for graduate medicine.</p>
           <a href={wa} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold" target="_blank" rel="noopener noreferrer">
             WhatsApp +91 88264-44334
           </a>
@@ -58,28 +58,28 @@ export default function Page() {
               </thead>
               <tbody>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">Section III Self-Paced (UK)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">£399</td>
+              <td className="py-3 px-4 font-medium text-slate-900">Section III — Pursuit (UK)</td>
+              <td className="py-3 px-4 text-green-700 font-bold">£349</td>
               <td className="py-3 px-4 text-slate-600 text-sm">4–6 months, biology content + ACER passages + recorded library</td>
             </tr>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">Section III Small-Batch (UK)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">£899</td>
+              <td className="py-3 px-4 font-medium text-slate-900">Section III — Ascent (UK)</td>
+              <td className="py-3 px-4 text-green-700 font-bold">£799</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Weekly 2-hour live sessions + monthly mocks</td>
             </tr>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">Section III 1:1 Senior Faculty (UK)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">£1,249</td>
+              <td className="py-3 px-4 font-medium text-slate-900">Section III — Pinnacle (UK)</td>
+              <td className="py-3 px-4 text-green-700 font-bold">£1,099</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Weekly 90-min 1:1 + personalised plan</td>
             </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 font-medium text-slate-900">Ireland (EUR)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">€449 / €999 / €1,399</td>
+              <td className="py-3 px-4 text-green-700 font-bold">€399 / €899 / €1,249</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Same tiers in EUR for RCSI/UCC/UL applicants</td>
             </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 font-medium text-slate-900">Australia (AUD)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">A$599 / A$1,299 / A$1,799</td>
+              <td className="py-3 px-4 text-green-700 font-bold">A$539 / A$1,149 / A$1,599</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Same tiers in AUD for Deakin/Melbourne/UQ/Griffith</td>
             </tr>
               </tbody>
@@ -102,7 +102,7 @@ export default function Page() {
               <tbody>
                 <tr className="border-b border-slate-100 bg-green-50">
                   <td className="py-3 px-4 font-bold text-green-800">Cerebrum Biology Academy (biology section only)</td>
-                  <td className="py-3 px-4 font-bold text-green-700">£399 – €449 / €999 / €1,399</td>
+                  <td className="py-3 px-4 font-bold text-green-700">£349 – €399 / €899 / €1,249</td>
                 </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 text-slate-700">Gold Standard GAMSAT (all sections, UK)</td>

@@ -14,16 +14,11 @@
  * scales upward in higher-purchasing-power markets so we match the
  * region's average AP/IB tutoring price level instead of underselling.
  *
- *   USA       — premium zone, $400/$450/$500 per month
- *   UK / EU   — high zone,     $350/$400/$450 per month
- *   UAE       — high zone,     $350/$400/$450 per month
- *   Canada    — high zone,     $350/$400/$450 per month
- *   Singapore — high zone,     $350/$400/$450 per month
- *   HK        — high zone,     $350/$400/$450 per month
- *   Australia — high zone,     $350/$400/$450 per month
- *   Other (Saudi, Qatar, Kuwait, Bahrain, Oman, Malaysia, Nepal,
- *          and any unmapped country)
- *             — floor,         $300/$350/$400 per month
+ *   USA       — premium zone, Pursuit $2,500 / Ascent $4,500 / Pinnacle $7,000
+ *   UK / EU / UAE / CA / SG / HK / AU
+ *             — high zone,    Pursuit $2,500 / Ascent $4,000 / Pinnacle $6,000
+ *   Other (Saudi, Qatar, Kuwait, Bahrain, Oman, Malaysia, Nepal)
+ *             — floor,        Pursuit $2,000 / Ascent $3,500 / Pinnacle $5,000
  *
  * Per-country display currency conversion uses `convertForDisplay()`
  * in src/data/shared/currencies.ts.
@@ -79,12 +74,12 @@ export interface NEETNRIPricingProduct {
 export const neetNRIPricingProducts: NEETNRIPricingProduct[] = [
   {
     id: 'foundation-class-11',
-    name: 'NEET Foundation (Class 11)',
-    subtitle: 'Year-long Class 11 NEET Biology track',
+    name: 'NEET NRI — Pursuit',
+    subtitle: 'Group-first · Monthly 1:1 · Class 11 Biology track',
     priceUSDByZone: {
-      us: 4800, // $400/mo
-      high: 4200, // $350/mo
-      floor: 3600, // $300/mo
+      us: 2500,
+      high: 2500,
+      floor: 2000,
     },
     unit: 'year',
     unitLabel: '/ year',
@@ -102,12 +97,12 @@ export const neetNRIPricingProducts: NEETNRIPricingProduct[] = [
   },
   {
     id: 'comprehensive-class-12',
-    name: 'NEET Comprehensive (Class 12)',
-    subtitle: 'Year-long Class 12 + final NEET prep',
+    name: 'NEET NRI — Ascent',
+    subtitle: 'Balanced · Bi-weekly 1:1 · Class 12 + final NEET prep',
     priceUSDByZone: {
-      us: 5400, // $450/mo
-      high: 4800, // $400/mo
-      floor: 4200, // $350/mo
+      us: 4500,
+      high: 4000,
+      floor: 3500,
     },
     unit: 'year',
     unitLabel: '/ year',
@@ -126,12 +121,12 @@ export const neetNRIPricingProducts: NEETNRIPricingProduct[] = [
   },
   {
     id: 'dropper-repeater',
-    name: 'NEET Dropper / Repeater',
-    subtitle: 'Intensive year for second attempts',
+    name: 'NEET NRI — Pinnacle',
+    subtitle: 'Premium · Weekly 1:1 · Dropper/Repeater intensive',
     priceUSDByZone: {
-      us: 6000, // $500/mo
-      high: 5400, // $450/mo
-      floor: 4800, // $400/mo
+      us: 7000,
+      high: 6000,
+      floor: 5000,
     },
     unit: 'year',
     unitLabel: '/ year',

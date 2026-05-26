@@ -5,7 +5,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/dat-biology-pricing'
 
 export const metadata: Metadata = {
   title: 'DAT Biology Pricing | Bio Section Packages | Cerebrum',
-  description: 'DAT Biology section tutoring pricing — $449 Self-Paced, $899 Small-Batch, $1,399 1:1 Senior Faculty. Compare vs DAT Bootcamp ($595) and Kaplan DAT ($1,599). Biology specialist.',
+  description: 'DAT Biology section tutoring pricing — $399 Self-Paced, $799 Small-Batch, $1,249 1:1 Senior Faculty. Compare vs DAT Bootcamp ($595) and Kaplan DAT ($1,599). Biology specialist.',
   keywords: [
     'DAT biology pricing',
     'DAT bio tutor cost',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'DAT Biology Pricing | Bio Section Packages | Cerebrum Biology Academy',
-    description: 'DAT Biology section tutoring pricing — $449 Self-Paced, $899 Small-Batch, $1,399 1:1 Senior Faculty. Compare vs DAT Bootcamp ($595) and Kaplan DAT ($1,599). Biology specialist.',
+    description: 'DAT Biology section tutoring pricing — $399 Self-Paced, $799 Small-Batch, $1,249 1:1 Senior Faculty. Compare vs DAT Bootcamp ($595) and Kaplan DAT ($1,599). Biology specialist.',
     url: PAGE_URL,
     type: 'website',
   },
@@ -37,7 +37,7 @@ export default function Page() {
             <span className="text-white">Pricing</span>
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">DAT Biology Pricing | Bio Section Packages</h1>
-          <p className="text-xl text-slate-300 mb-6 max-w-3xl">DAT Biology section tutoring pricing — $449 Self-Paced, $899 Small-Batch, $1,399 1:1 Senior Faculty. Compare vs DAT Bootcamp ($595) and Kaplan DAT ($1,599). Biology specialist.</p>
+          <p className="text-xl text-slate-300 mb-6 max-w-3xl">DAT Biology section tutoring pricing — $399 Self-Paced, $799 Small-Batch, $1,249 1:1 Senior Faculty. Compare vs DAT Bootcamp ($595) and Kaplan DAT ($1,599). Biology specialist.</p>
           <a href={wa} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold" target="_blank" rel="noopener noreferrer">
             WhatsApp +91 88264-44334
           </a>
@@ -58,23 +58,23 @@ export default function Page() {
               </thead>
               <tbody>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">DAT Biology Self-Paced</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$449</td>
+              <td className="py-3 px-4 font-medium text-slate-900">DAT Biology — Pursuit</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$399</td>
               <td className="py-3 px-4 text-slate-600 text-sm">3–5 months async, Campbell + ADA outline, 200+ questions, WhatsApp support</td>
             </tr>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">DAT Biology Small-Batch (4–6 students)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$899</td>
+              <td className="py-3 px-4 font-medium text-slate-900">DAT Biology — Ascent</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$799</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Weekly 90-min live sessions + monthly section mocks</td>
             </tr>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">DAT Biology 1:1 Senior Faculty</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$1,399</td>
+              <td className="py-3 px-4 font-medium text-slate-900">DAT Biology — Pinnacle</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$1,249</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Weekly 60-min 1:1 + personalised plan + faculty access</td>
             </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 font-medium text-slate-900">Ad-hoc 1:1 Tutoring</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$120/hour</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$109/hour</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Gap-fill, anatomy/physiology deep-dives, pre-test intensive</td>
             </tr>
               </tbody>
@@ -97,7 +97,7 @@ export default function Page() {
               <tbody>
                 <tr className="border-b border-slate-100 bg-green-50">
                   <td className="py-3 px-4 font-bold text-green-800">Cerebrum Biology Academy (biology section only)</td>
-                  <td className="py-3 px-4 font-bold text-green-700">$449 – $1,399</td>
+                  <td className="py-3 px-4 font-bold text-green-700">$399 – $1,249</td>
                 </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 text-slate-700">DAT Bootcamp (all sections)</td>

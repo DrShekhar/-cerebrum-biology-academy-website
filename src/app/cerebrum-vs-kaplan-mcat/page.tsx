@@ -36,8 +36,8 @@ const config: CompetitorComparisonConfig = {
   table: [
     { criterion: 'Scope', cerebrum: 'Bio/Biochem section only (specialist)', competitor: 'All 4 MCAT sections (generalist)', cerebrumWins: false },
     { criterion: 'Bio/Biochem Faculty', cerebrum: 'AIIMS-trained MD, biology-only specialist', competitor: 'Rotating subject faculty across all sections', cerebrumWins: true },
-    { criterion: 'Full-Course Price', cerebrum: '$499–$1,499 (Bio/Biochem only)', competitor: '~$2,700 (all 4 sections)', cerebrumWins: true },
-    { criterion: 'Per-Hour 1:1 Rate', cerebrum: '$150/hour', competitor: '$175–$200/hour', cerebrumWins: true },
+    { criterion: 'Full-Course Price', cerebrum: '$449–$1,349 (Bio/Biochem only)', competitor: '~$2,700 (all 4 sections)', cerebrumWins: true },
+    { criterion: 'Per-Hour 1:1 Rate', cerebrum: '$135/hour', competitor: '$175–$200/hour', cerebrumWins: true },
     { criterion: 'Batch Size', cerebrum: '4–6 students max', competitor: '20–40 students', cerebrumWins: true },
     { criterion: 'Campbell Biology Depth', cerebrum: 'End-to-end Campbell + Lehninger coverage', competitor: 'Review-level only (condensed)', cerebrumWins: true },
     { criterion: 'AAMC Passage Walkthroughs', cerebrum: 'Bio/Biochem passages only, deep analysis', competitor: 'All sections, survey-level', cerebrumWins: true },
@@ -46,7 +46,7 @@ const config: CompetitorComparisonConfig = {
   whyChooseCerebrum: [
     { title: 'Biology Section Depth', description: 'AIIMS-trained faculty who teach only biology — not rotating across C/P and CARS. Campbell Biology end-to-end coverage exceeds Kaplan\'s review-level biology content.' },
     { title: 'Smaller Batches', description: '4–6 students vs Kaplan\'s 20–40. More individual attention on Bio/Biochem passage technique.' },
-    { title: 'Lower Cost for Bio/Biochem', description: '$499–$1,499 for biology-section mastery vs $2,700 for Kaplan\'s full course. If Bio/Biochem is your weakest section, the ROI is clear.' },
+    { title: 'Lower Cost for Bio/Biochem', description: '$449–$1,349 for biology-section mastery vs $2,700 for Kaplan\'s full course. If Bio/Biochem is your weakest section, the ROI is clear.' },
     { title: 'Pair-Friendly', description: 'Many students use Kaplan for C/P and CARS, then Cerebrum for Bio/Biochem depth. No overlap, no redundancy.' },
   ],
   whenCompetitorMightBeBetter: [
@@ -60,7 +60,7 @@ const config: CompetitorComparisonConfig = {
   ],
   faqs: [
     { question: 'Can I use Kaplan for C/P and CARS, then Cerebrum for Bio/Biochem?', answer: 'Yes — this is the most common pairing pattern. Kaplan covers Chemical/Physical Foundations and CARS; Cerebrum covers Biological/Biochemical Foundations in depth. No overlap.' },
-    { question: 'Is Cerebrum cheaper than Kaplan overall?', answer: 'For Bio/Biochem only, yes: $499–$1,499 vs Kaplan\'s ~$2,700 (which covers all sections). If you only need biology-section help, Cerebrum is 45–80% cheaper. If you need all four sections, Kaplan\'s bundled price may be better value.' },
+    { question: 'Is Cerebrum cheaper than Kaplan overall?', answer: 'For Bio/Biochem only, yes: $449–$1,349 vs Kaplan\'s ~$2,700 (which covers all sections). If you only need biology-section help, Cerebrum is 45–80% cheaper. If you need all four sections, Kaplan\'s bundled price may be better value.' },
     { question: 'Does Cerebrum\'s faculty depth matter for Bio/Biochem?', answer: 'The Bio/Biochem section is 59 questions testing passage-based biological reasoning. AIIMS-trained faculty with clinical + research backgrounds read these passages differently than generalist instructors. The depth shows in passage-interpretation strategy, not just content recall.' },
     { question: 'What if Bio/Biochem is already my strongest section?', answer: 'If your diagnostic shows Bio/Biochem at 129+ and C/P or CARS below 127, a generalist like Kaplan is the better investment. Cerebrum is highest-ROI when Bio/Biochem is the weak or middle section.' },
   ],

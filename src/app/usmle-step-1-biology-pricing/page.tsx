@@ -5,7 +5,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/usmle-step-1-biology-pricin
 
 export const metadata: Metadata = {
   title: 'USMLE Step 1 Biology Pricing | Foundations Packages | Cerebrum',
-  description: 'USMLE Step 1 biology-foundations pricing — $799/₹39,999 Self-Paced to $2,499/₹1,24,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
+  description: 'USMLE Step 1 biology-foundations pricing — $699/₹34,999 Self-Paced to $2,249/₹1,09,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
   keywords: [
     'USMLE step 1 biology pricing',
     'USMLE step 1 tutor cost',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'USMLE Step 1 Biology Pricing | Foundations Packages | Cerebrum Biology Academy',
-    description: 'USMLE Step 1 biology-foundations pricing — $799/₹39,999 Self-Paced to $2,499/₹1,24,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
+    description: 'USMLE Step 1 biology-foundations pricing — $699/₹34,999 Self-Paced to $2,249/₹1,09,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
     url: PAGE_URL,
     type: 'website',
   },
@@ -37,7 +37,7 @@ export default function Page() {
             <span className="text-white">Pricing</span>
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">USMLE Step 1 Biology Pricing | Foundations Packages</h1>
-          <p className="text-xl text-slate-300 mb-6 max-w-3xl">USMLE Step 1 biology-foundations pricing — $799/₹39,999 Self-Paced to $2,499/₹1,24,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.</p>
+          <p className="text-xl text-slate-300 mb-6 max-w-3xl">USMLE Step 1 biology-foundations pricing — $699/₹34,999 Self-Paced to $2,249/₹1,09,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.</p>
           <a href={wa} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold" target="_blank" rel="noopener noreferrer">
             WhatsApp +91 88264-44334
           </a>
@@ -58,28 +58,28 @@ export default function Page() {
               </thead>
               <tbody>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">Step 1 Biology Self-Paced (US)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$799</td>
+              <td className="py-3 px-4 font-medium text-slate-900">Step 1 Biology — Pursuit (US)</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$699</td>
               <td className="py-3 px-4 text-slate-600 text-sm">First Aid-mapped foundations, recorded library, WhatsApp support</td>
             </tr>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">Step 1 Biology Small-Batch (US)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$1,599</td>
+              <td className="py-3 px-4 font-medium text-slate-900">Step 1 Biology — Ascent (US)</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$1,449</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Weekly 2-hour live sessions + monthly biology mocks</td>
             </tr>
             <tr className="border-b border-slate-100">
-              <td className="py-3 px-4 font-medium text-slate-900">Step 1 Biology 1:1 Senior (US)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$2,499</td>
+              <td className="py-3 px-4 font-medium text-slate-900">Step 1 Biology — Pinnacle (US)</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$2,249</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Weekly 90-min 1:1 + personalised plan + unlimited access</td>
             </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 font-medium text-slate-900">Ad-hoc 1:1 (US)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">$175/hour</td>
+              <td className="py-3 px-4 text-green-700 font-bold">$159/hour</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Targeted gap-fill on weak biology topics</td>
             </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 font-medium text-slate-900">India IMG pricing (INR)</td>
-              <td className="py-3 px-4 text-green-700 font-bold">₹39,999 / ₹79,999 / ₹1,24,999</td>
+              <td className="py-3 px-4 text-green-700 font-bold">₹34,999 / ₹69,999 / ₹1,09,999</td>
               <td className="py-3 px-4 text-slate-600 text-sm">Same tiers for AIIMS/MAMC/Grant/KEM graduates preparing for ECFMG</td>
             </tr>
               </tbody>
@@ -102,7 +102,7 @@ export default function Page() {
               <tbody>
                 <tr className="border-b border-slate-100 bg-green-50">
                   <td className="py-3 px-4 font-bold text-green-800">Cerebrum Biology Academy (biology section only)</td>
-                  <td className="py-3 px-4 font-bold text-green-700">$799 – $175/hour</td>
+                  <td className="py-3 px-4 font-bold text-green-700">$699 – $159/hour</td>
                 </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 text-slate-700">Kaplan Step 1 (all disciplines)</td>
@@ -110,7 +110,7 @@ export default function Page() {
             </tr>
             <tr className="border-b border-slate-100">
               <td className="py-3 px-4 text-slate-700">UWorld QBank (no teaching)</td>
-              <td className="py-3 px-4 text-slate-500">$499–$799</td>
+              <td className="py-3 px-4 text-slate-500">$499–$699</td>
             </tr>
               </tbody>
             </table>
