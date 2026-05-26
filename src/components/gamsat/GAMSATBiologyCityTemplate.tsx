@@ -25,9 +25,9 @@ function buildSchemas(metro: GAMSATMetroConfig) {
       courseWorkload: 'PT2H',
       location: { '@type': 'VirtualLocation', url: pageUrl },
       offers: [
-        { '@type': 'Offer', name: 'GAMSAT Section III Self-Paced', price: metro.pricing.selfPaced.replace(/[^0-9]/g, ''), priceCurrency, availability: 'https://schema.org/InStock', url: pageUrl },
-        { '@type': 'Offer', name: 'GAMSAT Section III Small-Batch', price: metro.pricing.smallBatch.replace(/[^0-9]/g, ''), priceCurrency, availability: 'https://schema.org/InStock', url: pageUrl },
-        { '@type': 'Offer', name: 'GAMSAT Section III 1:1 Senior Faculty', price: metro.pricing.oneOnOne.replace(/[^0-9]/g, ''), priceCurrency, availability: 'https://schema.org/InStock', url: pageUrl },
+        { '@type': 'Offer', name: 'GAMSAT Section III — Pursuit', price: metro.pricing.selfPaced.replace(/[^0-9]/g, ''), priceCurrency, availability: 'https://schema.org/InStock', url: pageUrl },
+        { '@type': 'Offer', name: 'GAMSAT Section III — Ascent', price: metro.pricing.smallBatch.replace(/[^0-9]/g, ''), priceCurrency, availability: 'https://schema.org/InStock', url: pageUrl },
+        { '@type': 'Offer', name: 'GAMSAT Section III — Pinnacle', price: metro.pricing.oneOnOne.replace(/[^0-9]/g, ''), priceCurrency, availability: 'https://schema.org/InStock', url: pageUrl },
       ],
     },
   }
@@ -113,9 +113,9 @@ export default function GAMSATBiologyCityTemplate({ metro }: { metro: GAMSATMetr
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">GAMSAT Section III pricing ({metro.currency.code})</h2>
           <ul>
-            <li><strong>GAMSAT Section III Self-Paced — {metro.pricing.selfPaced}</strong> for the full 4–6 month programme. Biology content coverage, ACER practice passages, recorded library, WhatsApp doubt support.</li>
-            <li><strong>GAMSAT Section III Small-Batch — {metro.pricing.smallBatch}</strong> for the full programme. Adds weekly 2-hour live sessions, monthly section mocks, peer channel, senior faculty office hours.</li>
-            <li><strong>GAMSAT Section III 1:1 Senior Faculty — {metro.pricing.oneOnOne}</strong> for the full programme. Adds weekly 90-minute 1:1 video sessions, personalised study plan, custom passage drills, unlimited WhatsApp faculty access.</li>
+            <li><strong>GAMSAT Section III — Pursuit — {metro.pricing.selfPaced}</strong> for the full 4–6 month programme. Biology content coverage, ACER practice passages, recorded library, WhatsApp doubt support.</li>
+            <li><strong>GAMSAT Section III — Ascent — {metro.pricing.smallBatch}</strong> for the full programme. Adds weekly 2-hour live sessions, monthly section mocks, peer channel, senior faculty office hours.</li>
+            <li><strong>GAMSAT Section III — Pinnacle — {metro.pricing.oneOnOne}</strong> for the full programme. Adds weekly 90-minute 1:1 video sessions, personalised study plan, custom passage drills, unlimited WhatsApp faculty access.</li>
           </ul>
         </div>
       </section>

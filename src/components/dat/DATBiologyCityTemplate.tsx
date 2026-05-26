@@ -112,9 +112,9 @@ export default function DATBiologyCityTemplate({ metro }: { metro: DATMetroConfi
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">DAT Biology pricing (USD)</h2>
           <ul>
-            <li><strong>DAT Biology Self-Paced — $449</strong> for the full 3–5 month programme. Campbell Biology coverage aligned to ADA DAT content outline, 200+ practice questions, recorded library, WhatsApp doubt support.</li>
-            <li><strong>DAT Biology Small-Batch — $899</strong> for the full programme. Adds weekly 90-minute live sessions, monthly section mocks, peer Slack channel, senior faculty office hours.</li>
-            <li><strong>DAT Biology 1:1 Senior Faculty — $1,399</strong> for the full programme. Adds weekly 60-minute 1:1 video sessions with AIIMS-trained senior faculty, personalised study plan, custom question drills.</li>
+            <li><strong>DAT Biology — Pursuit: $449</strong> for the full 3–5 month programme. Campbell Biology coverage aligned to ADA DAT content outline, 200+ practice questions, recorded library, WhatsApp doubt support.</li>
+            <li><strong>DAT Biology — Ascent: $899</strong> for the full programme. Adds weekly 90-minute live sessions, monthly section mocks, peer Slack channel, senior faculty office hours.</li>
+            <li><strong>DAT Biology — Pinnacle: $1,399</strong> for the full programme. Adds weekly 60-minute 1:1 video sessions with AIIMS-trained senior faculty, personalised study plan, custom question drills.</li>
             <li><strong>Ad-hoc 1:1 tutoring — $120/hour</strong> outside the packaged programme.</li>
           </ul>
         </div>

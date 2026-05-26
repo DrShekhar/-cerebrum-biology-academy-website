@@ -121,16 +121,16 @@ export default function USMLEStep1CityTemplate({ metro }: { metro: USMLEMetroCon
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">USMLE Step 1 Biology pricing ({metro.currency.code})</h2>
           {isIndia ? (
             <ul>
-              <li><strong>USMLE Step 1 Biology Self-Paced — ₹39,999</strong> for the full programme. First Aid-mapped biology foundations, recorded library, WhatsApp doubt support.</li>
-              <li><strong>USMLE Step 1 Biology Small-Batch — ₹79,999</strong>. Adds weekly 2-hour live sessions, monthly biology mocks, peer channel.</li>
-              <li><strong>USMLE Step 1 Biology 1:1 Senior Faculty — ₹1,24,999</strong>. Adds weekly 90-minute 1:1, personalised study plan, unlimited faculty access.</li>
+              <li><strong>USMLE Step 1 Biology — Pursuit: ₹39,999</strong> for the full programme. First Aid-mapped biology foundations, recorded library, WhatsApp doubt support.</li>
+              <li><strong>USMLE Step 1 Biology — Ascent: ₹79,999</strong>. Adds weekly 2-hour live sessions, monthly biology mocks, peer channel.</li>
+              <li><strong>USMLE Step 1 Biology — Pinnacle: ₹1,24,999</strong>. Adds weekly 90-minute 1:1, personalised study plan, unlimited faculty access.</li>
               <li><strong>Ad-hoc 1:1 — ₹8,750/hour</strong> outside the packaged programme.</li>
             </ul>
           ) : (
             <ul>
-              <li><strong>USMLE Step 1 Biology Self-Paced — $799</strong> for the full programme. First Aid-mapped biology foundations, recorded library, WhatsApp doubt support.</li>
-              <li><strong>USMLE Step 1 Biology Small-Batch — $1,599</strong>. Adds weekly 2-hour live sessions, monthly biology mocks, peer channel.</li>
-              <li><strong>USMLE Step 1 Biology 1:1 Senior Faculty — $2,499</strong>. Adds weekly 90-minute 1:1, personalised study plan, unlimited faculty access.</li>
+              <li><strong>USMLE Step 1 Biology — Pursuit: $799</strong> for the full programme. First Aid-mapped biology foundations, recorded library, WhatsApp doubt support.</li>
+              <li><strong>USMLE Step 1 Biology — Ascent: $1,599</strong>. Adds weekly 2-hour live sessions, monthly biology mocks, peer channel.</li>
+              <li><strong>USMLE Step 1 Biology — Pinnacle: $2,499</strong>. Adds weekly 90-minute 1:1, personalised study plan, unlimited faculty access.</li>
               <li><strong>Ad-hoc 1:1 — $175/hour</strong> outside the packaged programme.</li>
             </ul>
           )}
