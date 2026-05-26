@@ -612,6 +612,134 @@ export const mcatMetros: Record<string, MCATMetroConfig> = {
       },
     ],
   },
+  // ─── CANADA ─────────────────────────────────────────────────────────────────
+  toronto: {
+    slug: 'toronto',
+    city: 'Toronto',
+    stateOrRegion: 'Greater Toronto Area',
+    stateCode: 'ON',
+    timezone: 'Eastern Time',
+    timezoneShort: 'ET',
+    metaTitle: 'MCAT Biology Tutor Toronto | U of T, McMaster, Western, Queen\'s',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for Toronto pre-meds — University of Toronto, McMaster, Western, Queen\'s. Biology specialists, ET evening slots. From $449 USD.',
+    keywords: ['MCAT Biology tutor Toronto', 'MCAT Bio tutor University of Toronto', 'MCAT Biology tutor McMaster', 'MCAT tutor GTA', 'MCAT tutor Brampton', 'MCAT tutor Mississauga', 'MCAT Bio/Biochem tutor Ontario', 'Indian Canadian MCAT tutor Toronto', 'online MCAT Biology coaching Toronto'],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for University of Toronto, McMaster, Western, and Queen\'s pre-meds — built around the Brampton / Mississauga / Scarborough South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $449 to $1,349 USD.',
+    whySection: {
+      heading: 'Why Toronto is Canada\'s largest pre-med market',
+      paragraphs: [
+        'The Greater Toronto Area anchors the largest concentration of medical school applicants in Canada. University of Toronto Faculty of Medicine, McMaster\'s Michael G. DeGroote School of Medicine (Hamilton, 60 km west), and Western University (London, ON) collectively accept the majority of Ontario medical students. The MCAT is required by all Ontario medical schools except McMaster (which uses CASPer + CARS only).',
+        'The GTA South Asian community — concentrated in Brampton, Mississauga, Scarborough, and Markham — is one of the largest in North America. Pre-med culture is strong in these communities, with MCAT preparation planning starting during sophomore year at U of T, McMaster, York, or Ryerson (now Toronto Metropolitan).',
+      ],
+    },
+    universities: [
+      { name: 'University of Toronto', programmes: 'Life Sciences, Biochemistry, Human Biology, Molecular Genetics' },
+      { name: 'McMaster University (Hamilton)', programmes: 'Life Sciences, Biochemistry, Health Sciences (BHSc)' },
+      { name: 'Western University (London, ON)', programmes: 'Medical Sciences, Biochemistry, Biology' },
+      { name: 'Queen\'s University (Kingston)', programmes: 'Life Sciences, Biochemistry' },
+      { name: 'York University', programmes: 'Biology, Kinesiology, Biomedical Science' },
+      { name: 'Toronto Metropolitan University', programmes: 'Biology, Biomedical Sciences' },
+    ],
+    timezoneSection: 'All live sessions are in Eastern Time. Standard Toronto small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings. Weekend: 9:00 AM to 11:00 AM ET. This aligns with US ET scheduling — many Toronto students join sessions alongside NYC, Boston, and DC cohorts.',
+    demographicSection: {
+      heading: 'Brampton / Mississauga / Scarborough — the family planning conversation',
+      paragraphs: [
+        'The Brampton / Mississauga South Asian corridor has one of the highest Indian-Canadian household densities in North America. Combined with the Scarborough and Markham communities, this creates a concentrated pre-med pipeline.',
+        'What we hear from GTA parents: (1) U of T and McMaster are the primary targets; (2) Ontario medical schools have unique requirements (MCAT for U of T/Western/Queen\'s, CARS-only for McMaster); (3) many families also keep US medical school options open, requiring full MCAT Bio/Biochem prep. We structure the consultation around whether the student targets Canada-only or dual US/Canada applications.',
+      ],
+    },
+    faqs: [
+      { question: 'U of T or McMaster pre-med — how does MCAT prep differ?', answer: 'McMaster\'s BHSc and Health Sciences programmes are intensely competitive. McMaster medical school uses CASPer + CARS only (no Bio/Biochem required). U of T, Western, and Queen\'s require full MCAT including Bio/Biochem. If your student targets McMaster only, focus on CARS; if targeting U of T/Western/Queen\'s or US schools, full Bio/Biochem prep is essential.' },
+      { question: 'My family is in Brampton / Mississauga — planning conversation?', answer: 'The consultation covers: (a) target medical schools (Ontario only vs US dual-track), (b) MCAT section requirements (Bio/Biochem needed for all except McMaster), (c) timeline (summer after 3rd year typical). For Brampton/Mississauga families keeping US options open, full Bio/Biochem prep is recommended.' },
+      { question: 'Can Toronto students join US small-batch sessions?', answer: 'Yes — same Eastern Time zone. Toronto students join alongside NYC, Boston, and DC cohorts. This provides richer peer interaction and exposure to both Canadian and US medical school application contexts.' },
+      { question: 'Do you accept CAD payment?', answer: 'Yes — CAD via Canadian bank transfer (TD, RBC, Scotiabank, BMO, CIBC) or international Visa/Mastercard. USD also accepted. Prices listed in USD; CAD equivalent at current exchange rate.' },
+      { question: 'How does Cerebrum compare to Canadian MCAT prep?', answer: 'Canadian MCAT providers (Prep101, Princeton Review Canada) charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD) for Bio/Biochem only. Many Toronto students pair us with a generalist for C/P and CARS.' },
+    ],
+  },
+
+  vancouver: {
+    slug: 'vancouver',
+    city: 'Vancouver',
+    stateOrRegion: 'Greater Vancouver',
+    stateCode: 'BC',
+    timezone: 'Pacific Time',
+    timezoneShort: 'PT',
+    metaTitle: 'MCAT Biology Tutor Vancouver | UBC, SFU, UVic',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for Vancouver pre-meds — UBC, SFU, University of Victoria. Biology specialists, PT evening slots. From $449 USD.',
+    keywords: ['MCAT Biology tutor Vancouver', 'MCAT Bio tutor UBC', 'MCAT Biology tutor SFU', 'MCAT tutor Surrey BC', 'MCAT tutor Burnaby', 'MCAT Bio/Biochem tutor BC', 'Indian Canadian MCAT tutor Vancouver', 'online MCAT Biology coaching Vancouver'],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for UBC, SFU, and UVic pre-meds — built around the Surrey / Burnaby / Richmond South Asian corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Pacific Time evening sessions, $449 to $1,349 USD.',
+    whySection: {
+      heading: 'Why Vancouver is Western Canada\'s pre-med anchor',
+      paragraphs: [
+        'Vancouver is built around UBC Faculty of Medicine — the largest medical school in Western Canada and one of the most competitive in the country. SFU (Simon Fraser University) and UVic (University of Victoria) provide additional pre-med undergraduate pipelines. UBC requires full MCAT including Bio/Biochem.',
+        'The Surrey / Burnaby / Richmond South Asian corridor has a rapidly growing Indian-Canadian community driven by tech, healthcare, and professional services. Pre-med culture is strong, with many families maintaining dual Canada/US medical school application strategies.',
+      ],
+    },
+    universities: [
+      { name: 'University of British Columbia (UBC)', programmes: 'Biology, Biochemistry, Microbiology, Integrated Sciences' },
+      { name: 'Simon Fraser University (SFU)', programmes: 'Molecular Biology & Biochemistry, Biomedical Physiology & Kinesiology' },
+      { name: 'University of Victoria (UVic)', programmes: 'Biology, Biochemistry, Microbiology' },
+    ],
+    timezoneSection: 'All live sessions are in Pacific Time. Standard Vancouver small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings. Weekend: 9:00 AM to 11:00 AM PT. Vancouver students share the PT timezone with Seattle and Bay Area cohorts.',
+    demographicSection: {
+      heading: 'Surrey / Burnaby / Richmond — the family planning conversation',
+      paragraphs: [
+        'Surrey and Burnaby have the highest South Asian household densities in British Columbia. Many families target UBC Medicine as the primary goal, with US medical schools (University of Washington WWAMI, UCSF) as secondary options.',
+        'What we hear from Vancouver parents: (1) UBC Medicine is extremely competitive (median MCAT ~517); (2) the BC residency advantage is significant for in-province applicants; (3) many students do research at BC Cancer Agency or VGH. We structure the consultation around the UBC timeline and whether US dual-tracking is planned.',
+      ],
+    },
+    faqs: [
+      { question: 'UBC pre-med — what MCAT Bio/Biochem score is competitive?', answer: 'UBC Medicine is highly competitive: median accepted MCAT is ~517 overall. Our coaching targets the Bio/Biochem section for 130+ to contribute to the 517+ composite. Many UBC applicants pair Cerebrum (Bio/Biochem) with a generalist for C/P and CARS.' },
+      { question: 'My family is in Surrey / Burnaby — planning conversation?', answer: 'The consultation covers: (a) UBC Medicine as primary target, (b) US dual-track (UW WWAMI or California schools), (c) research timeline at BC Cancer or VGH. For Surrey families, PT evening sessions fit the after-work schedule.' },
+      { question: 'Can Vancouver students join Seattle or Bay Area sessions?', answer: 'Yes — same Pacific Time zone. Vancouver students join alongside Seattle and Bay Area cohorts, providing cross-border peer interaction.' },
+      { question: 'How does Cerebrum compare to Vancouver MCAT prep?', answer: 'BC MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD). Many Vancouver students pair us with a generalist for C/P and CARS.' },
+    ],
+  },
+
+  montreal: {
+    slug: 'montreal',
+    city: 'Montreal',
+    stateOrRegion: 'Greater Montreal',
+    stateCode: 'QC',
+    timezone: 'Eastern Time',
+    timezoneShort: 'ET',
+    metaTitle: 'MCAT Biology Tutor Montreal | McGill, Université de Montréal',
+    metaDescription:
+      'MCAT Bio/Biochem tutor for Montreal pre-meds — McGill, Université de Montréal, Université de Sherbrooke. Biology specialists, ET evening slots. From $449 USD.',
+    keywords: ['MCAT Biology tutor Montreal', 'MCAT Bio tutor McGill', 'MCAT Biology tutor Université de Montréal', 'MCAT tutor Laval QC', 'MCAT Bio/Biochem tutor Quebec', 'Indian Canadian MCAT tutor Montreal', 'online MCAT Biology coaching Montreal'],
+    heroSubtitle:
+      'MCAT Bio/Biochem coaching for McGill, Université de Montréal, and Université de Sherbrooke pre-meds. AIIMS-trained biology specialists, Campbell Biology + Lehninger curriculum, Eastern Time evening sessions, $449 to $1,349 USD.',
+    whySection: {
+      heading: 'Why Montreal is Quebec\'s bilingual pre-med hub',
+      paragraphs: [
+        'Montreal is unique in the Canadian medical landscape: it has both English-language (McGill Faculty of Medicine) and French-language (Université de Montréal, Université de Sherbrooke) medical schools. McGill requires full MCAT including Bio/Biochem. Quebec French-language medical schools historically did not require MCAT, but many Quebec students applying out-of-province or to US schools need full MCAT prep.',
+        'The Montreal South Asian community — concentrated in Brossard, Dollard-des-Ormeaux, and Côte-des-Neiges — drives growing MCAT demand. Many are McGill students or Concordia/UQAM students targeting out-of-province medical schools.',
+      ],
+    },
+    universities: [
+      { name: 'McGill University', programmes: 'Biology, Biochemistry, Anatomy & Cell Biology, Physiology' },
+      { name: 'Université de Montréal', programmes: 'Sciences biologiques, Biochimie et médecine moléculaire' },
+      { name: 'Concordia University', programmes: 'Biology, Biochemistry, Exercise Science' },
+      { name: 'Université de Sherbrooke', programmes: 'Biochimie de la santé, Biologie' },
+    ],
+    timezoneSection: 'All live sessions are in Eastern Time. Standard Montreal small-batch slot is 7:30 PM to 9:30 PM ET. Montreal students join alongside Toronto, NYC, and Boston ET cohorts.',
+    demographicSection: {
+      heading: 'Brossard / DDO / Côte-des-Neiges — the family planning conversation',
+      paragraphs: [
+        'Montreal\'s South Asian community in Brossard, Dollard-des-Ormeaux, and Côte-des-Neiges drives MCAT demand. Many are McGill students or immigrants whose children target English-language medical schools.',
+        'What we hear from Montreal parents: (1) McGill Medicine is the primary target (MCAT required); (2) some families target Ontario schools (U of T, McMaster, Western) for out-of-province spots; (3) Quebec French-med schools don\'t require MCAT, but out-of-province applications do. We structure the consultation around McGill vs out-of-province strategy.',
+      ],
+    },
+    faqs: [
+      { question: 'McGill pre-med — what MCAT Bio/Biochem score is competitive?', answer: 'McGill Medicine is highly competitive: median accepted MCAT is ~516+. Our coaching targets Bio/Biochem for 129+ to contribute to the 516+ composite. Many McGill students pair Cerebrum (Bio/Biochem) with a generalist for C/P and CARS.' },
+      { question: 'Do Quebec French-med schools require MCAT?', answer: 'Université de Montréal and Université de Sherbrooke do NOT require MCAT for Quebec CEGEP applicants. However, students applying to Ontario or US medical schools need full MCAT. If your student targets McGill or out-of-province schools, Bio/Biochem prep is essential.' },
+      { question: 'Do you offer sessions in French?', answer: 'Our MCAT Biology sessions are in English only, matching the MCAT examination language. However, we can clarify French-medium biology terminology for students who studied sciences in French during CEGEP.' },
+      { question: 'How does Cerebrum compare to Montreal MCAT prep?', answer: 'Quebec MCAT providers charge $1,500–$3,000 CAD for all sections. Cerebrum is a biology-section specialist at $449–$1,349 USD (~$600–$1,800 CAD). Many Montreal students pair us with a generalist for C/P and CARS.' },
+    ],
+  },
 }
 
 export function getMCATMetro(slug: string): MCATMetroConfig | null {
