@@ -92,26 +92,26 @@ export const neetNriTiers = {
 // ─── PROGRAMME-BASED VERTICALS (4–6 month duration) ─────────────────────────
 
 export const mcatTiers = {
-  pinnacle: { price: 1499, currency: 'USD', label: '$1,499', duration: '4–6 months', includes: 'Campbell + Lehninger, weekly 90-min 1:1, personalised plan, unlimited WhatsApp' },
-  ascent:   { price: 999,  currency: 'USD', label: '$999',  duration: '4–6 months', includes: 'Weekly 2hr live, monthly mocks, Slack channel, bi-weekly office hours' },
-  pursuit:  { price: 499,  currency: 'USD', label: '$499',  duration: '4–6 months', includes: 'Async content, 300+ passages, recorded library, WhatsApp doubt, monthly check-in' },
+  pinnacle: { price: 1349, currency: 'USD', label: '$1,349', duration: '4–6 months', includes: 'Campbell + Lehninger, weekly 90-min 1:1, personalised plan, unlimited WhatsApp' },
+  ascent:   { price: 899,  currency: 'USD', label: '$899',  duration: '4–6 months', includes: 'Weekly 2hr live, monthly mocks, Slack channel, bi-weekly office hours' },
+  pursuit:  { price: 449,  currency: 'USD', label: '$449',  duration: '4–6 months', includes: 'Async content, 300+ passages, recorded library, WhatsApp doubt, monthly check-in' },
 }
 
 export const datTiers = {
-  pinnacle: { price: 1399, currency: 'USD', label: '$1,399', duration: '3–5 months', includes: 'Weekly 60-min 1:1, personalised plan, Campbell + ADA outline, unlimited WhatsApp' },
-  ascent:   { price: 899,  currency: 'USD', label: '$899',  duration: '3–5 months', includes: 'Weekly 90-min live, monthly section mocks, Slack, office hours' },
-  pursuit:  { price: 449,  currency: 'USD', label: '$449',  duration: '3–5 months', includes: 'Async content, 200+ questions, recorded library, WhatsApp doubt' },
+  pinnacle: { price: 1249, currency: 'USD', label: '$1,249', duration: '3–5 months', includes: 'Weekly 60-min 1:1, personalised plan, Campbell + ADA outline, unlimited WhatsApp' },
+  ascent:   { price: 799,  currency: 'USD', label: '$799',  duration: '3–5 months', includes: 'Weekly 90-min live, monthly section mocks, Slack, office hours' },
+  pursuit:  { price: 399,  currency: 'USD', label: '$399',  duration: '3–5 months', includes: 'Async content, 200+ questions, recorded library, WhatsApp doubt' },
 }
 
 export const gamsatTiers = {
-  gbp: { pinnacle: { price: 1249, label: '£1,249' }, ascent: { price: 899, label: '£899' }, pursuit: { price: 399, label: '£399' } },
-  eur: { pinnacle: { price: 1399, label: '€1,399' }, ascent: { price: 999, label: '€999' }, pursuit: { price: 449, label: '€449' } },
-  aud: { pinnacle: { price: 1799, label: 'A$1,799' }, ascent: { price: 1299, label: 'A$1,299' }, pursuit: { price: 599, label: 'A$599' } },
+  gbp: { pinnacle: { price: 1099, label: '£1,099' }, ascent: { price: 799, label: '£799' }, pursuit: { price: 349, label: '£349' } },
+  eur: { pinnacle: { price: 1249, label: '€1,249' }, ascent: { price: 899, label: '€899' }, pursuit: { price: 399, label: '€399' } },
+  aud: { pinnacle: { price: 1599, label: 'A$1,599' }, ascent: { price: 1149, label: 'A$1,149' }, pursuit: { price: 539, label: 'A$539' } },
 }
 
 export const usmleTiers = {
-  usd: { pinnacle: { price: 2499, label: '$2,499' }, ascent: { price: 1599, label: '$1,599' }, pursuit: { price: 799, label: '$799' } },
-  inr: { pinnacle: { price: 124999, label: '₹1,24,999' }, ascent: { price: 79999, label: '₹79,999' }, pursuit: { price: 39999, label: '₹39,999' } },
+  usd: { pinnacle: { price: 2249, label: '$2,249' }, ascent: { price: 1449, label: '$1,449' }, pursuit: { price: 699, label: '$699' } },
+  inr: { pinnacle: { price: 109999, label: '₹1,09,999' }, ascent: { price: 69999, label: '₹69,999' }, pursuit: { price: 34999, label: '₹34,999' } },
 }
 
 // ─── CONTEXTUAL WHATSAPP MESSAGES ───────────────────────────────────────────

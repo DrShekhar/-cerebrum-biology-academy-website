@@ -3,8 +3,8 @@
  *
  * MCAT Biology city page — New Jersey metro (Princeton, Rutgers, Edison,
  * Jersey City, Edison-Iselin Indian-American corridor). Self-contained
- * server component. Pricing: USD only (Self-Paced $499 / Small-Batch
- * $999 / 1:1 Senior $1,499 + $150/hr ad-hoc). Primary keyword:
+ * server component. Pricing: USD only (Self-Paced $449 / Small-Batch
+ * $899 / 1:1 Senior $1,349 + $150/hr ad-hoc). Primary keyword:
  * "MCAT Biology tutor New Jersey".
  *
  * No 'use client' — content page, server-rendered.
@@ -19,7 +19,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/mcat-biology-tutor-new-jers
 export const metadata: Metadata = {
   title: 'MCAT Biology Tutor New Jersey | Princeton, Rutgers, Edison',
   description:
-    'MCAT Bio/Biochem tutor for New Jersey pre-meds — Princeton, Rutgers, NJIT, Edison, Jersey City. AIIMS-trained biology specialists, ET evening slots. From $499.',
+    'MCAT Bio/Biochem tutor for New Jersey pre-meds — Princeton, Rutgers, NJIT, Edison, Jersey City. AIIMS-trained biology specialists, ET evening slots. From $449.',
   keywords: [
     'MCAT Biology tutor New Jersey',
     'MCAT Bio tutor Princeton',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MCAT Biology Tutor New Jersey | Cerebrum Biology Academy',
     description:
-      'MCAT Bio/Biochem tutoring for NJ pre-meds — Princeton, Rutgers, Edison, Jersey City. AIIMS-trained faculty, ET evenings, $499–$1,499.',
+      'MCAT Bio/Biochem tutoring for NJ pre-meds — Princeton, Rutgers, Edison, Jersey City. AIIMS-trained faculty, ET evenings, $449–$1,349.',
     url: PAGE_URL,
     locale: 'en_US',
     type: 'website',
@@ -81,7 +81,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare to other generalist MCAT brands for an NJ pre-med?',
     answer:
-      'other generalist test-prep brands and other generalist test-prep brands are full-MCAT generalist providers — they cover all four sections (Bio/Biochem, C/P, CARS, Psych/Soc) with rotating subject faculty. Cerebrum is a biology specialist — we cover the Bio/Biochem section and the biology content in the Psych/Soc section, with biology faculty who do not rotate. Many NJ students pair us with a generalist for the non-biology sections. Our Small-Batch is $999 vs other generalist MCAT brands in-person ~$2,700; Senior Faculty 1:1 is $1,499 vs other generalist MCAT brands tutoring at $183/hour.',
+      'other generalist test-prep brands and other generalist test-prep brands are full-MCAT generalist providers — they cover all four sections (Bio/Biochem, C/P, CARS, Psych/Soc) with rotating subject faculty. Cerebrum is a biology specialist — we cover the Bio/Biochem section and the biology content in the Psych/Soc section, with biology faculty who do not rotate. Many NJ students pair us with a generalist for the non-biology sections. Our Small-Batch is $899 vs other generalist MCAT brands in-person ~$2,700; Senior Faculty 1:1 is $1,349 vs other generalist MCAT brands tutoring at $183/hour.',
   },
   {
     question: 'When should an NJIT or Rutgers Newark pre-med start MCAT Biology prep?',
@@ -222,7 +222,7 @@ export default function MCATBiologyTutorNewJerseyPage() {
             Rutgers Newark, NJIT, and TCNJ — plus the Edison / Iselin / Jersey City Indian-American
             applicant corridor. AIIMS-trained biology specialists, Campbell Biology + Lehninger
             curriculum, Eastern Time evening sessions, and pricing built for the per-section model
-            ($499 self-paced through $1,499 senior 1:1). Online live — no commute.
+            ($449 self-paced through $1,349 senior 1:1). Online live — no commute.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -345,7 +345,7 @@ export default function MCATBiologyTutorNewJerseyPage() {
           <p>
             <strong>Weekly small-batch sessions</strong> (4–6 students max) of 2 hours each, plus
             monthly full-length Bio/Biochem section mocks. <strong>Ad-hoc 1:1 sessions</strong>{' '}
-            available at $150/hour for gap-fill on weak topics — most NJ students book 4–8 of these
+            available at $135/hour for gap-fill on weak topics — most NJ students book 4–8 of these
             in the final 6 weeks before test day, typically on amino acid biochemistry, enzyme
             kinetics, or oxidative phosphorylation.
           </p>
@@ -355,24 +355,24 @@ export default function MCATBiologyTutorNewJerseyPage() {
           </h2>
           <ul>
             <li>
-              <strong>MCAT Bio/Biochem Self-Paced — $499</strong> for the full 4–6 month programme.
+              <strong>MCAT Bio/Biochem Self-Paced — $449</strong> for the full 4–6 month programme.
               Async Campbell Biology end-to-end, Lehninger first-semester biochemistry, AAMC content
               outline mapping, 300+ practice passages, recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Small-Batch — $999</strong> for the full programme.
+              <strong>MCAT Bio/Biochem Small-Batch — $899</strong> for the full programme.
               Everything in self-paced plus weekly 2-hour live sessions with biology-specialist
               faculty, monthly Bio/Biochem section mocks, peer Slack channel, senior faculty office
               hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,499</strong> for the full programme.
+              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,349</strong> for the full programme.
               Everything in Small-Batch plus weekly 90-minute 1:1 video sessions with AIIMS-trained
               senior faculty, personalised study plan, custom passage drills, unlimited WhatsApp
               faculty access.
             </li>
             <li>
-              <strong>Ad-hoc 1:1 tutoring — $150/hour</strong> outside the packaged programme. For
+              <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For
               students who already have a generalist provider and need biology-specialist gap-fill.
             </li>
           </ul>

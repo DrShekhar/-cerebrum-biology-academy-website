@@ -45,7 +45,7 @@ export const gamsatMetros: Record<string, GAMSATMetroConfig> = {
     timezone: 'Australian Eastern Time',
     timezoneShort: 'AEST',
     currency: { code: 'AUD', symbol: 'A$' },
-    pricing: { selfPaced: 'A$599', smallBatch: 'A$1,299', oneOnOne: 'A$1,799' },
+    pricing: { selfPaced: 'A$539', smallBatch: 'A$1,149', oneOnOne: 'A$1,599' },
     locale: 'en_AU',
     metaTitle: 'GAMSAT Biology Tutor Melbourne | Deakin, Melbourne MD, Monash',
     metaDescription:
@@ -92,7 +92,7 @@ export const gamsatMetros: Record<string, GAMSATMetroConfig> = {
     timezone: 'Australian Eastern Time',
     timezoneShort: 'AEST',
     currency: { code: 'AUD', symbol: 'A$' },
-    pricing: { selfPaced: 'A$599', smallBatch: 'A$1,299', oneOnOne: 'A$1,799' },
+    pricing: { selfPaced: 'A$539', smallBatch: 'A$1,149', oneOnOne: 'A$1,599' },
     locale: 'en_AU',
     metaTitle: 'GAMSAT Biology Tutor Brisbane | Griffith, UQ, Bond Medical',
     metaDescription:
@@ -138,7 +138,7 @@ export const gamsatMetros: Record<string, GAMSATMetroConfig> = {
     timezone: 'Greenwich Mean Time',
     timezoneShort: 'GMT',
     currency: { code: 'EUR', symbol: '€' },
-    pricing: { selfPaced: '€449', smallBatch: '€999', oneOnOne: '€1,399' },
+    pricing: { selfPaced: '€399', smallBatch: '€899', oneOnOne: '€1,249' },
     locale: 'en_IE',
     metaTitle: 'GAMSAT Biology Tutor Dublin | RCSI, UCC, UL Graduate Medicine',
     metaDescription:
@@ -185,7 +185,7 @@ export const gamsatMetros: Record<string, GAMSATMetroConfig> = {
     timezone: 'Greenwich Mean Time',
     timezoneShort: 'GMT',
     currency: { code: 'GBP', symbol: '£' },
-    pricing: { selfPaced: '£399', smallBatch: '£899', oneOnOne: '£1,249' },
+    pricing: { selfPaced: '£349', smallBatch: '£799', oneOnOne: '£1,099' },
     locale: 'en_GB',
     metaTitle: 'GAMSAT Biology Tutor Edinburgh | Edinburgh, St Andrews, Glasgow',
     metaDescription:

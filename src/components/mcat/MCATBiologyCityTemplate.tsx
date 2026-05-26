@@ -170,7 +170,7 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
           <p>
             <strong>Weekly small-batch sessions</strong> (4–6 students max, grouped by target band),
             2 hours each, plus monthly Bio/Biochem section mocks.{' '}
-            <strong>Ad-hoc 1:1 sessions</strong> at $150/hour for gap-fill — most {metro.city} students
+            <strong>Ad-hoc 1:1 sessions</strong> at $135/hour for gap-fill — most {metro.city} students
             book 6–10 of these in the final 6 weeks.
           </p>
 
@@ -179,22 +179,22 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
           </h2>
           <ul>
             <li>
-              <strong>MCAT Bio/Biochem — Pursuit: $499</strong> for the full 4–6 month programme.
+              <strong>MCAT Bio/Biochem — Pursuit: $449</strong> for the full 4–6 month programme.
               Campbell Biology end-to-end, Lehninger first-semester biochemistry, AAMC content
               outline mapping, 300+ practice passages, recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem — Ascent: $999</strong> for the full programme. Adds
+              <strong>MCAT Bio/Biochem — Ascent: $899</strong> for the full programme. Adds
               weekly 2-hour live sessions, monthly section mocks, peer Slack channel, senior faculty
               office hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem — Pinnacle: $1,499</strong> for the full programme.
+              <strong>MCAT Bio/Biochem — Pinnacle: $1,349</strong> for the full programme.
               Adds weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty,
               personalised study plan, custom passage drills, unlimited WhatsApp faculty access.
             </li>
             <li>
-              <strong>Ad-hoc 1:1 tutoring — $150/hour</strong> outside the packaged programme. For
+              <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For
               students using a generalist and wanting a biology specialist for gap-fill.
             </li>
           </ul>

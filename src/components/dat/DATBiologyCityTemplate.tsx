@@ -108,14 +108,14 @@ export default function DATBiologyCityTemplate({ metro }: { metro: DATMetroConfi
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">How Cerebrum coaches DAT Biology from {metro.city}</h2>
           <p><strong>100% online live.</strong> Zoom-based sessions, screen-shared Campbell Biology excerpts (cell biology, genetics, anatomy/physiology, evolution, ecology — the five DAT Biology pillars), DAT Bootcamp-style passage walkthroughs, and a WhatsApp channel for between-session doubts.</p>
-          <p><strong>Weekly small-batch sessions</strong> (4–6 students max, grouped by target band), 90 minutes each, plus monthly DAT Biology section mocks. <strong>Ad-hoc 1:1 sessions</strong> at $120/hour for gap-fill.</p>
+          <p><strong>Weekly small-batch sessions</strong> (4–6 students max, grouped by target band), 90 minutes each, plus monthly DAT Biology section mocks. <strong>Ad-hoc 1:1 sessions</strong> at $109/hour for gap-fill.</p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">DAT Biology pricing (USD)</h2>
           <ul>
-            <li><strong>DAT Biology — Pursuit: $449</strong> for the full 3–5 month programme. Campbell Biology coverage aligned to ADA DAT content outline, 200+ practice questions, recorded library, WhatsApp doubt support.</li>
-            <li><strong>DAT Biology — Ascent: $899</strong> for the full programme. Adds weekly 90-minute live sessions, monthly section mocks, peer Slack channel, senior faculty office hours.</li>
-            <li><strong>DAT Biology — Pinnacle: $1,399</strong> for the full programme. Adds weekly 60-minute 1:1 video sessions with AIIMS-trained senior faculty, personalised study plan, custom question drills.</li>
-            <li><strong>Ad-hoc 1:1 tutoring — $120/hour</strong> outside the packaged programme.</li>
+            <li><strong>DAT Biology — Pursuit: $399</strong> for the full 3–5 month programme. Campbell Biology coverage aligned to ADA DAT content outline, 200+ practice questions, recorded library, WhatsApp doubt support.</li>
+            <li><strong>DAT Biology — Ascent: $799</strong> for the full programme. Adds weekly 90-minute live sessions, monthly section mocks, peer Slack channel, senior faculty office hours.</li>
+            <li><strong>DAT Biology — Pinnacle: $1,249</strong> for the full programme. Adds weekly 60-minute 1:1 video sessions with AIIMS-trained senior faculty, personalised study plan, custom question drills.</li>
+            <li><strong>Ad-hoc 1:1 tutoring — $109/hour</strong> outside the packaged programme.</li>
           </ul>
         </div>
       </section>

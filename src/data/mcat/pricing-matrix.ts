@@ -38,7 +38,7 @@ export const mcatPricingProducts: MCATPricingProduct[] = [
     id: 'self-paced-bb',
     name: 'MCAT Bio/Biochem — Pursuit',
     subtitle: 'Accessible · Async track · Monthly check-in',
-    priceUSD: 499,
+    priceUSD: 449,
     unit: 'package',
     unitLabel: '/ full programme',
     duration: '4-6 months',
@@ -58,7 +58,7 @@ export const mcatPricingProducts: MCATPricingProduct[] = [
     id: 'small-batch-bb',
     name: 'MCAT Bio/Biochem — Ascent',
     subtitle: '4-6 students · Bi-weekly office hours · Live sessions',
-    priceUSD: 999,
+    priceUSD: 899,
     unit: 'package',
     unitLabel: '/ full programme',
     duration: '4-6 months',
@@ -79,7 +79,7 @@ export const mcatPricingProducts: MCATPricingProduct[] = [
     id: 'one-on-one-senior',
     name: 'MCAT Bio/Biochem — Pinnacle',
     subtitle: 'AIIMS-trained · Weekly 1:1 · Personalised plan',
-    priceUSD: 1499,
+    priceUSD: 1349,
     unit: 'package',
     unitLabel: '/ full programme',
     duration: '4-6 months',
@@ -100,7 +100,7 @@ export const mcatPricingProducts: MCATPricingProduct[] = [
 /** Hourly tutoring rate for ad-hoc / gap-fill sessions outside the
  *  packaged programmes. Compared to other generalist MCAT brands $175/hr and Princeton
  *  Review $183/hr, this is Cerebrum's per-hour wedge. */
-export const MCAT_ADHOC_TUTORING_USD_PER_HOUR = 150
+export const MCAT_ADHOC_TUTORING_USD_PER_HOUR = 135
 
 /** Course-schema offers[] for MCAT pages. All USD base. */
 export function mcatPricingAsCourseOffers(pageUrl: string) {

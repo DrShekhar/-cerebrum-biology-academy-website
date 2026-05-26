@@ -15,7 +15,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/mcat-biology-tutor-houston'
 export const metadata: Metadata = {
   title: 'MCAT Biology Tutor Houston | Rice, UT Austin, UTSW',
   description:
-    'MCAT Bio/Biochem tutor for Houston pre-meds — Rice, UT Austin, A&M, U of H, Sugar Land, Pearland. Biology specialists, CT evening slots. From $499.',
+    'MCAT Bio/Biochem tutor for Houston pre-meds — Rice, UT Austin, A&M, U of H, Sugar Land, Pearland. Biology specialists, CT evening slots. From $449.',
   keywords: [
     'MCAT Biology tutor Houston',
     'MCAT Bio tutor Rice University',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MCAT Biology Tutor Houston | Cerebrum Biology Academy',
     description:
-      'MCAT Bio/Biochem coaching for Houston pre-meds — Rice, UT Austin, A&M, U of H. CT evenings, Hindi-capable faculty, $499–$1,499.',
+      'MCAT Bio/Biochem coaching for Houston pre-meds — Rice, UT Austin, A&M, U of H. CT evenings, Hindi-capable faculty, $449–$1,349.',
     url: PAGE_URL,
     locale: 'en_US',
     type: 'website',
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare to Houston-based in-person MCAT centers?',
     answer:
-      'Houston has several in-person MCAT prep options including other generalist MCAT brands, other generalist MCAT brands, and smaller Texas-based providers. These are full-MCAT generalists ($2,500–$3,000 for the in-person course) covering all four sections with rotating faculty. Cerebrum is a biology-section specialist — we cover Bio/Biochem and the biology content in Psych/Soc with biology-only faculty. Our Small-Batch is $999 vs other generalist MCAT brands in-person around $2,700. Many Houston students pair us with a generalist for the non-biology sections.',
+      'Houston has several in-person MCAT prep options including other generalist MCAT brands, other generalist MCAT brands, and smaller Texas-based providers. These are full-MCAT generalists ($2,500–$3,000 for the in-person course) covering all four sections with rotating faculty. Cerebrum is a biology-section specialist — we cover Bio/Biochem and the biology content in Psych/Soc with biology-only faculty. Our Small-Batch is $899 vs other generalist MCAT brands in-person around $2,700. Many Houston students pair us with a generalist for the non-biology sections.',
   },
   {
     question:
@@ -218,7 +218,7 @@ export default function MCATBiologyTutorHoustonPage() {
             McGovern Medical School. Built for the Sugar Land / Pearland / Katy / The Woodlands
             Indian-American applicant cohort. AIIMS-trained biology specialists, Campbell +
             Lehninger curriculum, Central Time evening sessions, bilingual English-Hindi parent
-            consultations, $499 to $1,499.
+            consultations, $449 to $1,349.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -323,7 +323,7 @@ export default function MCATBiologyTutorHoustonPage() {
             tutoring stays in English, but Hindi parent updates are available on request; (b) family
             decision-making is often joint (parent + student), so we structure the consultation to
             include both; (c) the cultural expectation of medicine as a career path is real, but the
-            financial conversation about $499 vs $1,499 should be paced — we recommend starting with
+            financial conversation about $449 vs $1,349 should be paced — we recommend starting with
             Small-Batch and adding 1:1 hours only where the diagnostic shows specific gaps.
           </p>
 
@@ -339,7 +339,7 @@ export default function MCATBiologyTutorHoustonPage() {
           </p>
           <p>
             <strong>Weekly small-batch sessions</strong> (4–6 students max), 2 hours each, plus
-            monthly Bio/Biochem section mocks. <strong>Ad-hoc 1:1 sessions</strong> at $150/hour for
+            monthly Bio/Biochem section mocks. <strong>Ad-hoc 1:1 sessions</strong> at $135/hour for
             gap-fill — most Houston students book 4–8 of these in the final 6 weeks, typically on
             enzyme kinetics, amino acid biochemistry, or molecular biology passages.
           </p>
@@ -349,22 +349,22 @@ export default function MCATBiologyTutorHoustonPage() {
           </h2>
           <ul>
             <li>
-              <strong>MCAT Bio/Biochem Self-Paced — $499</strong> for the full 4–6 month programme.
+              <strong>MCAT Bio/Biochem Self-Paced — $449</strong> for the full 4–6 month programme.
               Campbell Biology end-to-end, Lehninger first-semester biochemistry, AAMC content
               outline mapping, 300+ practice passages, recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Small-Batch — $999</strong> for the full programme. Adds
+              <strong>MCAT Bio/Biochem Small-Batch — $899</strong> for the full programme. Adds
               weekly 2-hour live sessions, monthly section mocks, peer Slack channel, senior faculty
               office hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,499</strong> for the full programme.
+              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,349</strong> for the full programme.
               Adds weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty,
               personalised study plan, custom passage drills, unlimited WhatsApp access.
             </li>
             <li>
-              <strong>Ad-hoc 1:1 tutoring — $150/hour</strong> outside the packaged programme. For
+              <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For
               students using a generalist (other generalist MCAT brands / Blueprint) and wanting a
               biology specialist for gap-fill.
             </li>

@@ -15,7 +15,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/mcat-biology-tutor-atlanta'
 export const metadata: Metadata = {
   title: 'MCAT Biology Tutor Atlanta | Emory, Georgia Tech, UGA',
   description:
-    'MCAT Bio/Biochem tutor for Atlanta pre-meds — Emory, Georgia Tech, UGA, Alpharetta, Johns Creek, Cumming. Biology specialists, ET evening slots. From $499.',
+    'MCAT Bio/Biochem tutor for Atlanta pre-meds — Emory, Georgia Tech, UGA, Alpharetta, Johns Creek, Cumming. Biology specialists, ET evening slots. From $449.',
   keywords: [
     'MCAT Biology tutor Atlanta',
     'MCAT Bio tutor Emory',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MCAT Biology Tutor Atlanta | Cerebrum Biology Academy',
     description:
-      'MCAT Bio/Biochem coaching for Atlanta pre-meds — Emory, Georgia Tech, UGA. ET evening slots, $499–$1,499.',
+      'MCAT Bio/Biochem coaching for Atlanta pre-meds — Emory, Georgia Tech, UGA. ET evening slots, $449–$1,349.',
     url: PAGE_URL,
     locale: 'en_US',
     type: 'website',
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare to Atlanta-based in-person prep?',
     answer:
-      'Atlanta has the standard generalist in-person providers (other generalist test-prep brands Atlanta, other generalist test-prep brands Atlanta) plus a few smaller boutique tutors. The generalists are $2,500–$3,000 for the full-MCAT course covering all four sections with rotating subject faculty. Cerebrum is a biology-section specialist — Bio/Biochem and the biology content in Psych/Soc, with biology-only faculty. Our Small-Batch is $999 vs other generalist MCAT brands in-person around $2,700. Many Atlanta students pair Cerebrum with a generalist provider for the chemistry/physics and CARS sections.',
+      'Atlanta has the standard generalist in-person providers (other generalist test-prep brands Atlanta, other generalist test-prep brands Atlanta) plus a few smaller boutique tutors. The generalists are $2,500–$3,000 for the full-MCAT course covering all four sections with rotating subject faculty. Cerebrum is a biology-section specialist — Bio/Biochem and the biology content in Psych/Soc, with biology-only faculty. Our Small-Batch is $899 vs other generalist MCAT brands in-person around $2,700. Many Atlanta students pair Cerebrum with a generalist provider for the chemistry/physics and CARS sections.',
   },
   {
     question: 'Will Hindi or Telugu parent consultations be available?',
@@ -215,7 +215,7 @@ export default function MCATBiologyTutorAtlantaPage() {
             MCAT Bio/Biochem coaching for pre-meds at Emory, Georgia Tech, UGA, Mercer, and Georgia
             State — built for the North Atlanta South Asian applicant cohort in Alpharetta, Johns
             Creek, Cumming, Sandy Springs, and Duluth. AIIMS-trained biology specialists, Campbell
-            Biology + Lehninger curriculum, Eastern Time evening sessions, $499 to $1,499.
+            Biology + Lehninger curriculum, Eastern Time evening sessions, $449 to $1,349.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -337,7 +337,7 @@ export default function MCATBiologyTutorAtlantaPage() {
           <p>
             <strong>Weekly small-batch sessions</strong> (4–6 students max, grouped by target band),
             2 hours each, plus monthly Bio/Biochem section mocks.{' '}
-            <strong>Ad-hoc 1:1 sessions</strong> at $150/hour for gap-fill — most Atlanta students
+            <strong>Ad-hoc 1:1 sessions</strong> at $135/hour for gap-fill — most Atlanta students
             book 4–8 of these in the final 6 weeks on enzyme kinetics, oxidative phosphorylation, or
             molecular biology passages.
           </p>
@@ -347,22 +347,22 @@ export default function MCATBiologyTutorAtlantaPage() {
           </h2>
           <ul>
             <li>
-              <strong>MCAT Bio/Biochem Self-Paced — $499</strong> for the full 4–6 month programme.
+              <strong>MCAT Bio/Biochem Self-Paced — $449</strong> for the full 4–6 month programme.
               Campbell Biology end-to-end, Lehninger first-semester biochemistry, AAMC content
               outline mapping, 300+ practice passages, recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Small-Batch — $999</strong> for the full programme. Adds
+              <strong>MCAT Bio/Biochem Small-Batch — $899</strong> for the full programme. Adds
               weekly 2-hour live sessions, monthly section mocks, peer Slack channel, senior faculty
               office hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,499</strong> for the full programme.
+              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,349</strong> for the full programme.
               Adds weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty,
               personalised study plan, custom passage drills, unlimited WhatsApp faculty access.
             </li>
             <li>
-              <strong>Ad-hoc 1:1 tutoring — $150/hour</strong> outside the packaged programme. For
+              <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For
               students using other generalist MCAT brands as the generalist provider and wanting
               biology-specialist gap-fill.
             </li>

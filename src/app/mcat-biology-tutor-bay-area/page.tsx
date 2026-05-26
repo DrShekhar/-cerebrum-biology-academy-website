@@ -15,7 +15,7 @@ const PAGE_URL = 'https://cerebrumbiologyacademy.com/mcat-biology-tutor-bay-area
 export const metadata: Metadata = {
   title: 'MCAT Biology Tutor Bay Area | Berkeley, Stanford, UCSF',
   description:
-    'MCAT Bio/Biochem tutor for SF Bay Area pre-meds — UC Berkeley, Stanford, UCSF, Davis, San Jose State. Biology specialists, PT evening slots. From $499.',
+    'MCAT Bio/Biochem tutor for SF Bay Area pre-meds — UC Berkeley, Stanford, UCSF, Davis, San Jose State. Biology specialists, PT evening slots. From $449.',
   keywords: [
     'MCAT Biology tutor Bay Area',
     'MCAT Bio tutor Berkeley',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'MCAT Biology Tutor Bay Area | Cerebrum Biology Academy',
     description:
-      'MCAT Bio/Biochem tutoring for Bay Area pre-meds — Berkeley, Stanford, UCSF, Cupertino/Fremont/Palo Alto families. PT evenings, $499–$1,499.',
+      'MCAT Bio/Biochem tutoring for Bay Area pre-meds — Berkeley, Stanford, UCSF, Cupertino/Fremont/Palo Alto families. PT evenings, $449–$1,349.',
     url: PAGE_URL,
     locale: 'en_US',
     type: 'website',
@@ -77,7 +77,7 @@ const faqs = [
     question:
       'How does Cerebrum compare to Bay Area in-person providers like AltiusPrep or NextStep?',
     answer:
-      'other generalist MCAT brands is an excellent 1:1 generalist at ~$175/hour — they cover all four sections with subject-rotating tutors. NextStep (Blueprint) is a popular full-course generalist. Cerebrum is a biology-section specialist — we go deeper on the Bio/Biochem section than a generalist rotation does, and our $150/hour ad-hoc rate is below other generalist MCAT brands. Many Bay Area students use other generalist MCAT brands or Blueprint for the full course and add our Bio/Biochem 1:1 for gap-fill on the biology side.',
+      'other generalist MCAT brands is an excellent 1:1 generalist at ~$175/hour — they cover all four sections with subject-rotating tutors. NextStep (Blueprint) is a popular full-course generalist. Cerebrum is a biology-section specialist — we go deeper on the Bio/Biochem section than a generalist rotation does, and our $135/hour ad-hoc rate is below other generalist MCAT brands. Many Bay Area students use other generalist MCAT brands or Blueprint for the full course and add our Bio/Biochem 1:1 for gap-fill on the biology side.',
   },
   {
     question: 'Will UCSF or Stanford BS/MD or feeder-track students be coached differently?',
@@ -217,7 +217,7 @@ export default function MCATBiologyTutorBayAreaPage() {
             Davis, San Jose State, and UC Santa Cruz — plus the Cupertino / Fremont / Palo Alto /
             Sunnyvale South Asian applicant cohort heading toward UCSF, Stanford Medicine, and
             top-20 US medical schools. AIIMS-trained biology specialists, Campbell Biology +
-            Lehninger curriculum, Pacific Time evening sessions, $499 to $1,499.
+            Lehninger curriculum, Pacific Time evening sessions, $449 to $1,349.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -340,7 +340,7 @@ export default function MCATBiologyTutorBayAreaPage() {
           <p>
             <strong>Weekly small-batch sessions</strong> (4–6 students max, grouped by target band),
             2 hours each, plus monthly Bio/Biochem section mocks.{' '}
-            <strong>Ad-hoc 1:1 sessions</strong> at $150/hour for gap-fill — most Bay Area students
+            <strong>Ad-hoc 1:1 sessions</strong> at $135/hour for gap-fill — most Bay Area students
             book 4–8 of these in the final 6 weeks on biochem amino acid topics, oxidative
             phosphorylation, or molecular biology passages.
           </p>
@@ -350,23 +350,23 @@ export default function MCATBiologyTutorBayAreaPage() {
           </h2>
           <ul>
             <li>
-              <strong>MCAT Bio/Biochem Self-Paced — $499</strong> for the full 4–6 month programme.
+              <strong>MCAT Bio/Biochem Self-Paced — $449</strong> for the full 4–6 month programme.
               Async Campbell Biology end-to-end plus Lehninger first-semester biochemistry, AAMC
               content outline mapping, 300+ practice passages, recorded library, WhatsApp doubt
               support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Small-Batch — $999</strong> for the full programme. Adds
+              <strong>MCAT Bio/Biochem Small-Batch — $899</strong> for the full programme. Adds
               weekly 2-hour live sessions with biology-specialist faculty, monthly section mocks,
               peer Slack channel, senior faculty office hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,499</strong> for the full programme.
+              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,349</strong> for the full programme.
               Adds weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty,
               personalised study plan, custom passage drills, unlimited WhatsApp faculty access.
             </li>
             <li>
-              <strong>Ad-hoc 1:1 tutoring — $150/hour</strong> outside the packaged programme. For
+              <strong>Ad-hoc 1:1 tutoring — $135/hour</strong> outside the packaged programme. For
               students using other generalist MCAT brands / Blueprint / other generalist test-prep brands as the generalist provider and
               wanting a biology specialist for gap-fill.
             </li>
