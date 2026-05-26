@@ -3949,6 +3949,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.94,
     },
+    // A-Level city pages (P2 UK)
+    { url: `${baseUrl}/a-level-biology-tutor-london`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/a-level-biology-tutor-manchester`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/a-level-biology-tutor-birmingham`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    // Fee comparison pages (5 verticals)
+    { url: `${baseUrl}/mcat-biology-pricing`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/dat-biology-pricing`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/gamsat-biology-pricing`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/usmle-step-1-biology-pricing`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    { url: `${baseUrl}/ib-biology-pricing`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
     {
       url: `${baseUrl}/ib-biology-online-classes`,
       lastModified: lastUpdated,
@@ -9058,6 +9068,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.86,
     },
+    // P1 Canada NRI expansion
+    { url: `${baseUrl}/neet-coaching-edmonton-canada`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/neet-coaching-ottawa-canada`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
     {
       url: `${baseUrl}/neet-coaching-brisbane-australia`,
       lastModified: lastUpdated,

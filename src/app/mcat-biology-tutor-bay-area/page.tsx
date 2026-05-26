@@ -350,18 +350,18 @@ export default function MCATBiologyTutorBayAreaPage() {
           </h2>
           <ul>
             <li>
-              <strong>MCAT Bio/Biochem Self-Paced — $449</strong> for the full 4–6 month programme.
+              <strong>MCAT Bio/Biochem Pursuit: $449</strong> for the full 4–6 month programme.
               Async Campbell Biology end-to-end plus Lehninger first-semester biochemistry, AAMC
               content outline mapping, 300+ practice passages, recorded library, WhatsApp doubt
               support.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem Small-Batch — $899</strong> for the full programme. Adds
+              <strong>MCAT Bio/Biochem Ascent: $899</strong> for the full programme. Adds
               weekly 2-hour live sessions with biology-specialist faculty, monthly section mocks,
               peer Slack channel, senior faculty office hours.
             </li>
             <li>
-              <strong>MCAT Bio/Biochem 1:1 Senior Faculty — $1,349</strong> for the full programme.
+              <strong>MCAT Bio/Biochem Pinnacle: $1,349</strong> for the full programme.
               Adds weekly 90-minute 1:1 video sessions with AIIMS-trained senior faculty,
               personalised study plan, custom passage drills, unlimited WhatsApp faculty access.
             </li>
