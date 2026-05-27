@@ -1,0 +1,65 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
+
+const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-coaching-vijayawada'
+
+export const metadata: Metadata = {
+  title: 'NEET Coaching Vijayawada | Best Biology Coaching | Cerebrum',
+  description: 'Best NEET Biology coaching for Vijayawada students — AIIMS-trained faculty, online live batches, 15-20 students. Serving Benz Circle, Labbipet, Moghalrajpuram, Patamata. From Rs 48,000/yr.',
+  keywords: ['NEET coaching vijayawada', 'best NEET coaching vijayawada', 'NEET biology coaching vijayawada', 'online NEET coaching vijayawada'],
+  other: { 'article:modified_time': '2026-05-27' },
+  alternates: { canonical: PAGE_URL },
+  openGraph: { title: 'NEET Coaching Vijayawada | Cerebrum', description: 'Best NEET Biology coaching for Vijayawada. AIIMS-trained faculty.', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+}
+
+const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Vijayawada and want a FREE NEET Biology demo class. Please share timings.")
+
+const faqs = [
+  { question: 'Which is the best NEET coaching in Vijayawada?', answer: 'Cerebrum Biology Academy — biology-only specialist with AIIMS-trained faculty. 15-20 student online live batches, 98% qualification rate. Pursuit Rs 48,000/yr to Pinnacle Rs 98,000/yr.' },
+  { question: 'How does online NEET coaching work from Vijayawada?', answer: 'Live Zoom sessions in IST evening slots (5-8 PM). Same faculty as Delhi NCR offline. Recorded sessions + WhatsApp doubt support. Vijayawada students join pan-India cohorts.' },
+  { question: 'What does NEET coaching cost in Vijayawada?', answer: 'Pursuit Rs 48,000/yr (25-30 students). Ascent Rs 76,000/yr (16-20). Pinnacle Rs 98,000/yr (10-12 with weekly 1:1).' },
+]
+
+export default function Page() {
+  return (
+    <main className="min-h-screen bg-white">
+      <CerebrumPersonSchema knowsAbout={['NEET Vijayawada', 'NEET Biology Andhra Pradesh']} />
+      <LocalBusinessSchema />
+      <FAQSchema questions={faqs} pageUrl={PAGE_URL} />
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-4">
+          <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-white">Home</Link><span className="mx-2">/</span>
+            <Link href="/best-neet-coaching-near-me" className="hover:text-white">NEET Coaching</Link><span className="mx-2">/</span>
+            <span className="text-white">Vijayawada</span>
+          </nav>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Best NEET Coaching in Vijayawada</h1>
+          <p className="text-xl text-slate-300 mb-6 max-w-3xl">Biology-only NEET coaching for Vijayawada (Andhra Pradesh). AIIMS-trained faculty, 15-20 student online live batches. Serving Benz Circle, Labbipet, Moghalrajpuram, Patamata. Pursuit Rs 48,000 / Ascent Rs 76,000 / Pinnacle Rs 98,000 per year.</p>
+          <a href={wa} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
+        </div>
+      </section>
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">FAQs from Vijayawada families</h2>
+          <div className="space-y-6">
+            {faqs.map((f, i) => (
+              <details key={i} className="bg-white rounded-xl p-6 border border-slate-200">
+                <summary className="text-lg font-semibold text-slate-900 cursor-pointer">{f.question}</summary>
+                <p className="mt-4 text-slate-700 leading-relaxed">{f.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Book a free demo from Vijayawada</h2>
+          <a href={wa} className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold text-lg" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
+        </div>
+      </section>
+    </main>
+  )
+}
