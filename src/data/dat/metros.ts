@@ -42,7 +42,16 @@ export const datMetros: Record<string, DATMetroConfig> = {
     metaTitle: 'DAT Biology Tutor New York | Columbia, NYU, Stony Brook Dental',
     metaDescription:
       'DAT Biology tutor for New York pre-dental students — Columbia CDM, NYU Dentistry, Stony Brook Dental. AIIMS-trained biology specialists, ET evenings. From $449.',
-    keywords: ['DAT biology tutor New York', 'DAT tutor Columbia dental', 'DAT tutor NYU dentistry', 'DAT tutor Stony Brook dental', 'pre-dental tutor NYC', 'DAT tutor Edison NJ', 'Indian American DAT tutor New York', 'online DAT biology coaching NYC'],
+    keywords: [
+      'DAT biology tutor New York',
+      'DAT tutor Columbia dental',
+      'DAT tutor NYU dentistry',
+      'DAT tutor Stony Brook dental',
+      'pre-dental tutor NYC',
+      'DAT tutor Edison NJ',
+      'Indian American DAT tutor New York',
+      'online DAT biology coaching NYC',
+    ],
     heroSubtitle:
       'DAT Biology tutoring for Columbia CDM, NYU College of Dentistry, and Stony Brook Dental pre-dental students — built around the Edison / Jersey City / Long Island South Asian corridor. AIIMS-trained biology specialists, Campbell Biology curriculum, Eastern Time evening sessions, $449 to $1,399.',
     whySection: {
@@ -54,12 +63,19 @@ export const datMetros: Record<string, DATMetroConfig> = {
     },
     universities: [
       { name: 'Columbia College of Dental Medicine', programmes: 'DDS programme, research track' },
-      { name: 'NYU College of Dentistry', programmes: 'DDS, DDS/PhD, Advanced Education in General Dentistry' },
+      {
+        name: 'NYU College of Dentistry',
+        programmes: 'DDS, DDS/PhD, Advanced Education in General Dentistry',
+      },
       { name: 'Stony Brook School of Dental Medicine', programmes: 'DDS, Advanced certificates' },
-      { name: 'Rutgers School of Dental Medicine (Newark)', programmes: 'DMD, dual-degree pathways' },
+      {
+        name: 'Rutgers School of Dental Medicine (Newark)',
+        programmes: 'DMD, dual-degree pathways',
+      },
       { name: 'Touro College of Dental Medicine', programmes: 'DDS, Westchester campus' },
     ],
-    timezoneSection: 'All live sessions are in Eastern Time. Standard NYC small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. Senior Faculty 1:1 can be scheduled at any ET slot.',
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard NYC small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. Senior Faculty 1:1 can be scheduled at any ET slot.',
     demographicSection: {
       heading: 'Edison / Long Island — the pre-dental family conversation',
       paragraphs: [
@@ -68,11 +84,31 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     faqs: [
-      { question: 'NYU Dentistry or Columbia CDM — what DAT Biology score is competitive?', answer: 'NYU Dentistry median accepted DAT Bio is ~21–22; Columbia CDM is higher at ~23–24. Our coaching targets the 22+ band with specific focus on the Campbell-aligned content areas that DAT Biology emphasises (anatomy/physiology, genetics, ecology) more than MCAT.' },
-      { question: 'My family is in Edison / Jersey City — what is the planning conversation?', answer: 'The consultation covers: (a) target dental school tier (Columbia CDM at 23+ vs NYU at 21+), (b) timeline (summer-after-junior-year vs gap year), (c) whether the student is dual-tracking DAT + MCAT. For Edison families, we often discuss the Rutgers DMD pathway as a strong in-state option.' },
-      { question: 'Can I pair Cerebrum DAT Biology with a generalist DAT provider?', answer: 'Absolutely — this is common. Many NYC students use a generalist for PAT (Perceptual Ability) and Reading Comprehension, then pair with us for the Biology section. Our biology-specialist depth exceeds what generalist providers cover.' },
-      { question: 'Stony Brook or Rutgers dental — different prep from Columbia / NYU?', answer: 'The DAT is the same exam regardless of target school. The difference is target score: Stony Brook and Rutgers accept DAT Bio ~20–21; Columbia and NYU require 22–24. We calibrate the study plan intensity to your target school tier.' },
-      { question: 'How does Cerebrum compare to generalist DAT prep providers?', answer: 'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399 for Biology only. Our Campbell Biology depth exceeds generalist coverage — particularly in anatomy/physiology and genetics, which are weighted heavily on the DAT.' },
+      {
+        question: 'NYU Dentistry or Columbia CDM — what DAT Biology score is competitive?',
+        answer:
+          'NYU Dentistry median accepted DAT Bio is ~21–22; Columbia CDM is higher at ~23–24. Our coaching targets the 22+ band with specific focus on the Campbell-aligned content areas that DAT Biology emphasises (anatomy/physiology, genetics, ecology) more than MCAT.',
+      },
+      {
+        question: 'My family is in Edison / Jersey City — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) target dental school tier (Columbia CDM at 23+ vs NYU at 21+), (b) timeline (summer-after-junior-year vs gap year), (c) whether the student is dual-tracking DAT + MCAT. For Edison families, we often discuss the Rutgers DMD pathway as a strong in-state option.',
+      },
+      {
+        question: 'Can I pair Cerebrum DAT Biology with a generalist DAT provider?',
+        answer:
+          'Absolutely — this is common. Many NYC students use a generalist for PAT (Perceptual Ability) and Reading Comprehension, then pair with us for the Biology section. Our biology-specialist depth exceeds what generalist providers cover.',
+      },
+      {
+        question: 'Stony Brook or Rutgers dental — different prep from Columbia / NYU?',
+        answer:
+          'The DAT is the same exam regardless of target school. The difference is target score: Stony Brook and Rutgers accept DAT Bio ~20–21; Columbia and NYU require 22–24. We calibrate the study plan intensity to your target school tier.',
+      },
+      {
+        question: 'How does Cerebrum compare to generalist DAT prep providers?',
+        answer:
+          'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399 for Biology only. Our Campbell Biology depth exceeds generalist coverage — particularly in anatomy/physiology and genetics, which are weighted heavily on the DAT.',
+      },
     ],
   },
 
@@ -86,7 +122,16 @@ export const datMetros: Record<string, DATMetroConfig> = {
     metaTitle: 'DAT Biology Tutor Los Angeles | UCLA, USC, Western, Loma Linda',
     metaDescription:
       'DAT Biology tutor for LA pre-dental students — UCLA Dentistry, Herman Ostrow USC, Western, Loma Linda. Biology specialists, PT evenings. From $449.',
-    keywords: ['DAT biology tutor Los Angeles', 'DAT tutor UCLA dental', 'DAT tutor USC dental', 'DAT tutor Western dental', 'pre-dental tutor LA', 'DAT tutor Cerritos', 'Indian American DAT tutor LA', 'online DAT biology coaching Los Angeles'],
+    keywords: [
+      'DAT biology tutor Los Angeles',
+      'DAT tutor UCLA dental',
+      'DAT tutor USC dental',
+      'DAT tutor Western dental',
+      'pre-dental tutor LA',
+      'DAT tutor Cerritos',
+      'Indian American DAT tutor LA',
+      'online DAT biology coaching Los Angeles',
+    ],
     heroSubtitle:
       'DAT Biology tutoring for UCLA School of Dentistry, Herman Ostrow School of Dentistry of USC, Western University, and Loma Linda pre-dental students — built around the Cerritos / Irvine South Asian corridor. AIIMS-trained biology specialists, PT evening sessions, $449 to $1,399.',
     whySection: {
@@ -98,12 +143,22 @@ export const datMetros: Record<string, DATMetroConfig> = {
     },
     universities: [
       { name: 'UCLA School of Dentistry', programmes: 'DDS, DDS/PhD, Advanced specialty' },
-      { name: 'Herman Ostrow School of Dentistry of USC', programmes: 'DDS, DDS/MBA, Advanced Education' },
+      {
+        name: 'Herman Ostrow School of Dentistry of USC',
+        programmes: 'DDS, DDS/MBA, Advanced Education',
+      },
       { name: 'Western University of Health Sciences (Pomona)', programmes: 'DMD programme' },
-      { name: 'Loma Linda University School of Dentistry', programmes: 'DDS, dental hygiene, dental specialties' },
-      { name: 'UC Irvine / UC San Diego pre-dental feeders', programmes: 'Biology, Biochemistry pre-dental track' },
+      {
+        name: 'Loma Linda University School of Dentistry',
+        programmes: 'DDS, dental hygiene, dental specialties',
+      },
+      {
+        name: 'UC Irvine / UC San Diego pre-dental feeders',
+        programmes: 'Biology, Biochemistry pre-dental track',
+      },
     ],
-    timezoneSection: 'All live sessions are in Pacific Time. Standard LA small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings, with 9:00 AM to 11:00 AM PT Saturday and Sunday options.',
+    timezoneSection:
+      'All live sessions are in Pacific Time. Standard LA small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings, with 9:00 AM to 11:00 AM PT Saturday and Sunday options.',
     demographicSection: {
       heading: 'Cerritos / Irvine — the pre-dental family conversation',
       paragraphs: [
@@ -112,11 +167,31 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     faqs: [
-      { question: 'UCLA or USC Dentistry — what DAT Biology score is competitive?', answer: 'UCLA Dentistry median accepted DAT Bio is ~22; USC Ostrow is ~21–22. Both are competitive California schools. Our coaching targets the 22+ band. Loma Linda and Western accept ~20–21.' },
-      { question: 'My family is in Cerritos / Irvine — what is the planning conversation?', answer: 'The consultation covers: (a) target dental school (UCLA at 22+ vs Western/Loma Linda at 20+), (b) timeline (summer-after-junior-year vs gap year), (c) dual-tracking with MCAT. For Cerritos families, we discuss both UCLA and USC pathways.' },
-      { question: 'Can I pair Cerebrum with a generalist DAT provider?', answer: 'Yes — many LA students use a generalist for PAT and Reading Comprehension, then pair with us for the Biology section. Our Campbell Biology depth exceeds generalist coverage in anatomy/physiology and genetics.' },
-      { question: 'Pacific Time scheduling for LA students?', answer: 'Small-batch: 7:00–9:00 PM PT weekday evenings. Weekend: 9:00–11:00 AM PT. 1:1 available at any PT slot. The 7 PM PT start works well for UCLA/USC students finishing afternoon labs.' },
-      { question: 'How does Cerebrum compare to LA-area DAT prep?', answer: 'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many LA students pair us with a generalist for PAT and Reading Comprehension.' },
+      {
+        question: 'UCLA or USC Dentistry — what DAT Biology score is competitive?',
+        answer:
+          'UCLA Dentistry median accepted DAT Bio is ~22; USC Ostrow is ~21–22. Both are competitive California schools. Our coaching targets the 22+ band. Loma Linda and Western accept ~20–21.',
+      },
+      {
+        question: 'My family is in Cerritos / Irvine — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) target dental school (UCLA at 22+ vs Western/Loma Linda at 20+), (b) timeline (summer-after-junior-year vs gap year), (c) dual-tracking with MCAT. For Cerritos families, we discuss both UCLA and USC pathways.',
+      },
+      {
+        question: 'Can I pair Cerebrum with a generalist DAT provider?',
+        answer:
+          'Yes — many LA students use a generalist for PAT and Reading Comprehension, then pair with us for the Biology section. Our Campbell Biology depth exceeds generalist coverage in anatomy/physiology and genetics.',
+      },
+      {
+        question: 'Pacific Time scheduling for LA students?',
+        answer:
+          'Small-batch: 7:00–9:00 PM PT weekday evenings. Weekend: 9:00–11:00 AM PT. 1:1 available at any PT slot. The 7 PM PT start works well for UCLA/USC students finishing afternoon labs.',
+      },
+      {
+        question: 'How does Cerebrum compare to LA-area DAT prep?',
+        answer:
+          'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many LA students pair us with a generalist for PAT and Reading Comprehension.',
+      },
     ],
   },
 
@@ -130,7 +205,15 @@ export const datMetros: Record<string, DATMetroConfig> = {
     metaTitle: 'DAT Biology Tutor Chicago | UIC Dental, Midwestern, Northwestern',
     metaDescription:
       'DAT Biology tutor for Chicago pre-dental students — UIC College of Dentistry, Midwestern, Northwestern. Biology specialists, CT evenings. From $449.',
-    keywords: ['DAT biology tutor Chicago', 'DAT tutor UIC dental', 'DAT tutor Midwestern dental', 'pre-dental tutor Chicago', 'DAT tutor Naperville', 'Indian American DAT tutor Chicago', 'online DAT biology coaching Chicago'],
+    keywords: [
+      'DAT biology tutor Chicago',
+      'DAT tutor UIC dental',
+      'DAT tutor Midwestern dental',
+      'pre-dental tutor Chicago',
+      'DAT tutor Naperville',
+      'Indian American DAT tutor Chicago',
+      'online DAT biology coaching Chicago',
+    ],
     heroSubtitle:
       'DAT Biology tutoring for UIC College of Dentistry, Midwestern University, and Northwestern Dental pre-dental students — built around the Naperville / Schaumburg South Asian corridor. AIIMS-trained biology specialists, CT evening sessions, $449 to $1,399.',
     whySection: {
@@ -141,13 +224,29 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'UIC College of Dentistry', programmes: 'DMD, Advanced specialties (one of largest US dental schools)' },
-      { name: 'Midwestern University (Downers Grove)', programmes: 'DMD programme, health sciences cluster' },
-      { name: 'Northwestern University', programmes: 'Biology, Biomedical Engineering (dental pathway)' },
-      { name: 'University of Illinois Urbana-Champaign', programmes: 'Biology, Biochemistry (UIC Dental feeder)' },
-      { name: 'Marquette University (Milwaukee)', programmes: 'School of Dentistry, Midwest catchment' },
+      {
+        name: 'UIC College of Dentistry',
+        programmes: 'DMD, Advanced specialties (one of largest US dental schools)',
+      },
+      {
+        name: 'Midwestern University (Downers Grove)',
+        programmes: 'DMD programme, health sciences cluster',
+      },
+      {
+        name: 'Northwestern University',
+        programmes: 'Biology, Biomedical Engineering (dental pathway)',
+      },
+      {
+        name: 'University of Illinois Urbana-Champaign',
+        programmes: 'Biology, Biochemistry (UIC Dental feeder)',
+      },
+      {
+        name: 'Marquette University (Milwaukee)',
+        programmes: 'School of Dentistry, Midwest catchment',
+      },
     ],
-    timezoneSection: 'All live sessions are in Central Time. Standard Chicago small-batch slot is 7:00 PM to 9:00 PM CT on weekday evenings, with 9:00 AM to 11:00 AM CT Saturday and Sunday options.',
+    timezoneSection:
+      'All live sessions are in Central Time. Standard Chicago small-batch slot is 7:00 PM to 9:00 PM CT on weekday evenings, with 9:00 AM to 11:00 AM CT Saturday and Sunday options.',
     demographicSection: {
       heading: 'Naperville / Schaumburg — the pre-dental family conversation',
       paragraphs: [
@@ -156,11 +255,31 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     faqs: [
-      { question: 'UIC Dental — what DAT Biology score is competitive?', answer: 'UIC College of Dentistry median accepted DAT Bio is ~20–21. Our coaching targets the 21+ band. Midwestern Downers Grove accepts ~20. Out-of-state targets like Michigan or Indiana require 22+.' },
-      { question: 'My family is in Naperville — what is the planning conversation?', answer: 'The consultation covers: (a) target school (UIC at 21+ vs Midwestern at 20+ vs out-of-state at 22+), (b) timeline, (c) dual-tracking with MCAT. For Naperville families, UIC is typically the first-choice given in-state tuition.' },
-      { question: 'UIUC pre-dental students — can they join Chicago sessions?', answer: 'All sessions are online. UIUC students in Champaign join remotely. Many UIUC pre-dental students target UIC Dental — the in-state pipeline is strong.' },
-      { question: 'Central Time scheduling for Chicago students?', answer: 'Small-batch: 7:00–9:00 PM CT weekday evenings. Weekend: 9:00–11:00 AM CT. 1:1 available at any CT slot.' },
-      { question: 'How does Cerebrum compare to Chicago-area DAT prep?', answer: 'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many Chicago students pair us with a generalist for PAT and Reading Comprehension.' },
+      {
+        question: 'UIC Dental — what DAT Biology score is competitive?',
+        answer:
+          'UIC College of Dentistry median accepted DAT Bio is ~20–21. Our coaching targets the 21+ band. Midwestern Downers Grove accepts ~20. Out-of-state targets like Michigan or Indiana require 22+.',
+      },
+      {
+        question: 'My family is in Naperville — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) target school (UIC at 21+ vs Midwestern at 20+ vs out-of-state at 22+), (b) timeline, (c) dual-tracking with MCAT. For Naperville families, UIC is typically the first-choice given in-state tuition.',
+      },
+      {
+        question: 'UIUC pre-dental students — can they join Chicago sessions?',
+        answer:
+          'All sessions are online. UIUC students in Champaign join remotely. Many UIUC pre-dental students target UIC Dental — the in-state pipeline is strong.',
+      },
+      {
+        question: 'Central Time scheduling for Chicago students?',
+        answer:
+          'Small-batch: 7:00–9:00 PM CT weekday evenings. Weekend: 9:00–11:00 AM CT. 1:1 available at any CT slot.',
+      },
+      {
+        question: 'How does Cerebrum compare to Chicago-area DAT prep?',
+        answer:
+          'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many Chicago students pair us with a generalist for PAT and Reading Comprehension.',
+      },
     ],
   },
 
@@ -174,7 +293,16 @@ export const datMetros: Record<string, DATMetroConfig> = {
     metaTitle: 'DAT Biology Tutor Houston | UT Health, Baylor Dental, Texas A&M',
     metaDescription:
       'DAT Biology tutor for Houston pre-dental students — UT Health School of Dentistry, Baylor College of Dentistry, Texas A&M. Biology specialists, CT evenings. From $449.',
-    keywords: ['DAT biology tutor Houston', 'DAT tutor UT Health dental', 'DAT tutor Baylor dental', 'pre-dental tutor Houston', 'DAT tutor Sugar Land TX', 'DAT tutor Katy TX', 'Indian American DAT tutor Houston', 'online DAT biology coaching Houston'],
+    keywords: [
+      'DAT biology tutor Houston',
+      'DAT tutor UT Health dental',
+      'DAT tutor Baylor dental',
+      'pre-dental tutor Houston',
+      'DAT tutor Sugar Land TX',
+      'DAT tutor Katy TX',
+      'Indian American DAT tutor Houston',
+      'online DAT biology coaching Houston',
+    ],
     heroSubtitle:
       'DAT Biology tutoring for UT Health School of Dentistry, Baylor College of Dentistry (Dallas), and Texas A&M Dental pre-dental students — built around the Sugar Land / Katy / Missouri City South Asian corridor. AIIMS-trained biology specialists, CT evening sessions, $449 to $1,399.',
     whySection: {
@@ -185,13 +313,20 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'UT Health School of Dentistry Houston', programmes: 'DDS, Advanced Education in General Dentistry' },
-      { name: 'Baylor College of Dentistry (Dallas)', programmes: 'DDS, Texas-wide applicant pool' },
+      {
+        name: 'UT Health School of Dentistry Houston',
+        programmes: 'DDS, Advanced Education in General Dentistry',
+      },
+      {
+        name: 'Baylor College of Dentistry (Dallas)',
+        programmes: 'DDS, Texas-wide applicant pool',
+      },
       { name: 'Texas A&M College of Dentistry (Dallas)', programmes: 'DDS, dual-degree pathways' },
       { name: 'University of Houston', programmes: 'Biology, Biochemistry, pre-dental advising' },
       { name: 'Rice University', programmes: 'Biochemistry & Cell Biology, BioSciences' },
     ],
-    timezoneSection: 'All live sessions are in Central Time. Standard Houston small-batch slot is 7:00 PM to 9:00 PM CT on weekday evenings, with 9:00 AM to 11:00 AM CT Saturday and Sunday options.',
+    timezoneSection:
+      'All live sessions are in Central Time. Standard Houston small-batch slot is 7:00 PM to 9:00 PM CT on weekday evenings, with 9:00 AM to 11:00 AM CT Saturday and Sunday options.',
     demographicSection: {
       heading: 'Sugar Land / Katy / Missouri City — the pre-dental family conversation',
       paragraphs: [
@@ -200,11 +335,31 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     faqs: [
-      { question: 'UT Health Dental Houston — what DAT Biology score is competitive?', answer: 'UT Health School of Dentistry median accepted DAT Bio is ~20–21. Our coaching targets the 21+ band. Baylor and Texas A&M Dental (both in Dallas) accept similar scores for Texas residents.' },
-      { question: 'My family is in Sugar Land / Katy — what is the planning conversation?', answer: 'The consultation covers: (a) target school (UT Health at 21+ vs Baylor/TAMU at 21+), (b) timeline, (c) dual-tracking with MCAT. For Sugar Land families, UT Health Houston is the natural first choice.' },
-      { question: 'Rice or UH pre-dental — different prep?', answer: 'Rice pre-dental students enter with stronger quantitative foundations; UH students may need more content depth. We calibrate the programme based on the diagnostic assessment. Both feed into the same Texas dental school pipeline.' },
-      { question: 'How does Cerebrum compare to Houston-area DAT prep?', answer: 'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many Houston students pair us with a generalist for PAT and Reading Comprehension.' },
-      { question: 'Central Time scheduling for Houston students?', answer: 'Small-batch: 7:00–9:00 PM CT weekday evenings. Weekend: 9:00–11:00 AM CT. 1:1 available at any CT slot.' },
+      {
+        question: 'UT Health Dental Houston — what DAT Biology score is competitive?',
+        answer:
+          'UT Health School of Dentistry median accepted DAT Bio is ~20–21. Our coaching targets the 21+ band. Baylor and Texas A&M Dental (both in Dallas) accept similar scores for Texas residents.',
+      },
+      {
+        question: 'My family is in Sugar Land / Katy — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) target school (UT Health at 21+ vs Baylor/TAMU at 21+), (b) timeline, (c) dual-tracking with MCAT. For Sugar Land families, UT Health Houston is the natural first choice.',
+      },
+      {
+        question: 'Rice or UH pre-dental — different prep?',
+        answer:
+          'Rice pre-dental students enter with stronger quantitative foundations; UH students may need more content depth. We calibrate the programme based on the diagnostic assessment. Both feed into the same Texas dental school pipeline.',
+      },
+      {
+        question: 'How does Cerebrum compare to Houston-area DAT prep?',
+        answer:
+          'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many Houston students pair us with a generalist for PAT and Reading Comprehension.',
+      },
+      {
+        question: 'Central Time scheduling for Houston students?',
+        answer:
+          'Small-batch: 7:00–9:00 PM CT weekday evenings. Weekend: 9:00–11:00 AM CT. 1:1 available at any CT slot.',
+      },
     ],
   },
 
@@ -218,7 +373,16 @@ export const datMetros: Record<string, DATMetroConfig> = {
     metaTitle: 'DAT Biology Tutor Boston | Tufts, BU, Harvard Dental',
     metaDescription:
       'DAT Biology tutor for Boston pre-dental students — Tufts University School of Dental Medicine, BU Goldman School, Harvard School of Dental Medicine. Biology specialists, ET evenings. From $449.',
-    keywords: ['DAT biology tutor Boston', 'DAT tutor Tufts dental', 'DAT tutor BU Goldman dental', 'DAT tutor Harvard dental', 'pre-dental tutor Boston', 'DAT tutor Lexington MA', 'Indian American DAT tutor Boston', 'online DAT biology coaching Boston'],
+    keywords: [
+      'DAT biology tutor Boston',
+      'DAT tutor Tufts dental',
+      'DAT tutor BU Goldman dental',
+      'DAT tutor Harvard dental',
+      'pre-dental tutor Boston',
+      'DAT tutor Lexington MA',
+      'Indian American DAT tutor Boston',
+      'online DAT biology coaching Boston',
+    ],
     heroSubtitle:
       'DAT Biology tutoring for Tufts School of Dental Medicine, BU Henry M. Goldman School of Dental Medicine, and Harvard School of Dental Medicine pre-dental students — built around the Lexington / Newton / North Shore South Asian corridor. AIIMS-trained biology specialists, ET evening sessions, $449 to $1,399.',
     whySection: {
@@ -229,13 +393,26 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     universities: [
-      { name: 'Tufts University School of Dental Medicine', programmes: 'DMD, Advanced specialties' },
-      { name: 'BU Henry M. Goldman School of Dental Medicine', programmes: 'DMD, DMD/MPH, Advanced Education' },
-      { name: 'Harvard School of Dental Medicine', programmes: 'DMD, DMD/PhD (oldest US dental school, 1867)' },
+      {
+        name: 'Tufts University School of Dental Medicine',
+        programmes: 'DMD, Advanced specialties',
+      },
+      {
+        name: 'BU Henry M. Goldman School of Dental Medicine',
+        programmes: 'DMD, DMD/MPH, Advanced Education',
+      },
+      {
+        name: 'Harvard School of Dental Medicine',
+        programmes: 'DMD, DMD/PhD (oldest US dental school, 1867)',
+      },
       { name: 'Boston University', programmes: 'Biology, Biochemistry, pre-dental advising' },
-      { name: 'Northeastern University', programmes: 'Biology, co-op programme (pre-dental track)' },
+      {
+        name: 'Northeastern University',
+        programmes: 'Biology, co-op programme (pre-dental track)',
+      },
     ],
-    timezoneSection: 'All live sessions are in Eastern Time. Standard Boston small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options.',
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard Boston small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options.',
     demographicSection: {
       heading: 'Lexington / Newton — the pre-dental family conversation',
       paragraphs: [
@@ -244,11 +421,31 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     faqs: [
-      { question: 'Tufts, BU, or Harvard Dental — what DAT Biology score is competitive?', answer: 'Tufts Dental median accepted DAT Bio is ~21; BU Goldman is ~21–22; Harvard Dental is ~24+ (tiny class of ~35, extremely competitive). Our coaching targets the 21+ band for Tufts/BU or 24+ for Harvard Dental aspirants.' },
-      { question: 'My family is in Lexington / Newton — what is the planning conversation?', answer: 'The consultation covers: (a) target school tier (Harvard at 24+ vs Tufts/BU at 21+), (b) timeline, (c) dual-tracking with MCAT. For Lexington families, we often discuss hedging pre-dental + pre-med simultaneously.' },
-      { question: 'Northeastern co-op students — how does the DAT timeline work?', answer: 'Northeastern co-op pre-dental students have alternating semesters. The co-op semester (lighter academic load) is ideal for concentrated DAT prep. We calibrate the study plan around the co-op cycle.' },
-      { question: 'How does Cerebrum compare to Boston-area DAT prep?', answer: 'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many Boston students pair us with a generalist for PAT and Reading Comprehension.' },
-      { question: 'Eastern Time scheduling for Boston students?', answer: 'Small-batch: 7:30–9:30 PM ET weekday evenings. Weekend: 9:00–11:00 AM ET. 1:1 available at any ET slot.' },
+      {
+        question: 'Tufts, BU, or Harvard Dental — what DAT Biology score is competitive?',
+        answer:
+          'Tufts Dental median accepted DAT Bio is ~21; BU Goldman is ~21–22; Harvard Dental is ~24+ (tiny class of ~35, extremely competitive). Our coaching targets the 21+ band for Tufts/BU or 24+ for Harvard Dental aspirants.',
+      },
+      {
+        question: 'My family is in Lexington / Newton — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) target school tier (Harvard at 24+ vs Tufts/BU at 21+), (b) timeline, (c) dual-tracking with MCAT. For Lexington families, we often discuss hedging pre-dental + pre-med simultaneously.',
+      },
+      {
+        question: 'Northeastern co-op students — how does the DAT timeline work?',
+        answer:
+          'Northeastern co-op pre-dental students have alternating semesters. The co-op semester (lighter academic load) is ideal for concentrated DAT prep. We calibrate the study plan around the co-op cycle.',
+      },
+      {
+        question: 'How does Cerebrum compare to Boston-area DAT prep?',
+        answer:
+          'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many Boston students pair us with a generalist for PAT and Reading Comprehension.',
+      },
+      {
+        question: 'Eastern Time scheduling for Boston students?',
+        answer:
+          'Small-batch: 7:30–9:30 PM ET weekday evenings. Weekend: 9:00–11:00 AM ET. 1:1 available at any ET slot.',
+      },
     ],
   },
 
@@ -262,7 +459,16 @@ export const datMetros: Record<string, DATMetroConfig> = {
     metaTitle: 'DAT Biology Tutor Dallas | Baylor Dental, Texas A&M Dental, UTD',
     metaDescription:
       'DAT Biology tutor for Dallas pre-dental students — Baylor College of Dentistry, Texas A&M College of Dentistry, UTD. Biology specialists, CT evenings. From $449.',
-    keywords: ['DAT biology tutor Dallas', 'DAT tutor Baylor dental', 'DAT tutor Texas A&M dental', 'pre-dental tutor Dallas', 'DAT tutor Plano TX', 'DAT tutor Frisco TX', 'Indian American DAT tutor Dallas', 'online DAT biology coaching DFW'],
+    keywords: [
+      'DAT biology tutor Dallas',
+      'DAT tutor Baylor dental',
+      'DAT tutor Texas A&M dental',
+      'pre-dental tutor Dallas',
+      'DAT tutor Plano TX',
+      'DAT tutor Frisco TX',
+      'Indian American DAT tutor Dallas',
+      'online DAT biology coaching DFW',
+    ],
     heroSubtitle:
       'DAT Biology tutoring for Baylor College of Dentistry, Texas A&M College of Dentistry, and DFW pre-dental students — built around the Plano / Frisco South Asian corridor. AIIMS-trained biology specialists, CT evening sessions, $449 to $1,399.',
     whySection: {
@@ -279,7 +485,8 @@ export const datMetros: Record<string, DATMetroConfig> = {
       { name: 'SMU', programmes: 'Biological Sciences (pre-dental advising)' },
       { name: 'UT Arlington', programmes: 'Biology, Biochemistry, pre-dental pipeline' },
     ],
-    timezoneSection: 'All live sessions are in Central Time. Standard DFW small-batch slot is 7:00 PM to 9:00 PM CT on weekday evenings, with 9:00 AM to 11:00 AM CT Saturday and Sunday options.',
+    timezoneSection:
+      'All live sessions are in Central Time. Standard DFW small-batch slot is 7:00 PM to 9:00 PM CT on weekday evenings, with 9:00 AM to 11:00 AM CT Saturday and Sunday options.',
     demographicSection: {
       heading: 'Plano / Frisco — the pre-dental family conversation',
       paragraphs: [
@@ -288,11 +495,207 @@ export const datMetros: Record<string, DATMetroConfig> = {
       ],
     },
     faqs: [
-      { question: 'Baylor or Texas A&M Dental — what DAT Biology score is competitive?', answer: 'Both Dallas dental schools accept DAT Bio ~20–21 for Texas residents. Our coaching targets the 21+ band. Out-of-state applicants typically need 22+ for competitive admission.' },
-      { question: 'My family is in Plano / Frisco — what is the planning conversation?', answer: 'The consultation covers: (a) target school (Baylor vs TAMU Dental — both in Dallas), (b) timeline, (c) dual-tracking with MCAT. For Plano families, both dental schools are within commuting distance.' },
-      { question: 'UTD or SMU pre-dental — different prep?', answer: 'UTD pre-dental students have stronger STEM foundations; SMU students may have lighter research loads. We calibrate based on the diagnostic. Both feed into the same Dallas dental school pipeline.' },
-      { question: 'Central Time scheduling for Dallas students?', answer: 'Small-batch: 7:00–9:00 PM CT weekday evenings. Weekend: 9:00–11:00 AM CT. 1:1 available at any CT slot.' },
-      { question: 'How does Cerebrum compare to DFW-area DAT prep?', answer: 'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many DFW students pair us with a generalist for PAT and Reading Comprehension.' },
+      {
+        question: 'Baylor or Texas A&M Dental — what DAT Biology score is competitive?',
+        answer:
+          'Both Dallas dental schools accept DAT Bio ~20–21 for Texas residents. Our coaching targets the 21+ band. Out-of-state applicants typically need 22+ for competitive admission.',
+      },
+      {
+        question: 'My family is in Plano / Frisco — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) target school (Baylor vs TAMU Dental — both in Dallas), (b) timeline, (c) dual-tracking with MCAT. For Plano families, both dental schools are within commuting distance.',
+      },
+      {
+        question: 'UTD or SMU pre-dental — different prep?',
+        answer:
+          'UTD pre-dental students have stronger STEM foundations; SMU students may have lighter research loads. We calibrate based on the diagnostic. Both feed into the same Dallas dental school pipeline.',
+      },
+      {
+        question: 'Central Time scheduling for Dallas students?',
+        answer:
+          'Small-batch: 7:00–9:00 PM CT weekday evenings. Weekend: 9:00–11:00 AM CT. 1:1 available at any CT slot.',
+      },
+      {
+        question: 'How does Cerebrum compare to DFW-area DAT prep?',
+        answer:
+          'Generalist DAT providers charge $595–$2,599 for all sections. Cerebrum is a biology-section specialist at $449–$1,399. Many DFW students pair us with a generalist for PAT and Reading Comprehension.',
+      },
+    ],
+  },
+
+  toronto: {
+    slug: 'toronto',
+    city: 'Toronto',
+    stateOrRegion: 'Ontario',
+    stateCode: 'ON',
+    timezone: 'Eastern Time',
+    timezoneShort: 'ET',
+    metaTitle: 'DAT Biology Tutor Toronto | U of T, Western, McGill Dentistry',
+    metaDescription:
+      'DAT Biology tutor for Toronto pre-dental students — University of Toronto Faculty of Dentistry, Western Schulich, McGill. AIIMS-trained biology specialists, ET evenings. From $449.',
+    keywords: [
+      'DAT biology tutor Toronto',
+      'DAT tutor University of Toronto dental',
+      'DAT tutor Western Schulich dental',
+      'DAT tutor McGill dental',
+      'pre-dental tutor Toronto',
+      'DAT tutor Mississauga',
+      'DAT tutor Brampton',
+      'Indian Canadian DAT tutor Toronto',
+      'online DAT biology coaching Toronto',
+      'Canadian DAT biology tutor',
+    ],
+    heroSubtitle:
+      "DAT Biology tutoring for University of Toronto Faculty of Dentistry, Western University Schulich School of Dentistry, and McGill Faculty of Dentistry pre-dental students — built around Toronto's competitive pre-dental pipeline and the Mississauga / Brampton South Asian corridor. AIIMS-trained biology specialists, Campbell Biology curriculum, Eastern Time evening sessions, $449 to $1,399.",
+    whySection: {
+      heading: "Why Toronto is Canada's largest pre-dental market",
+      paragraphs: [
+        "Toronto anchors the largest pre-dental ecosystem in Canada. The University of Toronto Faculty of Dentistry is the country's oldest and most prestigious dental school (founded 1875). Western University Schulich School of Dentistry and Medicine (London, Ontario — 2 hours from Toronto) and McGill University Faculty of Dentistry (Montreal) serve the broader Ontario-Quebec corridor. Most Canadian DAT candidates are concentrated in the Greater Toronto Area.",
+        'The Mississauga / Brampton / Scarborough South Asian corridor — one of the highest-density Indian-Canadian communities in North America — drives significant pre-dental demand. Dentistry is culturally valued alongside medicine, with many families dual-tracking DAT and MCAT preparation.',
+      ],
+    },
+    universities: [
+      {
+        name: 'University of Toronto Faculty of Dentistry',
+        programmes: 'DDS, MSc, PhD, Advanced specialty (oldest dental school in Canada, 1875)',
+      },
+      {
+        name: 'Western University Schulich School of Dentistry',
+        programmes: 'DDS, dual-degree pathways (London, Ontario)',
+      },
+      {
+        name: 'McGill University Faculty of Dentistry',
+        programmes: 'DMD, MSc, Advanced specialties (Montreal)',
+      },
+      {
+        name: 'University of Toronto Mississauga (UTM)',
+        programmes: 'Biology, Biomedical Sciences (pre-dental feeder)',
+      },
+      {
+        name: 'McMaster University',
+        programmes: 'Health Sciences, Biology (Hamilton — pre-dental pipeline)',
+      },
+    ],
+    timezoneSection:
+      'All live sessions are in Eastern Time. Standard Toronto small-batch slot is 7:30 PM to 9:30 PM ET on weekday evenings, with 9:00 AM to 11:00 AM ET Saturday and Sunday options. Senior Faculty 1:1 can be scheduled at any ET slot.',
+    demographicSection: {
+      heading: 'Mississauga / Brampton / Scarborough — the pre-dental family conversation',
+      paragraphs: [
+        'The Mississauga / Brampton corridor has one of the largest South Asian populations outside of India. Pre-dental families in these communities increasingly view dentistry as the optimal clinical career path — shorter training than medicine (4 years DDS vs 5+ years MD residency), strong earning potential, and better work-life balance.',
+        'What we hear from Toronto-area pre-dental parents: (1) U of T Dentistry is the primary target (extremely competitive — DAT Bio 22+ required); (2) Western Schulich is a strong alternative with slightly lower cut-offs; (3) many families dual-track DAT + MCAT as a hedging strategy; (4) the Canadian DAT has the same biology section as the US DAT. We structure the consultation around target school tier and timeline.',
+      ],
+    },
+    faqs: [
+      {
+        question: 'U of T Dentistry or Western Schulich — what DAT Biology score is competitive?',
+        answer:
+          'University of Toronto Faculty of Dentistry is extremely competitive — median accepted DAT Bio is ~22-23. Western Schulich accepts DAT Bio ~21-22. McGill typically requires ~21+. Our coaching targets the 22+ band with specific focus on the Campbell-aligned content areas that DAT Biology emphasises (anatomy/physiology, genetics, developmental biology, ecology).',
+      },
+      {
+        question: 'My family is in Mississauga / Brampton — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) target dental school tier (U of T at 22+ vs Western at 21+), (b) timeline (summer-after-junior-year vs gap year), (c) whether the student is dual-tracking DAT + MCAT, (d) the Canadian DAT application cycle through AADSAS. For Mississauga/Brampton families, U of T is typically the first choice given proximity.',
+      },
+      {
+        question: 'Is the Canadian DAT the same as the US DAT for biology?',
+        answer:
+          'Yes — the Canadian DAT biology section tests the same content as the US DAT. The Canadian DAT also includes a Manual Dexterity Test (MDT) not found in the US version. Our biology coaching applies equally to both versions. All pricing is in USD as the DAT is a standardised US exam administered by the ADA.',
+      },
+      {
+        question: 'Can I pair Cerebrum DAT Biology with a generalist DAT provider?',
+        answer:
+          'Yes — this is common among Toronto students. Many use a generalist for PAT (Perceptual Ability) and Reading Comprehension, then pair with us for the Biology section. Our Campbell Biology depth exceeds what generalist providers cover, particularly in anatomy/physiology and genetics.',
+      },
+      {
+        question: 'How does Cerebrum compare to Canadian DAT prep providers?',
+        answer:
+          'Canadian DAT providers charge CAD $800-$3,500 for all sections. Cerebrum is a biology-section specialist at $449-$1,399 USD for Biology only. Most Toronto students pair us with a generalist for PAT and Reading Comprehension. Our AIIMS-trained faculty provide deeper biology coverage than generalist instructors.',
+      },
+    ],
+  },
+
+  vancouver: {
+    slug: 'vancouver',
+    city: 'Vancouver',
+    stateOrRegion: 'British Columbia',
+    stateCode: 'BC',
+    timezone: 'Pacific Time',
+    timezoneShort: 'PT',
+    metaTitle: 'DAT Biology Tutor Vancouver | UBC Faculty of Dentistry',
+    metaDescription:
+      'DAT Biology tutor for Vancouver pre-dental students — UBC Faculty of Dentistry (only dental school in western Canada). AIIMS-trained biology specialists, PT evenings. From $449.',
+    keywords: [
+      'DAT biology tutor Vancouver',
+      'DAT tutor UBC dental',
+      'DAT tutor UBC Faculty of Dentistry',
+      'pre-dental tutor Vancouver',
+      'DAT tutor Surrey BC',
+      'Indian Canadian DAT tutor Vancouver',
+      'online DAT biology coaching Vancouver',
+      'Canadian DAT biology tutor BC',
+    ],
+    heroSubtitle:
+      "DAT Biology tutoring for UBC Faculty of Dentistry pre-dental students — Vancouver's only dental school and the sole dental programme in western Canada. Built around the Surrey / Burnaby / Richmond South Asian corridor. AIIMS-trained biology specialists, Campbell Biology curriculum, Pacific Time evening sessions, $449 to $1,399.",
+    whySection: {
+      heading: "Why Vancouver is western Canada's pre-dental gateway",
+      paragraphs: [
+        'Vancouver is home to the UBC Faculty of Dentistry — the only dental school in western Canada (and one of only 10 dental schools in the entire country). This makes UBC Dentistry the exclusive target for BC-based pre-dental students. The programme is highly competitive: approximately 40-48 seats per year with a large applicant pool from across western Canada.',
+        "The Surrey / Burnaby / Richmond South Asian corridor drives significant pre-dental demand. Vancouver's Indian-Canadian community (concentrated in Surrey, Delta, and North Burnaby) views dentistry as a prestigious clinical career. The combination of limited dental school capacity (one school for all of western Canada) and high demand creates intense competition for UBC Dentistry spots.",
+      ],
+    },
+    universities: [
+      {
+        name: 'UBC Faculty of Dentistry',
+        programmes: 'DMD, MSc, PhD, Advanced specialty (only dental school in western Canada)',
+      },
+      {
+        name: 'University of British Columbia (main campus)',
+        programmes: 'Biology, Biochemistry, Integrated Sciences (pre-dental feeder)',
+      },
+      {
+        name: 'Simon Fraser University',
+        programmes: 'Biomedical Physiology and Kinesiology, Molecular Biology (pre-dental track)',
+      },
+      {
+        name: 'University of Victoria',
+        programmes: 'Biology, Biochemistry (Vancouver Island feeder to UBC Dentistry)',
+      },
+    ],
+    timezoneSection:
+      'All live sessions are in Pacific Time. Standard Vancouver small-batch slot is 7:00 PM to 9:00 PM PT on weekday evenings, with 9:00 AM to 11:00 AM PT Saturday and Sunday options. Senior Faculty 1:1 can be scheduled at any PT slot.',
+    demographicSection: {
+      heading: 'Surrey / Burnaby / Richmond — the pre-dental family conversation',
+      paragraphs: [
+        'Surrey has one of the largest South Asian populations in Canada. Pre-dental families in Surrey, Delta, North Burnaby, and Richmond drive strong demand for UBC Dentistry preparation. With only one dental school in all of western Canada, the competition for UBC Dentistry is intense — every seat matters.',
+        'What we hear from Vancouver-area pre-dental parents: (1) UBC Dentistry is the only realistic local option — there is no backup dental school in BC; (2) DAT Biology 22+ is competitive for UBC; (3) students who miss UBC often apply to US dental schools (University of Washington, OHSU) or eastern Canadian schools (U of T, Western); (4) many families dual-track DAT + MCAT. We structure the consultation around UBC competitiveness and backup planning.',
+      ],
+    },
+    faqs: [
+      {
+        question: 'UBC Dentistry — what DAT Biology score is competitive?',
+        answer:
+          'UBC Faculty of Dentistry is highly competitive with a median accepted DAT Bio of ~22-23. The programme admits approximately 40-48 students per year from a large applicant pool. Our coaching targets the 22+ band. Because UBC is the only dental school in western Canada, the applicant pool is deep and the cut-off is correspondingly high.',
+      },
+      {
+        question: 'My family is in Surrey — what is the planning conversation?',
+        answer:
+          'The consultation covers: (a) UBC Dentistry target score (DAT Bio 22+), (b) timeline (summer-after-third-year vs gap year), (c) backup plan if UBC is not achieved (US dental schools, eastern Canadian schools), (d) whether the student is dual-tracking DAT + MCAT. For Surrey families, we emphasise that UBC is the only BC option — there is no in-province backup.',
+      },
+      {
+        question: 'If I miss UBC, what are my backup options?',
+        answer:
+          'Western Canada has only UBC for dentistry. Backup options: (1) University of Toronto Faculty of Dentistry, (2) Western University Schulich Dentistry, (3) University of Alberta (pending accreditation status), (4) US dental schools — University of Washington, Oregon Health & Science University (OHSU), and others that accept Canadian applicants. We discuss backup planning during the initial consultation.',
+      },
+      {
+        question: 'Pacific Time scheduling for Vancouver students?',
+        answer:
+          'Small-batch: 7:00-9:00 PM PT weekday evenings. Weekend: 9:00-11:00 AM PT. 1:1 available at any PT slot. The 7 PM PT start works well for UBC and SFU students finishing afternoon labs.',
+      },
+      {
+        question: 'How does Cerebrum compare to Vancouver-area DAT prep?',
+        answer:
+          'Canadian DAT providers charge CAD $800-$3,500 for all sections. Cerebrum is a biology-section specialist at $449-$1,399 USD for Biology only. Most Vancouver students pair us with a generalist for PAT and Reading Comprehension. Our AIIMS-trained faculty provide deeper biology coverage than what generalist providers offer.',
+      },
     ],
   },
 }
