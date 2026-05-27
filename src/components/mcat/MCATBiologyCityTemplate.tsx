@@ -76,11 +76,26 @@ function buildSchemas(metro: MCATMetroConfig) {
     },
   }
 
-  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema }
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty#person`,
+    name: 'Dr. Shekhar C Singh',
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained biology educator specialising in MCAT Bio/Biochem preparation for ${metro.city} pre-med students. Campbell + Lehninger curriculum mapped to AAMC content categories.`,
+    url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
+    image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
+    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['MCAT Biology', 'MCAT Biochemistry', 'MCAT B/B Section', 'Campbell Biology', 'Lehninger Biochemistry', 'AAMC Content Categories', 'Pre-Medical Education'],
+    sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
+  }
+
+  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema, personSchema }
 }
 
 export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroConfig }) {
-  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema } = buildSchemas(metro)
+  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema, personSchema } = buildSchemas(metro)
 
   const wa =
     'https://wa.me/918826444334?text=' +
@@ -94,6 +109,7 @@ export default function MCATBiologyCityTemplate({ metro }: { metro: MCATMetroCon
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">

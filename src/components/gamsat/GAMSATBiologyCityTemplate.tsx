@@ -56,11 +56,26 @@ function buildSchemas(metro: GAMSATMetroConfig) {
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
   }
 
-  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema }
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty#person`,
+    name: 'Dr. Shekhar C Singh',
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained biology educator specialising in GAMSAT Section III preparation for ${metro.city} graduate medicine applicants.`,
+    url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
+    image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
+    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['GAMSAT Section III', 'Graduate Entry Medicine', 'GAMSAT Biology', 'GAMSAT Reasoning in Biological Sciences', 'Campbell Biology'],
+    sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
+  }
+
+  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema, personSchema }
 }
 
 export default function GAMSATBiologyCityTemplate({ metro }: { metro: GAMSATMetroConfig }) {
-  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema } = buildSchemas(metro)
+  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema, personSchema } = buildSchemas(metro)
 
   const wa =
     'https://wa.me/918826444334?text=' +
@@ -72,6 +87,7 @@ export default function GAMSATBiologyCityTemplate({ metro }: { metro: GAMSATMetr
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
       <section className="bg-gradient-to-br from-purple-900 to-indigo-900 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">

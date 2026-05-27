@@ -167,6 +167,21 @@ export function IBBiologySchoolSchemas({
     },
   }
 
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty#person`,
+    name: 'Dr. Shekhar C Singh',
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained IB Biology educator with examiner-level 2025-syllabus expertise. Tutoring students at ${school.shortName} in ${school.cityCountry}.`,
+    url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
+    image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
+    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['IB Biology HL', 'IB Biology SL', 'IB Biology IA', 'IB Extended Essay Biology', 'IB 2025 Syllabus', 'Paper 1', 'Paper 2', 'Campbell Biology'],
+    sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
+  }
+
   return (
     <>
       <script
@@ -184,6 +199,10 @@ export function IBBiologySchoolSchemas({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
     </>
   )

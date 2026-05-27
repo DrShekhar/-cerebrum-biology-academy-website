@@ -62,11 +62,26 @@ function buildSchemas(metro: USMLEMetroConfig) {
     speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
   }
 
-  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema }
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty#person`,
+    name: 'Dr. Shekhar C Singh',
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained biology educator specialising in USMLE Step 1 biology foundations for ${metro.city} ${metro.countryCode === 'IN' ? 'IMG' : 'medical'} students. First Aid mapped, Pathoma + Costanzo aligned.`,
+    url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
+    image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
+    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['USMLE Step 1', 'USMLE Biology Foundations', 'First Aid USMLE', 'Pathoma', 'Medical Biochemistry', 'Physiology', 'Microbiology', 'Immunology'],
+    sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
+  }
+
+  return { courseSchema, faqSchema, breadcrumbSchema, speakableSchema, personSchema }
 }
 
 export default function USMLEStep1CityTemplate({ metro }: { metro: USMLEMetroConfig }) {
-  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema } = buildSchemas(metro)
+  const { courseSchema, faqSchema, breadcrumbSchema, speakableSchema, personSchema } = buildSchemas(metro)
   const isIndia = metro.countryCode === 'IN'
 
   const wa =
@@ -79,6 +94,7 @@ export default function USMLEStep1CityTemplate({ metro }: { metro: USMLEMetroCon
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
       <section className="bg-gradient-to-br from-red-900 to-rose-800 py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-4">
