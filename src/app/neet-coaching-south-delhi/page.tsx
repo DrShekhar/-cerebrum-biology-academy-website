@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import PageContent from './PageContent'
@@ -332,6 +333,50 @@ export default function NEETCoachingSouthDelhiPage() {
         faqs={faqs}
       />
       <PageContent />
+
+      {/* Internal links — locality sub-pages + satellite pages + cross-NCR hubs */}
+      <section className="py-12 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">NEET Coaching Across South Delhi</h2>
+          <p className="text-slate-600 mb-6">Explore NEET Biology coaching in your specific South Delhi locality.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link href="/neet-coaching-south-extension" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">South Extension</span></Link>
+            <Link href="/neet-coaching-green-park-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Green Park</span></Link>
+            <Link href="/neet-coaching-hauz-khas-metro" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Hauz Khas</span></Link>
+            <Link href="/neet-coaching-defence-colony-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Defence Colony</span></Link>
+            <Link href="/neet-coaching-saket-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Saket</span></Link>
+            <Link href="/neet-coaching-vasant-kunj-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Vasant Kunj</span></Link>
+            <Link href="/neet-coaching-lajpat-nagar" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Lajpat Nagar</span></Link>
+            <Link href="/neet-coaching-panchsheel-park-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Panchsheel Park</span></Link>
+            <Link href="/neet-coaching-safdarjung-enclave-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Safdarjung Enclave</span></Link>
+            <Link href="/neet-coaching-cr-park-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">CR Park</span></Link>
+          </div>
+
+          <h3 className="text-lg font-semibold text-slate-900 mt-8 mb-3">Programme Pages</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <Link href="/neet-foundation-class-9-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Foundation Class 9</span></Link>
+            <Link href="/neet-foundation-class-10-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Foundation Class 10</span></Link>
+            <Link href="/best-neet-coaching-delhi-ncr" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Best NEET Delhi NCR</span></Link>
+            <Link href="/neet-coaching-fees" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Fee Comparison</span></Link>
+          </div>
+
+          <h3 className="text-lg font-semibold text-slate-900 mt-8 mb-3">Other Delhi NCR Centres</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <Link href="/neet-coaching-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Delhi (all centres)</span></Link>
+            <Link href="/neet-coaching-gurugram" className="block p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Gurugram</span></Link>
+            <Link href="/neet-coaching-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Noida</span></Link>
+            <Link href="/neet-coaching-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Faridabad</span></Link>
+          </div>
+
+          <h3 className="text-lg font-semibold text-slate-900 mt-8 mb-3">Beyond NEET</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <Link href="/ib-biology/south-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-amber-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">IB Biology South Delhi</span></Link>
+            <Link href="/nseb-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-amber-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">NSEB Biology Olympiad</span></Link>
+            <Link href="/best-neet-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-amber-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Best NEET Biology Tutor</span></Link>
+          </div>
+        </div>
+      </section>
+
       <NearMeKeywordInjector
         location="South Delhi"
         parentLocation="Delhi NCR"
