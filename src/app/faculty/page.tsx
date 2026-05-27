@@ -32,6 +32,8 @@ export const metadata: Metadata = {
       "Meet Dr. Shekhar C Singh (AIIMS) and the senior team. Bio-only focus, small batches (10-25), and direct founder-led mentoring at the top tier.",
     url: 'https://cerebrumbiologyacademy.com/faculty',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const FOUNDER = facultyMembers.find((f) => f.id === 'dr-shekhar-singh')

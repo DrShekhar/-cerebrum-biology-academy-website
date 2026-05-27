@@ -24,6 +24,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/boards/rajasthan-board`,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function RajasthanBoardPage() {

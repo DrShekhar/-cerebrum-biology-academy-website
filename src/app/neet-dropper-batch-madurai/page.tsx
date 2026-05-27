@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   keywords: ['neet dropper batch madurai', 'neet repeater course madurai', 'best dropper batch neet madurai'],
   alternates: { canonical: `https://cerebrumbiologyacademy.com/neet-dropper-batch-madurai` },
   openGraph: { title: `NEET Dropper Batch 2026-27 ${cityName}`, url: `https://cerebrumbiologyacademy.com/neet-dropper-batch-madurai`, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function Page() {

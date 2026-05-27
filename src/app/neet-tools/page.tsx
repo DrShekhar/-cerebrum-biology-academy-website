@@ -44,6 +44,8 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-tools',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const tools = [

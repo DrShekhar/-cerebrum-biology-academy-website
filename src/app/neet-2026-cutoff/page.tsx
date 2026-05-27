@@ -46,6 +46,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-2026-cutoff',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const qualifyingCutoff = [

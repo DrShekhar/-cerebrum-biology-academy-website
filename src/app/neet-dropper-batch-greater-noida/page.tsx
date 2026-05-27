@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-greater-noida',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

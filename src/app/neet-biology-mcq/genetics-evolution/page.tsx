@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/genetics-evolution',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const structuredData = {

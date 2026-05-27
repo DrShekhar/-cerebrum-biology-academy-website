@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/enrollment',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const upcomingBatches = [

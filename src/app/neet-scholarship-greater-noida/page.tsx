@@ -37,6 +37,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-scholarship-greater-noida',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const scholarshipSlabs = [

@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/batch-types',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 interface BatchCard {

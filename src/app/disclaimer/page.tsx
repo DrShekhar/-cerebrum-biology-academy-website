@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/disclaimer',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Disclaimer', description: 'Legal disclaimer for Cerebrum Biology Academy educational services and website content.', type: 'website' },
 }
 
 export default function DisclaimerPage() {

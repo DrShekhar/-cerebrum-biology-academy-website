@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'NEET 2026 Exam Countdown Timer | Days Left for NEET', description: 'Live countdown to NEET 2026 exam. Track days, hours, minutes left. Get study planner, important dates, and preparation tips from NEET toppers.', type: 'website' },
 }
 
 // NEET Exam Dates - First Sunday of May each year

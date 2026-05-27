@@ -31,6 +31,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-exam-centres-abroad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const config: BestVerticalConfig = {

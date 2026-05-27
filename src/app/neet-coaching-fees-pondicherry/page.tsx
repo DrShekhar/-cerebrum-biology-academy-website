@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   keywords: ['neet coaching fees pondicherry', 'NEET biology pondicherry', 'best NEET pondicherry'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching Fees Pondicherry', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Pondicherry and interested in NEET coaching. Please share details.")

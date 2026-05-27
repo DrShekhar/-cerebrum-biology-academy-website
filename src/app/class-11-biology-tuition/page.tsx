@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/class-11-biology-tuition',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Class 11 Biology Tuition Delhi | CBSE Board Coaching', description: 'Best Class 11 Biology tuition in Delhi NCR. Expert CBSE board coaching. Score 95+. Book free demo. Call +91-88264-44334', type: 'website' },
 }
 
 const usps: USP[] = [

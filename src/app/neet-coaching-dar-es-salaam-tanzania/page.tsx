@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dar-es-salaam-tanzania',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'NEET Coaching in Dar es Salaam, Tanzania', description: 'Expert NEET coaching in Dar es Salaam, Tanzania. Dar es Salaam, Tanzania', type: 'website' },
 }
 
 export default function Page() {

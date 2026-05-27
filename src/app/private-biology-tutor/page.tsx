@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://cerebrumbiologyacademy.com/private-biology-tutor`,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export const revalidate = 86400

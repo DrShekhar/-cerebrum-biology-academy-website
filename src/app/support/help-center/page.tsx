@@ -5,6 +5,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/support/help-center' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 /**

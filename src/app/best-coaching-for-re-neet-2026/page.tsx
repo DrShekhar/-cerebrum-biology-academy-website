@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/best-coaching-for-re-neet-2026',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const config: BestVerticalConfig = {

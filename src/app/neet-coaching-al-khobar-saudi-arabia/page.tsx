@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-al-khobar-saudi-arabia',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'NEET Coaching in Al Khobar, Saudi Arabia', description: 'Expert NEET coaching in Al Khobar, Saudi Arabia. Al Khobar, a major hub in Saudi Arabia', type: 'website' },
 }
 
 export default async function Page() {

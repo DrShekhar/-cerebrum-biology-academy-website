@@ -40,6 +40,8 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'profile',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const credentials = [

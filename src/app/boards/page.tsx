@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/boards',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Board Preparation | CBSE, ICSE, IGCSE, IB Biology Coaching', description: 'Expert Biology coaching for all major boards - CBSE, ICSE, IGCSE, IB, and State Boards. Score 90+ marks with our specialized board preparation programs.', type: 'website' },
 }
 
 export default function BoardPreparationPage() {

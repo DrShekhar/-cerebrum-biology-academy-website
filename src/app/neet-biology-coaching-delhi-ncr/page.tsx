@@ -37,6 +37,8 @@ export const metadata: Metadata = {
       'Premier NEET Biology coaching with 15+ years experience. Small batches, expert faculty, 98% results. Book free demo.',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const usps: USP[] = [

@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     description:
       'Practice 5,900+ free Biology Olympiad MCQs based on Campbell Biology. NSEB, USABO, and IBO preparation.',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const campbellUnits = [

@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/boards/igcse',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'IGCSE Biology Coaching | Cambridge Curriculum | International Standards | Cerebrum Biology Academy', description: 'Expert IGCSE Biology coaching following Cambridge curriculum. International teaching standards, practical assessments, and global university preparation.', type: 'website' },
 }
 
 export default function IGCSEBiologyPage() {

@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/diagrams',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Interactive Biology Diagrams', description: 'Explore interactive NCERT-style biology diagrams for NEET preparation. Learn plant anatomy, tissue types, and stem cross-sections with our visual learning tools.', type: 'website' },
 }
 
 export default function DiagramsPage() {

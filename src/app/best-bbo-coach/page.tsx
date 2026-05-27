@@ -31,6 +31,8 @@ export const metadata: Metadata = {
       'en-IN': 'https://cerebrumbiologyacademy.com/best-bbo-coach',
     },
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const config: BestVerticalConfig = {

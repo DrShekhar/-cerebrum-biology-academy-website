@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dlf-phase-1-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const nearbyLandmarks = [

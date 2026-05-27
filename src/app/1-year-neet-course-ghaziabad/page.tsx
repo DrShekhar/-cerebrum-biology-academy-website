@@ -40,6 +40,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/1-year-neet-course-ghaziabad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const coursePhases = [

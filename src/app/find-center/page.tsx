@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/find-center',
   },
   robots: { index: true, follow: true },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const centers = [

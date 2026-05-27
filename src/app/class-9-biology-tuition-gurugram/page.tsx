@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/class-9-biology-tuition-gurugram',
   },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/class-9-biology-tuition-gurugram' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/re-neet-2026-delhi',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function ReNEETDelhiPage() {

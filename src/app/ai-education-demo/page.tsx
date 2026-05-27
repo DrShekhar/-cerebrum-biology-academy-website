@@ -26,6 +26,8 @@ export const metadata: Metadata = {
     description: 'The most advanced AI-powered Biology tutor for NEET aspirants',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function AIEducationDemo() {

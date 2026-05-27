@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/cbse-students-abroad-neet',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const config: BestVerticalConfig = {

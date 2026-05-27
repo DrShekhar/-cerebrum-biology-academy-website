@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/nri-quota-mbbs',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const config: BestVerticalConfig = {

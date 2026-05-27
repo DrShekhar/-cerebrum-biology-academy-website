@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/best-neet-biology-coaching',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

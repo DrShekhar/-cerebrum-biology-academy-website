@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ['NSEB coaching visakhapatnam', 'biology olympiad visakhapatnam', 'NSEB preparation visakhapatnam', 'INBO coaching visakhapatnam', 'IBO preparation visakhapatnam'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NSEB Coaching Visakhapatnam | Cerebrum', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — my child in Visakhapatnam is interested in NSEB/Biology Olympiad coaching. Please share programme details.")

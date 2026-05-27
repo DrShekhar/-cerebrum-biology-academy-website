@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   },
 
   robots: { index: false, follow: true },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Thank You - Seminar Registration', description: 'Thank You - Seminar Registration', type: 'website' },
 }
 
 export default function SeminarThankYouLayout({ children }: { children: React.ReactNode }) {

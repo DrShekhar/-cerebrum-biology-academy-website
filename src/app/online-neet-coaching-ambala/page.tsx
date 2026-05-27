@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   keywords: ['online neet coaching ambala', 'NEET biology ambala'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'Online NEET Coaching Ambala', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — in Ambala, interested in NEET coaching.")
 const faqs = [

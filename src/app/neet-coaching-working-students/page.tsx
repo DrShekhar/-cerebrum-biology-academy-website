@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-working-students',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function NEETCoachingWorkingStudentsPage() {

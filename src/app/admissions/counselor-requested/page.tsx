@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   },
 
   robots: { index: false, follow: false },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Counselor Request Received', description: 'Counselor Request Received', type: 'website' },
 }
 
 export default function CounselorRequestedPage() {

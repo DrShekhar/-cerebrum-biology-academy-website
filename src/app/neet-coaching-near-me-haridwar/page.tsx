@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   keywords: ['neet coaching near me haridwar', 'NEET biology haridwar'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching Near Me Haridwar', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — in Haridwar, interested in NEET coaching.")
 const faqs = [

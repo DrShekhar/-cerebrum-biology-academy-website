@@ -36,6 +36,8 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

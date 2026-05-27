@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-crash-course-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

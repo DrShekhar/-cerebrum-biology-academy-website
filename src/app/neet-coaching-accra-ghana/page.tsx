@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-accra-ghana',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'NEET Coaching in Accra, Ghana', description: 'Expert NEET coaching in Accra, Ghana. Accra, Ghana', type: 'website' },
 }
 
 export default function Page() {

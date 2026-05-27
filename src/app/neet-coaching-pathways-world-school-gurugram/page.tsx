@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-pathways-world-school-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const whyPathwaysStudents = [

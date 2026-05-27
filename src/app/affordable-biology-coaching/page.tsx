@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://cerebrumbiologyacademy.com/affordable-biology-coaching`,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export const revalidate = 86400

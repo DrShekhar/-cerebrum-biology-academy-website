@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   keywords: ['neet dropper batch ranchi', 'neet repeater course ranchi', 'best dropper batch neet ranchi'],
   alternates: { canonical: `https://cerebrumbiologyacademy.com/neet-dropper-batch-ranchi` },
   openGraph: { title: `NEET Dropper Batch 2026-27 ${cityName}`, url: `https://cerebrumbiologyacademy.com/neet-dropper-batch-ranchi`, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function Page() {

@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     description: '98% success rate, 67+ AIIMS selections, 2,500+ students coached. Video testimonials from our toppers.',
     url: 'https://cerebrumbiologyacademy.com/results',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const breadcrumbSchema = {

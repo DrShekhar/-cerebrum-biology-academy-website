@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     index: false,
     follow: true,
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Verify Certificate', description: 'Verify the authenticity of a Cerebrum Biology Academy certificate', type: 'website' },
 }
 
 async function verifyCertificate(code: string) {

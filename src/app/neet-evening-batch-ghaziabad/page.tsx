@@ -39,6 +39,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-evening-batch-ghaziabad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const schedule = [

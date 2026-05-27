@@ -48,6 +48,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-teacher-india',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const credentials = [

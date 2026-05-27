@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const courses = [

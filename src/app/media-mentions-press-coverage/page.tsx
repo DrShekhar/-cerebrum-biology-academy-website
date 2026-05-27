@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/media-mentions-press-coverage',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const pressItems = [

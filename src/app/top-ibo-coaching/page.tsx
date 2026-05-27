@@ -24,6 +24,8 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/top-ibo-coaching',
     type: 'article',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function TopIBOPage() {

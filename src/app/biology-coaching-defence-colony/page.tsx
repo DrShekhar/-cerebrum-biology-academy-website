@@ -26,6 +26,8 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-coaching-defence-colony',
   },
   robots: { index: true, follow: true },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export const revalidate = 86400

@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   keywords: ['neet coaching fees amritsar', 'NEET biology amritsar'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching Fees Amritsar', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — in Amritsar, interested in NEET coaching.")
 const faqs = [

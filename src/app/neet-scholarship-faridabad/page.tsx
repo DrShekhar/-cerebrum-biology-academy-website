@@ -36,6 +36,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-scholarship-faridabad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const scholarshipSlabs = [

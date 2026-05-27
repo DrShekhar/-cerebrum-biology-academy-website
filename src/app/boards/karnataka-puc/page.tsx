@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/boards/karnataka-puc`,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function KarnatakaPUCPage() {

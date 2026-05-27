@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-gurugram',
   },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-gurugram' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

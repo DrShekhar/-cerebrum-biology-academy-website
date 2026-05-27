@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/boards/cbse',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'CBSE Biology Coaching | Class 11-12 NCERT | NEET Preparation', description: 'Expert CBSE Biology coaching for Classes 11-12. NCERT-focused teaching, board exam excellence, and integrated NEET preparation. Score 90+ marks!', type: 'website' },
 }
 
 export default function CBSEBiologyPage() {

@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/ai-features',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'AI Features', description: 'AI-powered study tools including ClaudeChat, Voice Training, and study analytics for NEET Biology', type: 'website' },
 }
 
 export default function AIFeaturesPage() {

@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tuition-near-me',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function BiologyTuitionNearMePage() {

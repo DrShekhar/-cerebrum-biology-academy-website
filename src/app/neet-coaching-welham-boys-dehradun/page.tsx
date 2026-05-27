@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   other: { 'article:modified_time': '2026-05-27' },
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching for Welham Boys School | Cerebrum', description: 'NEET Biology for Welham Boys School boarding students.', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — my child is at Welham Boys School (Dehradun) and I want NEET Biology coaching. Please share batch details and hostel-friendly timings.")

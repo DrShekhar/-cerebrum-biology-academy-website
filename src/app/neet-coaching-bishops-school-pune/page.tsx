@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-bishops-school-pune`,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

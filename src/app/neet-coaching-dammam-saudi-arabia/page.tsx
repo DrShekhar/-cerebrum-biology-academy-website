@@ -29,6 +29,8 @@ export const metadata: Metadata = {
       'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-dammam-saudi-arabia',
     },
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default async function Page() {

@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent('Hi — I want to discuss MCAT Biology pricing and which tier fits my goals. Please share programme details.')

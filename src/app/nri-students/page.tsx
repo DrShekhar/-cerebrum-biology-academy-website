@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/nri-students',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const organizationSchema = {

@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-career-point',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const config: CompetitorComparisonConfig = {

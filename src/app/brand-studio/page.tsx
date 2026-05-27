@@ -13,6 +13,8 @@ export const metadata: Metadata = {
       'AI-powered brand identity generator for educational institutions. Create Harvard-level logos, icons, and brand assets.',
     images: ['/brand/brand-studio-og.jpg'],
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function BrandStudioPage() {

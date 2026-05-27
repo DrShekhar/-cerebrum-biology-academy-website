@@ -43,6 +43,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/find-biology-tutor-delhi-ncr',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const comparisonData = [

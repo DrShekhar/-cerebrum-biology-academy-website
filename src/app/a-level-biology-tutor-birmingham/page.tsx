@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   keywords: ['A-Level biology tutor Birmingham', 'AQA biology tutor Birmingham', 'Edexcel biology tutor Birmingham', 'UCAS medicine biology Birmingham'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'A-Level Biology Tutor Birmingham | AQA, Edexcel | Cerebrum | Cerebrum', description: "A-Level Biology tutoring for Birmingham sixth-formers — AQA, Edexcel, OCR. AIIMS-trained faculty, GMT evenings. A* targeting for UCAS Medicine.", url: PAGE_URL, locale: 'en_GB', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I'm in Birmingham and looking for A-Level Biology tutoring. Please share programme details and pricing.")

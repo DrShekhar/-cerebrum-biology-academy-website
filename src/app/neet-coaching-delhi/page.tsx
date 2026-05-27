@@ -40,6 +40,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-delhi`,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const delhiWa =

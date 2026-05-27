@@ -46,6 +46,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-worldwide',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const curricula = [

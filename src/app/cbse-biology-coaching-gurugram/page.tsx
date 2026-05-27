@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://cerebrumbiologyacademy.com/cbse-biology-coaching-gurugram`,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export const revalidate = 86400

@@ -29,6 +29,8 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-tuition-greater-kailash',
   },
   robots: { index: true, follow: true },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export const revalidate = 86400

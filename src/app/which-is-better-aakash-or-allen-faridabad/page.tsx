@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/which-is-better-aakash-or-allen-faridabad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const comparison = [

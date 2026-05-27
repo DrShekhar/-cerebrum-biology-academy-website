@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: 'British Biology Olympiad coaching — Gold/Silver/Bronze targeting, IBO UK pathway.',
     url: CANONICAL, locale: 'en_GB', type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

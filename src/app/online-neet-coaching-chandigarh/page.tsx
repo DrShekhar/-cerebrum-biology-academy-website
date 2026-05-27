@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   keywords: ['online neet coaching chandigarh', 'NEET biology chandigarh', 'best NEET chandigarh'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'Online NEET Coaching Chandigarh', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Chandigarh and interested in NEET coaching. Please share details.")

@@ -18,6 +18,8 @@ export const metadata: Metadata = {
       'Master all NEET biology topics with comprehensive notes, videos, and practice questions',
     url: 'https://cerebrumbiologyacademy.com/biology-topics',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const biologyTopics = [

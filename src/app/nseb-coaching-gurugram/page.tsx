@@ -37,6 +37,8 @@ export const metadata: Metadata = {
       'x-default': 'https://cerebrumbiologyacademy.com/nseb-coaching',
     },
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

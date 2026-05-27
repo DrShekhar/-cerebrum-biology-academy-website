@@ -37,6 +37,8 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

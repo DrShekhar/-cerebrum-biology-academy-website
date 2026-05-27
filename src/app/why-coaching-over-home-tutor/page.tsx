@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/why-coaching-over-home-tutor',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const tutorProblems = [

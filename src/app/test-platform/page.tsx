@@ -3,6 +3,10 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Platform Testing Dashboard',
   description: 'Testing interface for AI education platform validation and verification',
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Platform Testing Dashboard', description: 'Testing interface for AI education platform validation and verification', type: 'website' },
 }
 
 export default function TestPlatformPage() {

@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/physics-wallah-alternative-noida',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const comparisonData = [

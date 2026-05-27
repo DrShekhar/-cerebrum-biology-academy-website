@@ -23,6 +23,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-shriram-school-aravali-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function FeederSchoolPage() {

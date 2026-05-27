@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-paras-world-school-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const whyParasStudents = [

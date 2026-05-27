@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: { canonical: `https://cerebrumbiologyacademy.com/neet-dropper-batch-${citySlug}` },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function Page() {

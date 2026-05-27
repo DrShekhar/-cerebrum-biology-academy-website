@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       '19,000+ free Biology MCQs for NEET, Class 11-12 NCERT, and Olympiad. PYQs, topic-wise practice, gamification, and leaderboards.',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function NEETBiologyMCQLayout({ children }: { children: React.ReactNode }) {

@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-near-me-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

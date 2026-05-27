@@ -41,6 +41,8 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function NEETCoachingMeeraBaghPage() {

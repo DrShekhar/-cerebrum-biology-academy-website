@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ['NSEB coaching kochi', 'biology olympiad kochi', 'NSEB preparation kochi', 'INBO coaching kochi', 'IBO preparation kochi'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NSEB Coaching Kochi | Cerebrum', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — my child in Kochi is interested in NSEB/Biology Olympiad coaching. Please share programme details.")

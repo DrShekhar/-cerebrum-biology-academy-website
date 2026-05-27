@@ -40,6 +40,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const demoIncludes = [

@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/re-neet-2026-cerebrum-vs-aakash-vs-pw`,
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const table = [

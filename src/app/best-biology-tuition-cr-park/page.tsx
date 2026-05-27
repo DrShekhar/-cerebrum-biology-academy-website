@@ -33,6 +33,8 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-tuition-cr-park',
   },
   robots: { index: true, follow: true },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function BestBiologyTuitionCRParkPage() {

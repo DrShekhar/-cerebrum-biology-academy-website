@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   keywords: ['neet coaching fees vijayawada', 'NEET biology vijayawada', 'best NEET vijayawada'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching Fees Vijayawada', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Vijayawada and interested in NEET coaching. Please share details.")

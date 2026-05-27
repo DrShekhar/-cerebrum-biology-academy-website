@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-faridabad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

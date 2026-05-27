@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/ncert-biology-solutions',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const class11Chapters = [

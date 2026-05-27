@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   keywords: ['online neet coaching tiruchirappalli', 'NEET biology tiruchirappalli', 'best NEET tiruchirappalli'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'Online NEET Coaching Tiruchirappalli', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Tiruchirappalli and interested in NEET coaching. Please share details.")

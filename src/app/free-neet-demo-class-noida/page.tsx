@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-noida',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const demoIncludes = [

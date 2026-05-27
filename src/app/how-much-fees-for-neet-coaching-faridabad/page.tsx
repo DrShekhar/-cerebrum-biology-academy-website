@@ -24,6 +24,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/how-much-fees-for-neet-coaching-faridabad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const feeComparison = [

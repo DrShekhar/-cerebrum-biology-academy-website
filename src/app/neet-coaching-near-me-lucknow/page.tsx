@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   other: { 'article:modified_time': '2026-05-27' },
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching Near Me Lucknow | Best Biology Coaching Nearby', description: 'Best NEET coaching near me in Lucknow — serving Gomti Nagar, Hazratganj. AIIMS-trained biology specialists, online live. 15-20 student batches. From Rs 48,000/yr.', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Lucknow and interested in NEET Biology coaching. Please share details.")

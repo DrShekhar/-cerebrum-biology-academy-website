@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/top-5-neet-coaching-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const quickAnswer = {

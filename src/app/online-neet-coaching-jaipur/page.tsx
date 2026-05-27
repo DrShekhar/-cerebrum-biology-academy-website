@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   other: { 'article:modified_time': '2026-05-27' },
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'Online NEET Coaching Jaipur | Live Biology Classes', description: 'Online NEET Biology coaching for Jaipur students — live classes with AIIMS-trained faculty. IST evening slots. Same pedagogy as Delhi NCR offline batches. From Rs 48,000/yr.', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Jaipur and interested in NEET Biology coaching. Please share details.")

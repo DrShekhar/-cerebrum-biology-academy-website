@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   keywords: ['neet dropper batch haridwar', 'neet repeater haridwar'],
   alternates: { canonical: `https://cerebrumbiologyacademy.com/neet-dropper-batch-haridwar` },
   openGraph: { title: `NEET Dropper Batch 2026-27 ${cityName}`, url: `https://cerebrumbiologyacademy.com/neet-dropper-batch-haridwar`, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 export default function Page() {
   return <DropperBatchTemplate cityName={cityName} citySlug={citySlug} faqs={[

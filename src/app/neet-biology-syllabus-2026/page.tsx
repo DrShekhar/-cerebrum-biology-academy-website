@@ -47,6 +47,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-syllabus-2026',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const class11Botany = [

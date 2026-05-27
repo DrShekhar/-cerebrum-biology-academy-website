@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ['neet foundation class 10 thrissur', 'class 10 biology coaching thrissur', 'class 10 neet thrissur'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Foundation Class 10 Thrissur', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — Class 10 student in Thrissur, want NEET Foundation details.")
 const faqs = [

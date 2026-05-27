@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: 'Australian Biology Olympiad coaching — IBO Australia team pathway.',
     url: CANONICAL, locale: 'en_AU', type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

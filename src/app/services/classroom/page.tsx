@@ -45,6 +45,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/services/classroom',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Classroom Coaching for NEET Biology | Traditional Face-to-Face Teaching | Cerebrum Biology Academy', description: 'Experience the power of traditional classroom coaching for NEET Biology. Small batches, personal attention, practical lab work, and direct faculty interaction. Starting ₹25,999.', type: 'website' },
 }
 
 export default function ClassroomCoachingPage() {

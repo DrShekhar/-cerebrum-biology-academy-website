@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: { canonical: `${BASE_URL}/neet-coaching-east-africa` },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

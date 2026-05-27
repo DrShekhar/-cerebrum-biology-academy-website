@@ -16,6 +16,8 @@ import type { Metadata } from 'next'
 // Tell search engines not to index overlay pages
 export const metadata: Metadata = {
   robots: 'noindex, nofollow',
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 // Force dynamic rendering for fresh state

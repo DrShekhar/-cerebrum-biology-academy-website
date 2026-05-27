@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/complement-aakash-coaching-faridabad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

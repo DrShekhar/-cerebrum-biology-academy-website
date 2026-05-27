@@ -16,6 +16,8 @@ export const metadata: Metadata = {
     description: 'Join our live NEET Biology study session with Pomodoro timer and focus tools.',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 interface PageProps {

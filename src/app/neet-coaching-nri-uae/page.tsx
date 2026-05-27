@@ -50,6 +50,8 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const cityLinks = [

@@ -24,6 +24,8 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/top-bbo-coaching-uk',
     type: 'article',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function TopBBOPage() {

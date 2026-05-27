@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ['neet coaching near me visakhapatnam', 'NEET biology visakhapatnam', 'best NEET visakhapatnam'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching Near Me Visakhapatnam', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Visakhapatnam, interested in NEET coaching. Please share details.")
 const faqs = [

@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     description:
       'Practice 1,600+ free Class 12 Biology MCQs based on NCERT. Topic-wise practice with instant feedback.',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const class12Topics = [

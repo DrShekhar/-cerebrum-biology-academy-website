@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-near-me-greater-noida',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

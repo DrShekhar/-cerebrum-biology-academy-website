@@ -24,6 +24,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/testimonials/sadhna-sirin-neet-2023-topper',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function SadhnaSirinPage() {

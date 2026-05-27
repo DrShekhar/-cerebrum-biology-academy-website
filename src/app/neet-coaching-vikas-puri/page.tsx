@@ -17,6 +17,8 @@ export const metadata: Metadata = {
       'Best NEET coaching in Vikas Puri. AIIMS faculty, small batches, 98% success rate. Free demo class available.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-vikas-puri',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function NEETCoachingVikasPuri() {

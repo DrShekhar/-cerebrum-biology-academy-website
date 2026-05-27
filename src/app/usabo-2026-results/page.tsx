@@ -44,6 +44,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Cerebrum Biology Academy',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const expectedDates = [

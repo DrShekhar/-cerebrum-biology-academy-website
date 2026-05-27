@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-nairobi-kenya',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'NEET Coaching in Nairobi, Kenya', description: 'Expert NEET coaching in Nairobi, Kenya. Nairobi, Kenya', type: 'website' },
 }
 
 export default function Page() {

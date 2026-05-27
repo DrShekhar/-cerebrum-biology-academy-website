@@ -49,6 +49,8 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     siteName: 'Cerebrum Biology Academy',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const heroBlurb =

@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-al-wakrah-qatar',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'NEET Coaching in Al Wakrah, Qatar', description: 'Expert NEET coaching in Al Wakrah, Qatar. Al Wakrah, Qatar', type: 'website' },
 }
 
 export default async function Page() {

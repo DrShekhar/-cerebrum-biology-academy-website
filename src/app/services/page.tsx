@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/services',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Our Services | Online, Classroom, International & Doubt Resolution | Cerebrum Biology Academy', description: 'Comprehensive NEET Biology coaching services: Online classes, Classroom teaching, International programs, and 24/7 doubt resolution support.', type: 'website' },
 }
 
 // BreadcrumbList Schema for improved SERP display and CTR

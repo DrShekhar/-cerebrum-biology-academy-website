@@ -35,6 +35,8 @@ export const metadata: Metadata = {
       'x-default': url,
     },
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const faqs = [

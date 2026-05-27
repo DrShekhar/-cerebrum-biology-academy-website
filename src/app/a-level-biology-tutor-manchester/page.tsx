@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   keywords: ['A-Level biology tutor Manchester', 'AQA biology tutor Manchester', 'Edexcel biology tutor Manchester', 'UCAS medicine biology Manchester'],
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'A-Level Biology Tutor Manchester | AQA, Edexcel | Cerebrum | Cerebrum', description: "A-Level Biology tutoring for Manchester sixth-formers — AQA, Edexcel, OCR. AIIMS-trained faculty, GMT evenings. A* targeting for UCAS Medicine.", url: PAGE_URL, locale: 'en_GB', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I'm in Manchester and looking for A-Level Biology tutoring. Please share programme details and pricing.")

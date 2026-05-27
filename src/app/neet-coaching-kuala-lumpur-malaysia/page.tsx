@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kuala-lumpur-malaysia',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default async function Page() {

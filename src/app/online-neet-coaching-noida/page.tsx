@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/online-neet-coaching-noida',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function OnlineNEETCoachingNoidaPage() {

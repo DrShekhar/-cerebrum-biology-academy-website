@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-fees-ghaziabad',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const feeComparison = [

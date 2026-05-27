@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   keywords: ['neet dropper batch tiruchirappalli', 'neet repeater course tiruchirappalli', 'best dropper batch neet tiruchirappalli'],
   alternates: { canonical: `https://cerebrumbiologyacademy.com/neet-dropper-batch-tiruchirappalli` },
   openGraph: { title: `NEET Dropper Batch 2026-27 ${cityName}`, url: `https://cerebrumbiologyacademy.com/neet-dropper-batch-tiruchirappalli`, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function Page() {

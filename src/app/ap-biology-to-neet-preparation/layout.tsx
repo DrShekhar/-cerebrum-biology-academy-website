@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description:
       'Specialized bridge course for AP Biology students preparing for NEET. Expert faculty, comprehensive gap analysis, proven 98% conversion rate.',
   },
+
+  openGraph: { title: 'AP Biology to NEET Biology Bridge', description: 'Specialized bridge course for AP Biology students preparing for NEET. Expert faculty, comprehensive gap analysis, proven 98% conversion rate.', type: 'website' },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

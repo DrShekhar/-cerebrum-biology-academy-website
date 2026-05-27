@@ -14,4 +14,8 @@ export const metadata: Metadata = {
   },
 
   robots: { index: false, follow: false },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'My Enrollments', description: 'Track your course progress and manage your enrollments at Cerebrum Biology Academy.', type: 'website' },
 }

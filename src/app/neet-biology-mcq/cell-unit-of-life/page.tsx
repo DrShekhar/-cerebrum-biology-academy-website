@@ -24,6 +24,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/cell-unit-of-life',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const structuredData = {

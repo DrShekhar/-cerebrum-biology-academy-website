@@ -40,6 +40,8 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Cerebrum Biology Academy',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const iboStats = {

@@ -37,6 +37,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/services/online-classes',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Online NEET Biology Classes | Live Interactive Sessions', description: 'Join India', type: 'website' },
 }
 
 export default function OnlineClassesPage() {

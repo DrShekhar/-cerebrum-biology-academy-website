@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     description: 'A-Level Biology tutoring for London sixth-formers. AQA/Edexcel/OCR. A* targeting.',
     url: PAGE_URL, locale: 'en_GB', type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I'm in London and looking for A-Level Biology tutoring (AQA/Edexcel/OCR). Please share programme details, GMT evening slots, and pricing.")

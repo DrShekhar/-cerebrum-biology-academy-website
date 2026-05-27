@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function NeetBiologyLayout({ children }: { children: React.ReactNode }) {

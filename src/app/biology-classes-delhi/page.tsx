@@ -48,6 +48,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-delhi',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const centers = [

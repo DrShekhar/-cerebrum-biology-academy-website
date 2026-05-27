@@ -45,6 +45,8 @@ export const metadata: Metadata = {
     locale: 'hi_IN',
     url: 'https://cerebrumbiologyacademy.com/hi',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function HindiHomePage() {

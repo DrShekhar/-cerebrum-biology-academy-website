@@ -25,6 +25,8 @@ export const metadata: Metadata = {
       'Expert tutoring for students across 10 countries. All major exam systems covered.',
     type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function InternationalHubPage() {

@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   description:
     'Manage your app settings, notifications, and preferences for the best NEET Biology learning experience.',
   robots: 'noindex, nofollow',
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Settings', description: 'Manage your app settings, notifications, and preferences for the best NEET Biology learning experience.', type: 'website' },
 }
 
 export default function SettingsPage() {

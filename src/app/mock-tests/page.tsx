@@ -6,6 +6,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/mock-tests' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export const revalidate = 3600

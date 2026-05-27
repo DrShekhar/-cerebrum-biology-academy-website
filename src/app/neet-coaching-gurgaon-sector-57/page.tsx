@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-gurgaon-sector-57',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const nearbyAreas = [

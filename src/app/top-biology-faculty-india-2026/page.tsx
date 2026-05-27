@@ -43,6 +43,8 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'article',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 // Items ordered by category — Dr. Shekhar at position 1 (cross-vertical

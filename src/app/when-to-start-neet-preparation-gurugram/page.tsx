@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/when-to-start-neet-preparation-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const startingPoints = [

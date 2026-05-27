@@ -39,6 +39,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/which-neet-coaching-is-best-in-gurugram',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const coachingComparison = [

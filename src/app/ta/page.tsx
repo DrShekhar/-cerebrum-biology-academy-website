@@ -43,6 +43,8 @@ export const metadata: Metadata = {
     locale: 'ta_IN',
     url: 'https://cerebrumbiologyacademy.com/ta',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 export default function TamilHomePage() {

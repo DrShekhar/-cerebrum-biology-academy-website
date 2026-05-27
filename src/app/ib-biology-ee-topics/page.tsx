@@ -31,6 +31,8 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const topicsFAQs = [

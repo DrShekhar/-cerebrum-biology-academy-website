@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   other: { 'article:modified_time': '2026-05-27' },
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching Thrissur | Cerebrum', description: 'Best NEET Biology coaching Thrissur.', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I am in Thrissur and want a FREE NEET Biology demo. Please share timings.")
 const faqs = [

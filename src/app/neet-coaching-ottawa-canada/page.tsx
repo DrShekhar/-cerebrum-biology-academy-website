@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     description: 'Online NEET Biology coaching for Ottawa NRI students. AIIMS-trained faculty.',
     url: PAGE_URL, locale: 'en_CA', type: 'website',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I'm in Ottawa (Canada) and interested in NEET Biology coaching for my child. Please share programme details, ET slot timings, and pricing.")

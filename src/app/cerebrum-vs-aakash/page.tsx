@@ -18,6 +18,8 @@ export const metadata: Metadata = {
       'Compare Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain). Learn about faculty, fees, success rates, and which institute is better for Biology specialization.',
     type: 'article',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 interface FAQItem {

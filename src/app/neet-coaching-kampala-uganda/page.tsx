@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kampala-uganda',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'NEET Coaching in Kampala, Uganda', description: 'Expert NEET coaching in Kampala, Uganda. Kampala, Uganda', type: 'website' },
 }
 
 export default function Page() {

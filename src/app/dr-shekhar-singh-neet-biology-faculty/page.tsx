@@ -42,6 +42,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
   },
+
+  twitter: { card: 'summary_large_image' as const },
 }
 
 const credentials = [

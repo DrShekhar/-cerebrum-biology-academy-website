@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/refund-policy',
   },
+
+  twitter: { card: 'summary_large_image' as const },
+
+  openGraph: { title: 'Refund Policy', description: 'Refund and cancellation policy for Cerebrum Biology Academy courses and services.', type: 'website' },
 }
 
 export default function RefundPolicyPage() {
