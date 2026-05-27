@@ -7657,6 +7657,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       'neet-foundation-class-9-indore', 'neet-foundation-class-10-indore',
       'neet-foundation-class-9-coimbatore', 'neet-foundation-class-10-coimbatore',
       'neet-foundation-class-9-patna', 'neet-foundation-class-10-patna',
+      // South India + Kerala + Punjab + NE + Uttarakhand + Haryana + J&K (May 2026)
+      'neet-coaching-kochi', 'neet-coaching-kozhikode', 'neet-coaching-thrissur',
+      'neet-coaching-allahabad', 'neet-coaching-rajkot', 'neet-coaching-aurangabad',
+      'neet-coaching-vijayawada', 'neet-coaching-tiruchirappalli', 'neet-coaching-pondicherry',
+      'neet-coaching-ludhiana', 'neet-coaching-amritsar', 'neet-coaching-jalandhar',
+      'neet-coaching-haridwar', 'neet-coaching-haldwani',
+      'neet-coaching-shillong', 'neet-coaching-imphal',
+      'neet-coaching-karnal', 'neet-coaching-ambala', 'neet-coaching-jammu',
+      // Depth pages for all new cities
+      ...['kochi','kozhikode','thrissur','thiruvananthapuram','visakhapatnam','mangalore','mysore','madurai',
+         'ludhiana','amritsar','jalandhar','haridwar','haldwani','shillong','imphal','karnal','ambala','jammu',
+         'allahabad','rajkot','aurangabad','vijayawada','tiruchirappalli','pondicherry','varanasi','kanpur',
+         'ranchi','bhubaneswar','guwahati','raipur','vadodara','nashik','meerut'].flatMap(c => [
+        `neet-dropper-batch-${c}`, `online-neet-coaching-${c}`,
+        `neet-coaching-fees-${c}`, `neet-coaching-near-me-${c}`,
+      ]),
+      // Foundation pages for Kerala + new cities
+      ...['kochi','kozhikode','thrissur','thiruvananthapuram','visakhapatnam','mangalore','mysore','madurai'].flatMap(c => [
+        `neet-foundation-class-9-${c}`, `neet-foundation-class-10-${c}`,
+      ]),
     ].map((slug) => ({
       url: `${baseUrl}/${slug}`,
       lastModified: lastUpdated,
