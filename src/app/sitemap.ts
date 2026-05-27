@@ -7646,6 +7646,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.91, // Gujarat - Diamond City
     },
+    // India Tier 2 depth — dropper + foundation pages (May 2026)
+    ...[
+      'neet-dropper-batch-surat', 'neet-dropper-batch-dehradun', 'neet-dropper-batch-bhopal',
+      'neet-dropper-batch-indore', 'neet-dropper-batch-coimbatore',
+      'neet-dropper-batch-lucknow', 'neet-dropper-batch-jaipur', 'neet-dropper-batch-patna',
+      'neet-foundation-class-9-surat', 'neet-foundation-class-10-surat',
+      'neet-foundation-class-9-dehradun', 'neet-foundation-class-10-dehradun',
+      'neet-foundation-class-9-bhopal', 'neet-foundation-class-10-bhopal',
+      'neet-foundation-class-9-indore', 'neet-foundation-class-10-indore',
+      'neet-foundation-class-9-coimbatore', 'neet-foundation-class-10-coimbatore',
+      'neet-foundation-class-9-patna', 'neet-foundation-class-10-patna',
+    ].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     {
       url: `${baseUrl}/neet-coaching-thiruvananthapuram`,
       lastModified: lastUpdated,
