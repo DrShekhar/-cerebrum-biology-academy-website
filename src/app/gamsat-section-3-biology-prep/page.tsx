@@ -291,6 +291,32 @@ export default function GAMSATSectionIIIBiologyPage() {
           </a>
         </div>
       </section>
+      <section className="py-10 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link href="/gamsat-vs-mcat-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">GAMSAT vs MCAT</span>
+            </Link>
+            <Link href="/gamsat-section-3-study-guide" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Section III Study Guide</span>
+            </Link>
+            <Link href="/gamsat-score-breakdown-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Score Breakdown</span>
+            </Link>
+            <Link href="/gamsat-biology-topics-2026" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">High-Yield Topics 2026</span>
+            </Link>
+            <Link href="/mcat-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">MCAT Biology</span>
+            </Link>
+            <Link href="/dat-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">DAT Biology</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <StickyMobileCTABar waUrl={wa} />
     </main>
   )

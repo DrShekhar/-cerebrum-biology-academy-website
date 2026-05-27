@@ -768,6 +768,29 @@ export default function USABOCoachingPage() {
           </div>
         </div>
       </section>
+
+      <section className="py-10 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link href="/bbo-vs-usabo-biology-olympiad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">BBO vs USABO</span>
+            </Link>
+            <Link href="/ap-biology-vs-usabo" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">AP vs USABO</span>
+            </Link>
+            <Link href="/ibo-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">IBO Preparation</span>
+            </Link>
+            <Link href="/nseb-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">NSEB Coaching</span>
+            </Link>
+            <Link href="/ap-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">AP Biology</span>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

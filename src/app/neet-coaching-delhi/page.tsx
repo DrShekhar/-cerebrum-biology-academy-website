@@ -372,6 +372,26 @@ export default function NEETCoachingDelhiPage() {
         </div>
       </section>
 
+      <section className="py-10 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-xl font-bold text-slate-900 mb-4">Explore Other Programmes in Delhi</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link href="/ib-biology/delhi-ncr" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">IB Biology Delhi</span>
+            </Link>
+            <Link href="/ap-biology-tutor-delhi-ncr" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">AP Biology Delhi</span>
+            </Link>
+            <Link href="/nseb-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">NSEB Olympiad</span>
+            </Link>
+            <Link href="/biology-olympiads/india/delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <span className="font-medium text-slate-900 text-sm">Biology Olympiad Delhi</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <CityHubPage data={cityData} />
       <StickyMobileCTABar waUrl={delhiWa} />
     </>
