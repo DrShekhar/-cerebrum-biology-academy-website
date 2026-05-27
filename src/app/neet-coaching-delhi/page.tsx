@@ -4,6 +4,7 @@ import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/cities'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -35,6 +36,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-delhi`,
   },
@@ -159,6 +161,7 @@ export default function NEETCoachingDelhiPage() {
         serviceName="Best NEET Biology Coaching in Delhi"
         description="India's only biology-only specialist NEET coaching in Delhi. 3 offline centres + online live classes. AIIMS-trained faculty led by Dr. Shekhar C Singh."
       />
+      <LocalBusinessSchema />
       <NEETSchemaStack
         pageUrl={`${BASE_URL}/neet-coaching-delhi`}
         pageName="Best NEET Biology Coaching in Delhi"

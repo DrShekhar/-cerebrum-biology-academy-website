@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import {
   LocalBusinessSchema,
   GurugramServiceSchema,
@@ -1895,6 +1896,8 @@ export default function NeetCoachingGurugramPage() {
           }),
         }}
       />
+
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Gurugram.%20Please%20share%20timings." />
     </div>
   )
 }

@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     title: 'NEET Coaching in Rohini | Cerebrum Biology Academy',
     description: 'Best NEET coaching in Rohini. Expert AIIMS faculty, small batches, 98% success rate.',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-rohini',
   },

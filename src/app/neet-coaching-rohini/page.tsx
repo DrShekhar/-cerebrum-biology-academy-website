@@ -25,6 +25,8 @@ import { VideoSchema } from '@/components/seo/StructuredData'
 import { LocalityCues } from '@/components/seo/LocalityCues'
 import { delhiNCRLocalityCues } from '@/data/delhi-ncr-locality-cues'
 import { NEETSchemaStack } from '@/components/seo/NEETSchemaStack'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -143,6 +145,7 @@ const features = [
 export default function NEETCoachingRohiniPage() {
   return (
     <>
+      <LocalBusinessSchema />
       <NEETSchemaStack
         pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-rohini"
         pageName="Best NEET Coaching in Rohini (North-West Delhi)"
@@ -743,6 +746,7 @@ export default function NEETCoachingRohiniPage() {
         contentUrl="https://www.youtube.com/watch?v=t5F8RBuHITM"
         embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
       />
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Rohini.%20Please%20share%20timings." />
     </>
   )
 }

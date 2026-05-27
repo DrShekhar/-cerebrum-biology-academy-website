@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching South Delhi',
     description: 'Premium NEET biology coaching in South Delhi. Expert faculty, proven results.',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-south-delhi',
   },
