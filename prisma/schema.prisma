@@ -2024,9 +2024,12 @@ model payments {
   currency          String        @default("INR")
   status            PaymentStatus @default(PENDING)
   paymentMethod     PaymentMethod
+  paymentProvider   String?       @default("razorpay")
   razorpayOrderId   String?       @unique
   razorpayPaymentId String?       @unique
   razorpaySignature String?
+  cashfreeOrderId   String?       @unique
+  cashfreePaymentId String?
   transactionId     String?
   failureReason     String?
   refundAmount      Int? // Amount refunded (partial or full)
@@ -3880,6 +3883,12 @@ enum PaymentMethod {
   RAZORPAY_CARD
   RAZORPAY_NETBANKING
   RAZORPAY_WALLET
+  CASHFREE_UPI
+  CASHFREE_CARD
+  CASHFREE_NETBANKING
+  CASHFREE_WALLET
+  CASHFREE_EMI
+  CASHFREE_PAYLATER
   BANK_TRANSFER
   CASH
   CHEQUE

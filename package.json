@@ -110,6 +110,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.63.0",
+    "@cashfreepayments/cashfree-js": "^1.0.7",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
@@ -146,6 +147,7 @@
     "axios": "^1.7.9",
     "bcryptjs": "^3.0.2",
     "bullmq": "^5.25.0",
+    "cashfree-pg": "^6.0.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "compression": "^1.8.1",
