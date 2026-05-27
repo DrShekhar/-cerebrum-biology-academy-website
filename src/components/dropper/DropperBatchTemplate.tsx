@@ -199,11 +199,36 @@ export default function DropperBatchTemplate({
     ],
   }
 
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `NEET Dropper Batch ${cityName}`,
+    url: pageUrl,
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
+  }
+
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+    name: 'Dr. Shekhar C Singh',
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained NEET Biology faculty leading dropper/repeater batches for ${cityName} students.`,
+    url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+    image: 'https://cerebrumbiologyacademy.com/images/dr-shekhar-singh.webp',
+    affiliation: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['NEET Biology', 'NEET Dropper Batch', 'NEET Repeater Strategy', 'Class 11 + 12 Biology'],
+    sameAs: ['https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty'],
+  }
+
   return (
     <main className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <nav className="bg-gray-100 py-3 px-4">
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">

@@ -108,13 +108,14 @@ function ALevelSchemas({ city }: { city: ALevelCityConfig }) {
     '@type': 'Person',
     '@id': `${siteUrl}/dr-shekhar-singh-neet-biology-faculty#person`,
     name: 'Dr. Shekhar C Singh',
-    jobTitle: 'Biology Faculty & A-Level Biology Tutor',
-    worksFor: {
-      '@type': 'EducationalOrganization',
-      name: 'Cerebrum Biology Academy',
-      url: siteUrl,
-    },
-    url: `${siteUrl}/dr-shekhar-singh-biology-faculty-india`,
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained A-Level Biology educator covering Cambridge, Edexcel, AQA, and OCR exam boards for ${city.cityName} students.`,
+    url: `${siteUrl}/dr-shekhar-singh-neet-biology-faculty`,
+    image: `${siteUrl}/images/dr-shekhar-singh.webp`,
+    affiliation: { '@type': 'EducationalOrganization', '@id': `${siteUrl}/#organization`, name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['A-Level Biology', 'Cambridge 9700', 'Edexcel IAL', 'AQA Biology', 'OCR Biology', 'UCAS Medicine Applications'],
+    sameAs: [`${siteUrl}/dr-shekhar-singh-neet-biology-faculty`],
   }
 
   return (

@@ -164,6 +164,21 @@ export function IndiaOlympiadSchoolSchemas({
     },
   }
 
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty#person`,
+    name: 'Dr. Shekhar C Singh',
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained biology olympiad coach. NSEB, INBO, OCSC, IBO preparation for students at ${school.shortName}.`,
+    url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
+    image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
+    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['NSEB', 'INBO', 'OCSC', 'IBO', 'Biology Olympiad', 'Campbell Biology', 'HBCSE', 'IAPT'],
+    sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
+  }
+
   return (
     <>
       <script
@@ -181,6 +196,10 @@ export function IndiaOlympiadSchoolSchemas({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
     </>
   )

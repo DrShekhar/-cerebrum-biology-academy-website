@@ -183,6 +183,21 @@ export function APBiologyMetroSchemas({
     },
   }
 
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty#person`,
+    name: 'Dr. Shekhar C Singh',
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained AP Biology educator with PhD-level faculty for ${metro.cityName} students. FRQ rubric mastery, College Board Units 1-8, AP-to-USABO bridge.`,
+    url: `${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`,
+    image: `${SITE_URL}/images/dr-shekhar-singh.webp`,
+    affiliation: { '@type': 'EducationalOrganization', '@id': `${SITE_URL}/#organization`, name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['AP Biology', 'College Board CED Units 1-8', 'AP Biology FRQ', 'USABO Bridge', 'Campbell Biology', 'AP Score 5 Strategy'],
+    sameAs: [`${SITE_URL}/dr-shekhar-singh-neet-biology-faculty`],
+  }
+
   return (
     <>
       <script
@@ -200,6 +215,10 @@ export function APBiologyMetroSchemas({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
     </>
   )
