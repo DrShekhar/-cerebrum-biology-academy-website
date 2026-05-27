@@ -76,6 +76,32 @@ export type CitySlug =
   | 'taipei'
   | 'manila'
   | 'jakarta'
+  // Programmatic batch — 25 new cities (May 2026)
+  | 'madrid'
+  | 'barcelona'
+  | 'milan'
+  | 'rome'
+  | 'lisbon'
+  | 'sao-paulo'
+  | 'mexico-city'
+  | 'buenos-aires'
+  | 'bogota'
+  | 'oslo'
+  | 'helsinki'
+  | 'auckland'
+  | 'wellington'
+  | 'cairo'
+  | 'amman'
+  | 'johannesburg'
+  | 'cape-town'
+  | 'nairobi'
+  | 'warsaw'
+  | 'prague'
+  | 'budapest'
+  | 'istanbul'
+  | 'tel-aviv'
+  | 'doha'
+  | 'riyadh'
 
 export interface CityConfig {
   slug: CitySlug
@@ -1514,6 +1540,183 @@ export const cities: Record<CitySlug, CityConfig> = {
     neighbourhoods: ['Pondok Indah', 'Kemang', 'Cilandak', 'Menteng', 'BSD City (Tangerang)'],
     localHook:
       "Jakarta's IB community is anchored by Jakarta Intercultural School (JIS) in Cilandak — Southeast Asia's largest international school — and British School Jakarta (BSJ) in Pondok Indah. The corporate expat community (mining, energy, tech) plus wealthy Indonesian families in South Jakarta drive strong IB demand. Our WIB evening sessions (6–9 PM Jakarta) fit the international-school schedule. Many Jakarta IB students target UK Russell Group, Australian Group of Eight, or Universitas Indonesia medical pathways.",
+  },
+
+  // ─── PROGRAMMATIC BATCH — 25 NEW CITIES (May 2026) ─────────────────────────
+  madrid: {
+    slug: 'madrid', city: 'Madrid', country: 'Spain', countryCode: 'ES', region: 'Community of Madrid', timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' }, pricing: { perHour: 60, perHourText: '€55–80/hr' },
+    ibSchools: ['International School of Madrid (ISM)', 'American School of Madrid', 'King\'s College Madrid', 'Brains International Schools', 'SEK International School'],
+    neighbourhoods: ['Chamartín', 'Salamanca', 'La Moraleja', 'Pozuelo de Alarcón', 'Las Rozas'],
+    localHook: "Madrid's IB community is anchored by ISM, American School of Madrid, and King's College — serving the corporate expat and diplomatic community. Spain's public university medical schools (Universidad Complutense, Universidad Autónoma de Madrid) accept IB Diploma. CET evening sessions fit the Spanish school schedule.",
+  },
+  barcelona: {
+    slug: 'barcelona', city: 'Barcelona', country: 'Spain', countryCode: 'ES', region: 'Catalonia', timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' }, pricing: { perHour: 60, perHourText: '€55–80/hr' },
+    ibSchools: ['American School of Barcelona', 'Benjamin Franklin International School', 'ES International School Barcelona', 'Agora International School', 'British School of Barcelona'],
+    neighbourhoods: ['Sarrià-Sant Gervasi', 'Pedralbes', 'Castelldefels', 'Sitges', 'Sant Cugat del Vallès'],
+    localHook: "Barcelona's IB community is anchored by the American School of Barcelona and Benjamin Franklin International School — serving the tech, pharma, and creative-industry expat community. The city's 22@ tech district drives Indian-origin expat demand. CET evening sessions fit Catalan school schedules.",
+  },
+  milan: {
+    slug: 'milan', city: 'Milan', country: 'Italy', countryCode: 'IT', region: 'Lombardy', timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' }, pricing: { perHour: 60, perHourText: '€55–80/hr' },
+    ibSchools: ['American School of Milan (ASM)', 'International School of Milan (ISM)', 'Sir James Henderson School', 'St. Louis School Milan'],
+    neighbourhoods: ['Brera', 'Porta Nuova', 'San Siro', 'Monza (commuter)', 'Bergamo (commuter)'],
+    localHook: "Milan's IB community is anchored by ASM and ISM — serving the fashion, finance, and pharmaceutical expat community. Università degli Studi di Milano medical school is the primary local target. CET evening sessions fit Italian school schedules.",
+  },
+  rome: {
+    slug: 'rome', city: 'Rome', country: 'Italy', countryCode: 'IT', region: 'Lazio', timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' }, pricing: { perHour: 60, perHourText: '€55–80/hr' },
+    ibSchools: ['St. Stephen\'s School Rome', 'American Overseas School of Rome (AOSR)', 'Ambrit International School', 'Marymount International School Rome'],
+    neighbourhoods: ['Parioli', 'EUR', 'Olgiata', 'Cassia', 'Trastevere'],
+    localHook: "Rome's IB community is anchored by St. Stephen's School and AOSR — serving the diplomatic (FAO, WFP, IFAD), Vatican, and UN agency expat community. Sapienza University of Rome medical school is the primary local target. CET evening sessions.",
+  },
+  lisbon: {
+    slug: 'lisbon', city: 'Lisbon', country: 'Portugal', countryCode: 'PT', region: 'Lisbon', timezoneAbbr: 'WET/WEST',
+    currency: { code: 'EUR', symbol: '€' }, pricing: { perHour: 55, perHourText: '€50–75/hr' },
+    ibSchools: ['St. Julian\'s School', 'CAISL (Carlucci American International School of Lisbon)', 'International Preparatory School (IPS)'],
+    neighbourhoods: ['Cascais', 'Estoril', 'Carcavelos', 'Oeiras', 'Belém'],
+    localHook: "Lisbon's IB community is growing rapidly — anchored by St. Julian's School and CAISL in the Cascais/Estoril corridor. Portugal's tech-visa ecosystem (Web Summit, startup ecosystem) drives increasing expat demand. WET evening sessions (same as GMT in winter).",
+  },
+  'sao-paulo': {
+    slug: 'sao-paulo', city: 'São Paulo', country: 'Brazil', countryCode: 'BR', region: 'São Paulo State', timezoneAbbr: 'BRT (UTC-3)',
+    currency: { code: 'BRL', symbol: 'R$' }, pricing: { perHour: 350, perHourText: 'R$300–450/hr' },
+    ibSchools: ['Graded - The American School of São Paulo', 'St. Paul\'s School', 'Chapel School', 'Escola Americana de Campinas', 'British College of Brazil'],
+    neighbourhoods: ['Morumbi', 'Jardins', 'Vila Olímpia', 'Alphaville', 'Campinas (commuter)'],
+    localHook: "São Paulo's IB community is the largest in Latin America — anchored by Graded and St. Paul's School in the Morumbi/Jardins corridor. The wealthy Paulista business community drives pre-med aspirations. BRT evening sessions (6–9 PM São Paulo). Many SP IB students target US or UK medical pathways.",
+  },
+  'mexico-city': {
+    slug: 'mexico-city', city: 'Mexico City', country: 'Mexico', countryCode: 'MX', region: 'CDMX', timezoneAbbr: 'CST (UTC-6)',
+    currency: { code: 'MXN', symbol: 'MX$' }, pricing: { perHour: 1200, perHourText: 'MX$1,000–1,500/hr' },
+    ibSchools: ['American School Foundation (ASF)', 'Westhill Institute', 'Greengates School', 'Colegio Peterson', 'Edron Academy'],
+    neighbourhoods: ['Polanco', 'Santa Fe', 'Lomas de Chapultepec', 'San Ángel', 'Coyoacán'],
+    localHook: "Mexico City has the largest IB school concentration in Latin America — anchored by ASF, Westhill, and Greengates in the Polanco/Santa Fe corridor. The affluent Polanco/Lomas community drives pre-med aspirations via US university pipelines. CST evening sessions align with US Central Time cohorts.",
+  },
+  'buenos-aires': {
+    slug: 'buenos-aires', city: 'Buenos Aires', country: 'Argentina', countryCode: 'AR', region: 'Buenos Aires Province', timezoneAbbr: 'ART (UTC-3)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 55, perHourText: '$50–75/hr' },
+    ibSchools: ['Lincoln School Buenos Aires', 'Belgrano Day School', 'St. Andrew\'s Scots School', 'Northlands School'],
+    neighbourhoods: ['Belgrano', 'Palermo', 'Recoleta', 'San Isidro', 'Vicente López'],
+    localHook: "Buenos Aires' IB community is anchored by Lincoln School and Belgrano Day School — serving the diplomatic and multinational expat community. USD pricing (Argentina's peso volatility makes local-currency impractical). ART evening sessions.",
+  },
+  bogota: {
+    slug: 'bogota', city: 'Bogotá', country: 'Colombia', countryCode: 'CO', region: 'Bogotá D.C.', timezoneAbbr: 'COT (UTC-5)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 55, perHourText: '$50–75/hr' },
+    ibSchools: ['Colegio Nueva Granada', 'Anglo Colombian School', 'Colegio Los Nogales', 'Colegio San Carlos'],
+    neighbourhoods: ['Chicó', 'Rosales', 'Usaquén', 'La Calera', 'Chía'],
+    localHook: "Bogotá's IB community is anchored by Colegio Nueva Granada (one of Latin America's top IB schools) in the Chicó/Usaquén corridor. The affluent northern Bogotá families drive pre-med aspirations via US university pipelines. COT sessions align with US Eastern Time.",
+  },
+  oslo: {
+    slug: 'oslo', city: 'Oslo', country: 'Norway', countryCode: 'NO', region: 'Oslo', timezoneAbbr: 'CET/CEST',
+    currency: { code: 'NOK', symbol: 'kr' }, pricing: { perHour: 800, perHourText: 'NOK 650–1,000/hr' },
+    ibSchools: ['Oslo International School (OIS)', 'International School of Stavanger (remote enrolment)', 'Skagerak International School'],
+    neighbourhoods: ['Frogner', 'Bygdøy', 'Bærum', 'Asker', 'Holmenkollen'],
+    localHook: "Oslo's IB community is anchored by Oslo International School (OIS) in Bekkestua. Norway's oil/gas and maritime expat community drives IB demand. The University of Oslo medical school accepts IB Biology HL. CET evening sessions fit Norwegian schedules. 91%+ adult English fluency makes online English-medium tutoring seamless.",
+  },
+  helsinki: {
+    slug: 'helsinki', city: 'Helsinki', country: 'Finland', countryCode: 'FI', region: 'Uusimaa', timezoneAbbr: 'EET/EEST',
+    currency: { code: 'EUR', symbol: '€' }, pricing: { perHour: 65, perHourText: '€60–85/hr' },
+    ibSchools: ['International School of Helsinki (ISH)', 'Helsinki International School', 'Ressu Upper Secondary IB'],
+    neighbourhoods: ['Espoo', 'Kauniainen', 'Vantaa', 'Töölö', 'Kulosaari'],
+    localHook: "Helsinki's IB community is anchored by ISH and Ressu Upper Secondary — serving the tech (Nokia, Supercell, Wolt), pharmaceutical, and diplomatic expat community. University of Helsinki medical school accepts IB. EET evening sessions (1 hour ahead of CET).",
+  },
+  auckland: {
+    slug: 'auckland', city: 'Auckland', country: 'New Zealand', countryCode: 'NZ', region: 'Auckland', timezoneAbbr: 'NZST (UTC+12)',
+    currency: { code: 'NZD', symbol: 'NZ$' }, pricing: { perHour: 95, perHourText: 'NZ$80–120/hr' },
+    ibSchools: ['Kristin School', 'ACG Parnell College', 'Rangitoto College IB', 'Westlake Boys High School IB'],
+    neighbourhoods: ['Parnell', 'Remuera', 'Epsom', 'North Shore', 'Howick'],
+    localHook: "Auckland's IB community is anchored by Kristin School and ACG Parnell — serving New Zealand's largest city. University of Auckland medical school is the primary target. NZST sessions (UTC+12) — our IST morning slots align with NZ evening.",
+  },
+  wellington: {
+    slug: 'wellington', city: 'Wellington', country: 'New Zealand', countryCode: 'NZ', region: 'Wellington', timezoneAbbr: 'NZST (UTC+12)',
+    currency: { code: 'NZD', symbol: 'NZ$' }, pricing: { perHour: 95, perHourText: 'NZ$80–120/hr' },
+    ibSchools: ['Scots College Wellington IB', 'Wellington College IB', 'Queen Margaret College IB'],
+    neighbourhoods: ['Kelburn', 'Karori', 'Khandallah', 'Lower Hutt', 'Petone'],
+    localHook: "Wellington's IB community centres on Scots College and Wellington College — serving the diplomatic (New Zealand Parliament, embassies) and public-sector community. University of Otago medical school (Dunedin, with Wellington clinical campus) is the primary medical target. NZST evening sessions.",
+  },
+  cairo: {
+    slug: 'cairo', city: 'Cairo', country: 'Egypt', countryCode: 'EG', region: 'Cairo Governorate', timezoneAbbr: 'EET (UTC+2)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 45, perHourText: '$40–60/hr' },
+    ibSchools: ['Cairo American College (CAC)', 'British International School in Cairo (BISC)', 'Hayah International Academy', 'GEMS International School Cairo'],
+    neighbourhoods: ['Maadi', 'New Cairo', 'Heliopolis', '6th of October City', 'Sheikh Zayed'],
+    localHook: "Cairo's IB community is anchored by CAC in Maadi and BISC — serving the diplomatic, oil/gas, and multinational expat community. USD pricing (EGP volatility makes local currency impractical). EET evening sessions (UTC+2). Many Cairo IB students target UK Russell Group medical schools.",
+  },
+  amman: {
+    slug: 'amman', city: 'Amman', country: 'Jordan', countryCode: 'JO', region: 'Amman', timezoneAbbr: 'EET (UTC+2)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 45, perHourText: '$40–60/hr' },
+    ibSchools: ['Amman Baccalaureate School (ABS)', 'King\'s Academy', 'American Community School Amman'],
+    neighbourhoods: ['Abdoun', 'Sweifieh', 'Dabouq', 'Khalda', 'Shmeisani'],
+    localHook: "Amman's IB community is anchored by ABS and King's Academy (boarding, founded by King Abdullah II) — serving the diplomatic, UNRWA, and regional-HQ expat community. USD pricing. EET sessions. Many Amman IB students target UK/US medical pathways.",
+  },
+  johannesburg: {
+    slug: 'johannesburg', city: 'Johannesburg', country: 'South Africa', countryCode: 'ZA', region: 'Gauteng', timezoneAbbr: 'SAST (UTC+2)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 45, perHourText: '$40–60/hr' },
+    ibSchools: ['St. John\'s College Johannesburg', 'Reddam House Bedfordview', 'Crawford International Sandton', 'American International School of Johannesburg'],
+    neighbourhoods: ['Sandton', 'Rosebank', 'Bedfordview', 'Fourways', 'Bryanston'],
+    localHook: "Johannesburg's IB community is anchored by St. John's College and Crawford International — serving South Africa's business capital. The Sandton/Rosebank corridor has a growing Indian-origin community. University of Witwatersrand medical school is the primary local target. SAST sessions (UTC+2, same as EET).",
+  },
+  'cape-town': {
+    slug: 'cape-town', city: 'Cape Town', country: 'South Africa', countryCode: 'ZA', region: 'Western Cape', timezoneAbbr: 'SAST (UTC+2)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 45, perHourText: '$40–60/hr' },
+    ibSchools: ['American International School of Cape Town', 'Reddam House Constantia', 'Herschel Girls School (IB option)'],
+    neighbourhoods: ['Constantia', 'Bishopscourt', 'Camps Bay', 'Sea Point', 'Stellenbosch (commuter)'],
+    localHook: "Cape Town's IB community serves the tech, wine, and tourism industry expat community. University of Cape Town medical school (one of Africa's best) is the primary medical target. SAST sessions.",
+  },
+  nairobi: {
+    slug: 'nairobi', city: 'Nairobi', country: 'Kenya', countryCode: 'KE', region: 'Nairobi County', timezoneAbbr: 'EAT (UTC+3)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 40, perHourText: '$35–55/hr' },
+    ibSchools: ['International School of Kenya (ISK)', 'Brookhouse School', 'Aga Khan Academy Nairobi', 'Braeburn School'],
+    neighbourhoods: ['Karen', 'Lavington', 'Runda', 'Muthaiga', 'Westlands'],
+    localHook: "Nairobi's IB community is anchored by ISK and Brookhouse — serving the UN (UNEP, UN-Habitat), diplomatic, and NGO expat community. The Karen/Lavington corridor drives IB demand. University of Nairobi medical school is the primary local target. EAT sessions (UTC+3).",
+  },
+  warsaw: {
+    slug: 'warsaw', city: 'Warsaw', country: 'Poland', countryCode: 'PL', region: 'Masovia', timezoneAbbr: 'CET/CEST',
+    currency: { code: 'PLN', symbol: 'zł' }, pricing: { perHour: 250, perHourText: 'zł 200–350/hr' },
+    ibSchools: ['American School of Warsaw', 'British School of Warsaw', 'International American School of Warsaw'],
+    neighbourhoods: ['Mokotów', 'Wilanów', 'Żoliborz', 'Ursynów', 'Kabaty'],
+    localHook: "Warsaw's IB community is growing rapidly — anchored by the American School and British School. Poland's tech-sector growth (Google, Samsung, Amazon offices in Warsaw) drives increasing expat demand. Warsaw Medical University is the primary local target. CET evening sessions.",
+  },
+  prague: {
+    slug: 'prague', city: 'Prague', country: 'Czech Republic', countryCode: 'CZ', region: 'Prague', timezoneAbbr: 'CET/CEST',
+    currency: { code: 'CZK', symbol: 'Kč' }, pricing: { perHour: 1500, perHourText: 'Kč 1,200–2,000/hr' },
+    ibSchools: ['International School of Prague (ISP)', 'Prague British International School', 'Riverside School Prague'],
+    neighbourhoods: ['Vinohrady', 'Dejvice', 'Bubeneč', 'Smíchov', 'Černý Most'],
+    localHook: "Prague's IB community is anchored by ISP — one of Central Europe's oldest international schools. Charles University medical faculty is a popular pathway for English-language medical programmes. CET evening sessions.",
+  },
+  budapest: {
+    slug: 'budapest', city: 'Budapest', country: 'Hungary', countryCode: 'HU', region: 'Budapest', timezoneAbbr: 'CET/CEST',
+    currency: { code: 'EUR', symbol: '€' }, pricing: { perHour: 50, perHourText: '€45–70/hr' },
+    ibSchools: ['American International School of Budapest (AISB)', 'British International School Budapest', 'SEK International School Budapest'],
+    neighbourhoods: ['District II (Rózsadomb)', 'District XII (Buda hills)', 'Óbuda', 'Zugló', 'Gödöllő'],
+    localHook: "Budapest's IB community is anchored by AISB in District XII — serving the diplomatic, tech, and shared-services expat community. Semmelweis University medical school (English-programme) is a popular pathway for international students. CET evening sessions. EUR pricing.",
+  },
+  istanbul: {
+    slug: 'istanbul', city: 'Istanbul', country: 'Turkey', countryCode: 'TR', region: 'Istanbul', timezoneAbbr: 'TRT (UTC+3)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 50, perHourText: '$45–70/hr' },
+    ibSchools: ['Robert College', 'Koç School', 'American Collegiate Institute (ACI)', 'Istanbul International Community School (IICS)', 'British International School Istanbul'],
+    neighbourhoods: ['Bebek', 'Etiler', 'Levent', 'Sarıyer', 'Kadıköy'],
+    localHook: "Istanbul's IB community is the largest in Turkey — anchored by Robert College (one of the oldest American schools outside the US, founded 1863) and Koç School. The Bebek/Etiler/Levent corridor drives IB demand from Turkey's business elite. USD pricing (TRY volatility). TRT sessions (UTC+3).",
+  },
+  'tel-aviv': {
+    slug: 'tel-aviv', city: 'Tel Aviv', country: 'Israel', countryCode: 'IL', region: 'Tel Aviv District', timezoneAbbr: 'IST (UTC+2)',
+    currency: { code: 'USD', symbol: '$' }, pricing: { perHour: 55, perHourText: '$50–75/hr' },
+    ibSchools: ['Walworth Barbour American International School (WBAIS)', 'Tabeetha School Jaffa', 'Anglican International School Jerusalem (day-trip)'],
+    neighbourhoods: ['Herzliya Pituach', 'Ramat HaSharon', 'Kfar Shmaryahu', 'Raanana', 'Savyon'],
+    localHook: "Tel Aviv's IB community is anchored by WBAIS (Walworth Barbour) in Even Yehuda — serving the tech (Startup Nation), diplomatic, and multinational expat community. The Herzliya tech corridor drives Indian-origin tech-expat demand. USD pricing. IST sessions (UTC+2, close to CEST). Many Tel Aviv IB students target US Ivy League or UK medical pathways.",
+  },
+  doha: {
+    slug: 'doha', city: 'Doha', country: 'Qatar', countryCode: 'QA', region: 'Doha', timezoneAbbr: 'AST (UTC+3)',
+    currency: { code: 'QAR', symbol: 'QR' }, pricing: { perHour: 250, perHourText: 'QR 200–350/hr' },
+    ibSchools: ['Qatar Academy Doha', 'American School of Doha (ASD)', 'Doha College', 'Park House English School'],
+    neighbourhoods: ['West Bay', 'The Pearl', 'Al Sadd', 'Al Waab', 'Education City'],
+    localHook: "Doha's IB community is anchored by Qatar Academy and ASD — serving the energy sector, Al Jazeera, and Qatar Foundation expat community. Education City hosts branch campuses of Weill Cornell Medicine-Qatar and Georgetown-Qatar. AST sessions (UTC+3). QAR or USD pricing.",
+  },
+  riyadh: {
+    slug: 'riyadh', city: 'Riyadh', country: 'Saudi Arabia', countryCode: 'SA', region: 'Riyadh Province', timezoneAbbr: 'AST (UTC+3)',
+    currency: { code: 'SAR', symbol: 'SAR' }, pricing: { perHour: 250, perHourText: 'SAR 200–350/hr' },
+    ibSchools: ['American International School Riyadh (AISR)', 'British International School Riyadh (BISR)', 'Riyadh Schools (ISG)', 'KAUST School (Jeddah/Thuwal)'],
+    neighbourhoods: ['Diplomatic Quarter', 'Al Olaya', 'Hittin', 'Al Narjis', 'King Abdullah Financial District'],
+    localHook: "Riyadh's IB community is growing rapidly — anchored by AISR and BISR in the Diplomatic Quarter. Saudi Vision 2030 and NEOM drive increasing international school demand. The large Indian expat community (2.5M+ Indians in Saudi Arabia) creates NEET + IB dual demand. AST sessions (UTC+3). SAR or USD pricing.",
   },
 }
 

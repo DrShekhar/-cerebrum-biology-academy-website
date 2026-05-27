@@ -314,6 +314,93 @@ export const gamsatMetros: Record<string, GAMSATMetroConfig> = {
       { question: 'How does Cerebrum compare to Birmingham GAMSAT prep?', answer: 'UK GAMSAT providers charge £600–£1,500 for all sections. Cerebrum is a Section III biology specialist at £349–£1,099. Most candidates pair us with a generalist for Section I and II.' },
     ],
   },
+  // ─── NEW ZEALAND ────────────────────────────────────────────────────────────
+  auckland: {
+    slug: 'auckland',
+    city: 'Auckland',
+    country: 'New Zealand',
+    countryCode: 'NZ',
+    region: 'Auckland',
+    timezone: 'New Zealand Standard Time',
+    timezoneShort: 'NZST',
+    currency: { code: 'NZD', symbol: 'NZ$' },
+    pricing: { selfPaced: 'NZ$599', smallBatch: 'NZ$1,199', oneOnOne: 'NZ$1,699' },
+    locale: 'en_NZ',
+    metaTitle: 'GAMSAT Biology Tutor Auckland | Auckland, Otago, Waikato',
+    metaDescription:
+      'GAMSAT Section III biology tutor for Auckland graduate medicine applicants — University of Auckland, University of Otago. AIIMS-trained biology specialists. From NZ$599.',
+    keywords: ['GAMSAT biology tutor Auckland', 'GAMSAT tutor Auckland', 'GAMSAT tutor University of Auckland', 'GAMSAT tutor Otago', 'graduate medicine tutor New Zealand', 'GAMSAT Section III Auckland', 'GAMSAT New Zealand'],
+    heroSubtitle:
+      'GAMSAT Section III biology coaching for University of Auckland and University of Otago graduate medicine applicants — New Zealand\'s two GAMSAT-pathway medical schools. AIIMS-trained biology specialists, NZST evening sessions, NZ$599 to NZ$1,699.',
+    whySection: {
+      heading: 'Why Auckland is New Zealand\'s graduate medicine gateway',
+      paragraphs: [
+        'Auckland anchors New Zealand\'s graduate medicine pathway. The University of Auckland School of Medicine and University of Otago (Dunedin, with Auckland clinical campus) are New Zealand\'s only two medical schools — both accept GAMSAT for graduate entry. Auckland produces the majority of NZ GAMSAT candidates.',
+        'Auckland has a growing Indian-origin community in East Auckland (Botany, Pakuranga, Howick), South Auckland (Manukau, Papatoetoe), and the North Shore. Healthcare professionals (nurses, pharmacists, physiotherapists) drive GAMSAT demand as career-changers targeting graduate medicine.',
+      ],
+    },
+    medSchools: [
+      { name: 'University of Auckland School of Medicine', programmes: 'MBChB (graduate entry, GAMSAT + MMI)' },
+      { name: 'University of Otago (Dunedin + Auckland clinical campus)', programmes: 'MBChB (graduate entry, GAMSAT + interview)' },
+    ],
+    timezoneSection: 'All live sessions timed for NZST (UTC+12). Standard Auckland small-batch: 7:30–9:30 PM NZST weekday evenings. Weekend: 10:00 AM–12:00 PM NZST. Our IST morning sessions align with NZ evenings.',
+    demographicSection: {
+      heading: 'East Auckland / North Shore — the graduate medicine conversation',
+      paragraphs: [
+        'Auckland\'s Indian-origin community in Botany, Howick, Pakuranga, and the North Shore drives growing GAMSAT demand. Many are healthcare professionals (pharmacists, nurses, allied health) targeting graduate medicine.',
+        'What we hear from Auckland candidates: (1) University of Auckland is the primary target (GAMSAT 58–62+); (2) Otago is the alternative with slightly different requirements; (3) working professionals need evening/weekend sessions. We structure the consultation around target programme and March vs September sitting.',
+      ],
+    },
+    faqs: [
+      { question: 'Auckland or Otago — what GAMSAT Section III is competitive?', answer: 'University of Auckland typically requires GAMSAT 58–62+ overall. University of Otago requires similar. Our coaching targets Section III 63+ to keep both NZ programmes competitive.' },
+      { question: 'I\'m a working professional in Auckland — can I prepare alongside work?', answer: 'Yes — NZST evening sessions (7:30–9:30 PM) fit after standard work hours. Weekend sessions accommodate shift workers.' },
+      { question: 'Do you accept NZD payment?', answer: 'Yes — NZD via New Zealand bank transfer (ANZ NZ, ASB, BNZ, Westpac NZ) or international Visa/Mastercard.' },
+      { question: 'How does Cerebrum compare to NZ GAMSAT prep?', answer: 'NZ GAMSAT providers charge NZ$1,200–NZ$3,500 for all sections. Cerebrum is a Section III biology specialist at NZ$599–NZ$1,699. Most candidates pair us with a generalist for Section I and II.' },
+    ],
+  },
+
+  wellington: {
+    slug: 'wellington',
+    city: 'Wellington',
+    country: 'New Zealand',
+    countryCode: 'NZ',
+    region: 'Wellington',
+    timezone: 'New Zealand Standard Time',
+    timezoneShort: 'NZST',
+    currency: { code: 'NZD', symbol: 'NZ$' },
+    pricing: { selfPaced: 'NZ$599', smallBatch: 'NZ$1,199', oneOnOne: 'NZ$1,699' },
+    locale: 'en_NZ',
+    metaTitle: 'GAMSAT Biology Tutor Wellington | Otago, Auckland Medical',
+    metaDescription:
+      'GAMSAT Section III biology tutor for Wellington graduate medicine applicants. AIIMS-trained biology specialists. From NZ$599.',
+    keywords: ['GAMSAT biology tutor Wellington', 'GAMSAT tutor Wellington', 'graduate medicine tutor Wellington', 'GAMSAT Section III Wellington', 'GAMSAT New Zealand Wellington'],
+    heroSubtitle:
+      'GAMSAT Section III biology coaching for Wellington-based graduate medicine applicants targeting University of Otago (Wellington clinical campus) and University of Auckland. AIIMS-trained faculty, NZST evening sessions, NZ$599 to NZ$1,699.',
+    whySection: {
+      heading: 'Why Wellington is New Zealand\'s capital for graduate medicine',
+      paragraphs: [
+        'Wellington hosts the University of Otago Wellington clinical campus — where Otago medical students complete their clinical years. Wellington Hospital and Capital & Coast DHB provide the clinical training environment. Graduate-entry candidates based in Wellington often target Otago\'s Wellington-based clinical placements.',
+        'Wellington\'s public-sector and diplomatic community (New Zealand Parliament, government ministries, embassies) includes career-changers targeting graduate medicine — public-health professionals, policy analysts, and allied health workers.',
+      ],
+    },
+    medSchools: [
+      { name: 'University of Otago (Wellington clinical campus)', programmes: 'MBChB clinical years, research programmes' },
+      { name: 'University of Auckland (remote application)', programmes: 'MBChB graduate entry' },
+    ],
+    timezoneSection: 'All live sessions timed for NZST. Standard Wellington small-batch: 7:30–9:30 PM NZST. Weekend: 10:00 AM–12:00 PM NZST.',
+    demographicSection: {
+      heading: 'Wellington public-sector corridor',
+      paragraphs: [
+        'Wellington\'s GAMSAT candidates include public-health professionals, allied health workers, and government policy analysts seeking career transitions to medicine.',
+        'What we hear from Wellington candidates: (1) Otago Wellington campus is the natural target for locally-based training; (2) GAMSAT 58–62+ is competitive; (3) part-time study alongside government jobs requires flexible scheduling.',
+      ],
+    },
+    faqs: [
+      { question: 'Wellington vs Auckland — which medical school should I target?', answer: 'Both use GAMSAT. University of Otago has a Wellington clinical campus for later years. University of Auckland is in Auckland. For Wellington-based candidates, Otago is the natural choice for local clinical placements.' },
+      { question: 'Do you accept NZD payment?', answer: 'Yes — NZD via NZ bank transfer or international Visa/Mastercard.' },
+      { question: 'How does Cerebrum compare to NZ GAMSAT prep?', answer: 'NZ providers charge NZ$1,200–NZ$3,500 for all sections. Cerebrum is a Section III biology specialist at NZ$599–NZ$1,699.' },
+    ],
+  },
 }
 
 export function getGAMSATMetro(slug: string): GAMSATMetroConfig | null {
