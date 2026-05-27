@@ -8448,6 +8448,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.86,
     },
+    // Dehradun/Mussoorie depth — boarding school pages + depth
+    ...[
+      'neet-coaching-fees-dehradun', 'neet-coaching-near-me-dehradun',
+      'online-neet-coaching-dehradun',
+      'neet-coaching-doon-school-dehradun', 'neet-coaching-welham-boys-dehradun',
+      'neet-coaching-welham-girls-dehradun', 'neet-coaching-woodstock-mussoorie',
+    ].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.82,
+    })),
     {
       url: `${baseUrl}/neet-coaching-dlf-phase-1-gurugram`,
       lastModified: lastUpdated,

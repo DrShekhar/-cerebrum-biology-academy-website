@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 import { FAQSchema } from '@/components/seo/FAQSchema'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-dehradun'
@@ -36,6 +37,7 @@ const faqs = [
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
+      <LocalBusinessSchema />
       <CerebrumPersonSchema knowsAbout={['NEET Foundation Dehradun', 'Class 10 Biology Dehradun', 'Early NEET preparation Uttarakhand']} />
       <FAQSchema questions={faqs} pageUrl={PAGE_URL} />
 
