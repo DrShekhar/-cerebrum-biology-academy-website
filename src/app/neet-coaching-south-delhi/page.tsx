@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { DelhiAreaSchema } from '@/components/seo/DelhiAreaSchema'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NearMeKeywordInjector } from '@/components/seo/NearMeKeywordInjector'
@@ -347,6 +348,7 @@ export default function NEETCoachingSouthDelhiPage() {
           'Green Park',
         ]}
       />
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20a%20FREE%20demo%20for%20NEET%20Biology%20in%20South%20Delhi.%20Please%20share%20timings." />
     </>
   )
 }

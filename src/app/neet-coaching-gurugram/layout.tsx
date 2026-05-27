@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     'Top NEET biology coaching in Gurugram 2026. 98% success rate, AIIMS faculty, 15-student batches. Best coaching near DLF Phase 1-5, Golf Course Road, Sector 51, Sohna Road. 680+ students selected. Book free demo class!',
   keywords:
     'NEET coaching Gurugram, NEET coaching Gurgaon, NEET classes DLF, biology coaching Golf Course Road, NEET tuition Sector 51, NEET coaching Sohna Road, NEET coaching MG Road, best NEET coaching Gurugram, NEET preparation Gurgaon, online NEET coaching Gurugram, medical coaching Gurugram',
+  other: { 'article:modified_time': '2026-05-27' },
   openGraph: {
     title: 'Best NEET Coaching in Gurugram | DLF, Golf Course Road',
     description:
