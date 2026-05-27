@@ -76,6 +76,11 @@ export type CitySlug =
   | 'taipei'
   | 'manila'
   | 'jakarta'
+  // India Tier 2 IB cities
+  | 'kochi'
+  | 'visakhapatnam-ib'
+  | 'mangalore-ib'
+  | 'surat-ib'
   // Programmatic batch — 25 new cities (May 2026)
   | 'madrid'
   | 'barcelona'
@@ -1540,6 +1545,36 @@ export const cities: Record<CitySlug, CityConfig> = {
     neighbourhoods: ['Pondok Indah', 'Kemang', 'Cilandak', 'Menteng', 'BSD City (Tangerang)'],
     localHook:
       "Jakarta's IB community is anchored by Jakarta Intercultural School (JIS) in Cilandak — Southeast Asia's largest international school — and British School Jakarta (BSJ) in Pondok Indah. The corporate expat community (mining, energy, tech) plus wealthy Indonesian families in South Jakarta drive strong IB demand. Our WIB evening sessions (6–9 PM Jakarta) fit the international-school schedule. Many Jakarta IB students target UK Russell Group, Australian Group of Eight, or Universitas Indonesia medical pathways.",
+  },
+
+  // ─── INDIA TIER 2 IB CITIES ───────────────────────────────────────────────
+  kochi: {
+    slug: 'kochi', city: 'Kochi', country: 'India', countryCode: 'IN', region: 'Kerala', timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' }, pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    ibSchools: ['Toc H Public School', 'Choice School Kochi', 'GIIS Kochi', 'Rajagiri Public School'],
+    neighbourhoods: ['Marine Drive', 'Edappally', 'Kakkanad', 'Vyttila', 'Aluva'],
+    localHook: "Kochi is Kerala's commercial capital with India's highest literacy state (96%+). The IT corridor (Infopark, SmartCity) drives IB/ICSE demand. Kerala families are education-focused, English-fluent, and strongly aspire to medicine. IST evening sessions.",
+  },
+  'visakhapatnam-ib': {
+    slug: 'visakhapatnam-ib', city: 'Visakhapatnam', country: 'India', countryCode: 'IN', region: 'Andhra Pradesh', timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' }, pricing: { perHour: 2000, perHourText: '₹1,800–3,000/hr' },
+    ibSchools: ['Oakridge International School Vizag', 'Delhi Public School Vizag', 'Navy Children School'],
+    neighbourhoods: ['Dwaraka Nagar', 'MVP Colony', 'Seethammadhara', 'Madhurawada'],
+    localHook: "Vizag's Navy, steel (RINL), and pharma corridor drives international school demand. Oakridge International offers IB. Navy families maintain dual IB + NEET tracks. IST sessions.",
+  },
+  'mangalore-ib': {
+    slug: 'mangalore-ib', city: 'Mangalore', country: 'India', countryCode: 'IN', region: 'Karnataka', timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' }, pricing: { perHour: 2000, perHourText: '₹1,800–3,000/hr' },
+    ibSchools: ['Manipal International School', 'Delhi Public School Mangalore', 'Canara International School'],
+    neighbourhoods: ['Balmatta', 'Hampankatta', 'Bejai', 'Surathkal', 'Manipal (30 km)'],
+    localHook: "Mangalore has 5 medical colleges — highest in Karnataka outside Bangalore. Manipal (30 km) is India's premier private medical education hub. International school families keep IB + NEET dual-track. IST sessions.",
+  },
+  'surat-ib': {
+    slug: 'surat-ib', city: 'Surat', country: 'India', countryCode: 'IN', region: 'Gujarat', timezoneAbbr: 'IST',
+    currency: { code: 'INR', symbol: '₹' }, pricing: { perHour: 2500, perHourText: '₹2,000–3,500/hr' },
+    ibSchools: ['Fountainhead School (IB)', 'P.P. Savani Cambridge International', 'Delhi Public School Surat'],
+    neighbourhoods: ['Adajan', 'Vesu', 'Piplod', 'City Light', 'Athwa'],
+    localHook: "Surat's diamond and textile industry families increasingly choose IB/Cambridge schools. Fountainhead School offers IB DP. The city's wealth drives premium education coaching demand. IST sessions.",
   },
 
   // ─── PROGRAMMATIC BATCH — 25 NEW CITIES (May 2026) ─────────────────────────
