@@ -20,6 +20,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import Link from 'next/link'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import { CitySchema } from '@/components/seo/CitySchema'
@@ -626,6 +627,7 @@ export default function NeetCoachingJaipurPage() {
           </div>
         </div>
       </section>
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Jaipur.%20Please%20share%20timings." />
     </div>
   )
 }

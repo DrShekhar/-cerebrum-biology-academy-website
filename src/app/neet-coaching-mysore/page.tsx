@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     images: [{ url: `${BASE_URL}/api/og?${ogImageParams.toString()}`, width: 1200, height: 630, alt: `NEET Coaching in ${locality}` }],
   },
   twitter: { card: 'summary_large_image', title: `Best NEET Coaching in ${locality}`, description: `Top NEET Biology coaching in ${locality}. AIIMS faculty, 98% success rate.`, images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`] },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: { canonical: `${BASE_URL}/${slug}` },
 }
 
@@ -45,6 +47,7 @@ export default function NEETCoachingMysorePage() {
     <>
       <LocalitySchema locality="Mysore" slug={slug} pageTitle="Best NEET Coaching in Mysore" pageDescription="Top NEET Biology coaching in Mysore, Karnataka with AIIMS faculty and 98% success rate." pageType="coaching" coordinates={{ lat: "12.2958", lng: "76.6394" }} faqs={faqs} />
       <PageContent />
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Mysore.%20Please%20share%20timings." />
     </>
   )
 }

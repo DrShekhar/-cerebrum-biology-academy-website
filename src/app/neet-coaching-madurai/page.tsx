@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
@@ -49,6 +50,7 @@ export const metadata: Metadata = {
       'Online NEET coaching in Madurai. Expert biology classes, 98% success rate. Book free demo!',
     images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`],
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-madurai`,
   },
@@ -64,6 +66,7 @@ export default function NEETCoachingMaduraiPage() {
         pageDescription="Premium online NEET coaching in Madurai. 10,000+ aspirants, expert faculty, near Madurai Medical College & Meenakshi Mission. 98% success rate."
         pageType="coaching" coordinates={{ lat: "9.9252", lng: "78.1198" }} />
       <PageContent />
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Madurai.%20Please%20share%20timings." />
     </>
   )
 }

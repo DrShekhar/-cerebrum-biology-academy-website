@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Ahmedabad | Satellite, SG Highway, Bopal',
@@ -21,11 +22,13 @@ export const metadata: Metadata = {
     description:
       'Top NEET biology coaching in Ahmedabad. 98% success rate. Satellite, SG Highway, Bopal, Prahlad Nagar, Gandhinagar.',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ahmedabad',
   },
 }
 
 export default function AhmedabadCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <><LocalBusinessSchema />
+      {children}</>
 }

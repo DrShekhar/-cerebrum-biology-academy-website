@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
@@ -49,6 +50,7 @@ export const metadata: Metadata = {
       'Online NEET coaching in Vizag for AP premium families. Expert biology classes, 98% success rate. Book free demo!',
     images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`],
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-visakhapatnam`,
   },
@@ -64,6 +66,7 @@ export default function NEETCoachingVisakhapatnamPage() {
         pageDescription="Premium online NEET coaching in Vizag. 15,000+ aspirants, expert faculty, near Andhra Medical College & GITAM. 98% success rate."
         pageType="coaching" coordinates={{ lat: "17.6868", lng: "83.2185" }} />
       <PageContent />
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Visakhapatnam.%20Please%20share%20timings." />
     </>
   )
 }

@@ -1,5 +1,6 @@
 'use client'
 
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import Link from 'next/link'
 import {
   MapPin,
@@ -708,6 +709,7 @@ export default function NEETCoachingMumbai() {
         </section>
       </main>
     </>
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Mumbai.%20Please%20share%20timings." />
     </>
   )
 }

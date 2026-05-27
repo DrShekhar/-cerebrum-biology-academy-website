@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Kolkata | Salt Lake, Park Street, New Town',
@@ -21,11 +22,13 @@ export const metadata: Metadata = {
     description:
       'Top NEET biology coaching in Kolkata. 98% success rate. Salt Lake, Park Street, New Town, Howrah, Jadavpur.',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kolkata',
   },
 }
 
 export default function KolkataCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <><LocalBusinessSchema />
+      {children}</>
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Mumbai 2026 | Maharashtra',
@@ -20,12 +21,13 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Mumbai 2026 | Maharashtra',
     description: 'Top NEET coaching for Mumbai students. 98% success rate. Online classes from AIIMS faculty.',
   },
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-mumbai',
-  },
   other: {
+    'article:modified_time': '2026-05-27',
     'geo.region': 'IN-MH',
     'geo.placename': 'Mumbai',
+  },
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-mumbai',
   },
 }
 

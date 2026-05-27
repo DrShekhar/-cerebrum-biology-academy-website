@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { StickyMobileCTABar } from '@/components/seo/StickyMobileCTABar'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
@@ -45,6 +46,7 @@ export default function NEETCoachingPatnaPage() {
     <>
       <LocalitySchema locality="Patna" slug={slug} pageTitle="Best NEET Coaching in Patna" pageDescription="Top NEET Biology coaching in Patna, Bihar with AIIMS faculty and 98% success rate." pageType="coaching" coordinates={{ lat: "25.6093", lng: "85.1376" }} faqs={faqs} />
       <PageContent />
+      <StickyMobileCTABar waUrl="https://wa.me/918826444334?text=Hi!%20I%20want%20a%20FREE%20demo%20for%20NEET%20Biology%20coaching%20in%20Patna.%20Please%20share%20timings." />
     </>
   )
 }

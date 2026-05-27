@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Indore | Biology Classes',
@@ -20,11 +21,13 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Indore | Biology Classes',
     description: 'Best NEET biology coaching in Indore. 98% success rate. AIIMS faculty. Vijay Nagar, Palasia, Rau, Bhawarkua.',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-indore',
   },
 }
 
 export default function IndoreCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <><LocalBusinessSchema />
+      {children}</>
 }

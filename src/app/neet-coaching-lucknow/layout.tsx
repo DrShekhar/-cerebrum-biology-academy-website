@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Lucknow | Gomti Nagar, Hazratganj',
@@ -21,11 +22,13 @@ export const metadata: Metadata = {
     description:
       'Top NEET biology coaching in Lucknow. KGMU-focused! 98% success rate. Gomti Nagar, Hazratganj, Aliganj, Indira Nagar.',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-lucknow',
   },
 }
 
 export default function LucknowCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <><LocalBusinessSchema />
+      {children}</>
 }

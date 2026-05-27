@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Patna | Boring Road, Kankarbagh',
@@ -21,11 +22,13 @@ export const metadata: Metadata = {
     description:
       'Top NEET biology coaching in Patna. No Kota migration needed! 98% success rate. Boring Road, Kankarbagh, Patliputra Colony.',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-patna',
   },
 }
 
 export default function PatnaCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <><LocalBusinessSchema />
+      {children}</>
 }

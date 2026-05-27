@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Hyderabad | Online Biology Classes by Cerebrum Academy',
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-hyderabad',
     type: 'website',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-hyderabad',
   },

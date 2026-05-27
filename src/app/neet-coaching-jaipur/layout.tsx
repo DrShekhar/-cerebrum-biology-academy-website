@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LocalBusinessSchema } from '@/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Jaipur | Vaishali Nagar, Mansarovar',
@@ -21,11 +22,13 @@ export const metadata: Metadata = {
     description:
       'Top NEET biology coaching in Jaipur. Kota alternative! 98% success rate. Vaishali Nagar, Mansarovar, Malviya Nagar, C-Scheme.',
   },
+  other: { 'article:modified_time': '2026-05-27' },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jaipur',
   },
 }
 
 export default function JaipurCoachingLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <><LocalBusinessSchema />
+      {children}</>
 }
