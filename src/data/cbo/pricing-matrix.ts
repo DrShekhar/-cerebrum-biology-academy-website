@@ -12,7 +12,7 @@
 
 import { sharedCurrencies, convertForDisplay } from '@/data/shared/currencies'
 
-export type CBOProductId = 'foundation' | 'intensive' | 'elite'
+export type CBOProductId = 'pursuit' | 'ascent' | 'pinnacle'
 
 export interface CBOPricingProduct {
   id: CBOProductId
@@ -25,8 +25,8 @@ export interface CBOPricingProduct {
 
 export const cboPricingProducts: CBOPricingProduct[] = [
   {
-    id: 'foundation',
-    name: 'CBO Foundation',
+    id: 'pursuit',
+    name: 'CBO — Pursuit',
     priceUSD: 375,
     duration: '3 months',
     features: [
@@ -38,12 +38,12 @@ export const cboPricingProducts: CBOPricingProduct[] = [
     ],
   },
   {
-    id: 'intensive',
-    name: 'CBO Intensive',
+    id: 'ascent',
+    name: 'CBO — Ascent',
     priceUSD: 675,
     duration: '6 months',
     features: [
-      'Everything in Foundation',
+      'Everything in Pursuit',
       '1-on-1 mentoring sessions',
       'Extended live classes (4 hrs/week)',
       'Mock tests with analysis',
@@ -53,12 +53,12 @@ export const cboPricingProducts: CBOPricingProduct[] = [
     popular: true,
   },
   {
-    id: 'elite',
-    name: 'CBO Elite',
+    id: 'pinnacle',
+    name: 'CBO — Pinnacle',
     priceUSD: 1125,
     duration: '12 months',
     features: [
-      'Everything in Intensive',
+      'Everything in Ascent',
       'Daily doubt clearing',
       'Practical exam preparation',
       'Priority faculty access',

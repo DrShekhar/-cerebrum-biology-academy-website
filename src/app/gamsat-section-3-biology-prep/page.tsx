@@ -64,7 +64,7 @@ const faqs = [
   {
     question: 'What GAMSAT score should I target for UK graduate medicine?',
     answer:
-      "UK graduate medicine intake cutoffs vary by school. For competitive UK GEM (Graduate Entry Medicine) programmes (Cambridge, Oxford, Imperial, KCL, UCL, Warwick, St George's, Nottingham), candidates typically target a GAMSAT score of 65+, with Section III 65+. For Australian graduate medicine (Sydney, Melbourne, Monash, ANU, Wollongong, Notre Dame), the threshold is broadly similar. For Irish graduate medicine (RCSI, UCC, Limerick), 60+ is competitive. Cerebrum students typically target 65+ in Small-Batch and 70+ in 1:1.",
+      "UK graduate medicine intake cutoffs vary by school. For competitive UK GEM (Graduate Entry Medicine) programmes (Cambridge, Oxford, Imperial, KCL, UCL, Warwick, St George's, Nottingham), candidates typically target a GAMSAT score of 65+, with Section III 65+. For Australian graduate medicine (Sydney, Melbourne, Monash, ANU, Wollongong, Notre Dame), the threshold is broadly similar. For Irish graduate medicine (RCSI, UCC, Limerick), 60+ is competitive. Cerebrum students typically target 65+ in Ascent and 70+ in Pinnacle.",
   },
   {
     question: 'Can a non-biology background student do well on GAMSAT Section III?',
@@ -83,7 +83,7 @@ const courseSchema = {
   '@type': 'Course',
   name: 'GAMSAT Section III Biology Preparation Programme',
   description:
-    'GAMSAT Section III biology coaching from AIIMS-trained specialists. Campbell + Pre-U biology, ACER official paper walkthroughs, biochemistry-chemistry crossover. Self-Paced (£399), Small-Batch (£799), 1:1 Senior Faculty (£1,249 full programme or £110/hr ad-hoc).',
+    'GAMSAT Section III biology coaching from AIIMS-trained specialists. Campbell + Pre-U biology, ACER official paper walkthroughs, biochemistry-chemistry crossover. Pursuit (£399), Ascent (£799), Pinnacle (£1,249 full programme or £110/hr ad-hoc).',
   url: PAGE_URL,
   inLanguage: 'en-GB',
   availableLanguage: ['English'],
@@ -200,18 +200,18 @@ export default function GAMSATSectionIIIBiologyPage() {
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">Pricing</h2>
           <ul>
             <li>
-              <strong>Self-Paced — £399 / A$799 / €469</strong> for the full 4–6 month programme.
+              <strong>Pursuit — £399 / A$799 / €469</strong> for the full 4–6 month programme.
               Async Campbell + Pre-U coverage, ACER paper walkthroughs (Papers 1, 2), 150+ practice
               stems, recorded library, WhatsApp doubt support.
             </li>
             <li>
-              <strong>Small-Batch — £799 / A$1,599 / €939</strong>. Everything in Self-Paced plus
+              <strong>Ascent — £799 / A$1,599 / €939</strong>. Everything in Pursuit plus
               weekly 2-hour live sessions, monthly full-length Section III mocks, peer Slack
               channel, senior faculty office hours.
             </li>
             <li>
-              <strong>1:1 Senior Faculty — £1,249 / A$2,399 / €1,449</strong>. Everything in
-              Small-Batch plus weekly 90-minute 1:1 video sessions with AIIMS-trained senior
+              <strong>Pinnacle — £1,249 / A$2,399 / €1,449</strong>. Everything in
+              Ascent plus weekly 90-minute 1:1 video sessions with AIIMS-trained senior
               faculty, personalised study plan (calibrated to your undergraduate background), custom
               stem drilling, unlimited WhatsApp faculty access.
             </li>
