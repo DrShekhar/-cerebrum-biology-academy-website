@@ -64,6 +64,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ludhiana' },
     description: 'Real-time sessions with Chandigarh-quality teaching. Ask questions live.',
   },
   {

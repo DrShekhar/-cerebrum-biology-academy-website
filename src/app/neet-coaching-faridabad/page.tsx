@@ -495,6 +495,7 @@ export default function NeetCoachingFaridabadPage() {
               {
                 icon: Award,
                 title: 'AIIMS Faculty',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad' },
                 desc: '15+ years experience, trained at AIIMS Delhi',
               },
               { icon: Users, title: 'Small Batches', desc: 'Only 15-20 students per batch' },

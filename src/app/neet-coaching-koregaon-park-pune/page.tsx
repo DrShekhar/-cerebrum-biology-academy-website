@@ -85,6 +85,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-koregaon-park-pune' },
     description:
       'Premium online coaching - no need to navigate Pune traffic. World-class teaching from your KP apartment.',
   },

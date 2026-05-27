@@ -63,6 +63,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jalandhar' },
     description: 'Real-time sessions with Chandigarh-quality teaching. Doaba students thrive here.',
   },
   {

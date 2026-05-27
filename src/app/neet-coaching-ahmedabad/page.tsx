@@ -136,6 +136,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ahmedabad' },
     description:
       'Real-time teaching with instant doubt resolution - skip Ahmedabad traffic completely',
   },

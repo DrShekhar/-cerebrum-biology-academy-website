@@ -85,6 +85,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-omr-chennai' },
     description:
       'Premium online coaching - no need to navigate OMR traffic. World-class teaching from your IT Park apartment.',
   },

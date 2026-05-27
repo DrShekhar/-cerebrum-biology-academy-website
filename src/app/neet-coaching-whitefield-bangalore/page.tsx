@@ -41,6 +41,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-whitefield-bangalore' },
     description:
       'Premium online coaching - no ORR traffic. World-class teaching from your Whitefield home.',
   },

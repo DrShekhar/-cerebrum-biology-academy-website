@@ -74,6 +74,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-overseas' },
     description: 'Real-time teaching with instant doubt resolution, recorded for later viewing',
   },
   {

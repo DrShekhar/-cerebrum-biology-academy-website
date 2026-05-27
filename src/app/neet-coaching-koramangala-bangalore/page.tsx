@@ -85,6 +85,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-koramangala-bangalore' },
     description:
       'Premium online coaching - no need to navigate Silk Board traffic. World-class teaching from your Koramangala apartment.',
   },

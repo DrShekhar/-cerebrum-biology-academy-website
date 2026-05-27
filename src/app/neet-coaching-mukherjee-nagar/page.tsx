@@ -120,6 +120,7 @@ const features = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-mukherjee-nagar' },
     description: 'Learn from doctors who cleared AIIMS themselves',
   },
   {

@@ -135,6 +135,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-pune' },
     description: 'Real-time teaching with instant doubt resolution - skip Pune traffic completely',
   },
   {

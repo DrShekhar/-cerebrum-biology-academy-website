@@ -119,6 +119,8 @@ export default function NEETCoachingSolan() {
         faqs={faqs}
       />
 
+      <>
+      <link rel="canonical" href="https://cerebrumbiologyacademy.com/neet-coaching-solan" />
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-lime-950/20 to-slate-950">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 lg:py-28">
@@ -612,6 +614,7 @@ export default function NEETCoachingSolan() {
           </div>
         </section>
       </main>
+    </>
     </>
   )
 }

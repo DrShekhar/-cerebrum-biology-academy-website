@@ -64,6 +64,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dharamshala' },
     description: 'Real-time sessions. Perfect for RPGMC Tanda and IGMC Shimla preparation.',
   },
   {

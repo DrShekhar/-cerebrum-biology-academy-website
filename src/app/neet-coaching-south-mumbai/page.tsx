@@ -85,6 +85,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-south-mumbai' },
     description:
       'Premium online coaching - no need to travel out of South Mumbai. World-class teaching from your sea-view apartment.',
   },

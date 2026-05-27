@@ -119,6 +119,8 @@ export default function NEETCoachingMandi() {
         faqs={faqs}
       />
 
+      <>
+      <link rel="canonical" href="https://cerebrumbiologyacademy.com/neet-coaching-mandi" />
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-indigo-950 to-slate-950">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 lg:py-28">
@@ -609,6 +611,7 @@ export default function NEETCoachingMandi() {
           </div>
         </section>
       </main>
+    </>
     </>
   )
 }

@@ -64,6 +64,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-karnal' },
     description: 'Real-time sessions. Perfect preparation for KCGMC Karnal aspirants.',
   },
   {

@@ -70,6 +70,7 @@ const features = [
   {
     icon: Building,
     title: 'State-of-the-Art Infrastructure',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-centre' },
     description: 'Modern classrooms with AC, projectors, and comfortable seating.',
   },
   {

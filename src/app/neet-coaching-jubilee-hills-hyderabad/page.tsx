@@ -85,6 +85,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jubilee-hills-hyderabad' },
     description:
       'Premium online coaching - no traffic from Jubilee Hills to coaching centers. World-class teaching from home.',
   },

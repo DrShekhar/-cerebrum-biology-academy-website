@@ -480,6 +480,7 @@ export default function FeesPage() {
                 { title: '3-Month EMI', description: 'Spread payments every 3 months (no extra charge)' },
                 {
                   title: 'Merit Scholarship',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-fees' },
                   description: 'Eligible students get up to 50% off on yearly fees',
                 },
               ].map((option, index) => (

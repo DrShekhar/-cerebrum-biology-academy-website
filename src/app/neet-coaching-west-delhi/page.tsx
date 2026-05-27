@@ -219,6 +219,8 @@ export default function NEETCoachingWestDelhiPage() {
       />
 
       <DelhiAreaSchema pageSlug="neet-coaching-west-delhi" />
+      <>
+      <link rel="canonical" href="https://cerebrumbiologyacademy.com/neet-coaching-west-delhi" />
       <main className="min-h-screen">
         {/* Schema Markup */}
         <script
@@ -466,6 +468,7 @@ export default function NEETCoachingWestDelhiPage() {
           </div>
         </section>
       </main>
+    </>
     </>
   )
 }

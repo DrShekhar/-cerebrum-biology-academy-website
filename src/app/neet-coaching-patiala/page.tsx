@@ -63,6 +63,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-patiala' },
     description: 'Real-time sessions with expert teaching. Perfect for GMC Patiala aspirants.',
   },
   {

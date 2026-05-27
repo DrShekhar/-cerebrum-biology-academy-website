@@ -26,6 +26,7 @@ const instituteHighlights = [
   {
     icon: Briefcase,
     title: '15+ Years Experience',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-institute' },
     description: 'Established institute with proven track record since 2014.',
     stat: '15+',
   },

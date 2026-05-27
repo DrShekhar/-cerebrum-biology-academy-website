@@ -119,6 +119,8 @@ export default function NEETCoachingHamirpur() {
         faqs={faqs}
       />
 
+      <>
+      <link rel="canonical" href="https://cerebrumbiologyacademy.com/neet-coaching-hamirpur" />
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-amber-950/20 to-slate-950">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 lg:py-28">
@@ -611,6 +613,7 @@ export default function NEETCoachingHamirpur() {
           </div>
         </section>
       </main>
+    </>
     </>
   )
 }

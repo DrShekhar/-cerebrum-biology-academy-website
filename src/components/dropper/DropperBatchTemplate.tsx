@@ -170,8 +170,40 @@ export default function DropperBatchTemplate({
     `Hi! I want to book FREE counseling for NEET Dropper Batch 2026-27 in ${cityName}. Please share available timings.`
   )}`
 
+  const pageUrl = `https://cerebrumbiologyacademy.com/neet-dropper-batch-${citySlug}`
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: `NEET Dropper Batch 2026-27 ${cityName}`,
+    description: `Intensive 1-year NEET Biology repeater programme for ${cityName} students. AIIMS-trained faculty, previous-attempt analysis, 100-150 mark improvement target.`,
+    url: pageUrl,
+    inLanguage: 'en-IN',
+    educationalLevel: 'NEET-UG Dropper/Repeater',
+    provider: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      { '@type': 'ListItem', position: 2, name: `NEET ${cityName}`, item: `https://cerebrumbiologyacademy.com/neet-coaching-${citySlug}` },
+      { '@type': 'ListItem', position: 3, name: 'Dropper Batch', item: pageUrl },
+    ],
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <nav className="bg-gray-100 py-3 px-4">
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">

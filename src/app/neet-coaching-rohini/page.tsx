@@ -120,6 +120,7 @@ const features = [
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-rohini' },
     description: 'Learn from experienced NEET biology experts with 15+ years experience',
   },
   {

@@ -70,6 +70,7 @@ const features = [
   {
     icon: Home,
     title: 'Study From Home',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-punjab' },
     description: 'No need to relocate to Chandigarh or Kota. Same quality coaching from your city.',
   },
   {

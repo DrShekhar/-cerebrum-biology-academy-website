@@ -40,6 +40,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh' },
     description: 'Real-time online coaching for Chandigarh Tricity. No commute needed.',
   },
   {

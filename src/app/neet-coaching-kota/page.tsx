@@ -114,6 +114,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kota' },
     description:
       'Same quality as Kota top faculties - live teaching with instant doubt resolution from your room',
   },

@@ -123,6 +123,7 @@ const features = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kalu-sarai' },
     description: 'Learn from doctors who cleared AIIMS themselves',
   },
   {

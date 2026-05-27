@@ -115,6 +115,7 @@ const features = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-janakpuri' },
     description: 'Learn from doctors who cleared AIIMS',
   },
   { icon: Users, title: 'Small Batches', description: '10-12 students per batch' },

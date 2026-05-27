@@ -77,6 +77,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh-sector-34' },
     description: 'Real-time online coaching. No need to sit in crowded Sector 34 classrooms.',
   },
   {

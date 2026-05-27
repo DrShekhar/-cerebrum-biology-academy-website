@@ -69,6 +69,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-east-india' },
     description: 'Real-time teaching with instant doubt resolution from Delhi NCR faculty',
   },
   {

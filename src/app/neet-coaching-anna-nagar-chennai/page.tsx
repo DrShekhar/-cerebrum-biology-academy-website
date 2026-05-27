@@ -85,6 +85,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-anna-nagar-chennai' },
     description:
       'Premium online coaching - no need to navigate Chennai traffic. World-class teaching from your Anna Nagar home.',
   },

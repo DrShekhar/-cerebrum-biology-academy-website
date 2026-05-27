@@ -162,6 +162,8 @@ export default function NEETCoachingMumbai() {
         faqs={faqs}
       />
 
+      <>
+      <link rel="canonical" href="https://cerebrumbiologyacademy.com/neet-coaching-mumbai" />
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-orange-950/20 to-slate-950">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 lg:py-28">
@@ -705,6 +707,7 @@ export default function NEETCoachingMumbai() {
           </div>
         </section>
       </main>
+    </>
     </>
   )
 }

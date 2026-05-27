@@ -85,6 +85,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-andheri-mumbai' },
     description:
       'Premium online coaching - no need to travel through Andheri traffic. World-class teaching from home.',
   },

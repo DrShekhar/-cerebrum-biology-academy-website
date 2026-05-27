@@ -115,6 +115,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jaipur' },
     description: 'Real-time teaching with instant doubt resolution - same as Kota coaching quality',
   },
   {

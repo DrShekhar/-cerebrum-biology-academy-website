@@ -64,6 +64,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ambala' },
     description: 'Real-time online sessions. Same quality as top Chandigarh coaching centers.',
   },
   {
