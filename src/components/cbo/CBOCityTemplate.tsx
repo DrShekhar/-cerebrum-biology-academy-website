@@ -134,8 +134,70 @@ export default function CBOCityTemplate({
     `Hi! I want to book a free CBO counselling call. Region: ${cityName}. Please share available Canadian-time slots.`
   )}`
 
+  const pageUrl = `https://cerebrumbiologyacademy.com/cbo-coaching-${citySlug}`
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: `CBO Coaching for ${cityName} Students`,
+    description: `Live online CBO + IBO coaching for ${cityName} students. AIIMS-trained faculty, small-batch (max 12), Canadian time-zone scheduling, past-paper saturation method.`,
+    url: pageUrl,
+    inLanguage: 'en-CA',
+    educationalLevel: 'Biology Olympiad',
+    provider: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
+    offers: [
+      { '@type': 'Offer', name: 'Pinnacle', price: '1125', priceCurrency: 'CAD', description: '12-month full CBO + IBO track', url: pageUrl },
+      { '@type': 'Offer', name: 'Ascent', price: '675', priceCurrency: 'CAD', description: '6-month intensive', url: pageUrl },
+      { '@type': 'Offer', name: 'Pursuit', price: '375', priceCurrency: 'CAD', description: '3-month qualifying-round prep', url: pageUrl },
+    ],
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      { '@type': 'ListItem', position: 2, name: 'CBO Coaching', item: 'https://cerebrumbiologyacademy.com/cbo-coaching' },
+      { '@type': 'ListItem', position: 3, name: cityName, item: pageUrl },
+    ],
+  }
+
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `CBO Coaching for ${cityName} Students`,
+    url: pageUrl,
+    speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]'] },
+  }
+
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+    name: 'Dr. Shekhar C Singh',
+    alternateName: ['Dr. Shekhar Singh', 'Dr. SC Singh'],
+    jobTitle: 'Founder & Lead Biology Faculty',
+    description: `AIIMS-trained biology faculty coaching CBO + IBO students from ${cityName}.`,
+    url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+    image: 'https://cerebrumbiologyacademy.com/images/dr-shekhar-singh.webp',
+    affiliation: { '@type': 'EducationalOrganization', '@id': 'https://cerebrumbiologyacademy.com/#organization', name: 'Cerebrum Biology Academy' },
+    knowsAbout: ['CBO', 'IBO', 'Campbell Biology', 'Canadian Biology Olympiad', 'Biology Olympiad', 'CBO National Round'],
+    sameAs: ['https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty'],
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <nav className="bg-gray-100 py-3 px-4">
         <div className="max-w-7xl mx-auto">
           <ol className="flex items-center flex-wrap gap-1 text-sm">
