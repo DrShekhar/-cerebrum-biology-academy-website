@@ -4,6 +4,7 @@ import { getAllSEOSlugs } from '@/data/seo-landing/slugs-static'
 import { allChapters } from '@/data/campbell-biology'
 import { campbellUnits } from '@/data/campbell-biology/units'
 import { citySlugs as ibBiologyCitySlugs } from '@/data/ib-biology/cities'
+import { aLevelCitySlugs } from '@/data/a-level/cities'
 import { ibBiologySchoolSlugs } from '@/data/ib-biology/schools'
 import { mcatMetroSlugs } from '@/data/mcat/metros'
 import { datMetroSlugs } from '@/data/dat/metros'
@@ -3953,6 +3954,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/a-level-biology-tutor-london`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/a-level-biology-tutor-manchester`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
     { url: `${baseUrl}/a-level-biology-tutor-birmingham`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.8 },
+    // A-Level Biology dynamic city pages — sourced from
+    // src/data/a-level/cities.ts so future additions automatically
+    // register in the sitemap.
+    ...aLevelCitySlugs().map((city) => ({
+      url: `${baseUrl}/a-level-biology/${city}`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     // Fee comparison pages (5 verticals)
     { url: `${baseUrl}/mcat-biology-pricing`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
     { url: `${baseUrl}/dat-biology-pricing`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
