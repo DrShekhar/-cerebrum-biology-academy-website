@@ -12,10 +12,14 @@ interface PageProps {
   params: Promise<{ area: string }>
 }
 
-export const dynamicParams = false
+// ISR: render on-demand + cached 24h. Skipping prerender of all areas at
+// build time keeps Vercel builds under the 45-min cap. Page calls
+// notFound() for unknown slugs so empty params is safe.
+export const dynamicParams = true
+export const revalidate = 86400
 
-export async function generateStaticParams() {
-  return getAllGurugramAreaSlugs().map((area) => ({ area }))
+export function generateStaticParams() {
+  return []
 }
 
 function getMetaDescriptionByType(area: ReturnType<typeof getGurugramAreaBySlug>): string {

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { permanentRedirect } from 'next/navigation'
-import { getPostsByTag, getAllTags } from '@/lib/blog/mdx'
+import { getPostsByTag } from '@/lib/blog/mdx'
 import { TagArchivePage } from '@/components/blog/TagArchivePage'
 
 export const revalidate = 3600
@@ -40,11 +40,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export async function generateStaticParams() {
-  const tags = getAllTags()
-  return tags.map((tagObj) => ({
-    slug: tagObj.tag.toLowerCase().replace(/\s+/g, '-'),
-  }))
+// Tag pages are noindex (see generateMetadata above) and get a tiny share
+// of traffic. Pre-generating 131 tags re-parsed all MDX 3× per page and
+// pushed Vercel past its build-time cap. ISR on-demand handles them: first
+// hit renders SSR (~300ms), then cached for revalidate=3600s.
+export function generateStaticParams() {
+  return []
 }
 
 // Allow dynamic params so non-existent tags get 301 → /blog instead of 404

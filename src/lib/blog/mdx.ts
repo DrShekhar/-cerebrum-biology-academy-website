@@ -199,7 +199,15 @@ export function getPostBySlug(slug: string): {
   return { meta, content, toc }
 }
 
+// Module-level cache: getAllPosts() is called repeatedly during build
+// (blog list, tag pages, related-post queries) and re-parsing 200+ MDX
+// files each call cost ~25 CPU-min on Vercel. Cache lives per worker
+// process; invalidates when the process exits.
+let _allPostsCache: BlogPostMeta[] | null = null
+
 export function getAllPosts(): BlogPostMeta[] {
+  if (_allPostsCache !== null) return _allPostsCache
+
   const slugs = getAllPostSlugs()
 
   const posts = slugs
@@ -213,6 +221,7 @@ export function getAllPosts(): BlogPostMeta[] {
     .filter((post): post is BlogPostMeta => post != null && post.isPublished !== false)
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 
+  _allPostsCache = posts
   return posts
 }
 
