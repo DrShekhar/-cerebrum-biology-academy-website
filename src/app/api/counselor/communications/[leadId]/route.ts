@@ -33,9 +33,12 @@ async function handleGET(req: NextRequest, session: any) {
       )
     }
 
-    // Verify lead exists and belongs to current counselor's organization
-    const lead = await prisma.leads.findUnique({
-      where: { id: leadId },
+    // Tenant isolation: counselor sees communications only for leads
+    // assigned to them. ADMIN sees all. Comment used to claim org-level
+    // isolation but the code wasn't enforcing it.
+    const isAdmin = session.role === 'ADMIN'
+    const lead = await prisma.leads.findFirst({
+      where: { id: leadId, ...(isAdmin ? {} : { assignedToId: session.userId }) },
       select: { id: true, studentName: true },
     })
 

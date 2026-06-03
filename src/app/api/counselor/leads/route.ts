@@ -35,9 +35,10 @@ export async function GET(request: NextRequest) {
     const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50')))
     const skip = (page - 1) * limit
 
-    const where: Record<string, unknown> = {
-      assignedToId: session.userId,
-    }
+    // Tenant isolation: counselors see only their own leads.
+    // ADMINs see all leads for oversight / support reassignment.
+    const where: Record<string, unknown> =
+      session.role.toUpperCase() === 'ADMIN' ? {} : { assignedToId: session.userId }
 
     if (stage) {
       where.stage = stage

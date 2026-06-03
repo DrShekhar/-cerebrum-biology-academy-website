@@ -5,11 +5,14 @@ import { differenceInDays } from 'date-fns'
 
 export const dynamic = 'force-dynamic'
 
-// POST - Rescore all leads
+// POST - Rescore all leads. ADMIN-only — bulk operation touches every lead.
 export async function POST(req: NextRequest) {
   try {
     const session = await auth()
     if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    if (session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden — admin only' }, { status: 403 })
+    }
 
     // Fetch all active leads
     const leads = await prisma.leads.findMany({

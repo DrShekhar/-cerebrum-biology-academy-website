@@ -24,15 +24,17 @@ const isFirebaseConfigured = Boolean(process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
 
 // Get role-based dashboard redirect URL
 // IMPORTANT: Roles in the system are UPPERCASE (STUDENT, ADMIN, etc.)
+// Paths must point at existing routes — see /src/app/{admin,teacher,counselor}/page.tsx
+// for the top-level role landings, /parent/dashboard and /dashboard for the others.
 function getRoleDashboardUrl(role: string | undefined): string {
   const normalizedRole = (role || 'STUDENT').toUpperCase()
   switch (normalizedRole) {
     case 'ADMIN':
-      return '/admin/dashboard'
+      return '/admin'
     case 'TEACHER':
-      return '/teacher/dashboard'
+      return '/teacher'
     case 'COUNSELOR':
-      return '/counselor/dashboard'
+      return '/counselor'
     case 'PARENT':
       return '/parent/dashboard'
     case 'STUDENT':
@@ -79,7 +81,10 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
   // Signup form state (for new users)
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
-  const [role, setRole] = useState<'student' | 'parent'>('student')
+  // Roles are UPPERCASE per CLAUDE.md + Prisma enum. /api/auth/firebase-session
+  // does `role === 'PARENT'` strict equality — lowercase here silently
+  // downgraded PARENT signups to STUDENT.
+  const [role, setRole] = useState<'STUDENT' | 'PARENT'>('STUDENT')
 
   // Store Firebase user after verification
   const [firebaseUser, setFirebaseUser] = useState<{
@@ -423,9 +428,9 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
             <div className="grid grid-cols-2 gap-3">
               <button
                 type="button"
-                onClick={() => setRole('student')}
+                onClick={() => setRole('STUDENT')}
                 className={`px-4 py-3 rounded-lg border-2 font-medium transition-colors ${
-                  role === 'student'
+                  role === 'STUDENT'
                     ? 'border-green-500 bg-green-50 text-green-700'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
@@ -435,9 +440,9 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
               </button>
               <button
                 type="button"
-                onClick={() => setRole('parent')}
+                onClick={() => setRole('PARENT')}
                 className={`px-4 py-3 rounded-lg border-2 font-medium transition-colors ${
-                  role === 'parent'
+                  role === 'PARENT'
                     ? 'border-green-500 bg-green-50 text-green-700'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}

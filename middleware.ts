@@ -483,7 +483,7 @@ export default async function middleware(req: NextRequest) {
   }
 
   // Protected counselor routes - require COUNSELOR or ADMIN role
-  if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc') {
+  if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc' && pathname !== '/counselor/login') {
     if (!userId) {
       const loginUrl = new URL('/sign-in', req.url)
       loginUrl.searchParams.set('redirect_url', pathname)
@@ -491,6 +491,30 @@ export default async function middleware(req: NextRequest) {
     }
     if (userRole !== 'COUNSELOR' && userRole !== 'ADMIN') {
       // Redirect non-counselors to their appropriate dashboard
+      return NextResponse.redirect(new URL('/dashboard', req.url))
+    }
+  }
+
+  // Protected parent routes - require PARENT or ADMIN role
+  if (pathname.startsWith('/parent/')) {
+    if (!userId) {
+      return NextResponse.redirect(
+        new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url)
+      )
+    }
+    if (userRole !== 'PARENT' && userRole !== 'ADMIN') {
+      return NextResponse.redirect(new URL('/dashboard', req.url))
+    }
+  }
+
+  // Protected student routes - require STUDENT or ADMIN role
+  if (pathname.startsWith('/student/')) {
+    if (!userId) {
+      return NextResponse.redirect(
+        new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url)
+      )
+    }
+    if (userRole !== 'STUDENT' && userRole !== 'ADMIN') {
       return NextResponse.redirect(new URL('/dashboard', req.url))
     }
   }

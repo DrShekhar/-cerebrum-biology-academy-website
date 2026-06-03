@@ -14,9 +14,18 @@ export async function GET(
     if (!session?.user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
 
-    const lead = await prisma.leads.findUnique({
-      where: { id: params.id },
+    // Tenant isolation: counselors can only see leads assigned to them.
+    // ADMINs see everything for support / oversight.
+    const isAdmin = session.user.role === 'ADMIN'
+    const lead = await prisma.leads.findFirst({
+      where: {
+        id: params.id,
+        ...(isAdmin ? {} : { assignedToId: session.user.id }),
+      },
       include: {
         users: {
           select: { name: true, email: true },
@@ -152,6 +161,22 @@ export async function PATCH(
     const session = await auth()
     if (!session?.user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
+    // Tenant isolation: counselors can only update leads assigned to them.
+    const isAdmin = session.user.role === 'ADMIN'
+    const owned = await prisma.leads.findFirst({
+      where: {
+        id: params.id,
+        ...(isAdmin ? {} : { assignedToId: session.user.id }),
+      },
+      select: { id: true },
+    })
+    if (!owned) {
+      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
     }
 
     const body = await request.json()

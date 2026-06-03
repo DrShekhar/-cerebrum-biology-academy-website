@@ -14,6 +14,19 @@ export async function GET(
     if (!session?.user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
+    // Tenant isolation: counselor can only read notes for leads assigned to them.
+    const isAdmin = session.user.role === 'ADMIN'
+    const owned = await prisma.leads.findFirst({
+      where: { id: params.id, ...(isAdmin ? {} : { assignedToId: session.user.id }) },
+      select: { id: true },
+    })
+    if (!owned) {
+      return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
+    }
 
     const notes = await prisma.notes.findMany({
       where: { leadId: params.id },
@@ -49,6 +62,9 @@ export async function POST(
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
 
     const body = await request.json()
     const { content, type, mood, nextSteps } = body
@@ -57,9 +73,10 @@ export async function POST(
       return NextResponse.json({ error: 'Content is required' }, { status: 400 })
     }
 
-    // Verify lead exists
-    const lead = await prisma.leads.findUnique({
-      where: { id: params.id },
+    // Tenant isolation: counselor can only add notes to leads assigned to them.
+    const isAdmin = session.user.role === 'ADMIN'
+    const lead = await prisma.leads.findFirst({
+      where: { id: params.id, ...(isAdmin ? {} : { assignedToId: session.user.id }) },
     })
 
     if (!lead) {

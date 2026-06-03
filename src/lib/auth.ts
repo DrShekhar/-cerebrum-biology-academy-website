@@ -218,9 +218,17 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return session
     },
     async redirect({ url, baseUrl }) {
-      // Redirect admin users to admin panel after login
+      // Role-specific entry pages: send the user to their workspace after auth.
+      // NextAuth's redirect callback doesn't receive session, so we infer
+      // intent from the URL the user came from.
       if (url.includes('/admin/login')) {
         return `${baseUrl}/admin`
+      }
+      if (url.includes('/counselor/login')) {
+        return `${baseUrl}/counselor`
+      }
+      if (url.includes('/teacher/login')) {
+        return `${baseUrl}/teacher`
       }
       if (url.startsWith('/')) return `${baseUrl}${url}`
       if (new URL(url).origin === baseUrl) return url
