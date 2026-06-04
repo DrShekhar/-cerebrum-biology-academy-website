@@ -1,6 +1,18 @@
 /**
- * Email Service - Unified email sending with SendGrid and Resend fallback
- * Handles all email communications for the CRM
+ * Email Service — unified email sending with provider fallback.
+ *
+ * Phase 1.6 (2026-06): Resend promoted to primary transactional
+ * provider (better deliverability + analytics + cheaper per email
+ * than SendGrid for our volume). SendGrid retained as fallback so
+ * a Resend outage doesn't block password resets / signup / payment
+ * confirmations.
+ *
+ * Configure: RESEND_API_KEY + RESEND_FROM_EMAIL (or fall back to
+ * SENDGRID_API_KEY + SENDGRID_FROM_EMAIL).
+ *
+ * All callers should use `emailService.send()`. Gmail SMTP is no
+ * longer in the path — env vars SMTP_HOST / SMTP_USER / SMTP_PASS
+ * are dead.
  */
 
 import { z } from 'zod'
@@ -163,12 +175,15 @@ class EmailService {
   private providers: EmailProvider[]
 
   constructor() {
-    this.providers = [new SendGridProvider(), new ResendProvider()]
+    // Resend first, SendGrid fallback. Provider order is the
+    // migration control: deleting RESEND_API_KEY reverts to SendGrid
+    // without a code change.
+    this.providers = [new ResendProvider(), new SendGridProvider()]
   }
 
   /**
-   * Send email with automatic fallback
-   * Tries SendGrid first, falls back to Resend if SendGrid fails
+   * Send email with automatic fallback.
+   * Tries Resend first, falls back to SendGrid on failure.
    */
   async send(
     options: EmailOptions

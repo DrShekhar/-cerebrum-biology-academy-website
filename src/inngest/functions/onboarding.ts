@@ -1,0 +1,155 @@
+import { inngest } from '../client'
+import { prisma } from '@/lib/prisma'
+import { notificationService } from '@/lib/notifications/notificationService'
+
+/**
+ * Lead → Enrolled onboarding orchestration.
+ *
+ * Fires when a lead's stage flips to ENROLLED (emitted by payment
+ * webhook and by counselor PATCH on /api/counselor/leads/[id]).
+ *
+ * Phase 1 scope (this commit):
+ *   1. Welcome WhatsApp (immediate)
+ *   2. Welcome email with first-class scheduling instructions
+ *   3. Day +1 follow-up nudge
+ *   4. Day +7 NPS prompt placeholder (logs a counselor task)
+ *
+ * Each step uses Inngest `step.run()` so retries are automatic and
+ * partial-failure doesn't re-fire the whole flow.
+ *
+ * Out of scope for this commit (Phase 2):
+ *   - Auto-batch assignment (needs batch-management model)
+ *   - LMS access provisioning
+ *   - Mentor introduction (manual until mentor model exists)
+ *   - Study material delivery (needs material-bundle model)
+ */
+export const leadOnboarding = inngest.createFunction(
+  {
+    id: 'lead-onboarding',
+    name: 'Lead → Enrolled Onboarding',
+    triggers: [{ event: 'lead/enrolled' }],
+  },
+  async ({ event, step, logger }) => {
+    const { leadId, courseInterest, amountPaid, currency } = event.data as {
+      leadId: string
+      courseInterest: string
+      amountPaid: number
+      currency: string
+    }
+
+    // Load full lead + counselor context. step.run isolates this so a
+    // transient DB error retries this single read instead of the flow.
+    const lead = await step.run('load-lead', async () => {
+      return prisma.leads.findUnique({
+        where: { id: leadId },
+        include: {
+          users: { select: { id: true, name: true, email: true } }, // counselor
+        },
+      })
+    })
+
+    if (!lead) {
+      logger.warn(`lead/enrolled: lead not found ${leadId}`)
+      return { skipped: 'lead-not-found' }
+    }
+
+    const counselorName = lead.users?.name ?? 'your counselor'
+    const symbol = currency === 'USD' ? '$' : '₹'
+    const amountLabel = `${symbol}${Number(amountPaid).toLocaleString(
+      currency === 'USD' ? 'en-US' : 'en-IN'
+    )}`
+
+    // 1. Welcome WhatsApp + email (parallel send via notificationService)
+    await step.run('welcome', async () => {
+      await notificationService.send({
+        leadId: lead.id,
+        studentName: lead.studentName,
+        email: lead.email ?? undefined,
+        phone: lead.phone,
+        type: 'ENROLLMENT_CONFIRMATION',
+        priority: 'HIGH',
+        whatsappData: {
+          message: `Welcome to Cerebrum Biology Academy, ${lead.studentName}! 🎉\n\nYour enrollment for ${courseInterest} is confirmed (${amountLabel} received). Your counselor ${counselorName} will reach out within 24 hours with batch details, study materials and your first-class schedule.\n\nIn the meantime, save this number for any questions.\n\n— Team Cerebrum`,
+        },
+        emailData: {
+          subject: `Welcome to Cerebrum Biology Academy — ${courseInterest}`,
+          html: `
+            <div style="font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-width:560px;">
+              <h2 style="color:#4f46e5;">Welcome, ${lead.studentName}! 🎉</h2>
+              <p>Your enrollment for <strong>${courseInterest}</strong> is confirmed.</p>
+              <p>Payment received: <strong>${amountLabel}</strong></p>
+              <p><strong>What happens next:</strong></p>
+              <ol>
+                <li>Your counselor <strong>${counselorName}</strong> will WhatsApp you within 24 hours with batch options.</li>
+                <li>You'll receive your first-class schedule + Zoom link.</li>
+                <li>Study materials (NCERT notes, MCQ access, Anki deck) will be shared on WhatsApp.</li>
+              </ol>
+              <p>Reply to your counselor any time with questions.</p>
+              <p>— Team Cerebrum Biology Academy</p>
+            </div>
+          `,
+        },
+      })
+    })
+
+    // 2. Create counselor task: schedule first class within 24h
+    await step.run('counselor-task-schedule-first-class', async () => {
+      if (!lead.users?.id) return
+      await prisma.tasks.create({
+        data: {
+          id: `task_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          leadId: lead.id,
+          createdById: lead.users.id,
+          assignedToId: lead.users.id,
+          title: `Schedule first class for ${lead.studentName} (${courseInterest})`,
+          description: `New enrollment — payment ${amountLabel} confirmed. Assign batch + share Zoom link + study materials within 24h.`,
+          type: 'FOLLOW_UP',
+          priority: 'HIGH',
+          status: 'TODO',
+          dueDate: new Date(Date.now() + 24 * 60 * 60 * 1000),
+          updatedAt: new Date(),
+        },
+      })
+    })
+
+    // 3. Wait 24h, then send day +1 nudge if no class scheduled
+    await step.sleep('wait-day-1', '24h')
+
+    await step.run('day-1-checkin', async () => {
+      await notificationService.send({
+        leadId: lead.id,
+        studentName: lead.studentName,
+        phone: lead.phone,
+        type: 'GENERAL',
+        priority: 'MEDIUM',
+        whatsappData: {
+          message: `Hi ${lead.studentName}, hope your onboarding is going smoothly! If you haven't received your first-class schedule yet or have any questions, just reply here. We're here to help. 📚`,
+        },
+      })
+    })
+
+    // 4. Wait until day 7, then create NPS task for counselor
+    await step.sleep('wait-day-7', '6d') // already waited 24h above
+
+    await step.run('day-7-nps-task', async () => {
+      if (!lead.users?.id) return
+      await prisma.tasks.create({
+        data: {
+          id: `task_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+          leadId: lead.id,
+          createdById: lead.users.id,
+          assignedToId: lead.users.id,
+          title: `Day 7 check-in: how is ${lead.studentName}'s onboarding going?`,
+          description: `Manual NPS / experience check-in with the student. Ask about first class, study materials, any friction so far. Log notes on the lead.`,
+          type: 'FOLLOW_UP',
+          priority: 'MEDIUM',
+          status: 'TODO',
+          dueDate: new Date(),
+          updatedAt: new Date(),
+        },
+      })
+    })
+
+    return { onboarded: lead.id, steps: ['welcome', 'task', 'day-1', 'day-7'] }
+  }
+)

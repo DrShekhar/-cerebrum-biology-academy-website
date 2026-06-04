@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { Redis } from '@upstash/redis'
 import { mapCourseToTier } from '@/lib/payments/tierMapping'
 import { logger } from '@/lib/logger'
+import { inngest } from '@/inngest/client'
 
 // SECURITY: Redis-backed webhook event deduplication for multi-instance deployments
 const EVENT_EXPIRY_SECONDS = 24 * 60 * 60 // 24 hours
@@ -349,17 +350,39 @@ async function handlePaymentLinkPaid(event: any) {
       ? link.amount_paid >= link.amount
       : event.event === 'payment_link.paid'
 
-  await prisma.payment_links.update({
+  const updatedLink = await prisma.payment_links.update({
     where: { id: link.reference_id },
     data: {
       status: fullyPaid ? 'PAID' : 'PARTIALLY_PAID',
       paidAt: new Date(),
       paidAmount: amountPaidMajor,
     },
+    include: {
+      leads: { select: { id: true, courseInterest: true, assignedToId: true, stage: true } },
+    },
   })
   logger.info(
     `Webhook: payment_link ${fullyPaid ? 'PAID' : 'PARTIALLY_PAID'}: ${link.reference_id}`
   )
+
+  // On full payment, flip the lead to ENROLLED (if not already) and
+  // emit lead/enrolled to fire the onboarding orchestration.
+  if (fullyPaid && updatedLink.leads.stage !== 'ENROLLED') {
+    await prisma.leads.update({
+      where: { id: updatedLink.leads.id },
+      data: { stage: 'ENROLLED', convertedAt: new Date() },
+    })
+    await inngest.send({
+      name: 'lead/enrolled',
+      data: {
+        leadId: updatedLink.leads.id,
+        counselorId: updatedLink.leads.assignedToId,
+        courseInterest: updatedLink.leads.courseInterest,
+        amountPaid: Number(updatedLink.paidAmount ?? updatedLink.amount),
+        currency: updatedLink.currency,
+      },
+    })
+  }
 }
 
 async function handlePaymentLinkClosed(event: any, eventType: string) {

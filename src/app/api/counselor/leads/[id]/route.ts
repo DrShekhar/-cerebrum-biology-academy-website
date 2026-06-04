@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { inngest } from '@/inngest/client'
 
 export const dynamic = 'force-dynamic'
 
@@ -205,10 +206,32 @@ export async function PATCH(
       updateData.convertedAt = new Date()
     }
 
+    // Detect ENROLLED transition: only emit if stage is actually changing,
+    // not on idempotent re-PATCHes of an already-enrolled lead.
+    const enrolling =
+      body.stage === 'ENROLLED' &&
+      (await prisma.leads.findUnique({
+        where: { id: params.id },
+        select: { stage: true, courseInterest: true, assignedToId: true },
+      }))
+
     const updated = await prisma.leads.update({
       where: { id: params.id },
       data: updateData,
     })
+
+    if (enrolling && enrolling.stage !== 'ENROLLED') {
+      await inngest.send({
+        name: 'lead/enrolled',
+        data: {
+          leadId: updated.id,
+          counselorId: enrolling.assignedToId,
+          courseInterest: enrolling.courseInterest,
+          amountPaid: 0, // manual ENROLLED via UI — payment may not be associated; onboarding still fires
+          currency: 'INR',
+        },
+      })
+    }
 
     return NextResponse.json({ data: updated })
   } catch (error) {
