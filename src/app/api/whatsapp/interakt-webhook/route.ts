@@ -12,6 +12,7 @@ import { logger } from '@/lib/utils/logger'
 import { prisma } from '@/lib/prisma'
 import crypto from 'crypto'
 import { isFromOwner, processApprovalResponse } from '@/lib/seo-marketing/approvalService'
+import { logInboundWhatsAppMessage } from '@/lib/whatsapp/inboundLogger'
 
 const INTERAKT_WEBHOOK_SECRET = process.env.INTERAKT_WEBHOOK_SECRET
 
@@ -215,6 +216,20 @@ async function handleIncomingMessage(data: any, originalPayload: InteraktWebhook
       type: messageType,
       timestamp: new Date().toISOString(),
     },
+  })
+
+  // CRM logging — log against matching lead if the phone is known.
+  // Non-blocking; failures don't break the intent-routing path below.
+  const providerMessageId =
+    data?.id || data?.messageId || originalPayload.data?.message?.id || undefined
+  const previewBody =
+    messageType === 'text'
+      ? messageText || ''
+      : `[${String(messageType).toUpperCase()}]`
+  void logInboundWhatsAppMessage({
+    fromPhone: phone,
+    message: previewBody,
+    providerMessageId,
   })
 
   if (messageType === 'text' && messageText) {

@@ -18,6 +18,7 @@ import crypto from 'crypto'
 import { WhatsAppMessageProcessor } from '@/lib/whatsapp/messageProcessor'
 import { aiOrchestrator } from '@/lib/ai/intelligent-ai-orchestrator'
 import { responseEnhancer } from '@/lib/ai/response-enhancer'
+import { logInboundWhatsAppMessage } from '@/lib/whatsapp/inboundLogger'
 
 const VERIFY_TOKEN = process.env.WHATSAPP_VERIFY_TOKEN
 const WEBHOOK_SECRET = process.env.WHATSAPP_WEBHOOK_SECRET
@@ -259,6 +260,19 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
             // Extract student contact info
             const contact = value.contacts?.find((c) => c.wa_id === message.from)
             const studentName = contact?.profile?.name || 'Student'
+
+            // CRM logging — if this phone matches a lead, log the inbound
+            // message to crm_communications so the counselor sees it in
+            // the lead timeline. Idempotent on message.id; fails closed
+            // (never blocks AI response flow).
+            const inboundMessageBody = inboundBodyFor(message)
+            const seconds = Number(message.timestamp)
+            void logInboundWhatsAppMessage({
+              fromPhone: message.from,
+              message: inboundMessageBody,
+              providerMessageId: message.id,
+              sentAt: Number.isFinite(seconds) ? new Date(seconds * 1000) : undefined,
+            })
 
             // Process message with AI enhancement
             await processEnhancedMessage({
@@ -850,6 +864,34 @@ async function sendEnhancedErrorResponse(
   const randomMessage = errorMessages[Math.floor(Math.random() * errorMessages.length)]
 
   await processor.sendTextMessage(from, phoneNumberId, randomMessage)
+}
+
+// Short, counselor-readable summary of an inbound WhatsApp message
+// for the crm_communications.message column. Media types collapse to
+// a `[Image]` / `[Voice note]` label plus any caption.
+function inboundBodyFor(message: any): string {
+  switch (message.type) {
+    case 'text':
+      return message.text?.body || ''
+    case 'image':
+      return message.image?.caption ? `[Image] ${message.image.caption}` : '[Image]'
+    case 'audio':
+      return message.audio?.voice ? '[Voice note]' : '[Audio]'
+    case 'video':
+      return message.video?.caption ? `[Video] ${message.video.caption}` : '[Video]'
+    case 'document':
+      return `[Document] ${message.document?.filename || ''}`.trim()
+    case 'interactive':
+      return (
+        message.interactive?.button_reply?.title ||
+        message.interactive?.list_reply?.title ||
+        '[Button reply]'
+      )
+    case 'location':
+      return '[Location shared]'
+    default:
+      return `[${message.type}]`
+  }
 }
 
 function extractMessageContent(message: any): any {
