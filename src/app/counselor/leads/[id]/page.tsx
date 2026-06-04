@@ -30,6 +30,7 @@ import {
 } from 'lucide-react'
 import { format, formatDistanceToNow } from 'date-fns'
 import { showToast } from '@/lib/toast'
+import { PaymentLinksSection } from './PaymentLinksSection'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -730,6 +731,9 @@ export default function LeadDetailPage() {
               ))}
             </div>
           )}
+
+          {/* Payment Links */}
+          <PaymentLinksSection leadId={lead.id} />
 
           {/* Offers */}
           {lead.offers && lead.offers.length > 0 && (

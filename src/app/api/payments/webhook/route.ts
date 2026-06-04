@@ -146,6 +146,16 @@ export async function POST(request: NextRequest) {
         await handleRefundCreated(event)
         break
 
+      case 'payment_link.paid':
+      case 'payment_link.partially_paid':
+        await handlePaymentLinkPaid(event)
+        break
+
+      case 'payment_link.cancelled':
+      case 'payment_link.expired':
+        await handlePaymentLinkClosed(event, eventType)
+        break
+
       default:
         logger.info('Webhook: Unhandled event type:', eventType)
     }
@@ -321,6 +331,44 @@ async function handleRefundCreated(event: any) {
     logger.error('Webhook: Error handling refund:', error)
     throw error
   }
+}
+
+// Payment link lifecycle handlers (counselor-issued links via
+// /api/counselor/payment-links/create). Razorpay sets reference_id =
+// our payment_links.id so we can match without storing the provider id.
+async function handlePaymentLinkPaid(event: any) {
+  const link = event.payload?.payment_link?.entity
+  if (!link?.reference_id) {
+    logger.error('Webhook: payment_link event missing reference_id', { eventId: event.id })
+    return
+  }
+
+  const amountPaidMajor = link.amount_paid ? link.amount_paid / 100 : undefined
+  const fullyPaid =
+    typeof link.amount === 'number' && typeof link.amount_paid === 'number'
+      ? link.amount_paid >= link.amount
+      : event.event === 'payment_link.paid'
+
+  await prisma.payment_links.update({
+    where: { id: link.reference_id },
+    data: {
+      status: fullyPaid ? 'PAID' : 'PARTIALLY_PAID',
+      paidAt: new Date(),
+      paidAmount: amountPaidMajor,
+    },
+  })
+  logger.info(
+    `Webhook: payment_link ${fullyPaid ? 'PAID' : 'PARTIALLY_PAID'}: ${link.reference_id}`
+  )
+}
+
+async function handlePaymentLinkClosed(event: any, eventType: string) {
+  const link = event.payload?.payment_link?.entity
+  if (!link?.reference_id) return
+  await prisma.payment_links.update({
+    where: { id: link.reference_id },
+    data: { status: eventType === 'payment_link.expired' ? 'EXPIRED' : 'CANCELLED' },
+  })
 }
 
 export async function GET() {

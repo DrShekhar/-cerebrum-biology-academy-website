@@ -104,6 +104,69 @@ export class CashfreeService {
     return 'CASHFREE_WALLET'
   }
 
+  /**
+   * Create a Cashfree Payment Link (PG Links API).
+   * Counselor-facing — used from /api/counselor/payment-links/create.
+   */
+  static async createPaymentLink(options: {
+    linkId: string // our payment_links.id (must be unique per Cashfree account)
+    amount: number // major units (e.g., 50000 for ₹50,000)
+    currency?: string
+    purpose: string
+    customer: { name: string; email?: string; phone: string }
+    expireAt: Date
+    notify?: { sms?: boolean; email?: boolean }
+    returnUrl?: string
+    notifyUrl?: string
+    notes?: Record<string, string>
+  }): Promise<{ link_id: string; link_url: string; link_status: string; cf_link_id: number }> {
+    const request = {
+      link_id: options.linkId,
+      link_amount: options.amount,
+      link_currency: options.currency || 'INR',
+      link_purpose: options.purpose,
+      customer_details: {
+        customer_name: options.customer.name,
+        customer_email: options.customer.email || '',
+        customer_phone: options.customer.phone.replace(/[^0-9+]/g, ''),
+      },
+      link_notify: {
+        send_sms: options.notify?.sms ?? false,
+        send_email: options.notify?.email ?? false,
+      },
+      link_auto_reminders: true,
+      link_expiry_time: options.expireAt.toISOString(),
+      link_meta: {
+        return_url: options.returnUrl || `${SITE_URL}/payment-status?link_id=${options.linkId}`,
+        notify_url: options.notifyUrl || `${SITE_URL}/api/payments/cashfree/webhook`,
+      },
+      link_notes: options.notes || {},
+    }
+
+    const response = await cashfree.PGCreateLink(request)
+    return response.data as unknown as {
+      link_id: string
+      link_url: string
+      link_status: string
+      cf_link_id: number
+    }
+  }
+
+  static async cancelPaymentLink(linkId: string): Promise<void> {
+    await cashfree.PGCancelLink(linkId)
+  }
+
+  static async fetchPaymentLink(
+    linkId: string
+  ): Promise<{ link_id: string; link_status: string; link_amount_paid?: number }> {
+    const response = await cashfree.PGFetchLink(linkId)
+    return response.data as unknown as {
+      link_id: string
+      link_status: string
+      link_amount_paid?: number
+    }
+  }
+
   static async processRefund(orderId: string, amount: number, reason?: string) {
     const refundRequest = {
       refund_amount: amount,

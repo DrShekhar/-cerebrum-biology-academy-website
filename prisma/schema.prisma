@@ -893,6 +893,50 @@ model crm_communications {
   @@index([sentById])
 }
 
+// Counselor → Lead payment links (Razorpay / Cashfree).
+// Created via /api/counselor/payment-links/create, sent to lead via
+// WhatsApp / email / SMS; provider webhook flips status to PAID and
+// fires onboarding orchestration.
+model payment_links {
+  id             String              @id
+  leadId         String
+  createdById    String
+  amount         Decimal             @db.Decimal(10, 2)
+  currency       String              @default("INR")
+  description    String
+  provider       PaymentLinkProvider
+  providerLinkId String              @unique
+  shortUrl       String
+  expiresAt      DateTime
+  status         PaymentLinkStatus   @default(ACTIVE)
+  paidAt         DateTime?
+  paidAmount     Decimal?            @db.Decimal(10, 2)
+  remindersSent  Int                 @default(0)
+  lastReminderAt DateTime?
+  metadata       Json?
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+  leads          leads               @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  createdBy      users               @relation(fields: [createdById], references: [id])
+
+  @@index([leadId, status])
+  @@index([createdById])
+  @@index([status, expiresAt])
+}
+
+enum PaymentLinkProvider {
+  RAZORPAY
+  CASHFREE
+}
+
+enum PaymentLinkStatus {
+  ACTIVE
+  PAID
+  PARTIALLY_PAID
+  EXPIRED
+  CANCELLED
+}
+
 model daily_challenges {
   id                String           @id
   date              DateTime         @unique @db.Date
@@ -1495,6 +1539,7 @@ model leads {
   demo_bookings           demo_bookings?            @relation(fields: [demoBookingId], references: [id])
   notes                   notes[]
   offers                  offers[]
+  payment_links           payment_links[]
   product_recommendations product_recommendations[]
   tasks                   tasks[]
   whatsapp_conversations  whatsapp_conversations[]
@@ -3041,6 +3086,7 @@ model users {
   offers                                                                offers[]
   parent_child_relationships_parent_child_relationships_childIdTousers  parent_child_relationships[]  @relation("parent_child_relationships_childIdTousers")
   parent_child_relationships_parent_child_relationships_parentIdTousers parent_child_relationships[]  @relation("parent_child_relationships_parentIdTousers")
+  payment_links                                                         payment_links[]
   payments                                                              payments[]
   performance_reports                                                   performance_reports[]
   product_recommendations                                               product_recommendations[]

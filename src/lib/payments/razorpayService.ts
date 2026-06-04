@@ -522,11 +522,110 @@ export class RazorpayService {
   }
 
   /**
-   * Generate payment link for sharing via WhatsApp/Email
+   * @deprecated Use createPaymentLink() instead. This only builds an internal
+   * checkout-page URL; it is NOT a real Razorpay Payment Link.
    */
   static generatePaymentLink(orderId: string, amount: number, description: string): string {
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cerebrumbiologyacademy.com'
     return `${baseUrl}/payment?order_id=${orderId}&amount=${amount}&description=${encodeURIComponent(description)}`
+  }
+
+  /**
+   * Create a real Razorpay Payment Link (POST /v1/payment_links).
+   * Razorpay hosts the checkout, sends SMS/email if asked, and fires
+   * webhooks to us on payment.
+   *
+   * Counselor-facing — used from /api/counselor/payment-links/create.
+   */
+  static async createPaymentLink(options: {
+    amount: number // in major units (e.g., 50000 for ₹50,000)
+    currency?: string
+    description: string
+    referenceId: string // our payment_links.id
+    customer: { name: string; email?: string; contact: string }
+    expireBySeconds: number // ttl in seconds (e.g., 7 * 86400)
+    notify?: { sms?: boolean; email?: boolean }
+    callbackUrl?: string
+    notes?: Record<string, string>
+  }): Promise<{
+    id: string
+    short_url: string
+    status: string
+    expire_by: number
+    amount: number
+    currency: string
+  }> {
+    if (!this.keyId || !this.keySecret) {
+      throw new Error('Razorpay credentials not configured')
+    }
+
+    const expireBy = Math.floor(Date.now() / 1000) + options.expireBySeconds
+
+    const body = {
+      amount: Math.round(options.amount * 100), // Razorpay expects paise
+      currency: options.currency || 'INR',
+      accept_partial: false,
+      reference_id: options.referenceId,
+      description: options.description,
+      customer: {
+        name: options.customer.name,
+        email: options.customer.email,
+        contact: options.customer.contact,
+      },
+      notify: {
+        sms: options.notify?.sms ?? false,
+        email: options.notify?.email ?? false,
+      },
+      reminder_enable: true,
+      expire_by: expireBy,
+      callback_url: options.callbackUrl,
+      callback_method: options.callbackUrl ? 'get' : undefined,
+      notes: {
+        platform: 'Cerebrum Biology Academy',
+        ...options.notes,
+      },
+    }
+
+    const response = await fetch('https://api.razorpay.com/v1/payment_links', {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(`${this.keyId}:${this.keySecret}`).toString('base64')}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    })
+
+    const data = await response.json()
+    if (!response.ok) {
+      throw new Error(
+        `Razorpay payment link create failed: ${data.error?.description || response.statusText}`
+      )
+    }
+    return data
+  }
+
+  /**
+   * Cancel a Razorpay payment link.
+   */
+  static async cancelPaymentLink(linkId: string): Promise<void> {
+    if (!this.keyId || !this.keySecret) {
+      throw new Error('Razorpay credentials not configured')
+    }
+    const response = await fetch(
+      `https://api.razorpay.com/v1/payment_links/${linkId}/cancel`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${Buffer.from(`${this.keyId}:${this.keySecret}`).toString('base64')}`,
+        },
+      }
+    )
+    if (!response.ok) {
+      const data = await response.json().catch(() => ({}))
+      throw new Error(
+        `Razorpay payment link cancel failed: ${data.error?.description || response.statusText}`
+      )
+    }
   }
 
   /**

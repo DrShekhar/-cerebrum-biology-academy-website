@@ -18,6 +18,35 @@ export async function POST(request: NextRequest) {
     const eventType: string = event.type || ''
     const orderData = event.data?.order
     const paymentData = event.data?.payment
+    const linkData = event.data?.payment_link
+
+    // Payment Link events (counselor-issued links). link_id = our
+    // payment_links.id since we set it when calling PGCreateLink.
+    if (linkData?.link_id) {
+      const linkStatus = String(linkData.link_status || '').toUpperCase()
+      const fullyPaid = linkStatus === 'PAID'
+      const partiallyPaid = linkStatus === 'PARTIALLY_PAID'
+      const closed = linkStatus === 'CANCELLED' || linkStatus === 'EXPIRED'
+
+      if (fullyPaid || partiallyPaid) {
+        await prisma.payment_links.update({
+          where: { id: linkData.link_id },
+          data: {
+            status: fullyPaid ? 'PAID' : 'PARTIALLY_PAID',
+            paidAt: new Date(),
+            paidAmount: linkData.link_amount_paid ?? undefined,
+          },
+        })
+        console.log(`Cashfree webhook: payment_link ${linkStatus}: ${linkData.link_id}`)
+      } else if (closed) {
+        await prisma.payment_links.update({
+          where: { id: linkData.link_id },
+          data: { status: linkStatus as 'CANCELLED' | 'EXPIRED' },
+        })
+      }
+      // Don't return — link events may not carry an order, so continue
+      // through to the order-handler block which is order_id-gated.
+    }
 
     if (!orderData?.order_id) {
       return NextResponse.json({ status: 'ok', message: 'No order_id, skipping' })
