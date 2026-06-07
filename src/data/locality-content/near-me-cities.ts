@@ -289,15 +289,19 @@ export const NEAR_ME_CITIES: NearMeCityData[] = [
 
 import { NEAR_ME_CITIES_BATCH2 } from './near-me-cities-batch2'
 import { NEAR_ME_CITIES_BATCH3 } from './near-me-cities-batch3'
+import { NEAR_ME_CITIES_BATCH4 } from './near-me-cities-batch4'
 
 /**
  * Combined city array. Source of truth for the lookup map below.
  * Batches exist purely to keep individual data files under ~1000 lines.
+ * Batch 4 adds 8 major metros (Mumbai, Bangalore, Chennai, Hyderabad,
+ * Kolkata, Pune, Delhi, Ahmedabad).
  */
 export const ALL_NEAR_ME_CITIES: NearMeCityData[] = [
   ...NEAR_ME_CITIES,
   ...NEAR_ME_CITIES_BATCH2,
   ...NEAR_ME_CITIES_BATCH3,
+  ...NEAR_ME_CITIES_BATCH4,
 ]
 
 /**

@@ -5968,6 +5968,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'vadodara',
         'nashik',
         'meerut',
+        // June 2026 — 8 major metros added (batch 4 of city data)
+        'mumbai',
+        'bangalore',
+        'chennai',
+        'hyderabad',
+        'kolkata',
+        'pune',
+        'delhi',
+        'ahmedabad',
       ].flatMap((c) => [
         `neet-dropper-batch-${c}`,
         `online-neet-coaching-${c}`,
