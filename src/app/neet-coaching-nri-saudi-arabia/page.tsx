@@ -16,6 +16,7 @@ export const metadata: Metadata = {
       'Expert NEET coaching for NRI students in Saudi Arabia. 42 CBSE schools, 2.6M Indians. IST-friendly evening batches with 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-nri-saudi-arabia',
     type: 'website',
+    locale: 'en_IN',
     images: [
       {
         url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-saudi-arabia.jpg',
