@@ -5328,6 +5328,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
+    // June 2026 — SEO-only landing for broad "online NEET coaching"
+    // cluster targeting India + NRI / global searchers. Honest biology-
+    // specialist positioning, no pricing displayed. NOT in nav.
+    {
+      url: `${baseUrl}/online-neet-coaching-pcb`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
     // neet-dropper-crash-course-2025 → redirects to /neet-crash-course
     // ===== City-specific dropper batch pages (Apr 2026 expansion) =====
     {
