@@ -3,17 +3,8 @@ import BrandIdentityGenerator from '@/components/brand/BrandIdentityGenerator'
 
 export const metadata: Metadata = {
   title: 'Brand Studio Design System',
-  description:
-    'Generate Harvard-level logos, icons, and brand assets with our AI-powered brand identity system. Professional design tools for educational excellence.',
-  keywords:
-    'brand identity, logo generator, icon design, brand guidelines, design system, educational branding',
-  openGraph: {
-    title: 'Brand Studio | Professional Logo & Icon Generator',
-    description:
-      'AI-powered brand identity generator for educational institutions. Create Harvard-level logos, icons, and brand assets.',
-    images: ['/brand/brand-studio-og.jpg'],
-  },
-
+  description: 'Internal brand identity generator for Cerebrum Biology Academy.',
+  robots: { index: false, follow: false },
   twitter: { card: 'summary_large_image' as const },
 }
 
