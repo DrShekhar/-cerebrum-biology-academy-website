@@ -5,7 +5,7 @@ import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaS
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'Can I Crack NEET Without Coaching? Self-Study Guide 2025',
+  title: 'Can I Crack NEET Without Coaching? Self-Study Guide 2026',
   description:
     'Can you crack NEET without coaching? Honest analysis with self-study strategy, resources, and when you might need help. Success stories from Gurugram (Gurgaon). Call 88264-44334!',
   keywords: [

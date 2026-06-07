@@ -5,7 +5,7 @@ import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaS
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Fees in Gurugram 2025 | ₹45K-₹3L Comparison',
+  title: 'NEET Coaching Fees in Gurugram 2026 | ₹45K-₹3L Comparison',
   description:
     "NEET coaching fees in Gurugram (Gurgaon) range from ₹45,000 to ₹3,00,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees. What's included, hidden costs, and best value. Call 88264-44334!",
   keywords: [

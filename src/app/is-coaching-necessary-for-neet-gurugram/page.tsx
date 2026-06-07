@@ -5,7 +5,7 @@ import { GurgaonGurugramAreaSchema } from '@/components/seo/GurgaonGurugramAreaS
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'Is Coaching Necessary for NEET? Gurugram Expert Answer | 2025',
+  title: 'Is Coaching Necessary for NEET? Gurugram Expert Answer | 2026',
   description:
     'Is coaching necessary for NEET? Expert analysis from Gurugram (Gurgaon) NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 88264-44334!',
   keywords: [

@@ -4,7 +4,7 @@ import { Phone, IndianRupee, ArrowRight, CheckCircle } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Fees in Faridabad 2025 | ₹45K-₹3L Comparison',
+  title: 'NEET Coaching Fees in Faridabad 2026 | ₹45K-₹3L Comparison',
   description:
     'NEET coaching fees in Faridabad range from ₹45,000 to ₹3,00,000. Compare Velocity, YVS, Cerebrum fees. What\'s included, hidden costs, and best value. Call 88264-44334!',
   keywords: [
