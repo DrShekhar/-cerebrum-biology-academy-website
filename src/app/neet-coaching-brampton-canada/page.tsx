@@ -1,13 +1,32 @@
 import { Metadata } from 'next'
 import NEETCoachingPageContent from './PageContent'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
+const city = NRI_INTERNATIONAL_CITIES['brampton-canada']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Brampton, Canada | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students in Brampton, Mississauga, Peel Region. SPH/MCAT pathway alternative via NRI quota MBBS. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Brampton Indian-origin Class 11-12 students — North America\'s most Indian city (52% Indian-origin, ~600K). Feeder schools: Turner Fenton, Mayfield, Heart Lake, Bramalea, Chinguacousy. EST 7-9:30 AM batch matches IST evening cleanly. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. 98% success rate. Cerebrum\'s largest GTA student concentration.`,
+  keywords: [
+    'NEET coaching Brampton',
+    'NEET coaching Peel Region',
+    'NEET coaching Canada',
+    'NEET coaching Mississauga',
+    'NEET tutor Brampton',
+    'Turner Fenton Secondary NEET',
+    'Mayfield Secondary NEET',
+    'Heart Lake Secondary NEET',
+    'Bramalea Secondary NEET',
+    'Chinguacousy NEET',
+    'NRI quota AIIMS Brampton',
+    'biology tutor Brampton',
+    'Indian MBBS pathway Brampton',
+    'NEET Punjabi Sikh community',
+    'Brampton Indian community NEET',
+    'McMaster MD vs NEET Brampton',
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-brampton-canada`,
     languages: {
@@ -16,9 +35,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'NEET Coaching in Brampton, Canada — Online Biology Classes',
-    description:
-      'NEET Biology coaching for Indian-origin students in Peel Region. Ontario grade 11-12 friendly, EST/EDT live classes, NRI quota MBBS guidance.',
+    title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
+    description: `EST 7-9:30 AM batch + Saturday live. Largest GTA student concentration. NRI quota pathway.`,
     url: `${BASE_URL}/neet-coaching-brampton-canada`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_CA',
@@ -34,8 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Brampton, Canada',
-    description: 'Online NEET Biology coaching for Brampton / Peel Region. Book free demo.',
+    title: `NEET Biology Coaching in ${city.city}, ${city.country}`,
+    description: `For Turner Fenton / Mayfield / Heart Lake students. Largest GTA student base.`,
     images: [`${BASE_URL}/og-neet-coaching-brampton-canada.jpg`],
   },
 }

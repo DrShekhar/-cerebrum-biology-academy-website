@@ -1,13 +1,30 @@
 import { Metadata } from 'next'
 import NEETCoachingPageContent from './PageContent'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
+const city = NRI_INTERNATIONAL_CITIES['chicago-usa']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Chicago, USA | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-American students across Chicago, Naperville, Schaumburg, Aurora. AP Biology + NEET dual prep. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Greater Chicago Indian-origin Class 11-12 students — Naperville, Schaumburg, Aurora, Bartlett, Hoffman Estates. AP Biology + NEET dual prep. CST 6-8:30 AM batch (matches IST evening). NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. MCAT B/B Section track available. 98% success rate.`,
+  keywords: [
+    'NEET coaching Chicago',
+    'NEET coaching USA',
+    'NEET coaching Naperville',
+    'NEET coaching Schaumburg',
+    'NEET coaching Aurora',
+    'NEET coaching Bartlett',
+    'NEET coaching Hoffman Estates',
+    'online NEET coaching Chicago',
+    'NEET tutor Chicago',
+    'AP Biology + NEET dual prep',
+    'Indian MBBS pathway Chicago',
+    'NRI quota AIIMS Chicago',
+    'MCAT biology Chicago',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-chicago-usa`,
     languages: {
@@ -16,9 +33,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'NEET Coaching in Chicago, USA — Online Biology Classes',
-    description:
-      'NEET Biology coaching for Indian-American students in Chicago metro. AP Biology friendly, CST/CDT live classes, NRI quota MBBS guidance.',
+    title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
+    description: `CST 6-8:30 AM batch + Saturday live. AP Biology + NEET dual prep. NRI quota pathway.`,
     url: `${BASE_URL}/neet-coaching-chicago-usa`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_US',
@@ -34,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Chicago, USA',
-    description: 'Online NEET Biology coaching for Chicago metro. Book free demo.',
+    title: `NEET Biology Coaching in ${city.city}, ${city.country}`,
+    description: `For Naperville/Schaumburg/Aurora Indian-American students.`,
     images: [`${BASE_URL}/og-neet-coaching-chicago-usa.jpg`],
   },
 }
