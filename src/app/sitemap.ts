@@ -126,7 +126,6 @@ function normalizePriority(path: string, currentPriority: number): number {
   if (
     path === '/' ||
     path === '/courses' ||
-    path === '/demo-booking' ||
     path === '/about' ||
     path === '/success-stories' ||
     path === '/results' ||
@@ -987,12 +986,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/demo-booking`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
     },
     {
       url: `${baseUrl}/class-11`,

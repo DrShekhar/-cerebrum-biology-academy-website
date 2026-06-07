@@ -4473,6 +4473,10 @@ export const delhiNCRDoorwayConsolidationRedirects = [
   { source: '/neet-coaching-with-hostel-delhi', destination: '/neet-coaching-delhi', permanent: true },
   { source: '/affordable-neet-coaching-delhi', destination: '/neet-coaching-delhi', permanent: true },
 
+  // ─── React-redirect cleanups (replacing in-page redirect()) ─────
+  { source: '/demo-booking', destination: '/book-free-demo', permanent: true },
+  { source: '/practice', destination: '/neet-biology-mcq', permanent: true },
+
   // ─── 2025 year-rollover redirects (replacing in-page React redirect()) ─
   { source: '/neet-2025-biology-coaching', destination: '/neet-2026-preparation', permanent: true },
   { source: '/neet-2025-preparation', destination: '/neet-2026-preparation', permanent: true },
