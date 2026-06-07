@@ -2,9 +2,11 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Dubai'
+const city = NRI_INTERNATIONAL_CITIES['dubai-uae']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -13,9 +15,30 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Dubai, UAE | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Dubai. AIIMS-led faculty, GST-friendly live classes, Dubai NEET exam centre. Class 9–12 + droppers. Book free demo.',
+  title: `NEET Biology Coaching in Dubai, UAE | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for ~1.5M Indian-origin Class 11-12 students in Dubai (world's most Indian non-Indian city, 28% of Dubai population). Bur Dubai / Karama / Deira / Jumeirah / JBR / Business Bay / JLT / Dubai Marina. Feeder schools: Indian High School Dubai (IHS — Asia's largest at 12K+ students), GEMS Our Own English HS / Modern Academy / Wellington / Legacy / Winchester, JSS International, DPS Dubai, Springdales, Ambassador. GST 4-6:30 PM batch. Dubai NTA NEET exam centre (largest overseas). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Dubai',
+    'NEET coaching UAE',
+    'online NEET coaching Dubai',
+    'NEET tutor Dubai',
+    'Indian High School Dubai NEET',
+    'IHS Dubai NEET',
+    'GEMS Our Own NEET',
+    'GEMS Modern Academy NEET',
+    'GEMS Wellington NEET',
+    'JSS International Dubai NEET',
+    'Delhi Private School Dubai NEET',
+    'Springdales Dubai NEET',
+    'Ambassador School Dubai NEET',
+    'NRI quota AIIMS Dubai',
+    'biology tutor Dubai',
+    'Bur Dubai NEET coaching',
+    'Karama NEET coaching',
+    'Jumeirah NEET coaching',
+    'Dubai NEET exam centre',
+    ...city.indianSchools.slice(0, 8).map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Dubai, UAE — Online Biology Classes',
     description:

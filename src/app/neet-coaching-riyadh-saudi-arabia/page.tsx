@@ -2,9 +2,11 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Riyadh'
+const city = NRI_INTERNATIONAL_CITIES['riyadh-saudi-arabia']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -13,9 +15,25 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Riyadh, Saudi Arabia | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Riyadh. AIIMS-led faculty, AST-friendly live classes, Riyadh NEET exam centre. Book free demo.',
+  title: `NEET Biology Coaching in Riyadh, Saudi Arabia | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Riyadh's 800K+ Indian-origin Class 11-12 students (Saudi Arabia's largest Indian concentration). Al Olaya / Al Malaz / Diplomatic Quarter / Al Rabwa / Al Khaleej. Flagship feeder: International Indian School Riyadh (IISR) with 13,000+ students — one of the world's largest schools. Also Bharatiya Vidya Bhavan Riyadh, Indian Embassy School, Al Yasmin International. AST 3-5:30 PM batch (after-IISR-dismissal slot). Ramadan schedule adjustments. Riyadh NTA NEET exam centre. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Riyadh',
+    'NEET coaching Saudi Arabia',
+    'online NEET coaching Riyadh',
+    'NEET tutor Riyadh',
+    'International Indian School Riyadh NEET',
+    'IISR NEET',
+    'Bharatiya Vidya Bhavan Riyadh NEET',
+    'Indian Embassy School Riyadh NEET',
+    'NRI quota AIIMS Riyadh',
+    'biology tutor Riyadh',
+    'Al Olaya NEET',
+    'Al Malaz NEET',
+    'Riyadh NEET exam centre',
+    'Ramadan NEET schedule Riyadh',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Riyadh, Saudi Arabia — Online Biology Classes',
     description:

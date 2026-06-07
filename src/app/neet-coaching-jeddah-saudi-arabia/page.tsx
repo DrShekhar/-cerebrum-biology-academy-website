@@ -2,9 +2,11 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Jeddah'
+const city = NRI_INTERNATIONAL_CITIES['jeddah-saudi-arabia']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -13,9 +15,26 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Jeddah, Saudi Arabia | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Jeddah. AIIMS-led faculty, AST-friendly live classes, GCC NEET exam centres. Book free demo.',
+  title: `NEET Biology Coaching in Jeddah, Saudi Arabia | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Jeddah's 500K+ Indian-origin Class 11-12 students (Saudi Arabia's west coast commercial hub + Mecca gateway). Al Naseem / Al Faisaliyah / Al Salama / Al Andalus / Al Hamra / Al Rawda. Flagship feeder: International Indian School Jeddah (IISJ) with 5,000+ students. Also Bharatiya Vidya Bhavan Jeddah, Al Manar International, Saudi Arabian International School. AST 3-5:30 PM batch (after-IISJ-dismissal slot). Ramadan schedule adjustments. Jeddah NTA NEET exam centre. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Jeddah',
+    'NEET coaching Saudi Arabia',
+    'online NEET coaching Jeddah',
+    'NEET tutor Jeddah',
+    'International Indian School Jeddah NEET',
+    'IISJ NEET',
+    'Bharatiya Vidya Bhavan Jeddah NEET',
+    'Al Manar International Jeddah NEET',
+    'NRI quota AIIMS Jeddah',
+    'biology tutor Jeddah',
+    'Al Naseem NEET',
+    'Al Faisaliyah NEET',
+    'Jeddah NEET exam centre',
+    'Ramadan NEET schedule Jeddah',
+    'Hyderabadi Kerala Jeddah community NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Jeddah, Saudi Arabia — Online Biology Classes',
     description:

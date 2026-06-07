@@ -1,3 +1,4 @@
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
@@ -5,6 +6,7 @@ import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Doha'
+const city = NRI_INTERNATIONAL_CITIES['doha-qatar']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -13,9 +15,25 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Doha, Qatar | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Doha. AIIMS-led faculty, AST-friendly live classes, Doha NEET exam centre. Book free demo.',
+  title: `NEET Biology Coaching in Doha, Qatar | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for ~700K Indian-origin Class 11-12 students in Doha (Qatar's largest expat community at 25% of population). Al Sadd / Bin Mahmoud / Al Mansoura / Wakra / Al Wukair / Al Khor. Feeder schools: DPS Modern Indian School Doha (DPS-MIS), Birla Public School Doha, MES Indian School, Bhavan's Public School, Ideal Indian School, Olive International. AST 3-5:30 PM batch (after-school slot). Doha NTA NEET exam centre (one of largest overseas). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Doha',
+    'NEET coaching Qatar',
+    'online NEET coaching Doha',
+    'NEET tutor Doha',
+    'DPS Modern Indian School Doha NEET',
+    'DPS MIS Doha NEET',
+    'Birla Public School Doha NEET',
+    'MES Indian School Doha NEET',
+    'Bhavans Public School Doha NEET',
+    'Ideal Indian School Doha NEET',
+    'NRI quota AIIMS Doha',
+    'biology tutor Doha',
+    'Al Sadd NEET coaching',
+    'Doha NEET exam centre',
+    ...city.indianSchools.slice(0, 8).map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Doha, Qatar — Online Biology Classes',
     description:

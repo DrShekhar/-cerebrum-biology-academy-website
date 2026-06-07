@@ -1,3 +1,4 @@
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
@@ -5,6 +6,7 @@ import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Sharjah'
+const city = NRI_INTERNATIONAL_CITIES['sharjah-uae']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -13,9 +15,25 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Sharjah, UAE | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Sharjah. AIIMS-led faculty, GST-friendly live classes, Sharjah NEET exam centre. Book free demo.',
+  title: `NEET Biology Coaching in Sharjah, UAE | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for ~700K Indian-origin Class 11-12 students in Sharjah (UAE's third-largest Indian community). Al Nahda / Al Majaz / Al Qasimia / Al Khan / Muweilah neighbourhoods. Feeder schools: DPS Sharjah, GEMS Millennium School, Indian School Al Khaleej, New Indian Model School, Sharjah Indian School. GST 4-6:30 PM batch (after-school slot). Sharjah NTA NEET exam centre (also serves Ajman/UAQ/Fujairah/RAK). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Sharjah',
+    'NEET coaching Sharjah UAE',
+    'online NEET coaching Sharjah',
+    'NEET tutor Sharjah',
+    'DPS Sharjah NEET',
+    'Delhi Private School Sharjah NEET',
+    'GEMS Millennium School Sharjah NEET',
+    'Indian School Al Khaleej NEET',
+    'New Indian Model School Sharjah NEET',
+    'NRI quota AIIMS Sharjah',
+    'biology tutor Sharjah',
+    'Al Nahda Sharjah NEET',
+    'Al Majaz NEET',
+    'Sharjah NEET exam centre',
+    ...city.indianSchools.slice(0, 6).map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Sharjah, UAE — Online Biology Classes',
     description:
