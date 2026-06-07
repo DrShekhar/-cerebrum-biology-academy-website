@@ -2,9 +2,11 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Muscat'
+const city = NRI_INTERNATIONAL_CITIES['muscat-oman']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -13,9 +15,26 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Muscat, Oman | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Muscat. AIIMS-led faculty, GST-friendly live classes, Muscat NEET exam centre. Book free demo.',
+  title: `NEET Biology Coaching in Muscat, Oman | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for ~700K Indian-origin Class 11-12 students in Oman (16% of population). Muscat (Ruwi, Mutrah, Wadi Kabir, Al Khoud, Bousher, Al Ghubra, Qurum). Feeder schools: Indian School Muscat (Wadi Kabir), Indian School Al Ghubra, Indian School Al Wadi Al Kabir, Indian School Bousher. GST 4-6:30 PM batch (after-school slot). Muscat NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Muscat',
+    'NEET coaching Oman',
+    'online NEET coaching Muscat',
+    'NEET tutor Muscat',
+    'Indian School Muscat NEET',
+    'Indian School Wadi Kabir NEET',
+    'Indian School Al Ghubra NEET',
+    'Indian School AWK NEET',
+    'Indian School Bousher NEET',
+    'NRI quota AIIMS Muscat',
+    'biology tutor Muscat',
+    'Ruwi NEET coaching',
+    'Wadi Kabir NEET coaching',
+    'Al Ghubra NEET',
+    'Muscat NEET exam centre',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Muscat, Oman — Online Biology Classes',
     description:

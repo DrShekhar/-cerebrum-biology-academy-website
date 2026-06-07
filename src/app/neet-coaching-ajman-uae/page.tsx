@@ -2,14 +2,32 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Ajman'
+const city = NRI_INTERNATIONAL_CITIES['ajman-uae']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Ajman, UAE | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Ajman. GST-friendly live classes, Sharjah/Dubai NEET exam centre support. Class 9–12 + droppers.',
+  title: `NEET Biology Coaching in Ajman, UAE | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for ~50K Indian-origin Class 11-12 students in Ajman (UAE\'s smallest emirate, part of UAE\'s 3.5M Indian community). Feeder schools: Indian School Ajman, Habitat School Ajman, India International School Ajman, Ajman Academy, BEAM, GEMS Westminster Ajman. GST 4-6:30 PM batch (after-school slot). Sharjah / Dubai NTA NEET exam centres (30-60 min commute). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Ajman',
+    'NEET coaching Ajman UAE',
+    'online NEET coaching Ajman',
+    'NEET tutor Ajman',
+    'Indian School Ajman NEET',
+    'Habitat School Ajman NEET',
+    'India International School Ajman NEET',
+    'GEMS Westminster Ajman NEET',
+    'BEAM Ajman NEET',
+    'Ajman Academy NEET',
+    'NRI quota AIIMS Ajman',
+    'biology tutor Ajman UAE',
+    'Ajman to Sharjah NEET centre',
+    'Ajman to Dubai NEET centre',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-ajman-uae`,
     languages: {

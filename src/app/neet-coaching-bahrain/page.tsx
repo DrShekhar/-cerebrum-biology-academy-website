@@ -1,9 +1,11 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Bahrain'
+const city = NRI_INTERNATIONAL_CITIES['bahrain']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -12,9 +14,23 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Bahrain (Manama) | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Bahrain. AIIMS-led faculty, AST-friendly live classes, Manama NEET exam centre. Book free demo.',
+  title: `NEET Biology Coaching in Bahrain (Manama) | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for ~350K Indian-origin Class 11-12 students in Bahrain (25% of population). Manama, Muharraq, Riffa, Saar, Janabiyah. Feeder schools: Indian School Bahrain (ISB), New Indian School Bahrain, Asian School Bahrain. AST 3-5:30 PM batch (after-school slot). Manama NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
+  keywords: [
+    'NEET coaching Bahrain',
+    'NEET coaching Manama',
+    'online NEET coaching Bahrain',
+    'NEET tutor Bahrain',
+    'Indian School Bahrain NEET',
+    'ISB NEET',
+    'New Indian School Bahrain NEET',
+    'Asian School Bahrain NEET',
+    'NRI quota AIIMS Bahrain',
+    'biology tutor Manama',
+    'Manama NEET exam centre',
+    'Bahrain Malayali Tamil Punjabi NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Bahrain (Manama) — Online Biology Classes',
     description:

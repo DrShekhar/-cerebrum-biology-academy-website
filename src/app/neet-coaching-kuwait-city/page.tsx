@@ -1,9 +1,11 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Kuwait City'
+const city = NRI_INTERNATIONAL_CITIES['kuwait-city']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -12,9 +14,25 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Kuwait City | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Kuwait City. AIIMS-led faculty, AST-friendly live classes, Kuwait City NEET exam centre. Book free demo.',
+  title: `NEET Biology Coaching in Kuwait City | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for ~1M Indian-origin Class 11-12 students in Kuwait (largest Gulf Indian community at 21% of population). Salmiya, Hawalli, Farwaniya, Mahboula, Mangaf, Abbasiya. Feeder schools: Indian Community School Kuwait (ICSK), Indian Public School (IPS), Gulf Indian School. AST 3-5:30 PM batch. Kuwait City NTA NEET exam centre on-site. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Kuwait',
+    'NEET coaching Kuwait City',
+    'online NEET coaching Kuwait',
+    'NEET tutor Kuwait City',
+    'Indian Community School Kuwait NEET',
+    'ICSK NEET',
+    'Indian Public School Kuwait NEET',
+    'IPS Kuwait NEET',
+    'Gulf Indian School Kuwait NEET',
+    'NRI quota AIIMS Kuwait',
+    'biology tutor Kuwait',
+    'Salmiya NEET coaching',
+    'Hawalli NEET coaching',
+    'Kuwait NEET exam centre',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Kuwait City — Online Biology Classes',
     description:
