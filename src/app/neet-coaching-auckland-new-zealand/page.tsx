@@ -1,14 +1,36 @@
 import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Auckland'
+const city = NRI_INTERNATIONAL_CITIES['auckland-new-zealand']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Auckland, New Zealand | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students in Auckland — Papatoetoe, Mount Roskill, Sandringham. NCEA + NEET dual prep. Free demo available.',
+  title: `NEET Biology Coaching in Auckland, New Zealand | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Auckland Indian-origin Class 11-12 students — 240K Indian community (~14% of city), New Zealand's largest. Papatoetoe / Mount Roskill / Sandringham / Otahuhu / Manukau / Botany / Howick. Feeder schools: Mt Albert Grammar, Auckland Grammar, Epsom Girls Grammar, Macleans College, Westlake Boys/Girls HS, Rangitoto College, Mount Roskill Grammar. NCEA + NEET dual prep. Saturday morning live (9-11:30 AM NZST). NRI quota + U of Auckland MBChB alternative. 98% success rate.`,
+  keywords: [
+    'NEET coaching Auckland',
+    'NEET coaching New Zealand',
+    'NEET coaching Papatoetoe',
+    'NEET coaching Mount Roskill',
+    'NEET coaching Sandringham',
+    'NEET coaching Otahuhu',
+    'NEET coaching Manukau',
+    'NEET coaching Botany',
+    'NEET coaching Howick',
+    'online NEET coaching Auckland',
+    'NEET tutor Auckland',
+    'Mt Albert Grammar NEET',
+    'Auckland Grammar NEET',
+    'Macleans College NEET',
+    'Westlake HS NEET',
+    'NCEA NEET bridge',
+    'U of Auckland MBChB vs NEET',
+    'Indo Fijian Punjabi NEET Auckland',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-auckland-new-zealand`,
     languages: {

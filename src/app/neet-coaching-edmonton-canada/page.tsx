@@ -2,13 +2,14 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-coaching-edmonton-canada'
+const city = NRI_INTERNATIONAL_CITIES['edmonton-canada']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Edmonton, Canada | Online Biology for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students in Edmonton. University of Alberta pre-med pipeline + NEET dual prep. AIIMS-trained faculty, MST evening slots.',
+  title: `NEET Biology Coaching in Edmonton, Canada | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Edmonton Indian-origin Class 11-12 students — 80K Indian community (Alberta\'s 2nd largest after Calgary), Mill Woods / Castle Downs / Beverly / Riverbend / Whitemud / U of A campus area. Significant Sikh/Punjabi + Gujarati communities. Feeder schools: Old Scona Academic, Strathcona HS, Ross Sheppard, Lillian Osborne, Harry Ainlay, Jasper Place. MST 5-7:30 AM batch + Saturday morning live. NRI quota + U of Alberta Medicine alternative. MCAT B/B track. 98% success rate.`,
   keywords: [
     'NEET coaching Edmonton', 'NEET coaching Edmonton Canada', 'NEET biology Edmonton',
     'Indian students Edmonton NEET', 'NRI NEET coaching Alberta',
