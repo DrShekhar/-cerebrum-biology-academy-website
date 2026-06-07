@@ -2,14 +2,37 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Brisbane'
+const city = NRI_INTERNATIONAL_CITIES['brisbane-australia']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Brisbane, Australia | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students in Brisbane — Sunnybank, Calamvale, Runcorn. Queensland Year 11-12 + NEET dual prep.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Brisbane Indian-origin Class 11-12 students — Sunnybank, Calamvale, Runcorn, Stretton, Kuraby, MacGregor. Feeder schools: Brisbane Grammar, Brisbane Boys' College, Brisbane State HS, Mansfield SHS, Sunnybank SHS, Indooroopilly SHS, Cavendish Road SHS. Queensland Year 11-12 + NEET dual prep. AEST Saturday morning live (9-11:30 AM) preferred. NRI quota + U of Queensland MD / Bond / Griffith alternative. GAMSAT B Section track. 98% success rate.`,
+  keywords: [
+    'NEET coaching Brisbane',
+    'NEET coaching Australia',
+    'NEET coaching Sunnybank',
+    'NEET coaching Calamvale',
+    'NEET coaching Runcorn',
+    'NEET coaching Stretton',
+    'NEET coaching Kuraby',
+    'NEET coaching MacGregor Brisbane',
+    'online NEET coaching Brisbane',
+    'NEET tutor Brisbane',
+    'Queensland ATAR Year 11-12 NEET',
+    'Brisbane Grammar NEET',
+    'Brisbane Boys College NEET',
+    'Sunnybank SHS NEET',
+    'NRI quota AIIMS Brisbane',
+    'biology tutor Brisbane',
+    'U of Queensland Medicine vs NEET',
+    'Bond Griffith MBBS vs NEET',
+    'GAMSAT biology Brisbane',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-brisbane-australia`,
     languages: {

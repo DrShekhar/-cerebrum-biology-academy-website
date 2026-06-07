@@ -2,14 +2,36 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Calgary'
+const city = NRI_INTERNATIONAL_CITIES['calgary-canada']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Calgary, Canada | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students in Calgary, Martindale, Saddle Ridge. Alberta Grade 11-12 + NEET dual prep. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Calgary Indian-origin Class 11-12 students — NE Calgary (Martindale, Saddle Ridge, Falconridge, Taradale, Castleridge, Coral Springs). Significant Sikh / Punjabi community. Feeder schools: Western Canada HS, Sir Winston Churchill HS, Centennial HS Calgary, Bowness HS, Henry Wise Wood HS. Alberta Grade 11-12 + NEET dual prep. MST 5-7:30 AM batch. NRI quota + U of Calgary Medicine alternative analysis. MCAT B/B track. 98% success rate.`,
+  keywords: [
+    'NEET coaching Calgary',
+    'NEET coaching Canada',
+    'NEET coaching NE Calgary',
+    'NEET coaching Martindale',
+    'NEET coaching Saddle Ridge',
+    'NEET coaching Falconridge',
+    'NEET coaching Taradale',
+    'NEET coaching Castleridge',
+    'online NEET coaching Calgary',
+    'NEET tutor Calgary',
+    'Alberta Grade 11-12 NEET',
+    'NRI quota AIIMS Calgary',
+    'biology tutor Calgary',
+    'U of Calgary Medicine vs NEET',
+    'MCAT biology Calgary',
+    'NEET Sikh Punjabi community Calgary',
+    'Western Canada HS NEET',
+    'Sir Winston Churchill HS NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-calgary-canada`,
     languages: {
