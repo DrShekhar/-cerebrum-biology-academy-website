@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  alternates: { canonical: '/checkout' },
-
+  title: 'Checkout | Cerebrum Biology Academy',
+  description: 'Internal course enrollment checkout flow.',
+  robots: { index: false, follow: false },
+  alternates: { canonical: 'https://cerebrumbiologyacademy.com/checkout' },
   twitter: { card: 'summary_large_image' as const },
 }
 
