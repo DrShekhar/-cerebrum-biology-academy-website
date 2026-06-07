@@ -1610,12 +1610,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.88,
     },
     {
-      url: `${baseUrl}/neet-coaching-mayur-vihar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
-    {
       url: `${baseUrl}/neet-coaching-karol-bagh`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -1937,19 +1931,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Online NEET coaching city pages (P1-1 May 2026)
     {
-      url: `${baseUrl}/online-neet-coaching-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/online-neet-coaching-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/online-neet-coaching-noida`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
@@ -1993,36 +1975,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // Delhi NCR feeder-school landing pages (P1.7 — May 2026)
     {
-      url: `${baseUrl}/neet-coaching-dps-rk-puram-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-sanskriti-school-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-modern-school-barakhamba-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-springdales-school-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-mothers-international-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/neet-coaching-gd-goenka-gurugram`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -2046,55 +1998,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/neet-coaching-dps-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-cambridge-international-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-amity-international-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-apeejay-school-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-delhi-public-school-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-dps-ghaziabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
     // P2-3 May 2026: 5 additional Delhi NCR feeder-school pages
-    {
-      url: `${baseUrl}/neet-coaching-dps-mathura-road-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-tagore-international-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
     {
       url: `${baseUrl}/neet-coaching-heritage-xperiential-gurugram`,
       lastModified: lastUpdated,
@@ -2103,12 +2007,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/neet-coaching-dps-sector-45-gurugram`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-lotus-valley-international-noida`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.88,
@@ -2158,12 +2056,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/re-neet-2026-kota`,
-      lastModified: lastUpdated,
-      changeFrequency: 'daily' as const,
-      priority: 0.93,
-    },
-    {
-      url: `${baseUrl}/re-neet-2026-delhi`,
       lastModified: lastUpdated,
       changeFrequency: 'daily' as const,
       priority: 0.93,
@@ -2436,12 +2328,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     // NEET Biology Tutor Pages - Phase 1 SEO Enhancement
-    {
-      url: `${baseUrl}/neet-biology-tutor`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
-    },
     // Delhi NCR Biology Tutor Locality Pages - Phase 2 SEO Enhancement
     {
       url: `${baseUrl}/biology-tutor-east-delhi`,
@@ -2491,12 +2377,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.92,
-    },
-    {
-      url: `${baseUrl}/biology-tutor-greater-noida`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.94,
     },
     // Ghaziabad Biology Tutor Locality Pages - Phase 2 SEO Enhancement
     {
@@ -4001,18 +3881,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     },
-    {
-      url: `${baseUrl}/a-level-biology-tuition`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/affordable-neet-coaching-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
     // NEET Notes Pages
     {
       url: `${baseUrl}/anatomy-flowering-plants-notes-neet`,
@@ -4163,18 +4031,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/biology-classes-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-classes-faridabad`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/biology-classes-ghaziabad`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.85,
@@ -5273,12 +5129,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/neet-coaching-with-hostel-delhi`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/neet-coaching-with-school`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -5516,12 +5366,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     // East Delhi Expansion Pages
-    {
-      url: `${baseUrl}/neet-coaching-mayur-vihar`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
     // Premium Coaching Pages
     {
       url: `${baseUrl}/one-to-one-biology-coaching`,
@@ -7198,12 +7042,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.89,
-    },
-    {
-      url: `${baseUrl}/neet-coaching-bahrain`,
-      lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.88,
     },
 
     // Thailand City Pages
