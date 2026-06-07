@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/about',
     type: 'website',
+    locale: 'en_IN',
     siteName: 'Cerebrum Biology Academy',
   },
   twitter: {

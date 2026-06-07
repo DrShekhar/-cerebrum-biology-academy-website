@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       'Expert biology tutor for Class 9 ICSE students. Build a strong foundation for NEET with AIIMS-trained faculty. Interactive classes, ICSE-aligned curriculum. Free demo!',
     url: 'https://cerebrumbiologyacademy.com/biology-tutor-class-9-icse',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-class-9-icse',

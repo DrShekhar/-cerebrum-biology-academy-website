@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description: 'Compare 7 top NEET biology coaching institutes. AIIMS faculty, 10-12 batch size, 98% success. See why students switch to Cerebrum.',
     url: 'https://cerebrumbiologyacademy.com/best-neet-biology-coaching',
     type: 'website',
+    locale: 'en_IN',
   },
 }
 

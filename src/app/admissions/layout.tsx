@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       'Limited seats for NEET 2026-27 batches. 98% success rate, AIIMS faculty. Class 11, 12 & Dropper programs available.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/admissions',
     siteName: 'Cerebrum Biology Academy',
   },

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       'Comprehensive biology olympiad coaching. Expert mentors, structured curriculum, past papers. Prepare for IBO, USABO, BBO & national olympiads.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/biology-olympiad-preparation',
   },
   twitter: {

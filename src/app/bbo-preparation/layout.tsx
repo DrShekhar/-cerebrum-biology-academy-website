@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     description:
       'Expert BBO preparation online. British Biology Olympiad coaching with Campbell Biology. Gold medal preparation for UK sixth form students.',
     type: 'website',
+    locale: 'en_GB',
     siteName: 'Cerebrum Biology Academy',
   },
 }
