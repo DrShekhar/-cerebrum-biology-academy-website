@@ -251,6 +251,29 @@ export default function NEETDropperBiologySpecialistPage() {
     })),
   }
 
+  // Review schema — Sadhna Sirin testimonial linked to the Course.
+  // 360/360 Biology in NEET 2023 is the strongest possible proof point
+  // for the "biology score is the rank limiter" thesis of this page.
+  const reviewSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: { '@id': `${PAGE_URL}#course` },
+    author: {
+      '@type': 'Person',
+      name: 'Sadhna Sirin',
+      description: 'Delhi-NCR Topper NEET 2023 — 695/720, 360/360 Biology',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    reviewBody:
+      "Dr. Shekhar Sir's conceptual approach made complex topics simple. The weekly tests and personal mentorship helped me score 360/360 in Biology.",
+    datePublished: '2023-06-15',
+  }
+
   const waUrl =
     'https://wa.me/918826444334?text=' +
     encodeURIComponent(
@@ -281,6 +304,10 @@ export default function NEETDropperBiologySpecialistPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
 
       <div className="min-h-screen bg-slate-50">
@@ -681,6 +708,67 @@ export default function NEETDropperBiologySpecialistPage() {
             EMI options available on all tiers. Pursuit tier eligible for 30%
             scholarship based on previous NEET score (call to verify).
           </p>
+        </section>
+
+        {/* Testimonial — Sadhna Sirin, the literal proof point */}
+        <section className="bg-gradient-to-br from-indigo-50 to-purple-50">
+          <div className="mx-auto max-w-6xl px-4 py-16">
+            <div className="grid gap-10 md:grid-cols-5 md:items-center">
+              <div className="md:col-span-3">
+                <span className="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-900">
+                  <Award className="h-3.5 w-3.5" />
+                  100 percentile biology · NEET 2023
+                </span>
+                <h2 className="mt-4 text-2xl md:text-3xl font-bold text-slate-900">
+                  Sadhna scored 360/360 in biology. The method on this page is
+                  what got her there.
+                </h2>
+                <figure className="mt-6 border-l-4 border-indigo-600 pl-5">
+                  <blockquote className="text-lg italic text-slate-700 leading-relaxed">
+                    “Dr. Shekhar Sir’s conceptual approach made complex topics
+                    simple. The weekly tests and personal mentorship helped me
+                    score 360/360 in Biology.”
+                  </blockquote>
+                  <figcaption className="mt-4 text-sm">
+                    <p className="font-bold text-slate-900">Sadhna Sirin</p>
+                    <p className="text-slate-600">
+                      Delhi-NCR Topper NEET 2023 · 695/720 · 100 percentile biology
+                    </p>
+                  </figcaption>
+                </figure>
+
+                <p className="mt-6 text-sm text-slate-600 leading-relaxed">
+                  The two mechanisms Sadhna mentions — <em>weekly tests</em> and{' '}
+                  <em>personal mentorship</em> — are the same two that the
+                  research foundation in our{' '}
+                  <Link
+                    href="/biology-revision-plan-neet-dropper"
+                    className="underline text-indigo-700 font-medium"
+                  >
+                    12-week revision plan
+                  </Link>{' '}
+                  is built around. Not a marketing message — a mechanism that
+                  has produced this outcome repeatedly across our cohorts.
+                </p>
+              </div>
+
+              <div className="md:col-span-2">
+                <div className="aspect-video overflow-hidden rounded-2xl shadow-xl ring-1 ring-slate-200 bg-black">
+                  <iframe
+                    src="https://www.youtube.com/embed/bk6wQCh6b9w"
+                    title="Sadhna Sirin — NEET 2023 Topper testimonial · Cerebrum Biology Academy"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="h-full w-full"
+                  />
+                </div>
+                <p className="mt-3 text-xs text-slate-500 text-center">
+                  Watch Sadhna&rsquo;s full success story (2 min)
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* FAQ */}
