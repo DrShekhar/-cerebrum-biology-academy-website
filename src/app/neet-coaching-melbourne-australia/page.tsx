@@ -1,23 +1,37 @@
 import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
+
+const city = NRI_INTERNATIONAL_CITIES['melbourne-australia']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Melbourne, Australia',
-  description:
-    "Expert NEET coaching for Melbourne, Australia students. 98% success rate. Dr. Shekhar C Singh's specialized curriculum. Join 50+ top scorers.",
-  keywords:
-    'NEET coaching melbourne, NEET classes melbourne, medical entrance exam melbourne, biology coaching melbourne, Cerebrum Biology Academy melbourne',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Melbourne-Indian Class 11-12 students. Feeder schools: ${city.indianSchools.slice(0, 3).join(', ')}. Time-zone-friendly Saturday morning live batch (9-11:30 AM AEDT) + weekday recordings. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. GAMSAT B Section also available. 98% success rate.`,
+  keywords: [
+    'NEET coaching Melbourne',
+    'NEET coaching Australia',
+    'online NEET coaching Melbourne',
+    'NEET tutor Melbourne',
+    'Indian MBBS pathway Melbourne',
+    'NRI quota AIIMS Melbourne',
+    'biology tutor Melbourne',
+    'Wyndham NEET coaching',
+    'Casey NEET coaching',
+    'Hume NEET coaching',
+    'NEET vs GAMSAT Melbourne',
+    'Monash University biology',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-melbourne-australia',
   },
-
   openGraph: {
-    title: 'NEET Coaching in Melbourne, Australia',
-    description:
-      '98% Success Rate. Expert NEET coaching by Dr. Shekhar C Singh. Call +918826444334 for free counseling.',
-    url: `https://cerebrumbiologyacademy.com/cities/neet-coaching-melbourne-australia`,
+    title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
+    description: `Saturday morning live (9-11:30 AM AEDT) + weekday recordings. NRI quota pathway. 98% qualification rate.`,
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-melbourne-australia',
     type: 'website',
+    locale: 'en_IN',
     images: [
       {
         url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-melbourne-australia.jpg',
@@ -29,10 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Melbourne, Australia',
-    description: '98% success rate with Dr. Shekhar C Singh. Limited seats available!',
+    title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
+    description: `For Melbourne-Indian Class 11-12 students. Saturday live + weekday recordings.`,
     creator: '@cerebrumacademy',
-    images: ['https://cerebrumbiologyacademy.com/twitter-neet-coaching-melbourne-australia.jpg'],
   },
 }
 

@@ -1,23 +1,37 @@
 import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
+
+const city = NRI_INTERNATIONAL_CITIES['sydney-australia']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Sydney, Australia',
-  description:
-    "Expert NEET coaching for Sydney, Australia students. 98% success rate. Dr. Shekhar C Singh's specialized curriculum. Join 50+ top scorers.",
-  keywords:
-    'NEET coaching sydney, NEET classes sydney, medical entrance exam sydney, biology coaching sydney, Cerebrum Biology Academy sydney',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Australian-Indian Class 11-12 students in ${city.city}. Feeder schools: ${city.indianSchools.slice(0, 3).join(', ')}. Time-zone-friendly Saturday morning live batch (9-11:30 AM AEDT) + weekday recordings. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
+  keywords: [
+    'NEET coaching Sydney',
+    'NEET coaching Australia',
+    'online NEET coaching Sydney',
+    'NEET tutor Sydney',
+    'Indian MBBS pathway Sydney',
+    'NRI quota AIIMS Sydney',
+    'biology tutor Sydney',
+    'Parramatta NEET coaching',
+    'Strathfield NEET coaching',
+    'Westmead NEET coaching',
+    'Pennant Hills NEET coaching',
+    'NEET vs UCAT Sydney',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-sydney-australia',
   },
-
   openGraph: {
-    title: 'NEET Coaching in Sydney, Australia',
-    description:
-      '98% Success Rate. Expert NEET coaching by Dr. Shekhar C Singh. Call +918826444334 for free counseling.',
-    url: `https://cerebrumbiologyacademy.com/cities/neet-coaching-sydney-australia`,
+    title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
+    description: `Saturday morning live (9-11:30 AM AEDT) + weekday recordings. NRI quota pathway to Indian MBBS. 98% qualification rate.`,
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-sydney-australia',
     type: 'website',
+    locale: 'en_IN',
     images: [
       {
         url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-sydney-australia.jpg',
@@ -29,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Sydney, Australia',
-    description: '98% success rate with Dr. Shekhar C Singh. Limited seats available!',
+    title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
+    description: `For Australian-Indian Class 11-12 students. Saturday live + weekday recordings.`,
     creator: '@cerebrumacademy',
     images: ['https://cerebrumbiologyacademy.com/twitter-neet-coaching-sydney-australia.jpg'],
   },

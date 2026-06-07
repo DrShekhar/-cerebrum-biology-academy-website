@@ -1,23 +1,40 @@
 import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
+
+const city = NRI_INTERNATIONAL_CITIES['toronto-canada']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Toronto, Canada',
-  description:
-    "Expert NEET coaching for Toronto, Canada students. 98% success rate. Dr. Shekhar C Singh's specialized curriculum. Join 50+ top scorers.",
-  keywords:
-    'NEET coaching toronto, NEET classes toronto, medical entrance exam toronto, biology coaching toronto, Cerebrum Biology Academy toronto',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for GTA-Indian Class 11-12 students in ${city.city}, Mississauga, Brampton, Markham. Time-zone-friendly EST 7-9:30 AM batch (matches IST evening) + Saturday morning live. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. MCAT B/B Section track also available. 98% success rate.`,
+  keywords: [
+    'NEET coaching Toronto',
+    'NEET coaching Canada',
+    'NEET coaching GTA',
+    'NEET coaching Mississauga',
+    'NEET coaching Brampton',
+    'NEET coaching Markham',
+    'NEET coaching Scarborough',
+    'NEET coaching Vaughan',
+    'online NEET coaching Toronto',
+    'NEET tutor Toronto',
+    'Indian MBBS pathway Toronto',
+    'NRI quota AIIMS Toronto',
+    'MCAT biology Toronto',
+    'biology tutor Toronto',
+    'McMaster MD vs NEET',
+    'U of T medicine vs Indian MBBS',
+  ].join(', '),
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-toronto-canada',
   },
-
   openGraph: {
-    title: 'NEET Coaching in Toronto, Canada',
-    description:
-      '98% Success Rate. Expert NEET coaching by Dr. Shekhar C Singh. Call +918826444334 for free counseling.',
-    url: `https://cerebrumbiologyacademy.com/cities/neet-coaching-toronto-canada`,
+    title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
+    description: `EST 7-9:30 AM batch (matches IST evening) + Saturday live. NRI quota + MCAT B/B track. 98% qualification.`,
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-toronto-canada',
     type: 'website',
+    locale: 'en_IN',
     images: [
       {
         url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-toronto-canada.jpg',
@@ -29,10 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Toronto, Canada',
-    description: '98% success rate with Dr. Shekhar C Singh. Limited seats available!',
+    title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
+    description: `For GTA Indian-origin students. EST early-morning batch + Saturday live.`,
     creator: '@cerebrumacademy',
-    images: ['https://cerebrumbiologyacademy.com/twitter-neet-coaching-toronto-canada.jpg'],
   },
 }
 

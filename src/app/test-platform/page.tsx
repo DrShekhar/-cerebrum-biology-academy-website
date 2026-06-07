@@ -2,11 +2,14 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Platform Testing Dashboard',
-  description: 'Testing interface for AI education platform validation and verification',
-
+  description: 'Internal testing interface for AI education platform validation and verification',
+  robots: { index: false, follow: false },
   twitter: { card: 'summary_large_image' as const },
-
-  openGraph: { title: 'Platform Testing Dashboard', description: 'Testing interface for AI education platform validation and verification', type: 'website' },
+  openGraph: {
+    title: 'Platform Testing Dashboard',
+    description: 'Internal testing interface',
+    type: 'website',
+  },
 }
 
 export default function TestPlatformPage() {
