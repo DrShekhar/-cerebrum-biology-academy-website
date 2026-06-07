@@ -2,14 +2,36 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Manchester'
+const city = NRI_INTERNATIONAL_CITIES['manchester-uk']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Manchester, UK | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students in Manchester, Bolton, Rochdale, Stockport. A-Level + NEET dual prep. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Greater Manchester Indian Class 11-12 students — Bolton, Stockport, Bury, Trafford, Cheadle, Altrincham. Feeder schools: Manchester Grammar, Withington Girls, Bury Grammar, Cheadle Hulme, Bolton School, Stockport Grammar. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch matches IST evening. NRI quota + UK MBBS alternative. 98% qualification rate.`,
+  keywords: [
+    'NEET coaching Manchester',
+    'NEET coaching UK',
+    'NEET coaching Bolton',
+    'NEET coaching Stockport',
+    'NEET coaching Bury',
+    'NEET coaching Trafford',
+    'NEET coaching Cheadle',
+    'NEET coaching Altrincham',
+    'online NEET coaching Manchester',
+    'NEET tutor Manchester',
+    'A-Level to NEET bridge',
+    'Manchester Grammar NEET',
+    'Withington Girls NEET',
+    'UK MBBS vs Indian MBBS',
+    'NRI quota AIIMS Manchester',
+    'biology tutor Manchester',
+    'University Manchester Med vs NEET',
+    'Lancaster Medicine vs NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-manchester-uk`,
     languages: {

@@ -2,14 +2,35 @@ import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'London'
+const city = NRI_INTERNATIONAL_CITIES['london-uk']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in London, UK | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students across London — Harrow, Southall, Wembley, Ilford. A-Level to NEET bridge. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for London-Indian Class 11-12 students — Harrow, Southall, Wembley, Ilford, Hounslow, Croydon, Brent. Feeder schools: Harrow School, Westminster, St Paul's, UCS, Habs Boys, NLCS. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch (matches IST evening). NRI quota guidance + UK MBBS alternative analysis. 98% qualification rate.`,
+  keywords: [
+    'NEET coaching London',
+    'NEET coaching UK',
+    'NEET coaching Harrow',
+    'NEET coaching Southall',
+    'NEET coaching Wembley',
+    'NEET coaching Ilford',
+    'NEET coaching Hounslow',
+    'NEET coaching Croydon',
+    'NEET coaching Brent',
+    'online NEET coaching London',
+    'NEET tutor London',
+    'A-Level to NEET bridge',
+    'UK MBBS vs Indian MBBS',
+    'NRI quota AIIMS London',
+    'biology tutor London',
+    'Imperial KCL UCL vs NEET',
+    'UCAT A-Level NEET dual prep',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in London, UK — Online Biology Classes',
     description:

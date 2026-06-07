@@ -2,14 +2,35 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Birmingham'
+const city = NRI_INTERNATIONAL_CITIES['birmingham-uk']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Birmingham, UK | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students in Birmingham — Handsworth, Smethwick, Edgbaston. A-Level + NEET dual prep. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Birmingham-Indian Class 11-12 students — Handsworth, Smethwick, Solihull, Sparkhill, Erdington. Feeder schools: King Edward's Birmingham, King Edward VI Camp Hill, Solihull School, Edgbaston High School. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch matches IST evening. NRI quota + UK MBBS alternative. 98% qualification rate.`,
+  keywords: [
+    'NEET coaching Birmingham',
+    'NEET coaching UK',
+    'NEET coaching Handsworth',
+    'NEET coaching Smethwick',
+    'NEET coaching Solihull',
+    'NEET coaching Sparkhill',
+    'NEET coaching Edgbaston',
+    'online NEET coaching Birmingham',
+    'NEET tutor Birmingham',
+    'A-Level to NEET bridge',
+    'King Edwards Birmingham NEET',
+    'Solihull School NEET',
+    'UK MBBS vs Indian MBBS',
+    'NRI quota AIIMS Birmingham',
+    'biology tutor Birmingham',
+    'Aston Medical vs NEET',
+    'Birmingham Medical School vs NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-birmingham-uk`,
     languages: {

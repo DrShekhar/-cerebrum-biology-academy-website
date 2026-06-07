@@ -2,14 +2,36 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Leicester'
+const city = NRI_INTERNATIONAL_CITIES['leicester-uk']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Leicester, UK | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-origin students in Leicester — Belgrave, Rushey Mead, Spinney Hills. A-Level + NEET dual prep. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Leicester Indian Class 11-12 students — UK's most Indian city per-capita (~33% Indian-origin, 140K residents). Belgrave, Rushey Mead, Spinney Hills, Stoneygate concentration. Feeder schools: Leicester Grammar, Loughborough Grammar, Loughborough High, Stoneygate School, Ratcliffe College. A-Level Biology to NCERT bridge. GMT 12-2:30 PM batch. NRI quota + UK MBBS analysis. 98% qualification rate.`,
+  keywords: [
+    'NEET coaching Leicester',
+    'NEET coaching UK',
+    'NEET coaching Belgrave',
+    'NEET coaching Rushey Mead',
+    'NEET coaching Spinney Hills',
+    'NEET coaching Stoneygate',
+    'NEET coaching Loughborough',
+    'online NEET coaching Leicester',
+    'NEET tutor Leicester',
+    'A-Level to NEET bridge',
+    'Leicester Grammar NEET',
+    'Loughborough Grammar NEET',
+    'UK MBBS vs Indian MBBS',
+    'NRI quota AIIMS Leicester',
+    'biology tutor Leicester',
+    'University Leicester Med vs NEET',
+    'De Montfort vs NEET',
+    'Nottingham Medicine vs NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-leicester-uk`,
     languages: {
