@@ -1,71 +1,193 @@
-'use client'
-
-import { MapPin, Users, Trophy, Star, CheckCircle, Award, BookOpen, Clock, Shield, Video, MessageCircle, Play, ArrowRight, GraduationCap, Building, Heart, TrendingUp } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
-import { CitySchema } from '@/components/seo/CitySchema'
+import { notFound } from 'next/navigation'
+import { NEAR_ME_CITY_BY_SLUG } from '@/data/locality-content/near-me-cities'
+import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 
-const localities = [
-  { name: 'Lawrence Road', slug: 'lawrence-road', students: '320+', highlight: 'Premium Hub', priority: 'high' },
-  { name: 'Ranjit Avenue', slug: 'ranjit-avenue', students: '300+', highlight: 'Modern Area', priority: 'high' },
-  { name: 'Mall Road', slug: 'mall-road', students: '280+', highlight: 'Central Area', priority: 'high' },
-  { name: 'Model Town', slug: 'model-town', students: '260+', highlight: 'Residential', priority: 'high' },
-  { name: 'Green Avenue', slug: 'green-avenue', students: '240+', highlight: 'New Township', priority: 'high' },
-  { name: 'GT Road', slug: 'gt-road', students: '220+', highlight: 'Highway Corridor', priority: 'medium' },
-  { name: 'Majitha Road', slug: 'majitha-road', students: '200+', highlight: 'Commercial Hub', priority: 'medium' },
-  { name: 'Circular Road', slug: 'circular-road', students: '180+', highlight: 'Old City', priority: 'medium' },
-  { name: 'Batala Road', slug: 'batala-road', students: '160+', highlight: 'Growing Area', priority: 'medium' },
-  { name: 'White Avenue', slug: 'white-avenue', students: '140+', highlight: 'Residential', priority: 'medium' },
-  { name: 'Chheharta', slug: 'chheharta', students: '120+', highlight: 'Industrial Belt', priority: 'medium' },
-  { name: 'Ajnala Road', slug: 'ajnala-road', students: '100+', highlight: 'Outskirts', priority: 'medium' },
-]
+const SLUG = 'amritsar'
+const city = NEAR_ME_CITY_BY_SLUG[SLUG]
+const PAGE_URL = `https://cerebrumbiologyacademy.com/neet-coaching-${SLUG}`
 
-const features = [
-  { icon: Video, title: 'Live Interactive Classes', description: 'Real-time teaching from the Holy City' },
-  { icon: Users, title: 'Small Batches (10-15)', description: 'Exclusive Punjab batches' },
-  { icon: Award, title: 'AIIMS Trained Faculties', description: 'Expert doctors' },
-  { icon: BookOpen, title: 'GMC Amritsar Focused', description: 'Coaching for GMC and Punjab medical colleges' },
-  { icon: Clock, title: 'Flexible Timings', description: 'All day batches' },
-  { icon: Shield, title: 'Stay in Amritsar', description: 'No migration to Kota needed' },
-]
-
-const successMetrics = [
-  { label: 'Success Rate', value: '98%', icon: Trophy },
-  { label: 'Top Score 2024', value: '354', icon: Star },
-  { label: 'Punjab Students', value: '2,400+', icon: Users },
-  { label: 'Areas Covered', value: '12+', icon: MapPin },
-]
-
-const faqs = [
-  { question: 'Why choose online coaching in Amritsar?', answer: 'Get quality NEET coaching at Rs 24,000-48,000/year. Stay in the Holy City with family.' },
-  { question: 'Which areas do you serve?', answer: 'Lawrence Road, Ranjit Avenue, Mall Road, Model Town, and all Amritsar localities.' },
-  { question: 'What is the fee?', answer: 'Rs 24,000 to Rs 48,000 per year with EMI.' },
-  { question: 'Do you understand PSEB patterns?', answer: 'Yes! We have Punjab Board specialized batches.' },
-]
-
-const premiumSchools = ['Spring Dale School', 'DAV Public School', 'Sacred Heart School', 'Delhi Public School', 'St. Francis School', 'Khalsa College', 'BBK DAV College', 'Sri Guru Ram Das', 'Army Public School', 'Cambridge School']
-
-const medicalColleges = ['GMC Amritsar', 'GMC Patiala', 'GMC Faridkot', 'PGIMER Chandigarh', 'AIIMS Delhi']
-
-export default function NeetCoachingAmritsarPage() {
-  const handleDemoBooking = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', 'demo_booking_amritsar', { event_category: 'conversion', event_label: 'neet_coaching_amritsar_page', value: 1 })
+export const metadata: Metadata = city
+  ? {
+      title: `NEET Coaching in ${city.displayName} | Best Biology Coaching · Cerebrum`,
+      description: `Best NEET Biology coaching for ${city.displayName} (${city.state}) students — AIIMS-trained faculty, small online batches, NCERT-line-by-line. Serving ${city.majorAreas.slice(0, 4).join(', ')}. Targets ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' / ' + city.otherStateMedicalColleges[0] : ''}. Pair with your existing ${city.localCoachingPresence.split(',')[0].trim().replace(/\\(.*\\)/, '').trim()} for PCM.`,
+      keywords: [
+        `NEET coaching ${city.displayName}`,
+        `NEET coaching ${SLUG}`,
+        `best NEET coaching ${city.displayName}`,
+        `NEET biology coaching ${city.displayName}`,
+        `online NEET coaching ${city.displayName}`,
+        `NEET preparation ${city.displayName}`,
+        `AIIMS coaching ${city.displayName}`,
+        `medical entrance coaching ${city.displayName}`,
+        `NEET tutor ${city.displayName}`,
+        `NEET classes ${city.displayName}`,
+        `NEET coaching ${city.state}`,
+        ...city.feederSchools.slice(0, 4).map((s) => `NEET coaching for ${s} alumni`),
+        ...(city.altNames ?? []).map((n) => `NEET coaching ${n}`),
+      ],
+      alternates: { canonical: PAGE_URL },
+      openGraph: {
+        title: `NEET Coaching in ${city.displayName} · Cerebrum Biology Academy`,
+        description: `Best biology-specialist NEET coaching for ${city.displayName} aspirants. AIIMS-trained faculty.`,
+        url: PAGE_URL,
+        locale: 'en_IN',
+        type: 'website',
+      },
+      twitter: { card: 'summary_large_image' as const },
+      robots: 'index, follow, max-image-preview:large',
     }
-  }
+  : { title: 'City not found' }
+
+export default function Page() {
+  if (!city) notFound()
+  const localCoaching = city.localCoachingPresence
+    .split(',')[0]
+    .trim()
+    .replace(/\(.*\)/, '')
+    .trim()
+  const wa =
+    'https://wa.me/918826444334?text=' +
+    encodeURIComponent(
+      `Hi — I am in ${city.displayName} (${city.state}) and want a free NEET Biology demo class. Please share details.`
+    )
+
+  const faqs = [
+    {
+      question: `Why pick Cerebrum biology specialist over Allen / Aakash / ${localCoaching} in ${city.displayName}?`,
+      answer: `We don't replace them — we add the biology depth they can't deliver. Allen / Aakash / ${localCoaching} ${city.displayName} batches are 150-200 students with generalist faculty; biology gets the same surface treatment as physics + chemistry. Cerebrum is biology-only by design — 10-40 student batches, AIIMS-trained faculty, weekly per-MCQ review, NCERT-line-by-line. Biology is 360/720 NEET marks (half the exam) — adding a specialist for it is the cleanest way to break through a 280-300 score plateau.`,
+    },
+    {
+      question: `What's the typical target college for a ${city.displayName} NEET aspirant?`,
+      answer: `Most achievable via ${city.state} state quota: ${city.stateQuotaCollege}. Also realistic: ${(city.otherStateMedicalColleges ?? []).slice(0, 2).join(', ') || 'AIIMS Delhi via all-India quota'}. Recent biology cut-offs ~315-340/360 for general category state-quota. Our programme calibrates biology score targets to your child's specific college aspiration.`,
+    },
+    {
+      question: `How does online NEET coaching work for a ${city.displayName} student?`,
+      answer: `Live Zoom classes, IST evening slots (5:30-8 PM weekdays + Sunday tests). ${city.displayName} students join pan-India cohorts. Recordings available if you miss. Weekly chapter tests reviewed in next live class. Material shipped to ${city.majorAreas.slice(0, 3).join(', ')} via tracked courier 4-5 days.`,
+    },
+    {
+      question: `Are there offline centres in ${city.displayName}?`,
+      answer: `No — Cerebrum's 4 offline centres are in Delhi NCR (South Extension, Rohini, Gurugram, Faridabad). For ${city.displayName} students the programme is 100% live online with the same faculty and curriculum. Many families pair Cerebrum biology online + local ${localCoaching} for PCM offline, which combines depth + accessibility.`,
+    },
+    {
+      question: `My child attends ${city.feederSchools[0]} / ${city.feederSchools[1] || city.feederSchools[0]}. How does the schedule fit?`,
+      answer: `Live online 5:30-8 PM IST Mon/Wed/Fri + Sunday morning test fits after most ${city.displayName} school dismissals. We have current students from ${city.feederSchools.slice(0, 3).join(', ')}.`,
+    },
+    {
+      question: `What's the medium of instruction?`,
+      answer: `English (NCERT NEET medium). For students from ${city.state} state-board / regional-medium schools, our first 4 weeks include a NCERT terminology bridge — most students adapt within a month.`,
+    },
+    {
+      question: `What does it cost?`,
+      answer: `Pursuit ~Rs 48,000/year (30-40 student batch); Ascent ~Rs 76,000/year (16-25 with weekly 1:1 doubt slot); Pinnacle ZA ~Rs 98,000/year (10-12 with direct Dr. Shekhar 1:1 mentor). EMI + sibling discounts available.`,
+    },
+  ]
 
   return (
-    <div className="min-h-screen">
-      <CitySchema cityName="Amritsar" citySlug="amritsar" state="Punjab" localities={localities.map((l) => l.name)} faqs={faqs} studentCount="2400" coordinates={{ lat: '31.6340', lng: '74.8723' }} />
-      <section className="relative bg-gradient-to-br from-teal-900 via-teal-700 to-teal-800 text-white py-20 overflow-hidden"><div className="absolute inset-0 bg-black/20" /><div className="relative max-w-7xl mx-auto px-4"><div className="text-center max-w-4xl mx-auto animate-fadeInUp"><div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6"><MapPin className="w-5 h-5 mr-2" />Holy City | GMC Amritsar Focused</div><h1 className="text-4xl md:text-6xl font-bold mb-6">Best <span className="text-yellow-300">NEET Coaching in Amritsar</span></h1><h2 className="text-xl md:text-2xl opacity-90 mb-4">Lawrence Road | Ranjit Avenue | Mall Road | Model Town</h2><p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">Get AIIMS trained faculties, 98% success rate from Amritsar. Join 2,400+ Punjab students.</p><div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"><Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Amritsar.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"><Button variant="secondary" size="xl" onClick={handleDemoBooking} className="bg-yellow-500 text-black hover:bg-yellow-400"><Play className="w-5 h-5 mr-2" />Book Free Demo</Button></Link><Link href="/courses"><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-teal-900"><BookOpen className="w-5 h-5 mr-2" />View Courses</Button></Link></div><div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">{successMetrics.map((metric, index) => (<div key={metric.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"><metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" /><div className="text-2xl font-bold">{metric.value}</div><div className="text-sm opacity-80">{metric.label}</div></div>))}</div></div></div></section>
-      <section className="py-20 bg-gray-50"><div className="max-w-7xl mx-auto px-4"><div className="text-center mb-16 animate-fadeInUp"><h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">NEET Coaching Across All Amritsar Localities</h2></div><div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">{localities.map((locality, index) => (<div key={locality.slug} className="animate-fadeInUp"><div className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${locality.priority === 'high' ? 'ring-2 ring-teal-600' : ''}`}><div className="flex items-center justify-between mb-2"><h3 className="text-lg font-bold text-gray-900">{locality.name}</h3><MapPin className="w-5 h-5 text-teal-600" /></div><div className="text-2xl font-bold text-teal-600 mb-1">{locality.students}</div><div className="text-sm text-gray-500">{locality.highlight}</div>{locality.priority === 'high' && (<div className="mt-2 inline-flex items-center text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded-full"><Star className="w-3 h-3 mr-1" />High Demand</div>)}</div></div>))}</div></div></section>
-      <section className="py-20 bg-teal-50"><div className="max-w-7xl mx-auto px-4"><div className="flex flex-wrap justify-center gap-4">{medicalColleges.map((college, index) => (<div key={college} className="bg-white px-6 py-4 rounded-xl shadow-lg animate-fadeInUp"><div className="flex items-center"><Heart className="w-5 h-5 text-teal-600 mr-2" /><span className="font-semibold text-gray-900">{college}</span></div></div>))}</div></div></section>
-      <section className="py-20 bg-white"><div className="max-w-7xl mx-auto px-4"><div className="grid md:grid-cols-3 gap-8 mb-16"><div className="bg-teal-50 rounded-xl p-8 border border-teal-100 animate-fadeInUp"><Building className="w-12 h-12 text-teal-600 mb-4" /><h3 className="text-xl font-bold text-gray-900 mb-2">No Kota Migration</h3><p className="text-gray-600">Stay in Amritsar with family.</p></div><div className="bg-teal-50 rounded-xl p-8 border border-teal-100 animate-fadeInUp"><TrendingUp className="w-12 h-12 text-teal-600 mb-4" /><h3 className="text-xl font-bold text-gray-900 mb-2">Rising Excellence</h3><p className="text-gray-600">Punjab students cracking NEET.</p></div><div className="bg-teal-50 rounded-xl p-8 border border-teal-100 animate-fadeInUp"><GraduationCap className="w-12 h-12 text-teal-600 mb-4" /><h3 className="text-xl font-bold text-gray-900 mb-2">PSEB Expert</h3><p className="text-gray-600">Punjab board specialists.</p></div></div><div className="bg-gray-50 rounded-2xl p-8"><h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Amritsar Schools Trust Us</h3><div className="flex flex-wrap justify-center gap-4">{premiumSchools.map((school, index) => (<span key={school} className="bg-white text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm animate-fadeInUp">{school}</span>))}</div></div></div></section>
-      <section className="py-20 bg-gray-50"><div className="max-w-7xl mx-auto px-4"><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (<div key={feature.title} className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"><feature.icon className="w-12 h-12 text-teal-600 mb-4" /><h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3><p className="text-gray-600">{feature.description}</p></div>))}</div></div></section>
-      <section className="py-20 bg-white"><div className="max-w-4xl mx-auto px-4"><div className="space-y-6">{faqs.map((faq, index) => (<div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"><h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start"><MessageCircle className="w-6 h-6 mr-3 text-teal-600 flex-shrink-0 mt-1" />{faq.question}</h3><p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p></div>))}</div></div></section>
-      <RelatedCityLinks currentCity="amritsar" variant="default" />
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-teal-700 text-white"><div className="max-w-4xl mx-auto px-4 text-center"><div className="animate-fadeInUp"><h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey from the Holy City</h2><p className="text-xl mb-8 opacity-90">98% success rate, 2,400+ students!</p><div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"><Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Amritsar.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"><Button variant="secondary" size="xl" onClick={handleDemoBooking} className="bg-yellow-500 text-black hover:bg-yellow-400"><Play className="w-5 h-5 mr-2" />Book Free Demo</Button></Link><Link href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20in%20Amritsar.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-teal-600"><ArrowRight className="w-5 h-5 mr-2" />Enroll Now</Button></Link></div><div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm"><div className="flex items-center justify-center"><CheckCircle className="w-4 h-4 mr-2" /><span>All Areas</span></div><div className="flex items-center justify-center"><CheckCircle className="w-4 h-4 mr-2" /><span>Live Classes</span></div><div className="flex items-center justify-center"><CheckCircle className="w-4 h-4 mr-2" /><span>AIIMS Faculty</span></div><div className="flex items-center justify-center"><CheckCircle className="w-4 h-4 mr-2" /><span>PSEB Specialist</span></div></div></div></div></section>
-    </div>
+    <main className="min-h-screen bg-white">
+      <CerebrumPersonSchema
+        knowsAbout={[
+          `NEET Coaching ${city.displayName}`,
+          `NEET Biology ${city.displayName}`,
+          `NEET Biology ${city.state}`,
+        ]}
+      />
+      <FAQSchema questions={faqs} pageUrl={PAGE_URL} />
+
+      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-4">
+          <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-white">Home</Link>
+            <span className="mx-2">/</span>
+            <span className="text-white">NEET Coaching {city.displayName}</span>
+          </nav>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            NEET Coaching in {city.displayName}
+          </h1>
+          <p className="text-xl text-slate-300 mb-6 max-w-3xl">
+            Live online NEET Biology coaching for {city.displayName} ({city.state})
+            students — AIIMS-trained faculty, small batches (10-40), NCERT-line-by-line
+            curriculum, weekly tests with per-MCQ review. Serving{' '}
+            {city.majorAreas.slice(0, 4).join(', ')}. Designed to pair with your
+            existing {localCoaching} for the physics-chemistry side. Target:{' '}
+            <strong>{city.stateQuotaCollege}</strong>
+            {city.otherStateMedicalColleges?.length ? (
+              <> or {city.otherStateMedicalColleges[0]}</>
+            ) : null}.
+          </p>
+          <a
+            href={wa}
+            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp +91 88264-44334
+          </a>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+            NEET coaching in {city.displayName} — local landscape
+          </h2>
+          <p className="mt-4 text-base text-slate-700 leading-relaxed">
+            {city.cityContext}
+          </p>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            <div className="rounded-xl bg-slate-50 p-5">
+              <p className="text-sm font-semibold text-indigo-700">Feeder schools in {city.displayName}</p>
+              <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
+                {city.feederSchools.map((s) => (
+                  <li key={s}>• {s}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-5">
+              <p className="text-sm font-semibold text-indigo-700">Neighborhoods covered</p>
+              <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
+                {city.majorAreas.map((a) => (
+                  <li key={a}>• {a}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-7">
+            NEET Coaching {city.displayName} — FAQs
+          </h2>
+          <div className="space-y-4">
+            {faqs.map((f, i) => (
+              <details key={i} className="bg-white rounded-xl p-5 border border-slate-200">
+                <summary className="text-base font-semibold text-slate-900 cursor-pointer">{f.question}</summary>
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed">{f.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-gradient-to-br from-blue-600 to-purple-600">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Book a free demo from {city.displayName}
+          </h2>
+          <a
+            href={wa}
+            className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold text-lg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp +91 88264-44334
+          </a>
+        </div>
+      </section>
+    </main>
   )
 }
