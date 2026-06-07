@@ -2,9 +2,11 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Salalah'
+const city = NRI_INTERNATIONAL_CITIES['salalah-oman']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -13,9 +15,23 @@ const ogImageParams = new URLSearchParams({
 })
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Salalah, Oman | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian students in Salalah, Oman. GST-friendly live classes, Muscat exam centre support, Class 9–12 and droppers.',
+  title: `NEET Biology Coaching in Salalah, Oman | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for ~50K Indian-origin Class 11-12 students in Salalah (Oman's second city, Dhofar region — Port of Salalah container hub + fishing + agriculture sector). Predominantly Malayali (Kerala) community. Feeder schools: Indian School Salalah, Indian Social Club School Salalah, Salalah Indian School. GST 4-6:30 PM batch (after-school slot). Muscat NTA NEET exam centre (1-hr flight or 12-hr drive). Khareef-season-proof online format. NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
+  keywords: [
+    'NEET coaching Salalah',
+    'NEET coaching Oman',
+    'NEET coaching Dhofar',
+    'online NEET coaching Salalah',
+    'NEET tutor Salalah',
+    'Indian School Salalah NEET',
+    'Salalah Indian School NEET',
+    'NRI quota AIIMS Salalah',
+    'biology tutor Salalah',
+    'Port of Salalah NEET',
+    'Salalah Malayali Kerala NEET',
+    'khareef NEET online',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Salalah, Oman — Online Biology Classes',
     description:

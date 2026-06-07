@@ -2,9 +2,11 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Abu Dhabi'
+const city = NRI_INTERNATIONAL_CITIES['abu-dhabi-uae']!
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -15,7 +17,7 @@ const ogImageParams = new URLSearchParams({
 export const metadata: Metadata = {
   title: 'NEET Coaching in Abu Dhabi, UAE | Online Biology Classes for NRI Students',
   description:
-    'Online NEET Biology coaching for Indian students in Abu Dhabi. AIIMS-led faculty, GST-friendly live classes, Abu Dhabi NEET exam centre. Book free demo.',
+    `Live online NEET Biology coaching for ~500K Indian-origin Class 11-12 students in Abu Dhabi (UAE's capital, 2nd-largest UAE Indian community). Khalidiya / Tourist Club Area / Mussafah / Hamdan Street / Mohammed Bin Zayed City / Shahama / Khalifa City. Flagship feeder: Abu Dhabi Indian School (ADIS) with 13,000+ students — among world's largest. Also GEMS Our Own Indian School Abu Dhabi, Indian Islahi Islamic, Indian Academy. GST 4-6:30 PM batch. Abu Dhabi NTA NEET exam centre (serves Al Ain too). NRI quota for AIIMS / JIPMER / Manipal. 98% success rate.`,
   openGraph: {
     title: 'NEET Coaching in Abu Dhabi, UAE — Online Biology Classes',
     description:
