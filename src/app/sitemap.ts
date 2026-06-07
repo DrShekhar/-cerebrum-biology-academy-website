@@ -5187,6 +5187,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92,
     },
+    // June 2026 — olympiad cornerstone pages. Captures broad "best
+    // biology olympiad coaching india" + "biology olympiad tutor india"
+    // head terms. Cross-links to existing NSEB / INBO / USABO / BBO /
+    // CBO / SBO pathway-specific pages.
+    {
+      url: `${baseUrl}/best-biology-olympiad-coaching-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/biology-olympiad-tutor-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
     // neet-dropper-crash-course-2025 → redirects to /neet-crash-course
     // ===== City-specific dropper batch pages (Apr 2026 expansion) =====
     {
