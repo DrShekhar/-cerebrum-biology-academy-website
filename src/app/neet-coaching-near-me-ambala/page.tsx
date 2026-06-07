@@ -1,49 +1,47 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
-import { FAQSchema } from '@/components/seo/FAQSchema'
-import { LocalBusinessSchema } from '@/components/seo/StructuredData'
-const PAGE_URL = 'https://cerebrumbiologyacademy.com/neet-coaching-near-me-ambala'
-export const metadata: Metadata = {
-  title: 'NEET Coaching Near Me Ambala | Cerebrum',
-  description: 'NEET Coaching Near Me in Ambala — AIIMS-trained faculty, online live. Serving Ambala Cantonment, Ambala City, Prem Nagar, Mahesh Nagar. From Rs 48,000/yr.',
-  keywords: ['neet coaching near me ambala', 'NEET biology ambala'],
-  alternates: { canonical: PAGE_URL },
-  openGraph: { title: 'NEET Coaching Near Me Ambala', url: PAGE_URL, locale: 'en_IN', type: 'website' },
+import { notFound } from 'next/navigation'
+import { NEAR_ME_CITY_BY_SLUG } from '@/data/locality-content/near-me-cities'
+import { NearMeCityTemplate } from '@/components/locality/NearMeCityTemplate'
 
-  twitter: { card: 'summary_large_image' as const },
-}
-const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — in Ambala, interested in NEET coaching.")
-const faqs = [
-  { question: 'How does it work from Ambala?', answer: 'Live online Zoom, IST evenings. AIIMS faculty. 15-20 student batches.' },
-  { question: 'Cost?', answer: 'Pursuit Rs 48,000/yr. Ascent Rs 76,000/yr. Pinnacle Rs 98,000/yr.' },
-]
+const SLUG = 'ambala'
+const city = NEAR_ME_CITY_BY_SLUG[SLUG]
+
+export const metadata: Metadata = city
+  ? {
+      title: `NEET Coaching Near Me in ${city.displayName} | Online Biology Specialist · Cerebrum`,
+      description: `Online NEET biology coaching for ${city.displayName} students. AIIMS-trained faculty, small batches (10-40), live Zoom classes from any neighbourhood (${city.majorAreas.slice(0, 3).join(', ')}), printed study material shipped. Target: ${city.stateQuotaCollege}. Pair with your existing PCM coaching.`,
+      keywords: [
+        `NEET coaching near me ${city.displayName}`,
+        `NEET coaching near me ${SLUG}`,
+        `NEET biology coaching ${city.displayName}`,
+        `online NEET coaching ${city.displayName}`,
+        `best NEET coaching ${city.displayName}`,
+        `NEET coaching ${city.state}`,
+        `NEET biology tutor ${city.displayName}`,
+        `AIIMS faculty NEET ${city.displayName}`,
+        ...city.feederSchools.map((s) => `NEET coaching for ${s} students`),
+        ...(city.altNames ?? []).map((n) => `NEET coaching near me ${n}`),
+      ],
+      alternates: {
+        canonical: `https://cerebrumbiologyacademy.com/neet-coaching-near-me-${SLUG}`,
+        languages: {
+          en: `https://cerebrumbiologyacademy.com/neet-coaching-near-me-${SLUG}`,
+          'en-IN': `https://cerebrumbiologyacademy.com/neet-coaching-near-me-${SLUG}`,
+        },
+      },
+      openGraph: {
+        title: `NEET Coaching Near Me in ${city.displayName} · Cerebrum Biology Academy`,
+        description: `Live online NEET Biology coaching for ${city.displayName} aspirants targeting ${city.stateQuotaCollege}. AIIMS-trained faculty, NCERT-line-by-line.`,
+        url: `https://cerebrumbiologyacademy.com/neet-coaching-near-me-${SLUG}`,
+        locale: 'en_IN',
+        type: 'website',
+      },
+      twitter: { card: 'summary_large_image' as const },
+      robots: 'index, follow, max-image-preview:large',
+    }
+  : { title: 'City not found' }
+
 export default function Page() {
-  return (
-    <main className="min-h-screen bg-white">
-      <CerebrumPersonSchema knowsAbout={['NEET Ambala', 'NEET Biology Haryana']} />
-      <LocalBusinessSchema />
-      <FAQSchema questions={faqs} pageUrl={PAGE_URL} />
-      <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-4">
-          <nav className="text-sm text-slate-400 mb-6" aria-label="Breadcrumb"><Link href="/" className="hover:text-white">Home</Link><span className="mx-2">/</span><Link href="/neet-coaching-ambala" className="hover:text-white">NEET Ambala</Link><span className="mx-2">/</span><span className="text-white">Coaching Near Me</span></nav>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">NEET Coaching Near Me in Ambala</h1>
-          <p className="text-xl text-slate-300 mb-6 max-w-3xl">NEET Biology for Ambala (Haryana). AIIMS faculty. Serving Ambala Cantonment, Ambala City, Prem Nagar, Mahesh Nagar.</p>
-          <a href={wa} className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
-        </div>
-      </section>
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">FAQs</h2>
-          <div className="space-y-6">{faqs.map((f, i) => (<details key={i} className="bg-white rounded-xl p-6 border border-slate-200"><summary className="text-lg font-semibold text-slate-900 cursor-pointer">{f.question}</summary><p className="mt-4 text-slate-700 leading-relaxed">{f.answer}</p></details>))}</div>
-        </div>
-      </section>
-      <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Free demo from Ambala</h2>
-          <a href={wa} className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold text-lg" target="_blank" rel="noopener noreferrer">WhatsApp +91 88264-44334</a>
-        </div>
-      </section>
-    </main>
-  )
+  if (!city) notFound()
+  return <NearMeCityTemplate city={city} />
 }
