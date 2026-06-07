@@ -15,18 +15,27 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Board Preparation | CBSE, ICSE, IGCSE, IB Biology Coaching',
+  title: 'Board Biology Coaching | CBSE + ICSE + IGCSE + IB + State Boards | Cerebrum',
   description:
-    'Expert Biology coaching for all major boards - CBSE, ICSE, IGCSE, IB, and State Boards. Score 90+ marks with our specialized board preparation programs.',
+    'Specialist Class 11-12 Board Biology coaching at Cerebrum — CBSE (NCERT line-by-line, 22+16 chapters mapped), ICSE (Sellinger + Ratna Sagar texts), IGCSE Biology (Cambridge 0610 + Edexcel), IB Biology (HL + SL 2025 syllabus + IA + EE), state boards (Maharashtra, Karnataka PUC, Tamil Nadu, AP, Telangana, UP). 90+ board marks + parallel NEET / IGCSE / IB exam readiness. AIIMS-trained Dr. Shekhar C Singh leads.',
   keywords:
-    'board preparation, CBSE Biology, ICSE Biology, IGCSE Biology, IB Biology, state board, board exam coaching',
+    'board preparation, board biology coaching, CBSE Biology Class 11 12, ICSE Biology coaching, IGCSE Biology Cambridge 0610, IGCSE Edexcel Biology, IB Biology HL SL, IB Biology 2025 syllabus, state board biology, Maharashtra board biology, Karnataka PUC biology, Tamil Nadu board biology, AP TS board biology, UP board biology english medium, board biology Class 12, board exam 90 plus biology, NEET integrated board biology',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/boards',
   },
-
-  twitter: { card: 'summary_large_image' as const },
-
-  openGraph: { title: 'Board Preparation | CBSE, ICSE, IGCSE, IB Biology Coaching', description: 'Expert Biology coaching for all major boards - CBSE, ICSE, IGCSE, IB, and State Boards. Score 90+ marks with our specialized board preparation programs.', type: 'website' },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Board Biology Coaching | Cerebrum',
+    description: 'CBSE + ICSE + IGCSE + IB + state boards — NCERT-deep + parallel NEET prep.',
+  },
+  openGraph: {
+    title: 'Board Biology Coaching | All Boards | Cerebrum Biology Academy',
+    description:
+      'CBSE / ICSE / IGCSE / IB / state boards — NCERT line-by-line + IA/EE supervision + AIIMS faculty.',
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://cerebrumbiologyacademy.com/boards',
+  },
 }
 
 export default function BoardPreparationPage() {
