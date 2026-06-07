@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       'Top-rated NEET coaching institute in Delhi NCR. 4 centers, AIIMS-trained faculty, 98% success rate, 67+ AIIMS selections. Affordable fees, small batches. Join now!',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-institute',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-institute',

@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     description:
       'Specialized NEET Biology coaching for droppers. Transform your second attempt into success with AIIMS faculty guidance.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/dropper',
     siteName: 'Cerebrum Biology Academy',
   },

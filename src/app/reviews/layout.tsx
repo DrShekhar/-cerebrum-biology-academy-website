@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
   twitter: { card: 'summary_large_image' as const },
 
-  openGraph: { title: 'Leave a Review', description: 'Share your experience at Cerebrum Biology Academy. Your feedback helps future NEET aspirants make the right choice.', type: 'website' },
+  openGraph: { title: 'Leave a Review', description: 'Share your experience at Cerebrum Biology Academy. Your feedback helps future NEET aspirants make the right choice.', type: 'website', locale: 'en_IN' },
 }
 
 export default function ReviewsLayout({ children }: { children: React.ReactNode }) {

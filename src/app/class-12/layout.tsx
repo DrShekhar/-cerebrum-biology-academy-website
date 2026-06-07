@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     description:
       'Expert Class 12 Biology coaching for CBSE boards and NEET preparation. Integrated curriculum by AIIMS faculty.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/class-12',
     siteName: 'Cerebrum Biology Academy',
   },

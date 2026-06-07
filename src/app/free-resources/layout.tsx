@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     description:
       'FREE study materials used by 15,000+ successful students. Notes, PYQs, formula sheets!',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/free-resources',
   },
   robots: {

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
       },
     ],
     type: 'profile',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh',
   },
   twitter: {

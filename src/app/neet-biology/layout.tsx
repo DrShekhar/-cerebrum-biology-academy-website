@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/neet-biology',
     siteName: 'Cerebrum Biology Academy',
     type: 'website',
+    locale: 'en_IN',
   },
 
   twitter: { card: 'summary_large_image' as const },

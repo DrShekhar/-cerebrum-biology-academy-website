@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     description:
       'Expert AIIMS & IITians faculties. Small batches of 10-18 students. 98% success rate. Class 11, 12 & Dropper batches. Online & offline coaching in Delhi-NCR.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching',
     siteName: 'Cerebrum Biology Academy',
     images: [

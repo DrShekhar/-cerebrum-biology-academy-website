@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     description: 'Starting Rs 2,500/month. AIIMS faculty, 10-12 batch size. Compare with the largest national NEET chain, the 2nd-largest national NEET chain. No hidden fees.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-fees',
     type: 'website',
+    locale: 'en_IN',
   },
 }
 
