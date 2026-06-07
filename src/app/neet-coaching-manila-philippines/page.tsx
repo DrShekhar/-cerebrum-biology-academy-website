@@ -1,32 +1,38 @@
 import { Metadata } from 'next'
 import NEETCoachingPageContent from './PageContent'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
+
+const city = NRI_INTERNATIONAL_CITIES['manila-philippines']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Manila, Philippines - 98% Success Rate',
-  description:
-    "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.",
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Indian-origin Class 11-12 students in ${city.city}, ${city.country}. Feeder schools: ${city.indianSchools.slice(0, 3).join(', ')}. Batch slot: ${city.localBatchSlot}. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
   keywords: [
-    'NEET coaching in Manila',
-    'medical entrance exam preparation Manila',
+    `NEET coaching ${city.city}`,
+    `NEET coaching ${city.country}`,
+    `online NEET coaching ${city.city}`,
+    `NEET tutor ${city.city}`,
+    `NRI quota AIIMS ${city.country}`,
+    `biology tutor ${city.city}`,
+    'NEET online Philippines',
+    'International School Manila NEET',
+    'Brent International School NEET',
     'Dr. Shekhar C Singh Manila',
-    'best NEET institute Manila',
-    'NEET online coaching Philippines',
+    ...city.indianSchools.map((s) => `${s} NEET`),
   ],
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-manila-philippines',
   },
-
   openGraph: {
-    title: 'NEET Coaching in Manila, Philippines - 98% Success Rate',
-    description:
-      "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.",
+    title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
+    description: `Live online PHT-time-zone batch (${city.localBatchSlot}). NRI quota guidance for Makati / BGC Indian families. 98% success rate.`,
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Manila, Philippines',
-    description:
-      "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.",
+    title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
+    description: `For Indian-origin students at ${city.indianSchools.slice(0, 2).join(' / ')}. NRI quota pathway to AIIMS / JIPMER.`,
   },
 }
 

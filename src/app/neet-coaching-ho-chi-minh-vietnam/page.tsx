@@ -1,32 +1,36 @@
 import { Metadata } from 'next'
 import NEETCoachingPageContent from './PageContent'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
+
+const city = NRI_INTERNATIONAL_CITIES['ho-chi-minh-vietnam']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Ho Chi Minh City, Vietnam - 98% Success Rate',
-  description:
-    "NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.",
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Indian-origin Class 11-12 students in ${city.city}, ${city.country}. Feeder schools: ${city.indianSchools.slice(0, 3).join(', ')}. Batch slot: ${city.localBatchSlot}. NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. 98% success rate.`,
   keywords: [
-    'NEET coaching in Ho Chi Minh City',
-    'medical entrance exam preparation Ho Chi Minh City',
+    `NEET coaching ${city.city}`,
+    `NEET coaching ${city.country}`,
+    `online NEET coaching ${city.city}`,
+    `NEET tutor ${city.city}`,
+    `NRI quota AIIMS ${city.country}`,
+    `biology tutor ${city.city}`,
+    'NEET online Vietnam',
     'Dr. Shekhar C Singh Ho Chi Minh City',
-    'best NEET institute Ho Chi Minh City',
-    'NEET online coaching Vietnam',
+    ...city.indianSchools.map((s) => `${s} NEET`),
   ],
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ho-chi-minh-vietnam',
   },
-
   openGraph: {
-    title: 'NEET Coaching in Ho Chi Minh City, Vietnam - 98% Success Rate',
-    description:
-      "NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.",
+    title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
+    description: `Live online ICT-time-zone batch (${city.localBatchSlot}). NRI quota guidance for Vietnam Indian families, NCERT-deep biology, 98% success rate.`,
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEET Coaching in Ho Chi Minh City, Vietnam',
-    description:
-      "NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.",
+    title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
+    description: `For Indian-origin students at ${city.indianSchools.slice(0, 2).join(' / ')}. NRI quota pathway to AIIMS / JIPMER.`,
   },
 }
 
