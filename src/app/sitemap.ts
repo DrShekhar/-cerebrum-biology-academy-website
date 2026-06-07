@@ -5203,6 +5203,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.93,
     },
+    // June 2026 — master "best biology coaching" head-term cornerstones.
+    // Designed to dominate the broadest aggregation searches across
+    // NEET + IB + AP + MCAT + Olympiads. Cross-links to specialty pages.
+    {
+      url: `${baseUrl}/best-biology-coaching-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.97,
+    },
+    {
+      url: `${baseUrl}/best-ibo-coaching-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/biology-coaching-english-medium-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
     // neet-dropper-crash-course-2025 → redirects to /neet-crash-course
     // ===== City-specific dropper batch pages (Apr 2026 expansion) =====
     {
