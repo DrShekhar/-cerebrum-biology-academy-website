@@ -4472,4 +4472,13 @@ export const delhiNCRDoorwayConsolidationRedirects = [
   { source: '/re-neet-2026-delhi', destination: '/re-neet-2026', permanent: true },
   { source: '/neet-coaching-with-hostel-delhi', destination: '/neet-coaching-delhi', permanent: true },
   { source: '/affordable-neet-coaching-delhi', destination: '/neet-coaching-delhi', permanent: true },
+
+  // ─── 2025 year-rollover redirects (replacing in-page React redirect()) ─
+  { source: '/neet-2025-biology-coaching', destination: '/neet-2026-preparation', permanent: true },
+  { source: '/neet-2025-preparation', destination: '/neet-2026-preparation', permanent: true },
+  { source: '/neet-biology-syllabus-2025', destination: '/neet-biology-syllabus-2026', permanent: true },
+  { source: '/neet-syllabus-2025', destination: '/neet-syllabus-2026', permanent: true },
+  { source: '/neet-exam-pattern-2025', destination: '/neet-exam-details', permanent: true },
+  { source: '/neet-dropper-crash-course-2025', destination: '/neet-crash-course', permanent: true },
+  { source: '/neet-repeater-course-2025', destination: '/neet-repeaters-2026', permanent: true },
 ]
