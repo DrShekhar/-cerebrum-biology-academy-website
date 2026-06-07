@@ -1,150 +1,89 @@
-import { Metadata } from 'next'
-import NEETDropperBatchNoidaContent from './NEETDropperBatchNoidaContent'
-import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import DropperBatchTemplate from '@/components/dropper/DropperBatchTemplate'
+import { NEAR_ME_CITY_BY_SLUG } from '@/data/locality-content/near-me-cities'
 
-export const metadata: Metadata = {
-  title: 'NEET Dropper Batch 2026-27 in Noida | Repeater Course',
-  description:
-    'Join NEET Dropper Batch 2026-27 in Noida. Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 62.',
-  keywords: [
-    'neet dropper batch 2026-27 noida',
-    'neet repeater course noida',
-    'neet dropper coaching noida',
-    'neet second attempt noida',
-    'neet dropper batch near me',
-    'neet repeater batch noida 2025',
-    'best dropper batch for neet noida',
-    '1 year neet dropper course noida',
-  ],
-  openGraph: {
-    locale: 'en_IN',
-    title: 'NEET Dropper Batch 2026-27 in Noida | Intensive Repeater Course',
-    description: 'Intensive 1-year NEET preparation for droppers and repeaters in Noida.',
-    url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-noida',
-  },
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-noida',
-  },
+const SLUG = 'noida'
+const city = NEAR_ME_CITY_BY_SLUG[SLUG]
 
-  twitter: { card: 'summary_large_image' as const },
-}
-
-const faqs = [
-  {
-    question: 'What is the eligibility for NEET Dropper Batch 2026-27?',
-    answer:
-      'Any student who has appeared for NEET 2024 or 2025 and wants to improve their score is eligible. We analyze your previous attempt and create a personalized improvement plan.',
-  },
-  {
-    question: 'What makes your dropper batch different?',
-    answer:
-      'We focus on previous attempt analysis, identifying weak areas, and targeted improvement. Our smaller batch size (max 20) ensures personalized attention. We have helped students improve by 100-200 marks in their second attempt.',
-  },
-  {
-    question: 'What is the fee and duration?',
-    answer:
-      'Dropper/Repeater Batch fees range from ₹90,000 to ₹1,56,000/year depending on your goal, current level, and the work needed to reliably achieve your target score. Tiers: Pursuit (₹70,000, 30-40 students), Ascent (₹90,000, 16-18 students), or Pinnacle ZA (₹1,56,000, 10-12 students with personal mentorship from Dr. Shekhar). All include study materials, test series, and doubt sessions.',
-  },
-  {
-    question: 'Do you provide hostel facility?',
-    answer:
-      'We partner with nearby PG accommodations for outstation students. We can help arrange accommodation near our Sector 62, Noida center.',
-  },
-  {
-    question: 'What is the batch timing?',
-    answer:
-      'Regular batch: 9 AM - 2 PM (6 days/week). We also have intensive batches with extended hours for students who need more practice.',
-  },
-  {
-    question: 'Where is the Noida center?',
-    answer:
-      'Our center is at B-45, Sector 62, Noida, UP 201301, near Sector 62 Metro Station (5 min walk).',
-  },
-]
-
-export default function NEETDropperBatchNoidaPage() {
-  const courseSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Course',
-    name: 'NEET Dropper Batch 2026-27 - Noida',
-    description:
-      'Intensive 1-year NEET preparation program for droppers and repeaters targeting NEET 2026.',
-    provider: {
-      '@type': 'EducationalOrganization',
-      name: 'Cerebrum Biology Academy',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'B-45, Sector 62',
-        addressLocality: 'Noida',
-        addressRegion: 'UP',
-        postalCode: '201301',
-        addressCountry: 'IN',
+export const metadata: Metadata = city
+  ? {
+      title: `NEET Dropper Batch 2026-27 ${city.displayName} | Biology Specialist Repeater Programme · Cerebrum`,
+      description: `NEET Dropper Batch 2026-27 for ${city.displayName} (${city.state}) students. Biology-specialist coaching for repeaters targeting ${city.stateQuotaCollege}${city.otherStateMedicalColleges?.length ? ' or ' + city.otherStateMedicalColleges[0] : ''}. AIIMS-trained faculty, 10-40 student batches, live online + study material shipped to ${city.majorAreas.slice(0, 3).join(', ')}. Pair with your existing ${city.localCoachingPresence.split(',')[0].trim().replace(/\\(.*\\)/, '').trim()} for PCM.`,
+      keywords: [
+        `neet dropper batch ${city.displayName}`,
+        `neet dropper batch ${SLUG}`,
+        `neet repeater coaching ${city.displayName}`,
+        `neet dropper coaching ${city.displayName}`,
+        `neet second attempt ${city.displayName}`,
+        `neet repeater batch ${city.displayName}`,
+        `best dropper batch for neet ${city.displayName}`,
+        `online neet dropper batch ${city.displayName}`,
+        `neet biology dropper ${city.displayName}`,
+        `neet dropper ${city.state}`,
+        ...city.feederSchools.map((s) => `NEET dropper for ${s} alumni`),
+        ...(city.altNames ?? []).map((n) => `neet dropper batch ${n}`),
+      ],
+      alternates: {
+        canonical: `https://cerebrumbiologyacademy.com/neet-dropper-batch-${SLUG}`,
+        languages: {
+          en: `https://cerebrumbiologyacademy.com/neet-dropper-batch-${SLUG}`,
+          'en-IN': `https://cerebrumbiologyacademy.com/neet-dropper-batch-${SLUG}`,
+        },
       },
-    },
-    educationalLevel: 'Post-12th',
-    teaches: ['NEET Biology', 'Previous Attempt Analysis', 'Score Improvement Strategy'],
-    timeRequired: 'P1Y',
-    hasCourseInstance: {
-      '@type': 'CourseInstance',
-      courseMode: 'Offline',
-      courseWorkload: '6 days/week intensive classes',
-      startDate: '2025-07-01',
-    },
-  }
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
-  }
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://cerebrumbiologyacademy.com',
+      openGraph: {
+        title: `NEET Dropper Batch 2026-27 ${city.displayName} · Cerebrum Biology Academy`,
+        description: `Biology-specialist NEET repeater programme for ${city.displayName} students targeting ${city.stateQuotaCollege}. AIIMS-trained faculty.`,
+        url: `https://cerebrumbiologyacademy.com/neet-dropper-batch-${SLUG}`,
+        locale: 'en_IN',
+        type: 'website',
       },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'NEET Coaching Noida',
-        item: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Dropper Batch 2026-27',
-        item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-noida',
-      },
-    ],
-  }
+      twitter: { card: 'summary_large_image' as const },
+      robots: 'index, follow, max-image-preview:large',
+    }
+  : { title: 'City not found' }
 
+export default function Page() {
+  if (!city) notFound()
+  const localCoaching = city.localCoachingPresence
+    .split(',')[0]
+    .trim()
+    .replace(/\(.*\)/, '')
+    .trim()
   return (
-    <>
-      <CerebrumPersonSchema
-        knowsAbout={['NEET Noida', 'NEET Biology Noida', 'Medical entrance coaching Noida']}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <NEETDropperBatchNoidaContent faqs={faqs} />
-    </>
+    <DropperBatchTemplate
+      cityName={city.displayName}
+      citySlug={SLUG}
+      faqs={[
+        {
+          question: `What does the NEET dropper batch in ${city.displayName} actually include?`,
+          answer: `Biology-specialist 1-year repeater programme designed to add 100-150 marks on biology alone. Live online via Zoom in IST evenings (5:30-8 PM Mon/Wed/Fri + weekend mocks), printed study material shipped to your ${city.displayName} address (${city.majorAreas.slice(0, 3).join(', ')} all covered), weekly chapter tests with per-MCQ review, and direct Dr. Shekhar mentorship in the Pinnacle tier. We don't teach physics or chemistry — pair us with your existing ${localCoaching} (or any local PCM source) for the full package.`,
+        },
+        {
+          question: `What's the realistic mark improvement for a ${city.displayName} dropper?`,
+          answer: `Average across our dropper cohorts: +25 to +40 marks in biology alone over 10 months. That's the largest subject-level improvement we see — biology has the most ground to gain because most droppers have unrefined recall, not weak fundamentals. The mechanism is research-backed (Karpicke & Roediger 2008 spaced retrieval + Dunlosky 2013 testing effect) — exactly what our weekly cycle delivers.`,
+        },
+        {
+          question: `Which medical college is realistic for a ${city.displayName} aspirant after the dropper year?`,
+          answer: `Most achievable via ${city.state} state quota: ${city.stateQuotaCollege}. Also realistic: ${(city.otherStateMedicalColleges ?? []).join(', ') || 'AIIMS Delhi via all-India quota'}. We calibrate biology score targets to your specific college aspiration.`,
+        },
+        {
+          question: `Is online dropper coaching from ${city.displayName} as good as relocating to Kota?`,
+          answer: `For biology specifically — yes. Kota's PCM teaching is unmatched, but their biology batches are 150-200 students. Cerebrum biology batches are 10-40 with per-MCQ review weekly. Many ${city.displayName} families pair us with a local Allen or Aakash for PCM and save the ₹2-3L Kota hostel cost while keeping the family support system intact.`,
+        },
+        {
+          question: `How do ${city.displayName} dropper batches handle schools like ${city.feederSchools.slice(0, 2).join(' or ')}?`,
+          answer: `School completion before dropper year, so school-side rhythm doesn't apply. We've worked with droppers from ${city.feederSchools.slice(0, 3).join(', ')}, and the consistent pattern is: strong PCM foundation but biology score stuck at 270-290. Our 10-month plan moves that to 320+/360.`,
+        },
+        {
+          question: `What's the pricing for the ${city.displayName} dropper programme?`,
+          answer: `Pricing is the same nationally — Pursuit (30-40 students) ~₹48,000/yr; Ascent (16-25 students with weekly 1:1 doubt slot) ~₹76,000/yr; Pinnacle ZA (10-12 students with direct Dr. Shekhar weekly mentor calls) ~₹98,000/yr. EMI options available. Shipping of printed material included.`,
+        },
+        {
+          question: `Schedule for a ${city.displayName} dropper while doing local Allen / Aakash?`,
+          answer: `Dropper batch is intensive but fits alongside local PCM coaching. Live online biology 6-8 hours/week (Mon/Wed/Fri evening + Sunday morning test). Most droppers do PCM at ${localCoaching} during the day and Cerebrum biology in the evening. Recordings available for any session missed due to Allen / Aakash scheduling clash.`,
+        },
+      ]}
+    />
   )
 }
