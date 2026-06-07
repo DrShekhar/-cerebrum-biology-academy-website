@@ -2,14 +2,45 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Washington DC'
+const city = NRI_INTERNATIONAL_CITIES['washington-dc-usa']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Washington DC | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-American students in DC, NoVA (Fairfax, Loudoun) and MoCo Maryland. AP Biology + NEET dual prep. Free demo.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for DC Metro Indian-origin Class 11-12 students — Northern Virginia (McLean, Vienna, Reston, Herndon, Centreville, Chantilly), Maryland (Bethesda, Potomac, Rockville, Gaithersburg). One of America's wealthiest, most education-focused Indian diasporas (~200K). Feeder schools: Thomas Jefferson HSST (TJHSST), Langley HS, McLean HS, Oakton, Marshall, Madison, Walt Whitman, Winston Churchill. AP Biology + NEET. EST 7-9:30 AM batch. NRI quota + MCAT B/B track. 98% success rate.`,
+  keywords: [
+    'NEET coaching Washington DC',
+    'NEET coaching DC Metro',
+    'NEET coaching USA',
+    'NEET coaching Northern Virginia',
+    'NEET coaching NoVA',
+    'NEET coaching Fairfax County',
+    'NEET coaching McLean',
+    'NEET coaching Vienna VA',
+    'NEET coaching Reston',
+    'NEET coaching Herndon',
+    'NEET coaching Centreville',
+    'NEET coaching Chantilly',
+    'NEET coaching Bethesda',
+    'NEET coaching Potomac',
+    'NEET coaching Rockville',
+    'NEET coaching Gaithersburg',
+    'TJHSST NEET',
+    'Thomas Jefferson HSST NEET',
+    'Langley HS NEET',
+    'McLean HS NEET',
+    'Walt Whitman HS NEET',
+    'online NEET coaching DC',
+    'NEET tutor DC',
+    'AP Biology + NEET dual prep',
+    'Johns Hopkins Georgetown UVA premed vs NEET',
+    'NRI quota AIIMS DC',
+    'MCAT biology DC',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-washington-dc-usa`,
     languages: {

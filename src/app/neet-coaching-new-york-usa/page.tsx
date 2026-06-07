@@ -2,14 +2,40 @@ import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'New York'
+const city = NRI_INTERNATIONAL_CITIES['new-york-usa']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in New York, USA | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-American students across NYC, NJ (Edison, Jersey City) and Long Island. AP Biology + NEET dual prep. Free demo.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for NYC Metro Indian-origin Class 11-12 students — Queens, Brooklyn, Manhattan, Edison NJ, Iselin, Jersey City, Princeton, Long Island, Westchester. America's largest Indian community (~700K). Feeder schools: Stuyvesant, Bronx Science, Brooklyn Tech, Hunter College HS, Edison HS, Bergen County Academies, Princeton HS, West Windsor-Plainsboro. AP Biology + NEET dual prep. EST 7-9:30 AM batch. NRI quota + MCAT B/B track. 98% success rate.`,
+  keywords: [
+    'NEET coaching New York',
+    'NEET coaching NYC',
+    'NEET coaching USA',
+    'NEET coaching Queens',
+    'NEET coaching Brooklyn',
+    'NEET coaching Manhattan',
+    'NEET coaching Edison NJ',
+    'NEET coaching Jersey City',
+    'NEET coaching Princeton NJ',
+    'NEET coaching Long Island',
+    'NEET coaching Westchester',
+    'Stuyvesant NEET',
+    'Bronx Science NEET',
+    'Brooklyn Tech NEET',
+    'Hunter College HS NEET',
+    'online NEET coaching NYC',
+    'NEET tutor New York',
+    'AP Biology + NEET dual prep',
+    'NRI quota AIIMS NYC',
+    'MCAT biology NYC',
+    'Columbia Cornell NYU premed vs NEET',
+    'Rutgers Princeton premed vs NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in New York, USA — Online Biology Classes',
     description:

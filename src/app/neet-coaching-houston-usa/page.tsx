@@ -2,14 +2,37 @@ import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Houston'
+const city = NRI_INTERNATIONAL_CITIES['houston-usa']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Houston, USA | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-American students in Houston, Sugar Land, Pearland, Katy. AP Biology + NEET dual prep. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Greater Houston Indian-origin Class 11-12 students — Sugar Land, Pearland, Katy, Cypress, Spring, Missouri City. Feeder schools: Clements HS Sugar Land, Dulles HS, Stephen F. Austin HS Sugar Land, Cinco Ranch, Seven Lakes, Memorial, Bellaire. AP Biology + NEET dual prep. CST 6-8:30 AM batch. NRI quota for AIIMS / JIPMER / Manipal / KMC. MCAT B/B track for UT Austin / Rice / Baylor premed alternative. 98% success rate.`,
+  keywords: [
+    'NEET coaching Houston',
+    'NEET coaching USA',
+    'NEET coaching Sugar Land',
+    'NEET coaching Pearland',
+    'NEET coaching Katy',
+    'NEET coaching Cypress TX',
+    'NEET coaching Spring TX',
+    'NEET coaching Missouri City',
+    'online NEET coaching Houston',
+    'NEET tutor Houston',
+    'Clements HS NEET',
+    'Dulles HS NEET',
+    'Cinco Ranch HS NEET',
+    'Seven Lakes HS NEET',
+    'AP Biology + NEET dual prep',
+    'UT Austin Rice Baylor premed vs NEET',
+    'NRI quota AIIMS Houston',
+    'MCAT biology Houston',
+    'Sugar Land Indian community NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
     title: 'NEET Coaching in Houston, USA — Online Biology Classes',
     description:

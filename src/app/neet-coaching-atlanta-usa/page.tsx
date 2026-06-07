@@ -2,14 +2,36 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Atlanta'
+const city = NRI_INTERNATIONAL_CITIES['atlanta-usa']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Atlanta, USA | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-American students in Atlanta, Johns Creek, Alpharetta, Duluth, Suwanee. AP Biology + NEET dual prep. Free demo available.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Greater Atlanta Indian-origin Class 11-12 students — North Fulton (Sandy Springs, Roswell, Alpharetta, Johns Creek), East Cobb, Gwinnett Tech Corridor. Feeder schools: Walton HS, Lambert HS, Northview HS, Pope HS, Chattahoochee, Centennial Roswell, Johns Creek HS. AP Biology + NEET dual prep. EST 7-9:30 AM batch. NRI quota for AIIMS / JIPMER / Manipal. MCAT B/B for Emory / Georgia Tech / UGA premed alternative. 98% success rate.`,
+  keywords: [
+    'NEET coaching Atlanta',
+    'NEET coaching USA',
+    'NEET coaching Johns Creek',
+    'NEET coaching Alpharetta',
+    'NEET coaching Sandy Springs',
+    'NEET coaching Roswell GA',
+    'NEET coaching Duluth GA',
+    'NEET coaching Suwanee',
+    'NEET coaching East Cobb',
+    'online NEET coaching Atlanta',
+    'NEET tutor Atlanta',
+    'Walton HS NEET',
+    'Lambert HS NEET',
+    'Northview HS NEET',
+    'AP Biology + NEET dual prep',
+    'Emory Georgia Tech premed vs NEET',
+    'NRI quota AIIMS Atlanta',
+    'MCAT biology Atlanta',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-atlanta-usa`,
     languages: {

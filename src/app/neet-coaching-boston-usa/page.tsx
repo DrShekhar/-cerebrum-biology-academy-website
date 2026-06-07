@@ -2,14 +2,37 @@ import { Metadata } from 'next'
 import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Boston'
+const city = NRI_INTERNATIONAL_CITIES['boston-usa']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Boston, USA | Online Biology Classes for NRI Students',
-  description:
-    'Online NEET Biology coaching for Indian-American students in Greater Boston — Lexington, Burlington, Westford, Acton, Andover. AP Biology + NEET dual prep.',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Greater Boston Indian-origin Class 11-12 students — Lexington, Acton-Boxborough, Westford, Newton, Wellesley, Concord, Belmont. Feeder schools: Boston Latin, Lexington HS, Acton-Boxborough, Newton North, Wellesley, Westford Academy. AP Biology + NEET dual prep. EST 7-9:30 AM batch (before-school). NRI quota guidance for AIIMS / JIPMER / Manipal / KMC. MCAT B/B track for Harvard / MIT / Tufts premed alternative. 98% success rate.`,
+  keywords: [
+    'NEET coaching Boston',
+    'NEET coaching USA',
+    'NEET coaching Lexington MA',
+    'NEET coaching Acton',
+    'NEET coaching Westford',
+    'NEET coaching Newton MA',
+    'NEET coaching Wellesley',
+    'NEET coaching Concord MA',
+    'NEET coaching Belmont',
+    'online NEET coaching Boston',
+    'NEET tutor Boston',
+    'AP Biology + NEET dual prep',
+    'Harvard MIT premed vs NEET',
+    'NRI quota AIIMS Boston',
+    'MCAT biology Boston',
+    'biotech corridor NEET',
+    'Boston Latin School NEET',
+    'Lexington HS NEET',
+    'Acton-Boxborough NEET',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   alternates: {
     canonical: `${BASE_URL}/neet-coaching-boston-usa`,
     languages: {
