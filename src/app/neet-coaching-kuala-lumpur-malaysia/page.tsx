@@ -2,19 +2,36 @@ import { Metadata } from 'next'
 import { PageContent } from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 import { NEETNRIPricingTiers } from '@/components/neet-nri/NEETNRIPricingTiers'
+import { NRI_INTERNATIONAL_CITIES } from '@/data/locality-content/nri-international-cities'
+
+const city = NRI_INTERNATIONAL_CITIES['kuala-lumpur-malaysia']!
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching in Kuala Lumpur, Malaysia',
-  description:
-    'Expert NEET coaching in Kuala Lumpur, Malaysia. 98% success rate, expert faculty, comprehensive study materials. Join 5000+ successful students. Enroll now!',
-  keywords:
-    'NEET coaching Kuala Lumpur, NEET exam center Kuala Lumpur, best NEET classes Kuala Lumpur, NEET preparation Malaysia',
+  title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum (Live Online)`,
+  description: `Live online NEET Biology coaching for Malaysian-Indian Class 11-12 students in ${city.city}, ${city.country}. Feeder schools: ${city.indianSchools.slice(0, 3).join(', ')}. Batch slot: ${city.localBatchSlot}. NRI quota guidance for AIIMS / JIPMER / MMMC Manipal / KMC Mangalore. 98% success rate.`,
+  keywords: [
+    `NEET coaching ${city.city}`,
+    `NEET coaching ${city.country}`,
+    'NEET coaching KL',
+    `online NEET coaching ${city.city}`,
+    `NEET tutor ${city.city}`,
+    'NRI quota AIIMS Malaysia',
+    'biology tutor Kuala Lumpur',
+    'NEET coaching Malaysia',
+    'Global Indian International School KL NEET',
+    'International Indian School Malaysia NEET',
+    'IISM NEET',
+    'GIIS KL NEET',
+    'Manipal Melaka MBBS',
+    'Tamil-medium NEET bridge',
+    ...city.indianSchools.map((s) => `${s} NEET`),
+  ].join(', '),
   openGraph: {
-    title: 'NEET Coaching in Kuala Lumpur, Malaysia | 98% Success Rate',
-    description:
-      'Premium NEET coaching center in Kuala Lumpur. Dr. Shekhar C Singh & expert faculty. Start your medical journey today.',
+    title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
+    description: `Live online MYT-time-zone batch (${city.localBatchSlot}). NRI quota guidance for Malaysian-Indian families. Tamil-medium NCERT bridge available. 98% success rate.`,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-kuala-lumpur-malaysia',
     type: 'website',
+    locale: 'en_IN',
     images: [
       {
         url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-kuala-lumpur-malaysia.jpg',
@@ -27,8 +44,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kuala-lumpur-malaysia',
   },
-
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: `NEET Biology Coaching in ${city.city} — Live Online from India`,
+    description: `For Malaysian-Indian students at ${city.indianSchools.slice(0, 2).join(' / ')}. NRI quota + Manipal Melaka pathway.`,
+  },
 }
 
 export default async function Page() {
@@ -49,7 +69,6 @@ export default async function Page() {
           website: 'https://cerebrumbiologyacademy.com',
           doctor: 'Dr. Shekhar C Singh',
         }}
-        skipCourseList
       />
       <PageContent city="Kuala Lumpur" country="Malaysia" />
       <NEETNRIPricingTiers />
