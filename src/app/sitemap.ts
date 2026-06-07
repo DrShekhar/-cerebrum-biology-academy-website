@@ -5224,6 +5224,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.93,
     },
+    // Tutor + classes head-term variants — complete the trio with
+    // /best-biology-coaching-india
+    {
+      url: `${baseUrl}/best-biology-tutor-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/best-biology-classes-india`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
     // neet-dropper-crash-course-2025 → redirects to /neet-crash-course
     // ===== City-specific dropper batch pages (Apr 2026 expansion) =====
     {
