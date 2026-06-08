@@ -17,7 +17,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/faculty',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Our Faculty | AIIMS-Trained Biology Teachers at Cerebrum Academy',
+    description: 'Meet our expert faculty at Cerebrum Biology Academy. AIIMS-trained biology teachers with 10+ years experience. Led by Dr. Shekhar with 67+ AIIMS selections.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

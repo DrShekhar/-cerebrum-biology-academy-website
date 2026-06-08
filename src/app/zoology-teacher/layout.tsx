@@ -16,7 +16,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/zoology-teacher',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Zoology Teacher for NEET | Expert Zoology Coaching',
+    description: 'Expert zoology teacher for NEET preparation. Specialized coaching in animal biology, human physiology, genetics & ecology by AIIMS-trained faculty. Book free demo!',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

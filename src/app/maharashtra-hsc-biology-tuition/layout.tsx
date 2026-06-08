@@ -17,7 +17,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/maharashtra-hsc-biology-tuition',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Maharashtra HSC Biology Tuition | MHT-CET & NEET Coaching',
+    description: 'Expert Maharashtra HSC biology tuition for board exams & MHT-CET/NEET preparation. State board aligned teaching with competitive exam focus. Online classes available!',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

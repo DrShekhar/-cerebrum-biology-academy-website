@@ -5,7 +5,11 @@ export const metadata: Metadata = {
   title: 'Offline',
   robots: { index: false, follow: false },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Offline',
+    description: 'Offline',
+  },
 
   openGraph: { title: 'Offline', description: 'Offline', type: 'website', locale: 'en_IN' },
 }

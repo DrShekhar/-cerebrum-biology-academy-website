@@ -17,7 +17,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Chapters - Complete Study Guide | Cerebrum Biology Academy',
+    description: 'Comprehensive NEET Biology chapter-wise study guide covering all Class 11 and 12 chapters. Key topics, important concepts, weightage analysis, and NEET preparation tips.',
+  },
 }
 
 export default function NeetBiologyLayout({ children }: { children: React.ReactNode }) {

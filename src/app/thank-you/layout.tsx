@@ -8,7 +8,11 @@ export const metadata: Metadata = {
 
   robots: { index: false, follow: false },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Thank You | Cerebrum Biology Academy',
+    description: 'Thank You | Cerebrum Biology Academy',
+  },
 
   openGraph: { title: 'Thank You | Cerebrum Biology Academy', description: 'Thank You | Cerebrum Biology Academy', type: 'website', locale: 'en_IN' },
 }

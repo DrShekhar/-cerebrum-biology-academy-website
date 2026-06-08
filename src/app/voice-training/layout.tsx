@@ -17,7 +17,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/voice-training',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Voice Training Studio | Practice Biology Concepts Aloud',
+    description: 'Interactive voice training studio for NEET biology preparation. Practice explaining concepts aloud, improve retention, and build confidence for exams.',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

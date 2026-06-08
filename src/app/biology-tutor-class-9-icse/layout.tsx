@@ -17,7 +17,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-class-9-icse',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Tutor for Class 9 ICSE | Expert Biology Classes',
+    description: 'Expert biology tutor for Class 9 ICSE students. Build a strong foundation for NEET with AIIMS-trained faculty. Interactive classes, ICSE-aligned curriculum. Free demo!',
+  },
 }
 
 export default function BiologyTutorClass9ICSELayout({ children }: { children: React.ReactNode }) {

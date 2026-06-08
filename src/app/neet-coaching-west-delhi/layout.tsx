@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in West Delhi | Biology Classes Near You',
+    description: 'Best NEET coaching in West Delhi. Expert biology classes for Class 11, 12 & droppers. AIIMS-trained faculty, small batches, 98% success rate. Free demo class!',
+  },
 }
 
 export default function NEETCoachingWestDelhiLayout({ children }: { children: React.ReactNode }) {

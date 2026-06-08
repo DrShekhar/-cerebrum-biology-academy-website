@@ -16,7 +16,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-score-calculator',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Score Calculator 2026 | Calculate Your Expected NEET Score',
+    description: 'Free NEET score calculator 2026. Calculate your expected NEET score based on correct, incorrect & unattempted questions. Instant results with rank prediction.',
+  },
 }
 
 export default function NEETScoreCalculatorLayout({ children }: { children: React.ReactNode }) {

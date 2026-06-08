@@ -16,7 +16,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-rank-predictor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Rank Predictor 2026 | Predict Your NEET AIR & College',
+    description: 'Free NEET rank predictor 2026. Predict your All India Rank based on expected score. See eligible medical colleges, cutoffs & admission chances. Instant results!',
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
