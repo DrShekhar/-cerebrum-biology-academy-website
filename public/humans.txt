@@ -181,6 +181,53 @@ Partnerships:
 - Student support platforms
 - Online learning partnerships
 
+/* GLOBAL NRI FOOTPRINT */
+
+Cerebrum Biology Academy serves Indian-origin students across 47 international cities
+covering ~14.8 million Indian-origin community members worldwide.
+
+Gulf (15 cities): Dubai, Abu Dhabi, Sharjah, Al Ain, Ajman (UAE);
+  Doha, Al Wakrah (Qatar); Riyadh, Jeddah, Dammam, Al Khobar (Saudi Arabia);
+  Manama (Bahrain); Kuwait City; Muscat, Salalah (Oman)
+Americas (10): NYC, Boston, Houston, Chicago, Dallas, San Jose Bay Area,
+  Atlanta, Washington DC, Edison NJ (USA); Toronto, Vancouver, Brampton,
+  Calgary, Edmonton (Canada)
+Europe (4): London, Birmingham, Manchester, Leicester (UK)
+Oceania (4): Sydney, Melbourne, Brisbane (Australia); Auckland (NZ)
+Southeast Asia (6): Ho Chi Minh (Vietnam), Jakarta (Indonesia),
+  Manila (Philippines), Kathmandu (Nepal), Kuala Lumpur (Malaysia),
+  Singapore City
+Africa (5): Accra (Ghana), Nairobi (Kenya), Kampala (Uganda),
+  Dar es Salaam (Tanzania), Lagos (Nigeria)
+
+Each city page references real Indian-curriculum feeder schools by name,
+time-zone-aware batch slots, NRI quota guidance for AIIMS / JIPMER /
+Manipal / KMC, and local NTA NEET exam centre information.
+
+Notable feeder schools served (with student counts where notable):
+- Indian High School Dubai (IHS) — 12,000+ students, Asia's largest
+- International Indian School Riyadh (IISR) — 13,000+ students
+- Abu Dhabi Indian School (ADIS) — 13,000+ students
+- International Indian School Dammam (IISD) — 6,000+ students
+- International Indian School Jeddah (IISJ) — 5,000+ students
+- Indian Community School Kuwait (ICSK), Indian Public School (IPS)
+- DPS Modern Indian School Doha, Birla Public School, MES Indian School
+- Global Indian International School (GIIS) — Singapore, KL, Dubai
+- UWCSEA Singapore, Tanglin Trust Singapore
+- US public-HS feeders: Stuyvesant NYC, Bronx Science, Brooklyn Tech,
+  Hunter College HS, Edison HS NJ, Lynbrook + Monta Vista + Mission San
+  Jose + Saratoga + Harker (Bay Area), Walton + Lambert + Northview
+  (Atlanta), TJHSST + Langley + Walt Whitman (DC Metro), Clements +
+  Dulles + Cinco Ranch (Houston)
+- UK independent schools: Harrow School, Westminster, St Paul's, NLCS,
+  Habs Boys (London); King Edward's Birmingham; Manchester Grammar;
+  Leicester Grammar
+- Canada: Turner Fenton / Mayfield / Heart Lake (Brampton — North
+  America's most Indian city at 52% Indian-origin)
+- Australia: Scotch College / Geelong Grammar / Melbourne Grammar
+- New Zealand: Mt Albert Grammar, Auckland Grammar, Epsom Girls Grammar,
+  Macleans College, Westlake Boys/Girls HS
+
 /* CONTACT INFORMATION */
 
 Physical Address: Block D, South Extension Part 2, New Delhi 110049, India
@@ -209,4 +256,6 @@ Built with passion for Biology education since 2014.
 Empowering NEET aspirants across India.
 Committed to excellence in medical entrance coaching.
 
-Last Updated: February 2026
+Last Updated: June 2026 (47 NRI city pages, ~895 social-share cards
+enriched, ~100 openGraph locales, 14 hreflang additions, full Twitter
+card metadata across customer-facing surface).
