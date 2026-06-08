@@ -11,7 +11,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/privacy-policy',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Privacy Policy | Cerebrum Biology Academy',
+    description: 'How we collect, use, and protect your personal information.',
+  },
 
   openGraph: { title: 'Privacy Policy', description: 'Privacy Policy for Cerebrum Biology Academy - How we collect, use, and protect your personal information.', type: 'website' },
 }

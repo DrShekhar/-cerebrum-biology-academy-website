@@ -17,7 +17,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Study With Me | Cerebrum Biology',
+    description: 'Live study-with-me Pomodoro sessions for NEET Biology students. Community accountability.',
+  },
 }
 
 interface PageProps {

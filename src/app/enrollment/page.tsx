@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/enrollment',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  robots: { index: false, follow: false },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Enrollment | Cerebrum Biology Academy',
+    description: 'Internal course enrollment flow.',
+  },
 }
 
 const upcomingBatches = [

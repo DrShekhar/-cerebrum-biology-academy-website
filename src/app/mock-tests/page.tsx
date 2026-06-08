@@ -7,7 +7,11 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   alternates: { canonical: '/mock-tests' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Mock Tests | Cerebrum',
+    description: 'Full-length NEET Biology mock tests with AIIMS-faculty solutions and rank-band projection.',
+  },
 }
 
 export const revalidate = 3600

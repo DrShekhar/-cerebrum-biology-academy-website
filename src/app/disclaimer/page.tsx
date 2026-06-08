@@ -8,7 +8,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/disclaimer',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Disclaimer | Cerebrum Biology Academy',
+    description: 'Legal disclaimer for Cerebrum Biology Academy educational services.',
+  },
 
   openGraph: { title: 'Disclaimer', description: 'Legal disclaimer for Cerebrum Biology Academy educational services and website content.', type: 'website' },
 }

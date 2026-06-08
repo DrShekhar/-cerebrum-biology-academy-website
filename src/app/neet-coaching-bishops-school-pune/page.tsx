@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/neet-coaching-bishops-school-pune`,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: `NEET Coaching for ${school} Students · Cerebrum`,
+    description: `Specialized NEET Biology coaching for ${school} students. AIIMS-trained faculty, small batches, NCERT line-by-line.`,
+  },
 }
 
 const faqs = [

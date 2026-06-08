@@ -16,7 +16,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/ai-features',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'AI Features | Cerebrum Biology Academy',
+    description: 'AI-powered NEET Biology features: instant doubt resolution, personalized study paths, voice tutor.',
+  },
 
   openGraph: { title: 'AI Features', description: 'AI-powered study tools including ClaudeChat, Voice Training, and study analytics for NEET Biology', type: 'website' },
 }

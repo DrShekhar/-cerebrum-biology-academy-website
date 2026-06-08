@@ -17,9 +17,12 @@ export const metadata: Metadata = {
   title: 'Settings',
   description:
     'Manage your app settings, notifications, and preferences for the best NEET Biology learning experience.',
-  robots: 'noindex, nofollow',
-
-  twitter: { card: 'summary_large_image' as const },
+  robots: { index: false, follow: false },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Settings | Cerebrum Biology Academy',
+    description: 'Internal settings page.',
+  },
 
   openGraph: { title: 'Settings', description: 'Manage your app settings, notifications, and preferences for the best NEET Biology learning experience.', type: 'website' },
 }
