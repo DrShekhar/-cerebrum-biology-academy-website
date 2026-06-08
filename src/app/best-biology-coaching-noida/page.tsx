@@ -17,7 +17,11 @@ export const metadata: Metadata = {
     canonical: `https://cerebrumbiologyacademy.com/best-biology-coaching-noida`,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: cityData.metaTitle,
+    description: cityData.metaDescription,
+  },
 }
 
 export const revalidate = 86400

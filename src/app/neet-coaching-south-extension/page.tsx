@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-south-extension',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: cityData.metaTitle,
+    description: cityData.metaDescription,
+  },
 }
 
 export const revalidate = 86400

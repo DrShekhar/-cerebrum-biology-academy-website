@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/neet-coaching-delhi`,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: cityData.metaTitle,
+    description: cityData.metaDescription,
+  },
 }
 
 const delhiWa =

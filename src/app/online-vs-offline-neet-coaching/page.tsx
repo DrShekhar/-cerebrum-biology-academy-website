@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/online-vs-offline-neet-coaching',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: pageData.metaTitle,
+    description: pageData.metaDescription,
+  },
 }
 
 export default function OnlineVsOfflineNEETCoachingPage() {

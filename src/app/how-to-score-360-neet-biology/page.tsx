@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/how-to-score-360-neet-biology',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: pageData.metaTitle,
+    description: pageData.metaDescription,
+  },
 }
 
 export default function HowToScore360NEETBiologyPage() {
