@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description:
       'Free NEET score calculator to estimate your marks and rank. Calculate expected scores based on your answers.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/calculator',
     siteName: 'Cerebrum Biology Academy',
   },

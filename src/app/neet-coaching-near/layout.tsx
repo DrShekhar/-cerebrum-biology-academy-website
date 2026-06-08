@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-near',
   },
 
-  openGraph: { title: 'NEET Coaching Near Top Schools Delhi | DPS, Modern, Vasant Valley', description: 'Find NEET coaching near your school. DPS RK Puram, DPS Vasant Vihar, Modern School, Vasant Valley, Sanskriti School students. Expert AIIMS faculty. Book free demo!', type: 'website' },
+  openGraph: { title: 'NEET Coaching Near Top Schools Delhi | DPS, Modern, Vasant Valley', description: 'Find NEET coaching near your school. DPS RK Puram, DPS Vasant Vihar, Modern School, Vasant Valley, Sanskriti School students. Expert AIIMS faculty. Book free demo!', type: 'website', locale: 'en_IN' },
 }
 
 export default function NEETCoachingNearLayout({ children }: { children: React.ReactNode }) {

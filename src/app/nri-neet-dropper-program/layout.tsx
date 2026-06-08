@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     description:
       'Specialized dropper program for NRI students who scored 300-550 in NEET and need 600+ for NRI quota. 10-12 months intensive coaching.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/nri-neet-dropper-program',
   },
   twitter: {

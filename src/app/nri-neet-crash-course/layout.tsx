@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description:
       'Last-minute intensive 3-6 month program for NRI students before NEET. Focus on high-yield topics, daily mock tests, and NCERT revision.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/nri-neet-crash-course',
   },
   twitter: {

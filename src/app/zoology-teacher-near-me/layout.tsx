@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     description:
       'Find expert zoology teachers near you at Cerebrum Biology Academy. Specialized zoology coaching for NEET, covering animal physiology, genetics, ecology. Book free demo!',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/zoology-teacher-near-me',
   },
   alternates: {

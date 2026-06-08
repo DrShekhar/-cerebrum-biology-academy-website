@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.",
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',

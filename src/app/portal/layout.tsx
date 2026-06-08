@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
   twitter: { card: 'summary_large_image' as const },
 
-  openGraph: { title: 'Student Portal', description: 'Access your Cerebrum Biology Academy student dashboard. View courses, track progress, access study materials, and manage your NEET preparation journey.', type: 'website' },
+  openGraph: { title: 'Student Portal', description: 'Access your Cerebrum Biology Academy student dashboard. View courses, track progress, access study materials, and manage your NEET preparation journey.', type: 'website', locale: 'en_IN' },
 }
 
 export default function PortalLayout({ children }: { children: React.ReactNode }) {

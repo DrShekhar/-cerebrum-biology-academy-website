@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: 'NRI Medical Admission Guide - 15% NRI Quota Counseling',
     description: 'Comprehensive counseling for NRI families navigating Indian medical admissions.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/nri-medical-admission-counseling',
   },
   twitter: {

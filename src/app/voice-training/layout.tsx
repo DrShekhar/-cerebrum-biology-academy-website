@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       'Interactive voice training studio for NEET biology preparation. Practice explaining concepts aloud, improve retention, and build confidence for exams.',
     url: 'https://cerebrumbiologyacademy.com/voice-training',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/voice-training',

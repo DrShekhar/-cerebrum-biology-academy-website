@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       "NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.",
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',

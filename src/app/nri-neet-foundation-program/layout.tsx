@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description:
       'Early preparation program for Class 9-10 NRI students planning for NEET. Build strong biological concepts.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/nri-neet-foundation-program',
   },
   twitter: {

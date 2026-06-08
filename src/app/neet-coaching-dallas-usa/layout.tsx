@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       "NEET Coaching in Dallas - Growing Indian tech hub's premier medical entrance prep with Texas CBSE school partnerships.",
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       'Best online NEET biology coaching for Hyderabad students. AIIMS-trained faculty, live interactive classes, 98% success rate. Join Cerebrum Academy from Hyderabad!',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-hyderabad',
     type: 'website',
+    locale: 'en_IN',
   },
   other: { 'article:modified_time': '2026-05-27' },
   alternates: {
