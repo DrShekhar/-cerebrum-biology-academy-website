@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-mcat-biology-tutor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best MCAT Biology Tutor | AIIMS-Trained Bio/Biochem Specialist',
+    description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum',
+  },
 }
 
 const config: BestVerticalConfig = {

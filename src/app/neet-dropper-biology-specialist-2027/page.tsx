@@ -78,7 +78,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Dropper Biology Specialist 2027 | The Add-On to PW, Allen, Aakash & Kota',
+    description: 'Most droppers are losing 30–40 marks on biology, not physics or chemistry. Cerebrum is a biology-only specialist — pair us with your existing dropper batch (PW / Allen / Aakash / Kota) to move biol...',
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 

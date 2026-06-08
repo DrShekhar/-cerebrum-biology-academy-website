@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/icse-biology-coaching',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'ICSE/ISC Biology Coaching | Class 9-12 | Board + NEET Preparation',
+    description: 'Expert ICSE and ISC Biology coaching for Class 9-12. CISCE syllabus with NEET bridge. AIIMS faculty, small batches. Score 95%+ in Biology boards.',
+  },
 }
 
 export default function Page() {

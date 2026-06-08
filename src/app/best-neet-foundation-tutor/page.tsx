@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-neet-foundation-tutor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Foundation Tutor for Class 9 & 10 Biology | AIIMS-Trained Dr. Shekhar',
+    description: 'Best NEET Foundation tutor for Class 9 and Class 10 — Dr. Shekhar C Singh (AIIMS Delhi). Early NEET pathway with biology + CBSE/ICSE board parallel track. ₹35K–₹95K/year, batches of 15–20, online +...',
+  },
 }
 
 const config: BestVerticalConfig = {

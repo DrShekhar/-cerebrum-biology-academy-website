@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/can-i-crack-neet-without-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Can I Crack NEET Without Coaching? Self-Study Guide 2026',
+    description: 'Can you crack NEET without coaching? Honest analysis with self-study strategy, resources, and when you might need help. Success stories from Gurugram (Gurgaon). Call 88264-44334!',
+  },
 }
 
 const selfStudyRequirements = [

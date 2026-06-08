@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/principles-inheritance',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Principles of Inheritance MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 500+ free Principles of Inheritance and Variation MCQs for NEET. Mendel laws, linkage, sex determination, mutation, chromosomal disorders questions. NCERT-based with explanations.',
+  },
 }
 
 const structuredData = {

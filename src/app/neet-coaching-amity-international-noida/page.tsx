@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-amity-international-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for Amity International Noida Students | AIIMS Faculty | Cerebrum',
+    description: 'NEET biology coaching for Amity International Noida Class 11–12 students. AIIMS-trained Dr. Shekhar C Singh, small batches of 15–20, NCERT line-by-line, weekly 1:1 doubt slots. 680+ medical college...',
+  },
 }
 
 export default function FeederSchoolPage() {

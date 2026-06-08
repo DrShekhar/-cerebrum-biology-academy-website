@@ -72,7 +72,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Olympiad Tutor in India — 1:1 + Micro-Batch Mentoring · Dr. Shekhar C Singh',
+    description: 'Direct 1:1 and micro-batch (6-8 students) biology olympiad tutoring with Dr. Shekhar C Singh (AIIMS New Delhi alumnus). Personalised NSEB / INBO / USABO / BBO / CBO / SBO / IBO preparation with wee...',
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 

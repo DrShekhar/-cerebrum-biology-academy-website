@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     url: CANONICAL, locale: 'en_GB', type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'BBO Coaching | British Biology Olympiad Preparation | Cerebrum',
+    description: 'British Biology Olympiad (BBO) coaching by AIIMS-trained faculty. Gold/Silver/Bronze targeting, IBO UK team pathway. Online small-batch and 1:1 for UK sixth-form students.',
+  },
 }
 
 const faqs = [

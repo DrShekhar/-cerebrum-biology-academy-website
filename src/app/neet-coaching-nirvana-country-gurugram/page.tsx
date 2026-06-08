@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-nirvana-country-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Nirvana Country Gurugram | 10 Min Drive',
+    description: 'Best NEET coaching near Nirvana Country Gurugram (Gurgaon). Just 10 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Perfect for Nirvana Country residents. Call 88264-44334!',
+  },
 }
 
 const nearbyAreas = [

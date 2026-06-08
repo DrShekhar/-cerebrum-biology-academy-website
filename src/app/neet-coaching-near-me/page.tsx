@@ -34,7 +34,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-near-me',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Near Me 2026 | Find Best NEET Biology Classes Nearby | Delhi NCR',
+    description: 'Find the best NEET coaching near you in Delhi NCR. 4 centers: South Extension, Rohini, Gurugram, Faridabad. AIIMS faculty, 98% success rate, 15-student batches. Online classes for all India. Book F...',
+  },
 }
 
 const centers = [

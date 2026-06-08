@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-faculty-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Faculty Gurugram | AIIMS Faculty',
+    description: 'Meet our expert NEET Biology faculty in Gurugram (Gurgaon). AIIMS graduates, 15+ years experience, 98% success rate. Small batch specialists. Call 88264-44334!',
+  },
 }
 
 const faculty = [

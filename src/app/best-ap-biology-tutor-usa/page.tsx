@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-ap-biology-tutor-usa',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best AP Biology Tutor (USA & Global) | FRQ Rubric Specialist',
+    description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum',
+  },
 }
 
 const config: BestVerticalConfig = {

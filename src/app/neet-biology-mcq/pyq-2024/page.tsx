@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/pyq-2024',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET 2024 Biology PYQ | Previous Year Questions with Answers',
+    description: 'Practice NEET 2024 Biology Previous Year Questions (PYQs) with detailed solutions. All 90 Biology questions from NEET 2024 exam. Free practice with explanations.',
+  },
 }
 
 const structuredData = {

@@ -39,7 +39,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'GAMSAT Section III Biology Prep | Campbell + ACER Paper Walkthroughs',
+    description: 'GAMSAT Section III biology coaching from AIIMS-trained specialists. Campbell + Pre-U biology, ACER official paper walkthroughs, biochemistry-chemistry crossover. £399 self-paced, £799 small-batch, ...',
+  },
 }
 
 const faqs = [

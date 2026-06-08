@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison Rs 48,000-3,50,000',
+    description: 'NEET coaching fee in Noida 2026: Rs 48,000-3,50,000. Compare Cerebrum (Rs 48,000, AIIMS faculty), the largest national NEET chain, the 2nd-largest national NEET chain, other IIT-JEE-first coachings...',
+  },
 }
 
 const quickAnswer = {

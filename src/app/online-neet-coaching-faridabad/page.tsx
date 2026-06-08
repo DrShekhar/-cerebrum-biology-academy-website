@@ -42,7 +42,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/online-neet-coaching-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Online NEET Coaching for Faridabad Students | Live & Hybrid Mode',
+    description: 'Online NEET Biology classes for Faridabad & Greater Faridabad students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 17. 800+ students. Call 88264-44334!',
+  },
 }
 
 const travelTimes = [

@@ -49,7 +49,11 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'USABO Past Papers 2015–2024 | Open Exam & Semifinal Archive',
+    description: 'Download USABO Open Exam and Semifinal past papers from 2015 to 2024 with worked solutions. Year-by-year archive — use these as your primary practice resource for the February Open Exam.',
+  },
 }
 
 interface PaperEntry {

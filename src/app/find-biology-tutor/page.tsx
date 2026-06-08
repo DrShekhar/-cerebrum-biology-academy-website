@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/find-biology-tutor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Find a Biology Tutor | Online & Offline | NEET, A-Level, IB, IGCSE',
+    description: 'Find the perfect Biology tutor for your needs. AIIMS-trained faculty for NEET, Board exams, A-Level, IB, IGCSE, AP. Online classes worldwide. 4 centers in Delhi NCR.',
+  },
 }
 
 export default function Page() {

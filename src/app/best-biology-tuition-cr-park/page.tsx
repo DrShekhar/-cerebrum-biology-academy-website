@@ -34,7 +34,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Tuition in CR Park | Top Tutors Chittaranjan Park',
+    description: 'Best biology tuition in CR Park (Chittaranjan Park), South Delhi. Expert tutors for Class 11, 12 & NEET preparation. Call 88264-44334 for demo class.',
+  },
 }
 
 export default function BestBiologyTuitionCRParkPage() {

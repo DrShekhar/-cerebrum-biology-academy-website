@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-neet-foundation-class-10',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Foundation Class 10 Biology Tutor | Life Processes + Heredity + Boards',
+    description: 'Best NEET Foundation Class 10 Biology tutor in India — Dr. Shekhar C Singh (AIIMS Delhi). Class 10 CBSE/ICSE boards + NEET-pattern biology in parallel. Life Processes, Control & Coordination, Hered...',
+  },
 }
 
 const config: BestVerticalConfig = {

@@ -23,7 +23,11 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-blueprint-mcat' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs Blueprint MCAT Biology | Comparison',
+    description: 'Cerebrum Biology Academy vs Blueprint MCAT for Bio/Biochem — biology-only specialist vs adaptive full-MCAT platform. Compare pricing, faculty, learning approach.',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

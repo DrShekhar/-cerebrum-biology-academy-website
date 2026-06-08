@@ -42,7 +42,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/online-neet-coaching-ghaziabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Online NEET Coaching for Ghaziabad Students | Live & Hybrid Mode',
+    description: 'Online NEET Biology classes for Ghaziabad & Indirapuram students. Live interactive sessions from home. Hybrid mode with weekend offline at Sector 62 Noida. 800+ students. Call 99536-43938!',
+  },
 }
 
 const travelTimes = [

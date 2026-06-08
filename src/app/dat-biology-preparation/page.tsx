@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'DAT Biology Preparation | Bio Section Specialist | Campbell + ADA Outline',
+    description: 'DAT Biology section coaching from AIIMS-trained biology specialists. Campbell Biology end-to-end with ADA outline weighting for anatomy/physiology. $449 self-paced, $899 small-batch, $1,399 1:1 sen...',
+  },
 }
 
 const faqs = [

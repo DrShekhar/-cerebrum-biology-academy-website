@@ -28,7 +28,11 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: `${BASE_URL}/neet-coaching-east-africa` },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for East Africa Students | Kenya, Tanzania, Uganda',
+    description: 'Best NEET Biology coaching for Indian students in East Africa. Nairobi, Dar es Salaam, Kampala, Mombasa. AIIMS faculty, EAT timezone classes, NRI quota guidance. 98% success rate.',
+  },
 }
 
 const faqs = [

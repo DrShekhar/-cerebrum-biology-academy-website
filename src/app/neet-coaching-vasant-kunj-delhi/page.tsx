@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-vasant-kunj-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in Vasant Kunj Delhi | Medical Entrance Biology',
+    description: 'Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 67+ AIIMS selections. DPS Vasant Kunj, Sanskriti students welcome.',
+  },
 }
 
 const faqs = [

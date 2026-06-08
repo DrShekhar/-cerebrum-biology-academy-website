@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-huda-city-centre-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching HUDA City Centre Gurugram | 15 Min',
+    description: 'Best NEET coaching near HUDA City Centre Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. Yellow Line terminus, major commercial hub. AIIMS faculty, 98% success. Call 88264-44334!',
+  },
 }
 
 const nearbyAreas = [

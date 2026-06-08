@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'IB Biology Pricing | HL & SL Tutoring Packages | Cerebrum',
+    description: 'IB Biology tutoring pricing — $6,000/year Complete Programme, $8,000/year 1:1 Elite, $3,500/year Group Batch. 55 cities, local-currency options. 2025 syllabus, IA + EE coaching included.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent('Hi — I want to discuss IB Biology pricing and which tier fits my goals. Please share programme details.')

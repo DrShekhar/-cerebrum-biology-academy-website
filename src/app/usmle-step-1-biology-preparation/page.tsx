@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'USMLE Step 1 Biology Preparation | First Aid + UWorld + NBME Integrated',
+    description: 'USMLE Step 1 biology-foundations coaching from AIIMS-trained specialists. Biochemistry, microbiology, immunology, physiology depth. First Aid mapped end-to-end, UWorld integration walkthroughs. $79...',
+  },
 }
 
 const faqs = [

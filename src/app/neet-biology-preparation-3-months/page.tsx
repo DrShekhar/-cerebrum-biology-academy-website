@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: articleUrl,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'How to Prepare Biology for NEET in 3 Months | 90-Day Study Plan',
+    description: 'Complete 90-day NEET Biology study plan. Week-by-week breakdown, chapter priority, daily schedule, mock tests. Score 300+ in just 3 months with strategic preparation.',
+  },
 };
 
 export default function NEETBiologyPreparation3Months() {

@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/states',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Coaching by State | All India Coverage',
+    description: 'Find the best NEET Biology coaching for your state. Online classes available for Uttar Pradesh, Bihar, Rajasthan, Haryana, Madhya Pradesh, Punjab and all other states. 98% success rate.',
+  },
 }
 
 export default function StatesIndexPage() {

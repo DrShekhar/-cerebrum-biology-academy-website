@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/physics-wallah-alternative-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'other online-only platforms Alternative Gurugram | Offline Expert Biology',
+    description: 'Need offline alternative to other online-only platforms in Gurugram (Gurgaon)? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 88264-44334!',
+  },
 }
 
 const comparisonData = [

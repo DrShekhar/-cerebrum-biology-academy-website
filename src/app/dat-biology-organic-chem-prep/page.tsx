@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'DAT Biology + Organic Chemistry Prep | Survey of Natural Sciences',
+    description: 'Combined DAT Biology + Organic Chemistry coaching covering 60+ questions of the Survey of Natural Sciences. AIIMS-trained biology lead, biochemistry-bridged orgo. Pre-dental specialist programme.',
+  },
 }
 
 const faqs = [

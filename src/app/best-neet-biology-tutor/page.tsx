@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-neet-biology-tutor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Biology Tutor in India | AIIMS-Trained Dr. Shekhar C Singh',
+    description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads India',
+  },
 }
 
 const config: BestVerticalConfig = {

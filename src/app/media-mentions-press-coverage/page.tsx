@@ -22,7 +22,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/media-mentions-press-coverage',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Media Mentions & Press Coverage',
+    description: 'Cerebrum Biology Academy featured in Education Times, Career360, Hindustan Times. Read press coverage about our NEET coaching excellence and student success stories.',
+  },
 }
 
 const pressItems = [

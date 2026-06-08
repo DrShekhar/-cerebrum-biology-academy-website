@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/online-neet-classes-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Online NEET Classes in Gurugram | Live Biology Classes from Home',
+    description: 'Join online NEET Biology classes from Gurugram (Gurgaon). Live interactive sessions, recorded lectures, doubt clearing. Same AIIMS faculty as offline. Starting ₹45,000/year.',
+  },
 }
 
 const faqs = [

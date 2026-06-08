@@ -49,7 +49,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-teacher-india',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Teacher in India 2026 | Dr. Shekhar C Singh | AIIMS Faculty',
+    description: 'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy — is widely regarded as India',
+  },
 }
 
 const credentials = [

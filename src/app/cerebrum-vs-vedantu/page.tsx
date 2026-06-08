@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-vedantu',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs other multi-subject tutoring platforms NEET Biology | Detailed Comparison',
+    description: 'Cerebrum Biology Academy vs other multi-subject tutoring platforms for NEET Biology — biology-only AIIMS faculty vs multi-subject IIT-trained tutors. Compare batch sizes, faculty depth, fees, and b...',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in Perth, Australia | Online Biology Classes for NRI Students',
+    description: 'NEET coaching for Indian-origin students in Perth — online live classes by AIIMS faculty in AWST evening slots. AUD-anchored pricing. ATAR + NEET dual-prep pathway. NRI quota MBBS guidance.',
+  },
 }
 
 const faqs = [

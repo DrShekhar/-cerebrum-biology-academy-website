@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-success-rate-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Success Rate Gurugram 2026 | Coaching Results Comparison',
+    description: 'Compare NEET success rates of coaching institutes in Gurugram (Gurgaon). Cerebrum: 98% qualification, 15 students 650+. See selection data, topper stats. Call 88264-44334!',
+  },
 }
 
 const quickAnswer = {

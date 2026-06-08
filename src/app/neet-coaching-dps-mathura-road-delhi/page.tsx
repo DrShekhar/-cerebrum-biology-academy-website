@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-mathura-road-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for DPS Mathura Road Students | AIIMS Faculty | Cerebrum',
+    description: 'NEET biology coaching for DPS Mathura Road Class 11–12 students. AIIMS-trained Dr. Shekhar C Singh, small batches of 15–20, NCERT line-by-line, weekly 1:1 doubt slots. 680+ medical college selections.',
+  },
 }
 
 export default function FeederSchoolPage() {

@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-coaching-east-of-kailash-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Coaching in East of Kailash Delhi | NEET & CBSE Tutor',
+    description: 'Best Biology coaching for East of Kailash, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. DPS EOK expertise, GK area students welcome.',
+  },
 }
 
 export default function BiologyCoachingEOKPage() {

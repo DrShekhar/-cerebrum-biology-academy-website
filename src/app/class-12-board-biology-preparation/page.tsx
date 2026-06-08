@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/class-12-board-biology-preparation',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Class 12 Board Biology Preparation | CBSE Exam Coaching',
+    description: 'Specialized Class 12 board Biology preparation. Score 95+. Expert answer writing. Book free demo. Call +91-88264-44334',
+  },
 
   openGraph: { title: 'Class 12 Board Biology Preparation | CBSE Exam Coaching', description: 'Specialized Class 12 board Biology preparation. Score 95+. Expert answer writing. Book free demo. Call +91-88264-44334', type: 'website' },
 }

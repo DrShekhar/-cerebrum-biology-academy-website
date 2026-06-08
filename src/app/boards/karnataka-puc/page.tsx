@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/boards/karnataka-puc`,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Karnataka PUC Biology to NEET',
+    description: 'Expert Karnataka PUC Biology coaching with seamless NEET integration. Master KCET & NEET from Pre-University Course curriculum.',
+  },
 }
 
 export default function KarnatakaPUCPage() {

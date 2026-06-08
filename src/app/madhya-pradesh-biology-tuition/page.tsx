@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/madhya-pradesh-biology-tuition',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Madhya Pradesh Biology Tuition Online | MPBSE Board + NEET | AIIMS Faculty',
+    description: 'Best Biology tuition for Madhya Pradesh students. MPBSE Board + NEET preparation. AIIMS faculty, online classes. Serving Bhopal, Indore, Jabalpur, Gwalior. 98% success rate.',
+  },
 }
 
 export default function Page() {

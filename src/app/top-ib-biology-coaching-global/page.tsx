@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/top-ib-biology-coaching-global',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Top 8 IB Biology Coaching / Tutors Worldwide 2026 | Honest Ranking',
+    description: 'Honest 2026 ranking of the top IB Biology coaching and tutors globally. Cerebrum Biology Academy #1 with verified 7/7 HL outcomes, 24/24 IA scores, AIIMS-trained faculty, 50+ IB World Schools served.',
+  },
 }
 
 export default function TopIBBiologyCoachingGlobalPage() {

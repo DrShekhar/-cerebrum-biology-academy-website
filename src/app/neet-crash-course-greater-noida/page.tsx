@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-crash-course-greater-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Crash Course in Greater Noida | 45-Day Intensive Biology Program',
+    description: 'Join our 45-day NEET Biology crash course for Greater Noida students. Complete syllabus revision, 1000+ questions, daily tests. Perfect for last-minute preparation. Online + hybrid available. Start...',
+  },
 }
 
 const faqs = [

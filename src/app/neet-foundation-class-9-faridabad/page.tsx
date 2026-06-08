@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 9 in Faridabad | Early NEET Preparation',
+    description: 'Start NEET preparation from Class 9 in Faridabad. 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 17 center. Book free demo.',
+  },
 }
 
 const faqs = [

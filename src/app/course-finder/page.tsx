@@ -18,7 +18,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/course-finder',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Course Finder Quiz - Find Your Perfect NEET Biology Course',
+    description: 'Take our smart quiz to find the perfect NEET Biology course based on your class, experience, and study schedule. Get personalized recommendations in 60 seconds.',
+  },
 
   openGraph: { title: 'Course Finder Quiz - Find Your Perfect NEET Biology Course', description: 'Take our smart quiz to find the perfect NEET Biology course based on your class, experience, and study schedule. Get personalized recommendations in 60 seconds.', type: 'website' },
 }

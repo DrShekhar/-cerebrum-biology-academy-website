@@ -49,7 +49,11 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'USABO 6-Month Prep Plan | Month-by-Month Schedule for the Open Exam',
+    description: 'A realistic 6-month USABO preparation plan for US high school students aiming at the February Open Exam. Month-by-month topics, weekly hours, books, past-paper drills, and the pitfalls that derail ...',
+  },
 }
 
 const months = [

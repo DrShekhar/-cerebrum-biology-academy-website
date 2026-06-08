@@ -30,7 +30,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Tuition in Lajpat Nagar | Top Tutors Central Delhi',
+    description: 'Best biology tuition in Lajpat Nagar, Delhi. Experienced tutors for Class 11, 12 & NEET. Near metro station. Call 88264-44334 for free demo class.',
+  },
 }
 
 export const revalidate = 86400

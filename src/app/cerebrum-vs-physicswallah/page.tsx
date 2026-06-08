@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-physicswallah',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs other online-only platforms NEET Biology | Detailed Comparison',
+    description: 'Cerebrum Biology Academy vs other online-only platforms for NEET Biology — small-batch AIIMS faculty vs mass online platform. Compare batch sizes, faculty specialisation, fees, and biology depth. 6...',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

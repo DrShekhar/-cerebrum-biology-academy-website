@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-gamsat-biology-tutor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best GAMSAT Biology Tutor | AIIMS-Trained Section III Specialist',
+    description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum',
+  },
 }
 
 const config: BestVerticalConfig = {

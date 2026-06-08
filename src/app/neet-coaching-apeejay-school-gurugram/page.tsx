@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-apeejay-school-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for Apeejay School Gurugram',
+    description: 'Best NEET coaching for Apeejay School Sector 15 students. Just 10 min drive. Strong CBSE foundation + NEET expertise. AIIMS faculty, 98% success rate. Call 88264-44334!',
+  },
 }
 
 const whyApeejayStudents = [

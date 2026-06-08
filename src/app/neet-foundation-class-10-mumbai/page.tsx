@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Mumbai | Board + NEET Parallel Online',
+    description: 'NEET Foundation Class 10 in Mumbai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board parallel with NEET-pattern pedagogy. ₹35K-95K/year.',
+  },
 }
 
 const faqs = [

@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-surajkund',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Coaching in Surajkund, Faridabad | Expert Classes',
+    description: 'Best NEET biology coaching in Surajkund, Faridabad. Expert AIIMS faculty, 98% success rate, live classes & test series. 550+ students trained. Call 88264-44334.',
+  },
 }
 
 const faqItems = [

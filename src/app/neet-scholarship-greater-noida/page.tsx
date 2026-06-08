@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-scholarship-greater-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Scholarship Greater Noida 2026 | Up to 100% Fee Waiver',
+    description: 'Apply for NEET scholarship for Greater Noida students. Merit-based scholarships up to 100% fee waiver. Online + hybrid classes available. Based on 10th/12th marks or scholarship test. Limited seats...',
+  },
 }
 
 const scholarshipSlabs = [

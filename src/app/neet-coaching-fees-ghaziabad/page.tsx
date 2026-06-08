@@ -39,7 +39,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-fees-ghaziabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Fees in Ghaziabad 2026 | Compare Coaching Fees',
+    description: 'Compare NEET coaching fees in Ghaziabad 2026. Fee comparison of the 2nd-largest national NEET chain Indirapuram, Smart Achievers, Gyanmudra vs Cerebrum Biology Academy. Best value with small batche...',
+  },
 }
 
 const feeComparison = [

@@ -44,7 +44,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'MCAT Biology Tutor Houston | Rice, UT Austin, UTSW',
+    description: 'MCAT Bio/Biochem tutor for Houston pre-meds — Rice, UT Austin, A&M, U of H, Sugar Land, Pearland. Biology specialists, CT evening slots. From $449.',
+  },
 }
 
 const faqs = [

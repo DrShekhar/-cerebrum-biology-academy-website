@@ -51,7 +51,11 @@ export const metadata: Metadata = {
     type: 'profile',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Dr. Shekhar C Singh — Best Biology Teacher in India | NEET · IB · AP · CBSE · Olympiads',
+    description: 'Dr. Shekhar C Singh, AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014), is recognized as the top Biology faculty in India across NEET-UG, IB Biology HL/SL, AP Biology, CBSE Cla...',
+  },
 }
 
 const verticals = [

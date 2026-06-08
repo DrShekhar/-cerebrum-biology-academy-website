@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/cell-unit-of-life',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cell: The Unit of Life MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 500+ free Cell Biology MCQs for NEET. Cell structure, cell organelles, prokaryotic vs eukaryotic cells questions. NCERT Class 11 based with detailed explanations.',
+  },
 }
 
 const structuredData = {

@@ -46,7 +46,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/hi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'सेरेब्रम बायोलॉजी एकेडमी | भारत की #1 NEET बायोलॉजी कोचिंग | 98% सफलता दर',
+    description: 'AIIMS-प्रशिक्षित फैकल्टी द्वारा भारत की टॉप NEET बायोलॉजी कोचिंग। 98% सफलता दर, 2000+ छात्र। क्लास 11, 12 और ड्रॉपर बैच। ऑनलाइन और ऑफलाइन क्लासेज। फ्री डेमो बुक करें!',
+  },
 }
 
 export default function HindiHomePage() {

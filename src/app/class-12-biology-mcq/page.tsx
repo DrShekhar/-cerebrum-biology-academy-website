@@ -15,7 +15,11 @@ export const metadata: Metadata = {
       'Practice 1,600+ free Class 12 Biology MCQs based on NCERT. Topic-wise practice with instant feedback.',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Class 12 Biology MCQ Practice | 1,600+ Free Questions — NCERT Based',
+    description: 'Practice 1,600+ free Class 12 Biology MCQs based on NCERT. Covers Reproduction, Genetics, Biotechnology & Ecology. Board and NEET aligned. Start now!',
+  },
 }
 
 const class12Topics = [

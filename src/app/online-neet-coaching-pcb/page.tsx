@@ -110,7 +110,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Online NEET Coaching for PCB Students — Live Biology Classes Globally · Cerebrum',
+    description: 'Online NEET coaching for PCB-stream students from AIIMS-trained faculty. Live biology classes serving India, UAE, USA, UK, Canada, Saudi, Singapore — your time zone. Biology is 360/720 of NEET; we ...',
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 

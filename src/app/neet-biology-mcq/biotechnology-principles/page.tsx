@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/biotechnology-principles',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biotechnology Principles MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 300+ free Biotechnology: Principles and Processes MCQs for NEET. Recombinant DNA, PCR, Restriction Enzymes, Vectors, and Cloning questions. NCERT Class 12 based with detailed explanations.',
+  },
 }
 
 const structuredData = {

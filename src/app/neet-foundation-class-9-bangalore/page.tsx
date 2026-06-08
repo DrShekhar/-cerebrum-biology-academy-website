@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 9 in Bangalore | AIIMS-Trained Online Live',
+    description: 'NEET Foundation Class 9 in Bangalore at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Karnataka Board + NEET parallel. Koramangala, Indiranagar, Whitefi...',
+  },
 }
 
 const faqs = [

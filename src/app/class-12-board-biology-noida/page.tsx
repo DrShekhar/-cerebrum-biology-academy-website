@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/class-12-board-biology-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Class 12 Board Exam Biology Coaching Noida 2026 | Score 95%+',
+    description: 'Class 12 Board exam Biology coaching in Noida. Score 95%+ in CBSE/ISC Biology. NCERT mastery, previous year papers, practical viva prep. Gaur City, Sector 150. Free demo!',
+  },
 }
 
 const courses = [

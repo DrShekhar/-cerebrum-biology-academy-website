@@ -11,7 +11,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/terms-of-service',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Terms of Service',
+    description: 'Terms and conditions for using Cerebrum Biology Academy services and educational platform.',
+  },
 
   openGraph: { title: 'Terms of Service', description: 'Terms and conditions for using Cerebrum Biology Academy services and educational platform.', type: 'website' },
 }

@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-tutor-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Tutor in Noida 2026 | AIIMS Faculty | Dr. Shekhar',
+    description: 'Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus, 15+ years). 67+ AIIMS selections, 5.0/5 rating. Online & offline. Gaur City, Sector 150. Free demo!',
+  },
 }
 
 const tutorProfile = {

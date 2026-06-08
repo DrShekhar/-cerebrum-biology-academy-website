@@ -24,7 +24,11 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-kaplan-mcat' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs Kaplan MCAT Biology | Specialist vs Generalist',
+    description: 'Cerebrum Biology Academy vs Kaplan for MCAT Bio/Biochem — biology-only AIIMS specialist vs full-MCAT generalist. Compare pricing, faculty depth, Bio section results.',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

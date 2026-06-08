@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-mg-road-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching MG Road Gurugram | 15 Min Drive',
+    description: 'Best NEET coaching near MG Road Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. Metro accessible via Yellow Line. AIIMS faculty, 98% success rate. Call 88264-44334!',
+  },
 }
 
 const nearbyAreas = [

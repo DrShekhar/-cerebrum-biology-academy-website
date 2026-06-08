@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'DAT Biology Pricing | Bio Section Packages | Cerebrum',
+    description: 'DAT Biology section tutoring pricing — $399 Self-Paced, $799 Small-Batch, $1,249 1:1 Senior Faculty. Compare vs DAT Bootcamp ($595) and Kaplan DAT ($1,599). Biology specialist.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent('Hi — I want to discuss DAT Biology pricing and which tier fits my goals. Please share programme details.')

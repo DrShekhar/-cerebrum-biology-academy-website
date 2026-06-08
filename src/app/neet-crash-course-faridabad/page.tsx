@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-crash-course-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Crash Course in Faridabad | 45-Day Intensive Biology Program',
+    description: 'Join our 45-day NEET Biology crash course in Faridabad. Complete syllabus revision, 1000+ questions, daily tests. Perfect for last-minute preparation. Starting Rs 25,000.',
+  },
 }
 
 const faqs = [

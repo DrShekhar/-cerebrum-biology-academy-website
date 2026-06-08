@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-class-11',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology for Class 11 | Foundation Course Delhi NCR',
+    description: 'Best Class 11 NEET Biology coaching in Delhi NCR. Build strong foundation with expert faculty. Book free demo. Call +91-88264-44334',
+  },
 
   openGraph: { title: 'NEET Biology for Class 11 | Foundation Course Delhi NCR', description: 'Best Class 11 NEET Biology coaching in Delhi NCR. Build strong foundation with expert faculty. Book free demo. Call +91-88264-44334', type: 'website' },
 }

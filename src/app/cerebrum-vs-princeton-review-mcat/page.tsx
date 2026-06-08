@@ -23,7 +23,11 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-princeton-review-mcat' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs Princeton Review MCAT Biology | Comparison',
+    description: 'Cerebrum Biology Academy vs Princeton Review for MCAT Bio/Biochem — biology-only specialist vs full-MCAT generalist. Compare pricing, faculty, Bio section depth.',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

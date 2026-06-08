@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'First Aid Step 1 Biology Tutor | Chapter-by-Chapter Mechanism Walkthroughs',
+    description: 'First Aid for the USMLE Step 1 chapter-by-chapter biology walkthroughs from AIIMS-trained specialists. Mechanism pedagogy on top of First Aid memorisation — the application layer Step 1 vignettes r...',
+  },
 }
 
 const faqs = [

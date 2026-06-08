@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/testimonials/sadhna-sirin-neet-2023-topper',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Sadhna Sirin - Delhi NCR NEET 2023 Topper',
+    description: 'Watch Sadhna Sirin share her NEET 2023 journey, scoring 695/720 with Cerebrum Biology Academy. Delhi-NCR student testimonial.',
+  },
 }
 
 export default function SadhnaSirinPage() {

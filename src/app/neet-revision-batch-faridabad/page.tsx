@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-revision-batch-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Revision Batch in Faridabad | Final 3-Month Revision Program',
+    description: 'Join our intensive 3-month NEET Biology revision batch in Faridabad. Complete NCERT revision, high-yield topics focus, 2000+ MCQs, and mock tests. Starting ₹40,000.',
+  },
 }
 
 const faqs = [

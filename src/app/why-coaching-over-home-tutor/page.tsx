@@ -39,7 +39,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/why-coaching-over-home-tutor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Why Coaching Institute Beats Home Tutor for Biology | NEET + Board 2026',
+    description: 'Home tutor vs coaching for biology — honest comparison. Why 90% of NEET toppers choose coaching over private tutors. Small batch coaching from ₹4K/month. Call 88264-44334.',
+  },
 }
 
 const tutorProblems = [

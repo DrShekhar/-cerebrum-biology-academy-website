@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/human-health-disease',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Human Health and Disease MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 500+ free Human Health and Disease MCQs for NEET. Immunity, Infectious Diseases, AIDS, Cancer, and Drugs & Alcohol Abuse questions. NCERT-based with explanations.',
+  },
 }
 
 const structuredData = {

@@ -43,7 +43,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in Bay Area, USA | Online for Fremont, Sunnyvale, Cupertino, San Jose',
+    description: 'NEET coaching for Indian-American students across the Bay Area — Fremont, Sunnyvale, Cupertino, San Jose, Palo Alto, Mountain View. Online live classes by AIIMS faculty, PST evening batches, AP Bio...',
+  },
 }
 
 const subAreas = [

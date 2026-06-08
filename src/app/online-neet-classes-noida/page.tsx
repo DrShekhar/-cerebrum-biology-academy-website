@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Online NEET Classes for Noida Students | Live & Hybrid Mode',
+    description: 'Online NEET Biology classes for Noida & Greater Noida students. Live interactive sessions from home. Hybrid mode with weekend offline at South Extension. 1200+ students. Call 88264-44334!',
+  },
 }
 
 const travelTimes = [

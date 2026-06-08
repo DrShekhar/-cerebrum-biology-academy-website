@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/ncert-biology-coaching-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NCERT Biology Coaching in Noida 2026 | Class 11 & 12',
+    description: 'NCERT Biology coaching for Class 11 & 12 in Noida. Complete NCERT coverage for NEET + Boards. AIIMS faculty, Rs 48,000-98,000/year. Gaur City, Sector 150.',
+  },
 }
 
 const coachingPlans = [

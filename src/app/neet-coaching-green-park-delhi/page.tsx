@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-green-park-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in Green Park Delhi | Medical Entrance Biology',
+    description: 'Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Quality matching IIT area standards.',
+  },
 }
 
 const faqs = [

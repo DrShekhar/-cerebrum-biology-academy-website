@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-vega-school-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for Vega School Gurugram',
+    description: 'Best NEET coaching for Vega Schools students. Progressive education to NEET transition. Just 15 min from campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
+  },
 }
 
 const whyVegaStudents = [

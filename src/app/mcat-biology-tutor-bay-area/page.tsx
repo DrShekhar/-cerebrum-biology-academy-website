@@ -43,7 +43,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'MCAT Biology Tutor Bay Area | Berkeley, Stanford, UCSF',
+    description: 'MCAT Bio/Biochem tutor for SF Bay Area pre-meds — UC Berkeley, Stanford, UCSF, Davis, San Jose State. Biology specialists, PT evening slots. From $449.',
+  },
 }
 
 const faqs = [

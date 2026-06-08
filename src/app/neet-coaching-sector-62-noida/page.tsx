@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-sector-62-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in Sector 62 Noida | Best Biology Classes Near You',
+    description: 'Top-rated NEET biology coaching in Sector 62, Noida. Expert AIIMS faculty, 98% success rate, live classes & test series. Join 480+ successful students. Call 88264-44334.',
+  },
 }
 
 const faqItems = [

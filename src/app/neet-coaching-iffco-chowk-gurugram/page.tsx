@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-iffco-chowk-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching IFFCO Chowk Gurugram | 12 Min Drive',
+    description: 'Best NEET coaching near IFFCO Chowk Gurugram (Gurgaon). Just 12 min drive to M2K Sector 51. Metro connected via Yellow Line. AIIMS faculty, 98% success rate. Call 88264-44334!',
+  },
 }
 
 const nearbyAreas = [

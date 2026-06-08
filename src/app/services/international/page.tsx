@@ -35,7 +35,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/services/international',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'International NEET Biology Programs | Global Medical Education | Cerebrum Biology Academy',
+    description: 'Comprehensive NEET Biology coaching for international students and Indians abroad. IGCSE, IB, AP Biology support, global university prep, 24/7 timezone support. Starting $599.',
+  },
 
   openGraph: { title: 'International NEET Biology Programs | Global Medical Education | Cerebrum Biology Academy', description: 'Comprehensive NEET Biology coaching for international students and Indians abroad. IGCSE, IB, AP Biology support, global university prep, 24/7 timezone support. Starting $599.', type: 'website' },
 }

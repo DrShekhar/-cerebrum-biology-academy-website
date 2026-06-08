@@ -12,7 +12,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Foundation Class 10 Kozhikode', url: PAGE_URL, locale: 'en_IN', type: 'website' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Kozhikode | AIIMS-Trained Online Live',
+    description: 'NEET Foundation Class 10 in Kozhikode — AIIMS-trained faculty, online live. Serving Beach Road, Palayam, Mavoor Road, Thondayad, Kunnamangalam. From Rs 35,000/year.',
+  },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — Class 10 student in Kozhikode, want NEET Foundation details.")
 const faqs = [

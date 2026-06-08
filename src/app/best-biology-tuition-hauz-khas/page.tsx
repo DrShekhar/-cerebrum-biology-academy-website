@@ -30,7 +30,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Tuition in Hauz Khas | Expert Tutors South Delhi',
+    description: 'Best biology tuition in Hauz Khas, South Delhi. Expert tutors near IIT Delhi & SDA. Class 11, 12 & NEET biology preparation. Call 88264-44334 for enrollment.',
+  },
 }
 
 export const revalidate = 86400

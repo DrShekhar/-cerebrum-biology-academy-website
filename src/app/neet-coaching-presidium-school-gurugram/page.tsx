@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-presidium-school-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for Presidium School Gurugram',
+    description: 'Best NEET coaching for Presidium School Gurugram (Gurgaon) students. Multiple campuses covered - Sector 49, 57. Just 10-15 min drive. AIIMS faculty, 98% success. Call 88264-44334!',
+  },
 }
 
 const campusDistances = [

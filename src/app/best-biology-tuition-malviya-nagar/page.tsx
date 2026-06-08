@@ -30,7 +30,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Tuition in Malviya Nagar | Affordable Tutors Delhi',
+    description: 'Best biology tuition in Malviya Nagar, South Delhi. Affordable & quality tutors for Class 11, 12 & NEET. Shivalik area. Call 88264-44334 for enrollment.',
+  },
 }
 
 export const revalidate = 86400

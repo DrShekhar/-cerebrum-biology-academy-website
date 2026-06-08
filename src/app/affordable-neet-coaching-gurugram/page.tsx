@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/affordable-neet-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Affordable NEET Coaching in Gurugram | Budget-Friendly Biology Preparation',
+    description: 'Best affordable NEET coaching in Gurugram (Gurgaon) starting from ₹45,000/year. Quality Biology coaching with AIIMS faculty at 30-40% lower fees than the largest national NEET chain, the 2nd-larges...',
+  },
 }
 
 const faqs = [

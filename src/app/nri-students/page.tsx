@@ -19,7 +19,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/nri-students',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for NRI Students | 14 Countries | Online Classes',
+    description: 'Best NEET Biology coaching for NRI students in UAE, Saudi Arabia, Kuwait, Singapore, Qatar, Oman, Malaysia, Nepal & more. AIIMS faculty, flexible timings, NEET exam centers abroad. 98% success rate.',
+  },
 }
 
 const organizationSchema = {

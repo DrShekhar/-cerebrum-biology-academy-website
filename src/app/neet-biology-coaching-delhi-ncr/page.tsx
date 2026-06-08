@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Coaching in Delhi NCR | Top Institute 2026',
+    description: 'Best NEET Biology coaching in Delhi NCR. Expert faculty, small batches, 98% results. Book free demo class at South Extension. Call +91-88264-44334',
+  },
 }
 
 const usps: USP[] = [

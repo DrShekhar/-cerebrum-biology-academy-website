@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/1-year-neet-course-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: '1 Year NEET Course Noida 2026 | Class 12 + Dropper',
+    description: 'Join 1-year NEET course in Noida for Class 12 students & droppers. Complete syllabus in 12 months. Sector 62. Intensive coaching. Call 99536-43938!',
+  },
 }
 
 const coursePhases = [

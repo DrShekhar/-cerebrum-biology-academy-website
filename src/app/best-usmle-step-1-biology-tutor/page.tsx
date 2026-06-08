@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-usmle-step-1-biology-tutor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best USMLE Step 1 Biology Tutor | AIIMS-Trained IMG Specialist',
+    description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum',
+  },
 }
 
 const config: BestVerticalConfig = {

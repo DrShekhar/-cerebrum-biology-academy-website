@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/which-neet-coaching-is-best-in-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Which NEET Coaching is Best in Gurugram? | 2026 Honest Comparison',
+    description: 'Looking for the best NEET coaching in Gurugram (Gurgaon)? Compare the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms & Cerebrum on fees, batch size, r...',
+  },
 }
 
 const coachingComparison = [

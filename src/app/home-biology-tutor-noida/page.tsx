@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/home-biology-tutor-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Home Biology Tutor in Noida 2026 | Online Home Tuition | Rs 45,000/year',
+    description: 'Home Biology tutor in Noida. Learn from home via online classes. AIIMS faculty, Class 9-12 & NEET. Rs 45,000/year. Gaur City, Sector 150, Greater Noida. Free demo!',
+  },
 }
 
 const homeTuitionModes = [

@@ -35,7 +35,11 @@ export const metadata: Metadata = {
     },
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'IBO Preparation in Gurugram | International Biology Olympiad Coaching',
+    description: 'Expert IBO preparation in Gurugram (Gurgaon) for International Biology Olympiad. Advanced training for INBO qualifiers, practical skills, research paper analysis at Sector 51 center.',
+  },
 }
 
 const faqs = [

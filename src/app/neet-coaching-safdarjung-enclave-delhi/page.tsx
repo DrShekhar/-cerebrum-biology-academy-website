@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-safdarjung-enclave-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in Safdarjung Enclave Delhi | Medical Entrance Biology',
+    description: 'Best NEET coaching for Safdarjung Enclave, Delhi students near AIIMS. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Join today.',
+  },
 }
 
 const faqs = [

@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/re-neet-2026-cerebrum-vs-aakash-vs-pw`,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'RE-NEET 2026 Crash Course: Cerebrum vs the 2nd-largest national NEET chain vs the largest national NEET chain vs other online-only platforms',
+    description: 'Honest comparison of RE-NEET 2026 crash courses — Cerebrum (biology-only AIIMS), the 2nd-largest national NEET chain, the largest national NEET chain, other online-only platforms. Batch size, biolo...',
+  },
 }
 
 const table = [

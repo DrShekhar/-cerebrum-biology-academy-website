@@ -12,7 +12,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Foundation Class 10 Thrissur', url: PAGE_URL, locale: 'en_IN', type: 'website' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Thrissur | AIIMS-Trained Online Live',
+    description: 'NEET Foundation Class 10 in Thrissur — AIIMS-trained faculty, online live. Serving Round, Swaraj, Ayyanthole, Punkunnam, Ollur, Wadakkanchery. From Rs 35,000/year.',
+  },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — Class 10 student in Thrissur, want NEET Foundation details.")
 const faqs = [

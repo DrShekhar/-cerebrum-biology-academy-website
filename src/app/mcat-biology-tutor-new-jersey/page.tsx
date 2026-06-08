@@ -47,7 +47,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'MCAT Biology Tutor New Jersey | Princeton, Rutgers, Edison',
+    description: 'MCAT Bio/Biochem tutor for New Jersey pre-meds — Princeton, Rutgers, NJIT, Edison, Jersey City. AIIMS-trained biology specialists, ET evening slots. From $449.',
+  },
 }
 
 const faqs = [

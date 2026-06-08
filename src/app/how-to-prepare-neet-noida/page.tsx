@@ -50,7 +50,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/how-to-prepare-neet-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'How to Prepare for NEET in Noida | Step-by-Step Guide 2026',
+    description: 'Complete guide on how to prepare for NEET from Noida. 5-step strategy by AIIMS faculty Dr. Shekhar C Singh. Score 650+ with our proven methodology. Free demo class available.',
+  },
 }
 
 const preparationSteps = [

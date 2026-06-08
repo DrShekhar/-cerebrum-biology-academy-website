@@ -27,7 +27,11 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: `${BASE_URL}/neet-coaching-west-africa` },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for West Africa Students | Nigeria, Ghana',
+    description: 'Best NEET Biology coaching for Indian students in West Africa. Lagos, Accra, Abuja. AIIMS faculty, WAT timezone classes, NRI quota guidance. 98% success rate.',
+  },
 }
 
 const faqs = [

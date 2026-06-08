@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/nri-neet-fees-documents',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NRI NEET Fees & Documents | NRI Quota MBBS Application Checklist',
+    description: 'Complete NRI NEET fees + documents checklist — NEET-UG registration fees for overseas candidates, NRI quota MBBS fee structure ($18K–$60K/year), parent employment certificate, sponsor affidavit, NR...',
+  },
 }
 
 const config: BestVerticalConfig = {

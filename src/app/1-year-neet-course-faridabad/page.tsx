@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/1-year-neet-course-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: '1 Year NEET Course Faridabad 2026 | Class 12 + Dropper',
+    description: 'Join 1-year NEET course in Faridabad for Class 12 students & droppers. Complete syllabus in 12 months. Sector 17. Intensive coaching. Call 88264-44334!',
+  },
 }
 
 const coursePhases = [

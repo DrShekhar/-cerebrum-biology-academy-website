@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/west-bengal-biology-tuition',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'West Bengal Biology Tuition Online | WBCHSE Board + NEET | AIIMS Faculty',
+    description: 'Best Biology tuition for West Bengal students. WBCHSE Board + NEET preparation. AIIMS faculty, online classes. Serving Kolkata, Siliguri, Durgapur, Asansol. 98% success rate.',
+  },
 }
 
 export default function Page() {

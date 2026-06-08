@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ats-pristine-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for ATS Pristine Sector 150 Noida | Online Classes',
+    description: 'NEET Biology coaching for ATS Pristine, Sector 150 Noida students. Online classes from home + hybrid mode available. 45+ students enrolled. AIIMS faculty. Call 88264-44334!',
+  },
 }
 
 const faqs = [

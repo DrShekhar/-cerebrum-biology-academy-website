@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-notes',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Free NEET Biology Notes | Comprehensive Study Material',
+    description: 'Access free comprehensive NEET biology notes covering all Class 11 and 12 topics. Expert-written study material by Dr. Shekhar C Singh to help you ace NEET Biology.',
+  },
 }
 
 export default async function BiologyNotesIndexPage() {

@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/narayana-alternative-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best a leading national educational institution Alternative in Gurugram 2026 | Small Batch Personal Attention',
+    description: 'Looking for a leading national educational institution alternative in Gurugram (Gurgaon)? Cerebrum: 25-student batches vs a leading national educational institution',
+  },
 }
 
 const comparisonData = [

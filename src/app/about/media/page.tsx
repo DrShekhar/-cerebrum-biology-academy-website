@@ -15,7 +15,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/about/media',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Media Coverage & Press',
+    description: 'Read about Cerebrum Biology Academy in the news. Media coverage, press releases, and recognition in education sector.',
+  },
 
   openGraph: { title: 'Media Coverage & Press', description: 'Read about Cerebrum Biology Academy in the news. Media coverage, press releases, and recognition in education sector.', type: 'website' },
 }

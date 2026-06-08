@@ -22,7 +22,11 @@ export const metadata: Metadata = {
     url: PAGE_URL, locale: 'en_GB', type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'A-Level Biology Tutor London | AQA, Edexcel, OCR | Cerebrum',
+    description: 'A-Level Biology tutoring for London sixth-formers — AQA, Edexcel (Pearson), OCR, CIE. AIIMS-trained biology specialists, GMT evening sessions. A*/Grade 9 targeting for UCAS Medicine.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I'm in London and looking for A-Level Biology tutoring (AQA/Edexcel/OCR). Please share programme details, GMT evening slots, and pricing.")

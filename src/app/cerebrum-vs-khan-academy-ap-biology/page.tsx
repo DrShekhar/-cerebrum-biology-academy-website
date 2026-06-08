@@ -24,7 +24,11 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-khan-academy-ap-biology' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs Khan Academy AP Biology | Comparison',
+    description: 'Cerebrum Biology Academy vs Khan Academy for AP Biology — paid specialist coaching vs free video library. Compare FRQ prep, faculty depth, score-5 outcomes.',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

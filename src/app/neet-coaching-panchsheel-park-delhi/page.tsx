@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-panchsheel-park-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in Panchsheel Park Delhi | Medical Entrance Biology',
+    description: 'Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 67+ AIIMS selections. Join today.',
+  },
 }
 
 const faqs = [

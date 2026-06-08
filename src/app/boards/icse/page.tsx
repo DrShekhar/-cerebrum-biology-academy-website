@@ -22,7 +22,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/boards/icse',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'ICSE Biology Coaching | Detailed Curriculum | Medical Entrance | Cerebrum Biology Academy',
+    description: 'Expert ICSE Biology coaching with comprehensive curriculum coverage. In-depth conceptual learning, practical focus, and medical entrance preparation.',
+  },
 
   openGraph: { title: 'ICSE Biology Coaching | Detailed Curriculum | Medical Entrance | Cerebrum Biology Academy', description: 'Expert ICSE Biology coaching with comprehensive curriculum coverage. In-depth conceptual learning, practical focus, and medical entrance preparation.', type: 'website' },
 }

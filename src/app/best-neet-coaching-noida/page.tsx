@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-neet-coaching-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Coaching in Noida 2026 | Top Institutes Compared',
+    description: 'Compare the best NEET coaching institutes in Noida for 2026. Fees, faculty, success rates, batch sizes compared. Find which coaching is right for you.',
+  },
 }
 
 const faqs = [

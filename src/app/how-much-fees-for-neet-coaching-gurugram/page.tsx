@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/how-much-fees-for-neet-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Fees in Gurugram 2026 | ₹45K-₹3L Comparison',
+    description: 'NEET coaching fees in Gurugram (Gurgaon) range from ₹45,000 to ₹3,00,000. Compare the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees. What',
+  },
 }
 
 const feeComparison = [

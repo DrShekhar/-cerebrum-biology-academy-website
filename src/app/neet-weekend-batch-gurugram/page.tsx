@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-weekend-batch-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Weekend Batch Gurugram 2026 | Saturday-Sunday Classes',
+    description: 'Join NEET weekend batch in Gurugram (Gurgaon) - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. M2K Sector 51. Call 88264-44334!',
+  },
 }
 
 const schedule = [

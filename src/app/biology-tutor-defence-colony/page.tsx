@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-defence-colony',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Tutor in Defence Colony Delhi | NEET & CBSE Coaching',
+    description: 'Best Biology tutor for Defence Colony, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. Transfer-friendly for defence families. Expert NEET & CBSE Bio...',
+  },
 }
 
 export default function BiologyTutorDefenceColonyPage() {

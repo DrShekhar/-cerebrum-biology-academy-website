@@ -13,7 +13,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Foundation Class 10 Kota', url: PAGE_URL, locale: 'en_IN', type: 'website' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Kota | AIIMS-Trained Online Live',
+    description: 'NEET Foundation Class 10 in Kota — AIIMS-trained faculty, online live. CBSE/ICSE/State Board + NEET parallel. Serving Kota coaching corridor. From Rs 35,000/year.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I want to enroll my child (Class 10) in NEET Foundation from Kota. Please share batch details.")

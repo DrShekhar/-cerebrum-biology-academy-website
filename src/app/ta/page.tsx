@@ -44,7 +44,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/ta',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'செரிப்ரம் பயாலஜி அகாடமி | இந்தியாவின் #1 NEET பயாலஜி கோச்சிங் | 98% வெற்றி விகிதம்',
+    description: 'AIIMS பயிற்சி பெற்ற ஆசிரியர்களால் இந்தியாவின் சிறந்த NEET பயாலஜி கோச்சிங். 98% வெற்றி விகிதம், 2000+ மாணவர்கள். 11, 12 வகுப்பு மற்றும் ட்ராப்பர் பேட்ச். ஆன்லைன் மற்றும் ஆஃப்லைன் வகுப்புகள். இலவச டெ...',
+  },
 }
 
 export default function TamilHomePage() {

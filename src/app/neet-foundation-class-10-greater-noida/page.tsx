@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-greater-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Greater Noida | 2-Year Head Start',
+    description: 'NEET Foundation for Class 10 students in Greater Noida. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty, online + hybrid classes available.',
+  },
 }
 
 const faqs = [

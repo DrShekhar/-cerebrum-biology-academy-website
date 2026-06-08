@@ -26,7 +26,11 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-gurugram' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Gurugram | 2-Year Head Start',
+    description: 'NEET Foundation for Class 10 students in Gurugram (Gurgaon). 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 51 center.',
+  },
 }
 
 const faqs = [

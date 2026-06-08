@@ -29,7 +29,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Find Your Nearest Cerebrum Biology Academy Center - 6 Locations',
+    description: 'Locate Cerebrum Biology Academy centers in Delhi NCR. 6 offline centers in Rohini, Gurugram, South Extension, Green Park, Faridabad, Noida. Visit us or book a demo class.',
+  },
 }
 
 const centers = [

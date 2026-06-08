@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-career-point',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs other Kota-origin chains NEET Biology | Detailed Comparison',
+    description: 'Cerebrum Biology Academy vs other Kota-origin chains for NEET Biology — biology-only AIIMS faculty vs Kota-based generalist coaching. Compare batch sizes, faculty depth, fees and biology results. 6...',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

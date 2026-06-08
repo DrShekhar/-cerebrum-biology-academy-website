@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/online-biology-tuition-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Online Biology Tuition in Noida 2026 | Live Classes | Rs 48,000/year',
+    description: 'Online Biology tuition for Noida students. Live classes from home. Class 9-12 & NEET. AIIMS faculty, Rs 48,000-98,000/year. Gaur City, Sector 150, Greater Noida. Free demo!',
+  },
 }
 
 const onlineCourses = [

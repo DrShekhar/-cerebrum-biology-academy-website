@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-weekend-batch-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Weekend Batch Faridabad 2026 | Saturday-Sunday Classes',
+    description: 'Join NEET weekend batch in Faridabad - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. Sector 17. Call 88264-44334!',
+  },
 }
 
 const schedule = [

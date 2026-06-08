@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: articleUrl,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Is NEET Biology Coaching Necessary? Self-Study vs Coaching Analysis',
+    description: "Honest analysis of self-study vs coaching for NEET Biology. When coaching helps, when it doesn't, and what to look for.",
+  },
 };
 
 export default function IsCoachingNecessaryForNEETBiology() {

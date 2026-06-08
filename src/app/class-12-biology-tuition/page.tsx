@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/class-12-biology-tuition',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Class 12 Biology Tuition Delhi | CBSE Board Coaching',
+    description: 'Best Class 12 Biology tuition in Delhi NCR. Expert CBSE coaching. Score 95+. Practicals covered. Book free demo. Call +91-88264-44334',
+  },
 
   openGraph: { title: 'Class 12 Biology Tuition Delhi | CBSE Board Coaching', description: 'Best Class 12 Biology tuition in Delhi NCR. Expert CBSE coaching. Score 95+. Practicals covered. Book free demo. Call +91-88264-44334', type: 'website' },
 }

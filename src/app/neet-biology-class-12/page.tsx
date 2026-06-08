@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-class-12',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology for Class 12 | Advanced Preparation Delhi NCR',
+    description: 'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2026. Book free demo. Call +91-88264-44334',
+  },
 
   openGraph: { title: 'NEET Biology for Class 12 | Advanced Preparation Delhi NCR', description: 'Class 12 NEET Biology coaching in Delhi NCR. Master advanced topics, ace NEET 2026. Book free demo. Call +91-88264-44334', type: 'website' },
 }

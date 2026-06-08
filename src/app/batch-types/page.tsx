@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Batch Types - Regular, Weekend, Crash Course',
+    description: 'Choose the perfect NEET Biology batch for your preparation. Regular batch, weekend batch, crash course, or online live classes at Cerebrum Biology Academy.',
+  },
 }
 
 interface BatchCard {

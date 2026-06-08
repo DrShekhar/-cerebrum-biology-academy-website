@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/narayana-alternative-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best a leading national educational institution Alternative in Noida 2026 | Small Batch Personal Attention',
+    description: 'Looking for a leading national educational institution alternative in Noida? Cerebrum: 25-student batches vs a leading national educational institution',
+  },
 }
 
 const comparisonData = [

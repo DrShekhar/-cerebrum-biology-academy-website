@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/parents-guide-neet-coaching-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Parents Guide to NEET Coaching in Faridabad 2026 | What to Know',
+    description: 'Complete parents guide to NEET coaching in Faridabad. How to choose an institute, red flags to avoid, fee benchmarks, mental-health tips, and how to support your child. WhatsApp 88264-44334.',
+  },
 }
 
 export default function ParentsGuideFaridabadPage() {

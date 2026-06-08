@@ -36,7 +36,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-topper-interview-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Topper Interviews Gurugram | Success Stories',
+    description: 'Read inspiring NEET topper interviews from Cerebrum Biology Academy Gurugram (Gurgaon). Learn strategies from students who scored 650+. Real stories, real success. Call 88264-44334!',
+  },
 }
 
 const topperInterviews = [

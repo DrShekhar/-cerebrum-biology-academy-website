@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-weekend-batch-ghaziabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Weekend Batch Ghaziabad 2026 | Saturday-Sunday Classes',
+    description: 'Join NEET weekend batch for Ghaziabad students - Saturday & Sunday intensive classes. Complete syllabus coverage. Sector 62 Noida center, Blue Line Metro accessible. Call 99536-43938!',
+  },
 }
 
 const schedule = [

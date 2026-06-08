@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Free NEET Demo Class Gurugram | Book Now',
+    description: 'Book your FREE NEET Biology demo class in Gurugram (Gurgaon). Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 88264-44334!',
+  },
 }
 
 const demoIncludes = [

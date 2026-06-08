@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-study-material',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Study Material | Notes, MCQs, Practice Papers',
+    description: 'Comprehensive NEET Biology study material. Updated notes, 10,000+ MCQs, previous year papers. Download free sample. Call +91-88264-44334',
+  },
 
   openGraph: { title: 'NEET Biology Study Material | Notes, MCQs, Practice Papers', description: 'Comprehensive NEET Biology study material. Updated notes, 10,000+ MCQs, previous year papers. Download free sample. Call +91-88264-44334', type: 'website' },
 }

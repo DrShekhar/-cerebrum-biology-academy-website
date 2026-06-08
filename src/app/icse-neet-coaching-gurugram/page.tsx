@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/icse-neet-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'ICSE Board NEET Coaching in Gurugram | Biology for ICSE Students',
+    description: 'Specialized NEET Biology coaching for ICSE board students in Gurugram (Gurgaon). Bridge ICSE to NCERT syllabus, conceptual depth advantage. Perfect for Pathways, Lancers students.',
+  },
 }
 
 const faqs = [

@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/re-neet-2026-hyderabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'RE-NEET 2026 Coaching in Hyderabad | Online Biology Crash Course',
+    description: 'RE-NEET 2026 coaching for Hyderabad students (Telangana + AP) after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash — alongside your other South-Indian chains / a leading nati...',
+  },
 }
 
 export default function ReNEETHyderabadPage() {

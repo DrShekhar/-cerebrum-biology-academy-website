@@ -51,7 +51,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching in UAE | NRI Biology Coaching | Cerebrum Biology Academy',
+    description: 'NEET coaching for NRI students across the UAE — Dubai, Abu Dhabi, Sharjah, Ajman, Al Ain. Online live classes in GST timezone by AIIMS-trained faculty. Dubai/Sharjah/Abu Dhabi NEET exam centres. AE...',
+  },
 }
 
 const cityLinks = [

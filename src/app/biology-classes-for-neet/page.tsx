@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-for-neet',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Classes for NEET | Small-Batch AIIMS Faculty | Cerebrum',
+    description: 'Biology classes for NEET — small-batch (15–20 students) live classroom instruction by AIIMS-trained faculty. Dr. Shekhar C Singh + senior team. NCERT-anchored, PYQ-driven, weekly mocks. 680+ medica...',
+  },
 }
 
 const config: BestVerticalConfig = {

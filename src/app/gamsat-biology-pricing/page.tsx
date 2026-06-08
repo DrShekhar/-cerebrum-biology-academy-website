@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'GAMSAT Section III Pricing | Biology Coaching Packages | Cerebrum',
+    description: 'GAMSAT Section III biology pricing — £349/€399/A$539 Self-Paced to £1,099/€1,249/A$1,599 1:1. UK, Ireland, Australia. Biology-section specialist for graduate medicine.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent('Hi — I want to discuss GAMSAT Biology pricing and which tier fits my goals. Please share programme details.')

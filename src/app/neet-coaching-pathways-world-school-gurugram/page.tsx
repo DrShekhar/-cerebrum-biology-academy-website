@@ -35,7 +35,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-pathways-world-school-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for Pathways World School Gurugram',
+    description: 'Best NEET coaching for Pathways World School Aravali students. Just 18 min from campus. IB/IGCSE to NEET transition support. AIIMS faculty, 98% success. Call 88264-44334!',
+  },
 }
 
 const whyPathwaysStudents = [

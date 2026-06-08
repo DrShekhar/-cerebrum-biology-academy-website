@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'CBSE Biology Coaching | Class 11 & 12 | Board + NEET Dual Preparation',
+    description: 'Best CBSE Biology coaching for Class 11 and 12. NCERT-focused teaching, Board exam + NEET dual preparation. AIIMS faculty, small batches, 98% success. Online + offline.',
+  },
 }
 
 export default function Page() {

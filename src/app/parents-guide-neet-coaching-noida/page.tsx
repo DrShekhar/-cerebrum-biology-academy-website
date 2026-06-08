@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/parents-guide-neet-coaching-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Parents Guide to NEET Coaching in Noida 2026 | What to Know',
+    description: 'Complete parents guide to NEET coaching in Noida. How to choose an institute, red flags to avoid, fee benchmarks, mental-health tips, and how to support your child. WhatsApp 88264-44334.',
+  },
 }
 
 export default function ParentsGuideNoidaPage() {

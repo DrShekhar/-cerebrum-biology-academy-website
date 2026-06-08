@@ -34,7 +34,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/when-to-start-neet-preparation-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'When to Start NEET Preparation? Best Time Guide 2025 | Gurugram',
+    description: 'When should you start NEET preparation? Expert guide on ideal timing - Class 9, 10, 11, or 12. Month-wise strategy and what to do if starting late. Call 88264-44334!',
+  },
 }
 
 const startingPoints = [

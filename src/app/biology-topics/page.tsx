@@ -19,7 +19,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/biology-topics',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Topics for NEET | Complete Study Guide',
+    description: 'Comprehensive biology topics for NEET preparation. Master Zoology, Botany, Human Physiology, Genetics, Ecology, Cell Biology, and more with expert guidance from AIIMS faculty.',
+  },
 }
 
 const biologyTopics = [

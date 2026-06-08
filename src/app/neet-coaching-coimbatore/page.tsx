@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     url: PAGE_URL, locale: 'en_IN', type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Coimbatore | Best Biology Coaching | Cerebrum',
+    description: 'Best NEET Biology coaching for Coimbatore students — AIIMS-trained faculty, online live batches. Serving RS Puram, Peelamedu, Saibaba Colony, Singanallur. From ₹48,000/yr.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I'm in Coimbatore and want to book a FREE NEET Biology demo class with Cerebrum. Please share available timings.")

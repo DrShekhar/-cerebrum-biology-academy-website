@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/what-to-do-after-neet-2026-cancellation',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'What to Do After NEET 2026 Cancellation | Student & Parent Guide',
+    description: 'NEET-UG 2026 was cancelled on 12 May 2026. What to do next — refund timeline, RE-NEET registration, study plan for the 6–8 week window, mental health helplines (Tele-MANAS 14416, iCall, Vandrevala)...',
+  },
 }
 
 const config: BestVerticalConfig = {

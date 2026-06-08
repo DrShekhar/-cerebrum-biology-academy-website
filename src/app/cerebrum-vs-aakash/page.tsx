@@ -19,7 +19,11 @@ export const metadata: Metadata = {
     type: 'article',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs the 2nd-largest national NEET chain: Which is Better for NEET Biology 2026?',
+    description: 'Detailed comparison of Cerebrum Biology Academy vs SKY Coaching (2nd-largest national NEET chain) for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 98%...',
+  },
 }
 
 interface FAQItem {

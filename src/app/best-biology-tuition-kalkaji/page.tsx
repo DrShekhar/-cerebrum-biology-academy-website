@@ -30,7 +30,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Tuition in Kalkaji | Expert Tutors Near Nehru Place',
+    description: 'Best biology tuition in Kalkaji, South Delhi. Expert tutors near Nehru Place & Lotus Temple. Class 11, 12 & NEET prep. Call 88264-44334 for enrollment.',
+  },
 }
 
 export const revalidate = 86400

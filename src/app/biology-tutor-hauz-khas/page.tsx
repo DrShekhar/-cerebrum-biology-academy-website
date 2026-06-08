@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-hauz-khas',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Tutor in Hauz Khas Delhi | NEET & CBSE Coaching',
+    description: 'Best Biology tutor for Hauz Khas, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. Near IIT Delhi, Green Park, SDA students welcome.',
+  },
 }
 
 export default function BiologyTutorHauzKhasPage() {

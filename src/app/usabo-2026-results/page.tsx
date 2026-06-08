@@ -45,7 +45,11 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'USABO 2026 Results, Cutoffs & Dates | Open Exam, Semifinal, Finalists',
+    description: 'USABO 2026 Open Exam date, Semifinal date, expected cutoffs, and the historical cutoff range for Semifinalist qualification. Plus the 2025 results recap and what they tell us about Cerebrum student...',
+  },
 }
 
 const expectedDates = [

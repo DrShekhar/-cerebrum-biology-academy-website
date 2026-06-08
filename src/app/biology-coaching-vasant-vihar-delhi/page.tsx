@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-coaching-vasant-vihar-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Coaching in Vasant Vihar Delhi | NEET & IB Biology Tutor',
+    description: 'Best Biology coaching for Vasant Vihar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET & IB Biology coaching with 67+ AIIMS selections. International school students welcome.',
+  },
 }
 
 export default function BiologyCoachingVasantViharPage() {

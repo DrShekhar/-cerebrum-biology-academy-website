@@ -36,7 +36,11 @@ export const metadata: Metadata = {
     canonical: articleUrl,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Most Important Chapters for NEET Biology 2026 | Weightage & Study Guide',
+    description: 'Complete chapter-wise importance analysis for NEET Biology. Botany & Zoology weightage, expected questions, high-priority topics. Boost your score strategically.',
+  },
 };
 
 export default function MostImportantChaptersNEETBiology() {

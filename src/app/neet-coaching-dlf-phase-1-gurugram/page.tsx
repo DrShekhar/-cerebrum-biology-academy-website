@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dlf-phase-1-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for DLF Phase 1 Gurugram | 15 Min from Your Home',
+    description: 'Best NEET coaching near DLF Phase 1 Gurugram (Gurgaon). Just 15 min drive to M2K Sector 51. AIIMS faculty, 98% success rate. Evening & weekend batches for DLF residents. Call 88264-44334!',
+  },
 }
 
 const nearbyLandmarks = [

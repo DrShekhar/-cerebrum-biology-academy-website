@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kr-mangalam-world-school-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for K R Mangalam World School Gurugram',
+    description: 'Best NEET coaching for K R Mangalam World School students. Multiple campus coverage - Sector 51 near GK-2, Vaishali near Sector 88. AIIMS faculty, 98% success. Call 88264-44334!',
+  },
 }
 
 const campusDistances = [

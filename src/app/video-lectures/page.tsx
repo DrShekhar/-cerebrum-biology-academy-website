@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/video-lectures',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Free Biology Video Lectures | Watch Demo Class | NEET & Board Exam | Cerebrum Academy',
+    description: 'Watch free Biology video lectures by Dr. Shekhar C Singh (AIIMS). Demo class, student success stories, and complete NEET Biology lecture library. Hinglish medium. Book FREE demo!',
+  },
 }
 
 const demoVideo = {

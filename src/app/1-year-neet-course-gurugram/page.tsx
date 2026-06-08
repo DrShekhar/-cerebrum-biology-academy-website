@@ -42,7 +42,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/1-year-neet-course-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: '1 Year NEET Course Gurugram 2026 | Class 12 + Dropper',
+    description: 'Join 1-year NEET course in Gurugram (Gurgaon) for Class 12 students & droppers. Complete syllabus in 12 months. M2K Sector 51. Intensive coaching. Call 88264-44334!',
+  },
 }
 
 const coursePhases = [

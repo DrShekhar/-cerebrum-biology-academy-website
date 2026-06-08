@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-weekend-batch-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Weekend Batch Noida 2026 | Saturday-Sunday Classes',
+    description: 'Join NEET weekend batch in Noida - Saturday & Sunday intensive classes for school students. Complete syllabus coverage. Sector 62. Call 99536-43938!',
+  },
 }
 
 const schedule = [

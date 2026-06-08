@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'DAT Perceptual Ability + Biology | Anatomy-Bridged PAT Coaching',
+    description: 'DAT Perceptual Ability (PAT) reasoning paired with biology anatomy depth — keyhole, top-front-end, angle ranking and pattern folding taught via vertebrate anatomy visualisation. Pre-dental speciali...',
+  },
 }
 
 const faqs = [

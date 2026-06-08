@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jaypee-greens-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for Jaypee Greens Noida | Online & Hybrid Classes',
+    description: 'NEET Biology coaching for Jaypee Greens, Sector 128 Noida students. Online classes from home + hybrid mode. 55+ students enrolled. AIIMS faculty. Call 88264-44334!',
+  },
 }
 
 const faqs = [

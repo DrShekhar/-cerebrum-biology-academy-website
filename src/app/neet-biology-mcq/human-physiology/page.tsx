@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/human-physiology',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Human Physiology MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 800+ free Human Physiology MCQs for NEET. Digestive, Respiratory, Circulatory, Excretory, Nervous & Muscular system questions. NCERT-based with explanations.',
+  },
 }
 
 const structuredData = {

@@ -35,7 +35,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-result-2024-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET 2024 Results Gurugram | 98% Success',
+    description: 'Cerebrum Biology Academy NEET 2024 results: 98% qualification rate, 12 students scored 650+, 3 in top 5000 AIR. See our Gurugram (Gurgaon) toppers. Call 88264-44334!',
+  },
 }
 
 const overallStats = [

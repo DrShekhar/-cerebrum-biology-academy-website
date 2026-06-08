@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/biological-classification',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biological Classification MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 350+ free Biological Classification MCQs for NEET. Five Kingdom Classification, Monera, Protista, Fungi, Viruses questions. NCERT-based with detailed explanations.',
+  },
 }
 
 const structuredData = {

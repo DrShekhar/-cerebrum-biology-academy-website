@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/re-neet-2026-mumbai',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'RE-NEET 2026 Coaching in Mumbai | Online Biology Crash Course',
+    description: 'RE-NEET 2026 coaching for Mumbai students (Andheri, Thane, Borivali) after the 12 May NEET cancellation. Online biology-only AIIMS-trained crash — alongside your Mahesh Tutorials / the largest nati...',
+  },
 }
 
 export default function ReNEETMumbaiPage() {

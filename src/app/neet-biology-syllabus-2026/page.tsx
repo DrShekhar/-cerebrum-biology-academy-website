@@ -48,7 +48,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-syllabus-2026',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Syllabus 2026 - Complete Chapter-wise Syllabus with Weightage | NCERT',
+    description: 'NEET Biology Syllabus 2026 with chapter-wise topics from Class 11 & 12 NCERT. Complete Botany & Zoology syllabus, topic weightage, important chapters, and preparation strategy.',
+  },
 }
 
 const class11Botany = [

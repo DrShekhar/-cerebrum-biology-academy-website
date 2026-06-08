@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-pataudi-road-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Pataudi Road Gurugram | 20 Min Drive',
+    description: 'Best NEET coaching near Pataudi Road Gurugram (Gurgaon). Just 20 min drive to M2K Sector 51. Emerging residential area with affordable housing. AIIMS faculty, 98% success. Call 88264-44334!',
+  },
 }
 
 const nearbyAreas = [

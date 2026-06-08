@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-biology-classes-for-neet',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Classes for NEET 2026 | AIIMS Faculty | Cerebrum',
+    description: 'Best biology classes for NEET 2026 — Cerebrum Biology Academy, the only major biology-only specialist coaching brand in India. AIIMS-trained faculty, small batches (15–20), 680+ medical college sel...',
+  },
 }
 
 const config: BestVerticalConfig = {

@@ -56,7 +56,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tuition',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Tuition | Best NEET & Board Biology Classes',
+    description: 'Looking for biology tuition? Cerebrum Biology Academy offers expert biology coaching for Class 9, 10, 11, 12, NEET & Board exams. AIIMS faculty, 98% success rate. Offline classes in Delhi NCR + Onl...',
+  },
 }
 
 const stats = [

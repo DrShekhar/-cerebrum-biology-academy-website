@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-vs-self-study-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching vs Self-Study: Which is Better? 2025 Guide | Gurugram',
+    description: 'NEET coaching vs self-study comparison. Pros, cons, success rates, and who should choose what. Expert advice from AIIMS faculty in Gurugram (Gurgaon). Call 88264-44334!',
+  },
 }
 
 const comparisonTable = [

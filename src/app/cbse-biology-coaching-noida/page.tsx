@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'CBSE Biology Coaching in Noida 2026 | Class 11-12 | Score 95%+',
+    description: 'CBSE Biology coaching in Noida for Class 11 & 12. NCERT mastery, board exam prep, practical viva. AIIMS faculty, Rs 45,000/year. Gaur City, Sector 150. Free demo!',
+  },
 }
 
 const courses = [

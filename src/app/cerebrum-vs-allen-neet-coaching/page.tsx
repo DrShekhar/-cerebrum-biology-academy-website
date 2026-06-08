@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-allen-neet-coaching',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs the largest national NEET chain NEET Coaching | Compare Biology Classes Delhi NCR',
+    description: 'Detailed comparison of Cerebrum vs the largest national NEET chain for NEET Biology coaching. Compare batch sizes (15-20 vs 200+), AIIMS-trained faculty, personal attention, fee structure, and succ...',
+  },
 }
 
 const faqs = [

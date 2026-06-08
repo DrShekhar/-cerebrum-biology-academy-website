@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-gurgaon-sector-62',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Sector 62 Gurgaon | 12 Min Drive',
+    description: 'Best NEET coaching near Sector 62 Gurgaon. Just 12 min drive to M2K Sector 51. New Gurugram area with growing families. AIIMS faculty, 98% success. Call 88264-44334!',
+  },
 }
 
 const nearbyAreas = [

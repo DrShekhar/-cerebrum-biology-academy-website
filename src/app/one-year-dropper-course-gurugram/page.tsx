@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/one-year-dropper-course-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'One Year NEET Dropper Course in Gurugram | Intensive Program',
+    description: 'One year intensive NEET dropper course in Gurugram (Gurgaon). Complete syllabus revision, 5000+ questions practice, daily tests. Transform your NEET score at Sector 51 center.',
+  },
 }
 
 const faqs = [

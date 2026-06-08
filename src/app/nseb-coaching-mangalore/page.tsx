@@ -12,7 +12,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NSEB Coaching Mangalore | Cerebrum', url: PAGE_URL, locale: 'en_IN', type: 'website' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NSEB Coaching Mangalore | Biology Olympiad Preparation | Cerebrum',
+    description: 'NSEB (National Standard Examination in Biology) coaching for Mangalore students. NSEB → INBO → OCSC → IBO pathway. AIIMS-trained faculty, online live.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — my child in Mangalore is interested in NSEB/Biology Olympiad coaching. Please share programme details.")

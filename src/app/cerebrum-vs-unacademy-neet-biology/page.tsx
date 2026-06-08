@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs other online-only platforms for NEET Biology | Specialist vs Subscription Platform',
+    description: 'Detailed Cerebrum vs other online-only platforms comparison for NEET Biology specifically. Biology-only AIIMS-trained specialist with 15-20 batches (Cerebrum, ₹40K-₹1.56L) vs subscription platform ...',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

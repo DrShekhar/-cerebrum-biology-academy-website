@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Coaching in Connaught Place | Cerebrum Biology Academy',
+    description: 'Best NEET Coaching in Connaught Place — biology-only specialist NEET coaching for Connaught Place (Delhi) families. AIIMS-trained faculty, 15-20 student batches, ₹40K-₹1.56L/year. Nearest Cerebrum ...',
+  },
 }
 
 const wa =

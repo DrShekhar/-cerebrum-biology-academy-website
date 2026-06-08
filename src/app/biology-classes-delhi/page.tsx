@@ -49,7 +49,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Classes in Delhi | Best NEET Biology Coaching',
+    description: 'Join the best biology classes in Delhi with AIIMS-trained faculty. 4 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
+  },
 }
 
 const centers = [

@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/1-on-1-neet-biology-tutor',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: '1-on-1 NEET Biology Tutor | Direct AIIMS Faculty Mentoring',
+    description: '1-on-1 NEET biology tutor — direct personalised mentoring with Dr. Shekhar C Singh (AIIMS Delhi). Bespoke pacing, weak-topic drilling, custom mock review, WhatsApp doubt support. 680+ medical colle...',
+  },
 }
 
 const config: BestVerticalConfig = {

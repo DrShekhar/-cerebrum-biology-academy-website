@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     },
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best BBO Coach (British Biology Olympiad) | Round 1 → Round 2 → UKBC',
+    description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum',
+  },
 }
 
 const config: BestVerticalConfig = {

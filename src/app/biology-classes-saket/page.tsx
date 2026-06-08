@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-saket',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Classes in Saket | NEET Coaching Near Select Citywalk Delhi',
+    description: 'Top biology classes in Saket for NEET & board exams. Near Saket metro & Select Citywalk. Expert faculty for Class 11, 12. Call 88264-44334 for enrollment.',
+  },
 }
 
 export const revalidate = 86400

@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-time-to-join-neet-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Time to Join NEET Coaching 2027 | April vs July | Gurugram',
+    description: 'When is the best time to join NEET coaching? April start vs July batch comparison. Month-wise joining guide for Class 11, 12, and droppers. Call 88264-44334!',
+  },
 }
 
 const joiningWindows = [

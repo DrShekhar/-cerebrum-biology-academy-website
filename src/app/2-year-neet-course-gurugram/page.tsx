@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/2-year-neet-course-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: '2 Year NEET Course Gurugram 2026 | Class 11-12 Integrated',
+    description: 'Join 2-year NEET course in Gurugram (Gurgaon) from Class 11. Complete foundation + advanced coaching. M2K Sector 51. Best results with 98% success rate. Call 88264-44334!',
+  },
 }
 
 const year1Topics = [

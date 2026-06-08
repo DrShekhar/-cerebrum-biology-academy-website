@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/velocity-alternative-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Velocity Institute Alternative in Faridabad | Small Batch NEET Biology',
+    description: 'Looking for Velocity Institute alternative in Faridabad? Cerebrum offers 15-20 student batches vs Velocity',
+  },
 }
 
 const faqs = [

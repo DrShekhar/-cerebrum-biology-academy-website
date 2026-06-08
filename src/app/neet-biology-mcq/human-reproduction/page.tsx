@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/human-reproduction',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Human Reproduction MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 400+ free Human Reproduction MCQs for NEET. Gametogenesis, fertilization, embryonic development, menstrual cycle questions. NCERT-based with detailed explanations.',
+  },
 }
 
 const structuredData = {

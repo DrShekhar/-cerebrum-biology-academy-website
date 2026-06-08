@@ -12,7 +12,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Foundation Class 9 Mysore', url: PAGE_URL, locale: 'en_IN', type: 'website' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 9 in Mysore | AIIMS-Trained Online Live',
+    description: 'NEET Foundation Class 9 in Mysore — AIIMS-trained faculty, online live. Serving Saraswathipuram, VV Mohalla, Kuvempunagar, Gokulam, Vijayanagar. From Rs 35,000/year.',
+  },
 }
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — Class 9 student in Mysore, want NEET Foundation details.")
 const faqs = [

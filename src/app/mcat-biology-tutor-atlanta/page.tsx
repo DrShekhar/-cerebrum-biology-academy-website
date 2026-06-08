@@ -44,7 +44,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'MCAT Biology Tutor Atlanta | Emory, Georgia Tech, UGA',
+    description: 'MCAT Bio/Biochem tutor for Atlanta pre-meds — Emory, Georgia Tech, UGA, Alpharetta, Johns Creek, Cumming. Biology specialists, ET evening slots. From $449.',
+  },
 }
 
 const faqs = [

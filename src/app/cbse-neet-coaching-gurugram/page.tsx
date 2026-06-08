@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cbse-neet-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'CBSE Board NEET Coaching in Gurugram | Biology for CBSE Students',
+    description: 'Specialized NEET Biology coaching for CBSE board students in Gurugram (Gurgaon). Aligned with NCERT curriculum, 98% success rate. Perfect for DPS, Shri Ram, GD Goenka students.',
+  },
 }
 
 const faqs = [

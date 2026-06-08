@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'USMLE Step 1 Biology Pricing | Foundations Packages | Cerebrum',
+    description: 'USMLE Step 1 biology-foundations pricing — $699/₹34,999 Self-Paced to $2,249/₹1,09,999 1:1. US medical students + Indian IMGs. First Aid mapped, UWorld integration.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent('Hi — I want to discuss USMLE Biology pricing and which tier fits my goals. Please share programme details.')

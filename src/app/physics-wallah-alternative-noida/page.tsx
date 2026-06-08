@@ -39,7 +39,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/physics-wallah-alternative-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'other online-only platforms Alternative Noida | Offline Expert Biology',
+    description: 'Need offline alternative to other online-only platforms in Noida? Cerebrum: Real classroom experience, AIIMS faculty, 98% success rate. Better than video lectures. Call 99536-43938!',
+  },
 }
 
 const comparisonData = [

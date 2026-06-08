@@ -34,7 +34,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-neet-coaching-near-me',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Coaching Near Me | 6 NCR Centres + Pan-India Online',
+    description: 'Best NEET coaching near me — Cerebrum Biology Academy. 6 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS facult...',
+  },
 }
 
 const centres = [

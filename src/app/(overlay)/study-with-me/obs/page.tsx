@@ -7,7 +7,11 @@ export const metadata: Metadata = {
     'OBS streaming overlay for NEET Biology study sessions. Clean 1920x1080 layout with timer and student count.',
   robots: 'noindex, nofollow',
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Study With Me OBS Overlay',
+    description: 'OBS streaming overlay for NEET Biology study sessions. Clean 1920x1080 layout with timer and student count.',
+  },
 
   openGraph: { title: 'Study With Me OBS Overlay', description: 'OBS streaming overlay for NEET Biology study sessions. Clean 1920x1080 layout with timer and student count.', type: 'website' },
 }

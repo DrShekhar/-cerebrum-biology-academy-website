@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'DAT Biology Tutor New Jersey | Rutgers, NYU, Edison, Jersey City',
+    description: 'DAT Biology tutor for New Jersey pre-dental students — Rutgers, TCNJ, NJIT, Edison, Iselin, Jersey City. AIIMS-trained biology specialists, ET evening slots. From $449.',
+  },
 }
 
 const faqs = [

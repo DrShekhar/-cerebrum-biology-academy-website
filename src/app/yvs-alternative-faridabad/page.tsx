@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/yvs-alternative-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'YVS Institute Alternative in Faridabad | AIIMS Faculty NEET Biology',
+    description: 'Looking for YVS Institute alternative in Faridabad? Cerebrum: Biology-specialist coaching, AIIMS faculty, 15-20 student batches vs YVS',
+  },
 }
 
 const comparisonData = [

@@ -43,7 +43,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Teacher in India | Dr. Shekhar C Singh | AIIMS Faculty',
+    description: 'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy, India',
+  },
 }
 
 const credentials = [

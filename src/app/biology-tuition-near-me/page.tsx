@@ -18,7 +18,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tuition-near-me',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Tuition Near Me | Best Biology Classes in Delhi NCR',
+    description: 'Looking for biology tuition near you? Cerebrum Biology Academy offers expert biology classes in Delhi, Noida, Gurgaon, Ghaziabad & Faridabad. AIIMS faculty, 98% success rate. Book FREE demo!',
+  },
 }
 
 export default function BiologyTuitionNearMePage() {

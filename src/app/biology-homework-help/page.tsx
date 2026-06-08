@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-homework-help',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Homework Help Online | Expert Tutors | All Levels',
+    description: 'Get expert Biology homework help online. AIIMS-trained tutors for NEET, CBSE, ICSE, A-Level, IB, IGCSE, AP. Step-by-step explanations. WhatsApp for instant help.',
+  },
 }
 
 export default function Page() {

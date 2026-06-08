@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-chapter-weightage-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Chapter Weightage 2026 | Important Topics',
+    description: 'NEET Biology chapter-wise weightage 2026. Human Physiology (20%), Genetics (18%), Plant Biology (15%). Focus on high-weightage chapters. Expert guidance at Cerebrum. Call 88264-44334!',
+  },
 }
 
 const quickAnswer = {

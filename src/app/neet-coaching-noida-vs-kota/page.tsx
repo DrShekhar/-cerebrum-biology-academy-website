@@ -42,7 +42,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-noida-vs-kota',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching: Noida vs Kota 2026 | Which is Better?',
+    description: 'Noida vs Kota for NEET coaching - complete comparison. Save Rs 2-3 lakh on hostel costs, study from home, get same results. 98% success rate with online coaching from Noida.',
+  },
 }
 
 const comparisonData = [

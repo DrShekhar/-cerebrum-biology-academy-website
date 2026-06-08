@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/parents-guide-neet-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Parents Guide to NEET Coaching in Gurugram 2025 | What to Know',
+    description: 'Complete parents guide to NEET coaching in Gurugram (Gurgaon). How to choose institute, red flags, fees, mental health tips, and how to support your child. Call 88264-44334!',
+  },
 }
 
 const checklistBeforeJoining = [

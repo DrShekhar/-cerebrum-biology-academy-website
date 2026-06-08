@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-evening-batch-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Evening Batch Noida 2026 | After-School Classes 5-8 PM',
+    description: 'Join NEET evening batch in Noida - 5 PM to 8 PM classes after school. Perfect for Class 11-12 students. Sector 62. Call 99536-43938!',
+  },
 }
 
 const schedule = [

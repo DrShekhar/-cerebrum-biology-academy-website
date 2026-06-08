@@ -30,7 +30,11 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Tuition in Greater Kailash | Top Tutors GK Delhi',
+    description: 'Best biology tuition in Greater Kailash, Delhi. Expert tutors for Class 11, 12 & NEET preparation. Personalized coaching in GK-1, GK-2. Call 88264-44334 for demo.',
+  },
 }
 
 export const revalidate = 86400

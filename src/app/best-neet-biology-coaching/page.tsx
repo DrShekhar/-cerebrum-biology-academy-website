@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Biology Coaching 2026 — Honest Comparison',
+    description: 'Compare the best NEET biology coaching institutes in India. Cerebrum vs the largest national NEET chain vs the 2nd-largest national NEET chain vs other online-only platforms. AIIMS faculty, small b...',
+  },
 }
 
 const faqs = [

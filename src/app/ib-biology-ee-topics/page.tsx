@@ -32,7 +32,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'IB Biology Extended Essay Topics | Research Question Ideas | Cerebrum',
+    description: 'Curated IB Biology Extended Essay topic ideas with full research questions, scope, and feasibility notes — grouped by the 4 themes of the 2025 syllabus.',
+  },
 }
 
 const topicsFAQs = [

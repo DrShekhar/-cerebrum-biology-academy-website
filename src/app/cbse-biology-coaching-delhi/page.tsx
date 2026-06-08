@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching-delhi',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'CBSE Biology Coaching Delhi | Class 11-12 | Board + NEET',
+    description: 'Best CBSE Biology coaching in Delhi NCR. Class 11-12 board + NEET preparation. Expert faculty. Book free demo. Call +91-88264-44334',
+  },
 
   openGraph: { title: 'CBSE Biology Coaching Delhi | Class 11-12 | Board + NEET', description: 'Best CBSE Biology coaching in Delhi NCR. Class 11-12 board + NEET preparation. Expert faculty. Book free demo. Call +91-88264-44334', type: 'website' },
 }

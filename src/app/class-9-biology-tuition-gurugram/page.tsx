@@ -26,7 +26,11 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/class-9-biology-tuition-gurugram' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Class 9 Biology Tuition in Gurugram | CBSE, ICSE Coaching',
+    description: 'Best Class 9 Biology tuition in Gurugram (Gurgaon) for CBSE & ICSE boards. Experienced teachers, small batches, complete NCERT coverage at Sector 51 center.',
+  },
 }
 
 const faqs = [

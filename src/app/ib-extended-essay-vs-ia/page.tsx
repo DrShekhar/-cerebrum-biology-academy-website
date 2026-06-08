@@ -29,7 +29,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'IB Biology EE vs IA | Differences, Overlap, Strategy | Cerebrum',
+    description: 'IB Biology Extended Essay vs Internal Assessment — side-by-side: word count, weighting, criteria, timeline, and whether you can reuse a topic. Clear answer to the most common IB Biology strategy qu...',
+  },
 }
 
 const comparisonFAQs = [

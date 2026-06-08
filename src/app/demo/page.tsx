@@ -20,7 +20,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/demo',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Book Free Demo Class | NEET Biology Trial Lesson',
+    description: 'Book a free demo class for NEET Biology coaching. Experience our teaching methodology with AIIMS-trained faculty. Limited slots available. Instant confirmation via WhatsApp.',
+  },
 }
 
 export default function DemoPage() {

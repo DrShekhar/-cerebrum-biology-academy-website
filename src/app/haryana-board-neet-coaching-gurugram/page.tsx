@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/haryana-board-neet-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Haryana Board NEET Coaching in Gurugram | HBSE Students NEET Prep',
+    description: 'Specialized NEET Biology coaching for Haryana Board (HBSE) students in Gurugram (Gurgaon). Hindi + English medium support, NCERT bridging, affordable fees. For Govt & private school students.',
+  },
 }
 
 const faqs = [

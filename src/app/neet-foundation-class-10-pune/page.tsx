@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Pune | Maharashtra SSC + CBSE + ICSE Parallel',
+    description: 'NEET Foundation Class 10 in Pune at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra SSC + NEET parallel. Koregaon Park, Aundh, Hinjewadi, Koth...',
+  },
 }
 
 const faqs = [

@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/how-much-fees-for-neet-coaching-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Fees in Faridabad 2026 | ₹45K-₹3L Comparison',
+    description: "NEET coaching fees in Faridabad range from ₹45,000 to ₹3,00,000. Compare Velocity, YVS, Cerebrum fees. What's included, hidden costs, and best value.",
+  },
 }
 
 const feeComparison = [

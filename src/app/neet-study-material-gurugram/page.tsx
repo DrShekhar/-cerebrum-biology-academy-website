@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-study-material-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Study Material in Gurugram | Biology Notes, MCQs, Test Papers',
+    description: 'Get comprehensive NEET Biology study material in Gurugram (Gurgaon). NCERT-based notes, 5000+ MCQs, chapter-wise tests, PYQ analysis. Free sample available. Download or collect from Sector 51.',
+  },
 }
 
 const faqs = [

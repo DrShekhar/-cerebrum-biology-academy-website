@@ -32,7 +32,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-definitions',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Definitions for NEET | Important Terms & Concepts',
+    description: 'Master essential biology definitions for NEET 2026-27. Comprehensive glossary of 30+ important terms with examples, key points, and NEET relevance. Free study material by Dr. Shekhar C Singh.',
+  },
 }
 
 export default function BiologyDefinitionsPage() {

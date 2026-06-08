@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-scholarship-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Scholarship Noida 2026 | Up to 100% Fee Waiver',
+    description: 'Apply for NEET scholarship in Noida. Merit-based scholarships up to 100% fee waiver. Based on 10th/12th marks or scholarship test. Limited seats. Apply now at Cerebrum Biology Academy!',
+  },
 }
 
 const scholarshipSlabs = [

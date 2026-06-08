@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'USMLE Step 1 Microbiology + Immunology Prep | Sketchy + First Aid Integrated',
+    description: 'USMLE Step 1 microbiology (~10%) and immunology (~6%) coaching from AIIMS-trained specialists. Sketchy-style mnemonic integration, complement system, hypersensitivity types, MHC. $2,499 full progra...',
+  },
 }
 
 const faqs = [

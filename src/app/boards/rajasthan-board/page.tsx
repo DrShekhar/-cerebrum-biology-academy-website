@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: `${BASE_URL}/boards/rajasthan-board`,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Rajasthan Board (RBSE) Biology to NEET',
+    description: 'Expert RBSE Biology coaching for Rajasthan students. NEET-integrated preparation from Kota, Jaipur, Jodhpur and across Rajasthan.',
+  },
 }
 
 export default function RajasthanBoardPage() {

@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-bal-bharati-school-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for Bal Bharati School Gurugram',
+    description: 'Best NEET coaching for Bal Bharati Public School Brij Vihar students. Just 15 min drive. CBSE-NEET aligned preparation. AIIMS faculty, 98% success rate. Call 88264-44334!',
+  },
 }
 
 const whyBalBharatiStudents = [

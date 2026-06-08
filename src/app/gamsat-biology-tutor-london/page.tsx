@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'GAMSAT Biology Tutor London | Imperial, KCL, UCL, St George',
+    description: 'GAMSAT Section III biology tutor for London graduate medicine applicants — Imperial, KCL, UCL, St George',
+  },
 }
 
 const faqs = [

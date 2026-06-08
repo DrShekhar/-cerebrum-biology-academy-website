@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 9 in Gurugram | Early NEET Preparation',
+    description: 'Start NEET preparation from Class 9 in Gurugram (Gurgaon). 4-year head start, NCERT foundation, board + NEET dual prep. Expert faculty at Sector 51 center. Book free demo.',
+  },
 }
 
 const faqs = [

@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dps-international-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for DPS International Gurugram',
+    description: 'Best NEET coaching for DPS International School Gurugram (Gurgaon) students. IGCSE/IB to NEET transition. 15 min from campus. AIIMS faculty, 98% success rate. Call 88264-44334!',
+  },
 }
 
 const whyDPSIStudents = [

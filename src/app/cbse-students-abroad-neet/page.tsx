@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/cbse-students-abroad-neet',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for CBSE Students Abroad | Gulf Sahodaya + Indian Schools Worldwide',
+    description: 'NEET coaching for CBSE-curriculum students studying abroad — 193 Gulf Sahodaya schools, Indian schools across UAE, Saudi, Qatar, Singapore, Malaysia, Australia, USA, UK. AIIMS-trained faculty, NCER...',
+  },
 }
 
 const config: BestVerticalConfig = {

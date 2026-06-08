@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-test-series-greater-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Test Series in Greater Noida | 50+ Mock Tests with Analysis',
+    description: 'Join our comprehensive NEET Biology test series in Greater Noida. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+  },
 }
 
 const faqs = [

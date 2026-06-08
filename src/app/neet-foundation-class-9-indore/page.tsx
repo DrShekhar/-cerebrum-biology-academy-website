@@ -23,7 +23,11 @@ export const metadata: Metadata = {
     url: PAGE_URL, locale: 'en_IN', type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 9 in Indore | AIIMS-Trained Online Live',
+    description: 'NEET Foundation Class 9 in Indore — AIIMS-trained faculty, online live. CBSE / ICSE / State Board + NEET parallel. Serving Vijay Nagar, Palasia, AB Road. From Rs 35,000/year.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I want to enroll my child (Class 9) in NEET Foundation from Indore. Please share batch details and demo timings.")

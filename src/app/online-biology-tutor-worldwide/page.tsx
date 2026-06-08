@@ -47,7 +47,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/online-biology-tutor-worldwide',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Online Biology Tutor | Expert Tutoring for A-Level, IB, IGCSE, AP, GCSE, NEET',
+    description: 'Find an expert online Biology tutor for any curriculum worldwide. A-Level (92% A*/A), IB Biology HL/SL, IGCSE, AP Biology, GCSE, NEET, Board exams. AIIMS-trained faculty. Live classes in your timez...',
+  },
 }
 
 const curricula = [

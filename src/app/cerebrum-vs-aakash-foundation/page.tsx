@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs the 2nd-largest national NEET chain Scholastics — NEET Foundation Class 9 & 10 Biology',
+    description: 'Cerebrum vs the 2nd-largest national NEET chain Scholastics for NEET Foundation Class 9 and Class 10. Biology-only AIIMS-trained specialist with 15-20 student batches (Cerebrum, ₹35K-95K) vs PCB-ge...',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

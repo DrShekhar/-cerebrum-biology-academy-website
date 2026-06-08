@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/test-series',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Test Series 2026 | 31+ Tests | Online + Offline | Free MCQ Tool',
+    description: 'Comprehensive NEET Biology test series with 31+ tests, detailed analytics, rank prediction. Free MCQ practice with 19,619 questions. Weekly tests at all centers.',
+  },
 }
 
 export default function Page() {

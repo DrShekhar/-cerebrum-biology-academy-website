@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/2-year-neet-course-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: '2 Year NEET Course Noida 2026 | Class 11-12 Integrated',
+    description: 'Join 2-year NEET course in Noida from Class 11. Complete foundation + advanced coaching. Sector 62. Best results with 98% success rate. Call 99536-43938!',
+  },
 }
 
 const year1Topics = [

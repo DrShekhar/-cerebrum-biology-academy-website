@@ -20,7 +20,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Near Noida Societies',
+    description: 'Find NEET Biology coaching near your Noida society. Online & hybrid classes for students in Godrej Woods, Mahagun Moderne, Supertech Eco Village, Logix Blossom County & more.',
+  },
 }
 
 const societies = [

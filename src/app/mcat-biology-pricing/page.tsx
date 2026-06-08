@@ -21,7 +21,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'MCAT Biology Pricing | Bio/Biochem Section Packages | Cerebrum',
+    description: 'MCAT Bio/Biochem section tutoring pricing — $449 Self-Paced, $899 Small-Batch, $1,349 1:1 Senior Faculty. Compare vs Kaplan ($2,700) and Princeton Review ($2,900). Biology-only specialist.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent('Hi — I want to discuss MCAT Biology pricing and which tier fits my goals. Please share programme details.')

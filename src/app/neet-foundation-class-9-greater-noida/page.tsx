@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-class-9-greater-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 9 in Greater Noida | Early NEET Preparation',
+    description: 'Start NEET preparation from Class 9 in Greater Noida. 4-year head start, NCERT foundation, board + NEET dual prep. Online + hybrid classes. Expert faculty. Book free demo.',
+  },
 }
 
 const faqs = [

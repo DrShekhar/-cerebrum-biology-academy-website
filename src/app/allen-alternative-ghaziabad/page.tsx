@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/allen-alternative-ghaziabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'the largest national NEET chain Alternative in Ghaziabad | Better NEET Biology Coaching',
+    description: 'Looking for the largest national NEET chain alternative in Ghaziabad? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% succes...',
+  },
 }
 
 const faqs = [

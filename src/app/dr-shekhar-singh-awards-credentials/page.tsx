@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     type: 'profile',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Dr. Shekhar C Singh — Awards, Credentials & Verified Outcomes | Biology Faculty India',
+    description: 'Verified awards, credentials and student outcomes for Dr. Shekhar C Singh, founder of Cerebrum Biology Academy (est. 2014) and AIIMS New Delhi alumnus. Includes Best Biology Teacher Award 2022, NEE...',
+  },
 }
 
 const credentials = [

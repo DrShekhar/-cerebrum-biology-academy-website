@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'International Biology Tutoring | 10 Countries',
+    description: 'Expert online biology tutoring for students in US, UK, Canada, Australia, Singapore, UAE, Ireland, Hong Kong, New Zealand & South Africa. Small group from $40/hr.',
+  },
 }
 
 export default function InternationalHubPage() {

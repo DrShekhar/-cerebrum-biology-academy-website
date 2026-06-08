@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/uttar-pradesh-biology-tuition',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Uttar Pradesh Biology Tuition Online | UP Board Board + NEET | AIIMS Faculty',
+    description: 'Best Biology tuition for Uttar Pradesh students. UP Board Board + NEET preparation. AIIMS faculty, online classes. Serving Lucknow, Noida, Varanasi, Agra, Allahabad. 98% success rate.',
+  },
 }
 
 export default function Page() {

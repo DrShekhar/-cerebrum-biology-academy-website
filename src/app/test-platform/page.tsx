@@ -4,7 +4,11 @@ export const metadata: Metadata = {
   title: 'Platform Testing Dashboard',
   description: 'Internal testing interface for AI education platform validation and verification',
   robots: { index: false, follow: false },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Platform Testing Dashboard',
+    description: 'Internal testing interface for AI education platform validation and verification',
+  },
   openGraph: {
     title: 'Platform Testing Dashboard',
     description: 'Internal testing interface',

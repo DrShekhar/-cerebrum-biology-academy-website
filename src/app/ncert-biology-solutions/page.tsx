@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/ncert-biology-solutions',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NCERT Biology Solutions for Class 11 & 12 | Free PDF Download 2025',
+    description: 'Free NCERT Biology solutions for Class 11 and Class 12 with chapter-wise answers, diagrams, and NEET preparation tips. Download PDF solutions by AIIMS faculty.',
+  },
 }
 
 const class11Chapters = [

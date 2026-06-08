@@ -35,7 +35,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/which-is-better-aakash-or-allen-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'the 2nd-largest national NEET chain vs the largest national NEET chain: Which is Better for NEET in Gurugram? 2025',
+    description: 'the 2nd-largest national NEET chain vs the largest national NEET chain comparison for NEET coaching in Gurugram (Gurgaon). Fees, faculty, results, batch size compared. Plus a better alternative wit...',
+  },
 }
 
 const comparison = [

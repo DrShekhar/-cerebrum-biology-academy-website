@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     },
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NSEB Coaching in Gurugram | National Standard Examination in Biology',
+    description: 'Expert NSEB coaching in Gurugram (Gurgaon) for National Standard Examination in Biology. Comprehensive syllabus coverage, past paper practice, experienced faculty at Sector 51 center.',
+  },
 }
 
 const faqs = [

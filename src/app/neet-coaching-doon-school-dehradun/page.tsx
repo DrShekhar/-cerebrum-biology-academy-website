@@ -14,7 +14,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: { title: 'NEET Coaching for The Doon School | Cerebrum', description: 'NEET Biology for The Doon School boarding students.', url: PAGE_URL, locale: 'en_IN', type: 'website' },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching for The Doon School Students | Cerebrum Biology',
+    description: 'NEET Biology coaching for The Doon School (Dehradun) boarding students. AIIMS-trained faculty, hostel-friendly evening sessions. ICSE / ISC to NEET bridge.',
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — my child is at The Doon School (Dehradun) and I want NEET Biology coaching. Please share batch details and hostel-friendly timings.")

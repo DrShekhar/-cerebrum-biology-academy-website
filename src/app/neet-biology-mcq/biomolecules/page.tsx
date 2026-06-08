@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/biomolecules',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biomolecules MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 400+ free Biomolecules MCQs for NEET. Carbohydrates, Proteins, Lipids, Enzymes, and Nucleic Acids questions. NCERT Class 11 based with detailed explanations.',
+  },
 }
 
 const structuredData = {

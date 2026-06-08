@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/re-neet-2026-syllabus-difficulty',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'RE-NEET 2026 Syllabus & Difficulty | Will the Reconduct Be Tougher?',
+    description: 'Will RE-NEET 2026 syllabus change? Will the reconduct exam be tougher? NTA confirmed: same NCERT Class 11 + 12 syllabus. Analyst consensus: difficulty may be slightly higher. Strategy for biology a...',
+  },
 }
 
 const config: BestVerticalConfig = {

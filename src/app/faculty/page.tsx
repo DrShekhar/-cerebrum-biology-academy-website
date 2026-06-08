@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/faculty',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Faculty | Dr. Shekhar Singh (AIIMS) & Senior Biology Team — Cerebrum',
+    description: 'AIIMS-led biology faculty: Dr. Shekhar Singh + 5 senior subject specialists across NEET, IB, AP, CBSE 11-12, and Biology Olympiad. Student outcomes include 695 NEET marks and 360/360 Biology.',
+  },
 }
 
 const FOUNDER = facultyMembers.find((f) => f.id === 'dr-shekhar-singh')

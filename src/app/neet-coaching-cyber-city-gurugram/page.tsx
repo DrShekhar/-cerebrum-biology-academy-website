@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-cyber-city-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Cyber City Gurugram | 10 Min from DLF Cyber Hub',
+    description: 'Best NEET coaching near Cyber City Gurugram (Gurgaon). Just 10 min drive to M2K Sector 51. Perfect for IT professional families. AIIMS faculty, 98% success rate. Call 88264-44334!',
+  },
 }
 
 const nearbyAreas = [

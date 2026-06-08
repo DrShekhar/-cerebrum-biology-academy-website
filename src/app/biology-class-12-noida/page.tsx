@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-class-12-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Class 12 Biology Coaching in Noida 2026 | NEET + Board',
+    description: 'Best Class 12 Biology coaching in Noida. NEET + Board exam integrated. AIIMS faculty, Rs 70,000/year. Gaur City, Sector 150, Greater Noida. 650+ NEET scorers. Free demo!',
+  },
 }
 
 const courses = [

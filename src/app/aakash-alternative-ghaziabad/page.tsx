@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/aakash-alternative-ghaziabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'the 2nd-largest national NEET chain Alternative in Ghaziabad | Personalized NEET Biology Coaching',
+    description: 'Looking for the 2nd-largest national NEET chain alternative in Ghaziabad? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, and 98% su...',
+  },
 }
 
 const faqs = [

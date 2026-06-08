@@ -42,7 +42,11 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Meera Bagh | Biology Classes Paschim Vihar',
+    description: 'Best NEET coaching in Meera Bagh, Paschim Vihar. Premium residential area near Virat Kohli residence. AIIMS faculty, 98% success rate. Only 15-20 min from Rohini center. Book free demo!',
+  },
 }
 
 export default function NEETCoachingMeeraBaghPage() {

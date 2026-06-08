@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Cerebrum vs the largest national NEET chain for NEET Biology | Biology Specialist vs Kota Generalist',
+    description: 'Detailed Cerebrum vs the largest national NEET chain comparison for NEET Biology specifically. Biology-only AIIMS-trained specialist (Cerebrum, ₹40K-₹1.56L) vs Kota-based PCB-generalist with 200-40...',
+  },
 }
 
 const config: CompetitorComparisonConfig = {

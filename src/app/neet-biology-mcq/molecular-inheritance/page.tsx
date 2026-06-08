@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq/molecular-inheritance',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Molecular Basis of Inheritance MCQ for NEET 2026 | Free Practice Questions',
+    description: 'Practice 500+ free Molecular Basis of Inheritance MCQs for NEET. DNA replication, transcription, translation, genetic code, lac operon questions. NCERT-based with explanations.',
+  },
 }
 
 const structuredData = {

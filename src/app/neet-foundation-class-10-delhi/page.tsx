@@ -35,7 +35,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Delhi | Board + NEET Parallel · South Ex + Rohini',
+    description: 'NEET Foundation Class 10 in Delhi at Cerebrum Biology Academy — South Extension flagship, Rohini, Green Park. CBSE / ICSE boards + NEET parallel pedagogy. AIIMS-trained faculty, batches of 15-20. ₹...',
+  },
 }
 
 const faqs = [

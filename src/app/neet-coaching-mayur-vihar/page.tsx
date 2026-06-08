@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Coaching in Mayur Vihar | Cerebrum Biology Academy',
+    description: 'Best NEET Coaching in Mayur Vihar — biology-only specialist NEET coaching for Mayur Vihar (Delhi) families. AIIMS-trained faculty, 15-20 student batches, ₹40K-₹1.56L/year. Nearest Cerebrum centre: ...',
+  },
 }
 
 const wa =

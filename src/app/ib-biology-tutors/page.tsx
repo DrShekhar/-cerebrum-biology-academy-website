@@ -38,7 +38,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'IB Biology Tutors | Examiners, Teachers & Academic Coaches | Cerebrum',
+    description: 'Meet our IB Biology tutor team — 8 named tutors across 3 tiers (IB Examiner, Qualified Teacher, Academic Tutor). Filter by specialty, timezone, and price. Free demo with every tutor.',
+  },
 }
 
 const directoryFAQs = [

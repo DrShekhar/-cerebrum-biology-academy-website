@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/compare',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Comparison | Cerebrum vs Kota, the largest national NEET chain, the 2nd-largest national NEET chain | 2026 Guide',
+    description: 'Compare Cerebrum Biology Academy with Kota coaching, the largest national NEET chain, the 2nd-largest national NEET chain, and local institutes. See fees, batch sizes, success rates. Make an inform...',
+  },
 }
 
 export default function ComparePage() {

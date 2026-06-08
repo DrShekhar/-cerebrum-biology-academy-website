@@ -34,7 +34,11 @@ export const metadata: Metadata = {
     },
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best CBO Coach (Canadian Biology Olympiad) | Open → National → Team Canada',
+    description: 'Dr. Shekhar C Singh (AIIMS Delhi) leads Cerebrum',
+  },
 }
 
 const config: BestVerticalConfig = {

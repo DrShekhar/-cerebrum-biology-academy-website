@@ -44,7 +44,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'MCAT Biology Tutor Boston | Harvard, MIT, Tufts, BU',
+    description: 'MCAT Bio/Biochem tutor for Boston pre-meds — Harvard, MIT, Tufts, BU, Brandeis, BC, Northeastern. Biology specialists, ET evening slots. From $449.',
+  },
 }
 
 const faqs = [

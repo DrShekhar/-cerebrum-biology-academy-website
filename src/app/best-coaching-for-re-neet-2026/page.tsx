@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/best-coaching-for-re-neet-2026',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Coaching for RE-NEET 2026 | 6–8 Week Crash Course Comparison',
+    description: 'Best coaching for RE-NEET 2026 (post 12 May 2026 cancellation). Compare biology-only AIIMS-trained Cerebrum, generalist the 2nd-largest national NEET chain, the largest national NEET chain, other o...',
+  },
 }
 
 const config: BestVerticalConfig = {

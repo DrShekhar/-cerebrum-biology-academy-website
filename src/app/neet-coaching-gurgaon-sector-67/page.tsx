@@ -26,7 +26,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-gurgaon-sector-67',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Sector 67 Gurgaon | 15 Min Drive',
+    description: 'Best NEET coaching near Sector 67 Gurgaon (Gurugram). Just 15 min drive to M2K Sector 51. Premium residential area on Golf Course Extension. AIIMS faculty, 98% success. Call 88264-44334!',
+  },
 }
 
 const nearbyAreas = [

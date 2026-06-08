@@ -36,7 +36,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/results',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Results 2024 | 98% Success Rate | Cerebrum Biology Academy',
+    description: 'NEET 2024 results: 98% qualification rate, 67+ AIIMS selections, AIR 127 best rank, 450+ qualifiers. Watch video testimonials. Board avg 92/100.',
+  },
 }
 
 const breadcrumbSchema = {

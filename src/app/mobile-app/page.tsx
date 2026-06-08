@@ -18,7 +18,11 @@ export const metadata: Metadata = {
 
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Mobile App - Study NEET Biology Anywhere',
+    description: 'Download our mobile app for NEET Biology preparation. Study anywhere, anytime with offline content, practice tests, and AI-powered doubt solving.',
+  },
 
   openGraph: { title: 'Mobile App - Study NEET Biology Anywhere', description: 'Download our mobile app for NEET Biology preparation. Study anywhere, anytime with offline content, practice tests, and AI-powered doubt solving.', type: 'website' },
 }

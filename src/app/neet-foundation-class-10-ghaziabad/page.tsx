@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-ghaziabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 10 in Ghaziabad | 2-Year Head Start',
+    description: 'NEET Foundation for Class 10 students in Ghaziabad. 2-year head start, 40% NEET syllabus overlap with boards. Expert faculty at Sector 62 Noida center, accessible via Blue Line Metro.',
+  },
 }
 
 const faqs = [

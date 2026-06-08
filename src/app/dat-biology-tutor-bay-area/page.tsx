@@ -38,7 +38,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'DAT Biology Tutor Bay Area | UCSF, Pacific, Berkeley, Stanford',
+    description: 'DAT Biology tutor for Bay Area pre-dental students — UC Berkeley, Stanford, UCSF, Pacific, San Jose State. AIIMS-trained biology specialists, PT evening slots. From $449.',
+  },
 }
 
 const faqs = [

@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-fees-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Fees in Gurugram 2026 | Fee Comparison | ₹45K-2L',
+    description: 'Compare NEET coaching fees in Gurugram for 2026. the 2nd-largest national NEET chain, the largest national NEET chain, Cerebrum fees compared. Scholarships, EMI options. Find affordable NEET coachi...',
+  },
 }
 
 const faqs = [

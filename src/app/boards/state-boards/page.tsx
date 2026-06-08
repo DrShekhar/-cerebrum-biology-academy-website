@@ -13,7 +13,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/boards/state-boards',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'State Board Biology Coaching | All States Covered | Regional Language Support | Cerebrum Biology Academy',
+    description: 'Expert State Board Biology coaching for all Indian states. Regional language support, state-specific curriculum, and local examination pattern focus.',
+  },
 
   openGraph: { title: 'State Board Biology Coaching | All States Covered | Regional Language Support | Cerebrum Biology Academy', description: 'Expert State Board Biology coaching for all Indian states. Regional language support, state-specific curriculum, and local examination pattern focus.', type: 'website' },
 }

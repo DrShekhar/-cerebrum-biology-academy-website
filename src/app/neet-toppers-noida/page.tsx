@@ -45,7 +45,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-toppers-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Toppers from Noida 2025 | 23 AIIMS Selections',
+    description: 'Meet NEET toppers from Noida 2025: 47 students scored 650+, 23 got AIIMS/JIPMER. Priya Sharma (698), Rahul Verma (685). See results, testimonials & success stories.',
+  },
 }
 
 const resultStats = [

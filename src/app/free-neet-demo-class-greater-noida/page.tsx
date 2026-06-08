@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-greater-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Free NEET Demo Class Greater Noida | Book Now',
+    description: 'Book your FREE NEET Biology demo class in Greater Noida. Experience AIIMS faculty teaching, small batches, and our proven methodology. Online & offline options. No obligation. Call 99536-43938!',
+  },
 }
 
 const demoIncludes = [

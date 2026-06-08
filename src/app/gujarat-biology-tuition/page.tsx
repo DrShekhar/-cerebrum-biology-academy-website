@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/gujarat-biology-tuition',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Gujarat Biology Tuition Online | GSEB Board + NEET | AIIMS Faculty',
+    description: 'Best Biology tuition for Gujarat students. GSEB Board + NEET preparation. AIIMS faculty, online classes. Serving Ahmedabad, Surat, Vadodara, Rajkot. 98% success rate.',
+  },
 }
 
 export default function Page() {

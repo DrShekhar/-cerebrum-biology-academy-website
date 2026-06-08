@@ -37,7 +37,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best NEET Coaching in Dwarka | Cerebrum Biology Academy',
+    description: 'Best NEET Coaching in Dwarka — biology-only specialist NEET coaching for Dwarka (Delhi) families. AIIMS-trained faculty, 15-20 student batches, ₹40K-₹1.56L/year. Nearest Cerebrum centre: Green Park...',
+  },
 }
 
 const wa =

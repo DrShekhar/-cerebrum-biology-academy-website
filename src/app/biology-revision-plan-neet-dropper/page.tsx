@@ -79,7 +79,11 @@ export const metadata: Metadata = {
     publishedTime: PUBLISHED_DATE,
     authors: ['Dr. Shekhar C Singh'],
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Dropper Biology Revision Plan — 12-Week Evidence-Based Schedule · Cerebrum',
+    description: 'The 12-week NEET biology revision plan we run inside our dropper batch — built on spaced retrieval (Karpicke & Roediger 2008), the testing effect (Roediger & Butler 2011), and interleaved practice....',
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 

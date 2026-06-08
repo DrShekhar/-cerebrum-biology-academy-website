@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/rajasthan-biology-tuition',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Rajasthan Biology Tuition Online | RBSE Board + NEET | AIIMS Faculty',
+    description: 'Best Biology tuition for Rajasthan students. RBSE Board + NEET preparation. AIIMS faculty, online classes. Serving Jaipur, Jodhpur, Udaipur, Kota. 98% success rate.',
+  },
 }
 
 export default function Page() {

@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Olympiad Preparation Online | IBO, USABO, BBO, INBO Coaching',
+    description: 'Expert Biology Olympiad coaching online. Prepare for IBO, USABO, BBO, INBO and 10+ national olympiads with Campbell Biology. Small batches, expert faculty.',
+  },
 }
 
 const iboStats = {

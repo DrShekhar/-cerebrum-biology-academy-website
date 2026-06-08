@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/is-coaching-necessary-for-neet-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Is Coaching Necessary for NEET? Noida Expert Answer | 2026',
+    description: 'Is coaching necessary for NEET? Expert analysis from Noida NEET toppers. When coaching helps vs self-study works. Honest advice from AIIMS faculty. Call 99536-43938!',
+  },
 }
 
 const whenCoachingHelps = [

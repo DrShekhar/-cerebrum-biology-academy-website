@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   description: 'Internal platform status page for Cerebrum Biology Academy.',
   robots: { index: false, follow: false },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/status' },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Platform Status | Cerebrum Biology Academy',
+    description: 'Internal platform status page for Cerebrum Biology Academy.',
+  },
 }
 
 export default function StatusPage() {

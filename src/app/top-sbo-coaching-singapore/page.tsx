@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     type: 'article',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Top 4 SBO Coaching in Singapore 2026 | Singapore Biology Olympiad Honest Ranking',
+    description: 'Honest 2026 ranking of SBO (Singapore Biology Olympiad) coaching in Singapore. Cerebrum #1 with documented Gold/Silver outcomes and direct IBO Singapore national-team funnel.',
+  },
 }
 
 export default function TopSBOPage() {

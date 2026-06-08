@@ -14,7 +14,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/company/results',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Student Results & Success Stories | NEET Biology Achievements',
+    description: 'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.',
+  },
 
   openGraph: { title: 'Student Results & Success Stories | NEET Biology Achievements', description: 'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.', type: 'website' },
 }

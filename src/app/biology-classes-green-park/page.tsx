@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-green-park',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Classes in Green Park | NEET Coaching South Delhi',
+    description: 'Expert biology classes in Green Park for NEET & board exams. Near Green Park metro. Quality coaching with proven results. Call 88264-44334 for free demo class.',
+  },
 }
 
 export const revalidate = 86400

@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/class-10-biology-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Class 10 Biology Coaching in Gurugram | Board Exam Preparation',
+    description: 'Best Class 10 Biology coaching in Gurugram (Gurgaon) for CBSE & ICSE boards. Expert teachers, diagram mastery, practical focus at Sector 51 center.',
+  },
 }
 
 const faqs = [

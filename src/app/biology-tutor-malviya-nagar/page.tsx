@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/biology-tutor-malviya-nagar',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Tutor in Malviya Nagar Delhi | NEET & CBSE Coaching',
+    description: 'Best Biology tutor for Malviya Nagar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers personalized online NEET coaching with 67+ AIIMS selections. Saket, Sheikh Sarai, Panchsheel students welcome.',
+  },
 }
 
 export default function BiologyTutorMalviyaNagarPage() {

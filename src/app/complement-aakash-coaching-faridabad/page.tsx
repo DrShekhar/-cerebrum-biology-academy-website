@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/complement-aakash-coaching-faridabad',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Complement the 2nd-largest national NEET chain Coaching with Cerebrum Biology | Faridabad',
+    description: 'Boost your NEET Biology score while staying at the 2nd-largest national NEET chain. Cerebrum offers weekend & evening Biology classes for the 2nd-largest national NEET chain students in Faridabad. ...',
+  },
 }
 
 const faqs = [

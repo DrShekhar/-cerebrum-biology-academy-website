@@ -51,7 +51,11 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'CBO Coaching for Vancouver Students | AIIMS-Trained Biology Olympiad Tutors',
+    description: 'Canadian Biology Olympiad (CBO + IBO) coaching for Vancouver and Lower Mainland students. Live online classes in PT, AIIMS-trained biology specialist faculty. Schools served include University Hill...',
+  },
 }
 
 const heroBlurb =

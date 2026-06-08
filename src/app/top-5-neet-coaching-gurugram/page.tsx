@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/top-5-neet-coaching-gurugram',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Top 5 NEET Coaching in Gurugram 2026 | Ranking by Results',
+    description: 'Ranked list of top 5 NEET coaching institutes in Gurugram (Gurgaon) 2026. Compare by success rate, fees, batch size. #1 Cerebrum Academy (98% rate). Call 88264-44334!',
+  },
 }
 
 const quickAnswer = {

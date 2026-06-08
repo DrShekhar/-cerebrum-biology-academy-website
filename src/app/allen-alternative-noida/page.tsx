@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/allen-alternative-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'the largest national NEET chain Alternative in Noida | Better NEET Biology Coaching',
+    description: 'Looking for the largest national NEET chain alternative in Noida? the largest national NEET chain has no Noida-specific center. Cerebrum Biology Academy offers local personalized NEET coaching with...',
+  },
 }
 
 const faqs = [

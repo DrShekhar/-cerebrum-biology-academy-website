@@ -29,7 +29,11 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'IB Biology EE Examples | Grade A Exemplars Annotated | Cerebrum',
+    description: 'Five anonymised IB Biology Extended Essay exemplars annotated against the 5 EE criteria. See what a grade A looks like vs grade C — and what fix moves a B to an A.',
+  },
 }
 
 interface Exemplar {

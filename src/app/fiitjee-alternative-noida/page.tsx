@@ -40,7 +40,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/fiitjee-alternative-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best other IIT-JEE-first coachings Alternative in Noida 2026 | Better Results, Lower Fees',
+    description: 'Looking for other IIT-JEE-first coachings alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 99536-43938!',
+  },
 }
 
 const comparisonData = [

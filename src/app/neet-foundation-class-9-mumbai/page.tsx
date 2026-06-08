@@ -36,7 +36,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Foundation Class 9 in Mumbai | AIIMS-Trained Online Live',
+    description: 'NEET Foundation Class 9 in Mumbai at Cerebrum Biology Academy — pan-India online live with AIIMS-trained faculty. CBSE / ICSE / Maharashtra Board + NEET parallel. Andheri, Thane, Borivali, Powai, B...',
+  },
 }
 
 const faqs = [

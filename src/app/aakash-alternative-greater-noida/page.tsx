@@ -31,7 +31,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/aakash-alternative-greater-noida',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'the 2nd-largest national NEET chain Alternative in Greater Noida | Personalized NEET Biology Coaching',
+    description: 'Looking for the 2nd-largest national NEET chain alternative in Greater Noida? Cerebrum Biology Academy offers personalized NEET coaching with smaller batches (10-20 students), AIIMS faculty, 19600+...',
+  },
 }
 
 const faqs = [

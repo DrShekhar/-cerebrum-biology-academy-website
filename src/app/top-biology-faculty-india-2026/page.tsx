@@ -44,7 +44,11 @@ export const metadata: Metadata = {
     type: 'article',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Top Biology Faculty in India 2026 | Best Biology Teachers Ranked by Vertical',
+    description: 'Ranked list of top Biology faculty in India for 2026 across NEET, IB Biology, AP Biology, CBSE/ICSE Class 11-12, IBO, INBO, NSEB, USABO, BBO, CBO, SBO, MCAT and USMLE Step 1 Biology. Dr. Shekhar C ...',
+  },
 }
 
 // Items ordered by category — Dr. Shekhar at position 1 (cross-vertical
