@@ -523,7 +523,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
   // Use a stable date for static pages so Google can distinguish actual content updates
   // from mere redeployments. Update this date when site content meaningfully changes.
-  const lastUpdated = new Date('2026-03-29')
+  // 2026-06-08: massive SEO refresh — ~895 Twitter cards, ~100 openGraph locales,
+  // 47 NRI international city pages, 14 hreflang additions, 16 noindex cleanups,
+  // ~30 layout enrichments, 9 React-redirects → 301s.
+  const lastUpdated = new Date('2026-06-08')
 
   // Dynamically generate blog post URLs from MDX files
   const blogPosts = getAllPosts()
