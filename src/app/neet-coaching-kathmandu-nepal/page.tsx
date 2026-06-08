@@ -40,6 +40,11 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kathmandu-nepal',
+    languages: {
+      'en-NP': 'https://cerebrumbiologyacademy.com/neet-coaching-kathmandu-nepal',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-kathmandu-nepal',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-kathmandu-nepal',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

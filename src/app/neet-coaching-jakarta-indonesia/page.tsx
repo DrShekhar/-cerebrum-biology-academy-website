@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jakarta-indonesia',
+    languages: {
+      'en-ID': 'https://cerebrumbiologyacademy.com/neet-coaching-jakarta-indonesia',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-jakarta-indonesia',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-jakarta-indonesia',
+    },
   },
   openGraph: {
     title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,

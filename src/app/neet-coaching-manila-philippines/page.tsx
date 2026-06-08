@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-manila-philippines',
+    languages: {
+      'en-PH': 'https://cerebrumbiologyacademy.com/neet-coaching-manila-philippines',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-manila-philippines',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-manila-philippines',
+    },
   },
   openGraph: {
     title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,

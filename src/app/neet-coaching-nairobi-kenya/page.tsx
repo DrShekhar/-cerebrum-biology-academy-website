@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   ].join(', '),
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-nairobi-kenya',
+    languages: {
+      'en-KE': 'https://cerebrumbiologyacademy.com/neet-coaching-nairobi-kenya',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-nairobi-kenya',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-nairobi-kenya',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   ].join(', '),
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-dar-es-salaam-tanzania',
+    languages: {
+      'en-TZ': 'https://cerebrumbiologyacademy.com/neet-coaching-dar-es-salaam-tanzania',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-dar-es-salaam-tanzania',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-dar-es-salaam-tanzania',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

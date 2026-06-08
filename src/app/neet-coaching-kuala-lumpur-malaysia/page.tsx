@@ -43,6 +43,11 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kuala-lumpur-malaysia',
+    languages: {
+      'en-MY': 'https://cerebrumbiologyacademy.com/neet-coaching-kuala-lumpur-malaysia',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-kuala-lumpur-malaysia',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-kuala-lumpur-malaysia',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

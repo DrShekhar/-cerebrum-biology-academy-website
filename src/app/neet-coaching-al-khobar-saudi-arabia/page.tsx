@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   ].join(', '),
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-al-khobar-saudi-arabia',
+    languages: {
+      'en-SA': 'https://cerebrumbiologyacademy.com/neet-coaching-al-khobar-saudi-arabia',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-al-khobar-saudi-arabia',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-al-khobar-saudi-arabia',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

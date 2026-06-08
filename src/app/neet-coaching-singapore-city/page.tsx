@@ -43,6 +43,11 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-singapore-city',
+    languages: {
+      'en-SG': 'https://cerebrumbiologyacademy.com/neet-coaching-singapore-city',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-singapore-city',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-singapore-city',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   ].join(', '),
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-accra-ghana',
+    languages: {
+      'en-GH': 'https://cerebrumbiologyacademy.com/neet-coaching-accra-ghana',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-accra-ghana',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-accra-ghana',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

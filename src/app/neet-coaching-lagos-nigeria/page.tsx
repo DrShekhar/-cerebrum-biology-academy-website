@@ -38,6 +38,11 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-lagos-nigeria',
+    languages: {
+      'en-NG': 'https://cerebrumbiologyacademy.com/neet-coaching-lagos-nigeria',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-lagos-nigeria',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-lagos-nigeria',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

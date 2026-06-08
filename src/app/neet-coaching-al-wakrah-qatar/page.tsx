@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   ].join(', '),
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-al-wakrah-qatar',
+    languages: {
+      'en-QA': 'https://cerebrumbiologyacademy.com/neet-coaching-al-wakrah-qatar',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-al-wakrah-qatar',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-al-wakrah-qatar',
+    },
   },
   twitter: {
     card: 'summary_large_image' as const,

@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ho-chi-minh-vietnam',
+    languages: {
+      'en-VN': 'https://cerebrumbiologyacademy.com/neet-coaching-ho-chi-minh-vietnam',
+      'en-IN': 'https://cerebrumbiologyacademy.com/neet-coaching-ho-chi-minh-vietnam',
+      'x-default': 'https://cerebrumbiologyacademy.com/neet-coaching-ho-chi-minh-vietnam',
+    },
   },
   openGraph: {
     title: `NEET Biology Coaching in ${city.city}, ${city.country} | Cerebrum`,
