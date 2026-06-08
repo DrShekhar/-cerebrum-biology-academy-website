@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       'Live countdown to NEET 2026 exam. Track preparation progress, study hours, and important dates.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
     images: [
       {

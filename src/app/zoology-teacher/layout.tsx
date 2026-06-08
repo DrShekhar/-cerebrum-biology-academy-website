@@ -10,6 +10,7 @@ export const metadata: Metadata = {
       'Expert zoology teacher for NEET preparation. Specialized coaching in animal biology, human physiology, genetics & ecology by AIIMS-trained faculty. Book free demo!',
     url: 'https://cerebrumbiologyacademy.com/zoology-teacher',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/zoology-teacher',

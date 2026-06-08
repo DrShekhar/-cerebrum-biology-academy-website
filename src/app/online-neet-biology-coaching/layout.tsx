@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: "Live NEET biology classes from anywhere in India. AIIMS faculty, small batches, personal mentoring. Starting Rs 2,500/month.",
     url: "https://cerebrumbiologyacademy.com/online-neet-biology-coaching",
     type: "website",
+    locale: "en_IN",
   },
 }
 

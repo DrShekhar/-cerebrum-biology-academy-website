@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     description:
       'Expert IB Biology tutoring for HL and SL students. Personalized coaching for IA, Extended Essay, and exam preparation.',
     type: 'website',
+    locale: 'en_IN',
     siteName: 'Cerebrum Biology Academy',
   },
 }

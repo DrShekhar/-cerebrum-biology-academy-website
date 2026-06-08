@@ -10,6 +10,7 @@ export const metadata: Metadata = {
       'Free NEET score calculator 2026. Calculate your expected NEET score based on correct, incorrect & unattempted questions. Instant results with rank prediction.',
     url: 'https://cerebrumbiologyacademy.com/neet-score-calculator',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-score-calculator',

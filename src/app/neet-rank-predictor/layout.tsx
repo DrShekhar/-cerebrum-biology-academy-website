@@ -10,6 +10,7 @@ export const metadata: Metadata = {
       'Free NEET rank predictor 2026. Predict your All India Rank based on expected score. See eligible medical colleges, cutoffs & admission chances. Instant results!',
     url: 'https://cerebrumbiologyacademy.com/neet-rank-predictor',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-rank-predictor',

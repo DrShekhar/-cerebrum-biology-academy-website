@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       'Expert Maharashtra HSC biology tuition for board exams & MHT-CET/NEET preparation. State board aligned teaching with competitive exam focus. Online classes available!',
     url: 'https://cerebrumbiologyacademy.com/maharashtra-hsc-biology-tuition',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/maharashtra-hsc-biology-tuition',

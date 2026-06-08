@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     description:
       'Expert MCAT Biology preparation with Campbell Biology-based curriculum. Score 520+ with our proven tutoring methods.',
     type: 'website',
+    locale: 'en_US',
     siteName: 'Cerebrum Biology Academy',
   },
 }

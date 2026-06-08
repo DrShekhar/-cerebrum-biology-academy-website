@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     description:
       'Find the perfect NEET Biology program. AIIMS doctor-led teaching. 695/720 NEET topper produced. Class 9–12 & Dropper batches.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/whatsapp-course-selector',
   },
   twitter: {

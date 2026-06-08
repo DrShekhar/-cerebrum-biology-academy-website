@@ -20,6 +20,7 @@ export const metadata: Metadata = {
       'Attend live NEET online classes from anywhere in India. Expert faculty, interactive sessions, recorded lectures for revision.',
     url: 'https://cerebrumbiologyacademy.com/neet-online-classes',
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',

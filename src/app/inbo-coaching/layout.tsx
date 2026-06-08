@@ -45,6 +45,7 @@ export const metadata: Metadata = {
     description:
       'Expert INBO coaching for Indian students. Indian Biology Olympiad preparation with NSEB and INBiO focus. Get selected for OCSC and IBO.',
     type: 'website',
+    locale: 'en_IN',
     siteName: 'Cerebrum Biology Academy',
   },
 }

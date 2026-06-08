@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     description:
       'Master Campbell Biology with expert tutoring. All 56 chapters covered for Olympiad, NEET, MCAT, AP & IB Biology.',
     type: 'website',
+    locale: 'en_US',
     siteName: 'Cerebrum Biology Academy',
   },
 }

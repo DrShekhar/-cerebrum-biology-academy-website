@@ -22,6 +22,7 @@ export const metadata: Metadata = {
       'All-in-one NEET preparation tools. Free rank predictor, college finder, study planner, and practice tests.',
     url: 'https://cerebrumbiologyacademy.com/neet-tools',
     type: 'website',
+    locale: 'en_IN',
     images: [
       {
         url: '/images/neet-tools.jpg',

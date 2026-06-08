@@ -22,6 +22,7 @@ export const metadata: Metadata = {
       'Generate your personalized NEET Biology study plan. Week-by-week schedule optimized for your preparation time and weak areas.',
     url: 'https://cerebrumbiologyacademy.com/neet-study-plan-generator',
     type: 'website',
+    locale: 'en_IN',
     images: [
       {
         url: '/images/neet-study-plan-generator.jpg',

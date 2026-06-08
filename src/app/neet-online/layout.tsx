@@ -20,6 +20,7 @@ export const metadata: Metadata = {
       "Start your NEET online preparation with India's top Biology faculty. Live classes, video lectures & mock tests.",
     url: 'https://cerebrumbiologyacademy.com/neet-online',
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',

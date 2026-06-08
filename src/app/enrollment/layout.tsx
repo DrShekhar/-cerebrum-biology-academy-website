@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/enrollment',
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',

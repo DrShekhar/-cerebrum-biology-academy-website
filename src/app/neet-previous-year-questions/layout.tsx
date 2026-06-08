@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Cerebrum Biology Academy' }],
   openGraph: {
     type: 'website',
+    locale: 'en_IN',
     title: 'NEET Biology Previous Year Questions (2019-2024) | Free PYQ with Solutions',
     description:
       'Practice 500+ NEET Biology PYQs from 2019-2024 with detailed solutions. Chapter-wise analysis reveals high-yield topics. By AIIMS faculty.',

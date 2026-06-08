@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     description:
       'AI-powered adaptive testing for NEET Biology preparation. Practice with personalized question difficulty.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/adaptive-testing',
     siteName: 'Cerebrum Biology Academy',
   },

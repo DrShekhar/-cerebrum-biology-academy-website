@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
   twitter: { card: 'summary_large_image' as const },
 
-  openGraph: { title: 'Offline', description: 'Offline', type: 'website' },
+  openGraph: { title: 'Offline', description: 'Offline', type: 'website', locale: 'en_IN' },
 }
 
 export default function OfflineLayout({ children }: { children: React.ReactNode }) {

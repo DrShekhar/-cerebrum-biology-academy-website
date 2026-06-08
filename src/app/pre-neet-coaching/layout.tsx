@@ -10,6 +10,7 @@ export const metadata: Metadata = {
       'Pre-NEET foundation coaching for Class 8-10 students. Build a strong biology foundation early for NEET success. AIIMS-trained faculty, concept-based learning. Enroll now!',
     url: 'https://cerebrumbiologyacademy.com/pre-neet-coaching',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/pre-neet-coaching',

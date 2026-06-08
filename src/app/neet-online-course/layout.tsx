@@ -20,6 +20,7 @@ export const metadata: Metadata = {
       'Enroll in comprehensive NEET online course with complete syllabus coverage. Video lectures, practice tests & study material.',
     url: 'https://cerebrumbiologyacademy.com/neet-online-course',
     type: 'website',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',

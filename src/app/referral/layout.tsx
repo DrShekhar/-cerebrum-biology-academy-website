@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description:
       'Refer friends to Cerebrum Biology Academy and earn rewards. Get ₹500 for every successful referral.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/referral',
     siteName: 'Cerebrum Biology Academy',
   },

@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     description:
       'Transform your NEET failure into medical college success. Specialized coaching for repeaters with proven results.',
     type: 'website',
+    locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/second-chance-neet',
     siteName: 'Cerebrum Biology Academy',
     images: [
