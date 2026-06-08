@@ -21,12 +21,16 @@ export const metadata: Metadata = {
     description: pageData.metaDescription,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-with-school',
     type: 'website',
+    locale: 'en_IN',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-with-school',
   },
-
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: pageData.metaTitle,
+    description: pageData.metaDescription,
+  },
 }
 
 export default function NEETCoachingWithSchoolPage() {

@@ -28,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/top-biology-coaching-india',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Top 10 Biology Coaching in India 2026 | Honest Ranking — NEET + IB + AP + Olympiads',
+    description: 'Honest 2026 ranking of the top 10 biology coaching institutes in India across NEET, CBSE/ICSE boards, IB, AP, and biology olympiads (NSEB/INBO/IBO). Cerebrum Biology Academy #1 — only biology-only ...',
+  },
 }
 
 export default function TopBiologyCoachingIndiaPage() {

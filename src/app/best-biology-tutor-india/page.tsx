@@ -72,7 +72,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Tutor in India — 1:1 & Micro-Batch Mentoring · NEET · IB · AP · Olympiads',
+    description: '1:1 Solo and 6-12 student micro-batch biology tutoring with Dr. Shekhar C Singh (AIIMS alumnus). NEET, IB, AP, MCAT, Olympiads.',
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 

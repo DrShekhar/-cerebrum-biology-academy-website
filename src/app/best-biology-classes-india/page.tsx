@@ -71,7 +71,12 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Classes in India · NEET · IB · AP · Olympiads',
+    description:
+      "India's best biology classes — Cerebrum by Dr. Shekhar C Singh (AIIMS Delhi). Live online + 4 offline Delhi NCR centres. NEET, IB, AP, MCAT, Olympiads.",
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 
