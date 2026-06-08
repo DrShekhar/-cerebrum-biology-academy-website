@@ -82,7 +82,12 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Olympiad Coaching in India · Cerebrum',
+    description:
+      'India / USA (USABO) / UK (BBO) / Canada (CBO) / Singapore (SBO) — full biology olympiad funnel from AIIMS-trained faculty.',
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 

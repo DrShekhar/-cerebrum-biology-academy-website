@@ -81,7 +81,12 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best Biology Coaching in India 2026 · Cerebrum',
+    description:
+      "India's biology-only specialist coaching — NEET, IB, AP, IGCSE, USABO, IBO, MCAT B/B. AIIMS-trained Dr. Shekhar C Singh. 98% qualification.",
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 

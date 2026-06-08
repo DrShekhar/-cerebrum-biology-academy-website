@@ -64,7 +64,12 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Best IBO Coaching in India · Cerebrum Biology Academy',
+    description:
+      "India's biology specialist for International Biology Olympiad. Full NSEB → INBO → OCSC → IBO funnel. AIIMS faculty.",
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 

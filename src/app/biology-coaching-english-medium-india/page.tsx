@@ -86,7 +86,12 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'Biology Coaching in English Medium · Cerebrum',
+    description:
+      'English-medium biology coaching for NRI families + regional-medium-to-English switchers + IB/AP/IGCSE students. NCERT-deep biology, AIIMS faculty.',
+  },
   robots: 'index, follow, max-image-preview:large',
 }
 
