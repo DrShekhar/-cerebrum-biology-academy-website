@@ -108,7 +108,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-kashmere-gate-metro',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Near Kashmere Gate Metro | Biology Classes North Delhi',
+    description: 'NEET Biology coaching near Kashmere Gate Metro Station, North Delhi. ${metroData.studentCount} students enrolled from Civil Lines, Old Delhi, Model Town. Red, Yellow, Violet Line connectivity. AIIM...',
+  },
 }
 
 export default function NEETCoachingKashmereGateMetroPage() {

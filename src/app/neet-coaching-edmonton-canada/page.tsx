@@ -22,7 +22,11 @@ export const metadata: Metadata = {
     url: PAGE_URL, locale: 'en_CA', type: 'website',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Biology Coaching in Edmonton, Canada | Cerebrum',
+    description: "Live online NEET Biology coaching for Edmonton Indian-origin Class 11-12 students. Mill Woods feeders, MST batch, NRI quota.",
+  },
 }
 
 const wa = 'https://wa.me/918826444334?text=' + encodeURIComponent("Hi — I'm in Edmonton (Canada) and interested in NEET Biology coaching for my child. Please share programme details, MST slot timings, and pricing.")

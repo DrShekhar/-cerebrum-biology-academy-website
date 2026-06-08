@@ -110,7 +110,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-hauz-khas-metro',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Near Hauz Khas Metro | Biology Classes South Delhi',
+    description: 'NEET Biology coaching near Hauz Khas Metro Station, South Delhi. ${metroData.studentCount} students enrolled from IIT Delhi, SDA, Green Park areas. Just ${metroData.nearestCenter.distance} to cente...',
+  },
 }
 
 export default function NEETCoachingHauzKhasMetroPage() {

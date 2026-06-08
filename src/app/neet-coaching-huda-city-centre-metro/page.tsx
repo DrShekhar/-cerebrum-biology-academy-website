@@ -96,7 +96,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-huda-city-centre-metro',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Near HUDA City Centre Metro | Biology Classes Gurugram',
+    description: 'NEET Biology coaching near HUDA City Centre Metro Station, Gurugram. ${metroData.studentCount} students enrolled from Cyber City, DLF, MG Road, Golf Course Road. Yellow Line terminal. Online & Offl...',
+  },
 }
 
 export default function NEETCoachingHUDACityCentreMetroPage() {

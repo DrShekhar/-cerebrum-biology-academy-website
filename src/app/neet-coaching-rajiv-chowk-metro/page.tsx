@@ -101,7 +101,11 @@ export const metadata: Metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-rajiv-chowk-metro',
   },
 
-  twitter: { card: 'summary_large_image' as const },
+  twitter: {
+    card: 'summary_large_image' as const,
+    title: 'NEET Coaching Near Rajiv Chowk Metro | Biology Classes Central Delhi',
+    description: 'NEET Biology coaching near Rajiv Chowk Metro Station, Central Delhi. ${metroData.studentCount} students enrolled. Yellow & Blue Line connectivity. ${metroData.nearestCenter.distance} to center. AII...',
+  },
 }
 
 export default function NEETCoachingRajivChowkMetroPage() {

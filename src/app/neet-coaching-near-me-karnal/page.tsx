@@ -36,7 +36,11 @@ export const metadata: Metadata = city
         locale: 'en_IN',
         type: 'website',
       },
-      twitter: { card: 'summary_large_image' as const },
+      twitter: {
+        card: 'summary_large_image' as const,
+        title: `NEET Coaching in ${city.displayName} · Cerebrum Biology Academy`,
+        description: `Best NEET Biology coaching for ${city.displayName} students at Cerebrum.`,
+      },
       robots: 'index, follow, max-image-preview:large',
     }
   : { title: 'City not found' }
