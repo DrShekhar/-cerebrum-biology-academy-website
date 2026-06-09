@@ -591,7 +591,7 @@ export default function Home() {
       {/* Content Freshness Schema for E-E-A-T signals */}
       <ContentFreshness
         datePublished="2024-01-15"
-        dateModified="2026-05-15"
+        dateModified="2026-06-08"
         author={{
           name: 'Dr. Shekhar C Singh',
           url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india',

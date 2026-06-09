@@ -127,7 +127,7 @@ export default function CoursesPage() {
       <EnhancedCoursesListingPage />
       <ContentFreshness
         datePublished="2024-01-01"
-        dateModified="2026-02-25"
+        dateModified="2026-06-08"
         author={{
           name: 'Dr. Shekhar C Singh',
           url: 'https://cerebrumbiologyacademy.com/faculty',
