@@ -64,7 +64,7 @@ export default function HowToScore340InNEETBiology() {
       },
     },
     datePublished: '2026-02-08',
-    dateModified: '2026-02-08',
+    dateModified: '2026-06-08',
   }
 
   const howToSchema = {

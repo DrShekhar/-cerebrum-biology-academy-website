@@ -97,7 +97,7 @@ export default function ComparisonLayout({ children }: { children: React.ReactNo
               name: 'Cerebrum Biology Academy',
             },
             datePublished: '2026-01-01',
-            dateModified: '2026-01-25',
+            dateModified: '2026-06-08',
           }),
         }}
       />

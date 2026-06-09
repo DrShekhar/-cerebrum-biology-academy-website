@@ -55,7 +55,7 @@ export default function APBiologyAnkiDeckPage() {
     url: `${SITE_URL}${CANONICAL}`,
     inLanguage: 'en-US',
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: '2026-06-08',
     author: { '@type': 'Person', name: 'Dr. Shekhar C Singh', url: `${SITE_URL}/faculty` },
     publisher: {
       '@type': 'EducationalOrganization',

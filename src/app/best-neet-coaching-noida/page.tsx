@@ -120,7 +120,7 @@ export default function BestNEETCoachingNoidaPage() {
       },
     },
     datePublished: '2025-01-01',
-    dateModified: '2026-01-26',
+    dateModified: '2026-06-08',
   }
 
   const faqSchema = {

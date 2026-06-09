@@ -227,7 +227,7 @@ export default function HowMuchFeesForNEETCoachingFaridabad() {
         author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
         publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
         datePublished: '2025-01-01',
-        dateModified: '2025-01-26',
+        dateModified: '2026-06-08',
       }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',

@@ -286,7 +286,7 @@ const articleSchema = {
     },
   },
   datePublished: '2026-04-29',
-  dateModified: '2026-04-29',
+  dateModified: '2026-06-08',
   about: [
     { '@type': 'Thing', name: 'AP Biology' },
     { '@type': 'Thing', name: 'USABO' },

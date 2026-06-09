@@ -181,7 +181,7 @@ const articleSchema = {
   url: URL,
   inLanguage: 'en-US',
   datePublished: '2026-04-29',
-  dateModified: '2026-04-29',
+  dateModified: '2026-06-08',
   author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
   publisher: {
     '@type': 'Organization',

@@ -234,7 +234,7 @@ export default function WhyCoachingOverHomeTutor() {
       url: 'https://cerebrumbiologyacademy.com',
     },
     datePublished: '2026-03-20',
-    dateModified: '2026-03-20',
+    dateModified: '2026-06-08',
   }
 
   return (

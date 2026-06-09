@@ -69,7 +69,7 @@ export default function APBiologyScore5StudyGuidePage() {
     url: `${SITE_URL}${CANONICAL}`,
     inLanguage: 'en-US',
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: '2026-06-08',
     author: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

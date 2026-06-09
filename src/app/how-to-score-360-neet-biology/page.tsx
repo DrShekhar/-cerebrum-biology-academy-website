@@ -53,7 +53,7 @@ export default function HowToScore360NEETBiologyPage() {
       },
     },
     datePublished: '2025-01-01',
-    dateModified: '2026-01-27',
+    dateModified: '2026-06-08',
     mainEntityOfPage: 'https://cerebrumbiologyacademy.com/how-to-score-360-neet-biology',
   }
 

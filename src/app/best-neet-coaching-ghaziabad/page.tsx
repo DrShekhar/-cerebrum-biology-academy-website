@@ -120,7 +120,7 @@ export default function BestNEETCoachingGhaziabadPage() {
       },
     },
     datePublished: '2025-01-01',
-    dateModified: '2026-02-19',
+    dateModified: '2026-06-08',
   }
 
   const faqSchema = {

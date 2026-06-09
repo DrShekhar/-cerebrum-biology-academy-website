@@ -67,7 +67,7 @@ export default function APBiologyFRQRubricMasteryPage() {
     inLanguage: 'en-US',
     image: `${SITE_URL}/og-image.jpg`,
     datePublished: '2026-04-30',
-    dateModified: '2026-04-30',
+    dateModified: '2026-06-08',
     author: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

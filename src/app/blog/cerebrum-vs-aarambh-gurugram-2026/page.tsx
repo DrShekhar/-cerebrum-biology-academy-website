@@ -175,7 +175,7 @@ export default function CerebrumVsAarambhPage() {
       url: 'https://cerebrumbiologyacademy.com',
     },
     datePublished: '2026-03-20',
-    dateModified: '2026-03-20',
+    dateModified: '2026-06-08',
     mainEntityOfPage:
       'https://cerebrumbiologyacademy.com/blog/cerebrum-vs-aarambh-gurugram-2026',
   }

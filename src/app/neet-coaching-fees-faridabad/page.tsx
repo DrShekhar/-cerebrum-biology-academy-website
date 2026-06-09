@@ -482,7 +482,7 @@ export default function NEETCoachingFeesFaridabadPage() {
               url: 'https://cerebrumbiologyacademy.com',
             },
             datePublished: '2025-01-01',
-            dateModified: '2026-02-19',
+            dateModified: '2026-06-08',
           }),
         }}
       />

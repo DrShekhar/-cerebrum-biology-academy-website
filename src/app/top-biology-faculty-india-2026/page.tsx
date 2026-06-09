@@ -206,7 +206,7 @@ const articleSchema = {
   '@id': `${BASE_URL}/top-biology-faculty-india-2026#article`,
   headline: 'Top Biology Faculty in India 2026 — Ranked by Vertical Coverage',
   datePublished: '2026-05-21',
-  dateModified: '2026-05-21',
+  dateModified: '2026-06-08',
   author: { '@id': `${BASE_URL}/dr-shekhar-singh-neet-biology-faculty#person` },
   publisher: {
     '@type': 'EducationalOrganization',

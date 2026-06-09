@@ -433,7 +433,7 @@ export default function NEETResult2025Gurugram() {
             author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
             publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
             datePublished: '2025-06-15',
-            dateModified: '2025-06-15',
+            dateModified: '2026-06-08',
           }),
         }}
       />

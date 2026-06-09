@@ -491,7 +491,7 @@ export default function NEETBiologyChapterWeightageGurugram() {
             author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
             publisher: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
             datePublished: '2026-01-01',
-            dateModified: '2026-01-27',
+            dateModified: '2026-06-08',
           }),
         }}
       />
