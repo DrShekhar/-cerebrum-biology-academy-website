@@ -37,6 +37,7 @@ export const metadata: Metadata = {
         url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-dammam-saudi-arabia.jpg',
         width: 1200,
         height: 630,
+        alt: 'Neet Coaching Dammam Saudi Arabia — Cerebrum Biology Academy',
       },
     ],
   },

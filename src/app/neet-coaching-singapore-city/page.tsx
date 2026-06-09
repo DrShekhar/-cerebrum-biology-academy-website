@@ -37,6 +37,7 @@ export const metadata: Metadata = {
         url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-singapore-city.jpg',
         width: 1200,
         height: 630,
+        alt: 'Neet Coaching Singapore City — Cerebrum Biology Academy',
       },
     ],
   },

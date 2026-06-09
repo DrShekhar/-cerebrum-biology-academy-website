@@ -32,6 +32,7 @@ export const metadata: Metadata = {
         url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-lagos-nigeria.jpg',
         width: 1200,
         height: 630,
+        alt: 'Neet Coaching Lagos Nigeria — Cerebrum Biology Academy',
       },
     ],
   },
