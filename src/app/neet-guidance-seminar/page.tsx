@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SEMINAR_CONFIG.title,
     description: SEMINAR_CONFIG.subtitle,
-    images: ['https://cerebrumbiologyacademy.com/og/neet-guidance-seminar.jpg'],
+    images: [{ url: 'https://cerebrumbiologyacademy.com/og/neet-guidance-seminar.jpg', width: 1200, height: 630, alt: 'Neet Guidance Seminar — Cerebrum Biology Academy' }],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-guidance-seminar',

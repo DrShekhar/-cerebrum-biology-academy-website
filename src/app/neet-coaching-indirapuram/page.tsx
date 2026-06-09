@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: cityData.metaTitle,
-    images: ['/og-image.jpg'],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Image — Cerebrum Biology Academy' }],
     description: cityData.metaDescription,
     url: `https://cerebrumbiologyacademy.com/neet-coaching-indirapuram`,
   },

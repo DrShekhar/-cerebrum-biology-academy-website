@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'Free NEET Demo Class Gurugram',
-    images: ['/og-image.jpg'],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Free NEET Demo Class Gurugram | Book Now' }],
     description: 'Book your FREE NEET demo class. Experience our teaching before you decide.',
     url: 'https://cerebrumbiologyacademy.com/free-neet-demo-class-gurugram',
   },

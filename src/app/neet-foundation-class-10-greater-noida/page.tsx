@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Foundation Class 10 in Greater Noida | 2-Year Head Start',
-    images: ['/og-image.jpg'],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NEET Foundation Class 10 in Greater Noida | 2-Year Head Start' }],
     description:
       'Get 2-year head start for NEET from Class 10 in Greater Noida. Online + hybrid classes available.',
     url: 'https://cerebrumbiologyacademy.com/neet-foundation-class-10-greater-noida',

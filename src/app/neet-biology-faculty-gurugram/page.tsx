@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     locale: 'en_IN',
     title: 'NEET Biology Faculty Gurugram',
-    images: ['/og-image.jpg'],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NEET Biology Faculty Gurugram | AIIMS Faculty' }],
     description: 'AIIMS graduates with 15+ years experience. 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-faculty-gurugram',
   },

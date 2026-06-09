@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description:
       'NEET coaching for Nepali students. NEET is the primary exam for medical education. 98% success rate with Nepali curriculum bridge.',
     creator: '@cerebrumbiology',
-    images: ['https://cerebrumbiologyacademy.com/og-neet-coaching-nepal.jpg'],
+    images: [{ url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-nepal.jpg', width: 1200, height: 630, alt: 'Neet Coaching Nepal — Cerebrum Biology Academy' }],
   },
 }
 

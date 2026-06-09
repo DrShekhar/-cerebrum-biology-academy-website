@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description:
       'Top-rated biology coaching in Delhi NCR. AIIMS faculty, 98% success rate. Centers in Rohini, South Delhi, Gurugram.',
     url: 'https://cerebrumbiologyacademy.com/biology-classes-delhi',
-    images: ['/og/biology-classes-delhi.jpg'],
+    images: [{ url: '/og/biology-classes-delhi.jpg', width: 1200, height: 630, alt: 'Bioly Classes Delhi — Cerebrum Biology Academy' }],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-delhi',

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       'NEET coaching for NRI students in Singapore. 4 CBSE schools, 600K Indians. Bridge from IB/IGCSE to NEET with 98% success rate.',
     creator: '@cerebrumbiology',
-    images: ['https://cerebrumbiologyacademy.com/og-neet-coaching-singapore.jpg'],
+    images: [{ url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-singapore.jpg', width: 1200, height: 630, alt: 'Neet Coaching Singapore — Cerebrum Biology Academy' }],
   },
 }
 

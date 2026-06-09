@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: 'Book Free Demo Class',
-    images: ['/og-image.jpg'],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Book Free Demo Class | NEET Biology Trial Lesson' }],
     description:
       'Experience NEET Biology coaching with AIIMS-trained faculty. Book your free demo class today!',
     type: 'website',

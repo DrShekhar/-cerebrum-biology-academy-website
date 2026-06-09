@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Biology Mock Test 2026 | Free Online | 90 Questions',
-    images: ['/og-image.jpg'],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'NEET Biology Mock Test 2026 | Free Online | 90 Questions' }],
     description:
       'Take free NEET Biology mock test with 90 questions. NTA pattern, detailed solutions, performance analysis. Test your NEET readiness. By AIIMS faculty.',
     url: `${BASE_URL}/free-neet-biology-mock-test`,
