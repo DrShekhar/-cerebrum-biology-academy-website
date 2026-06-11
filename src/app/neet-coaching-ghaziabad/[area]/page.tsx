@@ -196,13 +196,6 @@ export default async function GhaziabadAreaPage({ params }: Props) {
       '@type': 'Place',
       name: areaData.fullName,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   // Schema 2: LocalBusiness
@@ -420,7 +413,11 @@ export default async function GhaziabadAreaPage({ params }: Props) {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       {/* Schema Markup */}
       <script

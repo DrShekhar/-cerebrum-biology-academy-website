@@ -43,7 +43,14 @@ export const metadata: Metadata = {
     description:
       'Top-rated biology coaching in Delhi NCR. AIIMS faculty, 98% success rate. Centers in Rohini, South Delhi, Gurugram.',
     url: 'https://cerebrumbiologyacademy.com/biology-classes-delhi',
-    images: [{ url: '/og/biology-classes-delhi.jpg', width: 1200, height: 630, alt: 'Bioly Classes Delhi — Cerebrum Biology Academy' }],
+    images: [
+      {
+        url: '/og/biology-classes-delhi.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bioly Classes Delhi — Cerebrum Biology Academy',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-classes-delhi',
@@ -52,7 +59,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Classes in Delhi | Best NEET Biology Coaching',
-    description: 'Join the best biology classes in Delhi with AIIMS-trained faculty. 4 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
+    description:
+      'Join the best biology classes in Delhi with AIIMS-trained faculty. 4 centers in Rohini, South Extension, Gurugram & Faridabad. 98% success rate, 15000+ students. Book free demo!',
   },
 }
 
@@ -270,14 +278,6 @@ export default function BiologyClassesDelhiPage() {
       'Ghaziabad',
       'Faridabad',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

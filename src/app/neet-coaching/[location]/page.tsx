@@ -126,11 +126,6 @@ function generateStructuredData(location: NEETCoachingLocation) {
           addressRegion: location.state,
           addressCountry: 'IN',
         },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '5.0',
-          reviewCount: '38',
-        },
       }
     : null
 
@@ -169,10 +164,7 @@ export default async function NEETCoachingLocationPage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       )}
-      <NEETCoachingPageContent
-        location={locationData}
-        relatedLocations={relatedLocations}
-      />
+      <NEETCoachingPageContent location={locationData} relatedLocations={relatedLocations} />
     </>
   )
 }

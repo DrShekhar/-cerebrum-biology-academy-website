@@ -60,7 +60,8 @@ function NoidaServiceSchema() {
     '@type': 'LocalBusiness',
     additionalType: 'EducationalOrganization',
     name: 'Cerebrum Biology Academy - Noida',
-    description: 'Best NEET Biology coaching in Noida with AIIMS faculty. 98% success rate, small batches, Sector 62 location.',
+    description:
+      'Best NEET Biology coaching in Noida with AIIMS faculty. 98% success rate, small batches, Sector 62 location.',
     url: 'https://cerebrumbiologyacademy.com/locations/noida',
     telephone: '+91-88264-44334',
     email: 'info@cerebrumbiologyacademy.com',
@@ -90,13 +91,6 @@ function NoidaServiceSchema() {
       'Gaur City',
     ],
     // IMPORTANT: Must match Google Business Profile exactly (verified Feb 2026)
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '19',
-      bestRating: '5',
-      worstRating: '1',
-    },
     priceRange: '₹40,000 - ₹1,80,000',
     openingHoursSpecification: [
       {
@@ -178,21 +172,36 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
             ],
           }),
         }}
-      />      <script
+      />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Noida', item: 'https://cerebrumbiologyacademy.com/locations/noida' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Noida',
+                item: 'https://cerebrumbiologyacademy.com/locations/noida',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

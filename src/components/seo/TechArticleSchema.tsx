@@ -26,7 +26,12 @@ interface TechArticleSchemaProps {
   // Educational properties
   educationalLevel?: 'Class 9' | 'Class 10' | 'Class 11' | 'Class 12' | 'NEET Aspirant'
   teaches?: string[]
-  learningResourceType?: 'Study Guide' | 'Practice Questions' | 'Revision Notes' | 'Video Lecture' | 'Blog Post'
+  learningResourceType?:
+    | 'Study Guide'
+    | 'Practice Questions'
+    | 'Revision Notes'
+    | 'Video Lecture'
+    | 'Blog Post'
   // Tech article specific
   dependencies?: string[]
   proficiencyLevel?: 'Beginner' | 'Intermediate' | 'Advanced'
@@ -61,9 +66,7 @@ export function TechArticleSchema({
     alternativeHeadline: `${title} - NEET Biology Guide`,
     description: description,
     articleBody: articleBody,
-    image: featuredImage
-      ? `${baseUrl}${featuredImage}`
-      : `${baseUrl}/og-image.jpg`,
+    image: featuredImage ? `${baseUrl}${featuredImage}` : `${baseUrl}/og-image.jpg`,
     author: {
       '@type': 'Person',
       name: author.name,
@@ -121,7 +124,8 @@ export function TechArticleSchema({
     about: {
       '@type': 'Thing',
       name: 'NEET Biology Preparation',
-      description: 'National Eligibility cum Entrance Test (NEET) Biology preparation for medical college admission in India',
+      description:
+        'National Eligibility cum Entrance Test (NEET) Biology preparation for medical college admission in India',
     },
     // Citation tracking
     citation: {
@@ -129,14 +133,7 @@ export function TechArticleSchema({
       name: 'NCERT Biology Textbook',
       author: 'NCERT',
     },
-    // Aggregate rating if available
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }
 
   // Clean up undefined values

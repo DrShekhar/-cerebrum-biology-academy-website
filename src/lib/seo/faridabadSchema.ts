@@ -12,10 +12,7 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 /**
  * Generate LocalBusiness schema for a specific Faridabad area
  */
-export function generateFaridabadLocalBusinessSchema(
-  area: FaridabadAreaDetails,
-  slug: string
-) {
+export function generateFaridabadLocalBusinessSchema(area: FaridabadAreaDetails, slug: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
@@ -30,10 +27,7 @@ export function generateFaridabadLocalBusinessSchema(
     url: `${BASE_URL}/neet-coaching-faridabad/${slug}`,
     telephone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    image: [
-      `${BASE_URL}/og-image.jpg`,
-      `${BASE_URL}/images/faridabad-center.jpg`,
-    ],
+    image: [`${BASE_URL}/og-image.jpg`, `${BASE_URL}/images/faridabad-center.jpg`],
     logo: `${BASE_URL}/logo.png`,
     priceRange: '\u20B9\u20B9-\u20B9\u20B9\u20B9',
     currenciesAccepted: 'INR',
@@ -78,23 +72,13 @@ export function generateFaridabadLocalBusinessSchema(
         closes: CONTACT_INFO.hours.sunday.close,
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 }
 
 /**
  * Generate FAQ schema for a specific Faridabad area
  */
-export function generateFaridabadFAQSchema(
-  area: FaridabadAreaDetails,
-  slug: string
-) {
+export function generateFaridabadFAQSchema(area: FaridabadAreaDetails, slug: string) {
   const baseFaqs = [
     {
       question: `What is the fee for NEET coaching in ${area.name}?`,
@@ -157,10 +141,7 @@ export function generateFaridabadFAQSchema(
 /**
  * Generate Breadcrumb schema for Faridabad area pages
  */
-export function generateFaridabadBreadcrumbSchema(
-  slug: string,
-  areaName: string
-) {
+export function generateFaridabadBreadcrumbSchema(slug: string, areaName: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -190,10 +171,7 @@ export function generateFaridabadBreadcrumbSchema(
 /**
  * Generate Event schema for free demo class in Faridabad area
  */
-export function generateFaridabadEventSchema(
-  area: FaridabadAreaDetails,
-  slug: string
-) {
+export function generateFaridabadEventSchema(area: FaridabadAreaDetails, slug: string) {
   const nextSaturday = new Date()
   nextSaturday.setDate(nextSaturday.getDate() + ((6 - nextSaturday.getDay() + 7) % 7 || 7))
   const eventDate = nextSaturday.toISOString().split('T')[0]
@@ -301,7 +279,8 @@ export function generateFaridabadCourseSchema() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Biology Coaching Program - Faridabad',
-    description: 'Comprehensive NEET Biology preparation by AIIMS faculty in Faridabad. Small batches of 15 students, 98% success rate, both offline and online options.',
+    description:
+      'Comprehensive NEET Biology preparation by AIIMS faculty in Faridabad. Small batches of 15 students, 98% success rate, both offline and online options.',
     provider: {
       '@type': 'Organization',
       name: 'Cerebrum Biology Academy - Faridabad',
@@ -349,12 +328,6 @@ export function generateFaridabadCourseSchema() {
     },
     coursePrerequisites: 'Class 10th completion',
     teaches: ['Botany', 'Zoology', 'Human Physiology', 'Genetics', 'Ecology', 'Cell Biology'],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
   }
 }
 
@@ -368,7 +341,8 @@ export function generateFaridabadServiceSchema() {
     '@id': `${BASE_URL}/neet-coaching-faridabad#service`,
     name: 'NEET Biology Coaching Faridabad',
     alternateName: ['NEET Coaching Faridabad', 'Best NEET Coaching Faridabad'],
-    description: 'Premier NEET Biology coaching in Faridabad serving Greater Faridabad, NIT, Ballabgarh, Old Faridabad, and 30+ areas. 98% success rate, AIIMS faculty, small batches.',
+    description:
+      'Premier NEET Biology coaching in Faridabad serving Greater Faridabad, NIT, Ballabgarh, Old Faridabad, and 30+ areas. 98% success rate, AIIMS faculty, small batches.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -389,12 +363,6 @@ export function generateFaridabadServiceSchema() {
       serviceUrl: `${BASE_URL}/neet-coaching-faridabad`,
       servicePhone: CONTACT_INFO.phone.primary,
       availableLanguage: ['English', 'Hindi'],
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

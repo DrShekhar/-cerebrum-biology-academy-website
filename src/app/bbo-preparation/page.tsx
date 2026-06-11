@@ -272,13 +272,6 @@ export default function BBOPreparationPage() {
             foundingDate: '2014',
             description:
               'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. BBO coaching covers the full UK olympiad pathway (Round 1 → Round 2 → IBO Team UK selection) for sixth-form students. Same biology-specialist faculty stack as our INBO / USABO / CBO / SBO / IBO programmes.',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />

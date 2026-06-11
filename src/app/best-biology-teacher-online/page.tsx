@@ -164,13 +164,6 @@ export default function BestBiologyTeacherOnlinePage() {
             '@id': 'https://cerebrumbiologyacademy.com/#organization',
             name: 'Cerebrum Biology Academy',
             url: 'https://cerebrumbiologyacademy.com',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />

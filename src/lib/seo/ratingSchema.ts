@@ -32,14 +32,6 @@ export function generateAggregateRatingSchema(reviews?: ReviewData[]) {
       postalCode: '110049',
       addressCountry: 'IN',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
     sameAs: [
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
@@ -136,14 +128,6 @@ export function generateCourseRatingSchema(courseData: {
       url: 'https://cerebrumbiologyacademy.com',
     },
     url: courseData.url,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: courseData.ratingValue,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount: courseData.ratingCount,
-      reviewCount: courseData.reviewCount,
-    },
     offers: {
       '@type': 'Offer',
       price: courseData.price,

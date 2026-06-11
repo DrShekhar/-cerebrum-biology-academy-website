@@ -25,7 +25,8 @@ const locationData = {
     nearbyLandmarks: ['DC Chauk Metro Station', 'Rohini Sector 9', 'Vikas Surya Mall'],
     studentCount: '850',
     googleBusinessUrl: CONTACT_INFO.centers.rohini.googleBusinessUrl,
-    googleMapsUrl: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+Rohini,+Delhi&ll=28.7143,77.1117&z=15',
+    googleMapsUrl:
+      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Rohini,+Delhi&ll=28.7143,77.1117&z=15',
     areaServed: [
       'North Delhi',
       'Rohini',
@@ -73,7 +74,8 @@ const locationData = {
     nearbyLandmarks: ['Sector 51 Gurugram', 'Golf Course Extension Road', 'Sohna Road'],
     studentCount: '620',
     googleBusinessUrl: CONTACT_INFO.centers.gurugram.googleBusinessUrl,
-    googleMapsUrl: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+Gurugram,+Haryana&ll=28.4153,77.0499&z=15',
+    googleMapsUrl:
+      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Gurugram,+Haryana&ll=28.4153,77.0499&z=15',
     areaServed: [
       'Gurugram',
       'DLF Phase 1',
@@ -128,7 +130,8 @@ const locationData = {
     nearbyLandmarks: ['South Extension Market', 'AIIMS Delhi', 'Lajpat Nagar'],
     studentCount: '780',
     googleBusinessUrl: CONTACT_INFO.centers.southExtension.googleBusinessUrl,
-    googleMapsUrl: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+South+Extension,+Delhi&ll=28.5725,77.2217&z=15',
+    googleMapsUrl:
+      'https://maps.google.com/?q=Cerebrum+Biology+Academy+South+Extension,+Delhi&ll=28.5725,77.2217&z=15',
     areaServed: [
       'South Delhi',
       'South Extension',
@@ -177,15 +180,9 @@ const locationData = {
     nearbyLandmarks: ['Green Park Metro Station', 'IIT Delhi', 'Hauz Khas'],
     studentCount: '720',
     googleBusinessUrl: CONTACT_INFO.centers.greenPark.googleBusinessUrl,
-    googleMapsUrl: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+Green+Park,+Delhi&ll=28.5597,77.2089&z=15',
-    areaServed: [
-      'Green Park',
-      'Safdarjung',
-      'INA',
-      'RK Puram',
-      'Malviya Nagar',
-      'Vasant Kunj',
-    ],
+    googleMapsUrl:
+      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Green+Park,+Delhi&ll=28.5597,77.2089&z=15',
+    areaServed: ['Green Park', 'Safdarjung', 'INA', 'RK Puram', 'Malviya Nagar', 'Vasant Kunj'],
     reviews: [
       {
         author: 'Nisha Sharma',
@@ -224,7 +221,8 @@ const locationData = {
     nearbyLandmarks: ['Sector 17 Market', 'NHPC Chowk', 'Faridabad Railway Station'],
     studentCount: '550',
     googleBusinessUrl: CONTACT_INFO.centers.faridabad.googleBusinessUrl,
-    googleMapsUrl: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+Faridabad,+Haryana&ll=28.3870,77.3070&z=15',
+    googleMapsUrl:
+      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Faridabad,+Haryana&ll=28.3870,77.3070&z=15',
     areaServed: [
       'Faridabad',
       'Sector 15',
@@ -277,15 +275,9 @@ const locationData = {
     nearbyLandmarks: ['Sector 62 Metro Station', 'Electronic City', 'Noida City Centre'],
     studentCount: '480',
     googleBusinessUrl: CONTACT_INFO.centers.noida.googleBusinessUrl,
-    googleMapsUrl: 'https://maps.google.com/?q=Cerebrum+Biology+Academy+Noida,+Uttar+Pradesh&ll=28.6280,77.3649&z=15',
-    areaServed: [
-      'Noida',
-      'Sector 18',
-      'Sector 44',
-      'Sector 62',
-      'Greater Noida',
-      'Film City',
-    ],
+    googleMapsUrl:
+      'https://maps.google.com/?q=Cerebrum+Biology+Academy+Noida,+Uttar+Pradesh&ll=28.6280,77.3649&z=15',
+    areaServed: ['Noida', 'Sector 18', 'Sector 44', 'Sector 62', 'Greater Noida', 'Film City'],
     reviews: [
       {
         author: 'Aarav Tiwari',
@@ -370,31 +362,10 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       minValue: 10,
       maxValue: 20,
     },
-    // TODO: Update quarterly from Google Business Profile
-    // Source of truth: CEREBRUM_METRICS in src/lib/constants/metrics.ts
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: String(CEREBRUM_METRICS.rating),
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: String(CEREBRUM_METRICS.reviewCount),
-      reviewCount: String(CEREBRUM_METRICS.reviewCount),
-    },
-    review: location.reviews.map((review) => ({
-      '@type': 'Review',
-      author: {
-        '@type': 'Person',
-        name: review.author,
-      },
-      datePublished: review.date,
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: review.rating.toString(),
-        bestRating: '5',
-        worstRating: '1',
-      },
-      reviewBody: review.body,
-    })),
+    // review/aggregateRating removed 2026-06: self-serving review markup on a
+    // LocalBusiness about ourselves violates Google's review snippet policy
+    // (reviews must come from real users and be visible on-page). Real reviews
+    // belong on the Google Business Profile, not in our own schema.
     areaServed: location.areaServed.map((area: string) => ({
       '@type': 'City',
       name: area,
@@ -525,8 +496,9 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
 export function AllLocationsSchema() {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
 
-  const locationIds: Array<'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad' | 'noida'> =
-    ['rohini', 'gurugram', 'south-extension', 'green-park', 'faridabad', 'noida']
+  const locationIds: Array<
+    'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad' | 'noida'
+  > = ['rohini', 'gurugram', 'south-extension', 'green-park', 'faridabad', 'noida']
 
   const organizationWithLocations = {
     '@context': 'https://schema.org',

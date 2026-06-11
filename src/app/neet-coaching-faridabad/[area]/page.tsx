@@ -247,13 +247,6 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
       'https://www.youtube.com/@cerebrumbiologyacademy',
       'https://www.youtube.com/@drshekharcsingh',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: CEREBRUM_METRICS.rating.toString(),
-      reviewCount: CEREBRUM_METRICS.reviewCount.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'NEET Biology Courses',

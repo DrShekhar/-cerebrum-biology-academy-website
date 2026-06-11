@@ -152,7 +152,8 @@ export function CourseWithHowToSchema({
     educationalLevel: educationalLevel,
     timeRequired: `P${duration.replace(/\s+/g, '').toUpperCase()}`,
     teaches: 'NEET Biology',
-    coursePrerequisites: educationalLevel === 'Class 11' ? 'Class 10 completed' : 'Class 11 completed',
+    coursePrerequisites:
+      educationalLevel === 'Class 11' ? 'Class 10 completed' : 'Class 11 completed',
     hasCourseInstance: {
       '@type': 'CourseInstance',
       courseMode: ['online', 'onsite'],
@@ -170,14 +171,7 @@ export function CourseWithHowToSchema({
       validFrom: new Date().toISOString().split('T')[0],
       priceValidUntil: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
     ...(syllabus.length > 0 && {
       syllabusSections: syllabus.map((topic, index) => ({
         '@type': 'Syllabus',

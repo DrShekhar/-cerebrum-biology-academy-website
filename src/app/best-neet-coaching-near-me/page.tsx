@@ -37,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best NEET Coaching Near Me | 6 NCR Centres + Pan-India Online',
-    description: 'Best NEET coaching near me — Cerebrum Biology Academy. 6 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS facult...',
+    description:
+      'Best NEET coaching near me — Cerebrum Biology Academy. 6 offline centres in Delhi NCR (South Extension, Rohini, Green Park, Gurugram, Faridabad, Noida) + online live classes pan-India. AIIMS facult...',
   },
 }
 
@@ -266,13 +267,6 @@ const localBusinessSchema = {
     '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
   },
   foundingDate: '2014',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '485',
-    bestRating: '5',
-    worstRating: '1',
-  },
   areaServed: [
     { '@type': 'City', name: 'Delhi' },
     { '@type': 'City', name: 'Gurugram' },

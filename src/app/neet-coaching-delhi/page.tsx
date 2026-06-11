@@ -65,13 +65,6 @@ const delhiMultiLocationSchema = {
   url: `${BASE_URL}/neet-coaching-delhi`,
   description:
     "India's only biology-only specialist NEET coaching with 3 offline centres in Delhi proper (South Extension flagship, Rohini, Green Park) plus pan-India online live. AIIMS-trained faculty led by Dr. Shekhar C Singh.",
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '485',
-    bestRating: '5',
-    worstRating: '1',
-  },
   department: [
     {
       '@type': 'EducationalOrganization',
@@ -230,20 +223,22 @@ export default function NEETCoachingDelhiPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-5xl px-4 prose prose-slate max-w-none">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            Delhi NEET coaching — why families choose Cerebrum over the largest national NEET chains / other IIT-JEE-first coachings /
-            other online-only platforms
+            Delhi NEET coaching — why families choose Cerebrum over the largest national NEET chains
+            / other IIT-JEE-first coachings / other online-only platforms
           </h2>
           <p>
-            Delhi NEET aspirants have several generalist NEET coaching options — the largest national NEET chain (Kalu Sarai /
-            Punjabi Bagh), the 2nd-largest national NEET chain (multiple centres), other IIT-JEE-first coachings (Punjabi Bagh / South Ex),
-            other online-only platforms (online), other Kota-origin chains, other Kota-origin chains. These chains run combined Physics +
-            Chemistry + Biology batches of 200-400 students with rotating subject faculty. Cerebrum
-            is structurally different: the only NEET coaching institute in India built exclusively
-            around biology — the highest-scoring NEET subject at 360/720 marks (50% of total). 15-20
-            student batches, AIIMS-trained faculty continuity year-over-year, half the cost of Kota
-            relocation. Most Cerebrum Delhi students pair Cerebrum biology with other online-only platforms or
-            other multi-subject tutoring platforms for Physics + Chemistry — total stack ₹70K-₹1.1L vs the largest national NEET chain full PCB at ₹1.5L+ and
-            Kota relocation at ₹2L-₹2.5L all-in.
+            Delhi NEET aspirants have several generalist NEET coaching options — the largest
+            national NEET chain (Kalu Sarai / Punjabi Bagh), the 2nd-largest national NEET chain
+            (multiple centres), other IIT-JEE-first coachings (Punjabi Bagh / South Ex), other
+            online-only platforms (online), other Kota-origin chains, other Kota-origin chains.
+            These chains run combined Physics + Chemistry + Biology batches of 200-400 students with
+            rotating subject faculty. Cerebrum is structurally different: the only NEET coaching
+            institute in India built exclusively around biology — the highest-scoring NEET subject
+            at 360/720 marks (50% of total). 15-20 student batches, AIIMS-trained faculty continuity
+            year-over-year, half the cost of Kota relocation. Most Cerebrum Delhi students pair
+            Cerebrum biology with other online-only platforms or other multi-subject tutoring
+            platforms for Physics + Chemistry — total stack ₹70K-₹1.1L vs the largest national NEET
+            chain full PCB at ₹1.5L+ and Kota relocation at ₹2L-₹2.5L all-in.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-4">
@@ -380,18 +375,32 @@ export default function NEETCoachingDelhiPage() {
 
       <section className="py-10 bg-slate-50 border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-slate-900 mb-4">Explore Other Programmes in Delhi</h2>
+          <h2 className="text-xl font-bold text-slate-900 mb-4">
+            Explore Other Programmes in Delhi
+          </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/ib-biology/delhi-ncr" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ib-biology/delhi-ncr"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">IB Biology Delhi</span>
             </Link>
-            <Link href="/ap-biology-tutor-delhi-ncr" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-tutor-delhi-ncr"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP Biology Delhi</span>
             </Link>
-            <Link href="/nseb-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/nseb-coaching"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">NSEB Olympiad</span>
             </Link>
-            <Link href="/biology-olympiads/india/delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/biology-olympiads/india/delhi"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">Biology Olympiad Delhi</span>
             </Link>
           </div>

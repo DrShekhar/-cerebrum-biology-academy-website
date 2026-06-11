@@ -36,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Study Material in Gurugram | Biology Notes, MCQs, Test Papers',
-    description: 'Get comprehensive NEET Biology study material in Gurugram (Gurgaon). NCERT-based notes, 5000+ MCQs, chapter-wise tests, PYQ analysis. Free sample available. Download or collect from Sector 51.',
+    description:
+      'Get comprehensive NEET Biology study material in Gurugram (Gurgaon). NCERT-based notes, 5000+ MCQs, chapter-wise tests, PYQ analysis. Free sample available. Download or collect from Sector 51.',
   },
 }
 
@@ -122,11 +123,6 @@ export default function NEETStudyMaterialGurugramPage() {
       availability: 'https://schema.org/InStock',
       offerCount: '3',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-    },
   }
 
   const faqSchema = {
@@ -167,7 +163,11 @@ export default function NEETStudyMaterialGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="neet-study-material-gurugram" />
       <script

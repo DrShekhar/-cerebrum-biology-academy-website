@@ -4,7 +4,7 @@ import { faqs } from '@/data/neetCoachingData'
 export const metadata: Metadata = {
   title: 'NEET Coaching 2026 | Physics, Chemistry, Biology | 98% Success | Free Demo',
   description:
-    'India\'s top NEET coaching — Physics, Chemistry & Biology by AIIMS Alumnus Dr. Shekhar C Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers: South Extension, Rohini, Gurugram, Faridabad + Online. Call 88264-44334. Free Demo!',
+    "India's top NEET coaching — Physics, Chemistry & Biology by AIIMS Alumnus Dr. Shekhar C Singh. 98% success, 67+ AIIMS selections, 15,000+ students. 4 centers: South Extension, Rohini, Gurugram, Faridabad + Online. Call 88264-44334. Free Demo!",
   keywords: [
     'NEET coaching',
     'NEET 2026 coaching',
@@ -132,13 +132,6 @@ function generateJsonLd() {
     telephone: '+91-8826444334',
     email: 'info@cerebrumbiologyacademy.com',
     foundingDate: '2014',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'D 35, South Extension Part 2',

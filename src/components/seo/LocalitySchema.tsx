@@ -159,30 +159,10 @@ export function LocalitySchema({
       '@type': 'City',
       name: locality,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Parent of NEET Aspirant' },
-        datePublished: '2024-08-15',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
-        reviewBody: `Excellent NEET Biology coaching for ${locality} students. The AIIMS faculty is knowledgeable and supportive.`,
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'NEET 2024 Student' },
-        datePublished: '2024-06-20',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
-        reviewBody: `Best decision joining Cerebrum from ${locality}. Scored 680+ in NEET with their expert guidance and personalized attention.`,
-      },
-    ],
+    // review/aggregateRating removed 2026-06: they were schema-only (never
+    // rendered on-page) and self-serving — both violate Google's review
+    // snippet policy, and the identical 5.0/38 across 167 pages was a
+    // manual-action footprint (GSC had already flagged invalid reviews once).
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: CONTACT_INFO.phone.primary,

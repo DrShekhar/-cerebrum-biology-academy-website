@@ -436,12 +436,6 @@ export class MetadataService {
         'Online Education',
         'Biology Tutoring',
       ],
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        ratingCount: '38',
-        bestRating: '5',
-      },
     }
   }
 }

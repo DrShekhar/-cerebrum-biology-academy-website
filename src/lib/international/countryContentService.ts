@@ -647,11 +647,6 @@ class CountryContentService {
           contactType: 'customer service',
           availableLanguage: country.languageSupport,
         },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '5.0',
-          reviewCount: country.socialProof.totalStudents,
-        },
       },
     }
   }

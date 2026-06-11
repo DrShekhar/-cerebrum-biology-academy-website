@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching Anand Niketan | Near Diplomatic Enclave',
-    description: 'Premium NEET Biology coaching for Anand Niketan families. Near Diplomatic Enclave and Chanakyapuri.',
+    description:
+      'Premium NEET Biology coaching for Anand Niketan families. Near Diplomatic Enclave and Chanakyapuri.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
@@ -66,40 +67,42 @@ export default function AnandNiketanLayout({ children }: { children: React.React
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            'name': 'Cerebrum Biology Academy - Anand Niketan',
-            'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
-            'url': 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
-            'telephone': '+91-88264-44334',
-            'email': 'info@cerebrumbiologyacademy.com',
-            'address': {
+            name: 'Cerebrum Biology Academy - Anand Niketan',
+            image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
+            url: 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
+            telephone: '+91-88264-44334',
+            email: 'info@cerebrumbiologyacademy.com',
+            address: {
               '@type': 'PostalAddress',
-              'streetAddress': 'Near South Extension',
-              'addressLocality': 'Anand Niketan',
-              'addressRegion': 'Delhi',
-              'postalCode': '110049',
-              'addressCountry': 'IN',
+              streetAddress: 'Near South Extension',
+              addressLocality: 'Anand Niketan',
+              addressRegion: 'Delhi',
+              postalCode: '110049',
+              addressCountry: 'IN',
             },
-            'geo': {
+            geo: {
               '@type': 'GeoCoordinates',
-              'latitude': 28.5789,
-              'longitude': 77.1759,
+              latitude: 28.5789,
+              longitude: 77.1759,
             },
-            'openingHoursSpecification': [
+            openingHoursSpecification: [
               {
                 '@type': 'OpeningHoursSpecification',
-                'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                'opens': '00:00',
-                'closes': '23:59',
+                dayOfWeek: [
+                  'Monday',
+                  'Tuesday',
+                  'Wednesday',
+                  'Thursday',
+                  'Friday',
+                  'Saturday',
+                  'Sunday',
+                ],
+                opens: '00:00',
+                closes: '23:59',
               },
             ],
-            'priceRange': '₹40,000 - ₹1,80,000',
-            'aggregateRating': {
-              '@type': 'AggregateRating',
-              'ratingValue': '5.0',
-              'reviewCount': '38',
-              'bestRating': '5',
-            },
-            'sameAs': [
+            priceRange: '₹40,000 - ₹1,80,000',
+            sameAs: [
               'https://www.youtube.com/@CerebrumBiologyAcademy',
               'https://www.instagram.com/cerebrumbiologyacademy/',
             ],
@@ -156,21 +159,36 @@ export default function AnandNiketanLayout({ children }: { children: React.React
             ],
           }),
         }}
-      />      <script
+      />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Anand Niketan', item: 'https://cerebrumbiologyacademy.com/locations/anand-niketan' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Anand Niketan',
+                item: 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

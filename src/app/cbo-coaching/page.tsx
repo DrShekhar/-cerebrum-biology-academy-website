@@ -284,13 +284,6 @@ export default function CBOCoachingPage() {
               foundingDate: '2014',
               description:
                 'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. CBO coaching covers Canadian Biology Olympiad pathway (Round 1 → Round 2 → IBO Team Canada selection) for Grade 11-12 students from Ontario / BC / Quebec / Alberta. Same biology-specialist faculty stack as our INBO / USABO / BBO / SBO / IBO programmes.',
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '5.0',
-                reviewCount: '485',
-                bestRating: '5',
-                worstRating: '1',
-              },
             }),
           }}
         />

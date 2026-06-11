@@ -158,13 +158,6 @@ const educationalOrgSchema = {
   telephone: '+91-88264-44334',
   description:
     'Biology classes for NEET, CBSE/ICSE Boards (Classes 9-12), and droppers. Offline centres in Delhi NCR plus online and hybrid options.',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    bestRating: '5',
-    worstRating: '1',
-    reviewCount: '38',
-  },
   location: centres.map((c) => ({
     '@type': 'Place',
     name: `Cerebrum Biology Academy, ${c.city}`,

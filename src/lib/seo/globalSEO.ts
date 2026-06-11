@@ -255,11 +255,6 @@ export class GlobalSEOService {
       educationalLevel: courseData.level,
       teaches: `${courseData.className} ${courseData.subject}`,
       courseMode: 'online',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        ratingCount: '38',
-      },
       offers: {
         '@type': 'Offer',
         category: 'Educational',
@@ -298,11 +293,6 @@ export class GlobalSEOService {
       },
       areaServed: city,
       serviceType: 'Biology Coaching',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        ratingCount: '38',
-      },
     }
   }
 

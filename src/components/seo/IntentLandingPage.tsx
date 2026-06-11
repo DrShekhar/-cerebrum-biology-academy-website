@@ -147,14 +147,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
         description: 'Highest score achieved by a Cerebrum student in NEET Biology section',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: CONTACT_INFO.phone.primary,
@@ -272,10 +265,10 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
           of 25 students maximum.
         </p>
         <p className="speakable-features">
-          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar C Singh, small batch
-          sizes of maximum 25 students, comprehensive study material aligned with NCERT, regular
-          mock tests and performance tracking, doubt clearing sessions, and flexible batch timings
-          for school students.
+          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar C Singh, small
+          batch sizes of maximum 25 students, comprehensive study material aligned with NCERT,
+          regular mock tests and performance tracking, doubt clearing sessions, and flexible batch
+          timings for school students.
         </p>
         <p className="speakable-cta">
           To join the best NEET biology coaching, call us at {CONTACT_INFO.phone.primary} or visit
@@ -484,8 +477,8 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
               Ready to Start Your NEET Journey?
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-xl text-blue-100">
-              Join 15,000+ students who have transformed their NEET preparation with us. Book a
-              free demo today!
+              Join 15,000+ students who have transformed their NEET preparation with us. Book a free
+              demo today!
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link

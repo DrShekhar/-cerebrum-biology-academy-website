@@ -40,7 +40,11 @@ export class CitySpecificSEOService {
         'NCR NEET classes',
         'connaught place coaching',
       ],
-      competitors: ['the 2nd-largest national NEET chain', 'other Delhi-origin mid-tier institutes', 'other IIT-JEE-first coachings'],
+      competitors: [
+        'the 2nd-largest national NEET chain',
+        'other Delhi-origin mid-tier institutes',
+        'other IIT-JEE-first coachings',
+      ],
       studentVolume: 180000,
     },
     {
@@ -222,12 +226,6 @@ export class CitySpecificSEOService {
           },
         ],
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        ratingCount: '38',
-        bestRating: '5',
-      },
       priceRange: '₹40,000 - ₹1,80,000',
       telephone: CONTACT_INFO.phone.display.hyphenated.primary,
       openingHours: 'Mo-Su 06:00-22:00',
@@ -312,11 +310,6 @@ export class CitySpecificSEOService {
           closes: '22:00',
         },
       ],
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        reviewCount: '38',
-      },
     }))
   }
 

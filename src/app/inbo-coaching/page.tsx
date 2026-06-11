@@ -296,13 +296,6 @@ export default function INBOCoachingPage() {
             foundingDate: '2014',
             description:
               'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. Single biology-specialist faculty stack across the full India IBO pathway: NSEB Stage 1 (~75K students annually) → INBO Stage 2 → OCSC Stage 3 (top 35) → IBO team (top 4). 680+ medical college selections + India olympiad selections since 2014.',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />

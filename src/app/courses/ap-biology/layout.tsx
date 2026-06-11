@@ -84,12 +84,6 @@ export default function APBiologyLayout({ children }: { children: React.ReactNod
                 },
               },
             },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '45',
-              bestRating: '5',
-            },
           }),
         }}
       />

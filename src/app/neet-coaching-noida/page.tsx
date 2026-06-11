@@ -649,7 +649,7 @@ export default function NeetCoachingNoidaPage() {
               {
                 icon: Award,
                 title: 'AIIMS Faculty',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
+                alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
                 desc: '15+ years experience, trained at AIIMS Delhi',
               },
               { icon: Users, title: 'Small Batches', desc: 'Only 15-20 students per batch' },
@@ -1930,12 +1930,6 @@ export default function NeetCoachingNoidaPage() {
                 },
               ],
             },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-              bestRating: '5',
-            },
           }),
         }}
       />
@@ -1967,23 +1961,88 @@ export default function NeetCoachingNoidaPage() {
       <section className="py-12 bg-white border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-slate-900 mb-2">Explore NEET Coaching in Noida</h2>
-          <p className="text-slate-600 mb-6">Compare fees, alternatives, test series, and foundation programmes in Noida & Greater Noida.</p>
+          <p className="text-slate-600 mb-6">
+            Compare fees, alternatives, test series, and foundation programmes in Noida & Greater
+            Noida.
+          </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/best-neet-coaching-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Best NEET Coaching</span></Link>
-            <Link href="/neet-coaching-fee-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Fee Comparison</span></Link>
-            <Link href="/neet-test-series-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">NEET Test Series</span></Link>
-            <Link href="/allen-alternative-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Allen Alternative</span></Link>
-            <Link href="/aakash-alternative-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Aakash Alternative</span></Link>
-            <Link href="/neet-foundation-class-9-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Foundation Class 9</span></Link>
-            <Link href="/neet-foundation-class-10-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Foundation Class 10</span></Link>
-            <Link href="/neet-crash-course-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Crash Course</span></Link>
+            <Link
+              href="/best-neet-coaching-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Best NEET Coaching</span>
+            </Link>
+            <Link
+              href="/neet-coaching-fee-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Fee Comparison</span>
+            </Link>
+            <Link
+              href="/neet-test-series-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">NEET Test Series</span>
+            </Link>
+            <Link
+              href="/allen-alternative-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Allen Alternative</span>
+            </Link>
+            <Link
+              href="/aakash-alternative-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Aakash Alternative</span>
+            </Link>
+            <Link
+              href="/neet-foundation-class-9-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Foundation Class 9</span>
+            </Link>
+            <Link
+              href="/neet-foundation-class-10-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Foundation Class 10</span>
+            </Link>
+            <Link
+              href="/neet-crash-course-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Crash Course</span>
+            </Link>
           </div>
-          <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Other Delhi NCR Centres</h3>
+          <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">
+            Other Delhi NCR Centres
+          </h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <Link href="/neet-coaching-delhi" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Delhi</span></Link>
-            <Link href="/neet-coaching-faridabad" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Faridabad</span></Link>
-            <Link href="/neet-coaching-gurugram" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Gurugram</span></Link>
-            <Link href="/neet-coaching-ghaziabad" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"><span className="font-medium text-slate-900 text-sm">Ghaziabad</span></Link>
+            <Link
+              href="/neet-coaching-delhi"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Delhi</span>
+            </Link>
+            <Link
+              href="/neet-coaching-faridabad"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Faridabad</span>
+            </Link>
+            <Link
+              href="/neet-coaching-gurugram"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Gurugram</span>
+            </Link>
+            <Link
+              href="/neet-coaching-ghaziabad"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
+              <span className="font-medium text-slate-900 text-sm">Ghaziabad</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -2137,18 +2196,32 @@ export default function NeetCoachingNoidaPage() {
 
       <section className="py-10 bg-slate-50 border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-slate-900 mb-4">Explore Other Programmes in Noida</h2>
+          <h2 className="text-xl font-bold text-slate-900 mb-4">
+            Explore Other Programmes in Noida
+          </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/ib-biology/noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ib-biology/noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">IB Biology Noida</span>
             </Link>
-            <Link href="/ap-biology-tutor-noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-tutor-noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP Biology Noida</span>
             </Link>
-            <Link href="/nseb-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/nseb-coaching"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">NSEB Olympiad</span>
             </Link>
-            <Link href="/biology-olympiads/india/noida" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/biology-olympiads/india/noida"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">Biology Olympiad Noida</span>
             </Link>
           </div>

@@ -55,11 +55,6 @@ export default function IBBiologyTutorPage() {
     description:
       'Expert IB Biology tutoring for HL and SL students. 95% of students score 6-7 with our IB certified methods.',
     url: 'https://cerebrumbiologyacademy.com/ib-biology-tutor',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-    },
     offers: {
       '@type': 'Offer',
       category: 'IB Biology Tutoring',
@@ -380,7 +375,9 @@ export default function IBBiologyTutorPage() {
                   </div>
 
                   <div className="bg-gray-50 rounded-xl p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Assessment Breakdown (2025 syllabus)</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Assessment Breakdown (2025 syllabus)
+                    </h4>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex justify-between">
                         <span>Paper 1 (Multiple Choice)</span>
@@ -435,7 +432,9 @@ export default function IBBiologyTutorPage() {
                   </div>
 
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                    <h4 className="font-semibold text-white mb-2">Assessment Breakdown (2025 syllabus)</h4>
+                    <h4 className="font-semibold text-white mb-2">
+                      Assessment Breakdown (2025 syllabus)
+                    </h4>
                     <ul className="space-y-2 text-green-50">
                       <li className="flex justify-between">
                         <span>Paper 1 (Multiple Choice)</span>
@@ -941,19 +940,34 @@ export default function IBBiologyTutorPage() {
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-              <Link href="/ap-biology-vs-ib-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <Link
+                href="/ap-biology-vs-ib-biology"
+                className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+              >
                 <span className="font-medium text-slate-900 text-sm">AP vs IB Biology</span>
               </Link>
-              <Link href="/ap-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <Link
+                href="/ap-biology-tutor"
+                className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+              >
                 <span className="font-medium text-slate-900 text-sm">AP Biology Tutoring</span>
               </Link>
-              <Link href="/a-level-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <Link
+                href="/a-level-biology-tutor"
+                className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+              >
                 <span className="font-medium text-slate-900 text-sm">A-Level Biology</span>
               </Link>
-              <Link href="/mcat-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <Link
+                href="/mcat-biology-preparation"
+                className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+              >
                 <span className="font-medium text-slate-900 text-sm">MCAT Biology</span>
               </Link>
-              <Link href="/biology-olympiad-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+              <Link
+                href="/biology-olympiad-preparation"
+                className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+              >
                 <span className="font-medium text-slate-900 text-sm">Biology Olympiad</span>
               </Link>
             </div>

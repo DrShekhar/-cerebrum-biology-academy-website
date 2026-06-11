@@ -794,13 +794,6 @@ export default function MCATBiologyPage() {
             foundingDate: '2014',
             description:
               'Biology-only specialist coaching brand led by AIIMS-trained Dr. Shekhar C Singh. MCAT cluster covers 14 pages: Bio/Biochem programme hub, 3 section pages (B/B + biochem + passage strategy), 5 US metro pages (NJ, Bay Area, Houston, Atlanta, Boston), 4 cornerstone authority pages, and the canonical /best-mcat-biology-tutor AEO hub.',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />
@@ -839,22 +832,40 @@ export default function MCATBiologyPage() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/gamsat-vs-mcat-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/gamsat-vs-mcat-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">GAMSAT vs MCAT</span>
             </Link>
-            <Link href="/dat-vs-mcat-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/dat-vs-mcat-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">DAT vs MCAT</span>
             </Link>
-            <Link href="/mcat-biology-vs-neet-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/mcat-biology-vs-neet-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">MCAT vs NEET</span>
             </Link>
-            <Link href="/ap-biology-vs-college-bio-mcat-bridge" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-vs-college-bio-mcat-bridge"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP Bio → MCAT Bridge</span>
             </Link>
-            <Link href="/gamsat-section-3-biology-prep" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/gamsat-section-3-biology-prep"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">GAMSAT Biology</span>
             </Link>
-            <Link href="/dat-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/dat-biology-preparation"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">DAT Biology</span>
             </Link>
           </div>

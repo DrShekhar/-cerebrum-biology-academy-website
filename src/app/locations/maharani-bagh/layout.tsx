@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching Maharani Bagh | Premium South Delhi',
-    description: 'Expert NEET Biology coaching for Maharani Bagh students. Near Sundar Nagar & Friends Colony.',
+    description:
+      'Expert NEET Biology coaching for Maharani Bagh students. Near Sundar Nagar & Friends Colony.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/maharani-bagh',
@@ -77,12 +78,6 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
               'New Friends Colony',
             ],
             serviceType: 'NEET Biology Coaching',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-              bestRating: '5',
-            },
           }),
         }}
       />
@@ -92,40 +87,42 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            'name': 'Cerebrum Biology Academy - Maharani Bagh',
-            'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
-            'url': 'https://cerebrumbiologyacademy.com/locations/maharani-bagh',
-            'telephone': '+91-88264-44334',
-            'email': 'info@cerebrumbiologyacademy.com',
-            'address': {
+            name: 'Cerebrum Biology Academy - Maharani Bagh',
+            image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
+            url: 'https://cerebrumbiologyacademy.com/locations/maharani-bagh',
+            telephone: '+91-88264-44334',
+            email: 'info@cerebrumbiologyacademy.com',
+            address: {
               '@type': 'PostalAddress',
-              'streetAddress': 'Near South Extension',
-              'addressLocality': 'Maharani Bagh',
-              'addressRegion': 'Delhi',
-              'postalCode': '110049',
-              'addressCountry': 'IN',
+              streetAddress: 'Near South Extension',
+              addressLocality: 'Maharani Bagh',
+              addressRegion: 'Delhi',
+              postalCode: '110049',
+              addressCountry: 'IN',
             },
-            'geo': {
+            geo: {
               '@type': 'GeoCoordinates',
-              'latitude': 28.5691,
-              'longitude': 77.2548,
+              latitude: 28.5691,
+              longitude: 77.2548,
             },
-            'openingHoursSpecification': [
+            openingHoursSpecification: [
               {
                 '@type': 'OpeningHoursSpecification',
-                'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                'opens': '00:00',
-                'closes': '23:59',
+                dayOfWeek: [
+                  'Monday',
+                  'Tuesday',
+                  'Wednesday',
+                  'Thursday',
+                  'Friday',
+                  'Saturday',
+                  'Sunday',
+                ],
+                opens: '00:00',
+                closes: '23:59',
               },
             ],
-            'priceRange': '₹40,000 - ₹1,80,000',
-            'aggregateRating': {
-              '@type': 'AggregateRating',
-              'ratingValue': '5.0',
-              'reviewCount': '38',
-              'bestRating': '5',
-            },
-            'sameAs': [
+            priceRange: '₹40,000 - ₹1,80,000',
+            sameAs: [
               'https://www.youtube.com/@CerebrumBiologyAcademy',
               'https://www.instagram.com/cerebrumbiologyacademy/',
             ],
@@ -182,21 +179,36 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
             ],
           }),
         }}
-      />      <script
+      />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Maharani Bagh', item: 'https://cerebrumbiologyacademy.com/locations/maharani-bagh' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Maharani Bagh',
+                item: 'https://cerebrumbiologyacademy.com/locations/maharani-bagh',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

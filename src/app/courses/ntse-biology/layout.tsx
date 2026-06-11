@@ -74,12 +74,6 @@ export default function NTSEBiologyLayout({ children }: { children: React.ReactN
                 },
               },
             },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '52',
-              bestRating: '5',
-            },
           }),
         }}
       />

@@ -90,11 +90,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'best NEET institute Noida',
       'private school students NEET',
     ],
-    'it-hub': [
-      'Electronic City NEET coaching',
-      'IT hub NEET classes',
-      'Sector 62 NEET coaching',
-    ],
+    'it-hub': ['Electronic City NEET coaching', 'IT hub NEET classes', 'Sector 62 NEET coaching'],
     commercial: ['central Noida NEET coaching', 'convenient NEET coaching Noida'],
     'greater-noida': [
       'Greater Noida NEET coaching',
@@ -106,7 +102,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       'Greater Noida West NEET classes',
       'affordable NEET coaching Noida',
     ],
-    residential: ['residential area NEET coaching', 'sector NEET classes Noida', 'local NEET coaching'],
+    residential: [
+      'residential area NEET coaching',
+      'sector NEET classes Noida',
+      'local NEET coaching',
+    ],
   }
 
   return {
@@ -187,13 +187,6 @@ export default async function NoidaAreaPage({ params }: Props) {
     areaServed: {
       '@type': 'Place',
       name: areaData.fullName,
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
     },
   }
 

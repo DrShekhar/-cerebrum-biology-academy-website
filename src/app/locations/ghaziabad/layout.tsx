@@ -89,13 +89,6 @@ function GhaziabadServiceSchema() {
       'Crossing Republik',
       'Raj Nagar',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
-    },
     priceRange: '₹40,000 - ₹1,80,000',
     openingHoursSpecification: [
       {

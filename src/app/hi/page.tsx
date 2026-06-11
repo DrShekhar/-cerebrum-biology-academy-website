@@ -49,7 +49,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'सेरेब्रम बायोलॉजी एकेडमी | भारत की #1 NEET बायोलॉजी कोचिंग | 98% सफलता दर',
-    description: 'AIIMS-प्रशिक्षित फैकल्टी द्वारा भारत की टॉप NEET बायोलॉजी कोचिंग। 98% सफलता दर, 2000+ छात्र। क्लास 11, 12 और ड्रॉपर बैच। ऑनलाइन और ऑफलाइन क्लासेज। फ्री डेमो बुक करें!',
+    description:
+      'AIIMS-प्रशिक्षित फैकल्टी द्वारा भारत की टॉप NEET बायोलॉजी कोचिंग। 98% सफलता दर, 2000+ छात्र। क्लास 11, 12 और ड्रॉपर बैच। ऑनलाइन और ऑफलाइन क्लासेज। फ्री डेमो बुक करें!',
   },
 }
 
@@ -64,18 +65,13 @@ export default function HindiHomePage() {
     alternateName: 'Cerebrum Biology Academy',
     url: 'https://cerebrumbiologyacademy.com/hi',
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
-    description: 'भारत की प्रमुख NEET बायोलॉजी कोचिंग। AIIMS-प्रशिक्षित फैकल्टी द्वारा व्यापक तैयारी।',
+    description:
+      'भारत की प्रमुख NEET बायोलॉजी कोचिंग। AIIMS-प्रशिक्षित फैकल्टी द्वारा व्यापक तैयारी।',
     inLanguage: 'hi',
     availableLanguage: ['hi', 'en'],
     areaServed: {
       '@type': 'Country',
       name: 'India',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: 5.0,
-      reviewCount: 38,
-      bestRating: 5,
     },
   }
 
@@ -113,8 +109,7 @@ export default function HindiHomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                NEET बायोलॉजी में{' '}
-                <span className="text-yellow-300">98% सफलता दर</span>
+                NEET बायोलॉजी में <span className="text-yellow-300">98% सफलता दर</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-3xl mx-auto">
@@ -276,7 +271,9 @@ export default function HindiHomePage() {
                       <span className="text-gray-500 text-sm">{dict.courses.perYear}</span>
                     </div>
                     <Link
-                      href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20hi.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+                      href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20hi.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition-colors"
                     >
                       {dict.courses.enrollNow}
@@ -313,7 +310,12 @@ export default function HindiHomePage() {
                     <summary className="flex items-center justify-between cursor-pointer p-5 hover:bg-gray-100 transition-colors">
                       <h3 className="font-semibold text-gray-900 pr-4">{faq.question}</h3>
                       <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"

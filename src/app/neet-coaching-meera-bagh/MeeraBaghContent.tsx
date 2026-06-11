@@ -265,14 +265,6 @@ export function NEETCoachingMeeraBaghContent() {
       'Rohini',
       'Pitampura',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',
@@ -399,8 +391,7 @@ export function NEETCoachingMeeraBaghContent() {
               </div>
 
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-                NEET Coaching in{' '}
-                <span className="text-yellow-400">Meera Bagh</span>, Paschim Vihar
+                NEET Coaching in <span className="text-yellow-400">Meera Bagh</span>, Paschim Vihar
               </h1>
 
               <p className="mb-4 text-xl text-slate-300 md:text-2xl">
@@ -509,9 +500,9 @@ export function NEETCoachingMeeraBaghContent() {
                       <p>
                         <strong>Meera Bagh</strong> is one of West Delhi&apos;s most prestigious
                         residential colonies in Paschim Vihar. Known for its affluent community with{' '}
-                        <strong>500+ premium houses in Block A</strong> alone, the area is famous for
-                        being the residence of cricket legend <strong>Virat Kohli&apos;s family</strong>{' '}
-                        and other notable personalities.
+                        <strong>500+ premium houses in Block A</strong> alone, the area is famous
+                        for being the residence of cricket legend{' '}
+                        <strong>Virat Kohli&apos;s family</strong> and other notable personalities.
                       </p>
                       <p>
                         The educated, aspiring families of Meera Bagh understand the importance of
@@ -787,7 +778,9 @@ export function NEETCoachingMeeraBaghContent() {
                   <div className="border-t border-white/20 pt-4">
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-slate-400">{testimonial.location}</div>
-                    <div className="mt-1 text-sm font-medium text-green-400">{testimonial.score}</div>
+                    <div className="mt-1 text-sm font-medium text-green-400">
+                      {testimonial.score}
+                    </div>
                   </div>
                 </div>
               ))}

@@ -139,13 +139,6 @@ export function CerebrumOrgSchema() {
       'Zoology',
       'NCERT Biology',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '485',
-      bestRating: '5',
-      worstRating: '1',
-    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: CONTACT_INFO.centers.southExtension.streetAddress,

@@ -1113,13 +1113,6 @@ export default function PageContent() {
               addressRegion: 'Delhi',
               addressCountry: 'IN',
             },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: CEREBRUM_METRICS.rating,
-              bestRating: '5',
-              worstRating: '1',
-              ratingCount: CEREBRUM_METRICS.reviewCount,
-            },
           }),
         }}
       />

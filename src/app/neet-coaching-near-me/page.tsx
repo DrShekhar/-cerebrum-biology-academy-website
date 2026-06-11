@@ -37,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Near Me 2026 | Find Best NEET Biology Classes Nearby | Delhi NCR',
-    description: 'Find the best NEET coaching near you in Delhi NCR. 4 centers: South Extension, Rohini, Gurugram, Faridabad. AIIMS faculty, 98% success rate, 15-student batches. Online classes for all India. Book F...',
+    description:
+      'Find the best NEET coaching near you in Delhi NCR. 4 centers: South Extension, Rohini, Gurugram, Faridabad. AIIMS faculty, 98% success rate, 15-student batches. Online classes for all India. Book F...',
   },
 }
 
@@ -97,7 +98,8 @@ const faqs = [
       'Cerebrum Biology Academy fees: Pursuit batch Rs 40,000-48,000/year (30-40 students), Ascent batch Rs 58,000-78,000/year (16-25 students), Pinnacle batch Rs 98,000-1,56,000/year (10-12 students). EMI options available. Compare: the largest national NEET chains charge Rs 1.5-3 lakh for all subjects.',
   },
   {
-    question: 'What makes Cerebrum different from the largest national NEET chain or the 2nd-largest national NEET chain near me?',
+    question:
+      'What makes Cerebrum different from the largest national NEET chain or the 2nd-largest national NEET chain near me?',
     answer:
       'Three key differences: (1) Exclusive Biology focus — Biology is 50% of NEET marks (360/720), (2) Small batches of 15-20 students vs 50-100+ at the largest national NEET chains, (3) AIIMS-trained faculty led by Dr. Shekhar C Singh. Our 98% success rate and 680+ medical college selections prove the difference.',
   },
@@ -117,12 +119,6 @@ export default function NEETCoachingNearMePage() {
       'Best NEET coaching near you in Delhi NCR. 4 centers with AIIMS faculty, 98% success rate, small batches.',
     url: 'https://cerebrumbiologyacademy.com',
     telephone: CONTACT_INFO.phone.primary,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '485',
-      bestRating: '5',
-    },
     areaServed: [
       'Delhi',
       'New Delhi',
@@ -300,7 +296,8 @@ export default function NEETCoachingNearMePage() {
         <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">
-              Why Students Choose Cerebrum Over the largest national NEET chain, the 2nd-largest national NEET chain & PW
+              Why Students Choose Cerebrum Over the largest national NEET chain, the 2nd-largest
+              national NEET chain & PW
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">

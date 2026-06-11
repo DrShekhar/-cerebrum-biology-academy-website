@@ -148,7 +148,8 @@ export default function NEETScoreCalculatorPage() {
       (parseInt(physics.correct) || 0) +
       (parseInt(chemistry.correct) || 0) +
       (parseInt(biology.correct) || 0)
-    const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0
+    const overallAccuracy =
+      totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0
 
     setResult({
       physics: physicsResult,
@@ -224,9 +225,7 @@ export default function NEETScoreCalculatorPage() {
       </h3>
       <div className="grid gap-4 sm:grid-cols-3">
         <div>
-          <label className="mb-1 block text-sm font-medium text-gray-700">
-            Correct Answers
-          </label>
+          <label className="mb-1 block text-sm font-medium text-gray-700">Correct Answers</label>
           <input
             type="number"
             min="0"
@@ -239,9 +238,7 @@ export default function NEETScoreCalculatorPage() {
           <p className="mt-1 text-xs text-green-600">+4 marks each</p>
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-gray-700">
-            Incorrect Answers
-          </label>
+          <label className="mb-1 block text-sm font-medium text-gray-700">Incorrect Answers</label>
           <input
             type="number"
             min="0"
@@ -254,9 +251,7 @@ export default function NEETScoreCalculatorPage() {
           <p className="mt-1 text-xs text-red-600">-1 mark each</p>
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-gray-700">
-            Unattempted
-          </label>
+          <label className="mb-1 block text-sm font-medium text-gray-700">Unattempted</label>
           <input
             type="number"
             min="0"
@@ -290,11 +285,6 @@ export default function NEETScoreCalculatorPage() {
               '@type': 'Offer',
               price: '0',
               priceCurrency: 'INR',
-            },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              ratingCount: '38',
             },
           }),
         }}
@@ -573,11 +563,13 @@ export default function NEETScoreCalculatorPage() {
                     {/* CTAs */}
                     <div className="space-y-4">
                       <button
-                        onClick={() => trackAndOpenWhatsApp({
-                          source: 'score-calculator-result',
-                          message: `Hi! I scored ${result.totalScore}/720 in my NEET practice test. Physics: ${result.physics.score}/180, Chemistry: ${result.chemistry.score}/180, Biology: ${result.biology.score}/360. I would like to get a personalized analysis.`,
-                          campaign: 'score-calculator',
-                        })}
+                        onClick={() =>
+                          trackAndOpenWhatsApp({
+                            source: 'score-calculator-result',
+                            message: `Hi! I scored ${result.totalScore}/720 in my NEET practice test. Physics: ${result.physics.score}/180, Chemistry: ${result.chemistry.score}/180, Biology: ${result.biology.score}/360. I would like to get a personalized analysis.`,
+                            campaign: 'score-calculator',
+                          })
+                        }
                         className="flex w-full items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-4 font-semibold text-white transition-colors hover:bg-green-700 cursor-pointer"
                       >
                         <MessageCircle className="h-5 w-5" />
@@ -733,11 +725,14 @@ export default function NEETScoreCalculatorPage() {
                       <span className="truncate">Book Free Demo</span>
                     </Link>
                     <button
-                      onClick={() => trackAndOpenWhatsApp({
-                        source: 'score-calculator-cta',
-                        message: 'Hi! I want to improve my NEET score. Please share details about your courses.',
-                        campaign: 'score-calculator',
-                      })}
+                      onClick={() =>
+                        trackAndOpenWhatsApp({
+                          source: 'score-calculator-cta',
+                          message:
+                            'Hi! I want to improve my NEET score. Please share details about your courses.',
+                          campaign: 'score-calculator',
+                        })
+                      }
                       className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg border-2 border-white px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-6 sm:text-base cursor-pointer"
                     >
                       <MessageCircle className="h-5 w-5 flex-shrink-0" />

@@ -257,13 +257,6 @@ export default function SBOCoachingPage() {
             foundingDate: '2014',
             description:
               'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. SBO coaching covers Singapore Biology Olympiad pathway for JC1-JC2 students from Raffles / Hwa Chong / NUS High / VJC / ACS feeders. Same biology-specialist faculty stack as our INBO / USABO / BBO / CBO / IBO programmes.',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />

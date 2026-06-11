@@ -117,12 +117,6 @@ export default function NEETCoachingPage() {
           endDate: '2026-12-31',
         },
       ],
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        reviewCount: '38',
-        bestRating: '5',
-      },
     }
 
     const script = document.createElement('script')

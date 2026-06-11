@@ -99,7 +99,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Near HUDA City Centre Metro | Biology Classes Gurugram',
-    description: 'NEET Biology coaching near HUDA City Centre Metro Station, Gurugram. ${metroData.studentCount} students enrolled from Cyber City, DLF, MG Road, Golf Course Road. Yellow Line terminal. Online & Offl...',
+    description:
+      'NEET Biology coaching near HUDA City Centre Metro Station, Gurugram. ${metroData.studentCount} students enrolled from Cyber City, DLF, MG Road, Golf Course Road. Yellow Line terminal. Online & Offl...',
   },
 }
 
@@ -141,12 +142,6 @@ export default function NEETCoachingHUDACityCentreMetroPage() {
       '@type': 'Place',
       name: area,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
   }
 
   const breadcrumbSchema = {

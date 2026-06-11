@@ -350,12 +350,6 @@ export default function Class11BiologyPage() {
               price: '75000',
               availability: 'https://schema.org/InStock',
             },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-              bestRating: '5',
-            },
           }),
         }}
       />

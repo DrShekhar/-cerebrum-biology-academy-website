@@ -310,13 +310,6 @@ const localBusinessSchema = {
       name: 'Mittal Rishi Apartments Civil Lines',
     },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    bestRating: '5',
-    worstRating: '1',
-    ratingCount: CEREBRUM_METRICS.reviewCount.toString(),
-  },
   priceRange: 'Rs 25,000 - Rs 75,000',
   openingHoursSpecification: [
     {

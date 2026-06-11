@@ -316,13 +316,6 @@ export default function APBiologyTutorPage() {
             },
             description:
               'Biology-only specialist coaching brand led by AIIMS-trained faculty Dr. Shekhar C Singh. AP Biology cluster covers 44 pages across 10 US metros, 10 US school feeders (TJHSST / Stuyvesant / Harker / Andover / etc.), plus UAE / India / Canada / Singapore / Hong Kong international hubs.',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />
@@ -1147,25 +1140,46 @@ export default function APBiologyTutorPage() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/ap-biology-vs-ib-biology" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-vs-ib-biology"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP vs IB Biology</span>
             </Link>
-            <Link href="/ap-biology-vs-usabo" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-vs-usabo"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP vs USABO</span>
             </Link>
-            <Link href="/ap-biology-vs-college-bio-mcat-bridge" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-vs-college-bio-mcat-bridge"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP Bio → MCAT Bridge</span>
             </Link>
-            <Link href="/ib-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ib-biology-tutor"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">IB Biology Tutoring</span>
             </Link>
-            <Link href="/a-level-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/a-level-biology-tutor"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">A-Level Biology</span>
             </Link>
-            <Link href="/mcat-biology-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/mcat-biology-preparation"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">MCAT Biology</span>
             </Link>
-            <Link href="/usabo-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/usabo-coaching"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">USABO Coaching</span>
             </Link>
           </div>

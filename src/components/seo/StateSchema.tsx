@@ -21,7 +21,17 @@ export const INDIAN_STATES: Record<string, StateData> = {
     name: 'Uttar Pradesh',
     slug: 'uttar-pradesh',
     capital: 'Lucknow',
-    majorCities: ['Lucknow', 'Kanpur', 'Agra', 'Varanasi', 'Prayagraj', 'Meerut', 'Ghaziabad', 'Noida', 'Greater Noida'],
+    majorCities: [
+      'Lucknow',
+      'Kanpur',
+      'Agra',
+      'Varanasi',
+      'Prayagraj',
+      'Meerut',
+      'Ghaziabad',
+      'Noida',
+      'Greater Noida',
+    ],
     medicalColleges: ['KGMU Lucknow', 'BHU Varanasi', 'GSVM Kanpur', 'SN Medical Agra'],
     neetSeats: 5200,
     population: '24 crore',
@@ -29,7 +39,7 @@ export const INDIAN_STATES: Record<string, StateData> = {
     localLanguage: 'Hindi',
     nearestOfflineCenter: 'Noida/South Extension Delhi',
   },
-  'bihar': {
+  bihar: {
     name: 'Bihar',
     slug: 'bihar',
     capital: 'Patna',
@@ -41,7 +51,7 @@ export const INDIAN_STATES: Record<string, StateData> = {
     localLanguage: 'Hindi',
     nearestOfflineCenter: 'Online classes / Patna visits',
   },
-  'rajasthan': {
+  rajasthan: {
     name: 'Rajasthan',
     slug: 'rajasthan',
     capital: 'Jaipur',
@@ -53,11 +63,20 @@ export const INDIAN_STATES: Record<string, StateData> = {
     localLanguage: 'Hindi',
     nearestOfflineCenter: 'Online classes / Jaipur visits',
   },
-  'haryana': {
+  haryana: {
     name: 'Haryana',
     slug: 'haryana',
     capital: 'Chandigarh',
-    majorCities: ['Gurugram', 'Faridabad', 'Rohtak', 'Karnal', 'Panipat', 'Ambala', 'Hisar', 'Sonipat'],
+    majorCities: [
+      'Gurugram',
+      'Faridabad',
+      'Rohtak',
+      'Karnal',
+      'Panipat',
+      'Ambala',
+      'Hisar',
+      'Sonipat',
+    ],
     medicalColleges: ['PGIMS Rohtak', 'KGMC Karnal', 'BPS GMC Khanpur Kalan', 'AIIMS Manethi'],
     neetSeats: 1800,
     population: '3 crore',
@@ -77,7 +96,7 @@ export const INDIAN_STATES: Record<string, StateData> = {
     localLanguage: 'Hindi',
     nearestOfflineCenter: 'Online classes / Bhopal visits',
   },
-  'punjab': {
+  punjab: {
     name: 'Punjab',
     slug: 'punjab',
     capital: 'Chandigarh',
@@ -156,15 +175,19 @@ export function StateSchema({ state, pageUrl }: StateSchemaProps) {
               alumniOf: 'AIIMS New Delhi',
             },
           },
-          ...(state.nearestOfflineCenter ? [{
-            '@type': 'CourseInstance',
-            name: `Offline Classes (${state.nearestOfflineCenter})`,
-            courseMode: 'onsite',
-            location: {
-              '@type': 'Place',
-              name: state.nearestOfflineCenter,
-            },
-          }] : []),
+          ...(state.nearestOfflineCenter
+            ? [
+                {
+                  '@type': 'CourseInstance',
+                  name: `Offline Classes (${state.nearestOfflineCenter})`,
+                  courseMode: 'onsite',
+                  location: {
+                    '@type': 'Place',
+                    name: state.nearestOfflineCenter,
+                  },
+                },
+              ]
+            : []),
         ],
         offers: {
           '@type': 'AggregateOffer',
@@ -172,12 +195,6 @@ export function StateSchema({ state, pageUrl }: StateSchemaProps) {
           lowPrice: 48000,
           highPrice: 90000,
           offerCount: 5,
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: 5.0,
-          reviewCount: 38,
-          bestRating: 5,
         },
       },
       // WebPage

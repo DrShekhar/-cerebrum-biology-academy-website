@@ -70,8 +70,7 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
       'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy (2014), recognized as a top Biology faculty in India across NEET-UG, IB Biology HL/SL, AP Biology, CBSE/ICSE Class 11-12, MCAT, USMLE Step 1 Biology, USABO, INBO, IBO, CBO, BBO and SBO. 15+ years of pedagogy, 680+ medical college selections, 98% NEET-UG qualification rate, IB HL 7/7 outcomes, AP score-5 outcomes across global cohorts.',
     image: 'https://cerebrumbiologyacademy.com/faculty/dr-shekhar-singh.jpg',
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
-    mainEntityOfPage:
-      'https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india',
+    mainEntityOfPage: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-biology-faculty-india',
     sameAs: [
       'https://www.youtube.com/@drshekharcsingh',
       'https://www.youtube.com/@cerebrumbiologyacademy',
@@ -137,20 +136,7 @@ export function BestVerticalLanding({ config }: { config: BestVerticalConfig }) 
     foundingDate: '2014',
     description:
       "India's leading biology-only specialist coaching brand — NEET, IB, AP, MCAT and Biology Olympiad (USABO, INBO, IBO, NSEB) under AIIMS-trained faculty Dr. Shekhar C Singh.",
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '485',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: config.testimonials.map((t) => ({
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Person', name: t.name },
-      reviewBody: t.quote,
-      itemReviewed: { '@type': 'EducationalOrganization', name: 'Cerebrum Biology Academy' },
-    })),
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }
 
   const faqSchema = {

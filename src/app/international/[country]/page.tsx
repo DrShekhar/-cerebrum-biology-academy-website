@@ -103,11 +103,6 @@ function generateStructuredData(config: NonNullable<ReturnType<typeof getCountry
         },
       ],
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-    },
   }
 }
 

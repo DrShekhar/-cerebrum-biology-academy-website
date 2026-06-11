@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Top 5 NEET Coaching in Gurugram 2026 | Ranking by Results',
-    description: 'Ranked list of top 5 NEET coaching institutes in Gurugram (Gurgaon) 2026. Compare by success rate, fees, batch size. #1 Cerebrum Academy (98% rate). Call 88264-44334!',
+    description:
+      'Ranked list of top 5 NEET coaching institutes in Gurugram (Gurgaon) 2026. Compare by success rate, fees, batch size. #1 Cerebrum Academy (98% rate). Call 88264-44334!',
   },
 }
 
@@ -142,7 +143,8 @@ const faqs = [
       'Consider: 1) Your budget (₹45K-2L/year range), 2) Batch size preference (15-100 students), 3) Subject focus (Biology-only vs full PCB), 4) Location convenience, 5) Demo class experience. Visit top 2-3 and attend demo classes.',
   },
   {
-    question: 'Is the 2nd-largest national NEET chain or the largest national NEET chain better for NEET in Gurugram?',
+    question:
+      'Is the 2nd-largest national NEET chain or the largest national NEET chain better for NEET in Gurugram?',
     answer:
       'Both are comparable for full NEET coaching. the 2nd-largest national NEET chain has larger network and slightly better material. the largest national NEET chain brings Kota methodology. Choose based on demo class experience and batch timing that suits you.',
   },
@@ -157,15 +159,25 @@ export default function Top5NEETCoachingGurugram() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="top-5-neet-coaching-gurugram" />
       <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-          { name: 'NEET Coaching Gurugram', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
-          { name: 'Top 5 NEET Coaching', url: 'https://cerebrumbiologyacademy.com/top-5-neet-coaching-gurugram' },
+          {
+            name: 'NEET Coaching Gurugram',
+            url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
+          },
+          {
+            name: 'Top 5 NEET Coaching',
+            url: 'https://cerebrumbiologyacademy.com/top-5-neet-coaching-gurugram',
+          },
         ]}
       />
       {/* Quick Answer */}
@@ -178,7 +190,8 @@ export default function Top5NEETCoachingGurugram() {
               <div className="mt-4 flex items-center gap-2 text-yellow-300">
                 <Trophy className="w-5 h-5" />
                 <span className="font-semibold">
-                  #1 Cerebrum (98%) | #2 the 2nd-largest national NEET chain (88%) | #3 the largest national NEET chain (85%)
+                  #1 Cerebrum (98%) | #2 the 2nd-largest national NEET chain (88%) | #3 the largest
+                  national NEET chain (85%)
                 </span>
               </div>
             </div>
@@ -400,7 +413,9 @@ export default function Top5NEETCoachingGurugram() {
               href="/which-is-better-aakash-or-allen-gurugram"
               className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition text-center"
             >
-              <h3 className="font-semibold text-blue-800">the 2nd-largest national NEET chain vs the largest national NEET chain</h3>
+              <h3 className="font-semibold text-blue-800">
+                the 2nd-largest national NEET chain vs the largest national NEET chain
+              </h3>
               <p className="text-sm text-gray-600">Head-to-head comparison</p>
             </Link>
             <Link
@@ -455,11 +470,6 @@ export default function Top5NEETCoachingGurugram() {
               item: {
                 '@type': 'EducationalOrganization',
                 name: coaching.name,
-                aggregateRating: {
-                  '@type': 'AggregateRating',
-                  ratingValue: coaching.rating,
-                  bestRating: 5,
-                },
               },
             })),
           }),

@@ -180,13 +180,6 @@ export function generateLocalBusinessSchema(params: {
         longitude: params.coordinates.lng,
       },
     }),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
-    },
     areaServed: [params.locality, 'South Delhi', 'Delhi NCR'],
     priceRange: '₹40,000 - ₹1,80,000',
     sameAs: [

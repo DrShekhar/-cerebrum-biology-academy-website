@@ -130,14 +130,6 @@ export default function GurugramLocationPage() {
         closes: '23:59',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: CEREBRUM_METRICS.rating,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount: CEREBRUM_METRICS.reviewCount,
-      reviewCount: CEREBRUM_METRICS.reviewCount,
-    },
     sameAs: [
       CONTACT_INFO.social.instagram,
       CONTACT_INFO.social.youtube,
@@ -297,7 +289,11 @@ export default function GurugramLocationPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <script
         type="application/ld+json"

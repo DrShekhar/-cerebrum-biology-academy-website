@@ -212,48 +212,6 @@ export default function BestBiologyTeacherForNeetPage() {
             foundingDate: '2014',
             description:
               "India's leading biology-only specialist coaching brand. 680+ medical college selections, 98% NEET-UG qualification rate.",
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
-            review: [
-              {
-                '@type': 'Review',
-                reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-                author: { '@type': 'Person', name: 'Ishita Malhotra' },
-                reviewBody:
-                  "Dr. Singh's way of teaching physiology made it my strongest subject. NEET 702/720, AIIMS Delhi.",
-                itemReviewed: {
-                  '@type': 'EducationalOrganization',
-                  name: 'Cerebrum Biology Academy',
-                },
-              },
-              {
-                '@type': 'Review',
-                reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-                author: { '@type': 'Person', name: 'Rohan Khanna' },
-                reviewBody:
-                  'Personal attention helped me improve from 520 in mock to 688 in actual NEET. MAMC Delhi.',
-                itemReviewed: {
-                  '@type': 'EducationalOrganization',
-                  name: 'Cerebrum Biology Academy',
-                },
-              },
-              {
-                '@type': 'Review',
-                reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-                author: { '@type': 'Person', name: 'Kavya Reddy' },
-                reviewBody:
-                  'As a dropper, I needed personalized guidance. Dr. Singh identified exactly where I was going wrong. NEET 679, AIIMS Jodhpur.',
-                itemReviewed: {
-                  '@type': 'EducationalOrganization',
-                  name: 'Cerebrum Biology Academy',
-                },
-              },
-            ],
           }),
         }}
       />

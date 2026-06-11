@@ -110,12 +110,6 @@ export default function Class9FoundationLayout({ children }: { children: React.R
                 },
               },
             },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '4.8',
-              bestRating: '5',
-              ratingCount: '120',
-            },
           }),
         }}
       />

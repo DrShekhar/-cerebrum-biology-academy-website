@@ -262,11 +262,6 @@ const jsonLdSchema = {
     '@type': 'PostalAddress',
     addressCountry: 'Global',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '38',
-  },
   offers: {
     '@type': 'Offer',
     category: 'Online Biology Tutoring',
@@ -313,8 +308,7 @@ export default function InternationalBiologyTutorPage() {
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
           <div className="relative max-w-7xl mx-auto px-4">
-            <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
-            >
+            <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/20">
                 <Globe className="w-5 h-5 mr-2" />
                 World-Class International Biology Tutoring
@@ -338,7 +332,11 @@ export default function InternationalBiologyTutorPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button
                     variant="secondary"
                     size="xl"
@@ -362,22 +360,19 @@ export default function InternationalBiologyTutorPage() {
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp"
-                >
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp">
                   <Users className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">1,500+</div>
                   <div className="text-sm opacity-80 mt-1">International Students</div>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp"
-                >
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp">
                   <MapPin className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">15+</div>
                   <div className="text-sm opacity-80 mt-1">Countries Worldwide</div>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp"
-                >
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp">
                   <Clock className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">All Zones</div>
                   <div className="text-sm opacity-80 mt-1">EST, GMT, GST, SGT, AEST</div>
@@ -390,8 +385,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Curriculum Cards Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Choose Your Curriculum
               </h2>
@@ -446,8 +440,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our International Tutoring?
               </h2>
@@ -458,7 +451,10 @@ export default function InternationalBiologyTutorPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {whyChooseUs.map((item, index) => (
-                <div key={item.title} className="bg-gradient-to-br from-indigo-50 to-slate-50 rounded-xl p-8 hover:shadow-lg transition-shadow animate-fadeInUp">
+                <div
+                  key={item.title}
+                  className="bg-gradient-to-br from-indigo-50 to-slate-50 rounded-xl p-8 hover:shadow-lg transition-shadow animate-fadeInUp"
+                >
                   <div className="bg-gradient-to-br from-indigo-600 to-slate-700 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
@@ -473,8 +469,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Countries We Serve Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Students Worldwide Trust Us
               </h2>
@@ -486,7 +481,10 @@ export default function InternationalBiologyTutorPage() {
 
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
               {countries.map((country, index) => (
-                <div key={country.name} className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all hover:scale-105 animate-fadeInUp">
+                <div
+                  key={country.name}
+                  className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all hover:scale-105 animate-fadeInUp"
+                >
                   <div className="text-4xl mb-3 text-center">{country.flag}</div>
                   <h3 className="text-lg font-bold text-gray-900 text-center mb-2">
                     {country.name}
@@ -504,8 +502,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Comparison Table Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Compare Biology Curricula
               </h2>
@@ -547,8 +544,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Success Stories Section */}
         <section className="py-20 bg-gradient-to-br from-indigo-600 via-indigo-700 to-slate-800 text-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 International Student Success Stories
               </h2>
@@ -559,7 +555,10 @@ export default function InternationalBiologyTutorPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {successStories.map((story, index) => (
-                <div key={story.name} className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp">
+                <div
+                  key={story.name}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp"
+                >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{story.flag}</div>
@@ -589,8 +588,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Features Grid Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Premium Learning Features
               </h2>
@@ -601,7 +599,10 @@ export default function InternationalBiologyTutorPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={feature.title} className="bg-gradient-to-br from-slate-50 to-indigo-50 rounded-xl p-8 hover:shadow-lg transition-all animate-fadeInUp">
+                <div
+                  key={feature.title}
+                  className="bg-gradient-to-br from-slate-50 to-indigo-50 rounded-xl p-8 hover:shadow-lg transition-all animate-fadeInUp"
+                >
                   <div className="bg-gradient-to-br from-indigo-600 to-slate-700 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
@@ -616,8 +617,7 @@ export default function InternationalBiologyTutorPage() {
         {/* FAQ Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="text-center mb-16 animate-fadeInUp"
-            >
+            <div className="text-center mb-16 animate-fadeInUp">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Frequently Asked Questions
               </h2>
@@ -628,7 +628,10 @@ export default function InternationalBiologyTutorPage() {
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div key={faq.question} className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp">
+                <div
+                  key={faq.question}
+                  className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
+                >
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                     <MessageCircle className="w-6 h-6 mr-3 text-indigo-600 flex-shrink-0 mt-1" />
                     {faq.question}
@@ -653,7 +656,11 @@ export default function InternationalBiologyTutorPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://wa.me/918826444334?text=Hi!%20I'm%20an%20NRI%20student%20and%20want%20to%20book%20a%20FREE%20online%20demo%20class%20for%20NEET%20Biology.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button
                     variant="secondary"
                     size="xl"

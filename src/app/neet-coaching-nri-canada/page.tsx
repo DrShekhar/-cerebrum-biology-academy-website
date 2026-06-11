@@ -100,12 +100,6 @@ const organizationSchema = {
   url: `${BASE_URL}/neet-coaching-nri-canada`,
   telephone: '+91-8826444334',
   areaServed: { '@type': 'Country', name: 'Canada' },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    ratingCount: '35',
-    bestRating: '5',
-  },
 }
 
 const faqSchema = {
@@ -137,22 +131,42 @@ export default async function NEETCoachingNRICanadaPage() {
       {/* Cross-programme links for Canadian families */}
       <section className="py-12 bg-white border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Other Biology Programmes for Canadian Students</h2>
-          <p className="text-slate-600 mb-6">Beyond NEET, Cerebrum serves Canadian students across AP Biology, MCAT, IB Biology, and Biology Olympiads.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">
+            Other Biology Programmes for Canadian Students
+          </h2>
+          <p className="text-slate-600 mb-6">
+            Beyond NEET, Cerebrum serves Canadian students across AP Biology, MCAT, IB Biology, and
+            Biology Olympiads.
+          </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-            <Link href="/mcat-biology-tutor-toronto" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+            <Link
+              href="/mcat-biology-tutor-toronto"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">MCAT Biology Toronto</span>
             </Link>
-            <Link href="/mcat-biology-tutor-vancouver" className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition">
+            <Link
+              href="/mcat-biology-tutor-vancouver"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-blue-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">MCAT Biology Vancouver</span>
             </Link>
-            <Link href="/ap-biology-tutor-toronto-gta" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-tutor-toronto-gta"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP Biology Toronto</span>
             </Link>
-            <Link href="/cbo-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-amber-400 hover:shadow text-center transition">
+            <Link
+              href="/cbo-coaching"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-amber-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">CBO Olympiad</span>
             </Link>
-            <Link href="/ib-biology/toronto" className="block p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow text-center transition">
+            <Link
+              href="/ib-biology/toronto"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-purple-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">IB Biology Toronto</span>
             </Link>
           </div>

@@ -173,12 +173,6 @@ export default function BiologyOlympiadCoachingGurugramPage() {
       },
       geoRadius: '20000',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: CEREBRUM_METRICS.rating,
-      bestRating: 5,
-      ratingCount: CEREBRUM_METRICS.reviewCount,
-    },
   }
 
   const breadcrumbSchema = {
@@ -209,7 +203,11 @@ export default function BiologyOlympiadCoachingGurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

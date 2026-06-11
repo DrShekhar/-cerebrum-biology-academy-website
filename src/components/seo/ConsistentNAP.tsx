@@ -49,8 +49,7 @@ const BUSINESS_INFO = {
     },
     {
       name: 'Cerebrum Biology Academy - Faridabad',
-      address:
-        'SCF-130, 2nd Floor, Above Union Bank, HUDA Market, Sector 17, Faridabad - 121002',
+      address: 'SCF-130, 2nd Floor, Above Union Bank, HUDA Market, Sector 17, Faridabad - 121002',
       phone: CONTACT_INFO.phone.formatted.primary,
       geo: { lat: '28.4089', lng: '77.3178' },
     },
@@ -130,14 +129,6 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
     image: `${BASE_URL}/og-image.jpg`,
     // IMPORTANT: Review count must match Google Business Profile exactly
     // Last verified: Feb 2026 — 38 reviews on Google
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
   }
 
   if (variant === 'schema-only') {

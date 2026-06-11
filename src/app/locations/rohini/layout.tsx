@@ -33,13 +33,6 @@ function RohiniServiceSchema() {
         closes: '23:59',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '35',
-      bestRating: '5',
-      worstRating: '1',
-    },
     areaServed: [
       'Rohini',
       'Pitampura',
@@ -87,7 +80,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching Rohini Delhi | DC Chowk',
-    description: 'NEET Biology coaching center in Rohini, Delhi at DC Chowk. AIIMS faculty, small batches, near Rohini West Metro.',
+    description:
+      'NEET Biology coaching center in Rohini, Delhi at DC Chowk. AIIMS faculty, small batches, near Rohini West Metro.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/rohini',
@@ -105,7 +99,8 @@ function RohiniEventSchema() {
         '@type': 'EducationEvent',
         position: 1,
         name: 'NEET Biology Class 12 Intensive Batch - Rohini',
-        description: 'Intensive NEET Biology preparation for Class 12 students at Rohini center. Complete syllabus coverage with MCQ practice and weekly test series.',
+        description:
+          'Intensive NEET Biology preparation for Class 12 students at Rohini center. Complete syllabus coverage with MCQ practice and weekly test series.',
         startDate: '2026-03-01',
         endDate: '2027-04-30',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -140,7 +135,8 @@ function RohiniEventSchema() {
         '@type': 'EducationEvent',
         position: 2,
         name: 'NEET Biology Class 11 Foundation Batch - Rohini',
-        description: 'Early NEET preparation foundation batch for Class 11 students at Rohini. Build strong fundamentals with concept clarity and MCQ practice.',
+        description:
+          'Early NEET preparation foundation batch for Class 11 students at Rohini. Build strong fundamentals with concept clarity and MCQ practice.',
         startDate: '2026-04-01',
         endDate: '2027-03-31',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -175,7 +171,8 @@ function RohiniEventSchema() {
         '@type': 'EducationEvent',
         position: 3,
         name: 'Free NEET Biology Demo Class - Rohini',
-        description: 'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
+        description:
+          'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
         startDate: '2026-03-15',
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
@@ -271,21 +268,36 @@ export default function RohiniLayout({ children }: { children: React.ReactNode }
             ],
           }),
         }}
-      />      <script
+      />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Rohini', item: 'https://cerebrumbiologyacademy.com/locations/rohini' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Rohini',
+                item: 'https://cerebrumbiologyacademy.com/locations/rohini',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

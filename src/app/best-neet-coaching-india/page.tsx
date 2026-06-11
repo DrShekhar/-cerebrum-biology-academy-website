@@ -27,7 +27,12 @@ const comparisonData = [
     highlight: true,
   },
   { institute: 'XYZ Coaching', successRate: '65%', batchSize: '200-400', fees: '₹1,50,000+' },
-  { institute: 'SKY Coaching (2nd-largest national NEET chain)', successRate: '62%', batchSize: '150-300', fees: '₹1,40,000+' },
+  {
+    institute: 'SKY Coaching (2nd-largest national NEET chain)',
+    successRate: '62%',
+    batchSize: '150-300',
+    fees: '₹1,40,000+',
+  },
   {
     institute: 'Kota Coaching',
     successRate: '60%',
@@ -135,8 +140,9 @@ export default function BestNeetCoachingIndiaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Compare with the largest national NEET chain, the 2nd-largest national NEET chain, Kota coaching - see why students from Delhi NCR, Mumbai,
-              Bangalore, Hyderabad, Chennai choose Cerebrum Academy for NEET preparation.
+              Compare with the largest national NEET chain, the 2nd-largest national NEET chain,
+              Kota coaching - see why students from Delhi NCR, Mumbai, Bangalore, Hyderabad, Chennai
+              choose Cerebrum Academy for NEET preparation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -445,13 +451,6 @@ export default function BestNeetCoachingIndiaPage() {
                 },
               },
             ],
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />
@@ -488,13 +487,6 @@ export default function BestNeetCoachingIndiaPage() {
               { '@type': 'City', name: 'Kota' },
               { '@type': 'Country', name: 'India' },
             ],
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />

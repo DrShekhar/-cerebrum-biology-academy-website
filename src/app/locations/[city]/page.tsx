@@ -81,9 +81,24 @@ export default async function CityPage({ params }: CityPageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-      { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-      { '@type': 'ListItem', position: 3, name: cityName, item: `https://cerebrumbiologyacademy.com/locations/${resolvedParams.city}` },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Locations',
+        item: 'https://cerebrumbiologyacademy.com/locations',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: cityName,
+        item: `https://cerebrumbiologyacademy.com/locations/${resolvedParams.city}`,
+      },
     ],
   }
 
@@ -119,13 +134,6 @@ export default async function CityPage({ params }: CityPageProps) {
         '@type': 'State',
         name: stateName,
       },
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: String(totalStudents),
     },
   }
 
@@ -367,7 +375,9 @@ export default async function CityPage({ params }: CityPageProps) {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20locations.%20Please%20share%20fee%20structure%20and%20enrolment%20details." target="_blank" rel="noopener noreferrer"
+              href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20locations.%20Please%20share%20fee%20structure%20and%20enrolment%20details."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg"
             >
               Enroll Now
@@ -385,7 +395,11 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
 
           <p className="mt-6 text-sm text-blue-200">
-            Contact: <a href="tel:+918826444334" className="underline hover:text-white">+91-88264-44334</a> | Available for calling and WhatsApp
+            Contact:{' '}
+            <a href="tel:+918826444334" className="underline hover:text-white">
+              +91-88264-44334
+            </a>{' '}
+            | Available for calling and WhatsApp
           </p>
         </div>
       </section>

@@ -381,13 +381,6 @@ export default function FAQPage() {
             },
             description:
               "India's leading biology-only specialist coaching brand. AIIMS-trained faculty led by Dr. Shekhar C Singh. 9 biology verticals: NEET-UG, NEET Foundation, IB, AP, MCAT, DAT, GAMSAT, USMLE Step 1, and Biology Olympiads. 680+ medical college selections, 98% NEET-UG qualification rate, 15-20 student batches across 6 Delhi NCR offline centres plus pan-India online live classes.",
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />

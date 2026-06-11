@@ -113,7 +113,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Near Hauz Khas Metro | Biology Classes South Delhi',
-    description: 'NEET Biology coaching near Hauz Khas Metro Station, South Delhi. ${metroData.studentCount} students enrolled from IIT Delhi, SDA, Green Park areas. Just ${metroData.nearestCenter.distance} to cente...',
+    description:
+      'NEET Biology coaching near Hauz Khas Metro Station, South Delhi. ${metroData.studentCount} students enrolled from IIT Delhi, SDA, Green Park areas. Just ${metroData.nearestCenter.distance} to cente...',
   },
 }
 
@@ -155,19 +156,18 @@ export default function NEETCoachingHauzKhasMetroPage() {
       '@type': 'Place',
       name: area,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -186,7 +186,11 @@ export default function NEETCoachingHauzKhasMetroPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Hauz Khas', 'NEET Biology Hauz Khas', 'Medical entrance coaching Hauz Khas']}
+        knowsAbout={[
+          'NEET Hauz Khas',
+          'NEET Biology Hauz Khas',
+          'Medical entrance coaching Hauz Khas',
+        ]}
       />
       <script
         type="application/ld+json"
@@ -223,8 +227,7 @@ export default function NEETCoachingHauzKhasMetroPage() {
             </div>
 
             <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-              NEET Coaching Near{' '}
-              <span className="text-yellow-300">Hauz Khas Metro</span>
+              NEET Coaching Near <span className="text-yellow-300">Hauz Khas Metro</span>
             </h1>
 
             <p className="mx-auto mb-6 max-w-3xl text-xl text-white/90">
@@ -259,7 +262,9 @@ export default function NEETCoachingHauzKhasMetroPage() {
                 WhatsApp Us
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hauz%20Khas.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hauz%20Khas.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-6 py-3 font-semibold text-gray-900 transition hover:bg-yellow-300"
               >
                 Book FREE Demo
@@ -336,7 +341,8 @@ export default function NEETCoachingHauzKhasMetroPage() {
                   Closest NEET Coaching to Hauz Khas!
                 </h3>
                 <p className="text-gray-600">
-                  Our Green Park center is just 1 metro stop away - the most convenient location for South Delhi students!
+                  Our Green Park center is just 1 metro stop away - the most convenient location for
+                  South Delhi students!
                 </p>
               </div>
             </div>
@@ -378,7 +384,9 @@ export default function NEETCoachingHauzKhasMetroPage() {
               <div className="rounded-2xl border-2 border-green-200 bg-white p-6 shadow-md">
                 <Monitor className="mb-4 h-10 w-10 text-green-600" />
                 <h3 className="mb-2 text-xl font-bold">100% Online</h3>
-                <p className="mb-4 text-gray-600">Live classes from home. Perfect for busy schedules.</p>
+                <p className="mb-4 text-gray-600">
+                  Live classes from home. Perfect for busy schedules.
+                </p>
                 <ul className="mb-4 space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-green-600" />
@@ -462,8 +470,18 @@ export default function NEETCoachingHauzKhasMetroPage() {
                   <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold hover:bg-gray-100">
                     {faq.question}
                     <span className="text-yellow-600 transition-transform group-open:rotate-180">
-                      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <svg
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </span>
                   </summary>
@@ -486,7 +504,8 @@ export default function NEETCoachingHauzKhasMetroPage() {
               Join {metroData.studentCount} Students from Hauz Khas Area
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-xl text-white/90">
-              Start your medical journey with expert guidance from AIIMS faculty - just 5 min from Hauz Khas Metro!
+              Start your medical journey with expert guidance from AIIMS faculty - just 5 min from
+              Hauz Khas Metro!
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -498,7 +517,9 @@ export default function NEETCoachingHauzKhasMetroPage() {
                 WhatsApp Now
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hauz%20Khas.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Hauz%20Khas.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-semibold text-yellow-700 transition hover:bg-yellow-50"
               >
                 Book Free Demo

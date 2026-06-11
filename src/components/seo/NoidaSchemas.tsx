@@ -209,29 +209,7 @@ export function NoidaLocalBusinessSchema({
         closes: '18:00',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Person', name: 'Priya Sharma' },
-        datePublished: '2025-01-10',
-        reviewBody: `Best NEET Biology coaching in ${fullArea}. Dr. Shekhar's teaching helped me score 680+ in NEET!`,
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Person', name: 'Rahul Verma' },
-        datePublished: '2025-01-05',
-        reviewBody: `Joined online classes from ${locationName}. Small batch size and personal attention made all the difference.`,
-      },
-    ],
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
@@ -504,12 +482,7 @@ export function NoidaCourseSchema({
       educationalRole: 'student',
       audienceType: 'NEET Aspirants',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }
 
   return (
@@ -724,12 +697,7 @@ export function NoidaPageSchemas({
         society={society}
         coordinates={coordinates}
       />
-      <NoidaFAQSchema
-        area={area}
-        sector={sector}
-        society={society}
-        customFAQs={customFAQs}
-      />
+      <NoidaFAQSchema area={area} sector={sector} society={society} customFAQs={customFAQs} />
       <NoidaBreadcrumbSchema items={breadcrumbs} />
       <NoidaEnhancedSpeakableSchema
         pageName={pageName}
@@ -973,10 +941,34 @@ export function NoidaResultsSchema({ toppers }: NoidaResultsSchemaProps) {
 export const NOIDA_TOPPERS_2025 = [
   { name: 'Priya Sharma', score: 698, college: 'AIIMS Delhi', year: 2025, sector: 'Sector 62' },
   { name: 'Rahul Verma', score: 685, college: 'AIIMS Delhi', year: 2025, sector: 'Gaur City' },
-  { name: 'Ananya Gupta', score: 672, college: 'JIPMER Puducherry', year: 2025, sector: 'Sector 137' },
+  {
+    name: 'Ananya Gupta',
+    score: 672,
+    college: 'JIPMER Puducherry',
+    year: 2025,
+    sector: 'Sector 137',
+  },
   { name: 'Arjun Singh', score: 668, college: 'AIIMS Jodhpur', year: 2025, sector: 'Sector 18' },
-  { name: 'Sneha Patel', score: 655, college: 'Maulana Azad Medical College', year: 2025, sector: 'Greater Noida West' },
+  {
+    name: 'Sneha Patel',
+    score: 655,
+    college: 'Maulana Azad Medical College',
+    year: 2025,
+    sector: 'Greater Noida West',
+  },
   { name: 'Vikram Yadav', score: 652, college: 'KGMU Lucknow', year: 2025, sector: 'Sector 50' },
-  { name: 'Kritika Sharma', score: 648, college: 'AIIMS Rishikesh', year: 2025, sector: 'ATS Pristine' },
-  { name: 'Rohan Mehta', score: 645, college: 'Lady Hardinge Medical College', year: 2025, sector: 'Sector 44' },
+  {
+    name: 'Kritika Sharma',
+    score: 648,
+    college: 'AIIMS Rishikesh',
+    year: 2025,
+    sector: 'ATS Pristine',
+  },
+  {
+    name: 'Rohan Mehta',
+    score: 645,
+    college: 'Lady Hardinge Medical College',
+    year: 2025,
+    sector: 'Sector 44',
+  },
 ]

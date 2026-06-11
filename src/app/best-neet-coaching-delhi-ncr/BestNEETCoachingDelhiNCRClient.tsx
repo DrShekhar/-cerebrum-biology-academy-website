@@ -20,9 +20,27 @@ import { Button } from '@/components/ui/Button'
 
 const rankings = [
   { rank: 1, name: 'Cerebrum Biology Academy', rating: 5.0, successRate: '98%', highlight: true },
-  { rank: 2, name: 'XYZ Coaching (largest national NEET chain)', rating: 4.5, successRate: '75%', highlight: false },
-  { rank: 3, name: 'SKY Coaching (2nd-largest national NEET chain)', rating: 4.4, successRate: '72%', highlight: false },
-  { rank: 4, name: 'other IIT-JEE-first coachings', rating: 4.3, successRate: '68%', highlight: false },
+  {
+    rank: 2,
+    name: 'XYZ Coaching (largest national NEET chain)',
+    rating: 4.5,
+    successRate: '75%',
+    highlight: false,
+  },
+  {
+    rank: 3,
+    name: 'SKY Coaching (2nd-largest national NEET chain)',
+    rating: 4.4,
+    successRate: '72%',
+    highlight: false,
+  },
+  {
+    rank: 4,
+    name: 'other IIT-JEE-first coachings',
+    rating: 4.3,
+    successRate: '68%',
+    highlight: false,
+  },
   { rank: 5, name: 'other Kota-origin chains', rating: 4.2, successRate: '65%', highlight: false },
 ]
 
@@ -523,12 +541,6 @@ export function BestNEETCoachingDelhiNCRClient() {
               { '@type': 'City', name: 'Ghaziabad' },
               { '@type': 'City', name: 'Faridabad' },
             ],
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '47',
-              bestRating: '5',
-            },
             award: [
               '#1 NEET Biology Coaching in Delhi NCR',
               '98% Success Rate',

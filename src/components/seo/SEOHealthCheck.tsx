@@ -153,12 +153,7 @@ function LocalBusinessSchema() {
         closes: '23:59',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }
 
   return (

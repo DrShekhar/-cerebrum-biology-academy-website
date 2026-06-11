@@ -71,7 +71,7 @@ const faqs = [
   {
     question: 'How is Cerebrum different from coaching centers in Ashok Vihar or NSP?',
     answer:
-      "Unlike mass coaching centers, Cerebrum offers small batches of 15-20 students with AIIMS faculty. Our 98% success rate and personalized attention make the short commute worth it. Students from Wazirpur, Ashok Vihar, and surrounding areas travel to our Rohini center for quality coaching.",
+      'Unlike mass coaching centers, Cerebrum offers small batches of 15-20 students with AIIMS faculty. Our 98% success rate and personalized attention make the short commute worth it. Students from Wazirpur, Ashok Vihar, and surrounding areas travel to our Rohini center for quality coaching.',
   },
 ]
 
@@ -112,13 +112,6 @@ export default function WazirpurNEETCoachingPage() {
       'Shalimar Bagh',
       'Rohini',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-    },
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

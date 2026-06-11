@@ -38,8 +38,7 @@ const CANONICAL = '/neet-dropper-biology-specialist-2027'
 const PAGE_URL = `${SITE_URL}${CANONICAL}`
 
 export const metadata: Metadata = {
-  title:
-    'NEET Dropper Biology Specialist 2027 | The Add-On to PW, Allen, Aakash & Kota',
+  title: 'NEET Dropper Biology Specialist 2027 | The Add-On to PW, Allen, Aakash & Kota',
   description:
     'Most droppers are losing 30–40 marks on biology, not physics or chemistry. Cerebrum is a biology-only specialist — pair us with your existing dropper batch (PW / Allen / Aakash / Kota) to move biology from 65 → 90+. AIIMS-trained faculty, max 10–20 students per batch, NEET 2027 admissions open.',
   keywords: [
@@ -81,71 +80,62 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Dropper Biology Specialist 2027 | The Add-On to PW, Allen, Aakash & Kota',
-    description: 'Most droppers are losing 30–40 marks on biology, not physics or chemistry. Cerebrum is a biology-only specialist — pair us with your existing dropper batch (PW / Allen / Aakash / Kota) to move biol...',
+    description:
+      'Most droppers are losing 30–40 marks on biology, not physics or chemistry. Cerebrum is a biology-only specialist — pair us with your existing dropper batch (PW / Allen / Aakash / Kota) to move biol...',
   },
   robots: 'index, follow, max-image-preview:large',
 }
 
 const FAQS = [
   {
-    question:
-      'I\'m already at PW / Allen / Aakash / Kota — why would I add Cerebrum on top?',
+    question: "I'm already at PW / Allen / Aakash / Kota — why would I add Cerebrum on top?",
     answer:
       'Because biology is where most droppers lose 30–40 marks, and large-batch coaching cannot teach biology depth. Physics and chemistry are problem-solving subjects — a 200-seat lecture works. Biology is conceptual + memory-heavy + question-pattern-specific — it needs small-batch discussion, per-question rationale, and weekly retrieval practice. Our dropper students typically keep their primary coaching for PCM and add us as a 6 hour/week biology layer.',
   },
   {
-    question:
-      'How much can biology realistically improve in one drop year?',
+    question: 'How much can biology realistically improve in one drop year?',
     answer:
       'Our dropper cohort average is +25 to +40 marks in biology alone over 10 months of weekly specialist coaching. That is the single largest subject-level improvement we see in any cohort, because biology has the most ground to gain — droppers usually have unrefined recall, not weak fundamentals. The mechanism is research-backed: spaced retrieval (Karpicke & Roediger, 2008) plus interleaved MCQ drilling, which is exactly what our weekly cycle delivers.',
   },
   {
-    question:
-      'Is this only for online students? I\'m in Kota / Delhi / Hyderabad.',
+    question: "Is this only for online students? I'm in Kota / Delhi / Hyderabad.",
     answer:
-      'Live online via Zoom, scheduled outside your primary coaching hours (early morning or late evening). Printed Cerebrum Biology study material is shipped to your address at no extra cost — including the NCERT-line-by-line guide and 12,000+ MCQ bank. If you\'re in Delhi NCR you can also attend in-person at our South Extension / Rohini / Gurugram / Faridabad centres.',
+      "Live online via Zoom, scheduled outside your primary coaching hours (early morning or late evening). Printed Cerebrum Biology study material is shipped to your address at no extra cost — including the NCERT-line-by-line guide and 12,000+ MCQ bank. If you're in Delhi NCR you can also attend in-person at our South Extension / Rohini / Gurugram / Faridabad centres.",
   },
   {
-    question:
-      'What\'s the fee structure?',
+    question: "What's the fee structure?",
     answer:
       'Three tiers for the dropper biology specialization: Pursuit (₹40,000–₹75,000/year, batch of 30-40), Ascent (₹58,000–₹90,000/year, batch of 16-25, our most popular tier), Pinnacle ZA (₹1,20,000–₹1,56,000/year, batch of 10-12 with weekly 1-on-1 mentorship from Dr. Shekhar himself). All tiers include weekly tests, full study material, and unlimited doubt sessions. EMI options available.',
   },
   {
-    question:
-      'Who is Dr. Shekhar and why should I trust this?',
+    question: 'Who is Dr. Shekhar and why should I trust this?',
     answer:
       'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus who founded Cerebrum in 2014. 15+ years of NEET biology teaching, 680+ medical college selections including 67+ to AIIMS Delhi, 98% NEET-UG qualification rate. He personally teaches the Pinnacle tier and supervises curriculum for all batches. We are biology-only by design — no physics, no chemistry, no distractions.',
   },
   {
-    question:
-      'How is your test series different from PW / Allen / Aakash test series?',
+    question: 'How is your test series different from PW / Allen / Aakash test series?',
     answer:
-      'Our biology test series is built around the exact question patterns that have appeared in NEET 2018-2026, weighted by chapter to match NEET\'s actual emphasis (which differs from NCERT weightage). Most general coaching test series allocate biology questions evenly across chapters — that does not match reality. Our test series is pattern-engineered: more questions on Human Physiology, Genetics, Plant Physiology, Ecology — the chapters that consistently make up 70% of NEET biology marks.',
+      "Our biology test series is built around the exact question patterns that have appeared in NEET 2018-2026, weighted by chapter to match NEET's actual emphasis (which differs from NCERT weightage). Most general coaching test series allocate biology questions evenly across chapters — that does not match reality. Our test series is pattern-engineered: more questions on Human Physiology, Genetics, Plant Physiology, Ecology — the chapters that consistently make up 70% of NEET biology marks.",
   },
   {
-    question:
-      'When does the NEET 2027 dropper biology specialist programme start?',
+    question: 'When does the NEET 2027 dropper biology specialist programme start?',
     answer:
       'The 2026-27 dropper batch starts July 2026 (immediately after NEET 2026 result counselling closes). Late admissions accepted up to September 2026. Curriculum runs through April 2027 with a 4-week revision sprint before NEET 2027 (scheduled May 2027 per NTA tentative calendar).',
   },
   {
-    question:
-      'What\'s the time commitment alongside my primary coaching?',
+    question: "What's the time commitment alongside my primary coaching?",
     answer:
       '6 hours/week of live online classes (typically two 90-minute slots per week) + 2-3 hours of weekly MCQ tests + 1 hour weekly mentor call (Pinnacle tier only). That fits inside the gaps in your primary dropper schedule — designed not to compete with your PCM workload.',
   },
   {
-    question:
-      'Can I trial the programme before committing?',
+    question: 'Can I trial the programme before committing?',
     answer:
       'Yes. We run a free 60-minute demo class with Dr. Shekhar where you bring your weakest 5 NEET-style biology questions and we work through them live. About 80% of dropper enquiries take this demo before deciding. Book via WhatsApp +91 88264 44334.',
   },
   {
-    question:
-      'What if I haven\'t even decided to drop yet?',
+    question: "What if I haven't even decided to drop yet?",
     answer:
-      'Read our biology revision plan first — it\'s the same 12-week plan we run in the dropper batch, available as a free download. If you can follow that on your own with discipline, you may not need a coaching add-on. If you can\'t (most can\'t — the structure and accountability is the value), the dropper batch exists for that reason.',
+      "Read our biology revision plan first — it's the same 12-week plan we run in the dropper batch, available as a free download. If you can follow that on your own with discipline, you may not need a coaching add-on. If you can't (most can't — the structure and accountability is the value), the dropper batch exists for that reason.",
   },
 ]
 
@@ -255,29 +245,6 @@ export default function NEETDropperBiologySpecialistPage() {
     })),
   }
 
-  // Review schema — Sadhna Sirin testimonial linked to the Course.
-  // 360/360 Biology in NEET 2023 is the strongest possible proof point
-  // for the "biology score is the rank limiter" thesis of this page.
-  const reviewSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: { '@id': `${PAGE_URL}#course` },
-    author: {
-      '@type': 'Person',
-      name: 'Sadhna Sirin',
-      description: 'Delhi-NCR Topper NEET 2023 — 695/720, 360/360 Biology',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    reviewBody:
-      "Dr. Shekhar Sir's conceptual approach made complex topics simple. The weekly tests and personal mentorship helped me score 360/360 in Biology.",
-    datePublished: '2023-06-15',
-  }
-
   const waUrl =
     'https://wa.me/918826444334?text=' +
     encodeURIComponent(
@@ -309,17 +276,10 @@ export default function NEETDropperBiologySpecialistPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
 
       <div className="min-h-screen bg-slate-50">
         {/* Breadcrumb */}
-        <nav
-          aria-label="Breadcrumb"
-          className="mx-auto max-w-6xl px-4 pt-6 text-sm text-slate-500"
-        >
+        <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-6 text-sm text-slate-500">
           <ol className="flex items-center gap-1">
             <li>
               <Link href="/" className="hover:text-indigo-700 flex items-center gap-1">
@@ -345,11 +305,10 @@ export default function NEETDropperBiologySpecialistPage() {
                 <span className="text-indigo-700">We fix that.</span>
               </h1>
               <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-                Most NEET droppers land in the 600-640 range with strong physics and
-                chemistry but a biology score stuck at 280-300. That gap is what
-                separates a government MBBS rank from a private MBBS rank. Cerebrum
-                is a biology-only specialist — designed to pair with your existing PW,
-                Allen, Aakash, Motion or Kota dropper batch, not replace it.
+                Most NEET droppers land in the 600-640 range with strong physics and chemistry but a
+                biology score stuck at 280-300. That gap is what separates a government MBBS rank
+                from a private MBBS rank. Cerebrum is a biology-only specialist — designed to pair
+                with your existing PW, Allen, Aakash, Motion or Kota dropper batch, not replace it.
               </p>
 
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -371,8 +330,8 @@ export default function NEETDropperBiologySpecialistPage() {
               </div>
 
               <p className="mt-3 text-sm text-slate-500">
-                Free 60-min trial with Dr. Shekhar — bring your weakest 5 biology
-                questions and we work them live.
+                Free 60-min trial with Dr. Shekhar — bring your weakest 5 biology questions and we
+                work them live.
               </p>
             </div>
 
@@ -413,8 +372,8 @@ export default function NEETDropperBiologySpecialistPage() {
               Is the biology-specialist programme for you?
             </h2>
             <p className="mt-3 text-slate-600 max-w-3xl">
-              This page is not for everyone. The biology specialist drop-in works only
-              if you fit a specific profile. Be honest with yourself before booking.
+              This page is not for everyone. The biology specialist drop-in works only if you fit a
+              specific profile. Be honest with yourself before booking.
             </p>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -425,24 +384,23 @@ export default function NEETDropperBiologySpecialistPage() {
                 <ul className="mt-4 space-y-3 text-sm text-slate-700">
                   <li className="flex gap-2">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-                    You attempted NEET 2025 or 2026 and scored 540-680 overall but
-                    biology was the lowest of your three subject scores.
+                    You attempted NEET 2025 or 2026 and scored 540-680 overall but biology was the
+                    lowest of your three subject scores.
                   </li>
                   <li className="flex gap-2">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-                    You are enrolled (or about to enrol) in a full-package dropper
-                    coaching for NEET 2027 — PW, Allen, Aakash, Motion, Resonance,
-                    Bansal, Vibrant, Sri Chaitanya or similar.
+                    You are enrolled (or about to enrol) in a full-package dropper coaching for NEET
+                    2027 — PW, Allen, Aakash, Motion, Resonance, Bansal, Vibrant, Sri Chaitanya or
+                    similar.
                   </li>
                   <li className="flex gap-2">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-                    You can give 6 hours a week to focused biology work outside your
-                    primary coaching schedule.
+                    You can give 6 hours a week to focused biology work outside your primary
+                    coaching schedule.
                   </li>
                   <li className="flex gap-2">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-                    You want to fix a specific subject, not redo your whole
-                    preparation.
+                    You want to fix a specific subject, not redo your whole preparation.
                   </li>
                 </ul>
               </div>
@@ -454,9 +412,8 @@ export default function NEETDropperBiologySpecialistPage() {
                 <ul className="mt-4 space-y-3 text-sm text-slate-700">
                   <li className="flex gap-2">
                     <span className="font-bold text-rose-600">×</span>
-                    Your physics and chemistry are also at 50-60% — in that case you
-                    need a full-package dropper batch, not a biology specialist. See
-                    our{' '}
+                    Your physics and chemistry are also at 50-60% — in that case you need a
+                    full-package dropper batch, not a biology specialist. See our{' '}
                     <Link
                       href="/neet-dropper-batch-kota"
                       className="underline font-medium text-indigo-700"
@@ -467,14 +424,13 @@ export default function NEETDropperBiologySpecialistPage() {
                   </li>
                   <li className="flex gap-2">
                     <span className="font-bold text-rose-600">×</span>
-                    You expect biology to fix itself if you just attend more lectures.
-                    Biology improvement is retrieval-practice driven; lectures alone
-                    don\'t move the score.
+                    You expect biology to fix itself if you just attend more lectures. Biology
+                    improvement is retrieval-practice driven; lectures alone don\'t move the score.
                   </li>
                   <li className="flex gap-2">
                     <span className="font-bold text-rose-600">×</span>
-                    You can\'t commit to weekly tests and a strict NCERT revision
-                    schedule. The programme is intensive, not casual.
+                    You can\'t commit to weekly tests and a strict NCERT revision schedule. The
+                    programme is intensive, not casual.
                   </li>
                 </ul>
               </div>
@@ -487,28 +443,27 @@ export default function NEETDropperBiologySpecialistPage() {
           <div className="grid gap-10 md:grid-cols-2 md:items-start">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-                Why biology is the dropper\'s rank limiter — and why large-batch
-                coaching can\'t fix it
+                Why biology is the dropper\'s rank limiter — and why large-batch coaching can\'t fix
+                it
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                NEET biology is 360 of 720 total marks — half the exam. A 50-mark gap
-                in biology is mathematically larger than a 50-mark gap in physics or
-                chemistry combined. Among the 1,400+ dropper students we have worked
-                with since 2014, the biology score gap is almost always the largest
-                contributor to a sub-600 attempt.
+                NEET biology is 360 of 720 total marks — half the exam. A 50-mark gap in biology is
+                mathematically larger than a 50-mark gap in physics or chemistry combined. Among the
+                1,400+ dropper students we have worked with since 2014, the biology score gap is
+                almost always the largest contributor to a sub-600 attempt.
               </p>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Yet biology is the subject that large-batch coaching (Allen, Aakash,
-                PW, Kota chains) struggle most to teach. Physics and chemistry are
-                problem-solving subjects: a 200-seat lecture can transmit a derivation
-                or a reaction mechanism efficiently. Biology is conceptual + memory +
-                question-pattern recognition — none of which transmit well at scale.
+                Yet biology is the subject that large-batch coaching (Allen, Aakash, PW, Kota
+                chains) struggle most to teach. Physics and chemistry are problem-solving subjects:
+                a 200-seat lecture can transmit a derivation or a reaction mechanism efficiently.
+                Biology is conceptual + memory + question-pattern recognition — none of which
+                transmit well at scale.
               </p>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                The student-side fix is small-batch retrieval practice, weekly
-                question-pattern drilling, and NCERT-line-by-line consolidation. The
-                coaching-side fix is being biology-only by design — no resource
-                competition with physics/chemistry, no over-stretched faculty.
+                The student-side fix is small-batch retrieval practice, weekly question-pattern
+                drilling, and NCERT-line-by-line consolidation. The coaching-side fix is being
+                biology-only by design — no resource competition with physics/chemistry, no
+                over-stretched faculty.
               </p>
             </div>
 
@@ -526,10 +481,7 @@ export default function NEETDropperBiologySpecialistPage() {
                     <span className="font-semibold">avg loss: 14 marks</span>
                   </div>
                   <div className="mt-1 h-2 rounded-full bg-slate-700">
-                    <div
-                      className="h-2 rounded-full bg-amber-400"
-                      style={{ width: '60%' }}
-                    />
+                    <div className="h-2 rounded-full bg-amber-400" style={{ width: '60%' }} />
                   </div>
                 </div>
                 <div>
@@ -538,10 +490,7 @@ export default function NEETDropperBiologySpecialistPage() {
                     <span className="font-semibold">avg loss: 9 marks</span>
                   </div>
                   <div className="mt-1 h-2 rounded-full bg-slate-700">
-                    <div
-                      className="h-2 rounded-full bg-amber-400"
-                      style={{ width: '50%' }}
-                    />
+                    <div className="h-2 rounded-full bg-amber-400" style={{ width: '50%' }} />
                   </div>
                 </div>
                 <div>
@@ -550,10 +499,7 @@ export default function NEETDropperBiologySpecialistPage() {
                     <span className="font-semibold">avg loss: 7 marks</span>
                   </div>
                   <div className="mt-1 h-2 rounded-full bg-slate-700">
-                    <div
-                      className="h-2 rounded-full bg-amber-400"
-                      style={{ width: '45%' }}
-                    />
+                    <div className="h-2 rounded-full bg-amber-400" style={{ width: '45%' }} />
                   </div>
                 </div>
                 <div>
@@ -562,16 +508,12 @@ export default function NEETDropperBiologySpecialistPage() {
                     <span className="font-semibold">avg loss: 6 marks</span>
                   </div>
                   <div className="mt-1 h-2 rounded-full bg-slate-700">
-                    <div
-                      className="h-2 rounded-full bg-amber-400"
-                      style={{ width: '40%' }}
-                    />
+                    <div className="h-2 rounded-full bg-amber-400" style={{ width: '40%' }} />
                   </div>
                 </div>
               </div>
               <p className="mt-5 text-xs text-slate-400">
-                Source: Cerebrum dropper attempt-analysis call data, 2024-2026
-                cohorts, n=412.
+                Source: Cerebrum dropper attempt-analysis call data, 2024-2026 cohorts, n=412.
               </p>
             </div>
           </div>
@@ -589,38 +531,32 @@ export default function NEETDropperBiologySpecialistPage() {
                 {
                   icon: <BookOpen className="h-6 w-6 text-indigo-600" />,
                   title: 'NCERT-line-by-line revision',
-                  text:
-                    'Cerebrum NCERT guide annotates every NEET-tested line in Class 11 + 12 NCERT Biology. Eight 90-minute live sessions cover the full syllabus consolidation in your first 8 weeks.',
+                  text: 'Cerebrum NCERT guide annotates every NEET-tested line in Class 11 + 12 NCERT Biology. Eight 90-minute live sessions cover the full syllabus consolidation in your first 8 weeks.',
                 },
                 {
                   icon: <Microscope className="h-6 w-6 text-indigo-600" />,
                   title: 'Pattern-engineered MCQ drilling',
-                  text:
-                    '12,000+ MCQ bank, weighted by chapter to match NEET 2018-2026 actual emphasis (not NCERT proportional weight). Weekly 90-question chapter tests in Phase 1, full 90-question biology mocks in Phase 2.',
+                  text: '12,000+ MCQ bank, weighted by chapter to match NEET 2018-2026 actual emphasis (not NCERT proportional weight). Weekly 90-question chapter tests in Phase 1, full 90-question biology mocks in Phase 2.',
                 },
                 {
                   icon: <Users className="h-6 w-6 text-indigo-600" />,
                   title: 'Small-batch live discussion',
-                  text:
-                    'Max 10-20 students per batch (varies by tier). Every wrong MCQ in the weekly test is discussed in the next live class — the per-question rationale is the part lectures cannot deliver.',
+                  text: 'Max 10-20 students per batch (varies by tier). Every wrong MCQ in the weekly test is discussed in the next live class — the per-question rationale is the part lectures cannot deliver.',
                 },
                 {
                   icon: <TrendingUp className="h-6 w-6 text-indigo-600" />,
                   title: 'Weekly progress tracking',
-                  text:
-                    'Your biology score trajectory is plotted week-on-week. We share the dashboard with you and (if you opt in) with your primary coaching\'s academic mentor so plans stay aligned.',
+                  text: "Your biology score trajectory is plotted week-on-week. We share the dashboard with you and (if you opt in) with your primary coaching's academic mentor so plans stay aligned.",
                 },
                 {
                   icon: <Target className="h-6 w-6 text-indigo-600" />,
                   title: '4-week pre-NEET revision sprint',
-                  text:
-                    'April 2027 sprint: daily 1-hour biology revision live class + 1 full mock per day. Calibrated for the 30 days before NEET 2027. This phase alone often delivers a +10 mark improvement.',
+                  text: 'April 2027 sprint: daily 1-hour biology revision live class + 1 full mock per day. Calibrated for the 30 days before NEET 2027. This phase alone often delivers a +10 mark improvement.',
                 },
                 {
                   icon: <Award className="h-6 w-6 text-indigo-600" />,
                   title: 'Mentor accountability call',
-                  text:
-                    'Pinnacle tier: weekly 30-min 1-on-1 with Dr. Shekhar. Ascent tier: bi-weekly with senior faculty. Pursuit tier: monthly group mentor session. The accountability layer is what most droppers actually lack.',
+                  text: 'Pinnacle tier: weekly 30-min 1-on-1 with Dr. Shekhar. Ascent tier: bi-weekly with senior faculty. Pursuit tier: monthly group mentor session. The accountability layer is what most droppers actually lack.',
                 },
               ].map((card) => (
                 <div
@@ -630,12 +566,8 @@ export default function NEETDropperBiologySpecialistPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">
                     {card.icon}
                   </div>
-                  <h3 className="mt-4 text-base font-semibold text-slate-900">
-                    {card.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                    {card.text}
-                  </p>
+                  <h3 className="mt-4 text-base font-semibold text-slate-900">{card.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{card.text}</p>
                 </div>
               ))}
             </div>
@@ -648,8 +580,8 @@ export default function NEETDropperBiologySpecialistPage() {
             Three tiers. Pick by batch size + mentor access, not features.
           </h2>
           <p className="mt-3 text-slate-600 max-w-3xl">
-            All tiers cover the same syllabus, same test series, same study material.
-            What scales by tier is batch size, mentor depth, and personalisation.
+            All tiers cover the same syllabus, same test series, same study material. What scales by
+            tier is batch size, mentor depth, and personalisation.
           </p>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -709,8 +641,8 @@ export default function NEETDropperBiologySpecialistPage() {
           </div>
 
           <p className="mt-6 text-xs text-slate-500">
-            EMI options available on all tiers. Pursuit tier eligible for 30%
-            scholarship based on previous NEET score (call to verify).
+            EMI options available on all tiers. Pursuit tier eligible for 30% scholarship based on
+            previous NEET score (call to verify).
           </p>
         </section>
 
@@ -724,14 +656,12 @@ export default function NEETDropperBiologySpecialistPage() {
                   100 percentile biology · NEET 2023
                 </span>
                 <h2 className="mt-4 text-2xl md:text-3xl font-bold text-slate-900">
-                  Sadhna scored 360/360 in biology. The method on this page is
-                  what got her there.
+                  Sadhna scored 360/360 in biology. The method on this page is what got her there.
                 </h2>
                 <figure className="mt-6 border-l-4 border-indigo-600 pl-5">
                   <blockquote className="text-lg italic text-slate-700 leading-relaxed">
-                    “Dr. Shekhar Sir’s conceptual approach made complex topics
-                    simple. The weekly tests and personal mentorship helped me
-                    score 360/360 in Biology.”
+                    “Dr. Shekhar Sir’s conceptual approach made complex topics simple. The weekly
+                    tests and personal mentorship helped me score 360/360 in Biology.”
                   </blockquote>
                   <figcaption className="mt-4 text-sm">
                     <p className="font-bold text-slate-900">Sadhna Sirin</p>
@@ -743,16 +673,16 @@ export default function NEETDropperBiologySpecialistPage() {
 
                 <p className="mt-6 text-sm text-slate-600 leading-relaxed">
                   The two mechanisms Sadhna mentions — <em>weekly tests</em> and{' '}
-                  <em>personal mentorship</em> — are the same two that the
-                  research foundation in our{' '}
+                  <em>personal mentorship</em> — are the same two that the research foundation in
+                  our{' '}
                   <Link
                     href="/biology-revision-plan-neet-dropper"
                     className="underline text-indigo-700 font-medium"
                   >
                     12-week revision plan
                   </Link>{' '}
-                  is built around. Not a marketing message — a mechanism that
-                  has produced this outcome repeatedly across our cohorts.
+                  is built around. Not a marketing message — a mechanism that has produced this
+                  outcome repeatedly across our cohorts.
                 </p>
               </div>
 
@@ -788,9 +718,7 @@ export default function NEETDropperBiologySpecialistPage() {
                     <span>{f.question}</span>
                     <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                    {f.answer}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{f.answer}</p>
                 </details>
               ))}
             </div>
@@ -804,9 +732,8 @@ export default function NEETDropperBiologySpecialistPage() {
               NEET 2027 dropper biology batch — admissions open
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              First step is a free 60-minute trial class with Dr. Shekhar. Bring
-              your 5 weakest biology questions. We\'ll show you the gap and the plan
-              before you commit a rupee.
+              First step is a free 60-minute trial class with Dr. Shekhar. Bring your 5 weakest
+              biology questions. We\'ll show you the gap and the plan before you commit a rupee.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
               <a

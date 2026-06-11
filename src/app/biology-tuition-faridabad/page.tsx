@@ -64,7 +64,11 @@ export default function BiologyTuitionFaridabadPage() {
   return (
     <div className="min-h-screen">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -119,7 +123,10 @@ export default function BiologyTuitionFaridabadPage() {
                 { icon: Award, value: '1,100+', label: 'NEET Selections' },
                 { icon: Star, value: '5.0', label: 'Google Rating' },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <div
+                  key={stat.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
+                >
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
@@ -156,7 +163,11 @@ export default function BiologyTuitionFaridabadPage() {
                 {[
                   ['Monthly Fee', '\u20B95,000-8,000/month', '\u20B94,000/month (\u20B948K/year)'],
                   ['Faculty', 'B.Sc/M.Sc Graduate', 'AIIMS-Trained Doctor'],
-                  ['Batch Size', '1 Student (no peer learning)', '15 Students (healthy competition)'],
+                  [
+                    'Batch Size',
+                    '1 Student (no peer learning)',
+                    '15 Students (healthy competition)',
+                  ],
                   ['Test Series', 'No structured tests', 'Weekly tests + monthly assessments'],
                   ['Study Material', 'No material provided', 'Complete NCERT notes + MCQ bank'],
                   ['Recorded Lectures', 'Not available', 'All classes recorded for revision'],
@@ -192,7 +203,12 @@ export default function BiologyTuitionFaridabadPage() {
                 Boards Covered
               </h3>
               <ul className="space-y-3">
-                {['CBSE (most Faridabad schools)', 'ICSE', 'IB (International Baccalaureate)', 'IGCSE'].map((board) => (
+                {[
+                  'CBSE (most Faridabad schools)',
+                  'ICSE',
+                  'IB (International Baccalaureate)',
+                  'IGCSE',
+                ].map((board) => (
                   <li key={board} className="flex items-center text-gray-700">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 shrink-0" />
                     {board}
@@ -229,13 +245,14 @@ export default function BiologyTuitionFaridabadPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Faridabad Areas We Serve
             </h2>
-            <p className="text-lg text-gray-600">
-              Visit our Sector 17 center or join online
-            </p>
+            <p className="text-lg text-gray-600">Visit our Sector 17 center or join online</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {faridabadAreas.map((area) => (
-              <div key={area.name} className="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+              <div
+                key={area.name}
+                className="bg-green-50 rounded-xl p-4 text-center border border-green-100"
+              >
                 <MapPin className="w-6 h-6 text-green-600 mx-auto mb-2" />
                 <div className="font-bold text-gray-900">{area.name}</div>
                 <div className="text-xs text-gray-500">{area.highlight}</div>
@@ -246,11 +263,17 @@ export default function BiologyTuitionFaridabadPage() {
           <div className="mt-12 max-w-2xl mx-auto bg-green-50 border border-green-200 rounded-xl p-6 text-center">
             <Building className="w-10 h-10 text-green-600 mx-auto mb-3" />
             <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Faridabad Center</h3>
-            <p className="text-gray-700 mb-4">
-              Sector 17, Faridabad, Haryana 121002
-            </p>
-            <a href="https://maps.google.com/?q=Sector+17+Faridabad+Haryana" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white">
+            <p className="text-gray-700 mb-4">Sector 17, Faridabad, Haryana 121002</p>
+            <a
+              href="https://maps.google.com/?q=Sector+17+Faridabad+Haryana"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white"
+              >
                 <MapPin className="w-5 h-5 mr-2" />
                 Get Directions
               </Button>
@@ -296,7 +319,11 @@ export default function BiologyTuitionFaridabadPage() {
                 Book Free Demo Class
               </Button>
             </Link>
-            <a href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20biology%20tuition%20in%20Faridabad" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20biology%20tuition%20in%20Faridabad"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline"
                 size="xl"
@@ -308,9 +335,18 @@ export default function BiologyTuitionFaridabadPage() {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/pricing" className="underline opacity-80 hover:opacity-100">View Pricing</Link>
-            <Link href="/courses" className="underline opacity-80 hover:opacity-100">All Courses</Link>
-            <Link href="/neet-coaching-faridabad" className="underline opacity-80 hover:opacity-100">NEET Coaching Faridabad</Link>
+            <Link href="/pricing" className="underline opacity-80 hover:opacity-100">
+              View Pricing
+            </Link>
+            <Link href="/courses" className="underline opacity-80 hover:opacity-100">
+              All Courses
+            </Link>
+            <Link
+              href="/neet-coaching-faridabad"
+              className="underline opacity-80 hover:opacity-100"
+            >
+              NEET Coaching Faridabad
+            </Link>
           </div>
         </div>
       </section>
@@ -332,21 +368,42 @@ export default function BiologyTuitionFaridabadPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-                { '@type': 'ListItem', position: 2, name: 'Biology Tuition Faridabad', item: 'https://cerebrumbiologyacademy.com/biology-tuition-faridabad' },
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://cerebrumbiologyacademy.com',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Biology Tuition Faridabad',
+                  item: 'https://cerebrumbiologyacademy.com/biology-tuition-faridabad',
+                },
               ],
             },
             {
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Cerebrum Biology Academy - Biology Tuition Faridabad',
-              description: 'Best biology tuition in Faridabad for Class 11-12. CBSE Board + NEET prep by AIIMS faculty.',
+              description:
+                'Best biology tuition in Faridabad for Class 11-12. CBSE Board + NEET prep by AIIMS faculty.',
               url: 'https://cerebrumbiologyacademy.com/biology-tuition-faridabad',
               telephone: '+918826444334',
-              address: { '@type': 'PostalAddress', streetAddress: 'Sector 17', addressLocality: 'Faridabad', addressRegion: 'Haryana', postalCode: '121002', addressCountry: 'IN' },
-              areaServed: { '@type': 'City', name: 'Faridabad', containedInPlace: { '@type': 'State', name: 'Haryana' } },
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Sector 17',
+                addressLocality: 'Faridabad',
+                addressRegion: 'Haryana',
+                postalCode: '121002',
+                addressCountry: 'IN',
+              },
+              areaServed: {
+                '@type': 'City',
+                name: 'Faridabad',
+                containedInPlace: { '@type': 'State', name: 'Haryana' },
+              },
               priceRange: '\u20B948,000 - \u20B91,56,000/year',
-              aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '38', bestRating: '5' },
             },
           ]),
         }}

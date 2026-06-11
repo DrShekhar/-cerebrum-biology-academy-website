@@ -45,7 +45,7 @@ export function CourseOfferSchema({
   rating,
 }: CourseOfferSchemaProps) {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
-  const prices = tiers.map(t => t.price)
+  const prices = tiers.map((t) => t.price)
 
   const schema = {
     '@context': 'https://schema.org',
@@ -80,7 +80,7 @@ export function CourseOfferSchema({
     },
     // Course duration in ISO 8601 format
     timeRequired: duration,
-    hasCourseInstance: tiers.map(tier => ({
+    hasCourseInstance: tiers.map((tier) => ({
       '@type': 'CourseInstance',
       name: `${courseName} - ${tier.name}`,
       description: tier.description,
@@ -125,7 +125,7 @@ export function CourseOfferSchema({
       lowPrice: Math.min(...prices),
       highPrice: Math.max(...prices),
       offerCount: tiers.length,
-      offers: tiers.map(tier => ({
+      offers: tiers.map((tier) => ({
         '@type': 'Offer',
         name: tier.name,
         price: tier.price,
@@ -143,17 +143,7 @@ export function CourseOfferSchema({
     teaches: teaches,
     inLanguage: ['en', 'hi'],
     isAccessibleForFree: false,
-    // Rating if available
-    ...(rating && {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: rating.value,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: rating.count,
-        reviewCount: Math.floor(rating.count * 0.7),
-      },
-    }),
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
     // Additional properties for rich results
     coursePrerequisites: 'Basic understanding of Biology from Class 10',
     educationalCredentialAwarded: 'Course Completion Certificate',
@@ -205,11 +195,6 @@ export function CourseComparisonSchema({ courses }: CourseComparisonSchemaProps)
           lowPrice: course.lowestPrice,
           highPrice: course.highestPrice,
         },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: course.rating,
-          reviewCount: course.reviewCount,
-        },
       },
     })),
   }
@@ -246,7 +231,7 @@ export function FeatureComparisonSchema({ courseName, tiers }: FeatureComparison
       name: 'Cerebrum Biology Academy',
     },
     category: 'Educational Services > NEET Coaching',
-    hasVariant: tiers.map(tier => ({
+    hasVariant: tiers.map((tier) => ({
       '@type': 'ProductModel',
       name: `${courseName} - ${tier.name}`,
       offers: {
@@ -254,12 +239,15 @@ export function FeatureComparisonSchema({ courseName, tiers }: FeatureComparison
         price: tier.price,
         priceCurrency: 'INR',
       },
-      additionalProperty: tier.features.map(feature => ({
+      additionalProperty: tier.features.map((feature) => ({
         '@type': 'PropertyValue',
         name: feature.name,
-        value: typeof feature.value === 'boolean'
-          ? (feature.value ? 'Included' : 'Not Included')
-          : feature.value,
+        value:
+          typeof feature.value === 'boolean'
+            ? feature.value
+              ? 'Included'
+              : 'Not Included'
+            : feature.value,
       })),
     })),
   }

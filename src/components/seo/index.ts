@@ -138,15 +138,8 @@ export {
   HinglishFAQSection,
 } from './HinglishKeywords'
 
-// Google My Business multi-location schema
-export {
-  GoogleMyBusinessSchema,
-  SingleLocationSchema,
-  LocationCardsSection,
-  CEREBRUM_LOCATIONS,
-  generateLocationSchema,
-  type LocationData,
-} from './GoogleMyBusinessSchema'
+// GoogleMyBusinessSchema deleted 2026-06 — dead code (never imported by any
+// page) carrying fabricated review/aggregateRating markup.
 
 // State-specific schemas for regional SEO
 export {

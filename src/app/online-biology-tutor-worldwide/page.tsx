@@ -50,7 +50,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online Biology Tutor | Expert Tutoring for A-Level, IB, IGCSE, AP, GCSE, NEET',
-    description: 'Find an expert online Biology tutor for any curriculum worldwide. A-Level (92% A*/A), IB Biology HL/SL, IGCSE, AP Biology, GCSE, NEET, Board exams. AIIMS-trained faculty. Live classes in your timez...',
+    description:
+      'Find an expert online Biology tutor for any curriculum worldwide. A-Level (92% A*/A), IB Biology HL/SL, IGCSE, AP Biology, GCSE, NEET, Board exams. AIIMS-trained faculty. Live classes in your timez...',
   },
 }
 
@@ -167,12 +168,6 @@ export default function OnlineBiologyTutorWorldwidePage() {
     url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-worldwide',
     telephone: '+91-88264-44334',
     areaServed: 'Worldwide',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '485',
-      bestRating: '5',
-    },
   }
 
   const faqSchema = {

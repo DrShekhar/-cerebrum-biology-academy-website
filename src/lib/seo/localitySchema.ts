@@ -149,13 +149,6 @@ export function generateLocalBusinessSchema(
       name: nearbySlug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
     })),
     priceRange: '₹40,000 - ₹1,80,000',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-    },
     review: locality.socialProof.successStories.slice(0, 3).map((story, index) => ({
       '@type': 'Review',
       author: {

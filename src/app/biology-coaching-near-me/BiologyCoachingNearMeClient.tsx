@@ -159,9 +159,7 @@ export function BiologyCoachingNearMeClient() {
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Target className="w-5 h-5 mr-2 text-yellow-300" />
               #1 NEET Biology Coaching in Delhi NCR
@@ -201,7 +199,11 @@ export function BiologyCoachingNearMeClient() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -230,9 +232,7 @@ export function BiologyCoachingNearMeClient() {
       {/* Centers Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Coaching Centers in Delhi NCR
             </h2>
@@ -293,9 +293,7 @@ export function BiologyCoachingNearMeClient() {
       {/* Courses Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Coaching Courses Available
             </h2>
@@ -332,9 +330,7 @@ export function BiologyCoachingNearMeClient() {
       {/* Comparison Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Cerebrum vs Other Coaching Centers?
             </h2>
@@ -366,9 +362,7 @@ export function BiologyCoachingNearMeClient() {
       {/* Testimonials */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Success Stories from Students Near You
             </h2>
@@ -376,10 +370,7 @@ export function BiologyCoachingNearMeClient() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.name}
-                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
-              >
+              <div key={testimonial.name} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                     <GraduationCap className="w-6 h-6 text-green-600" />
@@ -406,9 +397,7 @@ export function BiologyCoachingNearMeClient() {
       {isInDelhiNCR === false && (
         <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
           <div className="max-w-7xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Wifi className="w-4 h-4 mr-2" />
                 Online Classes Available
@@ -458,9 +447,7 @@ export function BiologyCoachingNearMeClient() {
               ))}
             </div>
 
-            <div
-              className="text-center mt-10 animate-fadeInUp"
-            >
+            <div className="text-center mt-10 animate-fadeInUp">
               <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD, 'Online')}>
                 <Button size="xl" className="bg-green-600 hover:bg-green-700 text-white">
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -475,15 +462,18 @@ export function BiologyCoachingNearMeClient() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Start Your NEET Journey Today</h2>
             <p className="text-xl mb-8 opacity-90">
               Find the best biology coaching near you. Book a FREE demo class!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -528,11 +518,6 @@ export function BiologyCoachingNearMeClient() {
               { '@type': 'City', name: 'Ghaziabad' },
               { '@type': 'City', name: 'Faridabad' },
             ],
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-            },
           }),
         }}
       />

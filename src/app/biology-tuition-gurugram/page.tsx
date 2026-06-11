@@ -66,7 +66,11 @@ export default function BiologyTuitionGurugramPage() {
   return (
     <div className="min-h-screen">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="biology-tuition-gurugram" />
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
@@ -405,12 +409,6 @@ export default function BiologyTuitionGurugramPage() {
                 containedInPlace: { '@type': 'State', name: 'Haryana' },
               },
               priceRange: '\u20B948,000 - \u20B91,56,000/year',
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '5.0',
-                reviewCount: '38',
-                bestRating: '5',
-              },
             },
           ]),
         }}

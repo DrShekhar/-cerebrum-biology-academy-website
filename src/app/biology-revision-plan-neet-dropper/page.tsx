@@ -39,8 +39,7 @@ const PAGE_URL = `${SITE_URL}${CANONICAL}`
 const PUBLISHED_DATE = '2026-06-07'
 
 export const metadata: Metadata = {
-  title:
-    'NEET Dropper Biology Revision Plan — 12-Week Evidence-Based Schedule · Cerebrum',
+  title: 'NEET Dropper Biology Revision Plan — 12-Week Evidence-Based Schedule · Cerebrum',
   description:
     'The 12-week NEET biology revision plan we run inside our dropper batch — built on spaced retrieval (Karpicke & Roediger 2008), the testing effect (Roediger & Butler 2011), and interleaved practice. Phase 1: NCERT consolidation. Phase 2: pattern-drilling. Phase 3: mock + sprint. Free download.',
   keywords: [
@@ -69,8 +68,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title:
-      'NEET Dropper Biology Revision Plan — 12 Weeks, Research-Backed',
+    title: 'NEET Dropper Biology Revision Plan — 12 Weeks, Research-Backed',
     description:
       'The exact 12-week biology revision plan we teach inside our NEET dropper batch. Spaced retrieval, weekly MCQ drilling, NCERT-line-by-line. Free download.',
     url: PAGE_URL,
@@ -82,7 +80,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Dropper Biology Revision Plan — 12-Week Evidence-Based Schedule · Cerebrum',
-    description: 'The 12-week NEET biology revision plan we run inside our dropper batch — built on spaced retrieval (Karpicke & Roediger 2008), the testing effect (Roediger & Butler 2011), and interleaved practice....',
+    description:
+      'The 12-week NEET biology revision plan we run inside our dropper batch — built on spaced retrieval (Karpicke & Roediger 2008), the testing effect (Roediger & Butler 2011), and interleaved practice....',
   },
   robots: 'index, follow, max-image-preview:large',
 }
@@ -126,8 +125,7 @@ const WEEKS: WeekPlan[] = [
     phase: 'NCERT Consolidation',
     focus: 'Plant Physiology II + Animal Kingdom',
     ncert: 'Class 11: Ch 14 Respiration, Ch 15 Plant Growth, Ch 4 Animal Kingdom',
-    retrieval:
-      'Full Plant Physiology mock (90 questions, 60 min) + retrieval of weeks 1-2',
+    retrieval: 'Full Plant Physiology mock (90 questions, 60 min) + retrieval of weeks 1-2',
     weeklyHours: 7,
   },
   {
@@ -135,8 +133,7 @@ const WEEKS: WeekPlan[] = [
     phase: 'Pattern Drilling',
     focus: 'Human Physiology I',
     ncert: 'Class 11: Ch 16 Digestion, Ch 17 Breathing, Ch 18 Circulation',
-    retrieval:
-      'NEET 2018-2026 PYQ block: 100 questions on covered chapters, timed.',
+    retrieval: 'NEET 2018-2026 PYQ block: 100 questions on covered chapters, timed.',
     weeklyHours: 7,
   },
   {
@@ -152,8 +149,7 @@ const WEEKS: WeekPlan[] = [
     phase: 'Pattern Drilling',
     focus: 'Human Reproduction + Reproductive Health',
     ncert: 'Class 12: Ch 1 Reproduction in Organisms, Ch 2-4 Human Reproduction set',
-    retrieval:
-      'PYQ block 3 + 90-question full biology mock (NEET pattern, 60 min)',
+    retrieval: 'PYQ block 3 + 90-question full biology mock (NEET pattern, 60 min)',
     weeklyHours: 8,
   },
   {
@@ -178,8 +174,7 @@ const WEEKS: WeekPlan[] = [
     phase: 'Mock & Sprint',
     focus: 'Biotechnology + Ecology',
     ncert: 'Class 12: Ch 11-12 Biotech, Ch 13-14 Ecology, Ch 15 Biodiversity',
-    retrieval:
-      'Full biology mock + targeted retrieval of weakest 3 chapters from week 9 mock',
+    retrieval: 'Full biology mock + targeted retrieval of weakest 3 chapters from week 9 mock',
     weeklyHours: 8,
   },
   {
@@ -208,9 +203,10 @@ const RESEARCH = [
       'Active retrieval (taking practice tests) produces 50%+ better long-term recall than re-reading or re-studying notes, even when total study time is held constant. This is the foundation of our weekly MCQ test structure.',
   },
   {
-    citation: 'Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013)',
+    citation:
+      'Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013)',
     title:
-      'Improving students\' learning with effective learning techniques. Psychological Science in the Public Interest, 14(1), 4-58.',
+      "Improving students' learning with effective learning techniques. Psychological Science in the Public Interest, 14(1), 4-58.",
     finding:
       'Meta-review of 10 study techniques. Practice testing and distributed practice rated highest utility; highlighting and re-reading rated low. Our plan privileges the two high-utility techniques and removes the low-utility ones (which is what most dropper students default to).',
   },
@@ -226,7 +222,7 @@ const RESEARCH = [
     title:
       'Distributed practice in verbal recall tasks: A review and quantitative synthesis. Psychological Bulletin, 132(3), 354-380.',
     finding:
-      'Optimal spacing interval is ~10-20% of the retention interval. For NEET 2027 (10 months away), this means re-encountering week-1 material every 4-6 weeks. Our plan\'s interleaved retrieval schedule operationalises this.',
+      "Optimal spacing interval is ~10-20% of the retention interval. For NEET 2027 (10 months away), this means re-encountering week-1 material every 4-6 weeks. Our plan's interleaved retrieval schedule operationalises this.",
   },
   {
     citation: 'Rohrer, D., & Taylor, K. (2007)',
@@ -240,28 +236,23 @@ const RESEARCH = [
 const MISTAKES = [
   {
     title: 'Re-reading NCERT cover-to-cover, expecting recall to improve.',
-    why:
-      'Re-reading ranked one of the lowest-utility techniques in Dunlosky 2013. Recognition (the feeling of "I\'ve seen this before") is not recall (the ability to produce it on an MCQ). Switch to retrieval-first immediately.',
+    why: 'Re-reading ranked one of the lowest-utility techniques in Dunlosky 2013. Recognition (the feeling of "I\'ve seen this before") is not recall (the ability to produce it on an MCQ). Switch to retrieval-first immediately.',
   },
   {
     title: 'Watching coaching lectures at 1.5x without doing the MCQ work.',
-    why:
-      'Coaching lectures build conceptual understanding but do not build retrieval strength. The MCQ work is where the marks come from. We see droppers who have watched 600 hours of biology lectures but solved fewer than 1,000 MCQs — that ratio is upside down.',
+    why: 'Coaching lectures build conceptual understanding but do not build retrieval strength. The MCQ work is where the marks come from. We see droppers who have watched 600 hours of biology lectures but solved fewer than 1,000 MCQs — that ratio is upside down.',
   },
   {
     title: 'Studying one chapter for 2-3 weeks straight ("blocked" practice).',
-    why:
-      'Blocked practice feels productive but transfers poorly. Rohrer & Taylor 2007 showed interleaved (mixed-topic) practice produces 40-70% better transfer. Our plan mixes chapter-level revision with cumulative retrieval every single week.',
+    why: 'Blocked practice feels productive but transfers poorly. Rohrer & Taylor 2007 showed interleaved (mixed-topic) practice produces 40-70% better transfer. Our plan mixes chapter-level revision with cumulative retrieval every single week.',
   },
   {
     title: 'Skipping the weekly mock because "I\'m not ready yet".',
-    why:
-      'The mock is the intervention, not the assessment. Karpicke 2008 showed the test itself causes the learning. Waiting until you "feel ready" defeats the mechanism. The first 2-3 weeks of mocks are supposed to feel uncomfortable.',
+    why: 'The mock is the intervention, not the assessment. Karpicke 2008 showed the test itself causes the learning. Waiting until you "feel ready" defeats the mechanism. The first 2-3 weeks of mocks are supposed to feel uncomfortable.',
   },
   {
     title: 'Not reviewing wrong answers within 24 hours.',
-    why:
-      'The "feedback loop" matters more than the test itself. Roediger & Butler 2011 found feedback after retrieval failures produces stronger retention than retrieval without feedback. Same-day or next-day error review is non-negotiable.',
+    why: 'The "feedback loop" matters more than the test itself. Roediger & Butler 2011 found feedback after retrieval failures produces stronger retention than retrieval without feedback. Same-day or next-day error review is non-negotiable.',
   },
 ]
 
@@ -338,37 +329,10 @@ export default function NEETBiologyRevisionPlanDropperPage() {
     ],
   }
 
-  // Review schema — Sadhna Sirin's 360/360 in NEET 2023 attributed to
-  // "weekly tests + personal mentorship", which are this plan's exact
-  // two operating mechanisms. Direct proof point for the plan.
-  const reviewSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: {
-      '@type': 'HowTo',
-      name: '12-week NEET Biology revision plan for droppers',
-      url: PAGE_URL,
-    },
-    author: {
-      '@type': 'Person',
-      name: 'Sadhna Sirin',
-      description: 'Delhi-NCR Topper NEET 2023 — 695/720, 360/360 Biology',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    reviewBody:
-      "Dr. Shekhar Sir's conceptual approach made complex topics simple. The weekly tests and personal mentorship helped me score 360/360 in Biology.",
-    datePublished: '2023-06-15',
-  }
-
   const waUrl =
     'https://wa.me/918826444334?text=' +
     encodeURIComponent(
-      "Hi — I read the 12-week NEET biology revision plan. Can I get the PDF + ask a question about pairing it with my coaching?"
+      'Hi — I read the 12-week NEET biology revision plan. Can I get the PDF + ask a question about pairing it with my coaching?'
     )
 
   return (
@@ -395,17 +359,10 @@ export default function NEETBiologyRevisionPlanDropperPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
 
       <article className="min-h-screen bg-white">
         {/* Breadcrumb */}
-        <nav
-          aria-label="Breadcrumb"
-          className="mx-auto max-w-4xl px-4 pt-6 text-sm text-slate-500"
-        >
+        <nav aria-label="Breadcrumb" className="mx-auto max-w-4xl px-4 pt-6 text-sm text-slate-500">
           <ol className="flex items-center gap-1">
             <li>
               <Link href="/" className="hover:text-indigo-700 flex items-center gap-1">
@@ -427,13 +384,12 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             The 12-week NEET biology revision plan we run inside our dropper batch
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">
-            Most droppers ask "what should I study?" — the wrong question. The right
-            question is "<em>how</em> should I study, and in what sequence, so the
-            biology score actually moves." This is the exact 12-week plan we run
-            inside our dropper batch, published in full. It is built on five
-            peer-reviewed cognitive-psychology papers (cited below) and 12 years of
-            NEET cohort data. Free to use. If you can execute it solo, you don\'t
-            need a coach. If you can\'t, that\'s what we\'re for.
+            Most droppers ask "what should I study?" — the wrong question. The right question is "
+            <em>how</em> should I study, and in what sequence, so the biology score actually moves."
+            This is the exact 12-week plan we run inside our dropper batch, published in full. It is
+            built on five peer-reviewed cognitive-psychology papers (cited below) and 12 years of
+            NEET cohort data. Free to use. If you can execute it solo, you don\'t need a coach. If
+            you can\'t, that\'s what we\'re for.
           </p>
 
           <div className="mt-7 grid gap-3 sm:grid-cols-3 text-sm">
@@ -453,9 +409,7 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             </div>
             <div className="rounded-lg bg-slate-50 p-4">
               <ClipboardCheck className="h-5 w-5 text-indigo-600" />
-              <p className="mt-2 text-xs font-semibold uppercase text-slate-500">
-                Validated on
-              </p>
+              <p className="mt-2 text-xs font-semibold uppercase text-slate-500">Validated on</p>
               <p className="font-semibold text-slate-900">412 dropper cohort (2024-26)</p>
             </div>
           </div>
@@ -468,9 +422,8 @@ export default function NEETBiologyRevisionPlanDropperPage() {
                   Free PDF: the full 12-week schedule with day-by-day breakdown
                 </p>
                 <p className="mt-1 text-sm text-emerald-800">
-                  Download the printable schedule (4 pages, no email signup required)
-                  to keep on your desk. Plan continues to be available here for
-                  reference.
+                  Download the printable schedule (4 pages, no email signup required) to keep on
+                  your desk. Plan continues to be available here for reference.
                 </p>
                 <a
                   href={waUrl}
@@ -493,9 +446,8 @@ export default function NEETBiologyRevisionPlanDropperPage() {
               The research foundation
             </h2>
             <p className="mt-3 text-slate-600 leading-relaxed">
-              Most NEET prep advice is folk wisdom. This plan is built on five
-              specific findings from cognitive psychology research that have been
-              replicated across decades:
+              Most NEET prep advice is folk wisdom. This plan is built on five specific findings
+              from cognitive psychology research that have been replicated across decades:
             </p>
             <ol className="mt-7 space-y-6">
               {RESEARCH.map((r, idx) => (
@@ -503,14 +455,10 @@ export default function NEETBiologyRevisionPlanDropperPage() {
                   <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">
                     Paper {idx + 1}
                   </p>
-                  <p className="mt-2 text-base font-semibold text-slate-900">
-                    {r.title}
-                  </p>
+                  <p className="mt-2 text-base font-semibold text-slate-900">{r.title}</p>
                   <p className="text-xs text-slate-500">{r.citation}</p>
                   <p className="mt-3 text-sm text-slate-700 leading-relaxed">
-                    <span className="font-semibold text-slate-900">
-                      Why it matters here:
-                    </span>{' '}
+                    <span className="font-semibold text-slate-900">Why it matters here:</span>{' '}
                     {r.finding}
                   </p>
                 </li>
@@ -518,10 +466,9 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             </ol>
 
             <p className="mt-8 text-sm text-slate-600 leading-relaxed">
-              The translation from research into a NEET-specific schedule is where
-              most droppers get stuck — knowing "spaced retrieval works" doesn\'t
-              tell you which chapters to retrieve when. That\'s what the next section
-              does.
+              The translation from research into a NEET-specific schedule is where most droppers get
+              stuck — knowing "spaced retrieval works" doesn\'t tell you which chapters to retrieve
+              when. That\'s what the next section does.
             </p>
           </div>
         </section>
@@ -532,9 +479,8 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             The 12-week schedule, week by week
           </h2>
           <p className="mt-3 text-slate-600 max-w-3xl">
-            Three phases. Each week has an NCERT consolidation block and a retrieval
-            block. Hours scale up from 6 → 12 across the 12 weeks as you approach
-            the pre-exam sprint.
+            Three phases. Each week has an NCERT consolidation block and a retrieval block. Hours
+            scale up from 6 → 12 across the 12 weeks as you approach the pre-exam sprint.
           </p>
 
           {/* Phase 1 */}
@@ -543,10 +489,9 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             Phase 1 · Weeks 1-4 · NCERT consolidation
           </h3>
           <p className="mt-2 text-sm text-slate-600 max-w-3xl">
-            Class 11 NCERT, line-by-line. The goal is to fix gaps in foundational
-            content while the calendar is still long. Skipping this phase is the
-            single largest mistake we see in self-prep droppers — pattern drilling
-            without NCERT consolidation is building on sand.
+            Class 11 NCERT, line-by-line. The goal is to fix gaps in foundational content while the
+            calendar is still long. Skipping this phase is the single largest mistake we see in
+            self-prep droppers — pattern drilling without NCERT consolidation is building on sand.
           </p>
           <WeekTable weeks={WEEKS.filter((w) => w.phase === 'NCERT Consolidation')} />
 
@@ -556,9 +501,9 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             Phase 2 · Weeks 5-8 · NEET pattern drilling
           </h3>
           <p className="mt-2 text-sm text-slate-600 max-w-3xl">
-            Class 12 NCERT consolidation runs in parallel with intensive PYQ
-            drilling. Each week\'s retrieval block specifically tests the pattern
-            recognition that NEET 2018-2026 papers have rewarded.
+            Class 12 NCERT consolidation runs in parallel with intensive PYQ drilling. Each week\'s
+            retrieval block specifically tests the pattern recognition that NEET 2018-2026 papers
+            have rewarded.
           </p>
           <WeekTable weeks={WEEKS.filter((w) => w.phase === 'Pattern Drilling')} />
 
@@ -568,9 +513,8 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             Phase 3 · Weeks 9-12 · Mocks + pre-exam sprint
           </h3>
           <p className="mt-2 text-sm text-slate-600 max-w-3xl">
-            Weekly full biology mocks (90 questions, 60 min) plus targeted
-            retrieval of weakest chapters from the mock analysis. The final 2 weeks
-            shift to daily mocks.
+            Weekly full biology mocks (90 questions, 60 min) plus targeted retrieval of weakest
+            chapters from the mock analysis. The final 2 weeks shift to daily mocks.
           </p>
           <WeekTable weeks={WEEKS.filter((w) => w.phase === 'Mock & Sprint')} />
         </section>
@@ -578,13 +522,10 @@ export default function NEETBiologyRevisionPlanDropperPage() {
         {/* Common mistakes */}
         <section className="bg-slate-900 text-white">
           <div className="mx-auto max-w-4xl px-4 py-16">
-            <h2 className="text-2xl md:text-3xl font-bold">
-              5 mistakes that make this plan fail
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold">5 mistakes that make this plan fail</h2>
             <p className="mt-3 text-slate-300 max-w-3xl">
-              Each mistake corresponds to a published finding. If you find yourself
-              doing one, switch immediately — the plan only works when the
-              evidence-backed mechanism is intact.
+              Each mistake corresponds to a published finding. If you find yourself doing one,
+              switch immediately — the plan only works when the evidence-backed mechanism is intact.
             </p>
             <ol className="mt-8 space-y-5">
               {MISTAKES.map((m, idx) => (
@@ -592,9 +533,7 @@ export default function NEETBiologyRevisionPlanDropperPage() {
                   <p className="text-base font-semibold text-amber-300">
                     Mistake {idx + 1}: {m.title}
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                    {m.why}
-                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-300">{m.why}</p>
                 </li>
               ))}
             </ol>
@@ -608,28 +547,22 @@ export default function NEETBiologyRevisionPlanDropperPage() {
               Proof the method works
             </h2>
             <p className="mt-3 text-slate-600 max-w-3xl">
-              The two mechanisms the research papers above operationalise —
-              weekly retrieval tests and feedback-loop mentorship — are exactly
-              what Sadhna credits her 100-percentile biology result to. Same
-              method, same outcome, repeated across cohorts.
+              The two mechanisms the research papers above operationalise — weekly retrieval tests
+              and feedback-loop mentorship — are exactly what Sadhna credits her 100-percentile
+              biology result to. Same method, same outcome, repeated across cohorts.
             </p>
 
             <figure className="mt-8 rounded-2xl border border-slate-200 bg-gradient-to-br from-indigo-50 to-purple-50 p-7">
               <blockquote className="text-lg italic text-slate-800 leading-relaxed">
-                &ldquo;Dr. Shekhar Sir&rsquo;s conceptual approach made complex
-                topics simple. The weekly tests and personal mentorship helped
-                me score{' '}
-                <span className="not-italic font-bold text-indigo-700">
-                  360/360 in Biology
-                </span>
+                &ldquo;Dr. Shekhar Sir&rsquo;s conceptual approach made complex topics simple. The
+                weekly tests and personal mentorship helped me score{' '}
+                <span className="not-italic font-bold text-indigo-700">360/360 in Biology</span>
                 .&rdquo;
               </blockquote>
               <figcaption className="mt-5 flex flex-wrap items-center gap-3 text-sm">
                 <span className="font-bold text-slate-900">Sadhna Sirin</span>
                 <span className="text-slate-400">·</span>
-                <span className="text-slate-600">
-                  Delhi-NCR Topper NEET 2023 · 695/720
-                </span>
+                <span className="text-slate-600">Delhi-NCR Topper NEET 2023 · 695/720</span>
                 <span className="text-slate-400">·</span>
                 <a
                   href="https://www.youtube.com/watch?v=bk6wQCh6b9w"
@@ -647,27 +580,23 @@ export default function NEETBiologyRevisionPlanDropperPage() {
         {/* Wrap-up + CTA */}
         <section className="bg-slate-50">
           <div className="mx-auto max-w-3xl px-4 py-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              What to do this week
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">What to do this week</h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              If today is the first week of your drop year (June-July 2026),
-              start Week 1 today. Block 6 hours across the week — typically two
-              90-minute live NCERT pass slots, one 90-minute MCQ test session, and
-              one 60-minute error-review session.
+              If today is the first week of your drop year (June-July 2026), start Week 1 today.
+              Block 6 hours across the week — typically two 90-minute live NCERT pass slots, one
+              90-minute MCQ test session, and one 60-minute error-review session.
             </p>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              If you want the structure delivered to you with weekly tests,
-              error-review live class, and a mentor checking your progression — the
-              same plan above runs inside our{' '}
+              If you want the structure delivered to you with weekly tests, error-review live class,
+              and a mentor checking your progression — the same plan above runs inside our{' '}
               <Link
                 href="/neet-dropper-biology-specialist-2027"
                 className="text-indigo-700 font-semibold underline"
               >
                 NEET Dropper Biology Specialist programme
               </Link>
-              . If you can execute solo, just bookmark this page and follow it. Both
-              paths work — the plan is the plan.
+              . If you can execute solo, just bookmark this page and follow it. Both paths work —
+              the plan is the plan.
             </p>
 
             <div className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-6">
@@ -712,13 +641,10 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             </div>
 
             <div className="mt-12 rounded-xl bg-gradient-to-br from-indigo-700 to-purple-700 p-7 text-white">
-              <h3 className="text-xl font-bold">
-                One question? WhatsApp Dr. Shekhar directly.
-              </h3>
+              <h3 className="text-xl font-bold">One question? WhatsApp Dr. Shekhar directly.</h3>
               <p className="mt-2 text-sm text-indigo-100">
-                Send your previous NEET attempt score breakdown — we\'ll reply with
-                a 3-line gap-analysis of which week of this plan you should start
-                from.
+                Send your previous NEET attempt score breakdown — we\'ll reply with a 3-line
+                gap-analysis of which week of this plan you should start from.
               </p>
               <a
                 href={waUrl}
@@ -732,11 +658,10 @@ export default function NEETBiologyRevisionPlanDropperPage() {
             </div>
 
             <p className="mt-8 text-xs text-slate-500 italic">
-              Written and maintained by Dr. Shekhar C Singh, AIIMS New Delhi alumnus
-              and founder of Cerebrum Biology Academy. Last reviewed {PUBLISHED_DATE}.
-              Citations are linked in the research section above. This plan reflects
-              the syllabus weighting of NEET 2018-2026; will be updated if NTA
-              publishes structural changes to NEET 2027.
+              Written and maintained by Dr. Shekhar C Singh, AIIMS New Delhi alumnus and founder of
+              Cerebrum Biology Academy. Last reviewed {PUBLISHED_DATE}. Citations are linked in the
+              research section above. This plan reflects the syllabus weighting of NEET 2018-2026;
+              will be updated if NTA publishes structural changes to NEET 2027.
             </p>
           </div>
         </section>
@@ -753,9 +678,7 @@ function WeekTable({ weeks }: { weeks: WeekPlan[] }) {
           <tr>
             <th className="px-4 py-3 font-semibold text-slate-700">Week</th>
             <th className="px-4 py-3 font-semibold text-slate-700">Focus</th>
-            <th className="px-4 py-3 font-semibold text-slate-700">
-              NCERT consolidation
-            </th>
+            <th className="px-4 py-3 font-semibold text-slate-700">NCERT consolidation</th>
             <th className="px-4 py-3 font-semibold text-slate-700">Retrieval block</th>
             <th className="px-4 py-3 font-semibold text-slate-700">Hrs</th>
           </tr>
@@ -765,15 +688,9 @@ function WeekTable({ weeks }: { weeks: WeekPlan[] }) {
             <tr key={w.week} className="hover:bg-slate-50">
               <td className="px-4 py-4 font-semibold text-slate-900">W{w.week}</td>
               <td className="px-4 py-4 text-slate-700 font-medium">{w.focus}</td>
-              <td className="px-4 py-4 text-slate-600 text-xs leading-relaxed">
-                {w.ncert}
-              </td>
-              <td className="px-4 py-4 text-slate-600 text-xs leading-relaxed">
-                {w.retrieval}
-              </td>
-              <td className="px-4 py-4 font-semibold text-indigo-700">
-                {w.weeklyHours}
-              </td>
+              <td className="px-4 py-4 text-slate-600 text-xs leading-relaxed">{w.ncert}</td>
+              <td className="px-4 py-4 text-slate-600 text-xs leading-relaxed">{w.retrieval}</td>
+              <td className="px-4 py-4 font-semibold text-indigo-700">{w.weeklyHours}</td>
             </tr>
           ))}
         </tbody>

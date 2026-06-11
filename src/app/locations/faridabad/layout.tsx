@@ -59,7 +59,8 @@ function FaridabadServiceSchema() {
     '@type': 'LocalBusiness',
     additionalType: 'EducationalOrganization',
     name: 'Cerebrum Biology Academy - Faridabad',
-    description: 'Best NEET Biology coaching in Faridabad with AIIMS faculty. 98% success rate, small batches, Sector 17 location.',
+    description:
+      'Best NEET Biology coaching in Faridabad with AIIMS faculty. 98% success rate, small batches, Sector 17 location.',
     url: 'https://cerebrumbiologyacademy.com/locations/faridabad',
     telephone: '+91-88264-44334',
     email: 'info@cerebrumbiologyacademy.com',
@@ -89,13 +90,6 @@ function FaridabadServiceSchema() {
       'BPTP',
     ],
     // IMPORTANT: Must match Google Business Profile exactly (verified Feb 2026)
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '22',
-      bestRating: '5',
-      worstRating: '1',
-    },
     priceRange: '₹40,000 - ₹1,80,000',
     openingHoursSpecification: [
       {
@@ -190,7 +184,8 @@ function FaridabadEventSchema() {
         '@type': 'EducationEvent',
         position: 1,
         name: 'NEET Biology Class 12 Intensive Batch - Faridabad',
-        description: 'Intensive NEET Biology preparation for Class 12 students at Faridabad center. Complete syllabus coverage with MCQ practice and weekly test series.',
+        description:
+          'Intensive NEET Biology preparation for Class 12 students at Faridabad center. Complete syllabus coverage with MCQ practice and weekly test series.',
         startDate: '2026-03-01',
         endDate: '2027-04-30',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -225,7 +220,8 @@ function FaridabadEventSchema() {
         '@type': 'EducationEvent',
         position: 2,
         name: 'NEET Biology Class 11 Foundation Batch - Faridabad',
-        description: 'Early NEET preparation foundation batch for Class 11 students at Faridabad. Build strong fundamentals with concept clarity and MCQ practice.',
+        description:
+          'Early NEET preparation foundation batch for Class 11 students at Faridabad. Build strong fundamentals with concept clarity and MCQ practice.',
         startDate: '2026-04-01',
         endDate: '2027-03-31',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -260,7 +256,8 @@ function FaridabadEventSchema() {
         '@type': 'EducationEvent',
         position: 3,
         name: 'Free NEET Biology Demo Class - Faridabad',
-        description: 'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
+        description:
+          'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
         startDate: '2026-03-15',
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
@@ -306,21 +303,36 @@ export default function FaridabadLocationLayout({ children }: { children: React.
     <>
       <FaridabadServiceSchema />
       <FaridabadFAQSchema />
-      <FaridabadEventSchema />      <script
+      <FaridabadEventSchema />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Faridabad', item: 'https://cerebrumbiologyacademy.com/locations/faridabad' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Faridabad',
+                item: 'https://cerebrumbiologyacademy.com/locations/faridabad',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

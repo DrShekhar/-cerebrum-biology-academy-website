@@ -164,7 +164,11 @@ export default function BiologyTuitionGhaziabadPage() {
   return (
     <div className="min-h-screen">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Ghaziabad', 'NEET Biology Ghaziabad', 'Medical entrance coaching Ghaziabad']}
+        knowsAbout={[
+          'NEET Ghaziabad',
+          'NEET Biology Ghaziabad',
+          'Medical entrance coaching Ghaziabad',
+        ]}
       />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
@@ -172,8 +176,7 @@ export default function BiologyTuitionGhaziabadPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Microscope className="w-5 h-5 mr-2 text-yellow-300" />
               #1 Biology Tuition in Ghaziabad
@@ -193,7 +196,11 @@ export default function BiologyTuitionGhaziabadPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -219,7 +226,10 @@ export default function BiologyTuitionGhaziabadPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {successStats.map((stat, index) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp">
+                <div
+                  key={stat.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp"
+                >
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
@@ -233,8 +243,7 @@ export default function BiologyTuitionGhaziabadPage() {
       {/* Class Programs Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tuition Programs for All Classes
             </h2>
@@ -245,7 +254,10 @@ export default function BiologyTuitionGhaziabadPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {classPrograms.map((program, index) => (
-              <div key={program.class} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow animate-fadeInUp">
+              <div
+                key={program.class}
+                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow animate-fadeInUp"
+              >
                 <div className="bg-[#4a5d4a] text-white p-4">
                   <div className="text-sm font-medium opacity-90">{program.class}</div>
                   <div className="text-xl font-bold">{program.title}</div>
@@ -270,7 +282,11 @@ export default function BiologyTuitionGhaziabadPage() {
                       <div className="text-sm text-gray-500">{program.duration}</div>
                       <div className="text-lg font-bold text-green-600">{program.fee}</div>
                     </div>
-                    <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+                    <Link
+                      href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button variant="outline" size="sm">
                         Enquire
                       </Button>
@@ -286,8 +302,7 @@ export default function BiologyTuitionGhaziabadPage() {
       {/* Areas Coverage */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tuition Across Ghaziabad
             </h2>
@@ -298,7 +313,10 @@ export default function BiologyTuitionGhaziabadPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {ghaziabadAreas.map((area, index) => (
-              <div key={area.name} className="bg-green-50 rounded-xl p-4 text-center border border-green-100 animate-fadeInUp">
+              <div
+                key={area.name}
+                className="bg-green-50 rounded-xl p-4 text-center border border-green-100 animate-fadeInUp"
+              >
                 <MapPin className="w-6 h-6 text-green-600 mx-auto mb-2" />
                 <div className="font-bold text-gray-900">{area.name}</div>
                 <div className="text-green-600 font-semibold text-sm">{area.students}</div>
@@ -312,8 +330,7 @@ export default function BiologyTuitionGhaziabadPage() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Choose Our Biology Tuition in Ghaziabad
             </h2>
@@ -321,7 +338,10 @@ export default function BiologyTuitionGhaziabadPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((feature, index) => (
-              <div key={feature.title} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
+              <div
+                key={feature.title}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
+              >
                 <feature.icon className="w-10 h-10 text-yellow-400 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -334,8 +354,7 @@ export default function BiologyTuitionGhaziabadPage() {
       {/* FAQs Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tuition in Ghaziabad - FAQs
             </h2>
@@ -364,7 +383,11 @@ export default function BiologyTuitionGhaziabadPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20for%20NEET%20Biology%20coaching%20in%20Ghaziabad.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -426,12 +449,6 @@ export default function BiologyTuitionGhaziabadPage() {
                 { '@type': 'Course', name: 'Class 12 NEET Biology' },
                 { '@type': 'Course', name: 'NEET Dropper Biology' },
               ],
-            },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-              bestRating: '5',
             },
           }),
         }}

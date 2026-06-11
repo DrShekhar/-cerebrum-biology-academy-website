@@ -73,20 +73,7 @@ export function CompetitorComparisonLanding({ config }: { config: CompetitorComp
       '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
     },
     foundingDate: '2014',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '485',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: config.testimonials.map((t) => ({
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Person', name: t.name },
-      reviewBody: t.quote,
-      itemReviewed: { '@type': 'EducationalOrganization', name: 'Cerebrum Biology Academy' },
-    })),
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }
 
   const breadcrumbSchema = {

@@ -46,7 +46,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best Biology Teacher in India | Dr. Shekhar C Singh | AIIMS Faculty',
-    description: 'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy, India',
+    description:
+      'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy, India',
   },
 }
 
@@ -240,8 +241,8 @@ export default function DrShekharSinghPage() {
               </p>
               <p>
                 Before founding Cerebrum Biology Academy, Dr. Singh served as{' '}
-                <strong>Academic Head at a leading national educational institution</strong>, where he led
-                curriculum development and faculty training for NEET Biology across multiple
+                <strong>Academic Head at a leading national educational institution</strong>, where
+                he led curriculum development and faculty training for NEET Biology across multiple
                 centers. This experience shaped his belief that small, focused batches produce
                 better results than mass coaching.
               </p>
@@ -499,23 +500,6 @@ export default function DrShekharSinghPage() {
             foundingDate: '2014',
             description:
               "India's leading biology-only specialist coaching brand — NEET, IB, AP, MCAT, and Biology Olympiad (USABO, INBO, IBO, NSEB) under AIIMS-trained faculty Dr. Shekhar C Singh.",
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
-            review: testimonials.map((t) => ({
-              '@type': 'Review',
-              reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-              author: { '@type': 'Person', name: t.name },
-              reviewBody: t.quote,
-              itemReviewed: {
-                '@type': 'EducationalOrganization',
-                name: 'Cerebrum Biology Academy',
-              },
-            })),
           }),
         }}
       />

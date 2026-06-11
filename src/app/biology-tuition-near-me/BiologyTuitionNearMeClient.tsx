@@ -201,9 +201,7 @@ export function BiologyTuitionNearMeClient() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <div
-            className="text-center max-w-5xl mx-auto animate-fadeInUp"
-          >
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
               Find Biology Tuition Near You in Delhi NCR
@@ -233,7 +231,11 @@ export function BiologyTuitionNearMeClient() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tuition%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tuition%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -262,9 +264,7 @@ export function BiologyTuitionNearMeClient() {
       {/* Location Grid */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Find Biology Tuition in Your Area
             </h2>
@@ -323,9 +323,7 @@ export function BiologyTuitionNearMeClient() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Cerebrum for Biology Tuition?
             </h2>
@@ -351,9 +349,7 @@ export function BiologyTuitionNearMeClient() {
       {/* FAQ Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <div
-            className="text-center mb-12 animate-fadeInUp"
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
@@ -362,10 +358,7 @@ export function BiologyTuitionNearMeClient() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
-              >
+              <div key={index} className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp">
                 <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
@@ -378,9 +371,7 @@ export function BiologyTuitionNearMeClient() {
       {isInDelhiNCR === false && (
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4">
-            <div
-              className="text-center mb-12 animate-fadeInUp"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Online Biology Tuition for Your Region
               </h2>
@@ -425,8 +416,7 @@ export function BiologyTuitionNearMeClient() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div
-           className="animate-fadeInUp">
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Find the Best Biology Tuition Near You?
             </h2>
@@ -436,7 +426,11 @@ export function BiologyTuitionNearMeClient() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tuition%20near%20me.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tuition%20near%20me.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -481,11 +475,6 @@ export function BiologyTuitionNearMeClient() {
               { '@type': 'City', name: 'Ghaziabad' },
               { '@type': 'City', name: 'Faridabad' },
             ],
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-            },
           }),
         }}
       />

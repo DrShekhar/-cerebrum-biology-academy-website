@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching Malviya Nagar | Near Saket',
-    description: 'Best NEET Biology coaching for Malviya Nagar students. High student population area near Saket.',
+    description:
+      'Best NEET Biology coaching for Malviya Nagar students. High student population area near Saket.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
@@ -70,12 +71,6 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
             ],
             serviceType: 'NEET Biology Coaching',
             priceRange: '₹40,000 - ₹1,80,000',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-              bestRating: '5',
-            },
           }),
         }}
       />
@@ -85,40 +80,42 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            'name': 'Cerebrum Biology Academy - Malviya Nagar',
-            'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
-            'url': 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
-            'telephone': '+91-88264-44334',
-            'email': 'info@cerebrumbiologyacademy.com',
-            'address': {
+            name: 'Cerebrum Biology Academy - Malviya Nagar',
+            image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
+            url: 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
+            telephone: '+91-88264-44334',
+            email: 'info@cerebrumbiologyacademy.com',
+            address: {
               '@type': 'PostalAddress',
-              'streetAddress': 'Near South Extension',
-              'addressLocality': 'Malviya Nagar',
-              'addressRegion': 'Delhi',
-              'postalCode': '110049',
-              'addressCountry': 'IN',
+              streetAddress: 'Near South Extension',
+              addressLocality: 'Malviya Nagar',
+              addressRegion: 'Delhi',
+              postalCode: '110049',
+              addressCountry: 'IN',
             },
-            'geo': {
+            geo: {
               '@type': 'GeoCoordinates',
-              'latitude': 28.5282,
-              'longitude': 77.2095,
+              latitude: 28.5282,
+              longitude: 77.2095,
             },
-            'openingHoursSpecification': [
+            openingHoursSpecification: [
               {
                 '@type': 'OpeningHoursSpecification',
-                'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                'opens': '00:00',
-                'closes': '23:59',
+                dayOfWeek: [
+                  'Monday',
+                  'Tuesday',
+                  'Wednesday',
+                  'Thursday',
+                  'Friday',
+                  'Saturday',
+                  'Sunday',
+                ],
+                opens: '00:00',
+                closes: '23:59',
               },
             ],
-            'priceRange': '₹40,000 - ₹1,80,000',
-            'aggregateRating': {
-              '@type': 'AggregateRating',
-              'ratingValue': '5.0',
-              'reviewCount': '38',
-              'bestRating': '5',
-            },
-            'sameAs': [
+            priceRange: '₹40,000 - ₹1,80,000',
+            sameAs: [
               'https://www.youtube.com/@CerebrumBiologyAcademy',
               'https://www.instagram.com/cerebrumbiologyacademy/',
             ],
@@ -175,21 +172,36 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
             ],
           }),
         }}
-      />      <script
+      />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Malviya Nagar', item: 'https://cerebrumbiologyacademy.com/locations/malviya-nagar' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Malviya Nagar',
+                item: 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

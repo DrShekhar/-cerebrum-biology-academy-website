@@ -33,13 +33,6 @@ function GreenParkServiceSchema() {
         closes: '23:59',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
-    },
     areaServed: [
       'Green Park',
       'Hauz Khas',
@@ -87,7 +80,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching Green Park Delhi | Near Hauz Khas',
-    description: 'NEET Biology coaching center in Green Park, Delhi. Near Yellow Line Metro, Hauz Khas, IIT Delhi.',
+    description:
+      'NEET Biology coaching center in Green Park, Delhi. Near Yellow Line Metro, Hauz Khas, IIT Delhi.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/green-park',
@@ -161,7 +155,8 @@ function GreenParkEventSchema() {
         '@type': 'EducationEvent',
         position: 1,
         name: 'NEET Biology Class 12 Intensive Batch - Green Park',
-        description: 'Intensive NEET Biology preparation for Class 12 students at Green Park center. Complete syllabus coverage with MCQ practice and weekly test series.',
+        description:
+          'Intensive NEET Biology preparation for Class 12 students at Green Park center. Complete syllabus coverage with MCQ practice and weekly test series.',
         startDate: '2026-03-01',
         endDate: '2027-04-30',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -196,7 +191,8 @@ function GreenParkEventSchema() {
         '@type': 'EducationEvent',
         position: 2,
         name: 'NEET Biology Class 11 Foundation Batch - Green Park',
-        description: 'Early NEET preparation foundation batch for Class 11 students at Green Park. Build strong fundamentals with concept clarity and MCQ practice.',
+        description:
+          'Early NEET preparation foundation batch for Class 11 students at Green Park. Build strong fundamentals with concept clarity and MCQ practice.',
         startDate: '2026-04-01',
         endDate: '2027-03-31',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -231,7 +227,8 @@ function GreenParkEventSchema() {
         '@type': 'EducationEvent',
         position: 3,
         name: 'Free NEET Biology Demo Class - Green Park',
-        description: 'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
+        description:
+          'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
         startDate: '2026-03-15',
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
@@ -277,21 +274,36 @@ export default function GreenParkLayout({ children }: { children: React.ReactNod
     <>
       <GreenParkServiceSchema />
       <GreenParkFAQSchema />
-      <GreenParkEventSchema />      <script
+      <GreenParkEventSchema />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Green Park', item: 'https://cerebrumbiologyacademy.com/locations/green-park' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Green Park',
+                item: 'https://cerebrumbiologyacademy.com/locations/green-park',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

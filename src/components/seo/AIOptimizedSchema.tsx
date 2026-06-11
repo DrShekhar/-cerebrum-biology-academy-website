@@ -97,14 +97,7 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
       availableLanguage: ['English', 'Hindi'],
       areaServed: 'IN',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '38',
-      reviewCount: '38',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }
 
   const courseListSchema = {

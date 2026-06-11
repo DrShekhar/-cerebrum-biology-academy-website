@@ -142,13 +142,6 @@ function SouthDelhiServiceSchema() {
         },
       ],
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (
@@ -190,12 +183,6 @@ function SouthDelhiLocalBusinessSchema() {
       },
     ],
     priceRange: '₹40,000 - ₹1,80,000',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
     sameAs: [
       'https://www.youtube.com/@CerebrumBiologyAcademy',
       'https://www.instagram.com/cerebrumbiologyacademy/',

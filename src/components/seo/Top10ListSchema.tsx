@@ -89,15 +89,7 @@ export function Top10List({
         addressCountry: 'India',
       },
     }),
-    ...(item.rating && {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: item.rating,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: 32,
-      },
-    }),
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }))
 
   return (

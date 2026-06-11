@@ -401,12 +401,6 @@ export default function BiologyTuitionRohiniPage() {
               },
               areaServed: { '@type': 'Place', name: 'Rohini, Delhi' },
               priceRange: '\u20B948,000 - \u20B91,56,000/year',
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '5.0',
-                reviewCount: '38',
-                bestRating: '5',
-              },
             },
           ]),
         }}

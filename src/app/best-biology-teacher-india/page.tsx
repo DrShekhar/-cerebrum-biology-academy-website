@@ -52,7 +52,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Best Biology Teacher in India 2026 | Dr. Shekhar C Singh | AIIMS Faculty',
-    description: 'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy — is widely regarded as India',
+    description:
+      'Dr. Shekhar C Singh — AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy — is widely regarded as India',
   },
 }
 
@@ -329,20 +330,6 @@ export default function BestBiologyTeacherIndiaPage() {
     foundingDate: '2014',
     description:
       "India's leading biology-only specialist coaching brand — NEET, IB, AP, MCAT and Biology Olympiad (USABO, INBO, IBO, NSEB) under AIIMS-trained faculty Dr. Shekhar C Singh.",
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '485',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: testimonials.map((t) => ({
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Person', name: t.name },
-      reviewBody: t.quote,
-      itemReviewed: { '@type': 'EducationalOrganization', name: 'Cerebrum Biology Academy' },
-    })),
   }
 
   const faqSchema = {
@@ -414,8 +401,8 @@ export default function BestBiologyTeacherIndiaPage() {
             <p className="text-lg text-green-100 mb-8 max-w-3xl mx-auto">
               India&apos;s only biology-only specialist coaching brand — distinct from the largest
               national NEET chains, online-first generalist platforms and multi-subject tutoring
-              platforms. AIIMS-trained faculty leading six biology verticals:
-              NEET, IB, AP, MCAT, USABO/INBO/IBO and CBSE/ICSE board exams.
+              platforms. AIIMS-trained faculty leading six biology verticals: NEET, IB, AP, MCAT,
+              USABO/INBO/IBO and CBSE/ICSE board exams.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

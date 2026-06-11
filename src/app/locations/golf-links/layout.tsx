@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching Golf Links | Ultra-Premium Delhi',
-    description: 'Exclusive NEET Biology coaching for Golf Links families. Elite locality near India Gate.',
+    description:
+      'Exclusive NEET Biology coaching for Golf Links families. Elite locality near India Gate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/golf-links',
@@ -76,12 +77,6 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
               'Amrita Shergill Marg',
             ],
             serviceType: 'NEET Biology Coaching',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-              bestRating: '5',
-            },
           }),
         }}
       />
@@ -91,40 +86,42 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            'name': 'Cerebrum Biology Academy - Golf Links',
-            'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
-            'url': 'https://cerebrumbiologyacademy.com/locations/golf-links',
-            'telephone': '+91-88264-44334',
-            'email': 'info@cerebrumbiologyacademy.com',
-            'address': {
+            name: 'Cerebrum Biology Academy - Golf Links',
+            image: 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
+            url: 'https://cerebrumbiologyacademy.com/locations/golf-links',
+            telephone: '+91-88264-44334',
+            email: 'info@cerebrumbiologyacademy.com',
+            address: {
               '@type': 'PostalAddress',
-              'streetAddress': 'Near South Extension',
-              'addressLocality': 'Golf Links',
-              'addressRegion': 'Delhi',
-              'postalCode': '110049',
-              'addressCountry': 'IN',
+              streetAddress: 'Near South Extension',
+              addressLocality: 'Golf Links',
+              addressRegion: 'Delhi',
+              postalCode: '110049',
+              addressCountry: 'IN',
             },
-            'geo': {
+            geo: {
               '@type': 'GeoCoordinates',
-              'latitude': 28.5965,
-              'longitude': 77.2301,
+              latitude: 28.5965,
+              longitude: 77.2301,
             },
-            'openingHoursSpecification': [
+            openingHoursSpecification: [
               {
                 '@type': 'OpeningHoursSpecification',
-                'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                'opens': '00:00',
-                'closes': '23:59',
+                dayOfWeek: [
+                  'Monday',
+                  'Tuesday',
+                  'Wednesday',
+                  'Thursday',
+                  'Friday',
+                  'Saturday',
+                  'Sunday',
+                ],
+                opens: '00:00',
+                closes: '23:59',
               },
             ],
-            'priceRange': '₹40,000 - ₹1,80,000',
-            'aggregateRating': {
-              '@type': 'AggregateRating',
-              'ratingValue': '5.0',
-              'reviewCount': '38',
-              'bestRating': '5',
-            },
-            'sameAs': [
+            priceRange: '₹40,000 - ₹1,80,000',
+            sameAs: [
               'https://www.youtube.com/@CerebrumBiologyAcademy',
               'https://www.instagram.com/cerebrumbiologyacademy/',
             ],
@@ -181,21 +178,36 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
             ],
           }),
         }}
-      />      <script
+      />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'Golf Links', item: 'https://cerebrumbiologyacademy.com/locations/golf-links' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Golf Links',
+                item: 'https://cerebrumbiologyacademy.com/locations/golf-links',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

@@ -287,13 +287,6 @@ export default function USABOCoachingPage() {
             foundingDate: '2014',
             description:
               'Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. Full USABO pathway coverage: USABO Open Exam → Semifinal → National Finals → USA IBO team. AP Biology / USABO bridge methodology unique to Cerebrum (most generalist tutoring platforms cover one or the other; we cover both with the same Campbell + Alberts + Lehninger faculty stack).',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />
@@ -773,19 +766,34 @@ export default function USABOCoachingPage() {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-xl font-bold text-slate-900 mb-4">Compare & Explore</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            <Link href="/bbo-vs-usabo-biology-olympiad" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/bbo-vs-usabo-biology-olympiad"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">BBO vs USABO</span>
             </Link>
-            <Link href="/ap-biology-vs-usabo" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-vs-usabo"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP vs USABO</span>
             </Link>
-            <Link href="/ibo-preparation" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ibo-preparation"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">IBO Preparation</span>
             </Link>
-            <Link href="/nseb-coaching" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/nseb-coaching"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">NSEB Coaching</span>
             </Link>
-            <Link href="/ap-biology-tutor" className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition">
+            <Link
+              href="/ap-biology-tutor"
+              className="block p-3 rounded-lg border border-slate-200 hover:border-green-400 hover:shadow text-center transition"
+            >
               <span className="font-medium text-slate-900 text-sm">AP Biology</span>
             </Link>
           </div>

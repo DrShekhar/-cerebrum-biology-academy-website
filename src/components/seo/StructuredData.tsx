@@ -1,25 +1,5 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { realTestimonials } from '@/data/realTestimonials'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
-
-// Generate dynamic reviews from real testimonial data
-function getDynamicReviews() {
-  return realTestimonials.map((t) => ({
-    '@type': 'Review' as const,
-    reviewRating: {
-      '@type': 'Rating' as const,
-      ratingValue: '5',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    author: {
-      '@type': 'Person' as const,
-      name: t.studentName,
-    },
-    datePublished: `${t.year}-${t.isFeatured ? '01' : '06'}-15`,
-    reviewBody: t.quote,
-  }))
-}
 
 export function OrganizationSchema() {
   const organizationData = {
@@ -239,14 +219,7 @@ export function OrganizationSchema() {
         },
       ],
     },
-    review: getDynamicReviews(),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: String(CEREBRUM_METRICS.rating),
-      reviewCount: String(CEREBRUM_METRICS.reviewCount),
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }
 
   const courseData = {
@@ -596,54 +569,7 @@ export function LocalBusinessSchema() {
         closes: CONTACT_INFO.hours.sunday.close,
       },
     ],
-    // aggregateRating removed — OrganizationSchema already includes it globally
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Priya Sharma',
-        },
-        datePublished: '2024-11-15',
-        reviewBody:
-          'Best NEET Biology coaching in Gurugram. Dr. Shekhar Singh explains concepts so clearly. Scored 340/360 in Biology!',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Rahul Verma',
-        },
-        datePublished: '2024-10-20',
-        reviewBody:
-          'Small batch size made all the difference. Personal attention from faculty helped me clear NEET in first attempt.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Ananya Gupta',
-        },
-        datePublished: '2024-09-10',
-        reviewBody:
-          'Joined as a repeater student. The specialized approach helped me improve from 420 to 650. Now at AIIMS Delhi!',
-      },
-    ],
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
@@ -807,12 +733,7 @@ export function NationalServiceSchema() {
         },
       ],
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Pan-India NEET Coaching Services',
@@ -918,12 +839,6 @@ export function GurugramServiceSchema() {
       serviceUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
       servicePhone: CONTACT_INFO.phone.primary,
       availableLanguage: ['English', 'Hindi'],
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '28',
-      bestRating: '5',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

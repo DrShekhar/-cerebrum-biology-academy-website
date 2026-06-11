@@ -104,7 +104,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Near Rajiv Chowk Metro | Biology Classes Central Delhi',
-    description: 'NEET Biology coaching near Rajiv Chowk Metro Station, Central Delhi. ${metroData.studentCount} students enrolled. Yellow & Blue Line connectivity. ${metroData.nearestCenter.distance} to center. AII...',
+    description:
+      'NEET Biology coaching near Rajiv Chowk Metro Station, Central Delhi. ${metroData.studentCount} students enrolled. Yellow & Blue Line connectivity. ${metroData.nearestCenter.distance} to center. AII...',
   },
 }
 
@@ -146,19 +147,18 @@ export default function NEETCoachingRajivChowkMetroPage() {
       '@type': 'Place',
       name: area,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -211,8 +211,7 @@ export default function NEETCoachingRajivChowkMetroPage() {
             </div>
 
             <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-              NEET Coaching Near{' '}
-              <span className="text-yellow-300">Rajiv Chowk Metro</span>
+              NEET Coaching Near <span className="text-yellow-300">Rajiv Chowk Metro</span>
             </h1>
 
             <p className="mx-auto mb-6 max-w-3xl text-xl text-white/90">
@@ -247,7 +246,9 @@ export default function NEETCoachingRajivChowkMetroPage() {
                 WhatsApp Us
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20rajiv%20chowk%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20rajiv%20chowk%20metro.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-6 py-3 font-semibold text-gray-900 transition hover:bg-yellow-300"
               >
                 Book FREE Demo
@@ -439,8 +440,18 @@ export default function NEETCoachingRajivChowkMetroPage() {
                   <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold hover:bg-gray-100">
                     {faq.question}
                     <span className="text-yellow-600 transition-transform group-open:rotate-180">
-                      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <svg
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </span>
                   </summary>
@@ -475,7 +486,9 @@ export default function NEETCoachingRajivChowkMetroPage() {
                 WhatsApp Now
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20rajiv%20chowk%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20rajiv%20chowk%20metro.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-semibold text-yellow-700 transition hover:bg-yellow-50"
               >
                 Book Free Demo

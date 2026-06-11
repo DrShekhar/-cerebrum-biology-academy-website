@@ -86,8 +86,8 @@ export default function BiologyTuitionNoidaPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto">
               CBSE Board + NEET dual preparation by AIIMS faculty. Sector 18, 62, 137 &amp; all
-              Noida sectors. Small batches of 15 students. Better results than private tutors at half
-              the cost.
+              Noida sectors. Small batches of 15 students. Better results than private tutors at
+              half the cost.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -120,7 +120,10 @@ export default function BiologyTuitionNoidaPage() {
                 { icon: Award, value: '1,100+', label: 'NEET Selections' },
                 { icon: Star, value: '5.0', label: 'Google Rating' },
               ].map((stat) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+                <div
+                  key={stat.label}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
+                >
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
@@ -157,7 +160,11 @@ export default function BiologyTuitionNoidaPage() {
                 {[
                   ['Monthly Fee', '\u20B95,000-8,000/month', '\u20B94,000/month (\u20B948K/year)'],
                   ['Faculty', 'B.Sc/M.Sc Graduate', 'AIIMS-Trained Doctor'],
-                  ['Batch Size', '1 Student (no peer learning)', '15 Students (healthy competition)'],
+                  [
+                    'Batch Size',
+                    '1 Student (no peer learning)',
+                    '15 Students (healthy competition)',
+                  ],
                   ['Test Series', 'No structured tests', 'Weekly tests + monthly assessments'],
                   ['Study Material', 'No material provided', 'Complete NCERT notes + MCQ bank'],
                   ['Recorded Lectures', 'Not available', 'All classes recorded for revision'],
@@ -193,7 +200,12 @@ export default function BiologyTuitionNoidaPage() {
                 Boards Covered
               </h3>
               <ul className="space-y-3">
-                {['CBSE (most Noida schools)', 'ICSE', 'IB (International Baccalaureate)', 'IGCSE'].map((board) => (
+                {[
+                  'CBSE (most Noida schools)',
+                  'ICSE',
+                  'IB (International Baccalaureate)',
+                  'IGCSE',
+                ].map((board) => (
                   <li key={board} className="flex items-center text-gray-700">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 shrink-0" />
                     {board}
@@ -236,7 +248,10 @@ export default function BiologyTuitionNoidaPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {noidaAreas.map((area) => (
-              <div key={area.name} className="bg-green-50 rounded-xl p-4 text-center border border-green-100">
+              <div
+                key={area.name}
+                className="bg-green-50 rounded-xl p-4 text-center border border-green-100"
+              >
                 <MapPin className="w-6 h-6 text-green-600 mx-auto mb-2" />
                 <div className="font-bold text-gray-900">{area.name}</div>
                 <div className="text-xs text-gray-500">{area.highlight}</div>
@@ -256,12 +271,36 @@ export default function BiologyTuitionNoidaPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: Video, title: 'Recorded Lectures', desc: 'Miss a class? Rewatch anytime. Home tutors don\u2019t offer recordings.' },
-              { icon: MessageCircle, title: '24/7 Doubt Support', desc: 'WhatsApp doubt clearing any time. Home tutors are available only during class.' },
-              { icon: Target, title: 'Structured Testing', desc: 'Weekly chapter tests + monthly full-length mocks. Home tutors rarely test.' },
-              { icon: Users, title: 'Peer Learning', desc: 'Study with 15 motivated students. Home tuition is isolating.' },
-              { icon: Clock, title: 'No Travel Time', desc: 'Save 1-2 hours daily. No waiting for tutor to arrive.' },
-              { icon: BookOpen, title: 'Complete Materials', desc: 'NCERT notes, MCQ banks, PYQs included. Home tutors charge extra.' },
+              {
+                icon: Video,
+                title: 'Recorded Lectures',
+                desc: 'Miss a class? Rewatch anytime. Home tutors don\u2019t offer recordings.',
+              },
+              {
+                icon: MessageCircle,
+                title: '24/7 Doubt Support',
+                desc: 'WhatsApp doubt clearing any time. Home tutors are available only during class.',
+              },
+              {
+                icon: Target,
+                title: 'Structured Testing',
+                desc: 'Weekly chapter tests + monthly full-length mocks. Home tutors rarely test.',
+              },
+              {
+                icon: Users,
+                title: 'Peer Learning',
+                desc: 'Study with 15 motivated students. Home tuition is isolating.',
+              },
+              {
+                icon: Clock,
+                title: 'No Travel Time',
+                desc: 'Save 1-2 hours daily. No waiting for tutor to arrive.',
+              },
+              {
+                icon: BookOpen,
+                title: 'Complete Materials',
+                desc: 'NCERT notes, MCQ banks, PYQs included. Home tutors charge extra.',
+              },
             ].map((item) => (
               <div key={item.title} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <item.icon className="w-10 h-10 text-yellow-400 mb-4" />
@@ -310,7 +349,11 @@ export default function BiologyTuitionNoidaPage() {
                 Book Free Demo Class
               </Button>
             </Link>
-            <a href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20biology%20tuition%20in%20Noida" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/918826444334?text=Hi%2C%20I%20want%20biology%20tuition%20in%20Noida"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="outline"
                 size="xl"
@@ -322,9 +365,15 @@ export default function BiologyTuitionNoidaPage() {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="/pricing" className="underline opacity-80 hover:opacity-100">View Pricing</Link>
-            <Link href="/courses" className="underline opacity-80 hover:opacity-100">All Courses</Link>
-            <Link href="/neet-coaching-noida" className="underline opacity-80 hover:opacity-100">NEET Coaching Noida</Link>
+            <Link href="/pricing" className="underline opacity-80 hover:opacity-100">
+              View Pricing
+            </Link>
+            <Link href="/courses" className="underline opacity-80 hover:opacity-100">
+              All Courses
+            </Link>
+            <Link href="/neet-coaching-noida" className="underline opacity-80 hover:opacity-100">
+              NEET Coaching Noida
+            </Link>
           </div>
         </div>
       </section>
@@ -346,20 +395,34 @@ export default function BiologyTuitionNoidaPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-                { '@type': 'ListItem', position: 2, name: 'Biology Tuition Noida', item: 'https://cerebrumbiologyacademy.com/biology-tuition-noida' },
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://cerebrumbiologyacademy.com',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Biology Tuition Noida',
+                  item: 'https://cerebrumbiologyacademy.com/biology-tuition-noida',
+                },
               ],
             },
             {
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Cerebrum Biology Academy - Biology Tuition Noida',
-              description: 'Best biology tuition in Noida for Class 11-12. CBSE Board + NEET preparation by AIIMS faculty.',
+              description:
+                'Best biology tuition in Noida for Class 11-12. CBSE Board + NEET preparation by AIIMS faculty.',
               url: 'https://cerebrumbiologyacademy.com/biology-tuition-noida',
               telephone: '+918826444334',
-              areaServed: { '@type': 'City', name: 'Noida', containedInPlace: { '@type': 'State', name: 'Uttar Pradesh' } },
+              areaServed: {
+                '@type': 'City',
+                name: 'Noida',
+                containedInPlace: { '@type': 'State', name: 'Uttar Pradesh' },
+              },
               priceRange: '\u20B948,000 - \u20B91,56,000/year',
-              aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '38', bestRating: '5' },
             },
           ]),
         }}

@@ -39,7 +39,7 @@ const testimonials = [
     score: '678/720',
     college: 'AIIMS Delhi',
     quote:
-      'Living in Pushpanjali Enclave, I could reach DC Chauk center in just 8 minutes by metro or auto. Dr. Shekhar Sir\'s conceptual teaching helped me crack AIIMS in my first attempt.',
+      "Living in Pushpanjali Enclave, I could reach DC Chauk center in just 8 minutes by metro or auto. Dr. Shekhar Sir's conceptual teaching helped me crack AIIMS in my first attempt.",
     year: '2025',
   },
   {
@@ -183,13 +183,6 @@ const localBusinessSchema = {
     'Pitampura',
     'Rohini',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    bestRating: '5',
-    worstRating: '1',
-    ratingCount: '38',
-  },
   founder: {
     '@type': 'Person',
     name: 'Dr. Shekhar C Singh',
@@ -311,8 +304,8 @@ export function PushpanjaliEnclavePageContent() {
               </div>
 
               <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-                NEET Coaching in{' '}
-                <span className="text-yellow-400">Pushpanjali Enclave</span>, Pitampura
+                NEET Coaching in <span className="text-yellow-400">Pushpanjali Enclave</span>,
+                Pitampura
               </h1>
 
               <p className="mb-8 text-xl text-slate-300 md:text-2xl">
@@ -343,7 +336,9 @@ export function PushpanjaliEnclavePageContent() {
               {/* Primary CTAs */}
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <Link
-                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20pushpanjali%20enclave.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                  href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20pushpanjali%20enclave.%20Please%20share%20available%20timings."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
                 >
                   Book FREE Demo Class
@@ -460,7 +455,9 @@ export function PushpanjaliEnclavePageContent() {
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <Link
-                        href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20pushpanjali%20enclave.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                        href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20pushpanjali%20enclave.%20Please%20share%20available%20timings."
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="rounded-lg bg-green-600 px-6 py-3 font-medium text-white transition hover:bg-green-700"
                       >
                         Book Demo at Center
@@ -731,7 +728,9 @@ export function PushpanjaliEnclavePageContent() {
 
             <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20pushpanjali%20enclave.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20pushpanjali%20enclave.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-xl bg-yellow-500 px-4 py-3 text-base font-bold text-slate-900 shadow-lg shadow-yellow-500/30 transition hover:bg-yellow-400 sm:px-8 sm:py-4 sm:text-lg"
               >
                 Book Free Demo Class

@@ -76,7 +76,11 @@ export default function BiologyTuitionSouthDelhiPage() {
   return (
     <div className="min-h-screen">
       <CerebrumPersonSchema
-        knowsAbout={['NEET South Delhi', 'NEET Biology South Delhi', 'Medical entrance coaching South Delhi']}
+        knowsAbout={[
+          'NEET South Delhi',
+          'NEET Biology South Delhi',
+          'Medical entrance coaching South Delhi',
+        ]}
       />
       <DelhiAreaSchema pageSlug="biology-tuition-south-delhi" />
       <section className="relative bg-gradient-to-br from-green-900 via-green-700 to-green-800 text-white py-20 overflow-hidden">
@@ -437,12 +441,6 @@ export default function BiologyTuitionSouthDelhiPage() {
               },
               areaServed: { '@type': 'Place', name: 'South Delhi' },
               priceRange: '\u20B948,000 - \u20B91,56,000/year',
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '5.0',
-                reviewCount: '38',
-                bestRating: '5',
-              },
             },
           ]),
         }}

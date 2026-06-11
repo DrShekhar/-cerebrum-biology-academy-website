@@ -135,13 +135,7 @@ export function NEETSchemaStack({
     foundingDate: '2014',
     description:
       "India's leading biology-only specialist NEET coaching brand under AIIMS-trained Dr. Shekhar C Singh. 680+ medical college selections, 98% NEET-UG qualification rate, 15-20 student batches across 6 Delhi NCR offline centres plus pan-India online live classes.",
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '485',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // review/aggregateRating removed 2026-06: self-serving schema-only review markup violates Google's review snippet policy.
   }
 
   const courseSchema = {

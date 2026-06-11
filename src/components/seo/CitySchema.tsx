@@ -88,24 +88,9 @@ export function CitySchema({
       localitiesValue.length > 0
         ? localitiesValue.map((locality) => ({ '@type': 'City', name: locality }))
         : [{ '@type': 'City', name: cityName }],
-    // aggregateRating removed — global OrganizationSchema already includes it
-    // Prevents "Review has multiple aggregate ratings" GSC error
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Parent of NEET Aspirant' },
-        datePublished: '2024-08-15',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
-        reviewBody: `Excellent NEET Biology coaching for ${cityName} students. The faculty is knowledgeable and supportive.`,
-      },
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'NEET 2024 Student' },
-        datePublished: '2024-06-20',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
-        reviewBody: `Best decision was joining Cerebrum. Scored 680+ in NEET with their guidance from ${cityName}.`,
-      },
-    ],
+    // review/aggregateRating removed 2026-06: schema-only self-serving reviews
+    // violate Google's review snippet policy (the same two fabricated reviews
+    // were template-injected into every city).
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'NEET Biology Courses',

@@ -439,12 +439,6 @@ const NEETCompletePage = () => {
               price: '144400',
               availability: 'https://schema.org/InStock',
             },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-              bestRating: '5',
-            },
           }),
         }}
       />

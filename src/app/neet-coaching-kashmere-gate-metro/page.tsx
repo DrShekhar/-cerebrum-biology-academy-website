@@ -111,7 +111,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Near Kashmere Gate Metro | Biology Classes North Delhi',
-    description: 'NEET Biology coaching near Kashmere Gate Metro Station, North Delhi. ${metroData.studentCount} students enrolled from Civil Lines, Old Delhi, Model Town. Red, Yellow, Violet Line connectivity. AIIM...',
+    description:
+      'NEET Biology coaching near Kashmere Gate Metro Station, North Delhi. ${metroData.studentCount} students enrolled from Civil Lines, Old Delhi, Model Town. Red, Yellow, Violet Line connectivity. AIIM...',
   },
 }
 
@@ -153,19 +154,18 @@ export default function NEETCoachingKashmereGateMetroPage() {
       '@type': 'Place',
       name: area,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
@@ -222,13 +222,13 @@ export default function NEETCoachingKashmereGateMetroPage() {
             </div>
 
             <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-              NEET Coaching Near{' '}
-              <span className="text-yellow-300">Kashmere Gate Metro</span>
+              NEET Coaching Near <span className="text-yellow-300">Kashmere Gate Metro</span>
             </h1>
 
             <p className="mx-auto mb-6 max-w-3xl text-xl text-white/90">
               Biology Classes for Students in North Delhi. {metroData.studentCount} students
-              enrolled from Civil Lines, Old Delhi, DU area & nearby localities. Triple metro line connectivity!
+              enrolled from Civil Lines, Old Delhi, DU area & nearby localities. Triple metro line
+              connectivity!
             </p>
 
             {/* Trust Badges */}
@@ -257,7 +257,9 @@ export default function NEETCoachingKashmereGateMetroPage() {
                 WhatsApp Us
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kashmere%20gate%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kashmere%20gate%20metro.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-yellow-400 px-6 py-3 font-semibold text-gray-900 transition hover:bg-yellow-300"
               >
                 Book FREE Demo
@@ -328,7 +330,11 @@ export default function NEETCoachingKashmereGateMetroPage() {
                   >
                     <div
                       className={`mb-2 text-2xl font-bold ${
-                        index === 0 ? 'text-red-600' : index === 1 ? 'text-yellow-600' : 'text-violet-600'
+                        index === 0
+                          ? 'text-red-600'
+                          : index === 1
+                            ? 'text-yellow-600'
+                            : 'text-violet-600'
                       }`}
                     >
                       {route.time}
@@ -346,7 +352,8 @@ export default function NEETCoachingKashmereGateMetroPage() {
                   Triple Line Interchange - Maximum Connectivity!
                 </h3>
                 <p className="text-gray-600">
-                  Kashmere Gate connects 3 metro lines, making it the best hub for North Delhi, Old Delhi, and East Delhi students to access our coaching centers.
+                  Kashmere Gate connects 3 metro lines, making it the best hub for North Delhi, Old
+                  Delhi, and East Delhi students to access our coaching centers.
                 </p>
               </div>
             </div>
@@ -391,7 +398,9 @@ export default function NEETCoachingKashmereGateMetroPage() {
                 </span>
                 <Monitor className="mb-4 h-10 w-10 text-green-600" />
                 <h3 className="mb-2 text-xl font-bold">100% Online</h3>
-                <p className="mb-4 text-gray-600">Live classes from home. Best for Old Delhi students.</p>
+                <p className="mb-4 text-gray-600">
+                  Live classes from home. Best for Old Delhi students.
+                </p>
                 <ul className="mb-4 space-y-2 text-sm text-gray-600">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-green-600" />
@@ -472,8 +481,18 @@ export default function NEETCoachingKashmereGateMetroPage() {
                   <summary className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold hover:bg-gray-100">
                     {faq.question}
                     <span className="text-red-600 transition-transform group-open:rotate-180">
-                      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <svg
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </span>
                   </summary>
@@ -496,7 +515,8 @@ export default function NEETCoachingKashmereGateMetroPage() {
               Join {metroData.studentCount} Students from Kashmere Gate Area
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-xl text-white/90">
-              Start your medical journey with expert guidance from AIIMS faculty - connected by 3 metro lines!
+              Start your medical journey with expert guidance from AIIMS faculty - connected by 3
+              metro lines!
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -508,7 +528,9 @@ export default function NEETCoachingKashmereGateMetroPage() {
                 WhatsApp Now
               </a>
               <Link
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kashmere%20gate%20metro.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20kashmere%20gate%20metro.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 font-semibold text-red-700 transition hover:bg-red-50"
               >
                 Book Free Demo

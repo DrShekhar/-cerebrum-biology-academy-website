@@ -53,12 +53,10 @@ const PHONE_DISPLAY = '+91 88264 44334'
 // the user replaces, which gives the counselor immediate routing context.
 const WHATSAPP_MESSAGE = `Hi — I'm interested in Cerebrum's online NEET coaching for PCB. I'm based in [your city / country]. Please share live class timings (in my time zone), what's covered for biology, and how PCM pairing works.`
 
-const WA_URL =
-  'https://wa.me/918826444334?text=' + encodeURIComponent(WHATSAPP_MESSAGE)
+const WA_URL = 'https://wa.me/918826444334?text=' + encodeURIComponent(WHATSAPP_MESSAGE)
 
 export const metadata: Metadata = {
-  title:
-    'Online NEET Coaching for PCB Students — Live Biology Classes Globally · Cerebrum',
+  title: 'Online NEET Coaching for PCB Students — Live Biology Classes Globally · Cerebrum',
   description:
     'Online NEET coaching for PCB-stream students from AIIMS-trained faculty. Live biology classes serving India, UAE, USA, UK, Canada, Saudi, Singapore — your time zone. Biology is 360/720 of NEET; we are the specialist. Small batches, weekly tests, printed study material shipped globally. Free demo class.',
   keywords: [
@@ -113,7 +111,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Online NEET Coaching for PCB Students — Live Biology Classes Globally · Cerebrum',
-    description: 'Online NEET coaching for PCB-stream students from AIIMS-trained faculty. Live biology classes serving India, UAE, USA, UK, Canada, Saudi, Singapore — your time zone. Biology is 360/720 of NEET; we ...',
+    description:
+      'Online NEET coaching for PCB-stream students from AIIMS-trained faculty. Live biology classes serving India, UAE, USA, UK, Canada, Saudi, Singapore — your time zone. Biology is 360/720 of NEET; we ...',
   },
   robots: 'index, follow, max-image-preview:large',
 }
@@ -125,22 +124,19 @@ const FAQS = [
       'PCB is the Indian academic stream — Physics, Chemistry, Biology — that NEET aspirants take in Class 11-12. This programme is designed for any PCB-stream student preparing for NEET-UG, whether you are in Class 11, Class 12, or dropper. Classes are live online via Zoom, with recordings if you miss.',
   },
   {
-    question:
-      'Do you teach physics and chemistry too, or only biology?',
+    question: 'Do you teach physics and chemistry too, or only biology?',
     answer:
-      'We teach NEET Biology comprehensively — the entire Class 11 + 12 NCERT syllabus, every chapter, with NEET-pattern MCQ drilling. We do not teach physics or chemistry. Biology is 360 of NEET\'s 720 marks (half the exam) and is consistently the subject where most aspirants lose the most marks; our singular focus is on that. For PCM, our students typically pair us with their school faculty, a local tutor, or one of the major online PCM providers (PW, Allen Digital, Aakash Digital, Unacademy). We can recommend partners on request.',
+      "We teach NEET Biology comprehensively — the entire Class 11 + 12 NCERT syllabus, every chapter, with NEET-pattern MCQ drilling. We do not teach physics or chemistry. Biology is 360 of NEET's 720 marks (half the exam) and is consistently the subject where most aspirants lose the most marks; our singular focus is on that. For PCM, our students typically pair us with their school faculty, a local tutor, or one of the major online PCM providers (PW, Allen Digital, Aakash Digital, Unacademy). We can recommend partners on request.",
   },
   {
-    question:
-      'I am in the USA / UK / UAE / Canada / Saudi / Singapore — does this work for me?',
+    question: 'I am in the USA / UK / UAE / Canada / Saudi / Singapore — does this work for me?',
     answer:
       'Yes. We run dedicated batches in multiple time zones — early morning Indian time for Gulf families, evening Indian time for South-East Asia, and a US-friendly batch for North America. Printed study material is shipped to your address (we ship globally; tracking provided). Doubt sessions are async on WhatsApp during your study hours.',
   },
   {
-    question:
-      'How are live classes different from watching recorded YouTube lectures?',
+    question: 'How are live classes different from watching recorded YouTube lectures?',
     answer:
-      'Live classes have small batch sizes (10-40 students depending on tier), real-time Q&A, weekly tests with personal review, and a mentor accountable for your week-on-week progression. Recorded lectures don\'t know when you\'re falling behind. Per Dunlosky et al (2013) and Karpicke & Roediger (2008), retrieval practice and structured feedback drive learning — neither of which a passive video lecture delivers.',
+      "Live classes have small batch sizes (10-40 students depending on tier), real-time Q&A, weekly tests with personal review, and a mentor accountable for your week-on-week progression. Recorded lectures don't know when you're falling behind. Per Dunlosky et al (2013) and Karpicke & Roediger (2008), retrieval practice and structured feedback drive learning — neither of which a passive video lecture delivers.",
   },
   {
     question: 'What is the schedule like?',
@@ -160,7 +156,7 @@ const FAQS = [
   {
     question: 'How do I know if this is the right fit before committing?',
     answer:
-      'Book a free 60-minute live demo class with Dr. Shekhar via the WhatsApp number on this page. About 80% of overseas enquiries take this demo before deciding. You see the teaching style, ask any questions about format, and walk away with a clear plan even if you don\'t enrol with us.',
+      "Book a free 60-minute live demo class with Dr. Shekhar via the WhatsApp number on this page. About 80% of overseas enquiries take this demo before deciding. You see the teaching style, ask any questions about format, and walk away with a clear plan even if you don't enrol with us.",
   },
   {
     question: 'What about pricing?',
@@ -178,38 +174,32 @@ const FEATURES = [
   {
     icon: <Video className="h-6 w-6 text-indigo-600" />,
     title: 'Live online classes — not recorded videos',
-    text:
-      'Two-way Zoom classes with real-time Q&A. Recordings available for any session you miss, but the value is in the live discussion and weekly mentor accountability.',
+    text: 'Two-way Zoom classes with real-time Q&A. Recordings available for any session you miss, but the value is in the live discussion and weekly mentor accountability.',
   },
   {
     icon: <Globe className="h-6 w-6 text-indigo-600" />,
     title: 'Multiple time-zone batches',
-    text:
-      'Dedicated batch slots for Gulf (early morning IST), India (afternoon / evening IST), South-East Asia (evening IST), and North America (US-friendly window). Pick what fits your day.',
+    text: 'Dedicated batch slots for Gulf (early morning IST), India (afternoon / evening IST), South-East Asia (evening IST), and North America (US-friendly window). Pick what fits your day.',
   },
   {
     icon: <BookOpen className="h-6 w-6 text-indigo-600" />,
     title: 'Printed material shipped globally',
-    text:
-      'Cerebrum NCERT-line-by-line guide + 12,000-MCQ chapter test bank shipped to 30+ countries. Tracking provided. Free with annual programmes.',
+    text: 'Cerebrum NCERT-line-by-line guide + 12,000-MCQ chapter test bank shipped to 30+ countries. Tracking provided. Free with annual programmes.',
   },
   {
     icon: <Users className="h-6 w-6 text-indigo-600" />,
     title: 'Small batches by design',
-    text:
-      'Maximum batch size is 40 in our most affordable tier, 10-12 in our top tier. Every weekly test is reviewed in the next live class — the per-question discussion is the part that pre-recorded coaching cannot replicate.',
+    text: 'Maximum batch size is 40 in our most affordable tier, 10-12 in our top tier. Every weekly test is reviewed in the next live class — the per-question discussion is the part that pre-recorded coaching cannot replicate.',
   },
   {
     icon: <ShieldCheck className="h-6 w-6 text-indigo-600" />,
     title: 'AIIMS-trained faculty',
-    text:
-      'Lead faculty is Dr. Shekhar C Singh — AIIMS New Delhi alumnus, 15+ years of NEET biology pedagogy, 680+ medical college selections including 67+ to AIIMS Delhi.',
+    text: 'Lead faculty is Dr. Shekhar C Singh — AIIMS New Delhi alumnus, 15+ years of NEET biology pedagogy, 680+ medical college selections including 67+ to AIIMS Delhi.',
   },
   {
     icon: <Sparkles className="h-6 w-6 text-indigo-600" />,
     title: 'Mentor-led progression tracking',
-    text:
-      'Your biology score trajectory is plotted week-on-week against the NEET pattern. Pinnacle tier includes a weekly 1-on-1 mentor call with Dr. Shekhar himself.',
+    text: 'Your biology score trajectory is plotted week-on-week against the NEET pattern. Pinnacle tier includes a weekly 1-on-1 mentor call with Dr. Shekhar himself.',
   },
 ]
 
@@ -297,26 +287,6 @@ export default function OnlineNEETCoachingPCBPage() {
     })),
   }
 
-  const reviewSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: { '@id': `${PAGE_URL}#course` },
-    author: {
-      '@type': 'Person',
-      name: 'Sadhna Sirin',
-      description: 'Delhi-NCR Topper NEET 2023 — 695/720, 360/360 Biology',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    reviewBody:
-      "Dr. Shekhar Sir's conceptual approach made complex topics simple. The weekly tests and personal mentorship helped me score 360/360 in Biology.",
-    datePublished: '2023-06-15',
-  }
-
   return (
     <>
       <CerebrumPersonSchema
@@ -342,17 +312,10 @@ export default function OnlineNEETCoachingPCBPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
 
       <div className="min-h-screen bg-white">
         {/* Breadcrumb */}
-        <nav
-          aria-label="Breadcrumb"
-          className="mx-auto max-w-6xl px-4 pt-6 text-sm text-slate-500"
-        >
+        <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-6 text-sm text-slate-500">
           <ol className="flex items-center gap-1">
             <li>
               <Link href="/" className="hover:text-indigo-700 flex items-center gap-1">
@@ -378,13 +341,11 @@ export default function OnlineNEETCoachingPCBPage() {
                 <span className="text-indigo-700">in your time zone.</span>
               </h1>
               <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-                Biology is 360 of NEET&rsquo;s 720 marks &mdash; half the exam,
-                and the subject most aspirants lose the most marks on. We are
-                India&rsquo;s NEET biology specialist, delivering live online
-                classes to PCB-stream students in 30+ countries since 2014.
-                Same AIIMS-trained faculty, same NCERT-line-by-line study
-                material, same weekly tests &mdash; now shipped to your home
-                and taught in your time zone.
+                Biology is 360 of NEET&rsquo;s 720 marks &mdash; half the exam, and the subject most
+                aspirants lose the most marks on. We are India&rsquo;s NEET biology specialist,
+                delivering live online classes to PCB-stream students in 30+ countries since 2014.
+                Same AIIMS-trained faculty, same NCERT-line-by-line study material, same weekly
+                tests &mdash; now shipped to your home and taught in your time zone.
               </p>
 
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -407,9 +368,8 @@ export default function OnlineNEETCoachingPCBPage() {
               </div>
 
               <p className="mt-3 text-sm text-slate-500">
-                Free 60-minute demo class with Dr. Shekhar. Available in your
-                time zone. Reply within a few hours (overseas timing
-                respected).
+                Free 60-minute demo class with Dr. Shekhar. Available in your time zone. Reply
+                within a few hours (overseas timing respected).
               </p>
             </div>
 
@@ -420,29 +380,22 @@ export default function OnlineNEETCoachingPCBPage() {
                 </p>
                 <div className="mt-4 space-y-4">
                   <div className="flex items-baseline justify-between border-b border-slate-100 pb-3">
-                    <span className="text-sm text-slate-600">
-                      NEET total marks
-                    </span>
+                    <span className="text-sm text-slate-600">NEET total marks</span>
                     <span className="text-2xl font-bold text-slate-900">720</span>
                   </div>
                   <div className="flex items-baseline justify-between border-b border-slate-100 pb-3">
-                    <span className="text-sm text-slate-600">
-                      Biology share
-                    </span>
+                    <span className="text-sm text-slate-600">Biology share</span>
                     <span className="text-2xl font-bold text-indigo-700">360</span>
                   </div>
                   <div className="flex items-baseline justify-between">
-                    <span className="text-sm font-semibold text-slate-900">
-                      = half the exam
-                    </span>
+                    <span className="text-sm font-semibold text-slate-900">= half the exam</span>
                     <span className="text-2xl font-bold text-emerald-600">50%</span>
                   </div>
                 </div>
                 <p className="mt-4 text-xs text-slate-500 leading-relaxed">
-                  PCM = 360 marks across two subjects, scored well by most
-                  serious aspirants. Biology = 360 in one subject, and the
-                  one most lose marks on. Whoever owns biology, owns the
-                  rank.
+                  PCM = 360 marks across two subjects, scored well by most serious aspirants.
+                  Biology = 360 in one subject, and the one most lose marks on. Whoever owns
+                  biology, owns the rank.
                 </p>
               </div>
             </div>
@@ -467,18 +420,15 @@ export default function OnlineNEETCoachingPCBPage() {
                 <ul className="mt-4 space-y-3 text-sm text-slate-700">
                   <li className="flex gap-2">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-                    Live online NEET Biology classes — Class 11, Class 12,
-                    Dropper batches
+                    Live online NEET Biology classes — Class 11, Class 12, Dropper batches
                   </li>
                   <li className="flex gap-2">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-                    Complete Class 11 + 12 NCERT Biology, line-by-line,
-                    NEET-pattern weighted
+                    Complete Class 11 + 12 NCERT Biology, line-by-line, NEET-pattern weighted
                   </li>
                   <li className="flex gap-2">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-                    12,000+ MCQ bank, weekly chapter tests, monthly full
-                    biology mocks
+                    12,000+ MCQ bank, weekly chapter tests, monthly full biology mocks
                   </li>
                   <li className="flex gap-2">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
@@ -502,25 +452,23 @@ export default function OnlineNEETCoachingPCBPage() {
                 <ul className="mt-4 space-y-3 text-sm text-slate-700">
                   <li className="flex gap-2">
                     <span className="font-bold text-slate-500">×</span>
-                    We do not teach physics or chemistry. By design — biology
-                    specialisation is the entire wedge.
+                    We do not teach physics or chemistry. By design — biology specialisation is the
+                    entire wedge.
                   </li>
                   <li className="flex gap-2">
                     <span className="font-bold text-slate-500">×</span>
-                    We are not a video-on-demand library. Classes are live;
-                    recordings are backup, not the product.
+                    We are not a video-on-demand library. Classes are live; recordings are backup,
+                    not the product.
                   </li>
                   <li className="flex gap-2">
                     <span className="font-bold text-slate-500">×</span>
-                    We do not promise a rank without effort. Mechanism is
-                    weekly tests + retrieval practice + mentor accountability;
-                    you still have to do the work.
+                    We do not promise a rank without effort. Mechanism is weekly tests + retrieval
+                    practice + mentor accountability; you still have to do the work.
                   </li>
                 </ul>
                 <p className="mt-5 text-xs text-slate-600 leading-relaxed">
-                  For PCM, our students typically pair us with school
-                  faculty, a local tutor, or one of the major online PCM
-                  providers. We can recommend partners on request via
+                  For PCM, our students typically pair us with school faculty, a local tutor, or one
+                  of the major online PCM providers. We can recommend partners on request via
                   WhatsApp.
                 </p>
               </div>
@@ -535,19 +483,12 @@ export default function OnlineNEETCoachingPCBPage() {
           </h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {FEATURES.map((f) => (
-              <div
-                key={f.title}
-                className="rounded-xl border border-slate-200 bg-white p-6"
-              >
+              <div key={f.title} className="rounded-xl border border-slate-200 bg-white p-6">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">
                   {f.icon}
                 </div>
-                <h3 className="mt-4 text-base font-semibold text-slate-900">
-                  {f.title}
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  {f.text}
-                </p>
+                <h3 className="mt-4 text-base font-semibold text-slate-900">{f.title}</h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">{f.text}</p>
               </div>
             ))}
           </div>
@@ -560,41 +501,66 @@ export default function OnlineNEETCoachingPCBPage() {
               Live batches across time zones
             </h2>
             <p className="mt-3 text-slate-600 max-w-3xl">
-              Pick the slot that fits alongside your school + PCM coaching.
-              Final timings confirmed when you book a demo so we can match
-              your daily schedule precisely.
+              Pick the slot that fits alongside your school + PCM coaching. Final timings confirmed
+              when you book a demo so we can match your daily schedule precisely.
             </p>
 
             <div className="mt-8 overflow-x-auto rounded-xl border border-slate-200 bg-white">
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead className="bg-slate-100">
                   <tr>
-                    <th className="px-4 py-3 font-semibold text-slate-700">
-                      Region
-                    </th>
+                    <th className="px-4 py-3 font-semibold text-slate-700">Region</th>
                     <th className="px-4 py-3 font-semibold text-slate-700">
                       Typical batch window (local time)
                     </th>
-                    <th className="px-4 py-3 font-semibold text-slate-700">
-                      Indian Standard Time
-                    </th>
+                    <th className="px-4 py-3 font-semibold text-slate-700">Indian Standard Time</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   {[
-                    { region: 'Gulf (UAE, Saudi, Qatar, Kuwait, Bahrain, Oman)', local: 'Early evening, 5:00 PM – 7:00 PM', ist: '7:30 PM – 9:30 PM' },
-                    { region: 'India', local: '4:00 PM – 6:00 PM / 6:30 PM – 8:30 PM', ist: 'Same' },
-                    { region: 'Southeast Asia (Singapore, Malaysia)', local: 'Evening, 7:00 PM – 9:00 PM', ist: '4:30 PM – 6:30 PM' },
-                    { region: 'UK', local: 'Afternoon, 1:00 PM – 3:00 PM', ist: '6:30 PM – 8:30 PM' },
-                    { region: 'US East Coast', local: 'Morning, 8:00 AM – 10:00 AM', ist: '5:30 PM – 7:30 PM' },
-                    { region: 'US West Coast', local: 'Morning, 7:00 AM – 9:00 AM', ist: '7:30 PM – 9:30 PM' },
-                    { region: 'Canada (Eastern)', local: 'Morning, 8:00 AM – 10:00 AM', ist: '5:30 PM – 7:30 PM' },
-                    { region: 'Australia (Sydney)', local: 'Evening, 8:30 PM – 10:30 PM', ist: '3:00 PM – 5:00 PM' },
+                    {
+                      region: 'Gulf (UAE, Saudi, Qatar, Kuwait, Bahrain, Oman)',
+                      local: 'Early evening, 5:00 PM – 7:00 PM',
+                      ist: '7:30 PM – 9:30 PM',
+                    },
+                    {
+                      region: 'India',
+                      local: '4:00 PM – 6:00 PM / 6:30 PM – 8:30 PM',
+                      ist: 'Same',
+                    },
+                    {
+                      region: 'Southeast Asia (Singapore, Malaysia)',
+                      local: 'Evening, 7:00 PM – 9:00 PM',
+                      ist: '4:30 PM – 6:30 PM',
+                    },
+                    {
+                      region: 'UK',
+                      local: 'Afternoon, 1:00 PM – 3:00 PM',
+                      ist: '6:30 PM – 8:30 PM',
+                    },
+                    {
+                      region: 'US East Coast',
+                      local: 'Morning, 8:00 AM – 10:00 AM',
+                      ist: '5:30 PM – 7:30 PM',
+                    },
+                    {
+                      region: 'US West Coast',
+                      local: 'Morning, 7:00 AM – 9:00 AM',
+                      ist: '7:30 PM – 9:30 PM',
+                    },
+                    {
+                      region: 'Canada (Eastern)',
+                      local: 'Morning, 8:00 AM – 10:00 AM',
+                      ist: '5:30 PM – 7:30 PM',
+                    },
+                    {
+                      region: 'Australia (Sydney)',
+                      local: 'Evening, 8:30 PM – 10:30 PM',
+                      ist: '3:00 PM – 5:00 PM',
+                    },
                   ].map((row) => (
                     <tr key={row.region} className="hover:bg-slate-50">
-                      <td className="px-4 py-3 font-medium text-slate-900">
-                        {row.region}
-                      </td>
+                      <td className="px-4 py-3 font-medium text-slate-900">{row.region}</td>
                       <td className="px-4 py-3 text-slate-700">{row.local}</td>
                       <td className="px-4 py-3 text-slate-500">{row.ist}</td>
                     </tr>
@@ -603,9 +569,8 @@ export default function OnlineNEETCoachingPCBPage() {
               </table>
             </div>
             <p className="mt-3 text-xs text-slate-500">
-              Slots adjust seasonally for daylight saving and Ramadan
-              schedules. WhatsApp us with your country and we share the
-              current active batches.
+              Slots adjust seasonally for daylight saving and Ramadan schedules. WhatsApp us with
+              your country and we share the current active batches.
             </p>
           </div>
         </section>
@@ -618,42 +583,37 @@ export default function OnlineNEETCoachingPCBPage() {
                 Faculty + 12-year track record
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Cerebrum was founded in 2014 by Dr. Shekhar C Singh, an AIIMS
-                New Delhi alumnus, with one specific commitment: every
-                Cerebrum student gets the same quality of biology teaching
-                that pushed Dr. Shekhar himself into AIIMS. The result, over
-                12 years of cohorts:
+                Cerebrum was founded in 2014 by Dr. Shekhar C Singh, an AIIMS New Delhi alumnus,
+                with one specific commitment: every Cerebrum student gets the same quality of
+                biology teaching that pushed Dr. Shekhar himself into AIIMS. The result, over 12
+                years of cohorts:
               </p>
               <ul className="mt-6 space-y-3 text-sm text-slate-700">
                 <li className="flex gap-3">
                   <Award className="h-5 w-5 shrink-0 text-amber-500" />
                   <span>
-                    <strong>680+ medical college selections</strong>{' '}
-                    including AIIMS Delhi, JIPMER, AFMC, MAMC, LHMC and major
-                    state medical colleges
+                    <strong>680+ medical college selections</strong> including AIIMS Delhi, JIPMER,
+                    AFMC, MAMC, LHMC and major state medical colleges
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <Award className="h-5 w-5 shrink-0 text-amber-500" />
                   <span>
-                    <strong>67+ AIIMS Delhi selections</strong> personally
-                    mentored by Dr. Shekhar
+                    <strong>67+ AIIMS Delhi selections</strong> personally mentored by Dr. Shekhar
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <Award className="h-5 w-5 shrink-0 text-amber-500" />
                   <span>
-                    <strong>98% NEET-UG qualification rate</strong> sustained
-                    across cohorts since 2014
+                    <strong>98% NEET-UG qualification rate</strong> sustained across cohorts since
+                    2014
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <Award className="h-5 w-5 shrink-0 text-amber-500" />
                   <span>
-                    Multiple students with{' '}
-                    <strong>100 percentile in Biology</strong> — including
-                    Sadhna Sirin&rsquo;s 360/360 in NEET 2023 (testimonial
-                    below)
+                    Multiple students with <strong>100 percentile in Biology</strong> — including
+                    Sadhna Sirin&rsquo;s 360/360 in NEET 2023 (testimonial below)
                   </span>
                 </li>
               </ul>
@@ -664,9 +624,7 @@ export default function OnlineNEETCoachingPCBPage() {
                 Lead faculty
               </p>
               <h3 className="mt-2 text-2xl font-bold">Dr. Shekhar C Singh</h3>
-              <p className="mt-1 text-sm text-indigo-100">
-                Founder, AIIMS New Delhi alumnus
-              </p>
+              <p className="mt-1 text-sm text-indigo-100">Founder, AIIMS New Delhi alumnus</p>
               <ul className="mt-5 space-y-2 text-sm">
                 <li className="flex gap-2">
                   <Microscope className="h-4 w-4 mt-0.5 text-amber-300" />
@@ -682,8 +640,7 @@ export default function OnlineNEETCoachingPCBPage() {
                 </li>
                 <li className="flex gap-2">
                   <Microscope className="h-4 w-4 mt-0.5 text-amber-300" />
-                  Coaches Biology Olympiad (INBO, IBO, USABO, BBO, CBO, SBO)
-                  candidates
+                  Coaches Biology Olympiad (INBO, IBO, USABO, BBO, CBO, SBO) candidates
                 </li>
               </ul>
               <Link
@@ -707,20 +664,18 @@ export default function OnlineNEETCoachingPCBPage() {
                   100 percentile biology · NEET 2023
                 </span>
                 <h2 className="mt-4 text-2xl md:text-3xl font-bold text-slate-900">
-                  Sadhna scored 360/360 in biology. Online programme. Same
-                  faculty, same mechanism.
+                  Sadhna scored 360/360 in biology. Online programme. Same faculty, same mechanism.
                 </h2>
                 <figure className="mt-6 border-l-4 border-indigo-600 pl-5">
                   <blockquote className="text-lg italic text-slate-700 leading-relaxed">
-                    &ldquo;Dr. Shekhar Sir&rsquo;s conceptual approach made
-                    complex topics simple. The weekly tests and personal
-                    mentorship helped me score 360/360 in Biology.&rdquo;
+                    &ldquo;Dr. Shekhar Sir&rsquo;s conceptual approach made complex topics simple.
+                    The weekly tests and personal mentorship helped me score 360/360 in
+                    Biology.&rdquo;
                   </blockquote>
                   <figcaption className="mt-4 text-sm">
                     <p className="font-bold text-slate-900">Sadhna Sirin</p>
                     <p className="text-slate-600">
-                      Delhi-NCR Topper NEET 2023 · 695/720 · 100 percentile
-                      biology
+                      Delhi-NCR Topper NEET 2023 · 695/720 · 100 percentile biology
                     </p>
                   </figcaption>
                 </figure>
@@ -758,9 +713,7 @@ export default function OnlineNEETCoachingPCBPage() {
                     <span>{f.question}</span>
                     <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                    {f.answer}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{f.answer}</p>
                 </details>
               ))}
             </div>
@@ -775,11 +728,9 @@ export default function OnlineNEETCoachingPCBPage() {
               Ready to talk? Send a quick WhatsApp message.
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              Include your <strong>city / country</strong> and your{' '}
-              <strong>current class</strong> (Class 11, Class 12, or
-              Dropper). We respond within a few hours in your time zone with
-              live batch slots that fit your schedule and a free demo class
-              link.
+              Include your <strong>city / country</strong> and your <strong>current class</strong>{' '}
+              (Class 11, Class 12, or Dropper). We respond within a few hours in your time zone with
+              live batch slots that fit your schedule and a free demo class link.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a
@@ -800,8 +751,8 @@ export default function OnlineNEETCoachingPCBPage() {
               </a>
             </div>
             <p className="mt-6 text-xs text-slate-400">
-              India: +91 88264 44334 (call + WhatsApp) · International
-              callers can WhatsApp the same number free.
+              India: +91 88264 44334 (call + WhatsApp) · International callers can WhatsApp the same
+              number free.
             </p>
           </div>
         </section>

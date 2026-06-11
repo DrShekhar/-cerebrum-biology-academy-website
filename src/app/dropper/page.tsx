@@ -62,12 +62,6 @@ export default function DropperPage() {
         endDate: '2026-12-31',
         duration: 'P10M',
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        reviewCount: '38',
-        bestRating: '5',
-      },
     }
 
     const script = document.createElement('script')

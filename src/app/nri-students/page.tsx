@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching for NRI Students | 14 Countries | Online Classes',
-    description: 'Best NEET Biology coaching for NRI students in UAE, Saudi Arabia, Kuwait, Singapore, Qatar, Oman, Malaysia, Nepal & more. AIIMS faculty, flexible timings, NEET exam centers abroad. 98% success rate.',
+    description:
+      'Best NEET Biology coaching for NRI students in UAE, Saudi Arabia, Kuwait, Singapore, Qatar, Oman, Malaysia, Nepal & more. AIIMS faculty, flexible timings, NEET exam centers abroad. 98% success rate.',
   },
 }
 
@@ -105,13 +106,6 @@ const courseSchema = {
     price: '4800',
     priceValidUntil: '2026-12-31',
     url: 'https://cerebrumbiologyacademy.com/nri-students',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    ratingCount: '38',
-    bestRating: '5',
-    worstRating: '1',
   },
 }
 

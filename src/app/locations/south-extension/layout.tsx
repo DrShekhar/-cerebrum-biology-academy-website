@@ -33,13 +33,6 @@ function SouthExtensionServiceSchema() {
         closes: '23:59',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '47',
-      bestRating: '5',
-      worstRating: '1',
-    },
     areaServed: [
       'South Extension',
       'Lajpat Nagar',
@@ -113,7 +106,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching South Extension Delhi | Flagship Center',
-    description: 'Flagship NEET Biology coaching center in South Extension, Delhi. AIIMS faculty, small batches, 100m from South Extension Metro.',
+    description:
+      'Flagship NEET Biology coaching center in South Extension, Delhi. AIIMS faculty, small batches, 100m from South Extension Metro.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/south-extension',
@@ -125,13 +119,15 @@ function SouthExtensionEventSchema() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Upcoming NEET Biology Batches - South Extension Center',
-    description: 'Scheduled batch starts and demo classes at Cerebrum Biology Academy South Extension',
+    description:
+      'Scheduled batch starts and demo classes at Cerebrum Biology Academy South Extension',
     itemListElement: [
       {
         '@type': 'EducationEvent',
         position: 1,
         name: 'NEET Biology Class 12 Intensive Batch - South Extension',
-        description: 'Intensive NEET Biology preparation for Class 12 students at South Extension flagship center. Complete syllabus coverage with MCQ practice and weekly test series.',
+        description:
+          'Intensive NEET Biology preparation for Class 12 students at South Extension flagship center. Complete syllabus coverage with MCQ practice and weekly test series.',
         startDate: '2026-03-01',
         endDate: '2027-04-30',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -166,7 +162,8 @@ function SouthExtensionEventSchema() {
         '@type': 'EducationEvent',
         position: 2,
         name: 'NEET Biology Class 11 Foundation Batch - South Extension',
-        description: 'Early NEET preparation foundation batch for Class 11 students at South Extension. Build strong fundamentals with concept clarity and MCQ practice.',
+        description:
+          'Early NEET preparation foundation batch for Class 11 students at South Extension. Build strong fundamentals with concept clarity and MCQ practice.',
         startDate: '2026-04-01',
         endDate: '2027-03-31',
         eventStatus: 'https://schema.org/EventScheduled',
@@ -201,7 +198,8 @@ function SouthExtensionEventSchema() {
         '@type': 'EducationEvent',
         position: 3,
         name: 'Free NEET Biology Demo Class - South Extension',
-        description: 'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
+        description:
+          'Experience Cerebrum teaching methodology with a free demo class. Learn live Biology concepts from AIIMS faculty with interactive Q&A.',
         startDate: '2026-03-15',
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
@@ -297,21 +295,36 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
             ],
           }),
         }}
-      />      <script
+      />{' '}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
-              { '@type': 'ListItem', position: 3, name: 'South Extension', item: 'https://cerebrumbiologyacademy.com/locations/south-extension' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'South Extension',
+                item: 'https://cerebrumbiologyacademy.com/locations/south-extension',
+              },
             ],
-          })
+          }),
         }}
       />
-
       {children}
     </>
   )

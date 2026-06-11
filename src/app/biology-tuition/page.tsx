@@ -59,7 +59,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Biology Tuition | Best NEET & Board Biology Classes',
-    description: 'Looking for biology tuition? Cerebrum Biology Academy offers expert biology coaching for Class 9, 10, 11, 12, NEET & Board exams. AIIMS faculty, 98% success rate. Offline classes in Delhi NCR + Onl...',
+    description:
+      'Looking for biology tuition? Cerebrum Biology Academy offers expert biology coaching for Class 9, 10, 11, 12, NEET & Board exams. AIIMS faculty, 98% success rate. Offline classes in Delhi NCR + Onl...',
   },
 }
 
@@ -258,7 +259,11 @@ export default function BiologyTuitionPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tuition.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tuition.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -501,7 +506,11 @@ export default function BiologyTuitionPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tuition.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20tuition.%20Please%20share%20available%20timings."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="secondary"
                 size="xl"
@@ -565,13 +574,6 @@ export default function BiologyTuitionPage() {
                 addressCountry: 'IN',
               },
             ],
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '38',
-              bestRating: '5',
-              worstRating: '1',
-            },
             sameAs: [
               'https://www.facebook.com/cerebrumbiologyacademy',
               'https://www.instagram.com/cerebrumbiologyacademy',

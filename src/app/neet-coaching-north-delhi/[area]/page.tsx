@@ -212,13 +212,6 @@ export default async function NorthDelhiAreaPage({ params }: PageProps) {
       'https://www.youtube.com/@cerebrumbiologyacademy',
       'https://www.youtube.com/@drshekharcsingh',
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: CEREBRUM_METRICS.rating.toString(),
-      reviewCount: CEREBRUM_METRICS.reviewCount.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'NEET Biology Courses',
@@ -342,7 +335,11 @@ export default async function NorthDelhiAreaPage({ params }: PageProps) {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET North Delhi', 'NEET Biology North Delhi', 'Medical entrance coaching North Delhi']}
+        knowsAbout={[
+          'NEET North Delhi',
+          'NEET Biology North Delhi',
+          'Medical entrance coaching North Delhi',
+        ]}
       />
       <AreaPageContent area={area} areaSlug={areaSlug} />
 

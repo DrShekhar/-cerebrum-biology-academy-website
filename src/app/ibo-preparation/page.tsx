@@ -777,13 +777,6 @@ export default function IBOPreparationPage() {
             foundingDate: '2014',
             description:
               "Biology-only specialist coaching brand under AIIMS-trained Dr. Shekhar C Singh. IBO preparation is the apex of Cerebrum's olympiad pathway — students arrive via the national funnels (USABO → IBO USA, NSEB/INBO/OCSC → IBO India, BBO → IBO UK, CBO → IBO Canada, SBO → IBO Singapore, etc.) for advanced theory + practical training using Campbell, Alberts, and Lehninger as the canonical reference stack.",
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              reviewCount: '485',
-              bestRating: '5',
-              worstRating: '1',
-            },
           }),
         }}
       />

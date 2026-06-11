@@ -104,20 +104,22 @@ export default function CoursesPage() {
         endDate: '2026-12-31',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
   }
 
   return (
     <>
       {/* Course Schema - LD+JSON */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
       {/* Speakable Schema for Voice Search (AEO) */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(generateSpeakableWebPageSchema(speakablePages.courses)) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateSpeakableWebPageSchema(speakablePages.courses)),
+        }}
+      />
       {/* WebPage Schema with internal linking */}
       <CoursesPageWebPageSchema />
       {/* Breadcrumb Navigation + Schema */}

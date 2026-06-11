@@ -96,7 +96,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Coaching Near Botanical Garden Metro | Biology Classes Noida',
-    description: 'NEET Biology coaching near Botanical Garden Metro Station, Noida. ${metroData.studentCount} students enrolled from Sector 18, Sector 16, Amity area. Blue Line connectivity. Online & Offline. AIIMS ...',
+    description:
+      'NEET Biology coaching near Botanical Garden Metro Station, Noida. ${metroData.studentCount} students enrolled from Sector 18, Sector 16, Amity area. Blue Line connectivity. Online & Offline. AIIMS ...',
   },
 }
 
@@ -138,19 +139,18 @@ export default function NEETCoachingBotanicalGardenMetroPage() {
       '@type': 'Place',
       name: area,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '38',
-      bestRating: '5',
-    },
   }
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
       {
         '@type': 'ListItem',
         position: 2,
