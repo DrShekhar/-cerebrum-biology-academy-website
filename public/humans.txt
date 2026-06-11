@@ -53,9 +53,9 @@ Database: Serverless backend
 Analytics: Installed
 Performance: Optimized for mobile and desktop
 
-Languages: English, Hindi
-Target Audience: NEET aspirants, students, parents, educators
-Geographic Focus: India (Delhi NCR primary, Pan-India online reach)
+Languages: English (primary), Hindi (secondary for Indian-curriculum students)
+Target Audience: Students of any nationality preparing for biology exams — IB Biology HL/SL, AP Biology, A-Level, GCSE, IGCSE, USABO, BBO, IBO + 75+ national olympiads, MCAT, GAMSAT, USMLE, NEET. Plus parents and educators worldwide.
+Geographic Focus: Global online reach across 6 continents (Asia, North America, Europe, Oceania, Middle East, Africa); Delhi NCR primary for India physical centers; pan-India online for Indian curriculum
 
 /* CONTENT & RESOURCES */
 

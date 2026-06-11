@@ -18,9 +18,9 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
   title:
-    'Dr. Shekhar C Singh — Best Biology Teacher in India | NEET · IB · AP · CBSE · Olympiads',
+    'Dr. Shekhar C Singh — Global Biology Faculty | NEET · IB · AP · MCAT · IBO · USABO · BBO',
   description:
-    'Dr. Shekhar C Singh, AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014), is recognized as the top Biology faculty in India across NEET-UG, IB Biology HL/SL, AP Biology, CBSE Class 11-12, IBO, USABO, INBO, BBO, CBO, SBO, MCAT and USMLE Step 1 Biology. 15+ years pedagogy, 680+ medical college selections, 98% NEET qualification rate, IB HL 7/7 and AP score-5 outcomes across global cohorts.',
+    'Dr. Shekhar C Singh, AIIMS Delhi-trained biology faculty and founder of Cerebrum Biology Academy (2014). World-class faculty serving students of any nationality across IB Biology HL/SL, AP Biology, A-Level, IGCSE, MCAT Bio/Biochem, GAMSAT, USMLE Step 1 Biology, USABO, BBO, IBO (75+ national olympiad routes), NEET-UG. 15+ years pedagogy, IB HL 7/7 + AP score-5 outcomes worldwide, 680+ medical college selections, 98% NEET qualification rate.',
   keywords: [
     'best biology teacher in india',
     'top biology teacher india',
