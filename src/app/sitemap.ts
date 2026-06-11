@@ -24,48 +24,66 @@ import { successStoriesData } from '@/data/successStories'
 import { mockTests } from '@/data/mockTests'
 // localAreas import removed — [localSlug] pages now redirect to city hubs
 import collegesData from '@/data/colleges.json'
-import {
-  seoPageConsolidationRedirects,
-  neetCoachingLocationRedirects,
-  localAreaPageRedirects,
-  gsc404CleanupRedirects,
-  thinPageConsolidationRedirects,
-  gsc404CleanupBatch3Redirects,
-  hubPageConsolidationRedirects,
-  cannibalizationConsolidationRedirects,
-  areaConsolidationRedirects,
-  gurugramConsolidationRedirects,
-  noidaConsolidationRedirects,
-  faridabadConsolidationRedirects,
-  ghaziabadConsolidationRedirects,
-  rohiniConsolidationRedirects,
-  localPageConsolidationBatch2,
-  areaPageConsolidationRedirects,
-} from '@/config/seo-redirects.mjs'
+import fs from 'fs'
+import path from 'path'
+import * as redirectModule from '@/config/seo-redirects.mjs'
 
-const allRedirectSources = [
-  ...seoPageConsolidationRedirects,
-  ...neetCoachingLocationRedirects,
-  ...localAreaPageRedirects,
-  ...gsc404CleanupRedirects,
-  ...thinPageConsolidationRedirects,
-  ...gsc404CleanupBatch3Redirects,
-  ...hubPageConsolidationRedirects,
-  ...cannibalizationConsolidationRedirects,
-  ...areaConsolidationRedirects,
-  ...gurugramConsolidationRedirects,
-  ...noidaConsolidationRedirects,
-  ...faridabadConsolidationRedirects,
-  ...ghaziabadConsolidationRedirects,
-  ...rohiniConsolidationRedirects,
-  ...localPageConsolidationBatch2,
-  ...areaPageConsolidationRedirects,
-].map((r: { source: string }) => r.source)
+// Collect EVERY exported redirect array dynamically so this filter can never
+// go stale when a new array is added to seo-redirects.mjs (a hardcoded list
+// here previously missed 7 of the 23 arrays next.config.mjs applies, putting
+// ~50 redirecting URLs into the sitemap).
+const seoRedirectSources = (Object.values(redirectModule) as unknown[])
+  .filter((v): v is Array<{ source: string }> => Array.isArray(v))
+  .flat()
+  .map((r) => r.source)
+
+// Also extract the inline redirect sources defined directly in
+// next.config.mjs (blog-post redirects, /services, /locations/mumbai, ...).
+// Reading the file at build time keeps the two in sync automatically.
+function readNextConfigRedirectSources(): string[] {
+  try {
+    const text = fs.readFileSync(path.join(process.cwd(), 'next.config.mjs'), 'utf8')
+    // Slice strictly to the redirects() body — headers() further down declares
+    // catch-all sources like '/:path*' that would otherwise match every URL
+    // and empty the whole sitemap.
+    const start = text.indexOf('async redirects()')
+    const end = text.indexOf('async headers()')
+    if (start === -1 || end === -1 || end <= start) return []
+    return Array.from(text.slice(start, end).matchAll(/source:\s*'([^']+)'/g)).map((m) => m[1])
+  } catch {
+    return []
+  }
+}
+
+const allRedirectSources = [...seoRedirectSources, ...readNextConfigRedirectSources()]
 
 const exactRedirects = new Set(allRedirectSources.filter((s) => !s.includes(':')))
-const wildcardPrefixes = allRedirectSources
+// Convert path-to-regexp style wildcard sources to RegExps. The previous
+// prefix-only logic assumed params always follow a '/', silently missing
+// patterns like '/neet-coaching-fees-:slug' (dash-param) — which let 47
+// redirecting fees URLs into the sitemap.
+const wildcardRegexes = allRedirectSources
   .filter((s) => s.includes(':'))
-  .map((s) => s.replace(/\/:[^/]+\*?$/, ''))
+  .map(
+    (s) =>
+      new RegExp(
+        '^' +
+          s
+            .replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+            .replace(/\\:[A-Za-z0-9_]+\\\*/g, '(?:.*)?')
+            .replace(/:[A-Za-z0-9_]+\+/g, '.+')
+            .replace(/:[A-Za-z0-9_]+\*/g, '.*')
+            .replace(/:[A-Za-z0-9_]+/g, '[^/]+') +
+          '$'
+      )
+  )
+
+// A sitemap must only list URLs that return 200. For hand-maintained slug
+// arrays that have drifted from the filesystem (batch-4 city loop emitted 3
+// URLs with no page), verify the route directory actually exists at build.
+function pageExists(slug: string): boolean {
+  return fs.existsSync(path.join(process.cwd(), 'src', 'app', slug, 'page.tsx'))
+}
 
 // Inline redirect patterns from next.config.mjs that aren't in seo-redirects.mjs
 const inlineRedirectPatterns: RegExp[] = [
@@ -110,10 +128,10 @@ const inlineRedirectPatterns: RegExp[] = [
   /^\/locations\/[^/]+\/[^/]+$/,
 ]
 
-function isRedirectedPath(path: string): boolean {
-  if (exactRedirects.has(path)) return true
-  if (wildcardPrefixes.some((prefix) => path.startsWith(prefix + '/'))) return true
-  return inlineRedirectPatterns.some((pattern) => pattern.test(path))
+function isRedirectedPath(urlPath: string): boolean {
+  if (exactRedirects.has(urlPath)) return true
+  if (wildcardRegexes.some((re) => re.test(urlPath))) return true
+  return inlineRedirectPatterns.some((pattern) => pattern.test(urlPath))
 }
 
 /**
@@ -5273,6 +5291,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Primary demo money page — was missing while the sitemap listed
+    // /book-demo, which 301s here.
+    {
+      url: `${baseUrl}/book-free-demo`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
     // neet-dropper-crash-course-2025 → redirects to /neet-crash-course
     // ===== City-specific dropper batch pages (Apr 2026 expansion) =====
     {
@@ -6012,12 +6038,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'pune',
         'delhi',
         'ahmedabad',
-      ].flatMap((c) => [
-        `neet-dropper-batch-${c}`,
-        `online-neet-coaching-${c}`,
-        `neet-coaching-fees-${c}`,
-        `neet-coaching-near-me-${c}`,
-      ]),
+      ].flatMap((c) =>
+        [
+          `neet-dropper-batch-${c}`,
+          `online-neet-coaching-${c}`,
+          `neet-coaching-fees-${c}`,
+          `neet-coaching-near-me-${c}`,
+        ].filter(pageExists)
+      ),
       // Foundation pages for Kerala + new cities
       ...[
         'kochi',
@@ -6028,7 +6056,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'mangalore',
         'mysore',
         'madurai',
-      ].flatMap((c) => [`neet-foundation-class-9-${c}`, `neet-foundation-class-10-${c}`]),
+      ]
+        .flatMap((c) => [`neet-foundation-class-9-${c}`, `neet-foundation-class-10-${c}`])
+        .filter(pageExists),
+      // May 2026 city builds that were missing from the sitemap entirely —
+      // the batch-4 loop above covers different cities than were built.
+      ...[
+        ...[
+          'bhopal',
+          'chandigarh',
+          'coimbatore',
+          'jaipur',
+          'kochi',
+          'lucknow',
+          'mangalore',
+          'patna',
+          'surat',
+          'visakhapatnam',
+        ].map((c) => `nseb-coaching-${c}`),
+        ...[
+          'bhopal',
+          'chandigarh',
+          'coimbatore',
+          'indore',
+          'jaipur',
+          'kota',
+          'lucknow',
+          'patna',
+          'surat',
+        ].flatMap((c) => [`neet-coaching-near-me-${c}`, `online-neet-coaching-${c}`]),
+        ...['chandigarh', 'kota'].flatMap((c) => [
+          `neet-foundation-class-9-${c}`,
+          `neet-foundation-class-10-${c}`,
+        ]),
+        'neet-dropper-batch-chandigarh',
+      ].filter(pageExists),
     ].map((slug) => ({
       url: `${baseUrl}/${slug}`,
       lastModified: lastUpdated,
@@ -7925,7 +7987,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localityRoutes,
     ...definitionRoutes,
     ...categoryRoutes,
-    ...tagRoutes,
+    // tagRoutes removed 2026-06-11: /blog/tag/* pages are noindexed
+    // (blog/tag/[slug]/page.tsx sets robots index:false) — submitting them
+    // produced 67 "Submitted URL marked noindex" errors in GSC.
     ...stateRoutes,
     ...compareRoutes,
     // localAreaRoutes removed — redirected to parent city hubs
