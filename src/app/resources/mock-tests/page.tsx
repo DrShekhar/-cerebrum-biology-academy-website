@@ -673,7 +673,7 @@ export default function MockTestsPage() {
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/resources/mock-tests/neet-mock-1"
+              href="/mock-tests"
               className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-purple-600 transition-all hover:bg-gray-100"
             >
               <Play className="h-5 w-5" />

@@ -25,16 +25,17 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'NEET Dropper Batch 2026-27 in Gurugram | Intensive Repeater Course',
     description: 'Intensive 1-year NEET preparation for droppers and repeaters in Gurugram.',
-    url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram',
+    url: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2025-26-gurugram',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2025-26-gurugram',
   },
 
   twitter: {
     card: 'summary_large_image' as const,
     title: 'NEET Dropper Batch 2026-27 in Gurugram | Repeater Course',
-    description: 'Join NEET Dropper Batch 2026-27 in Gurugram (Gurgaon). Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
+    description:
+      'Join NEET Dropper Batch 2026-27 in Gurugram (Gurgaon). Intensive 1-year program for NEET repeaters. Previous attempt analysis, personalized strategy, expert faculty at Sector 51.',
   },
 }
 
@@ -130,7 +131,7 @@ export default function NEETDropperBatch2025GurugramPage() {
         '@type': 'ListItem',
         position: 3,
         name: 'Dropper Batch 2026-27',
-        item: 'https://cerebrumbiologyacademy.com/neet-dropper-batch-2026-27-gurugram',
+        item: 'https://cerebrumbiologyacademy.com/one-year-dropper-course-gurugram',
       },
     ],
   }
@@ -138,7 +139,11 @@ export default function NEETDropperBatch2025GurugramPage() {
   return (
     <>
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema
         spelling="gurugram"

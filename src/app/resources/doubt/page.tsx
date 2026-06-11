@@ -70,7 +70,7 @@ const doubtChannels = [
     response: 'Real-time',
     features: ['Screen sharing', 'Interactive Q&A', 'Recorded sessions'],
     cta: 'View Schedule',
-    href: '/demo-booking',
+    href: '/book-free-demo',
     highlight: false,
   },
   {
@@ -80,7 +80,7 @@ const doubtChannels = [
     response: 'Instant',
     features: ['24/7 available', 'NCERT aligned', 'Practice questions'],
     cta: 'Ask AI',
-    href: '/ai-tutor',
+    href: '/ceri-ai-demo',
     highlight: false,
   },
 ]

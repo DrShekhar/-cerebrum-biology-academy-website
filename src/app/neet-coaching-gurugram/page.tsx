@@ -194,7 +194,7 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-  alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+    alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
     description: 'Real-time teaching with instant doubt resolution - no more Delhi travel needed',
   },
   {
@@ -1616,7 +1616,7 @@ export default function NeetCoachingGurugramPage() {
               <p className="text-sm text-gray-600">Notes, MCQs, tests</p>
             </Link>
             <Link
-              href="/neet-dropper-batch-2026-27-gurugram"
+              href="/one-year-dropper-course-gurugram"
               className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow"
             >
               <h3 className="font-semibold text-teal-600">Dropper Batch 2026-27</h3>
@@ -1772,22 +1772,39 @@ export default function NeetCoachingGurugramPage() {
       {/* Cross-Vertical Links — connect NEET Gurugram to IB/Olympiad/Foundation */}
       <section className="py-12 bg-white border-t border-slate-200">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Beyond NEET — Other Biology Programmes in Gurugram</h2>
-          <p className="text-slate-600 mb-6">Cerebrum also serves IB Biology, Biology Olympiad, and Foundation students in the Gurugram area.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">
+            Beyond NEET — Other Biology Programmes in Gurugram
+          </h2>
+          <p className="text-slate-600 mb-6">
+            Cerebrum also serves IB Biology, Biology Olympiad, and Foundation students in the
+            Gurugram area.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Link href="/ib-biology/gurugram" className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition">
+            <Link
+              href="/ib-biology/gurugram"
+              className="block p-4 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow transition"
+            >
               <p className="font-semibold text-slate-900">IB Biology Tutor Gurugram</p>
               <p className="text-sm text-slate-500">HL & SL, 2025 syllabus, IA coaching</p>
             </Link>
-            <Link href="/biology-olympiad-coaching-gurugram" className="block p-4 rounded-xl border border-slate-200 hover:border-amber-400 hover:shadow transition">
+            <Link
+              href="/biology-olympiad-coaching-gurugram"
+              className="block p-4 rounded-xl border border-slate-200 hover:border-amber-400 hover:shadow transition"
+            >
               <p className="font-semibold text-slate-900">Biology Olympiad Gurugram</p>
               <p className="text-sm text-slate-500">NSEB → INBO → IBO pathway</p>
             </Link>
-            <Link href="/neet-foundation-class-9-gurugram" className="block p-4 rounded-xl border border-slate-200 hover:border-green-400 hover:shadow transition">
+            <Link
+              href="/neet-foundation-class-9-gurugram"
+              className="block p-4 rounded-xl border border-slate-200 hover:border-green-400 hover:shadow transition"
+            >
               <p className="font-semibold text-slate-900">NEET Foundation Class 9</p>
               <p className="text-sm text-slate-500">Early start for Gurugram students</p>
             </Link>
-            <Link href="/neet-foundation-class-10-gurugram" className="block p-4 rounded-xl border border-slate-200 hover:border-green-400 hover:shadow transition">
+            <Link
+              href="/neet-foundation-class-10-gurugram"
+              className="block p-4 rounded-xl border border-slate-200 hover:border-green-400 hover:shadow transition"
+            >
               <p className="font-semibold text-slate-900">NEET Foundation Class 10</p>
               <p className="text-sm text-slate-500">Board + NEET integrated track</p>
             </Link>

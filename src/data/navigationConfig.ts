@@ -577,7 +577,7 @@ export const navigationConfig: NavigationSection[] = [
       {
         id: 'doubt-resolution',
         title: 'Doubt Resolution',
-        href: '/services/doubt-resolution',
+        href: '/contact',
         description: '24/7 doubt clearing and academic support',
         keywords: ['doubt clearing', 'support', 'help', 'academic assistance'],
       },
@@ -847,7 +847,7 @@ export const searchableContent = [
   {
     id: 'intensive-neet-biology',
     title: 'Intensive NEET Biology Course',
-    href: '/courses/intensive-neet-biology',
+    href: '/courses',
     description: 'Premium intensive course for serious NEET aspirants',
     category: 'Courses',
     keywords: ['intensive', 'premium', 'neet biology', 'exclusive', 'high-ticket'],

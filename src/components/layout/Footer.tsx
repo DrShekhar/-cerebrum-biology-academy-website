@@ -174,7 +174,7 @@ export const Footer = memo(function Footer() {
       href: '/what-to-do-after-neet-2026-cancellation',
     },
     { name: 'RE-NEET 2026 Syllabus & Difficulty', href: '/re-neet-2026-syllabus-difficulty' },
-    { name: 'RE-NEET Coaching in Delhi', href: '/re-neet-2026-delhi' },
+    { name: 'RE-NEET 2026 Coaching', href: '/re-neet-2026' },
   ]
 
   const phraseLinks = [

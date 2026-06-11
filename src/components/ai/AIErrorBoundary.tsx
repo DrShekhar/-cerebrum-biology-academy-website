@@ -133,7 +133,7 @@ Please help resolve this AI system issue.
 
   private handleFallbackChat = () => {
     // Redirect to alternative support or contact method
-    window.location.href = '/support/contact'
+    window.location.href = '/contact'
   }
 
   componentWillUnmount() {
@@ -151,9 +151,7 @@ Please help resolve this AI system issue.
 
       // Default error UI
       return (
-        <div
-          className="flex flex-col items-center justify-center p-6 bg-red-50 border-2 border-red-200 rounded-xl max-w-md mx-auto animate-fadeInUp"
-        >
+        <div className="flex flex-col items-center justify-center p-6 bg-red-50 border-2 border-red-200 rounded-xl max-w-md mx-auto animate-fadeInUp">
           <div className="animate-fadeInUp">
             <AlertTriangle className="w-16 h-16 text-red-500 mb-4" />
           </div>
@@ -167,9 +165,7 @@ Please help resolve this AI system issue.
           </p>
 
           {this.props.showDebugInfo && this.state.error && (
-            <details
-              className="w-full mb-4 p-3 bg-red-100 rounded border text-xs"
-            >
+            <details className="w-full mb-4 p-3 bg-red-100 rounded border text-xs">
               <summary className="cursor-pointer font-medium text-red-700">
                 Technical Details (Click to expand)
               </summary>

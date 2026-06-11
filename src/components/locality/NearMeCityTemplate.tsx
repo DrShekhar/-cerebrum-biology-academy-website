@@ -31,9 +31,22 @@ import {
   Users,
 } from 'lucide-react'
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
+import { INDIAN_STATES } from '@/components/seo/StateSchema'
 import type { NearMeCityData } from '@/data/locality-content/near-me-cities'
 
 const SITE_URL = 'https://cerebrumbiologyacademy.com'
+
+// Only 6 states have live /states/{slug} pages (dynamicParams=false elsewhere
+// 404s). The old breadcrumb linked /neet-coaching-{state} which existed for
+// zero states — a broken crumb on every page using this template.
+function stateBreadcrumbHref(stateName: string): string | null {
+  const slug = stateName
+    .toLowerCase()
+    .replace(/\s*\(ut\)\s*/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+  return slug in INDIAN_STATES ? `/states/${slug}` : null
+}
 
 interface Props {
   city: NearMeCityData
@@ -53,7 +66,9 @@ export function NearMeCityTemplate({ city }: Props) {
         '@type': 'ListItem',
         position: 2,
         name: `NEET Coaching ${city.state}`,
-        item: `${SITE_URL}/neet-coaching-${city.state.toLowerCase().replace(/\s+/g, '-')}`,
+        item: stateBreadcrumbHref(city.state)
+          ? `${SITE_URL}${stateBreadcrumbHref(city.state)}`
+          : `${SITE_URL}/neet-coaching`,
       },
       {
         '@type': 'ListItem',
@@ -116,10 +131,7 @@ export function NearMeCityTemplate({ city }: Props) {
       />
 
       {/* Breadcrumb */}
-      <nav
-        aria-label="Breadcrumb"
-        className="mx-auto max-w-6xl px-4 pt-6 text-sm text-slate-500"
-      >
+      <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-6 text-sm text-slate-500">
         <ol className="flex flex-wrap items-center gap-1">
           <li>
             <Link href="/" className="hover:text-indigo-700 flex items-center gap-1">
@@ -128,17 +140,16 @@ export function NearMeCityTemplate({ city }: Props) {
           </li>
           <ChevronRight className="h-3.5 w-3.5" />
           <li>
-            <Link
-              href={`/neet-coaching-${city.state.toLowerCase().replace(/\s+/g, '-')}`}
-              className="hover:text-indigo-700"
-            >
-              NEET Coaching {city.state}
-            </Link>
+            {stateBreadcrumbHref(city.state) ? (
+              <Link href={stateBreadcrumbHref(city.state)!} className="hover:text-indigo-700">
+                NEET Coaching {city.state}
+              </Link>
+            ) : (
+              <span>NEET Coaching {city.state}</span>
+            )}
           </li>
           <ChevronRight className="h-3.5 w-3.5" />
-          <li className="text-slate-700">
-            NEET Coaching Near Me in {city.displayName}
-          </li>
+          <li className="text-slate-700">NEET Coaching Near Me in {city.displayName}</li>
         </ol>
       </nav>
 
@@ -152,9 +163,7 @@ export function NearMeCityTemplate({ city }: Props) {
             </span>
             <h1 className="mt-4 text-3xl md:text-5xl font-bold leading-tight text-slate-900">
               NEET coaching near me in {city.displayName} —{' '}
-              <span className="text-indigo-700">
-                biology specialist, online, no commute.
-              </span>
+              <span className="text-indigo-700">biology specialist, online, no commute.</span>
             </h1>
             <p className="mt-4 text-lg text-slate-600 leading-relaxed">
               For {city.displayName} NEET aspirants targeting{' '}
@@ -162,12 +171,15 @@ export function NearMeCityTemplate({ city }: Props) {
               {city.otherStateMedicalColleges?.length
                 ? `, ${city.otherStateMedicalColleges[0]}`
                 : ''}{' '}
-              or AIIMS via all-India quota. Cerebrum is India&rsquo;s biology-only
-              specialist — we don&rsquo;t teach physics or chemistry, but biology
-              is half of NEET (360/720 marks) and the subject most aspirants lose
-              the most marks on. Pair us with your existing{' '}
-              {city.localCoachingPresence.split(',')[0].trim().replace(/\(.*\)/, '').trim()} (or
-              any local PCM source) and we handle the biology specialization.
+              or AIIMS via all-India quota. Cerebrum is India&rsquo;s biology-only specialist — we
+              don&rsquo;t teach physics or chemistry, but biology is half of NEET (360/720 marks)
+              and the subject most aspirants lose the most marks on. Pair us with your existing{' '}
+              {city.localCoachingPresence
+                .split(',')[0]
+                .trim()
+                .replace(/\(.*\)/, '')
+                .trim()}{' '}
+              (or any local PCM source) and we handle the biology specialization.
             </p>
 
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -189,8 +201,8 @@ export function NearMeCityTemplate({ city }: Props) {
               </a>
             </div>
             <p className="mt-3 text-sm text-slate-500">
-              Free 60-min trial class with Dr. Shekhar. Live online via Zoom from
-              anywhere in {city.displayName}.
+              Free 60-min trial class with Dr. Shekhar. Live online via Zoom from anywhere in{' '}
+              {city.displayName}.
             </p>
           </div>
 
@@ -211,9 +223,7 @@ export function NearMeCityTemplate({ city }: Props) {
                 {city.metroPopulationMn ? (
                   <div className="flex justify-between border-b border-slate-100 pb-2">
                     <dt className="text-slate-600">Metro population</dt>
-                    <dd className="font-semibold text-slate-900">
-                      ~{city.metroPopulationMn}M
-                    </dd>
+                    <dd className="font-semibold text-slate-900">~{city.metroPopulationMn}M</dd>
                   </div>
                 ) : null}
                 <div className="flex justify-between border-b border-slate-100 pb-2">
@@ -247,8 +257,7 @@ export function NearMeCityTemplate({ city }: Props) {
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-white p-5">
               <div className="flex items-center gap-2 text-sm font-semibold text-indigo-700">
-                <School className="h-4 w-4" /> Major NEET-feeder schools in{' '}
-                {city.displayName}
+                <School className="h-4 w-4" /> Major NEET-feeder schools in {city.displayName}
               </div>
               <ul className="mt-3 space-y-2 text-sm text-slate-700">
                 {city.feederSchools.map((s) => (
@@ -282,9 +291,7 @@ export function NearMeCityTemplate({ city }: Props) {
         <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
           Why online NEET biology coaching works for {city.displayName}
         </h2>
-        <p className="mt-5 text-base text-slate-700 leading-relaxed">
-          {city.whyOnlineHere}
-        </p>
+        <p className="mt-5 text-base text-slate-700 leading-relaxed">{city.whyOnlineHere}</p>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <div className="rounded-xl border border-slate-200 p-5">
@@ -293,9 +300,8 @@ export function NearMeCityTemplate({ city }: Props) {
               AIIMS-trained faculty, no relocation
             </h3>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-              Dr. Shekhar C Singh (AIIMS New Delhi alumnus) leads curriculum;{' '}
-              {city.displayName} students get the same faculty as our Delhi NCR
-              offline centres, taught live via Zoom.
+              Dr. Shekhar C Singh (AIIMS New Delhi alumnus) leads curriculum; {city.displayName}{' '}
+              students get the same faculty as our Delhi NCR offline centres, taught live via Zoom.
             </p>
           </div>
           <div className="rounded-xl border border-slate-200 p-5">
@@ -304,9 +310,8 @@ export function NearMeCityTemplate({ city }: Props) {
               Small-batch model (10-40 students)
             </h3>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-              Local Allen / Aakash {city.displayName} batches are 150-200
-              students. We run weekly per-MCQ review on every wrong answer —
-              impossible at lecture-hall scale.
+              Local Allen / Aakash {city.displayName} batches are 150-200 students. We run weekly
+              per-MCQ review on every wrong answer — impossible at lecture-hall scale.
             </p>
           </div>
           <div className="rounded-xl border border-slate-200 p-5">
@@ -315,8 +320,8 @@ export function NearMeCityTemplate({ city }: Props) {
               Material shipped to {city.displayName}
             </h3>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-              NCERT-line-by-line biology guide + 12,000-MCQ test bank shipped
-              to your {city.displayName} address. Tracked courier.
+              NCERT-line-by-line biology guide + 12,000-MCQ test bank shipped to your{' '}
+              {city.displayName} address. Tracked courier.
             </p>
           </div>
         </div>
@@ -329,31 +334,27 @@ export function NearMeCityTemplate({ city }: Props) {
             Target medical colleges for {city.displayName} aspirants
           </h2>
           <p className="mt-3 text-slate-700">
-            {city.state} domicile gives state-quota access (85% reservation) to
-            these government medical colleges:
+            {city.state} domicile gives state-quota access (85% reservation) to these government
+            medical colleges:
           </p>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <div className="rounded-xl bg-white p-5 ring-1 ring-slate-200">
               <Stethoscope className="h-6 w-6 text-indigo-700" />
-              <h3 className="mt-3 text-base font-bold text-slate-900">
-                {city.stateQuotaCollege}
-              </h3>
+              <h3 className="mt-3 text-base font-bold text-slate-900">{city.stateQuotaCollege}</h3>
               <p className="mt-2 text-xs text-slate-500 uppercase tracking-wide">
                 Primary state-quota target
               </p>
               <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                The aspirational college for {city.displayName} NEET
-                candidates with {city.state} domicile. Recent biology cut-offs
-                typically 310-340/360 for general category via state quota.
+                The aspirational college for {city.displayName} NEET candidates with {city.state}{' '}
+                domicile. Recent biology cut-offs typically 310-340/360 for general category via
+                state quota.
               </p>
             </div>
             {city.otherStateMedicalColleges?.length ? (
               <div className="rounded-xl bg-white p-5 ring-1 ring-slate-200">
                 <Award className="h-6 w-6 text-amber-600" />
-                <h3 className="mt-3 text-base font-bold text-slate-900">
-                  Also achievable
-                </h3>
+                <h3 className="mt-3 text-base font-bold text-slate-900">Also achievable</h3>
                 <ul className="mt-3 space-y-2 text-sm text-slate-700">
                   {city.otherStateMedicalColleges.map((c) => (
                     <li key={c} className="flex gap-2">
@@ -400,9 +401,7 @@ export function NearMeCityTemplate({ city }: Props) {
                 <td className="px-4 py-3 text-slate-700">
                   Biology only (your PCM stays with current coaching)
                 </td>
-                <td className="px-4 py-3 text-slate-700">
-                  All three (P, C, B together)
-                </td>
+                <td className="px-4 py-3 text-slate-700">All three (P, C, B together)</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium text-slate-900">Batch size</td>
@@ -410,43 +409,28 @@ export function NearMeCityTemplate({ city }: Props) {
                 <td className="px-4 py-3 text-slate-700">100-200 students</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-medium text-slate-900">
-                  Faculty depth
-                </td>
+                <td className="px-4 py-3 font-medium text-slate-900">Faculty depth</td>
                 <td className="px-4 py-3 text-slate-700">
                   AIIMS-trained, biology-only career focus
                 </td>
-                <td className="px-4 py-3 text-slate-700">
-                  Generalist NEET faculty
-                </td>
+                <td className="px-4 py-3 text-slate-700">Generalist NEET faculty</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-medium text-slate-900">
-                  Per-MCQ review
-                </td>
-                <td className="px-4 py-3 text-slate-700">
-                  Every wrong answer reviewed weekly
-                </td>
-                <td className="px-4 py-3 text-slate-700">
-                  Lecture-format, no per-student review
-                </td>
+                <td className="px-4 py-3 font-medium text-slate-900">Per-MCQ review</td>
+                <td className="px-4 py-3 text-slate-700">Every wrong answer reviewed weekly</td>
+                <td className="px-4 py-3 text-slate-700">Lecture-format, no per-student review</td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium text-slate-900">Commute</td>
                 <td className="px-4 py-3 text-slate-700">
                   Zero — live on Zoom from anywhere in {city.displayName}
                 </td>
-                <td className="px-4 py-3 text-slate-700">
-                  30-90 min depending on neighbourhood
-                </td>
+                <td className="px-4 py-3 text-slate-700">30-90 min depending on neighbourhood</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 font-medium text-slate-900">
-                  Material
-                </td>
+                <td className="px-4 py-3 font-medium text-slate-900">Material</td>
                 <td className="px-4 py-3 text-slate-700">
-                  NCERT-line-by-line guide + 12,000 MCQs (shipped to{' '}
-                  {city.displayName})
+                  NCERT-line-by-line guide + 12,000 MCQs (shipped to {city.displayName})
                 </td>
                 <td className="px-4 py-3 text-slate-700">
                   Centre-issued material, pickup required
@@ -457,10 +441,14 @@ export function NearMeCityTemplate({ city }: Props) {
         </div>
 
         <p className="mt-4 text-xs text-slate-500">
-          Honest framing: we don&rsquo;t replace your local PCM coaching, we add
-          biology specialisation on top. Most students keep their{' '}
-          {city.localCoachingPresence.split(',')[0].trim().replace(/\(.*\)/, '').trim()} for
-          physics + chemistry and add Cerebrum for biology only.
+          Honest framing: we don&rsquo;t replace your local PCM coaching, we add biology
+          specialisation on top. Most students keep their{' '}
+          {city.localCoachingPresence
+            .split(',')[0]
+            .trim()
+            .replace(/\(.*\)/, '')
+            .trim()}{' '}
+          for physics + chemistry and add Cerebrum for biology only.
         </p>
       </section>
 
@@ -476,9 +464,8 @@ export function NearMeCityTemplate({ city }: Props) {
           </h2>
           <figure className="mt-6 border-l-4 border-indigo-600 pl-5 max-w-3xl">
             <blockquote className="text-lg italic text-slate-700 leading-relaxed">
-              &ldquo;Dr. Shekhar Sir&rsquo;s conceptual approach made complex
-              topics simple. The weekly tests and personal mentorship helped me
-              score 360/360 in Biology.&rdquo;
+              &ldquo;Dr. Shekhar Sir&rsquo;s conceptual approach made complex topics simple. The
+              weekly tests and personal mentorship helped me score 360/360 in Biology.&rdquo;
             </blockquote>
             <figcaption className="mt-4 text-sm">
               <p className="font-bold text-slate-900">Sadhna Sirin</p>
@@ -496,8 +483,8 @@ export function NearMeCityTemplate({ city }: Props) {
             </figcaption>
           </figure>
           <p className="mt-6 text-sm text-slate-600">
-            The same model — small batch, weekly tests, per-MCQ review — runs in
-            the live online programme that {city.displayName} students join.
+            The same model — small batch, weekly tests, per-MCQ review — runs in the live online
+            programme that {city.displayName} students join.
           </p>
         </div>
       </section>
@@ -515,9 +502,7 @@ export function NearMeCityTemplate({ city }: Props) {
                   <span>{f.question}</span>
                   <ChevronRight className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" />
                 </summary>
-                <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                  {f.answer}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-700">{f.answer}</p>
               </details>
             ))}
           </div>
@@ -534,9 +519,8 @@ export function NearMeCityTemplate({ city }: Props) {
           <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
             Send a WhatsApp message with your <strong>school</strong>,{' '}
             <strong>current class</strong>, and (if available) your latest{' '}
-            <strong>NEET 2025 or 2026 score</strong>. We respond within a few
-            hours with batch slots that fit your {city.displayName} schedule and
-            a free demo class with Dr. Shekhar.
+            <strong>NEET 2025 or 2026 score</strong>. We respond within a few hours with batch slots
+            that fit your {city.displayName} schedule and a free demo class with Dr. Shekhar.
           </p>
           <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
             <a
@@ -557,8 +541,8 @@ export function NearMeCityTemplate({ city }: Props) {
             </a>
           </div>
           <p className="mt-5 text-xs text-slate-400">
-            Free demo class · Dr. Shekhar C Singh, AIIMS New Delhi alumnus,
-            founder Cerebrum Biology Academy
+            Free demo class · Dr. Shekhar C Singh, AIIMS New Delhi alumnus, founder Cerebrum Biology
+            Academy
           </p>
         </div>
       </section>

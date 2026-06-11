@@ -102,9 +102,9 @@ export function TopSBOContent() {
       whatsappCampaign="top-sbo-singapore"
       faqs={faqs}
       relatedLinks={[
-        { label: 'Best SBO Coach', href: '/best-sbo-coach' },
+        { label: 'Best SBO Coach', href: '/sbo-coaching' },
         { label: 'Top IBO Coaching', href: '/top-ibo-coaching' },
-        { label: 'IB Biology Tutor Singapore', href: '/ib-biology-tutor-singapore' },
+        { label: 'IB Biology Tutor Singapore', href: '/ib-biology/singapore' },
         { label: 'NEET Coaching Singapore', href: '/neet-coaching-singapore' },
         { label: 'Top IB Biology Coaching Global', href: '/top-ib-biology-coaching-global' },
         { label: 'Dr. Shekhar — Biology Faculty', href: '/dr-shekhar-singh-biology-faculty-india' },

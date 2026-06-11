@@ -1,17 +1,11 @@
 import Link from 'next/link'
-import {
-  Trophy,
-  BookOpen,
-  GraduationCap,
-  School,
-  Award,
-  ClipboardList,
-} from 'lucide-react'
+import { Trophy, BookOpen, GraduationCap, School, Award, ClipboardList } from 'lucide-react'
 
 const courseOfferings = [
   {
     title: 'NEET Biology',
-    description: 'Comprehensive NEET Biology preparation with AIIMS faculty. 98% success rate, 67+ AIIMS selections.',
+    description:
+      'Comprehensive NEET Biology preparation with AIIMS faculty. 98% success rate, 67+ AIIMS selections.',
     icon: Trophy,
     color: 'bg-green-50 border-green-200 text-green-800',
     iconColor: 'text-green-600',
@@ -20,7 +14,8 @@ const courseOfferings = [
   },
   {
     title: 'Board & CBSE Biology',
-    description: 'Ace your Class 11 & 12 Board exams with deep NCERT mastery. Our students average 95%+ in Biology boards.',
+    description:
+      'Ace your Class 11 & 12 Board exams with deep NCERT mastery. Our students average 95%+ in Biology boards.',
     icon: BookOpen,
     color: 'bg-blue-50 border-blue-200 text-blue-800',
     iconColor: 'text-blue-600',
@@ -29,7 +24,8 @@ const courseOfferings = [
   },
   {
     title: 'Foundation Biology (Class 9 & 10)',
-    description: 'Start early, win big. Build strong Biology fundamentals for NEET + Board excellence from Class 9.',
+    description:
+      'Start early, win big. Build strong Biology fundamentals for NEET + Board excellence from Class 9.',
     icon: School,
     color: 'bg-purple-50 border-purple-200 text-purple-800',
     iconColor: 'text-purple-600',
@@ -38,25 +34,28 @@ const courseOfferings = [
   },
   {
     title: 'Biology Olympiad (NBO / IBO)',
-    description: 'National Biology Olympiad & International Biology Olympiad prep. 5,900+ Olympiad MCQs in our question bank.',
+    description:
+      'National Biology Olympiad & International Biology Olympiad prep. 5,900+ Olympiad MCQs in our question bank.',
     icon: Award,
     color: 'bg-yellow-50 border-yellow-200 text-yellow-800',
     iconColor: 'text-yellow-600',
-    link: '/mcq-practice',
+    link: '/neet-biology-mcq-practice',
     tags: ['NBO', 'IBO', 'NTSE', 'NSEB'],
   },
   {
     title: 'MCQ Practice Bank',
-    description: '19,000+ Biology MCQs across NEET, Board, and Olympiad levels. AI-powered adaptive practice with detailed solutions.',
+    description:
+      '19,000+ Biology MCQs across NEET, Board, and Olympiad levels. AI-powered adaptive practice with detailed solutions.',
     icon: ClipboardList,
     color: 'bg-teal-50 border-teal-200 text-teal-800',
     iconColor: 'text-teal-600',
-    link: '/mcq-practice',
+    link: '/neet-biology-mcq-practice',
     tags: ['19,000+ MCQs', 'AI-Powered', 'Free Access'],
   },
   {
     title: 'Class 11 & 12 Biology',
-    description: 'Complete NCERT + competitive exam coverage. Small batches of 15 students with personal mentorship.',
+    description:
+      'Complete NCERT + competitive exam coverage. Small batches of 15 students with personal mentorship.',
     icon: GraduationCap,
     color: 'bg-indigo-50 border-indigo-200 text-indigo-800',
     iconColor: 'text-indigo-600',

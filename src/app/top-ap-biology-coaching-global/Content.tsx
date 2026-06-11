@@ -112,7 +112,7 @@ export function Top10APGlobalContent() {
         { label: 'AP Biology Singapore', href: '/ap-biology-tutor-singapore' },
         { label: 'AP Biology Hong Kong', href: '/ap-biology-tutor-hong-kong' },
         { label: 'AP Biology Vancouver', href: '/ap-biology-tutor-vancouver' },
-        { label: 'AP Biology India', href: '/ap-biology-tutor-india' },
+        { label: 'AP Biology India', href: '/ap-biology-tutor-india-for-us-college-admissions' },
       ]}
     />
   )

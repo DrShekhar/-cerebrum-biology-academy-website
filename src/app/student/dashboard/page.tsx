@@ -231,7 +231,12 @@ export default function StudentDashboard() {
               </span>
             </div>
             <Button
-              onClick={() => window.open('https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.', '_blank')}
+              onClick={() =>
+                window.open(
+                  'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20enroll.%20Please%20share%20details.',
+                  '_blank'
+                )
+              }
               variant="secondary"
               size="sm"
               className="bg-white text-blue-600 hover:bg-gray-100"
@@ -307,9 +312,7 @@ export default function StudentDashboard() {
             {quickStats.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {quickStats.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                   className="animate-fadeInUp">
+                  <div key={stat.label} className="animate-fadeInUp">
                     <Card className="hover:shadow-lg transition-shadow">
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between">
@@ -524,7 +527,7 @@ export default function StudentDashboard() {
                     }}
                     secondaryAction={{
                       label: 'Explore Topics',
-                      href: '/student/materials',
+                      href: '/student/dashboard',
                     }}
                     size="lg"
                     variant="default"
@@ -627,10 +630,7 @@ function LockedActionButton({
   onClick: () => void
 }) {
   return (
-    <div
-      className="h-full cursor-pointer animate-fadeInUp"
-      onClick={onClick}
-    >
+    <div className="h-full cursor-pointer animate-fadeInUp" onClick={onClick}>
       <Card className="h-full hover:shadow-lg transition-shadow relative overflow-hidden">
         <CardContent className="p-6 relative">
           {/* Lock Badge */}

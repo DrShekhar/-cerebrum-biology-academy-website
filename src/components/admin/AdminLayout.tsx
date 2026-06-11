@@ -228,7 +228,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           id: 'content-published',
           name: 'Published',
           icon: Send,
-          href: '/admin/content/published',
+          href: '/admin/content',
         },
       ],
     },
@@ -258,7 +258,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       id: 'lms',
       name: 'LMS',
       icon: FileText,
-      href: '/admin/lms',
+      href: '/admin/lms/materials',
       children: [
         { id: 'lms-materials', name: 'Materials', icon: FolderOpen, href: '/admin/lms/materials' },
         { id: 'lms-upload', name: 'Upload', icon: Upload, href: '/admin/lms/materials/upload' },

@@ -49,7 +49,8 @@ const faqs = [
       'Cerebrum Biology Academy has the highest documented per-student score-5 rate for AP Biology in USA. Unlike other major generalist test-prep brands and tutor marketplaces (which do not publish per-student outcome data), Cerebrum tracks individual student scores and has documented score-5 outcomes across 10+ US metros. The bio-only specialist model — vs other major brands rotating across 30+ AP subjects — drives higher per-student outcomes.',
   },
   {
-    question: 'How does Cerebrum compare to other major generalist test-prep brands for AP Biology?',
+    question:
+      'How does Cerebrum compare to other major generalist test-prep brands for AP Biology?',
     answer:
       'Cerebrum is bio-only AP specialist; Other major test-prep brands are generalist offering AP Biology as 1 of 30+ AP courses. Cerebrum pricing ($499/$999/$1,499 packages + $150/hr ad-hoc) is best per-section value vs other major brand packages ($700–$2,500). Cerebrum has documented score-5 outcomes; other major brands do not publish per-student data. Cerebrum has biology-only AIIMS-trained faculty; other major brands use rotating generalist faculty.',
   },
@@ -97,10 +98,10 @@ export function TopAPBiologyUSAContent() {
           test-prep brands on a per-section basis.
           <br />
           <br />
-          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Other major generalist test-prep brands (AP)
-          , 3) Other adaptive online AP prep platforms, 4) Other tutor marketplaces, 5) Other US multi-subject tutoring platforms, 6)
-          Official College Board AP Daily Videos (free), 8) Local US
-          high-school AP teachers (private rates). Ranks 2–8 are{' '}
+          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Other major generalist
+          test-prep brands (AP) , 3) Other adaptive online AP prep platforms, 4) Other tutor
+          marketplaces, 5) Other US multi-subject tutoring platforms, 6) Official College Board AP
+          Daily Videos (free), 8) Local US high-school AP teachers (private rates). Ranks 2–8 are{' '}
           <strong>
             generalist test-prep brands, marketplace tutoring services, or self-paced content
           </strong>{' '}
@@ -123,7 +124,7 @@ export function TopAPBiologyUSAContent() {
         { label: 'AP Biology Bay Area', href: '/ap-biology-tutor-bay-area' },
         { label: 'AP Biology Boston', href: '/ap-biology-tutor-boston' },
         { label: 'AP Biology New Jersey', href: '/ap-biology-tutor-new-jersey' },
-        { label: 'AP Biology Houston', href: '/ap-biology-tutor-houston' },
+        { label: 'AP Biology Houston', href: '/ap-biology-tutor' },
         { label: 'AP Biology Atlanta', href: '/ap-biology-tutor-atlanta' },
         { label: 'Dr. Shekhar — Biology Faculty', href: '/dr-shekhar-singh-biology-faculty-india' },
       ]}

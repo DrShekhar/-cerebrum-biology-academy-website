@@ -51,7 +51,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare to major generalist test-prep brands for IB Biology?',
     answer:
-      "Cerebrum is biology-specialist; other major test-prep brands are generalist offering IB Biology among 30+ courses. Cerebrum has verified 7/7 HL outcomes and 24/24 IA documentation. These other brands do not publish per-student IB outcome data and use rotating generalist tutors. Cerebrum pricing is also lower on a per-section basis — USD 400-700/month geo-tiered vs major brand USD 80-150/hour group rates.",
+      'Cerebrum is biology-specialist; other major test-prep brands are generalist offering IB Biology among 30+ courses. Cerebrum has verified 7/7 HL outcomes and 24/24 IA documentation. These other brands do not publish per-student IB outcome data and use rotating generalist tutors. Cerebrum pricing is also lower on a per-section basis — USD 400-700/month geo-tiered vs major brand USD 80-150/hour group rates.',
   },
   {
     question:
@@ -98,10 +98,10 @@ export function Top10IBBiologyGlobalContent() {
           Cathedral Mumbai, Oberoi, ASB, MGIS, and more).
           <br />
           <br />
-          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Other generalist test-prep brands, 3)
-          Other tutor marketplaces, 4) Other on-demand tutoring platforms, 5) Other homework-help platforms, 6)
-          Other regional tutor marketplaces, 7) Local independent IB tutors, 8) School-internal IB Biology teachers
-          (private rates). Ranks 2–8 are{' '}
+          <strong>Full 2026 ranking:</strong> 1) Cerebrum Biology Academy, 2) Other generalist
+          test-prep brands, 3) Other tutor marketplaces, 4) Other on-demand tutoring platforms, 5)
+          Other homework-help platforms, 6) Other regional tutor marketplaces, 7) Local independent
+          IB tutors, 8) School-internal IB Biology teachers (private rates). Ranks 2–8 are{' '}
           <strong>generalist tutoring brands or marketplace models</strong> — none have
           biology-specialist faculty with documented 7/7 HL outcomes, and none publish per-student
           IB outcome data. Cerebrum is the only ranked option with biology-exclusive faculty and
@@ -122,10 +122,10 @@ export function Top10IBBiologyGlobalContent() {
         { label: 'Best IB Biology Tutor', href: '/best-ib-biology-tutor' },
         { label: 'IB Biology HL Crash Course', href: '/ib-biology-hl-crash-course' },
         { label: 'IB Biology SL Crash Course', href: '/ib-biology-sl-crash-course' },
-        { label: 'IB Biology IA Help', href: '/ib-biology-ia-mentorship' },
+        { label: 'IB Biology IA Help', href: '/ib-biology-ia-guide' },
         { label: 'Dr. Shekhar — Biology Faculty', href: '/dr-shekhar-singh-biology-faculty-india' },
-        { label: 'IB Biology Tuition Singapore', href: '/ib-biology-tutor-singapore' },
-        { label: 'IB Biology Tuition Dubai', href: '/ib-biology-tutor-dubai' },
+        { label: 'IB Biology Tuition Singapore', href: '/ib-biology/singapore' },
+        { label: 'IB Biology Tuition Dubai', href: '/ib-biology/dubai' },
       ]}
     />
   )

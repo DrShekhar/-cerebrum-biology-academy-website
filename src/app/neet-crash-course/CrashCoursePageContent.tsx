@@ -107,7 +107,7 @@ const toolsCTA = {
     {
       name: 'NEET MCQ Practice',
       description: 'Chapter-wise MCQs with instant answers and explanations',
-      link: '/mcq-practice',
+      link: '/neet-biology-mcq-practice',
       icon: 'mcq' as const,
     },
     {
@@ -472,7 +472,7 @@ export default function CrashCoursePageContent() {
               },
               {
                 title: 'MCQ Practice',
-                href: '/mcq-practice',
+                href: '/neet-biology-mcq-practice',
                 desc: '19,000+ Biology MCQs free',
               },
               {

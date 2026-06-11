@@ -107,7 +107,7 @@ export default function ContactPage() {
   ]
 
   const quickLinks = [
-    { title: 'Book Free Demo Class', href: '/demo-booking', icon: BookOpen },
+    { title: 'Book Free Demo Class', href: '/book-free-demo', icon: BookOpen },
     {
       title: 'Request Brochure',
       href: `https://wa.me/918826444334?text=${encodeURIComponent('Hi, I would like to receive the Cerebrum Biology Academy brochure. Please share it with me.')}`,

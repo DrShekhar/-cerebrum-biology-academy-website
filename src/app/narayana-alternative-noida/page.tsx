@@ -4,7 +4,8 @@ import { Phone, MapPin, CheckCircle, Clock, Award, ArrowRight, UserCheck } from 
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'Best a leading national educational institution Alternative in Noida 2026 | Small Batch Personal Attention',
+  title:
+    'Best a leading national educational institution Alternative in Noida 2026 | Small Batch Personal Attention',
   description:
     "Looking for a leading national educational institution alternative in Noida? Cerebrum: 25-student batches vs a leading national educational institution's 100+. AIIMS faculty, 98% success rate. Personal attention guaranteed. Call 99536-43938!",
   keywords: [
@@ -32,8 +33,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Best a leading national educational institution Alternative in Noida 2026 | Small Batch Personal Attention',
-    description: 'Looking for a leading national educational institution alternative in Noida? Cerebrum: 25-student batches vs a leading national educational institution',
+    title:
+      'Best a leading national educational institution Alternative in Noida 2026 | Small Batch Personal Attention',
+    description:
+      'Looking for a leading national educational institution alternative in Noida? Cerebrum: 25-student batches vs a leading national educational institution',
   },
 }
 
@@ -110,7 +113,8 @@ const faqs = [
       "Common complaints from ex-a leading national educational institution students: 1) Too crowded - can't ask doubts in class, 2) Faculty turnover - teachers change mid-session, 3) Focus on quantity over quality, 4) Generic study material, 5) Long wait for doubt resolution. Cerebrum solves all these with small batches.",
   },
   {
-    question: 'Can I join Cerebrum after leaving a leading national educational institution mid-year?',
+    question:
+      'Can I join Cerebrum after leaving a leading national educational institution mid-year?',
     answer:
       'Yes! We have flexible joining options: 1) Mid-session joining with catch-up support, 2) Backlog clearing batches for specific chapters, 3) Fast-track revision for already-covered syllabus, 4) No penalty or extra fees for mid-year joiners.',
   },
@@ -120,7 +124,8 @@ const faqs = [
       'Cerebrum is a biology-specialized institute: 1) All faculty are biology experts (AIIMS/medical background), 2) Daily biology classes (not alternate days), 3) NEET biology pattern expertise, 4) Diagram-focused teaching, 5) NCERT line-by-line coverage. a leading national educational institution treats biology as just one of 3 subjects.',
   },
   {
-    question: 'Do a leading national educational institution students join for supplementary biology?',
+    question:
+      'Do a leading national educational institution students join for supplementary biology?',
     answer:
       'Yes, many a leading national educational institution students take our: 1) Biology-only batch (weekends, ₹35,000/year), 2) Test series membership (₹8,000/year), 3) Crash courses before exams (₹15,000-25,000). Timings designed to complement a leading national educational institution schedule.',
   },
@@ -171,8 +176,8 @@ export default function NarayanaAlternativeNoida() {
               Best a leading national educational institution Alternative in Noida
             </h1>
             <p className="text-xl text-green-100 mb-8">
-              Tired of crowded a leading national educational institution batches? Get personal attention with 25-student batches at
-              Cerebrum.
+              Tired of crowded a leading national educational institution batches? Get personal
+              attention with 25-student batches at Cerebrum.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -212,7 +217,9 @@ export default function NarayanaAlternativeNoida() {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-green-600">200+</div>
-              <div className="text-gray-600">a leading national educational institution Switchers</div>
+              <div className="text-gray-600">
+                a leading national educational institution Switchers
+              </div>
             </div>
           </div>
         </div>
@@ -221,9 +228,12 @@ export default function NarayanaAlternativeNoida() {
       {/* Pain Points */}
       <section className="py-16 bg-red-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Common a leading national educational institution Problems We Solve</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Common a leading national educational institution Problems We Solve
+          </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Hear what ex-a leading national educational institution students said about why they switched
+            Hear what ex-a leading national educational institution students said about why they
+            switched
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {painPoints.map((point, index) => (
@@ -256,7 +266,9 @@ export default function NarayanaAlternativeNoida() {
               <thead className="bg-green-800 text-white">
                 <tr>
                   <th className="px-6 py-4 text-left">Feature</th>
-                  <th className="px-6 py-4 text-center">a leading national educational institution</th>
+                  <th className="px-6 py-4 text-center">
+                    a leading national educational institution
+                  </th>
                   <th className="px-6 py-4 text-center">Cerebrum</th>
                 </tr>
               </thead>
@@ -296,24 +308,25 @@ export default function NarayanaAlternativeNoida() {
               <UserCheck className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Personal Attention</h3>
               <p className="text-gray-600">
-                a leading national educational institution batches have 100-150 students. You become just a number. Our 25-student
-                limit ensures every student gets individual focus.
+                a leading national educational institution batches have 100-150 students. You become
+                just a number. Our 25-student limit ensures every student gets individual focus.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Clock className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Instant Doubt Resolution</h3>
               <p className="text-gray-600">
-                At a leading national educational institution, doubts pile up for days. At Cerebrum, WhatsApp your doubt and get
-                answers the same day. No waiting, no queues.
+                At a leading national educational institution, doubts pile up for days. At Cerebrum,
+                WhatsApp your doubt and get answers the same day. No waiting, no queues.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Award className="w-12 h-12 text-green-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Biology Specialists</h3>
               <p className="text-gray-600">
-                a leading national educational institution treats biology as one of many subjects. We specialize in NEET biology with
-                AIIMS-trained faculty who live and breathe biology.
+                a leading national educational institution treats biology as one of many subjects.
+                We specialize in NEET biology with AIIMS-trained faculty who live and breathe
+                biology.
               </p>
             </div>
           </div>
@@ -323,16 +336,20 @@ export default function NarayanaAlternativeNoida() {
       {/* Supplementary Options */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Already in a leading national educational institution?</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Already in a leading national educational institution?
+          </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Many a leading national educational institution students take our supplementary biology coaching alongside
+            Many a leading national educational institution students take our supplementary biology
+            coaching alongside
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
               <div className="text-2xl font-bold text-green-600 mb-2">₹35,000/year</div>
               <div className="font-semibold mb-2">Weekend Biology Batch</div>
               <p className="text-sm text-gray-600">
-                Sat-Sun classes that complement a leading national educational institution weekday schedule
+                Sat-Sun classes that complement a leading national educational institution weekday
+                schedule
               </p>
             </div>
             <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
@@ -426,7 +443,9 @@ export default function NarayanaAlternativeNoida() {
       {/* CTA */}
       <section className="py-16 bg-green-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Switch from a leading national educational institution?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Switch from a leading national educational institution?
+          </h2>
           <p className="text-xl text-green-100 mb-8">
             Book a free 3-day trial. Experience personal attention in small batches.
           </p>
@@ -439,7 +458,7 @@ export default function NarayanaAlternativeNoida() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="/neet-coaching-fees-noida"
+              href="/neet-coaching-fees"
               className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
             >
               View Fee Comparison

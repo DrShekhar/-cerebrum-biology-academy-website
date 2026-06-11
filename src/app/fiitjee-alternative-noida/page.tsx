@@ -13,7 +13,8 @@ import {
 import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 
 export const metadata: Metadata = {
-  title: 'Best other IIT-JEE-first coachings Alternative in Noida 2026 | Better Results, Lower Fees',
+  title:
+    'Best other IIT-JEE-first coachings Alternative in Noida 2026 | Better Results, Lower Fees',
   description:
     'Looking for other IIT-JEE-first coachings alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 99536-43938!',
   keywords: [
@@ -42,8 +43,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Best other IIT-JEE-first coachings Alternative in Noida 2026 | Better Results, Lower Fees',
-    description: 'Looking for other IIT-JEE-first coachings alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 99536-43938!',
+    title:
+      'Best other IIT-JEE-first coachings Alternative in Noida 2026 | Better Results, Lower Fees',
+    description:
+      'Looking for other IIT-JEE-first coachings alternative in Noida? Cerebrum Biology Academy: Same quality, 60% lower fees. AIIMS faculty, 98% success rate. Compare before you join. Call 99536-43938!',
   },
 }
 
@@ -248,30 +251,32 @@ export default function FIITJEEAlternativeNoida() {
       {/* Why Switch */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Students Switch from other IIT-JEE-first coachings</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Students Switch from other IIT-JEE-first coachings
+          </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <IndianRupee className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Save ₹1.2+ Lakh</h3>
               <p className="text-gray-600">
-                other IIT-JEE-first coachings charges ₹2L+ for integrated programs. Cerebrum offers complete NEET biology
-                coaching at ₹75K. Same quality, 60% savings.
+                other IIT-JEE-first coachings charges ₹2L+ for integrated programs. Cerebrum offers
+                complete NEET biology coaching at ₹75K. Same quality, 60% savings.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Users className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">3x More Attention</h3>
               <p className="text-gray-600">
-                other IIT-JEE-first coachings batches have 50-80 students. Our 25-student batches mean 3x more
-                doubt-resolution time per student.
+                other IIT-JEE-first coachings batches have 50-80 students. Our 25-student batches
+                mean 3x more doubt-resolution time per student.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <Award className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Biology Specialists</h3>
               <p className="text-gray-600">
-                other IIT-JEE-first coachings focuses on JEE. We specialize in NEET biology with AIIMS-trained faculty
-                dedicated to biology excellence.
+                other IIT-JEE-first coachings focuses on JEE. We specialize in NEET biology with
+                AIIMS-trained faculty dedicated to biology excellence.
               </p>
             </div>
           </div>
@@ -351,7 +356,9 @@ export default function FIITJEEAlternativeNoida() {
       {/* CTA */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Switch from other IIT-JEE-first coachings?</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Switch from other IIT-JEE-first coachings?
+          </h2>
           <p className="text-xl text-blue-100 mb-8">
             Book a free 3-day trial. Experience the Cerebrum difference.
           </p>
@@ -364,7 +371,7 @@ export default function FIITJEEAlternativeNoida() {
               Call Now: 99536-43938
             </a>
             <Link
-              href="/neet-coaching-fees-noida"
+              href="/neet-coaching-fees"
               className="bg-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition"
             >
               View Fee Comparison

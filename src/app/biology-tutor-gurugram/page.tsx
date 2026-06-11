@@ -124,7 +124,7 @@ const freeTools = [
     icon: BookOpen,
     title: 'MCQ Practice Tool',
     description: 'Practice 10,000+ NEET Biology MCQs with detailed explanations',
-    href: '/neet-tools/mcq',
+    href: '/neet-biology-mcq',
     color: 'bg-teal-600',
   },
   {
@@ -240,7 +240,11 @@ export default function BiologyTutorGurugramPage() {
   return (
     <div className="min-h-screen">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Gurugram', 'NEET Biology Gurugram', 'Medical entrance coaching Gurugram']}
+        knowsAbout={[
+          'NEET Gurugram',
+          'NEET Biology Gurugram',
+          'Medical entrance coaching Gurugram',
+        ]}
       />
       <GurgaonGurugramAreaSchema spelling="gurugram" pageSlug="biology-tutor-gurugram" />
       {/* Sticky CTA Bar */}

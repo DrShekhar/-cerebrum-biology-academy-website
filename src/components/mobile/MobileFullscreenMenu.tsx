@@ -436,7 +436,12 @@ export function BottomNavigation({ currentPath = '/' }: { currentPath?: string }
       active: currentPath.startsWith('/courses'),
     },
     { icon: MessageCircle, label: 'Support', href: '/support', active: currentPath === '/support' },
-    { icon: User, label: 'Account', href: '/account', active: currentPath.startsWith('/account') },
+    {
+      icon: User,
+      label: 'Account',
+      href: '/dashboard',
+      active: currentPath.startsWith('/dashboard'),
+    },
   ]
 
   return (

@@ -182,7 +182,7 @@ const freeTools = [
     name: 'Previous Year Papers',
     description: 'Last 10 years NEET Biology papers with answers',
     icon: Award,
-    link: '/neet-previous-year-papers',
+    link: '/neet-previous-year-questions',
   },
 ]
 

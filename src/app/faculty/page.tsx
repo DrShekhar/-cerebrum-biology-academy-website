@@ -29,14 +29,15 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     title: 'Cerebrum Biology Faculty — AIIMS-led, biology-only specialists',
     description:
-      "Meet Dr. Shekhar C Singh (AIIMS) and the senior team. Bio-only focus, small batches (10-25), and direct founder-led mentoring at the top tier.",
+      'Meet Dr. Shekhar C Singh (AIIMS) and the senior team. Bio-only focus, small batches (10-25), and direct founder-led mentoring at the top tier.',
     url: 'https://cerebrumbiologyacademy.com/faculty',
   },
 
   twitter: {
     card: 'summary_large_image' as const,
     title: 'Faculty | Dr. Shekhar Singh (AIIMS) & Senior Biology Team — Cerebrum',
-    description: 'AIIMS-led biology faculty: Dr. Shekhar Singh + 5 senior subject specialists across NEET, IB, AP, CBSE 11-12, and Biology Olympiad. Student outcomes include 695 NEET marks and 360/360 Biology.',
+    description:
+      'AIIMS-led biology faculty: Dr. Shekhar Singh + 5 senior subject specialists across NEET, IB, AP, CBSE 11-12, and Biology Olympiad. Student outcomes include 695 NEET marks and 360/360 Biology.',
   },
 }
 
@@ -51,7 +52,7 @@ const WHATSAPP_DEMO =
 const differentiators = [
   {
     title: 'Biology-only specialist',
-    body: "the largest national NEET chains teach all three subjects. Our entire faculty bench is biology-only — every senior teacher has spent a decade-plus going deep into Botany, Zoology, Genetics, or Physiology. For a student where biology is the gap, that depth shows up in mock scores within the first two months.",
+    body: 'the largest national NEET chains teach all three subjects. Our entire faculty bench is biology-only — every senior teacher has spent a decade-plus going deep into Botany, Zoology, Genetics, or Physiology. For a student where biology is the gap, that depth shows up in mock scores within the first two months.',
     icon: BookOpen,
   },
   {
@@ -108,7 +109,7 @@ const verticalCoverage = [
   {
     label: 'Biology Olympiad',
     body: 'NSEB → INBO → OCSC → IBO funnel. HBCSE / IAPT framework. India IBO team selection track.',
-    link: '/biology-olympiad',
+    link: '/biology-olympiads',
   },
 ]
 
@@ -154,9 +155,9 @@ export default function FacultyPage() {
               One founder who still teaches.
             </h1>
             <p className="mx-auto mb-8 max-w-3xl text-base text-blue-200 sm:text-lg md:text-xl">
-              Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years) leads a biology-only team
-              across NEET, IB, AP, CBSE 11-12, and Olympiads. No rotating part-timers; the
-              senior team teaches every batch.
+              Dr. Shekhar C Singh (AIIMS Delhi alumnus, 15+ years) leads a biology-only team across
+              NEET, IB, AP, CBSE 11-12, and Olympiads. No rotating part-timers; the senior team
+              teaches every batch.
             </p>
             <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
               <Link href={WHATSAPP_FOUNDER} target="_blank" rel="noopener noreferrer">
@@ -254,13 +255,19 @@ export default function FacultyPage() {
 
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Link href={WHATSAPP_FOUNDER} target="_blank" rel="noopener noreferrer">
-                    <Button variant="primary" className="w-full bg-blue-600 text-white hover:bg-blue-700 sm:w-auto">
+                    <Button
+                      variant="primary"
+                      className="w-full bg-blue-600 text-white hover:bg-blue-700 sm:w-auto"
+                    >
                       <MessageSquare className="mr-2 h-4 w-4" />
                       WhatsApp Dr. Shekhar
                     </Button>
                   </Link>
                   <Link href="/dr-shekhar-singh-biology-faculty-india">
-                    <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white sm:w-auto">
+                    <Button
+                      variant="outline"
+                      className="w-full border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white sm:w-auto"
+                    >
                       Full faculty profile
                     </Button>
                   </Link>
@@ -282,8 +289,8 @@ export default function FacultyPage() {
               What makes biology-only different
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-gray-600">
-              Honest answer: most NEET institutes optimise for the median student across three subjects.
-              For a student where biology is the gap, that approach loses 30-50 marks.
+              Honest answer: most NEET institutes optimise for the median student across three
+              subjects. For a student where biology is the gap, that approach loses 30-50 marks.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -314,9 +321,9 @@ export default function FacultyPage() {
               Five subject specialists behind the founder
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-gray-600">
-              Each of these faculty teaches their domain across multiple programmes —
-              they're not part-time consultants. Extended teaching and lab-support team
-              backs them on student doubts and weekly assessments.
+              Each of these faculty teaches their domain across multiple programmes — they're not
+              part-time consultants. Extended teaching and lab-support team backs them on student
+              doubts and weekly assessments.
             </p>
           </div>
 
@@ -375,7 +382,9 @@ export default function FacultyPage() {
                     {faculty.studentsGuided && (
                       <div className="mt-4 flex items-center gap-1.5 text-xs text-gray-600">
                         <Users className="h-3.5 w-3.5" />
-                        <span>{faculty.studentsGuided.toLocaleString('en-IN')}+ students mentored</span>
+                        <span>
+                          {faculty.studentsGuided.toLocaleString('en-IN')}+ students mentored
+                        </span>
                       </div>
                     )}
 
@@ -438,8 +447,8 @@ export default function FacultyPage() {
             Teach biology with us
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-gray-600">
-            We hire AIIMS / IIT / IISc / DU alumni with a decade-plus of senior teaching.
-            If biology is your craft, we'd like to talk.
+            We hire AIIMS / IIT / IISc / DU alumni with a decade-plus of senior teaching. If biology
+            is your craft, we'd like to talk.
           </p>
           <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
             <Link href="/about/careers">

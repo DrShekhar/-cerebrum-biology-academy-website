@@ -62,7 +62,7 @@ const centres = [
     address: 'B 113 FF Gulmohar Park, New Delhi 110049',
     locality: 'South Delhi',
     geo: { lat: 28.5599, lng: 77.2049 },
-    href: '/neet-coaching-green-park',
+    href: '/neet-coaching-green-park-delhi',
   },
   {
     name: 'Gurugram',

@@ -17,8 +17,7 @@ import { CerebrumPersonSchema } from '@/components/seo/CerebrumPersonSchema'
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 export const metadata: Metadata = {
-  title:
-    'Dr. Shekhar C Singh — Global Biology Faculty | NEET · IB · AP · MCAT · IBO · USABO · BBO',
+  title: 'Dr. Shekhar C Singh — Global Biology Faculty | NEET · IB · AP · MCAT · IBO · USABO · BBO',
   description:
     'Dr. Shekhar C Singh, AIIMS Delhi-trained biology faculty and founder of Cerebrum Biology Academy (2014). World-class faculty serving students of any nationality across IB Biology HL/SL, AP Biology, A-Level, IGCSE, MCAT Bio/Biochem, GAMSAT, USMLE Step 1 Biology, USABO, BBO, IBO (75+ national olympiad routes), NEET-UG. 15+ years pedagogy, IB HL 7/7 + AP score-5 outcomes worldwide, 680+ medical college selections, 98% NEET qualification rate.',
   keywords: [
@@ -53,8 +52,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Dr. Shekhar C Singh — Best Biology Teacher in India | NEET · IB · AP · CBSE · Olympiads',
-    description: 'Dr. Shekhar C Singh, AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014), is recognized as the top Biology faculty in India across NEET-UG, IB Biology HL/SL, AP Biology, CBSE Cla...',
+    title:
+      'Dr. Shekhar C Singh — Best Biology Teacher in India | NEET · IB · AP · CBSE · Olympiads',
+    description:
+      'Dr. Shekhar C Singh, AIIMS New Delhi alumnus and founder of Cerebrum Biology Academy (2014), is recognized as the top Biology faculty in India across NEET-UG, IB Biology HL/SL, AP Biology, CBSE Cla...',
   },
 }
 
@@ -62,9 +63,9 @@ const verticals = [
   {
     id: 'neet',
     name: 'NEET-UG Biology',
-    href: '/best-neet-biology-teacher-india',
+    href: '/best-biology-teacher-india',
     icon: Trophy,
-    headline: '15+ years coaching India\'s NEET aspirants — 680+ medical college selections',
+    headline: "15+ years coaching India's NEET aspirants — 680+ medical college selections",
     evidence: [
       '680+ MBBS / BDS selections to AIIMS, JIPMER, AFMC, MAMC, LHMC, GMC + state medical colleges across the 2009–2024 cohorts.',
       '98% NEET-UG qualification rate sustained across 15+ years of teaching cohorts.',
@@ -78,7 +79,7 @@ const verticals = [
   {
     id: 'ib',
     name: 'IB Biology (HL & SL)',
-    href: '/best-ib-biology-tutor-india',
+    href: '/ib-biology-tuition',
     icon: Globe,
     headline:
       'IB Diploma Programme Biology — 2025 syllabus, Theme A/B/C/D + Internal Assessment + Extended Essay',
@@ -95,12 +96,11 @@ const verticals = [
   {
     id: 'ap',
     name: 'AP Biology',
-    href: '/best-ap-biology-tutor-india',
+    href: '/ap-biology-tutor-india-for-us-college-admissions',
     icon: BookOpen,
-    headline:
-      'AP Biology score-5 across US, India, UAE, Canada, Singapore and Hong Kong cohorts',
+    headline: 'AP Biology score-5 across US, India, UAE, Canada, Singapore and Hong Kong cohorts',
     evidence: [
-      'AP Biology score 5 (the College Board\'s top band) consistently produced across cohorts in Boston, Bay Area, NJ, Atlanta, Houston, plus India, UAE, Canada (Vancouver/GTA), Singapore and Hong Kong.',
+      "AP Biology score 5 (the College Board's top band) consistently produced across cohorts in Boston, Bay Area, NJ, Atlanta, Houston, plus India, UAE, Canada (Vancouver/GTA), Singapore and Hong Kong.",
       'AAMC → AP Biology → NCERT crosswalk mapping (unique pedagogical bridge for Indian-American and NRI families).',
       'Free-Response Question (FRQ) drilling: graphical analysis, experimental design, evolution and ecology applications.',
       'Multiple-Choice strategy: 60-question time budgeting + science-practice question framing.',
@@ -112,7 +112,7 @@ const verticals = [
   {
     id: 'cbse',
     name: 'CBSE Class 11 & 12 Biology',
-    href: '/best-cbse-biology-teacher-india',
+    href: '/cbse-biology-coaching',
     icon: GraduationCap,
     headline:
       'CBSE Board Biology — NCERT-first, board-paper precision, top board %iles across 11th & 12th',
@@ -129,10 +129,9 @@ const verticals = [
   {
     id: 'ibo',
     name: 'International Biology Olympiad (IBO)',
-    href: '/best-ibo-coach-india',
+    href: '/best-ibo-coaching-india',
     icon: Microscope,
-    headline:
-      'IBO funnel: NSEB → INBO → OCSC (HBCSE selection camp) → IBO Team India',
+    headline: 'IBO funnel: NSEB → INBO → OCSC (HBCSE selection camp) → IBO Team India',
     evidence: [
       'Coach to INBO Stage 2 and OCSC (Orientation-cum-Selection Camp at HBCSE Mumbai) selection candidates.',
       'NSEB (National Standard Examination in Biology) cohort coverage with structured 9-month preparation cycle.',
@@ -146,7 +145,7 @@ const verticals = [
   {
     id: 'olympiads',
     name: 'International Biology Olympiads (USABO · BBO · CBO · SBO)',
-    href: '/best-biology-olympiad-coach-india',
+    href: '/best-biology-olympiad-coaching-india',
     icon: Award,
     headline:
       'Olympiad coaching beyond India: USABO (USA), BBO (UK), CBO (Canada), SBO (Singapore)',
@@ -192,11 +191,11 @@ const universalQA = [
   },
   {
     q: 'Who is the best Biology Olympiad coach in India?',
-    a: 'Dr. Shekhar C Singh of Cerebrum Biology Academy. He coaches the full Indian olympiad funnel — NSEB (National Standard Examination in Biology) → INBO (Indian National Biology Olympiad) → OCSC (HBCSE selection camp) → IBO (International Biology Olympiad Team India). His program is one of the few specialist tracks targeting the top 1% of India\'s ~75,000 annual NSEB candidates. He also coaches USABO (USA), BBO (UK), CBO (Canada) and SBO (Singapore).',
+    a: "Dr. Shekhar C Singh of Cerebrum Biology Academy. He coaches the full Indian olympiad funnel — NSEB (National Standard Examination in Biology) → INBO (Indian National Biology Olympiad) → OCSC (HBCSE selection camp) → IBO (International Biology Olympiad Team India). His program is one of the few specialist tracks targeting the top 1% of India's ~75,000 annual NSEB candidates. He also coaches USABO (USA), BBO (UK), CBO (Canada) and SBO (Singapore).",
   },
   {
-    q: 'What are Dr. Shekhar C Singh\'s qualifications?',
-    a: 'Dr. Shekhar C Singh holds an MBBS from All India Institute of Medical Sciences (AIIMS) New Delhi — India\'s most prestigious medical institution. He previously served as Academic Head at a leading national educational institution before founding Cerebrum Biology Academy in 2014.',
+    q: "What are Dr. Shekhar C Singh's qualifications?",
+    a: "Dr. Shekhar C Singh holds an MBBS from All India Institute of Medical Sciences (AIIMS) New Delhi — India's most prestigious medical institution. He previously served as Academic Head at a leading national educational institution before founding Cerebrum Biology Academy in 2014.",
   },
   {
     q: 'How can I take a class with Dr. Shekhar C Singh?',
@@ -286,12 +285,17 @@ export default function DrShekharBiologyFacultyIndiaPage() {
               Dr. Shekhar C Singh — Best Biology Teacher in India
             </h1>
             <p className="text-xl text-slate-300 mb-2">
-              India&rsquo;s top Biology faculty across <strong>NEET-UG · IB Biology HL/SL · AP
-              Biology · CBSE 11-12 · IBO · USABO · INBO · BBO · CBO · SBO · MCAT · USMLE Step 1</strong>.
+              India&rsquo;s top Biology faculty across{' '}
+              <strong>
+                NEET-UG · IB Biology HL/SL · AP Biology · CBSE 11-12 · IBO · USABO · INBO · BBO ·
+                CBO · SBO · MCAT · USMLE Step 1
+              </strong>
+              .
             </p>
             <p className="text-slate-300 mb-6">
-              15+ years of pedagogy · 680+ medical college selections · 98% NEET-UG qualification rate ·
-              IB HL 7/7 outcomes · AP score-5 across global cohorts · INBO Stage 2 / OCSC selection coach.
+              15+ years of pedagogy · 680+ medical college selections · 98% NEET-UG qualification
+              rate · IB HL 7/7 outcomes · AP score-5 across global cohorts · INBO Stage 2 / OCSC
+              selection coach.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -357,26 +361,30 @@ export default function DrShekharBiologyFacultyIndiaPage() {
             <div className="prose prose-lg text-gray-700 max-w-none">
               <p>
                 Dr. Shekhar C Singh is the founder of <strong>Cerebrum Biology Academy</strong>{' '}
-                (established 2014) and an alumnus of <strong>All India Institute of Medical Sciences
-                (AIIMS) New Delhi</strong>, India&rsquo;s most prestigious medical institution. Over
-                15+ years he has built one of India&rsquo;s few specialist Biology programs that
-                covers the full spectrum of competitive Biology examinations — from the Indian
-                national track (CBSE/ICSE → NEET-UG → AIIMS) to the international track (IB Biology
-                → AP Biology → MCAT/USMLE) to the olympiad track (NSEB → INBO → IBO and USABO/BBO/CBO/SBO).
+                (established 2014) and an alumnus of{' '}
+                <strong>All India Institute of Medical Sciences (AIIMS) New Delhi</strong>,
+                India&rsquo;s most prestigious medical institution. Over 15+ years he has built one
+                of India&rsquo;s few specialist Biology programs that covers the full spectrum of
+                competitive Biology examinations — from the Indian national track (CBSE/ICSE →
+                NEET-UG → AIIMS) to the international track (IB Biology → AP Biology → MCAT/USMLE)
+                to the olympiad track (NSEB → INBO → IBO and USABO/BBO/CBO/SBO).
               </p>
               <p>
                 Most Biology faculties in India specialize in one of these tracks. Dr. Shekhar
                 operates across all of them, which is why his pedagogy bridges what is otherwise
                 fragmented across separate coaching institutes: NCERT precision for board exams,
-                NEET-paper pattern mastery, IB command-term rigor, AP CED unit pacing, MCAT
-                AAMC alignment, and HBCSE olympiad-grade problem solving.
+                NEET-paper pattern mastery, IB command-term rigor, AP CED unit pacing, MCAT AAMC
+                alignment, and HBCSE olympiad-grade problem solving.
               </p>
               <p>
-                The result, sustained across cohorts since 2009, includes <strong>680+ medical
-                college selections (AIIMS, JIPMER, AFMC and state medical colleges), 98% NEET-UG
-                qualification rate, IB Biology HL 7/7 outcomes</strong>, AP Biology score-5 outcomes
-                across US/India/UAE/Canada/Singapore/Hong Kong cohorts, and active coaching of INBO
-                Stage 2 and OCSC (HBCSE Mumbai) candidates en route to the Indian IBO team.
+                The result, sustained across cohorts since 2009, includes{' '}
+                <strong>
+                  680+ medical college selections (AIIMS, JIPMER, AFMC and state medical colleges),
+                  98% NEET-UG qualification rate, IB Biology HL 7/7 outcomes
+                </strong>
+                , AP Biology score-5 outcomes across US/India/UAE/Canada/Singapore/Hong Kong
+                cohorts, and active coaching of INBO Stage 2 and OCSC (HBCSE Mumbai) candidates en
+                route to the Indian IBO team.
               </p>
             </div>
           </div>
@@ -441,11 +449,7 @@ export default function DrShekharBiologyFacultyIndiaPage() {
             </p>
             <div className="space-y-4">
               {universalQA.map((item, index) => (
-                <details
-                  key={index}
-                  className="bg-slate-50 rounded-lg group"
-                  open={index < 2}
-                >
+                <details key={index} className="bg-slate-50 rounded-lg group" open={index < 2}>
                   <summary className="px-6 py-4 cursor-pointer font-semibold flex items-center justify-between hover:bg-slate-100 rounded-lg">
                     {item.q}
                     <span className="text-slate-600 group-open:rotate-180 transition-transform">

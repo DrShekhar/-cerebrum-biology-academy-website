@@ -620,7 +620,7 @@ export default function NEETBiologyRevisionPlanDropperPage() {
                 <li>
                   Free 60-min demo class with Dr. Shekhar —{' '}
                   <Link
-                    href="/demo-booking?source=revision-plan-dropper"
+                    href="/book-free-demo?source=revision-plan-dropper"
                     className="underline text-indigo-700 font-medium"
                   >
                     book your slot

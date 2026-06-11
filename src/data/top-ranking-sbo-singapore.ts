@@ -38,7 +38,7 @@ export const TOP_SBO_COACHING_SINGAPORE: RankedItem[] = [
     feeRange: 'SGD 1,200–2,499 (SBO cycle)',
     location:
       'Singapore (live online — RI, ACSI, NJC, HCI, RGS, NUS High, UWCSEA, Tanglin, Stamford)',
-    website: 'https://cerebrumbiologyacademy.com/best-sbo-coach',
+    website: 'https://cerebrumbiologyacademy.com/sbo-coaching',
   },
   {
     rank: 2,

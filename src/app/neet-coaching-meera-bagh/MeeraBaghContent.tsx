@@ -194,7 +194,7 @@ const neetTools = [
     icon: Brain,
     title: 'Biology MCQ Practice',
     description: 'Practice 10,000+ NEET Biology MCQs with explanations',
-    href: '/neet-biology-mcq-test',
+    href: '/neet-biology-mcq',
     bgColor: 'bg-blue-50',
     textColor: 'text-blue-700',
   },

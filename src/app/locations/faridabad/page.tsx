@@ -127,7 +127,11 @@ export default function FaridabadLocationPage() {
   return (
     <div className="min-h-screen bg-white">
       <CerebrumPersonSchema
-        knowsAbout={['NEET Faridabad', 'NEET Biology Faridabad', 'Medical entrance coaching Faridabad']}
+        knowsAbout={[
+          'NEET Faridabad',
+          'NEET Biology Faridabad',
+          'Medical entrance coaching Faridabad',
+        ]}
       />
       <BreadcrumbSchema
         items={[
@@ -142,8 +146,7 @@ export default function FaridabadLocationPage() {
         <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left - Location Info */}
-            <div className="space-y-6 animate-fadeInUp"
-            >
+            <div className="space-y-6 animate-fadeInUp">
               <div className="inline-flex items-center space-x-2 bg-orange-500/20 border border-orange-500/40 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-orange-400" />
                 <span className="text-orange-300 text-sm font-medium">Faridabad Center</span>
@@ -216,8 +219,7 @@ export default function FaridabadLocationPage() {
             </div>
 
             {/* Right - Map Embed */}
-            <div className="h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp"
-            >
+            <div className="h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp">
               <LazyGoogleMap
                 embedUrl={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.5!2d${CONTACT_INFO.location.faridabad.geo.longitude}!3d${CONTACT_INFO.location.faridabad.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDIzJzQxLjMiTiA3N8KwMTgnNDIuMSJF!5e0!3m2!1sen!2sin!4v1234567890`}
                 title="Faridabad NEET Coaching Center"
@@ -225,7 +227,7 @@ export default function FaridabadLocationPage() {
                 placeholder={{
                   lat: CONTACT_INFO.location.faridabad.geo.latitude,
                   lng: CONTACT_INFO.location.faridabad.geo.longitude,
-                  address: `${CONTACT_INFO.location.faridabad.streetAddress}, ${CONTACT_INFO.location.faridabad.addressLocality}`
+                  address: `${CONTACT_INFO.location.faridabad.streetAddress}, ${CONTACT_INFO.location.faridabad.addressLocality}`,
                 }}
               />
             </div>
@@ -258,8 +260,8 @@ export default function FaridabadLocationPage() {
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">By Car</h3>
               <p className="text-gray-600">
-                Located in <strong>Sector 17 HUDA Market</strong>, easily accessible from Mathura Road.
-                Dedicated parking available for students.
+                Located in <strong>Sector 17 HUDA Market</strong>, easily accessible from Mathura
+                Road. Dedicated parking available for students.
               </p>
             </div>
 
@@ -307,7 +309,9 @@ export default function FaridabadLocationPage() {
                 description: 'Quality coaching without the hassle of commuting to Delhi',
               },
             ].map((feature, index) => (
-              <div key={index} className="text-center p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all animate-fadeInUp"
+              <div
+                key={index}
+                className="text-center p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all animate-fadeInUp"
               >
                 <feature.icon className="w-10 h-10 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
@@ -335,24 +339,29 @@ export default function FaridabadLocationPage() {
                 area: 'BPTP Parklands',
                 score: '680/720',
                 college: 'MAMC Delhi',
-                quote: 'Online classes from home were incredibly convenient. Same quality as Delhi coaching!',
+                quote:
+                  'Online classes from home were incredibly convenient. Same quality as Delhi coaching!',
               },
               {
                 name: 'Nidhi Sharma',
                 area: 'Sector 21',
                 score: '667/720',
                 college: 'UCMS Delhi',
-                quote: 'Small batches meant personal attention. Dr. Singh helped me improve Biology by 120 marks!',
+                quote:
+                  'Small batches meant personal attention. Dr. Singh helped me improve Biology by 120 marks!',
               },
               {
                 name: 'Kabir Mehta',
                 area: 'NIT Faridabad',
                 score: '654/720',
                 college: 'LHMC Delhi',
-                quote: 'No need to travel to Delhi daily. Best NEET coaching right here in Faridabad!',
+                quote:
+                  'No need to travel to Delhi daily. Best NEET coaching right here in Faridabad!',
               },
             ].map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 animate-fadeInUp"
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 animate-fadeInUp"
               >
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
@@ -363,7 +372,9 @@ export default function FaridabadLocationPage() {
                     <p className="text-sm text-gray-400">{testimonial.area}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
+                <p className="text-gray-300 text-sm mb-4 italic">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
                 <div className="flex justify-between items-center pt-4 border-t border-white/20">
                   <div>
                     <p className="text-yellow-400 font-bold text-lg">{testimonial.score}</p>
@@ -397,7 +408,8 @@ export default function FaridabadLocationPage() {
             Free NEET Preparation Tools
           </h2>
           <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-            Access our free tools to boost your NEET preparation. Available for all Faridabad students!
+            Access our free tools to boost your NEET preparation. Available for all Faridabad
+            students!
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -420,7 +432,7 @@ export default function FaridabadLocationPage() {
                 icon: FileText,
                 title: 'Previous Year Papers',
                 description: '15 years of solved NEET papers',
-                href: '/neet-previous-year-papers',
+                href: '/neet-previous-year-questions',
                 color: 'purple',
               },
               {
@@ -436,7 +448,9 @@ export default function FaridabadLocationPage() {
                 href={tool.href}
                 className="bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:shadow-lg hover:border-green-300 transition-all group"
               >
-                <div className={`w-10 h-10 bg-${tool.color}-100 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`w-10 h-10 bg-${tool.color}-100 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}
+                >
                   <tool.icon className={`w-5 h-5 text-${tool.color}-600`} />
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm mb-1">{tool.title}</h3>
@@ -498,8 +512,8 @@ export default function FaridabadLocationPage() {
             Metro Connectivity (Violet Line)
           </h2>
           <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-            Our Sector 17 center is just 5 minutes walk from Bata Chowk Metro Station.
-            Students from across the Violet Line corridor can easily reach us.
+            Our Sector 17 center is just 5 minutes walk from Bata Chowk Metro Station. Students from
+            across the Violet Line corridor can easily reach us.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -517,13 +531,15 @@ export default function FaridabadLocationPage() {
               <div
                 key={index}
                 className={`p-4 rounded-lg text-center ${
-                  metro.highlight
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-white border border-purple-200'
+                  metro.highlight ? 'bg-purple-600 text-white' : 'bg-white border border-purple-200'
                 }`}
               >
-                <Train className={`w-6 h-6 mx-auto mb-2 ${metro.highlight ? 'text-white' : 'text-purple-600'}`} />
-                <p className={`font-medium text-sm ${metro.highlight ? 'text-white' : 'text-gray-900'}`}>
+                <Train
+                  className={`w-6 h-6 mx-auto mb-2 ${metro.highlight ? 'text-white' : 'text-purple-600'}`}
+                />
+                <p
+                  className={`font-medium text-sm ${metro.highlight ? 'text-white' : 'text-gray-900'}`}
+                >
                   {metro.name}
                 </p>
                 <p className={`text-xs ${metro.highlight ? 'text-purple-100' : 'text-gray-500'}`}>
@@ -570,11 +586,36 @@ export default function FaridabadLocationPage() {
           </p>
           <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {[
-              { name: 'South Extension (Flagship)', slug: 'south-extension', city: 'New Delhi', highlight: 'Flagship Center' },
-              { name: 'Rohini - DC Chowk', slug: 'rohini', city: 'New Delhi', highlight: 'North Delhi' },
-              { name: 'Gurugram - Sector 51', slug: 'gurugram', city: 'Gurugram', highlight: 'Haryana' },
-              { name: 'Noida (Sector 62)', slug: 'noida', city: '~40 min via Noida-Greater Noida Expressway', highlight: 'Uttar Pradesh' },
-              { name: 'Ghaziabad (Online + Hybrid)', slug: 'ghaziabad', city: 'Online classes for East UP students', highlight: 'Online + Hybrid' },
+              {
+                name: 'South Extension (Flagship)',
+                slug: 'south-extension',
+                city: 'New Delhi',
+                highlight: 'Flagship Center',
+              },
+              {
+                name: 'Rohini - DC Chowk',
+                slug: 'rohini',
+                city: 'New Delhi',
+                highlight: 'North Delhi',
+              },
+              {
+                name: 'Gurugram - Sector 51',
+                slug: 'gurugram',
+                city: 'Gurugram',
+                highlight: 'Haryana',
+              },
+              {
+                name: 'Noida (Sector 62)',
+                slug: 'noida',
+                city: '~40 min via Noida-Greater Noida Expressway',
+                highlight: 'Uttar Pradesh',
+              },
+              {
+                name: 'Ghaziabad (Online + Hybrid)',
+                slug: 'ghaziabad',
+                city: 'Online classes for East UP students',
+                highlight: 'Online + Hybrid',
+              },
             ].map((center) => (
               <Link
                 key={center.slug}
@@ -584,7 +625,9 @@ export default function FaridabadLocationPage() {
                 <MapPin className="w-8 h-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <h3 className="font-bold text-gray-900 mb-1">{center.name}</h3>
                 <p className="text-sm text-gray-500">{center.city}</p>
-                <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">{center.highlight}</span>
+                <span className="inline-block mt-2 text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                  {center.highlight}
+                </span>
               </Link>
             ))}
           </div>

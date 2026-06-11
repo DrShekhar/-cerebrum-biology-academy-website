@@ -210,7 +210,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20coimbatore.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20coimbatore.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -388,7 +392,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20coimbatore.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20coimbatore.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -429,8 +437,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
-      
       {/* Schools Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -439,7 +445,16 @@ export default function PageContent() {
               Students from These Coimbatore Schools Trust Us
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {['SSVM School of Excellence', 'PSG Public School', 'GD Matriculation School', 'Stanes Anglo Indian School', 'Delhi Public School Coimbatore', 'Chinmaya Vidyalaya', 'Amrita Vidyalayam', 'Lisieux CMI School'].map((school) => (
+              {[
+                'SSVM School of Excellence',
+                'PSG Public School',
+                'GD Matriculation School',
+                'Stanes Anglo Indian School',
+                'Delhi Public School Coimbatore',
+                'Chinmaya Vidyalaya',
+                'Amrita Vidyalayam',
+                'Lisieux CMI School',
+              ].map((school) => (
                 <span
                   key={school}
                   className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium"
@@ -459,13 +474,13 @@ export default function PageContent() {
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/neet-coaching-tamil-nadu"
+              href="/neet-coaching-south-india"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Tamil Nadu NEET Hub
             </Link>
             <Link
-              href="/biology-tutor-coimbatore"
+              href="/biology-tuition"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Biology Tutor Coimbatore

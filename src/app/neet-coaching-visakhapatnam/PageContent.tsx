@@ -62,7 +62,7 @@ const whyChooseUs = [
     icon: Zap,
     title: 'AP Coastal Premium Hub',
     description:
-      'Visakhapatnam is Andhra Pradesh\'s premier coastal city with high-income families and quality education focus. 15,000+ NEET aspirants annually - Cerebrum brings structured online coaching.',
+      "Visakhapatnam is Andhra Pradesh's premier coastal city with high-income families and quality education focus. 15,000+ NEET aspirants annually - Cerebrum brings structured online coaching.",
   },
   {
     icon: Target,
@@ -103,7 +103,7 @@ const faqs = [
   {
     question: 'How does Cerebrum address weak local NEET coaching?',
     answer:
-      'Vizag\'s local coaching ecosystem is primarily tutor-based or unstructured. Cerebrum brings comprehensive curriculum, expert faculty, regular testing, progress tracking, and personalized mentorship - addressing the quality gap in Vizag NEET coaching.',
+      "Vizag's local coaching ecosystem is primarily tutor-based or unstructured. Cerebrum brings comprehensive curriculum, expert faculty, regular testing, progress tracking, and personalized mentorship - addressing the quality gap in Vizag NEET coaching.",
   },
   {
     question: 'What is the NEET coaching fee for Vizag students?',
@@ -141,8 +141,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - NEET Coaching Visakhapatnam',
-  description:
-    'Best online NEET coaching for Visakhapatnam Andhra Pradesh premium families',
+  description: 'Best online NEET coaching for Visakhapatnam Andhra Pradesh premium families',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-visakhapatnam',
   telephone: '+91-88264-44334',
   address: {
@@ -151,13 +150,7 @@ const localBusinessSchema = {
     addressRegion: 'Uttar Pradesh',
     addressCountry: 'IN',
   },
-  areaServed: [
-    'Visakhapatnam',
-    'MVP Colony',
-    'Dwaraka Nagar',
-    'Seethammadhara',
-    'Madhurawada',
-  ],
+  areaServed: ['Visakhapatnam', 'MVP Colony', 'Dwaraka Nagar', 'Seethammadhara', 'Madhurawada'],
   priceRange: '$$',
 }
 
@@ -170,7 +163,11 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
-      <CityBreadcrumb cityName="Visakhapatnam" stateName="Andhra Pradesh" stateSlug="andhra-pradesh" />
+      <CityBreadcrumb
+        cityName="Visakhapatnam"
+        stateName="Andhra Pradesh"
+        stateSlug="andhra-pradesh"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -210,7 +207,11 @@ export default function PageContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20visakhapatnam.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20visakhapatnam.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -379,16 +380,18 @@ export default function PageContent() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Vizag, Ace NEET with Cerebrum!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Vizag, Ace NEET with Cerebrum!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Structured online coaching filling Visakhapatnam's NEET education gap. World-class
               instruction, zero local competition.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20visakhapatnam.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20coaching%20visakhapatnam.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   variant="secondary"
                   size="xl"
@@ -429,7 +432,6 @@ export default function PageContent() {
         </div>
       </section>
 
-
       <PricingSection cityName="Visakhapatnam" />
       <CostComparisonSection cityName="Visakhapatnam" />
       {/* Related */}
@@ -438,13 +440,13 @@ export default function PageContent() {
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/neet-coaching-andhra-pradesh"
+              href="/neet-coaching-south-india"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Andhra Pradesh NEET Hub
             </Link>
             <Link
-              href="/biology-tutor-visakhapatnam"
+              href="/biology-tuition"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Biology Tutor Vizag
@@ -457,27 +459,35 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
-      
-      {/* Schools Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Students from These Vizag Schools Trust Us
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Delhi Public School Vizag', 'Timpany School', 'Sri Prakash Vidyaniketan', 'Bhashyam School', 'Oakridge International', 'Navy Children School', 'other South-Indian chains Techno School', 'Visakha Valley School'].map((school) => (
-              <div
-                key={school}
-                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
-              >
-                {school}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-</section>
+        {/* Schools Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Students from These Vizag Schools Trust Us
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                'Delhi Public School Vizag',
+                'Timpany School',
+                'Sri Prakash Vidyaniketan',
+                'Bhashyam School',
+                'Oakridge International',
+                'Navy Children School',
+                'other South-Indian chains Techno School',
+                'Visakha Valley School',
+              ].map((school) => (
+                <div
+                  key={school}
+                  className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+                >
+                  {school}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </section>
       <RelatedCityLinks currentCity="visakhapatnam" variant="default" />
     </div>
   )

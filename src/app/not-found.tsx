@@ -51,7 +51,7 @@ export default function NotFound() {
     },
     {
       title: 'Book Free Demo',
-      href: '/demo-booking',
+      href: '/book-free-demo',
       icon: Gift,
       description: 'Schedule a session',
     },
@@ -116,9 +116,7 @@ export default function NotFound() {
               <span className="text-5xl font-bold text-[#4a5d4a]">404</span>
             </div>
 
-            <h1 className="mb-4 text-4xl font-bold text-slate-900 sm:text-5xl">
-              Page Not Found
-            </h1>
+            <h1 className="mb-4 text-4xl font-bold text-slate-900 sm:text-5xl">Page Not Found</h1>
 
             <p className="mb-2 text-xl text-slate-600">
               Sorry, the page you are looking for does not exist.
@@ -133,11 +131,7 @@ export default function NotFound() {
           {/* Search Section */}
           <div className="mb-16 flex justify-center">
             <div className="w-full max-w-2xl">
-              <form
-                className="relative"
-                action="/search"
-                method="get"
-              >
+              <form className="relative" action="/search" method="get">
                 <div className="relative flex items-center">
                   <Search className="absolute left-4 h-5 w-5 text-slate-400" />
                   <input
@@ -206,7 +200,9 @@ export default function NotFound() {
                 Contact Us
               </a>
               <a
-                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20not%20found.tsx.%20Please%20share%20available%20timings." target="_blank" rel="noopener noreferrer"
+                href="https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20demo%20class%20%E2%80%94%20interested%20in%20not%20found.tsx.%20Please%20share%20available%20timings."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#4a5d4a] bg-white px-6 py-3 font-medium text-[#4a5d4a] transition-all hover:bg-[#f0f4f0]"
               >
                 <Gift className="h-4 w-4" />

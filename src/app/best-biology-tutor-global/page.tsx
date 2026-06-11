@@ -111,7 +111,7 @@ const REGIONS = [
     name: 'Asia',
     detail:
       'IB Biology HL/SL at international schools (UWCSEA, Tanglin Trust, NIST Bangkok, GIIS, Stamford American, GEMS) + Singapore Biology Olympiad (SBO) + Chinese Biology Olympiad + Japan Biology Olympiad (JBO) + Korea Biology Olympiad (KBO) + Indonesian KSN-Biologi + Philippine PBO + Thailand POSN-Biology + Vietnam VBO.',
-    href: '/best-biology-tutor-uwcsea',
+    href: '/ib-biology-tutor-uwcsea',
     flags: '🇸🇬 🇯🇵 🇰🇷 🇨🇳 🇮🇩 🇹🇭 🇵🇭 🇻🇳',
   },
   {

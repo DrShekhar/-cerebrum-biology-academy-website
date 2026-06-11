@@ -287,7 +287,7 @@ export function NoidaLocalBusinessSchema({
       '@type': 'ReserveAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://cerebrumbiologyacademy.com/demo-booking',
+        urlTemplate: 'https://cerebrumbiologyacademy.com/book-free-demo',
       },
       result: { '@type': 'Reservation', name: 'Book Free Demo Class' },
     },
@@ -843,7 +843,7 @@ export function NoidaEventSchema({
     location: isOnline
       ? {
           '@type': 'VirtualLocation',
-          url: 'https://cerebrumbiologyacademy.com/demo-booking',
+          url: 'https://cerebrumbiologyacademy.com/book-free-demo',
         }
       : {
           '@type': 'Place',
@@ -870,7 +870,7 @@ export function NoidaEventSchema({
       price: price,
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
-      url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      url: 'https://cerebrumbiologyacademy.com/book-free-demo',
       validFrom: new Date().toISOString(),
     },
     image: 'https://cerebrumbiologyacademy.com/og-image.jpg',

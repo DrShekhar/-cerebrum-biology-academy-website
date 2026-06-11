@@ -197,7 +197,7 @@ const faqs = [
   {
     question: 'Do you provide demo classes for Noida students?',
     answer:
-      'Yes, FREE demo class available for all Noida students: Online Demo: Join live Zoom class (1 hour Biology lecture + 30 min doubt session), Offline Demo: Visit South Extension center (if from nearby sectors with metro access), Recorded Demo: Watch pre-recorded sample lecture anytime. Book demo via: Website: cerebrumbiologyacademy.com/demo-booking, Phone: +91 88264 44334, WhatsApp: Direct message button on website. Demo includes interaction with Dr. Shekhar Sir, sample study material, and counseling session.',
+      'Yes, FREE demo class available for all Noida students: Online Demo: Join live Zoom class (1 hour Biology lecture + 30 min doubt session), Offline Demo: Visit South Extension center (if from nearby sectors with metro access), Recorded Demo: Watch pre-recorded sample lecture anytime. Book demo via: Website: cerebrumbiologyacademy.com/book-free-demo, Phone: +91 88264 44334, WhatsApp: Direct message button on website. Demo includes interaction with Dr. Shekhar Sir, sample study material, and counseling session.',
   },
   {
     question: 'Which schools from Noida have students at Cerebrum?',
