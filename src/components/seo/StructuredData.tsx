@@ -653,8 +653,7 @@ export function LocalBusinessSchema() {
     ],
     founder: {
       '@type': 'Person',
-      '@id':
-        'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
+      '@id': 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty#person',
       name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Lead Faculty',
       alumniOf: {
@@ -1823,9 +1822,11 @@ function SiteNavigationElementSchema() {
 export function StructuredData() {
   // Note: FAQSchema is NOT included globally to prevent duplicate FAQ errors in Google Search Console
   // Include FAQSchema only on specific pages that have FAQ content
+  // OrganizationSchema removed 2026-06: it shared @id #organization with the
+  // canonical CerebrumOrgSchema (also in root layout) and the two nodes carried
+  // contradictory descriptions. CerebrumOrgSchema is the single org node now.
   return (
     <>
-      <OrganizationSchema />
       <WebsiteSchema />
       <CourseSchema />
       <LocalBusinessSchema />

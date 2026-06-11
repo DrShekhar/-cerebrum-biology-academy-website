@@ -148,6 +148,7 @@ export const Footer = memo(function Footer() {
     { name: 'Biology Olympiads', href: '/biology-olympiads' },
     { name: 'Board Exam Preparation', href: '/board-exam-preparation' },
     { name: 'International Curriculum', href: '/international' },
+    { name: 'Global Programs — 75+ Countries', href: '/global' },
     { name: 'Pricing & Fee Structure', href: '/pricing' },
   ]
 

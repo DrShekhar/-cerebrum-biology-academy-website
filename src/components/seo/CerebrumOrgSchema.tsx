@@ -1,14 +1,19 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 /**
- * Site-wide canonical EducationalOrganization schema with all Cerebrum
- * Delhi NCR centres expressed as `branch[]` entries. Injected in the
- * root layout so every page in the site shares the same Org entity.
+ * Site-wide canonical EducationalOrganization schema — the ONLY Organization
+ * node the site may emit (#organization). Injected in the root layout so
+ * every page shares the same Org entity. Other schemas must reference it by
+ * @id, never declare a second Organization.
+ *
+ * Identity: global biology education brand (NEET + NEET-NRI + IB/AP/A-Level/
+ * GCSE/MCAT/GAMSAT/USMLE/DAT + olympiads in 75+ countries), headquartered in
+ * New Delhi with Delhi NCR centres expressed as `department[]` branches.
  *
  * Designed to enable:
  *  - Google Knowledge Panel with multi-location call buttons
  *  - Local Pack (3-pack) eligibility for "near me" Delhi NCR queries
- *  - Branch-specific geo + telephone surfacing in Maps
+ *  - Correct global brand descriptions in AI engines (ChatGPT/Perplexity/AIO)
  */
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -71,11 +76,14 @@ export function CerebrumOrgSchema() {
     '@type': 'EducationalOrganization',
     '@id': `${BASE_URL}/#organization`,
     name: 'Cerebrum Biology Academy',
-    alternateName: ['Cerebrum', 'Cerebrum NEET Biology'],
+    alternateName: ['Cerebrum', 'Cerebrum Academy', 'Cerebrum Biology', 'Cerebrum NEET Biology'],
+    legalName: 'Cerebrum Biology Academy Private Limited',
     url: BASE_URL,
     logo: `${BASE_URL}/logo.png`,
+    image: `${BASE_URL}/og-image.jpg`,
+    slogan: 'Where Biology Meets Excellence',
     description:
-      "India's only biology-only specialist NEET coaching brand. AIIMS-trained faculty led by Dr. Shekhar C Singh. 6 Delhi NCR centres + pan-India online. 680+ medical college selections, 98% NEET qualification rate.",
+      'Global biology education academy founded in New Delhi (2014). AIIMS-trained faculty led by Dr. Shekhar C Singh teach NEET (in India and for students abroad), IB Biology, AP Biology, A-Level, GCSE/IGCSE, MCAT Biology & Biochemistry, GAMSAT, USMLE Step 1, DAT, and biology olympiad pathways (USABO, BBO, INBO, IBO and 75+ national olympiads). 5 Delhi NCR centres + live online classes worldwide. 680+ medical college selections.',
     foundingDate: '2014',
     founder: {
       '@type': 'Person',
@@ -87,6 +95,11 @@ export function CerebrumOrgSchema() {
         name: 'All India Institute of Medical Sciences (AIIMS), New Delhi',
         url: 'https://www.aiims.edu/',
       },
+      sameAs: [
+        `${BASE_URL}/dr-shekhar-singh-neet-biology-faculty`,
+        'https://www.youtube.com/@drshekharcsingh',
+        'https://www.linkedin.com/in/drshekharsingh',
+      ],
     },
     telephone: '+918826444334',
     email: 'info@cerebrumbiologyacademy.com',
@@ -94,6 +107,37 @@ export function CerebrumOrgSchema() {
       'https://www.youtube.com/@cerebrumbiologyacademy',
       'https://www.youtube.com/@drshekharcsingh',
       'https://www.instagram.com/cerebrumbiologyacademy/',
+      'https://www.facebook.com/cerebrumbiologyacademy',
+      'https://www.linkedin.com/company/cerebrumbiologyacademy',
+      'https://twitter.com/cerebrumbiology',
+    ],
+    award: [
+      'Best Biology Teacher 2025 - Education Excellence Foundation',
+      'Top 10 NEET Coaching 2026 - Career360',
+      'Highest Success Rate 2025 - Gurugram Education Council',
+    ],
+    knowsAbout: [
+      'NEET Biology',
+      'NEET-UG Preparation',
+      'NEET Coaching for NRI Students',
+      'IB Biology (HL & SL)',
+      'AP Biology',
+      'A-Level Biology',
+      'GCSE & IGCSE Biology',
+      'MCAT Biology & Biochemistry',
+      'GAMSAT Section III Biology',
+      'USMLE Step 1 Biology',
+      'DAT Biology',
+      'USABO (USA Biology Olympiad)',
+      'BBO (British Biology Olympiad)',
+      'NSEB & INBO (India Biology Olympiad)',
+      'International Biology Olympiad (IBO)',
+      'Medical Entrance Exams',
+      'Human Physiology',
+      'Genetics and Evolution',
+      'Botany',
+      'Zoology',
+      'NCERT Biology',
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -132,6 +176,20 @@ export function CerebrumOrgSchema() {
       { '@type': 'City', name: 'Pune' },
       { '@type': 'City', name: 'Kota' },
       { '@type': 'Country', name: 'India' },
+      { '@type': 'Country', name: 'United States' },
+      { '@type': 'Country', name: 'United Kingdom' },
+      { '@type': 'Country', name: 'Canada' },
+      { '@type': 'Country', name: 'Australia' },
+      { '@type': 'Country', name: 'Singapore' },
+      { '@type': 'Country', name: 'United Arab Emirates' },
+      { '@type': 'Country', name: 'Saudi Arabia' },
+      { '@type': 'Country', name: 'Qatar' },
+      { '@type': 'Country', name: 'Kuwait' },
+      { '@type': 'Country', name: 'Oman' },
+      { '@type': 'Country', name: 'Bahrain' },
+      { '@type': 'Country', name: 'Malaysia' },
+      { '@type': 'Country', name: 'Nepal' },
+      { '@type': 'Place', name: 'Worldwide' },
     ],
     contactPoint: [
       {
@@ -141,6 +199,13 @@ export function CerebrumOrgSchema() {
         availableLanguage: ['English', 'Hindi'],
         areaServed: ['IN', 'IN-DL', 'IN-HR', 'IN-UP'],
         contactOption: ['HearingImpairedSupported', 'TollFree'],
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+918826444334',
+        contactType: 'international admissions',
+        availableLanguage: 'English',
+        areaServed: 'Worldwide',
       },
       {
         '@type': 'ContactPoint',

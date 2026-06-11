@@ -209,9 +209,17 @@ export const navigationConfig: NavigationSection[] = [
   },
   {
     id: 'international',
-    title: 'International',
+    title: 'Global Programs',
     icon: 'Globe',
     items: [
+      {
+        id: 'global-home',
+        title: 'Global Programs Home',
+        href: '/global',
+        description: 'NEET abroad · IB · AP · A-Level · MCAT · GAMSAT · Olympiads in 75+ countries',
+        keywords: ['global', 'international', 'worldwide', 'abroad', 'overseas'],
+        isPopular: true,
+      },
       {
         id: 'a-level-biology',
         title: 'A-Level Biology',
@@ -251,11 +259,25 @@ export const navigationConfig: NavigationSection[] = [
         isNew: true,
       },
       {
+        id: 'mcat-biology',
+        title: 'MCAT Biology & Biochemistry',
+        href: '/best-mcat-biology-tutor',
+        description: 'B/B section specialist prep — US & Canada pre-med',
+        keywords: ['mcat', 'biochemistry', 'pre-med', 'aamc', 'usa', 'canada'],
+      },
+      {
+        id: 'gamsat-biology',
+        title: 'GAMSAT Biology',
+        href: '/best-gamsat-biology-tutor',
+        description: 'Section III reasoning — UK, Ireland & Australia',
+        keywords: ['gamsat', 'section 3', 'uk', 'ireland', 'australia', 'graduate medicine'],
+      },
+      {
         id: 'biology-olympiad',
-        title: 'Biology Olympiad (NSEB/IBO)',
-        href: '/nseb-coaching-gurugram',
-        description: 'NSEB → INBO → IBO preparation with Campbell Biology',
-        keywords: ['nseb', 'ibo', 'inbo', 'biology olympiad', 'hbcse', 'campbell'],
+        title: 'Biology Olympiads (USABO/BBO/IBO)',
+        href: '/ibo-preparation',
+        description: 'USABO · BBO · INBO and 75+ national olympiads to the IBO',
+        keywords: ['usabo', 'bbo', 'nseb', 'ibo', 'inbo', 'biology olympiad', 'campbell'],
       },
     ],
   },

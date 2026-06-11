@@ -36,6 +36,16 @@ const UsersIcon = () => (
   </svg>
 )
 
+const GlobeIcon = () => (
+  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3.6 9h16.8M3.6 15h16.8M12 3a15.3 15.3 0 014 9 15.3 15.3 0 01-4 9 15.3 15.3 0 01-4-9 15.3 15.3 0 014-9zm0 0a9 9 0 100 18 9 9 0 000-18z"
+    />
+  </svg>
+)
+
 const MonitorIcon = () => (
   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path
@@ -164,6 +174,13 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             >
               <UsersIcon />
               <span>Faculty</span>
+            </Link>
+            <Link
+              href="/global"
+              className="flex items-center gap-2 font-medium px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-all duration-200"
+            >
+              <GlobeIcon />
+              <span>Global</span>
             </Link>
             {/* Centers link removed from nav — kept as SEO page only */}
           </nav>

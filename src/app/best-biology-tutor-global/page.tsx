@@ -37,8 +37,7 @@ const CANONICAL = '/best-biology-tutor-global'
 const PAGE_URL = `${SITE_URL}${CANONICAL}`
 
 export const metadata: Metadata = {
-  title:
-    'Best Biology Tutor Worldwide — IB · AP · A-Level · USABO · IBO · MCAT · GAMSAT',
+  title: 'Best Biology Tutor Worldwide — IB · AP · A-Level · USABO · IBO · MCAT · GAMSAT',
   description:
     "World's leading biology specialist faculty serving students of any nationality. Dr. Shekhar C Singh (AIIMS Delhi-trained, peer to Harvard/Hopkins/Oxford) leads 1:1 and 6-12 student micro-batch tutoring across IB Biology HL/SL, AP Biology, A-Level, GCSE, IGCSE, USABO, BBO, IBO + 75+ national olympiads, MCAT Bio/Biochem, GAMSAT, USMLE Step 1. Time-zone-calibrated live online globally. Free trial.",
   keywords: [
@@ -86,8 +85,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image' as const,
-    title:
-      'Best Biology Tutor Worldwide — IB · AP · A-Level · USABO · IBO · MCAT · GAMSAT',
+    title: 'Best Biology Tutor Worldwide — IB · AP · A-Level · USABO · IBO · MCAT · GAMSAT',
     description:
       "World's leading biology specialist faculty serving students of any nationality. Dr. Shekhar C Singh (AIIMS Delhi-trained) leads 1:1 + micro-batch tutoring across all major global biology exams.",
   },
@@ -171,7 +169,7 @@ const FAQS = [
   },
   {
     question:
-      'Who is Dr. Shekhar C Singh, and what is AIIMS Delhi for international audiences who haven\'t heard of it?',
+      "Who is Dr. Shekhar C Singh, and what is AIIMS Delhi for international audiences who haven't heard of it?",
     answer:
       "Dr. Shekhar C Singh is biology faculty trained at AIIMS Delhi (All India Institute of Medical Sciences) — India's apex medical institution, founded 1956 by Act of Parliament. AIIMS is internationally ranked among Asia's top medical schools. Peer institutions in selectivity and academic depth: Harvard Medical School, Johns Hopkins, Stanford Medicine, Oxford Medical, Cambridge Medical, Karolinska Institutet, University of Toronto Medical. AIIMS Delhi acceptance rate is approximately 0.005% (about 100 medical seats from 2 million+ applicants annually). AIIMS-trained faculty have clinical + research + teaching depth comparable to faculty trained at top medical institutions globally — directly relevant to IB Biology, USABO, AP Biology, MCAT, GAMSAT, USMLE Step 1.",
   },
@@ -183,7 +181,7 @@ const FAQS = [
   {
     question: 'How does Cerebrum compare to Kaplan, Princeton Review, Magoosh, Khan Academy?',
     answer:
-      "Kaplan / Princeton Review / Magoosh are multi-subject US test prep generalists hiring contract instructors per section. Khan Academy is free + self-paced + College Board content-aligned but lacks live faculty, FRQ rubric drilling, olympiad prep, and clinical correlations. Cerebrum is a biology-only specialist led by AIIMS Delhi medical faculty Dr. Shekhar C Singh — apex-medical-institution training (~0.005% acceptance rate) that no Kaplan / Princeton Review / Magoosh / Khan Academy biology instructor has. Best combinations: Kaplan or Princeton for non-biology MCAT sections + Cerebrum for biology depth; Khan Academy for content review + Cerebrum for live coaching + competition + admissions strategy.",
+      'Kaplan / Princeton Review / Magoosh are multi-subject US test prep generalists hiring contract instructors per section. Khan Academy is free + self-paced + College Board content-aligned but lacks live faculty, FRQ rubric drilling, olympiad prep, and clinical correlations. Cerebrum is a biology-only specialist led by AIIMS Delhi medical faculty Dr. Shekhar C Singh — apex-medical-institution training (~0.005% acceptance rate) that no Kaplan / Princeton Review / Magoosh / Khan Academy biology instructor has. Best combinations: Kaplan or Princeton for non-biology MCAT sections + Cerebrum for biology depth; Khan Academy for content review + Cerebrum for live coaching + competition + admissions strategy.',
   },
   {
     question:
@@ -212,7 +210,7 @@ export default function BestBiologyTutorGlobalPage() {
   const waUrl =
     'https://wa.me/918826444334?text=' +
     encodeURIComponent(
-      "Hi — I'm looking for a biology tutor for my child. Currently in [Grade / Year], targeting [IB / AP / A-Level / USABO / IBO / MCAT / GAMSAT / USMLE / national olympiad / other]. Based in [city, country]. Please share 1:1 and micro-batch options.",
+      "Hi — I'm looking for a biology tutor for my child. Currently in [Grade / Year], targeting [IB / AP / A-Level / USABO / IBO / MCAT / GAMSAT / USMLE / national olympiad / other]. Based in [city, country]. Please share 1:1 and micro-batch options."
     )
 
   const courseSchema = {
@@ -305,6 +303,12 @@ export default function BestBiologyTutorGlobalPage() {
               </Link>
             </li>
             <ChevronRight className="h-3.5 w-3.5" />
+            <li>
+              <Link href="/global" className="hover:text-indigo-700">
+                Global Programs
+              </Link>
+            </li>
+            <ChevronRight className="h-3.5 w-3.5" />
             <li className="text-slate-700">Best Biology Tutor Worldwide</li>
           </ol>
         </nav>
@@ -319,15 +323,13 @@ export default function BestBiologyTutorGlobalPage() {
             <span className="text-indigo-700">serving students of any nationality.</span>
           </h1>
           <p className="mt-5 text-lg text-slate-600 leading-relaxed max-w-4xl">
-            Dr. Shekhar C Singh &mdash; AIIMS Delhi-trained biology faculty,
-            founder of Cerebrum (2014), 15+ years of biology-only
-            specialisation. AIIMS Delhi (India&rsquo;s apex medical
-            institution &mdash; peer to Harvard Med, Johns Hopkins, Oxford
-            Med, Karolinska in selectivity) adds clinical-medical depth no
-            test-prep generalist faculty can replicate. Cerebrum serves IB
-            Biology, AP Biology, A-Level, GCSE, IGCSE, USABO, BBO, IBO and
-            75+ country national olympiads, MCAT Bio/Biochem, GAMSAT, USMLE
-            Step 1. Time-zone-calibrated live online across 6 continents.
+            Dr. Shekhar C Singh &mdash; AIIMS Delhi-trained biology faculty, founder of Cerebrum
+            (2014), 15+ years of biology-only specialisation. AIIMS Delhi (India&rsquo;s apex
+            medical institution &mdash; peer to Harvard Med, Johns Hopkins, Oxford Med, Karolinska
+            in selectivity) adds clinical-medical depth no test-prep generalist faculty can
+            replicate. Cerebrum serves IB Biology, AP Biology, A-Level, GCSE, IGCSE, USABO, BBO, IBO
+            and 75+ country national olympiads, MCAT Bio/Biochem, GAMSAT, USMLE Step 1.
+            Time-zone-calibrated live online across 6 continents.
           </p>
 
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -357,9 +359,8 @@ export default function BestBiologyTutorGlobalPage() {
               Where Cerebrum students study &mdash; six continents
             </h2>
             <p className="mt-3 text-slate-600 max-w-3xl">
-              Cerebrum serves any high school + pre-medical student in any
-              country. Verticals are universal exams &mdash; nationality is
-              not a requirement.
+              Cerebrum serves any high school + pre-medical student in any country. Verticals are
+              universal exams &mdash; nationality is not a requirement.
             </p>
             <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {REGIONS.map((r) => (
@@ -370,9 +371,7 @@ export default function BestBiologyTutorGlobalPage() {
                 >
                   <div className="text-2xl">{r.flags}</div>
                   <h3 className="mt-2 text-lg font-bold text-slate-900">{r.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700">
-                    {r.detail}
-                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700">{r.detail}</p>
                   <p className="mt-3 text-xs font-semibold text-indigo-700 inline-flex items-center gap-1">
                     Explore region <ChevronRight className="h-3.5 w-3.5" />
                   </p>
@@ -432,11 +431,7 @@ export default function BestBiologyTutorGlobalPage() {
                   >
                     Best for
                   </p>
-                  <p
-                    className={`mt-1 text-sm ${
-                      idx === 1 ? 'text-indigo-100' : 'text-slate-700'
-                    }`}
-                  >
+                  <p className={`mt-1 text-sm ${idx === 1 ? 'text-indigo-100' : 'text-slate-700'}`}>
                     {t.bestFor}
                   </p>
                 </div>
@@ -452,26 +447,21 @@ export default function BestBiologyTutorGlobalPage() {
               Why AIIMS-trained biology faculty matters &mdash; even outside India
             </h2>
             <p className="mt-4 text-base text-slate-700 leading-relaxed">
-              AIIMS Delhi (All India Institute of Medical Sciences) is
-              India&rsquo;s apex medical institution. Acceptance rate is
-              approximately 0.005% &mdash; about 100 medical seats from over
-              2 million annual applicants. Internationally ranked among
-              Asia&rsquo;s top medical schools by QS, Times Higher Education,
-              and US News Best Global Universities. AIIMS Delhi medical
-              graduates licensure-bridge into clinical practice in the USA
-              (via USMLE), UK (via PLAB / UKMLA), Canada (via MCCQE), and
-              Australia (via AMC).
+              AIIMS Delhi (All India Institute of Medical Sciences) is India&rsquo;s apex medical
+              institution. Acceptance rate is approximately 0.005% &mdash; about 100 medical seats
+              from over 2 million annual applicants. Internationally ranked among Asia&rsquo;s top
+              medical schools by QS, Times Higher Education, and US News Best Global Universities.
+              AIIMS Delhi medical graduates licensure-bridge into clinical practice in the USA (via
+              USMLE), UK (via PLAB / UKMLA), Canada (via MCCQE), and Australia (via AMC).
             </p>
             <p className="mt-4 text-base text-slate-700 leading-relaxed">
-              For biology students globally, AIIMS-trained faculty bring
-              three things no test-prep generalist instructor can replicate:
-              (1) deep clinical correlations that map directly to
-              MCAT/USMLE/IB diagnostic-style questions, (2) research-grade
-              depth in cell biology, biochemistry, and physiology, and (3)
-              the discipline of NCERT-line precision adapted to any
-              curriculum &mdash; whether that&rsquo;s the AP Biology Course
-              and Exam Description, the IB Biology Guide, the OCR A-Level
-              specification, or the AAMC MCAT content categories.
+              For biology students globally, AIIMS-trained faculty bring three things no test-prep
+              generalist instructor can replicate: (1) deep clinical correlations that map directly
+              to MCAT/USMLE/IB diagnostic-style questions, (2) research-grade depth in cell biology,
+              biochemistry, and physiology, and (3) the discipline of NCERT-line precision adapted
+              to any curriculum &mdash; whether that&rsquo;s the AP Biology Course and Exam
+              Description, the IB Biology Guide, the OCR A-Level specification, or the AAMC MCAT
+              content categories.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -537,9 +527,9 @@ export default function BestBiologyTutorGlobalPage() {
               Book a free trial with Dr. Shekhar
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              60 minutes, live, with the founder. Bring one biology question
-              your child has struggled with. You see the tutor-style depth
-              before committing. Available across all global time zones.
+              60 minutes, live, with the founder. Bring one biology question your child has
+              struggled with. You see the tutor-style depth before committing. Available across all
+              global time zones.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a

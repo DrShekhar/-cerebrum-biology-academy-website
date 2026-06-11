@@ -2584,11 +2584,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     // ===== Cross-vertical comparison pages (May 2026) =====
-    { url: `${baseUrl}/ap-biology-vs-ib-biology`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
-    { url: `${baseUrl}/a-level-biology-vs-igcse-biology`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
-    { url: `${baseUrl}/gamsat-vs-mcat-biology`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
-    { url: `${baseUrl}/dat-vs-mcat-biology`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
-    { url: `${baseUrl}/bbo-vs-usabo-biology-olympiad`, lastModified: lastUpdated, changeFrequency: 'monthly' as const, priority: 0.85 },
+    {
+      url: `${baseUrl}/ap-biology-vs-ib-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/a-level-biology-vs-igcse-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/gamsat-vs-mcat-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/dat-vs-mcat-biology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/bbo-vs-usabo-biology-olympiad`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
     {
       url: `${baseUrl}/usabo-6-month-prep-plan`,
       lastModified: lastUpdated,
@@ -5237,6 +5262,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Global hub — international audience anchor (Phase 3 of global repositioning)
     {
       url: `${baseUrl}/best-biology-tutor-global`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    // Global brand home — the international front door (/ stays India-NEET)
+    {
+      url: `${baseUrl}/global`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.95,

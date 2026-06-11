@@ -16,6 +16,7 @@ export async function GET() {
     headerList.get('x-vercel-ip-country') ||
     headerList.get('cf-ipcountry') ||
     headerList.get('x-country-code') ||
+    headerList.get('x-debug-country') ||
     null
 
   return NextResponse.json(
