@@ -700,13 +700,8 @@ const nextConfig = {
       },
       // Biology tutor class variations
       {
-        source: '/biology-tutor-class-10-cbse',
-        destination: '/biology-tutor-class-9-cbse',
-        permanent: true,
-      },
-      {
         source: '/biology-tutor-class-10-icse',
-        destination: '/biology-tutor-class-9-cbse',
+        destination: '/biology-tutor-class-10-cbse',
         permanent: true,
       },
       {
@@ -1428,32 +1423,7 @@ const nextConfig = {
         destination: '/neet-coaching-gurugram',
         permanent: true,
       }, // REMOVED: /neet-coaching-bhopal — page exists at src/app/neet-coaching-bhopal/
-      {
-        source: '/neet-coaching-nagpur',
-        destination: '/neet-coaching-west-india',
-        permanent: true,
-      },
       { source: '/neet-coaching-thane', destination: '/neet-coaching-west-india', permanent: true },
-      {
-        source: '/neet-coaching-navi-mumbai',
-        destination: '/neet-coaching-west-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-coimbatore',
-        destination: '/neet-coaching-south-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-madurai',
-        destination: '/neet-coaching-south-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-guwahati',
-        destination: '/neet-coaching-east-india',
-        permanent: true,
-      },
       {
         source: '/neet-coaching-dhanbad',
         destination: '/neet-coaching-east-india',
@@ -1461,16 +1431,13 @@ const nextConfig = {
       },
       { source: '/neet-coaching-jabalpur', destination: '/neet-coaching-centre', permanent: true },
       {
-        source: '/neet-coaching-aurangabad',
-        destination: '/neet-coaching-west-india',
-        permanent: true,
-      },
-      {
         source: '/neet-coaching-vasai-virar',
         destination: '/neet-coaching-west-india',
         permanent: true,
       },
-      { source: '/neet-coaching-delhi', destination: '/neet-coaching-centre', permanent: true },
+      // /neet-coaching-delhi redirect removed 2026-06-11 — a real Delhi hub page
+      // (sitemap priority 0.92) was created 2026-05-13 and this Jan-22 redirect was
+      // shadowing it, plus turning 14 inbound redirects into 2-hop chains.
 
       // Blog management quota article
       {
@@ -1591,10 +1558,11 @@ const nextConfig = {
 
       // About sub-page that never existed
       { source: '/about/dr-shekhar', destination: '/about', permanent: true },
-      { source: '/about/:path+', destination: '/about', permanent: true },
+      // /about/:path+ wildcard removed 2026-06-11 — it was shadowing the live
+      // /about/careers and /about/media pages. Unknown /about/* URLs now 404 (correct).
 
       // Book demo → demo-booking
-      { source: '/book-demo', destination: '/demo-booking', permanent: true },
+      { source: '/book-demo', destination: '/book-free-demo', permanent: true },
 
       // Blog posts that were deleted or never published
       {

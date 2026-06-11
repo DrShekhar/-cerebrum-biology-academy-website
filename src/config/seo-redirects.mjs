@@ -1124,8 +1124,10 @@ export const gsc404CleanupRedirects = [
   // --- NEET classes vs coaching (safe - no real pages with this prefix) ---
   { source: '/neet-classes-:slug', destination: '/neet-coaching', permanent: true },
 
-  // --- NEET coaching with India suffix (safe - only neet-coaching-:slug-india pattern) ---
-  { source: '/neet-coaching-:slug-india', destination: '/neet-coaching', permanent: true },
+  // --- NEET coaching with India suffix ---
+  // Wildcard '/neet-coaching-:slug-india' removed 2026-06-11: the "no real pages"
+  // assumption was wrong — /neet-coaching-{north,south,east,west}-india are live
+  // 586-line regional hubs (created Dec 2025) that the wildcard was shadowing.
 
   // --- Course slug consolidation ---
   {
@@ -4018,21 +4020,9 @@ export const datGamsatSynonymRedirects = [
     destination: '/best-gamsat-biology-tutor',
     permanent: true,
   },
-  {
-    source: '/gamsat-biology-tutor-melbourne',
-    destination: '/gamsat-biology-tutor-sydney',
-    permanent: true,
-  },
-  {
-    source: '/gamsat-biology-tutor-manchester',
-    destination: '/gamsat-biology-tutor-london',
-    permanent: true,
-  },
-  {
-    source: '/gamsat-biology-tutor-dublin',
-    destination: '/gamsat-biology-tutor-london',
-    permanent: true,
-  },
+  // melbourne/manchester/dublin redirects removed 2026-06-11 — real metro pages
+  // were created 2026-05-25 (GAMSATBiologyCityTemplate) after these May-14
+  // synonym redirects, which were then shadowing them.
   {
     source: '/graduate-medicine-biology-tutor',
     destination: '/best-gamsat-biology-tutor',
